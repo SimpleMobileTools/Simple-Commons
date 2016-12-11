@@ -6,4 +6,18 @@
     <string name="smtco_proceed_with_deletion">Действительно хотите удалить?</string>
     <string name="smtco_yes">Да</string>
     <string name="smtco_no">Нет</string>
+
+    <!-- About activity -->
+    <string name="smtco_about">О приложении</string>
+    <string name="smtco_website">Исходный код можно найти по адресу:\nhttp://simplemobiletools.com</string>
+    <string name="smtco_email_label">Отправить отзывы или предложения:</string>
+    <string name="smtco_more_apps_underlined"><u>Больше простых приложений</u></string>
+    <string name="smtco_third_party_licences_underlined"><u>Лицензии третьих сторон</u></string>
+    <string name="smtco_invite_friends_underlined"><u>Предложить другу</u></string>
+    <string name="smtco_share_text">Попробуй %1$s по ссылке %2$s</string>
+    <string name="smtco_invite_via">Предложить с помощью</string>
+    <string name="smtco_rate_us_underlined"><u>Оценить нас в Google Play</u></string>
+    <string name="smtco_donate_underlined"><u>Поддержать разработчика</u></string>
+    <string name="smtco_follow_us">Подписаться на нас:</string>
+    <string name="smtco_copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
 </resources>

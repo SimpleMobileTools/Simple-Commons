@@ -1,0 +1,23 @@
+<resources>
+    <string name="smtco_ok">确认</string>
+    <string name="smtco_cancel">取消</string>
+
+    <!-- Confirmation dialog -->
+    <string name="smtco_proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
+    <string name="smtco_yes">Yes</string>
+    <string name="smtco_no">No</string>
+
+    <!-- About activity -->
+    <string name="smtco_about">关于</string>
+    <string name="smtco_website">更多软件请访问: http://simplemobiletools.com</string>
+    <string name="smtco_email_label">反馈您的意见到:</string>
+    <string name="smtco_more_apps_underlined"><u>More apps</u></string>
+    <string name="smtco_third_party_licences_underlined"><u>开放源代码</u></string>
+    <string name="smtco_invite_friends_underlined"><u>分享给好友</u></string>
+    <string name="smtco_share_text">Hey, come check out %1$s at %2$s</string>
+    <string name="smtco_invite_via">分享到</string>
+    <string name="smtco_rate_us_underlined"><u>为我们打分</u></string>
+    <string name="smtco_donate_underlined"><u>Donate</u></string>
+    <string name="smtco_follow_us">关注我们:</string>
+    <string name="smtco_copyright">v %1$s Copyright © Simple Mobile Tools %2$d</string>
+</resources>

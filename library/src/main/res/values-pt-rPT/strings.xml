@@ -6,4 +6,18 @@
     <string name="smtco_proceed_with_deletion">Tem a certeza de que deseja continuar com a eliminação?</string>
     <string name="smtco_yes">Sim</string>
     <string name="smtco_no">Não</string>
+
+    <!-- About activity -->
+    <string name="smtco_about">Acerca</string>
+    <string name="smtco_website">Mais aplicações Simple e código fonte em:\nhttp://simplemobiletools.com</string>
+    <string name="smtco_email_label">Envie os seus comentários ou sugestões para:</string>
+    <string name="smtco_more_apps_underlined"><u>Mais aplicações</u></string>
+    <string name="smtco_third_party_licences_underlined"><u>Licenças de terceiros</u></string>
+    <string name="smtco_invite_friends_underlined"><u>Convidar amigos</u></string>
+    <string name="smtco_share_text">Olá, experimenta %1$s em %2$s</string>
+    <string name="smtco_invite_via">Convidar via</string>
+    <string name="smtco_rate_us_underlined"><u>Avalie-nos na Play Store</u></string>
+    <string name="smtco_donate_underlined"><u>Donativos</u></string>
+    <string name="smtco_follow_us">Siga-nos:</string>
+    <string name="smtco_copyright">V %1$s\nCopyright © Simple Mobile Tools %2$d</string>
 </resources>
