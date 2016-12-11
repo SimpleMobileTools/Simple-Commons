@@ -7,7 +7,7 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
 
-    <!-- About activity -->
+    <!-- About -->
     <string name="about">Információ</string>
     <string name="website">További egyszerű alkalmazások és a forráskód itt</string>
     <string name="email_label">Visszajelzés és javaslatok</string>
@@ -20,4 +20,20 @@
     <string name="donate_underlined"><u>Donate</u></string>
     <string name="follow_us">Követés:</string>
     <string name="copyright">%1$s verzió\nSzerzői jogok: © Simple Mobile Tools %2$d</string>
+
+    <!-- License -->
+    <string name="notice">Ez az alkalmazás az alábbi könyvtárakat használja, hogy a munkám egyszerűbb legyen. Köszönöm szépen.</string>
+    <string name="third_party_licences">Harmadik fél licenszek</string>
+    <string name="kotlin_title"><u>Kotlin (programozási nyelv)</u></string>
+    <string name="subsampling_title"><u>Subsampling Scale Image View (zoomable imageviews)</u></string>
+    <string name="glide_title"><u>Glide (image loading and caching)</u></string>
+    <string name="cropper_title"><u>Android Image Cropper (image crop and rotate)</u></string>
+    <string name="multiselect_title"><u>RecyclerView MultiSelect (selecting multiple list items)</u></string>
+    <string name="rtl_viewpager_title"><u>RtlViewPager (right to left image swiping)</u></string>
+    <string name="filepicker_title"><u>Simple File Picker (filepicker dialog)</u></string>
+    <string name="fileproperties_title"><u>Simple File Properties (properties dialog)</u></string>
+    <string name="ambilwarna_title"><u>AmbilWarna (színválasztó)</u></string>
+    <string name="joda_title"><u>Joda-Time (Java dátum helyettesítérére)</u></string>
+    <string name="stetho_title"><u>Stetho (adatbázisok hibakeresésére)</u></string>
+    <string name="otto_title"><u>Otto (event bus)</u></string>
 </resources>
