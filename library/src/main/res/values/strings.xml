@@ -1,4 +1,7 @@
 <resources>
+    <string name="smtco_ok">OK</string>
+    <string name="smtco_cancel">Cancel</string>
+
     <!-- Confirmation dialog -->
     <string name="smtco_proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
     <string name="smtco_yes">Yes</string>

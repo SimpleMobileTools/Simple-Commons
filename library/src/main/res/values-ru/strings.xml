@@ -1,6 +1,9 @@
 <resources>
+    <string name="smtco_ok">OK</string>
+    <string name="smtco_cancel">Отмена</string>
+
     <!-- Confirmation dialog -->
-    <string name="smtfp_proceed_with_deletion">Действительно хотите удалить?</string>
-    <string name="smtfp_yes">Да</string>
-    <string name="smtfp_no">Нет</string>
+    <string name="smtco_proceed_with_deletion">Действительно хотите удалить?</string>
+    <string name="smtco_yes">Да</string>
+    <string name="smtco_no">Нет</string>
 </resources>

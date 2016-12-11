@@ -1,6 +1,9 @@
 <resources>
+    <string name="smtco_ok">OK</string>
+    <string name="smtco_cancel">Abbrechen</string>
+
     <!-- Confirmation dialog -->
-    <string name="smtfp_proceed_with_deletion">Möchtest du mit der Löschung fortfahren?</string>
-    <string name="smtfp_yes">Ja</string>
-    <string name="smtfp_no">Nein</string>
+    <string name="smtco_proceed_with_deletion">Möchtest du mit der Löschung fortfahren?</string>
+    <string name="smtco_yes">Ja</string>
+    <string name="smtco_no">Nein</string>
 </resources>
