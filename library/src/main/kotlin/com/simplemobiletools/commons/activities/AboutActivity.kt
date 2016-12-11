@@ -87,8 +87,7 @@ class AboutActivity : SimpleActivity() {
 
     fun setupLicense() {
         about_license.setOnClickListener {
-            /*val intent = Intent(applicationContext, LicenseActivity::class.java)
-            startActivity(intent)*/
+            startActivity(Intent(applicationContext, LicenseActivity::class.java))
         }
     }
 
