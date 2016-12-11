@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="color_primary">#fff68630</color>
-    <color name="color_primary_dark">#ffe27725</color>
-    <color name="color_accent">@color/color_primary</color>
+    <color name="smtco_color_primary">#fff68630</color>
+    <color name="smtco_color_primary_dark">#ffe27725</color>
+    <color name="smtco_color_accent">@color/smtco_color_primary</color>
 
-    <color name="pressed_item_foreground">#08000000</color>
-    <color name="activated_item_foreground">#44888888</color>
-    <color name="divider_grey">#44cccccc</color>
+    <color name="smtco_pressed_item_foreground">#08000000</color>
+    <color name="smtco_activated_item_foreground">#44888888</color>
+    <color name="smtco_divider_grey">#44cccccc</color>
 </resources>
