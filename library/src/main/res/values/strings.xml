@@ -9,9 +9,8 @@
 
     <!-- About activity -->
     <string name="about">About</string>
-    <string name="website">For the source codes visit\nhttp://simplemobiletools.com</string>
-    <string name="email_label">Send your feedback or suggestions to:</string>
-    <string name="email" translatable="false">hello@simplemobiletools.com</string>
+    <string name="website_label">For the source codes visit</string>
+    <string name="email_label">Send your feedback or suggestions to</string>
     <string name="more_apps_underlined"><u>More apps</u></string>
     <string name="third_party_licences_underlined"><u>Third party licences</u></string>
     <string name="invite_friends_underlined"><u>Invite friends</u></string>
@@ -21,4 +20,9 @@
     <string name="donate_underlined"><u>Donate</u></string>
     <string name="follow_us">Follow us:</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+
+    <!-- Do not translate, do not include these lines in new language files -->
+    <string name="two_string_placeholder" translatable="false">%1$s%2$s</string>
+    <string name="website" translatable="false">\nhttp://simplemobiletools.com</string>
+    <string name="email" translatable="false">hello@simplemobiletools.com</string>
 </resources>

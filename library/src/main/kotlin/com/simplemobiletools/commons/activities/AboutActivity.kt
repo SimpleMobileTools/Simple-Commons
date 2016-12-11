@@ -21,6 +21,7 @@ class AboutActivity : SimpleActivity() {
         setContentView(R.layout.activity_about)
         appName = intent.getStringExtra(APP_NAME) ?: ""
 
+        setupWebsite()
         setupEmail()
         setupMoreApps()
         setupRateUs()
@@ -32,9 +33,16 @@ class AboutActivity : SimpleActivity() {
         setupCopyright()
     }
 
+    private fun setupWebsite() {
+        val websiteText = String.format(getString(R.string.two_string_placeholder), getString(R.string.website_label), getString(R.string.website))
+        about_website.text = websiteText
+    }
+
     private fun setupEmail() {
+        val label = getString(R.string.email_label)
         val email = getString(R.string.email)
-        val href = "<a href=\"mailto:$email?subject=$appName\">$email</a>"
+
+        val href = "$label<br><a href=\"mailto:$email?subject=$appName\">$email</a>"
         about_email.text = Html.fromHtml(href)
         about_email.movementMethod = LinkMovementMethod.getInstance()
     }
