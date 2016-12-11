@@ -2,7 +2,6 @@ package com.simplemobiletools.commons.activities
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.text.Html
 import android.text.method.LinkMovementMethod
@@ -49,15 +48,14 @@ class AboutActivity : SimpleActivity() {
 
     private fun setupMoreApps() {
         about_more_apps.setOnClickListener {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=9070296388022589266")))
+            launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
         }
     }
 
     private fun setupCopyright() {
         val versionName = BuildConfig.VERSION_NAME
         val year = Calendar.getInstance().get(Calendar.YEAR)
-        val copyrightText = String.format(getString(R.string.copyright), versionName, year)
-        about_copyright.text = copyrightText
+        about_copyright.text = String.format(getString(R.string.copyright), versionName, year)
     }
 
     private fun setupRateUs() {
@@ -65,11 +63,10 @@ class AboutActivity : SimpleActivity() {
             about_rate_us.visibility = View.GONE
         } else {
             about_rate_us.setOnClickListener {
-                val uri = Uri.parse("market://details?id=$packageName")
                 try {
-                    startActivity(Intent(Intent.ACTION_VIEW, uri))
+                    launchViewIntent("market://details?id=$packageName")
                 } catch (ignored: ActivityNotFoundException) {
-                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(getStoreUrl())))
+                    launchViewIntent(getStoreUrl())
                 }
             }
         }
@@ -97,7 +94,7 @@ class AboutActivity : SimpleActivity() {
 
     fun setupDonate() {
         about_donate.setOnClickListener {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("http://simplemobiletools.github.io/donate")))
+            launchViewIntent("http://simplemobiletools.github.io/donate")
         }
     }
 
@@ -110,14 +107,13 @@ class AboutActivity : SimpleActivity() {
             } catch (ignored: Exception) {
             }
 
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(link)))
+            launchViewIntent(link)
         }
     }
 
     fun setupGPlus() {
         about_gplus.setOnClickListener {
-            val link = "https://plus.google.com/communities/104880861558693868382"
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(link)))
+            launchViewIntent("https://plus.google.com/communities/104880861558693868382")
         }
     }
 
