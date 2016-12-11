@@ -29,8 +29,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.1'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-    debugCompile project(path: ':library', configuration: 'debug')
-    releaseCompile project(path: ':library', configuration: 'release')
+    compile project(':library')
 }
 
 buildscript {
