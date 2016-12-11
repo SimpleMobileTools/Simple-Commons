@@ -1,5 +1,5 @@
 # Simple-Commons
-Some helper functions, dialogs etc used by all simple apps
+Some helper functions, dialogs etc used by multiple simple apps.
 
 License
 -------
