@@ -37,7 +37,7 @@
     <string name="stetho_title">Stetho (debugging databases)</string>
     <string name="otto_title">Otto (event bus)</string>
 
-    <!-- DO NOT TRANSLATE, do not include these lines in new language files -->
+    <!-- DO NOT TRANSLATE, do not include anything below this line in new language files -->
     <!-- About -->
     <string name="two_string_placeholder" translatable="false">%1$s%2$s</string>
     <string name="website" translatable="false">\nhttp://simplemobiletools.com</string>

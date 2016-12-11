@@ -8,6 +8,7 @@ import android.text.method.LinkMovementMethod
 import android.view.View
 import com.simplemobiletools.commons.BuildConfig
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
 import kotlinx.android.synthetic.main.activity_about.*
 import java.util.*
@@ -87,7 +88,10 @@ class AboutActivity : SimpleActivity() {
 
     fun setupLicense() {
         about_license.setOnClickListener {
-            startActivity(Intent(applicationContext, LicenseActivity::class.java))
+            Intent(applicationContext, LicenseActivity::class.java).apply {
+                putExtra(APP_LICENSES, intent.getIntExtra(APP_LICENSES, 0))
+                startActivity(this)
+            }
         }
     }
 
