@@ -24,16 +24,16 @@
     <!-- License -->
     <string name="notice">Esta aplicação usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>
     <string name="third_party_licences">Licenças de terceiros</string>
-    <string name="kotlin_title"><u>Kotlin (linguagem de programação)</u></string>
-    <string name="subsampling_title"><u>Subsampling Scale Image View (ampliação de imagens)</u></string>
-    <string name="glide_title"><u>Glide (carregamento e cache de imagens)</u></string>
-    <string name="cropper_title"><u>Android Image Cropper (recorte e rotação de imagens)</u></string>
-    <string name="multiselect_title"><u>RecyclerView MultiSelect (seleção múltipla de itens)</u></string>
-    <string name="rtl_viewpager_title"><u>RtlViewPager (para percorrer as imagens)</u></string>
-    <string name="filepicker_title"><u>Simple File Picker (diálogo de seleção de ficheiros)</u></string>
-    <string name="fileproperties_title"><u>Simple File Properties (diálogo de propriedades)</u></string>
-    <string name="ambilwarna_title"><u>AmbilWarna (color picker)</u></string>
-    <string name="joda_title"><u>Joda-Time (Java date replacement)</u></string>
-    <string name="stetho_title"><u>Stetho (debugging databases)</u></string>
-    <string name="otto_title"><u>Otto (event bus)</u></string>
+    <string name="kotlin_title">Kotlin (linguagem de programação)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (ampliação de imagens)</string>
+    <string name="glide_title">Glide (carregamento e cache de imagens)</string>
+    <string name="cropper_title">Android Image Cropper (recorte e rotação de imagens)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (seleção múltipla de itens)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (para percorrer as imagens)</string>
+    <string name="filepicker_title">Simple File Picker (diálogo de seleção de ficheiros)</string>
+    <string name="fileproperties_title">Simple File Properties (diálogo de propriedades)</string>
+    <string name="ambilwarna_title">AmbilWarna (color picker)</string>
+    <string name="joda_title">Joda-Time (Java date replacement)</string>
+    <string name="stetho_title">Stetho (debugging databases)</string>
+    <string name="otto_title">Otto (event bus)</string>
 </resources>
