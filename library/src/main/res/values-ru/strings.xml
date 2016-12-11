@@ -2,6 +2,22 @@
     <string name="ok">OK</string>
     <string name="cancel">Отмена</string>
 
+    <!-- Actionbar items -->
+    <string name="delete">Удалить</string>
+    <string name="rename">Переименовать</string>
+    <string name="share">Поделиться</string>
+    <string name="share_via">Отправить по</string>
+    <string name="properties">Свойства</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">Сортировать по</string>
+    <string name="name">Имя</string>
+    <string name="size">Размер</string>
+    <string name="last_modified">Время изменения</string>
+    <string name="date_taken">Время создания</string>
+    <string name="ascending">По возрастанию</string>
+    <string name="descending">По убыванию</string>
+
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Действительно хотите удалить?</string>
     <string name="yes">Да</string>

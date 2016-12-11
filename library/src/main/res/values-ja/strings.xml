@@ -2,6 +2,22 @@
     <string name="ok">OK</string>
     <string name="cancel">キャンセル</string>
 
+    <!-- Actionbar items -->
+    <string name="delete">削除</string>
+    <string name="rename">名前の変更</string>
+    <string name="share">共有</string>
+    <string name="share_via">共有&#8230;</string>
+    <string name="properties">プロパティ</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">並び替え</string>
+    <string name="name">名前</string>
+    <string name="size">サイズ</string>
+    <string name="last_modified">Last modified</string>
+    <string name="date_taken">Date taken</string>
+    <string name="ascending">昇順</string>
+    <string name="descending">降順</string>
+
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">削除を続行してもよろしいですか?</string>
     <string name="yes">はい</string>

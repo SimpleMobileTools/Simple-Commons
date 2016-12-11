@@ -2,6 +2,22 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
 
+    <!-- Actionbar items -->
+    <string name="delete">Delete</string>
+    <string name="rename">Rename</string>
+    <string name="share">Share</string>
+    <string name="share_via">Share via</string>
+    <string name="properties">Properties</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">Sort by</string>
+    <string name="name">Name</string>
+    <string name="size">Size</string>
+    <string name="last_modified">Last modified</string>
+    <string name="date_taken">Date taken</string>
+    <string name="ascending">Ascending</string>
+    <string name="descending">Descending</string>
+
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
     <string name="yes">Yes</string>

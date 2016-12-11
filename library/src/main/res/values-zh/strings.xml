@@ -2,6 +2,22 @@
     <string name="ok">确认</string>
     <string name="cancel">取消</string>
 
+    <!-- Actionbar items -->
+    <string name="delete">删除</string>
+    <string name="rename">重命名</string>
+    <string name="share">分享</string>
+    <string name="share_via">分享到</string>
+    <string name="properties">信息</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">排序方式</string>
+    <string name="name">名称</string>
+    <string name="size">大小</string>
+    <string name="last_modified">Last modified</string>
+    <string name="date_taken">Date taken</string>
+    <string name="ascending">递增</string>
+    <string name="descending">递减</string>
+
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
     <string name="yes">Yes</string>
