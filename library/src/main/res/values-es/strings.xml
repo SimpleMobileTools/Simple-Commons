@@ -1,23 +1,23 @@
 <resources>
-    <string name="smtco_ok">OK</string>
-    <string name="smtco_cancel">Cancelar</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancelar</string>
 
     <!-- Confirmation dialog -->
-    <string name="smtco_proceed_with_deletion">¿Está seguro de querer continuar con la eliminación?</string>
-    <string name="smtco_yes">Sí</string>
-    <string name="smtco_no">No</string>
+    <string name="proceed_with_deletion">¿Está seguro de querer continuar con la eliminación?</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
 
     <!-- About activity -->
-    <string name="smtco_about">Acerca de</string>
-    <string name="smtco_website">Más aplicaciones sencillas y código fuente en:\nhttp://simplemobiletools.com</string>
-    <string name="smtco_email_label">Envía tus comentarios o sugerencias a:</string>
-    <string name="smtco_more_apps_underlined"><u>More apps</u></string>
-    <string name="smtco_third_party_licences_underlined"><u>Licencias de terceros</u></string>
-    <string name="smtco_invite_friends_underlined"><u>Invitar a amigos</u></string>
-    <string name="smtco_share_text">Hola, ven y mira %1$s en %2$s</string>
-    <string name="smtco_invite_via">Invitar vía</string>
-    <string name="smtco_rate_us_underlined"><u>Vótanos en Play Store</u></string>
-    <string name="smtco_donate_underlined"><u>Donate</u></string>
-    <string name="smtco_follow_us">Síguenos:</string>
-    <string name="smtco_copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="about">Acerca de</string>
+    <string name="website">Más aplicaciones sencillas y código fuente en:\nhttp://simplemobiletools.com</string>
+    <string name="email_label">Envía tus comentarios o sugerencias a:</string>
+    <string name="more_apps_underlined"><u>More apps</u></string>
+    <string name="third_party_licences_underlined"><u>Licencias de terceros</u></string>
+    <string name="invite_friends_underlined"><u>Invitar a amigos</u></string>
+    <string name="share_text">Hola, ven y mira %1$s en %2$s</string>
+    <string name="invite_via">Invitar vía</string>
+    <string name="rate_us_underlined"><u>Vótanos en Play Store</u></string>
+    <string name="donate_underlined"><u>Donate</u></string>
+    <string name="follow_us">Síguenos:</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
 </resources>

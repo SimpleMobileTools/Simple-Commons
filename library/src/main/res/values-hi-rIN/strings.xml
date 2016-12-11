@@ -1,23 +1,23 @@
 <resources>
-    <string name="smtco_ok">ठीक</string>
-    <string name="smtco_cancel">रद्द करें</string>
+    <string name="ok">ठीक</string>
+    <string name="cancel">रद्द करें</string>
 
     <!-- Confirmation dialog -->
-    <string name="smtco_proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
-    <string name="smtco_yes">Yes</string>
-    <string name="smtco_no">No</string>
+    <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
     <!-- About activity -->
-    <string name="smtco_about">के बारे में</string>
-    <string name="smtco_website">अधिक एप्पस व सोर्स कोड:\nhttp://simplemobiletools.com</string>
-    <string name="smtco_email_label">अपनी राय या सुझाव को भेजें:</string>
-    <string name="smtco_more_apps_underlined"><u>More apps</u></string>
-    <string name="smtco_third_party_licences_underlined"><u> तीसरी पार्टी के लाइसेंस </u></string>
-    <string name="smtco_invite_friends_underlined"><u>मित्रो को आमन्त्रित करें</u></string>
-    <string name="smtco_share_text">अरे, %1$s को %2$s पर देखो</string>
-    <string name="smtco_invite_via">के माध्यम से आमंत्रित</string>
-    <string name="smtco_rate_us_underlined"><u>हमे प्ले स्टोर पर रेट करें</u></string>
-    <string name="smtco_donate_underlined"><u>Donate</u></string>
-    <string name="smtco_follow_us">हमे फॉलो करें:</string>
-    <string name="smtco_copyright">सं %1$s\nकॉपीराइट © सिंपल मोबाइल टूल्स %2$d</string>
+    <string name="about">के बारे में</string>
+    <string name="website">अधिक एप्पस व सोर्स कोड:\nhttp://simplemobiletools.com</string>
+    <string name="email_label">अपनी राय या सुझाव को भेजें:</string>
+    <string name="more_apps_underlined"><u>More apps</u></string>
+    <string name="third_party_licences_underlined"><u> तीसरी पार्टी के लाइसेंस </u></string>
+    <string name="invite_friends_underlined"><u>मित्रो को आमन्त्रित करें</u></string>
+    <string name="share_text">अरे, %1$s को %2$s पर देखो</string>
+    <string name="invite_via">के माध्यम से आमंत्रित</string>
+    <string name="rate_us_underlined"><u>हमे प्ले स्टोर पर रेट करें</u></string>
+    <string name="donate_underlined"><u>Donate</u></string>
+    <string name="follow_us">हमे फॉलो करें:</string>
+    <string name="copyright">सं %1$s\nकॉपीराइट © सिंपल मोबाइल टूल्स %2$d</string>
 </resources>

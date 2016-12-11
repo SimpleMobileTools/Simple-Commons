@@ -1,23 +1,23 @@
 <resources>
-    <string name="smtco_ok">OK</string>
-    <string name="smtco_cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
 
     <!-- Confirmation dialog -->
-    <string name="smtco_proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
-    <string name="smtco_yes">Yes</string>
-    <string name="smtco_no">No</string>
+    <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
     <!-- About activity -->
-    <string name="smtco_about">Om</string>
-    <string name="smtco_website">Fler enkla appar och källkod här:\nhttp://simplemobiletools.com</string>
-    <string name="smtco_email_label">Skicka feedback och förslag till:</string>
-    <string name="smtco_more_apps_underlined"><u>More apps</u></string>
-    <string name="smtco_third_party_licences_underlined"><u>Tredjepartslicenser</u></string>
-    <string name="smtco_invite_friends_underlined"><u>Invite friends</u></string>
-    <string name="smtco_share_text">Hey, come check out %1$s at %2$s</string>
-    <string name="smtco_invite_via">Invite via</string>
-    <string name="smtco_rate_us_underlined"><u>Betygsätt oss i Play Butiken</u></string>
-    <string name="smtco_donate_underlined"><u>Donate</u></string>
-    <string name="smtco_follow_us">Följ oss:</string>
-    <string name="smtco_copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="about">Om</string>
+    <string name="website">Fler enkla appar och källkod här:\nhttp://simplemobiletools.com</string>
+    <string name="email_label">Skicka feedback och förslag till:</string>
+    <string name="more_apps_underlined"><u>More apps</u></string>
+    <string name="third_party_licences_underlined"><u>Tredjepartslicenser</u></string>
+    <string name="invite_friends_underlined"><u>Invite friends</u></string>
+    <string name="share_text">Hey, come check out %1$s at %2$s</string>
+    <string name="invite_via">Invite via</string>
+    <string name="rate_us_underlined"><u>Betygsätt oss i Play Butiken</u></string>
+    <string name="donate_underlined"><u>Donate</u></string>
+    <string name="follow_us">Följ oss:</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
 </resources>

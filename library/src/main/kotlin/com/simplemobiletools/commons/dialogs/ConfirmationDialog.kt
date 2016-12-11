@@ -14,8 +14,8 @@ import com.simplemobiletools.commons.R
  * @param negative negative buttons text ID (optional)
  * @param callback an anonymous function
  */
-class ConfirmationDialog(context: Context, message: String = "", messageId: Int = R.string.smtco_proceed_with_deletion, positive: Int = R.string.smtco_yes,
-                         negative: Int = R.string.smtco_no, val callback: () -> Unit) {
+class ConfirmationDialog(context: Context, message: String = "", messageId: Int = R.string.proceed_with_deletion, positive: Int = R.string.yes,
+                         negative: Int = R.string.no, val callback: () -> Unit) {
     var dialog: AlertDialog? = null
 
     init {
