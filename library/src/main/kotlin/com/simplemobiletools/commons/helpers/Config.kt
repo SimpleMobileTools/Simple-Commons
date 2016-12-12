@@ -22,4 +22,8 @@ class Config private constructor(context: Context) {
     var isDarkTheme: Boolean
         get() = mPrefs.getBoolean(IS_DARK_THEME, false)
         set(isDarkTheme) = mPrefs.edit().putBoolean(IS_DARK_THEME, isDarkTheme).apply()
+
+    var lastVersion: Int
+        get() = mPrefs.getInt(LAST_VERSION, 0)
+        set(lastVersion) = mPrefs.edit().putInt(LAST_VERSION, lastVersion).apply()
 }

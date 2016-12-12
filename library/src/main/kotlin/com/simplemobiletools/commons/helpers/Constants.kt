@@ -7,6 +7,7 @@ val APP_LICENSES = "app_licenses"
 val PREFS_KEY = "Prefs"
 val IS_FIRST_RUN = "is_first_run"
 val IS_DARK_THEME = "is_dark_theme"
+val LAST_VERSION = "last_version"
 
 val LICENSE_KOTLIN = 1
 val LICENSE_SUBSAMPLING = 2
