@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.simplemobiletools.commons.extensions.getSharedPrefs
 
-class Config private constructor(context: Context) {
+class Config(context: Context) {
     private val mPrefs: SharedPreferences
 
     companion object {
