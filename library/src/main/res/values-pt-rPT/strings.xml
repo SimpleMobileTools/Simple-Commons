@@ -2,6 +2,27 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancelar</string>
     <string name="search">Search</string>
+    <string name="invalid_name">O nome contém caracteres inválidos</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">Copiar</string>
+    <string name="move">Mover</string>
+    <string name="copy_move">Copiar / mover para</string>
+    <string name="source">Origem</string>
+    <string name="destination">Destino</string>
+    <string name="select_destination">Selecione o destino</string>
+    <string name="invalid_destination">Não foi possível escrever no destino selecionado</string>
+    <string name="please_select_destination">Por favor selecione um destino</string>
+    <string name="source_and_destination_same">A origem e o destino não podem ser iguais</string>
+    <string name="copy_failed">Não foi possível copiar os ficheiros</string>
+    <string name="copying">A copiar&#8230;</string>
+    <string name="copying_success">Ficheiros copiados com sucesso</string>
+    <string name="copy_move_failed">Ocorreu um erro ao copiar</string>
+    <string name="moving">A mover&#8230;</string>
+    <string name="moving_success">Ficheiros movidos com sucesso</string>
+    <string name="already_exists">Já existe um ficheiro com este nome</string>
+    <string name="moving_success_partial">Alguns ficheiros não foram movidos</string>
+    <string name="copying_success_partial">Alguns ficheiros não foram copiados</string>
 
     <!-- Color customization -->
     <string name="background_color">Background color</string>
@@ -18,6 +39,7 @@
     <string name="share">Partilhar</string>
     <string name="share_via">Partilhar via</string>
     <string name="properties">Propriedades</string>
+    <string name="select_all">Selecionar tudo</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>

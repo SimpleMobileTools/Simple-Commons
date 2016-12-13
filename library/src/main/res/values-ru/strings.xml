@@ -2,6 +2,27 @@
     <string name="ok">OK</string>
     <string name="cancel">Отмена</string>
     <string name="search">Search</string>
+    <string name="invalid_name">Имя содержит недопустимые символы</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">Копировать</string>
+    <string name="move">Переместить</string>
+    <string name="copy_move">Копировать / Переместить</string>
+    <string name="source">Путь источника</string>
+    <string name="destination">Путь назначения</string>
+    <string name="select_destination">Выберите путь назначения</string>
+    <string name="invalid_destination">Не удалось записать в выбранное расположение</string>
+    <string name="please_select_destination">Пожалуйста, выберите путь назначения</string>
+    <string name="source_and_destination_same">Исходный и конечный пути не могут совпадать</string>
+    <string name="copy_failed">Не удалось скопировать файлы</string>
+    <string name="copying">Копирование&#8230;</string>
+    <string name="copying_success">Файлы скопированы успешно</string>
+    <string name="copy_move_failed">Произошла ошибка</string>
+    <string name="moving">Перемещение&#8230;</string>
+    <string name="moving_success">Файлы успешно перемещены</string>
+    <string name="already_exists">Файл с таким именем уже существует</string>
+    <string name="moving_success_partial">Некоторые файлы не могут быть перемещены</string>
+    <string name="copying_success_partial">Некоторые файлы не могут быть скопированы</string>
 
     <!-- Color customization -->
     <string name="background_color">Background color</string>
@@ -18,6 +39,7 @@
     <string name="share">Поделиться</string>
     <string name="share_via">Отправить по</string>
     <string name="properties">Свойства</string>
+    <string name="select_all">Выделить все</string>
 
     <!-- Sorting -->
     <string name="sort_by">Сортировать по</string>

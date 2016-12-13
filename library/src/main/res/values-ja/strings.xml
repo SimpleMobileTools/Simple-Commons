@@ -2,6 +2,27 @@
     <string name="ok">OK</string>
     <string name="cancel">キャンセル</string>
     <string name="search">Search</string>
+    <string name="invalid_name">名前に無効な文字が含まれています</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">コピー</string>
+    <string name="move">移動</string>
+    <string name="copy_move">コピー / 移動</string>
+    <string name="source">元</string>
+    <string name="destination">先</string>
+    <string name="select_destination">宛先を選択</string>
+    <string name="invalid_destination">選択した宛先に書き込みできませんでした</string>
+    <string name="please_select_destination">宛先を選択してください</string>
+    <string name="source_and_destination_same">元と先を同じにすることはできません</string>
+    <string name="copy_failed">ファイルをコピーできませんでした</string>
+    <string name="copying">コピー中&#8230;</string>
+    <string name="copying_success">ファイルを正常にコピーしました</string>
+    <string name="copy_move_failed">エラーが発生しました</string>
+    <string name="moving">移動中&#8230;</string>
+    <string name="moving_success">ファイルを正常に移動しました</string>
+    <string name="already_exists">その名前のファイルは既に存在します</string>
+    <string name="moving_success_partial">一部のファイルが移動できませんでした</string>
+    <string name="copying_success_partial">一部のファイルがコピーできませんでした</string>
 
     <!-- Color customization -->
     <string name="background_color">Background color</string>
@@ -18,6 +39,7 @@
     <string name="share">共有</string>
     <string name="share_via">共有&#8230;</string>
     <string name="properties">プロパティ</string>
+    <string name="select_all">Select all</string>
 
     <!-- Sorting -->
     <string name="sort_by">並び替え</string>

@@ -2,6 +2,27 @@
     <string name="ok">OK</string>
     <string name="cancel">Avbryt</string>
     <string name="search">Search</string>
+    <string name="invalid_name">Namnet innehåller ogiltiga tecken</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">Kopiera</string>
+    <string name="move">Flytta</string>
+    <string name="copy_move">Copy / Move</string>
+    <string name="source">Källa</string>
+    <string name="destination">Mål</string>
+    <string name="select_destination">Välj mål</string>
+    <string name="invalid_destination">Det gick inte att skriva till målet</string>
+    <string name="please_select_destination">Please select a destination</string>
+    <string name="source_and_destination_same">Source and destination cannot be the same</string>
+    <string name="copy_failed">Kunde inte kopiera filen</string>
+    <string name="copying">Kopierar&#8230;</string>
+    <string name="copying_success">Files copied successfully</string>
+    <string name="copy_move_failed">An error occurred</string>
+    <string name="moving">Moving&#8230;</string>
+    <string name="moving_success">Files moved successfully</string>
+    <string name="already_exists">A file with that name already exists</string>
+    <string name="moving_success_partial">Some files could not be moved</string>
+    <string name="copying_success_partial">Some files could not be copied</string>
 
     <!-- Color customization -->
     <string name="background_color">Background color</string>
@@ -18,6 +39,7 @@
     <string name="share">Dela</string>
     <string name="share_via">Dela via</string>
     <string name="properties">Egenskaper</string>
+    <string name="select_all">Select all</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortera efter</string>

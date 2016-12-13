@@ -2,6 +2,27 @@
     <string name="ok">确认</string>
     <string name="cancel">取消</string>
     <string name="search">Search</string>
+    <string name="invalid_name">The name contains invalid characters</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">复制</string>
+    <string name="move">移动</string>
+    <string name="copy_move">复制 / 移动</string>
+    <string name="source">原路径</string>
+    <string name="destination">目标</string>
+    <string name="select_destination">选择目标</string>
+    <string name="invalid_destination">不能写入选中目标</string>
+    <string name="please_select_destination">请选择先目标</string>
+    <string name="source_and_destination_same">原路径和目标不能相同</string>
+    <string name="copy_failed">不能复制文件</string>
+    <string name="copying">正在复制&#8230;</string>
+    <string name="copying_success">复制成功</string>
+    <string name="copy_move_failed">操作失败</string>
+    <string name="moving">移动中&#8230;</string>
+    <string name="moving_success">文件移动成功</string>
+    <string name="already_exists">相同的文件名已经存在</string>
+    <string name="moving_success_partial">相同文件不能移动</string>
+    <string name="copying_success_partial">相同文件不能复制</string>
 
     <!-- Color customization -->
     <string name="background_color">Background color</string>
@@ -18,6 +39,7 @@
     <string name="share">分享</string>
     <string name="share_via">分享到</string>
     <string name="properties">信息</string>
+    <string name="select_all">Select all</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序方式</string>
