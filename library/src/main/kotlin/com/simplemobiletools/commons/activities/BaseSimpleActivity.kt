@@ -8,6 +8,7 @@ import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
 import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.helpers.OPEN_DOCUMENT_TREE
@@ -48,9 +49,10 @@ open class BaseSimpleActivity : AppCompatActivity() {
         contentResolver.takePersistableUriPermission(treeUri, takeFlags)
     }
 
-    fun startAboutActivity(appNameId: Int) {
+    fun startAboutActivity(appNameId: Int, licenseMask: Int) {
         Intent(applicationContext, AboutActivity::class.java).apply {
             putExtra(APP_NAME, getString(appNameId))
+            putExtra(APP_LICENSES, licenseMask)
             startActivity(this)
         }
     }
