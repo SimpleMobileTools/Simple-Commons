@@ -1,6 +1,12 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">キャンセル</string>
+    <string name="search">Search</string>
+
+    <!-- Color customization -->
+    <string name="background_color">Background color</string>
+    <string name="font_color">Font color</string>
+    <string name="primary_color">Primary color</string>
 
     <!-- What's new -->
     <string name="whats_new">What\'s new</string>
