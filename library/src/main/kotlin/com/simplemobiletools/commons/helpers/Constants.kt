@@ -8,7 +8,9 @@ val PREFS_KEY = "Prefs"
 val IS_FIRST_RUN = "is_first_run"
 val IS_DARK_THEME = "is_dark_theme"
 val LAST_VERSION = "last_version"
+val TREE_URI = "tree_uri"
 
+// licenses
 val LICENSE_KOTLIN = 1
 val LICENSE_SUBSAMPLING = 2
 val LICENSE_GLIDE = 4
@@ -21,3 +23,6 @@ val LICENSE_AMBILWARNA = 256
 val LICENSE_JODA = 512
 val LICENSE_STETHO = 1024
 val LICENSE_OTTO = 2048
+
+// global intents
+val OPEN_DOCUMENT_TREE = 1000

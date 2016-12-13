@@ -13,7 +13,7 @@ import com.simplemobiletools.commons.helpers.APP_NAME
 import kotlinx.android.synthetic.main.activity_about.*
 import java.util.*
 
-class AboutActivity : SimpleActivity() {
+class AboutActivity : BaseSimpleActivity() {
     var appName = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,7 +60,7 @@ class AboutActivity : SimpleActivity() {
     }
 
     private fun setupRateUs() {
-        if (config.isFirstRun) {
+        if (baseConfig.isFirstRun) {
             about_rate_us.visibility = View.GONE
         } else {
             about_rate_us.setOnClickListener {

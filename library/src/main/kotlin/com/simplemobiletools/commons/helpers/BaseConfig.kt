@@ -4,11 +4,11 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.simplemobiletools.commons.extensions.getSharedPrefs
 
-class Config(context: Context) {
+open class BaseConfig(context: Context) {
     private val mPrefs: SharedPreferences
 
     companion object {
-        fun newInstance(context: Context) = Config(context)
+        fun newInstance(context: Context) = BaseConfig(context)
     }
 
     init {
@@ -26,4 +26,8 @@ class Config(context: Context) {
     var lastVersion: Int
         get() = mPrefs.getInt(LAST_VERSION, 0)
         set(lastVersion) = mPrefs.edit().putInt(LAST_VERSION, lastVersion).apply()
+
+    var treeUri: String
+        get() = mPrefs.getString(TREE_URI, "")
+        set(uri) = mPrefs.edit().putString(TREE_URI, uri).apply()
 }

@@ -10,7 +10,7 @@ import com.simplemobiletools.commons.models.License
 import kotlinx.android.synthetic.main.activity_license.*
 import kotlinx.android.synthetic.main.license_item.view.*
 
-class LicenseActivity : SimpleActivity() {
+class LicenseActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_license)
