@@ -24,6 +24,14 @@
     <string name="moving_success_partial">Alcuni file non possono essere spostati</string>
     <string name="copying_success_partial">Alcuni file non possono essere copiati</string>
 
+    <!-- Copy conflicts -->
+    <string name="file_already_exists">File $%1s already exists</string>
+    <string name="select_an_action">Select an action</string>
+    <string name="overwrite">Overwrite</string>
+    <string name="skip">Skip</string>
+    <string name="append">Append with '_1'</string>
+    <string name="apply_to_all">Apply to all conflicts</string>
+
     <!-- Color customization -->
     <string name="background_color">Background color</string>
     <string name="font_color">Font color</string>
