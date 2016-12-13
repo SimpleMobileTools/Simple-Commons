@@ -23,12 +23,12 @@
     <string name="file_exists">Es existiert bereits eine Datei mit diesem Namen</string>
     <string name="moving_success_partial">Einige Dateien konnten nicht verschoben werden</string>
     <string name="copying_success_partial">Einige Dateien konnten nicht kopiert werden</string>
-    <string name="create_new_directory">Erstelle neuen Ordner</string>
+    <string name="create_new_directory">Neuen Ordner erstellen</string>
     <string name="directory_exists">Es existiert bereits ein Ordner mit diesem Namen</string>
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">Datei $%1s existiert bereits</string>
-    <string name="select_an_action">Wähle eine Aktion aus</string>
+    <string name="select_an_action">Aktion auswählen</string>
     <string name="overwrite">Überschreiben</string>
     <string name="skip">Überspringen</string>
     <string name="append">Append with '_1'</string>
@@ -43,7 +43,7 @@
     <string name="custom">Custom</string>
 
     <!-- What's new -->
-    <string name="whats_new">Was ist neu?</string>
+    <string name="whats_new">Neue Funktionen</string>
     <string name="whats_new_disclaimer">* Hier werden kleinere Verbesserungen weggelassen</string>
 
     <!-- Actionbar items -->
@@ -93,12 +93,12 @@
     <string name="subsampling_title">Subsampling Scale Image View (Zoombare Bilder)</string>
     <string name="glide_title">Glide (Bilder laden und zwischenspeichern)</string>
     <string name="cropper_title">Android Image Cropper (Bilder zuschneiden und rotieren)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (for swiping images right to left)</string>
-    <string name="filepicker_title">Simple File Picker (filepicker dialog)</string>
-    <string name="fileproperties_title">Simple File Properties (properties dialog)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (Mehrfachauswahl in Listen)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (Um Bilder von rechts nach links zu wischen)</string>
+    <string name="filepicker_title">Simple File Picker (Dateiauswahldialog)</string>
+    <string name="fileproperties_title">Simple File Properties (Einstellungsdialog)</string>
     <string name="ambilwarna_title">AmbilWarna (Farbauswahltool)</string>
     <string name="joda_title">Joda-Time (Ersatz für Java Datum)</string>
-    <string name="stetho_title">Stetho (debugging databases)</string>
+    <string name="stetho_title">Stetho (Datenbanken debuggen)</string>
     <string name="otto_title">Otto (event bus)</string>
 </resources>
