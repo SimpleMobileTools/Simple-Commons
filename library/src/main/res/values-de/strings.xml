@@ -1,7 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Abbrechen</string>
-    <string name="search">Search</string>
+    <string name="search">Suche</string>
     <string name="invalid_name">Der Name enthält nicht erlaubte Zeichen</string>
 
     <!-- Copy / Move -->
@@ -12,39 +12,39 @@
     <string name="destination">Ziel</string>
     <string name="select_destination">Ziel auswählen</string>
     <string name="invalid_destination">Konnte nicht an ausgewähltes Ziel schreiben</string>
-    <string name="please_select_destination">Bitte wähle ein Ziel</string>
-    <string name="source_and_destination_same">Source and destination cannot be the same</string>
+    <string name="please_select_destination">Bitte Ziel auswählen</string>
+    <string name="source_and_destination_same">Quell- und Zielpfad sind identisch</string>
     <string name="copy_failed">Konnte die Datei nicht kopieren</string>
     <string name="copying">Kopiere&#8230;</string>
-    <string name="copying_success">Files copied successfully</string>
-    <string name="copy_move_failed">An error occurred</string>
-    <string name="moving">Moving&#8230;</string>
-    <string name="moving_success">Files moved successfully</string>
-    <string name="file_exists">A file with that name already exists</string>
-    <string name="moving_success_partial">Some files could not be moved</string>
-    <string name="copying_success_partial">Some files could not be copied</string>
-    <string name="create_new_directory">Create new directory</string>
-    <string name="directory_exists">A directory with that name already exists</string>
+    <string name="copying_success">Dateien erfolgreich kopiert</string>
+    <string name="copy_move_failed">Es ist ein Fehler aufgetreten</string>
+    <string name="moving">Verschiebe&#8230;</string>
+    <string name="moving_success">Dateien erfolgreich verschoben</string>
+    <string name="file_exists">Es existiert bereits eine Datei mit diesem Namen</string>
+    <string name="moving_success_partial">Einige Dateien konnten nicht verschoben werden</string>
+    <string name="copying_success_partial">Einige Dateien konnten nicht kopiert werden</string>
+    <string name="create_new_directory">Erstelle neuen Ordner</string>
+    <string name="directory_exists">Es existiert bereits ein Ordner mit diesem Namen</string>
 
     <!-- Copy conflicts -->
-    <string name="file_already_exists">File $%1s already exists</string>
-    <string name="select_an_action">Select an action</string>
-    <string name="overwrite">Overwrite</string>
-    <string name="skip">Skip</string>
+    <string name="file_already_exists">Datei $%1s existiert bereits</string>
+    <string name="select_an_action">Wähle eine Aktion aus</string>
+    <string name="overwrite">Überschreiben</string>
+    <string name="skip">Überspringen</string>
     <string name="append">Append with '_1'</string>
-    <string name="apply_to_all">Apply to all conflicts</string>
+    <string name="apply_to_all">Bei allen Konflikten anwenden</string>
 
     <!-- Color customization -->
-    <string name="background_color">Background color</string>
-    <string name="font_color">Font color</string>
-    <string name="primary_color">Primary color</string>
-    <string name="light_theme">Light theme</string>
-    <string name="dark_theme">Dark theme</string>
+    <string name="background_color">Hintergrundfarbe</string>
+    <string name="font_color">Schriftfarbe</string>
+    <string name="primary_color">Primäre Farbe</string>
+    <string name="light_theme">Helles Thema</string>
+    <string name="dark_theme">Dunkles Thema</string>
     <string name="custom">Custom</string>
 
     <!-- What's new -->
-    <string name="whats_new">What\'s new</string>
-    <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
+    <string name="whats_new">Was ist neu?</string>
+    <string name="whats_new_disclaimer">* Hier werden kleinere Verbesserungen weggelassen</string>
 
     <!-- Actionbar items -->
     <string name="delete">Löschen</string>
@@ -52,13 +52,13 @@
     <string name="share">Teilen</string>
     <string name="share_via">Teilen via</string>
     <string name="properties">Eigenschaften</string>
-    <string name="select_all">Select all</string>
+    <string name="select_all">Alle auswählen</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortieren nach</string>
     <string name="name">Name</string>
     <string name="size">Größe</string>
-    <string name="last_modified">Last modified</string>
+    <string name="last_modified">Änderungsdatum</string>
     <string name="date_taken">Date taken</string>
     <string name="ascending">Aufsteigend</string>
     <string name="descending">Absteigend</string>
@@ -69,8 +69,8 @@
     <string name="no">Nein</string>
 
     <!-- Settings -->
-    <string name="settings">Settings</string>
-    <string name="customize_colors">Customize colors</string>
+    <string name="settings">Einstellungen</string>
+    <string name="customize_colors">Farben anpassen</string>
 
     <!-- About -->
     <string name="about">Über</string>
@@ -90,9 +90,9 @@
     <string name="notice">Diese App nutzt die folgenden Drittanbieterbilbiotheken, die mein Leben einfacher machen. Danke.</string>
     <string name="third_party_licences">Drittanbieterlizenzen</string>
     <string name="kotlin_title">Kotlin (Programmiersprache)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (Zoombare Bilder)</string>
     <string name="glide_title">Glide (Bilder laden und zwischenspeichern)</string>
-    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
+    <string name="cropper_title">Android Image Cropper (Bilder zuschneiden und rotieren)</string>
     <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
     <string name="rtl_viewpager_title">RtlViewPager (for swiping images right to left)</string>
     <string name="filepicker_title">Simple File Picker (filepicker dialog)</string>
