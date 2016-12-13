@@ -20,9 +20,11 @@
     <string name="copy_move_failed">Si è verificato un errore</string>
     <string name="moving">Spostando&#8230;</string>
     <string name="moving_success">File spostati correttamente</string>
-    <string name="already_exists">Esiste già un file con questo nome</string>
+    <string name="file_exists">Esiste già un file con questo nome</string>
     <string name="moving_success_partial">Alcuni file non possono essere spostati</string>
     <string name="copying_success_partial">Alcuni file non possono essere copiati</string>
+    <string name="create_new_directory">Create new directory</string>
+    <string name="directory_exists">A directory with that name already exists</string>
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">File $%1s already exists</string>
