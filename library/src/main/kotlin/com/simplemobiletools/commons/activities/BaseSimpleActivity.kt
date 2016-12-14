@@ -20,6 +20,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         baseConfig = BaseConfig.newInstance(applicationContext)
+        updateBackgroundColor()
         super.onCreate(savedInstanceState)
     }
 
@@ -31,6 +32,10 @@ open class BaseSimpleActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    fun updateBackgroundColor() {
+        window.decorView.setBackgroundColor(baseConfig.backgroundColor)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {

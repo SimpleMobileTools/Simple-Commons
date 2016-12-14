@@ -44,6 +44,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             override fun onOk(dialog: AmbilWarnaDialog, color: Int) {
                 baseConfig.backgroundColor = color
                 setupColors()
+                updateBackgroundColor()
             }
         }).show()
     }
