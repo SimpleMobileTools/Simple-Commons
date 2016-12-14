@@ -13,6 +13,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         setupColors()
         updateTextColors(customization_holder)
+        updateActionbarColor()
 
         customization_text_color_holder.setOnClickListener { pickTextColor() }
         customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
@@ -59,6 +60,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             override fun onOk(dialog: AmbilWarnaDialog, color: Int) {
                 baseConfig.primaryColor = color
                 setupColors()
+                updateActionbarColor()
             }
         }).show()
     }

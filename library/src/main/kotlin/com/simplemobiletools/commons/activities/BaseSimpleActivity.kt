@@ -3,6 +3,8 @@ package com.simplemobiletools.commons.activities
 import android.annotation.TargetApi
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -23,6 +25,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         baseConfig = BaseConfig.newInstance(applicationContext)
         updateBackgroundColor()
+        updateActionbarColor()
         super.onCreate(savedInstanceState)
     }
 
@@ -38,6 +41,21 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     fun updateBackgroundColor() {
         window.decorView.setBackgroundColor(baseConfig.backgroundColor)
+    }
+
+    fun updateActionbarColor() {
+        supportActionBar?.setBackgroundDrawable(ColorDrawable(baseConfig.primaryColor))
+        updateStatusbarColor()
+    }
+
+    fun updateStatusbarColor() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            val hsv = FloatArray(3)
+            Color.colorToHSV(baseConfig.primaryColor, hsv)
+            hsv[2] *= 0.9f
+
+            window.statusBarColor = Color.HSVToColor(hsv)
+        }
     }
 
     fun updateTextColors(viewGroup: ViewGroup) {
