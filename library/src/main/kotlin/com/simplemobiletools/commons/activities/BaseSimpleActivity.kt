@@ -53,7 +53,6 @@ open class BaseSimpleActivity : AppCompatActivity() {
             val hsv = FloatArray(3)
             Color.colorToHSV(baseConfig.primaryColor, hsv)
             hsv[2] *= 0.9f
-
             window.statusBarColor = Color.HSVToColor(hsv)
         }
     }

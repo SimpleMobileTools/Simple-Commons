@@ -2,9 +2,12 @@ package com.simplemobiletools.commons.dialogs
 
 import android.app.AlertDialog
 import android.content.Context
-import android.graphics.drawable.ColorDrawable
+import android.view.LayoutInflater
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.extensions.getContrastColor
+import com.simplemobiletools.commons.extensions.getDialogBackgroundColor
 import com.simplemobiletools.commons.helpers.BaseConfig
+import kotlinx.android.synthetic.main.dialog_message.view.*
 
 /**
  * A simple dialog without any view, just a messageId, a positive button and optionally a negative button
@@ -21,25 +24,25 @@ class ConfirmationDialog(context: Context, message: String = "", messageId: Int 
     var dialog: AlertDialog? = null
 
     init {
-        val builder = AlertDialog.Builder(context)
-                .setPositiveButton(positive, { dialog, which -> dialogConfirmed() })
+        val baseConfig = BaseConfig.newInstance(context)
+        val view = LayoutInflater.from(context).inflate(R.layout.dialog_message, null)
+        view.message.text = if (message.isEmpty()) context.resources.getString(messageId) else message
+        view.message.setTextColor(baseConfig.backgroundColor.getContrastColor())
 
-        if (message.isEmpty())
-            builder.setMessage(messageId)
-        else
-            builder.setMessage(message)
+        val builder = AlertDialog.Builder(context)
+                .setView(view)
+                .setPositiveButton(positive, { dialog, which -> dialogConfirmed() })
 
         if (negative != 0)
             builder.setNegativeButton(negative, null)
 
-        val baseConfig = BaseConfig.newInstance(context)
         val primaryColor = baseConfig.primaryColor
         dialog = builder.create().apply {
             setCanceledOnTouchOutside(true)
             show()
             getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(primaryColor)
             getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(primaryColor)
-            window.setBackgroundDrawable(ColorDrawable(baseConfig.backgroundColor))
+            window.setBackgroundDrawable(context.getDialogBackgroundColor(baseConfig))
         }
     }
 
