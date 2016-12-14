@@ -2,9 +2,10 @@ package com.simplemobiletools.commons.helpers
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getSharedPrefs
 
-open class BaseConfig(context: Context) {
+open class BaseConfig(val context: Context) {
     private val mPrefs: SharedPreferences
 
     companion object {
@@ -30,4 +31,16 @@ open class BaseConfig(context: Context) {
     var treeUri: String
         get() = mPrefs.getString(TREE_URI, "")
         set(uri) = mPrefs.edit().putString(TREE_URI, uri).apply()
+
+    var textColor: Int
+        get() = mPrefs.getInt(TEXT_COLOR, 0xFF333333.toInt())
+        set(textColor) = mPrefs.edit().putInt(TEXT_COLOR, textColor).apply()
+
+    var backgroundColor: Int
+        get() = mPrefs.getInt(BACKGROUND_COLOR, 0xFFEEEEEE.toInt())
+        set(backgroundColor) = mPrefs.edit().putInt(BACKGROUND_COLOR, backgroundColor).apply()
+
+    var primaryColor: Int
+        get() = mPrefs.getInt(PRIMARY_COLOR, context.getColor(R.color.color_primary))
+        set(primaryColor) = mPrefs.edit().putInt(PRIMARY_COLOR, primaryColor).apply()
 }

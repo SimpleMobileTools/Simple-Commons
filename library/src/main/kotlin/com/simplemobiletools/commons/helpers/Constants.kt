@@ -9,6 +9,9 @@ val IS_FIRST_RUN = "is_first_run"
 val IS_DARK_THEME = "is_dark_theme"
 val LAST_VERSION = "last_version"
 val TREE_URI = "tree_uri"
+val TEXT_COLOR = "text_color"
+val BACKGROUND_COLOR = "background_color"
+val PRIMARY_COLOR = "primary_color"
 
 // licenses
 val LICENSE_KOTLIN = 1
