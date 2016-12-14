@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.dialogs
 
 import android.app.AlertDialog
 import android.content.Context
+import android.graphics.drawable.ColorDrawable
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.BaseConfig
 
@@ -31,12 +32,14 @@ class ConfirmationDialog(context: Context, message: String = "", messageId: Int 
         if (negative != 0)
             builder.setNegativeButton(negative, null)
 
-        val primaryColor = BaseConfig.newInstance(context).primaryColor
+        val baseConfig = BaseConfig.newInstance(context)
+        val primaryColor = baseConfig.primaryColor
         dialog = builder.create().apply {
             setCanceledOnTouchOutside(true)
             show()
             getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(primaryColor)
             getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(primaryColor)
+            window.setBackgroundDrawable(ColorDrawable(baseConfig.backgroundColor))
         }
     }
 
