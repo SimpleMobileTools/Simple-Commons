@@ -11,7 +11,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
 
-        setupColors()
+        setupColorsPickers()
         updateTextColors(customization_holder)
         updateActionbarColor()
 
@@ -20,7 +20,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_primary_color_holder.setOnClickListener { pickPrimaryColor() }
     }
 
-    private fun setupColors() {
+    private fun setupColorsPickers() {
         customization_text_color.setBackgroundColor(baseConfig.textColor)
         customization_background_color.setBackgroundColor(baseConfig.backgroundColor)
         customization_primary_color.setBackgroundColor(baseConfig.primaryColor)
@@ -33,7 +33,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
             override fun onOk(dialog: AmbilWarnaDialog, color: Int) {
                 baseConfig.textColor = color
-                setupColors()
+                setupColorsPickers()
                 updateTextColors(customization_holder)
             }
         }).show()
@@ -46,7 +46,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
             override fun onOk(dialog: AmbilWarnaDialog, color: Int) {
                 baseConfig.backgroundColor = color
-                setupColors()
+                setupColorsPickers()
                 updateBackgroundColor()
             }
         }).show()
@@ -59,7 +59,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
             override fun onOk(dialog: AmbilWarnaDialog, color: Int) {
                 baseConfig.primaryColor = color
-                setupColors()
+                setupColorsPickers()
                 updateActionbarColor()
             }
         }).show()
