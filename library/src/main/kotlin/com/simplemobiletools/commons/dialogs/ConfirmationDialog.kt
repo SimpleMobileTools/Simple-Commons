@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.dialogs
 import android.app.AlertDialog
 import android.content.Context
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.helpers.BaseConfig
 
 /**
  * A simple dialog without any view, just a messageId, a positive button and optionally a negative button
@@ -30,9 +31,13 @@ class ConfirmationDialog(context: Context, message: String = "", messageId: Int 
         if (negative != 0)
             builder.setNegativeButton(negative, null)
 
-        dialog = builder.create()
-        dialog!!.setCanceledOnTouchOutside(true)
-        dialog!!.show()
+        val primaryColor = BaseConfig.newInstance(context).primaryColor
+        dialog = builder.create().apply {
+            setCanceledOnTouchOutside(true)
+            show()
+            getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(primaryColor)
+            getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(primaryColor)
+        }
     }
 
     private fun dialogConfirmed() {

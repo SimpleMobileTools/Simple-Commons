@@ -8,20 +8,25 @@ import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.models.Release
 import kotlinx.android.synthetic.main.dialog_whats_new.view.*
 
+
 class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
     var dialog: AlertDialog? = null
 
     init {
         val view = LayoutInflater.from(activity).inflate(R.layout.dialog_whats_new, null)
         view.whats_new_content.text = getNewReleases()
+
         val builder = AlertDialog.Builder(activity)
                 .setTitle(R.string.whats_new)
                 .setView(view)
                 .setPositiveButton(R.string.ok, null)
 
-        dialog = builder.create()
-        dialog!!.setCanceledOnTouchOutside(true)
-        dialog!!.show()
+        val primaryColor = BaseConfig.newInstance(activity).primaryColor
+        dialog = builder.create().apply {
+            setCanceledOnTouchOutside(true)
+            show()
+            getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(primaryColor)
+        }
     }
 
     fun getNewReleases(): String {
@@ -39,7 +44,6 @@ class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
         }
 
         config.lastVersion = if (releases.isEmpty()) 0 else releases.last().id
-
         return sb.toString()
     }
 }
