@@ -31,6 +31,7 @@ dependencies {
     compile 'com.simplemobiletools:filepicker:1.6.1@aar'
     compile 'com.android.support:design:25.0.1'
     compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.github.yukuku:ambilwarna:2.0.1'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
