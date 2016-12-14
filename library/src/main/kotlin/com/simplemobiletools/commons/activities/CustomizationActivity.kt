@@ -12,9 +12,10 @@ class CustomizationActivity : BaseSimpleActivity() {
         setContentView(R.layout.activity_customization)
 
         setupColors()
+        updateTextColors(customization_holder)
 
         customization_text_color_holder.setOnClickListener { pickTextColor() }
-        customization_background_color_holder.setOnClickListener { pickbackgroundColor() }
+        customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
         customization_primary_color_holder.setOnClickListener { pickPrimaryColor() }
     }
 
@@ -32,11 +33,12 @@ class CustomizationActivity : BaseSimpleActivity() {
             override fun onOk(dialog: AmbilWarnaDialog, color: Int) {
                 baseConfig.textColor = color
                 setupColors()
+                updateTextColors(customization_holder)
             }
         }).show()
     }
 
-    private fun pickbackgroundColor() {
+    private fun pickBackgroundColor() {
         AmbilWarnaDialog(this, baseConfig.backgroundColor, object : AmbilWarnaDialog.OnAmbilWarnaListener {
             override fun onCancel(dialog: AmbilWarnaDialog) {
             }

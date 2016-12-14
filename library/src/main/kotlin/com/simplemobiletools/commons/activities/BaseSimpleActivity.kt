@@ -8,6 +8,8 @@ import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import android.view.ViewGroup
+import android.widget.TextView
 import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
 import com.simplemobiletools.commons.helpers.BaseConfig
@@ -36,6 +38,18 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     fun updateBackgroundColor() {
         window.decorView.setBackgroundColor(baseConfig.backgroundColor)
+    }
+
+    fun updateTextColors(viewGroup: ViewGroup) {
+        val cnt = viewGroup.childCount
+        (0..cnt - 1).map { viewGroup.getChildAt(it) }
+                .forEach {
+                    if (it is TextView) {
+                        it.setTextColor(baseConfig.textColor)
+                    } else if (it is ViewGroup) {
+                        updateTextColors(it)
+                    }
+                }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
