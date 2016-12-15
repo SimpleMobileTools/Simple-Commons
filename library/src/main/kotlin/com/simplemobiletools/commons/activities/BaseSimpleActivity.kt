@@ -93,6 +93,8 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
+    fun startCustomizationActivity() = startActivity(Intent(this, CustomizationActivity::class.java))
+
     fun launchViewIntent(id: Int) = launchViewIntent(resources.getString(id))
 
     fun launchViewIntent(url: String) {
