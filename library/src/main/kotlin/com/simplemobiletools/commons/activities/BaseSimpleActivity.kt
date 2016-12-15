@@ -23,10 +23,10 @@ open class BaseSimpleActivity : AppCompatActivity() {
     lateinit var baseConfig: BaseConfig
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         baseConfig = BaseConfig.newInstance(applicationContext)
         updateBackgroundColor()
         updateActionbarColor()
-        super.onCreate(savedInstanceState)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
