@@ -30,11 +30,11 @@ open class BaseConfig(val context: Context) {
         set(uri) = prefs.edit().putString(TREE_URI, uri).apply()
 
     var textColor: Int
-        get() = prefs.getInt(TEXT_COLOR, 0xFF333333.toInt())
+        get() = prefs.getInt(TEXT_COLOR, context.resources.getColor(R.color.default_text_color))
         set(textColor) = prefs.edit().putInt(TEXT_COLOR, textColor).apply()
 
     var backgroundColor: Int
-        get() = prefs.getInt(BACKGROUND_COLOR, 0xFFEEEEEE.toInt())
+        get() = prefs.getInt(BACKGROUND_COLOR, context.resources.getColor(R.color.default_background_color))
         set(backgroundColor) = prefs.edit().putInt(BACKGROUND_COLOR, backgroundColor).apply()
 
     var primaryColor: Int
