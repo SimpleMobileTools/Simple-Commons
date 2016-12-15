@@ -11,10 +11,17 @@ import kotlinx.android.synthetic.main.activity_customization.*
 import yuku.ambilwarna.AmbilWarnaDialog
 
 class CustomizationActivity : BaseSimpleActivity() {
+    var curTextColor = 0
+    var curBackgroundColor = 0
+    var curPrimaryColor = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
+
+        curTextColor = baseConfig.textColor
+        curBackgroundColor = baseConfig.backgroundColor
+        curPrimaryColor = baseConfig.primaryColor
 
         setupColorsPickers()
         updateTextColors(customization_holder)
@@ -46,7 +53,10 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun saveChanges() {
-
+        baseConfig.textColor = curTextColor
+        baseConfig.backgroundColor = curBackgroundColor
+        baseConfig.primaryColor = curPrimaryColor
+        finish()
     }
 
     private fun undoChanges() {
@@ -54,9 +64,9 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun setupColorsPickers() {
-        customization_text_color.setBackgroundColor(baseConfig.textColor)
-        customization_primary_color.setBackgroundColor(baseConfig.primaryColor)
-        customView(customization_background_color, baseConfig.backgroundColor, baseConfig.backgroundColor.getContrastColor())
+        customization_text_color.setBackgroundColor(curTextColor)
+        customization_primary_color.setBackgroundColor(curPrimaryColor)
+        customView(customization_background_color, curBackgroundColor, curBackgroundColor.getContrastColor())
     }
 
     fun customView(view: View, backgroundColor: Int, borderColor: Int) {
@@ -69,40 +79,40 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickTextColor() {
-        AmbilWarnaDialog(this, baseConfig.textColor, object : AmbilWarnaDialog.OnAmbilWarnaListener {
+        AmbilWarnaDialog(this, curTextColor, object : AmbilWarnaDialog.OnAmbilWarnaListener {
             override fun onCancel(dialog: AmbilWarnaDialog) {
             }
 
             override fun onOk(dialog: AmbilWarnaDialog, color: Int) {
-                baseConfig.textColor = color
+                curTextColor = color
                 setupColorsPickers()
-                updateTextColors(customization_holder)
+                updateTextColors(customization_holder, color)
             }
         }).show()
     }
 
     private fun pickBackgroundColor() {
-        AmbilWarnaDialog(this, baseConfig.backgroundColor, object : AmbilWarnaDialog.OnAmbilWarnaListener {
+        AmbilWarnaDialog(this, curBackgroundColor, object : AmbilWarnaDialog.OnAmbilWarnaListener {
             override fun onCancel(dialog: AmbilWarnaDialog) {
             }
 
             override fun onOk(dialog: AmbilWarnaDialog, color: Int) {
-                baseConfig.backgroundColor = color
+                curBackgroundColor = color
                 setupColorsPickers()
-                updateBackgroundColor()
+                updateBackgroundColor(color)
             }
         }).show()
     }
 
     private fun pickPrimaryColor() {
-        AmbilWarnaDialog(this, baseConfig.primaryColor, object : AmbilWarnaDialog.OnAmbilWarnaListener {
+        AmbilWarnaDialog(this, curPrimaryColor, object : AmbilWarnaDialog.OnAmbilWarnaListener {
             override fun onCancel(dialog: AmbilWarnaDialog) {
             }
 
             override fun onOk(dialog: AmbilWarnaDialog, color: Int) {
-                baseConfig.primaryColor = color
+                curPrimaryColor = color
                 setupColorsPickers()
-                updateActionbarColor()
+                updateActionbarColor(color)
             }
         }).show()
     }
