@@ -12,6 +12,8 @@ val TREE_URI = "tree_uri"
 val TEXT_COLOR = "text_color"
 val BACKGROUND_COLOR = "background_color"
 val PRIMARY_COLOR = "primary_color"
+val WIDGET_BG_COLOR = "widget_bg_color"
+val WIDGET_TEXT_COLOR = "widget_text_color"
 
 // licenses
 val LICENSE_KOTLIN = 1
