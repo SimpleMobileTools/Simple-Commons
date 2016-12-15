@@ -21,10 +21,6 @@ open class BaseConfig(val context: Context) {
         get() = mPrefs.getBoolean(IS_FIRST_RUN, true)
         set(firstRun) = mPrefs.edit().putBoolean(IS_FIRST_RUN, firstRun).apply()
 
-    var isDarkTheme: Boolean
-        get() = mPrefs.getBoolean(IS_DARK_THEME, false)
-        set(isDarkTheme) = mPrefs.edit().putBoolean(IS_DARK_THEME, isDarkTheme).apply()
-
     var lastVersion: Int
         get() = mPrefs.getInt(LAST_VERSION, 0)
         set(lastVersion) = mPrefs.edit().putInt(LAST_VERSION, lastVersion).apply()

@@ -31,7 +31,6 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_primary_color_holder.setOnClickListener { pickPrimaryColor() }
     }
 
-
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_customization, menu)
         menu.findItem(R.id.undo).isVisible = hasUnsavedChanges
