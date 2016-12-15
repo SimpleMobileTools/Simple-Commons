@@ -64,7 +64,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
                     if (it is TextView) {
                         it.setTextColor(color)
                     } else if (it is ViewGroup) {
-                        updateTextColors(it)
+                        updateTextColors(it, color)
                     }
                 }
     }

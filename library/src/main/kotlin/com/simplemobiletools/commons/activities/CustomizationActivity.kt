@@ -15,6 +15,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     var curTextColor = 0
     var curBackgroundColor = 0
     var curPrimaryColor = 0
+    var hasUnsavedChanges = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +33,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_customization, menu)
+        menu.findItem(R.id.undo).isVisible = hasUnsavedChanges
         return true
     }
 
@@ -55,6 +57,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             backgroundColor = curBackgroundColor
             primaryColor = curPrimaryColor
         }
+        hasUnsavedChanges = false
         finish()
     }
 
@@ -65,11 +68,13 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun resetColors() {
+        hasUnsavedChanges = false
         initColorVariables()
         setupColorsPickers()
         updateTextColors(customization_holder)
         updateBackgroundColor()
         updateActionbarColor()
+        invalidateOptionsMenu()
     }
 
     private fun initColorVariables() {
@@ -93,15 +98,25 @@ class CustomizationActivity : BaseSimpleActivity() {
         }
     }
 
+    private fun hasColorChanged(old: Int, new: Int) = Math.abs(old - new) > 1
+
+    private fun colorChanged() {
+        hasUnsavedChanges = true
+        setupColorsPickers()
+        invalidateOptionsMenu()
+    }
+
     private fun pickTextColor() {
         AmbilWarnaDialog(this, curTextColor, object : AmbilWarnaDialog.OnAmbilWarnaListener {
             override fun onCancel(dialog: AmbilWarnaDialog) {
             }
 
             override fun onOk(dialog: AmbilWarnaDialog, color: Int) {
-                curTextColor = color
-                setupColorsPickers()
-                updateTextColors(customization_holder, color)
+                if (hasColorChanged(curTextColor, color)) {
+                    curTextColor = color
+                    updateTextColors(customization_holder, color)
+                    colorChanged()
+                }
             }
         }).show()
     }
@@ -112,9 +127,11 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
 
             override fun onOk(dialog: AmbilWarnaDialog, color: Int) {
-                curBackgroundColor = color
-                setupColorsPickers()
-                updateBackgroundColor(color)
+                if (hasColorChanged(curBackgroundColor, color)) {
+                    curBackgroundColor = color
+                    updateBackgroundColor(color)
+                    colorChanged()
+                }
             }
         }).show()
     }
@@ -125,9 +142,11 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
 
             override fun onOk(dialog: AmbilWarnaDialog, color: Int) {
-                curPrimaryColor = color
-                setupColorsPickers()
-                updateActionbarColor(color)
+                if (hasColorChanged(curPrimaryColor, color)) {
+                    curPrimaryColor = color
+                    updateActionbarColor(color)
+                    colorChanged()
+                }
             }
         }).show()
     }

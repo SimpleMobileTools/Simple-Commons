@@ -41,6 +41,6 @@ open class BaseConfig(val context: Context) {
         set(backgroundColor) = mPrefs.edit().putInt(BACKGROUND_COLOR, backgroundColor).apply()
 
     var primaryColor: Int
-        get() = mPrefs.getInt(PRIMARY_COLOR, context.getColor(R.color.color_primary))
+        get() = mPrefs.getInt(PRIMARY_COLOR, context.resources.getColor(R.color.color_primary))
         set(primaryColor) = mPrefs.edit().putInt(PRIMARY_COLOR, primaryColor).apply()
 }
