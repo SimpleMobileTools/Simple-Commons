@@ -25,6 +25,10 @@ open class BaseSimpleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         baseConfig = BaseConfig.newInstance(applicationContext)
+    }
+
+    override fun onResume() {
+        super.onResume()
         updateBackgroundColor()
         updateActionbarColor()
     }
