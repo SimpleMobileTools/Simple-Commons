@@ -39,30 +39,30 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun updateBackgroundColor() {
-        window.decorView.setBackgroundColor(baseConfig.backgroundColor)
+    fun updateBackgroundColor(color: Int = baseConfig.backgroundColor) {
+        window.decorView.setBackgroundColor(color)
     }
 
-    fun updateActionbarColor() {
-        supportActionBar?.setBackgroundDrawable(ColorDrawable(baseConfig.primaryColor))
-        updateStatusbarColor()
+    fun updateActionbarColor(color: Int = baseConfig.primaryColor) {
+        supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
+        updateStatusbarColor(color)
     }
 
-    fun updateStatusbarColor() {
+    fun updateStatusbarColor(color: Int) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             val hsv = FloatArray(3)
-            Color.colorToHSV(baseConfig.primaryColor, hsv)
+            Color.colorToHSV(color, hsv)
             hsv[2] *= 0.9f
             window.statusBarColor = Color.HSVToColor(hsv)
         }
     }
 
-    fun updateTextColors(viewGroup: ViewGroup) {
+    fun updateTextColors(viewGroup: ViewGroup, color: Int = baseConfig.textColor) {
         val cnt = viewGroup.childCount
         (0..cnt - 1).map { viewGroup.getChildAt(it) }
                 .forEach {
                     if (it is TextView) {
-                        it.setTextColor(baseConfig.textColor)
+                        it.setTextColor(color)
                     } else if (it is ViewGroup) {
                         updateTextColors(it)
                     }
