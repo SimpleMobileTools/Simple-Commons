@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.extensions.getContrastColor
 import kotlinx.android.synthetic.main.activity_customization.*
@@ -49,6 +50,27 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    override fun onBackPressed() {
+        if (hasUnsavedChanges) {
+            promptSaveDiscard()
+        } else {
+            super.onBackPressed()
+        }
+    }
+
+    private fun promptSaveDiscard() {
+        ConfirmationAdvancedDialog(this, "", R.string.save_before_closing, R.string.save, R.string.discard, object : ConfirmationAdvancedDialog.Listener {
+            override fun onPositive() {
+                saveChanges()
+            }
+
+            override fun onNegative() {
+                resetColors()
+                finish()
+            }
+        })
     }
 
     private fun saveChanges() {
