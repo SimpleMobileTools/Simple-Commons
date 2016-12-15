@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.extensions.getContrastColor
 import kotlinx.android.synthetic.main.activity_customization.*
 import yuku.ambilwarna.AmbilWarnaDialog
@@ -19,13 +20,9 @@ class CustomizationActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
 
-        curTextColor = baseConfig.textColor
-        curBackgroundColor = baseConfig.backgroundColor
-        curPrimaryColor = baseConfig.primaryColor
-
+        initColorVariables()
         setupColorsPickers()
         updateTextColors(customization_holder)
-        updateActionbarColor()
 
         customization_text_color_holder.setOnClickListener { pickTextColor() }
         customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
@@ -41,7 +38,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.undo -> {
-                undoChanges()
+                confirmUndoChanges()
                 true
             }
             R.id.save -> {
@@ -53,14 +50,32 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun saveChanges() {
-        baseConfig.textColor = curTextColor
-        baseConfig.backgroundColor = curBackgroundColor
-        baseConfig.primaryColor = curPrimaryColor
+        baseConfig.apply {
+            textColor = curTextColor
+            backgroundColor = curBackgroundColor
+            primaryColor = curPrimaryColor
+        }
         finish()
     }
 
-    private fun undoChanges() {
+    private fun confirmUndoChanges() {
+        ConfirmationDialog(this, "", R.string.undo_changes_confirmation, R.string.yes, R.string.no) {
+            resetColors()
+        }
+    }
 
+    private fun resetColors() {
+        initColorVariables()
+        setupColorsPickers()
+        updateTextColors(customization_holder)
+        updateBackgroundColor()
+        updateActionbarColor()
+    }
+
+    private fun initColorVariables() {
+        curTextColor = baseConfig.textColor
+        curBackgroundColor = baseConfig.backgroundColor
+        curPrimaryColor = baseConfig.primaryColor
     }
 
     private fun setupColorsPickers() {

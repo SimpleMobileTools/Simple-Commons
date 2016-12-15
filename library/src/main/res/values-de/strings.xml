@@ -42,7 +42,10 @@
     <string name="dark_theme">Dunkles Thema</string>
     <string name="custom">Custom</string>
     <string name="save">Speichern</string>
+    <string name="discard">Discard</string>
     <string name="undo_changes">Undo changes</string>
+    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
+    <string name="save_before_closing">You have unsaved changes. Save before closing?</string>
 
     <!-- What's new -->
     <string name="whats_new">Neue Funktionen</string>
