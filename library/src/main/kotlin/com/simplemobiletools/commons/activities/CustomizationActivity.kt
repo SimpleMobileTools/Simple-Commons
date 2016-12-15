@@ -2,6 +2,8 @@ package com.simplemobiletools.commons.activities
 
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getContrastColor
@@ -21,6 +23,34 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_text_color_holder.setOnClickListener { pickTextColor() }
         customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
         customization_primary_color_holder.setOnClickListener { pickPrimaryColor() }
+    }
+
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_customization, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.undo -> {
+                undoChanges()
+                true
+            }
+            R.id.save -> {
+                saveChanges()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun saveChanges() {
+
+    }
+
+    private fun undoChanges() {
+
     }
 
     private fun setupColorsPickers() {
