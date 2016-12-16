@@ -1,7 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Отмена</string>
-    <string name="search">Search</string>
+    <string name="search">Поиск</string>
     <string name="invalid_name">Имя содержит недопустимые символы</string>
 
     <!-- Copy / Move -->
@@ -23,33 +23,33 @@
     <string name="file_exists">Файл с таким именем уже существует</string>
     <string name="moving_success_partial">Некоторые файлы не могут быть перемещены</string>
     <string name="copying_success_partial">Некоторые файлы не могут быть скопированы</string>
-    <string name="create_new_directory">Create new directory</string>
-    <string name="directory_exists">A directory with that name already exists</string>
+    <string name="create_new_directory">Создать папку</string>
+    <string name="directory_exists">Папка с таким именем уже существует</string>
 
     <!-- Copy conflicts -->
-    <string name="file_already_exists">File $%1s already exists</string>
-    <string name="select_an_action">Select an action</string>
-    <string name="overwrite">Overwrite</string>
-    <string name="skip">Skip</string>
-    <string name="append">Append with \'_1\'</string>
-    <string name="apply_to_all">Apply to all conflicts</string>
+    <string name="file_already_exists">Файл $%1s уже существует</string>
+    <string name="select_an_action">Выберите действие</string>
+    <string name="overwrite">Перезаписать</string>
+    <string name="skip">Пропустить</string>
+    <string name="append">Добавить \'_1\' к имени</string>
+    <string name="apply_to_all">Применить ко всем конфликтам</string>
 
     <!-- Color customization -->
-    <string name="background_color">Background color</string>
-    <string name="text_color">Text color</string>
-    <string name="primary_color">Primary color</string>
-    <string name="light_theme">Light theme</string>
-    <string name="dark_theme">Dark theme</string>
-    <string name="custom">Custom</string>
+    <string name="background_color">Цвет фона</string>
+    <string name="text_color">Цвет текста</string>
+    <string name="primary_color">Основной цвет</string>
+    <string name="light_theme">Светлая тема</string>
+    <string name="dark_theme">Тёмная тема</string>
+    <string name="custom">Настраиваемое</string>
     <string name="save">Сохранить</string>
-    <string name="discard">Discard</string>
-    <string name="undo_changes">Undo changes</string>
-    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
-    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
+    <string name="discard">Сбросить</string>
+    <string name="undo_changes">Отменить изменения</string>
+    <string name="undo_changes_confirmation">Действительно отменить изенения?</string>
+    <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
 
     <!-- What's new -->
-    <string name="whats_new">What\'s new</string>
-    <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
+    <string name="whats_new">Что нового</string>
+    <string name="whats_new_disclaimer">* здесь представлены только значительные изменения, но всегда присутствуют и мелкие исправления</string>
 
     <!-- Actionbar items -->
     <string name="delete">Удалить</string>
@@ -74,8 +74,8 @@
     <string name="no">Нет</string>
 
     <!-- Settings -->
-    <string name="settings">Settings</string>
-    <string name="customize_colors">Customize colors</string>
+    <string name="settings">Настройки</string>
+    <string name="customize_colors">Настроить цвета</string>
 
     <!-- About -->
     <string name="about">О приложении</string>
@@ -102,8 +102,8 @@
     <string name="rtl_viewpager_title">RtlViewPager (для корректного отображения с RTL языками)</string>
     <string name="filepicker_title">Simple File Picker (диалог выбора файла)</string>
     <string name="fileproperties_title">Simple File Properties (диалог свойств файла)</string>
-    <string name="ambilwarna_title">AmbilWarna (color picker)</string>
-    <string name="joda_title">Joda-Time (Java date replacement)</string>
-    <string name="stetho_title">Stetho (debugging databases)</string>
-    <string name="otto_title">Otto (event bus)</string>
+    <string name="ambilwarna_title">AmbilWarna (диалог выбора цвета)</string>
+    <string name="joda_title">Joda-Time (замена даты Java)</string>
+    <string name="stetho_title">Stetho (базы данных отладки)</string>
+    <string name="otto_title">Otto ("шина" событий)</string>
 </resources>
