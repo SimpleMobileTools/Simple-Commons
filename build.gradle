@@ -21,3 +21,12 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    propBuildToolsVersion = '25.0.1'
+    propCompileSdkVersion = 25
+    propMinSdkVersion = 16
+    propTargetSdkVersion = propCompileSdkVersion
+    propVersionCode = 1
+    propVersionName = '1.0.9'
+}
