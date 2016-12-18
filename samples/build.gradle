@@ -3,15 +3,15 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.1"
+    compileSdkVersion propCompileSdkVersion
+    buildToolsVersion propBuildToolsVersion
 
     defaultConfig {
         applicationId "com.simplemobiletools.commons"
-        minSdkVersion 16
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion propMinSdkVersion
+        targetSdkVersion propTargetSdkVersion
+        versionCode propVersionCode
+        versionName propVersionName
     }
 
     buildTypes {
@@ -27,7 +27,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:appcompat-v7:25.1.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     compile project(':commons')
