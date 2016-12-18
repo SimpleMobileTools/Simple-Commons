@@ -74,12 +74,12 @@ open class BaseSimpleActivity : AppCompatActivity() {
                         it.setTextColor(textColor)
                     } else if (it is AppCompatTextView) {
                         it.setTextColor(textColor)
-                        it.highlightColor = baseConfig.primaryColor
+                        it.setLinkTextColor(baseConfig.primaryColor)
                     } else if (it is MyAppCompatSpinner) {
                         it.setColors(textColor, baseConfig.backgroundColor)
                     } else if (it is MySwitchCompat) {
-                        it.setColor(baseConfig.primaryColor)
                         it.setTextColor(textColor)
+                        it.setColor(baseConfig.primaryColor)
                     } else if (it is ViewGroup) {
                         updateTextColors(it, textColor)
                     }
