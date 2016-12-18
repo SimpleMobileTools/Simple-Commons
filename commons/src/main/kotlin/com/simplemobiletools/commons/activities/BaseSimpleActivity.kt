@@ -70,7 +70,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         (0..cnt - 1).map { viewGroup.getChildAt(it) }
                 .forEach {
                     if (it is AppCompatEditText) {
-                        it.background.mutate().setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+                        it.background.mutate().setColorFilter(baseConfig.primaryColor, PorterDuff.Mode.SRC_ATOP)
                         it.setTextColor(color)
                     } else if (it is AppCompatTextView) {
                         it.setTextColor(color)
@@ -78,6 +78,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
                         it.setColor(color)
                     } else if (it is MySwitchCompat) {
                         it.setColor(color)
+                        it.setTextColor(color)
                     } else if (it is ViewGroup) {
                         updateTextColors(it, color)
                     }
