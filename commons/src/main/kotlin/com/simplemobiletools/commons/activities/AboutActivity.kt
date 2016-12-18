@@ -20,7 +20,11 @@ class AboutActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
         appName = intent.getStringExtra(APP_NAME) ?: ""
+    }
 
+    override fun onResume() {
+        super.onResume()
+        updateTextColors(about_holder)
         setupWebsite()
         setupEmail()
         setupMoreApps()
@@ -31,11 +35,6 @@ class AboutActivity : BaseSimpleActivity() {
         setupFacebook()
         setupGPlus()
         setupCopyright()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        updateTextColors(about_holder)
     }
 
     private fun setupWebsite() {
