@@ -29,5 +29,5 @@ ext {
     propMinSdkVersion = 16
     propTargetSdkVersion = propCompileSdkVersion
     propVersionCode = 1
-    propVersionName = '1.1.6'
+    propVersionName = '1.1.7'
 }
