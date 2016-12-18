@@ -65,23 +65,23 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun updateTextColors(viewGroup: ViewGroup, color: Int = baseConfig.textColor) {
+    fun updateTextColors(viewGroup: ViewGroup, textColor: Int = baseConfig.textColor) {
         val cnt = viewGroup.childCount
         (0..cnt - 1).map { viewGroup.getChildAt(it) }
                 .forEach {
                     if (it is AppCompatEditText) {
                         it.background.mutate().setColorFilter(baseConfig.primaryColor, PorterDuff.Mode.SRC_ATOP)
-                        it.setTextColor(color)
+                        it.setTextColor(textColor)
                     } else if (it is AppCompatTextView) {
-                        it.setTextColor(color)
+                        it.setTextColor(textColor)
                         it.highlightColor = baseConfig.primaryColor
                     } else if (it is MyAppCompatSpinner) {
-                        it.setColor(color)
+                        it.setColors(textColor, baseConfig.backgroundColor)
                     } else if (it is MySwitchCompat) {
                         it.setColor(baseConfig.primaryColor)
-                        it.setTextColor(color)
+                        it.setTextColor(textColor)
                     } else if (it is ViewGroup) {
-                        updateTextColors(it, color)
+                        updateTextColors(it, textColor)
                     }
                 }
     }
