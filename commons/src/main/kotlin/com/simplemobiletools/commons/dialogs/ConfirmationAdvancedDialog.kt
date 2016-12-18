@@ -15,9 +15,10 @@ class ConfirmationAdvancedDialog(context: Context, message: String = "", message
 
     init {
         val baseConfig = BaseConfig.newInstance(context)
+        val backgroundColor = baseConfig.backgroundColor
         val view = LayoutInflater.from(context).inflate(R.layout.dialog_message, null)
         view.message.text = if (message.isEmpty()) context.resources.getString(messageId) else message
-        view.message.setTextColor(baseConfig.backgroundColor.getContrastColor())
+        view.message.setTextColor(backgroundColor.getContrastColor())
 
         val builder = AlertDialog.Builder(context)
                 .setView(view)
@@ -30,7 +31,7 @@ class ConfirmationAdvancedDialog(context: Context, message: String = "", message
             show()
             getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(primaryColor)
             getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(primaryColor)
-            window.setBackgroundDrawable(context.getDialogBackgroundColor(baseConfig))
+            window.setBackgroundDrawable(context.getDialogBackgroundColor(backgroundColor))
         }
     }
 
