@@ -77,7 +77,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
                     } else if (it is MyAppCompatSpinner) {
                         it.setColor(color)
                     } else if (it is MySwitchCompat) {
-                        it.setColor(color)
+                        it.setColor(baseConfig.primaryColor)
                         it.setTextColor(color)
                     } else if (it is ViewGroup) {
                         updateTextColors(it, color)
