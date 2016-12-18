@@ -25,6 +25,7 @@ class LicenseActivity : BaseSimpleActivity() {
             view.apply {
                 license_title.text = getUnderlinedTitle(getString(license.titleId))
                 license_title.setOnClickListener { launchViewIntent(license.urlId) }
+                license_title.setTextColor(baseConfig.primaryColor)
                 license_text.text = getString(license.textId)
                 licenses_holder.addView(this)
             }
