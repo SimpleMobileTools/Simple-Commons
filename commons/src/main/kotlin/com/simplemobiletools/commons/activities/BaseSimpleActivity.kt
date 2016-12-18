@@ -19,6 +19,7 @@ import com.simplemobiletools.commons.helpers.APP_NAME
 import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.helpers.OPEN_DOCUMENT_TREE
 import com.simplemobiletools.commons.views.MyAppCompatSpinner
+import com.simplemobiletools.commons.views.MyCompatRadioButton
 import com.simplemobiletools.commons.views.MySwitchCompat
 import com.simplemobiletools.filepicker.extensions.isShowingWritePermissions
 import java.io.File
@@ -78,6 +79,9 @@ open class BaseSimpleActivity : AppCompatActivity() {
                     } else if (it is MyAppCompatSpinner) {
                         it.setColors(textColor, baseConfig.backgroundColor)
                     } else if (it is MySwitchCompat) {
+                        it.setTextColor(textColor)
+                        it.setColor(baseConfig.primaryColor)
+                    } else if (it is MyCompatRadioButton) {
                         it.setTextColor(textColor)
                         it.setColor(baseConfig.primaryColor)
                     } else if (it is ViewGroup) {
