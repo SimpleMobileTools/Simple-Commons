@@ -56,12 +56,21 @@ class AboutActivity : BaseSimpleActivity() {
         about_more_apps.setOnClickListener {
             launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
         }
+        about_more_apps.setTextColor(baseConfig.primaryColor)
     }
 
-    private fun setupCopyright() {
-        val versionName = BuildConfig.VERSION_NAME
-        val year = Calendar.getInstance().get(Calendar.YEAR)
-        about_copyright.text = String.format(getString(R.string.copyright), versionName, year)
+    private fun setupInvite() {
+        about_invite.setOnClickListener {
+            val text = String.format(getString(R.string.share_text), appName, getStoreUrl())
+            Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_SUBJECT, appName)
+                putExtra(Intent.EXTRA_TEXT, text)
+                type = "text/plain"
+                startActivity(Intent.createChooser(this, getString(R.string.invite_via)))
+            }
+        }
+        about_invite.setTextColor(baseConfig.primaryColor)
     }
 
     private fun setupRateUs() {
@@ -76,19 +85,7 @@ class AboutActivity : BaseSimpleActivity() {
                 }
             }
         }
-    }
-
-    fun setupInvite() {
-        about_invite.setOnClickListener {
-            val text = String.format(getString(R.string.share_text), appName, getStoreUrl())
-            Intent().apply {
-                action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_SUBJECT, appName)
-                putExtra(Intent.EXTRA_TEXT, text)
-                type = "text/plain"
-                startActivity(Intent.createChooser(this, getString(R.string.invite_via)))
-            }
-        }
+        about_rate_us.setTextColor(baseConfig.primaryColor)
     }
 
     fun setupLicense() {
@@ -98,15 +95,17 @@ class AboutActivity : BaseSimpleActivity() {
                 startActivity(this)
             }
         }
+        about_license.setTextColor(baseConfig.primaryColor)
     }
 
-    fun setupDonate() {
+    private fun setupDonate() {
         about_donate.setOnClickListener {
             launchViewIntent("http://simplemobiletools.github.io/donate")
         }
+        about_donate.setTextColor(baseConfig.primaryColor)
     }
 
-    fun setupFacebook() {
+    private fun setupFacebook() {
         about_facebook.setOnClickListener {
             var link = "https://www.facebook.com/simplemobiletools"
             try {
@@ -119,10 +118,16 @@ class AboutActivity : BaseSimpleActivity() {
         }
     }
 
-    fun setupGPlus() {
+    private fun setupGPlus() {
         about_gplus.setOnClickListener {
             launchViewIntent("https://plus.google.com/communities/104880861558693868382")
         }
+    }
+
+    private fun setupCopyright() {
+        val versionName = BuildConfig.VERSION_NAME
+        val year = Calendar.getInstance().get(Calendar.YEAR)
+        about_copyright.text = String.format(getString(R.string.copyright), versionName, year)
     }
 
     private fun getStoreUrl() = "https://play.google.com/store/apps/details?id=$packageName"
