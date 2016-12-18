@@ -33,6 +33,11 @@ class AboutActivity : BaseSimpleActivity() {
         setupCopyright()
     }
 
+    override fun onResume() {
+        super.onResume()
+        updateTextColors(about_holder)
+    }
+
     private fun setupWebsite() {
         val websiteText = String.format(getString(R.string.two_string_placeholder), getString(R.string.website_label), getString(R.string.website))
         about_website.text = websiteText

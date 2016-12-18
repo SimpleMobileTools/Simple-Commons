@@ -31,6 +31,11 @@ class LicenseActivity : BaseSimpleActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        updateTextColors(licenses_holder)
+    }
+
     fun getUnderlinedTitle(title: String): SpannableString {
         val underlined = SpannableString(title)
         underlined.setSpan(UnderlineSpan(), 0, title.length, 0)
