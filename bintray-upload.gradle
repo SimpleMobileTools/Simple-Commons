@@ -31,7 +31,6 @@ install {
                 connection gitUrl
                 developerConnection gitUrl
                 url siteUrl
-
             }
         }
     }

@@ -4,18 +4,22 @@ import android.annotation.TargetApi
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.PorterDuff
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.AppCompatEditText
+import android.support.v7.widget.AppCompatTextView
 import android.view.MenuItem
 import android.view.ViewGroup
-import android.widget.TextView
 import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
 import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.helpers.OPEN_DOCUMENT_TREE
+import com.simplemobiletools.commons.views.MyAppCompatSpinner
+import com.simplemobiletools.commons.views.MySwitchCompat
 import com.simplemobiletools.filepicker.extensions.isShowingWritePermissions
 import java.io.File
 
@@ -65,8 +69,15 @@ open class BaseSimpleActivity : AppCompatActivity() {
         val cnt = viewGroup.childCount
         (0..cnt - 1).map { viewGroup.getChildAt(it) }
                 .forEach {
-                    if (it is TextView) {
+                    if (it is AppCompatEditText) {
+                        it.background.mutate().setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
                         it.setTextColor(color)
+                    } else if (it is AppCompatTextView) {
+                        it.setTextColor(color)
+                    } else if (it is MyAppCompatSpinner) {
+                        it.setColor(color)
+                    } else if (it is MySwitchCompat) {
+                        it.setColor(color)
                     } else if (it is ViewGroup) {
                         updateTextColors(it, color)
                     }
