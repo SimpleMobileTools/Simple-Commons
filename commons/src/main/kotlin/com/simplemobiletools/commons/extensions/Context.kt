@@ -1,11 +1,11 @@
 package com.simplemobiletools.commons.extensions
 
-import android.app.AlertDialog
 import android.content.Context
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
+import android.support.v7.app.AlertDialog
 import android.support.v7.widget.AppCompatEditText
 import android.support.v7.widget.AppCompatTextView
 import android.view.LayoutInflater
@@ -30,7 +30,7 @@ fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIV
 
 fun Context.getDialogBackgroundColor(backgroundColor: Int): Drawable {
     return ColorDrawable(if (backgroundColor.getContrastColor() == Color.WHITE) {
-        getColor(R.color.dark_dialog_background)
+        resources.getColor(R.color.dark_dialog_background)
     } else {
         backgroundColor
     })
@@ -78,6 +78,7 @@ fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) 
         title.dialog_title_textview.apply {
             setText(titleId)
             setTextColor(baseConfig.textColor)
+            textSize = resources.getDimension(R.dimen.smaller_text_size)
         }
     }
 
