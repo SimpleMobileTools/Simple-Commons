@@ -1,7 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annulla</string>
-    <string name="search">Search</string>
+    <string name="search">Cerca</string>
     <string name="invalid_name">Il nome contiene caratteri non validi</string>
 
     <!-- Copy / Move -->
@@ -18,38 +18,38 @@
     <string name="copying">Copia in corso&#8230;</string>
     <string name="copying_success">File copiati correttamente</string>
     <string name="copy_move_failed">Si è verificato un errore</string>
-    <string name="moving">Spostando&#8230;</string>
+    <string name="moving">Spostamento&#8230;</string>
     <string name="moving_success">File spostati correttamente</string>
     <string name="file_exists">Esiste già un file con questo nome</string>
     <string name="moving_success_partial">Alcuni file non possono essere spostati</string>
     <string name="copying_success_partial">Alcuni file non possono essere copiati</string>
-    <string name="create_new_directory">Create new directory</string>
-    <string name="directory_exists">A directory with that name already exists</string>
+    <string name="create_new_directory">Crea una cartella nuova</string>
+    <string name="directory_exists">Esiste già una cartella con quel nome</string>
 
     <!-- Copy conflicts -->
-    <string name="file_already_exists">File $%1s already exists</string>
-    <string name="select_an_action">Select an action</string>
-    <string name="overwrite">Overwrite</string>
-    <string name="skip">Skip</string>
-    <string name="append">Append with \'_1\'</string>
-    <string name="apply_to_all">Apply to all conflicts</string>
+    <string name="file_already_exists">Il file $%1s esiste già</string>
+    <string name="select_an_action">Seleziona un\'azione</string>
+    <string name="overwrite">Sovrascrivi</string>
+    <string name="skip">Salta</string>
+    <string name="append">Aggiungi \'_1\' alla fine</string>
+    <string name="apply_to_all">Applica a tutti i conflitti</string>
 
     <!-- Color customization -->
-    <string name="background_color">Background color</string>
-    <string name="text_color">Text color</string>
-    <string name="primary_color">Primary color</string>
-    <string name="light_theme">Light theme</string>
-    <string name="dark_theme">Dark theme</string>
-    <string name="custom">Custom</string>
+    <string name="background_color">Colore di sfondo</string>
+    <string name="text_color">Colore del testo</string>
+    <string name="primary_color">Colore primario</string>
+    <string name="light_theme">Tema chiaro</string>
+    <string name="dark_theme">Tema scuro</string>
+    <string name="custom">Personale</string>
     <string name="save">Salva</string>
-    <string name="discard">Discard</string>
-    <string name="undo_changes">Undo changes</string>
-    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
-    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
+    <string name="discard">Scarta</string>
+    <string name="undo_changes">Annulla modifiche</string>
+    <string name="undo_changes_confirmation">Sei sicuro di annullare le tue modifiche?</string>
+    <string name="save_before_closing">Hai modifiche non salvate. Salvare prima di uscire?</string>
 
     <!-- What's new -->
-    <string name="whats_new">What\'s new</string>
-    <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
+    <string name="whats_new">Novità</string>
+    <string name="whats_new_disclaimer">* qui sono elencate solo le modifiche maggiori, ci sono sempre anche piccoli miglioramenti</string>
 
     <!-- Actionbar items -->
     <string name="delete">Elimina</string>
@@ -57,53 +57,53 @@
     <string name="share">Condividi</string>
     <string name="share_via">Condividi via</string>
     <string name="properties">Proprietà</string>
-    <string name="select_all">Select all</string>
+    <string name="select_all">Seleziona tutto</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordina per</string>
     <string name="name">Nome</string>
     <string name="size">Dimensione</string>
-    <string name="last_modified">Last modified</string>
-    <string name="date_taken">Date taken</string>
+    <string name="last_modified">Ultima modifica</string>
+    <string name="date_taken">Data acquisizione</string>
     <string name="ascending">Ascendente</string>
     <string name="descending">Discendente</string>
 
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
-    <string name="yes">Yes</string>
+    <string name="proceed_with_deletion">Sei sicuro di procedere con l\'eliminazione?</string>
+    <string name="yes">Sì</string>
     <string name="no">No</string>
 
     <!-- Settings -->
-    <string name="settings">Settings</string>
-    <string name="customize_colors">Customize colors</string>
+    <string name="settings">Impostazioni</string>
+    <string name="customize_colors">Personalizza i colori</string>
 
     <!-- About -->
     <string name="about">Informazioni</string>
     <string name="website_label">Altre semplici app e codici sorgenti in</string>
     <string name="email_label">Invia la tua opinione o i tuoi suggerimenti a</string>
-    <string name="more_apps_underlined"><u>More apps</u></string>
+    <string name="more_apps_underlined"><u>Altre app</u></string>
     <string name="third_party_licences_underlined"><u>Licenze di terze parti</u></string>
     <string name="invite_friends_underlined"><u>Invita amico</u></string>
     <string name="share_text">Ciao, controlla %1$s su %2$s</string>
     <string name="invite_via">Invita con</string>
     <string name="rate_us_underlined"><u>Dacci un voto sul Play Store</u></string>
-    <string name="donate_underlined"><u>Donate</u></string>
+    <string name="donate_underlined"><u>Dona</u></string>
     <string name="follow_us">Seguici:</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
 
     <!-- License -->
     <string name="notice">Questa app usa le seguenti librerie di terze parti per semplificarmi la vita. Grazie.</string>
     <string name="third_party_licences">Licenze di terze parti</string>
-    <string name="kotlin_title">Kotlin (programming language)</string>
-    <string name="subsampling_title">PhotoView (zoomable imageviews)</string>
-    <string name="glide_title">Glide (image loading and caching)</string>
-    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (for swiping images right to left)</string>
-    <string name="filepicker_title">Simple File Picker (filepicker dialog)</string>
-    <string name="fileproperties_title">Simple File Properties (properties dialog)</string>
-    <string name="ambilwarna_title">AmbilWarna (color picker)</string>
-    <string name="joda_title">Joda-Time (Java date replacement)</string>
-    <string name="stetho_title">Stetho (debugging databases)</string>
-    <string name="otto_title">Otto (event bus)</string>
+    <string name="kotlin_title">Kotlin (linguaggio di programmazione)</string>
+    <string name="subsampling_title">PhotoView (immagini ingrandibili)</string>
+    <string name="glide_title">Glide (caricamento e caching immagini)</string>
+    <string name="cropper_title">Android Image Cropper (ritaglio e rotazione immagini)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (selezione elementi multipli da liste)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (scorrimento immagini da destra a sinistra)</string>
+    <string name="filepicker_title">Simple File Picker (finestra di selezione file)</string>
+    <string name="fileproperties_title">Simple File Properties (finestra di proprietà)</string>
+    <string name="ambilwarna_title">AmbilWarna (selettore colore)</string>
+    <string name="joda_title">Joda-Time (sostituto di \"Java date\")</string>
+    <string name="stetho_title">Stetho (debug database)</string>
+    <string name="otto_title">Otto (bus eventi)</string>
 </resources>
