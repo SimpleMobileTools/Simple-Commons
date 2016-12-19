@@ -18,6 +18,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.helpers.PREFS_KEY
 import com.simplemobiletools.commons.views.MyAppCompatSpinner
+import com.simplemobiletools.commons.views.MyAppCompatCheckbox
 import com.simplemobiletools.commons.views.MyCompatRadioButton
 import com.simplemobiletools.commons.views.MySwitchCompat
 import kotlinx.android.synthetic.main.dialog_title.view.*
@@ -55,6 +56,9 @@ fun Context.updateTextColors(viewGroup: ViewGroup, color: Int = 0) {
                     it.setTextColor(textColor)
                     it.setColor(baseConfig.primaryColor)
                 } else if (it is MyCompatRadioButton) {
+                    it.setTextColor(textColor)
+                    it.setColor(baseConfig.primaryColor)
+                } else if (it is MyAppCompatCheckbox) {
                     it.setTextColor(textColor)
                     it.setColor(baseConfig.primaryColor)
                 } else if (it is ViewGroup) {
