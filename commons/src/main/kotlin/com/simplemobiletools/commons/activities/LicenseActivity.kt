@@ -5,6 +5,7 @@ import android.text.SpannableString
 import android.text.style.UnderlineSpan
 import android.view.LayoutInflater
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.License
 import kotlinx.android.synthetic.main.activity_license.*

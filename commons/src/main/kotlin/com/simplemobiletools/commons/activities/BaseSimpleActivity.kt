@@ -4,23 +4,16 @@ import android.annotation.TargetApi
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
-import android.graphics.PorterDuff
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.AppCompatEditText
-import android.support.v7.widget.AppCompatTextView
 import android.view.MenuItem
-import android.view.ViewGroup
 import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
 import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.helpers.OPEN_DOCUMENT_TREE
-import com.simplemobiletools.commons.views.MyAppCompatSpinner
-import com.simplemobiletools.commons.views.MyCompatRadioButton
-import com.simplemobiletools.commons.views.MySwitchCompat
 import com.simplemobiletools.filepicker.extensions.isShowingWritePermissions
 import java.io.File
 
@@ -64,30 +57,6 @@ open class BaseSimpleActivity : AppCompatActivity() {
             hsv[2] *= 0.85f
             window.statusBarColor = Color.HSVToColor(hsv)
         }
-    }
-
-    fun updateTextColors(viewGroup: ViewGroup, textColor: Int = baseConfig.textColor) {
-        val cnt = viewGroup.childCount
-        (0..cnt - 1).map { viewGroup.getChildAt(it) }
-                .forEach {
-                    if (it is AppCompatEditText) {
-                        it.background.mutate().setColorFilter(baseConfig.primaryColor, PorterDuff.Mode.SRC_ATOP)
-                        it.setTextColor(textColor)
-                    } else if (it is AppCompatTextView) {
-                        it.setTextColor(textColor)
-                        it.setLinkTextColor(baseConfig.primaryColor)
-                    } else if (it is MyAppCompatSpinner) {
-                        it.setColors(textColor, baseConfig.backgroundColor)
-                    } else if (it is MySwitchCompat) {
-                        it.setTextColor(textColor)
-                        it.setColor(baseConfig.primaryColor)
-                    } else if (it is MyCompatRadioButton) {
-                        it.setTextColor(textColor)
-                        it.setColor(baseConfig.primaryColor)
-                    } else if (it is ViewGroup) {
-                        updateTextColors(it, textColor)
-                    }
-                }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {

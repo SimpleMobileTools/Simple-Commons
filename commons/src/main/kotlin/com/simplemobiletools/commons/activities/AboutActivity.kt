@@ -8,6 +8,7 @@ import android.text.method.LinkMovementMethod
 import android.view.View
 import com.simplemobiletools.commons.BuildConfig
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
 import kotlinx.android.synthetic.main.activity_about.*
@@ -25,6 +26,7 @@ class AboutActivity : BaseSimpleActivity() {
     override fun onResume() {
         super.onResume()
         updateTextColors(about_holder)
+
         setupWebsite()
         setupEmail()
         setupMoreApps()

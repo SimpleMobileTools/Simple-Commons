@@ -9,6 +9,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.extensions.getContrastColor
+import com.simplemobiletools.commons.extensions.updateTextColors
 import kotlinx.android.synthetic.main.activity_customization.*
 import yuku.ambilwarna.AmbilWarnaDialog
 
@@ -22,9 +23,9 @@ class CustomizationActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
 
+        updateTextColors(customization_holder)
         initColorVariables()
         setupColorsPickers()
-        updateTextColors(customization_holder)
 
         customization_text_color_holder.setOnClickListener { pickTextColor() }
         customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
@@ -92,10 +93,10 @@ class CustomizationActivity : BaseSimpleActivity() {
         hasUnsavedChanges = false
         initColorVariables()
         setupColorsPickers()
-        updateTextColors(customization_holder)
         updateBackgroundColor()
         updateActionbarColor()
         invalidateOptionsMenu()
+        updateTextColors(customization_holder)
     }
 
     private fun initColorVariables() {
