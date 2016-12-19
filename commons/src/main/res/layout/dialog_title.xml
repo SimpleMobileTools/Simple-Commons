@@ -8,4 +8,5 @@
     android:paddingLeft="@dimen/big_margin"
     android:paddingRight="@dimen/activity_margin"
     android:paddingStart="@dimen/big_margin"
-    android:paddingTop="@dimen/activity_margin"/>
+    android:paddingTop="@dimen/activity_margin"
+    android:textSize="@dimen/smaller_text_size"/>

@@ -17,8 +17,8 @@ import android.widget.Toast
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.helpers.PREFS_KEY
-import com.simplemobiletools.commons.views.MyAppCompatSpinner
 import com.simplemobiletools.commons.views.MyAppCompatCheckbox
+import com.simplemobiletools.commons.views.MyAppCompatSpinner
 import com.simplemobiletools.commons.views.MyCompatRadioButton
 import com.simplemobiletools.commons.views.MySwitchCompat
 import kotlinx.android.synthetic.main.dialog_title.view.*
@@ -82,7 +82,6 @@ fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) 
         title.dialog_title_textview.apply {
             setText(titleId)
             setTextColor(baseConfig.textColor)
-            textSize = resources.getDimension(R.dimen.smaller_text_size)
         }
     }
 
