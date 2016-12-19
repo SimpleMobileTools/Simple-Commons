@@ -9,8 +9,10 @@ import android.graphics.drawable.Drawable
 import android.support.v7.widget.AppCompatEditText
 import android.support.v7.widget.AppCompatTextView
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.view.Window
+import android.widget.TextView
 import android.widget.Toast
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.BaseConfig
@@ -61,14 +63,22 @@ fun Context.updateTextColors(viewGroup: ViewGroup, color: Int = 0) {
             }
 }
 
-fun Context.setupDialogStuff(view: ViewGroup, dialog: AlertDialog, titleId: Int) {
-    updateTextColors(view.getChildAt(0) as ViewGroup)
+fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) {
+    if (view is ViewGroup)
+        updateTextColors(view.getChildAt(0) as ViewGroup)
+    else if (view is AppCompatTextView) {
+        view.setTextColor(BaseConfig.newInstance(this).textColor)
+    }
+
     val baseConfig = BaseConfig.newInstance(this)
     val primaryColor = baseConfig.primaryColor
-    val title = LayoutInflater.from(this).inflate(R.layout.dialog_title, null)
-    title.dialog_title_textview.apply {
-        setText(titleId)
-        setTextColor(baseConfig.textColor)
+    var title: TextView? = null
+    if (titleId != 0) {
+        title = LayoutInflater.from(this).inflate(R.layout.dialog_title, null) as TextView
+        title.dialog_title_textview.apply {
+            setText(titleId)
+            setTextColor(baseConfig.textColor)
+        }
     }
 
     dialog.apply {
