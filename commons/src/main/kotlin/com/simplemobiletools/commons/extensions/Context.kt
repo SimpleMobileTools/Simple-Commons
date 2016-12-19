@@ -65,7 +65,7 @@ fun Context.updateTextColors(viewGroup: ViewGroup, color: Int = 0) {
 
 fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) {
     if (view is ViewGroup)
-        updateTextColors(view.getChildAt(0) as ViewGroup)
+        updateTextColors(view)
     else if (view is AppCompatTextView) {
         view.setTextColor(BaseConfig.newInstance(this).textColor)
     }
