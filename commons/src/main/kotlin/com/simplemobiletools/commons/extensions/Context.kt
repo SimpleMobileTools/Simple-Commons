@@ -17,10 +17,7 @@ import android.widget.Toast
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.helpers.PREFS_KEY
-import com.simplemobiletools.commons.views.MyAppCompatCheckbox
-import com.simplemobiletools.commons.views.MyAppCompatSpinner
-import com.simplemobiletools.commons.views.MyCompatRadioButton
-import com.simplemobiletools.commons.views.MySwitchCompat
+import com.simplemobiletools.commons.views.*
 import kotlinx.android.synthetic.main.dialog_title.view.*
 
 fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) = Toast.makeText(this, id, length).show()
@@ -61,6 +58,8 @@ fun Context.updateTextColors(viewGroup: ViewGroup, color: Int = 0) {
                 } else if (it is MyAppCompatCheckbox) {
                     it.setTextColor(textColor)
                     it.setColor(baseConfig.primaryColor)
+                } else if (it is MyEditText) {
+                    it.setColor(textColor, baseConfig.primaryColor)
                 } else if (it is ViewGroup) {
                     updateTextColors(it, textColor)
                 }
