@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/activity_margin">
 
-        <TextView
+        <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_website"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
             android:text="@string/website"
             android:textColorLink="@color/color_primary"/>
 
-        <TextView
+        <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             android:text="@string/email"
             android:textColorLink="@color/color_primary"/>
 
-        <TextView
+        <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_more_apps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
             android:text="@string/more_apps_underlined"
             android:textColor="@color/color_primary"/>
 
-        <TextView
+        <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_invite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
             android:text="@string/invite_friends_underlined"
             android:textColor="@color/color_primary"/>
 
-        <TextView
+        <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_rate_us"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
             android:text="@string/rate_us_underlined"
             android:textColor="@color/color_primary"/>
 
-        <TextView
+        <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_license"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
             android:text="@string/third_party_licences_underlined"
             android:textColor="@color/color_primary"/>
 
-        <TextView
+        <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_donate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
             android:text="@string/donate_underlined"
             android:textColor="@color/color_primary"/>
 
-        <TextView
+        <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_follow_us"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -107,7 +107,7 @@
             android:layout_toRightOf="@+id/about_facebook"
             android:src="@drawable/ic_gplus"/>
 
-        <TextView
+        <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_copyright"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
