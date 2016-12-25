@@ -5,7 +5,6 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.support.v7.app.AlertDialog
-import android.support.v7.widget.AppCompatTextView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -62,7 +61,7 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
 fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) {
     if (view is ViewGroup)
         updateTextColors(view)
-    else if (view is AppCompatTextView) {
+    else if (view is MyTextView) {
         view.setTextColor(BaseConfig.newInstance(this).textColor)
     }
 
