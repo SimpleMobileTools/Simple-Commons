@@ -34,6 +34,23 @@
     <string name="append">Добавить \'_1\' к имени</string>
     <string name="apply_to_all">Применить ко всем конфликтам</string>
 
+    <!-- File picker -->
+    <string name="select_folder">Выбор папки</string>
+    <string name="select_file">Выбор файла</string>
+    <string name="confirm_storage_access_title">Предоставление доступа к внешнему накопителю</string>
+    <string name="confirm_storage_access_text">Чтобы предоставить право на запись, пожалуйста, выберите корневую папку SD-карты на следующем шаге</string>
+
+    <plurals name="items">
+        <item quantity="one">1 объект</item>
+        <item quantity="other">объектов: %1$d</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">Выбрать хранилище</string>
+    <string name="internal">Внутренняя память</string>
+    <string name="sd_card">SD-карта</string>
+    <string name="root">Корневая папка</string>
+
     <!-- Color customization -->
     <string name="background_color">Цвет фона</string>
     <string name="text_color">Цвет текста</string>

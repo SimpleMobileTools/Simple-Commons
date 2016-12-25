@@ -34,6 +34,23 @@
     <string name="append">Append with \'_1\'</string>
     <string name="apply_to_all">Apply to all conflicts</string>
 
+    <!-- File picker -->
+    <string name="select_folder">Seleccione una carpeta</string>
+    <string name="select_file">Seleccione un archivo</string>
+    <string name="confirm_storage_access_title">Confirmación de acceso al almacenamiento externo</string>
+    <string name="confirm_storage_access_text">Por favor, elija la carpeta raíz de la tarjeta SD en la próxima pantalla para conceder el acceso de escritura</string>
+
+    <plurals name="items">
+        <item quantity="one">1 elemento</item>
+        <item quantity="other">%1$d elementos</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">Seleccione almacenamiento</string>
+    <string name="internal">Almacenamiento interno</string>
+    <string name="sd_card">Tarjeta SD</string>
+    <string name="root">Raíz /</string>
+
     <!-- Color customization -->
     <string name="background_color">Background color</string>
     <string name="text_color">Text color</string>

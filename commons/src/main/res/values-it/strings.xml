@@ -34,6 +34,23 @@
     <string name="append">Aggiungi \'_1\' alla fine</string>
     <string name="apply_to_all">Applica a tutti i conflitti</string>
 
+    <!-- File picker -->
+    <string name="select_folder">Seleziona una cartella</string>
+    <string name="select_file">Seleziona un file</string>
+    <string name="confirm_storage_access_title">Conferma l\'accesso all\'archivio esterno</string>
+    <string name="confirm_storage_access_text">Scegli la root della scheda SD nella prossima schermata, per consentire i permessi di scrittura</string>
+
+    <plurals name="items">
+        <item quantity="one">1 elemento</item>
+        <item quantity="other">%1$d elementi</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">Seleziona archivio</string>
+    <string name="internal">Interno</string>
+    <string name="sd_card">Scheda SD</string>
+    <string name="root">Root</string>
+
     <!-- Color customization -->
     <string name="background_color">Colore di sfondo</string>
     <string name="text_color">Colore del testo</string>
