@@ -9,7 +9,6 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.adjustAlpha
 
 class MySwitchCompat : SwitchCompat {
-
     constructor(context: Context) : super(context) {
     }
 
@@ -19,10 +18,11 @@ class MySwitchCompat : SwitchCompat {
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle) {
     }
 
-    fun setColor(color: Int) {
+    fun setColors(textColor: Int, accentColor: Int, backgroundColor: Int) {
+        setTextColor(textColor)
         val states = arrayOf(intArrayOf(-android.R.attr.state_checked), intArrayOf(android.R.attr.state_checked))
-        val thumbColors = intArrayOf(resources.getColor(R.color.thumb_deactivated), color)
-        val trackColors = intArrayOf(resources.getColor(R.color.track_deactivated), color.adjustAlpha(0.3f))
+        val thumbColors = intArrayOf(resources.getColor(R.color.thumb_deactivated), accentColor)
+        val trackColors = intArrayOf(resources.getColor(R.color.track_deactivated), accentColor.adjustAlpha(0.3f))
         DrawableCompat.setTintList(DrawableCompat.wrap(thumbDrawable), ColorStateList(states, thumbColors))
         DrawableCompat.setTintList(DrawableCompat.wrap(trackDrawable), ColorStateList(states, trackColors))
     }

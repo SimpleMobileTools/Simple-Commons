@@ -1,11 +1,10 @@
 package com.simplemobiletools.commons.views
 
 import android.content.Context
-import android.graphics.PorterDuff
 import android.util.AttributeSet
-import android.widget.EditText
+import android.widget.TextView
 
-class MyEditText : EditText {
+class MyTextView : TextView {
     constructor(context: Context) : super(context) {
     }
 
@@ -16,9 +15,7 @@ class MyEditText : EditText {
     }
 
     fun setColors(textColor: Int, accentColor: Int, backgroundColor: Int) {
-        background.mutate().setColorFilter(accentColor, PorterDuff.Mode.SRC_ATOP)
-
-        // requires android:textCursorDrawable="@null" in xml to color the cursor too
         setTextColor(textColor)
+        setLinkTextColor(accentColor)
     }
 }

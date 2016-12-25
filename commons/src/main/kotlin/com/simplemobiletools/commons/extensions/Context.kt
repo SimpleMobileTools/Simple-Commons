@@ -2,11 +2,9 @@ package com.simplemobiletools.commons.extensions
 
 import android.content.Context
 import android.graphics.Color
-import android.graphics.PorterDuff
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.support.v7.app.AlertDialog
-import android.support.v7.widget.AppCompatEditText
 import android.support.v7.widget.AppCompatTextView
 import android.view.LayoutInflater
 import android.view.View
@@ -34,34 +32,29 @@ fun Context.getDialogBackgroundColor(backgroundColor: Int): Drawable {
     })
 }
 
-fun Context.updateTextColors(viewGroup: ViewGroup, color: Int = 0) {
+fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAccentColor: Int = 0) {
     val baseConfig = BaseConfig.newInstance(this)
-    val textColor = if (color == 0) baseConfig.textColor else color
+    val textColor = if (tmpTextColor == 0) baseConfig.textColor else tmpTextColor
+    val accentColor = if (tmpAccentColor == 0) baseConfig.primaryColor else tmpAccentColor
+    val backgroundColor = baseConfig.backgroundColor
     val cnt = viewGroup.childCount
     (0..cnt - 1)
             .map { viewGroup.getChildAt(it) }
             .forEach {
-                if (it is AppCompatEditText) {
-                    it.background.mutate().setColorFilter(baseConfig.primaryColor, PorterDuff.Mode.SRC_ATOP)
-                    it.setTextColor(textColor)
-                } else if (it is AppCompatTextView) {
-                    it.setTextColor(textColor)
-                    it.setLinkTextColor(baseConfig.primaryColor)
+                if (it is MyTextView) {
+                    it.setColors(textColor, accentColor, backgroundColor)
                 } else if (it is MyAppCompatSpinner) {
-                    it.setColors(textColor, baseConfig.backgroundColor)
+                    it.setColors(textColor, accentColor, backgroundColor)
                 } else if (it is MySwitchCompat) {
-                    it.setTextColor(textColor)
-                    it.setColor(baseConfig.primaryColor)
+                    it.setColors(textColor, accentColor, backgroundColor)
                 } else if (it is MyCompatRadioButton) {
-                    it.setTextColor(textColor)
-                    it.setColor(baseConfig.primaryColor)
+                    it.setColors(textColor, accentColor, backgroundColor)
                 } else if (it is MyAppCompatCheckbox) {
-                    it.setTextColor(textColor)
-                    it.setColor(baseConfig.primaryColor)
+                    it.setColors(textColor, accentColor, backgroundColor)
                 } else if (it is MyEditText) {
-                    it.setColor(textColor, baseConfig.primaryColor)
+                    it.setColors(textColor, accentColor, backgroundColor)
                 } else if (it is ViewGroup) {
-                    updateTextColors(it, textColor)
+                    updateTextColors(it, textColor, accentColor)
                 }
             }
 }
