@@ -89,7 +89,7 @@ class AboutActivity : BaseSimpleActivity() {
         about_rate_us.setTextColor(baseConfig.primaryColor)
     }
 
-    fun setupLicense() {
+    private fun setupLicense() {
         about_license.setOnClickListener {
             Intent(applicationContext, LicenseActivity::class.java).apply {
                 putExtra(APP_LICENSES, intent.getIntExtra(APP_LICENSES, 0))
