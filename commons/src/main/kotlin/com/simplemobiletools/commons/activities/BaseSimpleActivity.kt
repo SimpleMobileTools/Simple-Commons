@@ -10,11 +10,11 @@ import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import com.simplemobiletools.commons.extensions.isShowingWritePermissions
 import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
 import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.helpers.OPEN_DOCUMENT_TREE
-import com.simplemobiletools.filepicker.extensions.isShowingWritePermissions
 import java.io.File
 
 open class BaseSimpleActivity : AppCompatActivity() {

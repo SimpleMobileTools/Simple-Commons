@@ -39,17 +39,12 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.undo -> {
-                confirmUndoChanges()
-                true
-            }
-            R.id.save -> {
-                saveChanges()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
+        when (item.itemId) {
+            R.id.undo -> confirmUndoChanges()
+            R.id.save -> saveChanges()
+            else -> return super.onOptionsItemSelected(item)
         }
+        return true
     }
 
     override fun onBackPressed() {
