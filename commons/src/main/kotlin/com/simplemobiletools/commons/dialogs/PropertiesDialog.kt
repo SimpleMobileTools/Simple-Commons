@@ -108,7 +108,10 @@ class PropertiesDialog() {
     }
 
     private fun getDirectChildrenCount(file: File, countHiddenItems: Boolean): String {
-        return file.listFiles().filter { !it.isHidden || (it.isHidden && countHiddenItems) }.size.toString()
+        return if (file.listFiles() == null)
+            "0"
+        else
+            file.listFiles().filter { it != null && (!it.isHidden || (it.isHidden && countHiddenItems)) }.size.toString()
     }
 
     private fun addProperty(labelId: Int, value: String?) {
@@ -141,12 +144,14 @@ class PropertiesDialog() {
         var size = 0L
         if (dir.exists()) {
             val files = dir.listFiles()
-            for (i in files.indices) {
-                if (files[i].isDirectory) {
-                    size += getDirectorySize(files[i])
-                } else if (!files[i].isHidden && !dir.isHidden || mCountHiddenItems) {
-                    mFilesCnt++
-                    size += files[i].length()
+            if (files != null) {
+                for (i in files.indices) {
+                    if (files[i].isDirectory) {
+                        size += getDirectorySize(files[i])
+                    } else if (!files[i].isHidden && !dir.isHidden || mCountHiddenItems) {
+                        mFilesCnt++
+                        size += files[i].length()
+                    }
                 }
             }
         }
