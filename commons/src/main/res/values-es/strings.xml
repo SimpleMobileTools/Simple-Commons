@@ -51,6 +51,17 @@
     <string name="sd_card">Tarjeta SD</string>
     <string name="root">Raíz /</string>
 
+    <!-- File properties -->
+    <string name="properties">Propiedades</string>
+    <string name="path">Ubicación</string>
+    <string name="items_selected">Elementos seleccionados</string>
+    <string name="direct_children_count">Número de archivos directamente contenidos</string>
+    <string name="files_count">Número total de archivos</string>
+    <string name="resolution">Resolución</string>
+    <string name="duration">Duración</string>
+    <string name="artist">Artista</string>
+    <string name="album">Álbum</string>
+
     <!-- Color customization -->
     <string name="background_color">Background color</string>
     <string name="text_color">Text color</string>
@@ -73,7 +84,6 @@
     <string name="rename">Renombrar</string>
     <string name="share">Compartir</string>
     <string name="share_via">Compartir vía</string>
-    <string name="properties">Propiedades</string>
     <string name="select_all">Select all</string>
 
     <!-- Sorting -->

@@ -51,6 +51,17 @@
     <string name="sd_card">SD-карта</string>
     <string name="root">Корневая папка</string>
 
+    <!-- File properties -->
+    <string name="properties">Свойства</string>
+    <string name="path">Расположение</string>
+    <string name="items_selected">Выбрано элементов</string>
+    <string name="direct_children_count">Дочерних элементов</string>
+    <string name="files_count">Всего файлов внутри</string>
+    <string name="resolution">Разрешение</string>
+    <string name="duration">Длительность</string>
+    <string name="artist">Исполнитель</string>
+    <string name="album">Альбом</string>
+
     <!-- Color customization -->
     <string name="background_color">Цвет фона</string>
     <string name="text_color">Цвет текста</string>
@@ -73,7 +84,6 @@
     <string name="rename">Переименовать</string>
     <string name="share">Поделиться</string>
     <string name="share_via">Отправить по</string>
-    <string name="properties">Свойства</string>
     <string name="select_all">Выделить все</string>
 
     <!-- Sorting -->

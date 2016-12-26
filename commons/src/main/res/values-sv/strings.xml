@@ -51,6 +51,17 @@
     <string name="sd_card">SD Card</string>
     <string name="root">Root</string>
 
+    <!-- File properties -->
+    <string name="properties">Egenskaper</string>
+    <string name="path">Path</string>
+    <string name="items_selected">Items selected</string>
+    <string name="direct_children_count">Direct children count</string>
+    <string name="files_count">Total files count</string>
+    <string name="resolution">Resolution</string>
+    <string name="duration">Duration</string>
+    <string name="artist">Artist</string>
+    <string name="album">Album</string>
+
     <!-- Color customization -->
     <string name="background_color">Background color</string>
     <string name="text_color">Text color</string>
@@ -73,7 +84,6 @@
     <string name="rename">Döp om</string>
     <string name="share">Dela</string>
     <string name="share_via">Dela via</string>
-    <string name="properties">Egenskaper</string>
     <string name="select_all">Select all</string>
 
     <!-- Sorting -->
