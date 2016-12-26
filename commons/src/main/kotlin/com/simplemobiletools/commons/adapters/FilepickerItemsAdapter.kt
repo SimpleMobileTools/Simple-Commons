@@ -10,16 +10,22 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.formatSize
 import com.simplemobiletools.commons.extensions.isGif
+import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.filepicker_list_item.view.*
 import java.io.File
 
 class FilepickerItemsAdapter(val context: Context, private val mItems: List<FileDirItem>, val itemClick: (FileDirItem) -> Unit) :
         RecyclerView.Adapter<FilepickerItemsAdapter.ViewHolder>() {
+    var textColor = 0
+
+    init {
+        textColor = BaseConfig.newInstance(context).textColor
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.filepicker_list_item, parent, false)
-        return ViewHolder(context, view, itemClick)
+        return ViewHolder(context, textColor, view, itemClick)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -28,9 +34,10 @@ class FilepickerItemsAdapter(val context: Context, private val mItems: List<File
 
     override fun getItemCount() = mItems.size
 
-    class ViewHolder(val context: Context, view: View, val itemClick: (FileDirItem) -> (Unit)) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(val context: Context, val textColor: Int, view: View, val itemClick: (FileDirItem) -> (Unit)) : RecyclerView.ViewHolder(view) {
         fun bindView(fileDirItem: FileDirItem) {
             itemView.list_item_name.text = fileDirItem.name
+            itemView.list_item_name.setTextColor(textColor)
 
             if (fileDirItem.isDirectory) {
                 Glide.with(context).load(R.drawable.ic_directory).diskCacheStrategy(getCacheStrategy(fileDirItem)).centerCrop().crossFade().into(itemView.list_item_icon)
@@ -40,6 +47,7 @@ class FilepickerItemsAdapter(val context: Context, private val mItems: List<File
                 itemView.list_item_details.text = fileDirItem.size.formatSize()
             }
 
+            itemView.list_item_details.setTextColor(textColor)
             itemView.setOnClickListener { itemClick(fileDirItem) }
         }
 

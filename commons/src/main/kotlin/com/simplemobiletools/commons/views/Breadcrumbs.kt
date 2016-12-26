@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getBasePath
 import com.simplemobiletools.commons.extensions.humanizePath
+import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.breadcrumb_item.view.*
 
@@ -18,10 +19,12 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
 
     private var mInflater: LayoutInflater
     private var mListener: BreadcrumbsListener? = null
+    private var mTextColor = 0
 
     init {
         mInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         mDeviceWidth = getDeviceWidth()
+        mTextColor = BaseConfig.newInstance(context).textColor
     }
 
     fun setListener(listener: BreadcrumbsListener) {
@@ -125,6 +128,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
             textToAdd = " -> " + textToAdd
 
         view.breadcrumb_text.text = textToAdd
+        view.breadcrumb_text.setTextColor(mTextColor)
         addView(view)
         view.setOnClickListener(this)
 
