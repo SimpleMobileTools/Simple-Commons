@@ -11,10 +11,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.simplemobiletools.commons.extensions.isShowingWritePermissions
-import com.simplemobiletools.commons.helpers.APP_LICENSES
-import com.simplemobiletools.commons.helpers.APP_NAME
-import com.simplemobiletools.commons.helpers.BaseConfig
-import com.simplemobiletools.commons.helpers.OPEN_DOCUMENT_TREE
+import com.simplemobiletools.commons.helpers.*
 import java.io.File
 
 open class BaseSimpleActivity : AppCompatActivity() {
@@ -75,10 +72,11 @@ open class BaseSimpleActivity : AppCompatActivity() {
         contentResolver.takePersistableUriPermission(treeUri, takeFlags)
     }
 
-    fun startAboutActivity(appNameId: Int, licenseMask: Int) {
+    fun startAboutActivity(appNameId: Int, licenseMask: Int, versionName: String) {
         Intent(applicationContext, AboutActivity::class.java).apply {
             putExtra(APP_NAME, getString(appNameId))
             putExtra(APP_LICENSES, licenseMask)
+            putExtra(APP_VERSION_NAME, versionName)
             startActivity(this)
         }
     }

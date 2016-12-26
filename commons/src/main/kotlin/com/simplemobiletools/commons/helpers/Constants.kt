@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.helpers
 
 val APP_NAME = "app_name"
 val APP_LICENSES = "app_licenses"
+val APP_VERSION_NAME = "app_version_name"
 
 // shared preferences
 val PREFS_KEY = "Prefs"

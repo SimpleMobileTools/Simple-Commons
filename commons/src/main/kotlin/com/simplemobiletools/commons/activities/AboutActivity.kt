@@ -6,11 +6,11 @@ import android.os.Bundle
 import android.text.Html
 import android.text.method.LinkMovementMethod
 import android.view.View
-import com.simplemobiletools.commons.BuildConfig
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
+import com.simplemobiletools.commons.helpers.APP_VERSION_NAME
 import kotlinx.android.synthetic.main.activity_about.*
 import java.util.*
 
@@ -126,7 +126,7 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupCopyright() {
-        val versionName = BuildConfig.VERSION_NAME
+        val versionName = intent.getStringExtra(APP_VERSION_NAME) ?: ""
         val year = Calendar.getInstance().get(Calendar.YEAR)
         about_copyright.text = String.format(getString(R.string.copyright), versionName, year)
     }
