@@ -19,7 +19,7 @@ import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.Breadcrumbs
 import com.simplemobiletools.commons.views.RecyclerViewDivider
-import kotlinx.android.synthetic.main.directory_picker.view.*
+import kotlinx.android.synthetic.main.dialog_filepicker.view.*
 import java.io.File
 import java.util.*
 import kotlin.comparisons.compareBy
@@ -53,7 +53,7 @@ class FilePickerDialog(val context: Context,
             if (!File(currPath).exists())
                 currPath = context.getInternalStoragePath()
 
-            mDialogView = LayoutInflater.from(context).inflate(R.layout.directory_picker, null)
+            mDialogView = LayoutInflater.from(context).inflate(R.layout.dialog_filepicker, null)
             mDialogView.directory_picker_breadcrumbs.setListener(this)
             updateItems()
 

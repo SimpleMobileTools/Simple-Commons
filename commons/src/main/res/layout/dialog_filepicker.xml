@@ -17,6 +17,7 @@
         android:id="@+id/directory_picker_list"
         android:layout_width="match_parent"
         android:layout_height="1000dp"
+        android:scrollbars="vertical"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
 
 </LinearLayout>
