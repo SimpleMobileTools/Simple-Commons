@@ -77,6 +77,7 @@ fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) 
     }
 
     dialog.apply {
+        setView(view)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         setCustomTitle(title)
         setCanceledOnTouchOutside(true)

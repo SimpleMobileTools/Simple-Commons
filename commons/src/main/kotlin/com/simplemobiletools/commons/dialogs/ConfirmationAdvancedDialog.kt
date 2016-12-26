@@ -16,7 +16,6 @@ class ConfirmationAdvancedDialog(context: Context, message: String = "", message
         view.message.text = if (message.isEmpty()) context.resources.getString(messageId) else message
 
         dialog = AlertDialog.Builder(context)
-                .setView(view)
                 .setPositiveButton(positive, { dialog, which -> positivePressed() })
                 .setNegativeButton(negative, { dialog, which -> negativePressed() })
                 .create().apply {

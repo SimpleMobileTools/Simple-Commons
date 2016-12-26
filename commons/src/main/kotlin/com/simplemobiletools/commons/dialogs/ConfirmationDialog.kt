@@ -26,7 +26,6 @@ class ConfirmationDialog(val context: Context, message: String = "", messageId: 
         view.message.text = if (message.isEmpty()) context.resources.getString(messageId) else message
 
         val builder = AlertDialog.Builder(context)
-                .setView(view)
                 .setPositiveButton(positive, { dialog, which -> dialogConfirmed() })
 
         if (negative != 0)

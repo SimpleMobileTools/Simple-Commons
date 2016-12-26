@@ -72,7 +72,6 @@ class FilePickerDialog(val context: Context,
             })
 
             val builder = AlertDialog.Builder(context)
-                    .setView(mDialogView)
                     .setNegativeButton(R.string.cancel, { dialog, which -> dialogDismissed() })
                     .setOnCancelListener({ dialogDismissed() })
                     .setOnKeyListener({ dialogInterface, i, keyEvent ->

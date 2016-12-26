@@ -20,7 +20,6 @@ class WritePermissionDialog(context: Context, val callback: () -> Unit) {
         val view = LayoutInflater.from(context).inflate(R.layout.dialog_write_permission, null)
 
         dialog = AlertDialog.Builder(context)
-                .setView(view)
                 .setPositiveButton(R.string.ok, { dialog, which -> dialogConfirmed() })
                 .create().apply {
             context.setupDialogStuff(view, this, R.string.confirm_storage_access_title)

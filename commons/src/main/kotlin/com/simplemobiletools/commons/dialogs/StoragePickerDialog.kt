@@ -54,7 +54,6 @@ class StoragePickerDialog(val context: Context, currPath: String, val callback: 
         radioGroup.addView(rootButton, layoutParams)
 
         mDialog = AlertDialog.Builder(context)
-                .setView(radioGroup)
                 .create().apply {
             context.setupDialogStuff(radioGroup, this, R.string.select_storage)
         }
