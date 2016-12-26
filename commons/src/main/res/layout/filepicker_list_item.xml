@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item_holder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:paddingRight="@dimen/activity_margin">
+
+    <ImageView
+        android:id="@+id/list_item_icon"
+        android:layout_width="@dimen/filepicker_list_icon_size"
+        android:layout_height="@dimen/filepicker_list_icon_size"
+        android:paddingBottom="@dimen/medium_margin"
+        android:paddingTop="@dimen/medium_margin"
+        android:src="@drawable/ic_directory"/>
+
+    <TextView
+        android:id="@+id/list_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/list_item_icon"
+        android:layout_toRightOf="@+id/list_item_icon"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:paddingLeft="@dimen/small_margin"
+        android:paddingTop="@dimen/small_margin"
+        android:text="Directory"/>
+
+    <TextView
+        android:id="@+id/list_item_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list_item_name"
+        android:layout_toRightOf="@+id/list_item_icon"
+        android:paddingLeft="@dimen/small_margin"
+        android:text="1 KB"
+        android:textSize="@dimen/smaller_text_size"/>
+
+</RelativeLayout>

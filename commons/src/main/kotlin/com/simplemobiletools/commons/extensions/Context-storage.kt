@@ -12,6 +12,7 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.support.v4.content.ContextCompat
 import android.support.v4.provider.DocumentFile
+import com.simplemobiletools.commons.R
 import java.io.File
 import java.util.*
 
@@ -65,9 +66,9 @@ fun Context.hasExternalSDCard(): Boolean {
 
 fun Context.getHumanReadablePath(path: String): String {
     return getString(when (path) {
-        "/" -> com.simplemobiletools.filepicker.R.string.smtfp_root
-        getInternalStoragePath() -> com.simplemobiletools.filepicker.R.string.smtfp_internal
-        else -> com.simplemobiletools.filepicker.R.string.smtfp_sd_card
+        "/" -> R.string.root
+        getInternalStoragePath() -> R.string.internal
+        else -> R.string.sd_card
     })
 }
 
