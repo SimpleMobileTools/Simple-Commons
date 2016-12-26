@@ -29,12 +29,14 @@ class MyAppCompatSpinner : AppCompatSpinner {
         val padding = resources.getDimension(R.dimen.activity_margin).toInt()
         adapter = MyArrayAdapter(context, android.R.layout.simple_spinner_item, items, textColor, backgroundColor, padding)
 
+        val superListener = onItemSelectedListener
         onItemSelectedListener = object : OnItemSelectedListener {
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-            }
-
             override fun onItemSelected(parent: AdapterView<*>, arg1: View?, arg2: Int, arg3: Long) {
                 (parent.getChildAt(0) as TextView).setTextColor(textColor)
+                superListener.onItemSelected(parent, arg1, arg2, arg3)
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
             }
         }
         background.setColorFilter(textColor, PorterDuff.Mode.SRC_ATOP)
