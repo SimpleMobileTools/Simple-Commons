@@ -1,9 +1,7 @@
 package com.simplemobiletools.commons.extensions
 
 import android.content.Context
-import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.Drawable
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
@@ -22,14 +20,6 @@ fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) = Toast.makeText(th
 fun Context.toast(msg: String, length: Int = Toast.LENGTH_SHORT) = Toast.makeText(this, msg, length).show()
 
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
-
-fun Context.getDialogBackgroundColor(backgroundColor: Int): Drawable {
-    return ColorDrawable(if (backgroundColor.getContrastColor() == Color.WHITE) {
-        resources.getColor(R.color.dark_dialog_background)
-    } else {
-        backgroundColor
-    })
-}
 
 fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAccentColor: Int = 0) {
     val baseConfig = BaseConfig.newInstance(this)
@@ -85,6 +75,6 @@ fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) 
         getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(primaryColor)
         getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(primaryColor)
         getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(primaryColor)
-        window.setBackgroundDrawable(context.getDialogBackgroundColor(baseConfig.backgroundColor))
+        window.setBackgroundDrawable(ColorDrawable(baseConfig.backgroundColor))
     }
 }
