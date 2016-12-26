@@ -102,7 +102,7 @@
     <string name="third_party_licences_underlined"><u>サードパーティー ライセンス</u></string>
     <string name="invite_friends_underlined"><u>友達を招待</u></string>
     <string name="share_text">%2$s で %1$s を確認してください</string>
-    <string name="invite_via">招待...</string>
+    <string name="invite_via">招待&#8230;</string>
     <string name="rate_us_underlined"><u>Play ストアで評価してください</u></string>
     <string name="donate_underlined"><u>Donate</u></string>
     <string name="follow_us">フォローしてください:</string>
@@ -117,7 +117,6 @@
     <string name="cropper_title">Android Image Cropper (画像のトリミングと回転)</string>
     <string name="multiselect_title">RecyclerView MultiSelect (複数選択リストアイテム)</string>
     <string name="rtl_viewpager_title">RtlViewPager (右から左への画像スワイプ用)</string>
-    <string name="filepicker_title">Simple File Picker (ファイルピッカー ダイアログ)</string>
     <string name="fileproperties_title">Simple File Properties (プロパティ ダイアログ)</string>
     <string name="ambilwarna_title">AmbilWarna (color picker)</string>
     <string name="joda_title">Joda-Time (Java date replacement)</string>

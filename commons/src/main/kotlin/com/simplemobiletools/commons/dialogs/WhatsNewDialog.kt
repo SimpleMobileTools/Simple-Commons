@@ -10,17 +10,14 @@ import com.simplemobiletools.commons.models.Release
 import kotlinx.android.synthetic.main.dialog_whats_new.view.*
 
 class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
-    var dialog: AlertDialog? = null
-
     init {
         val view = LayoutInflater.from(activity).inflate(R.layout.dialog_whats_new, null)
         view.whats_new_content.text = getNewReleases()
 
-        val builder = AlertDialog.Builder(activity)
+        AlertDialog.Builder(activity)
                 .setView(view)
                 .setPositiveButton(R.string.ok, null)
-
-        dialog = builder.create().apply {
+                .create().apply {
             activity.setupDialogStuff(view, this, R.string.whats_new)
         }
     }

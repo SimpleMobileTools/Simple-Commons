@@ -2,7 +2,7 @@ package com.simplemobiletools.commons.extensions
 
 import android.app.Activity
 import android.content.Intent
-import com.simplemobiletools.filepicker.dialogs.WritePermissionDialog
+import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import java.io.File
 
 fun Activity.isShowingWritePermissions(file: File, treeUri: String, requestCode: Int): Boolean {

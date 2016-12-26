@@ -53,7 +53,6 @@ class LicenseActivity : BaseSimpleActivity() {
                     License(LICENSE_CROPPER, R.string.cropper_title, R.string.cropper_text, R.string.cropper_url),
                     License(LICENSE_MULTISELECT, R.string.multiselect_title, R.string.multiselect_text, R.string.multiselect_url),
                     License(LICENSE_RTL, R.string.rtl_viewpager_title, R.string.rtl_viewpager_text, R.string.rtl_viewpager_url),
-                    License(LICENSE_FILEPICKER, R.string.filepicker_title, R.string.filepicker_text, R.string.filepicker_url),
                     License(LICENSE_FILEPROPERTIES, R.string.fileproperties_title, R.string.fileproperties_text, R.string.fileproperties_url),
                     License(LICENSE_AMBILWARNA, R.string.ambilwarna_title, R.string.ambilwarna_text, R.string.ambilwarna_url),
                     License(LICENSE_JODA, R.string.joda_title, R.string.joda_text, R.string.joda_url),
