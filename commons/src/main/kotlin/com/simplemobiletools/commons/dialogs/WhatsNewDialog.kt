@@ -23,15 +23,12 @@ class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
 
     fun getNewReleases(): String {
         val config = BaseConfig.newInstance(activity)
-        val lastVersion = config.lastVersion
         val sb = StringBuilder()
 
         releases.forEach {
-            if (it.id > lastVersion) {
-                val parts = activity.getString(it.textId).split("\n").map(String::trim)
-                parts.forEach {
-                    sb.append("- $it\n")
-                }
+            val parts = activity.getString(it.textId).split("\n").map(String::trim)
+            parts.forEach {
+                sb.append("- $it\n")
             }
         }
 

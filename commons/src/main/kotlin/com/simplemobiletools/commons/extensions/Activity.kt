@@ -2,7 +2,10 @@ package com.simplemobiletools.commons.extensions
 
 import android.app.Activity
 import android.content.Intent
+import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.dialogs.WhatsNewDialog
 import com.simplemobiletools.commons.dialogs.WritePermissionDialog
+import com.simplemobiletools.commons.models.Release
 import java.io.File
 
 fun Activity.isShowingWritePermissions(file: File, treeUri: String, requestCode: Int): Boolean {
@@ -15,4 +18,12 @@ fun Activity.isShowingWritePermissions(file: File, treeUri: String, requestCode:
     } else {
         false
     }
+}
+
+fun BaseSimpleActivity.checkWhatsNew(releases: List<Release>) {
+    val newReleases = arrayListOf<Release>()
+    releases.filterTo(newReleases) { it.id > baseConfig.lastVersion }
+
+    if (newReleases.isNotEmpty())
+        WhatsNewDialog(this, newReleases)
 }
