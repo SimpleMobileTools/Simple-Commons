@@ -15,7 +15,7 @@
         android:paddingTop="@dimen/medium_margin"
         android:src="@drawable/ic_directory"/>
 
-    <TextView
+    <com.simplemobiletools.commons.views.MyTextView
         android:id="@+id/list_item_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
         android:paddingTop="@dimen/small_margin"
         android:text="Directory"/>
 
-    <TextView
+    <com.simplemobiletools.commons.views.MyTextView
         android:id="@+id/list_item_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
