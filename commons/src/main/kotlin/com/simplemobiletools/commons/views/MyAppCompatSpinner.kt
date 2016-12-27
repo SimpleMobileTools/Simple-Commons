@@ -32,8 +32,8 @@ class MyAppCompatSpinner : AppCompatSpinner {
         val superListener = onItemSelectedListener
         onItemSelectedListener = object : OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                (parent?.getChildAt(0) as TextView).setTextColor(textColor)
-                superListener.onItemSelected(parent, view, position, id)
+                (view as TextView).setTextColor(textColor)
+                superListener?.onItemSelected(parent, view, position, id)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
