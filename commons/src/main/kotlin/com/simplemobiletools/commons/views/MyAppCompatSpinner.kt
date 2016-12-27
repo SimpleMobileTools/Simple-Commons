@@ -31,12 +31,12 @@ class MyAppCompatSpinner : AppCompatSpinner {
 
         val superListener = onItemSelectedListener
         onItemSelectedListener = object : OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, arg1: View?, arg2: Int, arg3: Long) {
-                (parent.getChildAt(0) as TextView).setTextColor(textColor)
-                superListener.onItemSelected(parent, arg1, arg2, arg3)
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                (parent?.getChildAt(0) as TextView).setTextColor(textColor)
+                superListener.onItemSelected(parent, view, position, id)
             }
 
-            override fun onNothingSelected(p0: AdapterView<*>?) {
+            override fun onNothingSelected(parent: AdapterView<*>?) {
             }
         }
         background.setColorFilter(textColor, PorterDuff.Mode.SRC_ATOP)
