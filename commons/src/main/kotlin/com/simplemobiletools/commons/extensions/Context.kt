@@ -49,20 +49,19 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
 }
 
 fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) {
+    val config = BaseConfig.newInstance(this)
     if (view is ViewGroup)
         updateTextColors(view)
     else if (view is MyTextView) {
-        view.setTextColor(BaseConfig.newInstance(this).textColor)
+        view.setTextColor(config.textColor)
     }
 
-    val baseConfig = BaseConfig.newInstance(this)
-    val primaryColor = baseConfig.primaryColor
     var title: TextView? = null
     if (titleId != 0) {
         title = LayoutInflater.from(this).inflate(R.layout.dialog_title, null) as TextView
         title.dialog_title_textview.apply {
             setText(titleId)
-            setTextColor(baseConfig.textColor)
+            setTextColor(config.textColor)
         }
     }
 
@@ -72,9 +71,9 @@ fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) 
         setCustomTitle(title)
         setCanceledOnTouchOutside(true)
         show()
-        getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(primaryColor)
-        getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(primaryColor)
-        getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(primaryColor)
-        window.setBackgroundDrawable(ColorDrawable(baseConfig.backgroundColor))
+        getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(config.textColor)
+        getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(config.textColor)
+        getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(config.textColor)
+        window.setBackgroundDrawable(ColorDrawable(config.backgroundColor))
     }
 }
