@@ -25,7 +25,12 @@ fun Activity.isShowingWritePermissions(file: File, treeUri: String, requestCode:
     }
 }
 
-fun BaseSimpleActivity.checkWhatsNew(releases: List<Release>) {
+fun BaseSimpleActivity.checkWhatsNew(releases: List<Release>, currVersion: Int) {
+    if (baseConfig.lastVersion == 0) {
+        baseConfig.lastVersion = currVersion
+        return
+    }
+
     val newReleases = arrayListOf<Release>()
     releases.filterTo(newReleases) { it.id > baseConfig.lastVersion }
 
