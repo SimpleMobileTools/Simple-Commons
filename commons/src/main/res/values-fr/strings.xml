@@ -1,0 +1,135 @@
+<resources>
+    <string name="ok">Ok</string>
+    <string name="cancel">Annuler</string>
+    <string name="search">Recherche</string>
+    <string name="invalid_name">Le nom contient des caractères invalides</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">Copier</string>
+    <string name="move">Déplacer</string>
+    <string name="copy_move">Copier / Déplacer</string>
+    <string name="source">Source</string>
+    <string name="destination">Destination</string>
+    <string name="select_destination">Sélectionner la destination</string>
+    <string name="click_select_destination">Cliquez ici pour sélectionner la destination</string>
+    <string name="invalid_destination">Impossible d'écrire dans la destination sélectionnée</string>
+    <string name="please_select_destination">Veuillez choisir une destination</string>
+    <string name="source_and_destination_same">La source et la destination ne peuvent pas être identiques</string>
+    <string name="copy_failed">Impossible de copier les fichiers</string>
+    <string name="copying">Copie&#8230;</string>
+    <string name="copying_success">Fichiers copiés avec succès</string>
+    <string name="copy_move_failed">Une erreur est survenue</string>
+    <string name="moving">Déplacement&#8230;</string>
+    <string name="moving_success">Fichiers déplacés avec succès</string>
+    <string name="file_exists">Un fichier avec le même nom existe déjà</string>
+    <string name="moving_success_partial">Certains fichiers n'ont pu être déplacés</string>
+    <string name="copying_success_partial">Certains fichiers n'ont pu être copiés</string>
+    <string name="create_new_directory">Créer un nouveau répertoire</string>
+    <string name="directory_exists">Un répertoire avec le même nom existe déja</string>
+
+    <!-- Copy conflicts -->
+    <string name="file_already_exists">Le fichier $%1s existe déjà</string>
+    <string name="select_an_action">Sélectionner une action</string>
+    <string name="overwrite">Ecraser</string>
+    <string name="skip">Passer</string>
+    <string name="append">Suffixer avec \'_1\'</string>
+    <string name="apply_to_all">Appliquer à tous les conflits</string>
+
+    <!-- File picker -->
+    <string name="select_folder">Sélectionner un dossier</string>
+    <string name="select_file">Sélectionner un fichier</string>
+    <string name="confirm_storage_access_title">Confirmer l'accès au stockage externe</string>
+    <string name="confirm_storage_access_text">Veuillez choisir le dossier racine de la carte SD dans le prochain écran, pour accorder le droit d'écriture</string>
+
+    <plurals name="items">
+        <item quantity="one">1 élément</item>
+        <item quantity="other">%1$d éléments</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">Sélectionner le stockage</string>
+    <string name="internal">Interne</string>
+    <string name="sd_card">Carte SD</string>
+    <string name="root">Racine</string>
+
+    <!-- File properties -->
+    <string name="properties">Propriétés</string>
+    <string name="path">Chemin</string>
+    <string name="items_selected">Eléments sélectionnés</string>
+    <string name="direct_children_count">Compte des enfants directs</string>
+    <string name="files_count">Compte total des fichiers</string>
+    <string name="resolution">Résolution</string>
+    <string name="duration">Durée</string>
+    <string name="artist">Artiste</string>
+    <string name="album">Album</string>
+
+    <!-- Color customization -->
+    <string name="background_color">Couleur d'arrière-plan</string>
+    <string name="text_color">Couleur du texte</string>
+    <string name="primary_color">Couleur primaire</string>
+    <string name="light_theme">Thème lumineux</string>
+    <string name="dark_theme">Thème sombre</string>
+    <string name="custom">Personnalisé</string>
+    <string name="save">Sauvegarder</string>
+    <string name="discard">Rejeter</string>
+    <string name="undo_changes">Annuler les changements</string>
+    <string name="undo_changes_confirmation">Etes-vous sûr de vouloir annuler vos changements ?</string>
+    <string name="save_before_closing">Vous avez des changements non sauvegardés. Sauvegarder avant de quitter ?</string>
+
+    <!-- What's new -->
+    <string name="whats_new">Quoi de neuf</string>
+    <string name="whats_new_disclaimer">*  seules les mises à jour les plus importantes sont listées ici, il y a toujours de petites améliorations également</string>
+
+    <!-- Actionbar items -->
+    <string name="delete">Supprimer</string>
+    <string name="rename">Renommer</string>
+    <string name="share">Partager</string>
+    <string name="share_via">Partager via</string>
+    <string name="select_all">Sélectionner tout</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">Trier par</string>
+    <string name="name">Nom</string>
+    <string name="size">Taille</string>
+    <string name="last_modified">Dernière modification</string>
+    <string name="date_taken">Date prise</string>
+    <string name="ascending">Croissant</string>
+    <string name="descending">Décroissant</string>
+
+    <!-- Confirmation dialog -->
+    <string name="proceed_with_deletion">Etes-vous sûr de voulois effectuer la suppression ?</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+
+    <!-- Settings -->
+    <string name="settings">Paramètres</string>
+    <string name="customize_colors">Personnaliser les couleurs</string>
+
+    <!-- About -->
+    <string name="about">A propos</string>
+    <string name="website_label">Pour le code source visitez</string>
+    <string name="email_label">Envoyez vos réactions et suggestions à</string>
+    <string name="more_apps_underlined"><u>Plus d'applications</u></string>
+    <string name="third_party_licences_underlined"><u>Licences tierces</u></string>
+    <string name="invite_friends_underlined"><u>Inviter des amis</u></string>
+    <string name="share_text">Hey, viens voir %1$s à %2$s</string>
+    <string name="invite_via">Inviter via</string>
+    <string name="rate_us_underlined"><u>Nous évaluer</u></string>
+    <string name="donate_underlined"><u>Donner</u></string>
+    <string name="follow_us">Suivez nous:</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+
+    <!-- License -->
+    <string name="notice">Cette application utilise les librairies tierces suivantes pour me simplifier la vie. Merci.</string>
+    <string name="third_party_licences">Licences tierces</string>
+    <string name="kotlin_title">Kotlin (langage de programmation)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (imageviews zoomables)</string>
+    <string name="glide_title">Glide (chargement et mise en cache d'image)</string>
+    <string name="cropper_title">Android Image Cropper (découpe et rotation d'image)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (sélection de multiples éléments de liste)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (balayage d'image de droite à gauche)</string>
+    <string name="ambilwarna_title">AmbilWarna (sélecteur de couleur)</string>
+    <string name="joda_title">Joda-Time (remplacement de date Java)</string>
+    <string name="stetho_title">Stetho (débogage de bases de données)</string>
+    <string name="otto_title">Otto (bus d'évenement)</string>
+</resources>
