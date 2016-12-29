@@ -12,7 +12,7 @@
     <string name="destination">Destination</string>
     <string name="select_destination">Sélectionner la destination</string>
     <string name="click_select_destination">Cliquez ici pour sélectionner la destination</string>
-    <string name="invalid_destination">Impossible d'écrire dans la destination sélectionnée</string>
+    <string name="invalid_destination">Impossible d\'écrire dans la destination sélectionnée</string>
     <string name="please_select_destination">Veuillez choisir une destination</string>
     <string name="source_and_destination_same">La source et la destination ne peuvent pas être identiques</string>
     <string name="copy_failed">Impossible de copier les fichiers</string>
@@ -22,8 +22,8 @@
     <string name="moving">Déplacement&#8230;</string>
     <string name="moving_success">Fichiers déplacés avec succès</string>
     <string name="file_exists">Un fichier avec le même nom existe déjà</string>
-    <string name="moving_success_partial">Certains fichiers n'ont pu être déplacés</string>
-    <string name="copying_success_partial">Certains fichiers n'ont pu être copiés</string>
+    <string name="moving_success_partial">Certains fichiers n\'ont pu être déplacés</string>
+    <string name="copying_success_partial">Certains fichiers n\'ont pu être copiés</string>
     <string name="create_new_directory">Créer un nouveau répertoire</string>
     <string name="directory_exists">Un répertoire avec le même nom existe déja</string>
 
@@ -38,8 +38,8 @@
     <!-- File picker -->
     <string name="select_folder">Sélectionner un dossier</string>
     <string name="select_file">Sélectionner un fichier</string>
-    <string name="confirm_storage_access_title">Confirmer l'accès au stockage externe</string>
-    <string name="confirm_storage_access_text">Veuillez choisir le dossier racine de la carte SD dans le prochain écran, pour accorder le droit d'écriture</string>
+    <string name="confirm_storage_access_title">Confirmer l\'accès au stockage externe</string>
+    <string name="confirm_storage_access_text">Veuillez choisir le dossier racine de la carte SD dans le prochain écran, pour accorder le droit d\'écriture</string>
 
     <plurals name="items">
         <item quantity="one">1 élément</item>
@@ -64,7 +64,7 @@
     <string name="album">Album</string>
 
     <!-- Color customization -->
-    <string name="background_color">Couleur d'arrière-plan</string>
+    <string name="background_color">Couleur d\'arrière-plan</string>
     <string name="text_color">Couleur du texte</string>
     <string name="primary_color">Couleur primaire</string>
     <string name="light_theme">Thème lumineux</string>
@@ -78,7 +78,7 @@
 
     <!-- What's new -->
     <string name="whats_new">Quoi de neuf</string>
-    <string name="whats_new_disclaimer">*  seules les mises à jour les plus importantes sont listées ici, il y a toujours de petites améliorations également</string>
+    <string name="whats_new_disclaimer">* seules les mises à jour les plus importantes sont listées ici, il y a toujours de petites améliorations également</string>
 
     <!-- Actionbar items -->
     <string name="delete">Supprimer</string>
@@ -109,7 +109,7 @@
     <string name="about">A propos</string>
     <string name="website_label">Pour le code source visitez</string>
     <string name="email_label">Envoyez vos réactions et suggestions à</string>
-    <string name="more_apps_underlined"><u>Plus d'applications</u></string>
+    <string name="more_apps_underlined"><u>Plus d\'applications</u></string>
     <string name="third_party_licences_underlined"><u>Licences tierces</u></string>
     <string name="invite_friends_underlined"><u>Inviter des amis</u></string>
     <string name="share_text">Hey, viens voir %1$s à %2$s</string>
@@ -124,12 +124,12 @@
     <string name="third_party_licences">Licences tierces</string>
     <string name="kotlin_title">Kotlin (langage de programmation)</string>
     <string name="subsampling_title">Subsampling Scale Image View (imageviews zoomables)</string>
-    <string name="glide_title">Glide (chargement et mise en cache d'image)</string>
-    <string name="cropper_title">Android Image Cropper (découpe et rotation d'image)</string>
+    <string name="glide_title">Glide (chargement et mise en cache d\'image)</string>
+    <string name="cropper_title">Android Image Cropper (découpe et rotation d\'image)</string>
     <string name="multiselect_title">RecyclerView MultiSelect (sélection de multiples éléments de liste)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (balayage d'image de droite à gauche)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (balayage d\'image de droite à gauche)</string>
     <string name="ambilwarna_title">AmbilWarna (sélecteur de couleur)</string>
     <string name="joda_title">Joda-Time (remplacement de date Java)</string>
     <string name="stetho_title">Stetho (débogage de bases de données)</string>
-    <string name="otto_title">Otto (bus d'évenement)</string>
+    <string name="otto_title">Otto (bus d\'évenement)</string>
 </resources>
