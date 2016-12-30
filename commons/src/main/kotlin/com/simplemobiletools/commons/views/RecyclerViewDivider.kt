@@ -7,11 +7,7 @@ import android.support.v7.widget.RecyclerView
 import com.simplemobiletools.commons.R
 
 class RecyclerViewDivider(context: Context) : RecyclerView.ItemDecoration() {
-    private val mDivider: Drawable
-
-    init {
-        mDivider = context.resources.getDrawable(R.drawable.divider)
-    }
+    private val mDivider: Drawable = context.resources.getDrawable(R.drawable.divider)
 
     override fun onDrawOver(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
         val left = parent.paddingLeft
