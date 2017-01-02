@@ -11,14 +11,11 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.adapters.MyArrayAdapter
 
 class MyAppCompatSpinner : AppCompatSpinner {
-    constructor(context: Context) : super(context) {
-    }
+    constructor(context: Context) : super(context)
 
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
-    }
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
 
-    constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle) {
-    }
+    constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
 
     fun setColors(textColor: Int, accentColor: Int, backgroundColor: Int) {
         val cnt = adapter.count
