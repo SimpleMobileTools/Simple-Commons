@@ -23,8 +23,10 @@ class MyAppCompatSpinner : AppCompatSpinner {
         for (i in 0..cnt - 1)
             items[i] = adapter.getItem(i)
 
+        val position = selectedItemPosition
         val padding = resources.getDimension(R.dimen.activity_margin).toInt()
         adapter = MyArrayAdapter(context, android.R.layout.simple_spinner_item, items, textColor, backgroundColor, padding)
+        setSelection(position)
 
         val superListener = onItemSelectedListener
         onItemSelectedListener = object : OnItemSelectedListener {
