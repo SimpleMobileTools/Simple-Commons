@@ -9,6 +9,8 @@
         <item name="android:spinnerItemStyle">@style/SpinnerItem</item>
         <item name="spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
         <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
+        <item name="buttonStyle">@style/MyTransparentButton</item>
+        <item name="android:buttonStyle">@style/MyTransparentButton</item>
     </style>
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
@@ -40,5 +42,11 @@
         <item name="android:paddingBottom">@dimen/medium_margin</item>
         <item name="android:paddingLeft">@dimen/activity_margin</item>
         <item name="android:paddingRight">@dimen/activity_margin</item>
+    </style>
+
+    <style name="MyTransparentButton" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="background">@drawable/transparent_button</item>
+        <item name="android:background">@drawable/transparent_button</item>
     </style>
 </resources>
