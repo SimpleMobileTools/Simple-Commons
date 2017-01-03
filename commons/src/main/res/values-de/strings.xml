@@ -11,7 +11,7 @@
     <string name="source">Quelle</string>
     <string name="destination">Ziel</string>
     <string name="select_destination">Ziel auswählen</string>
-    <string name="click_select_destination">Click here to select destination</string>
+    <string name="click_select_destination">Klicke hier um Ziel auszuwählen</string>
     <string name="invalid_destination">Konnte nicht an ausgewähltes Ziel schreiben</string>
     <string name="please_select_destination">Bitte Ziel auswählen</string>
     <string name="source_and_destination_same">Quell- und Zielpfad sind identisch</string>
@@ -55,7 +55,7 @@
     <!-- File properties -->
 
     <string name="path">Dateipfad</string>
-    <string name="items_selected">Items selected</string>
+    <string name="items_selected">Dateien ausgewählt</string>
     <string name="direct_children_count">Direct children count</string>
     <string name="files_count">Gesamtanzahl</string>
     <string name="resolution">Auflösung</string>
@@ -72,9 +72,9 @@
     <string name="custom">Custom</string>
     <string name="save">Speichern</string>
     <string name="discard">Discard</string>
-    <string name="undo_changes">Undo changes</string>
-    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
-    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
+    <string name="undo_changes">Änderungen rückgängig machen</string>
+    <string name="undo_changes_confirmation">Bist du sicher, das du die Änderungen rückgängig machen willst?</string>
+    <string name="save_before_closing">Du hast ungespeicherte Änderungen. Speichern vor beenden?</string>
 
     <!-- What's new -->
     <string name="whats_new">Neue Funktionen</string>
