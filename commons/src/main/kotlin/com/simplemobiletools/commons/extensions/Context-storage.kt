@@ -161,7 +161,11 @@ fun Context.getFileUri(file: File): Uri {
 }
 
 // these functions update the mediastore instantly, MediaScannerConnection.scanFile takes some time to really get applied
-fun Context.deleteFromMediaStore(file: File) = contentResolver.delete(getFileUri(file), "${MediaStore.MediaColumns.DATA} = '${file.absolutePath}'", null) == 1
+fun Context.deleteFromMediaStore(file: File): Boolean {
+    val where = "${MediaStore.MediaColumns.DATA} = ?"
+    val args = arrayOf(file.absolutePath)
+    return contentResolver.delete(getFileUri(file), where, args) == 1
+}
 
 fun Context.updateInMediaStore(oldFile: File, newFile: File): Boolean {
     val values = ContentValues().apply {
@@ -170,5 +174,7 @@ fun Context.updateInMediaStore(oldFile: File, newFile: File): Boolean {
         put(MediaStore.MediaColumns.TITLE, newFile.name)
     }
     val uri = getFileUri(oldFile)
-    return contentResolver.update(uri, values, "${MediaStore.MediaColumns.DATA} = '${oldFile.absolutePath}'", null) == 1
+    val where = "${MediaStore.MediaColumns.DATA} = ?"
+    val args = arrayOf(oldFile.absolutePath)
+    return contentResolver.update(uri, values, where, args) == 1
 }
