@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.extensions
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
@@ -26,7 +27,7 @@ fun Activity.isShowingWritePermissions(file: File, treeUri: String, requestCode:
 }
 
 fun BaseSimpleActivity.checkWhatsNew(releases: List<Release>, currVersion: Int) {
-    if (baseConfig.lastVersion == 0) {
+    if (isFirstRunEver()) {
         baseConfig.lastVersion = currVersion
         return
     }
@@ -36,6 +37,19 @@ fun BaseSimpleActivity.checkWhatsNew(releases: List<Release>, currVersion: Int) 
 
     if (newReleases.isNotEmpty())
         WhatsNewDialog(this, newReleases)
+
+    baseConfig.lastVersion = currVersion
+}
+
+fun BaseSimpleActivity.isFirstRunEver(): Boolean {
+    try {
+        val firstInstallTime = packageManager.getPackageInfo(packageName, 0).firstInstallTime
+        val lastUpdateTime = packageManager.getPackageInfo(packageName, 0).lastUpdateTime
+        return firstInstallTime == lastUpdateTime
+    } catch (e: PackageManager.NameNotFoundException) {
+
+    }
+    return false
 }
 
 fun Activity.hideKeyboard() {

@@ -5,7 +5,6 @@ import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.setupDialogStuff
-import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.models.Release
 import kotlinx.android.synthetic.main.dialog_whats_new.view.*
 
@@ -22,7 +21,6 @@ class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
     }
 
     fun getNewReleases(): String {
-        val config = BaseConfig.newInstance(activity)
         val sb = StringBuilder()
 
         releases.forEach {
@@ -32,7 +30,6 @@ class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
             }
         }
 
-        config.lastVersion = if (releases.isEmpty()) 0 else releases.last().id
         return sb.toString()
     }
 }
