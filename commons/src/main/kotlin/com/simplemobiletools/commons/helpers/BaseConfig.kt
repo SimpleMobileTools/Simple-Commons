@@ -2,7 +2,6 @@ package com.simplemobiletools.commons.helpers
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.graphics.Color
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getSharedPrefs
 
@@ -42,7 +41,7 @@ open class BaseConfig(val context: Context) {
         set(primaryColor) = prefs.edit().putInt(PRIMARY_COLOR, primaryColor).apply()
 
     var widgetBgColor: Int
-        get() = prefs.getInt(WIDGET_BG_COLOR, Color.BLACK)
+        get() = prefs.getInt(WIDGET_BG_COLOR, 1)
         set(widgetBgColor) = prefs.edit().putInt(WIDGET_BG_COLOR, widgetBgColor).apply()
 
     var widgetTextColor: Int
