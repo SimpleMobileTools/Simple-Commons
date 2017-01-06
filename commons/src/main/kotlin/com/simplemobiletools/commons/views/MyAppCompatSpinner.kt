@@ -18,6 +18,9 @@ class MyAppCompatSpinner : AppCompatSpinner {
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
 
     fun setColors(textColor: Int, accentColor: Int, backgroundColor: Int) {
+        if (adapter == null)
+            return
+
         val cnt = adapter.count
         val items = kotlin.arrayOfNulls<Any>(cnt)
         for (i in 0..cnt - 1)
