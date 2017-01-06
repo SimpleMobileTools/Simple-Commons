@@ -13,7 +13,7 @@ class MyEditText : EditText {
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
 
     fun setColors(textColor: Int, accentColor: Int, backgroundColor: Int) {
-        background.mutate().setColorFilter(accentColor, PorterDuff.Mode.SRC_ATOP)
+        background?.mutate()?.setColorFilter(accentColor, PorterDuff.Mode.SRC_ATOP)
 
         // requires android:textCursorDrawable="@null" in xml to color the cursor too
         setTextColor(textColor)
