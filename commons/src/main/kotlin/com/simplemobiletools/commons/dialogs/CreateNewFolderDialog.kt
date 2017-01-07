@@ -1,21 +1,21 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.content.Context
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowManager
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.BaseConfig
 import kotlinx.android.synthetic.main.dialog_create_new_folder.view.*
 import java.io.File
 
-class CreateNewFolderDialog(val context: Context, val path: String, val callback: () -> Unit) {
+class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, val callback: () -> Unit) {
     init {
-        val view = LayoutInflater.from(context).inflate(R.layout.dialog_create_new_folder, null)
+        val view = LayoutInflater.from(activity).inflate(R.layout.dialog_create_new_folder, null)
 
-        AlertDialog.Builder(context)
+        AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.ok, null)
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
@@ -32,13 +32,9 @@ class CreateNewFolderDialog(val context: Context, val path: String, val callback
                         return@OnClickListener
                     }
 
-                    if (createDirectory(file)) {
-                        callback.invoke()
-                        dismiss()
-                    } else {
+                    if (!createDirectory(file, this)) {
                         context.toast(R.string.error_occurred)
                     }
-
                 } else {
                     context.toast(R.string.invalid_name)
                 }
@@ -46,12 +42,25 @@ class CreateNewFolderDialog(val context: Context, val path: String, val callback
         }
     }
 
-    private fun createDirectory(file: File): Boolean {
-        return if (context.needsStupidWritePermissions(path)) {
-            val documentFile = context.getFileDocument(file.absolutePath, BaseConfig.newInstance(context).treeUri)
+    private fun createDirectory(file: File, alertDialog: AlertDialog): Boolean {
+        return if (activity.needsStupidWritePermissions(path)) {
+            if (activity.isShowingPermDialog(file)) {
+                return true
+            }
+            val documentFile = activity.getFileDocument(file.absolutePath, BaseConfig.newInstance(activity).treeUri)
             documentFile.createDirectory(file.name)
+            sendSuccess(alertDialog)
             true
-        } else
-            file.mkdirs()
+        } else if (file.mkdirs()) {
+            sendSuccess(alertDialog)
+            true
+        } else {
+            false
+        }
+    }
+
+    private fun sendSuccess(alertDialog: AlertDialog) {
+        callback.invoke()
+        alertDialog.dismiss()
     }
 }
