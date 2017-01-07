@@ -14,7 +14,6 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.adapters.FilepickerItemsAdapter
 import com.simplemobiletools.commons.extensions.getFilenameFromPath
 import com.simplemobiletools.commons.extensions.getInternalStoragePath
-import com.simplemobiletools.commons.extensions.hasStoragePermission
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.Breadcrumbs
@@ -31,7 +30,7 @@ import kotlin.comparisons.compareBy
  * @param currPath initial path of the dialog, defaults to the external storage
  * @param pickFile toggle used to determine if we are picking a file or a folder
  * @param showHidden toggle for showing hidden items, whose name starts with a dot
- * @param listener the callback used for returning the success or failure result to the initiator
+ * @param listener the callback used for returning the selected file/folder
  */
 class FilePickerDialog(val context: Context,
                        var currPath: String = Environment.getExternalStorageDirectory().toString(),
@@ -44,69 +43,60 @@ class FilePickerDialog(val context: Context,
     var mScrollStates = HashMap<String, Parcelable>()
 
     lateinit var mDialog: AlertDialog
-    lateinit var mDialogView: View
+    var mDialogView: View = LayoutInflater.from(context).inflate(R.layout.dialog_filepicker, null)
 
     init {
-        if (!context.hasStoragePermission()) {
-            listener.onFail(FilePickerResult.NO_PERMISSION)
-        } else {
-            if (!File(currPath).exists())
-                currPath = context.getInternalStoragePath()
+        if (!File(currPath).exists())
+            currPath = context.getInternalStoragePath()
 
-            mDialogView = LayoutInflater.from(context).inflate(R.layout.dialog_filepicker, null)
-            mDialogView.directory_picker_breadcrumbs.setListener(this)
-            updateItems()
+        mDialogView.directory_picker_breadcrumbs.setListener(this)
+        updateItems()
 
-            // if a dialog's listview has height wrap_content, it calls getView way too often which can reduce performance
-            // lets just measure it, then set a static height
-            mDialogView.directory_picker_list.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
-                override fun onGlobalLayout() {
-                    val listener = this
-                    val rect = Rect()
-                    mDialogView.directory_picker_list.apply {
-                        getGlobalVisibleRect(rect)
-                        layoutParams.height = rect.bottom - rect.top
-                        viewTreeObserver.removeOnGlobalLayoutListener(listener)
-                    }
+        // if a dialog's listview has height wrap_content, it calls getView way too often which can reduce performance
+        // lets just measure it, then set a static height
+        mDialogView.directory_picker_list.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                val listener = this
+                val rect = Rect()
+                mDialogView.directory_picker_list.apply {
+                    getGlobalVisibleRect(rect)
+                    layoutParams.height = rect.bottom - rect.top
+                    viewTreeObserver.removeOnGlobalLayoutListener(listener)
                 }
-            })
+            }
+        })
 
-            val builder = AlertDialog.Builder(context)
-                    .setNegativeButton(R.string.cancel, { dialog, which -> dialogDismissed() })
-                    .setOnCancelListener({ dialogDismissed() })
-                    .setOnKeyListener({ dialogInterface, i, keyEvent ->
-                        if (keyEvent.action == KeyEvent.ACTION_UP && i == KeyEvent.KEYCODE_BACK) {
-                            val breadcrumbs = mDialogView.directory_picker_breadcrumbs
-                            if (breadcrumbs.childCount > 1) {
-                                breadcrumbs.removeBreadcrumb()
-                                currPath = breadcrumbs.lastItem.path
-                                updateItems()
-                            } else {
-                                mDialog.dismiss()
-                                dialogDismissed()
-                            }
+        val builder = AlertDialog.Builder(context)
+                .setNegativeButton(R.string.cancel, null)
+                .setOnKeyListener({ dialogInterface, i, keyEvent ->
+                    if (keyEvent.action == KeyEvent.ACTION_UP && i == KeyEvent.KEYCODE_BACK) {
+                        val breadcrumbs = mDialogView.directory_picker_breadcrumbs
+                        if (breadcrumbs.childCount > 1) {
+                            breadcrumbs.removeBreadcrumb()
+                            currPath = breadcrumbs.lastItem.path
+                            updateItems()
+                        } else {
+                            mDialog.dismiss()
                         }
-                        true
-                    })
-
-            if (!pickFile)
-                builder.setPositiveButton(R.string.ok, null)
-
-            mDialog = builder.create().apply {
-                context.setupDialogStuff(mDialogView, this, getTitle())
-            }
-
-            if (!pickFile) {
-                mDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener({
-                    verifyPath()
+                    }
+                    true
                 })
-            }
+
+        if (!pickFile)
+            builder.setPositiveButton(R.string.ok, null)
+
+        mDialog = builder.create().apply {
+            context.setupDialogStuff(mDialogView, this, getTitle())
+        }
+
+        if (!pickFile) {
+            mDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener({
+                verifyPath()
+            })
         }
     }
 
     private fun getTitle() = if (pickFile) R.string.select_file else R.string.select_folder
-
-    private fun dialogDismissed() = listener.onFail(FilePickerResult.DISMISS)
 
     private fun updateItems() {
         var items = getItems(currPath)
@@ -197,11 +187,5 @@ class FilePickerDialog(val context: Context,
 
     interface OnFilePickerListener {
         fun onSuccess(pickedPath: String)
-
-        fun onFail(error: FilePickerResult)
-    }
-
-    enum class FilePickerResult() {
-        NO_PERMISSION, DISMISS
     }
 }
