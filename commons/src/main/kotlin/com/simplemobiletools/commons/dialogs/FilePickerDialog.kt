@@ -112,7 +112,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
     private fun updateItems() {
         var items = getItems(currPath)
-        if (!containsDirectory(items) && !mFirstUpdate && !pickFile) {
+        if (!containsDirectory(items) && !mFirstUpdate && !pickFile && !showFAB) {
             verifyPath()
             return
         }
