@@ -44,6 +44,8 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
                     it.setColors(textColor, accentColor, backgroundColor)
                 } else if (it is MyFloatingActionButton) {
                     it.setColors(textColor, accentColor, backgroundColor)
+                } else if (it is MySeekBar) {
+                    it.setColors(textColor, accentColor, backgroundColor)
                 } else if (it is ViewGroup) {
                     updateTextColors(it, textColor, accentColor)
                 }
