@@ -88,7 +88,7 @@ class FilePickerDialog(val context: Context,
 
         if (showFAB) {
             mDialogView.directory_picker_fab.visibility = View.VISIBLE
-            mDialogView.directory_picker_fab.setOnClickListener {  }
+            mDialogView.directory_picker_fab.setOnClickListener { createNewFolder() }
         }
 
         mDialog = builder.create().apply {
@@ -103,6 +103,10 @@ class FilePickerDialog(val context: Context,
     }
 
     private fun getTitle() = if (pickFile) R.string.select_file else R.string.select_folder
+
+    private fun createNewFolder() {
+        CreateNewFolderDialog(context, currPath)
+    }
 
     private fun updateItems() {
         var items = getItems(currPath)

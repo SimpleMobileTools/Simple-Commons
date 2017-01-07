@@ -2,7 +2,6 @@
     <string name="ok">OK</string>
     <string name="cancel">キャンセル</string>
     <string name="search">Search</string>
-    <string name="invalid_name">名前に無効な文字が含まれています</string>
 
     <!-- Copy / Move -->
     <string name="copy">コピー</string>
@@ -26,6 +25,13 @@
     <string name="copying_success_partial">一部のファイルがコピーできませんでした</string>
     <string name="create_new_directory">Create new directory</string>
     <string name="directory_exists">A directory with that name already exists</string>
+
+    <!-- Create new folder -->
+    <string name="create_new_folder">Create new folder</string>
+    <string name="name_taken">Directory or file with that name already exists</string>
+    <string name="invalid_name">名前に無効な文字が含まれています</string>
+    <string name="empty_name">Please enter a name</string>
+    <string name="error_occurred">An unknown error occurred</string>
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">File $%1s already exists</string>

@@ -2,7 +2,6 @@
     <string name="ok">Ok</string>
     <string name="cancel">Annuler</string>
     <string name="search">Recherche</string>
-    <string name="invalid_name">Le nom contient des caractères invalides</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copier</string>
@@ -26,6 +25,13 @@
     <string name="copying_success_partial">Certains fichiers n\'ont pu être copiés</string>
     <string name="create_new_directory">Créer un nouveau répertoire</string>
     <string name="directory_exists">Un répertoire avec le même nom existe déja</string>
+
+    <!-- Create new folder -->
+    <string name="create_new_folder">Create new folder</string>
+    <string name="name_taken">Directory or file with that name already exists</string>
+    <string name="invalid_name">Le nom contient des caractères invalides</string>
+    <string name="empty_name">Please enter a name</string>
+    <string name="error_occurred">An unknown error occurred</string>
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">Le fichier $%1s existe déjà</string>
