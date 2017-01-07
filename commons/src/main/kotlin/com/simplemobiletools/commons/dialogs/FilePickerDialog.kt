@@ -36,6 +36,7 @@ class FilePickerDialog(val context: Context,
                        var currPath: String = Environment.getExternalStorageDirectory().toString(),
                        val pickFile: Boolean = true,
                        val showHidden: Boolean = false,
+                       val showFAB: Boolean = false,
                        val callback: (pickedPath: String) -> Unit) : Breadcrumbs.BreadcrumbsListener {
 
     var mFirstUpdate = true
@@ -84,6 +85,11 @@ class FilePickerDialog(val context: Context,
 
         if (!pickFile)
             builder.setPositiveButton(R.string.ok, null)
+
+        if (showFAB) {
+            mDialogView.directory_picker_fab.visibility = View.VISIBLE
+            mDialogView.directory_picker_fab.setOnClickListener {  }
+        }
 
         mDialog = builder.create().apply {
             context.setupDialogStuff(mDialogView, this, getTitle())
