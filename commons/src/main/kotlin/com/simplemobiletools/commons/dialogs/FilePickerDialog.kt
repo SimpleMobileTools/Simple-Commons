@@ -105,7 +105,9 @@ class FilePickerDialog(val context: Context,
     private fun getTitle() = if (pickFile) R.string.select_file else R.string.select_folder
 
     private fun createNewFolder() {
-        CreateNewFolderDialog(context, currPath)
+        CreateNewFolderDialog(context, currPath) {
+            updateItems()
+        }
     }
 
     private fun updateItems() {

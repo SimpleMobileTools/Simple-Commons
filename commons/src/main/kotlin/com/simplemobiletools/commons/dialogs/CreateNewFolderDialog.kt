@@ -11,7 +11,7 @@ import com.simplemobiletools.commons.helpers.BaseConfig
 import kotlinx.android.synthetic.main.dialog_create_new_folder.view.*
 import java.io.File
 
-class CreateNewFolderDialog(val context: Context, val path: String) {
+class CreateNewFolderDialog(val context: Context, val path: String, val callback: () -> Unit) {
     init {
         val view = LayoutInflater.from(context).inflate(R.layout.dialog_create_new_folder, null)
 
@@ -33,6 +33,7 @@ class CreateNewFolderDialog(val context: Context, val path: String) {
                     }
 
                     if (createDirectory(file)) {
+                        callback.invoke()
                         dismiss()
                     } else {
                         context.toast(R.string.error_occurred)
@@ -50,6 +51,7 @@ class CreateNewFolderDialog(val context: Context, val path: String) {
             val documentFile = context.getFileDocument(file.absolutePath, BaseConfig.newInstance(context).treeUri)
             documentFile.createDirectory(file.name)
             true
-        } else file.mkdirs()
+        } else
+            file.mkdirs()
     }
 }
