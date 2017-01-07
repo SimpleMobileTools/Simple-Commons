@@ -36,7 +36,7 @@ class FilePickerDialog(val context: Context,
                        var currPath: String = Environment.getExternalStorageDirectory().toString(),
                        val pickFile: Boolean = true,
                        val showHidden: Boolean = false,
-                       val listener: OnFilePickerListener) : Breadcrumbs.BreadcrumbsListener {
+                       val callback: (pickedPath: String) -> Unit) : Breadcrumbs.BreadcrumbsListener {
 
     var mFirstUpdate = true
     var mPrevPath = ""
@@ -141,7 +141,7 @@ class FilePickerDialog(val context: Context,
     }
 
     private fun sendSuccess() {
-        listener.onSuccess(currPath)
+        callback.invoke(currPath)
         mDialog.dismiss()
     }
 
@@ -183,9 +183,5 @@ class FilePickerDialog(val context: Context,
                 updateItems()
             }
         }
-    }
-
-    interface OnFilePickerListener {
-        fun onSuccess(pickedPath: String)
     }
 }
