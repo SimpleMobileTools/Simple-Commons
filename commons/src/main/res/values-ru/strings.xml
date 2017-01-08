@@ -27,11 +27,11 @@
     <string name="directory_exists">Папка с таким именем уже существует</string>
 
     <!-- Create new folder -->
-    <string name="create_new_folder">Create new folder</string>
-    <string name="name_taken">Directory or file with that name already exists</string>
+    <string name="create_new_folder">Создать новую папку</string>
+    <string name="name_taken">Папка или файл с таким именем уже существует</string>
     <string name="invalid_name">Имя содержит недопустимые символы</string>
-    <string name="empty_name">Please enter a name</string>
-    <string name="error_occurred">An unknown error occurred</string>
+    <string name="empty_name">Пожалуйста, введите имя</string>
+    <string name="error_occurred">Произошла неизвестная ошибка</string>
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">Файл $%1s уже существует</string>
@@ -136,10 +136,10 @@
     <string name="glide_title">Glide (загрузка изображения и кэширование)</string>
     <string name="cropper_title">Android Image Cropper (обрезка и поворот изображений)</string>
     <string name="multiselect_title">RecyclerView MultiSelect (выбор нескольких элементов списка)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (отображение с RTL языками)</string>
     <string name="ambilwarna_title">AmbilWarna (диалог выбора цвета)</string>
     <string name="joda_title">Joda-Time (замена даты Java)</string>
     <string name="stetho_title">Stetho (базы данных отладки)</string>
     <string name="otto_title">Otto ("шина" событий)</string>
-    <string name="photoview_title">PhotoView (zoomable gifs)</string>
+    <string name="photoview_title">PhotoView (масштабирование gif)</string>
 </resources>
