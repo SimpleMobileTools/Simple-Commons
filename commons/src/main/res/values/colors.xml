@@ -12,6 +12,8 @@
     <!-- Color Customization -->
     <color name="default_text_color">#FF6D6D6D</color>
     <color name="default_background_color">#FFFAFAFA</color>
+    <color name="default_text_color_dark_theme">#FFEDEDED</color>
+    <color name="default_background_color_dark_theme">#FF3F3F3F</color>
 
     <!-- SwitchCompat -->
     <color name="thumb_deactivated">#FFECECEC</color>
