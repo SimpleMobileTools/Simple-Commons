@@ -60,14 +60,14 @@
                 android:layout_height="30dp">
 
                 <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:background="@drawable/tiled_background"/>
 
-                <View
+                <ImageView
                     android:id="@+id/color_picker_old_color"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:background="@android:color/white"/>
             </FrameLayout>
 
@@ -85,14 +85,14 @@
                 android:layout_height="30dp">
 
                 <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:background="@drawable/tiled_background"/>
 
-                <View
-                    android:id="@+id/colorpicker_new_color"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
+                <ImageView
+                    android:id="@+id/color_picker_new_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:background="@android:color/white"/>
             </FrameLayout>
         </LinearLayout>

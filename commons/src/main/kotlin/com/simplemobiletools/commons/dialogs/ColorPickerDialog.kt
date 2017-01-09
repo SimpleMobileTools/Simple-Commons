@@ -10,6 +10,7 @@ import android.view.View.OnTouchListener
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.extensions.setBackgroundWithStroke
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.views.ColorPickerSquare
@@ -20,7 +21,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
     lateinit var viewHue: View
     lateinit var viewSatVal: ColorPickerSquare
     lateinit var viewCursor: ImageView
-    lateinit var viewNewColor: View
+    lateinit var viewNewColor: ImageView
     lateinit var viewTarget: ImageView
     lateinit var viewContainer: ViewGroup
     val currentColorHsv = FloatArray(3)
@@ -33,13 +34,13 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
             viewSatVal = color_picker_square
             viewCursor = color_picker_hue_cursor
 
-            viewNewColor = colorpicker_new_color
+            viewNewColor = color_picker_new_color
             viewTarget = color_picker_cursor
             viewContainer = color_picker_holder
-            color_picker_old_color.setBackgroundColor(color)
 
             viewSatVal.setHue(getHue())
-            viewNewColor.setBackgroundColor(color)
+            viewNewColor.setBackgroundWithStroke(getColor())
+            color_picker_old_color.setBackgroundWithStroke(color)
         }
 
         viewHue.setOnTouchListener(OnTouchListener { v, event ->
@@ -54,7 +55,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
                 currentColorHsv[0] = hue
                 viewSatVal.setHue(getHue())
                 moveHuePicker()
-                viewNewColor.setBackgroundColor(getColor())
+                viewNewColor.setBackgroundWithStroke(getColor())
                 return@OnTouchListener true
             }
             false
@@ -78,7 +79,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
                 currentColorHsv[2] = 1f - 1f / viewSatVal.measuredHeight * y
 
                 moveColorPicker()
-                viewNewColor.setBackgroundColor(getColor())
+                viewNewColor.setBackgroundWithStroke(getColor())
                 return@OnTouchListener true
             }
             false

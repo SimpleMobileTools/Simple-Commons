@@ -1,15 +1,13 @@
 package com.simplemobiletools.commons.activities
 
-import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.dialogs.ColorPickerDialog
 import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
-import com.simplemobiletools.commons.extensions.getContrastColor
+import com.simplemobiletools.commons.extensions.setBackgroundWithStroke
 import com.simplemobiletools.commons.extensions.updateTextColors
 import kotlinx.android.synthetic.main.activity_customization.*
 
@@ -103,16 +101,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun setupColorsPickers() {
         customization_text_color.setBackgroundColor(curTextColor)
         customization_primary_color.setBackgroundColor(curPrimaryColor)
-        customView(customization_background_color, curBackgroundColor, curBackgroundColor.getContrastColor())
-    }
-
-    fun customView(view: View, backgroundColor: Int, borderColor: Int) {
-        GradientDrawable().apply {
-            shape = GradientDrawable.RECTANGLE
-            setColor(backgroundColor)
-            setStroke(2, borderColor)
-            view.setBackgroundDrawable(this)
-        }
+        customization_background_color.setBackgroundWithStroke(curBackgroundColor)
     }
 
     private fun hasColorChanged(old: Int, new: Int) = Math.abs(old - new) > 1
