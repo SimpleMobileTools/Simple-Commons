@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/color_picker_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/color_picker_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clipToPadding="false"
+        android:padding="@dimen/medium_margin">
+
+        <com.simplemobiletools.commons.views.ColorPickerSquare
+            android:id="@+id/color_picker_square"
+            android:layout_width="@dimen/colorpicker_size"
+            android:layout_height="@dimen/colorpicker_size"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layerType="software"/>
+
+        <ImageView
+            android:id="@+id/color_picker_hue"
+            android:layout_width="@dimen/colorpicker_hue_width"
+            android:layout_height="@dimen/colorpicker_size"
+            android:layout_marginLeft="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_toRightOf="@id/color_picker_square"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_color_picker_hue"/>
+
+        <ImageView
+            android:id="@+id/color_picker_hue_cursor"
+            android:layout_width="@dimen/activity_margin"
+            android:layout_height="@dimen/activity_margin"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_chevron_right"/>
+
+        <ImageView
+            android:id="@+id/color_picker_cursor"
+            android:layout_width="@dimen/activity_margin"
+            android:layout_height="@dimen/activity_margin"
+            android:scaleType="fitCenter"
+            android:src="@drawable/color_picker_circle"/>
+
+        <LinearLayout
+            android:id="@+id/color_picker_bottom_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/color_picker_square"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_height="30dp">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/tiled_background"/>
+
+                <View
+                    android:id="@+id/color_picker_old_color"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/white"/>
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/color_picker_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/medium_margin"
+                android:paddingRight="@dimen/medium_margin"
+                android:src="@drawable/ic_arrow_right"/>
+
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_height="30dp">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/tiled_background"/>
+
+                <View
+                    android:id="@+id/colorpicker_new_color"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/white"/>
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

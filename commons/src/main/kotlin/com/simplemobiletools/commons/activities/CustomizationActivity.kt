@@ -6,12 +6,12 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.dialogs.ColorPickerDialog
 import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.extensions.getContrastColor
 import com.simplemobiletools.commons.extensions.updateTextColors
 import kotlinx.android.synthetic.main.activity_customization.*
-import yuku.ambilwarna.AmbilWarnaDialog
 
 class CustomizationActivity : BaseSimpleActivity() {
     var curTextColor = 0
@@ -124,47 +124,32 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickTextColor() {
-        AmbilWarnaDialog(this, curTextColor, object : AmbilWarnaDialog.OnAmbilWarnaListener {
-            override fun onCancel(dialog: AmbilWarnaDialog) {
+        ColorPickerDialog(this, curTextColor) {
+            if (hasColorChanged(curTextColor, it)) {
+                curTextColor = it
+                updateTextColors(customization_holder, it)
+                colorChanged()
             }
-
-            override fun onOk(dialog: AmbilWarnaDialog, color: Int) {
-                if (hasColorChanged(curTextColor, color)) {
-                    curTextColor = color
-                    updateTextColors(customization_holder, color)
-                    colorChanged()
-                }
-            }
-        }).show()
+        }
     }
 
     private fun pickBackgroundColor() {
-        AmbilWarnaDialog(this, curBackgroundColor, object : AmbilWarnaDialog.OnAmbilWarnaListener {
-            override fun onCancel(dialog: AmbilWarnaDialog) {
+        ColorPickerDialog(this, curBackgroundColor) {
+            if (hasColorChanged(curBackgroundColor, it)) {
+                curBackgroundColor = it
+                updateBackgroundColor(it)
+                colorChanged()
             }
-
-            override fun onOk(dialog: AmbilWarnaDialog, color: Int) {
-                if (hasColorChanged(curBackgroundColor, color)) {
-                    curBackgroundColor = color
-                    updateBackgroundColor(color)
-                    colorChanged()
-                }
-            }
-        }).show()
+        }
     }
 
     private fun pickPrimaryColor() {
-        AmbilWarnaDialog(this, curPrimaryColor, object : AmbilWarnaDialog.OnAmbilWarnaListener {
-            override fun onCancel(dialog: AmbilWarnaDialog) {
+        ColorPickerDialog(this, curPrimaryColor) {
+            if (hasColorChanged(curPrimaryColor, it)) {
+                curPrimaryColor = it
+                updateActionbarColor(it)
+                colorChanged()
             }
-
-            override fun onOk(dialog: AmbilWarnaDialog, color: Int) {
-                if (hasColorChanged(curPrimaryColor, color)) {
-                    curPrimaryColor = color
-                    updateActionbarColor(color)
-                    colorChanged()
-                }
-            }
-        }).show()
+        }
     }
 }
