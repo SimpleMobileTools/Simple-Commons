@@ -10,16 +10,17 @@ import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.isShowingWritePermissions
-import com.simplemobiletools.commons.helpers.*
+import com.simplemobiletools.commons.helpers.APP_LICENSES
+import com.simplemobiletools.commons.helpers.APP_NAME
+import com.simplemobiletools.commons.helpers.APP_VERSION_NAME
+import com.simplemobiletools.commons.helpers.OPEN_DOCUMENT_TREE
 import java.io.File
 
 open class BaseSimpleActivity : AppCompatActivity() {
-    lateinit var baseConfig: BaseConfig
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        baseConfig = BaseConfig.newInstance(applicationContext)
     }
 
     override fun onResume() {

@@ -10,9 +10,9 @@ import android.view.View.OnTouchListener
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.setBackgroundWithStroke
 import com.simplemobiletools.commons.extensions.setupDialogStuff
-import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.views.ColorPickerSquare
 import kotlinx.android.synthetic.main.dialog_colorpicker.view.*
 
@@ -29,7 +29,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
     init {
         Color.colorToHSV(color, currentColorHsv)
 
-        val backgroundColor = BaseConfig.newInstance(context).backgroundColor
+        val backgroundColor = context.baseConfig.backgroundColor
         val view = LayoutInflater.from(context).inflate(R.layout.dialog_colorpicker, null).apply {
             viewHue = color_picker_hue
             viewSatVal = color_picker_square
@@ -86,7 +86,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
             false
         })
 
-        val textColor = BaseConfig.newInstance(context).textColor
+        val textColor = context.baseConfig.textColor
         AlertDialog.Builder(context)
                 .setPositiveButton(R.string.ok, { dialog, which -> callback.invoke(getColor()) })
                 .setNegativeButton(R.string.cancel, null)

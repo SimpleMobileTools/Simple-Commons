@@ -7,6 +7,7 @@ import android.text.Html
 import android.text.method.LinkMovementMethod
 import android.view.View
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME

@@ -7,7 +7,6 @@ import android.view.WindowManager
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.BaseConfig
 import kotlinx.android.synthetic.main.dialog_create_new_folder.view.*
 import java.io.File
 
@@ -47,7 +46,7 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
             if (activity.isShowingPermDialog(file)) {
                 return true
             }
-            val documentFile = activity.getFileDocument(file.absolutePath, BaseConfig.newInstance(activity).treeUri)
+            val documentFile = activity.getFileDocument(file.absolutePath, activity.baseConfig.treeUri)
             documentFile.createDirectory(file.name)
             sendSuccess(alertDialog)
             true

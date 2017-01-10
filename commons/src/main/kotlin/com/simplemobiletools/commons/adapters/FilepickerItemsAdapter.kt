@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.formatSize
 import com.simplemobiletools.commons.extensions.isGif
-import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.filepicker_list_item.view.*
 import java.io.File
@@ -20,7 +20,7 @@ class FilepickerItemsAdapter(val context: Context, private val mItems: List<File
     var textColor = 0
 
     init {
-        textColor = BaseConfig.newInstance(context).textColor
+        textColor = context.baseConfig.textColor
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {

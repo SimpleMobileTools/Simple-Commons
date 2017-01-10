@@ -22,7 +22,6 @@ fun Context.toast(msg: String, length: Int = Toast.LENGTH_SHORT) = Toast.makeTex
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
 fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAccentColor: Int = 0) {
-    val baseConfig = BaseConfig.newInstance(this)
     val textColor = if (tmpTextColor == 0) baseConfig.textColor else tmpTextColor
     val accentColor = if (tmpAccentColor == 0) baseConfig.primaryColor else tmpAccentColor
     val backgroundColor = baseConfig.backgroundColor
@@ -53,11 +52,10 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
 }
 
 fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) {
-    val config = BaseConfig.newInstance(this)
     if (view is ViewGroup)
         updateTextColors(view)
     else if (view is MyTextView) {
-        view.setTextColor(config.textColor)
+        view.setTextColor(baseConfig.textColor)
     }
 
     var title: TextView? = null
@@ -65,7 +63,7 @@ fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) 
         title = LayoutInflater.from(this).inflate(R.layout.dialog_title, null) as TextView
         title.dialog_title_textview.apply {
             setText(titleId)
-            setTextColor(config.textColor)
+            setTextColor(baseConfig.textColor)
         }
     }
 
@@ -75,9 +73,11 @@ fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) 
         setCustomTitle(title)
         setCanceledOnTouchOutside(true)
         show()
-        getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(config.textColor)
-        getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(config.textColor)
-        getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(config.textColor)
-        window.setBackgroundDrawable(ColorDrawable(config.backgroundColor))
+        getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(baseConfig.textColor)
+        getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(baseConfig.textColor)
+        getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(baseConfig.textColor)
+        window.setBackgroundDrawable(ColorDrawable(baseConfig.backgroundColor))
     }
 }
+
+val Context.baseConfig: BaseConfig get() = BaseConfig.newInstance(this)
