@@ -29,6 +29,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
     init {
         Color.colorToHSV(color, currentColorHsv)
 
+        val backgroundColor = BaseConfig.newInstance(context).backgroundColor
         val view = LayoutInflater.from(context).inflate(R.layout.dialog_colorpicker, null).apply {
             viewHue = color_picker_hue
             viewSatVal = color_picker_square
@@ -39,8 +40,8 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
             viewContainer = color_picker_holder
 
             viewSatVal.setHue(getHue())
-            viewNewColor.setBackgroundWithStroke(getColor())
-            color_picker_old_color.setBackgroundWithStroke(color)
+            viewNewColor.setBackgroundWithStroke(getColor(), backgroundColor)
+            color_picker_old_color.setBackgroundWithStroke(color, backgroundColor)
         }
 
         viewHue.setOnTouchListener(OnTouchListener { v, event ->
@@ -55,7 +56,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
                 currentColorHsv[0] = hue
                 viewSatVal.setHue(getHue())
                 moveHuePicker()
-                viewNewColor.setBackgroundWithStroke(getColor())
+                viewNewColor.setBackgroundWithStroke(getColor(), backgroundColor)
                 return@OnTouchListener true
             }
             false
@@ -79,7 +80,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
                 currentColorHsv[2] = 1f - 1f / viewSatVal.measuredHeight * y
 
                 moveColorPicker()
-                viewNewColor.setBackgroundWithStroke(getColor())
+                viewNewColor.setBackgroundWithStroke(getColor(), backgroundColor)
                 return@OnTouchListener true
             }
             false

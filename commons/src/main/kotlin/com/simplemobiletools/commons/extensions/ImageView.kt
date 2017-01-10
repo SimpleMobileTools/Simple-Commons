@@ -3,8 +3,8 @@ package com.simplemobiletools.commons.extensions
 import android.graphics.drawable.GradientDrawable
 import android.widget.ImageView
 
-fun ImageView.setBackgroundWithStroke(backgroundColor: Int) {
-    val strokeColor = backgroundColor.getContrastColor()
+fun ImageView.setBackgroundWithStroke(backgroundColor: Int, realStrokeColor: Int) {
+    val strokeColor = realStrokeColor.getContrastColor()
     GradientDrawable().apply {
         shape = GradientDrawable.RECTANGLE
         setColor(backgroundColor)
