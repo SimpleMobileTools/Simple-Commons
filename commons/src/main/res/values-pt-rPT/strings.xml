@@ -31,7 +31,7 @@
     <string name="name_taken">Já existe um ficheiro ou pasta com este nome</string>
     <string name="invalid_name">O nome contém caracteres inválidos</string>
     <string name="empty_name">Digite um nome</string>
-    <string name="error_occurred">Ocorreu um erro desconhecido</string>
+    <string name="unknown_error_occurred">Ocorreu um erro desconhecido</string>
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">Já existe um ficheiro com o nome $%1s</string>

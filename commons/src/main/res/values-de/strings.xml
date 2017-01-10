@@ -31,7 +31,7 @@
     <string name="name_taken">Directory or file with that name already exists</string>
     <string name="invalid_name">Der Name enthält nicht erlaubte Zeichen</string>
     <string name="empty_name">Please enter a name</string>
-    <string name="error_occurred">An unknown error occurred</string>
+    <string name="unknown_error_occurred">Ein unbekannter Fehler ist aufgetreten</string>
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">Datei $%1s existiert bereits</string>
@@ -59,7 +59,6 @@
     <string name="root">Hauptverzeichnis</string>
 
     <!-- File properties -->
-
     <string name="path">Dateipfad</string>
     <string name="items_selected">Dateien ausgewählt</string>
     <string name="direct_children_count">Direct children count</string>

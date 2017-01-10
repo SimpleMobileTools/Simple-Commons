@@ -33,7 +33,7 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                     }
 
                     if (!createDirectory(file, this)) {
-                        context.toast(R.string.error_occurred)
+                        context.toast(R.string.unknown_error_occurred)
                     }
                 } else {
                     context.toast(R.string.invalid_name)

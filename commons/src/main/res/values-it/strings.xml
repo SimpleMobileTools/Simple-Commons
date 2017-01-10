@@ -31,7 +31,7 @@
     <string name="name_taken">Directory or file with that name already exists</string>
     <string name="invalid_name">Il nome contiene caratteri non validi</string>
     <string name="empty_name">Please enter a name</string>
-    <string name="error_occurred">An unknown error occurred</string>
+    <string name="unknown_error_occurred">Riscontrato un errore sconosciuto</string>
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">Il file $%1s esiste già</string>

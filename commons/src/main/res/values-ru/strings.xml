@@ -31,7 +31,7 @@
     <string name="name_taken">Папка или файл с таким именем уже существует</string>
     <string name="invalid_name">Имя содержит недопустимые символы</string>
     <string name="empty_name">Пожалуйста, введите имя</string>
-    <string name="error_occurred">Произошла неизвестная ошибка</string>
+    <string name="unknown_error_occurred">Произошла неизвестная ошибка</string>
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">Файл $%1s уже существует</string>
