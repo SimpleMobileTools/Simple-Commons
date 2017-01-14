@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
 import android.content.res.Resources
+import android.media.ExifInterface
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ import kotlinx.android.synthetic.main.dialog_properties.view.*
 import kotlinx.android.synthetic.main.property_item.view.*
 import java.io.File
 import java.util.*
+
 
 class PropertiesDialog() {
     lateinit var mInflater: LayoutInflater
@@ -62,6 +64,36 @@ class PropertiesDialog() {
             addProperty(R.string.resolution, file.getVideoResolution())
             addProperty(R.string.artist, file.getArtist())
             addProperty(R.string.album, file.getAlbum())
+        }
+
+        val exif = ExifInterface(path)
+        exif.getAttribute(ExifInterface.TAG_FOCAL_LENGTH).let {
+            if (it?.isNotEmpty() == true) {
+                val values = it.split('/')
+                val focalLength = "${Math.round(values[0].toDouble() / values[1].toDouble())}mm ($it)"
+                addProperty(R.string.focal_length, focalLength)
+            }
+        }
+
+        exif.getAttribute(ExifInterface.TAG_EXPOSURE_TIME).let {
+            if (it?.isNotEmpty() == true) {
+                val exposureSec = (1 / it.toFloat()).toInt()
+                val exposureTime = "1/$exposureSec (${it}s)"
+                addProperty(R.string.exposure_time, exposureTime)
+            }
+        }
+
+        exif.getAttribute(ExifInterface.TAG_ISO_SPEED_RATINGS).let {
+            if (it?.isNotEmpty() == true) {
+                addProperty(R.string.iso_speed, it)
+            }
+        }
+
+        exif.getAttribute(ExifInterface.TAG_F_NUMBER).let {
+            if (it?.isNotEmpty() == true) {
+                val fNumber = "f/$it"
+                addProperty(R.string.focal_length, fNumber)
+            }
         }
 
         AlertDialog.Builder(activity)
