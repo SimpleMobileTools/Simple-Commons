@@ -1,10 +1,11 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.content.Context
+import android.app.Activity
 import android.content.res.Resources
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.TextView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import kotlinx.android.synthetic.main.dialog_properties.view.*
@@ -23,22 +24,29 @@ class PropertiesDialog() {
     /**
      * A File Properties dialog constructor with an optional parameter, usable at 1 file selected
      *
-     * @param context has to be activity context to avoid some Theme.AppCompat issues
+     * @param activity request activity to avoid some Theme.AppCompat issues
      * @param path the file path
      * @param countHiddenItems toggle determining if we will count hidden files themselves and their sizes (reasonable only at directory properties)
      */
-    constructor(context: Context, path: String, countHiddenItems: Boolean = false) : this() {
+    constructor(activity: Activity, path: String, countHiddenItems: Boolean = false) : this() {
         mCountHiddenItems = countHiddenItems
-        mInflater = LayoutInflater.from(context)
-        mResources = context.resources
+        mInflater = LayoutInflater.from(activity)
+        mResources = activity.resources
         val view = mInflater.inflate(R.layout.dialog_properties, null)
         mPropertyView = view.properties_holder
 
         val file = File(path)
         addProperty(R.string.name, file.name)
         addProperty(R.string.path, file.parent)
-        addProperty(R.string.size, getItemSize(file).formatSize())
+        addProperty(R.string.size, "...", R.id.properties_size)
         addProperty(R.string.last_modified, file.lastModified().formatLastModified())
+
+        Thread({
+            val size = getItemSize(file).formatSize()
+            activity.runOnUiThread {
+                (view.findViewById(R.id.properties_size).property_value as TextView).text = size
+            }
+        }).start()
 
         if (file.isDirectory) {
             addProperty(R.string.direct_children_count, getDirectChildrenCount(file, countHiddenItems))
@@ -56,24 +64,24 @@ class PropertiesDialog() {
             addProperty(R.string.album, file.getAlbum())
         }
 
-        AlertDialog.Builder(context)
+        AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.ok, null)
                 .create().apply {
-            context.setupDialogStuff(view, this, R.string.properties)
+            activity.setupDialogStuff(view, this, R.string.properties)
         }
     }
 
     /**
      * A File Properties dialog constructor with an optional parameter, usable at multiple items selected
      *
-     * @param context has to be activity context to avoid some Theme.AppCompat issues
+     * @param activity request activity to avoid some Theme.AppCompat issues
      * @param path the file path
      * @param countHiddenItems toggle determining if we will count hidden files themselves and their sizes
      */
-    constructor(context: Context, paths: List<String>, countHiddenItems: Boolean = false) : this() {
+    constructor(activity: Activity, paths: List<String>, countHiddenItems: Boolean = false) : this() {
         mCountHiddenItems = countHiddenItems
-        mInflater = LayoutInflater.from(context)
-        mResources = context.resources
+        mInflater = LayoutInflater.from(activity)
+        mResources = activity.resources
         val view = mInflater.inflate(R.layout.dialog_properties, null)
         mPropertyView = view.properties_holder
 
@@ -85,13 +93,21 @@ class PropertiesDialog() {
         addProperty(R.string.items_selected, paths.size.toString())
         if (isSameParent)
             addProperty(R.string.path, files[0].parent)
-        addProperty(R.string.size, getItemsSize(files).formatSize())
-        addProperty(R.string.files_count, mFilesCnt.toString())
+        addProperty(R.string.size, "...", R.id.properties_size)
+        addProperty(R.string.files_count, "...", R.id.properties_file_count)
 
-        AlertDialog.Builder(context)
+        Thread({
+            val size = getItemsSize(files).formatSize()
+            activity.runOnUiThread {
+                (view.findViewById(R.id.properties_size).property_value as TextView).text = size
+                (view.findViewById(R.id.properties_file_count).property_value as TextView).text = mFilesCnt.toString()
+            }
+        }).start()
+
+        AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.ok, null)
                 .create().apply {
-            context.setupDialogStuff(view, this, R.string.properties)
+            activity.setupDialogStuff(view, this, R.string.properties)
         }
     }
 
@@ -114,7 +130,7 @@ class PropertiesDialog() {
             file.listFiles().filter { it != null && (!it.isHidden || (it.isHidden && countHiddenItems)) }.size.toString()
     }
 
-    private fun addProperty(labelId: Int, value: String?) {
+    private fun addProperty(labelId: Int, value: String?, viewId: Int = 0) {
         if (value == null)
             return
 
@@ -122,6 +138,9 @@ class PropertiesDialog() {
             property_label.text = mResources.getString(labelId)
             property_value.text = value
             mPropertyView.properties_holder.addView(this)
+
+            if (viewId != 0)
+                id = viewId
         }
     }
 
