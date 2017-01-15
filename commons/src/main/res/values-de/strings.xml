@@ -27,10 +27,10 @@
     <string name="directory_exists">Es existiert bereits ein Ordner mit diesem Namen</string>
 
     <!-- Create new folder -->
-    <string name="create_new_folder">Create new folder</string>
-    <string name="name_taken">Directory or file with that name already exists</string>
+    <string name="create_new_folder">Neuen Ordner erstellen</string>
+    <string name="name_taken">Ordner oder Datei mit diesem Namen existiert bereits</string>
     <string name="invalid_name">Der Name enthält nicht erlaubte Zeichen</string>
-    <string name="empty_name">Please enter a name</string>
+    <string name="empty_name">Bitte gebe einen Namen an</string>
     <string name="unknown_error_occurred">Ein unbekannter Fehler ist aufgetreten</string>
 
     <!-- Copy conflicts -->
@@ -59,6 +59,7 @@
     <string name="root">Hauptverzeichnis</string>
 
     <!-- File properties -->
+    <string name="properties">Eigenschaften</string>
     <string name="path">Dateipfad</string>
     <string name="items_selected">Dateien ausgewählt</string>
     <string name="direct_children_count">Direct children count</string>
@@ -67,10 +68,10 @@
     <string name="duration">Dauer</string>
     <string name="artist">Künstler</string>
     <string name="album">Album</string>
-    <string name="focal_length">Focal length</string>
-    <string name="exposure_time">Exposure time</string>
-    <string name="iso_speed">ISO speed</string>
-    <string name="f_number">F-number</string>
+    <string name="focal_length">Brennweite</string>
+    <string name="exposure_time">Belichtungszeit</string>
+    <string name="iso_speed">Filmempfindlichkeit</string>
+    <string name="f_number">Blendenzahl</string>
 
     <!-- Color customization -->
     <string name="background_color">Hintergrundfarbe</string>
@@ -80,7 +81,7 @@
     <string name="dark_theme">Dunkles Thema</string>
     <string name="custom">Custom</string>
     <string name="save">Speichern</string>
-    <string name="discard">Discard</string>
+    <string name="discard">Verwerfen</string>
     <string name="undo_changes">Änderungen rückgängig machen</string>
     <string name="undo_changes_confirmation">Bist du sicher, das du die Änderungen rückgängig machen willst?</string>
     <string name="save_before_closing">Du hast ungespeicherte Änderungen. Speichern vor beenden?</string>
@@ -101,7 +102,7 @@
     <string name="name">Name</string>
     <string name="size">Größe</string>
     <string name="last_modified">Änderungsdatum</string>
-    <string name="date_taken">Date taken</string>
+    <string name="date_taken">Aufnahmedatum</string>
     <string name="title">Titel</string>
     <string name="filename">Dateiname</string>
     <string name="extension">Dateiendung</string>
@@ -109,7 +110,7 @@
     <string name="descending">Absteigend</string>
 
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Möchtest du mit der Löschung fortfahren?</string>
+    <string name="proceed_with_deletion">Möchtest du mit dem Löschen fortfahren?</string>
     <string name="yes">Ja</string>
     <string name="no">Nein</string>
 
@@ -143,5 +144,5 @@
     <string name="joda_title">Joda-Time (Ersatz für Java Datum)</string>
     <string name="stetho_title">Stetho (Datenbanken debuggen)</string>
     <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">PhotoView (zoomable gifs)</string>
+    <string name="photoview_title">PhotoView (Zoombare Gifs)</string>
 </resources>
