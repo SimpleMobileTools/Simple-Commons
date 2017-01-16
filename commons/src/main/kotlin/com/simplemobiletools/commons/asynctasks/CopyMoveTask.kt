@@ -49,7 +49,9 @@ class CopyMoveTask(val context: Context, val deleteAfterCopy: Boolean = false, v
                         }).start()
                     }
                 } else {
-                    file.delete()
+                    Thread({
+                        file.delete()
+                    }).start()
                 }
             }
         }
