@@ -21,6 +21,7 @@ class LicenseActivity : BaseSimpleActivity() {
     override fun onResume() {
         super.onResume()
 
+        licenses_holder.removeAllViews()
         val inflater = LayoutInflater.from(this)
         val licenses = initLicenses()
         val licenseMask = intent.getIntExtra(APP_LICENSES, 0)
@@ -28,7 +29,6 @@ class LicenseActivity : BaseSimpleActivity() {
             val license = it
             val view = inflater.inflate(R.layout.license_item, null)
             view.apply {
-                licenses_holder.removeAllViews()
                 license_title.text = getUnderlinedTitle(getString(license.titleId))
                 license_title.setOnClickListener { launchViewIntent(license.urlId) }
                 license_title.setTextColor(baseConfig.primaryColor)
