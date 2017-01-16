@@ -20,16 +20,15 @@ class LicenseActivity : BaseSimpleActivity() {
 
     override fun onResume() {
         super.onResume()
-        updateTextColors(licenses_holder)
 
         val inflater = LayoutInflater.from(this)
         val licenses = initLicenses()
         val licenseMask = intent.getIntExtra(APP_LICENSES, 0)
-
         licenses.filter { licenseMask and it.id != 0 }.forEach {
             val license = it
             val view = inflater.inflate(R.layout.license_item, null)
             view.apply {
+                licenses_holder.removeAllViews()
                 license_title.text = getUnderlinedTitle(getString(license.titleId))
                 license_title.setOnClickListener { launchViewIntent(license.urlId) }
                 license_title.setTextColor(baseConfig.primaryColor)
@@ -38,6 +37,7 @@ class LicenseActivity : BaseSimpleActivity() {
                 licenses_holder.addView(this)
             }
         }
+        updateTextColors(licenses_holder)
     }
 
     fun getUnderlinedTitle(title: String): SpannableString {
