@@ -16,12 +16,9 @@ class LicenseActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_license)
-    }
 
-    override fun onResume() {
-        super.onResume()
+        updateTextColors(licenses_holder)
 
-        licenses_holder.removeAllViews()
         val inflater = LayoutInflater.from(this)
         val licenses = initLicenses()
         val licenseMask = intent.getIntExtra(APP_LICENSES, 0)
@@ -37,7 +34,6 @@ class LicenseActivity : BaseSimpleActivity() {
                 licenses_holder.addView(this)
             }
         }
-        updateTextColors(licenses_holder)
     }
 
     fun getUnderlinedTitle(title: String): SpannableString {
