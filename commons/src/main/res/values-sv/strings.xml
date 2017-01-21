@@ -1,51 +1,51 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Avbryt</string>
-    <string name="search">Search</string>
+    <string name="search">Sök</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopiera</string>
     <string name="move">Flytta</string>
-    <string name="copy_move">Copy / Move</string>
+    <string name="copy_move">Kopiera / Flytta</string>
     <string name="source">Källa</string>
     <string name="destination">Mål</string>
     <string name="select_destination">Välj mål</string>
-    <string name="click_select_destination">Click here to select destination</string>
+    <string name="click_select_destination">Tryck här för att välja mål</string>
     <string name="invalid_destination">Det gick inte att skriva till målet</string>
-    <string name="please_select_destination">Please select a destination</string>
-    <string name="source_and_destination_same">Source and destination cannot be the same</string>
+    <string name="please_select_destination">Välj mål</string>
+    <string name="source_and_destination_same">Källa och mål kan inte vara samma</string>
     <string name="copy_failed">Kunde inte kopiera filen</string>
     <string name="copying">Kopierar&#8230;</string>
-    <string name="copying_success">Files copied successfully</string>
-    <string name="copy_move_failed">An error occurred</string>
-    <string name="moving">Moving&#8230;</string>
-    <string name="moving_success">Files moved successfully</string>
-    <string name="file_exists">A file with that name already exists</string>
-    <string name="moving_success_partial">Some files could not be moved</string>
-    <string name="copying_success_partial">Some files could not be copied</string>
-    <string name="create_new_directory">Create new directory</string>
-    <string name="directory_exists">A directory with that name already exists</string>
+    <string name="copying_success">Filerna har kopierats</string>
+    <string name="copy_move_failed">Ett fel har uppstått</string>
+    <string name="moving">Flyttar&#8230;</string>
+    <string name="moving_success">Filerna har flyttats</string>
+    <string name="file_exists">En fil med det namnet finns redan</string>
+    <string name="moving_success_partial">Några filer gick inte att flytta</string>
+    <string name="copying_success_partial">Några filer gick inte att kopiera</string>
+    <string name="create_new_directory">Skapa ny mapp</string>
+    <string name="directory_exists">En katalog med det namnet finns redan</string>
 
     <!-- Create new folder -->
-    <string name="create_new_folder">Create new folder</string>
-    <string name="name_taken">Directory or file with that name already exists</string>
+    <string name="create_new_folder">Skapa ny mapp</string>
+    <string name="name_taken">Katalogen eller filen finns redan med det namnet</string>
     <string name="invalid_name">Namnet innehåller ogiltiga tecken</string>
-    <string name="empty_name">Please enter a name</string>
+    <string name="empty_name">Ange ett namn</string>
     <string name="unknown_error_occurred">Ett okänt fel har uppstått</string>
 
     <!-- Copy conflicts -->
-    <string name="file_already_exists">File $%1s already exists</string>
-    <string name="select_an_action">Select an action</string>
-    <string name="overwrite">Overwrite</string>
-    <string name="skip">Skip</string>
-    <string name="append">Append with \'_1\'</string>
-    <string name="apply_to_all">Apply to all conflicts</string>
+    <string name="file_already_exists">Filen $%1s finns redan</string>
+    <string name="select_an_action">Välj en åtgärd</string>
+    <string name="overwrite">Skriv över</string>
+    <string name="skip">Hoppa över</string>
+    <string name="append">Bifoga med \'_1\'</string>
+    <string name="apply_to_all">Använd på alla konflikter</string>
 
     <!-- File picker -->
-    <string name="select_folder">Select a folder</string>
-    <string name="select_file">Select a file</string>
-    <string name="confirm_storage_access_title">Confirm external storage access</string>
-    <string name="confirm_storage_access_text">Please choose the root folder of the SD card on the next screen, to grant write access</string>
+    <string name="select_folder">Välj mapp</string>
+    <string name="select_file">Välj fil</string>
+    <string name="confirm_storage_access_title">Bekräfta extern åtkomstlagring</string>
+    <string name="confirm_storage_access_text">Välj rotmappen på ditt SD-kort på nästa skärmnbild, för att bevilja skrivrättigheter</string>
 
     <plurals name="items">
         <item quantity="one">1 objekt</item>
@@ -53,49 +53,49 @@
     </plurals>
 
     <!-- Storages -->
-    <string name="select_storage">Select storage</string>
-    <string name="internal">Internal</string>
-    <string name="sd_card">SD Card</string>
-    <string name="root">Root</string>
+    <string name="select_storage">Välj lagringsplats</string>
+    <string name="internal">Internt</string>
+    <string name="sd_card">SD-kort</string>
+    <string name="root">Rot</string>
 
     <!-- File properties -->
     <string name="properties">Egenskaper</string>
-    <string name="path">Path</string>
-    <string name="items_selected">Items selected</string>
+    <string name="path">Sökväg</string>
+    <string name="items_selected">Valda objekt</string>
     <string name="direct_children_count">Direct children count</string>
-    <string name="files_count">Total files count</string>
-    <string name="resolution">Resolution</string>
-    <string name="duration">Duration</string>
+    <string name="files_count">Antalet filer</string>
+    <string name="resolution">Upplösning</string>
+    <string name="duration">Varaktighet</string>
     <string name="artist">Artist</string>
     <string name="album">Album</string>
-    <string name="focal_length">Focal length</string>
-    <string name="exposure_time">Exposure time</string>
-    <string name="iso_speed">ISO speed</string>
-    <string name="f_number">F-number</string>
+    <string name="focal_length">Brännvidd</string>
+    <string name="exposure_time">Exponeringstid</string>
+    <string name="iso_speed">ISO-grader</string>
+    <string name="f_number">F-nummer</string>
 
     <!-- Color customization -->
-    <string name="background_color">Background color</string>
-    <string name="text_color">Text color</string>
-    <string name="primary_color">Primary color</string>
-    <string name="light_theme">Light theme</string>
-    <string name="dark_theme">Dark theme</string>
-    <string name="custom">Custom</string>
-    <string name="save">Save</string>
-    <string name="discard">Discard</string>
-    <string name="undo_changes">Undo changes</string>
-    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
-    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
+    <string name="background_color">Bakgrundsfärg</string>
+    <string name="text_color">Textfärg</string>
+    <string name="primary_color">Primär färg</string>
+    <string name="light_theme">Ljust tema</string>
+    <string name="dark_theme">Mörkt tema</string>
+    <string name="custom">Egen</string>
+    <string name="save">Spara</string>
+    <string name="discard">Avbryt</string>
+    <string name="undo_changes">Ångra ändringar</string>
+    <string name="undo_changes_confirmation">Är du säker på att du vill ångra dina ändringar?</string>
+    <string name="save_before_closing">Du har ändringar som inte är sparade. Spara innan du lämnar?</string>
 
     <!-- What's new -->
-    <string name="whats_new">What\'s new</string>
-    <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
+    <string name="whats_new">Vad är nytt</string>
+    <string name="whats_new_disclaimer">* endast de största uppdateringarna är listade här, det görs alltid också en massa småändringar</string>
 
     <!-- Actionbar items -->
     <string name="delete">Ta bort</string>
     <string name="rename">Döp om</string>
     <string name="share">Dela</string>
     <string name="share_via">Dela via</string>
-    <string name="select_all">Select all</string>
+    <string name="select_all">Välj alla</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortera efter</string>
@@ -115,8 +115,8 @@
     <string name="no">Nej</string>
 
     <!-- Settings -->
-    <string name="settings">Settings</string>
-    <string name="customize_colors">Customize colors</string>
+    <string name="settings">Inställningar</string>
+    <string name="customize_colors">Egna färger</string>
 
     <!-- About -->
     <string name="about">Om</string>
