@@ -7,6 +7,7 @@ import android.graphics.PorterDuffColorFilter
 import android.support.v7.app.AlertDialog
 import android.view.*
 import android.view.View.OnTouchListener
+import android.widget.EditText
 import android.widget.ImageView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
@@ -22,6 +23,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
     lateinit var viewCursor: ImageView
     lateinit var viewNewColor: ImageView
     lateinit var viewTarget: ImageView
+    lateinit var newHexField: EditText
     lateinit var viewContainer: ViewGroup
     val currentColorHsv = FloatArray(3)
 
@@ -37,14 +39,15 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
             viewNewColor = color_picker_new_color
             viewTarget = color_picker_cursor
             viewContainer = color_picker_holder
+            newHexField = color_picker_new_hex
 
             viewSatVal.setHue(getHue())
             viewNewColor.setBackgroundWithStroke(getColor(), backgroundColor)
             color_picker_old_color.setBackgroundWithStroke(color, backgroundColor)
 
-            val hexCode = Integer.toHexString(color).substring(2).toUpperCase()
+            val hexCode = getHexCode(color)
             color_picker_old_hex.text = "#$hexCode"
-            color_picker_new_hex.setText(hexCode)
+            newHexField.setText(hexCode)
         }
 
         viewHue.setOnTouchListener(OnTouchListener { v, event ->
@@ -64,6 +67,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
                 viewSatVal.setHue(getHue())
                 moveHuePicker()
                 viewNewColor.setBackgroundWithStroke(getColor(), backgroundColor)
+                newHexField.setText(getHexCode(getColor()))
                 return@OnTouchListener true
             }
             false
@@ -88,6 +92,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
 
                 moveColorPicker()
                 viewNewColor.setBackgroundWithStroke(getColor(), backgroundColor)
+                newHexField.setText(getHexCode(getColor()))
                 return@OnTouchListener true
             }
             false
@@ -112,6 +117,8 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
             }
         })
     }
+
+    private fun getHexCode(color: Int) = Integer.toHexString(color).substring(2).toUpperCase()
 
     private fun moveHuePicker() {
         var y = viewHue.measuredHeight - getHue() * viewHue.measuredHeight / 360f
