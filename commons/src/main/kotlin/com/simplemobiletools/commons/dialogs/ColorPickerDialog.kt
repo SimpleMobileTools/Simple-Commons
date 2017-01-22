@@ -8,7 +8,6 @@ import android.support.v7.app.AlertDialog
 import android.view.*
 import android.view.View.OnTouchListener
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.setBackgroundWithStroke
@@ -42,6 +41,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
             viewSatVal.setHue(getHue())
             viewNewColor.setBackgroundWithStroke(getColor(), backgroundColor)
             color_picker_old_color.setBackgroundWithStroke(color, backgroundColor)
+            color_picker_old_hex.text = "#${Integer.toHexString(color).substring(2).toUpperCase()}"
         }
 
         viewHue.setOnTouchListener(OnTouchListener { v, event ->
@@ -52,7 +52,9 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
                     y = viewHue.measuredHeight - 0.001f // to avoid jumping the cursor from bottom to top.
                 }
                 var hue = 360f - 360f / viewHue.measuredHeight * y
-                if (hue == 360f) hue = 0f
+                if (hue == 360f)
+                    hue = 0f
+
                 currentColorHsv[0] = hue
                 viewSatVal.setHue(getHue())
                 moveHuePicker()
@@ -93,7 +95,8 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
                 .create().apply {
             context.setupDialogStuff(view, this)
             view.color_picker_arrow.colorFilter = PorterDuffColorFilter(textColor, PorterDuff.Mode.SRC_IN)
-            view.color_picker_hue_cursor.colorFilter = PorterDuffColorFilter(textColor, PorterDuff.Mode.SRC_IN)
+            view.color_picker_hex_arrow.colorFilter = PorterDuffColorFilter(textColor, PorterDuff.Mode.SRC_IN)
+            viewCursor.colorFilter = PorterDuffColorFilter(textColor, PorterDuff.Mode.SRC_IN)
         }
 
         view.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
@@ -110,19 +113,15 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
         if (y == viewHue.measuredHeight.toFloat())
             y = 0f
 
-        val params = (viewCursor.layoutParams as RelativeLayout.LayoutParams)
-        params.leftMargin = ((viewHue.left - Math.floor((viewCursor.measuredWidth / 2).toDouble()) - viewContainer.paddingLeft).toInt())
-        params.topMargin = ((viewHue.top + y - Math.floor((viewCursor.measuredHeight / 2).toDouble()) - viewContainer.paddingTop).toInt())
-        viewCursor.layoutParams = params
+        viewCursor.x = (viewHue.left - viewCursor.width).toFloat()
+        viewCursor.y = viewHue.top + y - viewCursor.height / 2
     }
 
     private fun moveColorPicker() {
         val x = getSat() * viewSatVal.measuredWidth
         val y = (1f - getVal()) * viewSatVal.measuredHeight
-        val params = (viewTarget.layoutParams as RelativeLayout.LayoutParams)
-        params.leftMargin = ((viewSatVal.left + x).toDouble() - Math.floor((viewTarget.measuredWidth / 2).toDouble()) - viewContainer.paddingLeft).toInt()
-        params.topMargin = ((viewSatVal.top + y).toDouble() - Math.floor((viewTarget.measuredHeight / 2).toDouble()) - viewContainer.paddingTop).toInt()
-        viewTarget.layoutParams = params
+        viewTarget.x = viewSatVal.left + x - viewTarget.width / 2
+        viewTarget.y = viewSatVal.top + y - viewTarget.height / 2
     }
 
     private fun getColor() = Color.HSVToColor(currentColorHsv)
