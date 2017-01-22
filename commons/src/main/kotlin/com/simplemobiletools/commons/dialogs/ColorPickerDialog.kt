@@ -41,13 +41,18 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
             viewSatVal.setHue(getHue())
             viewNewColor.setBackgroundWithStroke(getColor(), backgroundColor)
             color_picker_old_color.setBackgroundWithStroke(color, backgroundColor)
-            color_picker_old_hex.text = "#${Integer.toHexString(color).substring(2).toUpperCase()}"
+
+            val hexCode = Integer.toHexString(color).substring(2).toUpperCase()
+            color_picker_old_hex.text = "#$hexCode"
+            color_picker_new_hex.setText(hexCode)
         }
 
         viewHue.setOnTouchListener(OnTouchListener { v, event ->
             if (event.action == MotionEvent.ACTION_MOVE || event.action == MotionEvent.ACTION_DOWN || event.action == MotionEvent.ACTION_UP) {
                 var y = event.y
-                if (y < 0f) y = 0f
+                if (y < 0f)
+                    y = 0f
+
                 if (y > viewHue.measuredHeight) {
                     y = viewHue.measuredHeight - 0.001f // to avoid jumping the cursor from bottom to top.
                 }
