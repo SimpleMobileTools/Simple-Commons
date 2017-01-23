@@ -8,4 +8,6 @@
         <item name="colorAccent">@color/color_primary</item>
         <item name="android:windowBackground">@color/default_background_color_dark_theme</item>
     </style>
+
+    <style name="SpinnerItem" parent="@android:style/Widget.TextView"/>
 </resources>
