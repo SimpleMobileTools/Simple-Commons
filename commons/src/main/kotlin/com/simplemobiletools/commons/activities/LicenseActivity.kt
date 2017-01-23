@@ -6,6 +6,7 @@ import android.text.style.UnderlineSpan
 import android.view.LayoutInflater
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.getLinkTextColor
 import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.License
@@ -16,6 +17,7 @@ class LicenseActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_license)
+        val linkTextColor = getLinkTextColor()
 
         updateTextColors(licenses_holder)
 
@@ -28,7 +30,7 @@ class LicenseActivity : BaseSimpleActivity() {
             view.apply {
                 license_title.text = getUnderlinedTitle(getString(license.titleId))
                 license_title.setOnClickListener { launchViewIntent(license.urlId) }
-                license_title.setTextColor(baseConfig.primaryColor)
+                license_title.setTextColor(linkTextColor)
                 license_text.text = getString(license.textId)
                 license_text.setTextColor(baseConfig.textColor)
                 licenses_holder.addView(this)

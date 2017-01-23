@@ -51,6 +51,13 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
             }
 }
 
+fun Context.getLinkTextColor(): Int {
+    return if (baseConfig.primaryColor == resources.getColor(R.color.color_primary))
+        baseConfig.primaryColor
+    else
+        baseConfig.textColor
+}
+
 fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) {
     if (view is ViewGroup)
         updateTextColors(view)

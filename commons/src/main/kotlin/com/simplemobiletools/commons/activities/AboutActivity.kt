@@ -8,6 +8,7 @@ import android.text.method.LinkMovementMethod
 import android.view.View
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.getLinkTextColor
 import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
@@ -17,11 +18,13 @@ import java.util.*
 
 class AboutActivity : BaseSimpleActivity() {
     var appName = ""
+    var linkTextColor = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
         appName = intent.getStringExtra(APP_NAME) ?: ""
+        linkTextColor = getLinkTextColor()
     }
 
     override fun onResume() {
@@ -43,6 +46,7 @@ class AboutActivity : BaseSimpleActivity() {
     private fun setupWebsite() {
         val websiteText = String.format(getString(R.string.two_string_placeholder), getString(R.string.website_label), getString(R.string.website))
         about_website.text = websiteText
+        about_website.setLinkTextColor(linkTextColor)
     }
 
     private fun setupEmail() {
@@ -52,13 +56,14 @@ class AboutActivity : BaseSimpleActivity() {
         val href = "$label<br><a href=\"mailto:$email?subject=$appName\">$email</a>"
         about_email.text = Html.fromHtml(href)
         about_email.movementMethod = LinkMovementMethod.getInstance()
+        about_email.setLinkTextColor(linkTextColor)
     }
 
     private fun setupMoreApps() {
         about_more_apps.setOnClickListener {
             launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
         }
-        about_more_apps.setTextColor(baseConfig.primaryColor)
+        about_more_apps.setTextColor(linkTextColor)
     }
 
     private fun setupInvite() {
@@ -72,7 +77,7 @@ class AboutActivity : BaseSimpleActivity() {
                 startActivity(Intent.createChooser(this, getString(R.string.invite_via)))
             }
         }
-        about_invite.setTextColor(baseConfig.primaryColor)
+        about_invite.setTextColor(linkTextColor)
     }
 
     private fun setupRateUs() {
@@ -87,7 +92,7 @@ class AboutActivity : BaseSimpleActivity() {
                 }
             }
         }
-        about_rate_us.setTextColor(baseConfig.primaryColor)
+        about_rate_us.setTextColor(linkTextColor)
     }
 
     private fun setupLicense() {
@@ -97,14 +102,14 @@ class AboutActivity : BaseSimpleActivity() {
                 startActivity(this)
             }
         }
-        about_license.setTextColor(baseConfig.primaryColor)
+        about_license.setTextColor(linkTextColor)
     }
 
     private fun setupDonate() {
         about_donate.setOnClickListener {
             launchViewIntent("http://simplemobiletools.github.io/donate")
         }
-        about_donate.setTextColor(baseConfig.primaryColor)
+        about_donate.setTextColor(linkTextColor)
     }
 
     private fun setupFacebook() {
