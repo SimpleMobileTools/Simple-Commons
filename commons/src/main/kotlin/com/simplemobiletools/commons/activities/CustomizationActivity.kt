@@ -10,8 +10,6 @@ import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.setBackgroundWithStroke
 import com.simplemobiletools.commons.extensions.updateTextColors
-import com.simplemobiletools.commons.helpers.DEFAULT_BACKGROUND_COLOR
-import com.simplemobiletools.commons.helpers.DEFAULT_TEXT_COLOR
 import kotlinx.android.synthetic.main.activity_customization.*
 
 class CustomizationActivity : BaseSimpleActivity() {
@@ -29,8 +27,8 @@ class CustomizationActivity : BaseSimpleActivity() {
         setContentView(R.layout.activity_customization)
 
         resources.apply {
-            defaultTextColor = intent.getIntExtra(DEFAULT_TEXT_COLOR, getColor(R.color.default_text_color))
-            defaultBackgroundColor = intent.getIntExtra(DEFAULT_BACKGROUND_COLOR, getColor(R.color.default_background_color))
+            defaultTextColor = getColor(R.color.default_text_color)
+            defaultBackgroundColor = getColor(R.color.default_background_color)
             defaultPrimaryColor = getColor(R.color.color_primary)
         }
 
