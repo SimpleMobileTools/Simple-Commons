@@ -10,6 +10,8 @@ import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.setBackgroundWithStroke
 import com.simplemobiletools.commons.extensions.updateTextColors
+import com.simplemobiletools.commons.helpers.DEFAULT_BACKGROUND_COLOR
+import com.simplemobiletools.commons.helpers.DEFAULT_TEXT_COLOR
 import kotlinx.android.synthetic.main.activity_customization.*
 
 class CustomizationActivity : BaseSimpleActivity() {
@@ -18,9 +20,19 @@ class CustomizationActivity : BaseSimpleActivity() {
     var curPrimaryColor = 0
     var hasUnsavedChanges = false
 
+    var defaultTextColor = 0
+    var defaultBackgroundColor = 0
+    var defaultPrimaryColor = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
+
+        resources.apply {
+            defaultTextColor = intent.getIntExtra(DEFAULT_TEXT_COLOR, getColor(R.color.default_text_color))
+            defaultBackgroundColor = intent.getIntExtra(DEFAULT_BACKGROUND_COLOR, getColor(R.color.default_background_color))
+            defaultPrimaryColor = getColor(R.color.color_primary)
+        }
 
         updateTextColors(customization_holder)
         initColorVariables()
@@ -29,6 +41,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_text_color_holder.setOnClickListener { pickTextColor() }
         customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
         customization_primary_color_holder.setOnClickListener { pickPrimaryColor() }
+        customization_restore_defaults.setOnClickListener { restoreDefaultColors() }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -52,6 +65,13 @@ class CustomizationActivity : BaseSimpleActivity() {
         } else {
             super.onBackPressed()
         }
+    }
+
+    private fun restoreDefaultColors() {
+        setCurrentTextColor(defaultTextColor)
+        setCurrentBackgroundColor(defaultBackgroundColor)
+        setCurrentPrimaryColor(defaultPrimaryColor)
+        colorChanged()
     }
 
     private fun promptSaveDiscard() {
@@ -113,11 +133,25 @@ class CustomizationActivity : BaseSimpleActivity() {
         invalidateOptionsMenu()
     }
 
+    private fun setCurrentTextColor(color: Int) {
+        curTextColor = color
+        updateTextColors(customization_holder, color)
+    }
+
+    private fun setCurrentBackgroundColor(color: Int) {
+        curBackgroundColor = color
+        updateBackgroundColor(color)
+    }
+
+    private fun setCurrentPrimaryColor(color: Int) {
+        curPrimaryColor = color
+        updateActionbarColor(color)
+    }
+
     private fun pickTextColor() {
         ColorPickerDialog(this, curTextColor) {
             if (hasColorChanged(curTextColor, it)) {
-                curTextColor = it
-                updateTextColors(customization_holder, it)
+                setCurrentTextColor(it)
                 colorChanged()
             }
         }
@@ -126,8 +160,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun pickBackgroundColor() {
         ColorPickerDialog(this, curBackgroundColor) {
             if (hasColorChanged(curBackgroundColor, it)) {
-                curBackgroundColor = it
-                updateBackgroundColor(it)
+                setCurrentBackgroundColor(it)
                 colorChanged()
             }
         }
@@ -136,8 +169,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun pickPrimaryColor() {
         ColorPickerDialog(this, curPrimaryColor) {
             if (hasColorChanged(curPrimaryColor, it)) {
-                curPrimaryColor = it
-                updateActionbarColor(it)
+                setCurrentPrimaryColor(it)
                 colorChanged()
             }
         }
