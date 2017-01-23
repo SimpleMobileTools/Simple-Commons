@@ -16,7 +16,7 @@ import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.setBackgroundWithStroke
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.views.ColorPickerSquare
-import kotlinx.android.synthetic.main.dialog_colorpicker.view.*
+import kotlinx.android.synthetic.main.dialog_color_picker.view.*
 
 // forked from https://github.com/yukuku/ambilwarna
 class ColorPickerDialog(val context: Context, color: Int, val callback: (color: Int) -> Unit) {
@@ -33,7 +33,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
     init {
         Color.colorToHSV(color, currentColorHsv)
 
-        val view = LayoutInflater.from(context).inflate(R.layout.dialog_colorpicker, null).apply {
+        val view = LayoutInflater.from(context).inflate(R.layout.dialog_color_picker, null).apply {
             viewHue = color_picker_hue
             viewSatVal = color_picker_square
             viewCursor = color_picker_hue_cursor
