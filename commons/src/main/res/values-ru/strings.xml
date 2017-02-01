@@ -68,16 +68,16 @@
     <string name="duration">Длительность</string>
     <string name="artist">Исполнитель</string>
     <string name="album">Альбом</string>
-    <string name="focal_length">Focal length</string>
-    <string name="exposure_time">Exposure time</string>
-    <string name="iso_speed">ISO speed</string>
-    <string name="f_number">F-number</string>
+    <string name="focal_length">Фокусное расстояние</string>
+    <string name="exposure_time">Выдержка</string>
+    <string name="iso_speed">Светочувствительность(ISO)</string>
+    <string name="f_number">Число диафрагмы</string>
 
     <!-- Color customization -->
     <string name="background_color">Цвет фона</string>
     <string name="text_color">Цвет текста</string>
     <string name="primary_color">Основной цвет</string>
-    <string name="restore_defaults">Restore defaults</string>
+    <string name="restore_defaults">Сбросить к стандартным</string>
     <string name="light_theme">Светлая тема</string>
     <string name="dark_theme">Тёмная тема</string>
     <string name="custom">Настраиваемое</string>
@@ -105,8 +105,8 @@
     <string name="last_modified">Время изменения</string>
     <string name="date_taken">Время создания</string>
     <string name="title">Title</string>
-    <string name="filename">Filename</string>
-    <string name="extension">Extension</string>
+    <string name="filename">Имя файла</string>
+    <string name="extension">Расширение</string>
     <string name="ascending">По возрастанию</string>
     <string name="descending">По убыванию</string>
 
