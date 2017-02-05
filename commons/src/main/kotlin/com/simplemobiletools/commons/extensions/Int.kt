@@ -30,3 +30,6 @@ fun Int.getFormattedDuration(): String {
     sb.append(":").append(String.format(Locale.getDefault(), "%02d", seconds))
     return sb.toString()
 }
+
+// TODO: how to do "flags & ~flag" in kotlin?
+fun Int.removeFlag(flag: Int) = this or flag - flag
