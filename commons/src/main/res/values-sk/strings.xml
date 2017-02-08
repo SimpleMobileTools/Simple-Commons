@@ -1,0 +1,151 @@
+<resources>
+    <string name="ok">OK</string>
+    <string name="cancel">Zrušiť</string>
+    <string name="search">Hľadať</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">Kopírovať</string>
+    <string name="move">Presunúť</string>
+    <string name="copy_move">Kopírovať / presunúť</string>
+    <string name="source">Zdroj</string>
+    <string name="destination">Cieľ</string>
+    <string name="select_destination">Vyberte cieľovú cestu</string>
+    <string name="click_select_destination">Kliknite sem pre zvolenie cieľovej cesty</string>
+    <string name="invalid_destination">Nepodarilo sa písať na cieľovú polohu</string>
+    <string name="please_select_destination">Prosím zvoľte cieľ</string>
+    <string name="source_and_destination_same">Zdroj a cieľ sa nemôžu zhodovať</string>
+    <string name="copy_failed">Nepodarilo sa skopírovať súbory</string>
+    <string name="copying">Kopírovanie&#8230;</string>
+    <string name="copying_success">Súbory boli úspešne skopírované</string>
+    <string name="copy_move_failed">Došlo k chybe</string>
+    <string name="moving">Presúvanie&#8230;</string>
+    <string name="moving_success">Súbory boli úspešne presunuté</string>
+    <string name="file_exists">Súbor s daným názvom už existuje</string>
+    <string name="moving_success_partial">Nepodarilo sa presunúť niektoré súbory</string>
+    <string name="copying_success_partial">Nepodarilo sa skopírovať niektoré súbory</string>
+    <string name="create_new_directory">Vytvoriť nový priečinok</string>
+    <string name="directory_exists">Priečinok s daným názvom už existuje</string>
+
+    <!-- Create new folder -->
+    <string name="create_new_folder">Vytvoriť nový priečinok</string>
+    <string name="name_taken">Priečinok alebo súbor s daným názvom už existuje</string>
+    <string name="invalid_name">Názov obsahuje neplatné znaky The name contains invalid characters</string>
+    <string name="empty_name">Prosím zadajte názov</string>
+    <string name="unknown_error_occurred">Došlo k neznámej chybe</string>
+
+    <!-- Copy conflicts -->
+    <string name="file_already_exists">Súbor $%1s už existuje</string>
+    <string name="select_an_action">Zvoľte operáciu</string>
+    <string name="overwrite">Prepísať</string>
+    <string name="skip">PreskočiŤ</string>
+    <string name="append">Pripnúť \'_1\'</string>
+    <string name="apply_to_all">Použiť na všetky konflikty</string>
+
+    <!-- File picker -->
+    <string name="select_folder">Zvoľte priečinok</string>
+    <string name="select_file">Zvoľte súbor</string>
+    <string name="confirm_storage_access_title">Potvrďte prístup k súborom</string>
+    <string name="confirm_storage_access_text">Pre poskytnutie práva na zápis prosím zvoľte na nasledujúcej obrazovke základný priečǐnok SD karty</string>
+
+    <plurals name="items">
+        <item quantity="one">1 položka</item>
+        <item quantity="few">%1$d položky</item>
+        <item quantity="other">%1$d položiek</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">Zvoľte úložisko</string>
+    <string name="internal">Interné</string>
+    <string name="sd_card">SD karta</string>
+    <string name="root">Koreňový priečinok</string>
+
+    <!-- File properties -->
+    <string name="properties">Vlastnosti</string>
+    <string name="path">Cesta</string>
+    <string name="items_selected">Počet zvolených položiek</string>
+    <string name="direct_children_count">Počet priamych podpoložiek</string>
+    <string name="files_count">Celkový počet vnútorných položiek</string>
+    <string name="resolution">Rozlíšenie</string>
+    <string name="duration">Trvanie</string>
+    <string name="artist">Skupina</string>
+    <string name="album">Album</string>
+    <string name="focal_length">Ohnisková vzdialenosť</string>
+    <string name="exposure_time">Dĺžka expozície</string>
+    <string name="iso_speed">Rýchlosť ISO</string>
+    <string name="f_number">Clonové číslo</string>
+
+    <!-- Color customization -->
+    <string name="background_color">Farba pozadia</string>
+    <string name="text_color">Farba textu</string>
+    <string name="primary_color">Primárna farba</string>
+    <string name="restore_defaults">Obnoviť predvolené</string>
+    <string name="theme">Téma</string>
+    <string name="light_theme">Svetlá téma</string>
+    <string name="dark_theme">Tmavá téma</string>
+    <string name="custom">Vlastná</string>
+    <string name="save">Uložiť</string>
+    <string name="discard">Zahodiť</string>
+    <string name="undo_changes">Vrátiť zmeny</string>
+    <string name="undo_changes_confirmation">Ste si istý, že chcete vrátiť zmeny?</string>
+    <string name="save_before_closing">Máte neuložené zmeny. Chcete ich uložiť pred ukončením?</string>
+
+    <!-- What's new -->
+    <string name="whats_new">Novinky</string>
+    <string name="whats_new_disclaimer">* sú tu vypísané iba väčšie aktualizácie, stále sú vykonané aj menšie opravy</string>
+
+    <!-- Actionbar items -->
+    <string name="delete">Vymazať</string>
+    <string name="rename">Premenovať</string>
+    <string name="share">Zdieľať</string>
+    <string name="share_via">Zdieľať cez</string>
+    <string name="select_all">Vybrať všetko</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">Zoradiť podľa</string>
+    <string name="name">Názvu</string>
+    <string name="size">Veľkosti</string>
+    <string name="last_modified">Dátumu poslednej úpravy</string>
+    <string name="date_taken">Dátumu vytvorenia</string>
+    <string name="title">Názvu</string>
+    <string name="filename">Názvu súboru</string>
+    <string name="extension">Prípony</string>
+    <string name="ascending">Vzostupne</string>
+    <string name="descending">Klesajúco</string>
+
+    <!-- Confirmation dialog -->
+    <string name="proceed_with_deletion">Ste si istý, že chcete pokračovať s vymazaním?</string>
+    <string name="yes">Áno</string>
+    <string name="no">Nie</string>
+
+    <!-- Settings -->
+    <string name="settings">Nastavenia</string>
+    <string name="customize_colors">Upraviť farby</string>
+
+    <!-- About -->
+    <string name="about">O aplikácií</string>
+    <string name="website_label">Pre zdrojové kódy navštívte</string>
+    <string name="email_label">Odozvu a návrhy posielajte na</string>
+    <string name="more_apps_underlined"><u>Viac aplikácií</u></string>
+    <string name="third_party_licences_underlined"><u>Licencie tretích strán</u></string>
+    <string name="invite_friends_underlined"><u>Pozvať priateľov</u></string>
+    <string name="share_text">Čauko, skús %1$s na %2$s</string>
+    <string name="invite_via">Pozvať cez</string>
+    <string name="rate_us_underlined"><u>Ohodnotiť aplikáciu</u></string>
+    <string name="donate_underlined"><u>Darovať</u></string>
+    <string name="follow_us">Nasledujte nás:</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+
+    <!-- License -->
+    <string name="notice">Táto aplikácia používa na uľahčenie práce nasledovné knižnice tretích strán. Ďakujeme.</string>
+    <string name="third_party_licences">Knižnice tretích strán</string>
+    <string name="kotlin_title">Kotlin (programovací jazyk)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (priblížiteľné obrázky)</string>
+    <string name="glide_title">Glide (načítavanie a cachovanie obrázkov)</string>
+    <string name="cropper_title">Android Image Cropper (orezávanie a otáčanie obrázkov)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (označovanie viacerých položiek zo zoznamu)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (swipovanie sprava vľavo)</string>
+    <string name="joda_title">Joda-Time (náhrada dátumov v Jave)</string>
+    <string name="stetho_title">Stetho (odladenie databáz)</string>
+    <string name="otto_title">Otto (event bus)</string>
+    <string name="photoview_title">PhotoView (priblížiteľné gifká)</string>
+</resources>
