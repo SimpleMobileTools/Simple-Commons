@@ -66,34 +66,8 @@ class PropertiesDialog() {
             addProperty(R.string.album, file.getAlbum())
         }
 
-        val exif = ExifInterface(path)
-        exif.getAttribute(ExifInterface.TAG_FOCAL_LENGTH).let {
-            if (it?.isNotEmpty() == true) {
-                val values = it.split('/')
-                val focalLength = "${Math.round(values[0].toDouble() / values[1].toDouble())}mm ($it)"
-                addProperty(R.string.focal_length, focalLength)
-            }
-        }
-
-        exif.getAttribute(ExifInterface.TAG_EXPOSURE_TIME).let {
-            if (it?.isNotEmpty() == true) {
-                val exposureSec = (1 / it.toFloat()).toInt()
-                val exposureTime = "1/$exposureSec (${it}s)"
-                addProperty(R.string.exposure_time, exposureTime)
-            }
-        }
-
-        exif.getAttribute(ExifInterface.TAG_ISO_SPEED_RATINGS).let {
-            if (it?.isNotEmpty() == true) {
-                addProperty(R.string.iso_speed, it)
-            }
-        }
-
-        exif.getAttribute(ExifInterface.TAG_F_NUMBER).let {
-            if (it?.isNotEmpty() == true) {
-                val fNumber = "f/$it"
-                addProperty(R.string.focal_length, fNumber)
-            }
+        if (!file.isDirectory) {
+            addExifProperties(path)
         }
 
         AlertDialog.Builder(activity)
@@ -140,6 +114,38 @@ class PropertiesDialog() {
                 .setPositiveButton(R.string.ok, null)
                 .create().apply {
             activity.setupDialogStuff(view, this, R.string.properties)
+        }
+    }
+
+    private fun addExifProperties(path: String) {
+        val exif = ExifInterface(path)
+        exif.getAttribute(ExifInterface.TAG_FOCAL_LENGTH).let {
+            if (it?.isNotEmpty() == true) {
+                val values = it.split('/')
+                val focalLength = "${Math.round(values[0].toDouble() / values[1].toDouble())}mm ($it)"
+                addProperty(R.string.focal_length, focalLength)
+            }
+        }
+
+        exif.getAttribute(ExifInterface.TAG_EXPOSURE_TIME).let {
+            if (it?.isNotEmpty() == true) {
+                val exposureSec = (1 / it.toFloat()).toInt()
+                val exposureTime = "1/$exposureSec (${it}s)"
+                addProperty(R.string.exposure_time, exposureTime)
+            }
+        }
+
+        exif.getAttribute(ExifInterface.TAG_ISO_SPEED_RATINGS).let {
+            if (it?.isNotEmpty() == true) {
+                addProperty(R.string.iso_speed, it)
+            }
+        }
+
+        exif.getAttribute(ExifInterface.TAG_F_NUMBER).let {
+            if (it?.isNotEmpty() == true) {
+                val fNumber = "f/$it"
+                addProperty(R.string.focal_length, fNumber)
+            }
         }
     }
 
