@@ -7,6 +7,7 @@ import android.util.Log
 import com.simplemobiletools.commons.extensions.*
 import java.io.*
 import java.lang.ref.WeakReference
+import java.net.URLDecoder
 import java.util.*
 
 class CopyMoveTask(val context: Context, val deleteAfterCopy: Boolean = false, val treeUri: String = "", val copyMediaOnly: Boolean,
@@ -38,20 +39,19 @@ class CopyMoveTask(val context: Context, val deleteAfterCopy: Boolean = false, v
         }
 
         if (deleteAfterCopy) {
+            val needsPermissions = context.needsStupidWritePermissions(mMovedFiles[0].absolutePath)
             for (file in mMovedFiles) {
-                if (context.needsStupidWritePermissions(file.absolutePath)) {
+                if (needsPermissions) {
                     val document = context.getFileDocument(file.absolutePath, treeUri)
 
                     // double check we have the uri to the proper file path, not some parent folder
-                    if (document.uri.toString().endsWith(file.absolutePath.getFilenameFromPath())) {
-                        Thread({
-                            document.delete()
-                        }).start()
+                    val uri = URLDecoder.decode(document.uri.toString(), "UTF-8")
+                    val filename = URLDecoder.decode(file.absolutePath.getFilenameFromPath(), "UTF-8")
+                    if (uri.endsWith(filename)) {
+                        document.delete()
                     }
                 } else {
-                    Thread({
-                        file.delete()
-                    }).start()
+                    file.delete()
                 }
             }
         }
