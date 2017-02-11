@@ -25,7 +25,7 @@ class StoragePickerDialog(val context: Context, currPath: String, val callback: 
         val resources = context.resources
         val basePath = currPath.getBasePath(context)
         val layoutParams = RadioGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-        val radioGroup = inflater.inflate(R.layout.radio_group, null) as RadioGroup
+        val radioGroup = inflater.inflate(R.layout.dialog_radio_group, null) as RadioGroup
 
         val internalButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
         internalButton.apply {
