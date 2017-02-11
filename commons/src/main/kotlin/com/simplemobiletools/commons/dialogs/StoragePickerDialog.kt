@@ -8,6 +8,7 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
+import kotlinx.android.synthetic.main.dialog_radio_group.view.*
 
 /**
  * A dialog for choosing between internal, root, SD card (optional) storage
@@ -25,7 +26,8 @@ class StoragePickerDialog(val context: Context, currPath: String, val callback: 
         val resources = context.resources
         val basePath = currPath.getBasePath(context)
         val layoutParams = RadioGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-        val radioGroup = inflater.inflate(R.layout.dialog_radio_group, null) as RadioGroup
+        val view = inflater.inflate(R.layout.dialog_radio_group, null)
+        val radioGroup = view.dialog_radio_group
 
         val internalButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
         internalButton.apply {
