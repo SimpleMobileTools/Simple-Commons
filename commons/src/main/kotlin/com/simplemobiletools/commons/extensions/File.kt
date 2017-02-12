@@ -19,7 +19,7 @@ fun File.isImageSlow() = isImageFast() || getMimeType().startsWith("image")
 
 // fast extension check, not guaranteed to be accurate
 fun File.isVideoFast(): Boolean {
-    val videoExtensions = arrayOf("gifv", "webm", "mkv", "flv", "vob", "avi", "wmv", "mp4", "ogv", "qt", "m4p", "mpg", "m4v", "mp2", "mpeg", "3gp")
+    val videoExtensions = arrayOf("webm", "mkv", "flv", "vob", "avi", "wmv", "mp4", "ogv", "qt", "m4p", "mpg", "m4v", "mp2", "mpeg", "3gp")
     val filename = name.toLowerCase()
     return videoExtensions.any { filename.endsWith(it) }
 }
