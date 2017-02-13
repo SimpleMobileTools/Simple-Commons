@@ -57,7 +57,7 @@ class StoragePickerDialog(val context: Context, currPath: String, val callback: 
 
         mDialog = AlertDialog.Builder(context)
                 .create().apply {
-            context.setupDialogStuff(radioGroup, this, R.string.select_storage)
+            context.setupDialogStuff(view, this, R.string.select_storage)
         }
     }
 
