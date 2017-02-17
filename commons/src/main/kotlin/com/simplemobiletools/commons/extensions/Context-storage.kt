@@ -95,7 +95,10 @@ fun Context.isAStorageRootFolder(path: String): Boolean {
 }
 
 fun Context.getFileDocument(path: String, treeUri: String): DocumentFile {
-    val relativePath = path.substring(getSDCardPath().length + 1)
+    var relativePath = path.substring(getSDCardPath().length)
+    if (relativePath.startsWith(File.separator))
+        relativePath = relativePath.substring(1)
+
     var document = DocumentFile.fromTreeUri(this, Uri.parse(treeUri))
     val parts = relativePath.split("/")
     for (part in parts) {
