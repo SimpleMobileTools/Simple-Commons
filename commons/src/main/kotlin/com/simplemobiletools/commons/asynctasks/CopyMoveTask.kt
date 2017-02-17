@@ -41,17 +41,17 @@ class CopyMoveTask(val context: Context, val deleteAfterCopy: Boolean = false, v
         if (deleteAfterCopy) {
             val needsPermissions = context.needsStupidWritePermissions(mMovedFiles[0].absolutePath)
             for (file in mMovedFiles) {
-                if (needsPermissions) {
-                    val document = context.getFileDocument(file.absolutePath, treeUri)
+                if (!file.delete()) {
+                    if (needsPermissions) {
+                        val document = context.getFileDocument(file.absolutePath, treeUri)
 
-                    // double check we have the uri to the proper file path, not some parent folder
-                    val uri = URLDecoder.decode(document.uri.toString(), "UTF-8")
-                    val filename = URLDecoder.decode(file.absolutePath.getFilenameFromPath(), "UTF-8")
-                    if (uri.endsWith(filename)) {
-                        document.delete()
+                        // double check we have the uri to the proper file path, not some parent folder
+                        val uri = URLDecoder.decode(document.uri.toString(), "UTF-8")
+                        val filename = URLDecoder.decode(file.absolutePath.getFilenameFromPath(), "UTF-8")
+                        if (uri.endsWith(filename)) {
+                            document.delete()
+                        }
                     }
-                } else {
-                    file.delete()
                 }
             }
         }
