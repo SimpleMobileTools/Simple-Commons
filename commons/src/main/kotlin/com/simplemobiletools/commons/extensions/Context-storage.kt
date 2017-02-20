@@ -6,6 +6,7 @@ import android.annotation.TargetApi
 import android.content.ContentValues
 import android.content.Context
 import android.content.pm.PackageManager
+import android.database.sqlite.SQLiteConstraintException
 import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Build
@@ -203,5 +204,10 @@ fun Context.updateInMediaStore(oldFile: File, newFile: File): Boolean {
     val uri = getFileUri(oldFile)
     val where = "${MediaStore.MediaColumns.DATA} = ?"
     val args = arrayOf(oldFile.absolutePath)
-    return contentResolver.update(uri, values, where, args) == 1
+
+    return try {
+        contentResolver.update(uri, values, where, args) == 1
+    } catch (e: SQLiteConstraintException) {
+        false
+    }
 }
