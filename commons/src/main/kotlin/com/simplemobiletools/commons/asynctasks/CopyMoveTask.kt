@@ -22,6 +22,9 @@ class CopyMoveTask(val context: Context, val deleteAfterCopy: Boolean = false, v
     }
 
     override fun doInBackground(vararg params: Pair<ArrayList<File>, File>): Boolean? {
+        if (params.isEmpty())
+            return false
+
         val pair = params[0]
         mFiles = pair.first
 
