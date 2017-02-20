@@ -116,15 +116,20 @@ fun Context.getFileDocument(path: String, treeUri: String): DocumentFile {
 
 @SuppressLint("NewApi")
 fun Context.tryFastDocumentDelete(file: File): Boolean {
-    val sdCardPath = getSDCardPath()
-    val relativePath = file.absolutePath.substring(sdCardPath.length).trim('/').replace("/", "%2F")
-    val sdCardPathPart = sdCardPath.split("/").last().trim('/')
-    val fullUri = "${baseConfig.treeUri}/document/$sdCardPathPart%3A$relativePath"
-    val document = DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
+    val document = getFastDocument(file)
     return if (document.isFile) {
         document.delete()
     } else
         false
+}
+
+@SuppressLint("NewApi")
+fun Context.getFastDocument(file: File): DocumentFile {
+    val sdCardPath = getSDCardPath()
+    val relativePath = file.absolutePath.substring(sdCardPath.length).trim('/').replace("/", "%2F")
+    val sdCardPathPart = sdCardPath.split("/").last().trim('/')
+    val fullUri = "${baseConfig.treeUri}/document/$sdCardPathPart%3A$relativePath"
+    return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
 
 fun Context.scanFile(file: File, action: () -> Unit) {
