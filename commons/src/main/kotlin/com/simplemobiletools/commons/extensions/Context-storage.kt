@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.extensions
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.content.ContentValues
 import android.content.Context
@@ -83,17 +84,21 @@ fun Context.humanizePath(path: String): String {
 
 fun Context.getInternalStoragePath() = Environment.getExternalStorageDirectory().toString().trimEnd('/')
 
+@SuppressLint("NewApi")
 fun Context.isPathOnSD(path: String) = getSDCardPath().isNotEmpty() && path.startsWith(getSDCardPath())
 
 fun Context.isKitkatPlus() = Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT
 
+@SuppressLint("NewApi")
 fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isKitkatPlus() && !getSDCardPath().isEmpty()
 
+@SuppressLint("NewApi")
 fun Context.isAStorageRootFolder(path: String): Boolean {
     val trimmed = path.trimEnd('/')
     return trimmed.isEmpty() || trimmed == getInternalStoragePath() || trimmed == getSDCardPath()
 }
 
+@SuppressLint("NewApi")
 fun Context.getFileDocument(path: String, treeUri: String): DocumentFile {
     var relativePath = path.substring(getSDCardPath().length)
     if (relativePath.startsWith(File.separator))
@@ -107,6 +112,19 @@ fun Context.getFileDocument(path: String, treeUri: String): DocumentFile {
             document = currDocument
     }
     return document
+}
+
+@SuppressLint("NewApi")
+fun Context.tryFastDocumentDelete(file: File): Boolean {
+    val sdCardPath = getSDCardPath()
+    val relativePath = file.absolutePath.substring(sdCardPath.length).trim('/').replace("/", "%2F")
+    val sdCardPathPart = sdCardPath.split("/").last().trim('/')
+    val fullUri = "${baseConfig.treeUri}/document/$sdCardPathPart%3A$relativePath"
+    val document = DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
+    return if (document.isFile) {
+        document.delete()
+    } else
+        false
 }
 
 fun Context.scanFile(file: File, action: () -> Unit) {
