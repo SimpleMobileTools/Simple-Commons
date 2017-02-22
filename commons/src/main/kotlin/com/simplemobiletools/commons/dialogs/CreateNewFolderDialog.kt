@@ -47,7 +47,7 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                 return true
             }
             val documentFile = activity.getFileDocument(file.absolutePath, activity.baseConfig.treeUri)
-            documentFile.createDirectory(file.name)
+            documentFile?.createDirectory(file.name)
             sendSuccess(alertDialog)
             true
         } else if (file.mkdirs()) {

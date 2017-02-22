@@ -44,7 +44,7 @@ class CopyMoveTask(val context: Context, val deleteAfterCopy: Boolean = false, v
         if (deleteAfterCopy) {
             for (file in mMovedFiles) {
                 if (!file.delete() && !context.tryFastDocumentDelete(file)) {
-                    val document = context.getFileDocument(file.absolutePath, treeUri)
+                    val document = context.getFileDocument(file.absolutePath, treeUri) ?: continue
 
                     // double check we have the uri to the proper file path, not some parent folder
                     val uri = URLDecoder.decode(document.uri.toString(), "UTF-8")
@@ -75,7 +75,7 @@ class CopyMoveTask(val context: Context, val deleteAfterCopy: Boolean = false, v
         if (!destination.exists()) {
             if (context.needsStupidWritePermissions(destination.absolutePath)) {
                 val document = context.getFileDocument(destination.absolutePath, treeUri)
-                document.createDirectory(destination.name)
+                document?.createDirectory(destination.name)
             } else if (!destination.mkdirs()) {
                 throw IOException("Could not create dir ${destination.absolutePath}")
             }
@@ -112,7 +112,7 @@ class CopyMoveTask(val context: Context, val deleteAfterCopy: Boolean = false, v
         val inputStream = FileInputStream(source)
         val out: OutputStream?
         if (context.needsStupidWritePermissions(destination.absolutePath)) {
-            var document = context.getFileDocument(destination.absolutePath, treeUri)
+            var document = context.getFileDocument(destination.absolutePath, treeUri) ?: return
             document = document.createFile("", destination.name)
 
             out = context.contentResolver.openOutputStream(document.uri)
