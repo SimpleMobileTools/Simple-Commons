@@ -13,7 +13,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.FilepickerItemsAdapter
 import com.simplemobiletools.commons.extensions.getFilenameFromPath
-import com.simplemobiletools.commons.extensions.getInternalStoragePath
+import com.simplemobiletools.commons.extensions.internalStoragePath
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.Breadcrumbs
@@ -48,7 +48,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
     init {
         if (!File(currPath).exists())
-            currPath = activity.getInternalStoragePath()
+            currPath = activity.internalStoragePath
 
         mDialogView.directory_picker_breadcrumbs.setListener(this)
         updateItems()

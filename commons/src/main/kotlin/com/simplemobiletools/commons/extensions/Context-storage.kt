@@ -21,9 +21,10 @@ import java.util.*
 fun Context.hasReadStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
 fun Context.hasWriteStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
 
-fun Context.storeSDCardPath() {
+fun Context.storeStoragePaths() {
     Thread({
         baseConfig.sdCardPath = getSDCardPath()
+        baseConfig.internalStoragePath = getInternalStoragePath()
     }).start()
 }
 
@@ -76,7 +77,7 @@ fun Context.hasExternalSDCard(): Boolean {
 fun Context.getHumanReadablePath(path: String): String {
     return getString(when (path) {
         "/" -> R.string.root
-        getInternalStoragePath() -> R.string.internal
+        internalStoragePath -> R.string.internal
         else -> R.string.sd_card
     })
 }
@@ -104,7 +105,7 @@ fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isKi
 @SuppressLint("NewApi")
 fun Context.isAStorageRootFolder(path: String): Boolean {
     val trimmed = path.trimEnd('/')
-    return trimmed.isEmpty() || trimmed == getInternalStoragePath() || trimmed == sdCardPath
+    return trimmed.isEmpty() || trimmed == internalStoragePath || trimmed == sdCardPath
 }
 
 @SuppressLint("NewApi")

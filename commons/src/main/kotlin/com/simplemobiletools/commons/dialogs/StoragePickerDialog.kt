@@ -32,7 +32,7 @@ class StoragePickerDialog(val context: Context, currPath: String, val callback: 
         val internalButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
         internalButton.apply {
             text = resources.getString(R.string.internal)
-            isChecked = basePath == context.getInternalStoragePath()
+            isChecked = basePath == context.internalStoragePath
             setOnClickListener { internalPicked() }
         }
         radioGroup.addView(internalButton, layoutParams)
@@ -63,7 +63,7 @@ class StoragePickerDialog(val context: Context, currPath: String, val callback: 
 
     private fun internalPicked() {
         mDialog?.dismiss()
-        callback.invoke(context.getInternalStoragePath())
+        callback.invoke(context.internalStoragePath)
     }
 
     private fun sdPicked() {
