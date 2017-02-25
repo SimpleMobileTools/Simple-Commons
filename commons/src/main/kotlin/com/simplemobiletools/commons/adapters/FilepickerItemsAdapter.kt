@@ -13,7 +13,6 @@ import com.simplemobiletools.commons.extensions.formatSize
 import com.simplemobiletools.commons.extensions.isGif
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.filepicker_list_item.view.*
-import java.io.File
 
 class FilepickerItemsAdapter(val context: Context, private val mItems: List<FileDirItem>, val itemClick: (FileDirItem) -> Unit) :
         RecyclerView.Adapter<FilepickerItemsAdapter.ViewHolder>() {
@@ -51,7 +50,7 @@ class FilepickerItemsAdapter(val context: Context, private val mItems: List<File
             itemView.setOnClickListener { itemClick(fileDirItem) }
         }
 
-        private fun getCacheStrategy(item: FileDirItem) = if (File(item.path).isGif()) DiskCacheStrategy.NONE else DiskCacheStrategy.RESULT
+        private fun getCacheStrategy(item: FileDirItem) = if (item.path.isGif()) DiskCacheStrategy.NONE else DiskCacheStrategy.RESULT
 
         private fun getChildrenCnt(item: FileDirItem): String {
             val children = item.children
