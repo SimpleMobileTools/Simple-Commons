@@ -22,7 +22,9 @@ fun Context.hasReadStoragePermission() = ContextCompat.checkSelfPermission(this,
 fun Context.hasWriteStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
 
 fun Context.storeSDCardPath() {
-    baseConfig.sdCardPath = getSDCardPath()
+    Thread({
+        baseConfig.sdCardPath = getSDCardPath()
+    }).start()
 }
 
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
