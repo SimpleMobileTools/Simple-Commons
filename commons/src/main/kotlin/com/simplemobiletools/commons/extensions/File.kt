@@ -4,25 +4,8 @@ import android.graphics.BitmapFactory
 import android.media.MediaMetadataRetriever
 import java.io.File
 
-fun File.isImageVideoGif() = isImageFast() || isVideoFast() || isGif()
-
-fun File.isGif() = path.endsWith(".gif", true)
-
-// fast extension check, not guaranteed to be accurate
-fun File.isImageFast(): Boolean {
-    val photoExtensions = arrayOf("jpg", "png", "jpeg", "bmp", "webp", "tiff")
-    return photoExtensions.any { path.endsWith(".$it", true) }
-}
-
-fun File.isImageSlow() = isImageFast() || getMimeType().startsWith("image")
-
-// fast extension check, not guaranteed to be accurate
-fun File.isVideoFast(): Boolean {
-    val videoExtensions = arrayOf("webm", "mkv", "flv", "vob", "avi", "wmv", "mp4", "ogv", "qt", "m4p", "mpg", "m4v", "mp2", "mpeg", "3gp")
-    return videoExtensions.any { path.endsWith(".$it", true) }
-}
-
-fun File.isVideoSlow() = isVideoFast() || getMimeType().startsWith("video")
+fun File.isImageSlow() = absolutePath.isImageFast() || getMimeType().startsWith("image")
+fun File.isVideoSlow() = absolutePath.isVideoFast() || getMimeType().startsWith("video")
 fun File.isAudioSlow() = getMimeType().startsWith("audio")
 
 fun File.getMimeType(default: String = ""): String {

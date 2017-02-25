@@ -23,3 +23,20 @@ fun String.isAValidFilename(): Boolean {
     }
     return true
 }
+
+val String.photoExtensions: Array<String> get() = arrayOf("jpg", "png", "jpeg", "bmp", "webp", "tiff")
+val String.videoExtensions: Array<String> get() = arrayOf("webm", "mkv", "flv", "vob", "avi", "wmv", "mp4", "ogv", "qt", "m4p", "mpg", "m4v", "mp2", "mpeg", "3gp")
+
+fun String.isImageVideoGif() = isImageFast() || isVideoFast() || isGif()
+
+fun String.isGif() = endsWith(".gif", true)
+
+// fast extension check, not guaranteed to be accurate
+fun String.isVideoFast(): Boolean {
+    return videoExtensions.any { endsWith(".$it", true) }
+}
+
+// fast extension check, not guaranteed to be accurate
+fun String.isImageFast(): Boolean {
+    return photoExtensions.any { endsWith(".$it", true) }
+}
