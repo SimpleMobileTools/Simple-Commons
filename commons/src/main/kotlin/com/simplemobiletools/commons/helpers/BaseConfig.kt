@@ -24,6 +24,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getString(TREE_URI, "")
         set(uri) = prefs.edit().putString(TREE_URI, uri).apply()
 
+    var sdCardPath: String
+        get() = prefs.getString(SD_CARD_PATH, "")
+        set(sdCardPath) = prefs.edit().putString(SD_CARD_PATH, sdCardPath).apply()
+
     var textColor: Int
         get() = prefs.getInt(TEXT_COLOR, context.resources.getColor(R.color.default_text_color))
         set(textColor) = prefs.edit().putInt(TEXT_COLOR, textColor).apply()

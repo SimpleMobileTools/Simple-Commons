@@ -21,6 +21,10 @@ import java.util.*
 fun Context.hasReadStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
 fun Context.hasWriteStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
 
+fun Context.storeSDCardPath() {
+    baseConfig.sdCardPath = getSDCardPath()
+}
+
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
 fun Context.getSDCardPath(): String {
     if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP || !hasExternalSDCard()) {
