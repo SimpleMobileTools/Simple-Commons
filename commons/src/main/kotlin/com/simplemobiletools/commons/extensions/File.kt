@@ -4,6 +4,11 @@ import android.graphics.BitmapFactory
 import android.media.MediaMetadataRetriever
 import java.io.File
 
+fun File.isImageVideoGif() = absolutePath.isImageFast() || absolutePath.isVideoFast() || absolutePath.isGif()
+fun File.isGif() = absolutePath.endsWith(".gif", true)
+fun File.isVideoFast() = absolutePath.videoExtensions.any { absolutePath.endsWith(".$it", true) }
+fun File.isImageFast() = absolutePath.photoExtensions.any { absolutePath.endsWith(".$it", true) }
+
 fun File.isImageSlow() = absolutePath.isImageFast() || getMimeType().startsWith("image")
 fun File.isVideoSlow() = absolutePath.isVideoFast() || getMimeType().startsWith("video")
 fun File.isAudioSlow() = getMimeType().startsWith("audio")

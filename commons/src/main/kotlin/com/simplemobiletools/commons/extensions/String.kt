@@ -32,11 +32,7 @@ fun String.isImageVideoGif() = isImageFast() || isVideoFast() || isGif()
 fun String.isGif() = endsWith(".gif", true)
 
 // fast extension check, not guaranteed to be accurate
-fun String.isVideoFast(): Boolean {
-    return videoExtensions.any { endsWith(".$it", true) }
-}
+fun String.isVideoFast() = videoExtensions.any { endsWith(".$it", true) }
 
 // fast extension check, not guaranteed to be accurate
-fun String.isImageFast(): Boolean {
-    return photoExtensions.any { endsWith(".$it", true) }
-}
+fun String.isImageFast() = photoExtensions.any { endsWith(".$it", true) }
