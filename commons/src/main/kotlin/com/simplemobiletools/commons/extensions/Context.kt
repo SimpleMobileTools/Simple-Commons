@@ -88,3 +88,4 @@ fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) 
 }
 
 val Context.baseConfig: BaseConfig get() = BaseConfig.newInstance(this)
+val Context.sdCardPath: String get() = baseConfig.sdCardPath

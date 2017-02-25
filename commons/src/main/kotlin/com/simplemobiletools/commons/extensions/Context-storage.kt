@@ -92,19 +92,19 @@ fun Context.humanizePath(path: String): String {
 fun Context.getInternalStoragePath() = Environment.getExternalStorageDirectory().toString().trimEnd('/')
 
 @SuppressLint("NewApi")
-fun Context.isPathOnSD(path: String) = getSDCardPath().isNotEmpty() && path.startsWith(getSDCardPath())
+fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWith(sdCardPath)
 
 fun Context.isKitkatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
 
 fun Context.isLollipopPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
 
 @SuppressLint("NewApi")
-fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isKitkatPlus() && !getSDCardPath().isEmpty()
+fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isKitkatPlus() && !sdCardPath.isEmpty()
 
 @SuppressLint("NewApi")
 fun Context.isAStorageRootFolder(path: String): Boolean {
     val trimmed = path.trimEnd('/')
-    return trimmed.isEmpty() || trimmed == getInternalStoragePath() || trimmed == getSDCardPath()
+    return trimmed.isEmpty() || trimmed == getInternalStoragePath() || trimmed == sdCardPath
 }
 
 @SuppressLint("NewApi")
@@ -112,7 +112,7 @@ fun Context.getFileDocument(path: String, treeUri: String): DocumentFile? {
     if (!isKitkatPlus())
         return null
 
-    var relativePath = path.substring(getSDCardPath().length)
+    var relativePath = path.substring(sdCardPath.length)
     if (relativePath.startsWith(File.separator))
         relativePath = relativePath.substring(1)
 
@@ -140,9 +140,8 @@ fun Context.getFastDocument(file: File): DocumentFile? {
     if (!isKitkatPlus())
         return null
 
-    val sdCardPath = getSDCardPath()
-    val relativePath = file.absolutePath.substring(sdCardPath.length).trim('/').replace("/", "%2F")
-    val sdCardPathPart = sdCardPath.split("/").last().trim('/')
+    val relativePath = file.absolutePath.substring(baseConfig.sdCardPath.length).trim('/').replace("/", "%2F")
+    val sdCardPathPart = baseConfig.sdCardPath.split("/").last().trim('/')
     val fullUri = "${baseConfig.treeUri}/document/$sdCardPathPart%3A$relativePath"
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }

@@ -9,8 +9,8 @@ fun String.getFilenameExtension() = substring(lastIndexOf(".") + 1)
 fun String.getBasePath(context: Context): String {
     return if (startsWith(context.getInternalStoragePath()))
         context.getInternalStoragePath()
-    else if (!context.getSDCardPath().isEmpty() && startsWith(context.getSDCardPath()))
-        context.getSDCardPath()
+    else if (!context.sdCardPath.isEmpty() && startsWith(context.sdCardPath))
+        context.sdCardPath
     else
         "/"
 }

@@ -41,7 +41,7 @@ class StoragePickerDialog(val context: Context, currPath: String, val callback: 
             val sdButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
             sdButton.apply {
                 text = resources.getString(R.string.sd_card)
-                isChecked = basePath == context.getSDCardPath()
+                isChecked = basePath == context.sdCardPath
                 setOnClickListener { sdPicked() }
             }
             radioGroup.addView(sdButton, layoutParams)
@@ -68,7 +68,7 @@ class StoragePickerDialog(val context: Context, currPath: String, val callback: 
 
     private fun sdPicked() {
         mDialog?.dismiss()
-        callback.invoke(context.getSDCardPath())
+        callback.invoke(context.sdCardPath)
     }
 
     private fun rootPicked() {
