@@ -10,4 +10,8 @@
     </style>
 
     <style name="SpinnerItem" parent="@android:style/Widget.TextView"/>
+
+    <style name="MyBorderlessBackgroundStyle">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
 </resources>
