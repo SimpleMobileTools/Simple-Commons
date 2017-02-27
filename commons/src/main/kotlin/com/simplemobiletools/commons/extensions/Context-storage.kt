@@ -30,7 +30,7 @@ fun Context.storeStoragePaths() {
 
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
 fun Context.getSDCardPath(): String {
-    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP || !hasExternalSDCard()) {
+    if (!isLollipopPlus() || !hasExternalSDCard()) {
         return ""
     }
 
@@ -100,7 +100,7 @@ fun Context.isKitkatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
 fun Context.isLollipopPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
 
 @SuppressLint("NewApi")
-fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isLollipopPlus() && !sdCardPath.isEmpty()
+fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isLollipopPlus() && sdCardPath.isNotEmpty()
 
 @SuppressLint("NewApi")
 fun Context.isAStorageRootFolder(path: String): Boolean {
