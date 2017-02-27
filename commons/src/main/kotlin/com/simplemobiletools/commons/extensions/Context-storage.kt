@@ -100,7 +100,7 @@ fun Context.isKitkatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
 fun Context.isLollipopPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
 
 @SuppressLint("NewApi")
-fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isKitkatPlus() && !sdCardPath.isEmpty()
+fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isLollipopPlus() && !sdCardPath.isEmpty()
 
 @SuppressLint("NewApi")
 fun Context.isAStorageRootFolder(path: String): Boolean {
@@ -110,7 +110,7 @@ fun Context.isAStorageRootFolder(path: String): Boolean {
 
 @SuppressLint("NewApi")
 fun Context.getFileDocument(path: String, treeUri: String): DocumentFile? {
-    if (!isKitkatPlus())
+    if (!isLollipopPlus())
         return null
 
     var relativePath = path.substring(sdCardPath.length)
@@ -138,7 +138,7 @@ fun Context.tryFastDocumentDelete(file: File): Boolean {
 
 @SuppressLint("NewApi")
 fun Context.getFastDocument(file: File): DocumentFile? {
-    if (!isKitkatPlus())
+    if (!isLollipopPlus())
         return null
 
     val relativePath = file.absolutePath.substring(baseConfig.sdCardPath.length).trim('/').replace("/", "%2F")
