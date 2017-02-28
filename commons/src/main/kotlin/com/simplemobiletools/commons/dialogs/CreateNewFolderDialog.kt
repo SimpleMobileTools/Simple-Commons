@@ -10,7 +10,7 @@ import com.simplemobiletools.commons.extensions.*
 import kotlinx.android.synthetic.main.dialog_create_new_folder.view.*
 import java.io.File
 
-class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, val callback: () -> Unit) {
+class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, val callback: (path: String) -> Unit) {
     init {
         val view = LayoutInflater.from(activity).inflate(R.layout.dialog_create_new_folder, null)
 
@@ -48,18 +48,18 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
             }
             val documentFile = activity.getFileDocument(file.absolutePath, activity.baseConfig.treeUri)
             documentFile?.createDirectory(file.name)
-            sendSuccess(alertDialog)
+            sendSuccess(alertDialog, file)
             true
         } else if (file.mkdirs()) {
-            sendSuccess(alertDialog)
+            sendSuccess(alertDialog, file)
             true
         } else {
             false
         }
     }
 
-    private fun sendSuccess(alertDialog: AlertDialog) {
-        callback.invoke()
+    private fun sendSuccess(alertDialog: AlertDialog, file: File) {
+        callback.invoke(file.absolutePath)
         alertDialog.dismiss()
     }
 }

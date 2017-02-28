@@ -106,7 +106,8 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
     private fun createNewFolder() {
         CreateNewFolderDialog(activity, currPath) {
-            updateItems()
+            callback.invoke(it)
+            mDialog.dismiss()
         }
     }
 
