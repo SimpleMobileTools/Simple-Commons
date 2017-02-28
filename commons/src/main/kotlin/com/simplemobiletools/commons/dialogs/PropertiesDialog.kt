@@ -14,7 +14,6 @@ import kotlinx.android.synthetic.main.property_item.view.*
 import java.io.File
 import java.util.*
 
-
 class PropertiesDialog() {
     lateinit var mInflater: LayoutInflater
     lateinit var mPropertyView: ViewGroup
@@ -47,12 +46,16 @@ class PropertiesDialog() {
             val size = getItemSize(file).formatSize()
             activity.runOnUiThread {
                 (view.findViewById(R.id.properties_size).property_value as TextView).text = size
+
+                if (file.isDirectory) {
+                    (view.findViewById(R.id.properties_file_count).property_value as TextView).text = mFilesCnt.toString()
+                }
             }
         }).start()
 
         if (file.isDirectory) {
             addProperty(R.string.direct_children_count, getDirectChildrenCount(file, countHiddenItems))
-            addProperty(R.string.files_count, mFilesCnt.toString())
+            addProperty(R.string.files_count, "...", R.id.properties_file_count)
         } else if (file.isImageSlow()) {
             addProperty(R.string.resolution, file.getImageResolution())
         } else if (file.isAudioSlow()) {
