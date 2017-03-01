@@ -100,7 +100,7 @@ fun Context.isKitkatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
 fun Context.isLollipopPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
 
 @SuppressLint("NewApi")
-fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isLollipopPlus() && sdCardPath.isNotEmpty()
+fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isLollipopPlus()
 
 @SuppressLint("NewApi")
 fun Context.isAStorageRootFolder(path: String): Boolean {
