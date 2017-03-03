@@ -27,7 +27,7 @@ fun Context.hasWriteStoragePermission() = ContextCompat.checkSelfPermission(this
 fun Context.storeStoragePaths() {
     Thread({
         baseConfig.internalStoragePath = getInternalStoragePath()
-        baseConfig.sdCardPath = getSDCardPath()
+        baseConfig.sdCardPath = getSDCardPath().trimEnd('/')
     }).start()
 }
 
