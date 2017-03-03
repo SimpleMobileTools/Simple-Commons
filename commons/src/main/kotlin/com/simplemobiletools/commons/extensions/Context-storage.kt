@@ -14,64 +14,75 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.support.v4.content.ContextCompat
 import android.support.v4.provider.DocumentFile
+import android.text.TextUtils
 import com.simplemobiletools.commons.R
 import java.io.File
 import java.util.*
+import java.util.regex.Pattern
 
 fun Context.hasReadStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
 fun Context.hasWriteStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
 
+@TargetApi(Build.VERSION_CODES.LOLLIPOP)
 fun Context.storeStoragePaths() {
     Thread({
-        baseConfig.sdCardPath = getSDCardPath()
         baseConfig.internalStoragePath = getInternalStoragePath()
+        baseConfig.sdCardPath = getSDCardPath()
     }).start()
 }
 
+// http://stackoverflow.com/a/18871043/1967672
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
 fun Context.getSDCardPath(): String {
-    if (!isLollipopPlus() || !hasExternalSDCard()) {
+    if (!isLollipopPlus()) {
         return ""
     }
 
-    val dirs = File("/storage").listFiles()
-    for (dir in dirs) {
-        try {
-            if (Environment.isExternalStorageRemovable(dir))
-                return dir.absolutePath.trimEnd('/')
-        } catch (e: Exception) {
-
-        }
-    }
-    return ""
+    return getStorageDirectories().firstOrNull { it != internalStoragePath } ?: ""
 }
 
-// http://stackoverflow.com/a/13648873/1967672
-// dont try to understand, just copy it
-fun Context.hasExternalSDCard(): Boolean {
-    val reg = "(?i).*vold.*(vfat|ntfs|exfat|fat32|ext3|ext4).*rw.*"
-    var s = ""
-    try {
-        val process = ProcessBuilder().command("mount").redirectErrorStream(true).start()
-        process.waitFor()
-        val inputStream = process.inputStream
-        val buffer = ByteArray(1024)
-        while (inputStream.read(buffer) !== -1) {
-            s += String(buffer)
+fun Context.hasExternalSDCard() = sdCardPath.isNotEmpty()
+
+fun Context.getStorageDirectories(): Array<String> {
+    val paths = HashSet<String>()
+    val rawExternalStorage = System.getenv("EXTERNAL_STORAGE")
+    val rawSecondaryStoragesStr = System.getenv("SECONDARY_STORAGE")
+    val rawEmulatedStorageTarget = System.getenv("EMULATED_STORAGE_TARGET")
+    if (TextUtils.isEmpty(rawEmulatedStorageTarget)) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            getExternalFilesDirs(null).map { it.absolutePath }
+                    .mapTo(paths) { it.substring(0, it.indexOf("Android/data")) }
+        } else {
+            if (TextUtils.isEmpty(rawExternalStorage)) {
+                paths.addAll(physicalPaths)
+            } else {
+                paths.add(rawExternalStorage)
+            }
         }
-        inputStream.close()
-    } catch (e: Exception) {
-        e.printStackTrace()
+    } else {
+        val path = Environment.getExternalStorageDirectory().absolutePath
+        val folders = Pattern.compile("/").split(path)
+        val lastFolder = folders[folders.size - 1]
+        var isDigit = false
+        try {
+            Integer.valueOf(lastFolder)
+            isDigit = true
+        } catch (ignored: NumberFormatException) {
+        }
+
+        val rawUserId = if (isDigit) lastFolder else ""
+        if (TextUtils.isEmpty(rawUserId)) {
+            paths.add(rawEmulatedStorageTarget)
+        } else {
+            paths.add(rawEmulatedStorageTarget + File.separator + rawUserId)
+        }
     }
 
-    val lines = s.split("\n".toRegex()).dropLastWhile(String::isEmpty).toTypedArray()
-    lines.filter { !it.toLowerCase(Locale.US).contains("asec") && it.matches(reg.toRegex()) }
-            .map { it.split(" ".toRegex()).dropLastWhile(String::isEmpty).toTypedArray() }
-            .forEach {
-                it.filter { it.startsWith("/") && !it.toLowerCase(Locale.US).contains("vold") }
-                        .forEach { return true }
-            }
-    return false
+    if (!TextUtils.isEmpty(rawSecondaryStoragesStr)) {
+        val rawSecondaryStorages = rawSecondaryStoragesStr.split(File.pathSeparator.toRegex()).dropLastWhile(String::isEmpty).toTypedArray()
+        Collections.addAll(paths, *rawSecondaryStorages)
+    }
+    return paths.toTypedArray()
 }
 
 fun Context.getHumanReadablePath(path: String): String {
@@ -131,7 +142,7 @@ fun Context.getFileDocument(path: String, treeUri: String): DocumentFile? {
 fun Context.tryFastDocumentDelete(file: File): Boolean {
     val document = getFastDocument(file)
     return if (document?.isFile == true) {
-        document!!.delete()
+        document.delete()
     } else
         false
 }
@@ -225,3 +236,18 @@ fun Context.updateInMediaStore(oldFile: File, newFile: File): Boolean {
         false
     }
 }
+
+private val physicalPaths = arrayListOf(
+        "/storage/sdcard0", "/storage/sdcard1", // Motorola Xoom
+        "/storage/extsdcard", // Samsung SGS3
+        "/storage/sdcard0/external_sdcard", // User request
+        "/mnt/extsdcard", "/mnt/sdcard/external_sd", // Samsung galaxy family
+        "/mnt/external_sd", "/mnt/media_rw/sdcard1", // 4.4.2 on CyanogenMod S3
+        "/removable/microsd", // Asus transformer prime
+        "/mnt/emmc", "/storage/external_SD", // LG
+        "/storage/ext_sd", // HTC One Max
+        "/storage/removable/sdcard1", // Sony Xperia Z1
+        "/data/sdext", "/data/sdext2", "/data/sdext3", "/data/sdext4", "/sdcard1", // Sony Xperia Z
+        "/sdcard2", // HTC One M8s
+        "/storage/microsd" // ASUS ZenFone 2
+)
