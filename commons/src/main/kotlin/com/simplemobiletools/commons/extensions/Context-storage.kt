@@ -153,7 +153,7 @@ fun Context.getFastDocument(file: File): DocumentFile? {
         return null
 
     val relativePath = Uri.encode(file.absolutePath.substring(baseConfig.sdCardPath.length).trim('/'))
-    val sdCardPathPart = baseConfig.sdCardPath.split("/").filterNot(String::isEmpty).last().trim('/')
+    val sdCardPathPart = baseConfig.sdCardPath.split("/").filter(String::isNotEmpty).last().trim('/')
     val fullUri = "${baseConfig.treeUri}/document/$sdCardPathPart%3A$relativePath"
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
