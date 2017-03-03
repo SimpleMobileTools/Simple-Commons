@@ -152,8 +152,8 @@ fun Context.getFastDocument(file: File): DocumentFile? {
     if (!isLollipopPlus())
         return null
 
-    val relativePath = file.absolutePath.substring(baseConfig.sdCardPath.length).trim('/').replace("/", "%2F")
-    val sdCardPathPart = baseConfig.sdCardPath.split("/").last().trim('/')
+    val relativePath = Uri.encode(file.absolutePath.substring(baseConfig.sdCardPath.length).trim('/'))
+    val sdCardPathPart = baseConfig.sdCardPath.split("/").filterNot(String::isEmpty).last().trim('/')
     val fullUri = "${baseConfig.treeUri}/document/$sdCardPathPart%3A$relativePath"
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
