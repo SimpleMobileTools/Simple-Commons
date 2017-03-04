@@ -38,7 +38,7 @@
     <string name="select_an_action">Aktion auswählen</string>
     <string name="overwrite">Überschreiben</string>
     <string name="skip">Überspringen</string>
-    <string name="append">\'_1\' anfügen</string>
+    <string name="append">\'_1\' anhängen</string>
     <string name="apply_to_all">Bei allen Konflikten anwenden</string>
 
     <!-- File picker -->
@@ -110,7 +110,7 @@
     <string name="extension">Dateiendung</string>
     <string name="ascending">Aufsteigend</string>
     <string name="descending">Absteigend</string>
-    <string name="use_for_this_folder">Use for this folder only</string>
+    <string name="use_for_this_folder">Nur für diesen Ordner verwenden</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Möchtest du mit dem Löschen fortfahren?</string>
@@ -144,8 +144,8 @@
     <string name="cropper_title">Android Image Cropper (Bilder zuschneiden und rotieren)</string>
     <string name="multiselect_title">RecyclerView MultiSelect (Mehrfachauswahl in Listen)</string>
     <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
-    <string name="joda_title">Joda-Time (Ersatz für Java Datum)</string>
+    <string name="joda_title">Joda-Time (Ersatz für Datums-Implementierung in Java)</string>
     <string name="stetho_title">Stetho (Datenbanken debuggen)</string>
-    <string name="otto_title">Otto (event bus)</string>
+    <string name="otto_title">Otto (Event Bus)</string>
     <string name="photoview_title">PhotoView (Zoombare Gifs)</string>
 </resources>
