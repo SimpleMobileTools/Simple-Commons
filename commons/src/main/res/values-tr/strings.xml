@@ -1,151 +1,150 @@
 <resources>
-    <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
-    <string name="search">Search</string>
+    <string name="ok">TAMAM</string>
+    <string name="cancel">İptal</string>
+    <string name="search">Arama</string>
 
-    <!-- Copy / Move -->
-    <string name="copy">Copy</string>
-    <string name="move">Move</string>
-    <string name="copy_move">Copy / Move</string>
-    <string name="source">Source</string>
-    <string name="destination">Destination</string>
-    <string name="select_destination">Select destination</string>
-    <string name="click_select_destination">Click here to select destination</string>
-    <string name="invalid_destination">Could not write to the selected destination</string>
-    <string name="please_select_destination">Please select a destination</string>
-    <string name="source_and_destination_same">Source and destination cannot be the same</string>
-    <string name="copy_failed">Could not copy the files</string>
-    <string name="copying">Copying&#8230;</string>
-    <string name="copying_success">Files copied successfully</string>
-    <string name="copy_move_failed">An error occurred</string>
-    <string name="moving">Moving&#8230;</string>
-    <string name="moving_success">Files moved successfully</string>
-    <string name="file_exists">A file with that name already exists</string>
-    <string name="moving_success_partial">Some files could not be moved</string>
-    <string name="copying_success_partial">Some files could not be copied</string>
-    <string name="create_new_directory">Create new directory</string>
-    <string name="directory_exists">A directory with that name already exists</string>
+    <!-- Kopyala / Taşı -->
+    <string name="copy">Kopyala</string>
+    <string name="move">Taşı</string>
+    <string name="copy_move">Kopyala / Taşı</string>
+    <string name="source">Kaynak</string>
+    <string name="destination">Hedef</string>
+    <string name="select_destination">Hedef seçin</string>
+    <string name="click_select_destination">Hedef seçmek için buraya tıklayın</string>
+    <string name="invalid_destination">Seçilen hedefe yazılamadı</string>
+    <string name="please_select_destination">Lütfen bir hedef seçin</string>
+    <string name="source_and_destination_same">Kaynak ve hedef aynı olamaz</string>
+    <string name="copy_failed">Dosyalar kopyalanamadı</string>
+    <string name="copying">Kopyalama&#8230;</string>
+    <string name="copying_success">Dosyalar başarılı bir şekilde kopyalanmıştır</string>
+    <string name="copy_move_failed">Bir hata oluştu</string>
+    <string name="moving">Taşıma&#8230;</string>
+    <string name="moving_success">Dosyalar başarıyla taşındı</string>
+    <string name="file_exists">Bu ada sahip bir dosya zaten var</string>
+    <string name="moving_success_partial">Bazı dosyalar taşınamadı</string>
+    <string name="copying_success_partial">Bazı dosyalar kopyalanamadı</string>
+    <string name="create_new_directory">Yeni dizin oluştur</string>
+    <string name="directory_exists">Bu ada sahip bir dizin zaten var</string>
 
-    <!-- Create new folder -->
-    <string name="create_new_folder">Create new folder</string>
-    <string name="name_taken">Directory or file with that name already exists</string>
-    <string name="invalid_name">The name contains invalid characters</string>
-    <string name="empty_name">Please enter a name</string>
-    <string name="unknown_error_occurred">An unknown error occurred</string>
+    <!-- Yeni klasör oluştur -->
+    <string name="create_new_folder">Yeni klasör oluştur</string>
+    <string name="name_taken">Bu ada sahip dizin veya dosya zaten var</string>
+    <string name="invalid_name">İsim, geçersiz karakterler içeriyor</string>
+    <string name="empty_name">Lütfen bir isim girin</string>
+    <string name="unknown_error_occurred">Bilinmeyen bir hata oluştu</string>
 
-    <!-- Copy conflicts -->
-    <string name="file_already_exists">File $%1s already exists</string>
-    <string name="select_an_action">Select an action</string>
-    <string name="overwrite">Overwrite</string>
-    <string name="skip">Skip</string>
-    <string name="append">Append with \'_1\'</string>
-    <string name="apply_to_all">Apply to all conflicts</string>
+    <!-- Kopyalama çakışmaları -->
+    <string name="file_already_exists">Dosya $%1s zaten mevcut</string>
+    <string name="select_an_action">Bir eylem seçin</string>
+    <string name="overwrite">Üzerine yaz</string>
+    <string name="skip">Atla</string>
+    <string name="append">İle ekle \'_1\'</string>
+    <string name="apply_to_all">Tüm çatışmalara uygula</string>
 
-    <!-- File picker -->
-    <string name="select_folder">Select a folder</string>
-    <string name="select_file">Select a file</string>
-    <string name="confirm_storage_access_title">Confirm external storage access</string>
-    <string name="confirm_storage_access_text">Please choose the root folder of the SD card on the next screen, to grant write access</string>
+    <!-- Dosya seçici -->
+    <string name="select_folder">Bir klasör seçin</string>
+    <string name="select_file">Bir dosya seçin</string>
+    <string name="confirm_storage_access_title">Harici depolama erişimini onayla</string>
+    <string name="confirm_storage_access_text">Yazma erişimi vermek için lütfen bir sonraki ekranda SD kartın kök klasörünü seçin</string>
 
     <plurals name="items">
-        <item quantity="one">1 item</item>
-        <item quantity="other">%1$d items</item>
+        <item quantity="one">1 öğe</item>
+        <item quantity="other">öğeler %1$d</item>
     </plurals>
 
-    <!-- Storages -->
-    <string name="select_storage">Select storage</string>
-    <string name="internal">Internal</string>
-    <string name="sd_card">SD Card</string>
-    <string name="root">Root</string>
+    <!-- Depolama -->
+    <string name="select_storage">Depolama alanını seç</string>
+    <string name="internal">Dahili</string>
+    <string name="sd_card">SD Kart</string>
+    <string name="root">Kök</string>
 
-    <!-- File properties -->
-    <string name="properties">Properties</string>
-    <string name="path">Path</string>
-    <string name="items_selected">Items selected</string>
+    <!-- Dosya özellikleri -->
+    <string name="properties">Özellikleri</string>
+    <string name="path">Yol</string>
+    <string name="items_selected">Seçilen öğeler</string>
     <string name="direct_children_count">Direct children count</string>
-    <string name="files_count">Total files count</string>
-    <string name="resolution">Resolution</string>
-    <string name="duration">Duration</string>
-    <string name="artist">Artist</string>
-    <string name="album">Album</string>
-    <string name="focal_length">Focal length</string>
-    <string name="exposure_time">Exposure time</string>
-    <string name="iso_speed">ISO speed</string>
-    <string name="f_number">F-number</string>
+    <string name="files_count">Toplam dosya sayısı</string>
+    <string name="resolution">Kararlılık</string>
+    <string name="duration">Süre</string>
+    <string name="artist">Sanatçı</string>
+    <string name="album">Albüm</string>
+    <string name="focal_length">Odak uzaklığı</string>
+    <string name="exposure_time">Pozlama süresi</string>
+    <string name="iso_speed">ISO hızı</string>
+    <string name="f_number">F-numarası</string>
 
-    <!-- Color customization -->
-    <string name="background_color">Background color</string>
-    <string name="text_color">Text color</string>
-    <string name="primary_color">Primary color</string>
-    <string name="restore_defaults">Restore defaults</string>
-    <string name="theme">Theme</string>
-    <string name="light_theme">Light theme</string>
-    <string name="dark_theme">Dark theme</string>
-    <string name="custom">Custom</string>
-    <string name="save">Save</string>
-    <string name="discard">Discard</string>
-    <string name="undo_changes">Undo changes</string>
-    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
-    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
+    <!-- Renk özelleştirme -->
+    <string name="background_color">Arkaplan rengi</string>
+    <string name="text_color">Metin rengi</string>
+    <string name="primary_color">Ana renk</string>
+    <string name="restore_defaults">Varsayılanları geri yükle</string>
+    <string name="theme">Tema</string>
+    <string name="light_theme">Hafif tema</string>
+    <string name="dark_theme">Koyu tema</string>
+    <string name="custom">Özel</string>
+    <string name="save">Kaydet</string>
+    <string name="discard">At</string>
+    <string name="undo_changes">Değişiklikleri geri al</string>
+    <string name="undo_changes_confirmation">Değişikliklerinizi geri almak istediğinizden emin misiniz?</string>
+    <string name="save_before_closing">Kaydedilmemiş değişiklikleriniz var. Çıkmadan önce kaydet?</string>
 
-    <!-- What's new -->
-    <string name="whats_new">What\'s new</string>
-    <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
+    <!-- Ne var ne yok -->
+    <string name="whats_new">Ne var\'s ne yok</string>
+    <string name="whats_new_disclaimer">* yalnızca daha büyük güncellemeler burada listeleniyor, daima küçük geliştirmeler de var</string>
 
-    <!-- Actionbar items -->
-    <string name="delete">Delete</string>
-    <string name="rename">Rename</string>
-    <string name="share">Share</string>
-    <string name="share_via">Share via</string>
-    <string name="select_all">Select all</string>
+    <!-- Eylem çubuğu öğeleri -->
+    <string name="delete">Sil</string>
+    <string name="rename">Yeniden adlandır</string>
+    <string name="share">Paylaş</string>
+    <string name="share_via">Üzerinden paylaş</string>
+    <string name="select_all">Tümünü seç</string>
 
     <!-- Sorting -->
-    <string name="sort_by">Sort by</string>
-    <string name="name">Name</string>
-    <string name="size">Size</string>
-    <string name="last_modified">Last modified</string>
-    <string name="date_taken">Date taken</string>
-    <string name="title">Title</string>
-    <string name="filename">Filename</string>
-    <string name="extension">Extension</string>
-    <string name="ascending">Ascending</string>
-    <string name="descending">Descending</string>
-    <string name="use_for_this_folder">Use for this folder only</string>
+    <string name="sort_by">Göre sırala</string>
+    <string name="name">İsim</string>
+    <string name="size">Boyut</string>
+    <string name="last_modified">Son düzenleme</string>
+    <string name="date_taken">Alınan tarih</string>
+    <string name="title">Başlık</string>
+    <string name="filename">Dosya adı</string>
+    <string name="extension">Uzantı</string>
+    <string name="ascending">Artan</string>
+    <string name="descending">Azalan</string>
 
-    <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <!-- Onay iletişim kutusu -->
+    <string name="proceed_with_deletion">Silme işlemine devam etmek istediğinizden emin misiniz?</string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
 
     <!-- Settings -->
-    <string name="settings">Settings</string>
-    <string name="customize_colors">Customize colors</string>
+    <string name="settings">Ayarlar</string>
+    <string name="customize_colors">Renkleri özelleştirme</string>
 
-    <!-- About -->
-    <string name="about">About</string>
-    <string name="website_label">For the source codes visit</string>
-    <string name="email_label">Send your feedback or suggestions to</string>
-    <string name="more_apps_underlined"><u>More apps</u></string>
-    <string name="third_party_licences_underlined"><u>Third party licences</u></string>
-    <string name="invite_friends_underlined"><u>Invite friends</u></string>
-    <string name="share_text">Hey, come check out %1$s at %2$s</string>
-    <string name="invite_via">Invite via</string>
-    <string name="rate_us_underlined"><u>Rate us</u></string>
-    <string name="donate_underlined"><u>Donate</u></string>
-    <string name="follow_us">Follow us:</string>
-    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <!-- Hakkında -->
+    <string name="about">Hakkında</string>
+    <string name="website_label">Kaynak kodları için ziyaret edin</string>
+    <string name="email_label">Görüşlerinizi veya önerilerinizi buraya gönderin</string>
+    <string name="more_apps_underlined"><u>Daha fazla uygulama</u></string>
+    <string name="third_party_licences_underlined"><u>Üçüncü taraf lisansları</u></string>
+    <string name="invite_friends_underlined"><u>Arkadaşlarını davet et</u></string>
+    <string name="share_text">Hey, gel kontrol %1$s et %2$s</string>
+    <string name="invite_via">Üzerinden davet et</string>
+    <string name="rate_us_underlined"><u>Bizi değerlendirin</u></string>
+    <string name="donate_underlined"><u>Bağışta bulun</u></string>
+    <string name="follow_us">Bizi takip et:</string>
+    <string name="copyright">v %1$s\nTelif Hakkı © Simple Mobile Tools %2$d</string>
 
-    <!-- License -->
-    <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
-    <string name="third_party_licences">Third party licences</string>
-    <string name="kotlin_title">Kotlin (programming language)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
-    <string name="glide_title">Glide (image loading and caching)</string>
-    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
-    <string name="joda_title">Joda-Time (Java date replacement)</string>
-    <string name="stetho_title">Stetho (debugging databases)</string>
+    <!-- Lisans -->
+    <string name="notice">Bu uygulama hayatımı kolaylaştırmak için aşağıdaki üçüncü parti kitaplıklarını kullanıyor. Teşekkür ederim.</string>
+    <string name="third_party_licences">Üçüncü taraf lisansları</string>
+    <string name="kotlin_title">Kotlin (programlama dili)</string>
+    <string name="subsampling_title">Alt Örnekleme Ölçek Görüntüsü Görünümü (yakınlaştırılabilir görüntü görünümleri)</string>
+    <string name="glide_title">Kayma (resim yükleme ve önbellekleme)</string>
+    <string name="cropper_title">Android Görübtü Kesme (resim kırpma ve döndürme)</string>
+    <string name="multiselect_title">Recyclergörünümü Çoklu seçim (birden çok liste öğesinin seçilmesi)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (sağdan sola hızlıca kaydırma)</string>
+    <string name="joda_title">Joda-Zaman (Java tarihinin değiştirilmesi)</string>
+    <string name="stetho_title">Stetho (hata ayıklama veritabanları)</string>
     <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">PhotoView (zoomable gifs)</string>
+    <string name="photoview_title">Fotoğraf Görüntüleme (yakınlaştırılabilen gif\'ler)</string>
 </resources>
