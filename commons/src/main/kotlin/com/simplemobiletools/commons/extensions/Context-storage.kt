@@ -38,7 +38,7 @@ fun Context.getSDCardPath(): String {
         return ""
     }
 
-    return getStorageDirectories().firstOrNull { it != internalStoragePath } ?: ""
+    return getStorageDirectories().firstOrNull { it.trimEnd('/') != internalStoragePath } ?: ""
 }
 
 fun Context.hasExternalSDCard() = sdCardPath.isNotEmpty()
@@ -104,7 +104,7 @@ fun Context.humanizePath(path: String): String {
 fun Context.getInternalStoragePath() = Environment.getExternalStorageDirectory().toString().trimEnd('/')
 
 @SuppressLint("NewApi")
-fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && sdCardPath != internalStoragePath && path.startsWith(sdCardPath)
+fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWith(sdCardPath)
 
 fun Context.isKitkatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
 
