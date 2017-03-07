@@ -26,6 +26,11 @@
     <string name="create_new_directory">Skapa ny mapp</string>
     <string name="directory_exists">En katalog med det namnet finns redan</string>
 
+    <!-- Create new file -->
+    <string name="filename_cannot_be_empty">Du måste ange ett filnamn</string>
+    <string name="filename_invalid_characters">Filnamnet innehåller ogiltiga tecken</string>
+    <string name="extension_cannot_be_empty">Filändelsen får inte vara tom</string>
+
     <!-- Create new folder -->
     <string name="create_new_folder">Skapa ny mapp</string>
     <string name="name_taken">Katalogen eller filen finns redan med det namnet</string>

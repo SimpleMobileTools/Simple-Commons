@@ -26,6 +26,11 @@
     <string name="create_new_directory">Vytvoriť nový priečinok</string>
     <string name="directory_exists">Priečinok s daným názvom už existuje</string>
 
+    <!-- Create new file -->
+    <string name="filename_cannot_be_empty">Názov súboru nemôže byť prázdny</string>
+    <string name="filename_invalid_characters">Názov súboru obsahuje neplatné znaky</string>
+    <string name="extension_cannot_be_empty">Prípona nesmie byť prázdna</string>
+
     <!-- Create new folder -->
     <string name="create_new_folder">Vytvoriť nový priečinok</string>
     <string name="name_taken">Priečinok alebo súbor s daným názvom už existuje</string>

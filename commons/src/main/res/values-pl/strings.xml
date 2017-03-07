@@ -26,6 +26,11 @@
     <string name="create_new_directory">Utwórz nowy katalog</string>
     <string name="directory_exists">Katalog o tej nazwie już istnieje</string>
 
+    <!-- Create new file -->
+    <string name="filename_cannot_be_empty">Nazwa pliku nie może być pusta</string>
+    <string name="filename_invalid_characters">Nazwa pliku zawiera niedozwolone znaki</string>
+    <string name="extension_cannot_be_empty">Rozszerzenie pliku nie może być puste</string>
+
     <!-- Create new folder -->
     <string name="create_new_folder">Stwórz nowy folder</string>
     <string name="name_taken">Katalog lub plik o tej nazwie już istnieje</string>

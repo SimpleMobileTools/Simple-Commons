@@ -26,6 +26,11 @@
     <string name="create_new_directory">Create new directory</string>
     <string name="directory_exists">A directory with that name already exists</string>
 
+    <!-- Create new file -->
+    <string name="filename_cannot_be_empty">ファイル名は空にできません</string>
+    <string name="filename_invalid_characters">ファイル名に無効な文字が含まれています</string>
+    <string name="extension_cannot_be_empty">Extension cannot be empty</string>
+
     <!-- Create new folder -->
     <string name="create_new_folder">Create new folder</string>
     <string name="name_taken">Directory or file with that name already exists</string>

@@ -26,6 +26,11 @@
     <string name="create_new_directory">Создать папку</string>
     <string name="directory_exists">Папка с таким именем уже существует</string>
 
+    <!-- Create new file -->
+    <string name="filename_cannot_be_empty">Имя файла не может быть пустым</string>
+    <string name="filename_invalid_characters">Имя файла содержит недопустимые символы</string>
+    <string name="extension_cannot_be_empty">Расширение не может быть пустым</string>
+
     <!-- Create new folder -->
     <string name="create_new_folder">Создать новую папку</string>
     <string name="name_taken">Папка или файл с таким именем уже существует</string>

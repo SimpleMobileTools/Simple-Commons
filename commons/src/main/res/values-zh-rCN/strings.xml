@@ -26,6 +26,11 @@
     <string name="create_new_directory">Create new directory</string>
     <string name="directory_exists">A directory with that name already exists</string>
 
+    <!-- Create new file -->
+    <string name="filename_cannot_be_empty">文件名不能为空</string>
+    <string name="filename_invalid_characters">文件名包含非法字符</string>
+    <string name="extension_cannot_be_empty">扩展名不能为空</string>
+
     <!-- Create new folder -->
     <string name="create_new_folder">Create new folder</string>
     <string name="name_taken">Directory or file with that name already exists</string>

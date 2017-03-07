@@ -26,6 +26,11 @@
     <string name="create_new_directory">Yeni dizin oluştur</string>
     <string name="directory_exists">Bu ada sahip bir dizin zaten var</string>
 
+    <!-- Create new file -->
+    <string name="filename_cannot_be_empty">Dosya adı boş olamaz</string>
+    <string name="filename_invalid_characters">Dosya adı geçersiz karakter içeriyor</string>
+    <string name="extension_cannot_be_empty">Uzantı boş olamaz</string>
+
     <!-- Yeni klasör oluştur -->
     <string name="create_new_folder">Yeni klasör oluştur</string>
     <string name="name_taken">Bu ada sahip dizin veya dosya zaten var</string>

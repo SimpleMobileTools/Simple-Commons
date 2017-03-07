@@ -26,6 +26,11 @@
     <string name="create_new_directory">Neuen Ordner erstellen</string>
     <string name="directory_exists">Es existiert bereits ein Ordner mit diesem Namen</string>
 
+    <!-- Create new file -->
+    <string name="filename_cannot_be_empty">Dateiname darf nicht leer sein</string>
+    <string name="filename_invalid_characters">Dateiname enthält ungültige Zeichen</string>
+    <string name="extension_cannot_be_empty">Dateiendung darf nicht leer sein</string>
+
     <!-- Create new folder -->
     <string name="create_new_folder">Neuen Ordner erstellen</string>
     <string name="name_taken">Ordner oder Datei mit diesem Namen existiert bereits</string>

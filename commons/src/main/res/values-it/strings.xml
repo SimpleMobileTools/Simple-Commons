@@ -26,6 +26,11 @@
     <string name="create_new_directory">Crea una cartella nuova</string>
     <string name="directory_exists">Esiste già una cartella con quel nome</string>
 
+    <!-- Create new file -->
+    <string name="filename_cannot_be_empty">Il nome del file non deve essere vuoto</string>
+    <string name="filename_invalid_characters">Il nome contiene caratteri non validi</string>
+    <string name="extension_cannot_be_empty">Extension cannot be empty</string>
+
     <!-- Create new folder -->
     <string name="create_new_folder">Create new folder</string>
     <string name="name_taken">Directory or file with that name already exists</string>
