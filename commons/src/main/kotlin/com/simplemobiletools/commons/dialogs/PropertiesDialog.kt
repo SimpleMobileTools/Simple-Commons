@@ -147,7 +147,7 @@ class PropertiesDialog() {
         exif.getAttribute(ExifInterface.TAG_F_NUMBER).let {
             if (it?.isNotEmpty() == true) {
                 val fNumber = "f/$it"
-                addProperty(R.string.focal_length, fNumber)
+                addProperty(R.string.f_number, fNumber)
             }
         }
     }
