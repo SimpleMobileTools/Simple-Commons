@@ -13,6 +13,7 @@ import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
 import android.support.v4.content.ContextCompat
+import android.support.v4.content.FileProvider
 import android.support.v4.provider.DocumentFile
 import android.text.TextUtils
 import com.simplemobiletools.commons.R
@@ -110,6 +111,8 @@ fun Context.isKitkatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
 
 fun Context.isLollipopPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
 
+fun Context.isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
+
 @SuppressLint("NewApi")
 fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isLollipopPlus()
 
@@ -117,6 +120,13 @@ fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isLo
 fun Context.isAStorageRootFolder(path: String): Boolean {
     val trimmed = path.trimEnd('/')
     return trimmed.isEmpty() || trimmed == internalStoragePath || trimmed == sdCardPath
+}
+
+fun Context.getMyFileUri(file: File): Uri {
+    return if (isNougatPlus())
+        FileProvider.getUriForFile(this, "$packageName.provider", file)
+    else
+        Uri.fromFile(file)
 }
 
 @SuppressLint("NewApi")
