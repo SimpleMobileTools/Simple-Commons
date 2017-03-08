@@ -6,6 +6,20 @@
     <string name="file_saved">Файл успешно сохранен</string>
     <string name="invalid_file_format">Invalid file format</string>
 
+    <!-- Renaming -->
+    <string name="rename_file">Изменение имени файла</string>
+    <string name="rename_folder">Изменение имени папки</string>
+    <string name="rename_file_error">Невозможно переименовать файл</string>
+    <string name="rename_folder_error">Невозможно переименовать папку</string>
+    <string name="rename_folder_empty">Имя папки не должно быть пустым</string>
+    <string name="rename_folder_exists">Папка с таким именем уже существует</string>
+    <string name="rename_folder_root">Невозможно переименовать корневую папку хранения</string>
+    <string name="rename_folder_ok">Папка переименована успешно</string>
+    <string name="renaming_folder">Изменение имени папки</string>
+    <string name="filename_cannot_be_empty">Имя файла не может быть пустым</string>
+    <string name="filename_invalid_characters">Имя файла содержит недопустимые символы</string>
+    <string name="extension_cannot_be_empty">Расширение не может быть пустым</string>
+
     <!-- Copy / Move -->
     <string name="copy">Копировать</string>
     <string name="move">Переместить</string>
@@ -28,11 +42,6 @@
     <string name="copying_success_partial">Некоторые файлы не могут быть скопированы</string>
     <string name="create_new_directory">Создать папку</string>
     <string name="directory_exists">Папка с таким именем уже существует</string>
-
-    <!-- Create new file -->
-    <string name="filename_cannot_be_empty">Имя файла не может быть пустым</string>
-    <string name="filename_invalid_characters">Имя файла содержит недопустимые символы</string>
-    <string name="extension_cannot_be_empty">Расширение не может быть пустым</string>
 
     <!-- Create new folder -->
     <string name="create_new_folder">Создать новую папку</string>

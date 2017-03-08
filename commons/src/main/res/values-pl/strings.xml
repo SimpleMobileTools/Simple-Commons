@@ -6,6 +6,20 @@
     <string name="file_saved">Plik zapisany</string>
     <string name="invalid_file_format">Invalid file format</string>
 
+    <!-- Renaming -->
+    <string name="rename_file">Zmień nazwę</string>
+    <string name="rename_folder">Zmień nazwę folderu</string>
+    <string name="rename_file_error">Nie można zmienić nazwy pliku</string>
+    <string name="rename_folder_error">Nie można zmienić nazwy folderu</string>
+    <string name="rename_folder_empty">Nazwa folderu nie może być pusta</string>
+    <string name="rename_folder_exists">Folder o tej nazwie już istnieje</string>
+    <string name="rename_folder_root">Nie można zmienić nazwy folderu głównego</string>
+    <string name="rename_folder_ok">Zmieniono nazwę folderu</string>
+    <string name="renaming_folder">Zmiana nazwy folderu</string>
+    <string name="filename_cannot_be_empty">Nazwa pliku nie może być pusta</string>
+    <string name="filename_invalid_characters">Nazwa pliku zawiera niedozwolone znaki</string>
+    <string name="extension_cannot_be_empty">Rozszerzenie pliku nie może być puste</string>
+
     <!-- Copy / Move -->
     <string name="copy">Kopiuj</string>
     <string name="move">Przenieś</string>
@@ -28,11 +42,6 @@
     <string name="copying_success_partial">Niektóre pliki nie mogą być skopiowane</string>
     <string name="create_new_directory">Utwórz nowy katalog</string>
     <string name="directory_exists">Katalog o tej nazwie już istnieje</string>
-
-    <!-- Create new file -->
-    <string name="filename_cannot_be_empty">Nazwa pliku nie może być pusta</string>
-    <string name="filename_invalid_characters">Nazwa pliku zawiera niedozwolone znaki</string>
-    <string name="extension_cannot_be_empty">Rozszerzenie pliku nie może być puste</string>
 
     <!-- Create new folder -->
     <string name="create_new_folder">Stwórz nowy folder</string>

@@ -6,6 +6,20 @@
     <string name="file_saved">File saved successfully</string>
     <string name="invalid_file_format">Invalid file format</string>
 
+    <!-- Renaming -->
+    <string name="rename_file">Rename file</string>
+    <string name="rename_folder">Rename folder</string>
+    <string name="rename_file_error">Could not rename the file</string>
+    <string name="rename_folder_error">Could not rename the folder</string>
+    <string name="rename_folder_empty">Folder name must not be empty</string>
+    <string name="rename_folder_exists">A folder with that name already exists</string>
+    <string name="rename_folder_root">Cannot rename the root folder of a storage</string>
+    <string name="rename_folder_ok">Folder renamed successfully</string>
+    <string name="renaming_folder">Renaming folder</string>
+    <string name="filename_cannot_be_empty">Filename cannot be empty</string>
+    <string name="filename_invalid_characters">Filename contains invalid characters</string>
+    <string name="extension_cannot_be_empty">Extension cannot be empty</string>
+
     <!-- Copy / Move -->
     <string name="copy">Copy</string>
     <string name="move">Move</string>
@@ -28,11 +42,6 @@
     <string name="copying_success_partial">Some files could not be copied</string>
     <string name="create_new_directory">Create new directory</string>
     <string name="directory_exists">A directory with that name already exists</string>
-
-    <!-- Create new file -->
-    <string name="filename_cannot_be_empty">Filename cannot be empty</string>
-    <string name="filename_invalid_characters">Filename contains invalid characters</string>
-    <string name="extension_cannot_be_empty">Extension cannot be empty</string>
 
     <!-- Create new folder -->
     <string name="create_new_folder">Create new folder</string>

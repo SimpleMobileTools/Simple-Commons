@@ -6,6 +6,20 @@
     <string name="file_saved">文件保存成功</string>
     <string name="invalid_file_format">Invalid file format</string>
 
+    <!-- Renaming -->
+    <string name="rename_file">重命名文件</string>
+    <string name="rename_folder">重命名文件夹</string>
+    <string name="rename_file_error">文件无法重命名</string>
+    <string name="rename_folder_error">Could not rename the folder</string>
+    <string name="rename_folder_empty">文件夹名不能为空</string>
+    <string name="rename_folder_exists">文件夹名已存在</string>
+    <string name="rename_folder_root">存储器的根目录无法重命名</string>
+    <string name="rename_folder_ok">文件夹重命名成功</string>
+    <string name="renaming_folder">重命名中...</string>
+    <string name="filename_cannot_be_empty">文件名不能为空</string>
+    <string name="filename_invalid_characters">文件名包含非法字符</string>
+    <string name="extension_cannot_be_empty">扩展名不能为空</string>
+
     <!-- Copy / Move -->
     <string name="copy">复制</string>
     <string name="move">移动</string>
@@ -28,11 +42,6 @@
     <string name="copying_success_partial">相同文件不能复制</string>
     <string name="create_new_directory">Create new directory</string>
     <string name="directory_exists">A directory with that name already exists</string>
-
-    <!-- Create new file -->
-    <string name="filename_cannot_be_empty">文件名不能为空</string>
-    <string name="filename_invalid_characters">文件名包含非法字符</string>
-    <string name="extension_cannot_be_empty">扩展名不能为空</string>
 
     <!-- Create new folder -->
     <string name="create_new_folder">Create new folder</string>

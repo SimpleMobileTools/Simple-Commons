@@ -6,6 +6,20 @@
     <string name="file_saved">Súbor bol úspešne uložený</string>
     <string name="invalid_file_format">Neplatný formát súboru</string>
 
+    <!-- Renaming -->
+    <string name="rename_file">Premenovať súbor</string>
+    <string name="rename_folder">Premenovať priečinok</string>
+    <string name="rename_file_error">Nepodarilo sa premenovať súbor</string>
+    <string name="rename_folder_error">Nepodarilo sa premenovať priečinok</string>
+    <string name="rename_folder_empty">Názov priečinka nemôže byť prázdny</string>
+    <string name="rename_folder_exists">Priečinok s daným názvom už existuje</string>
+    <string name="rename_folder_root">Nepodarilo sa premenovať základný priečinok úložiska</string>
+    <string name="rename_folder_ok">Priečinok bol úspešne premenovaný</string>
+    <string name="renaming_folder">Premenúva sa priečinok</string>
+    <string name="filename_cannot_be_empty">Názov súboru nemôže byť prázdny</string>
+    <string name="filename_invalid_characters">Názov súboru obsahuje neplatné znaky</string>
+    <string name="extension_cannot_be_empty">Prípona nesmie byť prázdna</string>
+
     <!-- Copy / Move -->
     <string name="copy">Kopírovať</string>
     <string name="move">Presunúť</string>
@@ -28,11 +42,6 @@
     <string name="copying_success_partial">Nepodarilo sa skopírovať niektoré súbory</string>
     <string name="create_new_directory">Vytvoriť nový priečinok</string>
     <string name="directory_exists">Priečinok s daným názvom už existuje</string>
-
-    <!-- Create new file -->
-    <string name="filename_cannot_be_empty">Názov súboru nemôže byť prázdny</string>
-    <string name="filename_invalid_characters">Názov súboru obsahuje neplatné znaky</string>
-    <string name="extension_cannot_be_empty">Prípona nesmie byť prázdna</string>
 
     <!-- Create new folder -->
     <string name="create_new_folder">Vytvoriť nový priečinok</string>

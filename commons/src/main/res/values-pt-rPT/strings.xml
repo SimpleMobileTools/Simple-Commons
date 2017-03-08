@@ -6,6 +6,20 @@
     <string name="file_saved">Ficheiro guardado com sucesso</string>
     <string name="invalid_file_format">Invalid file format</string>
 
+    <!-- Renaming -->
+    <string name="rename_file">Renomear ficheiro</string>
+    <string name="rename_folder">Renomear pasta</string>
+    <string name="rename_file_error">Não foi possível renomear o ficheiro</string>
+    <string name="rename_folder_error">Não foi possível renomear a pasta</string>
+    <string name="rename_folder_empty">O nome da pasta não pode estar vazio</string>
+    <string name="rename_folder_exists">Já existe uma pasta com este nome</string>
+    <string name="rename_folder_root">Não pode renomear a pasta raiz de um armazenamento</string>
+    <string name="rename_folder_ok">A pasta foi renomeada com sucesso</string>
+    <string name="renaming_folder">A renomear pasta</string>
+    <string name="filename_cannot_be_empty">O nome do ficheiro não pode estar vazio</string>
+    <string name="filename_invalid_characters">O nome do ficheiro contém caracteres inválidos</string>
+    <string name="extension_cannot_be_empty">A extensão não pode estar vazia</string>
+
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
     <string name="move">Mover</string>
@@ -28,11 +42,6 @@
     <string name="copying_success_partial">Alguns ficheiros não foram copiados</string>
     <string name="create_new_directory">Criar novo diretório</string>
     <string name="directory_exists">Já existe em diretório com este nome</string>
-
-    <!-- Create new file -->
-    <string name="filename_cannot_be_empty">O nome do ficheiro não pode estar vazio</string>
-    <string name="filename_invalid_characters">O nome do ficheiro contém caracteres inválidos</string>
-    <string name="extension_cannot_be_empty">A extensão não pode estar vazia</string>
 
     <!-- Create new folder -->
     <string name="create_new_folder">Criar nova pasta</string>

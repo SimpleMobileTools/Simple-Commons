@@ -6,6 +6,20 @@
     <string name="file_saved">Filen sparad</string>
     <string name="invalid_file_format">Invalid file format</string>
 
+    <!-- Renaming -->
+    <string name="rename_file">Döp om fil</string>
+    <string name="rename_folder">Döp om mapp</string>
+    <string name="rename_file_error">Det gick inte att döpa om filen</string>
+    <string name="rename_folder_error">Det gick inte att döpa om mappen</string>
+    <string name="rename_folder_empty">Du måste ange ett mappnamn</string>
+    <string name="rename_folder_exists">En mapp med det namnet finns redan</string>
+    <string name="rename_folder_root">Det går inte att döpa om rotmappen på lagringsutrymmet</string>
+    <string name="rename_folder_ok">Mappen döptes om</string>
+    <string name="renaming_folder">Döper om mappen</string>
+    <string name="filename_cannot_be_empty">Du måste ange ett filnamn</string>
+    <string name="filename_invalid_characters">Filnamnet innehåller ogiltiga tecken</string>
+    <string name="extension_cannot_be_empty">Filändelsen får inte vara tom</string>
+
     <!-- Copy / Move -->
     <string name="copy">Kopiera</string>
     <string name="move">Flytta</string>
@@ -28,11 +42,6 @@
     <string name="copying_success_partial">Några filer gick inte att kopiera</string>
     <string name="create_new_directory">Skapa ny mapp</string>
     <string name="directory_exists">En katalog med det namnet finns redan</string>
-
-    <!-- Create new file -->
-    <string name="filename_cannot_be_empty">Du måste ange ett filnamn</string>
-    <string name="filename_invalid_characters">Filnamnet innehåller ogiltiga tecken</string>
-    <string name="extension_cannot_be_empty">Filändelsen får inte vara tom</string>
 
     <!-- Create new folder -->
     <string name="create_new_folder">Skapa ny mapp</string>

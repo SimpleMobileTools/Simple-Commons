@@ -6,6 +6,20 @@
     <string name="file_saved">Fichier sauvegardé avec succès</string>
     <string name="invalid_file_format">Invalid file format</string>
 
+    <!-- Renaming -->
+    <string name="rename_file">Renommer le fichier</string>
+    <string name="rename_folder">Renommer le dossier</string>
+    <string name="rename_file_error">Impossible de renommer le fichier</string>
+    <string name="rename_folder_error">Impossible de renommer le dossier.</string>
+    <string name="rename_folder_empty">Le nom de dossier ne peut pas être vide.</string>
+    <string name="rename_folder_exists">Un dossier homonyme existe déjà.</string>
+    <string name="rename_folder_root">Impossible de renommer le dossier racine de la mémoire.</string>
+    <string name="rename_folder_ok">Dossier renommé avec succès</string>
+    <string name="renaming_folder">Renommage du dossier</string>
+    <string name="filename_cannot_be_empty">Le nom de fichier ne peut pas rester vide</string>
+    <string name="filename_invalid_characters">Le nom de fichier contient des caractères invalides</string>
+    <string name="extension_cannot_be_empty">L\'extension ne peut pas rester vide</string>
+
     <!-- Copy / Move -->
     <string name="copy">Copier</string>
     <string name="move">Déplacer</string>
@@ -28,11 +42,6 @@
     <string name="copying_success_partial">Certains fichiers n\'ont pu être copiés</string>
     <string name="create_new_directory">Créer un nouveau répertoire</string>
     <string name="directory_exists">Un répertoire avec le même nom existe déja</string>
-
-    <!-- Create new file -->
-    <string name="filename_cannot_be_empty">Le nom de fichier ne peut pas rester vide</string>
-    <string name="filename_invalid_characters">Le nom de fichier contient des caractères invalides</string>
-    <string name="extension_cannot_be_empty">L\'extension ne peut pas rester vide</string>
 
     <!-- Create new folder -->
     <string name="create_new_folder">Create new folder</string>
