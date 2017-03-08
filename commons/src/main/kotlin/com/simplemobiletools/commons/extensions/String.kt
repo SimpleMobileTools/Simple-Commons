@@ -25,7 +25,7 @@ fun String.isAValidFilename(): Boolean {
 }
 
 val String.photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp")
-val String.videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov")
+val String.videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v")
 
 fun String.isImageVideoGif() = isImageFast() || isVideoFast() || isGif()
 
