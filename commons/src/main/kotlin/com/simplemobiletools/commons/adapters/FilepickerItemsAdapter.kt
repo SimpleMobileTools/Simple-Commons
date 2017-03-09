@@ -25,9 +25,9 @@ class FilepickerItemsAdapter(val context: Context, private val mItems: List<File
     init {
         textColor = context.baseConfig.textColor
         folderDrawable = context.resources.getColoredDrawableWithColor(R.drawable.ic_folder, textColor)
-        folderDrawable.alpha = 100
+        folderDrawable.alpha = 140
         fileDrawable = context.resources.getColoredDrawableWithColor(R.drawable.ic_file, textColor)
-        fileDrawable.alpha = 100
+        fileDrawable.alpha = 140
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
