@@ -13,7 +13,7 @@
         android:layout_height="@dimen/filepicker_list_icon_size"
         android:paddingBottom="@dimen/medium_margin"
         android:paddingTop="@dimen/medium_margin"
-        android:src="@drawable/ic_directory"/>
+        android:src="@drawable/ic_folder"/>
 
     <com.simplemobiletools.commons.views.MyTextView
         android:id="@+id/list_item_name"

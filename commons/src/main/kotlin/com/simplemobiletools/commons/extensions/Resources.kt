@@ -21,3 +21,9 @@ fun Resources.getColoredDrawable(resId: Int, colorId: Int): Drawable {
     drawable.mutate().setColorFilter(getColor(colorId), PorterDuff.Mode.SRC_IN)
     return drawable
 }
+
+fun Resources.getColoredDrawableWithColor(resId: Int, color: Int): Drawable {
+    val drawable = getDrawable(resId)
+    drawable.mutate().setColorFilter(color, PorterDuff.Mode.SRC_IN)
+    return drawable
+}

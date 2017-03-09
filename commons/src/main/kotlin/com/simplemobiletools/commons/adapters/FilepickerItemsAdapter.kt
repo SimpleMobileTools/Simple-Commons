@@ -1,16 +1,15 @@
 package com.simplemobiletools.commons.adapters
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.formatSize
-import com.simplemobiletools.commons.extensions.isGif
+import com.simplemobiletools.commons.extensions.getColoredDrawableWithColor
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.filepicker_list_item.view.*
 
@@ -18,8 +17,17 @@ class FilepickerItemsAdapter(val context: Context, private val mItems: List<File
         RecyclerView.Adapter<FilepickerItemsAdapter.ViewHolder>() {
     var textColor = 0
 
+    companion object {
+        lateinit var folderDrawable: Drawable
+        lateinit var fileDrawable: Drawable
+    }
+
     init {
         textColor = context.baseConfig.textColor
+        folderDrawable = context.resources.getColoredDrawableWithColor(R.drawable.ic_folder, textColor)
+        folderDrawable.alpha = 100
+        fileDrawable = context.resources.getColoredDrawableWithColor(R.drawable.ic_file, textColor)
+        fileDrawable.alpha = 100
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
@@ -35,22 +43,22 @@ class FilepickerItemsAdapter(val context: Context, private val mItems: List<File
 
     class ViewHolder(val context: Context, val textColor: Int, view: View, val itemClick: (FileDirItem) -> (Unit)) : RecyclerView.ViewHolder(view) {
         fun bindView(fileDirItem: FileDirItem) {
-            itemView.list_item_name.text = fileDirItem.name
-            itemView.list_item_name.setTextColor(textColor)
+            itemView.apply {
+                list_item_name.text = fileDirItem.name
+                list_item_name.setTextColor(textColor)
 
-            if (fileDirItem.isDirectory) {
-                Glide.with(context).load(R.drawable.ic_directory).diskCacheStrategy(getCacheStrategy(fileDirItem)).centerCrop().crossFade().into(itemView.list_item_icon)
-                itemView.list_item_details.text = getChildrenCnt(fileDirItem)
-            } else {
-                Glide.with(context).load(fileDirItem.path).diskCacheStrategy(getCacheStrategy(fileDirItem)).error(R.drawable.ic_file).centerCrop().crossFade().into(itemView.list_item_icon)
-                itemView.list_item_details.text = fileDirItem.size.formatSize()
+                if (fileDirItem.isDirectory) {
+                    list_item_icon.setImageDrawable(folderDrawable)
+                    list_item_details.text = getChildrenCnt(fileDirItem)
+                } else {
+                    list_item_icon.setImageDrawable(fileDrawable)
+                    list_item_details.text = fileDirItem.size.formatSize()
+                }
+
+                list_item_details.setTextColor(textColor)
+                setOnClickListener { itemClick(fileDirItem) }
             }
-
-            itemView.list_item_details.setTextColor(textColor)
-            itemView.setOnClickListener { itemClick(fileDirItem) }
         }
-
-        private fun getCacheStrategy(item: FileDirItem) = if (item.path.isGif()) DiskCacheStrategy.NONE else DiskCacheStrategy.RESULT
 
         private fun getChildrenCnt(item: FileDirItem): String {
             val children = item.children

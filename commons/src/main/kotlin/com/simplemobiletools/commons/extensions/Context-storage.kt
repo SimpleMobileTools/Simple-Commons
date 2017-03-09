@@ -24,7 +24,6 @@ import java.util.regex.Pattern
 fun Context.hasReadStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
 fun Context.hasWriteStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
 
-@TargetApi(Build.VERSION_CODES.LOLLIPOP)
 fun Context.storeStoragePaths() {
     Thread({
         baseConfig.internalStoragePath = getInternalStoragePath()
