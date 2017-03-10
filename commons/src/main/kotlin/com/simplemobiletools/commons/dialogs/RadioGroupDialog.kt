@@ -18,11 +18,10 @@ class RadioGroupDialog(val activity: Activity, val items: Array<RadioItem>, val 
         val view = activity.layoutInflater.inflate(R.layout.dialog_radio_group, null)
         view.dialog_radio_group.apply {
             setOnCheckedChangeListener(this@RadioGroupDialog)
-            val resources = activity.resources
 
             items.map {
                 (activity.layoutInflater.inflate(R.layout.radio_button, null) as RadioButton).apply {
-                    text = resources.getString(it.titleId)
+                    text = it.title
                     isChecked = it.id == checkedItemId
                     id = it.id
                 }
