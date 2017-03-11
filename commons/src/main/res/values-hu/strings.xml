@@ -5,6 +5,7 @@
     <string name="save_as">Save as</string>
     <string name="file_saved">File saved successfully</string>
     <string name="invalid_file_format">Invalid file format</string>
+    <string name="no_permissions">We need the permission to access your storage</string>
 
     <!-- Renaming -->
     <string name="rename_file">Rename file</string>
@@ -37,15 +38,16 @@
     <string name="copy_move_failed">An error occurred</string>
     <string name="moving">Moving&#8230;</string>
     <string name="moving_success">Files moved successfully</string>
-    <string name="file_exists">A file with that name already exists</string>
     <string name="moving_success_partial">Some files could not be moved</string>
     <string name="copying_success_partial">Some files could not be copied</string>
-    <string name="create_new_directory">Create new directory</string>
-    <string name="directory_exists">A directory with that name already exists</string>
+    <string name="no_files_selected">No files selected</string>
 
-    <!-- Create new folder -->
+    <!-- Create new -->
+    <string name="create_new">Create new</string>
+    <string name="folder">Folder</string>
+    <string name="file">File</string>
     <string name="create_new_folder">Create new folder</string>
-    <string name="name_taken">Directory or file with that name already exists</string>
+    <string name="name_taken">A file or folder with that name already exists</string>
     <string name="invalid_name">The name contains invalid characters</string>
     <string name="empty_name">Please enter a name</string>
     <string name="unknown_error_occurred">An unknown error occurred</string>
@@ -65,7 +67,7 @@
     <string name="confirm_storage_access_text">Please choose the root folder of the SD card on the next screen, to grant write access</string>
 
     <plurals name="items">
-        <item quantity="one">1 item</item>
+        <item quantity="one">%1$d item</item>
         <item quantity="other">%1$d items</item>
     </plurals>
 
@@ -133,6 +135,11 @@
     <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="customize_colors">Customize colors</string>
+    <string name="show_hidden">Show hidden files and folders</string>
 
     <!-- About -->
     <string name="about">Információ</string>

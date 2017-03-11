@@ -5,6 +5,7 @@
     <string name="save_as">Sauvegarder sous</string>
     <string name="file_saved">Fichier sauvegardé avec succès</string>
     <string name="invalid_file_format">Invalid file format</string>
+    <string name="no_permissions">We need the permission to access your storage</string>
 
     <!-- Renaming -->
     <string name="rename_file">Renommer le fichier</string>
@@ -37,13 +38,14 @@
     <string name="copy_move_failed">Une erreur est survenue</string>
     <string name="moving">Déplacement&#8230;</string>
     <string name="moving_success">Fichiers déplacés avec succès</string>
-    <string name="file_exists">Un fichier avec le même nom existe déjà</string>
     <string name="moving_success_partial">Certains fichiers n\'ont pu être déplacés</string>
     <string name="copying_success_partial">Certains fichiers n\'ont pu être copiés</string>
-    <string name="create_new_directory">Créer un nouveau répertoire</string>
-    <string name="directory_exists">Un répertoire avec le même nom existe déja</string>
+    <string name="no_files_selected">No files selected</string>
 
-    <!-- Create new folder -->
+    <!-- Create new -->
+    <string name="create_new">Create new</string>
+    <string name="folder">Folder</string>
+    <string name="file">File</string>
     <string name="create_new_folder">Create new folder</string>
     <string name="name_taken">Directory or file with that name already exists</string>
     <string name="invalid_name">Le nom contient des caractères invalides</string>
@@ -65,7 +67,7 @@
     <string name="confirm_storage_access_text">Veuillez choisir le dossier racine de la carte SD dans le prochain écran, pour accorder le droit d\'écriture</string>
 
     <plurals name="items">
-        <item quantity="one">1 élément</item>
+        <item quantity="one">%1$d élément</item>
         <item quantity="other">%1$d éléments</item>
     </plurals>
 
@@ -137,6 +139,7 @@
     <!-- Settings -->
     <string name="settings">Paramètres</string>
     <string name="customize_colors">Personnaliser les couleurs</string>
+    <string name="show_hidden">Montrer les fichiers et dossiers cachés</string>
 
     <!-- About -->
     <string name="about">A propos</string>

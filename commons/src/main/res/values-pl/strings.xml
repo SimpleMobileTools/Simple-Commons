@@ -5,6 +5,7 @@
     <string name="save_as">Zapisz jako</string>
     <string name="file_saved">Plik zapisany</string>
     <string name="invalid_file_format">Invalid file format</string>
+    <string name="no_permissions">We need the permission to access your storage</string>
 
     <!-- Renaming -->
     <string name="rename_file">Zmień nazwę</string>
@@ -37,13 +38,14 @@
     <string name="copy_move_failed">Wystąpił błąd</string>
     <string name="moving">Przenieś&#8230;</string>
     <string name="moving_success">Pliki przeniesione</string>
-    <string name="file_exists">Plik o tej nazwie już istnieje</string>
     <string name="moving_success_partial">Niektóre pliki nie mogą być przeniesione</string>
     <string name="copying_success_partial">Niektóre pliki nie mogą być skopiowane</string>
-    <string name="create_new_directory">Utwórz nowy katalog</string>
-    <string name="directory_exists">Katalog o tej nazwie już istnieje</string>
+    <string name="no_files_selected">No files selected</string>
 
-    <!-- Create new folder -->
+    <!-- Create new -->
+    <string name="create_new">Create new</string>
+    <string name="folder">Folder</string>
+    <string name="file">File</string>
     <string name="create_new_folder">Stwórz nowy folder</string>
     <string name="name_taken">Katalog lub plik o tej nazwie już istnieje</string>
     <string name="invalid_name">Nazwa zawiera niedozwolone znaki</string>
@@ -65,7 +67,7 @@
     <string name="confirm_storage_access_text">Wybierz główny folder na karcie SD na następnym ekranie i udziel dostępu do zapisu</string>
 
     <plurals name="items">
-        <item quantity="one">1 pozycja</item>
+        <item quantity="one">%1$d pozycja</item>
         <item quantity="other">%1$d pozycji</item>
     </plurals>
 
@@ -137,6 +139,7 @@
     <!-- Settings -->
     <string name="settings">Ustawienia</string>
     <string name="customize_colors">Dostosuj kolory</string>
+    <string name="show_hidden">Show hidden files and folders</string>
 
     <!-- About -->
     <string name="about">O nas</string>

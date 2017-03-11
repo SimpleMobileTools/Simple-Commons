@@ -5,6 +5,7 @@
     <string name="save_as">Speichern unter</string>
     <string name="file_saved">Datei erfolgreich gespeichert</string>
     <string name="invalid_file_format">Invalid file format</string>
+    <string name="no_permissions">We need the permission to access your storage</string>
 
     <!-- Renaming -->
     <string name="rename_file">Datei umbenennen</string>
@@ -37,13 +38,14 @@
     <string name="copy_move_failed">Es ist ein Fehler aufgetreten</string>
     <string name="moving">Verschiebe&#8230;</string>
     <string name="moving_success">Dateien erfolgreich verschoben</string>
-    <string name="file_exists">Es existiert bereits eine Datei mit diesem Namen</string>
     <string name="moving_success_partial">Einige Dateien konnten nicht verschoben werden</string>
     <string name="copying_success_partial">Einige Dateien konnten nicht kopiert werden</string>
-    <string name="create_new_directory">Neuen Ordner erstellen</string>
-    <string name="directory_exists">Es existiert bereits ein Ordner mit diesem Namen</string>
+    <string name="no_files_selected">No files selected</string>
 
-    <!-- Create new folder -->
+    <!-- Create new -->
+    <string name="create_new">Neuen Ordner</string>
+    <string name="folder">Folder</string>
+    <string name="file">File</string>
     <string name="create_new_folder">Neuen Ordner erstellen</string>
     <string name="name_taken">Ordner oder Datei mit diesem Namen existiert bereits</string>
     <string name="invalid_name">Der Name enthält nicht erlaubte Zeichen</string>
@@ -65,7 +67,7 @@
     <string name="confirm_storage_access_text">Bitte wähle das Hauptverzeichnis deiner SD Karte auf dem nächsten Bildschirm um Schreibzugriff zu erlauben</string>
 
     <plurals name="items">
-        <item quantity="one">1 Datei/Ordner</item>
+        <item quantity="one">%1$d Datei/Ordner</item>
         <item quantity="other">%1$d Dateien/Ordner</item>
     </plurals>
 
@@ -137,6 +139,7 @@
     <!-- Settings -->
     <string name="settings">Einstellungen</string>
     <string name="customize_colors">Farben anpassen</string>
+    <string name="show_hidden">Zeige versteckte Dateien und Ordner</string>
 
     <!-- About -->
     <string name="about">Über</string>

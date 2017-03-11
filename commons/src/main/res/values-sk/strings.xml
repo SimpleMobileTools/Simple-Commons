@@ -5,6 +5,7 @@
     <string name="save_as">Uložiť ako</string>
     <string name="file_saved">Súbor bol úspešne uložený</string>
     <string name="invalid_file_format">Neplatný formát súboru</string>
+    <string name="no_permissions">We need the permission to access your storage</string>
 
     <!-- Renaming -->
     <string name="rename_file">Premenovať súbor</string>
@@ -37,16 +38,17 @@
     <string name="copy_move_failed">Došlo k chybe</string>
     <string name="moving">Presúvanie&#8230;</string>
     <string name="moving_success">Súbory boli úspešne presunuté</string>
-    <string name="file_exists">Súbor s daným názvom už existuje</string>
     <string name="moving_success_partial">Nepodarilo sa presunúť niektoré súbory</string>
     <string name="copying_success_partial">Nepodarilo sa skopírovať niektoré súbory</string>
-    <string name="create_new_directory">Vytvoriť nový priečinok</string>
-    <string name="directory_exists">Priečinok s daným názvom už existuje</string>
+    <string name="no_files_selected">Niesú označené žiadne súbory</string>
 
-    <!-- Create new folder -->
-    <string name="create_new_folder">Vytvoriť nový priečinok</string>
-    <string name="name_taken">Priečinok alebo súbor s daným názvom už existuje</string>
-    <string name="invalid_name">Názov obsahuje neplatné znaky The name contains invalid characters</string>
+    <!-- Create new -->
+    <string name="create_new">Vytvoriť nový</string>
+    <string name="folder">Adresár</string>
+    <string name="file">Súbor</string>
+    <string name="create_new_folder">Vytvoriť nový adresár</string>
+    <string name="name_taken">Súbor alebo adresár s daným názvom už existuje</string>
+    <string name="invalid_name">Názov obsahuje neplatné znaky</string>
     <string name="empty_name">Prosím zadajte názov</string>
     <string name="unknown_error_occurred">Došlo k neznámej chybe</string>
 
@@ -65,7 +67,7 @@
     <string name="confirm_storage_access_text">Pre poskytnutie práva na zápis prosím zvoľte na nasledujúcej obrazovke základný priečǐnok SD karty</string>
 
     <plurals name="items">
-        <item quantity="one">1 položka</item>
+        <item quantity="one">%1$d položka</item>
         <item quantity="few">%1$d položky</item>
         <item quantity="other">%1$d položiek</item>
     </plurals>
@@ -138,6 +140,7 @@
     <!-- Settings -->
     <string name="settings">Nastavenia</string>
     <string name="customize_colors">Upraviť farby</string>
+    <string name="show_hidden">Zobraziť skryté súbory a priečinky</string>
 
     <!-- About -->
     <string name="about">O aplikácií</string>

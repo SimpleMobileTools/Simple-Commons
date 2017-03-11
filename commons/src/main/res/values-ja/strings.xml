@@ -5,6 +5,7 @@
     <string name="save_as">名前を付けて保存</string>
     <string name="file_saved">ファイルを正常に保存しました</string>
     <string name="invalid_file_format">Invalid file format</string>
+    <string name="no_permissions">We need the permission to access your storage</string>
 
     <!-- Renaming -->
     <string name="rename_file">ファイルの名前を変更</string>
@@ -37,15 +38,16 @@
     <string name="copy_move_failed">エラーが発生しました</string>
     <string name="moving">移動中&#8230;</string>
     <string name="moving_success">ファイルを正常に移動しました</string>
-    <string name="file_exists">その名前のファイルは既に存在します</string>
     <string name="moving_success_partial">一部のファイルが移動できませんでした</string>
     <string name="copying_success_partial">一部のファイルがコピーできませんでした</string>
-    <string name="create_new_directory">Create new directory</string>
-    <string name="directory_exists">A directory with that name already exists</string>
+    <string name="no_files_selected">No files selected</string>
 
-    <!-- Create new folder -->
+    <!-- Create new -->
+    <string name="create_new">Create new</string>
+    <string name="folder">Folder</string>
+    <string name="file">File</string>
     <string name="create_new_folder">Create new folder</string>
-    <string name="name_taken">Directory or file with that name already exists</string>
+    <string name="name_taken">A file or folder with that name already exists</string>
     <string name="invalid_name">名前に無効な文字が含まれています</string>
     <string name="empty_name">Please enter a name</string>
     <string name="unknown_error_occurred">不明なエラーが発生しました</string>
@@ -65,7 +67,7 @@
     <string name="confirm_storage_access_text">次の画面で SD カードのルートフォルダーを選択して、書き込みアクセス許可を付与してください</string>
 
     <plurals name="items">
-        <item quantity="one">1 アイテム</item>
+        <item quantity="one">%1$d アイテム</item>
         <item quantity="other">%1$d アイテム</item>
     </plurals>
 
@@ -137,6 +139,7 @@
     <!-- Settings -->
     <string name="settings">Settings</string>
     <string name="customize_colors">Customize colors</string>
+    <string name="show_hidden">非表示のファイルとディレクトリーを表示する</string>
 
     <!-- About -->
     <string name="about">アプリについて</string>

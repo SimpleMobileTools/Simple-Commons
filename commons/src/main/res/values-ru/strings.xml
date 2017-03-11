@@ -5,6 +5,7 @@
     <string name="save_as">Сохранить как</string>
     <string name="file_saved">Файл успешно сохранен</string>
     <string name="invalid_file_format">Invalid file format</string>
+    <string name="no_permissions">We need the permission to access your storage</string>
 
     <!-- Renaming -->
     <string name="rename_file">Изменение имени файла</string>
@@ -37,13 +38,14 @@
     <string name="copy_move_failed">Произошла ошибка</string>
     <string name="moving">Перемещение&#8230;</string>
     <string name="moving_success">Файлы успешно перемещены</string>
-    <string name="file_exists">Файл с таким именем уже существует</string>
     <string name="moving_success_partial">Некоторые файлы не могут быть перемещены</string>
     <string name="copying_success_partial">Некоторые файлы не могут быть скопированы</string>
-    <string name="create_new_directory">Создать папку</string>
-    <string name="directory_exists">Папка с таким именем уже существует</string>
+    <string name="no_files_selected">No files selected</string>
 
-    <!-- Create new folder -->
+    <!-- Create new -->
+    <string name="create_new">Create new</string>
+    <string name="folder">Folder</string>
+    <string name="file">File</string>
     <string name="create_new_folder">Создать новую папку</string>
     <string name="name_taken">Папка или файл с таким именем уже существует</string>
     <string name="invalid_name">Имя содержит недопустимые символы</string>
@@ -65,7 +67,7 @@
     <string name="confirm_storage_access_text">Чтобы предоставить право на запись, пожалуйста, выберите корневую папку SD-карты на следующем шаге</string>
 
     <plurals name="items">
-        <item quantity="one">1 объект</item>
+        <item quantity="one">%1$d объект</item>
         <item quantity="other">объектов: %1$d</item>
     </plurals>
 
@@ -137,6 +139,7 @@
     <!-- Settings -->
     <string name="settings">Настройки</string>
     <string name="customize_colors">Настроить цвета</string>
+    <string name="show_hidden">Показать скрытые папки</string>
 
     <!-- About -->
     <string name="about">О приложении</string>

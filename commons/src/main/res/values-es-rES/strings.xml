@@ -5,6 +5,7 @@
     <string name="save_as">Salvar como</string>
     <string name="file_saved">Archivo guardado con éxito</string>
     <string name="invalid_file_format">Invalid file format</string>
+    <string name="no_permissions">We need the permission to access your storage</string>
 
     <!-- Renaming -->
     <string name="rename_file">Renombrar archivo</string>
@@ -37,13 +38,14 @@
     <string name="copy_move_failed">Un error ocurrió</string>
     <string name="moving">Moviendo&#8230;</string>
     <string name="moving_success">Archivos movidos correctamente</string>
-    <string name="file_exists">Ya existe un archivo con el mismo nombre</string>
     <string name="moving_success_partial">Algunos archivos no se pudieron mover</string>
     <string name="copying_success_partial">Algunos archivos no se pudieron copiar</string>
-    <string name="create_new_directory">Crear nueva carpeta</string>
-    <string name="directory_exists">Ya existe una carpeta con ese nombre</string>
+    <string name="no_files_selected">No files selected</string>
 
-    <!-- Create new folder -->
+    <!-- Create new -->
+    <string name="create_new">Crear nueva</string>
+    <string name="folder">Folder</string>
+    <string name="file">File</string>
     <string name="create_new_folder">Crear nueva carpeta</string>
     <string name="name_taken">Un archivo o carpeta ya existe con ese nombre</string>
     <string name="invalid_name">El nombre contiene carácteres inválidos</string>
@@ -65,7 +67,7 @@
     <string name="confirm_storage_access_text">Por favor, elija la carpeta raíz de la tarjeta SD en la próxima pantalla para conceder el acceso de escritura</string>
 
     <plurals name="items">
-        <item quantity="one">1 elemento</item>
+        <item quantity="one">%1$d elemento</item>
         <item quantity="other">%1$d elementos</item>
     </plurals>
 
@@ -137,6 +139,7 @@
     <!-- Settings -->
     <string name="settings">Ajustes</string>
     <string name="customize_colors">Cambiar colores</string>
+    <string name="show_hidden">Mostrar ficheros y directorios ocultos</string>
 
     <!-- About -->
     <string name="about">Acerca de</string>
