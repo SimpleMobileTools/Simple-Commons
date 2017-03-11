@@ -15,11 +15,11 @@ import kotlinx.android.synthetic.main.filepicker_list_item.view.*
 
 class FilepickerItemsAdapter(val context: Context, private val mItems: List<FileDirItem>, val itemClick: (FileDirItem) -> Unit) :
         RecyclerView.Adapter<FilepickerItemsAdapter.ViewHolder>() {
-    var textColor = 0
 
     companion object {
         lateinit var folderDrawable: Drawable
         lateinit var fileDrawable: Drawable
+        var textColor = 0
     }
 
     init {
@@ -32,7 +32,7 @@ class FilepickerItemsAdapter(val context: Context, private val mItems: List<File
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.filepicker_list_item, parent, false)
-        return ViewHolder(context, textColor, view, itemClick)
+        return ViewHolder(context, view, itemClick)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -41,7 +41,7 @@ class FilepickerItemsAdapter(val context: Context, private val mItems: List<File
 
     override fun getItemCount() = mItems.size
 
-    class ViewHolder(val context: Context, val textColor: Int, view: View, val itemClick: (FileDirItem) -> (Unit)) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(val context: Context, view: View, val itemClick: (FileDirItem) -> (Unit)) : RecyclerView.ViewHolder(view) {
         fun bindView(fileDirItem: FileDirItem) {
             itemView.apply {
                 list_item_name.text = fileDirItem.name
