@@ -4,6 +4,7 @@ import android.content.Context
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 
 /**
@@ -21,6 +22,7 @@ class WritePermissionDialog(context: Context, val callback: () -> Unit) {
 
         dialog = AlertDialog.Builder(context)
                 .setPositiveButton(R.string.ok, { dialog, which -> dialogConfirmed() })
+                .setOnCancelListener { BaseSimpleActivity.funAfterPermission = null }
                 .create().apply {
             context.setupDialogStuff(view, this, R.string.confirm_storage_access_title)
         }

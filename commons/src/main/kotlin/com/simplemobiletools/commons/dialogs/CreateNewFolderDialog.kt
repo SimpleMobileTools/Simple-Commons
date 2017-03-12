@@ -43,7 +43,9 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
 
     private fun createDirectory(file: File, alertDialog: AlertDialog): Boolean {
         return if (activity.needsStupidWritePermissions(path)) {
-            if (activity.isShowingPermDialog(file)) {
+            if (activity.isShowingPermDialog(file) {
+
+            }) {
                 return true
             }
             val documentFile = activity.getFileDocument(file.absolutePath, activity.baseConfig.treeUri)

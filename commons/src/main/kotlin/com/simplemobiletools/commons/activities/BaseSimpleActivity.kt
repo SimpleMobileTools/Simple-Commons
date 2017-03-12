@@ -9,9 +9,13 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.MenuItem
+import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.isShowingWritePermissions
+import com.simplemobiletools.commons.extensions.sdCardPath
+import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
 import com.simplemobiletools.commons.helpers.APP_VERSION_NAME
@@ -19,6 +23,10 @@ import com.simplemobiletools.commons.helpers.OPEN_DOCUMENT_TREE
 import java.io.File
 
 open class BaseSimpleActivity : AppCompatActivity() {
+    companion object {
+        var funAfterPermission: (() -> Unit)? = null
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -27,6 +35,11 @@ open class BaseSimpleActivity : AppCompatActivity() {
         super.onResume()
         updateBackgroundColor()
         updateActionbarColor()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        funAfterPermission = null
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -60,7 +73,15 @@ open class BaseSimpleActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
         super.onActivityResult(requestCode, resultCode, resultData)
         if (requestCode == OPEN_DOCUMENT_TREE && resultCode == Activity.RESULT_OK && resultData != null) {
-            saveTreeUri(resultData)
+            val uriEnding = resultData.dataString.split("/").last()
+            val sdCardEnding = sdCardPath.split("/").last()
+            if (uriEnding.startsWith(sdCardEnding)) {
+                saveTreeUri(resultData)
+                funAfterPermission?.invoke()
+            } else {
+                toast(R.string.wrong_root_selected)
+                funAfterPermission = null
+            }
         }
     }
 
@@ -91,5 +112,8 @@ open class BaseSimpleActivity : AppCompatActivity() {
         startActivity(browserIntent)
     }
 
-    fun isShowingPermDialog(file: File) = isShowingWritePermissions(file, baseConfig.treeUri, OPEN_DOCUMENT_TREE)
+    fun isShowingPermDialog(file: File, callback: () -> Unit): Boolean {
+        funAfterPermission = callback
+        return isShowingWritePermissions(file, baseConfig.treeUri, OPEN_DOCUMENT_TREE)
+    }
 }
