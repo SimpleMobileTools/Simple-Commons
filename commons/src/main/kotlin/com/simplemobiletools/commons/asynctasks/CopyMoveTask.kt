@@ -1,16 +1,15 @@
 package com.simplemobiletools.commons.asynctasks
 
-import android.content.Context
 import android.os.AsyncTask
 import android.support.v4.util.Pair
 import android.util.Log
+import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import java.io.*
 import java.lang.ref.WeakReference
-import java.net.URLDecoder
 import java.util.*
 
-class CopyMoveTask(val context: Context, val deleteAfterCopy: Boolean = false, val treeUri: String = "", val copyMediaOnly: Boolean,
+class CopyMoveTask(val activity: BaseSimpleActivity, val deleteAfterCopy: Boolean = false, val treeUri: String = "", val copyMediaOnly: Boolean,
                    listener: CopyMoveTask.CopyMoveListener) : AsyncTask<Pair<ArrayList<File>, File>, Void, Boolean>() {
     private val TAG = CopyMoveTask::class.java.simpleName
     private var mListener: WeakReference<CopyMoveListener>? = null
@@ -42,23 +41,10 @@ class CopyMoveTask(val context: Context, val deleteAfterCopy: Boolean = false, v
         }
 
         if (deleteAfterCopy) {
-            for (file in mMovedFiles) {
-                if (!file.delete() && !context.tryFastDocumentDelete(file)) {
-                    val document = context.getFileDocument(file.absolutePath, treeUri) ?: continue
-
-                    // double check we have the uri to the proper file path, not some parent folder
-                    val uri = URLDecoder.decode(document.uri.toString(), "UTF-8")
-                    val filename = URLDecoder.decode(file.absolutePath.getFilenameFromPath(), "UTF-8")
-                    if (uri.endsWith(filename)) {
-                        document.delete()
-                    }
-                }
-            }
+            activity.deleteFiles(mMovedFiles) {}
         }
 
-        context.scanFiles(mFiles) {}
-        context.scanFiles(mMovedFiles) {}
-
+        activity.scanFiles(mFiles) {}
         return true
     }
 
@@ -73,8 +59,8 @@ class CopyMoveTask(val context: Context, val deleteAfterCopy: Boolean = false, v
 
     private fun copyDirectory(source: File, destination: File) {
         if (!destination.exists()) {
-            if (context.needsStupidWritePermissions(destination.absolutePath)) {
-                val document = context.getFileDocument(destination.absolutePath, treeUri)
+            if (activity.needsStupidWritePermissions(destination.absolutePath)) {
+                val document = activity.getFileDocument(destination.absolutePath, treeUri)
                 document?.createDirectory(destination.name)
             } else if (!destination.mkdirs()) {
                 throw IOException("Could not create dir ${destination.absolutePath}")
@@ -88,7 +74,7 @@ class CopyMoveTask(val context: Context, val deleteAfterCopy: Boolean = false, v
                 continue
 
             val curFile = File(source, child)
-            if (context.needsStupidWritePermissions(destination.absolutePath)) {
+            if (activity.needsStupidWritePermissions(destination.absolutePath)) {
                 if (newFile.isDirectory) {
                     copyDirectory(curFile, newFile)
                 } else {
@@ -111,17 +97,17 @@ class CopyMoveTask(val context: Context, val deleteAfterCopy: Boolean = false, v
 
         val inputStream = FileInputStream(source)
         val out: OutputStream?
-        if (context.needsStupidWritePermissions(destination.absolutePath)) {
-            var document = context.getFileDocument(destination.absolutePath, treeUri) ?: return
+        if (activity.needsStupidWritePermissions(destination.absolutePath)) {
+            var document = activity.getFileDocument(destination.absolutePath, treeUri) ?: return
             document = document.createFile("", destination.name)
 
-            out = context.contentResolver.openOutputStream(document.uri)
+            out = activity.contentResolver.openOutputStream(document.uri)
         } else {
             out = FileOutputStream(destination)
         }
 
         copyStream(inputStream, out)
-        context.scanFile(destination) {}
+        activity.scanFile(destination) {}
         mMovedFiles.add(source)
     }
 
