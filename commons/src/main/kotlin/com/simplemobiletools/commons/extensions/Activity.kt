@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.os.Looper
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
@@ -55,28 +56,36 @@ fun BaseSimpleActivity.isFirstRunEver(): Boolean {
 }
 
 fun BaseSimpleActivity.deleteFile(file: File, callback: (wasSuccess: Boolean) -> Unit) {
-    Thread {
-        var fileDeleted = !file.exists() || file.delete()
-        if (fileDeleted) {
-            rescanDeletedFile(file) {
-                callback(true)
-            }
-        } else {
-            handleSAFDialog(file) {
-                fileDeleted = tryFastDocumentDelete(file)
-                if (!fileDeleted) {
-                    val document = getFileDocument(file.absolutePath, baseConfig.treeUri)
-                    fileDeleted = document?.isFile == true && document.delete()
-                }
+    if (Looper.myLooper() == Looper.getMainLooper()) {
+        Thread {
+            deleteFileBg(file, callback)
+        }.start()
+    } else {
+        deleteFileBg(file, callback)
+    }
+}
 
-                if (fileDeleted) {
-                    rescanDeletedFile(file) {
-                        callback(true)
-                    }
+fun BaseSimpleActivity.deleteFileBg(file: File, callback: (wasSuccess: Boolean) -> Unit) {
+    var fileDeleted = !file.exists() || file.delete()
+    if (fileDeleted) {
+        rescanDeletedFile(file) {
+            callback(true)
+        }
+    } else {
+        handleSAFDialog(file) {
+            fileDeleted = tryFastDocumentDelete(file)
+            if (!fileDeleted) {
+                val document = getFileDocument(file.absolutePath, baseConfig.treeUri)
+                fileDeleted = document?.isFile == true && document.delete()
+            }
+
+            if (fileDeleted) {
+                rescanDeletedFile(file) {
+                    callback(true)
                 }
             }
         }
-    }.start()
+    }
 }
 
 fun BaseSimpleActivity.rescanDeletedFile(file: File, callback: () -> Unit) {
