@@ -9,11 +9,10 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.view.MenuItem
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.isShowingWritePermissions
+import com.simplemobiletools.commons.extensions.isShowingSAFDialog
 import com.simplemobiletools.commons.extensions.sdCardPath
 import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.helpers.APP_LICENSES
@@ -112,8 +111,13 @@ open class BaseSimpleActivity : AppCompatActivity() {
         startActivity(browserIntent)
     }
 
-    fun isShowingPermDialog(file: File, callback: () -> Unit): Boolean {
-        funAfterPermission = callback
-        return isShowingWritePermissions(file, baseConfig.treeUri, OPEN_DOCUMENT_TREE)
+    fun handleSAFDialog(file: File, callback: () -> Unit): Boolean {
+        return if (isShowingSAFDialog(file, baseConfig.treeUri, OPEN_DOCUMENT_TREE)) {
+            funAfterPermission = callback
+            true
+        } else {
+            callback()
+            false
+        }
     }
 }

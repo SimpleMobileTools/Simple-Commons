@@ -14,11 +14,13 @@ import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.models.Release
 import java.io.File
 
-fun Activity.isShowingWritePermissions(file: File, treeUri: String, requestCode: Int): Boolean {
+fun Activity.isShowingSAFDialog(file: File, treeUri: String, requestCode: Int): Boolean {
     return if ((needsStupidWritePermissions(file.absolutePath) && treeUri.isEmpty())) {
-        WritePermissionDialog(this) {
-            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
-            startActivityForResult(intent, requestCode)
+        runOnUiThread {
+            WritePermissionDialog(this) {
+                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
+                startActivityForResult(intent, requestCode)
+            }
         }
         true
     } else {
@@ -50,6 +52,41 @@ fun BaseSimpleActivity.isFirstRunEver(): Boolean {
 
     }
     return false
+}
+
+fun BaseSimpleActivity.deleteFile(file: File, callback: (wasSuccess: Boolean) -> Unit) {
+    Thread {
+        var fileDeleted = !file.exists() || file.delete()
+        if (fileDeleted) {
+            rescanDeletedFile(file) {
+                callback(true)
+            }
+        } else {
+            handleSAFDialog(file) {
+                fileDeleted = tryFastDocumentDelete(file)
+                if (!fileDeleted) {
+                    val document = getFileDocument(file.absolutePath, baseConfig.treeUri)
+                    fileDeleted = document?.isFile == true && document.delete()
+                }
+
+                if (fileDeleted) {
+                    rescanDeletedFile(file) {
+                        callback(true)
+                    }
+                }
+            }
+        }
+    }.start()
+}
+
+fun BaseSimpleActivity.rescanDeletedFile(file: File, callback: () -> Unit) {
+    if (deleteFromMediaStore(file)) {
+        callback()
+    } else {
+        scanFile(file) {
+            callback()
+        }
+    }
 }
 
 fun Activity.hideKeyboard() {

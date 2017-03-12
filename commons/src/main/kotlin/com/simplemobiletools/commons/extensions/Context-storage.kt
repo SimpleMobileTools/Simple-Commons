@@ -158,7 +158,7 @@ fun Context.tryFastDocumentDelete(file: File): Boolean {
 
 @SuppressLint("NewApi")
 fun Context.getFastDocument(file: File): DocumentFile? {
-    if (!isLollipopPlus())
+    if (!isLollipopPlus() || baseConfig.sdCardPath.isEmpty())
         return null
 
     val relativePath = Uri.encode(file.absolutePath.substring(baseConfig.sdCardPath.length).trim('/'))
