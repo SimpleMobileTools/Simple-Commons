@@ -114,7 +114,7 @@ fun BaseSimpleActivity.deleteFolderBg(folder: File, deleteMediaOnly: Boolean = t
             deleteFileBg(file, false) { }
         }
 
-        if (folder.listFiles().isEmpty()) {
+        if (folder.listFiles()?.isEmpty() == true) {
             deleteFileBg(folder, true) { }
         }
     }
