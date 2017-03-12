@@ -14,6 +14,7 @@ import com.simplemobiletools.commons.dialogs.WhatsNewDialog
 import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.models.Release
 import java.io.File
+import java.util.*
 
 fun Activity.isShowingSAFDialog(file: File, treeUri: String, requestCode: Int): Boolean {
     return if ((needsStupidWritePermissions(file.absolutePath) && treeUri.isEmpty())) {
@@ -53,6 +54,32 @@ fun BaseSimpleActivity.isFirstRunEver(): Boolean {
 
     }
     return false
+}
+
+fun BaseSimpleActivity.deleteFiles(files: ArrayList<File>, callback: (wasSuccess: Boolean) -> Unit) {
+    if (Looper.myLooper() == Looper.getMainLooper()) {
+        Thread {
+            deleteFilesBg(files, callback)
+        }.start()
+    } else {
+        deleteFilesBg(files, callback)
+    }
+}
+
+fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<File>, callback: (wasSuccess: Boolean) -> Unit) {
+    var wasSuccess = false
+    handleSAFDialog(files[0]) {
+        files.forEachIndexed { index, file ->
+            deleteFileBg(file) {
+                if (it)
+                    wasSuccess = true
+
+                if (index == files.size - 1) {
+                    callback(wasSuccess)
+                }
+            }
+        }
+    }
 }
 
 fun BaseSimpleActivity.deleteFile(file: File, callback: (wasSuccess: Boolean) -> Unit) {
