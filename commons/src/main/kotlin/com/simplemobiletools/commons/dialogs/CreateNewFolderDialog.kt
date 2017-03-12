@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.dialogs
 
 import android.support.v7.app.AlertDialog
-import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowManager
 import com.simplemobiletools.commons.R
@@ -12,7 +11,7 @@ import java.io.File
 
 class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, val callback: (path: String) -> Unit) {
     init {
-        val view = LayoutInflater.from(activity).inflate(R.layout.dialog_create_new_folder, null)
+        val view = activity.layoutInflater.inflate(R.layout.dialog_create_new_folder, null)
 
         AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.ok, null)
@@ -31,9 +30,7 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                         return@OnClickListener
                     }
 
-                    if (!createDirectory(file, this)) {
-                        context.toast(R.string.unknown_error_occurred)
-                    }
+                    createFolder(file, this)
                 } else {
                     context.toast(R.string.invalid_name)
                 }
@@ -41,22 +38,15 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
         }
     }
 
-    private fun createDirectory(file: File, alertDialog: AlertDialog): Boolean {
-        return if (activity.needsStupidWritePermissions(path)) {
-            if (activity.isShowingPermDialog(file) {
-
-            }) {
-                return true
+    private fun createFolder(file: File, alertDialog: AlertDialog) {
+        if (activity.needsStupidWritePermissions(file.absolutePath)) {
+            activity.isShowingPermDialog(file) {
+                val documentFile = activity.getFileDocument(file.absolutePath, activity.baseConfig.treeUri)
+                documentFile?.createDirectory(file.name)
+                sendSuccess(alertDialog, file)
             }
-            val documentFile = activity.getFileDocument(file.absolutePath, activity.baseConfig.treeUri)
-            documentFile?.createDirectory(file.name)
-            sendSuccess(alertDialog, file)
-            true
         } else if (file.mkdirs()) {
             sendSuccess(alertDialog, file)
-            true
-        } else {
-            false
         }
     }
 
