@@ -56,27 +56,69 @@ fun BaseSimpleActivity.isFirstRunEver(): Boolean {
     return false
 }
 
-fun BaseSimpleActivity.deleteFolder(folder: File, deleteMediaOnly: Boolean, callback: (wasSuccess: Boolean) -> Unit) {
-    Thread {
-        if (folder.exists()) {
-            val filesArr = folder.listFiles()
-            if (filesArr == null) {
-                callback(true)
-                return@Thread
-            }
+fun BaseSimpleActivity.deleteFolders(folders: ArrayList<File>, deleteMediaOnly: Boolean, callback: (wasSuccess: Boolean) -> Unit) {
+    if (Looper.myLooper() == Looper.getMainLooper()) {
+        Thread {
+            deleteFoldersBg(folders, deleteMediaOnly, callback)
+        }.start()
+    } else {
+        deleteFoldersBg(folders, deleteMediaOnly, callback)
+    }
+}
 
-            val filesList = (filesArr as Array).toList()
-            val files = filesList.filter { !deleteMediaOnly || it.isImageVideoGif() }
-            for (file in files) {
-                deleteFileBg(file, false) { }
-            }
+fun BaseSimpleActivity.deleteFoldersBg(folders: ArrayList<File>, deleteMediaOnly: Boolean, callback: (wasSuccess: Boolean) -> Unit) {
+    var wasSuccess = false
+    var needPermissionForPath = ""
+    for (file in folders) {
+        if (needsStupidWritePermissions(file.absolutePath) && baseConfig.treeUri.isEmpty()) {
+            needPermissionForPath = file.absolutePath
+            break
+        }
+    }
 
-            if (folder.listFiles().isEmpty()) {
-                deleteFileBg(folder, true) { }
+    handleSAFDialog(File(needPermissionForPath)) {
+        folders.forEachIndexed { index, folder ->
+            deleteFolderBg(folder, deleteMediaOnly) {
+                if (it)
+                    wasSuccess = true
+
+                if (index == folders.size - 1) {
+                    callback(wasSuccess)
+                }
             }
         }
-        callback(true)
-    }.start()
+    }
+}
+
+fun BaseSimpleActivity.deleteFolder(folder: File, deleteMediaOnly: Boolean, callback: (wasSuccess: Boolean) -> Unit) {
+    if (Looper.myLooper() == Looper.getMainLooper()) {
+        Thread {
+            deleteFolderBg(folder, deleteMediaOnly, callback)
+        }.start()
+    } else {
+        deleteFolderBg(folder, deleteMediaOnly, callback)
+    }
+}
+
+fun BaseSimpleActivity.deleteFolderBg(folder: File, deleteMediaOnly: Boolean, callback: (wasSuccess: Boolean) -> Unit) {
+    if (folder.exists()) {
+        val filesArr = folder.listFiles()
+        if (filesArr == null) {
+            callback(true)
+            return
+        }
+
+        val filesList = (filesArr as Array).toList()
+        val files = filesList.filter { !deleteMediaOnly || it.isImageVideoGif() }
+        for (file in files) {
+            deleteFileBg(file, false) { }
+        }
+
+        if (folder.listFiles().isEmpty()) {
+            deleteFileBg(folder, true) { }
+        }
+    }
+    callback(true)
 }
 
 fun BaseSimpleActivity.deleteFiles(files: ArrayList<File>, allowDeleteFolder: Boolean, callback: (wasSuccess: Boolean) -> Unit) {
