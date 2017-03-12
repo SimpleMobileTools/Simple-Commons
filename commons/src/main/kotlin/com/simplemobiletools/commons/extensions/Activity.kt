@@ -121,7 +121,7 @@ fun BaseSimpleActivity.deleteFolderBg(folder: File, deleteMediaOnly: Boolean, ca
     callback(true)
 }
 
-fun BaseSimpleActivity.deleteFiles(files: ArrayList<File>, allowDeleteFolder: Boolean, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFiles(files: ArrayList<File>, allowDeleteFolder: Boolean = false, callback: (wasSuccess: Boolean) -> Unit) {
     if (Looper.myLooper() == Looper.getMainLooper()) {
         Thread {
             deleteFilesBg(files, allowDeleteFolder, callback)
@@ -131,7 +131,7 @@ fun BaseSimpleActivity.deleteFiles(files: ArrayList<File>, allowDeleteFolder: Bo
     }
 }
 
-fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<File>, allowDeleteFolder: Boolean, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<File>, allowDeleteFolder: Boolean = false, callback: (wasSuccess: Boolean) -> Unit) {
     var wasSuccess = false
     handleSAFDialog(files[0]) {
         files.forEachIndexed { index, file ->
@@ -147,7 +147,7 @@ fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<File>, allowDeleteFolder: 
     }
 }
 
-fun BaseSimpleActivity.deleteFile(file: File, allowDeleteFolder: Boolean, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFile(file: File, allowDeleteFolder: Boolean = false, callback: (wasSuccess: Boolean) -> Unit) {
     if (Looper.myLooper() == Looper.getMainLooper()) {
         Thread {
             deleteFileBg(file, allowDeleteFolder, callback)
@@ -157,7 +157,7 @@ fun BaseSimpleActivity.deleteFile(file: File, allowDeleteFolder: Boolean, callba
     }
 }
 
-fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = false, callback: (wasSuccess: Boolean) -> Unit) {
     var fileDeleted = !file.exists() || file.delete()
     if (fileDeleted) {
         rescanDeletedFile(file) {
