@@ -56,21 +56,44 @@ fun BaseSimpleActivity.isFirstRunEver(): Boolean {
     return false
 }
 
-fun BaseSimpleActivity.deleteFiles(files: ArrayList<File>, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFolder(folder: File, deleteMediaOnly: Boolean, callback: (wasSuccess: Boolean) -> Unit) {
+    Thread {
+        if (folder.exists()) {
+            val filesArr = folder.listFiles()
+            if (filesArr == null) {
+                callback(true)
+                return@Thread
+            }
+
+            val filesList = (filesArr as Array).toList()
+            val files = filesList.filter { !deleteMediaOnly || it.isImageVideoGif() }
+            for (file in files) {
+                deleteFileBg(file, false) { }
+            }
+
+            if (folder.listFiles().isEmpty()) {
+                deleteFileBg(folder, true) { }
+            }
+        }
+        callback(true)
+    }.start()
+}
+
+fun BaseSimpleActivity.deleteFiles(files: ArrayList<File>, allowDeleteFolder: Boolean, callback: (wasSuccess: Boolean) -> Unit) {
     if (Looper.myLooper() == Looper.getMainLooper()) {
         Thread {
-            deleteFilesBg(files, callback)
+            deleteFilesBg(files, allowDeleteFolder, callback)
         }.start()
     } else {
-        deleteFilesBg(files, callback)
+        deleteFilesBg(files, allowDeleteFolder, callback)
     }
 }
 
-fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<File>, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<File>, allowDeleteFolder: Boolean, callback: (wasSuccess: Boolean) -> Unit) {
     var wasSuccess = false
     handleSAFDialog(files[0]) {
         files.forEachIndexed { index, file ->
-            deleteFileBg(file) {
+            deleteFileBg(file, allowDeleteFolder) {
                 if (it)
                     wasSuccess = true
 
@@ -82,17 +105,17 @@ fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<File>, callback: (wasSucce
     }
 }
 
-fun BaseSimpleActivity.deleteFile(file: File, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFile(file: File, allowDeleteFolder: Boolean, callback: (wasSuccess: Boolean) -> Unit) {
     if (Looper.myLooper() == Looper.getMainLooper()) {
         Thread {
-            deleteFileBg(file, callback)
+            deleteFileBg(file, allowDeleteFolder, callback)
         }.start()
     } else {
-        deleteFileBg(file, callback)
+        deleteFileBg(file, allowDeleteFolder, callback)
     }
 }
 
-fun BaseSimpleActivity.deleteFileBg(file: File, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean, callback: (wasSuccess: Boolean) -> Unit) {
     var fileDeleted = !file.exists() || file.delete()
     if (fileDeleted) {
         rescanDeletedFile(file) {
@@ -103,7 +126,7 @@ fun BaseSimpleActivity.deleteFileBg(file: File, callback: (wasSuccess: Boolean) 
             fileDeleted = tryFastDocumentDelete(file)
             if (!fileDeleted) {
                 val document = getFileDocument(file.absolutePath, baseConfig.treeUri)
-                fileDeleted = document?.isFile == true && document.delete()
+                fileDeleted = (document?.isFile == true || allowDeleteFolder) && document?.delete() == true
             }
 
             if (fileDeleted) {
