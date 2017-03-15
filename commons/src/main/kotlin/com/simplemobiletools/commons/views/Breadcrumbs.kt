@@ -30,6 +30,10 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
         mListener = listener
     }
 
+    fun setTextColor(color: Int) {
+        mTextColor = color
+    }
+
     fun getDeviceWidth(): Int {
         val display = (context.getSystemService(Context.WINDOW_SERVICE) as WindowManager).defaultDisplay
         val deviceDisplay = Point()
