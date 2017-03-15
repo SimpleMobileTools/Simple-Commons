@@ -4,8 +4,8 @@
     <string name="search">Поиск</string>
     <string name="save_as">Сохранить как</string>
     <string name="file_saved">Файл успешно сохранен</string>
-    <string name="invalid_file_format">Invalid file format</string>
-    <string name="no_storage_permissions">We need the permission to access your storage</string>
+    <string name="invalid_file_format">Недопустимый формат файла</string>
+    <string name="no_storage_permissions">Нужно разрешение для доступа к памяти</string>
 
     <!-- Renaming -->
     <string name="rename_file">Изменение имени файла</string>
@@ -14,7 +14,7 @@
     <string name="rename_folder_error">Невозможно переименовать папку</string>
     <string name="rename_folder_empty">Имя папки не должно быть пустым</string>
     <string name="rename_folder_exists">Папка с таким именем уже существует</string>
-    <string name="rename_folder_root">Невозможно переименовать корневую папку хранения</string>
+    <string name="rename_folder_root">Невозможно переименовать корневую папку</string>
     <string name="rename_folder_ok">Папка переименована успешно</string>
     <string name="renaming_folder">Изменение имени папки</string>
     <string name="filename_cannot_be_empty">Имя файла не может быть пустым</string>
@@ -40,12 +40,12 @@
     <string name="moving_success">Файлы успешно перемещены</string>
     <string name="moving_success_partial">Некоторые файлы не могут быть перемещены</string>
     <string name="copying_success_partial">Некоторые файлы не могут быть скопированы</string>
-    <string name="no_files_selected">No files selected</string>
+    <string name="no_files_selected">Файлы не выбраны</string>
 
     <!-- Create new -->
-    <string name="create_new">Create new</string>
-    <string name="folder">Folder</string>
-    <string name="file">File</string>
+    <string name="create_new">Создать</string>
+    <string name="folder">Папку</string>
+    <string name="file">Файл</string>
     <string name="create_new_folder">Создать новую папку</string>
     <string name="name_taken">Папка или файл с таким именем уже существует</string>
     <string name="invalid_name">Имя содержит недопустимые символы</string>
@@ -76,7 +76,7 @@
     <string name="internal">Внутренняя память</string>
     <string name="sd_card">SD-карта</string>
     <string name="root">Корневая папка</string>
-    <string name="wrong_root_selected">Wrong folder selected, please select the SD card</string>
+    <string name="wrong_root_selected">Папка выбрана неверно, пожалуйста, выберите SD-карту</string>
 
     <!-- File properties -->
     <string name="properties">Свойства</string>
@@ -116,7 +116,7 @@
     <string name="delete">Удалить</string>
     <string name="rename">Переименовать</string>
     <string name="share">Поделиться</string>
-    <string name="share_via">Отправить по</string>
+    <string name="share_via">Отправить через</string>
     <string name="select_all">Выделить все</string>
 
     <!-- Sorting -->
@@ -130,7 +130,7 @@
     <string name="extension">Расширение</string>
     <string name="ascending">По возрастанию</string>
     <string name="descending">По убыванию</string>
-    <string name="use_for_this_folder">Use for this folder only</string>
+    <string name="use_for_this_folder">Использовать только для этой папки</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Действительно хотите удалить?</string>
