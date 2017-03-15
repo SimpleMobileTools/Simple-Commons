@@ -4,8 +4,8 @@
     <string name="search">Pesquisar</string>
     <string name="save_as">Guardar como</string>
     <string name="file_saved">Ficheiro guardado com sucesso</string>
-    <string name="invalid_file_format">Invalid file format</string>
-    <string name="no_storage_permissions">We need the permission to access your storage</string>
+    <string name="invalid_file_format">Formato de ficheiro inválido</string>
+    <string name="no_storage_permissions">Necessitamos de permissão para aceder ao armazenamento</string>
 
     <!-- Renaming -->
     <string name="rename_file">Renomear ficheiro</string>
@@ -40,12 +40,12 @@
     <string name="moving_success">Ficheiros movidos com sucesso</string>
     <string name="moving_success_partial">Alguns ficheiros não foram movidos</string>
     <string name="copying_success_partial">Alguns ficheiros não foram copiados</string>
-    <string name="no_files_selected">No files selected</string>
+    <string name="no_files_selected">Nenhum ficheiro selecionado</string>
 
     <!-- Create new -->
-    <string name="create_new">Create new</string>
-    <string name="folder">Folder</string>
-    <string name="file">File</string>
+    <string name="create_new">Criar</string>
+    <string name="folder">Pasta</string>
+    <string name="file">Ficheiro</string>
     <string name="create_new_folder">Criar nova pasta</string>
     <string name="name_taken">Já existe um ficheiro ou pasta com este nome</string>
     <string name="invalid_name">O nome contém caracteres inválidos</string>
@@ -76,7 +76,7 @@
     <string name="internal">Interno</string>
     <string name="sd_card">Cartão SD</string>
     <string name="root">Raiz</string>
-    <string name="wrong_root_selected">Wrong folder selected, please select the SD card</string>
+    <string name="wrong_root_selected">Pasta inválida, por favor selecione o cartão SD</string>
 
     <!-- File properties -->
     <string name="properties">Propriedades</string>
