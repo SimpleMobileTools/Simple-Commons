@@ -132,6 +132,11 @@ fun BaseSimpleActivity.deleteFiles(files: ArrayList<File>, allowDeleteFolder: Bo
 }
 
 fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<File>, allowDeleteFolder: Boolean = false, callback: (wasSuccess: Boolean) -> Unit) {
+    if (files.isEmpty()) {
+        callback(true)
+        return
+    }
+
     var wasSuccess = false
     handleSAFDialog(files[0]) {
         files.forEachIndexed { index, file ->
