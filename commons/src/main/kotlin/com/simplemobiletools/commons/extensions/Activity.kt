@@ -168,7 +168,7 @@ fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = fal
         rescanDeletedFile(file) {
             callback(true)
         }
-    } else {
+    } else if (isPathOnSD(file.absolutePath)) {
         handleSAFDialog(file) {
             fileDeleted = tryFastDocumentDelete(file)
             if (!fileDeleted) {
