@@ -168,17 +168,23 @@ fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = fal
         rescanDeletedFile(file) {
             callback(true)
         }
-    } else if (isPathOnSD(file.absolutePath)) {
-        handleSAFDialog(file) {
-            fileDeleted = tryFastDocumentDelete(file)
-            if (!fileDeleted) {
-                val document = getFileDocument(file.absolutePath, baseConfig.treeUri)
-                fileDeleted = (document?.isFile == true || allowDeleteFolder) && document?.delete() == true
-            }
+    } else {
+        if (file.isDirectory || allowDeleteFolder) {
+            fileDeleted = deleteRecursively(file)
+        }
 
-            if (fileDeleted) {
-                rescanDeletedFile(file) {
-                    callback(true)
+        if (!fileDeleted && isPathOnSD(file.absolutePath)) {
+            handleSAFDialog(file) {
+                fileDeleted = tryFastDocumentDelete(file)
+                if (!fileDeleted) {
+                    val document = getFileDocument(file.absolutePath, baseConfig.treeUri)
+                    fileDeleted = (document?.isFile == true || allowDeleteFolder) && document?.delete() == true
+                }
+
+                if (fileDeleted) {
+                    rescanDeletedFile(file) {
+                        callback(true)
+                    }
                 }
             }
         }
@@ -193,6 +199,17 @@ fun BaseSimpleActivity.rescanDeletedFile(file: File, callback: () -> Unit) {
             callback()
         }
     }
+}
+
+private fun deleteRecursively(file: File): Boolean {
+    if (file.isDirectory) {
+        val files = file.listFiles() ?: return file.delete()
+        for (child in files) {
+            deleteRecursively(child)
+        }
+    }
+
+    return file.delete()
 }
 
 fun Activity.hideKeyboard() {
