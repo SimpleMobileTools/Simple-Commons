@@ -86,11 +86,17 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
             if (updatedFiles[1].isDirectory) {
                 val files = updatedFiles[1].listFiles()
                 if (files != null) {
-                    for (file in files) {
-                        scanPath(file.absolutePath) {
+                    if (files.isEmpty()) {
+                        scanPath(updatedFiles[1].absolutePath) {
                             callback(updatedFiles[1].absolutePath)
                         }
-                        break
+                    } else {
+                        for (file in files) {
+                            scanPath(file.absolutePath) {
+                                callback(updatedFiles[1].absolutePath)
+                            }
+                            break
+                        }
                     }
                 }
             } else {
