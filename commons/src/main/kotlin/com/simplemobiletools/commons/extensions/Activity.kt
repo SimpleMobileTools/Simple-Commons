@@ -175,7 +175,7 @@ fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = fal
 
         if (!fileDeleted && isPathOnSD(file.absolutePath)) {
             handleSAFDialog(file) {
-                fileDeleted = tryFastDocumentDelete(file)
+                fileDeleted = tryFastDocumentDelete(file, allowDeleteFolder)
                 if (!fileDeleted) {
                     val document = getFileDocument(file.absolutePath, baseConfig.treeUri)
                     fileDeleted = (document?.isFile == true || allowDeleteFolder) && document?.delete() == true

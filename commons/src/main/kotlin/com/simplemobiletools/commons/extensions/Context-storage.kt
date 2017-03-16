@@ -24,6 +24,7 @@ import java.util.regex.Pattern
 fun Context.hasReadStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
 fun Context.hasWriteStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
 
+@SuppressLint("NewApi")
 fun Context.storeStoragePaths() {
     Thread({
         baseConfig.internalStoragePath = getInternalStoragePath()
@@ -148,10 +149,10 @@ fun Context.getFileDocument(path: String, treeUri: String): DocumentFile? {
 }
 
 @SuppressLint("NewApi")
-fun Context.tryFastDocumentDelete(file: File): Boolean {
+fun Context.tryFastDocumentDelete(file: File, allowDeleteFolder: Boolean): Boolean {
     val document = getFastDocument(file)
-    return if (document?.isFile == true) {
-        document.delete()
+    return if (document?.isFile == true || allowDeleteFolder) {
+        document?.delete() ?: false
     } else
         false
 }
