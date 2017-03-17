@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.activities
 
+import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.app.Activity
 import android.content.Intent
@@ -8,12 +9,12 @@ import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.provider.DocumentsContract
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.isShowingSAFDialog
-import com.simplemobiletools.commons.extensions.sdCardPath
 import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
@@ -72,9 +73,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
         super.onActivityResult(requestCode, resultCode, resultData)
         if (requestCode == OPEN_DOCUMENT_TREE && resultCode == Activity.RESULT_OK && resultData != null) {
-            val uriEnding = resultData.dataString.split("/").last()
-            val sdCardEnding = sdCardPath.split("/").last()
-            if (uriEnding.startsWith(sdCardEnding)) {
+            if (isProperFolder(resultData.data)) {
                 saveTreeUri(resultData)
                 funAfterPermission?.invoke()
             } else {
@@ -92,6 +91,16 @@ open class BaseSimpleActivity : AppCompatActivity() {
         val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
         contentResolver.takePersistableUriPermission(treeUri, takeFlags)
     }
+
+    private fun isProperFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
+
+    @SuppressLint("NewApi")
+    private fun isRootUri(uri: Uri) = DocumentsContract.getTreeDocumentId(uri).endsWith(":")
+
+    @SuppressLint("NewApi")
+    private fun isInternalStorage(uri: Uri) = isExternalStorageDocument(uri) && DocumentsContract.getTreeDocumentId(uri).contains("primary")
+
+    private fun isExternalStorageDocument(uri: Uri) = "com.android.externalstorage.documents" == uri.authority
 
     fun startAboutActivity(appNameId: Int, licenseMask: Int, versionName: String) {
         Intent(applicationContext, AboutActivity::class.java).apply {
