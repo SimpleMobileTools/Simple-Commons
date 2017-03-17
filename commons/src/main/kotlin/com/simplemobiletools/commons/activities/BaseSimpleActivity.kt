@@ -78,7 +78,8 @@ open class BaseSimpleActivity : AppCompatActivity() {
                 funAfterPermission?.invoke()
             } else {
                 toast(R.string.wrong_root_selected)
-                funAfterPermission = null
+                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
+                startActivityForResult(intent, requestCode)
             }
         }
     }
