@@ -55,6 +55,7 @@ class LicenseActivity : BaseSimpleActivity() {
                     License(LICENSE_JODA, R.string.joda_title, R.string.joda_text, R.string.joda_url),
                     License(LICENSE_STETHO, R.string.stetho_title, R.string.stetho_text, R.string.stetho_url),
                     License(LICENSE_OTTO, R.string.otto_title, R.string.otto_text, R.string.otto_url),
-                    License(LICENSE_PHOTOVIEW, R.string.photoview_title, R.string.photoview_text, R.string.photoview_url)
+                    License(LICENSE_PHOTOVIEW, R.string.photoview_title, R.string.photoview_text, R.string.photoview_url),
+                    License(LICENSE_PICASSO, R.string.picasso_title, R.string.picasso_text, R.string.picasso_url)
             )
 }
