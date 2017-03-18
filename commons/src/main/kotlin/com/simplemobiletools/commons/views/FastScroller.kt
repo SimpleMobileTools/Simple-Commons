@@ -106,7 +106,8 @@ class FastScroller : LinearLayout {
     }
 
     private fun showHandle() {
-        handle.animate().alpha(1f).startDelay = 0L
+        handle.animate().alpha(1f).start()  // override the fade animation
+        handle.alpha = 1f
     }
 
     private fun hideHandle() {
