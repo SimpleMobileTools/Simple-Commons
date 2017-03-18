@@ -101,8 +101,7 @@ class FastScroller : LinearLayout {
     init {
         orientation = LinearLayout.HORIZONTAL
         clipChildren = false
-        val inflater = LayoutInflater.from(context)
-        inflater.inflate(R.layout.fastscroller, this)
+        LayoutInflater.from(context).inflate(R.layout.fastscroller, this)
         handle = fastscroller_handle
     }
 
