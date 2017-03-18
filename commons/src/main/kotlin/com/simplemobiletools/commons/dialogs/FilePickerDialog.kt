@@ -29,7 +29,8 @@ import java.util.*
  * @param currPath initial path of the dialog, defaults to the external storage
  * @param pickFile toggle used to determine if we are picking a file or a folder
  * @param showHidden toggle for showing hidden items, whose name starts with a dot
- * @param listener the callback used for returning the selected file/folder
+ * @param showFAB toggle the displaying of a Floating Action Button for creating new folders
+ * @param callback the callback used for returning the selected file/folder
  */
 class FilePickerDialog(val activity: BaseSimpleActivity,
                        var currPath: String = Environment.getExternalStorageDirectory().toString(),
