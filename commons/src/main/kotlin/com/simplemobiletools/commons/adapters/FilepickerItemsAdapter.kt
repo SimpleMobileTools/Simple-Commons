@@ -6,9 +6,11 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.formatSize
+import com.simplemobiletools.commons.extensions.getCacheStrategy
 import com.simplemobiletools.commons.extensions.getColoredDrawableWithColor
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.filepicker_list_item.view.*
@@ -39,9 +41,14 @@ class FilepickerItemsAdapter(val context: Context, private val mItems: List<File
         holder.bindView(mItems[position])
     }
 
+    override fun onViewRecycled(holder: ViewHolder?) {
+        super.onViewRecycled(holder)
+        holder?.stopLoad()
+    }
+
     override fun getItemCount() = mItems.size
 
-    class ViewHolder(val context: Context, view: View, val itemClick: (FileDirItem) -> (Unit)) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(val context: Context, val view: View, val itemClick: (FileDirItem) -> (Unit)) : RecyclerView.ViewHolder(view) {
         fun bindView(fileDirItem: FileDirItem) {
             itemView.apply {
                 list_item_name.text = fileDirItem.name
@@ -51,7 +58,8 @@ class FilepickerItemsAdapter(val context: Context, private val mItems: List<File
                     list_item_icon.setImageDrawable(folderDrawable)
                     list_item_details.text = getChildrenCnt(fileDirItem)
                 } else {
-                    list_item_icon.setImageDrawable(fileDrawable)
+                    val path = fileDirItem.path
+                    Glide.with(context).load(path).diskCacheStrategy(path.getCacheStrategy()).error(fileDrawable).centerCrop().crossFade().into(list_item_icon)
                     list_item_details.text = fileDirItem.size.formatSize()
                 }
 
@@ -63,6 +71,10 @@ class FilepickerItemsAdapter(val context: Context, private val mItems: List<File
         private fun getChildrenCnt(item: FileDirItem): String {
             val children = item.children
             return context.resources.getQuantityString(R.plurals.items, children, children)
+        }
+
+        fun stopLoad() {
+            Glide.clear(view.list_item_icon)
         }
     }
 }
