@@ -212,6 +212,25 @@ private fun deleteRecursively(file: File): Boolean {
     return file.delete()
 }
 
+fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (success: Boolean) -> Unit) {
+    if (needsStupidWritePermissions(newFile.absolutePath)) {
+        handleSAFDialog(newFile) {
+            val document = getFileDocument(oldFile.absolutePath, baseConfig.treeUri)
+            if (document == null) {
+                callback(false)
+                return@handleSAFDialog
+            }
+
+            callback(document.canWrite() && document.renameTo(newFile.name))
+        }
+    } else if (oldFile.renameTo(newFile)) {
+        newFile.setLastModified(System.currentTimeMillis())
+        callback(true)
+    } else {
+        callback(false)
+    }
+}
+
 fun Activity.hideKeyboard() {
     val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
     inputMethodManager.hideSoftInputFromWindow((currentFocus ?: View(this)).windowToken, 0)

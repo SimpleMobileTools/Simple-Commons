@@ -62,20 +62,13 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
                 }
 
                 updatedFiles.add(newFile)
-                if (activity.needsStupidWritePermissions(file.absolutePath)) {
-                    activity.handleSAFDialog(file) {
-                        val document = activity.getFileDocument(file.absolutePath, activity.baseConfig.treeUri) ?: return@handleSAFDialog
-                        if (document.canWrite())
-                            document.renameTo(newName)
+                activity.renameFile(file, newFile) {
+                    if (it) {
                         sendSuccess(updatedFiles)
                         dismiss()
+                    } else {
+                        activity.toast(R.string.unknown_error_occurred)
                     }
-                } else if (file.renameTo(newFile)) {
-                    updatedFiles[1].setLastModified(System.currentTimeMillis())
-                    sendSuccess(updatedFiles)
-                    dismiss()
-                } else {
-                    activity.toast(R.string.unknown_error_occurred)
                 }
             })
         }
