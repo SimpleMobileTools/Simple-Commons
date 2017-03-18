@@ -3,7 +3,7 @@ package com.simplemobiletools.commons.views
 import android.content.Context
 import android.graphics.PorterDuff
 import android.support.v4.widget.SwipeRefreshLayout
-import android.support.v7.widget.GridLayoutManager
+import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -29,7 +29,7 @@ class FastScroller : LinearLayout {
 
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
 
-    fun setViews(recyclerView: RecyclerView, swipeRefreshLayout: SwipeRefreshLayout) {
+    fun setViews(recyclerView: RecyclerView, swipeRefreshLayout: SwipeRefreshLayout? = null) {
         this.recyclerView = recyclerView
         this.swipeRefreshLayout = swipeRefreshLayout
         handle.background.setColorFilter(context.baseConfig.primaryColor, PorterDuff.Mode.SRC_IN)
@@ -94,7 +94,7 @@ class FastScroller : LinearLayout {
             val itemCount = recyclerView!!.adapter.itemCount
             val proportion = y / currHeight
             val targetPos = getValueInRange(0f, (itemCount - 1).toFloat(), proportion * itemCount).toInt()
-            (recyclerView!!.layoutManager as GridLayoutManager).scrollToPositionWithOffset(targetPos, 0)
+            (recyclerView!!.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(targetPos, 0)
         }
     }
 

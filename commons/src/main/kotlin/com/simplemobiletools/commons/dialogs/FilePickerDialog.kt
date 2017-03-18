@@ -139,6 +139,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
             directory_picker_list.adapter = adapter
             directory_picker_breadcrumbs.setBreadcrumb(currPath)
+            directory_fastscroller.setViews(directory_picker_list)
         }
 
         layoutManager.onRestoreInstanceState(mScrollStates[currPath.trimEnd('/')])

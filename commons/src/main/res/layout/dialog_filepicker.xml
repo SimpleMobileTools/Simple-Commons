@@ -6,9 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <RelativeLayout
         android:id="@+id/directory_picker_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,10 +22,22 @@
             android:id="@+id/directory_picker_list"
             android:layout_width="match_parent"
             android:layout_height="1000dp"
-            android:scrollbars="vertical"
+            android:layout_below="@+id/directory_picker_breadcrumbs"
+            android:scrollbars="none"
             app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
 
-    </LinearLayout>
+        <com.simplemobiletools.commons.views.FastScroller
+            android:id="@+id/directory_fastscroller"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/directory_picker_list"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/directory_picker_list"
+            android:paddingLeft="@dimen/normal_margin"
+            android:paddingStart="@dimen/normal_margin"/>
+
+    </RelativeLayout>
 
     <com.simplemobiletools.commons.views.MyFloatingActionButton
         android:id="@+id/directory_picker_fab"
@@ -37,4 +47,5 @@
         android:layout_margin="@dimen/activity_margin"
         android:src="@drawable/ic_plus"
         android:visibility="gone"/>
+
 </android.support.design.widget.CoordinatorLayout>
