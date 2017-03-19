@@ -155,7 +155,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun sendSuccess() {
-        callback.invoke(currPath.trimEnd('/'))
+        callback.invoke(if (currPath.length == 1) currPath else currPath.trimEnd('/'))
         mDialog.dismiss()
     }
 
