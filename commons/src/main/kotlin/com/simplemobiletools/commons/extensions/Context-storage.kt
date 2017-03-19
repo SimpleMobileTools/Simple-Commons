@@ -1,18 +1,15 @@
 package com.simplemobiletools.commons.extensions
 
-import android.Manifest
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.content.ContentValues
 import android.content.Context
-import android.content.pm.PackageManager
 import android.database.sqlite.SQLiteConstraintException
 import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
-import android.support.v4.content.ContextCompat
 import android.support.v4.content.FileProvider
 import android.support.v4.provider.DocumentFile
 import android.text.TextUtils
@@ -20,9 +17,6 @@ import com.simplemobiletools.commons.R
 import java.io.File
 import java.util.*
 import java.util.regex.Pattern
-
-fun Context.hasReadStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
-fun Context.hasWriteStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
 
 @SuppressLint("NewApi")
 fun Context.storeStoragePaths() {

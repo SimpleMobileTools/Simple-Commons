@@ -27,3 +27,16 @@ fun Resources.getColoredDrawableWithColor(resId: Int, color: Int): Drawable {
     drawable.mutate().setColorFilter(color, PorterDuff.Mode.SRC_IN)
     return drawable
 }
+
+fun Resources.hasNavBar(): Boolean {
+    val id = getIdentifier("config_showNavigationBar", "bool", "android")
+    return id > 0 && getBoolean(id)
+}
+
+fun Resources.getNavBarHeight(): Int {
+    val id = getIdentifier("navigation_bar_height", "dimen", "android")
+    return if (id > 0 && hasNavBar()) {
+        getDimensionPixelSize(id)
+    } else
+        0
+}
