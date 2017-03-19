@@ -4,7 +4,6 @@ import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
 import android.graphics.drawable.ColorDrawable
-import android.hardware.Camera
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
@@ -27,8 +26,8 @@ fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIV
 
 fun Context.hasReadStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
 fun Context.hasWriteStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
-fun Context.hasCameraPermission(context: Context) = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED
-fun Context.hasRecordAudioPermission(cxt: Context) = ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED
+fun Context.hasCameraPermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED
+fun Context.hasRecordAudioPermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED
 
 fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAccentColor: Int = 0) {
     val textColor = if (tmpTextColor == 0) baseConfig.textColor else tmpTextColor
