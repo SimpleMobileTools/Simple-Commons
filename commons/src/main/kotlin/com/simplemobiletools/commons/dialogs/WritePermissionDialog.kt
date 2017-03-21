@@ -15,7 +15,7 @@ import com.simplemobiletools.commons.extensions.setupDialogStuff
  *
  */
 class WritePermissionDialog(context: Context, val callback: () -> Unit) {
-    var dialog: AlertDialog? = null
+    var dialog: AlertDialog
 
     init {
         val view = LayoutInflater.from(context).inflate(R.layout.dialog_write_permission, null)
@@ -29,7 +29,7 @@ class WritePermissionDialog(context: Context, val callback: () -> Unit) {
     }
 
     private fun dialogConfirmed() {
-        dialog?.dismiss()
+        dialog.dismiss()
         callback.invoke()
     }
 }

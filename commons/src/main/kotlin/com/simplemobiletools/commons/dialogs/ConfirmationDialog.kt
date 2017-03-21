@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.dialog_message.view.*
  */
 class ConfirmationDialog(val context: Context, message: String = "", messageId: Int = R.string.proceed_with_deletion, positive: Int = R.string.yes,
                          negative: Int = R.string.no, val callback: () -> Unit) {
-    var dialog: AlertDialog? = null
+    var dialog: AlertDialog
 
     init {
         val view = LayoutInflater.from(context).inflate(R.layout.dialog_message, null)
@@ -37,7 +37,7 @@ class ConfirmationDialog(val context: Context, message: String = "", messageId: 
     }
 
     private fun dialogConfirmed() {
-        dialog?.dismiss()
+        dialog.dismiss()
         callback.invoke()
     }
 }

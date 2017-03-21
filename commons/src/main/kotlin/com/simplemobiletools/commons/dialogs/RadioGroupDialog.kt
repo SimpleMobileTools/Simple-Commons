@@ -13,7 +13,7 @@ import java.util.*
 
 class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, val checkedItemId: Int, val callback: (newValue: Any) -> Unit) :
         AlertDialog.Builder(activity), RadioGroup.OnCheckedChangeListener {
-    val dialog: AlertDialog?
+    val dialog: AlertDialog
     var wasInit = false
 
     init {
@@ -41,7 +41,7 @@ class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, 
     override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
         if (wasInit) {
             callback.invoke(items[checkedId].value)
-            dialog?.dismiss()
+            dialog.dismiss()
         }
     }
 }

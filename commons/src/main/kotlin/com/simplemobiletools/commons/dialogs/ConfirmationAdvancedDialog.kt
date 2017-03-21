@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.dialog_message.view.*
 
 class ConfirmationAdvancedDialog(context: Context, message: String = "", messageId: Int = R.string.proceed_with_deletion, positive: Int = R.string.yes,
                                  negative: Int, val listener: Listener) {
-    var dialog: AlertDialog? = null
+    var dialog: AlertDialog
 
     init {
         val view = LayoutInflater.from(context).inflate(R.layout.dialog_message, null)
@@ -24,12 +24,12 @@ class ConfirmationAdvancedDialog(context: Context, message: String = "", message
     }
 
     private fun positivePressed() {
-        dialog?.dismiss()
+        dialog.dismiss()
         listener.onPositive()
     }
 
     private fun negativePressed() {
-        dialog?.dismiss()
+        dialog.dismiss()
         listener.onNegative()
     }
 
