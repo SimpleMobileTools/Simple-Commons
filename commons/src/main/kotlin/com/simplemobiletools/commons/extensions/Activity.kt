@@ -20,8 +20,10 @@ fun Activity.isShowingSAFDialog(file: File, treeUri: String, requestCode: Int): 
     return if ((needsStupidWritePermissions(file.absolutePath) && treeUri.isEmpty())) {
         runOnUiThread {
             WritePermissionDialog(this) {
-                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
-                startActivityForResult(intent, requestCode)
+                Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
+                    type = "*/*"
+                    startActivityForResult(intent, requestCode)
+                }
             }
         }
         true
