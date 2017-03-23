@@ -4,8 +4,8 @@
     <string name="search">Cerca</string>
     <string name="save_as">Salva come </string>
     <string name="file_saved">File salvato correttamente</string>
-    <string name="invalid_file_format">Invalid file format</string>
-    <string name="no_storage_permissions">We need the permission to access your storage</string>
+    <string name="invalid_file_format">Formato file non valido</string>
+    <string name="no_storage_permissions">È necessaria l'autorizzazione per l\'accesso all\'archiviazione</string>
 
     <!-- Renaming -->
     <string name="rename_file">Rinomina file</string>
@@ -19,7 +19,7 @@
     <string name="renaming_folder">Rinominazione cartella</string>
     <string name="filename_cannot_be_empty">Il nome del file non deve essere vuoto</string>
     <string name="filename_invalid_characters">Il nome contiene caratteri non validi</string>
-    <string name="extension_cannot_be_empty">Extension cannot be empty</string>
+    <string name="extension_cannot_be_empty">L\'estensione non può essere vuota</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copia</string>
@@ -28,7 +28,7 @@
     <string name="source">Fonte</string>
     <string name="destination">Destinazione</string>
     <string name="select_destination">Seleziona destinazione</string>
-    <string name="click_select_destination">Click here to select destination</string>
+    <string name="click_select_destination">Clicca qui per selezionare la destinazione</string>
     <string name="invalid_destination">Impossibile scrivere nella destinazione selezionata</string>
     <string name="please_select_destination">Seleziona una destinazione</string>
     <string name="source_and_destination_same">Sorgente e destinazione non possono essere uguali</string>
@@ -43,13 +43,13 @@
     <string name="folder_exists">Esiste già una cartella con quel nome</string>
 
     <!-- Create new -->
-    <string name="create_new">Create new</string>
-    <string name="folder">Folder</string>
+    <string name="create_new">Crea nuovo</string>
+    <string name="folder">Cartella</string>
     <string name="file">File</string>
-    <string name="create_new_folder">Create new folder</string>
-    <string name="name_taken">A file or folder with that name already exists</string>
+    <string name="create_new_folder">Crea nuova cartella</string>
+    <string name="name_taken">Esiste già un file o una cartella con quel nome</string>
     <string name="invalid_name">Il nome contiene caratteri non validi</string>
-    <string name="empty_name">Please enter a name</string>
+    <string name="empty_name">Inserisci un nome</string>
     <string name="unknown_error_occurred">Riscontrato un errore sconosciuto</string>
 
     <!-- Copy conflicts -->
@@ -63,7 +63,7 @@
     <!-- File picker -->
     <string name="select_folder">Seleziona una cartella</string>
     <string name="select_file">Seleziona un file</string>
-    <string name="confirm_storage_access_title">Conferma l\'accesso all\'archivio esterno</string>
+    <string name="confirm_storage_access_title">Conferma l\'accesso all\'archiviazione esterna</string>
     <string name="confirm_storage_access_text">Scegli la root della scheda SD nella prossima schermata, per consentire i permessi di scrittura</string>
 
     <plurals name="items">
@@ -72,11 +72,11 @@
     </plurals>
 
     <!-- Storages -->
-    <string name="select_storage">Seleziona archivio</string>
-    <string name="internal">Interno</string>
+    <string name="select_storage">Seleziona archiviazione</string>
+    <string name="internal">Interna</string>
     <string name="sd_card">Scheda SD</string>
     <string name="root">Root</string>
-    <string name="wrong_root_selected">Wrong folder selected, please select the root folder of your SD card</string>
+    <string name="wrong_root_selected">Selezionata una cartella errata, seleziona la cartella di root della tua scheda SD</string>
 
     <!-- File properties -->
     <string name="properties">Proprietà</string>
@@ -88,17 +88,17 @@
     <string name="duration">Durata</string>
     <string name="artist">Artista</string>
     <string name="album">Album</string>
-    <string name="focal_length">Focal length</string>
-    <string name="exposure_time">Exposure time</string>
-    <string name="iso_speed">ISO speed</string>
-    <string name="f_number">F-number</string>
+    <string name="focal_length">Lunghezza focale</string>
+    <string name="exposure_time">Tempo di esposizione</string>
+    <string name="iso_speed">Velocità ISO</string>
+    <string name="f_number">Rapporto focale</string>
 
     <!-- Color customization -->
     <string name="background_color">Colore di sfondo</string>
     <string name="text_color">Colore del testo</string>
     <string name="primary_color">Colore primario</string>
-    <string name="restore_defaults">Restore defaults</string>
-    <string name="theme">Theme</string>
+    <string name="restore_defaults">Ripristina predefiniti</string>
+    <string name="theme">Tema</string>
     <string name="light_theme">Tema chiaro</string>
     <string name="dark_theme">Tema scuro</string>
     <string name="custom">Personale</string>
@@ -110,7 +110,7 @@
 
     <!-- What's new -->
     <string name="whats_new">Novità</string>
-    <string name="whats_new_disclaimer">* qui sono elencate solo le modifiche maggiori, ci sono sempre anche piccoli miglioramenti</string>
+    <string name="whats_new_disclaimer">* qui vengono elencate solo le modifiche maggiori, ci sono sempre anche altri piccoli miglioramenti</string>
 
     <!-- Actionbar items -->
     <string name="delete">Elimina</string>
@@ -130,7 +130,7 @@
     <string name="extension">Estensione</string>
     <string name="ascending">Ascendente</string>
     <string name="descending">Discendente</string>
-    <string name="use_for_this_folder">Use for this folder only</string>
+    <string name="use_for_this_folder">Usa solo per questa cartella</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Sei sicuro di procedere con l\'eliminazione?</string>
@@ -165,9 +165,9 @@
     <string name="picasso_title">Picasso (caricamento e caching immagini)</string>
     <string name="cropper_title">Android Image Cropper (ritaglio e rotazione immagini)</string>
     <string name="multiselect_title">RecyclerView MultiSelect (selezione elementi multipli da liste)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (swipe da destra a sinistra)</string>
     <string name="joda_title">Joda-Time (sostituto di \"Java date\")</string>
     <string name="stetho_title">Stetho (debug database)</string>
     <string name="otto_title">Otto (bus eventi)</string>
-    <string name="photoview_title">PhotoView (zoomable gifs)</string>
+    <string name="photoview_title">PhotoView (gif zoomabili)</string>
 </resources>
