@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?attr/selectableItemBackground"
+    android:paddingEnd="@dimen/activity_margin"
     android:paddingRight="@dimen/activity_margin">
 
     <ImageView
@@ -20,10 +21,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/list_item_icon"
+        android:layout_toEndOf="@+id/list_item_icon"
         android:layout_toRightOf="@+id/list_item_icon"
         android:ellipsize="end"
         android:maxLines="3"
         android:paddingLeft="@dimen/small_margin"
+        android:paddingStart="@dimen/small_margin"
         android:paddingTop="@dimen/small_margin"
         android:text="Directory"/>
 
@@ -32,8 +35,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/list_item_name"
+        android:layout_toEndOf="@+id/list_item_icon"
         android:layout_toRightOf="@+id/list_item_icon"
         android:paddingLeft="@dimen/small_margin"
+        android:paddingStart="@dimen/small_margin"
         android:text="1 KB"
         android:textSize="@dimen/smaller_text_size"/>
 
