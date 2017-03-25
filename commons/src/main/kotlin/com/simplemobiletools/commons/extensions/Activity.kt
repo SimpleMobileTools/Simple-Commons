@@ -21,8 +21,10 @@ fun Activity.isShowingSAFDialog(file: File, treeUri: String, requestCode: Int): 
         runOnUiThread {
             WritePermissionDialog(this) {
                 Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
-                    type = "*/*"
-                    startActivityForResult(intent, requestCode)
+                    if (resolveActivity(packageManager) == null) {
+                        type = "*/*"
+                    }
+                    startActivityForResult(this, requestCode)
                 }
             }
         }
