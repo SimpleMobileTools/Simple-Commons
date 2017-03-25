@@ -57,14 +57,14 @@ class PropertiesDialog() {
             addProperty(R.string.direct_children_count, getDirectChildrenCount(file, countHiddenItems))
             addProperty(R.string.files_count, "...", R.id.properties_file_count)
         } else if (file.isImageSlow()) {
-            addProperty(R.string.resolution, file.getImageResolution())
+            addProperty(R.string.resolution, file.getResolution().formatAsResolution())
         } else if (file.isAudioSlow()) {
             addProperty(R.string.duration, file.getDuration())
             addProperty(R.string.artist, file.getArtist())
             addProperty(R.string.album, file.getAlbum())
         } else if (file.isVideoSlow()) {
             addProperty(R.string.duration, file.getDuration())
-            addProperty(R.string.resolution, file.getVideoResolution())
+            addProperty(R.string.resolution, file.getResolution().formatAsResolution())
             addProperty(R.string.artist, file.getArtist())
             addProperty(R.string.album, file.getAlbum())
         }

@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.extensions
 
 import android.graphics.BitmapFactory
+import android.graphics.Point
 import android.media.MediaMetadataRetriever
 import java.io.File
 
@@ -23,7 +24,7 @@ fun File.getMimeType(default: String = getDefaultMimeType()): String {
     }
 }
 
-fun File.getDefaultMimeType() = if (isVideoFast()) "video/*" else "image/*"
+fun File.getDefaultMimeType() = if (isVideoFast()) "video/*" else if (isImageFast()) "image/*" else ""
 
 fun File.getDuration(): String {
     val retriever = MediaMetadataRetriever()
@@ -45,30 +46,32 @@ fun File.getAlbum(): String? {
     return retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUM)
 }
 
-fun File.getVideoResolution(): String {
+fun File.getResolution(): Point {
+    return if (isImageFast() || isImageSlow()) {
+        getImageResolution()
+    } else if (isVideoFast() || isVideoSlow()) {
+        getVideoResolution()
+    } else {
+        return Point(0, 0)
+    }
+}
+
+fun File.getVideoResolution(): Point {
     try {
         val retriever = MediaMetadataRetriever()
         retriever.setDataSource(path)
         val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH).toInt()
         val height = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT).toInt()
-        return "$width x $height ${getMPx(width, height)}"
+        return Point(width, height)
     } catch (ignored: Exception) {
 
     }
-    return ""
+    return Point(0, 0)
 }
 
-fun File.getImageResolution(): String {
+fun File.getImageResolution(): Point {
     val options = BitmapFactory.Options()
     options.inJustDecodeBounds = true
     BitmapFactory.decodeFile(path, options)
-    val width = options.outWidth
-    val height = options.outHeight
-    return "$width x $height ${getMPx(width, height)}"
-}
-
-fun getMPx(width: Int, height: Int): String {
-    val px = width * height / 1000000.toFloat()
-    val rounded = Math.round(px * 10) / 10.toFloat()
-    return "(${rounded}MP)"
+    return Point(options.outWidth, options.outHeight)
 }
