@@ -17,7 +17,7 @@ fun File.isAudioSlow() = getMimeType().startsWith("audio")
 fun File.getMimeType(default: String = getDefaultMimeType()): String {
     return try {
         val retriever = MediaMetadataRetriever()
-        retriever.setDataSource(path)
+        retriever.setDataSource(absolutePath)
         retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_MIMETYPE)
     } catch (ignored: Exception) {
         default
@@ -28,7 +28,7 @@ fun File.getDefaultMimeType() = if (isVideoFast()) "video/*" else if (isImageFas
 
 fun File.getDuration(): String {
     val retriever = MediaMetadataRetriever()
-    retriever.setDataSource(path)
+    retriever.setDataSource(absolutePath)
     val time = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)
     val timeInMs = java.lang.Long.parseLong(time)
     return (timeInMs / 1000).toInt().getFormattedDuration()
@@ -36,13 +36,13 @@ fun File.getDuration(): String {
 
 fun File.getArtist(): String? {
     val retriever = MediaMetadataRetriever()
-    retriever.setDataSource(path)
+    retriever.setDataSource(absolutePath)
     return retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST)
 }
 
 fun File.getAlbum(): String? {
     val retriever = MediaMetadataRetriever()
-    retriever.setDataSource(path)
+    retriever.setDataSource(absolutePath)
     return retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUM)
 }
 
@@ -59,7 +59,7 @@ fun File.getResolution(): Point {
 fun File.getVideoResolution(): Point {
     try {
         val retriever = MediaMetadataRetriever()
-        retriever.setDataSource(path)
+        retriever.setDataSource(absolutePath)
         val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH).toInt()
         val height = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT).toInt()
         return Point(width, height)
@@ -72,6 +72,6 @@ fun File.getVideoResolution(): Point {
 fun File.getImageResolution(): Point {
     val options = BitmapFactory.Options()
     options.inJustDecodeBounds = true
-    BitmapFactory.decodeFile(path, options)
+    BitmapFactory.decodeFile(absolutePath, options)
     return Point(options.outWidth, options.outHeight)
 }
