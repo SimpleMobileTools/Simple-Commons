@@ -53,7 +53,7 @@
     <string name="unknown_error_occurred">Ein unbekannter Fehler ist aufgetreten</string>
 
     <!-- Copy conflicts -->
-    <string name="file_already_exists">Datei $%1s existiert bereits</string>
+    <string name="file_already_exists">Datei %1$s existiert bereits</string>
     <string name="select_an_action">Aktion auswählen</string>
     <string name="overwrite">Überschreiben</string>
     <string name="skip">Überspringen</string>

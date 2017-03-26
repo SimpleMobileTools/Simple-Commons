@@ -53,7 +53,7 @@
     <string name="unknown_error_occurred">Произошла неизвестная ошибка</string>
 
     <!-- Copy conflicts -->
-    <string name="file_already_exists">Файл $%1s уже существует</string>
+    <string name="file_already_exists">Файл %1$s уже существует</string>
     <string name="select_an_action">Выберите действие</string>
     <string name="overwrite">Перезаписать</string>
     <string name="skip">Пропустить</string>

@@ -53,7 +53,7 @@
     <string name="unknown_error_occurred">不明なエラーが発生しました</string>
 
     <!-- Copy conflicts -->
-    <string name="file_already_exists">File $%1s already exists</string>
+    <string name="file_already_exists">File %1$s already exists</string>
     <string name="select_an_action">Select an action</string>
     <string name="overwrite">Overwrite</string>
     <string name="skip">Skip</string>
