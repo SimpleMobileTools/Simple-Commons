@@ -4,8 +4,8 @@
     <string name="search">Recherche</string>
     <string name="save_as">Sauvegarder sous</string>
     <string name="file_saved">Fichier sauvegardé avec succès</string>
-    <string name="invalid_file_format">Invalid file format</string>
-    <string name="no_storage_permissions">We need the permission to access your storage</string>
+    <string name="invalid_file_format">Format de fichier invalide</string>
+    <string name="no_storage_permissions">Nous avons besoin de la permission d\'accéder à votre stockage</string>
 
     <!-- Renaming -->
     <string name="rename_file">Renommer le fichier</string>
@@ -40,16 +40,16 @@
     <string name="moving_success">Fichiers déplacés avec succès</string>
     <string name="moving_success_partial">Certains fichiers n\'ont pu être déplacés</string>
     <string name="copying_success_partial">Certains fichiers n\'ont pu être copiés</string>
-    <string name="no_files_selected">No files selected</string>
+    <string name="no_files_selected">Aucun fichier sélectionné</string>
 
     <!-- Create new -->
-    <string name="create_new">Create new</string>
-    <string name="folder">Folder</string>
-    <string name="file">File</string>
-    <string name="create_new_folder">Create new folder</string>
-    <string name="name_taken">Directory or file with that name already exists</string>
+    <string name="create_new">Créer nouveau</string>
+    <string name="folder">Dossier</string>
+    <string name="file">Fichier</string>
+    <string name="create_new_folder">Créer un nouveau dossier</string>
+    <string name="name_taken">Un répertoire ou un fichier avec ce nom existe déjà</string>
     <string name="invalid_name">Le nom contient des caractères invalides</string>
-    <string name="empty_name">Please enter a name</string>
+    <string name="empty_name">Veuillez saisir un nom</string>
     <string name="unknown_error_occurred">Une erreur inconnue est survenue.</string>
 
     <!-- Copy conflicts -->
@@ -76,7 +76,7 @@
     <string name="internal">Interne</string>
     <string name="sd_card">Carte SD</string>
     <string name="root">Racine</string>
-    <string name="wrong_root_selected">Wrong folder selected, please select the root folder of your SD card</string>
+    <string name="wrong_root_selected">Mauvais dossier sélectionné, veuillez sélectionner le dossier racine de votre carte SD</string>
 
     <!-- File properties -->
     <string name="properties">Propriétés</string>
@@ -88,17 +88,17 @@
     <string name="duration">Durée</string>
     <string name="artist">Artiste</string>
     <string name="album">Album</string>
-    <string name="focal_length">Focal length</string>
-    <string name="exposure_time">Exposure time</string>
-    <string name="iso_speed">ISO speed</string>
-    <string name="f_number">F-number</string>
+    <string name="focal_length">Longueur de focale</string>
+    <string name="exposure_time">Durée d'exposition</string>
+    <string name="iso_speed">Sensibilité ISO</string>
+    <string name="f_number">Ouverture</string>
 
     <!-- Color customization -->
     <string name="background_color">Couleur d\'arrière-plan</string>
     <string name="text_color">Couleur du texte</string>
     <string name="primary_color">Couleur primaire</string>
-    <string name="restore_defaults">Restore defaults</string>
-    <string name="theme">Theme</string>
+    <string name="restore_defaults">Restaurer les valeurs par défaut</string>
+    <string name="theme">Thème</string>
     <string name="light_theme">Thème lumineux</string>
     <string name="dark_theme">Thème sombre</string>
     <string name="custom">Personnalisé</string>
@@ -125,12 +125,12 @@
     <string name="size">Taille</string>
     <string name="last_modified">Dernière modification</string>
     <string name="date_taken">Date prise</string>
-    <string name="title">Title</string>
-    <string name="filename">Filename</string>
+    <string name="title">Titre</string>
+    <string name="filename">Nom de fichier</string>
     <string name="extension">Extension</string>
     <string name="ascending">Croissant</string>
     <string name="descending">Décroissant</string>
-    <string name="use_for_this_folder">Use for this folder only</string>
+    <string name="use_for_this_folder">Utiliser pour ce dossier uniquement</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Etes-vous sûr de vouloir effectuer la suppression ?</string>
@@ -169,5 +169,5 @@
     <string name="joda_title">Joda-Time (remplacement de date Java)</string>
     <string name="stetho_title">Stetho (débogage de bases de données)</string>
     <string name="otto_title">Otto (bus d\'évenement)</string>
-    <string name="photoview_title">PhotoView (zoomable gifs)</string>
+    <string name="photoview_title">PhotoView (gifs zoomables)</string>
 </resources>
