@@ -50,6 +50,9 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         if (!File(currPath).exists())
             currPath = activity.internalStoragePath
 
+        if (File(currPath).isFile)
+            currPath = File(currPath).parent
+
         mDialogView.directory_picker_breadcrumbs.setListener(this)
         updateItems()
 
