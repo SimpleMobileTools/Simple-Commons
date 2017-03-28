@@ -1,0 +1,173 @@
+<resources>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancelar</string>
+    <string name="search">Pesquisar</string>
+    <string name="save_as">Guardar como</string>
+    <string name="file_saved">Ficheiro guardado com sucesso</string>
+    <string name="invalid_file_format">Formato de ficheiro inválido</string>
+    <string name="no_storage_permissions">Necessitamos de permissão para aceder ao armazenamento</string>
+
+    <!-- Renaming -->
+    <string name="rename_file">Renomear ficheiro</string>
+    <string name="rename_folder">Renomear pasta</string>
+    <string name="rename_file_error">Não foi possível renomear o ficheiro</string>
+    <string name="rename_folder_error">Não foi possível renomear a pasta</string>
+    <string name="rename_folder_empty">O nome da pasta não pode estar vazio</string>
+    <string name="rename_folder_exists">Já existe uma pasta com este nome</string>
+    <string name="rename_folder_root">Não pode renomear a pasta raiz de um armazenamento</string>
+    <string name="rename_folder_ok">A pasta foi renomeada com sucesso</string>
+    <string name="renaming_folder">A renomear pasta</string>
+    <string name="filename_cannot_be_empty">O nome do ficheiro não pode estar vazio</string>
+    <string name="filename_invalid_characters">O nome do ficheiro contém caracteres inválidos</string>
+    <string name="extension_cannot_be_empty">A extensão não pode estar vazia</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">Copiar</string>
+    <string name="move">Mover</string>
+    <string name="copy_move">Copiar/mover para</string>
+    <string name="source">Origem</string>
+    <string name="destination">Destino</string>
+    <string name="select_destination">Selecione o destino</string>
+    <string name="click_select_destination">Clique aqui para escolher o destino</string>
+    <string name="invalid_destination">Não foi possível escrever no destino selecionado</string>
+    <string name="please_select_destination">Por favor selecione um destino</string>
+    <string name="source_and_destination_same">A origem e o destino não podem ser iguais</string>
+    <string name="copy_failed">Não foi possível copiar os ficheiros</string>
+    <string name="copying">A copiar&#8230;</string>
+    <string name="copying_success">Ficheiros copiados com sucesso</string>
+    <string name="copy_move_failed">Ocorreu um erro ao copiar</string>
+    <string name="moving">A mover&#8230;</string>
+    <string name="moving_success">Ficheiros movidos com sucesso</string>
+    <string name="moving_success_partial">Alguns ficheiros não foram movidos</string>
+    <string name="copying_success_partial">Alguns ficheiros não foram copiados</string>
+    <string name="no_files_selected">Nenhum ficheiro selecionado</string>
+
+    <!-- Create new -->
+    <string name="create_new">Criar</string>
+    <string name="folder">Pasta</string>
+    <string name="file">Ficheiro</string>
+    <string name="create_new_folder">Criar nova pasta</string>
+    <string name="name_taken">Já existe um ficheiro ou pasta com este nome</string>
+    <string name="invalid_name">O nome contém caracteres inválidos</string>
+    <string name="empty_name">Digite um nome</string>
+    <string name="unknown_error_occurred">Ocorreu um erro desconhecido</string>
+
+    <!-- Copy conflicts -->
+    <string name="file_already_exists">Já existe um ficheiro com o nome %1$s</string>
+    <string name="select_an_action">Selecione uma ação</string>
+    <string name="overwrite">Substituir</string>
+    <string name="skip">Ignorar</string>
+    <string name="append">Anexar \'_1\'</string>
+    <string name="apply_to_all">Aplicar a todos os conflitos</string>
+
+    <!-- File picker -->
+    <string name="select_folder">Selecionar pasta</string>
+    <string name="select_file">Selecionar ficheiro</string>
+    <string name="confirm_storage_access_title">Confirmação de acesso ao armazenamento externo</string>
+    <string name="confirm_storage_access_text">Por favor escolha a pasta raiz do cartão SD no próximo ecrã para conceder acesso de escrita</string>
+
+    <plurals name="items">
+        <item quantity="one">%1$d item</item>
+        <item quantity="other">%1$d itens</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">Selecionar armazenamento</string>
+    <string name="internal">Interno</string>
+    <string name="sd_card">Cartão SD</string>
+    <string name="root">Raiz</string>
+    <string name="wrong_root_selected">Pasta inválida, por favor selecione o cartão SD</string>
+
+    <!-- File properties -->
+    <string name="properties">Propriedades</string>
+    <string name="path">Caminho</string>
+    <string name="items_selected">Itens selecionados</string>
+    <string name="direct_children_count">Itens nesta pasta</string>
+    <string name="files_count">Total de ficheiros</string>
+    <string name="resolution">Resolução</string>
+    <string name="duration">Duração</string>
+    <string name="artist">Artista</string>
+    <string name="album">Álbum</string>
+    <string name="focal_length">Distância focal</string>
+    <string name="exposure_time">Tempo de exposição</string>
+    <string name="iso_speed">Velocidade ISO</string>
+    <string name="f_number">Número F</string>
+
+    <!-- Color customization -->
+    <string name="background_color">Cor de fundo</string>
+    <string name="text_color">Cor do tipo de letra</string>
+    <string name="primary_color">Cor primária</string>
+    <string name="restore_defaults">Restaurar predefinições</string>
+    <string name="theme">Tema</string>
+    <string name="light_theme">Tema claro</string>
+    <string name="dark_theme">Tema escuro</string>
+    <string name="custom">Personalizado</string>
+    <string name="save">Guardar</string>
+    <string name="discard">Descartar</string>
+    <string name="undo_changes">Desfazer alterações</string>
+    <string name="undo_changes_confirmation">Tem a certeza de que deseja desfazer as alterações?</string>
+    <string name="save_before_closing">Possui alterações não guardadas. Guardar antes de sair?</string>
+
+    <!-- What's new -->
+    <string name="whats_new">Novidades</string>
+    <string name="whats_new_disclaimer">* apenas as alterações significativas são listadas aqui, mas existem sempre mais alterações do que as aqui referidas</string>
+
+    <!-- Actionbar items -->
+    <string name="delete">Apagar</string>
+    <string name="rename">Renomear</string>
+    <string name="share">Partilhar</string>
+    <string name="share_via">Partilhar via</string>
+    <string name="select_all">Selecionar tudo</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">Ordenar por</string>
+    <string name="name">Nome</string>
+    <string name="size">Tamanho</string>
+    <string name="last_modified">Data de modificação</string>
+    <string name="date_taken">Data de obtenção</string>
+    <string name="title">Título</string>
+    <string name="filename">Nome do ficheiro</string>
+    <string name="extension">Extensão</string>
+    <string name="ascending">Ascendente</string>
+    <string name="descending">Descendente</string>
+    <string name="use_for_this_folder">Apenas para esta pasta</string>
+
+    <!-- Confirmation dialog -->
+    <string name="proceed_with_deletion">Tem a certeza de que deseja continuar com a eliminação?</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+
+    <!-- Settings -->
+    <string name="settings">Definições</string>
+    <string name="customize_colors">Personalizar cores</string>
+    <string name="show_hidden">Mostrar ficheiros e pastas ocultos</string>
+
+    <!-- About -->
+    <string name="about">Acerca</string>
+    <string name="website_label">Mais aplicações Simple e código fonte em</string>
+    <string name="email_label">Envie os seus comentários ou sugestões para</string>
+    <string name="more_apps_underlined"><u>Mais aplicações</u></string>
+    <string name="third_party_licences_underlined"><u>Licenças de terceiros</u></string>
+    <string name="invite_friends_underlined"><u>Convidar amigos</u></string>
+    <string name="share_text">Olá, experimenta %1$s em %2$s</string>
+    <string name="invite_via">Convidar via</string>
+    <string name="rate_us_underlined"><u>Avalie-nos na Play Store</u></string>
+    <string name="donate_underlined"><u>Donativos</u></string>
+    <string name="follow_us">Siga-nos:</string>
+    <string name="copyright">V %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+
+    <!-- License -->
+    <string name="notice">Esta aplicação usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>
+    <string name="third_party_licences">Licenças de terceiros</string>
+    <string name="kotlin_title">Kotlin (linguagem de programação)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (ampliação de imagens)</string>
+    <string name="glide_title">Glide (carregamento e cache de imagens)</string>
+    <string name="picasso_title">Picasso (carregamento e cache de imagens)</string>
+    <string name="cropper_title">Android Image Cropper (recorte e rotação de imagens)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (seleção múltipla de itens)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (deslizar à direita/esquerda)</string>
+    <string name="joda_title">Joda-Time (sustituto para Java date)</string>
+    <string name="stetho_title">Stetho (depuração a bases de dados)</string>
+    <string name="otto_title">Otto (canal de eventos)</string>
+    <string name="photoview_title">PhotoView (animação de gifs)</string>
+</resources>
