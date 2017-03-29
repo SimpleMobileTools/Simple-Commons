@@ -32,7 +32,7 @@ class FastScroller : LinearLayout {
     fun setViews(recyclerView: RecyclerView, swipeRefreshLayout: SwipeRefreshLayout? = null) {
         this.recyclerView = recyclerView
         this.swipeRefreshLayout = swipeRefreshLayout
-        handle.background.setColorFilter(context.baseConfig.primaryColor, PorterDuff.Mode.SRC_IN)
+        updateHandleColor()
 
         recyclerView.setOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(rv: RecyclerView, dx: Int, dy: Int) {
@@ -48,6 +48,10 @@ class FastScroller : LinearLayout {
                 }
             }
         })
+    }
+
+    fun updateHandleColor() {
+        handle.background.setColorFilter(context.baseConfig.primaryColor, PorterDuff.Mode.SRC_IN)
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
