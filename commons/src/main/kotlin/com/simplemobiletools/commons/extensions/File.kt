@@ -24,7 +24,7 @@ fun File.getMimeType(default: String = getDefaultMimeType()): String {
     }
 }
 
-fun File.getDefaultMimeType() = if (isVideoFast()) "video/*" else if (isImageFast()) "image/*" else ""
+fun File.getDefaultMimeType() = if (isVideoFast()) "video/*" else if (isImageFast()) "image/*" else if (isGif()) "image/gif" else ""
 
 fun File.getDuration(): String {
     val retriever = MediaMetadataRetriever()
