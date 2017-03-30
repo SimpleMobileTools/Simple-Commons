@@ -108,7 +108,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val deleteAfterCopy: Boolea
 
         copyStream(inputStream, out)
         activity.scanFile(destination) {}
-        if (source.length() == destination.length())
+        if (destination.length() > 0)
             mMovedFiles.add(source)
     }
 
