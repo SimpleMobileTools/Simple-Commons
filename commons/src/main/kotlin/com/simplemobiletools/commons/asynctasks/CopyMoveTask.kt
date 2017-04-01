@@ -9,7 +9,7 @@ import java.io.*
 import java.lang.ref.WeakReference
 import java.util.*
 
-class CopyMoveTask(val activity: BaseSimpleActivity, val deleteAfterCopy: Boolean = false, val treeUri: String = "", val copyMediaOnly: Boolean,
+class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = false, val copyMediaOnly: Boolean,
                    listener: CopyMoveTask.CopyMoveListener) : AsyncTask<Pair<ArrayList<File>, File>, Void, Boolean>() {
     private val TAG = CopyMoveTask::class.java.simpleName
     private var mListener: WeakReference<CopyMoveListener>? = null
@@ -40,7 +40,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val deleteAfterCopy: Boolea
             }
         }
 
-        if (deleteAfterCopy) {
+        if (!copyOnly) {
             activity.deleteFiles(mMovedFiles) {}
         }
 
@@ -60,7 +60,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val deleteAfterCopy: Boolea
     private fun copyDirectory(source: File, destination: File) {
         if (!destination.exists()) {
             if (activity.needsStupidWritePermissions(destination.absolutePath)) {
-                val document = activity.getFileDocument(destination.absolutePath, treeUri)
+                val document = activity.getFileDocument(destination.absolutePath, activity.baseConfig.treeUri)
                 document?.createDirectory(destination.name)
             } else if (!destination.mkdirs()) {
                 throw IOException("Could not create dir ${destination.absolutePath}")
@@ -98,7 +98,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val deleteAfterCopy: Boolea
         val inputStream = FileInputStream(source)
         val out: OutputStream?
         if (activity.needsStupidWritePermissions(destination.absolutePath)) {
-            var document = activity.getFileDocument(destination.absolutePath, treeUri) ?: return
+            var document = activity.getFileDocument(destination.absolutePath, activity.baseConfig.treeUri) ?: return
             document = document.createFile("", destination.name)
 
             out = activity.contentResolver.openOutputStream(document.uri)
@@ -127,14 +127,14 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val deleteAfterCopy: Boolea
         val listener = mListener?.get() ?: return
 
         if (success) {
-            listener.copySucceeded(deleteAfterCopy, mFiles.size == mMovedFiles.size)
+            listener.copySucceeded(copyOnly, mFiles.size == mMovedFiles.size)
         } else {
             listener.copyFailed()
         }
     }
 
     interface CopyMoveListener {
-        fun copySucceeded(deleted: Boolean, copiedAll: Boolean)
+        fun copySucceeded(copyOnly: Boolean, copiedAll: Boolean)
 
         fun copyFailed()
     }
