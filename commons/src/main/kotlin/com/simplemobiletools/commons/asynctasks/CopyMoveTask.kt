@@ -106,21 +106,10 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             out = FileOutputStream(destination)
         }
 
-        copyStream(inputStream, out)
+        inputStream.copyTo(out!!)
         activity.scanFile(destination) {}
         if (destination.length() > 0)
             mMovedFiles.add(source)
-    }
-
-    private fun copyStream(inputStream: InputStream, out: OutputStream?) {
-        val buf = ByteArray(1024)
-        var len: Int
-        while (true) {
-            len = inputStream.read(buf)
-            if (len <= 0)
-                break
-            out?.write(buf, 0, len)
-        }
     }
 
     override fun onPostExecute(success: Boolean) {
