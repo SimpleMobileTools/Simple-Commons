@@ -25,8 +25,8 @@
     <string name="copy">Kopyala</string>
     <string name="move">Taşı</string>
     <string name="copy_move">Kopyala / Taşı</string>
-    <string name="copy_to">Copy to</string>
-    <string name="move_to">Move to</string>
+    <string name="copy_to">Kopyala</string>
+    <string name="move_to">Taşı</string>
     <string name="source">Kaynak</string>
     <string name="destination">Hedef</string>
     <string name="select_destination">Hedef seçin</string>
@@ -132,7 +132,7 @@
     <string name="extension">Uzantı</string>
     <string name="ascending">Artan</string>
     <string name="descending">Azalan</string>
-    <string name="use_for_this_folder">Use for this folder only</string>
+    <string name="use_for_this_folder">Yalnızca bu klasör için kullanın</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Silme işlemine devam etmek istediğinizden emin misiniz?</string>
