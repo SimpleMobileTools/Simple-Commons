@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.dialogs
 import android.app.Activity
 import android.support.v7.app.AlertDialog
 import android.view.ViewGroup
+import android.view.ViewTreeObserver
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import com.simplemobiletools.commons.R
@@ -15,6 +16,7 @@ class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, 
         AlertDialog.Builder(activity), RadioGroup.OnCheckedChangeListener {
     val dialog: AlertDialog
     var wasInit = false
+    var selectedItemId = -1
 
     init {
         val view = activity.layoutInflater.inflate(R.layout.dialog_radio_group, null)
@@ -27,6 +29,8 @@ class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, 
                     isChecked = items[i].id == checkedItemId
                     id = i
                 }
+                if (items[i].id == checkedItemId)
+                    selectedItemId = i
                 addView(radioButton, RadioGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
             }
         }
@@ -35,6 +39,18 @@ class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, 
                 .create().apply {
             activity.setupDialogStuff(view, this)
         }
+
+        if (selectedItemId != -1) {
+            view.dialog_radio_holder.apply {
+                viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+                    override fun onGlobalLayout() {
+                        scrollY = view.dialog_radio_group.findViewById(selectedItemId).bottom - height
+                        viewTreeObserver.removeOnGlobalLayoutListener(this)
+                    }
+                })
+            }
+        }
+
         wasInit = true
     }
 
