@@ -7,6 +7,7 @@ val APP_VERSION_NAME = "app_version_name"
 // shared preferences
 val PREFS_KEY = "Prefs"
 val IS_FIRST_RUN = "is_first_run"
+val APP_RUN_COUNT = "app_run_count"
 val LAST_VERSION = "last_version"
 val TREE_URI = "tree_uri_2"
 val SD_CARD_PATH = "sd_card_path_2"

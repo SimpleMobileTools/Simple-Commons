@@ -11,6 +11,7 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.dialogs.DonateDialog
 import com.simplemobiletools.commons.dialogs.WhatsNewDialog
 import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.models.Release
@@ -19,6 +20,11 @@ import java.util.*
 
 @SuppressLint("NewApi")
 fun Activity.storeStoragePaths() {
+    baseConfig.appRunCount++
+    if (baseConfig.appRunCount == 50 || baseConfig.appRunCount == 300 || baseConfig.appRunCount == 1000) {
+        DonateDialog(this)
+    }
+
     Thread({
         baseConfig.internalStoragePath = getInternalStoragePath()
         baseConfig.sdCardPath = getSDCardPath().trimEnd('/')
