@@ -18,14 +18,6 @@ import java.io.File
 import java.util.*
 import java.util.regex.Pattern
 
-@SuppressLint("NewApi")
-fun Context.storeStoragePaths() {
-    Thread({
-        baseConfig.internalStoragePath = getInternalStoragePath()
-        baseConfig.sdCardPath = getSDCardPath().trimEnd('/')
-    }).start()
-}
-
 // http://stackoverflow.com/a/18871043/1967672
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
 fun Context.getSDCardPath(): String {

@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
@@ -15,6 +16,14 @@ import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.models.Release
 import java.io.File
 import java.util.*
+
+@SuppressLint("NewApi")
+fun Activity.storeStoragePaths() {
+    Thread({
+        baseConfig.internalStoragePath = getInternalStoragePath()
+        baseConfig.sdCardPath = getSDCardPath().trimEnd('/')
+    }).start()
+}
 
 fun Activity.isShowingSAFDialog(file: File, treeUri: String, requestCode: Int): Boolean {
     return if ((needsStupidWritePermissions(file.absolutePath) && treeUri.isEmpty())) {
