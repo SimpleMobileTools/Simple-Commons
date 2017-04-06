@@ -87,10 +87,14 @@ class CustomizationActivity : BaseSimpleActivity() {
                     RadioItem(THEME_CUSTOM, getString(R.string.custom)))
 
             RadioGroupDialog(this@CustomizationActivity, items, baseConfig.colorTheme) {
-                baseConfig.colorTheme = it as Int
-                customization_theme.text = getThemeText()
+                updateColorTheme(it as Int)
             }
         }
+    }
+
+    private fun updateColorTheme(themeId: Int = THEME_CUSTOM) {
+        baseConfig.colorTheme = themeId
+        customization_theme.text = getThemeText()
     }
 
     private fun getThemeText() = getString(when (baseConfig.colorTheme) {
@@ -178,6 +182,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             if (hasColorChanged(curTextColor, it)) {
                 setCurrentTextColor(it)
                 colorChanged()
+                updateColorTheme()
             }
         }
     }
@@ -187,6 +192,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             if (hasColorChanged(curBackgroundColor, it)) {
                 setCurrentBackgroundColor(it)
                 colorChanged()
+                updateColorTheme()
             }
         }
     }
@@ -196,6 +202,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             if (hasColorChanged(curPrimaryColor, it)) {
                 setCurrentPrimaryColor(it)
                 colorChanged()
+                updateColorTheme()
             }
         }
     }
