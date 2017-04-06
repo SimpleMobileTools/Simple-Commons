@@ -77,6 +77,24 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun updateColorTheme(themeId: Int = THEME_CUSTOM) {
         baseConfig.colorTheme = themeId
         customization_theme.text = getThemeText()
+
+        resources.apply {
+            if (themeId == THEME_LIGHT) {
+                curTextColor = getColor(R.color.default_light_theme_text_color)
+                curBackgroundColor = getColor(R.color.default_light_theme_background_color)
+                curPrimaryColor = getColor(R.color.color_primary)
+                colorChanged()
+            } else if (themeId == THEME_DARK) {
+                curTextColor = getColor(R.color.default_dark_theme_text_color)
+                curBackgroundColor = getColor(R.color.default_dark_theme_background_color)
+                curPrimaryColor = getColor(R.color.color_primary)
+                colorChanged()
+            }
+        }
+
+        updateTextColors(customization_holder, curTextColor)
+        updateBackgroundColor(curBackgroundColor)
+        updateActionbarColor(curPrimaryColor)
     }
 
     private fun getThemeText() = getString(when (baseConfig.colorTheme) {
