@@ -44,7 +44,6 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_text_color_holder.setOnClickListener { pickTextColor() }
         customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
         customization_primary_color_holder.setOnClickListener { pickPrimaryColor() }
-        customization_restore_defaults.setOnClickListener { restoreDefaultColors() }
         setupThemePicker()
     }
 
@@ -69,13 +68,6 @@ class CustomizationActivity : BaseSimpleActivity() {
         } else {
             super.onBackPressed()
         }
-    }
-
-    private fun restoreDefaultColors() {
-        setCurrentTextColor(defaultTextColor)
-        setCurrentBackgroundColor(defaultBackgroundColor)
-        setCurrentPrimaryColor(defaultPrimaryColor)
-        colorChanged()
     }
 
     private fun setupThemePicker() {
