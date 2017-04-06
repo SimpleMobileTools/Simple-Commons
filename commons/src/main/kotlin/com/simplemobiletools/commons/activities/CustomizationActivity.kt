@@ -32,8 +32,8 @@ class CustomizationActivity : BaseSimpleActivity() {
         setContentView(R.layout.activity_customization)
 
         resources.apply {
-            defaultTextColor = getColor(R.color.default_text_color)
-            defaultBackgroundColor = getColor(R.color.default_background_color)
+            defaultTextColor = getColor(R.color.default_light_theme_text_color)
+            defaultBackgroundColor = getColor(R.color.default_light_theme_background_color)
             defaultPrimaryColor = getColor(R.color.color_primary)
         }
 
