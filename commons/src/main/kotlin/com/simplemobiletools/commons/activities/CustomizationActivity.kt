@@ -23,19 +23,9 @@ class CustomizationActivity : BaseSimpleActivity() {
     var curPrimaryColor = 0
     var hasUnsavedChanges = false
 
-    var defaultTextColor = 0
-    var defaultBackgroundColor = 0
-    var defaultPrimaryColor = 0
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
-
-        resources.apply {
-            defaultTextColor = getColor(R.color.default_light_theme_text_color)
-            defaultBackgroundColor = getColor(R.color.default_light_theme_background_color)
-            defaultPrimaryColor = getColor(R.color.color_primary)
-        }
 
         updateTextColors(customization_holder)
         initColorVariables()
