@@ -7,9 +7,14 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.dialogs.ColorPickerDialog
 import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
+import com.simplemobiletools.commons.dialogs.RadioGroupDialog
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.setBackgroundWithStroke
 import com.simplemobiletools.commons.extensions.updateTextColors
+import com.simplemobiletools.commons.helpers.THEME_CUSTOM
+import com.simplemobiletools.commons.helpers.THEME_DARK
+import com.simplemobiletools.commons.helpers.THEME_LIGHT
+import com.simplemobiletools.commons.models.RadioItem
 import kotlinx.android.synthetic.main.activity_customization.*
 
 class CustomizationActivity : BaseSimpleActivity() {
@@ -40,6 +45,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
         customization_primary_color_holder.setOnClickListener { pickPrimaryColor() }
         customization_restore_defaults.setOnClickListener { restoreDefaultColors() }
+        setupThemePicker()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -71,6 +77,27 @@ class CustomizationActivity : BaseSimpleActivity() {
         setCurrentPrimaryColor(defaultPrimaryColor)
         colorChanged()
     }
+
+    private fun setupThemePicker() {
+        customization_theme.text = getThemeText()
+        customization_theme_holder.setOnClickListener {
+            val items = arrayListOf(
+                    RadioItem(THEME_LIGHT, getString(R.string.light_theme)),
+                    RadioItem(THEME_DARK, getString(R.string.dark_theme)),
+                    RadioItem(THEME_CUSTOM, getString(R.string.custom)))
+
+            RadioGroupDialog(this@CustomizationActivity, items, baseConfig.colorTheme) {
+                baseConfig.colorTheme = it as Int
+                customization_theme.text = getThemeText()
+            }
+        }
+    }
+
+    private fun getThemeText() = getString(when (baseConfig.colorTheme) {
+        THEME_LIGHT -> R.string.light_theme
+        THEME_DARK -> R.string.dark_theme
+        else -> R.string.custom
+    })
 
     private fun promptSaveDiscard() {
         ConfirmationAdvancedDialog(this, "", R.string.save_before_closing, R.string.save, R.string.discard, object : ConfirmationAdvancedDialog.Listener {

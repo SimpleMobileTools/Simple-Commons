@@ -15,6 +15,7 @@ val INTERNAL_STORAGE_PATH = "internal_storage_path"
 val TEXT_COLOR = "text_color"
 val BACKGROUND_COLOR = "background_color"
 val PRIMARY_COLOR = "primary_color"
+val COLOR_THEME = "color_theme"
 val WIDGET_BG_COLOR = "widget_bg_color"
 val WIDGET_TEXT_COLOR = "widget_text_color"
 
@@ -41,3 +42,7 @@ val SORT_BY_SIZE = 4
 val SORT_BY_DATE_TAKEN = 8
 val SORT_BY_EXTENSION = 16
 val SORT_DESCENDING = 1024
+
+val THEME_LIGHT = 0
+val THEME_DARK = 1
+val THEME_CUSTOM = 2

@@ -48,6 +48,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(PRIMARY_COLOR, context.resources.getColor(R.color.color_primary))
         set(primaryColor) = prefs.edit().putInt(PRIMARY_COLOR, primaryColor).apply()
 
+    var colorTheme: Int
+        get() = prefs.getInt(COLOR_THEME, THEME_LIGHT)
+        set(colorTheme) = prefs.edit().putInt(COLOR_THEME, colorTheme).apply()
+
     var widgetBgColor: Int
         get() = prefs.getInt(WIDGET_BG_COLOR, 1)
         set(widgetBgColor) = prefs.edit().putInt(WIDGET_BG_COLOR, widgetBgColor).apply()
