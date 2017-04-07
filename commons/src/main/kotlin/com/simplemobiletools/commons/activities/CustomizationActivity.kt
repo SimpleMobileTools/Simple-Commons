@@ -61,22 +61,21 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun setupThemePicker() {
-        customization_theme.text = getThemeText()
+        customization_theme.text = getThemeText(getCurrentThemeId())
         customization_theme_holder.setOnClickListener {
             val items = arrayListOf(
                     RadioItem(THEME_LIGHT, getString(R.string.light_theme)),
                     RadioItem(THEME_DARK, getString(R.string.dark_theme)),
                     RadioItem(THEME_CUSTOM, getString(R.string.custom)))
 
-            RadioGroupDialog(this@CustomizationActivity, items, baseConfig.colorTheme) {
+            RadioGroupDialog(this@CustomizationActivity, items, getCurrentThemeId()) {
                 updateColorTheme(it as Int)
             }
         }
     }
 
     private fun updateColorTheme(themeId: Int = THEME_CUSTOM) {
-        baseConfig.colorTheme = themeId
-        customization_theme.text = getThemeText()
+        customization_theme.text = getThemeText(themeId)
 
         resources.apply {
             if (themeId == THEME_LIGHT) {
@@ -97,7 +96,21 @@ class CustomizationActivity : BaseSimpleActivity() {
         updateActionbarColor(curPrimaryColor)
     }
 
-    private fun getThemeText() = getString(when (baseConfig.colorTheme) {
+    private fun getCurrentThemeId(): Int {
+        var themeId = THEME_CUSTOM
+        resources.apply {
+            if (curTextColor == getColor(R.color.default_light_theme_text_color) && curBackgroundColor == getColor(R.color.default_light_theme_background_color) &&
+                    curPrimaryColor == getColor(R.color.color_primary)) {
+                themeId = THEME_LIGHT
+            } else if (curTextColor == getColor(R.color.default_dark_theme_text_color) && curBackgroundColor == getColor(R.color.default_dark_theme_background_color) &&
+                    curPrimaryColor == getColor(R.color.color_primary)) {
+                themeId = THEME_DARK
+            }
+        }
+        return themeId
+    }
+
+    private fun getThemeText(themeId: Int) = getString(when (themeId) {
         THEME_LIGHT -> R.string.light_theme
         THEME_DARK -> R.string.dark_theme
         else -> R.string.custom

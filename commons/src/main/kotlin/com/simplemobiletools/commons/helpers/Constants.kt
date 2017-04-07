@@ -15,7 +15,6 @@ val INTERNAL_STORAGE_PATH = "internal_storage_path"
 val TEXT_COLOR = "text_color"
 val BACKGROUND_COLOR = "background_color"
 val PRIMARY_COLOR = "primary_color"
-val COLOR_THEME = "color_theme"
 val WIDGET_BG_COLOR = "widget_bg_color"
 val WIDGET_TEXT_COLOR = "widget_text_color"
 
