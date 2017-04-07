@@ -10,6 +10,7 @@ import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.dialogs.RadioGroupDialog
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.setBackgroundWithStroke
+import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.THEME_CUSTOM
 import com.simplemobiletools.commons.helpers.THEME_DARK
@@ -70,6 +71,9 @@ class CustomizationActivity : BaseSimpleActivity() {
 
             RadioGroupDialog(this@CustomizationActivity, items, getCurrentThemeId()) {
                 updateColorTheme(it as Int)
+                if (it != THEME_CUSTOM) {
+                    toast(R.string.changing_color_description)
+                }
             }
         }
     }
