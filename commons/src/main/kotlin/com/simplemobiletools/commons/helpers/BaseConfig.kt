@@ -37,11 +37,11 @@ open class BaseConfig(val context: Context) {
         set(internalStoragePath) = prefs.edit().putString(INTERNAL_STORAGE_PATH, internalStoragePath).apply()
 
     var textColor: Int
-        get() = prefs.getInt(TEXT_COLOR, context.resources.getColor(R.color.default_light_theme_text_color))
+        get() = prefs.getInt(TEXT_COLOR, context.resources.getColor(R.color.default_text_color))
         set(textColor) = prefs.edit().putInt(TEXT_COLOR, textColor).apply()
 
     var backgroundColor: Int
-        get() = prefs.getInt(BACKGROUND_COLOR, context.resources.getColor(R.color.default_light_theme_background_color))
+        get() = prefs.getInt(BACKGROUND_COLOR, context.resources.getColor(R.color.default_background_color))
         set(backgroundColor) = prefs.edit().putInt(BACKGROUND_COLOR, backgroundColor).apply()
 
     var primaryColor: Int
@@ -49,15 +49,15 @@ open class BaseConfig(val context: Context) {
         set(primaryColor) = prefs.edit().putInt(PRIMARY_COLOR, primaryColor).apply()
 
     var customTextColor: Int
-        get() = prefs.getInt(CUSTOM_TEXT_COLOR, context.resources.getColor(R.color.default_text_color))
+        get() = prefs.getInt(CUSTOM_TEXT_COLOR, textColor)
         set(customTextColor) = prefs.edit().putInt(CUSTOM_TEXT_COLOR, customTextColor).apply()
 
     var customBackgroundColor: Int
-        get() = prefs.getInt(CUSTOM_BACKGROUND_COLOR, context.resources.getColor(R.color.default_background_color))
+        get() = prefs.getInt(CUSTOM_BACKGROUND_COLOR, backgroundColor)
         set(customBackgroundColor) = prefs.edit().putInt(CUSTOM_BACKGROUND_COLOR, customBackgroundColor).apply()
 
     var customPrimaryColor: Int
-        get() = prefs.getInt(CUSTOM_PRIMARY_COLOR, context.resources.getColor(R.color.color_primary))
+        get() = prefs.getInt(CUSTOM_PRIMARY_COLOR, primaryColor)
         set(customPrimaryColor) = prefs.edit().putInt(CUSTOM_PRIMARY_COLOR, customPrimaryColor).apply()
 
     var widgetBgColor: Int
