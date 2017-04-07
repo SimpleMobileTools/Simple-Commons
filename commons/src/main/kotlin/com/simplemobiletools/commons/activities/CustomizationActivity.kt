@@ -22,6 +22,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     var curTextColor = 0
     var curBackgroundColor = 0
     var curPrimaryColor = 0
+    var curSelectedThemeId = 0
     var hasUnsavedChanges = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,14 +63,15 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun setupThemePicker() {
-        customization_theme.text = getThemeText(getCurrentThemeId())
+        curSelectedThemeId = getCurrentThemeId()
+        customization_theme.text = getThemeText()
         customization_theme_holder.setOnClickListener {
             val items = arrayListOf(
                     RadioItem(THEME_LIGHT, getString(R.string.light_theme)),
                     RadioItem(THEME_DARK, getString(R.string.dark_theme)),
                     RadioItem(THEME_CUSTOM, getString(R.string.custom)))
 
-            RadioGroupDialog(this@CustomizationActivity, items, getCurrentThemeId()) {
+            RadioGroupDialog(this@CustomizationActivity, items, curSelectedThemeId) {
                 updateColorTheme(it as Int)
                 if (it != THEME_CUSTOM) {
                     toast(R.string.changing_color_description)
@@ -79,7 +81,8 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun updateColorTheme(themeId: Int = THEME_CUSTOM) {
-        customization_theme.text = getThemeText(themeId)
+        curSelectedThemeId = themeId
+        customization_theme.text = getThemeText()
 
         resources.apply {
             if (themeId == THEME_LIGHT) {
@@ -114,7 +117,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         return themeId
     }
 
-    private fun getThemeText(themeId: Int) = getString(when (themeId) {
+    private fun getThemeText() = getString(when (curSelectedThemeId) {
         THEME_LIGHT -> R.string.light_theme
         THEME_DARK -> R.string.dark_theme
         else -> R.string.custom
