@@ -48,6 +48,18 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(PRIMARY_COLOR, context.resources.getColor(R.color.color_primary))
         set(primaryColor) = prefs.edit().putInt(PRIMARY_COLOR, primaryColor).apply()
 
+    var customTextColor: Int
+        get() = prefs.getInt(CUSTOM_TEXT_COLOR, context.resources.getColor(R.color.default_text_color))
+        set(customTextColor) = prefs.edit().putInt(CUSTOM_TEXT_COLOR, customTextColor).apply()
+
+    var customBackgroundColor: Int
+        get() = prefs.getInt(CUSTOM_BACKGROUND_COLOR, context.resources.getColor(R.color.default_background_color))
+        set(customBackgroundColor) = prefs.edit().putInt(CUSTOM_BACKGROUND_COLOR, customBackgroundColor).apply()
+
+    var customPrimaryColor: Int
+        get() = prefs.getInt(CUSTOM_PRIMARY_COLOR, context.resources.getColor(R.color.color_primary))
+        set(customPrimaryColor) = prefs.edit().putInt(CUSTOM_PRIMARY_COLOR, customPrimaryColor).apply()
+
     var widgetBgColor: Int
         get() = prefs.getInt(WIDGET_BG_COLOR, 1)
         set(widgetBgColor) = prefs.edit().putInt(WIDGET_BG_COLOR, widgetBgColor).apply()
