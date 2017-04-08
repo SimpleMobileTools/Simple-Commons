@@ -12,10 +12,6 @@ open class BaseConfig(val context: Context) {
         fun newInstance(context: Context) = BaseConfig(context)
     }
 
-    var isFirstRun: Boolean
-        get() = prefs.getBoolean(IS_FIRST_RUN, true)
-        set(firstRun) = prefs.edit().putBoolean(IS_FIRST_RUN, firstRun).apply()
-
     var appRunCount: Int
         get() = prefs.getInt(APP_RUN_COUNT, 0)
         set(appRunCount) = prefs.edit().putInt(APP_RUN_COUNT, appRunCount).apply()
