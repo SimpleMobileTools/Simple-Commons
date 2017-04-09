@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Point
 import android.media.MediaMetadataRetriever
@@ -74,4 +75,12 @@ fun File.getImageResolution(): Point {
     options.inJustDecodeBounds = true
     BitmapFactory.decodeFile(absolutePath, options)
     return Point(options.outWidth, options.outHeight)
+}
+
+fun File.getCompressionFormat(): Bitmap.CompressFormat {
+    return when (extension.toLowerCase()) {
+        "png" -> Bitmap.CompressFormat.PNG
+        "webp" -> Bitmap.CompressFormat.WEBP
+        else -> Bitmap.CompressFormat.JPEG
+    }
 }
