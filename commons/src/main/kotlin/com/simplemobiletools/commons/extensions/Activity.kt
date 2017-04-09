@@ -196,7 +196,7 @@ fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = fal
             handleSAFDialog(file) {
                 fileDeleted = tryFastDocumentDelete(file, allowDeleteFolder)
                 if (!fileDeleted) {
-                    val document = getFileDocument(file.absolutePath, baseConfig.treeUri)
+                    val document = getFileDocument(file.absolutePath)
                     fileDeleted = (document?.isFile == true || allowDeleteFolder) && document?.delete() == true
                 }
 
@@ -234,7 +234,7 @@ private fun deleteRecursively(file: File): Boolean {
 fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (success: Boolean) -> Unit) {
     if (needsStupidWritePermissions(newFile.absolutePath)) {
         handleSAFDialog(newFile) {
-            val document = getFileDocument(oldFile.absolutePath, baseConfig.treeUri)
+            val document = getFileDocument(oldFile.absolutePath)
             if (document == null) {
                 callback(false)
                 return@handleSAFDialog

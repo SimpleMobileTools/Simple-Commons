@@ -60,7 +60,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     private fun copyDirectory(source: File, destination: File) {
         if (!destination.exists()) {
             if (activity.needsStupidWritePermissions(destination.absolutePath)) {
-                val document = activity.getFileDocument(destination.absolutePath, activity.baseConfig.treeUri)
+                val document = activity.getFileDocument(destination.absolutePath)
                 document?.createDirectory(destination.name)
             } else if (!destination.mkdirs()) {
                 throw IOException("Could not create dir ${destination.absolutePath}")
@@ -98,7 +98,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         val inputStream = FileInputStream(source)
         val out: OutputStream?
         if (activity.needsStupidWritePermissions(destination.absolutePath)) {
-            var document = activity.getFileDocument(destination.absolutePath, activity.baseConfig.treeUri) ?: return
+            var document = activity.getFileDocument(destination.absolutePath) ?: return
             document = document.createFile("", destination.name)
 
             out = activity.contentResolver.openOutputStream(document.uri)
