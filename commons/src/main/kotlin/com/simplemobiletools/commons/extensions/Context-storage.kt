@@ -116,7 +116,7 @@ fun Context.getMyFileUri(file: File): Uri {
 }
 
 @SuppressLint("NewApi")
-fun Context.getFileDocument(path: String, treeUri: String): DocumentFile? {
+fun Context.getFileDocument(path: String): DocumentFile? {
     if (!isLollipopPlus())
         return null
 
@@ -124,7 +124,7 @@ fun Context.getFileDocument(path: String, treeUri: String): DocumentFile? {
     if (relativePath.startsWith(File.separator))
         relativePath = relativePath.substring(1)
 
-    var document = DocumentFile.fromTreeUri(this, Uri.parse(treeUri))
+    var document = DocumentFile.fromTreeUri(this, Uri.parse(baseConfig.treeUri))
     val parts = relativePath.split("/")
     for (part in parts) {
         val currDocument = document.findFile(part)
