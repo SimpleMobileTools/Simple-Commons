@@ -16,6 +16,8 @@ import com.simplemobiletools.commons.dialogs.WhatsNewDialog
 import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.models.Release
 import java.io.File
+import java.io.FileOutputStream
+import java.io.OutputStream
 import java.util.*
 
 @SuppressLint("NewApi")
@@ -259,4 +261,18 @@ fun Activity.hideKeyboard() {
 fun Activity.showKeyboard(et: EditText) {
     val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
     imm.showSoftInput(et, InputMethodManager.SHOW_IMPLICIT)
+}
+
+fun BaseSimpleActivity.getFileOutputStream(file: File, callback: (outputStream: OutputStream) -> Unit) {
+    if (needsStupidWritePermissions(file.absolutePath)) {
+        handleSAFDialog(file) {
+            var document = getFileDocument(file.absolutePath) ?: return@handleSAFDialog
+            if (!file.exists()) {
+                document = document.createFile("", file.name)
+            }
+            callback(contentResolver.openOutputStream(document.uri))
+        }
+    } else {
+        callback(FileOutputStream(file))
+    }
 }
