@@ -25,8 +25,8 @@
     <string name="copy">Копировать</string>
     <string name="move">Переместить</string>
     <string name="copy_move">Копировать / Переместить</string>
-    <string name="copy_to">Copy to</string>
-    <string name="move_to">Move to</string>
+    <string name="copy_to">Копировать в</string>
+    <string name="move_to">Переместить в</string>
     <string name="source">Путь источника</string>
     <string name="destination">Путь назначения</string>
     <string name="select_destination">Выберите путь назначения</string>
@@ -104,7 +104,7 @@
     <string name="light_theme">Светлая тема</string>
     <string name="dark_theme">Тёмная тема</string>
     <string name="custom">Настраиваемое</string>
-    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
+    <string name="changing_color_description">Изменение цвета повлечет переключение на пользовательскую тему.</string>
     <string name="save">Сохранить</string>
     <string name="discard">Сбросить</string>
     <string name="undo_changes">Отменить изменения</string>
