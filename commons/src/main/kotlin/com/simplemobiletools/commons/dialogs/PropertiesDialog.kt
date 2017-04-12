@@ -12,6 +12,7 @@ import com.simplemobiletools.commons.extensions.*
 import kotlinx.android.synthetic.main.dialog_properties.view.*
 import kotlinx.android.synthetic.main.property_item.view.*
 import java.io.File
+import java.text.SimpleDateFormat
 import java.util.*
 
 class PropertiesDialog() {
@@ -40,7 +41,6 @@ class PropertiesDialog() {
         addProperty(R.string.name, file.name)
         addProperty(R.string.path, file.parent)
         addProperty(R.string.size, "...", R.id.properties_size)
-        addProperty(R.string.last_modified, file.lastModified().formatLastModified())
 
         Thread({
             val size = getItemSize(file).formatSize()
@@ -68,6 +68,8 @@ class PropertiesDialog() {
             addProperty(R.string.artist, file.getArtist())
             addProperty(R.string.album, file.getAlbum())
         }
+
+        addProperty(R.string.last_modified, file.lastModified().formatLastModified())
 
         if (!file.isDirectory) {
             addExifProperties(path)
@@ -122,6 +124,14 @@ class PropertiesDialog() {
 
     private fun addExifProperties(path: String) {
         val exif = ExifInterface(path)
+        exif.getAttribute(ExifInterface.TAG_DATETIME).let {
+            if (it?.isNotEmpty() == true) {
+                val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd HH:mm:ss", Locale.getDefault())
+                val dateTaken = simpleDateFormat.parse(it).time.formatLastModified()
+                addProperty(R.string.date_taken, dateTaken)
+            }
+        }
+
         exif.getAttribute(ExifInterface.TAG_FOCAL_LENGTH).let {
             if (it?.isNotEmpty() == true) {
                 val values = it.split('/')
