@@ -10,6 +10,7 @@ import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.dialogs.DonateDialog
 import com.simplemobiletools.commons.dialogs.WhatsNewDialog
@@ -41,7 +42,12 @@ fun Activity.isShowingSAFDialog(file: File, treeUri: String, requestCode: Int): 
                     if (resolveActivity(packageManager) == null) {
                         type = "*/*"
                     }
-                    startActivityForResult(this, requestCode)
+
+                    if (resolveActivity(packageManager) != null) {
+                        startActivityForResult(this, requestCode)
+                    } else {
+                        toast(R.string.unknown_error_occurred)
+                    }
                 }
             }
         }
