@@ -18,7 +18,7 @@ import java.io.File
 import java.util.*
 import java.util.regex.Pattern
 
-// http://stackoverflow.com/a/18871043/1967672
+// http://stackoverflow.com/a/40582634/1967672
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
 fun Context.getSDCardPath(): String {
     if (!isLollipopPlus()) {
