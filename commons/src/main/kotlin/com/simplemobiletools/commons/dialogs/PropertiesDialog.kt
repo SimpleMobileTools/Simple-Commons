@@ -132,6 +132,13 @@ class PropertiesDialog() {
             }
         }
 
+        exif.getAttribute(ExifInterface.TAG_MAKE).let {
+            if (it?.isNotEmpty() == true) {
+                val model = exif.getAttribute(ExifInterface.TAG_MODEL)
+                addProperty(R.string.camera, "$it $model")
+            }
+        }
+
         exif.getAttribute(ExifInterface.TAG_FOCAL_LENGTH).let {
             if (it?.isNotEmpty() == true) {
                 val values = it.split('/')
