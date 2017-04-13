@@ -67,6 +67,7 @@
     <string name="select_file">Zvoľte súbor</string>
     <string name="confirm_storage_access_title">Potvrďte prístup k súborom</string>
     <string name="confirm_storage_access_text">Pre poskytnutie práva na zápis prosím zvoľte na nasledujúcej obrazovke základný priečǐnok SD karty</string>
+    <string name="confirm_storage_access_text_sd">Ak nevidíte SD kartu, skúste toto</string>
 
     <plurals name="items">
         <item quantity="one">%1$d položka</item>

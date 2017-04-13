@@ -67,6 +67,7 @@
     <string name="select_file">Selecionar ficheiro</string>
     <string name="confirm_storage_access_title">Confirmação de acesso ao armazenamento externo</string>
     <string name="confirm_storage_access_text">Por favor escolha a pasta raiz do cartão SD no próximo ecrã para conceder acesso de escrita</string>
+    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
 
     <plurals name="items">
         <item quantity="one">%1$d item</item>

@@ -67,6 +67,7 @@
     <string name="select_file">Wybierz plik</string>
     <string name="confirm_storage_access_title">Potwierdź dostęp do zewnętrznej pamięci</string>
     <string name="confirm_storage_access_text">Wybierz główny folder na karcie SD na następnym ekranie i udziel dostępu do zapisu</string>
+    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
 
     <plurals name="items">
         <item quantity="one">%1$d pozycja</item>
