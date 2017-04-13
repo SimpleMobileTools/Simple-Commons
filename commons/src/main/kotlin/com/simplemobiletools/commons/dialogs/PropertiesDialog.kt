@@ -139,34 +139,37 @@ class PropertiesDialog() {
             }
         }
 
+        var exifString = ""
+        exif.getAttribute(ExifInterface.TAG_F_NUMBER).let {
+            if (it?.isNotEmpty() == true) {
+                val number = it.trimEnd('0').trimEnd('.')
+                exifString += "F/$number  "
+            }
+        }
+
         exif.getAttribute(ExifInterface.TAG_FOCAL_LENGTH).let {
             if (it?.isNotEmpty() == true) {
                 val values = it.split('/')
-                val focalLength = "${Math.round(values[0].toDouble() / values[1].toDouble())}mm ($it)"
-                addProperty(R.string.focal_length, focalLength)
+                val focalLength = "${Math.round(values[0].toDouble() / values[1].toDouble())}mm"
+                exifString += "$focalLength  "
             }
         }
 
         exif.getAttribute(ExifInterface.TAG_EXPOSURE_TIME).let {
             if (it?.isNotEmpty() == true) {
                 val exposureSec = (1 / it.toFloat()).toInt()
-                val exposureTime = "1/$exposureSec (${it}s)"
-                addProperty(R.string.exposure_time, exposureTime)
+                exifString += "1/${exposureSec}s  "
             }
         }
 
         exif.getAttribute(ExifInterface.TAG_ISO_SPEED_RATINGS).let {
             if (it?.isNotEmpty() == true) {
-                addProperty(R.string.iso_speed, it)
+                exifString += "ISO-$it"
             }
         }
 
-        exif.getAttribute(ExifInterface.TAG_F_NUMBER).let {
-            if (it?.isNotEmpty() == true) {
-                val fNumber = "f/$it"
-                addProperty(R.string.f_number, fNumber)
-            }
-        }
+        if (exifString.trim().isNotEmpty())
+            addProperty(R.string.exif, exifString.trim())
     }
 
     private fun isSameParent(files: List<File>): Boolean {
