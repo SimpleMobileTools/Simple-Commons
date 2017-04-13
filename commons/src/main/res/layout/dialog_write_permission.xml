@@ -26,7 +26,16 @@
         android:id="@+id/write_permissions_dialog_text_sd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_margin"
         android:layout_marginTop="@dimen/activity_margin"
         android:text="@string/confirm_storage_access_text_sd"/>
+
+    <ImageView
+        android:id="@+id/write_permissions_dialog_image_sd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img_write_storage_sd"/>
 
 </LinearLayout>
