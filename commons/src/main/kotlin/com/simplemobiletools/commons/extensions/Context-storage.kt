@@ -27,7 +27,7 @@ fun Context.getSDCardPath(): String {
 
     val directories = getStorageDirectories().filter { it.trimEnd('/') != internalStoragePath }
     val sdCardPath = directories.firstOrNull { !physicalPaths.contains(it.trimEnd('/')) } ?: directories.first() ?: ""
-    return sdCardPath
+    return sdCardPath.trimEnd('/')
 }
 
 fun Context.hasExternalSDCard() = sdCardPath.isNotEmpty()
