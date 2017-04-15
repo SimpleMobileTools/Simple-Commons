@@ -67,7 +67,7 @@
     <string name="select_file">Selecionar ficheiro</string>
     <string name="confirm_storage_access_title">Confirmação de acesso ao armazenamento externo</string>
     <string name="confirm_storage_access_text">Por favor escolha a pasta raiz do cartão SD no próximo ecrã para conceder acesso de escrita</string>
-    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
+    <string name="confirm_storage_access_text_sd">Senão conseguir ver o catão SD, tente isto</string>
 
     <plurals name="items">
         <item quantity="one">%1$d item</item>
@@ -107,12 +107,12 @@
     <string name="light_theme">Tema claro</string>
     <string name="dark_theme">Tema escuro</string>
     <string name="custom">Personalizado</string>
-    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
+    <string name="changing_color_description">Se alterar uma cor, ativa o modo de tema personalizado</string>
     <string name="save">Guardar</string>
     <string name="discard">Descartar</string>
     <string name="undo_changes">Desfazer alterações</string>
     <string name="undo_changes_confirmation">Tem a certeza de que deseja desfazer as alterações?</string>
-    <string name="save_before_closing">Possui alterações não guardadas. Guardar antes de sair?</string>
+    <string name="save_before_closing">Existem alterações não guardadas. Deseja guardar antes de sair?</string>
 
     <!-- What's new -->
     <string name="whats_new">Novidades</string>
