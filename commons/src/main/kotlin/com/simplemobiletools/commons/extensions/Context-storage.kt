@@ -182,7 +182,7 @@ fun Context.scanPaths(paths: ArrayList<String>, action: () -> Unit) {
 
 fun Context.rescanPaths(paths: ArrayList<String>, action: () -> Unit) {
     var cnt = paths.size
-    MediaScannerConnection.scanFile(this, paths.toTypedArray(), null, { s, uri ->
+    MediaScannerConnection.scanFile(applicationContext, paths.toTypedArray(), null, { s, uri ->
         if (--cnt == 0)
             action.invoke()
     })
