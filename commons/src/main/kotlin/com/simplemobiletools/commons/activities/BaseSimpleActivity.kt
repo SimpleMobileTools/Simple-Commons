@@ -129,7 +129,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun copyMoveFilesTo(files: ArrayList<File>, source: String, destination: String, isCopyOperation: Boolean, callback: () -> Unit) {
+    fun copyMoveFilesTo(files: ArrayList<File>, source: String, destination: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean, callback: () -> Unit) {
         if (source == destination) {
             toast(R.string.source_and_destination_same)
             return
@@ -153,13 +153,13 @@ open class BaseSimpleActivity : AppCompatActivity() {
             if (isCopyOperation) {
                 toast(R.string.copying)
                 val pair = Pair<ArrayList<File>, File>(files, destinationFolder)
-                CopyMoveTask(this, isCopyOperation, true, copyMoveListener).execute(pair)
+                CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, copyMoveListener).execute(pair)
             } else {
                 if (isPathOnSD(source) || isPathOnSD(destinationFolder.absolutePath)) {
                     handleSAFDialog(files[0]) {
                         toast(R.string.moving)
                         val pair = Pair<ArrayList<File>, File>(files, destinationFolder)
-                        CopyMoveTask(this, isCopyOperation, true, copyMoveListener).execute(pair)
+                        CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, copyMoveListener).execute(pair)
                     }
                 } else {
                     val updatedFiles = ArrayList<File>(files.size * 2)
