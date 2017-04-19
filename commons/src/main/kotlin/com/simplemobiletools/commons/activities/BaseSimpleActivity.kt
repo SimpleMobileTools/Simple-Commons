@@ -129,7 +129,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    protected fun copyMoveFilesTo(files: ArrayList<File>, source: String, destination: String, isCopyOperation: Boolean, callback: () -> Unit) {
+    fun copyMoveFilesTo(files: ArrayList<File>, source: String, destination: String, isCopyOperation: Boolean, callback: () -> Unit) {
         if (source == destination) {
             toast(R.string.source_and_destination_same)
             return
