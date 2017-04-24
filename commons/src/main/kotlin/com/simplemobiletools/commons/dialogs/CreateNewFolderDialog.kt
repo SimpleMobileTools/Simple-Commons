@@ -22,17 +22,17 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
             getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(View.OnClickListener {
                 val name = view.folder_name.value
                 if (name.isEmpty()) {
-                    context.toast(R.string.empty_name)
+                    activity.toast(R.string.empty_name)
                 } else if (name.isAValidFilename()) {
                     val file = File(path, name)
                     if (file.exists()) {
-                        context.toast(R.string.name_taken)
+                        activity.toast(R.string.name_taken)
                         return@OnClickListener
                     }
 
                     createFolder(file, this)
                 } else {
-                    context.toast(R.string.invalid_name)
+                    activity.toast(R.string.invalid_name)
                 }
             })
         }

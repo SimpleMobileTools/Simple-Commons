@@ -10,6 +10,7 @@ import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.Toast
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.dialogs.DonateDialog
@@ -20,6 +21,26 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream
 import java.util.*
+
+fun Activity.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
+    if (isOnMainThread()) {
+        Toast.makeText(this, id, length).show()
+    } else {
+        runOnUiThread {
+            Toast.makeText(this, id, length).show()
+        }
+    }
+}
+
+fun Activity.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
+    if (isOnMainThread()) {
+        Toast.makeText(this, msg, length).show()
+    } else {
+        runOnUiThread {
+            Toast.makeText(this, msg, length).show()
+        }
+    }
+}
 
 @SuppressLint("NewApi")
 fun Activity.storeStoragePaths() {
