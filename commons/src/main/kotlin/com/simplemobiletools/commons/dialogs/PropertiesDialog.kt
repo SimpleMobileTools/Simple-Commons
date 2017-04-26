@@ -126,9 +126,12 @@ class PropertiesDialog() {
         val exif = ExifInterface(path)
         exif.getAttribute(ExifInterface.TAG_DATETIME).let {
             if (it?.isNotEmpty() == true) {
-                val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd HH:mm:ss", Locale.getDefault())
-                val dateTaken = simpleDateFormat.parse(it).time.formatLastModified()
-                addProperty(R.string.date_taken, dateTaken)
+                try {
+                    val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd HH:mm:ss", Locale.getDefault())
+                    val dateTaken = simpleDateFormat.parse(it).time.formatLastModified()
+                    addProperty(R.string.date_taken, dateTaken)
+                } catch (ignored: Exception) {
+                }
             }
         }
 
