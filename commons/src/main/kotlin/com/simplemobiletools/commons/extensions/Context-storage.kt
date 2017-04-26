@@ -15,6 +15,7 @@ import android.support.v4.provider.DocumentFile
 import android.text.TextUtils
 import com.simplemobiletools.commons.R
 import java.io.File
+import java.lang.ref.WeakReference
 import java.util.*
 import java.util.regex.Pattern
 
@@ -182,9 +183,10 @@ fun Context.scanPaths(paths: ArrayList<String>, action: () -> Unit) {
 
 fun Context.rescanPaths(paths: ArrayList<String>, action: () -> Unit) {
     var cnt = paths.size
+    val realAction = WeakReference<() -> Unit>(action)
     MediaScannerConnection.scanFile(applicationContext, paths.toTypedArray(), null, { s, uri ->
         if (--cnt == 0)
-            action.invoke()
+            realAction.get()?.invoke()
     })
 }
 
