@@ -43,7 +43,7 @@
     <string name="moving_success_partial">Alcuni file non possono essere spostati</string>
     <string name="copying_success_partial">Alcuni file non possono essere copiati</string>
     <string name="folder_exists">Esiste già una cartella con quel nome</string>
-    <string name="saving">Saving&#8230;</string>
+    <string name="saving">Salvataggio in corso;</string>
 
     <!-- Create new -->
     <string name="create_new">Crea nuovo</string>
@@ -125,8 +125,8 @@
     <string name="share">Condividi</string>
     <string name="share_via">Condividi via</string>
     <string name="select_all">Seleziona tutto</string>
-    <string name="hide">Hide</string>
-    <string name="unhide">Unhide</string>
+    <string name="hide">Nascondi file nascosti</string>
+    <string name="unhide">Mostra file nascosti</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordina per</string>
