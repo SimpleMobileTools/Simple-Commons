@@ -43,7 +43,7 @@
     <string name="moving_success_partial">Alguns ficheiros não foram movidos</string>
     <string name="copying_success_partial">Alguns ficheiros não foram copiados</string>
     <string name="no_files_selected">Nenhum ficheiro selecionado</string>
-    <string name="saving">Saving&#8230;</string>
+    <string name="saving">A guardar&#8230;</string>
 
     <!-- Create new -->
     <string name="create_new">Criar</string>
@@ -125,8 +125,8 @@
     <string name="share">Partilhar</string>
     <string name="share_via">Partilhar via</string>
     <string name="select_all">Selecionar tudo</string>
-    <string name="hide">Hide</string>
-    <string name="unhide">Unhide</string>
+    <string name="hide">Ocultar</string>
+    <string name="unhide">Mostrar</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
