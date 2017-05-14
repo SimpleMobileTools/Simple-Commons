@@ -172,7 +172,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
                     scanFiles(updatedFiles) {
                         runOnUiThread {
-                            copyMoveListener.copySucceeded(true, files.size * 2 == updatedFiles.size)
+                            copyMoveListener.copySucceeded(false, files.size * 2 == updatedFiles.size)
                         }
                     }
                 }
