@@ -5,7 +5,7 @@
     <string name="save_as">Speichern unter</string>
     <string name="file_saved">Datei erfolgreich gespeichert</string>
     <string name="invalid_file_format">Ungültiges Dateiformat</string>
-    <string name="no_storage_permissions">Berechtigung zum Zugriff auf den Speicher erforderlich</string>
+    <string name="no_storage_permissions">Berechtigung zum Zugriff auf Speicher erforderlich</string>
 
     <!-- Renaming -->
     <string name="rename_file">Datei umbenennen</string>
@@ -125,8 +125,8 @@
     <string name="share">Teilen</string>
     <string name="share_via">Teilen via</string>
     <string name="select_all">Alle auswählen</string>
-    <string name="hide">Hide</string>
-    <string name="unhide">Unhide</string>
+    <string name="hide">Verstecken</string>
+    <string name="unhide">Nicht verstecken</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortieren nach</string>
