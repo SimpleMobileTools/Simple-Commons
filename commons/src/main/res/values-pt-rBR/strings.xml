@@ -35,15 +35,15 @@
     <string name="please_select_destination">Por favor selecione um destino</string>
     <string name="source_and_destination_same">A origem e o destino não podem ser iguais</string>
     <string name="copy_failed">Não foi possível copiar os arquivos</string>
-    <string name="copying">A copiar&#8230;</string>
+    <string name="copying">Copiando&#8230;</string>
     <string name="copying_success">Arquivos copiados com sucesso</string>
     <string name="copy_move_failed">Ocorreu um erro ao copiar</string>
-    <string name="moving">A mover&#8230;</string>
+    <string name="moving">Movendo&#8230;</string>
     <string name="moving_success">Arquivos movidos com sucesso</string>
     <string name="moving_success_partial">Alguns arquivos não foram movidos</string>
     <string name="copying_success_partial">Alguns arquivos não foram copiados</string>
     <string name="no_files_selected">Nenhum arquivo selecionado</string>
-    <string name="saving">Saving&#8230;</string>
+    <string name="saving">Salvando&#8230;</string>
 
     <!-- Create new -->
     <string name="create_new">Criar</string>
@@ -68,7 +68,7 @@
     <string name="select_file">Selecionar arquivo</string>
     <string name="confirm_storage_access_title">Confirmação de acesso ao armazenamento externo</string>
     <string name="confirm_storage_access_text">Por favor escolha a pasta raíz do cartão SD no próximo passo para conceder acesso de escrita</string>
-    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
+    <string name="confirm_storage_access_text_sd">Se você não encontrar o cartão SD, tente isto</string>
 
     <plurals name="items">
         <item quantity="one">%1$d ítem</item>
@@ -96,7 +96,7 @@
     <string name="exposure_time">Tempo de exposição</string>
     <string name="iso_speed">Velocidade ISO</string>
     <string name="f_number">Número F</string>
-    <string name="camera">Camera</string>
+    <string name="camera">Câmera</string>
     <string name="exif">EXIF</string>
 
     <!-- Color customization -->
@@ -125,8 +125,8 @@
     <string name="share">Compartilhar</string>
     <string name="share_via">Compartilhar via</string>
     <string name="select_all">Selecionar tudo</string>
-    <string name="hide">Hide</string>
-    <string name="unhide">Unhide</string>
+    <string name="hide">Ocultar</string>
+    <string name="unhide">Mostrar</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -164,7 +164,7 @@
     <string name="donate_underlined"><u>Doações</u></string>
     <string name="follow_us">Siga-nos:</string>
     <string name="copyright">V %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="donate_please">Olá,\n\nparece que vocêtem usado esse app por um tempinho.\n\nVocê sabia queele não é custeado por nenhuma grande empresa? Desenvolve-lo leva tempo, e quero evitar de usar propagandas, logo sua ajuda seria muito bem vinda.\n\nVocê pode me ajudar comprando o app Simple Thank You, disponível na Play Store, ou me enviando dinheiro diretamente pelo Paypal, ou através de bitcoins.\n\nMais informações em http://simplemobiletools.com/donate.\n\nObrigado!</string>
+    <string name="donate_please">Olá,\n\nparece que você tem usado esse app por um tempinho.\n\nVocê sabia que ele não é custeado por nenhuma grande empresa? Desenvolvê-lo leva tempo, e quero evitar o uso de propagandas, logo sua ajuda seria muito bem vinda.\n\nVocê pode me ajudar comprando o app Simple Thank You, disponível na Play Store, ou me enviando dinheiro diretamente pelo Paypal, ou através de bitcoins.\n\nMais informações em http://simplemobiletools.com/donate.\n\nObrigado!</string>
 
     <!-- License -->
     <string name="notice">Este aplicativo usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>
