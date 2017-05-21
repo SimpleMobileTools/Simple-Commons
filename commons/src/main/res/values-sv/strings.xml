@@ -4,8 +4,8 @@
     <string name="search">Sök</string>
     <string name="save_as">Spara som</string>
     <string name="file_saved">Filen sparad</string>
-    <string name="invalid_file_format">Invalid file format</string>
-    <string name="no_storage_permissions">We need the permission to access your storage</string>
+    <string name="invalid_file_format">Ogiltigt filformat</string>
+    <string name="no_storage_permissions">Vi behöver behörigheten för att komma åt ditt lagringsutrymme</string>
 
     <!-- Renaming -->
     <string name="rename_file">Döp om fil</string>
@@ -25,8 +25,8 @@
     <string name="copy">Kopiera</string>
     <string name="move">Flytta</string>
     <string name="copy_move">Kopiera / Flytta</string>
-    <string name="copy_to">Copy to</string>
-    <string name="move_to">Move to</string>
+    <string name="copy_to">Kopiera till</string>
+    <string name="move_to">Flytta till</string>
     <string name="source">Källa</string>
     <string name="destination">Mål</string>
     <string name="select_destination">Välj mål</string>
@@ -42,13 +42,13 @@
     <string name="moving_success">Filerna har flyttats</string>
     <string name="moving_success_partial">Några filer gick inte att flytta</string>
     <string name="copying_success_partial">Några filer gick inte att kopiera</string>
-    <string name="no_files_selected">No files selected</string>
-    <string name="saving">Saving&#8230;</string>
+    <string name="no_files_selected">Inga filer markerade</string>
+    <string name="saving">Sparar&#8230;</string>
 
     <!-- Create new -->
-    <string name="create_new">Create new</string>
-    <string name="folder">Folder</string>
-    <string name="file">File</string>
+    <string name="create_new">Skapa ny</string>
+    <string name="folder">Mapp</string>
+    <string name="file">Fil</string>
     <string name="create_new_folder">Skapa ny mapp</string>
     <string name="name_taken">Katalogen eller filen finns redan med det namnet</string>
     <string name="invalid_name">Namnet innehåller ogiltiga tecken</string>
@@ -68,7 +68,7 @@
     <string name="select_file">Välj fil</string>
     <string name="confirm_storage_access_title">Bekräfta extern åtkomstlagring</string>
     <string name="confirm_storage_access_text">Välj rotmappen på ditt SD-kort på nästa skärmnbild, för att bevilja skrivrättigheter</string>
-    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
+    <string name="confirm_storage_access_text_sd">Om du inte ser SD-kortet, prova detta</string>
 
     <plurals name="items">
         <item quantity="one">%1$d objekt</item>
@@ -80,13 +80,13 @@
     <string name="internal">Internt</string>
     <string name="sd_card">SD-kort</string>
     <string name="root">Rot</string>
-    <string name="wrong_root_selected">Wrong folder selected, please select the root folder of your SD card</string>
+    <string name="wrong_root_selected">Fel mapp vald, välj rotmappen på ditt SD-kort</string>
 
     <!-- File properties -->
     <string name="properties">Egenskaper</string>
     <string name="path">Sökväg</string>
     <string name="items_selected">Valda objekt</string>
-    <string name="direct_children_count">Direct children count</string>
+    <string name="direct_children_count">Antal direkta döttrar</string>
     <string name="files_count">Antalet filer</string>
     <string name="resolution">Upplösning</string>
     <string name="duration">Varaktighet</string>
@@ -96,19 +96,19 @@
     <string name="exposure_time">Exponeringstid</string>
     <string name="iso_speed">ISO-grader</string>
     <string name="f_number">F-nummer</string>
-    <string name="camera">Camera</string>
+    <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
 
     <!-- Color customization -->
     <string name="background_color">Bakgrundsfärg</string>
     <string name="text_color">Textfärg</string>
     <string name="primary_color">Primär färg</string>
-    <string name="restore_defaults">Restore defaults</string>
-    <string name="theme">Theme</string>
+    <string name="restore_defaults">Återställ förvalda värden</string>
+    <string name="theme">Tema</string>
     <string name="light_theme">Ljust tema</string>
     <string name="dark_theme">Mörkt tema</string>
     <string name="custom">Egen</string>
-    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
+    <string name="changing_color_description">Om du ändrar en färg så kommer den byta till eget tema</string>
     <string name="save">Spara</string>
     <string name="discard">Avbryt</string>
     <string name="undo_changes">Ångra ändringar</string>
@@ -125,8 +125,8 @@
     <string name="share">Dela</string>
     <string name="share_via">Dela via</string>
     <string name="select_all">Välj alla</string>
-    <string name="hide">Hide</string>
-    <string name="unhide">Unhide</string>
+    <string name="hide">Dölj</string>
+    <string name="unhide">Visa</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortera efter</string>
@@ -139,7 +139,7 @@
     <string name="extension">Filändelse</string>
     <string name="ascending">Stigande</string>
     <string name="descending">Fallande</string>
-    <string name="use_for_this_folder">Use for this folder only</string>
+    <string name="use_for_this_folder">Använd bara för denna mapp</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Är du säker på att du vill ta bort detta?</string>
@@ -164,20 +164,20 @@
     <string name="donate_underlined"><u>Donera</u></string>
     <string name="follow_us">Följ oss:</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="donate_please">Hey,\n\nseems like you\'ve been using this app for quite a while now.\n\nDid you know it\'s not backed by any big company? Developing it takes time and I want to keep it adfree, so your support would be appreciated.\n\nYou can support me either by buying a paid app Simple Thank You, by sending money through Paypal or by sending bitcoins.\n\nMore info at http://simplemobiletools.com/donate.\n\nThank you!</string>
+    <string name="donate_please">Hej,\n\nverkar som att du har använt den här appen ganska länge nu.\n\nVisste du att den inte är uppbackad av något stort företag? Att utveckla den tar tid och jag vill behålla den reklamfri, så ditt stöd skulle uppskattas.\n\nDu kan stödja mig antingen genom att köpa en betalapp Simple Thank You, genom att skicka pengar via Paypal eller genom att skicka bitcoins.\n\nMer info på http://simplemobiletools.com/donate.\n\nTack!</string>
 
     <!-- License -->
     <string name="notice">Denna app använder följande tredjepartsbibliotek för att göra mitt liv enklare. Tack.</string>
     <string name="third_party_licences">Tredjepartslicenser</string>
-    <string name="kotlin_title">Kotlin (programming language)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
-    <string name="glide_title">Glide (image loading and caching)</string>
-    <string name="picasso_title">Picasso (image loading and caching)</string>
-    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
-    <string name="joda_title">Joda-Time (Java date replacement)</string>
-    <string name="stetho_title">Stetho (debugging databases)</string>
-    <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">PhotoView (zoomable gifs)</string>
+    <string name="kotlin_title">Kotlin (programmeringsspråk)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zoombara imageviewwidgetar)</string>
+    <string name="glide_title">Glide (inläsning och cachning av bilder)</string>
+    <string name="picasso_title">Picasso (inläsning och cachning av bilder)</string>
+    <string name="cropper_title">Android Image Cropper (beskärning och rotering av bilder)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (markering av flera listobjekt)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (höger-till-vänster-svepning)</string>
+    <string name="joda_title">Joda-Time (ersättning för Javas datumklass)</string>
+    <string name="stetho_title">Stetho (avlusning av databaser)</string>
+    <string name="otto_title">Otto (händelsebuss)</string>
+    <string name="photoview_title">PhotoView (zoombara GIF-bilder)</string>
 </resources>
