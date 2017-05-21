@@ -107,7 +107,7 @@ class AboutActivity : BaseSimpleActivity() {
 
     private fun setupDonate() {
         about_donate.setOnClickListener {
-            launchViewIntent("http://simplemobiletools.github.io/donate")
+            launchViewIntent("https://simplemobiletools.github.io/donate/")
         }
         about_donate.setTextColor(linkTextColor)
     }
