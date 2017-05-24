@@ -27,12 +27,16 @@ fun File.getMimeType(default: String = getDefaultMimeType()): String {
 
 fun File.getDefaultMimeType() = if (isVideoFast()) "video/*" else if (isImageFast()) "image/*" else if (isGif()) "image/gif" else ""
 
-fun File.getDuration(): String {
-    val retriever = MediaMetadataRetriever()
-    retriever.setDataSource(absolutePath)
-    val time = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)
-    val timeInMs = java.lang.Long.parseLong(time)
-    return (timeInMs / 1000).toInt().getFormattedDuration()
+fun File.getDuration(): String? {
+    try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(absolutePath)
+        val time = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)
+        val timeInMs = java.lang.Long.parseLong(time)
+        return (timeInMs / 1000).toInt().getFormattedDuration()
+    } catch (e: Exception) {
+        return null
+    }
 }
 
 fun File.getArtist(): String? {
