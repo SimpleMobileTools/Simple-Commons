@@ -269,11 +269,20 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
                 return@handleSAFDialog
             }
 
-            callback(document.canWrite() && document.renameTo(newFile.name))
+            val success = document.canWrite() && document.renameTo(newFile.name)
+            if (success) {
+                scanFiles(arrayListOf(oldFile, newFile)) {
+                    callback(true)
+                }
+            } else {
+                callback(false)
+            }
         }
     } else if (oldFile.renameTo(newFile)) {
         newFile.setLastModified(System.currentTimeMillis())
-        callback(true)
+        scanFiles(arrayListOf(oldFile, newFile)) {
+            callback(true)
+        }
     } else {
         callback(false)
     }
