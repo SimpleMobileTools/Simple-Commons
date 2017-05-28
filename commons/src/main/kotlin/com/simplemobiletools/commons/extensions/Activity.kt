@@ -271,7 +271,8 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
 
             val success = document.canWrite() && document.renameTo(newFile.name)
             if (success) {
-                scanFiles(arrayListOf(oldFile, newFile)) {
+                deleteFromMediaStore(oldFile)
+                scanFile(newFile) {
                     callback(true)
                 }
             } else {
@@ -280,7 +281,8 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
         }
     } else if (oldFile.renameTo(newFile)) {
         newFile.setLastModified(System.currentTimeMillis())
-        scanFiles(arrayListOf(oldFile, newFile)) {
+        deleteFromMediaStore(oldFile)
+        scanFile(newFile) {
             callback(true)
         }
     } else {
