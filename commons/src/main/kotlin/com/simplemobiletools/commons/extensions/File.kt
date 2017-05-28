@@ -40,9 +40,13 @@ fun File.getDuration(): String? {
 }
 
 fun File.getArtist(): String? {
-    val retriever = MediaMetadataRetriever()
-    retriever.setDataSource(absolutePath)
-    return retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST)
+    try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(absolutePath)
+        return retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST)
+    } catch (ignored: Exception) {
+        return null
+    }
 }
 
 fun File.getAlbum(): String? {
