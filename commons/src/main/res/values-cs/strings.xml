@@ -1,0 +1,183 @@
+<resources>
+    <string name="ok">OK</string>
+    <string name="cancel">Zrušit</string>
+    <string name="search">Hledat</string>
+    <string name="save_as">Uložit jako</string>
+    <string name="file_saved">Soubor úspěšně uložen</string>
+    <string name="invalid_file_format">Neplatný formát souboru</string>
+    <string name="no_storage_permissions">Potřebuji oprávnění k přístupu na vaše úložiště</string>
+
+    <!-- Renaming -->
+    <string name="rename_file">Přejmenovat soubor</string>
+    <string name="rename_folder">Přejmenovat složku</string>
+    <string name="rename_file_error">Nelze přejmenovat soubor</string>
+    <string name="rename_folder_error">Nelze přejmenovat složku</string>
+    <string name="rename_folder_empty">Název složky nesmí být prázdný</string>
+    <string name="rename_folder_exists">Složka s tímto názvem již existuje</string>
+    <string name="rename_folder_root">Nelze přejmenovat root složku úložiště</string>
+    <string name="rename_folder_ok">Složka byla úspěšně přejmenována</string>
+    <string name="renaming_folder">Přejmenování složky</string>
+    <string name="filename_cannot_be_empty">Název souboru nemůže být prázdný</string>
+    <string name="filename_invalid_characters">Název souboru obsahuje neplatné znaky</string>
+    <string name="extension_cannot_be_empty">Přípona nemůže být prázdná</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">Kopírovat</string>
+    <string name="move">Přesunout</string>
+    <string name="copy_move">Kopírovat / Přesunout</string>
+    <string name="copy_to">Kopírovat do</string>
+    <string name="move_to">Přesunout do</string>
+    <string name="source">Zdroj</string>
+    <string name="destination">Cíl</string>
+    <string name="select_destination">Zvolit cílovou složku</string>
+    <string name="click_select_destination">Klikněte zde pro volbu cílové složky</string>
+    <string name="invalid_destination">Nelze zapisovat do zvolené destinace</string>
+    <string name="please_select_destination">Prosím zvolte cílovou složku</string>
+    <string name="source_and_destination_same">Zdrojová a cílová složka se musí lišit</string>
+    <string name="copy_failed">Nelze zkopírovat soubory</string>
+    <string name="copying">Kopíruji&#8230;</string>
+    <string name="copying_success">Soubory byly úspěšně zkopírovány</string>
+    <string name="copy_move_failed">Vyskytla se chyba</string>
+    <string name="moving">Přesunuji&#8230;</string>
+    <string name="moving_success">Soubory byly úspěšně přesunuty</string>
+    <string name="moving_success_partial">Některé soubory nemohly být přesunuty</string>
+    <string name="copying_success_partial">Některé soubory nemohly být zkopírovány</string>
+    <string name="no_files_selected">Žádné soubory vybrány</string>
+    <string name="saving">Ukládám&#8230;</string>
+
+    <!-- Create new -->
+    <string name="create_new">Nový</string>
+    <string name="folder">Složka</string>
+    <string name="file">Soubor</string>
+    <string name="create_new_folder">Vytvořit novou složku</string>
+    <string name="name_taken">Soubor nebo složka s tímto názvem již existuje</string>
+    <string name="invalid_name">Název obsahuje neplatné znaky</string>
+    <string name="empty_name">Zadejte prosím název</string>
+    <string name="unknown_error_occurred">Vyskytla se neznámá chyba</string>
+
+    <!-- Copy conflicts -->
+    <string name="file_already_exists">Soubor %1$s již existuje</string>
+    <string name="select_an_action">Zvolte akci</string>
+    <string name="overwrite">Přepsat</string>
+    <string name="skip">Přeskočit</string>
+    <string name="append">Ponechat s \'_1\'</string>
+    <string name="apply_to_all">Použít pro všechny</string>
+
+    <!-- File picker -->
+    <string name="select_folder">Zvolte složku</string>
+    <string name="select_file">Zvolte soubor</string>
+    <string name="confirm_storage_access_title">Potvrďte přístup k externímu úložišti</string>
+    <string name="confirm_storage_access_text">Na následující obrazovce prosím zvolte root složku SD karty pro povolení oprávnění k zápisu</string>
+    <string name="confirm_storage_access_text_sd">Pokud SD kartu nevidíte, vyzkoušejte následující</string>
+
+    <plurals name="items">
+        <item quantity="one">%1$d položka</item>
+        <item quantity="other">%1$d položek</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">Zvolit úložiště</string>
+    <string name="internal">Interní</string>
+    <string name="sd_card">SD Karta</string>
+    <string name="root">Root</string>
+    <string name="wrong_root_selected">Neplatná složka zvolena, zvolte prosím root složku vaší SD karty</string>
+
+    <!-- File properties -->
+    <string name="properties">Vlastnosti</string>
+    <string name="path">Cesta</string>
+    <string name="items_selected">Položek zvoleno</string>
+    <string name="direct_children_count">Počet přímých dětí</string>
+    <string name="files_count">Celkový počet souborů</string>
+    <string name="resolution">Rozlišení</string>
+    <string name="duration">Délka</string>
+    <string name="artist">Autor</string>
+    <string name="album">Album</string>
+    <string name="focal_length">Ohnisková vzdálenost</string>
+    <string name="exposure_time">Čas explozice</string>
+    <string name="iso_speed">Citlivost ISO</string>
+    <string name="f_number">F-číslo</string>
+    <string name="camera">Fotoaparát</string>
+    <string name="exif">EXIF</string>
+
+    <!-- Color customization -->
+    <string name="background_color">Barva pozadí</string>
+    <string name="text_color">Barva písma</string>
+    <string name="primary_color">Primární barva</string>
+    <string name="restore_defaults">Obnovit výchozí</string>
+    <string name="theme">Motiv</string>
+    <string name="light_theme">Světlý motiv</string>
+    <string name="dark_theme">Tmavý motiv</string>
+    <string name="custom">Vlastní</string>
+    <string name="changing_color_description">Změna barvy změní motiv na Vlastní</string>
+    <string name="save">Uložit</string>
+    <string name="discard">Zahodit</string>
+    <string name="undo_changes">Vrátit změny zpět</string>
+    <string name="undo_changes_confirmation">Opravdu chcete vrátit změny zpět?</string>
+    <string name="save_before_closing">Máte neuložené změny. Uložit před zavřením?</string>
+
+    <!-- What's new -->
+    <string name="whats_new">Co je nového</string>
+    <string name="whats_new_disclaimer">* pouze větší změny jsou zde uvedeny, vždy jsou doprovázeny také menšími změnami</string>
+
+    <!-- Actionbar items -->
+    <string name="delete">Smazat</string>
+    <string name="rename">Přejmenovat</string>
+    <string name="share">Sdílet</string>
+    <string name="share_via">Sdílet pomocí</string>
+    <string name="select_all">Označit vše</string>
+    <string name="hide">Skrýt</string>
+    <string name="unhide">Odkrýt</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">Seřadit dle</string>
+    <string name="name">Názvu</string>
+    <string name="size">Velikosti</string>
+    <string name="last_modified">Poslední úpravy</string>
+    <string name="date_taken">Data pořízení</string>
+    <string name="title">Titulku</string>
+    <string name="filename">Názvu souboru</string>
+    <string name="extension">Přípony</string>
+    <string name="ascending">Vzestupně</string>
+    <string name="descending">Sestupně</string>
+    <string name="use_for_this_folder">Použít pouze pro tuto složku</string>
+
+    <!-- Confirmation dialog -->
+    <string name="proceed_with_deletion">Opravdu chcete smazat dané soubory/složky?</string>
+    <string name="yes">Ano</string>
+    <string name="no">Ne</string>
+
+    <!-- Settings -->
+    <string name="settings">Nastavení</string>
+    <string name="customize_colors">Přizpůsobit barvy</string>
+    <string name="show_hidden">Zobrazit skryté soubory a složky</string>
+
+    <!-- About -->
+    <string name="about">O aplikaci</string>
+    <string name="website_label">Pro zdrojové kódy navštivte</string>
+    <string name="email_label">Svoji zpětnou vazbu či návhry posílejte na</string>
+    <string name="more_apps_underlined"><u>Více aplikací</u></string>
+    <string name="third_party_licences_underlined"><u>Licence třetí strany</u></string>
+    <string name="invite_friends_underlined"><u>Pozvat přátele</u></string>
+    <string name="share_text">Ahoj, pojď se podívat na %1$s v/na %2$s</string>
+    <string name="invite_via">Pozvat pomocí</string>
+    <string name="rate_us_underlined"><u>Ohodnotit</u></string>
+    <string name="donate_underlined"><u>Donate</u></string>
+    <string name="follow_us">Sledujte nás:</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="donate_please">Hey,\n\nseems like you\'ve been using this app for quite a while now.\n\nDid you know it\'s not backed by any big company? Developing it takes time and I want to keep it adfree, so your support would be appreciated.\n\nYou can support me either by buying a paid app Simple Thank You, by sending money through Paypal or by sending bitcoins.\n\nMore info at http://simplemobiletools.com/donate.\n\nThank you!</string>
+
+    <!-- License -->
+    <string name="notice">Tato aplikace využívá následující knihovny třetích stran pro zjednodušení mého žívota. Děkuji.</string>
+    <string name="third_party_licences">Licence třetích stran</string>
+    <string name="kotlin_title">Kotlin (programovací jazyk)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
+    <string name="glide_title">Glide (image loading and caching)</string>
+    <string name="picasso_title">Picasso (image loading and caching)</string>
+    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
+    <string name="joda_title">Joda-Time (Java date replacement)</string>
+    <string name="stetho_title">Stetho (debugging databases)</string>
+    <string name="otto_title">Otto (event bus)</string>
+    <string name="photoview_title">PhotoView (zoomable gifs)</string>
+</resources>
