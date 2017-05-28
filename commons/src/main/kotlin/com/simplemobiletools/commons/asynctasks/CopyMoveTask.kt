@@ -108,7 +108,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
         inputStream.copyTo(out!!)
         activity.scanFile(destination) {}
-        if (source.hashCode() == destination.hashCode())
+        if (source.length() / 1000000 == destination.length() / 1000000)
             mMovedFiles.add(source)
     }
 
