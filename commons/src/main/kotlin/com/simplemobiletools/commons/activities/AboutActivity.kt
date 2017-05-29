@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.activities
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.text.Html
 import android.text.method.LinkMovementMethod
@@ -53,7 +54,12 @@ class AboutActivity : BaseSimpleActivity() {
         val label = getString(R.string.email_label)
         val email = getString(R.string.email)
 
-        val href = "$label<br><a href=\"mailto:$email?subject=$appName\">$email</a>"
+        val appVersion = String.format(getString(R.string.app_version, intent.getStringExtra(APP_VERSION_NAME)))
+        val deviceOS = String.format(getString(R.string.device_os), Build.VERSION.RELEASE)
+        val newline = "%0D%0A"
+        val separator = "___________________"
+        val body = "$newline$newline$newline$separator$newline${getString(R.string.additional_info)}:$newline$appVersion$newline$deviceOS"
+        val href = "$label<br><a href=\"mailto:$email?subject=$appName&body=$body\">$email</a>"
         about_email.text = Html.fromHtml(href)
         about_email.movementMethod = LinkMovementMethod.getInstance()
         about_email.setLinkTextColor(linkTextColor)
