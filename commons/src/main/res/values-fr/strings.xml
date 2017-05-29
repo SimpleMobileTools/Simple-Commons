@@ -57,6 +57,7 @@
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">Le fichier %1$s existe déjà</string>
+    <string name="file_already_exists_overwrite">Le fichier %1$s existe déjà. Ecraser?</string>
     <string name="select_an_action">Sélectionner une action</string>
     <string name="overwrite">Ecraser</string>
     <string name="skip">Passer</string>

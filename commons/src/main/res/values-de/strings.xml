@@ -57,6 +57,7 @@
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">Datei %1$s existiert bereits</string>
+    <string name="file_already_exists_overwrite">Datei %1$s existiert bereits. Überschreiben?</string>
     <string name="select_an_action">Aktion auswählen</string>
     <string name="overwrite">Überschreiben</string>
     <string name="skip">Überspringen</string>

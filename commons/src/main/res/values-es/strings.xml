@@ -57,6 +57,7 @@
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">El archivo %1$s ya existe</string>
+    <string name="file_already_exists_overwrite">El archivo %1$s ya existe. Sobreescribir?</string>
     <string name="select_an_action">Elige una opción</string>
     <string name="overwrite">Sobreescribir</string>
     <string name="skip">Saltar</string>

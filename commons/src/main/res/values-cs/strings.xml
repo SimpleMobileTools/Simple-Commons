@@ -57,6 +57,7 @@
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">Soubor %1$s již existuje</string>
+    <string name="file_already_exists_overwrite">Soubor %1$s již existuje. Přepsat??</string>
     <string name="select_an_action">Zvolte akci</string>
     <string name="overwrite">Přepsat</string>
     <string name="skip">Přeskočit</string>

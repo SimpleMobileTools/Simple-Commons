@@ -57,6 +57,7 @@
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">Filen %1$s finns redan</string>
+    <string name="file_already_exists_overwrite">Filen %1$s finns redan. Skriv över?</string>
     <string name="select_an_action">Välj en åtgärd</string>
     <string name="overwrite">Skriv över</string>
     <string name="skip">Hoppa över</string>

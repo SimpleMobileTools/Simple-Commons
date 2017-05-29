@@ -57,6 +57,7 @@
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">Dosya %1$s zaten mevcut</string>
+    <string name="file_already_exists_overwrite">Dosya %1$s zaten mevcut. Üzerine yaz?</string>
     <string name="select_an_action">Bir eylem seçin</string>
     <string name="overwrite">Üzerine yaz</string>
     <string name="skip">Atla</string>

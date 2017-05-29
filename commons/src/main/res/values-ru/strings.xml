@@ -57,6 +57,7 @@
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">Файл %1$s уже существует</string>
+    <string name="file_already_exists_overwrite">Файл %1$s уже существует. Перезаписать?</string>
     <string name="select_an_action">Выберите действие</string>
     <string name="overwrite">Перезаписать</string>
     <string name="skip">Пропустить</string>
