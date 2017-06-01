@@ -281,10 +281,8 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
         }
     } else if (oldFile.renameTo(newFile)) {
         newFile.setLastModified(System.currentTimeMillis())
-        deleteFromMediaStore(oldFile)
-        scanFile(newFile) {
-            callback(true)
-        }
+        updateInMediaStore(oldFile, newFile)
+        callback(true)
     } else {
         callback(false)
     }
