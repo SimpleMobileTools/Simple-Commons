@@ -6,7 +6,6 @@ import android.view.MenuItem
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.dialogs.ColorPickerDialog
 import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
-import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.dialogs.RadioGroupDialog
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.setBackgroundWithStroke
@@ -42,13 +41,11 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_customization, menu)
-        menu.findItem(R.id.undo).isVisible = hasUnsavedChanges
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.undo -> confirmUndoChanges()
             R.id.save -> saveChanges()
             else -> return super.onOptionsItemSelected(item)
         }
@@ -156,12 +153,6 @@ class CustomizationActivity : BaseSimpleActivity() {
         }
         hasUnsavedChanges = false
         finish()
-    }
-
-    private fun confirmUndoChanges() {
-        ConfirmationDialog(this, "", R.string.undo_changes_confirmation, R.string.yes, R.string.no) {
-            resetColors()
-        }
     }
 
     private fun resetColors() {
