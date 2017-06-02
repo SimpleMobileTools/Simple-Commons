@@ -1,9 +1,10 @@
 # Simple Commons
-Some helper functions, dialogs etc used by multiple simple apps.
+Some helper functions, dialogs etc used by multiple simple apps.</br>
+For reporting bugs/features that affect all apps please use the <a href="https://github.com/SimpleMobileTools/General-Discussion">General Discussion</a> repository.
 
 License
 -------
-    Copyright 2016 SimpleMobileTools
+    Copyright 2017 SimpleMobileTools
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
