@@ -50,9 +50,13 @@ fun File.getArtist(): String? {
 }
 
 fun File.getAlbum(): String? {
-    val retriever = MediaMetadataRetriever()
-    retriever.setDataSource(absolutePath)
-    return retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUM)
+    try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(absolutePath)
+        return retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUM)
+    } catch (ignored: Exception) {
+        return null
+    }
 }
 
 fun File.getResolution(): Point {
