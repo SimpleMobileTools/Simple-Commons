@@ -128,8 +128,8 @@
     <string name="select_all">Selecionar tudo</string>
     <string name="hide">Ocultar</string>
     <string name="unhide">Mostrar</string>
-    <string name="hide_folder">Hide folder</string>
-    <string name="unhide_folder">Unhide folder</string>
+    <string name="hide_folder">Ocultar posta</string>
+    <string name="unhide_folder">Mostrar pasta</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -167,9 +167,9 @@
     <string name="donate_underlined"><u>Donativos</u></string>
     <string name="follow_us">Siga-nos:</string>
     <string name="copyright">V %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="additional_info">Additional info</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
+    <string name="additional_info">Mais informações</string>
+    <string name="app_version">Versão da aplicação: %1$s</string>
+    <string name="device_os">SO do dispositivo: %1$s</string>
     <string name="donate_please">Olá,\n\nparece que já usa esta aplicação há algum tempo.\n\nSabia que não é patrocinada por nenhuma organização? O seu desenvolvimento ocupa-me bastante tempo e eu planeio manter a aplicação livre de anúncios. Assim, se me puder ajudar, ajuda no desenvolvimento.\n\nPode ajudar-me comprando a aplicação Simple Thank You ou com donativos através de Paypal ou bitcoins.\n\nMais informação em http://simplemobiletools.com/donate.\n\nObrigado!</string>
 
     <!-- License -->
