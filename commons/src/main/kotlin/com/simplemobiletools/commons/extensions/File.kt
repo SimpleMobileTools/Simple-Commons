@@ -4,7 +4,9 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Point
 import android.media.MediaMetadataRetriever
+import android.webkit.MimeTypeMap
 import java.io.File
+
 
 fun File.isImageVideoGif() = absolutePath.isImageFast() || absolutePath.isVideoFast() || absolutePath.isGif()
 fun File.isGif() = absolutePath.endsWith(".gif", true)
@@ -16,13 +18,11 @@ fun File.isVideoSlow() = absolutePath.isVideoFast() || getMimeType().startsWith(
 fun File.isAudioSlow() = getMimeType().startsWith("audio")
 
 fun File.getMimeType(default: String = getDefaultMimeType()): String {
-    return try {
-        val retriever = MediaMetadataRetriever()
-        retriever.setDataSource(absolutePath)
-        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_MIMETYPE)
-    } catch (ignored: Exception) {
+    val extension = MimeTypeMap.getFileExtensionFromUrl(absolutePath)
+    return if (extension != null) {
+        MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension)
+    } else
         default
-    }
 }
 
 fun File.getDefaultMimeType() = if (isVideoFast()) "video/*" else if (isImageFast()) "image/*" else if (isGif()) "image/gif" else ""
