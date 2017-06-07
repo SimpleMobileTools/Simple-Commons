@@ -18,11 +18,14 @@ fun File.isVideoSlow() = absolutePath.isVideoFast() || getMimeType().startsWith(
 fun File.isAudioSlow() = getMimeType().startsWith("audio")
 
 fun File.getMimeType(default: String = getDefaultMimeType()): String {
-    val extension = MimeTypeMap.getFileExtensionFromUrl(absolutePath)
-    return if (extension != null) {
-        MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension)
-    } else
-        default
+    try {
+        val extension = MimeTypeMap.getFileExtensionFromUrl(absolutePath)
+        if (extension != null) {
+            return MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension)
+        }
+    } catch (ignored: Exception) {
+    }
+    return default
 }
 
 fun File.getDefaultMimeType() = if (isVideoFast()) "video/*" else if (isImageFast()) "image/*" else if (isGif()) "image/gif" else ""
