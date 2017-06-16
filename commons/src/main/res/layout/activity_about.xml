@@ -108,13 +108,31 @@
             android:src="@drawable/ic_gplus"/>
 
         <com.simplemobiletools.commons.views.MyTextView
+            android:id="@+id/about_gruveo_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/about_facebook"
+            android:paddingBottom="@dimen/medium_margin"
+            android:paddingTop="@dimen/activity_margin"
+            android:text="@string/gruveo"/>
+
+        <ImageView
+            android:id="@+id/about_gruveo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/social_logo"
+            android:layout_below="@+id/about_gruveo_label"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_gruveo"/>
+
+        <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_copyright"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
-            android:layout_below="@+id/about_gplus"
+            android:layout_below="@+id/about_gruveo"
             android:gravity="center_horizontal|bottom"
             android:paddingTop="@dimen/activity_margin"
-            android:text="v1.0\nCopyright © Simple Mobile Tools 2016"/>
+            android:text="v1.0\nCopyright © Simple Mobile Tools 2017"/>
+
     </RelativeLayout>
 </ScrollView>
