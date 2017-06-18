@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Looper
+import android.provider.DocumentsContract
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
@@ -269,10 +270,9 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
                 return@handleSAFDialog
             }
 
-            val success = document.canWrite() && document.renameTo(newFile.name)
-            if (success) {
-                deleteFromMediaStore(oldFile)
-                scanFile(newFile) {
+            val uri = DocumentsContract.renameDocument(contentResolver, document.uri, newFile.name)
+            if (document.uri != uri) {
+                scanFiles(arrayListOf(oldFile, newFile)) {
                     callback(true)
                 }
             } else {
