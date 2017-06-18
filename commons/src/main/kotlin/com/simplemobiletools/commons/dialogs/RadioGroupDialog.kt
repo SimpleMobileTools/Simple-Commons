@@ -12,7 +12,7 @@ import com.simplemobiletools.commons.models.RadioItem
 import kotlinx.android.synthetic.main.dialog_radio_group.view.*
 import java.util.*
 
-class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, val checkedItemId: Int, val callback: (newValue: Any) -> Unit) :
+class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, val checkedItemId: Int, val titleId: Int = 0, val callback: (newValue: Any) -> Unit) :
         AlertDialog.Builder(activity), RadioGroup.OnCheckedChangeListener {
     val dialog: AlertDialog
     var wasInit = false
@@ -37,7 +37,7 @@ class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, 
 
         dialog = AlertDialog.Builder(activity)
                 .create().apply {
-            activity.setupDialogStuff(view, this)
+            activity.setupDialogStuff(view, this, titleId)
         }
 
         if (selectedItemId != -1) {
