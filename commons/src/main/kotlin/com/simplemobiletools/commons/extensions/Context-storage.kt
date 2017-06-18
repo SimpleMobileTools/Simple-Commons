@@ -9,6 +9,7 @@ import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
+import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.support.v4.content.FileProvider
 import android.support.v4.provider.DocumentFile
@@ -141,7 +142,7 @@ fun Context.getFileDocument(path: String): DocumentFile? {
 fun Context.tryFastDocumentDelete(file: File, allowDeleteFolder: Boolean): Boolean {
     val document = getFastDocument(file)
     return if (document?.isFile == true || allowDeleteFolder) {
-        document?.delete() ?: false
+        DocumentsContract.deleteDocument(contentResolver, document?.uri)
     } else
         false
 }

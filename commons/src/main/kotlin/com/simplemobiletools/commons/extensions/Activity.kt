@@ -227,7 +227,7 @@ fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = fal
                 fileDeleted = tryFastDocumentDelete(file, allowDeleteFolder)
                 if (!fileDeleted) {
                     val document = getFileDocument(file.absolutePath)
-                    fileDeleted = (document?.isFile == true || allowDeleteFolder) && document?.delete() == true
+                    fileDeleted = (document?.isFile == true || allowDeleteFolder) && DocumentsContract.deleteDocument(contentResolver, document?.uri)
                 }
 
                 if (fileDeleted) {
