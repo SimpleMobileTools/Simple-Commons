@@ -43,7 +43,7 @@ fun String.isImageFast() = photoExtensions.any { endsWith(it, true) }
 
 fun String.getCacheStrategy() = if (isGif()) DiskCacheStrategy.SOURCE else DiskCacheStrategy.RESULT
 
-fun String.getMimetypeFromPath(): String {
+fun String.getMimeTypeFromPath(): String {
     val typesMap = HashMap<String, String>().apply {
         put("323", "text/h323")
         put("3g2", "video/3gpp2")

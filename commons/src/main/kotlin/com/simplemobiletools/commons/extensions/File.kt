@@ -27,7 +27,7 @@ fun File.getMimeType(default: String = getDefaultMimeType()): String {
     return default
 }
 
-fun File.getDefaultMimeType() = if (isVideoFast()) "video/*" else if (isImageFast()) "image/*" else if (isGif()) "image/gif" else absolutePath.getMimetypeFromPath()
+fun File.getDefaultMimeType() = if (isVideoFast()) "video/*" else if (isImageFast()) "image/*" else if (isGif()) "image/gif" else absolutePath.getMimeTypeFromPath()
 
 fun File.getDuration(): String? {
     try {
