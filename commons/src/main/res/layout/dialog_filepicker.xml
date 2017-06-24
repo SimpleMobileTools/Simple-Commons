@@ -2,45 +2,55 @@
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/directory_picker_coordinator"
+    android:id="@+id/filepicker_coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:id="@+id/directory_picker_holder"
+        android:id="@+id/filepicker_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <com.simplemobiletools.commons.views.Breadcrumbs
-            android:id="@+id/directory_picker_breadcrumbs"
+            android:id="@+id/filepicker_breadcrumbs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/activity_margin"/>
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/directory_picker_list"
+            android:id="@+id/filepicker_list"
             android:layout_width="match_parent"
             android:layout_height="1000dp"
-            android:layout_below="@+id/directory_picker_breadcrumbs"
+            android:layout_below="@+id/filepicker_breadcrumbs"
             android:scrollbars="none"
             app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
 
         <com.simplemobiletools.commons.views.FastScroller
-            android:id="@+id/directory_fastscroller"
+            android:id="@+id/filepicker_fastscroller"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_alignBottom="@+id/directory_picker_list"
+            android:layout_alignBottom="@+id/filepicker_list"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/directory_picker_list"
+            android:layout_alignTop="@+id/filepicker_list"
             android:paddingLeft="@dimen/normal_margin"
-            android:paddingStart="@dimen/normal_margin"/>
+            android:paddingStart="@dimen/normal_margin">
+
+            <ImageView
+                android:id="@+id/filepicker_fastscroller_handle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:alpha="0"
+                android:background="@drawable/fastscroller_handle_vertical"/>
+
+        </com.simplemobiletools.commons.views.FastScroller>
 
     </RelativeLayout>
 
     <com.simplemobiletools.commons.views.MyFloatingActionButton
-        android:id="@+id/directory_picker_fab"
+        android:id="@+id/filepicker_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"

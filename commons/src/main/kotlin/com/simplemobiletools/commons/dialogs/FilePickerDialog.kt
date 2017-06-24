@@ -53,16 +53,16 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         if (File(currPath).isFile)
             currPath = File(currPath).parent
 
-        mDialogView.directory_picker_breadcrumbs.setListener(this)
+        mDialogView.filepicker_breadcrumbs.setListener(this)
         updateItems()
 
         // if a dialog's listview has height wrap_content, it calls getView way too often which can reduce performance
         // lets just measure it, then set a static height
-        mDialogView.directory_picker_list.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+        mDialogView.filepicker_list.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
             override fun onGlobalLayout() {
                 val listener = this
                 val rect = Rect()
-                mDialogView.directory_picker_list.apply {
+                mDialogView.filepicker_list.apply {
                     getGlobalVisibleRect(rect)
                     layoutParams.height = rect.bottom - rect.top
                     viewTreeObserver.removeOnGlobalLayoutListener(listener)
@@ -74,7 +74,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                 .setNegativeButton(R.string.cancel, null)
                 .setOnKeyListener({ dialogInterface, i, keyEvent ->
                     if (keyEvent.action == KeyEvent.ACTION_UP && i == KeyEvent.KEYCODE_BACK) {
-                        val breadcrumbs = mDialogView.directory_picker_breadcrumbs
+                        val breadcrumbs = mDialogView.filepicker_breadcrumbs
                         if (breadcrumbs.childCount > 1) {
                             breadcrumbs.removeBreadcrumb()
                             currPath = breadcrumbs.lastItem.path
@@ -90,8 +90,8 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             builder.setPositiveButton(R.string.ok, null)
 
         if (showFAB) {
-            mDialogView.directory_picker_fab.visibility = View.VISIBLE
-            mDialogView.directory_picker_fab.setOnClickListener { createNewFolder() }
+            mDialogView.filepicker_fab.visibility = View.VISIBLE
+            mDialogView.filepicker_fab.setOnClickListener { createNewFolder() }
         }
 
         mDialog = builder.create().apply {
@@ -133,16 +133,16 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             }
         }
 
-        val layoutManager = mDialogView.directory_picker_list.layoutManager as LinearLayoutManager
+        val layoutManager = mDialogView.filepicker_list.layoutManager as LinearLayoutManager
         mScrollStates.put(mPrevPath.trimEnd('/'), layoutManager.onSaveInstanceState())
 
         mDialogView.apply {
-            if (directory_picker_list.adapter == null)
-                directory_picker_list.addItemDecoration(RecyclerViewDivider(context))
+            if (filepicker_list.adapter == null)
+                filepicker_list.addItemDecoration(RecyclerViewDivider(context))
 
-            directory_picker_list.adapter = adapter
-            directory_picker_breadcrumbs.setBreadcrumb(currPath)
-            directory_fastscroller.setViews(directory_picker_list)
+            filepicker_list.adapter = adapter
+            filepicker_breadcrumbs.setBreadcrumb(currPath)
+            filepicker_fastscroller.setViews(filepicker_list)
         }
 
         layoutManager.onRestoreInstanceState(mScrollStates[currPath.trimEnd('/')])
@@ -194,7 +194,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                 updateItems()
             }
         } else {
-            val item = mDialogView.directory_picker_breadcrumbs.getChildAt(id).tag as FileDirItem
+            val item = mDialogView.filepicker_breadcrumbs.getChildAt(id).tag as FileDirItem
             if (currPath != item.path.trimEnd('/')) {
                 currPath = item.path
                 updateItems()

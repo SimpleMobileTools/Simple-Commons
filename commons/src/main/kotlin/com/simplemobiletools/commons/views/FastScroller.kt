@@ -6,18 +6,17 @@ import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.AttributeSet
-import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
-import android.widget.LinearLayout
-import com.simplemobiletools.commons.R
+import android.widget.FrameLayout
 import com.simplemobiletools.commons.extensions.baseConfig
-import kotlinx.android.synthetic.main.fastscroller.view.*
 
 // based on https://blog.stylingandroid.com/recyclerview-fastscroll-part-1
-class FastScroller : LinearLayout {
-    private val handle: View
+class FastScroller : FrameLayout {
+    var isHorizontal = false
+    private var handle: View? = null
     private var currHeight = 0
+    private var currWidth = 0
 
     private val HANDLE_HIDE_DELAY = 1000L
     private var recyclerView: RecyclerView? = null
@@ -51,41 +50,54 @@ class FastScroller : LinearLayout {
     }
 
     fun updateHandleColor() {
-        handle.background.setColorFilter(context.baseConfig.primaryColor, PorterDuff.Mode.SRC_IN)
+        handle!!.background.setColorFilter(context.baseConfig.primaryColor, PorterDuff.Mode.SRC_IN)
     }
 
-    override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
-        super.onSizeChanged(w, h, oldw, oldh)
-        currHeight = h
+    override fun onSizeChanged(width: Int, height: Int, oldWidth: Int, oldHeight: Int) {
+        super.onSizeChanged(width, height, oldWidth, oldHeight)
+        currHeight = height
+        currWidth = width
         updateHandlePosition()
     }
 
     private fun updateHandlePosition() {
-        if (handle.isSelected || recyclerView == null)
+        if (handle!!.isSelected || recyclerView == null)
             return
 
-        val verticalScrollOffset = recyclerView!!.computeVerticalScrollOffset()
-        val verticalScrollRange = recyclerView!!.computeVerticalScrollRange()
-        val proportion = verticalScrollOffset.toFloat() / (verticalScrollRange.toFloat() - currHeight)
-        setPosition(currHeight * proportion)
+        if (isHorizontal) {
+            val horizontalScrollOffset = recyclerView!!.computeHorizontalScrollOffset()
+            val horizontalScrollRange = recyclerView!!.computeHorizontalScrollRange()
+            val proportion = horizontalScrollOffset.toFloat() / (horizontalScrollRange.toFloat() - currWidth)
+            setPosition(currWidth * proportion)
+        } else {
+            val verticalScrollOffset = recyclerView!!.computeVerticalScrollOffset()
+            val verticalScrollRange = recyclerView!!.computeVerticalScrollRange()
+            val proportion = verticalScrollOffset.toFloat() / (verticalScrollRange.toFloat() - currHeight)
+            setPosition(currHeight * proportion)
+        }
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
         return when (event.action) {
             MotionEvent.ACTION_DOWN -> {
                 showHandle()
-                handle.isSelected = true
+                handle!!.isSelected = true
                 swipeRefreshLayout?.isEnabled = false
                 true
             }
             MotionEvent.ACTION_MOVE -> {
-                setPosition(event.y)
-                setRecyclerViewPosition(event.y)
+                if (isHorizontal) {
+                    setPosition(event.x)
+                    setRecyclerViewPosition(event.x)
+                } else {
+                    setPosition(event.y)
+                    setRecyclerViewPosition(event.y)
+                }
                 true
             }
             MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                 hideHandle()
-                handle.isSelected = false
+                handle!!.isSelected = false
                 swipeRefreshLayout?.isEnabled = true
                 true
             }
@@ -93,35 +105,44 @@ class FastScroller : LinearLayout {
         }
     }
 
-    private fun setRecyclerViewPosition(y: Float) {
+    private fun setRecyclerViewPosition(pos: Float) {
         if (recyclerView != null) {
             val itemCount = recyclerView!!.adapter.itemCount
-            val proportion = y / currHeight
+            val proportion = if (isHorizontal) {
+                pos / currWidth
+            } else {
+                pos / currHeight
+            }
+
             val targetPos = getValueInRange(0f, (itemCount - 1).toFloat(), proportion * itemCount).toInt()
             (recyclerView!!.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(targetPos, 0)
         }
     }
 
-    init {
-        orientation = LinearLayout.HORIZONTAL
-        clipChildren = false
-        LayoutInflater.from(context).inflate(R.layout.fastscroller, this)
-        handle = fastscroller_handle
+    override fun onFinishInflate() {
+        super.onFinishInflate()
+        handle = getChildAt(0)
     }
 
     private fun showHandle() {
-        handle.animate().alpha(1f).start()  // override the fade animation
-        handle.alpha = 1f
+        handle!!.animate().alpha(1f).start()  // override the fade animation
+        handle!!.alpha = 1f
     }
 
     private fun hideHandle() {
-        handle.animate().alpha(0f).startDelay = HANDLE_HIDE_DELAY
+        handle!!.animate().alpha(0f).startDelay = HANDLE_HIDE_DELAY
     }
 
-    private fun setPosition(y: Float) {
-        val position = y / currHeight
-        val handleHeight = handle.height
-        handle.y = getValueInRange(0f, (currHeight - handleHeight).toFloat(), (currHeight - handleHeight) * position)
+    private fun setPosition(pos: Float) {
+        if (isHorizontal) {
+            val position = pos / currWidth
+            val handleWidth = handle!!.width
+            handle!!.x = getValueInRange(0f, (currWidth - handleWidth).toFloat(), (currWidth - handleWidth) * position)
+        } else {
+            val position = pos / currHeight
+            val handleHeight = handle!!.height
+            handle!!.y = getValueInRange(0f, (currHeight - handleHeight).toFloat(), (currHeight - handleHeight) * position)
+        }
     }
 
     private fun getValueInRange(min: Float, max: Float, value: Float) = Math.min(Math.max(min, value), max)
