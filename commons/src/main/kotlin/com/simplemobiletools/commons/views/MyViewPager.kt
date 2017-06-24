@@ -15,8 +15,7 @@ class MyViewPager : RtlViewPager {
     override fun onInterceptTouchEvent(ev: MotionEvent): Boolean {
         try {
             return super.onInterceptTouchEvent(ev)
-        } catch (ex: IllegalArgumentException) {
-            ex.printStackTrace()
+        } catch (ignored: Exception) {
         }
 
         return false
@@ -25,8 +24,7 @@ class MyViewPager : RtlViewPager {
     override fun onTouchEvent(ev: MotionEvent): Boolean {
         try {
             return super.onTouchEvent(ev)
-        } catch (ex: IllegalArgumentException) {
-            ex.printStackTrace()
+        } catch (ignored: Exception) {
         }
 
         return false
