@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.media.MediaScannerConnection
 import android.os.Looper
 import android.provider.DocumentsContract
 import android.view.View
@@ -244,9 +245,13 @@ fun BaseSimpleActivity.rescanDeletedFile(file: File, callback: () -> Unit) {
     if (deleteFromMediaStore(file)) {
         callback()
     } else {
-        scanFile(file) {
+        MediaScannerConnection.scanFile(applicationContext, arrayOf(file.absolutePath), null, { s, uri ->
+            try {
+                contentResolver.delete(uri, null, null)
+            } catch (ignored: Exception) {
+            }
             callback()
-        }
+        })
     }
 }
 
