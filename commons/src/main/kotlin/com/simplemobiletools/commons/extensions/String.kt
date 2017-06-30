@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
 import android.content.Context
-import com.bumptech.glide.load.engine.DiskCacheStrategy
 import java.util.*
 
 fun String.getFilenameFromPath() = substring(lastIndexOf("/") + 1)
@@ -40,8 +39,6 @@ fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }
 
 // fast extension check, not guaranteed to be accurate
 fun String.isImageFast() = photoExtensions.any { endsWith(it, true) }
-
-fun String.getCacheStrategy() = if (isGif()) DiskCacheStrategy.SOURCE else DiskCacheStrategy.RESULT
 
 fun String.getMimeTypeFromPath(): String {
     val typesMap = HashMap<String, String>().apply {

@@ -28,9 +28,10 @@ android {
 dependencies {
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
     compile 'com.booking:rtlviewpager:1.0.1'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC1'
 }
 
 buildscript {

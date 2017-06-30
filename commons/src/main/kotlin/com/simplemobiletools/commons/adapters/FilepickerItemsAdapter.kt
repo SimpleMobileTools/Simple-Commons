@@ -7,10 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade
+import com.bumptech.glide.request.RequestOptions
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.formatSize
-import com.simplemobiletools.commons.extensions.getCacheStrategy
 import com.simplemobiletools.commons.extensions.getColoredDrawableWithColor
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.filepicker_list_item.view.*
@@ -59,7 +60,8 @@ class FilepickerItemsAdapter(val context: Context, private val mItems: List<File
                     list_item_details.text = getChildrenCnt(fileDirItem)
                 } else {
                     val path = fileDirItem.path
-                    Glide.with(context).load(path).diskCacheStrategy(path.getCacheStrategy()).error(fileDrawable).centerCrop().crossFade().into(list_item_icon)
+                    val options = RequestOptions().centerCrop().error(fileDrawable)
+                    Glide.with(context).load(path).transition(withCrossFade()).apply(options).into(list_item_icon)
                     list_item_details.text = fileDirItem.size.formatSize()
                 }
 
@@ -74,7 +76,7 @@ class FilepickerItemsAdapter(val context: Context, private val mItems: List<File
         }
 
         fun stopLoad() {
-            Glide.clear(view.list_item_icon)
+            Glide.with(context).clear(view.list_item_icon)
         }
     }
 }
