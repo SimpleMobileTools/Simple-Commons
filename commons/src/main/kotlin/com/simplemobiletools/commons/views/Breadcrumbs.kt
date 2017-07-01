@@ -128,7 +128,15 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
         mInflater.inflate(R.layout.breadcrumb_item, null, false).apply {
             var textToAdd = item.name
             if (addPrefix)
-                textToAdd = " -> $textToAdd"
+                textToAdd = "/ $textToAdd"
+
+            if (childCount == 0) {
+                resources.apply {
+                    background = getDrawable(R.drawable.breadcrumb_gradient)
+                    val medium = getDimension(R.dimen.medium_margin).toInt()
+                    setPadding(medium, medium, medium, medium)
+                }
+            }
 
             breadcrumb_text.text = textToAdd
             breadcrumb_text.setTextColor(mTextColor)
