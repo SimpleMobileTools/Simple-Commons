@@ -4,6 +4,7 @@ import android.graphics.Rect
 import android.os.Environment
 import android.os.Parcelable
 import android.support.v7.app.AlertDialog
+import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.view.KeyEvent
 import android.view.LayoutInflater
@@ -17,7 +18,6 @@ import com.simplemobiletools.commons.extensions.internalStoragePath
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.Breadcrumbs
-import com.simplemobiletools.commons.views.RecyclerViewDivider
 import kotlinx.android.synthetic.main.dialog_filepicker.view.*
 import java.io.File
 import java.util.*
@@ -138,8 +138,12 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         mScrollStates.put(mPrevPath.trimEnd('/'), layoutManager.onSaveInstanceState())
 
         mDialogView.apply {
-            if (filepicker_list.adapter == null)
-                filepicker_list.addItemDecoration(RecyclerViewDivider(context))
+            if (filepicker_list.adapter == null) {
+                DividerItemDecoration(context, DividerItemDecoration.VERTICAL).apply {
+                    setDrawable(context.resources.getDrawable(R.drawable.divider))
+                    filepicker_list.addItemDecoration(this)
+                }
+            }
 
             filepicker_list.adapter = adapter
             filepicker_breadcrumbs.setBreadcrumb(currPath)
