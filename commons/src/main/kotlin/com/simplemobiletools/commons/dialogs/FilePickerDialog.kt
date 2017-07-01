@@ -21,6 +21,7 @@ import com.simplemobiletools.commons.views.RecyclerViewDivider
 import kotlinx.android.synthetic.main.dialog_filepicker.view.*
 import java.io.File
 import java.util.*
+import kotlin.comparisons.compareBy
 
 /**
  * The only filepicker constructor with a couple optional parameters
