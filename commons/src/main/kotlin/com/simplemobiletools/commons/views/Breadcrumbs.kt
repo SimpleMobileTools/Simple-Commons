@@ -125,17 +125,18 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
     }
 
     private fun addBreadcrumb(item: FileDirItem, addPrefix: Boolean) {
-        val view = mInflater.inflate(R.layout.breadcrumb_item, null, false)
-        var textToAdd = item.name
-        if (addPrefix)
-            textToAdd = " -> " + textToAdd
+        mInflater.inflate(R.layout.breadcrumb_item, null, false).apply {
+            var textToAdd = item.name
+            if (addPrefix)
+                textToAdd = " -> $textToAdd"
 
-        view.breadcrumb_text.text = textToAdd
-        view.breadcrumb_text.setTextColor(mTextColor)
-        addView(view)
-        view.setOnClickListener(this)
+            breadcrumb_text.text = textToAdd
+            breadcrumb_text.setTextColor(mTextColor)
+            addView(this)
+            setOnClickListener(this@Breadcrumbs)
 
-        view.tag = item
+            tag = item
+        }
     }
 
     fun removeBreadcrumb() {
