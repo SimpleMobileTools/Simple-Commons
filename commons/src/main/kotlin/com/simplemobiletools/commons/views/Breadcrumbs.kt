@@ -2,6 +2,8 @@ package com.simplemobiletools.commons.views
 
 import android.content.Context
 import android.graphics.Point
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffColorFilter
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
@@ -133,6 +135,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
             if (childCount == 0) {
                 resources.apply {
                     background = getDrawable(R.drawable.breadcrumb_gradient)
+                    background.colorFilter = PorterDuffColorFilter(mTextColor, PorterDuff.Mode.SRC_IN)
                     val medium = getDimension(R.dimen.medium_margin).toInt()
                     setPadding(medium, medium, medium, medium)
                 }
