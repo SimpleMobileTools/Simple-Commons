@@ -43,7 +43,7 @@
     <string name="moving_success">File spostati correttamente</string>
     <string name="moving_success_partial">Alcuni file non possono essere spostati</string>
     <string name="copying_success_partial">Alcuni file non possono essere copiati</string>
-    <string name="no_files_selected">No files selected</string>
+    <string name="no_files_selected">Nessun file selezionato</string>
     <string name="saving">Salvataggio&#8230;</string>
 
     <!-- Create new -->
@@ -127,12 +127,12 @@
     <string name="share">Condividi</string>
     <string name="share_via">Condividi via</string>
     <string name="select_all">Seleziona tutto</string>
-    <string name="hide">Nascondi file nascosti</string>
-    <string name="unhide">Mostra file nascosti</string>
-    <string name="hide_folder">Hide folder</string>
-    <string name="unhide_folder">Unhide folder</string>
+    <string name="hide">Nascondi</string>
+    <string name="unhide">Non nascondere</string>
+    <string name="hide_folder">Nascondi cartella</string>
+    <string name="unhide_folder">Non nascondere cartella</string>
     <string name="temporarily_show_hidden">Mostra temporaneamente nascosti</string>
-    <string name="stop_showing_hidden">Stop showing hidden media</string>
+    <string name="stop_showing_hidden">Non mostrare media nascosti</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordina per</string>
@@ -156,11 +156,11 @@
     <string name="settings">Impostazioni</string>
     <string name="customize_colors">Personalizza i colori</string>
     <string name="show_hidden">Mostra file e cartelle nascosti</string>
-    <string name="font_size">Font size</string>
-    <string name="small">Small</string>
-    <string name="medium">Medium</string>
-    <string name="large">Large</string>
-    <string name="extra_large">Extra large</string>
+    <string name="font_size">Dimensione carattere</string>
+    <string name="small">Piccolo</string>
+    <string name="medium">Medio</string>
+    <string name="large">Grande</string>
+    <string name="extra_large">Molto grande</string>
 
     <!-- About -->
     <string name="about">Informazioni</string>
@@ -175,10 +175,10 @@
     <string name="donate_underlined"><u>Dona</u></string>
     <string name="follow_us">Seguici:</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="additional_info">Additional info</string>
-    <string name="gruveo">Are you looking for a simple and anonymous video calling app? Try out my other project</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
+    <string name="additional_info">Informazioni aggiuntive</string>
+    <string name="gruveo">Stai cercando un\'app semplice e anonima per videochiamate? Prova l\'altro mio progetto</string>
+    <string name="app_version">Versione app: %1$s</string>
+    <string name="device_os">OS dispositivo: %1$s</string>
     <string name="donate_please">Hey,\n\npare che tu stia usando questa app da un po\' di tempo.\n\nLo sapevi che non è sostenuta da nessuna grande azienda? Svilupparla richiede tempo e voglio mantenerla senza pubblicità, perciò il tuo supporto sarebbe apprezzato.\n\nPuoi aiutarmi acquistando l\'app Simple Thank You, oppure inviando denaro via Paypal o Bitcoin.\n\nMaggiori informazioni su http://simplemobiletools.com/donate.\n\nGrazie!</string>
 
     <!-- License -->
