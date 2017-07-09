@@ -275,12 +275,17 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
                 return@handleSAFDialog
             }
 
-            val uri = DocumentsContract.renameDocument(contentResolver, document.uri, newFile.name)
-            if (document.uri != uri) {
-                scanFiles(arrayListOf(oldFile, newFile)) {
-                    callback(true)
+            try {
+                val uri = DocumentsContract.renameDocument(contentResolver, document.uri, newFile.name)
+                if (document.uri != uri) {
+                    scanFiles(arrayListOf(oldFile, newFile)) {
+                        callback(true)
+                    }
+                } else {
+                    callback(false)
                 }
-            } else {
+            } catch (e: SecurityException) {
+                toast(R.string.unknown_error_occurred)
                 callback(false)
             }
         }
