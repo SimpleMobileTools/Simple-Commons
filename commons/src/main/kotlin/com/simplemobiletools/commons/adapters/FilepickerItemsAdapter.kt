@@ -76,7 +76,10 @@ class FilepickerItemsAdapter(val context: Context, private val mItems: List<File
         }
 
         fun stopLoad() {
-            Glide.with(context).clear(view.list_item_icon)
+            try {
+                Glide.with(context).clear(view.list_item_icon)
+            } catch (ignored: Exception) {
+            }
         }
     }
 }
