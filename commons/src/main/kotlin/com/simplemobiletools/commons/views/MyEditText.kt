@@ -19,5 +19,6 @@ class MyEditText : EditText {
         // requires android:textCursorDrawable="@null" in xml to color the cursor too
         setTextColor(textColor)
         setHintTextColor(textColor.adjustAlpha(0.5f))
+        setLinkTextColor(accentColor)
     }
 }
