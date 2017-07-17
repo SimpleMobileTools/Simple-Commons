@@ -112,13 +112,6 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     fun startCustomizationActivity() = startActivity(Intent(this, CustomizationActivity::class.java))
 
-    fun launchViewIntent(id: Int) = launchViewIntent(resources.getString(id))
-
-    fun launchViewIntent(url: String) {
-        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-        startActivity(browserIntent)
-    }
-
     fun handleSAFDialog(file: File, callback: () -> Unit): Boolean {
         return if (isShowingSAFDialog(file, baseConfig.treeUri, OPEN_DOCUMENT_TREE)) {
             funAfterPermission = callback

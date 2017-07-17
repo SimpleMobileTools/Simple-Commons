@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.media.MediaScannerConnection
+import android.net.Uri
 import android.os.Looper
 import android.provider.DocumentsContract
 import android.view.View
@@ -78,6 +79,13 @@ fun Activity.isShowingSAFDialog(file: File, treeUri: String, requestCode: Int): 
     } else {
         false
     }
+}
+
+fun Activity.launchViewIntent(id: Int) = launchViewIntent(resources.getString(id))
+
+fun Activity.launchViewIntent(url: String) {
+    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+    startActivity(browserIntent)
 }
 
 fun BaseSimpleActivity.checkWhatsNew(releases: List<Release>, currVersion: Int) {
