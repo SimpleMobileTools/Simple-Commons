@@ -97,6 +97,10 @@ fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(this, id, length).show()
 }
 
+fun Context.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
+    Toast.makeText(this, msg, length).show()
+}
+
 val Context.baseConfig: BaseConfig get() = BaseConfig.newInstance(this)
 val Context.sdCardPath: String get() = baseConfig.sdCardPath
 val Context.internalStoragePath: String get() = baseConfig.internalStoragePath
