@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.widget.TextView
+import android.widget.Toast
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.helpers.PREFS_KEY
@@ -90,6 +91,10 @@ fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) 
         getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(baseConfig.textColor)
         window.setBackgroundDrawable(ColorDrawable(baseConfig.backgroundColor))
     }
+}
+
+fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
+    Toast.makeText(this, id, length).show()
 }
 
 val Context.baseConfig: BaseConfig get() = BaseConfig.newInstance(this)
