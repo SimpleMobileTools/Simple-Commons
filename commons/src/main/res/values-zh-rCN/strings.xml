@@ -162,6 +162,17 @@
     <string name="large">Large</string>
     <string name="extra_large">Extra large</string>
 
+    <!-- Password protection -->
+    <string name="pin">PIN</string>
+    <string name="enter_pin">Enter PIN</string>
+    <string name="please_enter_pin">Please enter a PIN</string>
+    <string name="wrong_pin">Wrong PIN</string>
+    <string name="repeat_pin">Repeat PIN</string>
+    <string name="pattern">Pattern</string>
+    <string name="insert_pattern">Insert pattern</string>
+    <string name="wrong_pattern">Wrong pattern</string>
+    <string name="repeat_pattern">Repeat pattern</string>
+
     <!-- About -->
     <string name="about">关于</string>
     <string name="website_label">应用源码</string>

@@ -153,6 +153,17 @@
     <string name="yes">Áno</string>
     <string name="no">Nie</string>
 
+    <!-- Password protection -->
+    <string name="pin">PIN</string>
+    <string name="enter_pin">Zadajte PIN</string>
+    <string name="please_enter_pin">Prosím zadajte PIN</string>
+    <string name="wrong_pin">Nesprávny PIN</string>
+    <string name="repeat_pin">Zopakujte PIN</string>
+    <string name="pattern">Vzor</string>
+    <string name="insert_pattern">Zadajte vzor</string>
+    <string name="wrong_pattern">Nesprávny vzor</string>
+    <string name="repeat_pattern">Zopakujte vzor</string>
+
     <!-- Settings -->
     <string name="settings">Nastavenia</string>
     <string name="customize_colors">Upraviť farby</string>
