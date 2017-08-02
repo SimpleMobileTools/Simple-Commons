@@ -120,39 +120,6 @@ fun Context.getMyFileUri(file: File): Uri {
 }
 
 @SuppressLint("NewApi")
-fun Context.getFileDocument(path: String): DocumentFile? {
-    if (!isLollipopPlus())
-        return null
-
-    var relativePath = path.substring(sdCardPath.length)
-    if (relativePath.startsWith(File.separator))
-        relativePath = relativePath.substring(1)
-
-    var document = DocumentFile.fromTreeUri(this, Uri.parse(baseConfig.treeUri))
-    val parts = relativePath.split("/")
-    for (i in 0..parts.size - 1) {
-        var currDocument = document.findFile(parts[i])
-        if (currDocument == null) {
-            // We need to assure that we transverse to the right directory!
-            if (i == parts.size - 1) {
-                // The last document should be the file we're looking for, not a directory
-                currDocument = document.createFile("", parts[i])
-            } else {
-                currDocument = document.createDirectory(parts[i])
-            }
-
-            if (currDocument == null) {
-                // Half paths should not be tolerated. If the given path cannot
-                // be accessed, give up with an Exception to let the caller know.
-                throw UnsupportedOperationException("Failed to reach $path.")
-            }
-        }
-        document = currDocument
-    }
-    return document
-}
-
-@SuppressLint("NewApi")
 fun Context.tryFastDocumentDelete(file: File, allowDeleteFolder: Boolean): Boolean {
     val document = getFastDocument(file)
     return if (document?.isFile == true || allowDeleteFolder) {

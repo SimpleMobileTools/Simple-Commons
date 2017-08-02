@@ -9,6 +9,7 @@ import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Looper
 import android.provider.DocumentsContract
+import android.support.v4.provider.DocumentFile
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
@@ -337,4 +338,36 @@ fun BaseSimpleActivity.getFileOutputStream(file: File, callback: (outputStream: 
     } else {
         callback(FileOutputStream(file))
     }
+}
+
+@SuppressLint("NewApi")
+fun BaseSimpleActivity.getFileDocument(path: String): DocumentFile? {
+    if (!isLollipopPlus())
+        return null
+
+    var relativePath = path.substring(sdCardPath.length)
+    if (relativePath.startsWith(File.separator))
+        relativePath = relativePath.substring(1)
+
+    var document = DocumentFile.fromTreeUri(this, Uri.parse(baseConfig.treeUri))
+    val parts = relativePath.split("/")
+    for (i in 0..parts.size - 1) {
+        var currDocument = document.findFile(parts[i])
+        if (currDocument == null) {
+            // We need to assure that we transverse to the right directory!
+            if (i == parts.size - 1) {
+                // The last document should be the file we're looking for, not a directory
+                currDocument = document.createFile("", parts[i])
+            } else {
+                currDocument = document.createDirectory(parts[i])
+            }
+
+            if (currDocument == null) {
+                toast(R.string.unknown_error_occurred)
+                return null
+            }
+        }
+        document = currDocument
+    }
+    return document
 }
