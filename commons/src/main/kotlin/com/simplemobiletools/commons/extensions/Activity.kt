@@ -351,25 +351,14 @@ fun BaseSimpleActivity.getFileDocument(path: String): DocumentFile? {
 
     var document = DocumentFile.fromTreeUri(this, Uri.parse(baseConfig.treeUri))
     val parts = relativePath.split("/")
-    for (i in 0..parts.size - 1) {
-        var currDocument = document.findFile(parts[i])
-        if (currDocument != null) {
+    for (part in parts) {
+        val currDocument = document.findFile(part)
+        if (currDocument != null)
             document = currDocument
-        } else {
-            // We need to assure that we transverse to the right directory!
-            if (i == parts.size - 1) {
-                // The last document should be the file we're looking for, not a directory
-                currDocument = document.createFile("", parts[i])
-            } else {
-                currDocument = document.createDirectory(parts[i])
-            }
-
-            if (currDocument == null) {
-                toast(R.string.unknown_error_occurred)
-                return null
-            }
-            document = currDocument
-        }
     }
-    return document
+
+    return if (document.name == path.getFilenameFromPath())
+        document
+    else
+        null
 }
