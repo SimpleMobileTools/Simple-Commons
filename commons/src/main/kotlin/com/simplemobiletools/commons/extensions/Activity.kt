@@ -357,8 +357,5 @@ fun BaseSimpleActivity.getFileDocument(path: String): DocumentFile? {
             document = currDocument
     }
 
-    return if (document.name == path.getFilenameFromPath())
-        document
-    else
-        null
+    return document
 }
