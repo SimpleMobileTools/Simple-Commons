@@ -14,4 +14,9 @@
     <style name="MyBorderlessBackgroundStyle">
         <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
     </style>
+
+    <style name="PinNumberStyle" parent="PinNumberStyle.Base">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
 </resources>

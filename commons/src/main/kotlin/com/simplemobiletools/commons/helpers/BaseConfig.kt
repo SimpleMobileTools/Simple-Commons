@@ -63,4 +63,16 @@ open class BaseConfig(val context: Context) {
     var widgetTextColor: Int
         get() = prefs.getInt(WIDGET_TEXT_COLOR, context.resources.getColor(R.color.color_primary))
         set(widgetTextColor) = prefs.edit().putInt(WIDGET_TEXT_COLOR, widgetTextColor).apply()
+
+    var isPasswordProtectionOn: Boolean
+        get() = prefs.getBoolean(IS_PASSWORD_PROTECTION, false)
+        set(passwordProtection) = prefs.edit().putBoolean(IS_PASSWORD_PROTECTION, passwordProtection).apply()
+
+    var passwordHash: String
+        get() = prefs.getString(PASSWORD_HASH, "")
+        set(passwordHash) = prefs.edit().putString(PASSWORD_HASH, passwordHash).apply()
+
+    var protectionType: Int
+        get() = prefs.getInt(PROTECTION_TYPE, PROTECTION_PATTERN)
+        set(protectionType) = prefs.edit().putInt(PROTECTION_TYPE, protectionType).apply()
 }

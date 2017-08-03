@@ -19,6 +19,9 @@ val CUSTOM_BACKGROUND_COLOR = "custom_background_color"
 val CUSTOM_PRIMARY_COLOR = "custom_primary_color"
 val WIDGET_BG_COLOR = "widget_bg_color"
 val WIDGET_TEXT_COLOR = "widget_text_color"
+val IS_PASSWORD_PROTECTION = "password_protection"
+val PASSWORD_HASH = "password_hash"
+val PROTECTION_TYPE = "protection_type"
 
 // licenses
 val LICENSE_KOTLIN = 1
@@ -48,3 +51,12 @@ val SORT_DESCENDING = 1024
 val THEME_LIGHT = 0
 val THEME_DARK = 1
 val THEME_CUSTOM = 2
+
+// security
+val PROTECTION_PATTERN = 0
+val PROTECTION_PIN = 1
+val PROTECTION_FINGERPRINT = 2
+
+val SHOW_ALL_TABS = -1
+val SHOW_PATTERN = 0
+val SHOW_PIN = 1

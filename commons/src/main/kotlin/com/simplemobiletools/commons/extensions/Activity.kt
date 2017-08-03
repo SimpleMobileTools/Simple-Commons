@@ -18,6 +18,7 @@ import android.widget.Toast
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.dialogs.DonateDialog
+import com.simplemobiletools.commons.dialogs.SecurityDialog
 import com.simplemobiletools.commons.dialogs.WhatsNewDialog
 import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.models.Release
@@ -358,4 +359,14 @@ fun BaseSimpleActivity.getFileDocument(path: String): DocumentFile? {
     }
 
     return document
+}
+
+fun BaseSimpleActivity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
+    if (baseConfig.isPasswordProtectionOn) {
+        SecurityDialog(this, baseConfig.passwordHash, baseConfig.protectionType) { hash, type ->
+            callback()
+        }
+    } else {
+        callback()
+    }
 }
