@@ -353,7 +353,9 @@ fun BaseSimpleActivity.getFileDocument(path: String): DocumentFile? {
     val parts = relativePath.split("/")
     for (i in 0..parts.size - 1) {
         var currDocument = document.findFile(parts[i])
-        if (currDocument == null) {
+        if (currDocument != null) {
+            document = currDocument
+        } else {
             // We need to assure that we transverse to the right directory!
             if (i == parts.size - 1) {
                 // The last document should be the file we're looking for, not a directory
@@ -366,8 +368,8 @@ fun BaseSimpleActivity.getFileDocument(path: String): DocumentFile? {
                 toast(R.string.unknown_error_occurred)
                 return null
             }
+            document = currDocument
         }
-        document = currDocument
     }
     return document
 }
