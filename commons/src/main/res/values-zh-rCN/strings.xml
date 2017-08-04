@@ -152,16 +152,6 @@
     <string name="yes">是</string>
     <string name="no">否</string>
 
-    <!-- Settings -->
-    <string name="settings">设置</string>
-    <string name="customize_colors">自定义颜色</string>
-    <string name="show_hidden">显示隐藏文件和文件夹</string>
-    <string name="font_size">Font size</string>
-    <string name="small">Small</string>
-    <string name="medium">Medium</string>
-    <string name="large">Large</string>
-    <string name="extra_large">Extra large</string>
-
     <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">Enter PIN</string>
@@ -172,6 +162,30 @@
     <string name="insert_pattern">Insert pattern</string>
     <string name="wrong_pattern">Wrong pattern</string>
     <string name="repeat_pattern">Repeat pattern</string>
+
+    <!-- Times -->
+    <plurals name="seconds">
+        <item quantity="one">%1$d second</item>
+        <item quantity="other">%1$d seconds</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%1$d minute</item>
+        <item quantity="other">%1$d minutes</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%1$d hour</item>
+        <item quantity="other">%1$d hours</item>
+    </plurals>
+
+    <!-- Settings -->
+    <string name="settings">设置</string>
+    <string name="customize_colors">自定义颜色</string>
+    <string name="show_hidden">显示隐藏文件和文件夹</string>
+    <string name="font_size">Font size</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="extra_large">Extra large</string>
 
     <!-- About -->
     <string name="about">关于</string>

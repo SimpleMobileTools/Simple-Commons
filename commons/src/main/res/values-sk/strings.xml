@@ -164,6 +164,23 @@
     <string name="wrong_pattern">Nesprávny vzor</string>
     <string name="repeat_pattern">Zopakujte vzor</string>
 
+    <!-- Times -->
+    <plurals name="seconds">
+        <item quantity="one">%1$d sekunda</item>
+        <item quantity="few">%1$d sekundy</item>
+        <item quantity="other">%1$d sekúnd</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%1$d minúta</item>
+        <item quantity="few">%1$d minúty</item>
+        <item quantity="other">%1$d minút</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%1$d hodina</item>
+        <item quantity="few">%1$d hodiny</item>
+        <item quantity="other">%1$d hodín</item>
+    </plurals>
+
     <!-- Settings -->
     <string name="settings">Nastavenia</string>
     <string name="customize_colors">Upraviť farby</string>
