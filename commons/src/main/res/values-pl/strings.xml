@@ -33,7 +33,7 @@
     <string name="select_destination">Wybierz miejsce docelowe</string>
     <string name="click_select_destination">Kliknij tutaj, aby wybrać miejsce docelowe</string>
     <string name="invalid_destination">Nie można zapisać w tym miejscu</string>
-    <string name="please_select_destination">Proszę wybierz miejsce docelowe</string>
+    <string name="please_select_destination">Wybierz miejsce docelowe</string>
     <string name="source_and_destination_same">Miejsce żródłowe i docelowe nie może być takie samo</string>
     <string name="copy_failed">Nie można skopiować pliku</string>
     <string name="copying">Kopiuję&#8230;</string>
@@ -49,7 +49,7 @@
     <!-- Create new -->
     <string name="create_new">Utwórz nowy</string>
     <string name="folder">Folder</string>
-    <string name="file">File</string>
+    <string name="file">Plik</string>
     <string name="create_new_folder">Stwórz nowy folder</string>
     <string name="name_taken">Folder lub plik o tej nazwie już istnieje</string>
     <string name="invalid_name">Nazwa zawiera niedozwolone znaki</string>
@@ -70,7 +70,7 @@
     <string name="select_file">Wybierz plik</string>
     <string name="confirm_storage_access_title">Potwierdź dostęp do zewnętrznej pamięci</string>
     <string name="confirm_storage_access_text">Wybierz główny folder na karcie pamięci na następnym ekranie i udziel dostępu do zapisu</string>
-    <string name="confirm_storage_access_text_sd">Jeśli nie widzisz karty pamięci, spróbuj tego</string>
+    <string name="confirm_storage_access_text_sd">Jeśli nie widzisz karty pamięci, spróbuj tego:</string>
 
     <plurals name="items">
         <item quantity="one">%1$d pozycja</item>
@@ -79,7 +79,7 @@
 
     <!-- Storages -->
     <string name="select_storage">Wybierz pamięć</string>
-    <string name="internal">Wewnetrzna</string>
+    <string name="internal">Wewnętrzna</string>
     <string name="sd_card">Karta pamięci</string>
     <string name="root">Folder główny</string>
     <string name="wrong_root_selected">Wybrano nieprawidłowy folder. Wybierz główny folder karty pamięci.</string>
@@ -119,7 +119,7 @@
 
     <!-- What's new -->
     <string name="whats_new">Co nowego</string>
-    <string name="whats_new_disclaimer">* Wymienione są tylko większe zmiany </string>
+    <string name="whats_new_disclaimer">* Wymienione są tylko większe zmiany</string>
 
     <!-- Actionbar items -->
     <string name="delete">Usuń</string>
@@ -154,14 +154,14 @@
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
-    <string name="repeat_pin">Repeat PIN</string>
-    <string name="pattern">Pattern</string>
-    <string name="insert_pattern">Insert pattern</string>
-    <string name="wrong_pattern">Wrong pattern</string>
-    <string name="repeat_pattern">Repeat pattern</string>
+    <string name="enter_pin">Wprowadź PIN</string>
+    <string name="please_enter_pin">Wprowadź PIN</string>
+    <string name="wrong_pin">Nieprawidłowy PIN</string>
+    <string name="repeat_pin">Wprowadź PIN ponownie</string>
+    <string name="pattern">Wzór</string>
+    <string name="insert_pattern">Wprowadź wzór</string>
+    <string name="wrong_pattern">Nieprawidłowy wzór</string>
+    <string name="repeat_pattern">Wprowadź wzór ponownie</string>
 
     <!-- Settings -->
     <string name="settings">Ustawienia</string>
@@ -176,7 +176,7 @@
     <!-- About -->
     <string name="about">O aplikacji</string>
     <string name="website_label">Nasza strona internerowa:</string>
-    <string name="email_label">Napisz do nas, przyslij nam swoje uwagi:</string>
+    <string name="email_label">Napisz do nas, przyślij nam swoje uwagi:</string>
     <string name="more_apps_underlined"><u>Więcej naszych aplikacji</u></string>
     <string name="third_party_licences_underlined"><u>Licencje innych firm</u></string>
     <string name="invite_friends_underlined"><u>Zaproponuj aplikację znajomym</u></string>
@@ -185,7 +185,7 @@
     <string name="rate_us_underlined"><u>Oceń aplikację</u></string>
     <string name="donate">Przekaż darowiznę</string>
     <string name="donate_underlined"><u>Przekaż darowiznę</u></string>
-    <string name="follow_us">Śledź nas na:</string>
+    <string name="follow_us">Śledź nas:</string>
     <string name="copyright">Wersja %1$s\n© Simple Mobile Tools %2$d</string>
     <string name="additional_info">Dodatkowe informacje</string>
     <string name="gruveo">Nie szukasz może prostej i anonimowej w swych działaniach aplikacji do wideorozmów? Wypróbuj mój inny projekt:</string>
@@ -207,5 +207,5 @@
     <string name="stetho_title">Stetho (bazy danych debugowania)</string>
     <string name="otto_title">Otto (event bus)</string>
     <string name="photoview_title">PhotoView (przybliżanie GIFów)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="pattern_title">PatternLockView (ochrona plików wzorem)</string>
 </resources>
