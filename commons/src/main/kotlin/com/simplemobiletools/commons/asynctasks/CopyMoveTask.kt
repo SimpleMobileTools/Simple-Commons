@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.asynctasks
 
 import android.os.AsyncTask
+import android.support.v4.provider.DocumentFile
 import android.support.v4.util.Pair
 import android.util.Log
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
@@ -14,6 +15,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     private val TAG = CopyMoveTask::class.java.simpleName
     private var mListener: WeakReference<CopyMoveListener>? = null
     private var mMovedFiles: ArrayList<File> = ArrayList()
+    private var mDocument: DocumentFile? = null
     lateinit var mFiles: ArrayList<File>
 
     init {
@@ -99,9 +101,15 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         var out: OutputStream? = null
         try {
             if (activity.needsStupidWritePermissions(destination.absolutePath)) {
-                var document = activity.getFileDocument(destination.parent) ?: return
-                document = document.createFile("", destination.name)
-                out = activity.contentResolver.openOutputStream(document.uri)
+                if (mDocument == null) {
+                    mDocument = activity.getFileDocument(destination.parent)
+                }
+
+                if (mDocument == null)
+                    return
+
+                val newDocument = mDocument!!.createFile("", destination.name)
+                out = activity.contentResolver.openOutputStream(newDocument!!.uri)
             } else {
                 out = FileOutputStream(destination)
             }
