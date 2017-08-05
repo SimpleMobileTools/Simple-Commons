@@ -327,6 +327,11 @@ fun Activity.showKeyboard(et: EditText) {
     imm.showSoftInput(et, InputMethodManager.SHOW_IMPLICIT)
 }
 
+fun Activity.hideKeyboard(view: View) {
+    val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+    inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+}
+
 fun BaseSimpleActivity.getFileOutputStream(file: File, callback: (outputStream: OutputStream) -> Unit) {
     if (needsStupidWritePermissions(file.absolutePath)) {
         handleSAFDialog(file) {
