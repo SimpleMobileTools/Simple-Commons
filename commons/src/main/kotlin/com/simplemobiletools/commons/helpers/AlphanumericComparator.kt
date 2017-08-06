@@ -1,7 +1,7 @@
 package com.simplemobiletools.commons.helpers
 
-//take from https://gist.github.com/MichaelRocks/1b94bb44c7804e999dbf31dac86955ec
-// make IMG_5 come before IMG_10
+// taken from https://gist.github.com/MichaelRocks/1b94bb44c7804e999dbf31dac86955ec
+// make IMG_5.jpg come before IMG_10.jpg
 class AlphanumComparator {
     fun compare(string1: String, string2: String): Int {
         var thisMarker = 0
