@@ -1,216 +1,216 @@
 <resources>
-    <string name="ok">确认</string>
+    <string name="ok">確定</string>
     <string name="cancel">取消</string>
-    <string name="search">搜索</string>
-    <string name="save_as">保存</string>
-    <string name="file_saved">文件保存成功</string>
-    <string name="invalid_file_format">无效文件格式</string>
-    <string name="no_storage_permissions">请授予权限以访问您的存储器</string>
-    <string name="out_of_memory_error">内存不足</string>
+    <string name="search">搜尋</string>
+    <string name="save_as">儲存</string>
+    <string name="file_saved">成功儲存檔案</string>
+    <string name="invalid_file_format">無效的檔案格式</string>
+    <string name="no_storage_permissions">我們需要權限來存取您的儲存空間</string>
+    <string name="out_of_memory_error">記憶體不足</string>
 
     <!-- Renaming -->
-    <string name="rename_file">重命名文件</string>
-    <string name="rename_folder">重命名文件夹</string>
-    <string name="rename_file_error">无法重命名文件</string>
-    <string name="rename_folder_error">无法重命名文件夹</string>
-    <string name="rename_folder_empty">文件夹名不能为空</string>
-    <string name="rename_folder_exists">文件夹名已存在</string>
-    <string name="rename_folder_root">无法重命名存储器的根目录</string>
-    <string name="rename_folder_ok">文件夹重命名成功</string>
-    <string name="renaming_folder">重命名中...</string>
-    <string name="filename_cannot_be_empty">文件名不能为空</string>
-    <string name="filename_invalid_characters">文件名包含非法字符</string>
-    <string name="extension_cannot_be_empty">扩展名不能为空</string>
+    <string name="rename_file">重新命名檔案</string>
+    <string name="rename_folder">重新命名資料夾</string>
+    <string name="rename_file_error">無法重新命名檔案</string>
+    <string name="rename_folder_error">無法重新命名資料夾</string>
+    <string name="rename_folder_empty">資料夾名稱不得空白</string>
+    <string name="rename_folder_exists">已存在這名稱的資料夾</string>
+    <string name="rename_folder_root">無法重新命名根目錄</string>
+    <string name="rename_folder_ok">成功重新命名資料夾</string>
+    <string name="renaming_folder">資料夾重新命名中</string>
+    <string name="filename_cannot_be_empty">檔名不得空白</string>
+    <string name="filename_invalid_characters">檔名包含無效字符</string>
+    <string name="extension_cannot_be_empty">副檔名不得空白</string>
 
     <!-- Copy / Move -->
-    <string name="copy">复制</string>
-    <string name="move">移动</string>
-    <string name="copy_move">复制／移动</string>
-    <string name="copy_to">复制到</string>
-    <string name="move_to">移动到</string>
-    <string name="source">原始路径</string>
-    <string name="destination">目标路径</string>
-    <string name="select_destination">选择目标路径</string>
-    <string name="click_select_destination">点击此处以设置目标路径</string>
-    <string name="invalid_destination">无法写入到选中目标路径</string>
-    <string name="please_select_destination">请选择目标路径</string>
-    <string name="source_and_destination_same">原始路径和目标路径不能相同</string>
-    <string name="copy_failed">无法复制文件</string>
-    <string name="copying">正在复制&#8230;</string>
-    <string name="copying_success">复制成功</string>
-    <string name="copy_move_failed">操作失败</string>
-    <string name="moving">正在移动&#8230;</string>
-    <string name="moving_success">文件移动成功</string>
-    <string name="moving_success_partial">无法移动相同文件</string>
-    <string name="copying_success_partial">无法复制相同文件</string>
-    <string name="no_files_selected">未选择文件</string>
-    <string name="saving">正在保存&#8230;</string>
+    <string name="copy">複製</string>
+    <string name="move">移動</string>
+    <string name="copy_move">複製 / 移動</string>
+    <string name="copy_to">複製</string>
+    <string name="move_to">移動</string>
+    <string name="source">來源</string>
+    <string name="destination">目標</string>
+    <string name="select_destination">選擇目標</string>
+    <string name="click_select_destination">點此選擇目標</string>
+    <string name="invalid_destination">無法寫入所選的目標</string>
+    <string name="please_select_destination">請選擇目標</string>
+    <string name="source_and_destination_same">目標跟來源不能相同</string>
+    <string name="copy_failed">無法複製檔案</string>
+    <string name="copying">複製中&#8230;</string>
+    <string name="copying_success">成功複製檔案</string>
+    <string name="copy_move_failed">發生錯誤</string>
+    <string name="moving">移動中&#8230;</string>
+    <string name="moving_success">成功移動檔案</string>
+    <string name="moving_success_partial">部分檔案無法被移動</string>
+    <string name="copying_success_partial">部分檔案無法被複製</string>
+    <string name="no_files_selected">未選擇檔案</string>
+    <string name="saving">儲存中&#8230;</string>
 
     <!-- Create new -->
-    <string name="create_new">新建</string>
-    <string name="folder">文件夹</string>
-    <string name="file">文件</string>
-    <string name="create_new_folder">新建文件夹</string>
-    <string name="name_taken">同名文件夹或文件已存在</string>
-    <string name="invalid_name">名称包含非法字符</string>
-    <string name="empty_name">请输入名称</string>
-    <string name="unknown_error_occurred">未知错误</string>
+    <string name="create_new">新增</string>
+    <string name="folder">資料夾</string>
+    <string name="file">檔案</string>
+    <string name="create_new_folder">新增資料夾</string>
+    <string name="name_taken">已經存在相同名稱的檔案或資料夾</string>
+    <string name="invalid_name">名稱包含無效的字符</string>
+    <string name="empty_name">請輸入一個名字</string>
+    <string name="unknown_error_occurred">發生未知的錯誤</string>
 
     <!-- Copy conflicts -->
-    <string name="file_already_exists">文件 %1$s 已存在</string>
-    <string name="file_already_exists_overwrite">文件 %1$s 已存在。是否覆盖？</string>
-    <string name="select_an_action">选择操作</string>
-    <string name="overwrite">覆盖</string>
-    <string name="skip">跳过</string>
-    <string name="append">应用到 \'_1\'</string>
-    <string name="apply_to_all">应用到全部冲突项</string>
+    <string name="file_already_exists">檔案 %1$s 已經存在</string>
+    <string name="file_already_exists_overwrite">檔案 %1$s 已經存在。 要覆蓋嗎?</string>
+    <string name="select_an_action">選擇操作</string>
+    <string name="overwrite">覆蓋</string>
+    <string name="skip">跳過</string>
+    <string name="append">添加到 \'_1\'</string>
+    <string name="apply_to_all">添加到全部衝突</string>
 
     <!-- File picker -->
-    <string name="select_folder">选择文件夹</string>
-    <string name="select_file">选择文件</string>
-    <string name="confirm_storage_access_title">确认外部存储器访问权限</string>
-    <string name="confirm_storage_access_text">请选择 SD 卡根目录并授予写权限</string>
-    <string name="confirm_storage_access_text_sd">如果您未找到 SD 卡目录，请尝试</string>
+    <string name="select_folder">選擇資料夾</string>
+    <string name="select_file">選擇檔案</string>
+    <string name="confirm_storage_access_title">確認外部儲存空間存取權限</string>
+    <string name="confirm_storage_access_text">請在下個畫面選擇SD卡的根目錄，以准許寫入權限</string>
+    <string name="confirm_storage_access_text_sd">"如果看不到SD卡，試試這個"</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d 项目</item>
-        <item quantity="other">%1$d 项目</item>
+        <item quantity="one">%1$d個項目</item>
+        <item quantity="other">%1$d個項目</item>
     </plurals>
 
     <!-- Storages -->
-    <string name="select_storage">选择存储器</string>
-    <string name="internal">内部存储器</string>
-    <string name="sd_card">SD 卡</string>
-    <string name="root">根目录</string>
-    <string name="wrong_root_selected">目录选择错误，请选择 SD 卡</string>
+    <string name="select_storage">選擇儲存空間</string>
+    <string name="internal">內部儲存空間</string>
+    <string name="sd_card">SD卡</string>
+    <string name="root">根目錄</string>
+    <string name="wrong_root_selected">選擇了錯誤的資料夾，請選擇SD卡的根目錄</string>
 
     <!-- File properties -->
-    <string name="properties">属性</string>
-    <string name="path">路径</string>
-    <string name="items_selected">已选择项目</string>
-    <string name="direct_children_count">子目录数</string>
-    <string name="files_count">总文件数</string>
-    <string name="resolution">分辨率</string>
-    <string name="duration">时长</string>
-    <string name="artist">艺术家</string>
-    <string name="album">专辑</string>
+    <string name="properties">屬性</string>
+    <string name="path">路徑</string>
+    <string name="items_selected">選擇的項目</string>
+    <string name="direct_children_count">子目錄數</string>
+    <string name="files_count">總檔案數</string>
+    <string name="resolution">解析度</string>
+    <string name="duration">持續時間</string>
+    <string name="artist">藝術家</string>
+    <string name="album">相簿</string>
     <string name="focal_length">焦距</string>
-    <string name="exposure_time">曝光时间</string>
-    <string name="iso_speed">ISO 速度</string>
+    <string name="exposure_time">曝光時間</string>
+    <string name="iso_speed">ISO速度</string>
     <string name="f_number">光圈</string>
-    <string name="camera">相机</string>
+    <string name="camera">相機</string>
     <string name="exif">EXIF</string>
 
     <!-- Color customization -->
-    <string name="background_color">背景色</string>
-    <string name="text_color">文本颜色</string>
-    <string name="primary_color">主体色</string>
-    <string name="restore_defaults">恢复默认</string>
-    <string name="theme">主题</string>
-    <string name="light_theme">浅色主题</string>
-    <string name="dark_theme">深色主题</string>
-    <string name="custom">自定义</string>
-    <string name="changing_color_description">更改颜色将切换到自定义主题</string>
-    <string name="save">保存</string>
-    <string name="discard">丢弃</string>
-    <string name="undo_changes">撤销更改</string>
-    <string name="undo_changes_confirmation">是否撤销您的更改？</string>
-    <string name="save_before_closing">您尚未保存更改，是否保存？</string>
+    <string name="background_color">背景顏色</string>
+    <string name="text_color">文字顏色</string>
+    <string name="primary_color">主體顏色</string>
+    <string name="restore_defaults">恢復預設</string>
+    <string name="theme">主題</string>
+    <string name="light_theme">明亮主題</string>
+    <string name="dark_theme">灰暗主題</string>
+    <string name="custom">自訂</string>
+    <string name="changing_color_description">改變顏色將切換成「自訂」主題</string>
+    <string name="save">儲存</string>
+    <string name="discard">丟棄</string>
+    <string name="undo_changes">恢復更改</string>
+    <string name="undo_changes_confirmation">確定要恢復變更嗎?</string>
+    <string name="save_before_closing">尚未儲存變更。離開前是否儲存?</string>
 
     <!-- What's new -->
-    <string name="whats_new">更新日志</string>
-    <string name="whats_new_disclaimer">* 此处仅列举了重大更新，更多修正可在使用中体验</string>
+    <string name="whats_new">更新了什麼</string>
+    <string name="whats_new_disclaimer">* 還有一些小優化，此處僅列出重大更新</string>
 
     <!-- Actionbar items -->
-    <string name="delete">删除</string>
-    <string name="rename">重命名</string>
+    <string name="delete">刪除</string>
+    <string name="rename">重新命名</string>
     <string name="share">分享</string>
-    <string name="share_via">分享到</string>
-    <string name="select_all">全选</string>
-    <string name="hide">隐藏</string>
-    <string name="unhide">取消隐藏</string>
-    <string name="hide_folder">隐藏文件夹</string>
-    <string name="unhide_folder">取消隐藏文件夹</string>
-    <string name="temporarily_show_hidden">显示／隐藏缓存内容</string>
-    <string name="stop_showing_hidden">Stop showing hidden media</string>
+    <string name="share_via">分享方式</string>
+    <string name="select_all">全選</string>
+    <string name="hide">隱藏</string>
+    <string name="unhide">取消隱藏</string>
+    <string name="hide_folder">隱藏資料夾</string>
+    <string name="unhide_folder">取消隱藏資料夾</string>
+    <string name="temporarily_show_hidden">暫時顯示隱藏的檔案</string>
+    <string name="stop_showing_hidden">停止顯示隱藏的檔案</string>
 
     <!-- Sorting -->
-    <string name="sort_by">排序方式</string>
-    <string name="name">名称</string>
+    <string name="sort_by">排序</string>
+    <string name="name">名稱</string>
     <string name="size">大小</string>
-    <string name="last_modified">修改日期</string>
-    <string name="date_taken">拍摄日期</string>
-    <string name="title">标题</string>
-    <string name="filename">文件名</string>
-    <string name="extension">扩展名</string>
-    <string name="ascending">递增</string>
-    <string name="descending">递减</string>
-    <string name="use_for_this_folder">仅应用于此文件夹</string>
+    <string name="last_modified">最後修改</string>
+    <string name="date_taken">拍照日期</string>
+    <string name="title">標題</string>
+    <string name="filename">檔案名稱</string>
+    <string name="extension">副檔名</string>
+    <string name="ascending">遞增</string>
+    <string name="descending">遞減</string>
+    <string name="use_for_this_folder">僅套用於此資料夾</string>
 
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">是否执行此删除操作？</string>
+    <string name="proceed_with_deletion">確定要進行刪除嗎?</string>
     <string name="yes">是</string>
     <string name="no">否</string>
 
     <!-- Password protection -->
-    <string name="pin">PIN</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
-    <string name="repeat_pin">Repeat PIN</string>
-    <string name="pattern">Pattern</string>
-    <string name="insert_pattern">Insert pattern</string>
-    <string name="wrong_pattern">Wrong pattern</string>
-    <string name="repeat_pattern">Repeat pattern</string>
+    <string name="pin">PIN碼</string>
+    <string name="enter_pin">輸入PIN碼</string>
+    <string name="please_enter_pin">請輸入PIN碼</string>
+    <string name="wrong_pin">PIN碼錯誤</string>
+    <string name="repeat_pin">再次輸入PIN碼</string>
+    <string name="pattern">圖形</string>
+    <string name="insert_pattern">畫出解鎖圖形</string>
+    <string name="wrong_pattern">解鎖圖形錯誤</string>
+    <string name="repeat_pattern">再次畫出解鎖圖形</string>
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d second</item>
-        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">%1$d秒鐘</item>
+        <item quantity="other">%1$d秒鐘</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minute</item>
-        <item quantity="other">%1$d minutes</item>
+        <item quantity="one">%1$d分鐘</item>
+        <item quantity="other">%1$d分鐘</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d hour</item>
-        <item quantity="other">%1$d hours</item>
+        <item quantity="one">%1$d小時</item>
+        <item quantity="other">%1$d小時</item>
     </plurals>
 
     <!-- Settings -->
-    <string name="settings">设置</string>
-    <string name="customize_colors">自定义颜色</string>
-    <string name="show_hidden">显示隐藏文件和文件夹</string>
-    <string name="font_size">Font size</string>
-    <string name="small">Small</string>
-    <string name="medium">Medium</string>
-    <string name="large">Large</string>
-    <string name="extra_large">Extra large</string>
-    <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
+    <string name="settings">設定</string>
+    <string name="customize_colors">自訂顏色</string>
+    <string name="show_hidden">顯示隱藏的檔案及資料夾</string>
+    <string name="font_size">字體大小</string>
+    <string name="small">小</string>
+    <string name="medium">中</string>
+    <string name="large">大</string>
+    <string name="extra_large">特大</string>
+    <string name="password_protect_hidden_items">用密碼保護隱藏的物件</string>
 
     <!-- About -->
-    <string name="about">关于</string>
-    <string name="website_label">应用源码</string>
-    <string name="email_label">发送反馈</string>
-    <string name="more_apps_underlined"><u>更多应用</u></string>
-    <string name="third_party_licences_underlined"><u>开放源代码</u></string>
-    <string name="invite_friends_underlined"><u>分享给好友</u></string>
-    <string name="share_text">请前往 %2$s 看看我们的 %1$s 吧！</string>
-    <string name="invite_via">分享到</string>
-    <string name="rate_us_underlined"><u>为我们打分</u></string>
-    <string name="donate">捐赠</string>
-    <string name="donate_underlined"><u>捐赠</u></string>
-    <string name="follow_us">关注我们：</string>
-    <string name="copyright">v %1$s Copyright © Simple Mobile Tools %2$d</string>
-    <string name="additional_info">额外信息</string>
-    <string name="gruveo">Are you looking for a simple and anonymous video calling app? Try out my other project</string>
-    <string name="app_version">应用版本：%1$s</string>
-    <string name="device_os">设备系统：%1$s</string>
-    <string name="donate_please">您已使用此应用一段时间了。\n\n可您知道么，我并不就职于一个大公司。开发应用耗时耗力，且我想依旧保持免费，您的捐赠会给我更多动力。\n\n您可以通过购买付费应用 Simple Thank You 或捐赠比特币来支持我。\n\n更多信息请查阅 http://simplemobiletools.com/donate.\n\n非常感谢！</string>
+    <string name="about">關於</string>
+    <string name="website_label">觀看原始碼</string>
+    <string name="email_label">傳送您的反饋或建議</string>
+    <string name="more_apps_underlined"><u>更多應用程式</u></string>
+    <string name="third_party_licences_underlined"><u>第三方授權</u></string>
+    <string name="invite_friends_underlined"><u>邀請朋友</u></string>
+    <string name="share_text">嘿，來試試看「%1$s」吧！ %2$s</string>
+    <string name="invite_via">邀請</string>
+    <string name="rate_us_underlined"><u>評分我們</u></string>
+    <string name="donate">捐贈</string>
+    <string name="donate_underlined"><u>捐贈</u></string>
+    <string name="follow_us">追蹤我們:</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="additional_info">進階資訊</string>
+    <string name="gruveo">你正在找一個簡單且匿名的視訊電話程式嗎?試試看我別的應用程式吧</string>
+    <string name="app_version">應用程式版本: %1$s</string>
+    <string name="device_os">裝置系統: %1$s</string>
+    <string name="donate_please">嘿，您好像已經使用這應用程式一陣子了。\n\n這應用程式並沒有得到任何大企業的援助。開發耗費時間，而且我堅持無廣告，有您的支持將不勝感激。\n\n您可以購買付費程式「Simple Thank You」來支持我，也可以使用Paypal或比特幣捐贈。\n\n更多資訊在 http://simplemobiletools.com/donate \n\n萬分感謝!</string>
 
     <!-- License -->
-    <string name="notice">此应用使用了以下三方库。谢谢。</string>
-    <string name="third_party_licences">开放源代码</string>
+    <string name="notice">這程式使用了下列的第三方函示庫來讓我工作簡化。感謝。</string>
+    <string name="third_party_licences">第三方授權</string>
     <string name="kotlin_title">Kotlin (programming language)</string>
     <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
     <string name="glide_title">Glide (image loading and caching)</string>
