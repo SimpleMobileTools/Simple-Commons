@@ -28,13 +28,13 @@
     <string name="copy_move">Copia / Sposta</string>
     <string name="copy_to">Copia in</string>
     <string name="move_to">Sposta in</string>
-    <string name="source">Fonte</string>
+    <string name="source">Origine</string>
     <string name="destination">Destinazione</string>
     <string name="select_destination">Seleziona destinazione</string>
     <string name="click_select_destination">Clicca qui per selezionare la destinazione</string>
     <string name="invalid_destination">Impossibile scrivere nella destinazione selezionata</string>
     <string name="please_select_destination">Seleziona una destinazione</string>
-    <string name="source_and_destination_same">Sorgente e destinazione non possono essere uguali</string>
+    <string name="source_and_destination_same">Origine e destinazione non possono essere uguali</string>
     <string name="copy_failed">Impossibile copiare i file</string>
     <string name="copying">Copia in corso&#8230;</string>
     <string name="copying_success">File copiati correttamente</string>
@@ -154,27 +154,27 @@
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
-    <string name="repeat_pin">Repeat PIN</string>
-    <string name="pattern">Pattern</string>
-    <string name="insert_pattern">Insert pattern</string>
-    <string name="wrong_pattern">Wrong pattern</string>
-    <string name="repeat_pattern">Repeat pattern</string>
+    <string name="enter_pin">Inserisci PIN</string>
+    <string name="please_enter_pin">Per favore inserisci un PIN</string>
+    <string name="wrong_pin">PIN errato</string>
+    <string name="repeat_pin">Ripeti il PIN</string>
+    <string name="pattern">Sequenza</string>
+    <string name="insert_pattern">Inserisci sequenza</string>
+    <string name="wrong_pattern">Sequenza errata</string>
+    <string name="repeat_pattern">Ripeti la sequenza</string>
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d second</item>
-        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">%1$d secondo</item>
+        <item quantity="other">%1$d secondi</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minute</item>
-        <item quantity="other">%1$d minutes</item>
+        <item quantity="one">%1$d minuto</item>
+        <item quantity="other">%1$d minuti</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d hour</item>
-        <item quantity="other">%1$d hours</item>
+        <item quantity="one">%1$d ora</item>
+        <item quantity="other">%1$d ore</item>
     </plurals>
 
     <!-- Settings -->
@@ -186,7 +186,7 @@
     <string name="medium">Medio</string>
     <string name="large">Grande</string>
     <string name="extra_large">Molto grande</string>
-    <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
+    <string name="password_protect_hidden_items">Proteggi con password gli elementi nascosti</string>
 
     <!-- About -->
     <string name="about">Informazioni</string>
@@ -222,5 +222,5 @@
     <string name="stetho_title">Stetho (debug database)</string>
     <string name="otto_title">Otto (bus eventi)</string>
     <string name="photoview_title">PhotoView (gif zoomabili)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="pattern_title">PatternLockView (sequenza di protezione)</string>
 </resources>
