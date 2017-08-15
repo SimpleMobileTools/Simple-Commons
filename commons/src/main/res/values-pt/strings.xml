@@ -129,7 +129,7 @@
     <string name="select_all">Selecionar tudo</string>
     <string name="hide">Ocultar</string>
     <string name="unhide">Mostrar</string>
-    <string name="hide_folder">Ocultar posta</string>
+    <string name="hide_folder">Ocultar pasta</string>
     <string name="unhide_folder">Mostrar pasta</string>
     <string name="temporarily_show_hidden">Mostrar ocultas temporariamente</string>
     <string name="stop_showing_hidden">Não mostrar multimédia oculta</string>
@@ -154,19 +154,19 @@
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
-    <string name="repeat_pin">Repeat PIN</string>
-    <string name="pattern">Pattern</string>
-    <string name="insert_pattern">Insert pattern</string>
-    <string name="wrong_pattern">Wrong pattern</string>
-    <string name="repeat_pattern">Repeat pattern</string>
+    <string name="enter_pin">Digite o PIN</string>
+    <string name="please_enter_pin">Por favor digite o PIN</string>
+    <string name="wrong_pin">PIN inválido</string>
+    <string name="repeat_pin">Repita o PIN</string>
+    <string name="pattern">Padrão</string>
+    <string name="insert_pattern">Introduza o padrão</string>
+    <string name="wrong_pattern">Padrão inválido</string>
+    <string name="repeat_pattern">Repita o padrão</string>
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d second</item>
-        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">%1$d segundo</item>
+        <item quantity="other">%1$d segundos</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%1$d minuto</item>
@@ -183,7 +183,7 @@
     <string name="show_hidden">Mostrar ficheiros e pastas ocultos</string>
     <string name="font_size">Tamanho do texto</string>
     <string name="small">Pequeno</string>
-    <string name="medium">Medium</string>
+    <string name="medium">Médio</string>
     <string name="large">Grande</string>
     <string name="extra_large">Muito grande</string>
     <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
