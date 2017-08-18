@@ -104,3 +104,12 @@ fun Context.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
 val Context.baseConfig: BaseConfig get() = BaseConfig.newInstance(this)
 val Context.sdCardPath: String get() = baseConfig.sdCardPath
 val Context.internalStoragePath: String get() = baseConfig.internalStoragePath
+
+fun Context.isThankYouInstalled(): Boolean {
+    return try {
+        packageManager.getPackageInfo("com.simplemobiletools.thankyou", 0)
+        true
+    } catch (e: Exception) {
+        false
+    }
+}
