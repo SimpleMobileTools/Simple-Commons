@@ -50,7 +50,7 @@ fun Activity.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
 @SuppressLint("NewApi")
 fun Activity.storeStoragePaths() {
     baseConfig.appRunCount++
-    if (baseConfig.appRunCount == 50 || baseConfig.appRunCount == 300 || baseConfig.appRunCount == 1000) {
+    if (!isThankYouInstalled() && (baseConfig.appRunCount == 50 || baseConfig.appRunCount == 300 || baseConfig.appRunCount == 1000)) {
         DonateDialog(this)
     }
 
