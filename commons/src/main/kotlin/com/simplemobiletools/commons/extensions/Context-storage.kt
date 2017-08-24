@@ -229,5 +229,8 @@ private val physicalPaths = arrayListOf(
         "/storage/removable/sdcard1", // Sony Xperia Z1
         "/data/sdext", "/data/sdext2", "/data/sdext3", "/data/sdext4", "/sdcard1", // Sony Xperia Z
         "/sdcard2", // HTC One M8s
-        "/storage/microsd" // ASUS ZenFone 2
+        "/storage/microsd", // ASUS ZenFone 2
+        "/storage/emulated/0",  // Sony Xperia Z3
+        "/storage/USBdisk1",
+        "/storage/USBdisk2"
 )
