@@ -1,0 +1,227 @@
+<resources>
+    <string name="ok">확인</string>
+    <string name="cancel">취소</string>
+    <string name="search">검색</string>
+    <string name="save_as">다른이름으로 저장</string>
+    <string name="file_saved">파일저장 성공</string>
+    <string name="invalid_file_format">잘못된 파일 형식</string>
+    <string name="no_storage_permissions">저장공간 접근하기 위한 권한이 필요합니다.</string>
+    <string name="out_of_memory_error">메모리 부족 오류</string>
+
+    <!-- Renaming -->
+    <string name="rename_file">파일명 변경</string>
+    <string name="rename_folder">폴더명 변경</string>
+    <string name="rename_file_error">파일명을 변경 할 수 없음</string>
+    <string name="rename_folder_error">폴더명을 변경 할 수 없음</string>
+    <string name="rename_folder_empty">폴더명은 반드시 입력되어야 함</string>
+    <string name="rename_folder_exists">폴더명이 이미 존재함</string>
+    <string name="rename_folder_root">저장소의 루트폴더 이름은 변경 할 수 없음</string>
+    <string name="rename_folder_ok">폴더명 변경 성공</string>
+    <string name="renaming_folder">폴더명 변경</string>
+    <string name="filename_cannot_be_empty">파일명이 비어있으면 안됨</string>
+    <string name="filename_invalid_characters">파일명에 사용할 수 없는 문자가 포함됨</string>
+    <string name="extension_cannot_be_empty">확장자가 비어있으면 안됨</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">복사</string>
+    <string name="move">이동</string>
+    <string name="copy_move">복사 / 이동</string>
+    <string name="copy_to">복사하기</string>
+    <string name="move_to">이동하기</string>
+    <string name="source">Source</string>
+    <string name="destination">Destination</string>
+    <string name="select_destination">Select destination</string>
+    <string name="click_select_destination">Click here to select destination</string>
+    <string name="invalid_destination">Could not write to the selected destination</string>
+    <string name="please_select_destination">Please select a destination</string>
+    <string name="source_and_destination_same">Source and destination cannot be the same</string>
+    <string name="copy_failed">Could not copy the files</string>
+    <string name="copying">복사중&#8230;</string>
+    <string name="copying_success">파일복사 성공</string>
+    <string name="copy_move_failed">에러발생</string>
+    <string name="moving">이동중&#8230;</string>
+    <string name="moving_success">파일이동 성공</string>
+    <string name="moving_success_partial">일부 파일을 이동 할 수 없음</string>
+    <string name="copying_success_partial">일부 파일을 복사 할 수 없음</string>
+    <string name="no_files_selected">파일이 선택되지 않음</string>
+    <string name="saving">저장중&#8230;</string>
+
+    <!-- Create new -->
+    <string name="create_new">새로 만들기</string>
+    <string name="folder">폴더</string>
+    <string name="file">파일</string>
+    <string name="create_new_folder">새로운 폴더 만들기</string>
+    <string name="name_taken">동일한 이름의 파일 또는 폴더가 이미 존재함</string>
+    <string name="invalid_name">이름에 사용 할 수 없는 문자가 포함됨</string>
+    <string name="empty_name">이름을 입력 하세요.</string>
+    <string name="unknown_error_occurred">알 수 없는 에러가 발생함</string>
+
+    <!-- Copy conflicts -->
+    <string name="file_already_exists">%1$s 파일이 이미 존재합니다.</string>
+    <string name="file_already_exists_overwrite">%1$s 파일이 이미 존재합니다. 덮어쓰시겠습니까?</string>
+    <string name="select_an_action">동작선택</string>
+    <string name="overwrite">덮어쓰기</string>
+    <string name="skip">건너뛰기</string>
+    <string name="append">\'_1\' 문자열을 추가함</string>
+    <string name="apply_to_all">모든 출돌에 적용</string>
+
+    <!-- File picker -->
+    <string name="select_folder">폴더 선택</string>
+    <string name="select_file">파일 선택</string>
+    <string name="confirm_storage_access_title">외장 메모리 접근허용</string>
+    <string name="confirm_storage_access_text">쓰기 권한을 부여하려면 다음 화면에서 SD 카드의 루트 폴더를 선택하세요.</string>
+    <string name="confirm_storage_access_text_sd">SD 카드가 보이지 않으면 시도해보세요.</string>
+
+    <plurals name="items">
+        <item quantity="one">%1$d item</item>
+        <item quantity="other">%1$d items</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">저장공간 선택</string>
+    <string name="internal">내장 메모리</string>
+    <string name="sd_card">외장 메모리</string>
+    <string name="root">루트</string>
+    <string name="wrong_root_selected">잘못된 폴더가 선택되었습니다. SD 카드의 루트 폴더를 선택하세요.</string>
+
+    <!-- File properties -->
+    <string name="properties">Properties</string>
+    <string name="path">Path</string>
+    <string name="items_selected">Items selected</string>
+    <string name="direct_children_count">Direct children count</string>
+    <string name="files_count">Total files count</string>
+    <string name="resolution">Resolution</string>
+    <string name="duration">Duration</string>
+    <string name="artist">Artist</string>
+    <string name="album">Album</string>
+    <string name="focal_length">Focal length</string>
+    <string name="exposure_time">Exposure time</string>
+    <string name="iso_speed">ISO speed</string>
+    <string name="f_number">F-number</string>
+    <string name="camera">Camera</string>
+    <string name="exif">EXIF</string>
+
+    <!-- Color customization -->
+    <string name="background_color">Background color</string>
+    <string name="text_color">Text color</string>
+    <string name="primary_color">Primary color</string>
+    <string name="restore_defaults">Restore defaults</string>
+    <string name="theme">Theme</string>
+    <string name="light_theme">Light theme</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="custom">Custom</string>
+    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
+    <string name="save">Save</string>
+    <string name="discard">Discard</string>
+    <string name="undo_changes">Undo changes</string>
+    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
+    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
+
+    <!-- What's new -->
+    <string name="whats_new">What\'s new</string>
+    <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
+
+    <!-- Actionbar items -->
+    <string name="delete">Delete</string>
+    <string name="rename">Rename</string>
+    <string name="share">Share</string>
+    <string name="share_via">Share via</string>
+    <string name="select_all">Select all</string>
+    <string name="hide">Hide</string>
+    <string name="unhide">Unhide</string>
+    <string name="hide_folder">Hide folder</string>
+    <string name="unhide_folder">Unhide folder</string>
+    <string name="temporarily_show_hidden">Temporarily show hidden</string>
+    <string name="stop_showing_hidden">Stop showing hidden media</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">정렬 방식</string>
+    <string name="name">이름</string>
+    <string name="size">크기</string>
+    <string name="last_modified">최종 수정시간</string>
+    <string name="date_taken">촬영 날짜</string>
+    <string name="title">제목</string>
+    <string name="filename">파일명</string>
+    <string name="extension">파일종류</string>
+    <string name="ascending">오름차 순</string>
+    <string name="descending">내림차 순</string>
+    <string name="use_for_this_folder">현재 폴더만 적용</string>
+
+    <!-- Confirmation dialog -->
+    <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <!-- Password protection -->
+    <string name="pin">PIN</string>
+    <string name="enter_pin">Enter PIN</string>
+    <string name="please_enter_pin">Please enter a PIN</string>
+    <string name="wrong_pin">Wrong PIN</string>
+    <string name="repeat_pin">Repeat PIN</string>
+    <string name="pattern">Pattern</string>
+    <string name="insert_pattern">Insert pattern</string>
+    <string name="wrong_pattern">Wrong pattern</string>
+    <string name="repeat_pattern">Repeat pattern</string>
+    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
+
+    <!-- Times -->
+    <plurals name="seconds">
+        <item quantity="one">%1$d second</item>
+        <item quantity="other">%1$d seconds</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%1$d minute</item>
+        <item quantity="other">%1$d minutes</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%1$d hour</item>
+        <item quantity="other">%1$d hours</item>
+    </plurals>
+
+    <!-- Settings -->
+    <string name="settings">설정</string>
+    <string name="customize_colors">Customize colors</string>
+    <string name="show_hidden">Show hidden files and folders</string>
+    <string name="font_size">Font size</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="extra_large">Extra large</string>
+    <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
+
+    <!-- About -->
+    <string name="about">앱정보</string>
+    <string name="website_label">소스코드 공개 링크</string>
+    <string name="email_label">피드백 또는 제안요청</string>
+    <string name="more_apps_underlined"><u>앱 더보기</u></string>
+    <string name="third_party_licences_underlined"><u>Third party licences</u></string>
+    <string name="invite_friends_underlined"><u>친구에게 공유</u></string>
+    <string name="share_text">Hey, come check out %1$s at %2$s</string>
+    <string name="invite_via">Invite via</string>
+    <string name="rate_us_underlined"><u>Rate us</u></string>
+    <string name="donate">Donate</string>
+    <string name="donate_underlined"><u>기부하기</u></string>
+    <string name="follow_us">Follow us:</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="additional_info">Additional info</string>
+    <string name="gruveo">Are you looking for a simple and anonymous video calling app? Try out my other project</string>
+    <string name="app_version">App version: %1$s</string>
+    <string name="device_os">Device OS: %1$s</string>
+    <string name="donate_please">Hey,\n\nseems like you\'ve been using this app for quite a while now.\n\nDid you know it\'s not backed by any big company? Developing it takes time and I want to keep it adfree, so your support would be appreciated.\n\nYou can support me either by buying a paid app Simple Thank You, by sending money through Paypal or by sending bitcoins.\n\nMore info at http://simplemobiletools.com/donate.\n\nThank you!</string>
+
+    <!-- License -->
+    <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
+    <string name="third_party_licences">서드파티 라이선스</string>
+    <string name="kotlin_title">Kotlin (programming language)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
+    <string name="glide_title">Glide (image loading and caching)</string>
+    <string name="picasso_title">Picasso (image loading and caching)</string>
+    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
+    <string name="joda_title">Joda-Time (Java date replacement)</string>
+    <string name="stetho_title">Stetho (debugging databases)</string>
+    <string name="otto_title">Otto (event bus)</string>
+    <string name="photoview_title">PhotoView (zoomable gifs)</string>
+    <string name="pattern_title">PatternLockView (pattern protection)</string>
+</resources>
