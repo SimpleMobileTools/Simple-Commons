@@ -5,7 +5,7 @@
     <string name="save_as">다른이름으로 저장</string>
     <string name="file_saved">파일저장 성공</string>
     <string name="invalid_file_format">잘못된 파일 형식</string>
-    <string name="no_storage_permissions">저장공간 접근하기 위한 권한이 필요합니다.</string>
+    <string name="no_storage_permissions">저장공간에 접근하기 위한 권한이 필요합니다.</string>
     <string name="out_of_memory_error">메모리 부족 오류</string>
 
     <!-- Renaming -->
@@ -85,12 +85,12 @@
     <string name="wrong_root_selected">잘못된 폴더가 선택되었습니다. SD 카드의 루트 폴더를 선택하세요.</string>
 
     <!-- File properties -->
-    <string name="properties">Properties</string>
-    <string name="path">Path</string>
+    <string name="properties">상세정보</string>
+    <string name="path">경로</string>
     <string name="items_selected">Items selected</string>
     <string name="direct_children_count">Direct children count</string>
     <string name="files_count">Total files count</string>
-    <string name="resolution">Resolution</string>
+    <string name="resolution">해상도</string>
     <string name="duration">Duration</string>
     <string name="artist">Artist</string>
     <string name="album">Album</string>
@@ -102,37 +102,37 @@
     <string name="exif">EXIF</string>
 
     <!-- Color customization -->
-    <string name="background_color">Background color</string>
-    <string name="text_color">Text color</string>
+    <string name="background_color">배경 색상</string>
+    <string name="text_color">텍스트 색상</string>
     <string name="primary_color">Primary color</string>
-    <string name="restore_defaults">Restore defaults</string>
-    <string name="theme">Theme</string>
+    <string name="restore_defaults">기본설정으로 변경</string>
+    <string name="theme">테마</string>
     <string name="light_theme">Light theme</string>
     <string name="dark_theme">Dark theme</string>
     <string name="custom">Custom</string>
     <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
-    <string name="save">Save</string>
-    <string name="discard">Discard</string>
-    <string name="undo_changes">Undo changes</string>
-    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
-    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
+    <string name="save">저장</string>
+    <string name="discard">취소</string>
+    <string name="undo_changes">변경사항 되돌리기</string>
+    <string name="undo_changes_confirmation">변경된 사항을  되돌리겠습니까?</string>
+    <string name="save_before_closing">변경사항을 저장하지 않았습니다. 종료전에 저장 하시겠습니까?</string>
 
     <!-- What's new -->
     <string name="whats_new">What\'s new</string>
     <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
 
     <!-- Actionbar items -->
-    <string name="delete">Delete</string>
-    <string name="rename">Rename</string>
-    <string name="share">Share</string>
-    <string name="share_via">Share via</string>
-    <string name="select_all">Select all</string>
+    <string name="delete">삭제</string>
+    <string name="rename">이름변경</string>
+    <string name="share">공유</string>
+    <string name="share_via">공유방법</string>
+    <string name="select_all">전체선택</string>
     <string name="hide">Hide</string>
     <string name="unhide">Unhide</string>
     <string name="hide_folder">Hide folder</string>
     <string name="unhide_folder">Unhide folder</string>
-    <string name="temporarily_show_hidden">Temporarily show hidden</string>
-    <string name="stop_showing_hidden">Stop showing hidden media</string>
+    <string name="temporarily_show_hidden">숨김파일 임시보기</string>
+    <string name="stop_showing_hidden">숨김파일 임시보기 해제</string>
 
     <!-- Sorting -->
     <string name="sort_by">정렬 방식</string>
@@ -154,15 +154,15 @@
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
-    <string name="repeat_pin">Repeat PIN</string>
-    <string name="pattern">Pattern</string>
-    <string name="insert_pattern">Insert pattern</string>
-    <string name="wrong_pattern">Wrong pattern</string>
-    <string name="repeat_pattern">Repeat pattern</string>
-    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
+    <string name="enter_pin">PIN 번호 입력</string>
+    <string name="please_enter_pin">PIN 번호를 입력하세요.</string>
+    <string name="wrong_pin">PIN 번호가 일치하지 않습니다.</string>
+    <string name="repeat_pin">PIN 번호 확인</string>
+    <string name="pattern">패턴</string>
+    <string name="insert_pattern">패턴 입력</string>
+    <string name="wrong_pattern">패턴이 잘못 입력되었습니다.</string>
+    <string name="repeat_pattern">패터 확인</string>
+    <string name="protection_setup_successfully">암호 설정이 완료되었습니다. 암호를 기억하지 못하는경우 앱을 다시 설치하시기 바랍니다.</string>
 
     <!-- Times -->
     <plurals name="seconds">
@@ -180,25 +180,25 @@
 
     <!-- Settings -->
     <string name="settings">설정</string>
-    <string name="customize_colors">Customize colors</string>
-    <string name="show_hidden">Show hidden files and folders</string>
-    <string name="font_size">Font size</string>
-    <string name="small">Small</string>
-    <string name="medium">Medium</string>
-    <string name="large">Large</string>
-    <string name="extra_large">Extra large</string>
-    <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
+    <string name="customize_colors">앱 테마 및 색상 설정</string>
+    <string name="show_hidden">숨김파일 및 폴더 보기</string>
+    <string name="font_size">폰트 크기</string>
+    <string name="small">작게</string>
+    <string name="medium">중간</string>
+    <string name="large">크게</string>
+    <string name="extra_large">아주 크게</string>
+    <string name="password_protect_hidden_items">숨김파일 보기 암호설정</string>
 
     <!-- About -->
     <string name="about">앱정보</string>
     <string name="website_label">소스코드 공개 링크</string>
     <string name="email_label">피드백 또는 제안요청</string>
     <string name="more_apps_underlined"><u>앱 더보기</u></string>
-    <string name="third_party_licences_underlined"><u>Third party licences</u></string>
+    <string name="third_party_licences_underlined"><u>서드파티 라이선스</u></string>
     <string name="invite_friends_underlined"><u>친구에게 공유</u></string>
     <string name="share_text">Hey, come check out %1$s at %2$s</string>
     <string name="invite_via">Invite via</string>
-    <string name="rate_us_underlined"><u>Rate us</u></string>
+    <string name="rate_us_underlined"><u>앱 평가하기</u></string>
     <string name="donate">Donate</string>
     <string name="donate_underlined"><u>기부하기</u></string>
     <string name="follow_us">Follow us:</string>
