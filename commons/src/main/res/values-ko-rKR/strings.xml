@@ -45,6 +45,8 @@
     <string name="copying_success_partial">일부 파일을 복사 할 수 없음</string>
     <string name="no_files_selected">파일이 선택되지 않음</string>
     <string name="saving">저장중&#8230;</string>
+    <string name="could_not_create_folder">Could not create folder %s</string>
+    <string name="could_not_create_file">Could not create file %s</string>
 
     <!-- Create new -->
     <string name="create_new">새로 만들기</string>

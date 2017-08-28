@@ -45,6 +45,8 @@
     <string name="copying_success_partial">Nepodarilo sa skopírovať niektoré súbory</string>
     <string name="no_files_selected">Niesú označené žiadne súbory</string>
     <string name="saving">Ukladanie&#8230;</string>
+    <string name="could_not_create_folder">Nepodarilo sa vytvoriť priečinok %s</string>
+    <string name="could_not_create_file">Nepodarilo sa vytvoriť súbor %s</string>
 
     <!-- Create new -->
     <string name="create_new">Vytvoriť nový</string>

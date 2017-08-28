@@ -3,7 +3,7 @@ package com.simplemobiletools.commons.asynctasks
 import android.os.AsyncTask
 import android.support.v4.provider.DocumentFile
 import android.support.v4.util.Pair
-import android.util.Log
+import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import java.io.*
@@ -37,7 +37,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
                 copy(file, curFile)
             } catch (e: Exception) {
-                Log.e(TAG, "copy $e")
+                activity.toast(e.localizedMessage)
                 return false
             }
         }
@@ -65,7 +65,8 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 val document = activity.getFastDocument(destination) ?: return
                 document.createDirectory(destination.name)
             } else if (!destination.mkdirs()) {
-                throw IOException("Could not create dir ${destination.absolutePath}")
+                val error = String.format(activity.getString(R.string.could_not_create_folder), destination.absolutePath)
+                throw IOException(error)
             }
         }
 
@@ -94,7 +95,8 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
         val directory = destination.parentFile
         if (!directory.exists() && !directory.mkdirs()) {
-            throw IOException("Could not create dir ${directory.absolutePath}")
+            val error = String.format(activity.getString(R.string.could_not_create_folder), directory.absolutePath)
+            throw IOException(error)
         }
 
         var inputStream: InputStream? = null
@@ -106,7 +108,8 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 }
 
                 if (mDocument == null) {
-                    throw IOException("Could not create destination document ${destination.parent}")
+                    val error = String.format(activity.getString(R.string.could_not_create_file), destination.parent)
+                    throw IOException(error)
                 }
 
                 val newDocument = mDocument!!.createFile(source.getMimeType(), destination.name)
