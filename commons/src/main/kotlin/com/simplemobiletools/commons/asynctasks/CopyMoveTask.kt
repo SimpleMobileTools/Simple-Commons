@@ -117,7 +117,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             inputStream = FileInputStream(source)
             inputStream.copyTo(out!!)
             activity.scanFile(destination) {}
-            if (source.length() / 1000000 == destination.length() / 1000000)
+            if (source.length() == destination.length())
                 mMovedFiles.add(source)
         } finally {
             inputStream?.close()
