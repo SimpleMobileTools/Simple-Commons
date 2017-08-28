@@ -105,8 +105,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                     mDocument = activity.getFileDocument(destination.parent)
                 }
 
-                if (mDocument == null)
-                    return
+                if (mDocument == null) {
+                    throw IOException("Could not create destination document ${destination.parent}")
+                }
 
                 val newDocument = mDocument!!.createFile("", destination.name)
                 out = activity.contentResolver.openOutputStream(newDocument!!.uri)
