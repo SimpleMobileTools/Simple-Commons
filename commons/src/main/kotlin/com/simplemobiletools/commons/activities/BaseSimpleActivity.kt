@@ -14,7 +14,9 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
-import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.isShowingSAFDialog
+import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
 import com.simplemobiletools.commons.helpers.APP_VERSION_NAME
@@ -145,32 +147,19 @@ open class BaseSimpleActivity : AppCompatActivity() {
             copyMoveCallback = callback
             if (isCopyOperation) {
                 toast(R.string.copying)
-                val pair = Pair<ArrayList<File>, File>(files, destinationFolder)
-                CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, copyMoveListener).execute(pair)
+                startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly)
             } else {
-                if (isPathOnSD(source) || isPathOnSD(destinationFolder.absolutePath)) {
-                    handleSAFDialog(files[0]) {
-                        toast(R.string.moving)
-                        val pair = Pair<ArrayList<File>, File>(files, destinationFolder)
-                        CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, copyMoveListener).execute(pair)
-                    }
-                } else {
-                    val updatedFiles = ArrayList<File>(files.size * 2)
-                    updatedFiles.addAll(files)
-                    for (file in files) {
-                        val newFile = File(destinationFolder, file.name)
-                        if (!newFile.exists() && file.renameTo(newFile))
-                            updatedFiles.add(newFile)
-                    }
-
-                    scanFiles(updatedFiles) {
-                        runOnUiThread {
-                            copyMoveListener.copySucceeded(false, files.size * 2 == updatedFiles.size)
-                        }
-                    }
+                handleSAFDialog(File(source)) {
+                    toast(R.string.moving)
+                    startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly)
                 }
             }
         }
+    }
+
+    private fun startCopyMove(files: ArrayList<File>, destinationFolder: File, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean) {
+        val pair = Pair<ArrayList<File>, File>(files, destinationFolder)
+        CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, copyMoveListener).execute(pair)
     }
 
     protected val copyMoveListener = object : CopyMoveTask.CopyMoveListener {
