@@ -36,7 +36,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
                 copy(file, curFile)
             } catch (e: Exception) {
-                activity.toast(e.localizedMessage)
+                activity.toast(e.toString())
                 return false
             }
         }
