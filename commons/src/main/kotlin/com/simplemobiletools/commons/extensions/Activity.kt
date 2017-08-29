@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Looper
@@ -91,7 +90,7 @@ fun Activity.launchViewIntent(url: String) {
 }
 
 fun BaseSimpleActivity.checkWhatsNew(releases: List<Release>, currVersion: Int) {
-    if (isFirstRunEver()) {
+    if (baseConfig.lastVersion == 0) {
         baseConfig.lastVersion = currVersion
         return
     }
@@ -103,17 +102,6 @@ fun BaseSimpleActivity.checkWhatsNew(releases: List<Release>, currVersion: Int) 
         WhatsNewDialog(this, newReleases)
 
     baseConfig.lastVersion = currVersion
-}
-
-fun BaseSimpleActivity.isFirstRunEver(): Boolean {
-    try {
-        val firstInstallTime = packageManager.getPackageInfo(packageName, 0).firstInstallTime
-        val lastUpdateTime = packageManager.getPackageInfo(packageName, 0).lastUpdateTime
-        return firstInstallTime == lastUpdateTime
-    } catch (e: PackageManager.NameNotFoundException) {
-
-    }
-    return false
 }
 
 fun BaseSimpleActivity.deleteFolders(folders: ArrayList<File>, deleteMediaOnly: Boolean = true, callback: (wasSuccess: Boolean) -> Unit) {
