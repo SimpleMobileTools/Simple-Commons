@@ -45,6 +45,8 @@
     <string name="copying_success_partial">Algunos archivos no se pudieron copiar</string>
     <string name="no_files_selected">No hay archivos seleccionados</string>
     <string name="saving">Guardando&#8230;</string>
+    <string name="could_not_create_folder">Could not create folder %s</string>
+    <string name="could_not_create_file">Could not create file %s</string>
 
     <!-- Create new -->
     <string name="create_new">Crear nueva</string>

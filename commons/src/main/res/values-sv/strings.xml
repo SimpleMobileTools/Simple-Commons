@@ -45,6 +45,8 @@
     <string name="copying_success_partial">Några filer gick inte att kopiera</string>
     <string name="no_files_selected">Inga filer markerade</string>
     <string name="saving">Sparar&#8230;</string>
+    <string name="could_not_create_folder">Could not create folder %s</string>
+    <string name="could_not_create_file">Could not create file %s</string>
 
     <!-- Create new -->
     <string name="create_new">Skapa ny</string>

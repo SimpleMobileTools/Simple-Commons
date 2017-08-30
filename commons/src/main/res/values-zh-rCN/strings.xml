@@ -45,6 +45,8 @@
     <string name="copying_success_partial">无法复制相同文件</string>
     <string name="no_files_selected">未选择文件</string>
     <string name="saving">正在保存&#8230;</string>
+    <string name="could_not_create_folder">Could not create folder %s</string>
+    <string name="could_not_create_file">Could not create file %s</string>
 
     <!-- Create new -->
     <string name="create_new">新建</string>
