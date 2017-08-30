@@ -7,6 +7,7 @@
     <string name="invalid_file_format">Недопустимый формат файла</string>
     <string name="no_storage_permissions">Нужно разрешение для доступа к памяти</string>
     <string name="out_of_memory_error">Память переполнена</string>
+    <string name="an_error_occurred">Произошла ошибка: %s</string>
 
     <!-- Renaming -->
     <string name="rename_file">Изменение имени файла</string>

@@ -7,6 +7,7 @@
     <string name="invalid_file_format">Formato de archivo no válido</string>
     <string name="no_storage_permissions">Necesitamos permiso para acceder a su almacenamiento</string>
     <string name="out_of_memory_error">Error: sin memoria</string>
+    <string name="an_error_occurred">Un error ocurrió: %s</string>
 
     <!-- Renaming -->
     <string name="rename_file">Renombrar archivo</string>

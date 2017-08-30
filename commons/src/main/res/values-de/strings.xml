@@ -7,6 +7,7 @@
     <string name="invalid_file_format">Ungültiges Dateiformat</string>
     <string name="no_storage_permissions">Berechtigung zum Zugriff auf Speicher erforderlich</string>
     <string name="out_of_memory_error">Fehler: Zuwenig Speicher</string>
+    <string name="an_error_occurred">Es ist ein Fehler aufgetreten: %s</string>
 
     <!-- Renaming -->
     <string name="rename_file">Datei umbenennen</string>

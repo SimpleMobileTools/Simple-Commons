@@ -7,6 +7,7 @@
     <string name="invalid_file_format">Neplatný formát souboru</string>
     <string name="no_storage_permissions">Potřebuji oprávnění k přístupu na vaše úložiště</string>
     <string name="out_of_memory_error">Zařízení nemá dostatek paměti</string>
+    <string name="an_error_occurred">Vyskytla se chyba: %s</string>
 
     <!-- Renaming -->
     <string name="rename_file">Přejmenovat soubor</string>

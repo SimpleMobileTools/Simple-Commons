@@ -7,6 +7,7 @@
     <string name="invalid_file_format">잘못된 파일 형식</string>
     <string name="no_storage_permissions">저장공간에 접근하기 위한 권한이 필요합니다.</string>
     <string name="out_of_memory_error">메모리 부족 오류</string>
+    <string name="an_error_occurred">An error occurred: %s</string>
 
     <!-- Renaming -->
     <string name="rename_file">파일명 변경</string>
