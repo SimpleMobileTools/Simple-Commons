@@ -46,6 +46,10 @@ fun Activity.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
     }
 }
 
+fun Activity.showErrorToast(msg: String, length: Int = Toast.LENGTH_SHORT) {
+    toast(String.format(getString(R.string.an_error_occurred), msg))
+}
+
 @SuppressLint("NewApi")
 fun Activity.storeStoragePaths() {
     baseConfig.appRunCount++
