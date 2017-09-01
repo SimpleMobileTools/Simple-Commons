@@ -7,7 +7,7 @@
     <string name="invalid_file_format">Formato de ficheiro inválido</string>
     <string name="no_storage_permissions">Necessitamos de permissão para aceder ao armazenamento</string>
     <string name="out_of_memory_error">Memória insuficiente</string>
-    <string name="an_error_occurred">An error occurred: %s</string>
+    <string name="an_error_occurred">Ocorreu um erro: %s</string>
 
     <!-- Renaming -->
     <string name="rename_file">Renomear ficheiro</string>
@@ -46,8 +46,8 @@
     <string name="copying_success_partial">Alguns ficheiros não foram copiados</string>
     <string name="no_files_selected">Nenhum ficheiro selecionado</string>
     <string name="saving">A guardar&#8230;</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="could_not_create_folder">Não foi possível criar a pasta %s</string>
+    <string name="could_not_create_file">Não foi possível criar o ficheiro %s</string>
 
     <!-- Create new -->
     <string name="create_new">Criar</string>
