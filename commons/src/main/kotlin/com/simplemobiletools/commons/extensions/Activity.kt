@@ -46,7 +46,7 @@ fun Activity.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
     }
 }
 
-fun Activity.showErrorToast(msg: String, length: Int = Toast.LENGTH_SHORT) {
+fun Activity.showErrorToast(msg: String, length: Int = Toast.LENGTH_LONG) {
     toast(String.format(getString(R.string.an_error_occurred), msg))
 }
 
