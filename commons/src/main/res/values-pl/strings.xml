@@ -46,8 +46,8 @@
     <string name="copying_success_partial">Niektóre pliki nie mogą być skopiowane</string>
     <string name="no_files_selected">Nie wybrano żadnych plików</string>
     <string name="saving">Zapsisuję&#8230;</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="could_not_create_folder">Nie mogę utworzyć folderu %s</string>
+    <string name="could_not_create_file">Nie mogę utworzyć pliku %s</string>
 
     <!-- Create new -->
     <string name="create_new">Utwórz nowy</string>
@@ -71,7 +71,7 @@
     <!-- File picker -->
     <string name="select_folder">Wybierz folder</string>
     <string name="select_file">Wybierz plik</string>
-    <string name="confirm_storage_access_title">Potwierdź dostęp do zewnętrznej pamięci</string>
+    <string name="confirm_storage_access_title">Potwierdź dostęp do karty pamięci</string>
     <string name="confirm_storage_access_text">Wybierz główny folder na karcie pamięci na następnym ekranie i udziel dostępu do zapisu</string>
     <string name="confirm_storage_access_text_sd">Jeśli nie widzisz karty pamięci, spróbuj tego:</string>
 
@@ -166,7 +166,7 @@
     <string name="insert_pattern">Wprowadź wzór</string>
     <string name="wrong_pattern">Nieprawidłowy wzór</string>
     <string name="repeat_pattern">Wprowadź wzór ponownie</string>
-    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
+    <string name="protection_setup_successfully">Hasło zostało ustawione. Jeśli je zapomnisz, przeinstaluj aplikację.</string>
 
     <!-- Times -->
     <plurals name="seconds">
@@ -194,7 +194,7 @@
     <string name="medium">Średnia</string>
     <string name="large">Duża</string>
     <string name="extra_large">Bardzo duża</string>
-    <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
+    <string name="password_protect_hidden_items">Chroń hasłem widoczność ukrytych plików</string>
 
     <!-- About -->
     <string name="about">O aplikacji</string>
