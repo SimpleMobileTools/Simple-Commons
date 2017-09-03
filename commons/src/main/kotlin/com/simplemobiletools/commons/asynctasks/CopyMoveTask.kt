@@ -6,7 +6,10 @@ import android.support.v4.util.Pair
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
-import java.io.*
+import java.io.File
+import java.io.FileInputStream
+import java.io.InputStream
+import java.io.OutputStream
 import java.lang.ref.WeakReference
 import java.util.*
 
@@ -49,7 +52,6 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         return true
     }
 
-    @Throws(Exception::class)
     private fun copy(source: File, destination: File) {
         if (source.isDirectory) {
             copyDirectory(source, destination)
@@ -59,14 +61,10 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     }
 
     private fun copyDirectory(source: File, destination: File) {
-        if (!destination.exists()) {
-            if (activity.needsStupidWritePermissions(destination.absolutePath)) {
-                val document = activity.getFastDocument(destination) ?: return
-                document.createDirectory(destination.name)
-            } else if (!destination.mkdirs()) {
-                val error = String.format(activity.getString(R.string.could_not_create_folder), destination.absolutePath)
-                throw IOException(error)
-            }
+        if (!activity.createDirectorySync(destination)) {
+            val error = String.format(activity.getString(R.string.could_not_create_folder), destination.absolutePath)
+            activity.showErrorToast(error)
+            return
         }
 
         val children = source.list()
@@ -75,17 +73,10 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             if (newFile.exists())
                 continue
 
-            val curFile = File(source, child)
-            if (activity.needsStupidWritePermissions(destination.absolutePath)) {
-                if (newFile.isDirectory) {
-                    copyDirectory(curFile, newFile)
-                } else {
-                    copyFile(curFile, newFile)
-                }
-            } else {
-                copy(curFile, newFile)
-            }
+            val oldFile = File(source, child)
+            copy(oldFile, newFile)
         }
+        mMovedFiles.add(source)
     }
 
     private fun copyFile(source: File, destination: File) {
@@ -93,29 +84,20 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             return
 
         val directory = destination.parentFile
-        if (!directory.exists() && !directory.mkdirs()) {
+        if (!activity.createDirectorySync(directory)) {
             val error = String.format(activity.getString(R.string.could_not_create_folder), directory.absolutePath)
-            throw IOException(error)
+            activity.showErrorToast(error)
+            return
         }
 
         var inputStream: InputStream? = null
         var out: OutputStream? = null
         try {
-            if (activity.needsStupidWritePermissions(destination.absolutePath)) {
-                if (mDocument == null) {
-                    mDocument = activity.getFileDocument(destination.parent)
-                }
-
-                if (mDocument == null) {
-                    val error = String.format(activity.getString(R.string.could_not_create_file), destination.parent)
-                    throw IOException(error)
-                }
-
-                val newDocument = mDocument!!.createFile(source.getMimeType(), destination.name)
-                out = activity.contentResolver.openOutputStream(newDocument!!.uri)
-            } else {
-                out = FileOutputStream(destination)
+            if (mDocument == null && activity.needsStupidWritePermissions(destination.absolutePath)) {
+                mDocument = activity.getFileDocument(destination.parent)
             }
+
+            out = activity.getFileOutputStreamSync(destination.absolutePath, source.getMimeType(), mDocument)
 
             inputStream = FileInputStream(source)
             inputStream.copyTo(out!!)
@@ -132,7 +114,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         val listener = mListener?.get() ?: return
 
         if (success) {
-            listener.copySucceeded(copyOnly, mFiles.size == mMovedFiles.size)
+            listener.copySucceeded(copyOnly, mMovedFiles.size >= mFiles.size)
         } else {
             listener.copyFailed()
         }
