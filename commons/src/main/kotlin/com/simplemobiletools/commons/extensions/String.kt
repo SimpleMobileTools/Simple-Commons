@@ -40,6 +40,8 @@ fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }
 // fast extension check, not guaranteed to be accurate
 fun String.isImageFast() = photoExtensions.any { endsWith(it, true) }
 
+fun String.areDigitsOnly() = matches(Regex("[0-9]+"))
+
 fun String.getMimeTypeFromPath(): String {
     val typesMap = HashMap<String, String>().apply {
         put("323", "text/h323")
