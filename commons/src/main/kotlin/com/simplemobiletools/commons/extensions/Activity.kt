@@ -46,6 +46,14 @@ fun Activity.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
     }
 }
 
+fun Activity.showErrorToast(msg: String, length: Int = Toast.LENGTH_LONG) {
+    toast(String.format(getString(R.string.an_error_occurred), msg), length)
+}
+
+fun Activity.showErrorToast(exception: Exception, length: Int = Toast.LENGTH_LONG) {
+    showErrorToast(exception.toString(), length)
+}
+
 @SuppressLint("NewApi")
 fun Activity.storeStoragePaths() {
     baseConfig.appRunCount++
@@ -320,17 +328,42 @@ fun Activity.hideKeyboard(view: View) {
     inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
 }
 
-fun BaseSimpleActivity.getFileOutputStream(file: File, callback: (outputStream: OutputStream) -> Unit) {
+fun BaseSimpleActivity.getFileOutputStream(file: File, callback: (outputStream: OutputStream?) -> Unit) {
     if (needsStupidWritePermissions(file.absolutePath)) {
         handleSAFDialog(file) {
-            var document = getFileDocument(file.absolutePath) ?: return@handleSAFDialog
+            var document = getFileDocument(file.absolutePath)
+            if (document == null) {
+                val error = String.format(getString(R.string.could_not_create_file), file.absolutePath)
+                showErrorToast(error)
+                callback(null)
+                return@handleSAFDialog
+            }
+
             if (!file.exists()) {
                 document = document.createFile("", file.name)
             }
-            callback(contentResolver.openOutputStream(document.uri))
+            callback(contentResolver.openOutputStream(document!!.uri))
         }
     } else {
         callback(FileOutputStream(file))
+    }
+}
+
+fun BaseSimpleActivity.getFileOutputStreamSync(targetPath: String, mimeType: String, parentDocumentFile: DocumentFile? = null): OutputStream? {
+    val targetFile = File(targetPath)
+
+    return if (needsStupidWritePermissions(targetPath)) {
+        val documentFile = parentDocumentFile ?: getFileDocument(targetFile.parent)
+        if (documentFile == null) {
+            val error = String.format(getString(R.string.could_not_create_file), targetFile.parent)
+            showErrorToast(error)
+            return null
+        }
+
+        val newDocument = documentFile.createFile(mimeType, targetPath.getFilenameFromPath())
+        contentResolver.openOutputStream(newDocument!!.uri)
+    } else {
+        FileOutputStream(targetFile)
     }
 }
 
@@ -362,4 +395,16 @@ fun BaseSimpleActivity.handleHiddenFolderPasswordProtection(callback: () -> Unit
     } else {
         callback()
     }
+}
+
+fun BaseSimpleActivity.createDirectorySync(directory: File): Boolean {
+    if (directory.exists())
+        return true
+
+    if (needsStupidWritePermissions(directory.absolutePath)) {
+        val documentFile = getFileDocument(directory.absolutePath) ?: return false
+        val newDir = documentFile.createDirectory(directory.name)
+        return newDir != null
+    }
+    return directory.mkdirs()
 }

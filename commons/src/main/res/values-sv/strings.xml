@@ -6,7 +6,8 @@
     <string name="file_saved">Filen sparad</string>
     <string name="invalid_file_format">Ogiltigt filformat</string>
     <string name="no_storage_permissions">Vi behöver behörigheten för att komma åt ditt lagringsutrymme</string>
-    <string name="out_of_memory_error">Out of memory error</string>
+    <string name="out_of_memory_error">Minnet är fullt</string>
+    <string name="an_error_occurred">Ett fel har uppstått: %s</string>
 
     <!-- Renaming -->
     <string name="rename_file">Döp om fil</string>
@@ -45,8 +46,8 @@
     <string name="copying_success_partial">Några filer gick inte att kopiera</string>
     <string name="no_files_selected">Inga filer markerade</string>
     <string name="saving">Sparar&#8230;</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="could_not_create_folder">Kunde inte skapa mappen %s</string>
+    <string name="could_not_create_file">Kunde inte skapa filen %s</string>
 
     <!-- Create new -->
     <string name="create_new">Skapa ny</string>
@@ -71,7 +72,7 @@
     <string name="select_folder">Välj mapp</string>
     <string name="select_file">Välj fil</string>
     <string name="confirm_storage_access_title">Bekräfta extern åtkomstlagring</string>
-    <string name="confirm_storage_access_text">Välj rotmappen på ditt SD-kort på nästa skärmnbild, för att bevilja skrivrättigheter</string>
+    <string name="confirm_storage_access_text">Välj rotmappen på ditt SD-kort på nästa skärmbild, för att bevilja skrivrättigheter</string>
     <string name="confirm_storage_access_text_sd">Om du inte ser SD-kortet, prova detta</string>
 
     <plurals name="items">
@@ -84,7 +85,7 @@
     <string name="internal">Internt</string>
     <string name="sd_card">SD-kort</string>
     <string name="root">Rot</string>
-    <string name="wrong_root_selected">Fel mapp vald, välj rotmappen på ditt SD-kort</string>
+    <string name="wrong_root_selected">Du har valt fel mapp, välj rotmappen på ditt SD-kort</string>
 
     <!-- File properties -->
     <string name="properties">Egenskaper</string>
@@ -111,8 +112,8 @@
     <string name="theme">Tema</string>
     <string name="light_theme">Ljust tema</string>
     <string name="dark_theme">Mörkt tema</string>
-    <string name="custom">Egen</string>
-    <string name="changing_color_description">Om du ändrar en färg så kommer den byta till eget tema</string>
+    <string name="custom">Eget</string>
+    <string name="changing_color_description">Om du ändrar en färg, byter den till eget tema</string>
     <string name="save">Spara</string>
     <string name="discard">Avbryt</string>
     <string name="undo_changes">Ångra ändringar</string>
@@ -131,10 +132,10 @@
     <string name="select_all">Välj alla</string>
     <string name="hide">Dölj</string>
     <string name="unhide">Visa</string>
-    <string name="hide_folder">Hide folder</string>
-    <string name="unhide_folder">Unhide folder</string>
-    <string name="temporarily_show_hidden">Temporarily show hidden</string>
-    <string name="stop_showing_hidden">Stop showing hidden media</string>
+    <string name="hide_folder">Dölj mapp</string>
+    <string name="unhide_folder">Visa mapp</string>
+    <string name="temporarily_show_hidden">Visa dolda objekt tillfälligt</string>
+    <string name="stop_showing_hidden">Sluta visa dolda objekt</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortera efter</string>
@@ -155,21 +156,21 @@
     <string name="no">Nej</string>
 
     <!-- Password protection -->
-    <string name="pin">PIN</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
-    <string name="repeat_pin">Repeat PIN</string>
-    <string name="pattern">Pattern</string>
-    <string name="insert_pattern">Insert pattern</string>
-    <string name="wrong_pattern">Wrong pattern</string>
-    <string name="repeat_pattern">Repeat pattern</string>
-    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
+    <string name="pin">PIN-kod</string>
+    <string name="enter_pin">Ange PIN-kod</string>
+    <string name="please_enter_pin">Ange en PIN-kod</string>
+    <string name="wrong_pin">Du har angett fel PIN-kod</string>
+    <string name="repeat_pin">Upprepa PIN-kod</string>
+    <string name="pattern">Mönster</string>
+    <string name="insert_pattern">Rita mönster</string>
+    <string name="wrong_pattern">Du har ritat fel mönster</string>
+    <string name="repeat_pattern">Upprepa mönster</string>
+    <string name="protection_setup_successfully">Lösenordet har ställts in. Installera om appen om du glömmer bort det.</string>
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d second</item>
-        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">%1$d sekund</item>
+        <item quantity="other">%1$d sekunder</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%1$d minut</item>
@@ -184,12 +185,12 @@
     <string name="settings">Inställningar</string>
     <string name="customize_colors">Egna färger</string>
     <string name="show_hidden">Visa dolda filer</string>
-    <string name="font_size">Font size</string>
-    <string name="small">Small</string>
-    <string name="medium">Medium</string>
-    <string name="large">Large</string>
-    <string name="extra_large">Extra large</string>
-    <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
+    <string name="font_size">Teckenstorlek</string>
+    <string name="small">Liten</string>
+    <string name="medium">Medelstor</string>
+    <string name="large">Stor</string>
+    <string name="extra_large">Extra stor</string>
+    <string name="password_protect_hidden_items">Lösenordsskydda synligheten för dolda objekt</string>
 
     <!-- About -->
     <string name="about">Om</string>
@@ -205,17 +206,17 @@
     <string name="donate_underlined"><u>Donera</u></string>
     <string name="follow_us">Följ oss:</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="additional_info">Additional info</string>
-    <string name="gruveo">Are you looking for a simple and anonymous video calling app? Try out my other project</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
-    <string name="donate_please">Hej,\n\nverkar som att du har använt den här appen ganska länge nu.\n\nVisste du att den inte är uppbackad av något stort företag? Att utveckla den tar tid och jag vill behålla den reklamfri, så ditt stöd skulle uppskattas.\n\nDu kan stödja mig antingen genom att köpa en betalapp Simple Thank You, genom att skicka pengar via Paypal eller genom att skicka bitcoins.\n\nMer info på http://simplemobiletools.com/donate.\n\nTack!</string>
+    <string name="additional_info">Ytterligare info</string>
+    <string name="gruveo">Letar du efter en enkel app för anonyma videosamtal? Prova mitt andra projekt</string>
+    <string name="app_version">Appversion: %1$s</string>
+    <string name="device_os">Enhetens operativsystem: %1$s</string>
+    <string name="donate_please">Hej,\n\ndet verkar som att du har använt den här appen ganska länge nu.\n\nVisste du att den inte är uppbackad av något stort företag? Det tar tid att utveckla den och jag vill hålla den reklamfri, så ditt stöd skulle uppskattas.\n\nDu kan stödja mig genom att köpa betalappen Simple Thank You, genom att skicka pengar via Paypal eller genom att skicka kryptovalutor.\n\nMer info på http://simplemobiletools.com/donate.\n\nTack!</string>
 
     <!-- License -->
     <string name="notice">Denna app använder följande tredjepartsbibliotek för att göra mitt liv enklare. Tack.</string>
     <string name="third_party_licences">Tredjepartslicenser</string>
     <string name="kotlin_title">Kotlin (programmeringsspråk)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (zoombara imageviewwidgetar)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zoombara bildvyer)</string>
     <string name="glide_title">Glide (inläsning och cachning av bilder)</string>
     <string name="picasso_title">Picasso (inläsning och cachning av bilder)</string>
     <string name="cropper_title">Android Image Cropper (beskärning och rotering av bilder)</string>
@@ -225,5 +226,5 @@
     <string name="stetho_title">Stetho (avlusning av databaser)</string>
     <string name="otto_title">Otto (händelsebuss)</string>
     <string name="photoview_title">PhotoView (zoombara GIF-bilder)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="pattern_title">PatternLockView (mönsterlås)</string>
 </resources>
