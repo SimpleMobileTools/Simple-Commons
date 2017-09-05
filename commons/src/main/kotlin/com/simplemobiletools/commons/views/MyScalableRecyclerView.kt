@@ -85,8 +85,13 @@ class MyScalableRecyclerView : RecyclerView {
     }
 
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
-        if (!dragSelectActive)
-            super.dispatchTouchEvent(ev)
+        if (!dragSelectActive) {
+            try {
+                super.dispatchTouchEvent(ev)
+            } catch (ignored: Exception) {
+
+            }
+        }
 
         when (ev.action) {
             MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
