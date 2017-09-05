@@ -27,8 +27,8 @@
     <string name="copy">Copier</string>
     <string name="move">Déplacer</string>
     <string name="copy_move">Copier / Déplacer</string>
-    <string name="copy_to">Copy to</string>
-    <string name="move_to">Move to</string>
+    <string name="copy_to">Copier vers</string>
+    <string name="move_to">Déplacer vers</string>
     <string name="source">Source</string>
     <string name="destination">Destination</string>
     <string name="select_destination">Sélectionner la destination</string>
@@ -45,9 +45,9 @@
     <string name="moving_success_partial">Certains fichiers n\'ont pu être déplacés</string>
     <string name="copying_success_partial">Certains fichiers n\'ont pu être copiés</string>
     <string name="no_files_selected">Aucun fichier sélectionné</string>
-    <string name="saving">Saving&#8230;</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="saving">Enregistrement&#8230;</string>
+    <string name="could_not_create_folder">Impossible de créer le dossier %s</string>
+    <string name="could_not_create_file">Impossible de créer le fichier %s</string>
 
     <!-- Create new -->
     <string name="create_new">Créer nouveau</string>
@@ -63,7 +63,7 @@
     <string name="file_already_exists">Le fichier %1$s existe déjà</string>
     <string name="file_already_exists_overwrite">Le fichier %1$s existe déjà. Ecraser?</string>
     <string name="select_an_action">Sélectionner une action</string>
-    <string name="overwrite">Ecraser</string>
+    <string name="overwrite">Écraser</string>
     <string name="skip">Passer</string>
     <string name="append">Suffixer avec \'_1\'</string>
     <string name="apply_to_all">Appliquer à tous les conflits</string>
@@ -73,7 +73,7 @@
     <string name="select_file">Sélectionner un fichier</string>
     <string name="confirm_storage_access_title">Confirmer l\'accès au stockage externe</string>
     <string name="confirm_storage_access_text">Veuillez choisir le dossier racine de la carte SD dans le prochain écran, pour accorder le droit d\'écriture</string>
-    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
+    <string name="confirm_storage_access_text_sd">Si vous ne voyez pas la carte SD, essayez ceci</string>
 
     <plurals name="items">
         <item quantity="one">%1$d élément</item>
@@ -113,15 +113,15 @@
     <string name="light_theme">Thème lumineux</string>
     <string name="dark_theme">Thème sombre</string>
     <string name="custom">Personnalisé</string>
-    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
+    <string name="changing_color_description">Changer une couleur le basculera en Thème personnalisé</string>
     <string name="save">Sauvegarder</string>
     <string name="discard">Rejeter</string>
     <string name="undo_changes">Annuler les changements</string>
-    <string name="undo_changes_confirmation">Etes-vous sûr de vouloir annuler vos changements ?</string>
+    <string name="undo_changes_confirmation">Etes-vous sûr•e de vouloir annuler vos changements ?</string>
     <string name="save_before_closing">Vous avez des changements non sauvegardés. Sauvegarder avant de quitter ?</string>
 
     <!-- What's new -->
-    <string name="whats_new">Quoi de neuf</string>
+    <string name="whats_new">Quoi de neuf ?</string>
     <string name="whats_new_disclaimer">* seules les mises à jour les plus importantes sont listées ici, il y a toujours de petites améliorations également</string>
 
     <!-- Actionbar items -->
@@ -130,12 +130,12 @@
     <string name="share">Partager</string>
     <string name="share_via">Partager via</string>
     <string name="select_all">Sélectionner tout</string>
-    <string name="hide">Hide</string>
-    <string name="unhide">Unhide</string>
-    <string name="hide_folder">Hide folder</string>
-    <string name="unhide_folder">Unhide folder</string>
+    <string name="hide">Masquer</string>
+    <string name="unhide">Démasquer</string>
+    <string name="hide_folder">Masquer dossier</string>
+    <string name="unhide_folder">Démasquer dossier</string>
     <string name="temporarily_show_hidden">Afficher temporairement les fichiers masqués</string>
-    <string name="stop_showing_hidden">Stop showing hidden media</string>
+    <string name="stop_showing_hidden">Arrêter d\'afficher les medias masqués</string>
 
     <!-- Sorting -->
     <string name="sort_by">Trier par</string>
@@ -151,50 +151,50 @@
     <string name="use_for_this_folder">Utiliser pour ce dossier uniquement</string>
 
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Etes-vous sûr de vouloir effectuer la suppression ?</string>
+    <string name="proceed_with_deletion">Etes-vous sûr•e de vouloir effectuer la suppression ?</string>
     <string name="yes">Oui</string>
     <string name="no">Non</string>
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
-    <string name="repeat_pin">Repeat PIN</string>
-    <string name="pattern">Pattern</string>
-    <string name="insert_pattern">Insert pattern</string>
-    <string name="wrong_pattern">Wrong pattern</string>
-    <string name="repeat_pattern">Repeat pattern</string>
-    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
+    <string name="enter_pin">Saisir PIN</string>
+    <string name="please_enter_pin">Veuillez saisir un PIN</string>
+    <string name="wrong_pin">PIN erroné</string>
+    <string name="repeat_pin">Répéter PIN</string>
+    <string name="pattern">Modèle</string>
+    <string name="insert_pattern">Insérer modèle</string>
+    <string name="wrong_pattern">Modèle erroné</string>
+    <string name="repeat_pattern">Répéter modèle</string>
+    <string name="protection_setup_successfully">Mot de passe défini avec succès. Veuillez réinstaller l\'appli en cas d\'oubli.</string>
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d second</item>
-        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">%1$d seconde</item>
+        <item quantity="other">%1$d secondes</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%1$d minute</item>
         <item quantity="other">%1$d minutes</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d hour</item>
-        <item quantity="other">%1$d hours</item>
+        <item quantity="one">%1$d heure</item>
+        <item quantity="other">%1$d heures</item>
     </plurals>
 
     <!-- Settings -->
     <string name="settings">Paramètres</string>
     <string name="customize_colors">Personnaliser les couleurs</string>
     <string name="show_hidden">Montrer les fichiers et dossiers cachés</string>
-    <string name="font_size">Font size</string>
+    <string name="font_size">Taille police</string>
     <string name="small">Petite</string>
-    <string name="medium">Medium</string>
+    <string name="medium">Moyenne</string>
     <string name="large">Large</string>
     <string name="extra_large">Extra large</string>
     <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
 
     <!-- About -->
-    <string name="about">A propos</string>
-    <string name="website_label">Pour le code source visitez</string>
+    <string name="about">À propos</string>
+    <string name="website_label">Pour le code source, visitez</string>
     <string name="email_label">Envoyez vos réactions et suggestions à</string>
     <string name="more_apps_underlined"><u>Plus d\'applications</u></string>
     <string name="third_party_licences_underlined"><u>Licences tierces</u></string>
@@ -207,10 +207,10 @@
     <string name="follow_us">Suivez nous:</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Additional info</string>
-    <string name="gruveo">Are you looking for a simple and anonymous video calling app? Try out my other project</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
-    <string name="donate_please">Hey,\n\nseems like you\'ve been using this app for quite a while now.\n\nDid you know it\'s not backed by any big company? Developing it takes time and I want to keep it adfree, so your support would be appreciated.\n\nYou can support me either by buying a paid app Simple Thank You, by sending money through Paypal or by sending cryptocurrencies.\n\nMore info at http://simplemobiletools.com/donate.\n\nThank you!</string>
+    <string name="gruveo">Êtes-vous à la recherche d\'une appli d\'appels vidéo simple et anonyme ? Essayez mon autre projet</string>
+    <string name="app_version">Version appli: %1$s</string>
+    <string name="device_os">OS appareil: %1$s</string>
+    <string name="donate_please">Hey,\n\nil semble que utilisez cette appli depuis un moment.\n\nSaviez-vous qu\'il n\'y aucune grande société derrière ? Son développement prend du temps et je veux la garder sans pubs, alors votre support sera apprécié.\n\nVous pouvez me supporter soit en achetant une appli Simple Thank You, soit en envoyant de l\'argent via Paypal, soit en envoyant des crypto-monnaies.\n\nPlus d\'informations sur http://simplemobiletools.com/donate.\n\nMerci !</string>
 
     <!-- License -->
     <string name="notice">Cette application utilise les librairies tierces suivantes pour me simplifier la vie. Merci.</string>
@@ -221,10 +221,10 @@
     <string name="picasso_title">Picasso (chargement et mise en cache d\'image)</string>
     <string name="cropper_title">Android Image Cropper (découpe et rotation d\'image)</string>
     <string name="multiselect_title">RecyclerView MultiSelect (sélection de multiples éléments de liste)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (glissement de droite à gauche)</string>
     <string name="joda_title">Joda-Time (remplacement de date Java)</string>
     <string name="stetho_title">Stetho (débogage de bases de données)</string>
     <string name="otto_title">Otto (bus d\'évenement)</string>
     <string name="photoview_title">PhotoView (gifs zoomables)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="pattern_title">PatternLockView (protection de modèle)</string>
 </resources>
