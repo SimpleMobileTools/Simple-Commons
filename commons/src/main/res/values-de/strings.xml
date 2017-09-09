@@ -46,8 +46,8 @@
     <string name="copying_success_partial">Einige Dateien konnten nicht kopiert werden</string>
     <string name="no_files_selected">Keine Dateien ausgewählt</string>
     <string name="saving">Speichere&#8230;</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="could_not_create_folder">Ordner %s konnte nicht erstellt werden</string>
+    <string name="could_not_create_file">Datei %s konnte nicht erstellt werden</string>
 
     <!-- Create new -->
     <string name="create_new">Neuer Ordner</string>
@@ -165,7 +165,7 @@
     <string name="insert_pattern">Muster zeichnen</string>
     <string name="wrong_pattern">Falsches Muster</string>
     <string name="repeat_pattern">Muster wiederholen</string>
-    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
+    <string name="protection_setup_successfully">Muster/PIN erfolgreich gespeichert. Falls vergessen, muss die App neu installiert werden.</string>
 
     <!-- Times -->
     <plurals name="seconds">
