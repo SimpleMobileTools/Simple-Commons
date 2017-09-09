@@ -3,7 +3,7 @@
     <string name="cancel">Отмена</string>
     <string name="search">Поиск</string>
     <string name="save_as">Сохранить как</string>
-    <string name="file_saved">Файл успешно сохранен</string>
+    <string name="file_saved">Файл успешно сохранён</string>
     <string name="invalid_file_format">Недопустимый формат файла</string>
     <string name="no_storage_permissions">Нужно разрешение для доступа к памяти</string>
     <string name="out_of_memory_error">Память переполнена</string>
@@ -45,9 +45,9 @@
     <string name="moving_success_partial">Некоторые файлы не могут быть перемещены</string>
     <string name="copying_success_partial">Некоторые файлы не могут быть скопированы</string>
     <string name="no_files_selected">Файлы не выбраны</string>
-    <string name="saving">Saving&#8230;</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="saving">Сохранение&#8230;</string>
+    <string name="could_not_create_folder">Не удалось создать папку %s</string>
+    <string name="could_not_create_file">Не удалось создать файл %s</string>
 
     <!-- Create new -->
     <string name="create_new">Создать</string>
@@ -73,7 +73,7 @@
     <string name="select_file">Выбор файла</string>
     <string name="confirm_storage_access_title">Предоставление доступа к внешнему накопителю</string>
     <string name="confirm_storage_access_text">Чтобы предоставить право на запись, пожалуйста, выберите корневую папку SD-карты на следующем шаге</string>
-    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
+    <string name="confirm_storage_access_text_sd">Если вы не видите SD-карту, попробуйте это</string>
 
     <plurals name="items">
         <item quantity="one">%1$d объект</item>
@@ -101,7 +101,7 @@
     <string name="exposure_time">Выдержка</string>
     <string name="iso_speed">Светочувствительность(ISO)</string>
     <string name="f_number">Число диафрагмы</string>
-    <string name="camera">Camera</string>
+    <string name="camera">Камера</string>
     <string name="exif">EXIF</string>
 
     <!-- Color customization -->
@@ -113,11 +113,11 @@
     <string name="light_theme">Светлая тема</string>
     <string name="dark_theme">Тёмная тема</string>
     <string name="custom">Настраиваемое</string>
-    <string name="changing_color_description">Изменение цвета повлечет переключение на пользовательскую тему.</string>
+    <string name="changing_color_description">Изменение цвета повлечёт переключение на пользовательскую тему.</string>
     <string name="save">Сохранить</string>
     <string name="discard">Сбросить</string>
     <string name="undo_changes">Отменить изменения</string>
-    <string name="undo_changes_confirmation">Действительно отменить изенения?</string>
+    <string name="undo_changes_confirmation">Действительно отменить изменения?</string>
     <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
 
     <!-- What's new -->
@@ -130,12 +130,12 @@
     <string name="share">Поделиться</string>
     <string name="share_via">Отправить через</string>
     <string name="select_all">Выделить все</string>
-    <string name="hide">Hide</string>
-    <string name="unhide">Unhide</string>
-    <string name="hide_folder">Hide folder</string>
-    <string name="unhide_folder">Unhide folder</string>
+    <string name="hide">Скрыть</string>
+    <string name="unhide">Показать</string>
+    <string name="hide_folder">Скрыть папку</string>
+    <string name="unhide_folder">Показать папку</string>
     <string name="temporarily_show_hidden">Временный показ скрытых</string>
-    <string name="stop_showing_hidden">Stop showing hidden media</string>
+    <string name="stop_showing_hidden">Не показывать скрытые медиа</string>
 
     <!-- Sorting -->
     <string name="sort_by">Сортировать по</string>
@@ -156,21 +156,21 @@
     <string name="no">Нет</string>
 
     <!-- Password protection -->
-    <string name="pin">PIN</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
-    <string name="repeat_pin">Repeat PIN</string>
-    <string name="pattern">Pattern</string>
-    <string name="insert_pattern">Insert pattern</string>
-    <string name="wrong_pattern">Wrong pattern</string>
-    <string name="repeat_pattern">Repeat pattern</string>
-    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
+    <string name="pin">PIN-код</string>
+    <string name="enter_pin">Ввод PIN-кода</string>
+    <string name="please_enter_pin">Введите PIN-код</string>
+    <string name="wrong_pin">Неверный PIN-код</string>
+    <string name="repeat_pin">Повтор PIN-кода</string>
+    <string name="pattern">Графический ключ</string>
+    <string name="insert_pattern">Установить ключ</string>
+    <string name="wrong_pattern">Неверный графический ключ</string>
+    <string name="repeat_pattern">Повторить ключ</string>
+    <string name="protection_setup_successfully">Пароль успешно установлен. Пожалуйста, переустановите приложение в случае, если вы его забудете.</string>
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d second</item>
-        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">%1$d секунда</item>
+        <item quantity="other">%1$d секунд</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%1$d минута</item>
@@ -187,12 +187,12 @@
     <string name="settings">Настройки</string>
     <string name="customize_colors">Настроить цвета</string>
     <string name="show_hidden">Показать скрытые папки</string>
-    <string name="font_size">Font size</string>
+    <string name="font_size">Размер шрифта</string>
     <string name="small">Мелкий</string>
     <string name="medium">Нормальный</string>
     <string name="large">Крупный</string>
     <string name="extra_large">Очень крупный</string>
-    <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
+    <string name="password_protect_hidden_items">Защита паролем отображения скрытых объектов</string>
 
     <!-- About -->
     <string name="about">О приложении</string>
@@ -207,12 +207,12 @@
     <string name="donate">Поддержать разработчика</string>
     <string name="donate_underlined"><u>Поддержать разработчика</u></string>
     <string name="follow_us">Подписаться на нас:</string>
-    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="additional_info">Additional info</string>
-    <string name="gruveo">Are you looking for a simple and anonymous video calling app? Try out my other project</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
-    <string name="donate_please">Hey,\n\nseems like you\'ve been using this app for quite a while now.\n\nDid you know it\'s not backed by any big company? Developing it takes time and I want to keep it adfree, so your support would be appreciated.\n\nYou can support me either by buying a paid app Simple Thank You, by sending money through Paypal or by sending cryptocurrencies.\n\nMore info at http://simplemobiletools.com/donate.\n\nThank you!</string>
+    <string name="copyright">v %1$s\nАвторские права © Simple Mobile Tools %2$d</string>
+    <string name="additional_info">Дополнительная информация</string>
+    <string name="gruveo">Вы ищете простое и анонимное приложение для видеозвонков? Попробуйте мой другой проект</string>
+    <string name="app_version">Версия приложения: %1$s</string>
+    <string name="device_os">OS устройства: %1$s</string>
+    <string name="donate_please">Привет,\n\nпохоже, что вы уже давно используете это приложение.\n\nЗнаете ли вы, что оно не поддерживается какой-либо крупной компанией? Для его развития требуется время и я хочу сохранить его без рекламы, поэтому ваша поддержка будет оценена по достоинству.\n\nВы можете поддержать меня либо путём покупки платного приложения \'Simple Thank You\', либо переводом мне денег через Paypal или криптовалюту.\n\nБолее подробная информация на http://simplemobiletools.com/donate.\n\nСпасибо!</string>
 
     <!-- License -->
     <string name="notice">Это приложение использует следующие библиотеки сторонних разработчиков, чтобы облегчить мой труд. Спасибо.</string>
@@ -223,10 +223,10 @@
     <string name="picasso_title">Picasso (загрузка изображения и кэширование)</string>
     <string name="cropper_title">Android Image Cropper (обрезка и поворот изображений)</string>
     <string name="multiselect_title">RecyclerView MultiSelect (выбор нескольких элементов списка)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (отображение с RTL языками)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (отображение с RTL-языками)</string>
     <string name="joda_title">Joda-Time (замена даты Java)</string>
     <string name="stetho_title">Stetho (базы данных отладки)</string>
     <string name="otto_title">Otto ("шина" событий)</string>
     <string name="photoview_title">PhotoView (масштабирование gif)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="pattern_title">PatternLockView (защита графическим ключом)</string>
 </resources>
