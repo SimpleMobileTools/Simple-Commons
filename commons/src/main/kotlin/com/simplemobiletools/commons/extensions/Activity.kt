@@ -254,7 +254,8 @@ fun BaseSimpleActivity.rescanDeletedFile(file: File, callback: () -> Unit) {
         MediaScannerConnection.scanFile(applicationContext, arrayOf(file.absolutePath), null, { s, uri ->
             try {
                 contentResolver.delete(uri, null, null)
-            } catch (ignored: Exception) {
+            } catch (e: Exception) {
+                showErrorToast(e)
             }
             callback()
         })
@@ -291,7 +292,7 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
                     callback(false)
                 }
             } catch (e: SecurityException) {
-                toast(R.string.unknown_error_occurred)
+                showErrorToast(e)
                 callback(false)
             }
         }
