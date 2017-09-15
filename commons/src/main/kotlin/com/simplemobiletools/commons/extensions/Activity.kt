@@ -255,7 +255,6 @@ fun BaseSimpleActivity.rescanDeletedFile(file: File, callback: () -> Unit) {
             try {
                 contentResolver.delete(uri, null, null)
             } catch (e: Exception) {
-                showErrorToast(e)
             }
             callback()
         })
