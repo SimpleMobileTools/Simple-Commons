@@ -234,7 +234,9 @@ fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = fal
                 fileDeleted = tryFastDocumentDelete(file, allowDeleteFolder)
                 if (!fileDeleted) {
                     val document = getFileDocument(file.absolutePath)
-                    fileDeleted = (document?.isFile == true || allowDeleteFolder) && DocumentsContract.deleteDocument(contentResolver, document?.uri)
+                    if (document != null && (file.isDirectory == document.isDirectory)) {
+                        fileDeleted = (document.isFile == true || allowDeleteFolder) && DocumentsContract.deleteDocument(contentResolver, document.uri)
+                    }
                 }
 
                 if (fileDeleted) {
@@ -276,7 +278,7 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
     if (needsStupidWritePermissions(newFile.absolutePath)) {
         handleSAFDialog(newFile) {
             val document = getFileDocument(oldFile.absolutePath)
-            if (document == null) {
+            if (document == null || (oldFile.isDirectory != document.isDirectory)) {
                 callback(false)
                 return@handleSAFDialog
             }
