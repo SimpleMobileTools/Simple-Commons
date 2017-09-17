@@ -16,6 +16,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        maven { url 'https://maven.google.com' }
     }
 }
 
@@ -24,7 +25,7 @@ task clean(type: Delete) {
 }
 
 ext {
-    propBuildToolsVersion = '25.0.2'
+    propBuildToolsVersion = '25.0.0'
     propCompileSdkVersion = 25
     propMinSdkVersion = 16
     propTargetSdkVersion = propCompileSdkVersion
