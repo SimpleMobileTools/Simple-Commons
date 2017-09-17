@@ -36,7 +36,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
         mTextColor = color
     }
 
-    fun getDeviceWidth(): Int {
+    private fun getDeviceWidth(): Int {
         val display = (context.getSystemService(Context.WINDOW_SERVICE) as WindowManager).defaultDisplay
         val deviceDisplay = Point()
         display.getSize(deviceDisplay)
@@ -56,7 +56,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
         var curTop = paddingTop
 
         val cnt = childCount
-        for (i in 0..cnt - 1) {
+        for (i in 0 until cnt) {
             val child = getChildAt(i)
 
             child.measure(MeasureSpec.makeMeasureSpec(usableWidth, MeasureSpec.AT_MOST),
@@ -85,7 +85,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
         var lines = 1
 
         val cnt = childCount
-        for (i in 0..cnt - 1) {
+        for (i in 0 until cnt) {
             val child = getChildAt(i)
             measureChild(child, widthMeasureSpec, heightMeasureSpec)
             width += child.measuredWidth
@@ -158,7 +158,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
 
     override fun onClick(v: View) {
         val cnt = childCount
-        for (i in 0..cnt - 1) {
+        for (i in 0 until cnt) {
             if (getChildAt(i) != null && getChildAt(i) == v) {
                 mListener?.breadcrumbClicked(i)
             }
