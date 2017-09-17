@@ -46,8 +46,8 @@
     <string name="copying_success_partial">Alcuni file non possono essere copiati</string>
     <string name="no_files_selected">Nessun file selezionato</string>
     <string name="saving">Salvataggio&#8230;</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="could_not_create_folder">Impossibile creare la cartella %s</string>
+    <string name="could_not_create_file">Impossibile creare il file %s</string>
 
     <!-- Create new -->
     <string name="create_new">Crea nuovo</string>
@@ -165,8 +165,8 @@
     <string name="insert_pattern">Inserisci sequenza</string>
     <string name="wrong_pattern">Sequenza errata</string>
     <string name="repeat_pattern">Ripeti la sequenza</string>
-    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
-
+    <string name="protection_setup_successfully">Password impostata correttamente. Reinstalla l\'app nel caso la dimenticassi.</string>
+ 
     <!-- Times -->
     <plurals name="seconds">
         <item quantity="one">%1$d secondo</item>
