@@ -27,6 +27,7 @@ fun String.isAValidFilename(): Boolean {
 
 val String.photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp")
 val String.videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v")
+val String.audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a")
 
 fun String.isImageVideoGif() = isImageFast() || isVideoFast() || isGif()
 
@@ -34,11 +35,10 @@ fun String.isGif() = endsWith(".gif", true)
 
 fun String.isPng() = endsWith(".png", true)
 
-// fast extension check, not guaranteed to be accurate
+// fast extension checks, not guaranteed to be accurate
 fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }
-
-// fast extension check, not guaranteed to be accurate
 fun String.isImageFast() = photoExtensions.any { endsWith(it, true) }
+fun String.isAudioFast() = audioExtensions.any { endsWith(it, true) }
 
 fun String.areDigitsOnly() = matches(Regex("[0-9]+"))
 
