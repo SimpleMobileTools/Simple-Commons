@@ -306,7 +306,9 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
             }
         } else {
             updateInMediaStore(oldFile, newFile)
-            callback(true)
+            scanFile(newFile) {
+                callback(true)
+            }
         }
     } else {
         callback(false)

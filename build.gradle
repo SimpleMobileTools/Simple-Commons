@@ -30,7 +30,7 @@ ext {
     propMinSdkVersion = 16
     propTargetSdkVersion = propCompileSdkVersion
     propVersionCode = 1
-    propVersionName = '2.28.4'
+    propVersionName = '2.28.5'
     kotlin_version = '1.1.50'
     support_libs = '25.3.1'
 }
