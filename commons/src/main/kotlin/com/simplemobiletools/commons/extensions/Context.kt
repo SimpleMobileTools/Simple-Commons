@@ -1,9 +1,12 @@
 package com.simplemobiletools.commons.extensions
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
 import android.graphics.drawable.ColorDrawable
+import android.hardware.fingerprint.FingerprintManager
+import android.os.Build
 import android.os.Looper
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AlertDialog
@@ -19,6 +22,7 @@ import com.simplemobiletools.commons.helpers.PREFS_KEY
 import com.simplemobiletools.commons.views.*
 import kotlinx.android.synthetic.main.dialog_title.view.*
 
+
 fun Context.isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
@@ -26,6 +30,14 @@ fun Context.hasReadStoragePermission() = ContextCompat.checkSelfPermission(this,
 fun Context.hasWriteStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
 fun Context.hasCameraPermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED
 fun Context.hasRecordAudioPermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED
+
+fun Context.isKitkatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
+
+fun Context.isLollipopPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
+
+fun Context.isMarshmallowPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
+
+fun Context.isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
 
 fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAccentColor: Int = 0) {
     val textColor = if (tmpTextColor == 0) baseConfig.textColor else tmpTextColor
@@ -113,3 +125,6 @@ fun Context.isThankYouInstalled(): Boolean {
         false
     }
 }
+
+@SuppressLint("InlinedApi", "NewApi")
+fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && (getSystemService(Context.FINGERPRINT_SERVICE) as FingerprintManager).isHardwareDetected

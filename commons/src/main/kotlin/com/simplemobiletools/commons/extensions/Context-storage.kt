@@ -97,12 +97,6 @@ fun Context.getInternalStoragePath() = Environment.getExternalStorageDirectory()
 @SuppressLint("NewApi")
 fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWith(sdCardPath)
 
-fun Context.isKitkatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
-
-fun Context.isLollipopPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
-
-fun Context.isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
-
 @SuppressLint("NewApi")
 fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isLollipopPlus()
 
