@@ -14,9 +14,7 @@ class MyDialogViewPager : ViewPager {
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
 
     // disable manual swiping of viewpager at the dialog by swiping over the pattern
-    override fun onInterceptTouchEvent(ev: MotionEvent): Boolean {
-        return false
-    }
+    override fun onInterceptTouchEvent(ev: MotionEvent) = false
 
     override fun onTouchEvent(ev: MotionEvent): Boolean {
         if (!allowSwiping)
@@ -33,7 +31,7 @@ class MyDialogViewPager : ViewPager {
     // https://stackoverflow.com/a/20784791/1967672
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         var height = 0
-        for (i in 0..childCount - 1) {
+        for (i in 0 until childCount) {
             val child = getChildAt(i)
             child.measure(widthMeasureSpec, View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED))
             val h = child.measuredHeight

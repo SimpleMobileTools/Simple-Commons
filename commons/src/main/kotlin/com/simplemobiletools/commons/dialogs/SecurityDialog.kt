@@ -9,7 +9,11 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.PasswordTypesAdapter
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.beGone
+import com.simplemobiletools.commons.extensions.isFingerPrintSensorAvailable
 import com.simplemobiletools.commons.extensions.setupDialogStuff
+import com.simplemobiletools.commons.helpers.PROTECTION_FINGERPRINT
+import com.simplemobiletools.commons.helpers.PROTECTION_PATTERN
+import com.simplemobiletools.commons.helpers.PROTECTION_PIN
 import com.simplemobiletools.commons.helpers.SHOW_ALL_TABS
 import com.simplemobiletools.commons.interfaces.HashListener
 import com.simplemobiletools.commons.views.MyDialogViewPager
@@ -22,6 +26,7 @@ class SecurityDialog(val activity: BaseSimpleActivity, val requiredHash: String,
     init {
         view.apply {
             val viewPager = findViewById(R.id.dialog_tab_view_pager) as MyDialogViewPager
+            viewPager.offscreenPageLimit = 2
             viewPager.adapter = PasswordTypesAdapter(context, requiredHash, this@SecurityDialog)
             viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
                 override fun onPageScrollStateChanged(state: Int) {
@@ -37,6 +42,10 @@ class SecurityDialog(val activity: BaseSimpleActivity, val requiredHash: String,
 
             if (showTabIndex == SHOW_ALL_TABS) {
                 val textColor = context.baseConfig.textColor
+
+                if (!activity.isFingerPrintSensorAvailable())
+                    dialog_tab_layout.removeTabAt(PROTECTION_FINGERPRINT)
+
                 dialog_tab_layout.setTabTextColors(textColor, textColor)
                 dialog_tab_layout.setSelectedTabIndicatorColor(context.baseConfig.primaryColor)
                 dialog_tab_layout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
@@ -47,10 +56,10 @@ class SecurityDialog(val activity: BaseSimpleActivity, val requiredHash: String,
                     }
 
                     override fun onTabSelected(tab: TabLayout.Tab) {
-                        if (tab.text.toString().equals(resources.getString(R.string.pattern), true)) {
-                            viewPager.currentItem = 0
-                        } else {
-                            viewPager.currentItem = 1
+                        when {
+                            tab.text.toString().equals(resources.getString(R.string.pattern), true) -> viewPager.currentItem = PROTECTION_PATTERN
+                            tab.text.toString().equals(resources.getString(R.string.pin), true) -> viewPager.currentItem = PROTECTION_PIN
+                            else -> viewPager.currentItem = PROTECTION_FINGERPRINT
                         }
                     }
                 })

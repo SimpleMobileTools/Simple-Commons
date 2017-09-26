@@ -5,7 +5,6 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
 import android.graphics.drawable.ColorDrawable
-import android.hardware.fingerprint.FingerprintManager
 import android.os.Build
 import android.os.Looper
 import android.support.v4.content.ContextCompat
@@ -16,6 +15,7 @@ import android.view.ViewGroup
 import android.view.Window
 import android.widget.TextView
 import android.widget.Toast
+import com.github.ajalt.reprint.core.Reprint
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.BaseConfig
 import com.simplemobiletools.commons.helpers.PREFS_KEY
@@ -127,4 +127,4 @@ fun Context.isThankYouInstalled(): Boolean {
 }
 
 @SuppressLint("InlinedApi", "NewApi")
-fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && (getSystemService(Context.FINGERPRINT_SERVICE) as FingerprintManager).isHardwareDetected
+fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHardwarePresent()

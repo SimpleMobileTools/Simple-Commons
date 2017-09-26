@@ -1,7 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.simplemobiletools.commons">
-
-    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
-</manifest>
+<manifest package="com.simplemobiletools.commons"/>
