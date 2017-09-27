@@ -76,5 +76,6 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
         registerHandler.removeCallbacksAndMessages(null)
+        Reprint.cancelAuthentication()
     }
 }
