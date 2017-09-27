@@ -133,7 +133,7 @@ fun Context.isThankYouInstalled(): Boolean {
 @SuppressLint("InlinedApi", "NewApi")
 fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHardwarePresent()
 
-fun Context.getLatestMediaId(uri: Uri): Long {
+fun Context.getLatestMediaId(uri: Uri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI): Long {
     val projection = arrayOf(BaseColumns._ID)
     val sortOrder = "${MediaStore.Images.ImageColumns.DATE_TAKEN} DESC"
     var cursor: Cursor? = null
