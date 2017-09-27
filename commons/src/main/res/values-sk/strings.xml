@@ -166,6 +166,13 @@
     <string name="insert_pattern">Zadajte vzor</string>
     <string name="wrong_pattern">Nesprávny vzor</string>
     <string name="repeat_pattern">Zopakujte vzor</string>
+    <string name="fingerprint">Odtlačok</string>
+    <string name="add_fingerprint">Pridať odtlačok prsta</string>
+    <string name="place_finger">Prosím priložte prst ku senzoru odtlačku prsta</string>
+    <string name="authentication_failed">Overovanie zlyhalo</string>
+    <string name="authentication_blocked">Overovanie je zablokované, prosím skúste o chvíľu</string>
+    <string name="no_fingerprints_registered">Nemáte zaregistrované žiadne odtlačky, prosím pridajte nejaké v Nastaveniach zariadenia</string>
+    <string name="go_to_settings">Ísť do nastavení</string>
     <string name="protection_setup_successfully">Heslo bolo úspešne nastavené. Ak ho zabudnete, prosím preinštalujte aplikáciu.</string>
 
     <!-- Times -->
