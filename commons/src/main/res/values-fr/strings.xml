@@ -173,6 +173,7 @@
     <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
     <string name="go_to_settings">Go to Settings</string>
     <string name="protection_setup_successfully">Mot de passe défini avec succès. Veuillez réinstaller l\'appli en cas d\'oubli.</string>
+    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
 
     <!-- Times -->
     <plurals name="seconds">
