@@ -8,7 +8,9 @@ import android.widget.RelativeLayout
 import com.github.ajalt.reprint.core.AuthenticationFailureReason
 import com.github.ajalt.reprint.core.AuthenticationListener
 import com.github.ajalt.reprint.core.Reprint
+import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.PROTECTION_FINGERPRINT
 import com.simplemobiletools.commons.interfaces.HashListener
@@ -37,7 +39,9 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
                 }
 
                 override fun onFailure(failureReason: AuthenticationFailureReason, fatal: Boolean, errorMessage: CharSequence?, moduleTag: Int, errorCode: Int) {
-
+                    if (failureReason == AuthenticationFailureReason.AUTHENTICATION_FAILED) {
+                        context.toast(R.string.authentication_failed)
+                    }
                 }
             })
         } else {
