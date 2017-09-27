@@ -41,6 +41,8 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
                 override fun onFailure(failureReason: AuthenticationFailureReason, fatal: Boolean, errorMessage: CharSequence?, moduleTag: Int, errorCode: Int) {
                     if (failureReason == AuthenticationFailureReason.AUTHENTICATION_FAILED) {
                         context.toast(R.string.authentication_failed)
+                    } else if (failureReason == AuthenticationFailureReason.LOCKED_OUT) {
+                        context.toast(R.string.authentication_blocked)
                     }
                 }
             })
