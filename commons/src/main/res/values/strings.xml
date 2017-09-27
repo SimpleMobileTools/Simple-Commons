@@ -170,7 +170,8 @@
     <string name="place_finger">Please place your finger on the fingerprint sensor</string>
     <string name="authentication_failed">Authentication failed</string>
     <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Security settings of your device</string>
+    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
+    <string name="go_to_settings">Go to Settings</string>
     <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
 
     <!-- Times -->
