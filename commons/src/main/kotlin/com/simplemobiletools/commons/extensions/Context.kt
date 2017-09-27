@@ -4,9 +4,13 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
+import android.database.Cursor
 import android.graphics.drawable.ColorDrawable
+import android.net.Uri
 import android.os.Build
 import android.os.Looper
+import android.provider.BaseColumns
+import android.provider.MediaStore
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
@@ -128,3 +132,18 @@ fun Context.isThankYouInstalled(): Boolean {
 
 @SuppressLint("InlinedApi", "NewApi")
 fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHardwarePresent()
+
+fun Context.getLatestMediaId(uri: Uri): Long {
+    val projection = arrayOf(BaseColumns._ID)
+    val sortOrder = "${MediaStore.Images.ImageColumns.DATE_TAKEN} DESC"
+    var cursor: Cursor? = null
+    try {
+        cursor = contentResolver.query(uri, projection, null, null, sortOrder)
+        if (cursor?.moveToFirst() == true) {
+            return cursor.getLongValue(BaseColumns._ID)
+        }
+    } finally {
+        cursor?.close()
+    }
+    return 0
+}
