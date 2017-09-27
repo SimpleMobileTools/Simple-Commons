@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.adapters
 
 import android.content.Context
 import android.support.v4.view.PagerAdapter
+import android.util.SparseArray
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,15 +12,18 @@ import com.simplemobiletools.commons.interfaces.HashListener
 import com.simplemobiletools.commons.interfaces.SecurityTab
 
 class PasswordTypesAdapter(val context: Context, val requiredHash: String, val hashListener: HashListener) : PagerAdapter() {
+    private val tabs = SparseArray<SecurityTab>()
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view = LayoutInflater.from(context).inflate(layoutSelection(position), container, false)
         container.addView(view)
+        tabs.put(position, view as SecurityTab)
         (view as SecurityTab).initTab(requiredHash, hashListener)
         return view
     }
 
     override fun destroyItem(container: ViewGroup, position: Int, item: Any) {
+        tabs.remove(position)
         container.removeView(item as View)
     }
 
@@ -32,5 +36,9 @@ class PasswordTypesAdapter(val context: Context, val requiredHash: String, val h
         1 -> R.layout.tab_pin
         2 -> R.layout.tab_fingerprint
         else -> throw RuntimeException("Only 3 tabs allowed")
+    }
+
+    fun isTabVisible(position: Int, isVisible: Boolean) {
+        tabs[position]?.visibilityChanged(isVisible)
     }
 }
