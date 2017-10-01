@@ -27,7 +27,7 @@ fun Context.getSDCardPath(): String {
         return ""
     }
 
-    val directories = getStorageDirectories().filter { it.trimEnd('/') != internalStoragePath }
+    val directories = getStorageDirectories().filter { it.trimEnd('/') != getInternalStoragePath() }
     val sdCardPath = directories.firstOrNull { !physicalPaths.contains(it.toLowerCase().trimEnd('/')) } ?: directories.firstOrNull() ?: ""
     return sdCardPath.trimEnd('/')
 }
