@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">Potvrďte přístup k externímu úložišti</string>
     <string name="confirm_storage_access_text">Na následující obrazovce prosím zvolte root složku SD karty pro povolení oprávnění k zápisu</string>
     <string name="confirm_storage_access_text_sd">Pokud SD kartu nevidíte, vyzkoušejte následující</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d položka</item>

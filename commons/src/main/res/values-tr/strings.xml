@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">Harici depolama erişimini onayla</string>
     <string name="confirm_storage_access_text">Yazma erişimi vermek için lütfen bir sonraki ekranda SD kartın kök klasörünü seçin</string>
     <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d öğe</item>

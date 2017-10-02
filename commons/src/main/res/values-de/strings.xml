@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">Bitte Zugriff auf externen Speicher bestätigen</string>
     <string name="confirm_storage_access_text">Bitte wähle das Hauptverzeichnis deiner SD-Karte auf dem nächsten Bildschirm, um Schreibzugriff zu erlauben</string>
     <string name="confirm_storage_access_text_sd">Wenn die SD-Karte nicht sichtbar ist, versuche das</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d Datei/Ordner</item>

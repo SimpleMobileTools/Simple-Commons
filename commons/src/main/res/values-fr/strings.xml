@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">Confirmer l\'accès au stockage externe</string>
     <string name="confirm_storage_access_text">Veuillez choisir le dossier racine de la carte SD dans le prochain écran, pour accorder le droit d\'écriture</string>
     <string name="confirm_storage_access_text_sd">Si vous ne voyez pas la carte SD, essayez ceci</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d élément</item>

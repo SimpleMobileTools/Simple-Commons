@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">确认外部存储器访问权限</string>
     <string name="confirm_storage_access_text">请选择 SD 卡根目录并授予写权限</string>
     <string name="confirm_storage_access_text_sd">如果您未找到 SD 卡目录，请尝试</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d 项目</item>

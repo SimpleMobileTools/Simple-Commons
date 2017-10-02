@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">외장 메모리 접근허용</string>
     <string name="confirm_storage_access_text">쓰기 권한을 부여하려면 다음 화면에서 SD 카드의 루트 폴더를 선택하세요.</string>
     <string name="confirm_storage_access_text_sd">SD 카드가 보이지 않으면 시도해보세요.</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d item</item>

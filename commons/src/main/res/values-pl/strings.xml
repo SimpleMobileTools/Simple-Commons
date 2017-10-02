@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">Potwierdź dostęp do karty pamięci</string>
     <string name="confirm_storage_access_text">Wybierz główny folder na karcie pamięci na następnym ekranie i udziel dostępu do zapisu</string>
     <string name="confirm_storage_access_text_sd">Jeśli nie widzisz karty pamięci, spróbuj tego:</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d pozycja</item>

@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">Conferma l\'accesso all\'archiviazione esterna</string>
     <string name="confirm_storage_access_text">Scegli la root della scheda SD nella prossima schermata, per consentire i permessi di scrittura</string>
     <string name="confirm_storage_access_text_sd">Se non hai una scheda SD, prova questo</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d elemento</item>

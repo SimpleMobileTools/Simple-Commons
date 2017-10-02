@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">Предоставление доступа к внешнему накопителю</string>
     <string name="confirm_storage_access_text">Чтобы предоставить право на запись, пожалуйста, выберите корневую папку SD-карты на следующем шаге</string>
     <string name="confirm_storage_access_text_sd">Если вы не видите SD-карту, попробуйте это</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d объект</item>

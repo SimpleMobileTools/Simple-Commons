@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">Confirm external storage access</string>
     <string name="confirm_storage_access_text">Please choose the root folder of the SD card on the next screen, to grant write access</string>
     <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d item</item>

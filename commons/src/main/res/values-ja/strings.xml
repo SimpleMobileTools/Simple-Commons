@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">外部ストレージのアクセスを確認してください</string>
     <string name="confirm_storage_access_text">次の画面で SD カードのルートフォルダーを選択して、書き込みアクセス許可を付与してください</string>
     <string name="confirm_storage_access_text_sd">SD カードの内容が表示されない場合は、こちらをお試しください</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d アイテム</item>

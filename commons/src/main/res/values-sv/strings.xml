@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">Bekräfta extern åtkomstlagring</string>
     <string name="confirm_storage_access_text">Välj rotmappen på ditt SD-kort på nästa skärmbild, för att bevilja skrivrättigheter</string>
     <string name="confirm_storage_access_text_sd">Om du inte ser SD-kortet, prova detta</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d objekt</item>

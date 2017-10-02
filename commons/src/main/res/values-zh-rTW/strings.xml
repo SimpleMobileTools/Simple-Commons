@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">確認外部儲存空間存取權限</string>
     <string name="confirm_storage_access_text">請在下個畫面選擇SD卡的根目錄，以准許寫入權限</string>
     <string name="confirm_storage_access_text_sd">"如果看不到SD卡，試試這個"</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d個項目</item>
