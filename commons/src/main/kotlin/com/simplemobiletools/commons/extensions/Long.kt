@@ -16,5 +16,5 @@ fun Long.formatSize(): String {
 fun Long.formatLastModified(): String {
     val cal = Calendar.getInstance(Locale.ENGLISH)
     cal.timeInMillis = this
-    return DateFormat.format("dd.MM.yyyy HH:mm", cal).toString()
+    return DateFormat.format("dd.MM.yyyy kk:mm", cal).toString()
 }

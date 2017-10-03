@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">외장 메모리 접근허용</string>
     <string name="confirm_storage_access_text">쓰기 권한을 부여하려면 다음 화면에서 SD 카드의 루트 폴더를 선택하세요.</string>
     <string name="confirm_storage_access_text_sd">SD 카드가 보이지 않으면 시도해보세요.</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d item</item>
@@ -165,7 +166,15 @@
     <string name="insert_pattern">패턴 입력</string>
     <string name="wrong_pattern">패턴이 잘못 입력되었습니다.</string>
     <string name="repeat_pattern">패터 확인</string>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="add_fingerprint">Add fingerprint</string>
+    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
+    <string name="authentication_failed">Authentication failed</string>
+    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
+    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
+    <string name="go_to_settings">Go to Settings</string>
     <string name="protection_setup_successfully">암호 설정이 완료되었습니다. 암호를 기억하지 못하는경우 앱을 다시 설치하시기 바랍니다.</string>
+    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
 
     <!-- Times -->
     <plurals name="seconds">

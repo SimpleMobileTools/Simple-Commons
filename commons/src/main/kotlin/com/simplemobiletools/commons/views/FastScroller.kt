@@ -78,6 +78,23 @@ class FastScroller : FrameLayout {
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
+        // allow dragging only the handle itself
+        if (!handle!!.isSelected) {
+            if (isHorizontal) {
+                val min = handle!!.x
+                val max = min + handle!!.width
+                if (event.x < min || event.x > max) {
+                    return super.onTouchEvent(event)
+                }
+            } else {
+                val min = handle!!.y
+                val max = min + handle!!.height
+                if (event.y < min || event.y > max) {
+                    return super.onTouchEvent(event)
+                }
+            }
+        }
+
         return when (event.action) {
             MotionEvent.ACTION_DOWN -> {
                 showHandle()

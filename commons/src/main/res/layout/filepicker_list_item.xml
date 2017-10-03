@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list_item_holder"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -30,15 +31,15 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="3"
-            android:text="Directory"/>
+            tools:text="Directory"/>
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/list_item_details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/list_item_name"
-            android:text="1 KB"
-            android:textSize="@dimen/smaller_text_size"/>
+            android:textSize="@dimen/smaller_text_size"
+            tools:text="1 KB"/>
     </RelativeLayout>
 
 </RelativeLayout>

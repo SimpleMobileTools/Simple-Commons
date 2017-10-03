@@ -56,15 +56,18 @@ fun Activity.showErrorToast(exception: Exception, length: Int = Toast.LENGTH_LON
 
 @SuppressLint("NewApi")
 fun Activity.storeStoragePaths() {
+    if (baseConfig.appRunCount == 0) {
+        baseConfig.internalStoragePath = getInternalStoragePath()
+
+        Thread({
+            baseConfig.sdCardPath = getSDCardPath().trimEnd('/')
+        }).start()
+    }
+
     baseConfig.appRunCount++
     if (!isThankYouInstalled() && (baseConfig.appRunCount == 50 || baseConfig.appRunCount == 300 || baseConfig.appRunCount == 1000)) {
         DonateDialog(this)
     }
-
-    Thread({
-        baseConfig.internalStoragePath = getInternalStoragePath()
-        baseConfig.sdCardPath = getSDCardPath().trimEnd('/')
-    }).start()
 }
 
 fun Activity.isShowingSAFDialog(file: File, treeUri: String, requestCode: Int): Boolean {
@@ -234,7 +237,9 @@ fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = fal
                 fileDeleted = tryFastDocumentDelete(file, allowDeleteFolder)
                 if (!fileDeleted) {
                     val document = getFileDocument(file.absolutePath)
-                    fileDeleted = (document?.isFile == true || allowDeleteFolder) && DocumentsContract.deleteDocument(contentResolver, document?.uri)
+                    if (document != null && (file.isDirectory == document.isDirectory)) {
+                        fileDeleted = (document.isFile == true || allowDeleteFolder) && DocumentsContract.deleteDocument(contentResolver, document.uri)
+                    }
                 }
 
                 if (fileDeleted) {
@@ -254,7 +259,7 @@ fun BaseSimpleActivity.rescanDeletedFile(file: File, callback: () -> Unit) {
         MediaScannerConnection.scanFile(applicationContext, arrayOf(file.absolutePath), null, { s, uri ->
             try {
                 contentResolver.delete(uri, null, null)
-            } catch (ignored: Exception) {
+            } catch (e: Exception) {
             }
             callback()
         })
@@ -276,7 +281,7 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
     if (needsStupidWritePermissions(newFile.absolutePath)) {
         handleSAFDialog(newFile) {
             val document = getFileDocument(oldFile.absolutePath)
-            if (document == null) {
+            if (document == null || (oldFile.isDirectory != document.isDirectory)) {
                 callback(false)
                 return@handleSAFDialog
             }
@@ -291,7 +296,7 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
                     callback(false)
                 }
             } catch (e: SecurityException) {
-                toast(R.string.unknown_error_occurred)
+                showErrorToast(e)
                 callback(false)
             }
         }
@@ -304,7 +309,9 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
             }
         } else {
             updateInMediaStore(oldFile, newFile)
-            callback(true)
+            scanFile(newFile) {
+                callback(true)
+            }
         }
     } else {
         callback(false)

@@ -11,10 +11,11 @@ fun File.isImageVideoGif() = absolutePath.isImageFast() || absolutePath.isVideoF
 fun File.isGif() = absolutePath.endsWith(".gif", true)
 fun File.isVideoFast() = absolutePath.videoExtensions.any { absolutePath.endsWith(it, true) }
 fun File.isImageFast() = absolutePath.photoExtensions.any { absolutePath.endsWith(it, true) }
+fun File.isAudioFast() = absolutePath.audioExtensions.any { absolutePath.endsWith(it, true) }
 
 fun File.isImageSlow() = absolutePath.isImageFast() || getMimeType().startsWith("image")
 fun File.isVideoSlow() = absolutePath.isVideoFast() || getMimeType().startsWith("video")
-fun File.isAudioSlow() = getMimeType().startsWith("audio")
+fun File.isAudioSlow() = absolutePath.isAudioFast() || getMimeType().startsWith("audio")
 
 fun File.getMimeType(default: String = getDefaultMimeType()): String {
     try {

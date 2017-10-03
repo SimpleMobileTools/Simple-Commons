@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">確認外部儲存空間存取權限</string>
     <string name="confirm_storage_access_text">請在下個畫面選擇SD卡的根目錄，以准許寫入權限</string>
     <string name="confirm_storage_access_text_sd">"如果看不到SD卡，試試這個"</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d個項目</item>
@@ -165,7 +166,15 @@
     <string name="insert_pattern">畫出解鎖圖形</string>
     <string name="wrong_pattern">解鎖圖形錯誤</string>
     <string name="repeat_pattern">再次畫出解鎖圖形</string>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="add_fingerprint">Add fingerprint</string>
+    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
+    <string name="authentication_failed">Authentication failed</string>
+    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
+    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
+    <string name="go_to_settings">Go to Settings</string>
     <string name="protection_setup_successfully">密碼設置成功。若遺忘了請重新安裝此程式。</string>
+    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
 
     <!-- Times -->
     <plurals name="seconds">

@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">Confirmer l\'accès au stockage externe</string>
     <string name="confirm_storage_access_text">Veuillez choisir le dossier racine de la carte SD dans le prochain écran, pour accorder le droit d\'écriture</string>
     <string name="confirm_storage_access_text_sd">Si vous ne voyez pas la carte SD, essayez ceci</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d élément</item>
@@ -165,7 +166,15 @@
     <string name="insert_pattern">Insérer modèle</string>
     <string name="wrong_pattern">Modèle erroné</string>
     <string name="repeat_pattern">Répéter modèle</string>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="add_fingerprint">Add fingerprint</string>
+    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
+    <string name="authentication_failed">Authentication failed</string>
+    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
+    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
+    <string name="go_to_settings">Go to Settings</string>
     <string name="protection_setup_successfully">Mot de passe défini avec succès. Veuillez réinstaller l\'appli en cas d\'oubli.</string>
+    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
 
     <!-- Times -->
     <plurals name="seconds">
@@ -190,7 +199,7 @@
     <string name="medium">Moyenne</string>
     <string name="large">Large</string>
     <string name="extra_large">Extra large</string>
-    <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
+    <string name="password_protect_hidden_items">Visibilité des éléments protégés par un mot de passe</string>
 
     <!-- About -->
     <string name="about">À propos</string>
@@ -206,7 +215,7 @@
     <string name="donate_underlined"><u>Donner</u></string>
     <string name="follow_us">Suivez nous:</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="additional_info">Additional info</string>
+    <string name="additional_info">Info supplémentaire</string>
     <string name="gruveo">Êtes-vous à la recherche d\'une appli d\'appels vidéo simple et anonyme ? Essayez mon autre projet</string>
     <string name="app_version">Version appli: %1$s</string>
     <string name="device_os">OS appareil: %1$s</string>

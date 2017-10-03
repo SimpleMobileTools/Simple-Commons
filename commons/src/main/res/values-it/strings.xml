@@ -46,8 +46,8 @@
     <string name="copying_success_partial">Alcuni file non possono essere copiati</string>
     <string name="no_files_selected">Nessun file selezionato</string>
     <string name="saving">Salvataggio&#8230;</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="could_not_create_folder">Impossibile creare la cartella %s</string>
+    <string name="could_not_create_file">Impossibile creare il file %s</string>
 
     <!-- Create new -->
     <string name="create_new">Crea nuovo</string>
@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">Conferma l\'accesso all\'archiviazione esterna</string>
     <string name="confirm_storage_access_text">Scegli la root della scheda SD nella prossima schermata, per consentire i permessi di scrittura</string>
     <string name="confirm_storage_access_text_sd">Se non hai una scheda SD, prova questo</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d elemento</item>
@@ -165,8 +166,16 @@
     <string name="insert_pattern">Inserisci sequenza</string>
     <string name="wrong_pattern">Sequenza errata</string>
     <string name="repeat_pattern">Ripeti la sequenza</string>
-    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
-
+    <string name="fingerprint">Fingerprint</string>
+    <string name="add_fingerprint">Add fingerprint</string>
+    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
+    <string name="authentication_failed">Authentication failed</string>
+    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
+    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="protection_setup_successfully">Password impostata correttamente. Reinstalla l\'app nel caso la dimenticassi.</string>
+    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+ 
     <!-- Times -->
     <plurals name="seconds">
         <item quantity="one">%1$d secondo</item>

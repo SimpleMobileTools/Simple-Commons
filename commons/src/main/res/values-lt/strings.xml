@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">Pasirinkti iðorinës talpyklos prieigà</string>
     <string name="confirm_storage_access_text">Norint suteikti prieigà, pasirinkite pagrindiná SD kortelës aplankà kitame lange</string>
     <string name="confirm_storage_access_text_sd">Jei nematote SD kortelës, pabandykite tai</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d elementas</item>
@@ -165,7 +166,15 @@
     <string name="insert_pattern">Insert pattern</string>
     <string name="wrong_pattern">Wrong pattern</string>
     <string name="repeat_pattern">Repeat pattern</string>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="add_fingerprint">Add fingerprint</string>
+    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
+    <string name="authentication_failed">Authentication failed</string>
+    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
+    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
+    <string name="go_to_settings">Go to Settings</string>
     <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
+    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
 
     <!-- Times -->
     <plurals name="seconds">

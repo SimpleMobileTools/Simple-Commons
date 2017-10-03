@@ -16,6 +16,8 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        maven { url 'https://maven.google.com' }
+        maven { url 'https://jitpack.io' }
     }
 }
 
@@ -24,12 +26,12 @@ task clean(type: Delete) {
 }
 
 ext {
-    propBuildToolsVersion = '25.0.2'
+    propBuildToolsVersion = '25.0.0'
     propCompileSdkVersion = 25
     propMinSdkVersion = 16
     propTargetSdkVersion = propCompileSdkVersion
     propVersionCode = 1
-    propVersionName = '2.27.9'
-    kotlin_version = '1.1.4-3'
+    propVersionName = '2.29.2'
+    kotlin_version = '1.1.51'
     support_libs = '25.3.1'
 }

@@ -1,13 +1,12 @@
 package com.simplemobiletools.commons.views
 
 import android.content.Context
-import android.graphics.Point
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
-import android.view.WindowManager
+import android.view.ViewTreeObserver
 import android.widget.LinearLayout
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
@@ -17,30 +16,28 @@ import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.breadcrumb_item.view.*
 
 class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs), View.OnClickListener {
-    private var mDeviceWidth: Int = 0
+    private var availableWidth = 0
 
-    private var mInflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-    private var mListener: BreadcrumbsListener? = null
-    private var mTextColor = 0
+    private var inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+    private var listener: BreadcrumbsListener? = null
+    private var textColor = 0
 
     init {
-        mDeviceWidth = getDeviceWidth()
-        mTextColor = context.baseConfig.textColor
+        textColor = context.baseConfig.textColor
+        viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                viewTreeObserver.removeOnGlobalLayoutListener(this)
+                availableWidth = width
+            }
+        })
     }
 
     fun setListener(listener: BreadcrumbsListener) {
-        mListener = listener
+        this.listener = listener
     }
 
     fun setTextColor(color: Int) {
-        mTextColor = color
-    }
-
-    fun getDeviceWidth(): Int {
-        val display = (context.getSystemService(Context.WINDOW_SERVICE) as WindowManager).defaultDisplay
-        val deviceDisplay = Point()
-        display.getSize(deviceDisplay)
-        return deviceDisplay.x
+        textColor = color
     }
 
     override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
@@ -48,7 +45,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
         val childBottom = measuredHeight - paddingBottom
         val childHeight = childBottom - paddingTop
 
-        val usableWidth = mDeviceWidth - paddingLeft - paddingRight
+        val usableWidth = availableWidth - paddingLeft - paddingRight
         var maxHeight = 0
         var curWidth: Int
         var curHeight: Int
@@ -56,7 +53,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
         var curTop = paddingTop
 
         val cnt = childCount
-        for (i in 0..cnt - 1) {
+        for (i in 0 until cnt) {
             val child = getChildAt(i)
 
             child.measure(MeasureSpec.makeMeasureSpec(usableWidth, MeasureSpec.AT_MOST),
@@ -79,13 +76,13 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        val usableWidth = mDeviceWidth - paddingLeft - paddingRight
+        val usableWidth = availableWidth - paddingLeft - paddingRight
         var width = 0
         var rowHeight = 0
         var lines = 1
 
         val cnt = childCount
-        for (i in 0..cnt - 1) {
+        for (i in 0 until cnt) {
             val child = getChildAt(i)
             measureChild(child, widthMeasureSpec, heightMeasureSpec)
             width += child.measuredWidth
@@ -127,7 +124,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
     }
 
     private fun addBreadcrumb(item: FileDirItem, addPrefix: Boolean) {
-        mInflater.inflate(R.layout.breadcrumb_item, null, false).apply {
+        inflater.inflate(R.layout.breadcrumb_item, null, false).apply {
             var textToAdd = item.name
             if (addPrefix)
                 textToAdd = "/ $textToAdd"
@@ -135,14 +132,14 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
             if (childCount == 0) {
                 resources.apply {
                     background = getDrawable(R.drawable.breadcrumb_gradient)
-                    background.colorFilter = PorterDuffColorFilter(mTextColor, PorterDuff.Mode.SRC_IN)
+                    background.colorFilter = PorterDuffColorFilter(textColor, PorterDuff.Mode.SRC_IN)
                     val medium = getDimension(R.dimen.medium_margin).toInt()
                     setPadding(medium, medium, medium, medium)
                 }
             }
 
             breadcrumb_text.text = textToAdd
-            breadcrumb_text.setTextColor(mTextColor)
+            breadcrumb_text.setTextColor(textColor)
             addView(this)
             setOnClickListener(this@Breadcrumbs)
 
@@ -158,9 +155,9 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
 
     override fun onClick(v: View) {
         val cnt = childCount
-        for (i in 0..cnt - 1) {
+        for (i in 0 until cnt) {
             if (getChildAt(i) != null && getChildAt(i) == v) {
-                mListener?.breadcrumbClicked(i)
+                listener?.breadcrumbClicked(i)
             }
         }
     }

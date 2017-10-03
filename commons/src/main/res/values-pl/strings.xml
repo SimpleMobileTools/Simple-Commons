@@ -53,7 +53,7 @@
     <string name="create_new">Utwórz nowy</string>
     <string name="folder">Folder</string>
     <string name="file">Plik</string>
-    <string name="create_new_folder">Stwórz nowy folder</string>
+    <string name="create_new_folder">Utwórz nowy folder</string>
     <string name="name_taken">Folder lub plik o tej nazwie już istnieje</string>
     <string name="invalid_name">Nazwa zawiera niedozwolone znaki</string>
     <string name="empty_name">Wpisz nazwę</string>
@@ -74,6 +74,7 @@
     <string name="confirm_storage_access_title">Potwierdź dostęp do karty pamięci</string>
     <string name="confirm_storage_access_text">Wybierz główny folder na karcie pamięci na następnym ekranie i udziel dostępu do zapisu</string>
     <string name="confirm_storage_access_text_sd">Jeśli nie widzisz karty pamięci, spróbuj tego:</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d pozycja</item>
@@ -166,7 +167,15 @@
     <string name="insert_pattern">Wprowadź wzór</string>
     <string name="wrong_pattern">Nieprawidłowy wzór</string>
     <string name="repeat_pattern">Wprowadź wzór ponownie</string>
+    <string name="fingerprint">Odcisk palca</string>
+    <string name="add_fingerprint">Dodaj odcisk palca</string>
+    <string name="place_finger">Przyłóż palec do czytnika</string>
+    <string name="authentication_failed">Uwierzytelnianie nie powiodło się.</string>
+    <string name="authentication_blocked"> Uwierzytelnianie zablokowane. Spróbuj ponownie za chwilę.</string>
+    <string name="no_fingerprints_registered">Nie masz zarejestrowanych odcisków palców. Dodaj je w ustawieniach systemowych.</string>
+    <string name="go_to_settings">Przejdź do ustawień</string>
     <string name="protection_setup_successfully">Hasło zostało ustawione. Jeśli je zapomnisz, przeinstaluj aplikację.</string>
+    <string name="fingerprint_setup_successfully">Zabezpieczenie zostało ustawione. W razie problemów z jego zresetowaniem przeinstaluj aplikację.</string>
 
     <!-- Times -->
     <plurals name="seconds">
@@ -194,7 +203,7 @@
     <string name="medium">Średnia</string>
     <string name="large">Duża</string>
     <string name="extra_large">Bardzo duża</string>
-    <string name="password_protect_hidden_items">Chroń hasłem widoczność ukrytych plików</string>
+    <string name="password_protect_hidden_items">Chroń widoczność ukrytych plików</string>
 
     <!-- About -->
     <string name="about">O aplikacji</string>
