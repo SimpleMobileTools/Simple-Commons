@@ -23,10 +23,6 @@ import java.util.regex.Pattern
 // http://stackoverflow.com/a/40582634/1967672
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
 fun Context.getSDCardPath(): String {
-    if (!isLollipopPlus()) {
-        return ""
-    }
-
     val directories = getStorageDirectories().filter { it.trimEnd('/') != getInternalStoragePath() }
     val sdCardPath = directories.firstOrNull { !physicalPaths.contains(it.toLowerCase().trimEnd('/')) } ?: directories.firstOrNull() ?: ""
     return sdCardPath.trimEnd('/')
