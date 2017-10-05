@@ -34,6 +34,8 @@ fun Context.hasWriteStoragePermission() = ContextCompat.checkSelfPermission(this
 fun Context.hasCameraPermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED
 fun Context.hasRecordAudioPermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED
 
+fun Context.isAndroidFour() = Build.VERSION.SDK_INT <= Build.VERSION_CODES.KITKAT
+
 fun Context.isKitkatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
 
 fun Context.isLollipopPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
@@ -47,7 +49,7 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
     val accentColor = if (tmpAccentColor == 0) baseConfig.primaryColor else tmpAccentColor
     val backgroundColor = baseConfig.backgroundColor
     val cnt = viewGroup.childCount
-    (0..cnt - 1)
+    (0 until cnt)
             .map { viewGroup.getChildAt(it) }
             .forEach {
                 if (it is MyTextView) {

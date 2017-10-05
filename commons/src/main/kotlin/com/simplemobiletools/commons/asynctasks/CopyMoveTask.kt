@@ -107,6 +107,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         } finally {
             inputStream?.close()
             out?.close()
+            destination.setLastModified(source.lastModified())
         }
     }
 

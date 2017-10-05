@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
 import android.annotation.SuppressLint
-import android.annotation.TargetApi
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteConstraintException
@@ -21,7 +20,6 @@ import java.util.*
 import java.util.regex.Pattern
 
 // http://stackoverflow.com/a/40582634/1967672
-@TargetApi(Build.VERSION_CODES.LOLLIPOP)
 fun Context.getSDCardPath(): String {
     val directories = getStorageDirectories().filter { it.trimEnd('/') != getInternalStoragePath() }
     val sdCardPath = directories.firstOrNull { !physicalPaths.contains(it.toLowerCase().trimEnd('/')) } ?: directories.firstOrNull() ?: ""
@@ -90,13 +88,10 @@ fun Context.humanizePath(path: String): String {
 
 fun Context.getInternalStoragePath() = Environment.getExternalStorageDirectory().toString().trimEnd('/')
 
-@SuppressLint("NewApi")
 fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWith(sdCardPath)
 
-@SuppressLint("NewApi")
 fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isLollipopPlus()
 
-@SuppressLint("NewApi")
 fun Context.isAStorageRootFolder(path: String): Boolean {
     val trimmed = path.trimEnd('/')
     return trimmed.isEmpty() || trimmed == internalStoragePath || trimmed == sdCardPath
@@ -173,14 +168,10 @@ fun getPaths(file: File): ArrayList<String> {
     return paths
 }
 
-fun Context.getFileUri(file: File): Uri {
-    return if (file.isImageSlow()) {
-        MediaStore.Images.Media.EXTERNAL_CONTENT_URI
-    } else if (file.isVideoSlow()) {
-        MediaStore.Video.Media.EXTERNAL_CONTENT_URI
-    } else {
-        MediaStore.Files.getContentUri("external")
-    }
+fun Context.getFileUri(file: File) = when {
+    file.isImageSlow() -> MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+    file.isVideoSlow() -> MediaStore.Video.Media.EXTERNAL_CONTENT_URI
+    else -> MediaStore.Files.getContentUri("external")
 }
 
 // these functions update the mediastore instantly, MediaScannerConnection.scanFile takes some time to really get applied
