@@ -16,9 +16,9 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class PropertiesDialog() {
-    lateinit var mInflater: LayoutInflater
-    lateinit var mPropertyView: ViewGroup
-    lateinit var mResources: Resources
+    private lateinit var mInflater: LayoutInflater
+    private lateinit var mPropertyView: ViewGroup
+    private lateinit var mResources: Resources
 
     private var mCountHiddenItems = false
     private var mFilesCnt = 0
@@ -53,20 +53,23 @@ class PropertiesDialog() {
             }
         }).start()
 
-        if (file.isDirectory) {
-            addProperty(R.string.direct_children_count, getDirectChildrenCount(file, countHiddenItems))
-            addProperty(R.string.files_count, "...", R.id.properties_file_count)
-        } else if (file.isImageSlow()) {
-            addProperty(R.string.resolution, file.getResolution().formatAsResolution())
-        } else if (file.isAudioSlow()) {
-            file.getDuration()?.let { addProperty(R.string.duration, it) }
-            file.getArtist()?.let { addProperty(R.string.artist, it) }
-            file.getAlbum()?.let { addProperty(R.string.album, it) }
-        } else if (file.isVideoSlow()) {
-            file.getDuration()?.let { addProperty(R.string.duration, it) }
-            addProperty(R.string.resolution, file.getResolution().formatAsResolution())
-            file.getArtist()?.let { addProperty(R.string.artist, it) }
-            file.getAlbum()?.let { addProperty(R.string.album, it) }
+        when {
+            file.isDirectory -> {
+                addProperty(R.string.direct_children_count, getDirectChildrenCount(file, countHiddenItems))
+                addProperty(R.string.files_count, "...", R.id.properties_file_count)
+            }
+            file.isImageSlow() -> addProperty(R.string.resolution, file.getResolution().formatAsResolution())
+            file.isAudioSlow() -> {
+                file.getDuration()?.let { addProperty(R.string.duration, it) }
+                file.getArtist()?.let { addProperty(R.string.artist, it) }
+                file.getAlbum()?.let { addProperty(R.string.album, it) }
+            }
+            file.isVideoSlow() -> {
+                file.getDuration()?.let { addProperty(R.string.duration, it) }
+                addProperty(R.string.resolution, file.getResolution().formatAsResolution())
+                file.getArtist()?.let { addProperty(R.string.artist, it) }
+                file.getAlbum()?.let { addProperty(R.string.album, it) }
+            }
         }
 
         addProperty(R.string.last_modified, file.lastModified().formatLastModified())
