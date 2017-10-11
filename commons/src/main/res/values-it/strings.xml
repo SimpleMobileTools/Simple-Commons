@@ -74,7 +74,7 @@
     <string name="confirm_storage_access_title">Conferma l\'accesso all\'archiviazione esterna</string>
     <string name="confirm_storage_access_text">Scegli la root della scheda SD nella prossima schermata, per consentire i permessi di scrittura</string>
     <string name="confirm_storage_access_text_sd">Se non hai una scheda SD, prova questo</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_selection">Conferma selezione</string>
 
     <plurals name="items">
         <item quantity="one">%1$d elemento</item>
@@ -158,23 +158,23 @@
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">Inserisci PIN</string>
+    <string name="enter_pin">Inserisci un PIN</string>
     <string name="please_enter_pin">Per favore inserisci un PIN</string>
     <string name="wrong_pin">PIN errato</string>
     <string name="repeat_pin">Ripeti il PIN</string>
     <string name="pattern">Sequenza</string>
-    <string name="insert_pattern">Inserisci sequenza</string>
+    <string name="insert_pattern">Inserisci una sequenza</string>
     <string name="wrong_pattern">Sequenza errata</string>
     <string name="repeat_pattern">Ripeti la sequenza</string>
-    <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
-    <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
+    <string name="fingerprint">Impronta</string>
+    <string name="add_fingerprint">Aggiungi un\'impronta</string>
+    <string name="place_finger">Appoggia il dito sul sensore di impronte digitali</string>
+    <string name="authentication_failed">Autenticazione fallita</string>
+    <string name="authentication_blocked">Autenticazione bloccata, riprova fra qualche momento</string>
+    <string name="no_fingerprints_registered">Non hai impronte registrate, aggiungine alcune nelle impostazioni del tuo dispositivo</string>
+    <string name="go_to_settings">Vai alle impostazioni</string>
     <string name="protection_setup_successfully">Password impostata correttamente. Reinstalla l\'app nel caso la dimenticassi.</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="fingerprint_setup_successfully">Protezione impostata correttamente. Reinstalla l\'app in caso di problemi nel ripristinarla.</string>
  
     <!-- Times -->
     <plurals name="seconds">
