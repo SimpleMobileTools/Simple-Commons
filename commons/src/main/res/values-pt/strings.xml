@@ -73,7 +73,7 @@
     <string name="select_file">Selecionar ficheiro</string>
     <string name="confirm_storage_access_title">Confirmação de acesso ao armazenamento externo</string>
     <string name="confirm_storage_access_text">Por favor escolha a pasta raiz do cartão SD no próximo ecrã para conceder acesso de escrita</string>
-    <string name="confirm_storage_access_text_sd">Senão conseguir ver o cartão SD, tente isto</string>
+    <string name="confirm_storage_access_text_sd">Se não conseguir ver o cartão SD, tente isto</string>
     <string name="confirm_selection">Confirmar seleção</string>
 
     <plurals name="items">
@@ -168,9 +168,9 @@
     <string name="repeat_pattern">Repita o padrão</string>
     <string name="fingerprint">Impressão digital</string>
     <string name="add_fingerprint">Adicionar impressão digital</string>
-    <string name="place_finger">Coloque o seu dedo no sendor de impressões digitais</string>
+    <string name="place_finger">Coloque o seu dedo no sensor de impressões digitais</string>
     <string name="authentication_failed">Falha de autenticação</string>
-    <string name="authentication_blocked">Atenticação bloqueada. Por favor tente mais tarde.</string>
+    <string name="authentication_blocked">Autenticação bloqueada. Por favor tente mais tarde.</string>
     <string name="no_fingerprints_registered">Não tem impressões digitais registadas. Adicione a sua impressão digital nas definições do dispositivo.</string>
     <string name="go_to_settings">Ir para Definições</string>
     <string name="protection_setup_successfully">Palavra-passe definida com sucesso. Deve reinstalar esta aplicação se não se lembrar da palavra-passe.</string>
