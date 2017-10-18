@@ -199,7 +199,6 @@ fun Context.updateInMediaStore(oldFile: File, newFile: File): Boolean {
 }
 
 private val physicalPaths = arrayListOf(
-        "/storage/sdcard0", "/storage/sdcard1", // Motorola Xoom
         "/storage/extsdcard", // Samsung SGS3
         "/storage/sdcard0/external_sdcard", // User request
         "/mnt/extsdcard", "/mnt/sdcard/external_sd", // Samsung galaxy family
@@ -210,6 +209,7 @@ private val physicalPaths = arrayListOf(
         "/storage/removable/sdcard1", // Sony Xperia Z1
         "/data/sdext", "/data/sdext2", "/data/sdext3", "/data/sdext4", "/sdcard1", // Sony Xperia Z
         "/sdcard2", // HTC One M8s
+        "/storage/usbdisk0",
         "/storage/usbdisk1",
         "/storage/usbdisk2"
 )
