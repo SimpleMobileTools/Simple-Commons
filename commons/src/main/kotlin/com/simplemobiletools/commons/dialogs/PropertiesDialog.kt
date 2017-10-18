@@ -12,7 +12,6 @@ import com.simplemobiletools.commons.extensions.*
 import kotlinx.android.synthetic.main.dialog_properties.view.*
 import kotlinx.android.synthetic.main.property_item.view.*
 import java.io.File
-import java.text.SimpleDateFormat
 import java.util.*
 
 class PropertiesDialog() {
@@ -127,15 +126,9 @@ class PropertiesDialog() {
 
     private fun addExifProperties(path: String) {
         val exif = ExifInterface(path)
-        exif.getAttribute(ExifInterface.TAG_DATETIME).let {
-            if (it?.isNotEmpty() == true) {
-                try {
-                    val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd kk:mm:ss", Locale.ENGLISH)
-                    val dateTaken = simpleDateFormat.parse(it).time.formatLastModified()
-                    addProperty(R.string.date_taken, dateTaken)
-                } catch (ignored: Exception) {
-                }
-            }
+        val dateTaken = path.getFileExifDateTaken()
+        if (dateTaken.isNotEmpty()) {
+            addProperty(R.string.date_taken, dateTaken)
         }
 
         exif.getAttribute(ExifInterface.TAG_MAKE).let {
@@ -145,36 +138,8 @@ class PropertiesDialog() {
             }
         }
 
-        var exifString = ""
-        exif.getAttribute(ExifInterface.TAG_F_NUMBER).let {
-            if (it?.isNotEmpty() == true) {
-                val number = it.trimEnd('0').trimEnd('.')
-                exifString += "F/$number  "
-            }
-        }
-
-        exif.getAttribute(ExifInterface.TAG_FOCAL_LENGTH).let {
-            if (it?.isNotEmpty() == true) {
-                val values = it.split('/')
-                val focalLength = "${Math.round(values[0].toDouble() / values[1].toDouble())}mm"
-                exifString += "$focalLength  "
-            }
-        }
-
-        exif.getAttribute(ExifInterface.TAG_EXPOSURE_TIME).let {
-            if (it?.isNotEmpty() == true) {
-                val exposureSec = (1 / it.toFloat()).toInt()
-                exifString += "1/${exposureSec}s  "
-            }
-        }
-
-        exif.getAttribute(ExifInterface.TAG_ISO_SPEED_RATINGS).let {
-            if (it?.isNotEmpty() == true) {
-                exifString += "ISO-$it"
-            }
-        }
-
-        if (exifString.trim().isNotEmpty())
+        val exifString = path.getFileExifProperties()
+        if (exifString.isNotEmpty())
             addProperty(R.string.exif, exifString.trim())
     }
 

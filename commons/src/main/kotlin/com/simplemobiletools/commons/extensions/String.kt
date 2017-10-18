@@ -1,6 +1,8 @@
 package com.simplemobiletools.commons.extensions
 
 import android.content.Context
+import android.media.ExifInterface
+import java.text.SimpleDateFormat
 import java.util.*
 
 fun String.getFilenameFromPath() = substring(lastIndexOf("/") + 1)
@@ -37,10 +39,59 @@ fun String.isPng() = endsWith(".png", true)
 
 // fast extension checks, not guaranteed to be accurate
 fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }
+
 fun String.isImageFast() = photoExtensions.any { endsWith(it, true) }
 fun String.isAudioFast() = audioExtensions.any { endsWith(it, true) }
 
 fun String.areDigitsOnly() = matches(Regex("[0-9]+"))
+
+fun String.getFileExifProperties(): String {
+    val exif = ExifInterface(this)
+    var exifString = ""
+    exif.getAttribute(ExifInterface.TAG_F_NUMBER).let {
+        if (it?.isNotEmpty() == true) {
+            val number = it.trimEnd('0').trimEnd('.')
+            exifString += "F/$number  "
+        }
+    }
+
+    exif.getAttribute(ExifInterface.TAG_FOCAL_LENGTH).let {
+        if (it?.isNotEmpty() == true) {
+            val values = it.split('/')
+            val focalLength = "${Math.round(values[0].toDouble() / values[1].toDouble())}mm"
+            exifString += "$focalLength  "
+        }
+    }
+
+    exif.getAttribute(ExifInterface.TAG_EXPOSURE_TIME).let {
+        if (it?.isNotEmpty() == true) {
+            val exposureSec = (1 / it.toFloat()).toInt()
+            exifString += "1/${exposureSec}s  "
+        }
+    }
+
+    exif.getAttribute(ExifInterface.TAG_ISO_SPEED_RATINGS).let {
+        if (it?.isNotEmpty() == true) {
+            exifString += "ISO-$it"
+        }
+    }
+
+    return exifString.trim()
+}
+
+fun String.getFileExifDateTaken(): String {
+    val exif = ExifInterface(this)
+    exif.getAttribute(ExifInterface.TAG_DATETIME).let {
+        if (it?.isNotEmpty() == true) {
+            try {
+                val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd kk:mm:ss", Locale.ENGLISH)
+                return simpleDateFormat.parse(it).time.formatLastModified().trim()
+            } catch (ignored: Exception) {
+            }
+        }
+    }
+    return ""
+}
 
 fun String.getMimeTypeFromPath(): String {
     val typesMap = HashMap<String, String>().apply {
