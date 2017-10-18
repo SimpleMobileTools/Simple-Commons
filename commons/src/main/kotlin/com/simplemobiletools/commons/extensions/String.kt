@@ -45,8 +45,7 @@ fun String.isAudioFast() = audioExtensions.any { endsWith(it, true) }
 
 fun String.areDigitsOnly() = matches(Regex("[0-9]+"))
 
-fun String.getFileExifProperties(): String {
-    val exif = ExifInterface(this)
+fun String.getExifProperties(exif: ExifInterface): String {
     var exifString = ""
     exif.getAttribute(ExifInterface.TAG_F_NUMBER).let {
         if (it?.isNotEmpty() == true) {
@@ -79,8 +78,7 @@ fun String.getFileExifProperties(): String {
     return exifString.trim()
 }
 
-fun String.getFileExifDateTaken(): String {
-    val exif = ExifInterface(this)
+fun String.getExifDateTaken(exif: ExifInterface): String {
     exif.getAttribute(ExifInterface.TAG_DATETIME).let {
         if (it?.isNotEmpty() == true) {
             try {
@@ -88,6 +86,16 @@ fun String.getFileExifDateTaken(): String {
                 return simpleDateFormat.parse(it).time.formatLastModified().trim()
             } catch (ignored: Exception) {
             }
+        }
+    }
+    return ""
+}
+
+fun String.getExifCameraModel(exif: ExifInterface): String {
+    exif.getAttribute(ExifInterface.TAG_MAKE).let {
+        if (it?.isNotEmpty() == true) {
+            val model = exif.getAttribute(ExifInterface.TAG_MODEL)
+            return "$it $model".trim()
         }
     }
     return ""

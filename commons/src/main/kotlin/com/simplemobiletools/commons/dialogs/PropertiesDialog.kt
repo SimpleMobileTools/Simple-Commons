@@ -126,21 +126,20 @@ class PropertiesDialog() {
 
     private fun addExifProperties(path: String) {
         val exif = ExifInterface(path)
-        val dateTaken = path.getFileExifDateTaken()
+        val dateTaken = path.getExifDateTaken(exif)
         if (dateTaken.isNotEmpty()) {
             addProperty(R.string.date_taken, dateTaken)
         }
 
-        exif.getAttribute(ExifInterface.TAG_MAKE).let {
-            if (it?.isNotEmpty() == true) {
-                val model = exif.getAttribute(ExifInterface.TAG_MODEL)
-                addProperty(R.string.camera, "$it $model")
-            }
+        val cameraModel = path.getExifCameraModel(exif)
+        if (cameraModel.isNotEmpty()) {
+            addProperty(R.string.camera, cameraModel)
         }
 
-        val exifString = path.getFileExifProperties()
-        if (exifString.isNotEmpty())
-            addProperty(R.string.exif, exifString.trim())
+        val exifString = path.getExifProperties(exif)
+        if (exifString.isNotEmpty()) {
+            addProperty(R.string.exif, exifString)
+        }
     }
 
     private fun isSameParent(files: List<File>): Boolean {
