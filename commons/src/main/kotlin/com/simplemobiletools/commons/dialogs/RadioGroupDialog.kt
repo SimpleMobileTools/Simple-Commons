@@ -56,7 +56,7 @@ class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, 
 
     override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
         if (wasInit) {
-            callback.invoke(items[checkedId].value)
+            callback(items[checkedId].value)
             dialog.dismiss()
         }
     }

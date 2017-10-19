@@ -117,7 +117,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
 
         val textColor = context.baseConfig.textColor
         AlertDialog.Builder(context)
-                .setPositiveButton(R.string.ok, { dialog, which -> callback.invoke(getColor()) })
+                .setPositiveButton(R.string.ok, { dialog, which -> callback(getColor()) })
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
             context.setupDialogStuff(view, this)

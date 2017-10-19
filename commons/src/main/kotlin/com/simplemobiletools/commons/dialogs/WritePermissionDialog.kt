@@ -30,6 +30,6 @@ class WritePermissionDialog(context: Context, val callback: () -> Unit) {
 
     private fun dialogConfirmed() {
         dialog.dismiss()
-        callback.invoke()
+        callback()
     }
 }

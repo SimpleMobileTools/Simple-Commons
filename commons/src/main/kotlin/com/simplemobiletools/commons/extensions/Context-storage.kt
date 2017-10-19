@@ -152,8 +152,9 @@ fun Context.rescanPaths(paths: ArrayList<String>, action: () -> Unit) {
     var cnt = paths.size
     val realAction = WeakReference<() -> Unit>(action)
     MediaScannerConnection.scanFile(applicationContext, paths.toTypedArray(), null, { s, uri ->
-        if (--cnt == 0)
+        if (--cnt == 0) {
             realAction.get()?.invoke()
+        }
     })
 }
 

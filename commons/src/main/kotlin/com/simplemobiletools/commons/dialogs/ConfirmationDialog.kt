@@ -38,6 +38,6 @@ class ConfirmationDialog(val context: Context, message: String = "", messageId: 
 
     private fun dialogConfirmed() {
         dialog.dismiss()
-        callback.invoke()
+        callback()
     }
 }

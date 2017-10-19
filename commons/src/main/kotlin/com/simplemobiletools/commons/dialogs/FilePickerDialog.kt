@@ -21,7 +21,6 @@ import com.simplemobiletools.commons.views.Breadcrumbs
 import kotlinx.android.synthetic.main.dialog_filepicker.view.*
 import java.io.File
 import java.util.*
-import kotlin.comparisons.compareBy
 
 /**
  * The only filepicker constructor with a couple optional parameters
@@ -110,7 +109,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
     private fun createNewFolder() {
         CreateNewFolderDialog(activity, currPath) {
-            callback.invoke(it.trimEnd('/'))
+            callback(it.trimEnd('/'))
             mDialog.dismiss()
         }
     }
@@ -163,7 +162,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun sendSuccess() {
-        callback.invoke(if (currPath.length == 1) currPath else currPath.trimEnd('/'))
+        callback(if (currPath.length == 1) currPath else currPath.trimEnd('/'))
         mDialog.dismiss()
     }
 
