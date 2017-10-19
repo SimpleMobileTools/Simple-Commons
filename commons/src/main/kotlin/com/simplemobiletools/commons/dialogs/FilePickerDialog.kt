@@ -47,11 +47,13 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     var mDialogView: View = LayoutInflater.from(activity).inflate(R.layout.dialog_filepicker, null)
 
     init {
-        if (!File(currPath).exists())
+        if (!File(currPath).exists()) {
             currPath = activity.internalStoragePath
+        }
 
-        if (File(currPath).isFile)
+        if (File(currPath).isFile) {
             currPath = File(currPath).parent
+        }
 
         mDialogView.filepicker_breadcrumbs.setListener(this)
         updateItems()
@@ -171,8 +173,9 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         val base = File(path)
         val files = base.listFiles() ?: return items
         for (file in files) {
-            if (!showHidden && file.isHidden)
+            if (!showHidden && file.isHidden) {
                 continue
+            }
 
             val curPath = file.absolutePath
             val curName = curPath.getFilenameFromPath()
@@ -183,10 +186,11 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun getChildren(file: File): Int {
-        return if (file.listFiles() == null || !file.isDirectory)
+        return if (file.listFiles() == null || !file.isDirectory) {
             0
-        else
+        } else {
             file.listFiles().filter { !it.isHidden || (it.isHidden && showHidden) }.size
+        }
     }
 
     private fun containsDirectory(items: List<FileDirItem>) = items.any { it.isDirectory }

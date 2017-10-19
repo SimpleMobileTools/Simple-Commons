@@ -104,8 +104,10 @@ class PropertiesDialog() {
         val isSameParent = isSameParent(files)
 
         addProperty(R.string.items_selected, paths.size.toString())
-        if (isSameParent)
+        if (isSameParent) {
             addProperty(R.string.path, files[0].parent)
+        }
+
         addProperty(R.string.size, "...", R.id.properties_size)
         addProperty(R.string.files_count, "...", R.id.properties_file_count)
 
@@ -146,8 +148,9 @@ class PropertiesDialog() {
         var parent = files[0].parent
         for (file in files) {
             val curParent = file.parent
-            if (curParent != parent)
+            if (curParent != parent) {
                 return false
+            }
 
             parent = curParent
         }
@@ -155,10 +158,11 @@ class PropertiesDialog() {
     }
 
     private fun getDirectChildrenCount(file: File, countHiddenItems: Boolean): String {
-        return if (file.listFiles() == null)
+        return if (file.listFiles() == null) {
             "0"
-        else
+        } else {
             file.listFiles().filter { it != null && (!it.isHidden || (it.isHidden && countHiddenItems)) }.size.toString()
+        }
     }
 
     private fun addProperty(labelId: Int, value: String?, viewId: Int = 0) {
@@ -170,8 +174,9 @@ class PropertiesDialog() {
             property_value.text = value
             mPropertyView.properties_holder.addView(this)
 
-            if (viewId != 0)
+            if (viewId != 0) {
                 id = viewId
+            }
         }
     }
 

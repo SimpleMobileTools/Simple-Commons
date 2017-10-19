@@ -4,14 +4,10 @@ import android.support.design.widget.TabLayout
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
-import android.view.ViewTreeObserver
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.PasswordTypesAdapter
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.beGone
-import com.simplemobiletools.commons.extensions.isFingerPrintSensorAvailable
-import com.simplemobiletools.commons.extensions.setupDialogStuff
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.PROTECTION_FINGERPRINT
 import com.simplemobiletools.commons.helpers.PROTECTION_PATTERN
 import com.simplemobiletools.commons.helpers.PROTECTION_PIN
@@ -44,12 +40,9 @@ class SecurityDialog(val activity: BaseSimpleActivity, val requiredHash: String,
                 }
             })
 
-            viewPager.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
-                override fun onGlobalLayout() {
-                    viewPager.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                    updateTabVisibility()
-                }
-            })
+            viewPager.onGlobalLayout {
+                updateTabVisibility()
+            }
 
             if (showTabIndex == SHOW_ALL_TABS) {
                 val textColor = context.baseConfig.textColor
