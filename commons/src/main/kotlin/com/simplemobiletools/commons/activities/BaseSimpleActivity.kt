@@ -14,9 +14,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.isShowingSAFDialog
-import com.simplemobiletools.commons.extensions.toast
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
 import com.simplemobiletools.commons.helpers.APP_VERSION_NAME
@@ -85,7 +83,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
     }
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
-    fun saveTreeUri(resultData: Intent) {
+    private fun saveTreeUri(resultData: Intent) {
         val treeUri = resultData.data
         baseConfig.treeUri = treeUri.toString()
 
@@ -149,9 +147,26 @@ open class BaseSimpleActivity : AppCompatActivity() {
                 toast(R.string.copying)
                 startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly)
             } else {
-                handleSAFDialog(File(source)) {
+                if (isPathOnSD(source) || isPathOnSD(destinationFolder.absolutePath)) {
+                    handleSAFDialog(File(source)) {
+                        toast(R.string.moving)
+                        startCopyMove(files, destinationFolder, false, copyPhotoVideoOnly)
+                    }
+                } else {
                     toast(R.string.moving)
-                    startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly)
+                    val updatedFiles = ArrayList<File>(files.size * 2)
+                    updatedFiles.addAll(files)
+                    for (file in files) {
+                        val newFile = File(destinationFolder, file.name)
+                        if (!newFile.exists() && file.renameTo(newFile))
+                            updatedFiles.add(newFile)
+                    }
+
+                    scanFiles(updatedFiles) {
+                        runOnUiThread {
+                            copyMoveListener.copySucceeded(false, files.size * 2 == updatedFiles.size)
+                        }
+                    }
                 }
             }
         }
@@ -162,7 +177,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, copyMoveListener).execute(pair)
     }
 
-    protected val copyMoveListener = object : CopyMoveTask.CopyMoveListener {
+    private val copyMoveListener = object : CopyMoveTask.CopyMoveListener {
         override fun copySucceeded(copyOnly: Boolean, copiedAll: Boolean) {
             if (copyOnly) {
                 toast(if (copiedAll) R.string.copying_success else R.string.copying_success_partial)
