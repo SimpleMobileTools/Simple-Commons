@@ -28,7 +28,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
     lateinit var newHexField: EditText
     lateinit var viewContainer: ViewGroup
     val currentColorHsv = FloatArray(3)
-    val backgroundColor: Int = context.baseConfig.backgroundColor
+    val backgroundColor = context.baseConfig.backgroundColor
 
     init {
         Color.colorToHSV(color, currentColorHsv)
