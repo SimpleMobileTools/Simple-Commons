@@ -7,12 +7,16 @@ import android.graphics.PorterDuffColorFilter
 import android.support.v7.app.AlertDialog
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.*
+import android.view.LayoutInflater
+import android.view.MotionEvent
+import android.view.View
 import android.view.View.OnTouchListener
+import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.onGlobalLayout
 import com.simplemobiletools.commons.extensions.setBackgroundWithStroke
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.views.ColorPickerSquare
@@ -126,13 +130,10 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
             viewCursor.colorFilter = PorterDuffColorFilter(textColor, PorterDuff.Mode.SRC_IN)
         }
 
-        view.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                moveHuePicker()
-                moveColorPicker()
-                view.viewTreeObserver.removeGlobalOnLayoutListener(this)
-            }
-        })
+        view.onGlobalLayout {
+            moveHuePicker()
+            moveColorPicker()
+        }
     }
 
     private fun getHexCode(color: Int) = Integer.toHexString(color).substring(2).toUpperCase()

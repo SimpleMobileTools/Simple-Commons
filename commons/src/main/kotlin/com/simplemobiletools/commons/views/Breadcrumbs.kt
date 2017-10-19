@@ -6,12 +6,12 @@ import android.graphics.PorterDuffColorFilter
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewTreeObserver
 import android.widget.LinearLayout
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.getBasePath
 import com.simplemobiletools.commons.extensions.humanizePath
+import com.simplemobiletools.commons.extensions.onGlobalLayout
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.breadcrumb_item.view.*
 
@@ -19,25 +19,13 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
     private var availableWidth = 0
 
     private var inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-    private var listener: BreadcrumbsListener? = null
-    private var textColor = 0
+    var textColor = context.baseConfig.textColor
+    var listener: BreadcrumbsListener? = null
 
     init {
-        textColor = context.baseConfig.textColor
-        viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                viewTreeObserver.removeOnGlobalLayoutListener(this)
-                availableWidth = width
-            }
-        })
-    }
-
-    fun setListener(listener: BreadcrumbsListener) {
-        this.listener = listener
-    }
-
-    fun setTextColor(color: Int) {
-        textColor = color
+        onGlobalLayout {
+            availableWidth = width
+        }
     }
 
     override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
@@ -112,11 +100,13 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
                 currPath += dir + "/"
             }
 
-            if (dir.isEmpty())
+            if (dir.isEmpty()) {
                 continue
+            }
 
-            if (!currPath.endsWith('/'))
+            if (!currPath.endsWith('/')) {
                 currPath += "/"
+            }
 
             val item = FileDirItem(currPath, dir, true, 0, 0)
             addBreadcrumb(item, i > 0)
@@ -126,8 +116,9 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
     private fun addBreadcrumb(item: FileDirItem, addPrefix: Boolean) {
         inflater.inflate(R.layout.breadcrumb_item, null, false).apply {
             var textToAdd = item.name
-            if (addPrefix)
+            if (addPrefix) {
                 textToAdd = "/ $textToAdd"
+            }
 
             if (childCount == 0) {
                 resources.apply {

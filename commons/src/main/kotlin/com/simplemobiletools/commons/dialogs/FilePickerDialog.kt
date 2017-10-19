@@ -9,12 +9,12 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewTreeObserver
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.FilepickerItemsAdapter
 import com.simplemobiletools.commons.extensions.getFilenameFromPath
 import com.simplemobiletools.commons.extensions.internalStoragePath
+import com.simplemobiletools.commons.extensions.onGlobalLayout
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.Breadcrumbs
@@ -55,22 +55,18 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             currPath = File(currPath).parent
         }
 
-        mDialogView.filepicker_breadcrumbs.setListener(this)
+        mDialogView.filepicker_breadcrumbs.listener = this
         updateItems()
 
         // if a dialog's listview has height wrap_content, it calls getView way too often which can reduce performance
         // lets just measure it, then set a static height
-        mDialogView.filepicker_list.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                val listener = this
-                val rect = Rect()
-                mDialogView.filepicker_list.apply {
-                    getGlobalVisibleRect(rect)
-                    layoutParams.height = rect.bottom - rect.top
-                    viewTreeObserver.removeOnGlobalLayoutListener(listener)
-                }
+        mDialogView.filepicker_list.onGlobalLayout {
+            val rect = Rect()
+            mDialogView.filepicker_list.apply {
+                getGlobalVisibleRect(rect)
+                layoutParams.height = rect.bottom - rect.top
             }
-        })
+        }
 
         val builder = AlertDialog.Builder(activity)
                 .setNegativeButton(R.string.cancel, null)
