@@ -18,6 +18,8 @@ fun ExifInterface.copyTo(destination: ExifInterface) {
             ExifInterface.TAG_GPS_LONGITUDE_REF,
             ExifInterface.TAG_GPS_PROCESSING_METHOD,
             ExifInterface.TAG_GPS_TIMESTAMP,
+            ExifInterface.TAG_IMAGE_LENGTH,
+            ExifInterface.TAG_IMAGE_WIDTH,
             ExifInterface.TAG_ISO_SPEED_RATINGS,
             ExifInterface.TAG_MAKE,
             ExifInterface.TAG_MODEL,
