@@ -1,33 +1,32 @@
 package com.simplemobiletools.commons.activities
 
-import android.Manifest
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.app.Activity
-import android.bluetooth.BluetoothClass.Service.AUDIO
-import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import android.provider.DocumentsContract
 import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
 import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.*
+import com.simplemobiletools.commons.helpers.APP_LICENSES
+import com.simplemobiletools.commons.helpers.APP_NAME
+import com.simplemobiletools.commons.helpers.APP_VERSION_NAME
+import com.simplemobiletools.commons.helpers.OPEN_DOCUMENT_TREE
 import java.io.File
 import java.util.*
 
 open class BaseSimpleActivity : AppCompatActivity() {
     var copyMoveCallback: (() -> Unit)? = null
     var actionOnPermission: ((granted: Boolean) -> Unit)? = null
+    private val GENERIC_PERM_HANDLER = 100
 
     companion object {
         var funAfterSAFPermission: (() -> Unit)? = null
@@ -186,32 +185,19 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     fun handlePermission(permissionId: Int, callback: (granted: Boolean) -> Unit) {
         actionOnPermission = null
-        val permString = getPermissionString(permissionId)
-        if (hasPermission(permString)) {
+        if (hasPermission(permissionId)) {
             callback(true)
         } else {
             actionOnPermission = callback
-            ActivityCompat.requestPermissions(this, arrayOf(permString), 1)
+            ActivityCompat.requestPermissions(this, arrayOf(getPermissionString(permissionId)), GENERIC_PERM_HANDLER)
         }
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (grantResults.isNotEmpty()) {
+        if (requestCode == GENERIC_PERM_HANDLER && grantResults.isNotEmpty()) {
             actionOnPermission?.invoke(grantResults[0] == 0)
         }
-    }
-
-    private fun hasPermission(permString: String) = ContextCompat.checkSelfPermission(this, permString) == PackageManager.PERMISSION_GRANTED
-
-    private fun getPermissionString(id: Int) = when (id) {
-        PERMISSION_READ_STORAGE -> Manifest.permission.READ_EXTERNAL_STORAGE
-        PERMISSION_WRITE_STORAGE -> Manifest.permission.WRITE_EXTERNAL_STORAGE
-        PERMISSION_CAMERA -> Manifest.permission.CAMERA
-        PERMISSION_RECORD_AUDIO -> Manifest.permission.RECORD_AUDIO
-        PERMISSION_READ_CONTACTS -> Manifest.permission.READ_CONTACTS
-        PERMISSION_WRITE_CALENDAR -> Manifest.permission.WRITE_CALENDAR
-        else -> ""
     }
 
     private val copyMoveListener = object : CopyMoveTask.CopyMoveListener {

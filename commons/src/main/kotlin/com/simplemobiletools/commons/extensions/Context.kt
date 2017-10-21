@@ -21,27 +21,17 @@ import android.widget.TextView
 import android.widget.Toast
 import com.github.ajalt.reprint.core.Reprint
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.helpers.BaseConfig
-import com.simplemobiletools.commons.helpers.PREFS_KEY
+import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.views.*
 import kotlinx.android.synthetic.main.dialog_title.view.*
 
 fun Context.isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
-fun Context.hasReadStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
-fun Context.hasWriteStoragePermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
-fun Context.hasCameraPermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED
-fun Context.hasRecordAudioPermission() = ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED
-
 fun Context.isAndroidFour() = Build.VERSION.SDK_INT <= Build.VERSION_CODES.KITKAT_WATCH
-
 fun Context.isKitkatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
-
 fun Context.isLollipopPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
-
 fun Context.isMarshmallowPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
-
 fun Context.isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
 
 fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAccentColor: Int = 0) {
@@ -52,33 +42,26 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
     (0 until cnt)
             .map { viewGroup.getChildAt(it) }
             .forEach {
-                if (it is MyTextView) {
-                    it.setColors(textColor, accentColor, backgroundColor)
-                } else if (it is MyAppCompatSpinner) {
-                    it.setColors(textColor, accentColor, backgroundColor)
-                } else if (it is MySwitchCompat) {
-                    it.setColors(textColor, accentColor, backgroundColor)
-                } else if (it is MyCompatRadioButton) {
-                    it.setColors(textColor, accentColor, backgroundColor)
-                } else if (it is MyAppCompatCheckbox) {
-                    it.setColors(textColor, accentColor, backgroundColor)
-                } else if (it is MyEditText) {
-                    it.setColors(textColor, accentColor, backgroundColor)
-                } else if (it is MyFloatingActionButton) {
-                    it.setColors(textColor, accentColor, backgroundColor)
-                } else if (it is MySeekBar) {
-                    it.setColors(textColor, accentColor, backgroundColor)
-                } else if (it is ViewGroup) {
-                    updateTextColors(it, textColor, accentColor)
+                when (it) {
+                    is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
+                    is MyAppCompatSpinner -> it.setColors(textColor, accentColor, backgroundColor)
+                    is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
+                    is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
+                    is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
+                    is MyEditText -> it.setColors(textColor, accentColor, backgroundColor)
+                    is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
+                    is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor)
+                    is ViewGroup -> updateTextColors(it, textColor, accentColor)
                 }
             }
 }
 
 fun Context.getLinkTextColor(): Int {
-    return if (baseConfig.primaryColor == resources.getColor(R.color.color_primary))
+    return if (baseConfig.primaryColor == resources.getColor(R.color.color_primary)) {
         baseConfig.primaryColor
-    else
+    } else {
         baseConfig.textColor
+    }
 }
 
 fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) {
@@ -147,4 +130,17 @@ fun Context.getLatestMediaId(uri: Uri = MediaStore.Images.Media.EXTERNAL_CONTENT
         cursor?.close()
     }
     return 0
+}
+
+
+fun Context.hasPermission(permId: Int) = ContextCompat.checkSelfPermission(this, getPermissionString(permId)) == PackageManager.PERMISSION_GRANTED
+
+fun Context.getPermissionString(id: Int) = when (id) {
+    PERMISSION_READ_STORAGE -> Manifest.permission.READ_EXTERNAL_STORAGE
+    PERMISSION_WRITE_STORAGE -> Manifest.permission.WRITE_EXTERNAL_STORAGE
+    PERMISSION_CAMERA -> Manifest.permission.CAMERA
+    PERMISSION_RECORD_AUDIO -> Manifest.permission.RECORD_AUDIO
+    PERMISSION_READ_CONTACTS -> Manifest.permission.READ_CONTACTS
+    PERMISSION_WRITE_CALENDAR -> Manifest.permission.WRITE_CALENDAR
+    else -> ""
 }
