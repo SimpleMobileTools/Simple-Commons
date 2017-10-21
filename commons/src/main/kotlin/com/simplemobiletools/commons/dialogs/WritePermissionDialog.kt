@@ -22,7 +22,7 @@ class WritePermissionDialog(context: Context, val callback: () -> Unit) {
 
         dialog = AlertDialog.Builder(context)
                 .setPositiveButton(R.string.ok, { dialog, which -> dialogConfirmed() })
-                .setOnCancelListener { BaseSimpleActivity.funAfterPermission = null }
+                .setOnCancelListener { BaseSimpleActivity.funAfterSAFPermission = null }
                 .create().apply {
             context.setupDialogStuff(view, this, R.string.confirm_storage_access_title)
         }

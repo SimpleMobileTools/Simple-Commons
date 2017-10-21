@@ -1,32 +1,36 @@
 package com.simplemobiletools.commons.activities
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.app.Activity
+import android.bluetooth.BluetoothClass.Service.AUDIO
+import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import android.provider.DocumentsContract
+import android.support.v4.app.ActivityCompat
+import android.support.v4.content.ContextCompat
 import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.APP_LICENSES
-import com.simplemobiletools.commons.helpers.APP_NAME
-import com.simplemobiletools.commons.helpers.APP_VERSION_NAME
-import com.simplemobiletools.commons.helpers.OPEN_DOCUMENT_TREE
+import com.simplemobiletools.commons.helpers.*
 import java.io.File
 import java.util.*
 
 open class BaseSimpleActivity : AppCompatActivity() {
     var copyMoveCallback: (() -> Unit)? = null
+    var actionOnPermission: ((granted: Boolean) -> Unit)? = null
 
     companion object {
-        var funAfterPermission: (() -> Unit)? = null
+        var funAfterSAFPermission: (() -> Unit)? = null
     }
 
     override fun onResume() {
@@ -35,19 +39,22 @@ open class BaseSimpleActivity : AppCompatActivity() {
         updateActionbarColor()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        funAfterPermission = null
+    override fun onStop() {
+        super.onStop()
+        actionOnPermission = null
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            android.R.id.home -> {
-                finish()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
+    override fun onDestroy() {
+        super.onDestroy()
+        funAfterSAFPermission = null
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        android.R.id.home -> {
+            finish()
+            true
         }
+        else -> super.onOptionsItemSelected(item)
     }
 
     fun updateBackgroundColor(color: Int = baseConfig.backgroundColor) {
@@ -73,7 +80,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         if (requestCode == OPEN_DOCUMENT_TREE && resultCode == Activity.RESULT_OK && resultData != null) {
             if (isProperFolder(resultData.data)) {
                 saveTreeUri(resultData)
-                funAfterPermission?.invoke()
+                funAfterSAFPermission?.invoke()
             } else {
                 toast(R.string.wrong_root_selected)
                 val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
@@ -114,7 +121,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     fun handleSAFDialog(file: File, callback: () -> Unit): Boolean {
         return if (isShowingSAFDialog(file, baseConfig.treeUri, OPEN_DOCUMENT_TREE)) {
-            funAfterPermission = callback
+            funAfterSAFPermission = callback
             true
         } else {
             callback()
@@ -175,6 +182,36 @@ open class BaseSimpleActivity : AppCompatActivity() {
     private fun startCopyMove(files: ArrayList<File>, destinationFolder: File, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean) {
         val pair = Pair<ArrayList<File>, File>(files, destinationFolder)
         CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, copyMoveListener).execute(pair)
+    }
+
+    fun handlePermission(permissionId: Int, callback: (granted: Boolean) -> Unit) {
+        actionOnPermission = null
+        val permString = getPermissionString(permissionId)
+        if (hasPermission(permString)) {
+            callback(true)
+        } else {
+            actionOnPermission = callback
+            ActivityCompat.requestPermissions(this, arrayOf(permString), 1)
+        }
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (grantResults.isNotEmpty()) {
+            actionOnPermission?.invoke(grantResults[0] == 0)
+        }
+    }
+
+    private fun hasPermission(permString: String) = ContextCompat.checkSelfPermission(this, permString) == PackageManager.PERMISSION_GRANTED
+
+    private fun getPermissionString(id: Int) = when (id) {
+        PERMISSION_READ_STORAGE -> Manifest.permission.READ_EXTERNAL_STORAGE
+        PERMISSION_WRITE_STORAGE -> Manifest.permission.WRITE_EXTERNAL_STORAGE
+        PERMISSION_CAMERA -> Manifest.permission.CAMERA
+        PERMISSION_RECORD_AUDIO -> Manifest.permission.RECORD_AUDIO
+        PERMISSION_READ_CONTACTS -> Manifest.permission.READ_CONTACTS
+        PERMISSION_WRITE_CALENDAR -> Manifest.permission.WRITE_CALENDAR
+        else -> ""
     }
 
     private val copyMoveListener = object : CopyMoveTask.CopyMoveListener {
