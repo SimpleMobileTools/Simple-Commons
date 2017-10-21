@@ -26,6 +26,7 @@ import java.util.*
 open class BaseSimpleActivity : AppCompatActivity() {
     var copyMoveCallback: (() -> Unit)? = null
     var actionOnPermission: ((granted: Boolean) -> Unit)? = null
+    var isAskingPermissions = false
     private val GENERIC_PERM_HANDLER = 100
 
     companion object {
@@ -188,6 +189,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         if (hasPermission(permissionId)) {
             callback(true)
         } else {
+            isAskingPermissions = true
             actionOnPermission = callback
             ActivityCompat.requestPermissions(this, arrayOf(getPermissionString(permissionId)), GENERIC_PERM_HANDLER)
         }
@@ -195,6 +197,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        isAskingPermissions = false
         if (requestCode == GENERIC_PERM_HANDLER && grantResults.isNotEmpty()) {
             actionOnPermission?.invoke(grantResults[0] == 0)
         }
