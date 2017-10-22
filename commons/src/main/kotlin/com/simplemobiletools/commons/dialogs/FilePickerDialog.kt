@@ -1,6 +1,5 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.graphics.Rect
 import android.os.Environment
 import android.os.Parcelable
 import android.support.v7.app.AlertDialog
@@ -8,13 +7,12 @@ import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.view.KeyEvent
 import android.view.LayoutInflater
-import android.view.View
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.FilepickerItemsAdapter
+import com.simplemobiletools.commons.extensions.beVisible
 import com.simplemobiletools.commons.extensions.getFilenameFromPath
 import com.simplemobiletools.commons.extensions.internalStoragePath
-import com.simplemobiletools.commons.extensions.onGlobalLayout
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.Breadcrumbs
@@ -44,7 +42,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     var mScrollStates = HashMap<String, Parcelable>()
 
     lateinit var mDialog: AlertDialog
-    var mDialogView: View = LayoutInflater.from(activity).inflate(R.layout.dialog_filepicker, null)
+    var mDialogView = LayoutInflater.from(activity).inflate(R.layout.dialog_filepicker, null)
 
     init {
         if (!File(currPath).exists()) {
@@ -57,16 +55,6 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
         mDialogView.filepicker_breadcrumbs.listener = this
         updateItems()
-
-        // if a dialog's listview has height wrap_content, it calls getView way too often which can reduce performance
-        // lets just measure it, then set a static height
-        mDialogView.filepicker_list.onGlobalLayout {
-            val rect = Rect()
-            mDialogView.filepicker_list.apply {
-                getGlobalVisibleRect(rect)
-                layoutParams.height = rect.bottom - rect.top
-            }
-        }
 
         val builder = AlertDialog.Builder(activity)
                 .setNegativeButton(R.string.cancel, null)
@@ -88,8 +76,10 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             builder.setPositiveButton(R.string.ok, null)
 
         if (showFAB) {
-            mDialogView.filepicker_fab.visibility = View.VISIBLE
-            mDialogView.filepicker_fab.setOnClickListener { createNewFolder() }
+            mDialogView.filepicker_fab.apply {
+                beVisible()
+                setOnClickListener { createNewFolder() }
+            }
         }
 
         mDialog = builder.create().apply {
