@@ -17,9 +17,10 @@ import kotlinx.android.synthetic.main.breadcrumb_item.view.*
 
 class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs), View.OnClickListener {
     private var availableWidth = 0
-
     private var inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-    var textColor = context.baseConfig.textColor
+    private var textColor = context.baseConfig.textColor
+    private var lastPath = ""
+
     var listener: BreadcrumbsListener? = null
 
     init {
@@ -88,6 +89,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
     }
 
     fun setBreadcrumb(fullPath: String) {
+        lastPath = fullPath
         val basePath = fullPath.getBasePath(context)
         var currPath = basePath
         val tempPath = context.humanizePath(fullPath)
@@ -104,10 +106,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
                 continue
             }
 
-            if (!currPath.endsWith('/')) {
-                currPath += "/"
-            }
-
+            currPath = "${currPath.trimEnd('/')}/"
             val item = FileDirItem(currPath, dir, true, 0, 0)
             addBreadcrumb(item, i > 0)
         }
@@ -138,11 +137,16 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
         }
     }
 
+    fun updateColor(color: Int) {
+        textColor = color
+        setBreadcrumb(lastPath)
+    }
+
     fun removeBreadcrumb() {
         removeView(getChildAt(childCount - 1))
     }
 
-    val lastItem: FileDirItem get() = getChildAt(childCount - 1).tag as FileDirItem
+    fun getLastItem() = getChildAt(childCount - 1).tag as FileDirItem
 
     override fun onClick(v: View) {
         val cnt = childCount
