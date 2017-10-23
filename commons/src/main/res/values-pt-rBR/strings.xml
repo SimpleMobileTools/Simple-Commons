@@ -7,7 +7,7 @@
     <string name="invalid_file_format">Formato de arquivo inválido</string>
     <string name="no_storage_permissions">Necessitamos de permissão para acessar o armazenamento</string>
     <string name="out_of_memory_error">Memória insuficiente</string>
-    <string name="an_error_occurred">An error occurred: %s</string>
+    <string name="an_error_occurred">Um erro ocorreu: %s</string>
 
     <!-- Renaming -->
     <string name="rename_file">Renomear arquivo</string>
@@ -46,8 +46,8 @@
     <string name="copying_success_partial">Alguns arquivos não foram copiados</string>
     <string name="no_files_selected">Nenhum arquivo selecionado</string>
     <string name="saving">Salvando&#8230;</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="could_not_create_folder">Não foi possível criar pasta %s</string>
+    <string name="could_not_create_file">Não foi possível criar arquivo %s</string>
 
     <!-- Create new -->
     <string name="create_new">Criar</string>
@@ -74,7 +74,7 @@
     <string name="confirm_storage_access_title">Confirmação de acesso ao armazenamento externo</string>
     <string name="confirm_storage_access_text">Por favor escolha a pasta raíz do cartão SD no próximo passo para conceder acesso de escrita</string>
     <string name="confirm_storage_access_text_sd">Se você não encontrar o cartão SD, tente isto</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_selection">Confirmar seleção</string>
 
     <plurals name="items">
         <item quantity="one">%1$d ítem</item>
@@ -133,10 +133,10 @@
     <string name="select_all">Selecionar tudo</string>
     <string name="hide">Ocultar</string>
     <string name="unhide">Mostrar</string>
-    <string name="hide_folder">Hide folder</string>
-    <string name="unhide_folder">Unhide folder</string>
+    <string name="hide_folder">Ocultar pasta</string>
+    <string name="unhide_folder">Reexibir pasta</string>
     <string name="temporarily_show_hidden">Mostrar pastas ocultas temporariamente</string>
-    <string name="stop_showing_hidden">Stop showing hidden media</string>
+    <string name="stop_showing_hidden">Parar de exibir mídia oculta</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -158,36 +158,36 @@
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
-    <string name="repeat_pin">Repeat PIN</string>
-    <string name="pattern">Pattern</string>
-    <string name="insert_pattern">Insert pattern</string>
-    <string name="wrong_pattern">Wrong pattern</string>
-    <string name="repeat_pattern">Repeat pattern</string>
-    <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
-    <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
-    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="enter_pin">Digite o PIN</string>
+    <string name="please_enter_pin">Favor digitar o PIN</string>
+    <string name="wrong_pin">PIN errado</string>
+    <string name="repeat_pin">Repetir PIN</string>
+    <string name="pattern">Padrão</string>
+    <string name="insert_pattern">Inserir padrão</string>
+    <string name="wrong_pattern">Padrão errado</string>
+    <string name="repeat_pattern">Repetir padrão</string>
+    <string name="fingerprint">Digital</string>
+    <string name="add_fingerprint">Adicionar digital</string>
+    <string name="place_finger">Favor pôr seu dedo sobre o leitor de digital</string>
+    <string name="authentication_failed">Autenticação falhou</string>
+    <string name="authentication_blocked">Autenticação bloqueada, favor tentar novamente em instantes</string>
+    <string name="no_fingerprints_registered">Você não tem digitais cadastradas. Favor adiconar alguma nas configurações do seu aparelho</string>
+    <string name="go_to_settings">Ir para configurações</string>
+    <string name="protection_setup_successfully">Senha criada com sucesso. Reinstale o app caso você a esqueça.</string>
+    <string name="fingerprint_setup_successfully">Proteção criada com sucesso. Reinstale o app caso tenha problemas em redefinir.</string>
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d second</item>
-        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">%1$d segundo</item>
+        <item quantity="other">%1$d segundos</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minute</item>
-        <item quantity="other">%1$d minutes</item>
+        <item quantity="one">%1$d minuto</item>
+        <item quantity="other">%1$d minutos</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d hour</item>
-        <item quantity="other">%1$d hours</item>
+        <item quantity="one">%1$d hora</item>
+        <item quantity="other">%1$d horas</item>
     </plurals>
 
     <!-- Settings -->
@@ -196,10 +196,10 @@
     <string name="show_hidden">Mostrar arquivos e pastas ocultos</string>
     <string name="font_size">Tamanho do texto</string>
     <string name="small">Pequeno</string>
-    <string name="medium">Medium</string>
+    <string name="medium">Médio</string>
     <string name="large">Grande</string>
     <string name="extra_large">Muito grande</string>
-    <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
+    <string name="password_protect_hidden_items">Proteja visibilidade de ítens ocultos com senha</string>
 
     <!-- About -->
     <string name="about">Sobre</string>
@@ -215,10 +215,10 @@
     <string name="donate_underlined"><u>Doações</u></string>
     <string name="follow_us">Siga-nos:</string>
     <string name="copyright">V %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="additional_info">Additional info</string>
-    <string name="gruveo">Are you looking for a simple and anonymous video calling app? Try out my other project</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
+    <string name="additional_info">Informações adicionais</string>
+    <string name="gruveo">Está a procura de um app simples e anônimo de chamada de vídeo? Experiemnte meus outros projetos</string>
+    <string name="app_version">Versão do app: %1$s</string>
+    <string name="device_os">Sistema operacional: %1$s</string>
     <string name="donate_please">Olá,\n\nparece que você tem usado esse app por um tempinho.\n\nVocê sabia que ele não é custeado por nenhuma grande empresa? Desenvolvê-lo leva tempo, e quero evitar o uso de propagandas, logo sua ajuda seria muito bem vinda.\n\nVocê pode me ajudar comprando o app Simple Thank You, disponível na Play Store, ou me enviando dinheiro diretamente pelo Paypal, ou através de bitcoins.\n\nMais informações em http://simplemobiletools.com/donate.\n\nObrigado!</string>
 
     <!-- License -->
