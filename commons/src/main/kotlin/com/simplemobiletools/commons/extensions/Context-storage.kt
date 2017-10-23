@@ -189,13 +189,37 @@ fun Context.updateInMediaStore(oldFile: File, newFile: File): Boolean {
         put(MediaStore.MediaColumns.TITLE, newFile.name)
     }
     val uri = getFileUri(oldFile)
-    val where = "${MediaStore.MediaColumns.DATA} = ?"
-    val args = arrayOf(oldFile.absolutePath)
+    val selection = "${MediaStore.MediaColumns.DATA} = ?"
+    val selectionArgs = arrayOf(oldFile.absolutePath)
 
     return try {
-        contentResolver.update(uri, values, where, args) == 1
+        contentResolver.update(uri, values, selection, selectionArgs) == 1
     } catch (e: SQLiteConstraintException) {
         false
+    }
+}
+
+fun Context.copyDates(oldFile: File, newFile: File) {
+    val projection = arrayOf(
+            MediaStore.Images.Media.DATE_TAKEN,
+            MediaStore.Images.Media.DATE_MODIFIED)
+    val uri = MediaStore.Files.getContentUri("external")
+    val selection = "${MediaStore.MediaColumns.DATA} = ?"
+    var selectionArgs = arrayOf(oldFile.absolutePath)
+    val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+    cursor?.use {
+        if (cursor.moveToFirst()) {
+            val dateTaken = cursor.getLongValue(MediaStore.Images.Media.DATE_TAKEN)
+            val dateModified = cursor.getIntValue(MediaStore.Images.Media.DATE_MODIFIED)
+
+            val values = ContentValues().apply {
+                put(MediaStore.Images.Media.DATE_TAKEN, dateTaken)
+                put(MediaStore.Images.Media.DATE_MODIFIED, dateModified)
+            }
+
+            selectionArgs = arrayOf(newFile.absolutePath)
+            contentResolver.update(uri, values, selection, selectionArgs)
+        }
     }
 }
 
