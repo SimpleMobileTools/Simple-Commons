@@ -132,6 +132,21 @@ fun Context.getLatestMediaId(uri: Uri = MediaStore.Images.Media.EXTERNAL_CONTENT
     return 0
 }
 
+fun Context.getRealPathFromURI(uri: Uri): String? {
+    var cursor: Cursor? = null
+    try {
+        val projection = arrayOf(MediaStore.Images.Media.DATA)
+        cursor = contentResolver.query(uri, projection, null, null, null)
+        if (cursor?.moveToFirst() == true) {
+            val index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
+            return cursor.getString(index)
+        }
+    } catch (e: Exception) {
+    } finally {
+        cursor?.close()
+    }
+    return null
+}
 
 fun Context.hasPermission(permId: Int) = ContextCompat.checkSelfPermission(this, getPermissionString(permId)) == PackageManager.PERMISSION_GRANTED
 
