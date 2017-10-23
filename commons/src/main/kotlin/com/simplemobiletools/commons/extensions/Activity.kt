@@ -287,6 +287,7 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
             try {
                 val uri = DocumentsContract.renameDocument(contentResolver, document.uri, newFile.name)
                 if (document.uri != uri) {
+                    updateInMediaStore(oldFile, newFile)
                     scanFiles(arrayListOf(oldFile, newFile)) {
                         callback(true)
                     }
@@ -299,7 +300,6 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
             }
         }
     } else if (oldFile.renameTo(newFile)) {
-        newFile.setLastModified(System.currentTimeMillis())
         if (newFile.isDirectory) {
             deleteFromMediaStore(oldFile)
             scanFile(newFile) {

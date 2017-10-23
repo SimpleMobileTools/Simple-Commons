@@ -163,10 +163,12 @@ open class BaseSimpleActivity : AppCompatActivity() {
                     toast(R.string.moving)
                     val updatedFiles = ArrayList<File>(files.size * 2)
                     updatedFiles.addAll(files)
-                    for (file in files) {
-                        val newFile = File(destinationFolder, file.name)
-                        if (!newFile.exists() && file.renameTo(newFile))
+                    for (oldFile in files) {
+                        val newFile = File(destinationFolder, oldFile.name)
+                        if (!newFile.exists() && oldFile.renameTo(newFile)) {
+                            updateInMediaStore(oldFile, newFile)
                             updatedFiles.add(newFile)
+                        }
                     }
 
                     scanFiles(updatedFiles) {
