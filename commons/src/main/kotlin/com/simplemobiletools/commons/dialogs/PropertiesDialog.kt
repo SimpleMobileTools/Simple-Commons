@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.dialogs
 import android.app.Activity
 import android.content.res.Resources
 import android.media.ExifInterface
+import android.provider.MediaStore
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -51,6 +52,22 @@ class PropertiesDialog() {
                     (view.findViewById(R.id.properties_file_count).property_value as TextView).text = mFilesCnt.toString()
                 }
             }
+
+            if (!file.isDirectory) {
+                val projection = arrayOf(MediaStore.Images.Media.DATE_MODIFIED)
+                val uri = MediaStore.Files.getContentUri("external")
+                val selection = "${MediaStore.MediaColumns.DATA} = ?"
+                val selectionArgs = arrayOf(path)
+                val cursor = activity.contentResolver.query(uri, projection, selection, selectionArgs, null)
+                cursor?.use {
+                    if (cursor.moveToFirst()) {
+                        val dateModified = cursor.getIntValue(MediaStore.Images.Media.DATE_MODIFIED)
+                        activity.runOnUiThread {
+                            (view.findViewById(R.id.properties_last_modified).property_value as TextView).text = (dateModified * 1000L).formatLastModified()
+                        }
+                    }
+                }
+            }
         }).start()
 
         when {
@@ -72,9 +89,10 @@ class PropertiesDialog() {
             }
         }
 
-        addProperty(R.string.last_modified, file.lastModified().formatLastModified())
-
-        if (!file.isDirectory) {
+        if (file.isDirectory) {
+            addProperty(R.string.last_modified, file.lastModified().formatLastModified())
+        } else {
+            addProperty(R.string.last_modified, "...", R.id.properties_last_modified)
             addExifProperties(path)
         }
 
