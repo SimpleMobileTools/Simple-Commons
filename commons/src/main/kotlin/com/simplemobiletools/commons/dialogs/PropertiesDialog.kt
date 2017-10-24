@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.sumByLong
 import kotlinx.android.synthetic.main.dialog_properties.view.*
 import kotlinx.android.synthetic.main.property_item.view.*
 import java.io.File
@@ -112,9 +113,9 @@ class PropertiesDialog() {
         addProperty(R.string.files_count, "...", R.id.properties_file_count)
 
         Thread({
-            val size = getItemsSize(files).formatSize()
+            val size = files.sumByLong { getItemSize(it) }
             activity.runOnUiThread {
-                (view.findViewById(R.id.properties_size).property_value as TextView).text = size
+                (view.findViewById(R.id.properties_size).property_value as TextView).text = size.toString()
                 (view.findViewById(R.id.properties_file_count).property_value as TextView).text = mFilesCnt.toString()
             }
         }).start()
@@ -178,12 +179,6 @@ class PropertiesDialog() {
                 id = viewId
             }
         }
-    }
-
-    private fun getItemsSize(files: ArrayList<File>): Long {
-        var size = 0L
-        files.forEach { size += getItemSize(it) }
-        return size
     }
 
     private fun getItemSize(file: File): Long {
