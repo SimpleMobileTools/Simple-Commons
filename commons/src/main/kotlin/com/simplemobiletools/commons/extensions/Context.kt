@@ -162,7 +162,7 @@ fun Context.getPermissionString(id: Int) = when (id) {
     else -> ""
 }
 
-fun Context.getFileContentUri(file: File, applicationId: String): Uri {
+fun Context.getFilePublicUri(file: File, applicationId: String): Uri {
     return if (isNougatPlus()) {
         FileProvider.getUriForFile(this, "$applicationId.provider", file)
     } else {
