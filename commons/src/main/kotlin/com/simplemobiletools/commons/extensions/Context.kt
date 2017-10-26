@@ -11,6 +11,7 @@ import android.os.Build
 import android.os.Looper
 import android.provider.BaseColumns
 import android.provider.MediaStore
+import android.provider.OpenableColumns
 import android.support.v4.content.ContextCompat
 import android.support.v4.content.FileProvider
 import android.support.v7.app.AlertDialog
@@ -168,4 +169,30 @@ fun Context.getFilePublicUri(file: File, applicationId: String): Uri {
     } else {
         Uri.fromFile(file)
     }
+}
+
+fun Context.getFilenameFromUri(uri: Uri): String {
+    return if (uri.scheme == "file") {
+        File(uri.toString()).name
+    } else {
+        var name = getFilenameFromContentUri(uri) ?: ""
+        if (name.isEmpty()) {
+            name = uri.lastPathSegment
+        }
+        name
+    }
+}
+
+fun Context.getFilenameFromContentUri(uri: Uri): String? {
+    var cursor: Cursor? = null
+    try {
+        cursor = contentResolver.query(uri, null, null, null, null)
+        if (cursor?.moveToFirst() == true) {
+            return cursor.getStringValue(OpenableColumns.DISPLAY_NAME)
+        }
+    } catch (e: Exception) {
+    } finally {
+        cursor?.close()
+    }
+    return ""
 }
