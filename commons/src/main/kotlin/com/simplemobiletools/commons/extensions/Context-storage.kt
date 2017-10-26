@@ -207,6 +207,7 @@ fun Context.copyDates(oldFile: File, newFile: File) {
     val selection = "${MediaStore.MediaColumns.DATA} = ?"
     var selectionArgs = arrayOf(oldFile.absolutePath)
     val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+
     cursor?.use {
         if (cursor.moveToFirst()) {
             val dateTaken = cursor.getLongValue(MediaStore.Images.Media.DATE_TAKEN)
