@@ -12,6 +12,7 @@ import android.os.Looper
 import android.provider.BaseColumns
 import android.provider.MediaStore
 import android.support.v4.content.ContextCompat
+import android.support.v4.content.FileProvider
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
@@ -24,6 +25,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.views.*
 import kotlinx.android.synthetic.main.dialog_title.view.*
+import java.io.File
 
 fun Context.isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
@@ -158,4 +160,12 @@ fun Context.getPermissionString(id: Int) = when (id) {
     PERMISSION_READ_CONTACTS -> Manifest.permission.READ_CONTACTS
     PERMISSION_WRITE_CALENDAR -> Manifest.permission.WRITE_CALENDAR
     else -> ""
+}
+
+fun Context.getFileContentUri(file: File, applicationId: String): Uri {
+    return if (isNougatPlus()) {
+        FileProvider.getUriForFile(this, "$applicationId.provider", file)
+    } else {
+        Uri.fromFile(file)
+    }
 }
