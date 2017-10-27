@@ -141,8 +141,7 @@ fun Context.getRealPathFromURI(uri: Uri): String? {
         val projection = arrayOf(MediaStore.Images.Media.DATA)
         cursor = contentResolver.query(uri, projection, null, null, null)
         if (cursor?.moveToFirst() == true) {
-            val index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
-            return cursor.getString(index)
+            return cursor.getStringValue(MediaStore.Images.Media.DATA)
         }
     } catch (e: Exception) {
     } finally {
