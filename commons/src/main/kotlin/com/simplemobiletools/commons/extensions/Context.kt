@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.extensions
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.content.ContentUris
 import android.content.Context
 import android.content.pm.PackageManager
 import android.database.Cursor
@@ -10,6 +11,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Looper
 import android.provider.BaseColumns
+import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.provider.OpenableColumns
 import android.support.v4.content.ContextCompat
@@ -136,10 +138,17 @@ fun Context.getLatestMediaId(uri: Uri = MediaStore.Images.Media.EXTERNAL_CONTENT
 }
 
 fun Context.getRealPathFromURI(uri: Uri): String? {
+    val newUri = if (isKitkatPlus() && isDownloadsDocument(uri)) {
+        val id = DocumentsContract.getDocumentId(uri)
+        ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), id.toLong())
+    } else {
+        uri
+    }
+
     var cursor: Cursor? = null
     try {
         val projection = arrayOf(MediaStore.Images.Media.DATA)
-        cursor = contentResolver.query(uri, projection, null, null, null)
+        cursor = contentResolver.query(newUri, projection, null, null, null)
         if (cursor?.moveToFirst() == true) {
             return cursor.getStringValue(MediaStore.Images.Media.DATA)
         }
@@ -149,6 +158,8 @@ fun Context.getRealPathFromURI(uri: Uri): String? {
     }
     return null
 }
+
+private fun isDownloadsDocument(uri: Uri) = uri.authority == "com.android.providers.downloads.documents"
 
 fun Context.hasPermission(permId: Int) = ContextCompat.checkSelfPermission(this, getPermissionString(permId)) == PackageManager.PERMISSION_GRANTED
 
