@@ -173,8 +173,8 @@
     <string name="authentication_blocked">验证已被阻止，请稍后再试</string>
     <string name="no_fingerprints_registered">您还没有注册指纹，请先给你的设备添加一些指纹</string>
     <string name="go_to_settings">去设置</string>
-    <string name="protection_setup_successfully">密码设置成功。为防止遗忘，请重新安装本应用。</string>
-    <string name="fingerprint_setup_successfully">指纹保护设置成功。请重新安装本应用，以防重设时出现问题。</string>
+    <string name="protection_setup_successfully">密码设置成功。如果你不慎遗忘了，请重新安装本应用。</string>
+    <string name="fingerprint_setup_successfully">指纹保护设置成功。如果出现问题，请重新安装本应用。</string>
 
     <!-- Times -->
     <plurals name="seconds">
