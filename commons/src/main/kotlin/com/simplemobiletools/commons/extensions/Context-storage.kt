@@ -213,7 +213,7 @@ fun Context.updateLastModified(file: File) {
 
 // avoid these being set as SD card paths
 private val physicalPaths = arrayListOf(
-        "/storage/sdcard1", // Motorola Xoom
+        "/storage/sdcard0", "/storage/sdcard1", // Motorola Xoom
         "/storage/extsdcard", // Samsung SGS3
         "/storage/sdcard0/external_sdcard", // User request
         "/mnt/extsdcard", "/mnt/sdcard/external_sd", // Samsung galaxy family
