@@ -58,6 +58,8 @@ class LicenseActivity : BaseSimpleActivity() {
                     License(LICENSE_OTTO, R.string.otto_title, R.string.otto_text, R.string.otto_url),
                     License(LICENSE_PHOTOVIEW, R.string.photoview_title, R.string.photoview_text, R.string.photoview_url),
                     License(LICENSE_PICASSO, R.string.picasso_title, R.string.picasso_text, R.string.picasso_url),
-                    License(LICENSE_PATTERN, R.string.pattern_title, R.string.pattern_text, R.string.pattern_url)
+                    License(LICENSE_PATTERN, R.string.pattern_title, R.string.pattern_text, R.string.pattern_url),
+                    License(LICENSE_REPRINT, R.string.reprint_title, R.string.reprint_text, R.string.reprint_url),
+                    License(LICENSE_GIF_DRAWABLE, R.string.gif_drawable_title, R.string.gif_drawable_text, R.string.gif_drawable_url)
             )
 }

@@ -234,6 +234,8 @@
     <string name="joda_title">Joda-Time (remplacement de date Java)</string>
     <string name="stetho_title">Stetho (débogage de bases de données)</string>
     <string name="otto_title">Otto (bus d\'évenement)</string>
-    <string name="photoview_title">PhotoView (gifs zoomables)</string>
+    <string name="photoview_title">PhotoView (GIFs zoomables)</string>
     <string name="pattern_title">PatternLockView (protection de modèle)</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
 </resources>

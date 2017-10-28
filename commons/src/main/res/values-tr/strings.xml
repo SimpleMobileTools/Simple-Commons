@@ -234,6 +234,8 @@
     <string name="joda_title">Joda-Zaman (Java tarihinin değiştirilmesi)</string>
     <string name="stetho_title">Stetho (hata ayıklama veritabanları)</string>
     <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">Fotoğraf Görüntüleme (yakınlaştırılabilen gif\'ler)</string>
+    <string name="photoview_title">Fotoğraf Görüntüleme (yakınlaştırılabilen GIF\'ler)</string>
     <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
 </resources>
