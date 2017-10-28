@@ -3,7 +3,6 @@ package com.simplemobiletools.commons.extensions
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
-import android.database.sqlite.SQLiteConstraintException
 import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Environment
@@ -182,7 +181,7 @@ fun Context.deleteFromMediaStore(file: File): Boolean {
     return contentResolver.delete(getFileUri(file), where, args) == 1
 }
 
-fun Context.updateInMediaStore(oldFile: File, newFile: File): Boolean {
+fun Context.updateInMediaStore(oldFile: File, newFile: File) {
     val values = ContentValues().apply {
         put(MediaStore.MediaColumns.DATA, newFile.absolutePath)
         put(MediaStore.MediaColumns.DISPLAY_NAME, newFile.name)
@@ -192,10 +191,23 @@ fun Context.updateInMediaStore(oldFile: File, newFile: File): Boolean {
     val selection = "${MediaStore.MediaColumns.DATA} = ?"
     val selectionArgs = arrayOf(oldFile.absolutePath)
 
-    return try {
-        contentResolver.update(uri, values, selection, selectionArgs) == 1
-    } catch (e: SQLiteConstraintException) {
-        false
+    try {
+        contentResolver.update(uri, values, selection, selectionArgs)
+    } catch (ignored: Exception) {
+    }
+}
+
+fun Context.updateLastModified(file: File) {
+    val values = ContentValues().apply {
+        put(MediaStore.MediaColumns.DATE_MODIFIED, System.currentTimeMillis())
+    }
+    val uri = getFileUri(file)
+    val selection = "${MediaStore.MediaColumns.DATA} = ?"
+    val selectionArgs = arrayOf(file.absolutePath)
+
+    try {
+        contentResolver.update(uri, values, selection, selectionArgs)
+    } catch (ignored: Exception) {
     }
 }
 
