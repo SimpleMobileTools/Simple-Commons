@@ -6,7 +6,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getSharedPrefs
 
 open class BaseConfig(val context: Context) {
-    private val prefs: SharedPreferences = context.getSharedPrefs()
+    protected val prefs: SharedPreferences = context.getSharedPrefs()
 
     companion object {
         fun newInstance(context: Context) = BaseConfig(context)
