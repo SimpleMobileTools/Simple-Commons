@@ -6,7 +6,6 @@ import android.content.Context
 import android.database.sqlite.SQLiteConstraintException
 import android.media.MediaScannerConnection
 import android.net.Uri
-import android.os.Build
 import android.os.Environment
 import android.provider.DocumentsContract
 import android.provider.MediaStore
@@ -28,13 +27,14 @@ fun Context.getSDCardPath(): String {
 
 fun Context.hasExternalSDCard() = sdCardPath.isNotEmpty()
 
+@SuppressLint("NewApi")
 fun Context.getStorageDirectories(): Array<String> {
     val paths = HashSet<String>()
     val rawExternalStorage = System.getenv("EXTERNAL_STORAGE")
     val rawSecondaryStoragesStr = System.getenv("SECONDARY_STORAGE")
     val rawEmulatedStorageTarget = System.getenv("EMULATED_STORAGE_TARGET")
     if (TextUtils.isEmpty(rawEmulatedStorageTarget)) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        if (isMarshmallowPlus()) {
             getExternalFilesDirs(null).filterNotNull().map { it.absolutePath }
                     .mapTo(paths) { it.substring(0, it.indexOf("Android/data")) }
         } else {
@@ -86,7 +86,7 @@ fun Context.humanizePath(path: String): String {
         path.replaceFirst(basePath, getHumanReadablePath(basePath))
 }
 
-fun Context.getInternalStoragePath() = Environment.getExternalStorageDirectory().toString().trimEnd('/')
+fun Context.getInternalStoragePath() = Environment.getExternalStorageDirectory().absolutePath.trimEnd('/')
 
 fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWith(sdCardPath)
 
