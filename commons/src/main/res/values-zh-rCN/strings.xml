@@ -7,7 +7,7 @@
     <string name="invalid_file_format">无效文件格式</string>
     <string name="no_storage_permissions">请授予权限以访问您的存储器</string>
     <string name="out_of_memory_error">内存不足</string>
-    <string name="an_error_occurred">An error occurred: %s</string>
+    <string name="an_error_occurred">啊哦，出错啦: %s</string>
 
     <!-- Renaming -->
     <string name="rename_file">重命名文件</string>
@@ -46,8 +46,8 @@
     <string name="copying_success_partial">无法复制相同文件</string>
     <string name="no_files_selected">未选择文件</string>
     <string name="saving">正在保存&#8230;</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="could_not_create_folder">创建文件夹 %s 失败</string>
+    <string name="could_not_create_file">创建文件 %s 失败</string>
 
     <!-- Create new -->
     <string name="create_new">新建</string>
@@ -74,7 +74,7 @@
     <string name="confirm_storage_access_title">确认外部存储器访问权限</string>
     <string name="confirm_storage_access_text">请选择 SD 卡根目录并授予写权限</string>
     <string name="confirm_storage_access_text_sd">如果您未找到 SD 卡目录，请尝试</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_selection">确认选择</string>
 
     <plurals name="items">
         <item quantity="one">%1$d 项目</item>
@@ -136,7 +136,7 @@
     <string name="hide_folder">隐藏文件夹</string>
     <string name="unhide_folder">取消隐藏文件夹</string>
     <string name="temporarily_show_hidden">显示／隐藏缓存内容</string>
-    <string name="stop_showing_hidden">Stop showing hidden media</string>
+    <string name="stop_showing_hidden">不显示隐藏的媒体文件</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序方式</string>
@@ -157,49 +157,49 @@
     <string name="no">否</string>
 
     <!-- Password protection -->
-    <string name="pin">PIN</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
-    <string name="repeat_pin">Repeat PIN</string>
-    <string name="pattern">Pattern</string>
-    <string name="insert_pattern">Insert pattern</string>
-    <string name="wrong_pattern">Wrong pattern</string>
-    <string name="repeat_pattern">Repeat pattern</string>
-    <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
-    <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
-    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="pin">密码</string>
+    <string name="enter_pin">输入密码</string>
+    <string name="please_enter_pin">请输入密码</string>
+    <string name="wrong_pin">密码错误</string>
+    <string name="repeat_pin">重复密码</string>
+    <string name="pattern">图案</string>
+    <string name="insert_pattern">绘制图案</string>
+    <string name="wrong_pattern">图案错误</string>
+    <string name="repeat_pattern">重复图案</string>
+    <string name="fingerprint">指纹</string>
+    <string name="add_fingerprint">添加指纹</string>
+    <string name="place_finger">请将手指放在指纹传感器上</string>
+    <string name="authentication_failed">验证失败</string>
+    <string name="authentication_blocked">验证已被阻止，请稍后再试</string>
+    <string name="no_fingerprints_registered">您还没有注册指纹，请先给你的设备添加一些指纹</string>
+    <string name="go_to_settings">去设置</string>
+    <string name="protection_setup_successfully">密码设置成功。为防止遗忘，请重新安装本应用。</string>
+    <string name="fingerprint_setup_successfully">指纹保护设置成功。请重新安装本应用，以防重设时出现问题。</string>
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d second</item>
-        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">%1$d 秒</item>
+        <item quantity="other">%1$d 秒</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minute</item>
-        <item quantity="other">%1$d minutes</item>
+        <item quantity="one">%1$d 分钟</item>
+        <item quantity="other">%1$d 分钟</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d hour</item>
-        <item quantity="other">%1$d hours</item>
+        <item quantity="one">%1$d 小时</item>
+        <item quantity="other">%1$d 小时</item>
     </plurals>
 
     <!-- Settings -->
     <string name="settings">设置</string>
     <string name="customize_colors">自定义颜色</string>
     <string name="show_hidden">显示隐藏文件和文件夹</string>
-    <string name="font_size">Font size</string>
-    <string name="small">Small</string>
-    <string name="medium">Medium</string>
-    <string name="large">Large</string>
-    <string name="extra_large">Extra large</string>
-    <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
+    <string name="font_size">字体大小</string>
+    <string name="small">小</string>
+    <string name="medium">中</string>
+    <string name="large">大</string>
+    <string name="extra_large">巨大</string>
+    <string name="password_protect_hidden_items">使用密码保护隐藏项</string>
 
     <!-- About -->
     <string name="about">关于</string>
@@ -216,7 +216,7 @@
     <string name="follow_us">关注我们：</string>
     <string name="copyright">v %1$s Copyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">额外信息</string>
-    <string name="gruveo">Are you looking for a simple and anonymous video calling app? Try out my other project</string>
+    <string name="gruveo">你在寻找一个简单而匿名的视频通话应用吗？请尝试我的另一个项目</string>
     <string name="app_version">应用版本：%1$s</string>
     <string name="device_os">设备系统：%1$s</string>
     <string name="donate_please">您已使用此应用一段时间了。\n\n可您知道么，我并不就职于一个大公司。开发应用耗时耗力，且我想依旧保持免费，您的捐赠会给我更多动力。\n\n您可以通过购买付费应用 Simple Thank You 或捐赠比特币来支持我。\n\n更多信息请查阅 http://simplemobiletools.com/donate.\n\n非常感谢！</string>
