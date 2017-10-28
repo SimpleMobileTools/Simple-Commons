@@ -6,7 +6,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getSharedPrefs
 
 open class BaseConfig(val context: Context) {
-    protected val prefs: SharedPreferences = context.getSharedPrefs()
+    private val prefs: SharedPreferences = context.getSharedPrefs()
 
     companion object {
         fun newInstance(context: Context) = BaseConfig(context)
@@ -75,4 +75,8 @@ open class BaseConfig(val context: Context) {
     var protectionType: Int
         get() = prefs.getInt(PROTECTION_TYPE, PROTECTION_PATTERN)
         set(protectionType) = prefs.edit().putInt(PROTECTION_TYPE, protectionType).apply()
+
+    var keepLastModified: Boolean
+        get() = prefs.getBoolean(KEEP_LAST_MODIFIED, false)
+        set(keepLastModified) = prefs.edit().putBoolean(KEEP_LAST_MODIFIED, keepLastModified).apply()
 }

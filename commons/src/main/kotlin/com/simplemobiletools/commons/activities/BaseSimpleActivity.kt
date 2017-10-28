@@ -166,6 +166,9 @@ open class BaseSimpleActivity : AppCompatActivity() {
                     for (oldFile in files) {
                         val newFile = File(destinationFolder, oldFile.name)
                         if (!newFile.exists() && oldFile.renameTo(newFile)) {
+                            if (!baseConfig.keepLastModified) {
+                                newFile.setLastModified(System.currentTimeMillis())
+                            }
                             updateInMediaStore(oldFile, newFile)
                             updatedFiles.add(newFile)
                         }

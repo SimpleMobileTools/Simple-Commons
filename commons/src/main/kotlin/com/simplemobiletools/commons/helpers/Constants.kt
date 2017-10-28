@@ -22,6 +22,7 @@ val WIDGET_TEXT_COLOR = "widget_text_color"
 val IS_PASSWORD_PROTECTION = "password_protection"
 val PASSWORD_HASH = "password_hash"
 val PROTECTION_TYPE = "protection_type"
+val KEEP_LAST_MODIFIED = "keep_last_modified"
 
 // licenses
 val LICENSE_KOTLIN = 1

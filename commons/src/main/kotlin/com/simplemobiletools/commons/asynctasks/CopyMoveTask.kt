@@ -106,29 +106,10 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
             if (source.length() == destination.length()) {
                 mMovedFiles.add(source)
-                val projection = arrayOf(
-                        MediaStore.Images.Media.DATE_TAKEN,
-                        MediaStore.Images.Media.DATE_MODIFIED)
-                val uri = MediaStore.Files.getContentUri("external")
-                val selection = "${MediaStore.MediaColumns.DATA} = ?"
-                var selectionArgs = arrayOf(source.absolutePath)
-                val cursor = activity.contentResolver.query(uri, projection, selection, selectionArgs, null)
-
-                cursor?.use {
-                    if (cursor.moveToFirst()) {
-                        val dateTaken = cursor.getLongValue(MediaStore.Images.Media.DATE_TAKEN)
-                        val dateModified = cursor.getIntValue(MediaStore.Images.Media.DATE_MODIFIED)
-
-                        val values = ContentValues().apply {
-                            put(MediaStore.Images.Media.DATE_TAKEN, dateTaken)
-                            put(MediaStore.Images.Media.DATE_MODIFIED, dateModified)
-                        }
-
-                        selectionArgs = arrayOf(destination.absolutePath)
-                        activity.scanFile(destination) {
-                            activity.contentResolver.update(uri, values, selection, selectionArgs)
-                        }
-                    }
+                if (activity.baseConfig.keepLastModified) {
+                    copyOldLastModified(source, destination)
+                } else {
+                    activity.scanFile(destination) {}
                 }
             }
         } finally {
@@ -144,6 +125,33 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             listener.copySucceeded(copyOnly, mMovedFiles.size >= mFiles.size)
         } else {
             listener.copyFailed()
+        }
+    }
+
+    private fun copyOldLastModified(source: File, destination: File) {
+        val projection = arrayOf(
+                MediaStore.Images.Media.DATE_TAKEN,
+                MediaStore.Images.Media.DATE_MODIFIED)
+        val uri = MediaStore.Files.getContentUri("external")
+        val selection = "${MediaStore.MediaColumns.DATA} = ?"
+        var selectionArgs = arrayOf(source.absolutePath)
+        val cursor = activity.contentResolver.query(uri, projection, selection, selectionArgs, null)
+
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                val dateTaken = cursor.getLongValue(MediaStore.Images.Media.DATE_TAKEN)
+                val dateModified = cursor.getIntValue(MediaStore.Images.Media.DATE_MODIFIED)
+
+                val values = ContentValues().apply {
+                    put(MediaStore.Images.Media.DATE_TAKEN, dateTaken)
+                    put(MediaStore.Images.Media.DATE_MODIFIED, dateModified)
+                }
+
+                selectionArgs = arrayOf(destination.absolutePath)
+                activity.scanFile(destination) {
+                    activity.contentResolver.update(uri, values, selection, selectionArgs)
+                }
+            }
         }
     }
 
