@@ -77,6 +77,6 @@ open class BaseConfig(val context: Context) {
         set(protectionType) = prefs.edit().putInt(PROTECTION_TYPE, protectionType).apply()
 
     var keepLastModified: Boolean
-        get() = prefs.getBoolean(KEEP_LAST_MODIFIED, false)
+        get() = prefs.getBoolean(KEEP_LAST_MODIFIED, true)
         set(keepLastModified) = prefs.edit().putBoolean(KEEP_LAST_MODIFIED, keepLastModified).apply()
 }
