@@ -23,6 +23,7 @@ import com.simplemobiletools.commons.dialogs.WhatsNewDialog
 import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.helpers.IS_FROM_GALLERY
 import com.simplemobiletools.commons.helpers.REAL_FILE_PATH
+import com.simplemobiletools.commons.helpers.REQUEST_SET_AS
 import com.simplemobiletools.commons.models.Release
 import java.io.File
 import java.io.FileOutputStream
@@ -102,14 +103,13 @@ fun Activity.launchViewIntent(url: String) {
 }
 
 fun Activity.shareUri(uri: Uri, applicationId: String) {
-    val shareTitle = resources.getString(R.string.share_via)
     Intent().apply {
         action = Intent.ACTION_SEND
         putExtra(Intent.EXTRA_STREAM, ensurePublicUri(uri, applicationId))
         type = getMimeTypeFromUri(uri)
         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         if (resolveActivity(packageManager) != null) {
-            startActivity(Intent.createChooser(this, shareTitle))
+            startActivity(Intent.createChooser(this, getString(R.string.share_via)))
         } else {
             toast(R.string.no_app_found)
         }
@@ -118,7 +118,6 @@ fun Activity.shareUri(uri: Uri, applicationId: String) {
 
 fun Activity.shareUris(uris: ArrayList<Uri>, applicationId: String) {
     val newUris = uris.map { ensurePublicUri(it, applicationId) } as ArrayList<Uri>
-    val shareTitle = resources.getString(R.string.share_via)
     Intent().apply {
         action = Intent.ACTION_SEND_MULTIPLE
         type = newUris.getMimeType()
@@ -127,10 +126,26 @@ fun Activity.shareUris(uris: ArrayList<Uri>, applicationId: String) {
 
         if (resolveActivity(packageManager) != null) {
             try {
-                startActivity(Intent.createChooser(this, shareTitle))
+                startActivity(Intent.createChooser(this, getString(R.string.share_via)))
             } catch (e: TransactionTooLargeException) {
                 toast(R.string.maximum_share_reached)
             }
+        } else {
+            toast(R.string.no_app_found)
+        }
+    }
+}
+
+fun Activity.setAs(uri: Uri, applicationId: String) {
+    val newUri = ensurePublicUri(uri, applicationId)
+    Intent().apply {
+        action = Intent.ACTION_ATTACH_DATA
+        setDataAndType(newUri, getMimeTypeFromUri(newUri))
+        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        val chooser = Intent.createChooser(this, getString(R.string.set_as))
+
+        if (resolveActivity(packageManager) != null) {
+            startActivityForResult(chooser, REQUEST_SET_AS)
         } else {
             toast(R.string.no_app_found)
         }
@@ -296,6 +311,7 @@ fun BaseSimpleActivity.deleteFile(file: File, allowDeleteFolder: Boolean = false
     }
 }
 
+@SuppressLint("NewApi")
 fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = false, callback: (wasSuccess: Boolean) -> Unit) {
     var fileDeleted = !file.exists() || file.delete()
     if (fileDeleted) {
@@ -352,6 +368,7 @@ private fun deleteRecursively(file: File): Boolean {
     return file.delete()
 }
 
+@SuppressLint("NewApi")
 fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (success: Boolean) -> Unit) {
     if (needsStupidWritePermissions(newFile.absolutePath)) {
         handleSAFDialog(newFile) {
