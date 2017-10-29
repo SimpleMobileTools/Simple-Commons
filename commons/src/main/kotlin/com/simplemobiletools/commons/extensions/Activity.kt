@@ -108,7 +108,11 @@ fun Activity.shareUri(uri: Uri, applicationId: String) {
         putExtra(Intent.EXTRA_STREAM, ensurePublicUri(uri, applicationId))
         type = getMimeTypeFromUri(uri)
         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-        startActivity(Intent.createChooser(this, shareTitle))
+        if (resolveActivity(packageManager) != null) {
+            startActivity(Intent.createChooser(this, shareTitle))
+        } else {
+            toast(R.string.no_app_found)
+        }
     }
 }
 
@@ -120,10 +124,15 @@ fun Activity.shareUris(uris: ArrayList<Uri>, applicationId: String) {
         type = newUris.getMimeType()
         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         putParcelableArrayListExtra(Intent.EXTRA_STREAM, newUris)
-        try {
-            startActivity(Intent.createChooser(this, shareTitle))
-        } catch (e: TransactionTooLargeException) {
-            toast(R.string.maximum_share_reached)
+
+        if (resolveActivity(packageManager) != null) {
+            try {
+                startActivity(Intent.createChooser(this, shareTitle))
+            } catch (e: TransactionTooLargeException) {
+                toast(R.string.maximum_share_reached)
+            }
+        } else {
+            toast(R.string.no_app_found)
         }
     }
 }
