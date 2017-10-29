@@ -9,6 +9,7 @@ import android.net.Uri
 import android.os.Looper
 import android.os.TransactionTooLargeException
 import android.provider.DocumentsContract
+import android.provider.MediaStore
 import android.support.v4.provider.DocumentFile
 import android.view.View
 import android.view.WindowManager
@@ -23,6 +24,7 @@ import com.simplemobiletools.commons.dialogs.WhatsNewDialog
 import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.helpers.IS_FROM_GALLERY
 import com.simplemobiletools.commons.helpers.REAL_FILE_PATH
+import com.simplemobiletools.commons.helpers.REQUEST_EDIT_IMAGE
 import com.simplemobiletools.commons.helpers.REQUEST_SET_AS
 import com.simplemobiletools.commons.models.Release
 import java.io.File
@@ -146,6 +148,25 @@ fun Activity.setAs(uri: Uri, applicationId: String) {
 
         if (resolveActivity(packageManager) != null) {
             startActivityForResult(chooser, REQUEST_SET_AS)
+        } else {
+            toast(R.string.no_app_found)
+        }
+    }
+}
+
+fun Activity.openEditor(uri: Uri, applicationId: String) {
+    val newUri = ensurePublicUri(uri, applicationId)
+    Intent().apply {
+        action = Intent.ACTION_EDIT
+        setDataAndType(newUri, getMimeTypeFromUri(newUri))
+        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+
+        if (isNougatPlus()) {
+            putExtra(MediaStore.EXTRA_OUTPUT, uri)
+        }
+
+        if (resolveActivity(packageManager) != null) {
+            startActivityForResult(this, REQUEST_EDIT_IMAGE)
         } else {
             toast(R.string.no_app_found)
         }

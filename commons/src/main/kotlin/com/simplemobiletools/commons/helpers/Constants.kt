@@ -45,6 +45,7 @@ val LICENSE_GIF_DRAWABLE = 8192
 // global intents
 val OPEN_DOCUMENT_TREE = 1000
 val REQUEST_SET_AS = 1001
+val REQUEST_EDIT_IMAGE = 1002
 
 // sorting
 val SORT_BY_NAME = 1
