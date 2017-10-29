@@ -7,6 +7,7 @@ import android.content.Intent
 import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Looper
+import android.os.TransactionTooLargeException
 import android.provider.DocumentsContract
 import android.support.v4.provider.DocumentFile
 import android.view.View
@@ -98,6 +99,33 @@ fun Activity.launchViewIntent(id: Int) = launchViewIntent(resources.getString(id
 fun Activity.launchViewIntent(url: String) {
     val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
     startActivity(browserIntent)
+}
+
+fun Activity.shareUri(uri: Uri, applicationId: String) {
+    val shareTitle = resources.getString(R.string.share_via)
+    Intent().apply {
+        action = Intent.ACTION_SEND
+        putExtra(Intent.EXTRA_STREAM, ensurePublicUri(uri, applicationId))
+        type = getMimeTypeFromUri(uri)
+        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        startActivity(Intent.createChooser(this, shareTitle))
+    }
+}
+
+fun Activity.shareUris(uris: ArrayList<Uri>, applicationId: String) {
+    val newUris = uris.map { ensurePublicUri(it, applicationId) } as ArrayList<Uri>
+    val shareTitle = resources.getString(R.string.share_via)
+    Intent().apply {
+        action = Intent.ACTION_SEND_MULTIPLE
+        type = newUris.getMimeType()
+        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        putParcelableArrayListExtra(Intent.EXTRA_STREAM, newUris)
+        try {
+            startActivity(Intent.createChooser(this, shareTitle))
+        } catch (e: TransactionTooLargeException) {
+            toast(R.string.maximum_share_reached)
+        }
+    }
 }
 
 fun Activity.openFile(uri: Uri, forceChooser: Boolean, applicationId: String) {
