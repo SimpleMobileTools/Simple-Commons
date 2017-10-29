@@ -131,7 +131,7 @@ class PropertiesDialog() {
         addProperty(R.string.files_count, "...", R.id.properties_file_count)
 
         Thread({
-            val size = files.sumByLong { getItemSize(it) }
+            val size = files.sumByLong { getItemSize(it) }.formatSize()
             activity.runOnUiThread {
                 view.findViewById<TextView>(R.id.properties_size).property_value.text = size.toString()
                 view.findViewById<TextView>(R.id.properties_file_count).property_value.text = mFilesCnt.toString()
