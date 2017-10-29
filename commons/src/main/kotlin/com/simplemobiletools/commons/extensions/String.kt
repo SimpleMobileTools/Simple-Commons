@@ -101,6 +101,14 @@ fun String.getExifCameraModel(exif: ExifInterface): String {
     return ""
 }
 
+fun String.getGenericMimeType(): String {
+    if (!contains("/"))
+        return this
+
+    val type = substring(0, indexOf("/"))
+    return "$type/*"
+}
+
 fun String.getMimeTypeFromPath(): String {
     val typesMap = HashMap<String, String>().apply {
         put("323", "text/h323")

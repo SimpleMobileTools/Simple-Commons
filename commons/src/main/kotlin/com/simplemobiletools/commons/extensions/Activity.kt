@@ -20,6 +20,8 @@ import com.simplemobiletools.commons.dialogs.DonateDialog
 import com.simplemobiletools.commons.dialogs.SecurityDialog
 import com.simplemobiletools.commons.dialogs.WhatsNewDialog
 import com.simplemobiletools.commons.dialogs.WritePermissionDialog
+import com.simplemobiletools.commons.helpers.IS_FROM_GALLERY
+import com.simplemobiletools.commons.helpers.REAL_FILE_PATH
 import com.simplemobiletools.commons.models.Release
 import java.io.File
 import java.io.FileOutputStream
@@ -96,6 +98,44 @@ fun Activity.launchViewIntent(id: Int) = launchViewIntent(resources.getString(id
 fun Activity.launchViewIntent(url: String) {
     val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
     startActivity(browserIntent)
+}
+
+fun Activity.openFile(uri: Uri, forceChooser: Boolean, applicationId: String) {
+    val newUri = ensurePublicUri(uri, applicationId)
+    val mimeType = getMimeTypeFromUri(newUri)
+    Intent().apply {
+        action = Intent.ACTION_VIEW
+        setDataAndType(newUri, mimeType)
+        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+
+        if (applicationId == "com.simplemobiletools.gallery") {
+            putExtra(IS_FROM_GALLERY, true)
+        }
+
+        if (isNougatPlus()) {
+            putExtra(REAL_FILE_PATH, uri)
+        }
+
+        if (resolveActivity(packageManager) != null) {
+            val chooser = Intent.createChooser(this, getString(R.string.open_with))
+            startActivity(if (forceChooser) chooser else this)
+        } else {
+            if (!tryGenericMimeType(this, mimeType, uri)) {
+                toast(R.string.no_app_found)
+            }
+        }
+    }
+}
+
+fun Activity.tryGenericMimeType(intent: Intent, mimeType: String, uri: Uri): Boolean {
+    val genericMimeType = mimeType.getGenericMimeType()
+    intent.setDataAndType(uri, genericMimeType)
+    return if (intent.resolveActivity(packageManager) != null) {
+        startActivity(intent)
+        true
+    } else {
+        false
+    }
 }
 
 fun BaseSimpleActivity.checkWhatsNew(releases: List<Release>, currVersion: Int) {

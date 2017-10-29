@@ -193,6 +193,26 @@ fun Context.getFilenameFromUri(uri: Uri): String {
     }
 }
 
+fun Context.getMimeTypeFromUri(uri: Uri): String {
+    var mimetype = uri.path.getMimeTypeFromPath()
+    if (mimetype.isEmpty()) {
+        try {
+            mimetype = contentResolver.getType(uri)
+        } catch (e: IllegalStateException) {
+        }
+    }
+    return mimetype
+}
+
+fun Context.ensurePublicUri(uri: Uri, applicationId: String): Uri {
+    return if (uri.scheme == "content") {
+        uri
+    } else {
+        val file = File(uri.path)
+        getFilePublicUri(file, applicationId)
+    }
+}
+
 fun Context.getFilenameFromContentUri(uri: Uri): String? {
     var cursor: Cursor? = null
     try {

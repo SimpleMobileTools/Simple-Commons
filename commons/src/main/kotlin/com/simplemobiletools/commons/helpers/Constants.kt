@@ -4,6 +4,7 @@ val APP_NAME = "app_name"
 val APP_LICENSES = "app_licenses"
 val APP_VERSION_NAME = "app_version_name"
 val REAL_FILE_PATH = "real_file_path"
+val IS_FROM_GALLERY = "is_from_gallery"
 
 // shared preferences
 val PREFS_KEY = "Prefs"
