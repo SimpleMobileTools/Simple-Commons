@@ -105,10 +105,11 @@ fun Activity.launchViewIntent(url: String) {
 }
 
 fun Activity.shareUri(uri: Uri, applicationId: String) {
+    val newUri = ensurePublicUri(uri, applicationId)
     Intent().apply {
         action = Intent.ACTION_SEND
-        putExtra(Intent.EXTRA_STREAM, ensurePublicUri(uri, applicationId))
-        type = getMimeTypeFromUri(uri)
+        putExtra(Intent.EXTRA_STREAM, newUri)
+        type = getMimeTypeFromUri(newUri)
         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         if (resolveActivity(packageManager) != null) {
             startActivity(Intent.createChooser(this, getString(R.string.share_via)))
@@ -162,7 +163,7 @@ fun Activity.openEditor(uri: Uri, applicationId: String) {
         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
         if (isNougatPlus()) {
-            putExtra(MediaStore.EXTRA_OUTPUT, uri)
+            putExtra(MediaStore.EXTRA_OUTPUT, newUri)
         }
 
         if (resolveActivity(packageManager) != null) {
@@ -186,14 +187,14 @@ fun Activity.openFile(uri: Uri, forceChooser: Boolean, applicationId: String) {
         }
 
         if (isNougatPlus()) {
-            putExtra(REAL_FILE_PATH, uri)
+            putExtra(REAL_FILE_PATH, newUri)
         }
 
         if (resolveActivity(packageManager) != null) {
             val chooser = Intent.createChooser(this, getString(R.string.open_with))
             startActivity(if (forceChooser) chooser else this)
         } else {
-            if (!tryGenericMimeType(this, mimeType, uri)) {
+            if (!tryGenericMimeType(this, mimeType, newUri)) {
                 toast(R.string.no_app_found)
             }
         }
