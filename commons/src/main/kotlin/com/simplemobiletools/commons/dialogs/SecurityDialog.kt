@@ -24,7 +24,7 @@ class SecurityDialog(val activity: BaseSimpleActivity, val requiredHash: String,
 
     init {
         view.apply {
-            viewPager = findViewById(R.id.dialog_tab_view_pager) as MyDialogViewPager
+            viewPager = findViewById(R.id.dialog_tab_view_pager)
             viewPager.offscreenPageLimit = 2
             tabsAdapter = PasswordTypesAdapter(context, requiredHash, this@SecurityDialog)
             viewPager.adapter = tabsAdapter

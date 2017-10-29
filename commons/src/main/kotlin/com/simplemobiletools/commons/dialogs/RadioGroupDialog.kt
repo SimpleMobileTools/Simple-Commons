@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
 import android.support.v7.app.AlertDialog
+import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.RadioGroup
@@ -44,7 +45,7 @@ class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, 
         if (selectedItemId != -1) {
             view.dialog_radio_holder.apply {
                 onGlobalLayout {
-                    scrollY = view.dialog_radio_group.findViewById(selectedItemId).bottom - height
+                    scrollY = view.dialog_radio_group.findViewById<View>(selectedItemId).bottom - height
                 }
             }
         }

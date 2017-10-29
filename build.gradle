@@ -26,12 +26,12 @@ task clean(type: Delete) {
 }
 
 ext {
-    propBuildToolsVersion = '25.0.0'
-    propCompileSdkVersion = 25
+    propBuildToolsVersion = '26.0.2'
+    propCompileSdkVersion = 26
     propMinSdkVersion = 16
     propTargetSdkVersion = propCompileSdkVersion
     propVersionCode = 1
     propVersionName = '2.33.0'
     kotlin_version = '1.1.51'
-    support_libs = '25.3.1'
+    support_libs = '26.0.2'
 }

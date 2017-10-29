@@ -46,10 +46,10 @@ class PropertiesDialog() {
         Thread({
             val size = getItemSize(file).formatSize()
             activity.runOnUiThread {
-                (view.findViewById(R.id.properties_size).property_value as TextView).text = size
+                view.findViewById<TextView>(R.id.properties_size).property_value.text = size
 
                 if (file.isDirectory) {
-                    (view.findViewById(R.id.properties_file_count).property_value as TextView).text = mFilesCnt.toString()
+                    view.findViewById<TextView>(R.id.properties_file_count).property_value.text = mFilesCnt.toString()
                 }
             }
 
@@ -63,7 +63,7 @@ class PropertiesDialog() {
                     if (cursor.moveToFirst()) {
                         val dateModified = cursor.getIntValue(MediaStore.Images.Media.DATE_MODIFIED)
                         activity.runOnUiThread {
-                            (view.findViewById(R.id.properties_last_modified).property_value as TextView).text = (dateModified * 1000L).formatLastModified()
+                            view.findViewById<TextView>(R.id.properties_last_modified).property_value.text = (dateModified * 1000L).formatLastModified()
                         }
                     }
                 }
@@ -133,8 +133,8 @@ class PropertiesDialog() {
         Thread({
             val size = files.sumByLong { getItemSize(it) }
             activity.runOnUiThread {
-                (view.findViewById(R.id.properties_size).property_value as TextView).text = size.toString()
-                (view.findViewById(R.id.properties_file_count).property_value as TextView).text = mFilesCnt.toString()
+                view.findViewById<TextView>(R.id.properties_size).property_value.text = size.toString()
+                view.findViewById<TextView>(R.id.properties_file_count).property_value.text = mFilesCnt.toString()
             }
         }).start()
 
