@@ -163,7 +163,7 @@ fun Activity.openEditor(uri: Uri, applicationId: String) {
         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
         if (isNougatPlus()) {
-            putExtra(MediaStore.EXTRA_OUTPUT, newUri)
+            putExtra(MediaStore.EXTRA_OUTPUT, uri)
         }
 
         if (resolveActivity(packageManager) != null) {
@@ -187,7 +187,7 @@ fun Activity.openFile(uri: Uri, forceChooser: Boolean, applicationId: String) {
         }
 
         if (isNougatPlus()) {
-            putExtra(REAL_FILE_PATH, newUri)
+            putExtra(REAL_FILE_PATH, uri)
         }
 
         if (resolveActivity(packageManager) != null) {
