@@ -137,10 +137,15 @@ fun Context.getLatestMediaId(uri: Uri = MediaStore.Images.Media.EXTERNAL_CONTENT
     return 0
 }
 
+@SuppressLint("NewApi")
 fun Context.getRealPathFromURI(uri: Uri): String? {
     val newUri = if (isKitkatPlus() && isDownloadsDocument(uri)) {
         val id = DocumentsContract.getDocumentId(uri)
-        ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), id.toLong())
+        if (id.areDigitsOnly()) {
+            ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), id.toLong())
+        } else {
+            uri
+        }
     } else {
         uri
     }
