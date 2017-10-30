@@ -140,7 +140,7 @@
     <string name="unhide_folder">取消隐藏文件夹</string>
     <string name="temporarily_show_hidden">显示／隐藏缓存内容</string>
     <string name="stop_showing_hidden">不显示隐藏的媒体文件</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
+    <string name="maximum_share_reached">您不能一次分享太多的内容</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序方式</string>
@@ -204,7 +204,7 @@
     <string name="large">大</string>
     <string name="extra_large">巨大</string>
     <string name="password_protect_hidden_items">使用密码保护隐藏项</string>
-    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
+    <string name="keep_last_modified">在复制/移动/重命名文件时保留旧的修改日期</string>
 
     <!-- About -->
     <string name="about">关于</string>
