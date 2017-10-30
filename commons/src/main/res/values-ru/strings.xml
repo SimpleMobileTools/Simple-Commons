@@ -77,7 +77,7 @@
     <string name="confirm_storage_access_title">Предоставление доступа к внешнему накопителю</string>
     <string name="confirm_storage_access_text">Чтобы предоставить право на запись, пожалуйста, выберите корневую папку SD-карты на следующем шаге</string>
     <string name="confirm_storage_access_text_sd">Если вы не видите SD-карту, попробуйте это</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_selection">Подтвердить выделение</string>
 
     <plurals name="items">
         <item quantity="one">%1$d объект</item>
@@ -140,7 +140,7 @@
     <string name="unhide_folder">Показать папку</string>
     <string name="temporarily_show_hidden">Временный показ скрытых</string>
     <string name="stop_showing_hidden">Не показывать скрытые медиа</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
+    <string name="maximum_share_reached">Слишком большое количество контента, чтобы поделиться им</string>
 
     <!-- Sorting -->
     <string name="sort_by">Сортировать по</string>
@@ -206,7 +206,7 @@
     <string name="large">Крупный</string>
     <string name="extra_large">Очень крупный</string>
     <string name="password_protect_hidden_items">Защита паролем отображения скрытых объектов</string>
-    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
+    <string name="keep_last_modified">Сохранять значение даты изменения файла при копировании/перемещении/переименовании</string>
 
     <!-- About -->
     <string name="about">О приложении</string>
@@ -243,6 +243,6 @@
     <string name="otto_title">Otto ("шина" событий)</string>
     <string name="photoview_title">PhotoView (масштабирование GIF)</string>
     <string name="pattern_title">PatternLockView (защита графическим ключом)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="reprint_title">Reprint (защита по отпечатку пальца)</string>
     <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
 </resources>
