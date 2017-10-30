@@ -140,7 +140,7 @@
     <string name="unhide_folder">Reexibir pasta</string>
     <string name="temporarily_show_hidden">Mostrar pastas ocultas temporariamente</string>
     <string name="stop_showing_hidden">Parar de exibir mídia oculta</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
+    <string name="maximum_share_reached">Não é possível compartilhar essa quantidade toda de arquivos de uma vez</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -204,7 +204,7 @@
     <string name="large">Grande</string>
     <string name="extra_large">Muito grande</string>
     <string name="password_protect_hidden_items">Proteja visibilidade de ítens ocultos com senha</string>
-    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
+    <string name="keep_last_modified">Manter valor anterior do arquivo modificado por último ao copiar/mover/renomear arquivo</string>
 
     <!-- About -->
     <string name="about">Sobre</string>
