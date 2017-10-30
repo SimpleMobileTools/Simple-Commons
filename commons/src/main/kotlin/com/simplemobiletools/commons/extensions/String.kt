@@ -291,7 +291,7 @@ fun String.getMimeTypeFromPath(): String {
         put("hxx", "text/plain")
         put("i", "text/plain")
         put("ico", "image/x-icon")
-        put("ics", "application/octet-stream")
+        put("ics", "text/calendar")
         put("idl", "text/plain")
         put("ief", "image/ief")
         put("iii", "application/x-iphone")
