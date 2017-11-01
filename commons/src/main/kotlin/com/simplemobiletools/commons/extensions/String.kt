@@ -37,6 +37,8 @@ fun String.isGif() = endsWith(".gif", true)
 
 fun String.isPng() = endsWith(".png", true)
 
+fun String.isJpg() = endsWith(".jpg", true) or endsWith(".jpeg")
+
 // fast extension checks, not guaranteed to be accurate
 fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }
 
