@@ -192,7 +192,7 @@ fun Context.getFilenameFromUri(uri: Uri): String {
     } else {
         var name = getFilenameFromContentUri(uri) ?: ""
         if (name.isEmpty()) {
-            name = uri.lastPathSegment
+            name = uri.lastPathSegment ?: ""
         }
         name
     }
