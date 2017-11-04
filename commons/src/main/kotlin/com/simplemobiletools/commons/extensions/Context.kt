@@ -141,6 +141,10 @@ fun Context.getLatestMediaId(uri: Uri = MediaStore.Images.Media.EXTERNAL_CONTENT
 // some helper functions were taken from https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ipaulpro/afilechooser/utils/FileUtils.java
 @SuppressLint("NewApi")
 fun Context.getRealPathFromURI(uri: Uri): String? {
+    if (uri.scheme == "file") {
+        return uri.path
+    }
+
     if (isKitkatPlus()) {
         if (isDownloadsDocument(uri)) {
             val id = DocumentsContract.getDocumentId(uri)
