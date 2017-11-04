@@ -140,7 +140,7 @@
     <string name="unhide_folder">Non nascondere cartella</string>
     <string name="temporarily_show_hidden">Mostra temporaneamente nascosti</string>
     <string name="stop_showing_hidden">Non mostrare media nascosti</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
+    <string name="maximum_share_reached">Non puoi condividere così tanto in una volta sola</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordina per</string>
@@ -204,7 +204,7 @@
     <string name="large">Grande</string>
     <string name="extra_large">Molto grande</string>
     <string name="password_protect_hidden_items">Proteggi con password gli elementi nascosti</string>
-    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
+    <string name="keep_last_modified">Mantieni valore di ultima modifica dopo il copia/sposta/rinomina</string>
 
     <!-- About -->
     <string name="about">Informazioni</string>
@@ -241,6 +241,6 @@
     <string name="otto_title">Otto (bus eventi)</string>
     <string name="photoview_title">PhotoView (GIF zoomabili)</string>
     <string name="pattern_title">PatternLockView (sequenza di protezione)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
-    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="reprint_title">Reprint (protezione impronta)</string>
+    <string name="gif_drawable_title">Gif Drawable (caricamento GIF)</string>
 </resources>
