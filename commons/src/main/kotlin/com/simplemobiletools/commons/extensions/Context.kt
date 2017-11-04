@@ -9,6 +9,7 @@ import android.database.Cursor
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
+import android.os.Environment
 import android.os.Looper
 import android.provider.BaseColumns
 import android.provider.DocumentsContract
@@ -137,23 +138,53 @@ fun Context.getLatestMediaId(uri: Uri = MediaStore.Images.Media.EXTERNAL_CONTENT
     return 0
 }
 
+// some helper functions were taken from https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ipaulpro/afilechooser/utils/FileUtils.java
 @SuppressLint("NewApi")
 fun Context.getRealPathFromURI(uri: Uri): String? {
-    val newUri = if (isKitkatPlus() && isDownloadsDocument(uri)) {
-        val id = DocumentsContract.getDocumentId(uri)
-        if (id.areDigitsOnly()) {
-            ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), id.toLong())
-        } else {
-            uri
+    if (isKitkatPlus()) {
+        if (isDownloadsDocument(uri)) {
+            val id = DocumentsContract.getDocumentId(uri)
+            if (id.areDigitsOnly()) {
+                val newUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), id.toLong())
+                val path = getDataColumn(newUri)
+                if (path != null) {
+                    return path
+                }
+            }
+        } else if (isExternalStorageDocument(uri)) {
+            val documentId = DocumentsContract.getDocumentId(uri)
+            val parts = documentId.split(":")
+            if (parts[0].equals("primary", true)) {
+                return "${Environment.getExternalStorageDirectory().absolutePath}/${parts[1]}"
+            }
+        } else if (isMediaDocument(uri)) {
+            val documentId = DocumentsContract.getDocumentId(uri)
+            val split = documentId.split(":").dropLastWhile { it.isEmpty() }.toTypedArray()
+            val type = split[0]
+
+            val contentUri = when (type) {
+                "video" -> MediaStore.Video.Media.EXTERNAL_CONTENT_URI
+                "audio" -> MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
+                else -> MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+            }
+
+            val selection = "_id=?"
+            val selectionArgs = arrayOf(split[1])
+            val path = getDataColumn(contentUri, selection, selectionArgs)
+            if (path != null) {
+                return path
+            }
         }
-    } else {
-        uri
     }
 
+    return getDataColumn(uri)
+}
+
+fun Context.getDataColumn(uri: Uri, selection: String? = null, selectionArgs: Array<String>? = null): String? {
     var cursor: Cursor? = null
     try {
         val projection = arrayOf(MediaStore.Images.Media.DATA)
-        cursor = contentResolver.query(newUri, projection, null, null, null)
+        cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
         if (cursor?.moveToFirst() == true) {
             return cursor.getStringValue(MediaStore.Images.Media.DATA)
         }
@@ -164,7 +195,11 @@ fun Context.getRealPathFromURI(uri: Uri): String? {
     return null
 }
 
+private fun isMediaDocument(uri: Uri) = uri.authority == "com.android.providers.media.documents"
+
 private fun isDownloadsDocument(uri: Uri) = uri.authority == "com.android.providers.downloads.documents"
+
+private fun isExternalStorageDocument(uri: Uri) = uri.authority == "com.android.externalstorage.documents"
 
 fun Context.hasPermission(permId: Int) = ContextCompat.checkSelfPermission(this, getPermissionString(permId)) == PackageManager.PERMISSION_GRANTED
 
