@@ -120,21 +120,25 @@ fun Activity.shareUri(uri: Uri, applicationId: String) {
 }
 
 fun Activity.shareUris(uris: ArrayList<Uri>, applicationId: String) {
-    val newUris = uris.map { ensurePublicUri(it, applicationId) } as ArrayList<Uri>
-    Intent().apply {
-        action = Intent.ACTION_SEND_MULTIPLE
-        type = newUris.getMimeType()
-        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-        putParcelableArrayListExtra(Intent.EXTRA_STREAM, newUris)
+    if (uris.size == 1) {
+        shareUri(uris.first(), applicationId)
+    } else {
+        val newUris = uris.map { ensurePublicUri(it, applicationId) } as ArrayList<Uri>
+        Intent().apply {
+            action = Intent.ACTION_SEND_MULTIPLE
+            type = newUris.getMimeType()
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            putParcelableArrayListExtra(Intent.EXTRA_STREAM, newUris)
 
-        if (resolveActivity(packageManager) != null) {
-            try {
-                startActivity(Intent.createChooser(this, getString(R.string.share_via)))
-            } catch (e: TransactionTooLargeException) {
-                toast(R.string.maximum_share_reached)
+            if (resolveActivity(packageManager) != null) {
+                try {
+                    startActivity(Intent.createChooser(this, getString(R.string.share_via)))
+                } catch (e: TransactionTooLargeException) {
+                    toast(R.string.maximum_share_reached)
+                }
+            } else {
+                toast(R.string.no_app_found)
             }
-        } else {
-            toast(R.string.no_app_found)
         }
     }
 }
