@@ -57,6 +57,7 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
                     is MyEditText -> it.setColors(textColor, accentColor, backgroundColor)
                     is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
                     is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor)
+                    is MyButton -> it.setColors(textColor, accentColor, backgroundColor)
                     is ViewGroup -> updateTextColors(it, textColor, accentColor)
                 }
             }
