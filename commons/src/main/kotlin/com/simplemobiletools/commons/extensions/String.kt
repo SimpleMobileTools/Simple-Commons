@@ -367,6 +367,7 @@ fun String.getMimeTypeFromPath(): String {
         put("midi", "audio/mid")
         put("mix", "application/octet-stream")
         put("mk", "text/plain")
+        put("mkv", "video/x-matroska")
         put("mmf", "application/x-smaf")
         put("mno", "text/xml")
         put("mny", "application/x-msmoney")
