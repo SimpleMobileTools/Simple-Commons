@@ -110,7 +110,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
             }
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if ((count == 1 && s.length == 6) || (count == 6 && before == 0) || (count == 6 && before == 5)) {
+                if (s.length == 6) {
                     val newColor = Color.parseColor("#$s")
                     Color.colorToHSV(newColor, currentColorHsv)
                     updateHue()
