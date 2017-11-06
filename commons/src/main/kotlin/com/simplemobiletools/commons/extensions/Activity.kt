@@ -69,7 +69,7 @@ fun Activity.storeStoragePaths() {
     }).start()
 
     baseConfig.appRunCount++
-    if (!isThankYouInstalled() && (baseConfig.appRunCount == 50 || baseConfig.appRunCount == 300 || baseConfig.appRunCount == 1000)) {
+    if (!isThankYouInstalled() && (baseConfig.appRunCount % 100 == 0)) {
         DonateDialog(this)
     }
 }
