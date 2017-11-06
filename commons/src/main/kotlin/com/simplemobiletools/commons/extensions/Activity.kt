@@ -165,10 +165,7 @@ fun Activity.openEditor(uri: Uri, applicationId: String) {
         action = Intent.ACTION_EDIT
         setDataAndType(newUri, getMimeTypeFromUri(newUri))
         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-
-        if (isNougatPlus()) {
-            putExtra(MediaStore.EXTRA_OUTPUT, uri)
-        }
+        putExtra(MediaStore.EXTRA_OUTPUT, uri)
 
         if (resolveActivity(packageManager) != null) {
             startActivityForResult(this, REQUEST_EDIT_IMAGE)
@@ -190,9 +187,7 @@ fun Activity.openFile(uri: Uri, forceChooser: Boolean, applicationId: String) {
             putExtra(IS_FROM_GALLERY, true)
         }
 
-        if (isNougatPlus()) {
-            putExtra(REAL_FILE_PATH, uri)
-        }
+        putExtra(REAL_FILE_PATH, uri)
 
         if (resolveActivity(packageManager) != null) {
             val chooser = Intent.createChooser(this, getString(R.string.open_with))
