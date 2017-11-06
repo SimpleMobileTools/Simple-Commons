@@ -224,7 +224,8 @@
     <string name="gruveo">登録不要のビデオ通話アプリをお探しですか? 私のアプリを試してみてください</string>
     <string name="app_version">アプリバージョン: %1$s</string>
     <string name="device_os">デバイスOS: %1$s</string>
-    <string name="donate_please">このアプリをしばらくご利用いただいているようです。\n\nこのアプリが大企業などの支援を受けていないことをご存知ですか? 開発には時間を費やしており、広告の掲載なしでの提供を維持するため、皆様にご支援いただければ幸いです。\n\n有料アプリ「Simple Thank You」のご購入、Paypal経由での送金、暗号通貨の送金によりご寄付いただけます。\n\n詳しくは、こちらをご覧ください: http://simplemobiletools.com/donate\n\nご協力いただきありがとうございます！</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
 
     <!-- License -->
     <string name="notice">このアプリは、私の暮らしにゆとりを持たせるために、次のサードパーティのライブラリーを使用しています。 ありがとうございます。</string>

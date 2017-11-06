@@ -224,7 +224,8 @@
     <string name="gruveo">Está a procura de um app simples e anônimo de chamada de vídeo? Experiemnte meus outros projetos</string>
     <string name="app_version">Versão do app: %1$s</string>
     <string name="device_os">Sistema operacional: %1$s</string>
-    <string name="donate_please">Olá,\n\nparece que você tem usado esse app por um tempinho.\n\nVocê sabia que ele não é custeado por nenhuma grande empresa? Desenvolvê-lo leva tempo, e quero evitar o uso de propagandas, logo sua ajuda seria muito bem vinda.\n\nVocê pode me ajudar comprando o app Simple Thank You, disponível na Play Store, ou me enviando dinheiro diretamente pelo Paypal, ou através de bitcoins.\n\nMais informações em http://simplemobiletools.com/donate.\n\nObrigado!</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
 
     <!-- License -->
     <string name="notice">Este aplicativo usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>

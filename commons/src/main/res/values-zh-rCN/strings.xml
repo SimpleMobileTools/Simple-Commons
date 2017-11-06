@@ -224,7 +224,8 @@
     <string name="gruveo">你在寻找一个简单而匿名的视频通话应用吗？请尝试我的另一个项目</string>
     <string name="app_version">应用版本：%1$s</string>
     <string name="device_os">设备系统：%1$s</string>
-    <string name="donate_please">您已使用此应用一段时间了。\n\n可您知道么，我并不就职于一个大公司。开发应用耗时耗力，且我想依旧保持免费，您的捐赠会给我更多动力。\n\n您可以通过购买付费应用 Simple Thank You 或捐赠比特币来支持我。\n\n更多信息请查阅 http://simplemobiletools.com/donate.\n\n非常感谢！</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
 
     <!-- License -->
     <string name="notice">此应用使用了以下三方库。谢谢。</string>

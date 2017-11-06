@@ -224,7 +224,8 @@
     <string name="gruveo">你正在找一個簡單且匿名的視訊電話程式嗎?試試看我別的應用程式吧</string>
     <string name="app_version">應用程式版本: %1$s</string>
     <string name="device_os">裝置系統: %1$s</string>
-    <string name="donate_please">嘿，您好像已經使用這應用程式一陣子了。\n\n這應用程式並沒有得到任何大企業的援助。開發耗費時間，而且我堅持無廣告，有您的支持將不勝感激。\n\n您可以購買付費程式「Simple Thank You」來支持我，也可以使用Paypal或比特幣捐贈。\n\n更多資訊在 http://simplemobiletools.com/donate \n\n萬分感謝!</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
 
     <!-- License -->
     <string name="notice">這程式使用了下列的第三方函示庫來讓我工作簡化。感謝。</string>

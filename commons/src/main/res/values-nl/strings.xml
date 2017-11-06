@@ -224,7 +224,8 @@
     <string name="gruveo">Zoekt u een eenvoudige app voor anonieme videogesprekken? Neem dan een kijkje bij mijn andere project</string>
     <string name="app_version">Versie: %1$s</string>
     <string name="device_os">Besturingssysteem: %1$s</string>
-    <string name="donate_please">Hallo,\n\nHet lijkt erop dat u deze app al een tijdje gebruikt.\n\nWist u dat deze app niet wordt ondersteund door een groot bedrijf? Het ontwikkelen van apps kost veel tijd. Ik wil mijn apps vrij van advertenties houden, dus iedere vorm van ondersteuning wordt zeer gewaardeerd.\n\nU kunt me eenvoudig helpen door de app Simple Thank You aan te schaffen, door me wat geld te sturen via PayPal of door het sturen van cryptogeld.\n\nMeer informatie is te vinden op http://simplemobiletools.com/donate.\n\nDankuwel!</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
 
     <!-- License -->
     <string name="notice">Deze app maakt gebruik van de volgende libraries om het mij wat gemakkelijker te maken. Dank hiervoor.</string>

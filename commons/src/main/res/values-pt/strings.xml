@@ -224,7 +224,8 @@
     <string name="gruveo">Necessita de uma aplicação simples e privada para chamadas de vídeos? Teste os meus outros projetos</string>
     <string name="app_version">Versão da aplicação: %1$s</string>
     <string name="device_os">SO do dispositivo: %1$s</string>
-    <string name="donate_please">Olá,\n\nparece que já usa esta aplicação há algum tempo.\n\nSabia que não é patrocinada por nenhuma organização? O seu desenvolvimento ocupa-me bastante tempo e eu planeio manter a aplicação livre de anúncios. Assim, se me puder ajudar, ajuda no desenvolvimento.\n\nPode ajudar-me comprando a aplicação Simple Thank You ou com donativos através de Paypal ou bitcoins.\n\nMais informação em http://simplemobiletools.com/donate.\n\nObrigado!</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
 
     <!-- License -->
     <string name="notice">Esta aplicação usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>

@@ -226,7 +226,8 @@
     <string name="gruveo">Вы ищете простое и анонимное приложение для видеозвонков? Попробуйте мой другой проект</string>
     <string name="app_version">Версия приложения: %1$s</string>
     <string name="device_os">OS устройства: %1$s</string>
-    <string name="donate_please">Привет,\n\nпохоже, что вы уже давно используете это приложение.\n\nЗнаете ли вы, что оно не поддерживается какой-либо крупной компанией? Для его развития требуется время и я хочу сохранить его без рекламы, поэтому ваша поддержка будет оценена по достоинству.\n\nВы можете поддержать меня либо путём покупки платного приложения \'Simple Thank You\', либо переводом мне денег через Paypal или криптовалюту.\n\nБолее подробная информация на http://simplemobiletools.com/donate.\n\nСпасибо!</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
 
     <!-- License -->
     <string name="notice">Это приложение использует следующие библиотеки сторонних разработчиков, чтобы облегчить мой труд. Спасибо.</string>
