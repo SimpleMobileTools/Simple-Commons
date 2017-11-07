@@ -65,7 +65,7 @@
     <string name="name_taken">Bestand of map met deze naam bestaat reeds</string>
     <string name="invalid_name">Naam bevat ongeldige tekens</string>
     <string name="empty_name">Voer een naam in</string>
-    <string name="unknown_error_occurred">Onbekend fout opgetreden</string>
+    <string name="unknown_error_occurred">Onbekende fout opgetreden</string>
 
     <!-- Copy conflicts -->
     <string name="file_already_exists">Bestand %1$s bestaat reeds</string>
@@ -122,7 +122,7 @@
     <string name="light_theme">Licht thema</string>
     <string name="dark_theme">Donker thema</string>
     <string name="custom">Aangepast</string>
-    <string name="changing_color_description">Zodra een kleur veranderd wordt, zal het aangepaste thema worden gebruikt</string>
+    <string name="changing_color_description">Zodra een kleur veranderd wordt zal het aangepaste thema worden gebruikt</string>
     <string name="save">Opslaan</string>
     <string name="discard">Negeren</string>
     <string name="undo_changes">Ongedaan maken</string>
@@ -183,7 +183,7 @@
     <string name="no_fingerprints_registered">Er zijn geen vingerafdrukken geregistreerd. Voeg deze toe via de instellingen van uw toestel.</string>
     <string name="go_to_settings">Ga naar Instellingen</string>
     <string name="protection_setup_successfully">Wachtwoord ingesteld. Herinstalleer deze app indien u het wachtwoord vergeet.</string>
-    <string name="fingerprint_setup_successfully">Beveiliging ingesteld. Herinstalleer deze app indien u niet meer door de beveiliging heen komt.</string>
+    <string name="fingerprint_setup_successfully">Vingerafdruk beveiliging ingesteld. Herinstalleer deze app indien u niet meer met uw vingerafdruk kunt authenticeren.</string>
 
     <!-- Times -->
     <plurals name="seconds">
@@ -226,7 +226,7 @@
     <string name="follow_us">Volg ons:</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Extra informatie</string>
-    <string name="gruveo">Zoekt u een eenvoudige app voor anonieme videogesprekken? Neem dan een kijkje bij mijn andere project</string>
+    <string name="gruveo">Zoekt u een eenvoudige app voor anonieme videogesprekken? Neem dan een kijkje bij mijn andere project:</string>
     <string name="app_version">Versie: %1$s</string>
     <string name="device_os">Besturingssysteem: %1$s</string>
     <string name="donate_please">Hallo,\n\nHopelijk vindt u dit een fijne app. Het bevat geen advertenties, maar u kunt de verdere ontwikkeling wel ondersteunen door de app <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> aan te schaffen. Dit zal ook voorkomen dat dit venster nog eens verschijnt.\n\nU kunt meer opties om te doneren vinden op <a href="http://simplemobiletools.com/donate">de website</a>.\n\nDank u wel!</string>
