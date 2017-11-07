@@ -5,12 +5,17 @@
     <string name="save_as">Сохранить как</string>
     <string name="file_saved">Файл успешно сохранён</string>
     <string name="invalid_file_format">Недопустимый формат файла</string>
-    <string name="no_storage_permissions">Нужно разрешение для доступа к памяти</string>
     <string name="out_of_memory_error">Память переполнена</string>
     <string name="an_error_occurred">Произошла ошибка: %s</string>
     <string name="open_with">Открыть в</string>
     <string name="no_app_found">Приложение не найдено</string>
     <string name="set_as">Установить как</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">Изменение имени файла</string>

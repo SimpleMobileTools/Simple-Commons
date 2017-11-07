@@ -5,12 +5,17 @@
     <string name="save_as">Spara som</string>
     <string name="file_saved">Filen sparad</string>
     <string name="invalid_file_format">Ogiltigt filformat</string>
-    <string name="no_storage_permissions">Vi behöver behörigheten för att komma åt ditt lagringsutrymme</string>
     <string name="out_of_memory_error">Minnet är fullt</string>
     <string name="an_error_occurred">Ett fel har uppstått: %s</string>
     <string name="open_with">Öppna med</string>
     <string name="no_app_found">Hittade ingen giltig app</string>
     <string name="set_as">Ange som</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">Döp om fil</string>

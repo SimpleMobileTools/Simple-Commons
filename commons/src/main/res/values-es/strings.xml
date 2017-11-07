@@ -5,12 +5,17 @@
     <string name="save_as">Guardar como</string>
     <string name="file_saved">Archivo guardado con éxito</string>
     <string name="invalid_file_format">Formato de archivo no válido</string>
-    <string name="no_storage_permissions">Necesitamos permiso para acceder a su almacenamiento</string>
     <string name="out_of_memory_error">Error: sin memoria</string>
     <string name="an_error_occurred">Un error ocurrió: %s</string>
     <string name="open_with">Abrir con</string>
     <string name="no_app_found">No se encontró una aplicación válida</string>
     <string name="set_as">Establecer como</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">Renombrar archivo</string>

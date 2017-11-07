@@ -5,12 +5,17 @@
     <string name="save_as">Uložit jako</string>
     <string name="file_saved">Soubor úspěšně uložen</string>
     <string name="invalid_file_format">Neplatný formát souboru</string>
-    <string name="no_storage_permissions">Potřebuji oprávnění k přístupu na vaše úložiště</string>
     <string name="out_of_memory_error">Zařízení nemá dostatek paměti</string>
     <string name="an_error_occurred">Vyskytla se chyba: %s</string>
     <string name="open_with">Otevřít pomocí</string>
     <string name="no_app_found">Nebyla nalezena žádná vhodná aplikace</string>
     <string name="set_as">Nastavit jako</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">Přejmenovat soubor</string>

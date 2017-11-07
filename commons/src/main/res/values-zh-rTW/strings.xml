@@ -5,12 +5,17 @@
     <string name="save_as">儲存</string>
     <string name="file_saved">成功儲存檔案</string>
     <string name="invalid_file_format">無效的檔案格式</string>
-    <string name="no_storage_permissions">我們需要權限來存取您的儲存空間</string>
     <string name="out_of_memory_error">記憶體不足</string>
     <string name="an_error_occurred">發生錯誤: %s</string>
     <string name="open_with">以其他應用程式開啟</string>
     <string name="no_app_found">找不到應用程式</string>
     <string name="set_as">設為</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">重新命名檔案</string>

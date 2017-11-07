@@ -5,12 +5,17 @@
     <string name="save_as">다른이름으로 저장</string>
     <string name="file_saved">파일저장 성공</string>
     <string name="invalid_file_format">잘못된 파일 형식</string>
-    <string name="no_storage_permissions">저장공간에 접근하기 위한 권한이 필요합니다.</string>
     <string name="out_of_memory_error">메모리 부족 오류</string>
     <string name="an_error_occurred">An error occurred: %s</string>
     <string name="open_with">Open with</string>
     <string name="no_app_found">No valid app found</string>
     <string name="set_as">Set as</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">파일명 변경</string>

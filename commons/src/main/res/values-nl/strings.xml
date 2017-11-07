@@ -5,12 +5,17 @@
     <string name="save_as">Opslaan als</string>
     <string name="file_saved">Bestand opgeslagen</string>
     <string name="invalid_file_format">Ongeldig bestandsformaat</string>
-    <string name="no_storage_permissions">Permissie nodig om opslag te benaderen</string>
     <string name="out_of_memory_error">Onvoldoende geheugen</string>
     <string name="an_error_occurred">Fout opgetreden: %s</string>
     <string name="open_with">Openen met</string>
     <string name="no_app_found">Geen app gevonden om dit bestand mee te openen</string>
     <string name="set_as">Instellen als</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">Bestand hernoemen</string>

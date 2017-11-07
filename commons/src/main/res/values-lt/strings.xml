@@ -5,12 +5,17 @@
     <string name="save_as">Iðsaugoti kaip</string>
     <string name="file_saved">Failas iðsaugotas sëkmingai</string>
     <string name="invalid_file_format">Neteisingas failo formatas</string>
-    <string name="no_storage_permissions">Reikalingas leidimas pasiekti saugyklà</string>
     <string name="out_of_memory_error">Klaida: trûksta atminties</string>
     <string name="an_error_occurred">Klaida: %s</string>
     <string name="open_with">Open with</string>
     <string name="no_app_found">No valid app found</string>
     <string name="set_as">Set as</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">Pervadinti failà</string>

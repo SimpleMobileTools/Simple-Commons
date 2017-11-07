@@ -5,12 +5,17 @@
     <string name="save_as">Uložiť ako</string>
     <string name="file_saved">Súbor bol úspešne uložený</string>
     <string name="invalid_file_format">Neplatný formát súboru</string>
-    <string name="no_storage_permissions">Je potrebný prístup k súborom</string>
     <string name="out_of_memory_error">Došlo k chybe s nedostatkom pamäte</string>
     <string name="an_error_occurred">Došlo k chybe: %s</string>
     <string name="open_with">Otvoriť pomocou</string>
     <string name="no_app_found">Nenašla sa žiadna vhodná aplikácia</string>
     <string name="set_as">Nastaviť ako</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Je potrebné povolenie pre prístup k súborom</string>
+    <string name="no_contacts_permission">Je potrebné povolenie pre prístup ku kontaktom</string>
+    <string name="no_camera_permissions">Je potrebné povolenie pre prístup ku kamere</string>
+    <string name="no_audio_permissions">Je potrebné povolenie pre prístup ku zvuku</string>
 
     <!-- Renaming -->
     <string name="rename_file">Premenovať súbor</string>
