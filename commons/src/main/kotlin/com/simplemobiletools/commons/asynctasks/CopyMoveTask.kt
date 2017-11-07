@@ -31,7 +31,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             return false
 
         val pair = params[0]
-        mFiles = pair.first
+        mFiles = pair.first!!
 
         for (file in mFiles) {
             try {
