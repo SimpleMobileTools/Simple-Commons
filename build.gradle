@@ -27,7 +27,7 @@ task clean(type: Delete) {
 }
 
 ext {
-    propBuildToolsVersion = '26.0.2'
+    propBuildToolsVersion = '27.0.1'
     propCompileSdkVersion = 27
     propMinSdkVersion = 16
     propTargetSdkVersion = propCompileSdkVersion
