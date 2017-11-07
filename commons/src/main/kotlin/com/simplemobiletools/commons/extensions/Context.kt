@@ -218,7 +218,35 @@ fun Context.getPermissionString(id: Int) = when (id) {
     else -> ""
 }
 
-fun Context.getFilePublicUri(file: File, applicationId: String) = FileProvider.getUriForFile(this, "$applicationId.provider", file)
+fun Context.getFilePublicUri(file: File, applicationId: String): Uri {
+    // try getting a media content uri first, like content://media/external/images/media/438
+    // if media content uri is null, get our custom uri like content://com.simplemobiletools.gallery.provider/external_files/emulated/0/DCIM/IMG_20171104_233915.jpg
+    return getMediaContentUri(file.absolutePath) ?: FileProvider.getUriForFile(this, "$applicationId.provider", file)
+}
+
+fun Context.getMediaContentUri(path: String): Uri? {
+    val uri = when {
+        path.isImageFast() -> MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+        path.isVideoFast() -> MediaStore.Video.Media.EXTERNAL_CONTENT_URI
+        else -> MediaStore.Files.getContentUri("external")
+    }
+
+    val projection = arrayOf(MediaStore.Images.Media._ID)
+    val selection = MediaStore.Images.Media.DATA + "= ?"
+    val selectionArgs = arrayOf(path)
+    var cursor: Cursor? = null
+    try {
+        cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        if (cursor?.moveToFirst() == true) {
+            val id = cursor.getIntValue(MediaStore.Images.Media._ID).toString()
+            return Uri.withAppendedPath(uri, id)
+        }
+    } catch (e: Exception) {
+    } finally {
+        cursor?.close()
+    }
+    return null
+}
 
 fun Context.getFilenameFromUri(uri: Uri): String {
     return if (uri.scheme == "file") {
