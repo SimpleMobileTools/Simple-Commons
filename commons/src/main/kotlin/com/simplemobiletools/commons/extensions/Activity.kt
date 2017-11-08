@@ -539,6 +539,10 @@ fun BaseSimpleActivity.useEnglishToggled() {
     val conf = resources.configuration
     conf.locale = if (baseConfig.useEnglish) Locale.ENGLISH else Locale.getDefault()
     resources.updateConfiguration(conf, resources.displayMetrics)
+    restartActivity()
+}
+
+fun BaseSimpleActivity.restartActivity() {
     finish()
     startActivity(intent)
 }
