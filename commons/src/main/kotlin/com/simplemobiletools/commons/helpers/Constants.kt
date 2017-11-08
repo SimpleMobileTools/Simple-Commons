@@ -25,7 +25,7 @@ val IS_PASSWORD_PROTECTION = "password_protection"
 val PASSWORD_HASH = "password_hash"
 val PROTECTION_TYPE = "protection_type"
 val KEEP_LAST_MODIFIED = "keep_last_modified"
-val FORCE_ENGLISH = "force_english"
+val USE_ENGLISH = "use_english"
 
 // licenses
 val LICENSE_KOTLIN = 1

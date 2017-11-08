@@ -80,7 +80,7 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(KEEP_LAST_MODIFIED, true)
         set(keepLastModified) = prefs.edit().putBoolean(KEEP_LAST_MODIFIED, keepLastModified).apply()
 
-    var forceEnglish: Boolean
-        get() = prefs.getBoolean(FORCE_ENGLISH, false)
-        set(forceEnglish) = prefs.edit().putBoolean(FORCE_ENGLISH, forceEnglish).apply()
+    var useEnglish: Boolean
+        get() = prefs.getBoolean(USE_ENGLISH, false)
+        set(useEnglish) = prefs.edit().putBoolean(USE_ENGLISH, useEnglish).apply()
 }
