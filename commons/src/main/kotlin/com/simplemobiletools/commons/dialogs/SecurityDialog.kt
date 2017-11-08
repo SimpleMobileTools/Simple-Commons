@@ -1,11 +1,11 @@
 package com.simplemobiletools.commons.dialogs
 
+import android.app.Activity
 import android.support.design.widget.TabLayout
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.PasswordTypesAdapter
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.PROTECTION_FINGERPRINT
@@ -16,7 +16,7 @@ import com.simplemobiletools.commons.interfaces.HashListener
 import com.simplemobiletools.commons.views.MyDialogViewPager
 import kotlinx.android.synthetic.main.dialog_security.view.*
 
-class SecurityDialog(val activity: BaseSimpleActivity, val requiredHash: String, val showTabIndex: Int, val callback: (hash: String, type: Int) -> Unit) : HashListener {
+class SecurityDialog(val activity: Activity, val requiredHash: String, val showTabIndex: Int, val callback: (hash: String, type: Int) -> Unit) : HashListener {
     var dialog: AlertDialog? = null
     val view = LayoutInflater.from(activity).inflate(R.layout.dialog_security, null)
     lateinit var tabsAdapter: PasswordTypesAdapter

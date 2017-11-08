@@ -513,7 +513,7 @@ fun BaseSimpleActivity.getFileDocument(path: String): DocumentFile? {
     return document
 }
 
-fun BaseSimpleActivity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
+fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
     if (baseConfig.isPasswordProtectionOn) {
         SecurityDialog(this, baseConfig.passwordHash, baseConfig.protectionType) { hash, type ->
             callback()
@@ -523,7 +523,7 @@ fun BaseSimpleActivity.handleHiddenFolderPasswordProtection(callback: () -> Unit
     }
 }
 
-fun BaseSimpleActivity.handleAppPasswordProtection(callback: () -> Unit) {
+fun Activity.handleAppPasswordProtection(callback: () -> Unit) {
     if (baseConfig.appPasswordProtectionOn) {
         SecurityDialog(this, baseConfig.appPasswordHash, baseConfig.appProtectionType) { hash, type ->
             callback()
