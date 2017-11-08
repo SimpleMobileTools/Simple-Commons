@@ -16,7 +16,8 @@ import com.simplemobiletools.commons.interfaces.HashListener
 import com.simplemobiletools.commons.views.MyDialogViewPager
 import kotlinx.android.synthetic.main.dialog_security.view.*
 
-class SecurityDialog(val activity: Activity, val requiredHash: String, val showTabIndex: Int, val callback: (hash: String, type: Int) -> Unit) : HashListener {
+class SecurityDialog(val activity: Activity, val requiredHash: String, val showTabIndex: Int, val callback: (hash: String, type: Int, success: Boolean) -> Unit)
+    : HashListener {
     var dialog: AlertDialog? = null
     val view = LayoutInflater.from(activity).inflate(R.layout.dialog_security, null)
     lateinit var tabsAdapter: PasswordTypesAdapter
@@ -77,14 +78,20 @@ class SecurityDialog(val activity: Activity, val requiredHash: String, val showT
         }
 
         dialog = AlertDialog.Builder(activity)
-                .setNegativeButton(R.string.cancel, null)
+                .setOnCancelListener { onCancelFail() }
+                .setNegativeButton(R.string.cancel, { dialog, which -> onCancelFail() })
                 .create().apply {
             activity.setupDialogStuff(view, this)
         }
     }
 
+    private fun onCancelFail() {
+        callback("", 0, false)
+        dialog!!.dismiss()
+    }
+
     override fun receivedHash(hash: String, type: Int) {
-        callback(hash, type)
+        callback(hash, type, true)
         dialog!!.dismiss()
     }
 
