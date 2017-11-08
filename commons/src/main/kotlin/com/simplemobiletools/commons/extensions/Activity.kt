@@ -534,3 +534,11 @@ fun BaseSimpleActivity.createDirectorySync(directory: File): Boolean {
     }
     return directory.mkdirs()
 }
+
+fun BaseSimpleActivity.useEnglishToggled() {
+    val conf = resources.configuration
+    conf.locale = if (baseConfig.useEnglish) Locale.ENGLISH else Locale.getDefault()
+    resources.updateConfiguration(conf, resources.displayMetrics)
+    finish()
+    startActivity(intent)
+}
