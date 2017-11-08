@@ -523,6 +523,16 @@ fun BaseSimpleActivity.handleHiddenFolderPasswordProtection(callback: () -> Unit
     }
 }
 
+fun BaseSimpleActivity.handleAppPasswordProtection(callback: () -> Unit) {
+    if (baseConfig.appPasswordProtectionOn) {
+        SecurityDialog(this, baseConfig.appPasswordHash, baseConfig.appProtectionType) { hash, type ->
+            callback()
+        }
+    } else {
+        callback()
+    }
+}
+
 fun BaseSimpleActivity.createDirectorySync(directory: File): Boolean {
     if (directory.exists())
         return true
