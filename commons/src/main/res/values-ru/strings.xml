@@ -35,8 +35,8 @@
     <string name="copy">Копировать</string>
     <string name="move">Переместить</string>
     <string name="copy_move">Копировать/переместить</string>
-    <string name="copy_to">Копировать в</string>
-    <string name="move_to">Переместить в</string>
+    <string name="copy_to">Копировать в&#8230;</string>
+    <string name="move_to">Переместить в&#8230;</string>
     <string name="source">Путь источника</string>
     <string name="destination">Путь назначения</string>
     <string name="select_destination">Выберите путь назначения</string>
@@ -108,8 +108,8 @@
     <string name="album">Альбом</string>
     <string name="focal_length">Фокусное расстояние</string>
     <string name="exposure_time">Выдержка</string>
-    <string name="iso_speed">Светочувствительность(ISO)</string>
-    <string name="f_number">Число диафрагмы</string>
+    <string name="iso_speed">Светочувствительность (ISO)</string>
+    <string name="f_number">Относительное отверстие</string>
     <string name="camera">Камера</string>
     <string name="exif">EXIF</string>
 
