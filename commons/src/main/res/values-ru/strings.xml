@@ -7,9 +7,9 @@
     <string name="invalid_file_format">Недопустимый формат файла</string>
     <string name="out_of_memory_error">Память переполнена</string>
     <string name="an_error_occurred">Произошла ошибка: %s</string>
-    <string name="open_with">Открыть в&#8230;</string>
+    <string name="open_with">Открыть в…</string>
     <string name="no_app_found">Приложение не найдено</string>
-    <string name="set_as">Установить как&#8230;</string>
+    <string name="set_as">Установить как…</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Требуется разрешение для доступа к хранилищу</string>
@@ -35,8 +35,8 @@
     <string name="copy">Копировать</string>
     <string name="move">Переместить</string>
     <string name="copy_move">Копировать/переместить</string>
-    <string name="copy_to">Копировать в&#8230;</string>
-    <string name="move_to">Переместить в&#8230;</string>
+    <string name="copy_to">Копировать в…</string>
+    <string name="move_to">Переместить в…</string>
     <string name="source">Путь источника</string>
     <string name="destination">Путь назначения</string>
     <string name="select_destination">Выберите путь назначения</string>
@@ -45,15 +45,15 @@
     <string name="please_select_destination">Пожалуйста, выберите путь назначения</string>
     <string name="source_and_destination_same">Исходный и конечный пути не могут совпадать</string>
     <string name="copy_failed">Не удалось скопировать файлы</string>
-    <string name="copying">Копирование&#8230;</string>
+    <string name="copying">Копирование…</string>
     <string name="copying_success">Файлы скопированы успешно</string>
     <string name="copy_move_failed">Произошла ошибка</string>
-    <string name="moving">Перемещение&#8230;</string>
+    <string name="moving">Перемещение…</string>
     <string name="moving_success">Файлы успешно перемещены</string>
     <string name="moving_success_partial">Некоторые файлы не могут быть перемещены</string>
     <string name="copying_success_partial">Некоторые файлы не могут быть скопированы</string>
     <string name="no_files_selected">Файлы не выбраны</string>
-    <string name="saving">Сохранение&#8230;</string>
+    <string name="saving">Сохранение…</string>
     <string name="could_not_create_folder">Не удалось создать папку %s</string>
     <string name="could_not_create_file">Не удалось создать файл %s</string>
 
@@ -148,7 +148,7 @@
     <string name="maximum_share_reached">Слишком большое количество контента, чтобы поделиться им</string>
 
     <!-- Sorting -->
-    <string name="sort_by">Сортировать по&#8230;</string>
+    <string name="sort_by">Сортировать по…</string>
     <string name="name">Имя</string>
     <string name="size">Размер</string>
     <string name="last_modified">Время изменения</string>
