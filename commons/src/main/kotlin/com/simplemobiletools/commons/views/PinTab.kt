@@ -88,6 +88,9 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
 
     private fun updatePinCode() {
         pin_lock_current_pin.text = "*".repeat(pin.length)
+        if (hash.isNotEmpty() && hash == getHashedPin()) {
+            hashListener.receivedHash(hash, PROTECTION_PIN)
+        }
     }
 
     private fun getHashedPin(): String {
