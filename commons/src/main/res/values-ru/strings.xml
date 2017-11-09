@@ -7,15 +7,15 @@
     <string name="invalid_file_format">Недопустимый формат файла</string>
     <string name="out_of_memory_error">Память переполнена</string>
     <string name="an_error_occurred">Произошла ошибка: %s</string>
-    <string name="open_with">Открыть в</string>
+    <string name="open_with">Открыть в&#8230;</string>
     <string name="no_app_found">Приложение не найдено</string>
-    <string name="set_as">Установить как</string>
+    <string name="set_as">Установить как&#8230;</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">Требуется разрешение для доступа к хранилищу</string>
+    <string name="no_contacts_permission">Требуется разрешение для доступа к контактам</string>
+    <string name="no_camera_permissions">Требуется разрешение для доступа к камере</string>
+    <string name="no_audio_permissions">Требуется разрешение для доступа аудио</string>
 
     <!-- Renaming -->
     <string name="rename_file">Изменение имени файла</string>
@@ -148,7 +148,7 @@
     <string name="maximum_share_reached">Слишком большое количество контента, чтобы поделиться им</string>
 
     <!-- Sorting -->
-    <string name="sort_by">Сортировать по</string>
+    <string name="sort_by">Сортировать по&#8230;</string>
     <string name="name">Имя</string>
     <string name="size">Размер</string>
     <string name="last_modified">Время изменения</string>
@@ -212,7 +212,7 @@
     <string name="large">Крупный</string>
     <string name="extra_large">Очень крупный</string>
     <string name="password_protect_hidden_items">Защита паролем отображения скрытых объектов</string>
-    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="password_protect_whole_app">Защита паролем всего приложения</string>
     <string name="keep_last_modified">Сохранять значение даты изменения файла при копировании/перемещении/переименовании</string>
 
     <!-- About -->
@@ -232,9 +232,9 @@
     <string name="additional_info">Дополнительная информация</string>
     <string name="gruveo">Вы ищете простое и анонимное приложение для видеозвонков? Попробуйте мой другой проект</string>
     <string name="app_version">Версия приложения: %1$s</string>
-    <string name="device_os">OS устройства: %1$s</string>
-    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
-    <string name="purchase">Purchase</string>
+    <string name="device_os">ОС устройства: %1$s</string>
+    <string name="donate_please">Привет,\n\nнадеюсь, вам нравится приложение. Оно не содержит рекламы, поэтому, пожалуйста, поддержите разработку, купив приложение <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>. Покупка также предотвратит повторное появление данного диалогового окна.\n\nДругие способы сделать пожертвование можно найти <a href="http://simplemobiletools.com/donate">здесь</a>.\n\nСпасибо!</string>
+    <string name="purchase">Купить</string>
 
     <!-- License -->
     <string name="notice">Это приложение использует следующие библиотеки сторонних разработчиков, чтобы облегчить мой труд. Спасибо.</string>
@@ -252,8 +252,8 @@
     <string name="photoview_title">PhotoView (масштабирование GIF)</string>
     <string name="pattern_title">PatternLockView (защита графическим ключом)</string>
     <string name="reprint_title">Reprint (защита по отпечатку пальца)</string>
-    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
-    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
+    <string name="gif_drawable_title">Gif Drawable (загрузка GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (масштабирование текста)</string>
+    <string name="robolectric_title">Robolectric (тестирование framework)</string>
+    <string name="espresso_title">Espresso (помощник по тестированию)</string>
 </resources>
