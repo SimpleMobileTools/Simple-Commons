@@ -405,7 +405,7 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
                     updateInMediaStore(oldFile, newFile)
                     scanFiles(arrayListOf(oldFile, newFile)) {
                         if (!baseConfig.keepLastModified) {
-                            updateLastModified(newFile)
+                            updateLastModified(newFile, System.currentTimeMillis())
                         }
                         callback(true)
                     }

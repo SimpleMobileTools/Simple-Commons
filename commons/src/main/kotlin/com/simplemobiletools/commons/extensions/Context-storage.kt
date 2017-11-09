@@ -208,9 +208,9 @@ fun Context.updateInMediaStore(oldFile: File, newFile: File) {
     }
 }
 
-fun Context.updateLastModified(file: File) {
+fun Context.updateLastModified(file: File, lastModified: Long) {
     val values = ContentValues().apply {
-        put(MediaStore.MediaColumns.DATE_MODIFIED, System.currentTimeMillis())
+        put(MediaStore.MediaColumns.DATE_MODIFIED, lastModified)
     }
     val uri = getFileUri(file)
     val selection = "${MediaStore.MediaColumns.DATA} = ?"
