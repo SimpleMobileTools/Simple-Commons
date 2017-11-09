@@ -226,7 +226,7 @@ fun BaseSimpleActivity.checkWhatsNew(releases: List<Release>, currVersion: Int) 
     baseConfig.lastVersion = currVersion
 }
 
-fun BaseSimpleActivity.deleteFolders(folders: ArrayList<File>, deleteMediaOnly: Boolean = true, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFolders(folders: ArrayList<File>, deleteMediaOnly: Boolean = true, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     if (Looper.myLooper() == Looper.getMainLooper()) {
         Thread {
             deleteFoldersBg(folders, deleteMediaOnly, callback)
@@ -236,7 +236,7 @@ fun BaseSimpleActivity.deleteFolders(folders: ArrayList<File>, deleteMediaOnly: 
     }
 }
 
-fun BaseSimpleActivity.deleteFoldersBg(folders: ArrayList<File>, deleteMediaOnly: Boolean = true, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFoldersBg(folders: ArrayList<File>, deleteMediaOnly: Boolean = true, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     var wasSuccess = false
     var needPermissionForPath = ""
     for (file in folders) {
@@ -253,14 +253,14 @@ fun BaseSimpleActivity.deleteFoldersBg(folders: ArrayList<File>, deleteMediaOnly
                     wasSuccess = true
 
                 if (index == folders.size - 1) {
-                    callback(wasSuccess)
+                    callback?.invoke(wasSuccess)
                 }
             }
         }
     }
 }
 
-fun BaseSimpleActivity.deleteFolder(folder: File, deleteMediaOnly: Boolean = true, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFolder(folder: File, deleteMediaOnly: Boolean = true, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     if (Looper.myLooper() == Looper.getMainLooper()) {
         Thread {
             deleteFolderBg(folder, deleteMediaOnly, callback)
@@ -270,11 +270,11 @@ fun BaseSimpleActivity.deleteFolder(folder: File, deleteMediaOnly: Boolean = tru
     }
 }
 
-fun BaseSimpleActivity.deleteFolderBg(folder: File, deleteMediaOnly: Boolean = true, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFolderBg(folder: File, deleteMediaOnly: Boolean = true, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     if (folder.exists()) {
         val filesArr = folder.listFiles()
         if (filesArr == null) {
-            callback(true)
+            callback?.invoke(true)
             return
         }
 
@@ -288,10 +288,10 @@ fun BaseSimpleActivity.deleteFolderBg(folder: File, deleteMediaOnly: Boolean = t
             deleteFileBg(folder, true) { }
         }
     }
-    callback(true)
+    callback?.invoke(true)
 }
 
-fun BaseSimpleActivity.deleteFiles(files: ArrayList<File>, allowDeleteFolder: Boolean = false, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFiles(files: ArrayList<File>, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     if (Looper.myLooper() == Looper.getMainLooper()) {
         Thread {
             deleteFilesBg(files, allowDeleteFolder, callback)
@@ -301,9 +301,9 @@ fun BaseSimpleActivity.deleteFiles(files: ArrayList<File>, allowDeleteFolder: Bo
     }
 }
 
-fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<File>, allowDeleteFolder: Boolean = false, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<File>, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     if (files.isEmpty()) {
-        callback(true)
+        callback?.invoke(true)
         return
     }
 
@@ -315,14 +315,14 @@ fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<File>, allowDeleteFolder: 
                     wasSuccess = true
 
                 if (index == files.size - 1) {
-                    callback(wasSuccess)
+                    callback?.invoke(wasSuccess)
                 }
             }
         }
     }
 }
 
-fun BaseSimpleActivity.deleteFile(file: File, allowDeleteFolder: Boolean = false, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFile(file: File, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     if (Looper.myLooper() == Looper.getMainLooper()) {
         Thread {
             deleteFileBg(file, allowDeleteFolder, callback)
@@ -333,11 +333,11 @@ fun BaseSimpleActivity.deleteFile(file: File, allowDeleteFolder: Boolean = false
 }
 
 @SuppressLint("NewApi")
-fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = false, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     var fileDeleted = !file.exists() || file.delete()
     if (fileDeleted) {
         rescanDeletedFile(file) {
-            callback(true)
+            callback?.invoke(true)
         }
     } else {
         if (file.isDirectory || allowDeleteFolder) {
@@ -356,7 +356,7 @@ fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = fal
 
                 if (fileDeleted) {
                     rescanDeletedFile(file) {
-                        callback(true)
+                        callback?.invoke(true)
                     }
                 }
             }
@@ -364,16 +364,16 @@ fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = fal
     }
 }
 
-fun BaseSimpleActivity.rescanDeletedFile(file: File, callback: () -> Unit) {
+fun BaseSimpleActivity.rescanDeletedFile(file: File, callback: (() -> Unit)? = null) {
     if (deleteFromMediaStore(file)) {
-        callback()
+        callback?.invoke()
     } else {
         MediaScannerConnection.scanFile(applicationContext, arrayOf(file.absolutePath), null, { s, uri ->
             try {
                 contentResolver.delete(uri, null, null)
             } catch (e: Exception) {
             }
-            callback()
+            callback?.invoke()
         })
     }
 }
@@ -390,12 +390,12 @@ private fun deleteRecursively(file: File): Boolean {
 }
 
 @SuppressLint("NewApi")
-fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (success: Boolean) -> Unit) {
+fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: ((success: Boolean) -> Unit)? = null) {
     if (needsStupidWritePermissions(newFile.absolutePath)) {
         handleSAFDialog(newFile) {
             val document = getFileDocument(oldFile.absolutePath)
             if (document == null || (oldFile.isDirectory != document.isDirectory)) {
-                callback(false)
+                callback?.invoke(false)
                 return@handleSAFDialog
             }
 
@@ -407,21 +407,21 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
                         if (!baseConfig.keepLastModified) {
                             updateLastModified(newFile, System.currentTimeMillis())
                         }
-                        callback(true)
+                        callback?.invoke(true)
                     }
                 } else {
-                    callback(false)
+                    callback?.invoke(false)
                 }
             } catch (e: SecurityException) {
                 showErrorToast(e)
-                callback(false)
+                callback?.invoke(false)
             }
         }
     } else if (oldFile.renameTo(newFile)) {
         if (newFile.isDirectory) {
             deleteFromMediaStore(oldFile)
             scanFile(newFile) {
-                callback(true)
+                callback?.invoke(true)
             }
         } else {
             if (!baseConfig.keepLastModified) {
@@ -429,11 +429,11 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
             }
             updateInMediaStore(oldFile, newFile)
             scanFile(newFile) {
-                callback(true)
+                callback?.invoke(true)
             }
         }
     } else {
-        callback(false)
+        callback?.invoke(false)
     }
 }
 
