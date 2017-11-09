@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.views
 
 import android.content.Context
 import android.graphics.PorterDuff
+import android.os.Vibrator
 import android.util.AttributeSet
 import android.widget.RelativeLayout
 import com.simplemobiletools.commons.R
@@ -51,6 +52,11 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
         if (pin.length < 10) {
             pin += number
             updatePinCode()
+
+            val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+            if (vibrator.hasVibrator()) {
+                vibrator.vibrate(100)
+            }
         }
     }
 
