@@ -5,9 +5,17 @@
     <string name="save_as">Iðsaugoti kaip</string>
     <string name="file_saved">Failas iðsaugotas sëkmingai</string>
     <string name="invalid_file_format">Neteisingas failo formatas</string>
-    <string name="no_storage_permissions">Reikalingas leidimas pasiekti saugyklà</string>
     <string name="out_of_memory_error">Klaida: trûksta atminties</string>
     <string name="an_error_occurred">Klaida: %s</string>
+    <string name="open_with">Open with</string>
+    <string name="no_app_found">No valid app found</string>
+    <string name="set_as">Set as</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">Pervadinti failà</string>
@@ -137,6 +145,7 @@
     <string name="unhide_folder">Neslëpti aplanko</string>
     <string name="temporarily_show_hidden">Laikinai rodyti paslëptus</string>
     <string name="stop_showing_hidden">Neberodyti paslëptø failø</string>
+    <string name="maximum_share_reached">You cannot share this much content at once</string>
 
     <!-- Sorting -->
     <string name="sort_by">Rûðiuoti pagal</string>
@@ -193,6 +202,7 @@
     <!-- Settings -->
     <string name="settings">Nustatymai</string>
     <string name="customize_colors">Spalvø redagavimas</string>
+    <string name="use_english_language">Use english language</string>
     <string name="show_hidden">Rodyti paslëptus failus ir aplankus</string>
     <string name="font_size">Teksto dydis</string>
     <string name="small">Smulkus</string>
@@ -200,6 +210,8 @@
     <string name="large">Didelis</string>
     <string name="extra_large">Ypaè didelis</string>
     <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
+    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
 
     <!-- About -->
     <string name="about">Apie</string>
@@ -212,13 +224,14 @@
     <string name="invite_via">Pakviesti per</string>
     <string name="rate_us_underlined"><u>Ávertink mus</u></string>
     <string name="donate_underlined"><u>Paaukoti</u></string>
-    <string name="follow_us">Sekite mus:</string>
+    <string name="follow_us">Sekite mus</string>
     <string name="copyright">v %1$s\nCopyright Â© Simple Mobile Tools %2$d</string>
     <string name="additional_info">Papildoma informacija</string>
     <string name="gruveo">Ar ieðkote paprastos ir anonimiðkos vaizdo skambuèiø programos? Pabandykite kità mano projektà</string>
     <string name="app_version">Programos versija: %1$s</string>
     <string name="device_os">Árenginio OS: %1$s</string>
-    <string name="donate_please">Sveiki,\n\natrodo, naudojate ðià programà jau kurá laikà.\n\nAr þinojote, jog ði programa nëra sukurta didelës kompanijos? Programavimas uþima daug laiko ir að noriu programà iðlaikyti be reklamø, todël reikalinga Jûsø parama.\n\nGalite paremti mane ásigydami mokamà programà Simple Thank You, siøsdami pinigus per Paypal sistemà ar siøsdami bitcoin\'us.\n\nDugiau informacijos://simplemobiletools.com/donate.\n\nAèiû!</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
 
     <!-- License -->
     <string name="notice">Ði programa naudoja treèiøjø ðaliø licensijas ir padaro mano gyvenimà geresná. Aèiû.</string>
@@ -235,4 +248,9 @@
     <string name="otto_title">Otto (Ávykiø sàraðams)</string>
     <string name="photoview_title">PhotoView (judanèiø paveiksliukø didinimui)</string>
     <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
 </resources>

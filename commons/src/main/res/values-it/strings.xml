@@ -5,9 +5,17 @@
     <string name="save_as">Salva come</string>
     <string name="file_saved">File salvato correttamente</string>
     <string name="invalid_file_format">Formato file non valido</string>
-    <string name="no_storage_permissions">È necessaria l\'autorizzazione per l\'accesso all\'archiviazione</string>
     <string name="out_of_memory_error">Errore memoria esaurita</string>
     <string name="an_error_occurred">Si è verificato un errore: %s</string>
+    <string name="open_with">Apri con</string>
+    <string name="no_app_found">Nessun app valida trovata</string>
+    <string name="set_as">Imposta come</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">Rinomina file</string>
@@ -74,7 +82,7 @@
     <string name="confirm_storage_access_title">Conferma l\'accesso all\'archiviazione esterna</string>
     <string name="confirm_storage_access_text">Scegli la root della scheda SD nella prossima schermata, per consentire i permessi di scrittura</string>
     <string name="confirm_storage_access_text_sd">Se non hai una scheda SD, prova questo</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_selection">Conferma selezione</string>
 
     <plurals name="items">
         <item quantity="one">%1$d elemento</item>
@@ -137,6 +145,7 @@
     <string name="unhide_folder">Non nascondere cartella</string>
     <string name="temporarily_show_hidden">Mostra temporaneamente nascosti</string>
     <string name="stop_showing_hidden">Non mostrare media nascosti</string>
+    <string name="maximum_share_reached">Non puoi condividere così tanto in una volta sola</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordina per</string>
@@ -158,23 +167,23 @@
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">Inserisci PIN</string>
+    <string name="enter_pin">Inserisci un PIN</string>
     <string name="please_enter_pin">Per favore inserisci un PIN</string>
     <string name="wrong_pin">PIN errato</string>
     <string name="repeat_pin">Ripeti il PIN</string>
     <string name="pattern">Sequenza</string>
-    <string name="insert_pattern">Inserisci sequenza</string>
+    <string name="insert_pattern">Inserisci una sequenza</string>
     <string name="wrong_pattern">Sequenza errata</string>
     <string name="repeat_pattern">Ripeti la sequenza</string>
-    <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
-    <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
+    <string name="fingerprint">Impronta</string>
+    <string name="add_fingerprint">Aggiungi un\'impronta</string>
+    <string name="place_finger">Appoggia il dito sul sensore di impronte digitali</string>
+    <string name="authentication_failed">Autenticazione fallita</string>
+    <string name="authentication_blocked">Autenticazione bloccata, riprova fra qualche momento</string>
+    <string name="no_fingerprints_registered">Non hai impronte registrate, aggiungine alcune nelle impostazioni del tuo dispositivo</string>
+    <string name="go_to_settings">Vai alle impostazioni</string>
     <string name="protection_setup_successfully">Password impostata correttamente. Reinstalla l\'app nel caso la dimenticassi.</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="fingerprint_setup_successfully">Protezione impostata correttamente. Reinstalla l\'app in caso di problemi nel ripristinarla.</string>
  
     <!-- Times -->
     <plurals name="seconds">
@@ -193,6 +202,7 @@
     <!-- Settings -->
     <string name="settings">Impostazioni</string>
     <string name="customize_colors">Personalizza i colori</string>
+    <string name="use_english_language">Use english language</string>
     <string name="show_hidden">Mostra file e cartelle nascosti</string>
     <string name="font_size">Dimensione carattere</string>
     <string name="small">Piccolo</string>
@@ -200,6 +210,8 @@
     <string name="large">Grande</string>
     <string name="extra_large">Molto grande</string>
     <string name="password_protect_hidden_items">Proteggi con password gli elementi nascosti</string>
+    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="keep_last_modified">Mantieni valore di ultima modifica dopo il copia/sposta/rinomina</string>
 
     <!-- About -->
     <string name="about">Informazioni</string>
@@ -213,13 +225,14 @@
     <string name="rate_us_underlined"><u>Dacci un voto sul Play Store</u></string>
     <string name="donate">Dona</string>
     <string name="donate_underlined"><u>Dona</u></string>
-    <string name="follow_us">Seguici:</string>
+    <string name="follow_us">Seguici</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Informazioni aggiuntive</string>
     <string name="gruveo">Stai cercando un\'app semplice e anonima per videochiamate? Prova l\'altro mio progetto</string>
     <string name="app_version">Versione app: %1$s</string>
     <string name="device_os">OS dispositivo: %1$s</string>
-    <string name="donate_please">Hey,\n\npare che tu stia usando questa app da un po\' di tempo.\n\nLo sapevi che non è sostenuta da nessuna grande azienda? Svilupparla richiede tempo e voglio mantenerla senza pubblicità, perciò il tuo supporto sarebbe apprezzato.\n\nPuoi aiutarmi acquistando l\'app Simple Thank You, oppure inviando denaro via Paypal o Bitcoin.\n\nMaggiori informazioni su http://simplemobiletools.com/donate.\n\nGrazie!</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
 
     <!-- License -->
     <string name="notice">Questa app usa le seguenti librerie di terze parti per semplificarmi la vita. Grazie.</string>
@@ -234,6 +247,11 @@
     <string name="joda_title">Joda-Time (sostituto di \"Java date\")</string>
     <string name="stetho_title">Stetho (debug database)</string>
     <string name="otto_title">Otto (bus eventi)</string>
-    <string name="photoview_title">PhotoView (gif zoomabili)</string>
+    <string name="photoview_title">PhotoView (GIF zoomabili)</string>
     <string name="pattern_title">PatternLockView (sequenza di protezione)</string>
+    <string name="reprint_title">Reprint (protezione impronta)</string>
+    <string name="gif_drawable_title">Gif Drawable (caricamento GIF)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
 </resources>

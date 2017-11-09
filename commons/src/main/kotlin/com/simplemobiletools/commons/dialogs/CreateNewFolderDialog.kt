@@ -56,7 +56,7 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
     }
 
     private fun sendSuccess(alertDialog: AlertDialog, file: File) {
-        callback.invoke(file.absolutePath.trimEnd('/'))
+        callback(file.absolutePath.trimEnd('/'))
         alertDialog.dismiss()
     }
 }

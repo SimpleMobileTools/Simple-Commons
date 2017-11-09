@@ -133,16 +133,14 @@ class CustomizationActivity : BaseSimpleActivity() {
     })
 
     private fun promptSaveDiscard() {
-        ConfirmationAdvancedDialog(this, "", R.string.save_before_closing, R.string.save, R.string.discard, object : ConfirmationAdvancedDialog.Listener {
-            override fun onPositive() {
+        ConfirmationAdvancedDialog(this, "", R.string.save_before_closing, R.string.save, R.string.discard) {
+            if (it) {
                 saveChanges()
-            }
-
-            override fun onNegative() {
+            } else {
                 resetColors()
                 finish()
             }
-        })
+        }
     }
 
     private fun saveChanges() {

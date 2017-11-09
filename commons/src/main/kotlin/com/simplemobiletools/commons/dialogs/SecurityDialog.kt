@@ -1,17 +1,13 @@
 package com.simplemobiletools.commons.dialogs
 
+import android.app.Activity
 import android.support.design.widget.TabLayout
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
-import android.view.ViewTreeObserver
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.PasswordTypesAdapter
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.beGone
-import com.simplemobiletools.commons.extensions.isFingerPrintSensorAvailable
-import com.simplemobiletools.commons.extensions.setupDialogStuff
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.PROTECTION_FINGERPRINT
 import com.simplemobiletools.commons.helpers.PROTECTION_PATTERN
 import com.simplemobiletools.commons.helpers.PROTECTION_PIN
@@ -20,7 +16,8 @@ import com.simplemobiletools.commons.interfaces.HashListener
 import com.simplemobiletools.commons.views.MyDialogViewPager
 import kotlinx.android.synthetic.main.dialog_security.view.*
 
-class SecurityDialog(val activity: BaseSimpleActivity, val requiredHash: String, val showTabIndex: Int, val callback: (hash: String, type: Int) -> Unit) : HashListener {
+class SecurityDialog(val activity: Activity, val requiredHash: String, val showTabIndex: Int, val callback: (hash: String, type: Int, success: Boolean) -> Unit)
+    : HashListener {
     var dialog: AlertDialog? = null
     val view = LayoutInflater.from(activity).inflate(R.layout.dialog_security, null)
     lateinit var tabsAdapter: PasswordTypesAdapter
@@ -28,7 +25,7 @@ class SecurityDialog(val activity: BaseSimpleActivity, val requiredHash: String,
 
     init {
         view.apply {
-            viewPager = findViewById(R.id.dialog_tab_view_pager) as MyDialogViewPager
+            viewPager = findViewById(R.id.dialog_tab_view_pager)
             viewPager.offscreenPageLimit = 2
             tabsAdapter = PasswordTypesAdapter(context, requiredHash, this@SecurityDialog)
             viewPager.adapter = tabsAdapter
@@ -44,12 +41,9 @@ class SecurityDialog(val activity: BaseSimpleActivity, val requiredHash: String,
                 }
             })
 
-            viewPager.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
-                override fun onGlobalLayout() {
-                    viewPager.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                    updateTabVisibility()
-                }
-            })
+            viewPager.onGlobalLayout {
+                updateTabVisibility()
+            }
 
             if (showTabIndex == SHOW_ALL_TABS) {
                 val textColor = context.baseConfig.textColor
@@ -84,14 +78,20 @@ class SecurityDialog(val activity: BaseSimpleActivity, val requiredHash: String,
         }
 
         dialog = AlertDialog.Builder(activity)
-                .setNegativeButton(R.string.cancel, null)
+                .setOnCancelListener { onCancelFail() }
+                .setNegativeButton(R.string.cancel, { dialog, which -> onCancelFail() })
                 .create().apply {
             activity.setupDialogStuff(view, this)
         }
     }
 
+    private fun onCancelFail() {
+        callback("", 0, false)
+        dialog!!.dismiss()
+    }
+
     override fun receivedHash(hash: String, type: Int) {
-        callback(hash, type)
+        callback(hash, type, true)
         dialog!!.dismiss()
     }
 

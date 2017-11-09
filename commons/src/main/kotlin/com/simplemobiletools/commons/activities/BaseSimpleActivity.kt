@@ -9,14 +9,13 @@ import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import android.provider.DocumentsContract
+import android.support.v4.app.ActivityCompat
 import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.isShowingSAFDialog
-import com.simplemobiletools.commons.extensions.toast
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
 import com.simplemobiletools.commons.helpers.APP_VERSION_NAME
@@ -26,9 +25,12 @@ import java.util.*
 
 open class BaseSimpleActivity : AppCompatActivity() {
     var copyMoveCallback: (() -> Unit)? = null
+    var actionOnPermission: ((granted: Boolean) -> Unit)? = null
+    var isAskingPermissions = false
+    private val GENERIC_PERM_HANDLER = 100
 
     companion object {
-        var funAfterPermission: (() -> Unit)? = null
+        var funAfterSAFPermission: (() -> Unit)? = null
     }
 
     override fun onResume() {
@@ -37,19 +39,22 @@ open class BaseSimpleActivity : AppCompatActivity() {
         updateActionbarColor()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        funAfterPermission = null
+    override fun onStop() {
+        super.onStop()
+        actionOnPermission = null
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            android.R.id.home -> {
-                finish()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
+    override fun onDestroy() {
+        super.onDestroy()
+        funAfterSAFPermission = null
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        android.R.id.home -> {
+            finish()
+            true
         }
+        else -> super.onOptionsItemSelected(item)
     }
 
     fun updateBackgroundColor(color: Int = baseConfig.backgroundColor) {
@@ -75,7 +80,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         if (requestCode == OPEN_DOCUMENT_TREE && resultCode == Activity.RESULT_OK && resultData != null) {
             if (isProperFolder(resultData.data)) {
                 saveTreeUri(resultData)
-                funAfterPermission?.invoke()
+                funAfterSAFPermission?.invoke()
             } else {
                 toast(R.string.wrong_root_selected)
                 val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
@@ -85,7 +90,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
     }
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
-    fun saveTreeUri(resultData: Intent) {
+    private fun saveTreeUri(resultData: Intent) {
         val treeUri = resultData.data
         baseConfig.treeUri = treeUri.toString()
 
@@ -116,7 +121,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     fun handleSAFDialog(file: File, callback: () -> Unit): Boolean {
         return if (isShowingSAFDialog(file, baseConfig.treeUri, OPEN_DOCUMENT_TREE)) {
-            funAfterPermission = callback
+            funAfterSAFPermission = callback
             true
         } else {
             callback()
@@ -149,9 +154,31 @@ open class BaseSimpleActivity : AppCompatActivity() {
                 toast(R.string.copying)
                 startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly)
             } else {
-                handleSAFDialog(File(source)) {
+                if (isPathOnSD(source) || isPathOnSD(destinationFolder.absolutePath)) {
+                    handleSAFDialog(File(source)) {
+                        toast(R.string.moving)
+                        startCopyMove(files, destinationFolder, false, copyPhotoVideoOnly)
+                    }
+                } else {
                     toast(R.string.moving)
-                    startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly)
+                    val updatedFiles = ArrayList<File>(files.size * 2)
+                    updatedFiles.addAll(files)
+                    for (oldFile in files) {
+                        val newFile = File(destinationFolder, oldFile.name)
+                        if (!newFile.exists() && oldFile.renameTo(newFile)) {
+                            if (!baseConfig.keepLastModified) {
+                                newFile.setLastModified(System.currentTimeMillis())
+                            }
+                            updateInMediaStore(oldFile, newFile)
+                            updatedFiles.add(newFile)
+                        }
+                    }
+
+                    scanFiles(updatedFiles) {
+                        runOnUiThread {
+                            copyMoveListener.copySucceeded(false, files.size * 2 == updatedFiles.size)
+                        }
+                    }
                 }
             }
         }
@@ -162,7 +189,26 @@ open class BaseSimpleActivity : AppCompatActivity() {
         CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, copyMoveListener).execute(pair)
     }
 
-    protected val copyMoveListener = object : CopyMoveTask.CopyMoveListener {
+    fun handlePermission(permissionId: Int, callback: (granted: Boolean) -> Unit) {
+        actionOnPermission = null
+        if (hasPermission(permissionId)) {
+            callback(true)
+        } else {
+            isAskingPermissions = true
+            actionOnPermission = callback
+            ActivityCompat.requestPermissions(this, arrayOf(getPermissionString(permissionId)), GENERIC_PERM_HANDLER)
+        }
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        isAskingPermissions = false
+        if (requestCode == GENERIC_PERM_HANDLER && grantResults.isNotEmpty()) {
+            actionOnPermission?.invoke(grantResults[0] == 0)
+        }
+    }
+
+    private val copyMoveListener = object : CopyMoveTask.CopyMoveListener {
         override fun copySucceeded(copyOnly: Boolean, copiedAll: Boolean) {
             if (copyOnly) {
                 toast(if (copiedAll) R.string.copying_success else R.string.copying_success_partial)

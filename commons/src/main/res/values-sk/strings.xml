@@ -5,9 +5,17 @@
     <string name="save_as">Uložiť ako</string>
     <string name="file_saved">Súbor bol úspešne uložený</string>
     <string name="invalid_file_format">Neplatný formát súboru</string>
-    <string name="no_storage_permissions">Je potrebný prístup k súborom</string>
     <string name="out_of_memory_error">Došlo k chybe s nedostatkom pamäte</string>
     <string name="an_error_occurred">Došlo k chybe: %s</string>
+    <string name="open_with">Otvoriť pomocou</string>
+    <string name="no_app_found">Nenašla sa žiadna vhodná aplikácia</string>
+    <string name="set_as">Nastaviť ako</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Je potrebné povolenie pre prístup k súborom</string>
+    <string name="no_contacts_permission">Je potrebné povolenie pre prístup ku kontaktom</string>
+    <string name="no_camera_permissions">Je potrebné povolenie pre prístup ku kamere</string>
+    <string name="no_audio_permissions">Je potrebné povolenie pre prístup ku zvuku</string>
 
     <!-- Renaming -->
     <string name="rename_file">Premenovať súbor</string>
@@ -138,6 +146,7 @@
     <string name="unhide_folder">Odkryť priečinok</string>
     <string name="temporarily_show_hidden">Dočasne zobraziť skryté</string>
     <string name="stop_showing_hidden">Ukončiť zobrazovanie skrytých médií</string>
+    <string name="maximum_share_reached">Nemôžete zdieľať toľko obsahu naraz</string>
 
     <!-- Sorting -->
     <string name="sort_by">Zoradiť podľa</string>
@@ -197,6 +206,7 @@
     <!-- Settings -->
     <string name="settings">Nastavenia</string>
     <string name="customize_colors">Upraviť farby</string>
+    <string name="use_english_language">Použiť angličtinu</string>
     <string name="show_hidden">Zobraziť skryté súbory a priečinky</string>
     <string name="font_size">Veľkosť písma</string>
     <string name="small">Malé</string>
@@ -204,6 +214,8 @@
     <string name="large">Veľké</string>
     <string name="extra_large">Extra veľké</string>
     <string name="password_protect_hidden_items">Uzamknúť viditeľnosť skrytých položiek heslom</string>
+    <string name="password_protect_whole_app">Uzamknúť heslom celú aplikáciu</string>
+    <string name="keep_last_modified">Ponechať starú hodnotu naposledy-upravené pri kopírovaní/presúvaní/premenúvaní súborov</string>
 
     <!-- About -->
     <string name="about">O aplikácií</string>
@@ -217,13 +229,14 @@
     <string name="rate_us_underlined"><u>Ohodnotiť aplikáciu</u></string>
     <string name="donate">Podporiť</string>
     <string name="donate_underlined"><u>Podporiť</u></string>
-    <string name="follow_us">Nasledujte nás:</string>
+    <string name="follow_us">Sledujte nás</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Dodatočné informácie</string>
     <string name="gruveo">Hľadáte aplikáciu na jednoduché a anonymné videohovory? Skúste môj druhý projekt</string>
     <string name="app_version">Verzia aplikácie: %1$s</string>
     <string name="device_os">Operačný systém zariadenia: %1$s</string>
-    <string name="donate_please">Čauko,\n\nzdá sa, že túto aplikáciu používaš už nejaký čas.\n\nVedel si, že nie je financovaná žiadnou veľkou firmou? Jej vývoj zaberá čas a nechcem pridávať reklamy, takže by tvoja pomoc bola vítaná.\n\nMôžeš ma podporiť jednak kúpou platenej aplikácie Simple Thank You, poslaním peňazí cez Paypal, alebo poslaním kryptomien.\n\nViac info na http://simplemobiletools.com/donate.\n\nĎakujem!</string>
+    <string name="donate_please">Zdravím,\n\ndúfam, že sa vám moja apka páči. Neobsahuje žiadne reklamy, podporte prosím jej vývoj zakúpením aplikácie <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Jednoduché ďakujem</a>. Zaručí to aj to, že tento dialóg už neuvidíte.\n\nViac možností podpory nájdete <a href="http://simplemobiletools.com/donate">tu</a>.\n\nĎakujem!</string>
+    <string name="purchase">Zakúpiť</string>
 
     <!-- License -->
     <string name="notice">Táto aplikácia používa na uľahčenie práce nasledovné knižnice tretích strán. Ďakujeme.</string>
@@ -238,6 +251,11 @@
     <string name="joda_title">Joda-Time (náhrada dátumov v Jave)</string>
     <string name="stetho_title">Stetho (odladenie databáz)</string>
     <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">PhotoView (priblížiteľné gifká)</string>
+    <string name="photoview_title">PhotoView (priblížiteľné GIFká)</string>
     <string name="pattern_title">PatternLockView (ochrana vzorom)</string>
+    <string name="reprint_title">Reprint (ochrana odtlačkom prsta)</string>
+    <string name="gif_drawable_title">Gif Drawable (zobrazovanie GIF)</string>
+    <string name="autofittextview_title">AutoFitTextView (text meniaci veľkosť)</string>
+    <string name="robolectric_title">Robolectric (testovací framework)</string>
+    <string name="espresso_title">Espresso (testovací pomocník)</string>
 </resources>

@@ -20,7 +20,7 @@ class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
         }
     }
 
-    fun getNewReleases(): String {
+    private fun getNewReleases(): String {
         val sb = StringBuilder()
 
         releases.forEach {

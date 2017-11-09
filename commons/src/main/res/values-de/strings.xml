@@ -5,9 +5,17 @@
     <string name="save_as">Speichern unter</string>
     <string name="file_saved">Datei erfolgreich gespeichert</string>
     <string name="invalid_file_format">Ungültiges Dateiformat</string>
-    <string name="no_storage_permissions">Berechtigung zum Zugriff auf Speicher erforderlich</string>
     <string name="out_of_memory_error">Fehler: Zuwenig Speicher</string>
     <string name="an_error_occurred">Es ist ein Fehler aufgetreten: %s</string>
+    <string name="open_with">Öffnen mit</string>
+    <string name="no_app_found">Keine passende App gefunden</string>
+    <string name="set_as">Festlegen als</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">Datei umbenennen</string>
@@ -69,16 +77,16 @@
     <string name="apply_to_all">Bei allen Konflikten anwenden</string>
 
     <!-- File picker -->
-    <string name="select_folder">Wähle einen Ordner aus</string>
-    <string name="select_file">Wähle eine Datei aus</string>
+    <string name="select_folder">Ordner auswählen</string>
+    <string name="select_file">Datei auswählen</string>
     <string name="confirm_storage_access_title">Bitte Zugriff auf externen Speicher bestätigen</string>
-    <string name="confirm_storage_access_text">Bitte wähle das Hauptverzeichnis deiner SD-Karte auf dem nächsten Bildschirm, um Schreibzugriff zu erlauben</string>
-    <string name="confirm_storage_access_text_sd">Wenn die SD-Karte nicht sichtbar ist, versuche das</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_storage_access_text">Bitte am nächsten Bildschirm das Hauptverzeichnis deiner SD-Karte auswählen, um Schreibzugriff zu erlauben</string>
+    <string name="confirm_storage_access_text_sd">Wenn die SD-Karte nicht angezeigt wird, versuche das</string>
+    <string name="confirm_selection">Auswahl bestätigen</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d Datei/Ordner</item>
-        <item quantity="other">%1$d Dateien/Ordner</item>
+        <item quantity="one">%1$d Element</item>
+        <item quantity="other">%1$d Elemente</item>
     </plurals>
 
     <!-- Storages -->
@@ -91,7 +99,7 @@
     <!-- File properties -->
     <string name="properties">Eigenschaften</string>
     <string name="path">Pfad</string>
-    <string name="items_selected">Dateien ausgewählt</string>
+    <string name="items_selected">Ausgewählte Elemente</string>
     <string name="direct_children_count">Enthaltene Elemente (direkt)</string>
     <string name="files_count">Enthaltene Dateien (gesamt)</string>
     <string name="resolution">Auflösung</string>
@@ -117,8 +125,8 @@
     <string name="changing_color_description">Ändern einer Farbe setzt das Thema auf "Benutzerdefiniert"</string>
     <string name="save">Speichern</string>
     <string name="discard">Verwerfen</string>
-    <string name="undo_changes">Änderungen rückgängig machen</string>
-    <string name="undo_changes_confirmation">Bist du sicher, dass du die Änderungen rückgängig machen willst?</string>
+    <string name="undo_changes">Änderungen verwerfen</string>
+    <string name="undo_changes_confirmation">Bist du sicher, dass du die Änderungen verwerfen willst?</string>
     <string name="save_before_closing">Du hast ungespeicherte Änderungen. Speichern vorm Beenden?</string>
 
     <!-- What's new -->
@@ -137,6 +145,7 @@
     <string name="unhide_folder">Ordner nicht verstecken</string>
     <string name="temporarily_show_hidden">Verstecktes kurzzeitig zeigen</string>
     <string name="stop_showing_hidden">Verstecktes wieder verbergen</string>
+    <string name="maximum_share_reached">So viel Inhalt kann nicht auf einmal geteilt werden</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortieren nach</string>
@@ -167,14 +176,14 @@
     <string name="wrong_pattern">Falsches Muster</string>
     <string name="repeat_pattern">Muster wiederholen</string>
     <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
-    <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
+    <string name="add_fingerprint">Fingerabdruck hinzufügen</string>
+    <string name="place_finger">Bitte den Finger auf den Fingerabdruck-Sensor legen</string>
+    <string name="authentication_failed">Authentifizierung fehlgeschlagen</string>
+    <string name="authentication_blocked">Authentifizierung blockiert, bitte in Kürze erneut versuchen</string>
+    <string name="no_fingerprints_registered">Keine Fingerabdrücke registriert, bitte in den Geräteeinstellungen hinzufügen</string>
+    <string name="go_to_settings">Einstellungen öffnen</string>
     <string name="protection_setup_successfully">Muster/PIN erfolgreich gespeichert. Falls vergessen, muss die App neu installiert werden.</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="fingerprint_setup_successfully">Schutz erfolgreich eingerichtet. Falls beim Zurücksetzen Probleme auftreten, bitte die App neu installieren.</string>
 
     <!-- Times -->
     <plurals name="seconds">
@@ -193,6 +202,7 @@
     <!-- Settings -->
     <string name="settings">Einstellungen</string>
     <string name="customize_colors">Farben anpassen</string>
+    <string name="use_english_language">Use english language</string>
     <string name="show_hidden">Versteckte Dateien/Ordner zeigen</string>
     <string name="font_size">Schriftgröße</string>
     <string name="small">Klein</string>
@@ -200,6 +210,8 @@
     <string name="large">Groß</string>
     <string name="extra_large">Sehr groß</string>
     <string name="password_protect_hidden_items">Verstecktes mit Muster/PIN schützen</string>
+    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="keep_last_modified">Beim Kopieren/Verschieben/Umbenennen die alte Änderungszeit beibehalten</string>
 
     <!-- About -->
     <string name="about">Über</string>
@@ -213,13 +225,14 @@
     <string name="rate_us_underlined"><u>Bewerte uns im Play Store</u></string>
     <string name="donate">Spenden</string>
     <string name="donate_underlined"><u>Spenden</u></string>
-    <string name="follow_us">Folge uns:</string>
+    <string name="follow_us">Folge uns</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Zusätliche Infos</string>
     <string name="gruveo">Bist du auf der Suche nach einfachen und anonymen Videoanrufen? Probiere meine anderen Apps aus</string>
     <string name="app_version">App Version: %1$s</string>
     <string name="device_os">Betriebssystem: %1$s</string>
-    <string name="donate_please">Hey,\n\nscheint als ob diese App nun schon eine Weile in Gebrauch wäre.\n\nIst dir bewusst, dass hinter ihr kein größeres Unternehmen steht? Ihre Entwicklung kostet Zeit, und ich möchte sie werbefrei erhalten, daher würde ich Unterstützung sehr schätzen.\n\nDu kannst mich unterstützen mittels der Kauf-App Simple Thank You, durch Geldtransfer über Paypal oder mittels Senden von Bitcoins.\n\nMehr Info auf http://simplemobiletools.com/donate.\n\nVielen Dank!</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
 
     <!-- License -->
     <string name="notice">Diese App nutzt die folgenden Drittanbieterbilbiotheken, die mein Leben einfacher machen. Danke.</string>
@@ -235,5 +248,10 @@
     <string name="stetho_title">Stetho (Datenbanken debuggen)</string>
     <string name="otto_title">Otto (Event Bus)</string>
     <string name="photoview_title">PhotoView (Zoombare GIFs)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="pattern_title">PatternLockView (Schutz mit Muster)</string>
+    <string name="reprint_title">Reprint (Schutz mit Fingerabdruck)</string>
+    <string name="gif_drawable_title">Gif Drawable (Laden von GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
 </resources>

@@ -8,7 +8,7 @@ import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_message.view.*
 
 class ConfirmationAdvancedDialog(context: Context, message: String = "", messageId: Int = R.string.proceed_with_deletion, positive: Int = R.string.yes,
-                                 negative: Int, val listener: Listener) {
+                                 negative: Int, val callback: (result: Boolean) -> Unit) {
     var dialog: AlertDialog
 
     init {
@@ -25,17 +25,11 @@ class ConfirmationAdvancedDialog(context: Context, message: String = "", message
 
     private fun positivePressed() {
         dialog.dismiss()
-        listener.onPositive()
+        callback(true)
     }
 
     private fun negativePressed() {
         dialog.dismiss()
-        listener.onNegative()
-    }
-
-    interface Listener {
-        fun onPositive()
-
-        fun onNegative()
+        callback(false)
     }
 }

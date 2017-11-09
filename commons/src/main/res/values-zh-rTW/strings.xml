@@ -5,9 +5,17 @@
     <string name="save_as">儲存</string>
     <string name="file_saved">成功儲存檔案</string>
     <string name="invalid_file_format">無效的檔案格式</string>
-    <string name="no_storage_permissions">我們需要權限來存取您的儲存空間</string>
     <string name="out_of_memory_error">記憶體不足</string>
     <string name="an_error_occurred">發生錯誤: %s</string>
+    <string name="open_with">以其他應用程式開啟</string>
+    <string name="no_app_found">找不到應用程式</string>
+    <string name="set_as">設為</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">重新命名檔案</string>
@@ -137,6 +145,7 @@
     <string name="unhide_folder">取消隱藏資料夾</string>
     <string name="temporarily_show_hidden">暫時顯示隱藏的檔案</string>
     <string name="stop_showing_hidden">停止顯示隱藏的檔案</string>
+    <string name="maximum_share_reached">You cannot share this much content at once</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序</string>
@@ -193,6 +202,7 @@
     <!-- Settings -->
     <string name="settings">設定</string>
     <string name="customize_colors">自訂顏色</string>
+    <string name="use_english_language">Use english language</string>
     <string name="show_hidden">顯示隱藏的檔案及資料夾</string>
     <string name="font_size">字體大小</string>
     <string name="small">小</string>
@@ -200,6 +210,8 @@
     <string name="large">大</string>
     <string name="extra_large">特大</string>
     <string name="password_protect_hidden_items">用密碼保護隱藏的物件</string>
+    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
 
     <!-- About -->
     <string name="about">關於</string>
@@ -213,13 +225,14 @@
     <string name="rate_us_underlined"><u>評分我們</u></string>
     <string name="donate">捐贈</string>
     <string name="donate_underlined"><u>捐贈</u></string>
-    <string name="follow_us">追蹤我們:</string>
+    <string name="follow_us">追蹤我們</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">進階資訊</string>
     <string name="gruveo">你正在找一個簡單且匿名的視訊電話程式嗎?試試看我別的應用程式吧</string>
     <string name="app_version">應用程式版本: %1$s</string>
     <string name="device_os">裝置系統: %1$s</string>
-    <string name="donate_please">嘿，您好像已經使用這應用程式一陣子了。\n\n這應用程式並沒有得到任何大企業的援助。開發耗費時間，而且我堅持無廣告，有您的支持將不勝感激。\n\n您可以購買付費程式「Simple Thank You」來支持我，也可以使用Paypal或比特幣捐贈。\n\n更多資訊在 http://simplemobiletools.com/donate \n\n萬分感謝!</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
 
     <!-- License -->
     <string name="notice">這程式使用了下列的第三方函示庫來讓我工作簡化。感謝。</string>
@@ -234,6 +247,11 @@
     <string name="joda_title">Joda-Time (Java date replacement)</string>
     <string name="stetho_title">Stetho (debugging databases)</string>
     <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">PhotoView (zoomable gifs)</string>
+    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
     <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
 </resources>

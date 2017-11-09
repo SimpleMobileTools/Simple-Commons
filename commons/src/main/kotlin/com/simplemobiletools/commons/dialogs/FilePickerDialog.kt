@@ -1,6 +1,5 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.graphics.Rect
 import android.os.Environment
 import android.os.Parcelable
 import android.support.v7.app.AlertDialog
@@ -8,11 +7,10 @@ import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.view.KeyEvent
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewTreeObserver
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.FilepickerItemsAdapter
+import com.simplemobiletools.commons.extensions.beVisible
 import com.simplemobiletools.commons.extensions.getFilenameFromPath
 import com.simplemobiletools.commons.extensions.internalStoragePath
 import com.simplemobiletools.commons.extensions.setupDialogStuff
@@ -21,7 +19,6 @@ import com.simplemobiletools.commons.views.Breadcrumbs
 import kotlinx.android.synthetic.main.dialog_filepicker.view.*
 import java.io.File
 import java.util.*
-import kotlin.comparisons.compareBy
 
 /**
  * The only filepicker constructor with a couple optional parameters
@@ -45,31 +42,19 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     var mScrollStates = HashMap<String, Parcelable>()
 
     lateinit var mDialog: AlertDialog
-    var mDialogView: View = LayoutInflater.from(activity).inflate(R.layout.dialog_filepicker, null)
+    var mDialogView = LayoutInflater.from(activity).inflate(R.layout.dialog_filepicker, null)
 
     init {
-        if (!File(currPath).exists())
+        if (!File(currPath).exists()) {
             currPath = activity.internalStoragePath
+        }
 
-        if (File(currPath).isFile)
+        if (File(currPath).isFile) {
             currPath = File(currPath).parent
+        }
 
-        mDialogView.filepicker_breadcrumbs.setListener(this)
+        mDialogView.filepicker_breadcrumbs.listener = this
         updateItems()
-
-        // if a dialog's listview has height wrap_content, it calls getView way too often which can reduce performance
-        // lets just measure it, then set a static height
-        mDialogView.filepicker_list.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                val listener = this
-                val rect = Rect()
-                mDialogView.filepicker_list.apply {
-                    getGlobalVisibleRect(rect)
-                    layoutParams.height = rect.bottom - rect.top
-                    viewTreeObserver.removeOnGlobalLayoutListener(listener)
-                }
-            }
-        })
 
         val builder = AlertDialog.Builder(activity)
                 .setNegativeButton(R.string.cancel, null)
@@ -78,7 +63,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                         val breadcrumbs = mDialogView.filepicker_breadcrumbs
                         if (breadcrumbs.childCount > 1) {
                             breadcrumbs.removeBreadcrumb()
-                            currPath = breadcrumbs.lastItem.path
+                            currPath = breadcrumbs.getLastItem().path
                             updateItems()
                         } else {
                             mDialog.dismiss()
@@ -91,8 +76,10 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             builder.setPositiveButton(R.string.ok, null)
 
         if (showFAB) {
-            mDialogView.filepicker_fab.visibility = View.VISIBLE
-            mDialogView.filepicker_fab.setOnClickListener { createNewFolder() }
+            mDialogView.filepicker_fab.apply {
+                beVisible()
+                setOnClickListener { createNewFolder() }
+            }
         }
 
         mDialog = builder.create().apply {
@@ -110,7 +97,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
     private fun createNewFolder() {
         CreateNewFolderDialog(activity, currPath) {
-            callback.invoke(it.trimEnd('/'))
+            callback(it.trimEnd('/'))
             mDialog.dismiss()
         }
     }
@@ -163,7 +150,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun sendSuccess() {
-        callback.invoke(if (currPath.length == 1) currPath else currPath.trimEnd('/'))
+        callback(if (currPath.length == 1) currPath else currPath.trimEnd('/'))
         mDialog.dismiss()
     }
 
@@ -172,8 +159,9 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         val base = File(path)
         val files = base.listFiles() ?: return items
         for (file in files) {
-            if (!showHidden && file.isHidden)
+            if (!showHidden && file.isHidden) {
                 continue
+            }
 
             val curPath = file.absolutePath
             val curName = curPath.getFilenameFromPath()
@@ -184,10 +172,11 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun getChildren(file: File): Int {
-        return if (file.listFiles() == null || !file.isDirectory)
+        return if (file.listFiles() == null || !file.isDirectory) {
             0
-        else
+        } else {
             file.listFiles().filter { !it.isHidden || (it.isHidden && showHidden) }.size
+        }
     }
 
     private fun containsDirectory(items: List<FileDirItem>) = items.any { it.isDirectory }

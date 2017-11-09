@@ -1,6 +1,8 @@
 package com.simplemobiletools.commons.extensions
 
 import android.content.Context
+import android.media.ExifInterface
+import java.text.SimpleDateFormat
 import java.util.*
 
 fun String.getFilenameFromPath() = substring(lastIndexOf("/") + 1)
@@ -26,7 +28,7 @@ fun String.isAValidFilename(): Boolean {
 }
 
 val String.photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp")
-val String.videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v")
+val String.videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
 val String.audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a")
 
 fun String.isImageVideoGif() = isImageFast() || isVideoFast() || isGif()
@@ -35,12 +37,79 @@ fun String.isGif() = endsWith(".gif", true)
 
 fun String.isPng() = endsWith(".png", true)
 
+fun String.isJpg() = endsWith(".jpg", true) or endsWith(".jpeg")
+
 // fast extension checks, not guaranteed to be accurate
 fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }
+
 fun String.isImageFast() = photoExtensions.any { endsWith(it, true) }
 fun String.isAudioFast() = audioExtensions.any { endsWith(it, true) }
 
 fun String.areDigitsOnly() = matches(Regex("[0-9]+"))
+
+fun String.getExifProperties(exif: ExifInterface): String {
+    var exifString = ""
+    exif.getAttribute(ExifInterface.TAG_F_NUMBER).let {
+        if (it?.isNotEmpty() == true) {
+            val number = it.trimEnd('0').trimEnd('.')
+            exifString += "F/$number  "
+        }
+    }
+
+    exif.getAttribute(ExifInterface.TAG_FOCAL_LENGTH).let {
+        if (it?.isNotEmpty() == true) {
+            val values = it.split('/')
+            val focalLength = "${Math.round(values[0].toDouble() / values[1].toDouble())}mm"
+            exifString += "$focalLength  "
+        }
+    }
+
+    exif.getAttribute(ExifInterface.TAG_EXPOSURE_TIME).let {
+        if (it?.isNotEmpty() == true) {
+            val exposureSec = (1 / it.toFloat()).toInt()
+            exifString += "1/${exposureSec}s  "
+        }
+    }
+
+    exif.getAttribute(ExifInterface.TAG_ISO_SPEED_RATINGS).let {
+        if (it?.isNotEmpty() == true) {
+            exifString += "ISO-$it"
+        }
+    }
+
+    return exifString.trim()
+}
+
+fun String.getExifDateTaken(exif: ExifInterface): String {
+    exif.getAttribute(ExifInterface.TAG_DATETIME).let {
+        if (it?.isNotEmpty() == true) {
+            try {
+                val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd kk:mm:ss", Locale.ENGLISH)
+                return simpleDateFormat.parse(it).time.formatLastModified().trim()
+            } catch (ignored: Exception) {
+            }
+        }
+    }
+    return ""
+}
+
+fun String.getExifCameraModel(exif: ExifInterface): String {
+    exif.getAttribute(ExifInterface.TAG_MAKE).let {
+        if (it?.isNotEmpty() == true) {
+            val model = exif.getAttribute(ExifInterface.TAG_MODEL)
+            return "$it $model".trim()
+        }
+    }
+    return ""
+}
+
+fun String.getGenericMimeType(): String {
+    if (!contains("/"))
+        return this
+
+    val type = substring(0, indexOf("/"))
+    return "$type/*"
+}
 
 fun String.getMimeTypeFromPath(): String {
     val typesMap = HashMap<String, String>().apply {
@@ -51,7 +120,7 @@ fun String.getMimeTypeFromPath(): String {
         put("3gpp", "video/3gpp")
         put("7z", "application/x-7z-compressed")
         put("aa", "audio/audible")
-        put("AAC", "audio/aac")
+        put("aac", "audio/aac")
         put("aaf", "application/octet-stream")
         put("aax", "audio/vnd.audible.aax")
         put("ac3", "audio/ac3")
@@ -65,12 +134,12 @@ fun String.getMimeTypeFromPath(): String {
         put("accdw", "application/msaccess.webapplication")
         put("accft", "application/msaccess.ftemplate")
         put("acx", "application/internet-property-stream")
-        put("AddIn", "text/xml")
+        put("addin", "text/xml")
         put("ade", "application/msaccess")
         put("adobebridge", "application/x-bridge-url")
         put("adp", "application/msaccess")
-        put("ADT", "audio/vnd.dlna.adts")
-        put("ADTS", "audio/aac")
+        put("adt", "audio/vnd.dlna.adts")
+        put("adts", "audio/aac")
         put("afm", "application/octet-stream")
         put("ai", "application/postscript")
         put("aif", "audio/aiff")
@@ -163,7 +232,7 @@ fun String.getMimeTypeFromPath(): String {
         put("dsp", "application/octet-stream")
         put("dsw", "text/plain")
         put("dtd", "text/xml")
-        put("dtsConfig", "text/xml")
+        put("dtsconfig", "text/xml")
         put("dv", "video/x-dv")
         put("dvi", "application/x-dvi")
         put("dwf", "drawing/x-dwf")
@@ -224,7 +293,7 @@ fun String.getMimeTypeFromPath(): String {
         put("hxx", "text/plain")
         put("i", "text/plain")
         put("ico", "image/x-icon")
-        put("ics", "application/octet-stream")
+        put("ics", "text/calendar")
         put("idl", "text/plain")
         put("ief", "image/ief")
         put("iii", "application/x-iphone")
@@ -243,7 +312,7 @@ fun String.getMimeTypeFromPath(): String {
         put("itlp", "application/x-itunes-itlp")
         put("itms", "application/x-itunes-itms")
         put("itpc", "application/x-itunes-itpc")
-        put("IVF", "video/x-ivf")
+        put("ivf", "video/x-ivf")
         put("jar", "application/java-archive")
         put("java", "application/octet-stream")
         put("jck", "application/liquidmotion")
@@ -298,6 +367,7 @@ fun String.getMimeTypeFromPath(): String {
         put("midi", "audio/mid")
         put("mix", "application/octet-stream")
         put("mk", "text/plain")
+        put("mkv", "video/x-matroska")
         put("mmf", "application/x-smaf")
         put("mno", "text/xml")
         put("mny", "application/x-msmoney")
@@ -486,7 +556,7 @@ fun String.getMimeTypeFromPath(): String {
         put("spx", "audio/ogg")
         put("src", "application/x-wais-source")
         put("srf", "text/plain")
-        put("SSISDeploymentManifest", "text/xml")
+        put("ssisdeploymentmanifest", "text/xml")
         put("ssm", "application/streamingmedia")
         put("sst", "application/vnd.ms-pki.certstore")
         put("stl", "application/vnd.ms-pki.stl")
@@ -571,7 +641,7 @@ fun String.getMimeTypeFromPath(): String {
         put("wiq", "application/xml")
         put("wiz", "application/msword")
         put("wks", "application/vnd.ms-works")
-        put("WLMP", "application/wlmoviemaker")
+        put("wlmp", "application/wlmoviemaker")
         put("wlpginstall", "application/x-wlpg-detect")
         put("wlpginstall3", "application/x-wlpg3-detect")
         put("wm", "video/x-ms-wm")
@@ -622,7 +692,7 @@ fun String.getMimeTypeFromPath(): String {
         put("xml", "text/xml")
         put("xmta", "application/xml")
         put("xof", "x-world/x-vrml")
-        put("XOML", "text/plain")
+        put("xoml", "text/plain")
         put("xpm", "image/x-xpixmap")
         put("xps", "application/vnd.ms-xpsdocument")
         put("xrm-ms", "text/xml")
@@ -639,5 +709,5 @@ fun String.getMimeTypeFromPath(): String {
         put("z", "application/x-compress")
         put("zip", "application/zip")
     }
-    return typesMap[getFilenameExtension()] ?: ""
+    return typesMap[getFilenameExtension().toLowerCase()] ?: ""
 }

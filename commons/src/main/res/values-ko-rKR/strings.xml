@@ -5,9 +5,17 @@
     <string name="save_as">다른이름으로 저장</string>
     <string name="file_saved">파일저장 성공</string>
     <string name="invalid_file_format">잘못된 파일 형식</string>
-    <string name="no_storage_permissions">저장공간에 접근하기 위한 권한이 필요합니다.</string>
     <string name="out_of_memory_error">메모리 부족 오류</string>
     <string name="an_error_occurred">An error occurred: %s</string>
+    <string name="open_with">Open with</string>
+    <string name="no_app_found">No valid app found</string>
+    <string name="set_as">Set as</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">파일명 변경</string>
@@ -137,6 +145,7 @@
     <string name="unhide_folder">Unhide folder</string>
     <string name="temporarily_show_hidden">숨김파일 임시보기</string>
     <string name="stop_showing_hidden">숨김파일 임시보기 해제</string>
+    <string name="maximum_share_reached">You cannot share this much content at once</string>
 
     <!-- Sorting -->
     <string name="sort_by">정렬 방식</string>
@@ -193,6 +202,7 @@
     <!-- Settings -->
     <string name="settings">설정</string>
     <string name="customize_colors">앱 테마 및 색상 설정</string>
+    <string name="use_english_language">Use english language</string>
     <string name="show_hidden">숨김파일 및 폴더 보기</string>
     <string name="font_size">폰트 크기</string>
     <string name="small">작게</string>
@@ -200,6 +210,8 @@
     <string name="large">크게</string>
     <string name="extra_large">아주 크게</string>
     <string name="password_protect_hidden_items">숨김파일 보기 암호설정</string>
+    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
 
     <!-- About -->
     <string name="about">앱정보</string>
@@ -213,13 +225,14 @@
     <string name="rate_us_underlined"><u>앱 평가하기</u></string>
     <string name="donate">Donate</string>
     <string name="donate_underlined"><u>기부하기</u></string>
-    <string name="follow_us">Follow us:</string>
+    <string name="follow_us">Follow us</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Additional info</string>
     <string name="gruveo">Are you looking for a simple and anonymous video calling app? Try out my other project</string>
     <string name="app_version">App version: %1$s</string>
     <string name="device_os">Device OS: %1$s</string>
-    <string name="donate_please">Hey,\n\nseems like you\'ve been using this app for quite a while now.\n\nDid you know it\'s not backed by any big company? Developing it takes time and I want to keep it adfree, so your support would be appreciated.\n\nYou can support me either by buying a paid app Simple Thank You, by sending money through Paypal or by sending cryptocurrencies.\n\nMore info at http://simplemobiletools.com/donate.\n\nThank you!</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
 
     <!-- License -->
     <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
@@ -234,6 +247,11 @@
     <string name="joda_title">Joda-Time (Java date replacement)</string>
     <string name="stetho_title">Stetho (debugging databases)</string>
     <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">PhotoView (zoomable gifs)</string>
+    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
     <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
 </resources>

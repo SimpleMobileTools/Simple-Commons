@@ -7,12 +7,16 @@ import android.graphics.PorterDuffColorFilter
 import android.support.v7.app.AlertDialog
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.*
+import android.view.LayoutInflater
+import android.view.MotionEvent
+import android.view.View
 import android.view.View.OnTouchListener
+import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.onGlobalLayout
 import com.simplemobiletools.commons.extensions.setBackgroundWithStroke
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.views.ColorPickerSquare
@@ -28,7 +32,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
     lateinit var newHexField: EditText
     lateinit var viewContainer: ViewGroup
     val currentColorHsv = FloatArray(3)
-    val backgroundColor: Int = context.baseConfig.backgroundColor
+    val backgroundColor = context.baseConfig.backgroundColor
 
     init {
         Color.colorToHSV(color, currentColorHsv)
@@ -106,7 +110,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
             }
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if ((count == 1 && s.length == 6) || (count == 6 && before == 0) || (count == 6 && before == 5)) {
+                if (s.length == 6) {
                     val newColor = Color.parseColor("#$s")
                     Color.colorToHSV(newColor, currentColorHsv)
                     updateHue()
@@ -117,7 +121,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
 
         val textColor = context.baseConfig.textColor
         AlertDialog.Builder(context)
-                .setPositiveButton(R.string.ok, { dialog, which -> callback.invoke(getColor()) })
+                .setPositiveButton(R.string.ok, { dialog, which -> callback(getColor()) })
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
             context.setupDialogStuff(view, this)
@@ -126,13 +130,10 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
             viewCursor.colorFilter = PorterDuffColorFilter(textColor, PorterDuff.Mode.SRC_IN)
         }
 
-        view.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                moveHuePicker()
-                moveColorPicker()
-                view.viewTreeObserver.removeGlobalOnLayoutListener(this)
-            }
-        })
+        view.onGlobalLayout {
+            moveHuePicker()
+            moveColorPicker()
+        }
     }
 
     private fun getHexCode(color: Int) = Integer.toHexString(color).substring(2).toUpperCase()

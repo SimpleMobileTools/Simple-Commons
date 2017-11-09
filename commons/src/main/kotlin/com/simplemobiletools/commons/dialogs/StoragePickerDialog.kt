@@ -63,16 +63,16 @@ class StoragePickerDialog(val context: Context, currPath: String, val callback: 
 
     private fun internalPicked() {
         mDialog.dismiss()
-        callback.invoke(context.internalStoragePath)
+        callback(context.internalStoragePath)
     }
 
     private fun sdPicked() {
         mDialog.dismiss()
-        callback.invoke(context.sdCardPath)
+        callback(context.sdCardPath)
     }
 
     private fun rootPicked() {
         mDialog.dismiss()
-        callback.invoke("/")
+        callback("/")
     }
 }

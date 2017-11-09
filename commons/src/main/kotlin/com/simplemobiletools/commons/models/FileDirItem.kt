@@ -19,28 +19,27 @@ data class FileDirItem(val path: String, val name: String, val isDirectory: Bool
             1
         } else {
             var result: Int
-            if (sorting and SORT_BY_NAME != 0) {
-                result = name.toLowerCase().compareTo(other.name.toLowerCase())
-            } else if (sorting and SORT_BY_SIZE != 0) {
-                result = if (size == other.size)
-                    0
-                else if (size > other.size)
-                    1
-                else
-                    -1
-            } else if (sorting and SORT_BY_DATE_MODIFIED != 0) {
-                val file = File(path)
-                val otherFile = File(other.path)
-                result = if (file.lastModified() == otherFile.lastModified())
-                    0
-                else if (file.lastModified() > otherFile.lastModified())
-                    1
-                else
-                    -1
-            } else {
-                val extension = if (isDirectory) name else path.substringAfterLast('.', "")
-                val otherExtension = if (other.isDirectory) other.name else other.path.substringAfterLast('.', "")
-                result = extension.toLowerCase().compareTo(otherExtension.toLowerCase())
+            when {
+                sorting and SORT_BY_NAME != 0 -> result = name.toLowerCase().compareTo(other.name.toLowerCase())
+                sorting and SORT_BY_SIZE != 0 -> result = when {
+                    size == other.size -> 0
+                    size > other.size -> 1
+                    else -> -1
+                }
+                sorting and SORT_BY_DATE_MODIFIED != 0 -> {
+                    val file = File(path)
+                    val otherFile = File(other.path)
+                    result = when {
+                        file.lastModified() == otherFile.lastModified() -> 0
+                        file.lastModified() > otherFile.lastModified() -> 1
+                        else -> -1
+                    }
+                }
+                else -> {
+                    val extension = if (isDirectory) name else path.substringAfterLast('.', "")
+                    val otherExtension = if (other.isDirectory) other.name else other.path.substringAfterLast('.', "")
+                    result = extension.toLowerCase().compareTo(otherExtension.toLowerCase())
+                }
             }
 
             if (sorting and SORT_DESCENDING != 0) {

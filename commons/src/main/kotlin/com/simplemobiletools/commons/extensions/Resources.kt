@@ -4,7 +4,7 @@ import android.content.res.Resources
 import android.graphics.*
 import android.graphics.drawable.Drawable
 
-fun Resources.getColoredIcon(newColor: Int, resourceId: Int): Bitmap {
+fun Resources.getColoredBitmap(resourceId: Int, newColor: Int): Bitmap {
     val options = BitmapFactory.Options()
     options.inMutable = true
     val bmp = BitmapFactory.decodeResource(this, resourceId, options)
@@ -16,15 +16,12 @@ fun Resources.getColoredIcon(newColor: Int, resourceId: Int): Bitmap {
     return bmp
 }
 
-fun Resources.getColoredDrawable(resId: Int, colorId: Int): Drawable {
-    val drawable = getDrawable(resId)
-    drawable.mutate().setColorFilter(getColor(colorId), PorterDuff.Mode.SRC_IN)
-    return drawable
-}
+fun Resources.getColoredDrawable(drawableId: Int, colorId: Int, alpha: Int = 255) = getColoredDrawableWithColor(drawableId, getColor(colorId), alpha)
 
-fun Resources.getColoredDrawableWithColor(resId: Int, color: Int): Drawable {
-    val drawable = getDrawable(resId)
+fun Resources.getColoredDrawableWithColor(drawableId: Int, color: Int, alpha: Int = 255): Drawable {
+    val drawable = getDrawable(drawableId)
     drawable.mutate().setColorFilter(color, PorterDuff.Mode.SRC_IN)
+    drawable.mutate().alpha = alpha
     return drawable
 }
 

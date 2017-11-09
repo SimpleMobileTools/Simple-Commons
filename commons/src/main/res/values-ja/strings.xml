@@ -5,9 +5,17 @@
     <string name="save_as">名前を付けて保存</string>
     <string name="file_saved">ファイルを正常に保存しました</string>
     <string name="invalid_file_format">使用できないファイル形式</string>
-    <string name="no_storage_permissions">ストレージにアクセスする権限が必要です</string>
     <string name="out_of_memory_error">メモリー不足エラー</string>
     <string name="an_error_occurred">エラーが発生しました: %s</string>
+    <string name="open_with">別のアプリで開く</string>
+    <string name="no_app_found">有効なアプリが見つかりません</string>
+    <string name="set_as">他で使う</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">ファイルの名前を変更</string>
@@ -137,6 +145,7 @@
     <string name="unhide_folder">フォルダーを再表示</string>
     <string name="temporarily_show_hidden">非表示の項目を一時的に表示</string>
     <string name="stop_showing_hidden">非表示項目を表示しない</string>
+    <string name="maximum_share_reached">You cannot share this much content at once</string>
 
     <!-- Sorting -->
     <string name="sort_by">並び替え</string>
@@ -193,6 +202,7 @@
     <!-- Settings -->
     <string name="settings">設定</string>
     <string name="customize_colors">表示色のカスタマイズ</string>
+    <string name="use_english_language">Use english language</string>
     <string name="show_hidden">非表示のファイルとディレクトリーを表示する</string>
     <string name="font_size">メモのフォントサイズ</string>
     <string name="small">小</string>
@@ -200,6 +210,8 @@
     <string name="large">大</string>
     <string name="extra_large">特大</string>
     <string name="password_protect_hidden_items">非表示にした項目をパスワードで保護する</string>
+    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
 
     <!-- About -->
     <string name="about">アプリについて</string>
@@ -213,13 +225,14 @@
     <string name="rate_us_underlined"><u>Play ストアで評価してください</u></string>
     <string name="donate">寄付</string>
     <string name="donate_underlined"><u>寄付</u></string>
-    <string name="follow_us">フォローしてください:</string>
+    <string name="follow_us">フォローしてください</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">追加情報</string>
     <string name="gruveo">登録不要のビデオ通話アプリをお探しですか? 私のアプリを試してみてください</string>
     <string name="app_version">アプリバージョン: %1$s</string>
     <string name="device_os">デバイスOS: %1$s</string>
-    <string name="donate_please">このアプリをしばらくご利用いただいているようです。\n\nこのアプリが大企業などの支援を受けていないことをご存知ですか? 開発には時間を費やしており、広告の掲載なしでの提供を維持するため、皆様にご支援いただければ幸いです。\n\n有料アプリ「Simple Thank You」のご購入、Paypal経由での送金、暗号通貨の送金によりご寄付いただけます。\n\n詳しくは、こちらをご覧ください: http://simplemobiletools.com/donate\n\nご協力いただきありがとうございます！</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
 
     <!-- License -->
     <string name="notice">このアプリは、私の暮らしにゆとりを持たせるために、次のサードパーティのライブラリーを使用しています。 ありがとうございます。</string>
@@ -236,4 +249,9 @@
     <string name="otto_title">Otto (イベントバス)</string>
     <string name="photoview_title">PhotoView (GIF画像のズーム表示)</string>
     <string name="pattern_title">PatternLockView (パターン認証)</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
 </resources>

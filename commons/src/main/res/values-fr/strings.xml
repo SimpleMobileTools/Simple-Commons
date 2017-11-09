@@ -5,9 +5,17 @@
     <string name="save_as">Sauvegarder sous</string>
     <string name="file_saved">Fichier sauvegardé avec succès</string>
     <string name="invalid_file_format">Format de fichier invalide</string>
-    <string name="no_storage_permissions">Nous avons besoin de la permission d\'accéder à votre stockage</string>
     <string name="out_of_memory_error">Erreur excès de mémoire</string>
     <string name="an_error_occurred">Une erreur est survenue: %s</string>
+    <string name="open_with">Ouvrir avec</string>
+    <string name="no_app_found">Aucune application valide trouvée</string>
+    <string name="set_as">Définir comme</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">Renommer le fichier</string>
@@ -137,6 +145,7 @@
     <string name="unhide_folder">Démasquer dossier</string>
     <string name="temporarily_show_hidden">Afficher temporairement les fichiers masqués</string>
     <string name="stop_showing_hidden">Arrêter d\'afficher les medias masqués</string>
+    <string name="maximum_share_reached">You cannot share this much content at once</string>
 
     <!-- Sorting -->
     <string name="sort_by">Trier par</string>
@@ -193,6 +202,7 @@
     <!-- Settings -->
     <string name="settings">Paramètres</string>
     <string name="customize_colors">Personnaliser les couleurs</string>
+    <string name="use_english_language">Use english language</string>
     <string name="show_hidden">Montrer les fichiers et dossiers cachés</string>
     <string name="font_size">Taille police</string>
     <string name="small">Petite</string>
@@ -200,6 +210,8 @@
     <string name="large">Large</string>
     <string name="extra_large">Extra large</string>
     <string name="password_protect_hidden_items">Visibilité des éléments protégés par un mot de passe</string>
+    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="keep_last_modified">Garder la valeur de l\'ancienne modification lors de renommage/déplacement/copie de fichier</string>
 
     <!-- About -->
     <string name="about">À propos</string>
@@ -213,13 +225,14 @@
     <string name="rate_us_underlined"><u>Nous évaluer</u></string>
     <string name="donate">Donner</string>
     <string name="donate_underlined"><u>Donner</u></string>
-    <string name="follow_us">Suivez nous:</string>
+    <string name="follow_us">Suivez nous</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Info supplémentaire</string>
     <string name="gruveo">Êtes-vous à la recherche d\'une appli d\'appels vidéo simple et anonyme ? Essayez mon autre projet</string>
     <string name="app_version">Version appli: %1$s</string>
     <string name="device_os">OS appareil: %1$s</string>
-    <string name="donate_please">Hey,\n\nil semble que utilisez cette appli depuis un moment.\n\nSaviez-vous qu\'il n\'y aucune grande société derrière ? Son développement prend du temps et je veux la garder sans pubs, alors votre support sera apprécié.\n\nVous pouvez me supporter soit en achetant une appli Simple Thank You, soit en envoyant de l\'argent via Paypal, soit en envoyant des crypto-monnaies.\n\nPlus d\'informations sur http://simplemobiletools.com/donate.\n\nMerci !</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
 
     <!-- License -->
     <string name="notice">Cette application utilise les librairies tierces suivantes pour me simplifier la vie. Merci.</string>
@@ -234,6 +247,11 @@
     <string name="joda_title">Joda-Time (remplacement de date Java)</string>
     <string name="stetho_title">Stetho (débogage de bases de données)</string>
     <string name="otto_title">Otto (bus d\'évenement)</string>
-    <string name="photoview_title">PhotoView (gifs zoomables)</string>
+    <string name="photoview_title">PhotoView (GIFs zoomables)</string>
     <string name="pattern_title">PatternLockView (protection de modèle)</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
 </resources>

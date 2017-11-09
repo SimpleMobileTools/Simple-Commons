@@ -1,0 +1,257 @@
+<resources>
+    <string name="ok">OK</string>
+    <string name="cancel">Annuleren</string>
+    <string name="search">Zoeken</string>
+    <string name="save_as">Opslaan als</string>
+    <string name="file_saved">Bestand opgeslagen</string>
+    <string name="invalid_file_format">Ongeldig bestandsformaat</string>
+    <string name="out_of_memory_error">Onvoldoende geheugen</string>
+    <string name="an_error_occurred">Fout opgetreden: %s</string>
+    <string name="open_with">Openen met</string>
+    <string name="no_app_found">Geen app gevonden om dit bestand mee te openen</string>
+    <string name="set_as">Instellen als</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Permissie voor opslag benodigd</string>
+    <string name="no_contacts_permission">Permissie voor contacten benodigd</string>
+    <string name="no_camera_permissions">Permissie voor camera benodigd</string>
+    <string name="no_audio_permissions">Permissie voor geluid benodigd</string>
+
+    <!-- Renaming -->
+    <string name="rename_file">Bestand hernoemen</string>
+    <string name="rename_folder">Map hernoemen</string>
+    <string name="rename_file_error">Bestandsnaam kon niet worden gewijzigd</string>
+    <string name="rename_folder_error">Mapnaam kon niet worden gewijzigd</string>
+    <string name="rename_folder_empty">Mapnaam mag niet leeg zijn</string>
+    <string name="rename_folder_exists">Map met deze naam bestaat reeds</string>
+    <string name="rename_folder_root">De naam van een opslagmedium kan niet worden veranderd</string>
+    <string name="rename_folder_ok">Naam gewijzigd</string>
+    <string name="renaming_folder">Map hernoemen</string>
+    <string name="filename_cannot_be_empty">Bestandsnaam mag niet leeg zijn</string>
+    <string name="filename_invalid_characters">Bestandsnaam bevat ongeldige tekens</string>
+    <string name="extension_cannot_be_empty">Extensie mag niet leeg zijn</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">Kopiëren</string>
+    <string name="move">Verplaatsen</string>
+    <string name="copy_move">Kopiëren / Verplaatsen</string>
+    <string name="copy_to">Kopiëren naar</string>
+    <string name="move_to">Verplaatsen naar</string>
+    <string name="source">Van</string>
+    <string name="destination">Naar</string>
+    <string name="select_destination">Kies een bestemming</string>
+    <string name="click_select_destination">Klik hier om bestemming te kiezen</string>
+    <string name="invalid_destination">Kon niet naar bestemming schrijven</string>
+    <string name="please_select_destination">Kies een bestemming</string>
+    <string name="source_and_destination_same">Bron en bestemming kunnen niet gelijk zijn</string>
+    <string name="copy_failed">Kon de bestanden niet kopiëren</string>
+    <string name="copying">Kopiëren&#8230;</string>
+    <string name="copying_success">Bestanden gekopieerd</string>
+    <string name="copy_move_failed">Fout opgetreden</string>
+    <string name="moving">Verplaatsen&#8230;</string>
+    <string name="moving_success">Bestanden verplaatst</string>
+    <string name="moving_success_partial">Sommige bestanden konden niet worden verplaatst</string>
+    <string name="copying_success_partial">Sommige bestanden konden niet worden gekopieerd</string>
+    <string name="no_files_selected">Geen bestanden geselecteerd</string>
+    <string name="saving">Opslaan&#8230;</string>
+    <string name="could_not_create_folder">Kon de map %s niet aanmaken</string>
+    <string name="could_not_create_file">Kon het bestand %s niet aanmaken</string>
+
+    <!-- Create new -->
+    <string name="create_new">Nieuw</string>
+    <string name="folder">Map</string>
+    <string name="file">Bestand</string>
+    <string name="create_new_folder">Nieuwe map maken</string>
+    <string name="name_taken">Bestand of map met deze naam bestaat reeds</string>
+    <string name="invalid_name">Naam bevat ongeldige tekens</string>
+    <string name="empty_name">Voer een naam in</string>
+    <string name="unknown_error_occurred">Onbekende fout opgetreden</string>
+
+    <!-- Copy conflicts -->
+    <string name="file_already_exists">Bestand %1$s bestaat reeds</string>
+    <string name="file_already_exists_overwrite">Bestand %1$s bestaat reeds. Overschrijven?</string>
+    <string name="select_an_action">Kies een actie</string>
+    <string name="overwrite">Overschrijven</string>
+    <string name="skip">Overslaan</string>
+    <string name="append">Voeg \'_1\' toe</string>
+    <string name="apply_to_all">Voor alle conflicterende items</string>
+
+    <!-- File picker -->
+    <string name="select_folder">Kies een map</string>
+    <string name="select_file">Kies een bestand</string>
+    <string name="confirm_storage_access_title">Toegang tot externe opslag bevestigen</string>
+    <string name="confirm_storage_access_text">Kies in het volgende scherm de hoofdmap van de SD-kaart om schrijfrechten te verlenen</string>
+    <string name="confirm_storage_access_text_sd">Probeer het volgende indien de SD-kaart niet in de lijst staat</string>
+    <string name="confirm_selection">Keuze bevestigen</string>
+
+    <plurals name="items">
+        <item quantity="one">%1$d item</item>
+        <item quantity="other">%1$d items</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">Opslag kiezen</string>
+    <string name="internal">Interne opslag</string>
+    <string name="sd_card">SD-kaart</string>
+    <string name="root">Hoofdmap</string>
+    <string name="wrong_root_selected">Verkeerde map: kies de hoofdmap van de SD-kaart</string>
+
+    <!-- File properties -->
+    <string name="properties">Eigenschappen</string>
+    <string name="path">Pad</string>
+    <string name="items_selected">Items geselecteerd</string>
+    <string name="direct_children_count">Direct onderliggende items</string>
+    <string name="files_count">Totaal aantal bestanden</string>
+    <string name="resolution">Resolutie</string>
+    <string name="duration">Duur</string>
+    <string name="artist">Artiest</string>
+    <string name="album">Album</string>
+    <string name="focal_length">Brandpuntsafstand</string>
+    <string name="exposure_time">Sluitertijd</string>
+    <string name="iso_speed">ISO-waarde</string>
+    <string name="f_number">Diafragmagetal</string>
+    <string name="camera">Camera</string>
+    <string name="exif">EXIF</string>
+
+    <!-- Color customization -->
+    <string name="background_color">Achtergrondkleur</string>
+    <string name="text_color">Tekstkleur</string>
+    <string name="primary_color">Primaire kleur</string>
+    <string name="restore_defaults">Standaardwaarden</string>
+    <string name="theme">Thema</string>
+    <string name="light_theme">Licht thema</string>
+    <string name="dark_theme">Donker thema</string>
+    <string name="custom">Aangepast</string>
+    <string name="changing_color_description">Zodra een kleur veranderd wordt zal het aangepaste thema worden gebruikt</string>
+    <string name="save">Opslaan</string>
+    <string name="discard">Negeren</string>
+    <string name="undo_changes">Ongedaan maken</string>
+    <string name="undo_changes_confirmation">Wijzigingen ongedaan maken?</string>
+    <string name="save_before_closing">Onopgeslagen wijzigingen. Nu opslaan?</string>
+
+    <!-- What's new -->
+    <string name="whats_new">Wat is er nieuw</string>
+    <string name="whats_new_disclaimer">* Alleen de belangrijkste veranderingen worden hier vermeld</string>
+
+    <!-- Actionbar items -->
+    <string name="delete">Verwijderen</string>
+    <string name="rename">Hernoemen</string>
+    <string name="share">Delen</string>
+    <string name="share_via">Delen via</string>
+    <string name="select_all">Alles selecteren</string>
+    <string name="hide">Verbergen</string>
+    <string name="unhide">Tonen</string>
+    <string name="hide_folder">Map verbergen</string>
+    <string name="unhide_folder">Map tonen</string>
+    <string name="temporarily_show_hidden">Verborgen items tonen</string>
+    <string name="stop_showing_hidden">Verborgen items niet tonen</string>
+    <string name="maximum_share_reached">Te veel om in een keer te delen</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">Sorteren op</string>
+    <string name="name">Naam</string>
+    <string name="size">Grootte</string>
+    <string name="last_modified">Laatst gewijzigd</string>
+    <string name="date_taken">Datum opname</string>
+    <string name="title">Titel</string>
+    <string name="filename">Bestandsnaam</string>
+    <string name="extension">Extensie</string>
+    <string name="ascending">Oplopend</string>
+    <string name="descending">Aflopend</string>
+    <string name="use_for_this_folder">Alleen voor deze map gebruiken</string>
+
+    <!-- Confirmation dialog -->
+    <string name="proceed_with_deletion">Deze items verwijderen?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nee</string>
+
+    <!-- Password protection -->
+    <string name="pin">Pincode</string>
+    <string name="enter_pin">Voer pincode in</string>
+    <string name="please_enter_pin">Voer een pincode in</string>
+    <string name="wrong_pin">Verkeerde pincode</string>
+    <string name="repeat_pin">Herhaal pincode</string>
+    <string name="pattern">Patroon</string>
+    <string name="insert_pattern">Teken een patroon</string>
+    <string name="wrong_pattern">Verkeerde patroon</string>
+    <string name="repeat_pattern">Herhaal het patroon</string>
+    <string name="fingerprint">Vingerafdruk</string>
+    <string name="add_fingerprint">Voeg vingerafdruk toe</string>
+    <string name="place_finger">Plaats uw vinger op de sensor</string>
+    <string name="authentication_failed">Authenticatie mislukt</string>
+    <string name="authentication_blocked">Authenticatie geblokkeerd, probeer het op een ander moment</string>
+    <string name="no_fingerprints_registered">Er zijn geen vingerafdrukken geregistreerd. Voeg deze toe via de instellingen van uw toestel.</string>
+    <string name="go_to_settings">Ga naar Instellingen</string>
+    <string name="protection_setup_successfully">Wachtwoord ingesteld. Herinstalleer deze app indien u het wachtwoord vergeet.</string>
+    <string name="fingerprint_setup_successfully">Vingerafdruk beveiliging ingesteld. Herinstalleer deze app indien u niet meer met uw vingerafdruk kunt authenticeren.</string>
+
+    <!-- Times -->
+    <plurals name="seconds">
+        <item quantity="one">%1$d seconde</item>
+        <item quantity="other">%1$d seconden</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%1$d minuut</item>
+        <item quantity="other">%1$d minuten</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%1$d uur</item>
+        <item quantity="other">%1$d uren</item>
+    </plurals>
+
+    <!-- Settings -->
+    <string name="settings">Instellingen</string>
+    <string name="customize_colors">Kleuren aanpassen</string>
+    <string name="use_english_language">Use english language</string>
+    <string name="show_hidden">Verborgen bestanden en mappen tonen</string>
+    <string name="font_size">Lettergrootte</string>
+    <string name="small">Klein</string>
+    <string name="medium">Normaal</string>
+    <string name="large">Groot</string>
+    <string name="extra_large">Extra groot</string>
+    <string name="password_protect_hidden_items">Verborgen items met wachtwoord beveiligen</string>
+    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="keep_last_modified">Datum laatst gewijzigd behouden bij bestandsoperaties</string>
+
+    <!-- About -->
+    <string name="about">Over</string>
+    <string name="website_label">Bezoek voor de broncode</string>
+    <string name="email_label">Stuur reacties of suggesties naar</string>
+    <string name="more_apps_underlined"><u>Meer apps</u></string>
+    <string name="third_party_licences_underlined"><u>Licenties van derden</u></string>
+    <string name="invite_friends_underlined"><u>Vrienden uitnodigen</u></string>
+    <string name="share_text">Hé, bekijk %1$s eens op %2$s</string>
+    <string name="invite_via">Uitnodigen via</string>
+    <string name="rate_us_underlined"><u>Beoordeel ons</u></string>
+    <string name="donate">Doneren</string>
+    <string name="donate_underlined"><u>Doneren</u></string>
+    <string name="follow_us">Volg ons</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="additional_info">Extra informatie</string>
+    <string name="gruveo">Zoekt u een eenvoudige app voor anonieme videogesprekken? Neem dan een kijkje bij mijn andere project:</string>
+    <string name="app_version">Versie: %1$s</string>
+    <string name="device_os">Besturingssysteem: %1$s</string>
+    <string name="donate_please">Hallo,\n\nHopelijk vindt u dit een fijne app. Het bevat geen advertenties, maar u kunt de verdere ontwikkeling wel ondersteunen door de app <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> aan te schaffen. Dit zal ook voorkomen dat dit venster nog eens verschijnt.\n\nU kunt meer opties om te doneren vinden op <a href="http://simplemobiletools.com/donate">de website</a>.\n\nDank u wel!</string>
+    <string name="purchase">Kopen</string>
+
+    <!-- License -->
+    <string name="notice">Deze app maakt gebruik van de volgende libraries om het mij wat gemakkelijker te maken. Dank hiervoor.</string>
+    <string name="third_party_licences">Licenties van derden</string>
+    <string name="kotlin_title">Kotlin (programmeertaal)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
+    <string name="glide_title">Glide (image loading and caching)</string>
+    <string name="picasso_title">Picasso (image loading and caching)</string>
+    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
+    <string name="joda_title">Joda-Time (Java date replacement)</string>
+    <string name="stetho_title">Stetho (debugging databases)</string>
+    <string name="otto_title">Otto (event bus)</string>
+    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
+    <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
+</resources>

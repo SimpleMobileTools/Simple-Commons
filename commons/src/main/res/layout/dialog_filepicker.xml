@@ -24,7 +24,7 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/filepicker_list"
             android:layout_width="match_parent"
-            android:layout_height="1000dp"
+            android:layout_height="match_parent"
             android:layout_below="@+id/filepicker_breadcrumbs"
             android:scrollbars="none"
             app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>

@@ -12,7 +12,7 @@ class MyArrayAdapter<T>(context: Context, res: Int, items: Array<T>, val textCol
     override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val view = super.getView(position, convertView, parent)
 
-        (view.findViewById(android.R.id.text1) as TextView).apply {
+        view.findViewById<TextView>(android.R.id.text1).apply {
             setTextColor(textColor)
             setPadding(padding, padding, padding, padding)
             background = ColorDrawable(backgroundColor)

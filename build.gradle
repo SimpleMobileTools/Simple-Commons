@@ -3,9 +3,10 @@
 buildscript {
     repositories {
         jcenter()
+        maven { url 'https://maven.google.com' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.0.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
         // NOTE: Do not place your application dependencies here; they belong
@@ -26,12 +27,12 @@ task clean(type: Delete) {
 }
 
 ext {
-    propBuildToolsVersion = '25.0.0'
-    propCompileSdkVersion = 25
+    propBuildToolsVersion = '27.0.1'
+    propCompileSdkVersion = 27
     propMinSdkVersion = 16
     propTargetSdkVersion = propCompileSdkVersion
     propVersionCode = 1
-    propVersionName = '2.29.2'
+    propVersionName = '2.37.12'
     kotlin_version = '1.1.51'
-    support_libs = '25.3.1'
+    support_libs = '27.0.0'
 }

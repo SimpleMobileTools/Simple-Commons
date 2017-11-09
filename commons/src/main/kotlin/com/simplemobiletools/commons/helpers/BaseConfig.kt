@@ -64,9 +64,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(WIDGET_TEXT_COLOR, context.resources.getColor(R.color.color_primary))
         set(widgetTextColor) = prefs.edit().putInt(WIDGET_TEXT_COLOR, widgetTextColor).apply()
 
+    // hidden folder visibility protection
     var isPasswordProtectionOn: Boolean
-        get() = prefs.getBoolean(IS_PASSWORD_PROTECTION, false)
-        set(passwordProtection) = prefs.edit().putBoolean(IS_PASSWORD_PROTECTION, passwordProtection).apply()
+        get() = prefs.getBoolean(PASSWORD_PROTECTION, false)
+        set(isPasswordProtectionOn) = prefs.edit().putBoolean(PASSWORD_PROTECTION, isPasswordProtectionOn).apply()
 
     var passwordHash: String
         get() = prefs.getString(PASSWORD_HASH, "")
@@ -75,4 +76,25 @@ open class BaseConfig(val context: Context) {
     var protectionType: Int
         get() = prefs.getInt(PROTECTION_TYPE, PROTECTION_PATTERN)
         set(protectionType) = prefs.edit().putInt(PROTECTION_TYPE, protectionType).apply()
+
+    // whole app launch protection
+    var appPasswordProtectionOn: Boolean
+        get() = prefs.getBoolean(APP_PASSWORD_PROTECTION, false)
+        set(appPasswordProtectionOn) = prefs.edit().putBoolean(APP_PASSWORD_PROTECTION, appPasswordProtectionOn).apply()
+
+    var appPasswordHash: String
+        get() = prefs.getString(APP_PASSWORD_HASH, "")
+        set(appPasswordHash) = prefs.edit().putString(APP_PASSWORD_HASH, appPasswordHash).apply()
+
+    var appProtectionType: Int
+        get() = prefs.getInt(APP_PROTECTION_TYPE, PROTECTION_PATTERN)
+        set(appProtectionType) = prefs.edit().putInt(APP_PROTECTION_TYPE, appProtectionType).apply()
+
+    var keepLastModified: Boolean
+        get() = prefs.getBoolean(KEEP_LAST_MODIFIED, true)
+        set(keepLastModified) = prefs.edit().putBoolean(KEEP_LAST_MODIFIED, keepLastModified).apply()
+
+    var useEnglish: Boolean
+        get() = prefs.getBoolean(USE_ENGLISH, false)
+        set(useEnglish) = prefs.edit().putBoolean(USE_ENGLISH, useEnglish).apply()
 }

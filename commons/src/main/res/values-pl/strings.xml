@@ -5,9 +5,17 @@
     <string name="save_as">Zapisz jako&#8230;</string>
     <string name="file_saved">Plik został zapisany</string>
     <string name="invalid_file_format">Nieprawidłowy format pliku</string>
-    <string name="no_storage_permissions">Aby mieć dostęp do plików, potrzebuję uprawnień</string>
     <string name="out_of_memory_error">Błąd pamięci</string>
     <string name="an_error_occurred">Wystąpił błąd: %s</string>
+    <string name="open_with">Otwórz w</string>
+    <string name="no_app_found">Nie znaleziono danych aplikacji</string>
+    <string name="set_as">Ustaw jako</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">Zmień nazwę</string>
@@ -74,7 +82,7 @@
     <string name="confirm_storage_access_title">Potwierdź dostęp do karty pamięci</string>
     <string name="confirm_storage_access_text">Wybierz główny folder na karcie pamięci na następnym ekranie i udziel dostępu do zapisu</string>
     <string name="confirm_storage_access_text_sd">Jeśli nie widzisz karty pamięci, spróbuj tego:</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_selection">Potwierdź wybór</string>
 
     <plurals name="items">
         <item quantity="one">%1$d pozycja</item>
@@ -138,6 +146,7 @@
     <string name="unhide_folder">Odkryj folder</string>
     <string name="temporarily_show_hidden">Tymczasowo pokaż ukryte multimedia</string>
     <string name="stop_showing_hidden">Przestań pokazywać ukryte multimedia</string>
+    <string name="maximum_share_reached">Nie możesz udostępniać tak wielu danych naraz</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortuj według parametru:</string>
@@ -197,6 +206,7 @@
     <!-- Settings -->
     <string name="settings">Ustawienia</string>
     <string name="customize_colors">Dostosuj kolory</string>
+    <string name="use_english_language">Use english language</string>
     <string name="show_hidden">Pokazuj ukryte pliki i foldery</string>
     <string name="font_size">Rozmiar czcionki</string>
     <string name="small">Mała</string>
@@ -204,6 +214,8 @@
     <string name="large">Duża</string>
     <string name="extra_large">Bardzo duża</string>
     <string name="password_protect_hidden_items">Chroń widoczność ukrytych plików</string>
+    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="keep_last_modified">Zachowuj starą datę i czas modyfikacji przy kopiowaniu / przenoszeniu / zmianie nazwy plików</string>
 
     <!-- About -->
     <string name="about">O aplikacji</string>
@@ -217,13 +229,14 @@
     <string name="rate_us_underlined"><u>Oceń aplikację</u></string>
     <string name="donate">Przekaż darowiznę</string>
     <string name="donate_underlined"><u>Przekaż darowiznę</u></string>
-    <string name="follow_us">Śledź nas:</string>
+    <string name="follow_us">Śledź nas</string>
     <string name="copyright">Wersja %1$s\n© Simple Mobile Tools %2$d</string>
     <string name="additional_info">Dodatkowe informacje</string>
     <string name="gruveo">Nie szukasz może prostej i anonimowej w swych działaniach aplikacji do wideorozmów? Wypróbuj mój inny projekt:</string>
     <string name="app_version">Wersja aplikacji: %1$s</string>
     <string name="device_os">System: %1$s</string>
-    <string name="donate_please">Hej,\n\nZdaje się, że korzysatasz z tej aplikacji już jakiś czas.\n\nCzy wiesz, że nie jest ona dziełem wielgachnej korporacji? Rozwijanie tej aplikacji zajmuje sporo czasu i chcemy, żeby nie zawierała ona reklam, więc jakiekolwiek wsparcie jest bardzo mile widziane.\n\nMożesz nas wesprzeć kupując aplikację Simple Thank You, albo wysyłając nam pieniążki przez PayPala. Bitcoinami też nie pogardzimy.\n\nWięcej informacji: http://simplemobiletools.com/donate.\n\nDzięki!</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
 
     <!-- License -->
     <string name="notice">Aplikacja korzysta z następujących bibliotek innych firm:</string>
@@ -239,5 +252,10 @@
     <string name="stetho_title">Stetho (bazy danych debugowania)</string>
     <string name="otto_title">Otto (event bus)</string>
     <string name="photoview_title">PhotoView (przybliżanie GIFów)</string>
-    <string name="pattern_title">PatternLockView (ochrona plików wzorem)</string>
+    <string name="pattern_title">PatternLockView (ochrona danych wzorem)</string>
+    <string name="reprint_title">Reprint (ochrona danych odciskiem palca)</string>
+    <string name="gif_drawable_title">Gif Drawable (ładowanie GIFów)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
 </resources>

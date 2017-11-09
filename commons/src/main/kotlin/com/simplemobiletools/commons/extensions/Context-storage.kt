@@ -1,13 +1,10 @@
 package com.simplemobiletools.commons.extensions
 
 import android.annotation.SuppressLint
-import android.annotation.TargetApi
 import android.content.ContentValues
 import android.content.Context
-import android.database.sqlite.SQLiteConstraintException
 import android.media.MediaScannerConnection
 import android.net.Uri
-import android.os.Build
 import android.os.Environment
 import android.provider.DocumentsContract
 import android.provider.MediaStore
@@ -21,26 +18,33 @@ import java.util.*
 import java.util.regex.Pattern
 
 // http://stackoverflow.com/a/40582634/1967672
-@TargetApi(Build.VERSION_CODES.LOLLIPOP)
 fun Context.getSDCardPath(): String {
-    if (!isLollipopPlus()) {
-        return ""
+    val directories = getStorageDirectories().filter { it.trimEnd('/') != getInternalStoragePath() }
+    var sdCardPath = directories.firstOrNull { !physicalPaths.contains(it.toLowerCase().trimEnd('/')) } ?: ""
+
+    // on some devices no method retrieved any SD card path, so test if its not sdcard1 by any chance. It happened on an Android 5.1
+    if (sdCardPath.trimEnd('/').isEmpty()) {
+        val file = File("/storage/sdcard1")
+        if (file.exists()) {
+            return file.absolutePath
+        }
+
+        sdCardPath = directories.firstOrNull() ?: ""
     }
 
-    val directories = getStorageDirectories().filter { it.trimEnd('/') != getInternalStoragePath() }
-    val sdCardPath = directories.firstOrNull { !physicalPaths.contains(it.toLowerCase().trimEnd('/')) } ?: directories.firstOrNull() ?: ""
     return sdCardPath.trimEnd('/')
 }
 
 fun Context.hasExternalSDCard() = sdCardPath.isNotEmpty()
 
+@SuppressLint("NewApi")
 fun Context.getStorageDirectories(): Array<String> {
     val paths = HashSet<String>()
     val rawExternalStorage = System.getenv("EXTERNAL_STORAGE")
     val rawSecondaryStoragesStr = System.getenv("SECONDARY_STORAGE")
     val rawEmulatedStorageTarget = System.getenv("EMULATED_STORAGE_TARGET")
     if (TextUtils.isEmpty(rawEmulatedStorageTarget)) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        if (isMarshmallowPlus()) {
             getExternalFilesDirs(null).filterNotNull().map { it.absolutePath }
                     .mapTo(paths) { it.substring(0, it.indexOf("Android/data")) }
         } else {
@@ -92,15 +96,12 @@ fun Context.humanizePath(path: String): String {
         path.replaceFirst(basePath, getHumanReadablePath(basePath))
 }
 
-fun Context.getInternalStoragePath() = Environment.getExternalStorageDirectory().toString().trimEnd('/')
+fun Context.getInternalStoragePath() = Environment.getExternalStorageDirectory().absolutePath.trimEnd('/')
 
-@SuppressLint("NewApi")
 fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWith(sdCardPath)
 
-@SuppressLint("NewApi")
 fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isLollipopPlus()
 
-@SuppressLint("NewApi")
 fun Context.isAStorageRootFolder(path: String): Boolean {
     val trimmed = path.trimEnd('/')
     return trimmed.isEmpty() || trimmed == internalStoragePath || trimmed == sdCardPath
@@ -161,8 +162,9 @@ fun Context.rescanPaths(paths: ArrayList<String>, action: () -> Unit) {
     var cnt = paths.size
     val realAction = WeakReference<() -> Unit>(action)
     MediaScannerConnection.scanFile(applicationContext, paths.toTypedArray(), null, { s, uri ->
-        if (--cnt == 0)
+        if (--cnt == 0) {
             realAction.get()?.invoke()
+        }
     })
 }
 
@@ -177,14 +179,10 @@ fun getPaths(file: File): ArrayList<String> {
     return paths
 }
 
-fun Context.getFileUri(file: File): Uri {
-    return if (file.isImageSlow()) {
-        MediaStore.Images.Media.EXTERNAL_CONTENT_URI
-    } else if (file.isVideoSlow()) {
-        MediaStore.Video.Media.EXTERNAL_CONTENT_URI
-    } else {
-        MediaStore.Files.getContentUri("external")
-    }
+fun Context.getFileUri(file: File) = when {
+    file.isImageSlow() -> MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+    file.isVideoSlow() -> MediaStore.Video.Media.EXTERNAL_CONTENT_URI
+    else -> MediaStore.Files.getContentUri("external")
 }
 
 // these functions update the mediastore instantly, MediaScannerConnection.scanFile takes some time to really get applied
@@ -194,25 +192,40 @@ fun Context.deleteFromMediaStore(file: File): Boolean {
     return contentResolver.delete(getFileUri(file), where, args) == 1
 }
 
-fun Context.updateInMediaStore(oldFile: File, newFile: File): Boolean {
+fun Context.updateInMediaStore(oldFile: File, newFile: File) {
     val values = ContentValues().apply {
         put(MediaStore.MediaColumns.DATA, newFile.absolutePath)
         put(MediaStore.MediaColumns.DISPLAY_NAME, newFile.name)
         put(MediaStore.MediaColumns.TITLE, newFile.name)
     }
     val uri = getFileUri(oldFile)
-    val where = "${MediaStore.MediaColumns.DATA} = ?"
-    val args = arrayOf(oldFile.absolutePath)
+    val selection = "${MediaStore.MediaColumns.DATA} = ?"
+    val selectionArgs = arrayOf(oldFile.absolutePath)
 
-    return try {
-        contentResolver.update(uri, values, where, args) == 1
-    } catch (e: SQLiteConstraintException) {
-        false
+    try {
+        contentResolver.update(uri, values, selection, selectionArgs)
+    } catch (ignored: Exception) {
     }
 }
 
+fun Context.updateLastModified(file: File, lastModified: Long) {
+    val values = ContentValues().apply {
+        put(MediaStore.MediaColumns.DATE_MODIFIED, lastModified)
+    }
+    file.setLastModified(lastModified)
+    val uri = getFileUri(file)
+    val selection = "${MediaStore.MediaColumns.DATA} = ?"
+    val selectionArgs = arrayOf(file.absolutePath)
+
+    try {
+        contentResolver.update(uri, values, selection, selectionArgs)
+    } catch (ignored: Exception) {
+    }
+}
+
+// avoid these being set as SD card paths
 private val physicalPaths = arrayListOf(
-        "/storage/sdcard0", "/storage/sdcard1", // Motorola Xoom
+        "/storage/sdcard1", // Motorola Xoom
         "/storage/extsdcard", // Samsung SGS3
         "/storage/sdcard0/external_sdcard", // User request
         "/mnt/extsdcard", "/mnt/sdcard/external_sd", // Samsung galaxy family
@@ -223,6 +236,7 @@ private val physicalPaths = arrayListOf(
         "/storage/removable/sdcard1", // Sony Xperia Z1
         "/data/sdext", "/data/sdext2", "/data/sdext3", "/data/sdext4", "/sdcard1", // Sony Xperia Z
         "/sdcard2", // HTC One M8s
+        "/storage/usbdisk0",
         "/storage/usbdisk1",
         "/storage/usbdisk2"
 )

@@ -2,12 +2,20 @@
     <string name="ok">OK</string>
     <string name="cancel">Отмена</string>
     <string name="search">Поиск</string>
-    <string name="save_as">Сохранить как...</string>
+    <string name="save_as">Сохранить как</string>
     <string name="file_saved">Файл успешно сохранён</string>
     <string name="invalid_file_format">Недопустимый формат файла</string>
-    <string name="no_storage_permissions">Нужно разрешение для доступа к памяти</string>
     <string name="out_of_memory_error">Память переполнена</string>
     <string name="an_error_occurred">Произошла ошибка: %s</string>
+    <string name="open_with">Открыть в</string>
+    <string name="no_app_found">Приложение не найдено</string>
+    <string name="set_as">Установить как</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
     <string name="rename_file">Изменение имени файла</string>
@@ -27,8 +35,8 @@
     <string name="copy">Копировать</string>
     <string name="move">Переместить</string>
     <string name="copy_move">Копировать/переместить</string>
-    <string name="copy_to">Копировать в...</string>
-    <string name="move_to">Переместить в...</string>
+    <string name="copy_to">Копировать в</string>
+    <string name="move_to">Переместить в</string>
     <string name="source">Путь источника</string>
     <string name="destination">Путь назначения</string>
     <string name="select_destination">Выберите путь назначения</string>
@@ -74,7 +82,7 @@
     <string name="confirm_storage_access_title">Предоставление доступа к внешнему накопителю</string>
     <string name="confirm_storage_access_text">Чтобы предоставить право на запись, пожалуйста, выберите корневую папку SD-карты на следующем шаге</string>
     <string name="confirm_storage_access_text_sd">Если вы не видите SD-карту, попробуйте это</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_selection">Подтвердить выделение</string>
 
     <plurals name="items">
         <item quantity="one">%1$d объект</item>
@@ -137,6 +145,7 @@
     <string name="unhide_folder">Показать папку</string>
     <string name="temporarily_show_hidden">Временный показ скрытых</string>
     <string name="stop_showing_hidden">Не показывать скрытые медиа</string>
+    <string name="maximum_share_reached">Слишком большое количество контента, чтобы поделиться им</string>
 
     <!-- Sorting -->
     <string name="sort_by">Сортировать по</string>
@@ -195,6 +204,7 @@
     <!-- Settings -->
     <string name="settings">Настройки</string>
     <string name="customize_colors">Настроить цвета</string>
+    <string name="use_english_language">Use english language</string>
     <string name="show_hidden">Показывать скрытые папки</string>
     <string name="font_size">Размер шрифта</string>
     <string name="small">Мелкий</string>
@@ -202,6 +212,8 @@
     <string name="large">Крупный</string>
     <string name="extra_large">Очень крупный</string>
     <string name="password_protect_hidden_items">Защита паролем отображения скрытых объектов</string>
+    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="keep_last_modified">Сохранять значение даты изменения файла при копировании/перемещении/переименовании</string>
 
     <!-- About -->
     <string name="about">О приложении</string>
@@ -215,13 +227,14 @@
     <string name="rate_us_underlined"><u>Оценить нас в Google Play</u></string>
     <string name="donate">Поддержать разработчика</string>
     <string name="donate_underlined"><u>Поддержать разработчика</u></string>
-    <string name="follow_us">Подписаться на нас:</string>
+    <string name="follow_us">Подписаться на нас</string>
     <string name="copyright">v %1$s\nАвторские права © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Дополнительная информация</string>
     <string name="gruveo">Вы ищете простое и анонимное приложение для видеозвонков? Попробуйте мой другой проект</string>
     <string name="app_version">Версия приложения: %1$s</string>
     <string name="device_os">OS устройства: %1$s</string>
-    <string name="donate_please">Привет,\n\nпохоже, что вы уже давно используете это приложение.\n\nЗнаете ли вы, что оно не поддерживается какой-либо крупной компанией? Для его развития требуется время и я хочу сохранить его без рекламы, поэтому ваша поддержка будет оценена по достоинству.\n\nВы можете поддержать меня либо путём покупки платного приложения \'Simple Thank You\', либо переводом мне денег через Paypal или криптовалюту.\n\nБолее подробная информация на http://simplemobiletools.com/donate.\n\nСпасибо!</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
 
     <!-- License -->
     <string name="notice">Это приложение использует следующие библиотеки сторонних разработчиков, чтобы облегчить мой труд. Спасибо.</string>
@@ -236,6 +249,11 @@
     <string name="joda_title">Joda-Time (замена даты Java)</string>
     <string name="stetho_title">Stetho (базы данных отладки)</string>
     <string name="otto_title">Otto ("шина" событий)</string>
-    <string name="photoview_title">PhotoView (масштабирование gif)</string>
+    <string name="photoview_title">PhotoView (масштабирование GIF)</string>
     <string name="pattern_title">PatternLockView (защита графическим ключом)</string>
+    <string name="reprint_title">Reprint (защита по отпечатку пальца)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
 </resources>
