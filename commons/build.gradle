@@ -35,7 +35,7 @@ dependencies {
     compile 'com.github.ajalt.reprint:core:3.2.0@aar'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.2.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
 }
 
 buildscript {
