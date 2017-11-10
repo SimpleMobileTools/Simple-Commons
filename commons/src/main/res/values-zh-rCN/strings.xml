@@ -202,7 +202,7 @@
     <!-- Settings -->
     <string name="settings">设置</string>
     <string name="customize_colors">自定义颜色</string>
-    <string name="use_english_language">Use english language</string>
+    <string name="use_english_language">强制使用英语语言</string>
     <string name="show_hidden">显示隐藏文件和文件夹</string>
     <string name="font_size">字体大小</string>
     <string name="small">小</string>
@@ -210,7 +210,7 @@
     <string name="large">大</string>
     <string name="extra_large">巨大</string>
     <string name="password_protect_hidden_items">使用密码保护隐藏项</string>
-    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="password_protect_whole_app">使用密码保护本应用</string>
     <string name="keep_last_modified">在复制/移动/重命名文件时保留旧的修改日期</string>
 
     <!-- About -->
