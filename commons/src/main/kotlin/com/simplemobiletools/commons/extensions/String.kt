@@ -448,6 +448,7 @@ fun String.getMimeTypeFromPath(): String {
         put("pfm", "application/octet-stream")
         put("pfx", "application/x-pkcs12")
         put("pgm", "image/x-portable-graymap")
+        put("php", "text/plain")
         put("pic", "image/pict")
         put("pict", "image/pict")
         put("pkgdef", "text/plain")
