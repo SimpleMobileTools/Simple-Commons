@@ -12,9 +12,9 @@
     <string name="set_as">Imposta come</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_storage_permissions">L'autorizzazione Archiviazione è necessaria</string>
+    <string name="no_contacts_permission">L'autorizzazione Contatti è necessaria</string>
+    <string name="no_camera_permissions">L'autorizzazione Fotocamera è necessaria</string>
     <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
@@ -202,7 +202,7 @@
     <!-- Settings -->
     <string name="settings">Impostazioni</string>
     <string name="customize_colors">Personalizza i colori</string>
-    <string name="use_english_language">Use English language</string>
+    <string name="use_english_language">Forza lingua Inglese</string>
     <string name="show_hidden">Mostra file e cartelle nascosti</string>
     <string name="font_size">Dimensione carattere</string>
     <string name="small">Piccolo</string>
@@ -210,8 +210,8 @@
     <string name="large">Grande</string>
     <string name="extra_large">Molto grande</string>
     <string name="password_protect_hidden_items">Proteggi con password gli elementi nascosti</string>
-    <string name="password_protect_whole_app">Password protect the whole application</string>
-    <string name="keep_last_modified">Mantieni valore di ultima modifica dopo il copia/sposta/rinomina</string>
+    <string name="password_protect_whole_app">Proteggi con password tutta l\'applicazione</string>
+    <string name="keep_last_modified">Mantieni data/ora ultima modifica in copia/sposta/rinomina</string>
 
     <!-- About -->
     <string name="about">Informazioni</string>
@@ -231,8 +231,8 @@
     <string name="gruveo">Stai cercando un\'app semplice e anonima per videochiamate? Prova l\'altro mio progetto</string>
     <string name="app_version">Versione app: %1$s</string>
     <string name="device_os">OS dispositivo: %1$s</string>
-    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
-    <string name="purchase">Purchase</string>
+    <string name="donate_please">Ciao,\n\nspero che tu sia contento dell\'app. Non contiene pubblicità, per favore supportane lo sviluppo acquistando l\'app <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, inoltre questa finestra non verrà più mostrata.\n\nPuoi trovare ulteriori opzioni di donazione <a href="http://simplemobiletools.com/donate">qui</a>.\n\nGrazie!</string>
+    <string name="purchase">Acquista</string>
 
     <!-- License -->
     <string name="notice">Questa app usa le seguenti librerie di terze parti per semplificarmi la vita. Grazie.</string>
@@ -251,7 +251,7 @@
     <string name="pattern_title">PatternLockView (sequenza di protezione)</string>
     <string name="reprint_title">Reprint (protezione impronta)</string>
     <string name="gif_drawable_title">Gif Drawable (caricamento GIF)</string>
-    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
+    <string name="autofittextview_title">AutoFitTextView (ridimensionamento testo)</string>
+    <string name="robolectric_title">Robolectric (ambiente di test)</string>
+    <string name="espresso_title">Espresso (aiutante nei test)</string>
 </resources>
