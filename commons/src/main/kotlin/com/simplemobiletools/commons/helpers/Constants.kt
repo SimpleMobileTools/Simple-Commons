@@ -29,6 +29,7 @@ val APP_PASSWORD_HASH = "app_password_hash"
 val APP_PROTECTION_TYPE = "app_protection_type"
 val KEEP_LAST_MODIFIED = "keep_last_modified"
 val USE_ENGLISH = "use_english"
+val WAS_USE_ENGLISH_TOGGLED = "was_use_english_toggled"
 
 // licenses
 val LICENSE_KOTLIN = 1
