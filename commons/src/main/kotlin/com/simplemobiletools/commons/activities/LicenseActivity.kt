@@ -39,13 +39,13 @@ class LicenseActivity : BaseSimpleActivity() {
         }
     }
 
-    fun getUnderlinedTitle(title: String): SpannableString {
+    private fun getUnderlinedTitle(title: String): SpannableString {
         val underlined = SpannableString(title)
         underlined.setSpan(UnderlineSpan(), 0, title.length, 0)
         return underlined
     }
 
-    fun initLicenses() =
+    private fun initLicenses() =
             arrayOf(
                     License(LICENSE_KOTLIN, R.string.kotlin_title, R.string.kotlin_text, R.string.kotlin_url),
                     License(LICENSE_SUBSAMPLING, R.string.subsampling_title, R.string.subsampling_text, R.string.subsampling_url),
@@ -63,6 +63,8 @@ class LicenseActivity : BaseSimpleActivity() {
                     License(LICENSE_GIF_DRAWABLE, R.string.gif_drawable_title, R.string.gif_drawable_text, R.string.gif_drawable_url),
                     License(LICENSE_AUTOFITTEXTVIEW, R.string.autofittextview_title, R.string.autofittextview_text, R.string.autofittextview_url),
                     License(LICENSE_ROBOLECTRIC, R.string.robolectric_title, R.string.robolectric_text, R.string.robolectric_url),
-                    License(LICENSE_ESPRESSO, R.string.espresso_title, R.string.espresso_text, R.string.espresso_url)
+                    License(LICENSE_ESPRESSO, R.string.espresso_title, R.string.espresso_text, R.string.espresso_url),
+                    License(LICENSE_GSON, R.string.gson_title, R.string.gson_text, R.string.gson_url),
+                    License(LICENSE_LEAK_CANARY, R.string.leak_canary_title, R.string.leakcanary_text, R.string.leakcanary_url)
             )
 }
