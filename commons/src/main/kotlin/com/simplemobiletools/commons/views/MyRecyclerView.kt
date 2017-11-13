@@ -11,12 +11,13 @@ import com.simplemobiletools.commons.R
 // drag selection is based on https://github.com/afollestad/drag-select-recyclerview
 class MyRecyclerView : RecyclerView {
     private val AUTO_SCROLL_DELAY = 25L
-    var isZoomingEnabled = false
-    var isDragSelectionEnabled = false
-    var zoomListener: MyRecyclerViewZoomListener? = null
-    var dragListener: MyRecyclerViewDragListener? = null
+    private var isZoomEnabled = false
+    private var isDragSelectionEnabled = false
+    private var zoomListener: MyZoomListener? = null
+    private var dragListener: MyDragListener? = null
+    private var autoScrollHandler = Handler()
 
-    private var mScaleDetector: ScaleGestureDetector
+    private var scaleDetector: ScaleGestureDetector
 
     private var dragSelectActive = false
     private var lastDraggedIndex = -1
@@ -47,7 +48,7 @@ class MyRecyclerView : RecyclerView {
     init {
         hotspotHeight = context.resources.getDimensionPixelSize(R.dimen.dragselect_hotspot_height)
 
-        val gestureListener = object : MyRecyclerViewGestureListener {
+        val gestureListener = object : MyGestureListener {
             override fun getLastUp() = lastUp
 
             override fun getScaleFactor() = currScaleFactor
@@ -59,7 +60,7 @@ class MyRecyclerView : RecyclerView {
             override fun getZoomListener() = zoomListener
         }
 
-        mScaleDetector = ScaleGestureDetector(context, GestureListener(gestureListener))
+        scaleDetector = ScaleGestureDetector(context, GestureListener(gestureListener))
     }
 
     override fun onMeasure(widthSpec: Int, heightSpec: Int) {
@@ -72,7 +73,6 @@ class MyRecyclerView : RecyclerView {
         }
     }
 
-    private var autoScrollHandler = Handler()
     private val autoScrollRunnable = object : Runnable {
         override fun run() {
             if (inTopHotspot) {
@@ -90,7 +90,6 @@ class MyRecyclerView : RecyclerView {
             try {
                 super.dispatchTouchEvent(ev)
             } catch (ignored: Exception) {
-
             }
         }
 
@@ -168,10 +167,22 @@ class MyRecyclerView : RecyclerView {
                 }
             }
         }
-        return if (isZoomingEnabled)
-            mScaleDetector.onTouchEvent(ev)
-        else
+
+        return if (isZoomEnabled) {
+            scaleDetector.onTouchEvent(ev)
+        } else {
             true
+        }
+    }
+
+    fun setupDragListener(dragListener: MyDragListener?) {
+        isDragSelectionEnabled = dragListener != null
+        this.dragListener = dragListener
+    }
+
+    fun setupZoomListener(zoomListener: MyZoomListener?) {
+        isZoomEnabled = zoomListener != null
+        this.zoomListener = zoomListener
     }
 
     fun setDragSelectActive(initialSelection: Int) {
@@ -197,8 +208,7 @@ class MyRecyclerView : RecyclerView {
         return holder.adapterPosition
     }
 
-
-    class GestureListener(val gestureListener: MyRecyclerViewGestureListener) : ScaleGestureDetector.SimpleOnScaleGestureListener() {
+    class GestureListener(val gestureListener: MyGestureListener) : ScaleGestureDetector.SimpleOnScaleGestureListener() {
         private val ZOOM_IN_THRESHOLD = -0.4f
         private val ZOOM_OUT_THRESHOLD = 0.15f
 
@@ -220,25 +230,25 @@ class MyRecyclerView : RecyclerView {
         }
     }
 
-    interface MyRecyclerViewZoomListener {
+    interface MyZoomListener {
         fun zoomOut()
 
         fun zoomIn()
     }
 
-    interface MyRecyclerViewDragListener {
+    interface MyDragListener {
         fun selectItem(position: Int)
 
         fun selectRange(initialSelection: Int, lastDraggedIndex: Int, minReached: Int, maxReached: Int)
     }
 
-    interface MyRecyclerViewGestureListener {
+    interface MyGestureListener {
         fun getLastUp(): Long
 
         fun getScaleFactor(): Float
 
         fun setScaleFactor(value: Float)
 
-        fun getZoomListener(): MyRecyclerViewZoomListener?
+        fun getZoomListener(): MyZoomListener?
     }
 }
