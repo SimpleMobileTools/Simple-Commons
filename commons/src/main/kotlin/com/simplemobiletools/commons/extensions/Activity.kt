@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.media.MediaScannerConnection
 import android.net.Uri
+import android.os.Build
 import android.os.Looper
 import android.os.TransactionTooLargeException
 import android.provider.DocumentsContract
@@ -558,3 +559,5 @@ fun BaseSimpleActivity.restartActivity() {
     finish()
     startActivity(intent)
 }
+
+fun Activity.isActivityDestroyed() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1 && isDestroyed
