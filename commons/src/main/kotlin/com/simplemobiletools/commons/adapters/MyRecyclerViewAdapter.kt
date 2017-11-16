@@ -35,9 +35,9 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     abstract fun markItemSelection(select: Boolean, view: View?)
 
-    abstract fun actionItemPressed(id: Int)
-
     abstract fun prepareActionMode(menu: Menu)
+
+    abstract fun actionItemPressed(id: Int)
 
     fun toggleItemSelection(select: Boolean, pos: Int) {
         if (select) {
