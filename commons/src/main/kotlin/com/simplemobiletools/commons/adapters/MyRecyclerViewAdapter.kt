@@ -15,7 +15,8 @@ import com.simplemobiletools.commons.interfaces.MyAdapterListener
 import com.simplemobiletools.commons.views.MyRecyclerView
 import java.util.*
 
-abstract class MyRecyclerAdapter(val activity: BaseSimpleActivity, val itemClick: (Any) -> Unit) : RecyclerView.Adapter<MyRecyclerAdapter.ViewHolder>() {
+abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyclerView: MyRecyclerView, val itemClick: (Any) -> Unit)
+    : RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder>() {
     val baseConfig = activity.baseConfig
     val resources = activity.resources!!
     var primaryColor = baseConfig.primaryColor
@@ -26,7 +27,6 @@ abstract class MyRecyclerAdapter(val activity: BaseSimpleActivity, val itemClick
 
     private val multiSelector = MultiSelector()
     private var actMode: ActionMode? = null
-    private var myRecyclerView: MyRecyclerView? = null
 
     abstract fun getActionMenuId(): Int
 
@@ -77,17 +77,24 @@ abstract class MyRecyclerAdapter(val activity: BaseSimpleActivity, val itemClick
         updateTitle(cnt)
     }
 
-    fun setDragListenerRecyclerView(recyclerView: MyRecyclerView?) {
-        myRecyclerView = recyclerView
-        myRecyclerView?.setupDragListener(object : MyRecyclerView.MyDragListener {
-            override fun selectItem(position: Int) {
-                selectItemPosition(position)
-            }
+    fun setupDragListener(enable: Boolean) {
+        if (enable) {
+            recyclerView.setupDragListener(object : MyRecyclerView.MyDragListener {
+                override fun selectItem(position: Int) {
+                    selectItemPosition(position)
+                }
 
-            override fun selectRange(initialSelection: Int, lastDraggedIndex: Int, minReached: Int, maxReached: Int) {
-                selectItemRange(initialSelection, lastDraggedIndex, minReached, maxReached)
-            }
-        })
+                override fun selectRange(initialSelection: Int, lastDraggedIndex: Int, minReached: Int, maxReached: Int) {
+                    selectItemRange(initialSelection, lastDraggedIndex, minReached, maxReached)
+                }
+            })
+        } else {
+            recyclerView.setupDragListener(null)
+        }
+    }
+
+    fun setupZoomListener(zoomListener: MyRecyclerView.MyZoomListener?) {
+        recyclerView.setupZoomListener(zoomListener)
     }
 
     fun selectItemPosition(pos: Int) {
@@ -148,7 +155,7 @@ abstract class MyRecyclerAdapter(val activity: BaseSimpleActivity, val itemClick
         override fun getSelectedPositions() = selectedPositions
 
         override fun itemLongClicked(position: Int) {
-            myRecyclerView?.setDragSelectActive(position)
+            recyclerView.setDragSelectActive(position)
         }
     }
 
@@ -176,6 +183,7 @@ abstract class MyRecyclerAdapter(val activity: BaseSimpleActivity, val itemClick
                 markItemSelection(false, itemViews[it])
             }
             selectedPositions.clear()
+            actMode?.title = ""
             actMode = null
         }
     }
