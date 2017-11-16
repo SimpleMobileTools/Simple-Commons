@@ -6,6 +6,7 @@ import android.util.SparseArray
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.view.ViewGroup
 import com.bignerdranch.android.multiselector.ModalMultiSelectorCallback
 import com.bignerdranch.android.multiselector.MultiSelector
 import com.bignerdranch.android.multiselector.SwappingHolder
@@ -188,7 +189,16 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         }
     }
 
-    fun createViewHolder(view: View) = ViewHolder(view, adapterListener, activity, multiSelectorMode, multiSelector, itemClick)
+    fun createViewHolder(layoutType: Int, parent: ViewGroup?): ViewHolder {
+        val view = activity.layoutInflater.inflate(layoutType, parent, false)
+        return ViewHolder(view, adapterListener, activity, multiSelectorMode, multiSelector, itemClick)
+    }
+
+    fun bindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int, view: View) {
+        itemViews.put(position, view)
+        toggleItemSelection(selectedPositions.contains(position), position)
+        holder.itemView.tag = holder
+    }
 
     class ViewHolder(view: View, val adapterListener: MyAdapterListener, val activity: BaseSimpleActivity, val multiSelectorCallback: ModalMultiSelectorCallback,
                      val multiSelector: MultiSelector, val itemClick: (Any) -> (Unit)) : SwappingHolder(view, multiSelector) {
