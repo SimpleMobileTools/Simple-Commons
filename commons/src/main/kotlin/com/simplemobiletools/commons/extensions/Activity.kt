@@ -110,7 +110,7 @@ fun Activity.shareUri(uri: Uri, applicationId: String) {
     Intent().apply {
         action = Intent.ACTION_SEND
         putExtra(Intent.EXTRA_STREAM, newUri)
-        type = getMimeTypeFromUri(newUri)
+        type = getUriMimeType(uri, newUri)
         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         if (resolveActivity(packageManager) != null) {
             startActivity(Intent.createChooser(this, getString(R.string.share_via)))
@@ -148,7 +148,7 @@ fun Activity.setAs(uri: Uri, applicationId: String) {
     val newUri = ensurePublicUri(uri, applicationId)
     Intent().apply {
         action = Intent.ACTION_ATTACH_DATA
-        setDataAndType(newUri, getMimeTypeFromUri(newUri))
+        setDataAndType(newUri, getUriMimeType(uri, newUri))
         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         val chooser = Intent.createChooser(this, getString(R.string.set_as))
 
@@ -164,7 +164,7 @@ fun Activity.openEditor(uri: Uri, applicationId: String) {
     val newUri = ensurePublicUri(uri, applicationId)
     Intent().apply {
         action = Intent.ACTION_EDIT
-        setDataAndType(newUri, getMimeTypeFromUri(newUri))
+        setDataAndType(newUri, getUriMimeType(uri, newUri))
         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         putExtra(MediaStore.EXTRA_OUTPUT, uri)
 
@@ -178,7 +178,7 @@ fun Activity.openEditor(uri: Uri, applicationId: String) {
 
 fun Activity.openFile(uri: Uri, forceChooser: Boolean, applicationId: String) {
     val newUri = ensurePublicUri(uri, applicationId)
-    val mimeType = getMimeTypeFromUri(newUri)
+    val mimeType = getUriMimeType(uri, newUri)
     Intent().apply {
         action = Intent.ACTION_VIEW
         setDataAndType(newUri, mimeType)
@@ -199,6 +199,14 @@ fun Activity.openFile(uri: Uri, forceChooser: Boolean, applicationId: String) {
             }
         }
     }
+}
+
+fun Activity.getUriMimeType(oldUri: Uri, newUri: Uri): String {
+    var mimeType = getMimeTypeFromUri(oldUri)
+    if (mimeType.isEmpty()) {
+        mimeType = getMimeTypeFromUri(newUri)
+    }
+    return mimeType
 }
 
 fun Activity.tryGenericMimeType(intent: Intent, mimeType: String, uri: Uri): Boolean {
