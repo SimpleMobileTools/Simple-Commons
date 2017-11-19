@@ -125,9 +125,13 @@ fun Activity.shareUris(uris: ArrayList<Uri>, applicationId: String) {
         shareUri(uris.first(), applicationId)
     } else {
         val newUris = uris.map { ensurePublicUri(it, applicationId) } as ArrayList<Uri>
+        var mimeType = newUris.getMimeType()
+        if (mimeType.isEmpty() || mimeType == "*/*") {
+            mimeType = uris.getMimeType()
+        }
         Intent().apply {
             action = Intent.ACTION_SEND_MULTIPLE
-            type = newUris.getMimeType()
+            type = mimeType
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             putParcelableArrayListExtra(Intent.EXTRA_STREAM, newUris)
 
