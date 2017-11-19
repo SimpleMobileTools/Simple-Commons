@@ -210,7 +210,11 @@ fun Activity.getUriMimeType(oldUri: Uri, newUri: Uri): String {
 }
 
 fun Activity.tryGenericMimeType(intent: Intent, mimeType: String, uri: Uri): Boolean {
-    val genericMimeType = mimeType.getGenericMimeType()
+    var genericMimeType = mimeType.getGenericMimeType()
+    if (genericMimeType.isEmpty()) {
+        genericMimeType = "*/*"
+    }
+
     intent.setDataAndType(uri, genericMimeType)
     return if (intent.resolveActivity(packageManager) != null) {
         startActivity(intent)
