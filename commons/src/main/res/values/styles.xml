@@ -1,16 +1,20 @@
 <resources>
 
-    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme.Base.NoTextSize" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorPrimaryDark">@color/color_primary_dark</item>
         <item name="colorAccent">@color/color_accent</item>
         <item name="actionBarStyle">@style/AppTheme.ActionBarStyle</item>
-        <item name="android:textSize">@dimen/normal_text_size</item>
         <item name="android:spinnerItemStyle">@style/SpinnerItem</item>
         <item name="spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
         <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
         <item name="buttonStyle">@style/MyTransparentButton</item>
         <item name="android:buttonStyle">@style/MyTransparentButton</item>
+    </style>
+
+    <!-- we do not set android:textSize in Calendar, as it overrides time/datepicker dialog text sizes too and it looks bad -->
+    <style name="AppTheme.Base" parent="AppTheme.Base.NoTextSize">
+        <item name="android:textSize">@dimen/normal_text_size</item>
     </style>
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">

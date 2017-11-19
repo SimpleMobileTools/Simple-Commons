@@ -12,10 +12,10 @@
     <string name="set_as">Ustaw jako</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">Wymagane jest uprawnienie \'Pamięć\'</string>
+    <string name="no_contacts_permission">Wymagane jest uprawnienie \'Kontakty\'</string>
+    <string name="no_camera_permissions">Wymagane jest uprawnienie \'Aparat\'</string>
+    <string name="no_audio_permissions"> Wymagane jest uprawnienie \'Mikrofon\'</string>
 
     <!-- Renaming -->
     <string name="rename_file">Zmień nazwę</string>
@@ -206,7 +206,7 @@
     <!-- Settings -->
     <string name="settings">Ustawienia</string>
     <string name="customize_colors">Dostosuj kolory</string>
-    <string name="use_english_language">Use english language</string>
+    <string name="use_english_language">Wymuś używanie przez aplikację języka angielskiego</string>
     <string name="show_hidden">Pokazuj ukryte pliki i foldery</string>
     <string name="font_size">Rozmiar czcionki</string>
     <string name="small">Mała</string>
@@ -214,7 +214,7 @@
     <string name="large">Duża</string>
     <string name="extra_large">Bardzo duża</string>
     <string name="password_protect_hidden_items">Chroń widoczność ukrytych plików</string>
-    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="password_protect_whole_app">Chroń dostęp do aplikacji</string>
     <string name="keep_last_modified">Zachowuj starą datę i czas modyfikacji przy kopiowaniu / przenoszeniu / zmianie nazwy plików</string>
 
     <!-- About -->
@@ -232,11 +232,11 @@
     <string name="follow_us">Śledź nas</string>
     <string name="copyright">Wersja %1$s\n© Simple Mobile Tools %2$d</string>
     <string name="additional_info">Dodatkowe informacje</string>
-    <string name="gruveo">Nie szukasz może prostej i anonimowej w swych działaniach aplikacji do wideorozmów? Wypróbuj mój inny projekt:</string>
+    <string name="gruveo">Nie szukasz może prostej i anonimowej w swych działaniach aplikacji do wideorozmów?</string>
     <string name="app_version">Wersja aplikacji: %1$s</string>
     <string name="device_os">System: %1$s</string>
-    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
-    <string name="purchase">Purchase</string>
+    <string name="donate_please">Witaj!\n\nMamy nadzieję, że aplikacja przypadła Ci do gustu. Jak da się zauważyć, nie zawiera ona reklam, prosimy więc o wsparcie jej rozwoju poprzez zakup specjalnej aplikacji <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, co poskutkuje również wyłączeniem tego komunikatu.\n\nWięcej możliwości wsparcia znajdziesz <a href="http://simplemobiletools.com/donate">tutaj</a>.\n\nDziękujemy za korzystanie z aplikacji (no i za wasze ewentualne pieniążki)!</string>
+    <string name="purchase">Kup</string>
 
     <!-- License -->
     <string name="notice">Aplikacja korzysta z następujących bibliotek innych firm:</string>
@@ -250,12 +250,14 @@
     <string name="rtl_viewpager_title">RtlViewPager (przeciąganie ekranu od prawej do lewej strony)</string>
     <string name="joda_title">Joda-Time (podmienianie daty w języku Java)</string>
     <string name="stetho_title">Stetho (bazy danych debugowania)</string>
-    <string name="otto_title">Otto (event bus)</string>
+    <string name="otto_title">Otto (szyna zdarzeń)</string>
     <string name="photoview_title">PhotoView (przybliżanie GIFów)</string>
     <string name="pattern_title">PatternLockView (ochrona danych wzorem)</string>
     <string name="reprint_title">Reprint (ochrona danych odciskiem palca)</string>
     <string name="gif_drawable_title">Gif Drawable (ładowanie GIFów)</string>
-    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
+    <string name="autofittextview_title">AutoFitTextView (zmiana rozmiaru tekstu)</string>
+    <string name="robolectric_title">Robolectric (testowanie aplikacji)</string>
+    <string name="espresso_title">Espresso (testowanie aplikacji)</string>
+    <string name="gson_title">Gson (JSON parser)</string>
+    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
 </resources>

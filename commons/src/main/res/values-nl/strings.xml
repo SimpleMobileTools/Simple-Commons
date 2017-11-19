@@ -202,7 +202,7 @@
     <!-- Settings -->
     <string name="settings">Instellingen</string>
     <string name="customize_colors">Kleuren aanpassen</string>
-    <string name="use_english_language">Use english language</string>
+    <string name="use_english_language">Use English language</string>
     <string name="show_hidden">Verborgen bestanden en mappen tonen</string>
     <string name="font_size">Lettergrootte</string>
     <string name="small">Klein</string>
@@ -210,7 +210,7 @@
     <string name="large">Groot</string>
     <string name="extra_large">Extra groot</string>
     <string name="password_protect_hidden_items">Verborgen items met wachtwoord beveiligen</string>
-    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="password_protect_whole_app">Hele app met wachtwoord beveiligen</string>
     <string name="keep_last_modified">Datum laatst gewijzigd behouden bij bestandsoperaties</string>
 
     <!-- About -->
@@ -254,4 +254,6 @@
     <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
     <string name="robolectric_title">Robolectric (testing framework)</string>
     <string name="espresso_title">Espresso (testing helper)</string>
+    <string name="gson_title">Gson (JSON parser)</string>
+    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
 </resources>

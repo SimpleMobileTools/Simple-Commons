@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.app.Activity
 import android.content.Intent
+import android.content.res.Resources
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
@@ -12,6 +13,9 @@ import android.provider.DocumentsContract
 import android.support.v4.app.ActivityCompat
 import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
+import android.text.SpannableString
+import android.text.style.AbsoluteSizeSpan
+import android.view.Menu
 import android.view.MenuItem
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
@@ -73,6 +77,18 @@ open class BaseSimpleActivity : AppCompatActivity() {
             hsv[2] *= 0.85f
             window.statusBarColor = Color.HSVToColor(hsv)
         }
+    }
+
+    fun updateMenuTextSize(resources: Resources, menu: Menu) {
+        val textSize = resources.getDimension(R.dimen.normal_text_size).toInt()
+        (0 until menu.size())
+                .map { menu.getItem(it) }
+                .forEach {
+                    SpannableString(it.title).apply {
+                        setSpan(AbsoluteSizeSpan(textSize, false), 0, length, 0)
+                        it.title = this
+                    }
+                }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {

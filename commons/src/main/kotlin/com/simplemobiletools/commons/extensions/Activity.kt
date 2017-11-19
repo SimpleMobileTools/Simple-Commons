@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.media.MediaScannerConnection
 import android.net.Uri
+import android.os.Build
 import android.os.Looper
 import android.os.TransactionTooLargeException
 import android.provider.DocumentsContract
@@ -69,7 +70,7 @@ fun Activity.storeStoragePaths() {
     }).start()
 
     baseConfig.appRunCount++
-    if (!isThankYouInstalled() && (baseConfig.appRunCount % 100 == 0)) {
+    if (!isThankYouInstalled() && (baseConfig.appRunCount % 50 == 0)) {
         DonateDialog(this)
     }
 }
@@ -109,7 +110,7 @@ fun Activity.shareUri(uri: Uri, applicationId: String) {
     Intent().apply {
         action = Intent.ACTION_SEND
         putExtra(Intent.EXTRA_STREAM, newUri)
-        type = getMimeTypeFromUri(newUri)
+        type = getUriMimeType(uri, newUri)
         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         if (resolveActivity(packageManager) != null) {
             startActivity(Intent.createChooser(this, getString(R.string.share_via)))
@@ -124,9 +125,13 @@ fun Activity.shareUris(uris: ArrayList<Uri>, applicationId: String) {
         shareUri(uris.first(), applicationId)
     } else {
         val newUris = uris.map { ensurePublicUri(it, applicationId) } as ArrayList<Uri>
+        var mimeType = newUris.getMimeType()
+        if (mimeType.isEmpty() || mimeType == "*/*") {
+            mimeType = uris.getMimeType()
+        }
         Intent().apply {
             action = Intent.ACTION_SEND_MULTIPLE
-            type = newUris.getMimeType()
+            type = mimeType
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             putParcelableArrayListExtra(Intent.EXTRA_STREAM, newUris)
 
@@ -147,7 +152,7 @@ fun Activity.setAs(uri: Uri, applicationId: String) {
     val newUri = ensurePublicUri(uri, applicationId)
     Intent().apply {
         action = Intent.ACTION_ATTACH_DATA
-        setDataAndType(newUri, getMimeTypeFromUri(newUri))
+        setDataAndType(newUri, getUriMimeType(uri, newUri))
         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         val chooser = Intent.createChooser(this, getString(R.string.set_as))
 
@@ -163,7 +168,7 @@ fun Activity.openEditor(uri: Uri, applicationId: String) {
     val newUri = ensurePublicUri(uri, applicationId)
     Intent().apply {
         action = Intent.ACTION_EDIT
-        setDataAndType(newUri, getMimeTypeFromUri(newUri))
+        setDataAndType(newUri, getUriMimeType(uri, newUri))
         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         putExtra(MediaStore.EXTRA_OUTPUT, uri)
 
@@ -177,7 +182,7 @@ fun Activity.openEditor(uri: Uri, applicationId: String) {
 
 fun Activity.openFile(uri: Uri, forceChooser: Boolean, applicationId: String) {
     val newUri = ensurePublicUri(uri, applicationId)
-    val mimeType = getMimeTypeFromUri(newUri)
+    val mimeType = getUriMimeType(uri, newUri)
     Intent().apply {
         action = Intent.ACTION_VIEW
         setDataAndType(newUri, mimeType)
@@ -200,8 +205,20 @@ fun Activity.openFile(uri: Uri, forceChooser: Boolean, applicationId: String) {
     }
 }
 
+fun Activity.getUriMimeType(oldUri: Uri, newUri: Uri): String {
+    var mimeType = getMimeTypeFromUri(oldUri)
+    if (mimeType.isEmpty()) {
+        mimeType = getMimeTypeFromUri(newUri)
+    }
+    return mimeType
+}
+
 fun Activity.tryGenericMimeType(intent: Intent, mimeType: String, uri: Uri): Boolean {
-    val genericMimeType = mimeType.getGenericMimeType()
+    var genericMimeType = mimeType.getGenericMimeType()
+    if (genericMimeType.isEmpty()) {
+        genericMimeType = "*/*"
+    }
+
     intent.setDataAndType(uri, genericMimeType)
     return if (intent.resolveActivity(packageManager) != null) {
         startActivity(intent)
@@ -226,7 +243,7 @@ fun BaseSimpleActivity.checkWhatsNew(releases: List<Release>, currVersion: Int) 
     baseConfig.lastVersion = currVersion
 }
 
-fun BaseSimpleActivity.deleteFolders(folders: ArrayList<File>, deleteMediaOnly: Boolean = true, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFolders(folders: ArrayList<File>, deleteMediaOnly: Boolean = true, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     if (Looper.myLooper() == Looper.getMainLooper()) {
         Thread {
             deleteFoldersBg(folders, deleteMediaOnly, callback)
@@ -236,7 +253,7 @@ fun BaseSimpleActivity.deleteFolders(folders: ArrayList<File>, deleteMediaOnly: 
     }
 }
 
-fun BaseSimpleActivity.deleteFoldersBg(folders: ArrayList<File>, deleteMediaOnly: Boolean = true, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFoldersBg(folders: ArrayList<File>, deleteMediaOnly: Boolean = true, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     var wasSuccess = false
     var needPermissionForPath = ""
     for (file in folders) {
@@ -253,14 +270,14 @@ fun BaseSimpleActivity.deleteFoldersBg(folders: ArrayList<File>, deleteMediaOnly
                     wasSuccess = true
 
                 if (index == folders.size - 1) {
-                    callback(wasSuccess)
+                    callback?.invoke(wasSuccess)
                 }
             }
         }
     }
 }
 
-fun BaseSimpleActivity.deleteFolder(folder: File, deleteMediaOnly: Boolean = true, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFolder(folder: File, deleteMediaOnly: Boolean = true, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     if (Looper.myLooper() == Looper.getMainLooper()) {
         Thread {
             deleteFolderBg(folder, deleteMediaOnly, callback)
@@ -270,11 +287,11 @@ fun BaseSimpleActivity.deleteFolder(folder: File, deleteMediaOnly: Boolean = tru
     }
 }
 
-fun BaseSimpleActivity.deleteFolderBg(folder: File, deleteMediaOnly: Boolean = true, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFolderBg(folder: File, deleteMediaOnly: Boolean = true, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     if (folder.exists()) {
         val filesArr = folder.listFiles()
         if (filesArr == null) {
-            callback(true)
+            callback?.invoke(true)
             return
         }
 
@@ -288,10 +305,10 @@ fun BaseSimpleActivity.deleteFolderBg(folder: File, deleteMediaOnly: Boolean = t
             deleteFileBg(folder, true) { }
         }
     }
-    callback(true)
+    callback?.invoke(true)
 }
 
-fun BaseSimpleActivity.deleteFiles(files: ArrayList<File>, allowDeleteFolder: Boolean = false, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFiles(files: ArrayList<File>, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     if (Looper.myLooper() == Looper.getMainLooper()) {
         Thread {
             deleteFilesBg(files, allowDeleteFolder, callback)
@@ -301,9 +318,9 @@ fun BaseSimpleActivity.deleteFiles(files: ArrayList<File>, allowDeleteFolder: Bo
     }
 }
 
-fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<File>, allowDeleteFolder: Boolean = false, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<File>, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     if (files.isEmpty()) {
-        callback(true)
+        callback?.invoke(true)
         return
     }
 
@@ -315,14 +332,14 @@ fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<File>, allowDeleteFolder: 
                     wasSuccess = true
 
                 if (index == files.size - 1) {
-                    callback(wasSuccess)
+                    callback?.invoke(wasSuccess)
                 }
             }
         }
     }
 }
 
-fun BaseSimpleActivity.deleteFile(file: File, allowDeleteFolder: Boolean = false, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFile(file: File, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     if (Looper.myLooper() == Looper.getMainLooper()) {
         Thread {
             deleteFileBg(file, allowDeleteFolder, callback)
@@ -333,11 +350,11 @@ fun BaseSimpleActivity.deleteFile(file: File, allowDeleteFolder: Boolean = false
 }
 
 @SuppressLint("NewApi")
-fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = false, callback: (wasSuccess: Boolean) -> Unit) {
+fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     var fileDeleted = !file.exists() || file.delete()
     if (fileDeleted) {
         rescanDeletedFile(file) {
-            callback(true)
+            callback?.invoke(true)
         }
     } else {
         if (file.isDirectory || allowDeleteFolder) {
@@ -356,7 +373,7 @@ fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = fal
 
                 if (fileDeleted) {
                     rescanDeletedFile(file) {
-                        callback(true)
+                        callback?.invoke(true)
                     }
                 }
             }
@@ -364,16 +381,16 @@ fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = fal
     }
 }
 
-fun BaseSimpleActivity.rescanDeletedFile(file: File, callback: () -> Unit) {
+fun BaseSimpleActivity.rescanDeletedFile(file: File, callback: (() -> Unit)? = null) {
     if (deleteFromMediaStore(file)) {
-        callback()
+        callback?.invoke()
     } else {
         MediaScannerConnection.scanFile(applicationContext, arrayOf(file.absolutePath), null, { s, uri ->
             try {
                 contentResolver.delete(uri, null, null)
             } catch (e: Exception) {
             }
-            callback()
+            callback?.invoke()
         })
     }
 }
@@ -390,12 +407,12 @@ private fun deleteRecursively(file: File): Boolean {
 }
 
 @SuppressLint("NewApi")
-fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (success: Boolean) -> Unit) {
+fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: ((success: Boolean) -> Unit)? = null) {
     if (needsStupidWritePermissions(newFile.absolutePath)) {
         handleSAFDialog(newFile) {
             val document = getFileDocument(oldFile.absolutePath)
             if (document == null || (oldFile.isDirectory != document.isDirectory)) {
-                callback(false)
+                callback?.invoke(false)
                 return@handleSAFDialog
             }
 
@@ -407,21 +424,21 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
                         if (!baseConfig.keepLastModified) {
                             updateLastModified(newFile, System.currentTimeMillis())
                         }
-                        callback(true)
+                        callback?.invoke(true)
                     }
                 } else {
-                    callback(false)
+                    callback?.invoke(false)
                 }
             } catch (e: SecurityException) {
                 showErrorToast(e)
-                callback(false)
+                callback?.invoke(false)
             }
         }
     } else if (oldFile.renameTo(newFile)) {
         if (newFile.isDirectory) {
             deleteFromMediaStore(oldFile)
             scanFile(newFile) {
-                callback(true)
+                callback?.invoke(true)
             }
         } else {
             if (!baseConfig.keepLastModified) {
@@ -429,11 +446,11 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: (succe
             }
             updateInMediaStore(oldFile, newFile)
             scanFile(newFile) {
-                callback(true)
+                callback?.invoke(true)
             }
         }
     } else {
-        callback(false)
+        callback?.invoke(false)
     }
 }
 
@@ -558,3 +575,5 @@ fun BaseSimpleActivity.restartActivity() {
     finish()
     startActivity(intent)
 }
+
+fun Activity.isActivityDestroyed() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1 && isDestroyed

@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion propCompileSdkVersion
@@ -32,21 +33,11 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:4.3.1'
     compile 'com.booking:rtlviewpager:1.0.1'
     compile 'com.andrognito.patternlockview:patternlockview:1.0.0'
-    compile 'com.github.ajalt.reprint:core:3.2.0@aar'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile 'com.bignerdranch.android:recyclerview-multiselect:0.2'
+    compile 'com.github.ajalt.reprint:core:3.2.0@aar'
 
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.2.0'
-}
-
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
-    }
+    kapt 'com.github.bumptech.glide:compiler:4.3.1'
 }
 
 apply from: '../bintray-upload.gradle'

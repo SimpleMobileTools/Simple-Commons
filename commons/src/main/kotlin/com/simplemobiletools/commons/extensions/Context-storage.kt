@@ -13,7 +13,6 @@ import android.support.v4.provider.DocumentFile
 import android.text.TextUtils
 import com.simplemobiletools.commons.R
 import java.io.File
-import java.lang.ref.WeakReference
 import java.util.*
 import java.util.regex.Pattern
 
@@ -134,36 +133,35 @@ fun Context.getFastDocument(file: File): DocumentFile? {
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
 
-fun Context.scanFile(file: File, action: () -> Unit) {
-    scanFiles(arrayListOf(file), action)
+fun Context.scanFile(file: File, callback: (() -> Unit)? = null) {
+    scanFiles(arrayListOf(file), callback)
 }
 
-fun Context.scanPath(path: String, action: () -> Unit) {
-    scanPaths(arrayListOf(path), action)
+fun Context.scanPath(path: String, callback: (() -> Unit)? = null) {
+    scanPaths(arrayListOf(path), callback)
 }
 
-fun Context.scanFiles(files: ArrayList<File>, action: () -> Unit) {
+fun Context.scanFiles(files: ArrayList<File>, callback: (() -> Unit)? = null) {
     val allPaths = ArrayList<String>()
     for (file in files) {
         allPaths.addAll(getPaths(file))
     }
-    rescanPaths(allPaths, action)
+    rescanPaths(allPaths, callback)
 }
 
-fun Context.scanPaths(paths: ArrayList<String>, action: () -> Unit) {
+fun Context.scanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
     val allPaths = ArrayList<String>()
     for (path in paths) {
         allPaths.addAll(getPaths(File(path)))
     }
-    rescanPaths(allPaths, action)
+    rescanPaths(allPaths, callback)
 }
 
-fun Context.rescanPaths(paths: ArrayList<String>, action: () -> Unit) {
+fun Context.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
     var cnt = paths.size
-    val realAction = WeakReference<() -> Unit>(action)
     MediaScannerConnection.scanFile(applicationContext, paths.toTypedArray(), null, { s, uri ->
         if (--cnt == 0) {
-            realAction.get()?.invoke()
+            callback?.invoke()
         }
     })
 }

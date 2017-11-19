@@ -202,7 +202,7 @@
     <!-- Settings -->
     <string name="settings">Settings</string>
     <string name="customize_colors">Customize colors</string>
-    <string name="use_english_language">Use english language</string>
+    <string name="use_english_language">Use English language</string>
     <string name="show_hidden">Show hidden files and folders</string>
     <string name="font_size">Font size</string>
     <string name="small">Small</string>
@@ -254,4 +254,6 @@
     <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
     <string name="robolectric_title">Robolectric (testing framework)</string>
     <string name="espresso_title">Espresso (testing helper)</string>
+    <string name="gson_title">Gson (JSON parser)</string>
+    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
 </resources>
