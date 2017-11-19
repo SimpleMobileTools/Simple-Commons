@@ -33,6 +33,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
     lateinit var viewContainer: ViewGroup
     val currentColorHsv = FloatArray(3)
     val backgroundColor = context.baseConfig.backgroundColor
+    var isHueBeingDragged = false
 
     init {
         Color.colorToHSV(color, currentColorHsv)
@@ -57,6 +58,10 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
         }
 
         viewHue.setOnTouchListener(OnTouchListener { v, event ->
+            if (event.action == MotionEvent.ACTION_DOWN) {
+                isHueBeingDragged = true
+            }
+
             if (event.action == MotionEvent.ACTION_MOVE || event.action == MotionEvent.ACTION_DOWN || event.action == MotionEvent.ACTION_UP) {
                 var y = event.y
                 if (y < 0f)
@@ -70,8 +75,12 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
                     hue = 0f
 
                 currentColorHsv[0] = hue
-                newHexField.setText(getHexCode(getColor()))
                 updateHue()
+                newHexField.setText(getHexCode(getColor()))
+
+                if (event.action == MotionEvent.ACTION_UP) {
+                    isHueBeingDragged = false
+                }
                 return@OnTouchListener true
             }
             false
@@ -110,7 +119,7 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
             }
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (s.length == 6) {
+                if (s.length == 6 && !isHueBeingDragged) {
                     val newColor = Color.parseColor("#$s")
                     Color.colorToHSV(newColor, currentColorHsv)
                     updateHue()
