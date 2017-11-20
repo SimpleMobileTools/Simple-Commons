@@ -12,10 +12,10 @@
     <string name="set_as">Definir como</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">Requer acesso ao armazenamento</string>
+    <string name="no_contacts_permission">Requer acesso aos contactos</string>
+    <string name="no_camera_permissions">Requer acesso à câmara</string>
+    <string name="no_audio_permissions">Requer acesso ao áudio</string>
 
     <!-- Renaming -->
     <string name="rename_file">Renomear ficheiro</string>
@@ -202,15 +202,15 @@
     <!-- Settings -->
     <string name="settings">Definições</string>
     <string name="customize_colors">Personalizar cores</string>
-    <string name="use_english_language">Use English language</string>
+    <string name="use_english_language">Utilizar aplicação em inglês</string>
     <string name="show_hidden">Mostrar ficheiros e pastas ocultos</string>
     <string name="font_size">Tamanho do texto</string>
     <string name="small">Pequeno</string>
     <string name="medium">Médio</string>
     <string name="large">Grande</string>
     <string name="extra_large">Muito grande</string>
-    <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
-    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="password_protect_hidden_items">Proteger itens ocultos com palavra-passe</string>
+    <string name="password_protect_whole_app">Proteger aplicação com palavra-passe</string>
     <string name="keep_last_modified">Manter dados da última modificação ao copiar/mover/renomear</string>
 
     <!-- About -->
@@ -228,10 +228,10 @@
     <string name="follow_us">Siga-nos</string>
     <string name="copyright">V %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Mais informações</string>
-    <string name="gruveo">Necessita de uma aplicação simples e privada para chamadas de vídeos? Teste os meus outros projetos</string>
+    <string name="gruveo">Necessita de uma aplicação simples e privada para chamadas de vídeos? Teste os meus outros projetos.</string>
     <string name="app_version">Versão da aplicação: %1$s</string>
     <string name="device_os">SO do dispositivo: %1$s</string>
-    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="donate_please">Olá,\n\nespero que esteja a gostar desta aplicação. Não possui anúncios e é open source. Se quiser ajudar no desenvolvimento, pode comprar a aplicação <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> que também impedirá que este diálogo seja novamente mostrado.\n\nPode encontrar mais opções de suporte ao projeto <a href="http://simplemobiletools.com/donate">aqui</a>.\n\nObrigado!</string>
     <string name="purchase">Purchase</string>
 
     <!-- License -->
@@ -248,12 +248,12 @@
     <string name="stetho_title">Stetho (depuração a bases de dados)</string>
     <string name="otto_title">Otto (canal de eventos)</string>
     <string name="photoview_title">PhotoView (animação de GIFs)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
-    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
-    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
-    <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="pattern_title">PatternLockView (proteção com padrões)</string>
+    <string name="reprint_title">Reprint (proteção com impressões digitais)</string>
+    <string name="gif_drawable_title">Gif Drawable (carregamento de GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (redimensionamento de texto)</string>
+    <string name="robolectric_title">Robolectric (framework de testes)</string>
+    <string name="espresso_title">Espresso (apoio aos testes)</string>
+    <string name="gson_title">Gson (processador JSON)</string>
+    <string name="leak_canary_title">Leak Canary (detetor de falhas de memória)</string>
 </resources>
