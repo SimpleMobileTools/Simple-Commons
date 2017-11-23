@@ -9,6 +9,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
+import android.os.Bundle
 import android.provider.DocumentsContract
 import android.support.v4.app.ActivityCompat
 import android.support.v4.util.Pair
@@ -19,6 +20,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
+import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
@@ -35,6 +37,18 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     companion object {
         var funAfterSAFPermission: (() -> Unit)? = null
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        if (!packageName.startsWith("com.simplemobiletools.", true)) {
+            if ((0..50).random() == 10 || baseConfig.appRunCount % 100 == 0) {
+                val label = "You are using a fake version of the app. For your own safety download the original one from www.simplemobiletools.com. Thanks"
+                ConfirmationDialog(this, label, positive = R.string.ok, negative = 0) {
+                    launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
+                }
+            }
+        }
     }
 
     override fun onResume() {
