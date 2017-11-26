@@ -33,3 +33,5 @@ fun Int.getFormattedDuration(): String {
 
 // TODO: how to do "flags & ~flag" in kotlin?
 fun Int.removeFlag(flag: Int) = (this or flag) - flag
+
+fun ClosedRange<Int>.random() = Random().nextInt(endInclusive - start) + start
