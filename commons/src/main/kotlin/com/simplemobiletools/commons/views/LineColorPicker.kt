@@ -16,6 +16,7 @@ class LineColorPicker(context: Context, attrs: AttributeSet) : LinearLayout(cont
     private var stripeWidth = 0
     private var unselectedMargin = 0
     private var lastColorIndex = -1
+    private var wasInit = false
     private var colors = ArrayList<Int>()
 
     var listener: LineColorPickerListener? = null
@@ -28,6 +29,12 @@ class LineColorPicker(context: Context, attrs: AttributeSet) : LinearLayout(cont
 
                 if (colorsCount != 0)
                     stripeWidth = width / colorsCount
+            }
+
+            if (!wasInit) {
+                wasInit = true
+                initColorPicker()
+                updateItemMargin(lastColorIndex, false)
             }
         }
         orientation = LinearLayout.HORIZONTAL
@@ -44,13 +51,22 @@ class LineColorPicker(context: Context, attrs: AttributeSet) : LinearLayout(cont
         }
     }
 
-    fun updateColors(colors: ArrayList<Int>) {
+    fun updateColors(colors: ArrayList<Int>, selectColorIndex: Int = -1) {
         this.colors = colors
         colorsCount = colors.size
         if (pickerWidth != 0) {
             stripeWidth = pickerWidth / colorsCount
         }
 
+        if (selectColorIndex != -1) {
+            lastColorIndex = selectColorIndex
+        }
+
+        initColorPicker()
+        updateItemMargin(lastColorIndex, false)
+    }
+
+    private fun initColorPicker() {
         removeAllViews()
         val inflater = LayoutInflater.from(context)
         colors.forEach {
