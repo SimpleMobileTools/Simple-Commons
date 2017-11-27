@@ -1,47 +1,51 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.content.Context
 import android.support.v7.app.AlertDialog
-import android.view.LayoutInflater
+import android.view.View
 import android.view.WindowManager
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.interfaces.LineColorPickerListener
 import kotlinx.android.synthetic.main.dialog_line_color_picker.view.*
 import java.util.*
 
-class LineColorPickerDialog(val context: Context, val callback: (color: Int) -> Unit) {
+class LineColorPickerDialog(val activity: BaseSimpleActivity, val callback: (wasChanged: Boolean, color: Int) -> Unit) {
     private val PRIMARY_COLORS_COUNT = 19
     private val DEFAULT_PRIMARY_COLOR_INDEX = 14
     private val DEFAULT_SECONDARY_COLOR_INDEX = 6
 
     private var dialog: AlertDialog? = null
+    private var view: View
 
     init {
-        val view = LayoutInflater.from(context).inflate(R.layout.dialog_line_color_picker, null).apply {
+        view = activity.layoutInflater.inflate(R.layout.dialog_line_color_picker, null).apply {
             val indexes = getColorIndexes(context.baseConfig.primaryColor)
 
             primary_line_color_picker.updateColors(getColors(R.array.md_primary_colors), indexes.first)
             primary_line_color_picker.listener = object : LineColorPickerListener {
-                override fun colorChanged(index: Int) {
+                override fun colorChanged(index: Int, color: Int) {
                     val secondaryColors = getColorsForIndex(index)
                     secondary_line_color_picker.updateColors(secondaryColors)
                     dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
+                    activity.updateActionbarColor(secondary_line_color_picker.selectedColor())
                 }
             }
 
             secondary_line_color_picker.updateColors(getColorsForIndex(indexes.first), indexes.second)
             secondary_line_color_picker.listener = object : LineColorPickerListener {
-                override fun colorChanged(index: Int) {
+                override fun colorChanged(index: Int, color: Int) {
                     dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
+                    activity.updateActionbarColor(color)
                 }
             }
         }
 
-        dialog = AlertDialog.Builder(context)
+        dialog = AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.ok, { dialog, which -> dialogConfirmed() })
-                .setNegativeButton(R.string.cancel, null)
+                .setNegativeButton(R.string.cancel, { dialog, which -> dialogDismissed() })
+                .setOnDismissListener { dialogDismissed() }
                 .create().apply {
             context.setupDialogStuff(view, this)
         }
@@ -57,8 +61,13 @@ class LineColorPickerDialog(val context: Context, val callback: (color: Int) -> 
         return Pair(DEFAULT_PRIMARY_COLOR_INDEX, DEFAULT_SECONDARY_COLOR_INDEX)
     }
 
-    private fun dialogConfirmed() {
+    private fun dialogDismissed() {
+        callback(false, 0)
+    }
 
+    private fun dialogConfirmed() {
+        val color = view.secondary_line_color_picker.selectedColor()
+        callback(true, color)
     }
 
     private fun getColorsForIndex(index: Int) = when (index) {
@@ -84,5 +93,5 @@ class LineColorPickerDialog(val context: Context, val callback: (color: Int) -> 
         else -> throw RuntimeException("Invalid color id $index")
     }
 
-    private fun getColors(id: Int) = context.resources.getIntArray(id).toCollection(ArrayList())
+    private fun getColors(id: Int) = activity.resources.getIntArray(id).toCollection(ArrayList())
 }

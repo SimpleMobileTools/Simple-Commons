@@ -66,6 +66,8 @@ class LineColorPicker(context: Context, attrs: AttributeSet) : LinearLayout(cont
         updateItemMargin(lastColorIndex, false)
     }
 
+    fun selectedColor() = colors[lastColorIndex]
+
     private fun initColorPicker() {
         removeAllViews()
         val inflater = LayoutInflater.from(context)
@@ -84,7 +86,7 @@ class LineColorPicker(context: Context, attrs: AttributeSet) : LinearLayout(cont
             updateItemMargin(lastColorIndex, true)
             lastColorIndex = index
             updateItemMargin(index, false)
-            listener?.colorChanged(index)
+            listener?.colorChanged(index, colors[index])
         }
     }
 
