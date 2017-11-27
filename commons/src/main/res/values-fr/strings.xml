@@ -127,8 +127,9 @@
     <string name="save_before_closing">Vous avez des changements non sauvegardés. Sauvegarder avant de quitter ?</string>
 
     <!-- Themes -->
-    <string name="light_theme">Thème lumineux</string>
-    <string name="dark_theme">Thème sombre</string>
+    <string name="light_theme">Lumineux</string>
+    <string name="dark_theme">Sombre</string>
+    <string name="solarized">Solarized</string>
     <string name="custom">Personnalisé</string>
 
     <!-- What's new -->
