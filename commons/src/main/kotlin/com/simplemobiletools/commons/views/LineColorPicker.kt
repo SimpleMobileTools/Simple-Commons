@@ -41,7 +41,7 @@ class LineColorPicker(context: Context, attrs: AttributeSet) : LinearLayout(cont
 
         setOnTouchListener { view, motionEvent ->
             when (motionEvent.action) {
-                MotionEvent.ACTION_MOVE -> {
+                MotionEvent.ACTION_MOVE, MotionEvent.ACTION_UP -> {
                     if (pickerWidth != 0 && stripeWidth != 0) {
                         touchAt(motionEvent.x.toInt())
                     }
