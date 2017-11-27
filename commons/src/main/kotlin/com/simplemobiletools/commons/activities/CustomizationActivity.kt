@@ -21,6 +21,8 @@ class CustomizationActivity : BaseSimpleActivity() {
     private var curPrimaryColor = 0
     private var curSelectedThemeId = 0
     private var hasUnsavedChanges = false
+    private var isLineColorPickerVisible = false
+    private var curPrimaryLineColorPicker: LineColorPickerDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +42,13 @@ class CustomizationActivity : BaseSimpleActivity() {
     override fun onResume() {
         super.onResume()
         updateBackgroundColor(curBackgroundColor)
+        updateActionbarColor(curPrimaryColor)
+        setTheme(getThemeId(curPrimaryColor))
+
+        curPrimaryLineColorPicker?.getSpecificColor()?.apply {
+            updateActionbarColor(this)
+            setTheme(getThemeId(this))
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -225,7 +234,10 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickPrimaryColor() {
-        LineColorPickerDialog(this, curPrimaryColor) { wasPositivePressed, color ->
+        isLineColorPickerVisible = true
+        curPrimaryLineColorPicker = LineColorPickerDialog(this, curPrimaryColor) { wasPositivePressed, color ->
+            curPrimaryLineColorPicker = null
+            isLineColorPickerVisible = false
             if (wasPositivePressed) {
                 if (hasColorChanged(curPrimaryColor, color)) {
                     setCurrentPrimaryColor(color)
@@ -235,6 +247,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 }
             } else {
                 updateActionbarColor(curPrimaryColor)
+                setTheme(getThemeId(curPrimaryColor))
             }
         }
     }

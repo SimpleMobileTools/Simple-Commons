@@ -50,7 +50,9 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        setTheme(getThemeId())
         updateBackgroundColor()
+        updateActionbarColor()
     }
 
     override fun onStop() {

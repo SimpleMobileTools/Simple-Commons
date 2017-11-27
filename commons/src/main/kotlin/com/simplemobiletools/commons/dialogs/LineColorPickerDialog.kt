@@ -13,9 +13,9 @@ import java.util.*
 
 class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit) {
     private val PRIMARY_COLORS_COUNT = 19
-    private val DEFAULT_COLOR_VALUE = -689152
     private val DEFAULT_PRIMARY_COLOR_INDEX = 14
     private val DEFAULT_SECONDARY_COLOR_INDEX = 6
+    private val DEFAULT_COLOR_VALUE = activity.resources.getColor(R.color.color_primary)
 
     private var dialog: AlertDialog? = null
     private var view: View
@@ -49,6 +49,8 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
             context.setupDialogStuff(view, this)
         }
     }
+
+    fun getSpecificColor() = view.secondary_line_color_picker.getCurrentColor()
 
     private fun colorUpdated(color: Int) {
         dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
