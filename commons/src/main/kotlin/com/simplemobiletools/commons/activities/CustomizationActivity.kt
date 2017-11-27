@@ -6,11 +6,9 @@ import android.view.MenuItem
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.dialogs.ColorPickerDialog
 import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
+import com.simplemobiletools.commons.dialogs.LineColorPickerDialog
 import com.simplemobiletools.commons.dialogs.RadioGroupDialog
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.setBackgroundWithStroke
-import com.simplemobiletools.commons.extensions.toast
-import com.simplemobiletools.commons.extensions.updateTextColors
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.THEME_CUSTOM
 import com.simplemobiletools.commons.helpers.THEME_DARK
 import com.simplemobiletools.commons.helpers.THEME_LIGHT
@@ -18,11 +16,11 @@ import com.simplemobiletools.commons.models.RadioItem
 import kotlinx.android.synthetic.main.activity_customization.*
 
 class CustomizationActivity : BaseSimpleActivity() {
-    var curTextColor = 0
-    var curBackgroundColor = 0
-    var curPrimaryColor = 0
-    var curSelectedThemeId = 0
-    var hasUnsavedChanges = false
+    private var curTextColor = 0
+    private var curBackgroundColor = 0
+    private var curPrimaryColor = 0
+    private var curSelectedThemeId = 0
+    private var hasUnsavedChanges = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +35,11 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
         customization_primary_color_holder.setOnClickListener { pickPrimaryColor() }
         setupThemePicker()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        updateBackgroundColor(curBackgroundColor)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -87,17 +90,20 @@ class CustomizationActivity : BaseSimpleActivity() {
                 curTextColor = getColor(R.color.default_light_theme_text_color)
                 curBackgroundColor = getColor(R.color.default_light_theme_background_color)
                 curPrimaryColor = getColor(R.color.color_primary)
+                setTheme(getThemeId(curPrimaryColor))
                 colorChanged()
             } else if (themeId == THEME_DARK) {
                 curTextColor = getColor(R.color.default_dark_theme_text_color)
                 curBackgroundColor = getColor(R.color.default_dark_theme_background_color)
                 curPrimaryColor = getColor(R.color.color_primary)
+                setTheme(getThemeId(curPrimaryColor))
                 colorChanged()
             } else {
                 if (useStored) {
                     curTextColor = baseConfig.customTextColor
                     curBackgroundColor = baseConfig.customBackgroundColor
                     curPrimaryColor = baseConfig.customPrimaryColor
+                    setTheme(getThemeId(curPrimaryColor))
                     setupColorsPickers()
                 } else {
                     baseConfig.customPrimaryColor = curPrimaryColor
@@ -219,11 +225,16 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickPrimaryColor() {
-        ColorPickerDialog(this, curPrimaryColor) {
-            if (hasColorChanged(curPrimaryColor, it)) {
-                setCurrentPrimaryColor(it)
-                colorChanged()
-                updateColorTheme()
+        LineColorPickerDialog(this, curPrimaryColor) { wasPositivePressed, color ->
+            if (wasPositivePressed) {
+                if (hasColorChanged(curPrimaryColor, color)) {
+                    setCurrentPrimaryColor(color)
+                    colorChanged()
+                    updateColorTheme()
+                    setTheme(getThemeId(color))
+                }
+            } else {
+                updateActionbarColor(curPrimaryColor)
             }
         }
     }
