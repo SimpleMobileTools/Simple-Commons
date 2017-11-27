@@ -19,7 +19,8 @@
     <color name="default_background_color">@color/theme_light_background_color</color>
     <color name="theme_solarized_background_color">#FF002B36</color>
     <color name="theme_solarized_text_color">#FFB58900</color>
-    <color name="theme_solarized_primary_color">#FF283593</color>
+    <color name="theme_solarized_primary_color">@color/md_indigo_800</color>
+    <color name="theme_dark_red_primary_color">@color/md_red_700</color>
 
     <!-- SwitchCompat -->
     <color name="thumb_deactivated">#FFECECEC</color>

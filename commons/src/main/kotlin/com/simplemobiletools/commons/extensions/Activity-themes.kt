@@ -194,5 +194,5 @@ fun Activity.getThemeId(color: Int = baseConfig.primaryColor) = when (color) {
     -13154481 -> R.style.AppTheme_Blue_Grey_800
     -14273992 -> R.style.AppTheme_Blue_Grey_900
 
-    else -> throw RuntimeException("Unknown theme id ${baseConfig.primaryColor}")
+    else -> throw RuntimeException("Unknown theme id $color")
 }
