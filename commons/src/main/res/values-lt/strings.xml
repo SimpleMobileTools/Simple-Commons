@@ -119,15 +119,17 @@
     <string name="primary_color">Pirminë spalva</string>
     <string name="restore_defaults">Atstatyti</string>
     <string name="theme">Tema</string>
-    <string name="light_theme">Ðviesi tema</string>
-    <string name="dark_theme">Tamsi tema</string>
-    <string name="custom">Pasirinktinë</string>
     <string name="changing_color_description">Keièiant temà bus perjungta á pasirinktinæ temà</string>
     <string name="save">Iðsaugoti</string>
     <string name="discard">Atmesti</string>
     <string name="undo_changes">Panaikinti pakeitimus</string>
     <string name="undo_changes_confirmation">Ar esate tikri, jog norite panaikinti pakeitimus?</string>
     <string name="save_before_closing">Turite neiðsaugotø pakeitimø. Iðsaugoti prieð iðeinant?</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Ðviesi tema</string>
+    <string name="dark_theme">Tamsi tema</string>
+    <string name="custom">Pasirinktinë</string>
 
     <!-- What's new -->
     <string name="whats_new">Kas naujo</string>

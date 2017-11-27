@@ -120,15 +120,17 @@
     <string name="primary_color">Belka i przełączniki</string>
     <string name="restore_defaults">Przywróć domyślne</string>
     <string name="theme">Motyw</string>
-    <string name="light_theme">Jasny</string>
-    <string name="dark_theme">Ciemny</string>
-    <string name="custom">Własny</string>
     <string name="changing_color_description">Zmiana koloru spowoduje przełączenie motywu na własny</string>
     <string name="save">Zapisz</string>
     <string name="discard">Porzuć</string>
     <string name="undo_changes">Cofnij zmiany</string>
     <string name="undo_changes_confirmation">Czy na pewno chcesz cofnąć zmiany?</string>
     <string name="save_before_closing">Zapisać zmiany?</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Jasny</string>
+    <string name="dark_theme">Ciemny</string>
+    <string name="custom">Własny</string>
 
     <!-- What's new -->
     <string name="whats_new">Co nowego</string>

@@ -119,15 +119,17 @@
     <string name="primary_color">Основной цвет</string>
     <string name="restore_defaults">Сбросить к стандартным</string>
     <string name="theme">Тема</string>
-    <string name="light_theme">Светлая тема</string>
-    <string name="dark_theme">Тёмная тема</string>
-    <string name="custom">Настраиваемое</string>
     <string name="changing_color_description">Изменение цвета повлечёт переключение на пользовательскую тему.</string>
     <string name="save">Сохранить</string>
     <string name="discard">Сбросить</string>
     <string name="undo_changes">Отменить изменения</string>
     <string name="undo_changes_confirmation">Действительно отменить изменения?</string>
     <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Светлая тема</string>
+    <string name="dark_theme">Тёмная тема</string>
+    <string name="custom">Настраиваемое</string>
 
     <!-- What's new -->
     <string name="whats_new">Что нового</string>

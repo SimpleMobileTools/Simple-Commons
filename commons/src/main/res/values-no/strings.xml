@@ -119,15 +119,17 @@
     <string name="primary_color">Primærfarge</string>
     <string name="restore_defaults">Restore defaults</string>
     <string name="theme">Tema</string>
-    <string name="light_theme">Lyst tema</string>
-    <string name="dark_theme">Mørkt tema</string>
-    <string name="custom">Tilpasset</string>
     <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
     <string name="save">Lagre</string>
     <string name="discard">Discard</string>
     <string name="undo_changes">Undo changes</string>
     <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
     <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Lyst tema</string>
+    <string name="dark_theme">Mørkt tema</string>
+    <string name="custom">Tilpasset</string>
 
     <!-- What's new -->
     <string name="whats_new">What\'s new</string>

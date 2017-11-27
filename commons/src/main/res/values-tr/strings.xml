@@ -119,15 +119,17 @@
     <string name="primary_color">Ana renk</string>
     <string name="restore_defaults">Varsayılanları geri yükle</string>
     <string name="theme">Tema</string>
-    <string name="light_theme">Hafif tema</string>
-    <string name="dark_theme">Koyu tema</string>
-    <string name="custom">Özel</string>
     <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
     <string name="save">Kaydet</string>
     <string name="discard">At</string>
     <string name="undo_changes">Değişiklikleri geri al</string>
     <string name="undo_changes_confirmation">Değişikliklerinizi geri almak istediğinizden emin misiniz?</string>
     <string name="save_before_closing">Kaydedilmemiş değişiklikleriniz var. Çıkmadan önce kaydet?</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Hafif tema</string>
+    <string name="dark_theme">Koyu tema</string>
+    <string name="custom">Özel</string>
 
     <!-- What's new -->
     <string name="whats_new">Ne var\'s ne yok</string>

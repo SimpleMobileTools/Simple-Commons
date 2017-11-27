@@ -119,15 +119,17 @@
     <string name="primary_color">Couleur primaire</string>
     <string name="restore_defaults">Restaurer les valeurs par défaut</string>
     <string name="theme">Thème</string>
-    <string name="light_theme">Thème lumineux</string>
-    <string name="dark_theme">Thème sombre</string>
-    <string name="custom">Personnalisé</string>
     <string name="changing_color_description">Changer une couleur le basculera en Thème personnalisé</string>
     <string name="save">Sauvegarder</string>
     <string name="discard">Rejeter</string>
     <string name="undo_changes">Annuler les changements</string>
     <string name="undo_changes_confirmation">Etes-vous sûr•e de vouloir annuler vos changements ?</string>
     <string name="save_before_closing">Vous avez des changements non sauvegardés. Sauvegarder avant de quitter ?</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Thème lumineux</string>
+    <string name="dark_theme">Thème sombre</string>
+    <string name="custom">Personnalisé</string>
 
     <!-- What's new -->
     <string name="whats_new">Quoi de neuf ?</string>

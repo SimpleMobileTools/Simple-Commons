@@ -119,15 +119,17 @@
     <string name="primary_color">メインカラー</string>
     <string name="restore_defaults">デフォルトに戻す</string>
     <string name="theme">テーマ</string>
-    <string name="light_theme">ライト</string>
-    <string name="dark_theme">ダーク</string>
-    <string name="custom">カスタム</string>
     <string name="changing_color_description">色を変更すると、テーマが「カスタム」に切り替わります</string>
     <string name="save">保存</string>
     <string name="discard">破棄</string>
     <string name="undo_changes">変更を元に戻す</string>
     <string name="undo_changes_confirmation">変更を元に戻してもよろしいですか?</string>
     <string name="save_before_closing">保存していない変更があります。保存しますか?</string>
+
+    <!-- Themes -->
+    <string name="light_theme">ライト</string>
+    <string name="dark_theme">ダーク</string>
+    <string name="custom">カスタム</string>
 
     <!-- What's new -->
     <string name="whats_new">更新内容</string>

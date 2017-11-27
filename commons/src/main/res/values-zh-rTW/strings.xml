@@ -119,15 +119,17 @@
     <string name="primary_color">主體顏色</string>
     <string name="restore_defaults">恢復預設</string>
     <string name="theme">主題</string>
-    <string name="light_theme">明亮主題</string>
-    <string name="dark_theme">灰暗主題</string>
-    <string name="custom">自訂</string>
     <string name="changing_color_description">改變顏色將切換成「自訂」主題</string>
     <string name="save">儲存</string>
     <string name="discard">丟棄</string>
     <string name="undo_changes">恢復更改</string>
     <string name="undo_changes_confirmation">確定要恢復變更嗎?</string>
     <string name="save_before_closing">尚未儲存變更。離開前是否儲存?</string>
+
+    <!-- Themes -->
+    <string name="light_theme">明亮主題</string>
+    <string name="dark_theme">灰暗主題</string>
+    <string name="custom">自訂</string>
 
     <!-- What's new -->
     <string name="whats_new">更新了什麼</string>

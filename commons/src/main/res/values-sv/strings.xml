@@ -119,15 +119,17 @@
     <string name="primary_color">Primär färg</string>
     <string name="restore_defaults">Återställ förvalda värden</string>
     <string name="theme">Tema</string>
-    <string name="light_theme">Ljust tema</string>
-    <string name="dark_theme">Mörkt tema</string>
-    <string name="custom">Anpassat tema</string>
     <string name="changing_color_description">Om du ändrar en färg, ändras temat till anpassat tema</string>
     <string name="save">Spara</string>
     <string name="discard">Avbryt</string>
     <string name="undo_changes">Ångra ändringar</string>
     <string name="undo_changes_confirmation">Är du säker på att du vill ångra dina ändringar?</string>
     <string name="save_before_closing">Du har ändringar som inte är sparade. Spara innan du lämnar?</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Ljust tema</string>
+    <string name="dark_theme">Mörkt tema</string>
+    <string name="custom">Anpassat tema</string>
 
     <!-- What's new -->
     <string name="whats_new">Vad är nytt</string>

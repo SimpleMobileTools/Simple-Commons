@@ -119,15 +119,17 @@
     <string name="primary_color">Primaire kleur</string>
     <string name="restore_defaults">Standaardwaarden</string>
     <string name="theme">Thema</string>
-    <string name="light_theme">Licht thema</string>
-    <string name="dark_theme">Donker thema</string>
-    <string name="custom">Aangepast</string>
     <string name="changing_color_description">Zodra een kleur veranderd wordt zal het aangepaste thema worden gebruikt</string>
     <string name="save">Opslaan</string>
     <string name="discard">Negeren</string>
     <string name="undo_changes">Ongedaan maken</string>
     <string name="undo_changes_confirmation">Wijzigingen ongedaan maken?</string>
     <string name="save_before_closing">Onopgeslagen wijzigingen. Nu opslaan?</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Licht thema</string>
+    <string name="dark_theme">Donker thema</string>
+    <string name="custom">Aangepast</string>
 
     <!-- What's new -->
     <string name="whats_new">Wat is er nieuw</string>

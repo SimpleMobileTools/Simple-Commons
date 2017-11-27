@@ -119,15 +119,17 @@
     <string name="primary_color">Primary color</string>
     <string name="restore_defaults">기본설정으로 변경</string>
     <string name="theme">테마</string>
-    <string name="light_theme">Light theme</string>
-    <string name="dark_theme">Dark theme</string>
-    <string name="custom">Custom</string>
     <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
     <string name="save">저장</string>
     <string name="discard">취소</string>
     <string name="undo_changes">변경사항 되돌리기</string>
     <string name="undo_changes_confirmation">변경된 사항을  되돌리겠습니까?</string>
     <string name="save_before_closing">변경사항을 저장하지 않았습니다. 종료전에 저장 하시겠습니까?</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Light theme</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="custom">Custom</string>
 
     <!-- What's new -->
     <string name="whats_new">What\'s new</string>

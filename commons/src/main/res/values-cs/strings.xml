@@ -119,15 +119,17 @@
     <string name="primary_color">Primární barva</string>
     <string name="restore_defaults">Obnovit výchozí</string>
     <string name="theme">Motiv</string>
-    <string name="light_theme">Světlý motiv</string>
-    <string name="dark_theme">Tmavý motiv</string>
-    <string name="custom">Vlastní</string>
     <string name="changing_color_description">Změna barvy změní motiv na Vlastní</string>
     <string name="save">Uložit</string>
     <string name="discard">Zahodit</string>
     <string name="undo_changes">Vrátit změny zpět</string>
     <string name="undo_changes_confirmation">Opravdu chcete vrátit změny zpět?</string>
     <string name="save_before_closing">Máte neuložené změny. Uložit před zavřením?</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Světlý motiv</string>
+    <string name="dark_theme">Tmavý motiv</string>
+    <string name="custom">Vlastní</string>
 
     <!-- What's new -->
     <string name="whats_new">Co je nového</string>
