@@ -194,8 +194,8 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun setupColorsPickers() {
-        customization_text_color.setBackgroundColor(curTextColor)
-        customization_primary_color.setBackgroundColor(curPrimaryColor)
+        customization_text_color.setBackgroundWithStroke(curTextColor, curBackgroundColor)
+        customization_primary_color.setBackgroundWithStroke(curPrimaryColor, curBackgroundColor)
         customization_background_color.setBackgroundWithStroke(curBackgroundColor, curBackgroundColor)
     }
 
