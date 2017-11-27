@@ -44,10 +44,11 @@ fun Int.darkenColor(): Int {
     if (this == Color.WHITE) {
         return -2105377
     }
+    val DARK_FACTOR = 8
     var hsv = FloatArray(3)
     Color.colorToHSV(this, hsv)
     val hsl = hsv2hsl(hsv)
-    hsl[2] -= 12 / 100f
+    hsl[2] -= DARK_FACTOR / 100f
     if (hsl[2] < 0)
         hsl[2] = 0f
     hsv = hsl2hsv(hsl)
