@@ -13,6 +13,7 @@ import java.util.*
 
 class LineColorPickerDialog(val activity: BaseSimpleActivity, val callback: (wasChanged: Boolean, color: Int) -> Unit) {
     private val PRIMARY_COLORS_COUNT = 19
+    private val DEFAULT_COLOR_VALUE = -689152
     private val DEFAULT_PRIMARY_COLOR_INDEX = 14
     private val DEFAULT_SECONDARY_COLOR_INDEX = 6
 
@@ -29,7 +30,7 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val callback: (was
                     val secondaryColors = getColorsForIndex(index)
                     secondary_line_color_picker.updateColors(secondaryColors)
                     dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
-                    activity.updateActionbarColor(secondary_line_color_picker.selectedColor())
+                    activity.updateActionbarColor(secondary_line_color_picker.getCurrentColor())
                 }
             }
 
@@ -52,21 +53,28 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val callback: (was
     }
 
     private fun getColorIndexes(color: Int): Pair<Int, Int> {
+        if (color == DEFAULT_COLOR_VALUE) {
+            return getDefaultColorPair()
+        }
+
         for (i in 0 until PRIMARY_COLORS_COUNT) {
             val colors = getColorsForIndex(i)
             val size = colors.size
             (0 until size).filter { color == colors[it] }
                     .forEach { return Pair(i, it) }
         }
-        return Pair(DEFAULT_PRIMARY_COLOR_INDEX, DEFAULT_SECONDARY_COLOR_INDEX)
+
+        return getDefaultColorPair()
     }
+
+    private fun getDefaultColorPair() = Pair(DEFAULT_PRIMARY_COLOR_INDEX, DEFAULT_SECONDARY_COLOR_INDEX)
 
     private fun dialogDismissed() {
         callback(false, 0)
     }
 
     private fun dialogConfirmed() {
-        val color = view.secondary_line_color_picker.selectedColor()
+        val color = view.secondary_line_color_picker.getCurrentColor()
         callback(true, color)
     }
 

@@ -66,7 +66,7 @@ class LineColorPicker(context: Context, attrs: AttributeSet) : LinearLayout(cont
         updateItemMargin(lastColorIndex, false)
     }
 
-    fun selectedColor() = colors[lastColorIndex]
+    fun getCurrentColor() = colors[lastColorIndex]
 
     private fun initColorPicker() {
         removeAllViews()

@@ -4,8 +4,6 @@ import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.app.Activity
 import android.content.Intent
-import android.content.res.Resources
-import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
@@ -14,9 +12,7 @@ import android.provider.DocumentsContract
 import android.support.v4.app.ActivityCompat
 import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
-import android.text.SpannableString
-import android.text.style.AbsoluteSizeSpan
-import android.view.Menu
+import android.text.Html
 import android.view.MenuItem
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
@@ -40,6 +36,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(getThemeId())
         super.onCreate(savedInstanceState)
         if (!packageName.startsWith("com.simplemobiletools.", true)) {
             if ((0..50).random() == 10 || baseConfig.appRunCount % 100 == 0) {
@@ -54,7 +51,6 @@ open class BaseSimpleActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         updateBackgroundColor()
-        updateActionbarColor()
     }
 
     override fun onStop() {
@@ -81,6 +77,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     fun updateActionbarColor(color: Int = baseConfig.primaryColor) {
         supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
+        supportActionBar?.title = Html.fromHtml("<font color='${color.getContrastColor().toHex()}'>${supportActionBar?.title}</font>")
         updateStatusbarColor(color)
     }
 
@@ -88,18 +85,6 @@ open class BaseSimpleActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.statusBarColor = color.darkenColor()
         }
-    }
-
-    fun updateMenuTextSize(resources: Resources, menu: Menu) {
-        val textSize = resources.getDimension(R.dimen.normal_text_size).toInt()
-        (0 until menu.size())
-                .map { menu.getItem(it) }
-                .forEach {
-                    SpannableString(it.title).apply {
-                        setSpan(AbsoluteSizeSpan(textSize, false), 0, length, 0)
-                        it.title = this
-                    }
-                }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
