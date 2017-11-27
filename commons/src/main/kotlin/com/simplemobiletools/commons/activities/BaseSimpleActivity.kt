@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.activities
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.app.Activity
+import android.app.ActivityManager
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
@@ -81,6 +82,10 @@ open class BaseSimpleActivity : AppCompatActivity() {
         supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
         supportActionBar?.title = Html.fromHtml("<font color='${color.getContrastColor().toHex()}'>${supportActionBar?.title}</font>")
         updateStatusbarColor(color)
+
+        if (isLollipopPlus()) {
+            setTaskDescription(ActivityManager.TaskDescription(null, null, color))
+        }
     }
 
     fun updateStatusbarColor(color: Int) {
