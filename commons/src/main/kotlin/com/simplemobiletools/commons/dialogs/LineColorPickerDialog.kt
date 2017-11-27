@@ -5,6 +5,7 @@ import android.view.View
 import android.view.WindowManager
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.extensions.getThemeId
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.interfaces.LineColorPickerListener
 import kotlinx.android.synthetic.main.dialog_line_color_picker.view.*
@@ -28,16 +29,14 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
                 override fun colorChanged(index: Int, color: Int) {
                     val secondaryColors = getColorsForIndex(index)
                     secondary_line_color_picker.updateColors(secondaryColors)
-                    dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
-                    activity.updateActionbarColor(secondary_line_color_picker.getCurrentColor())
+                    colorUpdated(secondary_line_color_picker.getCurrentColor())
                 }
             }
 
             secondary_line_color_picker.updateColors(getColorsForIndex(indexes.first), indexes.second)
             secondary_line_color_picker.listener = object : LineColorPickerListener {
                 override fun colorChanged(index: Int, color: Int) {
-                    dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
-                    activity.updateActionbarColor(color)
+                    colorUpdated(color)
                 }
             }
         }
@@ -49,6 +48,12 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
                 .create().apply {
             context.setupDialogStuff(view, this)
         }
+    }
+
+    private fun colorUpdated(color: Int) {
+        dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
+        activity.updateActionbarColor(color)
+        activity.setTheme(activity.getThemeId(color))
     }
 
     private fun getColorIndexes(color: Int): Pair<Int, Int> {
