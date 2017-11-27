@@ -86,10 +86,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     fun updateStatusbarColor(color: Int) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            val hsv = FloatArray(3)
-            Color.colorToHSV(color, hsv)
-            hsv[2] *= 0.85f
-            window.statusBarColor = Color.HSVToColor(hsv)
+            window.statusBarColor = color.darkenColor()
         }
     }
 
