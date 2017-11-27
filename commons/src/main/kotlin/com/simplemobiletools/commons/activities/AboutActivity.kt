@@ -42,7 +42,6 @@ class AboutActivity : BaseSimpleActivity() {
         setupDonate()
         setupFacebook()
         setupGPlus()
-        setupGruveo()
         setupCopyright()
     }
 
@@ -136,12 +135,6 @@ class AboutActivity : BaseSimpleActivity() {
     private fun setupGPlus() {
         about_gplus.setOnClickListener {
             launchViewIntent("https://plus.google.com/communities/104880861558693868382")
-        }
-    }
-
-    private fun setupGruveo() {
-        about_gruveo.setOnClickListener {
-            launchViewIntent("https://play.google.com/store/apps/details?id=com.gruveo.gruveo_android")
         }
     }
 
