@@ -11,12 +11,12 @@
     <color name="gradient_grey_start">#AA000000</color>
 
     <!-- Color Customization -->
-    <color name="default_light_theme_text_color">#FF6D6D6D</color>
-    <color name="default_light_theme_background_color">#FFFAFAFA</color>
-    <color name="default_dark_theme_text_color">#FFEDEDED</color>
-    <color name="default_dark_theme_background_color">#FF3F3F3F</color>
-    <color name="default_text_color">@color/default_light_theme_text_color</color>
-    <color name="default_background_color">@color/default_light_theme_background_color</color>
+    <color name="theme_light_text_color">#FF6D6D6D</color>
+    <color name="theme_light_background_color">#FFFAFAFA</color>
+    <color name="theme_dark_text_color">#FFEDEDED</color>
+    <color name="theme_dark_background_color">#FF3F3F3F</color>
+    <color name="default_text_color">@color/theme_light_text_color</color>
+    <color name="default_background_color">@color/theme_light_background_color</color>
 
     <!-- SwitchCompat -->
     <color name="thumb_deactivated">#FFECECEC</color>

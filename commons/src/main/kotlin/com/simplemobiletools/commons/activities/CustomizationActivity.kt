@@ -9,19 +9,23 @@ import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
 import com.simplemobiletools.commons.dialogs.LineColorPickerDialog
 import com.simplemobiletools.commons.dialogs.RadioGroupDialog
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.THEME_CUSTOM
-import com.simplemobiletools.commons.helpers.THEME_DARK
-import com.simplemobiletools.commons.helpers.THEME_LIGHT
+import com.simplemobiletools.commons.models.MyTheme
 import com.simplemobiletools.commons.models.RadioItem
 import kotlinx.android.synthetic.main.activity_customization.*
+import java.util.*
 
 class CustomizationActivity : BaseSimpleActivity() {
+    private val THEME_LIGHT = 0
+    private val THEME_DARK = 1
+    private val THEME_CUSTOM = 2
+
     private var curTextColor = 0
     private var curBackgroundColor = 0
     private var curPrimaryColor = 0
     private var curSelectedThemeId = 0
     private var hasUnsavedChanges = false
     private var isLineColorPickerVisible = false
+    private var predefinedThemes = LinkedHashMap<Int, MyTheme>()
     private var curPrimaryLineColorPicker: LineColorPickerDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +41,12 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
         customization_primary_color_holder.setOnClickListener { pickPrimaryColor() }
         setupThemePicker()
+
+        predefinedThemes.apply {
+            put(THEME_LIGHT, MyTheme(R.string.light_theme, R.color.theme_light_text_color, R.color.theme_light_background_color, R.color.color_primary))
+            put(THEME_DARK, MyTheme(R.string.dark_theme, R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.color_primary))
+            put(THEME_CUSTOM, MyTheme(R.string.custom, 0, 0, 0))
+        }
     }
 
     override fun onResume() {
@@ -76,10 +86,10 @@ class CustomizationActivity : BaseSimpleActivity() {
         curSelectedThemeId = getCurrentThemeId()
         customization_theme.text = getThemeText()
         customization_theme_holder.setOnClickListener {
-            val items = arrayListOf(
-                    RadioItem(THEME_LIGHT, getString(R.string.light_theme)),
-                    RadioItem(THEME_DARK, getString(R.string.dark_theme)),
-                    RadioItem(THEME_CUSTOM, getString(R.string.custom)))
+            val items = arrayListOf<RadioItem>()
+            for ((key, value) in predefinedThemes) {
+                items.add(RadioItem(key, getString(value.nameId)))
+            }
 
             RadioGroupDialog(this@CustomizationActivity, items, curSelectedThemeId) {
                 updateColorTheme(it as Int, true)
@@ -95,19 +105,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_theme.text = getThemeText()
 
         resources.apply {
-            if (themeId == THEME_LIGHT) {
-                curTextColor = getColor(R.color.default_light_theme_text_color)
-                curBackgroundColor = getColor(R.color.default_light_theme_background_color)
-                curPrimaryColor = getColor(R.color.color_primary)
-                setTheme(getThemeId(curPrimaryColor))
-                colorChanged()
-            } else if (themeId == THEME_DARK) {
-                curTextColor = getColor(R.color.default_dark_theme_text_color)
-                curBackgroundColor = getColor(R.color.default_dark_theme_background_color)
-                curPrimaryColor = getColor(R.color.color_primary)
-                setTheme(getThemeId(curPrimaryColor))
-                colorChanged()
-            } else {
+            if (themeId == THEME_CUSTOM) {
                 if (useStored) {
                     curTextColor = baseConfig.customTextColor
                     curBackgroundColor = baseConfig.customBackgroundColor
@@ -119,6 +117,13 @@ class CustomizationActivity : BaseSimpleActivity() {
                     baseConfig.customBackgroundColor = curBackgroundColor
                     baseConfig.customTextColor = curTextColor
                 }
+            } else {
+                val theme = predefinedThemes[themeId]!!
+                curTextColor = getColor(theme.textColorId)
+                curBackgroundColor = getColor(theme.backgroundColorId)
+                curPrimaryColor = getColor(theme.primaryColorId)
+                setTheme(getThemeId(curPrimaryColor))
+                colorChanged()
             }
         }
 
@@ -130,22 +135,24 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getCurrentThemeId(): Int {
         var themeId = THEME_CUSTOM
         resources.apply {
-            if (curTextColor == getColor(R.color.default_light_theme_text_color) && curBackgroundColor == getColor(R.color.default_light_theme_background_color) &&
-                    curPrimaryColor == getColor(R.color.color_primary)) {
-                themeId = THEME_LIGHT
-            } else if (curTextColor == getColor(R.color.default_dark_theme_text_color) && curBackgroundColor == getColor(R.color.default_dark_theme_background_color) &&
-                    curPrimaryColor == getColor(R.color.color_primary)) {
-                themeId = THEME_DARK
+            for ((key, value) in predefinedThemes.filter { it.key != THEME_CUSTOM }) {
+                if (curTextColor == getColor(value.textColorId) && curBackgroundColor == getColor(value.backgroundColorId) && curPrimaryColor == getColor(value.primaryColorId)) {
+                    themeId = key
+                }
             }
         }
         return themeId
     }
 
-    private fun getThemeText() = getString(when (curSelectedThemeId) {
-        THEME_LIGHT -> R.string.light_theme
-        THEME_DARK -> R.string.dark_theme
-        else -> R.string.custom
-    })
+    private fun getThemeText(): String {
+        var nameId = R.string.custom
+        for ((key, value) in predefinedThemes) {
+            if (key == curSelectedThemeId) {
+                nameId = value.nameId
+            }
+        }
+        return getString(nameId)
+    }
 
     private fun promptSaveDiscard() {
         ConfirmationAdvancedDialog(this, "", R.string.save_before_closing, R.string.save, R.string.discard) {
