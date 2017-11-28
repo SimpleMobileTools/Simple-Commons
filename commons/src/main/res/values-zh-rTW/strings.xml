@@ -126,6 +126,8 @@
     <string name="undo_changes_confirmation">確定要恢復變更嗎?</string>
     <string name="save_before_closing">尚未儲存變更。離開前是否儲存?</string>
     <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
+    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="purchase_thank_you">Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!</string>
 
     <!-- Themes -->
     <string name="light_theme">明亮主題</string>
@@ -133,6 +135,7 @@
     <string name="solarized">Solarized</string>
     <string name="dark_red">Dark red</string>
     <string name="custom">自訂</string>
+    <string name="shared">Shared</string>
 
     <!-- What's new -->
     <string name="whats_new">更新了什麼</string>

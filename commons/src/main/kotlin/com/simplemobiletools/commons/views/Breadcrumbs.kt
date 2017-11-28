@@ -121,7 +121,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
 
             if (childCount == 0) {
                 resources.apply {
-                    background = getDrawable(R.drawable.breadcrumb_gradient)
+                    background = getDrawable(R.drawable.button_background)
                     background.colorFilter = PorterDuffColorFilter(textColor, PorterDuff.Mode.SRC_IN)
                     val medium = getDimension(R.dimen.medium_margin).toInt()
                     setPadding(medium, medium, medium, medium)

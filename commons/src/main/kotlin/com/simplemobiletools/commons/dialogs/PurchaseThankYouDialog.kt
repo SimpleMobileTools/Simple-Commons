@@ -6,12 +6,12 @@ import android.text.method.LinkMovementMethod
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.launchViewIntent
 import com.simplemobiletools.commons.extensions.setupDialogStuff
-import kotlinx.android.synthetic.main.dialog_donate.view.*
+import kotlinx.android.synthetic.main.dialog_purchase_thank_you.view.*
 
-class DonateDialog(val activity: Activity) {
+class PurchaseThankYouDialog(val activity: Activity) {
     init {
-        val view = activity.layoutInflater.inflate(R.layout.dialog_donate, null).apply {
-            donate.movementMethod = LinkMovementMethod.getInstance()
+        val view = activity.layoutInflater.inflate(R.layout.dialog_purchase_thank_you, null).apply {
+            install_thank_you.movementMethod = LinkMovementMethod.getInstance()
         }
 
         AlertDialog.Builder(activity)

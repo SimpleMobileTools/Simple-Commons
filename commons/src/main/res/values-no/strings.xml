@@ -126,6 +126,8 @@
     <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
     <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
     <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
+    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="purchase_thank_you">Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!</string>
 
     <!-- Themes -->
     <string name="light_theme">Lyst</string>
@@ -133,6 +135,7 @@
     <string name="solarized">Solarized</string>
     <string name="dark_red">Dark red</string>
     <string name="custom">Tilpasset</string>
+    <string name="shared">Shared</string>
 
     <!-- What's new -->
     <string name="whats_new">What\'s new</string>

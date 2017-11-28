@@ -4,10 +4,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.dialogs.ColorPickerDialog
-import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
-import com.simplemobiletools.commons.dialogs.LineColorPickerDialog
-import com.simplemobiletools.commons.dialogs.RadioGroupDialog
+import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.MyTheme
 import com.simplemobiletools.commons.models.RadioItem
@@ -20,6 +17,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private val THEME_SOLARIZED = 2
     private val THEME_DARK_RED = 3
     private val THEME_CUSTOM = 4
+    private val THEME_SHARED = 5
 
     private var curTextColor = 0
     private var curBackgroundColor = 0
@@ -50,6 +48,8 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_text_color_holder.setOnClickListener { pickTextColor() }
         customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
         customization_primary_color_holder.setOnClickListener { pickPrimaryColor() }
+        apply_to_all_holder.setOnClickListener { applyToAll() }
+        apply_to_all_holder.beGoneIf(baseConfig.wasSharedThemeShown)
         setupThemePicker()
     }
 
@@ -260,6 +260,17 @@ class CustomizationActivity : BaseSimpleActivity() {
                 updateActionbarColor(curPrimaryColor)
                 setTheme(getThemeId(curPrimaryColor))
             }
+        }
+    }
+
+    private fun applyToAll() {
+        if (isThankYouInstalled()) {
+            ConfirmationDialog(this, "", R.string.share_colors_success, R.string.ok, 0) {
+                baseConfig.wasSharedThemeShown = true
+                apply_to_all_holder.beGone()
+            }
+        } else {
+            PurchaseThankYouDialog(this)
         }
     }
 }

@@ -30,6 +30,7 @@ val APP_PROTECTION_TYPE = "app_protection_type"
 val KEEP_LAST_MODIFIED = "keep_last_modified"
 val USE_ENGLISH = "use_english"
 val WAS_USE_ENGLISH_TOGGLED = "was_use_english_toggled"
+val WAS_SHARED_THEME_SHOWN = "was_shared_theme_shown"
 
 // licenses
 val LICENSE_KOTLIN = 1
