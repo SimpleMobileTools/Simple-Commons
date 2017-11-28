@@ -66,7 +66,11 @@ fun Activity.storeStoragePaths() {
     baseConfig.internalStoragePath = getInternalStoragePath()
 
     Thread({
+        val oldPath = baseConfig.sdCardPath
         baseConfig.sdCardPath = getSDCardPath().trimEnd('/')
+        if (oldPath != baseConfig.sdCardPath) {
+            baseConfig.treeUri = ""
+        }
     }).start()
 
     baseConfig.appRunCount++
