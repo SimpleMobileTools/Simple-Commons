@@ -16,6 +16,7 @@ import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.provider.OpenableColumns
 import android.support.v4.content.ContextCompat
+import android.support.v4.content.CursorLoader
 import android.support.v4.content.FileProvider
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
@@ -27,6 +28,11 @@ import android.widget.Toast
 import com.github.ajalt.reprint.core.Reprint
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.*
+import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_BACKGROUND_COLOR
+import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_LAST_UPDATED_TS
+import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_PRIMARY_COLOR
+import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_TEXT_COLOR
+import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.*
 import kotlinx.android.synthetic.main.dialog_title.view.*
 import java.io.File
@@ -293,4 +299,25 @@ fun Context.getFilenameFromContentUri(uri: Uri): String? {
         cursor?.close()
     }
     return ""
+}
+
+fun Context.getSharedTheme(): SharedTheme? {
+    val cursorLoader = CursorLoader(this, MyContentProvider.CONTENT_URI, null, null, null, null)
+    val cursor = cursorLoader.loadInBackground()
+
+    cursor.use {
+        if (cursor?.moveToFirst() == true) {
+            val textColor = cursor.getIntValue(COL_TEXT_COLOR)
+            val backgroundColor = cursor.getIntValue(COL_BACKGROUND_COLOR)
+            val primaryColor = cursor.getIntValue(COL_PRIMARY_COLOR)
+            val lastUpdatedTS = cursor.getIntValue(COL_LAST_UPDATED_TS)
+            return SharedTheme(textColor, backgroundColor, primaryColor, lastUpdatedTS)
+        }
+    }
+    return null
+}
+
+fun Context.updateSharedTheme(sharedTheme: SharedTheme): Int {
+    val contentValues = MyContentProvider.fillThemeContentValues(sharedTheme)
+    return contentResolver.update(MyContentProvider.CONTENT_URI, contentValues, null, null)
 }
