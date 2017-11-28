@@ -7,6 +7,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.getThemeId
 import com.simplemobiletools.commons.extensions.setupDialogStuff
+import com.simplemobiletools.commons.extensions.toHex
 import com.simplemobiletools.commons.interfaces.LineColorPickerListener
 import kotlinx.android.synthetic.main.dialog_line_color_picker.view.*
 import java.util.*
@@ -22,6 +23,7 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
 
     init {
         view = activity.layoutInflater.inflate(R.layout.dialog_line_color_picker, null).apply {
+            hex_code.text = color.toHex()
             val indexes = getColorIndexes(color)
 
             primary_line_color_picker.updateColors(getColors(R.array.md_primary_colors), indexes.first)
@@ -56,6 +58,7 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
         dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
         activity.updateActionbarColor(color)
         activity.setTheme(activity.getThemeId(color))
+        view.hex_code.text = color.toHex()
     }
 
     private fun getColorIndexes(color: Int): Pair<Int, Int> {
