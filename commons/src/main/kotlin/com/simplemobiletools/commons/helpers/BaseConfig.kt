@@ -112,4 +112,8 @@ open class BaseConfig(val context: Context) {
     var isUsingSharedTheme: Boolean
         get() = prefs.getBoolean(IS_USING_SHARED_THEME, false)
         set(isUsingSharedTheme) = prefs.edit().putBoolean(IS_USING_SHARED_THEME, isUsingSharedTheme).apply()
+
+    var wasCustomThemeSwitchDescriptionShown: Boolean
+        get() = prefs.getBoolean(WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN, false)
+        set(wasCustomThemeSwitchDescriptionShown) = prefs.edit().putBoolean(WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN, wasCustomThemeSwitchDescriptionShown).apply()
 }
