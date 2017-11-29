@@ -84,6 +84,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_customization, menu)
+        menu.findItem(R.id.save).isVisible = hasUnsavedChanges
         return true
     }
 
@@ -224,11 +225,14 @@ class CustomizationActivity : BaseSimpleActivity() {
         hasUnsavedChanges = false
         if (finishAfterSave) {
             finish()
+        } else {
+            invalidateOptionsMenu()
         }
     }
 
     private fun resetColors() {
         hasUnsavedChanges = false
+        invalidateOptionsMenu()
         initColorVariables()
         setupColorsPickers()
         updateBackgroundColor()
