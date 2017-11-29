@@ -32,6 +32,7 @@ val USE_ENGLISH = "use_english"
 val WAS_USE_ENGLISH_TOGGLED = "was_use_english_toggled"
 val WAS_SHARED_THEME_EVER_ACTIVATED = "was_shared_theme_ever_activated"
 val IS_USING_SHARED_THEME = "is_using_shared_theme"
+val WAS_SHARED_THEME_FORCED = "was_shared_theme_forced"
 val WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN = "was_custom_theme_switch_description_shown"
 
 // licenses

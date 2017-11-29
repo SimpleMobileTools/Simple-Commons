@@ -1,11 +1,13 @@
 package com.simplemobiletools.commons.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.MyContentProvider
 import com.simplemobiletools.commons.models.MyTheme
 import com.simplemobiletools.commons.models.RadioItem
 import com.simplemobiletools.commons.models.SharedTheme
@@ -85,7 +87,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.save -> saveChanges()
+            R.id.save -> saveChanges(true)
             else -> return super.onOptionsItemSelected(item)
         }
         return true
@@ -193,7 +195,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun promptSaveDiscard() {
         ConfirmationAdvancedDialog(this, "", R.string.save_before_closing, R.string.save, R.string.discard) {
             if (it) {
-                saveChanges()
+                saveChanges(true)
             } else {
                 resetColors()
                 finish()
@@ -201,7 +203,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         }
     }
 
-    private fun saveChanges() {
+    private fun saveChanges(finishAfterSave: Boolean) {
         baseConfig.apply {
             textColor = curTextColor
             backgroundColor = curBackgroundColor
@@ -211,10 +213,16 @@ class CustomizationActivity : BaseSimpleActivity() {
         if (curSelectedThemeId == THEME_SHARED) {
             val newSharedTheme = SharedTheme(curTextColor, curBackgroundColor, curPrimaryColor)
             updateSharedTheme(newSharedTheme)
+            Intent().apply {
+                action = MyContentProvider.SHARED_THEME_UPDATED
+                sendBroadcast(this)
+            }
         }
         baseConfig.isUsingSharedTheme = curSelectedThemeId == THEME_SHARED
         hasUnsavedChanges = false
-        finish()
+        if (finishAfterSave) {
+            finish()
+        }
     }
 
     private fun resetColors() {
@@ -308,8 +316,14 @@ class CustomizationActivity : BaseSimpleActivity() {
             ConfirmationDialog(this, "", R.string.share_colors_success, R.string.ok, 0) {
                 baseConfig.wasSharedThemeEverActivated = true
                 apply_to_all_holder.beGone()
-                predefinedThemes.put(THEME_SHARED, MyTheme(R.string.shared, 0, 0, 0))
                 updateColorTheme(THEME_SHARED)
+                saveChanges(false)
+                predefinedThemes.put(THEME_SHARED, MyTheme(R.string.shared, 0, 0, 0))
+
+                Intent().apply {
+                    action = MyContentProvider.SHARED_THEME_ACTIVATED
+                    sendBroadcast(this)
+                }
             }
         } else {
             PurchaseThankYouDialog(this)

@@ -2,8 +2,6 @@ package com.simplemobiletools.commons.extensions
 
 import android.Manifest
 import android.annotation.SuppressLint
-import android.content.ClipData
-import android.content.ClipboardManager
 import android.content.ContentUris
 import android.content.Context
 import android.content.pm.PackageManager

@@ -8,6 +8,8 @@ class MyContentProvider {
     companion object {
         val AUTHORITY = "com.simplemobiletools.commons.provider"
         val CONTENT_URI = Uri.parse("content://$AUTHORITY/themes")
+        val SHARED_THEME_ACTIVATED = "com.simplemobiletools.commons.SHARED_THEME_ACTIVATED"
+        val SHARED_THEME_UPDATED = "com.simplemobiletools.commons.SHARED_THEME_UPDATED"
 
         val COL_ID = "_id"
         val COL_TEXT_COLOR = "text_color"
