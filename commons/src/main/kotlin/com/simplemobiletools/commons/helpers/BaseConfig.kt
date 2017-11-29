@@ -120,4 +120,9 @@ open class BaseConfig(val context: Context) {
     var wasSharedThemeForced: Boolean
         get() = prefs.getBoolean(WAS_SHARED_THEME_FORCED, false)
         set(wasSharedThemeForced) = prefs.edit().putBoolean(WAS_SHARED_THEME_FORCED, wasSharedThemeForced).apply()
+
+    // used only for checking shared theme after updating to 3.0.0 from some previous version
+    var wasSharedThemeAfterUpdateChecked: Boolean
+        get() = prefs.getBoolean(WAS_SHARED_THEME_AFTER_UPDATE_CHECKED, false)
+        set(wasSharedThemeAfterUpdateChecked) = prefs.edit().putBoolean(WAS_SHARED_THEME_AFTER_UPDATE_CHECKED, wasSharedThemeAfterUpdateChecked).apply()
 }

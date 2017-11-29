@@ -12,7 +12,8 @@ abstract class BaseSplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (baseConfig.appRunCount == 0 && isThankYouInstalled()) {
+        if ((baseConfig.appRunCount == 0 || !baseConfig.wasSharedThemeAfterUpdateChecked) && isThankYouInstalled()) {
+            baseConfig.wasSharedThemeAfterUpdateChecked = true
             getSharedTheme {
                 if (it != null) {
                     baseConfig.apply {
