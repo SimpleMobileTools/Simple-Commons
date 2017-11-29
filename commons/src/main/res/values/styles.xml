@@ -4,7 +4,6 @@
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorPrimaryDark">@color/color_primary_dark</item>
         <item name="colorAccent">@color/color_accent</item>
-        <!--<item name="actionBarStyle">@style/AppTheme.ActionBarStyle</item>-->
         <item name="android:spinnerItemStyle">@style/SpinnerItem</item>
         <item name="spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
         <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
@@ -19,11 +18,6 @@
     <style name="MyWidgetConfigTheme" parent="@style/AppTheme.Base">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowShowWallpaper">true</item>
-    </style>
-
-    <style name="AppTheme.ActionBarStyle" parent="@style/Base.Widget.AppCompat.ActionBar">
-        <!--<item name="background">@color/color_primary</item>
-        <item name="titleTextStyle">@style/AppTheme.ActionBar.TitleTextStyle</item>-->
     </style>
 
     <style name="AppTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
