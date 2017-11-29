@@ -105,7 +105,7 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(WAS_USE_ENGLISH_TOGGLED, false)
         set(wasUseEnglishToggled) = prefs.edit().putBoolean(WAS_USE_ENGLISH_TOGGLED, wasUseEnglishToggled).apply()
 
-    var wasSharedThemeShown: Boolean
-        get() = prefs.getBoolean(WAS_SHARED_THEME_SHOWN, false)
-        set(wasSharedThemeShown) = prefs.edit().putBoolean(WAS_SHARED_THEME_SHOWN, wasSharedThemeShown).apply()
+    var wasSharedThemeEverActivated: Boolean
+        get() = prefs.getBoolean(WAS_SHARED_THEME_EVER_ACTIVATED, false)
+        set(wasSharedThemeEverActivated) = prefs.edit().putBoolean(WAS_SHARED_THEME_EVER_ACTIVATED, wasSharedThemeEverActivated).apply()
 }

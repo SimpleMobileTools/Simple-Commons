@@ -38,6 +38,10 @@ class CustomizationActivity : BaseSimpleActivity() {
             put(THEME_SOLARIZED, MyTheme(R.string.solarized, R.color.theme_solarized_text_color, R.color.theme_solarized_background_color, R.color.theme_solarized_primary_color))
             put(THEME_DARK_RED, MyTheme(R.string.dark_red, R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.theme_dark_red_primary_color))
             put(THEME_CUSTOM, MyTheme(R.string.custom, 0, 0, 0))
+
+            if (baseConfig.wasSharedThemeEverActivated) {
+                put(THEME_SHARED, MyTheme(R.string.shared, 0, 0, 0))
+            }
         }
 
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_cross)
@@ -49,7 +53,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
         customization_primary_color_holder.setOnClickListener { pickPrimaryColor() }
         apply_to_all_holder.setOnClickListener { applyToAll() }
-        apply_to_all_holder.beGoneIf(baseConfig.wasSharedThemeShown)
+        apply_to_all_holder.beGoneIf(baseConfig.wasSharedThemeEverActivated)
         setupThemePicker()
     }
 
@@ -121,6 +125,8 @@ class CustomizationActivity : BaseSimpleActivity() {
                     baseConfig.customBackgroundColor = curBackgroundColor
                     baseConfig.customTextColor = curTextColor
                 }
+            } else if (themeId == THEME_SHARED) {
+
             } else {
                 val theme = predefinedThemes[themeId]!!
                 curTextColor = getColor(theme.textColorId)
@@ -139,7 +145,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getCurrentThemeId(): Int {
         var themeId = THEME_CUSTOM
         resources.apply {
-            for ((key, value) in predefinedThemes.filter { it.key != THEME_CUSTOM }) {
+            for ((key, value) in predefinedThemes.filter { it.key != THEME_CUSTOM && it.key != THEME_SHARED }) {
                 if (curTextColor == getColor(value.textColorId) && curBackgroundColor == getColor(value.backgroundColorId) && curPrimaryColor == getColor(value.primaryColorId)) {
                     themeId = key
                 }
@@ -266,8 +272,10 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun applyToAll() {
         if (isThankYouInstalled()) {
             ConfirmationDialog(this, "", R.string.share_colors_success, R.string.ok, 0) {
-                baseConfig.wasSharedThemeShown = true
+                baseConfig.wasSharedThemeEverActivated = true
                 apply_to_all_holder.beGone()
+                predefinedThemes.put(THEME_SHARED, MyTheme(R.string.shared, 0, 0, 0))
+                updateColorTheme(THEME_SHARED)
             }
         } else {
             PurchaseThankYouDialog(this)
