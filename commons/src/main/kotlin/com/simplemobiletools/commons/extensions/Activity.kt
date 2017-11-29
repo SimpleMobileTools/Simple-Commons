@@ -2,6 +2,8 @@ package com.simplemobiletools.commons.extensions
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.media.MediaScannerConnection
@@ -580,7 +582,6 @@ fun BaseSimpleActivity.restartActivity() {
 
 fun Activity.isActivityDestroyed() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1 && isDestroyed
 
-
 fun Activity.updateSharedTheme(sharedTheme: SharedTheme): Int {
     try {
         val contentValues = MyContentProvider.fillThemeContentValues(sharedTheme)
@@ -589,4 +590,10 @@ fun Activity.updateSharedTheme(sharedTheme: SharedTheme): Int {
         showErrorToast(e)
     }
     return 0
+}
+
+fun Activity.copyToClipboard(text: String) {
+    val clip = ClipData.newPlainText(getString(R.string.simple_commons), text)
+    (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).primaryClip = clip
+    toast(R.string.value_copied_to_clipboard)
 }

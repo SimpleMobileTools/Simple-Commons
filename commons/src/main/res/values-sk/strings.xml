@@ -10,6 +10,7 @@
     <string name="open_with">Otvoriť pomocou</string>
     <string name="no_app_found">Nenašla sa žiadna vhodná aplikácia</string>
     <string name="set_as">Nastaviť ako</string>
+    <string name="value_copied_to_clipboard">Hodnota bola vložená do schránky</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Je potrebné povolenie pre prístup k súborom</string>
@@ -72,7 +73,7 @@
     <string name="file_already_exists_overwrite">Súbor %1$s už existuje. Prepísať?</string>
     <string name="select_an_action">Zvoľte operáciu</string>
     <string name="overwrite">Prepísať</string>
-    <string name="skip">PreskočiŤ</string>
+    <string name="skip">Preskočiť</string>
     <string name="append">Pripnúť \'_1\'</string>
     <string name="apply_to_all">Použiť na všetky konflikty</string>
 

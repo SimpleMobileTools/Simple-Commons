@@ -320,8 +320,3 @@ fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme) -> Unit) {
         }
     }.start()
 }
-
-fun Context.copyToClipboard(text: String) {
-    val clip = ClipData.newPlainText(getString(R.string.simple_commons), text)
-    (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).primaryClip = clip
-}
