@@ -10,7 +10,7 @@
     <string name="open_with">Otvori s</string>
     <string name="no_app_found">Nema odgovarajuće aplikacije</string>
     <string name="set_as">Postavi kao</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
+    <string name="value_copied_to_clipboard">Vrijednost spremljena u međuspremnik</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Potrebna je dozvola za prostor za pohranu</string>
@@ -87,7 +87,8 @@
 
     <plurals name="items">
         <item quantity="one">%1$d stavka</item>
-        <item quantity="other">%1$d stavke</item>
+        <item quantity="few">%1$d stavke</item>
+        <item quantity="other">%1$d stavki</item>
     </plurals>
 
     <!-- Storages -->
@@ -197,18 +198,18 @@
     <!-- Times -->
     <plurals name="seconds">
         <item quantity="one">%1$d sekunda</item>
-        <item quantity="few">%1$d sekundi</item>
-        <item quantity="other">%1$d sekunde</item>
+        <item quantity="few">%1$d sekunde</item>
+        <item quantity="other">%1$d sekundi</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%1$d minuta</item>
-        <item quantity="few">%1$d minuti</item>
-        <item quantity="other">%1$d minute</item>
+        <item quantity="few">%1$d minute</item>
+        <item quantity="other">%1$d minuti</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%1$d sat</item>
-        <item quantity="few">%1$d sati</item>
-        <item quantity="other">%1$d sata</item>
+        <item quantity="few">%1$d sata</item>
+        <item quantity="other">%1$d sati</item>
     </plurals>
 
     <!-- Settings -->
