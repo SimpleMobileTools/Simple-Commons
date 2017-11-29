@@ -30,6 +30,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
     var copyMoveCallback: (() -> Unit)? = null
     var actionOnPermission: ((granted: Boolean) -> Unit)? = null
     var isAskingPermissions = false
+    var useDynamicTheme = true
     private val GENERIC_PERM_HANDLER = 100
 
     companion object {
@@ -37,7 +38,10 @@ open class BaseSimpleActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(getThemeId())
+        if (useDynamicTheme) {
+            setTheme(getThemeId())
+        }
+
         super.onCreate(savedInstanceState)
         if (!packageName.startsWith("com.simplemobiletools.", true)) {
             if ((0..50).random() == 10 || baseConfig.appRunCount % 100 == 0) {
@@ -51,8 +55,10 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        setTheme(getThemeId())
-        updateBackgroundColor()
+        if (useDynamicTheme) {
+            setTheme(getThemeId())
+            updateBackgroundColor()
+        }
         updateActionbarColor()
     }
 
@@ -204,7 +210,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
     }
 
     private fun startCopyMove(files: ArrayList<File>, destinationFolder: File, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean) {
-        val pair = Pair<ArrayList<File>, File>(files, destinationFolder)
+        val pair = Pair(files, destinationFolder)
         CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, copyMoveListener).execute(pair)
     }
 
