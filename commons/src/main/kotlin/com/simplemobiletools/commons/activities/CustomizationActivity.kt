@@ -52,8 +52,10 @@ class CustomizationActivity : BaseSimpleActivity() {
             baseConfig.isUsingSharedTheme = false
         }
 
-        getSharedTheme {
-            storedSharedTheme = it
+        if (baseConfig.wasSharedThemeEverActivated) {
+            getSharedTheme {
+                storedSharedTheme = it
+            }
         }
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_cross)
         updateTextColors(customization_holder)
@@ -314,16 +316,16 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun applyToAll() {
         if (isThankYouInstalled()) {
             ConfirmationDialog(this, "", R.string.share_colors_success, R.string.ok, 0) {
-                baseConfig.wasSharedThemeEverActivated = true
-                apply_to_all_holder.beGone()
-                updateColorTheme(THEME_SHARED)
-                saveChanges(false)
-                predefinedThemes.put(THEME_SHARED, MyTheme(R.string.shared, 0, 0, 0))
-
                 Intent().apply {
                     action = MyContentProvider.SHARED_THEME_ACTIVATED
                     sendBroadcast(this)
                 }
+
+                predefinedThemes.put(THEME_SHARED, MyTheme(R.string.shared, 0, 0, 0))
+                baseConfig.wasSharedThemeEverActivated = true
+                apply_to_all_holder.beGone()
+                updateColorTheme(THEME_SHARED)
+                saveChanges(false)
             }
         } else {
             PurchaseThankYouDialog(this)

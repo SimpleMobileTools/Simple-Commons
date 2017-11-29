@@ -301,7 +301,7 @@ fun Context.getFilenameFromContentUri(uri: Uri): String? {
     return ""
 }
 
-fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme) -> Unit) {
+fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
     val cursorLoader = CursorLoader(this, MyContentProvider.CONTENT_URI, null, null, null, null)
     Thread {
         val cursor = cursorLoader.loadInBackground()
@@ -314,6 +314,8 @@ fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme) -> Unit) {
                 val lastUpdatedTS = cursor.getIntValue(COL_LAST_UPDATED_TS)
                 val sharedTheme = SharedTheme(textColor, backgroundColor, primaryColor, lastUpdatedTS)
                 callback(sharedTheme)
+            } else {
+                callback(null)
             }
         }
     }.start()
