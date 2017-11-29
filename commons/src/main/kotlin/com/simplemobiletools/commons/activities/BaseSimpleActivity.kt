@@ -227,7 +227,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    private val copyMoveListener = object : CopyMoveTask.CopyMoveListener {
+    val copyMoveListener = object : CopyMoveTask.CopyMoveListener {
         override fun copySucceeded(copyOnly: Boolean, copiedAll: Boolean) {
             if (copyOnly) {
                 toast(if (copiedAll) R.string.copying_success else R.string.copying_success_partial)

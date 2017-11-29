@@ -108,4 +108,8 @@ open class BaseConfig(val context: Context) {
     var wasSharedThemeEverActivated: Boolean
         get() = prefs.getBoolean(WAS_SHARED_THEME_EVER_ACTIVATED, false)
         set(wasSharedThemeEverActivated) = prefs.edit().putBoolean(WAS_SHARED_THEME_EVER_ACTIVATED, wasSharedThemeEverActivated).apply()
+
+    var isUsingSharedTheme: Boolean
+        get() = prefs.getBoolean(IS_USING_SHARED_THEME, false)
+        set(isUsingSharedTheme) = prefs.edit().putBoolean(IS_USING_SHARED_THEME, isUsingSharedTheme).apply()
 }

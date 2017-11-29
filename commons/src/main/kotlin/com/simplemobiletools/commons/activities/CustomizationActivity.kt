@@ -8,6 +8,7 @@ import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.MyTheme
 import com.simplemobiletools.commons.models.RadioItem
+import com.simplemobiletools.commons.models.SharedTheme
 import kotlinx.android.synthetic.main.activity_customization.*
 import java.util.*
 
@@ -27,6 +28,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private var isLineColorPickerVisible = false
     private var predefinedThemes = LinkedHashMap<Int, MyTheme>()
     private var curPrimaryLineColorPicker: LineColorPickerDialog? = null
+    private var storedSharedTheme: SharedTheme? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +46,13 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
         }
 
+        if (!isThankYouInstalled()) {
+            baseConfig.isUsingSharedTheme = false
+        }
+
+        getSharedTheme {
+            storedSharedTheme = it
+        }
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_cross)
         updateTextColors(customization_holder)
         initColorVariables()
@@ -100,20 +109,25 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
 
             RadioGroupDialog(this@CustomizationActivity, items, curSelectedThemeId) {
+                if (it == THEME_SHARED && !isThankYouInstalled()) {
+                    PurchaseThankYouDialog(this)
+                    return@RadioGroupDialog
+                }
+
                 updateColorTheme(it as Int, true)
-                if (it != THEME_CUSTOM) {
+                if (it != THEME_CUSTOM && it != THEME_SHARED) {
                     toast(R.string.changing_color_description)
                 }
             }
         }
     }
 
-    private fun updateColorTheme(themeId: Int = THEME_CUSTOM, useStored: Boolean = false) {
+    private fun updateColorTheme(themeId: Int, useStored: Boolean = false) {
         curSelectedThemeId = themeId
         customization_theme.text = getThemeText()
 
         resources.apply {
-            if (themeId == THEME_CUSTOM) {
+            if (curSelectedThemeId == THEME_CUSTOM) {
                 if (useStored) {
                     curTextColor = baseConfig.customTextColor
                     curBackgroundColor = baseConfig.customBackgroundColor
@@ -125,10 +139,18 @@ class CustomizationActivity : BaseSimpleActivity() {
                     baseConfig.customBackgroundColor = curBackgroundColor
                     baseConfig.customTextColor = curTextColor
                 }
-            } else if (themeId == THEME_SHARED) {
-
+            } else if (curSelectedThemeId == THEME_SHARED) {
+                if (useStored) {
+                    storedSharedTheme?.apply {
+                        curTextColor = textColor
+                        curBackgroundColor = backgroundColor
+                        curPrimaryColor = primaryColor
+                    }
+                    setTheme(getThemeId(curPrimaryColor))
+                    setupColorsPickers()
+                }
             } else {
-                val theme = predefinedThemes[themeId]!!
+                val theme = predefinedThemes[curSelectedThemeId]!!
                 curTextColor = getColor(theme.textColorId)
                 curBackgroundColor = getColor(theme.backgroundColorId)
                 curPrimaryColor = getColor(theme.primaryColorId)
@@ -143,6 +165,9 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun getCurrentThemeId(): Int {
+        if (baseConfig.isUsingSharedTheme)
+            return THEME_SHARED
+
         var themeId = THEME_CUSTOM
         resources.apply {
             for ((key, value) in predefinedThemes.filter { it.key != THEME_CUSTOM && it.key != THEME_SHARED }) {
@@ -181,6 +206,12 @@ class CustomizationActivity : BaseSimpleActivity() {
             backgroundColor = curBackgroundColor
             primaryColor = curPrimaryColor
         }
+
+        if (curSelectedThemeId == THEME_SHARED) {
+            val newSharedTheme = SharedTheme(curTextColor, curBackgroundColor, curPrimaryColor)
+            updateSharedTheme(newSharedTheme)
+        }
+        baseConfig.isUsingSharedTheme = curSelectedThemeId == THEME_SHARED
         hasUnsavedChanges = false
         finish()
     }
@@ -235,7 +266,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             if (hasColorChanged(curTextColor, it)) {
                 setCurrentTextColor(it)
                 colorChanged()
-                updateColorTheme()
+                updateColorTheme(getUpdatedTheme())
             }
         }
     }
@@ -245,7 +276,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             if (hasColorChanged(curBackgroundColor, it)) {
                 setCurrentBackgroundColor(it)
                 colorChanged()
-                updateColorTheme()
+                updateColorTheme(getUpdatedTheme())
             }
         }
     }
@@ -259,7 +290,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 if (hasColorChanged(curPrimaryColor, color)) {
                     setCurrentPrimaryColor(color)
                     colorChanged()
-                    updateColorTheme()
+                    updateColorTheme(getUpdatedTheme())
                     setTheme(getThemeId(color))
                 }
             } else {
@@ -268,6 +299,8 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
         }
     }
+
+    private fun getUpdatedTheme() = if (curSelectedThemeId == THEME_SHARED) THEME_SHARED else THEME_CUSTOM
 
     private fun applyToAll() {
         if (isThankYouInstalled()) {

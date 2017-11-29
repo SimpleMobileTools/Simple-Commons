@@ -2,6 +2,8 @@ package com.simplemobiletools.commons.extensions
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.ContentUris
 import android.content.Context
 import android.content.pm.PackageManager
@@ -301,23 +303,25 @@ fun Context.getFilenameFromContentUri(uri: Uri): String? {
     return ""
 }
 
-fun Context.getSharedTheme(): SharedTheme? {
+fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme) -> Unit) {
     val cursorLoader = CursorLoader(this, MyContentProvider.CONTENT_URI, null, null, null, null)
-    val cursor = cursorLoader.loadInBackground()
+    Thread {
+        val cursor = cursorLoader.loadInBackground()
 
-    cursor.use {
-        if (cursor?.moveToFirst() == true) {
-            val textColor = cursor.getIntValue(COL_TEXT_COLOR)
-            val backgroundColor = cursor.getIntValue(COL_BACKGROUND_COLOR)
-            val primaryColor = cursor.getIntValue(COL_PRIMARY_COLOR)
-            val lastUpdatedTS = cursor.getIntValue(COL_LAST_UPDATED_TS)
-            return SharedTheme(textColor, backgroundColor, primaryColor, lastUpdatedTS)
+        cursor.use {
+            if (cursor?.moveToFirst() == true) {
+                val textColor = cursor.getIntValue(COL_TEXT_COLOR)
+                val backgroundColor = cursor.getIntValue(COL_BACKGROUND_COLOR)
+                val primaryColor = cursor.getIntValue(COL_PRIMARY_COLOR)
+                val lastUpdatedTS = cursor.getIntValue(COL_LAST_UPDATED_TS)
+                val sharedTheme = SharedTheme(textColor, backgroundColor, primaryColor, lastUpdatedTS)
+                callback(sharedTheme)
+            }
         }
-    }
-    return null
+    }.start()
 }
 
-fun Context.updateSharedTheme(sharedTheme: SharedTheme): Int {
-    val contentValues = MyContentProvider.fillThemeContentValues(sharedTheme)
-    return contentResolver.update(MyContentProvider.CONTENT_URI, contentValues, null, null)
+fun Context.copyToClipboard(text: String) {
+    val clip = ClipData.newPlainText(getString(R.string.simple_commons), text)
+    (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).primaryClip = clip
 }

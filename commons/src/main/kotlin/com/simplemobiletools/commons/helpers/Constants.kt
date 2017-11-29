@@ -31,6 +31,7 @@ val KEEP_LAST_MODIFIED = "keep_last_modified"
 val USE_ENGLISH = "use_english"
 val WAS_USE_ENGLISH_TOGGLED = "was_use_english_toggled"
 val WAS_SHARED_THEME_EVER_ACTIVATED = "was_shared_theme_ever_activated"
+val IS_USING_SHARED_THEME = "is_using_shared_theme"
 
 // licenses
 val LICENSE_KOTLIN = 1

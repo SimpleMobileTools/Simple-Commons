@@ -23,11 +23,9 @@ import com.simplemobiletools.commons.dialogs.DonateDialog
 import com.simplemobiletools.commons.dialogs.SecurityDialog
 import com.simplemobiletools.commons.dialogs.WhatsNewDialog
 import com.simplemobiletools.commons.dialogs.WritePermissionDialog
-import com.simplemobiletools.commons.helpers.IS_FROM_GALLERY
-import com.simplemobiletools.commons.helpers.REAL_FILE_PATH
-import com.simplemobiletools.commons.helpers.REQUEST_EDIT_IMAGE
-import com.simplemobiletools.commons.helpers.REQUEST_SET_AS
+import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.Release
+import com.simplemobiletools.commons.models.SharedTheme
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream
@@ -581,3 +579,14 @@ fun BaseSimpleActivity.restartActivity() {
 }
 
 fun Activity.isActivityDestroyed() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1 && isDestroyed
+
+
+fun Activity.updateSharedTheme(sharedTheme: SharedTheme): Int {
+    try {
+        val contentValues = MyContentProvider.fillThemeContentValues(sharedTheme)
+        return contentResolver.update(MyContentProvider.CONTENT_URI, contentValues, null, null)
+    } catch (e: Exception) {
+        showErrorToast(e)
+    }
+    return 0
+}
