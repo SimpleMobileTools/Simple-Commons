@@ -10,7 +10,7 @@
     <string name="open_with">Openen met</string>
     <string name="no_app_found">Geen app gevonden om dit bestand mee te openen</string>
     <string name="set_as">Instellen als</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
+    <string name="value_copied_to_clipboard">Gekopieerd naar klembord</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Permissie voor opslag benodigd</string>
@@ -126,17 +126,17 @@
     <string name="undo_changes">Ongedaan maken</string>
     <string name="undo_changes_confirmation">Wijzigingen ongedaan maken?</string>
     <string name="save_before_closing">Onopgeslagen wijzigingen. Nu opslaan?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
-    <string name="purchase_thank_you">Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!</string>
+    <string name="apply_to_all_apps">Kleuren toepassen op al onze apps</string>
+    <string name="share_colors_success">Kleuren gewijzigd. Gebruik het nieuwe thema \'Gedeeld\' om de kleuren voor al onze apps aan te passen.</string>
+    <string name="purchase_thank_you">Om deze functie te gebruiken en om verdere ontwikkeling te ondersteunen kunt u <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> aanschaffen. Alvast bedankt!</string>
 
     <!-- Themes -->
     <string name="light_theme">Licht</string>
     <string name="dark_theme">Donker</string>
-    <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
+    <string name="solarized">Overbelicht</string>
+    <string name="dark_red">Donkerrood</string>
     <string name="custom">Aangepast</string>
-    <string name="shared">Shared</string>
+    <string name="shared">Gedeeld</string>
 
     <!-- What's new -->
     <string name="whats_new">Wat is er nieuw</string>
