@@ -187,7 +187,12 @@ fun Activity.openEditor(uri: Uri, applicationId: String) {
 }
 
 fun Activity.openFile(uri: Uri, forceChooser: Boolean, applicationId: String) {
-    val newUri = ensurePublicUri(uri, applicationId)
+    val newUri = try {
+        ensurePublicUri(uri, applicationId)
+    } catch (e: Exception) {
+        showErrorToast(e)
+        return
+    }
     val mimeType = getUriMimeType(uri, newUri)
     Intent().apply {
         action = Intent.ACTION_VIEW
