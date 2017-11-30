@@ -215,6 +215,22 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         holder.itemView.tag = holder
     }
 
+    fun removeSelectedItems() {
+        selectedPositions.sortedDescending().forEach {
+            notifyItemRemoved(it)
+            itemViews.put(it, null)
+        }
+
+        val newItems = SparseArray<View>()
+        (0 until itemViews.size())
+                .filter { itemViews[it] != null }
+                .forEachIndexed { curIndex, i -> newItems.put(curIndex, itemViews[i]) }
+
+        itemViews = newItems
+        selectableItemCount = itemCount
+        finishActMode()
+    }
+
     class ViewHolder(view: View, val adapterListener: MyAdapterListener, val activity: BaseSimpleActivity, val multiSelectorCallback: ModalMultiSelectorCallback,
                      val multiSelector: MultiSelector, val itemClick: (Any) -> (Unit)) : SwappingHolder(view, multiSelector) {
         fun bindView(any: Any, allowLongClick: Boolean = true, callback: (itemView: View, layoutPosition: Int) -> Unit): View {
