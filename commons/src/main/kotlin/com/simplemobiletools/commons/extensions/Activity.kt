@@ -62,7 +62,7 @@ fun Activity.showErrorToast(exception: Exception, length: Int = Toast.LENGTH_LON
 }
 
 @SuppressLint("NewApi")
-fun Activity.storeStoragePaths() {
+fun Activity.appLaunched() {
     baseConfig.internalStoragePath = getInternalStoragePath()
 
     Thread({
