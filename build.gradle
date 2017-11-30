@@ -9,7 +9,7 @@ buildscript {
         propVersionCode = 1
         propVersionName = '3.0.5'
         kotlin_version = '1.2.0'
-        support_libs = '27.0.1'
+        support_libs = '27.0.2'
     }
 
     repositories {
