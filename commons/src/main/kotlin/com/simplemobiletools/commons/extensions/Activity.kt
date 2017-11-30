@@ -597,3 +597,11 @@ fun Activity.copyToClipboard(text: String) {
     (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).primaryClip = clip
     toast(R.string.value_copied_to_clipboard)
 }
+
+fun Activity.checkUseEnglish() {
+    if (baseConfig.useEnglish) {
+        val conf = resources.configuration
+        conf.locale = Locale.ENGLISH
+        resources.updateConfiguration(conf, resources.displayMetrics)
+    }
+}
