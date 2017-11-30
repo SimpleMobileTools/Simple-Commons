@@ -64,19 +64,21 @@ fun Activity.showErrorToast(exception: Exception, length: Int = Toast.LENGTH_LON
 @SuppressLint("NewApi")
 fun Activity.appLaunched() {
     baseConfig.internalStoragePath = getInternalStoragePath()
+    updateSDCardPath()
+    baseConfig.appRunCount++
+    if (!isThankYouInstalled() && (baseConfig.appRunCount % 50 == 0)) {
+        DonateDialog(this)
+    }
+}
 
-    Thread({
+fun Activity.updateSDCardPath() {
+    Thread {
         val oldPath = baseConfig.sdCardPath
         baseConfig.sdCardPath = getSDCardPath().trimEnd('/')
         if (oldPath != baseConfig.sdCardPath) {
             baseConfig.treeUri = ""
         }
-    }).start()
-
-    baseConfig.appRunCount++
-    if (!isThankYouInstalled() && (baseConfig.appRunCount % 50 == 0)) {
-        DonateDialog(this)
-    }
+    }.start()
 }
 
 fun Activity.isShowingSAFDialog(file: File, treeUri: String, requestCode: Int): Boolean {
