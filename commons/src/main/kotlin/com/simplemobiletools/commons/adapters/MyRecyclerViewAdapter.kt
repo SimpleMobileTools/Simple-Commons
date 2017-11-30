@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.adapters
 
 import android.support.v7.view.ActionMode
+import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.RecyclerView
 import android.util.SparseArray
 import android.view.Menu
@@ -10,6 +11,7 @@ import android.view.ViewGroup
 import com.bignerdranch.android.multiselector.ModalMultiSelectorCallback
 import com.bignerdranch.android.multiselector.MultiSelector
 import com.bignerdranch.android.multiselector.SwappingHolder
+import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.interfaces.MyAdapterListener
@@ -96,6 +98,19 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     fun setupZoomListener(zoomListener: MyRecyclerView.MyZoomListener?) {
         recyclerView.setupZoomListener(zoomListener)
+    }
+
+    fun addVerticalDividers(add: Boolean) {
+        if (recyclerView.itemDecorationCount > 0) {
+            recyclerView.removeItemDecorationAt(0)
+        }
+
+        if (add) {
+            DividerItemDecoration(activity, DividerItemDecoration.VERTICAL).apply {
+                setDrawable(resources.getDrawable(R.drawable.divider))
+                recyclerView.addItemDecoration(this)
+            }
+        }
     }
 
     fun selectItemPosition(pos: Int) {
