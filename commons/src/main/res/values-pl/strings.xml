@@ -10,7 +10,7 @@
     <string name="open_with">Otwórz w</string>
     <string name="no_app_found">Nie znaleziono danych aplikacji</string>
     <string name="set_as">Ustaw jako</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
+    <string name="value_copied_to_clipboard">Wartość została skopiowana do schowka</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Wymagane jest uprawnienie \'Pamięć\'</string>
@@ -127,17 +127,17 @@
     <string name="undo_changes">Cofnij zmiany</string>
     <string name="undo_changes_confirmation">Czy na pewno chcesz cofnąć zmiany?</string>
     <string name="save_before_closing">Zapisać zmiany?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
-    <string name="purchase_thank_you">Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!</string>
+    <string name="apply_to_all_apps">Zastosuj kolory do wszystkich Prostych Aplikacji</string>
+    <string name="share_colors_success">Kolory zostały zmienione. Utworzony został nowy, \'wspólny'\ motyw - użyj go, aby zaktualizować kolorystykę wszystkich Prostych Aplikacji.</string>
+    <string name="purchase_thank_you">Aby odblokować tą funkcję (i wesprzeć przy okazji rozwój niniejszej aplikacji), kup aplikację <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>.</string>
 
     <!-- Themes -->
     <string name="light_theme">Jasny</string>
     <string name="dark_theme">Ciemny</string>
-    <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
+    <string name="solarized">Solaryzacja</string>
+    <string name="dark_red">Ciemnoczerwony</string>
     <string name="custom">Własny</string>
-    <string name="shared">Shared</string>
+    <string name="shared">Wspólny</string>
 
     <!-- What's new -->
     <string name="whats_new">Co nowego</string>
@@ -268,6 +268,6 @@
     <string name="autofittextview_title">AutoFitTextView (zmiana rozmiaru tekstu)</string>
     <string name="robolectric_title">Robolectric (testowanie aplikacji)</string>
     <string name="espresso_title">Espresso (testowanie aplikacji)</string>
-    <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="gson_title">Gson (parser JSON)</string>
+    <string name="leak_canary_title">Leak Canary (wykrywanie wycieków pamięci)</string>
 </resources>
