@@ -24,7 +24,6 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
     init {
         folderDrawable.alpha = 180
         fileDrawable.alpha = 180
-        selectableItemCount = fileDirItems.size
     }
 
     override fun getActionMenuId() = 0
@@ -48,6 +47,8 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
     override fun prepareActionMode(menu: Menu) {}
 
     override fun actionItemPressed(id: Int) {}
+
+    override fun getSelectableItemCount() = fileDirItems.size
 
     override fun onViewRecycled(holder: MyRecyclerViewAdapter.ViewHolder?) {
         super.onViewRecycled(holder)

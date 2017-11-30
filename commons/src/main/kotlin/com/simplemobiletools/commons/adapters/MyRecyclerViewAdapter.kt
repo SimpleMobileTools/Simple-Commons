@@ -26,7 +26,6 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     var textColor = baseConfig.textColor
     var itemViews = SparseArray<View>()
     val selectedPositions = HashSet<Int>()
-    var selectableItemCount = 0
 
     private val multiSelector = MultiSelector()
     private var actMode: ActionMode? = null
@@ -40,6 +39,8 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     abstract fun prepareActionMode(menu: Menu)
 
     abstract fun actionItemPressed(id: Int)
+
+    abstract fun getSelectableItemCount(): Int
 
     fun toggleItemSelection(select: Boolean, pos: Int) {
         if (select) {
@@ -62,6 +63,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     }
 
     private fun updateTitle(cnt: Int) {
+        val selectableItemCount = getSelectableItemCount()
         val selectedCount = Math.min(cnt, selectableItemCount)
         val oldTitle = actMode?.title
         val newTitle = "$selectedCount / $selectableItemCount"
@@ -227,7 +229,6 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                 .forEachIndexed { curIndex, i -> newItems.put(curIndex, itemViews[i]) }
 
         itemViews = newItems
-        selectableItemCount = itemCount
         finishActMode()
     }
 
