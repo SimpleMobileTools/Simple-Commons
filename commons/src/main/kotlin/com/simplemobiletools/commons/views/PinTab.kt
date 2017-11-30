@@ -2,11 +2,11 @@ package com.simplemobiletools.commons.views
 
 import android.content.Context
 import android.graphics.PorterDuff
-import android.os.Vibrator
 import android.util.AttributeSet
 import android.widget.RelativeLayout
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.performHapticFeedback
 import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.PROTECTION_PIN
@@ -52,12 +52,8 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
         if (pin.length < 10) {
             pin += number
             updatePinCode()
-
-            val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
-            if (vibrator.hasVibrator()) {
-                vibrator.vibrate(100)
-            }
         }
+        performHapticFeedback()
     }
 
     private fun clear() {
@@ -65,6 +61,7 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
             pin = pin.substring(0, pin.length - 1)
             updatePinCode()
         }
+        performHapticFeedback()
     }
 
     private fun confirmPIN() {
@@ -85,6 +82,7 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
                 pin_lock_title.setText(R.string.enter_pin)
             }
         }
+        performHapticFeedback()
     }
 
     private fun resetPin() {
