@@ -21,7 +21,7 @@
             android:paddingRight="@dimen/activity_margin"
             android:paddingTop="@dimen/activity_margin"/>
 
-        <android.support.v7.widget.RecyclerView
+        <com.simplemobiletools.commons.views.MyRecyclerView
             android:id="@+id/filepicker_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -49,7 +49,6 @@
                 android:background="@drawable/fastscroller_handle_vertical"/>
 
         </com.simplemobiletools.commons.views.FastScroller>
-
     </RelativeLayout>
 
     <com.simplemobiletools.commons.views.MyFloatingActionButton

@@ -3,7 +3,6 @@ package com.simplemobiletools.commons.dialogs
 import android.os.Environment
 import android.os.Parcelable
 import android.support.v7.app.AlertDialog
-import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.view.KeyEvent
 import android.view.LayoutInflater
@@ -111,8 +110,8 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
         items = items.sortedWith(compareBy({ !it.isDirectory }, { it.name.toLowerCase() }))
 
-        val adapter = FilepickerItemsAdapter(activity, items) {
-            if (it.isDirectory) {
+        val adapter = FilepickerItemsAdapter(activity, items, mDialogView.filepicker_list) {
+            if ((it as FileDirItem).isDirectory) {
                 currPath = it.path
                 updateItems()
             } else if (pickFile) {
@@ -120,18 +119,12 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                 verifyPath()
             }
         }
+        adapter.addVerticalDividers(true)
 
         val layoutManager = mDialogView.filepicker_list.layoutManager as LinearLayoutManager
         mScrollStates.put(mPrevPath.trimEnd('/'), layoutManager.onSaveInstanceState())
 
         mDialogView.apply {
-            if (filepicker_list.adapter == null) {
-                DividerItemDecoration(context, DividerItemDecoration.VERTICAL).apply {
-                    setDrawable(context.resources.getDrawable(R.drawable.divider))
-                    filepicker_list.addItemDecoration(this)
-                }
-            }
-
             filepicker_list.adapter = adapter
             filepicker_breadcrumbs.setBreadcrumb(currPath)
             filepicker_fastscroller.setViews(filepicker_list)
