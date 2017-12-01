@@ -66,7 +66,8 @@ class LineColorPicker(context: Context, attrs: AttributeSet) : LinearLayout(cont
         updateItemMargin(lastColorIndex, false)
     }
 
-    fun getCurrentColor() = colors[lastColorIndex]
+    // do not remove ": Int", it causes "NoSuchMethodError" for some reason
+    fun getCurrentColor(): Int = colors[lastColorIndex]
 
     private fun initColorPicker() {
         removeAllViews()
