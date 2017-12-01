@@ -15,6 +15,7 @@ import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
 import android.text.Html
 import android.view.MenuItem
+import android.view.WindowManager
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
@@ -95,8 +96,14 @@ open class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun updateStatusbarColor(color: Int) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        if (isLollipopPlus()) {
             window.statusBarColor = color.darkenColor()
+        }
+    }
+
+    fun setTranslucentNavigation() {
+        if (isKitkatPlus()) {
+            window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
         }
     }
 

@@ -85,9 +85,9 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         }
 
         if (!pickFile) {
-            mDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener({
+            mDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                 verifyPath()
-            })
+            }
         }
     }
 
