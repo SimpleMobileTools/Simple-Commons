@@ -609,9 +609,9 @@ fun Activity.copyToClipboard(text: String) {
     toast(R.string.value_copied_to_clipboard)
 }
 
-fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0): Boolean {
+fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0, callback: (() -> Unit)? = null) {
     if (isActivityDestroyed()) {
-        return false
+        return
     }
 
     if (view is ViewGroup)
@@ -640,5 +640,5 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0)
         getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(baseConfig.textColor)
         window.setBackgroundDrawable(ColorDrawable(baseConfig.backgroundColor))
     }
-    return true
+    callback?.invoke()
 }

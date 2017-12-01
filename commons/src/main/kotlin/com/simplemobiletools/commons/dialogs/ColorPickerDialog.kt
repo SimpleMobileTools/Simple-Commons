@@ -2,8 +2,6 @@ package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
 import android.graphics.Color
-import android.graphics.PorterDuff
-import android.graphics.PorterDuffColorFilter
 import android.support.v7.app.AlertDialog
 import android.text.Editable
 import android.text.TextWatcher
@@ -14,10 +12,7 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.onGlobalLayout
-import com.simplemobiletools.commons.extensions.setBackgroundWithStroke
-import com.simplemobiletools.commons.extensions.setupDialogStuff
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.views.ColorPickerSquare
 import kotlinx.android.synthetic.main.dialog_color_picker.view.*
 
@@ -132,12 +127,11 @@ class ColorPickerDialog(val activity: Activity, color: Int, val callback: (color
                 .setPositiveButton(R.string.ok, { dialog, which -> callback(getColor()) })
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
-            if (!activity.setupDialogStuff(view, this))
-                return@apply
-
-            view.color_picker_arrow.colorFilter = PorterDuffColorFilter(textColor, PorterDuff.Mode.SRC_IN)
-            view.color_picker_hex_arrow.colorFilter = PorterDuffColorFilter(textColor, PorterDuff.Mode.SRC_IN)
-            viewCursor.colorFilter = PorterDuffColorFilter(textColor, PorterDuff.Mode.SRC_IN)
+            activity.setupDialogStuff(view, this) {
+                view.color_picker_arrow.applyColorFilter(textColor)
+                view.color_picker_hex_arrow.applyColorFilter(textColor)
+                viewCursor.applyColorFilter(textColor)
+            }
         }
 
         view.onGlobalLayout {

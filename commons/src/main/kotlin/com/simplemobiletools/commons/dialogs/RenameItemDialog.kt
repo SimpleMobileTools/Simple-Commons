@@ -35,44 +35,43 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
             window!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
-            if (!activity.setupDialogStuff(view, this, R.string.rename))
-                return@apply
+            activity.setupDialogStuff(view, this, R.string.rename) {
+                getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+                    var newName = view.rename_item_name.value
+                    val newExtension = view.rename_item_extension.value
 
-            getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener({
-                var newName = view.rename_item_name.value
-                val newExtension = view.rename_item_extension.value
+                    if (newName.isEmpty()) {
+                        activity.toast(R.string.empty_name)
+                        return@setOnClickListener
+                    }
 
-                if (newName.isEmpty()) {
-                    activity.toast(R.string.empty_name)
-                    return@setOnClickListener
-                }
+                    if (!newName.isAValidFilename()) {
+                        activity.toast(R.string.invalid_name)
+                        return@setOnClickListener
+                    }
 
-                if (!newName.isAValidFilename()) {
-                    activity.toast(R.string.invalid_name)
-                    return@setOnClickListener
-                }
+                    val updatedFiles = ArrayList<File>()
+                    updatedFiles.add(file)
+                    if (!newExtension.isEmpty())
+                        newName += ".$newExtension"
 
-                val updatedFiles = ArrayList<File>()
-                updatedFiles.add(file)
-                if (!newExtension.isEmpty())
-                    newName += ".$newExtension"
+                    val newFile = File(file.parent, newName)
+                    if (newFile.exists()) {
+                        activity.toast(R.string.name_taken)
+                        return@setOnClickListener
+                    }
 
-                val newFile = File(file.parent, newName)
-                if (newFile.exists()) {
-                    activity.toast(R.string.name_taken)
-                    return@setOnClickListener
-                }
-
-                updatedFiles.add(newFile)
-                activity.renameFile(file, newFile) {
-                    if (it) {
-                        sendSuccess(updatedFiles)
-                        dismiss()
-                    } else {
-                        activity.toast(R.string.unknown_error_occurred)
+                    updatedFiles.add(newFile)
+                    activity.renameFile(file, newFile) {
+                        if (it) {
+                            sendSuccess(updatedFiles)
+                            dismiss()
+                        } else {
+                            activity.toast(R.string.unknown_error_occurred)
+                        }
                     }
                 }
-            })
+            }
         }
     }
 
