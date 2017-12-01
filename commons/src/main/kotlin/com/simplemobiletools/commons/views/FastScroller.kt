@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.views
 
 import android.content.Context
-import android.graphics.PorterDuff
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -9,6 +8,7 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
+import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.baseConfig
 
 // based on https://blog.stylingandroid.com/recyclerview-fastscroll-part-1
@@ -50,7 +50,7 @@ class FastScroller : FrameLayout {
     }
 
     fun updateHandleColor() {
-        handle!!.background.setColorFilter(context.baseConfig.primaryColor, PorterDuff.Mode.SRC_IN)
+        handle!!.background.applyColorFilter(context.baseConfig.primaryColor)
     }
 
     override fun onSizeChanged(width: Int, height: Int, oldWidth: Int, oldHeight: Int) {

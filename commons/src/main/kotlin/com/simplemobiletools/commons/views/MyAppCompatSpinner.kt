@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.views
 
 import android.content.Context
-import android.graphics.PorterDuff
 import android.support.v7.widget.AppCompatSpinner
 import android.util.AttributeSet
 import android.view.View
@@ -9,6 +8,7 @@ import android.widget.AdapterView
 import android.widget.TextView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.adapters.MyArrayAdapter
+import com.simplemobiletools.commons.extensions.applyColorFilter
 
 class MyAppCompatSpinner : AppCompatSpinner {
     constructor(context: Context) : super(context)
@@ -43,6 +43,6 @@ class MyAppCompatSpinner : AppCompatSpinner {
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
         }
-        background.setColorFilter(textColor, PorterDuff.Mode.SRC_ATOP)
+        background.applyColorFilter(textColor)
     }
 }
