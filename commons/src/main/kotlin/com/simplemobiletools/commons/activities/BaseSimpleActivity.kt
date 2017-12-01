@@ -3,9 +3,8 @@ package com.simplemobiletools.commons.activities
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.app.Activity
+import android.app.ActivityManager
 import android.content.Intent
-import android.content.res.Resources
-import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
@@ -14,10 +13,9 @@ import android.provider.DocumentsContract
 import android.support.v4.app.ActivityCompat
 import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
-import android.text.SpannableString
-import android.text.style.AbsoluteSizeSpan
-import android.view.Menu
+import android.text.Html
 import android.view.MenuItem
+import android.view.WindowManager
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
@@ -33,6 +31,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
     var copyMoveCallback: (() -> Unit)? = null
     var actionOnPermission: ((granted: Boolean) -> Unit)? = null
     var isAskingPermissions = false
+    var useDynamicTheme = true
     private val GENERIC_PERM_HANDLER = 100
 
     companion object {
@@ -40,6 +39,10 @@ open class BaseSimpleActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        if (useDynamicTheme) {
+            setTheme(getThemeId())
+        }
+
         super.onCreate(savedInstanceState)
         if (!packageName.startsWith("com.simplemobiletools.", true)) {
             if ((0..50).random() == 10 || baseConfig.appRunCount % 100 == 0) {
@@ -53,7 +56,10 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        updateBackgroundColor()
+        if (useDynamicTheme) {
+            setTheme(getThemeId())
+            updateBackgroundColor()
+        }
         updateActionbarColor()
     }
 
@@ -81,28 +87,24 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     fun updateActionbarColor(color: Int = baseConfig.primaryColor) {
         supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
+        supportActionBar?.title = Html.fromHtml("<font color='${color.getContrastColor().toHex()}'>${supportActionBar?.title}</font>")
         updateStatusbarColor(color)
-    }
 
-    fun updateStatusbarColor(color: Int) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            val hsv = FloatArray(3)
-            Color.colorToHSV(color, hsv)
-            hsv[2] *= 0.85f
-            window.statusBarColor = Color.HSVToColor(hsv)
+        if (isLollipopPlus()) {
+            setTaskDescription(ActivityManager.TaskDescription(null, null, color))
         }
     }
 
-    fun updateMenuTextSize(resources: Resources, menu: Menu) {
-        val textSize = resources.getDimension(R.dimen.normal_text_size).toInt()
-        (0 until menu.size())
-                .map { menu.getItem(it) }
-                .forEach {
-                    SpannableString(it.title).apply {
-                        setSpan(AbsoluteSizeSpan(textSize, false), 0, length, 0)
-                        it.title = this
-                    }
-                }
+    fun updateStatusbarColor(color: Int) {
+        if (isLollipopPlus()) {
+            window.statusBarColor = color.darkenColor()
+        }
+    }
+
+    fun setTranslucentNavigation() {
+        if (isKitkatPlus()) {
+            window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
@@ -215,7 +217,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
     }
 
     private fun startCopyMove(files: ArrayList<File>, destinationFolder: File, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean) {
-        val pair = Pair<ArrayList<File>, File>(files, destinationFolder)
+        val pair = Pair(files, destinationFolder)
         CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, copyMoveListener).execute(pair)
     }
 
@@ -238,7 +240,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    private val copyMoveListener = object : CopyMoveTask.CopyMoveListener {
+    val copyMoveListener = object : CopyMoveTask.CopyMoveListener {
         override fun copySucceeded(copyOnly: Boolean, copiedAll: Boolean) {
             if (copyOnly) {
                 toast(if (copiedAll) R.string.copying_success else R.string.copying_success_partial)

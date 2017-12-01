@@ -43,7 +43,7 @@ class PropertiesDialog() {
         addProperty(R.string.path, file.parent)
         addProperty(R.string.size, "...", R.id.properties_size)
 
-        Thread({
+        Thread {
             val size = getItemSize(file).formatSize()
             activity.runOnUiThread {
                 view.findViewById<TextView>(R.id.properties_size).property_value.text = size
@@ -68,7 +68,7 @@ class PropertiesDialog() {
                     }
                 }
             }
-        }).start()
+        }.start()
 
         when {
             file.isDirectory -> {
@@ -130,13 +130,13 @@ class PropertiesDialog() {
         addProperty(R.string.size, "...", R.id.properties_size)
         addProperty(R.string.files_count, "...", R.id.properties_file_count)
 
-        Thread({
+        Thread {
             val size = files.sumByLong { getItemSize(it) }.formatSize()
             activity.runOnUiThread {
                 view.findViewById<TextView>(R.id.properties_size).property_value.text = size.toString()
                 view.findViewById<TextView>(R.id.properties_file_count).property_value.text = mFilesCnt.toString()
             }
-        }).start()
+        }.start()
 
         AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.ok, null)

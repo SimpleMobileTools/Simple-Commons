@@ -6,7 +6,6 @@ import android.content.ContentUris
 import android.content.Context
 import android.content.pm.PackageManager
 import android.database.Cursor
-import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
@@ -16,19 +15,19 @@ import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.provider.OpenableColumns
 import android.support.v4.content.ContextCompat
+import android.support.v4.content.CursorLoader
 import android.support.v4.content.FileProvider
-import android.support.v7.app.AlertDialog
-import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.view.Window
-import android.widget.TextView
 import android.widget.Toast
 import com.github.ajalt.reprint.core.Reprint
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.*
+import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_BACKGROUND_COLOR
+import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_LAST_UPDATED_TS
+import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_PRIMARY_COLOR
+import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_TEXT_COLOR
+import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.*
-import kotlinx.android.synthetic.main.dialog_title.view.*
 import java.io.File
 
 fun Context.isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
@@ -68,35 +67,6 @@ fun Context.getLinkTextColor(): Int {
         baseConfig.primaryColor
     } else {
         baseConfig.textColor
-    }
-}
-
-fun Context.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0) {
-    if (view is ViewGroup)
-        updateTextColors(view)
-    else if (view is MyTextView) {
-        view.setTextColor(baseConfig.textColor)
-    }
-
-    var title: TextView? = null
-    if (titleId != 0) {
-        title = LayoutInflater.from(this).inflate(R.layout.dialog_title, null) as TextView
-        title.dialog_title_textview.apply {
-            setText(titleId)
-            setTextColor(baseConfig.textColor)
-        }
-    }
-
-    dialog.apply {
-        setView(view)
-        requestWindowFeature(Window.FEATURE_NO_TITLE)
-        setCustomTitle(title)
-        setCanceledOnTouchOutside(true)
-        show()
-        getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(baseConfig.textColor)
-        getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(baseConfig.textColor)
-        getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(baseConfig.textColor)
-        window.setBackgroundDrawable(ColorDrawable(baseConfig.backgroundColor))
     }
 }
 
@@ -293,4 +263,24 @@ fun Context.getFilenameFromContentUri(uri: Uri): String? {
         cursor?.close()
     }
     return ""
+}
+
+fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
+    val cursorLoader = CursorLoader(this, MyContentProvider.CONTENT_URI, null, null, null, null)
+    Thread {
+        val cursor = cursorLoader.loadInBackground()
+
+        cursor.use {
+            if (cursor?.moveToFirst() == true) {
+                val textColor = cursor.getIntValue(COL_TEXT_COLOR)
+                val backgroundColor = cursor.getIntValue(COL_BACKGROUND_COLOR)
+                val primaryColor = cursor.getIntValue(COL_PRIMARY_COLOR)
+                val lastUpdatedTS = cursor.getIntValue(COL_LAST_UPDATED_TS)
+                val sharedTheme = SharedTheme(textColor, backgroundColor, primaryColor, lastUpdatedTS)
+                callback(sharedTheme)
+            } else {
+                callback(null)
+            }
+        }
+    }.start()
 }

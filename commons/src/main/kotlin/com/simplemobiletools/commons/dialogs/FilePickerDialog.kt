@@ -3,10 +3,8 @@ package com.simplemobiletools.commons.dialogs
 import android.os.Environment
 import android.os.Parcelable
 import android.support.v7.app.AlertDialog
-import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.view.KeyEvent
-import android.view.LayoutInflater
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.FilepickerItemsAdapter
@@ -23,7 +21,7 @@ import java.util.*
 /**
  * The only filepicker constructor with a couple optional parameters
  *
- * @param activity
+ * @param activity has to be activity to avoid some Theme.AppCompat issues
  * @param currPath initial path of the dialog, defaults to the external storage
  * @param pickFile toggle used to determine if we are picking a file or a folder
  * @param showHidden toggle for showing hidden items, whose name starts with a dot
@@ -42,7 +40,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     var mScrollStates = HashMap<String, Parcelable>()
 
     lateinit var mDialog: AlertDialog
-    var mDialogView = LayoutInflater.from(activity).inflate(R.layout.dialog_filepicker, null)
+    var mDialogView = activity.layoutInflater.inflate(R.layout.dialog_filepicker, null)
 
     init {
         if (!File(currPath).exists()) {
@@ -83,13 +81,13 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         }
 
         mDialog = builder.create().apply {
-            context.setupDialogStuff(mDialogView, this, getTitle())
+            activity.setupDialogStuff(mDialogView, this, getTitle())
         }
 
         if (!pickFile) {
-            mDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener({
+            mDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                 verifyPath()
-            })
+            }
         }
     }
 
@@ -111,8 +109,8 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
         items = items.sortedWith(compareBy({ !it.isDirectory }, { it.name.toLowerCase() }))
 
-        val adapter = FilepickerItemsAdapter(activity, items) {
-            if (it.isDirectory) {
+        val adapter = FilepickerItemsAdapter(activity, items, mDialogView.filepicker_list) {
+            if ((it as FileDirItem).isDirectory) {
                 currPath = it.path
                 updateItems()
             } else if (pickFile) {
@@ -120,18 +118,12 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                 verifyPath()
             }
         }
+        adapter.addVerticalDividers(true)
 
         val layoutManager = mDialogView.filepicker_list.layoutManager as LinearLayoutManager
         mScrollStates.put(mPrevPath.trimEnd('/'), layoutManager.onSaveInstanceState())
 
         mDialogView.apply {
-            if (filepicker_list.adapter == null) {
-                DividerItemDecoration(context, DividerItemDecoration.VERTICAL).apply {
-                    setDrawable(context.resources.getDrawable(R.drawable.divider))
-                    filepicker_list.addItemDecoration(this)
-                }
-            }
-
             filepicker_list.adapter = adapter
             filepicker_breadcrumbs.setBreadcrumb(currPath)
             filepicker_fastscroller.setViews(filepicker_list)

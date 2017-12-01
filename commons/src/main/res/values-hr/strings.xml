@@ -1,0 +1,271 @@
+<resources>
+    <string name="ok">U redu</string>
+    <string name="cancel">Poništi</string>
+    <string name="search">Traži</string>
+    <string name="save_as">Spremi kao</string>
+    <string name="file_saved">Datoteka uspješno spremljena</string>
+    <string name="invalid_file_format">Nevažeći format datoteke</string>
+    <string name="out_of_memory_error">Greška, nema slobodnog prostora</string>
+    <string name="an_error_occurred">Greška se dogodila: %s</string>
+    <string name="open_with">Otvori s</string>
+    <string name="no_app_found">Nema odgovarajuće aplikacije</string>
+    <string name="set_as">Postavi kao</string>
+    <string name="value_copied_to_clipboard">Vrijednost spremljena u međuspremnik</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Potrebna je dozvola za prostor za pohranu</string>
+    <string name="no_contacts_permission">Potrebna je dozvola za kontakte</string>
+    <string name="no_camera_permissions">Potrebna je dozvola za kameru</string>
+    <string name="no_audio_permissions">Potrebna je dozvola za zvuk</string>
+
+    <!-- Renaming -->
+    <string name="rename_file">Preimenuj datoteku</string>
+    <string name="rename_folder">Preimenuj direktorij</string>
+    <string name="rename_file_error">Nije moguće preimenovati datoteku</string>
+    <string name="rename_folder_error">Nije moguće preimenovati direktorij</string>
+    <string name="rename_folder_empty">Naziv direktorija ne smije biti prazan</string>
+    <string name="rename_folder_exists">Direktorij s tim imenom već postoji</string>
+    <string name="rename_folder_root">Nije moguće preimenovati root direktorij prostora za pohranu</string>
+    <string name="rename_folder_ok">Direktorij uspješno preimenovan</string>
+    <string name="renaming_folder">Preimenovanje direktorija</string>
+    <string name="filename_cannot_be_empty">Naziv datoteke ne smije biti prazan</string>
+    <string name="filename_invalid_characters">Naziv datoteke sadrži ne podržane znakove</string>
+    <string name="extension_cannot_be_empty">Ekstenzija ne smije biti prazna</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">Kopiraj</string>
+    <string name="move">Premjesti</string>
+    <string name="copy_move">Kopiraj / Premjesti</string>
+    <string name="copy_to">Kopiraj u</string>
+    <string name="move_to">Premjesti u</string>
+    <string name="source">Izvor</string>
+    <string name="destination">Odredište</string>
+    <string name="select_destination">Odabir odredišta</string>
+    <string name="click_select_destination">Kliknite ovdje za odabir odredišta</string>
+    <string name="invalid_destination">Nije moguće zapisivanje na odabranom odredištu</string>
+    <string name="please_select_destination">Molimo odaberite odredište</string>
+    <string name="source_and_destination_same">Izvor i odredište ne mogu biti isti</string>
+    <string name="copy_failed">Nije moguće kopiranje datoteka</string>
+    <string name="copying">Kopiranje&#8230;</string>
+    <string name="copying_success">Datoteke uspješno kopirane</string>
+    <string name="copy_move_failed">Greška se dogodila</string>
+    <string name="moving">Premještanje&#8230;</string>
+    <string name="moving_success">Datoteke uspješno premještene</string>
+    <string name="moving_success_partial">Neke datoteke nije bilo moguće premjestiti</string>
+    <string name="copying_success_partial">Neke datoteke nije bilo moguće kopirati</string>
+    <string name="no_files_selected">Nema odabranih datoteka</string>
+    <string name="saving">Spremanje&#8230;</string>
+    <string name="could_not_create_folder">Nije moguće stvoriti direktorij %s</string>
+    <string name="could_not_create_file">Nije moguće stvoriti datoteku %s</string>
+
+    <!-- Create new -->
+    <string name="create_new">Stvori novo</string>
+    <string name="folder">Direktorij</string>
+    <string name="file">Datoteka</string>
+    <string name="create_new_folder">Stvori novi direktorij</string>
+    <string name="name_taken">Datoteka ili direktorij s tim nazivom već postoje</string>
+    <string name="invalid_name">Naziv sadrži ne važeće znakove</string>
+    <string name="empty_name">Molimo unesite naziv</string>
+    <string name="unknown_error_occurred">Nepoznata greška se dogodila</string>
+
+    <!-- Copy conflicts -->
+    <string name="file_already_exists">Datoteka %1$s već postoji</string>
+    <string name="file_already_exists_overwrite">Datoteka %1$s već postoji. Presnimiti?</string>
+    <string name="select_an_action">Odaberite radnju</string>
+    <string name="overwrite">Presnimi</string>
+    <string name="skip">Preskoči</string>
+    <string name="append">Dodaj s \'_1\'</string>
+    <string name="apply_to_all">Primjeni na sve sukobe</string>
+
+    <!-- File picker -->
+    <string name="select_folder">Odaberite direktorij</string>
+    <string name="select_file">Odaberite datoteku</string>
+    <string name="confirm_storage_access_title">Potvrdite pristup vanjskom prostoru za pohranu</string>
+    <string name="confirm_storage_access_text">Molimo odaberite root direktorij SD kartice na sljedećem prozoru, da bi ste omogućili zapisivanje</string>
+    <string name="confirm_storage_access_text_sd">Ukoliko ne vidite SD karticu, probajte ovo</string>
+    <string name="confirm_selection">Potvrdi odabir</string>
+
+    <plurals name="items">
+        <item quantity="one">%1$d stavka</item>
+        <item quantity="few">%1$d stavke</item>
+        <item quantity="other">%1$d stavki</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">Odaberite prostor za pohranu</string>
+    <string name="internal">Unutranji prostor za pohranu</string>
+    <string name="sd_card">SD kartica</string>
+    <string name="root">Root</string>
+    <string name="wrong_root_selected">Odabran je pogrešan direktorij, molimo odaberite root direktorij Vaše SD kartice</string>
+
+    <!-- File properties -->
+    <string name="properties">Svojstva</string>
+    <string name="path">Putanja</string>
+    <string name="items_selected">Odabrane stavke</string>
+    <string name="direct_children_count">Zbroj podstavki</string>
+    <string name="files_count">Ukupni zbroj stavki</string>
+    <string name="resolution">Rezolucija</string>
+    <string name="duration">Trajanje</string>
+    <string name="artist">Umjetnik</string>
+    <string name="album">Album</string>
+    <string name="focal_length">Žarišna duljina</string>
+    <string name="exposure_time">Vrijeme izloženosti</string>
+    <string name="iso_speed">ISO brzina</string>
+    <string name="f_number">F-broj</string>
+    <string name="camera">Kamera</string>
+    <string name="exif">EXIF</string>
+
+    <!-- Color customization -->
+    <string name="background_color">Boja pozadine</string>
+    <string name="text_color">Boja teksta</string>
+    <string name="primary_color">Primarna boja</string>
+    <string name="restore_defaults">Vrati zadano</string>
+    <string name="theme">Tema</string>
+    <string name="changing_color_description">Promjenom boje, prelazi se na Prilagođenu temu</string>
+    <string name="save">Spremi</string>
+    <string name="discard">Odbaci</string>
+    <string name="undo_changes">Poništi promjene</string>
+    <string name="undo_changes_confirmation">Jeste li sigurni da želite poništiti Vaše promjene?</string>
+    <string name="save_before_closing">Imate ne spremljene promjene. Želite li spremiti prije izlaska?</string>
+    <string name="apply_to_all_apps">Primjeni boje na sve Simple Aplikacije</string>
+    <string name="share_colors_success">Uspješno ažurirane boje. Nova tema pod nazivom \'Shared\' je dodana, molimo koristite ju za ažuriranje svih boja u aplikaciji u budućnosti.</string>
+    <string name="purchase_thank_you">Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> otključavanju ove funkcionalnosti i podržavanju razvoja. Hvala!</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Svijetla</string>
+    <string name="dark_theme">Tamna</string>
+    <string name="solarized">Solarizirana</string>
+    <string name="dark_red">Tamno crvena</string>
+    <string name="custom">Prilagođena</string>
+    <string name="shared">Dijeljena</string>
+
+    <!-- What's new -->
+    <string name="whats_new">Što je novo</string>
+    <string name="whats_new_disclaimer">* samo velika ažuriranja su ovdje izlistana, ali imala ažuriranja su također prisutna</string>
+
+    <!-- Actionbar items -->
+    <string name="delete">Izbriši</string>
+    <string name="rename">Preimenuj</string>
+    <string name="share">Dijeli</string>
+    <string name="share_via">Dijeli preko</string>
+    <string name="select_all">Odaberi sve</string>
+    <string name="hide">Sakrij</string>
+    <string name="unhide">Otkrij</string>
+    <string name="hide_folder">Sakrij direktorij</string>
+    <string name="unhide_folder">Otkrij direktorij</string>
+    <string name="temporarily_show_hidden">Privremeno prikaži skriveno</string>
+    <string name="stop_showing_hidden">Zaustavi prikazivanje skrivenih stavki</string>
+    <string name="maximum_share_reached">Nije moguće dijeliti ovoliko stavki odjednom</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">Sortiraj po</string>
+    <string name="name">Naziv</string>
+    <string name="size">Veličina</string>
+    <string name="last_modified">Datum zadnje izmjenjene</string>
+    <string name="date_taken">Datum stvaranja</string>
+    <string name="title">Naslov</string>
+    <string name="filename">Naziv datoteke</string>
+    <string name="extension">Ekstenzija</string>
+    <string name="ascending">Uzlazno</string>
+    <string name="descending">Silazno</string>
+    <string name="use_for_this_folder">Koristi samo za ovaj direktorij</string>
+
+    <!-- Confirmation dialog -->
+    <string name="proceed_with_deletion">Jeste li sigurni da želite nastaviti s brisanjem?</string>
+    <string name="yes">Da</string>
+    <string name="no">Ne</string>
+
+    <!-- Password protection -->
+    <string name="pin">PIN</string>
+    <string name="enter_pin">Unesite PIN</string>
+    <string name="please_enter_pin">Molimo unesite PIN</string>
+    <string name="wrong_pin">Pogrešan PIN</string>
+    <string name="repeat_pin">Ponovite PIN</string>
+    <string name="pattern">Uzorak</string>
+    <string name="insert_pattern">Unesite uzorak</string>
+    <string name="wrong_pattern">Krivi uzorak</string>
+    <string name="repeat_pattern">Ponovite uzorak</string>
+    <string name="fingerprint">Otisak prsta</string>
+    <string name="add_fingerprint">Dodajte otisak prsta</string>
+    <string name="place_finger">Molimo postavite prst na senzor otiska prsta</string>
+    <string name="authentication_failed">Neuspješna autentifikacija</string>
+    <string name="authentication_blocked">Blokirana autentifikacija, molimo pokušajte za par trenutaka</string>
+    <string name="no_fingerprints_registered">Nemate registiranih otisaka prstiju, molimo dodajte ih u postavkama vašeg uređaja</string>
+    <string name="go_to_settings">Idi u Postavke</string>
+    <string name="protection_setup_successfully">Uspješno postavljanje lozinke. Molimo reinstalirajte aplikaciju u slučaju da je zaboravite.</string>
+    <string name="fingerprint_setup_successfully">Uspješno postavljanje zaštite. Molimo reinstalirajte aplikaciju u slučaju problema s resetiranjem.</string>
+
+    <!-- Times -->
+    <plurals name="seconds">
+        <item quantity="one">%1$d sekunda</item>
+        <item quantity="few">%1$d sekunde</item>
+        <item quantity="other">%1$d sekundi</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%1$d minuta</item>
+        <item quantity="few">%1$d minute</item>
+        <item quantity="other">%1$d minuti</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%1$d sat</item>
+        <item quantity="few">%1$d sata</item>
+        <item quantity="other">%1$d sati</item>
+    </plurals>
+
+    <!-- Settings -->
+    <string name="settings">Postavke</string>
+    <string name="customize_colors">Prilagodi boje</string>
+    <string name="use_english_language">Koristi Engleski jezik</string>
+    <string name="show_hidden">Prikaži skrivene datoteke i direktorije</string>
+    <string name="font_size">Veličina fonta</string>
+    <string name="small">Malo</string>
+    <string name="medium">Srednje</string>
+    <string name="large">Veće</string>
+    <string name="extra_large">Puno veće</string>
+    <string name="password_protect_hidden_items">Vidljivost skrivenih, lozinkom zaštićenih stavki</string>
+    <string name="password_protect_whole_app">Zaštiti cijelu aplikaciju lozinkom</string>
+    <string name="keep_last_modified">Zadrži stari datum zadnje izmjene pri kopiranje/premještanju/preimenovanju datoteke</string>
+
+    <!-- About -->
+    <string name="about">O nama</string>
+    <string name="website_label">Za pregled izvornog koda posjetite</string>
+    <string name="email_label">Pošaljite nam povratne informacije ili prijedloge na</string>
+    <string name="more_apps_underlined"><u>Više aplikacija</u></string>
+    <string name="third_party_licences_underlined"><u>Licence trećih strana</u></string>
+    <string name="invite_friends_underlined"><u>Pozovite prijatelje</u></string>
+    <string name="share_text">Hej, posjeti nas na %1$s u %2$s</string>
+    <string name="invite_via">Pozovite preko</string>
+    <string name="rate_us_underlined"><u>Ocijenite nas</u></string>
+    <string name="donate">Donirajte</string>
+    <string name="donate_underlined"><u>Donirajte</u></string>
+    <string name="follow_us">Pratite nas</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="additional_info">Dodatne informacije</string>
+    <string name="app_version">Verzija aplikacije: %1$s</string>
+    <string name="device_os">OS uređaja: %1$s</string>
+    <string name="donate_please">Pozdrav,\n\nnadam se da uživate u aplikaciji. Ne sadrži reklame, stoga nas podržite njen razvoj kupovinom <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> aplikacije, što će spriječiti da se ovaj prozor ponovno pojavljuje.\n\nDodatne opcije za doniranje potražite <a href="http://simplemobiletools.com/donate">ovdje</a>.\n\nHvala Vam!</string>
+    <string name="purchase">Kupi</string>
+
+    <!-- License -->
+    <string name="notice">Ova aplikacija koristi biblioteke trećih strana kako bi olakšala moj život. Hvala Vam.</string>
+    <string name="third_party_licences">Licence trećih strana</string>
+    <string name="kotlin_title">Kotlin (programming language)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
+    <string name="glide_title">Glide (image loading and caching)</string>
+    <string name="picasso_title">Picasso (image loading and caching)</string>
+    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
+    <string name="joda_title">Joda-Time (Java date replacement)</string>
+    <string name="stetho_title">Stetho (debugging databases)</string>
+    <string name="otto_title">Otto (event bus)</string>
+    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
+    <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
+    <string name="gson_title">Gson (JSON parser)</string>
+    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+</resources>

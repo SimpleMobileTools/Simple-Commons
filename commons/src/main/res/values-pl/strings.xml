@@ -10,6 +10,7 @@
     <string name="open_with">Otwórz w</string>
     <string name="no_app_found">Nie znaleziono danych aplikacji</string>
     <string name="set_as">Ustaw jako</string>
+    <string name="value_copied_to_clipboard">Wartość została skopiowana do schowka</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Wymagane jest uprawnienie \'Pamięć\'</string>
@@ -120,15 +121,23 @@
     <string name="primary_color">Belka i przełączniki</string>
     <string name="restore_defaults">Przywróć domyślne</string>
     <string name="theme">Motyw</string>
-    <string name="light_theme">Jasny</string>
-    <string name="dark_theme">Ciemny</string>
-    <string name="custom">Własny</string>
     <string name="changing_color_description">Zmiana koloru spowoduje przełączenie motywu na własny</string>
     <string name="save">Zapisz</string>
     <string name="discard">Porzuć</string>
     <string name="undo_changes">Cofnij zmiany</string>
     <string name="undo_changes_confirmation">Czy na pewno chcesz cofnąć zmiany?</string>
     <string name="save_before_closing">Zapisać zmiany?</string>
+    <string name="apply_to_all_apps">Zastosuj kolory do wszystkich Prostych Aplikacji</string>
+    <string name="share_colors_success">Kolory zostały zmienione. Utworzony został nowy, \'wspólny\' motyw - użyj go, aby zaktualizować kolorystykę wszystkich Prostych Aplikacji.</string>
+    <string name="purchase_thank_you">Aby odblokować tą funkcję (i wesprzeć przy okazji rozwój niniejszej aplikacji), kup aplikację <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>.</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Jasny</string>
+    <string name="dark_theme">Ciemny</string>
+    <string name="solarized">Solaryzacja</string>
+    <string name="dark_red">Ciemnoczerwony</string>
+    <string name="custom">Własny</string>
+    <string name="shared">Wspólny</string>
 
     <!-- What's new -->
     <string name="whats_new">Co nowego</string>
@@ -231,8 +240,9 @@
     <string name="donate_underlined"><u>Przekaż darowiznę</u></string>
     <string name="follow_us">Śledź nas</string>
     <string name="copyright">Wersja %1$s\n© Simple Mobile Tools %2$d</string>
-    <string name="additional_info">Dodatkowe informacje</string>
-    <string name="gruveo">Nie szukasz może prostej i anonimowej w swych działaniach aplikacji do wideorozmów?</string>
+    <string name="additional_info">Dodatkowe informacje</string><![CDATA[
+    
+    ]]>
     <string name="app_version">Wersja aplikacji: %1$s</string>
     <string name="device_os">System: %1$s</string>
     <string name="donate_please">Witaj!\n\nMamy nadzieję, że aplikacja przypadła Ci do gustu. Jak da się zauważyć, nie zawiera ona reklam, prosimy więc o wsparcie jej rozwoju poprzez zakup specjalnej aplikacji <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, co poskutkuje również wyłączeniem tego komunikatu.\n\nWięcej możliwości wsparcia znajdziesz <a href="http://simplemobiletools.com/donate">tutaj</a>.\n\nDziękujemy za korzystanie z aplikacji (no i za wasze ewentualne pieniążki)!</string>
@@ -258,6 +268,6 @@
     <string name="autofittextview_title">AutoFitTextView (zmiana rozmiaru tekstu)</string>
     <string name="robolectric_title">Robolectric (testowanie aplikacji)</string>
     <string name="espresso_title">Espresso (testowanie aplikacji)</string>
-    <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="gson_title">Gson (parser JSON)</string>
+    <string name="leak_canary_title">Leak Canary (wykrywanie wycieków pamięci)</string>
 </resources>

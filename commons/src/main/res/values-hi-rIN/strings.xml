@@ -10,6 +10,7 @@
     <string name="open_with">Open with</string>
     <string name="no_app_found">No valid app found</string>
     <string name="set_as">Set as</string>
+    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Storage permission is required</string>
@@ -119,15 +120,23 @@
     <string name="primary_color">Primary color</string>
     <string name="restore_defaults">Restore defaults</string>
     <string name="theme">Theme</string>
-    <string name="light_theme">Light theme</string>
-    <string name="dark_theme">Dark theme</string>
-    <string name="custom">Custom</string>
     <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
     <string name="save">Save</string>
     <string name="discard">Discard</string>
     <string name="undo_changes">Undo changes</string>
     <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
     <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
+    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
+    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="purchase_thank_you">Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Light</string>
+    <string name="dark_theme">Dark</string>
+    <string name="solarized">Solarized</string>
+    <string name="dark_red">Dark red</string>
+    <string name="custom">Custom</string>
+    <string name="shared">Shared</string>
 
     <!-- What's new -->
     <string name="whats_new">What\'s new</string>
@@ -228,7 +237,6 @@
     <string name="follow_us">हमे फॉलो करें</string>
     <string name="copyright">सं %1$s\nकॉपीराइट © सिंपल मोबाइल टूल्स %2$d</string>
     <string name="additional_info">Additional info</string>
-    <string name="gruveo">Are you looking for a simple and anonymous video calling app? Try out my other project</string>
     <string name="app_version">App version: %1$s</string>
     <string name="device_os">Device OS: %1$s</string>
     <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>

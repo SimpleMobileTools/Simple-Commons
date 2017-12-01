@@ -15,7 +15,7 @@ val SD_CARD_PATH = "sd_card_path_2"
 val INTERNAL_STORAGE_PATH = "internal_storage_path"
 val TEXT_COLOR = "text_color"
 val BACKGROUND_COLOR = "background_color"
-val PRIMARY_COLOR = "primary_color"
+val PRIMARY_COLOR = "primary_color_2"
 val CUSTOM_TEXT_COLOR = "custom_text_color"
 val CUSTOM_BACKGROUND_COLOR = "custom_background_color"
 val CUSTOM_PRIMARY_COLOR = "custom_primary_color"
@@ -30,6 +30,11 @@ val APP_PROTECTION_TYPE = "app_protection_type"
 val KEEP_LAST_MODIFIED = "keep_last_modified"
 val USE_ENGLISH = "use_english"
 val WAS_USE_ENGLISH_TOGGLED = "was_use_english_toggled"
+val WAS_SHARED_THEME_EVER_ACTIVATED = "was_shared_theme_ever_activated"
+val IS_USING_SHARED_THEME = "is_using_shared_theme"
+val WAS_SHARED_THEME_FORCED = "was_shared_theme_forced"
+val WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN = "was_custom_theme_switch_description_shown"
+val WAS_SHARED_THEME_AFTER_UPDATE_CHECKED = "was_shared_theme_after_update_checked"
 
 // licenses
 val LICENSE_KOTLIN = 1
@@ -65,10 +70,6 @@ val SORT_BY_DATE_TAKEN = 8
 val SORT_BY_EXTENSION = 16
 val SORT_BY_PATH = 32
 val SORT_DESCENDING = 1024
-
-val THEME_LIGHT = 0
-val THEME_DARK = 1
-val THEME_CUSTOM = 2
 
 // security
 val PROTECTION_PATTERN = 0

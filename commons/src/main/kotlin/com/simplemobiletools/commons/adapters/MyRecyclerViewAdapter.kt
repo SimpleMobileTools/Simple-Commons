@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.adapters
 
 import android.support.v7.view.ActionMode
+import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.RecyclerView
 import android.util.SparseArray
 import android.view.Menu
@@ -10,6 +11,7 @@ import android.view.ViewGroup
 import com.bignerdranch.android.multiselector.ModalMultiSelectorCallback
 import com.bignerdranch.android.multiselector.MultiSelector
 import com.bignerdranch.android.multiselector.SwappingHolder
+import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.interfaces.MyAdapterListener
@@ -24,7 +26,6 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     var textColor = baseConfig.textColor
     var itemViews = SparseArray<View>()
     val selectedPositions = HashSet<Int>()
-    var selectableItemCount = 0
 
     private val multiSelector = MultiSelector()
     private var actMode: ActionMode? = null
@@ -38,6 +39,8 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     abstract fun prepareActionMode(menu: Menu)
 
     abstract fun actionItemPressed(id: Int)
+
+    abstract fun getSelectableItemCount(): Int
 
     fun toggleItemSelection(select: Boolean, pos: Int) {
         if (select) {
@@ -60,6 +63,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     }
 
     private fun updateTitle(cnt: Int) {
+        val selectableItemCount = getSelectableItemCount()
         val selectedCount = Math.min(cnt, selectableItemCount)
         val oldTitle = actMode?.title
         val newTitle = "$selectedCount / $selectableItemCount"
@@ -96,6 +100,19 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     fun setupZoomListener(zoomListener: MyRecyclerView.MyZoomListener?) {
         recyclerView.setupZoomListener(zoomListener)
+    }
+
+    fun addVerticalDividers(add: Boolean) {
+        if (recyclerView.itemDecorationCount > 0) {
+            recyclerView.removeItemDecorationAt(0)
+        }
+
+        if (add) {
+            DividerItemDecoration(activity, DividerItemDecoration.VERTICAL).apply {
+                setDrawable(resources.getDrawable(R.drawable.divider))
+                recyclerView.addItemDecoration(this)
+            }
+        }
     }
 
     fun selectItemPosition(pos: Int) {
@@ -200,11 +217,26 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         holder.itemView.tag = holder
     }
 
+    fun removeSelectedItems() {
+        selectedPositions.sortedDescending().forEach {
+            notifyItemRemoved(it)
+            itemViews.put(it, null)
+        }
+
+        val newItems = SparseArray<View>()
+        (0 until itemViews.size())
+                .filter { itemViews[it] != null }
+                .forEachIndexed { curIndex, i -> newItems.put(curIndex, itemViews[i]) }
+
+        itemViews = newItems
+        finishActMode()
+    }
+
     class ViewHolder(view: View, val adapterListener: MyAdapterListener, val activity: BaseSimpleActivity, val multiSelectorCallback: ModalMultiSelectorCallback,
                      val multiSelector: MultiSelector, val itemClick: (Any) -> (Unit)) : SwappingHolder(view, multiSelector) {
-        fun bindView(any: Any, allowLongClick: Boolean = true, callback: (itemView: View) -> Unit): View {
+        fun bindView(any: Any, allowLongClick: Boolean = true, callback: (itemView: View, layoutPosition: Int) -> Unit): View {
             return itemView.apply {
-                callback(this)
+                callback(this, layoutPosition)
 
                 if (isClickable) {
                     setOnClickListener { viewClicked(any) }

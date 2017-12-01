@@ -10,6 +10,7 @@
     <string name="open_with">Открыть в…</string>
     <string name="no_app_found">Приложение не найдено</string>
     <string name="set_as">Установить как…</string>
+    <string name="value_copied_to_clipboard">Значение скопировано в буфер обмена</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Требуется разрешение для доступа к хранилищу</string>
@@ -119,15 +120,23 @@
     <string name="primary_color">Основной цвет</string>
     <string name="restore_defaults">Сбросить к стандартным</string>
     <string name="theme">Тема</string>
-    <string name="light_theme">Светлая тема</string>
-    <string name="dark_theme">Тёмная тема</string>
-    <string name="custom">Настраиваемое</string>
     <string name="changing_color_description">Изменение цвета повлечёт переключение на пользовательскую тему.</string>
     <string name="save">Сохранить</string>
     <string name="discard">Сбросить</string>
     <string name="undo_changes">Отменить изменения</string>
     <string name="undo_changes_confirmation">Действительно отменить изменения?</string>
     <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
+    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
+    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="purchase_thank_you">Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Светлая</string>
+    <string name="dark_theme">Тёмная</string>
+    <string name="solarized">Solarized</string>
+    <string name="dark_red">Dark red</string>
+    <string name="custom">Настраиваемое</string>
+    <string name="shared">Shared</string>
 
     <!-- What's new -->
     <string name="whats_new">Что нового</string>
@@ -230,7 +239,6 @@
     <string name="follow_us">Подписаться на нас</string>
     <string name="copyright">v %1$s\nАвторские права © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Дополнительная информация</string>
-    <string name="gruveo">Вы ищете простое и анонимное приложение для видеозвонков? Попробуйте мой другой проект</string>
     <string name="app_version">Версия приложения: %1$s</string>
     <string name="device_os">ОС устройства: %1$s</string>
     <string name="donate_please">Привет,\n\nнадеюсь, вам нравится приложение. Оно не содержит рекламы, поэтому, пожалуйста, поддержите разработку, купив приложение <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>. Покупка также предотвратит повторное появление данного диалогового окна.\n\nДругие способы сделать пожертвование можно найти <a href="http://simplemobiletools.com/donate">здесь</a>.\n\nСпасибо!</string>

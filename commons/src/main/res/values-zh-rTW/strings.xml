@@ -10,12 +10,13 @@
     <string name="open_with">以其他應用程式開啟</string>
     <string name="no_app_found">找不到應用程式</string>
     <string name="set_as">設為</string>
+    <string name="value_copied_to_clipboard">數值複製到剪貼簿</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">存儲權限是必要的</string>
+    <string name="no_contacts_permission">聯絡人權限是必要的</string>
+    <string name="no_camera_permissions">相機權限是必要的</string>
+    <string name="no_audio_permissions">聲音權限是必要的</string>
 
     <!-- Renaming -->
     <string name="rename_file">重新命名檔案</string>
@@ -82,7 +83,7 @@
     <string name="confirm_storage_access_title">確認外部儲存空間存取權限</string>
     <string name="confirm_storage_access_text">請在下個畫面選擇SD卡的根目錄，以准許寫入權限</string>
     <string name="confirm_storage_access_text_sd">"如果看不到SD卡，試試這個"</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_selection">確認選擇</string>
 
     <plurals name="items">
         <item quantity="one">%1$d個項目</item>
@@ -119,15 +120,23 @@
     <string name="primary_color">主體顏色</string>
     <string name="restore_defaults">恢復預設</string>
     <string name="theme">主題</string>
-    <string name="light_theme">明亮主題</string>
-    <string name="dark_theme">灰暗主題</string>
-    <string name="custom">自訂</string>
     <string name="changing_color_description">改變顏色將切換成「自訂」主題</string>
     <string name="save">儲存</string>
     <string name="discard">丟棄</string>
     <string name="undo_changes">恢復更改</string>
     <string name="undo_changes_confirmation">確定要恢復變更嗎?</string>
     <string name="save_before_closing">尚未儲存變更。離開前是否儲存?</string>
+    <string name="apply_to_all_apps">將顏色套用於全部 Simple 應用程式</string>
+    <string name="share_colors_success">顏色更新成功。創建了一個名為 \'Shared\' 的新主題，未來請使用那來更新全部應用程式顏色。</string>
+    <string name="purchase_thank_you">請購買 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 來解鎖此功能及支持開發者。謝謝!</string>
+
+    <!-- Themes -->
+    <string name="light_theme">明亮主題</string>
+    <string name="dark_theme">灰暗主題</string>
+    <string name="solarized">Solarized</string>
+    <string name="dark_red">深紅</string>
+    <string name="custom">自訂</string>
+    <string name="shared">分享</string>
 
     <!-- What's new -->
     <string name="whats_new">更新了什麼</string>
@@ -145,7 +154,7 @@
     <string name="unhide_folder">取消隱藏資料夾</string>
     <string name="temporarily_show_hidden">暫時顯示隱藏的檔案</string>
     <string name="stop_showing_hidden">停止顯示隱藏的檔案</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
+    <string name="maximum_share_reached">您不能一次分享如此多內容</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序</string>
@@ -175,15 +184,15 @@
     <string name="insert_pattern">畫出解鎖圖形</string>
     <string name="wrong_pattern">解鎖圖形錯誤</string>
     <string name="repeat_pattern">再次畫出解鎖圖形</string>
-    <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
-    <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
-    <string name="protection_setup_successfully">密碼設置成功。若遺忘了請重新安裝此程式。</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="fingerprint">指紋</string>
+    <string name="add_fingerprint">添加指紋</string>
+    <string name="place_finger">請將您的手指放置在指紋感應器上</string>
+    <string name="authentication_failed">驗證失敗</string>
+    <string name="authentication_blocked">驗證被限制，請稍後再重試</string>
+    <string name="no_fingerprints_registered">您尚未有登錄的指紋，請在裝置的「設定」內添加</string>
+    <string name="go_to_settings">前往「設定」</string>
+    <string name="protection_setup_successfully">密碼設置成功。若遺忘了，請重新安裝應用程式。</string>
+    <string name="fingerprint_setup_successfully">保護設置成功。若再次設置時發生問題，請重新安裝應用程式。</string>
 
     <!-- Times -->
     <plurals name="seconds">
@@ -202,7 +211,7 @@
     <!-- Settings -->
     <string name="settings">設定</string>
     <string name="customize_colors">自訂顏色</string>
-    <string name="use_english_language">Use English language</string>
+    <string name="use_english_language">使用英文語言</string>
     <string name="show_hidden">顯示隱藏的檔案及資料夾</string>
     <string name="font_size">字體大小</string>
     <string name="small">小</string>
@@ -210,8 +219,8 @@
     <string name="large">大</string>
     <string name="extra_large">特大</string>
     <string name="password_protect_hidden_items">用密碼保護隱藏的物件</string>
-    <string name="password_protect_whole_app">Password protect the whole application</string>
-    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
+    <string name="password_protect_whole_app">用密碼保護整個應用程式</string>
+    <string name="keep_last_modified">當檔案複製/移動/重新命名時，保留舊的「最後修改」數值</string>
 
     <!-- About -->
     <string name="about">關於</string>
@@ -228,11 +237,10 @@
     <string name="follow_us">追蹤我們</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">進階資訊</string>
-    <string name="gruveo">你正在找一個簡單且匿名的視訊電話程式嗎?試試看我別的應用程式吧</string>
     <string name="app_version">應用程式版本: %1$s</string>
     <string name="device_os">裝置系統: %1$s</string>
-    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
-    <string name="purchase">Purchase</string>
+    <string name="donate_please">哈囉 \n\n希望您喜愛這應用程式。 它不含廣告, 所以請購買應用程式 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 來支持開發者，這對話框也不會再出現。\n\n您可以在 <a href="http://simplemobiletools.com/donate">這裡</a> 找到更多捐贈選項。\n\n感謝!</string>
+    <string name="purchase">購買</string>
 
     <!-- License -->
     <string name="notice">這程式使用了下列的第三方函示庫來讓我工作簡化。感謝。</string>

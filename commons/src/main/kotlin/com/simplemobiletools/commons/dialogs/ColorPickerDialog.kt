@@ -1,13 +1,10 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.content.Context
+import android.app.Activity
 import android.graphics.Color
-import android.graphics.PorterDuff
-import android.graphics.PorterDuffColorFilter
 import android.support.v7.app.AlertDialog
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnTouchListener
@@ -15,15 +12,12 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.onGlobalLayout
-import com.simplemobiletools.commons.extensions.setBackgroundWithStroke
-import com.simplemobiletools.commons.extensions.setupDialogStuff
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.views.ColorPickerSquare
 import kotlinx.android.synthetic.main.dialog_color_picker.view.*
 
 // forked from https://github.com/yukuku/ambilwarna
-class ColorPickerDialog(val context: Context, color: Int, val callback: (color: Int) -> Unit) {
+class ColorPickerDialog(val activity: Activity, color: Int, val callback: (color: Int) -> Unit) {
     lateinit var viewHue: View
     lateinit var viewSatVal: ColorPickerSquare
     lateinit var viewCursor: ImageView
@@ -32,13 +26,13 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
     lateinit var newHexField: EditText
     lateinit var viewContainer: ViewGroup
     val currentColorHsv = FloatArray(3)
-    val backgroundColor = context.baseConfig.backgroundColor
+    val backgroundColor = activity.baseConfig.backgroundColor
     var isHueBeingDragged = false
 
     init {
         Color.colorToHSV(color, currentColorHsv)
 
-        val view = LayoutInflater.from(context).inflate(R.layout.dialog_color_picker, null).apply {
+        val view = activity.layoutInflater.inflate(R.layout.dialog_color_picker, null).apply {
             viewHue = color_picker_hue
             viewSatVal = color_picker_square
             viewCursor = color_picker_hue_cursor
@@ -128,15 +122,16 @@ class ColorPickerDialog(val context: Context, color: Int, val callback: (color: 
             }
         })
 
-        val textColor = context.baseConfig.textColor
-        AlertDialog.Builder(context)
+        val textColor = activity.baseConfig.textColor
+        AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.ok, { dialog, which -> callback(getColor()) })
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
-            context.setupDialogStuff(view, this)
-            view.color_picker_arrow.colorFilter = PorterDuffColorFilter(textColor, PorterDuff.Mode.SRC_IN)
-            view.color_picker_hex_arrow.colorFilter = PorterDuffColorFilter(textColor, PorterDuff.Mode.SRC_IN)
-            viewCursor.colorFilter = PorterDuffColorFilter(textColor, PorterDuff.Mode.SRC_IN)
+            activity.setupDialogStuff(view, this) {
+                view.color_picker_arrow.applyColorFilter(textColor)
+                view.color_picker_hex_arrow.applyColorFilter(textColor)
+                viewCursor.applyColorFilter(textColor)
+            }
         }
 
         view.onGlobalLayout {

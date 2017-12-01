@@ -10,6 +10,7 @@
     <string name="open_with">Apri con</string>
     <string name="no_app_found">Nessun app valida trovata</string>
     <string name="set_as">Imposta come</string>
+    <string name="value_copied_to_clipboard">Valore copiato negli appunti</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">L\'autorizzazione Archiviazione è necessaria</string>
@@ -119,15 +120,23 @@
     <string name="primary_color">Colore primario</string>
     <string name="restore_defaults">Ripristina predefiniti</string>
     <string name="theme">Tema</string>
-    <string name="light_theme">Tema chiaro</string>
-    <string name="dark_theme">Tema scuro</string>
-    <string name="custom">Personale</string>
     <string name="changing_color_description">Modificando un colore, il tema diventerà personale</string>
     <string name="save">Salva</string>
     <string name="discard">Scarta</string>
     <string name="undo_changes">Annulla modifiche</string>
     <string name="undo_changes_confirmation">Sei sicuro di annullare le tue modifiche?</string>
     <string name="save_before_closing">Hai modifiche non salvate. Salvare prima di uscire?</string>
+    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
+    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="purchase_thank_you">Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Chiaro</string>
+    <string name="dark_theme">Scuro</string>
+    <string name="solarized">Solarized</string>
+    <string name="dark_red">Dark red</string>
+    <string name="custom">Personale</string>
+    <string name="shared">Shared</string>
 
     <!-- What's new -->
     <string name="whats_new">Novità</string>
@@ -228,7 +237,6 @@
     <string name="follow_us">Seguici</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Informazioni aggiuntive</string>
-    <string name="gruveo">Stai cercando un\'app semplice e anonima per videochiamate? Prova l\'altro mio progetto</string>
     <string name="app_version">Versione app: %1$s</string>
     <string name="device_os">OS dispositivo: %1$s</string>
     <string name="donate_please">Ciao,\n\nspero che tu sia contento dell\'app. Non contiene pubblicità, per favore supportane lo sviluppo acquistando l\'app <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, inoltre questa finestra non verrà più mostrata.\n\nPuoi trovare ulteriori opzioni di donazione <a href="http://simplemobiletools.com/donate">qui</a>.\n\nGrazie!</string>

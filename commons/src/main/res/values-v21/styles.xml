@@ -6,7 +6,7 @@
 
     <style name="MyDialogTheme.Dark" parent="Theme.AppCompat.Dialog">
         <item name="colorAccent">@color/color_primary</item>
-        <item name="android:windowBackground">@color/default_dark_theme_background_color</item>
+        <item name="android:windowBackground">@color/theme_dark_background_color</item>
     </style>
 
     <style name="SpinnerItem" parent="@android:style/Widget.TextView"/>

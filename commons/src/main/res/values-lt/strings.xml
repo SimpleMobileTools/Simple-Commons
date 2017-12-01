@@ -10,6 +10,7 @@
     <string name="open_with">Open with</string>
     <string name="no_app_found">No valid app found</string>
     <string name="set_as">Set as</string>
+    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Storage permission is required</string>
@@ -119,15 +120,23 @@
     <string name="primary_color">Pirminë spalva</string>
     <string name="restore_defaults">Atstatyti</string>
     <string name="theme">Tema</string>
-    <string name="light_theme">Ðviesi tema</string>
-    <string name="dark_theme">Tamsi tema</string>
-    <string name="custom">Pasirinktinë</string>
     <string name="changing_color_description">Keièiant temà bus perjungta á pasirinktinæ temà</string>
     <string name="save">Iðsaugoti</string>
     <string name="discard">Atmesti</string>
     <string name="undo_changes">Panaikinti pakeitimus</string>
     <string name="undo_changes_confirmation">Ar esate tikri, jog norite panaikinti pakeitimus?</string>
     <string name="save_before_closing">Turite neiðsaugotø pakeitimø. Iðsaugoti prieð iðeinant?</string>
+    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
+    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="purchase_thank_you">Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Ðviesi</string>
+    <string name="dark_theme">Tamsi</string>
+    <string name="solarized">Solarized</string>
+    <string name="dark_red">Dark red</string>
+    <string name="custom">Pasirinktinë</string>
+    <string name="shared">Shared</string>
 
     <!-- What's new -->
     <string name="whats_new">Kas naujo</string>
@@ -227,7 +236,6 @@
     <string name="follow_us">Sekite mus</string>
     <string name="copyright">v %1$s\nCopyright Â© Simple Mobile Tools %2$d</string>
     <string name="additional_info">Papildoma informacija</string>
-    <string name="gruveo">Ar ieðkote paprastos ir anonimiðkos vaizdo skambuèiø programos? Pabandykite kità mano projektà</string>
     <string name="app_version">Programos versija: %1$s</string>
     <string name="device_os">Árenginio OS: %1$s</string>
     <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>

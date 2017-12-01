@@ -1,15 +1,16 @@
 <resources>
     <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
-    <string name="search">Search</string>
-    <string name="save_as">Save as</string>
-    <string name="file_saved">File saved successfully</string>
-    <string name="invalid_file_format">Invalid file format</string>
+    <string name="cancel">Avbryt</string>
+    <string name="search">Søk</string>
+    <string name="save_as">Lagre som</string>
+    <string name="file_saved">Fil vellykket lagret</string>
+    <string name="invalid_file_format">Ugyldig filformat</string>
     <string name="out_of_memory_error">Out of memory error</string>
-    <string name="an_error_occurred">An error occurred: %s</string>
-    <string name="open_with">Open with</string>
-    <string name="no_app_found">No valid app found</string>
-    <string name="set_as">Set as</string>
+    <string name="an_error_occurred">En feil oppstod: %s</string>
+    <string name="open_with">Åpne med</string>
+    <string name="no_app_found">Ingen gyldig app funnet</string>
+    <string name="set_as">Sett som</string>
+    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Storage permission is required</string>
@@ -32,14 +33,14 @@
     <string name="extension_cannot_be_empty">Extension cannot be empty</string>
 
     <!-- Copy / Move -->
-    <string name="copy">Copy</string>
-    <string name="move">Move</string>
-    <string name="copy_move">Copy / Move</string>
-    <string name="copy_to">Copy to</string>
-    <string name="move_to">Move to</string>
-    <string name="source">Source</string>
-    <string name="destination">Destination</string>
-    <string name="select_destination">Select destination</string>
+    <string name="copy">Kopier</string>
+    <string name="move">Flytt</string>
+    <string name="copy_move">Kopier / Flytt</string>
+    <string name="copy_to">Kopier til</string>
+    <string name="move_to">Flytt til</string>
+    <string name="source">Kilde</string>
+    <string name="destination">Mål</string>
+    <string name="select_destination">Velg mål</string>
     <string name="click_select_destination">Click here to select destination</string>
     <string name="invalid_destination">Could not write to the selected destination</string>
     <string name="please_select_destination">Please select a destination</string>
@@ -58,10 +59,10 @@
     <string name="could_not_create_file">Could not create file %s</string>
 
     <!-- Create new -->
-    <string name="create_new">Create new</string>
-    <string name="folder">Folder</string>
-    <string name="file">File</string>
-    <string name="create_new_folder">Create new folder</string>
+    <string name="create_new">Opprett ny</string>
+    <string name="folder">Mappe</string>
+    <string name="file">Fil</string>
+    <string name="create_new_folder">Opprett ny mappe</string>
     <string name="name_taken">A file or folder with that name already exists</string>
     <string name="invalid_name">The name contains invalid characters</string>
     <string name="empty_name">Please enter a name</string>
@@ -71,22 +72,22 @@
     <string name="file_already_exists">File %1$s already exists</string>
     <string name="file_already_exists_overwrite">File %1$s already exists. Overwrite?</string>
     <string name="select_an_action">Select an action</string>
-    <string name="overwrite">Overwrite</string>
-    <string name="skip">Skip</string>
+    <string name="overwrite">Overskriv</string>
+    <string name="skip">Hopp over</string>
     <string name="append">Append with \'_1\'</string>
     <string name="apply_to_all">Apply to all conflicts</string>
 
     <!-- File picker -->
-    <string name="select_folder">Select a folder</string>
-    <string name="select_file">Select a file</string>
+    <string name="select_folder">Velg en mappe</string>
+    <string name="select_file">Velg en fil</string>
     <string name="confirm_storage_access_title">Confirm external storage access</string>
     <string name="confirm_storage_access_text">Please choose the root folder of the SD card on the next screen, to grant write access</string>
     <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
     <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d item</item>
-        <item quantity="other">%1$d items</item>
+        <item quantity="one">%1$d element</item>
+        <item quantity="other">%1$d elementer</item>
     </plurals>
 
     <!-- Storages -->
@@ -114,30 +115,38 @@
     <string name="exif">EXIF</string>
 
     <!-- Color customization -->
-    <string name="background_color">Background color</string>
-    <string name="text_color">Text color</string>
-    <string name="primary_color">Primary color</string>
+    <string name="background_color">Bakgrunnsfarge</string>
+    <string name="text_color">Tekstfarge</string>
+    <string name="primary_color">Primærfarge</string>
     <string name="restore_defaults">Restore defaults</string>
-    <string name="theme">Theme</string>
-    <string name="light_theme">Light theme</string>
-    <string name="dark_theme">Dark theme</string>
-    <string name="custom">Custom</string>
+    <string name="theme">Tema</string>
     <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
-    <string name="save">Save</string>
+    <string name="save">Lagre</string>
     <string name="discard">Discard</string>
     <string name="undo_changes">Undo changes</string>
     <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
     <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
+    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
+    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="purchase_thank_you">Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!</string>
+
+    <!-- Themes -->
+    <string name="light_theme">Lyst</string>
+    <string name="dark_theme">Mørkt</string>
+    <string name="solarized">Solarized</string>
+    <string name="dark_red">Dark red</string>
+    <string name="custom">Tilpasset</string>
+    <string name="shared">Shared</string>
 
     <!-- What's new -->
     <string name="whats_new">What\'s new</string>
     <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
 
     <!-- Actionbar items -->
-    <string name="delete">Delete</string>
-    <string name="rename">Rename</string>
-    <string name="share">Share</string>
-    <string name="share_via">Share via</string>
+    <string name="delete">Slett</string>
+    <string name="rename">Endre navn</string>
+    <string name="share">Del</string>
+    <string name="share_via">Del via</string>
     <string name="select_all">Select all</string>
     <string name="hide">Hide</string>
     <string name="unhide">Unhide</string>
@@ -148,22 +157,22 @@
     <string name="maximum_share_reached">You cannot share this much content at once</string>
 
     <!-- Sorting -->
-    <string name="sort_by">Sort by</string>
-    <string name="name">Name</string>
-    <string name="size">Size</string>
+    <string name="sort_by">Sorter etter</string>
+    <string name="name">Navn</string>
+    <string name="size">Størrelse</string>
     <string name="last_modified">Last modified</string>
     <string name="date_taken">Date taken</string>
-    <string name="title">Title</string>
-    <string name="filename">Filename</string>
+    <string name="title">Tittel</string>
+    <string name="filename">Filnavn</string>
     <string name="extension">Extension</string>
     <string name="ascending">Ascending</string>
     <string name="descending">Descending</string>
     <string name="use_for_this_folder">Use for this folder only</string>
 
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="proceed_with_deletion">Er du sikker på at du vil fortsette med slettingen?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nei</string>
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
@@ -187,34 +196,34 @@
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d second</item>
-        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">%1$d sekund</item>
+        <item quantity="other">%1$d sekunder</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minute</item>
-        <item quantity="other">%1$d minutes</item>
+        <item quantity="one">%1$d minutt</item>
+        <item quantity="other">%1$d minutter</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d hour</item>
-        <item quantity="other">%1$d hours</item>
+        <item quantity="one">%1$d time</item>
+        <item quantity="other">%1$d timer</item>
     </plurals>
 
     <!-- Settings -->
-    <string name="settings">Settings</string>
-    <string name="customize_colors">Customize colors</string>
+    <string name="settings">Innstillinger</string>
+    <string name="customize_colors">Tilpass farger</string>
     <string name="use_english_language">Use English language</string>
     <string name="show_hidden">Show hidden files and folders</string>
-    <string name="font_size">Font size</string>
-    <string name="small">Small</string>
-    <string name="medium">Medium</string>
-    <string name="large">Large</string>
-    <string name="extra_large">Extra large</string>
+    <string name="font_size">Skriftstørrelse</string>
+    <string name="small">Liten</string>
+    <string name="medium">Middels</string>
+    <string name="large">Stor</string>
+    <string name="extra_large">Ekstra stor</string>
     <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
     <string name="password_protect_whole_app">Password protect the whole application</string>
     <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
 
     <!-- About -->
-    <string name="about">About</string>
+    <string name="about">Om</string>
     <string name="website_label">For the source codes visit</string>
     <string name="email_label">Send your feedback or suggestions to</string>
     <string name="more_apps_underlined"><u>More apps</u></string>
@@ -228,7 +237,6 @@
     <string name="follow_us">Follow us</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Additional info</string>
-    <string name="gruveo">Are you looking for a simple and anonymous video calling app? Try out my other project</string>
     <string name="app_version">App version: %1$s</string>
     <string name="device_os">Device OS: %1$s</string>
     <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>

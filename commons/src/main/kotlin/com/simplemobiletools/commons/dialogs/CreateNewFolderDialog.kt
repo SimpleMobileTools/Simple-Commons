@@ -19,23 +19,24 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
             window!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
-            context.setupDialogStuff(view, this, R.string.create_new_folder)
-            getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(View.OnClickListener {
-                val name = view.folder_name.value
-                when {
-                    name.isEmpty() -> activity.toast(R.string.empty_name)
-                    name.isAValidFilename() -> {
-                        val file = File(path, name)
-                        if (file.exists()) {
-                            activity.toast(R.string.name_taken)
-                            return@OnClickListener
-                        }
+            activity.setupDialogStuff(view, this, R.string.create_new_folder) {
+                getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(View.OnClickListener {
+                    val name = view.folder_name.value
+                    when {
+                        name.isEmpty() -> activity.toast(R.string.empty_name)
+                        name.isAValidFilename() -> {
+                            val file = File(path, name)
+                            if (file.exists()) {
+                                activity.toast(R.string.name_taken)
+                                return@OnClickListener
+                            }
 
-                        createFolder(file, this)
+                            createFolder(file, this)
+                        }
+                        else -> activity.toast(R.string.invalid_name)
                     }
-                    else -> activity.toast(R.string.invalid_name)
-                }
-            })
+                })
+            }
         }
     }
 
