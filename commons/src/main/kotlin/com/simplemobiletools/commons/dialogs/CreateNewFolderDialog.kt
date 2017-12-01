@@ -19,7 +19,9 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
             window!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
-            context.setupDialogStuff(view, this, R.string.create_new_folder)
+            if (!activity.setupDialogStuff(view, this, R.string.create_new_folder))
+                return@apply
+
             getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(View.OnClickListener {
                 val name = view.folder_name.value
                 when {

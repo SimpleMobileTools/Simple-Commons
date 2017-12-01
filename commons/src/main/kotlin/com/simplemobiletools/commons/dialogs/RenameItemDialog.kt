@@ -35,7 +35,9 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
             window!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
-            activity.setupDialogStuff(view, this, R.string.rename)
+            if (!activity.setupDialogStuff(view, this, R.string.rename))
+                return@apply
+
             getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener({
                 var newName = view.rename_item_name.value
                 val newExtension = view.rename_item_extension.value
