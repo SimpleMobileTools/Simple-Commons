@@ -126,17 +126,17 @@
     <string name="undo_changes">Отменить изменения</string>
     <string name="undo_changes_confirmation">Действительно отменить изменения?</string>
     <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
-    <string name="purchase_thank_you">Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!</string>
+    <string name="apply_to_all_apps">Применить цвета для всех приложений Simple</string>
+    <string name="share_colors_success">Цвета успешно обновлены. Добавлена новая тема с названием \'Общая\', в дальнейшем используйте её для обновления цветов всех приложений.</string>
+    <string name="purchase_thank_you">Пожалуйста, купите <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, чтобы разблокировать эту функцию и поддержать разработку. Спасибо!</string>
 
     <!-- Themes -->
     <string name="light_theme">Светлая</string>
     <string name="dark_theme">Тёмная</string>
-    <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
-    <string name="custom">Настраиваемое</string>
-    <string name="shared">Shared</string>
+    <string name="solarized">Солнечная</string>
+    <string name="dark_red">Тёмно-красная</string>
+    <string name="custom">Своя</string>
+    <string name="shared">Общая</string>
 
     <!-- What's new -->
     <string name="whats_new">Что нового</string>
