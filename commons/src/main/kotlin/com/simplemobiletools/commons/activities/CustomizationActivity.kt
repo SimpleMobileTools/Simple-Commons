@@ -165,6 +165,8 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
         }
 
+        hasUnsavedChanges = true
+        invalidateOptionsMenu()
         updateTextColors(customization_holder, curTextColor)
         updateBackgroundColor(curBackgroundColor)
         updateActionbarColor(curPrimaryColor)
