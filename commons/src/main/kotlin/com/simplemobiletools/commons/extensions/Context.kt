@@ -38,6 +38,7 @@ fun Context.isKitkatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
 fun Context.isLollipopPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
 fun Context.isMarshmallowPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
 fun Context.isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
+fun Context.isOreoPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
 
 fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAccentColor: Int = 0) {
     val textColor = if (tmpTextColor == 0) baseConfig.textColor else tmpTextColor
