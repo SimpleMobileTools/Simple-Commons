@@ -5,7 +5,7 @@
     <string name="save_as">Speichern unter</string>
     <string name="file_saved">Datei erfolgreich gespeichert</string>
     <string name="invalid_file_format">Ungültiges Dateiformat</string>
-    <string name="out_of_memory_error">Fehler: Zuwenig Speicher</string>
+    <string name="out_of_memory_error">Fehler: Zu wenig Speicher</string>
     <string name="an_error_occurred">Es ist ein Fehler aufgetreten: %s</string>
     <string name="open_with">Öffnen mit</string>
     <string name="no_app_found">Keine passende App gefunden</string>
@@ -54,7 +54,7 @@
     <string name="moving_success_partial">Einige Dateien konnten nicht verschoben werden</string>
     <string name="copying_success_partial">Einige Dateien konnten nicht kopiert werden</string>
     <string name="no_files_selected">Keine Dateien ausgewählt</string>
-    <string name="saving">Speichere&#8230;</string>
+    <string name="saving">Speichern&#8230;</string>
     <string name="could_not_create_folder">Ordner %s konnte nicht erstellt werden</string>
     <string name="could_not_create_file">Datei %s konnte nicht erstellt werden</string>
 
@@ -126,15 +126,15 @@
     <string name="undo_changes">Änderungen verwerfen</string>
     <string name="undo_changes_confirmation">Bist du sicher, dass du die Änderungen verwerfen willst?</string>
     <string name="save_before_closing">Du hast ungespeicherte Änderungen. Speichern vorm Beenden?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
-    <string name="purchase_thank_you">Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!</string>
+    <string name="apply_to_all_apps">Farben bei alle schlichten Apps anwenden</string>
+    <string name="share_colors_success">Farben erfolgreich aktualisiert. Ein neues Thema \'Shared\' wurde hinzugefügt, bitte verwende dieses um für alle Apps die Farben zu ändern.</string>
+    <string name="purchase_thank_you">Bitte kaufe <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> um diese Funktion freizuschalten und die Entwicklung zu unterstützen. Danke!</string>
 
     <!-- Themes -->
-    <string name="light_theme">Helles</string>
-    <string name="dark_theme">Dunkles</string>
+    <string name="light_theme">Hell</string>
+    <string name="dark_theme">Dunkel</string>
     <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
+    <string name="dark_red">Dunkelrot</string>
     <string name="custom">Benutzerdefiniert</string>
     <string name="shared">Shared</string>
 
@@ -184,7 +184,7 @@
     <string name="insert_pattern">Muster zeichnen</string>
     <string name="wrong_pattern">Falsches Muster</string>
     <string name="repeat_pattern">Muster wiederholen</string>
-    <string name="fingerprint">Fingerprint</string>
+    <string name="fingerprint">Fingerabdruck</string>
     <string name="add_fingerprint">Fingerabdruck hinzufügen</string>
     <string name="place_finger">Bitte den Finger auf den Fingerabdruck-Sensor legen</string>
     <string name="authentication_failed">Authentifizierung fehlgeschlagen</string>
