@@ -275,8 +275,8 @@ fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
     Thread {
         val cursor = cursorLoader.loadInBackground()
 
-        cursor.use {
-            if (cursor?.moveToFirst() == true) {
+        cursor?.use {
+            if (cursor.moveToFirst()) {
                 val textColor = cursor.getIntValue(COL_TEXT_COLOR)
                 val backgroundColor = cursor.getIntValue(COL_BACKGROUND_COLOR)
                 val primaryColor = cursor.getIntValue(COL_PRIMARY_COLOR)
