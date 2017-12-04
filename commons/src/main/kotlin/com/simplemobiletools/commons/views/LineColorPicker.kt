@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.widget.LinearLayout
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.extensions.isRTLLayout
 import com.simplemobiletools.commons.extensions.onGlobalLayout
 import com.simplemobiletools.commons.interfaces.LineColorPickerListener
 import java.util.*
@@ -81,7 +82,10 @@ class LineColorPicker(context: Context, attrs: AttributeSet) : LinearLayout(cont
     }
 
     private fun touchAt(touchX: Int) {
-        val colorIndex = touchX / stripeWidth
+        var colorIndex = touchX / stripeWidth
+        if (context.isRTLLayout) {
+            colorIndex = colors.size - colorIndex - 1
+        }
         val index = Math.max(0, Math.min(colorIndex, colorsCount - 1))
         if (lastColorIndex != index) {
             updateItemMargin(lastColorIndex, true)
