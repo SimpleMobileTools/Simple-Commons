@@ -17,9 +17,11 @@ class SharedThemeReceiver : BroadcastReceiver() {
                     wasSharedThemeEverActivated = true
 
                     context.getSharedTheme {
-                        textColor = it!!.textColor
-                        backgroundColor = it.backgroundColor
-                        primaryColor = it.primaryColor
+                        if (it != null) {
+                            textColor = it.textColor
+                            backgroundColor = it.backgroundColor
+                            primaryColor = it.primaryColor
+                        }
                     }
                 }
             }
@@ -27,9 +29,11 @@ class SharedThemeReceiver : BroadcastReceiver() {
             context.baseConfig.apply {
                 if (isUsingSharedTheme) {
                     context.getSharedTheme {
-                        textColor = it!!.textColor
-                        backgroundColor = it.backgroundColor
-                        primaryColor = it.primaryColor
+                        if (it != null) {
+                            textColor = it.textColor
+                            backgroundColor = it.backgroundColor
+                            primaryColor = it.primaryColor
+                        }
                     }
                 }
             }
