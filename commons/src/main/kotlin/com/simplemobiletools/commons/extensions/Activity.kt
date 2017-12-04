@@ -9,7 +9,6 @@ import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.media.MediaScannerConnection
 import android.net.Uri
-import android.os.Build
 import android.os.Looper
 import android.os.TransactionTooLargeException
 import android.provider.DocumentsContract
@@ -591,7 +590,7 @@ fun BaseSimpleActivity.restartActivity() {
     startActivity(intent)
 }
 
-fun Activity.isActivityDestroyed() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1 && isDestroyed
+fun Activity.isActivityDestroyed() = isJellyBean1Plus() && isDestroyed
 
 fun Activity.updateSharedTheme(sharedTheme: SharedTheme): Int {
     try {
