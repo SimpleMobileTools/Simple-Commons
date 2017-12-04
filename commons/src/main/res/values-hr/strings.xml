@@ -243,7 +243,14 @@
     <string name="additional_info">Dodatne informacije</string>
     <string name="app_version">Verzija aplikacije: %1$s</string>
     <string name="device_os">OS uređaja: %1$s</string>
-    <string name="donate_please">Pozdrav,\n\nnadam se da uživate u aplikaciji. Ne sadrži reklame, stoga nas podržite njen razvoj kupovinom <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> aplikacije, što će spriječiti da se ovaj prozor ponovno pojavljuje.\n\nDodatne opcije za doniranje potražite <a href="http://simplemobiletools.com/donate">ovdje</a>.\n\nHvala Vam!</string>
+    <string name="donate_please">
+        <![CDATA[
+            Pozdrav,<br><br>
+            nadam se da uživate u aplikaciji. Ne sadrži reklame, stoga nas podržite njen razvoj kupovinom <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> aplikacije, što će spriječiti da se ovaj prozor ponovno pojavljuje.<br><br>
+            Dodatne opcije za doniranje potražite <a href="http://simplemobiletools.com/donate">ovdje</a>.<br><br>
+            Hvala Vam!
+        ]]>
+    </string>
     <string name="purchase">Kupi</string>
 
     <!-- License -->

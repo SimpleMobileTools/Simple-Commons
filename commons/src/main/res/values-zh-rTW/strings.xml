@@ -239,7 +239,14 @@
     <string name="additional_info">進階資訊</string>
     <string name="app_version">應用程式版本: %1$s</string>
     <string name="device_os">裝置系統: %1$s</string>
-    <string name="donate_please">哈囉 \n\n希望您喜愛這應用程式。 它不含廣告, 所以請購買應用程式 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 來支持開發者，這對話框也不會再出現。\n\n您可以在 <a href="http://simplemobiletools.com/donate">這裡</a> 找到更多捐贈選項。\n\n感謝!</string>
+    <string name="donate_please">
+        <![CDATA[
+            哈囉 <br><br>
+            希望您喜愛這應用程式。 它不含廣告, 所以請購買應用程式 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 來支持開發者，這對話框也不會再出現。<br><br>
+            您可以在 <a href="http://simplemobiletools.com/donate">這裡</a> 找到更多捐贈選項。<br><br>
+            感謝!
+        ]]>
+    </string>
     <string name="purchase">購買</string>
 
     <!-- License -->

@@ -239,7 +239,14 @@
     <string name="additional_info">Zusätzliche Infos</string>
     <string name="app_version">App-Version: %1$s</string>
     <string name="device_os">Betriebssystem: %1$s</string>
-    <string name="donate_please">Hallo,\n\nich hoffe diese App gefällt dir. Sie beinhaltet keine Werbung, bitte unterstütze die Entwicklung durch Kauf der <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> App, dadurch wird auch dieser Dialog künftig nicht mehr gezeigt.\n\nWeitere Optionen zum Spenden findest du <a href="http://simplemobiletools.com/donate">hier</a>.\n\nVielen Dank!</string>
+    <string name="donate_please">
+        <![CDATA[
+            Hallo,<br><br>
+            ich hoffe diese App gefällt dir. Sie beinhaltet keine Werbung, bitte unterstütze die Entwicklung durch Kauf der <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> App, dadurch wird auch dieser Dialog künftig nicht mehr gezeigt.<br><br>
+            Weitere Optionen zum Spenden findest du <a href="http://simplemobiletools.com/donate">hier</a>.<br><br>
+            Vielen Dank!
+        ]]>
+    </string>
     <string name="purchase">Kaufen</string>
 
     <!-- License -->

@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
 import android.support.v7.app.AlertDialog
+import android.text.Html
 import android.text.method.LinkMovementMethod
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.launchViewIntent
@@ -11,6 +12,7 @@ import kotlinx.android.synthetic.main.dialog_donate.view.*
 class DonateDialog(val activity: Activity) {
     init {
         val view = activity.layoutInflater.inflate(R.layout.dialog_donate, null).apply {
+            donate.text = Html.fromHtml(activity.getString(R.string.donate_please))
             donate.movementMethod = LinkMovementMethod.getInstance()
         }
 

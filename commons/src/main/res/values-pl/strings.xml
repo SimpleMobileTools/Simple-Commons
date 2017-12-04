@@ -240,12 +240,17 @@
     <string name="donate_underlined"><u>Przekaż darowiznę</u></string>
     <string name="follow_us">Śledź nas</string>
     <string name="copyright">Wersja %1$s\n© Simple Mobile Tools %2$d</string>
-    <string name="additional_info">Dodatkowe informacje</string><![CDATA[
-    
-    ]]>
+    <string name="additional_info">Dodatkowe informacje</string>
     <string name="app_version">Wersja aplikacji: %1$s</string>
     <string name="device_os">System: %1$s</string>
-    <string name="donate_please">Witaj!\n\nMamy nadzieję, że aplikacja przypadła Ci do gustu. Jak da się zauważyć, nie zawiera ona reklam, prosimy więc o wsparcie jej rozwoju poprzez zakup specjalnej aplikacji <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, co poskutkuje również wyłączeniem tego komunikatu.\n\nWięcej możliwości wsparcia znajdziesz <a href="http://simplemobiletools.com/donate">tutaj</a>.\n\nDziękujemy za korzystanie z aplikacji (no i za wasze ewentualne pieniążki)!</string>
+    <string name="donate_please">
+        <![CDATA[
+            Witaj!<br><br>
+            Mamy nadzieję, że aplikacja przypadła Ci do gustu. Jak da się zauważyć, nie zawiera ona reklam, prosimy więc o wsparcie jej rozwoju poprzez zakup specjalnej aplikacji <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, co poskutkuje również wyłączeniem tego komunikatu.<br><br>
+            Więcej możliwości wsparcia znajdziesz <a href="http://simplemobiletools.com/donate">tutaj</a>.<br><br>
+            Dziękujemy!
+        ]]>
+    </string>
     <string name="purchase">Kup</string>
 
     <!-- License -->
