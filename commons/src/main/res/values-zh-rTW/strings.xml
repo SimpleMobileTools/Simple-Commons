@@ -128,7 +128,11 @@
     <string name="save_before_closing">尚未儲存變更。離開前是否儲存?</string>
     <string name="apply_to_all_apps">將顏色套用於全部 Simple 應用程式</string>
     <string name="share_colors_success">顏色更新成功。創建了一個名為 \'Shared\' 的新主題，未來請使用那來更新全部應用程式顏色。</string>
-    <string name="purchase_thank_you">請購買 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 來解鎖此功能及支持開發者。謝謝!</string>
+    <string name="purchase_thank_you">
+        <![CDATA[
+            請購買 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 來解鎖此功能及支持開發者。謝謝!
+        ]]>
+    </string>
 
     <!-- Themes -->
     <string name="light_theme">明亮主題</string>

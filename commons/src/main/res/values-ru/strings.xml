@@ -128,7 +128,11 @@
     <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
     <string name="apply_to_all_apps">Применить цвета ко всем приложениям Simple</string>
     <string name="share_colors_success">Цвета успешно обновлены. Добавлена новая тема с названием \'Общая\', в дальнейшем используйте её для обновления цветов всех приложений.</string>
-    <string name="purchase_thank_you">Пожалуйста, купите <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, чтобы разблокировать эту функцию и поддержать разработку. Спасибо!</string>
+    <string name="purchase_thank_you">
+        <![CDATA[
+            Пожалуйста, купите <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, чтобы разблокировать эту функцию и поддержать разработку. Спасибо!
+        ]]>
+    </string>
 
     <!-- Themes -->
     <string name="light_theme">Светлая</string>
