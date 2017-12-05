@@ -85,7 +85,7 @@ fun String.getExifDateTaken(exif: ExifInterface): String {
         if (it?.isNotEmpty() == true) {
             try {
                 val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd kk:mm:ss", Locale.ENGLISH)
-                return simpleDateFormat.parse(it).time.formatLastModified().trim()
+                return simpleDateFormat.parse(it).time.formatDate().trim()
             } catch (ignored: Exception) {
             }
         }

@@ -63,7 +63,7 @@ class PropertiesDialog() {
                     if (cursor.moveToFirst()) {
                         val dateModified = cursor.getIntValue(MediaStore.Images.Media.DATE_MODIFIED)
                         activity.runOnUiThread {
-                            view.findViewById<TextView>(R.id.properties_last_modified).property_value.text = (dateModified * 1000L).formatLastModified()
+                            view.findViewById<TextView>(R.id.properties_last_modified).property_value.text = (dateModified * 1000L).formatDate()
                         }
                     }
                 }
@@ -90,7 +90,7 @@ class PropertiesDialog() {
         }
 
         if (file.isDirectory) {
-            addProperty(R.string.last_modified, file.lastModified().formatLastModified())
+            addProperty(R.string.last_modified, file.lastModified().formatDate())
         } else {
             addProperty(R.string.last_modified, "...", R.id.properties_last_modified)
             addExifProperties(path)
