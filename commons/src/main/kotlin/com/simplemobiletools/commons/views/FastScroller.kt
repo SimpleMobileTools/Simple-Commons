@@ -17,13 +17,14 @@ import com.simplemobiletools.commons.extensions.baseConfig
 // based on https://blog.stylingandroid.com/recyclerview-fastscroll-part-1
 class FastScroller : FrameLayout {
     var isHorizontal = false
-    var allowBubbleDisplay = false
 
     private var handle: View? = null
     private var bubble: TextView? = null
     private var currHeight = 0
     private var currWidth = 0
     private var bubbleOffset = 0
+    private var allowBubbleDisplay = false
+    private var fastScrollCallback: ((Int) -> Unit)? = null
 
     private val HANDLE_HIDE_DELAY = 1000L
     private var recyclerView: RecyclerView? = null
@@ -35,7 +36,7 @@ class FastScroller : FrameLayout {
 
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
 
-    fun setViews(recyclerView: RecyclerView, swipeRefreshLayout: SwipeRefreshLayout? = null) {
+    fun setViews(recyclerView: RecyclerView, swipeRefreshLayout: SwipeRefreshLayout? = null, callback: ((Int) -> Unit)? = null) {
         this.recyclerView = recyclerView
         this.swipeRefreshLayout = swipeRefreshLayout
         updatePrimaryColor()
@@ -52,6 +53,9 @@ class FastScroller : FrameLayout {
                 }
             }
         })
+
+        allowBubbleDisplay = callback != null
+        fastScrollCallback = callback
     }
 
     fun updatePrimaryColor() {
@@ -162,15 +166,14 @@ class FastScroller : FrameLayout {
 
             val targetPos = getValueInRange(0f, (itemCount - 1).toFloat(), proportion * itemCount).toInt()
             (recyclerView!!.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(targetPos, 0)
+            fastScrollCallback?.invoke(targetPos)
         }
     }
 
     override fun onFinishInflate() {
         super.onFinishInflate()
         handle = getChildAt(0)
-        if (allowBubbleDisplay) {
-            bubble = getChildAt(1) as? TextView
-        }
+        bubble = getChildAt(1) as? TextView
 
         if (bubble != null) {
             bubbleOffset = resources.getDimension(R.dimen.fastscroll_height).toInt()
@@ -182,7 +185,7 @@ class FastScroller : FrameLayout {
         handle!!.animate().alpha(1f).start()  // override the fade animation
         handle!!.alpha = 1f
 
-        if (handle!!.isSelected) {
+        if (handle!!.isSelected && allowBubbleDisplay) {
             bubble?.animate()?.alpha(1f)?.start()
             bubble?.alpha = 1f
         }
