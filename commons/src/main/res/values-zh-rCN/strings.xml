@@ -10,7 +10,7 @@
     <string name="open_with">打开方式</string>
     <string name="no_app_found">未找到可用应用</string>
     <string name="set_as">设置为</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
+    <string name="value_copied_to_clipboard">颜色值已复制到剪贴板</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">请授予存储权限</string>
@@ -126,11 +126,11 @@
     <string name="undo_changes">撤销更改</string>
     <string name="undo_changes_confirmation">是否撤销您的更改？</string>
     <string name="save_before_closing">您尚未保存更改，是否保存？</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="apply_to_all_apps">应用到所有简约系列应用</string>
+    <string name="share_colors_success">颜色更改成功。已添加名为“共享”的新主题，以后你可以使用它来更改所有应用的颜色。</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
+            请购买 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 以解锁此功能并支持开发。感谢！
         ]]>
     </string>
 
@@ -138,9 +138,9 @@
     <string name="light_theme">浅色主题</string>
     <string name="dark_theme">深色主题</string>
     <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
+    <string name="dark_red">深红</string>
     <string name="custom">自定义</string>
-    <string name="shared">Shared</string>
+    <string name="shared">共享</string>
 
     <!-- What's new -->
     <string name="whats_new">更新日志</string>
