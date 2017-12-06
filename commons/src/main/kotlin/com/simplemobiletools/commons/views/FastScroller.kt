@@ -17,13 +17,13 @@ import com.simplemobiletools.commons.extensions.baseConfig
 // based on https://blog.stylingandroid.com/recyclerview-fastscroll-part-1
 class FastScroller : FrameLayout {
     var isHorizontal = false
+    var allowBubbleDisplay = false
 
     private var handle: View? = null
     private var bubble: TextView? = null
     private var currHeight = 0
     private var currWidth = 0
     private var bubbleOffset = 0
-    private var allowBubbleDisplay = false
     private var fastScrollCallback: ((Int) -> Unit)? = null
 
     private val HANDLE_HIDE_DELAY = 1000L
@@ -36,7 +36,7 @@ class FastScroller : FrameLayout {
 
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
 
-    fun setViews(recyclerView: RecyclerView, swipeRefreshLayout: SwipeRefreshLayout? = null, allowBubbleDisplay: Boolean = false, callback: ((Int) -> Unit)? = null) {
+    fun setViews(recyclerView: RecyclerView, swipeRefreshLayout: SwipeRefreshLayout? = null, callback: ((Int) -> Unit)? = null) {
         this.recyclerView = recyclerView
         this.swipeRefreshLayout = swipeRefreshLayout
         updatePrimaryColor()
@@ -54,7 +54,6 @@ class FastScroller : FrameLayout {
             }
         })
 
-        this.allowBubbleDisplay = allowBubbleDisplay
         fastScrollCallback = callback
     }
 
