@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/fastscroller_handle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:alpha="0"
+        android:background="@drawable/fastscroller_handle_horizontal"/>
+
+    <TextView
+        android:id="@+id/fastscroller_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fastscroll_height"
+        android:alpha="0"
+        android:background="@drawable/fastscroller_bubble"
+        android:ellipsize="end"
+        android:lines="1"
+        android:padding="@dimen/medium_margin"
+        android:singleLine="true"
+        android:textSize="@dimen/normal_text_size"
+        tools:text="bubble"/>
+
+</merge>

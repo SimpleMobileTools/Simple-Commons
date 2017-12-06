@@ -202,6 +202,10 @@ class FastScroller : FrameLayout {
             val position = pos / currWidth
             val handleWidth = handle!!.width
             handle!!.x = getValueInRange(0f, (currWidth - handleWidth).toFloat(), (currWidth - handleWidth) * position)
+
+            val bubbleWidth = bubble?.width ?: 0
+            val newX = getValueInRange(0f, (currWidth - bubbleWidth).toFloat(), (currWidth - bubbleWidth) * position)
+            bubble?.x = Math.max(0f, newX)
         } else {
             val position = pos / currHeight
             val handleHeight = handle!!.height
