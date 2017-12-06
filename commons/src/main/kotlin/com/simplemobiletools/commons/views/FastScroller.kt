@@ -36,7 +36,7 @@ class FastScroller : FrameLayout {
 
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
 
-    fun setViews(recyclerView: RecyclerView, swipeRefreshLayout: SwipeRefreshLayout? = null, callback: ((Int) -> Unit)? = null) {
+    fun setViews(recyclerView: RecyclerView, swipeRefreshLayout: SwipeRefreshLayout? = null, allowBubbleDisplay: Boolean = false, callback: ((Int) -> Unit)? = null) {
         this.recyclerView = recyclerView
         this.swipeRefreshLayout = swipeRefreshLayout
         updatePrimaryColor()
@@ -54,7 +54,7 @@ class FastScroller : FrameLayout {
             }
         })
 
-        allowBubbleDisplay = callback != null
+        this.allowBubbleDisplay = allowBubbleDisplay
         fastScrollCallback = callback
     }
 
