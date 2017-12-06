@@ -13,7 +13,7 @@ fun Long.formatSize(): String {
     return "${DecimalFormat("#,##0.#").format(this / Math.pow(1024.0, digitGroups.toDouble()))} ${units[digitGroups]}"
 }
 
-fun Long.formatLastModified(): String {
+fun Long.formatDate(): String {
     val cal = Calendar.getInstance(Locale.ENGLISH)
     cal.timeInMillis = this
     return DateFormat.format("dd.MM.yyyy kk:mm", cal).toString()

@@ -10,7 +10,7 @@
     <string name="open_with">Öppna med</string>
     <string name="no_app_found">Hittade ingen giltig app</string>
     <string name="set_as">Ange som</string>
-    <string name="value_copied_to_clipboard">Värdet kopierat till urklippet</string>
+    <string name="value_copied_to_clipboard">Värdet har kopierats till urklipp</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Lagringsbehörighet krävs</string>
@@ -45,7 +45,7 @@
     <string name="invalid_destination">Det gick inte att skriva till målet</string>
     <string name="please_select_destination">Välj mål</string>
     <string name="source_and_destination_same">Källa och mål kan inte vara samma</string>
-    <string name="copy_failed">Kunde inte kopiera filen</string>
+    <string name="copy_failed">Det gick inte att kopiera filerna</string>
     <string name="copying">Kopierar&#8230;</string>
     <string name="copying_success">Filerna har kopierats</string>
     <string name="copy_move_failed">Ett fel har uppstått</string>
@@ -126,17 +126,21 @@
     <string name="undo_changes">Ångra ändringar</string>
     <string name="undo_changes_confirmation">Är du säker på att du vill ångra dina ändringar?</string>
     <string name="save_before_closing">Du har ändringar som inte är sparade. Spara innan du lämnar?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
-    <string name="purchase_thank_you">Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!</string>
+    <string name="apply_to_all_apps">Använd färgerna i alla Simple-appar</string>
+    <string name="share_colors_success">Färgerna har uppdaterats. Ett nytt Tema som heter \'Delat\' har lagts till, använd det för att uppdatera alla apparnas färger i framtiden.</string>
+    <string name="purchase_thank_you">
+        <![CDATA[
+            Köp <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> för att låsa upp denna funktion och stödja utvecklingen. Tack!
+        ]]>
+    </string>
 
     <!-- Themes -->
     <string name="light_theme">Ljust</string>
     <string name="dark_theme">Mörkt</string>
-    <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
-    <string name="custom">Anpassat tema</string>
-    <string name="shared">Shared</string>
+    <string name="solarized">Solariserat</string>
+    <string name="dark_red">Mörkrött</string>
+    <string name="custom">Anpassat</string>
+    <string name="shared">Delat</string>
 
     <!-- What's new -->
     <string name="whats_new">Vad är nytt</string>
@@ -221,6 +225,7 @@
     <string name="password_protect_hidden_items">Lösenordsskydda synligheten för dolda objekt</string>
     <string name="password_protect_whole_app">Lösenordsskydda hela appen</string>
     <string name="keep_last_modified">Behåll senast ändrad-tider när filer kopieras, flyttas eller får nya namn</string>
+    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
 
     <!-- About -->
     <string name="about">Om</string>
@@ -239,7 +244,14 @@
     <string name="additional_info">Ytterligare info</string>
     <string name="app_version">Appversion: %1$s</string>
     <string name="device_os">Enhetens operativsystem: %1$s</string>
-    <string name="donate_please">Hej,\n\njag hoppas att du gillar appen. Den innehåller ingen reklam, så stöd dess utveckling genom att köpa appen <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, som även hindrar den här dialogrutan från att visas igen.\n\nDu hittar fler donationsalternativ <a href="http://simplemobiletools.com/donate">här</a>.\n\nTack!</string>
+    <string name="donate_please">
+        <![CDATA[
+            Hej,<br><br>
+            jag hoppas att du gillar appen. Den innehåller ingen reklam, så stöd dess utveckling genom att köpa appen <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, som även hindrar den här dialogrutan från att visas igen.<br><br>
+            Du hittar fler donationsalternativ <a href="http://simplemobiletools.com/donate">här</a>.<br><br>
+            Tack!
+        ]]>
+    </string>
     <string name="purchase">Köp</string>
 
     <!-- License -->

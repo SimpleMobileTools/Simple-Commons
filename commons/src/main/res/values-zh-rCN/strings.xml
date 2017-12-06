@@ -10,7 +10,7 @@
     <string name="open_with">打开方式</string>
     <string name="no_app_found">未找到可用应用</string>
     <string name="set_as">设置为</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
+    <string name="value_copied_to_clipboard">颜色值已复制到剪贴板</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">请授予存储权限</string>
@@ -126,17 +126,21 @@
     <string name="undo_changes">撤销更改</string>
     <string name="undo_changes_confirmation">是否撤销您的更改？</string>
     <string name="save_before_closing">您尚未保存更改，是否保存？</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
-    <string name="purchase_thank_you">Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!</string>
+    <string name="apply_to_all_apps">应用到所有简约系列应用</string>
+    <string name="share_colors_success">颜色更改成功。已添加名为“共享”的新主题，以后你可以使用它来更改所有应用的颜色。</string>
+    <string name="purchase_thank_you">
+        <![CDATA[
+            请购买 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 以解锁此功能并支持开发。感谢！
+        ]]>
+    </string>
 
     <!-- Themes -->
     <string name="light_theme">浅色主题</string>
     <string name="dark_theme">深色主题</string>
     <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
+    <string name="dark_red">深红</string>
     <string name="custom">自定义</string>
-    <string name="shared">Shared</string>
+    <string name="shared">共享</string>
 
     <!-- What's new -->
     <string name="whats_new">更新日志</string>
@@ -221,6 +225,7 @@
     <string name="password_protect_hidden_items">使用密码保护隐藏项</string>
     <string name="password_protect_whole_app">使用密码保护本应用</string>
     <string name="keep_last_modified">在复制/移动/重命名文件时保留旧的修改日期</string>
+    <string name="show_info_bubble">拖动滚动条时在滚动项目旁显示一个信息气泡</string>
 
     <!-- About -->
     <string name="about">关于</string>
@@ -239,7 +244,14 @@
     <string name="additional_info">额外信息</string>
     <string name="app_version">应用版本：%1$s</string>
     <string name="device_os">设备系统：%1$s</string>
-    <string name="donate_please">你好，\n\n希望你喜欢这个应用。它不包含广告，所以请购买<a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 这个应用支持一下，这样此对话框将不再出现。\n\n你可以在<a href="http://simplemobiletools.com/donate">这里</a>找到更多捐赠选项。\n\n非常感谢！</string>
+    <string name="donate_please">
+        <![CDATA[
+            你好，<br><br>
+            希望你喜欢这个应用。它不包含广告，所以请购买<a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 这个应用支持一下，这样此对话框将不再出现。<br><br>
+            你可以在<a href="http://simplemobiletools.com/donate">这里</a>找到更多捐赠选项。<br><br>
+            非常感谢！
+        ]]>
+    </string>
     <string name="purchase">购买</string>
 
     <!-- License -->

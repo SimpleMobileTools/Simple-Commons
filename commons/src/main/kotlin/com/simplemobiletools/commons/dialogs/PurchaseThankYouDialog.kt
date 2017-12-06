@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
 import android.support.v7.app.AlertDialog
+import android.text.Html
 import android.text.method.LinkMovementMethod
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.launchViewIntent
@@ -11,7 +12,8 @@ import kotlinx.android.synthetic.main.dialog_purchase_thank_you.view.*
 class PurchaseThankYouDialog(val activity: Activity) {
     init {
         val view = activity.layoutInflater.inflate(R.layout.dialog_purchase_thank_you, null).apply {
-            install_thank_you.movementMethod = LinkMovementMethod.getInstance()
+            purchase_thank_you.text = Html.fromHtml(activity.getString(R.string.purchase_thank_you))
+            purchase_thank_you.movementMethod = LinkMovementMethod.getInstance()
         }
 
         AlertDialog.Builder(activity)

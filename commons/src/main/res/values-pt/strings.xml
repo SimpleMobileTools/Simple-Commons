@@ -128,7 +128,11 @@
     <string name="save_before_closing">Existem alterações não guardadas. Deseja guardar antes de sair?</string>
     <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
     <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
-    <string name="purchase_thank_you">Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!</string>
+    <string name="purchase_thank_you">
+        <![CDATA[
+            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
+        ]]>
+    </string>
 
     <!-- Themes -->
     <string name="light_theme">Claro</string>
@@ -221,6 +225,7 @@
     <string name="password_protect_hidden_items">Proteger itens ocultos com palavra-passe</string>
     <string name="password_protect_whole_app">Proteger aplicação com palavra-passe</string>
     <string name="keep_last_modified">Manter dados da última modificação ao copiar/mover/renomear</string>
+    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
 
     <!-- About -->
     <string name="about">Acerca</string>
@@ -239,7 +244,14 @@
     <string name="additional_info">Mais informações</string>
     <string name="app_version">Versão da aplicação: %1$s</string>
     <string name="device_os">SO do dispositivo: %1$s</string>
-    <string name="donate_please">Olá,\n\nespero que esteja a gostar desta aplicação. Não possui anúncios e é open source. Se quiser ajudar no desenvolvimento, pode comprar a aplicação <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> que também impedirá que este diálogo seja novamente mostrado.\n\nPode encontrar mais opções de suporte ao projeto <a href="http://simplemobiletools.com/donate">aqui</a>.\n\nObrigado!</string>
+    <string name="donate_please">
+        <![CDATA[
+            Olá,<br><br>
+            espero que esteja a gostar desta aplicação. Não possui anúncios e é open source. Se quiser ajudar no desenvolvimento, pode comprar a aplicação <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> que também impedirá que este diálogo seja novamente mostrado.<br><br>
+            Pode encontrar mais opções de suporte ao projeto <a href="http://simplemobiletools.com/donate">aqui</a>.<br><br>
+            Obrigado!
+        ]]>
+    </string>
     <string name="purchase">Purchase</string>
 
     <!-- License -->

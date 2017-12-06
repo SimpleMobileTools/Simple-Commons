@@ -128,7 +128,11 @@
     <string name="save_before_closing">Onopgeslagen wijzigingen. Nu opslaan?</string>
     <string name="apply_to_all_apps">Kleuren toepassen op al onze apps</string>
     <string name="share_colors_success">Kleuren gewijzigd. Gebruik het nieuwe thema \'Gedeeld\' om de kleuren voor al onze apps aan te passen.</string>
-    <string name="purchase_thank_you">Om deze functie te gebruiken en om verdere ontwikkeling te ondersteunen kunt u <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> aanschaffen. Alvast bedankt!</string>
+    <string name="purchase_thank_you">
+        <![CDATA[
+            Om deze functie te gebruiken en om verdere ontwikkeling te ondersteunen kunt u <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> aanschaffen. Alvast bedankt!
+        ]]>
+    </string>
 
     <!-- Themes -->
     <string name="light_theme">Licht</string>
@@ -221,6 +225,7 @@
     <string name="password_protect_hidden_items">Verborgen items met wachtwoord beveiligen</string>
     <string name="password_protect_whole_app">Hele app met wachtwoord beveiligen</string>
     <string name="keep_last_modified">Datum laatst gewijzigd behouden bij bestandsoperaties</string>
+    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
 
     <!-- About -->
     <string name="about">Over</string>
@@ -239,7 +244,14 @@
     <string name="additional_info">Extra informatie</string>
     <string name="app_version">Versie: %1$s</string>
     <string name="device_os">Besturingssysteem: %1$s</string>
-    <string name="donate_please">Hallo,\n\nHopelijk vindt u dit een fijne app. Het bevat geen advertenties, maar u kunt de verdere ontwikkeling wel ondersteunen door de app <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> aan te schaffen. Dit zal ook voorkomen dat dit venster nog eens verschijnt.\n\nU kunt meer opties om te doneren vinden op <a href="http://simplemobiletools.com/donate">de website</a>.\n\nDank u wel!</string>
+    <string name="donate_please">
+        <![CDATA[
+            Hallo,<br><br>
+            Hopelijk vindt u dit een fijne app. Het bevat geen advertenties, maar u kunt de verdere ontwikkeling wel ondersteunen door de app <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> aan te schaffen. Dit zal ook voorkomen dat dit venster nog eens verschijnt.<br><br>
+            U kunt meer opties om te doneren vinden op <a href="http://simplemobiletools.com/donate">de website</a>.<br><br>
+            Dank u wel!
+        ]]>
+    </string>
     <string name="purchase">Kopen</string>
 
     <!-- License -->

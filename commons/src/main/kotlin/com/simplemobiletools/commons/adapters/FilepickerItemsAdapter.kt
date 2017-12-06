@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.adapters
 
+import android.content.pm.PackageManager
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
@@ -61,18 +62,34 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
         view.apply {
             list_item_name.text = fileDirItem.name
             list_item_name.setTextColor(textColor)
+            list_item_details.setTextColor(textColor)
 
             if (fileDirItem.isDirectory) {
                 list_item_icon.setImageDrawable(folderDrawable)
                 list_item_details.text = getChildrenCnt(fileDirItem)
             } else {
-                val path = fileDirItem.path
-                val options = RequestOptions().centerCrop().error(fileDrawable)
-                Glide.with(context).load(path).transition(withCrossFade()).apply(options).into(list_item_icon)
                 list_item_details.text = fileDirItem.size.formatSize()
-            }
+                val path = fileDirItem.path
+                val options = RequestOptions()
+                        .centerCrop()
+                        .error(fileDrawable)
 
-            list_item_details.setTextColor(textColor)
+                val itemToLoad = if (fileDirItem.name.endsWith(".apk", true)) {
+                    val packageInfo = context.packageManager.getPackageArchiveInfo(path, PackageManager.GET_ACTIVITIES)
+                    if (packageInfo != null) {
+                        val appInfo = packageInfo.applicationInfo
+                        appInfo.sourceDir = path
+                        appInfo.publicSourceDir = path
+                        appInfo.loadIcon(context.packageManager)
+                    } else {
+                        path
+                    }
+                } else {
+                    path
+                }
+
+                Glide.with(context).load(itemToLoad).transition(withCrossFade()).apply(options).into(list_item_icon)
+            }
         }
     }
 

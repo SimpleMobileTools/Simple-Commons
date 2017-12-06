@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.simplemobiletools.commons.views.MyTextView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/install_thank_you"
+    android:id="@+id/purchase_thank_you"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:lineSpacingExtra="3dp"

@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.views
 
 import android.content.Context
+import android.graphics.drawable.GradientDrawable
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -8,15 +9,22 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
+import android.widget.TextView
+import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.baseConfig
 
 // based on https://blog.stylingandroid.com/recyclerview-fastscroll-part-1
 class FastScroller : FrameLayout {
     var isHorizontal = false
+
     private var handle: View? = null
+    private var bubble: TextView? = null
     private var currHeight = 0
     private var currWidth = 0
+    private var bubbleOffset = 0
+    private var allowBubbleDisplay = false
+    private var fastScrollCallback: ((Int) -> Unit)? = null
 
     private val HANDLE_HIDE_DELAY = 1000L
     private var recyclerView: RecyclerView? = null
@@ -28,10 +36,10 @@ class FastScroller : FrameLayout {
 
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
 
-    fun setViews(recyclerView: RecyclerView, swipeRefreshLayout: SwipeRefreshLayout? = null) {
+    fun setViews(recyclerView: RecyclerView, swipeRefreshLayout: SwipeRefreshLayout? = null, callback: ((Int) -> Unit)? = null) {
         this.recyclerView = recyclerView
         this.swipeRefreshLayout = swipeRefreshLayout
-        updateHandleColor()
+        updatePrimaryColor()
 
         recyclerView.setOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(rv: RecyclerView, dx: Int, dy: Int) {
@@ -42,16 +50,42 @@ class FastScroller : FrameLayout {
                 super.onScrollStateChanged(recyclerView, newState)
                 if (newState == RecyclerView.SCROLL_STATE_DRAGGING) {
                     showHandle()
-                } else if (newState == RecyclerView.SCROLL_STATE_IDLE) {
-                    hideHandle()
                 }
             }
         })
+
+        allowBubbleDisplay = callback != null
+        fastScrollCallback = callback
     }
 
-    fun updateHandleColor() {
+    fun updatePrimaryColor() {
         handle!!.background.applyColorFilter(context.baseConfig.primaryColor)
+        updateBubblePrimaryColor()
     }
+
+    fun updateBubbleColors() {
+        updateBubblePrimaryColor()
+        updateBubbleTextColor()
+        updateBubbleBackgroundColor()
+    }
+
+    fun updateBubblePrimaryColor() {
+        getBubbleBackgroundDrawable()?.setStroke(resources.displayMetrics.density.toInt(), context.baseConfig.primaryColor)
+    }
+
+    fun updateBubbleTextColor() {
+        bubble?.setTextColor(context.baseConfig.textColor)
+    }
+
+    fun updateBubbleBackgroundColor() {
+        getBubbleBackgroundDrawable()?.setColor(context.baseConfig.backgroundColor)
+    }
+
+    fun updateBubbleText(text: String) {
+        bubble?.text = text
+    }
+
+    private fun getBubbleBackgroundDrawable() = bubble?.background as? GradientDrawable
 
     override fun onSizeChanged(width: Int, height: Int, oldWidth: Int, oldHeight: Int) {
         super.onSizeChanged(width, height, oldWidth, oldHeight)
@@ -97,9 +131,9 @@ class FastScroller : FrameLayout {
 
         return when (event.action) {
             MotionEvent.ACTION_DOWN -> {
-                showHandle()
                 handle!!.isSelected = true
                 swipeRefreshLayout?.isEnabled = false
+                showHandle()
                 true
             }
             MotionEvent.ACTION_MOVE -> {
@@ -113,7 +147,6 @@ class FastScroller : FrameLayout {
                 true
             }
             MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
-                hideHandle()
                 handle!!.isSelected = false
                 swipeRefreshLayout?.isEnabled = true
                 true
@@ -133,21 +166,36 @@ class FastScroller : FrameLayout {
 
             val targetPos = getValueInRange(0f, (itemCount - 1).toFloat(), proportion * itemCount).toInt()
             (recyclerView!!.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(targetPos, 0)
+            fastScrollCallback?.invoke(targetPos)
         }
     }
 
     override fun onFinishInflate() {
         super.onFinishInflate()
         handle = getChildAt(0)
+        bubble = getChildAt(1) as? TextView
+
+        if (bubble != null) {
+            bubbleOffset = resources.getDimension(R.dimen.fastscroll_height).toInt()
+            updateBubbleColors()
+        }
     }
 
     private fun showHandle() {
         handle!!.animate().alpha(1f).start()  // override the fade animation
         handle!!.alpha = 1f
+
+        if (handle!!.isSelected && allowBubbleDisplay) {
+            bubble?.animate()?.alpha(1f)?.start()
+            bubble?.alpha = 1f
+        }
     }
 
     private fun hideHandle() {
         handle!!.animate().alpha(0f).startDelay = HANDLE_HIDE_DELAY
+        bubble?.animate()?.alpha(0f)?.setStartDelay(HANDLE_HIDE_DELAY)?.withEndAction {
+            bubble?.text = ""
+        }
     }
 
     private fun setPosition(pos: Float) {
@@ -159,7 +207,12 @@ class FastScroller : FrameLayout {
             val position = pos / currHeight
             val handleHeight = handle!!.height
             handle!!.y = getValueInRange(0f, (currHeight - handleHeight).toFloat(), (currHeight - handleHeight) * position)
+
+            val bubbleHeight = bubble?.height ?: 0
+            val newY = getValueInRange(0f, (currHeight - bubbleHeight).toFloat(), (currHeight - bubbleHeight) * position)
+            bubble?.y = Math.max(0f, newY - bubbleOffset)
         }
+        hideHandle()
     }
 
     private fun getValueInRange(min: Float, max: Float, value: Float) = Math.min(Math.max(min, value), max)

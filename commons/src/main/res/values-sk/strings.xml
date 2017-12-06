@@ -129,7 +129,11 @@
     <string name="save_before_closing">Máte neuložené zmeny. Chcete ich uložiť pred ukončením?</string>
     <string name="apply_to_all_apps">Použiť farby na všetky Jednoduché Aplikácie</string>
     <string name="share_colors_success">Farby boli úspešne aktualizované. Bola pridaná nová \'Zdieľaná\' téma, prosím použite ju pri ďalšej úprave farieb.</string>
-    <string name="purchase_thank_you">Prosím zakúpte si <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Jednoduché ďakujem</a> na odomknutie tejto funkcie a podporu vývoja. Vďaka!</string>
+    <string name="purchase_thank_you">
+        <![CDATA[
+            Prosím zakúpte si <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Jednoduché ďakujem</a> na odomknutie tejto funkcie a podporu vývoja. Vďaka!
+        ]]>
+    </string>
 
     <!-- Themes -->
     <string name="light_theme">Svetlá</string>
@@ -225,6 +229,7 @@
     <string name="password_protect_hidden_items">Uzamknúť viditeľnosť skrytých položiek heslom</string>
     <string name="password_protect_whole_app">Uzamknúť heslom celú aplikáciu</string>
     <string name="keep_last_modified">Ponechať starú hodnotu naposledy-upravené pri kopírovaní/presúvaní/premenúvaní súborov</string>
+    <string name="show_info_bubble">Zobraziť informačnú bublinu pri prehliadaní položiek ťahaním posuvníka</string>
 
     <!-- About -->
     <string name="about">O aplikácií</string>
@@ -243,7 +248,14 @@
     <string name="additional_info">Dodatočné informácie</string>
     <string name="app_version">Verzia aplikácie: %1$s</string>
     <string name="device_os">Operačný systém zariadenia: %1$s</string>
-    <string name="donate_please">Zdravím,\n\ndúfam, že sa vám moja apka páči. Neobsahuje žiadne reklamy, podporte prosím jej vývoj zakúpením aplikácie <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Jednoduché ďakujem</a>. Zaručí to aj to, že tento dialóg už neuvidíte.\n\nViac možností podpory nájdete <a href="http://simplemobiletools.com/donate">tu</a>.\n\nĎakujem!</string>
+    <string name="donate_please">
+        <![CDATA[
+            Zdravím,<br><br>
+            dúfam, že sa vám moja apka páči. Neobsahuje žiadne reklamy, podporte prosím jej vývoj zakúpením aplikácie <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Jednoduché ďakujem</a>. Zaručí to aj to, že tento dialóg už neuvidíte.<br><br>
+            Viac možností podpory nájdete <a href="http://simplemobiletools.com/donate">tu</a>.<br><br>
+            Ďakujem!
+        ]]>
+    </string>
     <string name="purchase">Zakúpiť</string>
 
     <!-- License -->

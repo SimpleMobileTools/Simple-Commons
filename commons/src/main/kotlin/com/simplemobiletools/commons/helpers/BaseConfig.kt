@@ -125,4 +125,8 @@ open class BaseConfig(val context: Context) {
     var wasSharedThemeAfterUpdateChecked: Boolean
         get() = prefs.getBoolean(WAS_SHARED_THEME_AFTER_UPDATE_CHECKED, false)
         set(wasSharedThemeAfterUpdateChecked) = prefs.edit().putBoolean(WAS_SHARED_THEME_AFTER_UPDATE_CHECKED, wasSharedThemeAfterUpdateChecked).apply()
+
+    var showInfoBubble: Boolean
+        get() = prefs.getBoolean(SHOW_INFO_BUBBLE, true)
+        set(showInfoBubble) = prefs.edit().putBoolean(SHOW_INFO_BUBBLE, showInfoBubble).apply()
 }
