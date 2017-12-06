@@ -43,7 +43,10 @@ fun ClosedRange<Int>.random() = Random().nextInt(endInclusive - start) + start
 fun Int.darkenColor(): Int {
     if (this == Color.WHITE) {
         return -2105377
+    } else if (this == Color.BLACK) {
+        return Color.BLACK
     }
+
     val DARK_FACTOR = 8
     var hsv = FloatArray(3)
     Color.colorToHSV(this, hsv)
