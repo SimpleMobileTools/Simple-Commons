@@ -225,6 +225,7 @@ fun String.getMimeTypeFromPath(): String {
         put("dll", "application/x-msdownload")
         put("dll.config", "text/xml")
         put("dlm", "text/dlm")
+        put("dng", "image/x-adobe-dng")
         put("doc", "application/msword")
         put("docm", "application/vnd.ms-word.document.macroEnabled.12")
         put("docx", "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
