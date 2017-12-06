@@ -126,7 +126,10 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         mDialogView.apply {
             filepicker_list.adapter = adapter
             filepicker_breadcrumbs.setBreadcrumb(currPath)
-            filepicker_fastscroller.setViews(filepicker_list)
+            filepicker_fastscroller.allowBubbleDisplay = context.baseConfig.showInfoBubble
+            filepicker_fastscroller.setViews(filepicker_list) {
+                filepicker_fastscroller.updateBubbleText(items[it].getBubbleText())
+            }
         }
 
         layoutManager.onRestoreInstanceState(mScrollStates[currPath.trimEnd('/')])
