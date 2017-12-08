@@ -41,21 +41,33 @@ import java.util.*
 
 fun Activity.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
     if (isOnMainThread()) {
-        Toast.makeText(this, id, length).show()
+        showToast(this, id, length)
     } else {
         runOnUiThread {
-            Toast.makeText(this, id, length).show()
+            showToast(this, id, length)
         }
     }
 }
 
 fun Activity.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
     if (isOnMainThread()) {
-        Toast.makeText(this, msg, length).show()
+        showToast(this, msg, length)
     } else {
         runOnUiThread {
-            Toast.makeText(this, msg, length).show()
+            showToast(this, msg, length)
         }
+    }
+}
+
+private fun showToast(activity: Activity, messageId: Int, length: Int) {
+    if (!activity.isActivityDestroyed()) {
+        Toast.makeText(activity, messageId, length).show()
+    }
+}
+
+private fun showToast(activity: Activity, message: String, length: Int) {
+    if (!activity.isActivityDestroyed()) {
+        Toast.makeText(activity, message, length).show()
     }
 }
 
