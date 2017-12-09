@@ -126,21 +126,21 @@
     <string name="undo_changes">Annulla modifiche</string>
     <string name="undo_changes_confirmation">Sei sicuro di annullare le tue modifiche?</string>
     <string name="save_before_closing">Hai modifiche non salvate. Salvare prima di uscire?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="apply_to_all_apps">Applica i colori a tutte le app Simple</string>
+    <string name="share_colors_success">Colori aggiornati correttamente. È stato aggiunto un nuovo tema chiamato \'Condiviso\', usa quello per aggiornare tutti i colori dell'app in futuro.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
+            Acquista <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> per sbloccare questa funzione e supportare lo sviluppo. Grazie!
         ]]>
     </string>
 
     <!-- Themes -->
     <string name="light_theme">Chiaro</string>
     <string name="dark_theme">Scuro</string>
-    <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
+    <string name="solarized">Solarizzato</string>
+    <string name="dark_red">Rosso scuro</string>
     <string name="custom">Personale</string>
-    <string name="shared">Shared</string>
+    <string name="shared">Condiviso</string>
 
     <!-- What's new -->
     <string name="whats_new">Novità</string>
@@ -215,7 +215,7 @@
     <!-- Settings -->
     <string name="settings">Impostazioni</string>
     <string name="customize_colors">Personalizza i colori</string>
-    <string name="use_english_language">Forza lingua Inglese</string>
+    <string name="use_english_language">Forza la lingua inglese</string>
     <string name="show_hidden">Mostra file e cartelle nascosti</string>
     <string name="font_size">Dimensione carattere</string>
     <string name="small">Piccolo</string>
@@ -233,7 +233,7 @@
     <string name="email_label">Invia la tua opinione o i tuoi suggerimenti a</string>
     <string name="more_apps_underlined"><u>Altre app</u></string>
     <string name="third_party_licences_underlined"><u>Licenze di terze parti</u></string>
-    <string name="invite_friends_underlined"><u>Invita amico</u></string>
+    <string name="invite_friends_underlined"><u>Invita un amico</u></string>
     <string name="share_text">Ciao, controlla %1$s su %2$s</string>
     <string name="invite_via">Invita con</string>
     <string name="rate_us_underlined"><u>Dacci un voto sul Play Store</u></string>
@@ -247,7 +247,7 @@
     <string name="donate_please">
         <![CDATA[
             Ciao,<br><br>
-            spero che tu sia contento dell\'app. Non contiene pubblicità, per favore supportane lo sviluppo acquistando l\'app <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, inoltre questa finestra non verrà più mostrata.<br><br>
+            spero che tu sia contento dell\'app. Non contiene pubblicità, per favore supportane lo sviluppo acquistando l\'app <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>. Inoltre questa finestra non verrà più mostrata.<br><br>
             Puoi trovare ulteriori opzioni di donazione <a href="http://simplemobiletools.com/donate">qui</a>.<br><br>
             Grazie!
         ]]>
@@ -274,6 +274,6 @@
     <string name="autofittextview_title">AutoFitTextView (ridimensionamento testo)</string>
     <string name="robolectric_title">Robolectric (ambiente di test)</string>
     <string name="espresso_title">Espresso (aiutante nei test)</string>
-    <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="gson_title">Gson (parser JSON)</string>
+    <string name="leak_canary_title">Leak Canary (rileva leak di memoria)</string>
 </resources>
