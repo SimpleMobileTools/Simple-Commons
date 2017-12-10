@@ -46,14 +46,14 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupWebsite() {
-        val websiteText = String.format(getString(R.string.two_string_placeholder), getString(R.string.website_label), getString(R.string.website))
+        val websiteText = String.format(getString(R.string.two_string_placeholder), getString(R.string.website_label), getString(R.string.my_website))
         about_website.text = websiteText
         about_website.setLinkTextColor(linkTextColor)
     }
 
     private fun setupEmail() {
         val label = getString(R.string.email_label)
-        val email = getString(R.string.email)
+        val email = getString(R.string.my_email)
 
         val appVersion = String.format(getString(R.string.app_version, intent.getStringExtra(APP_VERSION_NAME)))
         val deviceOS = String.format(getString(R.string.device_os), Build.VERSION.RELEASE)
