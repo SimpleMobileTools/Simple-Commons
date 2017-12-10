@@ -1,9 +1,8 @@
 package com.simplemobiletools.commons.models
 
-import com.simplemobiletools.commons.helpers.SORT_BY_DATE_MODIFIED
-import com.simplemobiletools.commons.helpers.SORT_BY_NAME
-import com.simplemobiletools.commons.helpers.SORT_BY_SIZE
-import com.simplemobiletools.commons.helpers.SORT_DESCENDING
+import com.simplemobiletools.commons.extensions.formatDate
+import com.simplemobiletools.commons.extensions.formatSize
+import com.simplemobiletools.commons.helpers.*
 import java.io.File
 
 data class FileDirItem(val path: String, val name: String, val isDirectory: Boolean, val children: Int, val size: Long) :
@@ -36,9 +35,7 @@ data class FileDirItem(val path: String, val name: String, val isDirectory: Bool
                     }
                 }
                 else -> {
-                    val extension = if (isDirectory) name else path.substringAfterLast('.', "")
-                    val otherExtension = if (other.isDirectory) other.name else other.path.substringAfterLast('.', "")
-                    result = extension.toLowerCase().compareTo(otherExtension.toLowerCase())
+                    result = getExtension().toLowerCase().compareTo(other.getExtension().toLowerCase())
                 }
             }
 
@@ -47,5 +44,14 @@ data class FileDirItem(val path: String, val name: String, val isDirectory: Bool
             }
             result
         }
+    }
+
+    fun getExtension() = if (isDirectory) name else path.substringAfterLast('.', "")
+
+    fun getBubbleText() = when {
+        sorting and SORT_BY_SIZE != 0 -> size.formatSize()
+        sorting and SORT_BY_DATE_MODIFIED != 0 -> File(path).lastModified().formatDate()
+        sorting and SORT_BY_EXTENSION != 0 -> getExtension().toLowerCase()
+        else -> name
     }
 }

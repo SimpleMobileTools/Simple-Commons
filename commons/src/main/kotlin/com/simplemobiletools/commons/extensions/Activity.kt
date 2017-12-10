@@ -15,7 +15,10 @@ import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.support.v4.provider.DocumentFile
 import android.support.v7.app.AlertDialog
-import android.view.*
+import android.view.View
+import android.view.ViewGroup
+import android.view.Window
+import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
@@ -38,21 +41,33 @@ import java.util.*
 
 fun Activity.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
     if (isOnMainThread()) {
-        Toast.makeText(this, id, length).show()
+        showToast(this, id, length)
     } else {
         runOnUiThread {
-            Toast.makeText(this, id, length).show()
+            showToast(this, id, length)
         }
     }
 }
 
 fun Activity.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
     if (isOnMainThread()) {
-        Toast.makeText(this, msg, length).show()
+        showToast(this, msg, length)
     } else {
         runOnUiThread {
-            Toast.makeText(this, msg, length).show()
+            showToast(this, msg, length)
         }
+    }
+}
+
+private fun showToast(activity: Activity, messageId: Int, length: Int) {
+    if (!activity.isActivityDestroyed()) {
+        Toast.makeText(activity, messageId, length).show()
+    }
+}
+
+private fun showToast(activity: Activity, message: String, length: Int) {
+    if (!activity.isActivityDestroyed()) {
+        Toast.makeText(activity, message, length).show()
     }
 }
 
@@ -621,7 +636,7 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
 
     var title: TextView? = null
     if (titleId != 0) {
-        title = LayoutInflater.from(this).inflate(R.layout.dialog_title, null) as TextView
+        title = layoutInflater.inflate(R.layout.dialog_title, null) as TextView
         title.dialog_title_textview.apply {
             setText(titleId)
             setTextColor(baseConfig.textColor)

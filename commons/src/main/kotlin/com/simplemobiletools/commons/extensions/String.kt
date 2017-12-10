@@ -27,7 +27,7 @@ fun String.isAValidFilename(): Boolean {
     return true
 }
 
-val String.photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp")
+val String.photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp", ".dng")
 val String.videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
 val String.audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a")
 
@@ -38,6 +38,8 @@ fun String.isGif() = endsWith(".gif", true)
 fun String.isPng() = endsWith(".png", true)
 
 fun String.isJpg() = endsWith(".jpg", true) or endsWith(".jpeg")
+
+fun String.isDng() = endsWith(".dng", true)
 
 // fast extension checks, not guaranteed to be accurate
 fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }
@@ -223,6 +225,7 @@ fun String.getMimeTypeFromPath(): String {
         put("dll", "application/x-msdownload")
         put("dll.config", "text/xml")
         put("dlm", "text/dlm")
+        put("dng", "image/x-adobe-dng")
         put("doc", "application/msword")
         put("docm", "application/vnd.ms-word.document.macroEnabled.12")
         put("docx", "application/vnd.openxmlformats-officedocument.wordprocessingml.document")

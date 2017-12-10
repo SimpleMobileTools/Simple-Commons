@@ -5,18 +5,18 @@
     <string name="save_as">Lagre som</string>
     <string name="file_saved">Fil vellykket lagret</string>
     <string name="invalid_file_format">Ugyldig filformat</string>
-    <string name="out_of_memory_error">Out of memory error</string>
+    <string name="out_of_memory_error">Feil: Tomt for minne</string>
     <string name="an_error_occurred">En feil oppstod: %s</string>
     <string name="open_with">Åpne med</string>
     <string name="no_app_found">Ingen gyldig app funnet</string>
     <string name="set_as">Sett som</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
+    <string name="value_copied_to_clipboard">Verdi kopiert til utklippstavle</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">Tillatelse for lagring kreves</string>
+    <string name="no_contacts_permission">Tillatelse for kontakter kreves</string>
+    <string name="no_camera_permissions">Tillatelse for kamera kreves</string>
+    <string name="no_audio_permissions">Tillatelse for lyd kreves</string>
 
     <!-- Renaming -->
     <string name="rename_file">Rename file</string>
@@ -41,46 +41,46 @@
     <string name="source">Kilde</string>
     <string name="destination">Mål</string>
     <string name="select_destination">Velg mål</string>
-    <string name="click_select_destination">Click here to select destination</string>
-    <string name="invalid_destination">Could not write to the selected destination</string>
-    <string name="please_select_destination">Please select a destination</string>
-    <string name="source_and_destination_same">Source and destination cannot be the same</string>
-    <string name="copy_failed">Could not copy the files</string>
-    <string name="copying">Copying&#8230;</string>
-    <string name="copying_success">Files copied successfully</string>
-    <string name="copy_move_failed">An error occurred</string>
-    <string name="moving">Moving&#8230;</string>
-    <string name="moving_success">Files moved successfully</string>
-    <string name="moving_success_partial">Some files could not be moved</string>
-    <string name="copying_success_partial">Some files could not be copied</string>
-    <string name="no_files_selected">No files selected</string>
-    <string name="saving">Saving&#8230;</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="click_select_destination">Trykk her for å velge mål</string>
+    <string name="invalid_destination">Kunne ikke skrive til det valgte målet</string>
+    <string name="please_select_destination">Velg et mål</string>
+    <string name="source_and_destination_same">Kilde og mål kan ikke være det samme</string>
+    <string name="copy_failed">Kunne ikke kopiere filene</string>
+    <string name="copying">Kopierer&#8230;</string>
+    <string name="copying_success">Filer ble kopiert vellykket</string>
+    <string name="copy_move_failed">En feil oppstod</string>
+    <string name="moving">Flytter&#8230;</string>
+    <string name="moving_success">Filer ble flyttet vellykket</string>
+    <string name="moving_success_partial">Noen filer kunne ikke flyttes</string>
+    <string name="copying_success_partial">Noen filer kunne ikke kopieres</string>
+    <string name="no_files_selected">Ingen filer valgt</string>
+    <string name="saving">Lagrer&#8230;</string>
+    <string name="could_not_create_folder">Kunne ikke opprette mappen %s</string>
+    <string name="could_not_create_file">Kunne ikke opprette filen %s</string>
 
     <!-- Create new -->
     <string name="create_new">Opprett ny</string>
     <string name="folder">Mappe</string>
     <string name="file">Fil</string>
     <string name="create_new_folder">Opprett ny mappe</string>
-    <string name="name_taken">A file or folder with that name already exists</string>
-    <string name="invalid_name">The name contains invalid characters</string>
-    <string name="empty_name">Please enter a name</string>
-    <string name="unknown_error_occurred">An unknown error occurred</string>
+    <string name="name_taken">En fil eller mappe med det navnet finnes allerede</string>
+    <string name="invalid_name">Navnet inneholder ugyldige tegn</string>
+    <string name="empty_name">Oppfør et navn</string>
+    <string name="unknown_error_occurred">En ukjent feil oppstod</string>
 
     <!-- Copy conflicts -->
-    <string name="file_already_exists">File %1$s already exists</string>
-    <string name="file_already_exists_overwrite">File %1$s already exists. Overwrite?</string>
-    <string name="select_an_action">Select an action</string>
+    <string name="file_already_exists">Filen %1$s finnes allerede</string>
+    <string name="file_already_exists_overwrite">Filen %1$s finnes allerede. Overskrive?</string>
+    <string name="select_an_action">Velg en handling</string>
     <string name="overwrite">Overskriv</string>
     <string name="skip">Hopp over</string>
-    <string name="append">Append with \'_1\'</string>
-    <string name="apply_to_all">Apply to all conflicts</string>
+    <string name="append">Tilføy \'_1\'</string>
+    <string name="apply_to_all">Bruk på alle konflikter</string>
 
     <!-- File picker -->
     <string name="select_folder">Velg en mappe</string>
     <string name="select_file">Velg en fil</string>
-    <string name="confirm_storage_access_title">Confirm external storage access</string>
+    <string name="confirm_storage_access_title">Bekreft ekstern lagringstilgang</string>
     <string name="confirm_storage_access_text">Please choose the root folder of the SD card on the next screen, to grant write access</string>
     <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
     <string name="confirm_selection">Confirm selection</string>
@@ -91,10 +91,10 @@
     </plurals>
 
     <!-- Storages -->
-    <string name="select_storage">Select storage</string>
-    <string name="internal">Internal</string>
-    <string name="sd_card">SD Card</string>
-    <string name="root">Root</string>
+    <string name="select_storage">Velg lagring</string>
+    <string name="internal">Intern</string>
+    <string name="sd_card">SD-kort</string>
+    <string name="root">Rot</string>
     <string name="wrong_root_selected">Wrong folder selected, please select the root folder of your SD card</string>
 
     <!-- File properties -->
@@ -118,16 +118,16 @@
     <string name="background_color">Bakgrunnsfarge</string>
     <string name="text_color">Tekstfarge</string>
     <string name="primary_color">Primærfarge</string>
-    <string name="restore_defaults">Restore defaults</string>
+    <string name="restore_defaults">Gjenopprett standard</string>
     <string name="theme">Tema</string>
-    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
+    <string name="changing_color_description">Endring av farge vil gjøre at det skiftes til Tilpasset tema</string>
     <string name="save">Lagre</string>
-    <string name="discard">Discard</string>
-    <string name="undo_changes">Undo changes</string>
-    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
-    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="discard">Forkast</string>
+    <string name="undo_changes">Angre endringer</string>
+    <string name="undo_changes_confirmation">Er du sikker på at du vil angre dine endringer?</string>
+    <string name="save_before_closing">Du har endringer som ikke er lagret. Lagre før du avslutter?</string>
+    <string name="apply_to_all_apps">Bruk fargene i alle Simple Apps</string>
+    <string name="share_colors_success">Fargene er vellykket oppdatert. Et nytt tema kalt \'Delt\' er lagt til, bruk det for å oppdatere alle appenes farger i fremtiden.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
@@ -137,14 +137,14 @@
     <!-- Themes -->
     <string name="light_theme">Lyst</string>
     <string name="dark_theme">Mørkt</string>
-    <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
+    <string name="solarized">Solarisert</string>
+    <string name="dark_red">Mørkerødt</string>
     <string name="custom">Tilpasset</string>
-    <string name="shared">Shared</string>
+    <string name="shared">Delt</string>
 
     <!-- What's new -->
-    <string name="whats_new">What\'s new</string>
-    <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
+    <string name="whats_new">Hva er nytt</string>
+    <string name="whats_new_disclaimer">* bare de større oppdateringene er oppført her, det er alltid noen mindre forbedringer også</string>
 
     <!-- Actionbar items -->
     <string name="delete">Slett</string>
@@ -164,14 +164,14 @@
     <string name="sort_by">Sorter etter</string>
     <string name="name">Navn</string>
     <string name="size">Størrelse</string>
-    <string name="last_modified">Last modified</string>
-    <string name="date_taken">Date taken</string>
+    <string name="last_modified">Sist endret</string>
+    <string name="date_taken">Dato tatt</string>
     <string name="title">Tittel</string>
     <string name="filename">Filnavn</string>
-    <string name="extension">Extension</string>
-    <string name="ascending">Ascending</string>
-    <string name="descending">Descending</string>
-    <string name="use_for_this_folder">Use for this folder only</string>
+    <string name="extension">Filendelse</string>
+    <string name="ascending">Stigende</string>
+    <string name="descending">Fallende</string>
+    <string name="use_for_this_folder">Bruk kun for denne mappen</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Er du sikker på at du vil fortsette med slettingen?</string>
@@ -215,8 +215,8 @@
     <!-- Settings -->
     <string name="settings">Innstillinger</string>
     <string name="customize_colors">Tilpass farger</string>
-    <string name="use_english_language">Use English language</string>
-    <string name="show_hidden">Show hidden files and folders</string>
+    <string name="use_english_language">Bruk engelsk språk</string>
+    <string name="show_hidden">Vis skjulte filer og mapper</string>
     <string name="font_size">Skriftstørrelse</string>
     <string name="small">Liten</string>
     <string name="medium">Middels</string>
@@ -229,21 +229,21 @@
 
     <!-- About -->
     <string name="about">Om</string>
-    <string name="website_label">For the source codes visit</string>
-    <string name="email_label">Send your feedback or suggestions to</string>
-    <string name="more_apps_underlined"><u>More apps</u></string>
-    <string name="third_party_licences_underlined"><u>Third party licences</u></string>
-    <string name="invite_friends_underlined"><u>Invite friends</u></string>
+    <string name="website_label">For kildekoden besøk</string>
+    <string name="email_label">Send tilbakemelding eller forslag til</string>
+    <string name="more_apps_underlined"><u>Flere apper</u></string>
+    <string name="third_party_licences_underlined"><u>Tredjepartslisenser</u></string>
+    <string name="invite_friends_underlined"><u>Inviter venner</u></string>
     <string name="share_text">Hey, come check out %1$s at %2$s</string>
-    <string name="invite_via">Invite via</string>
-    <string name="rate_us_underlined"><u>Rate us</u></string>
-    <string name="donate">Donate</string>
-    <string name="donate_underlined"><u>Donate</u></string>
-    <string name="follow_us">Follow us</string>
+    <string name="invite_via">Inviter via</string>
+    <string name="rate_us_underlined"><u>Bedøm oss</u></string>
+    <string name="donate">Gi et bidrag</string>
+    <string name="donate_underlined"><u>Gi et bidrag</u></string>
+    <string name="follow_us">Følg oss</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="additional_info">Additional info</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
+    <string name="additional_info">Tilleggsinformasjon</string>
+    <string name="app_version">App-versjon: %1$s</string>
+    <string name="device_os">Operativsystem: %1$s</string>
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>
@@ -252,11 +252,11 @@
             Thank you!
         ]]>
     </string>
-    <string name="purchase">Purchase</string>
+    <string name="purchase">Kjøp</string>
 
     <!-- License -->
     <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
-    <string name="third_party_licences">Third party licences</string>
+    <string name="third_party_licences">Tredjepartslisenser</string>
     <string name="kotlin_title">Kotlin (programming language)</string>
     <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
     <string name="glide_title">Glide (image loading and caching)</string>

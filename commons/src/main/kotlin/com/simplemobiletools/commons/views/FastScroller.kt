@@ -17,13 +17,13 @@ import com.simplemobiletools.commons.extensions.baseConfig
 // based on https://blog.stylingandroid.com/recyclerview-fastscroll-part-1
 class FastScroller : FrameLayout {
     var isHorizontal = false
+    var allowBubbleDisplay = false
 
     private var handle: View? = null
     private var bubble: TextView? = null
     private var currHeight = 0
     private var currWidth = 0
     private var bubbleOffset = 0
-    private var allowBubbleDisplay = false
     private var fastScrollCallback: ((Int) -> Unit)? = null
 
     private val HANDLE_HIDE_DELAY = 1000L
@@ -54,7 +54,6 @@ class FastScroller : FrameLayout {
             }
         })
 
-        allowBubbleDisplay = callback != null
         fastScrollCallback = callback
     }
 
@@ -203,6 +202,10 @@ class FastScroller : FrameLayout {
             val position = pos / currWidth
             val handleWidth = handle!!.width
             handle!!.x = getValueInRange(0f, (currWidth - handleWidth).toFloat(), (currWidth - handleWidth) * position)
+
+            val bubbleWidth = bubble?.width ?: 0
+            val newX = getValueInRange(0f, (currWidth - bubbleWidth).toFloat(), (currWidth - bubbleWidth) * position)
+            bubble?.x = Math.max(0f, newX)
         } else {
             val position = pos / currHeight
             val handleHeight = handle!!.height
