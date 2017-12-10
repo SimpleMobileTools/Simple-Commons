@@ -126,21 +126,21 @@
     <string name="undo_changes">Desfazer alterações</string>
     <string name="undo_changes_confirmation">Tem a certeza de que deseja desfazer as alterações?</string>
     <string name="save_before_closing">Existem alterações não guardadas. Deseja guardar antes de sair?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="apply_to_all_apps">Alicar cores a todas as aplicações Simple</string>
+    <string name="share_colors_success">Cores atualizadas com sucesso. Foi criado o novo tema \'Partilhado\', que pode utilizar para atualizar as cores de todas as aplicações Simple.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
+            Por favor compre a aplicação <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> para desbloquear esta funcionalidade e ajudar no desenvolvimento. Obrigado!
         ]]>
     </string>
 
     <!-- Themes -->
     <string name="light_theme">Claro</string>
     <string name="dark_theme">Escuro</string>
-    <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
+    <string name="solarized">Solar</string>
+    <string name="dark_red">vermelho escuro</string>
     <string name="custom">Personalizado</string>
-    <string name="shared">Shared</string>
+    <string name="shared">Partilhado</string>
 
     <!-- What's new -->
     <string name="whats_new">Novidades</string>
@@ -225,7 +225,7 @@
     <string name="password_protect_hidden_items">Proteger itens ocultos com palavra-passe</string>
     <string name="password_protect_whole_app">Proteger aplicação com palavra-passe</string>
     <string name="keep_last_modified">Manter dados da última modificação ao copiar/mover/renomear</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+    <string name="show_info_bubble">Mostrar informação ao arrastar a barra de deslocamento</string>
 
     <!-- About -->
     <string name="about">Acerca</string>
@@ -252,7 +252,7 @@
             Obrigado!
         ]]>
     </string>
-    <string name="purchase">Purchase</string>
+    <string name="purchase">Comprar</string>
 
     <!-- License -->
     <string name="notice">Esta aplicação usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>
