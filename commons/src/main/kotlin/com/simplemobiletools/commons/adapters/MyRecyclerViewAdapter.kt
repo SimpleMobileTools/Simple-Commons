@@ -42,6 +42,8 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     abstract fun getSelectableItemCount(): Int
 
+    fun isOneItemSelected() = selectedPositions.size == 1
+
     fun toggleItemSelection(select: Boolean, pos: Int) {
         if (select) {
             if (itemViews[pos] != null) {
