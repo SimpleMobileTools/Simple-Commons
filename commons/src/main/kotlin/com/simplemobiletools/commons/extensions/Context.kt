@@ -192,6 +192,7 @@ fun Context.getPermissionString(id: Int) = when (id) {
     PERMISSION_WRITE_CONTACTS -> Manifest.permission.WRITE_CONTACTS
     PERMISSION_READ_CALENDAR -> Manifest.permission.READ_CALENDAR
     PERMISSION_WRITE_CALENDAR -> Manifest.permission.WRITE_CALENDAR
+    PERMISSION_CALL_PHONE -> Manifest.permission.CALL_PHONE
     else -> ""
 }
 
