@@ -148,6 +148,7 @@ class FastScroller : FrameLayout {
             MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                 handle!!.isSelected = false
                 swipeRefreshLayout?.isEnabled = true
+                hideHandle()
                 true
             }
             else -> super.onTouchEvent(event)
@@ -185,15 +186,19 @@ class FastScroller : FrameLayout {
         handle!!.alpha = 1f
 
         if (handle!!.isSelected && allowBubbleDisplay) {
-            bubble?.animate()?.alpha(1f)?.start()
             bubble?.alpha = 1f
+            bubble?.animate()?.alpha(1f)?.start()
         }
     }
 
     private fun hideHandle() {
-        handle!!.animate().alpha(0f).startDelay = HANDLE_HIDE_DELAY
-        bubble?.animate()?.alpha(0f)?.setStartDelay(HANDLE_HIDE_DELAY)?.withEndAction {
-            bubble?.text = ""
+        if (!handle!!.isSelected) {
+            handle!!.animate().alpha(0f).startDelay = HANDLE_HIDE_DELAY
+            bubble?.animate()?.alpha(0f)?.setStartDelay(HANDLE_HIDE_DELAY)?.withEndAction {
+                if (bubble?.alpha == 0f) {
+                    bubble?.text = ""
+                }
+            }
         }
     }
 
