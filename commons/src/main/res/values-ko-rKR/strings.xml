@@ -7,7 +7,7 @@
     <string name="invalid_file_format">잘못된 파일 형식</string>
     <string name="out_of_memory_error">메모리 부족 오류</string>
     <string name="an_error_occurred">An error occurred: %s</string>
-    <string name="open_with">Open with</string>
+    <string name="open_with">연결 프로그램</string>
     <string name="no_app_found">No valid app found</string>
     <string name="set_as">Set as</string>
     <string name="value_copied_to_clipboard">Value copied to clipboard</string>
@@ -157,9 +157,9 @@
     <string name="share">공유</string>
     <string name="share_via">공유방법</string>
     <string name="select_all">전체선택</string>
-    <string name="hide">Hide</string>
+    <string name="hide">숨김</string>
     <string name="unhide">Unhide</string>
-    <string name="hide_folder">Hide folder</string>
+    <string name="hide_folder">폴더 숨김</string>
     <string name="unhide_folder">Unhide folder</string>
     <string name="temporarily_show_hidden">숨김파일 임시보기</string>
     <string name="stop_showing_hidden">숨김파일 임시보기 해제</string>
