@@ -14,8 +14,8 @@
 
     <!-- Filters -->
     <string name="filter">Filtrar</string>
-    <string name="no_items_found">No items found.</string>
-    <string name="change_filter">Change filter</string>
+    <string name="no_items_found">Nenhum item encontrado.</string>
+    <string name="change_filter">Alterar filtro</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">É necessária a permissão Armazenamento</string>
@@ -130,7 +130,7 @@
     <string name="discard">Descartar</string>
     <string name="undo_changes">Desfazer alterações</string>
     <string name="undo_changes_confirmation">Tem certeza que deseja desfazer as alterações?</string>
-    <string name="save_before_closing">Possui alterações não salvass. Salvar antes de sair?</string>
+    <string name="save_before_closing">Existem alterações não salvas. Salvar antes de sair?</string>
     <string name="apply_to_all_apps">Aplicar cores a todos os Apps Simple</string>
     <string name="share_colors_success">Cores atualizadas com sucesso. Um novo tema chamado \'Compartilhado\' foi adicionado, use-o para atualizar as cores de todos os apps no futuro.</string>
     <string name="purchase_thank_you">
@@ -221,13 +221,13 @@
     <string name="settings">Configurações</string>
     <string name="customize_colors">Personalizar cores</string>
     <string name="use_english_language">Usar o idioma inglês</string>
-    <string name="show_hidden_items">Show hidden items</string>
+    <string name="show_hidden_items">Mostrar itens ocultos</string>
     <string name="font_size">Tamanho do texto</string>
     <string name="small">Pequeno</string>
     <string name="medium">Médio</string>
     <string name="large">Grande</string>
     <string name="extra_large">Muito grande</string>
-    <string name="password_protect_hidden_items">Proteja visibilidade de ítens ocultos com senha</string>
+    <string name="password_protect_hidden_items">Restringir a visualização de itens ocultos com senha</string>
     <string name="password_protect_whole_app">Proteção por senha em todo o app</string>
     <string name="keep_last_modified">Manter valor anterior do arquivo modificado por último ao copiar/mover/renomear arquivo</string>
     <string name="show_info_bubble">Mostrar bolha de informação ao rolar usando a barra de rolagem</string>
@@ -251,10 +251,10 @@
     <string name="device_os">Sistema operacional: %1$s</string>
     <string name="donate_please">
         <![CDATA[
-            Hello,<br><br>
-            hope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
-            You can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.<br><br>
-            Thank you!
+            Olá,<br><br>
+            Esperamos que esteja gostando do app. Ele não contém anúncios, então apoie o desenvolvimento adquirindo o <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Agradecimento ao Simple</a>, ele também bloqueia este diálogo de aparecer.<br><br>
+            Mais opções de doações <a href="http://simplemobiletools.com/donate">aqui</a>.<br><br>
+            Obrigado!
         ]]>
     </string>
     <string name="purchase">Comprar</string>
