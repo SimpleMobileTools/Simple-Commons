@@ -175,8 +175,10 @@ class FastScroller : FrameLayout {
     override fun onFinishInflate() {
         super.onFinishInflate()
         handle = getChildAt(0)
-        handleWidth = handle!!.width
-        handleHeight = handle!!.height
+        handle!!.onGlobalLayout {
+            handleWidth = handle!!.width
+            handleHeight = handle!!.height
+        }
         bubble = getChildAt(1) as? TextView
 
         if (bubble != null) {
