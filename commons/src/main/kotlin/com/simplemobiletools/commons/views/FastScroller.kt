@@ -13,6 +13,8 @@ import android.widget.TextView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
+import com.simplemobiletools.commons.extensions.onGlobalLayout
 
 // based on https://blog.stylingandroid.com/recyclerview-fastscroll-part-1
 class FastScroller : FrameLayout {
@@ -60,7 +62,7 @@ class FastScroller : FrameLayout {
     }
 
     fun updatePrimaryColor() {
-        handle!!.background.applyColorFilter(context.baseConfig.primaryColor)
+        handle!!.background.applyColorFilter(context.getAdjustedPrimaryColor())
         updateBubblePrimaryColor()
     }
 
@@ -71,7 +73,7 @@ class FastScroller : FrameLayout {
     }
 
     fun updateBubblePrimaryColor() {
-        getBubbleBackgroundDrawable()?.setStroke(resources.displayMetrics.density.toInt(), context.baseConfig.primaryColor)
+        getBubbleBackgroundDrawable()?.setStroke(resources.displayMetrics.density.toInt(), context.getAdjustedPrimaryColor())
     }
 
     fun updateBubbleTextColor() {

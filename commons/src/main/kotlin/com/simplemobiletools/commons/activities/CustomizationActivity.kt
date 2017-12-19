@@ -19,8 +19,9 @@ class CustomizationActivity : BaseSimpleActivity() {
     private val THEME_DARK = 1
     private val THEME_SOLARIZED = 2
     private val THEME_DARK_RED = 3
-    private val THEME_CUSTOM = 4
-    private val THEME_SHARED = 5
+    private val THEME_BLACK_WHITE = 4
+    private val THEME_CUSTOM = 5
+    private val THEME_SHARED = 6
 
     private var curTextColor = 0
     private var curBackgroundColor = 0
@@ -41,6 +42,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             put(THEME_DARK, MyTheme(R.string.dark_theme, R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.color_primary))
             //put(THEME_SOLARIZED, MyTheme(R.string.solarized, R.color.theme_solarized_text_color, R.color.theme_solarized_background_color, R.color.theme_solarized_primary_color))
             put(THEME_DARK_RED, MyTheme(R.string.dark_red, R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.theme_dark_red_primary_color))
+            put(THEME_BLACK_WHITE, MyTheme(R.string.black_white, android.R.color.white, android.R.color.black, android.R.color.black))
             put(THEME_CUSTOM, MyTheme(R.string.custom, 0, 0, 0))
 
             if (baseConfig.wasSharedThemeEverActivated) {
