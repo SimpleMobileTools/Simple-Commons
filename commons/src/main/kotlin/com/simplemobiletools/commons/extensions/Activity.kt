@@ -61,13 +61,13 @@ fun Activity.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
 
 private fun showToast(activity: Activity, messageId: Int, length: Int) {
     if (!activity.isActivityDestroyed()) {
-        Toast.makeText(activity, messageId, length).show()
+        Toast.makeText(activity.applicationContext, messageId, length).show()
     }
 }
 
 private fun showToast(activity: Activity, message: String, length: Int) {
     if (!activity.isActivityDestroyed()) {
-        Toast.makeText(activity, message, length).show()
+        Toast.makeText(activity.applicationContext, message, length).show()
     }
 }
 
