@@ -22,6 +22,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     : RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder>() {
     val baseConfig = activity.baseConfig
     val resources = activity.resources!!
+    val layoutInflater = activity.layoutInflater
     var primaryColor = baseConfig.primaryColor
     var textColor = baseConfig.textColor
     var itemViews = SparseArray<View>()
@@ -209,7 +210,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     }
 
     fun createViewHolder(layoutType: Int, parent: ViewGroup?): ViewHolder {
-        val view = activity.layoutInflater.inflate(layoutType, parent, false)
+        val view = layoutInflater.inflate(layoutType, parent, false)
         return ViewHolder(view, adapterListener, activity, multiSelectorMode, multiSelector, itemClick)
     }
 
