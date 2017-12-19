@@ -5,3 +5,5 @@
 -dontwarn com.bumptech.glide.load.resource.bitmap.Downsampler
 -dontwarn com.bumptech.glide.load.resource.bitmap.HardwareConfigState
 -dontwarn com.bumptech.glide.manager.RequestManagerRetriever
+
+-keep public class * extends java.lang.Exception
