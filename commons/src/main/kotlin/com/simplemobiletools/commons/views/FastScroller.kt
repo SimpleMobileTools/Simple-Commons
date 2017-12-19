@@ -24,6 +24,8 @@ class FastScroller : FrameLayout {
     private var currHeight = 0
     private var currWidth = 0
     private var bubbleOffset = 0
+    private var handleWidth = 0
+    private var handleHeight = 0
     private var fastScrollCallback: ((Int) -> Unit)? = null
 
     private val HANDLE_HIDE_DELAY = 1000L
@@ -173,6 +175,8 @@ class FastScroller : FrameLayout {
     override fun onFinishInflate() {
         super.onFinishInflate()
         handle = getChildAt(0)
+        handleWidth = handle!!.width
+        handleHeight = handle!!.height
         bubble = getChildAt(1) as? TextView
 
         if (bubble != null) {
@@ -205,20 +209,22 @@ class FastScroller : FrameLayout {
     private fun setPosition(pos: Float) {
         if (isHorizontal) {
             val position = pos / currWidth
-            val handleWidth = handle!!.width
             handle!!.x = getValueInRange(0f, (currWidth - handleWidth).toFloat(), (currWidth - handleWidth) * position)
 
-            val bubbleWidth = bubble?.width ?: 0
-            val newX = getValueInRange(0f, (currWidth - bubbleWidth).toFloat(), (currWidth - bubbleWidth) * position)
-            bubble?.x = Math.max(0f, newX)
+            if (bubble != null) {
+                val bubbleWidth = bubble!!.width
+                val newX = getValueInRange(0f, (currWidth - bubbleWidth).toFloat(), (currWidth - bubbleWidth) * position)
+                bubble!!.x = Math.max(0f, newX)
+            }
         } else {
             val position = pos / currHeight
-            val handleHeight = handle!!.height
             handle!!.y = getValueInRange(0f, (currHeight - handleHeight).toFloat(), (currHeight - handleHeight) * position)
 
-            val bubbleHeight = bubble?.height ?: 0
-            val newY = getValueInRange(0f, (currHeight - bubbleHeight).toFloat(), (currHeight - bubbleHeight) * position)
-            bubble?.y = Math.max(0f, newY - bubbleOffset)
+            if (bubble != null) {
+                val bubbleHeight = bubble!!.height
+                val newY = getValueInRange(0f, (currHeight - bubbleHeight).toFloat(), (currHeight - bubbleHeight) * position)
+                bubble!!.y = Math.max(0f, newY - bubbleOffset)
+            }
         }
         hideHandle()
     }
