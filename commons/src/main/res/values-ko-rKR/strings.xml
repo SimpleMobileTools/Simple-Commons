@@ -7,10 +7,10 @@
     <string name="invalid_file_format">잘못된 파일 형식</string>
     <string name="out_of_memory_error">메모리 부족 오류</string>
     <string name="an_error_occurred">An error occurred: %s</string>
-    <string name="open_with">연결 프로그램</string>
+    <string name="open_with">연결 애플리케이션</string>
     <string name="no_app_found">No valid app found</string>
-    <string name="set_as">Set as</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
+    <string name="set_as">애플리케이션에 설정</string>
+    <string name="value_copied_to_clipboard">클립보드에 복사됨</string>
     <string name="unknown">Unknown</string>
 
     <!-- Filters -->
@@ -104,11 +104,11 @@
     <string name="wrong_root_selected">잘못된 폴더가 선택되었습니다. SD 카드의 루트 폴더를 선택하세요.</string>
 
     <!-- File properties -->
-    <string name="properties">상세정보</string>
+    <string name="properties">속성</string>
     <string name="path">경로</string>
-    <string name="items_selected">Items selected</string>
+    <string name="items_selected">선택된 항목 수</string>
     <string name="direct_children_count">Direct children count</string>
-    <string name="files_count">Total files count</string>
+    <string name="files_count">전체 파일 수</string>
     <string name="resolution">해상도</string>
     <string name="duration">Duration</string>
     <string name="artist">Artist</string>
@@ -231,7 +231,7 @@
     <string name="extra_large">아주 크게</string>
     <string name="password_protect_hidden_items">숨김파일 보기 암호설정</string>
     <string name="password_protect_whole_app">애플리케이션 전체에서 암호를 이용한 보호기능 사용</string>
-    <string name="keep_last_modified">파일 복사/이동/변경 시 이전파일을 보관</string>
+    <string name="keep_last_modified">파일 복사/이동/변경 시 최종 수정시간 정보를 유지</string>
     <string name="show_info_bubble">스크롤바 드래그 시 항목별 툴팁 활성화</string>
 
     <!-- About -->
