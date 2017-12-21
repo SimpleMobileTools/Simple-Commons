@@ -6,12 +6,12 @@
     <string name="file_saved">파일저장 성공</string>
     <string name="invalid_file_format">잘못된 파일 형식</string>
     <string name="out_of_memory_error">메모리 부족 오류</string>
-    <string name="an_error_occurred">An error occurred: %s</string>
+    <string name="an_error_occurred">에러발생: %s</string>
     <string name="open_with">연결 애플리케이션</string>
-    <string name="no_app_found">No valid app found</string>
+    <string name="no_app_found">연결 가능한 애플리케이션 없음</string>
     <string name="set_as">애플리케이션에 설정</string>
     <string name="value_copied_to_clipboard">클립보드에 복사됨</string>
-    <string name="unknown">Unknown</string>
+    <string name="unknown">알 수 없음</string>
 
     <!-- Filters -->
     <string name="filter">필터</string>
@@ -253,13 +253,16 @@
     <string name="device_os">Device OS: %1$s</string>
     <string name="donate_please">
         <![CDATA[
-            Hello,<br><br>
-            hope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
-            You can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.<br><br>
-            Thank you!
+            안녕하세요.<br>
+            우리의 애플리케이션이 도움이 되길 바랍니다.<br>
+            사용하고 계신 애플리케이션은 광고 및 인앱 결제가 없는 무료 애플리케이션이므로 별도의 수익이 발생하지 않습니다.<br>
+            당신이 원하신다면 개발지원을 위해 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 앱을 다운받아 지원 하실 수 있습니다.<br>
+            \'Simple Thank You\' 앱이 설치되면 이 다이얼로그는 비 활성화 됩니다.<br>
+            이 방법외에도 <a href="http://simplemobiletools.com/donate">링크</a>를 통해 다양한 방식으로 개발지원을 하실 수 있습니다.<br>
+            감사합니다.
         ]]>
     </string>
-    <string name="purchase">Purchase</string>
+    <string name="purchase">구매</string>
 
     <!-- License -->
     <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
