@@ -6,12 +6,12 @@
     <string name="file_saved">파일저장 성공</string>
     <string name="invalid_file_format">잘못된 파일 형식</string>
     <string name="out_of_memory_error">메모리 부족 오류</string>
-    <string name="an_error_occurred">An error occurred: %s</string>
-    <string name="open_with">연결 프로그램</string>
-    <string name="no_app_found">No valid app found</string>
-    <string name="set_as">Set as</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
-    <string name="unknown">Unknown</string>
+    <string name="an_error_occurred">에러발생: %s</string>
+    <string name="open_with">연결 애플리케이션</string>
+    <string name="no_app_found">연결 가능한 애플리케이션 없음</string>
+    <string name="set_as">애플리케이션에 설정</string>
+    <string name="value_copied_to_clipboard">클립보드에 복사됨</string>
+    <string name="unknown">알 수 없음</string>
 
     <!-- Filters -->
     <string name="filter">필터</string>
@@ -104,11 +104,11 @@
     <string name="wrong_root_selected">잘못된 폴더가 선택되었습니다. SD 카드의 루트 폴더를 선택하세요.</string>
 
     <!-- File properties -->
-    <string name="properties">상세정보</string>
+    <string name="properties">속성</string>
     <string name="path">경로</string>
-    <string name="items_selected">Items selected</string>
+    <string name="items_selected">선택된 항목 수</string>
     <string name="direct_children_count">Direct children count</string>
-    <string name="files_count">Total files count</string>
+    <string name="files_count">전체 파일 수</string>
     <string name="resolution">해상도</string>
     <string name="duration">Duration</string>
     <string name="artist">Artist</string>
@@ -123,7 +123,7 @@
     <!-- Color customization -->
     <string name="background_color">배경 색상</string>
     <string name="text_color">텍스트 색상</string>
-    <string name="primary_color">주요 색상</string>
+    <string name="primary_color">주요 색상(테마)</string>
     <string name="restore_defaults">기본설정으로 변경</string>
     <string name="theme">테마</string>
     <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
@@ -231,7 +231,7 @@
     <string name="extra_large">아주 크게</string>
     <string name="password_protect_hidden_items">숨김파일 보기 암호설정</string>
     <string name="password_protect_whole_app">애플리케이션 전체에서 암호를 이용한 보호기능 사용</string>
-    <string name="keep_last_modified">파일 복사/이동/변경 시 이전파일을 보관</string>
+    <string name="keep_last_modified">파일 복사/이동/변경 시 최종 수정시간 정보를 유지</string>
     <string name="show_info_bubble">스크롤바 드래그 시 항목별 툴팁 활성화</string>
 
     <!-- About -->
@@ -253,13 +253,16 @@
     <string name="device_os">Device OS: %1$s</string>
     <string name="donate_please">
         <![CDATA[
-            Hello,<br><br>
-            hope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
-            You can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.<br><br>
-            Thank you!
+            안녕하세요.<br>
+            우리의 애플리케이션이 도움이 되길 바랍니다.<br>
+            사용하고 계신 애플리케이션은 광고 및 인앱 결제가 없는 무료 애플리케이션이므로 별도의 수익이 발생하지 않습니다.<br>
+            당신이 원하신다면 개발지원을 위해 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 앱을 다운받아 지원 하실 수 있습니다.<br>
+            \'Simple Thank You\' 앱이 설치되면 이 다이얼로그는 비 활성화 됩니다.<br>
+            이 방법외에도 <a href="http://simplemobiletools.com/donate">링크</a>를 통해 다양한 방식으로 개발지원을 하실 수 있습니다.<br>
+            감사합니다.
         ]]>
     </string>
-    <string name="purchase">Purchase</string>
+    <string name="purchase">구매</string>
 
     <!-- License -->
     <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
