@@ -195,21 +195,25 @@ open class BaseSimpleActivity : AppCompatActivity() {
                     toast(R.string.moving)
                     val updatedFiles = ArrayList<File>(files.size * 2)
                     updatedFiles.addAll(files)
-                    for (oldFile in files) {
-                        val newFile = File(destinationFolder, oldFile.name)
-                        if (!newFile.exists() && oldFile.renameTo(newFile)) {
-                            if (!baseConfig.keepLastModified) {
-                                newFile.setLastModified(System.currentTimeMillis())
+                    try {
+                        for (oldFile in files) {
+                            val newFile = File(destinationFolder, oldFile.name)
+                            if (!newFile.exists() && oldFile.renameTo(newFile)) {
+                                if (!baseConfig.keepLastModified) {
+                                    newFile.setLastModified(System.currentTimeMillis())
+                                }
+                                updateInMediaStore(oldFile, newFile)
+                                updatedFiles.add(newFile)
                             }
-                            updateInMediaStore(oldFile, newFile)
-                            updatedFiles.add(newFile)
                         }
-                    }
 
-                    scanFiles(updatedFiles) {
-                        runOnUiThread {
-                            copyMoveListener.copySucceeded(false, files.size * 2 == updatedFiles.size)
+                        scanFiles(updatedFiles) {
+                            runOnUiThread {
+                                copyMoveListener.copySucceeded(false, files.size * 2 == updatedFiles.size)
+                            }
                         }
+                    } catch (e: Exception) {
+                        showErrorToast(e)
                     }
                 }
             }
