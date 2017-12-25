@@ -174,7 +174,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
 
         if (files.size == 1) {
-            if (File(destinationFolder.absolutePath, files[0].name).exists()) {
+            if (File(destination, files[0].name).exists()) {
                 toast(R.string.name_taken)
                 return
             }
@@ -186,7 +186,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
                 toast(R.string.copying)
                 startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly)
             } else {
-                if (isPathOnSD(source) || isPathOnSD(destinationFolder.absolutePath)) {
+                if (isPathOnSD(source) || isPathOnSD(destination) || files.first().isDirectory) {
                     handleSAFDialog(File(source)) {
                         toast(R.string.moving)
                         startCopyMove(files, destinationFolder, false, copyPhotoVideoOnly)
