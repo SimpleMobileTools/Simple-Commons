@@ -44,14 +44,14 @@
     <string name="copy_move">복사 / 이동</string>
     <string name="copy_to">복사하기</string>
     <string name="move_to">이동하기</string>
-    <string name="source">Source</string>
-    <string name="destination">Destination</string>
-    <string name="select_destination">Select destination</string>
-    <string name="click_select_destination">Click here to select destination</string>
-    <string name="invalid_destination">Could not write to the selected destination</string>
-    <string name="please_select_destination">Please select a destination</string>
-    <string name="source_and_destination_same">Source and destination cannot be the same</string>
-    <string name="copy_failed">Could not copy the files</string>
+    <string name="source">원본</string>
+    <string name="destination">대상</string>
+    <string name="select_destination">대상 선택</string>
+    <string name="click_select_destination">대상을 선택하려면 여기를 클릭하세요.</string>
+    <string name="invalid_destination">대상경로에 생성 할 수 없음</string>
+    <string name="please_select_destination">대상 경로를 선택하세요.</string>
+    <string name="source_and_destination_same">원본파일과 대상파일은 동일할 수 없음</string>
+    <string name="copy_failed">파일을 복사 할 수 없음</string>
     <string name="copying">복사중&#8230;</string>
     <string name="copying_success">파일복사 성공</string>
     <string name="copy_move_failed">에러발생</string>
@@ -150,7 +150,7 @@
     <string name="shared">Shared</string>
 
     <!-- What's new -->
-    <string name="whats_new">What\'s new</string>
+    <string name="whats_new">새로운 기능</string>
     <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
 
     <!-- Actionbar items -->
@@ -165,7 +165,7 @@
     <string name="unhide_folder">Unhide folder</string>
     <string name="temporarily_show_hidden">숨김파일 임시보기</string>
     <string name="stop_showing_hidden">숨김파일 임시보기 해제</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
+    <string name="maximum_share_reached">한 번에 많은 콘텐츠를 공유 할 수 없습니다.</string>
 
     <!-- Sorting -->
     <string name="sort_by">정렬 방식</string>
@@ -194,16 +194,16 @@
     <string name="pattern">패턴</string>
     <string name="insert_pattern">패턴 입력</string>
     <string name="wrong_pattern">패턴이 잘못 입력되었습니다.</string>
-    <string name="repeat_pattern">패터 확인</string>
-    <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
-    <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
+    <string name="repeat_pattern">패턴 확인</string>
+    <string name="fingerprint">지문</string>
+    <string name="add_fingerprint">지문 추가</string>
+    <string name="place_finger">지문 센서에 손가락을 올려주세요.</string>
+    <string name="authentication_failed">인증 실패</string>
+    <string name="authentication_blocked">인증이 차단 되었으니, 잠시 후 다시 시도하십시오.</string>
+    <string name="no_fingerprints_registered">등록 된 지문이 없습니다. 기기의 설정에서 지문을 추가하십시오.</string>
+    <string name="go_to_settings">설정으로 이동</string>
     <string name="protection_setup_successfully">암호 설정이 완료되었습니다. 암호를 기억하지 못하는경우 앱을 다시 설치하시기 바랍니다.</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="fingerprint_setup_successfully">보안 설정이 성공적으로 완료되었습니다. 재설정 시 문제가 발생하면 앱을 다시 설치하시기 바랍니다.</string>
 
     <!-- Times -->
     <plurals name="seconds">
