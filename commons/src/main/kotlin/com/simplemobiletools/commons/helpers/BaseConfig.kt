@@ -3,6 +3,8 @@ package com.simplemobiletools.commons.helpers
 import android.content.Context
 import android.content.SharedPreferences
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.extensions.getInternalStoragePath
+import com.simplemobiletools.commons.extensions.getSDCardPath
 import com.simplemobiletools.commons.extensions.getSharedPrefs
 
 open class BaseConfig(val context: Context) {
@@ -25,11 +27,11 @@ open class BaseConfig(val context: Context) {
         set(uri) = prefs.edit().putString(TREE_URI, uri).apply()
 
     var sdCardPath: String
-        get() = prefs.getString(SD_CARD_PATH, "")
+        get() = prefs.getString(SD_CARD_PATH, context.getSDCardPath())
         set(sdCardPath) = prefs.edit().putString(SD_CARD_PATH, sdCardPath).apply()
 
     var internalStoragePath: String
-        get() = prefs.getString(INTERNAL_STORAGE_PATH, "")
+        get() = prefs.getString(INTERNAL_STORAGE_PATH, context.getInternalStoragePath())
         set(internalStoragePath) = prefs.edit().putString(INTERNAL_STORAGE_PATH, internalStoragePath).apply()
 
     var textColor: Int
