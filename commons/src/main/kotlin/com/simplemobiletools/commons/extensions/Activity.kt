@@ -126,8 +126,13 @@ fun Activity.isShowingSAFDialog(file: File, treeUri: String, requestCode: Int): 
 fun Activity.launchViewIntent(id: Int) = launchViewIntent(resources.getString(id))
 
 fun Activity.launchViewIntent(url: String) {
-    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-    startActivity(browserIntent)
+    Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
+        if (resolveActivity(packageManager) != null) {
+            startActivity(this)
+        } else {
+            toast(R.string.no_app_found)
+        }
+    }
 }
 
 fun Activity.shareUri(uri: Uri, applicationId: String) {
