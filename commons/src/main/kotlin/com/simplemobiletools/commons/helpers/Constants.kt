@@ -36,6 +36,7 @@ val WAS_SHARED_THEME_FORCED = "was_shared_theme_forced"
 val WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN = "was_custom_theme_switch_description_shown"
 val WAS_SHARED_THEME_AFTER_UPDATE_CHECKED = "was_shared_theme_after_update_checked"
 val SHOW_INFO_BUBBLE = "show_info_bubble"
+val SORTING = "sorting"
 
 // licenses
 val LICENSE_KOTLIN = 1
