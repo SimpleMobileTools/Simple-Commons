@@ -309,3 +309,5 @@ fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
         }
     }.start()
 }
+
+fun Context.getDialogTheme() = if (baseConfig.backgroundColor.getContrastColor() == Color.WHITE) R.style.MyDialogTheme_Dark else R.style.MyDialogTheme
