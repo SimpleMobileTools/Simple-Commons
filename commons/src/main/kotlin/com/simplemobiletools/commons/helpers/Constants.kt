@@ -97,3 +97,18 @@ val PERMISSION_WRITE_CONTACTS = 6
 val PERMISSION_READ_CALENDAR = 7
 val PERMISSION_WRITE_CALENDAR = 8
 val PERMISSION_CALL_PHONE = 9
+
+fun getDateFormats() = arrayListOf(
+        "yyyy-MM-dd",
+        "yyyyMMdd",
+        "yyyy.MM.dd",
+        "yy-MM-dd",
+        "yyMMdd",
+        "yy.MM.dd",
+        "yy/MM/dd",
+        "MM-dd",
+        "--MM-dd",
+        "MMdd",
+        "MM/dd",
+        "MM.dd"
+)
