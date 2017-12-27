@@ -126,17 +126,17 @@
     <string name="primary_color">주요 색상(테마)</string>
     <string name="restore_defaults">기본설정으로 변경</string>
     <string name="theme">테마</string>
-    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
+    <string name="changing_color_description">주요 색상(테마)을 변경하면 사용자정의 테마로 전환됩니다.</string>
     <string name="save">저장</string>
     <string name="discard">취소</string>
     <string name="undo_changes">변경사항 되돌리기</string>
     <string name="undo_changes_confirmation">변경된 사항을  되돌리겠습니까?</string>
     <string name="save_before_closing">변경사항을 저장하지 않았습니다. 종료전에 저장 하시겠습니까?</string>
     <string name="apply_to_all_apps">심플 시리즈 애플리케이션에 일괄적용</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="share_colors_success">색상이 성공적으로 변경되었습니다. \'공유\'라는 새로운 테마가 추가되었습니다. 앞으로 모든 앱 색상을 변경할때 사용하세요.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
+            이 기능을 이용하시려면 개발지원을 위해 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 앱을 구매해주세요. 감사합니다!
         ]]>
     </string>
 
@@ -241,10 +241,10 @@
     <string name="more_apps_underlined"><u>앱 더보기</u></string>
     <string name="third_party_licences_underlined"><u>서드파티 라이선스</u></string>
     <string name="invite_friends_underlined"><u>친구에게 공유</u></string>
-    <string name="share_text">Hey, come check out %1$s at %2$s</string>
-    <string name="invite_via">Invite via</string>
+    <string name="share_text">%1$s 애플리케이션을 다운받으세요. %2$s</string>
+    <string name="invite_via">애플리케이션 선택</string>
     <string name="rate_us_underlined"><u>앱 평가하기</u></string>
-    <string name="donate">Donate</string>
+    <string name="donate">기부</string>
     <string name="donate_underlined"><u>기부하기</u></string>
     <string name="follow_us">Follow us</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
