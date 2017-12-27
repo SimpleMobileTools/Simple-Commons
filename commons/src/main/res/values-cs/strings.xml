@@ -11,6 +11,12 @@
     <string name="no_app_found">Nebyla nalezena žádná vhodná aplikace</string>
     <string name="set_as">Nastavit jako</string>
     <string name="value_copied_to_clipboard">Value copied to clipboard</string>
+    <string name="unknown">Unknown</string>
+
+    <!-- Filters -->
+    <string name="filter">Filtrovat</string>
+    <string name="no_items_found">No items found.</string>
+    <string name="change_filter">Change filter</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Storage permission is required</string>
@@ -139,6 +145,7 @@
     <string name="dark_theme">Tmavý</string>
     <string name="solarized">Solarizovaná</string>
     <string name="dark_red">Dark red</string>
+    <string name="black_white">Black &amp; White</string>
     <string name="custom">Vlastní</string>
     <string name="shared">Shared</string>
 
@@ -216,7 +223,7 @@
     <string name="settings">Nastavení</string>
     <string name="customize_colors">Přizpůsobit barvy</string>
     <string name="use_english_language">Use English language</string>
-    <string name="show_hidden">Zobrazit skryté soubory a složky</string>
+    <string name="show_hidden_items">Zobrazit skryté položky</string>
     <string name="font_size">Font size</string>
     <string name="small">Small</string>
     <string name="medium">Medium</string>

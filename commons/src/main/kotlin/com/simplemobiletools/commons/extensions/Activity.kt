@@ -6,6 +6,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.media.MediaScannerConnection
 import android.net.Uri
@@ -61,13 +62,13 @@ fun Activity.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
 
 private fun showToast(activity: Activity, messageId: Int, length: Int) {
     if (!activity.isActivityDestroyed()) {
-        Toast.makeText(activity, messageId, length).show()
+        Toast.makeText(activity.applicationContext, messageId, length).show()
     }
 }
 
 private fun showToast(activity: Activity, message: String, length: Int) {
     if (!activity.isActivityDestroyed()) {
-        Toast.makeText(activity, message, length).show()
+        Toast.makeText(activity.applicationContext, message, length).show()
     }
 }
 
@@ -125,8 +126,13 @@ fun Activity.isShowingSAFDialog(file: File, treeUri: String, requestCode: Int): 
 fun Activity.launchViewIntent(id: Int) = launchViewIntent(resources.getString(id))
 
 fun Activity.launchViewIntent(url: String) {
-    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-    startActivity(browserIntent)
+    Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
+        if (resolveActivity(packageManager) != null) {
+            startActivity(this)
+        } else {
+            toast(R.string.no_app_found)
+        }
+    }
 }
 
 fun Activity.shareUri(uri: Uri, applicationId: String) {
@@ -631,7 +637,7 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
     if (view is ViewGroup)
         updateTextColors(view)
     else if (view is MyTextView) {
-        view.setTextColor(baseConfig.textColor)
+        view.setColors(baseConfig.textColor, if (isBlackAndWhiteTheme()) Color.WHITE else baseConfig.primaryColor, baseConfig.backgroundColor)
     }
 
     var title: TextView? = null

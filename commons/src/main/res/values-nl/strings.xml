@@ -11,6 +11,12 @@
     <string name="no_app_found">Geen app gevonden om dit bestand mee te openen</string>
     <string name="set_as">Instellen als</string>
     <string name="value_copied_to_clipboard">Gekopieerd naar klembord</string>
+    <string name="unknown">Onbekend</string>
+
+    <!-- Filters -->
+    <string name="filter">Filter</string>
+    <string name="no_items_found">Geen items gevonden.</string>
+    <string name="change_filter">Filter aanpassen</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Permissie voor opslag benodigd</string>
@@ -139,6 +145,7 @@
     <string name="dark_theme">Donker</string>
     <string name="solarized">Overbelicht</string>
     <string name="dark_red">Donkerrood</string>
+    <string name="black_white">Zwart &amp; Wit</string>
     <string name="custom">Aangepast</string>
     <string name="shared">Gedeeld</string>
 
@@ -216,7 +223,7 @@
     <string name="settings">Instellingen</string>
     <string name="customize_colors">Kleuren aanpassen</string>
     <string name="use_english_language">Use English language</string>
-    <string name="show_hidden">Verborgen bestanden en mappen tonen</string>
+    <string name="show_hidden_items">Verborgen items tonen</string>
     <string name="font_size">Lettergrootte</string>
     <string name="small">Klein</string>
     <string name="medium">Normaal</string>
@@ -225,7 +232,7 @@
     <string name="password_protect_hidden_items">Verborgen items met wachtwoord beveiligen</string>
     <string name="password_protect_whole_app">Hele app met wachtwoord beveiligen</string>
     <string name="keep_last_modified">Datum laatst gewijzigd behouden bij bestandsoperaties</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+    <string name="show_info_bubble">Bij slepen van schuifbalk extra informatie tonen</string>
 
     <!-- About -->
     <string name="about">Over</string>

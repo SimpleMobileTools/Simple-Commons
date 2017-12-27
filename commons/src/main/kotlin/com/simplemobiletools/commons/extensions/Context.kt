@@ -6,6 +6,7 @@ import android.content.ContentUris
 import android.content.Context
 import android.content.pm.PackageManager
 import android.database.Cursor
+import android.graphics.Color
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
@@ -46,8 +47,17 @@ val Context.isRTLLayout: Boolean get() = if (isJellyBean1Plus()) resources.confi
 
 fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAccentColor: Int = 0) {
     val textColor = if (tmpTextColor == 0) baseConfig.textColor else tmpTextColor
-    val accentColor = if (tmpAccentColor == 0) baseConfig.primaryColor else tmpAccentColor
     val backgroundColor = baseConfig.backgroundColor
+    val accentColor = if (tmpAccentColor == 0) {
+        if (isBlackAndWhiteTheme()) {
+            Color.WHITE
+        } else {
+            baseConfig.primaryColor
+        }
+    } else {
+        tmpAccentColor
+    }
+
     val cnt = viewGroup.childCount
     (0 until cnt)
             .map { viewGroup.getChildAt(it) }
@@ -74,6 +84,10 @@ fun Context.getLinkTextColor(): Int {
         baseConfig.textColor
     }
 }
+
+fun Context.isBlackAndWhiteTheme() = baseConfig.textColor == Color.WHITE && baseConfig.primaryColor == Color.BLACK && baseConfig.backgroundColor == Color.BLACK
+
+fun Context.getAdjustedPrimaryColor() = if (isBlackAndWhiteTheme()) Color.WHITE else baseConfig.primaryColor
 
 fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(this, id, length).show()
@@ -192,6 +206,7 @@ fun Context.getPermissionString(id: Int) = when (id) {
     PERMISSION_WRITE_CONTACTS -> Manifest.permission.WRITE_CONTACTS
     PERMISSION_READ_CALENDAR -> Manifest.permission.READ_CALENDAR
     PERMISSION_WRITE_CALENDAR -> Manifest.permission.WRITE_CALENDAR
+    PERMISSION_CALL_PHONE -> Manifest.permission.CALL_PHONE
     else -> ""
 }
 
@@ -294,3 +309,5 @@ fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
         }
     }.start()
 }
+
+fun Context.getDialogTheme() = if (baseConfig.backgroundColor.getContrastColor() == Color.WHITE) R.style.MyDialogTheme_Dark else R.style.MyDialogTheme

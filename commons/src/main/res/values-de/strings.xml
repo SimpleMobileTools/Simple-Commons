@@ -11,6 +11,12 @@
     <string name="no_app_found">Keine passende App gefunden</string>
     <string name="set_as">Festlegen als</string>
     <string name="value_copied_to_clipboard">Wert in Zwischenablage kopiert</string>
+    <string name="unknown">Unbekannt</string>
+
+    <!-- Filters -->
+    <string name="filter">Sortieren</string>
+    <string name="no_items_found">Nichts gefunden.</string>
+    <string name="change_filter">Sortierung ändern</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Speicher-Berechtigung wird benötigt</string>
@@ -139,6 +145,7 @@
     <string name="dark_theme">Dunkel</string>
     <string name="solarized">Solarized</string>
     <string name="dark_red">Dunkelrot</string>
+    <string name="black_white">Schwarz-Weiß</string>
     <string name="custom">Benutzerdefiniert</string>
     <string name="shared">Shared</string>
 
@@ -216,7 +223,7 @@
     <string name="settings">Einstellungen</string>
     <string name="customize_colors">Farben anpassen</string>
     <string name="use_english_language">Englische Sprache verwenden</string>
-    <string name="show_hidden">Versteckte Dateien/Ordner zeigen</string>
+    <string name="show_hidden_items">Versteckte Elemente anzeigen</string>
     <string name="font_size">Schriftgröße</string>
     <string name="small">Klein</string>
     <string name="medium">Mittel</string>

@@ -11,6 +11,12 @@
     <string name="no_app_found">有効なアプリが見つかりません</string>
     <string name="set_as">他で使う</string>
     <string name="value_copied_to_clipboard">値をクリップボードにコピーしました</string>
+    <string name="unknown">Unknown</string>
+
+    <!-- Filters -->
+    <string name="filter">Filter</string>
+    <string name="no_items_found">No items found.</string>
+    <string name="change_filter">Change filter</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Storage permission is required</string>
@@ -139,6 +145,7 @@
     <string name="dark_theme">ダーク</string>
     <string name="solarized">Solarized</string>
     <string name="dark_red">Dark red</string>
+    <string name="black_white">Black &amp; White</string>
     <string name="custom">カスタム</string>
     <string name="shared">Shared</string>
 
@@ -216,7 +223,7 @@
     <string name="settings">設定</string>
     <string name="customize_colors">表示色のカスタマイズ</string>
     <string name="use_english_language">Use English language</string>
-    <string name="show_hidden">非表示のファイルとディレクトリーを表示する</string>
+    <string name="show_hidden_items">Show hidden items</string>
     <string name="font_size">メモのフォントサイズ</string>
     <string name="small">小</string>
     <string name="medium">通常</string>

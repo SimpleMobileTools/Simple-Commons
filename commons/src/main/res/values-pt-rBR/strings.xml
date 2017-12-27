@@ -10,13 +10,19 @@
     <string name="open_with">Abrir com</string>
     <string name="no_app_found">Nenhum aplicativo encontrado</string>
     <string name="set_as">Definir como</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
+    <string name="value_copied_to_clipboard">Valor copiado para a área de transferência</string>
+    <string name="unknown">Unknown</string>
+
+    <!-- Filters -->
+    <string name="filter">Filtrar</string>
+    <string name="no_items_found">Nenhum item encontrado.</string>
+    <string name="change_filter">Alterar filtro</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">É necessária a permissão Armazenamento</string>
+    <string name="no_contacts_permission">É necessária a permissão Contatos</string>
+    <string name="no_camera_permissions">É necessária a permissão Câmera</string>
+    <string name="no_audio_permissions">É necessária a permissão Áudio</string>
 
     <!-- Renaming -->
     <string name="rename_file">Renomear arquivo</string>
@@ -25,12 +31,12 @@
     <string name="rename_folder_error">Não foi possível renomear a pasta</string>
     <string name="rename_folder_empty">O nome da pasta não pode estar vazio</string>
     <string name="rename_folder_exists">Já existe uma pasta com este nome</string>
-    <string name="rename_folder_root">Não se pode renomear a pasta raíz de um armazenamento</string>
+    <string name="rename_folder_root">Não se pode renomear a pasta raiz de um armazenamento</string>
     <string name="rename_folder_ok">A pasta foi renomeada com sucesso</string>
     <string name="renaming_folder">A renomear pasta</string>
-    <string name="filename_cannot_be_empty">O nome do arquivo não pode estar vazio</string>
+    <string name="filename_cannot_be_empty">O nome do arquivo não pode ficar em branco</string>
     <string name="filename_invalid_characters">O nome do arquivo contém caracteres inválidos</string>
-    <string name="extension_cannot_be_empty">A extensão não pode estar vazia</string>
+    <string name="extension_cannot_be_empty">A extensão não pode ficar em branco</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
@@ -74,34 +80,34 @@
     <string name="select_an_action">Selecione uma ação</string>
     <string name="overwrite">Substituir</string>
     <string name="skip">Ignorar</string>
-    <string name="append">Anexar \'_1\'</string>
+    <string name="append">Adicionar sufixo \'_1\'</string>
     <string name="apply_to_all">Aplicar a todos os conflitos</string>
 
     <!-- File picker -->
     <string name="select_folder">Selecionar pasta</string>
     <string name="select_file">Selecionar arquivo</string>
     <string name="confirm_storage_access_title">Confirmação de acesso ao armazenamento externo</string>
-    <string name="confirm_storage_access_text">Por favor escolha a pasta raíz do cartão SD no próximo passo para conceder acesso de escrita</string>
+    <string name="confirm_storage_access_text">Por favor escolha a pasta raiz do cartão SD no próximo passo para conceder acesso de escrita</string>
     <string name="confirm_storage_access_text_sd">Se você não encontrar o cartão SD, tente isto</string>
     <string name="confirm_selection">Confirmar seleção</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d ítem</item>
-        <item quantity="other">%1$d ítens</item>
+        <item quantity="one">%1$d item</item>
+        <item quantity="other">%1$d itens</item>
     </plurals>
 
     <!-- Storages -->
     <string name="select_storage">Selecionar armazenamento</string>
     <string name="internal">Interno</string>
     <string name="sd_card">Cartão SD</string>
-    <string name="root">Raíz</string>
-    <string name="wrong_root_selected">Pasta inválida, por favor selecione o cartão SD</string>
+    <string name="root">Raiz</string>
+    <string name="wrong_root_selected">Pasta inválida, por favor selecione a raiz do cartão SD</string>
 
     <!-- File properties -->
     <string name="properties">Propriedades</string>
     <string name="path">Caminho</string>
-    <string name="items_selected">Ítens selecionados</string>
-    <string name="direct_children_count">Ítens nesta pasta</string>
+    <string name="items_selected">Itens selecionados</string>
+    <string name="direct_children_count">Itens nesta pasta</string>
     <string name="files_count">Total de arquivos</string>
     <string name="resolution">Resolução</string>
     <string name="duration">Duração</string>
@@ -125,22 +131,23 @@
     <string name="discard">Descartar</string>
     <string name="undo_changes">Desfazer alterações</string>
     <string name="undo_changes_confirmation">Tem certeza que deseja desfazer as alterações?</string>
-    <string name="save_before_closing">Possui alterações não salvass. Salvar antes de sair?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="save_before_closing">Existem alterações não salvas. Salvar antes de sair?</string>
+    <string name="apply_to_all_apps">Aplicar cores a todos os Apps Simple</string>
+    <string name="share_colors_success">Cores atualizadas com sucesso. Um novo tema chamado \'Compartilhado\' foi adicionado, use-o para atualizar as cores de todos os apps no futuro.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
+            Por favor compre o <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Agradecimento Simple</a> para desbloquear esta função e apoiar o desenvolvimento. Obrigado!
         ]]>
     </string>
 
     <!-- Themes -->
     <string name="light_theme">Claro</string>
     <string name="dark_theme">Escuro</string>
-    <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
+    <string name="solarized">Ensolarado</string>
+    <string name="dark_red">Vermelho Escuro</string>
+    <string name="black_white">Black &amp; White</string>
     <string name="custom">Personalizado</string>
-    <string name="shared">Shared</string>
+    <string name="shared">Compartilhado</string>
 
     <!-- What's new -->
     <string name="whats_new">Novidades</string>
@@ -169,8 +176,8 @@
     <string name="title">Título</string>
     <string name="filename">Nome do arquivo</string>
     <string name="extension">Extensão</string>
-    <string name="ascending">Ascendente</string>
-    <string name="descending">Descendente</string>
+    <string name="ascending">Crescente</string>
+    <string name="descending">Decrescente</string>
     <string name="use_for_this_folder">Apenas para esta pasta</string>
 
     <!-- Confirmation dialog -->
@@ -182,7 +189,7 @@
     <string name="pin">PIN</string>
     <string name="enter_pin">Digite o PIN</string>
     <string name="please_enter_pin">Favor digitar o PIN</string>
-    <string name="wrong_pin">PIN errado</string>
+    <string name="wrong_pin">PIN incorreto</string>
     <string name="repeat_pin">Repetir PIN</string>
     <string name="pattern">Padrão</string>
     <string name="insert_pattern">Inserir padrão</string>
@@ -190,7 +197,7 @@
     <string name="repeat_pattern">Repetir padrão</string>
     <string name="fingerprint">Digital</string>
     <string name="add_fingerprint">Adicionar digital</string>
-    <string name="place_finger">Favor pôr seu dedo sobre o leitor de digital</string>
+    <string name="place_finger">Posicione seu dedo sobre o leitor de digitais</string>
     <string name="authentication_failed">Autenticação falhou</string>
     <string name="authentication_blocked">Autenticação bloqueada, favor tentar novamente em instantes</string>
     <string name="no_fingerprints_registered">Você não tem digitais cadastradas. Favor adiconar alguma nas configurações do seu aparelho</string>
@@ -215,17 +222,17 @@
     <!-- Settings -->
     <string name="settings">Configurações</string>
     <string name="customize_colors">Personalizar cores</string>
-    <string name="use_english_language">Use English language</string>
-    <string name="show_hidden">Mostrar arquivos e pastas ocultos</string>
+    <string name="use_english_language">Usar o idioma inglês</string>
+    <string name="show_hidden_items">Mostrar itens ocultos</string>
     <string name="font_size">Tamanho do texto</string>
     <string name="small">Pequeno</string>
     <string name="medium">Médio</string>
     <string name="large">Grande</string>
     <string name="extra_large">Muito grande</string>
-    <string name="password_protect_hidden_items">Proteja visibilidade de ítens ocultos com senha</string>
-    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="password_protect_hidden_items">Restringir a visualização de itens ocultos com senha</string>
+    <string name="password_protect_whole_app">Proteção por senha em todo o app</string>
     <string name="keep_last_modified">Manter valor anterior do arquivo modificado por último ao copiar/mover/renomear arquivo</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+    <string name="show_info_bubble">Mostrar bolha de informação ao rolar usando a barra de rolagem</string>
 
     <!-- About -->
     <string name="about">Sobre</string>
@@ -236,7 +243,7 @@
     <string name="invite_friends_underlined"><u>Convidar amigos</u></string>
     <string name="share_text">Olá, experimente %1$s em %2$s</string>
     <string name="invite_via">Convidar via</string>
-    <string name="rate_us_underlined"><u>Avalie-nos na Play Store</u></string>
+    <string name="rate_us_underlined"><u>Nos avalie na Play Store</u></string>
     <string name="donate">Doações</string>
     <string name="donate_underlined"><u>Doações</u></string>
     <string name="follow_us">Siga-nos</string>
@@ -246,13 +253,13 @@
     <string name="device_os">Sistema operacional: %1$s</string>
     <string name="donate_please">
         <![CDATA[
-            Hello,<br><br>
-            hope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
-            You can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.<br><br>
-            Thank you!
+            Olá,<br><br>
+            Esperamos que esteja gostando do app. Ele não contém anúncios, então apoie o desenvolvimento adquirindo o <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Agradecimento ao Simple</a>, ele também bloqueia este diálogo de aparecer.<br><br>
+            Mais opções de doações <a href="http://simplemobiletools.com/donate">aqui</a>.<br><br>
+            Obrigado!
         ]]>
     </string>
-    <string name="purchase">Purchase</string>
+    <string name="purchase">Comprar</string>
 
     <!-- License -->
     <string name="notice">Este aplicativo usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>

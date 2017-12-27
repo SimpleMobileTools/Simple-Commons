@@ -14,6 +14,7 @@ import com.simplemobiletools.commons.helpers.sumByLong
 import kotlinx.android.synthetic.main.dialog_properties.view.*
 import kotlinx.android.synthetic.main.property_item.view.*
 import java.io.File
+import java.io.FileNotFoundException
 import java.util.*
 
 class PropertiesDialog() {
@@ -93,7 +94,12 @@ class PropertiesDialog() {
             addProperty(R.string.last_modified, file.lastModified().formatDate())
         } else {
             addProperty(R.string.last_modified, "...", R.id.properties_last_modified)
-            addExifProperties(path)
+            try {
+                addExifProperties(path)
+            } catch (e: FileNotFoundException) {
+                activity.toast(R.string.unknown_error_occurred)
+                return
+            }
         }
 
         AlertDialog.Builder(activity)

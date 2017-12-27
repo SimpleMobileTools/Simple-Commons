@@ -6,17 +6,23 @@
     <string name="file_saved">파일저장 성공</string>
     <string name="invalid_file_format">잘못된 파일 형식</string>
     <string name="out_of_memory_error">메모리 부족 오류</string>
-    <string name="an_error_occurred">An error occurred: %s</string>
-    <string name="open_with">Open with</string>
-    <string name="no_app_found">No valid app found</string>
-    <string name="set_as">Set as</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
+    <string name="an_error_occurred">에러발생: %s</string>
+    <string name="open_with">연결 애플리케이션</string>
+    <string name="no_app_found">연결 가능한 애플리케이션 없음</string>
+    <string name="set_as">애플리케이션에 설정</string>
+    <string name="value_copied_to_clipboard">클립보드에 복사됨</string>
+    <string name="unknown">알 수 없음</string>
+
+    <!-- Filters -->
+    <string name="filter">필터</string>
+    <string name="no_items_found">항목을 찾지 못함</string>
+    <string name="change_filter">필터 변경</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">저장 권한이 필요함</string>
+    <string name="no_contacts_permission">주소록 사용 권한이 필요함</string>
+    <string name="no_camera_permissions">카메라 사용 권한이 필요함</string>
+    <string name="no_audio_permissions">오디오 사용 권한이 필요함</string>
 
     <!-- Renaming -->
     <string name="rename_file">파일명 변경</string>
@@ -38,14 +44,14 @@
     <string name="copy_move">복사 / 이동</string>
     <string name="copy_to">복사하기</string>
     <string name="move_to">이동하기</string>
-    <string name="source">Source</string>
-    <string name="destination">Destination</string>
-    <string name="select_destination">Select destination</string>
-    <string name="click_select_destination">Click here to select destination</string>
-    <string name="invalid_destination">Could not write to the selected destination</string>
-    <string name="please_select_destination">Please select a destination</string>
-    <string name="source_and_destination_same">Source and destination cannot be the same</string>
-    <string name="copy_failed">Could not copy the files</string>
+    <string name="source">원본</string>
+    <string name="destination">대상</string>
+    <string name="select_destination">대상 선택</string>
+    <string name="click_select_destination">대상을 선택하려면 여기를 클릭하세요.</string>
+    <string name="invalid_destination">대상경로에 생성 할 수 없음</string>
+    <string name="please_select_destination">대상 경로를 선택하세요.</string>
+    <string name="source_and_destination_same">원본파일과 대상파일은 동일할 수 없음</string>
+    <string name="copy_failed">파일을 복사 할 수 없음</string>
     <string name="copying">복사중&#8230;</string>
     <string name="copying_success">파일복사 성공</string>
     <string name="copy_move_failed">에러발생</string>
@@ -55,8 +61,8 @@
     <string name="copying_success_partial">일부 파일을 복사 할 수 없음</string>
     <string name="no_files_selected">파일이 선택되지 않음</string>
     <string name="saving">저장중&#8230;</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="could_not_create_folder">%s 폴더 생성에 실패함</string>
+    <string name="could_not_create_file">%s 파일 생성에 실패함</string>
 
     <!-- Create new -->
     <string name="create_new">새로 만들기</string>
@@ -98,11 +104,11 @@
     <string name="wrong_root_selected">잘못된 폴더가 선택되었습니다. SD 카드의 루트 폴더를 선택하세요.</string>
 
     <!-- File properties -->
-    <string name="properties">상세정보</string>
+    <string name="properties">속성</string>
     <string name="path">경로</string>
-    <string name="items_selected">Items selected</string>
+    <string name="items_selected">선택된 항목 수</string>
     <string name="direct_children_count">Direct children count</string>
-    <string name="files_count">Total files count</string>
+    <string name="files_count">전체 파일 수</string>
     <string name="resolution">해상도</string>
     <string name="duration">Duration</string>
     <string name="artist">Artist</string>
@@ -117,20 +123,20 @@
     <!-- Color customization -->
     <string name="background_color">배경 색상</string>
     <string name="text_color">텍스트 색상</string>
-    <string name="primary_color">Primary color</string>
+    <string name="primary_color">주요 색상(테마)</string>
     <string name="restore_defaults">기본설정으로 변경</string>
     <string name="theme">테마</string>
-    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
+    <string name="changing_color_description">주요 색상(테마)을 변경하면 사용자정의 테마로 전환됩니다.</string>
     <string name="save">저장</string>
     <string name="discard">취소</string>
     <string name="undo_changes">변경사항 되돌리기</string>
     <string name="undo_changes_confirmation">변경된 사항을  되돌리겠습니까?</string>
     <string name="save_before_closing">변경사항을 저장하지 않았습니다. 종료전에 저장 하시겠습니까?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="apply_to_all_apps">심플 시리즈 애플리케이션에 일괄적용</string>
+    <string name="share_colors_success">색상이 성공적으로 변경되었습니다. \'공유\'라는 새로운 테마가 추가되었습니다. 앞으로 모든 앱 색상을 변경할때 사용하세요.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
+            이 기능을 이용하시려면 개발지원을 위해 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 앱을 구매해주세요. 감사합니다!
         ]]>
     </string>
 
@@ -139,11 +145,12 @@
     <string name="dark_theme">Dark</string>
     <string name="solarized">Solarized</string>
     <string name="dark_red">Dark red</string>
+    <string name="black_white">Black &amp; White</string>
     <string name="custom">Custom</string>
     <string name="shared">Shared</string>
 
     <!-- What's new -->
-    <string name="whats_new">What\'s new</string>
+    <string name="whats_new">새로운 기능</string>
     <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
 
     <!-- Actionbar items -->
@@ -152,13 +159,13 @@
     <string name="share">공유</string>
     <string name="share_via">공유방법</string>
     <string name="select_all">전체선택</string>
-    <string name="hide">Hide</string>
+    <string name="hide">숨김</string>
     <string name="unhide">Unhide</string>
-    <string name="hide_folder">Hide folder</string>
+    <string name="hide_folder">폴더 숨김</string>
     <string name="unhide_folder">Unhide folder</string>
     <string name="temporarily_show_hidden">숨김파일 임시보기</string>
     <string name="stop_showing_hidden">숨김파일 임시보기 해제</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
+    <string name="maximum_share_reached">한 번에 많은 콘텐츠를 공유 할 수 없습니다.</string>
 
     <!-- Sorting -->
     <string name="sort_by">정렬 방식</string>
@@ -174,9 +181,9 @@
     <string name="use_for_this_folder">현재 폴더만 적용</string>
 
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="proceed_with_deletion">정말로 삭제 하시겠습니까?</string>
+    <string name="yes">네</string>
+    <string name="no">아니요</string>
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
@@ -187,16 +194,16 @@
     <string name="pattern">패턴</string>
     <string name="insert_pattern">패턴 입력</string>
     <string name="wrong_pattern">패턴이 잘못 입력되었습니다.</string>
-    <string name="repeat_pattern">패터 확인</string>
-    <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
-    <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
+    <string name="repeat_pattern">패턴 확인</string>
+    <string name="fingerprint">지문</string>
+    <string name="add_fingerprint">지문 추가</string>
+    <string name="place_finger">지문 센서에 손가락을 올려주세요.</string>
+    <string name="authentication_failed">인증 실패</string>
+    <string name="authentication_blocked">인증이 차단 되었으니, 잠시 후 다시 시도하십시오.</string>
+    <string name="no_fingerprints_registered">등록 된 지문이 없습니다. 기기의 설정에서 지문을 추가하십시오.</string>
+    <string name="go_to_settings">설정으로 이동</string>
     <string name="protection_setup_successfully">암호 설정이 완료되었습니다. 암호를 기억하지 못하는경우 앱을 다시 설치하시기 바랍니다.</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="fingerprint_setup_successfully">보안 설정이 성공적으로 완료되었습니다. 재설정 시 문제가 발생하면 앱을 다시 설치하시기 바랍니다.</string>
 
     <!-- Times -->
     <plurals name="seconds">
@@ -215,17 +222,17 @@
     <!-- Settings -->
     <string name="settings">설정</string>
     <string name="customize_colors">앱 테마 및 색상 설정</string>
-    <string name="use_english_language">Use English language</string>
-    <string name="show_hidden">숨김파일 및 폴더 보기</string>
+    <string name="use_english_language">영어 사용</string>
+    <string name="show_hidden_items">숨김항목 활성화</string>
     <string name="font_size">폰트 크기</string>
     <string name="small">작게</string>
     <string name="medium">중간</string>
     <string name="large">크게</string>
     <string name="extra_large">아주 크게</string>
     <string name="password_protect_hidden_items">숨김파일 보기 암호설정</string>
-    <string name="password_protect_whole_app">Password protect the whole application</string>
-    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+    <string name="password_protect_whole_app">애플리케이션 전체에서 암호를 이용한 보호기능 사용</string>
+    <string name="keep_last_modified">파일 복사/이동/변경 시 최종 수정시간 정보를 유지</string>
+    <string name="show_info_bubble">스크롤바 드래그 시 항목별 툴팁 활성화</string>
 
     <!-- About -->
     <string name="about">앱정보</string>
@@ -234,10 +241,10 @@
     <string name="more_apps_underlined"><u>앱 더보기</u></string>
     <string name="third_party_licences_underlined"><u>서드파티 라이선스</u></string>
     <string name="invite_friends_underlined"><u>친구에게 공유</u></string>
-    <string name="share_text">Hey, come check out %1$s at %2$s</string>
-    <string name="invite_via">Invite via</string>
+    <string name="share_text">%1$s 애플리케이션을 다운받으세요. %2$s</string>
+    <string name="invite_via">애플리케이션 선택</string>
     <string name="rate_us_underlined"><u>앱 평가하기</u></string>
-    <string name="donate">Donate</string>
+    <string name="donate">기부</string>
     <string name="donate_underlined"><u>기부하기</u></string>
     <string name="follow_us">Follow us</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
@@ -246,13 +253,16 @@
     <string name="device_os">Device OS: %1$s</string>
     <string name="donate_please">
         <![CDATA[
-            Hello,<br><br>
-            hope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
-            You can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.<br><br>
-            Thank you!
+            안녕하세요.<br>
+            우리의 애플리케이션이 도움이 되길 바랍니다.<br>
+            사용하고 계신 애플리케이션은 광고 및 인앱 결제가 없는 무료 애플리케이션이므로 별도의 수익이 발생하지 않습니다.<br>
+            당신이 원하신다면 개발지원을 위해 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 앱을 다운받아 지원 하실 수 있습니다.<br>
+            \'Simple Thank You\' 앱이 설치되면 이 다이얼로그는 비 활성화 됩니다.<br>
+            이 방법외에도 <a href="http://simplemobiletools.com/donate">링크</a>를 통해 다양한 방식으로 개발지원을 하실 수 있습니다.<br>
+            감사합니다.
         ]]>
     </string>
-    <string name="purchase">Purchase</string>
+    <string name="purchase">구매</string>
 
     <!-- License -->
     <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>

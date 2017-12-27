@@ -11,6 +11,12 @@
     <string name="no_app_found">No se encontró una aplicación válida</string>
     <string name="set_as">Establecer como</string>
     <string name="value_copied_to_clipboard">Valor copiado en el portapapeles</string>
+    <string name="unknown">Unknown</string>
+
+    <!-- Filters -->
+    <string name="filter">Filtrar</string>
+    <string name="no_items_found">No items found.</string>
+    <string name="change_filter">Change filter</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Storage permission is required</string>
@@ -139,6 +145,7 @@
     <string name="dark_theme">Oscuro</string>
     <string name="solarized">Solarized</string>
     <string name="dark_red">Dark red</string>
+    <string name="black_white">Black &amp; White</string>
     <string name="custom">Personalizado</string>
     <string name="shared">Shared</string>
 
@@ -216,7 +223,7 @@
     <string name="settings">Ajustes</string>
     <string name="customize_colors">Cambiar colores</string>
     <string name="use_english_language">Usar el idioma Inglés</string>
-    <string name="show_hidden">Mostrar ficheros y directorios ocultos</string>
+    <string name="show_hidden_items">Show hidden items</string>
     <string name="font_size">Tamaño de fuente</string>
     <string name="small">Pequeña</string>
     <string name="medium">Medium</string>

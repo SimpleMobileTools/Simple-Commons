@@ -13,6 +13,8 @@ import android.widget.TextView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
+import com.simplemobiletools.commons.extensions.onGlobalLayout
 
 // based on https://blog.stylingandroid.com/recyclerview-fastscroll-part-1
 class FastScroller : FrameLayout {
@@ -24,6 +26,8 @@ class FastScroller : FrameLayout {
     private var currHeight = 0
     private var currWidth = 0
     private var bubbleOffset = 0
+    private var handleWidth = 0
+    private var handleHeight = 0
     private var fastScrollCallback: ((Int) -> Unit)? = null
 
     private val HANDLE_HIDE_DELAY = 1000L
@@ -58,7 +62,7 @@ class FastScroller : FrameLayout {
     }
 
     fun updatePrimaryColor() {
-        handle!!.background.applyColorFilter(context.baseConfig.primaryColor)
+        handle!!.background.applyColorFilter(context.getAdjustedPrimaryColor())
         updateBubblePrimaryColor()
     }
 
@@ -69,7 +73,7 @@ class FastScroller : FrameLayout {
     }
 
     fun updateBubblePrimaryColor() {
-        getBubbleBackgroundDrawable()?.setStroke(resources.displayMetrics.density.toInt(), context.baseConfig.primaryColor)
+        getBubbleBackgroundDrawable()?.setStroke(resources.displayMetrics.density.toInt(), context.getAdjustedPrimaryColor())
     }
 
     fun updateBubbleTextColor() {
@@ -148,6 +152,7 @@ class FastScroller : FrameLayout {
             MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                 handle!!.isSelected = false
                 swipeRefreshLayout?.isEnabled = true
+                hideHandle()
                 true
             }
             else -> super.onTouchEvent(event)
@@ -172,6 +177,10 @@ class FastScroller : FrameLayout {
     override fun onFinishInflate() {
         super.onFinishInflate()
         handle = getChildAt(0)
+        handle!!.onGlobalLayout {
+            handleWidth = handle!!.width
+            handleHeight = handle!!.height
+        }
         bubble = getChildAt(1) as? TextView
 
         if (bubble != null) {
@@ -185,35 +194,41 @@ class FastScroller : FrameLayout {
         handle!!.alpha = 1f
 
         if (handle!!.isSelected && allowBubbleDisplay) {
-            bubble?.animate()?.alpha(1f)?.start()
             bubble?.alpha = 1f
+            bubble?.animate()?.alpha(1f)?.start()
         }
     }
 
     private fun hideHandle() {
-        handle!!.animate().alpha(0f).startDelay = HANDLE_HIDE_DELAY
-        bubble?.animate()?.alpha(0f)?.setStartDelay(HANDLE_HIDE_DELAY)?.withEndAction {
-            bubble?.text = ""
+        if (!handle!!.isSelected) {
+            handle!!.animate().alpha(0f).startDelay = HANDLE_HIDE_DELAY
+            bubble?.animate()?.alpha(0f)?.setStartDelay(HANDLE_HIDE_DELAY)?.withEndAction {
+                if (bubble?.alpha == 0f) {
+                    bubble?.text = ""
+                }
+            }
         }
     }
 
     private fun setPosition(pos: Float) {
         if (isHorizontal) {
             val position = pos / currWidth
-            val handleWidth = handle!!.width
             handle!!.x = getValueInRange(0f, (currWidth - handleWidth).toFloat(), (currWidth - handleWidth) * position)
 
-            val bubbleWidth = bubble?.width ?: 0
-            val newX = getValueInRange(0f, (currWidth - bubbleWidth).toFloat(), (currWidth - bubbleWidth) * position)
-            bubble?.x = Math.max(0f, newX)
+            if (bubble != null) {
+                val bubbleWidth = bubble!!.width
+                val newX = getValueInRange(0f, (currWidth - bubbleWidth).toFloat(), (currWidth - bubbleWidth) * position)
+                bubble!!.x = Math.max(0f, newX)
+            }
         } else {
             val position = pos / currHeight
-            val handleHeight = handle!!.height
             handle!!.y = getValueInRange(0f, (currHeight - handleHeight).toFloat(), (currHeight - handleHeight) * position)
 
-            val bubbleHeight = bubble?.height ?: 0
-            val newY = getValueInRange(0f, (currHeight - bubbleHeight).toFloat(), (currHeight - bubbleHeight) * position)
-            bubble?.y = Math.max(0f, newY - bubbleOffset)
+            if (bubble != null) {
+                val bubbleHeight = bubble!!.height
+                val newY = getValueInRange(0f, (currHeight - bubbleHeight).toFloat(), (currHeight - bubbleHeight) * position)
+                bubble!!.y = Math.max(0f, newY - bubbleOffset)
+            }
         }
         hideHandle()
     }

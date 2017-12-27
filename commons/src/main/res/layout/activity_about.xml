@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autoLink="web"
-            android:text="@string/website"
+            android:text="@string/my_website"
             android:textColorLink="@color/color_primary"/>
 
         <com.simplemobiletools.commons.views.MyTextView
@@ -27,7 +27,7 @@
             android:layout_below="@+id/about_website"
             android:layout_marginTop="@dimen/activity_margin"
             android:paddingBottom="@dimen/activity_margin"
-            android:text="@string/email"
+            android:text="@string/my_email"
             android:textColorLink="@color/color_primary"/>
 
         <com.simplemobiletools.commons.views.MyTextView

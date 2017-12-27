@@ -11,6 +11,12 @@
     <string name="no_app_found">找不到應用程式</string>
     <string name="set_as">設為</string>
     <string name="value_copied_to_clipboard">數值複製到剪貼簿</string>
+    <string name="unknown">未知的</string>
+
+    <!-- Filters -->
+    <string name="filter">篩選</string>
+    <string name="no_items_found">未發現項目</string>
+    <string name="change_filter">更改篩選條件</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">存儲權限是必要的</string>
@@ -138,7 +144,8 @@
     <string name="light_theme">明亮主題</string>
     <string name="dark_theme">灰暗主題</string>
     <string name="solarized">Solarized</string>
-    <string name="dark_red">深紅</string>
+    <string name="dark_red">深紅主題</string>
+    <string name="black_white">黑白主題</string>
     <string name="custom">自訂</string>
     <string name="shared">分享</string>
 
@@ -158,7 +165,7 @@
     <string name="unhide_folder">取消隱藏資料夾</string>
     <string name="temporarily_show_hidden">暫時顯示隱藏的檔案</string>
     <string name="stop_showing_hidden">停止顯示隱藏的檔案</string>
-    <string name="maximum_share_reached">您不能一次分享如此多內容</string>
+    <string name="maximum_share_reached">您不能一次分享這麼多內容</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序</string>
@@ -216,7 +223,7 @@
     <string name="settings">設定</string>
     <string name="customize_colors">自訂顏色</string>
     <string name="use_english_language">使用英文語言</string>
-    <string name="show_hidden">顯示隱藏的檔案及資料夾</string>
+    <string name="show_hidden_items">顯示隱藏的項目</string>
     <string name="font_size">字體大小</string>
     <string name="small">小</string>
     <string name="medium">中</string>
@@ -225,7 +232,7 @@
     <string name="password_protect_hidden_items">用密碼保護隱藏的物件</string>
     <string name="password_protect_whole_app">用密碼保護整個應用程式</string>
     <string name="keep_last_modified">當檔案複製/移動/重新命名時，保留舊的「最後修改」數值</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+    <string name="show_info_bubble">拖曳滾動條時，顯示訊息氣泡</string>
 
     <!-- About -->
     <string name="about">關於</string>

@@ -11,6 +11,12 @@
     <string name="no_app_found">Hittade ingen giltig app</string>
     <string name="set_as">Ange som</string>
     <string name="value_copied_to_clipboard">Värdet har kopierats till urklipp</string>
+    <string name="unknown">Unknown</string>
+
+    <!-- Filters -->
+    <string name="filter">Filtrera</string>
+    <string name="no_items_found">No items found.</string>
+    <string name="change_filter">Change filter</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Lagringsbehörighet krävs</string>
@@ -139,6 +145,7 @@
     <string name="dark_theme">Mörkt</string>
     <string name="solarized">Solariserat</string>
     <string name="dark_red">Mörkrött</string>
+    <string name="black_white">Black &amp; White</string>
     <string name="custom">Anpassat</string>
     <string name="shared">Delat</string>
 
@@ -216,7 +223,7 @@
     <string name="settings">Inställningar</string>
     <string name="customize_colors">Anpassa färger</string>
     <string name="use_english_language">Använd engelska</string>
-    <string name="show_hidden">Visa dolda filer och mappar</string>
+    <string name="show_hidden_items">Show hidden items</string>
     <string name="font_size">Teckenstorlek</string>
     <string name="small">Liten</string>
     <string name="medium">Medelstor</string>

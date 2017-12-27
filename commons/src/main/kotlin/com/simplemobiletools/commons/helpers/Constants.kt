@@ -36,6 +36,7 @@ val WAS_SHARED_THEME_FORCED = "was_shared_theme_forced"
 val WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN = "was_custom_theme_switch_description_shown"
 val WAS_SHARED_THEME_AFTER_UPDATE_CHECKED = "was_shared_theme_after_update_checked"
 val SHOW_INFO_BUBBLE = "show_info_bubble"
+val SORTING = "sorting"
 
 // licenses
 val LICENSE_KOTLIN = 1
@@ -71,6 +72,9 @@ val SORT_BY_DATE_TAKEN = 8
 val SORT_BY_EXTENSION = 16
 val SORT_BY_PATH = 32
 val SORT_BY_NUMBER = 64
+val SORT_BY_FIRST_NAME = 128
+val SORT_BY_MIDDLE_NAME = 256
+val SORT_BY_SURNAME = 512
 val SORT_DESCENDING = 1024
 
 // security
@@ -92,3 +96,19 @@ val PERMISSION_READ_CONTACTS = 5
 val PERMISSION_WRITE_CONTACTS = 6
 val PERMISSION_READ_CALENDAR = 7
 val PERMISSION_WRITE_CALENDAR = 8
+val PERMISSION_CALL_PHONE = 9
+
+fun getDateFormats() = arrayListOf(
+        "yyyy-MM-dd",
+        "yyyyMMdd",
+        "yyyy.MM.dd",
+        "yy-MM-dd",
+        "yyMMdd",
+        "yy.MM.dd",
+        "yy/MM/dd",
+        "MM-dd",
+        "--MM-dd",
+        "MMdd",
+        "MM/dd",
+        "MM.dd"
+)
