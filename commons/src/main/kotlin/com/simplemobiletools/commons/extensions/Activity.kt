@@ -126,118 +126,130 @@ fun Activity.isShowingSAFDialog(file: File, treeUri: String, requestCode: Int): 
 fun Activity.launchViewIntent(id: Int) = launchViewIntent(resources.getString(id))
 
 fun Activity.launchViewIntent(url: String) {
-    Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
-        if (resolveActivity(packageManager) != null) {
-            startActivity(this)
-        } else {
-            toast(R.string.no_app_found)
-        }
-    }
-}
-
-fun Activity.shareUri(uri: Uri, applicationId: String) {
-    val newUri = ensurePublicUri(uri, applicationId)
-    Intent().apply {
-        action = Intent.ACTION_SEND
-        putExtra(Intent.EXTRA_STREAM, newUri)
-        type = getUriMimeType(uri, newUri)
-        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-        if (resolveActivity(packageManager) != null) {
-            startActivity(Intent.createChooser(this, getString(R.string.share_via)))
-        } else {
-            toast(R.string.no_app_found)
-        }
-    }
-}
-
-fun Activity.shareUris(uris: ArrayList<Uri>, applicationId: String) {
-    if (uris.size == 1) {
-        shareUri(uris.first(), applicationId)
-    } else {
-        val newUris = uris.map { ensurePublicUri(it, applicationId) } as ArrayList<Uri>
-        var mimeType = newUris.getMimeType()
-        if (mimeType.isEmpty() || mimeType == "*/*") {
-            mimeType = uris.getMimeType()
-        }
-        Intent().apply {
-            action = Intent.ACTION_SEND_MULTIPLE
-            type = mimeType
-            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            putParcelableArrayListExtra(Intent.EXTRA_STREAM, newUris)
-
+    Thread {
+        Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
             if (resolveActivity(packageManager) != null) {
-                try {
-                    startActivity(Intent.createChooser(this, getString(R.string.share_via)))
-                } catch (e: TransactionTooLargeException) {
-                    toast(R.string.maximum_share_reached)
-                }
+                startActivity(this)
             } else {
                 toast(R.string.no_app_found)
             }
         }
-    }
+    }.start()
 }
 
-fun Activity.setAs(uri: Uri, applicationId: String) {
-    val newUri = ensurePublicUri(uri, applicationId)
-    Intent().apply {
-        action = Intent.ACTION_ATTACH_DATA
-        setDataAndType(newUri, getUriMimeType(uri, newUri))
-        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-        val chooser = Intent.createChooser(this, getString(R.string.set_as))
-
-        if (resolveActivity(packageManager) != null) {
-            startActivityForResult(chooser, REQUEST_SET_AS)
-        } else {
-            toast(R.string.no_app_found)
-        }
-    }
-}
-
-fun Activity.openEditor(uri: Uri, applicationId: String) {
-    val newUri = ensurePublicUri(uri, applicationId)
-    Intent().apply {
-        action = Intent.ACTION_EDIT
-        setDataAndType(newUri, getUriMimeType(uri, newUri))
-        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-        putExtra(MediaStore.EXTRA_OUTPUT, uri)
-
-        if (resolveActivity(packageManager) != null) {
-            startActivityForResult(this, REQUEST_EDIT_IMAGE)
-        } else {
-            toast(R.string.no_app_found)
-        }
-    }
-}
-
-fun Activity.openFile(uri: Uri, forceChooser: Boolean, applicationId: String) {
-    val newUri = try {
-        ensurePublicUri(uri, applicationId)
-    } catch (e: Exception) {
-        showErrorToast(e)
-        return
-    }
-    val mimeType = getUriMimeType(uri, newUri)
-    Intent().apply {
-        action = Intent.ACTION_VIEW
-        setDataAndType(newUri, mimeType)
-        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-
-        if (applicationId == "com.simplemobiletools.gallery") {
-            putExtra(IS_FROM_GALLERY, true)
-        }
-
-        putExtra(REAL_FILE_PATH, uri)
-
-        if (resolveActivity(packageManager) != null) {
-            val chooser = Intent.createChooser(this, getString(R.string.open_with))
-            startActivity(if (forceChooser) chooser else this)
-        } else {
-            if (!tryGenericMimeType(this, mimeType, newUri)) {
+fun Activity.shareUri(uri: Uri, applicationId: String) {
+    Thread {
+        val newUri = ensurePublicUri(uri, applicationId)
+        Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_STREAM, newUri)
+            type = getUriMimeType(uri, newUri)
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            if (resolveActivity(packageManager) != null) {
+                startActivity(Intent.createChooser(this, getString(R.string.share_via)))
+            } else {
                 toast(R.string.no_app_found)
             }
         }
-    }
+    }.start()
+}
+
+fun Activity.shareUris(uris: ArrayList<Uri>, applicationId: String) {
+    Thread {
+        if (uris.size == 1) {
+            shareUri(uris.first(), applicationId)
+        } else {
+            val newUris = uris.map { ensurePublicUri(it, applicationId) } as ArrayList<Uri>
+            var mimeType = newUris.getMimeType()
+            if (mimeType.isEmpty() || mimeType == "*/*") {
+                mimeType = uris.getMimeType()
+            }
+            Intent().apply {
+                action = Intent.ACTION_SEND_MULTIPLE
+                type = mimeType
+                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                putParcelableArrayListExtra(Intent.EXTRA_STREAM, newUris)
+
+                if (resolveActivity(packageManager) != null) {
+                    try {
+                        startActivity(Intent.createChooser(this, getString(R.string.share_via)))
+                    } catch (e: TransactionTooLargeException) {
+                        toast(R.string.maximum_share_reached)
+                    }
+                } else {
+                    toast(R.string.no_app_found)
+                }
+            }
+        }
+    }.start()
+}
+
+fun Activity.setAs(uri: Uri, applicationId: String) {
+    Thread {
+        val newUri = ensurePublicUri(uri, applicationId)
+        Intent().apply {
+            action = Intent.ACTION_ATTACH_DATA
+            setDataAndType(newUri, getUriMimeType(uri, newUri))
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            val chooser = Intent.createChooser(this, getString(R.string.set_as))
+
+            if (resolveActivity(packageManager) != null) {
+                startActivityForResult(chooser, REQUEST_SET_AS)
+            } else {
+                toast(R.string.no_app_found)
+            }
+        }
+    }.start()
+}
+
+fun Activity.openEditor(uri: Uri, applicationId: String) {
+    Thread {
+        val newUri = ensurePublicUri(uri, applicationId)
+        Intent().apply {
+            action = Intent.ACTION_EDIT
+            setDataAndType(newUri, getUriMimeType(uri, newUri))
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            putExtra(MediaStore.EXTRA_OUTPUT, uri)
+
+            if (resolveActivity(packageManager) != null) {
+                startActivityForResult(this, REQUEST_EDIT_IMAGE)
+            } else {
+                toast(R.string.no_app_found)
+            }
+        }
+    }.start()
+}
+
+fun Activity.openFile(uri: Uri, forceChooser: Boolean, applicationId: String) {
+    Thread {
+        val newUri = try {
+            ensurePublicUri(uri, applicationId)
+        } catch (e: Exception) {
+            showErrorToast(e)
+            return@Thread
+        }
+        val mimeType = getUriMimeType(uri, newUri)
+        Intent().apply {
+            action = Intent.ACTION_VIEW
+            setDataAndType(newUri, mimeType)
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+
+            if (applicationId == "com.simplemobiletools.gallery") {
+                putExtra(IS_FROM_GALLERY, true)
+            }
+
+            putExtra(REAL_FILE_PATH, uri)
+
+            if (resolveActivity(packageManager) != null) {
+                val chooser = Intent.createChooser(this, getString(R.string.open_with))
+                startActivity(if (forceChooser) chooser else this)
+            } else {
+                if (!tryGenericMimeType(this, mimeType, newUri)) {
+                    toast(R.string.no_app_found)
+                }
+            }
+        }
+    }.start()
 }
 
 fun Activity.getUriMimeType(oldUri: Uri, newUri: Uri): String {
