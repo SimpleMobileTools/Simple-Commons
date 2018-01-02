@@ -70,7 +70,7 @@
     <string name="file">Datei</string>
     <string name="create_new_folder">Neuen Ordner erstellen</string>
     <string name="name_taken">Ordner oder Datei mit diesem Namen existiert bereits</string>
-    <string name="invalid_name">Der Name enthält nicht erlaubte Zeichen</string>
+    <string name="invalid_name">Der Name enthält unerlaubte Zeichen</string>
     <string name="empty_name">Bitte einen Namen angeben</string>
     <string name="unknown_error_occurred">Ein unbekannter Fehler ist aufgetreten</string>
 
@@ -131,8 +131,8 @@
     <string name="discard">Verwerfen</string>
     <string name="undo_changes">Änderungen verwerfen</string>
     <string name="undo_changes_confirmation">Bist du sicher, dass du die Änderungen verwerfen willst?</string>
-    <string name="save_before_closing">Du hast ungespeicherte Änderungen. Speichern vorm Beenden?</string>
-    <string name="apply_to_all_apps">Farben bei alle schlichten Apps anwenden</string>
+    <string name="save_before_closing">Du hast ungespeicherte Änderungen. Speichern vor dem Beenden?</string>
+    <string name="apply_to_all_apps">Farben bei allen schlichten Apps anwenden</string>
     <string name="share_colors_success">Farben erfolgreich aktualisiert. Ein neues Thema \'Shared\' wurde hinzugefügt, bitte verwende dieses um für alle Apps die Farben zu ändern.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -163,8 +163,8 @@
     <string name="unhide">Nicht verstecken</string>
     <string name="hide_folder">Ordner verstecken</string>
     <string name="unhide_folder">Ordner nicht verstecken</string>
-    <string name="temporarily_show_hidden">Verstecktes kurzzeitig zeigen</string>
-    <string name="stop_showing_hidden">Verstecktes wieder verbergen</string>
+    <string name="temporarily_show_hidden">Versteckte Elemente kurzzeitig anzeigen</string>
+    <string name="stop_showing_hidden">Versteckte Elemente wieder verbergen</string>
     <string name="maximum_share_reached">So viel Inhalt kann nicht auf einmal geteilt werden</string>
 
     <!-- Sorting -->
@@ -178,7 +178,7 @@
     <string name="extension">Dateiendung</string>
     <string name="ascending">Aufsteigend</string>
     <string name="descending">Absteigend</string>
-    <string name="use_for_this_folder">Nur für diesen Ordner verwenden</string>
+    <string name="use_for_this_folder">Nur auf diesen Ordner anwenden</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Willst du mit dem Löschen fortfahren?</string>
@@ -197,7 +197,7 @@
     <string name="repeat_pattern">Muster wiederholen</string>
     <string name="fingerprint">Fingerabdruck</string>
     <string name="add_fingerprint">Fingerabdruck hinzufügen</string>
-    <string name="place_finger">Bitte den Finger auf den Fingerabdruck-Sensor legen</string>
+    <string name="place_finger">Bitte den Finger auf den Fingerabdrucksensor legen</string>
     <string name="authentication_failed">Authentifizierung fehlgeschlagen</string>
     <string name="authentication_blocked">Authentifizierung blockiert, bitte in Kürze erneut versuchen</string>
     <string name="no_fingerprints_registered">Keine Fingerabdrücke registriert, bitte in den Geräteeinstellungen hinzufügen</string>
@@ -222,22 +222,22 @@
     <!-- Settings -->
     <string name="settings">Einstellungen</string>
     <string name="customize_colors">Farben anpassen</string>
-    <string name="use_english_language">Englische Sprache verwenden</string>
+    <string name="use_english_language">App in Englisch verwenden</string>
     <string name="show_hidden_items">Versteckte Elemente anzeigen</string>
     <string name="font_size">Schriftgröße</string>
     <string name="small">Klein</string>
     <string name="medium">Mittel</string>
     <string name="large">Groß</string>
     <string name="extra_large">Sehr groß</string>
-    <string name="password_protect_hidden_items">Verstecktes mit Muster/PIN schützen</string>
+    <string name="password_protect_hidden_items">Versteckte Elemente mit Muster/PIN schützen</string>
     <string name="password_protect_whole_app">Gesamte App mit Passwort schützen</string>
-    <string name="keep_last_modified">Beim Kopieren/Verschieben/Umbenennen die alte Änderungszeit beibehalten</string>
-    <string name="show_info_bubble">Zeige Info-Fenster beim Scrollen mithilfe des Scrollbalkens an</string>
+    <string name="keep_last_modified">Beim Modifizieren von Dateien die alte Änderungszeit beibehalten</string>
+    <string name="show_info_bubble">Zeige Infofenster beim Scrollen mithilfe des Scrollbalkens an</string>
 
     <!-- About -->
     <string name="about">Über</string>
     <string name="website_label">Weitere schlichte Apps und Quellcode siehe</string>
-    <string name="email_label">Vorschläge und Feedback bitte senden an</string>
+    <string name="email_label">Vorschläge und Feedback sende bitte an</string>
     <string name="more_apps_underlined"><u>Weitere Apps</u></string>
     <string name="third_party_licences_underlined"><u>Drittanbieterlizenzen</u></string>
     <string name="invite_friends_underlined"><u>Freunde einladen</u></string>
@@ -253,8 +253,8 @@
     <string name="device_os">Betriebssystem: %1$s</string>
     <string name="donate_please">
         <![CDATA[
-            Hallo,<br><br>
-            ich hoffe diese App gefällt dir. Sie beinhaltet keine Werbung, bitte unterstütze die Entwicklung durch Kauf der <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> App, dadurch wird auch dieser Dialog künftig nicht mehr gezeigt.<br><br>
+            Hallo!,<br><br>
+            Ich hoffe diese App gefällt dir. Sie beinhaltet keine Werbung, daher unterstütze bitte die Entwicklung durch den Kauf der <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> App. Dadurch wird auch dieser Dialog künftig nicht mehr angezeigt.<br><br>
             Weitere Optionen zum Spenden findest du <a href="http://simplemobiletools.com/donate">hier</a>.<br><br>
             Vielen Dank!
         ]]>
@@ -262,7 +262,7 @@
     <string name="purchase">Kaufen</string>
 
     <!-- License -->
-    <string name="notice">Diese App nutzt die folgenden Drittanbieterbilbiotheken, die mein Leben einfacher machen. Danke.</string>
+    <string name="notice">Diese App nutzt die folgenden Drittanbieterbilbiotheken, die mein Leben einfacher machen. Danke!</string>
     <string name="third_party_licences">Drittanbieterlizenzen</string>
     <string name="kotlin_title">Kotlin (Programmiersprache)</string>
     <string name="subsampling_title">Subsampling Scale Image View (Zoombare Bilder)</string>
