@@ -186,7 +186,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
                 toast(R.string.copying)
                 startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly)
             } else {
-                if (isPathOnSD(source) || isPathOnSD(destination) || files.first().isDirectory || isOreoPlus()) {
+                if (isPathOnSD(source) || isPathOnSD(destination) || files.first().isDirectory || isNougatPlus()) {
                     handleSAFDialog(File(source)) {
                         toast(R.string.moving)
                         startCopyMove(files, destinationFolder, false, copyPhotoVideoOnly)
