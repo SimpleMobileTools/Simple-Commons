@@ -119,13 +119,13 @@ class FastScroller : FrameLayout {
         if (!handle!!.isSelected) {
             if (isHorizontal) {
                 val min = handle!!.x
-                val max = min + handle!!.width
+                val max = min + handleWidth
                 if (event.x < min || event.x > max) {
                     return super.onTouchEvent(event)
                 }
             } else {
                 val min = handle!!.y
-                val max = min + handle!!.height
+                val max = min + handleHeight
                 if (event.y < min || event.y > max) {
                     return super.onTouchEvent(event)
                 }
@@ -169,7 +169,7 @@ class FastScroller : FrameLayout {
             }
 
             val targetPos = getValueInRange(0f, (itemCount - 1).toFloat(), proportion * itemCount).toInt()
-            (recyclerView!!.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(targetPos, 0)
+            (recyclerView!!.layoutManager as LinearLayoutManager).scrollToPosition(targetPos)
             fastScrollCallback?.invoke(targetPos)
         }
     }
