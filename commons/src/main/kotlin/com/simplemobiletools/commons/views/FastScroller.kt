@@ -3,7 +3,6 @@ package com.simplemobiletools.commons.views
 import android.content.Context
 import android.graphics.drawable.GradientDrawable
 import android.support.v4.widget.SwipeRefreshLayout
-import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.AttributeSet
 import android.view.MotionEvent
@@ -28,6 +27,8 @@ class FastScroller : FrameLayout {
     private var bubbleOffset = 0
     private var handleWidth = 0
     private var handleHeight = 0
+    private var recyclerViewContentHeight = 1
+    private var recyclerViewContentWidth = 1
     private var fastScrollCallback: ((Int) -> Unit)? = null
 
     private val HANDLE_HIDE_DELAY = 1000L
@@ -59,6 +60,26 @@ class FastScroller : FrameLayout {
         })
 
         fastScrollCallback = callback
+        measureRecyclerViewHeightOnRedraw()
+    }
+
+    fun measureRecyclerViewHeightOnRedraw() {
+        recyclerView?.onGlobalLayout {
+            measureRecyclerViewHeight()
+        }
+    }
+
+    fun measureRecyclerViewHeight() {
+        recyclerViewContentHeight = recyclerView!!.computeVerticalScrollRange()
+        recyclerViewContentWidth = recyclerView!!.computeHorizontalScrollRange()
+
+        if (recyclerViewContentHeight == 0) {
+            recyclerViewContentHeight = 1
+        }
+
+        if (recyclerViewContentWidth == 0) {
+            recyclerViewContentWidth = 1
+        }
     }
 
     fun updatePrimaryColor() {
@@ -103,13 +124,11 @@ class FastScroller : FrameLayout {
 
         if (isHorizontal) {
             val horizontalScrollOffset = recyclerView!!.computeHorizontalScrollOffset()
-            val horizontalScrollRange = recyclerView!!.computeHorizontalScrollRange()
-            val proportion = horizontalScrollOffset.toFloat() / (horizontalScrollRange.toFloat() - currWidth)
+            val proportion = horizontalScrollOffset.toFloat() / (recyclerViewContentWidth - currWidth)
             setPosition(currWidth * proportion)
         } else {
             val verticalScrollOffset = recyclerView!!.computeVerticalScrollOffset()
-            val verticalScrollRange = recyclerView!!.computeVerticalScrollRange()
-            val proportion = verticalScrollOffset.toFloat() / (verticalScrollRange.toFloat() - currHeight)
+            val proportion = verticalScrollOffset.toFloat() / (recyclerViewContentHeight - currHeight)
             setPosition(currHeight * proportion)
         }
     }
@@ -161,15 +180,25 @@ class FastScroller : FrameLayout {
 
     private fun setRecyclerViewPosition(pos: Float) {
         if (recyclerView != null) {
-            val itemCount = recyclerView!!.adapter.itemCount
-            val proportion = if (isHorizontal) {
+            var proportion = if (isHorizontal) {
                 pos / currWidth
             } else {
                 pos / currHeight
             }
 
+            proportion = Math.min(1f, Math.max(0f, proportion))
+            if (isHorizontal) {
+                val target = (proportion * recyclerViewContentWidth).toInt()
+                val diff = target - recyclerView!!.computeHorizontalScrollOffset()
+                recyclerView!!.scrollBy(diff, 0)
+            } else {
+                val target = (proportion * recyclerViewContentHeight).toInt()
+                val diff = target - recyclerView!!.computeVerticalScrollOffset()
+                recyclerView!!.scrollBy(0, diff)
+            }
+
+            val itemCount = recyclerView!!.adapter.itemCount
             val targetPos = getValueInRange(0f, (itemCount - 1).toFloat(), proportion * itemCount).toInt()
-            (recyclerView!!.layoutManager as LinearLayoutManager).scrollToPosition(targetPos)
             fastScrollCallback?.invoke(targetPos)
         }
     }
