@@ -140,7 +140,8 @@ class FastScroller : FrameLayout {
             setPosition(currWidth * proportion)
         } else {
             val proportion = currScrollY.toFloat() / (recyclerViewContentHeight - recyclerViewHeight)
-            handle!!.y = Math.max(0f, proportion * recyclerViewHeight - handleHeight)
+            val targetY = proportion * (recyclerViewHeight - handleHeight)
+            handle!!.y = getValueInRange(0f, recyclerViewHeight - handleHeight.toFloat(), targetY)
         }
     }
 
