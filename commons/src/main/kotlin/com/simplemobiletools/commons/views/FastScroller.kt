@@ -11,7 +11,6 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
-import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
@@ -27,11 +26,10 @@ class FastScroller : FrameLayout {
     private var recyclerViewHeight = 0
     private var currWidth = 0
     private var currScrollY = 0
-    private var bubbleOffset = 0
     private var handleWidth = 0
     private var handleHeight = 0
+    private var bubbleHeight = 0
     private var handleYOffset = 0
-    private var initialHandleYOffset = 0
     private var recyclerViewContentHeight = 1
     private var recyclerViewContentWidth = 1
     private var fastScrollCallback: ((Int) -> Unit)? = null
@@ -166,7 +164,6 @@ class FastScroller : FrameLayout {
         return when (event.action) {
             MotionEvent.ACTION_DOWN -> {
                 handleYOffset = (event.y - handle!!.y).toInt()
-                initialHandleYOffset = (event.y - handle!!.y).toInt()
                 handle!!.isSelected = true
                 swipeRefreshLayout?.isEnabled = false
                 showHandle()
@@ -184,7 +181,6 @@ class FastScroller : FrameLayout {
             }
             MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                 handleYOffset = 0
-                initialHandleYOffset = 0
                 handle!!.isSelected = false
                 swipeRefreshLayout?.isEnabled = true
                 hideHandle()
@@ -226,10 +222,12 @@ class FastScroller : FrameLayout {
             handleHeight = handle!!.height
             showHandle()
         }
-        bubble = getChildAt(1) as? TextView
 
-        if (bubble != null) {
-            bubbleOffset = resources.getDimension(R.dimen.fastscroll_height).toInt()
+        bubble = getChildAt(1) as? TextView
+        bubble?.onGlobalLayout {
+            if (bubbleHeight == 0) {
+                bubbleHeight = bubble!!.height
+            }
             updateBubbleColors()
         }
     }
@@ -269,8 +267,7 @@ class FastScroller : FrameLayout {
         } else {
             handle!!.y = getValueInRange(0f, (recyclerViewHeight - handleHeight).toFloat(), pos - handleYOffset)
             if (bubble != null) {
-                val bubbleHeight = bubble!!.height
-                bubble!!.y = getValueInRange(0f, (recyclerViewHeight - bubbleHeight.toFloat()), (handle!!.y - bubbleOffset))
+                bubble!!.y = getValueInRange(0f, (recyclerViewHeight - bubbleHeight.toFloat()), (handle!!.y - bubbleHeight))
             }
         }
         hideHandle()
