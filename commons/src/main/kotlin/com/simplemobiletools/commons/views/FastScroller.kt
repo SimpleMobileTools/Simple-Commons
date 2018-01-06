@@ -206,19 +206,16 @@ class FastScroller : FrameLayout {
 
     private fun setRecyclerViewPosition(pos: Float) {
         if (recyclerView != null) {
-            val proportion = if (isHorizontal) {
-                pos / (recyclerViewWidth - (handleWidth - handleXOffset))
-            } else {
-                pos / (recyclerViewHeight - (handleHeight - handleYOffset))
-            }
-
+            val targetProportion: Float
             if (isHorizontal) {
+                targetProportion = currScrollX / recyclerViewContentWidth.toFloat()
                 val diffInMove = pos - handleXOffset
                 val movePercent = diffInMove / (recyclerViewWidth.toFloat() - handleWidth)
                 val target = (recyclerViewContentWidth - recyclerViewWidth) * movePercent
                 val diff = target.toInt() - currScrollX
                 recyclerView!!.scrollBy(diff, 0)
             } else {
+                targetProportion = currScrollY / recyclerViewContentHeight.toFloat()
                 val diffInMove = pos - handleYOffset
                 val movePercent = diffInMove / (recyclerViewHeight.toFloat() - handleHeight)
                 val target = (recyclerViewContentHeight - recyclerViewHeight) * movePercent
@@ -227,7 +224,7 @@ class FastScroller : FrameLayout {
             }
 
             val itemCount = recyclerView!!.adapter.itemCount
-            val targetPos = getValueInRange(0f, (itemCount - 1).toFloat(), proportion * itemCount).toInt()
+            val targetPos = getValueInRange(0f, (itemCount - 1).toFloat(), targetProportion * itemCount).toInt()
             fastScrollCallback?.invoke(targetPos)
         }
     }

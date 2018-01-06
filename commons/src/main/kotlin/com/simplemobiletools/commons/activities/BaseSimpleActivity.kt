@@ -189,7 +189,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
                 if (isPathOnSD(source) || isPathOnSD(destination) || files.first().isDirectory || isNougatPlus()) {
                     handleSAFDialog(File(source)) {
                         toast(R.string.moving)
-                        startCopyMove(files, destinationFolder, false, copyPhotoVideoOnly)
+                        startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly)
                     }
                 } else {
                     toast(R.string.moving)
