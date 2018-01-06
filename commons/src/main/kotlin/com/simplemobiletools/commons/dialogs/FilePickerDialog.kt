@@ -32,12 +32,12 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                        val showFAB: Boolean = false,
                        val callback: (pickedPath: String) -> Unit) : Breadcrumbs.BreadcrumbsListener {
 
-    var mFirstUpdate = true
-    var mPrevPath = ""
-    var mScrollStates = HashMap<String, Parcelable>()
+    private var mFirstUpdate = true
+    private var mPrevPath = ""
+    private var mScrollStates = HashMap<String, Parcelable>()
 
-    lateinit var mDialog: AlertDialog
-    var mDialogView = activity.layoutInflater.inflate(R.layout.dialog_filepicker, null)
+    lateinit private var mDialog: AlertDialog
+    private var mDialogView = activity.layoutInflater.inflate(R.layout.dialog_filepicker, null)
 
     init {
         if (!File(currPath).exists()) {
@@ -125,11 +125,15 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             filepicker_breadcrumbs.setBreadcrumb(currPath)
             filepicker_fastscroller.allowBubbleDisplay = context.baseConfig.showInfoBubble
             filepicker_fastscroller.setViews(filepicker_list) {
-                filepicker_fastscroller.updateBubbleText(items[it].getBubbleText())
+                filepicker_fastscroller.updateBubbleText(items.getOrNull(it)?.getBubbleText() ?: "")
             }
         }
 
         layoutManager.onRestoreInstanceState(mScrollStates[currPath.trimEnd('/')])
+        mDialogView.filepicker_list.onGlobalLayout {
+            mDialogView.filepicker_fastscroller.setScrollTo(mDialogView.filepicker_list.computeVerticalScrollOffset())
+        }
+
         mFirstUpdate = false
         mPrevPath = currPath
     }

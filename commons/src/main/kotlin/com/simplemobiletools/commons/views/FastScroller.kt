@@ -88,12 +88,17 @@ class FastScroller : FrameLayout {
         val adapter = recyclerView!!.adapter
         val spanCount = ((recyclerView!!.layoutManager as? GridLayoutManager)?.spanCount ?: 1)
         val otherDimension = Math.floor((adapter.itemCount - 1) / spanCount.toDouble()) + 1
-        val size = recyclerView!!.getChildAt(0).height
+        val size = recyclerView!!.getChildAt(0)?.height ?: 0
         if (isHorizontal) {
             recyclerViewContentWidth = (otherDimension * size).toInt()
         } else {
             recyclerViewContentHeight = (otherDimension * size).toInt()
         }
+    }
+
+    fun setScrollTo(y: Int) {
+        currScrollY = y
+        updateHandlePosition()
     }
 
     fun updatePrimaryColor() {
