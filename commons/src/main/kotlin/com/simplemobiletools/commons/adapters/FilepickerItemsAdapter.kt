@@ -54,7 +54,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
     override fun onViewRecycled(holder: MyRecyclerViewAdapter.ViewHolder?) {
         super.onViewRecycled(holder)
         if (!activity.isActivityDestroyed()) {
-            Glide.with(activity).clear(holder?.itemView?.list_item_icon)
+            Glide.with(activity).clear(holder?.itemView?.list_item_icon!!)
         }
     }
 

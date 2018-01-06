@@ -29,14 +29,14 @@ android {
 dependencies {
     compile "com.android.support:design:$support_libs"
     compile "com.android.support:appcompat-v7:$support_libs"
-    compile 'com.github.bumptech.glide:glide:4.4.0'
+    compile 'com.github.bumptech.glide:glide:4.5.0'
     compile 'com.booking:rtlviewpager:1.0.1'
     compile 'com.andrognito.patternlockview:patternlockview:1.0.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile 'com.bignerdranch.android:recyclerview-multiselect:0.2'
     compile 'com.github.ajalt.reprint:core:3.2.0@aar'
 
-    kapt 'com.github.bumptech.glide:compiler:4.4.0'
+    kapt 'com.github.bumptech.glide:compiler:4.5.0'
 }
 
 apply from: '../bintray-upload.gradle'
