@@ -234,7 +234,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
         itemViews = newItems
         finishActMode()
-        fastScroller?.measureRecyclerViewHeight()
+        fastScroller?.measureRecyclerView()
     }
 
     class ViewHolder(view: View, val adapterListener: MyAdapterListener, val activity: BaseSimpleActivity, val multiSelectorCallback: ModalMultiSelectorCallback,
