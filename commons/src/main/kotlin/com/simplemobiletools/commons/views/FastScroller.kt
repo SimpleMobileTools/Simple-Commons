@@ -26,13 +26,15 @@ class FastScroller : FrameLayout {
     private var bubble: TextView? = null
     private var recyclerViewWidth = 0
     private var recyclerViewHeight = 0
+    private var currScrollX = 0
     private var currScrollY = 0
     private var handleWidth = 0
     private var handleHeight = 0
     private var bubbleHeight = 0
+    private var handleXOffset = 0
     private var handleYOffset = 0
-    private var recyclerViewContentHeight = 1
     private var recyclerViewContentWidth = 1
+    private var recyclerViewContentHeight = 1
     private var tinyMargin = 0f
     private var fastScrollCallback: ((Int) -> Unit)? = null
 
@@ -59,6 +61,7 @@ class FastScroller : FrameLayout {
                     bubble?.alpha = 0f
                     bubbleHideHandler.removeCallbacksAndMessages(null)
                 }
+                currScrollX += dx
                 currScrollY += dy
                 updateHandlePosition()
             }
@@ -72,26 +75,25 @@ class FastScroller : FrameLayout {
         })
 
         fastScrollCallback = callback
-        measureRecyclerViewHeightOnRedraw()
+        measureRecyclerViewOnRedraw()
     }
 
-    fun measureRecyclerViewHeightOnRedraw() {
+    fun measureRecyclerViewOnRedraw() {
         recyclerView?.onGlobalLayout {
-            measureRecyclerViewHeight()
+            measureRecyclerView()
         }
     }
 
-    fun measureRecyclerViewHeight() {
-        recyclerViewContentWidth = recyclerView!!.computeHorizontalScrollRange()
-
+    fun measureRecyclerView() {
         val adapter = recyclerView!!.adapter
-        val columns = ((recyclerView!!.layoutManager as? GridLayoutManager)?.spanCount ?: 1)
-        val rows = Math.floor((adapter.itemCount - 1) / columns.toDouble()) + 1
-        val size = recyclerView!!.width / columns
-        recyclerViewContentHeight = (rows * size).toInt()
-
-        if (recyclerViewContentWidth == 0) {
-            recyclerViewContentWidth = 1
+        val spanCount = ((recyclerView!!.layoutManager as? GridLayoutManager)?.spanCount ?: 1)
+        val otherDimension = Math.floor((adapter.itemCount - 1) / spanCount.toDouble()) + 1
+        if (isHorizontal) {
+            val size = recyclerView!!.height / spanCount
+            recyclerViewContentWidth = (otherDimension * size).toInt()
+        } else {
+            val size = recyclerView!!.width / spanCount
+            recyclerViewContentHeight = (otherDimension * size).toInt()
         }
     }
 
@@ -126,8 +128,8 @@ class FastScroller : FrameLayout {
 
     override fun onSizeChanged(width: Int, height: Int, oldWidth: Int, oldHeight: Int) {
         super.onSizeChanged(width, height, oldWidth, oldHeight)
-        recyclerViewHeight = height
         recyclerViewWidth = width
+        recyclerViewHeight = height
         updateHandlePosition()
     }
 
@@ -136,9 +138,9 @@ class FastScroller : FrameLayout {
             return
 
         if (isHorizontal) {
-            val horizontalScrollOffset = recyclerView!!.computeHorizontalScrollOffset()
-            val proportion = horizontalScrollOffset.toFloat() / (recyclerViewContentWidth - recyclerViewWidth)
-            setPosition(recyclerViewWidth * proportion)
+            val proportion = currScrollX.toFloat() / (recyclerViewContentWidth - recyclerViewWidth)
+            val targetX = proportion * (recyclerViewWidth - handleWidth)
+            handle!!.x = getValueInRange(0f, recyclerViewWidth - handleWidth.toFloat(), targetX)
         } else {
             val proportion = currScrollY.toFloat() / (recyclerViewContentHeight - recyclerViewHeight)
             val targetY = proportion * (recyclerViewHeight - handleHeight)
@@ -167,7 +169,11 @@ class FastScroller : FrameLayout {
 
         return when (event.action) {
             MotionEvent.ACTION_DOWN -> {
-                handleYOffset = (event.y - handle!!.y).toInt()
+                if (isHorizontal) {
+                    handleXOffset = (event.x - handle!!.x).toInt()
+                } else {
+                    handleYOffset = (event.y - handle!!.y).toInt()
+                }
                 handle!!.isSelected = true
                 swipeRefreshLayout?.isEnabled = false
                 showHandle()
@@ -197,14 +203,16 @@ class FastScroller : FrameLayout {
     private fun setRecyclerViewPosition(pos: Float) {
         if (recyclerView != null) {
             val proportion = if (isHorizontal) {
-                pos / recyclerViewWidth
+                pos / (recyclerViewWidth - (handleWidth - handleXOffset))
             } else {
                 pos / (recyclerViewHeight - (handleHeight - handleYOffset))
             }
 
             if (isHorizontal) {
-                val target = (proportion * recyclerViewContentWidth).toInt()
-                val diff = target - recyclerView!!.computeHorizontalScrollOffset()
+                val diffInMove = pos - handleXOffset
+                val movePercent = diffInMove / (recyclerViewWidth.toFloat() - handleWidth)
+                val target = (recyclerViewContentWidth - recyclerViewWidth) * movePercent
+                val diff = target.toInt() - currScrollX
                 recyclerView!!.scrollBy(diff, 0)
             } else {
                 val diffInMove = pos - handleYOffset
@@ -268,12 +276,10 @@ class FastScroller : FrameLayout {
 
     private fun setPosition(pos: Float) {
         if (isHorizontal) {
-            val position = pos / recyclerViewWidth
-            handle!!.x = getValueInRange(0f, (recyclerViewWidth - handleWidth).toFloat(), (recyclerViewWidth - handleWidth) * position)
+            handle!!.x = getValueInRange(0f, (recyclerViewWidth - handleWidth).toFloat(), pos - handleXOffset)
             if (bubble != null) {
                 val bubbleWidth = bubble!!.width
-                val newX = getValueInRange(tinyMargin, (recyclerViewWidth - bubbleWidth).toFloat(), (recyclerViewWidth - bubbleWidth) * position)
-                bubble!!.x = Math.max(0f, newX)
+                bubble!!.x = getValueInRange(tinyMargin, (recyclerViewWidth - bubbleWidth.toFloat()), (handle!!.x - bubbleWidth))
             }
         } else {
             handle!!.y = getValueInRange(0f, (recyclerViewHeight - handleHeight).toFloat(), pos - handleYOffset)
