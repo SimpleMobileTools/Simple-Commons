@@ -269,7 +269,12 @@ class FastScroller : FrameLayout {
 
     private fun showHandle() {
         handleHideHandler.removeCallbacksAndMessages(null)
+        handle!!.animate().alpha(1f).start()        // override the fadeout animation
         handle!!.alpha = 1f
+        if (handleWidth == 0 && handleHeight == 0) {
+            handleWidth = handle!!.width
+            handleHeight = handle!!.height
+        }
     }
 
     private fun hideHandle() {
