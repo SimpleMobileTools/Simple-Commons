@@ -36,6 +36,7 @@ class FastScroller : FrameLayout {
     private var recyclerViewContentWidth = 1
     private var recyclerViewContentHeight = 1
     private var tinyMargin = 0f
+    private var isScrollingEnabled = false
     private var fastScrollCallback: ((Int) -> Unit)? = null
 
     private val HANDLE_HIDE_DELAY = 1000L
@@ -57,18 +58,20 @@ class FastScroller : FrameLayout {
         updatePrimaryColor()
         recyclerView.setOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(rv: RecyclerView, dx: Int, dy: Int) {
-                if (!handle!!.isSelected) {
-                    bubble?.alpha = 0f
-                    bubbleHideHandler.removeCallbacksAndMessages(null)
+                if (isScrollingEnabled) {
+                    if (!handle!!.isSelected) {
+                        bubble?.alpha = 0f
+                        bubbleHideHandler.removeCallbacksAndMessages(null)
+                    }
+                    currScrollX += dx
+                    currScrollY += dy
+                    updateHandlePosition()
                 }
-                currScrollX += dx
-                currScrollY += dy
-                updateHandlePosition()
             }
 
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
-                if (newState == RecyclerView.SCROLL_STATE_DRAGGING) {
+                if (isScrollingEnabled && newState == RecyclerView.SCROLL_STATE_DRAGGING) {
                     showHandle()
                 }
             }
@@ -93,6 +96,12 @@ class FastScroller : FrameLayout {
             recyclerViewContentWidth = (otherDimension * size).toInt()
         } else {
             recyclerViewContentHeight = (otherDimension * size).toInt()
+        }
+
+        isScrollingEnabled = if (isHorizontal) {
+            recyclerViewContentWidth > recyclerViewWidth
+        } else {
+            recyclerViewContentHeight > recyclerViewHeight
         }
     }
 
@@ -155,7 +164,7 @@ class FastScroller : FrameLayout {
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
         // allow dragging only the handle itself
-        if (!handle!!.isSelected) {
+        if (!handle!!.isSelected && isScrollingEnabled) {
             if (isHorizontal) {
                 val min = handle!!.x
                 val max = min + handleWidth
@@ -178,18 +187,20 @@ class FastScroller : FrameLayout {
                 } else {
                     handleYOffset = (event.y - handle!!.y).toInt()
                 }
-                handle!!.isSelected = true
-                swipeRefreshLayout?.isEnabled = false
-                showHandle()
+                if (isScrollingEnabled) {
+                    startScrolling()
+                }
                 true
             }
             MotionEvent.ACTION_MOVE -> {
-                if (isHorizontal) {
-                    setPosition(event.x)
-                    setRecyclerViewPosition(event.x)
-                } else {
-                    setPosition(event.y)
-                    setRecyclerViewPosition(event.y)
+                if (isScrollingEnabled) {
+                    if (isHorizontal) {
+                        setPosition(event.x)
+                        setRecyclerViewPosition(event.x)
+                    } else {
+                        setPosition(event.y)
+                        setRecyclerViewPosition(event.y)
+                    }
                 }
                 true
             }
@@ -202,6 +213,12 @@ class FastScroller : FrameLayout {
             }
             else -> super.onTouchEvent(event)
         }
+    }
+
+    private fun startScrolling() {
+        handle!!.isSelected = true
+        swipeRefreshLayout?.isEnabled = false
+        showHandle()
     }
 
     private fun setRecyclerViewPosition(pos: Float) {
