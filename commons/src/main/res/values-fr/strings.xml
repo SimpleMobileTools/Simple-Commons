@@ -11,18 +11,18 @@
     <string name="no_app_found">Aucune application valide trouvée</string>
     <string name="set_as">Définir comme</string>
     <string name="value_copied_to_clipboard">Value copied to clipboard</string>
-    <string name="unknown">Unknown</string>
+    <string name="unknown">Inconnu</string>
 
     <!-- Filters -->
     <string name="filter">Filtrer</string>
-    <string name="no_items_found">No items found.</string>
-    <string name="change_filter">Change filter</string>
+    <string name="no_items_found">Aucun élément trouvé.</string>
+    <string name="change_filter">Changer le filtre</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">L\'autorisation d\'accès au stockage est requise</string>
+    <string name="no_contacts_permission">L\'authorisation d\'accès aux contacts est requise</string>
+    <string name="no_camera_permissions">L\'autorisation d\'accès à l\'appareil photo est requise</string>
+    <string name="no_audio_permissions">L\'autorisation d\'accès aux paramètres audios est requise</string>
 
     <!-- Renaming -->
     <string name="rename_file">Renommer le fichier</string>
@@ -89,7 +89,7 @@
     <string name="confirm_storage_access_title">Confirmer l\'accès au stockage externe</string>
     <string name="confirm_storage_access_text">Veuillez choisir le dossier racine de la carte SD dans le prochain écran, pour accorder le droit d\'écriture</string>
     <string name="confirm_storage_access_text_sd">Si vous ne voyez pas la carte SD, essayez ceci</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_selection">Confirmer la sélection</string>
 
     <plurals name="items">
         <item quantity="one">%1$d élément</item>
@@ -117,7 +117,7 @@
     <string name="exposure_time">Durée d\'exposition</string>
     <string name="iso_speed">Sensibilité ISO</string>
     <string name="f_number">Ouverture</string>
-    <string name="camera">Camera</string>
+    <string name="camera">Caméra</string>
     <string name="exif">EXIF</string>
 
     <!-- Color customization -->
@@ -132,30 +132,30 @@
     <string name="undo_changes">Annuler les changements</string>
     <string name="undo_changes_confirmation">Etes-vous sûr•e de vouloir annuler vos changements ?</string>
     <string name="save_before_closing">Vous avez des changements non sauvegardés. Sauvegarder avant de quitter ?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="apply_to_all_apps">Appliquer ces couleurs à toutes les Applis Simples</string>
+    <string name="share_colors_success">Couleurs mises à jour. Un nouveau Thème nommé \'Partagé\' a été ajouté, veuillez utiliser celui-ci pour mettre à jour les couleurs de toutes les applis à partir de maintenant.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
+            Veuillez acquérir <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Un petit Merci</a> pour déverrouiller cette fonctionnalité et soutenir le développeur. Merci!
         ]]>
     </string>
 
     <!-- Themes -->
     <string name="light_theme">Lumineux</string>
     <string name="dark_theme">Sombre</string>
-    <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
-    <string name="black_white">Black &amp; White</string>
+    <string name="solarized">Solarisé</string>
+    <string name="dark_red">Noir et Rouge</string>
+    <string name="black_white">Noir &amp; Blanc</string>
     <string name="custom">Personnalisé</string>
-    <string name="shared">Shared</string>
+    <string name="shared">Partagé</string>
 
     <!-- What's new -->
     <string name="whats_new">Quoi de neuf ?</string>
-    <string name="whats_new_disclaimer">* seules les mises à jour les plus importantes sont listées ici, il y a toujours de petites améliorations également</string>
+    <string name="whats_new_disclaimer">* seules les mises à jour les plus importantes sont listées ici, elles sont toujours accompagnées de plus petites améliorations qui ne sont pas détaillées</string>
 
     <!-- Actionbar items -->
     <string name="delete">Supprimer</string>
-    <string name="remove">Remove</string>
+    <string name="remove">Retirer</string>
     <string name="rename">Renommer</string>
     <string name="share">Partager</string>
     <string name="share_via">Partager via</string>
@@ -166,7 +166,7 @@
     <string name="unhide_folder">Démasquer dossier</string>
     <string name="temporarily_show_hidden">Afficher temporairement les fichiers masqués</string>
     <string name="stop_showing_hidden">Arrêter d\'afficher les medias masqués</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
+    <string name="maximum_share_reached">Vous ne pouvez pas partager autant de contenu à la fois</string>
 
     <!-- Sorting -->
     <string name="sort_by">Trier par</string>
@@ -196,15 +196,15 @@
     <string name="insert_pattern">Insérer modèle</string>
     <string name="wrong_pattern">Modèle erroné</string>
     <string name="repeat_pattern">Répéter modèle</string>
-    <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
-    <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
+    <string name="fingerprint">Empreinte</string>
+    <string name="add_fingerprint">Ajouter une empreinte</string>
+    <string name="place_finger">Veuillez placer votre doigt sur le capteur d\'empreintes digitales</string>
+    <string name="authentication_failed">L\'identification a échoué</string>
+    <string name="authentication_blocked">Identification bloquée, veuillez réessayer dans quelques instants</string>
+    <string name="no_fingerprints_registered">Vous n\'avez aucune empreinte digitale d\'enregistrée, veuillez en ajouter dans les Paramètres de votre appareil</string>
+    <string name="go_to_settings">Aller aux Paramètres</string>
     <string name="protection_setup_successfully">Mot de passe défini avec succès. Veuillez réinstaller l\'appli en cas d\'oubli.</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="fingerprint_setup_successfully">Protection mise en place avec succès. Veuillez réinstaller l\'appli en cas d\'oubli.</string>
 
     <!-- Times -->
     <plurals name="seconds">
@@ -223,17 +223,17 @@
     <!-- Settings -->
     <string name="settings">Paramètres</string>
     <string name="customize_colors">Personnaliser les couleurs</string>
-    <string name="use_english_language">Use English language</string>
-    <string name="show_hidden_items">Show hidden items</string>
+    <string name="use_english_language">Utiliser l\'affichage en anglais</string>
+    <string name="show_hidden_items">Afficher les éléments cachés</string>
     <string name="font_size">Taille police</string>
     <string name="small">Petite</string>
     <string name="medium">Moyenne</string>
     <string name="large">Large</string>
     <string name="extra_large">Extra large</string>
     <string name="password_protect_hidden_items">Visibilité des éléments protégés par un mot de passe</string>
-    <string name="password_protect_whole_app">Password protect the whole application</string>
+    <string name="password_protect_whole_app">Le mot de passe protège l\'ensemble de l\'application</string>
     <string name="keep_last_modified">Garder la valeur de l\'ancienne modification lors de renommage/déplacement/copie de fichier</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+    <string name="show_info_bubble">Afficher une bulle d\'information des éléments qui s\'affichent lorsque vous faites glisser la barre de défilement</string>
 
     <!-- About -->
     <string name="about">À propos</string>
@@ -247,20 +247,20 @@
     <string name="rate_us_underlined"><u>Nous évaluer</u></string>
     <string name="donate">Donner</string>
     <string name="donate_underlined"><u>Donner</u></string>
-    <string name="follow_us">Suivez nous</string>
+    <string name="follow_us">Suivez-nous</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Info supplémentaire</string>
     <string name="app_version">Version appli: %1$s</string>
     <string name="device_os">OS appareil: %1$s</string>
     <string name="donate_please">
         <![CDATA[
-            Hello,<br><br>
-            hope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
-            You can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.<br><br>
-            Thank you!
+            Salut,<br><br>
+            nous espérons que vous appréciez cette appli. Elle ne contient aucune publicité, mais vous pouvez soutenir son développement en achetant l\'appli <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Un petit Merci</a>. Cela nous permettra également de ne plus vous montrer cette boite de dialogue.<br><br>
+            Vous pouvez trouver plus d\'options pour faire un don <a href="http://simplemobiletools.com/donate">ici</a>.<br><br>
+            Merci !
         ]]>
     </string>
-    <string name="purchase">Purchase</string>
+    <string name="purchase">Acheter</string>
 
     <!-- License -->
     <string name="notice">Cette application utilise les librairies tierces suivantes pour me simplifier la vie. Merci.</string>
@@ -277,11 +277,11 @@
     <string name="otto_title">Otto (bus d\'évenement)</string>
     <string name="photoview_title">PhotoView (GIFs zoomables)</string>
     <string name="pattern_title">PatternLockView (protection de modèle)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
-    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
-    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
-    <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="reprint_title">Reprint (protection par empreinte digitale)</string>
+    <string name="gif_drawable_title">Gif Drawable (chargement des GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (redimensionnement du texte)</string>
+    <string name="robolectric_title">Robolectric (framework de test)</string>
+    <string name="espresso_title">Espresso (assistant de test)</string>
+    <string name="gson_title">Gson (parser JSON)</string>
+    <string name="leak_canary_title">Leak Canary (détecteur de fuite de mémoire)</string>
 </resources>
