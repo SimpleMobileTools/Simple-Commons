@@ -43,6 +43,7 @@ class FastScroller : FrameLayout {
     private var recyclerView: RecyclerView? = null
     private var swipeRefreshLayout: SwipeRefreshLayout? = null
     private var bubbleHideHandler = Handler()
+    private var handleHideHandler = Handler()
 
     constructor(context: Context) : super(context)
 
@@ -61,6 +62,7 @@ class FastScroller : FrameLayout {
                 if (isScrollingEnabled) {
                     if (!handle!!.isSelected) {
                         bubble?.alpha = 0f
+                        bubble?.text = ""
                         bubbleHideHandler.removeCallbacksAndMessages(null)
                     }
                     currScrollX += dx
@@ -143,7 +145,6 @@ class FastScroller : FrameLayout {
         super.onSizeChanged(width, height, oldWidth, oldHeight)
         recyclerViewWidth = width
         recyclerViewHeight = height
-        updateHandlePosition()
     }
 
     private fun updateHandlePosition() {
@@ -159,6 +160,7 @@ class FastScroller : FrameLayout {
             val targetY = proportion * (recyclerViewHeight - handleHeight)
             handle!!.y = getValueInRange(0f, recyclerViewHeight - handleHeight.toFloat(), targetY)
         }
+        showHandle()
         hideHandle()
     }
 
@@ -253,6 +255,7 @@ class FastScroller : FrameLayout {
             handleWidth = handle!!.width
             handleHeight = handle!!.height
             showHandle()
+            hideHandle()
         }
 
         bubble = getChildAt(1) as? TextView
@@ -265,19 +268,16 @@ class FastScroller : FrameLayout {
     }
 
     private fun showHandle() {
-        handle!!.animate().alpha(1f).start()  // override the fade animation
+        handleHideHandler.removeCallbacksAndMessages(null)
         handle!!.alpha = 1f
-
-        if (handle!!.isSelected && allowBubbleDisplay) {
-            bubbleHideHandler.removeCallbacksAndMessages(null)
-            bubble?.alpha = 1f
-            bubble?.animate()?.alpha(1f)?.start()
-        }
     }
 
     private fun hideHandle() {
         if (!handle!!.isSelected) {
-            handle!!.animate().alpha(0f).startDelay = HANDLE_HIDE_DELAY
+            handleHideHandler.removeCallbacksAndMessages(null)
+            handleHideHandler.postDelayed({
+                handle!!.animate().alpha(0f).start()
+            }, HANDLE_HIDE_DELAY)
 
             if (bubble != null) {
                 bubbleHideHandler.removeCallbacksAndMessages(null)
@@ -295,14 +295,18 @@ class FastScroller : FrameLayout {
     private fun setPosition(pos: Float) {
         if (isHorizontal) {
             handle!!.x = getValueInRange(0f, (recyclerViewWidth - handleWidth).toFloat(), pos - handleXOffset)
-            if (bubble != null) {
+            if (bubble != null && allowBubbleDisplay && handle!!.isSelected) {
                 val bubbleWidth = bubble!!.width
                 bubble!!.x = getValueInRange(tinyMargin, (recyclerViewWidth - bubbleWidth.toFloat()), (handle!!.x - bubbleWidth))
+                bubbleHideHandler.removeCallbacksAndMessages(null)
+                bubble?.alpha = 1f
             }
         } else {
             handle!!.y = getValueInRange(0f, (recyclerViewHeight - handleHeight).toFloat(), pos - handleYOffset)
-            if (bubble != null) {
+            if (bubble != null && allowBubbleDisplay && handle!!.isSelected) {
                 bubble!!.y = getValueInRange(tinyMargin, (recyclerViewHeight - bubbleHeight.toFloat()), (handle!!.y - bubbleHeight))
+                bubbleHideHandler.removeCallbacksAndMessages(null)
+                bubble?.alpha = 1f
             }
         }
         hideHandle()
