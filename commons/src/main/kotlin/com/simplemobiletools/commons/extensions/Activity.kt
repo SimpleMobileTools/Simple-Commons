@@ -100,8 +100,9 @@ fun Activity.updateSDCardPath() {
     }.start()
 }
 
+@SuppressLint("InlinedApi")
 fun Activity.isShowingSAFDialog(file: File, treeUri: String, requestCode: Int): Boolean {
-    return if ((needsStupidWritePermissions(file.absolutePath) && treeUri.isEmpty())) {
+    return if (needsStupidWritePermissions(file.absolutePath) && (treeUri.isEmpty() || !hasProperStoredTreeUri())) {
         runOnUiThread {
             WritePermissionDialog(this) {
                 Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {

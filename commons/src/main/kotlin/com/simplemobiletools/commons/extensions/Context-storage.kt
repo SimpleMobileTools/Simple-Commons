@@ -101,6 +101,15 @@ fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWit
 
 fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isLollipopPlus()
 
+@SuppressLint("NewApi")
+fun Context.hasProperStoredTreeUri(): Boolean {
+    val hasProperUri = contentResolver.persistedUriPermissions.any { it.uri.toString() == baseConfig.treeUri }
+    if (!hasProperUri) {
+        baseConfig.treeUri = ""
+    }
+    return hasProperUri
+}
+
 fun Context.isAStorageRootFolder(path: String): Boolean {
     val trimmed = path.trimEnd('/')
     return trimmed.isEmpty() || trimmed == internalStoragePath || trimmed == sdCardPath
