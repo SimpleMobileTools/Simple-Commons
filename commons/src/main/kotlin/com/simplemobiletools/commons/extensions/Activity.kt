@@ -533,7 +533,13 @@ fun BaseSimpleActivity.getFileOutputStream(file: File, callback: (outputStream: 
             if (!file.exists()) {
                 document = document.createFile("", file.name)
             }
-            callback(contentResolver.openOutputStream(document!!.uri))
+            if (document?.exists() == true) {
+                callback(contentResolver.openOutputStream(document.uri))
+            } else {
+                val error = String.format(getString(R.string.could_not_create_file), file.absolutePath)
+                showErrorToast(error)
+                callback(null)
+            }
         }
     } else {
         callback(FileOutputStream(file))
