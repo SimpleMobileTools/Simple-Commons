@@ -116,7 +116,7 @@ class FastScroller : FrameLayout {
 
     fun setScrollTo(y: Int) {
         currScrollY = y
-        measureRecyclerView()
+        measureRecyclerViewOnRedraw()
         updateHandlePosition()
         hideHandle()
     }
@@ -277,13 +277,12 @@ class FastScroller : FrameLayout {
 
     private fun showHandle() {
         handleHideHandler.removeCallbacksAndMessages(null)
-        if (handle!!.alpha != 1f) {
+            handle!!.animate().cancel()
             handle!!.alpha = 1f
             if (handleWidth == 0 && handleHeight == 0) {
                 handleWidth = handle!!.width
                 handleHeight = handle!!.height
             }
-        }
     }
 
     private fun hideHandle() {
