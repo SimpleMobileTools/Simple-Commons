@@ -88,7 +88,9 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
                     path
                 }
 
-                Glide.with(context).load(itemToLoad).transition(withCrossFade()).apply(options).into(list_item_icon)
+                if (context != null) {
+                    Glide.with(context).load(itemToLoad).transition(withCrossFade()).apply(options).into(list_item_icon)
+                }
             }
         }
     }
