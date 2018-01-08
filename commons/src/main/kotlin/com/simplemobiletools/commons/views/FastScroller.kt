@@ -112,11 +112,22 @@ class FastScroller : FrameLayout {
         } else {
             recyclerViewContentHeight > recyclerViewHeight
         }
+
+        if (!isScrollingEnabled) {
+            bubbleHideHandler.removeCallbacksAndMessages(null)
+            bubble?.animate()?.cancel()
+            bubble?.alpha = 0f
+            bubble?.text = ""
+
+            handleHideHandler.removeCallbacksAndMessages(null)
+            handle?.animate()?.cancel()
+            handle?.alpha = 0f
+        }
     }
 
     fun setScrollTo(y: Int) {
+        measureRecyclerView()
         currScrollY = y
-        measureRecyclerViewOnRedraw()
         updateHandlePosition()
         hideHandle()
     }
@@ -276,13 +287,17 @@ class FastScroller : FrameLayout {
     }
 
     private fun showHandle() {
+        if (!isScrollingEnabled) {
+            return
+        }
+
         handleHideHandler.removeCallbacksAndMessages(null)
-            handle!!.animate().cancel()
-            handle!!.alpha = 1f
-            if (handleWidth == 0 && handleHeight == 0) {
-                handleWidth = handle!!.width
-                handleHeight = handle!!.height
-            }
+        handle!!.animate().cancel()
+        handle!!.alpha = 1f
+        if (handleWidth == 0 && handleHeight == 0) {
+            handleWidth = handle!!.width
+            handleHeight = handle!!.height
+        }
     }
 
     private fun hideHandle() {

@@ -127,11 +127,11 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             filepicker_fastscroller.setViews(filepicker_list) {
                 filepicker_fastscroller.updateBubbleText(items.getOrNull(it)?.getBubbleText() ?: "")
             }
-        }
 
-        layoutManager.onRestoreInstanceState(mScrollStates[currPath.trimEnd('/')])
-        mDialogView.filepicker_list.onGlobalLayout {
-            mDialogView.filepicker_fastscroller.setScrollTo(mDialogView.filepicker_list.computeVerticalScrollOffset())
+            layoutManager.onRestoreInstanceState(mScrollStates[currPath.trimEnd('/')])
+            filepicker_list.onGlobalLayout {
+                filepicker_fastscroller.setScrollTo(filepicker_list.computeVerticalScrollOffset())
+            }
         }
 
         mFirstUpdate = false
