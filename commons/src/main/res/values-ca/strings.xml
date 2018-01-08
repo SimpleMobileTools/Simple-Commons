@@ -1,0 +1,286 @@
+<resources>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancelar</string>
+    <string name="search">Buscar</string>
+    <string name="save_as">Guardar como</string>
+    <string name="file_saved">Archivo guardado con éxito</string>
+    <string name="invalid_file_format">Formato de archivo no válido</string>
+    <string name="out_of_memory_error">Error: sin memoria</string>
+    <string name="an_error_occurred">Un error ocurrió: %s</string>
+    <string name="open_with">Abrir con</string>
+    <string name="no_app_found">No se encontró una aplicación válida</string>
+    <string name="set_as">Establecer como</string>
+    <string name="value_copied_to_clipboard">Valor copiado en el portapapeles</string>
+    <string name="unknown">Unknown</string>
+
+    <!-- Filters -->
+    <string name="filter">Filtrar</string>
+    <string name="no_items_found">No items found.</string>
+    <string name="change_filter">Change filter</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
+
+    <!-- Renaming -->
+    <string name="rename_file">Renombrar archivo</string>
+    <string name="rename_folder">Renombrar carpeta</string>
+    <string name="rename_file_error">No se pudo renombrar el archivo</string>
+    <string name="rename_folder_error">No se pudo renombrar la carpeta</string>
+    <string name="rename_folder_empty">El nombre de la carpeta no puede estar vacío</string>
+    <string name="rename_folder_exists">Ya existe una carpeta con ese nombre</string>
+    <string name="rename_folder_root">No se puede cambiar el nombre de la carpeta raíz del almacenamiento</string>
+    <string name="rename_folder_ok">Carpeta renombrada correctamente</string>
+    <string name="renaming_folder">Renombrando carpeta</string>
+    <string name="filename_cannot_be_empty">El nombre de archivo no puede estar vacío</string>
+    <string name="filename_invalid_characters">El nombre archivo contiene caracteres no válidos</string>
+    <string name="extension_cannot_be_empty">La extensión no puede estar vacía</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">Copiar</string>
+    <string name="move">Mover</string>
+    <string name="copy_move">Copiar/Mover</string>
+    <string name="copy_to">Copiar a</string>
+    <string name="move_to">Mover a</string>
+    <string name="source">Origen</string>
+    <string name="destination">Destino</string>
+    <string name="select_destination">Seleccionar destino</string>
+    <string name="click_select_destination">Pulsa aquí para elegir el destino</string>
+    <string name="invalid_destination">No se pudo escribir en el destino elegido</string>
+    <string name="please_select_destination">Por favor elige un destino</string>
+    <string name="source_and_destination_same">Origen y destino no pueden coincidir</string>
+    <string name="copy_failed">No se pudo copiar los archivos</string>
+    <string name="copying">Copiando&#8230;</string>
+    <string name="copying_success">Archivos copiados correctamente</string>
+    <string name="copy_move_failed">Un error ocurrió</string>
+    <string name="moving">Moviendo&#8230;</string>
+    <string name="moving_success">Archivos movidos correctamente</string>
+    <string name="moving_success_partial">Algunos archivos no se pudieron mover</string>
+    <string name="copying_success_partial">Algunos archivos no se pudieron copiar</string>
+    <string name="no_files_selected">No hay archivos seleccionados</string>
+    <string name="saving">Guardando&#8230;</string>
+    <string name="could_not_create_folder">Could not create folder %s</string>
+    <string name="could_not_create_file">Could not create file %s</string>
+
+    <!-- Create new -->
+    <string name="create_new">Crear nueva</string>
+    <string name="folder">Carpeta</string>
+    <string name="file">Archivo</string>
+    <string name="create_new_folder">Crear nueva carpeta</string>
+    <string name="name_taken">Ya existe un archivo o carpeta con ese nombre</string>
+    <string name="invalid_name">El nombre contiene caracteres no válidos</string>
+    <string name="empty_name">Por favor introduce un nombre</string>
+    <string name="unknown_error_occurred">Ocurrió un error desconocido</string>
+
+    <!-- Copy conflicts -->
+    <string name="file_already_exists">El archivo %1$s ya existe</string>
+    <string name="file_already_exists_overwrite">El archivo %1$s ya existe. Sobreescribir?</string>
+    <string name="select_an_action">Elige una opción</string>
+    <string name="overwrite">Sobreescribir</string>
+    <string name="skip">Saltar</string>
+    <string name="append">Añadir \'_1\'</string>
+    <string name="apply_to_all">Aplicar a todo</string>
+
+    <!-- File picker -->
+    <string name="select_folder">Seleccione una carpeta</string>
+    <string name="select_file">Seleccione un archivo</string>
+    <string name="confirm_storage_access_title">Permita el acceso al almacenamiento externo</string>
+    <string name="confirm_storage_access_text">Por favor, elija la carpeta raíz de la tarjeta SD en la próxima pantalla para conceder el acceso de escritura</string>
+    <string name="confirm_storage_access_text_sd">Si no ve la tarjeta SD, prueba esto</string>
+    <string name="confirm_selection">Confirm selection</string>
+
+    <plurals name="items">
+        <item quantity="one">%1$d elemento</item>
+        <item quantity="other">%1$d elementos</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">Seleccione almacenamiento</string>
+    <string name="internal">Almacenamiento interno</string>
+    <string name="sd_card">Tarjeta SD</string>
+    <string name="root">Raíz /</string>
+    <string name="wrong_root_selected">Se seleccionó la carpeta incorrecta, seleccione la carpeta raíz de su tarjeta SD</string>
+
+    <!-- File properties -->
+    <string name="properties">Propiedades</string>
+    <string name="path">Ubicación</string>
+    <string name="items_selected">Elementos seleccionados</string>
+    <string name="direct_children_count">Número de archivos directamente contenidos</string>
+    <string name="files_count">Número total de archivos</string>
+    <string name="resolution">Resolución</string>
+    <string name="duration">Duración</string>
+    <string name="artist">Artista</string>
+    <string name="album">Álbum</string>
+    <string name="focal_length">Longitud focal</string>
+    <string name="exposure_time">Tiempo de exposición</string>
+    <string name="iso_speed">Velocidad ISO</string>
+    <string name="f_number">F-number</string>
+    <string name="camera">Cámara</string>
+    <string name="exif">EXIF</string>
+
+    <!-- Color customization -->
+    <string name="background_color">Color del fondo</string>
+    <string name="text_color">Color del texto</string>
+    <string name="primary_color">Color principal</string>
+    <string name="restore_defaults">Valores por defecto</string>
+    <string name="theme">Tema</string>
+    <string name="changing_color_description">Cambiar un color hará que cambie a tema personalizado</string>
+    <string name="save">Guardar</string>
+    <string name="discard">Deshacer</string>
+    <string name="undo_changes">Deshacer cambios</string>
+    <string name="undo_changes_confirmation">¿Seguro que quiere deshacer los cambios?</string>
+    <string name="save_before_closing">Tiene cambios sin aplicar. ¿Guardar antes de salir?</string>
+    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
+    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="purchase_thank_you">
+        <![CDATA[
+            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
+        ]]>
+    </string>
+
+    <!-- Themes -->
+    <string name="light_theme">Claro</string>
+    <string name="dark_theme">Oscuro</string>
+    <string name="solarized">Solarized</string>
+    <string name="dark_red">Dark red</string>
+    <string name="black_white">Black &amp; White</string>
+    <string name="custom">Personalizado</string>
+    <string name="shared">Shared</string>
+
+    <!-- What's new -->
+    <string name="whats_new">Qué hay de nuevo</string>
+    <string name="whats_new_disclaimer">* Sólo las actualizaciones más grandes se enumeran aquí, siempre hay algunas pequeñas mejoras también</string>
+
+    <!-- Actionbar items -->
+    <string name="delete">Eliminar</string>
+    <string name="rename">Renombrar</string>
+    <string name="share">Compartir</string>
+    <string name="share_via">Compartir con</string>
+    <string name="select_all">Seleccionar todo</string>
+    <string name="hide">Ocultar</string>
+    <string name="unhide">Montrar</string>
+    <string name="hide_folder">Hide folder</string>
+    <string name="unhide_folder">Unhide folder</string>
+    <string name="temporarily_show_hidden">Mostrar ocultos temporalmente</string>
+    <string name="stop_showing_hidden">Stop showing hidden media</string>
+    <string name="maximum_share_reached">You cannot share this much content at once</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">Ordenar por</string>
+    <string name="name">Nombre</string>
+    <string name="size">Tamaño</string>
+    <string name="last_modified">Modificación</string>
+    <string name="date_taken">Creación</string>
+    <string name="title">Título</string>
+    <string name="filename">Nombre del archivo</string>
+    <string name="extension">Extensión</string>
+    <string name="ascending">Ascendente</string>
+    <string name="descending">Descendente</string>
+    <string name="use_for_this_folder">Sólo para esta carpeta</string>
+
+    <!-- Confirmation dialog -->
+    <string name="proceed_with_deletion">¿Está seguro de querer continuar con la eliminación?</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+
+    <!-- Password protection -->
+    <string name="pin">PIN</string>
+    <string name="enter_pin">Enter PIN</string>
+    <string name="please_enter_pin">Please enter a PIN</string>
+    <string name="wrong_pin">Wrong PIN</string>
+    <string name="repeat_pin">Repeat PIN</string>
+    <string name="pattern">Pattern</string>
+    <string name="insert_pattern">Insert pattern</string>
+    <string name="wrong_pattern">Wrong pattern</string>
+    <string name="repeat_pattern">Repeat pattern</string>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="add_fingerprint">Add fingerprint</string>
+    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
+    <string name="authentication_failed">Authentication failed</string>
+    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
+    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
+    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+
+    <!-- Times -->
+    <plurals name="seconds">
+        <item quantity="one">%1$d second</item>
+        <item quantity="other">%1$d seconds</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%1$d minute</item>
+        <item quantity="other">%1$d minutes</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%1$d hour</item>
+        <item quantity="other">%1$d hours</item>
+    </plurals>
+
+    <!-- Settings -->
+    <string name="settings">Ajustes</string>
+    <string name="customize_colors">Cambiar colores</string>
+    <string name="use_english_language">Usar el idioma Inglés</string>
+    <string name="show_hidden_items">Show hidden items</string>
+    <string name="font_size">Tamaño de fuente</string>
+    <string name="small">Pequeña</string>
+    <string name="medium">Medium</string>
+    <string name="large">Grande</string>
+    <string name="extra_large">Enorme</string>
+    <string name="password_protect_hidden_items">Contraseña para proteger los medios ocultos</string>
+    <string name="password_protect_whole_app">Contraseña para proteger toda la aplicación</string>
+    <string name="keep_last_modified">Mantener el valor de ultima modificación al copiar/mover/renombrar los archivos</string>
+    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+
+    <!-- About -->
+    <string name="about">Acerca de</string>
+    <string name="website_label">Más aplicaciones sencillas y código fuente en</string>
+    <string name="email_label">Envía tus comentarios o sugerencias a</string>
+    <string name="more_apps_underlined"><u>Más aplicaciones</u></string>
+    <string name="third_party_licences_underlined"><u>Licencias de terceros</u></string>
+    <string name="invite_friends_underlined"><u>Invitar a amigos</u></string>
+    <string name="share_text">Hola, ven y mira %1$s en %2$s</string>
+    <string name="invite_via">Invitar con</string>
+    <string name="rate_us_underlined"><u>Vótanos en Play Store</u></string>
+    <string name="donate">Donar</string>
+    <string name="donate_underlined"><u>Donar</u></string>
+    <string name="follow_us">Síguenos</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="additional_info">Additional info</string>
+    <string name="app_version">App version: %1$s</string>
+    <string name="device_os">Device OS: %1$s</string>
+    <string name="donate_please">
+        <![CDATA[
+            Hello,<br><br>
+            hope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
+            You can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.<br><br>
+            Thank you!
+        ]]>
+    </string>
+    <string name="purchase">Purchase</string>
+
+    <!-- License -->
+    <string name="notice">Esta aplicación usa las siguientes bibliotecas de terceros que hacen mi vida más fácil. Gracias.</string>
+    <string name="third_party_licences">Licencias de terceros</string>
+    <string name="kotlin_title">Kotlin (Programming language)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
+    <string name="glide_title">Glide (image loading and caching)</string>
+    <string name="picasso_title">Picasso (image loading and caching)</string>
+    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
+    <string name="joda_title">Joda-Time (Java date replacement)</string>
+    <string name="stetho_title">Stetho (debugging databases)</string>
+    <string name="otto_title">Otto (event bus)</string>
+    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
+    <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
+    <string name="gson_title">Gson (JSON parser)</string>
+    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+</resources>
