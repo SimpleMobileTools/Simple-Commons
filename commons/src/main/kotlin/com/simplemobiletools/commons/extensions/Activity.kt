@@ -147,7 +147,11 @@ fun Activity.shareUri(uri: Uri, applicationId: String) {
             type = getUriMimeType(uri, newUri)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             if (resolveActivity(packageManager) != null) {
-                startActivity(Intent.createChooser(this, getString(R.string.share_via)))
+                try {
+                    startActivity(Intent.createChooser(this, getString(R.string.share_via)))
+                } catch (e: TransactionTooLargeException) {
+                    toast(R.string.maximum_share_reached)
+                }
             } else {
                 toast(R.string.no_app_found)
             }
