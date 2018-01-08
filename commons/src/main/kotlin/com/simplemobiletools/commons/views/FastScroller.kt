@@ -73,8 +73,15 @@ class FastScroller : FrameLayout {
 
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
-                if (isScrollingEnabled && newState == RecyclerView.SCROLL_STATE_DRAGGING) {
+                if (!isScrollingEnabled) {
+                    hideHandle()
+                    return
+                }
+
+                if (newState == RecyclerView.SCROLL_STATE_DRAGGING) {
                     showHandle()
+                } else if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                    hideHandle()
                 }
             }
         })
@@ -109,7 +116,9 @@ class FastScroller : FrameLayout {
 
     fun setScrollTo(y: Int) {
         currScrollY = y
+        measureRecyclerView()
         updateHandlePosition()
+        hideHandle()
     }
 
     fun updatePrimaryColor() {
@@ -161,7 +170,6 @@ class FastScroller : FrameLayout {
             handle!!.y = getValueInRange(0f, recyclerViewHeight - handleHeight.toFloat(), targetY)
         }
         showHandle()
-        hideHandle()
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
@@ -269,11 +277,12 @@ class FastScroller : FrameLayout {
 
     private fun showHandle() {
         handleHideHandler.removeCallbacksAndMessages(null)
-        handle!!.animate().alpha(1f).start()        // override the fadeout animation
-        handle!!.alpha = 1f
-        if (handleWidth == 0 && handleHeight == 0) {
-            handleWidth = handle!!.width
-            handleHeight = handle!!.height
+        if (handle!!.alpha != 1f) {
+            handle!!.alpha = 1f
+            if (handleWidth == 0 && handleHeight == 0) {
+                handleWidth = handle!!.width
+                handleHeight = handle!!.height
+            }
         }
     }
 
