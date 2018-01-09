@@ -537,6 +537,7 @@ fun BaseSimpleActivity.getFileOutputStream(file: File, callback: (outputStream: 
             if (!file.exists()) {
                 document = document.createFile("", file.name)
             }
+
             if (document?.exists() == true) {
                 callback(contentResolver.openOutputStream(document.uri))
             } else {
