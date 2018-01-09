@@ -5,24 +5,24 @@
     <string name="save_as">Guardar como</string>
     <string name="file_saved">Archivo guardado con éxito</string>
     <string name="invalid_file_format">Formato de archivo no válido</string>
-    <string name="out_of_memory_error">Error: sin memoria</string>
+    <string name="out_of_memory_error">Error: sin memória</string>
     <string name="an_error_occurred">Un error ocurrió: %s</string>
     <string name="open_with">Abrir con</string>
     <string name="no_app_found">No se encontró una aplicación válida</string>
     <string name="set_as">Establecer como</string>
     <string name="value_copied_to_clipboard">Valor copiado en el portapapeles</string>
-    <string name="unknown">Unknown</string>
+    <string name="unknown">Desconocido</string>
 
     <!-- Filters -->
     <string name="filter">Filtrar</string>
-    <string name="no_items_found">No items found.</string>
-    <string name="change_filter">Change filter</string>
+    <string name="no_items_found">No se encontraron artículos.</string>
+    <string name="change_filter">Cambiar filtro</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">Se requiere permiso de almacenamiento</string>
+    <string name="no_contacts_permission">Se requiere permiso de Contactos</string>
+    <string name="no_camera_permissions">Se requiere permiso de la cámara</string>
+    <string name="no_audio_permissions">Se requiere permiso de audio</string>
 
     <!-- Renaming -->
     <string name="rename_file">Renombrar archivo</string>
@@ -61,8 +61,8 @@
     <string name="copying_success_partial">Algunos archivos no se pudieron copiar</string>
     <string name="no_files_selected">No hay archivos seleccionados</string>
     <string name="saving">Guardando&#8230;</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="could_not_create_folder">No se puede crear la carpeta %s</string>
+    <string name="could_not_create_file">No se puede crear el fichero %s</string>
 
     <!-- Create new -->
     <string name="create_new">Crear nueva</string>
@@ -89,7 +89,7 @@
     <string name="confirm_storage_access_title">Permita el acceso al almacenamiento externo</string>
     <string name="confirm_storage_access_text">Por favor, elija la carpeta raíz de la tarjeta SD en la próxima pantalla para conceder el acceso de escritura</string>
     <string name="confirm_storage_access_text_sd">Si no ve la tarjeta SD, prueba esto</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_selection">Confirmar la selección</string>
 
     <plurals name="items">
         <item quantity="one">%1$d elemento</item>
@@ -132,8 +132,8 @@
     <string name="undo_changes">Deshacer cambios</string>
     <string name="undo_changes_confirmation">¿Seguro que quiere deshacer los cambios?</string>
     <string name="save_before_closing">Tiene cambios sin aplicar. ¿Guardar antes de salir?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="apply_to_all_apps">Aplicar colores a todas las aplicaciones Simple Apps</string>
+    <string name="share_colors_success">Colores actualizados correctamente. Se ha añadido un nuevo tema llamado \'Shared\', Por favor utilicelo para actualizar los colores de todas las aplicaciones en el futuro.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
@@ -144,10 +144,10 @@
     <string name="light_theme">Claro</string>
     <string name="dark_theme">Oscuro</string>
     <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
-    <string name="black_white">Black &amp; White</string>
+    <string name="dark_red">Rojo Oscuro</string>
+    <string name="black_white">Blanco &amp; Negro</string>
     <string name="custom">Personalizado</string>
-    <string name="shared">Shared</string>
+    <string name="shared">Compartido</string>
 
     <!-- What's new -->
     <string name="whats_new">Qué hay de nuevo</string>
@@ -161,11 +161,11 @@
     <string name="select_all">Seleccionar todo</string>
     <string name="hide">Ocultar</string>
     <string name="unhide">Montrar</string>
-    <string name="hide_folder">Hide folder</string>
-    <string name="unhide_folder">Unhide folder</string>
+    <string name="hide_folder">Ocultar carpeta</string>
+    <string name="unhide_folder">Mostrar carpeta</string>
     <string name="temporarily_show_hidden">Mostrar ocultos temporalmente</string>
-    <string name="stop_showing_hidden">Stop showing hidden media</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
+    <string name="stop_showing_hidden">No mostrar ocultos</string>
+    <string name="maximum_share_reached">No puedes compartir todo este contenido a la vez</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -187,52 +187,52 @@
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
-    <string name="repeat_pin">Repeat PIN</string>
-    <string name="pattern">Pattern</string>
-    <string name="insert_pattern">Insert pattern</string>
-    <string name="wrong_pattern">Wrong pattern</string>
-    <string name="repeat_pattern">Repeat pattern</string>
-    <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
-    <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
-    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="enter_pin">Introduzca PIN</string>
+    <string name="please_enter_pin">Por favor introduzca PIN</string>
+    <string name="wrong_pin">PIN erroneo</string>
+    <string name="repeat_pin">Repetir PIN</string>
+    <string name="pattern">Patrón</string>
+    <string name="insert_pattern">Inserte Patrón</string>
+    <string name="wrong_pattern">Patrón erroneo</string>
+    <string name="repeat_pattern">Repetir Patrón</string>
+    <string name="fingerprint">Huella dactilar</string>
+    <string name="add_fingerprint">Añadir Huella dactilar</string>
+    <string name="place_finger">Por favor pon el dedo en el lector de Huella dactilares</string>
+    <string name="authentication_failed">Autenticación fallida</string>
+    <string name="authentication_blocked">Autenticación bloqueada, por favor intente de nuevo en un momento</string>
+    <string name="no_fingerprints_registered">No tiene huellas dactilares registradas, por favor agregue algunas en la Configuración de su dispositivo</string>
+    <string name="go_to_settings">Ir a la configuración</string>
+    <string name="protection_setup_successfully">Se ha agregado la contraseña exitosamente. Por favor, vuelva a instalar la aplicación en caso de que la olvide.</string>
+    <string name="fingerprint_setup_successfully">Configuración de protección con éxito. Por favor, vuelva a instalar la aplicación en caso de problemas al restablecerla.</string>
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d second</item>
-        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">%1$d segundo</item>
+        <item quantity="other">%1$d segundos</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minute</item>
-        <item quantity="other">%1$d minutes</item>
+        <item quantity="one">%1$d minuto</item>
+        <item quantity="other">%1$d minutos</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d hour</item>
-        <item quantity="other">%1$d hours</item>
+        <item quantity="one">%1$d hora</item>
+        <item quantity="other">%1$d horas</item>
     </plurals>
 
     <!-- Settings -->
     <string name="settings">Ajustes</string>
     <string name="customize_colors">Cambiar colores</string>
     <string name="use_english_language">Usar el idioma Inglés</string>
-    <string name="show_hidden_items">Show hidden items</string>
+    <string name="show_hidden_items">Mostrar elementos ocultos</string>
     <string name="font_size">Tamaño de fuente</string>
     <string name="small">Pequeña</string>
-    <string name="medium">Medium</string>
+    <string name="medium">Mediana</string>
     <string name="large">Grande</string>
     <string name="extra_large">Enorme</string>
     <string name="password_protect_hidden_items">Contraseña para proteger los medios ocultos</string>
     <string name="password_protect_whole_app">Contraseña para proteger toda la aplicación</string>
     <string name="keep_last_modified">Mantener el valor de ultima modificación al copiar/mover/renombrar los archivos</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+    <string name="show_info_bubble">Mostrar una burbuja de información al desplazar elementos arrastrando la barra de desplazamiento</string>
 
     <!-- About -->
     <string name="about">Acerca de</string>
@@ -248,18 +248,18 @@
     <string name="donate_underlined"><u>Donar</u></string>
     <string name="follow_us">Síguenos</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="additional_info">Additional info</string>
+    <string name="additional_info">Información adicional</string>
     <string name="app_version">App version: %1$s</string>
     <string name="device_os">Device OS: %1$s</string>
     <string name="donate_please">
         <![CDATA[
-            Hello,<br><br>
-            hope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
-            You can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.<br><br>
-            Thank you!
+            Hola,<br><br>
+            Espero que estés disfrutando de la aplicación. No contiene anuncios, por lo que debe respaldar su desarrollo comprando la apñlicación <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, también evitará que este diálogo vuelva a aparecer.<br><br>
+            Puedes encontrar más opciones de donación <a href="http://simplemobiletools.com/donate">aquí</a>.<br><br>
+            Gracias!
         ]]>
     </string>
-    <string name="purchase">Purchase</string>
+    <string name="purchase">Comprar</string>
 
     <!-- License -->
     <string name="notice">Esta aplicación usa las siguientes bibliotecas de terceros que hacen mi vida más fácil. Gracias.</string>
