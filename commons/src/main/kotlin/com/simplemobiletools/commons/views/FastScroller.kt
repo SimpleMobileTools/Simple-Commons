@@ -97,6 +97,10 @@ class FastScroller : FrameLayout {
     }
 
     fun measureRecyclerView() {
+        if (recyclerView == null) {
+            return
+        }
+
         val adapter = recyclerView!!.adapter
         val spanCount = ((recyclerView!!.layoutManager as? GridLayoutManager)?.spanCount ?: 1)
         val otherDimension = Math.floor((adapter.itemCount - 1) / spanCount.toDouble()) + 1
