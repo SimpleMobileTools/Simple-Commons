@@ -101,6 +101,15 @@ fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWit
 
 fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isLollipopPlus()
 
+@SuppressLint("NewApi")
+fun Context.hasProperStoredTreeUri(): Boolean {
+    val hasProperUri = contentResolver.persistedUriPermissions.any { it.uri.toString() == baseConfig.treeUri }
+    if (!hasProperUri) {
+        baseConfig.treeUri = ""
+    }
+    return hasProperUri
+}
+
 fun Context.isAStorageRootFolder(path: String): Boolean {
     val trimmed = path.trimEnd('/')
     return trimmed.isEmpty() || trimmed == internalStoragePath || trimmed == sdCardPath
@@ -185,9 +194,13 @@ fun Context.getFileUri(file: File) = when {
 
 // these functions update the mediastore instantly, MediaScannerConnection.scanFile takes some time to really get applied
 fun Context.deleteFromMediaStore(file: File): Boolean {
-    val where = "${MediaStore.MediaColumns.DATA} = ?"
-    val args = arrayOf(file.absolutePath)
-    return contentResolver.delete(getFileUri(file), where, args) == 1
+    return try {
+        val where = "${MediaStore.MediaColumns.DATA} = ?"
+        val args = arrayOf(file.absolutePath)
+        contentResolver.delete(getFileUri(file), where, args) == 1
+    } catch (e: Exception) {
+        false
+    }
 }
 
 fun Context.updateInMediaStore(oldFile: File, newFile: File) {

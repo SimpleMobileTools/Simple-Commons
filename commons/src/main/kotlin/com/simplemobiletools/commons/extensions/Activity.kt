@@ -100,8 +100,9 @@ fun Activity.updateSDCardPath() {
     }.start()
 }
 
+@SuppressLint("InlinedApi")
 fun Activity.isShowingSAFDialog(file: File, treeUri: String, requestCode: Int): Boolean {
-    return if ((needsStupidWritePermissions(file.absolutePath) && treeUri.isEmpty())) {
+    return if (needsStupidWritePermissions(file.absolutePath) && (treeUri.isEmpty() || !hasProperStoredTreeUri())) {
         runOnUiThread {
             WritePermissionDialog(this) {
                 Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
@@ -146,7 +147,11 @@ fun Activity.shareUri(uri: Uri, applicationId: String) {
             type = getUriMimeType(uri, newUri)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             if (resolveActivity(packageManager) != null) {
-                startActivity(Intent.createChooser(this, getString(R.string.share_via)))
+                try {
+                    startActivity(Intent.createChooser(this, getString(R.string.share_via)))
+                } catch (e: TransactionTooLargeException) {
+                    toast(R.string.maximum_share_reached)
+                }
             } else {
                 toast(R.string.no_app_found)
             }
@@ -532,7 +537,14 @@ fun BaseSimpleActivity.getFileOutputStream(file: File, callback: (outputStream: 
             if (!file.exists()) {
                 document = document.createFile("", file.name)
             }
-            callback(contentResolver.openOutputStream(document!!.uri))
+
+            if (document?.exists() == true) {
+                callback(contentResolver.openOutputStream(document.uri))
+            } else {
+                val error = String.format(getString(R.string.could_not_create_file), file.absolutePath)
+                showErrorToast(error)
+                callback(null)
+            }
         }
     } else {
         callback(FileOutputStream(file))

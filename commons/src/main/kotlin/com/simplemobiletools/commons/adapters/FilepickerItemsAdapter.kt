@@ -17,7 +17,7 @@ import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.filepicker_list_item.view.*
 
 class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: List<FileDirItem>, recyclerView: MyRecyclerView,
-                             itemClick: (Any) -> Unit) : MyRecyclerViewAdapter(activity, recyclerView, itemClick) {
+                             itemClick: (Any) -> Unit) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick) {
 
     private val folderDrawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_folder, textColor)
     private val fileDrawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_file, textColor)
@@ -54,7 +54,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
     override fun onViewRecycled(holder: MyRecyclerViewAdapter.ViewHolder?) {
         super.onViewRecycled(holder)
         if (!activity.isActivityDestroyed()) {
-            Glide.with(activity).clear(holder?.itemView?.list_item_icon)
+            Glide.with(activity).clear(holder?.itemView?.list_item_icon!!)
         }
     }
 
@@ -88,7 +88,9 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
                     path
                 }
 
-                Glide.with(context).load(itemToLoad).transition(withCrossFade()).apply(options).into(list_item_icon)
+                if (context != null) {
+                    Glide.with(context).load(itemToLoad).transition(withCrossFade()).apply(options).into(list_item_icon)
+                }
             }
         }
     }
