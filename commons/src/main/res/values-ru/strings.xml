@@ -155,7 +155,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">Удалить</string>
-    <string name="remove">Remove</string>
+    <string name="remove">Убрать</string>
     <string name="rename">Переименовать</string>
     <string name="share">Поделиться</string>
     <string name="share_via">Отправить через</string>
@@ -209,6 +209,7 @@
     <!-- Times -->
     <plurals name="seconds">
         <item quantity="one">%1$d секунда</item>
+        <item quantity="few">%1$d секунды</item>
         <item quantity="other">%1$d секунд</item>
     </plurals>
     <plurals name="minutes">
