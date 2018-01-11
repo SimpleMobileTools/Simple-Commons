@@ -19,10 +19,10 @@
     <string name="change_filter">Filter aanpassen</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Permissie voor opslag benodigd</string>
-    <string name="no_contacts_permission">Permissie voor contacten benodigd</string>
-    <string name="no_camera_permissions">Permissie voor camera benodigd</string>
-    <string name="no_audio_permissions">Permissie voor geluid benodigd</string>
+    <string name="no_storage_permissions">Machtiging voor opslag benodigd</string>
+    <string name="no_contacts_permission">Machtiging voor contacten benodigd</string>
+    <string name="no_camera_permissions">Machtiging voor camera benodigd</string>
+    <string name="no_audio_permissions">Machtiging voor geluid benodigd</string>
 
     <!-- Renaming -->
     <string name="rename_file">Bestand hernoemen</string>
@@ -155,7 +155,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">Verwijderen</string>
-    <string name="remove">Remove</string>
+    <string name="remove">Verwijderen</string>
     <string name="rename">Hernoemen</string>
     <string name="share">Delen</string>
     <string name="share_via">Delen via</string>
@@ -166,7 +166,7 @@
     <string name="unhide_folder">Map tonen</string>
     <string name="temporarily_show_hidden">Verborgen items tonen</string>
     <string name="stop_showing_hidden">Verborgen items niet tonen</string>
-    <string name="maximum_share_reached">Te veel om in een keer te delen</string>
+    <string name="maximum_share_reached">Kan niet zoveel items tegelijk delen</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorteren op</string>
