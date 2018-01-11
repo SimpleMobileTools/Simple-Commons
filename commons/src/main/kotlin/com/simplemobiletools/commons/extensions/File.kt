@@ -18,15 +18,17 @@ fun File.isAudioSlow() = absolutePath.isAudioFast() || getMimeType().startsWith(
 
 fun File.getMimeType() = absolutePath.getMimeTypeFromPath()
 
-fun File.getDuration(): String? {
+fun File.getDuration() = getDurationSeconds().getFormattedDuration()
+
+fun File.getDurationSeconds(): Int {
     return try {
         val retriever = MediaMetadataRetriever()
         retriever.setDataSource(absolutePath)
         val time = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)
         val timeInMs = java.lang.Long.parseLong(time)
-        (timeInMs / 1000).toInt().getFormattedDuration()
+        (timeInMs / 1000).toInt()
     } catch (e: Exception) {
-        null
+        0
     }
 }
 
@@ -45,6 +47,16 @@ fun File.getAlbum(): String? {
         val retriever = MediaMetadataRetriever()
         retriever.setDataSource(absolutePath)
         retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUM)
+    } catch (ignored: Exception) {
+        null
+    }
+}
+
+fun File.getSongTitle(): String? {
+    return try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(absolutePath)
+        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE)
     } catch (ignored: Exception) {
         null
     }
