@@ -119,6 +119,7 @@
     <string name="f_number">Número F</string>
     <string name="camera">Câmara</string>
     <string name="exif">EXIF</string>
+    <string name="song_title">Song title</string>
 
     <!-- Color customization -->
     <string name="background_color">Cor de fundo</string>
@@ -234,6 +235,17 @@
     <string name="password_protect_whole_app">Proteger aplicação com palavra-passe</string>
     <string name="keep_last_modified">Manter dados da última modificação ao copiar/mover/renomear</string>
     <string name="show_info_bubble">Mostrar informação ao arrastar a barra de deslocamento</string>
+
+    <!-- Import / Export -->
+    <string name="importing">A importar…</string>
+    <string name="exporting">A exportar…</string>
+    <string name="importing_successful">Importing successful</string>
+    <string name="exporting_successful">Exporting successful</string>
+    <string name="importing_failed">Importing failed</string>
+    <string name="exporting_failed">Exporting failed</string>
+    <string name="importing_some_entries_failed">Importing some entries failed</string>
+    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
+    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
 
     <!-- About -->
     <string name="about">Acerca</string>

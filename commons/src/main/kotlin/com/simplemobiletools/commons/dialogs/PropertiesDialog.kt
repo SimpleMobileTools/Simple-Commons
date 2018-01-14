@@ -78,12 +78,13 @@ class PropertiesDialog() {
             }
             file.isImageSlow() -> addProperty(R.string.resolution, file.getResolution().formatAsResolution())
             file.isAudioSlow() -> {
-                file.getDuration()?.let { addProperty(R.string.duration, it) }
+                file.getDuration().let { addProperty(R.string.duration, it) }
+                file.getSongTitle()?.let { addProperty(R.string.song_title, it) }
                 file.getArtist()?.let { addProperty(R.string.artist, it) }
                 file.getAlbum()?.let { addProperty(R.string.album, it) }
             }
             file.isVideoSlow() -> {
-                file.getDuration()?.let { addProperty(R.string.duration, it) }
+                file.getDuration().let { addProperty(R.string.duration, it) }
                 addProperty(R.string.resolution, file.getResolution().formatAsResolution())
                 file.getArtist()?.let { addProperty(R.string.artist, it) }
                 file.getAlbum()?.let { addProperty(R.string.album, it) }

@@ -119,6 +119,7 @@
     <string name="f_number">Относительное отверстие</string>
     <string name="camera">Камера</string>
     <string name="exif">EXIF</string>
+    <string name="song_title">Song title</string>
 
     <!-- Color customization -->
     <string name="background_color">Цвет фона</string>
@@ -237,6 +238,17 @@
     <string name="password_protect_whole_app">Защита паролем всего приложения</string>
     <string name="keep_last_modified">Сохранять значение даты изменения файла при копировании/перемещении/переименовании</string>
     <string name="show_info_bubble">Показывать информационное окно при прокрутке элементов перетаскиванием полосы прокрутки</string>
+
+    <!-- Import / Export -->
+    <string name="importing">Импорт…</string>
+    <string name="exporting">Экспорт…</string>
+    <string name="importing_successful">Importing successful</string>
+    <string name="exporting_successful">Exporting successful</string>
+    <string name="importing_failed">Importing failed</string>
+    <string name="exporting_failed">Exporting failed</string>
+    <string name="importing_some_entries_failed">Importing some entries failed</string>
+    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
+    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
 
     <!-- About -->
     <string name="about">О приложении</string>

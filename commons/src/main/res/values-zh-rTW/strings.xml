@@ -119,6 +119,7 @@
     <string name="f_number">光圈</string>
     <string name="camera">相機</string>
     <string name="exif">EXIF</string>
+    <string name="song_title">Song title</string>
 
     <!-- Color customization -->
     <string name="background_color">背景顏色</string>
@@ -234,6 +235,17 @@
     <string name="password_protect_whole_app">用密碼保護整個應用程式</string>
     <string name="keep_last_modified">當檔案複製/移動/重新命名時，保留舊的「最後修改」數值</string>
     <string name="show_info_bubble">拖曳滾動條時，顯示訊息氣泡</string>
+
+    <!-- Import / Export -->
+    <string name="importing">Importing…</string>
+    <string name="exporting">Exporting…</string>
+    <string name="importing_successful">Importing successful</string>
+    <string name="exporting_successful">Exporting successful</string>
+    <string name="importing_failed">Importing failed</string>
+    <string name="exporting_failed">Exporting failed</string>
+    <string name="importing_some_entries_failed">Importing some entries failed</string>
+    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
+    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
 
     <!-- About -->
     <string name="about">關於</string>

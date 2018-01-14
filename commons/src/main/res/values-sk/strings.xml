@@ -120,6 +120,7 @@
     <string name="f_number">Clonové číslo</string>
     <string name="camera">Fotoaparát</string>
     <string name="exif">EXIF</string>
+    <string name="song_title">Názov skladby</string>
 
     <!-- Color customization -->
     <string name="background_color">Farba pozadia</string>
@@ -238,6 +239,17 @@
     <string name="password_protect_whole_app">Uzamknúť heslom celú aplikáciu</string>
     <string name="keep_last_modified">Ponechať starú hodnotu naposledy-upravené pri kopírovaní/presúvaní/premenúvaní súborov</string>
     <string name="show_info_bubble">Zobraziť informačnú bublinu pri prehliadaní položiek ťahaním posuvníka</string>
+
+    <!-- Import / Export -->
+    <string name="importing">Importovanie…</string>
+    <string name="exporting">Exportovanie…</string>
+    <string name="importing_successful">Importovanie bolo úspešné</string>
+    <string name="exporting_successful">Exportovanie bolo úspešné</string>
+    <string name="importing_failed">Importovanie zlyhalo</string>
+    <string name="exporting_failed">Exportovanie zlyhalo</string>
+    <string name="importing_some_entries_failed">Importovanie niektorých položiek zlyhalo</string>
+    <string name="exporting_some_entries_failed">Exportovanie niektorých položiek zlyhalo</string>
+    <string name="no_entries_for_exporting">Nenašli sa žiadne položky pre export</string>
 
     <!-- About -->
     <string name="about">O aplikácií</string>

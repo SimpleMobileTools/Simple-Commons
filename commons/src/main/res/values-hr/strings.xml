@@ -120,6 +120,7 @@
     <string name="f_number">F-broj</string>
     <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
+    <string name="song_title">Song title</string>
 
     <!-- Color customization -->
     <string name="background_color">Boja pozadine</string>
@@ -238,6 +239,17 @@
     <string name="password_protect_whole_app">Zaštiti cijelu aplikaciju lozinkom</string>
     <string name="keep_last_modified">Zadrži stari datum zadnje izmjene pri kopiranje/premještanju/preimenovanju datoteke</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+
+    <!-- Import / Export -->
+    <string name="importing">Importing…</string>
+    <string name="exporting">Exporting…</string>
+    <string name="importing_successful">Importing successful</string>
+    <string name="exporting_successful">Exporting successful</string>
+    <string name="importing_failed">Importing failed</string>
+    <string name="exporting_failed">Exporting failed</string>
+    <string name="importing_some_entries_failed">Importing some entries failed</string>
+    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
+    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
 
     <!-- About -->
     <string name="about">O nama</string>

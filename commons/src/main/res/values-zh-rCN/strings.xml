@@ -119,6 +119,7 @@
     <string name="f_number">光圈</string>
     <string name="camera">相机</string>
     <string name="exif">EXIF</string>
+    <string name="song_title">歌曲标题</string>
 
     <!-- Color customization -->
     <string name="background_color">背景色</string>
@@ -234,6 +235,17 @@
     <string name="password_protect_whole_app">使用密码保护本应用</string>
     <string name="keep_last_modified">在复制/移动/重命名文件时保留旧的修改日期</string>
     <string name="show_info_bubble">拖动滚动条时在滚动项目旁显示一个信息气泡</string>
+
+    <!-- Import / Export -->
+    <string name="importing">正在导入...</string>
+    <string name="exporting">正在导出...</string>
+    <string name="importing_successful">导入成功</string>
+    <string name="exporting_successful">导出成功</string>
+    <string name="importing_failed">导入失败</string>
+    <string name="exporting_failed">导出失败</string>
+    <string name="importing_some_entries_failed">部分项目导入失败</string>
+    <string name="exporting_some_entries_failed">部分项目导出失败</string>
+    <string name="no_entries_for_exporting">未找到要导出的项目</string>
 
     <!-- About -->
     <string name="about">关于</string>
