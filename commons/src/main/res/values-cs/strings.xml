@@ -236,6 +236,17 @@
     <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
 
+    <!-- Import / Export -->
+    <string name="importing">Importování…</string>
+    <string name="exporting">Exportování…</string>
+    <string name="import_successful">Import successful</string>
+    <string name="export_successful">Export successful</string>
+    <string name="importing_failed">Importing failed</string>
+    <string name="exporting_failed">Exporting failed</string>
+    <string name="importing_some_entries_failed">Importing some entries failed</string>
+    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
+    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+
     <!-- About -->
     <string name="about">O aplikaci</string>
     <string name="website_label">Pro zdrojové kódy navštivte</string>

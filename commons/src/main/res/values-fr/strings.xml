@@ -236,6 +236,17 @@
     <string name="keep_last_modified">Garder la valeur de l\'ancienne modification lors de renommage/déplacement/copie de fichier</string>
     <string name="show_info_bubble">Afficher une bulle d\'information des éléments qui s\'affichent lorsque vous faites glisser la barre de défilement</string>
 
+    <!-- Import / Export -->
+    <string name="importing">Importer…</string>
+    <string name="exporting">Exporter…</string>
+    <string name="import_successful">Import successful</string>
+    <string name="export_successful">Export successful</string>
+    <string name="importing_failed">Importing failed</string>
+    <string name="exporting_failed">Exporting failed</string>
+    <string name="importing_some_entries_failed">Importing some entries failed</string>
+    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
+    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+
     <!-- About -->
     <string name="about">À propos</string>
     <string name="website_label">Pour le code source, visitez</string>

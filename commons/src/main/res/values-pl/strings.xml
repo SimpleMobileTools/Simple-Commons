@@ -240,6 +240,17 @@
     <string name="keep_last_modified">Zachowuj starą datę i czas modyfikacji przy kopiowaniu / przenoszeniu / zmianie nazwy plików</string>
     <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
 
+    <!-- Import / Export -->
+    <string name="importing">Importuję…</string>
+    <string name="exporting">Eksportuję…</string>
+    <string name="import_successful">Import successful</string>
+    <string name="export_successful">Export successful</string>
+    <string name="importing_failed">Importing failed</string>
+    <string name="exporting_failed">Exporting failed</string>
+    <string name="importing_some_entries_failed">Importing some entries failed</string>
+    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
+    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+
     <!-- About -->
     <string name="about">O aplikacji</string>
     <string name="website_label">Nasza strona internerowa:</string>

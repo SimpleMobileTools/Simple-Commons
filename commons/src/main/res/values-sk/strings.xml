@@ -240,6 +240,17 @@
     <string name="keep_last_modified">Ponechať starú hodnotu naposledy-upravené pri kopírovaní/presúvaní/premenúvaní súborov</string>
     <string name="show_info_bubble">Zobraziť informačnú bublinu pri prehliadaní položiek ťahaním posuvníka</string>
 
+    <!-- Import / Export -->
+    <string name="importing">Importovanie…</string>
+    <string name="exporting">Exportovanie…</string>
+    <string name="import_successful">Import bol úspešný</string>
+    <string name="export_successful">Export bol úspešný</string>
+    <string name="importing_failed">Import zlyhal</string>
+    <string name="exporting_failed">Export zlyhal</string>
+    <string name="importing_some_entries_failed">Importovanie niektorých položiek zlyhalo</string>
+    <string name="exporting_some_entries_failed">Exportovanie niektorých položiek zlyhalo</string>
+    <string name="no_entries_for_exporting">Nenašli sa žiadne položky pre export</string>
+
     <!-- About -->
     <string name="about">O aplikácií</string>
     <string name="website_label">Pre zdrojové kódy navštívte</string>

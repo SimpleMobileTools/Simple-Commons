@@ -236,6 +236,17 @@
     <string name="keep_last_modified">Datum laatst gewijzigd behouden bij bestandsoperaties</string>
     <string name="show_info_bubble">Bij slepen van schuifbalk extra informatie tonen</string>
 
+    <!-- Import / Export -->
+    <string name="importing">Importeren…</string>
+    <string name="exporting">Exporteren…</string>
+    <string name="import_successful">Import successful</string>
+    <string name="export_successful">Export successful</string>
+    <string name="importing_failed">Importing failed</string>
+    <string name="exporting_failed">Exporting failed</string>
+    <string name="importing_some_entries_failed">Importing some entries failed</string>
+    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
+    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+
     <!-- About -->
     <string name="about">Over</string>
     <string name="website_label">Bezoek voor de broncode</string>
