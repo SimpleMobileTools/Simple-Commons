@@ -11,7 +11,7 @@
     <string name="no_app_found">Приложение не найдено</string>
     <string name="set_as">Установить как…</string>
     <string name="value_copied_to_clipboard">Значение скопировано в буфер обмена</string>
-    <string name="unknown">Unknown</string>
+    <string name="unknown">Неизвестно</string>
 
     <!-- Filters -->
     <string name="filter">Фильтрация</string>
@@ -119,7 +119,7 @@
     <string name="f_number">Относительное отверстие</string>
     <string name="camera">Камера</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Название песни</string>
 
     <!-- Color customization -->
     <string name="background_color">Цвет фона</string>
@@ -242,13 +242,13 @@
     <!-- Import / Export -->
     <string name="importing">Импорт…</string>
     <string name="exporting">Экспорт…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing_successful">Импортирование выполнено успешно</string>
+    <string name="exporting_successful">Экспортирование выполнено успешно</string>
+    <string name="importing_failed">Импортирование завершилось неудачей</string>
+    <string name="exporting_failed">Экспортирование завершилось неудачей</string>
+    <string name="importing_some_entries_failed">Импортирование некоторых элементов завершилось неудачей</string>
+    <string name="exporting_some_entries_failed">Экспортирование некоторых элементов завершилось неудачей</string>
+    <string name="no_entries_for_exporting">Нет элементов для экспортирования</string>
 
     <!-- About -->
     <string name="about">О приложении</string>
