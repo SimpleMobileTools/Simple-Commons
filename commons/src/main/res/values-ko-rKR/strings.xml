@@ -237,15 +237,15 @@
     <string name="show_info_bubble">스크롤바 드래그 시 항목별 툴팁 활성화</string>
 
     <!-- Import / Export -->
-    <string name="importing">가져 오는 중…</string>
+    <string name="importing">가져오는 중…</string>
     <string name="exporting">내보내는 중…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing_successful">가져오기 성공</string>
+    <string name="exporting_successful">내보내기 성공</string>
+    <string name="importing_failed">가져오기 실패</string>
+    <string name="exporting_failed">내보내기 실패</string>
+    <string name="importing_some_entries_failed">일부항목 가져오기에 실패함</string>
+    <string name="exporting_some_entries_failed">일부항목 내보내기에 실패함</string>
+    <string name="no_entries_for_exporting">내보낼 수 있는 항목을 찾을 수 없음</string>
 
     <!-- About -->
     <string name="about">앱정보</string>

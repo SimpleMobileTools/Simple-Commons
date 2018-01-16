@@ -113,13 +113,13 @@
     <string name="duration">Varighed</string>
     <string name="artist">Forfatter</string>
     <string name="album">Album</string>
-    <string name="focal_length">Focal length</string>
-    <string name="exposure_time">Exposure time</string>
-    <string name="iso_speed">ISO speed</string>
-    <string name="f_number">F-number</string>
+    <string name="focal_length">Brændvidde</string>
+    <string name="exposure_time">Eksponeringstid</string>
+    <string name="iso_speed">ISO</string>
+    <string name="f_number">F-nummer</string>
     <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Sangtitel</string>
 
     <!-- Color customization -->
     <string name="background_color">Baggrundsfarve</string>
@@ -165,7 +165,7 @@
     <string name="unhide">Vis</string>
     <string name="hide_folder">Skjul mappe</string>
     <string name="unhide_folder">Vis mappe</string>
-    <string name="temporarily_show_hidden">>Mis midlertidigt skjulte</string>
+    <string name="temporarily_show_hidden">Vis midlertidigt skjulte</string>
     <string name="stop_showing_hidden">Stop visning af skjulte medier</string>
     <string name="maximum_share_reached">Du kan ikke dele så meget indhold ad gangen</string>
 
@@ -241,11 +241,11 @@
     <string name="exporting">Eksporterer…</string>
     <string name="importing_successful">Importing successful</string>
     <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing_failed">Import mislykkedes</string>
+    <string name="exporting_failed">Export mislykkedes</string>
+    <string name="importing_some_entries_failed">Importing mislykkedes delvist</string>
+    <string name="exporting_some_entries_failed">Exporting  mislykkedes delvist</string>
+    <string name="no_entries_for_exporting">Der er ikke fundet indhold til eksport</string>
 
     <!-- About -->
     <string name="about">Om</string>
@@ -275,25 +275,25 @@
     <string name="purchase">Køb</string>
 
     <!-- License -->
-    <string name="notice">Denne app bruger følgende 3.-parts biblioteker der gør mit liv bliver lidt enklere. Tak.</string>
+    <string name="notice">Denne app bruger følgende 3.-parts biblioteker der gør at mit liv bliver lidt enklere. Tak.</string>
     <string name="third_party_licences">3.-parts licencer</string>
-    <string name="kotlin_title">Kotlin (programming language)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
-    <string name="glide_title">Glide (image loading and caching)</string>
-    <string name="picasso_title">Picasso (image loading and caching)</string>
-    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
-    <string name="joda_title">Joda-Time (Java date replacement)</string>
-    <string name="stetho_title">Stetho (debugging databases)</string>
+    <string name="kotlin_title">Kotlin (programmeringssprog)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zoombar billedvisning)</string>
+    <string name="glide_title">Glide (billedindlæsning og -caching)</string>
+    <string name="picasso_title">Picasso (billedindlæsning og -caching)</string>
+    <string name="cropper_title">Android Image Cropper (beskær og roter billede)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (vælger flere elementer)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (højre til venstre-swiping)</string>
+    <string name="joda_title">Joda-Time (Java-dato-erstatning)</string>
+    <string name="stetho_title">Stetho (debugger databaser)</string>
     <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
-    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
-    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
+    <string name="photoview_title">PhotoView (zoombare GIF\'er)</string>
+    <string name="pattern_title">PatternLockView (mønsterbeskyttelse)</string>
+    <string name="reprint_title">Reprint (beskyttelse af fingeraftryk)</string>
+    <string name="gif_drawable_title">Gif Drawable (indlæser GIF\'er)</string>
+    <string name="autofittextview_title">AutoFitTextView (skalering af tekst)</string>
+    <string name="robolectric_title">Robolectric (tester framework)</string>
+    <string name="espresso_title">Espresso (tester helper)</string>
     <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="leak_canary_title">Leak Canary (detektering af pladsmangel)</string>
 </resources>
