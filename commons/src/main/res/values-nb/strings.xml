@@ -119,7 +119,7 @@
     <string name="f_number">Blendertall</string>
     <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Sangtittel</string>
 
     <!-- Color customization -->
     <string name="background_color">Bakgrunnsfarge</string>
@@ -239,13 +239,13 @@
     <!-- Import / Export -->
     <string name="importing">Importerer…</string>
     <string name="exporting">Eksporterer…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing_successful">Importering vellykket</string>
+    <string name="exporting_successful">Eksportering vellykket</string>
+    <string name="importing_failed">Importering feilet</string>
+    <string name="exporting_failed">Eksportering feilet</string>
+    <string name="importing_some_entries_failed">Importering av noen oppføringer feilet</string>
+    <string name="exporting_some_entries_failed">Eksportering av noen oppføringer feilet</string>
+    <string name="no_entries_for_exporting">Ingen oppføringer for eksportering er funnet</string>
 
     <!-- About -->
     <string name="about">Om</string>
