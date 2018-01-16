@@ -11,7 +11,7 @@
 
     <!-- Color Customization -->
     <color name="theme_light_text_color">@color/md_grey_600</color>
-    <color name="theme_light_background_color">@color/md_grey_200</color>
+    <color name="theme_light_background_color">@color/md_grey_white</color>
     <color name="theme_dark_text_color">@color/md_grey_200</color>
     <color name="theme_dark_background_color">@color/md_grey_800</color>
     <color name="default_text_color">@color/theme_dark_text_color</color>
