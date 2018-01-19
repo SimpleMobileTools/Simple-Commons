@@ -1,7 +1,6 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annuller</string>
-    <string name="search">Søg</string>
     <string name="save_as">Gem som</string>
     <string name="file_saved">Fil gemt</string>
     <string name="invalid_file_format">Ugyldigt filformat</string>
@@ -12,6 +11,10 @@
     <string name="set_as">Sæt som</string>
     <string name="value_copied_to_clipboard">Værdi kopieret til udklipsholder</string>
     <string name="unknown">Ukendt</string>
+
+    <!-- Search -->
+    <string name="search">Søg</string>
+    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
 
     <!-- Filters -->
     <string name="filter">Filter</string>

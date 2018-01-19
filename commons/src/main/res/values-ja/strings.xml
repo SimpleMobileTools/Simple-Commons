@@ -1,7 +1,6 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">キャンセル</string>
-    <string name="search">検索</string>
     <string name="save_as">名前を付けて保存</string>
     <string name="file_saved">ファイルを正常に保存しました</string>
     <string name="invalid_file_format">使用できないファイル形式</string>
@@ -12,6 +11,10 @@
     <string name="set_as">他で使う</string>
     <string name="value_copied_to_clipboard">値をクリップボードにコピーしました</string>
     <string name="unknown">Unknown</string>
+
+    <!-- Search -->
+    <string name="search">検索</string>
+    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
 
     <!-- Filters -->
     <string name="filter">Filter</string>

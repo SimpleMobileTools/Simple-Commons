@@ -1,7 +1,6 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Отмена</string>
-    <string name="search">Поиск</string>
     <string name="save_as">Сохранить как</string>
     <string name="file_saved">Файл успешно сохранён</string>
     <string name="invalid_file_format">Недопустимый формат файла</string>
@@ -12,6 +11,10 @@
     <string name="set_as">Установить как…</string>
     <string name="value_copied_to_clipboard">Значение скопировано в буфер обмена</string>
     <string name="unknown">Неизвестно</string>
+
+    <!-- Search -->
+    <string name="search">Поиск</string>
+    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
 
     <!-- Filters -->
     <string name="filter">Фильтрация</string>

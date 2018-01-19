@@ -1,7 +1,6 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancel·lar</string>
-    <string name="search">Buscar</string>
     <string name="save_as">Desar com</string>
     <string name="file_saved">Arxiu desat amb éxit</string>
     <string name="invalid_file_format">Format d\'arxiu no vàlid</string>
@@ -12,6 +11,10 @@
     <string name="set_as">Establir com</string>
     <string name="value_copied_to_clipboard">Valor copiat al portaretalls</string>
     <string name="unknown">Desconegut</string>
+
+    <!-- Search -->
+    <string name="search">Buscar</string>
+    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
 
     <!-- Filters -->
     <string name="filter">Filtrar</string>

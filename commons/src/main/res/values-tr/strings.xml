@@ -1,7 +1,6 @@
 <resources>
     <string name="ok">TAMAM</string>
     <string name="cancel">İptal</string>
-    <string name="search">Arama</string>
     <string name="save_as">Farklı kaydet</string>
     <string name="file_saved">Dosya başarıyla kaydedildi</string>
     <string name="invalid_file_format">Invalid file format</string>
@@ -12,6 +11,10 @@
     <string name="set_as">Set as</string>
     <string name="value_copied_to_clipboard">Panoya kopyalanan değer</string>
     <string name="unknown">Unknown</string>
+
+    <!-- Search -->
+    <string name="search">Arama</string>
+    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
 
     <!-- Filters -->
     <string name="filter">Filtre</string>

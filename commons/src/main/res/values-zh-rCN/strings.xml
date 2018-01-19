@@ -1,7 +1,6 @@
 <resources>
     <string name="ok">确认</string>
     <string name="cancel">取消</string>
-    <string name="search">搜索</string>
     <string name="save_as">保存</string>
     <string name="file_saved">文件保存成功</string>
     <string name="invalid_file_format">无效文件格式</string>
@@ -12,6 +11,10 @@
     <string name="set_as">设置为</string>
     <string name="value_copied_to_clipboard">颜色值已复制到剪贴板</string>
     <string name="unknown">未知</string>
+
+    <!-- Search -->
+    <string name="search">搜索</string>
+    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
 
     <!-- Filters -->
     <string name="filter">过滤</string>

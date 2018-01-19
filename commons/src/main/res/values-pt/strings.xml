@@ -1,7 +1,6 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancelar</string>
-    <string name="search">Pesquisar</string>
     <string name="save_as">Guardar como</string>
     <string name="file_saved">Ficheiro guardado com sucesso</string>
     <string name="invalid_file_format">Formato de ficheiro inválido</string>
@@ -12,6 +11,10 @@
     <string name="set_as">Definir como</string>
     <string name="value_copied_to_clipboard">Valor copiado para a área de transferência</string>
     <string name="unknown">Desconhecido</string>
+
+    <!-- Search -->
+    <string name="search">Pesquisar</string>
+    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
 
     <!-- Filters -->
     <string name="filter">Filtrar</string>

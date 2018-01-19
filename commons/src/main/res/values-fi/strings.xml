@@ -1,7 +1,6 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
-    <string name="search">Search</string>
     <string name="save_as">Save as</string>
     <string name="file_saved">File saved successfully</string>
     <string name="invalid_file_format">Invalid file format</string>
@@ -12,6 +11,10 @@
     <string name="set_as">Aseta</string>
     <string name="value_copied_to_clipboard">Valeur copiée dans le presse-papier</string>
     <string name="unknown">Unknown</string>
+
+    <!-- Search -->
+    <string name="search">Search</string>
+    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
 
     <!-- Filters -->
     <string name="filter">Filter</string>
