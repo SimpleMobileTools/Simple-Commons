@@ -458,6 +458,27 @@ private fun deleteRecursively(file: File): Boolean {
     return file.delete()
 }
 
+
+fun Activity.scanFile(file: File, callback: (() -> Unit)? = null) {
+    applicationContext.scanFile(file, callback)
+}
+
+fun Activity.scanPath(path: String, callback: (() -> Unit)? = null) {
+    applicationContext.scanPath(path, callback)
+}
+
+fun Activity.scanFiles(files: ArrayList<File>, callback: (() -> Unit)? = null) {
+    applicationContext.scanFiles(files, callback)
+}
+
+fun Activity.scanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
+    applicationContext.scanPaths(paths, callback)
+}
+
+fun Activity.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
+    applicationContext.rescanPaths(paths, callback)
+}
+
 @SuppressLint("NewApi")
 fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: ((success: Boolean) -> Unit)? = null) {
     if (needsStupidWritePermissions(newFile.absolutePath)) {
