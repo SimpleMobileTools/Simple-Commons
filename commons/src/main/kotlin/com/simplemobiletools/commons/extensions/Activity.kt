@@ -458,7 +458,6 @@ private fun deleteRecursively(file: File): Boolean {
     return file.delete()
 }
 
-
 fun Activity.scanFile(file: File, callback: (() -> Unit)? = null) {
     applicationContext.scanFile(file, callback)
 }
