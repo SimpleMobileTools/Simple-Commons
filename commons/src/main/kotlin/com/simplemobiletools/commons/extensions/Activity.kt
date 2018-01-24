@@ -419,7 +419,7 @@ fun BaseSimpleActivity.deleteFileBg(file: File, allowDeleteFolder: Boolean = fal
                 if (!fileDeleted) {
                     val document = getFileDocument(file.absolutePath)
                     if (document != null && (file.isDirectory == document.isDirectory)) {
-                        fileDeleted = (document.isFile == true || allowDeleteFolder) && DocumentsContract.deleteDocument(contentResolver, document.uri)
+                        fileDeleted = (document.isFile == true || allowDeleteFolder) && DocumentsContract.deleteDocument(applicationContext.contentResolver, document.uri)
                     }
                 }
 
@@ -439,7 +439,7 @@ fun BaseSimpleActivity.rescanDeletedFile(file: File, callback: (() -> Unit)? = n
     } else {
         MediaScannerConnection.scanFile(applicationContext, arrayOf(file.absolutePath), null, { s, uri ->
             try {
-                contentResolver.delete(uri, null, null)
+                applicationContext.contentResolver.delete(uri, null, null)
             } catch (e: Exception) {
             }
             callback?.invoke()
@@ -490,7 +490,7 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: ((succ
             }
 
             try {
-                val uri = DocumentsContract.renameDocument(contentResolver, document.uri, newFile.name)
+                val uri = DocumentsContract.renameDocument(applicationContext.contentResolver, document.uri, newFile.name)
                 if (document.uri != uri) {
                     updateInMediaStore(oldFile, newFile)
                     scanFiles(arrayListOf(oldFile, newFile)) {
@@ -560,7 +560,7 @@ fun BaseSimpleActivity.getFileOutputStream(file: File, callback: (outputStream: 
             }
 
             if (document?.exists() == true) {
-                callback(contentResolver.openOutputStream(document.uri))
+                callback(applicationContext.contentResolver.openOutputStream(document.uri))
             } else {
                 val error = String.format(getString(R.string.could_not_create_file), file.absolutePath)
                 showErrorToast(error)
@@ -584,7 +584,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(targetPath: String, mimeType: Str
         }
 
         val newDocument = documentFile.createFile(mimeType, targetPath.getFilenameFromPath())
-        contentResolver.openOutputStream(newDocument!!.uri)
+        applicationContext.contentResolver.openOutputStream(newDocument!!.uri)
     } else {
         FileOutputStream(targetFile)
     }
@@ -661,7 +661,7 @@ fun Activity.isActivityDestroyed() = isJellyBean1Plus() && isDestroyed
 fun Activity.updateSharedTheme(sharedTheme: SharedTheme): Int {
     try {
         val contentValues = MyContentProvider.fillThemeContentValues(sharedTheme)
-        return contentResolver.update(MyContentProvider.CONTENT_URI, contentValues, null, null)
+        return applicationContext.contentResolver.update(MyContentProvider.CONTENT_URI, contentValues, null, null)
     } catch (e: Exception) {
         showErrorToast(e)
     }

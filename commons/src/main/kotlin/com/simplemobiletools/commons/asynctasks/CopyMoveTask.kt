@@ -137,7 +137,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         val uri = MediaStore.Files.getContentUri("external")
         val selection = "${MediaStore.MediaColumns.DATA} = ?"
         var selectionArgs = arrayOf(source.absolutePath)
-        val cursor = activity.contentResolver.query(uri, projection, selection, selectionArgs, null)
+        val cursor = activity.applicationContext.contentResolver.query(uri, projection, selection, selectionArgs, null)
 
         cursor?.use {
             if (cursor.moveToFirst()) {
@@ -151,7 +151,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
                 selectionArgs = arrayOf(destination.absolutePath)
                 activity.scanFile(destination) {
-                    activity.contentResolver.update(uri, values, selection, selectionArgs)
+                    activity.applicationContext.contentResolver.update(uri, values, selection, selectionArgs)
                 }
             }
         }

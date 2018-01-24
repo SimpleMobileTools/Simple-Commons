@@ -127,7 +127,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         baseConfig.treeUri = treeUri.toString()
 
         val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
-        contentResolver.takePersistableUriPermission(treeUri, takeFlags)
+        applicationContext.contentResolver.takePersistableUriPermission(treeUri, takeFlags)
     }
 
     private fun isProperFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
