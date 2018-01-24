@@ -8,6 +8,7 @@ import android.support.v4.util.Pair
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.interfaces.CopyMoveListener
 import java.io.File
 import java.io.FileInputStream
 import java.io.InputStream
@@ -16,7 +17,7 @@ import java.lang.ref.WeakReference
 import java.util.*
 
 class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = false, val copyMediaOnly: Boolean,
-                   listener: CopyMoveTask.CopyMoveListener) : AsyncTask<Pair<ArrayList<File>, File>, Void, Boolean>() {
+                   listener: CopyMoveListener) : AsyncTask<Pair<ArrayList<File>, File>, Void, Boolean>() {
     private var mListener: WeakReference<CopyMoveListener>? = null
     private var mMovedFiles: ArrayList<File> = ArrayList()
     private var mDocuments = LinkedHashMap<String, DocumentFile?>()
@@ -155,11 +156,5 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 }
             }
         }
-    }
-
-    interface CopyMoveListener {
-        fun copySucceeded(copyOnly: Boolean, copiedAll: Boolean)
-
-        fun copyFailed()
     }
 }
