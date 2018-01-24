@@ -19,7 +19,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                    listener: CopyMoveTask.CopyMoveListener) : AsyncTask<Pair<ArrayList<File>, File>, Void, Boolean>() {
     private var mListener: WeakReference<CopyMoveListener>? = null
     private var mMovedFiles: ArrayList<File> = ArrayList()
-    private var mDocument: DocumentFile? = null
+    private var mDocuments = LinkedHashMap<String, DocumentFile?>()
     lateinit var mFiles: ArrayList<File>
 
     init {
@@ -72,8 +72,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         val children = source.list()
         for (child in children) {
             val newFile = File(destination, child)
-            if (newFile.exists())
+            if (newFile.exists()) {
                 continue
+            }
 
             val oldFile = File(source, child)
             copy(oldFile, newFile)
@@ -82,8 +83,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     }
 
     private fun copyFile(source: File, destination: File) {
-        if (copyMediaOnly && !source.absolutePath.isImageVideoGif())
+        if (copyMediaOnly && !source.absolutePath.isImageVideoGif()) {
             return
+        }
 
         val directory = destination.parentFile
         if (!activity.createDirectorySync(directory)) {
@@ -95,11 +97,11 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         var inputStream: InputStream? = null
         var out: OutputStream? = null
         try {
-            if (mDocument == null && activity.needsStupidWritePermissions(destination.absolutePath)) {
-                mDocument = activity.getFileDocument(destination.parent)
+            if (!mDocuments.containsKey(destination.parent) && activity.needsStupidWritePermissions(destination.absolutePath)) {
+                mDocuments[destination.parent] = activity.getFileDocument(destination.parent)
             }
 
-            out = activity.getFileOutputStreamSync(destination.absolutePath, source.getMimeType(), mDocument)
+            out = activity.getFileOutputStreamSync(destination.absolutePath, source.getMimeType(), mDocuments[destination.parent])
 
             inputStream = FileInputStream(source)
             inputStream.copyTo(out!!)
