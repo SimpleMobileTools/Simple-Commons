@@ -239,6 +239,12 @@
     <string name="keep_last_modified">Garder la valeur de l\'ancienne modification lors de renommage/déplacement/copie de fichier</string>
     <string name="show_info_bubble">Afficher une bulle d\'information des éléments qui s\'affichent lorsque vous faites glisser la barre de défilement</string>
 
+    <!-- Setting sections -->
+    <string name="visibility">Visibility</string>
+    <string name="security">Security</string>
+    <string name="scrolling">Scrolling</string>
+    <string name="file_operations">File operations</string>
+
     <!-- Import / Export -->
     <string name="importing">Importer…</string>
     <string name="exporting">Exporter…</string>

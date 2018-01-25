@@ -239,6 +239,12 @@
     <string name="keep_last_modified">Manter dados da última modificação ao copiar/mover/renomear</string>
     <string name="show_info_bubble">Mostrar informação ao arrastar a barra de deslocamento</string>
 
+    <!-- Setting sections -->
+    <string name="visibility">Visibility</string>
+    <string name="security">Security</string>
+    <string name="scrolling">Scrolling</string>
+    <string name="file_operations">File operations</string>
+
     <!-- Import / Export -->
     <string name="importing">A importar…</string>
     <string name="exporting">A exportar…</string>

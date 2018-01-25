@@ -239,6 +239,12 @@
     <string name="keep_last_modified">當檔案複製/移動/重新命名時，保留舊的「最後修改」數值</string>
     <string name="show_info_bubble">拖曳滾動條時，顯示訊息氣泡</string>
 
+    <!-- Setting sections -->
+    <string name="visibility">Visibility</string>
+    <string name="security">Security</string>
+    <string name="scrolling">Scrolling</string>
+    <string name="file_operations">File operations</string>
+
     <!-- Import / Export -->
     <string name="importing">正在導入…</string>
     <string name="exporting">正在導出…</string>

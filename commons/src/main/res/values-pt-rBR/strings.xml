@@ -239,6 +239,12 @@
     <string name="keep_last_modified">Manter valor anterior do arquivo modificado por último ao copiar/mover/renomear arquivo</string>
     <string name="show_info_bubble">Mostrar bolha de informação ao rolar usando a barra de rolagem</string>
 
+    <!-- Setting sections -->
+    <string name="visibility">Visibility</string>
+    <string name="security">Security</string>
+    <string name="scrolling">Scrolling</string>
+    <string name="file_operations">File operations</string>
+
     <!-- Import / Export -->
     <string name="importing">Importing…</string>
     <string name="exporting">Exporting…</string>

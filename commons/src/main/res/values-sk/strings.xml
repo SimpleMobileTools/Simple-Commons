@@ -243,6 +243,12 @@
     <string name="keep_last_modified">Ponechať starú hodnotu naposledy-upravené pri kopírovaní/presúvaní/premenúvaní súborov</string>
     <string name="show_info_bubble">Zobraziť informačnú bublinu pri prehliadaní položiek ťahaním posuvníka</string>
 
+    <!-- Setting sections -->
+    <string name="visibility">Viditeľnosť</string>
+    <string name="security">Bezpečnosť</string>
+    <string name="scrolling">Skrolovanie</string>
+    <string name="file_operations">Súborové operácie</string>
+
     <!-- Import / Export -->
     <string name="importing">Importovanie…</string>
     <string name="exporting">Exportovanie…</string>

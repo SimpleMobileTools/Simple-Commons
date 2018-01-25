@@ -243,6 +243,12 @@
     <string name="keep_last_modified">Zadrži stari datum zadnje izmjene pri kopiranje/premještanju/preimenovanju datoteke</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
 
+    <!-- Setting sections -->
+    <string name="visibility">Visibility</string>
+    <string name="security">Security</string>
+    <string name="scrolling">Scrolling</string>
+    <string name="file_operations">File operations</string>
+
     <!-- Import / Export -->
     <string name="importing">Importing…</string>
     <string name="exporting">Exporting…</string>
