@@ -14,7 +14,7 @@
 
     <!-- Search -->
     <string name="search">Søg</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
+    <string name="type_2_characters">Start søgningen ved at skrive mindst to tegn.</string>
 
     <!-- Filters -->
     <string name="filter">Filter</string>
@@ -240,20 +240,20 @@
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
+    <string name="visibility">Synlighed</string>
+    <string name="security">Sikkerhed</string>
     <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
+    <string name="file_operations">Filoperationer</string>
 
     <!-- Import / Export -->
     <string name="importing">Importerer…</string>
     <string name="exporting">Eksporterer…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
+    <string name="importing_successful">Import gennemført</string>
+    <string name="exporting_successful">Eksport gennemført</string>
     <string name="importing_failed">Import mislykkedes</string>
-    <string name="exporting_failed">Export mislykkedes</string>
-    <string name="importing_some_entries_failed">Importing mislykkedes delvist</string>
-    <string name="exporting_some_entries_failed">Exporting  mislykkedes delvist</string>
+    <string name="exporting_failed">Eksport mislykkedes</string>
+    <string name="importing_some_entries_failed">Import mislykkedes delvist</string>
+    <string name="exporting_some_entries_failed">Eksport mislykkedes delvist</string>
     <string name="no_entries_for_exporting">Der er ikke fundet indhold til eksport</string>
 
     <!-- About -->
