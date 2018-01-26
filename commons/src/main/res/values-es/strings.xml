@@ -239,21 +239,21 @@
     <string name="show_info_bubble">Mostrar una burbuja de información al desplazar elementos arrastrando la barra de desplazamiento</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
+    <string name="visibility">Visibilidad</string>
+    <string name="security">Seguridad</string>
+    <string name="scrolling">Desplazamiento</string>
+    <string name="file_operations">Operaciones de ficheros</string>
 
     <!-- Import / Export -->
     <string name="importing">Importando…</string>
     <string name="exporting">Exportando…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing_successful">Importación correcta</string>
+    <string name="exporting_successful">Exportación correcta</string>
+    <string name="importing_failed">Importación fallida</string>
+    <string name="exporting_failed">Exportación fallida</string>
+    <string name="importing_some_entries_failed">La importación de algunas entradas ha fallado</string>
+    <string name="exporting_some_entries_failed">La exportación de algunas entradas ha fallado</string>
+    <string name="no_entries_for_exporting">No se han encontrado entradas para exportar</string>
 
     <!-- About -->
     <string name="about">Acerca de</string>
