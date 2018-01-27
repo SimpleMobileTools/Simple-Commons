@@ -14,7 +14,7 @@
 
     <!-- Search -->
     <string name="search">Søk</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
+    <string name="type_2_characters">Skriv inn minst 2 tegn for å starte søket.</string>
 
     <!-- Filters -->
     <string name="filter">Filter</string>
@@ -240,10 +240,10 @@
     <string name="show_info_bubble">Vis en info-boble ved å dra i rullefeltet</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
+    <string name="visibility">Synlighet</string>
+    <string name="security">Sikkerhet</string>
+    <string name="scrolling">Rulling</string>
+    <string name="file_operations">Filoperasjoner</string>
 
     <!-- Import / Export -->
     <string name="importing">Importerer…</string>
