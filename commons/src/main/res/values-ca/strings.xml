@@ -78,9 +78,9 @@
     <string name="unknown_error_occurred">Ha ocorregut un error desconegut</string>
 
     <!-- Copy conflicts -->
-    <string name="file_already_exists">L’arxiu %1$s ja existeix</string>
-    <string name="file_already_exists_overwrite">L’arxiu %1$s ja existeix. El vos sobreescriure?</string>
-    <string name="select_an_action">Tria una opció</string>
+    <string name="file_already_exists">L’arxiu \"%1$s\" ja existeix</string>
+    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="merge">Merge</string>
     <string name="overwrite">Sobreescriure</string>
     <string name="skip">Saltar</string>
     <string name="append">Afegir \'_1\'</string>

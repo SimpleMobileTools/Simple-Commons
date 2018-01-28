@@ -78,9 +78,9 @@
     <string name="unknown_error_occurred">Onbekende fout opgetreden</string>
 
     <!-- Copy conflicts -->
-    <string name="file_already_exists">Bestand %1$s bestaat reeds</string>
-    <string name="file_already_exists_overwrite">Bestand %1$s bestaat reeds. Overschrijven?</string>
-    <string name="select_an_action">Kies een actie</string>
+    <string name="file_already_exists">Bestand \"%1$s\" bestaat reeds</string>
+    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="merge">Merge</string>
     <string name="overwrite">Overschrijven</string>
     <string name="skip">Overslaan</string>
     <string name="append">Voeg \'_1\' toe</string>

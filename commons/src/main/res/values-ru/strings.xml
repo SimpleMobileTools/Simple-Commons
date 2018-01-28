@@ -78,9 +78,9 @@
     <string name="unknown_error_occurred">Произошла неизвестная ошибка</string>
 
     <!-- Copy conflicts -->
-    <string name="file_already_exists">Файл %1$s уже существует</string>
-    <string name="file_already_exists_overwrite">Файл %1$s уже существует. Перезаписать?</string>
-    <string name="select_an_action">Выберите действие</string>
+    <string name="file_already_exists">Файл \"%1$s\" уже существует</string>
+    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="merge">Merge</string>
     <string name="overwrite">Перезаписать</string>
     <string name="skip">Пропустить</string>
     <string name="append">Добавить \'_1\' к имени</string>

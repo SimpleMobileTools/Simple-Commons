@@ -78,9 +78,9 @@
     <string name="unknown_error_occurred">Ein unbekannter Fehler ist aufgetreten</string>
 
     <!-- Copy conflicts -->
-    <string name="file_already_exists">Datei %1$s existiert bereits</string>
-    <string name="file_already_exists_overwrite">Datei %1$s existiert bereits. Überschreiben?</string>
-    <string name="select_an_action">Aktion auswählen</string>
+    <string name="file_already_exists">Datei \"%1$s\" existiert bereits</string>
+    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="merge">Merge</string>
     <string name="overwrite">Überschreiben</string>
     <string name="skip">Überspringen</string>
     <string name="append">\'_1\' anhängen</string>

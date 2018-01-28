@@ -78,9 +78,9 @@
     <string name="unknown_error_occurred">Došlo k neznámej chybe</string>
 
     <!-- Copy conflicts -->
-    <string name="file_already_exists">Súbor %1$s už existuje</string>
-    <string name="file_already_exists_overwrite">Súbor %1$s už existuje. Prepísať?</string>
-    <string name="select_an_action">Zvoľte operáciu</string>
+    <string name="file_already_exists">Súbor \"%1$s\" už existuje</string>
+    <string name="folder_already_exists">Priečinok \"%1$s\" už existuje</string>
+    <string name="merge">Merge</string>
     <string name="overwrite">Prepísať</string>
     <string name="skip">Preskočiť</string>
     <string name="append">Pripnúť \'_1\'</string>

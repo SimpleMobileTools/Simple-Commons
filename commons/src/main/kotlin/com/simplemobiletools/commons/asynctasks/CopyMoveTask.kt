@@ -28,8 +28,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     }
 
     override fun doInBackground(vararg params: Pair<ArrayList<File>, File>): Boolean? {
-        if (params.isEmpty())
+        if (params.isEmpty()) {
             return false
+        }
 
         val pair = params[0]
         mFiles = pair.first!!
@@ -37,8 +38,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         for (file in mFiles) {
             try {
                 val curFile = File(pair.second, file.name)
-                if (curFile.exists())
+                if (curFile.exists()) {
                     continue
+                }
 
                 copy(file, curFile)
             } catch (e: Exception) {

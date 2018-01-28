@@ -78,9 +78,9 @@
     <string name="unknown_error_occurred">Wystąpił nieznany błąd</string>
 
     <!-- Copy conflicts -->
-    <string name="file_already_exists">Plik %1$s już istnieje</string>
-    <string name="file_already_exists_overwrite">Plik %1$s już istnieje. Nadpisać?</string>
-    <string name="select_an_action">Wybierz</string>
+    <string name="file_already_exists">Plik \"%1$s\" już istnieje</string>
+    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="merge">Merge</string>
     <string name="overwrite">Nadpisz</string>
     <string name="skip">Pomiń</string>
     <string name="append">Dodaj końcówkę \'_1\'</string>
