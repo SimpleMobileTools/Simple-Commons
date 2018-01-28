@@ -36,6 +36,7 @@ import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.MyTextView
 import kotlinx.android.synthetic.main.dialog_title.view.*
 import java.io.File
+import java.io.FileNotFoundException
 import java.io.FileOutputStream
 import java.io.OutputStream
 import java.util.*
@@ -559,7 +560,12 @@ fun BaseSimpleActivity.getFileOutputStream(file: File, callback: (outputStream: 
             }
 
             if (document?.exists() == true) {
-                callback(applicationContext.contentResolver.openOutputStream(document.uri))
+                try {
+                    callback(applicationContext.contentResolver.openOutputStream(document.uri))
+                } catch (e: FileNotFoundException) {
+                    showErrorToast(e)
+                    callback(null)
+                }
             } else {
                 val error = String.format(getString(R.string.could_not_create_file), file.absolutePath)
                 showErrorToast(error)
