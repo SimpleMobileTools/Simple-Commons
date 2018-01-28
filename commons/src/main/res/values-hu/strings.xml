@@ -1,7 +1,6 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
-    <string name="search">Search</string>
     <string name="save_as">Save as</string>
     <string name="file_saved">File saved successfully</string>
     <string name="invalid_file_format">Invalid file format</string>
@@ -12,6 +11,10 @@
     <string name="set_as">Set as</string>
     <string name="value_copied_to_clipboard">Value copied to clipboard</string>
     <string name="unknown">Unknown</string>
+
+    <!-- Search -->
+    <string name="search">Search</string>
+    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
 
     <!-- Filters -->
     <string name="filter">Filter</string>
@@ -236,6 +239,12 @@
     <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
 
+    <!-- Setting sections -->
+    <string name="visibility">Visibility</string>
+    <string name="security">Security</string>
+    <string name="scrolling">Scrolling</string>
+    <string name="file_operations">File operations</string>
+
     <!-- Import / Export -->
     <string name="importing">Importing…</string>
     <string name="exporting">Exporting…</string>
@@ -267,7 +276,7 @@
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>
-            hope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
+            hope you are enjoying the app. It contains no ads, please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
             You can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.<br><br>
             Thank you!
         ]]>

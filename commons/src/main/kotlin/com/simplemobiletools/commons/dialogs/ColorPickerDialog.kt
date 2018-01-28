@@ -124,7 +124,7 @@ class ColorPickerDialog(val activity: Activity, color: Int, val callback: (color
 
         val textColor = activity.baseConfig.textColor
         AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok, { dialog, which -> callback(getColor()) })
+                .setPositiveButton(R.string.ok, { dialog, which -> confirmNewColor() })
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
             activity.setupDialogStuff(view, this) {
@@ -140,7 +140,16 @@ class ColorPickerDialog(val activity: Activity, color: Int, val callback: (color
         }
     }
 
-    private fun getHexCode(color: Int) = Integer.toHexString(color).substring(2).toUpperCase()
+    private fun confirmNewColor() {
+        val hexValue = newHexField.value
+        if (hexValue.length == 6) {
+            callback(Color.parseColor("#$hexValue"))
+        } else {
+            callback(getColor())
+        }
+    }
+
+    private fun getHexCode(color: Int) = color.toHex().substring(1)
 
     private fun updateHue() {
         viewSatVal.setHue(getHue())

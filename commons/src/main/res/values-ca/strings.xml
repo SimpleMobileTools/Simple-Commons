@@ -1,7 +1,6 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancel·lar</string>
-    <string name="search">Buscar</string>
     <string name="save_as">Desar com</string>
     <string name="file_saved">Arxiu desat amb éxit</string>
     <string name="invalid_file_format">Format d\'arxiu no vàlid</string>
@@ -12,6 +11,10 @@
     <string name="set_as">Establir com</string>
     <string name="value_copied_to_clipboard">Valor copiat al portaretalls</string>
     <string name="unknown">Desconegut</string>
+
+    <!-- Search -->
+    <string name="search">Buscar</string>
+    <string name="type_2_characters">Escriu al menys dos caracters per iniciar la cerca.</string>
 
     <!-- Filters -->
     <string name="filter">Filtrar</string>
@@ -119,7 +122,7 @@
     <string name="f_number">F-number</string>
     <string name="camera">Càmera</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Títol de la canço</string>
 
     <!-- Color customization -->
     <string name="background_color">Color del fons</string>
@@ -235,16 +238,22 @@
     <string name="keep_last_modified">Mantenir el valor de la darrera modificació al copiar/moure/canviar el nom dels arxius</string>
     <string name="show_info_bubble">Mostra una bombolla d\'informació en elements de desplaçament mitjançant arrossegament de la barra de desplaçament</string>
 
+    <!-- Setting sections -->
+    <string name="visibility">Visibilitat</string>
+    <string name="security">Seguretat</string>
+    <string name="scrolling">Desplaçament</string>
+    <string name="file_operations">Operacions de fitxers</string>
+
     <!-- Import / Export -->
-    <string name="importing">Importing…</string>
-    <string name="exporting">Exporting…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing">Important…</string>
+    <string name="exporting">Exportant…</string>
+    <string name="importing_successful">Importació correcta</string>
+    <string name="exporting_successful">Exportació correcta</string>
+    <string name="importing_failed">Importacó fallida</string>
+    <string name="exporting_failed">Exportació fallida</string>
+    <string name="importing_some_entries_failed">L\'impotació d\'algunes entrades ha fallat</string>
+    <string name="exporting_some_entries_failed">L\'exportació d\'algunes entrades ha fallat</string>
+    <string name="no_entries_for_exporting">No s\'han trobat entrades per exportar</string>
 
     <!-- About -->
     <string name="about">Sobre</string>

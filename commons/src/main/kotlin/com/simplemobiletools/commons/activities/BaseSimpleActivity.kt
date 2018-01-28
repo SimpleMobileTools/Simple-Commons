@@ -24,6 +24,7 @@ import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
 import com.simplemobiletools.commons.helpers.APP_VERSION_NAME
 import com.simplemobiletools.commons.helpers.OPEN_DOCUMENT_TREE
+import com.simplemobiletools.commons.interfaces.CopyMoveListener
 import java.io.File
 import java.util.*
 
@@ -127,7 +128,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         baseConfig.treeUri = treeUri.toString()
 
         val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
-        contentResolver.takePersistableUriPermission(treeUri, takeFlags)
+        applicationContext.contentResolver.takePersistableUriPermission(treeUri, takeFlags)
     }
 
     private fun isProperFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
@@ -244,7 +245,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    val copyMoveListener = object : CopyMoveTask.CopyMoveListener {
+    val copyMoveListener = object : CopyMoveListener {
         override fun copySucceeded(copyOnly: Boolean, copiedAll: Boolean) {
             if (copyOnly) {
                 toast(if (copiedAll) R.string.copying_success else R.string.copying_success_partial)

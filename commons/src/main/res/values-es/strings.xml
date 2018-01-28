@@ -1,7 +1,6 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancelar</string>
-    <string name="search">Buscar</string>
     <string name="save_as">Guardar como</string>
     <string name="file_saved">Archivo guardado con éxito</string>
     <string name="invalid_file_format">Formato de archivo no válido</string>
@@ -12,6 +11,10 @@
     <string name="set_as">Establecer como</string>
     <string name="value_copied_to_clipboard">Valor copiado en el portapapeles</string>
     <string name="unknown">Desconocido</string>
+
+    <!-- Search -->
+    <string name="search">Buscar</string>
+    <string name="type_2_characters">Escribe por lo menos dos caracteres para iniciar la búsqueda.</string>
 
     <!-- Filters -->
     <string name="filter">Filtrar</string>
@@ -119,7 +122,7 @@
     <string name="f_number">F-number</string>
     <string name="camera">Cámara</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Título de la canción</string>
 
     <!-- Color customization -->
     <string name="background_color">Color del fondo</string>
@@ -235,16 +238,22 @@
     <string name="keep_last_modified">Mantener el valor de ultima modificación al copiar/mover/renombrar los archivos</string>
     <string name="show_info_bubble">Mostrar una burbuja de información al desplazar elementos arrastrando la barra de desplazamiento</string>
 
+    <!-- Setting sections -->
+    <string name="visibility">Visibilidad</string>
+    <string name="security">Seguridad</string>
+    <string name="scrolling">Desplazamiento</string>
+    <string name="file_operations">Operaciones de ficheros</string>
+
     <!-- Import / Export -->
     <string name="importing">Importando…</string>
     <string name="exporting">Exportando…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing_successful">Importación correcta</string>
+    <string name="exporting_successful">Exportación correcta</string>
+    <string name="importing_failed">Importación fallida</string>
+    <string name="exporting_failed">Exportación fallida</string>
+    <string name="importing_some_entries_failed">La importación de algunas entradas ha fallado</string>
+    <string name="exporting_some_entries_failed">La exportación de algunas entradas ha fallado</string>
+    <string name="no_entries_for_exporting">No se han encontrado entradas para exportar</string>
 
     <!-- About -->
     <string name="about">Acerca de</string>

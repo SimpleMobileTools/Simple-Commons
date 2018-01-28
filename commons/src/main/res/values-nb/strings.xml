@@ -1,7 +1,6 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Avbryt</string>
-    <string name="search">Søk</string>
     <string name="save_as">Lagre som</string>
     <string name="file_saved">Fil vellykket lagret</string>
     <string name="invalid_file_format">Ugyldig filformat</string>
@@ -12,6 +11,10 @@
     <string name="set_as">Sett som</string>
     <string name="value_copied_to_clipboard">Verdi kopiert til utklippstavle</string>
     <string name="unknown">Ukjent</string>
+
+    <!-- Search -->
+    <string name="search">Søk</string>
+    <string name="type_2_characters">Skriv inn minst 2 tegn for å starte søket.</string>
 
     <!-- Filters -->
     <string name="filter">Filter</string>
@@ -119,7 +122,7 @@
     <string name="f_number">Blendertall</string>
     <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Sangtittel</string>
 
     <!-- Color customization -->
     <string name="background_color">Bakgrunnsfarge</string>
@@ -236,16 +239,22 @@
     <string name="keep_last_modified">Behold gammel Sist endret-verdi ved kopier/flytt/endre navn for filer</string>
     <string name="show_info_bubble">Vis en info-boble ved å dra i rullefeltet</string>
 
+    <!-- Setting sections -->
+    <string name="visibility">Synlighet</string>
+    <string name="security">Sikkerhet</string>
+    <string name="scrolling">Rulling</string>
+    <string name="file_operations">Filoperasjoner</string>
+
     <!-- Import / Export -->
     <string name="importing">Importerer…</string>
     <string name="exporting">Eksporterer…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing_successful">Importering vellykket</string>
+    <string name="exporting_successful">Eksportering vellykket</string>
+    <string name="importing_failed">Importering feilet</string>
+    <string name="exporting_failed">Eksportering feilet</string>
+    <string name="importing_some_entries_failed">Importering av noen oppføringer feilet</string>
+    <string name="exporting_some_entries_failed">Eksportering av noen oppføringer feilet</string>
+    <string name="no_entries_for_exporting">Ingen oppføringer for eksportering er funnet</string>
 
     <!-- About -->
     <string name="about">Om</string>
@@ -267,7 +276,7 @@
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>
-            hope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
+            hope you are enjoying the app. It contains no ads, please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
             You can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.<br><br>
             Thank you!
         ]]>

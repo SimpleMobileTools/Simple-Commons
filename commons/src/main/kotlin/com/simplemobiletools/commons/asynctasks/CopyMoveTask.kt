@@ -8,6 +8,7 @@ import android.support.v4.util.Pair
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.interfaces.CopyMoveListener
 import java.io.File
 import java.io.FileInputStream
 import java.io.InputStream
@@ -16,10 +17,10 @@ import java.lang.ref.WeakReference
 import java.util.*
 
 class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = false, val copyMediaOnly: Boolean,
-                   listener: CopyMoveTask.CopyMoveListener) : AsyncTask<Pair<ArrayList<File>, File>, Void, Boolean>() {
+                   listener: CopyMoveListener) : AsyncTask<Pair<ArrayList<File>, File>, Void, Boolean>() {
     private var mListener: WeakReference<CopyMoveListener>? = null
     private var mMovedFiles: ArrayList<File> = ArrayList()
-    private var mDocument: DocumentFile? = null
+    private var mDocuments = LinkedHashMap<String, DocumentFile?>()
     lateinit var mFiles: ArrayList<File>
 
     init {
@@ -72,8 +73,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         val children = source.list()
         for (child in children) {
             val newFile = File(destination, child)
-            if (newFile.exists())
+            if (newFile.exists()) {
                 continue
+            }
 
             val oldFile = File(source, child)
             copy(oldFile, newFile)
@@ -82,8 +84,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     }
 
     private fun copyFile(source: File, destination: File) {
-        if (copyMediaOnly && !source.absolutePath.isImageVideoGif())
+        if (copyMediaOnly && !source.absolutePath.isImageVideoGif()) {
             return
+        }
 
         val directory = destination.parentFile
         if (!activity.createDirectorySync(directory)) {
@@ -95,11 +98,11 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         var inputStream: InputStream? = null
         var out: OutputStream? = null
         try {
-            if (mDocument == null && activity.needsStupidWritePermissions(destination.absolutePath)) {
-                mDocument = activity.getFileDocument(destination.parent)
+            if (!mDocuments.containsKey(destination.parent) && activity.needsStupidWritePermissions(destination.absolutePath)) {
+                mDocuments[destination.parent] = activity.getFileDocument(destination.parent)
             }
 
-            out = activity.getFileOutputStreamSync(destination.absolutePath, source.getMimeType(), mDocument)
+            out = activity.getFileOutputStreamSync(destination.absolutePath, source.getMimeType(), mDocuments[destination.parent])
 
             inputStream = FileInputStream(source)
             inputStream.copyTo(out!!)
@@ -135,7 +138,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         val uri = MediaStore.Files.getContentUri("external")
         val selection = "${MediaStore.MediaColumns.DATA} = ?"
         var selectionArgs = arrayOf(source.absolutePath)
-        val cursor = activity.contentResolver.query(uri, projection, selection, selectionArgs, null)
+        val cursor = activity.applicationContext.contentResolver.query(uri, projection, selection, selectionArgs, null)
 
         cursor?.use {
             if (cursor.moveToFirst()) {
@@ -149,15 +152,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
                 selectionArgs = arrayOf(destination.absolutePath)
                 activity.scanFile(destination) {
-                    activity.contentResolver.update(uri, values, selection, selectionArgs)
+                    activity.applicationContext.contentResolver.update(uri, values, selection, selectionArgs)
                 }
             }
         }
-    }
-
-    interface CopyMoveListener {
-        fun copySucceeded(copyOnly: Boolean, copiedAll: Boolean)
-
-        fun copyFailed()
     }
 }

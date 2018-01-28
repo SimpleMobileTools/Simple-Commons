@@ -1,7 +1,6 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annulla</string>
-    <string name="search">Cerca</string>
     <string name="save_as">Salva come</string>
     <string name="file_saved">File salvato correttamente</string>
     <string name="invalid_file_format">Formato file non valido</string>
@@ -12,6 +11,10 @@
     <string name="set_as">Imposta come</string>
     <string name="value_copied_to_clipboard">Valore copiato negli appunti</string>
     <string name="unknown">Sconosciuto</string>
+
+    <!-- Search -->
+    <string name="search">Cerca</string>
+    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
 
     <!-- Filters -->
     <string name="filter">Filtro</string>
@@ -235,6 +238,12 @@
     <string name="password_protect_whole_app">Proteggi con password tutta l\'applicazione</string>
     <string name="keep_last_modified">Mantieni data/ora ultima modifica in copia/sposta/rinomina</string>
     <string name="show_info_bubble">Mostra un fumetto informativo durante il trascinamento della barra di scorrimento</string>
+
+    <!-- Setting sections -->
+    <string name="visibility">Visibility</string>
+    <string name="security">Security</string>
+    <string name="scrolling">Scrolling</string>
+    <string name="file_operations">File operations</string>
 
     <!-- Import / Export -->
     <string name="importing">Importing…</string>

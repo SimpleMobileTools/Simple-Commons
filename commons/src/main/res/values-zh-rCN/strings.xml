@@ -1,7 +1,6 @@
 <resources>
     <string name="ok">确认</string>
     <string name="cancel">取消</string>
-    <string name="search">搜索</string>
     <string name="save_as">保存</string>
     <string name="file_saved">文件保存成功</string>
     <string name="invalid_file_format">无效文件格式</string>
@@ -12,6 +11,10 @@
     <string name="set_as">设置为</string>
     <string name="value_copied_to_clipboard">颜色值已复制到剪贴板</string>
     <string name="unknown">未知</string>
+
+    <!-- Search -->
+    <string name="search">搜索</string>
+    <string name="type_2_characters">请输入至少两个字符来开始搜索</string>
 
     <!-- Filters -->
     <string name="filter">过滤</string>
@@ -235,6 +238,12 @@
     <string name="password_protect_whole_app">使用密码保护本应用</string>
     <string name="keep_last_modified">在复制/移动/重命名文件时保留旧的修改日期</string>
     <string name="show_info_bubble">拖动滚动条时在滚动项目旁显示一个信息气泡</string>
+
+    <!-- Setting sections -->
+    <string name="visibility">可见度</string>
+    <string name="security">安全</string>
+    <string name="scrolling">滚动</string>
+    <string name="file_operations">文件操作</string>
 
     <!-- Import / Export -->
     <string name="importing">正在导入...</string>

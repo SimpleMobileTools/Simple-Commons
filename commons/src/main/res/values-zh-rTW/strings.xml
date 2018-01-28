@@ -1,7 +1,6 @@
 <resources>
     <string name="ok">確定</string>
     <string name="cancel">取消</string>
-    <string name="search">搜尋</string>
     <string name="save_as">儲存</string>
     <string name="file_saved">成功儲存檔案</string>
     <string name="invalid_file_format">無效的檔案格式</string>
@@ -12,6 +11,10 @@
     <string name="set_as">設為</string>
     <string name="value_copied_to_clipboard">數值複製到剪貼簿</string>
     <string name="unknown">未知的</string>
+
+    <!-- Search -->
+    <string name="search">搜尋</string>
+    <string name="type_2_characters">輸入兩個字以上來開始搜尋。</string>
 
     <!-- Filters -->
     <string name="filter">篩選</string>
@@ -119,7 +122,7 @@
     <string name="f_number">光圈</string>
     <string name="camera">相機</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">歌名</string>
 
     <!-- Color customization -->
     <string name="background_color">背景顏色</string>
@@ -156,7 +159,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">刪除</string>
-    <string name="remove">Remove</string>
+    <string name="remove">移除</string>
     <string name="rename">重新命名</string>
     <string name="share">分享</string>
     <string name="share_via">分享方式</string>
@@ -236,16 +239,22 @@
     <string name="keep_last_modified">當檔案複製/移動/重新命名時，保留舊的「最後修改」數值</string>
     <string name="show_info_bubble">拖曳滾動條時，顯示訊息氣泡</string>
 
+    <!-- Setting sections -->
+    <string name="visibility">Visibility</string>
+    <string name="security">Security</string>
+    <string name="scrolling">Scrolling</string>
+    <string name="file_operations">File operations</string>
+
     <!-- Import / Export -->
-    <string name="importing">Importing…</string>
-    <string name="exporting">Exporting…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing">正在導入…</string>
+    <string name="exporting">正在導出…</string>
+    <string name="importing_successful">導入成功</string>
+    <string name="exporting_successful">導出成功</string>
+    <string name="importing_failed">導入成功</string>
+    <string name="exporting_failed">導出失敗</string>
+    <string name="importing_some_entries_failed">部分項目導入失敗</string>
+    <string name="exporting_some_entries_failed">部分項目導出失敗</string>
+    <string name="no_entries_for_exporting">未發現供導出的項目</string>
 
     <!-- About -->
     <string name="about">關於</string>

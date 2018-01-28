@@ -87,7 +87,7 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupRateUs() {
-        if (baseConfig.appRunCount < 5) {
+        if (baseConfig.appRunCount < 3) {
             about_rate_us.visibility = View.GONE
         } else {
             about_rate_us.setOnClickListener {

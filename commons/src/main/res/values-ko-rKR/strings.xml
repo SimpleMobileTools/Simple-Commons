@@ -1,7 +1,6 @@
 <resources>
     <string name="ok">확인</string>
     <string name="cancel">취소</string>
-    <string name="search">검색</string>
     <string name="save_as">다른이름으로 저장</string>
     <string name="file_saved">파일저장 성공</string>
     <string name="invalid_file_format">잘못된 파일 형식</string>
@@ -12,6 +11,10 @@
     <string name="set_as">애플리케이션에 설정</string>
     <string name="value_copied_to_clipboard">클립보드에 복사됨</string>
     <string name="unknown">알 수 없음</string>
+
+    <!-- Search -->
+    <string name="search">검색</string>
+    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
 
     <!-- Filters -->
     <string name="filter">필터</string>
@@ -235,6 +238,12 @@
     <string name="password_protect_whole_app">애플리케이션 전체에서 암호를 이용한 보호기능 사용</string>
     <string name="keep_last_modified">파일 복사/이동/변경 시 최종 수정시간 정보를 유지</string>
     <string name="show_info_bubble">스크롤바 드래그 시 항목별 툴팁 활성화</string>
+
+    <!-- Setting sections -->
+    <string name="visibility">Visibility</string>
+    <string name="security">Security</string>
+    <string name="scrolling">Scrolling</string>
+    <string name="file_operations">File operations</string>
 
     <!-- Import / Export -->
     <string name="importing">가져오는 중…</string>

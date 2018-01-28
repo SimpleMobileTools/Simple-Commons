@@ -1,22 +1,25 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Avbryt</string>
-    <string name="search">Sök</string>
     <string name="save_as">Spara som</string>
-    <string name="file_saved">Filen sparad</string>
+    <string name="file_saved">Filen har sparats</string>
     <string name="invalid_file_format">Ogiltigt filformat</string>
     <string name="out_of_memory_error">Minnet är fullt</string>
     <string name="an_error_occurred">Ett fel har uppstått: %s</string>
     <string name="open_with">Öppna med</string>
-    <string name="no_app_found">Hittade ingen giltig app</string>
+    <string name="no_app_found">Ingen giltig app hittades</string>
     <string name="set_as">Ange som</string>
     <string name="value_copied_to_clipboard">Värdet har kopierats till urklipp</string>
-    <string name="unknown">Unknown</string>
+    <string name="unknown">Okänd</string>
+
+    <!-- Search -->
+    <string name="search">Sök</string>
+    <string name="type_2_characters">Skriv in minst två tecken för att starta sökningen.</string>
 
     <!-- Filters -->
     <string name="filter">Filtrera</string>
-    <string name="no_items_found">No items found.</string>
-    <string name="change_filter">Change filter</string>
+    <string name="no_items_found">Inga objekt hittades.</string>
+    <string name="change_filter">Ändra filter</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Lagringsbehörighet krävs</string>
@@ -25,15 +28,15 @@
     <string name="no_audio_permissions">Mikrofonbehörighet krävs</string>
 
     <!-- Renaming -->
-    <string name="rename_file">Döp om fil</string>
-    <string name="rename_folder">Döp om mapp</string>
-    <string name="rename_file_error">Det gick inte att döpa om filen</string>
-    <string name="rename_folder_error">Det gick inte att döpa om mappen</string>
+    <string name="rename_file">Byt namn på fil</string>
+    <string name="rename_folder">Byt namn på mapp</string>
+    <string name="rename_file_error">Det gick inte att byta namn på filen</string>
+    <string name="rename_folder_error">Det gick inte att byta namn på mappen</string>
     <string name="rename_folder_empty">Du måste ange ett mappnamn</string>
     <string name="rename_folder_exists">En mapp med det namnet finns redan</string>
-    <string name="rename_folder_root">Det går inte att döpa om rotmappen på lagringsutrymmet</string>
-    <string name="rename_folder_ok">Mappen döptes om</string>
-    <string name="renaming_folder">Döper om mappen</string>
+    <string name="rename_folder_root">Det går inte att byta namn på rotmappen på ett lagringsutrymme</string>
+    <string name="rename_folder_ok">Mappen har fått ett nytt namn</string>
+    <string name="renaming_folder">Byter namn på mappen</string>
     <string name="filename_cannot_be_empty">Du måste ange ett filnamn</string>
     <string name="filename_invalid_characters">Filnamnet innehåller ogiltiga tecken</string>
     <string name="extension_cannot_be_empty">Filändelsen får inte vara tom</string>
@@ -119,7 +122,7 @@
     <string name="f_number">F-nummer</string>
     <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Låttitel</string>
 
     <!-- Color customization -->
     <string name="background_color">Bakgrundsfärg</string>
@@ -146,7 +149,7 @@
     <string name="dark_theme">Mörkt</string>
     <string name="solarized">Solariserat</string>
     <string name="dark_red">Mörkrött</string>
-    <string name="black_white">Black &amp; White</string>
+    <string name="black_white">Svartvitt</string>
     <string name="custom">Anpassat</string>
     <string name="shared">Delat</string>
 
@@ -156,8 +159,8 @@
 
     <!-- Actionbar items -->
     <string name="delete">Ta bort</string>
-    <string name="remove">Remove</string>
-    <string name="rename">Döp om</string>
+    <string name="remove">Ta bort</string>
+    <string name="rename">Byt namn</string>
     <string name="share">Dela</string>
     <string name="share_via">Dela via</string>
     <string name="select_all">Välj alla</string>
@@ -225,7 +228,7 @@
     <string name="settings">Inställningar</string>
     <string name="customize_colors">Anpassa färger</string>
     <string name="use_english_language">Använd engelska</string>
-    <string name="show_hidden_items">Show hidden items</string>
+    <string name="show_hidden_items">Visa dolda objekt</string>
     <string name="font_size">Teckenstorlek</string>
     <string name="small">Liten</string>
     <string name="medium">Medelstor</string>
@@ -234,18 +237,24 @@
     <string name="password_protect_hidden_items">Lösenordsskydda synligheten för dolda objekt</string>
     <string name="password_protect_whole_app">Lösenordsskydda hela appen</string>
     <string name="keep_last_modified">Behåll senast ändrad-tider när filer kopieras, flyttas eller får nya namn</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+    <string name="show_info_bubble">Visa en informationsbubbla när jag rullar genom objekt genom att dra rullningslisten</string>
+
+    <!-- Setting sections -->
+    <string name="visibility">Synlighet</string>
+    <string name="security">Säkerhet</string>
+    <string name="scrolling">Rullning</string>
+    <string name="file_operations">Filåtgärder</string>
 
     <!-- Import / Export -->
     <string name="importing">Importerar…</string>
     <string name="exporting">Exporterar…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing_successful">Importen lyckades</string>
+    <string name="exporting_successful">Exporten lyckades</string>
+    <string name="importing_failed">Importen misslyckades</string>
+    <string name="exporting_failed">Exporten misslyckades</string>
+    <string name="importing_some_entries_failed">Importen av vissa poster misslyckades</string>
+    <string name="exporting_some_entries_failed">Exporten av vissa poster misslyckades</string>
+    <string name="no_entries_for_exporting">Inga poster hittades för export</string>
 
     <!-- About -->
     <string name="about">Om</string>
