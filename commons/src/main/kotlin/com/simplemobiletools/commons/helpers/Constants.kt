@@ -99,6 +99,10 @@ const val PERMISSION_READ_CALENDAR = 7
 const val PERMISSION_WRITE_CALENDAR = 8
 const val PERMISSION_CALL_PHONE = 9
 
+// conflict resolving
+const val CONFLICT_SKIP = 1
+const val CONFLICT_OVERWRITE = 2
+
 fun getDateFormats() = arrayListOf(
         "yyyy-MM-dd",
         "yyyyMMdd",
