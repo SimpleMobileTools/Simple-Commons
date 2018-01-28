@@ -1,128 +1,128 @@
 <resources>
-    <string name="ok">TAMAM</string>
+    <string name="ok">Tamam</string>
     <string name="cancel">İptal</string>
     <string name="save_as">Farklı kaydet</string>
     <string name="file_saved">Dosya başarıyla kaydedildi</string>
-    <string name="invalid_file_format">Invalid file format</string>
-    <string name="out_of_memory_error">Yetersiz bellek hatası</string>
+    <string name="invalid_file_format">Geçersiz dosya biçimi</string>
+    <string name="out_of_memory_error">Yetersiz hafıza hatası</string>
     <string name="an_error_occurred">Bir hata oluştu: %s</string>
-    <string name="open_with">Bununla aç</string>
+    <string name="open_with">Birlikte aç</string>
     <string name="no_app_found">Geçerli bir uygulama bulunamadı</string>
-    <string name="set_as">Set as</string>
-    <string name="value_copied_to_clipboard">Panoya kopyalanan değer</string>
-    <string name="unknown">Unknown</string>
+    <string name="set_as">Ayarla</string>
+    <string name="value_copied_to_clipboard">Değer panoya kopyalandı</string>
+    <string name="unknown">Bilinmeyen</string>
 
     <!-- Search -->
-    <string name="search">Arama</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
+    <string name="search">Ara</string>
+    <string name="type_2_characters">Aramaya başlamak için en az 2 karakter yazın.</string>
 
     <!-- Filters -->
     <string name="filter">Filtre</string>
-    <string name="no_items_found">No items found.</string>
-    <string name="change_filter">Change filter</string>
+    <string name="no_items_found">Hiçbir öğe bulunamadı.</string>
+    <string name="change_filter">Filtreyi değiştir</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">Depolama izni gerekiyor</string>
+    <string name="no_contacts_permission">Kişiler izni gerekiyor</string>
+    <string name="no_camera_permissions">Kamera izni gerekiyor</string>
+    <string name="no_audio_permissions">Ses izni gerekiyor</string>
 
     <!-- Renaming -->
     <string name="rename_file">Dosyayı yeniden adlandır</string>
     <string name="rename_folder">Klasörü yeniden adlandır</string>
-    <string name="rename_file_error">Dosya yeniden adlandırılamadı</string>
-    <string name="rename_folder_error">Klasör yeniden adlandırılamadı</string>
-    <string name="rename_folder_empty">Klasör adı boş olmamalıdır</string>
+    <string name="rename_file_error">Dosya yeniden adlandırılamıyor</string>
+    <string name="rename_folder_error">Klasör yeniden adlandırılamıyor</string>
+    <string name="rename_folder_empty">Klasör adı boş olamaz</string>
     <string name="rename_folder_exists">Bu ada sahip bir klasör zaten var</string>
-    <string name="rename_folder_root">Depolama kök klasörü yeniden adlandırılamıyor</string>
+    <string name="rename_folder_root">Depolama biriminin kök klasörü yeniden adlandıramaz</string>
     <string name="rename_folder_ok">Klasör başarıyla yeniden adlandırıldı</string>
-    <string name="renaming_folder">Klasörü yeniden adlandır</string>
+    <string name="renaming_folder">Klasörü yeniden adlandırma</string>
     <string name="filename_cannot_be_empty">Dosya adı boş olamaz</string>
-    <string name="filename_invalid_characters">Dosya adı geçersiz karakter içeriyor</string>
+    <string name="filename_invalid_characters">Dosya adı geçersiz karakterler içeriyor</string>
     <string name="extension_cannot_be_empty">Uzantı boş olamaz</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopyala</string>
     <string name="move">Taşı</string>
     <string name="copy_move">Kopyala / Taşı</string>
-    <string name="copy_to">Kopyala</string>
-    <string name="move_to">Taşı</string>
+    <string name="copy_to">Kopyala:</string>
+    <string name="move_to">Taşı:</string>
     <string name="source">Kaynak</string>
     <string name="destination">Hedef</string>
-    <string name="select_destination">Hedef seçin</string>
+    <string name="select_destination">Hedef seç</string>
     <string name="click_select_destination">Hedef seçmek için buraya tıklayın</string>
     <string name="invalid_destination">Seçilen hedefe yazılamadı</string>
     <string name="please_select_destination">Lütfen bir hedef seçin</string>
     <string name="source_and_destination_same">Kaynak ve hedef aynı olamaz</string>
     <string name="copy_failed">Dosyalar kopyalanamadı</string>
-    <string name="copying">Kopyalama&#8230;</string>
-    <string name="copying_success">Dosyalar başarılı bir şekilde kopyalanmıştır</string>
+    <string name="copying">Kopyalanıyor&#8230;</string>
+    <string name="copying_success">Dosyalar başarıyla kopyalandı</string>
     <string name="copy_move_failed">Bir hata oluştu</string>
-    <string name="moving">Taşıma&#8230;</string>
+    <string name="moving">Taşınıyor&#8230;</string>
     <string name="moving_success">Dosyalar başarıyla taşındı</string>
     <string name="moving_success_partial">Bazı dosyalar taşınamadı</string>
     <string name="copying_success_partial">Bazı dosyalar kopyalanamadı</string>
-    <string name="no_files_selected">No files selected</string>
-    <string name="saving">Saving&#8230;</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="no_files_selected">Hiçbir dosya seçilmedi</string>
+    <string name="saving">Kaydediliyor&#8230;</string>
+    <string name="could_not_create_folder">%s klasörü oluşturulamıyor</string>
+    <string name="could_not_create_file">%s dosyası oluşturulamıyor</string>
 
     <!-- Create new -->
-    <string name="create_new">Create new</string>
-    <string name="folder">Folder</string>
-    <string name="file">File</string>
+    <string name="create_new">Yeni oluştur</string>
+    <string name="folder">Klasör</string>
+    <string name="file">Dosya</string>
     <string name="create_new_folder">Yeni klasör oluştur</string>
-    <string name="name_taken">Bu ada sahip dizin veya dosya zaten var</string>
+    <string name="name_taken">Bu ada sahip bir dosya veya klasör zaten var</string>
     <string name="invalid_name">İsim, geçersiz karakterler içeriyor</string>
-    <string name="empty_name">Lütfen bir isim girin</string>
+    <string name="empty_name">Lütfen yeni bir ad girin</string>
     <string name="unknown_error_occurred">Bilinmeyen bir hata oluştu</string>
 
     <!-- Copy conflicts -->
-    <string name="file_already_exists">Dosya %1$s zaten mevcut</string>
-    <string name="file_already_exists_overwrite">Dosya %1$s zaten mevcut. Üzerine yaz?</string>
+    <string name="file_already_exists">%1$s dosyası zaten var</string>
+    <string name="file_already_exists_overwrite">%1$s dosyası zaten var. Üzerine yazılsın mı?</string>
     <string name="select_an_action">Bir eylem seçin</string>
     <string name="overwrite">Üzerine yaz</string>
     <string name="skip">Atla</string>
-    <string name="append">İle ekle \'_1\'</string>
+    <string name="append">\'_1\' ile ekle</string>
     <string name="apply_to_all">Tüm çatışmalara uygula</string>
 
     <!-- File picker -->
-    <string name="select_folder">Bir klasör seçin</string>
-    <string name="select_file">Bir dosya seçin</string>
+    <string name="select_folder">Bir klasör seç</string>
+    <string name="select_file">Bir dosya seç</string>
     <string name="confirm_storage_access_title">Harici depolama erişimini onayla</string>
     <string name="confirm_storage_access_text">Yazma erişimi vermek için lütfen bir sonraki ekranda SD kartın kök klasörünü seçin</string>
-    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_storage_access_text_sd">SD kartı görmüyorsanız, bunu deneyin</string>
+    <string name="confirm_selection">Seçimi onayla</string>
 
     <plurals name="items">
         <item quantity="one">%1$d öğe</item>
-        <item quantity="other">öğeler %1$d</item>
+        <item quantity="other">%1$d öğe</item>
     </plurals>
 
     <!-- Storages -->
-    <string name="select_storage">Depolama alanını seç</string>
+    <string name="select_storage">Depolama seç</string>
     <string name="internal">Dahili</string>
     <string name="sd_card">SD Kart</string>
-    <string name="root">Kök</string>
-    <string name="wrong_root_selected">Wrong folder selected, please select the SD card</string>
+    <string name="root">Root</string>
+    <string name="wrong_root_selected">Yanlış klasör seçildi, lütfen SD kartınızın kök klasörünü seçin</string>
 
     <!-- File properties -->
-    <string name="properties">Özellikleri</string>
+    <string name="properties">Özellikler</string>
     <string name="path">Yol</string>
     <string name="items_selected">Seçilen öğeler</string>
-    <string name="direct_children_count">Direct children count</string>
+    <string name="direct_children_count">Alt öğe sayısı</string>
     <string name="files_count">Toplam dosya sayısı</string>
-    <string name="resolution">Kararlılık</string>
+    <string name="resolution">Çözünürlük</string>
     <string name="duration">Süre</string>
     <string name="artist">Sanatçı</string>
     <string name="album">Albüm</string>
     <string name="focal_length">Odak uzaklığı</string>
     <string name="exposure_time">Pozlama süresi</string>
     <string name="iso_speed">ISO hızı</string>
-    <string name="f_number">F-numarası</string>
-    <string name="camera">Camera</string>
+    <string name="f_number">Diyafram</string>
+    <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Şarkı başlığı</string>
 
     <!-- Color customization -->
     <string name="background_color">Arkaplan rengi</string>
@@ -130,60 +130,60 @@
     <string name="primary_color">Ana renk</string>
     <string name="restore_defaults">Varsayılanları geri yükle</string>
     <string name="theme">Tema</string>
-    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
+    <string name="changing_color_description">Bir rengi değiştirdiğinizde Özel temaya geçeceksiniz</string>
     <string name="save">Kaydet</string>
-    <string name="discard">At</string>
+    <string name="discard">Çık</string>
     <string name="undo_changes">Değişiklikleri geri al</string>
     <string name="undo_changes_confirmation">Değişikliklerinizi geri almak istediğinizden emin misiniz?</string>
-    <string name="save_before_closing">Kaydedilmemiş değişiklikleriniz var. Çıkmadan önce kaydet?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="save_before_closing">Kaydedilmemiş değişiklikleriniz mevcut. Çıkmadan önce kaydedilsin mi?</string>
+    <string name="apply_to_all_apps">Tüm Basit Uygulamalara renk uygula</string>
+    <string name="share_colors_success">"Renkler başarıyla güncellendi. 'Paylaşılan' adlı yeni bir Tema eklendi, lütfen gelecekte tüm uygulama renklerini güncellemek için kullanınız."</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
+            Bu işlevin kilidini açmak ve geliştirmeyi desteklemek için lütfen <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>\'yu satın alın. Teşekkürler!
         ]]>
     </string>
 
     <!-- Themes -->
-    <string name="light_theme">Hafif</string>
-    <string name="dark_theme">Koyu</string>
+    <string name="light_theme">Aydınlık</string>
+    <string name="dark_theme">Karanlık</string>
     <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
-    <string name="black_white">Black &amp; White</string>
+    <string name="dark_red">Koyu Kırmızı</string>
+    <string name="black_white">Siyah &amp; Beyaz</string>
     <string name="custom">Özel</string>
-    <string name="shared">Shared</string>
+    <string name="shared">Paylaşılan</string>
 
     <!-- What's new -->
-    <string name="whats_new">Ne var\'s ne yok</string>
-    <string name="whats_new_disclaimer">* yalnızca daha büyük güncellemeler burada listeleniyor, daima küçük geliştirmeler de var</string>
+    <string name="whats_new">Yenilikler</string>
+    <string name="whats_new_disclaimer">* yalnızca büyük güncellemeler burada listelenmiştir; daima bazı küçük geliştirmeler de vardır</string>
 
     <!-- Actionbar items -->
     <string name="delete">Sil</string>
-    <string name="remove">Remove</string>
+    <string name="remove">Kaldır</string>
     <string name="rename">Yeniden adlandır</string>
     <string name="share">Paylaş</string>
-    <string name="share_via">Üzerinden paylaş</string>
+    <string name="share_via">Şununla paylaş</string>
     <string name="select_all">Tümünü seç</string>
-    <string name="hide">Hide</string>
-    <string name="unhide">Unhide</string>
-    <string name="hide_folder">Hide folder</string>
-    <string name="unhide_folder">Unhide folder</string>
-    <string name="temporarily_show_hidden">Geçici olarak gizli göster</string>
-    <string name="stop_showing_hidden">Stop showing hidden media</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
+    <string name="hide">Gizle</string>
+    <string name="unhide">Göster</string>
+    <string name="hide_folder">Klasörü gizle</string>
+    <string name="unhide_folder">Klasörü göster</string>
+    <string name="temporarily_show_hidden">Geçici olarak gizliyi göster</string>
+    <string name="stop_showing_hidden">Gizli medyayı göstermeyi bırak</string>
+    <string name="maximum_share_reached">Bu kadar çok içeriği bir kerede paylaşamazsınız</string>
 
     <!-- Sorting -->
-    <string name="sort_by">Göre sırala</string>
-    <string name="name">İsim</string>
+    <string name="sort_by">Sıralama ölçütü</string>
+    <string name="name">Ad</string>
     <string name="size">Boyut</string>
-    <string name="last_modified">Son düzenleme</string>
+    <string name="last_modified">Son değiştirilme</string>
     <string name="date_taken">Alınan tarih</string>
     <string name="title">Başlık</string>
     <string name="filename">Dosya adı</string>
     <string name="extension">Uzantı</string>
     <string name="ascending">Artan</string>
     <string name="descending">Azalan</string>
-    <string name="use_for_this_folder">Yalnızca bu klasör için kullanın</string>
+    <string name="use_for_this_folder">Sadece bu klasör için kullan</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Silme işlemine devam etmek istediğinizden emin misiniz?</string>
@@ -192,69 +192,69 @@
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
-    <string name="repeat_pin">Repeat PIN</string>
-    <string name="pattern">Pattern</string>
-    <string name="insert_pattern">Insert pattern</string>
-    <string name="wrong_pattern">Wrong pattern</string>
-    <string name="repeat_pattern">Repeat pattern</string>
-    <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
-    <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
-    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="enter_pin">PIN girin</string>
+    <string name="please_enter_pin">Lütfen PIN girin</string>
+    <string name="wrong_pin">Yanlış PIN</string>
+    <string name="repeat_pin">PIN\'i tekrarla</string>
+    <string name="pattern">Desen</string>
+    <string name="insert_pattern">Desen ekle</string>
+    <string name="wrong_pattern">Yanlış desen</string>
+    <string name="repeat_pattern">Deseni tekrarla</string>
+    <string name="fingerprint">Parmak izi</string>
+    <string name="add_fingerprint">Parmak izi ekle</string>
+    <string name="place_finger">Lütfen parmağınızı parmak izi sensörüne yerleştirin</string>
+    <string name="authentication_failed">Kimlik doğrulama başarısız</string>
+    <string name="authentication_blocked">Kimlik doğrulama engellendi, lütfen birazdan tekrar deneyin</string>
+    <string name="no_fingerprints_registered">Parmak iziniz kayıtlı değil, lütfen cihazınızın Ayarlar bölümünden ekleyin</string>
+    <string name="go_to_settings">Ayarlar\'a git</string>
+    <string name="protection_setup_successfully">Parola kurulumu başarılı oldu. Lütfen unuttuğunuz durumda uygulamayı yeniden yükleyin.</string>
+    <string name="fingerprint_setup_successfully">Koruma kurulumu başarıyla gerçekleştirildi. Sıfırlama ile ilgili sorunlar olması durumunda lütfen uygulamayı yeniden yükleyin.</string>
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d second</item>
-        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">%1$d saniye</item>
+        <item quantity="other">%1$d saniye</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minute</item>
-        <item quantity="other">%1$d minutes</item>
+        <item quantity="one">%1$d dakika</item>
+        <item quantity="other">%1$d dakika</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d hour</item>
-        <item quantity="other">%1$d hours</item>
+        <item quantity="one">%1$d saat</item>
+        <item quantity="other">%1$d saat</item>
     </plurals>
 
     <!-- Settings -->
     <string name="settings">Ayarlar</string>
-    <string name="customize_colors">Renkleri özelleştirme</string>
-    <string name="use_english_language">Use English language</string>
-    <string name="show_hidden_items">Show hidden items</string>
-    <string name="font_size">Font size</string>
-    <string name="small">Small</string>
-    <string name="medium">Medium</string>
-    <string name="large">Large</string>
-    <string name="extra_large">Extra large</string>
-    <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
-    <string name="password_protect_whole_app">Password protect the whole application</string>
-    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+    <string name="customize_colors">Renkleri özelleştir</string>
+    <string name="use_english_language">İngilizce dilini kullan</string>
+    <string name="show_hidden_items">Gizli öğeleri göster</string>
+    <string name="font_size">Yazı tipi boyutu</string>
+    <string name="small">Küçük</string>
+    <string name="medium">Orta</string>
+    <string name="large">Büyük</string>
+    <string name="extra_large">Çok büyük</string>
+    <string name="password_protect_hidden_items">Parola korumalı gizli öğe görünürlüğü</string>
+    <string name="password_protect_whole_app">Parola tüm uygulamayı korur</string>
+    <string name="keep_last_modified">Dosya kopyalama/taşıma/yeniden adlandırmada eski son değiştirilme değerini koru</string>
+    <string name="show_info_bubble">Kaydırma çubuğunu sürükleyerek öğeleri kaydırmada bilgi balonunu göster</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
+    <string name="visibility">Görünürlük</string>
+    <string name="security">Güvenlik</string>
+    <string name="scrolling">Kaydırma</string>
+    <string name="file_operations">Dosya işlemleri</string>
 
     <!-- Import / Export -->
-    <string name="importing">Importing…</string>
-    <string name="exporting">Exporting…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing">İçe aktarılıyor…</string>
+    <string name="exporting">Dışa aktarılıyor…</string>
+    <string name="importing_successful">İçe aktarma başarılı</string>
+    <string name="exporting_successful">Dışa aktarma başarılı</string>
+    <string name="importing_failed">İçe aktarılamadı</string>
+    <string name="exporting_failed">Dışa aktarılamadı</string>
+    <string name="importing_some_entries_failed">Bazı öğeler içe aktarılamadı</string>
+    <string name="exporting_some_entries_failed">Bazı öğeler dışa aktarılamadı</string>
+    <string name="no_entries_for_exporting">Dışa aktarılacak öğe bulunamadı</string>
 
     <!-- About -->
     <string name="about">Hakkında</string>
@@ -262,47 +262,47 @@
     <string name="email_label">Görüşlerinizi veya önerilerinizi buraya gönderin</string>
     <string name="more_apps_underlined"><u>Daha fazla uygulama</u></string>
     <string name="third_party_licences_underlined"><u>Üçüncü taraf lisansları</u></string>
-    <string name="invite_friends_underlined"><u>Arkadaşlarını davet et</u></string>
-    <string name="share_text">Hey, gel kontrol %1$s et %2$s</string>
-    <string name="invite_via">Üzerinden davet et</string>
+    <string name="invite_friends_underlined"><u>Arkadaşlarınızı davet edin</u></string>
+    <string name="share_text">Hey, %1$s adlı harika bir uygulama buldum. %2$s adresinden indir</string>
+    <string name="invite_via">Şununla davet et</string>
     <string name="rate_us_underlined"><u>Bizi değerlendirin</u></string>
-    <string name="donate">Bağışta bulun</string>
-    <string name="donate_underlined"><u>Bağışta bulun</u></string>
-    <string name="follow_us">Bizi takip et</string>
-    <string name="copyright">v %1$s\nTelif Hakkı © Simple Mobile Tools %2$d</string>
+    <string name="donate">Bağış yapın</string>
+    <string name="donate_underlined"><u>Bağış yapın</u></string>
+    <string name="follow_us">Bizi takip edin</string>
+    <string name="copyright">v %1$s\nTelif hakkı © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Additional info</string>
     <string name="app_version">App version: %1$s</string>
     <string name="device_os">Device OS: %1$s</string>
     <string name="donate_please">
         <![CDATA[
-            Hello,<br><br>
-            hope you are enjoying the app. It contains no ads, please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
-            You can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.<br><br>
-            Thank you!
+            Merhaba,<br><br>
+            umarım uygulamadan memnunsunuzdur. Hiçbir reklam içermiyor, bu yüzden lütfen <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> uygulamasını satın alarak geliştirmeyi destekleyip, bu pencerenin tekrar görünmesini de önleyin.<br><br>
+            Daha fazla bağış seçeneği <a href="http://simplemobiletools.com/donate">buradadır</a>.<br><br>
+            Teşekkürler!
         ]]>
     </string>
-    <string name="purchase">Purchase</string>
+    <string name="purchase">Satın al</string>
 
     <!-- License -->
-    <string name="notice">Bu uygulama hayatımı kolaylaştırmak için aşağıdaki üçüncü parti kitaplıklarını kullanıyor. Teşekkür ederim.</string>
+    <string name="notice">Bu uygulama hayatımı kolaylaştırmak için aşağıdaki üçüncü taraf kitaplıklarını kullanır. Teşekkürler.</string>
     <string name="third_party_licences">Üçüncü taraf lisansları</string>
     <string name="kotlin_title">Kotlin (programlama dili)</string>
-    <string name="subsampling_title">Alt Örnekleme Ölçek Görüntüsü Görünümü (yakınlaştırılabilir görüntü görünümleri)</string>
-    <string name="glide_title">Kayma (resim yükleme ve önbellekleme)</string>
-    <string name="picasso_title">Picasso (resim yükleme ve önbellekleme)</string>
-    <string name="cropper_title">Android Görübtü Kesme (resim kırpma ve döndürme)</string>
-    <string name="multiselect_title">Recyclergörünümü Çoklu seçim (birden çok liste öğesinin seçilmesi)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (sağdan sola hızlıca kaydırma)</string>
-    <string name="joda_title">Joda-Zaman (Java tarihinin değiştirilmesi)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (yakınlaştırılabilir görüntü görünümleri)</string>
+    <string name="glide_title">Glide (görüntü yükleme ve önbellekleme)</string>
+    <string name="picasso_title">Picasso (görüntü yükleme ve önbellekleme)</string>
+    <string name="cropper_title">Android Image Cropper (görüntü kırpma ve döndürme)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (birden çok liste öğesi seçme)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (sağdan sola  kaydırma)</string>
+    <string name="joda_title">Joda-Time (Java tarih değiştirme)</string>
     <string name="stetho_title">Stetho (hata ayıklama veritabanları)</string>
     <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">Fotoğraf Görüntüleme (yakınlaştırılabilen GIF\'ler)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
-    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
-    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
-    <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="photoview_title">PhotoView (yakınlaştırılabilir GIF\'ler)</string>
+    <string name="pattern_title">PatternLockView (desen koruması)</string>
+    <string name="reprint_title">Reprint (parmak izi koruması)</string>
+    <string name="gif_drawable_title">Gif Drawable (GIF\'leri yükleme)</string>
+    <string name="autofittextview_title">AutoFitTextView (metin boyutunu değiştirme)</string>
+    <string name="robolectric_title">Robolectric (test çerçevesi)</string>
+    <string name="espresso_title">Espresso (test yardımcısı)</string>
+    <string name="gson_title">Gson (JSON ayrıştırıcısıser)</string>
+    <string name="leak_canary_title">Leak Canary (bellek sızıntısı dedektörü)</string>
 </resources>

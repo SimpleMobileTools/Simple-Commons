@@ -4,7 +4,7 @@ For reporting bugs/features that affect all apps please use the <a href="https:/
 
 License
 -------
-    Copyright 2017 SimpleMobileTools
+    Copyright 2017-present SimpleMobileTools
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
