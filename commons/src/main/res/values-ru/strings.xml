@@ -14,7 +14,7 @@
 
     <!-- Search -->
     <string name="search">Поиск</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
+    <string name="type_2_characters">Введите как минимум 2 символа для начала поиска.</string>
 
     <!-- Filters -->
     <string name="filter">Фильтрация</string>
@@ -170,7 +170,7 @@
     <string name="unhide_folder">Показать папку</string>
     <string name="temporarily_show_hidden">Временный показ скрытых</string>
     <string name="stop_showing_hidden">Не показывать скрытые медиа</string>
-    <string name="maximum_share_reached">Слишком большое количество контента, чтобы поделиться им</string>
+    <string name="maximum_share_reached">Слишком большой объём данных, чтобы делиться им</string>
 
     <!-- Sorting -->
     <string name="sort_by">Сортировать по…</string>
@@ -243,10 +243,10 @@
     <string name="show_info_bubble">Показывать информационное окно при прокрутке элементов перетаскиванием полосы прокрутки</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
+    <string name="visibility">Отображение</string>
+    <string name="security">Безопасность</string>
+    <string name="scrolling">Прокрутка</string>
+    <string name="file_operations">Файловые операции</string>
 
     <!-- Import / Export -->
     <string name="importing">Импорт…</string>
