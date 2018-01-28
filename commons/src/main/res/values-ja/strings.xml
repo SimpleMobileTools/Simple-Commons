@@ -77,8 +77,9 @@
     <string name="empty_name">名前を入力してください</string>
     <string name="unknown_error_occurred">不明なエラーが発生しました</string>
 
-    <!-- Copy conflicts -->
+    <!-- File operation conflicts -->
     <string name="file_already_exists">ファイル \"%1$s\" は既に存在しています</string>
+    <string name="file_already_exists_overwrite">ファイル \"%1$s\" は既に存在しています。上書きしますか?</string>
     <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
     <string name="merge">Merge</string>
     <string name="overwrite">上書き</string>

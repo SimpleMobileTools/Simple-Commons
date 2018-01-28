@@ -77,8 +77,9 @@
     <string name="empty_name">Lütfen yeni bir ad girin</string>
     <string name="unknown_error_occurred">Bilinmeyen bir hata oluştu</string>
 
-    <!-- Copy conflicts -->
+    <!-- File operation conflicts -->
     <string name="file_already_exists">\"%1$s\" dosyası zaten var</string>
+    <string name="file_already_exists_overwrite">\"%1$s\" dosyası zaten var. Üzerine yazılsın mı?</string>
     <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
     <string name="merge">Merge</string>
     <string name="overwrite">Üzerine yaz</string>

@@ -77,8 +77,9 @@
     <string name="empty_name">Zadejte prosím název</string>
     <string name="unknown_error_occurred">Vyskytla se neznámá chyba</string>
 
-    <!-- Copy conflicts -->
+    <!-- File operation conflicts -->
     <string name="file_already_exists">Soubor \"%1$s\" již existuje</string>
+    <string name="file_already_exists_overwrite">Soubor \"%1$s\" již existuje. Přepsat?</string>
     <string name="folder_already_exists">Složka \"%1$s\" již existuje</string>
     <string name="merge">Merge</string>
     <string name="overwrite">Přepsat</string>

@@ -77,8 +77,9 @@
     <string name="empty_name">Please enter a name</string>
     <string name="unknown_error_occurred">An unknown error occurred</string>
 
-    <!-- Copy conflicts -->
+    <!-- File operation conflicts -->
     <string name="file_already_exists">File \"%1$s\" already exists</string>
+    <string name="file_already_exists_overwrite">File \"%1$s\" already exists. Overwrite?</string>
     <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
     <string name="merge">Merge</string>
     <string name="overwrite">Overskriv</string>
