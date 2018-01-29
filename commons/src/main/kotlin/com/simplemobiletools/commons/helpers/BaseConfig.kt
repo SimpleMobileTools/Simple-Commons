@@ -131,4 +131,12 @@ open class BaseConfig(val context: Context) {
     var showInfoBubble: Boolean
         get() = prefs.getBoolean(SHOW_INFO_BUBBLE, true)
         set(showInfoBubble) = prefs.edit().putBoolean(SHOW_INFO_BUBBLE, showInfoBubble).apply()
+
+    var lastConflictApplyToAll: Boolean
+        get() = prefs.getBoolean(LAST_CONFLICT_APPLY_TO_ALL, true)
+        set(lastConflictApplyToAll) = prefs.edit().putBoolean(LAST_CONFLICT_APPLY_TO_ALL, lastConflictApplyToAll).apply()
+
+    var lastConflictResolution: Int
+        get() = prefs.getInt(LAST_CONFLICT_RESOLUTION, CONFLICT_SKIP)
+        set(lastConflictResolution) = prefs.edit().putInt(LAST_CONFLICT_RESOLUTION, lastConflictResolution).apply()
 }

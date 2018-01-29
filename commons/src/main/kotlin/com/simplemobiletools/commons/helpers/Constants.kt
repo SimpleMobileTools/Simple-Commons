@@ -38,6 +38,8 @@ const val WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN = "was_custom_theme_switch_d
 const val WAS_SHARED_THEME_AFTER_UPDATE_CHECKED = "was_shared_theme_after_update_checked"
 const val SHOW_INFO_BUBBLE = "show_info_bubble"
 const val SORTING = "sorting"
+const val LAST_CONFLICT_RESOLUTION = "last_conflict_resolution"
+const val LAST_CONFLICT_APPLY_TO_ALL = "last_conflict_apply_to_all"
 
 // licenses
 const val LICENSE_KOTLIN = 1

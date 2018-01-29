@@ -19,6 +19,7 @@ import android.view.WindowManager
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
+import com.simplemobiletools.commons.dialogs.FileConflictDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
@@ -184,12 +185,10 @@ open class BaseSimpleActivity : AppCompatActivity() {
         handleSAFDialog(destinationFolder) {
             copyMoveCallback = callback
             if (isCopyOperation) {
-                toast(R.string.copying)
                 startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly)
             } else {
                 if (isPathOnSD(source) || isPathOnSD(destination) || files.first().isDirectory || isNougatPlus()) {
                     handleSAFDialog(File(source)) {
-                        toast(R.string.moving)
                         startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly)
                     }
                 } else {
@@ -222,8 +221,35 @@ open class BaseSimpleActivity : AppCompatActivity() {
     }
 
     private fun startCopyMove(files: ArrayList<File>, destinationFolder: File, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean) {
-        val pair = Pair(files, destinationFolder)
-        CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, copyMoveListener).execute(pair)
+        checkConflict(files, destinationFolder, 0, LinkedHashMap()) {
+            toast(if (isCopyOperation) R.string.copying else R.string.moving)
+            val pair = Pair(files, destinationFolder)
+            CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener).execute(pair)
+        }
+    }
+
+    private fun checkConflict(files: ArrayList<File>, destinationFolder: File, index: Int, conflictResolutions: LinkedHashMap<String, Int>,
+                              callback: (resolutions: LinkedHashMap<String, Int>) -> Unit) {
+        if (index == files.size) {
+            callback(conflictResolutions)
+            return
+        }
+
+        val file = files[index]
+        if (file.exists()) {
+            FileConflictDialog(this, file.name) { resolution, applyForAll ->
+                if (applyForAll) {
+                    conflictResolutions.clear()
+                    conflictResolutions[""] = resolution
+                    checkConflict(files, destinationFolder, files.size, conflictResolutions, callback)
+                } else {
+                    conflictResolutions[file.absolutePath] = resolution
+                    checkConflict(files, destinationFolder, index + 1, conflictResolutions, callback)
+                }
+            }
+        } else {
+            checkConflict(files, destinationFolder, index + 1, conflictResolutions, callback)
+        }
     }
 
     fun handlePermission(permissionId: Int, callback: (granted: Boolean) -> Unit) {
