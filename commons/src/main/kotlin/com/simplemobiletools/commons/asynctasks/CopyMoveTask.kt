@@ -8,6 +8,7 @@ import android.support.v4.util.Pair
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.CONFLICT_SKIP
 import com.simplemobiletools.commons.interfaces.CopyMoveListener
 import java.io.File
 import java.io.FileInputStream
@@ -37,12 +38,12 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
         for (file in mFiles) {
             try {
-                val curFile = File(pair.second, file.name)
-                if (curFile.exists()) {
+                val newFile = File(pair.second, file.name)
+                if (newFile.exists() && getConflictResolution(newFile) == CONFLICT_SKIP) {
                     continue
                 }
 
-                copy(file, curFile)
+                copy(file, newFile)
             } catch (e: Exception) {
                 activity.toast(e.toString())
                 return false
@@ -55,6 +56,16 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
         activity.scanFiles(mFiles) {}
         return true
+    }
+
+    private fun getConflictResolution(file: File): Int {
+        return if (conflictResolutions.size == 1 && conflictResolutions.containsKey("")) {
+            conflictResolutions[""]!!
+        } else if (conflictResolutions.containsKey(file.absolutePath)) {
+            conflictResolutions[file.absolutePath]!!
+        } else {
+            CONFLICT_SKIP
+        }
     }
 
     private fun copy(source: File, destination: File) {

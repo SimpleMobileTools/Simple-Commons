@@ -9,13 +9,14 @@ import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.helpers.CONFLICT_OVERWRITE
 import com.simplemobiletools.commons.helpers.CONFLICT_SKIP
 import kotlinx.android.synthetic.main.dialog_file_conflict.view.*
+import java.io.File
 
-class FileConflictDialog(val activity: Activity, val filename: String, val callback: (resolution: Int, applyForAll: Boolean) -> Unit) {
-    val view = activity.layoutInflater.inflate(R.layout.dialog_file_conflict, null)
+class FileConflictDialog(val activity: Activity, val file: File, val callback: (resolution: Int, applyForAll: Boolean) -> Unit) {
+    val view = activity.layoutInflater.inflate(R.layout.dialog_file_conflict, null)!!
 
     init {
         view.apply {
-            conflict_dialog_title.text = String.format(activity.getString(R.string.file_already_exists), filename)
+            conflict_dialog_title.text = String.format(activity.getString(R.string.file_already_exists), file.name)
             conflict_dialog_apply_to_all.isChecked = activity.baseConfig.lastConflictApplyToAll
 
             val resolutionButton = when (activity.baseConfig.lastConflictResolution) {

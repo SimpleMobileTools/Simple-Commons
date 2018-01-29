@@ -175,13 +175,6 @@ open class BaseSimpleActivity : AppCompatActivity() {
             return
         }
 
-        if (files.size == 1) {
-            if (File(destination, files[0].name).exists()) {
-                toast(R.string.name_taken)
-                return
-            }
-        }
-
         handleSAFDialog(destinationFolder) {
             copyMoveCallback = callback
             if (isCopyOperation) {
@@ -236,14 +229,15 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
 
         val file = files[index]
-        if (file.exists()) {
-            FileConflictDialog(this, file.name) { resolution, applyForAll ->
+        val newFile = File(destinationFolder, file.name)
+        if (newFile.exists()) {
+            FileConflictDialog(this, newFile) { resolution, applyForAll ->
                 if (applyForAll) {
                     conflictResolutions.clear()
                     conflictResolutions[""] = resolution
                     checkConflict(files, destinationFolder, files.size, conflictResolutions, callback)
                 } else {
-                    conflictResolutions[file.absolutePath] = resolution
+                    conflictResolutions[newFile.absolutePath] = resolution
                     checkConflict(files, destinationFolder, index + 1, conflictResolutions, callback)
                 }
             }
