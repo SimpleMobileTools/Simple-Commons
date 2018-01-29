@@ -127,8 +127,9 @@ fun Context.tryFastDocumentDelete(file: File, allowDeleteFolder: Boolean): Boole
     val document = getFastDocument(file)
     return if (document?.isFile == true || allowDeleteFolder) {
         DocumentsContract.deleteDocument(contentResolver, document?.uri)
-    } else
+    } else {
         false
+    }
 }
 
 @SuppressLint("NewApi")

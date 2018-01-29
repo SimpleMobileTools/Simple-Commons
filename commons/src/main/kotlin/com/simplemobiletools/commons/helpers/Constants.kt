@@ -104,6 +104,7 @@ const val PERMISSION_CALL_PHONE = 9
 // conflict resolving
 const val CONFLICT_SKIP = 1
 const val CONFLICT_OVERWRITE = 2
+const val CONFLICT_MERGE = 3
 
 fun getDateFormats() = arrayListOf(
         "yyyy-MM-dd",

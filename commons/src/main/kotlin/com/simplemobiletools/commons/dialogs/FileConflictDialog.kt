@@ -3,9 +3,12 @@ package com.simplemobiletools.commons.dialogs
 import android.app.Activity
 import android.support.v7.app.AlertDialog
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.R.id.conflict_dialog_radio_merge
 import com.simplemobiletools.commons.R.id.conflict_dialog_radio_skip
 import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.beVisibleIf
 import com.simplemobiletools.commons.extensions.setupDialogStuff
+import com.simplemobiletools.commons.helpers.CONFLICT_MERGE
 import com.simplemobiletools.commons.helpers.CONFLICT_OVERWRITE
 import com.simplemobiletools.commons.helpers.CONFLICT_SKIP
 import kotlinx.android.synthetic.main.dialog_file_conflict.view.*
@@ -16,11 +19,14 @@ class FileConflictDialog(val activity: Activity, val file: File, val callback: (
 
     init {
         view.apply {
-            conflict_dialog_title.text = String.format(activity.getString(R.string.file_already_exists), file.name)
+            val stringBase = if (file.isDirectory) R.string.folder_already_exists else R.string.file_already_exists
+            conflict_dialog_title.text = String.format(activity.getString(stringBase), file.name)
             conflict_dialog_apply_to_all.isChecked = activity.baseConfig.lastConflictApplyToAll
+            conflict_dialog_radio_merge.beVisibleIf(file.isDirectory)
 
             val resolutionButton = when (activity.baseConfig.lastConflictResolution) {
                 CONFLICT_OVERWRITE -> conflict_dialog_radio_overwrite
+                CONFLICT_MERGE -> conflict_dialog_radio_merge
                 else -> conflict_dialog_radio_skip
             }
             resolutionButton.isChecked = true
@@ -37,6 +43,7 @@ class FileConflictDialog(val activity: Activity, val file: File, val callback: (
     private fun dialogConfirmed() {
         val resolution = when (view.conflict_dialog_radio_group.checkedRadioButtonId) {
             conflict_dialog_radio_skip -> CONFLICT_SKIP
+            conflict_dialog_radio_merge -> CONFLICT_MERGE
             else -> CONFLICT_OVERWRITE
         }
 
@@ -45,6 +52,7 @@ class FileConflictDialog(val activity: Activity, val file: File, val callback: (
             lastConflictApplyToAll = applyToAll
             lastConflictResolution = resolution
         }
+
         callback(resolution, applyToAll)
     }
 }
