@@ -18,7 +18,7 @@
 
     <!-- Filters -->
     <string name="filter">Sortieren</string>
-    <string name="no_items_found">Nichts gefunden.</string>
+    <string name="no_items_found">Keine Elemente gefunden.</string>
     <string name="change_filter">Sortierung ändern</string>
 
     <!-- Permissions -->
@@ -54,12 +54,12 @@
     <string name="invalid_destination">Konnte nicht auf ausgewähltes Ziel schreiben</string>
     <string name="please_select_destination">Bitte Ziel auswählen</string>
     <string name="source_and_destination_same">Quell- und Zielpfad sind identisch</string>
-    <string name="copy_failed">Konnte die Datei nicht kopieren</string>
+    <string name="copy_failed">Konnte die Datei(en) nicht kopieren</string>
     <string name="copying">Kopiere&#8230;</string>
-    <string name="copying_success">Dateien erfolgreich kopiert</string>
+    <string name="copying_success">Datei(en) erfolgreich kopiert</string>
     <string name="copy_move_failed">Es ist ein Fehler aufgetreten</string>
     <string name="moving">Verschiebe&#8230;</string>
-    <string name="moving_success">Dateien erfolgreich verschoben</string>
+    <string name="moving_success">Datei(en) erfolgreich verschoben</string>
     <string name="moving_success_partial">Einige Dateien konnten nicht verschoben werden</string>
     <string name="copying_success_partial">Einige Dateien konnten nicht kopiert werden</string>
     <string name="no_files_selected">Keine Dateien ausgewählt</string>
@@ -136,7 +136,7 @@
     <string name="discard">Verwerfen</string>
     <string name="undo_changes">Änderungen verwerfen</string>
     <string name="undo_changes_confirmation">Bist du sicher, dass du die Änderungen verwerfen willst?</string>
-    <string name="save_before_closing">Du hast ungespeicherte Änderungen. Speichern vor dem Beenden?</string>
+    <string name="save_before_closing">Du hast ungespeicherte Änderungen. Speichern vorm Beenden?</string>
     <string name="apply_to_all_apps">Farben bei allen schlichten Apps anwenden</string>
     <string name="share_colors_success">Farben erfolgreich aktualisiert. Ein neues Thema \'Shared\' wurde hinzugefügt, bitte verwende dieses um für alle Apps die Farben zu ändern.</string>
     <string name="purchase_thank_you">
@@ -169,7 +169,7 @@
     <string name="unhide">Nicht verstecken</string>
     <string name="hide_folder">Ordner verstecken</string>
     <string name="unhide_folder">Ordner nicht verstecken</string>
-    <string name="temporarily_show_hidden">Versteckte Elemente kurzzeitig anzeigen</string>
+    <string name="temporarily_show_hidden">Versteckte Elemente kurz zeigen</string>
     <string name="stop_showing_hidden">Versteckte Elemente wieder verbergen</string>
     <string name="maximum_share_reached">So viel Inhalt kann nicht auf einmal geteilt werden</string>
 
@@ -238,13 +238,7 @@
     <string name="password_protect_hidden_items">Versteckte Elemente mit Muster/PIN schützen</string>
     <string name="password_protect_whole_app">Gesamte App mit Passwort schützen</string>
     <string name="keep_last_modified">Beim Modifizieren von Dateien die alte Änderungszeit beibehalten</string>
-    <string name="show_info_bubble">Zeige Infofenster beim Scrollen mithilfe des Scrollbalkens an</string>
-
-    <!-- Setting sections -->
-    <string name="visibility">Sichtbarkeit</string>
-    <string name="security">Sicherheit</string>
-    <string name="scrolling">Scrollen</string>
-    <string name="file_operations">Dateioperationen</string>
+    <string name="show_info_bubble">Beim Scrollen mit dem Scrollbalken Infofenster anzeigen</string>
 
     <!-- Import / Export -->
     <string name="importing">Importiere…</string>
@@ -255,12 +249,12 @@
     <string name="exporting_failed">Exportieren fehlgeschlagen</string>
     <string name="importing_some_entries_failed">Importieren einiger Einträge fehlgeschlagen</string>
     <string name="exporting_some_entries_failed">Exportieren einiger Einträge fehlgeschlagen</string>
-    <string name="no_entries_for_exporting">Es wurden keine Einträge zum Exportieren gefunden</string>
+    <string name="no_entries_for_exporting">Keine Einträge zum Exportieren gefunden</string>
 
     <!-- About -->
     <string name="about">Über</string>
     <string name="website_label">Weitere schlichte Apps und Quellcode siehe</string>
-    <string name="email_label">Vorschläge und Feedback sende bitte an</string>
+    <string name="email_label">Vorschläge und Feedback bitte senden an</string>
     <string name="more_apps_underlined"><u>Weitere Apps</u></string>
     <string name="third_party_licences_underlined"><u>Drittanbieterlizenzen</u></string>
     <string name="invite_friends_underlined"><u>Freunde einladen</u></string>
