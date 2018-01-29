@@ -241,6 +241,12 @@
     <string name="keep_last_modified">Beim Modifizieren von Dateien die alte Änderungszeit beibehalten</string>
     <string name="show_info_bubble">Beim Scrollen mit dem Scrollbalken Infofenster anzeigen</string>
 
+    <!-- Setting sections -->
+    <string name="visibility">Sichtbarkeit</string>
+    <string name="security">Sicherheit</string>
+    <string name="scrolling">Scrollen</string>
+    <string name="file_operations">Dateioperationen</string>
+
     <!-- Import / Export -->
     <string name="importing">Importiere…</string>
     <string name="exporting">Exportiere…</string>
