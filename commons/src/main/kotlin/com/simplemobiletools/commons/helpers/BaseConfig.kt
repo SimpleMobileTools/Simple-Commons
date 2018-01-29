@@ -139,4 +139,8 @@ open class BaseConfig(val context: Context) {
     var lastConflictResolution: Int
         get() = prefs.getInt(LAST_CONFLICT_RESOLUTION, CONFLICT_SKIP)
         set(lastConflictResolution) = prefs.edit().putInt(LAST_CONFLICT_RESOLUTION, lastConflictResolution).apply()
+
+    var avoidWhatsNew: Boolean
+        get() = prefs.getBoolean(AVOID_WHATS_NEW, false)
+        set(avoidWhatsNew) = prefs.edit().putBoolean(AVOID_WHATS_NEW, avoidWhatsNew).apply()
 }
