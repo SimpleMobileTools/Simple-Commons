@@ -14,7 +14,7 @@
 
     <!-- Search -->
     <string name="search">Pesquisar</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
+    <string name="type_2_characters">Digite pelo menos 2 letras para iniciar a pesquisa.</string>
 
     <!-- Filters -->
     <string name="filter">Filtrar</string>
@@ -80,8 +80,8 @@
     <!-- File operation conflicts -->
     <string name="file_already_exists">Já existe um arquivo com o nome \%1$s\"</string>
     <string name="file_already_exists_overwrite">Já existe um arquivo com o nome \"%1$s\". Substituir?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
-    <string name="merge">Merge</string>
+    <string name="folder_already_exists">A pasta \"%1$s\" já existe</string>
+    <string name="merge">Mesclar</string>
     <string name="overwrite">Substituir</string>
     <string name="skip">Ignorar</string>
     <string name="append">Adicionar sufixo \'_1\'</string>
@@ -120,10 +120,10 @@
     <string name="focal_length">Distância focal</string>
     <string name="exposure_time">Tempo de exposição</string>
     <string name="iso_speed">Velocidade ISO</string>
-    <string name="f_number">Número F</string>
+    <string name="f_number">Abertura</string>
     <string name="camera">Câmera</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Título da música</string>
 
     <!-- Color customization -->
     <string name="background_color">Cor de fundo</string>
@@ -150,7 +150,7 @@
     <string name="dark_theme">Escuro</string>
     <string name="solarized">Ensolarado</string>
     <string name="dark_red">Vermelho Escuro</string>
-    <string name="black_white">Black &amp; White</string>
+    <string name="black_white">Preto &amp; branco</string>
     <string name="custom">Personalizado</string>
     <string name="shared">Compartilhado</string>
 
@@ -241,21 +241,21 @@
     <string name="show_info_bubble">Mostrar bolha de informação ao rolar usando a barra de rolagem</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
+    <string name="visibility">Visibilidade</string>
+    <string name="security">Segurança</string>
+    <string name="scrolling">Rolagem</string>
+    <string name="file_operations">Operações de arquivos</string>
 
     <!-- Import / Export -->
-    <string name="importing">Importing…</string>
-    <string name="exporting">Exporting…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing">Importando…</string>
+    <string name="exporting">Exportando…</string>
+    <string name="importing_successful">Importado com sucesso</string>
+    <string name="exporting_successful">Exportado com sucesso</string>
+    <string name="importing_failed">Falha na importação</string>
+    <string name="exporting_failed">Falha na exportação</string>
+    <string name="importing_some_entries_failed">Houve falha em alguns ítens da importação</string>
+    <string name="exporting_some_entries_failed">Houve falha em alguns ítens da exportação</string>
+    <string name="no_entries_for_exporting">Não foram encontramos ítens para exportar</string>
 
     <!-- About -->
     <string name="about">Sobre</string>
