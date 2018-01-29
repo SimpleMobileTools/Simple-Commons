@@ -80,8 +80,8 @@
     <!-- File operation conflicts -->
     <string name="file_already_exists">Datei \"%1$s\" existiert bereits</string>
     <string name="file_already_exists_overwrite">Datei \"%1$s\" existiert bereits. Überschreiben?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
-    <string name="merge">Merge</string>
+    <string name="folder_already_exists">Ordner \"%1$s\" existiert bereits</string>
+    <string name="merge">Zusammenführen</string>
     <string name="overwrite">Überschreiben</string>
     <string name="skip">Überspringen</string>
     <string name="append">\'_1\' anhängen</string>
