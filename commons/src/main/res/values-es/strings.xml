@@ -28,7 +28,7 @@
     <string name="no_audio_permissions">Se requiere permiso de audio</string>
 
     <!-- Renaming -->
-    <string name="rename_file">Renombrar archivo</string>
+    <string name="rename_file">Renombrar archivo</stri"avoid_whats_newng>
     <string name="rename_folder">Renombrar carpeta</string>
     <string name="rename_file_error">No se pudo renombrar el archivo</string>
     <string name="rename_folder_error">No se pudo renombrar la carpeta</string>
@@ -80,8 +80,8 @@
     <!-- File operation conflicts -->
     <string name="file_already_exists">El archivo \"%1$s\" ya existe</string>
     <string name="file_already_exists_overwrite">El archivo \"%1$s\" ya existe. Sobreescribir?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
-    <string name="merge">Merge</string>
+    <string name="folder_already_exists">La carpeta \"%1$s\" ya existe</string>
+    <string name="merge">Fusionar</string>
     <string name="overwrite">Sobreescribir</string>
     <string name="skip">Saltar</string>
     <string name="append">Añadir \'_1\'</string>
@@ -228,7 +228,7 @@
     <string name="settings">Ajustes</string>
     <string name="customize_colors">Cambiar colores</string>
     <string name="use_english_language">Usar el idioma Inglés</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup after app upgrade</string>
+    <string name="avoid_whats_new">No mostrar novedades en el inicio después de la actualización de la aplicación</string>
     <string name="show_hidden_items">Mostrar elementos ocultos</string>
     <string name="font_size">Tamaño de fuente</string>
     <string name="small">Pequeña</string>
