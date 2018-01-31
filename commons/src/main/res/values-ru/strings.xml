@@ -80,7 +80,7 @@
     <!-- File operation conflicts -->
     <string name="file_already_exists">Файл \"%1$s\" уже существует</string>
     <string name="file_already_exists_overwrite">Файл \"%1$s\" уже существует. Перезаписать?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="folder_already_exists">Папка \"%1$s\" уже существует</string>
     <string name="merge">Merge</string>
     <string name="overwrite">Перезаписать</string>
     <string name="skip">Пропустить</string>
@@ -232,7 +232,7 @@
     <string name="settings">Настройки</string>
     <string name="customize_colors">Настроить цвета</string>
     <string name="use_english_language">Use English language</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup after app upgrade</string>
+    <string name="avoid_whats_new">Не показывать \"Что нового\" при запуске после обновления приложения</string>
     <string name="show_hidden_items">Показывать скрытые папки</string>
     <string name="font_size">Размер шрифта</string>
     <string name="small">Мелкий</string>
