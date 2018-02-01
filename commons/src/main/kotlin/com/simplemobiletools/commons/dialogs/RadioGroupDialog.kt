@@ -14,7 +14,8 @@ import kotlinx.android.synthetic.main.dialog_radio_group.view.*
 import java.util.*
 
 class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, val checkedItemId: Int = -1, val titleId: Int = 0,
-                       val cancelCallback: (() -> Unit)? = null, val callback: (newValue: Any) -> Unit) : RadioGroup.OnCheckedChangeListener {
+                       showOKButton: Boolean = false, val cancelCallback: (() -> Unit)? = null, val callback: (newValue: Any) -> Unit)
+    : RadioGroup.OnCheckedChangeListener {
     val dialog: AlertDialog
     var wasInit = false
     var selectedItemId = -1
@@ -37,9 +38,14 @@ class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, 
             }
         }
 
-        dialog = AlertDialog.Builder(activity)
+        val builder = AlertDialog.Builder(activity)
                 .setOnCancelListener { cancelCallback?.invoke() }
-                .create().apply {
+
+        if (selectedItemId != -1 && showOKButton) {
+            builder.setPositiveButton(R.string.ok, { dialog, which -> onCheckedChanged(view.dialog_radio_group, selectedItemId) })
+        }
+
+        dialog = builder.create().apply {
             activity.setupDialogStuff(view, this, titleId)
         }
 
