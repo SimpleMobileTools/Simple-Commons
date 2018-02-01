@@ -77,10 +77,11 @@
     <string name="empty_name">Si us plau introdueix un nom</string>
     <string name="unknown_error_occurred">Ha ocorregut un error desconegut</string>
 
-    <!-- Copy conflicts -->
-    <string name="file_already_exists">L’arxiu %1$s ja existeix</string>
-    <string name="file_already_exists_overwrite">L’arxiu %1$s ja existeix. El vos sobreescriure?</string>
-    <string name="select_an_action">Tria una opció</string>
+    <!-- File operation conflicts -->
+    <string name="file_already_exists">L’arxiu \"%1$s\" ja existeix</string>
+    <string name="file_already_exists_overwrite">L’arxiu \"%1$s\" ja existeix. El vos sobreescriure?</string>
+    <string name="folder_already_exists">La carpeta \"%1$s\" ja existeix</string>
+    <string name="merge">Fusionar</string>
     <string name="overwrite">Sobreescriure</string>
     <string name="skip">Saltar</string>
     <string name="append">Afegir \'_1\'</string>
@@ -227,6 +228,7 @@
     <string name="settings">Ajustaments</string>
     <string name="customize_colors">Canviar colors</string>
     <string name="use_english_language">Usar l’idioma Anglès</string>
+    <string name="avoid_whats_new">No mostrar les novetats a l\'inici després de l\'actualització de l\'aplicació</string>
     <string name="show_hidden_items">Mostra elements ocults</string>
     <string name="font_size">Mida de la font</string>
     <string name="small">Petita</string>

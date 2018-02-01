@@ -77,10 +77,11 @@
     <string name="empty_name">Prosím zadajte názov</string>
     <string name="unknown_error_occurred">Došlo k neznámej chybe</string>
 
-    <!-- Copy conflicts -->
-    <string name="file_already_exists">Súbor %1$s už existuje</string>
-    <string name="file_already_exists_overwrite">Súbor %1$s už existuje. Prepísať?</string>
-    <string name="select_an_action">Zvoľte operáciu</string>
+    <!-- File operation conflicts -->
+    <string name="file_already_exists">Súbor \"%1$s\" už existuje</string>
+    <string name="file_already_exists_overwrite">Súbor \"%1$s\" už existuje. Prepísať?</string>
+    <string name="folder_already_exists">Priečinok \"%1$s\" už existuje</string>
+    <string name="merge">Zlúčiť</string>
     <string name="overwrite">Prepísať</string>
     <string name="skip">Preskočiť</string>
     <string name="append">Pripnúť \'_1\'</string>
@@ -232,6 +233,7 @@
     <string name="settings">Nastavenia</string>
     <string name="customize_colors">Upraviť farby</string>
     <string name="use_english_language">Použiť angličtinu</string>
+    <string name="avoid_whats_new">Nikdy nezobrazovať Novinky po aktualizovaní apky</string>
     <string name="show_hidden_items">Zobraziť skryté položky</string>
     <string name="font_size">Veľkosť písma</string>
     <string name="small">Malé</string>

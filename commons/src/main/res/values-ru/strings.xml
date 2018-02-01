@@ -77,10 +77,11 @@
     <string name="empty_name">Пожалуйста, введите имя</string>
     <string name="unknown_error_occurred">Произошла неизвестная ошибка</string>
 
-    <!-- Copy conflicts -->
-    <string name="file_already_exists">Файл %1$s уже существует</string>
-    <string name="file_already_exists_overwrite">Файл %1$s уже существует. Перезаписать?</string>
-    <string name="select_an_action">Выберите действие</string>
+    <!-- File operation conflicts -->
+    <string name="file_already_exists">Файл \"%1$s\" уже существует</string>
+    <string name="file_already_exists_overwrite">Файл \"%1$s\" уже существует. Перезаписать?</string>
+    <string name="folder_already_exists">Папка \"%1$s\" уже существует</string>
+    <string name="merge">Merge</string>
     <string name="overwrite">Перезаписать</string>
     <string name="skip">Пропустить</string>
     <string name="append">Добавить \'_1\' к имени</string>
@@ -231,6 +232,7 @@
     <string name="settings">Настройки</string>
     <string name="customize_colors">Настроить цвета</string>
     <string name="use_english_language">Use English language</string>
+    <string name="avoid_whats_new">Не показывать \"Что нового\" при запуске после обновления приложения</string>
     <string name="show_hidden_items">Показывать скрытые папки</string>
     <string name="font_size">Размер шрифта</string>
     <string name="small">Мелкий</string>

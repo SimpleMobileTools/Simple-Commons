@@ -8,6 +8,8 @@ import android.support.v4.util.Pair
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.CONFLICT_OVERWRITE
+import com.simplemobiletools.commons.helpers.CONFLICT_SKIP
 import com.simplemobiletools.commons.interfaces.CopyMoveListener
 import java.io.File
 import java.io.FileInputStream
@@ -16,7 +18,7 @@ import java.io.OutputStream
 import java.lang.ref.WeakReference
 import java.util.*
 
-class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = false, val copyMediaOnly: Boolean,
+class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = false, val copyMediaOnly: Boolean, val conflictResolutions: LinkedHashMap<String, Int>,
                    listener: CopyMoveListener) : AsyncTask<Pair<ArrayList<File>, File>, Void, Boolean>() {
     private var mListener: WeakReference<CopyMoveListener>? = null
     private var mMovedFiles: ArrayList<File> = ArrayList()
@@ -28,19 +30,26 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     }
 
     override fun doInBackground(vararg params: Pair<ArrayList<File>, File>): Boolean? {
-        if (params.isEmpty())
+        if (params.isEmpty()) {
             return false
+        }
 
         val pair = params[0]
         mFiles = pair.first!!
 
         for (file in mFiles) {
             try {
-                val curFile = File(pair.second, file.name)
-                if (curFile.exists())
-                    continue
+                val newFile = File(pair.second, file.name)
+                if (newFile.exists()) {
+                    val resolution = getConflictResolution(newFile)
+                    if (resolution == CONFLICT_SKIP) {
+                        continue
+                    } else if (resolution == CONFLICT_OVERWRITE) {
+                        activity.deleteFilesBg(arrayListOf(newFile), true)
+                    }
+                }
 
-                copy(file, curFile)
+                copy(file, newFile)
             } catch (e: Exception) {
                 activity.toast(e.toString())
                 return false
@@ -53,6 +62,16 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
         activity.scanFiles(mFiles) {}
         return true
+    }
+
+    private fun getConflictResolution(file: File): Int {
+        return if (conflictResolutions.size == 1 && conflictResolutions.containsKey("")) {
+            conflictResolutions[""]!!
+        } else if (conflictResolutions.containsKey(file.absolutePath)) {
+            conflictResolutions[file.absolutePath]!!
+        } else {
+            CONFLICT_SKIP
+        }
     }
 
     private fun copy(source: File, destination: File) {

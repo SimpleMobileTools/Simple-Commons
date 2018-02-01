@@ -77,10 +77,11 @@
     <string name="empty_name">Inserisci un nome</string>
     <string name="unknown_error_occurred">Riscontrato un errore sconosciuto</string>
 
-    <!-- Copy conflicts -->
-    <string name="file_already_exists">Il file %1$s esiste già</string>
-    <string name="file_already_exists_overwrite">Il file %1$s esiste già. Sovrascrivi?</string>
-    <string name="select_an_action">Seleziona un\'azione</string>
+    <!-- File operation conflicts -->
+    <string name="file_already_exists">Il file \"%1$s\" esiste già</string>
+    <string name="file_already_exists_overwrite">Il file \"%1$s\" esiste già. Sovrascrivi?</string>
+    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="merge">Merge</string>
     <string name="overwrite">Sovrascrivi</string>
     <string name="skip">Salta</string>
     <string name="append">Aggiungi \'_1\' alla fine</string>
@@ -228,6 +229,7 @@
     <string name="settings">Impostazioni</string>
     <string name="customize_colors">Personalizza i colori</string>
     <string name="use_english_language">Forza la lingua inglese</string>
+    <string name="avoid_whats_new">Avoid showing What\'s New on startup after app upgrade</string>
     <string name="show_hidden_items">Mostra gli elementi nascosti</string>
     <string name="font_size">Dimensione carattere</string>
     <string name="small">Piccolo</string>

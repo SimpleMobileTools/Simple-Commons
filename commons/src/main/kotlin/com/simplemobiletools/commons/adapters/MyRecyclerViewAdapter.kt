@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.bignerdranch.android.multiselector.ModalMultiSelectorCallback
 import com.bignerdranch.android.multiselector.MultiSelector
 import com.bignerdranch.android.multiselector.SwappingHolder
@@ -31,6 +32,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     private val multiSelector = MultiSelector()
     private var actMode: ActionMode? = null
+    private var actBarTextView: TextView? = null
 
     abstract fun getActionMenuId(): Int
 
@@ -69,10 +71,10 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     private fun updateTitle(cnt: Int) {
         val selectableItemCount = getSelectableItemCount()
         val selectedCount = Math.min(cnt, selectableItemCount)
-        val oldTitle = actMode?.title
+        val oldTitle = actBarTextView?.text
         val newTitle = "$selectedCount / $selectableItemCount"
         if (oldTitle != newTitle) {
-            actMode?.title = newTitle
+            actBarTextView?.text = newTitle
             actMode?.invalidate()
         }
     }
@@ -190,6 +192,15 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         override fun onCreateActionMode(actionMode: ActionMode?, menu: Menu?): Boolean {
             super.onCreateActionMode(actionMode, menu)
             actMode = actionMode
+            actBarTextView = layoutInflater.inflate(R.layout.actionbar_title, null) as TextView
+            actMode!!.customView = actBarTextView
+            actBarTextView!!.setOnClickListener {
+                if (getSelectableItemCount() == selectedPositions.size) {
+                    finishActMode()
+                } else {
+                    selectAll()
+                }
+            }
             activity.menuInflater.inflate(getActionMenuId(), menu)
             return true
         }
@@ -205,7 +216,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                 markItemSelection(false, itemViews[it])
             }
             selectedPositions.clear()
-            actMode?.title = ""
+            actBarTextView?.text = ""
             actMode = null
         }
     }

@@ -38,6 +38,9 @@ const val WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN = "was_custom_theme_switch_d
 const val WAS_SHARED_THEME_AFTER_UPDATE_CHECKED = "was_shared_theme_after_update_checked"
 const val SHOW_INFO_BUBBLE = "show_info_bubble"
 const val SORTING = "sorting"
+const val LAST_CONFLICT_RESOLUTION = "last_conflict_resolution"
+const val LAST_CONFLICT_APPLY_TO_ALL = "last_conflict_apply_to_all"
+const val AVOID_WHATS_NEW = "avoid_whats_new"
 
 // licenses
 const val LICENSE_KOTLIN = 1
@@ -98,6 +101,11 @@ const val PERMISSION_WRITE_CONTACTS = 6
 const val PERMISSION_READ_CALENDAR = 7
 const val PERMISSION_WRITE_CALENDAR = 8
 const val PERMISSION_CALL_PHONE = 9
+
+// conflict resolving
+const val CONFLICT_SKIP = 1
+const val CONFLICT_OVERWRITE = 2
+const val CONFLICT_MERGE = 3
 
 fun getDateFormats() = arrayListOf(
         "yyyy-MM-dd",

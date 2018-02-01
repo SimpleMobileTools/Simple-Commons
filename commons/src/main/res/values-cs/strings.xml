@@ -77,10 +77,11 @@
     <string name="empty_name">Zadejte prosím název</string>
     <string name="unknown_error_occurred">Vyskytla se neznámá chyba</string>
 
-    <!-- Copy conflicts -->
-    <string name="file_already_exists">Soubor %1$s již existuje</string>
-    <string name="file_already_exists_overwrite">Soubor %1$s již existuje. Přepsat??</string>
-    <string name="select_an_action">Zvolte akci</string>
+    <!-- File operation conflicts -->
+    <string name="file_already_exists">Soubor \"%1$s\" již existuje</string>
+    <string name="file_already_exists_overwrite">Soubor \"%1$s\" již existuje. Přepsat?</string>
+    <string name="folder_already_exists">Složka \"%1$s\" již existuje</string>
+    <string name="merge">Merge</string>
     <string name="overwrite">Přepsat</string>
     <string name="skip">Přeskočit</string>
     <string name="append">Ponechat s \'_1\'</string>
@@ -228,6 +229,7 @@
     <string name="settings">Nastavení</string>
     <string name="customize_colors">Přizpůsobit barvy</string>
     <string name="use_english_language">Use English language</string>
+    <string name="avoid_whats_new">Avoid showing What\'s New on startup after app upgrade</string>
     <string name="show_hidden_items">Zobrazit skryté položky</string>
     <string name="font_size">Font size</string>
     <string name="small">Small</string>

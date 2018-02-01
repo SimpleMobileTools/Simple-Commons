@@ -77,10 +77,11 @@
     <string name="empty_name">Skriv et navn</string>
     <string name="unknown_error_occurred">Der opstod en ukendt fejl</string>
 
-    <!-- Copy conflicts -->
-    <string name="file_already_exists">Filen %1$s findes allerede</string>
-    <string name="file_already_exists_overwrite">Filen %1$s findes allerede. Overskriv?</string>
-    <string name="select_an_action">Vælg handling</string>
+    <!-- File operation conflicts -->
+    <string name="file_already_exists">Filen \"%1$s\" findes allerede</string>
+    <string name="file_already_exists_overwrite">Filen \"%1$s\" findes allerede. Overskriv?</string>
+    <string name="folder_already_exists">Mappen \"%1$s\" findes allerede</string>
+    <string name="merge">Sammenflet</string>
     <string name="overwrite">Overskriv</string>
     <string name="skip">Skip</string>
     <string name="append">Tilføj med \'_1\'</string>
@@ -228,6 +229,7 @@
     <string name="settings">Indstillinger</string>
     <string name="customize_colors">Rediger farver</string>
     <string name="use_english_language">Use English language</string>
+    <string name="avoid_whats_new">Undgå at få vist info om hvad der er nyt efter opgradering af appen</string>
     <string name="show_hidden_items">Vis skjulte elementer</string>
     <string name="font_size">Skriftstørrelse</string>
     <string name="small">Lille</string>

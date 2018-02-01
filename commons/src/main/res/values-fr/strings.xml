@@ -77,10 +77,11 @@
     <string name="empty_name">Veuillez saisir un nom</string>
     <string name="unknown_error_occurred">Une erreur inconnue est survenue.</string>
 
-    <!-- Copy conflicts -->
-    <string name="file_already_exists">Le fichier %1$s existe déjà</string>
-    <string name="file_already_exists_overwrite">Le fichier %1$s existe déjà. Ecraser?</string>
-    <string name="select_an_action">Sélectionner une action</string>
+    <!-- File operation conflicts -->
+    <string name="file_already_exists">Le fichier \"%1$s\" existe déjà</string>
+    <string name="file_already_exists_overwrite">Le fichier \"%1$s\" existe déjà. Ecraser?</string>
+    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="merge">Merge</string>
     <string name="overwrite">Écraser</string>
     <string name="skip">Passer</string>
     <string name="append">Suffixer avec \'_1\'</string>
@@ -228,6 +229,7 @@
     <string name="settings">Paramètres</string>
     <string name="customize_colors">Personnaliser les couleurs</string>
     <string name="use_english_language">Utiliser l\'affichage en anglais</string>
+    <string name="avoid_whats_new">Avoid showing What\'s New on startup after app upgrade</string>
     <string name="show_hidden_items">Afficher les éléments cachés</string>
     <string name="font_size">Taille police</string>
     <string name="small">Petite</string>

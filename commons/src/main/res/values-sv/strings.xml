@@ -77,10 +77,11 @@
     <string name="empty_name">Ange ett namn</string>
     <string name="unknown_error_occurred">Ett okänt fel har uppstått</string>
 
-    <!-- Copy conflicts -->
-    <string name="file_already_exists">Filen %1$s finns redan</string>
-    <string name="file_already_exists_overwrite">Filen %1$s finns redan. Skriv över?</string>
-    <string name="select_an_action">Välj en åtgärd</string>
+    <!-- File operation conflicts -->
+    <string name="file_already_exists">Filen \"%1$s\" finns redan</string>
+    <string name="file_already_exists_overwrite">Filen \"%1$s\" finns redan. Skriv över?</string>
+    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="merge">Merge</string>
     <string name="overwrite">Skriv över</string>
     <string name="skip">Hoppa över</string>
     <string name="append">Bifoga \'_1\'</string>
@@ -228,6 +229,7 @@
     <string name="settings">Inställningar</string>
     <string name="customize_colors">Anpassa färger</string>
     <string name="use_english_language">Använd engelska</string>
+    <string name="avoid_whats_new">Avoid showing What\'s New on startup after app upgrade</string>
     <string name="show_hidden_items">Visa dolda objekt</string>
     <string name="font_size">Teckenstorlek</string>
     <string name="small">Liten</string>

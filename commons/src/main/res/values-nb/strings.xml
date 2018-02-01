@@ -77,10 +77,11 @@
     <string name="empty_name">Oppfør et navn</string>
     <string name="unknown_error_occurred">En ukjent feil oppstod</string>
 
-    <!-- Copy conflicts -->
-    <string name="file_already_exists">Filen %1$s finnes allerede</string>
-    <string name="file_already_exists_overwrite">Filen %1$s finnes allerede. Overskrive?</string>
-    <string name="select_an_action">Velg en handling</string>
+    <!-- File operation conflicts -->
+    <string name="file_already_exists">Filen \"%1$s\" finnes allerede</string>
+    <string name="file_already_exists_overwrite">Filen \"%1$s\" finnes allerede. Overskrive?</string>
+    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="merge">Merge</string>
     <string name="overwrite">Overskriv</string>
     <string name="skip">Hopp over</string>
     <string name="append">Tilføy \'_1\'</string>
@@ -228,6 +229,7 @@
     <string name="settings">Innstillinger</string>
     <string name="customize_colors">Tilpass farger</string>
     <string name="use_english_language">Bruk engelsk språk</string>
+    <string name="avoid_whats_new">Avoid showing What\'s New on startup after app upgrade</string>
     <string name="show_hidden_items">Vis skjulte elementer</string>
     <string name="font_size">Skriftstørrelse</string>
     <string name="small">Liten</string>

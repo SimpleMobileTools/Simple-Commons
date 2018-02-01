@@ -77,10 +77,11 @@
     <string name="empty_name">请输入名称</string>
     <string name="unknown_error_occurred">未知错误</string>
 
-    <!-- Copy conflicts -->
-    <string name="file_already_exists">文件 %1$s 已存在</string>
-    <string name="file_already_exists_overwrite">文件 %1$s 已存在。是否覆盖？</string>
-    <string name="select_an_action">选择操作</string>
+    <!-- File operation conflicts -->
+    <string name="file_already_exists">文件 \"%1$s\" 已存在</string>
+    <string name="file_already_exists_overwrite">文件 \"%1$s\" 已存在。是否覆盖？</string>
+    <string name="folder_already_exists">文件夹 \"%1$s\" 已存在</string>
+    <string name="merge">合并</string>
     <string name="overwrite">覆盖</string>
     <string name="skip">跳过</string>
     <string name="append">应用到 \'_1\'</string>
@@ -228,6 +229,7 @@
     <string name="settings">设置</string>
     <string name="customize_colors">自定义颜色</string>
     <string name="use_english_language">强制使用英语语言</string>
+    <string name="avoid_whats_new">升级后不再显示新功能</string>
     <string name="show_hidden_items">显示隐藏的项目</string>
     <string name="font_size">字体大小</string>
     <string name="small">小</string>
