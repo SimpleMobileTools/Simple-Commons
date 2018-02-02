@@ -14,7 +14,7 @@
 
     <!-- Search -->
     <string name="search">Szukaj</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
+    <string name="type_2_characters">Wpisz co najmniej 2 znaki, aby rozpocząć wyszukiwanie.</string>
 
     <!-- Filters -->
     <string name="filter">Filtr</string>
@@ -80,8 +80,8 @@
     <!-- File operation conflicts -->
     <string name="file_already_exists">Plik \"%1$s\" już istnieje</string>
     <string name="file_already_exists_overwrite">Plik \"%1$s\" już istnieje. Nadpisać?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
-    <string name="merge">Merge</string>
+    <string name="folder_already_exists">Folder \"%1$s\" już istnieje</string>
+    <string name="merge">Połącz</string>
     <string name="overwrite">Nadpisz</string>
     <string name="skip">Pomiń</string>
     <string name="append">Dodaj końcówkę \'_1\'</string>
@@ -124,7 +124,7 @@
     <string name="f_number">Otwór względny obiektywu</string>
     <string name="camera">Kamera/aparat</string>
     <string name="exif">Dane EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Tytuł piosenki</string>
 
     <!-- Color customization -->
     <string name="background_color">Tło</string>
@@ -161,7 +161,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">Usuń</string>
-    <string name="remove">Remove</string>
+    <string name="remove">Usuń</string>
     <string name="rename">Zmień nazwę</string>
     <string name="share">Udostępnij</string>
     <string name="share_via">Udostępnij w</string>
@@ -233,7 +233,7 @@
     <string name="settings">Ustawienia</string>
     <string name="customize_colors">Dostosuj kolory</string>
     <string name="use_english_language">Wymuś używanie przez aplikację języka angielskiego</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup after app upgrade</string>
+    <string name="avoid_whats_new">Nie pokazuj okna \'Co nowego\' po aktualizacji aplikacji</string>
     <string name="show_hidden_items">Pokazuj ukryte elementy</string>
     <string name="font_size">Rozmiar czcionki</string>
     <string name="small">Mała</string>
@@ -246,25 +246,25 @@
     <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
+    <string name="visibility">Widoczność</string>
+    <string name="security">Bezpieczeństwo</string>
+    <string name="scrolling">Przewijanie</string>
+    <string name="file_operations">Operacje na plikach</string>
 
     <!-- Import / Export -->
     <string name="importing">Importuję…</string>
     <string name="exporting">Eksportuję…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing_successful">Importowanie zakończone</string>
+    <string name="exporting_successful">Eksportowanie zakończone</string>
+    <string name="importing_failed">Importowanie nie powiodło się</string>
+    <string name="exporting_failed">Eksportowanie nie powiodło się</string>
+    <string name="importing_some_entries_failed">Importowanie niektórych wpisów nie powiodło się</string>
+    <string name="exporting_some_entries_failed">Eksportowanie niektórych wpisów nie powiodło się</string>
+    <string name="no_entries_for_exporting">Nie znalazłem żadnych wpisów do wyeksportowania</string>
 
     <!-- About -->
     <string name="about">O aplikacji</string>
-    <string name="website_label">Nasza strona internerowa:</string>
+    <string name="website_label">Nasza strona internetowa:</string>
     <string name="email_label">Napisz do nas, przyślij nam swoje uwagi:</string>
     <string name="more_apps_underlined"><u>Więcej naszych aplikacji</u></string>
     <string name="third_party_licences_underlined"><u>Licencje innych firm</u></string>
@@ -272,8 +272,8 @@
     <string name="share_text">Hej! Sprawdź aplikację %1$s (link: %2$s).</string>
     <string name="invite_via">Wybierz sposób:</string>
     <string name="rate_us_underlined"><u>Oceń aplikację</u></string>
-    <string name="donate">Przekaż darowiznę</string>
-    <string name="donate_underlined"><u>Przekaż darowiznę</u></string>
+    <string name="donate">Przekaż datek</string>
+    <string name="donate_underlined"><u>Przekaż datek</u></string>
     <string name="follow_us">Śledź nas</string>
     <string name="copyright">Wersja %1$s\n© Simple Mobile Tools %2$d</string>
     <string name="additional_info">Dodatkowe informacje</string>
