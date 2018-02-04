@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/filepicker_breadcrumbs"
             android:scrollbars="none"
-            app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+            app:layoutManager="com.simplemobiletools.commons.views.MyLinearLayoutManager"/>
 
         <com.simplemobiletools.commons.views.FastScroller
             android:id="@+id/filepicker_fastscroller"
