@@ -9,7 +9,7 @@ import android.view.ScaleGestureDetector
 import com.simplemobiletools.commons.R
 
 // drag selection is based on https://github.com/afollestad/drag-select-recyclerview
-class MyRecyclerView : RecyclerView {
+open class MyRecyclerView : RecyclerView {
     private val AUTO_SCROLL_DELAY = 25L
     private var isZoomEnabled = false
     private var isDragSelectionEnabled = false

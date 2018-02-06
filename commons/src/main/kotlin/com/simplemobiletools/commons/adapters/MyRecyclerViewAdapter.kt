@@ -248,8 +248,9 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         fastScroller?.measureRecyclerView()
     }
 
-    class ViewHolder(view: View, val adapterListener: MyAdapterListener, val activity: BaseSimpleActivity, val multiSelectorCallback: ModalMultiSelectorCallback,
-                     val multiSelector: MultiSelector, val itemClick: (Any) -> (Unit)) : SwappingHolder(view, multiSelector) {
+    open class ViewHolder(view: View, val adapterListener: MyAdapterListener? = null, val activity: BaseSimpleActivity? = null,
+                          val multiSelectorCallback: ModalMultiSelectorCallback? = null, val multiSelector: MultiSelector,
+                          val itemClick: ((Any) -> (Unit))? = null) : SwappingHolder(view, multiSelector) {
         fun bindView(any: Any, allowLongClick: Boolean = true, callback: (itemView: View, layoutPosition: Int) -> Unit): View {
             return itemView.apply {
                 callback(this, layoutPosition)
@@ -266,20 +267,20 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
         private fun viewClicked(any: Any) {
             if (multiSelector.isSelectable) {
-                val isSelected = adapterListener.getSelectedPositions().contains(adapterPosition)
-                adapterListener.toggleItemSelectionAdapter(!isSelected, adapterPosition)
+                val isSelected = adapterListener?.getSelectedPositions()?.contains(adapterPosition) ?: false
+                adapterListener?.toggleItemSelectionAdapter(!isSelected, adapterPosition)
             } else {
-                itemClick(any)
+                itemClick?.invoke(any)
             }
         }
 
         private fun viewLongClicked() {
-            if (!multiSelector.isSelectable) {
-                activity.startSupportActionMode(multiSelectorCallback)
-                adapterListener.toggleItemSelectionAdapter(true, adapterPosition)
+            if (!multiSelector.isSelectable && multiSelectorCallback != null) {
+                activity?.startSupportActionMode(multiSelectorCallback)
+                adapterListener?.toggleItemSelectionAdapter(true, adapterPosition)
             }
 
-            adapterListener.itemLongClicked(adapterPosition)
+            adapterListener?.itemLongClicked(adapterPosition)
         }
     }
 }
