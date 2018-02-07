@@ -29,6 +29,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     var textColor = baseConfig.textColor
     var itemViews = SparseArray<View>()
     val selectedPositions = HashSet<Int>()
+    var positionOffset = 0
 
     private val multiSelector = MultiSelector()
     private var actMode: ActionMode? = null
@@ -80,10 +81,10 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     }
 
     fun selectAll() {
-        val cnt = itemCount
+        val cnt = itemCount - positionOffset
         for (i in 0 until cnt) {
             selectedPositions.add(i)
-            notifyItemChanged(i)
+            notifyItemChanged(i + positionOffset)
         }
         updateTitle(cnt)
     }
@@ -96,7 +97,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                 }
 
                 override fun selectRange(initialSelection: Int, lastDraggedIndex: Int, minReached: Int, maxReached: Int) {
-                    selectItemRange(initialSelection, lastDraggedIndex, minReached, maxReached)
+                    selectItemRange(initialSelection, lastDraggedIndex - positionOffset, minReached, maxReached)
                 }
             })
         } else {
@@ -223,7 +224,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     fun createViewHolder(layoutType: Int, parent: ViewGroup?): ViewHolder {
         val view = layoutInflater.inflate(layoutType, parent, false)
-        return ViewHolder(view, adapterListener, activity, multiSelectorMode, multiSelector, itemClick)
+        return ViewHolder(view, adapterListener, activity, multiSelectorMode, multiSelector, positionOffset, itemClick)
     }
 
     fun bindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int, view: View) {
@@ -234,7 +235,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     fun removeSelectedItems() {
         selectedPositions.sortedDescending().forEach {
-            notifyItemRemoved(it)
+            notifyItemRemoved(it + positionOffset)
             itemViews.put(it, null)
         }
 
@@ -250,7 +251,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     open class ViewHolder(view: View, val adapterListener: MyAdapterListener? = null, val activity: BaseSimpleActivity? = null,
                           val multiSelectorCallback: ModalMultiSelectorCallback? = null, val multiSelector: MultiSelector,
-                          val itemClick: ((Any) -> (Unit))? = null) : SwappingHolder(view, multiSelector) {
+                          val positionOffset: Int = 0, val itemClick: ((Any) -> (Unit))? = null) : SwappingHolder(view, multiSelector) {
         fun bindView(any: Any, allowLongClick: Boolean = true, callback: (itemView: View, layoutPosition: Int) -> Unit): View {
             return itemView.apply {
                 callback(this, layoutPosition)
@@ -267,8 +268,8 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
         private fun viewClicked(any: Any) {
             if (multiSelector.isSelectable) {
-                val isSelected = adapterListener?.getSelectedPositions()?.contains(adapterPosition) ?: false
-                adapterListener?.toggleItemSelectionAdapter(!isSelected, adapterPosition)
+                val isSelected = adapterListener?.getSelectedPositions()?.contains(adapterPosition - positionOffset) ?: false
+                adapterListener?.toggleItemSelectionAdapter(!isSelected, adapterPosition - positionOffset)
             } else {
                 itemClick?.invoke(any)
             }
@@ -277,10 +278,10 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         private fun viewLongClicked() {
             if (!multiSelector.isSelectable && multiSelectorCallback != null) {
                 activity?.startSupportActionMode(multiSelectorCallback)
-                adapterListener?.toggleItemSelectionAdapter(true, adapterPosition)
+                adapterListener?.toggleItemSelectionAdapter(true, adapterPosition - positionOffset)
             }
 
-            adapterListener?.itemLongClicked(adapterPosition)
+            adapterListener?.itemLongClicked(adapterPosition - positionOffset)
         }
     }
 }
