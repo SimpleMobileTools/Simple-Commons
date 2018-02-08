@@ -1,101 +1,101 @@
 <resources>
     <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
-    <string name="save_as">Save as</string>
-    <string name="file_saved">File saved successfully</string>
-    <string name="invalid_file_format">Invalid file format</string>
-    <string name="out_of_memory_error">Out of memory error</string>
-    <string name="an_error_occurred">An error occurred: %s</string>
-    <string name="open_with">Open with</string>
-    <string name="no_app_found">No valid app found</string>
-    <string name="set_as">Set as</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
-    <string name="unknown">Unknown</string>
-    <string name="always">Always</string>
-    <string name="never">Never</string>
+    <string name="cancel">Batal</string>
+    <string name="save_as">Simpan Sebagai</string>
+    <string name="file_saved">File Sukses Tersimpan</string>
+    <string name="invalid_file_format">Format File Invalid</string>
+    <string name="out_of_memory_error">Error Out of Memori</string>
+    <string name="an_error_occurred">Terjadi Kesalahan: %s</string>
+    <string name="open_with">Buka dengan</string>
+    <string name="no_app_found">Tidak Ada Aplikasi</string>
+    <string name="set_as">Setel Sebagai</string>
+    <string name="value_copied_to_clipboard">Di copy ke Clipboard</string>
+    <string name="unknown">Tidak di ketahui</string>
+    <string name="always">Selalu</string>
+    <string name="never">Tidak Pernah</string>
 
     <!-- Search -->
-    <string name="search">Search</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
+    <string name="search">Cari</string>
+    <string name="type_2_characters">Ketik minimal 2 Karakter Untuk Mencari.</string>
 
     <!-- Filters -->
-    <string name="filter">Filter</string>
-    <string name="no_items_found">No items found.</string>
-    <string name="change_filter">Change filter</string>
+    <string name="filter">Saring</string>
+    <string name="no_items_found">Tidak Ditemukan.</string>
+    <string name="change_filter">Tukar Penyaring</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">Memerlukan Izin Akses Penyimpanan</string>
+    <string name="no_contacts_permission">Memerlukan Izin Akses Kontak</string>
+    <string name="no_camera_permissions">Memerlukan Izin Akses Kamera</string>
+    <string name="no_audio_permissions">Memerlukan Izin Akses Audio</string>
 
     <!-- Renaming -->
-    <string name="rename_file">Rename file</string>
-    <string name="rename_folder">Rename folder</string>
-    <string name="rename_file_error">Could not rename the file</string>
-    <string name="rename_folder_error">Could not rename the folder</string>
-    <string name="rename_folder_empty">Folder name must not be empty</string>
-    <string name="rename_folder_exists">A folder with that name already exists</string>
-    <string name="rename_folder_root">Cannot rename the root folder of a storage</string>
-    <string name="rename_folder_ok">Folder renamed successfully</string>
-    <string name="renaming_folder">Renaming folder</string>
-    <string name="filename_cannot_be_empty">Filename cannot be empty</string>
-    <string name="filename_invalid_characters">Filename contains invalid characters</string>
-    <string name="extension_cannot_be_empty">Extension cannot be empty</string>
+    <string name="rename_file">Ganti Nama File</string>
+    <string name="rename_folder">Ganti Nama Folder</string>
+    <string name="rename_file_error">Tidak Bisa Mengganti Nama File</string>
+    <string name="rename_folder_error">Tidak Bisa Mengganti Nama Folder</string>
+    <string name="rename_folder_empty">Folder Nama Tidak Boleh Kosong</string>
+    <string name="rename_folder_exists">Folder Dengan Nama Ini Sudah Ada</string>
+    <string name="rename_folder_root">Folder Root Penyimpanan Tidak Dapat Di Ubah</string>
+    <string name="rename_folder_ok">Penggantian Nama Folder Berhasil</string>
+    <string name="renaming_folder">Mengganti Nama Folder</string>
+    <string name="filename_cannot_be_empty">Nama File Tidak Boleh Kosong</string>
+    <string name="filename_invalid_characters">Nama mengandung Karakter Tidak Di Dukung</string>
+    <string name="extension_cannot_be_empty">Extension Tidak Boleh Kosong</string>
 
     <!-- Copy / Move -->
-    <string name="copy">Copy</string>
-    <string name="move">Move</string>
-    <string name="copy_move">Copy / Move</string>
-    <string name="copy_to">Copy to</string>
-    <string name="move_to">Move to</string>
-    <string name="source">Source</string>
-    <string name="destination">Destination</string>
-    <string name="select_destination">Select destination</string>
-    <string name="click_select_destination">Click here to select destination</string>
-    <string name="invalid_destination">Could not write to the selected destination</string>
-    <string name="please_select_destination">Please select a destination</string>
-    <string name="source_and_destination_same">Source and destination cannot be the same</string>
-    <string name="copy_failed">Could not copy the files</string>
-    <string name="copying">Copying&#8230;</string>
-    <string name="copying_success">Files copied successfully</string>
-    <string name="copy_move_failed">An error occurred</string>
-    <string name="moving">Moving&#8230;</string>
-    <string name="moving_success">Files moved successfully</string>
-    <string name="moving_success_partial">Some files could not be moved</string>
-    <string name="copying_success_partial">Some files could not be copied</string>
-    <string name="no_files_selected">No files selected</string>
-    <string name="saving">Saving&#8230;</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="copy">Salin</string>
+    <string name="move">Pindah</string>
+    <string name="copy_move">Salin / Pindah</string>
+    <string name="copy_to">Salin Ke</string>
+    <string name="move_to">Pindah Ke</string>
+    <string name="source">Sumber</string>
+    <string name="destination">Destinasi</string>
+    <string name="select_destination">Pilih Destinasi</string>
+    <string name="click_select_destination">Klik Di Sini Untuk Memilih Destinasi</string>
+    <string name="invalid_destination">Tidak Dapat Menulis Destinasi Yang Di Pilih</string>
+    <string name="please_select_destination">Mohon Pilih Destinasi</string>
+    <string name="source_and_destination_same">Sumber Dan Destinasi Tidak Boleh Sama</string>
+    <string name="copy_failed">Tidak Dapat Menyalin File</string>
+    <string name="copying">Menyalin&#8230;</string>
+    <string name="copying_success">File Berhasil Di Salin</string>
+    <string name="copy_move_failed">Terjadi Kesalahan</string>
+    <string name="moving">Memindahkan&#8230;</string>
+    <string name="moving_success">File Berhasil Di Pindahkan</string>
+    <string name="moving_success_partial">Beberapa File Tidak Dapat Di pindah</string>
+    <string name="copying_success_partial">Beberapa File Tidak Dapat Di Salin</string>
+    <string name="no_files_selected">Tidak Ada File Yang Di Pilih</string>
+    <string name="saving">Menyimpan&#8230;</string>
+    <string name="could_not_create_folder">Tidak Dapat Membuat Folder %s</string>
+    <string name="could_not_create_file">Tidak Dapat Membuat File %s</string>
 
     <!-- Create new -->
-    <string name="create_new">Create new</string>
+    <string name="create_new">Buat Baru</string>
     <string name="folder">Folder</string>
     <string name="file">File</string>
-    <string name="create_new_folder">Create new folder</string>
-    <string name="name_taken">A file or folder with that name already exists</string>
-    <string name="invalid_name">The name contains invalid characters</string>
-    <string name="empty_name">Please enter a name</string>
-    <string name="unknown_error_occurred">An unknown error occurred</string>
+    <string name="create_new_folder">Buat Folder Baru</string>
+    <string name="name_taken">File Atau Folder Dengan Nama Ini Sudah Ada</string>
+    <string name="invalid_name">Nama Mengandung Karakter Tidak Di dukung</string>
+    <string name="empty_name">Masukkan Nama</string>
+    <string name="unknown_error_occurred">Terjadi Kesalahan Tidak Di Ketahui</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">File \"%1$s\" already exists</string>
-    <string name="file_already_exists_overwrite">File \"%1$s\" already exists. Overwrite?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
-    <string name="merge">Merge</string>
-    <string name="overwrite">Overwrite</string>
-    <string name="skip">Skip</string>
-    <string name="append">Append with \'_1\'</string>
-    <string name="apply_to_all">Apply to all</string>
+    <string name="file_already_exists">File \"%1$s\" Sudah Ada</string>
+    <string name="file_already_exists_overwrite">File \"%1$s\" Sudah Ada. Timpa saja?</string>
+    <string name="folder_already_exists">Folder \"%1$s\" Sudah Ada</string>
+    <string name="merge">Gabung</string>
+    <string name="overwrite">Timpa</string>
+    <string name="skip">Lewati</string>
+    <string name="append">Tambahkan Dengan \'_1\'</string>
+    <string name="apply_to_all">Terapkan Ke Semua</string>
 
     <!-- File picker -->
-    <string name="select_folder">Select a folder</string>
-    <string name="select_file">Select a file</string>
-    <string name="confirm_storage_access_title">Confirm external storage access</string>
-    <string name="confirm_storage_access_text">Please choose the root folder of the SD card on the next screen, to grant write access</string>
-    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="select_folder">Pilih Folder</string>
+    <string name="select_file">Pilih File</string>
+    <string name="confirm_storage_access_title">Konfirmasi Penyimpanan Eksternal</string>
+    <string name="confirm_storage_access_text">Pilih Folder Root SD Card Untuk Layar Berikutnya,Agar Memberi Akses Tulis</string>
+    <string name="confirm_storage_access_text_sd">Jika Tidak Menemukan SD card, Coba Ini</string>
+    <string name="confirm_selection">Konfirmasi</string>
 
     <plurals name="items">
         <item quantity="one">%1$d item</item>
@@ -103,20 +103,20 @@
     </plurals>
 
     <!-- Storages -->
-    <string name="select_storage">Select storage</string>
+    <string name="select_storage">Pilih Penyimpanan</string>
     <string name="internal">Internal</string>
     <string name="sd_card">SD Card</string>
     <string name="root">Root</string>
-    <string name="wrong_root_selected">Wrong folder selected, please select the root folder of your SD card</string>
+    <string name="wrong_root_selected">Anda Memilih Folder Yang Salah</string>
 
     <!-- File properties -->
     <string name="properties">Properties</string>
     <string name="path">Path</string>
-    <string name="items_selected">Items selected</string>
+    <string name="items_selected">Item Terpilih</string>
     <string name="direct_children_count">Direct children count</string>
     <string name="files_count">Total files count</string>
-    <string name="resolution">Resolution</string>
-    <string name="duration">Duration</string>
+    <string name="resolution">Resolusi</string>
+    <string name="duration">Durasi</string>
     <string name="artist">Artist</string>
     <string name="album">Album</string>
     <string name="focal_length">Focal length</string>
@@ -125,25 +125,25 @@
     <string name="f_number">F-number</string>
     <string name="camera">Camera</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Judul lagu</string>
 
     <!-- Color customization -->
-    <string name="background_color">Background color</string>
-    <string name="text_color">Text color</string>
-    <string name="primary_color">Primary color</string>
-    <string name="restore_defaults">Restore defaults</string>
-    <string name="theme">Theme</string>
-    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
-    <string name="save">Save</string>
-    <string name="discard">Discard</string>
-    <string name="undo_changes">Undo changes</string>
-    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
-    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="background_color">Warna Latar</string>
+    <string name="text_color">Warna Teks</string>
+    <string name="primary_color">Warna Utama</string>
+    <string name="restore_defaults">Kembalikan Ke Awal</string>
+    <string name="theme">Tema</string>
+    <string name="changing_color_description">Mengubah Warna Akan Membuat Beralih Ke Tema Kustom</string>
+    <string name="save">Simpan</string>
+    <string name="discard">Buang</string>
+    <string name="undo_changes">Batalkan Perubahan</string>
+    <string name="undo_changes_confirmation">Apa Kamu Yakin?</string>
+    <string name="save_before_closing">Kamu Punya Perubahan Yang Belum Di simpan,Simpan?</string>
+    <string name="apply_to_all_apps">Terapkan Warna Untuk Semua Simple apps</string>
+    <string name="share_colors_success">Pembaharuan Warna Berhasil. Tema Baru Di Sebut \'Shared\' Telah Di Tambahkan, Mohon Pakai Itu Untuk Pembaharuan Semua Warna Di Masa Akan Datang.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
+            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Terimakasih</a> Untuk Unlock Dan Memberi Dukungan,Terima Kasih!
         ]]>
     </string>
 
@@ -161,24 +161,24 @@
     <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
 
     <!-- Actionbar items -->
-    <string name="delete">Delete</string>
+    <string name="delete">Hapus</string>
     <string name="remove">Remove</string>
-    <string name="rename">Rename</string>
+    <string name="rename">Ganti Nama</string>
     <string name="share">Share</string>
     <string name="share_via">Share via</string>
-    <string name="select_all">Select all</string>
-    <string name="hide">Hide</string>
-    <string name="unhide">Unhide</string>
-    <string name="hide_folder">Hide folder</string>
-    <string name="unhide_folder">Unhide folder</string>
+    <string name="select_all">Pilih Semua</string>
+    <string name="hide">Sembunyikan</string>
+    <string name="unhide">Munculkan</string>
+    <string name="hide_folder">Sembunyikan folder</string>
+    <string name="unhide_folder">Munculkan folder</string>
     <string name="temporarily_show_hidden">Temporarily show hidden</string>
     <string name="stop_showing_hidden">Stop showing hidden media</string>
     <string name="maximum_share_reached">You cannot share this much content at once</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sort by</string>
-    <string name="name">Name</string>
-    <string name="size">Size</string>
+    <string name="name">Nama</string>
+    <string name="size">Ukuran</string>
     <string name="last_modified">Last modified</string>
     <string name="date_taken">Date taken</string>
     <string name="title">Title</string>
@@ -186,12 +186,12 @@
     <string name="extension">Extension</string>
     <string name="ascending">Ascending</string>
     <string name="descending">Descending</string>
-    <string name="use_for_this_folder">Use for this folder only</string>
+    <string name="use_for_this_folder">Pakai Hanya Untuk Folder Ini</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
@@ -204,33 +204,33 @@
     <string name="wrong_pattern">Wrong pattern</string>
     <string name="repeat_pattern">Repeat pattern</string>
     <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
+    <string name="add_fingerprint">Tambahkan fingerprint</string>
+    <string name="place_finger">Mohon Tempatkan Jari mu Di Fingerprint Sensor</string>
     <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
-    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="authentication_blocked">Autentikasi di blok,Mohon Coba Kembali</string>
+    <string name="no_fingerprints_registered">Kamu Tidak Punya Fingerprint Yang Terdaftar, Mohon Tambahkan Di Pengaturan</string>
+    <string name="go_to_settings">Ke Pengaturan</string>
+    <string name="protection_setup_successfully">Pengaturan Password Berhasil. Install Ulang Apabila Terlupa.</string>
+    <string name="fingerprint_setup_successfully">Pengaturan Proteksi Berhasil. Install Ulang Aplikasi Jika Terjadi Masalah Dengan Reset.</string>
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d second</item>
-        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">%1$d Detik</item>
+        <item quantity="other">%1$d Detik</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minute</item>
-        <item quantity="other">%1$d minutes</item>
+        <item quantity="one">%1$d menit</item>
+        <item quantity="other">%1$d menit</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d hour</item>
-        <item quantity="other">%1$d hours</item>
+        <item quantity="one">%1$d Jam</item>
+        <item quantity="other">%1$d Jam</item>
     </plurals>
 
     <!-- Settings -->
-    <string name="settings">Settings</string>
-    <string name="customize_colors">Customize colors</string>
-    <string name="use_english_language">Use English language</string>
+    <string name="settings">Pengaturan</string>
+    <string name="customize_colors">Sesuaikan Warna</string>
+    <string name="use_english_language">Gunakan Bahasa Inggris</string>
     <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
     <string name="show_hidden_items">Show hidden items</string>
     <string name="font_size">Font size</string>
@@ -245,44 +245,44 @@
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
+    <string name="security">Keamanan</string>
     <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
+    <string name="file_operations">File operasi</string>
 
     <!-- Import / Export -->
     <string name="importing">Importing…</string>
     <string name="exporting">Exporting…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing_successful">Importing Berhasil</string>
+    <string name="exporting_successful">Exporting Berhasil</string>
+    <string name="importing_failed">Importing Gagal</string>
+    <string name="exporting_failed">Exporting Gagal</string>
+    <string name="importing_some_entries_failed">Importing Beberapa Entri Gagal</string>
+    <string name="exporting_some_entries_failed">Exporting Beberapa Entri Gagal</string>
+    <string name="no_entries_for_exporting">Tidak Ada Entri Untuk Exporting Di Temukan</string>
 
     <!-- About -->
-    <string name="about">About</string>
-    <string name="website_label">For the source codes visit</string>
-    <string name="email_label">Send your feedback or suggestions to</string>
+    <string name="about">Tentang</string>
+    <string name="website_label">Untuk Sumber Kode Kunjungi</string>
+    <string name="email_label">Kirimkan Masukan Dan Bantuan</string>
     <string name="more_apps_underlined"><u>More apps</u></string>
-    <string name="third_party_licences_underlined"><u>Third party licences</u></string>
+    <string name="third_party_licences_underlined"><u>Lisensi pihak Ke Tiga</u></string>
     <string name="invite_friends_underlined"><u>Invite friends</u></string>
-    <string name="share_text">Hey, come check out %1$s at %2$s</string>
+    <string name="share_text">Hey, Mari check out %1$s at %2$s</string>
     <string name="invite_via">Invite via</string>
     <string name="rate_us_underlined"><u>Rate us</u></string>
-    <string name="donate">Donate</string>
-    <string name="donate_underlined"><u>Donate</u></string>
+    <string name="donate">Donasi</string>
+    <string name="donate_underlined"><u>Donasi</u></string>
     <string name="follow_us">Follow us</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="additional_info">Additional info</string>
+    <string name="additional_info">Tambahan info</string>
     <string name="app_version">App version: %1$s</string>
     <string name="device_os">Device OS: %1$s</string>
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>
-            hope you are enjoying the app. It contains no ads, please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
-            You can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.<br><br>
-            Thank you!
+            Harap Menikmati Aplikasi Ini. Ini Tidak Ada Iklan,Mohon Beri Dukungan Pengembangan Dengan Purchase<a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Terimakasih</a> app, it will also prevent this dialog from showing up again.<br><br>
+            Kamu Dapat Memberi Donasi Dengan Mengunjungi <a href="http://simplemobiletools.com/donate">Disini</a>.<br><br>
+            Terimakasih!
         ]]>
     </string>
     <string name="purchase">Purchase</string>
