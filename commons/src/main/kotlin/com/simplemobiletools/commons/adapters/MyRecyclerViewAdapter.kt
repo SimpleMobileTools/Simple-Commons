@@ -27,6 +27,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     val layoutInflater = activity.layoutInflater
     var primaryColor = baseConfig.primaryColor
     var textColor = baseConfig.textColor
+    var backgroundColor = baseConfig.backgroundColor
     var itemViews = SparseArray<View>()
     val selectedPositions = HashSet<Int>()
     var positionOffset = 0
