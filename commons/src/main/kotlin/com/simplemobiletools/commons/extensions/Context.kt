@@ -31,6 +31,8 @@ import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_TEX
 import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.*
 import java.io.File
+import java.text.SimpleDateFormat
+import java.util.*
 
 fun Context.isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
@@ -311,3 +313,8 @@ fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
 }
 
 fun Context.getDialogTheme() = if (baseConfig.backgroundColor.getContrastColor() == Color.WHITE) R.style.MyDialogTheme_Dark else R.style.MyDialogTheme
+
+fun Context.getCurrentFormattedDateTime(): String {
+    val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd_HH-mm", Locale.getDefault())
+    return simpleDateFormat.format(Date(System.currentTimeMillis()))
+}
