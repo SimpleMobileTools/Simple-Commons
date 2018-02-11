@@ -11,9 +11,9 @@
     <string name="set_as">Установить как…</string>
     <string name="value_copied_to_clipboard">Значение скопировано в буфер обмена</string>
     <string name="unknown">Неизвестно</string>
-    <string name="always">Always</string>
-    <string name="never">Never</string>
-    <string name="details">Details</string>
+    <string name="always">Всегда</string>
+    <string name="never">Никогда</string>
+    <string name="details">Подробности</string>
 
     <!-- Search -->
     <string name="search">Поиск</string>
@@ -87,7 +87,7 @@
     <string name="merge">Merge</string>
     <string name="overwrite">Перезаписать</string>
     <string name="skip">Пропустить</string>
-    <string name="append">Добавить \'_1\' к имени</string>
+    <string name="append">Добавить \"_1\" к имени</string>
     <string name="apply_to_all">Применить ко всем конфликтам</string>
 
     <!-- File picker -->
@@ -141,7 +141,7 @@
     <string name="undo_changes_confirmation">Действительно отменить изменения?</string>
     <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
     <string name="apply_to_all_apps">Применить цвета ко всем приложениям Simple</string>
-    <string name="share_colors_success">Цвета успешно обновлены. Добавлена новая тема с названием \'Общая\', в дальнейшем используйте её для обновления цветов всех приложений.</string>
+    <string name="share_colors_success">Цвета успешно обновлены. Добавлена новая тема с названием \"Общая\", в дальнейшем используйте её для обновления цветов всех приложений.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Пожалуйста, купите <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, чтобы разблокировать эту функцию и поддержать разработку. Спасибо!
@@ -235,7 +235,7 @@
     <string name="settings">Настройки</string>
     <string name="customize_colors">Настроить цвета</string>
     <string name="use_english_language">Use English language</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
+    <string name="avoid_whats_new">Не показывать \"Что нового\" при запуске</string>
     <string name="show_hidden_items">Показывать скрытые папки</string>
     <string name="font_size">Размер шрифта</string>
     <string name="small">Мелкий</string>
@@ -246,7 +246,7 @@
     <string name="password_protect_whole_app">Защита паролем всего приложения</string>
     <string name="keep_last_modified">Сохранять значение даты изменения файла при копировании/перемещении/переименовании</string>
     <string name="show_info_bubble">Показывать информационное окно при прокрутке элементов перетаскиванием полосы прокрутки</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Предотвращать засыпание устройства</string>
 
     <!-- Setting sections -->
     <string name="visibility">Отображение</string>
