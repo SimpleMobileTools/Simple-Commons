@@ -11,6 +11,9 @@
     <string name="set_as">Nastaviť ako</string>
     <string name="value_copied_to_clipboard">Hodnota bola vložená do schránky</string>
     <string name="unknown">Neznámy</string>
+    <string name="always">Vždy</string>
+    <string name="never">Nikdy</string>
+    <string name="details">Detaily</string>
 
     <!-- Search -->
     <string name="search">Hľadať</string>
@@ -233,7 +236,7 @@
     <string name="settings">Nastavenia</string>
     <string name="customize_colors">Upraviť farby</string>
     <string name="use_english_language">Použiť angličtinu</string>
-    <string name="avoid_whats_new">Nikdy nezobrazovať Novinky po aktualizovaní apky</string>
+    <string name="avoid_whats_new">Nikdy nezobrazovať Novinky po spustení</string>
     <string name="show_hidden_items">Zobraziť skryté položky</string>
     <string name="font_size">Veľkosť písma</string>
     <string name="small">Malé</string>
@@ -244,6 +247,7 @@
     <string name="password_protect_whole_app">Uzamknúť heslom celú aplikáciu</string>
     <string name="keep_last_modified">Ponechať starú hodnotu naposledy-upravené pri kopírovaní/presúvaní/premenúvaní súborov</string>
     <string name="show_info_bubble">Zobraziť informačnú bublinu pri prehliadaní položiek ťahaním posuvníka</string>
+    <string name="prevent_phone_from_sleeping">Zabrániť uspaniu zariadenia</string>
 
     <!-- Setting sections -->
     <string name="visibility">Viditeľnosť</string>

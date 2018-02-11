@@ -11,10 +11,13 @@
     <string name="set_as">Imposta come</string>
     <string name="value_copied_to_clipboard">Valore copiato negli appunti</string>
     <string name="unknown">Sconosciuto</string>
+    <string name="always">Sempre</string>
+    <string name="never">Mai</string>
+    <string name="details">Details</string>
 
     <!-- Search -->
     <string name="search">Cerca</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
+    <string name="type_2_characters">Digita almeno 2 caratteri per iniziare la ricerca.</string>
 
     <!-- Filters -->
     <string name="filter">Filtro</string>
@@ -80,8 +83,8 @@
     <!-- File operation conflicts -->
     <string name="file_already_exists">Il file \"%1$s\" esiste già</string>
     <string name="file_already_exists_overwrite">Il file \"%1$s\" esiste già. Sovrascrivi?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
-    <string name="merge">Merge</string>
+    <string name="folder_already_exists">La cartella \"%1$s\" esiste già</string>
+    <string name="merge">Unisci</string>
     <string name="overwrite">Sovrascrivi</string>
     <string name="skip">Salta</string>
     <string name="append">Aggiungi \'_1\' alla fine</string>
@@ -123,7 +126,7 @@
     <string name="f_number">Rapporto focale</string>
     <string name="camera">Camera</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Titolo canzone</string>
 
     <!-- Color customization -->
     <string name="background_color">Colore di sfondo</string>
@@ -160,7 +163,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">Elimina</string>
-    <string name="remove">Remove</string>
+    <string name="remove">Rimuovi</string>
     <string name="rename">Rinomina</string>
     <string name="share">Condividi</string>
     <string name="share_via">Condividi via</string>
@@ -229,7 +232,7 @@
     <string name="settings">Impostazioni</string>
     <string name="customize_colors">Personalizza i colori</string>
     <string name="use_english_language">Forza la lingua inglese</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup after app upgrade</string>
+    <string name="avoid_whats_new">Non mostrare le novità all\'avvio</string>
     <string name="show_hidden_items">Mostra gli elementi nascosti</string>
     <string name="font_size">Dimensione carattere</string>
     <string name="small">Piccolo</string>
@@ -240,23 +243,24 @@
     <string name="password_protect_whole_app">Proteggi con password tutta l\'applicazione</string>
     <string name="keep_last_modified">Mantieni data/ora ultima modifica in copia/sposta/rinomina</string>
     <string name="show_info_bubble">Mostra un fumetto informativo durante il trascinamento della barra di scorrimento</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
+    <string name="visibility">Visibilità</string>
+    <string name="security">Sicurezza</string>
+    <string name="scrolling">Scorrimento</string>
+    <string name="file_operations">Operazioni sui file</string>
 
     <!-- Import / Export -->
-    <string name="importing">Importing…</string>
-    <string name="exporting">Exporting…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing">Importazione…</string>
+    <string name="exporting">Esportazione…</string>
+    <string name="importing_successful">Importazione riuscita</string>
+    <string name="exporting_successful">Esportazione riuscita</string>
+    <string name="importing_failed">Importazione fallita</string>
+    <string name="exporting_failed">Esportazione fallita</string>
+    <string name="importing_some_entries_failed">Importazione di alcuni elementi fallita</string>
+    <string name="exporting_some_entries_failed">Esportazione di alcuni elementi fallita</string>
+    <string name="no_entries_for_exporting">Nessun elemento trovato da esportare</string>
 
     <!-- About -->
     <string name="about">Informazioni</string>

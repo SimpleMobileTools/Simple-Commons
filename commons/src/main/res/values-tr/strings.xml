@@ -11,6 +11,9 @@
     <string name="set_as">Ayarla</string>
     <string name="value_copied_to_clipboard">Değer panoya kopyalandı</string>
     <string name="unknown">Bilinmeyen</string>
+    <string name="always">Always</string>
+    <string name="never">Never</string>
+    <string name="details">Details</string>
 
     <!-- Search -->
     <string name="search">Ara</string>
@@ -229,7 +232,7 @@
     <string name="settings">Ayarlar</string>
     <string name="customize_colors">Renkleri özelleştir</string>
     <string name="use_english_language">İngilizce dilini kullan</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup after app upgrade</string>
+    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
     <string name="show_hidden_items">Gizli öğeleri göster</string>
     <string name="font_size">Yazı tipi boyutu</string>
     <string name="small">Küçük</string>
@@ -240,6 +243,7 @@
     <string name="password_protect_whole_app">Parola tüm uygulamayı korur</string>
     <string name="keep_last_modified">Dosya kopyalama/taşıma/yeniden adlandırmada eski son değiştirilme değerini koru</string>
     <string name="show_info_bubble">Kaydırma çubuğunu sürükleyerek öğeleri kaydırmada bilgi balonunu göster</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
 
     <!-- Setting sections -->
     <string name="visibility">Görünürlük</string>

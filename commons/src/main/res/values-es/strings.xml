@@ -11,6 +11,9 @@
     <string name="set_as">Establecer como</string>
     <string name="value_copied_to_clipboard">Valor copiado en el portapapeles</string>
     <string name="unknown">Desconocido</string>
+    <string name="always">Siempre</string>
+    <string name="never">Nunca</string>
+    <string name="details">Details</string>
 
     <!-- Search -->
     <string name="search">Buscar</string>
@@ -228,7 +231,7 @@
     <string name="settings">Ajustes</string>
     <string name="customize_colors">Cambiar colores</string>
     <string name="use_english_language">Usar el idioma Inglés</string>
-    <string name="avoid_whats_new">No mostrar novedades en el inicio después de la actualización de la aplicación</string>
+    <string name="avoid_whats_new">Permitir mostrar novedades al iniciar</string>
     <string name="show_hidden_items">Mostrar elementos ocultos</string>
     <string name="font_size">Tamaño de fuente</string>
     <string name="small">Pequeña</string>
@@ -239,6 +242,7 @@
     <string name="password_protect_whole_app">Contraseña para proteger toda la aplicación</string>
     <string name="keep_last_modified">Mantener el valor de ultima modificación al copiar/mover/renombrar los archivos</string>
     <string name="show_info_bubble">Mostrar una burbuja de información al desplazar elementos arrastrando la barra de desplazamiento</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilidad</string>

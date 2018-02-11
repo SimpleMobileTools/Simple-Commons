@@ -11,6 +11,9 @@
     <string name="set_as">Ange som</string>
     <string name="value_copied_to_clipboard">Värdet har kopierats till urklipp</string>
     <string name="unknown">Okänd</string>
+    <string name="always">Always</string>
+    <string name="never">Never</string>
+    <string name="details">Details</string>
 
     <!-- Search -->
     <string name="search">Sök</string>
@@ -229,7 +232,7 @@
     <string name="settings">Inställningar</string>
     <string name="customize_colors">Anpassa färger</string>
     <string name="use_english_language">Använd engelska</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup after app upgrade</string>
+    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
     <string name="show_hidden_items">Visa dolda objekt</string>
     <string name="font_size">Teckenstorlek</string>
     <string name="small">Liten</string>
@@ -240,6 +243,7 @@
     <string name="password_protect_whole_app">Lösenordsskydda hela appen</string>
     <string name="keep_last_modified">Behåll senast ändrad-tider när filer kopieras, flyttas eller får nya namn</string>
     <string name="show_info_bubble">Visa en informationsbubbla när jag rullar genom objekt genom att dra rullningslisten</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighet</string>

@@ -11,6 +11,9 @@
     <string name="set_as">Sett som</string>
     <string name="value_copied_to_clipboard">Verdi kopiert til utklippstavle</string>
     <string name="unknown">Ukjent</string>
+    <string name="always">Alltid</string>
+    <string name="never">Aldri</string>
+    <string name="details">Details</string>
 
     <!-- Search -->
     <string name="search">Søk</string>
@@ -80,8 +83,8 @@
     <!-- File operation conflicts -->
     <string name="file_already_exists">Filen \"%1$s\" finnes allerede</string>
     <string name="file_already_exists_overwrite">Filen \"%1$s\" finnes allerede. Overskrive?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
-    <string name="merge">Merge</string>
+    <string name="folder_already_exists">Mappen \"%1$s\" finnes allerede</string>
+    <string name="merge">Sammenslå</string>
     <string name="overwrite">Overskriv</string>
     <string name="skip">Hopp over</string>
     <string name="append">Tilføy \'_1\'</string>
@@ -229,7 +232,7 @@
     <string name="settings">Innstillinger</string>
     <string name="customize_colors">Tilpass farger</string>
     <string name="use_english_language">Bruk engelsk språk</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup after app upgrade</string>
+    <string name="avoid_whats_new">Ikke vis \'Hva er nytt\' ved oppstart</string>
     <string name="show_hidden_items">Vis skjulte elementer</string>
     <string name="font_size">Skriftstørrelse</string>
     <string name="small">Liten</string>
@@ -240,6 +243,7 @@
     <string name="password_protect_whole_app">Passordbeskytt hele appen</string>
     <string name="keep_last_modified">Behold gammel Sist endret-verdi ved kopier/flytt/endre navn for filer</string>
     <string name="show_info_bubble">Vis en info-boble ved å dra i rullefeltet</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighet</string>

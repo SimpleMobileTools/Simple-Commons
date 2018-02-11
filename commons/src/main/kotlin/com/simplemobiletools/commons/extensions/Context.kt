@@ -31,6 +31,8 @@ import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_TEX
 import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.*
 import java.io.File
+import java.text.SimpleDateFormat
+import java.util.*
 
 fun Context.isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
@@ -114,13 +116,13 @@ fun Context.isThankYouInstalled(): Boolean {
 fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHardwarePresent()
 
 fun Context.getLatestMediaId(uri: Uri = MediaStore.Files.getContentUri("external")): Long {
-    val projection = arrayOf(BaseColumns._ID)
-    val sortOrder = "${MediaStore.Images.ImageColumns.DATE_TAKEN} DESC"
+    val MAX_VALUE = "max_value"
+    val projection = arrayOf("MAX(${BaseColumns._ID}) AS $MAX_VALUE")
     var cursor: Cursor? = null
     try {
-        cursor = contentResolver.query(uri, projection, null, null, sortOrder)
+        cursor = contentResolver.query(uri, projection, null, null, null)
         if (cursor?.moveToFirst() == true) {
-            return cursor.getLongValue(BaseColumns._ID)
+            return cursor.getLongValue(MAX_VALUE)
         }
     } finally {
         cursor?.close()
@@ -311,3 +313,8 @@ fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
 }
 
 fun Context.getDialogTheme() = if (baseConfig.backgroundColor.getContrastColor() == Color.WHITE) R.style.MyDialogTheme_Dark else R.style.MyDialogTheme
+
+fun Context.getCurrentFormattedDateTime(): String {
+    val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd_HH-mm", Locale.getDefault())
+    return simpleDateFormat.format(Date(System.currentTimeMillis()))
+}

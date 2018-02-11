@@ -11,6 +11,9 @@
     <string name="set_as">设置为</string>
     <string name="value_copied_to_clipboard">颜色值已复制到剪贴板</string>
     <string name="unknown">未知</string>
+    <string name="always">总是</string>
+    <string name="never">从不</string>
+    <string name="details">Details</string>
 
     <!-- Search -->
     <string name="search">搜索</string>
@@ -229,7 +232,7 @@
     <string name="settings">设置</string>
     <string name="customize_colors">自定义颜色</string>
     <string name="use_english_language">强制使用英语语言</string>
-    <string name="avoid_whats_new">升级后不再显示新功能</string>
+    <string name="avoid_whats_new">启动时不再显示更新内容</string>
     <string name="show_hidden_items">显示隐藏的项目</string>
     <string name="font_size">字体大小</string>
     <string name="small">小</string>
@@ -240,6 +243,7 @@
     <string name="password_protect_whole_app">使用密码保护本应用</string>
     <string name="keep_last_modified">在复制/移动/重命名文件时保留旧的修改日期</string>
     <string name="show_info_bubble">拖动滚动条时在滚动项目旁显示一个信息气泡</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
 
     <!-- Setting sections -->
     <string name="visibility">可见度</string>

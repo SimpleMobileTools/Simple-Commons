@@ -11,6 +11,9 @@
     <string name="set_as">Establir com</string>
     <string name="value_copied_to_clipboard">Valor copiat al portaretalls</string>
     <string name="unknown">Desconegut</string>
+    <string name="always">Sempre</string>
+    <string name="never">Mai</string>
+    <string name="details">Details</string>
 
     <!-- Search -->
     <string name="search">Buscar</string>
@@ -228,7 +231,7 @@
     <string name="settings">Ajustaments</string>
     <string name="customize_colors">Canviar colors</string>
     <string name="use_english_language">Usar l’idioma Anglès</string>
-    <string name="avoid_whats_new">No mostrar les novetats a l\'inici després de l\'actualització de l\'aplicació</string>
+    <string name="avoid_whats_new">Permetre mostrar novetats a l\'inici</string>
     <string name="show_hidden_items">Mostra elements ocults</string>
     <string name="font_size">Mida de la font</string>
     <string name="small">Petita</string>
@@ -239,6 +242,7 @@
     <string name="password_protect_whole_app">Contrasenya per protegir tota l’aplicació</string>
     <string name="keep_last_modified">Mantenir el valor de la darrera modificació al copiar/moure/canviar el nom dels arxius</string>
     <string name="show_info_bubble">Mostra una bombolla d\'informació en elements de desplaçament mitjançant arrossegament de la barra de desplaçament</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilitat</string>

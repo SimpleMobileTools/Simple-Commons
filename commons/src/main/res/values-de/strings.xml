@@ -11,6 +11,9 @@
     <string name="set_as">Festlegen als</string>
     <string name="value_copied_to_clipboard">Wert in Zwischenablage kopiert</string>
     <string name="unknown">Unbekannt</string>
+    <string name="always">Immer</string>
+    <string name="never">Nie</string>
+    <string name="details">Details</string>
 
     <!-- Search -->
     <string name="search">Suchen</string>
@@ -229,7 +232,7 @@
     <string name="settings">Einstellungen</string>
     <string name="customize_colors">Farben anpassen</string>
     <string name="use_english_language">App in Englisch verwenden</string>
-    <string name="avoid_whats_new">Beim Start nach einem Update \"Neue Funktionen\" nicht anzeigen</string>
+    <string name="avoid_whats_new">Beim Start \"Neue Funktionen\" nicht anzeigen</string>
     <string name="show_hidden_items">Versteckte Elemente anzeigen</string>
     <string name="font_size">Schriftgröße</string>
     <string name="small">Klein</string>
@@ -240,6 +243,7 @@
     <string name="password_protect_whole_app">Gesamte App mit Passwort schützen</string>
     <string name="keep_last_modified">Beim Modifizieren von Dateien die alte Änderungszeit beibehalten</string>
     <string name="show_info_bubble">Beim Scrollen mit dem Scrollbalken Infofenster anzeigen</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
 
     <!-- Setting sections -->
     <string name="visibility">Sichtbarkeit</string>

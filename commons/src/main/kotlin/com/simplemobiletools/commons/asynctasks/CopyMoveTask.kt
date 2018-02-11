@@ -134,6 +134,8 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                     activity.scanFile(destination) {}
                 }
             }
+        } catch (e: Exception) {
+            activity.showErrorToast(e)
         } finally {
             inputStream?.close()
             out?.close()

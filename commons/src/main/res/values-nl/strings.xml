@@ -11,6 +11,9 @@
     <string name="set_as">Instellen als</string>
     <string name="value_copied_to_clipboard">Gekopieerd naar klembord</string>
     <string name="unknown">Onbekend</string>
+    <string name="always">Altijd</string>
+    <string name="never">Nooit</string>
+    <string name="details">Details</string>
 
     <!-- Search -->
     <string name="search">Zoeken</string>
@@ -240,6 +243,7 @@
     <string name="password_protect_whole_app">Hele app met wachtwoord beveiligen</string>
     <string name="keep_last_modified">Datum laatst gewijzigd behouden bij bestandsoperaties</string>
     <string name="show_info_bubble">Bij slepen van schuifbalk extra informatie tonen</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
 
     <!-- Setting sections -->
     <string name="visibility">Opmaak</string>

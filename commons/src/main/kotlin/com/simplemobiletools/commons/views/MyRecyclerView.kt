@@ -7,9 +7,10 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.ScaleGestureDetector
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.interfaces.RecyclerScrollCallback
 
 // drag selection is based on https://github.com/afollestad/drag-select-recyclerview
-class MyRecyclerView : RecyclerView {
+open class MyRecyclerView : RecyclerView {
     private val AUTO_SCROLL_DELAY = 25L
     private var isZoomEnabled = false
     private var isDragSelectionEnabled = false
@@ -40,6 +41,14 @@ class MyRecyclerView : RecyclerView {
 
     private var currScaleFactor = 1.0f
     private var lastUp = 0L    // allow only pinch zoom, not double tap
+
+    // things related to parallax scrolling (for now only in the music player)
+    // cut from https://github.com/ksoichiro/Android-ObservableScrollView
+    var recyclerScrollCallback: RecyclerScrollCallback? = null
+    private var mPrevFirstVisiblePosition = 0
+    private var mPrevScrolledChildrenHeight = 0
+    private var mPrevFirstVisibleChildHeight = -1
+    private var mScrollY = 0
 
     constructor(context: Context) : super(context)
 
@@ -206,6 +215,35 @@ class MyRecyclerView : RecyclerView {
 
         val holder = v.tag as RecyclerView.ViewHolder
         return holder.adapterPosition
+    }
+
+    override fun onScrollChanged(l: Int, t: Int, oldl: Int, oldt: Int) {
+        super.onScrollChanged(l, t, oldl, oldt)
+        if (recyclerScrollCallback == null) {
+            return
+        }
+
+        if (childCount > 0) {
+            val firstVisiblePosition = getChildAdapterPosition(getChildAt(0))
+            val firstVisibleChild = getChildAt(0)
+            if (firstVisibleChild != null) {
+                if (mPrevFirstVisiblePosition < firstVisiblePosition) {
+                    mPrevScrolledChildrenHeight += mPrevFirstVisibleChildHeight
+                }
+
+                if (firstVisiblePosition == 0) {
+                    mPrevFirstVisibleChildHeight = firstVisibleChild.height
+                    mPrevScrolledChildrenHeight = 0
+                }
+
+                if (mPrevFirstVisibleChildHeight < 0) {
+                    mPrevFirstVisibleChildHeight = 0
+                }
+
+                mScrollY = mPrevScrolledChildrenHeight - firstVisibleChild.top
+                recyclerScrollCallback?.onScrolled(mScrollY)
+            }
+        }
     }
 
     class GestureListener(val gestureListener: MyGestureListener) : ScaleGestureDetector.SimpleOnScaleGestureListener() {

@@ -11,6 +11,9 @@
     <string name="set_as">Установить как…</string>
     <string name="value_copied_to_clipboard">Значение скопировано в буфер обмена</string>
     <string name="unknown">Неизвестно</string>
+    <string name="always">Always</string>
+    <string name="never">Never</string>
+    <string name="details">Details</string>
 
     <!-- Search -->
     <string name="search">Поиск</string>
@@ -232,7 +235,7 @@
     <string name="settings">Настройки</string>
     <string name="customize_colors">Настроить цвета</string>
     <string name="use_english_language">Use English language</string>
-    <string name="avoid_whats_new">Не показывать \"Что нового\" при запуске после обновления приложения</string>
+    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
     <string name="show_hidden_items">Показывать скрытые папки</string>
     <string name="font_size">Размер шрифта</string>
     <string name="small">Мелкий</string>
@@ -243,6 +246,7 @@
     <string name="password_protect_whole_app">Защита паролем всего приложения</string>
     <string name="keep_last_modified">Сохранять значение даты изменения файла при копировании/перемещении/переименовании</string>
     <string name="show_info_bubble">Показывать информационное окно при прокрутке элементов перетаскиванием полосы прокрутки</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
 
     <!-- Setting sections -->
     <string name="visibility">Отображение</string>

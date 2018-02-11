@@ -21,6 +21,7 @@ import com.simplemobiletools.commons.extensions.onGlobalLayout
 class FastScroller : FrameLayout {
     var isHorizontal = false
     var allowBubbleDisplay = false
+    var measureItemIndex = 0
 
     private var handle: View? = null
     private var bubble: TextView? = null
@@ -104,7 +105,7 @@ class FastScroller : FrameLayout {
         val adapter = recyclerView!!.adapter
         val spanCount = ((recyclerView!!.layoutManager as? GridLayoutManager)?.spanCount ?: 1)
         val otherDimension = Math.floor((adapter.itemCount - 1) / spanCount.toDouble()) + 1
-        val size = recyclerView!!.getChildAt(0)?.height ?: 0
+        val size = recyclerView!!.getChildAt(measureItemIndex)?.height ?: 0
         if (isHorizontal) {
             recyclerViewContentWidth = (otherDimension * size).toInt()
         } else {

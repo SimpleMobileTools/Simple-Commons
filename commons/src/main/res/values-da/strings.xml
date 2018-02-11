@@ -11,6 +11,9 @@
     <string name="set_as">Sæt som</string>
     <string name="value_copied_to_clipboard">Værdi kopieret til udklipsholder</string>
     <string name="unknown">Ukendt</string>
+    <string name="always">Altid</string>
+    <string name="never">Aldrig</string>
+    <string name="details">Detaljer</string>
 
     <!-- Search -->
     <string name="search">Søg</string>
@@ -229,7 +232,7 @@
     <string name="settings">Indstillinger</string>
     <string name="customize_colors">Rediger farver</string>
     <string name="use_english_language">Use English language</string>
-    <string name="avoid_whats_new">Undgå at få vist info om hvad der er nyt efter opgradering af appen</string>
+    <string name="avoid_whats_new">Vis ikke seneste ændringer ved opstart</string>
     <string name="show_hidden_items">Vis skjulte elementer</string>
     <string name="font_size">Skriftstørrelse</string>
     <string name="small">Lille</string>
@@ -240,6 +243,7 @@
     <string name="password_protect_whole_app">Beskyt hele appen med en adgangskode</string>
     <string name="keep_last_modified">Kopi/flyt/omdøb skal ikke påvirke ændringstidspunktet</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+    <string name="prevent_phone_from_sleeping">Hold telefonen \'vågen\'</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighed</string>

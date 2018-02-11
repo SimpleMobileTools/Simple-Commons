@@ -11,6 +11,9 @@
     <string name="set_as">Aseta</string>
     <string name="value_copied_to_clipboard">Valeur copiée dans le presse-papier</string>
     <string name="unknown">Unknown</string>
+    <string name="always">Always</string>
+    <string name="never">Never</string>
+    <string name="details">Details</string>
 
     <!-- Search -->
     <string name="search">Search</string>
@@ -229,7 +232,7 @@
     <string name="settings">Settings</string>
     <string name="customize_colors">Customize colors</string>
     <string name="use_english_language">Use English language</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup after app upgrade</string>
+    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
     <string name="show_hidden_items">Show hidden items</string>
     <string name="font_size">Font size</string>
     <string name="small">Small</string>
@@ -240,6 +243,7 @@
     <string name="password_protect_whole_app">Password protect the whole application</string>
     <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>

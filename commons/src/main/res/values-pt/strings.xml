@@ -11,10 +11,13 @@
     <string name="set_as">Definir como</string>
     <string name="value_copied_to_clipboard">Valor copiado para a área de transferência</string>
     <string name="unknown">Desconhecido</string>
+    <string name="always">Sempre</string>
+    <string name="never">Nunca</string>
+    <string name="details">Details</string>
 
     <!-- Search -->
     <string name="search">Pesquisar</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
+    <string name="type_2_characters">Digite, pele menos, 2 caracteres para iniciar a pesquisa.</string>
 
     <!-- Filters -->
     <string name="filter">Filtrar</string>
@@ -123,7 +126,7 @@
     <string name="f_number">Número F</string>
     <string name="camera">Câmara</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Título da faixa</string>
 
     <!-- Color customization -->
     <string name="background_color">Cor de fundo</string>
@@ -160,7 +163,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">Apagar</string>
-    <string name="remove">Remove</string>
+    <string name="remove">Remover</string>
     <string name="rename">Renomear</string>
     <string name="share">Partilhar</string>
     <string name="share_via">Partilhar via</string>
@@ -229,7 +232,7 @@
     <string name="settings">Definições</string>
     <string name="customize_colors">Personalizar cores</string>
     <string name="use_english_language">Utilizar aplicação em inglês</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup after app upgrade</string>
+    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
     <string name="show_hidden_items">Mostrar itens ocultos</string>
     <string name="font_size">Tamanho do texto</string>
     <string name="small">Pequeno</string>
@@ -240,23 +243,24 @@
     <string name="password_protect_whole_app">Proteger aplicação com palavra-passe</string>
     <string name="keep_last_modified">Manter dados da última modificação ao copiar/mover/renomear</string>
     <string name="show_info_bubble">Mostrar informação ao arrastar a barra de deslocamento</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
+    <string name="visibility">Visibilidade</string>
+    <string name="security">Segurança</string>
+    <string name="scrolling">Deslocação</string>
+    <string name="file_operations">Operações de ficheiros</string>
 
     <!-- Import / Export -->
     <string name="importing">A importar…</string>
     <string name="exporting">A exportar…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing_successful">Importação efetuada</string>
+    <string name="exporting_successful">Exportação efetuada</string>
+    <string name="importing_failed">Falha ao importar</string>
+    <string name="exporting_failed">Falha ao exportar</string>
+    <string name="importing_some_entries_failed">Falha ao importar alguns itens</string>
+    <string name="exporting_some_entries_failed">Falha ao exportar alguns itens</string>
+    <string name="no_entries_for_exporting">Não existem itens para exportação</string>
 
     <!-- About -->
     <string name="about">Acerca</string>
