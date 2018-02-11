@@ -1,7 +1,7 @@
 <resources>
     <string name="ok">Ok</string>
     <string name="cancel">Annuler</string>
-    <string name="save_as">Sauvegarder sous</string>
+    <string name="save_as">Enregistrer sous</string>
     <string name="file_saved">Fichier sauvegardé avec succès</string>
     <string name="invalid_file_format">Format de fichier invalide</string>
     <string name="out_of_memory_error">Erreur excès de mémoire</string>
@@ -9,15 +9,15 @@
     <string name="open_with">Ouvrir avec</string>
     <string name="no_app_found">Aucune application valide trouvée</string>
     <string name="set_as">Définir comme</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
+    <string name="value_copied_to_clipboard">Valeur copiée dans le presse-papier</string>
     <string name="unknown">Inconnu</string>
-    <string name="always">Always</string>
-    <string name="never">Never</string>
-    <string name="details">Details</string>
+    <string name="always">Toujours</string>
+    <string name="never">Jamais</string>
+    <string name="details">Détails</string>
 
     <!-- Search -->
     <string name="search">Recherche</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
+    <string name="type_2_characters">Tapez au moins 2 caractères pour lancer la recherche.</string>
 
     <!-- Filters -->
     <string name="filter">Filtrer</string>
@@ -25,10 +25,10 @@
     <string name="change_filter">Changer le filtre</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">L\'authorisation d\'accès au stockage est requise</string>
-    <string name="no_contacts_permission">L\'authorisation d\'accès aux contacts est requise</string>
-    <string name="no_camera_permissions">L\'authorisation d\'accès à l\'appareil photo est requise</string>
-    <string name="no_audio_permissions">L\'authorisation d\'accès aux paramètres audios est requise</string>
+    <string name="no_storage_permissions">L\'autorisation d\'accès au stockage est requise</string>
+    <string name="no_contacts_permission">L\'autorisation d\'accès aux contacts est requise</string>
+    <string name="no_camera_permissions">L\'autorisation d\'accès à l\'appareil photo est requise</string>
+    <string name="no_audio_permissions">L\'autorisation d\'accès aux paramètres audios est requise</string>
 
     <!-- Renaming -->
     <string name="rename_file">Renommer le fichier</string>
@@ -126,7 +126,7 @@
     <string name="f_number">Ouverture</string>
     <string name="camera">Caméra</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Titre de la chanson</string>
 
     <!-- Color customization -->
     <string name="background_color">Couleur d\'arrière-plan</string>
@@ -243,24 +243,24 @@
     <string name="password_protect_whole_app">Le mot de passe protège l\'ensemble de l\'application</string>
     <string name="keep_last_modified">Garder la valeur de l\'ancienne modification lors de renommage/déplacement/copie de fichier</string>
     <string name="show_info_bubble">Afficher une bulle d\'information des éléments qui s\'affichent lorsque vous faites glisser la barre de défilement</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Empêcher le téléphone de passer en mode veille</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
+    <string name="visibility">Visibilité</string>
+    <string name="security">Sécurité</string>
+    <string name="scrolling">Défilement</string>
+    <string name="file_operations">Opérations sur les fichiers</string>
 
     <!-- Import / Export -->
     <string name="importing">Importer…</string>
     <string name="exporting">Exporter…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing_successful">Importation réussie</string>
+    <string name="exporting_successful">Exportation réussie</string>
+    <string name="importing_failed">L\'importation a échoué</string>
+    <string name="exporting_failed">L\'exportation a échoué</string>
+    <string name="importing_some_entries_failed">L\'importation de certains items a échoué</string>
+    <string name="exporting_some_entries_failed">L\'exportation de certains items a échoué</string>
+    <string name="no_entries_for_exporting">Aucun item pouvant être exporté n\'a été trouvé</string>
 
     <!-- About -->
     <string name="about">À propos</string>
