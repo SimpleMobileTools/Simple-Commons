@@ -1,8 +1,12 @@
 package com.simplemobiletools.commons.asynctasks
 
+import android.app.NotificationManager
 import android.content.ContentValues
+import android.content.Context
 import android.os.AsyncTask
+import android.os.Handler
 import android.provider.MediaStore
+import android.support.v4.app.NotificationCompat
 import android.support.v4.provider.DocumentFile
 import android.support.v4.util.Pair
 import com.simplemobiletools.commons.R
@@ -20,13 +24,27 @@ import java.util.*
 
 class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = false, val copyMediaOnly: Boolean, val conflictResolutions: LinkedHashMap<String, Int>,
                    listener: CopyMoveListener, val copyHidden: Boolean) : AsyncTask<Pair<ArrayList<File>, File>, Void, Boolean>() {
+    private val INITIAL_PROGRESS_DELAY = 3000L
+    private val PROGRESS_RECHECK_INTERVAL = 500L
+
     private var mListener: WeakReference<CopyMoveListener>? = null
     private var mMovedFiles: ArrayList<File> = ArrayList()
     private var mDocuments = LinkedHashMap<String, DocumentFile?>()
     lateinit var mFiles: ArrayList<File>
 
+    // progress indication
+    private var mNotificationManager: NotificationManager
+    private var mNotificationBuilder: NotificationCompat.Builder
+    private var mCurrFilename = ""
+    private var mCurrentProgress = 0L
+    private var mMaxSize = 0
+    private var mNotifId = 0
+    private var mProgressHandler = Handler()
+
     init {
         mListener = WeakReference(listener)
+        mNotificationManager = activity.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        mNotificationBuilder = NotificationCompat.Builder(activity)
     }
 
     override fun doInBackground(vararg params: Pair<ArrayList<File>, File>): Boolean? {
@@ -36,6 +54,19 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
         val pair = params[0]
         mFiles = pair.first!!
+        mNotifId = mFiles.hashCode()
+        mMaxSize = 0
+        for (file in mFiles) {
+            val newFile = File(pair.second, file.name)
+            if (!newFile.exists() || getConflictResolution(newFile) != CONFLICT_SKIP) {
+                mMaxSize += (file.getProperSize(copyHidden) / 1000).toInt()
+            }
+        }
+
+        mProgressHandler.postDelayed({
+            initProgressNotification()
+            updateProgress()
+        }, INITIAL_PROGRESS_DELAY)
 
         for (file in mFiles) {
             try {
@@ -65,6 +96,8 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     }
 
     override fun onPostExecute(success: Boolean) {
+        mProgressHandler.removeCallbacksAndMessages(null)
+        mNotificationManager.cancel(mNotifId)
         val listener = mListener?.get() ?: return
 
         if (success) {
@@ -72,6 +105,24 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         } else {
             listener.copyFailed()
         }
+    }
+
+    private fun initProgressNotification() {
+        mNotificationBuilder.setContentTitle(activity.getString(if (copyOnly) R.string.copying else R.string.moving))
+                .setSmallIcon(R.drawable.ic_copy)
+    }
+
+    private fun updateProgress() {
+        mNotificationBuilder.apply {
+            setContentText(mCurrFilename)
+            setProgress(mMaxSize, (mCurrentProgress / 1000).toInt(), false)
+            mNotificationManager.notify(mNotifId, build())
+        }
+
+        mProgressHandler.removeCallbacksAndMessages(null)
+        mProgressHandler.postDelayed({
+            updateProgress()
+        }, PROGRESS_RECHECK_INTERVAL)
     }
 
     private fun getConflictResolution(file: File): Int {
@@ -124,6 +175,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             return
         }
 
+        mCurrFilename = source.name
         var inputStream: InputStream? = null
         var out: OutputStream? = null
         try {
@@ -134,7 +186,14 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             out = activity.getFileOutputStreamSync(destination.absolutePath, source.getMimeType(), mDocuments[destination.parent])
 
             inputStream = FileInputStream(source)
-            inputStream.copyTo(out!!)
+
+            val buffer = ByteArray(DEFAULT_BUFFER_SIZE)
+            var bytes = inputStream.read(buffer)
+            while (bytes >= 0) {
+                out!!.write(buffer, 0, bytes)
+                mCurrentProgress += bytes
+                bytes = inputStream.read(buffer)
+            }
 
             if (source.length() == destination.length()) {
                 mMovedFiles.add(source)
