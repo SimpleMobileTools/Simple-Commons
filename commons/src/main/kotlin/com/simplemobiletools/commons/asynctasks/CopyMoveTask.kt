@@ -30,7 +30,8 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     private var mListener: WeakReference<CopyMoveListener>? = null
     private var mMovedFiles: ArrayList<File> = ArrayList()
     private var mDocuments = LinkedHashMap<String, DocumentFile?>()
-    lateinit var mFiles: ArrayList<File>
+    private lateinit var mFiles: ArrayList<File>
+    private var mFileCountToCopy = 0
 
     // progress indication
     private var mNotificationManager: NotificationManager
@@ -54,6 +55,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
         val pair = params[0]
         mFiles = pair.first!!
+        mFileCountToCopy = mFiles.size
         mNotifId = mFiles.hashCode()
         mMaxSize = 0
         for (file in mFiles) {
@@ -74,6 +76,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 if (newFile.exists()) {
                     val resolution = getConflictResolution(newFile)
                     if (resolution == CONFLICT_SKIP) {
+                        mFileCountToCopy--
                         continue
                     } else if (resolution == CONFLICT_OVERWRITE) {
                         activity.deleteFilesBg(arrayListOf(newFile), true)
@@ -101,7 +104,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         val listener = mListener?.get() ?: return
 
         if (success) {
-            listener.copySucceeded(copyOnly, mMovedFiles.size >= mFiles.size)
+            listener.copySucceeded(copyOnly, mMovedFiles.size >= mFileCountToCopy)
         } else {
             listener.copyFailed()
         }
