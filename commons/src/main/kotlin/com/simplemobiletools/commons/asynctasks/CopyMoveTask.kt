@@ -19,7 +19,7 @@ import java.lang.ref.WeakReference
 import java.util.*
 
 class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = false, val copyMediaOnly: Boolean, val conflictResolutions: LinkedHashMap<String, Int>,
-                   listener: CopyMoveListener) : AsyncTask<Pair<ArrayList<File>, File>, Void, Boolean>() {
+                   listener: CopyMoveListener, val copyHidden: Boolean) : AsyncTask<Pair<ArrayList<File>, File>, Void, Boolean>() {
     private var mListener: WeakReference<CopyMoveListener>? = null
     private var mMovedFiles: ArrayList<File> = ArrayList()
     private var mDocuments = LinkedHashMap<String, DocumentFile?>()

@@ -163,7 +163,8 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun copyMoveFilesTo(files: ArrayList<File>, source: String, destination: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean, callback: () -> Unit) {
+    fun copyMoveFilesTo(files: ArrayList<File>, source: String, destination: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean,
+                        copyHidden: Boolean, callback: () -> Unit) {
         if (source == destination) {
             toast(R.string.source_and_destination_same)
             return
@@ -178,11 +179,11 @@ open class BaseSimpleActivity : AppCompatActivity() {
         handleSAFDialog(destinationFolder) {
             copyMoveCallback = callback
             if (isCopyOperation) {
-                startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly)
+                startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly, copyHidden)
             } else {
                 if (isPathOnSD(source) || isPathOnSD(destination) || files.first().isDirectory || isNougatPlus()) {
                     handleSAFDialog(File(source)) {
-                        startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly)
+                        startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly, copyHidden)
                     }
                 } else {
                     toast(R.string.moving)
@@ -213,11 +214,11 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    private fun startCopyMove(files: ArrayList<File>, destinationFolder: File, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean) {
+    private fun startCopyMove(files: ArrayList<File>, destinationFolder: File, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean, copyHidden: Boolean) {
         checkConflict(files, destinationFolder, 0, LinkedHashMap()) {
             toast(if (isCopyOperation) R.string.copying else R.string.moving)
             val pair = Pair(files, destinationFolder)
-            CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener).execute(pair)
+            CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
         }
     }
 
