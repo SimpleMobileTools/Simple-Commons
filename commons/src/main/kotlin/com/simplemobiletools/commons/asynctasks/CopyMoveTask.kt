@@ -64,6 +64,16 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         return true
     }
 
+    override fun onPostExecute(success: Boolean) {
+        val listener = mListener?.get() ?: return
+
+        if (success) {
+            listener.copySucceeded(copyOnly, mMovedFiles.size >= mFiles.size)
+        } else {
+            listener.copyFailed()
+        }
+    }
+
     private fun getConflictResolution(file: File): Int {
         return if (conflictResolutions.size == 1 && conflictResolutions.containsKey("")) {
             conflictResolutions[""]!!
@@ -139,16 +149,6 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         } finally {
             inputStream?.close()
             out?.close()
-        }
-    }
-
-    override fun onPostExecute(success: Boolean) {
-        val listener = mListener?.get() ?: return
-
-        if (success) {
-            listener.copySucceeded(copyOnly, mMovedFiles.size >= mFiles.size)
-        } else {
-            listener.copyFailed()
         }
     }
 
