@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.sumByInt
 import com.simplemobiletools.commons.helpers.sumByLong
 import kotlinx.android.synthetic.main.dialog_properties.view.*
 import kotlinx.android.synthetic.main.property_item.view.*
@@ -22,9 +23,6 @@ class PropertiesDialog() {
     private lateinit var mPropertyView: ViewGroup
     private lateinit var mResources: Resources
 
-    private var mCountHiddenItems = false
-    private var mFilesCnt = 0
-
     /**
      * A File Properties dialog constructor with an optional parameter, usable at 1 file selected
      *
@@ -33,7 +31,6 @@ class PropertiesDialog() {
      * @param countHiddenItems toggle determining if we will count hidden files themselves and their sizes (reasonable only at directory properties)
      */
     constructor(activity: Activity, path: String, countHiddenItems: Boolean = false) : this() {
-        mCountHiddenItems = countHiddenItems
         mInflater = LayoutInflater.from(activity)
         mResources = activity.resources
         val view = mInflater.inflate(R.layout.dialog_properties, null)
@@ -42,15 +39,16 @@ class PropertiesDialog() {
         val file = File(path)
         addProperty(R.string.name, file.name)
         addProperty(R.string.path, file.parent)
-        addProperty(R.string.size, "...", R.id.properties_size)
+        addProperty(R.string.size, "…", R.id.properties_size)
 
         Thread {
-            val size = getItemSize(file).formatSize()
+            val fileCount = file.getFileCount(countHiddenItems)
+            val size = file.getProperSize(countHiddenItems).formatSize()
             activity.runOnUiThread {
                 view.findViewById<TextView>(R.id.properties_size).property_value.text = size
 
                 if (file.isDirectory) {
-                    view.findViewById<TextView>(R.id.properties_file_count).property_value.text = mFilesCnt.toString()
+                    view.findViewById<TextView>(R.id.properties_file_count).property_value.text = fileCount.toString()
                 }
             }
 
@@ -74,7 +72,7 @@ class PropertiesDialog() {
         when {
             file.isDirectory -> {
                 addProperty(R.string.direct_children_count, getDirectChildrenCount(file, countHiddenItems))
-                addProperty(R.string.files_count, "...", R.id.properties_file_count)
+                addProperty(R.string.files_count, "…", R.id.properties_file_count)
             }
             file.isImageSlow() -> addProperty(R.string.resolution, file.getResolution().formatAsResolution())
             file.isAudioSlow() -> {
@@ -94,7 +92,7 @@ class PropertiesDialog() {
         if (file.isDirectory) {
             addProperty(R.string.last_modified, file.lastModified().formatDate())
         } else {
-            addProperty(R.string.last_modified, "...", R.id.properties_last_modified)
+            addProperty(R.string.last_modified, "…", R.id.properties_last_modified)
             try {
                 addExifProperties(path)
             } catch (e: FileNotFoundException) {
@@ -118,7 +116,6 @@ class PropertiesDialog() {
      * @param countHiddenItems toggle determining if we will count hidden files themselves and their sizes
      */
     constructor(activity: Activity, paths: List<String>, countHiddenItems: Boolean = false) : this() {
-        mCountHiddenItems = countHiddenItems
         mInflater = LayoutInflater.from(activity)
         mResources = activity.resources
         val view = mInflater.inflate(R.layout.dialog_properties, null)
@@ -134,14 +131,15 @@ class PropertiesDialog() {
             addProperty(R.string.path, files[0].parent)
         }
 
-        addProperty(R.string.size, "...", R.id.properties_size)
-        addProperty(R.string.files_count, "...", R.id.properties_file_count)
+        addProperty(R.string.size, "…", R.id.properties_size)
+        addProperty(R.string.files_count, "…", R.id.properties_file_count)
 
         Thread {
-            val size = files.sumByLong { getItemSize(it) }.formatSize()
+            val fileCount = files.sumByInt { it.getFileCount(countHiddenItems) }
+            val size = files.sumByLong { it.getProperSize(countHiddenItems) }.formatSize()
             activity.runOnUiThread {
-                view.findViewById<TextView>(R.id.properties_size).property_value.text = size.toString()
-                view.findViewById<TextView>(R.id.properties_file_count).property_value.text = mFilesCnt.toString()
+                view.findViewById<TextView>(R.id.properties_size).property_value.text = size
+                view.findViewById<TextView>(R.id.properties_file_count).property_value.text = fileCount.toString()
             }
         }.start()
 
@@ -204,32 +202,5 @@ class PropertiesDialog() {
                 id = viewId
             }
         }
-    }
-
-    private fun getItemSize(file: File): Long {
-        if (file.isDirectory) {
-            return getDirectorySize(File(file.path))
-        }
-
-        mFilesCnt++
-        return file.length()
-    }
-
-    private fun getDirectorySize(dir: File): Long {
-        var size = 0L
-        if (dir.exists()) {
-            val files = dir.listFiles()
-            if (files != null) {
-                for (i in files.indices) {
-                    if (files[i].isDirectory) {
-                        size += getDirectorySize(files[i])
-                    } else if (!files[i].isHidden && !dir.isHidden || mCountHiddenItems) {
-                        mFilesCnt++
-                        size += files[i].length()
-                    }
-                }
-            }
-        }
-        return size
     }
 }
