@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.asynctasks
 
+import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.ContentValues
 import android.content.Context
@@ -56,7 +57,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         val pair = params[0]
         mFiles = pair.first!!
         mFileCountToCopy = mFiles.size
-        mNotifId = mFiles.hashCode()
+        mNotifId = (System.currentTimeMillis() / 1000).toInt()
         mMaxSize = 0
         for (file in mFiles) {
             val newFile = File(pair.second, file.name)
@@ -111,8 +112,20 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     }
 
     private fun initProgressNotification() {
-        mNotificationBuilder.setContentTitle(activity.getString(if (copyOnly) R.string.copying else R.string.moving))
+        val channelId = "copying_moving_channel"
+        val title = activity.getString(if (copyOnly) R.string.copying else R.string.moving)
+        if (activity.isOreoPlus()) {
+            val importance = NotificationManager.IMPORTANCE_LOW
+            NotificationChannel(channelId, title, importance).apply {
+                enableLights(false)
+                enableVibration(false)
+                mNotificationManager.createNotificationChannel(this)
+            }
+        }
+
+        mNotificationBuilder.setContentTitle(title)
                 .setSmallIcon(R.drawable.ic_copy)
+                .setChannelId(channelId)
     }
 
     private fun updateProgress() {
