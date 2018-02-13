@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.extensions
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
+import android.hardware.usb.UsbManager
 import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Environment
@@ -35,6 +36,8 @@ fun Context.getSDCardPath(): String {
 }
 
 fun Context.hasExternalSDCard() = sdCardPath.isNotEmpty()
+
+fun Context.hasOTGConnected() = (getSystemService(Context.USB_SERVICE) as UsbManager).deviceList.isNotEmpty()
 
 @SuppressLint("NewApi")
 fun Context.getStorageDirectories(): Array<String> {

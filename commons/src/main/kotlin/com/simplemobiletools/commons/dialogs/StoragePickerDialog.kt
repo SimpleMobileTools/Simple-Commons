@@ -47,6 +47,16 @@ class StoragePickerDialog(val activity: Activity, currPath: String, val callback
             radioGroup.addView(sdButton, layoutParams)
         }
 
+        if (activity.hasOTGConnected()) {
+            val otgButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
+            otgButton.apply {
+                text = resources.getString(R.string.otg)
+                isChecked = false
+                setOnClickListener { otgPicked() }
+            }
+            radioGroup.addView(otgButton, layoutParams)
+        }
+
         val rootButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
         rootButton.apply {
             text = resources.getString(R.string.root)
@@ -69,6 +79,10 @@ class StoragePickerDialog(val activity: Activity, currPath: String, val callback
     private fun sdPicked() {
         mDialog.dismiss()
         callback(activity.sdCardPath)
+    }
+
+    private fun otgPicked() {
+        mDialog.dismiss()
     }
 
     private fun rootPicked() {
