@@ -168,6 +168,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
     private fun copyFile(source: File, destination: File) {
         if (copyMediaOnly && !source.absolutePath.isImageVideoGif()) {
+            mCurrentProgress += source.length()
             return
         }
 
@@ -175,6 +176,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         if (!activity.createDirectorySync(directory)) {
             val error = String.format(activity.getString(R.string.could_not_create_folder), directory.absolutePath)
             activity.showErrorToast(error)
+            mCurrentProgress += source.length()
             return
         }
 
