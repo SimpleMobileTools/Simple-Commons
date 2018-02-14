@@ -13,7 +13,7 @@
     <string name="unknown">Desconocido</string>
     <string name="always">Siempre</string>
     <string name="never">Nunca</string>
-    <string name="details">Details</string>
+    <string name="details">Detalles</string>
 
     <!-- Search -->
     <string name="search">Buscar</string>
@@ -242,7 +242,7 @@
     <string name="password_protect_whole_app">Contraseña para proteger toda la aplicación</string>
     <string name="keep_last_modified">Mantener el valor de ultima modificación al copiar/mover/renombrar los archivos</string>
     <string name="show_info_bubble">Mostrar una burbuja de información al desplazar elementos arrastrando la barra de desplazamiento</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Evitar que el teléfono duerma</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilidad</string>
@@ -263,8 +263,8 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="confirm_otg_storage_access_text">Elija la carpeta raíz del dispositivo OTG en la pantalla siguiente, para otorgar acceso</string>
+    <string name="wrong_root_selected_otg">Carpeta incorrecta, seleccione la carpeta raíz de su dispositivo OTG</string>
 
     <!-- About -->
     <string name="about">Acerca de</string>
