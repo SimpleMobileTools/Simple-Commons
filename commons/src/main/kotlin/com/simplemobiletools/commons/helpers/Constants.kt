@@ -6,7 +6,7 @@ const val APP_VERSION_NAME = "app_version_name"
 const val REAL_FILE_PATH = "real_file_path"
 const val IS_FROM_GALLERY = "is_from_gallery"
 const val BROADCAST_REFRESH_MEDIA = "com.simplemobiletools.REFRESH_MEDIA"
-const val OTG_PATH = "otg://"
+const val OTG_PATH = "otg:/"
 
 // shared preferences
 const val PREFS_KEY = "Prefs"

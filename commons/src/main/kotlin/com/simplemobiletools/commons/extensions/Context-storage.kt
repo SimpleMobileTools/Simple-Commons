@@ -248,7 +248,7 @@ fun Context.updateLastModified(file: File, lastModified: Long) {
     }
 }
 
-fun Context.getOTGItems(path: String, callback: (List<FileDirItem>) -> Unit) {
+fun Context.getOTGItems(path: String, callback: (ArrayList<FileDirItem>) -> Unit) {
     val items = ArrayList<FileDirItem>()
     val OTGTreeUri = baseConfig.OTGTreeUri
     var rootUri = DocumentFile.fromTreeUri(applicationContext, Uri.parse(OTGTreeUri))
