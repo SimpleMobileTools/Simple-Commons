@@ -243,7 +243,7 @@
     <string name="password_protect_whole_app">Hele app met wachtwoord beveiligen</string>
     <string name="keep_last_modified">Datum laatst gewijzigd behouden bij bestandsoperaties</string>
     <string name="show_info_bubble">Bij slepen van schuifbalk extra informatie tonen</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Slaapstand voorkomen</string>
 
     <!-- Setting sections -->
     <string name="visibility">Opmaak</string>
@@ -264,8 +264,8 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="confirm_otg_storage_access_text">Selecteer in het volgende scherm de hoofdmap van het OTG-apparaat</string>
+    <string name="wrong_root_selected_otg">Verkeerde map geselecteerd, kies de hoofdmap van het OTG-apparaat</string>
 
     <!-- About -->
     <string name="about">Over</string>
