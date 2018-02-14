@@ -14,7 +14,9 @@ import android.support.v4.provider.DocumentFile
 import android.text.TextUtils
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.OTG_PATH
+import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
+import java.net.URLDecoder
 import java.util.*
 import java.util.regex.Pattern
 
@@ -104,6 +106,8 @@ fun Context.humanizePath(path: String): String {
 fun Context.getInternalStoragePath() = Environment.getExternalStorageDirectory().absolutePath.trimEnd('/')
 
 fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWith(sdCardPath)
+
+fun Context.isPathOnOTG(path: String) = path.startsWith(OTG_PATH)
 
 fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isLollipopPlus()
 
@@ -242,6 +246,45 @@ fun Context.updateLastModified(file: File, lastModified: Long) {
         contentResolver.update(uri, values, selection, selectionArgs)
     } catch (ignored: Exception) {
     }
+}
+
+fun Context.getOTGItems(path: String, callback: (List<FileDirItem>) -> Unit) {
+    val items = ArrayList<FileDirItem>()
+    val OTGTreeUri = baseConfig.OTGTreeUri
+    var rootUri = DocumentFile.fromTreeUri(applicationContext, Uri.parse(OTGTreeUri))
+    val parts = path.split("/").dropLastWhile { it.isEmpty() }
+    for (part in parts) {
+        if (path == OTG_PATH) {
+            break
+        }
+
+        if (part == "otg:" || part == "") {
+            continue
+        }
+
+        rootUri = rootUri.findFile(part)
+    }
+
+    val files = rootUri.listFiles()
+    if (baseConfig.OTGBasePath.isEmpty()) {
+        val first = files?.firstOrNull()
+        if (first != null) {
+            val fullPath = first.uri.toString()
+            val nameStartIndex = fullPath.lastIndexOf(first.name)
+            val basePath = fullPath.substring(0, nameStartIndex)
+            baseConfig.OTGBasePath = basePath
+        }
+    }
+
+    val basePath = baseConfig.OTGBasePath
+    for (file in files) {
+        if (file.exists()) {
+            val filePath = file.uri.toString().substring(basePath.length)
+            val decodedPath = OTG_PATH + "/" + URLDecoder.decode(filePath, "UTF-8")
+            items.add(FileDirItem(decodedPath, file.name, file.isDirectory, 0, file.length()))
+        }
+    }
+    callback(items)
 }
 
 // avoid these being set as SD card paths

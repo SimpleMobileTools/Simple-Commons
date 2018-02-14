@@ -1,9 +1,7 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.net.Uri
 import android.os.Environment
 import android.os.Parcelable
-import android.support.v4.provider.DocumentFile
 import android.support.v7.app.AlertDialog
 import android.support.v7.widget.LinearLayoutManager
 import android.view.KeyEvent
@@ -16,7 +14,6 @@ import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.Breadcrumbs
 import kotlinx.android.synthetic.main.dialog_filepicker.view.*
 import java.io.File
-import java.net.URLDecoder
 import java.util.*
 
 /**
@@ -170,49 +167,10 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
     private fun getItems(path: String, callback: (List<FileDirItem>) -> Unit) {
         if (path.startsWith(OTG_PATH)) {
-            getOTGItems(path, callback)
+            activity.getOTGItems(path, callback)
         } else {
             getRegularItems(path, callback)
         }
-    }
-
-    private fun getOTGItems(path: String, callback: (List<FileDirItem>) -> Unit) {
-        val items = ArrayList<FileDirItem>()
-        val OTGTreeUri = activity.baseConfig.OTGTreeUri
-        var rootUri = DocumentFile.fromTreeUri(activity.applicationContext, Uri.parse(OTGTreeUri))
-        val parts = path.split("/").dropLastWhile { it.isEmpty() }
-        for (part in parts) {
-            if (path == OTG_PATH) {
-                break
-            }
-
-            if (part == "otg:" || part == "") {
-                continue
-            }
-
-            rootUri = rootUri.findFile(part)
-        }
-
-        val files = rootUri.listFiles()
-        if (activity.baseConfig.OTGBasePath.isEmpty()) {
-            val first = files?.firstOrNull()
-            if (first != null) {
-                val fullPath = first.uri.toString()
-                val nameStartIndex = fullPath.lastIndexOf(first.name)
-                val basePath = fullPath.substring(0, nameStartIndex)
-                activity.baseConfig.OTGBasePath = basePath
-            }
-        }
-
-        val basePath = activity.baseConfig.OTGBasePath
-        for (file in files) {
-            if (file.exists()) {
-                val filePath = file.uri.toString().substring(basePath.length)
-                val decodedPath = OTG_PATH + "/" + URLDecoder.decode(filePath, "UTF-8")
-                items.add(FileDirItem(decodedPath, file.name, file.isDirectory, 0, file.length()))
-            }
-        }
-        callback(items)
     }
 
     private fun getRegularItems(path: String, callback: (List<FileDirItem>) -> Unit) {
