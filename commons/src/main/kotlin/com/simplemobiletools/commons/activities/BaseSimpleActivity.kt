@@ -14,17 +14,16 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
 import android.text.Html
+import android.util.Log
 import android.view.MenuItem
 import android.view.WindowManager
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.dialogs.FileConflictDialog
+import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.APP_LICENSES
-import com.simplemobiletools.commons.helpers.APP_NAME
-import com.simplemobiletools.commons.helpers.APP_VERSION_NAME
-import com.simplemobiletools.commons.helpers.OPEN_DOCUMENT_TREE
+import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.interfaces.CopyMoveListener
 import java.io.File
 import java.util.*
@@ -34,6 +33,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
     var actionOnPermission: ((granted: Boolean) -> Unit)? = null
     var isAskingPermissions = false
     var useDynamicTheme = true
+
     private val GENERIC_PERM_HANDLER = 100
 
     companion object {
@@ -112,11 +112,22 @@ open class BaseSimpleActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
         super.onActivityResult(requestCode, resultCode, resultData)
         if (requestCode == OPEN_DOCUMENT_TREE && resultCode == Activity.RESULT_OK && resultData != null) {
-            if (isProperFolder(resultData.data)) {
+            if (isProperSDFolder(resultData.data)) {
                 saveTreeUri(resultData)
                 funAfterSAFPermission?.invoke()
+                funAfterSAFPermission = null
             } else {
                 toast(R.string.wrong_root_selected)
+                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
+                startActivityForResult(intent, requestCode)
+            }
+        } else if (requestCode == OPEN_DOCUMENT_TREE_OTG && resultCode == Activity.RESULT_OK && resultData != null) {
+            if (isProperOTGFolder(resultData.data)) {
+                baseConfig.OTGTreeUri = resultData.dataString
+                funAfterSAFPermission?.invoke()
+                funAfterSAFPermission = null
+            } else {
+                toast(R.string.wrong_root_selected_otg)
                 val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
                 startActivityForResult(intent, requestCode)
             }
@@ -132,7 +143,9 @@ open class BaseSimpleActivity : AppCompatActivity() {
         applicationContext.contentResolver.takePersistableUriPermission(treeUri, takeFlags)
     }
 
-    private fun isProperFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
+    private fun isProperSDFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
+
+    private fun isProperOTGFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
 
     @SuppressLint("NewApi")
     private fun isRootUri(uri: Uri) = DocumentsContract.getTreeDocumentId(uri).endsWith(":")
@@ -155,6 +168,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     fun handleSAFDialog(file: File, callback: () -> Unit): Boolean {
         return if (isShowingSAFDialog(file, baseConfig.treeUri, OPEN_DOCUMENT_TREE)) {
+            Log.e("DEBUG", "SAF dialog")
             funAfterSAFPermission = callback
             true
         } else {
@@ -280,6 +294,28 @@ open class BaseSimpleActivity : AppCompatActivity() {
         override fun copyFailed() {
             toast(R.string.copy_move_failed)
             copyMoveCallback = null
+        }
+    }
+
+    fun handleOTGPermission(callback: () -> Unit) {
+        if (baseConfig.OTGTreeUri.isNotEmpty()) {
+            callback()
+            return
+        }
+
+        funAfterSAFPermission = callback
+        WritePermissionDialog(this, true) {
+            Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
+                if (resolveActivity(packageManager) == null) {
+                    type = "*/*"
+                }
+
+                if (resolveActivity(packageManager) != null) {
+                    startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
+                } else {
+                    toast(R.string.unknown_error_occurred)
+                }
+            }
         }
     }
 }

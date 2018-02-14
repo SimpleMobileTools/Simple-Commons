@@ -67,8 +67,9 @@ const val LICENSE_LEAK_CANARY = 262144
 
 // global intents
 const val OPEN_DOCUMENT_TREE = 1000
-const val REQUEST_SET_AS = 1001
-const val REQUEST_EDIT_IMAGE = 1002
+const val OPEN_DOCUMENT_TREE_OTG = 1001
+const val REQUEST_SET_AS = 1002
+const val REQUEST_EDIT_IMAGE = 1003
 
 // sorting
 const val SORT_BY_NAME = 1

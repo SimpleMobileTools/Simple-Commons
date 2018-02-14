@@ -262,6 +262,11 @@
     <string name="exporting_some_entries_failed">L\'exportation de certains items a échoué</string>
     <string name="no_entries_for_exporting">Aucun item pouvant être exporté n\'a été trouvé</string>
 
+    <!-- OTG devices -->
+    <string name="otg">OTG</string>
+    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
+    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+
     <!-- About -->
     <string name="about">À propos</string>
     <string name="website_label">Pour le code source, visitez</string>

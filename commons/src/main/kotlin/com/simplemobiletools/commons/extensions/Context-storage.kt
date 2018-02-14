@@ -13,6 +13,7 @@ import android.support.v4.content.FileProvider
 import android.support.v4.provider.DocumentFile
 import android.text.TextUtils
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.helpers.OTG_PATH
 import java.io.File
 import java.util.*
 import java.util.regex.Pattern
@@ -86,6 +87,7 @@ fun Context.getHumanReadablePath(path: String): String {
     return getString(when (path) {
         "/" -> R.string.root
         internalStoragePath -> R.string.internal
+        OTG_PATH -> R.string.otg
         else -> R.string.sd_card
     })
 }

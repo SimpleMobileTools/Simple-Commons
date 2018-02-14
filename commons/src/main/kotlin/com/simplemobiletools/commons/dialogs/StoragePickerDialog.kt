@@ -1,13 +1,14 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.app.Activity
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.OTG_PATH
 import kotlinx.android.synthetic.main.dialog_radio_group.view.*
 
 /**
@@ -18,7 +19,7 @@ import kotlinx.android.synthetic.main.dialog_radio_group.view.*
  * @param callback an anonymous function
  *
  */
-class StoragePickerDialog(val activity: Activity, currPath: String, val callback: (pickedPath: String) -> Unit) {
+class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, val callback: (pickedPath: String) -> Unit) {
     var mDialog: AlertDialog
 
     init {
@@ -51,7 +52,7 @@ class StoragePickerDialog(val activity: Activity, currPath: String, val callback
             val otgButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
             otgButton.apply {
                 text = resources.getString(R.string.otg)
-                isChecked = false
+                isChecked = basePath == OTG_PATH
                 setOnClickListener { otgPicked() }
             }
             radioGroup.addView(otgButton, layoutParams)
@@ -82,7 +83,10 @@ class StoragePickerDialog(val activity: Activity, currPath: String, val callback
     }
 
     private fun otgPicked() {
-        mDialog.dismiss()
+        activity.handleOTGPermission {
+            mDialog.dismiss()
+            callback(OTG_PATH)
+        }
     }
 
     private fun rootPicked() {

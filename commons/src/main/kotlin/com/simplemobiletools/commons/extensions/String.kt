@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.extensions
 
 import android.content.Context
 import android.media.ExifInterface
+import com.simplemobiletools.commons.helpers.OTG_PATH
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -10,12 +11,15 @@ fun String.getFilenameFromPath() = substring(lastIndexOf("/") + 1)
 fun String.getFilenameExtension() = substring(lastIndexOf(".") + 1)
 
 fun String.getBasePath(context: Context): String {
-    return if (startsWith(context.internalStoragePath))
+    return if (startsWith(context.internalStoragePath)) {
         context.internalStoragePath
-    else if (!context.sdCardPath.isEmpty() && startsWith(context.sdCardPath))
+    } else if (!context.sdCardPath.isEmpty() && startsWith(context.sdCardPath)) {
         context.sdCardPath
-    else
+    } else if (startsWith(OTG_PATH)) {
+        OTG_PATH
+    } else {
         "/"
+    }
 }
 
 fun String.isAValidFilename(): Boolean {

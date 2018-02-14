@@ -266,6 +266,11 @@
     <string name="exporting_some_entries_failed">Exportovanie niektorých položiek zlyhalo</string>
     <string name="no_entries_for_exporting">Nenašli sa žiadne položky pre export</string>
 
+    <!-- OTG devices -->
+    <string name="otg">OTG</string>
+    <string name="confirm_otg_storage_access_text">Pre poskytnutie práv prosím zvoľte na nasledujúcej obrazovke základný priečinok OTG zariadenia</string>
+    <string name="wrong_root_selected_otg">Bol zvolený nesprávny koreňový priečinok, prosím zvoľte OTG zariadenie</string>
+
     <!-- About -->
     <string name="about">O aplikácií</string>
     <string name="website_label">Pre zdrojové kódy navštívte</string>

@@ -39,7 +39,7 @@
     <string name="rename_folder_exists">文件夹名已存在</string>
     <string name="rename_folder_root">无法重命名存储器的根目录</string>
     <string name="rename_folder_ok">文件夹重命名成功</string>
-    <string name="renaming_folder">重命名中...</string>
+    <string name="renaming_folder">重命名中…</string>
     <string name="filename_cannot_be_empty">文件名不能为空</string>
     <string name="filename_invalid_characters">文件名包含非法字符</string>
     <string name="extension_cannot_be_empty">扩展名不能为空</string>
@@ -252,8 +252,8 @@
     <string name="file_operations">文件操作</string>
 
     <!-- Import / Export -->
-    <string name="importing">正在导入...</string>
-    <string name="exporting">正在导出...</string>
+    <string name="importing">正在导入…</string>
+    <string name="exporting">正在导出…</string>
     <string name="importing_successful">导入成功</string>
     <string name="exporting_successful">导出成功</string>
     <string name="importing_failed">导入失败</string>
@@ -261,6 +261,11 @@
     <string name="importing_some_entries_failed">部分项目导入失败</string>
     <string name="exporting_some_entries_failed">部分项目导出失败</string>
     <string name="no_entries_for_exporting">未找到要导出的项目</string>
+
+    <!-- OTG devices -->
+    <string name="otg">OTG</string>
+    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
+    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
 
     <!-- About -->
     <string name="about">关于</string>
