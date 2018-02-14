@@ -264,8 +264,8 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="confirm_otg_storage_access_text">Vælg rodmappen på \'OTG\'-enheden på den næste skærm for at give adgang.</string>
+    <string name="wrong_root_selected_otg">Den forkerte mappe er valgt, vælg rodmappen på din \'OTG\'-enhed</string>
 
     <!-- About -->
     <string name="about">Om</string>
