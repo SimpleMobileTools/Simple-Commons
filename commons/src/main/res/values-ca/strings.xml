@@ -13,7 +13,7 @@
     <string name="unknown">Desconegut</string>
     <string name="always">Sempre</string>
     <string name="never">Mai</string>
-    <string name="details">Details</string>
+    <string name="details">Detalls</string>
 
     <!-- Search -->
     <string name="search">Buscar</string>
@@ -242,7 +242,7 @@
     <string name="password_protect_whole_app">Contrasenya per protegir tota l’aplicació</string>
     <string name="keep_last_modified">Mantenir el valor de la darrera modificació al copiar/moure/canviar el nom dels arxius</string>
     <string name="show_info_bubble">Mostra una bombolla d\'informació en elements de desplaçament mitjançant arrossegament de la barra de desplaçament</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Evita que el telèfon dormi</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilitat</string>
@@ -263,8 +263,8 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="confirm_otg_storage_access_text">Seleccioneu la carpeta arrel del dispositiu OTG a la pantalla següent per concedir accés</string>
+    <string name="wrong_root_selected_otg">S\'ha seleccionat la carpeta incorrecta, seleccioneu la carpeta arrel del vostre dispositiu OTG</string>
 
     <!-- About -->
     <string name="about">Sobre</string>
