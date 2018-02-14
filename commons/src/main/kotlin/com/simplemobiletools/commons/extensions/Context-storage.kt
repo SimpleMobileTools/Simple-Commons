@@ -109,6 +109,8 @@ fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWit
 
 fun Context.isPathOnOTG(path: String) = path.startsWith(OTG_PATH)
 
+fun Context.isFileDirItemOnOTG(fileDirItem: FileDirItem) = fileDirItem.path.startsWith(OTG_PATH)
+
 fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isLollipopPlus()
 
 @SuppressLint("NewApi")
@@ -134,8 +136,8 @@ fun Context.getMyFileUri(file: File): Uri {
 }
 
 @SuppressLint("NewApi")
-fun Context.tryFastDocumentDelete(file: File, allowDeleteFolder: Boolean): Boolean {
-    val document = getFastDocument(file)
+fun Context.tryFastDocumentDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolean): Boolean {
+    val document = getFastDocument(fileDirItem)
     return if (document?.isFile == true || allowDeleteFolder) {
         DocumentsContract.deleteDocument(contentResolver, document?.uri)
     } else {
@@ -144,13 +146,23 @@ fun Context.tryFastDocumentDelete(file: File, allowDeleteFolder: Boolean): Boole
 }
 
 @SuppressLint("NewApi")
-fun Context.getFastDocument(file: File): DocumentFile? {
-    if (!isLollipopPlus() || baseConfig.sdCardPath.isEmpty())
+fun Context.getFastDocument(fileDirItem: FileDirItem): DocumentFile? {
+    if (!isLollipopPlus()) {
         return null
+    }
 
-    val relativePath = Uri.encode(file.absolutePath.substring(baseConfig.sdCardPath.length).trim('/'))
-    val sdCardPathPart = baseConfig.sdCardPath.split("/").filter(String::isNotEmpty).last().trim('/')
-    val fullUri = "${baseConfig.treeUri}/document/$sdCardPathPart%3A$relativePath"
+    val isOTG = isFileDirItemOnOTG(fileDirItem)
+    if (!isOTG && baseConfig.sdCardPath.isEmpty()) {
+        return null
+    }
+
+    val startString = if (isOTG) OTG_PATH else baseConfig.sdCardPath
+    val basePath = if (isOTG) baseConfig.OTGBasePath else baseConfig.sdCardPath
+    val treeUri = if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri
+
+    val relativePath = Uri.encode(fileDirItem.path.substring(startString.length).trim('/'))
+    val externalPathPart = basePath.split("/").last(String::isNotEmpty).trim('/')
+    val fullUri = "$treeUri/document/$externalPathPart%3A$relativePath"
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
 
@@ -198,33 +210,33 @@ fun getPaths(file: File): ArrayList<String> {
     return paths
 }
 
-fun Context.getFileUri(file: File) = when {
-    file.isImageSlow() -> MediaStore.Images.Media.EXTERNAL_CONTENT_URI
-    file.isVideoSlow() -> MediaStore.Video.Media.EXTERNAL_CONTENT_URI
+fun Context.getFileUri(path: String) = when {
+    path.isImageSlow() -> MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+    path.isVideoSlow() -> MediaStore.Video.Media.EXTERNAL_CONTENT_URI
     else -> MediaStore.Files.getContentUri("external")
 }
 
 // these functions update the mediastore instantly, MediaScannerConnection.scanFile takes some time to really get applied
-fun Context.deleteFromMediaStore(file: File): Boolean {
+fun Context.deleteFromMediaStore(path: String): Boolean {
     return try {
         val where = "${MediaStore.MediaColumns.DATA} = ?"
-        val args = arrayOf(file.absolutePath)
-        contentResolver.delete(getFileUri(file), where, args) == 1
+        val args = arrayOf(path)
+        contentResolver.delete(getFileUri(path), where, args) == 1
     } catch (e: Exception) {
         false
     }
 }
 
-fun Context.updateInMediaStore(oldFile: File, newFile: File) {
+fun Context.updateInMediaStore(oldPath: String, newPath: String) {
     Thread {
         val values = ContentValues().apply {
-            put(MediaStore.MediaColumns.DATA, newFile.absolutePath)
-            put(MediaStore.MediaColumns.DISPLAY_NAME, newFile.name)
-            put(MediaStore.MediaColumns.TITLE, newFile.name)
+            put(MediaStore.MediaColumns.DATA, newPath)
+            put(MediaStore.MediaColumns.DISPLAY_NAME, newPath.getFilenameFromPath())
+            put(MediaStore.MediaColumns.TITLE, newPath.getFilenameFromPath())
         }
-        val uri = getFileUri(oldFile)
+        val uri = getFileUri(oldPath)
         val selection = "${MediaStore.MediaColumns.DATA} = ?"
-        val selectionArgs = arrayOf(oldFile.absolutePath)
+        val selectionArgs = arrayOf(oldPath)
 
         try {
             contentResolver.update(uri, values, selection, selectionArgs)
@@ -238,7 +250,7 @@ fun Context.updateLastModified(file: File, lastModified: Long) {
         put(MediaStore.MediaColumns.DATE_MODIFIED, lastModified)
     }
     file.setLastModified(lastModified)
-    val uri = getFileUri(file)
+    val uri = getFileUri(file.absolutePath)
     val selection = "${MediaStore.MediaColumns.DATA} = ?"
     val selectionArgs = arrayOf(file.absolutePath)
 
@@ -271,12 +283,15 @@ fun Context.getOTGItems(path: String, callback: (ArrayList<FileDirItem>) -> Unit
         if (first != null) {
             val fullPath = first.uri.toString()
             val nameStartIndex = fullPath.lastIndexOf(first.name)
-            val basePath = fullPath.substring(0, nameStartIndex)
+            var basePath = fullPath.substring(0, nameStartIndex)
+            if (basePath.endsWith("%3A")) {
+                basePath = basePath.substring(0, basePath.length - 3)
+            }
             baseConfig.OTGBasePath = basePath
         }
     }
 
-    val basePath = baseConfig.OTGBasePath
+    val basePath = "${baseConfig.OTGBasePath}%3A"
     for (file in files) {
         if (file.exists()) {
             val filePath = file.uri.toString().substring(basePath.length)

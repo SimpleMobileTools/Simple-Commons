@@ -5,7 +5,7 @@ import com.simplemobiletools.commons.extensions.formatSize
 import com.simplemobiletools.commons.helpers.*
 import java.io.File
 
-data class FileDirItem(val path: String, val name: String, val isDirectory: Boolean, var children: Int, var size: Long) :
+data class FileDirItem(val path: String, val name: String = "", val isDirectory: Boolean = false, var children: Int = 0, var size: Long = 0L) :
         Comparable<FileDirItem> {
     companion object {
         var sorting: Int = 0

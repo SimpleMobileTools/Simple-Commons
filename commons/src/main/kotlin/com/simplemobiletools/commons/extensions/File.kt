@@ -4,6 +4,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Point
 import android.media.MediaMetadataRetriever
+import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 
 fun File.isImageVideoGif() = absolutePath.isImageFast() || absolutePath.isVideoFast() || absolutePath.isGif()
@@ -147,3 +148,5 @@ private fun getDirectoryFileCount(dir: File, countHiddenItems: Boolean): Int {
     }
     return count
 }
+
+fun File.toFileDirItem() = FileDirItem(absolutePath, name, isDirectory, 0, 0L)

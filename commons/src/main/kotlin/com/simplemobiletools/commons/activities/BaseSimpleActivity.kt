@@ -14,7 +14,6 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
 import android.text.Html
-import android.util.Log
 import android.view.MenuItem
 import android.view.WindowManager
 import com.simplemobiletools.commons.R
@@ -25,6 +24,7 @@ import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.interfaces.CopyMoveListener
+import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 import java.util.*
 
@@ -168,7 +168,6 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     fun handleSAFDialog(file: File, callback: () -> Unit): Boolean {
         return if (isShowingSAFDialog(file, baseConfig.treeUri, OPEN_DOCUMENT_TREE)) {
-            Log.e("DEBUG", "SAF dialog")
             funAfterSAFPermission = callback
             true
         } else {
@@ -177,7 +176,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun copyMoveFilesTo(files: ArrayList<File>, source: String, destination: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean,
+    fun copyMoveFilesTo(fileDirItems: ArrayList<FileDirItem>, source: String, destination: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean,
                         copyHidden: Boolean, callback: () -> Unit) {
         if (source == destination) {
             toast(R.string.source_and_destination_same)
@@ -193,31 +192,32 @@ open class BaseSimpleActivity : AppCompatActivity() {
         handleSAFDialog(destinationFolder) {
             copyMoveCallback = callback
             if (isCopyOperation) {
-                startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly, copyHidden)
+                startCopyMove(fileDirItems, destinationFolder, isCopyOperation, copyPhotoVideoOnly, copyHidden)
             } else {
-                if (isPathOnSD(source) || isPathOnSD(destination) || files.first().isDirectory || isNougatPlus()) {
+                if (isPathOnSD(source) || isPathOnSD(destination) || fileDirItems.first().isDirectory || isNougatPlus()) {
                     handleSAFDialog(File(source)) {
-                        startCopyMove(files, destinationFolder, isCopyOperation, copyPhotoVideoOnly, copyHidden)
+                        startCopyMove(fileDirItems, destinationFolder, isCopyOperation, copyPhotoVideoOnly, copyHidden)
                     }
                 } else {
                     toast(R.string.moving)
-                    val updatedFiles = ArrayList<File>(files.size * 2)
-                    updatedFiles.addAll(files)
+                    val updatedFiles = ArrayList<FileDirItem>(fileDirItems.size * 2)
+                    updatedFiles.addAll(fileDirItems)
                     try {
-                        for (oldFile in files) {
-                            val newFile = File(destinationFolder, oldFile.name)
-                            if (!newFile.exists() && oldFile.renameTo(newFile)) {
+                        for (oldFileDirItem in fileDirItems) {
+                            val newFile = File(destinationFolder, oldFileDirItem.name)
+                            if (!newFile.exists() && File(oldFileDirItem.path).renameTo(newFile)) {
                                 if (!baseConfig.keepLastModified) {
                                     newFile.setLastModified(System.currentTimeMillis())
                                 }
-                                updateInMediaStore(oldFile, newFile)
-                                updatedFiles.add(newFile)
+                                updateInMediaStore(oldFileDirItem.path, newFile.absolutePath)
+                                updatedFiles.add(newFile.toFileDirItem())
                             }
                         }
 
-                        scanFiles(updatedFiles) {
+                        val updatedPaths = updatedFiles.map { it.path } as ArrayList<String>
+                        scanPaths(updatedPaths) {
                             runOnUiThread {
-                                copyMoveListener.copySucceeded(false, files.size * 2 == updatedFiles.size)
+                                copyMoveListener.copySucceeded(false, fileDirItems.size * 2 == updatedFiles.size)
                             }
                         }
                     } catch (e: Exception) {
@@ -228,7 +228,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    private fun startCopyMove(files: ArrayList<File>, destinationFolder: File, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean, copyHidden: Boolean) {
+    private fun startCopyMove(files: ArrayList<FileDirItem>, destinationFolder: File, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean, copyHidden: Boolean) {
         checkConflict(files, destinationFolder, 0, LinkedHashMap()) {
             toast(if (isCopyOperation) R.string.copying else R.string.moving)
             val pair = Pair(files, destinationFolder)
@@ -236,7 +236,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    private fun checkConflict(files: ArrayList<File>, destinationFolder: File, index: Int, conflictResolutions: LinkedHashMap<String, Int>,
+    private fun checkConflict(files: ArrayList<FileDirItem>, destinationFolder: File, index: Int, conflictResolutions: LinkedHashMap<String, Int>,
                               callback: (resolutions: LinkedHashMap<String, Int>) -> Unit) {
         if (index == files.size) {
             callback(conflictResolutions)

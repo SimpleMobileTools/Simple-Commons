@@ -16,6 +16,7 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.CONFLICT_OVERWRITE
 import com.simplemobiletools.commons.helpers.CONFLICT_SKIP
 import com.simplemobiletools.commons.interfaces.CopyMoveListener
+import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 import java.io.FileInputStream
 import java.io.InputStream
@@ -24,14 +25,14 @@ import java.lang.ref.WeakReference
 import java.util.*
 
 class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = false, val copyMediaOnly: Boolean, val conflictResolutions: LinkedHashMap<String, Int>,
-                   listener: CopyMoveListener, val copyHidden: Boolean) : AsyncTask<Pair<ArrayList<File>, File>, Void, Boolean>() {
+                   listener: CopyMoveListener, val copyHidden: Boolean) : AsyncTask<Pair<ArrayList<FileDirItem>, File>, Void, Boolean>() {
     private val INITIAL_PROGRESS_DELAY = 3000L
     private val PROGRESS_RECHECK_INTERVAL = 500L
 
     private var mListener: WeakReference<CopyMoveListener>? = null
-    private var mMovedFiles: ArrayList<File> = ArrayList()
+    private var mMovedFiles: ArrayList<FileDirItem> = ArrayList()
     private var mDocuments = LinkedHashMap<String, DocumentFile?>()
-    private lateinit var mFiles: ArrayList<File>
+    private lateinit var mFiles: ArrayList<FileDirItem>
     private var mFileCountToCopy = 0
 
     // progress indication
@@ -49,7 +50,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         mNotificationBuilder = NotificationCompat.Builder(activity)
     }
 
-    override fun doInBackground(vararg params: Pair<ArrayList<File>, File>): Boolean? {
+    override fun doInBackground(vararg params: Pair<ArrayList<FileDirItem>, File>): Boolean? {
         if (params.isEmpty()) {
             return false
         }
@@ -62,7 +63,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         for (file in mFiles) {
             val newFile = File(pair.second, file.name)
             if (!newFile.exists() || getConflictResolution(newFile) != CONFLICT_SKIP) {
-                mMaxSize += (file.getProperSize(copyHidden) / 1000).toInt()
+                mMaxSize += (File(file.path).getProperSize(copyHidden) / 1000).toInt()
             }
         }
 
@@ -80,7 +81,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                         mFileCountToCopy--
                         continue
                     } else if (resolution == CONFLICT_OVERWRITE) {
-                        activity.deleteFilesBg(arrayListOf(newFile), true)
+                        activity.deleteFileBg(newFile.toFileDirItem(), true)
                     }
                 }
 
@@ -95,7 +96,8 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             activity.deleteFiles(mMovedFiles) {}
         }
 
-        activity.scanFiles(mFiles) {}
+        val paths = mFiles.map { it.path } as ArrayList<String>
+        activity.scanPaths(paths) {}
         return true
     }
 
@@ -151,7 +153,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         }
     }
 
-    private fun copy(source: File, destination: File) {
+    private fun copy(source: FileDirItem, destination: File) {
         if (source.isDirectory) {
             copyDirectory(source, destination)
         } else {
@@ -159,29 +161,29 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         }
     }
 
-    private fun copyDirectory(source: File, destination: File) {
+    private fun copyDirectory(source: FileDirItem, destination: File) {
         if (!activity.createDirectorySync(destination)) {
             val error = String.format(activity.getString(R.string.could_not_create_folder), destination.absolutePath)
             activity.showErrorToast(error)
             return
         }
 
-        val children = source.list()
+        val children = File(source.path).list()
         for (child in children) {
             val newFile = File(destination, child)
             if (newFile.exists()) {
                 continue
             }
 
-            val oldFile = File(source, child)
-            copy(oldFile, newFile)
+            val oldFile = File(source.path, child)
+            copy(oldFile.toFileDirItem(), newFile)
         }
         mMovedFiles.add(source)
     }
 
-    private fun copyFile(source: File, destination: File) {
-        if (copyMediaOnly && !source.absolutePath.isImageVideoGif()) {
-            mCurrentProgress += source.length()
+    private fun copyFile(source: FileDirItem, destination: File) {
+        if (copyMediaOnly && !source.path.isImageVideoGif()) {
+            mCurrentProgress += source.size
             return
         }
 
@@ -189,7 +191,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         if (!activity.createDirectorySync(directory)) {
             val error = String.format(activity.getString(R.string.could_not_create_folder), directory.absolutePath)
             activity.showErrorToast(error)
-            mCurrentProgress += source.length()
+            mCurrentProgress += source.size
             return
         }
 
@@ -201,9 +203,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 mDocuments[destination.parent] = activity.getFileDocument(destination.parent)
             }
 
-            out = activity.getFileOutputStreamSync(destination.absolutePath, source.getMimeType(), mDocuments[destination.parent])
+            out = activity.getFileOutputStreamSync(destination.absolutePath, source.path.getMimeType(), mDocuments[destination.parent])
 
-            inputStream = FileInputStream(source)
+            inputStream = FileInputStream(File(source.path))
 
             val buffer = ByteArray(DEFAULT_BUFFER_SIZE)
             var bytes = inputStream.read(buffer)
@@ -213,10 +215,10 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 bytes = inputStream.read(buffer)
             }
 
-            if (source.length() == destination.length()) {
+            if (source.size == destination.length()) {
                 mMovedFiles.add(source)
                 if (activity.baseConfig.keepLastModified) {
-                    copyOldLastModified(source, destination)
+                    copyOldLastModified(source.path, destination)
                 } else {
                     activity.scanFile(destination) {}
                 }
@@ -229,13 +231,13 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         }
     }
 
-    private fun copyOldLastModified(source: File, destination: File) {
+    private fun copyOldLastModified(sourcePath: String, destination: File) {
         val projection = arrayOf(
                 MediaStore.Images.Media.DATE_TAKEN,
                 MediaStore.Images.Media.DATE_MODIFIED)
         val uri = MediaStore.Files.getContentUri("external")
         val selection = "${MediaStore.MediaColumns.DATA} = ?"
-        var selectionArgs = arrayOf(source.absolutePath)
+        var selectionArgs = arrayOf(sourcePath)
         val cursor = activity.applicationContext.contentResolver.query(uri, projection, selection, selectionArgs, null)
 
         cursor?.use {

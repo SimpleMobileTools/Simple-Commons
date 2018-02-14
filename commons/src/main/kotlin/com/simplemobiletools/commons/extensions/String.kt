@@ -10,6 +10,8 @@ fun String.getFilenameFromPath() = substring(lastIndexOf("/") + 1)
 
 fun String.getFilenameExtension() = substring(lastIndexOf(".") + 1)
 
+fun String.getMimeType() = getMimeTypeFromPath()
+
 fun String.getBasePath(context: Context): String {
     return if (startsWith(context.internalStoragePath)) {
         context.internalStoragePath
@@ -47,9 +49,12 @@ fun String.isDng() = endsWith(".dng", true)
 
 // fast extension checks, not guaranteed to be accurate
 fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }
-
 fun String.isImageFast() = photoExtensions.any { endsWith(it, true) }
 fun String.isAudioFast() = audioExtensions.any { endsWith(it, true) }
+
+fun String.isImageSlow() = isImageFast() || getMimeType().startsWith("image")
+fun String.isVideoSlow() = isVideoFast() || getMimeType().startsWith("video")
+fun String.isAudioSlow() = isAudioFast() || getMimeType().startsWith("audio")
 
 fun String.areDigitsOnly() = matches(Regex("[0-9]+"))
 
