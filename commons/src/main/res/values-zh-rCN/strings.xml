@@ -13,7 +13,7 @@
     <string name="unknown">未知</string>
     <string name="always">总是</string>
     <string name="never">从不</string>
-    <string name="details">Details</string>
+    <string name="details">详细</string>
 
     <!-- Search -->
     <string name="search">搜索</string>
@@ -243,7 +243,7 @@
     <string name="password_protect_whole_app">使用密码保护本应用</string>
     <string name="keep_last_modified">在复制/移动/重命名文件时保留旧的修改日期</string>
     <string name="show_info_bubble">拖动滚动条时在滚动项目旁显示一个信息气泡</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">阻止设备休眠</string>
 
     <!-- Setting sections -->
     <string name="visibility">可见度</string>
@@ -264,8 +264,8 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="confirm_otg_storage_access_text">请在下一界面选择OTG设备的根文件夹以授予访问权限</string>
+    <string name="wrong_root_selected_otg">选择错误，请正确选择OTG设备的根文件夹</string>
 
     <!-- About -->
     <string name="about">关于</string>
