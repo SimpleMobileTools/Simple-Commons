@@ -264,6 +264,7 @@
 
     <!-- OTG USB -->
     <string name="otg">OTG</string>
+    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
 
     <!-- About -->
     <string name="about">About</string>

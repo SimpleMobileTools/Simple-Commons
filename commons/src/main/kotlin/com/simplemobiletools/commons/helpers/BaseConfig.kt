@@ -26,6 +26,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getString(TREE_URI, "")
         set(uri) = prefs.edit().putString(TREE_URI, uri).apply()
 
+    var OTGTreeUri: String
+        get() = prefs.getString(OTG_TREE_URI, "")
+        set(OTGTreeUri) = prefs.edit().putString(OTG_TREE_URI, OTGTreeUri).apply()
+
     var sdCardPath: String
         get() = prefs.getString(SD_CARD_PATH, context.getSDCardPath())
         set(sdCardPath) = prefs.edit().putString(SD_CARD_PATH, sdCardPath).apply()

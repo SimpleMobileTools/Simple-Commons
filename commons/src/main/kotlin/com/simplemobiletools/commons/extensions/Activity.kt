@@ -105,7 +105,7 @@ fun Activity.updateSDCardPath() {
 fun Activity.isShowingSAFDialog(file: File, treeUri: String, requestCode: Int): Boolean {
     return if (needsStupidWritePermissions(file.absolutePath) && (treeUri.isEmpty() || !hasProperStoredTreeUri())) {
         runOnUiThread {
-            WritePermissionDialog(this) {
+            WritePermissionDialog(this, false) {
                 Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                     if (resolveActivity(packageManager) == null) {
                         type = "*/*"
