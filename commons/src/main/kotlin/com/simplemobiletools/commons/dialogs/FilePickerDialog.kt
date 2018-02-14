@@ -49,7 +49,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         }
 
         mDialogView.filepicker_breadcrumbs.listener = this
-        updateItems()
+        tryUpdateItems()
 
         val builder = AlertDialog.Builder(activity)
                 .setNegativeButton(R.string.cancel, null)
@@ -59,7 +59,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                         if (breadcrumbs.childCount > 1) {
                             breadcrumbs.removeBreadcrumb()
                             currPath = breadcrumbs.getLastItem().path
-                            updateItems()
+                            tryUpdateItems()
                         } else {
                             mDialog.dismiss()
                         }
@@ -97,19 +97,28 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         }
     }
 
-    private fun updateItems() {
-        var items = getItems(currPath)
+    private fun tryUpdateItems() {
+        Thread {
+            getItems(currPath) {
+                activity.runOnUiThread {
+                    updateItems(it)
+                }
+            }
+        }.start()
+    }
+
+    private fun updateItems(items: List<FileDirItem>) {
         if (!containsDirectory(items) && !mFirstUpdate && !pickFile && !showFAB) {
             verifyPath()
             return
         }
 
-        items = items.sortedWith(compareBy({ !it.isDirectory }, { it.name.toLowerCase() }))
+        val sortedItems = items.sortedWith(compareBy({ !it.isDirectory }, { it.name.toLowerCase() }))
 
-        val adapter = FilepickerItemsAdapter(activity, items, mDialogView.filepicker_list) {
+        val adapter = FilepickerItemsAdapter(activity, sortedItems, mDialogView.filepicker_list) {
             if ((it as FileDirItem).isDirectory) {
                 currPath = it.path
-                updateItems()
+                tryUpdateItems()
             } else if (pickFile) {
                 currPath = it.path
                 verifyPath()
@@ -118,14 +127,14 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         adapter.addVerticalDividers(true)
 
         val layoutManager = mDialogView.filepicker_list.layoutManager as LinearLayoutManager
-        mScrollStates.put(mPrevPath.trimEnd('/'), layoutManager.onSaveInstanceState())
+        mScrollStates[mPrevPath.trimEnd('/')] = layoutManager.onSaveInstanceState()
 
         mDialogView.apply {
             filepicker_list.adapter = adapter
             filepicker_breadcrumbs.setBreadcrumb(currPath)
             filepicker_fastscroller.allowBubbleDisplay = context.baseConfig.showInfoBubble
             filepicker_fastscroller.setViews(filepicker_list) {
-                filepicker_fastscroller.updateBubbleText(items.getOrNull(it)?.getBubbleText() ?: "")
+                filepicker_fastscroller.updateBubbleText(sortedItems.getOrNull(it)?.getBubbleText() ?: "")
             }
 
             layoutManager.onRestoreInstanceState(mScrollStates[currPath.trimEnd('/')])
@@ -150,10 +159,15 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         mDialog.dismiss()
     }
 
-    private fun getItems(path: String): List<FileDirItem> {
+    private fun getItems(path: String, callback: (List<FileDirItem>) -> Unit) {
         val items = ArrayList<FileDirItem>()
         val base = File(path)
-        val files = base.listFiles() ?: return items
+        val files = base.listFiles()
+        if (files == null) {
+            callback(items)
+            return
+        }
+
         for (file in files) {
             if (!showHidden && file.isHidden) {
                 continue
@@ -164,7 +178,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             val size = file.length()
             items.add(FileDirItem(curPath, curName, file.isDirectory, getChildren(file), size))
         }
-        return items
+        callback(items)
     }
 
     private fun getChildren(file: File): Int {
@@ -181,13 +195,13 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         if (id == 0) {
             StoragePickerDialog(activity, currPath) {
                 currPath = it
-                updateItems()
+                tryUpdateItems()
             }
         } else {
             val item = mDialogView.filepicker_breadcrumbs.getChildAt(id).tag as FileDirItem
             if (currPath != item.path.trimEnd('/')) {
                 currPath = item.path
-                updateItems()
+                tryUpdateItems()
             }
         }
     }
