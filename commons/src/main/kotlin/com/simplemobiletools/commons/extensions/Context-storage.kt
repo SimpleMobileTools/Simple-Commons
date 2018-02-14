@@ -94,10 +94,11 @@ fun Context.getHumanReadablePath(path: String): String {
 
 fun Context.humanizePath(path: String): String {
     val basePath = path.getBasePath(this)
-    return if (basePath == "/")
-        "${getHumanReadablePath(basePath)}$path"
-    else
-        path.replaceFirst(basePath, getHumanReadablePath(basePath))
+    return when (basePath) {
+        "/" -> "${getHumanReadablePath(basePath)}$path"
+        OTG_PATH -> path.replaceFirst(basePath, "${getHumanReadablePath(basePath)}/")
+        else -> path.replaceFirst(basePath, getHumanReadablePath(basePath))
+    }
 }
 
 fun Context.getInternalStoragePath() = Environment.getExternalStorageDirectory().absolutePath.trimEnd('/')
@@ -121,10 +122,11 @@ fun Context.isAStorageRootFolder(path: String): Boolean {
 }
 
 fun Context.getMyFileUri(file: File): Uri {
-    return if (isNougatPlus())
+    return if (isNougatPlus()) {
         FileProvider.getUriForFile(this, "$packageName.provider", file)
-    else
+    } else {
         Uri.fromFile(file)
+    }
 }
 
 @SuppressLint("NewApi")

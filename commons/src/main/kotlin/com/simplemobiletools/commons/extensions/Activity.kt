@@ -598,14 +598,17 @@ fun BaseSimpleActivity.getFileOutputStreamSync(targetPath: String, mimeType: Str
 
 @SuppressLint("NewApi")
 fun BaseSimpleActivity.getFileDocument(path: String): DocumentFile? {
-    if (!isLollipopPlus())
+    if (!isLollipopPlus()) {
         return null
+    }
 
-    var relativePath = path.substring(sdCardPath.length)
-    if (relativePath.startsWith(File.separator))
+    val isOTG = path.startsWith(OTG_PATH)
+    var relativePath = path.substring(if (isOTG) OTG_PATH.length else sdCardPath.length)
+    if (relativePath.startsWith(File.separator)) {
         relativePath = relativePath.substring(1)
+    }
 
-    var document = DocumentFile.fromTreeUri(this, Uri.parse(baseConfig.treeUri))
+    var document = DocumentFile.fromTreeUri(this, Uri.parse(if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri))
     val parts = relativePath.split("/")
     for (part in parts) {
         val currDocument = document.findFile(part)
