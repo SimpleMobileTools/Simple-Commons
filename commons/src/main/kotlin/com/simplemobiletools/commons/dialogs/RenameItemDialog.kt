@@ -52,8 +52,9 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
 
                     val updatedFiles = ArrayList<File>()
                     updatedFiles.add(file)
-                    if (!newExtension.isEmpty())
+                    if (!newExtension.isEmpty()) {
                         newName += ".$newExtension"
+                    }
 
                     val newFile = File(file.parent, newName)
                     if (newFile.exists()) {
@@ -62,7 +63,7 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
                     }
 
                     updatedFiles.add(newFile)
-                    activity.renameFile(file, newFile) {
+                    activity.renameFile(path, "${file.parent}/$newName") {
                         if (it) {
                             sendSuccess(updatedFiles)
                             dismiss()

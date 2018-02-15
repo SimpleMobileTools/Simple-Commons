@@ -25,7 +25,7 @@ import java.lang.ref.WeakReference
 import java.util.*
 
 class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = false, val copyMediaOnly: Boolean, val conflictResolutions: LinkedHashMap<String, Int>,
-                   listener: CopyMoveListener, val copyHidden: Boolean) : AsyncTask<Pair<ArrayList<FileDirItem>, File>, Void, Boolean>() {
+                   listener: CopyMoveListener, val copyHidden: Boolean) : AsyncTask<Pair<ArrayList<FileDirItem>, FileDirItem>, Void, Boolean>() {
     private val INITIAL_PROGRESS_DELAY = 3000L
     private val PROGRESS_RECHECK_INTERVAL = 500L
 
@@ -50,7 +50,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         mNotificationBuilder = NotificationCompat.Builder(activity)
     }
 
-    override fun doInBackground(vararg params: Pair<ArrayList<FileDirItem>, File>): Boolean? {
+    override fun doInBackground(vararg params: Pair<ArrayList<FileDirItem>, FileDirItem>): Boolean? {
         if (params.isEmpty()) {
             return false
         }
@@ -61,7 +61,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         mNotifId = (System.currentTimeMillis() / 1000).toInt()
         mMaxSize = 0
         for (file in mFiles) {
-            val newFile = File(pair.second, file.name)
+            val newFile = File(pair.second!!.path, file.name)
             if (!newFile.exists() || getConflictResolution(newFile) != CONFLICT_SKIP) {
                 mMaxSize += (File(file.path).getProperSize(copyHidden) / 1000).toInt()
             }
@@ -74,7 +74,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
         for (file in mFiles) {
             try {
-                val newFile = File(pair.second, file.name)
+                val newFile = File(pair.second!!.path, file.name)
                 if (newFile.exists()) {
                     val resolution = getConflictResolution(newFile)
                     if (resolution == CONFLICT_SKIP) {

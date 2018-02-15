@@ -166,8 +166,8 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     fun startCustomizationActivity() = startActivity(Intent(this, CustomizationActivity::class.java))
 
-    fun handleSAFDialog(file: File, callback: () -> Unit): Boolean {
-        return if (isShowingSAFDialog(file, baseConfig.treeUri, OPEN_DOCUMENT_TREE)) {
+    fun handleSAFDialog(path: String, callback: () -> Unit): Boolean {
+        return if (isShowingSAFDialog(path, baseConfig.treeUri, OPEN_DOCUMENT_TREE)) {
             funAfterSAFPermission = callback
             true
         } else {
@@ -189,14 +189,14 @@ open class BaseSimpleActivity : AppCompatActivity() {
             return
         }
 
-        handleSAFDialog(destinationFolder) {
+        handleSAFDialog(destination) {
             copyMoveCallback = callback
             if (isCopyOperation) {
-                startCopyMove(fileDirItems, destinationFolder, isCopyOperation, copyPhotoVideoOnly, copyHidden)
+                startCopyMove(fileDirItems, FileDirItem(destination), isCopyOperation, copyPhotoVideoOnly, copyHidden)
             } else {
                 if (isPathOnSD(source) || isPathOnSD(destination) || fileDirItems.first().isDirectory || isNougatPlus()) {
-                    handleSAFDialog(File(source)) {
-                        startCopyMove(fileDirItems, destinationFolder, isCopyOperation, copyPhotoVideoOnly, copyHidden)
+                    handleSAFDialog(source) {
+                        startCopyMove(fileDirItems, FileDirItem(destination), isCopyOperation, copyPhotoVideoOnly, copyHidden)
                     }
                 } else {
                     toast(R.string.moving)
@@ -228,15 +228,15 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    private fun startCopyMove(files: ArrayList<FileDirItem>, destinationFolder: File, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean, copyHidden: Boolean) {
-        checkConflict(files, destinationFolder, 0, LinkedHashMap()) {
+    private fun startCopyMove(files: ArrayList<FileDirItem>, destinationFileDirItem: FileDirItem, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean, copyHidden: Boolean) {
+        checkConflict(files, destinationFileDirItem, 0, LinkedHashMap()) {
             toast(if (isCopyOperation) R.string.copying else R.string.moving)
-            val pair = Pair(files, destinationFolder)
+            val pair = Pair(files, destinationFileDirItem)
             CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
         }
     }
 
-    private fun checkConflict(files: ArrayList<FileDirItem>, destinationFolder: File, index: Int, conflictResolutions: LinkedHashMap<String, Int>,
+    private fun checkConflict(files: ArrayList<FileDirItem>, destinationFileDirItem: FileDirItem, index: Int, conflictResolutions: LinkedHashMap<String, Int>,
                               callback: (resolutions: LinkedHashMap<String, Int>) -> Unit) {
         if (index == files.size) {
             callback(conflictResolutions)
@@ -244,20 +244,20 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
 
         val file = files[index]
-        val newFile = File(destinationFolder, file.name)
+        val newFile = File(destinationFileDirItem.path, file.name)
         if (newFile.exists()) {
             FileConflictDialog(this, newFile) { resolution, applyForAll ->
                 if (applyForAll) {
                     conflictResolutions.clear()
                     conflictResolutions[""] = resolution
-                    checkConflict(files, destinationFolder, files.size, conflictResolutions, callback)
+                    checkConflict(files, destinationFileDirItem, files.size, conflictResolutions, callback)
                 } else {
                     conflictResolutions[newFile.absolutePath] = resolution
-                    checkConflict(files, destinationFolder, index + 1, conflictResolutions, callback)
+                    checkConflict(files, destinationFileDirItem, index + 1, conflictResolutions, callback)
                 }
             }
         } else {
-            checkConflict(files, destinationFolder, index + 1, conflictResolutions, callback)
+            checkConflict(files, destinationFileDirItem, index + 1, conflictResolutions, callback)
         }
     }
 

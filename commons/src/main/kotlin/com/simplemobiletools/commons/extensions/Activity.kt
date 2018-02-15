@@ -103,8 +103,8 @@ fun Activity.updateSDCardPath() {
 }
 
 @SuppressLint("InlinedApi")
-fun Activity.isShowingSAFDialog(file: File, treeUri: String, requestCode: Int): Boolean {
-    return if (needsStupidWritePermissions(file.absolutePath) && (treeUri.isEmpty() || !hasProperStoredTreeUri())) {
+fun Activity.isShowingSAFDialog(path: String, treeUri: String, requestCode: Int): Boolean {
+    return if (needsStupidWritePermissions(path) && (treeUri.isEmpty() || !hasProperStoredTreeUri())) {
         runOnUiThread {
             WritePermissionDialog(this, false) {
                 Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
@@ -318,7 +318,7 @@ fun BaseSimpleActivity.deleteFoldersBg(folders: ArrayList<FileDirItem>, deleteMe
         }
     }
 
-    handleSAFDialog(File(needPermissionForPath)) {
+    handleSAFDialog(needPermissionForPath) {
         folders.forEachIndexed { index, folder ->
             deleteFolderBg(folder, deleteMediaOnly) {
                 if (it)
@@ -381,7 +381,7 @@ fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<FileDirItem>, allowDeleteF
     }
 
     var wasSuccess = false
-    handleSAFDialog(File(files[0].path)) {
+    handleSAFDialog(files[0].path) {
         files.forEachIndexed { index, file ->
             deleteFileBg(file, allowDeleteFolder) {
                 if (it) {
@@ -408,10 +408,11 @@ fun BaseSimpleActivity.deleteFile(fileDirItem: FileDirItem, allowDeleteFolder: B
 
 @SuppressLint("NewApi")
 fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
-    val file = File(fileDirItem.path)
-    var fileDeleted = !isPathOnOTG(fileDirItem.path) && (!file.exists() || file.delete())
+    val path = fileDirItem.path
+    val file = File(path)
+    var fileDeleted = !isPathOnOTG(path) && (!file.exists() || file.delete())
     if (fileDeleted) {
-        rescanDeletedFile(fileDirItem) {
+        rescanDeletedPath(fileDirItem.path) {
             callback?.invoke(true)
         }
     } else {
@@ -420,8 +421,8 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
         }
 
         if (!fileDeleted) {
-            if (isPathOnSD(fileDirItem.path)) {
-                handleSAFDialog(file) {
+            if (isPathOnSD(path)) {
+                handleSAFDialog(fileDirItem.path) {
                     trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
                 }
             } else if (isPathOnOTG(fileDirItem.path)) {
@@ -441,18 +442,18 @@ fun BaseSimpleActivity.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFol
         }
 
         if (fileDeleted) {
-            rescanDeletedFile(fileDirItem) {
+            rescanDeletedPath(fileDirItem.path) {
                 callback?.invoke(true)
             }
         }
     }
 }
 
-fun BaseSimpleActivity.rescanDeletedFile(fileDirItem: FileDirItem, callback: (() -> Unit)? = null) {
-    if (deleteFromMediaStore(fileDirItem.path)) {
+fun BaseSimpleActivity.rescanDeletedPath(path: String, callback: (() -> Unit)? = null) {
+    if (deleteFromMediaStore(path)) {
         callback?.invoke()
     } else {
-        MediaScannerConnection.scanFile(applicationContext, arrayOf(fileDirItem.path), null, { s, uri ->
+        MediaScannerConnection.scanFile(applicationContext, arrayOf(path), null, { s, uri ->
             try {
                 applicationContext.contentResolver.delete(uri, null, null)
             } catch (e: Exception) {
@@ -494,22 +495,22 @@ fun Activity.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = nul
 }
 
 @SuppressLint("NewApi")
-fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: ((success: Boolean) -> Unit)? = null) {
-    if (needsStupidWritePermissions(newFile.absolutePath)) {
-        handleSAFDialog(newFile) {
-            val document = getFileDocument(oldFile.absolutePath)
-            if (document == null || (oldFile.isDirectory != document.isDirectory)) {
+fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((success: Boolean) -> Unit)? = null) {
+    if (needsStupidWritePermissions(newPath)) {
+        handleSAFDialog(newPath) {
+            val document = getFileDocument(oldPath)
+            if (document == null || (File(oldPath).isDirectory != document.isDirectory)) {
                 callback?.invoke(false)
                 return@handleSAFDialog
             }
 
             try {
-                val uri = DocumentsContract.renameDocument(applicationContext.contentResolver, document.uri, newFile.name)
+                val uri = DocumentsContract.renameDocument(applicationContext.contentResolver, document.uri, newPath)
                 if (document.uri != uri) {
-                    updateInMediaStore(oldFile.absolutePath, newFile.absolutePath)
-                    scanFiles(arrayListOf(oldFile, newFile)) {
+                    updateInMediaStore(oldPath, newPath)
+                    scanPaths(arrayListOf(oldPath, newPath)) {
                         if (!baseConfig.keepLastModified) {
-                            updateLastModified(newFile, System.currentTimeMillis())
+                            updateLastModified(newPath, System.currentTimeMillis())
                         }
                         callback?.invoke(true)
                     }
@@ -521,18 +522,18 @@ fun BaseSimpleActivity.renameFile(oldFile: File, newFile: File, callback: ((succ
                 callback?.invoke(false)
             }
         }
-    } else if (oldFile.renameTo(newFile)) {
-        if (newFile.isDirectory) {
-            deleteFromMediaStore(oldFile.path)
-            scanFile(newFile) {
+    } else if (File(oldPath).renameTo(File(newPath))) {
+        if (File(newPath).isDirectory) {
+            deleteFromMediaStore(oldPath)
+            scanPath(newPath) {
                 callback?.invoke(true)
             }
         } else {
             if (!baseConfig.keepLastModified) {
-                newFile.setLastModified(System.currentTimeMillis())
+                File(newPath).setLastModified(System.currentTimeMillis())
             }
-            updateInMediaStore(oldFile.absolutePath, newFile.absolutePath)
-            scanFile(newFile) {
+            updateInMediaStore(oldPath, newPath)
+            scanPath(newPath) {
                 callback?.invoke(true)
             }
         }
@@ -558,19 +559,19 @@ fun Activity.hideKeyboard(view: View) {
     inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
 }
 
-fun BaseSimpleActivity.getFileOutputStream(file: File, callback: (outputStream: OutputStream?) -> Unit) {
-    if (needsStupidWritePermissions(file.absolutePath)) {
-        handleSAFDialog(file) {
-            var document = getFileDocument(file.absolutePath)
+fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, callback: (outputStream: OutputStream?) -> Unit) {
+    if (needsStupidWritePermissions(fileDirItem.path)) {
+        handleSAFDialog(fileDirItem.path) {
+            var document = getFileDocument(fileDirItem.path)
             if (document == null) {
-                val error = String.format(getString(R.string.could_not_create_file), file.absolutePath)
+                val error = String.format(getString(R.string.could_not_create_file), fileDirItem.path)
                 showErrorToast(error)
                 callback(null)
                 return@handleSAFDialog
             }
 
-            if (!file.exists()) {
-                document = document.createFile("", file.name)
+            if (!File(fileDirItem.path).exists()) {
+                document = document.createFile("", fileDirItem.name)
             }
 
             if (document?.exists() == true) {
@@ -581,13 +582,13 @@ fun BaseSimpleActivity.getFileOutputStream(file: File, callback: (outputStream: 
                     callback(null)
                 }
             } else {
-                val error = String.format(getString(R.string.could_not_create_file), file.absolutePath)
+                val error = String.format(getString(R.string.could_not_create_file), fileDirItem.path)
                 showErrorToast(error)
                 callback(null)
             }
         }
     } else {
-        callback(FileOutputStream(file))
+        callback(FileOutputStream(File(fileDirItem.path)))
     }
 }
 

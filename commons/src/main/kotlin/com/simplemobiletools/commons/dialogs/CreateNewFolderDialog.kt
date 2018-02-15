@@ -31,7 +31,7 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                                 return@OnClickListener
                             }
 
-                            createFolder(file, this)
+                            createFolder("$path/$name", this)
                         }
                         else -> activity.toast(R.string.invalid_name)
                     }
@@ -40,19 +40,19 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
         }
     }
 
-    private fun createFolder(file: File, alertDialog: AlertDialog) {
+    private fun createFolder(path: String, alertDialog: AlertDialog) {
         try {
             when {
-                activity.needsStupidWritePermissions(file.absolutePath) -> activity.handleSAFDialog(file) {
+                activity.needsStupidWritePermissions(path) -> activity.handleSAFDialog(path) {
                     try {
-                        val documentFile = activity.getFileDocument(file.absolutePath)
-                        documentFile?.createDirectory(file.name)
-                        sendSuccess(alertDialog, file)
+                        val documentFile = activity.getFileDocument(path)
+                        documentFile?.createDirectory(path.getFilenameFromPath())
+                        sendSuccess(alertDialog, path)
                     } catch (e: SecurityException) {
                         activity.showErrorToast(e)
                     }
                 }
-                file.mkdirs() -> sendSuccess(alertDialog, file)
+                File(path).mkdirs() -> sendSuccess(alertDialog, path)
                 else -> activity.toast(R.string.unknown_error_occurred)
             }
         } catch (e: Exception) {
@@ -60,8 +60,8 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
         }
     }
 
-    private fun sendSuccess(alertDialog: AlertDialog, file: File) {
-        callback(file.absolutePath.trimEnd('/'))
+    private fun sendSuccess(alertDialog: AlertDialog, path: String) {
+        callback(path.trimEnd('/'))
         alertDialog.dismiss()
     }
 }

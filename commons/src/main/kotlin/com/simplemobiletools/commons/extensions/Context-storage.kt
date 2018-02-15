@@ -245,14 +245,14 @@ fun Context.updateInMediaStore(oldPath: String, newPath: String) {
     }.start()
 }
 
-fun Context.updateLastModified(file: File, lastModified: Long) {
+fun Context.updateLastModified(path: String, lastModified: Long) {
     val values = ContentValues().apply {
         put(MediaStore.MediaColumns.DATE_MODIFIED, lastModified)
     }
-    file.setLastModified(lastModified)
-    val uri = getFileUri(file.absolutePath)
+    File(path).setLastModified(lastModified)
+    val uri = getFileUri(path)
     val selection = "${MediaStore.MediaColumns.DATA} = ?"
-    val selectionArgs = arrayOf(file.absolutePath)
+    val selectionArgs = arrayOf(path)
 
     try {
         contentResolver.update(uri, values, selection, selectionArgs)
