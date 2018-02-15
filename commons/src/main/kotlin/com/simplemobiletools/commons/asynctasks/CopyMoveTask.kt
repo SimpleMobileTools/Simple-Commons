@@ -63,7 +63,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         for (file in mFiles) {
             val newFile = File(pair.second!!.path, file.name)
             if (!newFile.exists() || getConflictResolution(newFile) != CONFLICT_SKIP) {
-                mMaxSize += (File(file.path).getProperSize(copyHidden) / 1000).toInt()
+                mMaxSize += (file.getProperSize(activity, copyHidden) / 1000).toInt()
             }
         }
 

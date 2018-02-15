@@ -109,8 +109,6 @@ fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWit
 
 fun Context.isPathOnOTG(path: String) = path.startsWith(OTG_PATH)
 
-fun Context.isFileDirItemOnOTG(fileDirItem: FileDirItem) = fileDirItem.path.startsWith(OTG_PATH)
-
 fun Context.needsStupidWritePermissions(path: String) = (isPathOnSD(path) || isPathOnOTG(path)) && isLollipopPlus()
 
 @SuppressLint("NewApi")
@@ -136,8 +134,8 @@ fun Context.getMyFileUri(file: File): Uri {
 }
 
 @SuppressLint("NewApi")
-fun Context.tryFastDocumentDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolean): Boolean {
-    val document = getFastDocument(fileDirItem)
+fun Context.tryFastDocumentDelete(path: String, allowDeleteFolder: Boolean): Boolean {
+    val document = getFastDocument(path)
     return if (document?.isFile == true || allowDeleteFolder) {
         DocumentsContract.deleteDocument(contentResolver, document?.uri)
     } else {
@@ -146,12 +144,12 @@ fun Context.tryFastDocumentDelete(fileDirItem: FileDirItem, allowDeleteFolder: B
 }
 
 @SuppressLint("NewApi")
-fun Context.getFastDocument(fileDirItem: FileDirItem): DocumentFile? {
+fun Context.getFastDocument(path: String): DocumentFile? {
     if (!isLollipopPlus()) {
         return null
     }
 
-    val isOTG = isFileDirItemOnOTG(fileDirItem)
+    val isOTG = isPathOnOTG(path)
     if (!isOTG && baseConfig.sdCardPath.isEmpty()) {
         return null
     }
@@ -160,7 +158,7 @@ fun Context.getFastDocument(fileDirItem: FileDirItem): DocumentFile? {
     val basePath = if (isOTG) baseConfig.OTGBasePath else baseConfig.sdCardPath
     val treeUri = if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri
 
-    val relativePath = Uri.encode(fileDirItem.path.substring(startString.length).trim('/'))
+    val relativePath = Uri.encode(path.substring(startString.length).trim('/'))
     val externalPathPart = basePath.split("/").last(String::isNotEmpty).trim('/')
     val fullUri = "$treeUri/document/$externalPathPart%3A$relativePath"
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
@@ -188,6 +186,8 @@ fun Context.getFileDocument(path: String): DocumentFile? {
 
     return document
 }
+
+fun Context.getSomeFileDocument(path: String) = getFastDocument(path) ?: getFileDocument(path)
 
 fun Context.scanFile(file: File, callback: (() -> Unit)? = null) {
     scanFiles(arrayListOf(file), callback)
@@ -319,7 +319,8 @@ fun Context.getOTGItems(path: String, countHiddenItems: Boolean, callback: (Arra
         if (file.exists()) {
             val filePath = file.uri.toString().substring(basePath.length)
             val decodedPath = OTG_PATH + "/" + URLDecoder.decode(filePath, "UTF-8")
-            items.add(FileDirItem(decodedPath, file.name, file.isDirectory, file.listFiles()?.size ?: 0, file.getItemSize(countHiddenItems)))
+            items.add(FileDirItem(decodedPath, file.name, file.isDirectory, file.listFiles()?.size
+                    ?: 0, file.getItemSize(countHiddenItems)))
         }
     }
     callback(items)
@@ -341,7 +342,7 @@ fun Context.rescanDeletedPath(path: String, callback: (() -> Unit)? = null) {
 
 @SuppressLint("NewApi")
 fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
-    var fileDeleted = tryFastDocumentDelete(fileDirItem, allowDeleteFolder)
+    var fileDeleted = tryFastDocumentDelete(fileDirItem.path, allowDeleteFolder)
     if (!fileDeleted) {
         val document = getFileDocument(fileDirItem.path)
         if (document != null && (fileDirItem.isDirectory == document.isDirectory)) {

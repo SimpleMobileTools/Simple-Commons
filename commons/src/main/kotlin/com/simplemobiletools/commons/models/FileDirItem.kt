@@ -1,7 +1,7 @@
 package com.simplemobiletools.commons.models
 
-import com.simplemobiletools.commons.extensions.formatDate
-import com.simplemobiletools.commons.extensions.formatSize
+import android.content.Context
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import java.io.File
 
@@ -53,5 +53,13 @@ data class FileDirItem(val path: String, val name: String = "", val isDirectory:
         sorting and SORT_BY_DATE_MODIFIED != 0 -> File(path).lastModified().formatDate()
         sorting and SORT_BY_EXTENSION != 0 -> getExtension().toLowerCase()
         else -> name
+    }
+
+    fun getProperSize(context: Context, countHidden: Boolean): Long {
+        return if (context.isPathOnOTG(path)) {
+            context.getSomeFileDocument(path)?.getItemSize(countHidden) ?: 0
+        } else {
+            File(path).getProperSize(countHidden)
+        }
     }
 }
