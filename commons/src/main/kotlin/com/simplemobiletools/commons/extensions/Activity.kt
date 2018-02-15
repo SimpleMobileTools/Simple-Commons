@@ -8,7 +8,6 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Looper
 import android.os.TransactionTooLargeException
@@ -90,16 +89,6 @@ fun Activity.appLaunched() {
     if (!isThankYouInstalled() && (baseConfig.appRunCount % 50 == 0)) {
         DonateDialog(this)
     }
-}
-
-fun Activity.updateSDCardPath() {
-    Thread {
-        val oldPath = baseConfig.sdCardPath
-        baseConfig.sdCardPath = getSDCardPath().trimEnd('/')
-        if (oldPath != baseConfig.sdCardPath) {
-            baseConfig.treeUri = ""
-        }
-    }.start()
 }
 
 @SuppressLint("InlinedApi")
@@ -257,14 +246,6 @@ fun Activity.openFile(uri: Uri, forceChooser: Boolean, applicationId: String) {
             }
         }
     }.start()
-}
-
-fun Activity.getUriMimeType(oldUri: Uri, newUri: Uri): String {
-    var mimeType = getMimeTypeFromUri(oldUri)
-    if (mimeType.isEmpty()) {
-        mimeType = getMimeTypeFromUri(newUri)
-    }
-    return mimeType
 }
 
 fun Activity.tryGenericMimeType(intent: Intent, mimeType: String, uri: Uri): Boolean {
@@ -432,37 +413,6 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
     }
 }
 
-@SuppressLint("NewApi")
-fun BaseSimpleActivity.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
-    var fileDeleted = tryFastDocumentDelete(fileDirItem, allowDeleteFolder)
-    if (!fileDeleted) {
-        val document = getFileDocument(fileDirItem.path)
-        if (document != null && (fileDirItem.isDirectory == document.isDirectory)) {
-            fileDeleted = (document.isFile == true || allowDeleteFolder) && DocumentsContract.deleteDocument(applicationContext.contentResolver, document.uri)
-        }
-
-        if (fileDeleted) {
-            rescanDeletedPath(fileDirItem.path) {
-                callback?.invoke(true)
-            }
-        }
-    }
-}
-
-fun BaseSimpleActivity.rescanDeletedPath(path: String, callback: (() -> Unit)? = null) {
-    if (deleteFromMediaStore(path)) {
-        callback?.invoke()
-    } else {
-        MediaScannerConnection.scanFile(applicationContext, arrayOf(path), null, { s, uri ->
-            try {
-                applicationContext.contentResolver.delete(uri, null, null)
-            } catch (e: Exception) {
-            }
-            callback?.invoke()
-        })
-    }
-}
-
 private fun deleteRecursively(file: File): Boolean {
     if (file.isDirectory) {
         val files = file.listFiles() ?: return file.delete()
@@ -608,29 +558,6 @@ fun BaseSimpleActivity.getFileOutputStreamSync(targetPath: String, mimeType: Str
     } else {
         FileOutputStream(targetFile)
     }
-}
-
-@SuppressLint("NewApi")
-fun BaseSimpleActivity.getFileDocument(path: String): DocumentFile? {
-    if (!isLollipopPlus()) {
-        return null
-    }
-
-    val isOTG = path.startsWith(OTG_PATH)
-    var relativePath = path.substring(if (isOTG) OTG_PATH.length else sdCardPath.length)
-    if (relativePath.startsWith(File.separator)) {
-        relativePath = relativePath.substring(1)
-    }
-
-    var document = DocumentFile.fromTreeUri(this, Uri.parse(if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri))
-    val parts = relativePath.split("/")
-    for (part in parts) {
-        val currDocument = document.findFile(part)
-        if (currDocument != null)
-            document = currDocument
-    }
-
-    return document
 }
 
 fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {

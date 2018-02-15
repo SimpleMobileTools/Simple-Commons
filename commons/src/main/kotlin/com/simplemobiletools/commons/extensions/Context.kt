@@ -318,3 +318,21 @@ fun Context.getCurrentFormattedDateTime(): String {
     val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd_HH-mm", Locale.getDefault())
     return simpleDateFormat.format(Date(System.currentTimeMillis()))
 }
+
+fun Context.updateSDCardPath() {
+    Thread {
+        val oldPath = baseConfig.sdCardPath
+        baseConfig.sdCardPath = getSDCardPath().trimEnd('/')
+        if (oldPath != baseConfig.sdCardPath) {
+            baseConfig.treeUri = ""
+        }
+    }.start()
+}
+
+fun Context.getUriMimeType(oldUri: Uri, newUri: Uri): String {
+    var mimeType = getMimeTypeFromUri(oldUri)
+    if (mimeType.isEmpty()) {
+        mimeType = getMimeTypeFromUri(newUri)
+    }
+    return mimeType
+}

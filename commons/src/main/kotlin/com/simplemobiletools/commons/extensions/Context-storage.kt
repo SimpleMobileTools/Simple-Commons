@@ -166,6 +166,29 @@ fun Context.getFastDocument(fileDirItem: FileDirItem): DocumentFile? {
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
 
+@SuppressLint("NewApi")
+fun Context.getFileDocument(path: String): DocumentFile? {
+    if (!isLollipopPlus()) {
+        return null
+    }
+
+    val isOTG = path.startsWith(OTG_PATH)
+    var relativePath = path.substring(if (isOTG) OTG_PATH.length else sdCardPath.length)
+    if (relativePath.startsWith(File.separator)) {
+        relativePath = relativePath.substring(1)
+    }
+
+    var document = DocumentFile.fromTreeUri(applicationContext, Uri.parse(if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri))
+    val parts = relativePath.split("/")
+    for (part in parts) {
+        val currDocument = document.findFile(part)
+        if (currDocument != null)
+            document = currDocument
+    }
+
+    return document
+}
+
 fun Context.scanFile(file: File, callback: (() -> Unit)? = null) {
     scanFiles(arrayListOf(file), callback)
 }
@@ -300,6 +323,37 @@ fun Context.getOTGItems(path: String, callback: (ArrayList<FileDirItem>) -> Unit
         }
     }
     callback(items)
+}
+
+fun Context.rescanDeletedPath(path: String, callback: (() -> Unit)? = null) {
+    if (deleteFromMediaStore(path)) {
+        callback?.invoke()
+    } else {
+        MediaScannerConnection.scanFile(applicationContext, arrayOf(path), null, { s, uri ->
+            try {
+                applicationContext.contentResolver.delete(uri, null, null)
+            } catch (e: Exception) {
+            }
+            callback?.invoke()
+        })
+    }
+}
+
+@SuppressLint("NewApi")
+fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
+    var fileDeleted = tryFastDocumentDelete(fileDirItem, allowDeleteFolder)
+    if (!fileDeleted) {
+        val document = getFileDocument(fileDirItem.path)
+        if (document != null && (fileDirItem.isDirectory == document.isDirectory)) {
+            fileDeleted = (document.isFile == true || allowDeleteFolder) && DocumentsContract.deleteDocument(applicationContext.contentResolver, document.uri)
+        }
+
+        if (fileDeleted) {
+            rescanDeletedPath(fileDirItem.path) {
+                callback?.invoke(true)
+            }
+        }
+    }
 }
 
 // avoid these being set as SD card paths
