@@ -164,7 +164,12 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun sendSuccess() {
-        callback(if (currPath.length == 1) currPath else currPath.trimEnd('/'))
+        currPath = if (currPath == OTG_PATH || currPath.length == 1) {
+            currPath
+        } else {
+            currPath.trimEnd('/')
+        }
+        callback(currPath)
         mDialog.dismiss()
     }
 
