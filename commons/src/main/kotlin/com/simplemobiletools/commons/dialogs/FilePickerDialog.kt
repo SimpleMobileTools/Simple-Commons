@@ -10,6 +10,7 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.FilepickerItemsAdapter
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.OTG_PATH
+import com.simplemobiletools.commons.helpers.SORT_BY_SIZE
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.Breadcrumbs
 import kotlinx.android.synthetic.main.dialog_filepicker.view.*
@@ -100,7 +101,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
     private fun tryUpdateItems() {
         Thread {
-            getItems(currPath) {
+            getItems(currPath, activity.baseConfig.sorting and SORT_BY_SIZE != 0) {
                 activity.runOnUiThread {
                     updateItems(it)
                 }
@@ -165,15 +166,15 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         mDialog.dismiss()
     }
 
-    private fun getItems(path: String, callback: (List<FileDirItem>) -> Unit) {
+    private fun getItems(path: String, getProperFileSize: Boolean, callback: (List<FileDirItem>) -> Unit) {
         if (path.startsWith(OTG_PATH)) {
-            activity.getOTGItems(path, showHidden, callback)
+            activity.getOTGItems(path, showHidden, getProperFileSize, callback)
         } else {
-            getRegularItems(path, callback)
+            getRegularItems(path, getProperFileSize, callback)
         }
     }
 
-    private fun getRegularItems(path: String, callback: (List<FileDirItem>) -> Unit) {
+    private fun getRegularItems(path: String, getProperFileSize: Boolean, callback: (List<FileDirItem>) -> Unit) {
         val items = ArrayList<FileDirItem>()
         val base = File(path)
         val files = base.listFiles()
@@ -189,7 +190,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
             val curPath = file.absolutePath
             val curName = curPath.getFilenameFromPath()
-            val size = file.length()
+            val size = if (getProperFileSize) file.getProperSize(showHidden) else file.length()
             items.add(FileDirItem(curPath, curName, file.isDirectory, getChildren(file), size))
         }
         callback(items)

@@ -30,9 +30,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     private val PROGRESS_RECHECK_INTERVAL = 500L
 
     private var mListener: WeakReference<CopyMoveListener>? = null
-    private var mMovedFiles: ArrayList<FileDirItem> = ArrayList()
+    private var mMovedFiles = ArrayList<FileDirItem>()
     private var mDocuments = LinkedHashMap<String, DocumentFile?>()
-    private lateinit var mFiles: ArrayList<FileDirItem>
+    private var mFiles = ArrayList<FileDirItem>()
     private var mFileCountToCopy = 0
 
     // progress indication

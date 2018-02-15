@@ -194,7 +194,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
             if (isCopyOperation) {
                 startCopyMove(fileDirItems, FileDirItem(destination), isCopyOperation, copyPhotoVideoOnly, copyHidden)
             } else {
-                if (isPathOnSD(source) || isPathOnSD(destination) || fileDirItems.first().isDirectory || isNougatPlus()) {
+                if (isPathOnOTG(source) || isPathOnOTG(destination) || isPathOnSD(source) || isPathOnSD(destination) || fileDirItems.first().isDirectory || isNougatPlus()) {
                     handleSAFDialog(source) {
                         startCopyMove(fileDirItems, FileDirItem(destination), isCopyOperation, copyPhotoVideoOnly, copyHidden)
                     }

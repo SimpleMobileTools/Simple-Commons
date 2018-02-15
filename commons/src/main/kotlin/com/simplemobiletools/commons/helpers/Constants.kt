@@ -40,7 +40,6 @@ const val WAS_SHARED_THEME_FORCED = "was_shared_theme_forced"
 const val WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN = "was_custom_theme_switch_description_shown"
 const val WAS_SHARED_THEME_AFTER_UPDATE_CHECKED = "was_shared_theme_after_update_checked"
 const val SHOW_INFO_BUBBLE = "show_info_bubble"
-const val SORTING = "sorting"
 const val LAST_CONFLICT_RESOLUTION = "last_conflict_resolution"
 const val LAST_CONFLICT_APPLY_TO_ALL = "last_conflict_apply_to_all"
 const val AVOID_WHATS_NEW = "avoid_whats_new"
@@ -73,6 +72,7 @@ const val REQUEST_SET_AS = 1002
 const val REQUEST_EDIT_IMAGE = 1003
 
 // sorting
+const val SORT_ORDER = "sort_order"
 const val SORT_BY_NAME = 1
 const val SORT_BY_DATE_MODIFIED = 2
 const val SORT_BY_SIZE = 4
