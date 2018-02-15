@@ -355,6 +355,8 @@ fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolea
     }
 }
 
+fun Context.doesFilePathExist(path: String) = if (isPathOnOTG(path)) getFastDocumentFile(path)?.exists() ?: false else File(path).exists()
+
 // avoid these being set as SD card paths
 private val physicalPaths = arrayListOf(
         "/storage/sdcard1", // Motorola Xoom

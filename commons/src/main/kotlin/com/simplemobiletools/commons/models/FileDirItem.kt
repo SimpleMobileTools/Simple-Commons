@@ -63,5 +63,5 @@ data class FileDirItem(val path: String, val name: String = "", var isDirectory:
         }
     }
 
-    fun getParentPath() = path.substring(0, path.length - name.length)
+    fun getParentPath() = path.getParentPath()
 }

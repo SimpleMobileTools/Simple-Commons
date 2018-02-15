@@ -77,8 +77,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             try {
                 val newPath = "${pair.second!!.path}/${file.name}"
                 val newFileDirItem = FileDirItem(newPath, newPath.getFilenameFromPath())
-
-                if (File(newPath).exists() || activity.getSomeDocumentFile(newPath) != null) {
+                if (activity.doesFilePathExist(newPath)) {
                     val resolution = getConflictResolution(newPath)
                     if (resolution == CONFLICT_SKIP) {
                         mFileCountToCopy--
@@ -219,10 +218,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         var out: OutputStream? = null
         try {
             if (!mDocuments.containsKey(directory) && activity.needsStupidWritePermissions(destination.path)) {
-                mDocuments[directory] = activity.getSomeDocumentFile(directory)
+                mDocuments[directory] = activity.getDocumentFile(directory)
             }
-
-            out = activity.getFileOutputStreamSync(directory, source.path.getMimeType(), mDocuments[directory])
+            out = activity.getFileOutputStreamSync(destination.path, source.path.getMimeType(), mDocuments[directory])
             inputStream = activity.getFileInputStreamSync(source.path)!!
 
             var copiedSize = 0L

@@ -2,6 +2,8 @@ package com.simplemobiletools.commons.extensions
 
 import android.content.Context
 import android.media.ExifInterface
+import com.simplemobiletools.commons.R.string.name
+import com.simplemobiletools.commons.R.string.path
 import com.simplemobiletools.commons.helpers.OTG_PATH
 import java.text.SimpleDateFormat
 import java.util.*
@@ -121,6 +123,8 @@ fun String.getGenericMimeType(): String {
     val type = substring(0, indexOf("/"))
     return "$type/*"
 }
+
+fun String.getParentPath() = substring(0, length - getFilenameFromPath().length)
 
 fun String.getMimeTypeFromPath(): String {
     val typesMap = HashMap<String, String>().apply {
