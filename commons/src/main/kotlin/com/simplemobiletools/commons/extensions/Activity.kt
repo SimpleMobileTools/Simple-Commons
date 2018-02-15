@@ -588,17 +588,18 @@ fun Activity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
     }
 }
 
-fun BaseSimpleActivity.createDirectorySync(directory: File): Boolean {
-    if (directory.exists()) {
+fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
+    if (File(directory).exists()) {
         return true
     }
 
-    if (needsStupidWritePermissions(directory.absolutePath)) {
-        val documentFile = getDocumentFile(directory.absolutePath) ?: return false
-        val newDir = documentFile.createDirectory(directory.name)
+    if (needsStupidWritePermissions(directory)) {
+        val documentFile = getDocumentFile(directory) ?: return false
+        val newDir = documentFile.createDirectory(directory.getFilenameFromPath())
         return newDir != null
     }
-    return directory.mkdirs()
+
+    return File(directory).mkdirs()
 }
 
 fun BaseSimpleActivity.useEnglishToggled() {

@@ -5,7 +5,7 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import java.io.File
 
-data class FileDirItem(val path: String, val name: String = "", val isDirectory: Boolean = false, var children: Int = 0, var size: Long = 0L) :
+data class FileDirItem(val path: String, val name: String = "", var isDirectory: Boolean = false, var children: Int = 0, var size: Long = 0L) :
         Comparable<FileDirItem> {
     companion object {
         var sorting: Int = 0
@@ -62,4 +62,6 @@ data class FileDirItem(val path: String, val name: String = "", val isDirectory:
             File(path).getProperSize(countHidden)
         }
     }
+
+    fun getParentPath() = path.substring(0, path.length - name.length)
 }
