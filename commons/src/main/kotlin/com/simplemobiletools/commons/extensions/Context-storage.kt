@@ -319,7 +319,7 @@ fun Context.getOTGItems(path: String, callback: (ArrayList<FileDirItem>) -> Unit
         if (file.exists()) {
             val filePath = file.uri.toString().substring(basePath.length)
             val decodedPath = OTG_PATH + "/" + URLDecoder.decode(filePath, "UTF-8")
-            items.add(FileDirItem(decodedPath, file.name, file.isDirectory, 0, file.length()))
+            items.add(FileDirItem(decodedPath, file.name, file.isDirectory, file.listFiles()?.size ?: 0, file.length()))
         }
     }
     callback(items)
