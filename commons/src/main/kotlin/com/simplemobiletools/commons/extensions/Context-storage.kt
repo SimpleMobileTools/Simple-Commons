@@ -111,7 +111,7 @@ fun Context.isPathOnOTG(path: String) = path.startsWith(OTG_PATH)
 
 fun Context.isFileDirItemOnOTG(fileDirItem: FileDirItem) = fileDirItem.path.startsWith(OTG_PATH)
 
-fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isLollipopPlus()
+fun Context.needsStupidWritePermissions(path: String) = (isPathOnSD(path) || isPathOnOTG(path)) && isLollipopPlus()
 
 @SuppressLint("NewApi")
 fun Context.hasProperStoredTreeUri(): Boolean {

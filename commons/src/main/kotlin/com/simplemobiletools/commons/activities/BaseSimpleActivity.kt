@@ -167,7 +167,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
     fun startCustomizationActivity() = startActivity(Intent(this, CustomizationActivity::class.java))
 
     fun handleSAFDialog(path: String, callback: () -> Unit): Boolean {
-        return if (isShowingSAFDialog(path, baseConfig.treeUri, OPEN_DOCUMENT_TREE)) {
+        return if (!isPathOnOTG(path) && isShowingSAFDialog(path, baseConfig.treeUri, OPEN_DOCUMENT_TREE)) {
             funAfterSAFPermission = callback
             true
         } else {
