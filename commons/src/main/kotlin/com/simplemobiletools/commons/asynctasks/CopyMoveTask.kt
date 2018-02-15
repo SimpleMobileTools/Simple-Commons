@@ -219,7 +219,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         var out: OutputStream? = null
         try {
             if (!mDocuments.containsKey(directory) && activity.needsStupidWritePermissions(destination.path)) {
-                mDocuments[directory] = activity.getDocumentFile(directory)
+                mDocuments[directory] = activity.getSomeDocumentFile(directory)
             }
 
             out = activity.getFileOutputStreamSync(directory, source.path.getMimeType(), mDocuments[directory])
