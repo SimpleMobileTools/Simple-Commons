@@ -152,7 +152,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     private fun verifyPath() {
         val file = File(currPath)
         if (currPath.startsWith(OTG_PATH)) {
-            val fileDocument = activity.getFileDocument(currPath) ?: return
+            val fileDocument = activity.getDocumentFile(currPath) ?: return
             if ((pickFile && fileDocument.isFile) || (!pickFile && fileDocument.isDirectory)) {
                 sendSuccess(fileDocument.uri.toString())
             }

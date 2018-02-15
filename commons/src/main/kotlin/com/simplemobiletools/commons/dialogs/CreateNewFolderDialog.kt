@@ -45,7 +45,7 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
             when {
                 activity.needsStupidWritePermissions(path) -> activity.handleSAFDialog(path) {
                     try {
-                        val documentFile = activity.getFileDocument(path)
+                        val documentFile = activity.getDocumentFile(path)
                         documentFile?.createDirectory(path.getFilenameFromPath())
                         sendSuccess(alertDialog, path)
                     } catch (e: SecurityException) {

@@ -57,7 +57,7 @@ data class FileDirItem(val path: String, val name: String = "", val isDirectory:
 
     fun getProperSize(context: Context, countHidden: Boolean): Long {
         return if (context.isPathOnOTG(path)) {
-            context.getSomeFileDocument(path)?.getItemSize(countHidden) ?: 0
+            context.getSomeDocumentFile(path)?.getItemSize(countHidden) ?: 0
         } else {
             File(path).getProperSize(countHidden)
         }

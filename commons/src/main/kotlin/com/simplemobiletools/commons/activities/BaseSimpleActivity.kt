@@ -184,7 +184,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
 
         val destinationFolder = File(destination)
-        if (!destinationFolder.exists()) {
+        if (!destinationFolder.exists() && getDocumentFile(destination) == null) {
             toast(R.string.invalid_destination)
             return
         }

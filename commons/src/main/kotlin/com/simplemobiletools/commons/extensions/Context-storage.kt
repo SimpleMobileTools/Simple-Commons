@@ -135,7 +135,7 @@ fun Context.getMyFileUri(file: File): Uri {
 
 @SuppressLint("NewApi")
 fun Context.tryFastDocumentDelete(path: String, allowDeleteFolder: Boolean): Boolean {
-    val document = getFastDocument(path)
+    val document = getFastDocumentFile(path)
     return if (document?.isFile == true || allowDeleteFolder) {
         DocumentsContract.deleteDocument(contentResolver, document?.uri)
     } else {
@@ -144,7 +144,7 @@ fun Context.tryFastDocumentDelete(path: String, allowDeleteFolder: Boolean): Boo
 }
 
 @SuppressLint("NewApi")
-fun Context.getFastDocument(path: String): DocumentFile? {
+fun Context.getFastDocumentFile(path: String): DocumentFile? {
     if (!isLollipopPlus()) {
         return null
     }
@@ -165,7 +165,7 @@ fun Context.getFastDocument(path: String): DocumentFile? {
 }
 
 @SuppressLint("NewApi")
-fun Context.getFileDocument(path: String): DocumentFile? {
+fun Context.getDocumentFile(path: String): DocumentFile? {
     if (!isLollipopPlus()) {
         return null
     }
@@ -179,15 +179,13 @@ fun Context.getFileDocument(path: String): DocumentFile? {
     var document = DocumentFile.fromTreeUri(applicationContext, Uri.parse(if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri))
     val parts = relativePath.split("/")
     for (part in parts) {
-        val currDocument = document.findFile(part)
-        if (currDocument != null)
-            document = currDocument
+        document = document?.findFile(part)
     }
 
     return document
 }
 
-fun Context.getSomeFileDocument(path: String) = getFastDocument(path) ?: getFileDocument(path)
+fun Context.getSomeDocumentFile(path: String) = getFastDocumentFile(path) ?: getDocumentFile(path)
 
 fun Context.scanFile(file: File, callback: (() -> Unit)? = null) {
     scanFiles(arrayListOf(file), callback)
@@ -344,7 +342,7 @@ fun Context.rescanDeletedPath(path: String, callback: (() -> Unit)? = null) {
 fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     var fileDeleted = tryFastDocumentDelete(fileDirItem.path, allowDeleteFolder)
     if (!fileDeleted) {
-        val document = getFileDocument(fileDirItem.path)
+        val document = getDocumentFile(fileDirItem.path)
         if (document != null && (fileDirItem.isDirectory == document.isDirectory)) {
             fileDeleted = (document.isFile == true || allowDeleteFolder) && DocumentsContract.deleteDocument(applicationContext.contentResolver, document.uri)
         }

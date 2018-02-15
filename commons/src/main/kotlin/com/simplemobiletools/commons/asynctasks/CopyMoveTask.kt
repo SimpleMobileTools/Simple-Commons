@@ -18,7 +18,6 @@ import com.simplemobiletools.commons.helpers.CONFLICT_SKIP
 import com.simplemobiletools.commons.interfaces.CopyMoveListener
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
-import java.io.FileInputStream
 import java.io.InputStream
 import java.io.OutputStream
 import java.lang.ref.WeakReference
@@ -200,12 +199,11 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         var out: OutputStream? = null
         try {
             if (!mDocuments.containsKey(destination.parent) && activity.needsStupidWritePermissions(destination.absolutePath)) {
-                mDocuments[destination.parent] = activity.getFileDocument(destination.parent)
+                mDocuments[destination.parent] = activity.getDocumentFile(destination.parent)
             }
 
             out = activity.getFileOutputStreamSync(destination.absolutePath, source.path.getMimeType(), mDocuments[destination.parent])
-
-            inputStream = FileInputStream(File(source.path))
+            inputStream = activity.getFileInputStreamSync(source.path)!!
 
             val buffer = ByteArray(DEFAULT_BUFFER_SIZE)
             var bytes = inputStream.read(buffer)

@@ -35,10 +35,7 @@ import com.simplemobiletools.commons.models.Release
 import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.MyTextView
 import kotlinx.android.synthetic.main.dialog_title.view.*
-import java.io.File
-import java.io.FileNotFoundException
-import java.io.FileOutputStream
-import java.io.OutputStream
+import java.io.*
 import java.util.*
 
 fun Activity.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
@@ -448,7 +445,7 @@ fun Activity.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = nul
 fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((success: Boolean) -> Unit)? = null) {
     if (needsStupidWritePermissions(newPath)) {
         handleSAFDialog(newPath) {
-            val document = getFileDocument(oldPath)
+            val document = getDocumentFile(oldPath)
             if (document == null || (File(oldPath).isDirectory != document.isDirectory)) {
                 callback?.invoke(false)
                 return@handleSAFDialog
@@ -512,7 +509,7 @@ fun Activity.hideKeyboard(view: View) {
 fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, callback: (outputStream: OutputStream?) -> Unit) {
     if (needsStupidWritePermissions(fileDirItem.path)) {
         handleSAFDialog(fileDirItem.path) {
-            var document = getFileDocument(fileDirItem.path)
+            var document = getDocumentFile(fileDirItem.path)
             if (document == null) {
                 val error = String.format(getString(R.string.could_not_create_file), fileDirItem.path)
                 showErrorToast(error)
@@ -542,21 +539,30 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, callback: (
     }
 }
 
-fun BaseSimpleActivity.getFileOutputStreamSync(targetPath: String, mimeType: String, parentDocumentFile: DocumentFile? = null): OutputStream? {
-    val targetFile = File(targetPath)
+fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, parentDocumentFile: DocumentFile? = null): OutputStream? {
+    val targetFile = File(path)
 
-    return if (needsStupidWritePermissions(targetPath)) {
-        val documentFile = parentDocumentFile ?: getFileDocument(targetFile.parent)
+    return if (needsStupidWritePermissions(path)) {
+        val documentFile = parentDocumentFile ?: getDocumentFile(targetFile.parent)
         if (documentFile == null) {
             val error = String.format(getString(R.string.could_not_create_file), targetFile.parent)
             showErrorToast(error)
             return null
         }
 
-        val newDocument = documentFile.createFile(mimeType, targetPath.getFilenameFromPath())
+        val newDocument = documentFile.createFile(mimeType, path.getFilenameFromPath())
         applicationContext.contentResolver.openOutputStream(newDocument!!.uri)
     } else {
         FileOutputStream(targetFile)
+    }
+}
+
+fun BaseSimpleActivity.getFileInputStreamSync(path: String): InputStream? {
+    return if (needsStupidWritePermissions(path)) {
+        val fileDocument = getSomeDocumentFile(path)
+        applicationContext.contentResolver.openInputStream(fileDocument?.uri)
+    } else {
+        FileInputStream(File(path))
     }
 }
 
@@ -583,11 +589,12 @@ fun Activity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
 }
 
 fun BaseSimpleActivity.createDirectorySync(directory: File): Boolean {
-    if (directory.exists())
+    if (directory.exists()) {
         return true
+    }
 
     if (needsStupidWritePermissions(directory.absolutePath)) {
-        val documentFile = getFileDocument(directory.absolutePath) ?: return false
+        val documentFile = getDocumentFile(directory.absolutePath) ?: return false
         val newDir = documentFile.createDirectory(directory.name)
         return newDir != null
     }
