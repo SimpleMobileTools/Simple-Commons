@@ -66,7 +66,7 @@ class PropertiesDialog() {
                 val cursor = activity.contentResolver.query(uri, projection, selection, selectionArgs, null)
                 cursor?.use {
                     if (cursor.moveToFirst()) {
-                        val dateModified = cursor.getLongValue(MediaStore.Images.Media.DATE_MODIFIED)
+                        val dateModified = cursor.getLongValue(MediaStore.Images.Media.DATE_MODIFIED) * 1000L
                         updateLastModified(activity, view, dateModified)
                     } else {
                         updateLastModified(activity, view, fileDirItem.getLastModified(activity))

@@ -42,12 +42,12 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     private var mDialogView = activity.layoutInflater.inflate(R.layout.dialog_filepicker, null)
 
     init {
-        if (!File(currPath).exists()) {
+        if (!activity.doesFilePathExist(currPath)) {
             currPath = activity.internalStoragePath
         }
 
-        if (File(currPath).isFile) {
-            currPath = File(currPath).parent
+        if (!activity.getIsPathDirectory(currPath)) {
+            currPath = currPath.getParentPath()
         }
 
         mDialogView.filepicker_breadcrumbs.listener = this

@@ -64,6 +64,7 @@ private fun getDirectoryFileCount(dir: File, countHiddenItems: Boolean): Int {
             for (i in files.indices) {
                 val file = files[i]
                 if (file.isDirectory) {
+                    count++
                     count += getDirectoryFileCount(file, countHiddenItems)
                 } else if (!file.isHidden || countHiddenItems) {
                     count++
