@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
+import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Point
@@ -150,4 +151,4 @@ private fun getDirectoryFileCount(dir: File, countHiddenItems: Boolean): Int {
     return count
 }
 
-fun File.toFileDirItem() = FileDirItem(absolutePath, name, isDirectory, 0, 0L)
+fun File.toFileDirItem(context: Context) = FileDirItem(absolutePath, name, absolutePath.getIsDirectory(context), 0, 0L)

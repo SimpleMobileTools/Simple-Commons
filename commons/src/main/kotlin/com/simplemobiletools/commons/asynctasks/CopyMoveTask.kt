@@ -29,7 +29,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     private val PROGRESS_RECHECK_INTERVAL = 500L
 
     private var mListener: WeakReference<CopyMoveListener>? = null
-    private var mMovedFiles = ArrayList<FileDirItem>()
+    private var mTransferredFiles = ArrayList<FileDirItem>()
     private var mDocuments = LinkedHashMap<String, DocumentFile?>()
     private var mFiles = ArrayList<FileDirItem>()
     private var mFileCountToCopy = 0
@@ -76,7 +76,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         for (file in mFiles) {
             try {
                 val newPath = "${pair.second!!.path}/${file.name}"
-                val newFileDirItem = FileDirItem(newPath, newPath.getFilenameFromPath())
+                val newFileDirItem = FileDirItem(newPath, newPath.getFilenameFromPath(), file.isDirectory)
                 if (activity.doesFilePathExist(newPath)) {
                     val resolution = getConflictResolution(newPath)
                     if (resolution == CONFLICT_SKIP) {
@@ -96,7 +96,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         }
 
         if (!copyOnly) {
-            activity.deleteFiles(mMovedFiles) {}
+            activity.deleteFiles(mTransferredFiles) {}
         }
 
         val paths = mFiles.map { it.path } as ArrayList<String>
@@ -110,7 +110,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         val listener = mListener?.get() ?: return
 
         if (success) {
-            listener.copySucceeded(copyOnly, mMovedFiles.size >= mFileCountToCopy)
+            listener.copySucceeded(copyOnly, mTransferredFiles.size >= mFileCountToCopy)
         } else {
             listener.copyFailed()
         }
@@ -172,10 +172,10 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         }
 
         if (activity.isPathOnOTG(source.path)) {
-            val children = activity.getSomeDocumentFile(source.path)?.listFiles() ?: return
+            val children = activity.getDocumentFile(source.path)?.listFiles() ?: return
             for (child in children) {
                 val newPath = "$destinationPath/${child.name}"
-                if (activity.getFastDocumentFile(newPath)?.exists() == true) {
+                if (activity.doesFilePathExist(newPath)) {
                     continue
                 }
 
@@ -184,18 +184,21 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 val newFileDirItem = FileDirItem(newPath, child.name, child.isDirectory)
                 copy(oldFileDirItem, newFileDirItem)
             }
+            mTransferredFiles.add(source)
         } else {
             val children = File(source.path).list()
             for (child in children) {
-                val newFile = File(destinationPath, child)
-                if (newFile.exists()) {
+                val newPath = "$destinationPath/$child"
+                if (activity.doesFilePathExist(newPath)) {
                     continue
                 }
 
                 val oldFile = File(source.path, child)
-                copy(oldFile.toFileDirItem(), newFile.toFileDirItem())
+                val oldFileDirItem = oldFile.toFileDirItem(activity.applicationContext)
+                val newFileDirItem = FileDirItem(newPath, newPath.getFilenameFromPath(), oldFile.isDirectory)
+                copy(oldFileDirItem, newFileDirItem)
             }
-            mMovedFiles.add(source)
+            mTransferredFiles.add(source)
         }
     }
 
@@ -234,7 +237,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             mCurrentProgress += copiedSize
 
             if (source.size == copiedSize) {
-                mMovedFiles.add(source)
+                mTransferredFiles.add(source)
                 if (activity.baseConfig.keepLastModified) {
                     copyOldLastModified(source.path, destination.path)
                 } else {

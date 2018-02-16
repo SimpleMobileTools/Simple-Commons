@@ -210,7 +210,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
                                     newFile.setLastModified(System.currentTimeMillis())
                                 }
                                 updateInMediaStore(oldFileDirItem.path, newFile.absolutePath)
-                                updatedFiles.add(newFile.toFileDirItem())
+                                updatedFiles.add(newFile.toFileDirItem(applicationContext))
                             }
                         }
 

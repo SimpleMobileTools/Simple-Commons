@@ -332,7 +332,7 @@ fun BaseSimpleActivity.deleteFolderBg(fileDirItem: FileDirItem, deleteMediaOnly:
         val filesList = (filesArr as Array).toList()
         val files = filesList.filter { !deleteMediaOnly || it.isImageVideoGif() }
         for (file in files) {
-            deleteFileBg(file.toFileDirItem(), false) { }
+            deleteFileBg(file.toFileDirItem(applicationContext), false) { }
         }
 
         if (folder.listFiles()?.isEmpty() == true) {
@@ -589,12 +589,12 @@ fun Activity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
 }
 
 fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
-    if (File(directory).exists()) {
+    if (doesFilePathExist(directory)) {
         return true
     }
 
     if (needsStupidWritePermissions(directory)) {
-        val documentFile = getDocumentFile(directory) ?: return false
+        val documentFile = getDocumentFile(directory.getParentPath()) ?: return false
         val newDir = documentFile.createDirectory(directory.getFilenameFromPath())
         return newDir != null
     }

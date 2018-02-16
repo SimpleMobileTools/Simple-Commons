@@ -128,7 +128,7 @@ fun String.getParentPath() = substring(0, length - getFilenameFromPath().length)
 
 fun String.getIsDirectory(context: Context): Boolean {
     return if (context.isPathOnOTG(this)) {
-        context.getSomeDocumentFile(this)?.isDirectory ?: false
+        context.getFastDocumentFile(this)?.isDirectory ?: false
     } else {
         File(this).isDirectory
     }
