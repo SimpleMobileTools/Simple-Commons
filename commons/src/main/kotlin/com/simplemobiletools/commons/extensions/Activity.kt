@@ -126,13 +126,13 @@ fun Activity.launchViewIntent(url: String) {
     }.start()
 }
 
-fun Activity.shareUri(uri: Uri, applicationId: String) {
+fun Activity.shareUriIntent(path: String, applicationId: String) {
     Thread {
-        val newUri = ensurePublicUri(uri, applicationId)
+        val newUri = getFinalUriFromPath(path, applicationId) ?: return@Thread
         Intent().apply {
             action = Intent.ACTION_SEND
             putExtra(Intent.EXTRA_STREAM, newUri)
-            type = getUriMimeType(uri, newUri)
+            type = getUriMimeType(path, newUri)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             if (resolveActivity(packageManager) != null) {
                 try {
@@ -147,16 +147,23 @@ fun Activity.shareUri(uri: Uri, applicationId: String) {
     }.start()
 }
 
-fun Activity.shareUris(uris: ArrayList<Uri>, applicationId: String) {
+fun Activity.sharePathsIntent(paths: ArrayList<String>, applicationId: String) {
     Thread {
-        if (uris.size == 1) {
-            shareUri(uris.first(), applicationId)
+        if (paths.size == 1) {
+            shareUriIntent(paths.first(), applicationId)
         } else {
-            val newUris = uris.map { ensurePublicUri(it, applicationId) } as ArrayList<Uri>
-            var mimeType = newUris.getMimeType()
+            val uriPaths = ArrayList<String>()
+            val newUris = paths.map {
+                val uri = getFinalUriFromPath(it, applicationId) ?: return@Thread
+                uriPaths.add(uri.path)
+                uri
+            } as ArrayList<Uri>
+
+            var mimeType = uriPaths.getMimeType()
             if (mimeType.isEmpty() || mimeType == "*/*") {
-                mimeType = uris.getMimeType()
+                mimeType = paths.getMimeType()
             }
+
             Intent().apply {
                 action = Intent.ACTION_SEND_MULTIPLE
                 type = mimeType
@@ -177,12 +184,12 @@ fun Activity.shareUris(uris: ArrayList<Uri>, applicationId: String) {
     }.start()
 }
 
-fun Activity.setAs(uri: Uri, applicationId: String) {
+fun Activity.setAsIntent(path: String, applicationId: String) {
     Thread {
-        val newUri = ensurePublicUri(uri, applicationId)
+        val newUri = getFinalUriFromPath(path, applicationId) ?: return@Thread
         Intent().apply {
             action = Intent.ACTION_ATTACH_DATA
-            setDataAndType(newUri, getUriMimeType(uri, newUri))
+            setDataAndType(newUri, getUriMimeType(path, newUri))
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             val chooser = Intent.createChooser(this, getString(R.string.set_as))
 
@@ -195,14 +202,14 @@ fun Activity.setAs(uri: Uri, applicationId: String) {
     }.start()
 }
 
-fun Activity.openEditor(uri: Uri, applicationId: String) {
+fun Activity.openEditorIntent(path: String, applicationId: String) {
     Thread {
-        val newUri = ensurePublicUri(uri, applicationId)
+        val newUri = getFinalUriFromPath(path, applicationId) ?: return@Thread
         Intent().apply {
             action = Intent.ACTION_EDIT
-            setDataAndType(newUri, getUriMimeType(uri, newUri))
+            setDataAndType(newUri, getUriMimeType(path, newUri))
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            putExtra(MediaStore.EXTRA_OUTPUT, uri)
+            putExtra(MediaStore.EXTRA_OUTPUT, newUri)
 
             if (resolveActivity(packageManager) != null) {
                 startActivityForResult(this, REQUEST_EDIT_IMAGE)
@@ -213,15 +220,10 @@ fun Activity.openEditor(uri: Uri, applicationId: String) {
     }.start()
 }
 
-fun Activity.openFile(uri: Uri, forceChooser: Boolean, applicationId: String) {
+fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: String) {
     Thread {
-        val newUri = try {
-            ensurePublicUri(uri, applicationId)
-        } catch (e: Exception) {
-            showErrorToast(e)
-            return@Thread
-        }
-        val mimeType = getUriMimeType(uri, newUri)
+        val newUri = getFinalUriFromPath(path, applicationId) ?: return@Thread
+        val mimeType = getUriMimeType(path, newUri)
         Intent().apply {
             action = Intent.ACTION_VIEW
             setDataAndType(newUri, mimeType)
@@ -231,7 +233,7 @@ fun Activity.openFile(uri: Uri, forceChooser: Boolean, applicationId: String) {
                 putExtra(IS_FROM_GALLERY, true)
             }
 
-            putExtra(REAL_FILE_PATH, uri)
+            putExtra(REAL_FILE_PATH, path)
 
             if (resolveActivity(packageManager) != null) {
                 val chooser = Intent.createChooser(this, getString(R.string.open_with))
@@ -243,6 +245,22 @@ fun Activity.openFile(uri: Uri, forceChooser: Boolean, applicationId: String) {
             }
         }
     }.start()
+}
+
+fun Activity.getFinalUriFromPath(path: String, applicationId: String): Uri? {
+    val uri = try {
+        ensurePublicUri(path, applicationId)
+    } catch (e: Exception) {
+        showErrorToast(e)
+        return null
+    }
+
+    if (uri == null) {
+        toast(R.string.unknown_error_occurred)
+        return null
+    }
+
+    return uri
 }
 
 fun Activity.tryGenericMimeType(intent: Intent, mimeType: String, uri: Uri): Boolean {

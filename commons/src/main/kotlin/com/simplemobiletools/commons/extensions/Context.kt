@@ -255,7 +255,7 @@ fun Context.getFilenameFromUri(uri: Uri): String {
 }
 
 fun Context.getMimeTypeFromUri(uri: Uri): String {
-    var mimetype = uri.path.getMimeTypeFromPath()
+    var mimetype = uri.path.getMimeType()
     if (mimetype.isEmpty()) {
         try {
             mimetype = contentResolver.getType(uri)
@@ -263,6 +263,20 @@ fun Context.getMimeTypeFromUri(uri: Uri): String {
         }
     }
     return mimetype
+}
+
+fun Context.ensurePublicUri(path: String, applicationId: String): Uri? {
+    return if (isPathOnOTG(path)) {
+        getDocumentFile(path)?.uri
+    } else {
+        val uri = Uri.parse(path)
+        if (uri.scheme == "content") {
+            uri
+        } else {
+            val file = File(uri.path)
+            getFilePublicUri(file, applicationId)
+        }
+    }
 }
 
 fun Context.ensurePublicUri(uri: Uri, applicationId: String): Uri {
@@ -329,8 +343,8 @@ fun Context.updateSDCardPath() {
     }.start()
 }
 
-fun Context.getUriMimeType(oldUri: Uri, newUri: Uri): String {
-    var mimeType = getMimeTypeFromUri(oldUri)
+fun Context.getUriMimeType(path: String, newUri: Uri): String {
+    var mimeType = path.getMimeType()
     if (mimeType.isEmpty()) {
         mimeType = getMimeTypeFromUri(newUri)
     }

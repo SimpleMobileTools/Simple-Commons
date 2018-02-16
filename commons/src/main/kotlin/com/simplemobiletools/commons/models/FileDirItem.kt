@@ -104,4 +104,6 @@ data class FileDirItem(val path: String, val name: String = "", var isDirectory:
     fun getVideoResolution() = path.getVideoResolution()
 
     fun getImageResolution() = path.getImageResolution()
+
+    fun getPublicUri(context: Context) = context.getDocumentFile(path)?.uri ?: ""
 }

@@ -198,17 +198,9 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             val curPath = file.absolutePath
             val curName = curPath.getFilenameFromPath()
             val size = if (getProperFileSize) file.getProperSize(showHidden) else file.length()
-            items.add(FileDirItem(curPath, curName, file.isDirectory, getChildren(file), size))
+            items.add(FileDirItem(curPath, curName, file.isDirectory, file.getDirectChildrenCount(showHidden), size))
         }
         callback(items)
-    }
-
-    private fun getChildren(file: File): Int {
-        return if (file.listFiles() == null || !file.isDirectory) {
-            0
-        } else {
-            file.listFiles().filter { !it.isHidden || (it.isHidden && showHidden) }.size
-        }
     }
 
     private fun containsDirectory(items: List<FileDirItem>) = items.any { it.isDirectory }

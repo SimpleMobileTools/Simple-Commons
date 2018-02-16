@@ -15,7 +15,7 @@ fun File.isImageSlow() = absolutePath.isImageFast() || getMimeType().startsWith(
 fun File.isVideoSlow() = absolutePath.isVideoFast() || getMimeType().startsWith("video")
 fun File.isAudioSlow() = absolutePath.isAudioFast() || getMimeType().startsWith("audio")
 
-fun File.getMimeType() = absolutePath.getMimeTypeFromPath()
+fun File.getMimeType() = absolutePath.getMimeType()
 
 fun File.getCompressionFormat() = when (extension.toLowerCase()) {
     "png" -> Bitmap.CompressFormat.PNG

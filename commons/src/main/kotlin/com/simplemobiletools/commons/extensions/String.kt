@@ -13,8 +13,6 @@ fun String.getFilenameFromPath() = substring(lastIndexOf("/") + 1)
 
 fun String.getFilenameExtension() = substring(lastIndexOf(".") + 1)
 
-fun String.getMimeType() = getMimeTypeFromPath()
-
 fun String.getBasePath(context: Context): String {
     return if (startsWith(context.internalStoragePath)) {
         context.internalStoragePath
@@ -208,7 +206,9 @@ fun String.getImageResolution(): Point? {
     }
 }
 
-fun String.getMimeTypeFromPath(): String {
+fun String.getPublicUri(context: Context) = context.getDocumentFile(this)?.uri ?: ""
+
+fun String.getMimeType(): String {
     val typesMap = HashMap<String, String>().apply {
         put("323", "text/h323")
         put("3g2", "video/3gpp2")
