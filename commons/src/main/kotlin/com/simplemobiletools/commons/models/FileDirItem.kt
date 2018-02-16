@@ -75,7 +75,7 @@ data class FileDirItem(val path: String, val name: String = "", var isDirectory:
         return if (context.isPathOnOTG(path)) {
             context.getDocumentFile(path)?.listFiles()?.filter { if (countHiddenItems) true else !it.name.startsWith(".") }?.size ?: 0
         } else {
-            File(path).listFiles().filter { if (countHiddenItems) true else it.isHidden }.size
+            File(path).getDirectChildrenCount(countHiddenItems)
         }
     }
 
