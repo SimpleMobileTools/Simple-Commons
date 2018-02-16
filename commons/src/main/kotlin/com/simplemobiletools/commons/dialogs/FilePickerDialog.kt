@@ -94,7 +94,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
     private fun createNewFolder() {
         CreateNewFolderDialog(activity, currPath) {
-            callback(it.trimEnd('/'))
+            callback(it)
             mDialog.dismiss()
         }
     }

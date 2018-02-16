@@ -183,8 +183,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
             return
         }
 
-        val destinationFolder = File(destination)
-        if (!destinationFolder.exists() && getSomeDocumentFile(destination) == null) {
+        if (!doesFilePathExist(destination)) {
             toast(R.string.invalid_destination)
             return
         }
@@ -203,6 +202,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
                     val updatedFiles = ArrayList<FileDirItem>(fileDirItems.size * 2)
                     updatedFiles.addAll(fileDirItems)
                     try {
+                        val destinationFolder = File(destination)
                         for (oldFileDirItem in fileDirItems) {
                             val newFile = File(destinationFolder, oldFileDirItem.name)
                             if (!newFile.exists() && File(oldFileDirItem.path).renameTo(newFile)) {
@@ -244,15 +244,15 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
 
         val file = files[index]
-        val newFile = File(destinationFileDirItem.path, file.name)
-        if (newFile.exists()) {
-            FileConflictDialog(this, newFile) { resolution, applyForAll ->
+        val newFileDirItem = FileDirItem("${destinationFileDirItem.path}/${file.name}", file.name, file.isDirectory)
+        if (doesFilePathExist(newFileDirItem.path)) {
+            FileConflictDialog(this, newFileDirItem) { resolution, applyForAll ->
                 if (applyForAll) {
                     conflictResolutions.clear()
                     conflictResolutions[""] = resolution
                     checkConflict(files, destinationFileDirItem, files.size, conflictResolutions, callback)
                 } else {
-                    conflictResolutions[newFile.absolutePath] = resolution
+                    conflictResolutions[newFileDirItem.path] = resolution
                     checkConflict(files, destinationFileDirItem, index + 1, conflictResolutions, callback)
                 }
             }

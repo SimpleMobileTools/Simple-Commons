@@ -43,6 +43,7 @@
     <string name="filename_cannot_be_empty">Имя файла не может быть пустым</string>
     <string name="filename_invalid_characters">Имя файла содержит недопустимые символы</string>
     <string name="extension_cannot_be_empty">Расширение не может быть пустым</string>
+    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
 
     <!-- Copy / Move -->
     <string name="copy">Копировать</string>

@@ -2,9 +2,6 @@ package com.simplemobiletools.commons.extensions
 
 import android.content.Context
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.graphics.Point
-import android.media.MediaMetadataRetriever
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 
@@ -20,80 +17,6 @@ fun File.isAudioSlow() = absolutePath.isAudioFast() || getMimeType().startsWith(
 
 fun File.getMimeType() = absolutePath.getMimeTypeFromPath()
 
-fun File.getDuration() = getDurationSeconds().getFormattedDuration()
-
-fun File.getDurationSeconds(): Int {
-    return try {
-        val retriever = MediaMetadataRetriever()
-        retriever.setDataSource(absolutePath)
-        val time = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)
-        val timeInMs = java.lang.Long.parseLong(time)
-        (timeInMs / 1000).toInt()
-    } catch (e: Exception) {
-        0
-    }
-}
-
-fun File.getArtist(): String? {
-    return try {
-        val retriever = MediaMetadataRetriever()
-        retriever.setDataSource(absolutePath)
-        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST)
-    } catch (ignored: Exception) {
-        null
-    }
-}
-
-fun File.getAlbum(): String? {
-    return try {
-        val retriever = MediaMetadataRetriever()
-        retriever.setDataSource(absolutePath)
-        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUM)
-    } catch (ignored: Exception) {
-        null
-    }
-}
-
-fun File.getSongTitle(): String? {
-    return try {
-        val retriever = MediaMetadataRetriever()
-        retriever.setDataSource(absolutePath)
-        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE)
-    } catch (ignored: Exception) {
-        null
-    }
-}
-
-fun File.getResolution(): Point {
-    return if (isImageFast() || isImageSlow()) {
-        getImageResolution()
-    } else if (isVideoFast() || isVideoSlow()) {
-        getVideoResolution()
-    } else {
-        return Point(0, 0)
-    }
-}
-
-fun File.getVideoResolution(): Point {
-    try {
-        val retriever = MediaMetadataRetriever()
-        retriever.setDataSource(absolutePath)
-        val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH).toInt()
-        val height = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT).toInt()
-        return Point(width, height)
-    } catch (ignored: Exception) {
-
-    }
-    return Point(0, 0)
-}
-
-fun File.getImageResolution(): Point {
-    val options = BitmapFactory.Options()
-    options.inJustDecodeBounds = true
-    BitmapFactory.decodeFile(absolutePath, options)
-    return Point(options.outWidth, options.outHeight)
-}
-
 fun File.getCompressionFormat() = when (extension.toLowerCase()) {
     "png" -> Bitmap.CompressFormat.PNG
     "webp" -> Bitmap.CompressFormat.WEBP
@@ -102,7 +25,7 @@ fun File.getCompressionFormat() = when (extension.toLowerCase()) {
 
 fun File.getProperSize(countHiddenItems: Boolean): Long {
     return if (isDirectory) {
-        getDirectorySize(File(path), countHiddenItems)
+        getDirectorySize(this, countHiddenItems)
     } else {
         length()
     }
@@ -127,7 +50,7 @@ private fun getDirectorySize(dir: File, countHiddenItems: Boolean): Long {
 
 fun File.getFileCount(countHiddenItems: Boolean): Int {
     return if (isDirectory) {
-        getDirectoryFileCount(File(path), countHiddenItems)
+        getDirectoryFileCount(this, countHiddenItems)
     } else {
         1
     }
@@ -151,4 +74,4 @@ private fun getDirectoryFileCount(dir: File, countHiddenItems: Boolean): Int {
     return count
 }
 
-fun File.toFileDirItem(context: Context) = FileDirItem(absolutePath, name, absolutePath.getIsDirectory(context), 0, 0L)
+fun File.toFileDirItem(context: Context) = FileDirItem(absolutePath, name, context.getIsPathDirectory(absolutePath), 0, 0L)

@@ -63,5 +63,45 @@ data class FileDirItem(val path: String, val name: String = "", var isDirectory:
         }
     }
 
+    fun getProperFileCount(context: Context, countHidden: Boolean): Int {
+        return if (context.isPathOnOTG(path)) {
+            context.getDocumentFile(path)?.getFileCount(countHidden) ?: 0
+        } else {
+            File(path).getFileCount(countHidden)
+        }
+    }
+
+    fun getDirectChildrenCount(context: Context, countHiddenItems: Boolean): Int {
+        return if (context.isPathOnOTG(path)) {
+            context.getDocumentFile(path)?.listFiles()?.filter { if (countHiddenItems) true else !it.name.startsWith(".") }?.size ?: 0
+        } else {
+            File(path).listFiles().filter { if (countHiddenItems) true else it.isHidden }.size
+        }
+    }
+
+    fun getLastModified(context: Context): Long {
+        return if (context.isPathOnOTG(path)) {
+            context.getFastDocumentFile(path)?.lastModified() ?: 0L
+        } else {
+            File(path).lastModified()
+        }
+    }
+
     fun getParentPath() = path.getParentPath()
+
+    fun getDuration() = path.getDuration()
+
+    fun getFileDurationSeconds() = path.getFileDurationSeconds()
+
+    fun getArtist() = path.getFileArtist()
+
+    fun getAlbum() = path.getFileAlbum()
+
+    fun getSongTitle() = path.getFileSongTitle()
+
+    fun getResolution() = path.getResolution()
+
+    fun getVideoResolution() = path.getVideoResolution()
+
+    fun getImageResolution() = path.getImageResolution()
 }

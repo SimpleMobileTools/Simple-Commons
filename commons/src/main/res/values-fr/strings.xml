@@ -43,6 +43,7 @@
     <string name="filename_cannot_be_empty">Le nom de fichier ne peut pas rester vide</string>
     <string name="filename_invalid_characters">Le nom de fichier contient des caractères invalides</string>
     <string name="extension_cannot_be_empty">L\'extension ne peut pas rester vide</string>
+    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copier</string>

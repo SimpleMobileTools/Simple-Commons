@@ -43,6 +43,7 @@
     <string name="filename_cannot_be_empty">El nom de l\'arxiu no pot ser buit</string>
     <string name="filename_invalid_characters">El nom de l\'arxiu conté caràcters no vàlids</string>
     <string name="extension_cannot_be_empty">La extensió no pot estar buida</string>
+    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>

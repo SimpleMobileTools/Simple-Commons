@@ -1,9 +1,11 @@
 package com.simplemobiletools.commons.extensions
 
 import android.content.Context
+import android.graphics.BitmapFactory
+import android.graphics.Point
 import android.media.ExifInterface
+import android.media.MediaMetadataRetriever
 import com.simplemobiletools.commons.helpers.OTG_PATH
-import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -126,11 +128,83 @@ fun String.getGenericMimeType(): String {
 
 fun String.getParentPath() = substring(0, length - getFilenameFromPath().length)
 
-fun String.getIsDirectory(context: Context): Boolean {
-    return if (context.isPathOnOTG(this)) {
-        context.getFastDocumentFile(this)?.isDirectory ?: false
+fun String.getDuration() = getFileDurationSeconds()?.getFormattedDuration()
+
+fun String.getFileDurationSeconds(): Int? {
+    return try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(this)
+        val time = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)
+        val timeInMs = java.lang.Long.parseLong(time)
+        (timeInMs / 1000).toInt()
+    } catch (e: Exception) {
+        null
+    }
+}
+
+fun String.getFileArtist(): String? {
+    return try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(this)
+        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST)
+    } catch (ignored: Exception) {
+        null
+    }
+}
+
+fun String.getFileAlbum(): String? {
+    return try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(this)
+        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUM)
+    } catch (ignored: Exception) {
+        null
+    }
+}
+
+fun String.getFileSongTitle(): String? {
+    return try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(this)
+        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE)
+    } catch (ignored: Exception) {
+        null
+    }
+}
+
+fun String.getResolution(): Point? {
+    return if (isImageFast() || isImageSlow()) {
+        getImageResolution()
+    } else if (isVideoFast() || isVideoSlow()) {
+        getVideoResolution()
     } else {
-        File(this).isDirectory
+        return null
+    }
+}
+
+fun String.getVideoResolution(): Point? {
+    try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(this)
+        val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH).toInt()
+        val height = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT).toInt()
+        return Point(width, height)
+    } catch (ignored: Exception) {
+
+    }
+    return null
+}
+
+fun String.getImageResolution(): Point? {
+    val options = BitmapFactory.Options()
+    options.inJustDecodeBounds = true
+    BitmapFactory.decodeFile(this, options)
+    val width = options.outWidth
+    val height = options.outHeight
+    return if (width > 0 && height > 0) {
+        Point(options.outWidth, options.outHeight)
+    } else {
+        null
     }
 }
 

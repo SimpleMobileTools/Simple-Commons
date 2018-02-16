@@ -98,7 +98,7 @@ fun Context.humanizePath(path: String): String {
     val basePath = path.getBasePath(this)
     return when (basePath) {
         "/" -> "${getHumanReadablePath(basePath)}$path"
-        OTG_PATH -> path.replaceFirst(basePath, "${getHumanReadablePath(basePath)}/")
+        OTG_PATH -> path.replaceFirst(basePath, getHumanReadablePath(basePath)).replaceFirst("otg://", OTG_PATH).trimEnd('/')
         else -> path.replaceFirst(basePath, getHumanReadablePath(basePath))
     }
 }
@@ -356,6 +356,14 @@ fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolea
 }
 
 fun Context.doesFilePathExist(path: String) = if (isPathOnOTG(path)) getFastDocumentFile(path)?.exists() ?: false else File(path).exists()
+
+fun Context.getIsPathDirectory(path: String): Boolean {
+    return if (isPathOnOTG(path)) {
+        getFastDocumentFile(path)?.isDirectory ?: false
+    } else {
+        File(path).isDirectory
+    }
+}
 
 // avoid these being set as SD card paths
 private val physicalPaths = arrayListOf(

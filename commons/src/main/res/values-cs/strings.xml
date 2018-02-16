@@ -43,6 +43,7 @@
     <string name="filename_cannot_be_empty">Název souboru nemůže být prázdný</string>
     <string name="filename_invalid_characters">Název souboru obsahuje neplatné znaky</string>
     <string name="extension_cannot_be_empty">Přípona nemůže být prázdná</string>
+    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopírovat</string>

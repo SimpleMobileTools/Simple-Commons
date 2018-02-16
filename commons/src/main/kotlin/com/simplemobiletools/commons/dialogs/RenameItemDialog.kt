@@ -6,18 +6,16 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import kotlinx.android.synthetic.main.dialog_rename_item.view.*
-import java.io.File
 import java.util.*
 
 class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val callback: (newPath: String) -> Unit) {
     init {
-        val file = File(path)
-        val fullName = file.name
+        val fullName = path.getFilenameFromPath()
         val dotAt = fullName.lastIndexOf(".")
         var name = fullName
 
         val view = activity.layoutInflater.inflate(R.layout.dialog_rename_item, null).apply {
-            if (dotAt > 0 && !file.isDirectory) {
+            if (dotAt > 0 && !activity.getIsPathDirectory(path)) {
                 name = fullName.substring(0, dotAt)
                 val extension = fullName.substring(dotAt + 1)
                 rename_item_extension.setText(extension)
@@ -27,7 +25,7 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
             }
 
             rename_item_name.setText(name)
-            rename_item_path.text = activity.humanizePath(file.parent ?: "") + "/"
+            rename_item_path.text = activity.humanizePath(path.getParentPath())
         }
 
         AlertDialog.Builder(activity)
@@ -50,53 +48,34 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
                         return@setOnClickListener
                     }
 
-                    val updatedFiles = ArrayList<File>()
-                    updatedFiles.add(file)
+                    val updatedPaths = ArrayList<String>()
+                    updatedPaths.add(path)
                     if (!newExtension.isEmpty()) {
                         newName += ".$newExtension"
                     }
 
-                    val newFile = File(file.parent, newName)
-                    if (newFile.exists()) {
+                    if (!activity.doesFilePathExist(path)) {
+                        activity.toast(String.format(activity.getString(R.string.source_file_doesnt_exist), path))
+                        return@setOnClickListener
+                    }
+
+                    val newPath = "${path.getParentPath()}/$newName"
+                    if (activity.doesFilePathExist(newPath)) {
                         activity.toast(R.string.name_taken)
                         return@setOnClickListener
                     }
 
-                    updatedFiles.add(newFile)
-                    activity.renameFile(path, "${file.parent}/$newName") {
+                    updatedPaths.add(newPath)
+                    activity.renameFile(path, newPath) {
                         if (it) {
-                            sendSuccess(updatedFiles)
+                            activity.scanPaths(updatedPaths) {
+                                callback(newPath)
+                            }
                             dismiss()
                         } else {
                             activity.toast(R.string.unknown_error_occurred)
                         }
                     }
-                }
-            }
-        }
-    }
-
-    private fun sendSuccess(updatedFiles: ArrayList<File>) {
-        activity.apply {
-            if (updatedFiles[1].isDirectory) {
-                val files = updatedFiles[1].listFiles()
-                if (files != null) {
-                    if (files.isEmpty()) {
-                        scanPath(updatedFiles[1].absolutePath) {
-                            callback(updatedFiles[1].absolutePath.trimEnd('/'))
-                        }
-                    } else {
-                        for (file in files) {
-                            scanPath(file.absolutePath) {
-                                callback(updatedFiles[1].absolutePath.trimEnd('/'))
-                            }
-                            break
-                        }
-                    }
-                }
-            } else {
-                scanFiles(updatedFiles) {
-                    callback(updatedFiles[1].absolutePath.trimEnd('/'))
                 }
             }
         }

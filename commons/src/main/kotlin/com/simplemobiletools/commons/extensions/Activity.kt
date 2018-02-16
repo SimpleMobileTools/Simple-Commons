@@ -452,7 +452,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
             }
 
             try {
-                val uri = DocumentsContract.renameDocument(applicationContext.contentResolver, document.uri, newPath)
+                val uri = DocumentsContract.renameDocument(applicationContext.contentResolver, document.uri, newPath.getFilenameFromPath())
                 if (document.uri != uri) {
                     updateInMediaStore(oldPath, newPath)
                     scanPaths(arrayListOf(oldPath, newPath)) {

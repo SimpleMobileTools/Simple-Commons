@@ -43,6 +43,7 @@
     <string name="filename_cannot_be_empty">文件名不能为空</string>
     <string name="filename_invalid_characters">文件名包含非法字符</string>
     <string name="extension_cannot_be_empty">扩展名不能为空</string>
+    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
 
     <!-- Copy / Move -->
     <string name="copy">复制</string>

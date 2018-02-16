@@ -12,7 +12,7 @@ import java.io.File
 class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, val callback: (path: String) -> Unit) {
     init {
         val view = activity.layoutInflater.inflate(R.layout.dialog_create_new_folder, null)
-        view.folder_path.text = activity.humanizePath(path).trimEnd('/') + "/"
+        view.folder_path.text = "${activity.humanizePath(path)}/"
 
         AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.ok, null)
@@ -45,9 +45,12 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
             when {
                 activity.needsStupidWritePermissions(path) -> activity.handleSAFDialog(path) {
                     try {
-                        val documentFile = activity.getDocumentFile(path)
-                        documentFile?.createDirectory(path.getFilenameFromPath())
-                        sendSuccess(alertDialog, path)
+                        val documentFile = activity.getDocumentFile(path.getParentPath())
+                        if (documentFile?.createDirectory(path.getFilenameFromPath()) != null) {
+                            sendSuccess(alertDialog, path)
+                        } else {
+                            activity.toast(R.string.unknown_error_occurred)
+                        }
                     } catch (e: SecurityException) {
                         activity.showErrorToast(e)
                     }

@@ -232,9 +232,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             while (bytes >= 0) {
                 out!!.write(buffer, 0, bytes)
                 copiedSize += bytes
+                mCurrentProgress += bytes
                 bytes = inputStream.read(buffer)
             }
-            mCurrentProgress += copiedSize
 
             if (source.size == copiedSize) {
                 mTransferredFiles.add(source)
