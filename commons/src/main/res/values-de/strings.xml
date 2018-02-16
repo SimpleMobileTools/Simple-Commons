@@ -110,6 +110,7 @@
     <string name="sd_card">SD-Karte</string>
     <string name="root">Hauptverzeichnis</string>
     <string name="wrong_root_selected">Falscher Ordner ausgewählt, bitte Hauptverzeichnis der SD-Karte auswählen</string>
+    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
 
     <!-- File properties -->
     <string name="properties">Eigenschaften</string>

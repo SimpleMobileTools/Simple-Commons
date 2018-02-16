@@ -110,6 +110,7 @@
     <string name="sd_card">Cartão SD</string>
     <string name="root">Raiz</string>
     <string name="wrong_root_selected">Pasta inválida, por favor selecione a raiz do cartão SD</string>
+    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
 
     <!-- File properties -->
     <string name="properties">Propriedades</string>

@@ -110,6 +110,7 @@
     <string name="sd_card">SD Karta</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Neplatná složka zvolena, zvolte prosím root složku vaší SD karty</string>
+    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
 
     <!-- File properties -->
     <string name="properties">Vlastnosti</string>

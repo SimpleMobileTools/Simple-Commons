@@ -110,6 +110,7 @@
     <string name="sd_card">Tarjeta SD</string>
     <string name="root">Raíz /</string>
     <string name="wrong_root_selected">Se seleccionó la carpeta incorrecta, seleccione la carpeta raíz de su tarjeta SD</string>
+    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
 
     <!-- File properties -->
     <string name="properties">Propiedades</string>

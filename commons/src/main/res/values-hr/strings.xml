@@ -111,6 +111,7 @@
     <string name="sd_card">SD kartica</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Odabran je pogrešan direktorij, molimo odaberite root direktorij Vaše SD kartice</string>
+    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
 
     <!-- File properties -->
     <string name="properties">Svojstva</string>
