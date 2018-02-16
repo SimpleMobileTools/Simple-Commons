@@ -134,14 +134,15 @@ fun Activity.sharePathIntent(path: String, applicationId: String) {
             putExtra(Intent.EXTRA_STREAM, newUri)
             type = getUriMimeType(path, newUri)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            if (resolveActivity(packageManager) != null) {
-                try {
+
+            try {
+                if (resolveActivity(packageManager) != null) {
                     startActivity(Intent.createChooser(this, getString(R.string.share_via)))
-                } catch (e: TransactionTooLargeException) {
-                    toast(R.string.maximum_share_reached)
+                } else {
+                    toast(R.string.no_app_found)
                 }
-            } else {
-                toast(R.string.no_app_found)
+            } catch (e: TransactionTooLargeException) {
+                toast(R.string.maximum_share_reached)
             }
         }
     }.start()
@@ -170,14 +171,14 @@ fun Activity.sharePathsIntent(paths: ArrayList<String>, applicationId: String) {
                 addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                 putParcelableArrayListExtra(Intent.EXTRA_STREAM, newUris)
 
-                if (resolveActivity(packageManager) != null) {
-                    try {
+                try {
+                    if (resolveActivity(packageManager) != null) {
                         startActivity(Intent.createChooser(this, getString(R.string.share_via)))
-                    } catch (e: TransactionTooLargeException) {
-                        toast(R.string.maximum_share_reached)
+                    } else {
+                        toast(R.string.no_app_found)
                     }
-                } else {
-                    toast(R.string.no_app_found)
+                } catch (e: TransactionTooLargeException) {
+                    toast(R.string.maximum_share_reached)
                 }
             }
         }
