@@ -2,9 +2,8 @@ package com.simplemobiletools.commons.extensions
 
 import android.content.Context
 import android.media.ExifInterface
-import com.simplemobiletools.commons.R.string.name
-import com.simplemobiletools.commons.R.string.path
 import com.simplemobiletools.commons.helpers.OTG_PATH
+import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -51,6 +50,7 @@ fun String.isDng() = endsWith(".dng", true)
 
 // fast extension checks, not guaranteed to be accurate
 fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }
+
 fun String.isImageFast() = photoExtensions.any { endsWith(it, true) }
 fun String.isAudioFast() = audioExtensions.any { endsWith(it, true) }
 
@@ -125,6 +125,14 @@ fun String.getGenericMimeType(): String {
 }
 
 fun String.getParentPath() = substring(0, length - getFilenameFromPath().length)
+
+fun String.getIsDirectory(context: Context): Boolean {
+    return if (context.isPathOnOTG(this)) {
+        context.getSomeDocumentFile(this)?.isDirectory ?: false
+    } else {
+        File(this).isDirectory
+    }
+}
 
 fun String.getMimeTypeFromPath(): String {
     val typesMap = HashMap<String, String>().apply {
