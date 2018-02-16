@@ -126,7 +126,7 @@ fun Activity.launchViewIntent(url: String) {
     }.start()
 }
 
-fun Activity.shareUriIntent(path: String, applicationId: String) {
+fun Activity.sharePathIntent(path: String, applicationId: String) {
     Thread {
         val newUri = getFinalUriFromPath(path, applicationId) ?: return@Thread
         Intent().apply {
@@ -150,7 +150,7 @@ fun Activity.shareUriIntent(path: String, applicationId: String) {
 fun Activity.sharePathsIntent(paths: ArrayList<String>, applicationId: String) {
     Thread {
         if (paths.size == 1) {
-            shareUriIntent(paths.first(), applicationId)
+            sharePathIntent(paths.first(), applicationId)
         } else {
             val uriPaths = ArrayList<String>()
             val newUris = paths.map {

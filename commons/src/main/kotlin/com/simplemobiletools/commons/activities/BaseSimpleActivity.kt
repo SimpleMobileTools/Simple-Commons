@@ -38,6 +38,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     companion object {
         var funAfterSAFPermission: (() -> Unit)? = null
+        var funAfterOTGPermission: ((success: Boolean) -> Unit)? = null
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,6 +74,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         funAfterSAFPermission = null
+        funAfterOTGPermission = null
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
@@ -113,6 +115,10 @@ open class BaseSimpleActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, resultData)
         if (requestCode == OPEN_DOCUMENT_TREE && resultCode == Activity.RESULT_OK && resultData != null) {
             if (isProperSDFolder(resultData.data)) {
+                if (resultData.dataString == baseConfig.OTGTreeUri) {
+                    toast(R.string.sd_card_otg_same)
+                    return
+                }
                 saveTreeUri(resultData)
                 funAfterSAFPermission?.invoke()
                 funAfterSAFPermission = null
@@ -123,9 +129,14 @@ open class BaseSimpleActivity : AppCompatActivity() {
             }
         } else if (requestCode == OPEN_DOCUMENT_TREE_OTG && resultCode == Activity.RESULT_OK && resultData != null) {
             if (isProperOTGFolder(resultData.data)) {
+                if (resultData.dataString == baseConfig.treeUri) {
+                    funAfterOTGPermission?.invoke(false)
+                    toast(R.string.sd_card_otg_same)
+                    return
+                }
                 baseConfig.OTGTreeUri = resultData.dataString
-                funAfterSAFPermission?.invoke()
-                funAfterSAFPermission = null
+                funAfterOTGPermission?.invoke(true)
+                funAfterOTGPermission = null
             } else {
                 toast(R.string.wrong_root_selected_otg)
                 val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
@@ -297,13 +308,13 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun handleOTGPermission(callback: () -> Unit) {
+    fun handleOTGPermission(callback: (success: Boolean) -> Unit) {
         if (baseConfig.OTGTreeUri.isNotEmpty()) {
-            callback()
+            callback(true)
             return
         }
 
-        funAfterSAFPermission = callback
+        funAfterOTGPermission = callback
         WritePermissionDialog(this, true) {
             Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                 if (resolveActivity(packageManager) == null) {

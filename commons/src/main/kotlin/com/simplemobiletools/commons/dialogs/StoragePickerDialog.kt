@@ -20,30 +20,45 @@ import kotlinx.android.synthetic.main.dialog_radio_group.view.*
  *
  */
 class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, val callback: (pickedPath: String) -> Unit) {
-    var mDialog: AlertDialog
+    private val ID_INTERNAL = 1
+    private val ID_SD = 2
+    private val ID_OTG = 3
+    private val ID_ROOT = 4
+
+    private var mDialog: AlertDialog
+    private var radioGroup: RadioGroup
+    private var defaultSelectedId = 0
 
     init {
         val inflater = LayoutInflater.from(activity)
         val resources = activity.resources
-        val basePath = currPath.getBasePath(activity)
         val layoutParams = RadioGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         val view = inflater.inflate(R.layout.dialog_radio_group, null)
-        val radioGroup = view.dialog_radio_group
+        radioGroup = view.dialog_radio_group
+        val basePath = currPath.getBasePath(activity)
 
         val internalButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
         internalButton.apply {
+            id = ID_INTERNAL
             text = resources.getString(R.string.internal)
             isChecked = basePath == context.internalStoragePath
             setOnClickListener { internalPicked() }
+            if (isChecked) {
+                defaultSelectedId = id
+            }
         }
         radioGroup.addView(internalButton, layoutParams)
 
         if (activity.hasExternalSDCard()) {
             val sdButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
             sdButton.apply {
+                id = ID_SD
                 text = resources.getString(R.string.sd_card)
                 isChecked = basePath == context.sdCardPath
                 setOnClickListener { sdPicked() }
+                if (isChecked) {
+                    defaultSelectedId = id
+                }
             }
             radioGroup.addView(sdButton, layoutParams)
         }
@@ -51,18 +66,26 @@ class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, va
         if (activity.hasOTGConnected()) {
             val otgButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
             otgButton.apply {
+                id = ID_OTG
                 text = resources.getString(R.string.otg)
                 isChecked = basePath == OTG_PATH
                 setOnClickListener { otgPicked() }
+                if (isChecked) {
+                    defaultSelectedId = id
+                }
             }
             radioGroup.addView(otgButton, layoutParams)
         }
 
         val rootButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
         rootButton.apply {
+            id = ID_ROOT
             text = resources.getString(R.string.root)
             isChecked = basePath == "/"
             setOnClickListener { rootPicked() }
+            if (isChecked) {
+                defaultSelectedId = id
+            }
         }
         radioGroup.addView(rootButton, layoutParams)
 
@@ -84,8 +107,12 @@ class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, va
 
     private fun otgPicked() {
         activity.handleOTGPermission {
-            mDialog.dismiss()
-            callback(OTG_PATH)
+            if (it) {
+                callback(OTG_PATH)
+                mDialog.dismiss()
+            } else {
+                radioGroup.check(defaultSelectedId)
+            }
         }
     }
 
