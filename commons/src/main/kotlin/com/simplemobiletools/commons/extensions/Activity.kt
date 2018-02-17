@@ -616,7 +616,7 @@ fun Activity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
 }
 
 fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
-    if (doesFilePathExist(directory)) {
+    if (getDoesFilePathExist(directory)) {
         return true
     }
 

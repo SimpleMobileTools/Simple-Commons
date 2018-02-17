@@ -24,7 +24,7 @@ import java.lang.ref.WeakReference
 import java.util.*
 
 class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = false, val copyMediaOnly: Boolean, val conflictResolutions: LinkedHashMap<String, Int>,
-                   listener: CopyMoveListener, val copyHidden: Boolean) : AsyncTask<Pair<ArrayList<FileDirItem>, FileDirItem>, Void, Boolean>() {
+                   listener: CopyMoveListener, val copyHidden: Boolean) : AsyncTask<Pair<ArrayList<FileDirItem>, String>, Void, Boolean>() {
     private val INITIAL_PROGRESS_DELAY = 3000L
     private val PROGRESS_RECHECK_INTERVAL = 500L
 
@@ -49,7 +49,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         mNotificationBuilder = NotificationCompat.Builder(activity)
     }
 
-    override fun doInBackground(vararg params: Pair<ArrayList<FileDirItem>, FileDirItem>): Boolean? {
+    override fun doInBackground(vararg params: Pair<ArrayList<FileDirItem>, String>): Boolean? {
         if (params.isEmpty()) {
             return false
         }
@@ -60,7 +60,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         mNotifId = (System.currentTimeMillis() / 1000).toInt()
         mMaxSize = 0
         for (file in mFiles) {
-            val newPath = "${pair.second!!.path}/${file.name}"
+            val newPath = "${pair.second}/${file.name}"
             val fileExists = if (activity.isPathOnOTG(newPath)) activity.getFastDocumentFile(newPath)?.exists()
                     ?: false else File(newPath).exists()
             if (getConflictResolution(newPath) != CONFLICT_SKIP || !fileExists) {
@@ -75,9 +75,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
         for (file in mFiles) {
             try {
-                val newPath = "${pair.second!!.path}/${file.name}"
+                val newPath = "${pair.second}/${file.name}"
                 val newFileDirItem = FileDirItem(newPath, newPath.getFilenameFromPath(), file.isDirectory)
-                if (activity.doesFilePathExist(newPath)) {
+                if (activity.getDoesFilePathExist(newPath)) {
                     val resolution = getConflictResolution(newPath)
                     if (resolution == CONFLICT_SKIP) {
                         mFileCountToCopy--
@@ -175,7 +175,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             val children = activity.getDocumentFile(source.path)?.listFiles() ?: return
             for (child in children) {
                 val newPath = "$destinationPath/${child.name}"
-                if (activity.doesFilePathExist(newPath)) {
+                if (activity.getDoesFilePathExist(newPath)) {
                     continue
                 }
 
@@ -189,7 +189,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             val children = File(source.path).list()
             for (child in children) {
                 val newPath = "$destinationPath/$child"
-                if (activity.doesFilePathExist(newPath)) {
+                if (activity.getDoesFilePathExist(newPath)) {
                     continue
                 }
 

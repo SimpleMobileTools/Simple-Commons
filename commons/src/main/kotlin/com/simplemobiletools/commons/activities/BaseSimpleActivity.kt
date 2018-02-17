@@ -194,7 +194,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
             return
         }
 
-        if (!doesFilePathExist(destination)) {
+        if (!getDoesFilePathExist(destination)) {
             toast(R.string.invalid_destination)
             return
         }
@@ -202,11 +202,11 @@ open class BaseSimpleActivity : AppCompatActivity() {
         handleSAFDialog(destination) {
             copyMoveCallback = callback
             if (isCopyOperation) {
-                startCopyMove(fileDirItems, FileDirItem(destination), isCopyOperation, copyPhotoVideoOnly, copyHidden)
+                startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
             } else {
                 if (isPathOnOTG(source) || isPathOnOTG(destination) || isPathOnSD(source) || isPathOnSD(destination) || fileDirItems.first().isDirectory || isNougatPlus()) {
                     handleSAFDialog(source) {
-                        startCopyMove(fileDirItems, FileDirItem(destination), isCopyOperation, copyPhotoVideoOnly, copyHidden)
+                        startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
                     }
                 } else {
                     toast(R.string.moving)
@@ -239,36 +239,36 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    private fun startCopyMove(files: ArrayList<FileDirItem>, destinationFileDirItem: FileDirItem, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean, copyHidden: Boolean) {
-        checkConflict(files, destinationFileDirItem, 0, LinkedHashMap()) {
+    private fun startCopyMove(files: ArrayList<FileDirItem>, destinationPath: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean, copyHidden: Boolean) {
+        checkConflicts(files, destinationPath, 0, LinkedHashMap()) {
             toast(if (isCopyOperation) R.string.copying else R.string.moving)
-            val pair = Pair(files, destinationFileDirItem)
+            val pair = Pair(files, destinationPath)
             CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
         }
     }
 
-    private fun checkConflict(files: ArrayList<FileDirItem>, destinationFileDirItem: FileDirItem, index: Int, conflictResolutions: LinkedHashMap<String, Int>,
-                              callback: (resolutions: LinkedHashMap<String, Int>) -> Unit) {
+    fun checkConflicts(files: ArrayList<FileDirItem>, destinationPath: String, index: Int, conflictResolutions: LinkedHashMap<String, Int>,
+                       callback: (resolutions: LinkedHashMap<String, Int>) -> Unit) {
         if (index == files.size) {
             callback(conflictResolutions)
             return
         }
 
         val file = files[index]
-        val newFileDirItem = FileDirItem("${destinationFileDirItem.path}/${file.name}", file.name, file.isDirectory)
-        if (doesFilePathExist(newFileDirItem.path)) {
+        val newFileDirItem = FileDirItem("$destinationPath/${file.name}", file.name, file.isDirectory)
+        if (getDoesFilePathExist(newFileDirItem.path)) {
             FileConflictDialog(this, newFileDirItem) { resolution, applyForAll ->
                 if (applyForAll) {
                     conflictResolutions.clear()
                     conflictResolutions[""] = resolution
-                    checkConflict(files, destinationFileDirItem, files.size, conflictResolutions, callback)
+                    checkConflicts(files, destinationPath, files.size, conflictResolutions, callback)
                 } else {
                     conflictResolutions[newFileDirItem.path] = resolution
-                    checkConflict(files, destinationFileDirItem, index + 1, conflictResolutions, callback)
+                    checkConflicts(files, destinationPath, index + 1, conflictResolutions, callback)
                 }
             }
         } else {
-            checkConflict(files, destinationFileDirItem, index + 1, conflictResolutions, callback)
+            checkConflicts(files, destinationPath, index + 1, conflictResolutions, callback)
         }
     }
 
