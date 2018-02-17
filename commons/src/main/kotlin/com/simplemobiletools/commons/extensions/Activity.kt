@@ -141,8 +141,12 @@ fun Activity.sharePathIntent(path: String, applicationId: String) {
                 } else {
                     toast(R.string.no_app_found)
                 }
-            } catch (e: TransactionTooLargeException) {
-                toast(R.string.maximum_share_reached)
+            } catch (e: RuntimeException) {
+                if (e.cause is TransactionTooLargeException) {
+                    toast(R.string.maximum_share_reached)
+                } else {
+                    showErrorToast(e)
+                }
             }
         }
     }.start()
@@ -177,8 +181,12 @@ fun Activity.sharePathsIntent(paths: ArrayList<String>, applicationId: String) {
                     } else {
                         toast(R.string.no_app_found)
                     }
-                } catch (e: TransactionTooLargeException) {
-                    toast(R.string.maximum_share_reached)
+                } catch (e: RuntimeException) {
+                    if (e.cause is TransactionTooLargeException) {
+                        toast(R.string.maximum_share_reached)
+                    } else {
+                        showErrorToast(e)
+                    }
                 }
             }
         }
