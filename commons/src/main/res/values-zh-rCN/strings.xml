@@ -43,7 +43,7 @@
     <string name="filename_cannot_be_empty">文件名不能为空</string>
     <string name="filename_invalid_characters">文件名包含非法字符</string>
     <string name="extension_cannot_be_empty">扩展名不能为空</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
+    <string name="source_file_doesnt_exist">原文件 %s 不存在</string>
 
     <!-- Copy / Move -->
     <string name="copy">复制</string>
@@ -110,7 +110,7 @@
     <string name="sd_card">SD 卡</string>
     <string name="root">根目录</string>
     <string name="wrong_root_selected">目录选择错误，请选择 SD 卡</string>
-    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
+    <string name="sd_card_otg_same">SD 卡和 OTG 设备路径不能相同</string>
 
     <!-- File properties -->
     <string name="properties">属性</string>
