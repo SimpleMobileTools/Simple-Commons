@@ -300,6 +300,15 @@
     </string>
     <string name="purchase">Zakúpiť</string>
 
+    <!-- FAQ -->
+    <string name="frequently_asked_questions">Často kladené otázky</string>
+    <string name="faq_1_title_commons">Prečo nevidím widget tejto apky na zozname widgetov?</string>
+    <string name="faq_1_text_commons">Je to pravdepodobne spôsobené tým, že ste apku presunuli na SD kartu. Ide o systémové obmedzenie, ktoré v tomto prípade skryje widget apky.
+        Jediným riešením je presunutie apky späť na internú pamäť cez nastavnenia zariadenia.</string>
+    <string name="faq_2_title_commons">Chcem vás podporiť, ale neviem poslať peniaze. Viem pre vás urobiť aj niečo iné?</string>
+    <string name="faq_2_text_commons">Áno, samozrejme. Môžete napr. šíriť apky medzi známymi, alebo nám poslať užitočnú odozvu a hodnotenia. Viete pomôcť aj preložením apiek do nových jazykov, alebo upraviť existujúce preklady.
+        Návod nájdete na https://github.com/SimpleMobileTools/General-Discussion , alebo mi v prípade potreby pošlite email na hello@simplemobiletools.com.</string>
+
     <!-- License -->
     <string name="notice">Táto aplikácia používa na uľahčenie práce nasledovné knižnice tretích strán. Ďakujeme.</string>
     <string name="third_party_licences">Knižnice tretích strán</string>
