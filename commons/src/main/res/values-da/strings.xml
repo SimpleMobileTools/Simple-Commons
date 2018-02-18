@@ -297,13 +297,12 @@
     <string name="purchase">Køb</string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently Asked Questions</string>
-    <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
-    <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
-        in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
-    <string name="faq_2_title_commons">I want to support you, but I cannot donate money. Is there anything else I can do?</string>
-    <string name="faq_2_text_commons">Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-        You can find the guide at https://github.com/SimpleMobileTools/General-Discussion , or just shoot me a message at hello@simplemobiletools.com if you need help.</string>
+    <string name="frequently_asked_questions">Ofte stillede spørgsmål</string>
+    <string name="faq_1_title_commons">Hvorfor kan jeg ikke se denne app\'s widget på listen med widgets?</string>
+    <string name="faq_1_text_commons">Det er sikkert fordi du har flyttet appen til et SD-kort. Der er en begrænsning i Androidsystemet der i så fald skjuler appens widget. Eneste løsning er at flytte appen tilbage til det interne lager via indstillingerne på din enhed.</string>
+    <string name="faq_2_title_commons">Jeg vil gerne støtte dig, men jeg kan ikke donere penge. Er der andet jeg kan gøre?</string>
+    <string name="faq_2_text_commons">Ja, selvfølgelig. Du kan fortælle andre om appsene eller give god feedback og gode vurderinger. Du kan også hjælpe med at oversætte til et nyt sprog, eller med at opdatere en eksisterende oversættelse.
+        Du kan finde en guide på siden https://github.com/SimpleMobileTools/General-Discussion, eller send mig en besked på hello@simplemobiletools.com hvis du har brug for hjælp.</string>
 
     <!-- License -->
     <string name="notice">Denne app bruger følgende 3.-parts biblioteker der gør at mit liv bliver lidt enklere. Tak.</string>
