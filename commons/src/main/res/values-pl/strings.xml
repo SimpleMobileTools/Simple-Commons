@@ -11,9 +11,9 @@
     <string name="set_as">Ustaw jako</string>
     <string name="value_copied_to_clipboard">Wartość została skopiowana do schowka</string>
     <string name="unknown">Nieznane</string>
-    <string name="always">Always</string>
-    <string name="never">Never</string>
-    <string name="details">Details</string>
+    <string name="always">Zawsze</string>
+    <string name="never">Nigdy</string>
+    <string name="details">Szczegóły</string>
 
     <!-- Search -->
     <string name="search">Szukaj</string>
@@ -43,7 +43,7 @@
     <string name="filename_cannot_be_empty">Nazwa pliku nie może być pusta</string>
     <string name="filename_invalid_characters">Nazwa pliku zawiera niedozwolone znaki</string>
     <string name="extension_cannot_be_empty">Rozszerzenie pliku nie może być puste</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
+    <string name="source_file_doesnt_exist">Plik źródłowy nie istnieje</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopiuj</string>
@@ -111,7 +111,7 @@
     <string name="sd_card">Karta pamięci</string>
     <string name="root">Folder główny</string>
     <string name="wrong_root_selected">Wybrano nieprawidłowy folder. Wybierz główny folder karty pamięci.</string>
-    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
+    <string name="sd_card_otg_same">Ścieżka do karty pamięci i urządzenia OTG nie może być taka sama</string>
 
     <!-- File properties -->
     <string name="properties">Właściwości</string>
@@ -238,7 +238,7 @@
     <string name="settings">Ustawienia</string>
     <string name="customize_colors">Dostosuj kolory</string>
     <string name="use_english_language">Wymuś używanie przez aplikację języka angielskiego</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
+    <string name="avoid_whats_new">Nie pokazuj okna \'Co nowego\' po uruchomieniu aplikacji</string>
     <string name="show_hidden_items">Pokazuj ukryte elementy</string>
     <string name="font_size">Rozmiar czcionki</string>
     <string name="small">Mała</string>
@@ -249,7 +249,7 @@
     <string name="password_protect_whole_app">Chroń dostęp do aplikacji</string>
     <string name="keep_last_modified">Zachowuj starą datę i czas modyfikacji przy kopiowaniu / przenoszeniu / zmianie nazwy plików</string>
     <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Zapobiegaj przejściu urządzenia w stan uśpienia</string>
 
     <!-- Setting sections -->
     <string name="visibility">Widoczność</string>
@@ -270,8 +270,8 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="confirm_otg_storage_access_text">Wybierz folder główny urządzenia OTG na następnym ekranie, aby uzyskać dostęp</string>
+    <string name="wrong_root_selected_otg">Wybrany został niewłaściwy folder, wybierz główny folder urządzenia OTG</string>
 
     <!-- About -->
     <string name="about">O aplikacji</string>
@@ -293,7 +293,7 @@
     <string name="donate_please">
         <![CDATA[
             Witaj!<br><br>
-            Mamy nadzieję, że aplikacja przypadła Ci do gustu. Jak da się zauważyć, nie zawiera ona reklam, prosimy więc o wsparcie jej rozwoju poprzez zakup specjalnej aplikacji <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, co poskutkuje również wyłączeniem tego komunikatu.<br><br>
+            Mamy nadzieję, że aplikacja przypadła Ci do gustu. Jak da się zauważyć, nie zawiera ona reklam, prosimy więc o wsparcie jej rozwoju poprzez zakup specjalnej aplikacji <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Proste Podziękowanie/a>, co poskutkuje również wyłączeniem tego komunikatu.<br><br>
             Więcej możliwości wsparcia znajdziesz <a href="http://simplemobiletools.com/donate">tutaj</a>.<br><br>
             Dziękujemy!
         ]]>
@@ -301,15 +301,13 @@
     <string name="purchase">Kup</string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently Asked Questions</string>
-    <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
-    <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
-        in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
-    <string name="faq_2_title_commons">I want to support you, but I cannot donate money. Is there anything else I can do?</string>
-    <string name="faq_2_text_commons">Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-        You can find the guide at https://github.com/SimpleMobileTools/General-Discussion , or just shoot me a message at hello@simplemobiletools.com if you need help.</string>
-    <string name="faq_3_title_commons">I deleted some files by mistake, how can I recover them?</string>
-    <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, there is no trashbin available.</string>
+    <string name="frequently_asked_questions">Często zadawane pytania (FAQ)</string>
+    <string name="faq_1_title_commons">Dlaczego nigdzie nie widzę widżetu aplikacji?</string>
+    <string name="faq_1_text_commons">Zapewne dlatego, że aplikacja znajduje się na karcie pamięci. Jedynym rozwiązaniem problemu jest przeniesienie aplikacji z powrotem na pamięć wewnętrzną, ponieważ jest to ograniczenie systemu Android, nie aplikacji.</string>
+    <string name="faq_2_title_commons">Chcę was wesprzeć, ale jestem bez grosza przy duszy. Mogę jakoś to zrobić inaczej?</string>
+    <string name="faq_2_text_commons">Oczywiście. Możesz powiedzieć światu o naszych aplikacjach, podzielić się opinią i oceną w Sklepie Google Play, lub też wspomóc tłumaczenie aplikacji na nowe języki (bądź poprawić już istniejące tłumaczenia). Instrukcję znajdziesz pod adresem https://github.com/SimpleMobileTools/General-Discussion . Możesz też napisać do nas na adres hello@simplemobiletools.com , jeśli potrzebujesz pomocy.</string>
+    <string name="faq_3_title_commons">Usunąłem jakieś pliki przez przypadek. Mogę je jakoś odzyskać?</string>
+    <string name="faq_3_text_commons">Niestety nie. Pliki są usuwane zaraz po kliknięciu w oknie potwierdzającym. System Amdroid nie ma wbudowanego kosza (są osobne od tego aplikacje, jednakże upewnij się kilka razy, zanim cokolwiek usuniesz, gdyż takowe aplikacje nie gwarantują odzyskania pliku w nienaruszonym stanie).</string>
 
     <!-- License -->
     <string name="notice">Aplikacja korzysta z następujących bibliotek innych firm:</string>
