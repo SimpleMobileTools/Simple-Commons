@@ -218,6 +218,7 @@ fun Activity.openEditorIntent(path: String, applicationId: String) {
             setDataAndType(newUri, getUriMimeType(path, newUri))
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             putExtra(MediaStore.EXTRA_OUTPUT, newUri)
+            putExtra(REAL_FILE_PATH, path)
 
             if (resolveActivity(packageManager) != null) {
                 startActivityForResult(this, REQUEST_EDIT_IMAGE)
