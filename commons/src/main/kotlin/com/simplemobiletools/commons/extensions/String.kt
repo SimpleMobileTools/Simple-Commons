@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.extensions
 
 import android.content.Context
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Point
 import android.media.ExifInterface
@@ -57,6 +58,12 @@ fun String.isAudioFast() = audioExtensions.any { endsWith(it, true) }
 fun String.isImageSlow() = isImageFast() || getMimeType().startsWith("image")
 fun String.isVideoSlow() = isVideoFast() || getMimeType().startsWith("video")
 fun String.isAudioSlow() = isAudioFast() || getMimeType().startsWith("audio")
+
+fun String.getCompressionFormat() = when (getFilenameExtension().toLowerCase()) {
+    "png" -> Bitmap.CompressFormat.PNG
+    "webp" -> Bitmap.CompressFormat.WEBP
+    else -> Bitmap.CompressFormat.JPEG
+}
 
 fun String.areDigitsOnly() = matches(Regex("[0-9]+"))
 

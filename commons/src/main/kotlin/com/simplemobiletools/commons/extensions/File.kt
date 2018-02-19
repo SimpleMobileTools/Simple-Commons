@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
 import android.content.Context
-import android.graphics.Bitmap
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 
@@ -16,12 +15,6 @@ fun File.isVideoSlow() = absolutePath.isVideoFast() || getMimeType().startsWith(
 fun File.isAudioSlow() = absolutePath.isAudioFast() || getMimeType().startsWith("audio")
 
 fun File.getMimeType() = absolutePath.getMimeType()
-
-fun File.getCompressionFormat() = when (extension.toLowerCase()) {
-    "png" -> Bitmap.CompressFormat.PNG
-    "webp" -> Bitmap.CompressFormat.WEBP
-    else -> Bitmap.CompressFormat.JPEG
-}
 
 fun File.getProperSize(countHiddenItems: Boolean): Long {
     return if (isDirectory) {
