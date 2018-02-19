@@ -99,7 +99,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         }
 
         if (!copyOnly) {
-            activity.deleteFiles(mTransferredFiles) {}
+            activity.deleteFilesBg(mTransferredFiles) {}
         }
 
         val paths = mFiles.map { it.path } as ArrayList<String>
@@ -183,7 +183,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 }
 
                 val oldPath = "${source.path}/${child.name}"
-                val oldFileDirItem = FileDirItem(oldPath, child.name, child.isDirectory)
+                val oldFileDirItem = FileDirItem(oldPath, child.name, child.isDirectory, 0, child.length())
                 val newFileDirItem = FileDirItem(newPath, child.name, child.isDirectory)
                 copy(oldFileDirItem, newFileDirItem)
             }

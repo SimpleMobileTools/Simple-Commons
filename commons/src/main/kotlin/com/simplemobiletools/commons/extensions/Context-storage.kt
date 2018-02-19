@@ -346,16 +346,17 @@ fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolea
         if (document != null && (fileDirItem.isDirectory == document.isDirectory)) {
             fileDeleted = (document.isFile == true || allowDeleteFolder) && DocumentsContract.deleteDocument(applicationContext.contentResolver, document.uri)
         }
+    }
 
-        if (fileDeleted) {
-            rescanDeletedPath(fileDirItem.path) {
-                callback?.invoke(true)
-            }
+    if (fileDeleted) {
+        rescanDeletedPath(fileDirItem.path) {
+            callback?.invoke(true)
         }
     }
 }
 
-fun Context.getDoesFilePathExist(path: String) = if (isPathOnOTG(path)) getFastDocumentFile(path)?.exists() ?: false else File(path).exists()
+fun Context.getDoesFilePathExist(path: String) = if (isPathOnOTG(path)) getFastDocumentFile(path)?.exists()
+        ?: false else File(path).exists()
 
 fun Context.getIsPathDirectory(path: String): Boolean {
     return if (isPathOnOTG(path)) {

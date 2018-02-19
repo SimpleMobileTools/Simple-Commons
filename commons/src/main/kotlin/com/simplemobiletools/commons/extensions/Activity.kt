@@ -417,7 +417,7 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
     val file = File(path)
     var fileDeleted = !isPathOnOTG(path) && (!file.exists() || file.delete())
     if (fileDeleted) {
-        rescanDeletedPath(fileDirItem.path) {
+        rescanDeletedPath(path) {
             callback?.invoke(true)
         }
     } else {
@@ -427,10 +427,10 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
 
         if (!fileDeleted) {
             if (isPathOnSD(path)) {
-                handleSAFDialog(fileDirItem.path) {
+                handleSAFDialog(path) {
                     trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
                 }
-            } else if (isPathOnOTG(fileDirItem.path)) {
+            } else if (isPathOnOTG(path)) {
                 trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
             }
         }
