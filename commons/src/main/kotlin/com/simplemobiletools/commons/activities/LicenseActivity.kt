@@ -7,7 +7,7 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.License
 import kotlinx.android.synthetic.main.activity_license.*
-import kotlinx.android.synthetic.main.license_item.view.*
+import kotlinx.android.synthetic.main.license_faq_item.view.*
 
 class LicenseActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +15,7 @@ class LicenseActivity : BaseSimpleActivity() {
         setContentView(R.layout.activity_license)
 
         val linkColor = getAdjustedPrimaryColor()
+        val textColor = baseConfig.textColor
         updateTextColors(licenses_holder)
 
         val inflater = LayoutInflater.from(this)
@@ -22,9 +23,8 @@ class LicenseActivity : BaseSimpleActivity() {
         val licenseMask = intent.getIntExtra(APP_LICENSES, 0)
         licenses.filter { licenseMask and it.id != 0 }.forEach {
             val license = it
-            val view = inflater.inflate(R.layout.license_item, null)
-            view.apply {
-                license_title.apply {
+            inflater.inflate(R.layout.license_faq_item, null).apply {
+                license_faq_title.apply {
                     text = getString(license.titleId)
                     underlineText()
                     setTextColor(linkColor)
@@ -33,8 +33,8 @@ class LicenseActivity : BaseSimpleActivity() {
                     }
                 }
 
-                license_text.text = getString(license.textId)
-                license_text.setTextColor(baseConfig.textColor)
+                license_faq_text.text = getString(license.textId)
+                license_faq_text.setTextColor(textColor)
                 licenses_holder.addView(this)
             }
         }

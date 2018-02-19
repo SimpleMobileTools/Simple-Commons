@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.helpers
 
 const val APP_NAME = "app_name"
 const val APP_LICENSES = "app_licenses"
+const val APP_FAQ = "app_faq"
 const val APP_VERSION_NAME = "app_version_name"
 const val REAL_FILE_PATH = "real_file_path_2"
 const val IS_FROM_GALLERY = "is_from_gallery"

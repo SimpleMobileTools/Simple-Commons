@@ -24,6 +24,7 @@ import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.interfaces.CopyMoveListener
+import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 import java.util.*
@@ -166,11 +167,12 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     private fun isExternalStorageDocument(uri: Uri) = "com.android.externalstorage.documents" == uri.authority
 
-    fun startAboutActivity(appNameId: Int, licenseMask: Int, versionName: String) {
+    fun startAboutActivity(appNameId: Int, licenseMask: Int, versionName: String, faqItems: Array<FAQItem> = arrayOf()) {
         Intent(applicationContext, AboutActivity::class.java).apply {
             putExtra(APP_NAME, getString(appNameId))
             putExtra(APP_LICENSES, licenseMask)
             putExtra(APP_VERSION_NAME, versionName)
+            putExtra(APP_FAQ, faqItems)
             startActivity(this)
         }
     }
