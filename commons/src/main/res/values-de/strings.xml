@@ -297,7 +297,7 @@
     <string name="purchase">Kaufen</string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently Asked Questions</string>
+    <string name="frequently_asked_questions">Frequently asked questions</string>
     <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
     <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
         in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
