@@ -60,11 +60,14 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         mNotifId = (System.currentTimeMillis() / 1000).toInt()
         mMaxSize = 0
         for (file in mFiles) {
+            if (file.size == 0L) {
+                file.size = file.getProperSize(activity, copyHidden)
+            }
             val newPath = "${pair.second}/${file.name}"
             val fileExists = if (activity.isPathOnOTG(newPath)) activity.getFastDocumentFile(newPath)?.exists()
                     ?: false else File(newPath).exists()
             if (getConflictResolution(newPath) != CONFLICT_SKIP || !fileExists) {
-                mMaxSize += (file.getProperSize(activity, copyHidden) / 1000).toInt()
+                mMaxSize += (file.size / 1000).toInt()
             }
         }
 
