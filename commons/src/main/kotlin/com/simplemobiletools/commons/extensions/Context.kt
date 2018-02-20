@@ -266,7 +266,7 @@ fun Context.getMimeTypeFromUri(uri: Uri): String {
 }
 
 fun Context.ensurePublicUri(path: String, applicationId: String): Uri? {
-    return if (isPathOnOTG(path)) {
+    return if (path.startsWith(OTG_PATH)) {
         getDocumentFile(path)?.uri
     } else {
         val uri = Uri.parse(path)

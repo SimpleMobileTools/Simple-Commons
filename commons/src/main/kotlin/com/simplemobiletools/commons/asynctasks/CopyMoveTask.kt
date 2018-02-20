@@ -15,6 +15,7 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.CONFLICT_OVERWRITE
 import com.simplemobiletools.commons.helpers.CONFLICT_SKIP
+import com.simplemobiletools.commons.helpers.OTG_PATH
 import com.simplemobiletools.commons.interfaces.CopyMoveListener
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
@@ -64,7 +65,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 file.size = file.getProperSize(activity, copyHidden)
             }
             val newPath = "${pair.second}/${file.name}"
-            val fileExists = if (activity.isPathOnOTG(newPath)) activity.getFastDocumentFile(newPath)?.exists()
+            val fileExists = if (newPath.startsWith(OTG_PATH)) activity.getFastDocumentFile(newPath)?.exists()
                     ?: false else File(newPath).exists()
             if (getConflictResolution(newPath) != CONFLICT_SKIP || !fileExists) {
                 mMaxSize += (file.size / 1000).toInt()
@@ -174,7 +175,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             return
         }
 
-        if (activity.isPathOnOTG(source.path)) {
+        if (source.path.startsWith(OTG_PATH)) {
             val children = activity.getDocumentFile(source.path)?.listFiles() ?: return
             for (child in children) {
                 val newPath = "$destinationPath/${child.name}"

@@ -10,6 +10,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.OTG_PATH
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.filepicker_list_item.view.*
@@ -88,7 +89,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
                 }
 
                 if (!activity.isActivityDestroyed()) {
-                    if (hasOTGConnected && itemToLoad is String && activity.isPathOnOTG(itemToLoad)) {
+                    if (hasOTGConnected && itemToLoad is String && itemToLoad.startsWith(OTG_PATH)) {
                         itemToLoad = itemToLoad.getOTGPublicPath(activity)
                     }
                     Glide.with(activity).load(itemToLoad).transition(withCrossFade()).apply(options).into(list_item_icon)

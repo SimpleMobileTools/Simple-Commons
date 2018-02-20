@@ -56,7 +56,7 @@ data class FileDirItem(val path: String, val name: String = "", var isDirectory:
     }
 
     fun getProperSize(context: Context, countHidden: Boolean): Long {
-        return if (context.isPathOnOTG(path)) {
+        return if (path.startsWith(OTG_PATH)) {
             context.getDocumentFile(path)?.getItemSize(countHidden) ?: 0
         } else {
             File(path).getProperSize(countHidden)
@@ -64,7 +64,7 @@ data class FileDirItem(val path: String, val name: String = "", var isDirectory:
     }
 
     fun getProperFileCount(context: Context, countHidden: Boolean): Int {
-        return if (context.isPathOnOTG(path)) {
+        return if (path.startsWith(OTG_PATH)) {
             context.getDocumentFile(path)?.getFileCount(countHidden) ?: 0
         } else {
             File(path).getFileCount(countHidden)
@@ -72,7 +72,7 @@ data class FileDirItem(val path: String, val name: String = "", var isDirectory:
     }
 
     fun getDirectChildrenCount(context: Context, countHiddenItems: Boolean): Int {
-        return if (context.isPathOnOTG(path)) {
+        return if (path.startsWith(OTG_PATH)) {
             context.getDocumentFile(path)?.listFiles()?.filter { if (countHiddenItems) true else !it.name.startsWith(".") }?.size ?: 0
         } else {
             File(path).getDirectChildrenCount(countHiddenItems)
@@ -80,7 +80,7 @@ data class FileDirItem(val path: String, val name: String = "", var isDirectory:
     }
 
     fun getLastModified(context: Context): Long {
-        return if (context.isPathOnOTG(path)) {
+        return if (path.startsWith(OTG_PATH)) {
             context.getFastDocumentFile(path)?.lastModified() ?: 0L
         } else {
             File(path).lastModified()

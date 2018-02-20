@@ -107,9 +107,7 @@ fun Context.getInternalStoragePath() = Environment.getExternalStorageDirectory()
 
 fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWith(sdCardPath)
 
-fun Context.isPathOnOTG(path: String) = path.startsWith(OTG_PATH)
-
-fun Context.needsStupidWritePermissions(path: String) = (isPathOnSD(path) || isPathOnOTG(path)) && isLollipopPlus()
+fun Context.needsStupidWritePermissions(path: String) = (isPathOnSD(path) || path.startsWith(OTG_PATH)) && isLollipopPlus()
 
 @SuppressLint("NewApi")
 fun Context.hasProperStoredTreeUri(): Boolean {
@@ -149,7 +147,7 @@ fun Context.getFastDocumentFile(path: String): DocumentFile? {
         return null
     }
 
-    val isOTG = isPathOnOTG(path)
+    val isOTG = path.startsWith(OTG_PATH)
     if (!isOTG && baseConfig.sdCardPath.isEmpty()) {
         return null
     }
@@ -355,11 +353,11 @@ fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolea
     }
 }
 
-fun Context.getDoesFilePathExist(path: String) = if (isPathOnOTG(path)) getFastDocumentFile(path)?.exists()
+fun Context.getDoesFilePathExist(path: String) = if (path.startsWith(OTG_PATH)) getFastDocumentFile(path)?.exists()
         ?: false else File(path).exists()
 
 fun Context.getIsPathDirectory(path: String): Boolean {
-    return if (isPathOnOTG(path)) {
+    return if (path.startsWith(OTG_PATH)) {
         getFastDocumentFile(path)?.isDirectory ?: false
     } else {
         File(path).isDirectory
