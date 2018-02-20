@@ -215,6 +215,8 @@ fun String.getImageResolution(): Point? {
 
 fun String.getPublicUri(context: Context) = context.getDocumentFile(this)?.uri ?: ""
 
+fun String.getOTGPublicPath(context: Context) = "${context.baseConfig.OTGBasePath}%3A${substring(OTG_PATH.length).replace("/", "%2F")}"
+
 fun String.getMimeType(): String {
     val typesMap = HashMap<String, String>().apply {
         put("323", "text/h323")
