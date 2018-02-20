@@ -237,7 +237,7 @@ fun Context.getFileUri(path: String) = when {
 
 // these functions update the mediastore instantly, MediaScannerConnection.scanFile takes some time to really get applied
 fun Context.deleteFromMediaStore(path: String): Boolean {
-    if (getDoesFilePathExist(path)) {
+    if (getDoesFilePathExist(path) || getIsPathDirectory(path)) {
         return false
     }
 
