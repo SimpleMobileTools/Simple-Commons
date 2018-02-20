@@ -507,7 +507,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                 File(newPath).setLastModified(System.currentTimeMillis())
             }
             updateInMediaStore(oldPath, newPath)
-            scanPath(newPath) {
+            scanPaths(arrayListOf(oldPath, newPath)) {
                 callback?.invoke(true)
             }
         }
