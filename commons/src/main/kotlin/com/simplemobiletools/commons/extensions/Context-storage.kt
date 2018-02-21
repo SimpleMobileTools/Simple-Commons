@@ -135,7 +135,11 @@ fun Context.getMyFileUri(file: File): Uri {
 fun Context.tryFastDocumentDelete(path: String, allowDeleteFolder: Boolean): Boolean {
     val document = getFastDocumentFile(path)
     return if (document?.isFile == true || allowDeleteFolder) {
-        DocumentsContract.deleteDocument(contentResolver, document?.uri)
+        try {
+            DocumentsContract.deleteDocument(contentResolver, document?.uri)
+        } catch (e: Exception) {
+            false
+        }
     } else {
         false
     }

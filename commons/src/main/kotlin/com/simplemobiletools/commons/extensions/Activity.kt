@@ -562,7 +562,11 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, callback: (
             }
         }
     } else {
-        callback(FileOutputStream(File(fileDirItem.path)))
+        try {
+            callback(FileOutputStream(File(fileDirItem.path)))
+        } catch (e: Exception) {
+            callback(null)
+        }
     }
 }
 
