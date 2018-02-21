@@ -10,6 +10,7 @@ import com.simplemobiletools.commons.helpers.APP_FAQ
 import com.simplemobiletools.commons.models.FAQItem
 import kotlinx.android.synthetic.main.activity_faq.*
 import kotlinx.android.synthetic.main.license_faq_item.view.*
+import java.util.*
 
 class FAQActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +21,7 @@ class FAQActivity : BaseSimpleActivity() {
         val textColor = baseConfig.textColor
 
         val inflater = LayoutInflater.from(this)
-        val faqItems = intent.getSerializableExtra(APP_FAQ) as Array<FAQItem>
+        val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
         faqItems.forEach {
             val faqItem = it
             inflater.inflate(R.layout.license_faq_item, null).apply {

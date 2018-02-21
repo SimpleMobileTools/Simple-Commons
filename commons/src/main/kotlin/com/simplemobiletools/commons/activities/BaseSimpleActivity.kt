@@ -167,7 +167,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     private fun isExternalStorageDocument(uri: Uri) = "com.android.externalstorage.documents" == uri.authority
 
-    fun startAboutActivity(appNameId: Int, licenseMask: Int, versionName: String, faqItems: Array<FAQItem> = arrayOf()) {
+    fun startAboutActivity(appNameId: Int, licenseMask: Int, versionName: String, faqItems: ArrayList<FAQItem> = arrayListOf()) {
         Intent(applicationContext, AboutActivity::class.java).apply {
             putExtra(APP_NAME, getString(appNameId))
             putExtra(APP_LICENSES, licenseMask)

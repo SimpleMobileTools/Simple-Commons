@@ -65,7 +65,7 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupFAQ() {
-        val faqItems = intent.getSerializableExtra(APP_FAQ) as Array<FAQItem>
+        val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
         about_faq.beVisibleIf(faqItems.isNotEmpty())
         about_faq.setOnClickListener {
             Intent(applicationContext, FAQActivity::class.java).apply {
