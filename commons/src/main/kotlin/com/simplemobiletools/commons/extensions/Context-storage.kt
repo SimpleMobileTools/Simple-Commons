@@ -309,14 +309,12 @@ fun Context.getOTGItems(path: String, countHiddenItems: Boolean, getProperFileSi
         val first = files?.firstOrNull()
         if (first != null) {
             val fullPath = first.uri.toString()
-            val nameStartIndex = fullPath.lastIndexOf(first.name)
-            if (fullPath.length > nameStartIndex) {
-                var basePath = fullPath.substring(0, nameStartIndex)
-                if (basePath.endsWith("%3A")) {
-                    basePath = basePath.substring(0, basePath.length - 3)
-                }
-                baseConfig.OTGBasePath = basePath
+            val nameStartIndex = Math.max(fullPath.lastIndexOf(first.name), 0)
+            var basePath = fullPath.substring(0, nameStartIndex)
+            if (basePath.endsWith("%3A")) {
+                basePath = basePath.substring(0, basePath.length - 3)
             }
+            baseConfig.OTGBasePath = basePath
         }
     }
 
