@@ -43,7 +43,7 @@
     <string name="renaming_folder">Přejmenování složky</string>
     <string name="filename_cannot_be_empty">Název souboru nemůže být prázdný</string>
     <string name="filename_invalid_characters">Název souboru obsahuje neplatné znaky</string>
-    <string name="filename_invalid_characters_placeholder">Název souboru %s obsahuje neplatné znaky</string>
+    <string name="filename_invalid_characters_placeholder">Název souboru \'%s\' obsahuje neplatné znaky</string>
     <string name="extension_cannot_be_empty">Přípona nemůže být prázdná</string>
     <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
 

@@ -43,7 +43,7 @@
     <string name="renaming_folder">Premenúva sa priečinok</string>
     <string name="filename_cannot_be_empty">Názov súboru nemôže byť prázdny</string>
     <string name="filename_invalid_characters">Názov súboru obsahuje neplatné znaky</string>
-    <string name="filename_invalid_characters_placeholder">Názov súboru %s obsahuje neplatné znaky</string>
+    <string name="filename_invalid_characters_placeholder">Názov súboru \'%s\' obsahuje neplatné znaky</string>
     <string name="extension_cannot_be_empty">Prípona nesmie byť prázdna</string>
     <string name="source_file_doesnt_exist">Zdrojový súbor %s neexistuje</string>
 

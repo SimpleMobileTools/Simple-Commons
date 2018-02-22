@@ -43,7 +43,7 @@
     <string name="renaming_folder">Byter namn på mappen</string>
     <string name="filename_cannot_be_empty">Du måste ange ett filnamn</string>
     <string name="filename_invalid_characters">Filnamnet innehåller ogiltiga tecken</string>
-    <string name="filename_invalid_characters_placeholder">Filename %s contains invalid characters</string>
+    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
     <string name="extension_cannot_be_empty">Filändelsen får inte vara tom</string>
     <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
 

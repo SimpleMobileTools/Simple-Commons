@@ -43,7 +43,7 @@
     <string name="renaming_folder">重命名中…</string>
     <string name="filename_cannot_be_empty">文件名不能为空</string>
     <string name="filename_invalid_characters">文件名包含非法字符</string>
-    <string name="filename_invalid_characters_placeholder">Filename %s contains invalid characters</string>
+    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
     <string name="extension_cannot_be_empty">扩展名不能为空</string>
     <string name="source_file_doesnt_exist">原文件 %s 不存在</string>
 

@@ -43,7 +43,7 @@
     <string name="renaming_folder">Ordner umbennenen</string>
     <string name="filename_cannot_be_empty">Dateiname darf nicht leer sein</string>
     <string name="filename_invalid_characters">Dateiname enthält ungültige Zeichen</string>
-    <string name="filename_invalid_characters_placeholder">Filename %s contains invalid characters</string>
+    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
     <string name="extension_cannot_be_empty">Dateiendung darf nicht leer sein</string>
     <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
 

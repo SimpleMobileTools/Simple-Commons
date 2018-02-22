@@ -43,7 +43,7 @@
     <string name="renaming_folder">Renombrando carpeta</string>
     <string name="filename_cannot_be_empty">El nombre de archivo no puede estar vacío</string>
     <string name="filename_invalid_characters">El nombre archivo contiene caracteres no válidos</string>
-    <string name="filename_invalid_characters_placeholder">Filename %s contains invalid characters</string>
+    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
     <string name="extension_cannot_be_empty">La extensión no puede estar vacía</string>
     <string name="source_file_doesnt_exist">El archivo %s no existe</string>
 

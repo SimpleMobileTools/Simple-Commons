@@ -43,7 +43,7 @@
     <string name="renaming_folder">A renomear pasta</string>
     <string name="filename_cannot_be_empty">O nome do ficheiro não pode estar vazio</string>
     <string name="filename_invalid_characters">O nome do ficheiro contém caracteres inválidos</string>
-    <string name="filename_invalid_characters_placeholder">Filename %s contains invalid characters</string>
+    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
     <string name="extension_cannot_be_empty">A extensão não pode estar vazia</string>
     <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
 
