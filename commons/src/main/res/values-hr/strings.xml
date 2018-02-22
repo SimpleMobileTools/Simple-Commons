@@ -43,6 +43,7 @@
     <string name="renaming_folder">Preimenovanje direktorija</string>
     <string name="filename_cannot_be_empty">Naziv datoteke ne smije biti prazan</string>
     <string name="filename_invalid_characters">Naziv datoteke sadrži ne podržane znakove</string>
+    <string name="filename_invalid_characters_placeholder">Filename %s contains invalid characters</string>
     <string name="extension_cannot_be_empty">Ekstenzija ne smije biti prazna</string>
     <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
 

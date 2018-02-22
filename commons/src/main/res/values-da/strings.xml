@@ -43,6 +43,7 @@
     <string name="renaming_folder">Omdøber mappe</string>
     <string name="filename_cannot_be_empty">Filen skal have et navn</string>
     <string name="filename_invalid_characters">Filnavnet indeholder ugyldige tegn</string>
+    <string name="filename_invalid_characters_placeholder">Filename %s contains invalid characters</string>
     <string name="extension_cannot_be_empty">Filtypen kan ikke stå tom</string>
     <string name="source_file_doesnt_exist">Kildefilen %s eksisterer ikke</string>
 

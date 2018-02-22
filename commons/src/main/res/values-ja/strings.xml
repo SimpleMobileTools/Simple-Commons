@@ -43,6 +43,7 @@
     <string name="renaming_folder">フォルダーの名前を変更中</string>
     <string name="filename_cannot_be_empty">ファイル名は空にできません</string>
     <string name="filename_invalid_characters">ファイル名に無効な文字が含まれています</string>
+    <string name="filename_invalid_characters_placeholder">Filename %s contains invalid characters</string>
     <string name="extension_cannot_be_empty">拡張子は省略できません</string>
     <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
 

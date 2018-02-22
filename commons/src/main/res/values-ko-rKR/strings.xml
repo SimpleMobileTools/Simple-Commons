@@ -43,6 +43,7 @@
     <string name="renaming_folder">폴더명 변경</string>
     <string name="filename_cannot_be_empty">파일명이 비어있으면 안됨</string>
     <string name="filename_invalid_characters">파일명에 사용할 수 없는 문자가 포함됨</string>
+    <string name="filename_invalid_characters_placeholder">Filename %s contains invalid characters</string>
     <string name="extension_cannot_be_empty">확장자가 비어있으면 안됨</string>
     <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
 

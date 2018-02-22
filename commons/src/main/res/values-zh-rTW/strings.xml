@@ -43,6 +43,7 @@
     <string name="renaming_folder">資料夾重新命名中</string>
     <string name="filename_cannot_be_empty">檔名不得空白</string>
     <string name="filename_invalid_characters">檔名包含無效字符</string>
+    <string name="filename_invalid_characters_placeholder">Filename %s contains invalid characters</string>
     <string name="extension_cannot_be_empty">副檔名不得空白</string>
     <string name="source_file_doesnt_exist">原始檔案 %s 不存在</string>
 

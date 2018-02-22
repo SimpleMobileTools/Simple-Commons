@@ -43,6 +43,7 @@
     <string name="renaming_folder">Rinominazione cartella</string>
     <string name="filename_cannot_be_empty">Il nome del file non deve essere vuoto</string>
     <string name="filename_invalid_characters">Il nome contiene caratteri non validi</string>
+    <string name="filename_invalid_characters_placeholder">Filename %s contains invalid characters</string>
     <string name="extension_cannot_be_empty">L\'estensione non può essere vuota</string>
     <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
 

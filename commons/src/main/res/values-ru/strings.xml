@@ -43,6 +43,7 @@
     <string name="renaming_folder">Изменение имени папки</string>
     <string name="filename_cannot_be_empty">Имя файла не может быть пустым</string>
     <string name="filename_invalid_characters">Имя файла содержит недопустимые символы</string>
+    <string name="filename_invalid_characters_placeholder">Filename %s contains invalid characters</string>
     <string name="extension_cannot_be_empty">Расширение не может быть пустым</string>
     <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
 
