@@ -334,6 +334,11 @@ fun Context.rescanDeletedPath(path: String, callback: (() -> Unit)? = null) {
     if (deleteFromMediaStore(path)) {
         callback?.invoke()
     } else {
+        if (getDoesFilePathExist(path) || getIsPathDirectory(path)) {
+            callback?.invoke()
+            return
+        }
+
         MediaScannerConnection.scanFile(applicationContext, arrayOf(path), null, { s, uri ->
             try {
                 applicationContext.contentResolver.delete(uri, null, null)
