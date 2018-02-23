@@ -159,4 +159,8 @@ open class BaseConfig(val context: Context) {
     var hadThankYouInstalled: Boolean
         get() = prefs.getBoolean(HAD_THANK_YOU_INSTALLED, false)
         set(hadThankYouInstalled) = prefs.edit().putBoolean(HAD_THANK_YOU_INSTALLED, hadThankYouInstalled).apply()
+
+    var skipDeleteConfirmation: Boolean
+        get() = prefs.getBoolean(SKIP_DELETE_CONFIRMATION, false)
+        set(skipDeleteConfirmation) = prefs.edit().putBoolean(SKIP_DELETE_CONFIRMATION, skipDeleteConfirmation).apply()
 }
