@@ -247,6 +247,7 @@
     <string name="keep_last_modified">當檔案複製/移動/重新命名時，保留舊的「最後修改」數值</string>
     <string name="show_info_bubble">拖曳滾動條時，顯示訊息氣泡</string>
     <string name="prevent_phone_from_sleeping">防止手機睡眠</string>
+    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
 
     <!-- Setting sections -->
     <string name="visibility">可見度</string>

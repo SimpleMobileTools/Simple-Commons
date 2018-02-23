@@ -248,6 +248,7 @@
     <string name="keep_last_modified">파일 복사/이동/변경 시 최종 수정시간 정보를 유지</string>
     <string name="show_info_bubble">스크롤바 드래그 시 항목별 툴팁 활성화</string>
     <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>

@@ -252,6 +252,7 @@
     <string name="keep_last_modified">Zachowuj starą datę i czas modyfikacji przy kopiowaniu / przenoszeniu / zmianie nazwy plików</string>
     <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
     <string name="prevent_phone_from_sleeping">Zapobiegaj przejściu urządzenia w stan uśpienia</string>
+    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
 
     <!-- Setting sections -->
     <string name="visibility">Widoczność</string>

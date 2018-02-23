@@ -248,6 +248,7 @@
     <string name="keep_last_modified">Garder la valeur de l\'ancienne modification lors de renommage/déplacement/copie de fichier</string>
     <string name="show_info_bubble">Afficher une bulle d\'information des éléments qui s\'affichent lorsque vous faites glisser la barre de défilement</string>
     <string name="prevent_phone_from_sleeping">Empêcher le téléphone de passer en mode veille</string>
+    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilité</string>

@@ -251,6 +251,7 @@
     <string name="keep_last_modified">Сохранять значение даты изменения файла при копировании/перемещении/переименовании</string>
     <string name="show_info_bubble">Показывать информационное окно при прокрутке элементов перетаскиванием полосы прокрутки</string>
     <string name="prevent_phone_from_sleeping">Предотвращать засыпание устройства</string>
+    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
 
     <!-- Setting sections -->
     <string name="visibility">Отображение</string>
