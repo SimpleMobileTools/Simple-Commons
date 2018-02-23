@@ -46,6 +46,8 @@ const val LAST_CONFLICT_APPLY_TO_ALL = "last_conflict_apply_to_all"
 const val AVOID_WHATS_NEW = "avoid_whats_new"
 const val HAD_THANK_YOU_INSTALLED = "had_thank_you_installed"
 const val SKIP_DELETE_CONFIRMATION = "skip_delete_confirmation"
+const val ENABLE_PULL_TO_REFRESH = "enable_pull_to_refresh"
+const val SCROLL_HORIZONTALLY = "scroll_horizontally"
 
 // licenses
 const val LICENSE_KOTLIN = 1

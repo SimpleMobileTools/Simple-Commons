@@ -163,4 +163,12 @@ open class BaseConfig(val context: Context) {
     var skipDeleteConfirmation: Boolean
         get() = prefs.getBoolean(SKIP_DELETE_CONFIRMATION, false)
         set(skipDeleteConfirmation) = prefs.edit().putBoolean(SKIP_DELETE_CONFIRMATION, skipDeleteConfirmation).apply()
+
+    var enablePullToRefresh: Boolean
+        get() = prefs.getBoolean(ENABLE_PULL_TO_REFRESH, true)
+        set(enablePullToRefresh) = prefs.edit().putBoolean(ENABLE_PULL_TO_REFRESH, enablePullToRefresh).apply()
+
+    var scrollHorizontally: Boolean
+        get() = prefs.getBoolean(SCROLL_HORIZONTALLY, false)
+        set(scrollHorizontally) = prefs.edit().putBoolean(SCROLL_HORIZONTALLY, scrollHorizontally).apply()
 }
