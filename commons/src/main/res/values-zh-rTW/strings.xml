@@ -14,7 +14,7 @@
     <string name="always">總是</string>
     <string name="never">從不</string>
     <string name="details">詳細資訊</string>
-    <string name="notes">Notes</string>
+    <string name="notes">筆記</string>
 
     <!-- Search -->
     <string name="search">搜尋</string>
@@ -42,8 +42,8 @@
     <string name="rename_folder_ok">成功重新命名資料夾</string>
     <string name="renaming_folder">資料夾重新命名中</string>
     <string name="filename_cannot_be_empty">檔名不得空白</string>
-    <string name="filename_invalid_characters">檔名包含無效字符</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
+    <string name="filename_invalid_characters">檔名包含無效字元</string>
+    <string name="filename_invalid_characters_placeholder">檔名 \'%s\' 包含無效字元</string>
     <string name="extension_cannot_be_empty">副檔名不得空白</string>
     <string name="source_file_doesnt_exist">原始檔案 %s 不存在</string>
 
@@ -79,7 +79,7 @@
     <string name="file">檔案</string>
     <string name="create_new_folder">新增資料夾</string>
     <string name="name_taken">已經存在相同名稱的檔案或資料夾</string>
-    <string name="invalid_name">名稱包含無效的字符</string>
+    <string name="invalid_name">名稱包含無效的字元</string>
     <string name="empty_name">請輸入一個名字</string>
     <string name="unknown_error_occurred">發生未知的錯誤</string>
 
@@ -290,7 +290,7 @@
     <string name="donate_please">
         <![CDATA[
             哈囉 <br><br>
-            希望您喜愛這應用程式。 它不含廣告, 所以請購買應用程式 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 來支持開發者，這對話框也不會再出現。<br><br>
+            希望您喜愛這應用程式。 它不含廣告，所以請購買應用程式 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 來支持開發者，這對話框也不會再出現。<br><br>
             您可以在 <a href="http://simplemobiletools.com/donate">這裡</a> 找到更多捐贈選項。<br><br>
             感謝!
         ]]>
@@ -304,11 +304,11 @@
 		只有一個解決方法，就是經由你的裝置設定，把應用程式移動回內部儲存空間。</string>
     <string name="faq_2_title_commons">我想要支持您，但我無法捐款。還有什麼我能做的嗎?</string>
     <string name="faq_2_text_commons">當然好囉。你可以推廣關於這應用程式，或是給予好的反饋和評分。你也可以幫忙把這應用程式翻譯成新的語言，或者只更新一些現有的翻譯。
-		你可以在 https://github.com/SimpleMobileTools/General-Discussion 找到教學，或者若你需要幫忙，只要發個訊息到 hello@simplemobiletools.com 。</string>
+		你可以在 https://github.com/SimpleMobileTools/General-Discussion 找到教學，或者若你需要幫忙，只要發個訊息到 <a href="hello@simplemobiletools.com">hello@simplemobiletools.com</a> 。</string>
     <string name="faq_3_title_commons">我誤刪了一些檔案，如何復原?</string>
     <string name="faq_3_text_commons">不幸地，沒有辦法。檔案經確認後就立即刪除了，沒有垃圾筒可用。</string>
-    <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
-    <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
+    <string name="faq_4_title_commons">我不喜歡小工具的顏色，我能更改嗎?</string>
+    <string name="faq_4_text_commons">可啊，當你在主畫面拖動小工具時，會出現小工具設置畫面。你會在左下角看到顏色方塊，點下去再挑個新顏色就好了。你也能用拉條來調整透明度。</string>
 
     <!-- License -->
     <string name="notice">這程式使用了下列的第三方函示庫來讓我工作簡化。感謝。</string>
