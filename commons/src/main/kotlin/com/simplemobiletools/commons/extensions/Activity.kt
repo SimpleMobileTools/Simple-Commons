@@ -420,13 +420,13 @@ fun BaseSimpleActivity.deleteFile(fileDirItem: FileDirItem, allowDeleteFolder: B
 fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     val path = fileDirItem.path
     val file = File(path)
-    var fileDeleted = !path.startsWith(OTG_PATH) && (!file.exists() && file.length() == 0L || file.delete())
+    var fileDeleted = !path.startsWith(OTG_PATH) && ((!file.exists() && file.length() == 0L) || file.delete())
     if (fileDeleted) {
         rescanDeletedPath(path) {
             callback?.invoke(true)
         }
     } else {
-        if (file.isDirectory || allowDeleteFolder) {
+        if (file.isDirectory && allowDeleteFolder) {
             fileDeleted = deleteRecursively(file)
         }
 
