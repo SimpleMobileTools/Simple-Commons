@@ -155,4 +155,8 @@ open class BaseConfig(val context: Context) {
     var sorting: Int
         get() = prefs.getInt(SORT_ORDER, context.resources.getInteger(R.integer.default_sorting))
         set(sorting) = prefs.edit().putInt(SORT_ORDER, sorting).apply()
+
+    var hadThankYouInstalled: Boolean
+        get() = prefs.getBoolean(HAD_THANK_YOU_INSTALLED, false)
+        set(hadThankYouInstalled) = prefs.edit().putBoolean(HAD_THANK_YOU_INSTALLED, hadThankYouInstalled).apply()
 }

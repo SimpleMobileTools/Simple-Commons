@@ -82,8 +82,13 @@ fun Activity.appLaunched() {
     baseConfig.internalStoragePath = getInternalStoragePath()
     updateSDCardPath()
     baseConfig.appRunCount++
-    if (!isThankYouInstalled() && (baseConfig.appRunCount % 50 == 0)) {
-        DonateDialog(this)
+
+    if (!baseConfig.hadThankYouInstalled) {
+        if (isThankYouInstalled()) {
+            baseConfig.hadThankYouInstalled = true
+        } else if (baseConfig.appRunCount % 50 == 0) {
+            DonateDialog(this)
+        }
     }
 }
 

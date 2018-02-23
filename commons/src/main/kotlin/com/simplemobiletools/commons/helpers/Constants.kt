@@ -44,6 +44,7 @@ const val SHOW_INFO_BUBBLE = "show_info_bubble"
 const val LAST_CONFLICT_RESOLUTION = "last_conflict_resolution"
 const val LAST_CONFLICT_APPLY_TO_ALL = "last_conflict_apply_to_all"
 const val AVOID_WHATS_NEW = "avoid_whats_new"
+const val HAD_THANK_YOU_INSTALLED = "had_thank_you_installed"
 
 // licenses
 const val LICENSE_KOTLIN = 1
