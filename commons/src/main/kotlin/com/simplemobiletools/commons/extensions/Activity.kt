@@ -335,7 +335,9 @@ fun BaseSimpleActivity.deleteFoldersBg(folders: ArrayList<FileDirItem>, deleteMe
                     wasSuccess = true
 
                 if (index == folders.size - 1) {
-                    callback?.invoke(wasSuccess)
+                    runOnUiThread {
+                        callback?.invoke(wasSuccess)
+                    }
                 }
             }
         }
@@ -357,7 +359,9 @@ fun BaseSimpleActivity.deleteFolderBg(fileDirItem: FileDirItem, deleteMediaOnly:
     if (folder.exists()) {
         val filesArr = folder.listFiles()
         if (filesArr == null) {
-            callback?.invoke(true)
+            runOnUiThread {
+                callback?.invoke(true)
+            }
             return
         }
 
@@ -371,7 +375,9 @@ fun BaseSimpleActivity.deleteFolderBg(fileDirItem: FileDirItem, deleteMediaOnly:
             deleteFileBg(fileDirItem, true) { }
         }
     }
-    callback?.invoke(true)
+    runOnUiThread {
+        callback?.invoke(true)
+    }
 }
 
 fun BaseSimpleActivity.deleteFiles(files: ArrayList<FileDirItem>, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
@@ -386,7 +392,9 @@ fun BaseSimpleActivity.deleteFiles(files: ArrayList<FileDirItem>, allowDeleteFol
 
 fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<FileDirItem>, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     if (files.isEmpty()) {
-        callback?.invoke(true)
+        runOnUiThread {
+            callback?.invoke(true)
+        }
         return
     }
 
@@ -399,7 +407,9 @@ fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<FileDirItem>, allowDeleteF
                 }
 
                 if (index == files.size - 1) {
-                    callback?.invoke(wasSuccess)
+                    runOnUiThread {
+                        callback?.invoke(wasSuccess)
+                    }
                 }
             }
         }
@@ -423,7 +433,9 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
     var fileDeleted = !path.startsWith(OTG_PATH) && ((!file.exists() && file.length() == 0L) || file.delete())
     if (fileDeleted) {
         rescanDeletedPath(path) {
-            callback?.invoke(true)
+            runOnUiThread {
+                callback?.invoke(true)
+            }
         }
     } else {
         if (file.isDirectory && allowDeleteFolder) {
@@ -479,7 +491,9 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
         handleSAFDialog(newPath) {
             val document = getDocumentFile(oldPath)
             if (document == null || (File(oldPath).isDirectory != document.isDirectory)) {
-                callback?.invoke(false)
+                runOnUiThread {
+                    callback?.invoke(false)
+                }
                 return@handleSAFDialog
             }
 
@@ -491,21 +505,29 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                         if (!baseConfig.keepLastModified) {
                             updateLastModified(newPath, System.currentTimeMillis())
                         }
-                        callback?.invoke(true)
+                        runOnUiThread {
+                            callback?.invoke(true)
+                        }
                     }
                 } else {
-                    callback?.invoke(false)
+                    runOnUiThread {
+                        callback?.invoke(false)
+                    }
                 }
             } catch (e: SecurityException) {
                 showErrorToast(e)
-                callback?.invoke(false)
+                runOnUiThread {
+                    callback?.invoke(false)
+                }
             }
         }
     } else if (File(oldPath).renameTo(File(newPath))) {
         if (File(newPath).isDirectory) {
             deleteFromMediaStore(oldPath)
             scanPath(newPath) {
-                callback?.invoke(true)
+                runOnUiThread {
+                    callback?.invoke(true)
+                }
             }
         } else {
             if (!baseConfig.keepLastModified) {
@@ -513,11 +535,15 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
             }
             updateInMediaStore(oldPath, newPath)
             scanPaths(arrayListOf(oldPath, newPath)) {
-                callback?.invoke(true)
+                runOnUiThread {
+                    callback?.invoke(true)
+                }
             }
         }
     } else {
-        callback?.invoke(false)
+        runOnUiThread {
+            callback?.invoke(false)
+        }
     }
 }
 
