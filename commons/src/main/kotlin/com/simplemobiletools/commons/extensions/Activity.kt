@@ -564,10 +564,14 @@ fun Activity.hideKeyboard(view: View) {
     inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
 }
 
-fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, callback: (outputStream: OutputStream?) -> Unit) {
+fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreatingNewFile: Boolean = false, callback: (outputStream: OutputStream?) -> Unit) {
     if (needsStupidWritePermissions(fileDirItem.path)) {
         handleSAFDialog(fileDirItem.path) {
             var document = getDocumentFile(fileDirItem.path)
+            if (document == null && allowCreatingNewFile) {
+                document = getDocumentFile(fileDirItem.getParentPath())
+            }
+
             if (document == null) {
                 val error = String.format(getString(R.string.could_not_create_file), fileDirItem.path)
                 showErrorToast(error)
