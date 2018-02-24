@@ -43,7 +43,7 @@
     <string name="renaming_folder">Map hernoemen</string>
     <string name="filename_cannot_be_empty">Bestandsnaam mag niet leeg zijn</string>
     <string name="filename_invalid_characters">Bestandsnaam bevat ongeldige tekens</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
+    <string name="filename_invalid_characters_placeholder">Bestandsnaam \'%s\' bevat ongeldige tekens</string>
     <string name="extension_cannot_be_empty">Extensie mag niet leeg zijn</string>
     <string name="source_file_doesnt_exist">Bronbestand %s bestaat niet</string>
 
@@ -248,8 +248,8 @@
     <string name="keep_last_modified">Datum laatst gewijzigd behouden bij bestandsoperaties</string>
     <string name="show_info_bubble">Bij slepen van schuifbalk extra informatie tonen</string>
     <string name="prevent_phone_from_sleeping">Slaapstand voorkomen</string>
-    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="skip_delete_confirmation">Niet om bevestiging vragen bij verwijderen</string>
+    <string name="enable_pull_to_refresh">Pull-to-refresh inschakelen</string>
 
     <!-- Setting sections -->
     <string name="visibility">Opmaak</string>
