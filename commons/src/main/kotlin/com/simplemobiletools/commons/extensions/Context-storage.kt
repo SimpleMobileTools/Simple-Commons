@@ -291,6 +291,11 @@ fun Context.getOTGItems(path: String, countHiddenItems: Boolean, getProperFileSi
     val items = ArrayList<FileDirItem>()
     val OTGTreeUri = baseConfig.OTGTreeUri
     var rootUri = DocumentFile.fromTreeUri(applicationContext, Uri.parse(OTGTreeUri))
+    if (rootUri == null) {
+        callback(items)
+        return
+    }
+
     val parts = path.split("/").dropLastWhile { it.isEmpty() }
     for (part in parts) {
         if (path == OTG_PATH) {
