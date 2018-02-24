@@ -360,7 +360,10 @@ fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolea
     if (!fileDeleted) {
         val document = getDocumentFile(fileDirItem.path)
         if (document != null && (fileDirItem.isDirectory == document.isDirectory)) {
-            fileDeleted = (document.isFile == true || allowDeleteFolder) && DocumentsContract.deleteDocument(applicationContext.contentResolver, document.uri)
+            try {
+                fileDeleted = (document.isFile == true || allowDeleteFolder) && DocumentsContract.deleteDocument(applicationContext.contentResolver, document.uri)
+            } catch (ignored: Exception) {
+            }
         }
     }
 
