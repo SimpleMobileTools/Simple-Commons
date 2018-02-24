@@ -35,6 +35,18 @@ fun Context.getSDCardPath(): String {
         sdCardPath = directories.firstOrNull() ?: ""
     }
 
+    if (sdCardPath.isEmpty()) {
+        val SDpattern = Pattern.compile("^[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$")
+        try {
+            File("/storage").listFiles()?.forEach {
+                if (SDpattern.matcher(it.name).matches()) {
+                    sdCardPath = "/storage/${it.name}"
+                }
+            }
+        } catch (e: Exception) {
+        }
+    }
+
     return sdCardPath.trimEnd('/')
 }
 
