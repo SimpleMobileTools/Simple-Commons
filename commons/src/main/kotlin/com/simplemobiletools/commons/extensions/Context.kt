@@ -273,7 +273,8 @@ fun Context.ensurePublicUri(path: String, applicationId: String): Uri? {
         if (uri.scheme == "content") {
             uri
         } else {
-            val file = File(uri.path)
+            val newPath = if (uri.toString().startsWith("/")) uri.toString() else uri.path
+            val file = File(newPath)
             getFilePublicUri(file, applicationId)
         }
     }
