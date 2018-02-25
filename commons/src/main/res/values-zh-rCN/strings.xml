@@ -314,4 +314,23 @@
     <!-- License -->
     <string name="notice">此应用使用了以下三方库。谢谢。</string>
     <string name="third_party_licences">开放源代码</string>
+    <string name="kotlin_title">Kotlin (programming language)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
+    <string name="glide_title">Glide (image loading and caching)</string>
+    <string name="picasso_title">Picasso (image loading and caching)</string>
+    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
+    <string name="joda_title">Joda-Time (Java date replacement)</string>
+    <string name="stetho_title">Stetho (debugging databases)</string>
+    <string name="otto_title">Otto (event bus)</string>
+    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
+    <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
+    <string name="gson_title">Gson (JSON parser)</string>
+    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
 </resources>
