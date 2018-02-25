@@ -43,7 +43,7 @@
     <string name="renaming_folder">Canviant el nom de la carpeta</string>
     <string name="filename_cannot_be_empty">El nom de l\'arxiu no pot ser buit</string>
     <string name="filename_invalid_characters">El nom de l\'arxiu conté caràcters no vàlids</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
+    <string name="filename_invalid_characters_placeholder">El nom de l\'arxiu  \'%s\' conté caràcters no vàlids</string>
     <string name="extension_cannot_be_empty">La extensió no pot estar buida</string>
     <string name="source_file_doesnt_exist">El fitxer %s no existeix</string>
 
@@ -247,8 +247,8 @@
     <string name="keep_last_modified">Mantenir el valor de la darrera modificació al copiar/moure/canviar el nom dels arxius</string>
     <string name="show_info_bubble">Mostra una bombolla d\'informació en elements de desplaçament mitjançant arrossegament de la barra de desplaçament</string>
     <string name="prevent_phone_from_sleeping">Evita que el telèfon dormi</string>
-    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="skip_delete_confirmation">Ignora sempre el diàleg de confirmació d\'eliminació</string>
+    <string name="enable_pull_to_refresh">Activa estirar des de la part superior per refrescar</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilitat</string>
