@@ -248,8 +248,8 @@
     <string name="keep_last_modified">在复制/移动/重命名文件时保留旧的修改日期</string>
     <string name="show_info_bubble">拖动滚动条时在滚动项目旁显示一个信息气泡</string>
     <string name="prevent_phone_from_sleeping">阻止设备休眠</string>
-    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="skip_delete_confirmation">忽略删除确认对话框</string>
+    <string name="enable_pull_to_refresh">启用顶部上拉刷新</string>
 
     <!-- Setting sections -->
     <string name="visibility">可见度</string>
@@ -301,38 +301,17 @@
     <string name="purchase">购买</string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently asked questions</string>
-    <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
-    <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
-        in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
-    <string name="faq_2_title_commons">I want to support you, but I cannot donate money. Is there anything else I can do?</string>
-    <string name="faq_2_text_commons">Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-        You can find the guide at https://github.com/SimpleMobileTools/General-Discussion , or just shoot me a message at hello@simplemobiletools.com if you need help.</string>
-    <string name="faq_3_title_commons">I deleted some files by mistake, how can I recover them?</string>
-    <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, there is no trashbin available.</string>
-    <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
-    <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
+    <string name="frequently_asked_questions">常见问题</string>
+    <string name="faq_1_title_commons">为什么我在应用小部件列表里没有找到这个应用的小部件？</string>
+    <string name="faq_1_text_commons">这很可能是因为你将应用程序移动到了SD卡。由于Android系统的限制，在这种情况下会隐藏应用程序的小部件。 唯一的解决方法是在系统设置中将应用程序移回内部存储。</string>
+    <string name="faq_2_title_commons">我想支持你，但我不能捐赠金钱。 还有什么是我能够做的吗？</string>
+    <string name="faq_2_text_commons">当然有。你可以帮我宣传这个应用，或给个五星好评。你还可以为我的应用翻译新的语言来帮助你，或者是更新一些现有的翻译。你可以在https://github.com/SimpleMobileTools/General-Discussion找到该指南，如果你需要帮助，也可以发邮件hello@simplemobiletools.com给我。</string>
+    <string name="faq_3_title_commons">我该怎么恢复误删的文件？</string>
+    <string name="faq_3_text_commons">不幸的是，你无法恢复。在确认对话框后文件将被立即删除，你并没有回收站用。</string>
+    <string name="faq_4_title_commons">我不喜欢小部件的颜色，我可以修改吗？</string>
+    <string name="faq_4_text_commons">是可以的，当你在主屏幕上拖动小部件时，会出现小部件配置界面。你会在左下角看到彩色的方块，只需按下它们即可选择新的颜色。你还可以通过滑块来调整Alpha值。</string>
 
     <!-- License -->
     <string name="notice">此应用使用了以下三方库。谢谢。</string>
     <string name="third_party_licences">开放源代码</string>
-    <string name="kotlin_title">Kotlin (programming language)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
-    <string name="glide_title">Glide (image loading and caching)</string>
-    <string name="picasso_title">Picasso (image loading and caching)</string>
-    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
-    <string name="joda_title">Joda-Time (Java date replacement)</string>
-    <string name="stetho_title">Stetho (debugging databases)</string>
-    <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
-    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
-    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
-    <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
 </resources>
