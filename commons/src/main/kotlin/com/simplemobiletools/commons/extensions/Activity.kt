@@ -243,7 +243,7 @@ fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: 
             setDataAndType(newUri, mimeType)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
-            if (applicationId == "com.simplemobiletools.gallery") {
+            if (applicationId == "com.simplemobiletools.gallery" || applicationId == "com.simplemobiletools.gallery.debug") {
                 putExtra(IS_FROM_GALLERY, true)
             }
 
