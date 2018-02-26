@@ -236,7 +236,7 @@
     <string name="settings">설정</string>
     <string name="customize_colors">앱 테마 및 색상 설정</string>
     <string name="use_english_language">영어 사용</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
+    <string name="avoid_whats_new">시작시 새로운 기능 표시 안 함</string>
     <string name="show_hidden_items">숨김항목 활성화</string>
     <string name="font_size">폰트 크기</string>
     <string name="small">작게</string>
@@ -304,17 +304,17 @@
     <string name="purchase">구매</string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently asked questions</string>
-    <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
-    <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
-        in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
-    <string name="faq_2_title_commons">I want to support you, but I cannot donate money. Is there anything else I can do?</string>
-    <string name="faq_2_text_commons">Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-        You can find the guide at https://github.com/SimpleMobileTools/General-Discussion , or just shoot me a message at hello@simplemobiletools.com if you need help.</string>
-    <string name="faq_3_title_commons">I deleted some files by mistake, how can I recover them?</string>
-    <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, there is no trashbin available.</string>
-    <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
-    <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
+    <string name="frequently_asked_questions">자주 묻는 질문</string>
+    <string name="faq_1_title_commons">위젯 목록에 이앱이 표시되지 않으면 어떻게 해야 하나요?</string>
+    <string name="faq_1_text_commons">SD 카드에서 앱을 이동했기 때문에 그럴 가능성이 큽니다. 그런경우 안드로이드 시스템 정책에 따라 위젯이 보이지 않게됩니다. 
+        유일한 해결책은 기기 설정을 통해 앱을 내부 저장소로 다시 이동하는 것입니다.</string>
+    <string name="faq_2_title_commons">기부가 아닌 다른 방법으로 당신을 지원하고 싶습니다. 다른 방법이 있나요?</string>
+    <string name="faq_2_text_commons">예, 물론입니다. 앱에 대한 의견을 전하거나 좋은 피드백과 평가를 제공 할 수 있습니다. 또한 새로운 언어로 앱을 번역하거나 기존 번역을 업데이트하면 도움이됩니다.
+        가이드는 https://github.com/SimpleMobileTools/General-Discussion에서 찾을 수 있습니다. 도움이 필요하면 hello@simplemobiletools.com으로 메시지를 보내시기 바랍니다.</string>
+    <string name="faq_3_title_commons">실수로 일부 파일을 삭제했는데 어떻게 복구 할 수 있습니까?</string>
+    <string name="faq_3_text_commons">불행하게도 불가능합니다. 파일은 바로 삭제되며 사용 가능한 휴지통이 없습니다.</string>
+    <string name="faq_4_title_commons">위젯 색상이 마음에 들지 않을 경우 변경할 수 있나요?</string>
+    <string name="faq_4_text_commons">예, 홈 화면에서 위젯을 드래그하면 위젯 구성 화면이 나타납니다. 왼쪽 하단 모서리에 색깔이있는 사각형이 보일 것입니다. 그것을 눌러 새로운 색을 선택하십시오. 슬라이더를 사용하여 알파를 조정할 수도 있습니다.</string>
 
     <!-- License -->
     <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
