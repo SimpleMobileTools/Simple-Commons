@@ -318,7 +318,10 @@ fun Context.getOTGItems(path: String, countHiddenItems: Boolean, getProperFileSi
             continue
         }
 
-        rootUri = rootUri.findFile(part)
+        val file = rootUri.findFile(part)
+        if (file != null) {
+            rootUri = file
+        }
     }
 
     val files = rootUri.listFiles()
