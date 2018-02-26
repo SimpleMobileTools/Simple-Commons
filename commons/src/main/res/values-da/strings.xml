@@ -43,7 +43,7 @@
     <string name="renaming_folder">Omdøber mappe</string>
     <string name="filename_cannot_be_empty">Filen skal have et navn</string>
     <string name="filename_invalid_characters">Filnavnet indeholder ugyldige tegn</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
+    <string name="filename_invalid_characters_placeholder">Filnavnet \'%s\' indeholder ugyldige tegn</string>
     <string name="extension_cannot_be_empty">Filtypen kan ikke stå tom</string>
     <string name="source_file_doesnt_exist">Kildefilen %s eksisterer ikke</string>
 
@@ -248,8 +248,8 @@
     <string name="keep_last_modified">Kopi/flyt/omdøb skal ikke påvirke ændringstidspunktet</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
     <string name="prevent_phone_from_sleeping">Hold telefonen \'vågen\'</string>
-    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="skip_delete_confirmation">Spørg ikke om bekræftelse før sletning</string>
+    <string name="enable_pull_to_refresh">Aktiver træk nedad for at genindlæse</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighed</string>
