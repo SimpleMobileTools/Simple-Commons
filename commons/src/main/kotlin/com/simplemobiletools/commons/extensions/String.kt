@@ -1,7 +1,12 @@
 package com.simplemobiletools.commons.extensions
 
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.Point
 import android.media.ExifInterface
+import android.media.MediaMetadataRetriever
+import com.simplemobiletools.commons.helpers.OTG_PATH
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -10,12 +15,15 @@ fun String.getFilenameFromPath() = substring(lastIndexOf("/") + 1)
 fun String.getFilenameExtension() = substring(lastIndexOf(".") + 1)
 
 fun String.getBasePath(context: Context): String {
-    return if (startsWith(context.internalStoragePath))
+    return if (startsWith(context.internalStoragePath)) {
         context.internalStoragePath
-    else if (!context.sdCardPath.isEmpty() && startsWith(context.sdCardPath))
+    } else if (!context.sdCardPath.isEmpty() && startsWith(context.sdCardPath)) {
         context.sdCardPath
-    else
+    } else if (startsWith(OTG_PATH)) {
+        OTG_PATH
+    } else {
         "/"
+    }
 }
 
 fun String.isAValidFilename(): Boolean {
@@ -46,6 +54,16 @@ fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }
 
 fun String.isImageFast() = photoExtensions.any { endsWith(it, true) }
 fun String.isAudioFast() = audioExtensions.any { endsWith(it, true) }
+
+fun String.isImageSlow() = isImageFast() || getMimeType().startsWith("image")
+fun String.isVideoSlow() = isVideoFast() || getMimeType().startsWith("video")
+fun String.isAudioSlow() = isAudioFast() || getMimeType().startsWith("audio")
+
+fun String.getCompressionFormat() = when (getFilenameExtension().toLowerCase()) {
+    "png" -> Bitmap.CompressFormat.PNG
+    "webp" -> Bitmap.CompressFormat.WEBP
+    else -> Bitmap.CompressFormat.JPEG
+}
 
 fun String.areDigitsOnly() = matches(Regex("[0-9]+"))
 
@@ -113,7 +131,93 @@ fun String.getGenericMimeType(): String {
     return "$type/*"
 }
 
-fun String.getMimeTypeFromPath(): String {
+fun String.getParentPath() = substring(0, length - getFilenameFromPath().length)
+
+fun String.getDuration() = getFileDurationSeconds()?.getFormattedDuration()
+
+fun String.getFileDurationSeconds(): Int? {
+    return try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(this)
+        val time = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)
+        val timeInMs = java.lang.Long.parseLong(time)
+        (timeInMs / 1000).toInt()
+    } catch (e: Exception) {
+        null
+    }
+}
+
+fun String.getFileArtist(): String? {
+    return try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(this)
+        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST)
+    } catch (ignored: Exception) {
+        null
+    }
+}
+
+fun String.getFileAlbum(): String? {
+    return try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(this)
+        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUM)
+    } catch (ignored: Exception) {
+        null
+    }
+}
+
+fun String.getFileSongTitle(): String? {
+    return try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(this)
+        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE)
+    } catch (ignored: Exception) {
+        null
+    }
+}
+
+fun String.getResolution(): Point? {
+    return if (isImageFast() || isImageSlow()) {
+        getImageResolution()
+    } else if (isVideoFast() || isVideoSlow()) {
+        getVideoResolution()
+    } else {
+        return null
+    }
+}
+
+fun String.getVideoResolution(): Point? {
+    try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(this)
+        val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH).toInt()
+        val height = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT).toInt()
+        return Point(width, height)
+    } catch (ignored: Exception) {
+
+    }
+    return null
+}
+
+fun String.getImageResolution(): Point? {
+    val options = BitmapFactory.Options()
+    options.inJustDecodeBounds = true
+    BitmapFactory.decodeFile(this, options)
+    val width = options.outWidth
+    val height = options.outHeight
+    return if (width > 0 && height > 0) {
+        Point(options.outWidth, options.outHeight)
+    } else {
+        null
+    }
+}
+
+fun String.getPublicUri(context: Context) = context.getDocumentFile(this)?.uri ?: ""
+
+fun String.getOTGPublicPath(context: Context) = "${context.baseConfig.OTGBasePath}%3A${substring(OTG_PATH.length).replace("/", "%2F")}"
+
+fun String.getMimeType(): String {
     val typesMap = HashMap<String, String>().apply {
         put("323", "text/h323")
         put("3g2", "video/3gpp2")

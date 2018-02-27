@@ -13,7 +13,8 @@
     <string name="unknown">Desconocido</string>
     <string name="always">Siempre</string>
     <string name="never">Nunca</string>
-    <string name="details">Details</string>
+    <string name="details">Detalles</string>
+    <string name="notas">Notas</string>
 
     <!-- Search -->
     <string name="search">Buscar</string>
@@ -40,9 +41,11 @@
     <string name="rename_folder_root">No se puede cambiar el nombre de la carpeta raíz del almacenamiento</string>
     <string name="rename_folder_ok">Carpeta renombrada correctamente</string>
     <string name="renaming_folder">Renombrando carpeta</string>
-    <string name="filename_cannot_be_empty">El nombre de archivo no puede estar vacío</string>
-    <string name="filename_invalid_characters">El nombre archivo contiene caracteres no válidos</string>
+    <string name="filename_cannot_be_empty">El nombre del archivo no puede estar vacío</string>
+    <string name="filename_invalid_characters">El nombre del archivo contiene caracteres no válidos</string>
+    <string name="filename_invalid_characters_placeholder">El nombre del archivo \'%s\' contiene caracteres no válidos</string>
     <string name="extension_cannot_be_empty">La extensión no puede estar vacía</string>
+    <string name="source_file_doesnt_exist">El archivo %s no existe</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
@@ -109,6 +112,7 @@
     <string name="sd_card">Tarjeta SD</string>
     <string name="root">Raíz /</string>
     <string name="wrong_root_selected">Se seleccionó la carpeta incorrecta, seleccione la carpeta raíz de su tarjeta SD</string>
+    <string name="sd_card_otg_same">La targeta SD i el dispositivo OTG no pueden ser los mismos</string>
 
     <!-- File properties -->
     <string name="properties">Propiedades</string>
@@ -242,7 +246,9 @@
     <string name="password_protect_whole_app">Contraseña para proteger toda la aplicación</string>
     <string name="keep_last_modified">Mantener el valor de ultima modificación al copiar/mover/renombrar los archivos</string>
     <string name="show_info_bubble">Mostrar una burbuja de información al desplazar elementos arrastrando la barra de desplazamiento</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Evitar que el teléfono duerma</string>
+    <string name="skip_delete_confirmation">Omitir siempre el diálogo de confirmación de eliminación</string>
+    <string name="enable_pull_to_refresh">Habilitar tirar desde la parte superior para refrescar</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilidad</string>
@@ -260,6 +266,11 @@
     <string name="importing_some_entries_failed">La importación de algunas entradas ha fallado</string>
     <string name="exporting_some_entries_failed">La exportación de algunas entradas ha fallado</string>
     <string name="no_entries_for_exporting">No se han encontrado entradas para exportar</string>
+
+    <!-- OTG devices -->
+    <string name="otg">OTG</string>
+    <string name="confirm_otg_storage_access_text">Elija la carpeta raíz del dispositivo OTG en la pantalla siguiente, para otorgar acceso</string>
+    <string name="wrong_root_selected_otg">Carpeta incorrecta, seleccione la carpeta raíz de su dispositivo OTG</string>
 
     <!-- About -->
     <string name="about">Acerca de</string>
@@ -281,12 +292,25 @@
     <string name="donate_please">
         <![CDATA[
             Hola,<br><br>
-            Espero que estés disfrutando de la aplicación. No contiene anuncios, por lo que debe respaldar su desarrollo comprando la apñlicación <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, también evitará que este diálogo vuelva a aparecer.<br><br>
+            Espero que estés disfrutando de la aplicación. No contiene anuncios, por lo que debe respaldar su desarrollo comprando la aplicación <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, también evitará que este diálogo vuelva a aparecer.<br><br>
             Puedes encontrar más opciones de donación <a href="http://simplemobiletools.com/donate">aquí</a>.<br><br>
             Gracias!
         ]]>
     </string>
     <string name="purchase">Comprar</string>
+
+    <!-- FAQ -->
+    <string name="frequently_asked_questions">Preguntas frecuentes</string>
+    <string name="faq_1_title_commons">¿Cómo es que no veo este widget de aplicaciones en la lista de widgets?</string>
+    <string name="faq_1_text_commons">Lo más probable es que haya movido la aplicación en una tarjeta SD. Hay una limitación del sistema Android que oculta los widgets de la aplicación dada
+        en ese caso. La única solución es volver a colocar la aplicación en el almacenamiento interno a través de la configuración de su dispositivo.</string>
+    <string name="faq_2_title_commons">Quiero apoyarte, pero no puedo donar dinero. ¿Hay algo mas que pueda hacer?</string>
+    <string name="faq_2_text_commons">Sí, por supuesto. Puede correr la voz sobre las aplicaciones o dar buenos comentarios y valoraciones. También puede ayudar traduciendo las aplicaciones en un nuevo idioma o simplemente actualizar algunas traducciones existentes.
+        Puede encontrar la guía en https://github.com/SimpleMobileTools/General-Discussion, o simplemente envíeme un mensaje a hello@simplemobiletools.com si necesita ayuda.</string>
+    <string name="faq_3_title_commons">Borré algunos archivos por error, ¿cómo puedo recuperarlos?</string>
+    <string name="faq_3_text_commons">Tristemente, no puedes. Los archivos se eliminan instantáneamente después del diálogo de confirmación, no hay papelera disponible.</string>
+    <string name="faq_4_title_commons">No me gustan los colores del widget, ¿puedo cambiarlos?</string>
+    <string name="faq_4_text_commons">Sí, al arrastrar un widget en la pantalla de inicio aparece una pantalla de configuración de widgets. Verá cuadrados de colores en la esquina inferior izquierda, solo presione para elegir un nuevo color. Puede usar el control deslizante para ajustar el alfa también.</string>
 
     <!-- License -->
     <string name="notice">Esta aplicación usa las siguientes bibliotecas de terceros que hacen mi vida más fácil. Gracias.</string>

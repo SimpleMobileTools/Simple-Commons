@@ -14,6 +14,7 @@
     <string name="always">Altid</string>
     <string name="never">Aldrig</string>
     <string name="details">Detaljer</string>
+    <string name="notes">Noter</string>
 
     <!-- Search -->
     <string name="search">Søg</string>
@@ -42,7 +43,9 @@
     <string name="renaming_folder">Omdøber mappe</string>
     <string name="filename_cannot_be_empty">Filen skal have et navn</string>
     <string name="filename_invalid_characters">Filnavnet indeholder ugyldige tegn</string>
+    <string name="filename_invalid_characters_placeholder">Filnavnet \'%s\' indeholder ugyldige tegn</string>
     <string name="extension_cannot_be_empty">Filtypen kan ikke stå tom</string>
+    <string name="source_file_doesnt_exist">Kildefilen %s eksisterer ikke</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopier</string>
@@ -109,6 +112,7 @@
     <string name="sd_card">SD-kort</string>
     <string name="root">Rod</string>
     <string name="wrong_root_selected">Forkert mappe valgt, vælg rodmappen på SD-kortet</string>
+    <string name="sd_card_otg_same">Stierne til SD-kortet og OTG-enheden kan ikke være ens</string>
 
     <!-- File properties -->
     <string name="properties">Indstillinger</string>
@@ -242,8 +246,10 @@
     <string name="password_protect_hidden_items">Beskyt visning af skjulte elementer med en kode</string>
     <string name="password_protect_whole_app">Beskyt hele appen med en adgangskode</string>
     <string name="keep_last_modified">Kopi/flyt/omdøb skal ikke påvirke ændringstidspunktet</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+    <string name="show_info_bubble">Vis en info-boble når jeg scroller med rullepanelet</string>
     <string name="prevent_phone_from_sleeping">Hold telefonen \'vågen\'</string>
+    <string name="skip_delete_confirmation">Spørg ikke om bekræftelse før sletning</string>
+    <string name="enable_pull_to_refresh">Aktiver træk nedad for at genindlæse</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighed</string>
@@ -261,6 +267,11 @@
     <string name="importing_some_entries_failed">Import mislykkedes delvist</string>
     <string name="exporting_some_entries_failed">Eksport mislykkedes delvist</string>
     <string name="no_entries_for_exporting">Der er ikke fundet indhold til eksport</string>
+
+    <!-- OTG devices -->
+    <string name="otg">OTG</string>
+    <string name="confirm_otg_storage_access_text">Vælg rodmappen på \'OTG\'-enheden på den næste skærm for at give adgang.</string>
+    <string name="wrong_root_selected_otg">Den forkerte mappe er valgt, vælg rodmappen på din \'OTG\'-enhed</string>
 
     <!-- About -->
     <string name="about">Om</string>
@@ -288,6 +299,18 @@
         ]]>
     </string>
     <string name="purchase">Køb</string>
+
+    <!-- FAQ -->
+    <string name="frequently_asked_questions">Ofte stillede spørgsmål</string>
+    <string name="faq_1_title_commons">Hvorfor kan jeg ikke se denne app\'s widget på listen med widgets?</string>
+    <string name="faq_1_text_commons">Det er sikkert fordi du har flyttet appen til et SD-kort. Der er en begrænsning i Androidsystemet der i så fald skjuler appens widget. Eneste løsning er at flytte appen tilbage til det interne lager via indstillingerne på din enhed.</string>
+    <string name="faq_2_title_commons">Jeg vil gerne støtte dig, men jeg kan ikke donere penge. Er der andet jeg kan gøre?</string>
+    <string name="faq_2_text_commons">Ja, selvfølgelig. Du kan fortælle andre om appsene eller give god feedback og gode vurderinger. Du kan også hjælpe med at oversætte til et nyt sprog, eller med at opdatere en eksisterende oversættelse.
+        Du kan finde en guide på siden https://github.com/SimpleMobileTools/General-Discussion, eller send mig en besked på hello@simplemobiletools.com hvis du har brug for hjælp.</string>
+    <string name="faq_3_title_commons">Jeg fik slettet nogle filer ved en fejl, hvordan kan jeg gendanne dem?</string>
+    <string name="faq_3_text_commons">Det kan du desværre ikke. Filer er væk så snart sletningen er bekræftet, og der er ingen papirkurv.</string>
+    <string name="faq_4_title_commons">Jeg bryder mig ikke om farverne på widget\'en, kan jeg ændre dem?</string>
+    <string name="faq_4_text_commons">Jep. Når du føjer en widget til din skærm kommer muligheden for at konfigurere den frem. I nederste venstre hjørne finder du farvede kvadrater, klik på dem og vælg en ny farve. Du kan justere alfa med skyderen.</string>
 
     <!-- License -->
     <string name="notice">Denne app bruger følgende 3.-parts biblioteker der gør at mit liv bliver lidt enklere. Tak.</string>

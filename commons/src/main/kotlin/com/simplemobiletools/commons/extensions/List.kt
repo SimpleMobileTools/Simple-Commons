@@ -1,13 +1,12 @@
 package com.simplemobiletools.commons.extensions
 
-import android.net.Uri
 import java.util.*
 
-fun List<Uri>.getMimeType(): String {
+fun List<String>.getMimeType(): String {
     val mimeGroups = HashSet<String>(size)
     val subtypes = HashSet<String>(size)
     forEach {
-        val parts = it.path.getMimeTypeFromPath().split("/")
+        val parts = it.getMimeType().split("/")
         if (parts.size == 2) {
             mimeGroups.add(parts.getOrElse(0, { "" }))
             subtypes.add(parts.getOrElse(1, { "" }))

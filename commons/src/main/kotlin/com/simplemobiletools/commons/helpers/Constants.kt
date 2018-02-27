@@ -2,16 +2,20 @@ package com.simplemobiletools.commons.helpers
 
 const val APP_NAME = "app_name"
 const val APP_LICENSES = "app_licenses"
+const val APP_FAQ = "app_faq"
 const val APP_VERSION_NAME = "app_version_name"
-const val REAL_FILE_PATH = "real_file_path"
+const val REAL_FILE_PATH = "real_file_path_2"
 const val IS_FROM_GALLERY = "is_from_gallery"
 const val BROADCAST_REFRESH_MEDIA = "com.simplemobiletools.REFRESH_MEDIA"
+const val OTG_PATH = "otg:/"
 
 // shared preferences
 const val PREFS_KEY = "Prefs"
 const val APP_RUN_COUNT = "app_run_count"
 const val LAST_VERSION = "last_version"
 const val TREE_URI = "tree_uri_2"
+const val OTG_TREE_URI = "otg_tree_uri"
+const val OTG_BASE_PATH = "otg_base_path"
 const val SD_CARD_PATH = "sd_card_path_2"
 const val INTERNAL_STORAGE_PATH = "internal_storage_path"
 const val TEXT_COLOR = "text_color"
@@ -37,10 +41,13 @@ const val WAS_SHARED_THEME_FORCED = "was_shared_theme_forced"
 const val WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN = "was_custom_theme_switch_description_shown"
 const val WAS_SHARED_THEME_AFTER_UPDATE_CHECKED = "was_shared_theme_after_update_checked"
 const val SHOW_INFO_BUBBLE = "show_info_bubble"
-const val SORTING = "sorting"
 const val LAST_CONFLICT_RESOLUTION = "last_conflict_resolution"
 const val LAST_CONFLICT_APPLY_TO_ALL = "last_conflict_apply_to_all"
 const val AVOID_WHATS_NEW = "avoid_whats_new"
+const val HAD_THANK_YOU_INSTALLED = "had_thank_you_installed"
+const val SKIP_DELETE_CONFIRMATION = "skip_delete_confirmation"
+const val ENABLE_PULL_TO_REFRESH = "enable_pull_to_refresh"
+const val SCROLL_HORIZONTALLY = "scroll_horizontally"
 
 // licenses
 const val LICENSE_KOTLIN = 1
@@ -65,10 +72,12 @@ const val LICENSE_LEAK_CANARY = 262144
 
 // global intents
 const val OPEN_DOCUMENT_TREE = 1000
-const val REQUEST_SET_AS = 1001
-const val REQUEST_EDIT_IMAGE = 1002
+const val OPEN_DOCUMENT_TREE_OTG = 1001
+const val REQUEST_SET_AS = 1002
+const val REQUEST_EDIT_IMAGE = 1003
 
 // sorting
+const val SORT_ORDER = "sort_order"
 const val SORT_BY_NAME = 1
 const val SORT_BY_DATE_MODIFIED = 2
 const val SORT_BY_SIZE = 4

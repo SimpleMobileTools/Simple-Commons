@@ -14,6 +14,7 @@
     <string name="always">Immer</string>
     <string name="never">Nie</string>
     <string name="details">Details</string>
+    <string name="notes">Notizen</string>
 
     <!-- Search -->
     <string name="search">Suchen</string>
@@ -42,7 +43,9 @@
     <string name="renaming_folder">Ordner umbennenen</string>
     <string name="filename_cannot_be_empty">Dateiname darf nicht leer sein</string>
     <string name="filename_invalid_characters">Dateiname enthält ungültige Zeichen</string>
+    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
     <string name="extension_cannot_be_empty">Dateiendung darf nicht leer sein</string>
+    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopieren</string>
@@ -109,6 +112,7 @@
     <string name="sd_card">SD-Karte</string>
     <string name="root">Hauptverzeichnis</string>
     <string name="wrong_root_selected">Falscher Ordner ausgewählt, bitte Hauptverzeichnis der SD-Karte auswählen</string>
+    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
 
     <!-- File properties -->
     <string name="properties">Eigenschaften</string>
@@ -244,6 +248,8 @@
     <string name="keep_last_modified">Beim Modifizieren von Dateien die alte Änderungszeit beibehalten</string>
     <string name="show_info_bubble">Beim Scrollen mit dem Scrollbalken Infofenster anzeigen</string>
     <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
+    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
 
     <!-- Setting sections -->
     <string name="visibility">Sichtbarkeit</string>
@@ -261,6 +267,11 @@
     <string name="importing_some_entries_failed">Importieren einiger Einträge fehlgeschlagen</string>
     <string name="exporting_some_entries_failed">Exportieren einiger Einträge fehlgeschlagen</string>
     <string name="no_entries_for_exporting">Keine Einträge zum Exportieren gefunden</string>
+
+    <!-- OTG devices -->
+    <string name="otg">OTG</string>
+    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
+    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
 
     <!-- About -->
     <string name="about">Über</string>
@@ -288,6 +299,18 @@
         ]]>
     </string>
     <string name="purchase">Kaufen</string>
+
+    <!-- FAQ -->
+    <string name="frequently_asked_questions">Frequently asked questions</string>
+    <string name="faq_1_title_commons">Weshalb sehe ich das Widget dieser App nicht in der Liste der Widgets?</string>
+    <string name="faq_1_text_commons">Wahrscheinlich weil du die App auf die Speicherkarte verschoben hast. In diesem Fall werden durch eine Einschränkung von Android  die Widgets dieser App versteckt. Die einzige Lösung ist die App über die Geräteeinstellungen wieder in den internen Speicher zu verschieben.</string>
+    <string name="faq_2_title_commons">Ich will dich unterstützen, aber es ist mir nicht möglich Geld zu spenden. Gibt es eine andere Möglichkeit?</string>
+    <string name="faq_2_text_commons">Ja, sicherlich. Du kannst die Apps weiterempfehlen oder gute Rückmeldung und Berwertungen geben. Du kannst ebenso helfen, indem du die Apps in neue Sprachen übersetzt oder vorhandene Übersetzungen aktualisierst. 
+        Die Anleitung dazu findest du unter https://github.com/SimpleMobileTools/General-Discussion oder sende mir eine Nachricht an hello@simplemobiletools.com, falls du Hilfe benötigst.</string>
+    <string name="faq_3_title_commons">Ich habe versehentlich einige Dateien gelöscht. Wie kann ich diese wiederherstellen?</string>
+    <string name="faq_3_text_commons">Unglücklicherweise gar nicht. Dateien werden sofort nach dem Bestätigungsdialog gelöscht, sprich ein Papierkorb ist nicht vorhanden.</string>
+    <string name="faq_4_title_commons">Ich mag die Farben des Widgets nicht. Kann ich sie wechseln?</string>
+    <string name="faq_4_text_commons">Ja, wenn du ein Widget auf den Home Screen ziehst, erscheint ein Konfigurationmenü. In der linken unteren Ecke sind farbige Kästchen, drücke auf sie und wähle eine neue Farbe. Ausserdem kannst du den Regler nutzen, um den Alphaparameter (Transparenz) einzustellen.</string>
 
     <!-- License -->
     <string name="notice">Diese App nutzt die folgenden Drittanbieterbilbiotheken, die mein Leben einfacher machen. Danke!</string>

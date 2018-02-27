@@ -13,7 +13,8 @@
     <string name="unknown">未知</string>
     <string name="always">总是</string>
     <string name="never">从不</string>
-    <string name="details">Details</string>
+    <string name="details">详细</string>
+    <string name="notes">笔记</string>
 
     <!-- Search -->
     <string name="search">搜索</string>
@@ -39,10 +40,12 @@
     <string name="rename_folder_exists">文件夹名已存在</string>
     <string name="rename_folder_root">无法重命名存储器的根目录</string>
     <string name="rename_folder_ok">文件夹重命名成功</string>
-    <string name="renaming_folder">重命名中...</string>
+    <string name="renaming_folder">重命名中…</string>
     <string name="filename_cannot_be_empty">文件名不能为空</string>
     <string name="filename_invalid_characters">文件名包含非法字符</string>
+    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
     <string name="extension_cannot_be_empty">扩展名不能为空</string>
+    <string name="source_file_doesnt_exist">原文件 %s 不存在</string>
 
     <!-- Copy / Move -->
     <string name="copy">复制</string>
@@ -109,6 +112,7 @@
     <string name="sd_card">SD 卡</string>
     <string name="root">根目录</string>
     <string name="wrong_root_selected">目录选择错误，请选择 SD 卡</string>
+    <string name="sd_card_otg_same">SD 卡和 OTG 设备路径不能相同</string>
 
     <!-- File properties -->
     <string name="properties">属性</string>
@@ -243,7 +247,9 @@
     <string name="password_protect_whole_app">使用密码保护本应用</string>
     <string name="keep_last_modified">在复制/移动/重命名文件时保留旧的修改日期</string>
     <string name="show_info_bubble">拖动滚动条时在滚动项目旁显示一个信息气泡</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">阻止设备休眠</string>
+    <string name="skip_delete_confirmation">忽略删除确认对话框</string>
+    <string name="enable_pull_to_refresh">启用顶部上拉刷新</string>
 
     <!-- Setting sections -->
     <string name="visibility">可见度</string>
@@ -252,8 +258,8 @@
     <string name="file_operations">文件操作</string>
 
     <!-- Import / Export -->
-    <string name="importing">正在导入...</string>
-    <string name="exporting">正在导出...</string>
+    <string name="importing">正在导入…</string>
+    <string name="exporting">正在导出…</string>
     <string name="importing_successful">导入成功</string>
     <string name="exporting_successful">导出成功</string>
     <string name="importing_failed">导入失败</string>
@@ -261,6 +267,11 @@
     <string name="importing_some_entries_failed">部分项目导入失败</string>
     <string name="exporting_some_entries_failed">部分项目导出失败</string>
     <string name="no_entries_for_exporting">未找到要导出的项目</string>
+
+    <!-- OTG devices -->
+    <string name="otg">OTG</string>
+    <string name="confirm_otg_storage_access_text">请在下一界面选择OTG设备的根文件夹以授予访问权限</string>
+    <string name="wrong_root_selected_otg">选择错误，请正确选择OTG设备的根文件夹</string>
 
     <!-- About -->
     <string name="about">关于</string>
@@ -288,6 +299,17 @@
         ]]>
     </string>
     <string name="purchase">购买</string>
+
+    <!-- FAQ -->
+    <string name="frequently_asked_questions">常见问题</string>
+    <string name="faq_1_title_commons">为什么我在应用小部件列表里没有找到这个应用的小部件？</string>
+    <string name="faq_1_text_commons">这很可能是因为你将应用程序移动到了SD卡。由于Android系统的限制，在这种情况下会隐藏应用程序的小部件。 唯一的解决方法是在系统设置中将应用程序移回内部存储。</string>
+    <string name="faq_2_title_commons">我想支持你，但我不能捐赠金钱。 还有什么是我能够做的吗？</string>
+    <string name="faq_2_text_commons">当然有。你可以帮我宣传这个应用，或给个五星好评。你还可以为我的应用翻译新的语言来帮助你，或者是更新一些现有的翻译。你可以在https://github.com/SimpleMobileTools/General-Discussion找到该指南，如果你需要帮助，也可以发邮件hello@simplemobiletools.com给我。</string>
+    <string name="faq_3_title_commons">我该怎么恢复误删的文件？</string>
+    <string name="faq_3_text_commons">不幸的是，你无法恢复。在确认对话框后文件将被立即删除，你并没有回收站用。</string>
+    <string name="faq_4_title_commons">我不喜欢小部件的颜色，我可以修改吗？</string>
+    <string name="faq_4_text_commons">是可以的，当你在主屏幕上拖动小部件时，会出现小部件配置界面。你会在左下角看到彩色的方块，只需按下它们即可选择新的颜色。你还可以通过滑块来调整Alpha值。</string>
 
     <!-- License -->
     <string name="notice">此应用使用了以下三方库。谢谢。</string>

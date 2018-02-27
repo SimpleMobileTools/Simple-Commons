@@ -14,6 +14,7 @@
     <string name="always">Always</string>
     <string name="never">Never</string>
     <string name="details">Details</string>
+    <string name="notes">Notes</string>
 
     <!-- Search -->
     <string name="search">검색</string>
@@ -42,7 +43,9 @@
     <string name="renaming_folder">폴더명 변경</string>
     <string name="filename_cannot_be_empty">파일명이 비어있으면 안됨</string>
     <string name="filename_invalid_characters">파일명에 사용할 수 없는 문자가 포함됨</string>
+    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
     <string name="extension_cannot_be_empty">확장자가 비어있으면 안됨</string>
+    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
 
     <!-- Copy / Move -->
     <string name="copy">복사</string>
@@ -109,6 +112,7 @@
     <string name="sd_card">외장 메모리</string>
     <string name="root">루트</string>
     <string name="wrong_root_selected">잘못된 폴더가 선택되었습니다. SD 카드의 루트 폴더를 선택하세요.</string>
+    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
 
     <!-- File properties -->
     <string name="properties">속성</string>
@@ -232,7 +236,7 @@
     <string name="settings">설정</string>
     <string name="customize_colors">앱 테마 및 색상 설정</string>
     <string name="use_english_language">영어 사용</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
+    <string name="avoid_whats_new">시작시 새로운 기능 표시 안 함</string>
     <string name="show_hidden_items">숨김항목 활성화</string>
     <string name="font_size">폰트 크기</string>
     <string name="small">작게</string>
@@ -244,12 +248,14 @@
     <string name="keep_last_modified">파일 복사/이동/변경 시 최종 수정시간 정보를 유지</string>
     <string name="show_info_bubble">스크롤바 드래그 시 항목별 툴팁 활성화</string>
     <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="skip_delete_confirmation">삭제 확인 다이얼로그 비활성화</string>
+    <string name="enable_pull_to_refresh">상하단 스와이프 동작으로 새로고침</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
+    <string name="visibility">가시성</string>
+    <string name="security">보안</string>
+    <string name="scrolling">스크롤링</string>
+    <string name="file_operations">파일 작업</string>
 
     <!-- Import / Export -->
     <string name="importing">가져오는 중…</string>
@@ -261,6 +267,11 @@
     <string name="importing_some_entries_failed">일부항목 가져오기에 실패함</string>
     <string name="exporting_some_entries_failed">일부항목 내보내기에 실패함</string>
     <string name="no_entries_for_exporting">내보낼 수 있는 항목을 찾을 수 없음</string>
+
+    <!-- OTG devices -->
+    <string name="otg">OTG</string>
+    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
+    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
 
     <!-- About -->
     <string name="about">앱정보</string>
@@ -291,6 +302,19 @@
         ]]>
     </string>
     <string name="purchase">구매</string>
+
+    <!-- FAQ -->
+    <string name="frequently_asked_questions">자주 묻는 질문</string>
+    <string name="faq_1_title_commons">위젯 목록에 이앱이 표시되지 않으면 어떻게 해야 하나요?</string>
+    <string name="faq_1_text_commons">SD 카드에서 앱을 이동했기 때문에 그럴 가능성이 큽니다. 그런경우 안드로이드 시스템 정책에 따라 위젯이 보이지 않게됩니다. 
+        유일한 해결책은 기기 설정을 통해 앱을 내부 저장소로 다시 이동하는 것입니다.</string>
+    <string name="faq_2_title_commons">기부가 아닌 다른 방법으로 당신을 지원하고 싶습니다. 다른 방법이 있나요?</string>
+    <string name="faq_2_text_commons">예, 물론입니다. 앱에 대한 의견을 전하거나 좋은 피드백과 평가를 제공 할 수 있습니다. 또한 새로운 언어로 앱을 번역하거나 기존 번역을 업데이트하면 도움이됩니다.
+        가이드는 https://github.com/SimpleMobileTools/General-Discussion에서 찾을 수 있습니다. 도움이 필요하면 hello@simplemobiletools.com으로 메시지를 보내시기 바랍니다.</string>
+    <string name="faq_3_title_commons">실수로 일부 파일을 삭제했는데 어떻게 복구 할 수 있습니까?</string>
+    <string name="faq_3_text_commons">불행하게도 불가능합니다. 파일은 바로 삭제되며 사용 가능한 휴지통이 없습니다.</string>
+    <string name="faq_4_title_commons">위젯 색상이 마음에 들지 않을 경우 변경할 수 있나요?</string>
+    <string name="faq_4_text_commons">예, 홈 화면에서 위젯을 드래그하면 위젯 구성 화면이 나타납니다. 왼쪽 하단 모서리에 색깔이있는 사각형이 보일 것입니다. 그것을 눌러 새로운 색을 선택하십시오. 슬라이더를 사용하여 알파를 조정할 수도 있습니다.</string>
 
     <!-- License -->
     <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>

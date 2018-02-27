@@ -2,20 +2,18 @@ package com.simplemobiletools.commons.activities
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.text.Html
 import android.text.method.LinkMovementMethod
 import android.view.View
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.isBlackAndWhiteTheme
-import com.simplemobiletools.commons.extensions.launchViewIntent
-import com.simplemobiletools.commons.extensions.updateTextColors
+import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.APP_FAQ
 import com.simplemobiletools.commons.helpers.APP_LICENSES
 import com.simplemobiletools.commons.helpers.APP_NAME
 import com.simplemobiletools.commons.helpers.APP_VERSION_NAME
+import com.simplemobiletools.commons.models.FAQItem
 import kotlinx.android.synthetic.main.activity_about.*
 import java.util.*
 
@@ -27,7 +25,7 @@ class AboutActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
         appName = intent.getStringExtra(APP_NAME) ?: ""
-        linkColor = if (isBlackAndWhiteTheme()) Color.WHITE else baseConfig.primaryColor
+        linkColor = getAdjustedPrimaryColor()
     }
 
     override fun onResume() {
@@ -36,6 +34,7 @@ class AboutActivity : BaseSimpleActivity() {
 
         setupWebsite()
         setupEmail()
+        setupFAQ()
         setupMoreApps()
         setupRateUs()
         setupInvite()
@@ -63,6 +62,19 @@ class AboutActivity : BaseSimpleActivity() {
         val href = "$label<br><a href=\"mailto:$email?subject=$appName&body=$body\">$email</a>"
         about_email.text = Html.fromHtml(href)
         about_email.movementMethod = LinkMovementMethod.getInstance()
+    }
+
+    private fun setupFAQ() {
+        val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
+        about_faq.beVisibleIf(faqItems.isNotEmpty())
+        about_faq.setOnClickListener {
+            Intent(applicationContext, FAQActivity::class.java).apply {
+                putExtra(APP_FAQ, faqItems)
+                startActivity(this)
+            }
+        }
+        about_faq.setTextColor(linkColor)
+        about_faq.underlineText()
     }
 
     private fun setupMoreApps() {

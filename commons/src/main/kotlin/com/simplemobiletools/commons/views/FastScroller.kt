@@ -237,7 +237,9 @@ class FastScroller : FrameLayout {
             MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                 handleYOffset = 0
                 handle!!.isSelected = false
-                swipeRefreshLayout?.isEnabled = true
+                if (context.baseConfig.enablePullToRefresh) {
+                    swipeRefreshLayout?.isEnabled = true
+                }
                 hideHandle()
                 true
             }

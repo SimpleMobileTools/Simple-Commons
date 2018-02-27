@@ -9,9 +9,8 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withC
 import com.bumptech.glide.request.RequestOptions
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
-import com.simplemobiletools.commons.extensions.formatSize
-import com.simplemobiletools.commons.extensions.getColoredDrawableWithColor
-import com.simplemobiletools.commons.extensions.isActivityDestroyed
+import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.OTG_PATH
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.filepicker_list_item.view.*
@@ -21,6 +20,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
 
     private val folderDrawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_folder, textColor)
     private val fileDrawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_file, textColor)
+    private val hasOTGConnected = activity.hasOTGConnected()
 
     init {
         folderDrawable.alpha = 180
@@ -74,7 +74,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
                         .centerCrop()
                         .error(fileDrawable)
 
-                val itemToLoad = if (fileDirItem.name.endsWith(".apk", true)) {
+                var itemToLoad = if (fileDirItem.name.endsWith(".apk", true)) {
                     val packageInfo = context.packageManager.getPackageArchiveInfo(path, PackageManager.GET_ACTIVITIES)
                     if (packageInfo != null) {
                         val appInfo = packageInfo.applicationInfo
@@ -89,6 +89,9 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
                 }
 
                 if (!activity.isActivityDestroyed()) {
+                    if (hasOTGConnected && itemToLoad is String && itemToLoad.startsWith(OTG_PATH)) {
+                        itemToLoad = itemToLoad.getOTGPublicPath(activity)
+                    }
                     Glide.with(activity).load(itemToLoad).transition(withCrossFade()).apply(options).into(list_item_icon)
                 }
             }

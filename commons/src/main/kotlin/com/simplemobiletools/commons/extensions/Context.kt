@@ -255,7 +255,7 @@ fun Context.getFilenameFromUri(uri: Uri): String {
 }
 
 fun Context.getMimeTypeFromUri(uri: Uri): String {
-    var mimetype = uri.path.getMimeTypeFromPath()
+    var mimetype = uri.path.getMimeType()
     if (mimetype.isEmpty()) {
         try {
             mimetype = contentResolver.getType(uri)
@@ -263,6 +263,21 @@ fun Context.getMimeTypeFromUri(uri: Uri): String {
         }
     }
     return mimetype
+}
+
+fun Context.ensurePublicUri(path: String, applicationId: String): Uri? {
+    return if (path.startsWith(OTG_PATH)) {
+        getDocumentFile(path)?.uri
+    } else {
+        val uri = Uri.parse(path)
+        if (uri.scheme == "content") {
+            uri
+        } else {
+            val newPath = if (uri.toString().startsWith("/")) uri.toString() else uri.path
+            val file = File(newPath)
+            getFilePublicUri(file, applicationId)
+        }
+    }
 }
 
 fun Context.ensurePublicUri(uri: Uri, applicationId: String): Uri {
@@ -317,4 +332,22 @@ fun Context.getDialogTheme() = if (baseConfig.backgroundColor.getContrastColor()
 fun Context.getCurrentFormattedDateTime(): String {
     val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd_HH-mm", Locale.getDefault())
     return simpleDateFormat.format(Date(System.currentTimeMillis()))
+}
+
+fun Context.updateSDCardPath() {
+    Thread {
+        val oldPath = baseConfig.sdCardPath
+        baseConfig.sdCardPath = getSDCardPath().trimEnd('/')
+        if (oldPath != baseConfig.sdCardPath) {
+            baseConfig.treeUri = ""
+        }
+    }.start()
+}
+
+fun Context.getUriMimeType(path: String, newUri: Uri): String {
+    var mimeType = path.getMimeType()
+    if (mimeType.isEmpty()) {
+        mimeType = getMimeTypeFromUri(newUri)
+    }
+    return mimeType
 }

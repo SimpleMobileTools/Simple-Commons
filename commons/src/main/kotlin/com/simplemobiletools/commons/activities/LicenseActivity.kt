@@ -1,26 +1,21 @@
 package com.simplemobiletools.commons.activities
 
-import android.graphics.Color
 import android.os.Bundle
-import android.text.SpannableString
-import android.text.style.UnderlineSpan
 import android.view.LayoutInflater
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.isBlackAndWhiteTheme
-import com.simplemobiletools.commons.extensions.launchViewIntent
-import com.simplemobiletools.commons.extensions.updateTextColors
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.License
 import kotlinx.android.synthetic.main.activity_license.*
-import kotlinx.android.synthetic.main.license_item.view.*
+import kotlinx.android.synthetic.main.license_faq_item.view.*
 
 class LicenseActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_license)
 
-        val linkColor = if (isBlackAndWhiteTheme()) Color.WHITE else baseConfig.primaryColor
+        val linkColor = getAdjustedPrimaryColor()
+        val textColor = baseConfig.textColor
         updateTextColors(licenses_holder)
 
         val inflater = LayoutInflater.from(this)
@@ -28,22 +23,21 @@ class LicenseActivity : BaseSimpleActivity() {
         val licenseMask = intent.getIntExtra(APP_LICENSES, 0)
         licenses.filter { licenseMask and it.id != 0 }.forEach {
             val license = it
-            val view = inflater.inflate(R.layout.license_item, null)
-            view.apply {
-                license_title.text = getUnderlinedTitle(getString(license.titleId))
-                license_title.setOnClickListener { launchViewIntent(license.urlId) }
-                license_title.setTextColor(linkColor)
-                license_text.text = getString(license.textId)
-                license_text.setTextColor(baseConfig.textColor)
+            inflater.inflate(R.layout.license_faq_item, null).apply {
+                license_faq_title.apply {
+                    text = getString(license.titleId)
+                    underlineText()
+                    setTextColor(linkColor)
+                    setOnClickListener {
+                        launchViewIntent(license.urlId)
+                    }
+                }
+
+                license_faq_text.text = getString(license.textId)
+                license_faq_text.setTextColor(textColor)
                 licenses_holder.addView(this)
             }
         }
-    }
-
-    private fun getUnderlinedTitle(title: String): SpannableString {
-        val underlined = SpannableString(title)
-        underlined.setSpan(UnderlineSpan(), 0, title.length, 0)
-        return underlined
     }
 
     private fun initLicenses() =

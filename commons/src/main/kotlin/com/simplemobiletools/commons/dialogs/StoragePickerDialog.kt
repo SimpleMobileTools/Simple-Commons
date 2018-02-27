@@ -1,13 +1,14 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.app.Activity
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.OTG_PATH
 import kotlinx.android.synthetic.main.dialog_radio_group.view.*
 
 /**
@@ -18,40 +19,73 @@ import kotlinx.android.synthetic.main.dialog_radio_group.view.*
  * @param callback an anonymous function
  *
  */
-class StoragePickerDialog(val activity: Activity, currPath: String, val callback: (pickedPath: String) -> Unit) {
-    var mDialog: AlertDialog
+class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, val callback: (pickedPath: String) -> Unit) {
+    private val ID_INTERNAL = 1
+    private val ID_SD = 2
+    private val ID_OTG = 3
+    private val ID_ROOT = 4
+
+    private var mDialog: AlertDialog
+    private var radioGroup: RadioGroup
+    private var defaultSelectedId = 0
 
     init {
         val inflater = LayoutInflater.from(activity)
         val resources = activity.resources
-        val basePath = currPath.getBasePath(activity)
         val layoutParams = RadioGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         val view = inflater.inflate(R.layout.dialog_radio_group, null)
-        val radioGroup = view.dialog_radio_group
+        radioGroup = view.dialog_radio_group
+        val basePath = currPath.getBasePath(activity)
 
         val internalButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
         internalButton.apply {
+            id = ID_INTERNAL
             text = resources.getString(R.string.internal)
             isChecked = basePath == context.internalStoragePath
             setOnClickListener { internalPicked() }
+            if (isChecked) {
+                defaultSelectedId = id
+            }
         }
         radioGroup.addView(internalButton, layoutParams)
 
         if (activity.hasExternalSDCard()) {
             val sdButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
             sdButton.apply {
+                id = ID_SD
                 text = resources.getString(R.string.sd_card)
                 isChecked = basePath == context.sdCardPath
                 setOnClickListener { sdPicked() }
+                if (isChecked) {
+                    defaultSelectedId = id
+                }
             }
             radioGroup.addView(sdButton, layoutParams)
         }
 
+        if (activity.hasOTGConnected()) {
+            val otgButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
+            otgButton.apply {
+                id = ID_OTG
+                text = resources.getString(R.string.otg)
+                isChecked = basePath == OTG_PATH
+                setOnClickListener { otgPicked() }
+                if (isChecked) {
+                    defaultSelectedId = id
+                }
+            }
+            radioGroup.addView(otgButton, layoutParams)
+        }
+
         val rootButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
         rootButton.apply {
+            id = ID_ROOT
             text = resources.getString(R.string.root)
             isChecked = basePath == "/"
             setOnClickListener { rootPicked() }
+            if (isChecked) {
+                defaultSelectedId = id
+            }
         }
         radioGroup.addView(rootButton, layoutParams)
 
@@ -69,6 +103,17 @@ class StoragePickerDialog(val activity: Activity, currPath: String, val callback
     private fun sdPicked() {
         mDialog.dismiss()
         callback(activity.sdCardPath)
+    }
+
+    private fun otgPicked() {
+        activity.handleOTGPermission {
+            if (it) {
+                callback(OTG_PATH)
+                mDialog.dismiss()
+            } else {
+                radioGroup.check(defaultSelectedId)
+            }
+        }
     }
 
     private fun rootPicked() {

@@ -26,6 +26,14 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getString(TREE_URI, "")
         set(uri) = prefs.edit().putString(TREE_URI, uri).apply()
 
+    var OTGTreeUri: String
+        get() = prefs.getString(OTG_TREE_URI, "")
+        set(OTGTreeUri) = prefs.edit().putString(OTG_TREE_URI, OTGTreeUri).apply()
+
+    var OTGBasePath: String
+        get() = prefs.getString(OTG_BASE_PATH, "")
+        set(OTGBasePath) = prefs.edit().putString(OTG_BASE_PATH, OTGBasePath).apply()
+
     var sdCardPath: String
         get() = prefs.getString(SD_CARD_PATH, context.getSDCardPath())
         set(sdCardPath) = prefs.edit().putString(SD_CARD_PATH, sdCardPath).apply()
@@ -143,4 +151,24 @@ open class BaseConfig(val context: Context) {
     var avoidWhatsNew: Boolean
         get() = prefs.getBoolean(AVOID_WHATS_NEW, false)
         set(avoidWhatsNew) = prefs.edit().putBoolean(AVOID_WHATS_NEW, avoidWhatsNew).apply()
+
+    var sorting: Int
+        get() = prefs.getInt(SORT_ORDER, context.resources.getInteger(R.integer.default_sorting))
+        set(sorting) = prefs.edit().putInt(SORT_ORDER, sorting).apply()
+
+    var hadThankYouInstalled: Boolean
+        get() = prefs.getBoolean(HAD_THANK_YOU_INSTALLED, false)
+        set(hadThankYouInstalled) = prefs.edit().putBoolean(HAD_THANK_YOU_INSTALLED, hadThankYouInstalled).apply()
+
+    var skipDeleteConfirmation: Boolean
+        get() = prefs.getBoolean(SKIP_DELETE_CONFIRMATION, false)
+        set(skipDeleteConfirmation) = prefs.edit().putBoolean(SKIP_DELETE_CONFIRMATION, skipDeleteConfirmation).apply()
+
+    var enablePullToRefresh: Boolean
+        get() = prefs.getBoolean(ENABLE_PULL_TO_REFRESH, true)
+        set(enablePullToRefresh) = prefs.edit().putBoolean(ENABLE_PULL_TO_REFRESH, enablePullToRefresh).apply()
+
+    var scrollHorizontally: Boolean
+        get() = prefs.getBoolean(SCROLL_HORIZONTALLY, false)
+        set(scrollHorizontally) = prefs.edit().putBoolean(SCROLL_HORIZONTALLY, scrollHorizontally).apply()
 }

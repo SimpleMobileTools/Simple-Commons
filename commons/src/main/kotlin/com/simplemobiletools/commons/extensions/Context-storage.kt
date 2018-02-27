@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.extensions
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
+import android.hardware.usb.UsbManager
 import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Environment
@@ -12,7 +13,10 @@ import android.support.v4.content.FileProvider
 import android.support.v4.provider.DocumentFile
 import android.text.TextUtils
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.helpers.OTG_PATH
+import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
+import java.net.URLDecoder
 import java.util.*
 import java.util.regex.Pattern
 
@@ -31,10 +35,24 @@ fun Context.getSDCardPath(): String {
         sdCardPath = directories.firstOrNull() ?: ""
     }
 
+    if (sdCardPath.isEmpty()) {
+        val SDpattern = Pattern.compile("^[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$")
+        try {
+            File("/storage").listFiles()?.forEach {
+                if (SDpattern.matcher(it.name).matches()) {
+                    sdCardPath = "/storage/${it.name}"
+                }
+            }
+        } catch (e: Exception) {
+        }
+    }
+
     return sdCardPath.trimEnd('/')
 }
 
 fun Context.hasExternalSDCard() = sdCardPath.isNotEmpty()
+
+fun Context.hasOTGConnected() = (getSystemService(Context.USB_SERVICE) as UsbManager).deviceList.isNotEmpty()
 
 @SuppressLint("NewApi")
 fun Context.getStorageDirectories(): Array<String> {
@@ -83,23 +101,25 @@ fun Context.getHumanReadablePath(path: String): String {
     return getString(when (path) {
         "/" -> R.string.root
         internalStoragePath -> R.string.internal
+        OTG_PATH -> R.string.otg
         else -> R.string.sd_card
     })
 }
 
 fun Context.humanizePath(path: String): String {
     val basePath = path.getBasePath(this)
-    return if (basePath == "/")
-        "${getHumanReadablePath(basePath)}$path"
-    else
-        path.replaceFirst(basePath, getHumanReadablePath(basePath))
+    return when (basePath) {
+        "/" -> "${getHumanReadablePath(basePath)}$path"
+        OTG_PATH -> path.replaceFirst(basePath, getHumanReadablePath(basePath)).replaceFirst("otg://", OTG_PATH).trimEnd('/') + "/"
+        else -> path.replaceFirst(basePath, getHumanReadablePath(basePath))
+    }
 }
 
 fun Context.getInternalStoragePath() = Environment.getExternalStorageDirectory().absolutePath.trimEnd('/')
 
 fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWith(sdCardPath)
 
-fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) && isLollipopPlus()
+fun Context.needsStupidWritePermissions(path: String) = (isPathOnSD(path) || path.startsWith(OTG_PATH)) && isLollipopPlus()
 
 @SuppressLint("NewApi")
 fun Context.hasProperStoredTreeUri(): Boolean {
@@ -116,32 +136,70 @@ fun Context.isAStorageRootFolder(path: String): Boolean {
 }
 
 fun Context.getMyFileUri(file: File): Uri {
-    return if (isNougatPlus())
+    return if (isNougatPlus()) {
         FileProvider.getUriForFile(this, "$packageName.provider", file)
-    else
+    } else {
         Uri.fromFile(file)
+    }
 }
 
 @SuppressLint("NewApi")
-fun Context.tryFastDocumentDelete(file: File, allowDeleteFolder: Boolean): Boolean {
-    val document = getFastDocument(file)
+fun Context.tryFastDocumentDelete(path: String, allowDeleteFolder: Boolean): Boolean {
+    val document = getFastDocumentFile(path)
     return if (document?.isFile == true || allowDeleteFolder) {
-        DocumentsContract.deleteDocument(contentResolver, document?.uri)
+        try {
+            DocumentsContract.deleteDocument(contentResolver, document?.uri)
+        } catch (e: Exception) {
+            false
+        }
     } else {
         false
     }
 }
 
 @SuppressLint("NewApi")
-fun Context.getFastDocument(file: File): DocumentFile? {
-    if (!isLollipopPlus() || baseConfig.sdCardPath.isEmpty())
+fun Context.getFastDocumentFile(path: String): DocumentFile? {
+    if (!isLollipopPlus()) {
         return null
+    }
 
-    val relativePath = Uri.encode(file.absolutePath.substring(baseConfig.sdCardPath.length).trim('/'))
-    val sdCardPathPart = baseConfig.sdCardPath.split("/").filter(String::isNotEmpty).last().trim('/')
-    val fullUri = "${baseConfig.treeUri}/document/$sdCardPathPart%3A$relativePath"
+    val isOTG = path.startsWith(OTG_PATH)
+    if (!isOTG && baseConfig.sdCardPath.isEmpty()) {
+        return null
+    }
+
+    val startString = if (isOTG) OTG_PATH else baseConfig.sdCardPath
+    val basePath = if (isOTG) baseConfig.OTGBasePath else baseConfig.sdCardPath
+    val treeUri = if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri
+
+    val relativePath = Uri.encode(path.substring(startString.length).trim('/'))
+    val externalPathPart = basePath.split("/").last(String::isNotEmpty).trim('/')
+    val fullUri = "$treeUri/document/$externalPathPart%3A$relativePath"
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
+
+@SuppressLint("NewApi")
+fun Context.getDocumentFile(path: String): DocumentFile? {
+    if (!isLollipopPlus()) {
+        return null
+    }
+
+    val isOTG = path.startsWith(OTG_PATH)
+    var relativePath = path.substring(if (isOTG) OTG_PATH.length else sdCardPath.length)
+    if (relativePath.startsWith(File.separator)) {
+        relativePath = relativePath.substring(1)
+    }
+
+    var document = DocumentFile.fromTreeUri(applicationContext, Uri.parse(if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri))
+    val parts = relativePath.split("/").filter { it.isNotEmpty() }
+    for (part in parts) {
+        document = document?.findFile(part)
+    }
+
+    return document
+}
+
+fun Context.getSomeDocumentFile(path: String) = getFastDocumentFile(path) ?: getDocumentFile(path)
 
 fun Context.scanFile(file: File, callback: (() -> Unit)? = null) {
     scanFiles(arrayListOf(file), callback)
@@ -187,33 +245,37 @@ fun getPaths(file: File): ArrayList<String> {
     return paths
 }
 
-fun Context.getFileUri(file: File) = when {
-    file.isImageSlow() -> MediaStore.Images.Media.EXTERNAL_CONTENT_URI
-    file.isVideoSlow() -> MediaStore.Video.Media.EXTERNAL_CONTENT_URI
+fun Context.getFileUri(path: String) = when {
+    path.isImageSlow() -> MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+    path.isVideoSlow() -> MediaStore.Video.Media.EXTERNAL_CONTENT_URI
     else -> MediaStore.Files.getContentUri("external")
 }
 
 // these functions update the mediastore instantly, MediaScannerConnection.scanFile takes some time to really get applied
-fun Context.deleteFromMediaStore(file: File): Boolean {
+fun Context.deleteFromMediaStore(path: String): Boolean {
+    if (getDoesFilePathExist(path) || getIsPathDirectory(path)) {
+        return false
+    }
+
     return try {
         val where = "${MediaStore.MediaColumns.DATA} = ?"
-        val args = arrayOf(file.absolutePath)
-        contentResolver.delete(getFileUri(file), where, args) == 1
+        val args = arrayOf(path)
+        contentResolver.delete(getFileUri(path), where, args) == 1
     } catch (e: Exception) {
         false
     }
 }
 
-fun Context.updateInMediaStore(oldFile: File, newFile: File) {
+fun Context.updateInMediaStore(oldPath: String, newPath: String) {
     Thread {
         val values = ContentValues().apply {
-            put(MediaStore.MediaColumns.DATA, newFile.absolutePath)
-            put(MediaStore.MediaColumns.DISPLAY_NAME, newFile.name)
-            put(MediaStore.MediaColumns.TITLE, newFile.name)
+            put(MediaStore.MediaColumns.DATA, newPath)
+            put(MediaStore.MediaColumns.DISPLAY_NAME, newPath.getFilenameFromPath())
+            put(MediaStore.MediaColumns.TITLE, newPath.getFilenameFromPath())
         }
-        val uri = getFileUri(oldFile)
+        val uri = getFileUri(oldPath)
         val selection = "${MediaStore.MediaColumns.DATA} = ?"
-        val selectionArgs = arrayOf(oldFile.absolutePath)
+        val selectionArgs = arrayOf(oldPath)
 
         try {
             contentResolver.update(uri, values, selection, selectionArgs)
@@ -222,18 +284,119 @@ fun Context.updateInMediaStore(oldFile: File, newFile: File) {
     }.start()
 }
 
-fun Context.updateLastModified(file: File, lastModified: Long) {
+fun Context.updateLastModified(path: String, lastModified: Long) {
     val values = ContentValues().apply {
         put(MediaStore.MediaColumns.DATE_MODIFIED, lastModified)
     }
-    file.setLastModified(lastModified)
-    val uri = getFileUri(file)
+    File(path).setLastModified(lastModified)
+    val uri = getFileUri(path)
     val selection = "${MediaStore.MediaColumns.DATA} = ?"
-    val selectionArgs = arrayOf(file.absolutePath)
+    val selectionArgs = arrayOf(path)
 
     try {
         contentResolver.update(uri, values, selection, selectionArgs)
     } catch (ignored: Exception) {
+    }
+}
+
+fun Context.getOTGItems(path: String, countHiddenItems: Boolean, getProperFileSize: Boolean, callback: (ArrayList<FileDirItem>) -> Unit) {
+    val items = ArrayList<FileDirItem>()
+    val OTGTreeUri = baseConfig.OTGTreeUri
+    var rootUri = DocumentFile.fromTreeUri(applicationContext, Uri.parse(OTGTreeUri))
+    if (rootUri == null) {
+        callback(items)
+        return
+    }
+
+    val parts = path.split("/").dropLastWhile { it.isEmpty() }
+    for (part in parts) {
+        if (path == OTG_PATH) {
+            break
+        }
+
+        if (part == "otg:" || part == "") {
+            continue
+        }
+
+        val file = rootUri.findFile(part)
+        if (file != null) {
+            rootUri = file
+        }
+    }
+
+    val files = rootUri.listFiles()
+    if (baseConfig.OTGBasePath.isEmpty()) {
+        val first = files?.firstOrNull()
+        if (first != null) {
+            val fullPath = first.uri.toString()
+            val nameStartIndex = Math.max(fullPath.lastIndexOf(first.name), 0)
+            var basePath = fullPath.substring(0, nameStartIndex)
+            if (basePath.endsWith("%3A")) {
+                basePath = basePath.substring(0, basePath.length - 3)
+            }
+            baseConfig.OTGBasePath = basePath
+        }
+    }
+
+    val basePath = "${baseConfig.OTGBasePath}%3A"
+    for (file in files) {
+        if (file.exists()) {
+            val filePath = file.uri.toString().substring(basePath.length)
+            val decodedPath = OTG_PATH + "/" + URLDecoder.decode(filePath, "UTF-8")
+            val fileSize = if (getProperFileSize) file.getItemSize(countHiddenItems) else file.length()
+            items.add(FileDirItem(decodedPath, file.name, file.isDirectory, file.listFiles()?.size ?: 0, fileSize))
+        }
+    }
+    callback(items)
+}
+
+fun Context.rescanDeletedPath(path: String, callback: (() -> Unit)? = null) {
+    if (deleteFromMediaStore(path)) {
+        callback?.invoke()
+    } else {
+        if (getIsPathDirectory(path)) {
+            callback?.invoke()
+            return
+        }
+
+        MediaScannerConnection.scanFile(applicationContext, arrayOf(path), null, { s, uri ->
+            try {
+                applicationContext.contentResolver.delete(uri, null, null)
+            } catch (e: Exception) {
+            }
+            callback?.invoke()
+        })
+    }
+}
+
+@SuppressLint("NewApi")
+fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
+    var fileDeleted = tryFastDocumentDelete(fileDirItem.path, allowDeleteFolder)
+    if (!fileDeleted) {
+        val document = getDocumentFile(fileDirItem.path)
+        if (document != null && (fileDirItem.isDirectory == document.isDirectory)) {
+            try {
+                fileDeleted = (document.isFile == true || allowDeleteFolder) && DocumentsContract.deleteDocument(applicationContext.contentResolver, document.uri)
+            } catch (ignored: Exception) {
+            }
+        }
+    }
+
+    if (fileDeleted) {
+        rescanDeletedPath(fileDirItem.path) {
+            callback?.invoke(true)
+        }
+    }
+}
+
+fun Context.getDoesFilePathExist(path: String) = if (path.startsWith(OTG_PATH)) getFastDocumentFile(path)?.exists()
+        ?: false else File(path).exists()
+
+fun Context.getIsPathDirectory(path: String): Boolean {
+    return if (path.startsWith(OTG_PATH)) {
+        getFastDocumentFile(path)?.isDirectory ?: false
+    } else {
+        File(path).isDirectory
     }
 }
 

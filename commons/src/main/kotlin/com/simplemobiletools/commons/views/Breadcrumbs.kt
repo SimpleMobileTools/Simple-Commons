@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.breadcrumb_item.view.*
 
 class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs), View.OnClickListener {
     private var availableWidth = 0
-    private var inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+    private var inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
     private var textColor = context.baseConfig.textColor
     private var lastPath = ""
 
@@ -95,7 +95,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
         val tempPath = context.humanizePath(fullPath)
 
         removeAllViewsInLayout()
-        val dirs = tempPath.split("/".toRegex()).dropLastWhile(String::isEmpty).toTypedArray()
+        val dirs = tempPath.split("/").dropLastWhile(String::isEmpty)
         for (i in dirs.indices) {
             val dir = dirs[i]
             if (i > 0) {

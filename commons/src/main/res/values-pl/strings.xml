@@ -11,9 +11,10 @@
     <string name="set_as">Ustaw jako</string>
     <string name="value_copied_to_clipboard">Wartość została skopiowana do schowka</string>
     <string name="unknown">Nieznane</string>
-    <string name="always">Always</string>
-    <string name="never">Never</string>
-    <string name="details">Details</string>
+    <string name="always">Zawsze</string>
+    <string name="never">Nigdy</string>
+    <string name="details">Szczegóły</string>
+    <string name="notes">Notatnik</string>
 
     <!-- Search -->
     <string name="search">Szukaj</string>
@@ -42,7 +43,9 @@
     <string name="renaming_folder">Zmieniam nazwę folderu&#8230;</string>
     <string name="filename_cannot_be_empty">Nazwa pliku nie może być pusta</string>
     <string name="filename_invalid_characters">Nazwa pliku zawiera niedozwolone znaki</string>
+    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
     <string name="extension_cannot_be_empty">Rozszerzenie pliku nie może być puste</string>
+    <string name="source_file_doesnt_exist">Plik źródłowy nie istnieje</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopiuj</string>
@@ -110,6 +113,7 @@
     <string name="sd_card">Karta pamięci</string>
     <string name="root">Folder główny</string>
     <string name="wrong_root_selected">Wybrano nieprawidłowy folder. Wybierz główny folder karty pamięci.</string>
+    <string name="sd_card_otg_same">Ścieżka do karty pamięci i urządzenia OTG nie może być taka sama</string>
 
     <!-- File properties -->
     <string name="properties">Właściwości</string>
@@ -236,7 +240,7 @@
     <string name="settings">Ustawienia</string>
     <string name="customize_colors">Dostosuj kolory</string>
     <string name="use_english_language">Wymuś używanie przez aplikację języka angielskiego</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
+    <string name="avoid_whats_new">Nie pokazuj okna \'Co nowego\' po uruchomieniu aplikacji</string>
     <string name="show_hidden_items">Pokazuj ukryte elementy</string>
     <string name="font_size">Rozmiar czcionki</string>
     <string name="small">Mała</string>
@@ -247,7 +251,9 @@
     <string name="password_protect_whole_app">Chroń dostęp do aplikacji</string>
     <string name="keep_last_modified">Zachowuj starą datę i czas modyfikacji przy kopiowaniu / przenoszeniu / zmianie nazwy plików</string>
     <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Zapobiegaj przejściu urządzenia w stan uśpienia</string>
+    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
+    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
 
     <!-- Setting sections -->
     <string name="visibility">Widoczność</string>
@@ -265,6 +271,11 @@
     <string name="importing_some_entries_failed">Importowanie niektórych wpisów nie powiodło się</string>
     <string name="exporting_some_entries_failed">Eksportowanie niektórych wpisów nie powiodło się</string>
     <string name="no_entries_for_exporting">Nie znalazłem żadnych wpisów do wyeksportowania</string>
+
+    <!-- OTG devices -->
+    <string name="otg">OTG</string>
+    <string name="confirm_otg_storage_access_text">Wybierz folder główny urządzenia OTG na następnym ekranie, aby uzyskać dostęp</string>
+    <string name="wrong_root_selected_otg">Wybrany został niewłaściwy folder, wybierz główny folder urządzenia OTG</string>
 
     <!-- About -->
     <string name="about">O aplikacji</string>
@@ -286,12 +297,23 @@
     <string name="donate_please">
         <![CDATA[
             Witaj!<br><br>
-            Mamy nadzieję, że aplikacja przypadła Ci do gustu. Jak da się zauważyć, nie zawiera ona reklam, prosimy więc o wsparcie jej rozwoju poprzez zakup specjalnej aplikacji <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, co poskutkuje również wyłączeniem tego komunikatu.<br><br>
+            Mamy nadzieję, że aplikacja przypadła Ci do gustu. Jak da się zauważyć, nie zawiera ona reklam, prosimy więc o wsparcie jej rozwoju poprzez zakup specjalnej aplikacji <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Proste Podziękowanie/a>, co poskutkuje również wyłączeniem tego komunikatu.<br><br>
             Więcej możliwości wsparcia znajdziesz <a href="http://simplemobiletools.com/donate">tutaj</a>.<br><br>
             Dziękujemy!
         ]]>
     </string>
     <string name="purchase">Kup</string>
+
+    <!-- FAQ -->
+    <string name="frequently_asked_questions">Często zadawane pytania (FAQ)</string>
+    <string name="faq_1_title_commons">Dlaczego nigdzie nie widzę widżetu aplikacji?</string>
+    <string name="faq_1_text_commons">Zapewne dlatego, że aplikacja znajduje się na karcie pamięci. Jedynym rozwiązaniem problemu jest przeniesienie aplikacji z powrotem na pamięć wewnętrzną, ponieważ jest to ograniczenie systemu Android, nie aplikacji.</string>
+    <string name="faq_2_title_commons">Chcę was wesprzeć, ale jestem bez grosza przy duszy. Mogę jakoś to zrobić inaczej?</string>
+    <string name="faq_2_text_commons">Oczywiście. Możesz powiedzieć światu o naszych aplikacjach, podzielić się opinią i oceną w Sklepie Google Play, lub też wspomóc tłumaczenie aplikacji na nowe języki (bądź poprawić już istniejące tłumaczenia). Instrukcję znajdziesz pod adresem https://github.com/SimpleMobileTools/General-Discussion . Możesz też napisać do nas na adres hello@simplemobiletools.com , jeśli potrzebujesz pomocy.</string>
+    <string name="faq_3_title_commons">Usunąłem / usunęłam jakieś pliki przez przypadek. Mogę je jakoś odzyskać?</string>
+    <string name="faq_3_text_commons">Niestety nie. Pliki są usuwane zaraz po kliknięciu w oknie potwierdzającym. System Amdroid nie ma wbudowanego kosza (są osobne od tego aplikacje, jednakże upewnij się kilka razy, zanim cokolwiek usuniesz, gdyż takowe aplikacje nie gwarantują odzyskania pliku w nienaruszonym stanie).</string>
+    <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
+    <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
 
     <!-- License -->
     <string name="notice">Aplikacja korzysta z następujących bibliotek innych firm:</string>

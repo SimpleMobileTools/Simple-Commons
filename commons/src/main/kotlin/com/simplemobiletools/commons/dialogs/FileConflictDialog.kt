@@ -11,18 +11,18 @@ import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.helpers.CONFLICT_MERGE
 import com.simplemobiletools.commons.helpers.CONFLICT_OVERWRITE
 import com.simplemobiletools.commons.helpers.CONFLICT_SKIP
+import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.dialog_file_conflict.view.*
-import java.io.File
 
-class FileConflictDialog(val activity: Activity, val file: File, val callback: (resolution: Int, applyForAll: Boolean) -> Unit) {
+class FileConflictDialog(val activity: Activity, val fileDirItem: FileDirItem, val callback: (resolution: Int, applyForAll: Boolean) -> Unit) {
     val view = activity.layoutInflater.inflate(R.layout.dialog_file_conflict, null)!!
 
     init {
         view.apply {
-            val stringBase = if (file.isDirectory) R.string.folder_already_exists else R.string.file_already_exists
-            conflict_dialog_title.text = String.format(activity.getString(stringBase), file.name)
+            val stringBase = if (fileDirItem.isDirectory) R.string.folder_already_exists else R.string.file_already_exists
+            conflict_dialog_title.text = String.format(activity.getString(stringBase), fileDirItem.name)
             conflict_dialog_apply_to_all.isChecked = activity.baseConfig.lastConflictApplyToAll
-            conflict_dialog_radio_merge.beVisibleIf(file.isDirectory)
+            conflict_dialog_radio_merge.beVisibleIf(fileDirItem.isDirectory)
 
             val resolutionButton = when (activity.baseConfig.lastConflictResolution) {
                 CONFLICT_OVERWRITE -> conflict_dialog_radio_overwrite

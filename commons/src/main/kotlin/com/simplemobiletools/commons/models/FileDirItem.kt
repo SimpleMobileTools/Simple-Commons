@@ -1,11 +1,11 @@
 package com.simplemobiletools.commons.models
 
-import com.simplemobiletools.commons.extensions.formatDate
-import com.simplemobiletools.commons.extensions.formatSize
+import android.content.Context
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import java.io.File
 
-data class FileDirItem(val path: String, val name: String, val isDirectory: Boolean, var children: Int, var size: Long) :
+data class FileDirItem(val path: String, val name: String = "", var isDirectory: Boolean = false, var children: Int = 0, var size: Long = 0L) :
         Comparable<FileDirItem> {
     companion object {
         var sorting: Int = 0
@@ -54,4 +54,56 @@ data class FileDirItem(val path: String, val name: String, val isDirectory: Bool
         sorting and SORT_BY_EXTENSION != 0 -> getExtension().toLowerCase()
         else -> name
     }
+
+    fun getProperSize(context: Context, countHidden: Boolean): Long {
+        return if (path.startsWith(OTG_PATH)) {
+            context.getDocumentFile(path)?.getItemSize(countHidden) ?: 0
+        } else {
+            File(path).getProperSize(countHidden)
+        }
+    }
+
+    fun getProperFileCount(context: Context, countHidden: Boolean): Int {
+        return if (path.startsWith(OTG_PATH)) {
+            context.getDocumentFile(path)?.getFileCount(countHidden) ?: 0
+        } else {
+            File(path).getFileCount(countHidden)
+        }
+    }
+
+    fun getDirectChildrenCount(context: Context, countHiddenItems: Boolean): Int {
+        return if (path.startsWith(OTG_PATH)) {
+            context.getDocumentFile(path)?.listFiles()?.filter { if (countHiddenItems) true else !it.name.startsWith(".") }?.size ?: 0
+        } else {
+            File(path).getDirectChildrenCount(countHiddenItems)
+        }
+    }
+
+    fun getLastModified(context: Context): Long {
+        return if (path.startsWith(OTG_PATH)) {
+            context.getFastDocumentFile(path)?.lastModified() ?: 0L
+        } else {
+            File(path).lastModified()
+        }
+    }
+
+    fun getParentPath() = path.getParentPath()
+
+    fun getDuration() = path.getDuration()
+
+    fun getFileDurationSeconds() = path.getFileDurationSeconds()
+
+    fun getArtist() = path.getFileArtist()
+
+    fun getAlbum() = path.getFileAlbum()
+
+    fun getSongTitle() = path.getFileSongTitle()
+
+    fun getResolution() = path.getResolution()
+
+    fun getVideoResolution() = path.getVideoResolution()
+
+    fun getImageResolution() = path.getImageResolution()
+
+    fun getPublicUri(context: Context) = context.getDocumentFile(path)?.uri ?: ""
 }

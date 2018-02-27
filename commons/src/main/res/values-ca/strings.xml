@@ -13,7 +13,8 @@
     <string name="unknown">Desconegut</string>
     <string name="always">Sempre</string>
     <string name="never">Mai</string>
-    <string name="details">Details</string>
+    <string name="details">Detalls</string>
+    <string name="notes">Notes</string>
 
     <!-- Search -->
     <string name="search">Buscar</string>
@@ -42,7 +43,9 @@
     <string name="renaming_folder">Canviant el nom de la carpeta</string>
     <string name="filename_cannot_be_empty">El nom de l\'arxiu no pot ser buit</string>
     <string name="filename_invalid_characters">El nom de l\'arxiu conté caràcters no vàlids</string>
+    <string name="filename_invalid_characters_placeholder">El nom de l\'arxiu  \'%s\' conté caràcters no vàlids</string>
     <string name="extension_cannot_be_empty">La extensió no pot estar buida</string>
+    <string name="source_file_doesnt_exist">El fitxer %s no existeix</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
@@ -109,6 +112,7 @@
     <string name="sd_card">Targeta SD</string>
     <string name="root">Arrel /</string>
     <string name="wrong_root_selected">Has seleccionat la carpeta incorrecta. Selecciona la carpeta arrel de la targeta SD</string>
+    <string name="sd_card_otg_same">La targeta SD i el dispositiu OTG no poden ser el mateix</string>
 
     <!-- File properties -->
     <string name="properties">Propietats</string>
@@ -242,7 +246,9 @@
     <string name="password_protect_whole_app">Contrasenya per protegir tota l’aplicació</string>
     <string name="keep_last_modified">Mantenir el valor de la darrera modificació al copiar/moure/canviar el nom dels arxius</string>
     <string name="show_info_bubble">Mostra una bombolla d\'informació en elements de desplaçament mitjançant arrossegament de la barra de desplaçament</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Evita que el telèfon dormi</string>
+    <string name="skip_delete_confirmation">Ignora sempre el diàleg de confirmació d\'eliminació</string>
+    <string name="enable_pull_to_refresh">Activa estirar des de la part superior per refrescar</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilitat</string>
@@ -260,6 +266,11 @@
     <string name="importing_some_entries_failed">L\'impotació d\'algunes entrades ha fallat</string>
     <string name="exporting_some_entries_failed">L\'exportació d\'algunes entrades ha fallat</string>
     <string name="no_entries_for_exporting">No s\'han trobat entrades per exportar</string>
+
+    <!-- OTG devices -->
+    <string name="otg">OTG</string>
+    <string name="confirm_otg_storage_access_text">Seleccioneu la carpeta arrel del dispositiu OTG a la pantalla següent per concedir accés</string>
+    <string name="wrong_root_selected_otg">S\'ha seleccionat la carpeta incorrecta, seleccioneu la carpeta arrel del vostre dispositiu OTG</string>
 
     <!-- About -->
     <string name="about">Sobre</string>
@@ -287,6 +298,19 @@
         ]]>
     </string>
     <string name="purchase">Comprar</string>
+
+    <!-- FAQ -->
+    <string name="frequently_asked_questions">Preguntes frequents</string>
+    <string name="faq_1_title_commons">Com és que no veig aquest widget a la llista de widgets?</string>
+    <string name="faq_1_text_commons">Probablement, perquè heu mogut l\'aplicació en una targeta SD. Hi ha una limitació del sistema d\'Android que oculta els widgets de l\'aplicació determinada
+        en aquest cas. L\'única solució és moure l\'aplicació a l\'emmagatzematge intern a través de la configuració del dispositiu.</string>
+    <string name="faq_2_title_commons">Vull donar-vos suport, però no puc donar diners. Hi ha alguna cosa més que pugui fer?</string>
+    <string name="faq_2_text_commons">Sí, per suposat. Podeu donar a conneixer les aplicacions o donar-ne una bona opinió i valoracions. També podeu ajudar per traduir les aplicacions en un nou idioma o, simplement, actualitzar algunes de les traduccions existents.
+        Podeu trobar la guia a https://github.com/SimpleMobileTools/General-Discussion, o simplement enviar-me un missatge a hello@simplemobiletools.com si necessiteu ajuda.</string>
+    <string name="faq_3_title_commons">He esborrat alguns fitxers per error, com puc recuperar-los?</string>
+    <string name="faq_3_text_commons">Malauradament, no pots fer-ho. Els fitxers s\'eliminen a l\'instant després del diàleg de confirmació, no hi ha una paperera disponible.</string>
+    <string name="faq_4_title_commons">No m\'agraden els colors del widget, puc canviar-los?</string>
+    <string name="faq_4_text_commons">Sí, mentre arrossegueu un widget a la vostra pantalla d\'inici, apareixerà una pantalla de configuració de widgets. Veureu quadrats de colors a l\'extrem inferior esquerre, només cal prémer-los per seleccionar un color nou. També podeu utilitzar el control lliscant per ajustar l\'alfa.</string>
 
     <!-- License -->
     <string name="notice">Aquesta aplicació fa servir les següents biblioteques de tercers que ens faciliten la feina. Gràcies.</string>

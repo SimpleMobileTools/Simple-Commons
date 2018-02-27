@@ -11,9 +11,10 @@
     <string name="set_as">設為</string>
     <string name="value_copied_to_clipboard">數值複製到剪貼簿</string>
     <string name="unknown">未知的</string>
-    <string name="always">Always</string>
-    <string name="never">Never</string>
-    <string name="details">Details</string>
+    <string name="always">總是</string>
+    <string name="never">從不</string>
+    <string name="details">詳細資訊</string>
+    <string name="notes">筆記</string>
 
     <!-- Search -->
     <string name="search">搜尋</string>
@@ -41,8 +42,10 @@
     <string name="rename_folder_ok">成功重新命名資料夾</string>
     <string name="renaming_folder">資料夾重新命名中</string>
     <string name="filename_cannot_be_empty">檔名不得空白</string>
-    <string name="filename_invalid_characters">檔名包含無效字符</string>
+    <string name="filename_invalid_characters">檔名包含無效字元</string>
+    <string name="filename_invalid_characters_placeholder">檔名 \'%s\' 包含無效字元</string>
     <string name="extension_cannot_be_empty">副檔名不得空白</string>
+    <string name="source_file_doesnt_exist">原始檔案 %s 不存在</string>
 
     <!-- Copy / Move -->
     <string name="copy">複製</string>
@@ -76,7 +79,7 @@
     <string name="file">檔案</string>
     <string name="create_new_folder">新增資料夾</string>
     <string name="name_taken">已經存在相同名稱的檔案或資料夾</string>
-    <string name="invalid_name">名稱包含無效的字符</string>
+    <string name="invalid_name">名稱包含無效的字元</string>
     <string name="empty_name">請輸入一個名字</string>
     <string name="unknown_error_occurred">發生未知的錯誤</string>
 
@@ -93,7 +96,7 @@
     <string name="select_folder">選擇資料夾</string>
     <string name="select_file">選擇檔案</string>
     <string name="confirm_storage_access_title">確認外部儲存空間存取權限</string>
-    <string name="confirm_storage_access_text">請在下個畫面選擇SD卡的根目錄，以准許寫入權限</string>
+    <string name="confirm_storage_access_text">請在下個畫面選擇SD卡的根目錄，以授予存取權限</string>
     <string name="confirm_storage_access_text_sd">"如果看不到SD卡，試試這個"</string>
     <string name="confirm_selection">確認選擇</string>
 
@@ -108,6 +111,7 @@
     <string name="sd_card">SD卡</string>
     <string name="root">根目錄</string>
     <string name="wrong_root_selected">選擇了錯誤的資料夾，請選擇SD卡的根目錄</string>
+    <string name="sd_card_otg_same">SD卡和OTG裝置的路徑不能相同</string>
 
     <!-- File properties -->
     <string name="properties">屬性</string>
@@ -242,7 +246,9 @@
     <string name="password_protect_whole_app">用密碼保護整個應用程式</string>
     <string name="keep_last_modified">當檔案複製/移動/重新命名時，保留舊的「最後修改」數值</string>
     <string name="show_info_bubble">拖曳滾動條時，顯示訊息氣泡</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">防止手機睡眠</string>
+    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
+    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
 
     <!-- Setting sections -->
     <string name="visibility">可見度</string>
@@ -260,6 +266,11 @@
     <string name="importing_some_entries_failed">部分項目導入失敗</string>
     <string name="exporting_some_entries_failed">部分項目導出失敗</string>
     <string name="no_entries_for_exporting">未發現供導出的項目</string>
+
+    <!-- OTG devices -->
+    <string name="otg">OTG</string>
+    <string name="confirm_otg_storage_access_text">請在下個畫面選擇OTG裝置的根目錄，以授予存取權限</string>
+    <string name="wrong_root_selected_otg">選擇到錯誤資料夾，請選擇你OTG裝置的根目錄</string>
 
     <!-- About -->
     <string name="about">關於</string>
@@ -281,12 +292,25 @@
     <string name="donate_please">
         <![CDATA[
             哈囉 <br><br>
-            希望您喜愛這應用程式。 它不含廣告, 所以請購買應用程式 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 來支持開發者，這對話框也不會再出現。<br><br>
+            希望您喜愛這應用程式。 它不含廣告，所以請購買應用程式 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 來支持開發者，這對話框也不會再出現。<br><br>
             您可以在 <a href="http://simplemobiletools.com/donate">這裡</a> 找到更多捐贈選項。<br><br>
             感謝!
         ]]>
     </string>
     <string name="purchase">購買</string>
+
+    <!-- FAQ -->
+    <string name="frequently_asked_questions">常見問題</string>
+    <string name="faq_1_title_commons">為什麼我在小工具列表中沒看到這應用程式的小工具?</string>
+    <string name="faq_1_text_commons">這很可能是因為你把應用程式移動到SD卡。那樣的話，有個隱藏特定程式小工具的Android系統限制存在。
+		只有一個解決方法，就是經由你的裝置設定，把應用程式移動回內部儲存空間。</string>
+    <string name="faq_2_title_commons">我想要支持您，但我無法捐款。還有什麼我能做的嗎?</string>
+    <string name="faq_2_text_commons">當然好囉。你可以推廣關於這應用程式，或是給予好的反饋和評分。你也可以幫忙把這應用程式翻譯成新的語言，或者只更新一些現有的翻譯。
+		你可以在 https://github.com/SimpleMobileTools/General-Discussion 找到教學，或者若你需要幫忙，只要發個訊息到 <a href="hello@simplemobiletools.com">hello@simplemobiletools.com</a> 。</string>
+    <string name="faq_3_title_commons">我誤刪了一些檔案，如何復原?</string>
+    <string name="faq_3_text_commons">不幸地，沒有辦法。檔案經確認後就立即刪除了，沒有垃圾筒可用。</string>
+    <string name="faq_4_title_commons">我不喜歡小工具的顏色，我能更改嗎?</string>
+    <string name="faq_4_text_commons">可啊，當你在主畫面拖動小工具時，會出現小工具設置畫面。你會在左下角看到顏色方塊，點下去再挑個新顏色就好了。你也能用拉條來調整透明度。</string>
 
     <!-- License -->
     <string name="notice">這程式使用了下列的第三方函示庫來讓我工作簡化。感謝。</string>

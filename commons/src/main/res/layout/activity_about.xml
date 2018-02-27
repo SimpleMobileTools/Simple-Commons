@@ -31,10 +31,20 @@
             android:textColorLink="@color/color_primary"/>
 
         <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/about_more_apps"
+            android:id="@+id/about_faq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/about_email"
+            android:paddingBottom="@dimen/activity_margin"
+            android:paddingTop="@dimen/activity_margin"
+            android:text="@string/frequently_asked_questions"
+            android:textColor="@color/color_primary"/>
+
+        <com.simplemobiletools.commons.views.MyTextView
+            android:id="@+id/about_more_apps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/about_faq"
             android:paddingBottom="@dimen/activity_margin"
             android:paddingTop="@dimen/activity_margin"
             android:text="@string/more_apps_underlined"

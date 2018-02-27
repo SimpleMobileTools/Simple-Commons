@@ -14,6 +14,7 @@
     <string name="always">Altijd</string>
     <string name="never">Nooit</string>
     <string name="details">Details</string>
+    <string name="notes">Notities</string>
 
     <!-- Search -->
     <string name="search">Zoeken</string>
@@ -42,7 +43,9 @@
     <string name="renaming_folder">Map hernoemen</string>
     <string name="filename_cannot_be_empty">Bestandsnaam mag niet leeg zijn</string>
     <string name="filename_invalid_characters">Bestandsnaam bevat ongeldige tekens</string>
+    <string name="filename_invalid_characters_placeholder">Bestandsnaam \'%s\' bevat ongeldige tekens</string>
     <string name="extension_cannot_be_empty">Extensie mag niet leeg zijn</string>
+    <string name="source_file_doesnt_exist">Bronbestand %s bestaat niet</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopiëren</string>
@@ -109,6 +112,7 @@
     <string name="sd_card">SD-kaart</string>
     <string name="root">Hoofdmap</string>
     <string name="wrong_root_selected">Verkeerde map: kies de hoofdmap van de SD-kaart</string>
+    <string name="sd_card_otg_same">Paden van SD-kaart en OTG-apparaat kunnen niet gelijk zijn</string>
 
     <!-- File properties -->
     <string name="properties">Eigenschappen</string>
@@ -243,7 +247,9 @@
     <string name="password_protect_whole_app">Hele app met wachtwoord beveiligen</string>
     <string name="keep_last_modified">Datum laatst gewijzigd behouden bij bestandsoperaties</string>
     <string name="show_info_bubble">Bij slepen van schuifbalk extra informatie tonen</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Slaapstand voorkomen</string>
+    <string name="skip_delete_confirmation">Niet om bevestiging vragen bij verwijderen</string>
+    <string name="enable_pull_to_refresh">Pull-to-refresh inschakelen</string>
 
     <!-- Setting sections -->
     <string name="visibility">Opmaak</string>
@@ -261,6 +267,11 @@
     <string name="importing_some_entries_failed">Sommige items konden niet worden geïmporteerd</string>
     <string name="exporting_some_entries_failed">Sommige items konden niet worden geëxporteerd</string>
     <string name="no_entries_for_exporting">Er zijn geen items gevonden om te exporteren</string>
+
+    <!-- OTG devices -->
+    <string name="otg">OTG</string>
+    <string name="confirm_otg_storage_access_text">Selecteer in het volgende scherm de hoofdmap van het OTG-apparaat</string>
+    <string name="wrong_root_selected_otg">Verkeerde map geselecteerd, kies de hoofdmap van het OTG-apparaat</string>
 
     <!-- About -->
     <string name="about">Over</string>
@@ -288,6 +299,18 @@
         ]]>
     </string>
     <string name="purchase">Kopen</string>
+
+    <!-- FAQ -->
+    <string name="frequently_asked_questions">Veelgestelde vragen</string>
+    <string name="faq_1_title_commons">Waarom zie ik de widget van deze app niet in de lijst met widgets?</string>
+    <string name="faq_1_text_commons">Waarschijnlijk is de app verplaatst naar de SD-kaart. Android verbergt widgets van apps die zich bevinden op de SD-kaart. De enige oplossing is het verplaatsen van de app naar de Interne Opslag via de instellingen van Android.</string>
+    <string name="faq_2_title_commons">Ik wil een bijdrage leveren, maar ik kan geen geld doneren. Kan ik iets anders doen?</string>
+    <string name="faq_2_text_commons">Maar natuurlijk! Vertel anderen over deze apps of geef feedback en positieve beoordelingen. Ook het vertalen van de apps in een nieuwe taal of het bijwerken van bestaande vertalingen wordt gewaardeerd.
+        Een handleiding is te vinden op https://github.com/SimpleMobileTools/General-Discussion , of stuur me een bericht via hello@simplemobiletools.com voor hulp.</string>
+    <string name="faq_3_title_commons">Ik heb per ongeluk bestanden verwijderd, hoe kan ik deze herstellen?</string>
+    <string name="faq_3_text_commons">Dat gaat helaas niet lukken. Bestanden worden direct na bevestiging verwijderd; er is geen prullenbak.</string>
+    <string name="faq_4_title_commons">Ik vind de kleuren van de widgets niet mooi, kan ik ze veranderen?</string>
+    <string name="faq_4_text_commons">Bij het plaatsen van een widget op het startscherm zal er een instellingenvenster verschijnen. Onderaan staan gekleurde vlakken, waarmee nieuwe kleuren kunnen worden gekozen. De schuif is voor de transparantie.</string>
 
     <!-- License -->
     <string name="notice">Deze app maakt gebruik van de volgende libraries om het mij wat gemakkelijker te maken. Dank hiervoor.</string>
