@@ -304,6 +304,17 @@
     </string>
     <string name="purchase">Zakúpiť</string>
 
+    <!-- New app (do not translate anything on the 4th line) -->
+    <string name="new_app">
+        <![CDATA[
+            Zdravím,<br><br>
+            iba vám oznamujem, že bola nedávno vydaná nová aplikácia:<br><br>
+            <a href="%1$s">%2$s</a><br><br>
+            Viete ju stiahnuť kliknutím na názov.<br><br>
+            Vďaka
+        ]]>
+    </string>
+
     <!-- FAQ -->
     <string name="frequently_asked_questions">Často kladené otázky</string>
     <string name="faq_1_title_commons">Prečo nevidím widget tejto apky na zozname widgetov?</string>
