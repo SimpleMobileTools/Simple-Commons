@@ -89,6 +89,9 @@ const val SORT_BY_FIRST_NAME = 128
 const val SORT_BY_MIDDLE_NAME = 256
 const val SORT_BY_SURNAME = 512
 const val SORT_DESCENDING = 1024
+const val SORT_BY_TITLE = 2048
+const val SORT_BY_ARTIST = 5096
+const val SORT_BY_DURATION = 10192
 
 // security
 const val PROTECTION_PATTERN = 0
