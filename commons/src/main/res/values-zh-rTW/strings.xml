@@ -162,7 +162,7 @@
 
     <!-- What's new -->
     <string name="whats_new">更新了什麼</string>
-    <string name="whats_new_disclaimer">* 還有一些小優化，此處僅列出重大更新</string>
+    <string name="whats_new_disclaimer">*此處僅列出大更新，尚有一些小改善</string>
 
     <!-- Actionbar items -->
     <string name="delete">刪除</string>
@@ -247,8 +247,8 @@
     <string name="keep_last_modified">當檔案複製/移動/重新命名時，保留舊的「最後修改」數值</string>
     <string name="show_info_bubble">拖曳滾動條時，顯示訊息氣泡</string>
     <string name="prevent_phone_from_sleeping">防止手機睡眠</string>
-    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="skip_delete_confirmation">永遠跳過刪除確認</string>
+    <string name="enable_pull_to_refresh">啟用頂端下拉更新</string>
 
     <!-- Setting sections -->
     <string name="visibility">可見度</string>
@@ -302,11 +302,11 @@
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
-            Hey,<br><br>
-            just letting you know that a new app has been released recently:<br><br>
+            嗨，<br><br>
+            想讓你知道最近剛發布了一個新的應用程式:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-            You can download it by pressing the title.<br><br>
-            Thanks
+            點標題就能下載了<br><br>
+            謝謝
         ]]>
     </string>
 
@@ -324,7 +324,7 @@
     <string name="faq_4_text_commons">可啊，當你在主畫面拖動小工具時，會出現小工具設置畫面。你會在左下角看到顏色方塊，點下去再挑個新顏色就好了。你也能用拉條來調整透明度。</string>
 
     <!-- License -->
-    <string name="notice">這程式使用了下列的第三方函示庫來讓我工作簡化。感謝。</string>
+    <string name="notice">這程式使用了下列的第三方函式庫來讓我工作簡化。感謝。</string>
     <string name="third_party_licences">第三方授權</string>
     <string name="kotlin_title">Kotlin (programming language)</string>
     <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
