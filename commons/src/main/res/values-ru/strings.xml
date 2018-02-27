@@ -43,9 +43,9 @@
     <string name="renaming_folder">Изменение имени папки</string>
     <string name="filename_cannot_be_empty">Имя файла не может быть пустым</string>
     <string name="filename_invalid_characters">Имя файла содержит недопустимые символы</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
+    <string name="filename_invalid_characters_placeholder">Имя файла \"%s\" содержит недопустимые символы</string>
     <string name="extension_cannot_be_empty">Расширение не может быть пустым</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
+    <string name="source_file_doesnt_exist">Исходный файл \"%s\" не существует</string>
 
     <!-- Copy / Move -->
     <string name="copy">Копировать</string>
@@ -70,8 +70,8 @@
     <string name="copying_success_partial">Некоторые файлы не могут быть скопированы</string>
     <string name="no_files_selected">Файлы не выбраны</string>
     <string name="saving">Сохранение…</string>
-    <string name="could_not_create_folder">Не удалось создать папку %s</string>
-    <string name="could_not_create_file">Не удалось создать файл %s</string>
+    <string name="could_not_create_folder">Не удалось создать папку \"%s\"</string>
+    <string name="could_not_create_file">Не удалось создать файл \"%s\"</string>
 
     <!-- Create new -->
     <string name="create_new">Создать</string>
@@ -87,7 +87,7 @@
     <string name="file_already_exists">Файл \"%1$s\" уже существует</string>
     <string name="file_already_exists_overwrite">Файл \"%1$s\" уже существует. Перезаписать?</string>
     <string name="folder_already_exists">Папка \"%1$s\" уже существует</string>
-    <string name="merge">Merge</string>
+    <string name="merge">Объединить</string>
     <string name="overwrite">Перезаписать</string>
     <string name="skip">Пропустить</string>
     <string name="append">Добавить \"_1\" к имени</string>
@@ -112,7 +112,7 @@
     <string name="sd_card">SD-карта</string>
     <string name="root">Корневая папка</string>
     <string name="wrong_root_selected">Папка выбрана неверно, пожалуйста, выберите SD-карту</string>
-    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
+    <string name="sd_card_otg_same">Пути к SD-карте и OTG-устройству не могут быть одинаковыми</string>
 
     <!-- File properties -->
     <string name="properties">Свойства</string>
@@ -251,8 +251,8 @@
     <string name="keep_last_modified">Сохранять значение даты изменения файла при копировании/перемещении/переименовании</string>
     <string name="show_info_bubble">Показывать информационное окно при прокрутке элементов перетаскиванием полосы прокрутки</string>
     <string name="prevent_phone_from_sleeping">Предотвращать засыпание устройства</string>
-    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="skip_delete_confirmation">Всегда пропускать диалог подтверждения удаления</string>
+    <string name="enable_pull_to_refresh">Использовать \"потяните-для-обновления\" в верхней части экрана</string>
 
     <!-- Setting sections -->
     <string name="visibility">Отображение</string>
@@ -273,8 +273,8 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="confirm_otg_storage_access_text">Пожалуйста, выберите корневую папку OTG-устройства на следующем экране, чтобы предоставить к нему доступ.</string>
+    <string name="wrong_root_selected_otg">Выбрана неправильная папка. Выберите корневую папку вашего OTG-устройства.</string>
 
     <!-- About -->
     <string name="about">О приложении</string>
