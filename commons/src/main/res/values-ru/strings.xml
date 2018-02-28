@@ -276,6 +276,28 @@
     <string name="confirm_otg_storage_access_text">Пожалуйста, выберите корневую папку OTG-устройства на следующем экране, чтобы предоставить к нему доступ.</string>
     <string name="wrong_root_selected_otg">Выбрана неправильная папка. Выберите корневую папку вашего OTG-устройства.</string>
 
+    <!-- Dates -->
+    <string name="january">Январь</string>
+    <string name="february">Февраль</string>
+    <string name="march">Март</string>
+    <string name="april">Апрель</string>
+    <string name="may">Май</string>
+    <string name="june">Июнь</string>
+    <string name="july">Июль</string>
+    <string name="august">Август</string>
+    <string name="september">Сентябрь</string>
+    <string name="october">Октябрь</string>
+    <string name="november">Ноябрь</string>
+    <string name="december">Декабрь</string>
+
+    <string name="monday">Понедельник</string>
+    <string name="tuesday">Вторник</string>
+    <string name="wednesday">Среда</string>
+    <string name="thursday">Четверг</string>
+    <string name="friday">Пятница</string>
+    <string name="saturday">Суббота</string>
+    <string name="sunday">Воскресенье</string>
+
     <!-- About -->
     <string name="about">О приложении</string>
     <string name="website_label">Исходный код можно найти по адресу</string>

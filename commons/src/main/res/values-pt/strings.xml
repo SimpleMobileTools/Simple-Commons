@@ -273,6 +273,28 @@
     <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
     <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
 
+    <!-- Dates -->
+    <string name="january">janeiro</string>
+    <string name="february">fevereiro</string>
+    <string name="march">março</string>
+    <string name="april">abril</string>
+    <string name="may">maio</string>
+    <string name="june">junho</string>
+    <string name="july">julho</string>
+    <string name="august">agosto</string>
+    <string name="september">setembro</string>
+    <string name="october">outubro</string>
+    <string name="november">novembro</string>
+    <string name="december">dezembro</string>
+
+    <string name="monday">segunda</string>
+    <string name="tuesday">terça</string>
+    <string name="wednesday">quarta</string>
+    <string name="thursday">quinta</string>
+    <string name="friday">sexta</string>
+    <string name="saturday">sábado</string>
+    <string name="sunday">domingo</string>
+
     <!-- About -->
     <string name="about">Acerca</string>
     <string name="website_label">Mais aplicações Simple e código fonte em</string>

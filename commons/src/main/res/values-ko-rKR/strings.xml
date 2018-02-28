@@ -12,7 +12,7 @@
     <string name="value_copied_to_clipboard">클립보드에 복사됨</string>
     <string name="unknown">알 수 없음</string>
     <string name="always">Always</string>
-    <string name="never">Never</string>
+    <string name="never">사용 안함</string>
     <string name="details">Details</string>
     <string name="notes">Notes</string>
 
@@ -272,6 +272,28 @@
     <string name="otg">OTG</string>
     <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
     <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+
+    <!-- Dates -->
+    <string name="january">1월</string>
+    <string name="february">2월</string>
+    <string name="march">3월</string>
+    <string name="april">4월</string>
+    <string name="may">5월</string>
+    <string name="june">6월</string>
+    <string name="july">7월</string>
+    <string name="august">8월</string>
+    <string name="september">9월</string>
+    <string name="october">10월</string>
+    <string name="november">11월</string>
+    <string name="december">12월</string>
+
+    <string name="monday">월요일</string>
+    <string name="tuesday">화요일</string>
+    <string name="wednesday">수요일</string>
+    <string name="thursday">목요일</string>
+    <string name="friday">금요일</string>
+    <string name="saturday">토요일</string>
+    <string name="sunday">일요일</string>
 
     <!-- About -->
     <string name="about">앱정보</string>
