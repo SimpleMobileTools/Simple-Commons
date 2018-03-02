@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.dialogs
 
 import android.support.v7.app.AlertDialog
-import android.view.WindowManager
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
@@ -32,8 +31,8 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
                 .setPositiveButton(R.string.ok, null)
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
-            window!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
             activity.setupDialogStuff(view, this, R.string.rename) {
+                showKeyboard(view.rename_item_name)
                 getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                     var newName = view.rename_item_name.value
                     val newExtension = view.rename_item_extension.value

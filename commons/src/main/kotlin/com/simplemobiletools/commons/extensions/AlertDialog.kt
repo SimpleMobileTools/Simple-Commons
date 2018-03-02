@@ -1,0 +1,14 @@
+package com.simplemobiletools.commons.extensions
+
+import android.support.v7.app.AlertDialog
+import android.view.WindowManager
+import android.widget.EditText
+
+fun AlertDialog.showKeyboard(editText: EditText) {
+    window!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
+    editText.apply {
+        onGlobalLayout {
+            setSelection(text.toString().length)
+        }
+    }
+}
