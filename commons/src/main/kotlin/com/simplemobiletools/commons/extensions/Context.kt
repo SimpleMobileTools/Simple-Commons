@@ -103,15 +103,6 @@ val Context.baseConfig: BaseConfig get() = BaseConfig.newInstance(this)
 val Context.sdCardPath: String get() = baseConfig.sdCardPath
 val Context.internalStoragePath: String get() = baseConfig.internalStoragePath
 
-fun Context.isThankYouInstalled(): Boolean {
-    return try {
-        packageManager.getPackageInfo("com.simplemobiletools.thankyou", 0)
-        true
-    } catch (e: Exception) {
-        false
-    }
-}
-
 @SuppressLint("InlinedApi", "NewApi")
 fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHardwarePresent()
 
@@ -350,4 +341,15 @@ fun Context.getUriMimeType(path: String, newUri: Uri): String {
         mimeType = getMimeTypeFromUri(newUri)
     }
     return mimeType
+}
+
+fun Context.isThankYouInstalled() = isPackageInstalled("com.simplemobiletools.thankyou")
+
+fun Context.isPackageInstalled(pkgName: String): Boolean {
+    return try {
+        packageManager.getPackageInfo(pkgName, 0)
+        true
+    } catch (e: Exception) {
+        false
+    }
 }
