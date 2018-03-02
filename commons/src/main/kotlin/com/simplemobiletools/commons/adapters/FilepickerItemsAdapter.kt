@@ -33,7 +33,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
 
     override fun markItemSelection(select: Boolean, view: View?) {}
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int) = createViewHolder(R.layout.filepicker_list_item, parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.filepicker_list_item, parent)
 
     override fun onBindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int) {
         val fileDirItem = fileDirItems[position]
@@ -51,10 +51,10 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
 
     override fun getSelectableItemCount() = fileDirItems.size
 
-    override fun onViewRecycled(holder: MyRecyclerViewAdapter.ViewHolder?) {
+    override fun onViewRecycled(holder: MyRecyclerViewAdapter.ViewHolder) {
         super.onViewRecycled(holder)
         if (!activity.isActivityDestroyed()) {
-            Glide.with(activity).clear(holder?.itemView?.list_item_icon!!)
+            Glide.with(activity).clear(holder.itemView?.list_item_icon!!)
         }
     }
 
