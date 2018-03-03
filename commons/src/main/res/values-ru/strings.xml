@@ -34,18 +34,18 @@
     <!-- Renaming -->
     <string name="rename_file">Изменение имени файла</string>
     <string name="rename_folder">Изменение имени папки</string>
-    <string name="rename_file_error">Невозможно переименовать файл</string>
-    <string name="rename_folder_error">Невозможно переименовать папку</string>
+    <string name="rename_file_error">Не удалось переименовать файл</string>
+    <string name="rename_folder_error">Не удалось переименовать папку</string>
     <string name="rename_folder_empty">Имя папки не должно быть пустым</string>
     <string name="rename_folder_exists">Папка с таким именем уже существует</string>
-    <string name="rename_folder_root">Невозможно переименовать корневую папку</string>
+    <string name="rename_folder_root">Нельзя переименовать корневую папку</string>
     <string name="rename_folder_ok">Папка переименована успешно</string>
     <string name="renaming_folder">Изменение имени папки</string>
     <string name="filename_cannot_be_empty">Имя файла не может быть пустым</string>
     <string name="filename_invalid_characters">Имя файла содержит недопустимые символы</string>
-    <string name="filename_invalid_characters_placeholder">Имя файла \"%s\" содержит недопустимые символы</string>
+    <string name="filename_invalid_characters_placeholder">Имя файла «%s» содержит недопустимые символы</string>
     <string name="extension_cannot_be_empty">Расширение не может быть пустым</string>
-    <string name="source_file_doesnt_exist">Исходный файл \"%s\" не существует</string>
+    <string name="source_file_doesnt_exist">Исходный файл «%s» не существует</string>
 
     <!-- Copy / Move -->
     <string name="copy">Копировать</string>
@@ -70,8 +70,8 @@
     <string name="copying_success_partial">Некоторые файлы не могут быть скопированы</string>
     <string name="no_files_selected">Файлы не выбраны</string>
     <string name="saving">Сохранение…</string>
-    <string name="could_not_create_folder">Не удалось создать папку \"%s\"</string>
-    <string name="could_not_create_file">Не удалось создать файл \"%s\"</string>
+    <string name="could_not_create_folder">Не удалось создать папку «%s»</string>
+    <string name="could_not_create_file">Не удалось создать файл «%s»</string>
 
     <!-- Create new -->
     <string name="create_new">Создать</string>
@@ -84,13 +84,13 @@
     <string name="unknown_error_occurred">Произошла неизвестная ошибка</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Файл \"%1$s\" уже существует</string>
-    <string name="file_already_exists_overwrite">Файл \"%1$s\" уже существует. Перезаписать?</string>
-    <string name="folder_already_exists">Папка \"%1$s\" уже существует</string>
+    <string name="file_already_exists">Файл «%1$s» уже существует</string>
+    <string name="file_already_exists_overwrite">Файл «%1$s» уже существует. Перезаписать?</string>
+    <string name="folder_already_exists">Папка «%1$s» уже существует</string>
     <string name="merge">Объединить</string>
     <string name="overwrite">Перезаписать</string>
     <string name="skip">Пропустить</string>
-    <string name="append">Добавить \"_1\" к имени</string>
+    <string name="append">Добавить «_1» к имени</string>
     <string name="apply_to_all">Применить ко всем конфликтам</string>
 
     <!-- File picker -->
@@ -103,7 +103,8 @@
 
     <plurals name="items">
         <item quantity="one">%1$d объект</item>
-        <item quantity="other">объектов: %1$d</item>
+        <item quantity="few">%1$d объекта</item>
+        <item quantity="many">%1$d объектов</item>
     </plurals>
 
     <!-- Storages -->
@@ -145,7 +146,7 @@
     <string name="undo_changes_confirmation">Действительно отменить изменения?</string>
     <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
     <string name="apply_to_all_apps">Применить цвета ко всем приложениям Simple</string>
-    <string name="share_colors_success">Цвета успешно обновлены. Добавлена новая тема с названием \"Общая\", в дальнейшем используйте её для обновления цветов всех приложений.</string>
+    <string name="share_colors_success">Цвета успешно обновлены. Добавлена новая тема с названием «Общая», в дальнейшем используйте её для обновления цветов всех приложений.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Пожалуйста, купите <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, чтобы разблокировать эту функцию и поддержать разработку. Спасибо!
@@ -239,7 +240,7 @@
     <string name="settings">Настройки</string>
     <string name="customize_colors">Настроить цвета</string>
     <string name="use_english_language">Use English language</string>
-    <string name="avoid_whats_new">Не показывать \"Что нового\" при запуске</string>
+    <string name="avoid_whats_new">Не показывать «Что нового» при запуске</string>
     <string name="show_hidden_items">Показывать скрытые папки</string>
     <string name="font_size">Размер шрифта</string>
     <string name="small">Мелкий</string>
@@ -252,7 +253,7 @@
     <string name="show_info_bubble">Показывать информационное окно при прокрутке элементов перетаскиванием полосы прокрутки</string>
     <string name="prevent_phone_from_sleeping">Предотвращать засыпание устройства</string>
     <string name="skip_delete_confirmation">Всегда пропускать диалог подтверждения удаления</string>
-    <string name="enable_pull_to_refresh">Использовать \"потяните-для-обновления\" в верхней части экрана</string>
+    <string name="enable_pull_to_refresh">Использовать «потяните-для-обновления» в верхней части экрана</string>
 
     <!-- Setting sections -->
     <string name="visibility">Отображение</string>
@@ -337,7 +338,7 @@
     </string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently asked questions</string>
+    <string name="frequently_asked_questions">Часто задаваемые вопросы</string>
     <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
     <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
         in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
@@ -354,21 +355,21 @@
     <string name="third_party_licences">Лицензии третьих сторон</string>
     <string name="kotlin_title">Kotlin (язык программирования)</string>
     <string name="subsampling_title">Subsampling Scale Image View (возможность масштабирования изображений)</string>
-    <string name="glide_title">Glide (загрузка изображения и кэширование)</string>
-    <string name="picasso_title">Picasso (загрузка изображения и кэширование)</string>
+    <string name="glide_title">Glide (загрузка и кэширование изображений)</string>
+    <string name="picasso_title">Picasso (загрузка и кэширование изображений)</string>
     <string name="cropper_title">Android Image Cropper (обрезка и поворот изображений)</string>
     <string name="multiselect_title">RecyclerView MultiSelect (выбор нескольких элементов списка)</string>
     <string name="rtl_viewpager_title">RtlViewPager (отображение с RTL-языками)</string>
     <string name="joda_title">Joda-Time (замена даты Java)</string>
-    <string name="stetho_title">Stetho (базы данных отладки)</string>
-    <string name="otto_title">Otto ("шина" событий)</string>
+    <string name="stetho_title">Stetho (отладка баз данных)</string>
+    <string name="otto_title">Otto (шина событий)</string>
     <string name="photoview_title">PhotoView (масштабирование GIF)</string>
     <string name="pattern_title">PatternLockView (защита графическим ключом)</string>
     <string name="reprint_title">Reprint (защита по отпечатку пальца)</string>
-    <string name="gif_drawable_title">Gif Drawable (загрузка GIFs)</string>
+    <string name="gif_drawable_title">Gif Drawable (загрузка GIFов)</string>
     <string name="autofittextview_title">AutoFitTextView (масштабирование текста)</string>
-    <string name="robolectric_title">Robolectric (тестирование framework)</string>
+    <string name="robolectric_title">Robolectric (фреймворк для тестирования)</string>
     <string name="espresso_title">Espresso (помощник по тестированию)</string>
-    <string name="gson_title">Gson (анализатор JSON)</string>
-    <string name="leak_canary_title">Leak Canary (детектор утечки памяти)</string>
+    <string name="gson_title">Gson (парсер JSON)</string>
+    <string name="leak_canary_title">Leak Canary (детектор утечек памяти)</string>
 </resources>
