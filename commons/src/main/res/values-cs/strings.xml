@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Vyskytla se neznámá chyba</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Soubor \"%1$s\" již existuje</string>
-    <string name="file_already_exists_overwrite">Soubor \"%1$s\" již existuje. Přepsat?</string>
-    <string name="folder_already_exists">Složka \"%1$s\" již existuje</string>
+    <string name="file_already_exists">Soubor \"%s\" již existuje</string>
+    <string name="file_already_exists_overwrite">Soubor \"%s\" již existuje. Přepsat?</string>
+    <string name="folder_already_exists">Složka \"%s\" již existuje</string>
     <string name="merge">Merge</string>
     <string name="overwrite">Přepsat</string>
     <string name="skip">Přeskočit</string>
@@ -323,7 +323,7 @@
     <string name="more_apps_underlined"><u>Více aplikací</u></string>
     <string name="third_party_licences_underlined"><u>Licence třetí strany</u></string>
     <string name="invite_friends_underlined"><u>Pozvat přátele</u></string>
-    <string name="share_text">Ahoj, pojď se podívat na %1$s v/na %2$s</string>
+    <string name="share_text">Ahoj, pojď se podívat na %1$s na %2$s</string>
     <string name="invite_via">Pozvat pomocí</string>
     <string name="rate_us_underlined"><u>Ohodnotit</u></string>
     <string name="donate">Donate</string>
@@ -331,8 +331,8 @@
     <string name="follow_us">Sledujte nás</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Additional info</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
+    <string name="app_version">App version: %s</string>
+    <string name="device_os">Device OS: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>

@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Ha ocorregut un error desconegut</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">L’arxiu \"%1$s\" ja existeix</string>
-    <string name="file_already_exists_overwrite">L’arxiu \"%1$s\" ja existeix. El vos sobreescriure?</string>
-    <string name="folder_already_exists">La carpeta \"%1$s\" ja existeix</string>
+    <string name="file_already_exists">L’arxiu \"%s\" ja existeix</string>
+    <string name="file_already_exists_overwrite">L’arxiu \"%s\" ja existeix. El vos sobreescriure?</string>
+    <string name="folder_already_exists">La carpeta \"%s\" ja existeix</string>
     <string name="merge">Fusionar</string>
     <string name="overwrite">Sobreescriure</string>
     <string name="skip">Saltar</string>
@@ -330,8 +330,8 @@
     <string name="follow_us">Segueix-nos</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Informació adicional</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
+    <string name="app_version">App version: %s</string>
+    <string name="device_os">Device OS: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hola,<br><br>

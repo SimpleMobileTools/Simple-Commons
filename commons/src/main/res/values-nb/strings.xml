@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">En ukjent feil oppstod</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Filen \"%1$s\" finnes allerede</string>
-    <string name="file_already_exists_overwrite">Filen \"%1$s\" finnes allerede. Overskrive?</string>
-    <string name="folder_already_exists">Mappen \"%1$s\" finnes allerede</string>
+    <string name="file_already_exists">Filen \"%s\" finnes allerede</string>
+    <string name="file_already_exists_overwrite">Filen \"%s\" finnes allerede. Overskrive?</string>
+    <string name="folder_already_exists">Mappen \"%s\" finnes allerede</string>
     <string name="merge">Sammenslå</string>
     <string name="overwrite">Overskriv</string>
     <string name="skip">Hopp over</string>
@@ -331,8 +331,8 @@
     <string name="follow_us">Følg oss</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Tilleggsinformasjon</string>
-    <string name="app_version">App-versjon: %1$s</string>
-    <string name="device_os">Operativsystem: %1$s</string>
+    <string name="app_version">App-versjon: %s</string>
+    <string name="device_os">Operativsystem: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>

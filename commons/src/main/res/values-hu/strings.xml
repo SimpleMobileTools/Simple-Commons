@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">An unknown error occurred</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">File \"%1$s\" already exists</string>
-    <string name="file_already_exists_overwrite">File \"%1$s\" already exists. Overwrite?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="file_already_exists">File \"%s\" already exists</string>
+    <string name="file_already_exists_overwrite">File \"%s\" already exists. Overwrite?</string>
+    <string name="folder_already_exists">Folder \"%s\" already exists</string>
     <string name="merge">Merge</string>
     <string name="overwrite">Overwrite</string>
     <string name="skip">Skip</string>
@@ -331,8 +331,8 @@
     <string name="follow_us">Követés</string>
     <string name="copyright">%1$s verzió\nSzerzői jogok: © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Additional info</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
+    <string name="app_version">App version: %s</string>
+    <string name="device_os">Device OS: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>

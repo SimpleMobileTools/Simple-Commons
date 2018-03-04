@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Onbekende fout opgetreden</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Bestand \"%1$s\" bestaat reeds</string>
-    <string name="file_already_exists_overwrite">Bestand \"%1$s\" bestaat reeds. Overschrijven?</string>
-    <string name="folder_already_exists">Map \"%1$s\" bestaat reeds</string>
+    <string name="file_already_exists">Bestand \"%s\" bestaat reeds</string>
+    <string name="file_already_exists_overwrite">Bestand \"%s\" bestaat reeds. Overschrijven?</string>
+    <string name="folder_already_exists">Map \"%s\" bestaat reeds</string>
     <string name="merge">Samenvoegen</string>
     <string name="overwrite">Overschrijven</string>
     <string name="skip">Overslaan</string>
@@ -331,8 +331,8 @@
     <string name="follow_us">Volg ons</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Extra informatie</string>
-    <string name="app_version">Versie: %1$s</string>
-    <string name="device_os">Besturingssysteem: %1$s</string>
+    <string name="app_version">Versie: %s</string>
+    <string name="device_os">Besturingssysteem: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hallo,<br><br>

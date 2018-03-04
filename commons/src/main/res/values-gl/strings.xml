@@ -14,7 +14,7 @@
     <string name="always">Siempre</string>
     <string name="never">Nunca</string>
     <string name="details">Detalles</string>
-    <string name="notas">Notas</string>
+    <string name="notes">Notas</string>
 
     <!-- Search -->
     <string name="search">Buscar</string>
@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Ocurrió un error desconocido</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">El archivo \"%1$s\" ya existe</string>
-    <string name="file_already_exists_overwrite">El archivo \"%1$s\" ya existe. Sobreescribir?</string>
-    <string name="folder_already_exists">La carpeta \"%1$s\" ya existe</string>
+    <string name="file_already_exists">El archivo \"%s\" ya existe</string>
+    <string name="file_already_exists_overwrite">El archivo \"%s\" ya existe. Sobreescribir?</string>
+    <string name="folder_already_exists">La carpeta \"%s\" ya existe</string>
     <string name="merge">Fusionar</string>
     <string name="overwrite">Sobreescribir</string>
     <string name="skip">Saltar</string>
@@ -330,8 +330,8 @@
     <string name="follow_us">Síguenos</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Información adicional</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
+    <string name="app_version">App version: %s</string>
+    <string name="device_os">Device OS: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hola,<br><br>

@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">不明なエラーが発生しました</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">ファイル \"%1$s\" は既に存在しています</string>
-    <string name="file_already_exists_overwrite">ファイル \"%1$s\" は既に存在しています。上書きしますか?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="file_already_exists">ファイル \"%s\" は既に存在しています</string>
+    <string name="file_already_exists_overwrite">ファイル \"%s\" は既に存在しています。上書きしますか?</string>
+    <string name="folder_already_exists">Folder \"%s\" already exists</string>
     <string name="merge">Merge</string>
     <string name="overwrite">上書き</string>
     <string name="skip">スキップ</string>
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d アイテム</item>
-        <item quantity="other">%1$d アイテム</item>
+        <item quantity="one">%d アイテム</item>
+        <item quantity="other">%d アイテム</item>
     </plurals>
 
     <!-- Storages -->
@@ -331,8 +331,8 @@
     <string name="follow_us">フォローしてください</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">追加情報</string>
-    <string name="app_version">アプリバージョン: %1$s</string>
-    <string name="device_os">デバイスOS: %1$s</string>
+    <string name="app_version">アプリバージョン: %s</string>
+    <string name="device_os">デバイスOS: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>

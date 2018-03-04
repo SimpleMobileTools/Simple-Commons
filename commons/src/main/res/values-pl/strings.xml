@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Wystąpił nieznany błąd</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Plik \"%1$s\" już istnieje</string>
-    <string name="file_already_exists_overwrite">Plik \"%1$s\" już istnieje. Nadpisać?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" już istnieje</string>
+    <string name="file_already_exists">Plik \"%s\" już istnieje</string>
+    <string name="file_already_exists_overwrite">Plik \"%s\" już istnieje. Nadpisać?</string>
+    <string name="folder_already_exists">Folder \"%s\" już istnieje</string>
     <string name="merge">Połącz</string>
     <string name="overwrite">Nadpisz</string>
     <string name="skip">Pomiń</string>
@@ -335,8 +335,8 @@
     <string name="follow_us">Śledź nas</string>
     <string name="copyright">Wersja %1$s\n© Simple Mobile Tools %2$d</string>
     <string name="additional_info">Dodatkowe informacje</string>
-    <string name="app_version">Wersja aplikacji: %1$s</string>
-    <string name="device_os">System: %1$s</string>
+    <string name="app_version">Wersja aplikacji: %s</string>
+    <string name="device_os">System: %s</string>
     <string name="donate_please">
         <![CDATA[
             Witaj!<br><br>

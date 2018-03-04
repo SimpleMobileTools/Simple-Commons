@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Nepoznata greška se dogodila</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Datoteka \"%1$s\" već postoji</string>
-    <string name="file_already_exists_overwrite">Datoteka \"%1$s\" već postoji. Presnimiti?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="file_already_exists">Datoteka \"%s\" već postoji</string>
+    <string name="file_already_exists_overwrite">Datoteka \"%s\" već postoji. Presnimiti?</string>
+    <string name="folder_already_exists">Folder \"%s\" already exists</string>
     <string name="merge">Merge</string>
     <string name="overwrite">Presnimi</string>
     <string name="skip">Preskoči</string>
@@ -335,8 +335,8 @@
     <string name="follow_us">Pratite nas</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Dodatne informacije</string>
-    <string name="app_version">Verzija aplikacije: %1$s</string>
-    <string name="device_os">OS uređaja: %1$s</string>
+    <string name="app_version">Verzija aplikacije: %s</string>
+    <string name="device_os">OS uređaja: %s</string>
     <string name="donate_please">
         <![CDATA[
             Pozdrav,<br><br>

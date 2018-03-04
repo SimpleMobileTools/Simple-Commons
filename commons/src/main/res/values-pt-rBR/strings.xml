@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Ocorreu um erro desconhecido</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Já existe um arquivo com o nome \%1$s\"</string>
-    <string name="file_already_exists_overwrite">Já existe um arquivo com o nome \"%1$s\". Substituir?</string>
-    <string name="folder_already_exists">A pasta \"%1$s\" já existe</string>
+    <string name="file_already_exists">Já existe um arquivo com o nome \%s\"</string>
+    <string name="file_already_exists_overwrite">Já existe um arquivo com o nome \"%s\". Substituir?</string>
+    <string name="folder_already_exists">A pasta \"%s\" já existe</string>
     <string name="merge">Mesclar</string>
     <string name="overwrite">Substituir</string>
     <string name="skip">Ignorar</string>
@@ -331,8 +331,8 @@
     <string name="follow_us">Siga-nos</string>
     <string name="copyright">V %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Informações adicionais</string>
-    <string name="app_version">Versão do app: %1$s</string>
-    <string name="device_os">Sistema operacional: %1$s</string>
+    <string name="app_version">Versão do app: %s</string>
+    <string name="device_os">Sistema operacional: %s</string>
     <string name="donate_please">
         <![CDATA[
             Olá,<br><br>

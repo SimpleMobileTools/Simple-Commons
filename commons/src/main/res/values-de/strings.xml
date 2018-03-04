@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Ein unbekannter Fehler ist aufgetreten</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Datei \"%1$s\" existiert bereits</string>
-    <string name="file_already_exists_overwrite">Datei \"%1$s\" existiert bereits. Überschreiben?</string>
-    <string name="folder_already_exists">Ordner \"%1$s\" existiert bereits</string>
+    <string name="file_already_exists">Datei \"%s\" existiert bereits</string>
+    <string name="file_already_exists_overwrite">Datei \"%s\" existiert bereits. Überschreiben?</string>
+    <string name="folder_already_exists">Ordner \"%s\" existiert bereits</string>
     <string name="merge">Zusammenführen</string>
     <string name="overwrite">Überschreiben</string>
     <string name="skip">Überspringen</string>
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Auswahl bestätigen</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d Element</item>
-        <item quantity="other">%1$d Elemente</item>
+        <item quantity="one">%d Element</item>
+        <item quantity="other">%d Elemente</item>
     </plurals>
 
     <!-- Storages -->
@@ -331,8 +331,8 @@
     <string name="follow_us">Folge uns</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Zusätzliche Infos</string>
-    <string name="app_version">App-Version: %1$s</string>
-    <string name="device_os">Betriebssystem: %1$s</string>
+    <string name="app_version">App-Version: %s</string>
+    <string name="device_os">Betriebssystem: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hallo!,<br><br>

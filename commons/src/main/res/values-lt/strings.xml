@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Neþinoma klaida</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Failas \"%1$s\" jau egzistuoja</string>
-    <string name="file_already_exists_overwrite">Failas \"%1$s\" jau egzistuoja. Pervadinti?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="file_already_exists">Failas \"%s\" jau egzistuoja</string>
+    <string name="file_already_exists_overwrite">Failas \"%s\" jau egzistuoja. Pervadinti?</string>
+    <string name="folder_already_exists">Folder \"%s\" already exists</string>
     <string name="merge">Merge</string>
     <string name="overwrite">Uþraðyti ant virðaus</string>
     <string name="skip">Praleisti</string>
@@ -330,8 +330,8 @@
     <string name="follow_us">Sekite mus</string>
     <string name="copyright">v %1$s\nCopyright Â© Simple Mobile Tools %2$d</string>
     <string name="additional_info">Papildoma informacija</string>
-    <string name="app_version">Programos versija: %1$s</string>
-    <string name="device_os">Árenginio OS: %1$s</string>
+    <string name="app_version">Programos versija: %s</string>
+    <string name="device_os">Árenginio OS: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>
