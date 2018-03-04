@@ -353,3 +353,17 @@ fun Context.isPackageInstalled(pkgName: String): Boolean {
         false
     }
 }
+
+// format day bits to strings like "Mon, Tue, Wed"
+fun Context.getSelectedDaysString(bitMask: Int): String {
+    val dayBits = arrayListOf(MONDAY_BIT, TUESDAY_BIT, WEDNESDAY_BIT, THURSDAY_BIT, FRIDAY_BIT, SATURDAY_BIT, SUNDAY_BIT)
+
+    val weekDays = resources.getStringArray(R.array.week_days)
+    var days = ""
+    dayBits.forEachIndexed { index, bit ->
+        if (bitMask and bit != 0) {
+            days += "${weekDays[index].substringTo(3)}, "
+        }
+    }
+    return days.trim().trimEnd(',')
+}

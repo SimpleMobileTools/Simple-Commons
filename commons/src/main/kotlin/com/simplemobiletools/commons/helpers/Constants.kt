@@ -121,6 +121,17 @@ const val CONFLICT_SKIP = 1
 const val CONFLICT_OVERWRITE = 2
 const val CONFLICT_MERGE = 3
 
+const val MONDAY_BIT = 1
+const val TUESDAY_BIT = 2
+const val WEDNESDAY_BIT = 4
+const val THURSDAY_BIT = 8
+const val FRIDAY_BIT = 16
+const val SATURDAY_BIT = 32
+const val SUNDAY_BIT = 64
+const val EVERY_DAY_BIT = MONDAY_BIT or TUESDAY_BIT or WEDNESDAY_BIT or THURSDAY_BIT or FRIDAY_BIT or SATURDAY_BIT or SUNDAY_BIT
+const val WEEK_DAYS_BIT = MONDAY_BIT or TUESDAY_BIT or WEDNESDAY_BIT or THURSDAY_BIT or FRIDAY_BIT
+const val WEEKENDS_BIT = SATURDAY_BIT or SUNDAY_BIT
+
 fun getDateFormats() = arrayListOf(
         "yyyy-MM-dd",
         "yyyyMMdd",
