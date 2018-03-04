@@ -269,7 +269,7 @@
     <string name="password_protect_whole_app">Защита паролем всего приложения</string>
     <string name="keep_last_modified">Сохранять значение даты изменения файла при копировании/перемещении/переименовании</string>
     <string name="show_info_bubble">Показывать информационное окно при прокрутке элементов перетаскиванием полосы прокрутки</string>
-    <string name="prevent_phone_from_sleeping">Предотвращать засыпание устройства</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="skip_delete_confirmation">Всегда пропускать диалог подтверждения удаления</string>
     <string name="enable_pull_to_refresh">Использовать «потяните-для-обновления» в верхней части экрана</string>
     <string name="use_24_hour_time_format">Use 24-hour time format</string>

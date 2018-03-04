@@ -269,7 +269,7 @@
     <string name="password_protect_whole_app">Chroń dostęp do aplikacji</string>
     <string name="keep_last_modified">Zachowuj starą datę i czas modyfikacji przy kopiowaniu / przenoszeniu / zmianie nazwy plików</string>
     <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
-    <string name="prevent_phone_from_sleeping">Zapobiegaj przejściu urządzenia w stan uśpienia</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="skip_delete_confirmation">Nie pokazuj okna z potwierdzeniem usunięcia elementu(-ów)</string>
     <string name="enable_pull_to_refresh">Włącz gest pociągnięcia ekranu od góry w celu odświeżenia widoku</string>
     <string name="use_24_hour_time_format">Use 24-hour time format</string>

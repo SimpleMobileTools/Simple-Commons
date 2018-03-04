@@ -264,7 +264,7 @@
     <string name="password_protect_whole_app">Contraseña para proteger toda la aplicación</string>
     <string name="keep_last_modified">Mantener el valor de ultima modificación al copiar/mover/renombrar los archivos</string>
     <string name="show_info_bubble">Mostrar una burbuja de información al desplazar elementos arrastrando la barra de desplazamiento</string>
-    <string name="prevent_phone_from_sleeping">Evitar que el teléfono duerma</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="skip_delete_confirmation">Omitir siempre el diálogo de confirmación de eliminación</string>
     <string name="enable_pull_to_refresh">Habilitar tirar desde la parte superior para refrescar</string>
     <string name="use_24_hour_time_format">Usar el formato 24 horas</string>

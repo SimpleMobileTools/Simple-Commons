@@ -265,7 +265,7 @@
     <string name="password_protect_whole_app">使用密码保护本应用</string>
     <string name="keep_last_modified">在复制/移动/重命名文件时保留旧的修改日期</string>
     <string name="show_info_bubble">拖动滚动条时在滚动项目旁显示一个信息气泡</string>
-    <string name="prevent_phone_from_sleeping">阻止设备休眠</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="skip_delete_confirmation">忽略删除确认对话框</string>
     <string name="enable_pull_to_refresh">启用顶部上拉刷新</string>
     <string name="use_24_hour_time_format">Use 24-hour time format</string>
