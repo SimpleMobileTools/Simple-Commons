@@ -232,22 +232,22 @@
     </plurals>
 
     <plurals name="in_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d segundo</item>
+        <item quantity="other">%d segundos</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minuto</item>
+        <item quantity="other">%d minutos</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d hora</item>
+        <item quantity="other">%d horas</item>
     </plurals>
 
     <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
-    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
-    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
-    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
+    <string name="alarm_goes_off_in_hours_minutes">La alarma se apagaré en %1$d horas y %2$d minutos</string>
+    <string name="alarm_goes_off_in_hours">La alarma se apagaré en %d horas</string>
+    <string name="alarm_goes_off_in_minutes">La alarma se apagará en %d minutos</string>
 
     <!-- Settings -->
     <string name="settings">Ajustes</string>
@@ -267,8 +267,8 @@
     <string name="prevent_phone_from_sleeping">Evitar que el teléfono duerma</string>
     <string name="skip_delete_confirmation">Omitir siempre el diálogo de confirmación de eliminación</string>
     <string name="enable_pull_to_refresh">Habilitar tirar desde la parte superior para refrescar</string>
-    <string name="use_24_hour_time_format">Use 24-hour time format</string>
-    <string name="sunday_first">Start week on Sunday</string>
+    <string name="use_24_hour_time_format">Usar el formato 24 horas</string>
+    <string name="sunday_first">Comenzar la semana en Domingo</string>
     <string name="widgets">Widgets</string>
 
     <!-- Setting sections -->
