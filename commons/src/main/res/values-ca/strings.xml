@@ -232,22 +232,22 @@
     </plurals>
 
     <plurals name="in_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d segon</item>
+        <item quantity="other">%d segons</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minut</item>
+        <item quantity="other">%d minuts</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d hora</item>
+        <item quantity="other">%d hores</item>
     </plurals>
 
     <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
-    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
-    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
-    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
+    <string name="alarm_goes_off_in_hours_minutes">L\'alarma s\'apagarà en %1$d houres i %2$d minuts</string>
+    <string name="alarm_goes_off_in_hours">L\'alarma s\'apagarà en %d houres</string>
+    <string name="alarm_goes_off_in_minutes">L\'alarma s\'apagarà en %d minuts</string>
 
     <!-- Settings -->
     <string name="settings">Ajustaments</string>
@@ -267,9 +267,9 @@
     <string name="prevent_phone_from_sleeping">Evita que el telèfon dormi</string>
     <string name="skip_delete_confirmation">Ignora sempre el diàleg de confirmació d\'eliminació</string>
     <string name="enable_pull_to_refresh">Activa estirar des de la part superior per refrescar</string>
-    <string name="use_24_hour_time_format">Use 24-hour time format</string>
-    <string name="sunday_first">Start week on Sunday</string>
-    <string name="widgets">Widgets</string>
+    <string name="use_24_hour_time_format">Utilitzar foramt 24 houres</string>
+    <string name="sunday_first">Començar la setmana en diumenge</string>
+    <string name="widgets">Ginys</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilitat</string>
