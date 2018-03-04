@@ -167,7 +167,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">Verwijderen</string>
-    <string name="remove">Verwijderen</string>
+    <string name="remove">Weghalen</string>
     <string name="rename">Hernoemen</string>
     <string name="share">Delen</string>
     <string name="share_via">Delen via</string>
@@ -233,22 +233,22 @@
     </plurals>
 
     <plurals name="in_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d seconde</item>
+        <item quantity="other">%d seconden</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minuut</item>
+        <item quantity="other">%d minuten</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d uur</item>
+        <item quantity="other">%d uren</item>
     </plurals>
 
     <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
-    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
-    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
-    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
+    <string name="alarm_goes_off_in_hours_minutes">Het alarm zal afgaan over %1$d uren en %2$d minuten</string>
+    <string name="alarm_goes_off_in_hours">Het alarm zal afgaan over %d uren</string>
+    <string name="alarm_goes_off_in_minutes">Het alarm zal afgaan over %d minuten</string>
 
     <!-- Settings -->
     <string name="settings">Instellingen</string>
@@ -268,8 +268,8 @@
     <string name="prevent_phone_from_sleeping">Slaapstand voorkomen</string>
     <string name="skip_delete_confirmation">Niet om bevestiging vragen bij verwijderen</string>
     <string name="enable_pull_to_refresh">Pull-to-refresh inschakelen</string>
-    <string name="use_24_hour_time_format">Use 24-hour time format</string>
-    <string name="sunday_first">Start week on Sunday</string>
+    <string name="use_24_hour_time_format">24-uursformaat gebruiken</string>
+    <string name="sunday_first">Week op zondag beginnen</string>
     <string name="widgets">Widgets</string>
 
     <!-- Setting sections -->
@@ -346,11 +346,11 @@
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
-            Hey,<br><br>
-            just letting you know that a new app has been released recently:<br><br>
+            Hallo,<br><br>
+            Er is recentelijk een nieuwe app uitgebracht:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-            You can download it by pressing the title.<br><br>
-            Thanks
+            Downloaden kan door een druk op de naam hierboven.<br><br>
+            Dank u wel!
         ]]>
     </string>
 
