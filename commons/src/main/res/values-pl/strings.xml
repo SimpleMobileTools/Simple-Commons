@@ -43,7 +43,7 @@
     <string name="renaming_folder">Zmieniam nazwę folderu&#8230;</string>
     <string name="filename_cannot_be_empty">Nazwa pliku nie może być pusta</string>
     <string name="filename_invalid_characters">Nazwa pliku zawiera niedozwolone znaki</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
+    <string name="filename_invalid_characters_placeholder">Nazwa \'%s\' zawiera niedozwolone znaki</string>
     <string name="extension_cannot_be_empty">Rozszerzenie pliku nie może być puste</string>
     <string name="source_file_doesnt_exist">Plik źródłowy nie istnieje</string>
 
@@ -252,8 +252,8 @@
     <string name="keep_last_modified">Zachowuj starą datę i czas modyfikacji przy kopiowaniu / przenoszeniu / zmianie nazwy plików</string>
     <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
     <string name="prevent_phone_from_sleeping">Zapobiegaj przejściu urządzenia w stan uśpienia</string>
-    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="skip_delete_confirmation">Nie pokazuj okna z potwierdzeniem usunięcia elementu(-ów)</string>
+    <string name="enable_pull_to_refresh">Włącz gest pociągnięcia ekranu od góry w celu odświeżenia widoku</string>
 
     <!-- Setting sections -->
     <string name="visibility">Widoczność</string>
@@ -274,8 +274,30 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Wybierz folder główny urządzenia OTG na następnym ekranie, aby uzyskać dostęp</string>
+    <string name="confirm_otg_storage_access_text">Wybierz folder główny urządzenia OTG na następnym ekranie, aby uzyskać dostęp do tegoż urządzenia</string>
     <string name="wrong_root_selected_otg">Wybrany został niewłaściwy folder, wybierz główny folder urządzenia OTG</string>
+
+    <!-- Dates -->
+    <string name="january">Styczeń</string>
+    <string name="february">Luty</string>
+    <string name="march">Marzec</string>
+    <string name="april">Kwiecień</string>
+    <string name="may">Maj</string>
+    <string name="june">Czerwiec</string>
+    <string name="july">Lipiec</string>
+    <string name="august">Sierpień</string>
+    <string name="september">Wrzesień</string>
+    <string name="october">Październik</string>
+    <string name="november">Listopad</string>
+    <string name="december">Grudzień</string>
+
+    <string name="monday">Poniedziałek</string>
+    <string name="tuesday">Wtorek</string>
+    <string name="wednesday">Środa</string>
+    <string name="thursday">Czwartek</string>
+    <string name="friday">Piątek</string>
+    <string name="saturday">Sobota</string>
+    <string name="sunday">Niedziela</string>
 
     <!-- About -->
     <string name="about">O aplikacji</string>
@@ -284,7 +306,7 @@
     <string name="more_apps_underlined"><u>Więcej naszych aplikacji</u></string>
     <string name="third_party_licences_underlined"><u>Licencje innych firm</u></string>
     <string name="invite_friends_underlined"><u>Zaproponuj aplikację znajomym</u></string>
-    <string name="share_text">Hej! Sprawdź aplikację %1$s (link: %2$s).</string>
+    <string name="share_text">Hej! Sprawdź aplikację %1$s (%2$s).</string>
     <string name="invite_via">Wybierz sposób:</string>
     <string name="rate_us_underlined"><u>Oceń aplikację</u></string>
     <string name="donate">Przekaż datek</string>
@@ -304,16 +326,27 @@
     </string>
     <string name="purchase">Kup</string>
 
+    <!-- New app (do not translate anything on the 4th line) -->
+    <string name="new_app">
+        <![CDATA[
+            Cześć!<br><br>
+            Dajemy Ci znać, że ostatnio wyszła nowa aplikacja:<br><br>
+            <a href="%1$s">%2$s</a><br><br>
+            Możesz ją pobrać, klikając tytuł.<br><br>
+            Dziękujemy!
+        ]]>
+    </string>
+
     <!-- FAQ -->
     <string name="frequently_asked_questions">Często zadawane pytania (FAQ)</string>
     <string name="faq_1_title_commons">Dlaczego nigdzie nie widzę widżetu aplikacji?</string>
-    <string name="faq_1_text_commons">Zapewne dlatego, że aplikacja znajduje się na karcie pamięci. Jedynym rozwiązaniem problemu jest przeniesienie aplikacji z powrotem na pamięć wewnętrzną, ponieważ jest to ograniczenie systemu Android, nie aplikacji.</string>
+    <string name="faq_1_text_commons">Zapewne dlatego, że aplikacja znajduje się na karcie pamięci. Jedynym rozwiązaniem problemu jest przeniesienie aplikacji z powrotem na pamięć wewnętrzną. Jest to ograniczenie systemu Android, nie aplikacji.</string>
     <string name="faq_2_title_commons">Chcę was wesprzeć, ale jestem bez grosza przy duszy. Mogę jakoś to zrobić inaczej?</string>
     <string name="faq_2_text_commons">Oczywiście. Możesz powiedzieć światu o naszych aplikacjach, podzielić się opinią i oceną w Sklepie Google Play, lub też wspomóc tłumaczenie aplikacji na nowe języki (bądź poprawić już istniejące tłumaczenia). Instrukcję znajdziesz pod adresem https://github.com/SimpleMobileTools/General-Discussion . Możesz też napisać do nas na adres hello@simplemobiletools.com , jeśli potrzebujesz pomocy.</string>
-    <string name="faq_3_title_commons">Usunąłem / usunęłam jakieś pliki przez przypadek. Mogę je jakoś odzyskać?</string>
-    <string name="faq_3_text_commons">Niestety nie. Pliki są usuwane zaraz po kliknięciu w oknie potwierdzającym. System Amdroid nie ma wbudowanego kosza (są osobne od tego aplikacje, jednakże upewnij się kilka razy, zanim cokolwiek usuniesz, gdyż takowe aplikacje nie gwarantują odzyskania pliku w nienaruszonym stanie).</string>
-    <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
-    <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
+    <string name="faq_3_title_commons">Usunąłem (/ usunęłam) jakieś pliki przez przypadek. Mogę je jakoś odzyskać?</string>
+    <string name="faq_3_text_commons">Nie z poziomu naszych aplikacji. Pliki są usuwane zaraz po kliknięciu w oknie potwierdzającym. System Amdroid nie ma wbudowanego kosza. Są od tego osobne aplikacje, jednakże upewnij się kilka razy, zanim cokolwiek usuniesz, gdyż takowe aplikacje nie gwarantują odzyskania pliku w nienaruszonym stanie.</string>
+    <string name="faq_4_title_commons">Nie za bardzo podobają mi się domyślne kolory wiedżetów. Mogę je jakoś zmienić?</string>
+    <string name="faq_4_text_commons">Tak. Po przeciągnięciu widżetu na pulpit pojawia się okno jego konfiguracji. Zobaczysz na nim kolorowe kwadraty, za pomocą których możesz wybrać nowe kolory. Suwakiem możesz też ustawić poziom przezroczystości.</string>
 
     <!-- License -->
     <string name="notice">Aplikacja korzysta z następujących bibliotek innych firm:</string>

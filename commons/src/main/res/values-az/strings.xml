@@ -1,136 +1,136 @@
 <resources>
-    <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
-    <string name="save_as">Save as</string>
-    <string name="file_saved">File saved successfully</string>
-    <string name="invalid_file_format">Invalid file format</string>
-    <string name="out_of_memory_error">Out of memory error</string>
-    <string name="an_error_occurred">An error occurred: %s</string>
-    <string name="open_with">Open with</string>
-    <string name="no_app_found">No valid app found</string>
-    <string name="set_as">Set as</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
-    <string name="unknown">Unknown</string>
-    <string name="always">Always</string>
-    <string name="never">Never</string>
-    <string name="details">Details</string>
-    <string name="notes">Notes</string>
+    <string name="ok">Oldu</string>
+    <string name="cancel">Ləğv Et</string>
+    <string name="save_as">Saxla</string>
+    <string name="file_saved">Fayl uğurla saxlandı</string>
+    <string name="invalid_file_format">Keçərsiz fayl formatı</string>
+    <string name="out_of_memory_error">Yaddaş doludur xətası</string>
+    <string name="an_error_occurred">Xəta baş verdi: %s</string>
+    <string name="open_with">Bununla aç</string>
+    <string name="no_app_found">Etibarlı tətbiq tapılmadı</string>
+    <string name="set_as">Təyin et</string>
+    <string name="value_copied_to_clipboard">Miqdar panelə kopyalandı</string>
+    <string name="unknown">Bilinməyən</string>
+    <string name="always">Həmişə</string>
+    <string name="never">Heç vaxt</string>
+    <string name="details">Detallar</string>
+    <string name="notes">Qeydlər</string>
 
     <!-- Search -->
-    <string name="search">Search</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
+    <string name="search">Axtar</string>
+    <string name="type_2_characters">Axtarışa başlamaq üçün ən az 2 simvol yazın.</string>
 
     <!-- Filters -->
-    <string name="filter">Filter</string>
-    <string name="no_items_found">No items found.</string>
-    <string name="change_filter">Change filter</string>
+    <string name="filter">Filtr</string>
+    <string name="no_items_found">Heçnə tapılmadı.</string>
+    <string name="change_filter">Filtri dəyiş</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">Yaddaş icazəsi tələb olunur</string>
+    <string name="no_contacts_permission">Kontakt icazəsi tələb olunur</string>
+    <string name="no_camera_permissions">Kamera icazəsi tələb olunur</string>
+    <string name="no_audio_permissions">Səs icazəsi tələb olunur</string>
 
     <!-- Renaming -->
-    <string name="rename_file">Rename file</string>
-    <string name="rename_folder">Rename folder</string>
-    <string name="rename_file_error">Could not rename the file</string>
-    <string name="rename_folder_error">Could not rename the folder</string>
-    <string name="rename_folder_empty">Folder name must not be empty</string>
-    <string name="rename_folder_exists">A folder with that name already exists</string>
-    <string name="rename_folder_root">Cannot rename the root folder of a storage</string>
-    <string name="rename_folder_ok">Folder renamed successfully</string>
-    <string name="renaming_folder">Renaming folder</string>
-    <string name="filename_cannot_be_empty">Filename cannot be empty</string>
-    <string name="filename_invalid_characters">Filename contains invalid characters</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
-    <string name="extension_cannot_be_empty">Extension cannot be empty</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
+    <string name="rename_file">Faylı yenidən adlandır</string>
+    <string name="rename_folder">Qovluğu yenidən adlandır</string>
+    <string name="rename_file_error">Faylı adlandırmaq olmur</string>
+    <string name="rename_folder_error">Qovluğu adlandırmaq olmur</string>
+    <string name="rename_folder_empty">Qovluq adı boş ola bilməz</string>
+    <string name="rename_folder_exists">Bu adda qovluq artıq mövcuddur</string>
+    <string name="rename_folder_root">Yaddaşın root qovluğunu adlandırmaq olmur</string>
+    <string name="rename_folder_ok">Qovluq uğurla adlandırıldı</string>
+    <string name="renaming_folder">Qovluq adlandırma</string>
+    <string name="filename_cannot_be_empty">Fayl adı boş ola bilməz</string>
+    <string name="filename_invalid_characters">Faylın adında etibarsız simvollar var</string>
+    <string name="filename_invalid_characters_placeholder">Fayl adı \'%s\' etibarsız simvollar ehtiva edir</string>
+    <string name="extension_cannot_be_empty">Uzantı boş ola bilməz</string>
+    <string name="source_file_doesnt_exist">Kök faylı %s yoxdur</string>
 
     <!-- Copy / Move -->
-    <string name="copy">Copy</string>
-    <string name="move">Move</string>
-    <string name="copy_move">Copy / Move</string>
-    <string name="copy_to">Copy to</string>
-    <string name="move_to">Move to</string>
-    <string name="source">Source</string>
-    <string name="destination">Destination</string>
-    <string name="select_destination">Select destination</string>
-    <string name="click_select_destination">Click here to select destination</string>
-    <string name="invalid_destination">Could not write to the selected destination</string>
-    <string name="please_select_destination">Please select a destination</string>
-    <string name="source_and_destination_same">Source and destination cannot be the same</string>
-    <string name="copy_failed">Could not copy the files</string>
-    <string name="copying">Copying&#8230;</string>
-    <string name="copying_success">Files copied successfully</string>
-    <string name="copy_move_failed">An error occurred</string>
-    <string name="moving">Moving&#8230;</string>
-    <string name="moving_success">Files moved successfully</string>
-    <string name="moving_success_partial">Some files could not be moved</string>
-    <string name="copying_success_partial">Some files could not be copied</string>
-    <string name="no_files_selected">No files selected</string>
-    <string name="saving">Saving&#8230;</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="copy">Kopyala</string>
+    <string name="move">Yerini dəyiş</string>
+    <string name="copy_move">Kopyala / Yerini dəyiş</string>
+    <string name="copy_to">Bura kopyala</string>
+    <string name="move_to">Yerini bura dəyiş</string>
+    <string name="source">Kök</string>
+    <string name="destination">Hədəf</string>
+    <string name="select_destination">Hədəf seç</string>
+    <string name="click_select_destination">Hədəf seçmək üçün bura bas</string>
+    <string name="invalid_destination">Seçilmiş hədəfə yazmaq olmur</string>
+    <string name="please_select_destination">Xahiş olunur hədəf seçin</string>
+    <string name="source_and_destination_same">Kök və hədəf eyni ola bilməz</string>
+    <string name="copy_failed">Faylları kopyalamaq olmur</string>
+    <string name="copying">Kopyalanır&#8230;</string>
+    <string name="copying_success">Fayl uğurla kopyalandı</string>
+    <string name="copy_move_failed">Xəta baş verdi</string>
+    <string name="moving">Yerini dəyişir&#8230;</string>
+    <string name="moving_success">Faylın yeri uğurla dəyişdirildi</string>
+    <string name="moving_success_partial">Bəzi faylların yeri dəyişdirilmir</string>
+    <string name="copying_success_partial">Bəzi faylları kopyalamaq olmur</string>
+    <string name="no_files_selected">Fayl seçilməyib</string>
+    <string name="saving">Saxlanılır&#8230;</string>
+    <string name="could_not_create_folder">%s qovluğunu yaratmaq olmur</string>
+    <string name="could_not_create_file">%s faylını yaratmaq olmur</string>
 
     <!-- Create new -->
-    <string name="create_new">Create new</string>
-    <string name="folder">Folder</string>
-    <string name="file">File</string>
-    <string name="create_new_folder">Create new folder</string>
-    <string name="name_taken">A file or folder with that name already exists</string>
-    <string name="invalid_name">The name contains invalid characters</string>
-    <string name="empty_name">Please enter a name</string>
-    <string name="unknown_error_occurred">An unknown error occurred</string>
+    <string name="create_new">Yeni yarat</string>
+    <string name="folder">Qovluqr</string>
+    <string name="file">Fayl</string>
+    <string name="create_new_folder">Yeni qovluq yarat</string>
+    <string name="name_taken">Eyni adda fayl və ya qovluq artıq mövcuddur</string>
+    <string name="invalid_name">Ad etibarsız simvollar ehtiva edir</string>
+    <string name="empty_name">Zəhmət olmasa adı daxil edin</string>
+    <string name="unknown_error_occurred">Bilinməyən xəta baş verdi</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">File \"%1$s\" already exists</string>
-    <string name="file_already_exists_overwrite">File \"%1$s\" already exists. Overwrite?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
-    <string name="merge">Merge</string>
-    <string name="overwrite">Overwrite</string>
-    <string name="skip">Skip</string>
-    <string name="append">Append with \'_1\'</string>
-    <string name="apply_to_all">Apply to all</string>
+    <string name="file_already_exists">\"%1$s\" faylı artıq mövcuddur</string>
+    <string name="file_already_exists_overwrite">\"%1$s\" faylı artıq mövcuddur. Üzərinə yazılsın?</string>
+    <string name="folder_already_exists">\"%1$s\" qovluğu artıq mövcuddur</string>
+    <string name="merge">Birləşdir</string>
+    <string name="overwrite">Üzərinə yaz</string>
+    <string name="skip">Keç</string>
+    <string name="append">\'_1\' ilə əlavə et</string>
+    <string name="apply_to_all">Hamsına şamil et</string>
 
     <!-- File picker -->
-    <string name="select_folder">Select a folder</string>
-    <string name="select_file">Select a file</string>
-    <string name="confirm_storage_access_title">Confirm external storage access</string>
-    <string name="confirm_storage_access_text">Please choose the root folder of the SD card on the next screen, to grant write access</string>
-    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="select_folder">Qovluq seç</string>
+    <string name="select_file">Fayl seç</string>
+    <string name="confirm_storage_access_title">Xarici yaddaş icazəsini təsdiqlə</string>
+    <string name="confirm_storage_access_text">Xahiş olunur icazəni təsdiqləmək üçün gələcək ekranda SD kartın root qovluğunu seçin.</string>
+    <string name="confirm_storage_access_text_sd">Əgər SD kart görünmürsə, bunu yoxlayın</string>
+    <string name="confirm_selection">Seçimi təsdiqlə</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d item</item>
-        <item quantity="other">%1$d items</item>
+        <item quantity="one">%1$d fayl</item>
+        <item quantity="other">%1$d fayl</item>
     </plurals>
 
     <!-- Storages -->
-    <string name="select_storage">Select storage</string>
-    <string name="internal">Internal</string>
-    <string name="sd_card">SD Card</string>
+    <string name="select_storage">Yaddaş seç</string>
+    <string name="internal">Daxili</string>
+    <string name="sd_card">SD Kart</string>
     <string name="root">Root</string>
-    <string name="wrong_root_selected">Wrong folder selected, please select the root folder of your SD card</string>
-    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
+    <string name="wrong_root_selected">Seçilən qovluq yanlışdır, xahiş olunur SD kartın root qovluğunu seçin</string>
+    <string name="sd_card_otg_same">SD kart və OTG cihaz yolu eyni ola bilməz</string>
 
     <!-- File properties -->
-    <string name="properties">Properties</string>
-    <string name="path">Path</string>
-    <string name="items_selected">Items selected</string>
-    <string name="direct_children_count">Direct children count</string>
-    <string name="files_count">Total files count</string>
-    <string name="resolution">Resolution</string>
-    <string name="duration">Duration</string>
-    <string name="artist">Artist</string>
-    <string name="album">Album</string>
-    <string name="focal_length">Focal length</string>
-    <string name="exposure_time">Exposure time</string>
-    <string name="iso_speed">ISO speed</string>
-    <string name="f_number">F-number</string>
-    <string name="camera">Camera</string>
+    <string name="properties">Xüsusiyyətlər</string>
+    <string name="path">Yol</string>
+    <string name="items_selected">Fayl seçildi</string>
+    <string name="direct_children_count">Alt qovluq sayı</string>
+    <string name="files_count">Bütün faylların sayı</string>
+    <string name="resolution">Görüntü imkanı</string>
+    <string name="duration">Uzunluq</string>
+    <string name="artist">Müğənni</string>
+    <string name="album">Albom</string>
+    <string name="focal_length">Fokus məsafəsi</string>
+    <string name="exposure_time">Poza vaxtı</string>
+    <string name="iso_speed">ISO sürəti</string>
+    <string name="f_number">Diyafram</string>
+    <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Musiqi başlığı</string>
 
     <!-- Color customization -->
     <string name="background_color">Background color</string>

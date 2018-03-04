@@ -273,6 +273,28 @@
     <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
     <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
 
+    <!-- Dates -->
+    <string name="january">leden</string>
+    <string name="february">únor</string>
+    <string name="march">březen</string>
+    <string name="april">duben</string>
+    <string name="may">květen</string>
+    <string name="june">červen</string>
+    <string name="july">červenec</string>
+    <string name="august">srpen</string>
+    <string name="september">září</string>
+    <string name="october">říjen</string>
+    <string name="november">listopad</string>
+    <string name="december">prosinec</string>
+
+    <string name="monday">Pondělí</string>
+    <string name="tuesday">Úterý</string>
+    <string name="wednesday">Středa</string>
+    <string name="thursday">Čtvrtek</string>
+    <string name="friday">Pátek</string>
+    <string name="saturday">Sobota</string>
+    <string name="sunday">Neděle</string>
+
     <!-- About -->
     <string name="about">O aplikaci</string>
     <string name="website_label">Pro zdrojové kódy navštivte</string>
@@ -299,6 +321,17 @@
         ]]>
     </string>
     <string name="purchase">Purchase</string>
+
+    <!-- New app (do not translate anything on the 4th line) -->
+    <string name="new_app">
+        <![CDATA[
+            Hey,<br><br>
+            just letting you know that a new app has been released recently:<br><br>
+            <a href="%1$s">%2$s</a><br><br>
+            You can download it by pressing the title.<br><br>
+            Thanks
+        ]]>
+    </string>
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Frequently asked questions</string>

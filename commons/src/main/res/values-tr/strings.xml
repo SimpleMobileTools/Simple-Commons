@@ -273,6 +273,28 @@
     <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
     <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
 
+    <!-- Dates -->
+    <string name="january">Ocak</string>
+    <string name="february">Şubat</string>
+    <string name="march">Mart</string>
+    <string name="april">Nisan</string>
+    <string name="may">Mayıs</string>
+    <string name="june">Haziran</string>
+    <string name="july">Temmuz</string>
+    <string name="august">Ağustos</string>
+    <string name="september">Eylül</string>
+    <string name="october">Ekim</string>
+    <string name="november">Kasım</string>
+    <string name="december">Aralık</string>
+
+    <string name="monday">Pazartesi</string>
+    <string name="tuesday">Salı</string>
+    <string name="wednesday">Çarşamba</string>
+    <string name="thursday">Perşembe</string>
+    <string name="friday">Cuma</string>
+    <string name="saturday">Cumartesi</string>
+    <string name="sunday">Pazar</string>
+
     <!-- About -->
     <string name="about">Hakkında</string>
     <string name="website_label">Kaynak kodları için ziyaret edin</string>
@@ -299,6 +321,17 @@
         ]]>
     </string>
     <string name="purchase">Satın al</string>
+
+    <!-- New app (do not translate anything on the 4th line) -->
+    <string name="new_app">
+        <![CDATA[
+            Hey,<br><br>
+            just letting you know that a new app has been released recently:<br><br>
+            <a href="%1$s">%2$s</a><br><br>
+            You can download it by pressing the title.<br><br>
+            Thanks
+        ]]>
+    </string>
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Frequently asked questions</string>

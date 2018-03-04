@@ -48,6 +48,8 @@ const val HAD_THANK_YOU_INSTALLED = "had_thank_you_installed"
 const val SKIP_DELETE_CONFIRMATION = "skip_delete_confirmation"
 const val ENABLE_PULL_TO_REFRESH = "enable_pull_to_refresh"
 const val SCROLL_HORIZONTALLY = "scroll_horizontally"
+const val PREVENT_PHONE_FROM_SLEEPING = "prevent_phone_from_sleeping"
+const val LAST_USED_VIEW_PAGER_PAGE = "last_used_view_pager_page"
 
 // licenses
 const val LICENSE_KOTLIN = 1
@@ -89,6 +91,9 @@ const val SORT_BY_FIRST_NAME = 128
 const val SORT_BY_MIDDLE_NAME = 256
 const val SORT_BY_SURNAME = 512
 const val SORT_DESCENDING = 1024
+const val SORT_BY_TITLE = 2048
+const val SORT_BY_ARTIST = 5096
+const val SORT_BY_DURATION = 10192
 
 // security
 const val PROTECTION_PATTERN = 0

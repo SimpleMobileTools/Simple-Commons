@@ -277,6 +277,28 @@
     <string name="confirm_otg_storage_access_text">Pre poskytnutie práv prosím zvoľte na nasledujúcej obrazovke základný priečinok OTG zariadenia</string>
     <string name="wrong_root_selected_otg">Bol zvolený nesprávny koreňový priečinok, prosím zvoľte OTG zariadenie</string>
 
+    <!-- Dates -->
+    <string name="january">Január</string>
+    <string name="february">Február</string>
+    <string name="march">Marec</string>
+    <string name="april">Apríl</string>
+    <string name="may">Máj</string>
+    <string name="june">Jún</string>
+    <string name="july">Júl</string>
+    <string name="august">August</string>
+    <string name="september">September</string>
+    <string name="october">Október</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
+
+    <string name="monday">Pondelok</string>
+    <string name="tuesday">Utorok</string>
+    <string name="wednesday">Streda</string>
+    <string name="thursday">Štvrtok</string>
+    <string name="friday">Piatok</string>
+    <string name="saturday">Sobota</string>
+    <string name="sunday">Nedeľa</string>
+
     <!-- About -->
     <string name="about">O aplikácií</string>
     <string name="website_label">Pre zdrojové kódy navštívte</string>
@@ -303,6 +325,17 @@
         ]]>
     </string>
     <string name="purchase">Zakúpiť</string>
+
+    <!-- New app (do not translate anything on the 4th line) -->
+    <string name="new_app">
+        <![CDATA[
+            Zdravím,<br><br>
+            iba vám oznamujem, že bola nedávno vydaná nová aplikácia:<br><br>
+            <a href="%1$s">%2$s</a><br><br>
+            Viete ju stiahnuť kliknutím na názov.<br><br>
+            Vďaka
+        ]]>
+    </string>
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Často kladené otázky</string>

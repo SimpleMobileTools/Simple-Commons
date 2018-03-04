@@ -12,7 +12,7 @@
     <string name="value_copied_to_clipboard">Värdet har kopierats till urklipp</string>
     <string name="unknown">Okänd</string>
     <string name="always">Always</string>
-    <string name="never">Never</string>
+    <string name="never">Aldrig</string>
     <string name="details">Details</string>
     <string name="notes">Anteckningar</string>
 
@@ -273,6 +273,28 @@
     <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
     <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
 
+    <!-- Dates -->
+    <string name="january">Januari</string>
+    <string name="february">Februari</string>
+    <string name="march">Mars</string>
+    <string name="april">April</string>
+    <string name="may">Maj</string>
+    <string name="june">Juni</string>
+    <string name="july">Juli</string>
+    <string name="august">Augusti</string>
+    <string name="september">September</string>
+    <string name="october">Oktober</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
+
+    <string name="monday">Måndag</string>
+    <string name="tuesday">Tisdag</string>
+    <string name="wednesday">Onsdag</string>
+    <string name="thursday">Torsdag</string>
+    <string name="friday">Fredag</string>
+    <string name="saturday">Lördag</string>
+    <string name="sunday">Söndag</string>
+
     <!-- About -->
     <string name="about">Om</string>
     <string name="website_label">Du hittar källkoden på</string>
@@ -299,6 +321,17 @@
         ]]>
     </string>
     <string name="purchase">Köp</string>
+
+    <!-- New app (do not translate anything on the 4th line) -->
+    <string name="new_app">
+        <![CDATA[
+            Hey,<br><br>
+            just letting you know that a new app has been released recently:<br><br>
+            <a href="%1$s">%2$s</a><br><br>
+            You can download it by pressing the title.<br><br>
+            Thanks
+        ]]>
+    </string>
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Frequently asked questions</string>

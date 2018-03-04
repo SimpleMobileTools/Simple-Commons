@@ -103,8 +103,6 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             activity.deleteFilesBg(mTransferredFiles) {}
         }
 
-        val paths = mFiles.map { it.path } as ArrayList<String>
-        activity.scanPaths(paths) {}
         return true
     }
 
@@ -242,10 +240,10 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
             if (source.size == copiedSize) {
                 mTransferredFiles.add(source)
-                if (activity.baseConfig.keepLastModified) {
-                    copyOldLastModified(source.path, destination.path)
-                } else {
-                    activity.scanPath(destination.path) {}
+                activity.scanPath(destination.path) {
+                    if (activity.baseConfig.keepLastModified) {
+                        copyOldLastModified(source.path, destination.path)
+                    }
                 }
             }
         } catch (e: Exception) {

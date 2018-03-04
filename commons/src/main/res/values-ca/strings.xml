@@ -272,6 +272,28 @@
     <string name="confirm_otg_storage_access_text">Seleccioneu la carpeta arrel del dispositiu OTG a la pantalla següent per concedir accés</string>
     <string name="wrong_root_selected_otg">S\'ha seleccionat la carpeta incorrecta, seleccioneu la carpeta arrel del vostre dispositiu OTG</string>
 
+    <!-- Dates -->
+    <string name="january">Gener</string>
+    <string name="february">Febrer</string>
+    <string name="march">Març</string>
+    <string name="april">Abril</string>
+    <string name="may">Maig</string>
+    <string name="june">Juny</string>
+    <string name="july">Juliol</string>
+    <string name="august">Agost</string>
+    <string name="september">Setembre</string>
+    <string name="october">Octubre</string>
+    <string name="november">Novembre</string>
+    <string name="december">Decembre</string>
+
+    <string name="monday">Dilluns</string>
+    <string name="tuesday">Dimarts</string>
+    <string name="wednesday">Dimecres</string>
+    <string name="thursday">Dijous</string>
+    <string name="friday">Divendres</string>
+    <string name="saturday">Dissabte</string>
+    <string name="sunday">Diumenge</string>
+
     <!-- About -->
     <string name="about">Sobre</string>
     <string name="website_label">Més aplicacions senzilles i codi font a</string>
@@ -298,6 +320,17 @@
         ]]>
     </string>
     <string name="purchase">Comprar</string>
+
+    <!-- New app (do not translate anything on the 4th line) -->
+    <string name="new_app">
+        <![CDATA[
+            Hola,<br><br>
+            només informar-te que una nova aplicació s\'ha publicat recentment:<br><br>
+            <a href="%1$s">%2$s</a><br><br>
+            Pots descarregar-la prement el títol.<br><br>
+            Gràcies
+        ]]>
+    </string>
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Preguntes frequents</string>
