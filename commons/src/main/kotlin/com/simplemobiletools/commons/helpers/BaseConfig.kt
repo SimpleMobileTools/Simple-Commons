@@ -2,10 +2,12 @@ package com.simplemobiletools.commons.helpers
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.text.format.DateFormat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getInternalStoragePath
 import com.simplemobiletools.commons.extensions.getSDCardPath
 import com.simplemobiletools.commons.extensions.getSharedPrefs
+import java.util.*
 
 open class BaseConfig(val context: Context) {
     protected val prefs: SharedPreferences = context.getSharedPrefs()
@@ -179,4 +181,15 @@ open class BaseConfig(val context: Context) {
     var lastUsedViewPagerPage: Int
         get() = prefs.getInt(LAST_USED_VIEW_PAGER_PAGE, 0)
         set(lastUsedViewPagerPage) = prefs.edit().putInt(LAST_USED_VIEW_PAGER_PAGE, lastUsedViewPagerPage).apply()
+
+    var use24hourFormat: Boolean
+        get() = prefs.getBoolean(USE_24_HOUR_FORMAT, DateFormat.is24HourFormat(context))
+        set(use24hourFormat) = prefs.edit().putBoolean(USE_24_HOUR_FORMAT, use24hourFormat).apply()
+
+    var isSundayFirst: Boolean
+        get() {
+            val isSundayFirst = Calendar.getInstance(Locale.getDefault()).firstDayOfWeek == Calendar.SUNDAY
+            return prefs.getBoolean(SUNDAY_FIRST, isSundayFirst)
+        }
+        set(sundayFirst) = prefs.edit().putBoolean(SUNDAY_FIRST, sundayFirst).apply()
 }

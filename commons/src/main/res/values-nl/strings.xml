@@ -61,15 +61,15 @@
     <string name="please_select_destination">Kies een bestemming</string>
     <string name="source_and_destination_same">Bron en bestemming kunnen niet gelijk zijn</string>
     <string name="copy_failed">Kon de bestanden niet kopiëren</string>
-    <string name="copying">Kopiëren&#8230;</string>
+    <string name="copying">Kopiëren…</string>
     <string name="copying_success">Bestanden gekopieerd</string>
     <string name="copy_move_failed">Fout opgetreden</string>
-    <string name="moving">Verplaatsen&#8230;</string>
+    <string name="moving">Verplaatsen…</string>
     <string name="moving_success">Bestanden verplaatst</string>
     <string name="moving_success_partial">Sommige bestanden konden niet worden verplaatst</string>
     <string name="copying_success_partial">Sommige bestanden konden niet worden gekopieerd</string>
     <string name="no_files_selected">Geen bestanden geselecteerd</string>
-    <string name="saving">Opslaan&#8230;</string>
+    <string name="saving">Opslaan…</string>
     <string name="could_not_create_folder">Kon de map %s niet aanmaken</string>
     <string name="could_not_create_file">Kon het bestand %s niet aanmaken</string>
 
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Keuze bevestigen</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d item</item>
-        <item quantity="other">%1$d items</item>
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
     </plurals>
 
     <!-- Storages -->
@@ -220,17 +220,35 @@
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d seconde</item>
-        <item quantity="other">%1$d seconden</item>
+        <item quantity="one">%d seconde</item>
+        <item quantity="other">%d seconden</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minuut</item>
-        <item quantity="other">%1$d minuten</item>
+        <item quantity="one">%d minuut</item>
+        <item quantity="other">%d minuten</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d uur</item>
-        <item quantity="other">%1$d uren</item>
+        <item quantity="one">%d uur</item>
+        <item quantity="other">%d uren</item>
     </plurals>
+
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
+    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
+    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
+    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
 
     <!-- Settings -->
     <string name="settings">Instellingen</string>
@@ -250,6 +268,9 @@
     <string name="prevent_phone_from_sleeping">Slaapstand voorkomen</string>
     <string name="skip_delete_confirmation">Niet om bevestiging vragen bij verwijderen</string>
     <string name="enable_pull_to_refresh">Pull-to-refresh inschakelen</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
 
     <!-- Setting sections -->
     <string name="visibility">Opmaak</string>

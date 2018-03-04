@@ -61,15 +61,15 @@
     <string name="please_select_destination">Por favor elige un destino</string>
     <string name="source_and_destination_same">Origen y destino no pueden coincidir</string>
     <string name="copy_failed">No se pudo copiar los archivos</string>
-    <string name="copying">Copiando&#8230;</string>
+    <string name="copying">Copiando…</string>
     <string name="copying_success">Archivos copiados correctamente</string>
     <string name="copy_move_failed">Un error ocurrió</string>
-    <string name="moving">Moviendo&#8230;</string>
+    <string name="moving">Moviendo…</string>
     <string name="moving_success">Archivos movidos correctamente</string>
     <string name="moving_success_partial">Algunos archivos no se pudieron mover</string>
     <string name="copying_success_partial">Algunos archivos no se pudieron copiar</string>
     <string name="no_files_selected">No hay archivos seleccionados</string>
-    <string name="saving">Guardando&#8230;</string>
+    <string name="saving">Guardando…</string>
     <string name="could_not_create_folder">No se puede crear la carpeta %s</string>
     <string name="could_not_create_file">No se puede crear el fichero %s</string>
 
@@ -219,17 +219,35 @@
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d segundo</item>
-        <item quantity="other">%1$d segundos</item>
+        <item quantity="one">%d segundo</item>
+        <item quantity="other">%d segundos</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minuto</item>
-        <item quantity="other">%1$d minutos</item>
+        <item quantity="one">%d minuto</item>
+        <item quantity="other">%d minutos</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d hora</item>
-        <item quantity="other">%1$d horas</item>
+        <item quantity="one">%d hora</item>
+        <item quantity="other">%d horas</item>
     </plurals>
+
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
+    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
+    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
+    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
 
     <!-- Settings -->
     <string name="settings">Ajustes</string>
@@ -249,6 +267,9 @@
     <string name="prevent_phone_from_sleeping">Evitar que el teléfono duerma</string>
     <string name="skip_delete_confirmation">Omitir siempre el diálogo de confirmación de eliminación</string>
     <string name="enable_pull_to_refresh">Habilitar tirar desde la parte superior para refrescar</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilidad</string>

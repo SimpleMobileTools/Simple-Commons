@@ -102,9 +102,9 @@
     <string name="confirm_selection">Подтвердить выделение</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d объект</item>
-        <item quantity="few">%1$d объекта</item>
-        <item quantity="many">%1$d объектов</item>
+        <item quantity="one">%d объект</item>
+        <item quantity="few">%d объекта</item>
+        <item quantity="many">%d объектов</item>
     </plurals>
 
     <!-- Storages -->
@@ -221,20 +221,38 @@
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d секунда</item>
-        <item quantity="few">%1$d секунды</item>
-        <item quantity="other">%1$d секунд</item>
+        <item quantity="one">%d секунда</item>
+        <item quantity="few">%d секунды</item>
+        <item quantity="other">%d секунд</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d минута</item>
-        <item quantity="few">%1$d минуты</item>
-        <item quantity="many">%1$d минут</item>
+        <item quantity="one">%d минута</item>
+        <item quantity="few">%d минуты</item>
+        <item quantity="many">%d минут</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d час</item>
-        <item quantity="few">%1$d часа</item>
-        <item quantity="many">%1$d часов</item>
+        <item quantity="one">%d час</item>
+        <item quantity="few">%d часа</item>
+        <item quantity="many">%d часов</item>
     </plurals>
+
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
+    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
+    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
+    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
 
     <!-- Settings -->
     <string name="settings">Настройки</string>
@@ -254,6 +272,9 @@
     <string name="prevent_phone_from_sleeping">Предотвращать засыпание устройства</string>
     <string name="skip_delete_confirmation">Всегда пропускать диалог подтверждения удаления</string>
     <string name="enable_pull_to_refresh">Использовать «потяните-для-обновления» в верхней части экрана</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
 
     <!-- Setting sections -->
     <string name="visibility">Отображение</string>

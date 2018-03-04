@@ -61,15 +61,15 @@
     <string name="please_select_destination">Si us plau tria un destí</string>
     <string name="source_and_destination_same">Origen i destí no poden ser iguals</string>
     <string name="copy_failed">No s\'ha pogut copiar els arxius</string>
-    <string name="copying">Copiant&#8230;</string>
+    <string name="copying">Copiant…</string>
     <string name="copying_success">Arxius copiats correctament</string>
     <string name="copy_move_failed">Ha ocorregut un error</string>
-    <string name="moving">Movent&#8230;</string>
+    <string name="moving">Movent…</string>
     <string name="moving_success">Arxius moguts correctament</string>
     <string name="moving_success_partial">Alguns arxius no s\'han pogut moure</string>
     <string name="copying_success_partial">Alguns arxius no s\'han pogut copiar</string>
     <string name="no_files_selected">No hi ha elements seleccionats</string>
-    <string name="saving">Desant&#8230;</string>
+    <string name="saving">Desant…</string>
     <string name="could_not_create_folder">No es pot crear la carpeta %s</string>
     <string name="could_not_create_file">No es pot crear l\'arxiu %s</string>
 
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Confirmar Selecció</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d element</item>
-        <item quantity="other">%1$d elements</item>
+        <item quantity="one">%d element</item>
+        <item quantity="other">%d elements</item>
     </plurals>
 
     <!-- Storages -->
@@ -219,17 +219,35 @@
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d segon</item>
-        <item quantity="other">%1$d segons</item>
+        <item quantity="one">%d segon</item>
+        <item quantity="other">%d segons</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minut</item>
-        <item quantity="other">%1$d minuts</item>
+        <item quantity="one">%d minut</item>
+        <item quantity="other">%d minuts</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d hora</item>
-        <item quantity="other">%1$d hores</item>
+        <item quantity="one">%d hora</item>
+        <item quantity="other">%d hores</item>
     </plurals>
+
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
+    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
+    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
+    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
 
     <!-- Settings -->
     <string name="settings">Ajustaments</string>
@@ -249,6 +267,9 @@
     <string name="prevent_phone_from_sleeping">Evita que el telèfon dormi</string>
     <string name="skip_delete_confirmation">Ignora sempre el diàleg de confirmació d\'eliminació</string>
     <string name="enable_pull_to_refresh">Activa estirar des de la part superior per refrescar</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilitat</string>

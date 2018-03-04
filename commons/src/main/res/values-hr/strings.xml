@@ -61,15 +61,15 @@
     <string name="please_select_destination">Molimo odaberite odredište</string>
     <string name="source_and_destination_same">Izvor i odredište ne mogu biti isti</string>
     <string name="copy_failed">Nije moguće kopiranje datoteka</string>
-    <string name="copying">Kopiranje&#8230;</string>
+    <string name="copying">Kopiranje…</string>
     <string name="copying_success">Datoteke uspješno kopirane</string>
     <string name="copy_move_failed">Greška se dogodila</string>
-    <string name="moving">Premještanje&#8230;</string>
+    <string name="moving">Premještanje…</string>
     <string name="moving_success">Datoteke uspješno premještene</string>
     <string name="moving_success_partial">Neke datoteke nije bilo moguće premjestiti</string>
     <string name="copying_success_partial">Neke datoteke nije bilo moguće kopirati</string>
     <string name="no_files_selected">Nema odabranih datoteka</string>
-    <string name="saving">Spremanje&#8230;</string>
+    <string name="saving">Spremanje…</string>
     <string name="could_not_create_folder">Nije moguće stvoriti direktorij %s</string>
     <string name="could_not_create_file">Nije moguće stvoriti datoteku %s</string>
 
@@ -102,9 +102,9 @@
     <string name="confirm_selection">Potvrdi odabir</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d stavka</item>
-        <item quantity="few">%1$d stavke</item>
-        <item quantity="other">%1$d stavki</item>
+        <item quantity="one">%d stavka</item>
+        <item quantity="few">%d stavke</item>
+        <item quantity="other">%d stavki</item>
     </plurals>
 
     <!-- Storages -->
@@ -221,20 +221,38 @@
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d sekunda</item>
-        <item quantity="few">%1$d sekunde</item>
-        <item quantity="other">%1$d sekundi</item>
+        <item quantity="one">%d sekunda</item>
+        <item quantity="few">%d sekunde</item>
+        <item quantity="other">%d sekundi</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minuta</item>
-        <item quantity="few">%1$d minute</item>
-        <item quantity="other">%1$d minuti</item>
+        <item quantity="one">%d minuta</item>
+        <item quantity="few">%d minute</item>
+        <item quantity="other">%d minuti</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d sat</item>
-        <item quantity="few">%1$d sata</item>
-        <item quantity="other">%1$d sati</item>
+        <item quantity="one">%d sat</item>
+        <item quantity="few">%d sata</item>
+        <item quantity="other">%d sati</item>
     </plurals>
+
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
+    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
+    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
+    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
 
     <!-- Settings -->
     <string name="settings">Postavke</string>
@@ -254,6 +272,9 @@
     <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
     <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
     <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>

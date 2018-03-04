@@ -61,15 +61,15 @@
     <string name="please_select_destination">Mohon Pilih Destinasi</string>
     <string name="source_and_destination_same">Sumber Dan Destinasi Tidak Boleh Sama</string>
     <string name="copy_failed">Tidak Dapat Menyalin File</string>
-    <string name="copying">Menyalin&#8230;</string>
+    <string name="copying">Menyalin…</string>
     <string name="copying_success">File Berhasil Di Salin</string>
     <string name="copy_move_failed">Terjadi Kesalahan</string>
-    <string name="moving">Memindahkan&#8230;</string>
+    <string name="moving">Memindahkan…</string>
     <string name="moving_success">File Berhasil Di Pindahkan</string>
     <string name="moving_success_partial">Beberapa File Tidak Dapat Di pindah</string>
     <string name="copying_success_partial">Beberapa File Tidak Dapat Di Salin</string>
     <string name="no_files_selected">Tidak Ada File Yang Di Pilih</string>
-    <string name="saving">Menyimpan&#8230;</string>
+    <string name="saving">Menyimpan…</string>
     <string name="could_not_create_folder">Tidak Dapat Membuat Folder %s</string>
     <string name="could_not_create_file">Tidak Dapat Membuat File %s</string>
 
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Konfirmasi</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d item</item>
-        <item quantity="other">%1$d items</item>
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
     </plurals>
 
     <!-- Storages -->
@@ -220,17 +220,35 @@
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d Detik</item>
-        <item quantity="other">%1$d Detik</item>
+        <item quantity="one">%d Detik</item>
+        <item quantity="other">%d Detik</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d menit</item>
-        <item quantity="other">%1$d menit</item>
+        <item quantity="one">%d menit</item>
+        <item quantity="other">%d menit</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d Jam</item>
-        <item quantity="other">%1$d Jam</item>
+        <item quantity="one">%d Jam</item>
+        <item quantity="other">%d Jam</item>
     </plurals>
+
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
+    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
+    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
+    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
 
     <!-- Settings -->
     <string name="settings">Pengaturan</string>
@@ -250,6 +268,9 @@
     <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
     <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
     <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>

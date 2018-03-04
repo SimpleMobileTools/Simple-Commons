@@ -61,15 +61,15 @@
     <string name="please_select_destination">Välj mål</string>
     <string name="source_and_destination_same">Källa och mål kan inte vara samma</string>
     <string name="copy_failed">Det gick inte att kopiera filerna</string>
-    <string name="copying">Kopierar&#8230;</string>
+    <string name="copying">Kopierar…</string>
     <string name="copying_success">Filerna har kopierats</string>
     <string name="copy_move_failed">Ett fel har uppstått</string>
-    <string name="moving">Flyttar&#8230;</string>
+    <string name="moving">Flyttar…</string>
     <string name="moving_success">Filerna har flyttats</string>
     <string name="moving_success_partial">Det gick inte att flytta vissa filer</string>
     <string name="copying_success_partial">Det gick inte att kopiera vissa filer</string>
     <string name="no_files_selected">Inga filer markerade</string>
-    <string name="saving">Sparar&#8230;</string>
+    <string name="saving">Sparar…</string>
     <string name="could_not_create_folder">Det gick inte att skapa mappen %s</string>
     <string name="could_not_create_file">Det gick inte att skapa filen %s</string>
 
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Bekräfta val</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d objekt</item>
-        <item quantity="other">%1$d objekt</item>
+        <item quantity="one">%d objekt</item>
+        <item quantity="other">%d objekt</item>
     </plurals>
 
     <!-- Storages -->
@@ -220,17 +220,35 @@
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d sekund</item>
-        <item quantity="other">%1$d sekunder</item>
+        <item quantity="one">%d sekund</item>
+        <item quantity="other">%d sekunder</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minut</item>
-        <item quantity="other">%1$d minuter</item>
+        <item quantity="one">%d minut</item>
+        <item quantity="other">%d minuter</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d timme</item>
-        <item quantity="other">%1$d timmar</item>
+        <item quantity="one">%d timme</item>
+        <item quantity="other">%d timmar</item>
     </plurals>
+
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
+    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
+    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
+    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
 
     <!-- Settings -->
     <string name="settings">Inställningar</string>
@@ -250,6 +268,9 @@
     <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
     <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
     <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighet</string>

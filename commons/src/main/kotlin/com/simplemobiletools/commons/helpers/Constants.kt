@@ -50,6 +50,8 @@ const val ENABLE_PULL_TO_REFRESH = "enable_pull_to_refresh"
 const val SCROLL_HORIZONTALLY = "scroll_horizontally"
 const val PREVENT_PHONE_FROM_SLEEPING = "prevent_phone_from_sleeping"
 const val LAST_USED_VIEW_PAGER_PAGE = "last_used_view_pager_page"
+const val USE_24_HOUR_FORMAT = "use_24_hour_format"
+const val SUNDAY_FIRST = "sunday_first"
 
 // licenses
 const val LICENSE_KOTLIN = 1

@@ -61,15 +61,15 @@
     <string name="please_select_destination">Lütfen bir hedef seçin</string>
     <string name="source_and_destination_same">Kaynak ve hedef aynı olamaz</string>
     <string name="copy_failed">Dosyalar kopyalanamadı</string>
-    <string name="copying">Kopyalanıyor&#8230;</string>
+    <string name="copying">Kopyalanıyor…</string>
     <string name="copying_success">Dosyalar başarıyla kopyalandı</string>
     <string name="copy_move_failed">Bir hata oluştu</string>
-    <string name="moving">Taşınıyor&#8230;</string>
+    <string name="moving">Taşınıyor…</string>
     <string name="moving_success">Dosyalar başarıyla taşındı</string>
     <string name="moving_success_partial">Bazı dosyalar taşınamadı</string>
     <string name="copying_success_partial">Bazı dosyalar kopyalanamadı</string>
     <string name="no_files_selected">Hiçbir dosya seçilmedi</string>
-    <string name="saving">Kaydediliyor&#8230;</string>
+    <string name="saving">Kaydediliyor…</string>
     <string name="could_not_create_folder">%s klasörü oluşturulamıyor</string>
     <string name="could_not_create_file">%s dosyası oluşturulamıyor</string>
 
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Seçimi onayla</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d öğe</item>
-        <item quantity="other">%1$d öğe</item>
+        <item quantity="one">%d öğe</item>
+        <item quantity="other">%d öğe</item>
     </plurals>
 
     <!-- Storages -->
@@ -220,17 +220,35 @@
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d saniye</item>
-        <item quantity="other">%1$d saniye</item>
+        <item quantity="one">%d saniye</item>
+        <item quantity="other">%d saniye</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d dakika</item>
-        <item quantity="other">%1$d dakika</item>
+        <item quantity="one">%d dakika</item>
+        <item quantity="other">%d dakika</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d saat</item>
-        <item quantity="other">%1$d saat</item>
+        <item quantity="one">%d saat</item>
+        <item quantity="other">%d saat</item>
     </plurals>
+
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
+    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
+    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
+    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
 
     <!-- Settings -->
     <string name="settings">Ayarlar</string>
@@ -250,6 +268,9 @@
     <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
     <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
     <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
 
     <!-- Setting sections -->
     <string name="visibility">Görünürlük</string>

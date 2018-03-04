@@ -61,15 +61,15 @@
     <string name="please_select_destination">請選擇目標</string>
     <string name="source_and_destination_same">目標跟來源不能相同</string>
     <string name="copy_failed">無法複製檔案</string>
-    <string name="copying">複製中&#8230;</string>
+    <string name="copying">複製中…</string>
     <string name="copying_success">成功複製檔案</string>
     <string name="copy_move_failed">發生錯誤</string>
-    <string name="moving">移動中&#8230;</string>
+    <string name="moving">移動中…</string>
     <string name="moving_success">成功移動檔案</string>
     <string name="moving_success_partial">部分檔案無法被移動</string>
     <string name="copying_success_partial">部分檔案無法被複製</string>
     <string name="no_files_selected">未選擇檔案</string>
-    <string name="saving">儲存中&#8230;</string>
+    <string name="saving">儲存中…</string>
     <string name="could_not_create_folder">無法創建資料夾 %s</string>
     <string name="could_not_create_file">無法創建檔案 %s</string>
 
@@ -219,17 +219,35 @@
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d秒鐘</item>
-        <item quantity="other">%1$d秒鐘</item>
+        <item quantity="one">%d秒鐘</item>
+        <item quantity="other">%d秒鐘</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d分鐘</item>
-        <item quantity="other">%1$d分鐘</item>
+        <item quantity="one">%d分鐘</item>
+        <item quantity="other">%d分鐘</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d小時</item>
-        <item quantity="other">%1$d小時</item>
+        <item quantity="one">%d小時</item>
+        <item quantity="other">%d小時</item>
     </plurals>
+
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
+    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
+    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
+    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
 
     <!-- Settings -->
     <string name="settings">設定</string>
@@ -249,6 +267,9 @@
     <string name="prevent_phone_from_sleeping">防止手機睡眠</string>
     <string name="skip_delete_confirmation">永遠跳過刪除確認</string>
     <string name="enable_pull_to_refresh">啟用頂端下拉更新</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
 
     <!-- Setting sections -->
     <string name="visibility">可見度</string>

@@ -61,15 +61,15 @@
     <string name="please_select_destination">Prosím zvoľte cieľ</string>
     <string name="source_and_destination_same">Zdroj a cieľ sa nemôžu zhodovať</string>
     <string name="copy_failed">Nepodarilo sa skopírovať súbory</string>
-    <string name="copying">Kopírovanie&#8230;</string>
+    <string name="copying">Kopírovanie…</string>
     <string name="copying_success">Súbory boli úspešne skopírované</string>
     <string name="copy_move_failed">Došlo k chybe</string>
-    <string name="moving">Presúvanie&#8230;</string>
+    <string name="moving">Presúvanie…</string>
     <string name="moving_success">Súbory boli úspešne presunuté</string>
     <string name="moving_success_partial">Nepodarilo sa presunúť niektoré súbory</string>
     <string name="copying_success_partial">Nepodarilo sa skopírovať niektoré súbory</string>
     <string name="no_files_selected">Niesú označené žiadne súbory</string>
-    <string name="saving">Ukladanie&#8230;</string>
+    <string name="saving">Ukladanie…</string>
     <string name="could_not_create_folder">Nepodarilo sa vytvoriť priečinok %s</string>
     <string name="could_not_create_file">Nepodarilo sa vytvoriť súbor %s</string>
 
@@ -102,9 +102,9 @@
     <string name="confirm_selection">Potvrdiť výber</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d položka</item>
-        <item quantity="few">%1$d položky</item>
-        <item quantity="other">%1$d položiek</item>
+        <item quantity="one">%d položka</item>
+        <item quantity="few">%d položky</item>
+        <item quantity="other">%d položiek</item>
     </plurals>
 
     <!-- Storages -->
@@ -221,20 +221,41 @@
 
     <!-- Times -->
     <plurals name="seconds">
-        <item quantity="one">%1$d sekunda</item>
-        <item quantity="few">%1$d sekundy</item>
-        <item quantity="other">%1$d sekúnd</item>
+        <item quantity="one">%d sekunda</item>
+        <item quantity="few">%d sekundy</item>
+        <item quantity="other">%d sekúnd</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minúta</item>
-        <item quantity="few">%1$d minúty</item>
-        <item quantity="other">%1$d minút</item>
+        <item quantity="one">%d minúta</item>
+        <item quantity="few">%d minúty</item>
+        <item quantity="other">%d minút</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d hodina</item>
-        <item quantity="few">%1$d hodiny</item>
-        <item quantity="other">%1$d hodín</item>
+        <item quantity="one">%d hodina</item>
+        <item quantity="few">%d hodiny</item>
+        <item quantity="other">%d hodín</item>
     </plurals>
+
+    <plurals name="in_seconds">
+        <item quantity="one">%d sekundu</item>
+        <item quantity="few">%d sekundy</item>
+        <item quantity="other">%d sekúnd</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minútu</item>
+        <item quantity="few">%d minúty</item>
+        <item quantity="other">%d minút</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hodinu</item>
+        <item quantity="few">%d hodiny</item>
+        <item quantity="other">%d hodín</item>
+    </plurals>
+
+    <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
+    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
+    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
+    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
 
     <!-- Settings -->
     <string name="settings">Nastavenia</string>
@@ -254,6 +275,9 @@
     <string name="prevent_phone_from_sleeping">Zabrániť uspaniu zariadenia</string>
     <string name="skip_delete_confirmation">Stále preskočiť potvrdenie vymazania súborov</string>
     <string name="enable_pull_to_refresh">Povoliť obnovenie súborov potiahnutím zhora</string>
+    <string name="use_24_hour_time_format">Použiť 24 hodinový časový formát</string>
+    <string name="sunday_first">Začať týždeň nedeľou</string>
+    <string name="widgets">Widgety</string>
 
     <!-- Setting sections -->
     <string name="visibility">Viditeľnosť</string>
