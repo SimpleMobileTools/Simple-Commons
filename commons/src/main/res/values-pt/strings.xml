@@ -13,7 +13,7 @@
     <string name="unknown">Desconhecido</string>
     <string name="always">Sempre</string>
     <string name="never">Nunca</string>
-    <string name="details">Details</string>
+    <string name="details">Detalhes</string>
     <string name="notes">Notas</string>
 
     <!-- Search -->
@@ -43,9 +43,9 @@
     <string name="renaming_folder">A renomear pasta</string>
     <string name="filename_cannot_be_empty">O nome do ficheiro não pode estar vazio</string>
     <string name="filename_invalid_characters">O nome do ficheiro contém caracteres inválidos</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
+    <string name="filename_invalid_characters_placeholder">O nome \'%s\' contém caracteres inválidos</string>
     <string name="extension_cannot_be_empty">A extensão não pode estar vazia</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
+    <string name="source_file_doesnt_exist">O ficheiro de origem %s não existe</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
@@ -87,7 +87,7 @@
     <string name="file_already_exists">Já existe um ficheiro com o nome \"%s\"</string>
     <string name="file_already_exists_overwrite">Já existe um ficheiro com o nome \"%s\". Substituir?</string>
     <string name="folder_already_exists">Folder \"%s\" already exists</string>
-    <string name="merge">Merge</string>
+    <string name="merge">Unir</string>
     <string name="overwrite">Substituir</string>
     <string name="skip">Ignorar</string>
     <string name="append">Anexar \'_1\'</string>
@@ -170,7 +170,7 @@
     <string name="remove">Remover</string>
     <string name="rename">Renomear</string>
     <string name="share">Partilhar</string>
-    <string name="share_via">Partilhar via</string>
+    <string name="share_via">Partilhar por</string>
     <string name="select_all">Selecionar tudo</string>
     <string name="hide">Ocultar</string>
     <string name="unhide">Mostrar</string>
@@ -178,7 +178,7 @@
     <string name="unhide_folder">Mostrar pasta</string>
     <string name="temporarily_show_hidden">Mostrar ocultas temporariamente</string>
     <string name="stop_showing_hidden">Não mostrar multimédia oculta</string>
-    <string name="maximum_share_reached">Não pode partilhar tantas coisas ao mesmo tempo</string>
+    <string name="maximum_share_reached">Não pode partilhar tantos itens em simultâneoo</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -233,28 +233,28 @@
     </plurals>
 
     <plurals name="in_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d segundo</item>
+        <item quantity="other">%d segundos</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minuto</item>
+        <item quantity="other">%d minutos</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d hora</item>
+        <item quantity="other">%d horas</item>
     </plurals>
 
     <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
-    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
-    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
-    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
+    <string name="alarm_goes_off_in_hours_minutes">O alarme será ativado dentro de %1$d horas e %2$d minutos</string>
+    <string name="alarm_goes_off_in_hours">O alarme será ativado dentro de %d horas</string>
+    <string name="alarm_goes_off_in_minutes">O alarme será ativado dentro de %d minutos</string>
 
     <!-- Settings -->
     <string name="settings">Definições</string>
     <string name="customize_colors">Personalizar cores</string>
     <string name="use_english_language">Utilizar aplicação em inglês</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
+    <string name="avoid_whats_new">Não mostrar as novidades ao iniciar</string>
     <string name="show_hidden_items">Mostrar itens ocultos</string>
     <string name="font_size">Tamanho do texto</string>
     <string name="small">Pequeno</string>
@@ -265,11 +265,11 @@
     <string name="password_protect_whole_app">Proteger aplicação com palavra-passe</string>
     <string name="keep_last_modified">Manter dados da última modificação ao copiar/mover/renomear</string>
     <string name="show_info_bubble">Mostrar informação ao arrastar a barra de deslocamento</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
-    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
-    <string name="use_24_hour_time_format">Use 24-hour time format</string>
-    <string name="sunday_first">Start week on Sunday</string>
+    <string name="prevent_phone_from_sleeping">Impedir adormecimento do dispositivo se a aplicação estiver em segundo plano</string>
+    <string name="skip_delete_confirmation">Ignorar sempre a confirmação para eliminação de ficheiros</string>
+    <string name="enable_pull_to_refresh">Ativar pull-to-refresh</string>
+    <string name="use_24_hour_time_format">Utilizar formato 24 horas</string>
+    <string name="sunday_first">Iniciar semana ao domingo</string>
     <string name="widgets">Widgets</string>
 
     <!-- Setting sections -->
@@ -291,8 +291,8 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="confirm_otg_storage_access_text">Escolha a pasta raiz do dispositivo OTG no ecrã seguinte para conceder o acesso</string>
+    <string name="wrong_root_selected_otg">Escolheu uma pasta inválida, deve selecionar a pasta raiz do dispositivo OTG</string>
 
     <!-- Dates -->
     <string name="january">janeiro</string>
@@ -331,8 +331,8 @@
     <string name="more_apps_underlined"><u>Mais aplicações</u></string>
     <string name="third_party_licences_underlined"><u>Licenças de terceiros</u></string>
     <string name="invite_friends_underlined"><u>Convidar amigos</u></string>
-    <string name="share_text">Olá, experimenta %1$s em %2$s</string>
-    <string name="invite_via">Convidar via</string>
+    <string name="share_text">Olá, experimente %1$s em %2$s</string>
+    <string name="invite_via">Convidar por</string>
     <string name="rate_us_underlined"><u>Avalie-nos na Play Store</u></string>
     <string name="donate">Donativos</string>
     <string name="donate_underlined"><u>Donativos</u></string>
@@ -354,11 +354,11 @@
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
-            Hey,<br><br>
-            just letting you know that a new app has been released recently:<br><br>
+            Olá,<br><br>
+            para que saibas, foi disponibilizada recentemente uma nova aplicação:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-            You can download it by pressing the title.<br><br>
-            Thanks
+            Podes descarregar a nova aplicação carregando no título.<br><br>
+            Obrigado
         ]]>
     </string>
 
