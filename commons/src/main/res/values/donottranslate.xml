@@ -73,4 +73,14 @@
         <item>@string/saturday</item>
         <item>@string/sunday</item>
     </string-array>
+
+    <array name="week_day_letters">
+        <item>@string/monday_letter</item>
+        <item>@string/tuesday_letter</item>
+        <item>@string/wednesday_letter</item>
+        <item>@string/thursday_letter</item>
+        <item>@string/friday_letter</item>
+        <item>@string/saturday_letter</item>
+        <item>@string/sunday_letter</item>
+    </array>
 </resources>
