@@ -34,8 +34,10 @@ fun Int.getFormattedDuration(): String {
     return sb.toString()
 }
 
-// TODO: how to do "flags & ~flag" in kotlin?
-fun Int.removeFlag(flag: Int) = (this or flag) - flag
+// TODO: how to do "bits & ~bit" in kotlin?
+fun Int.removeBit(bit: Int) = addBit(bit) - bit
+
+fun Int.addBit(bit: Int) = this or bit
 
 fun ClosedRange<Int>.random() = Random().nextInt(endInclusive - start) + start
 
