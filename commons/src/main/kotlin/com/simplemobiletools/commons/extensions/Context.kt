@@ -360,11 +360,8 @@ fun Context.getSelectedDaysString(bitMask: Int): String {
     val weekDays = resources.getStringArray(R.array.week_days).toList() as ArrayList<String>
 
     if (baseConfig.isSundayFirst) {
-        val sundayBit = dayBits.removeAt(dayBits.size - 1)
-        dayBits.add(0, sundayBit)
-
-        val sunday = weekDays.removeAt(weekDays.size - 1)
-        weekDays.add(0, sunday)
+        dayBits.moveLastItemToFront()
+        weekDays.moveLastItemToFront()
     }
 
     var days = ""
