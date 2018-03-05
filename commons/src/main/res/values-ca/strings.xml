@@ -264,7 +264,7 @@
     <string name="password_protect_whole_app">Contrasenya per protegir tota l’aplicació</string>
     <string name="keep_last_modified">Mantenir el valor de la darrera modificació al copiar/moure/canviar el nom dels arxius</string>
     <string name="show_info_bubble">Mostra una bombolla d\'informació en elements de desplaçament mitjançant arrossegament de la barra de desplaçament</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
+    <string name="prevent_phone_from_sleeping">No deixar dormir el telèfon amb la aplicació a primer pla</string>
     <string name="skip_delete_confirmation">Ignora sempre el diàleg de confirmació d\'eliminació</string>
     <string name="enable_pull_to_refresh">Activa estirar des de la part superior per refrescar</string>
     <string name="use_24_hour_time_format">Utilitzar foramt 24 houres</string>
@@ -338,8 +338,8 @@
     <string name="follow_us">Segueix-nos</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Informació adicional</string>
-    <string name="app_version">App version: %s</string>
-    <string name="device_os">Device OS: %s</string>
+    <string name="app_version">Versió de la APP: %s</string>
+    <string name="device_os">Sistema operatiu: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hola,<br><br>
