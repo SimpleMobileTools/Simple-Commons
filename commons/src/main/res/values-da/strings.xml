@@ -265,7 +265,7 @@
     <string name="password_protect_whole_app">Beskyt hele appen med en adgangskode</string>
     <string name="keep_last_modified">Kopi/flyt/omdøb skal ikke påvirke ændringstidspunktet</string>
     <string name="show_info_bubble">Vis en info-boble når jeg scroller med rullepanelet</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
+    <string name="prevent_phone_from_sleeping">Forhindr telefonen i at falde i søvn når appen er i forgrunden</string>
     <string name="skip_delete_confirmation">Spørg ikke om bekræftelse før sletning</string>
     <string name="enable_pull_to_refresh">Aktiver træk nedad for at genindlæse</string>
     <string name="use_24_hour_time_format">Use 24-hour time format</string>
@@ -354,11 +354,11 @@
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
-            Hey,<br><br>
-            just letting you know that a new app has been released recently:<br><br>
+            Hej<br><br>
+            - synes lige du skulle vide at der er kommet en ny app:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-            You can download it by pressing the title.<br><br>
-            Thanks
+            Du kan downloade den med et klik på titlen.<br><br>
+            Tak
         ]]>
     </string>
 
