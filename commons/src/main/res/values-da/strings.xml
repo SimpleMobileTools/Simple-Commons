@@ -233,22 +233,22 @@
     </plurals>
 
     <plurals name="in_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d sekund</item>
+        <item quantity="other">%d sekunder</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minut</item>
+        <item quantity="other">%d minutter</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d time</item>
+        <item quantity="other">%d timer</item>
     </plurals>
 
     <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
-    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
-    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
-    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
+    <string name="alarm_goes_off_in_hours_minutes">Alarmen starter om %1$d timer og %2$d minutter</string>
+    <string name="alarm_goes_off_in_hours">Alarmen starter om %d Timer</string>
+    <string name="alarm_goes_off_in_minutes">Alarmen starter om %d minutter</string>
 
     <!-- Settings -->
     <string name="settings">Indstillinger</string>
@@ -265,11 +265,11 @@
     <string name="password_protect_whole_app">Beskyt hele appen med en adgangskode</string>
     <string name="keep_last_modified">Kopi/flyt/omdøb skal ikke påvirke ændringstidspunktet</string>
     <string name="show_info_bubble">Vis en info-boble når jeg scroller med rullepanelet</string>
-    <string name="prevent_phone_from_sleeping">Forhindr telefonen i at falde i søvn når appen er i forgrunden</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="skip_delete_confirmation">Spørg ikke om bekræftelse før sletning</string>
     <string name="enable_pull_to_refresh">Aktiver træk nedad for at genindlæse</string>
-    <string name="use_24_hour_time_format">Use 24-hour time format</string>
-    <string name="sunday_first">Start week on Sunday</string>
+    <string name="use_24_hour_time_format">Brug 24-timers format</string>
+    <string name="sunday_first">Søndag første ugedag</string>
     <string name="widgets">Widgets</string>
 
     <!-- Setting sections -->
@@ -354,11 +354,11 @@
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
-            Hej<br><br>
-            - synes lige du skulle vide at der er kommet en ny app:<br><br>
+            Hey,<br><br>
+            just letting you know that a new app has been released recently:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-            Du kan downloade den med et klik på titlen.<br><br>
-            Tak
+            You can download it by pressing the title.<br><br>
+            Thanks
         ]]>
     </string>
 
