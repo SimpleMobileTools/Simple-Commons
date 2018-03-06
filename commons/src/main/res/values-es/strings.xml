@@ -267,6 +267,20 @@
         <item quantity="other">%d horas</item>
     </plurals>
 
+    <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="minutes_before">
+        <item quantity="one">%d minuto antes</item>
+        <item quantity="other">%d minutos antes</item>
+    </plurals>
+    <plurals name="hours_before">
+        <item quantity="one">%d hora antes</item>
+        <item quantity="other">%d horas antes</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">%d día antes</item>
+        <item quantity="other">%d días antes</item>
+    </plurals>
+
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Tiempo restante hasta que suene la alarma:\n%s</string>
     <string name="alarm_warning">Asegúrese de que la alarma funcione correctamente antes de confiar en ella. Podría comportarse mal debido a las restricciones del sistema relacionadas con el ahorro de batería.</string>
@@ -275,6 +289,8 @@
     <!-- Alarms -->
     <string name="snooze">Posponer</string>
     <string name="dismiss">Candelar</string>
+    <string name="no_reminder">Sin recordatorio</string>
+    <string name="at_start">Al inicio</string>
 
     <!-- Settings -->
     <string name="settings">Ajustes</string>
