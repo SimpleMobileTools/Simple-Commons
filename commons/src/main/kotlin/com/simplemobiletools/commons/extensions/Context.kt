@@ -360,3 +360,30 @@ fun Context.getSelectedDaysString(bitMask: Int): String {
     }
     return days.trim().trimEnd(',')
 }
+
+fun Context.formatMinutesToTimeString(totalMinutes: Int): String {
+    val days = totalMinutes / DAY_MINUTES
+    val hours = (totalMinutes % DAY_MINUTES) / 60
+    val minutes = totalMinutes % 60
+    val timesString = StringBuilder()
+    if (days > 0) {
+        val daysString = String.format(resources.getQuantityString(R.plurals.days, days, days))
+        timesString.append("$daysString, ")
+    }
+
+    if (hours > 0) {
+        val hoursString = String.format(resources.getQuantityString(R.plurals.hours, hours, hours))
+        timesString.append("$hoursString, ")
+    }
+
+    if (minutes > 0) {
+        val minutesString = String.format(resources.getQuantityString(R.plurals.minutes, minutes, minutes))
+        timesString.append(minutesString)
+    }
+
+    var result = timesString.toString().trim().trimEnd(',')
+    if (result.isEmpty()) {
+        result = String.format(resources.getQuantityString(R.plurals.minutes, 0, 0))
+    }
+    return result
+}
