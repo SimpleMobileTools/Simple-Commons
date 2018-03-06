@@ -136,8 +136,8 @@
     <string name="background_color">Color del fons</string>
     <string name="text_color">Color del text</string>
     <string name="primary_color">Color principal</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
+    <string name="foreground_color">Color de primer pla</string>
+    <string name="app_icon_color">Color de la icona d\'aplicació</string>
     <string name="restore_defaults">Valors per defecte</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Canviar un color farà que canvii a tema personalitzat</string>
@@ -264,13 +264,13 @@
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Temps restant fins que l\'alarma s\'apagi:\n%s</string>
+    <string name="alarm_goes_off_in">Temps restant fins que soni l\'alarma: \n%s</string>
     <string name="alarm_warning">Assegureu-vos que l\'alarma funcioni correctament abans de confiar-hi. Pot comportar-se malament a causa de les restriccions del sistema relacionades amb l\'estalvi de bateria.</string>
     <string name="reminder_warning">Assegureu-vos que els recordatoris funcionin correctament abans de confiar-hi. Podrien comportar-se malament a causa de les restriccions del sistema relacionades amb l\'estalvi de bateria.</string>
 
     <!-- Alarms -->
-    <string name="snooze">Snooze</string>
-    <string name="dismiss">Dismiss</string>
+    <string name="snooze">Postposar</string>
+    <string name="dismiss">Cancel·lar</string>
 
     <!-- Settings -->
     <string name="settings">Ajustaments</string>
@@ -293,8 +293,8 @@
     <string name="use_24_hour_time_format">Utilitzar foramt 24 houres</string>
     <string name="sunday_first">Començar la setmana en diumenge</string>
     <string name="widgets">Ginys</string>
-    <string name="use_same_snooze">Always use same snooze time</string>
-    <string name="snooze_time">Snooze time</string>
+    <string name="use_same_snooze">Utilitzeu sempre el mateix temps de posposat</string>
+    <string name="snooze_time">Temps de posposat</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilitat</string>
