@@ -269,6 +269,10 @@
     <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
     <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
 
+    <!-- Alarms -->
+    <string name="snooze">Snooze</string>
+    <string name="dismiss">Dismiss</string>
+
     <!-- Settings -->
     <string name="settings">Einstellungen</string>
     <string name="customize_colors">Farben anpassen</string>
@@ -290,6 +294,8 @@
     <string name="use_24_hour_time_format">Use 24-hour time format</string>
     <string name="sunday_first">Start week on Sunday</string>
     <string name="widgets">Widgets</string>
+    <string name="use_same_snooze">Immer dasselbe Snooze-Intervall nutzen</string>
+    <string name="snooze_time">Snooze-Intervall</string>
 
     <!-- Setting sections -->
     <string name="visibility">Sichtbarkeit</string>

@@ -269,6 +269,10 @@
     <string name="alarm_warning">在依赖它之前，请确保闹钟能够正常工作。由于系统与节电有关的限制，它有时可能会失灵。</string>
     <string name="reminder_warning">在依赖它们之前，请确保提醒能够正常工作。由于系统与节电有关的限制，它们有时可能会失灵。</string>
 
+    <!-- Alarms -->
+    <string name="snooze">Snooze</string>
+    <string name="dismiss">Dismiss</string>
+
     <!-- Settings -->
     <string name="settings">设置</string>
     <string name="customize_colors">自定义颜色</string>
@@ -290,6 +294,8 @@
     <string name="use_24_hour_time_format">Use 24-hour time format</string>
     <string name="sunday_first">Start week on Sunday</string>
     <string name="widgets">Widgets</string>
+    <string name="use_same_snooze">Always use same snooze time</string>
+    <string name="snooze_time">Snooze time</string>
 
     <!-- Setting sections -->
     <string name="visibility">可见度</string>

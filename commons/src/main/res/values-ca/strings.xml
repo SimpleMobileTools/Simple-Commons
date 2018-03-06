@@ -268,6 +268,10 @@
     <string name="alarm_warning">Assegureu-vos que l\'alarma funcioni correctament abans de confiar-hi. Pot comportar-se malament a causa de les restriccions del sistema relacionades amb l\'estalvi de bateria.</string>
     <string name="reminder_warning">Assegureu-vos que els recordatoris funcionin correctament abans de confiar-hi. Podrien comportar-se malament a causa de les restriccions del sistema relacionades amb l\'estalvi de bateria.</string>
 
+    <!-- Alarms -->
+    <string name="snooze">Snooze</string>
+    <string name="dismiss">Dismiss</string>
+
     <!-- Settings -->
     <string name="settings">Ajustaments</string>
     <string name="customize_colors">Canviar colors</string>
@@ -289,6 +293,8 @@
     <string name="use_24_hour_time_format">Utilitzar foramt 24 houres</string>
     <string name="sunday_first">Començar la setmana en diumenge</string>
     <string name="widgets">Ginys</string>
+    <string name="use_same_snooze">Always use same snooze time</string>
+    <string name="snooze_time">Snooze time</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilitat</string>

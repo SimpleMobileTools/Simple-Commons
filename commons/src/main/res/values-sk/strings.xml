@@ -280,6 +280,10 @@
     <string name="alarm_warning">Pred tým, ako by ste sa na budík spoliehali, sa prosím uistite, že funguje správne. Niektoré systémové obmedzenia spojené so zlepšením výdrže batérie môžu spôsobiť problémy.</string>
     <string name="reminder_warning">Pred tým, ako by ste sa na pripomienky spoliehali, sa prosím uistite, že fungujú správne. Niektoré systémové obmedzenia spojené so zlepšením výdrže batérie môžu spôsobiť problémy.</string>
 
+    <!-- Alarms -->
+    <string name="snooze">Odložiť</string>
+    <string name="dismiss">Odstrániť</string>
+
     <!-- Settings -->
     <string name="settings">Nastavenia</string>
     <string name="customize_colors">Upraviť farby</string>
@@ -301,6 +305,8 @@
     <string name="use_24_hour_time_format">Použiť 24 hodinový časový formát</string>
     <string name="sunday_first">Začať týždeň nedeľou</string>
     <string name="widgets">Widgety</string>
+    <string name="use_same_snooze">Použiť stále rovnaký čas s Odložiť</string>
+    <string name="snooze_time">Čas odloženia</string>
 
     <!-- Setting sections -->
     <string name="visibility">Viditeľnosť</string>

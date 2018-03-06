@@ -50,8 +50,7 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
     }
 
     val cnt = viewGroup.childCount
-    (0 until cnt)
-            .map { viewGroup.getChildAt(it) }
+    (0 until cnt).map { viewGroup.getChildAt(it) }
             .forEach {
                 when (it) {
                     is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
