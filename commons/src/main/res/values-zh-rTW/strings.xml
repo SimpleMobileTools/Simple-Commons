@@ -135,8 +135,8 @@
     <string name="background_color">背景顏色</string>
     <string name="text_color">文字顏色</string>
     <string name="primary_color">主體顏色</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
+    <string name="foreground_color">前景顏色</string>
+    <string name="app_icon_color">應用程式圖標顏色</string>
     <string name="restore_defaults">恢復預設</string>
     <string name="theme">主題</string>
     <string name="changing_color_description">改變顏色將切換成[自訂]主題</string>
@@ -233,20 +233,20 @@
         <item quantity="other">%d小時</item>
     </plurals>
     <plurals name="days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d天</item>
+        <item quantity="other">%d天</item>
     </plurals>
     <plurals name="weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d週</item>
+        <item quantity="other">%d週</item>
     </plurals>
     <plurals name="months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d個月</item>
+        <item quantity="other">%d個月</item>
     </plurals>
     <plurals name="years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d年</item>
+        <item quantity="other">%d年</item>
     </plurals>
 
     <!-- For example: I will be there in 5 minutes -->
@@ -264,9 +264,9 @@
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
-    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+    <string name="alarm_goes_off_in">鬧鐘響起剩餘時間:\n%s</string>
+    <string name="alarm_warning">依靠鬧鐘功能之前，請先確認是否正常運作，有可能因為省電相關的系統限制而導致失靈。</string>
+    <string name="reminder_warning">依靠提醒功能之前，請先確認是否正常運作，有可能因為省電相關的系統限制而導致失靈。</string>
 
     <!-- Settings -->
     <string name="settings">設定</string>
@@ -384,10 +384,10 @@
     <string name="frequently_asked_questions">常見問題</string>
     <string name="faq_1_title_commons">為什麼我在小工具列表中沒看到這應用程式的小工具?</string>
     <string name="faq_1_text_commons">這很可能是因為你把應用程式移動到SD卡。那樣的話，有個隱藏特定程式小工具的Android系統限制存在。
-		只有一個解決方法，就是經由你的裝置設定，把應用程式移動回內部儲存空間。</string>
+	    只有一個解決方法，就是經由你的裝置設定，把應用程式移動回內部儲存空間。</string>
     <string name="faq_2_title_commons">我想要支持您，但我無法捐款。還有什麼我能做的嗎?</string>
     <string name="faq_2_text_commons">當然好囉。你可以推廣關於這應用程式，或是給予好的反饋和評分。你也可以幫忙把這應用程式翻譯成新的語言，或者只更新一些現有的翻譯。
-		你可以在 https://github.com/SimpleMobileTools/General-Discussion 找到教學，或者若你需要幫忙，只要發個訊息到 hello@simplemobiletools.com。</string>
+	    你可以在 https://github.com/SimpleMobileTools/General-Discussion 找到教學，或者若你需要幫忙，只要發個訊息到 hello@simplemobiletools.com。</string>
     <string name="faq_3_title_commons">我誤刪了一些檔案，如何復原?</string>
     <string name="faq_3_text_commons">不幸地，沒有辦法。檔案經確認後就立即刪除了，沒有垃圾筒可用。</string>
     <string name="faq_4_title_commons">我不喜歡小工具的顏色，我能更改嗎?</string>
