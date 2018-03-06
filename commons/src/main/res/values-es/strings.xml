@@ -136,8 +136,8 @@
     <string name="background_color">Color del fondo</string>
     <string name="text_color">Color del texto</string>
     <string name="primary_color">Color principal</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
+    <string name="foreground_color">Color de primer plano</string>
+    <string name="app_icon_color">Color del icono de la aplicación</string>
     <string name="restore_defaults">Valores por defecto</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Cambiar un color hará que cambie a tema personalizado</string>
@@ -269,8 +269,8 @@
     <string name="reminder_warning">Asegúrese de que los recordatorios funcionen correctamente antes de confiar en ellos. Podrían portarse mal debido a las restricciones del sistema relacionadas con el ahorro de batería.</string>
 
     <!-- Alarms -->
-    <string name="snooze">Snooze</string>
-    <string name="dismiss">Dismiss</string>
+    <string name="snooze">Posponer</string>
+    <string name="dismiss">Candelar</string>
 
     <!-- Settings -->
     <string name="settings">Ajustes</string>
@@ -293,8 +293,8 @@
     <string name="use_24_hour_time_format">Usar el formato 24 horas</string>
     <string name="sunday_first">Comenzar la semana en Domingo</string>
     <string name="widgets">Widgets</string>
-    <string name="use_same_snooze">Always use same snooze time</string>
-    <string name="snooze_time">Snooze time</string>
+    <string name="use_same_snooze">Siempre use el mismo tiempo de repetición</string>
+    <string name="snooze_time">Tiempo de repetición</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilidad</string>
