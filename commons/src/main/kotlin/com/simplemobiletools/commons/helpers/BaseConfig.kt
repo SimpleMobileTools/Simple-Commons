@@ -192,4 +192,12 @@ open class BaseConfig(val context: Context) {
             return prefs.getBoolean(SUNDAY_FIRST, isSundayFirst)
         }
         set(sundayFirst) = prefs.edit().putBoolean(SUNDAY_FIRST, sundayFirst).apply()
+
+    var wasAlarmWarningShown: Boolean
+        get() = prefs.getBoolean(WAS_ALARM_WARNING_SHOWN, false)
+        set(wasAlarmWarningShown) = prefs.edit().putBoolean(WAS_ALARM_WARNING_SHOWN, wasAlarmWarningShown).apply()
+
+    var wasReminderWarningShown: Boolean
+        get() = prefs.getBoolean(WAS_REMINDER_WARNING_SHOWN, false)
+        set(wasReminderWarningShown) = prefs.edit().putBoolean(WAS_REMINDER_WARNING_SHOWN, wasReminderWarningShown).apply()
 }

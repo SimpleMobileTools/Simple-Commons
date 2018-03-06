@@ -52,6 +52,8 @@ const val PREVENT_PHONE_FROM_SLEEPING = "prevent_phone_from_sleeping"
 const val LAST_USED_VIEW_PAGER_PAGE = "last_used_view_pager_page"
 const val USE_24_HOUR_FORMAT = "use_24_hour_format"
 const val SUNDAY_FIRST = "sunday_first"
+const val WAS_ALARM_WARNING_SHOWN = "was_alarm_warning_shown"
+const val WAS_REMINDER_WARNING_SHOWN = "was_reminder_warning_shown"
 
 // licenses
 const val LICENSE_KOTLIN = 1

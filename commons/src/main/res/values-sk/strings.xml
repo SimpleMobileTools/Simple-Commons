@@ -275,6 +275,8 @@
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Zostávajúci čas do zvonenia budíka: %s</string>
+    <string name="alarm_warning">Pred tým, ako by ste sa na budík spoliehali, sa prosím uistite, že funguje správne. Niektoré systémové obmedzenia spojené so zlepšením výdrže batérie môžu spôsobiť problémy.</string>
+    <string name="reminder_warning">Pred tým, ako by ste sa na pripomienky spoliehali, sa prosím uistite, že fungujú správne. Niektoré systémové obmedzenia spojené so zlepšením výdrže batérie môžu spôsobiť problémy.</string>
 
     <!-- Settings -->
     <string name="settings">Nastavenia</string>
