@@ -231,24 +231,46 @@
         <item quantity="one">%d hour</item>
         <item quantity="other">%d hours</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d den</item>
+        <item quantity="few">%d dni</item>
+        <item quantity="other">%d dní</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d týden</item>
+        <item quantity="few">%d týdni</item>
+        <item quantity="other">%d týdnů</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d měsíc</item>
+        <item quantity="few">%d měsíce</item>
+        <item quantity="other">%d měsíců</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d rok</item>
+        <item quantity="few">%d roky</item>
+        <item quantity="other">%d roků</item>
+    </plurals>
 
+    <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d second</item>
+        <item quantity="few">%d seconds</item>
         <item quantity="other">%d seconds</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d minute</item>
+        <item quantity="few">%d minutes</item>
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d hour</item>
+        <item quantity="few">%d hours</item>
         <item quantity="other">%d hours</item>
     </plurals>
 
-    <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
-    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
-    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
-    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Time remaining till the alarm goes off: %s</string>
 
     <!-- Settings -->
     <string name="settings">Nastavení</string>

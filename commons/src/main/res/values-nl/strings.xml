@@ -231,7 +231,24 @@
         <item quantity="one">%d uur</item>
         <item quantity="other">%d uren</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d dag</item>
+        <item quantity="other">%d dagen</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weken</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d maand</item>
+        <item quantity="other">%d maanden</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d jaar</item>
+        <item quantity="other">%d jaren</item>
+    </plurals>
 
+    <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d seconde</item>
         <item quantity="other">%d seconden</item>
@@ -245,10 +262,8 @@
         <item quantity="other">%d uren</item>
     </plurals>
 
-    <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
-    <string name="alarm_goes_off_in_hours_minutes">Het alarm zal afgaan over %1$d uren en %2$d minuten</string>
-    <string name="alarm_goes_off_in_hours">Het alarm zal afgaan over %d uren</string>
-    <string name="alarm_goes_off_in_minutes">Het alarm zal afgaan over %d minuten</string>
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Time remaining till the alarm goes off: %s</string>
 
     <!-- Settings -->
     <string name="settings">Instellingen</string>

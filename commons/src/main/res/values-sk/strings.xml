@@ -235,7 +235,28 @@
         <item quantity="few">%d hodiny</item>
         <item quantity="other">%d hodín</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d deň</item>
+        <item quantity="few">%d dni</item>
+        <item quantity="other">%d dní</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d týždeň</item>
+        <item quantity="few">%d týždne</item>
+        <item quantity="other">%d týždňov</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d mesiac</item>
+        <item quantity="few">%d mesiace</item>
+        <item quantity="other">%d mesiacov</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d rok</item>
+        <item quantity="few">%d roky</item>
+        <item quantity="other">%d rokov</item>
+    </plurals>
 
+    <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d sekundu</item>
         <item quantity="few">%d sekundy</item>
@@ -252,10 +273,8 @@
         <item quantity="other">%d hodín</item>
     </plurals>
 
-    <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
-    <string name="alarm_goes_off_in_hours_minutes">The alarm will go off in %1$d hours and %2$d minutes</string>
-    <string name="alarm_goes_off_in_hours">The alarm will go off in %d hours</string>
-    <string name="alarm_goes_off_in_minutes">The alarm will go off in %d minutes</string>
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Zostávajúci čas do zvonenia budíka: %s</string>
 
     <!-- Settings -->
     <string name="settings">Nastavenia</string>

@@ -230,7 +230,24 @@
         <item quantity="one">%d hora</item>
         <item quantity="other">%d horas</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d día</item>
+        <item quantity="other">%d días</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d semana</item>
+        <item quantity="other">%d semanas</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d mes</item>
+        <item quantity="other">%d meses</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d año</item>
+        <item quantity="other">%d años</item>
+    </plurals>
 
+    <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d segundo</item>
         <item quantity="other">%d segundos</item>
@@ -244,10 +261,8 @@
         <item quantity="other">%d horas</item>
     </plurals>
 
-    <!-- For example: The alarm will go off in 6 hours and 5 minutes -->
-    <string name="alarm_goes_off_in_hours_minutes">La alarma se apagaré en %1$d horas y %2$d minutos</string>
-    <string name="alarm_goes_off_in_hours">La alarma se apagaré en %d horas</string>
-    <string name="alarm_goes_off_in_minutes">La alarma se apagará en %d minutos</string>
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Time remaining till the alarm goes off: %s</string>
 
     <!-- Settings -->
     <string name="settings">Ajustes</string>
