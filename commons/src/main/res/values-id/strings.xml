@@ -221,6 +221,10 @@
     <string name="fingerprint_setup_successfully">Pengaturan Proteksi Berhasil. Install Ulang Aplikasi Jika Terjadi Masalah Dengan Reset.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minutes</string>
+    <string name="hours_raw">hours</string>
+    <string name="days_raw">days</string>
+
     <plurals name="seconds">
         <item quantity="one">%d Detik</item>
         <item quantity="other">%d Detik</item>

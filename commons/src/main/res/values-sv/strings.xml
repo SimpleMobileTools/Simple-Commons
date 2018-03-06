@@ -221,6 +221,10 @@
     <string name="fingerprint_setup_successfully">Skyddet har ställts in. Installera om appen om du inte kan ta bort skyddet.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minuter</string>
+    <string name="hours_raw">timmar</string>
+    <string name="days_raw">dagar</string>
+
     <plurals name="seconds">
         <item quantity="one">%d sekund</item>
         <item quantity="other">%d sekunder</item>

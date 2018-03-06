@@ -221,6 +221,10 @@
     <string name="fingerprint_setup_successfully">Vingerafdruk beveiliging ingesteld. Herinstalleer deze app indien u niet meer met uw vingerafdruk kunt authenticeren.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minuten</string>
+    <string name="hours_raw">uren</string>
+    <string name="days_raw">dagen</string>
+
     <plurals name="seconds">
         <item quantity="one">%d seconde</item>
         <item quantity="other">%d seconden</item>

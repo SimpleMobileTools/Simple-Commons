@@ -221,6 +221,10 @@
     <string name="fingerprint_setup_successfully">Beskyttelsen er oprettet. Geninstaller appen hvis du har problemer med at gendanne den.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minutter</string>
+    <string name="hours_raw">timer</string>
+    <string name="days_raw">dage</string>
+
     <plurals name="seconds">
         <item quantity="one">%d sekund</item>
         <item quantity="other">%d sekunder</item>

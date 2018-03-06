@@ -220,6 +220,10 @@
     <string name="fingerprint_setup_successfully">Configuración de protección con éxito. Por favor, vuelva a instalar la aplicación en caso de problemas al restablecerla.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minutos</string>
+    <string name="hours_raw">horas</string>
+    <string name="days_raw">días</string>
+
     <plurals name="seconds">
         <item quantity="one">%d segundo</item>
         <item quantity="other">%d segundos</item>

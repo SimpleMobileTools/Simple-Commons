@@ -222,6 +222,10 @@
     <string name="fingerprint_setup_successfully">Zabezpieczenie zostało ustawione. W razie problemów z jego zresetowaniem przeinstaluj aplikację.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minuty</string>
+    <string name="hours_raw">godziny</string>
+    <string name="days_raw">dni</string>
+
     <plurals name="seconds">
         <item quantity="one">%d sekunda</item>
         <item quantity="few">%d sekundy</item>

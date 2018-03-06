@@ -221,6 +221,10 @@
     <string name="fingerprint_setup_successfully">Protezione impostata correttamente. Reinstalla l\'app in caso di problemi nel ripristinarla.</string>
  
     <!-- Times -->
+    <string name="minutes_raw">minutes</string>
+    <string name="hours_raw">hours</string>
+    <string name="days_raw">days</string>
+
     <plurals name="seconds">
         <item quantity="one">%d secondo</item>
         <item quantity="other">%d secondi</item>

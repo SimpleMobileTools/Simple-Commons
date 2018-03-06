@@ -221,6 +221,10 @@
     <string name="fingerprint_setup_successfully">Koruma kurulumu başarıyla gerçekleştirildi. Sıfırlama ile ilgili sorunlar olması durumunda lütfen uygulamayı yeniden yükleyin.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">dakika</string>
+    <string name="hours_raw">saatler</string>
+    <string name="days_raw">günler</string>
+
     <plurals name="seconds">
         <item quantity="one">%d saniye</item>
         <item quantity="other">%d saniye</item>

@@ -222,6 +222,10 @@
     <string name="fingerprint_setup_successfully">Ochrana bola úspešne nastavená. Prosím preinštalujte aplikáciu v prípade problémov s jej zmenou.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minúty</string>
+    <string name="hours_raw">hodiny</string>
+    <string name="days_raw">dni</string>
+
     <plurals name="seconds">
         <item quantity="one">%d sekunda</item>
         <item quantity="few">%d sekundy</item>

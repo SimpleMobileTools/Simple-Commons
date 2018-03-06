@@ -221,6 +221,10 @@
     <string name="fingerprint_setup_successfully">Schutz erfolgreich eingerichtet. Falls beim Zurücksetzen Probleme auftreten, bitte die App neu installieren.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">Minuten</string>
+    <string name="hours_raw">Stunden</string>
+    <string name="days_raw">Tage</string>
+
     <plurals name="seconds">
         <item quantity="one">%d Sekunde</item>
         <item quantity="other">%d Sekunden</item>

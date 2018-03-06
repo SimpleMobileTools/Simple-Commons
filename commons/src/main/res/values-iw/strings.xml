@@ -160,7 +160,7 @@
     <string name="solarized">Solarized</string>
     <string name="dark_red">Dark red</string>
     <string name="black_white">Black &amp; White</string>
-    <string name="custom">Custom</string>
+    <string name="custom">מותאם אישית</string>
     <string name="shared">Shared</string>
 
     <!-- What's new -->
@@ -221,6 +221,10 @@
     <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minutes</string>
+    <string name="hours_raw">hours</string>
+    <string name="days_raw">days</string>
+
     <plurals name="seconds">
         <item quantity="one">%d second</item>
         <item quantity="other">%d seconds</item>

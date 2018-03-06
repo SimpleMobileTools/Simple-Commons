@@ -221,6 +221,10 @@
     <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minuty</string>
+    <string name="hours_raw">hodiny</string>
+    <string name="days_raw">dny</string>
+
     <plurals name="seconds">
         <item quantity="one">%d second</item>
         <item quantity="other">%d seconds</item>

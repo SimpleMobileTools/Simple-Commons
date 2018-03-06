@@ -222,6 +222,10 @@
     <string name="fingerprint_setup_successfully">Установка защиты выполнена успешно. Переустановите приложение в случае возникновения проблем с её отключением.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">минут</string>
+    <string name="hours_raw">часов</string>
+    <string name="days_raw">дней</string>
+
     <plurals name="seconds">
         <item quantity="one">%d секунда</item>
         <item quantity="few">%d секунды</item>

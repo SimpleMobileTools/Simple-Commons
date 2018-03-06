@@ -221,6 +221,10 @@
     <string name="fingerprint_setup_successfully">指纹保护设置成功。如果出现问题，请重新安装本应用。</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minutes</string>
+    <string name="hours_raw">hours</string>
+    <string name="days_raw">days</string>
+
     <plurals name="seconds">
         <item quantity="one">%d 秒</item>
         <item quantity="other">%d 秒</item>
