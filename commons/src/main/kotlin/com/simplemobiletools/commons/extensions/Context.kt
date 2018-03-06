@@ -8,9 +8,7 @@ import android.content.pm.PackageManager
 import android.database.Cursor
 import android.graphics.Color
 import android.net.Uri
-import android.os.Build
 import android.os.Environment
-import android.os.Looper
 import android.provider.BaseColumns
 import android.provider.DocumentsContract
 import android.provider.MediaStore
@@ -34,16 +32,7 @@ import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 
-fun Context.isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
-
-fun Context.isJellyBean1Plus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1
-fun Context.isAndroidFour() = Build.VERSION.SDK_INT <= Build.VERSION_CODES.KITKAT_WATCH
-fun Context.isKitkatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
-fun Context.isLollipopPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
-fun Context.isMarshmallowPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
-fun Context.isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
-fun Context.isOreoPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
 
 val Context.isRTLLayout: Boolean get() = if (isJellyBean1Plus()) resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_RTL else false
 

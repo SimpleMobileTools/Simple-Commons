@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.helpers
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.text.format.DateFormat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getInternalStoragePath
@@ -10,7 +9,7 @@ import com.simplemobiletools.commons.extensions.getSharedPrefs
 import java.util.*
 
 open class BaseConfig(val context: Context) {
-    protected val prefs: SharedPreferences = context.getSharedPrefs()
+    protected val prefs = context.getSharedPrefs()
 
     companion object {
         fun newInstance(context: Context) = BaseConfig(context)

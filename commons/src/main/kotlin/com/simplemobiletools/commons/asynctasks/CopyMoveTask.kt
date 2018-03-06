@@ -16,6 +16,7 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.CONFLICT_OVERWRITE
 import com.simplemobiletools.commons.helpers.CONFLICT_SKIP
 import com.simplemobiletools.commons.helpers.OTG_PATH
+import com.simplemobiletools.commons.helpers.isOreoPlus
 import com.simplemobiletools.commons.interfaces.CopyMoveListener
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
@@ -121,7 +122,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     private fun initProgressNotification() {
         val channelId = "copying_moving_channel"
         val title = activity.getString(if (copyOnly) R.string.copying else R.string.moving)
-        if (activity.isOreoPlus()) {
+        if (isOreoPlus()) {
             val importance = NotificationManager.IMPORTANCE_LOW
             NotificationChannel(channelId, title, importance).apply {
                 enableLights(false)

@@ -1,5 +1,9 @@
 package com.simplemobiletools.commons.helpers
 
+import android.content.Context
+import android.os.Build
+import android.os.Looper
+
 const val APP_NAME = "app_name"
 const val APP_LICENSES = "app_licenses"
 const val APP_FAQ = "app_faq"
@@ -135,6 +139,16 @@ const val SUNDAY_BIT = 64
 const val EVERY_DAY_BIT = MONDAY_BIT or TUESDAY_BIT or WEDNESDAY_BIT or THURSDAY_BIT or FRIDAY_BIT or SATURDAY_BIT or SUNDAY_BIT
 const val WEEK_DAYS_BIT = MONDAY_BIT or TUESDAY_BIT or WEDNESDAY_BIT or THURSDAY_BIT or FRIDAY_BIT
 const val WEEKENDS_BIT = SATURDAY_BIT or SUNDAY_BIT
+
+fun Context.isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
+
+fun isJellyBean1Plus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1
+fun isAndroidFour() = Build.VERSION.SDK_INT <= Build.VERSION_CODES.KITKAT_WATCH
+fun isKitkatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
+fun isLollipopPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
+fun isMarshmallowPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
+fun isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
+fun isOreoPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
 
 fun getDateFormats() = arrayListOf(
         "yyyy-MM-dd",

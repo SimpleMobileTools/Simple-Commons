@@ -14,6 +14,9 @@ import android.support.v4.provider.DocumentFile
 import android.text.TextUtils
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.OTG_PATH
+import com.simplemobiletools.commons.helpers.isLollipopPlus
+import com.simplemobiletools.commons.helpers.isMarshmallowPlus
+import com.simplemobiletools.commons.helpers.isNougatPlus
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 import java.net.URLDecoder
