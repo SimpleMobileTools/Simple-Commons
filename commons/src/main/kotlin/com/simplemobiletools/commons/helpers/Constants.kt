@@ -58,6 +58,8 @@ const val USE_24_HOUR_FORMAT = "use_24_hour_format"
 const val SUNDAY_FIRST = "sunday_first"
 const val WAS_ALARM_WARNING_SHOWN = "was_alarm_warning_shown"
 const val WAS_REMINDER_WARNING_SHOWN = "was_reminder_warning_shown"
+const val USE_SAME_SNOOZE = "use_same_snooze"
+const val SNOOZE_TIME = "snooze_delay"
 
 // licenses
 const val LICENSE_KOTLIN = 1

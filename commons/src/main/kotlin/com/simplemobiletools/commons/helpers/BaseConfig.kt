@@ -199,4 +199,12 @@ open class BaseConfig(val context: Context) {
     var wasReminderWarningShown: Boolean
         get() = prefs.getBoolean(WAS_REMINDER_WARNING_SHOWN, false)
         set(wasReminderWarningShown) = prefs.edit().putBoolean(WAS_REMINDER_WARNING_SHOWN, wasReminderWarningShown).apply()
+
+    var useSameSnooze: Boolean
+        get() = prefs.getBoolean(USE_SAME_SNOOZE, true)
+        set(useSameSnooze) = prefs.edit().putBoolean(USE_SAME_SNOOZE, useSameSnooze).apply()
+
+    var snoozeTime: Int
+        get() = prefs.getInt(SNOOZE_TIME, 10)
+        set(snoozeDelay) = prefs.edit().putInt(SNOOZE_TIME, snoozeDelay).apply()
 }
