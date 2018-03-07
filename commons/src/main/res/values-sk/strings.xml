@@ -296,6 +296,18 @@
         <item quantity="other">%d dní vopred</item>
     </plurals>
 
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_minutes">
+        <item quantity="one">%d minútu</item>
+        <item quantity="few">%d minúty</item>
+        <item quantity="other">%d minút</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">%d hodinu</item>
+        <item quantity="few">%d hodiny</item>
+        <item quantity="other">%d hodín</item>
+    </plurals>
+
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Zostávajúci čas do zvonenia budíka:\n%s</string>
     <string name="alarm_warning">Pred tým, ako by ste sa na budík spoliehali, sa prosím uistite, že funguje správne. Niektoré systémové obmedzenia spojené so zlepšením výdrže batérie môžu spôsobiť problémy.</string>

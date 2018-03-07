@@ -363,8 +363,8 @@ fun Context.getSelectedDaysString(bitMask: Int): String {
 
 fun Context.formatMinutesToTimeString(totalMinutes: Int): String {
     val days = totalMinutes / DAY_MINUTES
-    val hours = (totalMinutes % DAY_MINUTES) / 60
-    val minutes = totalMinutes % 60
+    val hours = (totalMinutes % DAY_MINUTES) / HOUR_MINUTES
+    val minutes = totalMinutes % HOUR_MINUTES
     val timesString = StringBuilder()
     if (days > 0) {
         val daysString = String.format(resources.getQuantityString(R.plurals.days, days, days))
@@ -386,4 +386,27 @@ fun Context.formatMinutesToTimeString(totalMinutes: Int): String {
         result = String.format(resources.getQuantityString(R.plurals.minutes, 0, 0))
     }
     return result
+}
+
+fun Context.getFormattedMinutes(minutes: Int, showBefore: Boolean = true) = when (minutes) {
+    -1 -> getString(R.string.no_reminder)
+    0 -> getString(R.string.at_start)
+    else -> {
+        if (minutes % YEAR_MINUTES == 0)
+            resources.getQuantityString(R.plurals.years, minutes / YEAR_MINUTES, minutes / YEAR_MINUTES)
+
+        when {
+            minutes % MONTH_MINUTES == 0 -> resources.getQuantityString(R.plurals.months, minutes / MONTH_MINUTES, minutes / MONTH_MINUTES)
+            minutes % WEEK_MINUTES == 0 -> resources.getQuantityString(R.plurals.weeks, minutes / WEEK_MINUTES, minutes / WEEK_MINUTES)
+            minutes % DAY_MINUTES == 0 -> resources.getQuantityString(R.plurals.days, minutes / DAY_MINUTES, minutes / DAY_MINUTES)
+            minutes % HOUR_MINUTES == 0 -> {
+                val base = if (showBefore) R.plurals.hours_before else R.plurals.by_hours
+                resources.getQuantityString(base, minutes / HOUR_MINUTES, minutes / HOUR_MINUTES)
+            }
+            else -> {
+                val base = if (showBefore) R.plurals.minutes_before else R.plurals.by_minutes
+                resources.getQuantityString(base, minutes, minutes)
+            }
+        }
+    }
 }

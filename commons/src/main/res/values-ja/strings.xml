@@ -282,6 +282,16 @@
         <item quantity="other">%d 日 前</item>
     </plurals>
 
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
     <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
