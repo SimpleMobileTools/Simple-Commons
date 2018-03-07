@@ -136,8 +136,8 @@
     <string name="background_color">Achtergrondkleur</string>
     <string name="text_color">Tekstkleur</string>
     <string name="primary_color">Primaire kleur</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
+    <string name="foreground_color">Kleur voorgrond</string>
+    <string name="app_icon_color">Kleur app-icoon</string>
     <string name="restore_defaults">Standaardwaarden</string>
     <string name="theme">Thema</string>
     <string name="changing_color_description">Zodra een kleur veranderd wordt zal het aangepaste thema worden gebruikt</string>
@@ -293,13 +293,13 @@
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
-    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+    <string name="alarm_goes_off_in">Het alarm zal afgaan over\n%s</string>
+    <string name="alarm_warning">Controleer eerst of het alarm goed werkt. Er kunnen zich problemen voordoen door de batterijbesparing van Android.</string>
+    <string name="reminder_warning">Controleer eerst of de herinneringen goed werken. Er kunnen zich problemen voordoen door de batterijbesparing van Android.</string>
 
     <!-- Alarms -->
     <string name="snooze">Uitstellen</string>
-    <string name="dismiss">Dismiss</string>
+    <string name="dismiss">Uitzetten</string>
     <string name="no_reminder">Geen herinnering</string>
     <string name="at_start">Als afspraak begint</string>
 
@@ -325,8 +325,7 @@
     <string name="sunday_first">Week op zondag beginnen</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Altijd dezelfde interval voor uitstellen gebruiken</string>
-    <string name="snooze_time">Snooze time</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="snooze_time">Interval bij uitstellen</string>
 
     <!-- Setting sections -->
     <string name="visibility">Opmaak</string>
