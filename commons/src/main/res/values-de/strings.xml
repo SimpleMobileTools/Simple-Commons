@@ -45,7 +45,7 @@
     <string name="filename_invalid_characters">Dateiname enthält ungültige Zeichen</string>
     <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
     <string name="extension_cannot_be_empty">Dateiendung darf nicht leer sein</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
+    <string name="source_file_doesnt_exist">Quelldatei %s existiert nicht</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopieren</string>
@@ -112,7 +112,7 @@
     <string name="sd_card">SD-Karte</string>
     <string name="root">Hauptverzeichnis</string>
     <string name="wrong_root_selected">Falscher Ordner ausgewählt, bitte Hauptverzeichnis der SD-Karte auswählen</string>
-    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
+    <string name="sd_card_otg_same">SDCard- und OTG-Gerätepfad dürfen nicht identisch sein</string>
 
     <!-- File properties -->
     <string name="properties">Eigenschaften</string>
@@ -136,8 +136,8 @@
     <string name="background_color">Hintergrundfarbe</string>
     <string name="text_color">Schriftfarbe</string>
     <string name="primary_color">Primäre Farbe</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
+    <string name="foreground_color">Vordergrundfarbe</string>
+    <string name="app_icon_color">App-Icon-Farbe</string>
     <string name="restore_defaults">Standard wiederherstellen</string>
     <string name="theme">Thema</string>
     <string name="changing_color_description">Ändern einer Farbe setzt das Thema auf "Benutzerdefiniert"</string>
@@ -157,11 +157,11 @@
     <!-- Themes -->
     <string name="light_theme">Hell</string>
     <string name="dark_theme">Dunkel</string>
-    <string name="solarized">Solarized</string>
+    <string name="solarized">Solarisiert</string>
     <string name="dark_red">Dunkelrot</string>
     <string name="black_white">Schwarz-Weiß</string>
     <string name="custom">Benutzerdefiniert</string>
-    <string name="shared">Shared</string>
+    <string name="shared">Geteilt</string>
 
     <!-- What's new -->
     <string name="whats_new">Neue Funktionen</string>
@@ -256,16 +256,16 @@
 
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d Sekunde</item>
+        <item quantity="other">%d Sekunden</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d Minute</item>
+        <item quantity="other">%d Minuten</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d Stunde</item>
+        <item quantity="other">%d Stunden</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
@@ -293,13 +293,13 @@
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
-    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+    <string name="alarm_goes_off_in">Zeit bis der Alarm endet:\n%s</string>
+    <string name="alarm_warning">Bitte stell sicher, dass der Alarm zuverlässig funktioniert, bevor Du Dich darauf verlässt. Es könnte wegen Systemeinschränkungen (z.B. Stromsparfunktion) fehlschlagen.</string>
+    <string name="reminder_warning">Bitte stell sicher, dass die Erinnerung zuverlässig funktioniert, bevor Du Dich darauf verlässt. Es könnte wegen Systemeinschränkungen (z.B. Stromsparfunktion) fehlschlagen.</string>
 
     <!-- Alarms -->
     <string name="snooze">Snooze</string>
-    <string name="dismiss">Dismiss</string>
+    <string name="dismiss">Abstellen</string>
     <string name="no_reminder">Keine Erinnerung</string>
     <string name="at_start">Zu Beginn</string>
 
@@ -318,11 +318,11 @@
     <string name="password_protect_whole_app">Gesamte App mit Passwort schützen</string>
     <string name="keep_last_modified">Beim Modifizieren von Dateien die alte Änderungszeit beibehalten</string>
     <string name="show_info_bubble">Beim Scrollen mit dem Scrollbalken Infofenster anzeigen</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
-    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
-    <string name="use_24_hour_time_format">Use 24-hour time format</string>
-    <string name="sunday_first">Start week on Sunday</string>
+    <string name="prevent_phone_from_sleeping">Verhindere, dass das Handy in den Ruhemodus wechselt, solange die App im Vordergrund läuft</string>
+    <string name="skip_delete_confirmation">Verwende keinen Löschen-bestätigen-Dialog</string>
+    <string name="enable_pull_to_refresh">Ermögliche \"Auffrischen\" durch Ziehen von der oberen Kante</string>
+    <string name="use_24_hour_time_format">Benutze 24-Std.-Zeitformat</string>
+    <string name="sunday_first">Beginne die Woche am Sonntag</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Immer dasselbe Snooze-Intervall nutzen</string>
     <string name="snooze_time">Snooze-Intervall</string>
@@ -347,8 +347,8 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="confirm_otg_storage_access_text">Bitte den Basis-Ordner des OTG-Geräts auf der folgenden Seite wählen, um Zugriff zu gewähren</string>
+    <string name="wrong_root_selected_otg">Falscher Ordner gewählt, bitte den Basis- (root-) Ordner des OTG-Geräts wählen</string>
 
     <!-- Dates -->
     <string name="january">Januar</string>
@@ -419,9 +419,9 @@
     </string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently asked questions</string>
+    <string name="frequently_asked_questions">Häufig gestellte Fragen</string>
     <string name="faq_1_title_commons">Weshalb sehe ich das Widget dieser App nicht in der Liste der Widgets?</string>
-    <string name="faq_1_text_commons">Wahrscheinlich weil du die App auf die Speicherkarte verschoben hast. In diesem Fall werden durch eine Einschränkung von Android  die Widgets dieser App versteckt. Die einzige Lösung ist die App über die Geräteeinstellungen wieder in den internen Speicher zu verschieben.</string>
+    <string name="faq_1_text_commons">Wahrscheinlich weil du die App auf die Speicherkarte verschoben hast. In diesem Fall werden durch eine Einschränkung von Android die Widgets dieser App versteckt. Die einzige Lösung ist die App über die Geräteeinstellungen wieder in den internen Speicher zu verschieben.</string>
     <string name="faq_2_title_commons">Ich will dich unterstützen, aber es ist mir nicht möglich Geld zu spenden. Gibt es eine andere Möglichkeit?</string>
     <string name="faq_2_text_commons">Ja, sicherlich. Du kannst die Apps weiterempfehlen oder gute Rückmeldung und Berwertungen geben. Du kannst ebenso helfen, indem du die Apps in neue Sprachen übersetzt oder vorhandene Übersetzungen aktualisierst. 
         Die Anleitung dazu findest du unter https://github.com/SimpleMobileTools/General-Discussion oder sende mir eine Nachricht an hello@simplemobiletools.com, falls du Hilfe benötigst.</string>
@@ -431,7 +431,7 @@
     <string name="faq_4_text_commons">Ja, wenn du ein Widget auf den Home Screen ziehst, erscheint ein Konfigurationmenü. In der linken unteren Ecke sind farbige Kästchen, drücke auf sie und wähle eine neue Farbe. Ausserdem kannst du den Regler nutzen, um den Alphaparameter (Transparenz) einzustellen.</string>
 
     <!-- License -->
-    <string name="notice">Diese App nutzt die folgenden Drittanbieterbilbiotheken, die mein Leben einfacher machen. Danke!</string>
+    <string name="notice">Diese App nutzt die folgenden Drittanbieterbibliotheken, die mein Leben einfacher machen. Danke!</string>
     <string name="third_party_licences">Drittanbieterlizenzen</string>
     <string name="kotlin_title">Kotlin (Programmiersprache)</string>
     <string name="subsampling_title">Subsampling Scale Image View (Zoombare Bilder)</string>
@@ -439,7 +439,7 @@
     <string name="picasso_title">Picasso (Bilder laden und zwischenspeichern)</string>
     <string name="cropper_title">Android Image Cropper (Bilder zuschneiden und rotieren)</string>
     <string name="multiselect_title">RecyclerView MultiSelect (Mehrfachauswahl in Listen)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (Rechts-Links-Swipen)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (Rechts-Links-Wischen)</string>
     <string name="joda_title">Joda-Time (Ersatz für Datums-Implementierung in Java)</string>
     <string name="stetho_title">Stetho (Datenbanken debuggen)</string>
     <string name="otto_title">Otto (Event Bus)</string>
