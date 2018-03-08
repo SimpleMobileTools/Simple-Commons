@@ -66,6 +66,7 @@ const val WAS_ALARM_WARNING_SHOWN = "was_alarm_warning_shown"
 const val WAS_REMINDER_WARNING_SHOWN = "was_reminder_warning_shown"
 const val USE_SAME_SNOOZE = "use_same_snooze"
 const val SNOOZE_TIME = "snooze_delay"
+const val VIBRATE_ON_BUTTON_PRESS = "vibrate_on_button_press"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
