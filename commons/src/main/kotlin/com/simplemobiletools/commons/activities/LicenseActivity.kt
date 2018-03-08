@@ -20,7 +20,7 @@ class LicenseActivity : BaseSimpleActivity() {
 
         val inflater = LayoutInflater.from(this)
         val licenses = initLicenses()
-        val licenseMask = intent.getIntExtra(APP_LICENSES, 0)
+        val licenseMask = intent.getIntExtra(APP_LICENSES, 0) or LICENSE_KOTLIN
         licenses.filter { licenseMask and it.id != 0 }.forEach {
             val license = it
             inflater.inflate(R.layout.license_faq_item, null).apply {

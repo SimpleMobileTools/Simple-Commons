@@ -68,7 +68,7 @@ const val USE_SAME_SNOOZE = "use_same_snooze"
 const val SNOOZE_TIME = "snooze_delay"
 
 // licenses
-const val LICENSE_KOTLIN = 1
+internal const val LICENSE_KOTLIN = 1
 const val LICENSE_SUBSAMPLING = 2
 const val LICENSE_GLIDE = 4
 const val LICENSE_CROPPER = 8
