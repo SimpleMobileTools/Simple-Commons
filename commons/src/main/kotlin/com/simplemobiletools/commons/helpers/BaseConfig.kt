@@ -209,6 +209,6 @@ open class BaseConfig(val context: Context) {
         set(snoozeDelay) = prefs.edit().putInt(SNOOZE_TIME, snoozeDelay).apply()
 
     var vibrateOnButtonPress: Boolean
-        get() = prefs.getBoolean(VIBRATE_ON_BUTTON_PRESS, true)
+        get() = prefs.getBoolean(VIBRATE_ON_BUTTON_PRESS, false)
         set(vibrateOnButton) = prefs.edit().putBoolean(VIBRATE_ON_BUTTON_PRESS, vibrateOnButton).apply()
 }
