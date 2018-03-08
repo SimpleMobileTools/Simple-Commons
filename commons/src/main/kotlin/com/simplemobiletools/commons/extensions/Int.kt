@@ -39,6 +39,8 @@ fun Int.removeBit(bit: Int) = addBit(bit) - bit
 
 fun Int.addBit(bit: Int) = this or bit
 
+fun Int.flipBit(bit: Int) = if (this and bit == 0) addBit(bit) else removeBit(bit)
+
 fun ClosedRange<Int>.random() = Random().nextInt(endInclusive - start) + start
 
 // taken from https://stackoverflow.com/a/40964456/1967672
