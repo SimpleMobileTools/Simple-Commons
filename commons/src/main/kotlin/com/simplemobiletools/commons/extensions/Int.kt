@@ -21,9 +21,9 @@ fun Int.adjustAlpha(factor: Float): Int {
 
 fun Int.getFormattedDuration(): String {
     val sb = StringBuilder(8)
-    val hours = this / (60 * 60)
-    val minutes = this % (60 * 60) / 60
-    val seconds = this % (60 * 60) % 60
+    val hours = this / 3600
+    val minutes = this % 3600 / 60
+    val seconds = this % 60
 
     if (this > 3600) {
         sb.append(String.format(Locale.getDefault(), "%02d", hours)).append(":")
