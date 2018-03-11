@@ -220,6 +220,7 @@
     <string name="fingerprint_setup_successfully">Configuración de protección con éxito. Por favor, vuelva a instalar la aplicación en caso de problemas al restablecerla.</string>
 
     <!-- Times -->
+    <string name="seconds_raw">seconds</string>
     <string name="minutes_raw">minutos</string>
     <string name="hours_raw">horas</string>
     <string name="days_raw">días</string>
@@ -268,6 +269,10 @@
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="seconds_before">
+        <item quantity="one">%d second before</item>
+        <item quantity="other">%d seconds before</item>
+    </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minuto antes</item>
         <item quantity="other">%d minutos antes</item>
@@ -282,6 +287,10 @@
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minuto</item>
         <item quantity="other">%d minutos</item>

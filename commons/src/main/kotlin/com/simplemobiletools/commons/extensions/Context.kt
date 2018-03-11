@@ -361,10 +361,13 @@ fun Context.getSelectedDaysString(bitMask: Int): String {
     return days.trim().trimEnd(',')
 }
 
-fun Context.formatMinutesToTimeString(totalMinutes: Int): String {
-    val days = totalMinutes / DAY_MINUTES
-    val hours = (totalMinutes % DAY_MINUTES) / HOUR_MINUTES
-    val minutes = totalMinutes % HOUR_MINUTES
+fun Context.formatMinutesToTimeString(totalMinutes: Int) = formatSecondsToTimeString(totalMinutes * 60)
+
+fun Context.formatSecondsToTimeString(totalSeconds: Int): String {
+    val days = totalSeconds / DAY_SECONDS
+    val hours = (totalSeconds % DAY_SECONDS) / HOUR_SECONDS
+    val minutes = (totalSeconds % HOUR_SECONDS) / MINUTE_SECONDS
+    val seconds = totalSeconds % MINUTE_SECONDS
     val timesString = StringBuilder()
     if (days > 0) {
         val daysString = String.format(resources.getQuantityString(R.plurals.days, days, days))
@@ -378,7 +381,12 @@ fun Context.formatMinutesToTimeString(totalMinutes: Int): String {
 
     if (minutes > 0) {
         val minutesString = String.format(resources.getQuantityString(R.plurals.minutes, minutes, minutes))
-        timesString.append(minutesString)
+        timesString.append("$minutesString, ")
+    }
+
+    if (seconds > 0) {
+        val secondsString = String.format(resources.getQuantityString(R.plurals.seconds, seconds, seconds))
+        timesString.append(secondsString)
     }
 
     var result = timesString.toString().trim().trimEnd(',')
@@ -388,24 +396,30 @@ fun Context.formatMinutesToTimeString(totalMinutes: Int): String {
     return result
 }
 
-fun Context.getFormattedMinutes(minutes: Int, showBefore: Boolean = true) = when (minutes) {
+fun Context.getFormattedMinutes(minutes: Int, showBefore: Boolean = true) = getFormattedSeconds(minutes * 60, showBefore)
+
+fun Context.getFormattedSeconds(seconds: Int, showBefore: Boolean = true) = when (seconds) {
     -1 -> getString(R.string.no_reminder)
     0 -> getString(R.string.at_start)
     else -> {
-        if (minutes % YEAR_MINUTES == 0)
-            resources.getQuantityString(R.plurals.years, minutes / YEAR_MINUTES, minutes / YEAR_MINUTES)
+        if (seconds % YEAR_SECONDS == 0)
+            resources.getQuantityString(R.plurals.years, seconds / YEAR_SECONDS, seconds / YEAR_SECONDS)
 
         when {
-            minutes % MONTH_MINUTES == 0 -> resources.getQuantityString(R.plurals.months, minutes / MONTH_MINUTES, minutes / MONTH_MINUTES)
-            minutes % WEEK_MINUTES == 0 -> resources.getQuantityString(R.plurals.weeks, minutes / WEEK_MINUTES, minutes / WEEK_MINUTES)
-            minutes % DAY_MINUTES == 0 -> resources.getQuantityString(R.plurals.days, minutes / DAY_MINUTES, minutes / DAY_MINUTES)
-            minutes % HOUR_MINUTES == 0 -> {
+            seconds % MONTH_SECONDS == 0 -> resources.getQuantityString(R.plurals.months, seconds / MONTH_SECONDS, seconds / MONTH_SECONDS)
+            seconds % WEEK_SECONDS == 0 -> resources.getQuantityString(R.plurals.weeks, seconds / WEEK_SECONDS, seconds / WEEK_SECONDS)
+            seconds % DAY_SECONDS == 0 -> resources.getQuantityString(R.plurals.days, seconds / DAY_SECONDS, seconds / DAY_SECONDS)
+            seconds % HOUR_SECONDS == 0 -> {
                 val base = if (showBefore) R.plurals.hours_before else R.plurals.by_hours
-                resources.getQuantityString(base, minutes / HOUR_MINUTES, minutes / HOUR_MINUTES)
+                resources.getQuantityString(base, seconds / HOUR_SECONDS, seconds / HOUR_SECONDS)
+            }
+            seconds % MINUTE_SECONDS == 0 -> {
+                val base = if (showBefore) R.plurals.minutes_before else R.plurals.by_minutes
+                resources.getQuantityString(base, seconds / MINUTE_SECONDS, seconds / MINUTE_SECONDS)
             }
             else -> {
-                val base = if (showBefore) R.plurals.minutes_before else R.plurals.by_minutes
-                resources.getQuantityString(base, minutes, minutes)
+                val base = if (showBefore) R.plurals.seconds_before else R.plurals.by_seconds
+                resources.getQuantityString(base, seconds, seconds)
             }
         }
     }

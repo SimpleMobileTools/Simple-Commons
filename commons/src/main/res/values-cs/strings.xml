@@ -221,20 +221,24 @@
     <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
 
     <!-- Times -->
+    <string name="seconds_raw">seconds</string>
     <string name="minutes_raw">minuty</string>
     <string name="hours_raw">hodiny</string>
     <string name="days_raw">dny</string>
 
     <plurals name="seconds">
         <item quantity="one">%d second</item>
+        <item quantity="few">%d seconds</item>
         <item quantity="other">%d seconds</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d minute</item>
+        <item quantity="few">%d minutes</item>
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d hour</item>
+        <item quantity="few">%d hours</item>
         <item quantity="other">%d hours</item>
     </plurals>
     <plurals name="days">
@@ -276,6 +280,11 @@
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="seconds_before">
+        <item quantity="one">%d second before</item>
+        <item quantity="few">%d seconds before</item>
+        <item quantity="other">%d seconds before</item>
+    </plurals>
     <plurals name="minutes_before">
         <item quantity="one">před %d minutou</item>
         <item quantity="few">před %d minutami</item>
@@ -293,12 +302,19 @@
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="few">%d seconds</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minute</item>
+        <item quantity="few">%d minutes</item>
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d hour</item>
+        <item quantity="few">%d hours</item>
         <item quantity="other">%d hours</item>
     </plurals>
 

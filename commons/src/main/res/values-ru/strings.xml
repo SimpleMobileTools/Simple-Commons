@@ -222,6 +222,7 @@
     <string name="fingerprint_setup_successfully">Установка защиты выполнена успешно. Переустановите приложение в случае возникновения проблем с её отключением.</string>
 
     <!-- Times -->
+    <string name="seconds_raw">seconds</string>
     <string name="minutes_raw">минут</string>
     <string name="hours_raw">часов</string>
     <string name="days_raw">дней</string>
@@ -284,6 +285,12 @@
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="seconds_before">
+        <item quantity="one">%d second before</item>
+        <item quantity="few">%d seconds before</item>
+        <item quantity="many">%d seconds before</item>
+        <item quantity="other">%d seconds before</item>
+    </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d минуту до события</item>
         <item quantity="few">%d минуты до события</item>
@@ -304,6 +311,11 @@
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="few">%d seconds</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d минуту</item>
         <item quantity="few">%d минуты</item>

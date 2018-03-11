@@ -222,6 +222,7 @@
     <string name="fingerprint_setup_successfully">Ochrana bola úspešne nastavená. Prosím preinštalujte aplikáciu v prípade problémov s jej zmenou.</string>
 
     <!-- Times -->
+    <string name="seconds_raw">sekundy</string>
     <string name="minutes_raw">minúty</string>
     <string name="hours_raw">hodiny</string>
     <string name="days_raw">dni</string>
@@ -280,6 +281,11 @@
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="seconds_before">
+        <item quantity="one">%d sekundu vopred</item>
+        <item quantity="few">%d sekundy vopred</item>
+        <item quantity="other">%d sekúnd vopred</item>
+    </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minútu vopred</item>
         <item quantity="few">%d minúty vopred</item>
@@ -297,6 +303,11 @@
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_seconds">
+        <item quantity="one">%d sekundu</item>
+        <item quantity="few">%d sekundy</item>
+        <item quantity="other">%d sekúnd</item>
+    </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minútu</item>
         <item quantity="few">%d minúty</item>

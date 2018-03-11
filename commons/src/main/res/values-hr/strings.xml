@@ -222,6 +222,7 @@
     <string name="fingerprint_setup_successfully">Uspješno postavljanje zaštite. Molimo reinstalirajte aplikaciju u slučaju problema s resetiranjem.</string>
 
     <!-- Times -->
+    <string name="seconds_raw">seconds</string>
     <string name="minutes_raw">minutes</string>
     <string name="hours_raw">hours</string>
     <string name="days_raw">days</string>
@@ -280,6 +281,11 @@
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="seconds_before">
+        <item quantity="one">%d second before</item>
+        <item quantity="few">%d seconds before</item>
+        <item quantity="other">%d seconds before</item>
+    </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minute before</item>
         <item quantity="few">%d minutes before</item>
@@ -297,6 +303,11 @@
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="few">%d seconds</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minute</item>
         <item quantity="few">%d minutes</item>

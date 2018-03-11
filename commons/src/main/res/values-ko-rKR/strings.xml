@@ -221,6 +221,7 @@
     <string name="fingerprint_setup_successfully">보안 설정이 성공적으로 완료되었습니다. 재설정 시 문제가 발생하면 앱을 다시 설치하시기 바랍니다.</string>
 
     <!-- Times -->
+    <string name="seconds_raw">seconds</string>
     <string name="minutes_raw">분</string>
     <string name="hours_raw">시간</string>
     <string name="days_raw">일</string>
@@ -269,6 +270,10 @@
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="seconds_before">
+        <item quantity="one">%d second before</item>
+        <item quantity="other">%d seconds before</item>
+    </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d 분 전</item>
         <item quantity="other">%d 분 전</item>
@@ -283,6 +288,10 @@
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d 분</item>
         <item quantity="other">%d 분</item>
