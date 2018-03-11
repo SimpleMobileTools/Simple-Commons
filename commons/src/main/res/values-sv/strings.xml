@@ -11,9 +11,9 @@
     <string name="set_as">Ange som</string>
     <string name="value_copied_to_clipboard">Värdet har kopierats till urklipp</string>
     <string name="unknown">Okänd</string>
-    <string name="always">Always</string>
+    <string name="always">Alltid</string>
     <string name="never">Aldrig</string>
-    <string name="details">Details</string>
+    <string name="details">Information</string>
     <string name="notes">Anteckningar</string>
 
     <!-- Search -->
@@ -37,7 +37,7 @@
     <string name="rename_file_error">Det gick inte att byta namn på filen</string>
     <string name="rename_folder_error">Det gick inte att byta namn på mappen</string>
     <string name="rename_folder_empty">Du måste ange ett mappnamn</string>
-    <string name="rename_folder_exists">En mapp med det namnet finns redan</string>
+    <string name="rename_folder_exists">Det finns redan en mapp med samma namn</string>
     <string name="rename_folder_root">Det går inte att byta namn på rotmappen på ett lagringsutrymme</string>
     <string name="rename_folder_ok">Mappen har fått ett nytt namn</string>
     <string name="renaming_folder">Byter namn på mappen</string>
@@ -45,7 +45,7 @@
     <string name="filename_invalid_characters">Filnamnet innehåller ogiltiga tecken</string>
     <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
     <string name="extension_cannot_be_empty">Filändelsen får inte vara tom</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
+    <string name="source_file_doesnt_exist">Källfilen %s finns inte</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopiera</string>
@@ -68,7 +68,7 @@
     <string name="moving_success">Filerna har flyttats</string>
     <string name="moving_success_partial">Det gick inte att flytta vissa filer</string>
     <string name="copying_success_partial">Det gick inte att kopiera vissa filer</string>
-    <string name="no_files_selected">Inga filer markerade</string>
+    <string name="no_files_selected">Inga filer har valts</string>
     <string name="saving">Sparar…</string>
     <string name="could_not_create_folder">Det gick inte att skapa mappen %s</string>
     <string name="could_not_create_file">Det gick inte att skapa filen %s</string>
@@ -78,7 +78,7 @@
     <string name="folder">Mapp</string>
     <string name="file">Fil</string>
     <string name="create_new_folder">Skapa ny mapp</string>
-    <string name="name_taken">Det finns redan en fil eller mapp med det namnet</string>
+    <string name="name_taken">Det finns redan en fil eller mapp med samma namn</string>
     <string name="invalid_name">Namnet innehåller ogiltiga tecken</string>
     <string name="empty_name">Ange ett namn</string>
     <string name="unknown_error_occurred">Ett okänt fel har uppstått</string>
@@ -86,18 +86,18 @@
     <!-- File operation conflicts -->
     <string name="file_already_exists">Filen \"%s\" finns redan</string>
     <string name="file_already_exists_overwrite">Filen \"%s\" finns redan. Skriv över?</string>
-    <string name="folder_already_exists">Folder \"%s\" already exists</string>
-    <string name="merge">Merge</string>
+    <string name="folder_already_exists">Mappen \"%s\" finns redan</string>
+    <string name="merge">Slå ihop</string>
     <string name="overwrite">Skriv över</string>
     <string name="skip">Hoppa över</string>
-    <string name="append">Bifoga \'_1\'</string>
+    <string name="append">Lägg till \'_1\'</string>
     <string name="apply_to_all">Använd på alla konflikter</string>
 
     <!-- File picker -->
     <string name="select_folder">Välj mapp</string>
     <string name="select_file">Välj fil</string>
     <string name="confirm_storage_access_title">Bekräfta åtkomst till extern lagring</string>
-    <string name="confirm_storage_access_text">Välj rotmappen på ditt SD-kort på nästa skärmbild, för att bevilja skrivrättigheter</string>
+    <string name="confirm_storage_access_text">Välj rotmappen på ditt SD-kort på nästa skärm, för att bevilja skrivrättigheter</string>
     <string name="confirm_storage_access_text_sd">Om du inte ser SD-kortet, prova detta</string>
     <string name="confirm_selection">Bekräfta val</string>
 
@@ -112,7 +112,7 @@
     <string name="sd_card">SD-kort</string>
     <string name="root">Rot</string>
     <string name="wrong_root_selected">Du har valt fel mapp, välj rotmappen på ditt SD-kort</string>
-    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
+    <string name="sd_card_otg_same">SD-kortets och OTG-enhetens sökvägar kan inte vara samma</string>
 
     <!-- File properties -->
     <string name="properties">Egenskaper</string>
@@ -136,8 +136,8 @@
     <string name="background_color">Bakgrundsfärg</string>
     <string name="text_color">Textfärg</string>
     <string name="primary_color">Primär färg</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
+    <string name="foreground_color">Förgrundsfärg</string>
+    <string name="app_icon_color">Appikonens färg</string>
     <string name="restore_defaults">Återställ förvalda värden</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Om du ändrar en färg, ändras temat till anpassat tema</string>
@@ -221,7 +221,7 @@
     <string name="fingerprint_setup_successfully">Skyddet har ställts in. Installera om appen om du inte kan ta bort skyddet.</string>
 
     <!-- Times -->
-    <string name="seconds_raw">seconds</string>
+    <string name="seconds_raw">sekunder</string>
     <string name="minutes_raw">minuter</string>
     <string name="hours_raw">timmar</string>
     <string name="days_raw">dagar</string>
@@ -257,22 +257,22 @@
 
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d sekund</item>
+        <item quantity="other">%d sekunder</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minut</item>
+        <item quantity="other">%d minuter</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d timme</item>
+        <item quantity="other">%d timmar</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d second before</item>
-        <item quantity="other">%d seconds before</item>
+        <item quantity="one">%d sekund före</item>
+        <item quantity="other">%d sekunder före</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minut före</item>
@@ -289,8 +289,8 @@
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d sekund</item>
+        <item quantity="other">%d sekunder</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minut</item>
@@ -302,13 +302,13 @@
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
-    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+    <string name="alarm_goes_off_in">Återstående tid tills alarmet ringer:\n%s</string>
+    <string name="alarm_warning">Kontrollera att alarmet fungerar som det ska innan du förlitar dig på det. Det kanske inte fungerar som det ska på grund av batterisparrelaterade systembegränsningar.</string>
+    <string name="reminder_warning">Kontrollera att påminnelserna fungerar som de ska innan du förlitar dig på dem. De kanske inte fungerar som de ska på grund av batterisparrelaterade systembegränsningar.</string>
 
     <!-- Alarms -->
     <string name="snooze">Snooza</string>
-    <string name="dismiss">Dismiss</string>
+    <string name="dismiss">Stäng av</string>
     <string name="no_reminder">Ingen påminnelse</string>
     <string name="at_start">Vid start</string>
 
@@ -316,7 +316,7 @@
     <string name="settings">Inställningar</string>
     <string name="customize_colors">Anpassa färger</string>
     <string name="use_english_language">Använd engelska</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
+    <string name="avoid_whats_new">Visa inte vad som är nytt vid start</string>
     <string name="show_hidden_items">Visa dolda objekt</string>
     <string name="font_size">Teckenstorlek</string>
     <string name="small">Liten</string>
@@ -327,12 +327,12 @@
     <string name="password_protect_whole_app">Lösenordsskydda hela appen</string>
     <string name="keep_last_modified">Behåll senast ändrad-tider när filer kopieras, flyttas eller får nya namn</string>
     <string name="show_info_bubble">Visa en informationsbubbla när jag rullar genom objekt genom att dra rullningslisten</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
-    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
-    <string name="use_24_hour_time_format">Use 24-hour time format</string>
-    <string name="sunday_first">Start week on Sunday</string>
-    <string name="widgets">Widgets</string>
+    <string name="prevent_phone_from_sleeping">Hindra aktivering av viloläge när appen körs i förgrunden</string>
+    <string name="skip_delete_confirmation">Hoppa alltid över dialogrutan för bekräftelse av borttagning</string>
+    <string name="enable_pull_to_refresh">Aktivera uppdatering vid svepning från överkant</string>
+    <string name="use_24_hour_time_format">Använd 24-timmarsformat</string>
+    <string name="sunday_first">Börja veckan på söndag</string>
+    <string name="widgets">Widgetar</string>
     <string name="use_same_snooze">Använd alltid samma snooze-intervall</string>
     <string name="snooze_time">Snooze-intervall</string>
     <string name="vibrate_on_button_press">Vibrera när jag trycker på knapparna</string>
@@ -356,8 +356,8 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="confirm_otg_storage_access_text">Välj rotmappen på OTG-enheten på nästa skärm, för att ge åtkomst</string>
+    <string name="wrong_root_selected_otg">Du har valt fel mapp, välj rotmappen på din OTG-enhet</string>
 
     <!-- Dates -->
     <string name="january">Januari</string>
@@ -409,7 +409,7 @@
     <string name="donate_please">
         <![CDATA[
             Hej,<br><br>
-            jag hoppas att du gillar appen. Den innehåller ingen reklam, så stöd dess utveckling genom att köpa appen <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, som även hindrar den här dialogrutan från att visas igen.<br><br>
+            jag hoppas att du gillar appen. Den innehåller ingen reklam. Stöd dess utveckling genom att köpa appen <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, som även hindrar den här dialogrutan från att visas igen.<br><br>
             Du hittar fler donationsalternativ <a href="http://simplemobiletools.com/donate">här</a>.<br><br>
             Tack!
         ]]>
@@ -419,16 +419,16 @@
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
-            Hey,<br><br>
-            just letting you know that a new app has been released recently:<br><br>
+            Hej,<br><br>
+            jag vill bara meddela att en ny app nyligen har publicerats:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-            You can download it by pressing the title.<br><br>
-            Thanks
+            Du kan hämta den genom att trycka på titeln.<br><br>
+            Tack
         ]]>
     </string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently asked questions</string>
+    <string name="frequently_asked_questions">Frågor och svar</string>
     <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
     <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
         in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
@@ -462,5 +462,5 @@
     <string name="espresso_title">Espresso (testhjälpklass)</string>
     <string name="gson_title">Gson (JSON-parser)</string>
     <string name="leak_canary_title">Leak Canary (minnesläckagedetektor)</string>
-    <string name="number_picker_title">Number Picker (customizable number picker)</string>
+    <string name="number_picker_title">Number Picker (anpassningsbar talväljare)</string>
 </resources>
