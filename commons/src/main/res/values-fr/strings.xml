@@ -429,18 +429,13 @@
     <!-- FAQ -->
     <string name="frequently_asked_questions">Foire aux questions (FAQ)</string>
     <string name="faq_1_title_commons">Pourquoi je ne vois pas les widgets de cette appli dans la liste des widgets ?</string>
-    <string name="faq_1_text_commons">Probablement parce que l\'appli a été déplacée sur la carte SD. 
-        Android a une limitation qui fait qu\'il n\'affiche pas les widgets de cette appli dans ce cas. La seule solution consiste à replacer l\'appli dans le 
-        stockage interne via les paramètres du système.</string>
+    <string name="faq_1_text_commons">Probablement parce que l\'appli a été déplacée sur la carte SD. Android a une limitation qui fait qu\'il n\'affiche pas les widgets de cette appli dans ce cas. La seule solution consiste à replacer l\'appli dans le stockage interne via les paramètres du système.</string>
     <string name="faq_2_title_commons">Je voudrais vous apporter mon support, mais je ne peux pas vous donner de l\'argent. Existe t-il un autre moyen ?</string>
-    <string name="faq_2_text_commons">
-        Bien sûr. Vous pouvez recommender ces applis et/ou donner de bonnes évaluations. Vous pouvez aussi nous aider en traduisant les applis dans une nouvelle langue, ou mettre à jour les traductions
-        existantes. Vous pouvez trouver le guide à l'adresse https://github.com/SimpleMobileTools/General-Discussion , ou juste m\'envoyer un mail à hello@simplemobiletools.com si vous avez besoin d\'aide.</string>
+    <string name="faq_2_text_commons"> Bien sûr. Vous pouvez recommander ces applis et/ou donner de bonnes évaluations. Vous pouvez aussi nous aider en traduisant les applis dans une nouvelle langue, ou mettre à jour les traductions existantes. Vous pouvez trouver le guide à l'adresse https://github.com/SimpleMobileTools/General-Discussion , ou juste m\'envoyer un mail à hello@simplemobiletools.com si vous avez besoin d\'aide.</string>
     <string name="faq_3_title_commons">J\'ai effacé des fichiers par erreurs. Comment les récupérer ?</string>
     <string name="faq_3_text_commons">C\'est malheureusement impossible, car les fichiers sont supprimés instantanément après le dialogue de confirmation et il n\'y a pas de corbeille.</string>
     <string name="faq_4_title_commons">Je n\'aime pas les couleurs du widget. Puis-je la changer ? </string>
     <string name="faq_4_text_commons">Oui, quand vous glissez le widget sur l\'écran d\'accueil un dialogue de configuration apparaît. Vous verrez des carrés en bas à gauche, en appuyant dessus vous pouvez choisir une nouvelle couleur. Vous pouvez aussi utiliser le curseur pour régler la transparence.</string>
-
     <!-- License -->
     <string name="notice">Cette application utilise les librairies tierces suivantes pour me simplifier la vie. Merci.</string>
     <string name="third_party_licences">Licences tierces</string>
@@ -465,4 +460,3 @@
     <string name="leak_canary_title">Leak Canary (détecteur de fuite de mémoire)</string>
     <string name="number_picker_title">Number Picker (customizable number picker)</string>
 </resources>
-
