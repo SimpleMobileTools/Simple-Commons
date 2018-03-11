@@ -742,7 +742,6 @@ fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = fa
         add(1 * MINUTE_SECONDS)
         add(5 * MINUTE_SECONDS)
         add(10 * MINUTE_SECONDS)
-        add(20 * MINUTE_SECONDS)
         add(30 * MINUTE_SECONDS)
         add(60 * MINUTE_SECONDS)
         add(curSeconds)
