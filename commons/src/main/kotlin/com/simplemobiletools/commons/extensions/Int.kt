@@ -21,9 +21,9 @@ fun Int.adjustAlpha(factor: Float): Int {
 
 fun Int.getFormattedDuration(): String {
     val sb = StringBuilder(8)
-    val hours = this / (60 * 60)
-    val minutes = this % (60 * 60) / 60
-    val seconds = this % (60 * 60) % 60
+    val hours = this / 3600
+    val minutes = this % 3600 / 60
+    val seconds = this % 60
 
     if (this > 3600) {
         sb.append(String.format(Locale.getDefault(), "%02d", hours)).append(":")
@@ -34,8 +34,12 @@ fun Int.getFormattedDuration(): String {
     return sb.toString()
 }
 
-// TODO: how to do "flags & ~flag" in kotlin?
-fun Int.removeFlag(flag: Int) = (this or flag) - flag
+// TODO: how to do "bits & ~bit" in kotlin?
+fun Int.removeBit(bit: Int) = addBit(bit) - bit
+
+fun Int.addBit(bit: Int) = this or bit
+
+fun Int.flipBit(bit: Int) = if (this and bit == 0) addBit(bit) else removeBit(bit)
 
 fun ClosedRange<Int>.random() = Random().nextInt(endInclusive - start) + start
 

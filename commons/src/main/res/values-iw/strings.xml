@@ -61,15 +61,15 @@
     <string name="please_select_destination">Please select a destination</string>
     <string name="source_and_destination_same">Source and destination cannot be the same</string>
     <string name="copy_failed">Could not copy the files</string>
-    <string name="copying">Copying&#8230;</string>
+    <string name="copying">Copying…</string>
     <string name="copying_success">Files copied successfully</string>
     <string name="copy_move_failed">An error occurred</string>
-    <string name="moving">Moving&#8230;</string>
+    <string name="moving">Moving…</string>
     <string name="moving_success">Files moved successfully</string>
     <string name="moving_success_partial">Some files could not be moved</string>
     <string name="copying_success_partial">Some files could not be copied</string>
     <string name="no_files_selected">No files selected</string>
-    <string name="saving">Saving&#8230;</string>
+    <string name="saving">Saving…</string>
     <string name="could_not_create_folder">Could not create folder %s</string>
     <string name="could_not_create_file">Could not create file %s</string>
 
@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">An unknown error occurred</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">File \"%1$s\" already exists</string>
-    <string name="file_already_exists_overwrite">File \"%1$s\" already exists. Overwrite?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="file_already_exists">File \"%s\" already exists</string>
+    <string name="file_already_exists_overwrite">File \"%s\" already exists. Overwrite?</string>
+    <string name="folder_already_exists">Folder \"%s\" already exists</string>
     <string name="merge">Merge</string>
     <string name="overwrite">Overwrite</string>
     <string name="skip">Skip</string>
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d item</item>
-        <item quantity="other">%1$d items</item>
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
     </plurals>
 
     <!-- Storages -->
@@ -136,6 +136,8 @@
     <string name="background_color">Background color</string>
     <string name="text_color">Text color</string>
     <string name="primary_color">Primary color</string>
+    <string name="foreground_color">Foreground color</string>
+    <string name="app_icon_color">App icon color</string>
     <string name="restore_defaults">Restore defaults</string>
     <string name="theme">Theme</string>
     <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
@@ -158,7 +160,7 @@
     <string name="solarized">Solarized</string>
     <string name="dark_red">Dark red</string>
     <string name="black_white">Black &amp; White</string>
-    <string name="custom">Custom</string>
+    <string name="custom">מותאם אישית</string>
     <string name="shared">Shared</string>
 
     <!-- What's new -->
@@ -219,18 +221,87 @@
     <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minutes</string>
+    <string name="hours_raw">hours</string>
+    <string name="days_raw">days</string>
+
     <plurals name="seconds">
-        <item quantity="one">%1$d second</item>
-        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minute</item>
-        <item quantity="other">%1$d minutes</item>
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d hour</item>
-        <item quantity="other">%1$d hours</item>
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
+
+    <!-- For example: I will be there in 5 minutes -->
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="minutes_before">
+        <item quantity="one">%d minute before</item>
+        <item quantity="other">%d minutes before</item>
+    </plurals>
+    <plurals name="hours_before">
+        <item quantity="one">%d hour before</item>
+        <item quantity="other">%d hours before</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">%d day before</item>
+        <item quantity="other">%d days before</item>
+    </plurals>
+
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
+    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
+    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+
+    <!-- Alarms -->
+    <string name="snooze">Snooze</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="no_reminder">No reminder</string>
+    <string name="at_start">בהתחלה</string>
 
     <!-- Settings -->
     <string name="settings">Settings</string>
@@ -247,9 +318,15 @@
     <string name="password_protect_whole_app">Password protect the whole application</string>
     <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
     <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
+    <string name="use_same_snooze">Always use same snooze time</string>
+    <string name="snooze_time">Snooze time</string>
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>
@@ -295,6 +372,14 @@
     <string name="saturday">Saturday</string>
     <string name="sunday">Sunday</string>
 
+    <string name="monday_letter">ב\'</string>
+    <string name="tuesday_letter">ג\'</string>
+    <string name="wednesday_letter">ד\'</string>
+    <string name="thursday_letter">ה\'</string>
+    <string name="friday_letter">ו\'</string>
+    <string name="saturday_letter">ש\'</string>
+    <string name="sunday_letter">א\'</string>
+
     <!-- About -->
     <string name="about">About</string>
     <string name="website_label">For the source codes visit</string>
@@ -310,8 +395,8 @@
     <string name="follow_us">Follow us</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Additional info</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
+    <string name="app_version">App version: %s</string>
+    <string name="device_os">Device OS: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>
@@ -368,4 +453,5 @@
     <string name="espresso_title">Espresso (testing helper)</string>
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="number_picker_title">Number Picker (customizable number picker)</string>
 </resources>

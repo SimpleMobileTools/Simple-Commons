@@ -61,15 +61,15 @@
     <string name="please_select_destination">Si us plau tria un destí</string>
     <string name="source_and_destination_same">Origen i destí no poden ser iguals</string>
     <string name="copy_failed">No s\'ha pogut copiar els arxius</string>
-    <string name="copying">Copiant&#8230;</string>
+    <string name="copying">Copiant…</string>
     <string name="copying_success">Arxius copiats correctament</string>
     <string name="copy_move_failed">Ha ocorregut un error</string>
-    <string name="moving">Movent&#8230;</string>
+    <string name="moving">Movent…</string>
     <string name="moving_success">Arxius moguts correctament</string>
     <string name="moving_success_partial">Alguns arxius no s\'han pogut moure</string>
     <string name="copying_success_partial">Alguns arxius no s\'han pogut copiar</string>
     <string name="no_files_selected">No hi ha elements seleccionats</string>
-    <string name="saving">Desant&#8230;</string>
+    <string name="saving">Desant…</string>
     <string name="could_not_create_folder">No es pot crear la carpeta %s</string>
     <string name="could_not_create_file">No es pot crear l\'arxiu %s</string>
 
@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Ha ocorregut un error desconegut</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">L’arxiu \"%1$s\" ja existeix</string>
-    <string name="file_already_exists_overwrite">L’arxiu \"%1$s\" ja existeix. El vos sobreescriure?</string>
-    <string name="folder_already_exists">La carpeta \"%1$s\" ja existeix</string>
+    <string name="file_already_exists">L’arxiu \"%s\" ja existeix</string>
+    <string name="file_already_exists_overwrite">L’arxiu \"%s\" ja existeix. El vos sobreescriure?</string>
+    <string name="folder_already_exists">La carpeta \"%s\" ja existeix</string>
     <string name="merge">Fusionar</string>
     <string name="overwrite">Sobreescriure</string>
     <string name="skip">Saltar</string>
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Confirmar Selecció</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d element</item>
-        <item quantity="other">%1$d elements</item>
+        <item quantity="one">%d element</item>
+        <item quantity="other">%d elements</item>
     </plurals>
 
     <!-- Storages -->
@@ -136,6 +136,8 @@
     <string name="background_color">Color del fons</string>
     <string name="text_color">Color del text</string>
     <string name="primary_color">Color principal</string>
+    <string name="foreground_color">Color de primer pla</string>
+    <string name="app_icon_color">Color de la icona d\'aplicació</string>
     <string name="restore_defaults">Valors per defecte</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Canviar un color farà que canvii a tema personalitzat</string>
@@ -218,18 +220,89 @@
     <string name="fingerprint_setup_successfully">Configuració de la protecció amb èxit. Torneu a instal·lar l\'aplicació en cas de problemes amb restablir-la.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minutes</string>
+    <string name="hours_raw">hours</string>
+    <string name="days_raw">days</string>
+
     <plurals name="seconds">
-        <item quantity="one">%1$d segon</item>
-        <item quantity="other">%1$d segons</item>
+        <item quantity="one">%d segon</item>
+        <item quantity="other">%d segons</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minut</item>
-        <item quantity="other">%1$d minuts</item>
+        <item quantity="one">%d minut</item>
+        <item quantity="other">%d minuts</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d hora</item>
-        <item quantity="other">%1$d hores</item>
+        <item quantity="one">%d hora</item>
+        <item quantity="other">%d hores</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d dia</item>
+        <item quantity="other">%d dies</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d setmana</item>
+        <item quantity="other">%d setmanes</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d mes</item>
+        <item quantity="other">%d mesos</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d any</item>
+        <item quantity="other">%d anys</item>
+    </plurals>
+
+    <!-- For example: I will be there in 5 minutes -->
+    <plurals name="in_seconds">
+        <item quantity="one">%d segon</item>
+        <item quantity="other">%d segons</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minut</item>
+        <item quantity="other">%d minuts</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hora</item>
+        <item quantity="other">%d hores</item>
+    </plurals>
+
+    <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="minutes_before">
+        <item quantity="one">%d minute before</item>
+        <item quantity="other">%d minutes before</item>
+    </plurals>
+    <plurals name="hours_before">
+        <item quantity="one">%d hour before</item>
+        <item quantity="other">%d hours before</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">%d day before</item>
+        <item quantity="other">%d days before</item>
+    </plurals>
+
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_minutes">
+        <item quantity="one">%d minutu</item>
+        <item quantity="few">%d minuty</item>
+        <item quantity="other">%d minut</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">%d hodina</item>
+        <item quantity="few">%d hodiny</item>
+        <item quantity="other">%d hodin</item>
+    </plurals>
+
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Temps restant fins que soni l\'alarma: \n%s</string>
+    <string name="alarm_warning">Assegureu-vos que l\'alarma funcioni correctament abans de confiar-hi. Pot comportar-se malament a causa de les restriccions del sistema relacionades amb l\'estalvi de bateria.</string>
+    <string name="reminder_warning">Assegureu-vos que els recordatoris funcionin correctament abans de confiar-hi. Podrien comportar-se malament a causa de les restriccions del sistema relacionades amb l\'estalvi de bateria.</string>
+
+    <!-- Alarms -->
+    <string name="snooze">Postposar</string>
+    <string name="dismiss">Cancel·lar</string>
+    <string name="no_reminder">No reminder</string>
+    <string name="at_start">At start</string>
 
     <!-- Settings -->
     <string name="settings">Ajustaments</string>
@@ -246,9 +319,15 @@
     <string name="password_protect_whole_app">Contrasenya per protegir tota l’aplicació</string>
     <string name="keep_last_modified">Mantenir el valor de la darrera modificació al copiar/moure/canviar el nom dels arxius</string>
     <string name="show_info_bubble">Mostra una bombolla d\'informació en elements de desplaçament mitjançant arrossegament de la barra de desplaçament</string>
-    <string name="prevent_phone_from_sleeping">Evita que el telèfon dormi</string>
+    <string name="prevent_phone_from_sleeping">No deixar dormir el telèfon amb la aplicació a primer pla</string>
     <string name="skip_delete_confirmation">Ignora sempre el diàleg de confirmació d\'eliminació</string>
     <string name="enable_pull_to_refresh">Activa estirar des de la part superior per refrescar</string>
+    <string name="use_24_hour_time_format">Utilitzar foramt 24 houres</string>
+    <string name="sunday_first">Començar la setmana en diumenge</string>
+    <string name="widgets">Ginys</string>
+    <string name="use_same_snooze">Utilitzeu sempre el mateix temps de posposat</string>
+    <string name="snooze_time">Temps de posposat</string>
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilitat</string>
@@ -294,6 +373,14 @@
     <string name="saturday">Dissabte</string>
     <string name="sunday">Diumenge</string>
 
+    <string name="monday_letter">DL</string>
+    <string name="tuesday_letter">DT</string>
+    <string name="wednesday_letter">DC</string>
+    <string name="thursday_letter">DJ</string>
+    <string name="friday_letter">DV</string>
+    <string name="saturday_letter">DS</string>
+    <string name="sunday_letter">DG</string>
+
     <!-- About -->
     <string name="about">Sobre</string>
     <string name="website_label">Més aplicacions senzilles i codi font a</string>
@@ -309,8 +396,8 @@
     <string name="follow_us">Segueix-nos</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Informació adicional</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
+    <string name="app_version">Versió de la APP: %s</string>
+    <string name="device_os">Sistema operatiu: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hola,<br><br>
@@ -367,4 +454,5 @@
     <string name="espresso_title">Espresso (testing helper)</string>
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="number_picker_title">Number Picker (customizable number picker)</string>
 </resources>

@@ -61,15 +61,15 @@
     <string name="please_select_destination">Lütfen bir hedef seçin</string>
     <string name="source_and_destination_same">Kaynak ve hedef aynı olamaz</string>
     <string name="copy_failed">Dosyalar kopyalanamadı</string>
-    <string name="copying">Kopyalanıyor&#8230;</string>
+    <string name="copying">Kopyalanıyor…</string>
     <string name="copying_success">Dosyalar başarıyla kopyalandı</string>
     <string name="copy_move_failed">Bir hata oluştu</string>
-    <string name="moving">Taşınıyor&#8230;</string>
+    <string name="moving">Taşınıyor…</string>
     <string name="moving_success">Dosyalar başarıyla taşındı</string>
     <string name="moving_success_partial">Bazı dosyalar taşınamadı</string>
     <string name="copying_success_partial">Bazı dosyalar kopyalanamadı</string>
     <string name="no_files_selected">Hiçbir dosya seçilmedi</string>
-    <string name="saving">Kaydediliyor&#8230;</string>
+    <string name="saving">Kaydediliyor…</string>
     <string name="could_not_create_folder">%s klasörü oluşturulamıyor</string>
     <string name="could_not_create_file">%s dosyası oluşturulamıyor</string>
 
@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Bilinmeyen bir hata oluştu</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">\"%1$s\" dosyası zaten var</string>
-    <string name="file_already_exists_overwrite">\"%1$s\" dosyası zaten var. Üzerine yazılsın mı?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="file_already_exists">\"%s\" dosyası zaten var</string>
+    <string name="file_already_exists_overwrite">\"%s\" dosyası zaten var. Üzerine yazılsın mı?</string>
+    <string name="folder_already_exists">Folder \"%s\" already exists</string>
     <string name="merge">Merge</string>
     <string name="overwrite">Üzerine yaz</string>
     <string name="skip">Atla</string>
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Seçimi onayla</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d öğe</item>
-        <item quantity="other">%1$d öğe</item>
+        <item quantity="one">%d öğe</item>
+        <item quantity="other">%d öğe</item>
     </plurals>
 
     <!-- Storages -->
@@ -136,6 +136,8 @@
     <string name="background_color">Arkaplan rengi</string>
     <string name="text_color">Metin rengi</string>
     <string name="primary_color">Ana renk</string>
+    <string name="foreground_color">Foreground color</string>
+    <string name="app_icon_color">App icon color</string>
     <string name="restore_defaults">Varsayılanları geri yükle</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Bir rengi değiştirdiğinizde Özel temaya geçeceksiniz</string>
@@ -219,18 +221,87 @@
     <string name="fingerprint_setup_successfully">Koruma kurulumu başarıyla gerçekleştirildi. Sıfırlama ile ilgili sorunlar olması durumunda lütfen uygulamayı yeniden yükleyin.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">dakika</string>
+    <string name="hours_raw">saatler</string>
+    <string name="days_raw">günler</string>
+
     <plurals name="seconds">
-        <item quantity="one">%1$d saniye</item>
-        <item quantity="other">%1$d saniye</item>
+        <item quantity="one">%d saniye</item>
+        <item quantity="other">%d saniye</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d dakika</item>
-        <item quantity="other">%1$d dakika</item>
+        <item quantity="one">%d dakika</item>
+        <item quantity="other">%d dakika</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d saat</item>
-        <item quantity="other">%1$d saat</item>
+        <item quantity="one">%d saat</item>
+        <item quantity="other">%d saat</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d gün</item>
+        <item quantity="other">günler %d</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d hafta</item>
+        <item quantity="other">haftalar %d</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d ay</item>
+        <item quantity="other">aylar %d</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d yıl</item>
+        <item quantity="other">yıllar %d</item>
+    </plurals>
+
+    <!-- For example: I will be there in 5 minutes -->
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="minutes_before">
+        <item quantity="one">%d dakika önce</item>
+        <item quantity="other">%d dakika önce</item>
+    </plurals>
+    <plurals name="hours_before">
+        <item quantity="one">%d saat önce</item>
+        <item quantity="other">%d saat önce</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">%d önceki gün</item>
+        <item quantity="other">%d önceki gün</item>
+    </plurals>
+
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
+    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
+    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+
+    <!-- Alarms -->
+    <string name="snooze">Snooze</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="no_reminder">Hatırlatma yok</string>
+    <string name="at_start">Başlangıçta</string>
 
     <!-- Settings -->
     <string name="settings">Ayarlar</string>
@@ -247,9 +318,15 @@
     <string name="password_protect_whole_app">Parola tüm uygulamayı korur</string>
     <string name="keep_last_modified">Dosya kopyalama/taşıma/yeniden adlandırmada eski son değiştirilme değerini koru</string>
     <string name="show_info_bubble">Kaydırma çubuğunu sürükleyerek öğeleri kaydırmada bilgi balonunu göster</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
     <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
+    <string name="use_same_snooze">Always use same snooze time</string>
+    <string name="snooze_time">Snooze time</string>
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Setting sections -->
     <string name="visibility">Görünürlük</string>
@@ -295,6 +372,14 @@
     <string name="saturday">Cumartesi</string>
     <string name="sunday">Pazar</string>
 
+    <string name="monday_letter">P</string>
+    <string name="tuesday_letter">S</string>
+    <string name="wednesday_letter">Ç</string>
+    <string name="thursday_letter">P</string>
+    <string name="friday_letter">C</string>
+    <string name="saturday_letter">C</string>
+    <string name="sunday_letter">P</string>
+
     <!-- About -->
     <string name="about">Hakkında</string>
     <string name="website_label">Kaynak kodları için ziyaret edin</string>
@@ -310,8 +395,8 @@
     <string name="follow_us">Bizi takip edin</string>
     <string name="copyright">v %1$s\nTelif hakkı © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Additional info</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
+    <string name="app_version">App version: %s</string>
+    <string name="device_os">Device OS: %s</string>
     <string name="donate_please">
         <![CDATA[
             Merhaba,<br><br>
@@ -368,4 +453,5 @@
     <string name="espresso_title">Espresso (test yardımcısı)</string>
     <string name="gson_title">Gson (JSON ayrıştırıcısıser)</string>
     <string name="leak_canary_title">Leak Canary (bellek sızıntısı dedektörü)</string>
+    <string name="number_picker_title">Number Picker (customizable number picker)</string>
 </resources>

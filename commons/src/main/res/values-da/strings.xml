@@ -8,7 +8,7 @@
     <string name="an_error_occurred">Der opstod en fejl: %s</string>
     <string name="open_with">Åbn med</string>
     <string name="no_app_found">Der blev ikke fundet en gyldig app</string>
-    <string name="set_as">Sæt som</string>
+    <string name="set_as">Anvend som</string>
     <string name="value_copied_to_clipboard">Værdi kopieret til udklipsholder</string>
     <string name="unknown">Ukendt</string>
     <string name="always">Altid</string>
@@ -43,7 +43,7 @@
     <string name="renaming_folder">Omdøber mappe</string>
     <string name="filename_cannot_be_empty">Filen skal have et navn</string>
     <string name="filename_invalid_characters">Filnavnet indeholder ugyldige tegn</string>
-    <string name="filename_invalid_characters_placeholder">Filnavnet \'%s\' indeholder ugyldige tegn</string>
+    <string name="filename_invalid_characters_placeholder">Filnavnet \"%s\" indeholder ugyldige tegn</string>
     <string name="extension_cannot_be_empty">Filtypen kan ikke stå tom</string>
     <string name="source_file_doesnt_exist">Kildefilen %s eksisterer ikke</string>
 
@@ -52,24 +52,24 @@
     <string name="move">Flyt</string>
     <string name="copy_move">Kopier/Flyt</string>
     <string name="copy_to">Kopier til</string>
-    <string name="move_to">Flyt ti</string>
+    <string name="move_to">Flyt til</string>
     <string name="source">Kilde</string>
     <string name="destination">Destination</string>
     <string name="select_destination">Vælg destination</string>
     <string name="click_select_destination">Klik her for at vælge destination</string>
     <string name="invalid_destination">Kunne ikke skrive til den valgte destination</string>
     <string name="please_select_destination">Vælg en destination</string>
-    <string name="source_and_destination_same">Til og fra kan ikke overlappe</string>
+    <string name="source_and_destination_same">Til og fra skal være forskellige</string>
     <string name="copy_failed">Kunne ikke kopiere filerne</string>
-    <string name="copying">Kopierer&#8230;</string>
+    <string name="copying">Kopierer…</string>
     <string name="copying_success">Filerne er kopieret</string>
     <string name="copy_move_failed">Der opstod en fejl</string>
-    <string name="moving">Flytter&#8230;</string>
+    <string name="moving">Flytter…</string>
     <string name="moving_success">Filerne er flyttet</string>
     <string name="moving_success_partial">Ikke alle filer blev flyttet</string>
     <string name="copying_success_partial">Nogle filer blev ikke kopieret</string>
     <string name="no_files_selected">Der er ikke valgt nogen filer</string>
-    <string name="saving">Gemmer&#8230;</string>
+    <string name="saving">Gemmer…</string>
     <string name="could_not_create_folder">Kunne ikke oprette mappen %s</string>
     <string name="could_not_create_file">Kunne ikke oprette filen %s</string>
 
@@ -84,13 +84,13 @@
     <string name="unknown_error_occurred">Der opstod en ukendt fejl</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Filen \"%1$s\" findes allerede</string>
-    <string name="file_already_exists_overwrite">Filen \"%1$s\" findes allerede. Overskriv?</string>
-    <string name="folder_already_exists">Mappen \"%1$s\" findes allerede</string>
+    <string name="file_already_exists">Filen \"%s\" findes allerede</string>
+    <string name="file_already_exists_overwrite">Filen \"%s\" findes allerede. Overskriv?</string>
+    <string name="folder_already_exists">Mappen \"%s\" findes allerede</string>
     <string name="merge">Sammenflet</string>
     <string name="overwrite">Overskriv</string>
-    <string name="skip">Skip</string>
-    <string name="append">Tilføj med \'_1\'</string>
+    <string name="skip">Spring over</string>
+    <string name="append">Tilføj \"_1\"</string>
     <string name="apply_to_all">Anvend på alle konflikter</string>
 
     <!-- File picker -->
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Bekræft valg</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d element</item>
-        <item quantity="other">%1$d elementer</item>
+        <item quantity="one">%d element</item>
+        <item quantity="other">%d elementer</item>
     </plurals>
 
     <!-- Storages -->
@@ -115,12 +115,12 @@
     <string name="sd_card_otg_same">Stierne til SD-kortet og OTG-enheden kan ikke være ens</string>
 
     <!-- File properties -->
-    <string name="properties">Indstillinger</string>
+    <string name="properties">Egenskaber</string>
     <string name="path">Sti</string>
     <string name="items_selected">Elementer valgt</string>
     <string name="direct_children_count">Antal direkte underliggende</string>
     <string name="files_count">Antal filer i alt</string>
-    <string name="resolution">Resolution</string>
+    <string name="resolution">Opløsning</string>
     <string name="duration">Varighed</string>
     <string name="artist">Forfatter</string>
     <string name="album">Album</string>
@@ -136,6 +136,8 @@
     <string name="background_color">Baggrundsfarve</string>
     <string name="text_color">Tekstfarve</string>
     <string name="primary_color">Primær farve</string>
+    <string name="foreground_color">Forgrundsfarve</string>
+    <string name="app_icon_color">Farve til appens ikon</string>
     <string name="restore_defaults">Gendan standarder</string>
     <string name="theme">Udseende</string>
     <string name="changing_color_description">Ændring af farve vil også medføre skift til tilpasset udseende</string>
@@ -145,7 +147,7 @@
     <string name="undo_changes_confirmation">Er du sikker på at du vil fortryde ændringerne?</string>
     <string name="save_before_closing">Du har ændringer der ikke er gemt. Vil du gemme dem?</string>
     <string name="apply_to_all_apps">Anvend farverne på alle Simple Apps</string>
-    <string name="share_colors_success">Farverne er ændret. Et nyt udseende kaldet \'Tilpasset\' er tilføjet, brug det ved opdatering af all app-farver fremover.</string>
+    <string name="share_colors_success">Farverne er ændret. Et nyt udseende kaldet \"Tilpasset\" er tilføjet, brug det ved opdatering af alle app-farver fremover.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Køb <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> for at låse denne funktion op og understøtte appens udvikling. Tak!
@@ -185,7 +187,7 @@
     <string name="name">Navn</string>
     <string name="size">Størrelse</string>
     <string name="last_modified">Senest ændret</string>
-    <string name="date_taken">Date taken</string>
+    <string name="date_taken">Eksponeringsdato</string>
     <string name="title">Titel</string>
     <string name="filename">Filnavn</string>
     <string name="extension">Filtype</string>
@@ -214,23 +216,92 @@
     <string name="authentication_failed">Godkendelsen fejlede</string>
     <string name="authentication_blocked">Godkendelse blokeret, prøv igen om lidt</string>
     <string name="no_fingerprints_registered">Du har ingen registrerede fingeraftryk, tilføj nogle i indstillingerne på din enhed</string>
-    <string name="go_to_settings">Spring til indstillingerne</string>
+    <string name="go_to_settings">Gå til indstillingerne</string>
     <string name="protection_setup_successfully">Adgangskoden er oprettet. Geninstaller appen hvis du glemmer den.</string>
     <string name="fingerprint_setup_successfully">Beskyttelsen er oprettet. Geninstaller appen hvis du har problemer med at gendanne den.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minutter</string>
+    <string name="hours_raw">timer</string>
+    <string name="days_raw">dage</string>
+
     <plurals name="seconds">
-        <item quantity="one">%1$d sekund</item>
-        <item quantity="other">%1$d sekunder</item>
+        <item quantity="one">%d sekund</item>
+        <item quantity="other">%d sekunder</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minut</item>
-        <item quantity="other">%1$d minutter</item>
+        <item quantity="one">%d minut</item>
+        <item quantity="other">%d minutter</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d time</item>
-        <item quantity="other">%1$d timer</item>
+        <item quantity="one">%d time</item>
+        <item quantity="other">%d timer</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d dag</item>
+        <item quantity="other">%d dage</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d uge</item>
+        <item quantity="other">%d uger</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d måned</item>
+        <item quantity="other">%d måneder</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d år</item>
+        <item quantity="other">%d år</item>
+    </plurals>
+
+    <!-- For example: I will be there in 5 minutes -->
+    <plurals name="in_seconds">
+        <item quantity="one">%d sekund</item>
+        <item quantity="other">%d sekunder</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minut</item>
+        <item quantity="other">%d minutter</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d time</item>
+        <item quantity="other">%d timer</item>
+    </plurals>
+
+    <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="minutes_before">
+        <item quantity="one">%d minut før start</item>
+        <item quantity="other">%d minutter før start</item>
+    </plurals>
+    <plurals name="hours_before">
+        <item quantity="one">%d time før start</item>
+        <item quantity="other">%d timer før start</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">%d dag før start</item>
+        <item quantity="other">%d dage før start</item>
+    </plurals>
+
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_minutes">
+        <item quantity="one">%d minut</item>
+        <item quantity="other">%d minutter</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">%d time</item>
+        <item quantity="other">%d timer</item>
+    </plurals>
+
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Resterende tid før alarmen lyder:\n%s</string>
+    <string name="alarm_warning">Du anbefales sikre dig at alarmen virker som den skal inden du stoler på den. Den kan skuffe i kraft af strømbesparende begrænsninger på systemet.</string>
+    <string name="reminder_warning">Du anbefales sikre dig at påmindelser virker som de skal inden du stoler på dem. De kan skuffe i kraft af strømbesparende begrænsninger på systemet.</string>
+
+    <!-- Alarms -->
+    <string name="snooze">Snooze</string>
+    <string name="dismiss">Slå fra</string>
+    <string name="no_reminder">Ingen påmindelse</string>
+    <string name="at_start">Ved start</string>
 
     <!-- Settings -->
     <string name="settings">Indstillinger</string>
@@ -247,9 +318,15 @@
     <string name="password_protect_whole_app">Beskyt hele appen med en adgangskode</string>
     <string name="keep_last_modified">Kopi/flyt/omdøb skal ikke påvirke ændringstidspunktet</string>
     <string name="show_info_bubble">Vis en info-boble når jeg scroller med rullepanelet</string>
-    <string name="prevent_phone_from_sleeping">Hold telefonen \'vågen\'</string>
+    <string name="prevent_phone_from_sleeping">Forhindr telefonen i at falde i søvn når appen er i forgrunden</string>
     <string name="skip_delete_confirmation">Spørg ikke om bekræftelse før sletning</string>
     <string name="enable_pull_to_refresh">Aktiver træk nedad for at genindlæse</string>
+    <string name="use_24_hour_time_format">Brug 24-timersformat</string>
+    <string name="sunday_first">Søndag første ugedag</string>
+    <string name="widgets">Widgets</string>
+    <string name="use_same_snooze">Brug altid samme snooze-tid</string>
+    <string name="snooze_time">Snooze-tid</string>
+    <string name="vibrate_on_button_press">Vibrer ved tryk på knapper</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighed</string>
@@ -270,8 +347,8 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Vælg rodmappen på \'OTG\'-enheden på den næste skærm for at give adgang.</string>
-    <string name="wrong_root_selected_otg">Den forkerte mappe er valgt, vælg rodmappen på din \'OTG\'-enhed</string>
+    <string name="confirm_otg_storage_access_text">Vælg rodmappen på OTG-enheden på den næste skærm for at give adgang.</string>
+    <string name="wrong_root_selected_otg">Den forkerte mappe er valgt, vælg rodmappen på din OTG-enhed</string>
 
     <!-- Dates -->
     <string name="january">Januar</string>
@@ -295,6 +372,14 @@
     <string name="saturday">Lørdag</string>
     <string name="sunday">Søndag</string>
 
+    <string name="monday_letter">M</string>
+    <string name="tuesday_letter">T</string>
+    <string name="wednesday_letter">O</string>
+    <string name="thursday_letter">T</string>
+    <string name="friday_letter">F</string>
+    <string name="saturday_letter">L</string>
+    <string name="sunday_letter">S</string>
+
     <!-- About -->
     <string name="about">Om</string>
     <string name="website_label">For at se kildekoden besøg</string>
@@ -310,14 +395,14 @@
     <string name="follow_us">Følg os</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Yderligere info</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
+    <string name="app_version">App version: %s</string>
+    <string name="device_os">Device OS: %s</string>
     <string name="donate_please">
         <![CDATA[
-            Hej,<br><br>
-            håber du kan lide denne app. Den indeholder ingen reklamer, så vær sød at købe appen <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, som også vil forhindre at denne besked vises igen.<br><br>
+            Hej<br><br>
+            Håber du kan lide denne app. Den indeholder ingen reklamer, så vær sød at købe appen <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, som også vil forhindre at denne besked vises igen.<br><br>
             Du finder <a href="http://simplemobiletools.com/donate"><string name="copyright">flere muligheder for at donere her</a>.<br><br>
-            Thank you!
+            På forhånd tak!
         ]]>
     </string>
     <string name="purchase">Køb</string>
@@ -325,11 +410,11 @@
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
-            Hey,<br><br>
-            just letting you know that a new app has been released recently:<br><br>
+            Hej<br><br>
+            - synes lige du skulle vide at der er kommet en ny app:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-            You can download it by pressing the title.<br><br>
-            Thanks
+            Du kan downloade den med et klik på titlen.<br><br>
+            Tak
         ]]>
     </string>
 
@@ -367,4 +452,5 @@
     <string name="espresso_title">Espresso (tester helper)</string>
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (detektering af pladsmangel)</string>
+    <string name="number_picker_title">Number Picker (customizable number picker)</string>
 </resources>

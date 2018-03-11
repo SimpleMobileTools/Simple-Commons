@@ -61,15 +61,15 @@
     <string name="please_select_destination">Mohon Pilih Destinasi</string>
     <string name="source_and_destination_same">Sumber Dan Destinasi Tidak Boleh Sama</string>
     <string name="copy_failed">Tidak Dapat Menyalin File</string>
-    <string name="copying">Menyalin&#8230;</string>
+    <string name="copying">Menyalin…</string>
     <string name="copying_success">File Berhasil Di Salin</string>
     <string name="copy_move_failed">Terjadi Kesalahan</string>
-    <string name="moving">Memindahkan&#8230;</string>
+    <string name="moving">Memindahkan…</string>
     <string name="moving_success">File Berhasil Di Pindahkan</string>
     <string name="moving_success_partial">Beberapa File Tidak Dapat Di pindah</string>
     <string name="copying_success_partial">Beberapa File Tidak Dapat Di Salin</string>
     <string name="no_files_selected">Tidak Ada File Yang Di Pilih</string>
-    <string name="saving">Menyimpan&#8230;</string>
+    <string name="saving">Menyimpan…</string>
     <string name="could_not_create_folder">Tidak Dapat Membuat Folder %s</string>
     <string name="could_not_create_file">Tidak Dapat Membuat File %s</string>
 
@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Terjadi Kesalahan Tidak Di Ketahui</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">File \"%1$s\" Sudah Ada</string>
-    <string name="file_already_exists_overwrite">File \"%1$s\" Sudah Ada. Timpa saja?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" Sudah Ada</string>
+    <string name="file_already_exists">File \"%s\" Sudah Ada</string>
+    <string name="file_already_exists_overwrite">File \"%s\" Sudah Ada. Timpa saja?</string>
+    <string name="folder_already_exists">Folder \"%s\" Sudah Ada</string>
     <string name="merge">Gabung</string>
     <string name="overwrite">Timpa</string>
     <string name="skip">Lewati</string>
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Konfirmasi</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d item</item>
-        <item quantity="other">%1$d items</item>
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
     </plurals>
 
     <!-- Storages -->
@@ -136,6 +136,8 @@
     <string name="background_color">Warna Latar</string>
     <string name="text_color">Warna Teks</string>
     <string name="primary_color">Warna Utama</string>
+    <string name="foreground_color">Foreground color</string>
+    <string name="app_icon_color">App icon color</string>
     <string name="restore_defaults">Kembalikan Ke Awal</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Mengubah Warna Akan Membuat Beralih Ke Tema Kustom</string>
@@ -219,18 +221,87 @@
     <string name="fingerprint_setup_successfully">Pengaturan Proteksi Berhasil. Install Ulang Aplikasi Jika Terjadi Masalah Dengan Reset.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minutes</string>
+    <string name="hours_raw">hours</string>
+    <string name="days_raw">days</string>
+
     <plurals name="seconds">
-        <item quantity="one">%1$d Detik</item>
-        <item quantity="other">%1$d Detik</item>
+        <item quantity="one">%d Detik</item>
+        <item quantity="other">%d Detik</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d menit</item>
-        <item quantity="other">%1$d menit</item>
+        <item quantity="one">%d menit</item>
+        <item quantity="other">%d menit</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d Jam</item>
-        <item quantity="other">%1$d Jam</item>
+        <item quantity="one">%d Jam</item>
+        <item quantity="other">%d Jam</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
+
+    <!-- For example: I will be there in 5 minutes -->
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="minutes_before">
+        <item quantity="one">%d minute before</item>
+        <item quantity="other">%d minutes before</item>
+    </plurals>
+    <plurals name="hours_before">
+        <item quantity="one">%d hour before</item>
+        <item quantity="other">%d hours before</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">%d day before</item>
+        <item quantity="other">%d days before</item>
+    </plurals>
+
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
+    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
+    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+
+    <!-- Alarms -->
+    <string name="snooze">Snooze</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="no_reminder">No reminder</string>
+    <string name="at_start">At start</string>
 
     <!-- Settings -->
     <string name="settings">Pengaturan</string>
@@ -247,9 +318,15 @@
     <string name="password_protect_whole_app">Password protect the whole application</string>
     <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
     <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
+    <string name="use_same_snooze">Always use same snooze time</string>
+    <string name="snooze_time">Snooze time</string>
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>
@@ -295,6 +372,14 @@
     <string name="saturday">Saturday</string>
     <string name="sunday">Sunday</string>
 
+    <string name="monday_letter">M</string>
+    <string name="tuesday_letter">T</string>
+    <string name="wednesday_letter">W</string>
+    <string name="thursday_letter">T</string>
+    <string name="friday_letter">F</string>
+    <string name="saturday_letter">S</string>
+    <string name="sunday_letter">S</string>
+
     <!-- About -->
     <string name="about">Tentang</string>
     <string name="website_label">Untuk Sumber Kode Kunjungi</string>
@@ -310,8 +395,8 @@
     <string name="follow_us">Follow us</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Tambahan info</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
+    <string name="app_version">App version: %s</string>
+    <string name="device_os">Device OS: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>
@@ -368,4 +453,5 @@
     <string name="espresso_title">Espresso (testing helper)</string>
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="number_picker_title">Number Picker (customizable number picker)</string>
 </resources>

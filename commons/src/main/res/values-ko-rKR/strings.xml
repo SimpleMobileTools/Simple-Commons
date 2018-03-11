@@ -61,15 +61,15 @@
     <string name="please_select_destination">대상 경로를 선택하세요.</string>
     <string name="source_and_destination_same">원본파일과 대상파일은 동일할 수 없음</string>
     <string name="copy_failed">파일을 복사 할 수 없음</string>
-    <string name="copying">복사중&#8230;</string>
+    <string name="copying">복사중…</string>
     <string name="copying_success">파일복사 성공</string>
     <string name="copy_move_failed">에러발생</string>
-    <string name="moving">이동중&#8230;</string>
+    <string name="moving">이동중…</string>
     <string name="moving_success">파일이동 성공</string>
     <string name="moving_success_partial">일부 파일을 이동 할 수 없음</string>
     <string name="copying_success_partial">일부 파일을 복사 할 수 없음</string>
     <string name="no_files_selected">파일이 선택되지 않음</string>
-    <string name="saving">저장중&#8230;</string>
+    <string name="saving">저장중…</string>
     <string name="could_not_create_folder">%s 폴더 생성에 실패함</string>
     <string name="could_not_create_file">%s 파일 생성에 실패함</string>
 
@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">알 수 없는 에러가 발생함</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">\"%1$s\" 파일이 이미 존재합니다.</string>
-    <string name="file_already_exists_overwrite">\"%1$s\" 파일이 이미 존재합니다. 덮어쓰시겠습니까?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="file_already_exists">\"%s\" 파일이 이미 존재합니다.</string>
+    <string name="file_already_exists_overwrite">\"%s\" 파일이 이미 존재합니다. 덮어쓰시겠습니까?</string>
+    <string name="folder_already_exists">Folder \"%s\" already exists</string>
     <string name="merge">Merge</string>
     <string name="overwrite">덮어쓰기</string>
     <string name="skip">건너뛰기</string>
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d item</item>
-        <item quantity="other">%1$d items</item>
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
     </plurals>
 
     <!-- Storages -->
@@ -136,6 +136,8 @@
     <string name="background_color">배경 색상</string>
     <string name="text_color">텍스트 색상</string>
     <string name="primary_color">주요 색상(테마)</string>
+    <string name="foreground_color">Foreground color</string>
+    <string name="app_icon_color">App icon color</string>
     <string name="restore_defaults">기본설정으로 변경</string>
     <string name="theme">테마</string>
     <string name="changing_color_description">주요 색상(테마)을 변경하면 사용자정의 테마로 전환됩니다.</string>
@@ -158,7 +160,7 @@
     <string name="solarized">Solarized</string>
     <string name="dark_red">Dark red</string>
     <string name="black_white">Black &amp; White</string>
-    <string name="custom">Custom</string>
+    <string name="custom">사용자 정의</string>
     <string name="shared">Shared</string>
 
     <!-- What's new -->
@@ -219,18 +221,87 @@
     <string name="fingerprint_setup_successfully">보안 설정이 성공적으로 완료되었습니다. 재설정 시 문제가 발생하면 앱을 다시 설치하시기 바랍니다.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">분</string>
+    <string name="hours_raw">시간</string>
+    <string name="days_raw">일</string>
+
     <plurals name="seconds">
-        <item quantity="one">%1$d second</item>
-        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minute</item>
-        <item quantity="other">%1$d minutes</item>
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d hour</item>
-        <item quantity="other">%1$d hours</item>
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
+
+    <!-- For example: I will be there in 5 minutes -->
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="minutes_before">
+        <item quantity="one">%d 분 전</item>
+        <item quantity="other">%d 분 전</item>
+    </plurals>
+    <plurals name="hours_before">
+        <item quantity="one">%d 시간 전</item>
+        <item quantity="other">%d 시간 전</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">%d 일 전</item>
+        <item quantity="other">%d 일 전</item>
+    </plurals>
+
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_minutes">
+        <item quantity="one">%d 분</item>
+        <item quantity="other">%d 분</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">%d 시</item>
+        <item quantity="other">%d 시</item>
+    </plurals>
+
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
+    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
+    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+
+    <!-- Alarms -->
+    <string name="snooze">스누즈</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="no_reminder">알림 없음</string>
+    <string name="at_start">시작할 때</string>
 
     <!-- Settings -->
     <string name="settings">설정</string>
@@ -247,9 +318,15 @@
     <string name="password_protect_whole_app">애플리케이션 전체에서 암호를 이용한 보호기능 사용</string>
     <string name="keep_last_modified">파일 복사/이동/변경 시 최종 수정시간 정보를 유지</string>
     <string name="show_info_bubble">스크롤바 드래그 시 항목별 툴팁 활성화</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="skip_delete_confirmation">삭제 확인 다이얼로그 비활성화</string>
     <string name="enable_pull_to_refresh">상하단 스와이프 동작으로 새로고침</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
+    <string name="use_same_snooze">Always use same snooze time</string>
+    <string name="snooze_time">Snooze time</string>
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Setting sections -->
     <string name="visibility">가시성</string>
@@ -295,6 +372,14 @@
     <string name="saturday">토요일</string>
     <string name="sunday">일요일</string>
 
+    <string name="monday_letter">월</string>
+    <string name="tuesday_letter">화</string>
+    <string name="wednesday_letter">수</string>
+    <string name="thursday_letter">목</string>
+    <string name="friday_letter">금</string>
+    <string name="saturday_letter">토</string>
+    <string name="sunday_letter">일</string>
+
     <!-- About -->
     <string name="about">앱정보</string>
     <string name="website_label">소스코드 공개 링크</string>
@@ -310,8 +395,8 @@
     <string name="follow_us">Follow us</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Additional info</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
+    <string name="app_version">App version: %s</string>
+    <string name="device_os">Device OS: %s</string>
     <string name="donate_please">
         <![CDATA[
             안녕하세요.<br>
@@ -371,4 +456,5 @@
     <string name="espresso_title">Espresso (testing helper)</string>
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="number_picker_title">Number Picker (customizable number picker)</string>
 </resources>

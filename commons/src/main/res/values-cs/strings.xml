@@ -61,15 +61,15 @@
     <string name="please_select_destination">Prosím zvolte cílovou složku</string>
     <string name="source_and_destination_same">Zdrojová a cílová složka se musí lišit</string>
     <string name="copy_failed">Nelze zkopírovat soubory</string>
-    <string name="copying">Kopíruji&#8230;</string>
+    <string name="copying">Kopíruji…</string>
     <string name="copying_success">Soubory byly úspěšně zkopírovány</string>
     <string name="copy_move_failed">Vyskytla se chyba</string>
-    <string name="moving">Přesunuji&#8230;</string>
+    <string name="moving">Přesunuji…</string>
     <string name="moving_success">Soubory byly úspěšně přesunuty</string>
     <string name="moving_success_partial">Některé soubory nemohly být přesunuty</string>
     <string name="copying_success_partial">Některé soubory nemohly být zkopírovány</string>
     <string name="no_files_selected">Žádné soubory vybrány</string>
-    <string name="saving">Ukládám&#8230;</string>
+    <string name="saving">Ukládám…</string>
     <string name="could_not_create_folder">Could not create folder %s</string>
     <string name="could_not_create_file">Could not create file %s</string>
 
@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Vyskytla se neznámá chyba</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Soubor \"%1$s\" již existuje</string>
-    <string name="file_already_exists_overwrite">Soubor \"%1$s\" již existuje. Přepsat?</string>
-    <string name="folder_already_exists">Složka \"%1$s\" již existuje</string>
+    <string name="file_already_exists">Soubor \"%s\" již existuje</string>
+    <string name="file_already_exists_overwrite">Soubor \"%s\" již existuje. Přepsat?</string>
+    <string name="folder_already_exists">Složka \"%s\" již existuje</string>
     <string name="merge">Merge</string>
     <string name="overwrite">Přepsat</string>
     <string name="skip">Přeskočit</string>
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d položka</item>
-        <item quantity="other">%1$d položek</item>
+        <item quantity="one">%d položka</item>
+        <item quantity="other">%d položek</item>
     </plurals>
 
     <!-- Storages -->
@@ -136,6 +136,8 @@
     <string name="background_color">Barva pozadí</string>
     <string name="text_color">Barva písma</string>
     <string name="primary_color">Primární barva</string>
+    <string name="foreground_color">Foreground color</string>
+    <string name="app_icon_color">App icon color</string>
     <string name="restore_defaults">Obnovit výchozí</string>
     <string name="theme">Motiv</string>
     <string name="changing_color_description">Změna barvy změní motiv na Vlastní</string>
@@ -219,18 +221,97 @@
     <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minuty</string>
+    <string name="hours_raw">hodiny</string>
+    <string name="days_raw">dny</string>
+
     <plurals name="seconds">
-        <item quantity="one">%1$d second</item>
-        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minute</item>
-        <item quantity="other">%1$d minutes</item>
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d hour</item>
-        <item quantity="other">%1$d hours</item>
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d den</item>
+        <item quantity="few">%d dni</item>
+        <item quantity="other">%d dní</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d týden</item>
+        <item quantity="few">%d týdni</item>
+        <item quantity="other">%d týdnů</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d měsíc</item>
+        <item quantity="few">%d měsíce</item>
+        <item quantity="other">%d měsíců</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d rok</item>
+        <item quantity="few">%d roky</item>
+        <item quantity="other">%d roků</item>
+    </plurals>
+
+    <!-- For example: I will be there in 5 minutes -->
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="few">%d seconds</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="few">%d minutes</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="few">%d hours</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="minutes_before">
+        <item quantity="one">před %d minutou</item>
+        <item quantity="few">před %d minutami</item>
+        <item quantity="other">před %d minutami</item>
+    </plurals>
+    <plurals name="hours_before">
+        <item quantity="one">před %d hodinou</item>
+        <item quantity="few">před %d hodinami</item>
+        <item quantity="other">před %d hodinami</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">před %d dnem</item>
+        <item quantity="few">před %d dnami</item>
+        <item quantity="other">před %d dny</item>
+    </plurals>
+
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
+    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
+    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+
+    <!-- Alarms -->
+    <string name="snooze">Snooze</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="no_reminder">Žádné připomenutí</string>
+    <string name="at_start">Na začátku</string>
 
     <!-- Settings -->
     <string name="settings">Nastavení</string>
@@ -247,9 +328,15 @@
     <string name="password_protect_whole_app">Password protect the whole application</string>
     <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
     <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
+    <string name="use_same_snooze">Always use same snooze time</string>
+    <string name="snooze_time">Snooze time</string>
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>
@@ -295,6 +382,14 @@
     <string name="saturday">Sobota</string>
     <string name="sunday">Neděle</string>
 
+    <string name="monday_letter">P</string>
+    <string name="tuesday_letter">Ú</string>
+    <string name="wednesday_letter">S</string>
+    <string name="thursday_letter">Č</string>
+    <string name="friday_letter">P</string>
+    <string name="saturday_letter">S</string>
+    <string name="sunday_letter">N</string>
+
     <!-- About -->
     <string name="about">O aplikaci</string>
     <string name="website_label">Pro zdrojové kódy navštivte</string>
@@ -302,7 +397,7 @@
     <string name="more_apps_underlined"><u>Více aplikací</u></string>
     <string name="third_party_licences_underlined"><u>Licence třetí strany</u></string>
     <string name="invite_friends_underlined"><u>Pozvat přátele</u></string>
-    <string name="share_text">Ahoj, pojď se podívat na %1$s v/na %2$s</string>
+    <string name="share_text">Ahoj, pojď se podívat na %1$s na %2$s</string>
     <string name="invite_via">Pozvat pomocí</string>
     <string name="rate_us_underlined"><u>Ohodnotit</u></string>
     <string name="donate">Donate</string>
@@ -310,8 +405,8 @@
     <string name="follow_us">Sledujte nás</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Additional info</string>
-    <string name="app_version">App version: %1$s</string>
-    <string name="device_os">Device OS: %1$s</string>
+    <string name="app_version">App version: %s</string>
+    <string name="device_os">Device OS: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>
@@ -368,4 +463,5 @@
     <string name="espresso_title">Espresso (testing helper)</string>
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="number_picker_title">Number Picker (customizable number picker)</string>
 </resources>

@@ -61,15 +61,15 @@
     <string name="please_select_destination">Kies een bestemming</string>
     <string name="source_and_destination_same">Bron en bestemming kunnen niet gelijk zijn</string>
     <string name="copy_failed">Kon de bestanden niet kopiëren</string>
-    <string name="copying">Kopiëren&#8230;</string>
+    <string name="copying">Kopiëren…</string>
     <string name="copying_success">Bestanden gekopieerd</string>
     <string name="copy_move_failed">Fout opgetreden</string>
-    <string name="moving">Verplaatsen&#8230;</string>
+    <string name="moving">Verplaatsen…</string>
     <string name="moving_success">Bestanden verplaatst</string>
     <string name="moving_success_partial">Sommige bestanden konden niet worden verplaatst</string>
     <string name="copying_success_partial">Sommige bestanden konden niet worden gekopieerd</string>
     <string name="no_files_selected">Geen bestanden geselecteerd</string>
-    <string name="saving">Opslaan&#8230;</string>
+    <string name="saving">Opslaan…</string>
     <string name="could_not_create_folder">Kon de map %s niet aanmaken</string>
     <string name="could_not_create_file">Kon het bestand %s niet aanmaken</string>
 
@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Onbekende fout opgetreden</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Bestand \"%1$s\" bestaat reeds</string>
-    <string name="file_already_exists_overwrite">Bestand \"%1$s\" bestaat reeds. Overschrijven?</string>
-    <string name="folder_already_exists">Map \"%1$s\" bestaat reeds</string>
+    <string name="file_already_exists">Bestand \"%s\" bestaat reeds</string>
+    <string name="file_already_exists_overwrite">Bestand \"%s\" bestaat reeds. Overschrijven?</string>
+    <string name="folder_already_exists">Map \"%s\" bestaat reeds</string>
     <string name="merge">Samenvoegen</string>
     <string name="overwrite">Overschrijven</string>
     <string name="skip">Overslaan</string>
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Keuze bevestigen</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d item</item>
-        <item quantity="other">%1$d items</item>
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
     </plurals>
 
     <!-- Storages -->
@@ -136,6 +136,8 @@
     <string name="background_color">Achtergrondkleur</string>
     <string name="text_color">Tekstkleur</string>
     <string name="primary_color">Primaire kleur</string>
+    <string name="foreground_color">Kleur voorgrond</string>
+    <string name="app_icon_color">Kleur app-icoon</string>
     <string name="restore_defaults">Standaardwaarden</string>
     <string name="theme">Thema</string>
     <string name="changing_color_description">Zodra een kleur veranderd wordt zal het aangepaste thema worden gebruikt</string>
@@ -167,7 +169,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">Verwijderen</string>
-    <string name="remove">Verwijderen</string>
+    <string name="remove">Weghalen</string>
     <string name="rename">Hernoemen</string>
     <string name="share">Delen</string>
     <string name="share_via">Delen via</string>
@@ -219,18 +221,87 @@
     <string name="fingerprint_setup_successfully">Vingerafdruk beveiliging ingesteld. Herinstalleer deze app indien u niet meer met uw vingerafdruk kunt authenticeren.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minuten</string>
+    <string name="hours_raw">uren</string>
+    <string name="days_raw">dagen</string>
+
     <plurals name="seconds">
-        <item quantity="one">%1$d seconde</item>
-        <item quantity="other">%1$d seconden</item>
+        <item quantity="one">%d seconde</item>
+        <item quantity="other">%d seconden</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minuut</item>
-        <item quantity="other">%1$d minuten</item>
+        <item quantity="one">%d minuut</item>
+        <item quantity="other">%d minuten</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d uur</item>
-        <item quantity="other">%1$d uren</item>
+        <item quantity="one">%d uur</item>
+        <item quantity="other">%d uren</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d dag</item>
+        <item quantity="other">%d dagen</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weken</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d maand</item>
+        <item quantity="other">%d maanden</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d jaar</item>
+        <item quantity="other">%d jaren</item>
+    </plurals>
+
+    <!-- For example: I will be there in 5 minutes -->
+    <plurals name="in_seconds">
+        <item quantity="one">%d seconde</item>
+        <item quantity="other">%d seconden</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minuut</item>
+        <item quantity="other">%d minuten</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d uur</item>
+        <item quantity="other">%d uren</item>
+    </plurals>
+
+    <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="minutes_before">
+        <item quantity="one">%d minuut van tevoren</item>
+        <item quantity="other">%d minuten van tevoren</item>
+    </plurals>
+    <plurals name="hours_before">
+        <item quantity="one">%d uur van tevoren</item>
+        <item quantity="other">%d uren van tevoren</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">%d dag van tevoren</item>
+        <item quantity="other">%d dagen van tevoren</item>
+    </plurals>
+
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_minutes">
+        <item quantity="one">%d minuut</item>
+        <item quantity="other">%d minuten</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">%d uur</item>
+        <item quantity="other">%d uren</item>
+    </plurals>
+
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Het alarm zal afgaan over\n%s</string>
+    <string name="alarm_warning">Controleer eerst of het alarm goed werkt. Er kunnen zich problemen voordoen door de batterijbesparing van Android.</string>
+    <string name="reminder_warning">Controleer eerst of de herinneringen goed werken. Er kunnen zich problemen voordoen door de batterijbesparing van Android.</string>
+
+    <!-- Alarms -->
+    <string name="snooze">Uitstellen</string>
+    <string name="dismiss">Uitzetten</string>
+    <string name="no_reminder">Geen herinnering</string>
+    <string name="at_start">Als afspraak begint</string>
 
     <!-- Settings -->
     <string name="settings">Instellingen</string>
@@ -247,9 +318,15 @@
     <string name="password_protect_whole_app">Hele app met wachtwoord beveiligen</string>
     <string name="keep_last_modified">Datum laatst gewijzigd behouden bij bestandsoperaties</string>
     <string name="show_info_bubble">Bij slepen van schuifbalk extra informatie tonen</string>
-    <string name="prevent_phone_from_sleeping">Slaapstand voorkomen</string>
+    <string name="prevent_phone_from_sleeping">Slaapstand voorkomen wanneer de app actief is</string>
     <string name="skip_delete_confirmation">Niet om bevestiging vragen bij verwijderen</string>
     <string name="enable_pull_to_refresh">Pull-to-refresh inschakelen</string>
+    <string name="use_24_hour_time_format">24-uursformaat gebruiken</string>
+    <string name="sunday_first">Week op zondag beginnen</string>
+    <string name="widgets">Widgets</string>
+    <string name="use_same_snooze">Altijd dezelfde interval voor uitstellen gebruiken</string>
+    <string name="snooze_time">Interval bij uitstellen</string>
+    <string name="vibrate_on_button_press">Trillen bij het indrukken van knoppen</string>
 
     <!-- Setting sections -->
     <string name="visibility">Opmaak</string>
@@ -295,6 +372,14 @@
     <string name="saturday">Zaterdag</string>
     <string name="sunday">Zondag</string>
 
+    <string name="monday_letter">M</string>
+    <string name="tuesday_letter">D</string>
+    <string name="wednesday_letter">W</string>
+    <string name="thursday_letter">D</string>
+    <string name="friday_letter">V</string>
+    <string name="saturday_letter">Z</string>
+    <string name="sunday_letter">Z</string>
+
     <!-- About -->
     <string name="about">Over</string>
     <string name="website_label">Bezoek voor de broncode</string>
@@ -310,8 +395,8 @@
     <string name="follow_us">Volg ons</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Extra informatie</string>
-    <string name="app_version">Versie: %1$s</string>
-    <string name="device_os">Besturingssysteem: %1$s</string>
+    <string name="app_version">Versie: %s</string>
+    <string name="device_os">Besturingssysteem: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hallo,<br><br>
@@ -325,11 +410,11 @@
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
-            Hey,<br><br>
-            just letting you know that a new app has been released recently:<br><br>
+            Hallo,<br><br>
+            Er is recentelijk een nieuwe app uitgebracht:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-            You can download it by pressing the title.<br><br>
-            Thanks
+            Downloaden kan door een druk op de naam hierboven.<br><br>
+            Dank u wel!
         ]]>
     </string>
 
@@ -367,4 +452,5 @@
     <string name="espresso_title">Espresso (testing helper)</string>
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="number_picker_title">Number Picker (customizable number picker)</string>
 </resources>

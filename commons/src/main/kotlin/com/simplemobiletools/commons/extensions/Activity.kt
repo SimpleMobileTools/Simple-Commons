@@ -24,12 +24,10 @@ import android.widget.TextView
 import android.widget.Toast
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
-import com.simplemobiletools.commons.dialogs.DonateDialog
-import com.simplemobiletools.commons.dialogs.SecurityDialog
-import com.simplemobiletools.commons.dialogs.WhatsNewDialog
-import com.simplemobiletools.commons.dialogs.WritePermissionDialog
+import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FileDirItem
+import com.simplemobiletools.commons.models.RadioItem
 import com.simplemobiletools.commons.models.Release
 import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.MyTextView
@@ -730,4 +728,45 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
         window.setBackgroundDrawable(ColorDrawable(baseConfig.backgroundColor))
     }
     callback?.invoke()
+}
+
+fun Activity.showPickIntervalDialog(curMinutes: Int, isSnoozePicker: Boolean = false, cancelCallback: (() -> Unit)? = null, callback: (minutes: Int) -> Unit) {
+    hideKeyboard()
+    val minutes = TreeSet<Int>()
+    minutes.apply {
+        if (!isSnoozePicker) {
+            add(-1)
+            add(0)
+        }
+        add(5)
+        add(10)
+        add(20)
+        add(30)
+        add(60)
+        add(curMinutes)
+    }
+
+    val items = ArrayList<RadioItem>(minutes.size + 1)
+    minutes.mapIndexedTo(items, { index, value ->
+        RadioItem(index, getFormattedMinutes(value, !isSnoozePicker), value)
+    })
+
+    var selectedIndex = 0
+    minutes.forEachIndexed { index, value ->
+        if (value == curMinutes) {
+            selectedIndex = index
+        }
+    }
+
+    items.add(RadioItem(-2, getString(R.string.custom)))
+
+    RadioGroupDialog(this, items, selectedIndex, showOKButton = isSnoozePicker, cancelCallback = cancelCallback) {
+        if (it == -2) {
+            CustomIntervalPickerDialog(this) {
+                callback(it)
+            }
+        } else {
+            callback(it as Int)
+        }
+    }
 }

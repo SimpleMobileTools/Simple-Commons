@@ -61,15 +61,15 @@
     <string name="please_select_destination">Velg et mål</string>
     <string name="source_and_destination_same">Kilde og mål kan ikke være det samme</string>
     <string name="copy_failed">Kunne ikke kopiere filene</string>
-    <string name="copying">Kopierer&#8230;</string>
+    <string name="copying">Kopierer…</string>
     <string name="copying_success">Filer ble kopiert vellykket</string>
     <string name="copy_move_failed">En feil oppstod</string>
-    <string name="moving">Flytter&#8230;</string>
+    <string name="moving">Flytter…</string>
     <string name="moving_success">Filer ble flyttet vellykket</string>
     <string name="moving_success_partial">Noen filer kunne ikke flyttes</string>
     <string name="copying_success_partial">Noen filer kunne ikke kopieres</string>
     <string name="no_files_selected">Ingen filer valgt</string>
-    <string name="saving">Lagrer&#8230;</string>
+    <string name="saving">Lagrer…</string>
     <string name="could_not_create_folder">Kunne ikke opprette mappen %s</string>
     <string name="could_not_create_file">Kunne ikke opprette filen %s</string>
 
@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">En ukjent feil oppstod</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Filen \"%1$s\" finnes allerede</string>
-    <string name="file_already_exists_overwrite">Filen \"%1$s\" finnes allerede. Overskrive?</string>
-    <string name="folder_already_exists">Mappen \"%1$s\" finnes allerede</string>
+    <string name="file_already_exists">Filen \"%s\" finnes allerede</string>
+    <string name="file_already_exists_overwrite">Filen \"%s\" finnes allerede. Overskrive?</string>
+    <string name="folder_already_exists">Mappen \"%s\" finnes allerede</string>
     <string name="merge">Sammenslå</string>
     <string name="overwrite">Overskriv</string>
     <string name="skip">Hopp over</string>
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Bekreft valg</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d element</item>
-        <item quantity="other">%1$d elementer</item>
+        <item quantity="one">%d element</item>
+        <item quantity="other">%d elementer</item>
     </plurals>
 
     <!-- Storages -->
@@ -112,7 +112,7 @@
     <string name="sd_card">SD-kort</string>
     <string name="root">Rot</string>
     <string name="wrong_root_selected">Feil mappe er valgt, velg rotmappen til SD-kortet</string>
-    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
+    <string name="sd_card_otg_same">Bane for SD-kort og OTG-enhet kan ikke være den samme</string>
 
     <!-- File properties -->
     <string name="properties">Egenskaper</string>
@@ -136,6 +136,8 @@
     <string name="background_color">Bakgrunnsfarge</string>
     <string name="text_color">Tekstfarge</string>
     <string name="primary_color">Primærfarge</string>
+    <string name="foreground_color">Forgrunnsfarge</string>
+    <string name="app_icon_color">Farge for app-ikon</string>
     <string name="restore_defaults">Gjenopprett standard</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Endring av farge vil gjøre at det skiftes til Tilpasset tema</string>
@@ -219,18 +221,87 @@
     <string name="fingerprint_setup_successfully">Beskyttelse er stilt inn. Installer appen på nytt i tilfelle problemer med å tilbakestille.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minutter</string>
+    <string name="hours_raw">timer</string>
+    <string name="days_raw">dager</string>
+
     <plurals name="seconds">
-        <item quantity="one">%1$d sekund</item>
-        <item quantity="other">%1$d sekunder</item>
+        <item quantity="one">%d sekund</item>
+        <item quantity="other">%d sekunder</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minutt</item>
-        <item quantity="other">%1$d minutter</item>
+        <item quantity="one">%d minutt</item>
+        <item quantity="other">%d minutter</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d time</item>
-        <item quantity="other">%1$d timer</item>
+        <item quantity="one">%d time</item>
+        <item quantity="other">%d timer</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d dag</item>
+        <item quantity="other">%d dager</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d uke</item>
+        <item quantity="other">%d uker</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d måned</item>
+        <item quantity="other">%d måneder</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d år</item>
+        <item quantity="other">%d år</item>
+    </plurals>
+
+    <!-- For example: I will be there in 5 minutes -->
+    <plurals name="in_seconds">
+        <item quantity="one">%d sekund</item>
+        <item quantity="other">%d sekunder</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minutt</item>
+        <item quantity="other">%d minutter</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d time</item>
+        <item quantity="other">%d timer</item>
+    </plurals>
+
+    <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="minutes_before">
+        <item quantity="one">%d minutt før</item>
+        <item quantity="other">%d minutter før</item>
+    </plurals>
+    <plurals name="hours_before">
+        <item quantity="one">%d time før</item>
+        <item quantity="other">%d timer før</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">%d dag før</item>
+        <item quantity="other">%d dager før</item>
+    </plurals>
+
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_minutes">
+        <item quantity="one">%d minutt</item>
+        <item quantity="other">%d minutter</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">%d time</item>
+        <item quantity="other">%d timer</item>
+    </plurals>
+
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Tid igjen til alarmen går:\n%s</string>
+    <string name="alarm_warning">Sørg for at alarmen fungerer ordentlig før du stoler på den. Den kan fungere dårlig på grunn av systembegrensninger relatert til batterisparing.</string>
+    <string name="reminder_warning">Sørg for at påminnelsene fungerer riktig før du stoler på dem. De kan fungere dårlig på grunn av systembegrensninger relatert til batterisparing.</string>
+
+    <!-- Alarms -->
+    <string name="snooze">Snooze</string>
+    <string name="dismiss">Avvis</string>
+    <string name="no_reminder">Ingen påminnelse</string>
+    <string name="at_start">Ved start</string>
 
     <!-- Settings -->
     <string name="settings">Innstillinger</string>
@@ -247,9 +318,15 @@
     <string name="password_protect_whole_app">Passordbeskytt hele appen</string>
     <string name="keep_last_modified">Behold gammel Sist endret-verdi ved kopier/flytt/endre navn for filer</string>
     <string name="show_info_bubble">Vis en info-boble ved å dra i rullefeltet</string>
-    <string name="prevent_phone_from_sleeping">Forhindre at telefonen går i hvilemodus</string>
+    <string name="prevent_phone_from_sleeping">Forhindre at telefonen går i hvilemodus mens appen er i forgrunnen</string>
     <string name="skip_delete_confirmation">Hopp alltid over dialog for slettebekreftelse</string>
     <string name="enable_pull_to_refresh">Aktiver vertikal sveipebevegelse fra toppen for innholdsgjenoppfrisking</string>
+    <string name="use_24_hour_time_format">Bruk 24-timers tidsformat</string>
+    <string name="sunday_first">Start uken på søndag</string>
+    <string name="widgets">Moduler</string>
+    <string name="use_same_snooze">Bruk alltid samme intervall for Snooze</string>
+    <string name="snooze_time">Intervall for Snooze</string>
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighet</string>
@@ -295,6 +372,14 @@
     <string name="saturday">Lørdag</string>
     <string name="sunday">Søndag</string>
 
+    <string name="monday_letter">M</string>
+    <string name="tuesday_letter">T</string>
+    <string name="wednesday_letter">O</string>
+    <string name="thursday_letter">T</string>
+    <string name="friday_letter">F</string>
+    <string name="saturday_letter">L</string>
+    <string name="sunday_letter">S</string>
+
     <!-- About -->
     <string name="about">Om</string>
     <string name="website_label">For kildekoden besøk</string>
@@ -310,8 +395,8 @@
     <string name="follow_us">Følg oss</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Tilleggsinformasjon</string>
-    <string name="app_version">App-versjon: %1$s</string>
-    <string name="device_os">Operativsystem: %1$s</string>
+    <string name="app_version">App-versjon: %s</string>
+    <string name="device_os">Operativsystem: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>
@@ -368,4 +453,5 @@
     <string name="espresso_title">Espresso (testing helper)</string>
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="number_picker_title">Number Picker (customizable number picker)</string>
 </resources>

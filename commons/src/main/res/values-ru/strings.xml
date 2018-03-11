@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Произошла неизвестная ошибка</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Файл «%1$s» уже существует</string>
-    <string name="file_already_exists_overwrite">Файл «%1$s» уже существует. Перезаписать?</string>
-    <string name="folder_already_exists">Папка «%1$s» уже существует</string>
+    <string name="file_already_exists">Файл «%s» уже существует</string>
+    <string name="file_already_exists_overwrite">Файл «%s» уже существует. Перезаписать?</string>
+    <string name="folder_already_exists">Папка «%s» уже существует</string>
     <string name="merge">Объединить</string>
     <string name="overwrite">Перезаписать</string>
     <string name="skip">Пропустить</string>
@@ -102,9 +102,9 @@
     <string name="confirm_selection">Подтвердить выделение</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d объект</item>
-        <item quantity="few">%1$d объекта</item>
-        <item quantity="many">%1$d объектов</item>
+        <item quantity="one">%d объект</item>
+        <item quantity="few">%d объекта</item>
+        <item quantity="many">%d объектов</item>
     </plurals>
 
     <!-- Storages -->
@@ -137,6 +137,8 @@
     <string name="background_color">Цвет фона</string>
     <string name="text_color">Цвет текста</string>
     <string name="primary_color">Основной цвет</string>
+    <string name="foreground_color">Foreground color</string>
+    <string name="app_icon_color">App icon color</string>
     <string name="restore_defaults">Сбросить к стандартным</string>
     <string name="theme">Тема</string>
     <string name="changing_color_description">Изменение цвета повлечёт переключение на пользовательскую тему.</string>
@@ -220,21 +222,106 @@
     <string name="fingerprint_setup_successfully">Установка защиты выполнена успешно. Переустановите приложение в случае возникновения проблем с её отключением.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">минут</string>
+    <string name="hours_raw">часов</string>
+    <string name="days_raw">дней</string>
+
     <plurals name="seconds">
-        <item quantity="one">%1$d секунда</item>
-        <item quantity="few">%1$d секунды</item>
-        <item quantity="other">%1$d секунд</item>
+        <item quantity="one">%d секунда</item>
+        <item quantity="few">%d секунды</item>
+        <item quantity="other">%d секунд</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d минута</item>
-        <item quantity="few">%1$d минуты</item>
-        <item quantity="many">%1$d минут</item>
+        <item quantity="one">%d минута</item>
+        <item quantity="few">%d минуты</item>
+        <item quantity="many">%d минут</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d час</item>
-        <item quantity="few">%1$d часа</item>
-        <item quantity="many">%1$d часов</item>
+        <item quantity="one">%d час</item>
+        <item quantity="few">%d часа</item>
+        <item quantity="many">%d часов</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d день</item>
+        <item quantity="few">%d дня</item>
+        <item quantity="many">%d дней</item>
+        <item quantity="other">%d дня(-ей)</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d неделя</item>
+        <item quantity="few">%d недели</item>
+        <item quantity="many">%d недель</item>
+        <item quantity="other">%d недели(-ль)</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d месяц</item>
+        <item quantity="few">%d месяца</item>
+        <item quantity="many">%d месяцев</item>
+        <item quantity="other">%d месяца(-ев)</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d год</item>
+        <item quantity="few">%d года</item>
+        <item quantity="many">%d лет</item>
+        <item quantity="other">%d года(лет)</item>
+    </plurals>
+
+    <!-- For example: I will be there in 5 minutes -->
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="minutes_before">
+        <item quantity="one">%d минута до события</item>
+        <item quantity="few">%d минуты до события</item>
+        <item quantity="many">%d минут до события</item>
+        <item quantity="other">%d минут(-ы) до события</item>
+    </plurals>
+    <plurals name="hours_before">
+        <item quantity="one">%d час до события</item>
+        <item quantity="few">%d часа до события</item>
+        <item quantity="many">%d часов до события</item>
+        <item quantity="other">%d часа(-ов) до события</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">%d день до события</item>
+        <item quantity="few">%d дня до события</item>
+        <item quantity="many">%d дней до события</item>
+        <item quantity="other">%d дня(-ей) до события</item>
+    </plurals>
+
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_minutes">
+        <item quantity="one">%d минута</item>
+        <item quantity="few">%d минуты</item>
+        <item quantity="many">%d минут</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">%d час</item>
+        <item quantity="few">%d часа</item>
+        <item quantity="many">%d часов</item>
+    </plurals>
+
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
+    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
+    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+
+    <!-- Alarms -->
+    <string name="snooze">Отложить</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="no_reminder">Без напоминания</string>
+    <string name="at_start">С наступлением события</string>
 
     <!-- Settings -->
     <string name="settings">Настройки</string>
@@ -251,9 +338,15 @@
     <string name="password_protect_whole_app">Защита паролем всего приложения</string>
     <string name="keep_last_modified">Сохранять значение даты изменения файла при копировании/перемещении/переименовании</string>
     <string name="show_info_bubble">Показывать информационное окно при прокрутке элементов перетаскиванием полосы прокрутки</string>
-    <string name="prevent_phone_from_sleeping">Предотвращать засыпание устройства</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="skip_delete_confirmation">Всегда пропускать диалог подтверждения удаления</string>
     <string name="enable_pull_to_refresh">Использовать «потяните-для-обновления» в верхней части экрана</string>
+    <string name="use_24_hour_time_format">Использовать 24-часовой формат времени</string>
+    <string name="sunday_first">Воскресенье — начало недели</string>
+    <string name="widgets">Виджеты</string>
+    <string name="use_same_snooze">Всегда использовать один и тот же интервал повтора</string>
+    <string name="snooze_time">Интервал повтора</string>
+    <string name="vibrate_on_button_press">Вибрация при нажатии кнопок</string>
 
     <!-- Setting sections -->
     <string name="visibility">Отображение</string>
@@ -299,6 +392,14 @@
     <string name="saturday">Суббота</string>
     <string name="sunday">Воскресенье</string>
 
+    <string name="monday_letter">П</string>
+    <string name="tuesday_letter">В</string>
+    <string name="wednesday_letter">С</string>
+    <string name="thursday_letter">Ч</string>
+    <string name="friday_letter">П</string>
+    <string name="saturday_letter">С</string>
+    <string name="sunday_letter">В</string>
+
     <!-- About -->
     <string name="about">О приложении</string>
     <string name="website_label">Исходный код можно найти по адресу</string>
@@ -314,8 +415,8 @@
     <string name="follow_us">Подписаться на нас</string>
     <string name="copyright">v %1$s\nАвторские права © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Дополнительная информация</string>
-    <string name="app_version">Версия приложения: %1$s</string>
-    <string name="device_os">ОС устройства: %1$s</string>
+    <string name="app_version">Версия приложения: %s</string>
+    <string name="device_os">ОС устройства: %s</string>
     <string name="donate_please">
         <![CDATA[
             Привет,<br><br>
@@ -372,4 +473,5 @@
     <string name="espresso_title">Espresso (помощник по тестированию)</string>
     <string name="gson_title">Gson (парсер JSON)</string>
     <string name="leak_canary_title">Leak Canary (детектор утечек памяти)</string>
+    <string name="number_picker_title">Number Picker (customizable number picker)</string>
 </resources>

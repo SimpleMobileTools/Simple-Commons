@@ -40,7 +40,7 @@
     <string name="rename_folder_exists">Folder o tej nazwie już istnieje</string>
     <string name="rename_folder_root">Nie mogę zmienić nazwy folderu głównego</string>
     <string name="rename_folder_ok">Zmieniono nazwę folderu</string>
-    <string name="renaming_folder">Zmieniam nazwę folderu&#8230;</string>
+    <string name="renaming_folder">Zmieniam nazwę folderu…</string>
     <string name="filename_cannot_be_empty">Nazwa pliku nie może być pusta</string>
     <string name="filename_invalid_characters">Nazwa pliku zawiera niedozwolone znaki</string>
     <string name="filename_invalid_characters_placeholder">Nazwa \'%s\' zawiera niedozwolone znaki</string>
@@ -61,15 +61,15 @@
     <string name="please_select_destination">Wybierz miejsce docelowe</string>
     <string name="source_and_destination_same">Miejsce żródłowe i docelowe nie może być takie samo</string>
     <string name="copy_failed">Nie można skopiować pliku</string>
-    <string name="copying">Kopiuję&#8230;</string>
+    <string name="copying">Kopiuję…</string>
     <string name="copying_success">Pliki zostały skopiowane</string>
     <string name="copy_move_failed">Wystąpił błąd</string>
-    <string name="moving">Przenoszę&#8230;</string>
+    <string name="moving">Przenoszę…</string>
     <string name="moving_success">Pliki zostały przeniesione</string>
     <string name="moving_success_partial">Niektóre pliki nie mogą być przeniesione</string>
     <string name="copying_success_partial">Niektóre pliki nie mogą być skopiowane</string>
     <string name="no_files_selected">Nie wybrano żadnych plików</string>
-    <string name="saving">Zapsisuję&#8230;</string>
+    <string name="saving">Zapsisuję…</string>
     <string name="could_not_create_folder">Nie mogę utworzyć folderu %s</string>
     <string name="could_not_create_file">Nie mogę utworzyć pliku %s</string>
 
@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Wystąpił nieznany błąd</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Plik \"%1$s\" już istnieje</string>
-    <string name="file_already_exists_overwrite">Plik \"%1$s\" już istnieje. Nadpisać?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" już istnieje</string>
+    <string name="file_already_exists">Plik \"%s\" już istnieje</string>
+    <string name="file_already_exists_overwrite">Plik \"%s\" już istnieje. Nadpisać?</string>
+    <string name="folder_already_exists">Folder \"%s\" już istnieje</string>
     <string name="merge">Połącz</string>
     <string name="overwrite">Nadpisz</string>
     <string name="skip">Pomiń</string>
@@ -102,9 +102,9 @@
     <string name="confirm_selection">Potwierdź wybór</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d pozycja</item>
-        <item quantity="few">%1$d pozycje</item>
-        <item quantity="other">%1$d pozycji</item>
+        <item quantity="one">%d pozycja</item>
+        <item quantity="few">%d pozycje</item>
+        <item quantity="other">%d pozycji</item>
     </plurals>
 
     <!-- Storages -->
@@ -137,6 +137,8 @@
     <string name="background_color">Tło</string>
     <string name="text_color">Tekst</string>
     <string name="primary_color">Belka i przełączniki</string>
+    <string name="foreground_color">Foreground color</string>
+    <string name="app_icon_color">App icon color</string>
     <string name="restore_defaults">Przywróć domyślne</string>
     <string name="theme">Motyw</string>
     <string name="changing_color_description">Zmiana koloru spowoduje przełączenie motywu na własny</string>
@@ -220,21 +222,98 @@
     <string name="fingerprint_setup_successfully">Zabezpieczenie zostało ustawione. W razie problemów z jego zresetowaniem przeinstaluj aplikację.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minuty</string>
+    <string name="hours_raw">godziny</string>
+    <string name="days_raw">dni</string>
+
     <plurals name="seconds">
-        <item quantity="one">%1$d sekunda</item>
-        <item quantity="few">%1$d sekundy</item>
-        <item quantity="other">%1$d sekund</item>
+        <item quantity="one">%d sekunda</item>
+        <item quantity="few">%d sekundy</item>
+        <item quantity="other">%d sekund</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minuta</item>
-        <item quantity="few">%1$d minuty</item>
-        <item quantity="other">%1$d minut</item>
+        <item quantity="one">%d minuta</item>
+        <item quantity="few">%d minuty</item>
+        <item quantity="other">%d minut</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d godzina</item>
-        <item quantity="few">%1$d godziny</item>
-        <item quantity="other">%1$d godzin</item>
+        <item quantity="one">%d godzina</item>
+        <item quantity="few">%d godziny</item>
+        <item quantity="other">%d godzin</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d dzień</item>
+        <item quantity="other">%d dni</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d tydzień</item>
+        <item quantity="few">%d tygodnie</item>
+        <item quantity="other">%d tygodni</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d miesiąc</item>
+        <item quantity="few">%d miesiące</item>
+        <item quantity="other">%d miesięcy</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d rok</item>
+        <item quantity="few">%d lata</item>
+        <item quantity="other">%d lat</item>
+    </plurals>
+
+    <!-- For example: I will be there in 5 minutes -->
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="minutes_before">
+        <item quantity="one">%d minutę przed</item>
+        <item quantity="few">%d minuty przed</item>
+        <item quantity="other">%d minut before</item>
+    </plurals>
+    <plurals name="hours_before">
+        <item quantity="one">%d godzinę przed</item>
+        <item quantity="few">%d godziny przed</item>
+        <item quantity="other">%d godzin przed</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">%d dzień przed</item>
+        <item quantity="few">%d dni przed</item>
+        <item quantity="other">%d dni przed</item>
+    </plurals>
+
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_minutes">
+        <item quantity="one">%d minutę</item>
+        <item quantity="few">%d minuty</item>
+        <item quantity="other">%d minut</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">%d godzinę</item>
+        <item quantity="few">%d godziny</item>
+        <item quantity="other">%d godzin</item>
+    </plurals>
+
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
+    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
+    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+
+    <!-- Alarms -->
+    <string name="snooze">Drzemka</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="no_reminder">Brak przypomnienia</string>
+    <string name="at_start">Przy rozpoczęciu</string>
 
     <!-- Settings -->
     <string name="settings">Ustawienia</string>
@@ -251,9 +330,15 @@
     <string name="password_protect_whole_app">Chroń dostęp do aplikacji</string>
     <string name="keep_last_modified">Zachowuj starą datę i czas modyfikacji przy kopiowaniu / przenoszeniu / zmianie nazwy plików</string>
     <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
-    <string name="prevent_phone_from_sleeping">Zapobiegaj przejściu urządzenia w stan uśpienia</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="skip_delete_confirmation">Nie pokazuj okna z potwierdzeniem usunięcia elementu(-ów)</string>
     <string name="enable_pull_to_refresh">Włącz gest pociągnięcia ekranu od góry w celu odświeżenia widoku</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
+    <string name="use_same_snooze">Zawsze używaj tego samego przedziału przypomnienia</string>
+    <string name="snooze_time">Snooze time</string>
+    <string name="vibrate_on_button_press">Wibracja po wciśnięciu przycisku</string>
 
     <!-- Setting sections -->
     <string name="visibility">Widoczność</string>
@@ -299,6 +384,14 @@
     <string name="saturday">Sobota</string>
     <string name="sunday">Niedziela</string>
 
+    <string name="monday_letter">P</string>
+    <string name="tuesday_letter">W</string>
+    <string name="wednesday_letter">Ś</string>
+    <string name="thursday_letter">CZ</string>
+    <string name="friday_letter">P</string>
+    <string name="saturday_letter">S</string>
+    <string name="sunday_letter">N</string>
+
     <!-- About -->
     <string name="about">O aplikacji</string>
     <string name="website_label">Nasza strona internetowa:</string>
@@ -314,8 +407,8 @@
     <string name="follow_us">Śledź nas</string>
     <string name="copyright">Wersja %1$s\n© Simple Mobile Tools %2$d</string>
     <string name="additional_info">Dodatkowe informacje</string>
-    <string name="app_version">Wersja aplikacji: %1$s</string>
-    <string name="device_os">System: %1$s</string>
+    <string name="app_version">Wersja aplikacji: %s</string>
+    <string name="device_os">System: %s</string>
     <string name="donate_please">
         <![CDATA[
             Witaj!<br><br>
@@ -370,4 +463,5 @@
     <string name="espresso_title">Espresso (testowanie aplikacji)</string>
     <string name="gson_title">Gson (parser JSON)</string>
     <string name="leak_canary_title">Leak Canary (wykrywanie wycieków pamięci)</string>
+    <string name="number_picker_title">Number Picker (customizable number picker)</string>
 </resources>

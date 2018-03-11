@@ -61,15 +61,15 @@
     <string name="please_select_destination">宛先を選択してください</string>
     <string name="source_and_destination_same">元と先を同じにすることはできません</string>
     <string name="copy_failed">ファイルをコピーできませんでした</string>
-    <string name="copying">コピー中&#8230;</string>
+    <string name="copying">コピー中…</string>
     <string name="copying_success">ファイルを正常にコピーしました</string>
     <string name="copy_move_failed">エラーが発生しました</string>
-    <string name="moving">移動中&#8230;</string>
+    <string name="moving">移動中…</string>
     <string name="moving_success">ファイルを正常に移動しました</string>
     <string name="moving_success_partial">一部のファイルが移動できませんでした</string>
     <string name="copying_success_partial">一部のファイルがコピーできませんでした</string>
     <string name="no_files_selected">ファイルが選択されていません</string>
-    <string name="saving">保存中&#8230;</string>
+    <string name="saving">保存中…</string>
     <string name="could_not_create_folder">フォルダー %s を作成できません</string>
     <string name="could_not_create_file">ファイル %s を作成できません</string>
 
@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">不明なエラーが発生しました</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">ファイル \"%1$s\" は既に存在しています</string>
-    <string name="file_already_exists_overwrite">ファイル \"%1$s\" は既に存在しています。上書きしますか?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="file_already_exists">ファイル \"%s\" は既に存在しています</string>
+    <string name="file_already_exists_overwrite">ファイル \"%s\" は既に存在しています。上書きしますか?</string>
+    <string name="folder_already_exists">Folder \"%s\" already exists</string>
     <string name="merge">Merge</string>
     <string name="overwrite">上書き</string>
     <string name="skip">スキップ</string>
@@ -102,8 +102,8 @@
     <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d アイテム</item>
-        <item quantity="other">%1$d アイテム</item>
+        <item quantity="one">%d アイテム</item>
+        <item quantity="other">%d アイテム</item>
     </plurals>
 
     <!-- Storages -->
@@ -136,6 +136,8 @@
     <string name="background_color">背景色</string>
     <string name="text_color">文字色</string>
     <string name="primary_color">メインカラー</string>
+    <string name="foreground_color">Foreground color</string>
+    <string name="app_icon_color">App icon color</string>
     <string name="restore_defaults">デフォルトに戻す</string>
     <string name="theme">テーマ</string>
     <string name="changing_color_description">色を変更すると、テーマが「カスタム」に切り替わります</string>
@@ -170,7 +172,7 @@
     <string name="remove">Remove</string>
     <string name="rename">名前の変更</string>
     <string name="share">共有</string>
-    <string name="share_via">共有&#8230;</string>
+    <string name="share_via">共有</string>
     <string name="select_all">すべて選択</string>
     <string name="hide">非表示</string>
     <string name="unhide">再表示</string>
@@ -219,18 +221,87 @@
     <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">分</string>
+    <string name="hours_raw">時間</string>
+    <string name="days_raw">日</string>
+
     <plurals name="seconds">
-        <item quantity="one">%1$d秒</item>
-        <item quantity="other">%1$d秒</item>
+        <item quantity="one">%d秒</item>
+        <item quantity="other">%d秒</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d分</item>
-        <item quantity="other">%1$d分</item>
+        <item quantity="one">%d分</item>
+        <item quantity="other">%d分</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d時間</item>
-        <item quantity="other">%1$d時間</item>
+        <item quantity="one">%d時間</item>
+        <item quantity="other">%d時間</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
+
+    <!-- For example: I will be there in 5 minutes -->
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="minutes_before">
+        <item quantity="one">%d minute before</item>
+        <item quantity="other">%d 分 前</item>
+    </plurals>
+    <plurals name="hours_before">
+        <item quantity="one">%d hour before</item>
+        <item quantity="other">%d 時間 前</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">%d day before</item>
+        <item quantity="other">%d 日 前</item>
+    </plurals>
+
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
+    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
+    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+
+    <!-- Alarms -->
+    <string name="snooze">Snooze</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="no_reminder">No reminder</string>
+    <string name="at_start">開始時</string>
 
     <!-- Settings -->
     <string name="settings">設定</string>
@@ -247,9 +318,15 @@
     <string name="password_protect_whole_app">Password protect the whole application</string>
     <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
     <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
+    <string name="use_same_snooze">Always use same snooze time</string>
+    <string name="snooze_time">Snooze time</string>
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>
@@ -295,6 +372,14 @@
     <string name="saturday">Saturday</string>
     <string name="sunday">Sunday</string>
 
+    <string name="monday_letter">月</string>
+    <string name="tuesday_letter">火</string>
+    <string name="wednesday_letter">水</string>
+    <string name="thursday_letter">木</string>
+    <string name="friday_letter">金</string>
+    <string name="saturday_letter">土</string>
+    <string name="sunday_letter">日</string>
+
     <!-- About -->
     <string name="about">アプリについて</string>
     <string name="website_label">もっとシンプルなアプリとソースコードは</string>
@@ -303,15 +388,15 @@
     <string name="third_party_licences_underlined"><u>サードパーティー ライセンス</u></string>
     <string name="invite_friends_underlined"><u>友達を招待</u></string>
     <string name="share_text">%2$s で %1$s を確認してください</string>
-    <string name="invite_via">招待&#8230;</string>
+    <string name="invite_via">招待</string>
     <string name="rate_us_underlined"><u>Play ストアで評価してください</u></string>
     <string name="donate">寄付</string>
     <string name="donate_underlined"><u>寄付</u></string>
     <string name="follow_us">フォローしてください</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">追加情報</string>
-    <string name="app_version">アプリバージョン: %1$s</string>
-    <string name="device_os">デバイスOS: %1$s</string>
+    <string name="app_version">アプリバージョン: %s</string>
+    <string name="device_os">デバイスOS: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>
@@ -368,4 +453,5 @@
     <string name="espresso_title">Espresso (testing helper)</string>
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="number_picker_title">Number Picker (customizable number picker)</string>
 </resources>

@@ -1,14 +1,15 @@
 package com.simplemobiletools.commons.helpers
 
 import android.content.Context
-import android.content.SharedPreferences
+import android.text.format.DateFormat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getInternalStoragePath
 import com.simplemobiletools.commons.extensions.getSDCardPath
 import com.simplemobiletools.commons.extensions.getSharedPrefs
+import java.util.*
 
 open class BaseConfig(val context: Context) {
-    protected val prefs: SharedPreferences = context.getSharedPrefs()
+    protected val prefs = context.getSharedPrefs()
 
     companion object {
         fun newInstance(context: Context) = BaseConfig(context)
@@ -179,4 +180,35 @@ open class BaseConfig(val context: Context) {
     var lastUsedViewPagerPage: Int
         get() = prefs.getInt(LAST_USED_VIEW_PAGER_PAGE, 0)
         set(lastUsedViewPagerPage) = prefs.edit().putInt(LAST_USED_VIEW_PAGER_PAGE, lastUsedViewPagerPage).apply()
+
+    var use24hourFormat: Boolean
+        get() = prefs.getBoolean(USE_24_HOUR_FORMAT, DateFormat.is24HourFormat(context))
+        set(use24hourFormat) = prefs.edit().putBoolean(USE_24_HOUR_FORMAT, use24hourFormat).apply()
+
+    var isSundayFirst: Boolean
+        get() {
+            val isSundayFirst = Calendar.getInstance(Locale.getDefault()).firstDayOfWeek == Calendar.SUNDAY
+            return prefs.getBoolean(SUNDAY_FIRST, isSundayFirst)
+        }
+        set(sundayFirst) = prefs.edit().putBoolean(SUNDAY_FIRST, sundayFirst).apply()
+
+    var wasAlarmWarningShown: Boolean
+        get() = prefs.getBoolean(WAS_ALARM_WARNING_SHOWN, false)
+        set(wasAlarmWarningShown) = prefs.edit().putBoolean(WAS_ALARM_WARNING_SHOWN, wasAlarmWarningShown).apply()
+
+    var wasReminderWarningShown: Boolean
+        get() = prefs.getBoolean(WAS_REMINDER_WARNING_SHOWN, false)
+        set(wasReminderWarningShown) = prefs.edit().putBoolean(WAS_REMINDER_WARNING_SHOWN, wasReminderWarningShown).apply()
+
+    var useSameSnooze: Boolean
+        get() = prefs.getBoolean(USE_SAME_SNOOZE, true)
+        set(useSameSnooze) = prefs.edit().putBoolean(USE_SAME_SNOOZE, useSameSnooze).apply()
+
+    var snoozeTime: Int
+        get() = prefs.getInt(SNOOZE_TIME, 10)
+        set(snoozeDelay) = prefs.edit().putInt(SNOOZE_TIME, snoozeDelay).apply()
+
+    var vibrateOnButtonPress: Boolean
+        get() = prefs.getBoolean(VIBRATE_ON_BUTTON_PRESS, false)
+        set(vibrateOnButton) = prefs.edit().putBoolean(VIBRATE_ON_BUTTON_PRESS, vibrateOnButton).apply()
 }

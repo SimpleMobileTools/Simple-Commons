@@ -61,15 +61,15 @@
     <string name="please_select_destination">Molimo odaberite odredište</string>
     <string name="source_and_destination_same">Izvor i odredište ne mogu biti isti</string>
     <string name="copy_failed">Nije moguće kopiranje datoteka</string>
-    <string name="copying">Kopiranje&#8230;</string>
+    <string name="copying">Kopiranje…</string>
     <string name="copying_success">Datoteke uspješno kopirane</string>
     <string name="copy_move_failed">Greška se dogodila</string>
-    <string name="moving">Premještanje&#8230;</string>
+    <string name="moving">Premještanje…</string>
     <string name="moving_success">Datoteke uspješno premještene</string>
     <string name="moving_success_partial">Neke datoteke nije bilo moguće premjestiti</string>
     <string name="copying_success_partial">Neke datoteke nije bilo moguće kopirati</string>
     <string name="no_files_selected">Nema odabranih datoteka</string>
-    <string name="saving">Spremanje&#8230;</string>
+    <string name="saving">Spremanje…</string>
     <string name="could_not_create_folder">Nije moguće stvoriti direktorij %s</string>
     <string name="could_not_create_file">Nije moguće stvoriti datoteku %s</string>
 
@@ -84,9 +84,9 @@
     <string name="unknown_error_occurred">Nepoznata greška se dogodila</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Datoteka \"%1$s\" već postoji</string>
-    <string name="file_already_exists_overwrite">Datoteka \"%1$s\" već postoji. Presnimiti?</string>
-    <string name="folder_already_exists">Folder \"%1$s\" already exists</string>
+    <string name="file_already_exists">Datoteka \"%s\" već postoji</string>
+    <string name="file_already_exists_overwrite">Datoteka \"%s\" već postoji. Presnimiti?</string>
+    <string name="folder_already_exists">Folder \"%s\" already exists</string>
     <string name="merge">Merge</string>
     <string name="overwrite">Presnimi</string>
     <string name="skip">Preskoči</string>
@@ -102,9 +102,9 @@
     <string name="confirm_selection">Potvrdi odabir</string>
 
     <plurals name="items">
-        <item quantity="one">%1$d stavka</item>
-        <item quantity="few">%1$d stavke</item>
-        <item quantity="other">%1$d stavki</item>
+        <item quantity="one">%d stavka</item>
+        <item quantity="few">%d stavke</item>
+        <item quantity="other">%d stavki</item>
     </plurals>
 
     <!-- Storages -->
@@ -137,6 +137,8 @@
     <string name="background_color">Boja pozadine</string>
     <string name="text_color">Boja teksta</string>
     <string name="primary_color">Primarna boja</string>
+    <string name="foreground_color">Foreground color</string>
+    <string name="app_icon_color">App icon color</string>
     <string name="restore_defaults">Vrati zadano</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Promjenom boje, prelazi se na Prilagođenu temu</string>
@@ -220,21 +222,102 @@
     <string name="fingerprint_setup_successfully">Uspješno postavljanje zaštite. Molimo reinstalirajte aplikaciju u slučaju problema s resetiranjem.</string>
 
     <!-- Times -->
+    <string name="minutes_raw">minutes</string>
+    <string name="hours_raw">hours</string>
+    <string name="days_raw">days</string>
+
     <plurals name="seconds">
-        <item quantity="one">%1$d sekunda</item>
-        <item quantity="few">%1$d sekunde</item>
-        <item quantity="other">%1$d sekundi</item>
+        <item quantity="one">%d sekunda</item>
+        <item quantity="few">%d sekunde</item>
+        <item quantity="other">%d sekundi</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%1$d minuta</item>
-        <item quantity="few">%1$d minute</item>
-        <item quantity="other">%1$d minuti</item>
+        <item quantity="one">%d minuta</item>
+        <item quantity="few">%d minute</item>
+        <item quantity="other">%d minuti</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%1$d sat</item>
-        <item quantity="few">%1$d sata</item>
-        <item quantity="other">%1$d sati</item>
+        <item quantity="one">%d sat</item>
+        <item quantity="few">%d sata</item>
+        <item quantity="other">%d sati</item>
     </plurals>
+    <plurals name="days">
+        <item quantity="one">%d day</item>
+        <item quantity="few">%d days</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="few">%d weeks</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d month</item>
+        <item quantity="few">%d months</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d year</item>
+        <item quantity="few">%d years</item>
+        <item quantity="other">%d years</item>
+    </plurals>
+
+    <!-- For example: I will be there in 5 minutes -->
+    <plurals name="in_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="few">%d seconds</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="few">%d minutes</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="few">%d hours</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="minutes_before">
+        <item quantity="one">%d minute before</item>
+        <item quantity="few">%d minutes before</item>
+        <item quantity="other">%d minutes before</item>
+    </plurals>
+    <plurals name="hours_before">
+        <item quantity="one">%d hour before</item>
+        <item quantity="few">%d hours before</item>
+        <item quantity="other">%d hours before</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">%d day before</item>
+        <item quantity="few">%d days before</item>
+        <item quantity="other">%d days before</item>
+    </plurals>
+
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="few">%d minutes</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="few">%d hours</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
+    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
+    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+
+    <!-- Alarms -->
+    <string name="snooze">Snooze</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="no_reminder">No reminder</string>
+    <string name="at_start">At start</string>
 
     <!-- Settings -->
     <string name="settings">Postavke</string>
@@ -251,9 +334,15 @@
     <string name="password_protect_whole_app">Zaštiti cijelu aplikaciju lozinkom</string>
     <string name="keep_last_modified">Zadrži stari datum zadnje izmjene pri kopiranje/premještanju/preimenovanju datoteke</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping</string>
+    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
     <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
+    <string name="use_same_snooze">Always use same snooze time</string>
+    <string name="snooze_time">Snooze time</string>
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>
@@ -299,6 +388,14 @@
     <string name="saturday">Saturday</string>
     <string name="sunday">Sunday</string>
 
+    <string name="monday_letter">M</string>
+    <string name="tuesday_letter">T</string>
+    <string name="wednesday_letter">W</string>
+    <string name="thursday_letter">T</string>
+    <string name="friday_letter">F</string>
+    <string name="saturday_letter">S</string>
+    <string name="sunday_letter">S</string>
+
     <!-- About -->
     <string name="about">O nama</string>
     <string name="website_label">Za pregled izvornog koda posjetite</string>
@@ -314,8 +411,8 @@
     <string name="follow_us">Pratite nas</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Dodatne informacije</string>
-    <string name="app_version">Verzija aplikacije: %1$s</string>
-    <string name="device_os">OS uređaja: %1$s</string>
+    <string name="app_version">Verzija aplikacije: %s</string>
+    <string name="device_os">OS uređaja: %s</string>
     <string name="donate_please">
         <![CDATA[
             Pozdrav,<br><br>
@@ -372,4 +469,5 @@
     <string name="espresso_title">Espresso (testing helper)</string>
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="number_picker_title">Number Picker (customizable number picker)</string>
 </resources>
