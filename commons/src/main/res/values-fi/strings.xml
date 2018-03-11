@@ -193,12 +193,12 @@
     <string name="extension">Extension</string>
     <string name="ascending">Nouseva</string>
     <string name="descending">Laskeva</string>
-<string name="use_for_this_folder">Käytä vain tässä kansiossa</string>
+    <string name="use_for_this_folder">Käytä vain tässä kansiossa</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Haluatko varmasti poistaa pysyvästi?</string>
     <string name="yes">Poista</string>
-<string name="no">Peruuta</string>
+    <string name="no">Peruuta</string>
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
@@ -323,10 +323,10 @@
     <string name="medium">Keskikokoinen</string>
     <string name="large">Suuri</string>
     <string name="extra_large">Erittäin suuri</string>
-    <string name="password_protect_hidden_items">Suojaa piilotetut salasanalla</string> 
+    <string name="password_protect_hidden_items">Suojaa piilotetut salasanalla</string>
     <string name="password_protect_whole_app">Suojaa koko sovellus salasanalla</string>
-    <string name="keep_last_modified">Säilytä alkuperäinen "viimeksi muokattu" ajankohta tiedostoa siirtäessä, kopioitaessa ja uudelleennimettäessä</string> 
-    <string name="show_info_bubble">Näytä lisätietokupla vierityspalkista vierittäessä</string>   
+    <string name="keep_last_modified">Säilytä alkuperäinen "viimeksi muokattu" ajankohta tiedostoa siirtäessä, kopioitaessa ja uudelleennimettäessä</string>
+    <string name="show_info_bubble">Näytä lisätietokupla vierityspalkista vierittäessä</string>
     <string name="prevent_phone_from_sleeping">Estä puhelinta siirtymästä virransäästöön kun sovellus on avattu ja käytössä</string>
     <string name="skip_delete_confirmation">Älä koskaan kysy varmistusta tiedostoja poistaessa</string>
     <string name="enable_pull_to_refresh">Päivitä näkymä vedettäessä ylhäältä alas</string>
@@ -335,7 +335,7 @@
     <string name="widgets">Widgetit</string>
     <string name="use_same_snooze">Käytä aina samaa torkkuaikaa</string>
     <string name="snooze_time">Torkkuaika</string>
-<string name="vibrate_on_button_press">Tärinä koskettaessa</string> 
+    <string name="vibrate_on_button_press">Tärinä koskettaessa</string>
 
     <!-- Setting sections -->
     <string name="visibility">Näkyvyys</string>
