@@ -43,9 +43,9 @@
     <string name="renaming_folder">Renommage du dossier</string>
     <string name="filename_cannot_be_empty">Le nom de fichier ne peut pas rester vide</string>
     <string name="filename_invalid_characters">Le nom de fichier contient des caractères invalides</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
+    <string name="filename_invalid_characters_placeholder">Le nom de fichier \'%s\' contient des caractères invalides</string>
     <string name="extension_cannot_be_empty">L\'extension ne peut pas rester vide</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
+    <string name="source_file_doesnt_exist">Le fichier source %s n\'existe pas</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copier</string>
@@ -86,8 +86,8 @@
     <!-- File operation conflicts -->
     <string name="file_already_exists">Le fichier \"%s\" existe déjà</string>
     <string name="file_already_exists_overwrite">Le fichier \"%s\" existe déjà. Ecraser?</string>
-    <string name="folder_already_exists">Folder \"%s\" already exists</string>
-    <string name="merge">Merge</string>
+    <string name="folder_already_exists">Le répertoire \"%s\" existe déjà</string>
+    <string name="merge">Fusionner</string>
     <string name="overwrite">Écraser</string>
     <string name="skip">Passer</string>
     <string name="append">Suffixer avec \'_1\'</string>
@@ -112,7 +112,7 @@
     <string name="sd_card">Carte SD</string>
     <string name="root">Racine</string>
     <string name="wrong_root_selected">Mauvais dossier sélectionné, veuillez sélectionner le dossier racine de votre carte SD</string>
-    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
+    <string name="sd_card_otg_same">Les chemins de la carte SD et du stockage USB OTG ne peuvent être similaires.</string>
 
     <!-- File properties -->
     <string name="properties">Propriétés</string>
@@ -136,18 +136,18 @@
     <string name="background_color">Couleur d\'arrière-plan</string>
     <string name="text_color">Couleur du texte</string>
     <string name="primary_color">Couleur primaire</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
+    <string name="foreground_color">Couleur de fond</string>
+    <string name="app_icon_color">Couleur de fond de l'îcone de l\'application</string>
     <string name="restore_defaults">Restaurer les valeurs par défaut</string>
     <string name="theme">Thème</string>
-    <string name="changing_color_description">Changer une couleur le basculera en Thème personnalisé</string>
+    <string name="changing_color_description">Changer une couleur le basculera en thème personnalisé</string>
     <string name="save">Sauvegarder</string>
     <string name="discard">Rejeter</string>
     <string name="undo_changes">Annuler les changements</string>
     <string name="undo_changes_confirmation">Etes-vous sûr•e de vouloir annuler vos changements ?</string>
     <string name="save_before_closing">Vous avez des changements non sauvegardés. Sauvegarder avant de quitter ?</string>
     <string name="apply_to_all_apps">Appliquer ces couleurs à toutes les Applis Simples</string>
-    <string name="share_colors_success">Couleurs mises à jour. Un nouveau Thème nommé \'Partagé\' a été ajouté, veuillez utiliser celui-ci pour mettre à jour les couleurs de toutes les applis à partir de maintenant.</string>
+    <string name="share_colors_success">Couleurs mises à jour. Un nouveau thème nommé \'Partagé\' a été ajouté, veuillez utiliser celui-ci pour mettre à jour les couleurs de toutes les applis à partir de maintenant.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Veuillez acquérir <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Un petit Merci</a> pour déverrouiller cette fonctionnalité et soutenir le développeur. Merci!
@@ -215,13 +215,12 @@
     <string name="place_finger">Veuillez placer votre doigt sur le capteur d\'empreintes digitales</string>
     <string name="authentication_failed">L\'identification a échoué</string>
     <string name="authentication_blocked">Identification bloquée, veuillez réessayer dans quelques instants</string>
-    <string name="no_fingerprints_registered">Vous n\'avez aucune empreinte digitale d\'enregistrée, veuillez en ajouter dans les Paramètres de votre appareil</string>
+    <string name="no_fingerprints_registered">Vous n\'avez aucune empreinte digitale enregistrée, veuillez en ajouter dans les paramètres de votre appareil</string>
     <string name="go_to_settings">Aller aux Paramètres</string>
     <string name="protection_setup_successfully">Mot de passe défini avec succès. Veuillez réinstaller l\'appli en cas d\'oubli.</string>
     <string name="fingerprint_setup_successfully">Protection mise en place avec succès. Veuillez réinstaller l\'appli en cas d\'oubli.</string>
 
     <!-- Times -->
-    <string name="seconds_raw">seconds</string>
     <string name="minutes_raw">minutes</string>
     <string name="hours_raw">heures</string>
     <string name="days_raw">jours</string>
@@ -271,8 +270,8 @@
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d second before</item>
-        <item quantity="other">%d seconds before</item>
+        <item quantity="one">%d seconde avant</item>
+        <item quantity="other">%d secondes avant</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minute avant</item>
@@ -289,8 +288,8 @@
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d seconde</item>
+        <item quantity="other">%d secondes</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minute</item>
@@ -302,13 +301,13 @@
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
-    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+    <string name="alarm_goes_off_in">Temps restant jusqu\'au déclenchement de l\'alarme : \n%s</string>
+    <string name="alarm_warning">Veuillez vérifier que l\'alarme fonctionne correctement avant de lui faire confiance. Elle pourrait ne pas fonctionner correctement, à cause de la politique d\'économie d'énergie de votre appareil.</string>
+    <string name="reminder_warning">Veuillez vérifier que les rappels fonctionnent correctement avant de leur faire confiance. Ils pourraient ne pas fonctionner correctement, à cause de la politique d\'économie d'énergie de votre appareil.</string>
 
     <!-- Alarms -->
-    <string name="snooze">Sommeiller</string>
-    <string name="dismiss">Dismiss</string>
+    <string name="snooze">Répéter</string>
+    <string name="dismiss">Ignorer</string>
     <string name="no_reminder">Pas de rappel</string>
     <string name="at_start">Au démarrage</string>
 
@@ -316,7 +315,7 @@
     <string name="settings">Paramètres</string>
     <string name="customize_colors">Personnaliser les couleurs</string>
     <string name="use_english_language">Utiliser l\'affichage en anglais</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
+    <string name="avoid_whats_new">Ne pas montrer les nouveautés au démarrage.</string>
     <string name="show_hidden_items">Afficher les éléments cachés</string>
     <string name="font_size">Taille police</string>
     <string name="small">Petite</string>
@@ -327,15 +326,15 @@
     <string name="password_protect_whole_app">Le mot de passe protège l\'ensemble de l\'application</string>
     <string name="keep_last_modified">Garder la valeur de l\'ancienne modification lors de renommage/déplacement/copie de fichier</string>
     <string name="show_info_bubble">Afficher une bulle d\'information des éléments qui s\'affichent lorsque vous faites glisser la barre de défilement</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
-    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
-    <string name="use_24_hour_time_format">Use 24-hour time format</string>
-    <string name="sunday_first">Start week on Sunday</string>
+    <string name="prevent_phone_from_sleeping">Ne pas mettre en veille tant que l\'application est active.</string>
+    <string name="skip_delete_confirmation">Ne jamais montrer le dialogue de confirmation de suppression</string>
+    <string name="enable_pull_to_refresh">Activer le rafraîchissement en glissant à partir du haut</string>
+    <string name="use_24_hour_time_format">Utiliser le format horaire 24 heures.</string>
+    <string name="sunday_first">Démarrer la semaine le dimanche</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Toujours utiliser le même intervalle de répétition</string>
-    <string name="snooze_time">Snooze time</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="snooze_time">Temps de répétition</string>
+    <string name="vibrate_on_button_press">Vibrer lors de l\'appui sur un bouton</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilité</string>
@@ -355,9 +354,9 @@
     <string name="no_entries_for_exporting">Aucun item pouvant être exporté n\'a été trouvé</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="otg">USB OTG</string>
+    <string name="confirm_otg_storage_access_text">Veuillez choisir le répertoire racine du périphérique USB OTG au prochain écran afin de pouvoir y accèder.</string>
+    <string name="wrong_root_selected_otg">Mauvais répertoire choisi, merci de sélectionner le répertoire racine du périphérique USB OTG.</string>
 
     <!-- Dates -->
     <string name="january">Janvier</string>
@@ -404,8 +403,8 @@
     <string name="follow_us">Suivez-nous</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Info supplémentaire</string>
-    <string name="app_version">Version appli: %s</string>
-    <string name="device_os">OS appareil: %s</string>
+    <string name="app_version">Version appli : %s</string>
+    <string name="device_os">OS appareil : %s</string>
     <string name="donate_please">
         <![CDATA[
             Salut,<br><br>
@@ -428,18 +427,15 @@
     </string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently asked questions</string>
-    <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
-    <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
-        in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
-    <string name="faq_2_title_commons">I want to support you, but I cannot donate money. Is there anything else I can do?</string>
-    <string name="faq_2_text_commons">Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-        You can find the guide at https://github.com/SimpleMobileTools/General-Discussion , or just shoot me a message at hello@simplemobiletools.com if you need help.</string>
-    <string name="faq_3_title_commons">I deleted some files by mistake, how can I recover them?</string>
-    <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, there is no trashbin available.</string>
-    <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
-    <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
-
+    <string name="frequently_asked_questions">Foire aux questions (FAQ)</string>
+    <string name="faq_1_title_commons">Pourquoi je ne vois pas les widgets de cette appli dans la liste des widgets ?</string>
+    <string name="faq_1_text_commons">Probablement parce que l\'appli a été déplacée sur la carte SD. Android a une limitation qui fait qu\'il n\'affiche pas les widgets de cette appli dans ce cas. La seule solution consiste à replacer l\'appli dans le stockage interne via les paramètres du système.</string>
+    <string name="faq_2_title_commons">Je voudrais vous apporter mon support, mais je ne peux pas vous donner de l\'argent. Existe t-il un autre moyen ?</string>
+    <string name="faq_2_text_commons"> Bien sûr. Vous pouvez recommander ces applis et/ou donner de bonnes évaluations. Vous pouvez aussi nous aider en traduisant les applis dans une nouvelle langue, ou mettre à jour les traductions existantes. Vous pouvez trouver le guide à l'adresse https://github.com/SimpleMobileTools/General-Discussion , ou juste m\'envoyer un mail à hello@simplemobiletools.com si vous avez besoin d\'aide.</string>
+    <string name="faq_3_title_commons">J\'ai effacé des fichiers par erreurs. Comment les récupérer ?</string>
+    <string name="faq_3_text_commons">C\'est malheureusement impossible, car les fichiers sont supprimés instantanément après le dialogue de confirmation et il n\'y a pas de corbeille.</string>
+    <string name="faq_4_title_commons">Je n\'aime pas les couleurs du widget. Puis-je la changer ? </string>
+    <string name="faq_4_text_commons">Oui, quand vous glissez le widget sur l\'écran d\'accueil un dialogue de configuration apparaît. Vous verrez des carrés en bas à gauche, en appuyant dessus vous pouvez choisir une nouvelle couleur. Vous pouvez aussi utiliser le curseur pour régler la transparence.</string>
     <!-- License -->
     <string name="notice">Cette application utilise les librairies tierces suivantes pour me simplifier la vie. Merci.</string>
     <string name="third_party_licences">Licences tierces</string>
