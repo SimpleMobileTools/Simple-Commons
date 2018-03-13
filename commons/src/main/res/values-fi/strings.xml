@@ -1,105 +1,105 @@
 <resources>
     <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
-    <string name="save_as">Save as</string>
-    <string name="file_saved">File saved successfully</string>
-    <string name="invalid_file_format">Invalid file format</string>
-    <string name="out_of_memory_error">Out of memory error</string>
-    <string name="an_error_occurred">An error occurred: %s</string>
-    <string name="open_with">Avaa</string>
+    <string name="cancel">Peruuta</string>
+    <string name="save_as">Tallenna nimellä</string>
+    <string name="file_saved">Tallennettu</string>
+    <string name="invalid_file_format">Virheellinen tiedostomuoto</string>
+    <string name="out_of_memory_error">Liian vähän muistia</string>
+    <string name="an_error_occurred">Tapahtui virhe: %s</string>
+    <string name="open_with">Avaa sovelluksessa</string>
     <string name="no_app_found">Sovelluksia ei löydetty</string>
     <string name="set_as">Aseta</string>
-    <string name="value_copied_to_clipboard">Valeur copiée dans le presse-papier</string>
-    <string name="unknown">Unknown</string>
-    <string name="always">Always</string>
-    <string name="never">Never</string>
-    <string name="details">Details</string>
-    <string name="notes">Notes</string>
+    <string name="value_copied_to_clipboard">Kopioitu leikepöydälle</string>
+    <string name="unknown">Tuntematon</string>
+    <string name="always">Aina</string>
+    <string name="never">Ei koskaan</string>
+    <string name="details">Yksityiskohdat</string>
+    <string name="notes">Muistiinpanot</string>
 
     <!-- Search -->
-    <string name="search">Search</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
+    <string name="search">Haku</string>
+    <string name="type_2_characters">Syötä ainakin 2 merkkiä hakeaksesi</string>
 
     <!-- Filters -->
-    <string name="filter">Filter</string>
-    <string name="no_items_found">No items found.</string>
-    <string name="change_filter">Change filter</string>
+    <string name="filter">Suodata</string>
+    <string name="no_items_found">Tiedostoja ei löytynyt.</string>
+    <string name="change_filter">Vaihda suodatin</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">Lupa tallennustilaan vaaditaan</string>
+    <string name="no_contacts_permission">Lupa yhteystietoihin vaaditaan</string>
+    <string name="no_camera_permissions">Lupa kameraan vaaditaan</string>
+    <string name="no_audio_permissions">Lupa ääneen vaaditaan</string>
 
     <!-- Renaming -->
-    <string name="rename_file">Rename file</string>
-    <string name="rename_folder">Rename folder</string>
-    <string name="rename_file_error">Could not rename the file</string>
-    <string name="rename_folder_error">Could not rename the folder</string>
-    <string name="rename_folder_empty">Folder name must not be empty</string>
-    <string name="rename_folder_exists">A folder with that name already exists</string>
-    <string name="rename_folder_root">Cannot rename the root folder of a storage</string>
-    <string name="rename_folder_ok">Folder renamed successfully</string>
-    <string name="renaming_folder">Renaming folder</string>
-    <string name="filename_cannot_be_empty">Filename cannot be empty</string>
-    <string name="filename_invalid_characters">Filename contains invalid characters</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
-    <string name="extension_cannot_be_empty">Extension cannot be empty</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
+    <string name="rename_file">Uudelleennimeä tiedosto</string>
+    <string name="rename_folder">Uudelleennimeä kansio</string>
+    <string name="rename_file_error">Tiedostoa ei voitu uudelleennimetä</string>
+    <string name="rename_folder_error">Kansiota ei voitu uudelleennimetä</string>
+    <string name="rename_folder_empty">Kansiolle täytyy antaa nimi</string>
+    <string name="rename_folder_exists">Nimi on jo käytössä</string>
+    <string name="rename_folder_root">Root-kansiota ei voi uudelleennimetä</string>
+    <string name="rename_folder_ok">Kansio uudelleennimetty</string>
+    <string name="renaming_folder">Uudelleennimetään kansio</string>
+    <string name="filename_cannot_be_empty">Tiedostolle täytyy antaa nimi</string>
+    <string name="filename_invalid_characters">Tiedostonimi sisältää kiellettyjä merkkejä</string>
+    <string name="filename_invalid_characters_placeholder">Tiedostonimi \'%s\' sisältää kiellettyjä merkkejä</string>
+    <string name="extension_cannot_be_empty">Tiedostomuoto ei voi olla tyhjä</string>
+    <string name="source_file_doesnt_exist">Lähdetiedostoa %s ei löydy</string>
 
     <!-- Copy / Move -->
-    <string name="copy">Copy</string>
-    <string name="move">Move</string>
-    <string name="copy_move">Copy / Move</string>
-    <string name="copy_to">Copy to</string>
-    <string name="move_to">Move to</string>
-    <string name="source">Source</string>
-    <string name="destination">Destination</string>
-    <string name="select_destination">Select destination</string>
-    <string name="click_select_destination">Click here to select destination</string>
-    <string name="invalid_destination">Could not write to the selected destination</string>
-    <string name="please_select_destination">Please select a destination</string>
-    <string name="source_and_destination_same">Source and destination cannot be the same</string>
-    <string name="copy_failed">Could not copy the files</string>
-    <string name="copying">Copying…</string>
-    <string name="copying_success">Files copied successfully</string>
-    <string name="copy_move_failed">An error occurred</string>
-    <string name="moving">Moving…</string>
-    <string name="moving_success">Files moved successfully</string>
-    <string name="moving_success_partial">Some files could not be moved</string>
-    <string name="copying_success_partial">Some files could not be copied</string>
-    <string name="no_files_selected">No files selected</string>
-    <string name="saving">Saving…</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="copy">Kopioi</string>
+    <string name="move">Siirrä</string>
+    <string name="copy_move">Kopioi / Siirrä</string>
+    <string name="copy_to">Kopioi kohteeseen</string>
+    <string name="move_to">Siirrä kohteeseen</string>
+    <string name="source">Lähde</string>
+    <string name="destination">Kohde</string>
+    <string name="select_destination">Valitse kohde</string>
+    <string name="click_select_destination">Kosketa valitaksesi kohteen</string>
+    <string name="invalid_destination">Valittuun kohteeseen ei voitu kirjoittaa</string>
+    <string name="please_select_destination">Valitse kohde</string>
+    <string name="source_and_destination_same">Lähde ja kohde eivät voi olla samat</string>
+    <string name="copy_failed">Tiedostoja ei voitu kopioida</string>
+    <string name="copying">Kopioidaan</string>
+    <string name="copying_success">Tiedostot kopioitu</string>
+    <string name="copy_move_failed">Tapahtui virhe</string>
+    <string name="moving">Siirretään</string>
+    <string name="moving_success">Tiedostot siirretty</string>
+    <string name="moving_success_partial">Kaikkia tiedostoja ei voitu siirtää</string>
+    <string name="copying_success_partial">Kaikkia tiedostoja ei voitu kopioida</string>
+    <string name="no_files_selected">Ei valittuja tiedostoja</string>
+    <string name="saving">Tallennetaan</string>
+    <string name="could_not_create_folder">Ei voitu luoda kansiota %s</string>
+    <string name="could_not_create_file">Ei voitu luoda tiedostoa %s</string>
 
     <!-- Create new -->
-    <string name="create_new">Create new</string>
-    <string name="folder">Folder</string>
-    <string name="file">File</string>
-    <string name="create_new_folder">Create new folder</string>
-    <string name="name_taken">A file or folder with that name already exists</string>
-    <string name="invalid_name">The name contains invalid characters</string>
-    <string name="empty_name">Please enter a name</string>
-    <string name="unknown_error_occurred">An unknown error occurred</string>
+    <string name="create_new">Luo uusi</string>
+    <string name="folder">Kansio</string>
+    <string name="file">Tiedosto</string>
+    <string name="create_new_folder">Luo uusi kansio</string>
+    <string name="name_taken">Samanniminen tiedosto tai kansio on jo olemassa</string>
+    <string name="invalid_name">Nimessä on kiellettyjä merkkejä</string>
+    <string name="empty_name">Syötä nimi</string>
+    <string name="unknown_error_occurred">Tapahtui tuntematon virhe</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">File \"%s\" already exists</string>
-    <string name="file_already_exists_overwrite">File \"%s\" already exists. Overwrite?</string>
-    <string name="folder_already_exists">Folder \"%s\" already exists</string>
-    <string name="merge">Merge</string>
-    <string name="overwrite">Overwrite</string>
-    <string name="skip">Skip</string>
-    <string name="append">Append with \'_1\'</string>
-    <string name="apply_to_all">Apply to all</string>
+    <string name="file_already_exists">Tiedosto \"%s\" on jo olemassa</string>
+    <string name="file_already_exists_overwrite">Tiedosto \"%s\" on jo olemassa. Korvataanko?</string>
+    <string name="folder_already_exists">Kansio \"%s\" on jo olemassa</string>
+    <string name="merge">Yhdistä</string>
+    <string name="overwrite">Korvaa</string>
+    <string name="skip">Ohita</string>
+    <string name="append">Lisää nimeen \'_1\'</string>
+    <string name="apply_to_all">Käytä kaikkiin</string>
 
     <!-- File picker -->
-    <string name="select_folder">Select a folder</string>
-    <string name="select_file">Select a file</string>
-    <string name="confirm_storage_access_title">Confirm external storage access</string>
-    <string name="confirm_storage_access_text">Please choose the root folder of the SD card on the next screen, to grant write access</string>
-    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="select_folder">Valitse kansio</string>
+    <string name="select_file">Valitse tiedosto</string>
+    <string name="confirm_storage_access_title">Vahvista pääsy ulkoiseen tallennustilaan</string>
+    <string name="confirm_storage_access_text">Valitse muistikortin root-kansio seuraavaksi antaaksesi kirjoitusoikeuden</string>
+    <string name="confirm_storage_access_text_sd">Jos et näe muistikorttia, kokeile tätä</string>
+    <string name="confirm_selection">Vahvista valinta</string>
 
     <plurals name="items">
         <item quantity="one">%d item</item>
@@ -107,333 +107,342 @@
     </plurals>
 
     <!-- Storages -->
-    <string name="select_storage">Select storage</string>
-    <string name="internal">Internal</string>
-    <string name="sd_card">SD Card</string>
+    <string name="select_storage">Valitse tallennustila</string>
+    <string name="internal">Sisäinen</string>
+    <string name="sd_card">Muistikortti</string>
     <string name="root">Root</string>
-    <string name="wrong_root_selected">Wrong folder selected, please select the root folder of your SD card</string>
-    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
+    <string name="wrong_root_selected">Väärä kansio valittu, valitse muistikortin root-kansio</string>
+    <string name="sd_card_otg_same">Muistikortin ja OTG-laitteen polut eivät voi olla samat</string>
 
     <!-- File properties -->
-    <string name="properties">Properties</string>
-    <string name="path">Path</string>
-    <string name="items_selected">Items selected</string>
-    <string name="direct_children_count">Direct children count</string>
-    <string name="files_count">Total files count</string>
-    <string name="resolution">Resolution</string>
-    <string name="duration">Duration</string>
-    <string name="artist">Artist</string>
-    <string name="album">Album</string>
-    <string name="focal_length">Focal length</string>
-    <string name="exposure_time">Exposure time</string>
-    <string name="iso_speed">ISO speed</string>
-    <string name="f_number">F-number</string>
-    <string name="camera">Camera</string>
+    <string name="properties">Ominaisuudet</string>
+    <string name="path">Polku</string>
+    <string name="items_selected">Kohteita valittu</string>
+    <string name="direct_children_count">Sisältyvien kohteiden määrä</string>
+    <string name="files_count">Tiedostoja yhteensä</string>
+    <string name="resolution">Resoluutio</string>
+    <string name="duration">Kesto</string>
+    <string name="artist">Esittäjä</string>
+    <string name="album">Albumi</string>
+    <string name="focal_length">Polttoväli</string>
+    <string name="exposure_time">Valotusaika</string>
+    <string name="iso_speed">ISO-arvo</string>
+    <string name="f_number">F-arvo</string>
+    <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Kappaleen nimi</string>
 
     <!-- Color customization -->
-    <string name="background_color">Background color</string>
-    <string name="text_color">Text color</string>
-    <string name="primary_color">Primary color</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
-    <string name="restore_defaults">Restore defaults</string>
-    <string name="theme">Theme</string>
-    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
-    <string name="save">Save</string>
-    <string name="discard">Discard</string>
-    <string name="undo_changes">Undo changes</string>
-    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
-    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="background_color">Taustaväri</string>
+    <string name="text_color">Tekstin väri</string>
+    <string name="primary_color">Ensisijainen väri</string>
+    <string name="foreground_color">Etualan väri</string>
+    <string name="app_icon_color">Sovelluksen ikonin väri</string>
+    <string name="restore_defaults">Palauta oletukset</string>
+    <string name="theme">Teema</string>
+    <string name="changing_color_description">Värin vaihtaminen vaihtaa teemaksi "Oma teema"</string>
+    <string name="save">Tallenna</string>
+    <string name="discard">Hylkää</string>
+    <string name="undo_changes">Peru muutokset</string>
+    <string name="undo_changes_confirmation">Haluatko varmasti perua muutokset?</string>
+    <string name="save_before_closing">Sinulla on tallentamattomia muutoksia. Tallennetaanko ennen sulkemista?</string>
+    <string name="apply_to_all_apps">Käytä värejä kaikissa Simple App -sovelluksissa</string>
+    <string name="share_colors_success">Värit päivitetty. Uusi teema nimeltä \'Jaettu\' käytä sitä jatkossa muokataksesi värejä kaikissa sovelluksissa.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
+            Osta <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> avataksesi ominaisuuden ja tukeaksesi kehitystä. Kiitos!
         ]]>
     </string>
 
     <!-- Themes -->
-    <string name="light_theme">Light</string>
-    <string name="dark_theme">Dark</string>
+    <string name="light_theme">Vaalea</string>
+    <string name="dark_theme">Tumma</string>
     <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
-    <string name="black_white">Black &amp; White</string>
-    <string name="custom">Custom</string>
-    <string name="shared">Shared</string>
+    <string name="dark_red">Tumman punainen</string>
+    <string name="black_white">Musta &amp; Valkoinen</string>
+    <string name="custom">Oma</string>
+    <string name="shared">Jaettu</string>
 
     <!-- What's new -->
-    <string name="whats_new">What\'s new</string>
-    <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
+    <string name="whats_new">Mitä uutta</string>
+    <string name="whats_new_disclaimer">* tässä mainitaan vain isot muutokset, ei pieniä korjauksia</string>
 
     <!-- Actionbar items -->
-    <string name="delete">Delete</string>
-    <string name="remove">Remove</string>
-    <string name="rename">Rename</string>
-    <string name="share">Share</string>
-    <string name="share_via">Share via</string>
-    <string name="select_all">Select all</string>
-    <string name="hide">Hide</string>
-    <string name="unhide">Unhide</string>
-    <string name="hide_folder">Hide folder</string>
-    <string name="unhide_folder">Unhide folder</string>
-    <string name="temporarily_show_hidden">Temporarily show hidden</string>
-    <string name="stop_showing_hidden">Stop showing hidden media</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
+    <string name="delete">Poista</string>
+    <string name="remove">Poista</string>
+    <string name="rename">Uudelleennimeä</string>
+    <string name="share">Jaa</string>
+    <string name="share_via">Jaa sovelluksella</string>
+    <string name="select_all">Valitse kaikki</string>
+    <string name="hide">Piilota</string>
+    <string name="unhide">Näytä piilotetut</string>
+    <string name="hide_folder">Piilota kansio</string>
+    <string name="unhide_folder">Näytä piilotettu kansio</string>
+    <string name="temporarily_show_hidden">Näytä piilotetut väliaikaisesti</string>
+    <string name="stop_showing_hidden">Lopeta piilotettujen näyttäminen</string>
+    <string name="maximum_share_reached">Et voi jakaa näin paljoa kerralla</string>
 
     <!-- Sorting -->
-    <string name="sort_by">Sort by</string>
-    <string name="name">Name</string>
-    <string name="size">Size</string>
-    <string name="last_modified">Last modified</string>
-    <string name="date_taken">Date taken</string>
-    <string name="title">Title</string>
-    <string name="filename">Filename</string>
+    <string name="sort_by">Järjestä</string>
+    <string name="name">Nimen perusteella</string>
+    <string name="size">Koon perusteella</string>
+    <string name="last_modified">Viimeksi muokattu</string>
+    <string name="date_taken">Viimeksi kuvattu</string>
+    <string name="title">Otsikko</string>
+    <string name="filename">Tiedostonimi</string>
     <string name="extension">Extension</string>
-    <string name="ascending">Ascending</string>
-    <string name="descending">Descending</string>
-    <string name="use_for_this_folder">Use for this folder only</string>
+    <string name="ascending">Nouseva</string>
+    <string name="descending">Laskeva</string>
+    <string name="use_for_this_folder">Käytä vain tässä kansiossa</string>
 
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="proceed_with_deletion">Haluatko varmasti poistaa pysyvästi?</string>
+    <string name="yes">Poista</string>
+    <string name="no">Peruuta</string>
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
-    <string name="repeat_pin">Repeat PIN</string>
-    <string name="pattern">Pattern</string>
-    <string name="insert_pattern">Insert pattern</string>
-    <string name="wrong_pattern">Wrong pattern</string>
-    <string name="repeat_pattern">Repeat pattern</string>
-    <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
-    <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
-    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="enter_pin">Syötä PIN</string>
+    <string name="please_enter_pin">Syötä PIN</string>
+    <string name="wrong_pin">Väärä PIN</string>
+    <string name="repeat_pin">Toista PIN</string>
+    <string name="pattern">Kuvio</string>
+    <string name="insert_pattern">Syötä kuvio</string>
+    <string name="wrong_pattern">Väärä kuvio</string>
+    <string name="repeat_pattern">Toista kuvio</string>
+    <string name="fingerprint">Sormenjälki</string>
+    <string name="add_fingerprint">Lisää sormenjälki</string>
+    <string name="place_finger">Aseta sormi sormenjälkitunnistimelle</string>
+    <string name="authentication_failed">Kirjautuminen epäonnistui</string>
+    <string name="authentication_blocked">Kirjautuminen estetty, yritä myöhemmin uudelleen</string>
+    <string name="no_fingerprints_registered">Sinulla ei ole tallennettuja sormenjälkiä, lisää niitä laitteesi asetuksista</string>
+    <string name="go_to_settings">Mene asetuksiin</string>
+    <string name="protection_setup_successfully">Salasana tallennettu. Asenna sovellus uudelleen jos unohdat sen.</string>
+    <string name="fingerprint_setup_successfully">Suojaus onnistui. Asenna sovellus uudelleen jos kohtaat ongelmia.</string>
 
     <!-- Times -->
-    <string name="minutes_raw">minutes</string>
-    <string name="hours_raw">hours</string>
-    <string name="days_raw">days</string>
+    <string name="seconds_raw">sekunnit</string>
+    <string name="minutes_raw">minuutit</string>
+    <string name="hours_raw">tunnit</string>
+    <string name="days_raw">päivät</string>
 
     <plurals name="seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d sekunti</item>
+        <item quantity="other">%d sekuntia</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minuutti</item>
+        <item quantity="other">%d minuuttia</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d tunti</item>
+        <item quantity="other">%d tuntia</item>
     </plurals>
     <plurals name="days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d päivä</item>
+        <item quantity="other">%d päivää</item>
     </plurals>
     <plurals name="weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d viikko</item>
+        <item quantity="other">%d viikkoa</item>
     </plurals>
     <plurals name="months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d kuukausi</item>
+        <item quantity="other">%d kuukautta</item>
     </plurals>
     <plurals name="years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d vuosi</item>
+        <item quantity="other">%d vuotta</item>
     </plurals>
 
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d sekunnissa</item>
+        <item quantity="other">%d sekunnissa</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minuutissa</item>
+        <item quantity="other">%d minuutissa</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d tunnissa</item>
+        <item quantity="other">%d tunnissa</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="seconds_before">
+        <item quantity="one">%d sekunti ennen</item>
+        <item quantity="other">%d sekuntia ennen</item>
+    </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">%d minute before</item>
-        <item quantity="other">%d minutes before</item>
+        <item quantity="one">%d minuutti ennen</item>
+        <item quantity="other">%d minuuttia ennen</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">%d hour before</item>
-        <item quantity="other">%d hours before</item>
+        <item quantity="one">%d tunti ennen</item>
+        <item quantity="other">%d tuntia ennen</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">%d day before</item>
-        <item quantity="other">%d days before</item>
+        <item quantity="one">%d päivä ennen</item>
+        <item quantity="other">%d päivää ennen</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_seconds">
+        <item quantity="one">%d sekunnilla</item>
+        <item quantity="other">%d sekunnilla</item>
+    </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minuutilla</item>
+        <item quantity="other">%d minuutilla</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d tunnilla</item>
+        <item quantity="other">%d tunnilla</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
-    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+    <string name="alarm_goes_off_in">Aikaa hälytykseen:\n%s</string>
+    <string name="alarm_warning">Varmista että hälytys toimii ennenkuin turvaudut siihen. Se voi toimia virheellisesti laitteesi virransäästötoiminnoista riippuen.</string>
+    <string name="reminder_warning">Varmista että muistutus toimii ennenkuin turvaudut siihen. Se voi toimia virheellisesti laitteesi virransäästötoiminnoista riippuen.</string>
 
     <!-- Alarms -->
-    <string name="snooze">Snooze</string>
-    <string name="dismiss">Dismiss</string>
-    <string name="no_reminder">No reminder</string>
-    <string name="at_start">At start</string>
+    <string name="snooze">Torkuta</string>
+    <string name="dismiss">Ohita</string>
+    <string name="no_reminder">Ei muistutusta</string>
+    <string name="at_start">Alussa</string>
 
     <!-- Settings -->
-    <string name="settings">Settings</string>
-    <string name="customize_colors">Customize colors</string>
-    <string name="use_english_language">Use English language</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
-    <string name="show_hidden_items">Show hidden items</string>
-    <string name="font_size">Font size</string>
-    <string name="small">Small</string>
-    <string name="medium">Medium</string>
-    <string name="large">Large</string>
-    <string name="extra_large">Extra large</string>
-    <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
-    <string name="password_protect_whole_app">Password protect the whole application</string>
-    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
-    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
-    <string name="use_24_hour_time_format">Use 24-hour time format</string>
-    <string name="sunday_first">Start week on Sunday</string>
-    <string name="widgets">Widgets</string>
-    <string name="use_same_snooze">Always use same snooze time</string>
-    <string name="snooze_time">Snooze time</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="settings">Asetukset</string>
+    <string name="customize_colors">Muokkaa sovelluksen värejä</string>
+    <string name="use_english_language">Käytä Englannin kieltä</string>
+    <string name="avoid_whats_new">Älä näytä uutisia aloituksen yhteydessä</string>
+    <string name="show_hidden_items">Näytä piilotetut tiedostot</string>
+    <string name="font_size">Fonttikoko</string>
+    <string name="small">Pieni</string>
+    <string name="medium">Keskikokoinen</string>
+    <string name="large">Suuri</string>
+    <string name="extra_large">Erittäin suuri</string>
+    <string name="password_protect_hidden_items">Suojaa piilotetut salasanalla</string>
+    <string name="password_protect_whole_app">Suojaa koko sovellus salasanalla</string>
+    <string name="keep_last_modified">Säilytä alkuperäinen "viimeksi muokattu" ajankohta tiedostoa siirtäessä, kopioitaessa ja uudelleennimettäessä</string>
+    <string name="show_info_bubble">Näytä lisätietokupla vierityspalkista vierittäessä</string>
+    <string name="prevent_phone_from_sleeping">Estä puhelinta siirtymästä virransäästöön kun sovellus on avattu ja käytössä</string>
+    <string name="skip_delete_confirmation">Älä koskaan kysy varmistusta tiedostoja poistaessa</string>
+    <string name="enable_pull_to_refresh">Päivitä näkymä vedettäessä ylhäältä alas</string>
+    <string name="use_24_hour_time_format">Käytä 24:n tunnin kelloa</string>
+    <string name="sunday_first">Aloita viikko sunnuntaista</string>
+    <string name="widgets">Widgetit</string>
+    <string name="use_same_snooze">Käytä aina samaa torkkuaikaa</string>
+    <string name="snooze_time">Torkkuaika</string>
+    <string name="vibrate_on_button_press">Tärinä koskettaessa</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
+    <string name="visibility">Näkyvyys</string>
+    <string name="security">Turvallisuus</string>
+    <string name="scrolling">Vierittäminen</string>
+    <string name="file_operations">Tiedostot</string>
 
     <!-- Import / Export -->
-    <string name="importing">Importing…</string>
-    <string name="exporting">Exporting…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing">Tuodaan</string>
+    <string name="exporting">Viedään</string>
+    <string name="importing_successful">Tuonti onnistui</string>
+    <string name="exporting_successful">Vienti onnistui</string>
+    <string name="importing_failed">Tuonti epäonnistui</string>
+    <string name="exporting_failed">Vienti epäonnistui</string>
+    <string name="importing_some_entries_failed">Joidenkin kohteiden tuonti epäonnistui</string>
+    <string name="exporting_some_entries_failed">Joidenkin kohteiden vienti epäonnistui</string>
+    <string name="no_entries_for_exporting">Vientikohteita ei löydetty</string>
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="confirm_otg_storage_access_text">Valitse OTG-laitteen root-kansio salliaksesi pääsyn</string>
+    <string name="wrong_root_selected_otg">Väärä kansio valittu, valitse OTG-laitteen root-kansio</string>
 
     <!-- Dates -->
-    <string name="january">January</string>
-    <string name="february">February</string>
-    <string name="march">March</string>
-    <string name="april">April</string>
-    <string name="may">May</string>
-    <string name="june">June</string>
-    <string name="july">July</string>
-    <string name="august">August</string>
-    <string name="september">September</string>
-    <string name="october">October</string>
-    <string name="november">November</string>
-    <string name="december">December</string>
+    <string name="january">Tammikuu</string>
+    <string name="february">Helmikuu</string>
+    <string name="march">Maaliskuu</string>
+    <string name="april">Huhtikuu</string>
+    <string name="may">Toukokuu</string>
+    <string name="june">Kesäkuu</string>
+    <string name="july">Heinäkuu</string>
+    <string name="august">Elokuu</string>
+    <string name="september">Syyskuu</string>
+    <string name="october">Lokakuu</string>
+    <string name="november">Marraskuu</string>
+    <string name="december">Joulukuu</string>
 
-    <string name="monday">Monday</string>
-    <string name="tuesday">Tuesday</string>
-    <string name="wednesday">Wednesday</string>
-    <string name="thursday">Thursday</string>
-    <string name="friday">Friday</string>
-    <string name="saturday">Saturday</string>
-    <string name="sunday">Sunday</string>
+    <string name="monday">Maanantai</string>
+    <string name="tuesday">Tiistai</string>
+    <string name="wednesday">Keskiviikko</string>
+    <string name="thursday">Torstai</string>
+    <string name="friday">Perjantai</string>
+    <string name="saturday">Lauantai</string>
+    <string name="sunday">Sunnuntai</string>
 
     <string name="monday_letter">M</string>
     <string name="tuesday_letter">T</string>
-    <string name="wednesday_letter">W</string>
+    <string name="wednesday_letter">K</string>
     <string name="thursday_letter">T</string>
-    <string name="friday_letter">F</string>
-    <string name="saturday_letter">S</string>
+    <string name="friday_letter">P</string>
+    <string name="saturday_letter">L</string>
     <string name="sunday_letter">S</string>
 
     <!-- About -->
-    <string name="about">About</string>
-    <string name="website_label">For the source codes visit</string>
-    <string name="email_label">Send your feedback or suggestions to</string>
-    <string name="more_apps_underlined"><u>More apps</u></string>
-    <string name="third_party_licences_underlined"><u>Third party licences</u></string>
-    <string name="invite_friends_underlined"><u>Invite friends</u></string>
-    <string name="share_text">Hey, come check out %1$s at %2$s</string>
-    <string name="invite_via">Invite via</string>
-    <string name="rate_us_underlined"><u>Rate us</u></string>
-    <string name="donate">Donate</string>
-    <string name="donate_underlined"><u>Donate</u></string>
-    <string name="follow_us">Follow us</string>
+    <string name="about">Tietoa</string>
+    <string name="website_label">Lähdekoodin löydät täältä</string>
+    <string name="email_label">Lähetä palautteesi ja ehdotuksia osoitteeseen</string>
+    <string name="more_apps_underlined"><u>Lisää sovelluksia</u></string>
+    <string name="third_party_licences_underlined"><u>Kolmansien osapuolien lisenssit</u></string>
+    <string name="invite_friends_underlined"><u>Kutsu ystäviä</u></string>
+    <string name="share_text">Hei, tutustu %1$s täällä %2$s</string>
+    <string name="invite_via">Kutsu sovelluksella</string>
+    <string name="rate_us_underlined"><u>Arvostele</u></string>
+    <string name="donate">Lahjoita</string>
+    <string name="donate_underlined"><u>Lahjoita</u></string>
+    <string name="follow_us">Seuraa</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="additional_info">Additional info</string>
-    <string name="app_version">App version: %s</string>
-    <string name="device_os">Device OS: %s</string>
+    <string name="additional_info">Lisätietoa</string>
+    <string name="app_version">Sovelluksen versio: %s</string>
+    <string name="device_os">Laitteen käyttöjärjestelmä: %s</string>
     <string name="donate_please">
         <![CDATA[
-            Hello,<br><br>
-            hope you are enjoying the app. It contains no ads, please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
-            You can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.<br><br>
-            Thank you!
+            Hei,<br><br>
+            toivottavasti pidät sovelluksesta. Se ei sisällä mainoksia, tue sen kehitystä ostamalla <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> sovellus, tämä myös estää tämän ilmoituksen jatkossa.<br><br>
+            Lisää lahjoitusvaihtoehtoja löydät <a href="http://simplemobiletools.com/donate">täältä</a>.<br><br>
+            Kiitos!
         ]]>
+
     </string>
-    <string name="purchase">Purchase</string>
+    <string name="purchase">Osta</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
-            Hey,<br><br>
-            just letting you know that a new app has been released recently:<br><br>
+            Hei,<br><br>
+            halusin vain kertoa että uusi sovellus on julkaistu:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-            You can download it by pressing the title.<br><br>
-            Thanks
+            Voit ladata sen koskettamalla otsikkoa.<br><br>
+            Kiitos!
         ]]>
     </string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently asked questions</string>
-    <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
-    <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
-        in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
-    <string name="faq_2_title_commons">I want to support you, but I cannot donate money. Is there anything else I can do?</string>
-    <string name="faq_2_text_commons">Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-        You can find the guide at https://github.com/SimpleMobileTools/General-Discussion , or just shoot me a message at hello@simplemobiletools.com if you need help.</string>
-    <string name="faq_3_title_commons">I deleted some files by mistake, how can I recover them?</string>
-    <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, there is no trashbin available.</string>
-    <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
-    <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
+    <string name="frequently_asked_questions">Usein kysytyt kysymykset</string>
+    <string name="faq_1_title_commons">Miksi en näe tämän sovelluksen widgettiä widget-valikossa?</string>
+    <string name="faq_1_text_commons">Todennäköisesti asensit sovelluksen ulkoiselle muistikortille. Tässä tapauksessa ainoa vaihtoehto on uudelleenasentaa sovellus laitteen sisäiseen tallennustilaan.</string>
+    <string name="faq_2_title_commons">Haluan tukea sinua, mutta minulla ei ole varaa lahjoittaa. Voinko auttaa jotenkin muuten?</string>
+    <string name="faq_2_text_commons">Tottakai. Voit kertoa ystävillesi sovelluksista ja antaa hyviä arvosteluja ja palautetta. Voit myös auttaa kääntämällä sovelluksen uudelle kielelle tai korjata käännösvirheitä.
+        Ohjeet löydät täältä https://github.com/SimpleMobileTools/General-Discussion , tai lähettämällä viestiä osoitteeseen hello@simplemobiletools.com jos Sinulla on kysyttävää.</string>
+    <string name="faq_3_title_commons">Poistin tiedostoja vahingossa, miten palautan ne?</string>
+    <string name="faq_3_text_commons">Valitettavasti se ei ole mahdollista. Tiedostot poistetaan aina pysyvästi.</string>
+    <string name="faq_4_title_commons">En pidä widgetin väreistä, voinko vaihtaa ne?</string>
+    <string name="faq_4_text_commons">Kyllä. Kun luot widgetin aloitusnäytölle aukeaa widgetin määritysikkuna. Paina värillisiä neliöitä valitaksesi uudet värit. Vierityspalkista voit myös säätää läpinäkyvyyttä.</string>
 
     <!-- License -->
-    <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
-    <string name="third_party_licences">Third party licences</string>
+    <string name="notice">Tämä sovellus käyttää kolmannen osapuolen lisenssejä tehdäkseni elämästäni helpompaa. Kiitos.</string>
+    <string name="third_party_licences">Kolmansien osapuolien lisenssit</string>
     <string name="kotlin_title">Kotlin (programming language)</string>
     <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
     <string name="glide_title">Glide (image loading and caching)</string>

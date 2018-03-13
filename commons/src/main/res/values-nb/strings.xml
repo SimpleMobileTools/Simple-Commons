@@ -221,6 +221,7 @@
     <string name="fingerprint_setup_successfully">Beskyttelse er stilt inn. Installer appen på nytt i tilfelle problemer med å tilbakestille.</string>
 
     <!-- Times -->
+    <string name="seconds_raw">sekunder</string>
     <string name="minutes_raw">minutter</string>
     <string name="hours_raw">timer</string>
     <string name="days_raw">dager</string>
@@ -269,6 +270,10 @@
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="seconds_before">
+        <item quantity="one">%d sekund før</item>
+        <item quantity="other">%d sekunder før</item>
+    </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minutt før</item>
         <item quantity="other">%d minutter før</item>
@@ -283,6 +288,10 @@
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_seconds">
+        <item quantity="one">%d sekund</item>
+        <item quantity="other">%d sekunder</item>
+    </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minutt</item>
         <item quantity="other">%d minutter</item>
@@ -326,7 +335,7 @@
     <string name="widgets">Moduler</string>
     <string name="use_same_snooze">Bruk alltid samme intervall for Snooze</string>
     <string name="snooze_time">Intervall for Snooze</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="vibrate_on_button_press">Vibrer ved trykk på knapper</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighet</string>

@@ -4,32 +4,37 @@ import android.app.Activity
 import android.support.v7.app.AlertDialog
 import android.view.ViewGroup
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.hideKeyboard
-import com.simplemobiletools.commons.extensions.setupDialogStuff
-import com.simplemobiletools.commons.extensions.showKeyboard
-import com.simplemobiletools.commons.extensions.value
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.DAY_MINUTES
+import com.simplemobiletools.commons.helpers.DAY_SECONDS
+import com.simplemobiletools.commons.helpers.HOUR_SECONDS
+import com.simplemobiletools.commons.helpers.MINUTE_SECONDS
 import kotlinx.android.synthetic.main.dialog_custom_interval_picker.view.*
 
-class CustomIntervalPickerDialog(val activity: Activity, val selectedMinutes: Int = 0, val callback: (minutes: Int) -> Unit) {
+class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: Int = 0, val showSeconds: Boolean = false, val callback: (minutes: Int) -> Unit) {
     var dialog: AlertDialog
     var view = (activity.layoutInflater.inflate(R.layout.dialog_custom_interval_picker, null) as ViewGroup)
 
     init {
         view.apply {
+            dialog_radio_seconds.beVisibleIf(showSeconds)
             when {
-                selectedMinutes == 0 -> dialog_radio_view.check(R.id.dialog_radio_minutes)
-                selectedMinutes % DAY_MINUTES == 0 -> {
+                selectedSeconds == 0 -> dialog_radio_view.check(R.id.dialog_radio_minutes)
+                selectedSeconds % DAY_SECONDS == 0 -> {
                     dialog_radio_view.check(R.id.dialog_radio_days)
-                    dialog_custom_interval_value.setText((selectedMinutes / DAY_MINUTES).toString())
+                    dialog_custom_interval_value.setText((selectedSeconds / DAY_SECONDS).toString())
                 }
-                selectedMinutes % 60 == 0 -> {
+                selectedSeconds % HOUR_SECONDS == 0 -> {
                     dialog_radio_view.check(R.id.dialog_radio_hours)
-                    dialog_custom_interval_value.setText((selectedMinutes / 60).toString())
+                    dialog_custom_interval_value.setText((selectedSeconds / HOUR_SECONDS).toString())
+                }
+                selectedSeconds % MINUTE_SECONDS == 0 -> {
+                    dialog_radio_view.check(R.id.dialog_radio_minutes)
+                    dialog_custom_interval_value.setText((selectedSeconds / MINUTE_SECONDS).toString())
                 }
                 else -> {
-                    dialog_radio_view.check(R.id.dialog_radio_minutes)
-                    dialog_custom_interval_value.setText(selectedMinutes.toString())
+                    dialog_radio_view.check(R.id.dialog_radio_seconds)
+                    dialog_custom_interval_value.setText(selectedSeconds.toString())
                 }
             }
         }
@@ -54,8 +59,9 @@ class CustomIntervalPickerDialog(val activity: Activity, val selectedMinutes: In
     }
 
     private fun getMultiplier(id: Int) = when (id) {
-        R.id.dialog_radio_hours -> 60
         R.id.dialog_radio_days -> DAY_MINUTES
+        R.id.dialog_radio_hours -> HOUR_SECONDS
+        R.id.dialog_radio_minutes -> MINUTE_SECONDS
         else -> 1
     }
 }

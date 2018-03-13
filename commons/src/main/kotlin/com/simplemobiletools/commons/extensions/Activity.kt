@@ -730,30 +730,31 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
     callback?.invoke()
 }
 
-fun Activity.showPickIntervalDialog(curMinutes: Int, isSnoozePicker: Boolean = false, cancelCallback: (() -> Unit)? = null, callback: (minutes: Int) -> Unit) {
+fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false,
+                                   cancelCallback: (() -> Unit)? = null, callback: (minutes: Int) -> Unit) {
     hideKeyboard()
-    val minutes = TreeSet<Int>()
-    minutes.apply {
+    val seconds = TreeSet<Int>()
+    seconds.apply {
         if (!isSnoozePicker) {
             add(-1)
             add(0)
         }
-        add(5)
-        add(10)
-        add(20)
-        add(30)
-        add(60)
-        add(curMinutes)
+        add(1 * MINUTE_SECONDS)
+        add(5 * MINUTE_SECONDS)
+        add(10 * MINUTE_SECONDS)
+        add(30 * MINUTE_SECONDS)
+        add(60 * MINUTE_SECONDS)
+        add(curSeconds)
     }
 
-    val items = ArrayList<RadioItem>(minutes.size + 1)
-    minutes.mapIndexedTo(items, { index, value ->
-        RadioItem(index, getFormattedMinutes(value, !isSnoozePicker), value)
+    val items = ArrayList<RadioItem>(seconds.size + 1)
+    seconds.mapIndexedTo(items, { index, value ->
+        RadioItem(index, getFormattedSeconds(value, !isSnoozePicker), value)
     })
 
     var selectedIndex = 0
-    minutes.forEachIndexed { index, value ->
-        if (value == curMinutes) {
+    seconds.forEachIndexed { index, value ->
+        if (value == curSeconds) {
             selectedIndex = index
         }
     }
@@ -762,7 +763,7 @@ fun Activity.showPickIntervalDialog(curMinutes: Int, isSnoozePicker: Boolean = f
 
     RadioGroupDialog(this, items, selectedIndex, showOKButton = isSnoozePicker, cancelCallback = cancelCallback) {
         if (it == -2) {
-            CustomIntervalPickerDialog(this) {
+            CustomIntervalPickerDialog(this, showSeconds = showSecondsAtCustomDialog) {
                 callback(it)
             }
         } else {
