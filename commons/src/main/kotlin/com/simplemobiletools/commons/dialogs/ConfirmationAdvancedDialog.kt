@@ -18,8 +18,8 @@ class ConfirmationAdvancedDialog(activity: Activity, message: String = "", messa
                 .setPositiveButton(positive, { dialog, which -> positivePressed() })
                 .setNegativeButton(negative, { dialog, which -> negativePressed() })
                 .create().apply {
-            activity.setupDialogStuff(view, this)
-        }
+                    activity.setupDialogStuff(view, this)
+                }
     }
 
     private fun positivePressed() {

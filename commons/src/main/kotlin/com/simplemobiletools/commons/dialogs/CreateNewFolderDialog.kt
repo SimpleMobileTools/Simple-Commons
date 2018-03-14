@@ -17,26 +17,26 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                 .setPositiveButton(R.string.ok, null)
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
-            activity.setupDialogStuff(view, this, R.string.create_new_folder) {
-                showKeyboard(view.folder_name)
-                getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(View.OnClickListener {
-                    val name = view.folder_name.value
-                    when {
-                        name.isEmpty() -> activity.toast(R.string.empty_name)
-                        name.isAValidFilename() -> {
-                            val file = File(path, name)
-                            if (file.exists()) {
-                                activity.toast(R.string.name_taken)
-                                return@OnClickListener
-                            }
+                    activity.setupDialogStuff(view, this, R.string.create_new_folder) {
+                        showKeyboard(view.folder_name)
+                        getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(View.OnClickListener {
+                            val name = view.folder_name.value
+                            when {
+                                name.isEmpty() -> activity.toast(R.string.empty_name)
+                                name.isAValidFilename() -> {
+                                    val file = File(path, name)
+                                    if (file.exists()) {
+                                        activity.toast(R.string.name_taken)
+                                        return@OnClickListener
+                                    }
 
-                            createFolder("$path/$name", this)
-                        }
-                        else -> activity.toast(R.string.invalid_name)
+                                    createFolder("$path/$name", this)
+                                }
+                                else -> activity.toast(R.string.invalid_name)
+                            }
+                        })
                     }
-                })
-            }
-        }
+                }
     }
 
     private fun createFolder(path: String, alertDialog: AlertDialog) {

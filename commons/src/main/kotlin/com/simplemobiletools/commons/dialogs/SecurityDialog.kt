@@ -81,8 +81,8 @@ class SecurityDialog(val activity: Activity, val requiredHash: String, val showT
                 .setOnCancelListener { onCancelFail() }
                 .setNegativeButton(R.string.cancel, { dialog, which -> onCancelFail() })
                 .create().apply {
-            activity.setupDialogStuff(view, this)
-        }
+                    activity.setupDialogStuff(view, this)
+                }
     }
 
     private fun onCancelFail() {
