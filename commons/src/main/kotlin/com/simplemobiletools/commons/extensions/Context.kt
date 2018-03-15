@@ -204,6 +204,10 @@ fun Context.getMediaContentUri(path: String): Uri? {
         else -> MediaStore.Files.getContentUri("external")
     }
 
+    return getMediaContent(path, uri) ?: getMediaContent(path, MediaStore.Files.getContentUri("external")) ?: null
+}
+
+fun Context.getMediaContent(path: String, uri: Uri): Uri? {
     val projection = arrayOf(MediaStore.Images.Media._ID)
     val selection = MediaStore.Images.Media.DATA + "= ?"
     val selectionArgs = arrayOf(path)
