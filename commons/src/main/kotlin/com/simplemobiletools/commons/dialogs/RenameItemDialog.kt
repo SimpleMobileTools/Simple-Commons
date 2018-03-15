@@ -67,9 +67,7 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
                             updatedPaths.add(newPath)
                             activity.renameFile(path, newPath) {
                                 if (it) {
-                                    activity.scanPaths(updatedPaths) {
-                                        callback(newPath)
-                                    }
+                                    callback(newPath)
                                     dismiss()
                                 } else {
                                     activity.toast(R.string.unknown_error_occurred)
