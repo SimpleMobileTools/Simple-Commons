@@ -222,7 +222,7 @@
     <string name="fingerprint_setup_successfully">Установка защиты выполнена успешно. Переустановите приложение в случае возникновения проблем с её отключением.</string>
 
     <!-- Times -->
-    <string name="seconds_raw">seconds</string>
+    <string name="seconds_raw">секунд</string>
     <string name="minutes_raw">минут</string>
     <string name="hours_raw">часов</string>
     <string name="days_raw">дней</string>
@@ -286,13 +286,13 @@
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d second before</item>
-        <item quantity="few">%d seconds before</item>
-        <item quantity="many">%d seconds before</item>
-        <item quantity="other">%d seconds before</item>
+        <item quantity="one">%d секунда до события</item>
+        <item quantity="few">%d секунды до события</item>
+        <item quantity="many">%d секунд до события</item>
+        <item quantity="other">%d секунд(-ы) до события</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">%d минуту до события</item>
+        <item quantity="one">%d минута до события</item>
         <item quantity="few">%d минуты до события</item>
         <item quantity="many">%d минут до события</item>
         <item quantity="other">%d минут(-ы) до события</item>
@@ -312,9 +312,9 @@
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="few">%d seconds</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d секунду</item>
+        <item quantity="few">%d секунды</item>
+        <item quantity="other">%d секунд</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d минуту</item>
