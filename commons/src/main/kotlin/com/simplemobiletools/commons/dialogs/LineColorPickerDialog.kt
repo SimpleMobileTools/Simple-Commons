@@ -47,8 +47,8 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
                 .setNegativeButton(R.string.cancel, { dialog, which -> dialogDismissed() })
                 .setOnCancelListener { dialogDismissed() }
                 .create().apply {
-            activity.setupDialogStuff(view, this)
-        }
+                    activity.setupDialogStuff(view, this)
+                }
     }
 
     fun getSpecificColor() = view.secondary_line_color_picker.getCurrentColor()

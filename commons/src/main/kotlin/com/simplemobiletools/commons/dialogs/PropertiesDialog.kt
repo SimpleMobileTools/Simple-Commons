@@ -112,8 +112,8 @@ class PropertiesDialog() {
         AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.ok, null)
                 .create().apply {
-            activity.setupDialogStuff(view, this, R.string.properties)
-        }
+                    activity.setupDialogStuff(view, this, R.string.properties)
+                }
     }
 
     private fun updateLastModified(activity: Activity, view: View, timestamp: Long) {
@@ -163,8 +163,8 @@ class PropertiesDialog() {
         AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.ok, null)
                 .create().apply {
-            activity.setupDialogStuff(view, this, R.string.properties)
-        }
+                    activity.setupDialogStuff(view, this, R.string.properties)
+                }
     }
 
     private fun addExifProperties(path: String) {

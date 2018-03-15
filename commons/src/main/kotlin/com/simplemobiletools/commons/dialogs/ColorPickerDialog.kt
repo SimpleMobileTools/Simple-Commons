@@ -127,12 +127,12 @@ class ColorPickerDialog(val activity: Activity, color: Int, val callback: (color
                 .setPositiveButton(R.string.ok, { dialog, which -> confirmNewColor() })
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
-            activity.setupDialogStuff(view, this) {
-                view.color_picker_arrow.applyColorFilter(textColor)
-                view.color_picker_hex_arrow.applyColorFilter(textColor)
-                viewCursor.applyColorFilter(textColor)
-            }
-        }
+                    activity.setupDialogStuff(view, this) {
+                        view.color_picker_arrow.applyColorFilter(textColor)
+                        view.color_picker_hex_arrow.applyColorFilter(textColor)
+                        viewCursor.applyColorFilter(textColor)
+                    }
+                }
 
         view.onGlobalLayout {
             moveHuePicker()

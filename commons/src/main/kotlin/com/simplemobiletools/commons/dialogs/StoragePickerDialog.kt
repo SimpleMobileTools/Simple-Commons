@@ -91,8 +91,8 @@ class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, va
 
         mDialog = AlertDialog.Builder(activity)
                 .create().apply {
-            activity.setupDialogStuff(view, this, R.string.select_storage)
-        }
+                    activity.setupDialogStuff(view, this, R.string.select_storage)
+                }
     }
 
     private fun internalPicked() {

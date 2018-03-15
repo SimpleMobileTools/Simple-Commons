@@ -20,7 +20,7 @@ class PurchaseThankYouDialog(val activity: Activity) {
                 .setPositiveButton(R.string.purchase, { dialog, which -> activity.launchViewIntent(R.string.thank_you_url) })
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
-            activity.setupDialogStuff(view, this)
-        }
+                    activity.setupDialogStuff(view, this)
+                }
     }
 }
