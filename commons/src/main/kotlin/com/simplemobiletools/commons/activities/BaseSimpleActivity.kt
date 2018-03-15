@@ -30,7 +30,7 @@ import java.io.File
 import java.util.*
 
 open class BaseSimpleActivity : AppCompatActivity() {
-    var copyMoveCallback: (() -> Unit)? = null
+    var copyMoveCallback: ((destinationPath: String) -> Unit)? = null
     var actionOnPermission: ((granted: Boolean) -> Unit)? = null
     var isAskingPermissions = false
     var useDynamicTheme = true
@@ -190,7 +190,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun copyMoveFilesTo(fileDirItems: ArrayList<FileDirItem>, source: String, destination: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean,
-                        copyHidden: Boolean, callback: () -> Unit) {
+                        copyHidden: Boolean, callback: (destinationPath: String) -> Unit) {
         if (source == destination) {
             toast(R.string.source_and_destination_same)
             return
@@ -230,7 +230,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
                         val updatedPaths = updatedFiles.map { it.path } as ArrayList<String>
                         scanPaths(updatedPaths) {
                             runOnUiThread {
-                                copyMoveListener.copySucceeded(false, fileDirItems.size * 2 == updatedFiles.size)
+                                copyMoveListener.copySucceeded(false, fileDirItems.size * 2 == updatedFiles.size, destination)
                             }
                         }
                     } catch (e: Exception) {
@@ -294,13 +294,13 @@ open class BaseSimpleActivity : AppCompatActivity() {
     }
 
     val copyMoveListener = object : CopyMoveListener {
-        override fun copySucceeded(copyOnly: Boolean, copiedAll: Boolean) {
+        override fun copySucceeded(copyOnly: Boolean, copiedAll: Boolean, destinationPath: String) {
             if (copyOnly) {
                 toast(if (copiedAll) R.string.copying_success else R.string.copying_success_partial)
             } else {
                 toast(if (copiedAll) R.string.moving_success else R.string.moving_success_partial)
             }
-            copyMoveCallback?.invoke()
+            copyMoveCallback?.invoke(destinationPath)
             copyMoveCallback = null
         }
 

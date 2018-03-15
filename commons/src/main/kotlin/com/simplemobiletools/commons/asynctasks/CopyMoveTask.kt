@@ -35,6 +35,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     private var mDocuments = LinkedHashMap<String, DocumentFile?>()
     private var mFiles = ArrayList<FileDirItem>()
     private var mFileCountToCopy = 0
+    private var mDestinationPath = ""
 
     // progress indication
     private var mNotificationManager: NotificationManager
@@ -58,6 +59,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
         val pair = params[0]
         mFiles = pair.first!!
+        mDestinationPath = pair.second!!
         mFileCountToCopy = mFiles.size
         mNotifId = (System.currentTimeMillis() / 1000).toInt()
         mMaxSize = 0
@@ -65,7 +67,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             if (file.size == 0L) {
                 file.size = file.getProperSize(activity, copyHidden)
             }
-            val newPath = "${pair.second}/${file.name}"
+            val newPath = "$mDestinationPath/${file.name}"
             val fileExists = if (newPath.startsWith(OTG_PATH)) activity.getFastDocumentFile(newPath)?.exists()
                     ?: false else File(newPath).exists()
             if (getConflictResolution(newPath) != CONFLICT_SKIP || !fileExists) {
@@ -80,7 +82,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
         for (file in mFiles) {
             try {
-                val newPath = "${pair.second}/${file.name}"
+                val newPath = "$mDestinationPath/${file.name}"
                 val newFileDirItem = FileDirItem(newPath, newPath.getFilenameFromPath(), file.isDirectory)
                 if (activity.getDoesFilePathExist(newPath)) {
                     val resolution = getConflictResolution(newPath)
@@ -113,7 +115,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         val listener = mListener?.get() ?: return
 
         if (success) {
-            listener.copySucceeded(copyOnly, mTransferredFiles.size >= mFileCountToCopy)
+            listener.copySucceeded(copyOnly, mTransferredFiles.size >= mFileCountToCopy, mDestinationPath)
         } else {
             listener.copyFailed()
         }
