@@ -43,9 +43,9 @@
     <string name="renaming_folder">Изменение имени папки</string>
     <string name="filename_cannot_be_empty">Имя файла не может быть пустым</string>
     <string name="filename_invalid_characters">Имя файла содержит недопустимые символы</string>
-    <string name="filename_invalid_characters_placeholder">Имя файла «%s» содержит недопустимые символы</string>
+    <string name="filename_invalid_characters_placeholder">Имя файла \"%s\" содержит недопустимые символы</string>
     <string name="extension_cannot_be_empty">Расширение не может быть пустым</string>
-    <string name="source_file_doesnt_exist">Исходный файл «%s» не существует</string>
+    <string name="source_file_doesnt_exist">Исходный файл \"%s\" не существует</string>
 
     <!-- Copy / Move -->
     <string name="copy">Копировать</string>
@@ -70,8 +70,8 @@
     <string name="copying_success_partial">Некоторые файлы не могут быть скопированы</string>
     <string name="no_files_selected">Файлы не выбраны</string>
     <string name="saving">Сохранение…</string>
-    <string name="could_not_create_folder">Не удалось создать папку «%s»</string>
-    <string name="could_not_create_file">Не удалось создать файл «%s»</string>
+    <string name="could_not_create_folder">Не удалось создать папку \"%s\"</string>
+    <string name="could_not_create_file">Не удалось создать файл \"%\"</string>
 
     <!-- Create new -->
     <string name="create_new">Создать</string>
@@ -84,13 +84,13 @@
     <string name="unknown_error_occurred">Произошла неизвестная ошибка</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Файл «%s» уже существует</string>
-    <string name="file_already_exists_overwrite">Файл «%s» уже существует. Перезаписать?</string>
-    <string name="folder_already_exists">Папка «%s» уже существует</string>
+    <string name="file_already_exists">Файл \"%s\" уже существует</string>
+    <string name="file_already_exists_overwrite">Файл \"%s\" уже существует. Перезаписать?</string>
+    <string name="folder_already_exists">Папка \"%s\" уже существует</string>
     <string name="merge">Объединить</string>
     <string name="overwrite">Перезаписать</string>
     <string name="skip">Пропустить</string>
-    <string name="append">Добавить «_1» к имени</string>
+    <string name="append">Добавить \"_1\" к имени</string>
     <string name="apply_to_all">Применить ко всем конфликтам</string>
 
     <!-- File picker -->
@@ -148,7 +148,7 @@
     <string name="undo_changes_confirmation">Действительно отменить изменения?</string>
     <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
     <string name="apply_to_all_apps">Применить цвета ко всем приложениям Simple</string>
-    <string name="share_colors_success">Цвета успешно обновлены. Добавлена новая тема с названием «Общая», в дальнейшем используйте её для обновления цветов всех приложений.</string>
+    <string name="share_colors_success">Цвета успешно обновлены. Добавлена новая тема с названием \"Общая\", в дальнейшем используйте её для обновления цветов всех приложений.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Пожалуйста, купите <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, чтобы разблокировать эту функцию и поддержать разработку. Спасибо!
@@ -342,7 +342,7 @@
     <string name="settings">Настройки</string>
     <string name="customize_colors">Настроить цвета</string>
     <string name="use_english_language">Use English language</string>
-    <string name="avoid_whats_new">Не показывать «Что нового» при запуске</string>
+    <string name="avoid_whats_new">Не показывать \"Что нового\" при запуске</string>
     <string name="show_hidden_items">Показывать скрытые папки</string>
     <string name="font_size">Размер шрифта</string>
     <string name="small">Мелкий</string>
@@ -355,7 +355,7 @@
     <string name="show_info_bubble">Показывать информационное окно при прокрутке элементов перетаскиванием полосы прокрутки</string>
     <string name="prevent_phone_from_sleeping">Предотвращать засыпание устройства, пока приложение находится на переднем плане</string>
     <string name="skip_delete_confirmation">Всегда пропускать диалог подтверждения удаления</string>
-    <string name="enable_pull_to_refresh">Использовать «потяните-для-обновления» в верхней части экрана</string>
+    <string name="enable_pull_to_refresh">Использовать \"потянуть-для-обновления\" в верхней части экрана</string>
     <string name="use_24_hour_time_format">Использовать 24-часовой формат времени</string>
     <string name="sunday_first">Воскресенье — начало недели</string>
     <string name="widgets">Виджеты</string>
@@ -462,7 +462,7 @@
     <string name="faq_2_text_commons">Да, конечно. Вы можете распространять информацию о приложениях или давать хорошие отзывы и оценки. Также вы можете помочь, переведя приложения на новый язык или просто обновив существующие переводы.
         Руководство можно найти по адресу https://github.com/SimpleMobileTools/General-Discussion или просто написать мне короткое сообщение на hello@simplemobiletools.com , если вам нужна помощь.</string>
     <string name="faq_3_title_commons">Я по ошибке удалил некоторые файлы, как их восстановить?</string>
-    <string name="faq_3_text_commons">К сожалению, вы не сможете. Файлы удаляются сразу после диалога подтверждения, функции вроде «корзины» не предусмотрено.</string>
+    <string name="faq_3_text_commons">К сожалению, вы не сможете. Файлы удаляются сразу после диалога подтверждения, функции вроде \"корзины\" не предусмотрено.</string>
     <string name="faq_4_title_commons">Мне не нравятся цвета виджета, я могу их изменить?</string>
     <string name="faq_4_text_commons">Да, при перетаскивании виджета на главный экран появляется панель его настройки. На ней вы увидите цветные квадраты в левом нижнем углу, просто нажмите их, чтобы выбрать новый цвет. Также можно использовать ползунок для настройки прозрачности.</string>
 
