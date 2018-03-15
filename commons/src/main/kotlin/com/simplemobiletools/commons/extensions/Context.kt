@@ -109,6 +109,22 @@ fun Context.getLatestMediaId(uri: Uri = MediaStore.Files.getContentUri("external
     return 0
 }
 
+fun Context.getLatestMediaByDateId(uri: Uri = MediaStore.Files.getContentUri("external")): Long {
+    val projection = arrayOf(BaseColumns._ID)
+    val sortOrder = "${MediaStore.Images.ImageColumns.DATE_TAKEN} DESC"
+    var cursor: Cursor? = null
+    try {
+        cursor = contentResolver.query(uri, projection, null, null, sortOrder)
+        if (cursor?.moveToFirst() == true) {
+            return cursor.getLongValue(BaseColumns._ID)
+        }
+    } finally {
+        cursor?.close()
+    }
+    return 0
+}
+
+
 // some helper functions were taken from https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ipaulpro/afilechooser/utils/FileUtils.java
 @SuppressLint("NewApi")
 fun Context.getRealPathFromURI(uri: Uri): String? {
