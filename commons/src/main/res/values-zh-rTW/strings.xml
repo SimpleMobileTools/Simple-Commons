@@ -220,7 +220,7 @@
     <string name="fingerprint_setup_successfully">保護設置成功。若再次設置時發生問題，請重新安裝應用程式。</string>
 
     <!-- Times -->
-    <string name="seconds_raw">seconds</string>
+    <string name="seconds_raw">秒鐘</string>
     <string name="minutes_raw">分鐘</string>
     <string name="hours_raw">小時</string>
     <string name="days_raw">天</string>
@@ -270,8 +270,8 @@
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d second before</item>
-        <item quantity="other">%d seconds before</item>
+        <item quantity="one">%d秒鐘前</item>
+        <item quantity="other">%d秒鐘前</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d分鐘前</item>
@@ -288,8 +288,8 @@
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d秒鐘</item>
+        <item quantity="other">%d秒鐘</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d分鐘</item>
@@ -307,7 +307,7 @@
 
     <!-- Alarms -->
     <string name="snooze">延遲</string>
-    <string name="dismiss">Dismiss</string>
+    <string name="dismiss">關閉</string>
     <string name="no_reminder">不提醒</string>
     <string name="at_start">準時</string>
 
@@ -333,8 +333,8 @@
     <string name="sunday_first">每周由星期日開始</string>
     <string name="widgets">小工具</string>
     <string name="use_same_snooze">總是使用相同延遲間隔</string>
-    <string name="snooze_time">Snooze time</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="snooze_time">延遲時間</string>
+    <string name="vibrate_on_button_press">按下按鈕時震動</string>
 
     <!-- Setting sections -->
     <string name="visibility">可見度</string>
@@ -419,9 +419,9 @@
     <string name="new_app">
         <![CDATA[
             嗨，<br><br>
-            想讓你知道最近剛發布了一個新的應用程式:<br><br>
+            告訴你最近有一個新的應用程式剛發布:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-            點標題就能下載了<br><br>
+            點標題下載來試試看吧<br><br>
             謝謝
         ]]>
     </string>
