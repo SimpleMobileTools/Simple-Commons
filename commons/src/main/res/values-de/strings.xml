@@ -221,7 +221,7 @@
     <string name="fingerprint_setup_successfully">Schutz erfolgreich eingerichtet. Falls beim Zurücksetzen Probleme auftreten, bitte die App neu installieren.</string>
 
     <!-- Times -->
-    <string name="seconds_raw">seconds</string>
+    <string name="seconds_raw">Sekunden</string>
     <string name="minutes_raw">Minuten</string>
     <string name="hours_raw">Stunden</string>
     <string name="days_raw">Tage</string>
@@ -271,8 +271,8 @@
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d second before</item>
-        <item quantity="other">%d seconds before</item>
+        <item quantity="one">%d Sekunde vorher</item>
+        <item quantity="other">%d Sekunden vorher</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d Minute vorher</item>
@@ -289,8 +289,8 @@
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d Sekunde</item>
+        <item quantity="other">%d Sekunden</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d Minute</item>
@@ -389,6 +389,14 @@
     <string name="saturday_letter">S</string>
     <string name="sunday_letter">S</string>
 
+    <string name="monday_short">Mo</string>
+    <string name="tuesday_short">Di</string>
+    <string name="wednesday_short">Mi</string>
+    <string name="thursday_short">Do</string>
+    <string name="friday_short">Fr</string>
+    <string name="saturday_short">Sa</string>
+    <string name="sunday_short">So</string>
+
     <!-- About -->
     <string name="about">Über</string>
     <string name="website_label">Weitere schlichte Apps und Quellcode siehe</string>
@@ -437,7 +445,7 @@
     <string name="faq_3_title_commons">Ich habe versehentlich einige Dateien gelöscht. Wie kann ich diese wiederherstellen?</string>
     <string name="faq_3_text_commons">Unglücklicherweise gar nicht. Dateien werden sofort nach dem Bestätigungsdialog gelöscht, sprich ein Papierkorb ist nicht vorhanden.</string>
     <string name="faq_4_title_commons">Ich mag die Farben des Widgets nicht. Kann ich sie wechseln?</string>
-    <string name="faq_4_text_commons">Ja, wenn du ein Widget auf den Home Screen ziehst, erscheint ein Konfigurationmenü. In der linken unteren Ecke sind farbige Kästchen, drücke auf sie und wähle eine neue Farbe. Ausserdem kannst du den Regler nutzen, um den Alphaparameter (Transparenz) einzustellen.</string>
+    <string name="faq_4_text_commons">Ja, wenn du ein Widget auf den Home Screen ziehst, erscheint ein Konfigurationsmenü. In der linken unteren Ecke sind farbige Kästchen, drücke auf sie und wähle eine neue Farbe. Ausserdem kannst du den Regler nutzen, um den Alphaparameter (Transparenz) einzustellen.</string>
 
     <!-- License -->
     <string name="notice">Diese App nutzt die folgenden Drittanbieterbibliotheken, die mein Leben einfacher machen. Danke!</string>
@@ -461,5 +469,5 @@
     <string name="espresso_title">Espresso (Test-Hilfstool)</string>
     <string name="gson_title">Gson (JSON-Parser)</string>
     <string name="leak_canary_title">Leak Canary (Memory-Leak-Detektor)</string>
-    <string name="number_picker_title">Number Picker (customizable number picker)</string>
+    <string name="number_picker_title">Number Picker (Konfigurierbarer Zahlenwähler)</string>
 </resources>

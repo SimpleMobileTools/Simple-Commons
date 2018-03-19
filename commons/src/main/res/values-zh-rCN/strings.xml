@@ -136,8 +136,8 @@
     <string name="background_color">背景色</string>
     <string name="text_color">文本颜色</string>
     <string name="primary_color">主体色</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
+    <string name="foreground_color">前景色</string>
+    <string name="app_icon_color">应用图标颜色</string>
     <string name="restore_defaults">恢复默认</string>
     <string name="theme">主题</string>
     <string name="changing_color_description">更改颜色将切换到自定义主题</string>
@@ -221,10 +221,10 @@
     <string name="fingerprint_setup_successfully">指纹保护设置成功。如果出现问题，请重新安装本应用。</string>
 
     <!-- Times -->
-    <string name="seconds_raw">seconds</string>
-    <string name="minutes_raw">minutes</string>
-    <string name="hours_raw">hours</string>
-    <string name="days_raw">days</string>
+    <string name="seconds_raw">秒</string>
+    <string name="minutes_raw">分钟</string>
+    <string name="hours_raw">小时</string>
+    <string name="days_raw">天</string>
 
     <plurals name="seconds">
         <item quantity="one">%d 秒</item>
@@ -271,34 +271,34 @@
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d second before</item>
-        <item quantity="other">%d seconds before</item>
+        <item quantity="one">%d 秒前</item>
+        <item quantity="other">%d 秒前</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">%d minute before</item>
-        <item quantity="other">%d minutes before</item>
+        <item quantity="one">%d 分钟前</item>
+        <item quantity="other">%d 分钟前</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">%d hour before</item>
-        <item quantity="other">%d hours before</item>
+        <item quantity="one">%d 小时前</item>
+        <item quantity="other">%d 小时前</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">%d day before</item>
-        <item quantity="other">%d days before</item>
+        <item quantity="one">%d 天前</item>
+        <item quantity="other">%d 天前</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d 秒</item>
+        <item quantity="other">%d 秒</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d 分钟</item>
+        <item quantity="other">%d 分钟</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d 小时</item>
+        <item quantity="other">%d 小时</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -307,10 +307,10 @@
     <string name="reminder_warning">在依赖它们之前，请确保提醒能够正常工作。由于系统与节电有关的限制，它们有时可能会失灵。</string>
 
     <!-- Alarms -->
-    <string name="snooze">Snooze</string>
-    <string name="dismiss">Dismiss</string>
-    <string name="no_reminder">No reminder</string>
-    <string name="at_start">At start</string>
+    <string name="snooze">贪睡</string>
+    <string name="dismiss">关闭</string>
+    <string name="no_reminder">不再提醒</string>
+    <string name="at_start">开始时</string>
 
     <!-- Settings -->
     <string name="settings">设置</string>
@@ -330,12 +330,12 @@
     <string name="prevent_phone_from_sleeping">阻止设备自动休眠</string>
     <string name="skip_delete_confirmation">忽略删除确认对话框</string>
     <string name="enable_pull_to_refresh">启用顶部上拉刷新</string>
-    <string name="use_24_hour_time_format">Use 24-hour time format</string>
-    <string name="sunday_first">Start week on Sunday</string>
-    <string name="widgets">Widgets</string>
-    <string name="use_same_snooze">Always use same snooze time</string>
-    <string name="snooze_time">Snooze time</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="use_24_hour_time_format">使用 24 小时制</string>
+    <string name="sunday_first">每周以周日开头</string>
+    <string name="widgets">小部件</string>
+    <string name="use_same_snooze">始终使用相同的贪睡时间</string>
+    <string name="snooze_time">贪睡时间</string>
+    <string name="vibrate_on_button_press">按下按键后震动</string>
 
     <!-- Setting sections -->
     <string name="visibility">可见度</string>
@@ -388,6 +388,14 @@
     <string name="friday_letter">五</string>
     <string name="saturday_letter">六</string>
     <string name="sunday_letter">日</string>
+
+    <string name="monday_short">周一</string>
+    <string name="tuesday_short">周二</string>
+    <string name="wednesday_short">周三</string>
+    <string name="thursday_short">周四</string>
+    <string name="friday_short">周五</string>
+    <string name="saturday_short">周六</string>
+    <string name="sunday_short">周日</string>
 
     <!-- About -->
     <string name="about">关于</string>

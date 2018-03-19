@@ -595,8 +595,13 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
             }
         }
     } else {
+        val file = File(fileDirItem.path)
+        if (!file.parentFile.exists()) {
+            file.parentFile.mkdirs()
+        }
+
         try {
-            callback(FileOutputStream(File(fileDirItem.path)))
+            callback(FileOutputStream(file))
         } catch (e: Exception) {
             callback(null)
         }

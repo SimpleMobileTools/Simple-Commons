@@ -230,11 +230,27 @@ fun Context.scanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null) 
 
 fun Context.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
     var cnt = paths.size
-    MediaScannerConnection.scanFile(applicationContext, paths.toTypedArray(), null, { s, uri ->
-        if (--cnt == 0) {
-            callback?.invoke()
+    var connection: MediaScannerConnection? = null
+
+    val connectionClient = object : MediaScannerConnection.MediaScannerConnectionClient {
+        override fun onMediaScannerConnected() {
+            paths.forEach {
+                if (connection?.isConnected == true) {
+                    connection?.scanFile(it, "")
+                }
+            }
         }
-    })
+
+        override fun onScanCompleted(path: String?, uri: Uri?) {
+            if (--cnt == 0) {
+                connection?.disconnect()
+                callback?.invoke()
+            }
+        }
+    }
+
+    connection = MediaScannerConnection(this, connectionClient)
+    connection.connect()
 }
 
 fun getPaths(file: File): ArrayList<String> {
@@ -289,7 +305,7 @@ fun Context.updateInMediaStore(oldPath: String, newPath: String) {
 
 fun Context.updateLastModified(path: String, lastModified: Long) {
     val values = ContentValues().apply {
-        put(MediaStore.MediaColumns.DATE_MODIFIED, lastModified)
+        put(MediaStore.MediaColumns.DATE_MODIFIED, lastModified / 1000)
     }
     File(path).setLastModified(lastModified)
     val uri = getFileUri(path)
