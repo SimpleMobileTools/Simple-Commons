@@ -220,10 +220,10 @@
     <string name="fingerprint_setup_successfully">Configuració de la protecció amb èxit. Torneu a instal·lar l\'aplicació en cas de problemes amb restablir-la.</string>
 
     <!-- Times -->
-    <string name="seconds_raw">seconds</string>
-    <string name="minutes_raw">minutes</string>
-    <string name="hours_raw">hours</string>
-    <string name="days_raw">days</string>
+    <string name="seconds_raw">segons</string>
+    <string name="minutes_raw">minuts</string>
+    <string name="hours_raw">hores</string>
+    <string name="days_raw">dies</string>
 
     <plurals name="seconds">
         <item quantity="one">%d segon</item>
@@ -270,37 +270,37 @@
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d second before</item>
-        <item quantity="other">%d seconds before</item>
+        <item quantity="one">%d segon abans</item>
+        <item quantity="other">%d segons abans</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">%d minute before</item>
-        <item quantity="other">%d minutes before</item>
+        <item quantity="one">%d minut abans</item>
+        <item quantity="other">%d minuts abans</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">%d hour before</item>
-        <item quantity="other">%d hours before</item>
+        <item quantity="one">%d hora abans</item>
+        <item quantity="other">%d hores abans</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">%d day before</item>
-        <item quantity="other">%d days before</item>
+        <item quantity="one">%d dia abans</item>
+        <item quantity="other">%d dies abans</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="few">%d seconds</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d segon</item>
+        <item quantity="few">%d segons</item>
+        <item quantity="other">%d segons</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d minutu</item>
-        <item quantity="few">%d minuty</item>
-        <item quantity="other">%d minut</item>
+        <item quantity="one">%d minut</item>
+        <item quantity="few">%d minuts</item>
+        <item quantity="other">%d minuts</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d hodina</item>
-        <item quantity="few">%d hodiny</item>
-        <item quantity="other">%d hodin</item>
+        <item quantity="one">%d hora</item>
+        <item quantity="few">%d hores</item>
+        <item quantity="other">%d hores</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -337,7 +337,7 @@
     <string name="widgets">Ginys</string>
     <string name="use_same_snooze">Utilitzeu sempre el mateix temps de posposat</string>
     <string name="snooze_time">Temps de posposat</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="vibrate_on_button_press">Vibrar al prŕmer un botó</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilitat</string>
@@ -391,13 +391,13 @@
     <string name="saturday_letter">DS</string>
     <string name="sunday_letter">DG</string>
 
-    <string name="monday_short">Dil</string>
-    <string name="tuesday_short">Dim</string>
-    <string name="wednesday_short">Dim</string>
-    <string name="thursday_short">Dij</string>
-    <string name="friday_short">Div</string>
-    <string name="saturday_short">Dis</string>
-    <string name="sunday_short">Diu</string>
+    <string name="monday_short">DL</string>
+    <string name="tuesday_short">DT</string>
+    <string name="wednesday_short">DC</string>
+    <string name="thursday_short">DJ</string>
+    <string name="friday_short">DV</string>
+    <string name="saturday_short">DS</string>
+    <string name="sunday_short">DG</string>
 
     <!-- About -->
     <string name="about">Sobre</string>
@@ -472,5 +472,5 @@
     <string name="espresso_title">Espresso (testing helper)</string>
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
-    <string name="number_picker_title">Number Picker (customizable number picker)</string>
+    <string name="number_picker_title">Selector de números (selector de números personalitzable)</string>
 </resources>
