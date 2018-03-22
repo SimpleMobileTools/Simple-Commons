@@ -236,7 +236,7 @@ fun Context.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null
         override fun onMediaScannerConnected() {
             paths.forEach {
                 if (connection?.isConnected == true) {
-                    connection?.scanFile(it, "")
+                    connection?.scanFile(it, it.getMimeType())
                 }
             }
         }
