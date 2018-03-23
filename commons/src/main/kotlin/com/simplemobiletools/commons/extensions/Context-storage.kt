@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.extensions
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
+import android.content.ReceiverCallNotAllowedException
 import android.hardware.usb.UsbManager
 import android.media.MediaScannerConnection
 import android.net.Uri
@@ -250,7 +251,10 @@ fun Context.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null
     }
 
     connection = MediaScannerConnection(this, connectionClient)
-    connection.connect()
+    try {
+        connection.connect()
+    } catch (ignored: ReceiverCallNotAllowedException) {
+    }
 }
 
 fun getPaths(file: File): ArrayList<String> {
