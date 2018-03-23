@@ -96,6 +96,7 @@ fun Activity.isShowingSAFDialog(path: String, treeUri: String, requestCode: Int)
         runOnUiThread {
             WritePermissionDialog(this, false) {
                 Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
+                    putExtra("android.content.extra.SHOW_ADVANCED", true)
                     if (resolveActivity(packageManager) == null) {
                         type = "*/*"
                     }
