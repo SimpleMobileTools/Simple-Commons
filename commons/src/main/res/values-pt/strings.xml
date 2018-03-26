@@ -22,7 +22,7 @@
 
     <!-- Filters -->
     <string name="filter">Filtrar</string>
-    <string name="no_items_found">Sem itens.</string>
+    <string name="no_items_found">Sem itens</string>
     <string name="change_filter">Alterar filtro</string>
 
     <!-- Permissions -->
@@ -136,8 +136,8 @@
     <string name="background_color">Cor de fundo</string>
     <string name="text_color">Cor do tipo de letra</string>
     <string name="primary_color">Cor primária</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
+    <string name="foreground_color">Cor secundária</string>
+    <string name="app_icon_color">Cor do ícone da aplicação</string>
     <string name="restore_defaults">Restaurar predefinições</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Se alterar uma cor, ativa o modo de tema personalizado</string>
@@ -221,8 +221,8 @@
     <string name="fingerprint_setup_successfully">Proteção definida com sucesso. Deve reinstalar a aplicação se ocorrerem problemas.</string>
 
     <!-- Times -->
-    <string name="tomorrow">Tomorrow</string>
-    <string name="seconds_raw">seconds</string>
+    <string name="tomorrow">Amanhã</string>
+    <string name="seconds_raw">segundos</string>
     <string name="minutes_raw">minutos</string>
     <string name="hours_raw">horas</string>
     <string name="days_raw">dias</string>
@@ -272,8 +272,8 @@
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d second before</item>
-        <item quantity="other">%d seconds before</item>
+        <item quantity="one">%d segundo antes</item>
+        <item quantity="other">%d segundos antes</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minuto antes</item>
@@ -290,8 +290,8 @@
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d segundo</item>
+        <item quantity="other">%d segundos</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minuto</item>
@@ -303,13 +303,13 @@
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
-    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+    <string name="alarm_goes_off_in">O alarme está definido para daqui a:\n%s</string>
+    <string name="alarm_warning">Certifique-se de que o alarme está a funcionar corretamente antes de o utilizar na plenitude. Pode ter um comportamento errático devido a restrições do sistema.</string>
+    <string name="reminder_warning">Certifique-se de que o lembrete está a funcionar corretamente antes de o utilizar na plenitude. Pode ter um comportamento errático devido a restrições do sistema.</string>
 
     <!-- Alarms -->
     <string name="snooze">Snooze</string>
-    <string name="dismiss">Dismiss</string>
+    <string name="dismiss">Descartar</string>
     <string name="no_reminder">Sem lembrete</string>
     <string name="at_start">No início</string>
 
@@ -335,7 +335,7 @@
     <string name="sunday_first">Iniciar semana ao domingo</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Usar sempre o mesmo intervalo para snooze</string>
-    <string name="snooze_time">Snooze time</string>
+    <string name="snooze_time">TIntervalo para snooze</string>
     <string name="vibrate_on_button_press">Vibrar ao tocar nos botões</string>
 
     <!-- Setting sections -->
@@ -471,5 +471,5 @@
     <string name="espresso_title">Espresso (apoio aos testes)</string>
     <string name="gson_title">Gson (processador JSON)</string>
     <string name="leak_canary_title">Leak Canary (detetor de falhas de memória)</string>
-    <string name="number_picker_title">Number Picker (customizable number picker)</string>
+    <string name="number_picker_title">Number Picker (seletor de números personalizado)</string>
 </resources>
