@@ -1,7 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion propCompileSdkVersion
@@ -36,7 +35,7 @@ dependencies {
     compile 'com.bignerdranch.android:recyclerview-multiselect:0.2'
     compile 'com.github.ajalt.reprint:core:3.2.0@aar'
 
-    kapt 'com.github.bumptech.glide:compiler:4.6.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
 }
 
 apply from: '../bintray-upload.gradle'
