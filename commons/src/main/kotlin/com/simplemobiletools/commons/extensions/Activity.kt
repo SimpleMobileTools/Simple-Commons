@@ -736,8 +736,14 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
     callback?.invoke()
 }
 
+fun Activity.showPickMinutesDialog(curMinutes: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false,
+                                   cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
+    val seconds = if (curMinutes > 0) curMinutes * 60 else curMinutes
+    showPickSecondsDialog(seconds, isSnoozePicker, showSecondsAtCustomDialog, cancelCallback, callback)
+}
+
 fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false,
-                                   cancelCallback: (() -> Unit)? = null, callback: (minutes: Int) -> Unit) {
+                                   cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
     hideKeyboard()
     val seconds = TreeSet<Int>()
     seconds.apply {
