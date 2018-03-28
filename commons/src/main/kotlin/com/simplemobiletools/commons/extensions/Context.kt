@@ -364,7 +364,7 @@ fun Context.isPackageInstalled(pkgName: String): Boolean {
 // format day bits to strings like "Mon, Tue, Wed"
 fun Context.getSelectedDaysString(bitMask: Int): String {
     val dayBits = arrayListOf(MONDAY_BIT, TUESDAY_BIT, WEDNESDAY_BIT, THURSDAY_BIT, FRIDAY_BIT, SATURDAY_BIT, SUNDAY_BIT)
-    val weekDays = resources.getStringArray(R.array.week_days).toList() as ArrayList<String>
+    val weekDays = resources.getStringArray(R.array.week_days_short).toList() as ArrayList<String>
 
     if (baseConfig.isSundayFirst) {
         dayBits.moveLastItemToFront()
@@ -374,7 +374,7 @@ fun Context.getSelectedDaysString(bitMask: Int): String {
     var days = ""
     dayBits.forEachIndexed { index, bit ->
         if (bitMask and bit != 0) {
-            days += "${weekDays[index].substringTo(3)}, "
+            days += "${weekDays[index]}, "
         }
     }
     return days.trim().trimEnd(',')
