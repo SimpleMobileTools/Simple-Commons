@@ -5,7 +5,6 @@ import android.support.v7.app.AlertDialog
 import android.view.ViewGroup
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.DAY_MINUTES
 import com.simplemobiletools.commons.helpers.DAY_SECONDS
 import com.simplemobiletools.commons.helpers.HOUR_SECONDS
 import com.simplemobiletools.commons.helpers.MINUTE_SECONDS
@@ -59,7 +58,7 @@ class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: In
     }
 
     private fun getMultiplier(id: Int) = when (id) {
-        R.id.dialog_radio_days -> DAY_MINUTES
+        R.id.dialog_radio_days -> DAY_SECONDS
         R.id.dialog_radio_hours -> HOUR_SECONDS
         R.id.dialog_radio_minutes -> MINUTE_SECONDS
         else -> 1
