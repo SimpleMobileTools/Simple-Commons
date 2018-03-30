@@ -4,6 +4,7 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.ContentUris
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.database.Cursor
 import android.graphics.Color
@@ -448,3 +449,11 @@ fun Context.getFormattedSeconds(seconds: Int, showBefore: Boolean = true) = when
 fun Context.getDefaultAlarmUri() = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM)
 
 fun Context.getDefaultAlarmTitle(defaultTitle: String) = RingtoneManager.getRingtone(this, getDefaultAlarmUri())?.getTitle(this) ?: defaultTitle
+
+fun Context.grantReadUriPermission(uriString: String) {
+    try {
+        // ensure custom reminder sounds play well
+        grantUriPermission("com.android.systemui", Uri.parse(uriString), Intent.FLAG_GRANT_READ_URI_PERMISSION)
+    } catch (ignored: Exception) {
+    }
+}
