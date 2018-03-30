@@ -70,8 +70,8 @@
     <string name="copying_success_partial">部分檔案無法被複製</string>
     <string name="no_files_selected">未選擇檔案</string>
     <string name="saving">儲存中…</string>
-    <string name="could_not_create_folder">無法創建資料夾 %s</string>
-    <string name="could_not_create_file">無法創建檔案 %s</string>
+    <string name="could_not_create_folder">無法建立資料夾 %s</string>
+    <string name="could_not_create_file">無法建立檔案 %s</string>
 
     <!-- Create new -->
     <string name="create_new">新增</string>
@@ -220,7 +220,7 @@
     <string name="fingerprint_setup_successfully">保護設置成功。若再次設置時發生問題，請重新安裝應用程式。</string>
 
     <!-- Times -->
-    <string name="tomorrow">Tomorrow</string>
+    <string name="tomorrow">明天</string>
     <string name="seconds_raw">秒鐘</string>
     <string name="minutes_raw">分鐘</string>
     <string name="hours_raw">小時</string>
@@ -311,9 +311,9 @@
     <string name="dismiss">關閉</string>
     <string name="no_reminder">不提醒</string>
     <string name="at_start">準時</string>
-    <string name="system_sounds">System sounds</string>
-    <string name="your_sounds">Your sounds</string>
-    <string name="add_new_sound">Add a new sound</string>
+    <string name="system_sounds">系統音效</string>
+    <string name="your_sounds">你的音效</string>
+    <string name="add_new_sound">添加新的音效</string>
 
     <!-- Settings -->
     <string name="settings">設定</string>
