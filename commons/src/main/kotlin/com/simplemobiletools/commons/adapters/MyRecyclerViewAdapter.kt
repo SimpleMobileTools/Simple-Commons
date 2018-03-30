@@ -22,15 +22,15 @@ import java.util.*
 
 abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyclerView: MyRecyclerView, val fastScroller: FastScroller? = null,
                                      val itemClick: (Any) -> Unit) : RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder>() {
-    val baseConfig = activity.baseConfig
-    val resources = activity.resources!!
-    val layoutInflater = activity.layoutInflater
-    var primaryColor = baseConfig.primaryColor
-    var textColor = baseConfig.textColor
-    var backgroundColor = baseConfig.backgroundColor
-    var itemViews = SparseArray<View>()
-    val selectedPositions = HashSet<Int>()
-    var positionOffset = 0
+    protected val baseConfig = activity.baseConfig
+    protected val resources = activity.resources!!
+    protected val layoutInflater = activity.layoutInflater
+    protected var primaryColor = baseConfig.primaryColor
+    protected var textColor = baseConfig.textColor
+    protected var backgroundColor = baseConfig.backgroundColor
+    protected var itemViews = SparseArray<View>()
+    protected val selectedPositions = HashSet<Int>()
+    protected var positionOffset = 0
 
     private val multiSelector = MultiSelector()
     private var actMode: ActionMode? = null
@@ -48,9 +48,9 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     abstract fun getSelectableItemCount(): Int
 
-    fun isOneItemSelected() = selectedPositions.size == 1
+    protected fun isOneItemSelected() = selectedPositions.size == 1
 
-    fun toggleItemSelection(select: Boolean, pos: Int) {
+    protected fun toggleItemSelection(select: Boolean, pos: Int) {
         if (select) {
             if (itemViews[pos] != null) {
                 prepareItemSelection(itemViews[pos])
@@ -81,7 +81,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         }
     }
 
-    fun selectAll() {
+    protected fun selectAll() {
         val cnt = itemCount - positionOffset
         for (i in 0 until cnt) {
             selectedPositions.add(i)
@@ -90,7 +90,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         updateTitle(cnt)
     }
 
-    fun setupDragListener(enable: Boolean) {
+    protected fun setupDragListener(enable: Boolean) {
         if (enable) {
             recyclerView.setupDragListener(object : MyRecyclerView.MyDragListener {
                 override fun selectItem(position: Int) {
@@ -123,11 +123,11 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         }
     }
 
-    fun selectItemPosition(pos: Int) {
+    protected fun selectItemPosition(pos: Int) {
         toggleItemSelection(true, pos)
     }
 
-    fun selectItemRange(from: Int, to: Int, min: Int, max: Int) {
+    protected fun selectItemRange(from: Int, to: Int, min: Int, max: Int) {
         if (from == to) {
             (min..max).filter { it != from }.forEach { toggleItemSelection(false, it) }
             return
@@ -171,6 +171,14 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     fun updateTextColor(textColor: Int) {
         this.textColor = textColor
         notifyDataSetChanged()
+    }
+
+    fun updatePrimaryColor(primaryColor: Int) {
+        this.primaryColor = primaryColor
+    }
+
+    fun updateBackgroundColor(backgroundColor: Int) {
+        this.backgroundColor = backgroundColor
     }
 
     private val adapterListener = object : MyAdapterListener {
@@ -223,18 +231,18 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         }
     }
 
-    fun createViewHolder(layoutType: Int, parent: ViewGroup?): ViewHolder {
+    protected fun createViewHolder(layoutType: Int, parent: ViewGroup?): ViewHolder {
         val view = layoutInflater.inflate(layoutType, parent, false)
         return ViewHolder(view, adapterListener, activity, multiSelectorMode, multiSelector, positionOffset, itemClick)
     }
 
-    fun bindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int, view: View) {
+    protected fun bindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int, view: View) {
         itemViews.put(position, view)
         toggleItemSelection(selectedPositions.contains(position), position)
         holder.itemView.tag = holder
     }
 
-    fun removeSelectedItems() {
+    protected fun removeSelectedItems() {
         selectedPositions.sortedDescending().forEach {
             notifyItemRemoved(it + positionOffset)
             itemViews.put(it, null)
