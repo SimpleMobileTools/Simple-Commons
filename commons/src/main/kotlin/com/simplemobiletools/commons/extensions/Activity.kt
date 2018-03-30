@@ -735,7 +735,7 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
 }
 
 fun Activity.showPickSecondsDialogHelper(curMinutes: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false,
-                                   cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
+                                         cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
     val seconds = if (curMinutes > 0) curMinutes * 60 else curMinutes
     showPickSecondsDialog(seconds, isSnoozePicker, showSecondsAtCustomDialog, cancelCallback, callback)
 }
@@ -782,14 +782,14 @@ fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = fa
     }
 }
 
-fun BaseSimpleActivity.getAlarmSounds(callback: (ArrayList<AlarmSound>) -> Unit) {
+fun BaseSimpleActivity.getAlarmSounds(type: Int, callback: (ArrayList<AlarmSound>) -> Unit) {
     val alarms = ArrayList<AlarmSound>()
     val manager = RingtoneManager(this)
-    manager.setType(RingtoneManager.TYPE_ALARM)
+    manager.setType(if (type == ALARM_SOUND_TYPE_NOTIFICATION) RingtoneManager.TYPE_NOTIFICATION else RingtoneManager.TYPE_ALARM)
 
     try {
         val cursor = manager.cursor
-        val defaultAlarm = AlarmSound(0, getDefaultAlarmTitle(getString(R.string.alarm)), getDefaultAlarmUri().toString())
+        val defaultAlarm = getDefaultAlarmSound(type, getString(R.string.alarm))
         alarms.add(defaultAlarm)
 
         var curId = 1
@@ -800,6 +800,7 @@ fun BaseSimpleActivity.getAlarmSounds(callback: (ArrayList<AlarmSound>) -> Unit)
             if (!uri.endsWith(id)) {
                 uri += "/$id"
             }
+
             val alarmSound = AlarmSound(curId++, title, uri)
             alarms.add(alarmSound)
         }
@@ -808,7 +809,7 @@ fun BaseSimpleActivity.getAlarmSounds(callback: (ArrayList<AlarmSound>) -> Unit)
         if (e is SecurityException) {
             handlePermission(PERMISSION_READ_STORAGE) {
                 if (it) {
-                    getAlarmSounds(callback)
+                    getAlarmSounds(type, callback)
                 } else {
                     showErrorToast(e)
                     callback(ArrayList())

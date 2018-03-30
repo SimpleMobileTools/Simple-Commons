@@ -28,6 +28,7 @@ import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_BAC
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_LAST_UPDATED_TS
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_PRIMARY_COLOR
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_TEXT_COLOR
+import com.simplemobiletools.commons.models.AlarmSound
 import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.*
 import java.io.File
@@ -446,9 +447,12 @@ fun Context.getFormattedSeconds(seconds: Int, showBefore: Boolean = true) = when
     }
 }
 
-fun Context.getDefaultAlarmUri() = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM)
+fun Context.getDefaultAlarmUri(type: Int) = RingtoneManager.getDefaultUri(if (type == ALARM_SOUND_TYPE_NOTIFICATION) RingtoneManager.TYPE_NOTIFICATION else RingtoneManager.TYPE_ALARM)
 
-fun Context.getDefaultAlarmTitle(defaultTitle: String) = RingtoneManager.getRingtone(this, getDefaultAlarmUri())?.getTitle(this) ?: defaultTitle
+fun Context.getDefaultAlarmTitle(type: Int, defaultTitle: String) = RingtoneManager.getRingtone(this, getDefaultAlarmUri(type))?.getTitle(this)
+        ?: defaultTitle
+
+fun Context.getDefaultAlarmSound(type: Int, defaultTitle: String) = AlarmSound(0, getDefaultAlarmTitle(type, defaultTitle), getDefaultAlarmUri(type).toString())
 
 fun Context.grantReadUriPermission(uriString: String) {
     try {
