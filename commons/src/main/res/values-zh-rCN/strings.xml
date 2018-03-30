@@ -221,7 +221,7 @@
     <string name="fingerprint_setup_successfully">指纹保护设置成功。如果出现问题，请重新安装本应用。</string>
 
     <!-- Times -->
-    <string name="tomorrow">Tomorrow</string>
+    <string name="tomorrow">明天</string>
     <string name="seconds_raw">秒</string>
     <string name="minutes_raw">分钟</string>
     <string name="hours_raw">小时</string>
@@ -308,14 +308,14 @@
     <string name="reminder_warning">在依赖它们之前，请确保提醒能够正常工作。由于系统与节电有关的限制，它们有时可能会失灵。</string>
 
     <!-- Alarms -->
-    <string name="alarm">Alarm</string>
+    <string name="alarm">闹钟</string>
     <string name="snooze">贪睡</string>
     <string name="dismiss">关闭</string>
     <string name="no_reminder">不再提醒</string>
     <string name="at_start">开始时</string>
-    <string name="system_sounds">System sounds</string>
-    <string name="your_sounds">Your sounds</string>
-    <string name="add_new_sound">Add a new sound</string>
+    <string name="system_sounds">系统铃声</string>
+    <string name="your_sounds">你的铃声</string>
+    <string name="add_new_sound">添加新的铃声</string>
 
     <!-- Settings -->
     <string name="settings">设置</string>
