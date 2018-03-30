@@ -7,6 +7,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
+import android.media.RingtoneManager
 import android.net.Uri
 import android.os.Looper
 import android.os.TransactionTooLargeException
@@ -26,10 +27,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.helpers.*
-import com.simplemobiletools.commons.models.FileDirItem
-import com.simplemobiletools.commons.models.RadioItem
-import com.simplemobiletools.commons.models.Release
-import com.simplemobiletools.commons.models.SharedTheme
+import com.simplemobiletools.commons.models.*
 import com.simplemobiletools.commons.views.MyTextView
 import kotlinx.android.synthetic.main.dialog_title.view.*
 import java.io.*
@@ -780,6 +778,45 @@ fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = fa
             }
         } else {
             callback(it as Int)
+        }
+    }
+}
+
+fun BaseSimpleActivity.getAlarmSounds(callback: (ArrayList<AlarmSound>) -> Unit) {
+    val alarms = ArrayList<AlarmSound>()
+    val manager = RingtoneManager(this)
+    manager.setType(RingtoneManager.TYPE_ALARM)
+
+    try {
+        val cursor = manager.cursor
+        val defaultAlarm = AlarmSound(0, getDefaultAlarmTitle(getString(R.string.alarm)), getDefaultAlarmUri().toString())
+        alarms.add(defaultAlarm)
+
+        var curId = 1
+        while (cursor.moveToNext()) {
+            val title = cursor.getString(RingtoneManager.TITLE_COLUMN_INDEX)
+            var uri = cursor.getString(RingtoneManager.URI_COLUMN_INDEX)
+            val id = cursor.getString(RingtoneManager.ID_COLUMN_INDEX)
+            if (!uri.endsWith(id)) {
+                uri += "/$id"
+            }
+            val alarmSound = AlarmSound(curId++, title, uri)
+            alarms.add(alarmSound)
+        }
+        callback(alarms)
+    } catch (e: Exception) {
+        if (e is SecurityException) {
+            handlePermission(PERMISSION_READ_STORAGE) {
+                if (it) {
+                    getAlarmSounds(callback)
+                } else {
+                    showErrorToast(e)
+                    callback(ArrayList())
+                }
+            }
+        } else {
+            showErrorToast(e)
+            callback(ArrayList())
         }
     }
 }

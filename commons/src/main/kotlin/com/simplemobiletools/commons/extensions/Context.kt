@@ -7,6 +7,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.database.Cursor
 import android.graphics.Color
+import android.media.RingtoneManager
 import android.net.Uri
 import android.os.Environment
 import android.provider.BaseColumns
@@ -443,3 +444,7 @@ fun Context.getFormattedSeconds(seconds: Int, showBefore: Boolean = true) = when
         }
     }
 }
+
+fun Context.getDefaultAlarmUri() = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM)
+
+fun Context.getDefaultAlarmTitle(defaultTitle: String) = RingtoneManager.getRingtone(this, getDefaultAlarmUri())?.getTitle(this) ?: defaultTitle

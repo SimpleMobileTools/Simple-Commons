@@ -211,4 +211,8 @@ open class BaseConfig(val context: Context) {
     var vibrateOnButtonPress: Boolean
         get() = prefs.getBoolean(VIBRATE_ON_BUTTON_PRESS, false)
         set(vibrateOnButton) = prefs.edit().putBoolean(VIBRATE_ON_BUTTON_PRESS, vibrateOnButton).apply()
+
+    var yourAlarmSounds: String
+        get() = prefs.getString(YOUR_ALARM_SOUNDS, "")
+        set(yourAlarmSounds) = prefs.edit().putString(YOUR_ALARM_SOUNDS, yourAlarmSounds).apply()
 }
