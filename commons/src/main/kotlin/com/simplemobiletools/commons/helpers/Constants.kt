@@ -13,6 +13,7 @@ const val BROADCAST_REFRESH_MEDIA = "com.simplemobiletools.REFRESH_MEDIA"
 const val OTG_PATH = "otg:/"
 const val ALARM_SOUND_TYPE_ALARM = 1
 const val ALARM_SOUND_TYPE_NOTIFICATION = 2
+const val YOUR_ALARM_SOUNDS_MIN_ID = 1000
 
 const val HOUR_MINUTES = 60
 const val DAY_MINUTES = 24 * HOUR_MINUTES

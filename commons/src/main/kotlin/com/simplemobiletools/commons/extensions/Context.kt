@@ -22,6 +22,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.github.ajalt.reprint.core.Reprint
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_BACKGROUND_COLOR
@@ -460,4 +462,29 @@ fun Context.grantReadUriPermission(uriString: String) {
         grantUriPermission("com.android.systemui", Uri.parse(uriString), Intent.FLAG_GRANT_READ_URI_PERMISSION)
     } catch (ignored: Exception) {
     }
+}
+
+fun Context.storeNewYourAlarmSound(resultData: Intent): AlarmSound {
+    val uri = resultData.data
+    var filename = getFilenameFromUri(uri)
+    if (filename.isEmpty()) {
+        filename = getString(R.string.alarm)
+    }
+
+    val token = object : TypeToken<ArrayList<AlarmSound>>() {}.type
+    val yourAlarmSounds = Gson().fromJson<ArrayList<AlarmSound>>(baseConfig.yourAlarmSounds, token) ?: ArrayList()
+    val newAlarmSoundId = (yourAlarmSounds.maxBy { it.id }?.id ?: YOUR_ALARM_SOUNDS_MIN_ID) + 1
+    val newAlarmSound = AlarmSound(newAlarmSoundId, filename, uri.toString())
+    if (yourAlarmSounds.firstOrNull { it.uri == uri.toString() } == null) {
+        yourAlarmSounds.add(newAlarmSound)
+    }
+
+    baseConfig.yourAlarmSounds = Gson().toJson(yourAlarmSounds)
+
+    if (isKitkatPlus()) {
+        val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION
+        contentResolver.takePersistableUriPermission(uri, takeFlags)
+    }
+
+    return newAlarmSound
 }
