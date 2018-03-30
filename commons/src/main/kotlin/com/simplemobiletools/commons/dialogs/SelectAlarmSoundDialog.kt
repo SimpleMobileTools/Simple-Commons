@@ -21,7 +21,8 @@ import kotlinx.android.synthetic.main.dialog_select_alarm_sound.view.*
 import java.util.*
 
 class SelectAlarmSoundDialog(val activity: BaseSimpleActivity, val currentUri: String, val audioStream: Int, val pickAudioIntentId: Int,
-                             val type: Int, val onAlarmPicked: (alarmSound: AlarmSound?) -> Unit, val onAlarmSoundDeleted: (alarmSound: AlarmSound) -> Unit) {
+                             val type: Int, val loopAudio: Boolean, val onAlarmPicked: (alarmSound: AlarmSound?) -> Unit,
+                             val onAlarmSoundDeleted: (alarmSound: AlarmSound) -> Unit) {
     private val ADD_NEW_SOUND_ID = -2
 
     private val view = activity.layoutInflater.inflate(R.layout.dialog_select_alarm_sound, null)
@@ -118,7 +119,7 @@ class SelectAlarmSoundDialog(val activity: BaseSimpleActivity, val currentUri: S
                 mediaPlayer = MediaPlayer().apply {
                     setAudioStreamType(audioStream)
                     setDataSource(activity, Uri.parse(alarmSound.uri))
-                    isLooping = true
+                    isLooping = loopAudio
                     prepare()
                     start()
                 }
