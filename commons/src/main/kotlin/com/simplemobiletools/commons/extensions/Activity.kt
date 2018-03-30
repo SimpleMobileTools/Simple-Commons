@@ -789,7 +789,7 @@ fun BaseSimpleActivity.getAlarmSounds(type: Int, callback: (ArrayList<AlarmSound
 
     try {
         val cursor = manager.cursor
-        val defaultAlarm = getDefaultAlarmSound(type, getString(R.string.alarm))
+        val defaultAlarm = getDefaultAlarmSound(type)
         alarms.add(defaultAlarm)
 
         var curId = 1
