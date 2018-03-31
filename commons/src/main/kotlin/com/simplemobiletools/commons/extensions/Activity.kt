@@ -621,7 +621,12 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
         val newDocument = documentFile.createFile(mimeType, path.getFilenameFromPath())
         applicationContext.contentResolver.openOutputStream(newDocument!!.uri)
     } else {
-        FileOutputStream(targetFile)
+        try {
+            FileOutputStream(targetFile)
+        } catch (e: Exception) {
+            showErrorToast(e)
+            null
+        }
     }
 }
 
