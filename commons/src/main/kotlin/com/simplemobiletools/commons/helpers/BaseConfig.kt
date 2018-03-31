@@ -109,7 +109,7 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(USE_ENGLISH, false)
         set(useEnglish) {
             wasUseEnglishToggled = true
-            prefs.edit().putBoolean(USE_ENGLISH, useEnglish).apply()
+            prefs.edit().putBoolean(USE_ENGLISH, useEnglish).commit()
         }
 
     var wasUseEnglishToggled: Boolean

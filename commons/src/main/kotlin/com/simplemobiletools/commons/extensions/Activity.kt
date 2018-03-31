@@ -675,18 +675,6 @@ fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
     return File(directory).mkdirs()
 }
 
-fun BaseSimpleActivity.useEnglishToggled() {
-    val conf = resources.configuration
-    conf.locale = if (baseConfig.useEnglish) Locale.ENGLISH else Locale.getDefault()
-    resources.updateConfiguration(conf, resources.displayMetrics)
-    restartActivity()
-}
-
-fun BaseSimpleActivity.restartActivity() {
-    finish()
-    startActivity(intent)
-}
-
 fun Activity.isActivityDestroyed() = isJellyBean1Plus() && isDestroyed
 
 fun Activity.updateSharedTheme(sharedTheme: SharedTheme): Int {
