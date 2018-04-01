@@ -513,7 +513,7 @@ fun Context.saveImageRotation(path: String, degrees: Int): Boolean {
     return false
 }
 
-private fun saveExifRotation(exif: ExifInterface, degrees: Int) {
+fun Context.saveExifRotation(exif: ExifInterface, degrees: Int) {
     val orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL)
     val orientationDegrees = (orientation.degreesFromOrientation() + degrees) % 360
     exif.setAttribute(ExifInterface.TAG_ORIENTATION, orientationDegrees.orientationFromDegrees())
