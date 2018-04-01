@@ -8,13 +8,16 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.database.Cursor
 import android.graphics.Color
+import android.media.ExifInterface
 import android.media.RingtoneManager
 import android.net.Uri
+import android.os.Build
 import android.os.Environment
 import android.provider.BaseColumns
 import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.provider.OpenableColumns
+import android.support.annotation.RequiresApi
 import android.support.v4.content.ContextCompat
 import android.support.v4.content.CursorLoader
 import android.support.v4.content.FileProvider
@@ -491,4 +494,28 @@ fun Context.storeNewYourAlarmSound(resultData: Intent): AlarmSound {
     }
 
     return newAlarmSound
+}
+
+@RequiresApi(Build.VERSION_CODES.N)
+fun Context.saveImageRotation(path: String, degrees: Int): Boolean {
+    if (!isPathOnSD(path)) {
+        saveExifRotation(ExifInterface(path), degrees)
+        return true
+    } else if (isNougatPlus()) {
+        val documentFile = getSomeDocumentFile(path)
+        if (documentFile != null) {
+            val parcelFileDescriptor = contentResolver.openFileDescriptor(documentFile.uri, "rw")
+            val fileDescriptor = parcelFileDescriptor.fileDescriptor
+            saveExifRotation(ExifInterface(fileDescriptor), degrees)
+            return true
+        }
+    }
+    return false
+}
+
+private fun saveExifRotation(exif: ExifInterface, degrees: Int) {
+    val orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL)
+    val orientationDegrees = (orientation.degreesFromOrientation() + degrees) % 360
+    exif.setAttribute(ExifInterface.TAG_ORIENTATION, orientationDegrees.orientationFromDegrees())
+    exif.saveAttributes()
 }
