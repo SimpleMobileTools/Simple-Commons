@@ -309,7 +309,7 @@
 
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
-    <string name="snooze">Snooze</string>
+    <string name="snooze">Udsæt</string>
     <string name="dismiss">Slå fra</string>
     <string name="no_reminder">Ingen påmindelse</string>
     <string name="at_start">Ved start</string>
@@ -338,8 +338,8 @@
     <string name="use_24_hour_time_format">Brug 24-timersformat</string>
     <string name="sunday_first">Søndag første ugedag</string>
     <string name="widgets">Widgets</string>
-    <string name="use_same_snooze">Brug altid samme snooze-tid</string>
-    <string name="snooze_time">Snooze-tid</string>
+    <string name="use_same_snooze">Brug altid samme udsættelsestid</string>
+    <string name="snooze_time">Udsættelsestid</string>
     <string name="vibrate_on_button_press">Vibrer ved tryk på knapper</string>
 
     <!-- Setting sections -->
