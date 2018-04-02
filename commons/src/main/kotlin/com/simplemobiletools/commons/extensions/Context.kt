@@ -181,10 +181,10 @@ fun Context.getRealPathFromURI(uri: Uri): String? {
 fun Context.getDataColumn(uri: Uri, selection: String? = null, selectionArgs: Array<String>? = null): String? {
     var cursor: Cursor? = null
     try {
-        val projection = arrayOf(MediaStore.Images.Media.DATA)
+        val projection = arrayOf(MediaStore.Files.FileColumns.DATA)
         cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
         if (cursor?.moveToFirst() == true) {
-            return cursor.getStringValue(MediaStore.Images.Media.DATA)
+            return cursor.getStringValue(MediaStore.Files.FileColumns.DATA)
         }
     } catch (e: Exception) {
     } finally {
