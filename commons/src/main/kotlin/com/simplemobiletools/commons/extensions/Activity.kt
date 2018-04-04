@@ -677,14 +677,13 @@ fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
 
 fun Activity.isActivityDestroyed() = isJellyBean1Plus() && isDestroyed
 
-fun Activity.updateSharedTheme(sharedTheme: SharedTheme): Int {
+fun Activity.updateSharedTheme(sharedTheme: SharedTheme) {
     try {
         val contentValues = MyContentProvider.fillThemeContentValues(sharedTheme)
-        return applicationContext.contentResolver.update(MyContentProvider.CONTENT_URI, contentValues, null, null)
+        applicationContext.contentResolver.update(MyContentProvider.MY_CONTENT_URI, contentValues, null, null)
     } catch (e: Exception) {
         showErrorToast(e)
     }
-    return 0
 }
 
 fun Activity.copyToClipboard(text: String) {

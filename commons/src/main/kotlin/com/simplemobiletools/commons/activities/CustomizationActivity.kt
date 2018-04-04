@@ -36,6 +36,10 @@ class CustomizationActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
+        storedSharedTheme = getSharedThemeSync(getMyContentProviderCursorLoader())
+        if (storedSharedTheme != null) {
+            baseConfig.wasSharedThemeEverActivated = true
+        }
 
         predefinedThemes.apply {
             put(THEME_LIGHT, MyTheme(R.string.light_theme, R.color.theme_light_text_color, R.color.theme_light_background_color, R.color.color_primary))
@@ -44,19 +48,14 @@ class CustomizationActivity : BaseSimpleActivity() {
             put(THEME_DARK_RED, MyTheme(R.string.dark_red, R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.theme_dark_red_primary_color))
             put(THEME_BLACK_WHITE, MyTheme(R.string.black_white, android.R.color.white, android.R.color.black, android.R.color.black))
             put(THEME_CUSTOM, MyTheme(R.string.custom, 0, 0, 0))
+
+            if (storedSharedTheme != null) {
+                put(THEME_SHARED, MyTheme(R.string.shared, 0, 0, 0))
+            }
         }
 
         if (!isThankYouInstalled()) {
             baseConfig.isUsingSharedTheme = false
-        }
-
-        getSharedTheme {
-            if (it != null) {
-                storedSharedTheme = it
-                baseConfig.wasSharedThemeEverActivated = true
-                apply_to_all_holder.beGone()
-                predefinedThemes[THEME_SHARED] = MyTheme(R.string.shared, it.textColor, it.backgroundColor, it.primaryColor)
-            }
         }
 
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_cross)

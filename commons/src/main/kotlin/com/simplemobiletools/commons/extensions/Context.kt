@@ -314,28 +314,31 @@ fun Context.getFilenameFromContentUri(uri: Uri): String? {
 }
 
 fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
-    var wasSharedThemeReturned = false
-    val cursorLoader = CursorLoader(this, MyContentProvider.CONTENT_URI, null, null, null, null)
+    val cursorLoader = getMyContentProviderCursorLoader()
     Thread {
-        val cursor = cursorLoader.loadInBackground()
-
-        cursor?.use {
-            if (cursor.moveToFirst()) {
-                val textColor = cursor.getIntValue(COL_TEXT_COLOR)
-                val backgroundColor = cursor.getIntValue(COL_BACKGROUND_COLOR)
-                val primaryColor = cursor.getIntValue(COL_PRIMARY_COLOR)
-                val lastUpdatedTS = cursor.getIntValue(COL_LAST_UPDATED_TS)
-                val sharedTheme = SharedTheme(textColor, backgroundColor, primaryColor, lastUpdatedTS)
-                callback(sharedTheme)
-                wasSharedThemeReturned = true
-            }
-        }
-
-        if (!wasSharedThemeReturned) {
-            callback(null)
-        }
+        callback(getSharedThemeSync(cursorLoader))
     }.start()
 }
+
+fun Context.getSharedThemeSync(cursorLoader: CursorLoader): SharedTheme? {
+    if (!isThankYouInstalled()) {
+        return null
+    }
+
+    val cursor = cursorLoader.loadInBackground()
+    cursor?.use {
+        if (cursor.moveToFirst()) {
+            val textColor = cursor.getIntValue(COL_TEXT_COLOR)
+            val backgroundColor = cursor.getIntValue(COL_BACKGROUND_COLOR)
+            val primaryColor = cursor.getIntValue(COL_PRIMARY_COLOR)
+            val lastUpdatedTS = cursor.getIntValue(COL_LAST_UPDATED_TS)
+            return SharedTheme(textColor, backgroundColor, primaryColor, lastUpdatedTS)
+        }
+    }
+    return null
+}
+
+fun Context.getMyContentProviderCursorLoader() = CursorLoader(this, MyContentProvider.MY_CONTENT_URI, null, null, null, null)
 
 fun Context.getDialogTheme() = if (baseConfig.backgroundColor.getContrastColor() == Color.WHITE) R.style.MyDialogTheme_Dark else R.style.MyDialogTheme
 
