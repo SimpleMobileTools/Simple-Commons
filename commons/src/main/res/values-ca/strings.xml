@@ -220,7 +220,7 @@
     <string name="fingerprint_setup_successfully">Configuració de la protecció amb èxit. Torneu a instal·lar l\'aplicació en cas de problemes amb restablir-la.</string>
 
     <!-- Times -->
-    <string name="tomorrow">Tomorrow</string>
+    <string name="tomorrow">Demà</string>
     <string name="seconds_raw">segons</string>
     <string name="minutes_raw">minuts</string>
     <string name="hours_raw">hores</string>
@@ -310,14 +310,14 @@
     <string name="reminder_warning">Assegureu-vos que els recordatoris funcionin correctament abans de confiar-hi. Podrien comportar-se malament a causa de les restriccions del sistema relacionades amb l\'estalvi de bateria.</string>
 
     <!-- Alarms -->
-    <string name="alarm">Alarm</string>
-    <string name="snooze">Postposar</string>
+    <string name="alarm">Alarma</string>
+    <string name="snooze">Posposar</string>
     <string name="dismiss">Cancel·lar</string>
-    <string name="no_reminder">No reminder</string>
-    <string name="at_start">At start</string>
-    <string name="system_sounds">System sounds</string>
-    <string name="your_sounds">Your sounds</string>
-    <string name="add_new_sound">Add a new sound</string>
+    <string name="no_reminder">Cap recordatori</string>
+    <string name="at_start">En començar</string>
+    <string name="system_sounds">Sons del sistema</string>
+    <string name="your_sounds">Els teus sons</string>
+    <string name="add_new_sound">Afegeix un so nou</string>
 
     <!-- Settings -->
     <string name="settings">Ajustaments</string>
