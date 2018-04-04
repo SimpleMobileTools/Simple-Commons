@@ -44,21 +44,21 @@ class CustomizationActivity : BaseSimpleActivity() {
             put(THEME_DARK_RED, MyTheme(R.string.dark_red, R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.theme_dark_red_primary_color))
             put(THEME_BLACK_WHITE, MyTheme(R.string.black_white, android.R.color.white, android.R.color.black, android.R.color.black))
             put(THEME_CUSTOM, MyTheme(R.string.custom, 0, 0, 0))
-
-            if (baseConfig.wasSharedThemeEverActivated) {
-                put(THEME_SHARED, MyTheme(R.string.shared, 0, 0, 0))
-            }
         }
 
         if (!isThankYouInstalled()) {
             baseConfig.isUsingSharedTheme = false
         }
 
-        if (baseConfig.wasSharedThemeEverActivated) {
-            getSharedTheme {
+        getSharedTheme {
+            if (it != null) {
                 storedSharedTheme = it
+                baseConfig.wasSharedThemeEverActivated = true
+                apply_to_all_holder.beGone()
+                predefinedThemes[THEME_SHARED] = MyTheme(R.string.shared, it.textColor, it.backgroundColor, it.primaryColor)
             }
         }
+
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_cross)
         updateTextColors(customization_holder)
         initColorVariables()
@@ -329,7 +329,9 @@ class CustomizationActivity : BaseSimpleActivity() {
                     sendBroadcast(this)
                 }
 
-                predefinedThemes.put(THEME_SHARED, MyTheme(R.string.shared, 0, 0, 0))
+                if (!predefinedThemes.containsKey(THEME_SHARED)) {
+                    predefinedThemes[THEME_SHARED] = MyTheme(R.string.shared, 0, 0, 0)
+                }
                 baseConfig.wasSharedThemeEverActivated = true
                 apply_to_all_holder.beGone()
                 updateColorTheme(THEME_SHARED)
