@@ -220,7 +220,7 @@
     <string name="fingerprint_setup_successfully">Configuración de protección con éxito. Por favor, vuelva a instalar la aplicación en caso de problemas al restablecerla.</string>
 
     <!-- Times -->
-    <string name="tomorrow">Tomorrow</string>
+    <string name="tomorrow">Mañana</string>
     <string name="seconds_raw">segundos</string>
     <string name="minutes_raw">minutos</string>
     <string name="hours_raw">horas</string>
@@ -307,14 +307,14 @@
     <string name="reminder_warning">Asegúrese de que los recordatorios funcionen correctamente antes de confiar en ellos. Podrían portarse mal debido a las restricciones del sistema relacionadas con el ahorro de batería.</string>
 
     <!-- Alarms -->
-    <string name="alarm">Alarm</string>
+    <string name="alarm">Alarma</string>
     <string name="snooze">Posponer</string>
     <string name="dismiss">Candelar</string>
     <string name="no_reminder">Sin recordatorio</string>
     <string name="at_start">Al inicio</string>
-    <string name="system_sounds">System sounds</string>
-    <string name="your_sounds">Your sounds</string>
-    <string name="add_new_sound">Add a new sound</string>
+    <string name="system_sounds">Sonidos del sistema</string>
+    <string name="your_sounds">Tus sonidos</string>
+    <string name="add_new_sound">Agrega un nuevo sonido</string>
 
     <!-- Settings -->
     <string name="settings">Ajustes</string>
