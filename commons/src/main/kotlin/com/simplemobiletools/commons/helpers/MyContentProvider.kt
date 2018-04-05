@@ -11,6 +11,7 @@ class MyContentProvider {
         const val SHARED_THEME_UPDATED = "com.simplemobiletools.commons.SHARED_THEME_UPDATED"
         val MY_CONTENT_URI = Uri.parse("content://$AUTHORITY/themes")
 
+        const val COL_ID = "_id"    // used in Simple Thank You
         const val COL_TEXT_COLOR = "text_color"
         const val COL_BACKGROUND_COLOR = "background_color"
         const val COL_PRIMARY_COLOR = "primary_color"
