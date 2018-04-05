@@ -280,21 +280,25 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickTextColor() {
-        ColorPickerDialog(this, curTextColor) {
-            if (hasColorChanged(curTextColor, it)) {
-                setCurrentTextColor(it)
-                colorChanged()
-                updateColorTheme(getUpdatedTheme())
+        ColorPickerDialog(this, curTextColor) { wasPositivePressed, color ->
+            if (wasPositivePressed) {
+                if (hasColorChanged(curTextColor, color)) {
+                    setCurrentTextColor(color)
+                    colorChanged()
+                    updateColorTheme(getUpdatedTheme())
+                }
             }
         }
     }
 
     private fun pickBackgroundColor() {
-        ColorPickerDialog(this, curBackgroundColor) {
-            if (hasColorChanged(curBackgroundColor, it)) {
-                setCurrentBackgroundColor(it)
-                colorChanged()
-                updateColorTheme(getUpdatedTheme())
+        ColorPickerDialog(this, curBackgroundColor) { wasPositivePressed, color ->
+            if (wasPositivePressed) {
+                if (hasColorChanged(curBackgroundColor, color)) {
+                    setCurrentBackgroundColor(color)
+                    colorChanged()
+                    updateColorTheme(getUpdatedTheme())
+                }
             }
         }
     }

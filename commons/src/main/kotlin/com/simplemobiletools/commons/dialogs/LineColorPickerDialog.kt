@@ -16,6 +16,7 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
     private val DEFAULT_SECONDARY_COLOR_INDEX = 6
     private val DEFAULT_COLOR_VALUE = activity.resources.getColor(R.color.color_primary)
 
+    private var wasDimmedBackgroundRemoved = false
     private var dialog: AlertDialog? = null
     private var view: View
 
@@ -54,10 +55,14 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
     fun getSpecificColor() = view.secondary_line_color_picker.getCurrentColor()
 
     private fun colorUpdated(color: Int) {
-        dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
         activity.updateActionbarColor(color)
         activity.setTheme(activity.getThemeId(color))
         view.hex_code.text = color.toHex()
+
+        if (!wasDimmedBackgroundRemoved) {
+            dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
+            wasDimmedBackgroundRemoved = true
+        }
     }
 
     private fun getColorIndexes(color: Int): Pair<Int, Int> {

@@ -9,6 +9,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnTouchListener
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.EditText
 import android.widget.ImageView
 import com.simplemobiletools.commons.R
@@ -17,7 +18,8 @@ import com.simplemobiletools.commons.views.ColorPickerSquare
 import kotlinx.android.synthetic.main.dialog_color_picker.view.*
 
 // forked from https://github.com/yukuku/ambilwarna
-class ColorPickerDialog(val activity: Activity, color: Int, val callback: (color: Int) -> Unit) {
+class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBackground: Boolean = false,
+                        val currentColorCallback: ((color: Int) -> Unit)? = null, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit) {
     lateinit var viewHue: View
     lateinit var viewSatVal: ColorPickerSquare
     lateinit var viewCursor: ImageView
@@ -25,9 +27,11 @@ class ColorPickerDialog(val activity: Activity, color: Int, val callback: (color
     lateinit var viewTarget: ImageView
     lateinit var newHexField: EditText
     lateinit var viewContainer: ViewGroup
-    val currentColorHsv = FloatArray(3)
-    val backgroundColor = activity.baseConfig.backgroundColor
-    var isHueBeingDragged = false
+    private val currentColorHsv = FloatArray(3)
+    private val backgroundColor = activity.baseConfig.backgroundColor
+    private var isHueBeingDragged = false
+    private var wasDimmedBackgroundRemoved = false
+    private var dialog: AlertDialog? = null
 
     init {
         Color.colorToHSV(color, currentColorHsv)
@@ -123,9 +127,10 @@ class ColorPickerDialog(val activity: Activity, color: Int, val callback: (color
         })
 
         val textColor = activity.baseConfig.textColor
-        AlertDialog.Builder(activity)
+        dialog = AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.ok, { dialog, which -> confirmNewColor() })
-                .setNegativeButton(R.string.cancel, null)
+                .setNegativeButton(R.string.cancel, { dialog, which -> dialogDismissed() })
+                .setOnCancelListener { dialogDismissed() }
                 .create().apply {
                     activity.setupDialogStuff(view, this) {
                         view.color_picker_arrow.applyColorFilter(textColor)
@@ -140,12 +145,16 @@ class ColorPickerDialog(val activity: Activity, color: Int, val callback: (color
         }
     }
 
+    private fun dialogDismissed() {
+        callback(false, 0)
+    }
+
     private fun confirmNewColor() {
         val hexValue = newHexField.value
         if (hexValue.length == 6) {
-            callback(Color.parseColor("#$hexValue"))
+            callback(true, Color.parseColor("#$hexValue"))
         } else {
-            callback(getColor())
+            callback(true, getColor())
         }
     }
 
@@ -155,6 +164,12 @@ class ColorPickerDialog(val activity: Activity, color: Int, val callback: (color
         viewSatVal.setHue(getHue())
         moveHuePicker()
         viewNewColor.setBackgroundWithStroke(getColor(), backgroundColor)
+        if (removeDimmedBackground && !wasDimmedBackgroundRemoved) {
+            dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
+            wasDimmedBackgroundRemoved = true
+        }
+
+        currentColorCallback?.invoke(getColor())
     }
 
     private fun moveHuePicker() {
