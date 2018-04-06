@@ -37,7 +37,9 @@ class CustomizationActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
         storedSharedTheme = getSharedThemeSync(getMyContentProviderCursorLoader())
-        if (storedSharedTheme != null) {
+        if (storedSharedTheme == null) {
+            baseConfig.isUsingSharedTheme = false
+        } else {
             baseConfig.wasSharedThemeEverActivated = true
         }
 
@@ -174,8 +176,9 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun getCurrentThemeId(): Int {
-        if (baseConfig.isUsingSharedTheme)
+        if (baseConfig.isUsingSharedTheme) {
             return THEME_SHARED
+        }
 
         var themeId = THEME_CUSTOM
         resources.apply {
