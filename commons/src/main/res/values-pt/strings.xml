@@ -18,7 +18,7 @@
 
     <!-- Search -->
     <string name="search">Pesquisar</string>
-    <string name="type_2_characters">Digite, pele menos, 2 caracteres para iniciar a pesquisa.</string>
+    <string name="type_2_characters">Digite, pelo menos, 2 caracteres para iniciar a pesquisa.</string>
 
     <!-- Filters -->
     <string name="filter">Filtrar</string>
@@ -112,7 +112,7 @@
     <string name="sd_card">Cartão SD</string>
     <string name="root">Raiz</string>
     <string name="wrong_root_selected">Pasta inválida, por favor selecione o cartão SD</string>
-    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
+    <string name="sd_card_otg_same">Não pode utilizar o mesmo caminho para o cartão SD e para o dispositivo OTG</string>
 
     <!-- File properties -->
     <string name="properties">Propriedades</string>
@@ -139,7 +139,7 @@
     <string name="foreground_color">Cor secundária</string>
     <string name="app_icon_color">Cor do ícone da aplicação</string>
     <string name="restore_defaults">Restaurar predefinições</string>
-    <string name="change_color">Change color</string>
+    <string name="change_color">Alterar cor</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Se alterar uma cor, ativa o modo de tema personalizado</string>
     <string name="save">Guardar</string>
@@ -314,9 +314,9 @@
     <string name="dismiss">Descartar</string>
     <string name="no_reminder">Sem lembrete</string>
     <string name="at_start">No início</string>
-    <string name="system_sounds">System sounds</string>
-    <string name="your_sounds">Your sounds</string>
-    <string name="add_new_sound">Add a new sound</string>
+    <string name="system_sounds">Sons do sistema</string>
+    <string name="your_sounds">Meus sons</string>
+    <string name="add_new_sound">Adicionar um novo som</string>
 
     <!-- Settings -->
     <string name="settings">Definições</string>
@@ -398,7 +398,7 @@
     <string name="monday_short">seg</string>
     <string name="tuesday_short">ter</string>
     <string name="wednesday_short">qua</string>
-    <string name="thursday_short">Qui</string>
+    <string name="thursday_short">qui</string>
     <string name="friday_short">sex</string>
     <string name="saturday_short">sáb</string>
     <string name="sunday_short">dom</string>
