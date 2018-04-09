@@ -231,7 +231,7 @@ fun Context.getMediaContentUri(path: String): Uri? {
         else -> MediaStore.Files.getContentUri("external")
     }
 
-    return getMediaContent(path, uri) ?: getMediaContent(path, MediaStore.Files.getContentUri("external")) ?: null
+    return getMediaContent(path, uri)
 }
 
 fun Context.getMediaContent(path: String, uri: Uri): Uri? {
