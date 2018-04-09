@@ -107,6 +107,13 @@
         <item quantity="other">%d pozycji</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 items? -->
+    <plurals name="delete_items">
+        <item quantity="one">%d item</item>
+        <item quantity="few">%d items</item>
+        <item quantity="other">%d items</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Wybierz pamięć</string>
     <string name="internal">Wewnętrzna</string>
@@ -199,6 +206,9 @@
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Czy na pewno chcesz to usunąć?</string>
+    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s to Recycle Bin?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="do_not_ask_again">Nie pytaj więcej w tej sesji</string>
     <string name="yes">Tak</string>
     <string name="no">Nie</string>
 
@@ -356,12 +366,17 @@
     <string name="use_same_snooze">Zawsze używaj tego samego przedziału przypomnienia</string>
     <string name="snooze_time">Snooze time</string>
     <string name="vibrate_on_button_press">Wibracja po wciśnięciu przycisku</string>
+    <string name="move_items_to_trash_bin">Move items in Recycle Bin instead of deleting</string>
+    <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
+    <string name="empty_recycle_bin">Empty Recycle Bin</string>
+    <string name="recycle_bin_location">Recycle Bin location</string>
 
     <!-- Setting sections -->
     <string name="visibility">Widoczność</string>
     <string name="security">Bezpieczeństwo</string>
     <string name="scrolling">Przewijanie</string>
     <string name="file_operations">Operacje na plikach</string>
+    <string name="recycle_bin">Recycle Bin</string>
 
     <!-- Import / Export -->
     <string name="importing">Importuję…</string>
@@ -465,6 +480,8 @@
     <string name="faq_3_text_commons">Nie z poziomu naszych aplikacji. Pliki są usuwane zaraz po kliknięciu w oknie potwierdzającym. System Amdroid nie ma wbudowanego kosza. Są od tego osobne aplikacje, jednakże upewnij się kilka razy, zanim cokolwiek usuniesz, gdyż takowe aplikacje nie gwarantują odzyskania pliku w nienaruszonym stanie.</string>
     <string name="faq_4_title_commons">Nie za bardzo podobają mi się domyślne kolory wiedżetów. Mogę je jakoś zmienić?</string>
     <string name="faq_4_text_commons">Tak. Po przeciągnięciu widżetu na pulpit pojawia się okno jego konfiguracji. Zobaczysz na nim kolorowe kwadraty, za pomocą których możesz wybrać nowe kolory. Suwakiem możesz też ustawić poziom przezroczystości.</string>
+    <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
+    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them. You can customize the Recycle Bin location, emptying interval, or empty it manually.</string>
 
     <!-- License -->
     <string name="notice">Aplikacja korzysta z następujących bibliotek innych firm:</string>
