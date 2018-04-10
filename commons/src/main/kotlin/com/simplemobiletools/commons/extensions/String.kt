@@ -7,6 +7,9 @@ import android.graphics.Point
 import android.media.ExifInterface
 import android.media.MediaMetadataRetriever
 import com.simplemobiletools.commons.helpers.OTG_PATH
+import com.simplemobiletools.commons.helpers.audioExtensions
+import com.simplemobiletools.commons.helpers.photoExtensions
+import com.simplemobiletools.commons.helpers.videoExtensions
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -34,10 +37,6 @@ fun String.isAValidFilename(): Boolean {
     }
     return true
 }
-
-val String.photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp", ".dng", ".orf")
-val String.videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
-val String.audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a", ".opus", ".flac")
 
 fun String.isImageVideoGif() = isImageFast() || isVideoFast() || isGif()
 
