@@ -36,12 +36,16 @@ open class BaseConfig(val context: Context) {
         set(OTGBasePath) = prefs.edit().putString(OTG_BASE_PATH, OTGBasePath).apply()
 
     var sdCardPath: String
-        get() = prefs.getString(SD_CARD_PATH, context.getSDCardPath())
+        get() = prefs.getString(SD_CARD_PATH, getDefaultSDCardPath())
         set(sdCardPath) = prefs.edit().putString(SD_CARD_PATH, sdCardPath).apply()
 
+    private fun getDefaultSDCardPath() = if (prefs.contains(SD_CARD_PATH)) "" else context.getSDCardPath()
+
     var internalStoragePath: String
-        get() = prefs.getString(INTERNAL_STORAGE_PATH, context.getInternalStoragePath())
+        get() = prefs.getString(INTERNAL_STORAGE_PATH, getDefaultInternalPath())
         set(internalStoragePath) = prefs.edit().putString(INTERNAL_STORAGE_PATH, internalStoragePath).apply()
+
+    private fun getDefaultInternalPath() = if (prefs.contains(INTERNAL_STORAGE_PATH)) "" else context.getInternalStoragePath()
 
     var textColor: Int
         get() = prefs.getInt(TEXT_COLOR, context.resources.getColor(R.color.default_text_color))

@@ -350,7 +350,7 @@ fun Context.getCurrentFormattedDateTime(): String {
 fun Context.updateSDCardPath() {
     Thread {
         val oldPath = baseConfig.sdCardPath
-        baseConfig.sdCardPath = getSDCardPath().trimEnd('/')
+        baseConfig.sdCardPath = getSDCardPath()
         if (oldPath != baseConfig.sdCardPath) {
             baseConfig.treeUri = ""
         }
