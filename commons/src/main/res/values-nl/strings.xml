@@ -464,9 +464,11 @@
     <string name="faq_2_text_commons">Maar natuurlijk! Vertel anderen over deze apps of geef feedback en positieve beoordelingen. Ook het vertalen van de apps in een nieuwe taal of het bijwerken van bestaande vertalingen wordt gewaardeerd.
         Een handleiding is te vinden op https://github.com/SimpleMobileTools/General-Discussion , of stuur me een bericht via hello@simplemobiletools.com voor hulp.</string>
     <string name="faq_3_title_commons">Ik heb per ongeluk bestanden verwijderd, hoe kan ik deze herstellen?</string>
-    <string name="faq_3_text_commons">Bestanden worden direct na bevestiging verwijderd, tenzij de prullenbak wordt gebruikt. De prullenbak kan bij de instellingen worden ingeschakeld.</string>
+    <string name="faq_3_text_commons">Dat gaat helaas niet lukken. Bestanden worden direct na bevestiging verwijderd; er is geen prullenbak.</string>
     <string name="faq_4_title_commons">Ik vind de kleuren van de widgets niet mooi, kan ik ze veranderen?</string>
     <string name="faq_4_text_commons">Bij het plaatsen van een widget op het startscherm zal er een instellingenvenster verschijnen. Onderaan staan gekleurde vlakken, waarmee nieuwe kleuren kunnen worden gekozen. De schuif is voor de transparantie.</string>
+    <string name="faq_5_title_commons">Kan ik verwijderde bestanden herstellen?</string>
+    <string name="faq_5_text_commons">Bestanden worden direct na bevestiging verwijderd, tenzij de prullenbak wordt gebruikt. De prullenbak kan bij de instellingen worden ingeschakeld.</string>
 
     <!-- License -->
     <string name="notice">Deze app maakt gebruik van de volgende libraries om het mij wat gemakkelijker te maken. Dank hiervoor.</string>
