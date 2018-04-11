@@ -461,8 +461,14 @@ fun Context.getFormattedSeconds(seconds: Int, showBefore: Boolean = true) = when
 
 fun Context.getDefaultAlarmUri(type: Int) = RingtoneManager.getDefaultUri(if (type == ALARM_SOUND_TYPE_NOTIFICATION) RingtoneManager.TYPE_NOTIFICATION else RingtoneManager.TYPE_ALARM)
 
-fun Context.getDefaultAlarmTitle(type: Int) = RingtoneManager.getRingtone(this, getDefaultAlarmUri(type))?.getTitle(this)
-        ?: getString(R.string.alarm)
+fun Context.getDefaultAlarmTitle(type: Int): String {
+    val alarmString = getString(R.string.alarm)
+    return try {
+        RingtoneManager.getRingtone(this, getDefaultAlarmUri(type))?.getTitle(this) ?: alarmString
+    } catch (e: Exception) {
+        alarmString
+    }
+}
 
 fun Context.getDefaultAlarmSound(type: Int) = AlarmSound(0, getDefaultAlarmTitle(type), getDefaultAlarmUri(type).toString())
 
