@@ -781,10 +781,13 @@ fun BaseSimpleActivity.getAlarmSounds(type: Int, callback: (ArrayList<AlarmSound
 
     try {
         val cursor = manager.cursor
+        var curId = 1
+        val silentAlarm = AlarmSound(curId++, getString(R.string.no_sound), SILENT)
+        alarms.add(silentAlarm)
+
         val defaultAlarm = getDefaultAlarmSound(type)
         alarms.add(defaultAlarm)
 
-        var curId = 1
         while (cursor.moveToNext()) {
             val title = cursor.getString(RingtoneManager.TITLE_COLUMN_INDEX)
             var uri = cursor.getString(RingtoneManager.URI_COLUMN_INDEX)

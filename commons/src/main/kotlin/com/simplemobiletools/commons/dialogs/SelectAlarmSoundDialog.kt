@@ -13,6 +13,7 @@ import com.google.gson.reflect.TypeToken
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.SILENT
 import com.simplemobiletools.commons.helpers.isKitkatPlus
 import com.simplemobiletools.commons.models.AlarmSound
 import com.simplemobiletools.commons.models.RadioItem
@@ -101,8 +102,9 @@ class SelectAlarmSoundDialog(val activity: BaseSimpleActivity, val currentUri: S
     }
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
-    private fun alarmClicked(alarmSound: AlarmSound) {
-        if (alarmSound.id == ADD_NEW_SOUND_ID) {
+    private fun alarmClicked(alarmSound: AlarmSound) = when {
+        alarmSound.uri == SILENT -> mediaPlayer.stop()
+        alarmSound.id == ADD_NEW_SOUND_ID -> {
             val action = if (isKitkatPlus()) Intent.ACTION_OPEN_DOCUMENT else Intent.ACTION_GET_CONTENT
             Intent(action).apply {
                 type = "audio/*"
@@ -113,19 +115,18 @@ class SelectAlarmSoundDialog(val activity: BaseSimpleActivity, val currentUri: S
                 }
             }
             dialog.dismiss()
-        } else {
-            try {
-                mediaPlayer.stop()
-                mediaPlayer = MediaPlayer().apply {
-                    setAudioStreamType(audioStream)
-                    setDataSource(activity, Uri.parse(alarmSound.uri))
-                    isLooping = loopAudio
-                    prepare()
-                    start()
-                }
-            } catch (e: Exception) {
-                activity.showErrorToast(e)
+        }
+        else -> try {
+            mediaPlayer.stop()
+            mediaPlayer = MediaPlayer().apply {
+                setAudioStreamType(audioStream)
+                setDataSource(activity, Uri.parse(alarmSound.uri))
+                isLooping = loopAudio
+                prepare()
+                start()
             }
+        } catch (e: Exception) {
+            activity.showErrorToast(e)
         }
     }
 
