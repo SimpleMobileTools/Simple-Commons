@@ -102,14 +102,14 @@
     <string name="confirm_selection">确认选择</string>
 
     <plurals name="items">
-        <item quantity="one">%d 项目</item>
-        <item quantity="other">%d 项目</item>
+        <item quantity="one">%d 个项目</item>
+        <item quantity="other">%d 个项目</item>
     </plurals>
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">%d 个项目</item>
+        <item quantity="other">%d 个项目</item>
     </plurals>
 
     <!-- Storages -->
@@ -145,7 +145,7 @@
     <string name="foreground_color">前景色</string>
     <string name="app_icon_color">应用图标颜色</string>
     <string name="restore_defaults">恢复默认</string>
-    <string name="change_color">Change color</string>
+    <string name="change_color">修改颜色</string>
     <string name="theme">主题</string>
     <string name="changing_color_description">更改颜色将切换到自定义主题</string>
     <string name="save">保存</string>
@@ -204,8 +204,8 @@
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">是否执行此删除操作？</string>
-    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s to Recycle Bin?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="deletion_confirmation">你确定要删除 %s？</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">你确定要移动 %s到回收站？</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
     <string name="do_not_ask_again">不再提醒</string>
     <string name="yes">是</string>
     <string name="no">否</string>
