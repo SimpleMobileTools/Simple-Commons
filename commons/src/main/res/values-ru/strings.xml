@@ -109,9 +109,9 @@
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d item</item>
-        <item quantity="few">%d items</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">%d объект</item>
+        <item quantity="few">%d объекта</item>
+        <item quantity="other">%d объектов</item>
     </plurals>
 
     <!-- Storages -->
@@ -147,7 +147,7 @@
     <string name="foreground_color">Цвет переднего плана</string>
     <string name="app_icon_color">Цвет значка приложения</string>
     <string name="restore_defaults">Сбросить к стандартным</string>
-    <string name="change_color">Change color</string>
+    <string name="change_color">Изменить цвет</string>
     <string name="theme">Тема</string>
     <string name="changing_color_description">Изменение цвета повлечёт переключение на пользовательскую тему.</string>
     <string name="save">Сохранить</string>
@@ -205,9 +205,9 @@
     <string name="use_for_this_folder">Использовать только для этой папки</string>
 
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Действительно хотите удалить?</string>
-    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s to Recycle Bin?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="proceed_with_deletion">Подтверждение удаления</string>
+    <string name="deletion_confirmation">Вы действительно хотите удалить %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Вы действительно хотите переместить %s в корзину?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
     <string name="do_not_ask_again">Не спрашивать снова (до следующего запуска)</string>
     <string name="yes">Да</string>
     <string name="no">Нет</string>
@@ -233,7 +233,7 @@
     <string name="fingerprint_setup_successfully">Установка защиты выполнена успешно. Переустановите приложение в случае возникновения проблем с её отключением.</string>
 
     <!-- Times -->
-    <string name="tomorrow">Tomorrow</string>
+    <string name="tomorrow">Завтра</string>
     <string name="seconds_raw">секунд</string>
     <string name="minutes_raw">минут</string>
     <string name="hours_raw">часов</string>
@@ -345,15 +345,15 @@
     <string name="reminder_warning">Пожалуйста, убедитесь, что напоминания работают правильно, прежде чем полагаться на них. Они могут не работать должным образом из-за системных ограничений, связанных с экономией батареи.</string>
 
     <!-- Alarms -->
-    <string name="alarm">Alarm</string>
+    <string name="alarm">Будильник</string>
     <string name="snooze">Отложить</string>
     <string name="dismiss">Закрыть</string>
     <string name="no_reminder">Без напоминания</string>
     <string name="at_start">С наступлением события</string>
-    <string name="system_sounds">System sounds</string>
-    <string name="your_sounds">Your sounds</string>
-    <string name="add_new_sound">Add a new sound</string>
-    <string name="no_sound">No sound</string>
+    <string name="system_sounds">Системные звуки</string>
+    <string name="your_sounds">Свои звуки</string>
+    <string name="add_new_sound">Добавить новый звук</string>
+    <string name="no_sound">Без звука</string>
 
     <!-- Settings -->
     <string name="settings">Настройки</string>
@@ -379,17 +379,17 @@
     <string name="use_same_snooze">Всегда использовать один и тот же интервал повтора</string>
     <string name="snooze_time">Интервал повтора</string>
     <string name="vibrate_on_button_press">Вибрация при нажатии кнопок</string>
-    <string name="move_items_to_trash_bin">Move items in Recycle Bin instead of deleting</string>
-    <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
-    <string name="empty_recycle_bin">Empty Recycle Bin</string>
-    <string name="recycle_bin_location">Recycle Bin location</string>
+    <string name="move_items_to_trash_bin">Перемещать объекты в корзину вместо удаления</string>
+    <string name="recycle_bin_cleaning_interval">Интервал очистки корзины</string>
+    <string name="empty_recycle_bin">Очистить корзину</string>
+    <string name="recycle_bin_location">Расположение корзины</string>
 
     <!-- Setting sections -->
     <string name="visibility">Отображение</string>
     <string name="security">Безопасность</string>
     <string name="scrolling">Прокрутка</string>
     <string name="file_operations">Файловые операции</string>
-    <string name="recycle_bin">Recycle Bin</string>
+    <string name="recycle_bin">Корзина</string>
 
     <!-- Import / Export -->
     <string name="importing">Импорт…</string>
@@ -495,8 +495,8 @@
     <string name="faq_3_text_commons">К сожалению, вы не сможете. Файлы удаляются сразу после диалога подтверждения, функции вроде \"корзины\" не предусмотрено.</string>
     <string name="faq_4_title_commons">Мне не нравятся цвета виджета, я могу их изменить?</string>
     <string name="faq_4_text_commons">Да, при перетаскивании виджета на главный экран появляется панель его настройки. На ней вы увидите цветные квадраты в левом нижнем углу, просто нажмите их, чтобы выбрать новый цвет. Также можно использовать ползунок для настройки прозрачности.</string>
-    <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them. You can customize the Recycle Bin location, emptying interval, or empty it manually.</string>
+    <string name="faq_5_title_commons">Могу я как-то восстановить удалённые файлы?</string>
+    <string name="faq_5_text_commons">Если они были действительно удалены, то не можете. Однако можно включить использование корзины вместо удаления в настройках приложения. Тогда файлы будут просто перемещаться в неё, а не удаляться. Можно настроить расположение корзины и интервал автоматической очистки, а также очистить корзину вручную.</string>
 
     <!-- License -->
     <string name="notice">Это приложение использует следующие библиотеки сторонних разработчиков, чтобы облегчить мой труд. Спасибо.</string>
