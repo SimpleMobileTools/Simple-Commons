@@ -51,7 +51,9 @@ fun Context.getSDCardPath(): String {
         }
     }
 
-    return sdCardPath.trimEnd('/')
+    val finalPath = sdCardPath.trimEnd('/')
+    baseConfig.sdCardPath = finalPath
+    return finalPath
 }
 
 fun Context.hasExternalSDCard() = sdCardPath.isNotEmpty()

@@ -4,15 +4,20 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.ContentUris
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.database.Cursor
 import android.graphics.Color
+import android.media.ExifInterface
+import android.media.RingtoneManager
 import android.net.Uri
+import android.os.Build
 import android.os.Environment
 import android.provider.BaseColumns
 import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.provider.OpenableColumns
+import android.support.annotation.RequiresApi
 import android.support.v4.content.ContextCompat
 import android.support.v4.content.CursorLoader
 import android.support.v4.content.FileProvider
@@ -20,12 +25,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.github.ajalt.reprint.core.Reprint
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_BACKGROUND_COLOR
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_LAST_UPDATED_TS
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_PRIMARY_COLOR
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_TEXT_COLOR
+import com.simplemobiletools.commons.models.AlarmSound
 import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.*
 import java.io.File
@@ -173,10 +181,10 @@ fun Context.getRealPathFromURI(uri: Uri): String? {
 fun Context.getDataColumn(uri: Uri, selection: String? = null, selectionArgs: Array<String>? = null): String? {
     var cursor: Cursor? = null
     try {
-        val projection = arrayOf(MediaStore.Images.Media.DATA)
+        val projection = arrayOf(MediaStore.Files.FileColumns.DATA)
         cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
         if (cursor?.moveToFirst() == true) {
-            return cursor.getStringValue(MediaStore.Images.Media.DATA)
+            return cursor.getStringValue(MediaStore.Files.FileColumns.DATA)
         }
     } catch (e: Exception) {
     } finally {
@@ -207,9 +215,13 @@ fun Context.getPermissionString(id: Int) = when (id) {
 }
 
 fun Context.getFilePublicUri(file: File, applicationId: String): Uri {
-    // try getting a media content uri first, like content://media/external/images/media/438
+    // for images/videos/gifs try getting a media content uri first, like content://media/external/images/media/438
     // if media content uri is null, get our custom uri like content://com.simplemobiletools.gallery.provider/external_files/emulated/0/DCIM/IMG_20171104_233915.jpg
-    return getMediaContentUri(file.absolutePath) ?: FileProvider.getUriForFile(this, "$applicationId.provider", file)
+    return if (file.isImageVideoGif()) {
+        getMediaContentUri(file.absolutePath) ?: FileProvider.getUriForFile(this, "$applicationId.provider", file)
+    } else {
+        FileProvider.getUriForFile(this, "$applicationId.provider", file)
+    }
 }
 
 fun Context.getMediaContentUri(path: String): Uri? {
@@ -219,7 +231,7 @@ fun Context.getMediaContentUri(path: String): Uri? {
         else -> MediaStore.Files.getContentUri("external")
     }
 
-    return getMediaContent(path, uri) ?: getMediaContent(path, MediaStore.Files.getContentUri("external")) ?: null
+    return getMediaContent(path, uri)
 }
 
 fun Context.getMediaContent(path: String, uri: Uri): Uri? {
@@ -302,28 +314,31 @@ fun Context.getFilenameFromContentUri(uri: Uri): String? {
 }
 
 fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
-    var wasSharedThemeReturned = false
-    val cursorLoader = CursorLoader(this, MyContentProvider.CONTENT_URI, null, null, null, null)
+    val cursorLoader = getMyContentProviderCursorLoader()
     Thread {
-        val cursor = cursorLoader.loadInBackground()
-
-        cursor?.use {
-            if (cursor.moveToFirst()) {
-                val textColor = cursor.getIntValue(COL_TEXT_COLOR)
-                val backgroundColor = cursor.getIntValue(COL_BACKGROUND_COLOR)
-                val primaryColor = cursor.getIntValue(COL_PRIMARY_COLOR)
-                val lastUpdatedTS = cursor.getIntValue(COL_LAST_UPDATED_TS)
-                val sharedTheme = SharedTheme(textColor, backgroundColor, primaryColor, lastUpdatedTS)
-                callback(sharedTheme)
-                wasSharedThemeReturned = true
-            }
-        }
-
-        if (!wasSharedThemeReturned) {
-            callback(null)
-        }
+        callback(getSharedThemeSync(cursorLoader))
     }.start()
 }
+
+fun Context.getSharedThemeSync(cursorLoader: CursorLoader): SharedTheme? {
+    if (!isThankYouInstalled()) {
+        return null
+    }
+
+    val cursor = cursorLoader.loadInBackground()
+    cursor?.use {
+        if (cursor.moveToFirst()) {
+            val textColor = cursor.getIntValue(COL_TEXT_COLOR)
+            val backgroundColor = cursor.getIntValue(COL_BACKGROUND_COLOR)
+            val primaryColor = cursor.getIntValue(COL_PRIMARY_COLOR)
+            val lastUpdatedTS = cursor.getIntValue(COL_LAST_UPDATED_TS)
+            return SharedTheme(textColor, backgroundColor, primaryColor, lastUpdatedTS)
+        }
+    }
+    return null
+}
+
+fun Context.getMyContentProviderCursorLoader() = CursorLoader(this, MyContentProvider.MY_CONTENT_URI, null, null, null, null)
 
 fun Context.getDialogTheme() = if (baseConfig.backgroundColor.getContrastColor() == Color.WHITE) R.style.MyDialogTheme_Dark else R.style.MyDialogTheme
 
@@ -335,7 +350,7 @@ fun Context.getCurrentFormattedDateTime(): String {
 fun Context.updateSDCardPath() {
     Thread {
         val oldPath = baseConfig.sdCardPath
-        baseConfig.sdCardPath = getSDCardPath().trimEnd('/')
+        baseConfig.sdCardPath = getSDCardPath()
         if (oldPath != baseConfig.sdCardPath) {
             baseConfig.treeUri = ""
         }
@@ -364,7 +379,7 @@ fun Context.isPackageInstalled(pkgName: String): Boolean {
 // format day bits to strings like "Mon, Tue, Wed"
 fun Context.getSelectedDaysString(bitMask: Int): String {
     val dayBits = arrayListOf(MONDAY_BIT, TUESDAY_BIT, WEDNESDAY_BIT, THURSDAY_BIT, FRIDAY_BIT, SATURDAY_BIT, SUNDAY_BIT)
-    val weekDays = resources.getStringArray(R.array.week_days).toList() as ArrayList<String>
+    val weekDays = resources.getStringArray(R.array.week_days_short).toList() as ArrayList<String>
 
     if (baseConfig.isSundayFirst) {
         dayBits.moveLastItemToFront()
@@ -374,7 +389,7 @@ fun Context.getSelectedDaysString(bitMask: Int): String {
     var days = ""
     dayBits.forEachIndexed { index, bit ->
         if (bitMask and bit != 0) {
-            days += "${weekDays[index].substringTo(3)}, "
+            days += "${weekDays[index]}, "
         }
     }
     return days.trim().trimEnd(',')
@@ -415,7 +430,7 @@ fun Context.formatSecondsToTimeString(totalSeconds: Int): String {
     return result
 }
 
-fun Context.getFormattedMinutes(minutes: Int, showBefore: Boolean = true) = getFormattedSeconds(minutes * 60, showBefore)
+fun Context.getFormattedMinutes(minutes: Int, showBefore: Boolean = true) = getFormattedSeconds(if (minutes <= 0) minutes else minutes * 60, showBefore)
 
 fun Context.getFormattedSeconds(seconds: Int, showBefore: Boolean = true) = when (seconds) {
     -1 -> getString(R.string.no_reminder)
@@ -442,4 +457,74 @@ fun Context.getFormattedSeconds(seconds: Int, showBefore: Boolean = true) = when
             }
         }
     }
+}
+
+fun Context.getDefaultAlarmUri(type: Int) = RingtoneManager.getDefaultUri(if (type == ALARM_SOUND_TYPE_NOTIFICATION) RingtoneManager.TYPE_NOTIFICATION else RingtoneManager.TYPE_ALARM)
+
+fun Context.getDefaultAlarmTitle(type: Int): String {
+    val alarmString = getString(R.string.alarm)
+    return try {
+        RingtoneManager.getRingtone(this, getDefaultAlarmUri(type))?.getTitle(this) ?: alarmString
+    } catch (e: Exception) {
+        alarmString
+    }
+}
+
+fun Context.getDefaultAlarmSound(type: Int) = AlarmSound(0, getDefaultAlarmTitle(type), getDefaultAlarmUri(type).toString())
+
+fun Context.grantReadUriPermission(uriString: String) {
+    try {
+        // ensure custom reminder sounds play well
+        grantUriPermission("com.android.systemui", Uri.parse(uriString), Intent.FLAG_GRANT_READ_URI_PERMISSION)
+    } catch (ignored: Exception) {
+    }
+}
+
+fun Context.storeNewYourAlarmSound(resultData: Intent): AlarmSound {
+    val uri = resultData.data
+    var filename = getFilenameFromUri(uri)
+    if (filename.isEmpty()) {
+        filename = getString(R.string.alarm)
+    }
+
+    val token = object : TypeToken<ArrayList<AlarmSound>>() {}.type
+    val yourAlarmSounds = Gson().fromJson<ArrayList<AlarmSound>>(baseConfig.yourAlarmSounds, token) ?: ArrayList()
+    val newAlarmSoundId = (yourAlarmSounds.maxBy { it.id }?.id ?: YOUR_ALARM_SOUNDS_MIN_ID) + 1
+    val newAlarmSound = AlarmSound(newAlarmSoundId, filename, uri.toString())
+    if (yourAlarmSounds.firstOrNull { it.uri == uri.toString() } == null) {
+        yourAlarmSounds.add(newAlarmSound)
+    }
+
+    baseConfig.yourAlarmSounds = Gson().toJson(yourAlarmSounds)
+
+    if (isKitkatPlus()) {
+        val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION
+        contentResolver.takePersistableUriPermission(uri, takeFlags)
+    }
+
+    return newAlarmSound
+}
+
+@RequiresApi(Build.VERSION_CODES.N)
+fun Context.saveImageRotation(path: String, degrees: Int): Boolean {
+    if (!isPathOnSD(path)) {
+        saveExifRotation(ExifInterface(path), degrees)
+        return true
+    } else if (isNougatPlus()) {
+        val documentFile = getSomeDocumentFile(path)
+        if (documentFile != null) {
+            val parcelFileDescriptor = contentResolver.openFileDescriptor(documentFile.uri, "rw")
+            val fileDescriptor = parcelFileDescriptor.fileDescriptor
+            saveExifRotation(ExifInterface(fileDescriptor), degrees)
+            return true
+        }
+    }
+    return false
+}
+
+fun Context.saveExifRotation(exif: ExifInterface, degrees: Int) {
+    val orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL)
+    val orientationDegrees = (orientation.degreesFromOrientation() + degrees) % 360
+    exif.setAttribute(ExifInterface.TAG_ORIENTATION, orientationDegrees.orientationFromDegrees())
+    exif.saveAttributes()
 }

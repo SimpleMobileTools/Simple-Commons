@@ -36,6 +36,12 @@ class CustomizationActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
+        storedSharedTheme = getSharedThemeSync(getMyContentProviderCursorLoader())
+        if (storedSharedTheme == null) {
+            baseConfig.isUsingSharedTheme = false
+        } else {
+            baseConfig.wasSharedThemeEverActivated = true
+        }
 
         predefinedThemes.apply {
             put(THEME_LIGHT, MyTheme(R.string.light_theme, R.color.theme_light_text_color, R.color.theme_light_background_color, R.color.color_primary))
@@ -45,7 +51,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             put(THEME_BLACK_WHITE, MyTheme(R.string.black_white, android.R.color.white, android.R.color.black, android.R.color.black))
             put(THEME_CUSTOM, MyTheme(R.string.custom, 0, 0, 0))
 
-            if (baseConfig.wasSharedThemeEverActivated) {
+            if (storedSharedTheme != null) {
                 put(THEME_SHARED, MyTheme(R.string.shared, 0, 0, 0))
             }
         }
@@ -54,11 +60,6 @@ class CustomizationActivity : BaseSimpleActivity() {
             baseConfig.isUsingSharedTheme = false
         }
 
-        if (baseConfig.wasSharedThemeEverActivated) {
-            getSharedTheme {
-                storedSharedTheme = it
-            }
-        }
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_cross)
         updateTextColors(customization_holder)
         initColorVariables()
@@ -175,8 +176,9 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun getCurrentThemeId(): Int {
-        if (baseConfig.isUsingSharedTheme)
+        if (baseConfig.isUsingSharedTheme) {
             return THEME_SHARED
+        }
 
         var themeId = THEME_CUSTOM
         resources.apply {
@@ -281,21 +283,25 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickTextColor() {
-        ColorPickerDialog(this, curTextColor) {
-            if (hasColorChanged(curTextColor, it)) {
-                setCurrentTextColor(it)
-                colorChanged()
-                updateColorTheme(getUpdatedTheme())
+        ColorPickerDialog(this, curTextColor) { wasPositivePressed, color ->
+            if (wasPositivePressed) {
+                if (hasColorChanged(curTextColor, color)) {
+                    setCurrentTextColor(color)
+                    colorChanged()
+                    updateColorTheme(getUpdatedTheme())
+                }
             }
         }
     }
 
     private fun pickBackgroundColor() {
-        ColorPickerDialog(this, curBackgroundColor) {
-            if (hasColorChanged(curBackgroundColor, it)) {
-                setCurrentBackgroundColor(it)
-                colorChanged()
-                updateColorTheme(getUpdatedTheme())
+        ColorPickerDialog(this, curBackgroundColor) { wasPositivePressed, color ->
+            if (wasPositivePressed) {
+                if (hasColorChanged(curBackgroundColor, color)) {
+                    setCurrentBackgroundColor(color)
+                    colorChanged()
+                    updateColorTheme(getUpdatedTheme())
+                }
             }
         }
     }
@@ -329,7 +335,9 @@ class CustomizationActivity : BaseSimpleActivity() {
                     sendBroadcast(this)
                 }
 
-                predefinedThemes.put(THEME_SHARED, MyTheme(R.string.shared, 0, 0, 0))
+                if (!predefinedThemes.containsKey(THEME_SHARED)) {
+                    predefinedThemes[THEME_SHARED] = MyTheme(R.string.shared, 0, 0, 0)
+                }
                 baseConfig.wasSharedThemeEverActivated = true
                 apply_to_all_holder.beGone()
                 updateColorTheme(THEME_SHARED)

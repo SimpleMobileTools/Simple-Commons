@@ -18,11 +18,11 @@
 
     <!-- Search -->
     <string name="search">Pesquisar</string>
-    <string name="type_2_characters">Digite, pele menos, 2 caracteres para iniciar a pesquisa.</string>
+    <string name="type_2_characters">Digite, pelo menos, 2 caracteres para iniciar a pesquisa.</string>
 
     <!-- Filters -->
     <string name="filter">Filtrar</string>
-    <string name="no_items_found">Sem itens.</string>
+    <string name="no_items_found">Sem itens</string>
     <string name="change_filter">Alterar filtro</string>
 
     <!-- Permissions -->
@@ -106,13 +106,19 @@
         <item quantity="other">%d itens</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 items? -->
+    <plurals name="delete_items">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Selecionar armazenamento</string>
     <string name="internal">Interno</string>
     <string name="sd_card">Cartão SD</string>
     <string name="root">Raiz</string>
     <string name="wrong_root_selected">Pasta inválida, por favor selecione o cartão SD</string>
-    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
+    <string name="sd_card_otg_same">Não pode utilizar o mesmo caminho para o cartão SD e para o dispositivo OTG</string>
 
     <!-- File properties -->
     <string name="properties">Propriedades</string>
@@ -136,9 +142,10 @@
     <string name="background_color">Cor de fundo</string>
     <string name="text_color">Cor do tipo de letra</string>
     <string name="primary_color">Cor primária</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
+    <string name="foreground_color">Cor secundária</string>
+    <string name="app_icon_color">Cor do ícone da aplicação</string>
     <string name="restore_defaults">Restaurar predefinições</string>
+    <string name="change_color">Alterar cor</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Se alterar uma cor, ativa o modo de tema personalizado</string>
     <string name="save">Guardar</string>
@@ -197,6 +204,9 @@
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Tem a certeza de que deseja continuar com a eliminação?</string>
+    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s to Recycle Bin?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="do_not_ask_again">Não perguntar de novo para esta sessão</string>
     <string name="yes">Sim</string>
     <string name="no">Não</string>
 
@@ -221,7 +231,8 @@
     <string name="fingerprint_setup_successfully">Proteção definida com sucesso. Deve reinstalar a aplicação se ocorrerem problemas.</string>
 
     <!-- Times -->
-    <string name="seconds_raw">seconds</string>
+    <string name="tomorrow">Amanhã</string>
+    <string name="seconds_raw">segundos</string>
     <string name="minutes_raw">minutos</string>
     <string name="hours_raw">horas</string>
     <string name="days_raw">dias</string>
@@ -271,8 +282,8 @@
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d second before</item>
-        <item quantity="other">%d seconds before</item>
+        <item quantity="one">%d segundo antes</item>
+        <item quantity="other">%d segundos antes</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minuto antes</item>
@@ -289,8 +300,8 @@
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d segundo</item>
+        <item quantity="other">%d segundos</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minuto</item>
@@ -302,15 +313,20 @@
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
-    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+    <string name="alarm_goes_off_in">O alarme está definido para daqui a:\n%s</string>
+    <string name="alarm_warning">Certifique-se de que o alarme está a funcionar corretamente antes de o utilizar na plenitude. Pode ter um comportamento errático devido a restrições do sistema.</string>
+    <string name="reminder_warning">Certifique-se de que o lembrete está a funcionar corretamente antes de o utilizar na plenitude. Pode ter um comportamento errático devido a restrições do sistema.</string>
 
     <!-- Alarms -->
+    <string name="alarm">Alarme</string>
     <string name="snooze">Snooze</string>
-    <string name="dismiss">Dismiss</string>
+    <string name="dismiss">Descartar</string>
     <string name="no_reminder">Sem lembrete</string>
     <string name="at_start">No início</string>
+    <string name="system_sounds">Sons do sistema</string>
+    <string name="your_sounds">Meus sons</string>
+    <string name="add_new_sound">Adicionar um novo som</string>
+    <string name="no_sound">No sound</string>
 
     <!-- Settings -->
     <string name="settings">Definições</string>
@@ -334,14 +350,19 @@
     <string name="sunday_first">Iniciar semana ao domingo</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Usar sempre o mesmo intervalo para snooze</string>
-    <string name="snooze_time">Snooze time</string>
+    <string name="snooze_time">TIntervalo para snooze</string>
     <string name="vibrate_on_button_press">Vibrar ao tocar nos botões</string>
+    <string name="move_items_to_trash_bin">Move items in Recycle Bin instead of deleting</string>
+    <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
+    <string name="empty_recycle_bin">Empty Recycle Bin</string>
+    <string name="recycle_bin_location">Recycle Bin location</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilidade</string>
     <string name="security">Segurança</string>
     <string name="scrolling">Deslocação</string>
     <string name="file_operations">Operações de ficheiros</string>
+    <string name="recycle_bin">Recycle Bin</string>
 
     <!-- Import / Export -->
     <string name="importing">A importar…</string>
@@ -392,7 +413,7 @@
     <string name="monday_short">seg</string>
     <string name="tuesday_short">ter</string>
     <string name="wednesday_short">qua</string>
-    <string name="thursday_short">Qui</string>
+    <string name="thursday_short">qui</string>
     <string name="friday_short">sex</string>
     <string name="saturday_short">sáb</string>
     <string name="sunday_short">dom</string>
@@ -447,6 +468,8 @@
     <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, there is no trashbin available.</string>
     <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
     <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
+    <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
+    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them. You can customize the Recycle Bin location, emptying interval, or empty it manually.</string>
 
     <!-- License -->
     <string name="notice">Esta aplicação usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>
@@ -470,5 +493,5 @@
     <string name="espresso_title">Espresso (apoio aos testes)</string>
     <string name="gson_title">Gson (processador JSON)</string>
     <string name="leak_canary_title">Leak Canary (detetor de falhas de memória)</string>
-    <string name="number_picker_title">Number Picker (customizable number picker)</string>
+    <string name="number_picker_title">Number Picker (seletor de números personalizado)</string>
 </resources>

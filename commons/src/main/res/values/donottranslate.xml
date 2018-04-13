@@ -87,4 +87,14 @@
         <item>@string/saturday_letter</item>
         <item>@string/sunday_letter</item>
     </array>
+
+    <array name="week_days_short">
+        <item>@string/monday_short</item>
+        <item>@string/tuesday_short</item>
+        <item>@string/wednesday_short</item>
+        <item>@string/thursday_short</item>
+        <item>@string/friday_short</item>
+        <item>@string/saturday_short</item>
+        <item>@string/sunday_short</item>
+    </array>
 </resources>

@@ -7,6 +7,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
+import android.media.RingtoneManager
 import android.net.Uri
 import android.os.Looper
 import android.os.TransactionTooLargeException
@@ -26,10 +27,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.helpers.*
-import com.simplemobiletools.commons.models.FileDirItem
-import com.simplemobiletools.commons.models.RadioItem
-import com.simplemobiletools.commons.models.Release
-import com.simplemobiletools.commons.models.SharedTheme
+import com.simplemobiletools.commons.models.*
 import com.simplemobiletools.commons.views.MyTextView
 import kotlinx.android.synthetic.main.dialog_title.view.*
 import java.io.*
@@ -623,7 +621,12 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
         val newDocument = documentFile.createFile(mimeType, path.getFilenameFromPath())
         applicationContext.contentResolver.openOutputStream(newDocument!!.uri)
     } else {
-        FileOutputStream(targetFile)
+        try {
+            FileOutputStream(targetFile)
+        } catch (e: Exception) {
+            showErrorToast(e)
+            null
+        }
     }
 }
 
@@ -672,28 +675,15 @@ fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
     return File(directory).mkdirs()
 }
 
-fun BaseSimpleActivity.useEnglishToggled() {
-    val conf = resources.configuration
-    conf.locale = if (baseConfig.useEnglish) Locale.ENGLISH else Locale.getDefault()
-    resources.updateConfiguration(conf, resources.displayMetrics)
-    restartActivity()
-}
-
-fun BaseSimpleActivity.restartActivity() {
-    finish()
-    startActivity(intent)
-}
-
 fun Activity.isActivityDestroyed() = isJellyBean1Plus() && isDestroyed
 
-fun Activity.updateSharedTheme(sharedTheme: SharedTheme): Int {
+fun Activity.updateSharedTheme(sharedTheme: SharedTheme) {
     try {
         val contentValues = MyContentProvider.fillThemeContentValues(sharedTheme)
-        return applicationContext.contentResolver.update(MyContentProvider.CONTENT_URI, contentValues, null, null)
+        applicationContext.contentResolver.update(MyContentProvider.MY_CONTENT_URI, contentValues, null, null)
     } catch (e: Exception) {
         showErrorToast(e)
     }
-    return 0
 }
 
 fun Activity.copyToClipboard(text: String) {
@@ -736,8 +726,14 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
     callback?.invoke()
 }
 
+fun Activity.showPickSecondsDialogHelper(curMinutes: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false,
+                                         cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
+    val seconds = if (curMinutes > 0) curMinutes * 60 else curMinutes
+    showPickSecondsDialog(seconds, isSnoozePicker, showSecondsAtCustomDialog, cancelCallback, callback)
+}
+
 fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false,
-                                   cancelCallback: (() -> Unit)? = null, callback: (minutes: Int) -> Unit) {
+                                   cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
     hideKeyboard()
     val seconds = TreeSet<Int>()
     seconds.apply {
@@ -774,6 +770,49 @@ fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = fa
             }
         } else {
             callback(it as Int)
+        }
+    }
+}
+
+fun BaseSimpleActivity.getAlarmSounds(type: Int, callback: (ArrayList<AlarmSound>) -> Unit) {
+    val alarms = ArrayList<AlarmSound>()
+    val manager = RingtoneManager(this)
+    manager.setType(if (type == ALARM_SOUND_TYPE_NOTIFICATION) RingtoneManager.TYPE_NOTIFICATION else RingtoneManager.TYPE_ALARM)
+
+    try {
+        val cursor = manager.cursor
+        var curId = 1
+        val silentAlarm = AlarmSound(curId++, getString(R.string.no_sound), SILENT)
+        alarms.add(silentAlarm)
+
+        val defaultAlarm = getDefaultAlarmSound(type)
+        alarms.add(defaultAlarm)
+
+        while (cursor.moveToNext()) {
+            val title = cursor.getString(RingtoneManager.TITLE_COLUMN_INDEX)
+            var uri = cursor.getString(RingtoneManager.URI_COLUMN_INDEX)
+            val id = cursor.getString(RingtoneManager.ID_COLUMN_INDEX)
+            if (!uri.endsWith(id)) {
+                uri += "/$id"
+            }
+
+            val alarmSound = AlarmSound(curId++, title, uri)
+            alarms.add(alarmSound)
+        }
+        callback(alarms)
+    } catch (e: Exception) {
+        if (e is SecurityException) {
+            handlePermission(PERMISSION_READ_STORAGE) {
+                if (it) {
+                    getAlarmSounds(type, callback)
+                } else {
+                    showErrorToast(e)
+                    callback(ArrayList())
+                }
+            }
+        } else {
+            showErrorToast(e)
+            callback(ArrayList())
         }
     }
 }

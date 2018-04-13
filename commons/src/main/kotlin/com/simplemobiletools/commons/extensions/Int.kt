@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.extensions
 
 import android.graphics.Color
+import android.media.ExifInterface
 import java.util.*
 
 fun Int.getContrastColor(): Int {
@@ -25,7 +26,7 @@ fun Int.getFormattedDuration(): String {
     val minutes = this % 3600 / 60
     val seconds = this % 60
 
-    if (this > 3600) {
+    if (this >= 3600) {
         sb.append(String.format(Locale.getDefault(), "%02d", hours)).append(":")
     }
 
@@ -81,4 +82,18 @@ private fun hsv2hsl(hsv: FloatArray): FloatArray {
         newSat = 1f
 
     return floatArrayOf(hue, newSat, newHue / 2f)
+}
+
+fun Int.orientationFromDegrees() = when (this) {
+    270 -> ExifInterface.ORIENTATION_ROTATE_270
+    180 -> ExifInterface.ORIENTATION_ROTATE_180
+    90 -> ExifInterface.ORIENTATION_ROTATE_90
+    else -> ExifInterface.ORIENTATION_NORMAL
+}.toString()
+
+fun Int.degreesFromOrientation() = when (this) {
+    ExifInterface.ORIENTATION_ROTATE_270 -> 270
+    ExifInterface.ORIENTATION_ROTATE_180 -> 180
+    ExifInterface.ORIENTATION_ROTATE_90 -> 90
+    else -> 0
 }

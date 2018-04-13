@@ -11,6 +11,9 @@ const val REAL_FILE_PATH = "real_file_path_2"
 const val IS_FROM_GALLERY = "is_from_gallery"
 const val BROADCAST_REFRESH_MEDIA = "com.simplemobiletools.REFRESH_MEDIA"
 const val OTG_PATH = "otg:/"
+const val ALARM_SOUND_TYPE_ALARM = 1
+const val ALARM_SOUND_TYPE_NOTIFICATION = 2
+const val YOUR_ALARM_SOUNDS_MIN_ID = 1000
 
 const val HOUR_MINUTES = 60
 const val DAY_MINUTES = 24 * HOUR_MINUTES
@@ -73,6 +76,8 @@ const val WAS_REMINDER_WARNING_SHOWN = "was_reminder_warning_shown"
 const val USE_SAME_SNOOZE = "use_same_snooze"
 const val SNOOZE_TIME = "snooze_delay"
 const val VIBRATE_ON_BUTTON_PRESS = "vibrate_on_button_press"
+const val YOUR_ALARM_SOUNDS = "your_alarm_sounds"
+const val SILENT = "silent"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
@@ -116,8 +121,8 @@ const val SORT_BY_MIDDLE_NAME = 256
 const val SORT_BY_SURNAME = 512
 const val SORT_DESCENDING = 1024
 const val SORT_BY_TITLE = 2048
-const val SORT_BY_ARTIST = 5096
-const val SORT_BY_DURATION = 10192
+const val SORT_BY_ARTIST = 4096
+const val SORT_BY_DURATION = 8192
 
 // security
 const val PROTECTION_PATTERN = 0
@@ -155,6 +160,10 @@ const val SUNDAY_BIT = 64
 const val EVERY_DAY_BIT = MONDAY_BIT or TUESDAY_BIT or WEDNESDAY_BIT or THURSDAY_BIT or FRIDAY_BIT or SATURDAY_BIT or SUNDAY_BIT
 const val WEEK_DAYS_BIT = MONDAY_BIT or TUESDAY_BIT or WEDNESDAY_BIT or THURSDAY_BIT or FRIDAY_BIT
 const val WEEKENDS_BIT = SATURDAY_BIT or SUNDAY_BIT
+
+val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp", ".dng", ".orf")
+val videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
+val audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a", ".opus", ".flac")
 
 fun isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 

@@ -106,6 +106,12 @@
         <item quantity="other">%d items</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 items? -->
+    <plurals name="delete_items">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Select storage</string>
     <string name="internal">Internal</string>
@@ -139,6 +145,7 @@
     <string name="foreground_color">Foreground color</string>
     <string name="app_icon_color">App icon color</string>
     <string name="restore_defaults">Restore defaults</string>
+    <string name="change_color">Change color</string>
     <string name="theme">Theme</string>
     <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
     <string name="save">Save</string>
@@ -197,6 +204,9 @@
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
+    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s to Recycle Bin?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="do_not_ask_again">Do not ask again in this session</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
 
@@ -221,6 +231,7 @@
     <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
 
     <!-- Times -->
+    <string name="tomorrow">Tomorrow</string>
     <string name="seconds_raw">seconds</string>
     <string name="minutes_raw">minutes</string>
     <string name="hours_raw">hours</string>
@@ -307,10 +318,15 @@
     <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
 
     <!-- Alarms -->
+    <string name="alarm">Alarm</string>
     <string name="snooze">Snooze</string>
     <string name="dismiss">Dismiss</string>
     <string name="no_reminder">No reminder</string>
     <string name="at_start">בהתחלה</string>
+    <string name="system_sounds">System sounds</string>
+    <string name="your_sounds">Your sounds</string>
+    <string name="add_new_sound">Add a new sound</string>
+    <string name="no_sound">No sound</string>
 
     <!-- Settings -->
     <string name="settings">Settings</string>
@@ -336,12 +352,17 @@
     <string name="use_same_snooze">Always use same snooze time</string>
     <string name="snooze_time">Snooze time</string>
     <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="move_items_to_trash_bin">Move items in Recycle Bin instead of deleting</string>
+    <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
+    <string name="empty_recycle_bin">Empty Recycle Bin</string>
+    <string name="recycle_bin_location">Recycle Bin location</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>
     <string name="security">Security</string>
     <string name="scrolling">Scrolling</string>
     <string name="file_operations">File operations</string>
+    <string name="recycle_bin">Recycle Bin</string>
 
     <!-- Import / Export -->
     <string name="importing">Importing…</string>
@@ -447,6 +468,8 @@
     <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, there is no trashbin available.</string>
     <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
     <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
+    <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
+    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them. You can customize the Recycle Bin location, emptying interval, or empty it manually.</string>
 
     <!-- License -->
     <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
