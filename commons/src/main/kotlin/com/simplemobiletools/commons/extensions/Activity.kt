@@ -6,6 +6,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.drawable.ColorDrawable
 import android.media.RingtoneManager
 import android.net.Uri
@@ -218,8 +219,21 @@ fun Activity.openEditorIntent(path: String, applicationId: String) {
         Intent().apply {
             action = Intent.ACTION_EDIT
             setDataAndType(newUri, getUriMimeType(path, newUri))
-            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            putExtra(MediaStore.EXTRA_OUTPUT, newUri)
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
+
+            val parent = path.getParentPath()
+            val newFilename = "${path.getFilenameFromPath().substringBeforeLast('.')}_1"
+            val extension = path.getFilenameExtension()
+            val newFilePath = File(parent, "$newFilename.$extension")
+
+            val outputUri = getFinalUriFromPath("$newFilePath", applicationId)
+            val resInfoList = packageManager.queryIntentActivities(this, PackageManager.MATCH_DEFAULT_ONLY)
+            for (resolveInfo in resInfoList) {
+                val packageName = resolveInfo.activityInfo.packageName
+                grantUriPermission(packageName, outputUri, Intent.FLAG_GRANT_WRITE_URI_PERMISSION or Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            }
+
+            putExtra(MediaStore.EXTRA_OUTPUT, outputUri)
             putExtra(REAL_FILE_PATH, path)
 
             if (resolveActivity(packageManager) != null) {
