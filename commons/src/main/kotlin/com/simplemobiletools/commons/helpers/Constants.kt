@@ -78,6 +78,7 @@ const val SNOOZE_TIME = "snooze_delay"
 const val VIBRATE_ON_BUTTON_PRESS = "vibrate_on_button_press"
 const val YOUR_ALARM_SOUNDS = "your_alarm_sounds"
 const val SILENT = "silent"
+const val FORCE_PORTRAIT = "force_portrait"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1

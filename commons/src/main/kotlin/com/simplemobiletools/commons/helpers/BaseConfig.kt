@@ -219,4 +219,8 @@ open class BaseConfig(val context: Context) {
     var yourAlarmSounds: String
         get() = prefs.getString(YOUR_ALARM_SOUNDS, "")
         set(yourAlarmSounds) = prefs.edit().putString(YOUR_ALARM_SOUNDS, yourAlarmSounds).apply()
+
+    var forcePortrait: Boolean
+        get() = prefs.getBoolean(FORCE_PORTRAIT, true)
+        set(forcePortrait) = prefs.edit().putBoolean(FORCE_PORTRAIT, forcePortrait).apply()
 }
