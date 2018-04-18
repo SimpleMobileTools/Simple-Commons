@@ -6,6 +6,9 @@ import android.graphics.BitmapFactory
 import android.graphics.Point
 import android.media.ExifInterface
 import android.media.MediaMetadataRetriever
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import com.simplemobiletools.commons.helpers.OTG_PATH
 import com.simplemobiletools.commons.helpers.audioExtensions
 import com.simplemobiletools.commons.helpers.photoExtensions
@@ -222,6 +225,16 @@ fun String.substringTo(cnt: Int): String {
     } else {
         substring(0, Math.min(length, cnt))
     }
+}
+
+fun String.highlightTextPart(textToHighlight: String, color: Int): SpannableString {
+    val spannableString = SpannableString(this)
+    val startIndex = indexOf(textToHighlight, 0, true)
+    if (startIndex != -1) {
+        val endIndex = Math.min(startIndex + textToHighlight.length, length)
+        spannableString.setSpan(ForegroundColorSpan(color), startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+    }
+    return spannableString
 }
 
 fun String.getMimeType(): String {
