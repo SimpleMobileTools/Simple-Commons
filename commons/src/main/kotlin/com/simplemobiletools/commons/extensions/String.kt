@@ -229,6 +229,10 @@ fun String.substringTo(cnt: Int): String {
 
 fun String.highlightTextPart(textToHighlight: String, color: Int): SpannableString {
     val spannableString = SpannableString(this)
+    if (textToHighlight.isEmpty()) {
+        return spannableString
+    }
+
     val startIndex = indexOf(textToHighlight, 0, true)
     if (startIndex != -1) {
         val endIndex = Math.min(startIndex + textToHighlight.length, length)
