@@ -6,8 +6,8 @@ buildscript {
         propMinSdkVersion = 16
         propTargetSdkVersion = propCompileSdkVersion
         propVersionCode = 1
-        propVersionName = '3.19.5'
-        kotlin_version = '1.2.31'
+        propVersionName = '3.19.6'
+        kotlin_version = '1.2.40'
         support_libs = '27.1.1'
     }
 
