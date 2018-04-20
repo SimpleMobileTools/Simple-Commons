@@ -133,7 +133,13 @@ fun String.getGenericMimeType(): String {
     return "$type/*"
 }
 
-fun String.getParentPath() = substring(0, length - getFilenameFromPath().length)
+fun String.getParentPath(): String {
+    var parent = removeSuffix("/${getFilenameFromPath()}")
+    if (parent == "otg:") {
+        parent = OTG_PATH
+    }
+    return parent
+}
 
 fun String.getDuration() = getFileDurationSeconds()?.getFormattedDuration()
 
