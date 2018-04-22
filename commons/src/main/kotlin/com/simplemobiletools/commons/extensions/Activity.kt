@@ -237,7 +237,11 @@ fun Activity.openEditorIntent(path: String, applicationId: String) {
             putExtra(REAL_FILE_PATH, path)
 
             if (resolveActivity(packageManager) != null) {
-                startActivityForResult(this, REQUEST_EDIT_IMAGE)
+                try {
+                    startActivityForResult(this, REQUEST_EDIT_IMAGE)
+                } catch (e: SecurityException) {
+                    showErrorToast(e)
+                }
             } else {
                 toast(R.string.no_app_found)
             }
@@ -262,7 +266,11 @@ fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: 
 
             if (resolveActivity(packageManager) != null) {
                 val chooser = Intent.createChooser(this, getString(R.string.open_with))
-                startActivity(if (forceChooser) chooser else this)
+                try {
+                    startActivity(if (forceChooser) chooser else this)
+                } catch (e: NullPointerException) {
+                    showErrorToast(e)
+                }
             } else {
                 if (!tryGenericMimeType(this, mimeType, newUri)) {
                     toast(R.string.no_app_found)
