@@ -226,7 +226,7 @@ fun Activity.openEditorIntent(path: String, applicationId: String) {
             val extension = path.getFilenameExtension()
             val newFilePath = File(parent, "$newFilename.$extension")
 
-            val outputUri = getFinalUriFromPath("$newFilePath", applicationId)
+            val outputUri = if (path.startsWith(OTG_PATH)) newUri else getFinalUriFromPath("$newFilePath", applicationId)
             val resInfoList = packageManager.queryIntentActivities(this, PackageManager.MATCH_DEFAULT_ONLY)
             for (resolveInfo in resInfoList) {
                 val packageName = resolveInfo.activityInfo.packageName
