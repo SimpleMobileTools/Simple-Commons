@@ -180,7 +180,7 @@ fun Context.getFastDocumentFile(path: String): DocumentFile? {
     val treeUri = if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri
 
     val relativePath = Uri.encode(path.substring(startString.length).trim('/'))
-    val externalPathPart = basePath.split("/").last(String::isNotEmpty).trim('/')
+    val externalPathPart = basePath.split("/").lastOrNull(String::isNotEmpty)?.trim('/') ?: return null
     val fullUri = "$treeUri/document/$externalPathPart%3A$relativePath"
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
