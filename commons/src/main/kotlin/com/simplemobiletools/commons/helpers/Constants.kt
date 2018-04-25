@@ -35,7 +35,6 @@ const val APP_RUN_COUNT = "app_run_count"
 const val LAST_VERSION = "last_version"
 const val TREE_URI = "tree_uri_2"
 const val OTG_TREE_URI = "otg_tree_uri"
-const val OTG_BASE_PATH = "otg_base_path"
 const val SD_CARD_PATH = "sd_card_path_2"
 const val INTERNAL_STORAGE_PATH = "internal_storage_path"
 const val TEXT_COLOR = "text_color"
@@ -80,6 +79,7 @@ const val VIBRATE_ON_BUTTON_PRESS = "vibrate_on_button_press"
 const val YOUR_ALARM_SOUNDS = "your_alarm_sounds"
 const val SILENT = "silent"
 const val FORCE_PORTRAIT = "force_portrait"
+const val OTG_PARTITION = "otg_partition"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1

@@ -170,18 +170,31 @@ fun Context.getFastDocumentFile(path: String): DocumentFile? {
         return null
     }
 
-    val isOTG = path.startsWith(OTG_PATH)
-    if (!isOTG && baseConfig.sdCardPath.isEmpty()) {
+    if (path.startsWith(OTG_PATH)) {
+        return getOTGFastDocumentFile(path)
+    }
+
+    if (baseConfig.sdCardPath.isEmpty()) {
         return null
     }
 
-    val startString = if (isOTG) OTG_PATH else baseConfig.sdCardPath
-    val basePath = if (isOTG) baseConfig.OTGBasePath else baseConfig.sdCardPath
-    val treeUri = if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri
+    val relativePath = Uri.encode(path.substring(baseConfig.sdCardPath.length).trim('/'))
+    val externalPathPart = baseConfig.sdCardPath.split("/").lastOrNull(String::isNotEmpty)?.trim('/') ?: return null
+    val fullUri = "${baseConfig.treeUri}/document/$externalPathPart%3A$relativePath"
+    return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
+}
 
-    val relativePath = Uri.encode(path.substring(startString.length).trim('/'))
-    val externalPathPart = basePath.split("/").lastOrNull(String::isNotEmpty)?.trim('/') ?: return null
-    val fullUri = "$treeUri/document/$externalPathPart%3A$relativePath"
+fun Context.getOTGFastDocumentFile(path: String): DocumentFile? {
+    if (baseConfig.OTGTreeUri.isEmpty()) {
+        return null
+    }
+
+    if (baseConfig.OTGPartition.isEmpty()) {
+        baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/')
+    }
+
+    val relativePath = Uri.encode(path.substring(OTG_PATH.length).trim('/'))
+    val fullUri = "${baseConfig.OTGTreeUri}/document/${baseConfig.OTGPartition}%3A$relativePath"
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
 
@@ -351,20 +364,8 @@ fun Context.getOTGItems(path: String, countHiddenItems: Boolean, getProperFileSi
     }
 
     val files = rootUri.listFiles()
-    if (baseConfig.OTGBasePath.isEmpty()) {
-        val first = files?.firstOrNull()
-        if (first != null) {
-            val fullPath = first.uri.toString()
-            val nameStartIndex = Math.max(fullPath.lastIndexOf(first.name), 0)
-            var basePath = fullPath.substring(0, nameStartIndex)
-            if (basePath.endsWith("%3A")) {
-                basePath = basePath.substring(0, basePath.length - 3)
-            }
-            baseConfig.OTGBasePath = basePath
-        }
-    }
 
-    val basePath = "${baseConfig.OTGBasePath}%3A"
+    val basePath = "${baseConfig.OTGTreeUri}/document/${baseConfig.OTGPartition}%3A"
     for (file in files) {
         if (file.exists()) {
             val filePath = file.uri.toString().substring(basePath.length)
@@ -415,12 +416,12 @@ fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolea
     }
 }
 
-fun Context.getDoesFilePathExist(path: String) = if (path.startsWith(OTG_PATH)) getFastDocumentFile(path)?.exists()
+fun Context.getDoesFilePathExist(path: String) = if (path.startsWith(OTG_PATH)) getOTGFastDocumentFile(path)?.exists()
         ?: false else File(path).exists()
 
 fun Context.getIsPathDirectory(path: String): Boolean {
     return if (path.startsWith(OTG_PATH)) {
-        getFastDocumentFile(path)?.isDirectory ?: false
+        getOTGFastDocumentFile(path)?.isDirectory ?: false
     } else {
         File(path).isDirectory
     }

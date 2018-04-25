@@ -136,6 +136,8 @@ open class BaseSimpleActivity : AppCompatActivity() {
                     return
                 }
                 baseConfig.OTGTreeUri = resultData.dataString
+                baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/')
+
                 funAfterOTGPermission?.invoke(true)
                 funAfterOTGPermission = null
             } else {
