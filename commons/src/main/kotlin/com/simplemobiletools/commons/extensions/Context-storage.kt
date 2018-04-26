@@ -117,7 +117,7 @@ fun Context.humanizePath(path: String): String {
     val basePath = path.getBasePath(this)
     return when (basePath) {
         "/" -> "${getHumanReadablePath(basePath)}$trimmedPath"
-        OTG_PATH -> path.replaceFirst(basePath, "${getHumanReadablePath(basePath)}/").replaceFirst("otg://", OTG_PATH).trimEnd('/') + "/"
+        OTG_PATH -> path.replaceFirst(basePath, "${getHumanReadablePath(basePath).trimEnd('/')}/").replace("//", "/")
         else -> trimmedPath.replaceFirst(basePath, getHumanReadablePath(basePath))
     }
 }
