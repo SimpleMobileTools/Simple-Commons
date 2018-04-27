@@ -179,7 +179,12 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun startCustomizationActivity() = startActivity(Intent(this, CustomizationActivity::class.java))
+    fun startCustomizationActivity(appIconIDs: ArrayList<Int>? = null) {
+        Intent(applicationContext, CustomizationActivity::class.java).apply {
+            putExtra(APP_ICON_IDS, appIconIDs)
+            startActivity(this)
+        }
+    }
 
     fun handleSAFDialog(path: String, callback: () -> Unit): Boolean {
         return if (!path.startsWith(OTG_PATH) && isShowingSAFDialog(path, baseConfig.treeUri, OPEN_DOCUMENT_TREE)) {

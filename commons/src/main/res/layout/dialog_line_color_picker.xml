@@ -7,10 +7,20 @@
     android:layout_height="match_parent"
     android:padding="@dimen/activity_margin">
 
+    <ImageView
+        android:id="@+id/line_color_picker_icon"
+        android:layout_width="@dimen/line_color_picker_app_icon_size"
+        android:layout_height="@dimen/line_color_picker_app_icon_size"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/normal_margin"
+        android:src="@drawable/ic_bell"
+        android:visibility="gone"/>
+
     <com.simplemobiletools.commons.views.LineColorPicker
         android:id="@+id/primary_line_color_picker"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/line_color_picker_height"/>
+        android:layout_height="@dimen/line_color_picker_height"
+        android:layout_below="@+id/line_color_picker_icon"/>
 
     <com.simplemobiletools.commons.views.LineColorPicker
         android:id="@+id/secondary_line_color_picker"

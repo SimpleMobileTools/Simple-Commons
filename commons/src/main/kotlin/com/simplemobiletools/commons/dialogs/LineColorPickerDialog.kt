@@ -10,8 +10,9 @@ import com.simplemobiletools.commons.interfaces.LineColorPickerListener
 import kotlinx.android.synthetic.main.dialog_line_color_picker.view.*
 import java.util.*
 
-class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, val isPrimaryColorPicker: Boolean,
-                            val primaryColors: Int = R.array.md_primary_colors, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit) {
+class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, val isPrimaryColorPicker: Boolean, val primaryColors: Int = R.array.md_primary_colors,
+                            val appIconIDs: ArrayList<Int>? = null, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit) {
+
     private val PRIMARY_COLORS_COUNT = 19
     private val DEFAULT_PRIMARY_COLOR_INDEX = 14
     private val DEFAULT_SECONDARY_COLOR_INDEX = 6
@@ -25,6 +26,7 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
         view = activity.layoutInflater.inflate(R.layout.dialog_line_color_picker, null).apply {
             hex_code.text = color.toHex()
             hex_code.setOnLongClickListener { activity.copyToClipboard(hex_code.value.substring(1)); true }
+            line_color_picker_icon.beGoneIf(isPrimaryColorPicker)
             val indexes = getColorIndexes(color)
 
             primary_line_color_picker.updateColors(getColors(primaryColors), indexes.first)
@@ -35,6 +37,10 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
 
                     val newColor = if (isPrimaryColorPicker) secondary_line_color_picker.getCurrentColor() else color
                     colorUpdated(newColor)
+
+                    if (!isPrimaryColorPicker) {
+                        primaryColorChanged(index)
+                    }
                 }
             }
 
@@ -84,6 +90,10 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
         }
 
         return getDefaultColorPair()
+    }
+
+    private fun primaryColorChanged(index: Int) {
+        view.line_color_picker_icon.setImageResource(appIconIDs?.getOrNull(index) ?: 0)
     }
 
     private fun getDefaultColorPair() = Pair(DEFAULT_PRIMARY_COLOR_INDEX, DEFAULT_SECONDARY_COLOR_INDEX)

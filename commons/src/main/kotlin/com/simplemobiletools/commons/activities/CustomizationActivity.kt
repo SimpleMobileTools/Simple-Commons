@@ -7,6 +7,7 @@ import android.view.MenuItem
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.APP_ICON_IDS
 import com.simplemobiletools.commons.helpers.MyContentProvider
 import com.simplemobiletools.commons.models.MyTheme
 import com.simplemobiletools.commons.models.RadioItem
@@ -336,7 +337,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickAppIconColor() {
-        LineColorPickerDialog(this, curAppIconColor, false, R.array.md_app_icon_colors) { wasPositivePressed, color ->
+        LineColorPickerDialog(this, curAppIconColor, false, R.array.md_app_icon_colors, intent.getIntegerArrayListExtra(APP_ICON_IDS)) { wasPositivePressed, color ->
             if (wasPositivePressed) {
                 if (hasColorChanged(curAppIconColor, color)) {
                     curAppIconColor = color
