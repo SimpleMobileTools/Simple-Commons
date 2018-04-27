@@ -25,7 +25,11 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
     init {
         view = activity.layoutInflater.inflate(R.layout.dialog_line_color_picker, null).apply {
             hex_code.text = color.toHex()
-            hex_code.setOnLongClickListener { activity.copyToClipboard(hex_code.value.substring(1)); true }
+            hex_code.setOnLongClickListener {
+                activity.copyToClipboard(hex_code.value.substring(1))
+                true
+            }
+
             line_color_picker_icon.beGoneIf(isPrimaryColorPicker)
             val indexes = getColorIndexes(color)
 
