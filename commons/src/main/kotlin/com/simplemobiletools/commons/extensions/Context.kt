@@ -29,6 +29,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.*
+import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_APP_ICON_COLOR
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_BACKGROUND_COLOR
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_LAST_UPDATED_TS
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_PRIMARY_COLOR
@@ -331,8 +332,9 @@ fun Context.getSharedThemeSync(cursorLoader: CursorLoader): SharedTheme? {
             val textColor = cursor.getIntValue(COL_TEXT_COLOR)
             val backgroundColor = cursor.getIntValue(COL_BACKGROUND_COLOR)
             val primaryColor = cursor.getIntValue(COL_PRIMARY_COLOR)
+            val appIconColor = cursor.getIntValue(COL_APP_ICON_COLOR)
             val lastUpdatedTS = cursor.getIntValue(COL_LAST_UPDATED_TS)
-            return SharedTheme(textColor, backgroundColor, primaryColor, lastUpdatedTS)
+            return SharedTheme(textColor, backgroundColor, primaryColor, appIconColor, lastUpdatedTS)
         }
     }
     return null
