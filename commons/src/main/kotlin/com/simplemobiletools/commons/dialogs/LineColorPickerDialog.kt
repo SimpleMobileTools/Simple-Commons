@@ -10,7 +10,8 @@ import com.simplemobiletools.commons.interfaces.LineColorPickerListener
 import kotlinx.android.synthetic.main.dialog_line_color_picker.view.*
 import java.util.*
 
-class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit) {
+class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, val isPrimaryColorPicker: Boolean,
+                            val primaryColors: Int = R.array.md_primary_colors, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit) {
     private val PRIMARY_COLORS_COUNT = 19
     private val DEFAULT_PRIMARY_COLOR_INDEX = 14
     private val DEFAULT_SECONDARY_COLOR_INDEX = 6
@@ -26,15 +27,18 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
             hex_code.setOnLongClickListener { activity.copyToClipboard(hex_code.value.substring(1)); true }
             val indexes = getColorIndexes(color)
 
-            primary_line_color_picker.updateColors(getColors(R.array.md_primary_colors), indexes.first)
+            primary_line_color_picker.updateColors(getColors(primaryColors), indexes.first)
             primary_line_color_picker.listener = object : LineColorPickerListener {
                 override fun colorChanged(index: Int, color: Int) {
                     val secondaryColors = getColorsForIndex(index)
                     secondary_line_color_picker.updateColors(secondaryColors)
-                    colorUpdated(secondary_line_color_picker.getCurrentColor())
+
+                    val newColor = if (isPrimaryColorPicker) secondary_line_color_picker.getCurrentColor() else color
+                    colorUpdated(newColor)
                 }
             }
 
+            secondary_line_color_picker.beVisibleIf(isPrimaryColorPicker)
             secondary_line_color_picker.updateColors(getColorsForIndex(indexes.first), indexes.second)
             secondary_line_color_picker.listener = object : LineColorPickerListener {
                 override fun colorChanged(index: Int, color: Int) {
@@ -55,13 +59,15 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
     fun getSpecificColor() = view.secondary_line_color_picker.getCurrentColor()
 
     private fun colorUpdated(color: Int) {
-        activity.updateActionbarColor(color)
-        activity.setTheme(activity.getThemeId(color))
         view.hex_code.text = color.toHex()
+        if (isPrimaryColorPicker) {
+            activity.updateActionbarColor(color)
+            activity.setTheme(activity.getThemeId(color))
 
-        if (!wasDimmedBackgroundRemoved) {
-            dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
-            wasDimmedBackgroundRemoved = true
+            if (!wasDimmedBackgroundRemoved) {
+                dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
+                wasDimmedBackgroundRemoved = true
+            }
         }
     }
 
@@ -109,8 +115,8 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
         14 -> getColors(R.array.md_oranges)
         15 -> getColors(R.array.md_deep_oranges)
         16 -> getColors(R.array.md_browns)
-        17 -> getColors(R.array.md_greys)
-        18 -> getColors(R.array.md_blue_greys)
+        17 -> getColors(R.array.md_blue_greys)
+        18 -> getColors(R.array.md_greys)
         else -> throw RuntimeException("Invalid color id $index")
     }
 
