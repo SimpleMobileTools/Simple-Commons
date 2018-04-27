@@ -169,7 +169,7 @@
             android:id="@+id/apply_to_all_holder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/customization_primary_color_holder"
+            android:layout_below="@+id/customization_app_icon_color_holder"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/activity_margin"
             android:background="?attr/selectableItemBackground">

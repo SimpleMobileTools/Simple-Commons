@@ -20,10 +20,10 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
 
     private var wasDimmedBackgroundRemoved = false
     private var dialog: AlertDialog? = null
-    private var view: View
+    private var view: View = activity.layoutInflater.inflate(R.layout.dialog_line_color_picker, null)
 
     init {
-        view = activity.layoutInflater.inflate(R.layout.dialog_line_color_picker, null).apply {
+        view.apply {
             hex_code.text = color.toHex()
             hex_code.setOnLongClickListener {
                 activity.copyToClipboard(hex_code.value.substring(1))
@@ -33,7 +33,9 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
             line_color_picker_icon.beGoneIf(isPrimaryColorPicker)
             val indexes = getColorIndexes(color)
 
-            primary_line_color_picker.updateColors(getColors(primaryColors), indexes.first)
+            val primaryColorIndex = indexes.first
+            primaryColorChanged(primaryColorIndex)
+            primary_line_color_picker.updateColors(getColors(primaryColors), primaryColorIndex)
             primary_line_color_picker.listener = object : LineColorPickerListener {
                 override fun colorChanged(index: Int, color: Int) {
                     val secondaryColors = getColorsForIndex(index)
@@ -49,7 +51,7 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
             }
 
             secondary_line_color_picker.beVisibleIf(isPrimaryColorPicker)
-            secondary_line_color_picker.updateColors(getColorsForIndex(indexes.first), indexes.second)
+            secondary_line_color_picker.updateColors(getColorsForIndex(primaryColorIndex), indexes.second)
             secondary_line_color_picker.listener = object : LineColorPickerListener {
                 override fun colorChanged(index: Int, color: Int) {
                     colorUpdated(color)
@@ -87,10 +89,11 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
         }
 
         for (i in 0 until PRIMARY_COLORS_COUNT) {
-            val colors = getColorsForIndex(i)
-            val size = colors.size
-            (0 until size).filter { color == colors[it] }
-                    .forEach { return Pair(i, it) }
+            getColorsForIndex(i).indexOfFirst { color == it }.apply {
+                if (this != -1) {
+                    return Pair(i, this)
+                }
+            }
         }
 
         return getDefaultColorPair()
