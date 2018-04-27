@@ -26,17 +26,23 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/about_website"
             android:layout_marginTop="@dimen/activity_margin"
-            android:paddingBottom="@dimen/activity_margin"
             android:text="@string/my_email"
             android:textColorLink="@color/color_primary"/>
+
+        <com.simplemobiletools.commons.views.MyTextView
+            android:id="@+id/about_faq_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/about_email"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:text="@string/before_asking_question"/>
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_faq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/about_email"
+            android:layout_below="@+id/about_faq_label"
             android:paddingBottom="@dimen/activity_margin"
-            android:paddingTop="@dimen/activity_margin"
             android:text="@string/frequently_asked_questions"
             android:textColor="@color/color_primary"/>
 

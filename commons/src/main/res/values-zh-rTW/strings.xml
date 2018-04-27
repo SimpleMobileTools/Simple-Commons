@@ -460,6 +460,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">常見問題</string>
+    <string name="before_asking_question">Before you ask a question, please first read the</string>
     <string name="faq_1_title_commons">為什麼我在小工具列表中沒看到這應用程式的小工具?</string>
     <string name="faq_1_text_commons">這很可能是因為你把應用程式移動到SD卡。那樣的話，有個隱藏特定程式小工具的Android系統限制存在。
 	    只有一個解決方法，就是經由你的裝置設定，把應用程式移動回內部儲存空間。</string>

@@ -66,15 +66,25 @@ class AboutActivity : BaseSimpleActivity() {
 
     private fun setupFAQ() {
         val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
+        about_faq_label.beVisibleIf(faqItems.isNotEmpty())
+        about_faq_label.setOnClickListener {
+            openFAQ(faqItems)
+        }
+
         about_faq.beVisibleIf(faqItems.isNotEmpty())
         about_faq.setOnClickListener {
-            Intent(applicationContext, FAQActivity::class.java).apply {
-                putExtra(APP_FAQ, faqItems)
-                startActivity(this)
-            }
+            openFAQ(faqItems)
         }
+
         about_faq.setTextColor(linkColor)
         about_faq.underlineText()
+    }
+
+    private fun openFAQ(faqItems: ArrayList<FAQItem>) {
+        Intent(applicationContext, FAQActivity::class.java).apply {
+            putExtra(APP_FAQ, faqItems)
+            startActivity(this)
+        }
     }
 
     private fun setupMoreApps() {
