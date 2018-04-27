@@ -110,7 +110,8 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
     }
 
     private fun dialogConfirmed() {
-        val color = view.secondary_line_color_picker.getCurrentColor()
+        val targetView = if (isPrimaryColorPicker) view.secondary_line_color_picker else view.primary_line_color_picker
+        val color = targetView.getCurrentColor()
         callback(true, color)
     }
 
