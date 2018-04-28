@@ -8,6 +8,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.APP_ICON_IDS
+import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
 import com.simplemobiletools.commons.helpers.MyContentProvider
 import com.simplemobiletools.commons.models.MyTheme
 import com.simplemobiletools.commons.models.RadioItem
@@ -35,6 +36,8 @@ class CustomizationActivity : BaseSimpleActivity() {
     private var storedSharedTheme: SharedTheme? = null
 
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
+
+    override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -344,6 +347,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 if (hasColorChanged(curAppIconColor, color)) {
                     curAppIconColor = color
                     colorChanged()
+                    updateColorTheme(getUpdatedTheme())
                 }
             }
         }

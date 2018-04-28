@@ -45,6 +45,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     abstract fun getAppIconIDs(): ArrayList<Int>
 
+    abstract fun getAppLauncherName(): String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         if (useDynamicTheme) {
             setTheme(getThemeId())
@@ -119,7 +121,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             }
 
             val recentsIcon = BitmapFactory.decodeResource(resources, appIconIDs[currentAppIconColorIndex])
-            val title: String? = null
+            val title = getAppLauncherName()
             val color = baseConfig.primaryColor
 
             val description = ActivityManager.TaskDescription(title, recentsIcon, color)
@@ -203,6 +205,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun startAboutActivity(appNameId: Int, licenseMask: Int, versionName: String, faqItems: ArrayList<FAQItem> = arrayListOf()) {
         Intent(applicationContext, AboutActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIDs())
+            putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
             putExtra(APP_NAME, getString(appNameId))
             putExtra(APP_LICENSES, licenseMask)
             putExtra(APP_VERSION_NAME, versionName)
@@ -214,6 +217,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun startCustomizationActivity() {
         Intent(applicationContext, CustomizationActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIDs())
+            putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
             startActivity(this)
         }
     }

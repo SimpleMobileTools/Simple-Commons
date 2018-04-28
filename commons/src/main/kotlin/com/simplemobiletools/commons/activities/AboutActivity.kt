@@ -20,6 +20,8 @@ class AboutActivity : BaseSimpleActivity() {
 
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
+    override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
@@ -82,6 +84,7 @@ class AboutActivity : BaseSimpleActivity() {
     private fun openFAQ(faqItems: ArrayList<FAQItem>) {
         Intent(applicationContext, FAQActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIDs())
+            putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
             putExtra(APP_FAQ, faqItems)
             startActivity(this)
         }
@@ -127,6 +130,7 @@ class AboutActivity : BaseSimpleActivity() {
         about_license.setOnClickListener {
             Intent(applicationContext, LicenseActivity::class.java).apply {
                 putExtra(APP_ICON_IDS, getAppIconIDs())
+                putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
                 putExtra(APP_LICENSES, intent.getIntExtra(APP_LICENSES, 0))
                 startActivity(this)
             }
