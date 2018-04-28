@@ -42,7 +42,15 @@ class CustomizationActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
-        storedSharedTheme = getSharedThemeSync(getMyContentProviderCursorLoader())
+
+        try {
+            storedSharedTheme = getSharedThemeSync(getMyContentProviderCursorLoader())
+        } catch (e: Exception) {
+            toast(R.string.update_thank_you)
+            finish()
+            return
+        }
+
         if (storedSharedTheme == null) {
             baseConfig.isUsingSharedTheme = false
         } else {
