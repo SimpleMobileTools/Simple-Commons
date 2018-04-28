@@ -31,9 +31,9 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getString(OTG_TREE_URI, "")
         set(OTGTreeUri) = prefs.edit().putString(OTG_TREE_URI, OTGTreeUri).apply()
 
-    var OTGBasePath: String
-        get() = prefs.getString(OTG_BASE_PATH, "")
-        set(OTGBasePath) = prefs.edit().putString(OTG_BASE_PATH, OTGBasePath).apply()
+    var OTGPartition: String
+        get() = prefs.getString(OTG_PARTITION, "")
+        set(OTGPartition) = prefs.edit().putString(OTG_PARTITION, OTGPartition).apply()
 
     var sdCardPath: String
         get() = prefs.getString(SD_CARD_PATH, getDefaultSDCardPath())
@@ -59,6 +59,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(PRIMARY_COLOR, context.resources.getColor(R.color.color_primary))
         set(primaryColor) = prefs.edit().putInt(PRIMARY_COLOR, primaryColor).apply()
 
+    var appIconColor: Int
+        get() = prefs.getInt(APP_ICON_COLOR, context.resources.getColor(R.color.color_primary))
+        set(appIconColor) = prefs.edit().putInt(APP_ICON_COLOR, appIconColor).apply()
+
     var customTextColor: Int
         get() = prefs.getInt(CUSTOM_TEXT_COLOR, textColor)
         set(customTextColor) = prefs.edit().putInt(CUSTOM_TEXT_COLOR, customTextColor).apply()
@@ -69,6 +73,10 @@ open class BaseConfig(val context: Context) {
 
     var customPrimaryColor: Int
         get() = prefs.getInt(CUSTOM_PRIMARY_COLOR, primaryColor)
+        set(customPrimaryColor) = prefs.edit().putInt(CUSTOM_PRIMARY_COLOR, customPrimaryColor).apply()
+
+    var customAppIconColor: Int
+        get() = prefs.getInt(CUSTOM_APP_ICON_COLOR, primaryColor)
         set(customPrimaryColor) = prefs.edit().putInt(CUSTOM_PRIMARY_COLOR, customPrimaryColor).apply()
 
     var widgetBgColor: Int
@@ -219,4 +227,8 @@ open class BaseConfig(val context: Context) {
     var yourAlarmSounds: String
         get() = prefs.getString(YOUR_ALARM_SOUNDS, "")
         set(yourAlarmSounds) = prefs.edit().putString(YOUR_ALARM_SOUNDS, yourAlarmSounds).apply()
+
+    var forcePortrait: Boolean
+        get() = prefs.getBoolean(FORCE_PORTRAIT, true)
+        set(forcePortrait) = prefs.edit().putBoolean(FORCE_PORTRAIT, forcePortrait).apply()
 }

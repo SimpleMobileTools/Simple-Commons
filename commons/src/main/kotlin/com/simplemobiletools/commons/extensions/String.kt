@@ -6,6 +6,9 @@ import android.graphics.BitmapFactory
 import android.graphics.Point
 import android.media.ExifInterface
 import android.media.MediaMetadataRetriever
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import com.simplemobiletools.commons.helpers.OTG_PATH
 import com.simplemobiletools.commons.helpers.audioExtensions
 import com.simplemobiletools.commons.helpers.photoExtensions
@@ -130,7 +133,13 @@ fun String.getGenericMimeType(): String {
     return "$type/*"
 }
 
-fun String.getParentPath() = substring(0, length - getFilenameFromPath().length)
+fun String.getParentPath(): String {
+    var parent = removeSuffix("/${getFilenameFromPath()}")
+    if (parent == "otg:") {
+        parent = OTG_PATH
+    }
+    return parent
+}
 
 fun String.getDuration() = getFileDurationSeconds()?.getFormattedDuration()
 
@@ -214,7 +223,7 @@ fun String.getImageResolution(): Point? {
 
 fun String.getPublicUri(context: Context) = context.getDocumentFile(this)?.uri ?: ""
 
-fun String.getOTGPublicPath(context: Context) = "${context.baseConfig.OTGBasePath}%3A${substring(OTG_PATH.length).replace("/", "%2F")}"
+fun String.getOTGPublicPath(context: Context) = "${context.baseConfig.OTGTreeUri}/document/${context.baseConfig.OTGPartition}%3A${substring(OTG_PATH.length).replace("/", "%2F")}"
 
 fun String.substringTo(cnt: Int): String {
     return if (isEmpty()) {
@@ -222,6 +231,20 @@ fun String.substringTo(cnt: Int): String {
     } else {
         substring(0, Math.min(length, cnt))
     }
+}
+
+fun String.highlightTextPart(textToHighlight: String, color: Int): SpannableString {
+    val spannableString = SpannableString(this)
+    if (textToHighlight.isEmpty()) {
+        return spannableString
+    }
+
+    val startIndex = indexOf(textToHighlight, 0, true)
+    if (startIndex != -1) {
+        val endIndex = Math.min(startIndex + textToHighlight.length, length)
+        spannableString.setSpan(ForegroundColorSpan(color), startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+    }
+    return spannableString
 }
 
 fun String.getMimeType(): String {

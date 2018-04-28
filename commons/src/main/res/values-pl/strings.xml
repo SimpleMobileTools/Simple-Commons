@@ -15,6 +15,7 @@
     <string name="never">Nigdy</string>
     <string name="details">Szczegóły</string>
     <string name="notes">Notatnik</string>
+    <string name="deleting_folder">Deleting folder \'%s\'</string>
 
     <!-- Search -->
     <string name="search">Szukaj</string>
@@ -371,6 +372,7 @@
     <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
     <string name="empty_recycle_bin">Empty Recycle Bin</string>
     <string name="recycle_bin_location">Recycle Bin location</string>
+    <string name="force_portrait_mode">Force portrait mode</string>
 
     <!-- Setting sections -->
     <string name="visibility">Widoczność</string>
@@ -473,6 +475,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Często zadawane pytania (FAQ)</string>
+    <string name="before_asking_question">Before you ask a question, please first read the</string>
     <string name="faq_1_title_commons">Dlaczego nigdzie nie widzę widżetu aplikacji?</string>
     <string name="faq_1_text_commons">Zapewne dlatego, że aplikacja znajduje się na karcie pamięci. Jedynym rozwiązaniem problemu jest przeniesienie aplikacji z powrotem na pamięć wewnętrzną. Jest to ograniczenie systemu Android, nie aplikacji.</string>
     <string name="faq_2_title_commons">Chcę was wesprzeć, ale jestem bez grosza przy duszy. Mogę jakoś to zrobić inaczej?</string>

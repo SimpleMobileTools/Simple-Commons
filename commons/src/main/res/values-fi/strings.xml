@@ -15,6 +15,7 @@
     <string name="never">Ei koskaan</string>
     <string name="details">Yksityiskohdat</string>
     <string name="notes">Muistiinpanot</string>
+    <string name="deleting_folder">Deleting folder \'%s\'</string>
 
     <!-- Search -->
     <string name="search">Haku</string>
@@ -356,6 +357,7 @@
     <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
     <string name="empty_recycle_bin">Empty Recycle Bin</string>
     <string name="recycle_bin_location">Recycle Bin location</string>
+    <string name="force_portrait_mode">Force portrait mode</string>
 
     <!-- Setting sections -->
     <string name="visibility">Näkyvyys</string>
@@ -459,6 +461,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Usein kysytyt kysymykset</string>
+    <string name="before_asking_question">Before you ask a question, please first read the</string>
     <string name="faq_1_title_commons">Miksi en näe tämän sovelluksen widgettiä widget-valikossa?</string>
     <string name="faq_1_text_commons">Todennäköisesti asensit sovelluksen ulkoiselle muistikortille. Tässä tapauksessa ainoa vaihtoehto on uudelleenasentaa sovellus laitteen sisäiseen tallennustilaan.</string>
     <string name="faq_2_title_commons">Haluan tukea sinua, mutta minulla ei ole varaa lahjoittaa. Voinko auttaa jotenkin muuten?</string>

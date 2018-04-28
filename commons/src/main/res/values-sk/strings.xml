@@ -15,6 +15,7 @@
     <string name="never">Nikdy</string>
     <string name="details">Detaily</string>
     <string name="notes">Poznámky</string>
+    <string name="deleting_folder">Odstraňuje sa priečinok \'%s\'</string>
 
     <!-- Search -->
     <string name="search">Hľadať</string>
@@ -375,6 +376,7 @@
     <string name="recycle_bin_cleaning_interval">Interval vysypávania koša</string>
     <string name="empty_recycle_bin">Vysypať odpadkový kôď</string>
     <string name="recycle_bin_location">Umiestnenie odpadkového koša</string>
+    <string name="force_portrait_mode">Stále použiť režim na výšku</string>
 
     <!-- Setting sections -->
     <string name="visibility">Viditeľnosť</string>
@@ -477,6 +479,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Často kladené otázky</string>
+    <string name="before_asking_question">Predtým, ako sa niečo opýtate si prosíme preštudujte</string>
     <string name="faq_1_title_commons">Prečo nevidím widget tejto apky na zozname widgetov?</string>
     <string name="faq_1_text_commons">Je to pravdepodobne spôsobené tým, že ste apku presunuli na SD kartu. Ide o systémové obmedzenie, ktoré v tomto prípade skryje widget apky.
         Jediným riešením je presunutie apky späť na internú pamäť cez nastavnenia zariadenia.</string>

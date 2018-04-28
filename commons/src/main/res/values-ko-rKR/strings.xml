@@ -15,6 +15,7 @@
     <string name="never">사용 안함</string>
     <string name="details">Details</string>
     <string name="notes">Notes</string>
+    <string name="deleting_folder">Deleting folder \'%s\'</string>
 
     <!-- Search -->
     <string name="search">검색</string>
@@ -356,6 +357,7 @@
     <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
     <string name="empty_recycle_bin">Empty Recycle Bin</string>
     <string name="recycle_bin_location">Recycle Bin location</string>
+    <string name="force_portrait_mode">Force portrait mode</string>
 
     <!-- Setting sections -->
     <string name="visibility">가시성</string>
@@ -461,6 +463,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">자주 묻는 질문</string>
+    <string name="before_asking_question">Before you ask a question, please first read the</string>
     <string name="faq_1_title_commons">위젯 목록에 이앱이 표시되지 않으면 어떻게 해야 하나요?</string>
     <string name="faq_1_text_commons">SD 카드에서 앱을 이동했기 때문에 그럴 가능성이 큽니다. 그런경우 안드로이드 시스템 정책에 따라 위젯이 보이지 않게됩니다. 
         유일한 해결책은 기기 설정을 통해 앱을 내부 저장소로 다시 이동하는 것입니다.</string>

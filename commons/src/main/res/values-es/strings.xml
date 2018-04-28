@@ -15,6 +15,7 @@
     <string name="never">Nunca</string>
     <string name="details">Detalles</string>
     <string name="notes">Notas</string>
+    <string name="deleting_folder">Deleting folder \'%s\'</string>
 
     <!-- Search -->
     <string name="search">Buscar</string>
@@ -355,6 +356,7 @@
     <string name="recycle_bin_cleaning_interval">Intervalo de vaciado de la papelera de reciclaje</string>
     <string name="empty_recycle_bin">Vaciar papelera de reciclaje</string>
     <string name="recycle_bin_location">Ubicación de la papelera de reciclaje</string>
+    <string name="force_portrait_mode">Forzar el modo retrato</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilidad</string>
@@ -457,6 +459,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Preguntas frecuentes</string>
+    <string name="before_asking_question">Before you ask a question, please first read the</string>
     <string name="faq_1_title_commons">¿Cómo es que no veo este widget de aplicaciones en la lista de widgets?</string>
     <string name="faq_1_text_commons">Lo más probable es que haya movido la aplicación en una tarjeta SD. Hay una limitación del sistema Android que oculta los widgets de la aplicación dada
         en ese caso. La única solución es volver a colocar la aplicación en el almacenamiento interno a través de la configuración de su dispositivo.</string>

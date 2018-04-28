@@ -15,6 +15,7 @@
     <string name="never">Никогда</string>
     <string name="details">Подробности</string>
     <string name="notes">Заметки</string>
+    <string name="deleting_folder">Deleting folder \'%s\'</string>
 
     <!-- Search -->
     <string name="search">Поиск</string>
@@ -383,6 +384,7 @@
     <string name="recycle_bin_cleaning_interval">Интервал очистки корзины</string>
     <string name="empty_recycle_bin">Очистить корзину</string>
     <string name="recycle_bin_location">Расположение корзины</string>
+    <string name="force_portrait_mode">Force portrait mode</string>
 
     <!-- Setting sections -->
     <string name="visibility">Отображение</string>
@@ -485,6 +487,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Часто задаваемые вопросы</string>
+    <string name="before_asking_question">Before you ask a question, please first read the</string>
     <string name="faq_1_title_commons">Почему я не вижу виджет этого приложения в списке виджетов?</string>
     <string name="faq_1_text_commons">Это, скорее всего, потому, что вы перенесли приложение на SD-карту. Существует ограничение системы Android, которое скрывает виджеты приложения
         в этом случае. Единственное решение — переместить приложение обратно во внутреннее хранилище через настройки вашего устройства.</string>

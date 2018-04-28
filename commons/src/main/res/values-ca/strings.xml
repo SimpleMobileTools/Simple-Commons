@@ -15,6 +15,7 @@
     <string name="never">Mai</string>
     <string name="details">Detalls</string>
     <string name="notes">Notes</string>
+    <string name="deleting_folder">Deleting folder \'%s\'</string>
 
     <!-- Search -->
     <string name="search">Buscar</string>
@@ -358,6 +359,7 @@
     <string name="recycle_bin_cleaning_interval">Interval de neteja de paperera de reciclatge</string>
     <string name="empty_recycle_bin">Buida la paperera de reciclatge</string>
     <string name="recycle_bin_location">Ubicació de la paperera de reciclatge</string>
+    <string name="force_portrait_mode">Força el mode de retrat</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilitat</string>
@@ -460,6 +462,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Preguntes frequents</string>
+    <string name="before_asking_question">Before you ask a question, please first read the</string>
     <string name="faq_1_title_commons">Com és que no veig aquest widget a la llista de widgets?</string>
     <string name="faq_1_text_commons">Probablement, perquè heu mogut l\'aplicació en una targeta SD. Hi ha una limitació del sistema d\'Android que oculta els widgets de l\'aplicació determinada
         en aquest cas. L\'única solució és moure l\'aplicació a l\'emmagatzematge intern a través de la configuració del dispositiu.</string>

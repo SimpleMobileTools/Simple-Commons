@@ -15,6 +15,7 @@
     <string name="never">Aldri</string>
     <string name="details">Detaljer</string>
     <string name="notes">Notes</string>
+    <string name="deleting_folder">Deleting folder \'%s\'</string>
 
     <!-- Search -->
     <string name="search">Søk</string>
@@ -108,8 +109,8 @@
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">%d element</item>
+        <item quantity="other">%d elementer</item>
     </plurals>
 
     <!-- Storages -->
@@ -145,7 +146,7 @@
     <string name="foreground_color">Forgrunnsfarge</string>
     <string name="app_icon_color">Farge for app-ikon</string>
     <string name="restore_defaults">Gjenopprett standard</string>
-    <string name="change_color">Change color</string>
+    <string name="change_color">Endre farge</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Endring av farge vil gjøre at det skiftes til Tilpasset tema</string>
     <string name="save">Lagre</string>
@@ -204,8 +205,8 @@
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Er du sikker på at du vil fortsette med slettingen?</string>
-    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s to Recycle Bin?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="deletion_confirmation">Er du sikker på at du vil slette %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Er du sikker på at du vil flytte %s til papirkurven?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
     <string name="do_not_ask_again">Ikke spør igjen i denne økten</string>
     <string name="yes">Ja</string>
     <string name="no">Nei</string>
@@ -326,7 +327,7 @@
     <string name="system_sounds">Systemlyder</string>
     <string name="your_sounds">Dine lyder</string>
     <string name="add_new_sound">Legg til en ny lyd</string>
-    <string name="no_sound">No sound</string>
+    <string name="no_sound">Ingen lyd</string>
 
     <!-- Settings -->
     <string name="settings">Innstillinger</string>
@@ -352,17 +353,18 @@
     <string name="use_same_snooze">Bruk alltid samme intervall for Snooze</string>
     <string name="snooze_time">Intervall for Snooze</string>
     <string name="vibrate_on_button_press">Vibrer ved trykk på knapper</string>
-    <string name="move_items_to_trash_bin">Move items in Recycle Bin instead of deleting</string>
-    <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
-    <string name="empty_recycle_bin">Empty Recycle Bin</string>
-    <string name="recycle_bin_location">Recycle Bin location</string>
+    <string name="move_items_to_trash_bin">Flytt elementer til papirkurven istedenfor å slette dem</string>
+    <string name="recycle_bin_cleaning_interval">Tømmeintervall for papirkurven</string>
+    <string name="empty_recycle_bin">Tøm papirkurven</string>
+    <string name="recycle_bin_location">Papirkurvplassering</string>
+    <string name="force_portrait_mode">Force portrait mode</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighet</string>
     <string name="security">Sikkerhet</string>
     <string name="scrolling">Rulling</string>
     <string name="file_operations">Filoperasjoner</string>
-    <string name="recycle_bin">Recycle Bin</string>
+    <string name="recycle_bin">Papirkurv</string>
 
     <!-- Import / Export -->
     <string name="importing">Importerer…</string>
@@ -458,6 +460,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Ofte stilte spørsmål</string>
+    <string name="before_asking_question">Before you ask a question, please first read the</string>
     <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
     <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
         in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>

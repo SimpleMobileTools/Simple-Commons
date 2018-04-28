@@ -15,6 +15,7 @@
     <string name="never">Aldrig</string>
     <string name="details">Detaljer</string>
     <string name="notes">Noter</string>
+    <string name="deleting_folder">Sletter mappen \'%s\'</string>
 
     <!-- Search -->
     <string name="search">Søg</string>
@@ -356,6 +357,7 @@
     <string name="recycle_bin_cleaning_interval">Interval for tømning af papirkurven</string>
     <string name="empty_recycle_bin">Tøm papirkurven</string>
     <string name="recycle_bin_location">Papirkurvens placering</string>
+    <string name="force_portrait_mode">Brug stående visning</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighed</string>
@@ -458,6 +460,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Ofte stillede spørgsmål</string>
+    <string name="before_asking_question">Before you ask a question, please first read the</string>
     <string name="faq_1_title_commons">Hvorfor kan jeg ikke se denne app\'s widget på listen med widgets?</string>
     <string name="faq_1_text_commons">Det er sikkert fordi du har flyttet appen til et SD-kort. Der er en begrænsning i Androidsystemet der i så fald skjuler appens widget. Eneste løsning er at flytte appen tilbage til det interne lager via indstillingerne på din enhed.</string>
     <string name="faq_2_title_commons">Jeg vil gerne støtte dig, men jeg kan ikke donere penge. Er der andet jeg kan gøre?</string>

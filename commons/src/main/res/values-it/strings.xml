@@ -15,6 +15,7 @@
     <string name="never">Mai</string>
     <string name="details">Dettagli</string>
     <string name="notes">Note</string>
+    <string name="deleting_folder">Deleting folder \'%s\'</string>
 
     <!-- Search -->
     <string name="search">Cerca</string>
@@ -108,8 +109,8 @@
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">%d elemento</item>
+        <item quantity="other">%d elementi</item>
     </plurals>
 
     <!-- Storages -->
@@ -145,7 +146,7 @@
     <string name="foreground_color">Colore in primo piano</string>
     <string name="app_icon_color">Colore icona app</string>
     <string name="restore_defaults">Ripristina predefiniti</string>
-    <string name="change_color">Change color</string>
+    <string name="change_color">Cambia colore</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Modificando un colore, il tema diventerà personale</string>
     <string name="save">Salva</string>
@@ -204,8 +205,8 @@
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Sei sicuro di procedere con l\'eliminazione?</string>
-    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s to Recycle Bin?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="deletion_confirmation">Sei sicuro di volere eliminare %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Sei sicuro di volere spostare nel cestino %s?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
     <string name="do_not_ask_again">Non chiedere nuovamente in questa sessione</string>
     <string name="yes">Sì</string>
     <string name="no">No</string>
@@ -231,7 +232,7 @@
     <string name="fingerprint_setup_successfully">Protezione impostata correttamente. Reinstalla l\'app in caso di problemi nel ripristinarla.</string>
  
     <!-- Times -->
-    <string name="tomorrow">Tomorrow</string>
+    <string name="tomorrow">Domani</string>
     <string name="seconds_raw">secondi</string>
     <string name="minutes_raw">minuti</string>
     <string name="hours_raw">ore</string>
@@ -318,15 +319,15 @@
     <string name="reminder_warning">Assicurati che i promemoria funzionino correttamente prima di fare affidamento su di essi. Potrebbero comportarsi in modo anomalo a causa di restrizioni di sistema relative al risparmio della batteria.</string>
 
     <!-- Alarms -->
-    <string name="alarm">Alarm</string>
+    <string name="alarm">Sveglia</string>
     <string name="snooze">Posponi</string>
     <string name="dismiss">Ignora</string>
     <string name="no_reminder">Nessun promemoria</string>
     <string name="at_start">All\'inizio</string>
-    <string name="system_sounds">System sounds</string>
-    <string name="your_sounds">Your sounds</string>
-    <string name="add_new_sound">Add a new sound</string>
-    <string name="no_sound">No sound</string>
+    <string name="system_sounds">Suoni di sistema</string>
+    <string name="your_sounds">I tuoi suoni</string>
+    <string name="add_new_sound">Aggiungi un nuovo suono</string>
+    <string name="no_sound">Nessun suono</string>
 
     <!-- Settings -->
     <string name="settings">Impostazioni</string>
@@ -352,17 +353,18 @@
     <string name="use_same_snooze">Usa sempre lo stesso tempo di ripetizione</string>
     <string name="snooze_time">Tempo di ripetizione</string>
     <string name="vibrate_on_button_press">Vibra alla pressione dei tasti</string>
-    <string name="move_items_to_trash_bin">Move items in Recycle Bin instead of deleting</string>
-    <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
-    <string name="empty_recycle_bin">Empty Recycle Bin</string>
-    <string name="recycle_bin_location">Recycle Bin location</string>
+    <string name="move_items_to_trash_bin">Sposta gli elementi nel cestino invece di eliminarli</string>
+    <string name="recycle_bin_cleaning_interval">Intervallo svuotamento cestino</string>
+    <string name="empty_recycle_bin">Svuota il cestino</string>
+    <string name="recycle_bin_location">Percorso del cestino</string>
+    <string name="force_portrait_mode">Forza la modalità ritratto</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilità</string>
     <string name="security">Sicurezza</string>
     <string name="scrolling">Scorrimento</string>
     <string name="file_operations">Operazioni sui file</string>
-    <string name="recycle_bin">Recycle Bin</string>
+    <string name="recycle_bin">Cestino</string>
 
     <!-- Import / Export -->
     <string name="importing">Importazione…</string>
@@ -458,6 +460,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Domande frequenti</string>
+    <string name="before_asking_question">Before you ask a question, please first read the</string>
     <string name="faq_1_title_commons">Come mai non vedo il widget di questa app nell\'elenco dei widget?</string>
     <string name="faq_1_text_commons">Probabilmente perchè hai spostato l\'app nella scheda SD. C\'è una limitazione di sistema di Android che nasconde i widget in questione
         in quel caso. L\'unica soluzione è spostare l\'app nell\'archiviazione interna usando le impostazioni di sistema.</string>
@@ -468,8 +471,8 @@
     <string name="faq_3_text_commons">Purtroppo non puoi. I file vengono eliminati subito dopo la richiesta di conferma, non c\'è nessun cestino disponibile.</string>
     <string name="faq_4_title_commons">Non mi piacciono i colori del widget, posso cambiarli?</string>
     <string name="faq_4_text_commons">Sì, quando trascini un widget nella tua schermata appare una finestra di configurazione. Vedrai dei quadrati colorati nell\'angolo in basso a sinistra, toccali per scegliere un colore. Puoi muovere l\'indicatore per regolare l\'alpha.</string>
-    <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them. You can customize the Recycle Bin location, emptying interval, or empty it manually.</string>
+    <string name="faq_5_title_commons">Posso recuperare in qualche modo i file eliminati?</string>
+    <string name="faq_5_text_commons">Se sono stati veramente eliminati, non puoi. Tuttavia, puoi attivare nelle impostazioni l\'uso del cestino invece di eliminare. I file verranno solo spostati lì invece di essere eliminati. Puoi scegliere il percorso del cestino, l\'intervallo di pulitura, o svuotarlo manualmente.</string>
 
     <!-- License -->
     <string name="notice">Questa app usa le seguenti librerie di terze parti per semplificarmi la vita. Grazie.</string>

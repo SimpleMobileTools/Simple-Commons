@@ -15,6 +15,7 @@
     <string name="never">从不</string>
     <string name="details">详细</string>
     <string name="notes">笔记</string>
+    <string name="deleting_folder">Deleting folder \'%s\'</string>
 
     <!-- Search -->
     <string name="search">搜索</string>
@@ -356,6 +357,7 @@
     <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
     <string name="empty_recycle_bin">Empty Recycle Bin</string>
     <string name="recycle_bin_location">Recycle Bin location</string>
+    <string name="force_portrait_mode">Force portrait mode</string>
 
     <!-- Setting sections -->
     <string name="visibility">可见度</string>
@@ -458,6 +460,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">常见问题</string>
+    <string name="before_asking_question">Before you ask a question, please first read the</string>
     <string name="faq_1_title_commons">为什么我在应用小部件列表里没有找到这个应用的小部件？</string>
     <string name="faq_1_text_commons">这很可能是因为你将应用程序移动到了SD卡。由于Android系统的限制，在这种情况下会隐藏应用程序的小部件。 唯一的解决方法是在系统设置中将应用程序移回内部存储。</string>
     <string name="faq_2_title_commons">我想支持你，但我不能捐赠金钱。 还有什么是我能够做的吗？</string>
