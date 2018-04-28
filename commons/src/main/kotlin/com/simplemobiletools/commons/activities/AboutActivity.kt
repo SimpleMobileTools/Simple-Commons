@@ -9,10 +9,7 @@ import android.text.method.LinkMovementMethod
 import android.view.View
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.APP_FAQ
-import com.simplemobiletools.commons.helpers.APP_LICENSES
-import com.simplemobiletools.commons.helpers.APP_NAME
-import com.simplemobiletools.commons.helpers.APP_VERSION_NAME
+import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FAQItem
 import kotlinx.android.synthetic.main.activity_about.*
 import java.util.*
@@ -20,6 +17,8 @@ import java.util.*
 class AboutActivity : BaseSimpleActivity() {
     private var appName = ""
     private var linkColor = 0
+
+    override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,6 +81,7 @@ class AboutActivity : BaseSimpleActivity() {
 
     private fun openFAQ(faqItems: ArrayList<FAQItem>) {
         Intent(applicationContext, FAQActivity::class.java).apply {
+            putExtra(APP_ICON_IDS, getAppIconIDs())
             putExtra(APP_FAQ, faqItems)
             startActivity(this)
         }
@@ -126,6 +126,7 @@ class AboutActivity : BaseSimpleActivity() {
     private fun setupLicense() {
         about_license.setOnClickListener {
             Intent(applicationContext, LicenseActivity::class.java).apply {
+                putExtra(APP_ICON_IDS, getAppIconIDs())
                 putExtra(APP_LICENSES, intent.getIntExtra(APP_LICENSES, 0))
                 startActivity(this)
             }

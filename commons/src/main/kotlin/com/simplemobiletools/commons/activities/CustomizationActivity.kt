@@ -34,6 +34,8 @@ class CustomizationActivity : BaseSimpleActivity() {
     private var curPrimaryLineColorPicker: LineColorPickerDialog? = null
     private var storedSharedTheme: SharedTheme? = null
 
+    override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
@@ -337,7 +339,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickAppIconColor() {
-        LineColorPickerDialog(this, curAppIconColor, false, R.array.md_app_icon_colors, intent.getIntegerArrayListExtra(APP_ICON_IDS)) { wasPositivePressed, color ->
+        LineColorPickerDialog(this, curAppIconColor, false, R.array.md_app_icon_colors, getAppIconIDs()) { wasPositivePressed, color ->
             if (wasPositivePressed) {
                 if (hasColorChanged(curAppIconColor, color)) {
                     curAppIconColor = color
