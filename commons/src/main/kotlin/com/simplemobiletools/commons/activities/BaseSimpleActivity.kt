@@ -338,4 +338,12 @@ open class BaseSimpleActivity : AppCompatActivity() {
             }
         }
     }
+
+    fun checkAppIconColorChange(storedAppIconColor: Int, appId: String) {
+        if (storedAppIconColor != baseConfig.appIconColor) {
+            getAppIconColors().forEachIndexed { index, color ->
+                toggleAppIconColor(appId, index, baseConfig.appIconColor == color)
+            }
+        }
+    }
 }

@@ -170,6 +170,28 @@ val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bm
 val videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
 val audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a", ".opus", ".flac")
 
+val appIconColorStrings = arrayListOf(
+        ".Red",
+        ".Pink",
+        ".Purple",
+        ".Deep_purple",
+        ".Indigo",
+        ".Blue",
+        ".Light_blue",
+        ".Cyan",
+        ".Teal",
+        ".Green",
+        ".Light_green",
+        ".Lime",
+        ".Yellow",
+        ".Amber",
+        "",
+        ".Deep_orange",
+        ".Brown",
+        ".Blue_grey",
+        ".Grey_black"
+)
+
 fun isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 
 fun isJellyBean1Plus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1

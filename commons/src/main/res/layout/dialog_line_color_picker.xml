@@ -12,7 +12,7 @@
         android:layout_width="@dimen/line_color_picker_app_icon_size"
         android:layout_height="@dimen/line_color_picker_app_icon_size"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/normal_margin"
+        android:layout_marginBottom="@dimen/medium_margin"
         android:visibility="gone"/>
 
     <com.simplemobiletools.commons.views.LineColorPicker
