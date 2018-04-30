@@ -214,8 +214,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun startCustomizationActivity() {
+    fun startCustomizationActivity(appId: String) {
         Intent(applicationContext, CustomizationActivity::class.java).apply {
+            putExtra(APP_ID, appId)
             putExtra(APP_ICON_IDS, getAppIconIDs())
             putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
             startActivity(this)
@@ -371,14 +372,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 } else {
                     toast(R.string.unknown_error_occurred)
                 }
-            }
-        }
-    }
-
-    fun checkAppIconColorChange(storedAppIconColor: Int, appId: String) {
-        if (storedAppIconColor != baseConfig.appIconColor) {
-            getAppIconColors().forEachIndexed { index, color ->
-                toggleAppIconColor(appId, index, baseConfig.appIconColor == color)
             }
         }
     }

@@ -8,6 +8,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.APP_ICON_IDS
+import com.simplemobiletools.commons.helpers.APP_ID
 import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
 import com.simplemobiletools.commons.helpers.MyContentProvider
 import com.simplemobiletools.commons.models.MyTheme
@@ -236,11 +237,21 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun saveChanges(finishAfterSave: Boolean) {
+        val didAppIconColorChange = baseConfig.appIconColor == curAppIconColor
         baseConfig.apply {
             textColor = curTextColor
             backgroundColor = curBackgroundColor
             primaryColor = curPrimaryColor
             appIconColor = curAppIconColor
+        }
+
+        if (didAppIconColorChange) {
+            val appId = intent.getStringExtra(APP_ID) ?: ""
+            if (appId.isNotEmpty()) {
+                getAppIconColors().forEachIndexed { index, color ->
+                    toggleAppIconColor(appId, index, baseConfig.appIconColor == color)
+                }
+            }
         }
 
         if (curSelectedThemeId == THEME_SHARED) {
