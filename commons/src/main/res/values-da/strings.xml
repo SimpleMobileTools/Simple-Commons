@@ -315,8 +315,8 @@
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Resterende tid før alarmen lyder:\n%s</string>
-    <string name="alarm_warning">Du anbefales sikre dig at alarmen virker som den skal inden du stoler på den. Den kan skuffe i kraft af strømbesparende begrænsninger på systemet.</string>
-    <string name="reminder_warning">Du anbefales sikre dig at påmindelser virker som de skal inden du stoler på dem. De kan skuffe i kraft af strømbesparende begrænsninger på systemet.</string>
+    <string name="alarm_warning">Du anbefales sikre dig at alarmen virker som den skal inden du stoler på den. Den kan drille som følge af strømbesparende begrænsninger på systemet.</string>
+    <string name="reminder_warning">Du anbefales sikre dig at påmindelser virker som de skal inden du stoler på dem. De kan drille som følge af strømbesparende begrænsninger på systemet.</string>
 
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
@@ -446,6 +446,7 @@
         ]]>
     </string>
     <string name="purchase">Køb</string>
+    <string name="update_thank_you">Opdater venligst Simple Thank You til den seneste version</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -460,7 +461,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Ofte stillede spørgsmål</string>
-    <string name="before_asking_question">Before you ask a question, please first read the</string>
+    <string name="before_asking_question">Inden du stiller et spørgsmål bedes du først læse</string>
     <string name="faq_1_title_commons">Hvorfor kan jeg ikke se denne app\'s widget på listen med widgets?</string>
     <string name="faq_1_text_commons">Det er sikkert fordi du har flyttet appen til et SD-kort. Der er en begrænsning i Androidsystemet der i så fald skjuler appens widget. Eneste løsning er at flytte appen tilbage til det interne lager via indstillingerne på din enhed.</string>
     <string name="faq_2_title_commons">Jeg vil gerne støtte dig, men jeg kan ikke donere penge. Er der andet jeg kan gøre?</string>

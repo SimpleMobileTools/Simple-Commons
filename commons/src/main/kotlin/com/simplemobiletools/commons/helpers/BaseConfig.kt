@@ -61,7 +61,10 @@ open class BaseConfig(val context: Context) {
 
     var appIconColor: Int
         get() = prefs.getInt(APP_ICON_COLOR, context.resources.getColor(R.color.color_primary))
-        set(appIconColor) = prefs.edit().putInt(APP_ICON_COLOR, appIconColor).apply()
+        set(appIconColor) {
+            isUsingModifiedAppIcon = appIconColor != context.resources.getColor(R.color.color_primary)
+            prefs.edit().putInt(APP_ICON_COLOR, appIconColor).apply()
+        }
 
     var customTextColor: Int
         get() = prefs.getInt(CUSTOM_TEXT_COLOR, textColor)
@@ -231,4 +234,8 @@ open class BaseConfig(val context: Context) {
     var forcePortrait: Boolean
         get() = prefs.getBoolean(FORCE_PORTRAIT, true)
         set(forcePortrait) = prefs.edit().putBoolean(FORCE_PORTRAIT, forcePortrait).apply()
+
+    var isUsingModifiedAppIcon: Boolean
+        get() = prefs.getBoolean(IS_USING_MODIFIED_APP_ICON, false)
+        set(isUsingModifiedAppIcon) = prefs.edit().putBoolean(IS_USING_MODIFIED_APP_ICON, isUsingModifiedAppIcon).apply()
 }

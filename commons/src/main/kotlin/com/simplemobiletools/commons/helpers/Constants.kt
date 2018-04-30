@@ -8,6 +8,7 @@ const val APP_LICENSES = "app_licenses"
 const val APP_FAQ = "app_faq"
 const val APP_VERSION_NAME = "app_version_name"
 const val APP_ICON_IDS = "app_icon_ids"
+const val APP_LAUNCHER_NAME = "app_launcher_name"
 const val REAL_FILE_PATH = "real_file_path_2"
 const val IS_FROM_GALLERY = "is_from_gallery"
 const val BROADCAST_REFRESH_MEDIA = "com.simplemobiletools.REFRESH_MEDIA"
@@ -83,6 +84,7 @@ const val YOUR_ALARM_SOUNDS = "your_alarm_sounds"
 const val SILENT = "silent"
 const val FORCE_PORTRAIT = "force_portrait"
 const val OTG_PARTITION = "otg_partition"
+const val IS_USING_MODIFIED_APP_ICON = "is_using_modified_app_icon"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
@@ -169,6 +171,28 @@ const val WEEKENDS_BIT = SATURDAY_BIT or SUNDAY_BIT
 val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp", ".dng", ".orf")
 val videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
 val audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a", ".opus", ".flac")
+
+val appIconColorStrings = arrayListOf(
+        ".Red",
+        ".Pink",
+        ".Purple",
+        ".Deep_purple",
+        ".Indigo",
+        ".Blue",
+        ".Light_blue",
+        ".Cyan",
+        ".Teal",
+        ".Green",
+        ".Light_green",
+        ".Lime",
+        ".Yellow",
+        ".Amber",
+        "",
+        ".Deep_orange",
+        ".Brown",
+        ".Blue_grey",
+        ".Grey_black"
+)
 
 fun isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 

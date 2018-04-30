@@ -8,6 +8,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.APP_ICON_IDS
+import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
 import com.simplemobiletools.commons.helpers.MyContentProvider
 import com.simplemobiletools.commons.models.MyTheme
 import com.simplemobiletools.commons.models.RadioItem
@@ -34,10 +35,22 @@ class CustomizationActivity : BaseSimpleActivity() {
     private var curPrimaryLineColorPicker: LineColorPickerDialog? = null
     private var storedSharedTheme: SharedTheme? = null
 
+    override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
+
+    override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
-        storedSharedTheme = getSharedThemeSync(getMyContentProviderCursorLoader())
+
+        try {
+            storedSharedTheme = getSharedThemeSync(getMyContentProviderCursorLoader())
+        } catch (e: Exception) {
+            toast(R.string.update_thank_you)
+            finish()
+            return
+        }
+
         if (storedSharedTheme == null) {
             baseConfig.isUsingSharedTheme = false
         } else {
@@ -337,11 +350,12 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickAppIconColor() {
-        LineColorPickerDialog(this, curAppIconColor, false, R.array.md_app_icon_colors, intent.getIntegerArrayListExtra(APP_ICON_IDS)) { wasPositivePressed, color ->
+        LineColorPickerDialog(this, curAppIconColor, false, R.array.md_app_icon_colors, getAppIconIDs()) { wasPositivePressed, color ->
             if (wasPositivePressed) {
                 if (hasColorChanged(curAppIconColor, color)) {
                     curAppIconColor = color
                     colorChanged()
+                    updateColorTheme(getUpdatedTheme())
                 }
             }
         }

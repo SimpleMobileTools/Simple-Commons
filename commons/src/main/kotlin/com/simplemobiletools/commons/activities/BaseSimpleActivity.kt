@@ -5,6 +5,7 @@ import android.annotation.TargetApi
 import android.app.Activity
 import android.app.ActivityManager
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
@@ -29,7 +30,7 @@ import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 import java.util.*
 
-open class BaseSimpleActivity : AppCompatActivity() {
+abstract class BaseSimpleActivity : AppCompatActivity() {
     var copyMoveCallback: ((destinationPath: String) -> Unit)? = null
     var actionOnPermission: ((granted: Boolean) -> Unit)? = null
     var isAskingPermissions = false
@@ -41,6 +42,10 @@ open class BaseSimpleActivity : AppCompatActivity() {
         var funAfterSAFPermission: (() -> Unit)? = null
         var funAfterOTGPermission: ((success: Boolean) -> Unit)? = null
     }
+
+    abstract fun getAppIconIDs(): ArrayList<Int>
+
+    abstract fun getAppLauncherName(): String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         if (useDynamicTheme) {
@@ -65,6 +70,7 @@ open class BaseSimpleActivity : AppCompatActivity() {
             updateBackgroundColor()
         }
         updateActionbarColor()
+        updateRecentsAppIcon()
     }
 
     override fun onStop() {
@@ -104,6 +110,33 @@ open class BaseSimpleActivity : AppCompatActivity() {
         if (isLollipopPlus()) {
             window.statusBarColor = color.darkenColor()
         }
+    }
+
+    fun updateRecentsAppIcon() {
+        if (baseConfig.isUsingModifiedAppIcon && isLollipopPlus()) {
+            val appIconIDs = getAppIconIDs()
+            val currentAppIconColorIndex = getCurrentAppIconColorIndex()
+            if (appIconIDs.size - 1 < currentAppIconColorIndex) {
+                return
+            }
+
+            val recentsIcon = BitmapFactory.decodeResource(resources, appIconIDs[currentAppIconColorIndex])
+            val title = getAppLauncherName()
+            val color = baseConfig.primaryColor
+
+            val description = ActivityManager.TaskDescription(title, recentsIcon, color)
+            setTaskDescription(description)
+        }
+    }
+
+    private fun getCurrentAppIconColorIndex(): Int {
+        val appIconColor = baseConfig.appIconColor
+        getAppIconColors().forEachIndexed { index, color ->
+            if (color == appIconColor) {
+                return index
+            }
+        }
+        return 0
     }
 
     fun setTranslucentNavigation() {
@@ -171,6 +204,8 @@ open class BaseSimpleActivity : AppCompatActivity() {
 
     fun startAboutActivity(appNameId: Int, licenseMask: Int, versionName: String, faqItems: ArrayList<FAQItem> = arrayListOf()) {
         Intent(applicationContext, AboutActivity::class.java).apply {
+            putExtra(APP_ICON_IDS, getAppIconIDs())
+            putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
             putExtra(APP_NAME, getString(appNameId))
             putExtra(APP_LICENSES, licenseMask)
             putExtra(APP_VERSION_NAME, versionName)
@@ -179,9 +214,10 @@ open class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun startCustomizationActivity(appIconIDs: ArrayList<Int>? = null) {
+    fun startCustomizationActivity() {
         Intent(applicationContext, CustomizationActivity::class.java).apply {
-            putExtra(APP_ICON_IDS, appIconIDs)
+            putExtra(APP_ICON_IDS, getAppIconIDs())
+            putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
             startActivity(this)
         }
     }
@@ -335,6 +371,14 @@ open class BaseSimpleActivity : AppCompatActivity() {
                 } else {
                     toast(R.string.unknown_error_occurred)
                 }
+            }
+        }
+    }
+
+    fun checkAppIconColorChange(storedAppIconColor: Int, appId: String) {
+        if (storedAppIconColor != baseConfig.appIconColor) {
+            getAppIconColors().forEachIndexed { index, color ->
+                toggleAppIconColor(appId, index, baseConfig.appIconColor == color)
             }
         }
     }
