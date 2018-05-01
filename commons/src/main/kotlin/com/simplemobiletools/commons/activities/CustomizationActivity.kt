@@ -8,7 +8,6 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.APP_ICON_IDS
-import com.simplemobiletools.commons.helpers.APP_ID
 import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
 import com.simplemobiletools.commons.helpers.MyContentProvider
 import com.simplemobiletools.commons.models.MyTheme
@@ -31,6 +30,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private var curPrimaryColor = 0
     private var curAppIconColor = 0
     private var curSelectedThemeId = 0
+    private var originalAppIconColor = 0
     private var hasUnsavedChanges = false
     private var predefinedThemes = LinkedHashMap<Int, MyTheme>()
     private var curPrimaryLineColorPicker: LineColorPickerDialog? = null
@@ -87,6 +87,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         apply_to_all_holder.setOnClickListener { applyToAll() }
         apply_to_all_holder.beGoneIf(baseConfig.wasSharedThemeEverActivated)
         setupThemePicker()
+        originalAppIconColor = baseConfig.appIconColor
     }
 
     override fun onResume() {
@@ -237,7 +238,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun saveChanges(finishAfterSave: Boolean) {
-        val didAppIconColorChange = baseConfig.appIconColor == curAppIconColor
+        val didAppIconColorChange = curAppIconColor != originalAppIconColor
         baseConfig.apply {
             textColor = curTextColor
             backgroundColor = curBackgroundColor
@@ -246,12 +247,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         }
 
         if (didAppIconColorChange) {
-            val appId = intent.getStringExtra(APP_ID) ?: ""
-            if (appId.isNotEmpty()) {
-                getAppIconColors().forEachIndexed { index, color ->
-                    toggleAppIconColor(appId, index, baseConfig.appIconColor == color)
-                }
-            }
+            checkAppIconColor()
         }
 
         if (curSelectedThemeId == THEME_SHARED) {
@@ -262,6 +258,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 sendBroadcast(this)
             }
         }
+
         baseConfig.isUsingSharedTheme = curSelectedThemeId == THEME_SHARED
         hasUnsavedChanges = false
         if (finishAfterSave) {

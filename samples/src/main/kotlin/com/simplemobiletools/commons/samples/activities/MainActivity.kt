@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.samples.activities
 import android.os.Bundle
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.appLaunched
+import com.simplemobiletools.commons.samples.BuildConfig
 import com.simplemobiletools.commons.samples.R
 import java.util.*
 
@@ -18,6 +19,6 @@ class MainActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        appLaunched()
+        appLaunched(BuildConfig.APPLICATION_ID)
     }
 }

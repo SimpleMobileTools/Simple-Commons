@@ -75,9 +75,13 @@ fun Activity.showErrorToast(exception: Exception, length: Int = Toast.LENGTH_LON
 }
 
 @SuppressLint("NewApi")
-fun Activity.appLaunched() {
+fun Activity.appLaunched(appId: String) {
     baseConfig.internalStoragePath = getInternalStoragePath()
     updateSDCardPath()
+    if (baseConfig.appRunCount == 0) {
+        baseConfig.appId = appId
+        checkAppIconColor()
+    }
     baseConfig.appRunCount++
 
     if (!baseConfig.hadThankYouInstalled) {

@@ -214,9 +214,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun startCustomizationActivity(appId: String) {
+    fun startCustomizationActivity() {
         Intent(applicationContext, CustomizationActivity::class.java).apply {
-            putExtra(APP_ID, appId)
             putExtra(APP_ICON_IDS, getAppIconIDs())
             putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
             startActivity(this)
