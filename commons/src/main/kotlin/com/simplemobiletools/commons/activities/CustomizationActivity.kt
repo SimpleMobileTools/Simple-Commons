@@ -287,10 +287,10 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun setupColorsPickers() {
-        customization_text_color.setBackgroundWithStroke(curTextColor, curBackgroundColor)
-        customization_primary_color.setBackgroundWithStroke(curPrimaryColor, curBackgroundColor)
-        customization_background_color.setBackgroundWithStroke(curBackgroundColor, curBackgroundColor)
-        customization_app_icon_color.setBackgroundWithStroke(curAppIconColor, curBackgroundColor)
+        customization_text_color.setFillWithStroke(curTextColor, curBackgroundColor)
+        customization_primary_color.setFillWithStroke(curPrimaryColor, curBackgroundColor)
+        customization_background_color.setFillWithStroke(curBackgroundColor, curBackgroundColor)
+        customization_app_icon_color.setFillWithStroke(curAppIconColor, curBackgroundColor)
     }
 
     private fun hasColorChanged(old: Int, new: Int) = Math.abs(old - new) > 1
