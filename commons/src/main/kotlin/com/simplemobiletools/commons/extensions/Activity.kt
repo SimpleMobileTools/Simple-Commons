@@ -78,8 +78,8 @@ fun Activity.showErrorToast(exception: Exception, length: Int = Toast.LENGTH_LON
 fun Activity.appLaunched(appId: String) {
     baseConfig.internalStoragePath = getInternalStoragePath()
     updateSDCardPath()
+    baseConfig.appId = appId
     if (baseConfig.appRunCount == 0) {
-        baseConfig.appId = appId
         checkAppIconColor()
     }
     baseConfig.appRunCount++
