@@ -172,7 +172,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                         curTextColor = textColor
                         curBackgroundColor = backgroundColor
                         curPrimaryColor = primaryColor
-                        curAppIconColor = curAppIconColor
+                        curAppIconColor = appIconColor
                     }
                     setTheme(getThemeId(curPrimaryColor))
                     setupColorsPickers()

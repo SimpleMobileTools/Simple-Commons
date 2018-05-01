@@ -21,6 +21,7 @@ class SharedThemeReceiver : BroadcastReceiver() {
                             textColor = it.textColor
                             backgroundColor = it.backgroundColor
                             primaryColor = it.primaryColor
+                            appIconColor = it.appIconColor
                         }
                     }
                 }
@@ -33,6 +34,7 @@ class SharedThemeReceiver : BroadcastReceiver() {
                             textColor = it.textColor
                             backgroundColor = it.backgroundColor
                             primaryColor = it.primaryColor
+                            appIconColor = it.appIconColor
                         }
                     }
                 }
