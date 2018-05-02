@@ -15,7 +15,7 @@
     <string name="never">Nunca</string>
     <string name="details">Detalles</string>
     <string name="notes">Notas</string>
-    <string name="deleting_folder">Deleting folder \'%s\'</string>
+    <string name="deleting_folder">Eliminando carpeta \'%s\'</string>
 
     <!-- Search -->
     <string name="search">Buscar</string>
@@ -331,7 +331,7 @@
     <!-- Settings -->
     <string name="settings">Ajustes</string>
     <string name="customize_colors">Cambiar colores</string>
-    <string name="customize_widget_colors">Customize widget colors</string>
+    <string name="customize_widget_colors">Personaliza los colores del widget</string>
     <string name="use_english_language">Usar el idioma Inglés</string>
     <string name="avoid_whats_new">Permitir mostrar novedades al iniciar</string>
     <string name="show_hidden_items">Mostrar elementos ocultos</string>
@@ -446,7 +446,7 @@
         ]]>
     </string>
     <string name="purchase">Comprar</string>
-    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
+    <string name="update_thank_you">Por favor, actualice Simple Tank You a la última versión</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -461,7 +461,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Preguntas frecuentes</string>
-    <string name="before_asking_question">Before you ask a question, please first read the</string>
+    <string name="before_asking_question">Antes de hacer una pregunta, primero lea las</string>
     <string name="faq_1_title_commons">¿Cómo es que no veo este widget de aplicaciones en la lista de widgets?</string>
     <string name="faq_1_text_commons">Lo más probable es que haya movido la aplicación en una tarjeta SD. Hay una limitación del sistema Android que oculta los widgets de la aplicación dada
         en ese caso. La única solución es volver a colocar la aplicación en el almacenamiento interno a través de la configuración de su dispositivo.</string>
