@@ -44,31 +44,29 @@ class CustomizationActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
 
-        try {
-            storedSharedTheme = getSharedThemeSync(getMyContentProviderCursorLoader())
-        } catch (e: Exception) {
-            toast(R.string.update_thank_you)
-            finish()
-            return
-        }
+        initColorVariables()
+        setupColorsPickers()
 
-        if (storedSharedTheme == null) {
-            baseConfig.isUsingSharedTheme = false
-        } else {
-            baseConfig.wasSharedThemeEverActivated = true
-        }
+        if (isThankYouInstalled()) {
+            val cursorLoader = getMyContentProviderCursorLoader()
+            Thread {
+                try {
+                    storedSharedTheme = getSharedThemeSync(cursorLoader)
+                    if (storedSharedTheme == null) {
+                        baseConfig.isUsingSharedTheme = false
+                    } else {
+                        baseConfig.wasSharedThemeEverActivated = true
+                    }
 
-        predefinedThemes.apply {
-            put(THEME_LIGHT, MyTheme(R.string.light_theme, R.color.theme_light_text_color, R.color.theme_light_background_color, R.color.color_primary, R.color.color_primary))
-            put(THEME_DARK, MyTheme(R.string.dark_theme, R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.color_primary, R.color.color_primary))
-            //put(THEME_SOLARIZED, MyTheme(R.string.solarized, R.color.theme_solarized_text_color, R.color.theme_solarized_background_color, R.color.theme_solarized_primary_color))
-            put(THEME_DARK_RED, MyTheme(R.string.dark_red, R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.theme_dark_red_primary_color, R.color.md_red_700))
-            put(THEME_BLACK_WHITE, MyTheme(R.string.black_white, android.R.color.white, android.R.color.black, android.R.color.black, R.color.md_grey_black))
-            put(THEME_CUSTOM, MyTheme(R.string.custom, 0, 0, 0, 0))
-
-            if (storedSharedTheme != null) {
-                put(THEME_SHARED, MyTheme(R.string.shared, 0, 0, 0, 0))
-            }
+                    runOnUiThread {
+                        setupThemes()
+                        apply_to_all_holder.beVisibleIf(storedSharedTheme == null)
+                    }
+                } catch (e: Exception) {
+                    toast(R.string.update_thank_you)
+                    finish()
+                }
+            }.start()
         }
 
         if (!isThankYouInstalled()) {
@@ -77,16 +75,6 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_cross)
         updateTextColors(customization_holder)
-        initColorVariables()
-        setupColorsPickers()
-
-        customization_text_color_holder.setOnClickListener { pickTextColor() }
-        customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
-        customization_primary_color_holder.setOnClickListener { pickPrimaryColor() }
-        customization_app_icon_color_holder.setOnClickListener { pickAppIconColor() }
-        apply_to_all_holder.setOnClickListener { applyToAll() }
-        apply_to_all_holder.beGoneIf(baseConfig.wasSharedThemeEverActivated)
-        setupThemePicker()
         originalAppIconColor = baseConfig.appIconColor
     }
 
@@ -122,6 +110,22 @@ class CustomizationActivity : BaseSimpleActivity() {
         } else {
             super.onBackPressed()
         }
+    }
+
+    private fun setupThemes() {
+        predefinedThemes.apply {
+            put(THEME_LIGHT, MyTheme(R.string.light_theme, R.color.theme_light_text_color, R.color.theme_light_background_color, R.color.color_primary, R.color.color_primary))
+            put(THEME_DARK, MyTheme(R.string.dark_theme, R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.color_primary, R.color.color_primary))
+            //put(THEME_SOLARIZED, MyTheme(R.string.solarized, R.color.theme_solarized_text_color, R.color.theme_solarized_background_color, R.color.theme_solarized_primary_color))
+            put(THEME_DARK_RED, MyTheme(R.string.dark_red, R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.theme_dark_red_primary_color, R.color.md_red_700))
+            put(THEME_BLACK_WHITE, MyTheme(R.string.black_white, android.R.color.white, android.R.color.black, android.R.color.black, R.color.md_grey_black))
+            put(THEME_CUSTOM, MyTheme(R.string.custom, 0, 0, 0, 0))
+
+            if (storedSharedTheme != null) {
+                put(THEME_SHARED, MyTheme(R.string.shared, 0, 0, 0, 0))
+            }
+        }
+        setupThemePicker()
     }
 
     private fun setupThemePicker() {
@@ -291,6 +295,12 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_primary_color.setFillWithStroke(curPrimaryColor, curBackgroundColor)
         customization_background_color.setFillWithStroke(curBackgroundColor, curBackgroundColor)
         customization_app_icon_color.setFillWithStroke(curAppIconColor, curBackgroundColor)
+
+        customization_text_color_holder.setOnClickListener { pickTextColor() }
+        customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
+        customization_primary_color_holder.setOnClickListener { pickPrimaryColor() }
+        customization_app_icon_color_holder.setOnClickListener { pickAppIconColor() }
+        apply_to_all_holder.setOnClickListener { applyToAll() }
     }
 
     private fun hasColorChanged(old: Int, new: Int) = Math.abs(old - new) > 1

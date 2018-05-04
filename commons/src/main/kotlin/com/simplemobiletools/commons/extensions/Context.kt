@@ -316,17 +316,17 @@ fun Context.getFilenameFromContentUri(uri: Uri): String? {
 }
 
 fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
-    val cursorLoader = getMyContentProviderCursorLoader()
-    Thread {
-        callback(getSharedThemeSync(cursorLoader))
-    }.start()
+    if (!isThankYouInstalled()) {
+        callback(null)
+    } else {
+        val cursorLoader = getMyContentProviderCursorLoader()
+        Thread {
+            callback(getSharedThemeSync(cursorLoader))
+        }.start()
+    }
 }
 
 fun Context.getSharedThemeSync(cursorLoader: CursorLoader): SharedTheme? {
-    if (!isThankYouInstalled()) {
-        return null
-    }
-
     val cursor = cursorLoader.loadInBackground()
     cursor?.use {
         if (cursor.moveToFirst()) {
