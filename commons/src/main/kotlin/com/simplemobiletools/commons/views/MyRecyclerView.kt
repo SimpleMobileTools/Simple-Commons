@@ -229,21 +229,26 @@ open class MyRecyclerView : RecyclerView {
         return holder.adapterPosition
     }
 
-    override fun onScrollChanged(l: Int, t: Int, oldl: Int, oldt: Int) {
-        super.onScrollChanged(l, t, oldl, oldt)
+    override fun onScrollStateChanged(state: Int) {
+        super.onScrollStateChanged(state)
         if (endlessScrollListener != null) {
             if (totalItemCount == 0) {
                 totalItemCount = adapter.itemCount
             }
 
-            val lastVisiblePosition = linearLayoutManager?.findLastVisibleItemPosition() ?: 0
-            if (lastVisiblePosition != lastMaxItemIndex && lastVisiblePosition == totalItemCount - 1) {
-                previousTotalItemCount = totalItemCount
-                lastMaxItemIndex = lastVisiblePosition
-                endlessScrollListener!!.updateBottom()
+            if (state == SCROLL_STATE_IDLE) {
+                val lastVisiblePosition = linearLayoutManager?.findLastVisibleItemPosition() ?: 0
+                if (lastVisiblePosition != lastMaxItemIndex && lastVisiblePosition == totalItemCount - 1) {
+                    previousTotalItemCount = totalItemCount
+                    lastMaxItemIndex = lastVisiblePosition
+                    endlessScrollListener!!.updateBottom()
+                }
             }
         }
+    }
 
+    override fun onScrollChanged(l: Int, t: Int, oldl: Int, oldt: Int) {
+        super.onScrollChanged(l, t, oldl, oldt)
         if (recyclerScrollCallback != null) {
             if (childCount > 0) {
                 val firstVisiblePosition = getChildAdapterPosition(getChildAt(0))
