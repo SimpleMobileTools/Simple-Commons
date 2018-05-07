@@ -54,7 +54,6 @@ open class MyRecyclerView : RecyclerView {
     // variables used for fetching additional items at scrolling to the bottom/top
     var endlessScrollListener: EndlessScrollListener? = null
     private var totalItemCount = 0
-    private var previousTotalItemCount = 0
     private var lastMaxItemIndex = 0
     private var linearLayoutManager: LinearLayoutManager? = null
 
@@ -243,9 +242,13 @@ open class MyRecyclerView : RecyclerView {
             if (state == SCROLL_STATE_IDLE) {
                 val lastVisiblePosition = linearLayoutManager?.findLastVisibleItemPosition() ?: 0
                 if (lastVisiblePosition != lastMaxItemIndex && lastVisiblePosition == totalItemCount - 1) {
-                    previousTotalItemCount = totalItemCount
                     lastMaxItemIndex = lastVisiblePosition
                     endlessScrollListener!!.updateBottom()
+                }
+
+                val firstVisiblePosition = linearLayoutManager?.findFirstVisibleItemPosition() ?: -1
+                if (firstVisiblePosition == 0) {
+                    endlessScrollListener!!.updateTop()
                 }
             }
         }
@@ -323,6 +326,8 @@ open class MyRecyclerView : RecyclerView {
     }
 
     interface EndlessScrollListener {
+        fun updateTop()
+
         fun updateBottom()
     }
 }
