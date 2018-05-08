@@ -67,9 +67,8 @@ class CustomizationActivity : BaseSimpleActivity() {
                     finish()
                 }
             }.start()
-        }
-
-        if (!isThankYouInstalled()) {
+        } else {
+            setupThemes()
             baseConfig.isUsingSharedTheme = false
         }
 
