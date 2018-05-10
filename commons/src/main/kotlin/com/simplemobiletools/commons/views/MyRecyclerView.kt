@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.views
 
 import android.content.Context
 import android.os.Handler
+import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.AttributeSet
 import android.view.MotionEvent
@@ -50,12 +51,22 @@ open class MyRecyclerView : RecyclerView {
     private var mPrevFirstVisibleChildHeight = -1
     private var mScrollY = 0
 
+    // variables used for fetching additional items at scrolling to the bottom/top
+    var endlessScrollListener: EndlessScrollListener? = null
+    private var totalItemCount = 0
+    private var lastMaxItemIndex = 0
+    private var linearLayoutManager: LinearLayoutManager? = null
+
     constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
 
     init {
         hotspotHeight = context.resources.getDimensionPixelSize(R.dimen.dragselect_hotspot_height)
+
+        if (layoutManager is LinearLayoutManager) {
+            linearLayoutManager = layoutManager as LinearLayoutManager
+        }
 
         val gestureListener = object : MyGestureListener {
             override fun getLastUp() = lastUp
@@ -92,6 +103,10 @@ open class MyRecyclerView : RecyclerView {
                 autoScrollHandler.postDelayed(this, AUTO_SCROLL_DELAY)
             }
         }
+    }
+
+    fun resetItemCount() {
+        totalItemCount = 0
     }
 
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
@@ -217,31 +232,51 @@ open class MyRecyclerView : RecyclerView {
         return holder.adapterPosition
     }
 
+    override fun onScrollStateChanged(state: Int) {
+        super.onScrollStateChanged(state)
+        if (endlessScrollListener != null) {
+            if (totalItemCount == 0) {
+                totalItemCount = adapter.itemCount
+            }
+
+            if (state == SCROLL_STATE_IDLE) {
+                val lastVisiblePosition = linearLayoutManager?.findLastVisibleItemPosition() ?: 0
+                if (lastVisiblePosition != lastMaxItemIndex && lastVisiblePosition == totalItemCount - 1) {
+                    lastMaxItemIndex = lastVisiblePosition
+                    endlessScrollListener!!.updateBottom()
+                }
+
+                val firstVisiblePosition = linearLayoutManager?.findFirstVisibleItemPosition() ?: -1
+                if (firstVisiblePosition == 0) {
+                    endlessScrollListener!!.updateTop()
+                }
+            }
+        }
+    }
+
     override fun onScrollChanged(l: Int, t: Int, oldl: Int, oldt: Int) {
         super.onScrollChanged(l, t, oldl, oldt)
-        if (recyclerScrollCallback == null) {
-            return
-        }
+        if (recyclerScrollCallback != null) {
+            if (childCount > 0) {
+                val firstVisiblePosition = getChildAdapterPosition(getChildAt(0))
+                val firstVisibleChild = getChildAt(0)
+                if (firstVisibleChild != null) {
+                    if (mPrevFirstVisiblePosition < firstVisiblePosition) {
+                        mPrevScrolledChildrenHeight += mPrevFirstVisibleChildHeight
+                    }
 
-        if (childCount > 0) {
-            val firstVisiblePosition = getChildAdapterPosition(getChildAt(0))
-            val firstVisibleChild = getChildAt(0)
-            if (firstVisibleChild != null) {
-                if (mPrevFirstVisiblePosition < firstVisiblePosition) {
-                    mPrevScrolledChildrenHeight += mPrevFirstVisibleChildHeight
+                    if (firstVisiblePosition == 0) {
+                        mPrevFirstVisibleChildHeight = firstVisibleChild.height
+                        mPrevScrolledChildrenHeight = 0
+                    }
+
+                    if (mPrevFirstVisibleChildHeight < 0) {
+                        mPrevFirstVisibleChildHeight = 0
+                    }
+
+                    mScrollY = mPrevScrolledChildrenHeight - firstVisibleChild.top
+                    recyclerScrollCallback?.onScrolled(mScrollY)
                 }
-
-                if (firstVisiblePosition == 0) {
-                    mPrevFirstVisibleChildHeight = firstVisibleChild.height
-                    mPrevScrolledChildrenHeight = 0
-                }
-
-                if (mPrevFirstVisibleChildHeight < 0) {
-                    mPrevFirstVisibleChildHeight = 0
-                }
-
-                mScrollY = mPrevScrolledChildrenHeight - firstVisibleChild.top
-                recyclerScrollCallback?.onScrolled(mScrollY)
             }
         }
     }
@@ -288,5 +323,11 @@ open class MyRecyclerView : RecyclerView {
         fun setScaleFactor(value: Float)
 
         fun getZoomListener(): MyZoomListener?
+    }
+
+    interface EndlessScrollListener {
+        fun updateTop()
+
+        fun updateBottom()
     }
 }

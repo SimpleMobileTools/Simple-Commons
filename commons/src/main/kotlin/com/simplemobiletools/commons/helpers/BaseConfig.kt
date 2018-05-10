@@ -238,4 +238,8 @@ open class BaseConfig(val context: Context) {
     var isUsingModifiedAppIcon: Boolean
         get() = prefs.getBoolean(IS_USING_MODIFIED_APP_ICON, false)
         set(isUsingModifiedAppIcon) = prefs.edit().putBoolean(IS_USING_MODIFIED_APP_ICON, isUsingModifiedAppIcon).apply()
+
+    var appId: String
+        get() = prefs.getString(APP_ID, "")
+        set(appId) = prefs.edit().putString(APP_ID, appId).apply()
 }

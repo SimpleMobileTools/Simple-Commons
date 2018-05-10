@@ -4,11 +4,11 @@ import android.graphics.PorterDuff
 import android.graphics.drawable.GradientDrawable
 import android.widget.ImageView
 
-fun ImageView.setBackgroundWithStroke(backgroundColor: Int, realStrokeColor: Int) {
-    val strokeColor = realStrokeColor.getContrastColor()
+fun ImageView.setFillWithStroke(fillColor: Int, backgroundColor: Int) {
+    val strokeColor = backgroundColor.getContrastColor()
     GradientDrawable().apply {
         shape = GradientDrawable.RECTANGLE
-        setColor(backgroundColor)
+        setColor(fillColor)
         setStroke(2, strokeColor)
         setBackgroundDrawable(this)
     }

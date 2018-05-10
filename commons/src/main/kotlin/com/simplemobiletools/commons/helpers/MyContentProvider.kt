@@ -22,7 +22,7 @@ class MyContentProvider {
             put(COL_TEXT_COLOR, sharedTheme.textColor)
             put(COL_BACKGROUND_COLOR, sharedTheme.backgroundColor)
             put(COL_PRIMARY_COLOR, sharedTheme.primaryColor)
-            put(COL_APP_ICON_COLOR, sharedTheme.appColor)
+            put(COL_APP_ICON_COLOR, sharedTheme.appIconColor)
             put(COL_LAST_UPDATED_TS, System.currentTimeMillis() / 1000)
         }
     }

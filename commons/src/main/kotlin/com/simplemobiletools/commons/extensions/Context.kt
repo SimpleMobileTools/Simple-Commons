@@ -316,17 +316,17 @@ fun Context.getFilenameFromContentUri(uri: Uri): String? {
 }
 
 fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
-    val cursorLoader = getMyContentProviderCursorLoader()
-    Thread {
-        callback(getSharedThemeSync(cursorLoader))
-    }.start()
+    if (!isThankYouInstalled()) {
+        callback(null)
+    } else {
+        val cursorLoader = getMyContentProviderCursorLoader()
+        Thread {
+            callback(getSharedThemeSync(cursorLoader))
+        }.start()
+    }
 }
 
 fun Context.getSharedThemeSync(cursorLoader: CursorLoader): SharedTheme? {
-    if (!isThankYouInstalled()) {
-        return null
-    }
-
     val cursor = cursorLoader.loadInBackground()
     cursor?.use {
         if (cursor.moveToFirst()) {
@@ -532,10 +532,22 @@ fun Context.saveExifRotation(exif: ExifInterface, degrees: Int) {
     exif.saveAttributes()
 }
 
+fun Context.checkAppIconColor() {
+    val appId = baseConfig.appId
+    if (appId.isNotEmpty()) {
+        getAppIconColors().forEachIndexed { index, color ->
+            toggleAppIconColor(appId, index, baseConfig.appIconColor == color)
+        }
+    }
+}
+
 fun Context.toggleAppIconColor(appId: String, colorIndex: Int, enable: Boolean) {
     val className = "${appId.removeSuffix(".debug")}.activities.SplashActivity${appIconColorStrings[colorIndex]}"
     val state = if (enable) PackageManager.COMPONENT_ENABLED_STATE_ENABLED else PackageManager.COMPONENT_ENABLED_STATE_DISABLED
-    packageManager.setComponentEnabledSetting(ComponentName(appId, className), state, PackageManager.DONT_KILL_APP)
+    try {
+        packageManager.setComponentEnabledSetting(ComponentName(appId, className), state, PackageManager.DONT_KILL_APP)
+    } catch (e: Exception) {
+    }
 }
 
 fun Context.getAppIconColors() = resources.getIntArray(R.array.md_app_icon_colors).toCollection(ArrayList())

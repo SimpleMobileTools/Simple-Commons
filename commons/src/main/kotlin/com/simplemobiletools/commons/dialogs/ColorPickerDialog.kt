@@ -47,8 +47,8 @@ class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBack
             newHexField = color_picker_new_hex
 
             viewSatVal.setHue(getHue())
-            viewNewColor.setBackgroundWithStroke(getColor(), backgroundColor)
-            color_picker_old_color.setBackgroundWithStroke(color, backgroundColor)
+            viewNewColor.setFillWithStroke(getColor(), backgroundColor)
+            color_picker_old_color.setFillWithStroke(color, backgroundColor)
 
             val hexCode = getHexCode(color)
             color_picker_old_hex.text = "#$hexCode"
@@ -102,7 +102,7 @@ class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBack
                 currentColorHsv[2] = 1f - 1f / viewSatVal.measuredHeight * y
 
                 moveColorPicker()
-                viewNewColor.setBackgroundWithStroke(getColor(), backgroundColor)
+                viewNewColor.setFillWithStroke(getColor(), backgroundColor)
                 newHexField.setText(getHexCode(getColor()))
                 return@OnTouchListener true
             }
@@ -163,7 +163,7 @@ class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBack
     private fun updateHue() {
         viewSatVal.setHue(getHue())
         moveHuePicker()
-        viewNewColor.setBackgroundWithStroke(getColor(), backgroundColor)
+        viewNewColor.setFillWithStroke(getColor(), backgroundColor)
         if (removeDimmedBackground && !wasDimmedBackgroundRemoved) {
             dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
             wasDimmedBackgroundRemoved = true
