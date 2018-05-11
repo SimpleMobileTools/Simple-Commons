@@ -68,6 +68,21 @@
         <item>@string/december</item>
     </string-array>
 
+    <string-array name="in_months">
+        <item>@string/in_january</item>
+        <item>@string/in_february</item>
+        <item>@string/in_march</item>
+        <item>@string/in_april</item>
+        <item>@string/in_may</item>
+        <item>@string/in_june</item>
+        <item>@string/in_july</item>
+        <item>@string/in_august</item>
+        <item>@string/in_september</item>
+        <item>@string/in_october</item>
+        <item>@string/in_november</item>
+        <item>@string/in_december</item>
+    </string-array>
+
     <string-array name="week_days">
         <item>@string/monday</item>
         <item>@string/tuesday</item>
