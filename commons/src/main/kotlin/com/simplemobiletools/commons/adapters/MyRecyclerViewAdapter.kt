@@ -263,7 +263,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                           val positionOffset: Int = 0, val itemClick: ((Any) -> (Unit))? = null) : SwappingHolder(view, multiSelector) {
         fun bindView(any: Any, allowLongClick: Boolean = true, callback: (itemView: View, layoutPosition: Int) -> Unit): View {
             return itemView.apply {
-                callback(this, layoutPosition)
+                callback(this, adapterPosition)
 
                 if (isClickable) {
                     setOnClickListener { viewClicked(any) }
