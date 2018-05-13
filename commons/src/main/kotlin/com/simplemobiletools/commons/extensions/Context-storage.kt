@@ -3,7 +3,6 @@ package com.simplemobiletools.commons.extensions
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
-import android.content.ReceiverCallNotAllowedException
 import android.hardware.usb.UsbManager
 import android.media.MediaScannerConnection
 import android.net.Uri
@@ -247,30 +246,11 @@ fun Context.scanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null) 
 
 fun Context.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
     var cnt = paths.size
-    var connection: MediaScannerConnection? = null
-
-    val connectionClient = object : MediaScannerConnection.MediaScannerConnectionClient {
-        override fun onMediaScannerConnected() {
-            paths.forEach {
-                if (connection?.isConnected == true) {
-                    connection?.scanFile(it, it.getMimeType())
-                }
-            }
+    MediaScannerConnection.scanFile(applicationContext, paths.toTypedArray(), null, { s, uri ->
+        if (--cnt == 0) {
+            callback?.invoke()
         }
-
-        override fun onScanCompleted(path: String?, uri: Uri?) {
-            if (--cnt == 0) {
-                connection?.disconnect()
-                callback?.invoke()
-            }
-        }
-    }
-
-    connection = MediaScannerConnection(this, connectionClient)
-    try {
-        connection.connect()
-    } catch (ignored: ReceiverCallNotAllowedException) {
-    }
+    })
 }
 
 fun getPaths(file: File): ArrayList<String> {
