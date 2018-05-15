@@ -318,7 +318,7 @@ fun Context.updateLastModified(path: String, lastModified: Long) {
     }
 }
 
-fun Context.getOTGItems(path: String, countHiddenItems: Boolean, getProperFileSize: Boolean, callback: (ArrayList<FileDirItem>) -> Unit) {
+fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSize: Boolean, callback: (ArrayList<FileDirItem>) -> Unit) {
     val items = ArrayList<FileDirItem>()
     val OTGTreeUri = baseConfig.OTGTreeUri
     var rootUri = DocumentFile.fromTreeUri(applicationContext, Uri.parse(OTGTreeUri))
@@ -347,10 +347,14 @@ fun Context.getOTGItems(path: String, countHiddenItems: Boolean, getProperFileSi
 
     val basePath = "${baseConfig.OTGTreeUri}/document/${baseConfig.OTGPartition}%3A"
     for (file in files) {
+        if (!shouldShowHidden && file.name.startsWith(".")) {
+            continue
+        }
+
         if (file.exists()) {
             val filePath = file.uri.toString().substring(basePath.length)
             val decodedPath = OTG_PATH + "/" + URLDecoder.decode(filePath, "UTF-8")
-            val fileSize = if (getProperFileSize) file.getItemSize(countHiddenItems) else file.length()
+            val fileSize = if (getProperFileSize) file.getItemSize(shouldShowHidden) else file.length()
             items.add(FileDirItem(decodedPath, file.name, file.isDirectory, file.listFiles()?.size ?: 0, fileSize))
         }
     }
