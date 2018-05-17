@@ -140,68 +140,68 @@
     <string name="song_title">Musiqi başlığı</string>
 
     <!-- Color customization -->
-    <string name="background_color">Background color</string>
-    <string name="text_color">Text color</string>
-    <string name="primary_color">Primary color</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
-    <string name="restore_defaults">Restore defaults</string>
-    <string name="change_color">Change color</string>
-    <string name="theme">Theme</string>
-    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
-    <string name="save">Save</string>
-    <string name="discard">Discard</string>
-    <string name="undo_changes">Undo changes</string>
-    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
-    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="background_color">Arxaplan rəngi</string>
+    <string name="text_color">Yazı rəngi</string>
+    <string name="primary_color">Birinci rəng</string>
+    <string name="foreground_color">Önplan rəngi</string>
+    <string name="app_icon_color">Tətbiq ikonu rəngi</string>
+    <string name="restore_defaults">Standarta qaytar</string>
+    <string name="change_color">Rəngi dəyiş</string>
+    <string name="theme">Mövzu</string>
+    <string name="changing_color_description">Rəngi dəyişmək onu Özəl mövzuya çevirəcək</string>
+    <string name="save">Saxla</string>
+    <string name="discard">Yoxsay</string>
+    <string name="undo_changes">Dəyişiklikləri geri al</string>
+    <string name="undo_changes_confirmation">Dəyişiklikləri geri almaq istədiyinizə əminsiniz?</string>
+    <string name="save_before_closing">Yadda saxlamadığınız dəyişikliklər var. Çıxmazdan əvvəl saxlanılsın?</string>
+    <string name="apply_to_all_apps">Rəngləri bütün Simple Apps tətbiqlərinə şamil et</string>
+    <string name="share_colors_success">Rənglər uğurla yeniləndi. \'Paylanmış\' adlı yeni tema əlavə edildi, xahiş olunur gələcəkdə bütün tətbiqlərin yeniləmələri üçün bundan istifadə edin.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
+            Lütfən bağış edin <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Bu funksiyanı açdığınız və təkmilləşdirməni dəstəklədiyiniz üçün Sadə Təşəkkür</a>. Çox Sağolun!
         ]]>
     </string>
 
     <!-- Themes -->
-    <string name="light_theme">Light</string>
-    <string name="dark_theme">Dark</string>
-    <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
-    <string name="black_white">Black &amp; White</string>
-    <string name="custom">Custom</string>
-    <string name="shared">Shared</string>
+    <string name="light_theme">İşıqlı</string>
+    <string name="dark_theme">Qaranlıq</string>
+    <string name="solarized">Közərmiş</string>
+    <string name="dark_red">Qaraqırmızı</string>
+    <string name="black_white">Ağ və Qara</string>
+    <string name="custom">Özəl</string>
+    <string name="shared">Paylanmış</string>
 
     <!-- What's new -->
-    <string name="whats_new">What\'s new</string>
-    <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
+    <string name="whats_new">Yeni nə var</string>
+    <string name="whats_new_disclaimer">* burada yalnız böyük təzələmələr sıralanıb, həmişə kiçik yaxşılaşdırmalar da olur</string>
 
     <!-- Actionbar items -->
-    <string name="delete">Delete</string>
-    <string name="remove">Remove</string>
-    <string name="rename">Rename</string>
-    <string name="share">Share</string>
-    <string name="share_via">Share via</string>
-    <string name="select_all">Select all</string>
-    <string name="hide">Hide</string>
-    <string name="unhide">Unhide</string>
-    <string name="hide_folder">Hide folder</string>
-    <string name="unhide_folder">Unhide folder</string>
-    <string name="temporarily_show_hidden">Temporarily show hidden</string>
-    <string name="stop_showing_hidden">Stop showing hidden media</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
+    <string name="delete">Sil</string>
+    <string name="remove">Sil</string>
+    <string name="rename">Yenidən adlandır</string>
+    <string name="share">Paylaş</string>
+    <string name="share_via">Paylaş</string>
+    <string name="select_all">Hamsını seç</string>
+    <string name="hide">Gizlət</string>
+    <string name="unhide">Gizlətmə</string>
+    <string name="hide_folder">Qovluğu gizlət</string>
+    <string name="unhide_folder">Qovluğu gizlətmə</string>
+    <string name="temporarily_show_hidden">Gizlənmişi müvəqqəti göstər</string>
+    <string name="stop_showing_hidden">Gizlənmiş mediyanı göstərmə</string>
+    <string name="maximum_share_reached">Bu qədər faylı bir dəfəyə paylaşa bilməzsiniz</string>
 
     <!-- Sorting -->
-    <string name="sort_by">Sort by</string>
-    <string name="name">Name</string>
-    <string name="size">Size</string>
-    <string name="last_modified">Last modified</string>
-    <string name="date_taken">Date taken</string>
-    <string name="title">Title</string>
-    <string name="filename">Filename</string>
-    <string name="extension">Extension</string>
-    <string name="ascending">Ascending</string>
-    <string name="descending">Descending</string>
-    <string name="use_for_this_folder">Use for this folder only</string>
+    <string name="sort_by">Sırala</string>
+    <string name="name">Ad</string>
+    <string name="size">Ölçü</string>
+    <string name="last_modified">Son dəyişdirilən</string>
+    <string name="date_taken">Götürülmə tarixi</string>
+    <string name="title">Başlıq</string>
+    <string name="filename">Fayl adı</string>
+    <string name="extension">Fayl çıxışı</string>
+    <string name="ascending">Artan</string>
+    <string name="descending">Azalan</string>
+    <string name="use_for_this_folder">Yalnız bu qovluq üçün işlət</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
@@ -232,39 +232,39 @@
     <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
 
     <!-- Times -->
-    <string name="tomorrow">Tomorrow</string>
-    <string name="seconds_raw">seconds</string>
-    <string name="minutes_raw">minutes</string>
-    <string name="hours_raw">hours</string>
-    <string name="days_raw">days</string>
+    <string name="tomorrow">Sabah</string>
+    <string name="seconds_raw">saniyələr</string>
+    <string name="minutes_raw">dəqiqələr</string>
+    <string name="hours_raw">saatlar</string>
+    <string name="days_raw">günlər</string>
 
     <plurals name="seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d saniyə</item>
+        <item quantity="other">%d saniyə</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d dəqiqə</item>
+        <item quantity="other">%d dəqiqə</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d saat</item>
+        <item quantity="other">%d saat</item>
     </plurals>
     <plurals name="days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d gün</item>
+        <item quantity="other">%d gün</item>
     </plurals>
     <plurals name="weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d həftə</item>
+        <item quantity="other">%d həftə</item>
     </plurals>
     <plurals name="months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d ay</item>
+        <item quantity="other">%d ay</item>
     </plurals>
     <plurals name="years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d il</item>
+        <item quantity="other">%d il</item>
     </plurals>
 
     <!-- For example: I will be there in 5 minutes -->
@@ -330,17 +330,17 @@
     <string name="no_sound">No sound</string>
 
     <!-- Settings -->
-    <string name="settings">Settings</string>
-    <string name="customize_colors">Customize colors</string>
-    <string name="customize_widget_colors">Customize widget colors</string>
-    <string name="use_english_language">Use English language</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
-    <string name="show_hidden_items">Show hidden items</string>
-    <string name="font_size">Font size</string>
-    <string name="small">Small</string>
-    <string name="medium">Medium</string>
-    <string name="large">Large</string>
-    <string name="extra_large">Extra large</string>
+    <string name="settings">Parametrlər</string>
+    <string name="customize_colors">Rəngləri dəyiş</string>
+    <string name="customize_widget_colors">Widget rənglərini dəyiş</string>
+    <string name="use_english_language">İngilis dilində işlət</string>
+    <string name="avoid_whats_new">Başlanğıca yeni nə var göstərmə</string>
+    <string name="show_hidden_items">Gizli faylları göstər</string>
+    <string name="font_size">Yazı ölçüsü</string>
+    <string name="small">Kiçik</string>
+    <string name="medium">Orta</string>
+    <string name="large">Böyük</string>
+    <string name="extra_large">Çox böyük</string>
     <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
     <string name="password_protect_whole_app">Password protect the whole application</string>
     <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
