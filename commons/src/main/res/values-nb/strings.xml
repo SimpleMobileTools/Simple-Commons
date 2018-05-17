@@ -15,7 +15,7 @@
     <string name="never">Aldri</string>
     <string name="details">Detaljer</string>
     <string name="notes">Notes</string>
-    <string name="deleting_folder">Deleting folder \'%s\'</string>
+    <string name="deleting_folder">Sletter mappen \'%s\'</string>
 
     <!-- Search -->
     <string name="search">Søk</string>
@@ -332,7 +332,7 @@
     <!-- Settings -->
     <string name="settings">Innstillinger</string>
     <string name="customize_colors">Tilpass farger</string>
-    <string name="customize_widget_colors">Customize widget colors</string>
+    <string name="customize_widget_colors">Tilpass modulfarger</string>
     <string name="use_english_language">Bruk engelsk språk</string>
     <string name="avoid_whats_new">Ikke vis \'Hva er nytt\' ved oppstart</string>
     <string name="show_hidden_items">Vis skjulte elementer</string>
@@ -358,7 +358,7 @@
     <string name="recycle_bin_cleaning_interval">Tømmeintervall for papirkurven</string>
     <string name="empty_recycle_bin">Tøm papirkurven</string>
     <string name="recycle_bin_location">Papirkurvplassering</string>
-    <string name="force_portrait_mode">Force portrait mode</string>
+    <string name="force_portrait_mode">Påtving portrettmodus</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighet</string>
@@ -366,6 +366,9 @@
     <string name="scrolling">Rulling</string>
     <string name="file_operations">Filoperasjoner</string>
     <string name="recycle_bin">Papirkurv</string>
+    <string name="saving_label">Saving</string>
+    <string name="startup">Startup</string>
+    <string name="text">Text</string>
 
     <!-- Import / Export -->
     <string name="importing">Importerer…</string>
@@ -398,18 +401,18 @@
     <string name="december">Desember</string>
 
     <!-- in January -->
-    <string name="in_january">in January</string>
-    <string name="in_february">in February</string>
-    <string name="in_march">in March</string>
-    <string name="in_april">in April</string>
-    <string name="in_may">in May</string>
-    <string name="in_june">in June</string>
-    <string name="in_july">in July</string>
-    <string name="in_august">in August</string>
-    <string name="in_september">in September</string>
-    <string name="in_october">in October</string>
-    <string name="in_november">in November</string>
-    <string name="in_december">in December</string>
+    <string name="in_january">i januar</string>
+    <string name="in_february">i februar</string>
+    <string name="in_march">i mars</string>
+    <string name="in_april">i april</string>
+    <string name="in_may">i mai</string>
+    <string name="in_june">i juni</string>
+    <string name="in_july">i juli</string>
+    <string name="in_august">i august</string>
+    <string name="in_september">i september</string>
+    <string name="in_october">i oktober</string>
+    <string name="in_november">i november</string>
+    <string name="in_december">i desember</string>
 
     <string name="monday">Mandag</string>
     <string name="tuesday">Tirsdag</string>
@@ -476,7 +479,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Ofte stilte spørsmål</string>
-    <string name="before_asking_question">Before you ask a question, please first read the</string>
+    <string name="before_asking_question">Før du stiller et spørsmål, les først</string>
     <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
     <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
         in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>

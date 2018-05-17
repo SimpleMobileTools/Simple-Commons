@@ -551,3 +551,5 @@ fun Context.toggleAppIconColor(appId: String, colorIndex: Int, enable: Boolean) 
 }
 
 fun Context.getAppIconColors() = resources.getIntArray(R.array.md_app_icon_colors).toCollection(ArrayList())
+
+fun Context.getLaunchIntent() = packageManager.getLaunchIntentForPackage(baseConfig.appId)

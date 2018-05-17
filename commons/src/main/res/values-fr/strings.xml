@@ -15,7 +15,7 @@
     <string name="never">Jamais</string>
     <string name="details">Détails</string>
     <string name="notes">Notes</string>
-    <string name="deleting_folder">Deleting folder \'%s\'</string>
+    <string name="deleting_folder">Supprimer le dossier \'%s\'</string>
 
     <!-- Search -->
     <string name="search">Recherche</string>
@@ -332,7 +332,7 @@
     <!-- Settings -->
     <string name="settings">Paramètres</string>
     <string name="customize_colors">Personnaliser les couleurs</string>
-    <string name="customize_widget_colors">Customize widget colors</string>
+    <string name="customize_widget_colors">Personnaliser les couleurs du widget</string>
     <string name="use_english_language">Utiliser l\'affichage en anglais</string>
     <string name="avoid_whats_new">Ne pas montrer les nouveautés au démarrage</string>
     <string name="show_hidden_items">Afficher les éléments cachés</string>
@@ -366,6 +366,9 @@
     <string name="scrolling">Défilement</string>
     <string name="file_operations">Opérations sur les fichiers</string>
     <string name="recycle_bin">Corbeille</string>
+    <string name="saving_label">Saving</string>
+    <string name="startup">Startup</string>
+    <string name="text">Text</string>
 
     <!-- Import / Export -->
     <string name="importing">Importer…</string>
@@ -398,18 +401,18 @@
     <string name="december">Décembre</string>
 
     <!-- in January -->
-    <string name="in_january">in January</string>
-    <string name="in_february">in February</string>
-    <string name="in_march">in March</string>
-    <string name="in_april">in April</string>
-    <string name="in_may">in May</string>
-    <string name="in_june">in June</string>
-    <string name="in_july">in July</string>
-    <string name="in_august">in August</string>
-    <string name="in_september">in September</string>
-    <string name="in_october">in October</string>
-    <string name="in_november">in November</string>
-    <string name="in_december">in December</string>
+    <string name="in_january">en Janvier</string>
+    <string name="in_february">en Février</string>
+    <string name="in_march">en Mars</string>
+    <string name="in_april">en Avril</string>
+    <string name="in_may">en Mai</string>
+    <string name="in_june">en Juin</string>
+    <string name="in_july">en Juillet</string>
+    <string name="in_august">en Août</string>
+    <string name="in_september">en Septembre</string>
+    <string name="in_october">en Octobre</string>
+    <string name="in_november">en Novembre</string>
+    <string name="in_december">en Décembre</string>
 
     <string name="monday">Lundi</string>
     <string name="tuesday">Mardi</string>
@@ -461,7 +464,7 @@
         ]]>
     </string>
     <string name="purchase">Acheter</string>
-    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
+    <string name="update_thank_you">Veuillez mettre à jour Simple Merci à la dernière version</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -476,7 +479,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Foire aux questions (FAQ)</string>
-    <string name="before_asking_question">Before you ask a question, please first read the</string>
+    <string name="before_asking_question">Avant de poser une question, lisez d\'abord le</string>
     <string name="faq_1_title_commons">Pourquoi je ne vois pas les widgets de cette appli dans la liste des widgets ?</string>
     <string name="faq_1_text_commons">Probablement parce que l\'appli a été déplacée sur la carte SD. Android a une limitation qui fait qu\'il n\'affiche pas les widgets de cette appli dans ce cas. La seule solution consiste à replacer l\'appli dans le stockage interne via les paramètres du système.</string>
     <string name="faq_2_title_commons">Je voudrais vous apporter mon support, mais je ne peux pas vous donner de l\'argent. Existe t-il un autre moyen ?</string>

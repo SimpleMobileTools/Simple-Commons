@@ -37,7 +37,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
 
     override fun onBindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int) {
         val fileDirItem = fileDirItems[position]
-        val view = holder.bindView(fileDirItem, false) { itemView, layoutPosition ->
+        val view = holder.bindView(fileDirItem, false) { itemView, adapterPosition ->
             setupView(itemView, fileDirItem)
         }
         bindViewHolder(holder, position, view)
