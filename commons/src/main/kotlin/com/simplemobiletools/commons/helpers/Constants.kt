@@ -87,6 +87,8 @@ const val SILENT = "silent"
 const val FORCE_PORTRAIT = "force_portrait"
 const val OTG_PARTITION = "otg_partition"
 const val IS_USING_MODIFIED_APP_ICON = "is_using_modified_app_icon"
+const val INITIAL_WIDGET_HEIGHT = "initial_widget_height"
+const val WIDGET_ID_TO_MEASURE = "widget_id_to_measure"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1

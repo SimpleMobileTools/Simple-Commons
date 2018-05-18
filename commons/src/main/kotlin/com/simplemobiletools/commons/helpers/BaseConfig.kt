@@ -242,4 +242,12 @@ open class BaseConfig(val context: Context) {
     var appId: String
         get() = prefs.getString(APP_ID, "")
         set(appId) = prefs.edit().putString(APP_ID, appId).apply()
+
+    var initialWidgetHeight: Int
+        get() = prefs.getInt(INITIAL_WIDGET_HEIGHT, 0)
+        set(initialWidgetHeight) = prefs.edit().putInt(INITIAL_WIDGET_HEIGHT, initialWidgetHeight).apply()
+
+    var widgetIdToMeasure: Int
+        get() = prefs.getInt(WIDGET_ID_TO_MEASURE, 0)
+        set(widgetIdToMeasure) = prefs.edit().putInt(WIDGET_ID_TO_MEASURE, widgetIdToMeasure).apply()
 }

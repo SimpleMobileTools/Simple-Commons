@@ -11,11 +11,11 @@
     <string name="set_as">Ayarla</string>
     <string name="value_copied_to_clipboard">Değer panoya kopyalandı</string>
     <string name="unknown">Bilinmeyen</string>
-    <string name="always">Always</string>
-    <string name="never">Never</string>
-    <string name="details">Details</string>
-    <string name="notes">Notes</string>
-    <string name="deleting_folder">Deleting folder \'%s\'</string>
+    <string name="always">Her zaman</string>
+    <string name="never">Asla</string>
+    <string name="details">Ayrıntılar</string>
+    <string name="notes">Notlar</string>
+    <string name="deleting_folder">\'%s\' klasörü siliniyor</string>
 
     <!-- Search -->
     <string name="search">Ara</string>
@@ -44,9 +44,9 @@
     <string name="renaming_folder">Klasörü yeniden adlandırma</string>
     <string name="filename_cannot_be_empty">Dosya adı boş olamaz</string>
     <string name="filename_invalid_characters">Dosya adı geçersiz karakterler içeriyor</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
+    <string name="filename_invalid_characters_placeholder">Dosya adı \'%s\' geçersiz karakterler içeriyor</string>
     <string name="extension_cannot_be_empty">Uzantı boş olamaz</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
+    <string name="source_file_doesnt_exist">%s kaynak dosyası mevcut değil</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopyala</string>
@@ -87,12 +87,12 @@
     <!-- File operation conflicts -->
     <string name="file_already_exists">\"%s\" dosyası zaten var</string>
     <string name="file_already_exists_overwrite">\"%s\" dosyası zaten var. Üzerine yazılsın mı?</string>
-    <string name="folder_already_exists">Folder \"%s\" already exists</string>
-    <string name="merge">Merge</string>
+    <string name="folder_already_exists">\"%s\" klasörü zaten var</string>
+    <string name="merge">Birleştir</string>
     <string name="overwrite">Üzerine yaz</string>
     <string name="skip">Atla</string>
     <string name="append">\'_1\' ile ekle</string>
-    <string name="apply_to_all">Tüm çatışmalara uygula</string>
+    <string name="apply_to_all">Tümüne uygula</string>
 
     <!-- File picker -->
     <string name="select_folder">Bir klasör seç</string>
@@ -109,8 +109,8 @@
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">%d öğe</item>
+        <item quantity="other">%d öğe</item>
     </plurals>
 
     <!-- Storages -->
@@ -119,7 +119,7 @@
     <string name="sd_card">SD Kart</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Yanlış klasör seçildi, lütfen SD kartınızın kök klasörünü seçin</string>
-    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
+    <string name="sd_card_otg_same">SD kart ve OTG cihaz yolları aynı olamaz</string>
 
     <!-- File properties -->
     <string name="properties">Özellikler</string>
@@ -140,20 +140,20 @@
     <string name="song_title">Şarkı başlığı</string>
 
     <!-- Color customization -->
-    <string name="background_color">Arkaplan rengi</string>
+    <string name="background_color">Arka plan rengi</string>
     <string name="text_color">Metin rengi</string>
     <string name="primary_color">Ana renk</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
+    <string name="foreground_color">Ön plan rengi</string>
+    <string name="app_icon_color">Uygulama simgesi rengi</string>
     <string name="restore_defaults">Varsayılanları geri yükle</string>
-    <string name="change_color">Change color</string>
+    <string name="change_color">Rengi değiştir</string>
     <string name="theme">Tema</string>
-    <string name="changing_color_description">Bir rengi değiştirdiğinizde Özel temaya geçeceksiniz</string>
+    <string name="changing_color_description">Bir rengin değiştirilmesi, Özel temaya geçilmesini sağlayacaktır</string>
     <string name="save">Kaydet</string>
     <string name="discard">Çık</string>
     <string name="undo_changes">Değişiklikleri geri al</string>
     <string name="undo_changes_confirmation">Değişikliklerinizi geri almak istediğinizden emin misiniz?</string>
-    <string name="save_before_closing">Kaydedilmemiş değişiklikleriniz mevcut. Çıkmadan önce kaydedilsin mi?</string>
+    <string name="save_before_closing">Kaydedilmemiş değişiklikleriniz var. Çıkmadan önce kaydedilsin mi?</string>
     <string name="apply_to_all_apps">Tüm Basit Uygulamalara renk uygula</string>
     <string name="share_colors_success">"Renkler başarıyla güncellendi. 'Paylaşılan' adlı yeni bir Tema eklendi, lütfen gelecekte tüm uygulama renklerini güncellemek için kullanınız."</string>
     <string name="purchase_thank_you">
@@ -205,9 +205,9 @@
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Silme işlemine devam etmek istediğinizden emin misiniz?</string>
-    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s to Recycle Bin?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
-    <string name="do_not_ask_again">Do not ask again in this session</string>
+    <string name="deletion_confirmation">%s gerçekten silinsin mi?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">%s gerçekten Geri Dönüşüm Kutusuna taşınsın mı?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="do_not_ask_again">Bu oturumda tekrar sorma</string>
     <string name="yes">Evet</string>
     <string name="no">Hayır</string>
 
@@ -232,11 +232,11 @@
     <string name="fingerprint_setup_successfully">Koruma kurulumu başarıyla gerçekleştirildi. Sıfırlama ile ilgili sorunlar olması durumunda lütfen uygulamayı yeniden yükleyin.</string>
 
     <!-- Times -->
-    <string name="tomorrow">Tomorrow</string>
-    <string name="seconds_raw">seconds</string>
+    <string name="tomorrow">Yarın</string>
+    <string name="seconds_raw">saniye</string>
     <string name="minutes_raw">dakika</string>
-    <string name="hours_raw">saatler</string>
-    <string name="days_raw">günler</string>
+    <string name="hours_raw">saat</string>
+    <string name="days_raw">gün</string>
 
     <plurals name="seconds">
         <item quantity="one">%d saniye</item>
@@ -252,39 +252,39 @@
     </plurals>
     <plurals name="days">
         <item quantity="one">%d gün</item>
-        <item quantity="other">günler %d</item>
+        <item quantity="other">%d gün</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="one">%d hafta</item>
-        <item quantity="other">haftalar %d</item>
+        <item quantity="other">%d hafta</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d ay</item>
-        <item quantity="other">aylar %d</item>
+        <item quantity="other">%d ay</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d yıl</item>
-        <item quantity="other">yıllar %d</item>
+        <item quantity="other">%d yıl</item>
     </plurals>
 
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d saniye</item>
+        <item quantity="other">%d saniye</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d dakika</item>
+        <item quantity="other">%d dakika</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d saat</item>
+        <item quantity="other">%d saat</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d second before</item>
-        <item quantity="other">%d seconds before</item>
+        <item quantity="one">%d saniye önce</item>
+        <item quantity="other">%d saniye önce</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d dakika önce</item>
@@ -295,46 +295,46 @@
         <item quantity="other">%d saat önce</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">%d önceki gün</item>
-        <item quantity="other">%d önceki gün</item>
+        <item quantity="one">%d gün önce</item>
+        <item quantity="other">%d gün önce</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d saniye</item>
+        <item quantity="other">%d saniye</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d dakika</item>
+        <item quantity="other">%d dakika</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d saat</item>
+        <item quantity="other">%d saat</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
-    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+    <string name="alarm_goes_off_in">Alarmın çalmasına şu kadar kaldı:\n%s</string>
+    <string name="alarm_warning">Lütfen alarma güvenmeden önce düzgün çalıştığından emin olun. Pil tasarrufu ile ilgili sistem kısıtlamaları nedeniyle yanlış davranabilir.</string>
+    <string name="reminder_warning">Lütfen hatırlatıcılara güvenmeden önce düzgün çalıştıklarından emin olun. Pil tasarrufu ile ilgili sistem kısıtlamaları nedeniyle yanlış davranabilirler.</string>
 
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
-    <string name="snooze">Snooze</string>
-    <string name="dismiss">Dismiss</string>
+    <string name="snooze">Ertele</string>
+    <string name="dismiss">Kapat</string>
     <string name="no_reminder">Hatırlatma yok</string>
     <string name="at_start">Başlangıçta</string>
-    <string name="system_sounds">System sounds</string>
-    <string name="your_sounds">Your sounds</string>
-    <string name="add_new_sound">Add a new sound</string>
-    <string name="no_sound">No sound</string>
+    <string name="system_sounds">Sistem sesleri</string>
+    <string name="your_sounds">Sesleriniz</string>
+    <string name="add_new_sound">Yeni bir ses ekle</string>
+    <string name="no_sound">Ses yok</string>
 
     <!-- Settings -->
     <string name="settings">Ayarlar</string>
     <string name="customize_colors">Renkleri özelleştir</string>
-    <string name="customize_widget_colors">Customize widget colors</string>
+    <string name="customize_widget_colors">Widget renklerini özelleştir</string>
     <string name="use_english_language">İngilizce dilini kullan</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
+    <string name="avoid_whats_new">Başlangıçta Yenilikleri göstermeyi önle</string>
     <string name="show_hidden_items">Gizli öğeleri göster</string>
     <string name="font_size">Yazı tipi boyutu</string>
     <string name="small">Küçük</string>
@@ -345,30 +345,30 @@
     <string name="password_protect_whole_app">Parola tüm uygulamayı korur</string>
     <string name="keep_last_modified">Dosya kopyalama/taşıma/yeniden adlandırmada eski son değiştirilme değerini koru</string>
     <string name="show_info_bubble">Kaydırma çubuğunu sürükleyerek öğeleri kaydırmada bilgi balonunu göster</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
-    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
-    <string name="use_24_hour_time_format">Use 24-hour time format</string>
-    <string name="sunday_first">Start week on Sunday</string>
-    <string name="widgets">Widgets</string>
-    <string name="use_same_snooze">Always use same snooze time</string>
-    <string name="snooze_time">Snooze time</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
-    <string name="move_items_to_trash_bin">Move items in Recycle Bin instead of deleting</string>
-    <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
-    <string name="empty_recycle_bin">Empty Recycle Bin</string>
-    <string name="recycle_bin_location">Recycle Bin location</string>
-    <string name="force_portrait_mode">Force portrait mode</string>
+    <string name="prevent_phone_from_sleeping">Uygulama ön plandayken telefonun uykuya geçmesini önle</string>
+    <string name="skip_delete_confirmation">Her zaman silme onayı penceresini atla</string>
+    <string name="enable_pull_to_refresh">Üstten yenilemek için çekmeyi etkinleştir</string>
+    <string name="use_24_hour_time_format">24 saat biçimini kullan</string>
+    <string name="sunday_first">Pazar günü hafta başlangıcı</string>
+    <string name="widgets">Widget\'lar</string>
+    <string name="use_same_snooze">Her zaman aynı erteleme süresini kullan</string>
+    <string name="snooze_time">Erteleme süresi</string>
+    <string name="vibrate_on_button_press">Düğmeye basıldığında titret</string>
+    <string name="move_items_to_trash_bin">Öğeleri silmek yerine Geri Dönüşüm Kutusuna taşı</string>
+    <string name="recycle_bin_cleaning_interval">Geri Dönüşüm Kutusu temizleme süresi</string>
+    <string name="empty_recycle_bin">Geri Dönüşüm Kutusunu boşalt</string>
+    <string name="recycle_bin_location">Geri Dönüşüm Kutusu konumu</string>
+    <string name="force_portrait_mode">Dikey modu zorla</string>
 
     <!-- Setting sections -->
     <string name="visibility">Görünürlük</string>
     <string name="security">Güvenlik</string>
     <string name="scrolling">Kaydırma</string>
     <string name="file_operations">Dosya işlemleri</string>
-    <string name="recycle_bin">Recycle Bin</string>
-    <string name="saving_label">Saving</string>
-    <string name="startup">Startup</string>
-    <string name="text">Text</string>
+    <string name="recycle_bin">Geri Dönüşüm Kutusu</string>
+    <string name="saving_label">Kaydetme</string>
+    <string name="startup">Başlangıç</string>
+    <string name="text">Metin</string>
 
     <!-- Import / Export -->
     <string name="importing">İçe aktarılıyor…</string>
@@ -383,8 +383,8 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="confirm_otg_storage_access_text">Erişim vermek için lütfen bir sonraki ekranda OTG cihazının kök klasörünü seçin</string>
+    <string name="wrong_root_selected_otg">Yanlış klasör seçildi, lütfen OTG cihazınızın kök klasörünü seçin</string>
 
     <!-- Dates -->
     <string name="january">Ocak</string>
@@ -401,18 +401,18 @@
     <string name="december">Aralık</string>
 
     <!-- in January -->
-    <string name="in_january">in January</string>
-    <string name="in_february">in February</string>
-    <string name="in_march">in March</string>
-    <string name="in_april">in April</string>
-    <string name="in_may">in May</string>
-    <string name="in_june">in June</string>
-    <string name="in_july">in July</string>
-    <string name="in_august">in August</string>
-    <string name="in_september">in September</string>
-    <string name="in_october">in October</string>
-    <string name="in_november">in November</string>
-    <string name="in_december">in December</string>
+    <string name="in_january">Ocak ayında</string>
+    <string name="in_february">Şubat ayında</string>
+    <string name="in_march">Mart ayında</string>
+    <string name="in_april">Nisan ayında</string>
+    <string name="in_may">Mayıs ayında</string>
+    <string name="in_june">Haziran ayında</string>
+    <string name="in_july">Temmuz ayında</string>
+    <string name="in_august">Ağustos ayında</string>
+    <string name="in_september">Eylül ayında</string>
+    <string name="in_october">Ekim ayında</string>
+    <string name="in_november">Kasım ayında</string>
+    <string name="in_december">Aralık ayında</string>
 
     <string name="monday">Pazartesi</string>
     <string name="tuesday">Salı</string>
@@ -430,12 +430,12 @@
     <string name="saturday_letter">C</string>
     <string name="sunday_letter">P</string>
 
-    <string name="monday_short">Paz</string>
+    <string name="monday_short">Pzt</string>
     <string name="tuesday_short">Sal</string>
     <string name="wednesday_short">Çar</string>
     <string name="thursday_short">Per</string>
     <string name="friday_short">Cum</string>
-    <string name="saturday_short">Cum</string>
+    <string name="saturday_short">Cmt</string>
     <string name="sunday_short">Paz</string>
 
     <!-- About -->
@@ -445,16 +445,16 @@
     <string name="more_apps_underlined"><u>Daha fazla uygulama</u></string>
     <string name="third_party_licences_underlined"><u>Üçüncü taraf lisansları</u></string>
     <string name="invite_friends_underlined"><u>Arkadaşlarınızı davet edin</u></string>
-    <string name="share_text">Hey, %1$s adlı harika bir uygulama buldum. %2$s adresinden indir</string>
+    <string name="share_text">Selam, %1$s adlı harika bir uygulama buldum. %2$s adresinden indir</string>
     <string name="invite_via">Şununla davet et</string>
     <string name="rate_us_underlined"><u>Bizi değerlendirin</u></string>
     <string name="donate">Bağış yapın</string>
     <string name="donate_underlined"><u>Bağış yapın</u></string>
     <string name="follow_us">Bizi takip edin</string>
     <string name="copyright">v %1$s\nTelif hakkı © Simple Mobile Tools %2$d</string>
-    <string name="additional_info">Additional info</string>
-    <string name="app_version">App version: %s</string>
-    <string name="device_os">Device OS: %s</string>
+    <string name="additional_info">Ek bilgiler</string>
+    <string name="app_version">Uygulama sürümü: %s</string>
+    <string name="device_os">Cihaz İS: %s</string>
     <string name="donate_please">
         <![CDATA[
             Merhaba,<br><br>
@@ -464,34 +464,33 @@
         ]]>
     </string>
     <string name="purchase">Satın al</string>
-    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
+    <string name="update_thank_you">Lütfen Simple Thank You\'yu son sürüme güncelleyin</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
-            Hey,<br><br>
-            just letting you know that a new app has been released recently:<br><br>
+            Selam,<br><br>
+            kısa bir süre önce yeni uygulamamın yayınlandığını bilmenizi istiyorum:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-            You can download it by pressing the title.<br><br>
-            Thanks
+            Başlığa basarak indirebilirsiniz.<br><br>
+            Teşekkürler
         ]]>
     </string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently asked questions</string>
-    <string name="before_asking_question">Before you ask a question, please first read the</string>
-    <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
-    <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
-        in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
-    <string name="faq_2_title_commons">I want to support you, but I cannot donate money. Is there anything else I can do?</string>
-    <string name="faq_2_text_commons">Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-        You can find the guide at https://github.com/SimpleMobileTools/General-Discussion , or just shoot me a message at hello@simplemobiletools.com if you need help.</string>
-    <string name="faq_3_title_commons">I deleted some files by mistake, how can I recover them?</string>
-    <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, there is no trashbin available.</string>
-    <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
-    <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
-    <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them. You can customize the Recycle Bin location, emptying interval, or empty it manually.</string>
+    <string name="frequently_asked_questions">Sık sorulan sorular</string>
+    <string name="before_asking_question">Bir soru sormadan önce, lütfen şurayı okuyun</string>
+    <string name="faq_1_title_commons">Uygulamanın widget\'ını widget\'lar listesinde neden göremiyorum?</string>
+    <string name="faq_1_text_commons">Büyük olasılıkla uygulamayı SD karta taşıdığınız içindir. Bu durumda verilen uygulama widget\'larını gizleyen bir Android sistem sınırlaması var. Tek çözüm, cihaz ayarlarınızı kullanarak uygulamayı Dahili Depolama birimine geri taşımaktır.</string>
+    <string name="faq_2_title_commons">Seni desteklemek istiyorum ama para bağışlayamıyorum. Yapabileceğim başka bir şey var mı?</string>
+    <string name="faq_2_text_commons">Evet, tabi ki. Uygulamalar hakkında tanıtım yapabilir veya iyi geribildirim ve derecelendirmeler verebilirsiniz.
+        Kılavuzu https://github.com/SimpleMobileTools/General-Discussion adresinde bulabilir, veya yardıma ihtiyacınız varsa bana hello@simplemobiletools.com adresinden bir mesaj gönderebilirsiniz.</string>
+    <string name="faq_3_title_commons">Bazı dosyaları yanlışlıkla sildim, onları nasıl kurtarabilirim?</string>
+    <string name="faq_3_text_commons">Ne yazık ki, yapamazsınız. Onay penceresinden sonra dosyalar anında silinir, kullanılabilir çöp kutusu yoktur.</string>
+    <string name="faq_4_title_commons">Widget renklerini beğenmedim, değiştirebilir miyim?</string>
+    <string name="faq_4_text_commons">Evet, ana ekranınızda bir widget\'ı sürüklediğinizde, bir widget yapılandırma ekranı görünür. Sol alt köşede renkli kareler göreceksiniz, sadece yeni bir renk seçmek için onlara basın. Alfa\'yı da ayarlamak için kaydırıcıyı kullanabilirsiniz.</string>
+    <string name="faq_5_title_commons">Bir şekilde silinen dosyaları geri yükleyebilir miyim?</string>
+    <string name="faq_5_text_commons">Gerçekten silinmişlerse, yapamazsınız. Bununla birlikte, gelecekte dosyaları kaybetmemek için uygulama ayarlarındaki Silmek yerine Geri Dönüşüm Kutusuna taşı seçeneğini etkinleştirebilirsiniz. Bu, dosyaları silmek yerine sadece taşır. Geri Dönüşüm Kutusu konumunu özelleştirebilir, boşaltma süresini ayarlayabilir veya elle boşaltabilirsiniz.</string>
 
     <!-- License -->
     <string name="notice">Bu uygulama hayatımı kolaylaştırmak için aşağıdaki üçüncü taraf kitaplıklarını kullanır. Teşekkürler.</string>
@@ -513,7 +512,7 @@
     <string name="autofittextview_title">AutoFitTextView (metin boyutunu değiştirme)</string>
     <string name="robolectric_title">Robolectric (test çerçevesi)</string>
     <string name="espresso_title">Espresso (test yardımcısı)</string>
-    <string name="gson_title">Gson (JSON ayrıştırıcısıser)</string>
+    <string name="gson_title">Gson (JSON ayrıştırıcısı)</string>
     <string name="leak_canary_title">Leak Canary (bellek sızıntısı dedektörü)</string>
-    <string name="number_picker_title">Number Picker (customizable number picker)</string>
+    <string name="number_picker_title">Number Picker (özelleştirilebilir sayı seçici)</string>
 </resources>
