@@ -206,17 +206,17 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Silmə prosesini təsdiqləyirsiniz?</string>
     <string name="deletion_confirmation">%s faylı silmək istdəyinizə əminsiniz?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">%s'i zibil qutusuna atmaq istədiyinizə əminsiniz?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">%s\'i zibil qutusuna atmaq istədiyinizə əminsiniz?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
     <string name="do_not_ask_again">Bu oturumda birdə soruşma</string>
     <string name="yes">Bəli</string>
     <string name="no">Xeyr</string>
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">PIN'i daxil edin</string>
-    <string name="please_enter_pin">Xahiş olunur PIN'i daxil edin</string>
+    <string name="enter_pin">PIN\'i daxil edin</string>
+    <string name="please_enter_pin">Xahiş olunur PIN\'i daxil edin</string>
     <string name="wrong_pin">PIN yanlışdır</string>
-    <string name="repeat_pin">PIN'i təkrarlayın</string>
+    <string name="repeat_pin">PIN\'i təkrarlayın</string>
     <string name="pattern">Model</string>
     <string name="insert_pattern">Model daxil edin</string>
     <string name="wrong_pattern">Yanlış model</string>
@@ -445,7 +445,7 @@
     <string name="more_apps_underlined"><u>Daha çox tətbiq</u></string>
     <string name="third_party_licences_underlined"><u>Üçüncü partiya lisenziyaları</u></string>
     <string name="invite_friends_underlined"><u>Dostları dəvət et</u></string>
-    <string name="share_text">Ey! gəl sən də %2$s'də %1$s'ə nəzər yetir!</string>
+    <string name="share_text">Ey! gəl sən də %2$s\'də %1$s\'ə nəzər yetir!</string>
     <string name="invite_via">Dəvət et</string>
     <string name="rate_us_underlined"><u>Dəyərləndir</u></string>
     <string name="donate">İanə et</string>
