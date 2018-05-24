@@ -220,15 +220,15 @@ fun Context.getDocumentFile(path: String): DocumentFile? {
 
 fun Context.getSomeDocumentFile(path: String) = getFastDocumentFile(path) ?: getDocumentFile(path)
 
-fun Context.scanFile(file: File, callback: (() -> Unit)? = null) {
-    scanFiles(arrayListOf(file), callback)
+fun Context.scanFileRecursively(file: File, callback: (() -> Unit)? = null) {
+    scanFilesRecursively(arrayListOf(file), callback)
 }
 
-fun Context.scanPath(path: String, callback: (() -> Unit)? = null) {
-    scanPaths(arrayListOf(path), callback)
+fun Context.scanPathRecursively(path: String, callback: (() -> Unit)? = null) {
+    scanPathsRecursively(arrayListOf(path), callback)
 }
 
-fun Context.scanFiles(files: ArrayList<File>, callback: (() -> Unit)? = null) {
+fun Context.scanFilesRecursively(files: ArrayList<File>, callback: (() -> Unit)? = null) {
     val allPaths = ArrayList<String>()
     for (file in files) {
         allPaths.addAll(getPaths(file))
@@ -236,7 +236,7 @@ fun Context.scanFiles(files: ArrayList<File>, callback: (() -> Unit)? = null) {
     rescanPaths(allPaths, callback)
 }
 
-fun Context.scanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
+fun Context.scanPathsRecursively(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
     val allPaths = ArrayList<String>()
     for (path in paths) {
         allPaths.addAll(getPaths(File(path)))
@@ -270,7 +270,7 @@ fun Context.getFileUri(path: String) = when {
     else -> MediaStore.Files.getContentUri("external")
 }
 
-// these functions update the mediastore instantly, MediaScannerConnection.scanFile takes some time to really get applied
+// these functions update the mediastore instantly, MediaScannerConnection.scanFileRecursively takes some time to really get applied
 fun Context.deleteFromMediaStore(path: String): Boolean {
     if (getDoesFilePathExist(path) || getIsPathDirectory(path)) {
         return false

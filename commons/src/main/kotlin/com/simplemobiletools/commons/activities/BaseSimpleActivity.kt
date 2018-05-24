@@ -271,7 +271,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                         }
 
                         val updatedPaths = updatedFiles.map { it.path } as ArrayList<String>
-                        scanPaths(updatedPaths) {
+                        scanPathsRecursively(updatedPaths) {
                             runOnUiThread {
                                 copyMoveListener.copySucceeded(false, fileDirItems.size * 2 == updatedFiles.size, destination)
                             }
