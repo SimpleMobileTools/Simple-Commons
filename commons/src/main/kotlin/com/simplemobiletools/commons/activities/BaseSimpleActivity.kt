@@ -265,7 +265,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                                 if (!baseConfig.keepLastModified) {
                                     newFile.setLastModified(System.currentTimeMillis())
                                 }
-                                updateInMediaStore(oldFileDirItem.path, newFile.absolutePath)
                                 updatedFiles.add(newFile.toFileDirItem(applicationContext))
                             }
                         }
