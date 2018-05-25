@@ -53,8 +53,6 @@ class FastScroller : FrameLayout {
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
 
     fun setViews(recyclerView: RecyclerView, swipeRefreshLayout: SwipeRefreshLayout? = null, callback: ((Int) -> Unit)? = null) {
-        currScrollX = 0
-        currScrollY = 0
         this.recyclerView = recyclerView
         this.swipeRefreshLayout = swipeRefreshLayout
         tinyMargin = context.resources.getDimension(R.dimen.tiny_margin)
