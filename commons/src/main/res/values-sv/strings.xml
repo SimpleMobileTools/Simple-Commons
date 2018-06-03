@@ -8,14 +8,14 @@
     <string name="an_error_occurred">Ett fel har uppstått: %s</string>
     <string name="open_with">Öppna med</string>
     <string name="no_app_found">Ingen giltig app hittades</string>
-    <string name="set_as">Ange som</string>
+    <string name="set_as">Använd som</string>
     <string name="value_copied_to_clipboard">Värdet har kopierats till urklipp</string>
     <string name="unknown">Okänd</string>
     <string name="always">Alltid</string>
     <string name="never">Aldrig</string>
     <string name="details">Information</string>
     <string name="notes">Anteckningar</string>
-    <string name="deleting_folder">Deleting folder \'%s\'</string>
+    <string name="deleting_folder">Tar bort mappen \'%s\'</string>
 
     <!-- Search -->
     <string name="search">Sök</string>
@@ -44,8 +44,8 @@
     <string name="renaming_folder">Byter namn på mappen</string>
     <string name="filename_cannot_be_empty">Du måste ange ett filnamn</string>
     <string name="filename_invalid_characters">Filnamnet innehåller ogiltiga tecken</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
-    <string name="extension_cannot_be_empty">Filändelsen får inte vara tom</string>
+    <string name="filename_invalid_characters_placeholder">Filnamnet \'%s\' innehåller ogiltiga tecken</string>
+    <string name="extension_cannot_be_empty">Filnamnstillägget får inte vara tomt</string>
     <string name="source_file_doesnt_exist">Källfilen %s finns inte</string>
 
     <!-- Copy / Move -->
@@ -109,8 +109,8 @@
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">%d objekt</item>
+        <item quantity="other">%d objekt</item>
     </plurals>
 
     <!-- Storages -->
@@ -146,7 +146,7 @@
     <string name="foreground_color">Förgrundsfärg</string>
     <string name="app_icon_color">Appikonens färg</string>
     <string name="restore_defaults">Återställ förvalda värden</string>
-    <string name="change_color">Change color</string>
+    <string name="change_color">Ändra färg</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Om du ändrar en färg, ändras temat till anpassat tema</string>
     <string name="save">Spara</string>
@@ -198,15 +198,15 @@
     <string name="date_taken">Fotodatum</string>
     <string name="title">Titel</string>
     <string name="filename">Filnamn</string>
-    <string name="extension">Filändelse</string>
+    <string name="extension">Filnamnstillägg</string>
     <string name="ascending">Stigande</string>
     <string name="descending">Fallande</string>
     <string name="use_for_this_folder">Använd bara för denna mapp</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Är du säker på att du vill fortsätta med borttagningen?</string>
-    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s to Recycle Bin?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="deletion_confirmation">Är du säker på att du vill ta bort %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Är du säker på att du vill flytta %s till Papperskorgen?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
     <string name="do_not_ask_again">Fråga inte igen i denna session</string>
     <string name="yes">Ja</string>
     <string name="no">Nej</string>
@@ -327,12 +327,12 @@
     <string name="system_sounds">Systemljud</string>
     <string name="your_sounds">Dina ljud</string>
     <string name="add_new_sound">Lägg till ett nytt ljud</string>
-    <string name="no_sound">No sound</string>
+    <string name="no_sound">Inget ljud</string>
 
     <!-- Settings -->
     <string name="settings">Inställningar</string>
     <string name="customize_colors">Anpassa färger</string>
-    <string name="customize_widget_colors">Customize widget colors</string>
+    <string name="customize_widget_colors">Anpassa widgetens färger</string>
     <string name="use_english_language">Använd engelska</string>
     <string name="avoid_whats_new">Visa inte vad som är nytt vid start</string>
     <string name="show_hidden_items">Visa dolda objekt</string>
@@ -354,20 +354,20 @@
     <string name="use_same_snooze">Använd alltid samma snooze-intervall</string>
     <string name="snooze_time">Snooze-intervall</string>
     <string name="vibrate_on_button_press">Vibrera när jag trycker på knapparna</string>
-    <string name="move_items_to_trash_bin">Move items in Recycle Bin instead of deleting</string>
-    <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
-    <string name="empty_recycle_bin">Empty Recycle Bin</string>
-    <string name="recycle_bin_location">Recycle Bin location</string>
-    <string name="force_portrait_mode">Force portrait mode</string>
+    <string name="move_items_to_trash_bin">Flytta objekt till Papperskorgen istället för att ta bort dem</string>
+    <string name="recycle_bin_cleaning_interval">Rensningsintervall för Papperskorgen</string>
+    <string name="empty_recycle_bin">Töm Papperskorgen</string>
+    <string name="recycle_bin_location">Plats för Papperskorgen</string>
+    <string name="force_portrait_mode">Lås skärmen i stående läge</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighet</string>
     <string name="security">Säkerhet</string>
     <string name="scrolling">Rullning</string>
     <string name="file_operations">Filåtgärder</string>
-    <string name="recycle_bin">Recycle Bin</string>
-    <string name="saving_label">Saving</string>
-    <string name="startup">Startup</string>
+    <string name="recycle_bin">Papperskorgen</string>
+    <string name="saving_label">Sparande</string>
+    <string name="startup">Start</string>
     <string name="text">Text</string>
 
     <!-- Import / Export -->
@@ -401,18 +401,18 @@
     <string name="december">December</string>
 
     <!-- in January -->
-    <string name="in_january">in January</string>
-    <string name="in_february">in February</string>
-    <string name="in_march">in March</string>
-    <string name="in_april">in April</string>
-    <string name="in_may">in May</string>
-    <string name="in_june">in June</string>
-    <string name="in_july">in July</string>
-    <string name="in_august">in August</string>
-    <string name="in_september">in September</string>
-    <string name="in_october">in October</string>
-    <string name="in_november">in November</string>
-    <string name="in_december">in December</string>
+    <string name="in_january">i januari</string>
+    <string name="in_february">i februari</string>
+    <string name="in_march">i mars</string>
+    <string name="in_april">i april</string>
+    <string name="in_may">i maj</string>
+    <string name="in_june">i juni</string>
+    <string name="in_july">i juli</string>
+    <string name="in_august">i augusti</string>
+    <string name="in_september">i september</string>
+    <string name="in_october">i oktober</string>
+    <string name="in_november">i november</string>
+    <string name="in_december">i december</string>
 
     <string name="monday">Måndag</string>
     <string name="tuesday">Tisdag</string>
@@ -464,7 +464,7 @@
         ]]>
     </string>
     <string name="purchase">Köp</string>
-    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
+    <string name="update_thank_you">Uppdatera Simple Thank You till den senaste versionen</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -479,7 +479,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Frågor och svar</string>
-    <string name="before_asking_question">Before you ask a question, please first read the</string>
+    <string name="before_asking_question">Innan du ställer en fråga, läs först</string>
     <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
     <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
         in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
