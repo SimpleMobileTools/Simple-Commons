@@ -15,7 +15,7 @@
     <string name="never">從不</string>
     <string name="details">詳細資訊</string>
     <string name="notes">筆記</string>
-    <string name="deleting_folder">Deleting folder \'%s\'</string>
+    <string name="deleting_folder">資料夾 \'%s\' 刪除中</string>
 
     <!-- Search -->
     <string name="search">搜尋</string>
@@ -326,12 +326,12 @@
     <string name="system_sounds">系統音效</string>
     <string name="your_sounds">你的音效</string>
     <string name="add_new_sound">添加新的音效</string>
-    <string name="no_sound">No sound</string>
+    <string name="no_sound">無音效</string>
 
     <!-- Settings -->
     <string name="settings">設定</string>
     <string name="customize_colors">自訂顏色</string>
-    <string name="customize_widget_colors">Customize widget colors</string>
+    <string name="customize_widget_colors">自訂小工具顏色</string>
     <string name="use_english_language">強制使用英語</string>
     <string name="avoid_whats_new">啟動時不顯示更新了什麼</string>
     <string name="show_hidden_items">顯示隱藏的項目</string>
@@ -357,7 +357,7 @@
     <string name="recycle_bin_cleaning_interval">回收桶清理間隔</string>
     <string name="empty_recycle_bin">空白回收桶</string>
     <string name="recycle_bin_location">回收桶位置</string>
-    <string name="force_portrait_mode">Force portrait mode</string>
+    <string name="force_portrait_mode">強制直向模式</string>
 
     <!-- Setting sections -->
     <string name="visibility">可見度</string>
@@ -365,9 +365,9 @@
     <string name="scrolling">滑動</string>
     <string name="file_operations">檔案操作</string>
     <string name="recycle_bin">回收桶</string>
-    <string name="saving_label">Saving</string>
-    <string name="startup">Startup</string>
-    <string name="text">Text</string>
+    <string name="saving_label">儲存中</string>
+    <string name="startup">啟動</string>
+    <string name="text">文字</string>
 
 
     <!-- Import / Export -->
@@ -401,18 +401,18 @@
     <string name="december">十二月</string>
 
     <!-- in January -->
-    <string name="in_january">in January</string>
-    <string name="in_february">in February</string>
-    <string name="in_march">in March</string>
-    <string name="in_april">in April</string>
-    <string name="in_may">in May</string>
-    <string name="in_june">in June</string>
-    <string name="in_july">in July</string>
-    <string name="in_august">in August</string>
-    <string name="in_september">in September</string>
-    <string name="in_october">in October</string>
-    <string name="in_november">in November</string>
-    <string name="in_december">in December</string>
+    <string name="in_january">在一月</string>
+    <string name="in_february">在二月</string>
+    <string name="in_march">在三月</string>
+    <string name="in_april">在四月</string>
+    <string name="in_may">在五月</string>
+    <string name="in_june">在六月</string>
+    <string name="in_july">在七月</string>
+    <string name="in_august">在八月</string>
+    <string name="in_september">在九月</string>
+    <string name="in_october">在十月</string>
+    <string name="in_november">在十一月</string>
+    <string name="in_december">在十二月</string>
 
     <string name="monday">星期一</string>
     <string name="tuesday">星期二</string>
@@ -464,7 +464,7 @@
         ]]>
     </string>
     <string name="purchase">購買</string>
-    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
+    <string name="update_thank_you">請更新[Simple Thank You]至最新版本</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -479,7 +479,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">常見問題</string>
-    <string name="before_asking_question">Before you ask a question, please first read the</string>
+    <string name="before_asking_question">在你發問之前，請先閱讀</string>
     <string name="faq_1_title_commons">為什麼我在小工具列表中沒看到這應用程式的小工具?</string>
     <string name="faq_1_text_commons">這很可能是因為你把應用程式移動到SD卡。那樣的話，有個隱藏特定程式小工具的Android系統限制存在。
 	    只有一個解決方法，就是經由你的裝置設定，把應用程式移動回內部儲存空間。</string>
