@@ -4,12 +4,12 @@
     <string name="save_as">Guardar como</string>
     <string name="file_saved">Archivo guardado con éxito</string>
     <string name="invalid_file_format">Formato de archivo no válido</string>
-    <string name="out_of_memory_error">Error: sin memória</string>
-    <string name="an_error_occurred">Un error ocurrió: %s</string>
+    <string name="out_of_memory_error">Error: sin memoria</string>
+    <string name="an_error_occurred">Ocurrió un error: %s</string>
     <string name="open_with">Abrir con</string>
     <string name="no_app_found">No se encontró una aplicación válida</string>
     <string name="set_as">Establecer como</string>
-    <string name="value_copied_to_clipboard">Valor copiado en el portapapeles</string>
+    <string name="value_copied_to_clipboard">Valor copiado al portapapeles</string>
     <string name="unknown">Desconocido</string>
     <string name="always">Siempre</string>
     <string name="never">Nunca</string>
@@ -29,8 +29,8 @@
     <!-- Permissions -->
     <string name="no_storage_permissions">Se requiere permiso de almacenamiento</string>
     <string name="no_contacts_permission">Se requiere permiso de Contactos</string>
-    <string name="no_camera_permissions">Se requiere permiso de la cámara</string>
-    <string name="no_audio_permissions">Se requiere permiso de audio</string>
+    <string name="no_camera_permissions">Se requiere permiso para la Cámara</string>
+    <string name="no_audio_permissions">Se requiere permiso de Audio</string>
 
     <!-- Renaming -->
     <string name="rename_file">Renombrar archivo</string>
@@ -61,10 +61,10 @@
     <string name="invalid_destination">No se pudo escribir en el destino elegido</string>
     <string name="please_select_destination">Por favor elige un destino</string>
     <string name="source_and_destination_same">Origen y destino no pueden coincidir</string>
-    <string name="copy_failed">No se pudo copiar los archivos</string>
+    <string name="copy_failed">No se pudieron copiar los archivos</string>
     <string name="copying">Copiando…</string>
     <string name="copying_success">Archivos copiados correctamente</string>
-    <string name="copy_move_failed">Un error ocurrió</string>
+    <string name="copy_move_failed">Ha ocurrido un error</string>
     <string name="moving">Moviendo…</string>
     <string name="moving_success">Archivos movidos correctamente</string>
     <string name="moving_success_partial">Algunos archivos no se pudieron mover</string>
@@ -172,7 +172,7 @@
     <string name="shared">Compartido</string>
 
     <!-- What's new -->
-    <string name="whats_new">Qué hay de nuevo</string>
+    <string name="whats_new">Novedades</string>
     <string name="whats_new_disclaimer">* Sólo las actualizaciones más grandes se enumeran aquí, siempre hay algunas pequeñas mejoras también</string>
 
     <!-- Actionbar items -->
@@ -214,7 +214,7 @@
     <string name="pin">PIN</string>
     <string name="enter_pin">Introduzca PIN</string>
     <string name="please_enter_pin">Por favor introduzca PIN</string>
-    <string name="wrong_pin">PIN erroneo</string>
+    <string name="wrong_pin">PIN erróneo</string>
     <string name="repeat_pin">Repetir PIN</string>
     <string name="pattern">Patrón</string>
     <string name="insert_pattern">Inserte Patrón</string>
@@ -227,7 +227,7 @@
     <string name="authentication_blocked">Autenticación bloqueada, por favor intente de nuevo en un momento</string>
     <string name="no_fingerprints_registered">No tiene huellas dactilares registradas, por favor agregue algunas en la Configuración de su dispositivo</string>
     <string name="go_to_settings">Ir a la configuración</string>
-    <string name="protection_setup_successfully">Se ha agregado la contraseña exitosamente. Por favor, vuelva a instalar la aplicación en caso de que la olvide.</string>
+    <string name="protection_setup_successfully">Se ha agregado la contraseña con éxito. Por favor, vuelva a instalar la aplicación en caso de que la olvide.</string>
     <string name="fingerprint_setup_successfully">Configuración de protección con éxito. Por favor, vuelva a instalar la aplicación en caso de problemas al restablecerla.</string>
 
     <!-- Times -->
@@ -320,7 +320,7 @@
     <!-- Alarms -->
     <string name="alarm">Alarma</string>
     <string name="snooze">Posponer</string>
-    <string name="dismiss">Candelar</string>
+    <string name="dismiss">Cancelar</string>
     <string name="no_reminder">Sin recordatorio</string>
     <string name="at_start">Al inicio</string>
     <string name="system_sounds">Sonidos del sistema</string>
@@ -342,7 +342,7 @@
     <string name="extra_large">Enorme</string>
     <string name="password_protect_hidden_items">Contraseña para proteger los medios ocultos</string>
     <string name="password_protect_whole_app">Contraseña para proteger toda la aplicación</string>
-    <string name="keep_last_modified">Mantener el valor de ultima modificación al copiar/mover/renombrar los archivos</string>
+    <string name="keep_last_modified">Mantener el valor de la última modificación al copiar/mover/renombrar los archivos</string>
     <string name="show_info_bubble">Mostrar una burbuja de información al desplazar elementos arrastrando la barra de desplazamiento</string>
     <string name="prevent_phone_from_sleeping">No dejar dormir el teléfono con la aplicación en primer plano</string>
     <string name="skip_delete_confirmation">Omitir siempre el diálogo de confirmación de eliminación</string>
@@ -363,7 +363,7 @@
     <string name="visibility">Visibilidad</string>
     <string name="security">Seguridad</string>
     <string name="scrolling">Desplazamiento</string>
-    <string name="file_operations">Operaciones de ficheros</string>
+    <string name="file_operations">Operaciones con ficheros</string>
     <string name="recycle_bin">Papelera de reciclaje</string>
     <string name="saving_label">Guardando</string>
     <string name="startup">Puesta en marcha</string>
