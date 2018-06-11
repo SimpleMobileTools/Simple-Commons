@@ -34,4 +34,5 @@ fun ExifInterface.copyTo(destination: ExifInterface) {
             destination.setAttribute(it, value)
         }
     }
+    destination.saveAttributes()
 }
