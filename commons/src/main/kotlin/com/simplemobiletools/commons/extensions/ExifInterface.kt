@@ -6,6 +6,8 @@ fun ExifInterface.copyTo(destination: ExifInterface) {
     val attributes = arrayOf(
             ExifInterface.TAG_APERTURE,
             ExifInterface.TAG_DATETIME,
+            ExifInterface.TAG_DATETIME_DIGITIZED,
+            ExifInterface.TAG_DATETIME_ORIGINAL,
             ExifInterface.TAG_EXPOSURE_TIME,
             ExifInterface.TAG_FLASH,
             ExifInterface.TAG_FOCAL_LENGTH,
