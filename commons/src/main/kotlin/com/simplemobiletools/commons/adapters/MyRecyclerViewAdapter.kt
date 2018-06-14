@@ -35,6 +35,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     private val multiSelector = MultiSelector()
     private var actMode: ActionMode? = null
     private var actBarTextView: TextView? = null
+    private var lastLongPressedItem = -1
 
     abstract fun getActionMenuId(): Int
 
@@ -88,6 +89,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
             notifyItemChanged(i + positionOffset)
         }
         updateTitle(cnt)
+        lastLongPressedItem = -1
     }
 
     protected fun setupDragListener(enable: Boolean) {
@@ -184,12 +186,19 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     private val adapterListener = object : MyAdapterListener {
         override fun toggleItemSelectionAdapter(select: Boolean, position: Int) {
             toggleItemSelection(select, position)
+            lastLongPressedItem = -1
         }
 
         override fun getSelectedPositions() = selectedPositions
 
         override fun itemLongClicked(position: Int) {
             recyclerView.setDragSelectActive(position)
+            lastLongPressedItem = if (lastLongPressedItem == -1) {
+                position
+            } else {
+                selectItemRange(lastLongPressedItem, position, Math.min(lastLongPressedItem, position), Math.max(lastLongPressedItem, position))
+                -1
+            }
         }
     }
 
@@ -228,6 +237,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
             selectedPositions.clear()
             actBarTextView?.text = ""
             actMode = null
+            lastLongPressedItem = -1
         }
     }
 
