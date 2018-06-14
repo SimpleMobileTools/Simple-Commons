@@ -211,6 +211,11 @@
     <string name="yes">Sim</string>
     <string name="no">Não</string>
 
+    <plurals name="delete_warning">
+        <item quantity="one">WARNING: You are deleting a folder</item>
+        <item quantity="other">WARNING: You are deleting %d folders</item>
+    </plurals>
+
     <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">Digite o PIN</string>
@@ -332,9 +337,9 @@
     <!-- Settings -->
     <string name="settings">Definições</string>
     <string name="customize_colors">Personalizar cores</string>
-    <string name="customize_widget_colors">Customize widget colors</string>
+    <string name="customize_widget_colors">Personalizar cores do widget</string>
     <string name="use_english_language">Utilizar aplicação em inglês</string>
-    <string name="avoid_whats_new">Não mostrar as novidades ao iniciar</string>
+    <string name="avoid_whats_new">Não mostrar novidades ao iniciar</string>
     <string name="show_hidden_items">Mostrar itens ocultos</string>
     <string name="font_size">Tamanho do texto</string>
     <string name="small">Pequeno</string>
@@ -366,9 +371,9 @@
     <string name="scrolling">Deslocação</string>
     <string name="file_operations">Operações de ficheiros</string>
     <string name="recycle_bin">Reciclagem</string>
-    <string name="saving_label">Saving</string>
-    <string name="startup">Startup</string>
-    <string name="text">Text</string>
+    <string name="saving_label">Guardar</string>
+    <string name="startup">Arranque</string>
+    <string name="text">Texto</string>
 
     <!-- Import / Export -->
     <string name="importing">A importar…</string>
@@ -401,18 +406,18 @@
     <string name="december">dezembro</string>
 
     <!-- in January -->
-    <string name="in_january">in January</string>
-    <string name="in_february">in February</string>
-    <string name="in_march">in March</string>
-    <string name="in_april">in April</string>
-    <string name="in_may">in May</string>
-    <string name="in_june">in June</string>
-    <string name="in_july">in July</string>
-    <string name="in_august">in August</string>
-    <string name="in_september">in September</string>
-    <string name="in_october">in October</string>
-    <string name="in_november">in November</string>
-    <string name="in_december">in December</string>
+    <string name="in_january">em janeiro</string>
+    <string name="in_february">em fevereiro</string>
+    <string name="in_march">em março</string>
+    <string name="in_april">em abril</string>
+    <string name="in_may">em maio</string>
+    <string name="in_june">em junho</string>
+    <string name="in_july">em julho</string>
+    <string name="in_august">em agosto</string>
+    <string name="in_september">em setembro</string>
+    <string name="in_october">em outubro</string>
+    <string name="in_november">em novembro</string>
+    <string name="in_december">em dezembro</string>
 
     <string name="monday">segunda</string>
     <string name="tuesday">terça</string>
@@ -464,7 +469,7 @@
         ]]>
     </string>
     <string name="purchase">Comprar</string>
-    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
+    <string name="update_thank_you">por favor atualize a aplicação Simple Thank You para a versão mais recente</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">

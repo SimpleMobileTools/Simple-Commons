@@ -191,21 +191,20 @@ fun String.getResolution(): Point? {
     } else if (isVideoFast() || isVideoSlow()) {
         getVideoResolution()
     } else {
-        return null
+        null
     }
 }
 
 fun String.getVideoResolution(): Point? {
-    try {
+    return try {
         val retriever = MediaMetadataRetriever()
         retriever.setDataSource(this)
         val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH).toInt()
         val height = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT).toInt()
-        return Point(width, height)
+        Point(width, height)
     } catch (ignored: Exception) {
-
+        null
     }
-    return null
 }
 
 fun String.getImageResolution(): Point? {

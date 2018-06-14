@@ -76,7 +76,7 @@
 
     <!-- Create new -->
     <string name="create_new">Yeni yarat</string>
-    <string name="folder">Qovluqr</string>
+    <string name="folder">Qovluq</string>
     <string name="file">Fayl</string>
     <string name="create_new_folder">Yeni qovluq yarat</string>
     <string name="name_taken">Eyni adda fayl və ya qovluq artıq mövcuddur</string>
@@ -109,8 +109,8 @@
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">%d fayl</item>
+        <item quantity="other">%d fayl</item>
     </plurals>
 
     <!-- Storages -->
@@ -204,32 +204,37 @@
     <string name="use_for_this_folder">Yalnız bu qovluq üçün işlət</string>
 
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
-    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s to Recycle Bin?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
-    <string name="do_not_ask_again">Do not ask again in this session</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="proceed_with_deletion">Silmə prosesini təsdiqləyirsiniz?</string>
+    <string name="deletion_confirmation">%s faylı silmək istdəyinizə əminsiniz?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">%s\'i zibil qutusuna atmaq istədiyinizə əminsiniz?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="do_not_ask_again">Bu oturumda birdə soruşma</string>
+    <string name="yes">Bəli</string>
+    <string name="no">Xeyr</string>
+
+    <plurals name="delete_warning">
+        <item quantity="one">WARNING: You are deleting a folder</item>
+        <item quantity="other">WARNING: You are deleting %d folders</item>
+    </plurals>
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
-    <string name="repeat_pin">Repeat PIN</string>
-    <string name="pattern">Pattern</string>
-    <string name="insert_pattern">Insert pattern</string>
-    <string name="wrong_pattern">Wrong pattern</string>
-    <string name="repeat_pattern">Repeat pattern</string>
-    <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
-    <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
-    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="enter_pin">PIN\'i daxil edin</string>
+    <string name="please_enter_pin">Xahiş olunur PIN\'i daxil edin</string>
+    <string name="wrong_pin">PIN yanlışdır</string>
+    <string name="repeat_pin">PIN\'i təkrarlayın</string>
+    <string name="pattern">Model</string>
+    <string name="insert_pattern">Model daxil edin</string>
+    <string name="wrong_pattern">Yanlış model</string>
+    <string name="repeat_pattern">Modeli təkrarlayın</string>
+    <string name="fingerprint">Barmaq izi</string>
+    <string name="add_fingerprint">Barmaq izi əlavə et</string>
+    <string name="place_finger">Xahiş olunur barmağınızı barmaq izi sensoru üzərinə yerləşdirin</string>
+    <string name="authentication_failed">Uyğunlaşdırma uğursuzdur</string>
+    <string name="authentication_blocked">Uyğunlaşdırma bloklanıb, biraz sonra yoxlayın</string>
+    <string name="no_fingerprints_registered">Qeydiyyata alınmış heçbir barmaq izi yoxdur, xahiş olunur cihazınızın Parametrlərindən əlavə edəsiniz</string>
+    <string name="go_to_settings">Parametrlərə get</string>
+    <string name="protection_setup_successfully">Şifrə təyini uğurludur. Əgər şifrəni unutsanız, tətbiqi yenidən yükləyin.</string>
+    <string name="fingerprint_setup_successfully">Qoruma təyini uğurludur. Əgər təzələmə problemi yaşasanız, tətbiqi yenidən yükləyin.</string>
 
     <!-- Times -->
     <string name="tomorrow">Sabah</string>
@@ -269,65 +274,65 @@
 
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d saniyə</item>
+        <item quantity="other">%d saniyə</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d dəqiqə</item>
+        <item quantity="other">%d dəqiqə</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d saat</item>
+        <item quantity="other">%d saat</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d second before</item>
-        <item quantity="other">%d seconds before</item>
+        <item quantity="one">%d saniyə əvvəl</item>
+        <item quantity="other">%d saniyə əvvəl</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">%d minute before</item>
-        <item quantity="other">%d minutes before</item>
+        <item quantity="one">%d dəqiqə əvvəl</item>
+        <item quantity="other">%d dəqiqə əvvəl</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">%d hour before</item>
-        <item quantity="other">%d hours before</item>
+        <item quantity="one">%d saat əvvəl</item>
+        <item quantity="other">%d saat əvvəl</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">%d day before</item>
-        <item quantity="other">%d days before</item>
+        <item quantity="one">%d gün əvvəl</item>
+        <item quantity="other">%d gün əvvəl</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d saniyə</item>
+        <item quantity="other">%d saniyə</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d dəqiqə</item>
+        <item quantity="other">%d dəqiqə</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d saat</item>
+        <item quantity="other">%d saat</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
-    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+    <string name="alarm_goes_off_in">Zəng dayanana qədər qalan vaxt:\n%s</string>
+    <string name="alarm_warning">Xahiş olunur zəngə istinad etməzdən əvvəl işləyib işləmədiyini yoxlayın. Güc qoruma parametrləri onun işləməsində problem yarada bilər.</string>
+    <string name="reminder_warning">Xahiş olunur xatırladıcılara istinad etməzdən əvvəl işləyib işləmədiyini yoxlayın. Güc qoruma parametrləri onların işləməsində problem yarada bilər.</string>
 
     <!-- Alarms -->
-    <string name="alarm">Alarm</string>
-    <string name="snooze">Snooze</string>
-    <string name="dismiss">Dismiss</string>
-    <string name="no_reminder">No reminder</string>
-    <string name="at_start">At start</string>
-    <string name="system_sounds">System sounds</string>
-    <string name="your_sounds">Your sounds</string>
-    <string name="add_new_sound">Add a new sound</string>
-    <string name="no_sound">No sound</string>
+    <string name="alarm">Zəng</string>
+    <string name="snooze">Yuxu</string>
+    <string name="dismiss">Burax</string>
+    <string name="no_reminder">Xatırladıcı yoxdur</string>
+    <string name="at_start">Başlanğıcda</string>
+    <string name="system_sounds">Sistem səsləri</string>
+    <string name="your_sounds">Sizin səsləriniz</string>
+    <string name="add_new_sound">Yeni səs əlavə et</string>
+    <string name="no_sound">Səs yoxdur</string>
 
     <!-- Settings -->
     <string name="settings">Parametrlər</string>
@@ -361,110 +366,110 @@
     <string name="force_portrait_mode">Force portrait mode</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
-    <string name="recycle_bin">Recycle Bin</string>
-    <string name="saving_label">Saving</string>
-    <string name="startup">Startup</string>
-    <string name="text">Text</string>
+    <string name="visibility">Görünürlük</string>
+    <string name="security">Qoruma</string>
+    <string name="scrolling">Sürüşdürmə</string>
+    <string name="file_operations">Fayl əməliyyatları</string>
+    <string name="recycle_bin">Zibil Qutusu</string>
+    <string name="saving_label">Saxlama</string>
+    <string name="startup">Başlanğıc</string>
+    <string name="text">Mətn</string>
 
     <!-- Import / Export -->
-    <string name="importing">Importing…</string>
-    <string name="exporting">Exporting…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing">Daxil edilir…</string>
+    <string name="exporting">Çıxarılır…</string>
+    <string name="importing_successful">Daxiletmə uğurludur</string>
+    <string name="exporting_successful">Çıxarış uğurludur</string>
+    <string name="importing_failed">Daxiletmə uğursuzdur</string>
+    <string name="exporting_failed">Çıxarış uğursuzdur</string>
+    <string name="importing_some_entries_failed">Bəzi girişləri daxil etmək olmur</string>
+    <string name="exporting_some_entries_failed">Bəzi girişləri çıxarmaq olmur</string>
+    <string name="no_entries_for_exporting">Çıxarış üçün heçbir giriş tapılmadı</string>
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="confirm_otg_storage_access_text">Xahiş edirik icazə vermək üçün sonrakı ekranda çıxan OTG cihazın root qovluğunu seçin</string>
+    <string name="wrong_root_selected_otg">Yanlış qovluq seçilib, xahiş olunur OTG cihazın root qovluğunu seçin</string>
 
     <!-- Dates -->
-    <string name="january">January</string>
-    <string name="february">February</string>
-    <string name="march">March</string>
-    <string name="april">April</string>
+    <string name="january">Yanvar</string>
+    <string name="february">Fevral</string>
+    <string name="march">Mart</string>
+    <string name="april">Aprel</string>
     <string name="may">May</string>
-    <string name="june">June</string>
-    <string name="july">July</string>
-    <string name="august">August</string>
-    <string name="september">September</string>
-    <string name="october">October</string>
-    <string name="november">November</string>
-    <string name="december">December</string>
+    <string name="june">İyun</string>
+    <string name="july">İyul</string>
+    <string name="august">Avqust</string>
+    <string name="september">Sentyabr</string>
+    <string name="october">Oktyabr</string>
+    <string name="november">Noyabr</string>
+    <string name="december">Dekabr</string>
 
     <!-- in January -->
-    <string name="in_january">in January</string>
-    <string name="in_february">in February</string>
-    <string name="in_march">in March</string>
-    <string name="in_april">in April</string>
-    <string name="in_may">in May</string>
-    <string name="in_june">in June</string>
-    <string name="in_july">in July</string>
-    <string name="in_august">in August</string>
-    <string name="in_september">in September</string>
-    <string name="in_october">in October</string>
-    <string name="in_november">in November</string>
-    <string name="in_december">in December</string>
+    <string name="in_january">Yanvarda</string>
+    <string name="in_february">Fevralda</string>
+    <string name="in_march">Martda</string>
+    <string name="in_april">Apreldə</string>
+    <string name="in_may">Mayda</string>
+    <string name="in_june">İyunda</string>
+    <string name="in_july">İyulda</string>
+    <string name="in_august">Avqustda</string>
+    <string name="in_september">Sentyabrda</string>
+    <string name="in_october">Oktyabrda</string>
+    <string name="in_november">Noyabrda</string>
+    <string name="in_december">Dekabrda</string>
 
-    <string name="monday">Monday</string>
-    <string name="tuesday">Tuesday</string>
-    <string name="wednesday">Wednesday</string>
-    <string name="thursday">Thursday</string>
-    <string name="friday">Friday</string>
-    <string name="saturday">Saturday</string>
-    <string name="sunday">Sunday</string>
+    <string name="monday">Bazar Ertəsi</string>
+    <string name="tuesday">Çərşənbə Axşamı</string>
+    <string name="wednesday">Çərşənbə</string>
+    <string name="thursday">Cümə Axşamı</string>
+    <string name="friday">Cümə</string>
+    <string name="saturday">Şənbə</string>
+    <string name="sunday">Bazar</string>
 
-    <string name="monday_letter">M</string>
-    <string name="tuesday_letter">T</string>
-    <string name="wednesday_letter">W</string>
-    <string name="thursday_letter">T</string>
-    <string name="friday_letter">F</string>
-    <string name="saturday_letter">S</string>
-    <string name="sunday_letter">S</string>
+    <string name="monday_letter">B.E</string>
+    <string name="tuesday_letter">Ç.A</string>
+    <string name="wednesday_letter">Ç</string>
+    <string name="thursday_letter">C.A</string>
+    <string name="friday_letter">C</string>
+    <string name="saturday_letter">Ş</string>
+    <string name="sunday_letter">B</string>
 
-    <string name="monday_short">Mon</string>
-    <string name="tuesday_short">Tue</string>
-    <string name="wednesday_short">Wed</string>
-    <string name="thursday_short">Thu</string>
-    <string name="friday_short">Fri</string>
-    <string name="saturday_short">Sat</string>
-    <string name="sunday_short">Sun</string>
+    <string name="monday_short">Bzr.E</string>
+    <string name="tuesday_short">Çrş.A</string>
+    <string name="wednesday_short">Çrş</string>
+    <string name="thursday_short">Cü.A</string>
+    <string name="friday_short">Cü</string>
+    <string name="saturday_short">Şnb</string>
+    <string name="sunday_short">Bzr</string>
 
     <!-- About -->
-    <string name="about">About</string>
-    <string name="website_label">For the source codes visit</string>
-    <string name="email_label">Send your feedback or suggestions to</string>
-    <string name="more_apps_underlined"><u>More apps</u></string>
-    <string name="third_party_licences_underlined"><u>Third party licences</u></string>
-    <string name="invite_friends_underlined"><u>Invite friends</u></string>
-    <string name="share_text">Hey, come check out %1$s at %2$s</string>
-    <string name="invite_via">Invite via</string>
-    <string name="rate_us_underlined"><u>Rate us</u></string>
-    <string name="donate">Donate</string>
-    <string name="donate_underlined"><u>Donate</u></string>
-    <string name="follow_us">Follow us</string>
-    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="additional_info">Additional info</string>
-    <string name="app_version">App version: %s</string>
-    <string name="device_os">Device OS: %s</string>
+    <string name="about">Haqqında</string>
+    <string name="website_label">Kök koda keçiş üçün</string>
+    <string name="email_label">Geri dönüş və tövsiyələriniz göndərin</string>
+    <string name="more_apps_underlined"><u>Daha çox tətbiq</u></string>
+    <string name="third_party_licences_underlined"><u>Üçüncü partiya lisenziyaları</u></string>
+    <string name="invite_friends_underlined"><u>Dostları dəvət et</u></string>
+    <string name="share_text">Ey! gəl sən də %2$s\'də %1$s\'ə nəzər yetir!</string>
+    <string name="invite_via">Dəvət et</string>
+    <string name="rate_us_underlined"><u>Dəyərləndir</u></string>
+    <string name="donate">İanə et</string>
+    <string name="donate_underlined"><u>İanə et</u></string>
+    <string name="follow_us">İzlə</string>
+    <string name="copyright">v %1$s\nMüəllif Hüquqları © Simple Mobile Tools %2$d</string>
+    <string name="additional_info">Əlavə məlumat</string>
+    <string name="app_version">Tətbiq versiyası: %s</string>
+    <string name="device_os">Cihaz ƏS: %s</string>
     <string name="donate_please">
         <![CDATA[
-            Hello,<br><br>
-            hope you are enjoying the app. It contains no ads, please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
+            Salam,<br><br>
+            arzu edirəm tətbiqdən zövq alırsan. Reklam ehtiva etmir, please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
             You can find more donating options <a href="https://simplemobiletools.com/donate">here</a>.<br><br>
             Thank you!
         ]]>
     </string>
-    <string name="purchase">Purchase</string>
-    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
+    <string name="purchase">Ödəniş Et</string>
+    <string name="update_thank_you">Xahiş olunur Sadə Təşəkkür tətbiqini ən son versiyaya yeniləyin</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">

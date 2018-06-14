@@ -213,6 +213,11 @@
     <string name="yes">Da</string>
     <string name="no">Ne</string>
 
+    <plurals name="delete_warning">
+        <item quantity="one">WARNING: You are deleting a folder</item>
+        <item quantity="other">WARNING: You are deleting %d folders</item>
+    </plurals>
+
     <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">Unesite PIN</string>

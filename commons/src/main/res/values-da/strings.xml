@@ -211,6 +211,11 @@
     <string name="yes">Ja</string>
     <string name="no">Nej</string>
 
+    <plurals name="delete_warning">
+        <item quantity="one">ADVARSEL: Du sletter en mappe</item>
+        <item quantity="other">ADVARSEL: Du sletter %d mapper</item>
+    </plurals>
+
     <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">Indtast PIN</string>

@@ -1,11 +1,14 @@
 package com.simplemobiletools.commons.extensions
 
 import android.media.ExifInterface
+import java.io.IOException
 
 fun ExifInterface.copyTo(destination: ExifInterface) {
     val attributes = arrayOf(
             ExifInterface.TAG_APERTURE,
             ExifInterface.TAG_DATETIME,
+            ExifInterface.TAG_DATETIME_DIGITIZED,
+            ExifInterface.TAG_DATETIME_ORIGINAL,
             ExifInterface.TAG_EXPOSURE_TIME,
             ExifInterface.TAG_FLASH,
             ExifInterface.TAG_FOCAL_LENGTH,
@@ -31,5 +34,10 @@ fun ExifInterface.copyTo(destination: ExifInterface) {
         if (value != null) {
             destination.setAttribute(it, value)
         }
+    }
+
+    try {
+        destination.saveAttributes()
+    } catch (ignored: IOException) {
     }
 }

@@ -243,7 +243,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
             if (source.size == copiedSize) {
                 mTransferredFiles.add(source)
-                activity.scanPath(destination.path) {
+                activity.scanPathRecursively(destination.path) {
                     if (activity.baseConfig.keepLastModified) {
                         copyOldLastModified(source.path, destination.path)
                     }
@@ -277,7 +277,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 }
 
                 selectionArgs = arrayOf(destinationPath)
-                activity.scanPath(destinationPath) {
+                activity.scanPathRecursively(destinationPath) {
                     activity.applicationContext.contentResolver.update(uri, values, selection, selectionArgs)
                 }
             }

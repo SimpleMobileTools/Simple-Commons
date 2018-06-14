@@ -488,20 +488,20 @@ private fun deleteRecursively(file: File): Boolean {
     return file.delete()
 }
 
-fun Activity.scanFile(file: File, callback: (() -> Unit)? = null) {
-    applicationContext.scanFile(file, callback)
+fun Activity.scanFileRecursively(file: File, callback: (() -> Unit)? = null) {
+    applicationContext.scanFileRecursively(file, callback)
 }
 
-fun Activity.scanPath(path: String, callback: (() -> Unit)? = null) {
-    applicationContext.scanPath(path, callback)
+fun Activity.scanPathRecursively(path: String, callback: (() -> Unit)? = null) {
+    applicationContext.scanPathRecursively(path, callback)
 }
 
-fun Activity.scanFiles(files: ArrayList<File>, callback: (() -> Unit)? = null) {
-    applicationContext.scanFiles(files, callback)
+fun Activity.scanFilesRecursively(files: ArrayList<File>, callback: (() -> Unit)? = null) {
+    applicationContext.scanFilesRecursively(files, callback)
 }
 
-fun Activity.scanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
-    applicationContext.scanPaths(paths, callback)
+fun Activity.scanPathsRecursively(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
+    applicationContext.scanPathsRecursively(paths, callback)
 }
 
 fun Activity.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
@@ -551,13 +551,13 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                 runOnUiThread {
                     callback?.invoke(true)
                 }
+                scanPathRecursively(newPath)
             }
         } else {
             if (!baseConfig.keepLastModified) {
                 File(newPath).setLastModified(System.currentTimeMillis())
             }
-            updateInMediaStore(oldPath, newPath)
-            scanPaths(arrayListOf(oldPath, newPath)) {
+            scanPathsRecursively(arrayListOf(newPath)) {
                 runOnUiThread {
                     callback?.invoke(true)
                 }

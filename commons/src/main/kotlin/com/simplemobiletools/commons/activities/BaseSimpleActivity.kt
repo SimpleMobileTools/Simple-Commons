@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.app.Activity
 import android.app.ActivityManager
+import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.graphics.drawable.ColorDrawable
@@ -90,6 +91,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             true
         }
         else -> super.onOptionsItemSelected(item)
+    }
+
+    override fun attachBaseContext(newBase: Context) {
+        if (newBase.baseConfig.useEnglish) {
+            super.attachBaseContext(MyContextWrapper(newBase).wrap(newBase, "en"))
+        } else {
+            super.attachBaseContext(newBase)
+        }
     }
 
     fun updateBackgroundColor(color: Int = baseConfig.backgroundColor) {
@@ -265,13 +274,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                                 if (!baseConfig.keepLastModified) {
                                     newFile.setLastModified(System.currentTimeMillis())
                                 }
-                                updateInMediaStore(oldFileDirItem.path, newFile.absolutePath)
                                 updatedFiles.add(newFile.toFileDirItem(applicationContext))
                             }
                         }
 
                         val updatedPaths = updatedFiles.map { it.path } as ArrayList<String>
-                        scanPaths(updatedPaths) {
+                        scanPathsRecursively(updatedPaths) {
                             runOnUiThread {
                                 copyMoveListener.copySucceeded(false, fileDirItems.size * 2 == updatedFiles.size, destination)
                             }
