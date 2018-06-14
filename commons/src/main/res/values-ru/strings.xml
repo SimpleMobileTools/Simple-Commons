@@ -214,8 +214,8 @@
     <string name="no">Нет</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting a folder</item>
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="one">ПРЕДУПРЕЖДЕНИЕ: вы удаляете папку</item>
+        <item quantity="other">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папки</item>
     </plurals>
 
     <!-- Password protection -->
@@ -515,7 +515,7 @@
     <string name="faq_1_title_commons">Почему я не вижу виджет этого приложения в списке виджетов?</string>
     <string name="faq_1_text_commons">Это, скорее всего, потому, что вы перенесли приложение на SD-карту. Существует ограничение системы Android, которое скрывает виджеты приложения
         в этом случае. Единственное решение — переместить приложение обратно во внутреннее хранилище через настройки вашего устройства.</string>
-    <string name="faq_2_title_commons">Я хочу поддержать вас, но я не могу пожертвовать деньги. Есть ли что-нибудь ещё, что я могу сделать?</string>
+    <string name="faq_2_title_commons">Я хочу поддержать вас, но могу пожертвовать деньги. Есть ли что-нибудь ещё, что я могу сделать?</string>
     <string name="faq_2_text_commons">Да, конечно. Вы можете распространять информацию о приложениях или давать хорошие отзывы и оценки. Также вы можете помочь, переведя приложения на новый язык или просто обновив существующие переводы.
         Руководство можно найти по адресу https://github.com/SimpleMobileTools/General-Discussion или просто написать мне короткое сообщение на hello@simplemobiletools.com , если вам нужна помощь.</string>
     <string name="faq_3_title_commons">Я по ошибке удалил некоторые файлы, как их восстановить?</string>
