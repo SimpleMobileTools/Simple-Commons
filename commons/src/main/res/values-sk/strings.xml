@@ -213,6 +213,12 @@
     <string name="yes">Áno</string>
     <string name="no">Nie</string>
 
+    <plurals name="delete_warning">
+        <item quantity="one">UPOZORNENIE: Chystáte sa vymazať priečinok</item>
+        <item quantity="few">UPOZORNENIE: Chystáte sa vymazať %d priečinky</item>
+        <item quantity="other">UPOZORNENIE: Chystáte sa vymazať %d priečinkov</item>
+    </plurals>
+
     <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">Zadajte PIN</string>

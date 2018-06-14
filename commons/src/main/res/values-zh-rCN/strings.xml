@@ -211,6 +211,11 @@
     <string name="yes">是</string>
     <string name="no">否</string>
 
+    <plurals name="delete_warning">
+        <item quantity="one">WARNING: You are deleting a folder</item>
+        <item quantity="other">WARNING: You are deleting %d folders</item>
+    </plurals>
+
     <!-- Password protection -->
     <string name="pin">密码</string>
     <string name="enter_pin">输入密码</string>
