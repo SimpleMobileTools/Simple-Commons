@@ -136,6 +136,7 @@ const val SORT_BY_ARTIST = 4096
 const val SORT_BY_DURATION = 8192
 
 // security
+const val WAS_PROTECTION_HANDLED = "was_protection_handled"
 const val PROTECTION_PATTERN = 0
 const val PROTECTION_PIN = 1
 const val PROTECTION_FINGERPRINT = 2
