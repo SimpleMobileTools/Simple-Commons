@@ -212,8 +212,8 @@
     <string name="no">Hayır</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting a folder</item>
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="one">UYARI: Bir klasör siliyorsunuz</item>
+        <item quantity="other">UYARI: %d klasör siliyorsunuz</item>
     </plurals>
 
     <!-- Password protection -->
