@@ -27,7 +27,7 @@ class SecurityDialog(val activity: Activity, val requiredHash: String, val showT
         view.apply {
             viewPager = findViewById(R.id.dialog_tab_view_pager)
             viewPager.offscreenPageLimit = 2
-            tabsAdapter = PasswordTypesAdapter(context, requiredHash, this@SecurityDialog)
+            tabsAdapter = PasswordTypesAdapter(context, requiredHash, this@SecurityDialog, dialog_scrollview)
             viewPager.adapter = tabsAdapter
             viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
                 override fun onPageScrollStateChanged(state: Int) {

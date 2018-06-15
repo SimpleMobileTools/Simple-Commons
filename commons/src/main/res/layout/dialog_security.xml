@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<com.simplemobiletools.commons.views.MyScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/dialog_scrollview"
     android:layout_width="match_parent"
@@ -42,4 +42,4 @@
             android:layout_below="@+id/dialog_tab_layout"/>
 
     </RelativeLayout>
-</ScrollView>
+</com.simplemobiletools.commons.views.MyScrollView>

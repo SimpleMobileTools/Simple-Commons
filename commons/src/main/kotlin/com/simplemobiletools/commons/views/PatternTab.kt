@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.views
 import android.content.Context
 import android.os.Handler
 import android.util.AttributeSet
+import android.view.MotionEvent
 import android.widget.RelativeLayout
 import com.andrognito.patternlockview.PatternLockView
 import com.andrognito.patternlockview.listener.PatternLockViewListener
@@ -19,12 +20,22 @@ import kotlinx.android.synthetic.main.tab_pattern.view.*
 class PatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs), SecurityTab {
     private var hash = ""
     private var requiredHash = ""
+    private var scrollView: MyScrollView? = null
     lateinit var hashListener: HashListener
 
     override fun onFinishInflate() {
         super.onFinishInflate()
         val textColor = context.baseConfig.textColor
         context.updateTextColors(pattern_lock_holder)
+
+        pattern_lock_view.setOnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> scrollView?.isScrollable = false
+                MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> scrollView?.isScrollable = true
+            }
+            false
+        }
+
         pattern_lock_view.correctStateColor = context.baseConfig.primaryColor
         pattern_lock_view.normalStateColor = textColor
         pattern_lock_view.addPatternLockListener(object : PatternLockViewListener {
@@ -36,13 +47,13 @@ class PatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(context
 
             override fun onStarted() {}
 
-            override fun onProgress(progressPattern: MutableList<PatternLockView.Dot>?) {
-            }
+            override fun onProgress(progressPattern: MutableList<PatternLockView.Dot>?) {}
         })
     }
 
-    override fun initTab(requiredHash: String, listener: HashListener) {
+    override fun initTab(requiredHash: String, listener: HashListener, scrollView: MyScrollView) {
         this.requiredHash = requiredHash
+        this.scrollView = scrollView
         hash = requiredHash
         hashListener = listener
     }
