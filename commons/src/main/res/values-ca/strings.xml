@@ -212,7 +212,7 @@
 
     <plurals name="delete_warning">
         <item quantity="one">ADVERTIMENT: s\'eliminarà una carpeta</item>
-        <item quantity="other">ADVERTIMENT: s\'eliminaran %d carpetes WARNING: You are deleting %d folders</item>
+        <item quantity="other">ADVERTIMENT: s\'eliminaran %d carpetes</item>
     </plurals>
 
     <!-- Password protection -->
