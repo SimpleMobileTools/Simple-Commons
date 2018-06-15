@@ -212,8 +212,8 @@
     <string name="no">Nee</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting a folder</item>
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="one">WAARSCHUWING: Hele map zal worden verwijderd</item>
+        <item quantity="other">WAARSCHUWING: %d mappen zullen worden verwijderd</item>
     </plurals>
 
     <!-- Password protection -->
