@@ -9,10 +9,7 @@ import android.media.MediaMetadataRetriever
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
-import com.simplemobiletools.commons.helpers.OTG_PATH
-import com.simplemobiletools.commons.helpers.audioExtensions
-import com.simplemobiletools.commons.helpers.photoExtensions
-import com.simplemobiletools.commons.helpers.videoExtensions
+import com.simplemobiletools.commons.helpers.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -49,13 +46,14 @@ fun String.isPng() = endsWith(".png", true)
 
 fun String.isJpg() = endsWith(".jpg", true) or endsWith(".jpeg")
 
-fun String.isDng() = endsWith(".dng", true)
+fun String.isRaw() = endsWith(".dng", true)
 
 // fast extension checks, not guaranteed to be accurate
 fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }
 
 fun String.isImageFast() = photoExtensions.any { endsWith(it, true) }
 fun String.isAudioFast() = audioExtensions.any { endsWith(it, true) }
+fun String.isRawFast() = rawExtensions.any { endsWith(it, true) }
 
 fun String.isImageSlow() = isImageFast() || getMimeType().startsWith("image")
 fun String.isVideoSlow() = isVideoFast() || getMimeType().startsWith("video")
