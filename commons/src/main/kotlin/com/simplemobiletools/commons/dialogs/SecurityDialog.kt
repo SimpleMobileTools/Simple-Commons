@@ -79,7 +79,7 @@ class SecurityDialog(val activity: Activity, val requiredHash: String, val showT
 
         dialog = AlertDialog.Builder(activity)
                 .setOnCancelListener { onCancelFail() }
-                .setNegativeButton(R.string.cancel, { dialog, which -> onCancelFail() })
+                .setNegativeButton(R.string.cancel) { dialog, which -> onCancelFail() }
                 .create().apply {
                     activity.setupDialogStuff(view, this)
                 }

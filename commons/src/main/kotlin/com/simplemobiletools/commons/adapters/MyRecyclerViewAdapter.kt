@@ -196,7 +196,11 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
             lastLongPressedItem = if (lastLongPressedItem == -1) {
                 position
             } else {
-                selectItemRange(lastLongPressedItem, position, Math.min(lastLongPressedItem, position), Math.max(lastLongPressedItem, position))
+                val min = Math.min(lastLongPressedItem, position)
+                val max = Math.max(lastLongPressedItem, position)
+                for (i in min..max) {
+                    toggleItemSelection(true, i)
+                }
                 -1
             }
         }
