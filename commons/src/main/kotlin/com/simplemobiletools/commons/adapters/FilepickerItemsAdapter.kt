@@ -31,7 +31,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
 
     override fun prepareItemSelection(viewHolder: ViewHolder) {}
 
-    override fun markItemHolderSelection(select: Boolean, viewHolder: ViewHolder?) {}
+    override fun markViewHolderSelection(select: Boolean, viewHolder: ViewHolder?) {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.filepicker_list_item, parent)
 
