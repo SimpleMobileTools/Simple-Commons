@@ -28,7 +28,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     protected var primaryColor = baseConfig.primaryColor
     protected var textColor = baseConfig.textColor
     protected var backgroundColor = baseConfig.backgroundColor
-    protected var itemViews = SparseArray<View>()
+    protected var itemHolders = SparseArray<ViewHolder>()
     protected val selectedPositions = HashSet<Int>()
     protected var positionOffset = 0
 
@@ -39,9 +39,9 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     abstract fun getActionMenuId(): Int
 
-    abstract fun prepareItemSelection(view: View)
+    abstract fun prepareItemSelection(viewHolder: ViewHolder)
 
-    abstract fun markItemSelection(select: Boolean, view: View?)
+    abstract fun markItemHolderSelection(select: Boolean, viewHolder: ViewHolder?)
 
     abstract fun prepareActionMode(menu: Menu)
 
@@ -53,15 +53,15 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     protected fun toggleItemSelection(select: Boolean, pos: Int) {
         if (select) {
-            if (itemViews[pos] != null) {
-                prepareItemSelection(itemViews[pos])
-                selectedPositions.add(pos)
+            if (itemHolders[pos] != null) {
+                prepareItemSelection(itemHolders[pos])
             }
+            selectedPositions.add(pos)
         } else {
             selectedPositions.remove(pos)
         }
 
-        markItemSelection(select, itemViews[pos])
+        markItemHolderSelection(select, itemHolders[pos])
 
         if (selectedPositions.isEmpty()) {
             finishActMode()
@@ -236,7 +236,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         override fun onDestroyActionMode(actionMode: ActionMode?) {
             super.onDestroyActionMode(actionMode)
             selectedPositions.forEach {
-                markItemSelection(false, itemViews[it])
+                markItemHolderSelection(false, itemHolders[it])
             }
             selectedPositions.clear()
             actBarTextView?.text = ""
@@ -251,23 +251,40 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     }
 
     protected fun bindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int, view: View) {
-        itemViews.put(position, view)
+        itemHolders.put(position, holder)
         toggleItemSelection(selectedPositions.contains(position), position)
         holder.itemView.tag = holder
     }
 
+    override fun onViewRecycled(holder: ViewHolder) {
+        super.onViewRecycled(holder)
+        val pos = itemHolders.indexOfValue(holder)
+        try {
+            if (pos != -1) {
+                itemHolders.removeAt(pos)
+            }
+        } catch (ignored: ArrayIndexOutOfBoundsException) {
+        }
+    }
+
     protected fun removeSelectedItems() {
+        val newViewHolders = SparseArray<ViewHolder>()
+        val cnt = itemHolders.size()
+        for (i in 0..cnt) {
+            if (selectedPositions.contains(i)) {
+                continue
+            }
+
+            val view = itemHolders.get(i, null)
+            val newIndex = i - selectedPositions.count { it <= i }
+            newViewHolders.put(newIndex, view)
+        }
+        itemHolders = newViewHolders
+
         selectedPositions.sortedDescending().forEach {
             notifyItemRemoved(it + positionOffset)
-            itemViews.put(it, null)
         }
 
-        val newItems = SparseArray<View>()
-        (0 until itemViews.size())
-                .filter { itemViews[it] != null }
-                .forEachIndexed { curIndex, i -> newItems.put(curIndex, itemViews[i]) }
-
-        itemViews = newItems
         finishActMode()
         fastScroller?.measureRecyclerView()
     }
