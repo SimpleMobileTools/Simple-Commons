@@ -8,7 +8,7 @@ import com.simplemobiletools.commons.helpers.videoExtensions
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 
-fun File.isImageVideoGif() = absolutePath.isImageFast() || absolutePath.isVideoFast() || absolutePath.isGif()
+fun File.isImageVideoGif() = absolutePath.isImageFast() || absolutePath.isVideoFast() || absolutePath.isGif() || absolutePath.isRawFast()
 fun File.isGif() = absolutePath.endsWith(".gif", true)
 fun File.isVideoFast() = videoExtensions.any { absolutePath.endsWith(it, true) }
 fun File.isImageFast() = photoExtensions.any { absolutePath.endsWith(it, true) }
