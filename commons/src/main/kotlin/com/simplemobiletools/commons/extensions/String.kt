@@ -46,8 +46,6 @@ fun String.isPng() = endsWith(".png", true)
 
 fun String.isJpg() = endsWith(".jpg", true) or endsWith(".jpeg")
 
-fun String.isRaw() = endsWith(".dng", true)
-
 // fast extension checks, not guaranteed to be accurate
 fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }
 
