@@ -214,8 +214,9 @@
     <string name="no">Nie</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting a folder</item>
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="one">UWAGA: usuwasz folder</item>
+        <item quantity="few">UWAGA: usuwasz %d foldery</item>
+        <item quantity="other">UWAGA: usuwasz %d folderów</item>
     </plurals>
 
     <!-- Password protection -->
@@ -353,8 +354,8 @@
 
     <!-- Settings -->
     <string name="settings">Ustawienia</string>
-    <string name="customize_colors">Dostosuj kolory</string>
-    <string name="customize_widget_colors">Customize widget colors</string>
+    <string name="customize_colors">Dostosuj kolory aplikacji</string>
+    <string name="customize_widget_colors">Dostosuj kolory widżetu</string>
     <string name="use_english_language">Wymuś używanie przez aplikację języka angielskiego</string>
     <string name="avoid_whats_new">Nie pokazuj okna \'Co nowego\' po uruchomieniu aplikacji</string>
     <string name="show_hidden_items">Pokazuj ukryte elementy</string>
@@ -494,7 +495,7 @@
             Cześć!<br><br>
             Dajemy Ci znać, że ostatnio wyszła nowa aplikacja:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-            Możesz ją pobrać, klikając tytuł.<br><br>
+            Możesz ją pobrać, klikając powyższy odnośnik.<br><br>
             Dziękujemy!
         ]]>
     </string>
