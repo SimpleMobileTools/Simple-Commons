@@ -17,6 +17,12 @@
     <string name="notes">Anteckningar</string>
     <string name="deleting_folder">Tar bort mappen \'%s\'</string>
 
+    <!-- Favorites -->
+    <string name="favorites">Favoriter</string>
+    <string name="add_favorites">Lägg till favoriter</string>
+    <string name="add_to_favorites">Lägg till i favoriter</string>
+    <string name="remove_from_favorites">Ta bort från favoriter</string>
+
     <!-- Search -->
     <string name="search">Sök</string>
     <string name="type_2_characters">Skriv in minst två tecken för att starta sökningen.</string>

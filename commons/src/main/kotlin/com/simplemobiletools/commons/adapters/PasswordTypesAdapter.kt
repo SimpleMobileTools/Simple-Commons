@@ -10,15 +10,16 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.isFingerPrintSensorAvailable
 import com.simplemobiletools.commons.interfaces.HashListener
 import com.simplemobiletools.commons.interfaces.SecurityTab
+import com.simplemobiletools.commons.views.MyScrollView
 
-class PasswordTypesAdapter(val context: Context, val requiredHash: String, val hashListener: HashListener) : PagerAdapter() {
+class PasswordTypesAdapter(val context: Context, val requiredHash: String, val hashListener: HashListener, val scrollView: MyScrollView) : PagerAdapter() {
     private val tabs = SparseArray<SecurityTab>()
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view = LayoutInflater.from(context).inflate(layoutSelection(position), container, false)
         container.addView(view)
         tabs.put(position, view as SecurityTab)
-        (view as SecurityTab).initTab(requiredHash, hashListener)
+        (view as SecurityTab).initTab(requiredHash, hashListener, scrollView)
         return view
     }
 

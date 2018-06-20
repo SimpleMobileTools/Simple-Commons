@@ -3,15 +3,17 @@ package com.simplemobiletools.commons.extensions
 import android.content.Context
 import com.simplemobiletools.commons.helpers.audioExtensions
 import com.simplemobiletools.commons.helpers.photoExtensions
+import com.simplemobiletools.commons.helpers.rawExtensions
 import com.simplemobiletools.commons.helpers.videoExtensions
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 
-fun File.isImageVideoGif() = absolutePath.isImageFast() || absolutePath.isVideoFast() || absolutePath.isGif()
+fun File.isImageVideoGif() = absolutePath.isImageFast() || absolutePath.isVideoFast() || absolutePath.isGif() || absolutePath.isRawFast()
 fun File.isGif() = absolutePath.endsWith(".gif", true)
 fun File.isVideoFast() = videoExtensions.any { absolutePath.endsWith(it, true) }
 fun File.isImageFast() = photoExtensions.any { absolutePath.endsWith(it, true) }
 fun File.isAudioFast() = audioExtensions.any { absolutePath.endsWith(it, true) }
+fun File.isRawFast() = rawExtensions.any { absolutePath.endsWith(it, true) }
 
 fun File.isImageSlow() = absolutePath.isImageFast() || getMimeType().startsWith("image")
 fun File.isVideoSlow() = absolutePath.isVideoFast() || getMimeType().startsWith("video")

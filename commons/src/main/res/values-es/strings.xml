@@ -17,6 +17,12 @@
     <string name="notes">Notas</string>
     <string name="deleting_folder">Eliminando carpeta \'%s\'</string>
 
+    <!-- Favorites -->
+    <string name="favorites">Favoritos</string>
+    <string name="add_favorites">Add favorites</string>
+    <string name="add_to_favorites">Agregar a favoritos</string>
+    <string name="remove_from_favorites">Eliminar de favoritos</string>
+
     <!-- Search -->
     <string name="search">Buscar</string>
     <string name="type_2_characters">Escribe por lo menos dos caracteres para iniciar la búsqueda.</string>
@@ -211,8 +217,8 @@
     <string name="no">No</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting a folder</item>
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="one">ADVERTENCIA: está eliminando una carpeta</item>
+        <item quantity="other">ADVERTENCIA: está eliminando %d carpetas</item>
     </plurals>
 
     <!-- Password protection -->

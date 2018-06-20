@@ -38,7 +38,7 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
         }
     }
 
-    override fun initTab(requiredHash: String, listener: HashListener) {
+    override fun initTab(requiredHash: String, listener: HashListener, scrollView: MyScrollView) {
         hashListener = listener
     }
 

@@ -28,19 +28,20 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     protected var primaryColor = baseConfig.primaryColor
     protected var textColor = baseConfig.textColor
     protected var backgroundColor = baseConfig.backgroundColor
-    protected var itemViews = SparseArray<View>()
+    protected var viewHolders = SparseArray<ViewHolder>()
     protected val selectedPositions = HashSet<Int>()
     protected var positionOffset = 0
 
     private val multiSelector = MultiSelector()
     private var actMode: ActionMode? = null
     private var actBarTextView: TextView? = null
+    private var lastLongPressedItem = -1
 
     abstract fun getActionMenuId(): Int
 
-    abstract fun prepareItemSelection(view: View)
+    abstract fun prepareItemSelection(viewHolder: ViewHolder)
 
-    abstract fun markItemSelection(select: Boolean, view: View?)
+    abstract fun markViewHolderSelection(select: Boolean, viewHolder: ViewHolder?)
 
     abstract fun prepareActionMode(menu: Menu)
 
@@ -52,15 +53,15 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     protected fun toggleItemSelection(select: Boolean, pos: Int) {
         if (select) {
-            if (itemViews[pos] != null) {
-                prepareItemSelection(itemViews[pos])
-                selectedPositions.add(pos)
+            if (viewHolders[pos] != null) {
+                prepareItemSelection(viewHolders[pos])
             }
+            selectedPositions.add(pos)
         } else {
             selectedPositions.remove(pos)
         }
 
-        markItemSelection(select, itemViews[pos])
+        markViewHolderSelection(select, viewHolders[pos])
 
         if (selectedPositions.isEmpty()) {
             finishActMode()
@@ -88,6 +89,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
             notifyItemChanged(i + positionOffset)
         }
         updateTitle(cnt)
+        lastLongPressedItem = -1
     }
 
     protected fun setupDragListener(enable: Boolean) {
@@ -184,12 +186,23 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     private val adapterListener = object : MyAdapterListener {
         override fun toggleItemSelectionAdapter(select: Boolean, position: Int) {
             toggleItemSelection(select, position)
+            lastLongPressedItem = -1
         }
 
         override fun getSelectedPositions() = selectedPositions
 
         override fun itemLongClicked(position: Int) {
             recyclerView.setDragSelectActive(position)
+            lastLongPressedItem = if (lastLongPressedItem == -1) {
+                position
+            } else {
+                val min = Math.min(lastLongPressedItem, position)
+                val max = Math.max(lastLongPressedItem, position)
+                for (i in min..max) {
+                    toggleItemSelection(true, i)
+                }
+                -1
+            }
         }
     }
 
@@ -223,11 +236,12 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         override fun onDestroyActionMode(actionMode: ActionMode?) {
             super.onDestroyActionMode(actionMode)
             selectedPositions.forEach {
-                markItemSelection(false, itemViews[it])
+                markViewHolderSelection(false, viewHolders[it])
             }
             selectedPositions.clear()
             actBarTextView?.text = ""
             actMode = null
+            lastLongPressedItem = -1
         }
     }
 
@@ -237,23 +251,40 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     }
 
     protected fun bindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int, view: View) {
-        itemViews.put(position, view)
+        viewHolders.put(position, holder)
         toggleItemSelection(selectedPositions.contains(position), position)
         holder.itemView.tag = holder
     }
 
+    override fun onViewRecycled(holder: ViewHolder) {
+        super.onViewRecycled(holder)
+        val pos = viewHolders.indexOfValue(holder)
+        try {
+            if (pos != -1) {
+                viewHolders.removeAt(pos)
+            }
+        } catch (ignored: ArrayIndexOutOfBoundsException) {
+        }
+    }
+
     protected fun removeSelectedItems() {
+        val newViewHolders = SparseArray<ViewHolder>()
+        val cnt = viewHolders.size()
+        for (i in 0..cnt) {
+            if (selectedPositions.contains(i)) {
+                continue
+            }
+
+            val view = viewHolders.get(i, null)
+            val newIndex = i - selectedPositions.count { it <= i }
+            newViewHolders.put(newIndex, view)
+        }
+        viewHolders = newViewHolders
+
         selectedPositions.sortedDescending().forEach {
             notifyItemRemoved(it + positionOffset)
-            itemViews.put(it, null)
         }
 
-        val newItems = SparseArray<View>()
-        (0 until itemViews.size())
-                .filter { itemViews[it] != null }
-                .forEachIndexed { curIndex, i -> newItems.put(curIndex, itemViews[i]) }
-
-        itemViews = newItems
         finishActMode()
         fastScroller?.measureRecyclerView()
     }
