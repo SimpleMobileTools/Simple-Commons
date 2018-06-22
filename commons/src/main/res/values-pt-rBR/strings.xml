@@ -17,22 +17,22 @@
     <string name="notes">Notas</string>
     <string name="deleting_folder">Excluindo pastas \'%s\'</string>
 
-    <!-- Favoritos -->
+    <!-- Favorites -->
     <string name="favorites">Favoritos</string>
     <string name="add_favorites">Adicionar favoritos</string>
     <string name="add_to_favorites">Adicionar aos favoritos</string>
     <string name="remove_from_favorites">Remover dos favoritos</string>
 
-    <!-- Busca -->
+    <!-- Search -->
     <string name="search">Pesquisar</string>
     <string name="type_2_characters">Digite pelo menos 2 letras para iniciar a pesquisa.</string>
 
-    <!-- Filtros -->
+    <!-- Filters -->
     <string name="filter">Filtrar</string>
     <string name="no_items_found">Nenhum item encontrado.</string>
     <string name="change_filter">Alterar filtro</string>
 
-    <!-- Permissões -->
+    <!-- Permissions -->
     <string name="no_storage_permissions">É necessária a permissão Armazenamento</string>
     <string name="no_contacts_permission">É necessária a permissão Contatos</string>
     <string name="no_camera_permissions">É necessária a permissão Câmera</string>
@@ -54,7 +54,7 @@
     <string name="extension_cannot_be_empty">A extensão não pode ficar em branco</string>
     <string name="source_file_doesnt_exist">Arquivo de origem %s não existe</string>
 
-    <!-- Copiar / Mover -->
+    <!-- Copy / Move -->
     <string name="copy">Copiar</string>
     <string name="move">Mover</string>
     <string name="copy_move">Copiar/mover para</string>
@@ -80,7 +80,7 @@
     <string name="could_not_create_folder">Não foi possível criar pasta %s</string>
     <string name="could_not_create_file">Não foi possível criar arquivo %s</string>
 
-    <!-- Criar novo -->
+    <!-- Create new -->
     <string name="create_new">Criar</string>
     <string name="folder">Pasta</string>
     <string name="file">Arquivo</string>
@@ -90,7 +90,7 @@
     <string name="empty_name">Digite um nome</string>
     <string name="unknown_error_occurred">Ocorreu um erro desconhecido</string>
 
-    <!-- Conflitos em operações com arquivo -->
+    <!-- File operation conflicts -->
     <string name="file_already_exists">Já existe um arquivo com o nome \%s\"</string>
     <string name="file_already_exists_overwrite">Já existe um arquivo com o nome \"%s\". Substituir?</string>
     <string name="folder_already_exists">A pasta \"%s\" já existe</string>
@@ -100,7 +100,7 @@
     <string name="append">Adicionar sufixo \'_1\'</string>
     <string name="apply_to_all">Aplicar a todos os conflitos</string>
 
-    <!-- Seletor de arquivos -->
+    <!-- File picker -->
     <string name="select_folder">Selecionar pasta</string>
     <string name="select_file">Selecionar arquivo</string>
     <string name="confirm_storage_access_title">Confirmação de acesso ao armazenamento externo</string>
@@ -127,7 +127,7 @@
     <string name="wrong_root_selected">Pasta inválida, por favor selecione a raiz do cartão SD</string>
     <string name="sd_card_otg_same">Pastas do cartão SD e do dispositivo OTG não podem ser iguais</string>
 
-    <!-- Propriedades de arquivo -->
+    <!-- File properties -->
     <string name="properties">Propriedades</string>
     <string name="path">Caminho</string>
     <string name="items_selected">Itens selecionados</string>
@@ -145,7 +145,7 @@
     <string name="exif">EXIF</string>
     <string name="song_title">Título da música</string>
 
-    <!-- Customização de cor -->
+    <!-- Color customization -->
     <string name="background_color">Cor de fundo</string>
     <string name="text_color">Cor do texto</string>
     <string name="primary_color">Cor primária</string>
@@ -168,7 +168,7 @@
         ]]>
     </string>
 
-    <!-- Temas -->
+    <!-- Themes -->
     <string name="light_theme">Claro</string>
     <string name="dark_theme">Escuro</string>
     <string name="solarized">Ensolarado</string>
@@ -177,11 +177,11 @@
     <string name="custom">Personalizado</string>
     <string name="shared">Compartilhado</string>
 
-    <!-- Novidades -->
+    <!-- What's new -->
     <string name="whats_new">Novidades</string>
     <string name="whats_new_disclaimer">* apenas as alterações significativas são listadas aqui, mas existem sempre mais alterações do que as aqui referidas</string>
 
-    <!-- Itens da actionbar -->
+    <!-- Actionbar items -->
     <string name="delete">Apagar</string>
     <string name="remove">Remover</string>
     <string name="rename">Renomear</string>
@@ -196,7 +196,7 @@
     <string name="stop_showing_hidden">Parar de exibir mídia oculta</string>
     <string name="maximum_share_reached">Não é possível compartilhar essa quantidade toda de arquivos de uma vez</string>
 
-    <!-- Ordenando -->
+    <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
     <string name="name">Nome</string>
     <string name="size">Tamanho</string>
@@ -209,7 +209,7 @@
     <string name="descending">Decrescente</string>
     <string name="use_for_this_folder">Apenas para esta pasta</string>
 
-    <!-- Diálogo de confirmação -->
+    <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Deseja realmente excluir?</string>
     <string name="deletion_confirmation">Deseja realmente excluir %s?</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Deseja realmente mover %s para a Lixeira?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
@@ -222,7 +222,7 @@
         <item quantity="other">WARNING: Você está excluindo %d pastas</item>
     </plurals>
 
-    <!-- Proteção por senha -->
+    <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">Digite o PIN</string>
     <string name="please_enter_pin">Favor digitar o PIN</string>
@@ -242,7 +242,7 @@
     <string name="protection_setup_successfully">Senha criada com sucesso. Reinstale o app caso você a esqueça.</string>
     <string name="fingerprint_setup_successfully">Proteção criada com sucesso. Reinstale o app caso tenha problemas em redefinir.</string>
 
-    <!-- Tempo -->
+    <!-- Times -->
     <string name="tomorrow">Amanhã</string>
     <string name="seconds_raw">segundos</string>
     <string name="minutes_raw">minutos</string>
@@ -278,7 +278,7 @@
         <item quantity="other">%d anos</item>
     </plurals>
 
-    <!-- Por exemplo: Eu estarei lá em 5 minutos -->
+    <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d segundo</item>
         <item quantity="other">%d segundos</item>
@@ -292,7 +292,7 @@
         <item quantity="other">%d horas</item>
     </plurals>
 
-    <!-- Por exemplo: Lembrar de evento: 3 minutos antes -->
+    <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d segundo antes</item>
         <item quantity="other">%d segundos antes</item>
@@ -310,7 +310,7 @@
         <item quantity="other">%d dias antes</item>
     </plurals>
 
-    <!-- Por exemplo: Adie o lembrete por 3 minutos -->
+    <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d segundo</item>
         <item quantity="other">%d segundos</item>
@@ -324,12 +324,12 @@
         <item quantity="other">%d horas</item>
     </plurals>
 
-    <!-- Por exemplo: Tempo restante até o alarme disparar: 6 horas, 5 minutos -->
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Tempo restante até o alarme disparar:\n%s</string>
     <string name="alarm_warning">Por favor, verifique se o alarme funciona corretamente antes de confiar nele. Ele pode se comportar mal devido a restrições do sistema relacionadas à economia de bateria.</string>
     <string name="reminder_warning">Certifique-se de que os lembretes funcionem corretamente antes de confiar neles. Eles podem se comportar mal devido a restrições do sistema relacionadas à economia de bateria.</string>
 
-    <!-- Alarmes -->
+    <!-- Alarms -->
     <string name="alarm">Alarme</string>
     <string name="snooze">Soneca</string>
     <string name="dismiss">Dispensar</string>
@@ -340,7 +340,7 @@
     <string name="add_new_sound">Adicionar um novo som</string>
     <string name="no_sound">Sem som</string>
 
-    <!-- Configurações -->
+    <!-- Settings -->
     <string name="settings">Configurações</string>
     <string name="customize_colors">Personalizar cores</string>
     <string name="customize_widget_colors">Customize widget colors</string>
@@ -371,7 +371,7 @@
     <string name="recycle_bin_location">Localização da Lixeira</string>
     <string name="force_portrait_mode">Forçar modo retrato</string>
 
-    <!-- Seção de opções -->
+    <!-- Setting sections -->
     <string name="visibility">Visibilidade</string>
     <string name="security">Segurança</string>
     <string name="scrolling">Rolagem</string>
@@ -381,7 +381,7 @@
     <string name="startup">Inicialização</string>
     <string name="text">Texto</string>
 
-    <!-- Importar / Exportar -->
+    <!-- Import / Export -->
     <string name="importing">Importando…</string>
     <string name="exporting">Exportando…</string>
     <string name="importing_successful">Importado com sucesso</string>
@@ -392,12 +392,12 @@
     <string name="exporting_some_entries_failed">Houve falha em alguns ítens da exportação</string>
     <string name="no_entries_for_exporting">Não foram encontramos ítens para exportar</string>
 
-    <!-- Dispositivos OTG -->
+    <!-- OTG devices -->
     <string name="otg">OTG</string>
     <string name="confirm_otg_storage_access_text">Por favor, escolha a pasta raiz do dispositivo OTG na próxima tela, para conceder acesso</string>
     <string name="wrong_root_selected_otg">Pasta errada selecionada, selecione a pasta raiz do seu dispositivo OTG</string>
 
-    <!-- Datas -->
+    <!-- Dates -->
     <string name="january">janeiro</string>
     <string name="february">fevereiro</string>
     <string name="march">março</string>
@@ -411,7 +411,7 @@
     <string name="november">novembro</string>
     <string name="december">dezembro</string>
 
-    <!-- em Janeiro -->
+    <!-- In January -->
     <string name="in_january">em Janeiro</string>
     <string name="in_february">em Fevereiro</string>
     <string name="in_march">em Março</string>
@@ -449,7 +449,7 @@
     <string name="saturday_short">Sáb</string>
     <string name="sunday_short">Dom</string>
 
-    <!-- Sobre -->
+    <!-- About -->
     <string name="about">Sobre</string>
     <string name="website_label">Mais aplicativos Simple e código-fonte em</string>
     <string name="email_label">Envie os seus comentários ou sugestões para</string>
@@ -477,7 +477,7 @@
     <string name="purchase">Comprar</string>
     <string name="update_thank_you">Por favor, atualize o Simple Thank You para a versão mais recente</string>
 
-    <!-- Novo app (não traduza nada na 4a linha) -->
+    <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
             Ei,<br><br>
@@ -503,7 +503,7 @@
     <string name="faq_5_title_commons">Posso restaurar de alguma forma os arquivos apagados?</string>
     <string name="faq_5_text_commons">Se eles foram realmente excluídos, você não pode. No entanto, você pode ativar o uso de uma Lixeira em vez de excluí-la nas configurações do aplicativo. Isso apenas moverá os arquivos, em vez de excluí-los. Você pode personalizar o local da Lixeira, o intervalo de esvaziamento ou esvaziá-lo manualmente.</string>
 
-    <!-- Licença -->
+    <!-- License -->
     <string name="notice">Este aplicativo usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>
     <string name="third_party_licences">Licenças de terceiros</string>
     <string name="kotlin_title">Kotlin (linguagem de programação)</string>
