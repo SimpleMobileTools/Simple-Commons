@@ -19,7 +19,7 @@
 
     <!-- Favorites -->
     <string name="favorites">Избранное</string>
-    <string name="add_favorites">Добавить избранные</string>
+    <string name="add_favorites">Добавить избранное</string>
     <string name="add_to_favorites">Добавить в избранное</string>
     <string name="remove_from_favorites">Убрать из избранного</string>
 
@@ -221,7 +221,9 @@
 
     <plurals name="delete_warning">
         <item quantity="one">ПРЕДУПРЕЖДЕНИЕ: вы удаляете папку</item>
-        <item quantity="other">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папки</item>
+        <item quantity="few">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папки</item>
+        <item quantity="many">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папок</item>
+        <item quantity="other">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папок</item>
     </plurals>
 
     <!-- Password protection -->
@@ -232,8 +234,8 @@
     <string name="repeat_pin">Повтор PIN-кода</string>
     <string name="pattern">Графический ключ</string>
     <string name="insert_pattern">Установить ключ</string>
-    <string name="wrong_pattern">Неверный графический ключ</string>
-    <string name="repeat_pattern">Повторить ключ</string>
+    <string name="wrong_pattern">Неправильный графический ключ</string>
+    <string name="repeat_pattern">Повтор ключа</string>
     <string name="fingerprint">Отпечаток пальца</string>
     <string name="add_fingerprint">Добавить отпечаток</string>
     <string name="place_finger">Пожалуйста, поместите палец на датчик отпечатков.</string>
