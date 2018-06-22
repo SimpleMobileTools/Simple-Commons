@@ -300,11 +300,11 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     open class ViewHolder(view: View, val adapterListener: MyAdapterListener? = null, val activity: BaseSimpleActivity? = null,
                           val multiSelectorCallback: ModalMultiSelectorCallback? = null, val multiSelector: MultiSelector,
                           val positionOffset: Int = 0, val itemClick: ((Any) -> (Unit))? = null) : SwappingHolder(view, multiSelector) {
-        fun bindView(any: Any, allowLongClick: Boolean = true, callback: (itemView: View, adapterPosition: Int) -> Unit): View {
+        fun bindView(any: Any, allowSingleClick: Boolean = true, allowLongClick: Boolean = true, callback: (itemView: View, adapterPosition: Int) -> Unit): View {
             return itemView.apply {
                 callback(this, adapterPosition)
 
-                if (isClickable) {
+                if (allowSingleClick) {
                     setOnClickListener { viewClicked(any) }
                     setOnLongClickListener { if (allowLongClick) viewLongClicked() else viewClicked(any); true }
                 } else {
