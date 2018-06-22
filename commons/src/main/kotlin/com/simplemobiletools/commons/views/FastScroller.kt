@@ -39,6 +39,7 @@ class FastScroller : FrameLayout {
     private var tinyMargin = 0f
     private var isScrollingEnabled = false
     private var fastScrollCallback: ((Int) -> Unit)? = null
+    private var wasRecyclerViewContentSizeSet = false       // stop measuring and calculating content size as soon as it is manually set once
 
     private val HANDLE_HIDE_DELAY = 1000L
     private var recyclerView: RecyclerView? = null
@@ -102,14 +103,16 @@ class FastScroller : FrameLayout {
             return
         }
 
-        val adapter = recyclerView!!.adapter
-        val spanCount = ((recyclerView!!.layoutManager as? GridLayoutManager)?.spanCount ?: 1)
-        val otherDimension = Math.floor((adapter.itemCount - 1) / spanCount.toDouble()) + 1
-        val size = recyclerView!!.getChildAt(measureItemIndex)?.height ?: 0
-        if (isHorizontal) {
-            recyclerViewContentWidth = (otherDimension * size).toInt()
-        } else {
-            recyclerViewContentHeight = (otherDimension * size).toInt()
+        if (!wasRecyclerViewContentSizeSet) {
+            val adapter = recyclerView!!.adapter
+            val spanCount = ((recyclerView!!.layoutManager as? GridLayoutManager)?.spanCount ?: 1)
+            val otherDimension = Math.floor((adapter.itemCount - 1) / spanCount.toDouble()) + 1
+            val size = recyclerView!!.getChildAt(measureItemIndex)?.height ?: 0
+            if (isHorizontal) {
+                recyclerViewContentWidth = (otherDimension * size).toInt()
+            } else {
+                recyclerViewContentHeight = (otherDimension * size).toInt()
+            }
         }
 
         isScrollingEnabled = if (isHorizontal) {
@@ -128,6 +131,16 @@ class FastScroller : FrameLayout {
             handle?.animate()?.cancel()
             handle?.alpha = 0f
         }
+    }
+
+    fun setContentWidth(width: Int) {
+        recyclerViewContentWidth = width
+        wasRecyclerViewContentSizeSet = true
+    }
+
+    fun setContentHeight(height: Int) {
+        recyclerViewContentHeight = height
+        wasRecyclerViewContentSizeSet = true
     }
 
     fun setScrollTo(y: Int) {
