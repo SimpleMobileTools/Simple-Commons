@@ -5,21 +5,21 @@
     <string name="file_saved">Arquivo salvo com sucesso</string>
     <string name="invalid_file_format">Formato de arquivo inválido</string>
     <string name="out_of_memory_error">Memória insuficiente</string>
-    <string name="an_error_occurred">Um erro ocorreu: %s</string>
+    <string name="an_error_occurred">Ocorreu um erro: %s</string>
     <string name="open_with">Abrir com</string>
     <string name="no_app_found">Nenhum aplicativo encontrado</string>
     <string name="set_as">Definir como</string>
     <string name="value_copied_to_clipboard">Valor copiado para a área de transferência</string>
     <string name="unknown">Desconhecido</string>
-    <string name="always">Always</string>
-    <string name="never">Never</string>
-    <string name="details">Details</string>
+    <string name="always">Sempre</string>
+    <string name="never">Nunca</string>
+    <string name="details">Detalhes</string>
     <string name="notes">Notas</string>
-    <string name="deleting_folder">Deleting folder \'%s\'</string>
+    <string name="deleting_folder">Excluindo pastas \'%s\'</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
-    <string name="add_favorites">Add favorites</string>
+    <string name="add_favorites">Adicionar favoritos</string>
     <string name="add_to_favorites">Adicionar aos favoritos</string>
     <string name="remove_from_favorites">Remover dos favoritos</string>
 
@@ -50,9 +50,9 @@
     <string name="renaming_folder">A renomear pasta</string>
     <string name="filename_cannot_be_empty">O nome do arquivo não pode ficar em branco</string>
     <string name="filename_invalid_characters">O nome do arquivo contém caracteres inválidos</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
+    <string name="filename_invalid_characters_placeholder">O nome do arquivo \'%s\' contém caracteres inválidos</string>
     <string name="extension_cannot_be_empty">A extensão não pode ficar em branco</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
+    <string name="source_file_doesnt_exist">Arquivo de origem %s não existe</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
@@ -116,7 +116,7 @@
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="other">%d itens</item>
     </plurals>
 
     <!-- Storages -->
@@ -125,7 +125,7 @@
     <string name="sd_card">Cartão SD</string>
     <string name="root">Raiz</string>
     <string name="wrong_root_selected">Pasta inválida, por favor selecione a raiz do cartão SD</string>
-    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
+    <string name="sd_card_otg_same">Pastas do cartão SD e do dispositivo OTG não podem ser iguais</string>
 
     <!-- File properties -->
     <string name="properties">Propriedades</string>
@@ -149,10 +149,10 @@
     <string name="background_color">Cor de fundo</string>
     <string name="text_color">Cor do texto</string>
     <string name="primary_color">Cor primária</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
+    <string name="foreground_color">Cor da fonte</string>
+    <string name="app_icon_color">Cor do ícone do aplicativo</string>
     <string name="restore_defaults">Restaurar predefinições</string>
-    <string name="change_color">Change color</string>
+    <string name="change_color">Mudar cor</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Mudança nas cores irá alternar para um tema personalizado</string>
     <string name="save">Salvar</string>
@@ -183,7 +183,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">Apagar</string>
-    <string name="remove">Remove</string>
+    <string name="remove">Remover</string>
     <string name="rename">Renomear</string>
     <string name="share">Compartilhar</string>
     <string name="share_via">Compartilhar via</string>
@@ -211,15 +211,15 @@
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Deseja realmente excluir?</string>
-    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s to Recycle Bin?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="deletion_confirmation">Deseja realmente excluir %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Deseja realmente mover %s para a Lixeira?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
     <string name="do_not_ask_again">Não perguntar novamente por enquanto</string>
     <string name="yes">Sim</string>
     <string name="no">Não</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting a folder</item>
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="one">WARNING: Você está excluindo uma pasta</item>
+        <item quantity="other">WARNING: Você está excluindo %d pastas</item>
     </plurals>
 
     <!-- Password protection -->
@@ -243,8 +243,8 @@
     <string name="fingerprint_setup_successfully">Proteção criada com sucesso. Reinstale o app caso tenha problemas em redefinir.</string>
 
     <!-- Times -->
-    <string name="tomorrow">Tomorrow</string>
-    <string name="seconds_raw">seconds</string>
+    <string name="tomorrow">Amanhã</string>
+    <string name="seconds_raw">segundos</string>
     <string name="minutes_raw">minutos</string>
     <string name="hours_raw">horas</string>
     <string name="days_raw">dias</string>
@@ -280,22 +280,22 @@
 
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d segundo</item>
+        <item quantity="other">%d segundos</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minuto</item>
+        <item quantity="other">%d minutos</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d hora</item>
+        <item quantity="other">%d horas</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d second before</item>
-        <item quantity="other">%d seconds before</item>
+        <item quantity="one">%d segundo antes</item>
+        <item quantity="other">%d segundos antes</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minuto antes</item>
@@ -312,33 +312,33 @@
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d segundo</item>
+        <item quantity="other">%d segundos</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minuto</item>
+        <item quantity="other">%d minutos</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d hora</item>
+        <item quantity="other">%d horas</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
-    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+    <string name="alarm_goes_off_in">Tempo restante até o alarme disparar:\n%s</string>
+    <string name="alarm_warning">Por favor, verifique se o alarme funciona corretamente antes de confiar nele. Ele pode se comportar mal devido a restrições do sistema relacionadas à economia de bateria.</string>
+    <string name="reminder_warning">Certifique-se de que os lembretes funcionem corretamente antes de confiar neles. Eles podem se comportar mal devido a restrições do sistema relacionadas à economia de bateria.</string>
 
     <!-- Alarms -->
-    <string name="alarm">Alarm</string>
-    <string name="snooze">Snooze</string>
-    <string name="dismiss">Dismiss</string>
+    <string name="alarm">Alarme</string>
+    <string name="snooze">Soneca</string>
+    <string name="dismiss">Dispensar</string>
     <string name="no_reminder">Sem lembrete</string>
     <string name="at_start">No início</string>
-    <string name="system_sounds">System sounds</string>
-    <string name="your_sounds">Your sounds</string>
-    <string name="add_new_sound">Add a new sound</string>
-    <string name="no_sound">No sound</string>
+    <string name="system_sounds">Sons do sistema</string>
+    <string name="your_sounds">Seus sons</string>
+    <string name="add_new_sound">Adicionar um novo som</string>
+    <string name="no_sound">Sem som</string>
 
     <!-- Settings -->
     <string name="settings">Configurações</string>
@@ -356,30 +356,30 @@
     <string name="password_protect_whole_app">Proteção por senha em todo o app</string>
     <string name="keep_last_modified">Manter valor anterior do arquivo modificado por último ao copiar/mover/renomear arquivo</string>
     <string name="show_info_bubble">Mostrar bolha de informação ao rolar usando a barra de rolagem</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
+    <string name="prevent_phone_from_sleeping">Impedir que o telefone durma enquanto o aplicativo está em primeiro plano</string>
     <string name="skip_delete_confirmation">Sempre pular confirmação de exclusão</string>
     <string name="enable_pull_to_refresh">Habilitar puxar do topo da tela para atualizar o conteúdo</string>
-    <string name="use_24_hour_time_format">Use 24-hour time format</string>
-    <string name="sunday_first">Start week on Sunday</string>
+    <string name="use_24_hour_time_format">Usar formato de tempo 24-horas</string>
+    <string name="sunday_first">Iniciar a semana no Domingo</string>
     <string name="widgets">Widgets</string>
-    <string name="use_same_snooze">Always use same snooze time</string>
-    <string name="snooze_time">Snooze time</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
-    <string name="move_items_to_trash_bin">Move items in Recycle Bin instead of deleting</string>
-    <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
-    <string name="empty_recycle_bin">Empty Recycle Bin</string>
-    <string name="recycle_bin_location">Recycle Bin location</string>
-    <string name="force_portrait_mode">Force portrait mode</string>
+    <string name="use_same_snooze">Sempre usar o mesmo tempo de soneca</string>
+    <string name="snooze_time">Tempo de soneca</string>
+    <string name="vibrate_on_button_press">Vibrar ao pressionar o botão</string>
+    <string name="move_items_to_trash_bin">Mover itens na Lixeira em vez de excluir</string>
+    <string name="recycle_bin_cleaning_interval">Intervalo de limpeza da Lixeira</string>
+    <string name="empty_recycle_bin">Lixeira vazia</string>
+    <string name="recycle_bin_location">Localização da Lixeira</string>
+    <string name="force_portrait_mode">Forçar modo retrato</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilidade</string>
     <string name="security">Segurança</string>
     <string name="scrolling">Rolagem</string>
     <string name="file_operations">Operações de arquivos</string>
-    <string name="recycle_bin">Recycle Bin</string>
-    <string name="saving_label">Saving</string>
-    <string name="startup">Startup</string>
-    <string name="text">Text</string>
+    <string name="recycle_bin">Lixeira</string>
+    <string name="saving_label">Salvando</string>
+    <string name="startup">Inicialização</string>
+    <string name="text">Texto</string>
 
     <!-- Import / Export -->
     <string name="importing">Importando…</string>
@@ -394,8 +394,8 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="confirm_otg_storage_access_text">Por favor, escolha a pasta raiz do dispositivo OTG na próxima tela, para conceder acesso</string>
+    <string name="wrong_root_selected_otg">Pasta errada selecionada, selecione a pasta raiz do seu dispositivo OTG</string>
 
     <!-- Dates -->
     <string name="january">janeiro</string>
@@ -411,27 +411,27 @@
     <string name="november">novembro</string>
     <string name="december">dezembro</string>
 
-    <!-- in January -->
-    <string name="in_january">in January</string>
-    <string name="in_february">in February</string>
-    <string name="in_march">in March</string>
-    <string name="in_april">in April</string>
-    <string name="in_may">in May</string>
-    <string name="in_june">in June</string>
-    <string name="in_july">in July</string>
-    <string name="in_august">in August</string>
-    <string name="in_september">in September</string>
-    <string name="in_october">in October</string>
-    <string name="in_november">in November</string>
-    <string name="in_december">in December</string>
+    <!-- In January -->
+    <string name="in_january">em Janeiro</string>
+    <string name="in_february">em Fevereiro</string>
+    <string name="in_march">em Março</string>
+    <string name="in_april">em Abril</string>
+    <string name="in_may">em Maio</string>
+    <string name="in_june">em Junho</string>
+    <string name="in_july">em Julho</string>
+    <string name="in_august">em Agosto</string>
+    <string name="in_september">em Setembro</string>
+    <string name="in_october">em Outubro</string>
+    <string name="in_november">em Novembro</string>
+    <string name="in_december">em Dezembro</string>
 
-    <string name="monday">Monday</string>
-    <string name="tuesday">Tuesday</string>
-    <string name="wednesday">Wednesday</string>
-    <string name="thursday">Thursday</string>
-    <string name="friday">Friday</string>
-    <string name="saturday">Saturday</string>
-    <string name="sunday">Sunday</string>
+    <string name="monday">Segunda-feira</string>
+    <string name="tuesday">Terça-feira</string>
+    <string name="wednesday">Quarta-feira</string>
+    <string name="thursday">Quinta-feira</string>
+    <string name="friday">Sexta-feira</string>
+    <string name="saturday">Sábado</string>
+    <string name="sunday">Domingo</string>
 
     <string name="monday_letter">S</string>
     <string name="tuesday_letter">T</string>
@@ -441,13 +441,13 @@
     <string name="saturday_letter">S</string>
     <string name="sunday_letter">D</string>
 
-    <string name="monday_short">Mon</string>
-    <string name="tuesday_short">Tue</string>
-    <string name="wednesday_short">Wed</string>
-    <string name="thursday_short">Thu</string>
-    <string name="friday_short">Fri</string>
-    <string name="saturday_short">Sat</string>
-    <string name="sunday_short">Sun</string>
+    <string name="monday_short">Seg</string>
+    <string name="tuesday_short">Ter</string>
+    <string name="wednesday_short">Qua</string>
+    <string name="thursday_short">Qui</string>
+    <string name="friday_short">Sex</string>
+    <string name="saturday_short">Sáb</string>
+    <string name="sunday_short">Dom</string>
 
     <!-- About -->
     <string name="about">Sobre</string>
@@ -475,34 +475,33 @@
         ]]>
     </string>
     <string name="purchase">Comprar</string>
-    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
+    <string name="update_thank_you">Por favor, atualize o Simple Thank You para a versão mais recente</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
-            Hey,<br><br>
-            just letting you know that a new app has been released recently:<br><br>
+            Ei,<br><br>
+            apenas informando que um novo aplicativo foi lançado recentemente:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-            You can download it by pressing the title.<br><br>
-            Thanks
+            Você pode baixá-lo pressionando o título.<br><br>
+            Obrigado
         ]]>
     </string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently asked questions</string>
-    <string name="before_asking_question">Before you ask a question, please first read the</string>
-    <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
-    <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
-        in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
-    <string name="faq_2_title_commons">I want to support you, but I cannot donate money. Is there anything else I can do?</string>
-    <string name="faq_2_text_commons">Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-        You can find the guide at https://github.com/SimpleMobileTools/General-Discussion , or just shoot me a message at hello@simplemobiletools.com if you need help.</string>
-    <string name="faq_3_title_commons">I deleted some files by mistake, how can I recover them?</string>
-    <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, there is no trashbin available.</string>
-    <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
-    <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
-    <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them. You can customize the Recycle Bin location, emptying interval, or empty it manually.</string>
+    <string name="frequently_asked_questions">Perguntas frequentes</string>
+    <string name="before_asking_question">Antes de fazer uma pergunta, leia primeiro a</string>
+    <string name="faq_1_title_commons">Por que não vejo esse widget de aplicativos na lista de widgets?</string>
+    <string name="faq_1_text_commons">É mais provável que você tenha movido o aplicativo para um cartão SD. Existe uma limitação do sistema Android que oculta os widgets de aplicativos fornecidos nesse caso. A única solução é mover o aplicativo de volta para o armazenamento interno por meio das configurações do dispositivo.</string>
+    <string name="faq_2_title_commons">Eu quero te apoiar, mas não posso doar dinheiro. Há algo mais que eu possa fazer?</string>
+    <string name="faq_2_text_commons">Sim, claro. Você pode divulgar os aplicativos ou dar um bom feedback e classificação. Você também pode ajudar traduzindo os aplicativos em um novo idioma ou apenas atualizando algumas traduções existentes.
+        Você pode encontrar o guia em https://github.com/SimpleMobileTools/General-Discussion , ou apenas me mande uma mensagem para hello@simplemobiletools.com se precisar de ajuda.</string>
+    <string name="faq_3_title_commons">Eu apaguei alguns arquivos por engano, como posso recuperá-los?</string>
+    <string name="faq_3_text_commons">Infelizmente, você não pode. Os arquivos são apagados instantaneamente após a caixa de diálogo de confirmação, não há lixeira disponível.</string>
+    <string name="faq_4_title_commons">Eu não gosto das cores do widget, posso mudá-las?</string>
+    <string name="faq_4_text_commons">Sim, enquanto você arrasta um widget em sua tela inicial, uma tela de configuração do widget aparece. Você verá quadrados coloridos no canto inferior esquerdo, basta pressioná-los para escolher uma nova cor. Você pode usar o controle deslizante para ajustar o alfa também.</string>
+    <string name="faq_5_title_commons">Posso restaurar de alguma forma os arquivos apagados?</string>
+    <string name="faq_5_text_commons">Se eles foram realmente excluídos, você não pode. No entanto, você pode ativar o uso de uma Lixeira em vez de excluí-la nas configurações do aplicativo. Isso apenas moverá os arquivos, em vez de excluí-los. Você pode personalizar o local da Lixeira, o intervalo de esvaziamento ou esvaziá-lo manualmente.</string>
 
     <!-- License -->
     <string name="notice">Este aplicativo usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>
@@ -519,12 +518,12 @@
     <string name="otto_title">Otto (canal de eventos)</string>
     <string name="photoview_title">PhotoView (animação de GIFs)</string>
     <string name="pattern_title">PatternLockView (pattern protection)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
-    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
-    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
-    <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
-    <string name="number_picker_title">Number Picker (customizable number picker)</string>
+    <string name="reprint_title">Reprint (proteção de impressões digitais)</string>
+    <string name="gif_drawable_title">Gif Drawable (carregamento de GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (redimensionamento de texto)</string>
+    <string name="robolectric_title">Robolectric (framework de teste)</string>
+    <string name="espresso_title">Espresso (helper de teste)</string>
+    <string name="gson_title">Gson (analisador JSON)</string>
+    <string name="leak_canary_title">Leak Canary (detector de vazamento de memória)</string>
+    <string name="number_picker_title">Number Picker (selecionador personalizável de número)</string>
 </resources>
