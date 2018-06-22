@@ -49,9 +49,15 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     abstract fun getSelectableItemCount(): Int
 
+    abstract fun getIsItemSelectable(position: Int): Boolean
+
     protected fun isOneItemSelected() = selectedPositions.size == 1
 
     protected fun toggleItemSelection(select: Boolean, pos: Int) {
+        if (select && !getIsItemSelectable(pos)) {
+            return
+        }
+
         if (select) {
             if (viewHolders[pos] != null) {
                 prepareItemSelection(viewHolders[pos])
@@ -85,8 +91,10 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     protected fun selectAll() {
         val cnt = itemCount - positionOffset
         for (i in 0 until cnt) {
-            selectedPositions.add(i)
-            notifyItemChanged(i + positionOffset)
+            if (getIsItemSelectable(i)) {
+                selectedPositions.add(i)
+                notifyItemChanged(i + positionOffset)
+            }
         }
         updateTitle(cnt)
         lastLongPressedItem = -1

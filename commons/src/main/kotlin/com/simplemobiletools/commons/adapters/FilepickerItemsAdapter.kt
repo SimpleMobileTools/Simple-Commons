@@ -51,6 +51,8 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
 
     override fun getSelectableItemCount() = fileDirItems.size
 
+    override fun getIsItemSelectable(position: Int) = false
+
     override fun onViewRecycled(holder: MyRecyclerViewAdapter.ViewHolder) {
         super.onViewRecycled(holder)
         if (!activity.isActivityDestroyed()) {
