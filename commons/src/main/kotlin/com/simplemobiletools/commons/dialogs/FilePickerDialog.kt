@@ -141,7 +141,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
             layoutManager.onRestoreInstanceState(mScrollStates[currPath.trimEnd('/')])
             filepicker_list.onGlobalLayout {
-                filepicker_fastscroller.setScrollTo(filepicker_list.computeVerticalScrollOffset())
+                filepicker_fastscroller.setScrollToY(filepicker_list.computeVerticalScrollOffset())
             }
         }
 

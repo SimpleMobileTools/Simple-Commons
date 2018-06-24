@@ -155,7 +155,14 @@ class FastScroller : FrameLayout {
         updateHandlePosition()
     }
 
-    fun setScrollTo(y: Int) {
+    fun setScrollToX(x: Int) {
+        measureRecyclerView()
+        currScrollX = x
+        updateHandlePosition()
+        hideHandle()
+    }
+
+    fun setScrollToY(y: Int) {
         measureRecyclerView()
         currScrollY = y
         updateHandlePosition()
