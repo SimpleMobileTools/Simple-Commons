@@ -53,6 +53,10 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     protected fun isOneItemSelected() = selectedPositions.size == 1
 
+    init {
+        fastScroller?.resetScrollPositions()
+    }
+
     protected fun toggleItemSelection(select: Boolean, pos: Int) {
         if (select && !getIsItemSelectable(pos)) {
             return
