@@ -37,7 +37,7 @@ class FastScroller : FrameLayout {
     private var recyclerViewContentWidth = 1
     private var recyclerViewContentHeight = 1
     private var tinyMargin = 0
-    private var isScrollingEnabled = false
+    private var isScrollingEnabled = false      // a boolean indicating whether the actual recycler view content is higher than the screen
     private var fastScrollCallback: ((Int) -> Unit)? = null
     private var wasRecyclerViewContentSizeSet = false       // stop measuring and calculating content size as soon as it is manually set once
 
@@ -147,12 +147,14 @@ class FastScroller : FrameLayout {
         recyclerViewContentWidth = width
         wasRecyclerViewContentSizeSet = true
         updateHandlePosition()
+        isScrollingEnabled = recyclerViewContentWidth > recyclerViewWidth
     }
 
     fun setContentHeight(height: Int) {
         recyclerViewContentHeight = height
         wasRecyclerViewContentSizeSet = true
         updateHandlePosition()
+        isScrollingEnabled = recyclerViewContentHeight > recyclerViewHeight
     }
 
     fun setScrollToX(x: Int) {
