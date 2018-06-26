@@ -194,6 +194,7 @@
     <string name="temporarily_show_hidden">Mostrar ocultos temporalmente</string>
     <string name="stop_showing_hidden">No mostrar ocultos</string>
     <string name="maximum_share_reached">No puedes compartir todo este contenido a la vez</string>
+    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -364,10 +365,9 @@
     <string name="use_same_snooze">Siempre use el mismo tiempo de repetición</string>
     <string name="snooze_time">Tiempo de repetición</string>
     <string name="vibrate_on_button_press">Vibrar al presionar un botón</string>
-    <string name="move_items_to_trash_bin">Mover los elementos en la Papelera de reciclaje en lugar de eliminar</string>
+    <string name="move_items_to_recycle_bin">Mover los elementos en la Papelera de reciclaje en lugar de eliminar</string>
     <string name="recycle_bin_cleaning_interval">Intervalo de vaciado de la papelera de reciclaje</string>
     <string name="empty_recycle_bin">Vaciar papelera de reciclaje</string>
-    <string name="recycle_bin_location">Ubicación de la papelera de reciclaje</string>
     <string name="force_portrait_mode">Forzar el modo retrato</string>
 
     <!-- Setting sections -->

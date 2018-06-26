@@ -195,6 +195,7 @@
     <string name="temporarily_show_hidden">Mostrar ocultas temporariamente</string>
     <string name="stop_showing_hidden">Não mostrar multimédia oculta</string>
     <string name="maximum_share_reached">Não pode partilhar tantos itens em simultâneoo</string>
+    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -365,10 +366,9 @@
     <string name="use_same_snooze">Usar sempre o mesmo intervalo para snooze</string>
     <string name="snooze_time">Intervalo para snooze</string>
     <string name="vibrate_on_button_press">Vibrar ao tocar nos botões</string>
-    <string name="move_items_to_trash_bin">Mover itens para a reciclagem em vez de os apagar</string>
+    <string name="move_items_to_recycle_bin">Mover itens para a reciclagem em vez de os apagar</string>
     <string name="recycle_bin_cleaning_interval">Intervalo de tempo para limpar a reciclagem</string>
     <string name="empty_recycle_bin">Limpar reciclagem</string>
-    <string name="recycle_bin_location">Localização da reciclagem</string>
     <string name="force_portrait_mode">Impor modo verticar</string>
 
     <!-- Setting sections -->
