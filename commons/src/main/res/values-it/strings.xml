@@ -195,6 +195,7 @@
     <string name="temporarily_show_hidden">Mostra temporaneamente nascosti</string>
     <string name="stop_showing_hidden">Non mostrare media nascosti</string>
     <string name="maximum_share_reached">Non puoi condividere così tanto in una volta sola</string>
+    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordina per</string>
@@ -365,10 +366,9 @@
     <string name="use_same_snooze">Usa sempre lo stesso tempo di ripetizione</string>
     <string name="snooze_time">Tempo di ripetizione</string>
     <string name="vibrate_on_button_press">Vibra alla pressione dei tasti</string>
-    <string name="move_items_to_trash_bin">Sposta gli elementi nel cestino invece di eliminarli</string>
+    <string name="move_items_to_recycle_bin">Sposta gli elementi nel cestino invece di eliminarli</string>
     <string name="recycle_bin_cleaning_interval">Intervallo svuotamento cestino</string>
     <string name="empty_recycle_bin">Svuota il cestino</string>
-    <string name="recycle_bin_location">Percorso del cestino</string>
     <string name="force_portrait_mode">Forza la modalità ritratto</string>
 
     <!-- Setting sections -->

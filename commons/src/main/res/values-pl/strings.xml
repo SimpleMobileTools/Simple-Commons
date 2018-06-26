@@ -197,6 +197,7 @@
     <string name="temporarily_show_hidden">Tymczasowo pokaż ukryte multimedia</string>
     <string name="stop_showing_hidden">Przestań pokazywać ukryte multimedia</string>
     <string name="maximum_share_reached">Nie możesz udostępniać tak wielu danych naraz</string>
+    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortuj według parametru:</string>
@@ -383,10 +384,9 @@
     <string name="use_same_snooze">Zawsze używaj tego samego przedziału przypomnienia</string>
     <string name="snooze_time">Długość drzemki</string>
     <string name="vibrate_on_button_press">Wibracja po wciśnięciu przycisku</string>
-    <string name="move_items_to_trash_bin">Przenoś elementy do kosza zamiast je usuwać</string>
+    <string name="move_items_to_recycle_bin">Przenoś elementy do kosza zamiast je usuwać</string>
     <string name="recycle_bin_cleaning_interval">Przedział czasowy czyszczenia kosza</string>
     <string name="empty_recycle_bin">Wyczyść kosz</string>
-    <string name="recycle_bin_location">Lokalizacja kosza</string>
     <string name="force_portrait_mode">Wymuś tryb pionowy</string>
 
     <!-- Setting sections -->

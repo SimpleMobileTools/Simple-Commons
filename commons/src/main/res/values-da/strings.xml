@@ -195,6 +195,7 @@
     <string name="temporarily_show_hidden">Vis midlertidigt skjulte</string>
     <string name="stop_showing_hidden">Stop visning af skjulte medier</string>
     <string name="maximum_share_reached">Du kan ikke dele så meget indhold ad gangen</string>
+    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorter efter</string>
@@ -365,10 +366,9 @@
     <string name="use_same_snooze">Brug altid samme udsættelsestid</string>
     <string name="snooze_time">Udsættelsestid</string>
     <string name="vibrate_on_button_press">Vibrer ved tryk på knapper</string>
-    <string name="move_items_to_trash_bin">Flyt elementer til papirkurven i stedet for at slette dem</string>
+    <string name="move_items_to_recycle_bin">Flyt elementer til papirkurven i stedet for at slette dem</string>
     <string name="recycle_bin_cleaning_interval">Interval for tømning af papirkurven</string>
     <string name="empty_recycle_bin">Tøm papirkurven</string>
-    <string name="recycle_bin_location">Papirkurvens placering</string>
     <string name="force_portrait_mode">Brug stående visning</string>
 
     <!-- Setting sections -->
