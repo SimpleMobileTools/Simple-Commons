@@ -213,7 +213,9 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Deseja realmente excluir?</string>
     <string name="deletion_confirmation">Deseja realmente excluir %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Deseja realmente mover %s para a Lixeira?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">Deseja realmente mover %s para a Lixeira?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
+    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
     <string name="do_not_ask_again">Não perguntar novamente por enquanto</string>
     <string name="yes">Sim</string>
     <string name="no">Não</string>
@@ -366,7 +368,7 @@
     <string name="use_same_snooze">Sempre usar o mesmo tempo de soneca</string>
     <string name="snooze_time">Tempo de soneca</string>
     <string name="vibrate_on_button_press">Vibrar ao pressionar o botão</string>
-    <string name="move_items_to_recycle_bin">Mover itens na Lixeira em vez de excluir</string>
+    <string name="move_items_into_recycle_bin">Mover itens na Lixeira em vez de excluir</string>
     <string name="recycle_bin_cleaning_interval">Intervalo de limpeza da Lixeira</string>
     <string name="empty_recycle_bin">Lixeira vazia</string>
     <string name="force_portrait_mode">Forçar modo retrato</string>

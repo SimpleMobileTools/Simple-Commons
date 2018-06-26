@@ -213,7 +213,9 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Willst du mit dem Löschen fortfahren?</string>
     <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s to Recycle Bin?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s into the Recycle Bin?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
+    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
     <string name="do_not_ask_again">Nicht erneut fragen (in dieser Sitzung)</string>
     <string name="yes">Ja</string>
     <string name="no">Nein</string>
@@ -366,7 +368,7 @@
     <string name="use_same_snooze">Immer dasselbe Snooze-Intervall nutzen</string>
     <string name="snooze_time">Snooze-Intervall</string>
     <string name="vibrate_on_button_press">Bei Tastendruck vibrieren</string>
-    <string name="move_items_to_recycle_bin">Move items in Recycle Bin instead of deleting</string>
+    <string name="move_items_into_recycle_bin">Move items into the Recycle Bin instead of deleting</string>
     <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
     <string name="empty_recycle_bin">Empty Recycle Bin</string>
     <string name="force_portrait_mode">Force portrait mode</string>
