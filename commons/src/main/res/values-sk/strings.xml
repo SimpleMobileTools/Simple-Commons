@@ -409,6 +409,8 @@
     <string name="restore_all_files">Obnoviť všetky súbory</string>
     <string name="recycle_bin_emptied">Odpadkový kôš bol vyprázdnený</string>
     <string name="files_restored_successfully">Súbory boli úspešne obnovené</string>
+    <string name="empty_recycle_bin_confirmation">Ste si istý, že chcete vysypať odpadkový kôš? Súbory budú navždy stratené.</string>
+    <string name="recycle_bin_empty">Odpadkový kôš je prázdny</string>
 
     <!-- Import / Export -->
     <string name="importing">Importovanie…</string>

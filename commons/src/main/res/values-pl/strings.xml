@@ -407,6 +407,8 @@
     <string name="restore_all_files">Przywróć wszystkie pliki</string>
     <string name="recycle_bin_emptied">Kosz został opróżniony</string>
     <string name="files_restored_successfully">Pliki zostały przywrócone</string>
+    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
+    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
 
     <!-- Import / Export -->
     <string name="importing">Importuję…</string>

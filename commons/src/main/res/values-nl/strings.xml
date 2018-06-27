@@ -389,6 +389,8 @@
     <string name="restore_all_files">Alles herstellen</string>
     <string name="recycle_bin_emptied">Prullenbak is geleegd</string>
     <string name="files_restored_successfully">Bestanden zijn hersteld</string>
+    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
+    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
 
     <!-- Import / Export -->
     <string name="importing">Importeren…</string>
