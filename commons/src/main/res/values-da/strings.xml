@@ -389,8 +389,8 @@
     <string name="restore_all_files">Restore all files</string>
     <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
     <string name="files_restored_successfully">Files have been restored successfully</string>
-    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
-    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
+    <string name="empty_recycle_bin_confirmation">Er du sikker på at du vil tømme papirkurven? Filerne vil ikke kunne genskabes.</string>
+    <string name="recycle_bin_empty">Papirkurven er tom</string>
 
     <!-- Import / Export -->
     <string name="importing">Importerer…</string>
