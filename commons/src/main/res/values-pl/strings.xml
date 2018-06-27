@@ -7,7 +7,7 @@
     <string name="out_of_memory_error">Błąd pamięci</string>
     <string name="an_error_occurred">Wystąpił błąd: %s</string>
     <string name="open_with">Otwórz w</string>
-    <string name="no_app_found">Nie znaleziono danych aplikacji</string>
+    <string name="no_app_found">Nie mogę znaleźć danych aplikacji</string>
     <string name="set_as">Ustaw jako</string>
     <string name="value_copied_to_clipboard">Wartość została skopiowana do schowka</string>
     <string name="unknown">Nieznane</string>
@@ -197,7 +197,7 @@
     <string name="temporarily_show_hidden">Tymczasowo pokaż ukryte multimedia</string>
     <string name="stop_showing_hidden">Przestań pokazywać ukryte multimedia</string>
     <string name="maximum_share_reached">Nie możesz udostępniać tak wielu danych naraz</string>
-    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
+    <string name="empty_and_disable_recycle_bin">Wyczyść i wyłącz kosz</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortuj według parametru:</string>
@@ -216,8 +216,8 @@
     <string name="proceed_with_deletion">Czy na pewno chcesz to usunąć?</string>
     <string name="deletion_confirmation">Czy na pewno chcesz usunąć %s?</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Czy na pewno chcesz %s do kosza?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
-    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
+    <string name="are_you_sure_delete">Czy na pewno chcesz usunąć ten element?</string>
+    <string name="are_you_sure_recycle_bin">Czy na pewno chcesz przenieść ten element do kosza?</string>
     <string name="do_not_ask_again">Nie pytaj więcej w tej sesji</string>
     <string name="yes">Tak</string>
     <string name="no">Nie</string>
@@ -402,11 +402,11 @@
     <string name="text">Tekst</string>
 
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restore this file</string>
-    <string name="restore_selected_files">Restore selected files</string>
-    <string name="restore_all_files">Restore all files</string>
-    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
-    <string name="files_restored_successfully">Files have been restored successfully</string>
+    <string name="restore_this_file">Przywróć ten plik</string>
+    <string name="restore_selected_files">Przywróć wybrane pliki</string>
+    <string name="restore_all_files">Przywróć wszystkie pliki</string>
+    <string name="recycle_bin_emptied">Kosz został opróżniony</string>
+    <string name="files_restored_successfully">Pliki zostały przywrócone</string>
 
     <!-- Import / Export -->
     <string name="importing">Importuję…</string>
