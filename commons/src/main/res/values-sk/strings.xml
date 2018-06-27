@@ -403,6 +403,13 @@
     <string name="startup">Po spustení</string>
     <string name="text">Text</string>
 
+    <!-- Recycle Bin -->
+    <string name="restore_this_file">Obnoviť tento súbor</string>
+    <string name="restore_selected_files">Obnoviť vybrané súbory</string>
+    <string name="restore_all_files">Obnoviť všetky súbory</string>
+    <string name="recycle_bin_emptied">Odpadkový kôš bol vyprázdnený</string>
+    <string name="files_restored_successfully">Súbory boli úspešne obnovené</string>
+
     <!-- Import / Export -->
     <string name="importing">Importovanie…</string>
     <string name="exporting">Exportovanie…</string>

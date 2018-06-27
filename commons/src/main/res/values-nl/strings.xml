@@ -383,6 +383,13 @@
     <string name="startup">Opstarten</string>
     <string name="text">Tekst</string>
 
+    <!-- Recycle Bin -->
+    <string name="restore_this_file">Restore this file</string>
+    <string name="restore_selected_files">Restore selected files</string>
+    <string name="restore_all_files">Restore all files</string>
+    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
+    <string name="files_restored_successfully">Files have been restored successfully</string>
+
     <!-- Import / Export -->
     <string name="importing">Importeren…</string>
     <string name="exporting">Exporteren…</string>
