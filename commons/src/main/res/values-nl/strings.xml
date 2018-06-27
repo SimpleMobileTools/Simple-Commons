@@ -195,7 +195,7 @@
     <string name="temporarily_show_hidden">Verborgen items tonen</string>
     <string name="stop_showing_hidden">Verborgen items niet tonen</string>
     <string name="maximum_share_reached">Kan niet zoveel items tegelijk delen</string>
-    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
+    <string name="empty_and_disable_recycle_bin">Prullenbak leegmaken en uitschakelen</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorteren op</string>
@@ -214,8 +214,8 @@
     <string name="proceed_with_deletion">Deze items verwijderen?</string>
     <string name="deletion_confirmation">%s echt verwijderen?</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">%s echt verplaatsen naar de prullenbak?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
-    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
+    <string name="are_you_sure_delete">Item echt verwijderen?</string>
+    <string name="are_you_sure_recycle_bin">Item echt verplaatsen naar de prullenbak?</string>
     <string name="do_not_ask_again">Onthouden voor deze sessie</string>
     <string name="yes">Ja</string>
     <string name="no">Nee</string>
