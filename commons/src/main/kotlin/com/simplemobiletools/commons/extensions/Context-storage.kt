@@ -375,6 +375,11 @@ fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSi
 }
 
 fun Context.rescanDeletedPath(path: String, callback: (() -> Unit)? = null) {
+    if (path.startsWith(filesDir.toString())) {
+        callback?.invoke()
+        return
+    }
+
     if (deleteFromMediaStore(path)) {
         callback?.invoke()
     } else {
@@ -383,13 +388,13 @@ fun Context.rescanDeletedPath(path: String, callback: (() -> Unit)? = null) {
             return
         }
 
-        MediaScannerConnection.scanFile(applicationContext, arrayOf(path), null, { s, uri ->
+        MediaScannerConnection.scanFile(applicationContext, arrayOf(path), null) { s, uri ->
             try {
                 applicationContext.contentResolver.delete(uri, null, null)
             } catch (e: Exception) {
             }
             callback?.invoke()
-        })
+        }
     }
 }
 
