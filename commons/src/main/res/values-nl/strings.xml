@@ -246,8 +246,8 @@
     <string name="fingerprint_setup_successfully">Vingerafdruk beveiliging ingesteld. Herinstalleer deze app indien u niet meer met uw vingerafdruk kunt authenticeren.</string>
 
     <!-- Times -->
-    <string name="yesterday">Yesterday</string>
-    <string name="today">Today</string>
+    <string name="yesterday">Gisteren</string>
+    <string name="today">Vandaag</string>
     <string name="tomorrow">Morgen</string>
     <string name="seconds_raw">seconden</string>
     <string name="minutes_raw">minuten</string>
@@ -391,8 +391,8 @@
     <string name="restore_all_files">Alles herstellen</string>
     <string name="recycle_bin_emptied">Prullenbak is geleegd</string>
     <string name="files_restored_successfully">Bestanden zijn hersteld</string>
-    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
-    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
+    <string name="empty_recycle_bin_confirmation">Prullenbak echt leegmaken? De bestanden zullen permanent verwijderd worden.</string>
+    <string name="recycle_bin_empty">Prullenbak is leeg</string>
 
     <!-- Import / Export -->
     <string name="importing">Importeren…</string>
