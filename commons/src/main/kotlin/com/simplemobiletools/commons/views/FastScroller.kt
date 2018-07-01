@@ -258,12 +258,15 @@ class FastScroller : FrameLayout {
             }
             MotionEvent.ACTION_MOVE -> {
                 if (isScrollingEnabled) {
-                    if (isHorizontal) {
-                        setPosition(event.x)
-                        setRecyclerViewPosition(event.x)
-                    } else {
-                        setPosition(event.y)
-                        setRecyclerViewPosition(event.y)
+                    try {
+                        if (isHorizontal) {
+                            setPosition(event.x)
+                            setRecyclerViewPosition(event.x)
+                        } else {
+                            setPosition(event.y)
+                            setRecyclerViewPosition(event.y)
+                        }
+                    } catch (ignored: Exception) {
                     }
                 }
                 true
