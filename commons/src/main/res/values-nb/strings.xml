@@ -119,6 +119,11 @@
         <item quantity="other">%d elementer</item>
     </plurals>
 
+    <plurals name="deleting_items">
+        <item quantity="one">Deleting %d item</item>
+        <item quantity="other">Deleting %d items</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Velg lagring</string>
     <string name="internal">Intern</string>

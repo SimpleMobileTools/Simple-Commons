@@ -121,6 +121,12 @@
         <item quantity="other">%d items</item>
     </plurals>
 
+    <plurals name="deleting_items">
+        <item quantity="one">Deleting %d item</item>
+        <item quantity="few">Deleting %d items</item>
+        <item quantity="other">Deleting %d items</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Odaberite prostor za pohranu</string>
     <string name="internal">Unutranji prostor za pohranu</string>

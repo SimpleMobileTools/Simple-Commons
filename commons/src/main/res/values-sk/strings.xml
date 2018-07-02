@@ -121,6 +121,12 @@
         <item quantity="other">%d položiek</item>
     </plurals>
 
+    <plurals name="deleting_items">
+        <item quantity="one">Odstraňuje sa %d položka</item>
+        <item quantity="few">Odstraňujú sa %d položky</item>
+        <item quantity="other">Odstraňuje sa %d položiek</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Zvoľte úložisko</string>
     <string name="internal">Interné</string>

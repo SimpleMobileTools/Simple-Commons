@@ -119,6 +119,11 @@
         <item quantity="other">%d 个项目</item>
     </plurals>
 
+    <plurals name="deleting_items">
+        <item quantity="one">Deleting %d item</item>
+        <item quantity="other">Deleting %d items</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">选择存储器</string>
     <string name="internal">内部存储器</string>

@@ -119,6 +119,11 @@
         <item quantity="other">%d items</item>
     </plurals>
 
+    <plurals name="deleting_items">
+        <item quantity="one">Deleting %d item</item>
+        <item quantity="other">Deleting %d items</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">저장공간 선택</string>
     <string name="internal">내장 메모리</string>

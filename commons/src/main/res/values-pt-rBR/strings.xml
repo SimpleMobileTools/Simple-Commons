@@ -119,6 +119,11 @@
         <item quantity="other">%d itens</item>
     </plurals>
 
+    <plurals name="deleting_items">
+        <item quantity="one">Deleting %d item</item>
+        <item quantity="other">Deleting %d items</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Selecionar armazenamento</string>
     <string name="internal">Interno</string>

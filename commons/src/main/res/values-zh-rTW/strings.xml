@@ -118,6 +118,11 @@
         <item quantity="other">%d個項目</item>
     </plurals>
 
+    <plurals name="deleting_items">
+        <item quantity="one">Deleting %d item</item>
+        <item quantity="other">Deleting %d items</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">選擇儲存空間</string>
     <string name="internal">內部儲存空間</string>
