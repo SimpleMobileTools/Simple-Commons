@@ -15,13 +15,13 @@
     <string name="never">从不</string>
     <string name="details">详细</string>
     <string name="notes">笔记</string>
-    <string name="deleting_folder">Deleting folder \'%s\'</string>
+    <string name="deleting_folder">正在删除目录 \'%s\'</string>
 
     <!-- Favorites -->
-    <string name="favorites">Favorites</string>
-    <string name="add_favorites">Add favorites</string>
-    <string name="add_to_favorites">Add to favorites</string>
-    <string name="remove_from_favorites">Remove from favorites</string>
+    <string name="favorites">收藏</string>
+    <string name="add_favorites">添加收藏</string>
+    <string name="add_to_favorites">添加到收藏</string>
+    <string name="remove_from_favorites">从收藏中移除</string>
 
     <!-- Search -->
     <string name="search">搜索</string>
@@ -119,6 +119,11 @@
         <item quantity="other">%d 个项目</item>
     </plurals>
 
+    <plurals name="deleting_items">
+        <item quantity="one">Deleting %d item</item>
+        <item quantity="other">Deleting %d items</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">选择存储器</string>
     <string name="internal">内部存储器</string>
@@ -195,6 +200,7 @@
     <string name="temporarily_show_hidden">显示／隐藏缓存内容</string>
     <string name="stop_showing_hidden">不显示隐藏的媒体文件</string>
     <string name="maximum_share_reached">您不能一次分享太多的内容</string>
+    <string name="empty_and_disable_recycle_bin">清空并禁用回收站</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序方式</string>
@@ -212,14 +218,16 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">是否执行此删除操作？</string>
     <string name="deletion_confirmation">你确定要删除 %s？</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">你确定要移动 %s到回收站？</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">你确定要移动 %s到回收站？</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">你确定要删除此项目吗？</string>
+    <string name="are_you_sure_recycle_bin">你确定要移动此项目到回收站吗？</string>
     <string name="do_not_ask_again">不再提醒</string>
     <string name="yes">是</string>
     <string name="no">否</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting a folder</item>
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="one">警告: 你正在删除此目录</item>
+        <item quantity="other">警告: 你正在删除 %d 目录</item>
     </plurals>
 
     <!-- Password protection -->
@@ -243,6 +251,8 @@
     <string name="fingerprint_setup_successfully">指纹保护设置成功。如果出现问题，请重新安装本应用。</string>
 
     <!-- Times -->
+    <string name="yesterday">昨天</string>
+    <string name="today">今天</string>
     <string name="tomorrow">明天</string>
     <string name="seconds_raw">秒</string>
     <string name="minutes_raw">分钟</string>
@@ -343,7 +353,7 @@
     <!-- Settings -->
     <string name="settings">设置</string>
     <string name="customize_colors">自定义颜色</string>
-    <string name="customize_widget_colors">Customize widget colors</string>
+    <string name="customize_widget_colors">自定义小部件颜色</string>
     <string name="use_english_language">强制使用英语语言</string>
     <string name="avoid_whats_new">启动时不再显示更新内容</string>
     <string name="show_hidden_items">显示隐藏的项目</string>
@@ -365,21 +375,29 @@
     <string name="use_same_snooze">始终使用相同的贪睡时间</string>
     <string name="snooze_time">贪睡时间</string>
     <string name="vibrate_on_button_press">按下按键后震动</string>
-    <string name="move_items_to_trash_bin">Move items in Recycle Bin instead of deleting</string>
-    <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
-    <string name="empty_recycle_bin">Empty Recycle Bin</string>
-    <string name="recycle_bin_location">Recycle Bin location</string>
-    <string name="force_portrait_mode">Force portrait mode</string>
+    <string name="move_items_into_recycle_bin">将项目转移到回收站而不是直接删除</string>
+    <string name="recycle_bin_cleaning_interval">回收站清理间隔</string>
+    <string name="empty_recycle_bin">清空回收站</string>
+    <string name="force_portrait_mode">强制人像模式</string>
 
     <!-- Setting sections -->
     <string name="visibility">可见度</string>
     <string name="security">安全</string>
     <string name="scrolling">滚动</string>
     <string name="file_operations">文件操作</string>
-    <string name="recycle_bin">Recycle Bin</string>
-    <string name="saving_label">Saving</string>
-    <string name="startup">Startup</string>
-    <string name="text">Text</string>
+    <string name="recycle_bin">回收站</string>
+    <string name="saving_label">正在保存</string>
+    <string name="startup">启动</string>
+    <string name="text">文本</string>
+
+    <!-- Recycle Bin -->
+    <string name="restore_this_file">恢复此文件</string>
+    <string name="restore_selected_files">恢复选中的文件</string>
+    <string name="restore_all_files">恢复所有文件</string>
+    <string name="recycle_bin_emptied">清空回收站成功</string>
+    <string name="files_restored_successfully">恢复文件成功</string>
+    <string name="empty_recycle_bin_confirmation">您确定要清空回收站吗？这些文件将永久丢失。</string>
+    <string name="recycle_bin_empty">回收站是空的</string>
 
     <!-- Import / Export -->
     <string name="importing">正在导入…</string>
@@ -412,18 +430,18 @@
     <string name="december">十二月</string>
 
     <!-- in January -->
-    <string name="in_january">in January</string>
-    <string name="in_february">in February</string>
-    <string name="in_march">in March</string>
-    <string name="in_april">in April</string>
-    <string name="in_may">in May</string>
-    <string name="in_june">in June</string>
-    <string name="in_july">in July</string>
-    <string name="in_august">in August</string>
-    <string name="in_september">in September</string>
-    <string name="in_october">in October</string>
-    <string name="in_november">in November</string>
-    <string name="in_december">in December</string>
+    <string name="in_january">一月</string>
+    <string name="in_february">二月</string>
+    <string name="in_march">三月</string>
+    <string name="in_april">四月</string>
+    <string name="in_may">五月</string>
+    <string name="in_june">六月</string>
+    <string name="in_july">七月</string>
+    <string name="in_august">八月</string>
+    <string name="in_september">九月</string>
+    <string name="in_october">十月</string>
+    <string name="in_november">十一月</string>
+    <string name="in_december">十二月</string>
 
     <string name="monday">周一</string>
     <string name="tuesday">周二</string>
@@ -475,7 +493,7 @@
         ]]>
     </string>
     <string name="purchase">购买</string>
-    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
+    <string name="update_thank_you">请更新Simple Thank You到最新版本</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -490,7 +508,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">常见问题</string>
-    <string name="before_asking_question">Before you ask a question, please first read the</string>
+    <string name="before_asking_question">在提问之前，请先阅读</string>
     <string name="faq_1_title_commons">为什么我在应用小部件列表里没有找到这个应用的小部件？</string>
     <string name="faq_1_text_commons">这很可能是因为你将应用程序移动到了SD卡。由于Android系统的限制，在这种情况下会隐藏应用程序的小部件。 唯一的解决方法是在系统设置中将应用程序移回内部存储。</string>
     <string name="faq_2_title_commons">我想支持你，但我不能捐赠金钱。 还有什么是我能够做的吗？</string>
@@ -499,8 +517,8 @@
     <string name="faq_3_text_commons">不幸的是，你无法恢复。在确认对话框后文件将被立即删除，你并没有回收站用。</string>
     <string name="faq_4_title_commons">我不喜欢小部件的颜色，我可以修改吗？</string>
     <string name="faq_4_text_commons">是可以的，当你在主屏幕上拖动小部件时，会出现小部件配置界面。你会在左下角看到彩色的方块，只需按下它们即可选择新的颜色。你还可以通过滑块来调整Alpha值。</string>
-    <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them. You can customize the Recycle Bin location, emptying interval, or empty it manually.</string>
+    <string name="faq_5_title_commons">我可以恢复已删除的文件吗？</string>
+    <string name="faq_5_text_commons">如果你真的把它们删除了，那么你无法恢复。不过，您可以启用回收站，这样只会移动文件而不是直接删除。</string>
 
     <!-- License -->
     <string name="notice">此应用使用了以下三方库。谢谢。</string>
@@ -525,4 +543,7 @@
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
     <string name="number_picker_title">Number Picker (customizable number picker)</string>
+    <string name="exoplayer_title">ExoPlayer (video player)</string>
+    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
+    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
 </resources>

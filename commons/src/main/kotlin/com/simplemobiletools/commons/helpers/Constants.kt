@@ -45,6 +45,7 @@ const val TEXT_COLOR = "text_color"
 const val BACKGROUND_COLOR = "background_color"
 const val PRIMARY_COLOR = "primary_color_2"
 const val APP_ICON_COLOR = "app_icon_color"
+const val LAST_ICON_COLOR = "last_icon_color"
 const val CUSTOM_TEXT_COLOR = "custom_text_color"
 const val CUSTOM_BACKGROUND_COLOR = "custom_background_color"
 const val CUSTOM_PRIMARY_COLOR = "custom_primary_color"
@@ -111,6 +112,9 @@ const val LICENSE_ESPRESSO = 65536
 const val LICENSE_GSON = 131072
 const val LICENSE_LEAK_CANARY = 262144
 const val LICENSE_NUMBER_PICKER = 524288
+const val LICENSE_EXOPLAYER = 1048576
+const val LICENSE_PANORAMA_VIEW = 2097152
+const val LICENSE_SANSELAN = 4194304
 
 // global intents
 const val OPEN_DOCUMENT_TREE = 1000
@@ -176,7 +180,7 @@ const val WEEKENDS_BIT = SATURDAY_BIT or SUNDAY_BIT
 val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp")
 val videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
 val audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a", ".opus", ".flac")
-val rawExtensions: Array<String> get() = arrayOf(".dng", ".orf")
+val rawExtensions: Array<String> get() = arrayOf(".dng", ".orf", ".nef")
 
 val appIconColorStrings = arrayListOf(
         ".Red",

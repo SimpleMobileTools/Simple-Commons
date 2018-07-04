@@ -119,6 +119,11 @@
         <item quantity="other">%d items</item>
     </plurals>
 
+    <plurals name="deleting_items">
+        <item quantity="one">%d item verwijderen</item>
+        <item quantity="other">%d items verwijderen</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Opslag kiezen</string>
     <string name="internal">Interne opslag</string>
@@ -195,6 +200,7 @@
     <string name="temporarily_show_hidden">Verborgen items tonen</string>
     <string name="stop_showing_hidden">Verborgen items niet tonen</string>
     <string name="maximum_share_reached">Kan niet zoveel items tegelijk delen</string>
+    <string name="empty_and_disable_recycle_bin">Prullenbak leegmaken en uitschakelen</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorteren op</string>
@@ -212,7 +218,9 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Deze items verwijderen?</string>
     <string name="deletion_confirmation">%s echt verwijderen?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">%s echt verplaatsen naar de prullenbak?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">%s echt verplaatsen naar de prullenbak?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">Item echt verwijderen?</string>
+    <string name="are_you_sure_recycle_bin">Item echt verplaatsen naar de prullenbak?</string>
     <string name="do_not_ask_again">Onthouden voor deze sessie</string>
     <string name="yes">Ja</string>
     <string name="no">Nee</string>
@@ -243,6 +251,8 @@
     <string name="fingerprint_setup_successfully">Vingerafdruk beveiliging ingesteld. Herinstalleer deze app indien u niet meer met uw vingerafdruk kunt authenticeren.</string>
 
     <!-- Times -->
+    <string name="yesterday">Gisteren</string>
+    <string name="today">Vandaag</string>
     <string name="tomorrow">Morgen</string>
     <string name="seconds_raw">seconden</string>
     <string name="minutes_raw">minuten</string>
@@ -365,10 +375,9 @@
     <string name="use_same_snooze">Altijd dezelfde interval voor uitstellen gebruiken</string>
     <string name="snooze_time">Interval bij uitstellen</string>
     <string name="vibrate_on_button_press">Trillen bij het indrukken van knoppen</string>
-    <string name="move_items_to_trash_bin">Items niet verwijderen, maar verplaatsen naar prullenbak</string>
+    <string name="move_items_into_recycle_bin">Items niet verwijderen, maar verplaatsen naar prullenbak</string>
     <string name="recycle_bin_cleaning_interval">Interval prullenbak leegmaken</string>
     <string name="empty_recycle_bin">Prullenbak leegmaken</string>
-    <string name="recycle_bin_location">Locatie prullenbak</string>
     <string name="force_portrait_mode">Portretmodus forceren</string>
 
     <!-- Setting sections -->
@@ -380,6 +389,15 @@
     <string name="saving_label">Opslaan</string>
     <string name="startup">Opstarten</string>
     <string name="text">Tekst</string>
+
+    <!-- Recycle Bin -->
+    <string name="restore_this_file">Bestand herstellen</string>
+    <string name="restore_selected_files">Selectie herstellen</string>
+    <string name="restore_all_files">Alles herstellen</string>
+    <string name="recycle_bin_emptied">Prullenbak is geleegd</string>
+    <string name="files_restored_successfully">Bestanden zijn hersteld</string>
+    <string name="empty_recycle_bin_confirmation">Prullenbak echt leegmaken? De bestanden zullen permanent verwijderd worden.</string>
+    <string name="recycle_bin_empty">Prullenbak is leeg</string>
 
     <!-- Import / Export -->
     <string name="importing">Importeren…</string>
@@ -526,4 +544,7 @@
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
     <string name="number_picker_title">Number Picker (customizable number picker)</string>
+    <string name="exoplayer_title">ExoPlayer (video player)</string>
+    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
+    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
 </resources>

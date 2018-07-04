@@ -119,6 +119,11 @@
         <item quantity="other">%d items</item>
     </plurals>
 
+    <plurals name="deleting_items">
+        <item quantity="one">Deleting %d item</item>
+        <item quantity="other">Deleting %d items</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Speicher auswählen</string>
     <string name="internal">Intern</string>
@@ -195,6 +200,7 @@
     <string name="temporarily_show_hidden">Verstecktes kurz zeigen</string>
     <string name="stop_showing_hidden">Verstecktes wieder verbergen</string>
     <string name="maximum_share_reached">So viel Inhalt kann nicht auf einmal geteilt werden</string>
+    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortieren nach</string>
@@ -212,7 +218,9 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Willst du mit dem Löschen fortfahren?</string>
     <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s to Recycle Bin?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s into the Recycle Bin?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
+    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
     <string name="do_not_ask_again">Nicht erneut fragen (in dieser Sitzung)</string>
     <string name="yes">Ja</string>
     <string name="no">Nein</string>
@@ -243,6 +251,8 @@
     <string name="fingerprint_setup_successfully">Schutz erfolgreich eingerichtet. Falls beim Zurücksetzen Probleme auftreten, bitte die App neu installieren.</string>
 
     <!-- Times -->
+    <string name="yesterday">Yesterday</string>
+    <string name="today">Today</string>
     <string name="tomorrow">Morgen</string>
     <string name="seconds_raw">Sekunden</string>
     <string name="minutes_raw">Minuten</string>
@@ -365,10 +375,10 @@
     <string name="use_same_snooze">Immer dasselbe Snooze-Intervall nutzen</string>
     <string name="snooze_time">Snooze-Intervall</string>
     <string name="vibrate_on_button_press">Bei Tastendruck vibrieren</string>
-    <string name="move_items_to_trash_bin">Move items in Recycle Bin instead of deleting</string>
+    <string name="move_items_into_recycle_bin">Move items into the Recycle Bin instead of deleting</string>
     <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
-    <string name="empty_recycle_bin">Empty Recycle Bin</string>
-    <string name="recycle_bin_location">Recycle Bin location</string>
+    <string name="empty_recycle_bin">Empty the Recycle Bin</string>
+    <string name="force_portrait_mode">Force portrait mode</string>
 
     <!-- Setting sections -->
     <string name="visibility">Sichtbarkeit</string>
@@ -379,6 +389,15 @@
     <string name="saving_label">Saving</string>
     <string name="startup">Startup</string>
     <string name="text">Text</string>
+
+    <!-- Recycle Bin -->
+    <string name="restore_this_file">Restore this file</string>
+    <string name="restore_selected_files">Restore selected files</string>
+    <string name="restore_all_files">Restore all files</string>
+    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
+    <string name="files_restored_successfully">Files have been restored successfully</string>
+    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
+    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
 
     <!-- Import / Export -->
     <string name="importing">Importiere…</string>
@@ -500,7 +519,7 @@
     <string name="faq_4_title_commons">Ich mag die Farben des Widgets nicht. Kann ich sie wechseln?</string>
     <string name="faq_4_text_commons">Ja, wenn du ein Widget auf den Home Screen ziehst, erscheint ein Konfigurationsmenü. In der linken unteren Ecke sind farbige Kästchen, drücke auf sie und wähle eine neue Farbe. Ausserdem kannst du den Regler nutzen, um den Alphaparameter (Transparenz) einzustellen.</string>
     <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them. You can customize the Recycle Bin location, emptying interval, or empty it manually.</string>
+    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them.</string>
 
     <!-- License -->
     <string name="notice">Diese App nutzt die folgenden Drittanbieterbibliotheken, die mein Leben einfacher machen. Danke!</string>
@@ -525,4 +544,7 @@
     <string name="gson_title">Gson (JSON-Parser)</string>
     <string name="leak_canary_title">Leak Canary (Memory-Leak-Detektor)</string>
     <string name="number_picker_title">Number Picker (Konfigurierbarer Zahlenwähler)</string>
+    <string name="exoplayer_title">ExoPlayer (video player)</string>
+    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
+    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
 </resources>

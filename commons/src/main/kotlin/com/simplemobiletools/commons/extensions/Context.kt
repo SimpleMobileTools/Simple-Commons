@@ -534,18 +534,21 @@ fun Context.saveExifRotation(exif: ExifInterface, degrees: Int) {
 
 fun Context.checkAppIconColor() {
     val appId = baseConfig.appId
-    if (appId.isNotEmpty()) {
+    if (appId.isNotEmpty() && baseConfig.lastIconColor != baseConfig.appIconColor) {
         getAppIconColors().forEachIndexed { index, color ->
-            toggleAppIconColor(appId, index, baseConfig.appIconColor == color)
+            toggleAppIconColor(appId, index, color, baseConfig.appIconColor == color)
         }
     }
 }
 
-fun Context.toggleAppIconColor(appId: String, colorIndex: Int, enable: Boolean) {
+fun Context.toggleAppIconColor(appId: String, colorIndex: Int, color: Int, enable: Boolean) {
     val className = "${appId.removeSuffix(".debug")}.activities.SplashActivity${appIconColorStrings[colorIndex]}"
     val state = if (enable) PackageManager.COMPONENT_ENABLED_STATE_ENABLED else PackageManager.COMPONENT_ENABLED_STATE_DISABLED
     try {
         packageManager.setComponentEnabledSetting(ComponentName(appId, className), state, PackageManager.DONT_KILL_APP)
+        if (enable) {
+            baseConfig.lastIconColor = color
+        }
     } catch (e: Exception) {
     }
 }

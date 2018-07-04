@@ -119,6 +119,11 @@
         <item quantity="other">%d itens</item>
     </plurals>
 
+    <plurals name="deleting_items">
+        <item quantity="one">Deleting %d item</item>
+        <item quantity="other">Deleting %d items</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Selecionar armazenamento</string>
     <string name="internal">Interno</string>
@@ -195,6 +200,7 @@
     <string name="temporarily_show_hidden">Mostrar pastas ocultas temporariamente</string>
     <string name="stop_showing_hidden">Parar de exibir mídia oculta</string>
     <string name="maximum_share_reached">Não é possível compartilhar essa quantidade toda de arquivos de uma vez</string>
+    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -212,7 +218,9 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Deseja realmente excluir?</string>
     <string name="deletion_confirmation">Deseja realmente excluir %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Deseja realmente mover %s para a Lixeira?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">Deseja realmente mover %s para a Lixeira?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
+    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
     <string name="do_not_ask_again">Não perguntar novamente por enquanto</string>
     <string name="yes">Sim</string>
     <string name="no">Não</string>
@@ -243,6 +251,8 @@
     <string name="fingerprint_setup_successfully">Proteção criada com sucesso. Reinstale o app caso tenha problemas em redefinir.</string>
 
     <!-- Times -->
+    <string name="yesterday">Yesterday</string>
+    <string name="today">Today</string>
     <string name="tomorrow">Amanhã</string>
     <string name="seconds_raw">segundos</string>
     <string name="minutes_raw">minutos</string>
@@ -365,10 +375,9 @@
     <string name="use_same_snooze">Sempre usar o mesmo tempo de soneca</string>
     <string name="snooze_time">Tempo de soneca</string>
     <string name="vibrate_on_button_press">Vibrar ao pressionar o botão</string>
-    <string name="move_items_to_trash_bin">Mover itens na Lixeira em vez de excluir</string>
+    <string name="move_items_into_recycle_bin">Mover itens na Lixeira em vez de excluir</string>
     <string name="recycle_bin_cleaning_interval">Intervalo de limpeza da Lixeira</string>
     <string name="empty_recycle_bin">Lixeira vazia</string>
-    <string name="recycle_bin_location">Localização da Lixeira</string>
     <string name="force_portrait_mode">Forçar modo retrato</string>
 
     <!-- Setting sections -->
@@ -380,6 +389,15 @@
     <string name="saving_label">Salvando</string>
     <string name="startup">Inicialização</string>
     <string name="text">Texto</string>
+
+    <!-- Recycle Bin -->
+    <string name="restore_this_file">Restore this file</string>
+    <string name="restore_selected_files">Restore selected files</string>
+    <string name="restore_all_files">Restore all files</string>
+    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
+    <string name="files_restored_successfully">Files have been restored successfully</string>
+    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
+    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
 
     <!-- Import / Export -->
     <string name="importing">Importando…</string>
@@ -501,7 +519,7 @@
     <string name="faq_4_title_commons">Eu não gosto das cores do widget, posso mudá-las?</string>
     <string name="faq_4_text_commons">Sim, enquanto você arrasta um widget em sua tela inicial, uma tela de configuração do widget aparece. Você verá quadrados coloridos no canto inferior esquerdo, basta pressioná-los para escolher uma nova cor. Você pode usar o controle deslizante para ajustar o alfa também.</string>
     <string name="faq_5_title_commons">Posso restaurar de alguma forma os arquivos apagados?</string>
-    <string name="faq_5_text_commons">Se eles foram realmente excluídos, você não pode. No entanto, você pode ativar o uso de uma Lixeira em vez de excluí-la nas configurações do aplicativo. Isso apenas moverá os arquivos, em vez de excluí-los. Você pode personalizar o local da Lixeira, o intervalo de esvaziamento ou esvaziá-lo manualmente.</string>
+    <string name="faq_5_text_commons">Se eles foram realmente excluídos, você não pode. No entanto, você pode ativar o uso de uma Lixeira em vez de excluí-la nas configurações do aplicativo. Isso apenas moverá os arquivos, em vez de excluí-los.</string>
 
     <!-- License -->
     <string name="notice">Este aplicativo usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>
@@ -526,4 +544,7 @@
     <string name="gson_title">Gson (analisador JSON)</string>
     <string name="leak_canary_title">Leak Canary (detector de vazamento de memória)</string>
     <string name="number_picker_title">Number Picker (selecionador personalizável de número)</string>
+    <string name="exoplayer_title">ExoPlayer (video player)</string>
+    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
+    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
 </resources>

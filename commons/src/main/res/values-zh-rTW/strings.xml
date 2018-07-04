@@ -118,6 +118,11 @@
         <item quantity="other">%d個項目</item>
     </plurals>
 
+    <plurals name="deleting_items">
+        <item quantity="one">Deleting %d item</item>
+        <item quantity="other">Deleting %d items</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">選擇儲存空間</string>
     <string name="internal">內部儲存空間</string>
@@ -194,6 +199,7 @@
     <string name="temporarily_show_hidden">暫時顯示隱藏的檔案</string>
     <string name="stop_showing_hidden">停止顯示隱藏的檔案</string>
     <string name="maximum_share_reached">你不能一次分享這麼多內容</string>
+    <string name="empty_and_disable_recycle_bin">清空並停用回收桶</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序</string>
@@ -211,14 +217,16 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">確定要進行刪除嗎?</string>
     <string name="deletion_confirmation">你確定要刪除%s嗎?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">你確定要把%s移到回收桶嗎?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">你確定要把%s移到回收桶嗎?</string>    <!-- Are you sure you want to move 3 items into Recycle Bin? -->
+    <string name="are_you_sure_delete">你確定要刪除這個項目嗎?</string>
+    <string name="are_you_sure_recycle_bin">你確定要把這個項目移到回收桶嗎?</string>
     <string name="do_not_ask_again">這情況不再詢問</string>
     <string name="yes">是</string>
     <string name="no">否</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting a folder</item>
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="one">注意: 你正在刪除1個資料夾</item>
+        <item quantity="other">注意: 你正在刪除%d個資料夾</item>
     </plurals>
 
     <!-- Password protection -->
@@ -242,6 +250,8 @@
     <string name="fingerprint_setup_successfully">保護設置成功。若再次設置時發生問題，請重新安裝應用程式。</string>
 
     <!-- Times -->
+    <string name="yesterday">昨天</string>
+    <string name="today">今天</string>
     <string name="tomorrow">明天</string>
     <string name="seconds_raw">秒鐘</string>
     <string name="minutes_raw">分鐘</string>
@@ -364,10 +374,9 @@
     <string name="use_same_snooze">總是使用相同延遲間隔</string>
     <string name="snooze_time">延遲時間</string>
     <string name="vibrate_on_button_press">按下按鈕時震動</string>
-    <string name="move_items_to_trash_bin">將項目移入回收桶取代刪除</string>
+    <string name="move_items_into_recycle_bin">將項目移入回收桶取代刪除</string>
     <string name="recycle_bin_cleaning_interval">回收桶清理間隔</string>
-    <string name="empty_recycle_bin">空白回收桶</string>
-    <string name="recycle_bin_location">回收桶位置</string>
+    <string name="empty_recycle_bin">清空回收桶</string>
     <string name="force_portrait_mode">強制直向模式</string>
 
     <!-- Setting sections -->
@@ -380,6 +389,14 @@
     <string name="startup">啟動</string>
     <string name="text">文字</string>
 
+    <!-- Recycle Bin -->
+    <string name="restore_this_file">還原這個檔案</string>
+    <string name="restore_selected_files">還原選擇的檔案</string>
+    <string name="restore_all_files">還原全部檔案</string>
+    <string name="recycle_bin_emptied">回收桶已成功清空</string>
+    <string name="files_restored_successfully">檔案已成功還原</string>
+    <string name="empty_recycle_bin_confirmation">你確定要清空回收桶嗎?檔案將會永久消失。</string>
+    <string name="recycle_bin_empty">回收桶是空的</string>
 
     <!-- Import / Export -->
     <string name="importing">正在匯入…</string>
@@ -502,7 +519,7 @@
     <string name="faq_4_title_commons">我不喜歡小工具的顏色，我能更改嗎?</string>
     <string name="faq_4_text_commons">可啊，當你在主畫面拖動小工具時，會出現小工具設置畫面。你會在左下角看到顏色方塊，點下去再挑個新顏色就好了。你也能用拉條來調整透明度。</string>
     <string name="faq_5_title_commons">我有辦法恢復被刪除的檔案嗎?</string>
-    <string name="faq_5_text_commons">如果它們確實被刪除了，那沒辦法。然而，你可以在程式設定中啟用回收桶來取代刪除。那只會移動檔案而不是刪除它們。你可以自訂回收桶位置、清空間隔或手動清空。</string>
+    <string name="faq_5_text_commons">如果它們確實被刪除了，那沒辦法。然而，你可以在程式設定中啟用回收桶來取代刪除。那只會移動檔案而不是刪除它們。</string>
 
     <!-- License -->
     <string name="notice">這程式使用了下列的第三方函式庫來讓我工作簡化。感謝。</string>
@@ -527,4 +544,7 @@
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
     <string name="number_picker_title">Number Picker (customizable number picker)</string>
+    <string name="exoplayer_title">ExoPlayer (video player)</string>
+    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
+    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
 </resources>

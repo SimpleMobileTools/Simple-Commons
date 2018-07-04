@@ -119,6 +119,11 @@
         <item quantity="other">%d öğe</item>
     </plurals>
 
+    <plurals name="deleting_items">
+        <item quantity="one">Deleting %d item</item>
+        <item quantity="other">Deleting %d items</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Depolama seç</string>
     <string name="internal">Dahili</string>
@@ -195,6 +200,7 @@
     <string name="temporarily_show_hidden">Geçici olarak gizliyi göster</string>
     <string name="stop_showing_hidden">Gizli medyayı göstermeyi bırak</string>
     <string name="maximum_share_reached">Bu kadar çok içeriği bir kerede paylaşamazsınız</string>
+    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sıralama ölçütü</string>
@@ -212,7 +218,9 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Silme işlemine devam etmek istediğinizden emin misiniz?</string>
     <string name="deletion_confirmation">%s gerçekten silinsin mi?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">%s gerçekten Geri Dönüşüm Kutusuna taşınsın mı?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">%s gerçekten Geri Dönüşüm Kutusuna taşınsın mı?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
+    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
     <string name="do_not_ask_again">Bu oturumda tekrar sorma</string>
     <string name="yes">Evet</string>
     <string name="no">Hayır</string>
@@ -243,6 +251,8 @@
     <string name="fingerprint_setup_successfully">Koruma kurulumu başarıyla gerçekleştirildi. Sıfırlama ile ilgili sorunlar olması durumunda lütfen uygulamayı yeniden yükleyin.</string>
 
     <!-- Times -->
+    <string name="yesterday">Yesterday</string>
+    <string name="today">Today</string>
     <string name="tomorrow">Yarın</string>
     <string name="seconds_raw">saniye</string>
     <string name="minutes_raw">dakika</string>
@@ -365,10 +375,9 @@
     <string name="use_same_snooze">Her zaman aynı erteleme süresini kullan</string>
     <string name="snooze_time">Erteleme süresi</string>
     <string name="vibrate_on_button_press">Düğmeye basıldığında titret</string>
-    <string name="move_items_to_trash_bin">Öğeleri silmek yerine Geri Dönüşüm Kutusuna taşı</string>
+    <string name="move_items_into_recycle_bin">Öğeleri silmek yerine Geri Dönüşüm Kutusuna taşı</string>
     <string name="recycle_bin_cleaning_interval">Geri Dönüşüm Kutusu temizleme süresi</string>
     <string name="empty_recycle_bin">Geri Dönüşüm Kutusunu boşalt</string>
-    <string name="recycle_bin_location">Geri Dönüşüm Kutusu konumu</string>
     <string name="force_portrait_mode">Dikey modu zorla</string>
 
     <!-- Setting sections -->
@@ -380,6 +389,15 @@
     <string name="saving_label">Kaydetme</string>
     <string name="startup">Başlangıç</string>
     <string name="text">Metin</string>
+
+    <!-- Recycle Bin -->
+    <string name="restore_this_file">Restore this file</string>
+    <string name="restore_selected_files">Restore selected files</string>
+    <string name="restore_all_files">Restore all files</string>
+    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
+    <string name="files_restored_successfully">Files have been restored successfully</string>
+    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
+    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
 
     <!-- Import / Export -->
     <string name="importing">İçe aktarılıyor…</string>
@@ -501,7 +519,7 @@
     <string name="faq_4_title_commons">Widget renklerini beğenmedim, değiştirebilir miyim?</string>
     <string name="faq_4_text_commons">Evet, ana ekranınızda bir widget\'ı sürüklediğinizde, bir widget yapılandırma ekranı görünür. Sol alt köşede renkli kareler göreceksiniz, sadece yeni bir renk seçmek için onlara basın. Alfa\'yı da ayarlamak için kaydırıcıyı kullanabilirsiniz.</string>
     <string name="faq_5_title_commons">Bir şekilde silinen dosyaları geri yükleyebilir miyim?</string>
-    <string name="faq_5_text_commons">Gerçekten silinmişlerse, yapamazsınız. Bununla birlikte, gelecekte dosyaları kaybetmemek için uygulama ayarlarındaki Silmek yerine Geri Dönüşüm Kutusuna taşı seçeneğini etkinleştirebilirsiniz. Bu, dosyaları silmek yerine sadece taşır. Geri Dönüşüm Kutusu konumunu özelleştirebilir, boşaltma süresini ayarlayabilir veya elle boşaltabilirsiniz.</string>
+    <string name="faq_5_text_commons">Gerçekten silinmişlerse, yapamazsınız. Bununla birlikte, gelecekte dosyaları kaybetmemek için uygulama ayarlarındaki Silmek yerine Geri Dönüşüm Kutusuna taşı seçeneğini etkinleştirebilirsiniz. Bu, dosyaları silmek yerine sadece taşır.</string>
 
     <!-- License -->
     <string name="notice">Bu uygulama hayatımı kolaylaştırmak için aşağıdaki üçüncü taraf kitaplıklarını kullanır. Teşekkürler.</string>
@@ -526,4 +544,7 @@
     <string name="gson_title">Gson (JSON ayrıştırıcısı)</string>
     <string name="leak_canary_title">Leak Canary (bellek sızıntısı dedektörü)</string>
     <string name="number_picker_title">Number Picker (özelleştirilebilir sayı seçici)</string>
+    <string name="exoplayer_title">ExoPlayer (video player)</string>
+    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
+    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
 </resources>

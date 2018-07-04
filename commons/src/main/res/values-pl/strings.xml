@@ -7,7 +7,7 @@
     <string name="out_of_memory_error">Błąd pamięci</string>
     <string name="an_error_occurred">Wystąpił błąd: %s</string>
     <string name="open_with">Otwórz w</string>
-    <string name="no_app_found">Nie znaleziono danych aplikacji</string>
+    <string name="no_app_found">Nie mogę znaleźć danych aplikacji</string>
     <string name="set_as">Ustaw jako</string>
     <string name="value_copied_to_clipboard">Wartość została skopiowana do schowka</string>
     <string name="unknown">Nieznane</string>
@@ -121,6 +121,12 @@
         <item quantity="other">%d elementów</item>
     </plurals>
 
+    <plurals name="deleting_items">
+        <item quantity="one">Deleting %d item</item>
+        <item quantity="few">Deleting %d items</item>
+        <item quantity="other">Deleting %d items</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Wybierz pamięć</string>
     <string name="internal">Wewnętrzna</string>
@@ -197,6 +203,7 @@
     <string name="temporarily_show_hidden">Tymczasowo pokaż ukryte multimedia</string>
     <string name="stop_showing_hidden">Przestań pokazywać ukryte multimedia</string>
     <string name="maximum_share_reached">Nie możesz udostępniać tak wielu danych naraz</string>
+    <string name="empty_and_disable_recycle_bin">Wyczyść i wyłącz kosz</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortuj według parametru:</string>
@@ -214,7 +221,9 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Czy na pewno chcesz to usunąć?</string>
     <string name="deletion_confirmation">Czy na pewno chcesz usunąć %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Czy na pewno chcesz %s do kosza?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">Czy na pewno chcesz %s do kosza?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">Czy na pewno chcesz usunąć ten element?</string>
+    <string name="are_you_sure_recycle_bin">Czy na pewno chcesz przenieść ten element do kosza?</string>
     <string name="do_not_ask_again">Nie pytaj więcej w tej sesji</string>
     <string name="yes">Tak</string>
     <string name="no">Nie</string>
@@ -246,6 +255,8 @@
     <string name="fingerprint_setup_successfully">Zabezpieczenie zostało ustawione. W razie problemów z jego zresetowaniem przeinstaluj aplikację.</string>
 
     <!-- Times -->
+    <string name="yesterday">Yesterday</string>
+    <string name="today">Today</string>
     <string name="tomorrow">Jutro</string>
     <string name="seconds_raw">sekundy</string>
     <string name="minutes_raw">minuty</string>
@@ -383,10 +394,9 @@
     <string name="use_same_snooze">Zawsze używaj tego samego przedziału przypomnienia</string>
     <string name="snooze_time">Długość drzemki</string>
     <string name="vibrate_on_button_press">Wibracja po wciśnięciu przycisku</string>
-    <string name="move_items_to_trash_bin">Przenoś elementy do kosza zamiast je usuwać</string>
+    <string name="move_items_into_recycle_bin">Przenoś elementy do kosza zamiast je usuwać</string>
     <string name="recycle_bin_cleaning_interval">Przedział czasowy czyszczenia kosza</string>
     <string name="empty_recycle_bin">Wyczyść kosz</string>
-    <string name="recycle_bin_location">Lokalizacja kosza</string>
     <string name="force_portrait_mode">Wymuś tryb pionowy</string>
 
     <!-- Setting sections -->
@@ -398,6 +408,15 @@
     <string name="saving_label">Zachowywanie</string>
     <string name="startup">Uruchamianie</string>
     <string name="text">Tekst</string>
+
+    <!-- Recycle Bin -->
+    <string name="restore_this_file">Przywróć ten plik</string>
+    <string name="restore_selected_files">Przywróć wybrane pliki</string>
+    <string name="restore_all_files">Przywróć wszystkie pliki</string>
+    <string name="recycle_bin_emptied">Kosz został opróżniony</string>
+    <string name="files_restored_successfully">Pliki zostały przywrócone</string>
+    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
+    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
 
     <!-- Import / Export -->
     <string name="importing">Importuję…</string>
@@ -518,7 +537,7 @@
     <string name="faq_4_title_commons">Nie za bardzo podobają mi się domyślne kolory wiedżetów. Mogę je jakoś zmienić?</string>
     <string name="faq_4_text_commons">Tak. Po przeciągnięciu widżetu na pulpit pojawia się okno jego konfiguracji. Zobaczysz na nim kolorowe kwadraty, za pomocą których możesz wybrać nowe kolory. Suwakiem możesz też ustawić poziom przezroczystości.</string>
     <string name="faq_5_title_commons">Czy mogę jakoś odzyskać usunięte pliki?</string>
-    <string name="faq_5_text_commons">Jeśli zostały faktycznie usunięte, no to nie bardzo (ratunkiem mogą - acz nie muszą - okazać się zewnętrzne aplikacje odzyskujące pliki). Jednakże, możesz włączyć funkcję kosza w ustawieniach niniejszej aplikacji, aby mieć pewność co do ich ewentualnego odzyskania. Możliwe jest ustawienie jego lokalizaji, przedziału czyszczenia i jego samodzielne czyszczenie.</string>
+    <string name="faq_5_text_commons">Jeśli zostały faktycznie usunięte, no to nie bardzo (ratunkiem mogą - acz nie muszą - okazać się zewnętrzne aplikacje odzyskujące pliki). Jednakże, możesz włączyć funkcję kosza w ustawieniach niniejszej aplikacji, aby mieć pewność co do ich ewentualnego odzyskania.</string>
 
     <!-- License -->
     <string name="notice">Aplikacja korzysta z następujących bibliotek innych firm:</string>
@@ -543,4 +562,7 @@
     <string name="gson_title">Gson (parser JSON)</string>
     <string name="leak_canary_title">Leak Canary (wykrywanie wycieków pamięci)</string>
     <string name="number_picker_title">Number Picker (generator liczb losowych)</string>
+    <string name="exoplayer_title">ExoPlayer (video player)</string>
+    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
+    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
 </resources>

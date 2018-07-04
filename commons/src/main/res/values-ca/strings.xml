@@ -119,6 +119,11 @@
         <item quantity="other">%d elements</item>
     </plurals>
 
+    <plurals name="deleting_items">
+        <item quantity="one">Deleting %d item</item>
+        <item quantity="other">Deleting %d items</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Selecciona emmagatzematge</string>
     <string name="internal">Emmagatzematge intern</string>
@@ -194,6 +199,7 @@
     <string name="temporarily_show_hidden">Mostrar amagats temporalment</string>
     <string name="stop_showing_hidden">Deixar de mostrar mitjans amagats</string>
     <string name="maximum_share_reached">No pots compartir aquest contingut alhora</string>
+    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar per</string>
@@ -211,7 +217,9 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Estas segur que vols continuar amb l’eliminació?</string>
     <string name="deletion_confirmation">Esteu segur que voleu suprimir %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Estàs segur que vols moure %s a la paperera?</string>    <!-- Are you sure you want to move 3 items to Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">Estàs segur que vols moure %s a la paperera?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
+    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
     <string name="do_not_ask_again">No tornar a preguntar en aquesta sessió</string>
     <string name="yes">Si</string>
     <string name="no">No</string>
@@ -242,6 +250,8 @@
     <string name="fingerprint_setup_successfully">Configuració de la protecció amb èxit. Torneu a instal·lar l\'aplicació en cas de problemes amb restablir-la.</string>
 
     <!-- Times -->
+    <string name="yesterday">Yesterday</string>
+    <string name="today">Today</string>
     <string name="tomorrow">Demà</string>
     <string name="seconds_raw">segons</string>
     <string name="minutes_raw">minuts</string>
@@ -367,10 +377,9 @@
     <string name="use_same_snooze">Utilitzeu sempre el mateix temps de posposat</string>
     <string name="snooze_time">Temps de posposat</string>
     <string name="vibrate_on_button_press">Vibrar al prŕmer un botó</string>
-    <string name="move_items_to_trash_bin">Mou elements a la paperera de reciclatge en lloc de suprimir-los</string>
+    <string name="move_items_into_recycle_bin">Mou elements a la paperera de reciclatge en lloc de suprimir-los</string>
     <string name="recycle_bin_cleaning_interval">Interval de neteja de paperera de reciclatge</string>
     <string name="empty_recycle_bin">Buida la paperera de reciclatge</string>
-    <string name="recycle_bin_location">Ubicació de la paperera de reciclatge</string>
     <string name="force_portrait_mode">Força el mode de retrat</string>
 
     <!-- Setting sections -->
@@ -382,6 +391,15 @@
     <string name="saving_label">Desant</string>
     <string name="startup">Inici</string>
     <string name="text">Text</string>
+
+    <!-- Recycle Bin -->
+    <string name="restore_this_file">Restore this file</string>
+    <string name="restore_selected_files">Restore selected files</string>
+    <string name="restore_all_files">Restore all files</string>
+    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
+    <string name="files_restored_successfully">Files have been restored successfully</string>
+    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
+    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
 
     <!-- Import / Export -->
     <string name="importing">Important…</string>
@@ -504,7 +522,7 @@
     <string name="faq_4_title_commons">No m\'agraden els colors del widget, puc canviar-los?</string>
     <string name="faq_4_text_commons">Sí, mentre arrossegueu un widget a la vostra pantalla d\'inici, apareixerà una pantalla de configuració de widgets. Veureu quadrats de colors a l\'extrem inferior esquerre, només cal prémer-los per seleccionar un color nou. També podeu utilitzar el control lliscant per ajustar l\'alfa.</string>
     <string name="faq_5_title_commons">Puc recuperar d\'alguna manera els fitxers eliminats?</string>
-    <string name="faq_5_text_commons">Si estan realment eliminats no pots fer-ho. Tanmateix, pots habilitar l\'ús d\'una paperera de reciclatge en comptes de suprimir definitivament a la configuració de l\'aplicació. Això només mourà els fitxers en lloc d\'eliminar-los. Pots personalitzar la ubicació de la paperera de reciclatge i l\'interval de buidatge o buidar-la manualment.</string>
+    <string name="faq_5_text_commons">Si estan realment eliminats no pots fer-ho. Tanmateix, pots habilitar l\'ús d\'una paperera de reciclatge en comptes de suprimir definitivament a la configuració de l\'aplicació. Això només mourà els fitxers en lloc d\'eliminar-los.</string>
 
     <!-- License -->
     <string name="notice">Aquesta aplicació fa servir les següents biblioteques de tercers que ens faciliten la feina. Gràcies.</string>
@@ -529,4 +547,7 @@
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
     <string name="number_picker_title">Selector de números (selector de números personalitzable)</string>
+    <string name="exoplayer_title">ExoPlayer (video player)</string>
+    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
+    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
 </resources>

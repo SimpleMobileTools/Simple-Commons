@@ -77,14 +77,14 @@ fun String.getExifProperties(exif: ExifInterface): String {
     exif.getAttribute(ExifInterface.TAG_FOCAL_LENGTH).let {
         if (it?.isNotEmpty() == true) {
             val values = it.split('/')
-            val focalLength = "${Math.round(values[0].toDouble() / values[1].toDouble())}mm"
+            val focalLength = "${values[0].toDouble() / values[1].toDouble()}mm"
             exifString += "$focalLength  "
         }
     }
 
     exif.getAttribute(ExifInterface.TAG_EXPOSURE_TIME).let {
         if (it?.isNotEmpty() == true) {
-            val exposureSec = (1 / it.toFloat()).toInt()
+            val exposureSec = Math.round(1 / it.toFloat())
             exifString += "1/${exposureSec}s  "
         }
     }
