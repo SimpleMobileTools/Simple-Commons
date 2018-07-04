@@ -336,6 +336,7 @@
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Alarmın çalmasına şu kadar kaldı:\n%s</string>
+    <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
     <string name="alarm_warning">Lütfen alarma güvenmeden önce düzgün çalıştığından emin olun. Pil tasarrufu ile ilgili sistem kısıtlamaları nedeniyle yanlış davranabilir.</string>
     <string name="reminder_warning">Lütfen hatırlatıcılara güvenmeden önce düzgün çalıştıklarından emin olun. Pil tasarrufu ile ilgili sistem kısıtlamaları nedeniyle yanlış davranabilirler.</string>
 
