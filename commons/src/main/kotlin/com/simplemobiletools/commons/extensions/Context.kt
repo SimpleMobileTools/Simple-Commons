@@ -536,7 +536,13 @@ fun Context.checkAppIconColor() {
     val appId = baseConfig.appId
     if (appId.isNotEmpty() && baseConfig.lastIconColor != baseConfig.appIconColor) {
         getAppIconColors().forEachIndexed { index, color ->
-            toggleAppIconColor(appId, index, color, baseConfig.appIconColor == color)
+            toggleAppIconColor(appId, index, color, false)
+        }
+
+        getAppIconColors().forEachIndexed { index, color ->
+            if (baseConfig.appIconColor == color) {
+                toggleAppIconColor(appId, index, color, true)
+            }
         }
     }
 }
