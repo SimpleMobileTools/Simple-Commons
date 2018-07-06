@@ -394,13 +394,13 @@
     <string name="text">Text</string>
 
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restore this file</string>
-    <string name="restore_selected_files">Restore selected files</string>
-    <string name="restore_all_files">Restore all files</string>
-    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
-    <string name="files_restored_successfully">Files have been restored successfully</string>
-    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
-    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
+    <string name="restore_this_file">Restaura aquest fitxer</string>
+    <string name="restore_selected_files">Restaura els fitxers seleccionats</string>
+    <string name="restore_all_files">Restaura tots els fitxers</string>
+    <string name="recycle_bin_emptied">La paperea s'ha buidat correctament</string>
+    <string name="files_restored_successfully">El fitxers s'han restaurat correctament</string>
+    <string name="empty_recycle_bin_confirmation">ASegur que vols buidar la paperera? El fitxer s'eliminaran definitivament.</string>
+    <string name="recycle_bin_empty">La paperera és buida</string>
 
     <!-- Import / Export -->
     <string name="importing">Important…</string>
