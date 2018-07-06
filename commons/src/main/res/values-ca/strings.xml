@@ -120,8 +120,8 @@
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Deleting %d item</item>
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="one">Eliminant %d element</item>
+        <item quantity="other">Eliminant %d elements</item>
     </plurals>
 
     <!-- Storages -->
