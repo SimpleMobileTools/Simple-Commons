@@ -20,7 +20,7 @@
     <!-- Favorites -->
     <string name="favorites">Preferits</string>
     <string name="add_favorites">Afegeix als preferits</string>
-    <string name="add_to_favorites">Afegeix als preferits/string>
+    <string name="add_to_favorites">Afegeix als preferits</string>
     <string name="remove_from_favorites">Elimina dels preferits</string>
 
     <!-- Search -->
@@ -397,9 +397,9 @@
     <string name="restore_this_file">Restaura aquest fitxer</string>
     <string name="restore_selected_files">Restaura els fitxers seleccionats</string>
     <string name="restore_all_files">Restaura tots els fitxers</string>
-    <string name="recycle_bin_emptied">La paperea s'ha buidat correctament</string>
-    <string name="files_restored_successfully">El fitxers s'han restaurat correctament</string>
-    <string name="empty_recycle_bin_confirmation">ASegur que vols buidar la paperera? El fitxer s'eliminaran definitivament.</string>
+    <string name="recycle_bin_emptied">La paperea s\'ha buidat correctament</string>
+    <string name="files_restored_successfully">El fitxers s\'han restaurat correctament</string>
+    <string name="empty_recycle_bin_confirmation">ASegur que vols buidar la paperera? El fitxer s\'eliminaran definitivament.</string>
     <string name="recycle_bin_empty">La paperera és buida</string>
 
     <!-- Import / Export -->
