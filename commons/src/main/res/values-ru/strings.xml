@@ -366,7 +366,7 @@
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Время, оставшееся до срабатывания будильника:\n%s</string>
-    <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
+    <string name="reminder_triggers_in">Время, оставшееся до срабатывания напоминания:\n%s</string>
     <string name="alarm_warning">Пожалуйста, убедитесь, что будильник работает правильно, прежде чем полагаться на него. Он может не работать должным образом из-за системных ограничений, связанных с экономией батареи.</string>
     <string name="reminder_warning">Пожалуйста, убедитесь, что напоминания работают правильно, прежде чем полагаться на них. Они могут не работать должным образом из-за системных ограничений, связанных с экономией батареи.</string>
 
