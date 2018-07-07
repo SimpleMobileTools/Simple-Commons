@@ -19,7 +19,7 @@
 
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
-    <string name="add_favorites">Add favorites</string>
+    <string name="add_favorites">Agregar a favoritos</string>
     <string name="add_to_favorites">Agregar a favoritos</string>
     <string name="remove_from_favorites">Eliminar de favoritos</string>
 
@@ -120,8 +120,8 @@
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Deleting %d item</item>
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="one">Eliminando %d elemento</item>
+        <item quantity="other">Eliminando %d elementos</item>
     </plurals>
 
     <!-- Storages -->
@@ -199,7 +199,7 @@
     <string name="temporarily_show_hidden">Mostrar ocultos temporalmente</string>
     <string name="stop_showing_hidden">No mostrar ocultos</string>
     <string name="maximum_share_reached">No puedes compartir todo este contenido a la vez</string>
-    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
+    <string name="empty_and_disable_recycle_bin">Vaciar y desactivar la papelera de reciclaje</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -218,8 +218,8 @@
     <string name="proceed_with_deletion">¿Está seguro de querer continuar con la eliminación?</string>
     <string name="deletion_confirmation">Estas seguro que quieres borrar %s?</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">¿Estás seguro de que quieres mover %s a la papelera de reciclaje?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
-    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
+    <string name="are_you_sure_delete">¿Seguro que quieres eliminar este elemento?</string>
+    <string name="are_you_sure_recycle_bin">¿Seguro que quieres enviar este elemento a la papelera?</string>
     <string name="do_not_ask_again">No volver a preguntar en esta sesión</string>
     <string name="yes">Sí</string>
     <string name="no">No</string>
@@ -250,8 +250,8 @@
     <string name="fingerprint_setup_successfully">Configuración de protección con éxito. Por favor, vuelva a instalar la aplicación en caso de problemas al restablecerla.</string>
 
     <!-- Times -->
-    <string name="yesterday">Yesterday</string>
-    <string name="today">Today</string>
+    <string name="yesterday">Ayer</string>
+    <string name="today">Hoy</string>
     <string name="tomorrow">Mañana</string>
     <string name="seconds_raw">segundos</string>
     <string name="minutes_raw">minutos</string>
@@ -335,6 +335,7 @@
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Tiempo restante hasta que suene la alarma:\n%s</string>
+    <string name="reminder_triggers_in">Tiempo restante hasta que se active el recordatorio:\n%s</string>
     <string name="alarm_warning">Asegúrese de que la alarma funcione correctamente antes de confiar en ella. Podría comportarse mal debido a las restricciones del sistema relacionadas con el ahorro de batería.</string>
     <string name="reminder_warning">Asegúrese de que los recordatorios funcionen correctamente antes de confiar en ellos. Podrían portarse mal debido a las restricciones del sistema relacionadas con el ahorro de batería.</string>
 
@@ -390,13 +391,13 @@
     <string name="text">Texto</string>
 
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restore this file</string>
-    <string name="restore_selected_files">Restore selected files</string>
-    <string name="restore_all_files">Restore all files</string>
-    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
-    <string name="files_restored_successfully">Files have been restored successfully</string>
-    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
-    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
+    <string name="restore_this_file">Restaurar el fichero</string>
+    <string name="restore_selected_files">Restaurar los ficheros seleccionados</string>
+    <string name="restore_all_files">Restaurar todos los ficheros</string>
+    <string name="recycle_bin_emptied">La papelera se ha vaciado</string>
+    <string name="files_restored_successfully">Lo ficheros han sido restaurados correctamente</string>
+    <string name="empty_recycle_bin_confirmation">Seguro que quieres vaciar la papelera? Los ficheros se perderan definitivamente.</string>
+    <string name="recycle_bin_empty">La papelera está vacia</string>
 
     <!-- Import / Export -->
     <string name="importing">Importando…</string>
