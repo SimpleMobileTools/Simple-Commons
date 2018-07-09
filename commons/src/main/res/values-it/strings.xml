@@ -120,8 +120,8 @@
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Deleting %d item</item>
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="one">Eliminazione di %d elemento</item>
+        <item quantity="other">Eliminazione di %d elementi</item>
     </plurals>
 
     <!-- Storages -->
@@ -200,7 +200,7 @@
     <string name="temporarily_show_hidden">Mostra temporaneamente nascosti</string>
     <string name="stop_showing_hidden">Non mostrare media nascosti</string>
     <string name="maximum_share_reached">Non puoi condividere così tanto in una volta sola</string>
-    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
+    <string name="empty_and_disable_recycle_bin">Svuota e disattiva il Cestino</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordina per</string>
@@ -219,8 +219,8 @@
     <string name="proceed_with_deletion">Sei sicuro di procedere con l\'eliminazione?</string>
     <string name="deletion_confirmation">Sei sicuro di volere eliminare %s?</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Sei sicuro di volere spostare nel cestino %s?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
-    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
+    <string name="are_you_sure_delete">Sei sicuro di voler eliminare quest\'elemento?</string>
+    <string name="are_you_sure_recycle_bin">Sei sicuro di voler spostare quest\'elemento nel Cestino?</string>
     <string name="do_not_ask_again">Non chiedere nuovamente in questa sessione</string>
     <string name="yes">Sì</string>
     <string name="no">No</string>
@@ -251,8 +251,8 @@
     <string name="fingerprint_setup_successfully">Protezione impostata correttamente. Reinstalla l\'app in caso di problemi nel ripristinarla.</string>
  
     <!-- Times -->
-    <string name="yesterday">Yesterday</string>
-    <string name="today">Today</string>
+    <string name="yesterday">Ieri</string>
+    <string name="today">Oggi</string>
     <string name="tomorrow">Domani</string>
     <string name="seconds_raw">secondi</string>
     <string name="minutes_raw">minuti</string>
@@ -392,13 +392,13 @@
     <string name="text">Testo</string>
 
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restore this file</string>
-    <string name="restore_selected_files">Restore selected files</string>
-    <string name="restore_all_files">Restore all files</string>
-    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
-    <string name="files_restored_successfully">Files have been restored successfully</string>
-    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
-    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
+    <string name="restore_this_file">Ripristina questo file</string>
+    <string name="restore_selected_files">Ripristina i file selezionati</string>
+    <string name="restore_all_files">Ripristina tutti i file</string>
+    <string name="recycle_bin_emptied">Il Cestino è stato svuotato con successo</string>
+    <string name="files_restored_successfully">I file sono stati ripristinati con successo</string>
+    <string name="empty_recycle_bin_confirmation">Sei sicuro di voler svuotare il Cestino? I file saranno definitivamente persi.</string>
+    <string name="recycle_bin_empty">Il Cestino è vuoto</string>
 
     <!-- Import / Export -->
     <string name="importing">Importazione…</string>
