@@ -5,7 +5,7 @@ import android.support.v7.app.AlertDialog
 import android.text.Html
 import android.text.method.LinkMovementMethod
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.launchViewIntent
+import com.simplemobiletools.commons.extensions.launchPurchaseThankYouIntent
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_purchase_thank_you.view.*
 
@@ -17,7 +17,7 @@ class PurchaseThankYouDialog(val activity: Activity) {
         }
 
         AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.purchase, { dialog, which -> activity.launchViewIntent(R.string.thank_you_url) })
+                .setPositiveButton(R.string.purchase) { dialog, which -> activity.launchPurchaseThankYouIntent() }
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
                     activity.setupDialogStuff(view, this)
