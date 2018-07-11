@@ -255,10 +255,10 @@ fun Activity.openEditorIntent(path: String, applicationId: String) {
     }.start()
 }
 
-fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: String) {
+fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: String, forceMimeType: String = "") {
     Thread {
         val newUri = getFinalUriFromPath(path, applicationId) ?: return@Thread
-        val mimeType = getUriMimeType(path, newUri)
+        val mimeType = if (forceMimeType.isNotEmpty()) forceMimeType else getUriMimeType(path, newUri)
         Intent().apply {
             action = Intent.ACTION_VIEW
             setDataAndType(newUri, mimeType)
