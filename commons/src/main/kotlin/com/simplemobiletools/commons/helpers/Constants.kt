@@ -197,7 +197,7 @@ val appIconColorStrings = arrayListOf(
         ".Lime",
         ".Yellow",
         ".Amber",
-        "",
+        ".Orange",
         ".Deep_orange",
         ".Brown",
         ".Blue_grey",
