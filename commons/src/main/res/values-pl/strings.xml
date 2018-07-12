@@ -323,7 +323,7 @@
     <plurals name="minutes_before">
         <item quantity="one">%d minutę przed</item>
         <item quantity="few">%d minuty przed</item>
-        <item quantity="other">%d minut before</item>
+        <item quantity="other">%d minut przed</item>
     </plurals>
     <plurals name="hours_before">
         <item quantity="one">%d godzinę przed</item>
@@ -371,7 +371,7 @@
 
     <!-- Settings -->
     <string name="settings">Ustawienia</string>
-    <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Kup aplikację \"Proste podziękowanie\"</string>
     <string name="customize_colors">Dostosuj kolory aplikacji</string>
     <string name="customize_widget_colors">Dostosuj kolory widżetu</string>
     <string name="use_english_language">Wymuś używanie przez aplikację języka angielskiego</string>
