@@ -254,4 +254,8 @@ open class BaseConfig(val context: Context) {
     var widgetIdToMeasure: Int
         get() = prefs.getInt(WIDGET_ID_TO_MEASURE, 0)
         set(widgetIdToMeasure) = prefs.edit().putInt(WIDGET_ID_TO_MEASURE, widgetIdToMeasure).apply()
+
+    var wasOrangeIconChecked: Boolean
+        get() = prefs.getBoolean(WAS_ORANGE_ICON_CHECKED, false)
+        set(wasOrangeIconChecked) = prefs.edit().putBoolean(WAS_ORANGE_ICON_CHECKED, wasOrangeIconChecked).apply()
 }

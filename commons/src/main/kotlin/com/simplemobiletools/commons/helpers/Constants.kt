@@ -90,6 +90,7 @@ const val OTG_PARTITION = "otg_partition"
 const val IS_USING_MODIFIED_APP_ICON = "is_using_modified_app_icon"
 const val INITIAL_WIDGET_HEIGHT = "initial_widget_height"
 const val WIDGET_ID_TO_MEASURE = "widget_id_to_measure"
+const val WAS_ORANGE_ICON_CHECKED = "was_orange_icon_checked"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1

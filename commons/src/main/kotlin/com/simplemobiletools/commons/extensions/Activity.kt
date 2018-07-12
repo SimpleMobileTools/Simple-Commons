@@ -2,10 +2,7 @@ package com.simplemobiletools.commons.extensions
 
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
-import android.content.Intent
+import android.content.*
 import android.content.pm.PackageManager
 import android.graphics.drawable.ColorDrawable
 import android.media.RingtoneManager
@@ -81,6 +78,15 @@ fun Activity.appLaunched(appId: String) {
     baseConfig.appId = appId
     if (baseConfig.appRunCount == 0) {
         checkAppIconColor()
+    } else if (!baseConfig.wasOrangeIconChecked) {
+        baseConfig.wasOrangeIconChecked = true
+        if (baseConfig.appIconColor != resources.getColor(R.color.color_primary)) {
+            val orangeClassName = "${baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity.Orange"
+            packageManager.setComponentEnabledSetting(ComponentName(baseConfig.appId, orangeClassName), PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP)
+
+            val defaultClassName = "${baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity"
+            packageManager.setComponentEnabledSetting(ComponentName(baseConfig.appId, defaultClassName), PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, PackageManager.DONT_KILL_APP)
+        }
     }
     baseConfig.appRunCount++
 
