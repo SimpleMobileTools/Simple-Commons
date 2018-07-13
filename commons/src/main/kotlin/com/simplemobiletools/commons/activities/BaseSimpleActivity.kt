@@ -106,7 +106,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     fun updateActionbarColor(color: Int = baseConfig.primaryColor) {
         supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
-        updateActionBarTitle(supportActionBar?.title.toString())
+        updateActionBarTitle(supportActionBar?.title.toString(), color)
         updateStatusbarColor(color)
 
         if (isLollipopPlus()) {
