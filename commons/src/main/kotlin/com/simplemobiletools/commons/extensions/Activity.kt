@@ -13,6 +13,8 @@ import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.support.v4.provider.DocumentFile
 import android.support.v7.app.AlertDialog
+import android.support.v7.app.AppCompatActivity
+import android.text.Html
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
@@ -69,6 +71,14 @@ fun Activity.showErrorToast(msg: String, length: Int = Toast.LENGTH_LONG) {
 
 fun Activity.showErrorToast(exception: Exception, length: Int = Toast.LENGTH_LONG) {
     showErrorToast(exception.toString(), length)
+}
+
+fun AppCompatActivity.updateActionBarTitle(text: String, color: Int = baseConfig.primaryColor) {
+    supportActionBar?.title = Html.fromHtml("<font color='${color.getContrastColor().toHex()}'>$text</font>")
+}
+
+fun AppCompatActivity.updateActionBarSubtitle(text: String) {
+    supportActionBar?.subtitle = Html.fromHtml("<font color='${baseConfig.primaryColor.getContrastColor().toHex()}'>$text</font>")
 }
 
 @SuppressLint("NewApi")
