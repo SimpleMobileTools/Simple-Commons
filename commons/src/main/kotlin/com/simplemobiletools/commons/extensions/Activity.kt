@@ -96,6 +96,12 @@ fun Activity.appLaunched(appId: String) {
 
             val defaultClassName = "${baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity"
             packageManager.setComponentEnabledSetting(ComponentName(baseConfig.appId, defaultClassName), PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, PackageManager.DONT_KILL_APP)
+
+            getAppIconColors().forEachIndexed { index, color ->
+                if (baseConfig.appIconColor == color) {
+                    toggleAppIconColor(appId, index, color, true)
+                }
+            }
         }
     }
     baseConfig.appRunCount++
