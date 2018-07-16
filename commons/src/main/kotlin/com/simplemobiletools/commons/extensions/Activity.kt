@@ -91,18 +91,20 @@ fun Activity.appLaunched(appId: String) {
         checkAppIconColor()
     } else if (!baseConfig.wasOrangeIconChecked) {
         baseConfig.wasOrangeIconChecked = true
-        if (baseConfig.appIconColor != resources.getColor(R.color.color_primary)) {
-            val orangeClassName = "${baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity.Orange"
-            packageManager.setComponentEnabledSetting(ComponentName(baseConfig.appId, orangeClassName), PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP)
+        val primaryColor = resources.getColor(R.color.color_primary)
+        if (baseConfig.appIconColor != primaryColor) {
+            getAppIconColors().forEachIndexed { index, color ->
+                toggleAppIconColor(appId, index, color, false)
+            }
 
             val defaultClassName = "${baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity"
             packageManager.setComponentEnabledSetting(ComponentName(baseConfig.appId, defaultClassName), PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, PackageManager.DONT_KILL_APP)
 
-            getAppIconColors().forEachIndexed { index, color ->
-                if (baseConfig.appIconColor == color) {
-                    toggleAppIconColor(appId, index, color, true)
-                }
-            }
+            val orangeClassName = "${baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity.Orange"
+            packageManager.setComponentEnabledSetting(ComponentName(baseConfig.appId, orangeClassName), PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
+
+            baseConfig.appIconColor = primaryColor
+            baseConfig.lastIconColor = primaryColor
         }
     }
     baseConfig.appRunCount++
