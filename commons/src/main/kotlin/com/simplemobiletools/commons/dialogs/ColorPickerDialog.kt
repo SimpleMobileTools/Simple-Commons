@@ -118,10 +118,13 @@ class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBack
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
                 if (s.length == 6 && !isHueBeingDragged) {
-                    val newColor = Color.parseColor("#$s")
-                    Color.colorToHSV(newColor, currentColorHsv)
-                    updateHue()
-                    moveColorPicker()
+                    try {
+                        val newColor = Color.parseColor("#$s")
+                        Color.colorToHSV(newColor, currentColorHsv)
+                        updateHue()
+                        moveColorPicker()
+                    } catch (ignored: Exception) {
+                    }
                 }
             }
         })
