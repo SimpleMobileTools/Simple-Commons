@@ -87,6 +87,7 @@ fun Activity.appLaunched(appId: String) {
     updateSDCardPath()
     baseConfig.appId = appId
     if (baseConfig.appRunCount == 0) {
+        baseConfig.wasOrangeIconChecked = true
         checkAppIconColor()
     } else if (!baseConfig.wasOrangeIconChecked) {
         baseConfig.wasOrangeIconChecked = true
