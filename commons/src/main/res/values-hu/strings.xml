@@ -131,6 +131,8 @@
     <string name="root">Root</string>
     <string name="wrong_root_selected">Wrong folder selected, please select the root folder of your SD card</string>
     <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
+    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
+        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
 
     <!-- File properties -->
     <string name="properties">Properties</string>
