@@ -91,6 +91,7 @@ const val IS_USING_MODIFIED_APP_ICON = "is_using_modified_app_icon"
 const val INITIAL_WIDGET_HEIGHT = "initial_widget_height"
 const val WIDGET_ID_TO_MEASURE = "widget_id_to_measure"
 const val WAS_ORANGE_ICON_CHECKED = "was_orange_icon_checked"
+const val WAS_APP_ON_SD_SHOWN = "was_app_on_sd_shown"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1

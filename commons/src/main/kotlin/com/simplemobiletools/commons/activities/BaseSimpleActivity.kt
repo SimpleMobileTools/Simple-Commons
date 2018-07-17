@@ -381,4 +381,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             }
         }
     }
+
+    fun checkAppOnSDCard() {
+        if (!baseConfig.wasAppOnSDShown && isAppInstalledOnSDCard()) {
+            baseConfig.wasAppOnSDShown = true
+            ConfirmationDialog(this, "", R.string.app_on_sd_card, R.string.ok, 0) {}
+        }
+    }
 }

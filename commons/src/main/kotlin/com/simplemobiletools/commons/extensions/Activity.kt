@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.extensions
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.*
+import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.graphics.drawable.ColorDrawable
 import android.media.RingtoneManager
@@ -116,6 +117,13 @@ fun Activity.appLaunched(appId: String) {
             DonateDialog(this)
         }
     }
+}
+
+fun Activity.isAppInstalledOnSDCard(): Boolean = try {
+    val applicationInfo = packageManager.getPackageInfo(packageName, 0).applicationInfo
+    (applicationInfo.flags and ApplicationInfo.FLAG_EXTERNAL_STORAGE) == ApplicationInfo.FLAG_EXTERNAL_STORAGE
+} catch (e: Exception) {
+    false
 }
 
 @SuppressLint("InlinedApi")
