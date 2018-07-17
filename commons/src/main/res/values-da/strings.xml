@@ -131,8 +131,8 @@
     <string name="root">Rod</string>
     <string name="wrong_root_selected">Forkert mappe valgt, vælg rodmappen på SD-kortet</string>
     <string name="sd_card_otg_same">Stierne til SD-kortet og OTG-enheden kan ikke være ens</string>
-    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
-        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
+    <string name="app_on_sd_card">Det ser ud til at du har appen installeret på et SD-kort. Det gør at appens widget ikke er tilgængelig og ikke kan ses på listen med widgets.
+        Dette skyldes en begrænsning i systemet, så hvis du vil bruge appens widgets må du flytte appen tilbage til det interne lager.</string>
 
     <!-- File properties -->
     <string name="properties">Egenskaber</string>
@@ -355,7 +355,7 @@
 
     <!-- Settings -->
     <string name="settings">Indstillinger</string>
-    <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Køb Simple Thank You</string>
     <string name="customize_colors">Rediger farver</string>
     <string name="customize_widget_colors">Rediger widget-farver</string>
     <string name="use_english_language">Use English language</string>
