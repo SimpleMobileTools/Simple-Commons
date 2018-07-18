@@ -40,7 +40,6 @@ class AboutActivity : BaseSimpleActivity() {
         setupRateUs()
         setupInvite()
         setupLicense()
-        setupDonate()
         setupFacebook()
         setupGPlus()
         setupCopyright()
@@ -136,13 +135,6 @@ class AboutActivity : BaseSimpleActivity() {
             }
         }
         about_license.setTextColor(linkColor)
-    }
-
-    private fun setupDonate() {
-        about_donate.setOnClickListener {
-            launchViewIntent("https://simplemobiletools.github.io/donate/")
-        }
-        about_donate.setTextColor(linkColor)
     }
 
     private fun setupFacebook() {

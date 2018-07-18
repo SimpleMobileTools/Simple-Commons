@@ -87,20 +87,10 @@
             android:textColor="@color/color_primary"/>
 
         <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/about_donate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/about_license"
-            android:paddingBottom="@dimen/activity_margin"
-            android:paddingTop="@dimen/activity_margin"
-            android:text="@string/donate_underlined"
-            android:textColor="@color/color_primary"/>
-
-        <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_follow_us"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/about_donate"
+            android:layout_below="@+id/about_license"
             android:paddingBottom="@dimen/medium_margin"
             android:paddingTop="@dimen/activity_margin"
             android:text="@string/follow_us"/>
