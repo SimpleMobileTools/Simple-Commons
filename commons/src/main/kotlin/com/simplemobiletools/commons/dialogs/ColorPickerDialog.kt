@@ -118,18 +118,21 @@ class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBack
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
                 if (s.length == 6 && !isHueBeingDragged) {
-                    val newColor = Color.parseColor("#$s")
-                    Color.colorToHSV(newColor, currentColorHsv)
-                    updateHue()
-                    moveColorPicker()
+                    try {
+                        val newColor = Color.parseColor("#$s")
+                        Color.colorToHSV(newColor, currentColorHsv)
+                        updateHue()
+                        moveColorPicker()
+                    } catch (ignored: Exception) {
+                    }
                 }
             }
         })
 
         val textColor = activity.baseConfig.textColor
         dialog = AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok, { dialog, which -> confirmNewColor() })
-                .setNegativeButton(R.string.cancel, { dialog, which -> dialogDismissed() })
+                .setPositiveButton(R.string.ok) { dialog, which -> confirmNewColor() }
+                .setNegativeButton(R.string.cancel) { dialog, which -> dialogDismissed() }
                 .setOnCancelListener { dialogDismissed() }
                 .create().apply {
                     activity.setupDialogStuff(view, this) {

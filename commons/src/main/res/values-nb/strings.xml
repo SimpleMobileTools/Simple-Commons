@@ -131,6 +131,8 @@
     <string name="root">Rot</string>
     <string name="wrong_root_selected">Feil mappe er valgt, velg rotmappen til SD-kortet</string>
     <string name="sd_card_otg_same">Bane for SD-kort og OTG-enhet kan ikke være den samme</string>
+    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
+        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
 
     <!-- File properties -->
     <string name="properties">Egenskaper</string>
@@ -201,6 +203,8 @@
     <string name="stop_showing_hidden">Stopp å vise skjulte media</string>
     <string name="maximum_share_reached">Du kan ikke dele så mye innhold på en gang</string>
     <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
+    <string name="undo">Undo</string>
+    <string name="redo">Redo</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorter etter</string>

@@ -130,6 +130,8 @@
     <string name="root">根目錄</string>
     <string name="wrong_root_selected">選擇了錯誤的資料夾，請選擇SD卡的根目錄</string>
     <string name="sd_card_otg_same">SD卡和OTG裝置的路徑不能相同</string>
+    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
+        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
 
     <!-- File properties -->
     <string name="properties">屬性</string>
@@ -200,6 +202,8 @@
     <string name="stop_showing_hidden">停止顯示隱藏的檔案</string>
     <string name="maximum_share_reached">你不能一次分享這麼多內容</string>
     <string name="empty_and_disable_recycle_bin">清空並停用回收桶</string>
+    <string name="undo">Undo</string>
+    <string name="redo">Redo</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序</string>
@@ -352,7 +356,7 @@
 
     <!-- Settings -->
     <string name="settings">設定</string>
-    <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
+    <string name="purchase_simple_thank_you">購買Simple Thank You</string>
     <string name="customize_colors">自訂顏色</string>
     <string name="customize_widget_colors">自訂小工具顏色</string>
     <string name="use_english_language">強制使用英語</string>

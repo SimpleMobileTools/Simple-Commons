@@ -15,7 +15,6 @@ import android.provider.DocumentsContract
 import android.support.v4.app.ActivityCompat
 import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
-import android.text.Html
 import android.view.MenuItem
 import android.view.WindowManager
 import com.simplemobiletools.commons.R
@@ -107,7 +106,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     fun updateActionbarColor(color: Int = baseConfig.primaryColor) {
         supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
-        supportActionBar?.title = Html.fromHtml("<font color='${color.getContrastColor().toHex()}'>${supportActionBar?.title}</font>")
+        updateActionBarTitle(supportActionBar?.title.toString(), color)
         updateStatusbarColor(color)
 
         if (isLollipopPlus()) {
@@ -380,6 +379,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     toast(R.string.unknown_error_occurred)
                 }
             }
+        }
+    }
+
+    fun checkAppOnSDCard() {
+        if (!baseConfig.wasAppOnSDShown && isAppInstalledOnSDCard()) {
+            baseConfig.wasAppOnSDShown = true
+            ConfirmationDialog(this, "", R.string.app_on_sd_card, R.string.ok, 0) {}
         }
     }
 }

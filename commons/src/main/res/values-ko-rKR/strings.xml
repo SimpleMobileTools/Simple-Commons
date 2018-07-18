@@ -131,6 +131,8 @@
     <string name="root">루트</string>
     <string name="wrong_root_selected">잘못된 폴더가 선택되었습니다. SD 카드의 루트 폴더를 선택하세요.</string>
     <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
+    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
+        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
 
     <!-- File properties -->
     <string name="properties">속성</string>
@@ -201,6 +203,8 @@
     <string name="stop_showing_hidden">숨김파일 임시보기 해제</string>
     <string name="maximum_share_reached">한 번에 많은 콘텐츠를 공유 할 수 없습니다.</string>
     <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
+    <string name="undo">Undo</string>
+    <string name="redo">Redo</string>
 
     <!-- Sorting -->
     <string name="sort_by">정렬 방식</string>

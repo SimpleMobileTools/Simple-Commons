@@ -29,7 +29,7 @@ class SelectAlarmSoundDialog(val activity: BaseSimpleActivity, val currentUri: S
     private val view = activity.layoutInflater.inflate(R.layout.dialog_select_alarm_sound, null)
     private var systemAlarmSounds = ArrayList<AlarmSound>()
     private var yourAlarmSounds = ArrayList<AlarmSound>()
-    private var mediaPlayer = MediaPlayer()
+    private var mediaPlayer: MediaPlayer? = null
     private val config = activity.baseConfig
     private val dialog: AlertDialog
 
@@ -45,8 +45,8 @@ class SelectAlarmSoundDialog(val activity: BaseSimpleActivity, val currentUri: S
         addYourAlarms()
 
         dialog = AlertDialog.Builder(activity)
-                .setOnDismissListener { mediaPlayer.stop() }
-                .setPositiveButton(R.string.ok, { dialog, which -> dialogConfirmed() })
+                .setOnDismissListener { mediaPlayer?.stop() }
+                .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
                     activity.setupDialogStuff(view, this)
@@ -102,31 +102,38 @@ class SelectAlarmSoundDialog(val activity: BaseSimpleActivity, val currentUri: S
     }
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
-    private fun alarmClicked(alarmSound: AlarmSound) = when {
-        alarmSound.uri == SILENT -> mediaPlayer.stop()
-        alarmSound.id == ADD_NEW_SOUND_ID -> {
-            val action = if (isKitkatPlus()) Intent.ACTION_OPEN_DOCUMENT else Intent.ACTION_GET_CONTENT
-            Intent(action).apply {
-                type = "audio/*"
-                activity.startActivityForResult(this, pickAudioIntentId)
+    private fun alarmClicked(alarmSound: AlarmSound) {
+        when {
+            alarmSound.uri == SILENT -> mediaPlayer?.stop()
+            alarmSound.id == ADD_NEW_SOUND_ID -> {
+                val action = if (isKitkatPlus()) Intent.ACTION_OPEN_DOCUMENT else Intent.ACTION_GET_CONTENT
+                Intent(action).apply {
+                    type = "audio/*"
+                    activity.startActivityForResult(this, pickAudioIntentId)
 
-                if (isKitkatPlus()) {
-                    flags = flags or Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION
+                    if (isKitkatPlus()) {
+                        flags = flags or Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION
+                    }
                 }
+                dialog.dismiss()
             }
-            dialog.dismiss()
-        }
-        else -> try {
-            mediaPlayer.stop()
-            mediaPlayer = MediaPlayer().apply {
-                setAudioStreamType(audioStream)
-                setDataSource(activity, Uri.parse(alarmSound.uri))
-                isLooping = loopAudio
-                prepare()
-                start()
+            else -> try {
+                mediaPlayer?.reset()
+                if (mediaPlayer == null) {
+                    mediaPlayer = MediaPlayer().apply {
+                        setAudioStreamType(audioStream)
+                        isLooping = loopAudio
+                    }
+                }
+
+                mediaPlayer?.apply {
+                    setDataSource(activity, Uri.parse(alarmSound.uri))
+                    prepare()
+                    start()
+                }
+            } catch (e: Exception) {
+                activity.showErrorToast(e)
             }
-        } catch (e: Exception) {
-            activity.showErrorToast(e)
         }
     }
 

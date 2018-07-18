@@ -120,8 +120,8 @@
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Deleting %d item</item>
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="one">%d fayl silinir</item>
+        <item quantity="other">%d fayl silinir</item>
     </plurals>
 
     <!-- Storages -->
@@ -131,6 +131,8 @@
     <string name="root">Root</string>
     <string name="wrong_root_selected">Seçilən qovluq yanlışdır, xahiş olunur SD kartın root qovluğunu seçin</string>
     <string name="sd_card_otg_same">SD kart və OTG cihaz yolu eyni ola bilməz</string>
+    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
+        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
 
     <!-- File properties -->
     <string name="properties">Xüsusiyyətlər</string>
@@ -201,6 +203,8 @@
     <string name="stop_showing_hidden">Gizlənmiş mediyanı göstərmə</string>
     <string name="maximum_share_reached">Bu qədər faylı bir dəfəyə paylaşa bilməzsiniz</string>
     <string name="empty_and_disable_recycle_bin">Zibil qutusunu boşalt və qapat</string>
+    <string name="undo">Undo</string>
+    <string name="redo">Redo</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sırala</string>
@@ -353,7 +357,7 @@
 
     <!-- Settings -->
     <string name="settings">Parametrlər</string>
-    <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Sadə Təşəkkür'ü Alın</string>
     <string name="customize_colors">Rəngləri dəyiş</string>
     <string name="customize_widget_colors">Widget rənglərini dəyiş</string>
     <string name="use_english_language">İngilis dilində işlət</string>
@@ -366,9 +370,9 @@
     <string name="extra_large">Çox böyük</string>
     <string name="password_protect_hidden_items">Şifrə gizlənmiş tətbiqin görünürlüyünü qoruyur</string>
     <string name="password_protect_whole_app">Şifrə bütün tətbiqi qoruyur</string>
-    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
+    <string name="keep_last_modified">Faylı kopyalama/daşıma/yenidən adlandırma proseslərində son faylı saxla</string>
+    <string name="show_info_bubble">Sürüşdürmə çubuğu ilə hərəkət zamanı məlumat ekranını göstər</string>
+    <string name="prevent_phone_from_sleeping">Tətbiq aktiv halda olduqda telefonun yuxuya getməsinin qarşısını al</string>
     <string name="skip_delete_confirmation">Silmə təsdiq dialoqunu göstərmə</string>
     <string name="enable_pull_to_refresh">Yuxarıdan çək-təzələ\'ni aç</string>
     <string name="use_24_hour_time_format">24 saat formatından istifadə et</string>
@@ -509,8 +513,8 @@
     </string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently asked questions</string>
-    <string name="before_asking_question">Before you ask a question, please first read the</string>
+    <string name="frequently_asked_questions">Tez-tez Soruşulan Suallar</string>
+    <string name="before_asking_question">Xahiş olunur sual verməmşdən qabaq aşağıdakı bölməni oxuyun</string>
     <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
     <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
         in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
@@ -525,11 +529,11 @@
     <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them.</string>
 
     <!-- License -->
-    <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
-    <string name="third_party_licences">Third party licences</string>
-    <string name="kotlin_title">Kotlin (programming language)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
-    <string name="glide_title">Glide (image loading and caching)</string>
+    <string name="notice">Bu tətbiq həyatımı asanlaşdırmaq üçün aşağıdakı üçüncü partiya tətbiq kitabxanalarından istifadə edir. Təşəkkürlər.</string>
+    <string name="third_party_licences">Üçüncü partiya lisenziyaları</string>
+    <string name="kotlin_title">Kotlin (proqramlaşdırma dili)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (yaxınlaşdırılan şəkillər)</string>
+    <string name="glide_title">Glide (şəkil açma və keşləmə)</string>
     <string name="picasso_title">Picasso (image loading and caching)</string>
     <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
     <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>

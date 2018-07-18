@@ -131,6 +131,8 @@
     <string name="root">Raíz /</string>
     <string name="wrong_root_selected">Se seleccionó la carpeta incorrecta, seleccione la carpeta raíz de su tarjeta SD</string>
     <string name="sd_card_otg_same">La targeta SD i el dispositivo OTG no pueden ser los mismos</string>
+    <string name="app_on_sd_card">Parece que tienes la aplicación instalada en una tarjeta SD, lo que hace que los widgets de la aplicación no estén disponibles. Ni siquiera los verás en la lista de widgets disponibles.
+        Es una limitación del sistema, por lo que si deseas usar los widgets, debes volver a colocar la aplicación en el almacenamiento interno.</string>
 
     <!-- File properties -->
     <string name="properties">Propiedades</string>
@@ -200,6 +202,8 @@
     <string name="stop_showing_hidden">No mostrar ocultos</string>
     <string name="maximum_share_reached">No puedes compartir todo este contenido a la vez</string>
     <string name="empty_and_disable_recycle_bin">Vaciar y desactivar la papelera de reciclaje</string>
+    <string name="undo">Deshacer</string>
+    <string name="redo">Rehacer</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>

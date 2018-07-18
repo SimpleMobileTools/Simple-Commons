@@ -131,6 +131,8 @@
     <string name="root">Hoofdmap</string>
     <string name="wrong_root_selected">Verkeerde map: kies de hoofdmap van de SD-kaart</string>
     <string name="sd_card_otg_same">Paden van SD-kaart en OTG-apparaat kunnen niet gelijk zijn</string>
+    <string name="app_on_sd_card">Het lijkt erop dat de app is geïnstalleerd op een SD-kaart. Dit zorgt ervoor dat Android de widgets van deze app blokkeert.
+        Dit is een beperking van het systeem en alleen het verplaatsen van de app naar het interne geheugen zal de widgets beschikbaar maken.</string>
 
     <!-- File properties -->
     <string name="properties">Eigenschappen</string>
@@ -201,6 +203,8 @@
     <string name="stop_showing_hidden">Verborgen items niet tonen</string>
     <string name="maximum_share_reached">Kan niet zoveel items tegelijk delen</string>
     <string name="empty_and_disable_recycle_bin">Prullenbak leegmaken en uitschakelen</string>
+    <string name="undo">Ongedaan maken</string>
+    <string name="redo">Opnieuw</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorteren op</string>
@@ -353,7 +357,7 @@
 
     <!-- Settings -->
     <string name="settings">Instellingen</string>
-    <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Simple Thank You kopen</string>
     <string name="customize_colors">Kleuren aanpassen</string>
     <string name="customize_widget_colors">Kleuren voor widget aanpassen</string>
     <string name="use_english_language">Use English language</string>

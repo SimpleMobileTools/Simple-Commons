@@ -90,6 +90,8 @@ const val OTG_PARTITION = "otg_partition"
 const val IS_USING_MODIFIED_APP_ICON = "is_using_modified_app_icon"
 const val INITIAL_WIDGET_HEIGHT = "initial_widget_height"
 const val WIDGET_ID_TO_MEASURE = "widget_id_to_measure"
+const val WAS_ORANGE_ICON_CHECKED = "was_orange_icon_checked"
+const val WAS_APP_ON_SD_SHOWN = "was_app_on_sd_shown"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
@@ -179,7 +181,7 @@ const val WEEKENDS_BIT = SATURDAY_BIT or SUNDAY_BIT
 
 val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp")
 val videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
-val audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a", ".opus", ".flac")
+val audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a", ".opus", ".flac", ".aac")
 val rawExtensions: Array<String> get() = arrayOf(".dng", ".orf", ".nef")
 
 val appIconColorStrings = arrayListOf(
@@ -197,7 +199,7 @@ val appIconColorStrings = arrayListOf(
         ".Lime",
         ".Yellow",
         ".Amber",
-        "",
+        ".Orange",
         ".Deep_orange",
         ".Brown",
         ".Blue_grey",

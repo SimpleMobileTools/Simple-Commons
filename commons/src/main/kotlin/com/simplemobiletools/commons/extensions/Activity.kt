@@ -2,10 +2,8 @@ package com.simplemobiletools.commons.extensions
 
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
-import android.content.Intent
+import android.content.*
+import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.graphics.drawable.ColorDrawable
 import android.media.RingtoneManager
@@ -16,6 +14,8 @@ import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.support.v4.provider.DocumentFile
 import android.support.v7.app.AlertDialog
+import android.support.v7.app.AppCompatActivity
+import android.text.Html
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
@@ -74,13 +74,39 @@ fun Activity.showErrorToast(exception: Exception, length: Int = Toast.LENGTH_LON
     showErrorToast(exception.toString(), length)
 }
 
+fun AppCompatActivity.updateActionBarTitle(text: String, color: Int = baseConfig.primaryColor) {
+    supportActionBar?.title = Html.fromHtml("<font color='${color.getContrastColor().toHex()}'>$text</font>")
+}
+
+fun AppCompatActivity.updateActionBarSubtitle(text: String) {
+    supportActionBar?.subtitle = Html.fromHtml("<font color='${baseConfig.primaryColor.getContrastColor().toHex()}'>$text</font>")
+}
+
 @SuppressLint("NewApi")
 fun Activity.appLaunched(appId: String) {
     baseConfig.internalStoragePath = getInternalStoragePath()
     updateSDCardPath()
     baseConfig.appId = appId
     if (baseConfig.appRunCount == 0) {
+        baseConfig.wasOrangeIconChecked = true
         checkAppIconColor()
+    } else if (!baseConfig.wasOrangeIconChecked) {
+        baseConfig.wasOrangeIconChecked = true
+        val primaryColor = resources.getColor(R.color.color_primary)
+        if (baseConfig.appIconColor != primaryColor) {
+            getAppIconColors().forEachIndexed { index, color ->
+                toggleAppIconColor(appId, index, color, false)
+            }
+
+            val defaultClassName = "${baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity"
+            packageManager.setComponentEnabledSetting(ComponentName(baseConfig.appId, defaultClassName), PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, PackageManager.DONT_KILL_APP)
+
+            val orangeClassName = "${baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity.Orange"
+            packageManager.setComponentEnabledSetting(ComponentName(baseConfig.appId, orangeClassName), PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
+
+            baseConfig.appIconColor = primaryColor
+            baseConfig.lastIconColor = primaryColor
+        }
     }
     baseConfig.appRunCount++
 
@@ -91,6 +117,13 @@ fun Activity.appLaunched(appId: String) {
             DonateDialog(this)
         }
     }
+}
+
+fun Activity.isAppInstalledOnSDCard(): Boolean = try {
+    val applicationInfo = packageManager.getPackageInfo(packageName, 0).applicationInfo
+    (applicationInfo.flags and ApplicationInfo.FLAG_EXTERNAL_STORAGE) == ApplicationInfo.FLAG_EXTERNAL_STORAGE
+} catch (e: Exception) {
+    false
 }
 
 @SuppressLint("InlinedApi")
@@ -255,10 +288,10 @@ fun Activity.openEditorIntent(path: String, applicationId: String) {
     }.start()
 }
 
-fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: String) {
+fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: String, forceMimeType: String = "") {
     Thread {
         val newUri = getFinalUriFromPath(path, applicationId) ?: return@Thread
-        val mimeType = getUriMimeType(path, newUri)
+        val mimeType = if (forceMimeType.isNotEmpty()) forceMimeType else getUriMimeType(path, newUri)
         Intent().apply {
             action = Intent.ACTION_VIEW
             setDataAndType(newUri, mimeType)
