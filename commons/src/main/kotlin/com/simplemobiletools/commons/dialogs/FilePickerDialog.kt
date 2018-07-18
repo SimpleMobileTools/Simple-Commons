@@ -50,12 +50,17 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             currPath = currPath.getParentPath()
         }
 
+        // do not allow copying files in the recycle bin manually
+        if (currPath.startsWith(activity.filesDir.absolutePath)) {
+            currPath = activity.internalStoragePath
+        }
+
         mDialogView.filepicker_breadcrumbs.listener = this
         tryUpdateItems()
 
         val builder = AlertDialog.Builder(activity)
                 .setNegativeButton(R.string.cancel, null)
-                .setOnKeyListener({ dialogInterface, i, keyEvent ->
+                .setOnKeyListener { dialogInterface, i, keyEvent ->
                     if (keyEvent.action == KeyEvent.ACTION_UP && i == KeyEvent.KEYCODE_BACK) {
                         val breadcrumbs = mDialogView.filepicker_breadcrumbs
                         if (breadcrumbs.childCount > 1) {
@@ -67,7 +72,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                         }
                     }
                     true
-                })
+                }
 
         if (!pickFile)
             builder.setPositiveButton(R.string.ok, null)
