@@ -131,8 +131,8 @@
     <string name="root">Root</string>
     <string name="wrong_root_selected">Seçilən qovluq yanlışdır, xahiş olunur SD kartın root qovluğunu seçin</string>
     <string name="sd_card_otg_same">SD kart və OTG cihaz yolu eyni ola bilməz</string>
-    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
-        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
+    <string name="app_on_sd_card">Görünür tətbiqi SD karta yükləmisiniz, bu widgetlərin işləməsinin qarşısını alır. Siz widgetləri əlçatan widgetlər siyahısında belə görə bilməyəcəksiniz.
+        Bu sistem məhdudiyyətidir, əgər widgetlərin işləməsini istəyirsinizsə, tətbiqi daxili yaddaşa köçürməlisiniz.</string>
 
     <!-- File properties -->
     <string name="properties">Xüsusiyyətlər</string>
@@ -203,8 +203,8 @@
     <string name="stop_showing_hidden">Gizlənmiş mediyanı göstərmə</string>
     <string name="maximum_share_reached">Bu qədər faylı bir dəfəyə paylaşa bilməzsiniz</string>
     <string name="empty_and_disable_recycle_bin">Zibil qutusunu boşalt və qapat</string>
-    <string name="undo">Undo</string>
-    <string name="redo">Redo</string>
+    <string name="undo">Geri al</string>
+    <string name="redo">Təkrar et</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sırala</string>
@@ -340,7 +340,7 @@
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Zəng dayanana qədər qalan vaxt:\n%s</string>
-    <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
+    <string name="reminder_triggers_in">Xatırladıcının işləməsinə qalan vaxt:\n%s</string>
     <string name="alarm_warning">Xahiş olunur zəngə istinad etməzdən əvvəl işləyib işləmədiyini yoxlayın. Güc qoruma parametrləri onun işləməsində problem yarada bilər.</string>
     <string name="reminder_warning">Xahiş olunur xatırladıcılara istinad etməzdən əvvəl işləyib işləmədiyini yoxlayın. Güc qoruma parametrləri onların işləməsində problem yarada bilər.</string>
 
@@ -361,7 +361,7 @@
     <string name="customize_colors">Rəngləri dəyiş</string>
     <string name="customize_widget_colors">Widget rənglərini dəyiş</string>
     <string name="use_english_language">İngilis dilində işlət</string>
-    <string name="avoid_whats_new">Başlanğıca yeni nə var göstərmə</string>
+    <string name="avoid_whats_new">Başlanğıcda yeni nə var göstərmə</string>
     <string name="show_hidden_items">Gizli faylları göstər</string>
     <string name="font_size">Yazı ölçüsü</string>
     <string name="small">Kiçik</string>
@@ -514,7 +514,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Tez-tez Soruşulan Suallar</string>
-    <string name="before_asking_question">Xahiş olunur sual verməmşdən qabaq aşağıdakı bölməni oxuyun</string>
+    <string name="before_asking_question">Xahiş olunur sual verməmişdən qabaq aşağıdakı bölməni oxuyun</string>
     <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
     <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
         in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
