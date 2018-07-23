@@ -16,6 +16,7 @@
     <string name="details">Szczegóły</string>
     <string name="notes">Notatnik</string>
     <string name="deleting_folder">Usuwam folder \'%s\'</string>
+    <string name="none">None</string>
 
     <!-- Favorites -->
     <string name="favorites">Ulubione</string>
@@ -133,8 +134,7 @@
     <string name="root">Folder główny</string>
     <string name="wrong_root_selected">Wybrano nieprawidłowy folder. Wybierz główny folder karty pamięci.</string>
     <string name="sd_card_otg_same">Ścieżka do karty pamięci i urządzenia OTG nie może być taka sama</string>
-    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
-        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
+    <string name="app_on_sd_card">Wygląda na to, że aplikacja jest zainstalowana na karcie pamięci. Przez to widżety aplikacji są niedostępne.\nJest to ograniczenie systemu. Jeśli chcesz używać widżetów, musisz przenieść ją do pamięci wewnętrznej.</string>
 
     <!-- File properties -->
     <string name="properties">Właściwości</string>
@@ -158,7 +158,7 @@
     <string name="background_color">Tło</string>
     <string name="text_color">Tekst</string>
     <string name="primary_color">Belka i przełączniki</string>
-    <string name="foreground_color">Foreground color</string>
+    <string name="foreground_color">Pierwszy plan</string>
     <string name="app_icon_color">Ikona aplikacji</string>
     <string name="restore_defaults">Przywróć domyślne</string>
     <string name="change_color">Zmień kolor</string>
@@ -205,8 +205,8 @@
     <string name="stop_showing_hidden">Przestań pokazywać ukryte multimedia</string>
     <string name="maximum_share_reached">Nie możesz udostępniać tak wielu danych naraz</string>
     <string name="empty_and_disable_recycle_bin">Wyczyść i wyłącz kosz</string>
-    <string name="undo">Undo</string>
-    <string name="redo">Redo</string>
+    <string name="undo">Cofnij</string>
+    <string name="redo">Ponów</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortuj według parametru:</string>
@@ -251,7 +251,7 @@
     <string name="add_fingerprint">Dodaj odcisk palca</string>
     <string name="place_finger">Przyłóż palec do czytnika</string>
     <string name="authentication_failed">Uwierzytelnianie nie powiodło się.</string>
-    <string name="authentication_blocked"> Uwierzytelnianie zablokowane. Spróbuj ponownie za chwilę.</string>
+    <string name="authentication_blocked">Uwierzytelnianie zablokowane. Spróbuj ponownie za chwilę.</string>
     <string name="no_fingerprints_registered">Nie masz zarejestrowanych odcisków palców. Dodaj je w ustawieniach systemowych.</string>
     <string name="go_to_settings">Przejdź do ustawień</string>
     <string name="protection_setup_successfully">Hasło zostało ustawione. Jeśli je zapomnisz, przeinstaluj aplikację.</string>
@@ -259,7 +259,7 @@
 
     <!-- Times -->
     <string name="yesterday">Wczoraj</string>
-    <string name="today">Today</string>
+    <string name="today">Dzisiaj</string>
     <string name="tomorrow">Jutro</string>
     <string name="seconds_raw">sekundy</string>
     <string name="minutes_raw">minuty</string>

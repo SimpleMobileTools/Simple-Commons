@@ -40,7 +40,6 @@ class AboutActivity : BaseSimpleActivity() {
         setupRateUs()
         setupInvite()
         setupLicense()
-        setupDonate()
         setupFacebook()
         setupGPlus()
         setupCopyright()
@@ -112,7 +111,7 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupRateUs() {
-        if (baseConfig.appRunCount < 3) {
+        if (baseConfig.appRunCount < 10) {
             about_rate_us.visibility = View.GONE
         } else {
             about_rate_us.setOnClickListener {
@@ -136,13 +135,6 @@ class AboutActivity : BaseSimpleActivity() {
             }
         }
         about_license.setTextColor(linkColor)
-    }
-
-    private fun setupDonate() {
-        about_donate.setOnClickListener {
-            launchViewIntent("https://simplemobiletools.github.io/donate/")
-        }
-        about_donate.setTextColor(linkColor)
     }
 
     private fun setupFacebook() {
