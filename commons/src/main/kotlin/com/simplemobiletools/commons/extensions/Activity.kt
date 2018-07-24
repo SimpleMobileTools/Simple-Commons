@@ -681,6 +681,10 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
         val newDocument = documentFile.createFile(mimeType, path.getFilenameFromPath())
         applicationContext.contentResolver.openOutputStream(newDocument!!.uri)
     } else {
+        if (!targetFile.parentFile.exists()) {
+            targetFile.parentFile.mkdirs()
+        }
+
         try {
             FileOutputStream(targetFile)
         } catch (e: Exception) {
