@@ -671,7 +671,16 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
     val targetFile = File(path)
 
     return if (needsStupidWritePermissions(path)) {
-        val documentFile = parentDocumentFile ?: getDocumentFile(path.getParentPath())
+        var documentFile = parentDocumentFile
+        if (documentFile == null) {
+            if (targetFile.parentFile.exists()) {
+                documentFile = getDocumentFile(targetFile.parentFile.absolutePath)
+            } else {
+                documentFile = getDocumentFile(targetFile.parentFile.parent)
+                documentFile = documentFile!!.createDirectory(targetFile.parentFile.name)
+            }
+        }
+
         if (documentFile == null) {
             val error = String.format(getString(R.string.could_not_create_file), targetFile.parent)
             showErrorToast(error)
