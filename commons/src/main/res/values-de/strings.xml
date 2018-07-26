@@ -222,7 +222,7 @@
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Willst du mit dem Löschen fortfahren?</string>
-    <string name="deletion_confirmation">Sollen %s? Elemente wirklich gelöscht werden?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="deletion_confirmation">Sollen %s Elemente wirklich gelöscht werden?</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Sollen %s Elemente wirklich in den Papierkorb verschoben werden?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Soll dieses Element wirklich gelöscht werden?</string>
     <string name="are_you_sure_recycle_bin">Soll dieses Element wirklich in den Papierkorb verschoben werden?</string>
@@ -501,6 +501,8 @@
     </string>
     <string name="purchase">Kaufen</string>
     <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
+    <string name="before_asking_question_read_faq">Before you ask a question, please read the Frequently Asked Questions first, maybe the solution is there.</string>
+    <string name="read_it">Read it</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
