@@ -522,6 +522,8 @@
     </string>
     <string name="purchase">Zakúpiť</string>
     <string name="update_thank_you">Prosím aktualizujte Jednoduché Ďakujem na najnovšiu verziu</string>
+    <string name="before_asking_question_read_faq">Predtým, ako sa niečo opýtate, si prosím prečítajte Často Kladené Otázky, možno v nich nájdete svoju odpoveď.</string>
+    <string name="read_it">Prečítať</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -576,4 +578,5 @@
     <string name="exoplayer_title">ExoPlayer (prehrávač videí)</string>
     <string name="panorama_view_title">VR Panorama View (zobrazovanie panorám)</string>
     <string name="sanselan_title">Apache Sanselan (čítanie metadát obrázkov)</string>
+    <string name="filters_title">Android Photo Filters (filtre obrázkov)</string>
 </resources>

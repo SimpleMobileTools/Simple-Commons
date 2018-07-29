@@ -68,6 +68,7 @@ class LicenseActivity : BaseSimpleActivity() {
             License(LICENSE_NUMBER_PICKER, R.string.number_picker_title, R.string.number_picker_text, R.string.number_picker_url),
             License(LICENSE_EXOPLAYER, R.string.exoplayer_title, R.string.exoplayer_text, R.string.exoplayer_url),
             License(LICENSE_PANORAMA_VIEW, R.string.panorama_view_title, R.string.panorama_view_text, R.string.panorama_view_url),
-            License(LICENSE_SANSELAN, R.string.sanselan_title, R.string.sanselan_text, R.string.sanselan_url)
+            License(LICENSE_SANSELAN, R.string.sanselan_title, R.string.sanselan_text, R.string.sanselan_url),
+            License(LICENSE_FILTERS, R.string.filters_title, R.string.filters_text, R.string.filters_url)
     )
 }

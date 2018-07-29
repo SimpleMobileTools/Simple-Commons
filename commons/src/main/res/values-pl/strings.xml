@@ -518,6 +518,8 @@
     </string>
     <string name="purchase">Kup</string>
     <string name="update_thank_you">Zaktualizuj aplikcję Proste Podziękowanie do najnowszej wersji</string>
+    <string name="before_asking_question_read_faq">Before you ask a question, please read the Frequently Asked Questions first, maybe the solution is there.</string>
+    <string name="read_it">Read it</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -570,4 +572,5 @@
     <string name="exoplayer_title">ExoPlayer (odtwarzacz filmów)</string>
     <string name="panorama_view_title">VR Panorama View (wyświetlanie panoram)</string>
     <string name="sanselan_title">Apache Sanselan (odczytywanie metadanych obrazów)</string>
+    <string name="filters_title">Android Photo Filters (image filters)</string>
 </resources>

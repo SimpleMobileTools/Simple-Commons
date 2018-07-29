@@ -501,6 +501,8 @@
     </string>
     <string name="purchase">Satın al</string>
     <string name="update_thank_you">Lütfen Simple Thank You\'yu son sürüme güncelleyin</string>
+    <string name="before_asking_question_read_faq">Before you ask a question, please read the Frequently Asked Questions first, maybe the solution is there.</string>
+    <string name="read_it">Read it</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -554,4 +556,5 @@
     <string name="exoplayer_title">ExoPlayer (video oynatıcı)</string>
     <string name="panorama_view_title">VR Panorama View (panorama görüntüleme)</string>
     <string name="sanselan_title">Apache Sanselan (görüntü meta verileri okuma)</string>
+    <string name="filters_title">Android Photo Filters (image filters)</string>
 </resources>
