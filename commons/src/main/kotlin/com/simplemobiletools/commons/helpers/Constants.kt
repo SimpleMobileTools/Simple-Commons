@@ -19,6 +19,7 @@ const val IS_CUSTOMIZING_COLORS = "is_customizing_colors"
 const val ALARM_SOUND_TYPE_ALARM = 1
 const val ALARM_SOUND_TYPE_NOTIFICATION = 2
 const val YOUR_ALARM_SOUNDS_MIN_ID = 1000
+const val SHOW_FAQ_BEFORE_MAIL = "show_faq_before_mail"
 
 const val HOUR_MINUTES = 60
 const val DAY_MINUTES = 24 * HOUR_MINUTES

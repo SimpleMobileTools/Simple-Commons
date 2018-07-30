@@ -63,9 +63,7 @@ class AboutActivity : BaseSimpleActivity() {
         val href = "$label<br><a href=\"mailto:$email?subject=$appName&body=$body\">$email</a>"
         about_email.text = Html.fromHtml(href)
 
-        if (baseConfig.wasBeforeAskingShown) {
-            about_email.movementMethod = LinkMovementMethod.getInstance()
-        } else {
+        if (intent.getBooleanExtra(SHOW_FAQ_BEFORE_MAIL, false) && !baseConfig.wasBeforeAskingShown) {
             about_email.setOnClickListener {
                 baseConfig.wasBeforeAskingShown = true
                 about_email.movementMethod = LinkMovementMethod.getInstance()
@@ -74,6 +72,8 @@ class AboutActivity : BaseSimpleActivity() {
                     about_faq_label.performClick()
                 }
             }
+        } else {
+            about_email.movementMethod = LinkMovementMethod.getInstance()
         }
     }
 
