@@ -165,6 +165,7 @@ const val PERMISSION_WRITE_CONTACTS = 6
 const val PERMISSION_READ_CALENDAR = 7
 const val PERMISSION_WRITE_CALENDAR = 8
 const val PERMISSION_CALL_PHONE = 9
+const val PERMISSION_WRITE_CALL_LOG = 10
 
 // conflict resolving
 const val CONFLICT_SKIP = 1
