@@ -780,7 +780,7 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
     }
 
     var title: TextView? = null
-    if (titleId != 0) {
+    if (titleId != 0 || titleText.isNotEmpty()) {
         title = layoutInflater.inflate(R.layout.dialog_title, null) as TextView
         title.dialog_title_textview.apply {
             if (titleText.isNotEmpty()) {
