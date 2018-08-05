@@ -62,10 +62,7 @@ private fun showToast(activity: Activity, messageId: Int, length: Int) {
 
 private fun showToast(activity: Activity, message: String, length: Int) {
     if (!activity.isActivityDestroyed()) {
-        try {
-            Toast.makeText(activity.applicationContext, message, length).show()
-        } catch (e: Exception) {
-        }
+        activity.applicationContext.toast(message, length)
     }
 }
 

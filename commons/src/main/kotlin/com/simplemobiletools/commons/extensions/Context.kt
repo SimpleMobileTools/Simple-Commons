@@ -90,11 +90,14 @@ fun Context.isBlackAndWhiteTheme() = baseConfig.textColor == Color.WHITE && base
 fun Context.getAdjustedPrimaryColor() = if (isBlackAndWhiteTheme()) Color.WHITE else baseConfig.primaryColor
 
 fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
-    Toast.makeText(this, id, length).show()
+    toast(getString(id), length)
 }
 
 fun Context.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
-    Toast.makeText(this, msg, length).show()
+    try {
+        Toast.makeText(applicationContext, msg, length).show()
+    } catch (e: Exception) {
+    }
 }
 
 val Context.baseConfig: BaseConfig get() = BaseConfig.newInstance(this)
