@@ -258,14 +258,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             if (isCopyOperation) {
                 startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
             } else {
-                if (source.startsWith(OTG_PATH) || destination.startsWith(OTG_PATH) || isPathOnSD(source) || isPathOnSD(destination) || fileDirItems.first().isDirectory || isNougatPlus()) {
+                if (source.startsWith(OTG_PATH) || destination.startsWith(OTG_PATH) || isPathOnSD(source) || isPathOnSD(destination) || fileDirItems.first().isDirectory) {
                     handleSAFDialog(source) {
                         startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
                     }
                 } else {
                     toast(R.string.moving)
                     val updatedFiles = ArrayList<FileDirItem>(fileDirItems.size * 2)
-                    updatedFiles.addAll(fileDirItems)
                     try {
                         val destinationFolder = File(destination)
                         for (oldFileDirItem in fileDirItems) {
@@ -279,10 +278,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                         }
 
                         val updatedPaths = updatedFiles.map { it.path } as ArrayList<String>
-                        scanPathsRecursively(updatedPaths) {
+                        rescanPaths(updatedPaths) {
                             runOnUiThread {
-                                copyMoveListener.copySucceeded(false, fileDirItems.size * 2 == updatedFiles.size, destination)
+                                copyMoveListener.copySucceeded(false, fileDirItems.size == updatedFiles.size, destination)
                             }
+                        }
+
+                        if (updatedPaths.isEmpty()) {
+                            copyMoveListener.copySucceeded(false, false, destination)
                         }
                     } catch (e: Exception) {
                         showErrorToast(e)
@@ -351,6 +354,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             } else {
                 toast(if (copiedAll) R.string.moving_success else R.string.moving_success_partial)
             }
+
             copyMoveCallback?.invoke(destinationPath)
             copyMoveCallback = null
         }
