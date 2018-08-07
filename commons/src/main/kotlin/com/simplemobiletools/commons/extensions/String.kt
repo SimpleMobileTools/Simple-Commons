@@ -228,17 +228,30 @@ fun String.substringTo(cnt: Int): String {
     }
 }
 
-fun String.highlightTextPart(textToHighlight: String, color: Int): SpannableString {
+fun String.highlightTextPart(textToHighlight: String, color: Int, highlightAll: Boolean = false): SpannableString {
     val spannableString = SpannableString(this)
     if (textToHighlight.isEmpty()) {
         return spannableString
     }
 
-    val startIndex = indexOf(textToHighlight, 0, true)
-    if (startIndex != -1) {
-        val endIndex = Math.min(startIndex + textToHighlight.length, length)
-        spannableString.setSpan(ForegroundColorSpan(color), startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+    var startIndex = indexOf(textToHighlight, 0, true)
+    val indexes = ArrayList<Int>()
+    while (startIndex >= 0) {
+        if (startIndex != -1) {
+            indexes.add(startIndex)
+        }
+
+        startIndex = indexOf(textToHighlight, startIndex + textToHighlight.length, true)
+        if (!highlightAll) {
+            break
+        }
     }
+
+    indexes.forEach {
+        val endIndex = Math.min(it + textToHighlight.length, length)
+        spannableString.setSpan(ForegroundColorSpan(color), it, endIndex, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+    }
+
     return spannableString
 }
 
