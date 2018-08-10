@@ -16,7 +16,7 @@
     <string name="details">Detaljer</string>
     <string name="notes">Notes</string>
     <string name="deleting_folder">Sletter mappen \'%s\'</string>
-    <string name="none">None</string>
+    <string name="none">Ingen</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoritter</string>
@@ -40,8 +40,8 @@
     <string name="no_audio_permissions">Tillatelse for lyd kreves</string>
 
     <!-- Renaming -->
-    <string name="rename_file">Rename file</string>
-    <string name="rename_folder">Rename folder</string>
+    <string name="rename_file">Endre navn på fil</string>
+    <string name="rename_folder">Endre navn på mappe</string>
     <string name="rename_file_error">Could not rename the file</string>
     <string name="rename_folder_error">Could not rename the folder</string>
     <string name="rename_folder_empty">Folder name must not be empty</string>
@@ -121,8 +121,8 @@
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Deleting %d item</item>
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="one">Sletter %d element</item>
+        <item quantity="other">Sletter %d elementer</item>
     </plurals>
 
     <!-- Storages -->
@@ -203,9 +203,9 @@
     <string name="temporarily_show_hidden">Vis skjulte midlertidig</string>
     <string name="stop_showing_hidden">Stopp å vise skjulte media</string>
     <string name="maximum_share_reached">Du kan ikke dele så mye innhold på en gang</string>
-    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
-    <string name="undo">Undo</string>
-    <string name="redo">Redo</string>
+    <string name="empty_and_disable_recycle_bin">Tøm og deaktiver papirkurven</string>
+    <string name="undo">Angre</string>
+    <string name="redo">Annuler angre</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorter etter</string>
@@ -224,15 +224,15 @@
     <string name="proceed_with_deletion">Er du sikker på at du vil fortsette med slettingen?</string>
     <string name="deletion_confirmation">Er du sikker på at du vil slette %s?</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Er du sikker på at du vil flytte %s til papirkurven?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
-    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
+    <string name="are_you_sure_delete">Er du sikker på at du vil slette dette elementet?</string>
+    <string name="are_you_sure_recycle_bin">Er du sikker på at du vil flytte dette elementet til papirkurven?</string>
     <string name="do_not_ask_again">Ikke spør igjen i denne økten</string>
     <string name="yes">Ja</string>
     <string name="no">Nei</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting a folder</item>
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="one">ADVARSEL: Du sletter en mappe</item>
+        <item quantity="other">ADVARSEL: Du sletter %d mapper</item>
     </plurals>
 
     <!-- Password protection -->
@@ -256,8 +256,8 @@
     <string name="fingerprint_setup_successfully">Beskyttelse er stilt inn. Installer appen på nytt i tilfelle problemer med å tilbakestille.</string>
 
     <!-- Times -->
-    <string name="yesterday">Yesterday</string>
-    <string name="today">Today</string>
+    <string name="yesterday">I går</string>
+    <string name="today">I dag</string>
     <string name="tomorrow">I morgen</string>
     <string name="seconds_raw">sekunder</string>
     <string name="minutes_raw">minutter</string>
@@ -341,7 +341,7 @@
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Tid igjen til alarmen går:\n%s</string>
-    <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
+    <string name="reminder_triggers_in">Tid som gjenstår til påminnelsen utløser:\n%s</string>
     <string name="alarm_warning">Sørg for at alarmen fungerer ordentlig før du stoler på den. Den kan fungere dårlig på grunn av systembegrensninger relatert til batterisparing.</string>
     <string name="reminder_warning">Sørg for at påminnelsene fungerer riktig før du stoler på dem. De kan fungere dårlig på grunn av systembegrensninger relatert til batterisparing.</string>
 
@@ -398,13 +398,13 @@
     <string name="text">Text</string>
 
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restore this file</string>
-    <string name="restore_selected_files">Restore selected files</string>
-    <string name="restore_all_files">Restore all files</string>
-    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
-    <string name="files_restored_successfully">Files have been restored successfully</string>
-    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
-    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
+    <string name="restore_this_file">Gjenopprett denne filen</string>
+    <string name="restore_selected_files">Gjenopprett valgte filer</string>
+    <string name="restore_all_files">Gjenopprett alle filer</string>
+    <string name="recycle_bin_emptied">Papirkurven er tømt</string>
+    <string name="files_restored_successfully">Filer er vellykket gjenopprettet</string>
+    <string name="empty_recycle_bin_confirmation">Er du sikker på at du vil tømme papirkurven? Filene vil bli tapt permanent.</string>
+    <string name="recycle_bin_empty">Papirkurven er tom</string>
 
     <!-- Import / Export -->
     <string name="importing">Importerer…</string>
