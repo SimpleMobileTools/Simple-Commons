@@ -10,6 +10,7 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import com.simplemobiletools.commons.helpers.*
+import java.text.Normalizer
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -234,14 +235,14 @@ fun String.highlightTextPart(textToHighlight: String, color: Int, highlightAll: 
         return spannableString
     }
 
-    var startIndex = indexOf(textToHighlight, 0, true)
+    var startIndex = normalizeString().indexOf(textToHighlight, 0, true)
     val indexes = ArrayList<Int>()
     while (startIndex >= 0) {
         if (startIndex != -1) {
             indexes.add(startIndex)
         }
 
-        startIndex = indexOf(textToHighlight, startIndex + textToHighlight.length, true)
+        startIndex = normalizeString().indexOf(textToHighlight, startIndex + textToHighlight.length, true)
         if (!highlightAll) {
             break
         }
@@ -254,6 +255,8 @@ fun String.highlightTextPart(textToHighlight: String, color: Int, highlightAll: 
 
     return spannableString
 }
+
+fun String.normalizeString() = Normalizer.normalize(this, Normalizer.Form.NFD).replace(normalizeRegex, "")
 
 fun String.getMimeType(): String {
     val typesMap = HashMap<String, String>().apply {

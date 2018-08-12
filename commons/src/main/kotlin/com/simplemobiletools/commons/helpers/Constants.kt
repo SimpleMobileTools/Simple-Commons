@@ -236,3 +236,5 @@ fun getDateFormats() = arrayListOf(
         "MM/dd",
         "MM.dd"
 )
+
+val normalizeRegex = "\\p{InCombiningDiacriticalMarks}+".toRegex()
