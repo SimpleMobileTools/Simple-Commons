@@ -1,175 +1,175 @@
 <resources>
     <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
-    <string name="save_as">Save as</string>
-    <string name="file_saved">File saved successfully</string>
-    <string name="invalid_file_format">Invalid file format</string>
-    <string name="out_of_memory_error">Out of memory error</string>
-    <string name="an_error_occurred">An error occurred: %s</string>
-    <string name="open_with">Open with</string>
-    <string name="no_app_found">No valid app found</string>
-    <string name="set_as">Set as</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
-    <string name="unknown">Unknown</string>
-    <string name="always">Always</string>
-    <string name="never">Never</string>
-    <string name="details">Details</string>
-    <string name="notes">Notes</string>
-    <string name="deleting_folder">Deleting folder \'%s\'</string>
-    <string name="none">None</string>
+    <string name="cancel">Ακύρωση</string>
+    <string name="save_as">Αποθήκευση ως</string>
+    <string name="file_saved">Αποθηκεύθηκε επιτυχώς</string>
+    <string name="invalid_file_format">Μη έγκυρη μορφή αρχείου</string>
+    <string name="out_of_memory_error">Σφάλμα Έλλειψη μνήμης</string>
+    <string name="an_error_occurred">Παρουσιάστηκε σφάλμα: %s</string>
+    <string name="open_with">Άνοιγμα με</string>
+    <string name="no_app_found">Δεν βρέθηκε έγκυρη εφαρμογή</string>
+    <string name="set_as">Ορισμός ως</string>
+    <string name="value_copied_to_clipboard">Η τιμή αντιγράφηκε στο πρόχειρο</string>
+    <string name="unknown">Άγνωστο</string>
+    <string name="always">Πάντα</string>
+    <string name="never">Ποτέ</string>
+    <string name="details">Λεπτομέρειες</string>
+    <string name="notes">Σημειώσεις</string>
+    <string name="deleting_folder">Διαγραφή φακέλου \'%s\'</string>
+    <string name="none">Χωρίς</string>
 
     <!-- Favorites -->
-    <string name="favorites">Favorites</string>
-    <string name="add_favorites">Add favorites</string>
-    <string name="add_to_favorites">Add to favorites</string>
-    <string name="remove_from_favorites">Remove from favorites</string>
+    <string name="favorites">Αγαπημένα</string>
+    <string name="add_favorites">Προσθήκη αγαπημένων</string>
+    <string name="add_to_favorites">Προσθήκη στα αγαπημένα</string>
+    <string name="remove_from_favorites">Αφαίρεση απο τα αγαπημένα</string>
 
     <!-- Search -->
-    <string name="search">Search</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
+    <string name="search">Αναζήτηση</string>
+    <string name="type_2_characters">Πληκτρολογήστε τουλάχιστον 2 χαρακτήρες για να ξεκινήσετε την αναζήτηση.</string>
 
     <!-- Filters -->
-    <string name="filter">Filter</string>
-    <string name="no_items_found">No items found.</string>
-    <string name="change_filter">Change filter</string>
+    <string name="filter">Φίλτρο</string>
+    <string name="no_items_found">Δεν βρέθηκαν αντικείμενα.</string>
+    <string name="change_filter">Αλλαγή φίλτρου</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">Απαιτείται άδεια Αποθήκευσης</string>
+    <string name="no_contacts_permission">Απαιτείται άδεια Επαφών</string>
+    <string name="no_camera_permissions">Απαιτείται άδεια Κάμερας</string>
+    <string name="no_audio_permissions">Απαιτείται άδεια Ήχου</string>
 
     <!-- Renaming -->
-    <string name="rename_file">Rename file</string>
-    <string name="rename_folder">Rename folder</string>
-    <string name="rename_file_error">Could not rename the file</string>
-    <string name="rename_folder_error">Could not rename the folder</string>
-    <string name="rename_folder_empty">Folder name must not be empty</string>
-    <string name="rename_folder_exists">A folder with that name already exists</string>
-    <string name="rename_folder_root">Cannot rename the root folder of a storage</string>
-    <string name="rename_folder_ok">Folder renamed successfully</string>
-    <string name="renaming_folder">Renaming folder</string>
-    <string name="filename_cannot_be_empty">Filename cannot be empty</string>
-    <string name="filename_invalid_characters">Filename contains invalid characters</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
-    <string name="extension_cannot_be_empty">Extension cannot be empty</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
+    <string name="rename_file">Μετονομασία αρχείου</string>
+    <string name="rename_folder">Μετονομασία φακέλου</string>
+    <string name="rename_file_error">Αδύνατη η μετονομασία του αρχείου</string>
+    <string name="rename_folder_error">Αδύνατη η μετονομασία του φακέλου</string>
+    <string name="rename_folder_empty">Το όνομα του φακέλου δεν πρέπει να είναι κενό</string>
+    <string name="rename_folder_exists">Ένας φάκελος με αυτό το όνομα υπάρχει ήδη</string>
+    <string name="rename_folder_root">Αδύνατη η μετονομασία του ριζικού φακέλου ενός χώρου αποθήκευσης</string>
+    <string name="rename_folder_ok">Ο φάκελος μετονομάστηκε με επιτυχία</string>
+    <string name="renaming_folder">Μετονομασία φακέλου</string>
+    <string name="filename_cannot_be_empty">Το όνομα αρχείου δεν μπορεί να είναι κενό</string>
+    <string name="filename_invalid_characters">Το όνομα περιέχει μη έγκυρους χαρακτήρες</string>
+    <string name="filename_invalid_characters_placeholder">Το όνομα \'%s\' περιέχει μη έγκυρους χαρακτήρες</string>
+    <string name="extension_cannot_be_empty">Η επέκταση δεν μπορεί να είναι κενή</string>
+    <string name="source_file_doesnt_exist">To aρχείο προέλευσης %s δεν υπάρχει</string>
 
     <!-- Copy / Move -->
-    <string name="copy">Copy</string>
-    <string name="move">Move</string>
-    <string name="copy_move">Copy / Move</string>
-    <string name="copy_to">Copy to</string>
-    <string name="move_to">Move to</string>
-    <string name="source">Source</string>
-    <string name="destination">Destination</string>
-    <string name="select_destination">Select destination</string>
-    <string name="click_select_destination">Click here to select destination</string>
-    <string name="invalid_destination">Could not write to the selected destination</string>
-    <string name="please_select_destination">Please select a destination</string>
-    <string name="source_and_destination_same">Source and destination cannot be the same</string>
-    <string name="copy_failed">Could not copy the files</string>
-    <string name="copying">Copying…</string>
-    <string name="copying_success">Files copied successfully</string>
-    <string name="copy_move_failed">An error occurred</string>
-    <string name="moving">Moving…</string>
-    <string name="moving_success">Files moved successfully</string>
-    <string name="moving_success_partial">Some files could not be moved</string>
-    <string name="copying_success_partial">Some files could not be copied</string>
-    <string name="no_files_selected">No files selected</string>
-    <string name="saving">Saving…</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="copy">Αντιγραφή</string>
+    <string name="move">Μετακίνηση</string>
+    <string name="copy_move">Αντιγραφή / Μετακίνηση</string>
+    <string name="copy_to">Αντιγραφή σε</string>
+    <string name="move_to">Μετακίνηση σε</string>
+    <string name="source">Προέλευση</string>
+    <string name="destination">Προορισμός</string>
+    <string name="select_destination">Επιλογή προορισμού</string>
+    <string name="click_select_destination">Κάντε κλικ εδώ για να επιλέξετε προορισμό</string>
+    <string name="invalid_destination">Αδύνατη η εγγραφή στον επιλεγμένο προορισμό</string>
+    <string name="please_select_destination">Επιλέξτε έναν προορισμό</string>
+    <string name="source_and_destination_same">Η προέλευση και ο προορισμός δεν μπορούν να είναι ίδιες</string>
+    <string name="copy_failed">Αδύνατη η αντιγραφή των αρχείων</string>
+    <string name="copying">Αντιγράφονται…</string>
+    <string name="copying_success">Τα αρχεία αντιγράφηκαν με επιτυχία</string>
+    <string name="copy_move_failed">Ένα σφάλμα παρουσιάστηκε</string>
+    <string name="moving">Μετακινούνται…</string>
+    <string name="moving_success">Τα αρχεία μετακινήθηκαν με επιτυχία</string>
+    <string name="moving_success_partial">Αδύνατη η μετακίνηση ορισμένων αρχείων</string>
+    <string name="copying_success_partial">Αδύνατη η αντιγραφή ορισμένων αρχείων</string>
+    <string name="no_files_selected">Δεν έχουν επιλεγεί αρχεία</string>
+    <string name="saving">Αποθηκεύεται…</string>
+    <string name="could_not_create_folder">Αδύνατη η δημιουργία του φακέλου %s</string>
+    <string name="could_not_create_file">Αδύνατη η δημιουργία του αρχείου %s</string>
 
     <!-- Create new -->
-    <string name="create_new">Create new</string>
-    <string name="folder">Folder</string>
-    <string name="file">File</string>
-    <string name="create_new_folder">Create new folder</string>
-    <string name="name_taken">A file or folder with that name already exists</string>
-    <string name="invalid_name">The name contains invalid characters</string>
-    <string name="empty_name">Please enter a name</string>
-    <string name="unknown_error_occurred">An unknown error occurred</string>
+    <string name="create_new">Δημιουργία νέου</string>
+    <string name="folder">Φάκελος</string>
+    <string name="file">Αρχείο</string>
+    <string name="create_new_folder">Δημιουργία νέου φακέλου</string>
+    <string name="name_taken">Ένα αρχείο ή φάκελος με αυτό το όνομα υπάρχει ήδη</string>
+    <string name="invalid_name">Το όνομα περιέχει μη αποδεκτούς χαρακτήρες</string>
+    <string name="empty_name">Παρακαλώ εισάγετε ένα όνομα</string>
+    <string name="unknown_error_occurred">Παρουσιάστηκε άγνωστο σφάλμα</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">File \"%s\" already exists</string>
-    <string name="file_already_exists_overwrite">File \"%s\" already exists. Overwrite?</string>
-    <string name="folder_already_exists">Folder \"%s\" already exists</string>
-    <string name="merge">Merge</string>
-    <string name="overwrite">Overwrite</string>
-    <string name="skip">Skip</string>
-    <string name="append">Append with \'_1\'</string>
-    <string name="apply_to_all">Apply to all</string>
+    <string name="file_already_exists">Το αρχείο \"%s\" υπάρχει ήδη</string>
+    <string name="file_already_exists_overwrite">Το αρχείο \"%s\" υπάρχει ήδη. Αντικατάσταση?</string>
+    <string name="folder_already_exists">Ο φάκελος \"%s\" υπάρχει ήδη</string>
+    <string name="merge">Συγχώνευση</string>
+    <string name="overwrite">Αντικατάσταση</string>
+    <string name="skip">Παράβλεψη</string>
+    <string name="append">Προσάρτηση με \'_1\'</string>
+    <string name="apply_to_all">Εφαρμογή σε όλα</string>
 
     <!-- File picker -->
-    <string name="select_folder">Select a folder</string>
-    <string name="select_file">Select a file</string>
-    <string name="confirm_storage_access_title">Confirm external storage access</string>
-    <string name="confirm_storage_access_text">Please choose the root folder of the SD card on the next screen, to grant write access</string>
-    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="select_folder">Επιλέξτε ένα φάκελο</string>
+    <string name="select_file">Επιλέξτε ένα αρχείο</string>
+    <string name="confirm_storage_access_title">Επιβεβαιώστε την πρόσβαση στην εξωτερική αποθήκευση</string>
+    <string name="confirm_storage_access_text">Επιλέξτε τον ριζικό φάκελο της κάρτας SD στην επόμενη οθόνη, για να επιτρέψετε πρόσβαση εγγραφής</string>
+    <string name="confirm_storage_access_text_sd">Εάν δεν βλέπετε την κάρτα SD, δοκιμάστε αυτό</string>
+    <string name="confirm_selection">Επιβεβαιώστε την επιλογή</string>
 
     <plurals name="items">
-        <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">%d στοιχείο</item>
+        <item quantity="other">%d στοιχεία</item>
     </plurals>
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">%d στοιχείο</item>
+        <item quantity="other">%d στοιχεία</item>
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Deleting %d item</item>
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="one">Διαγραφή %d στοιχείο</item>
+        <item quantity="other">Διαγραφή %d στοιχεία</item>
     </plurals>
 
     <!-- Storages -->
-    <string name="select_storage">Select storage</string>
-    <string name="internal">Internal</string>
+    <string name="select_storage">Επιλέξτε αποθήκευση</string>
+    <string name="internal">Εσωτερική</string>
     <string name="sd_card">SD Card</string>
     <string name="root">Root</string>
-    <string name="wrong_root_selected">Wrong folder selected, please select the root folder of your SD card</string>
-    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
-    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
-        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
+    <string name="wrong_root_selected">Επιλεγμένος λάθος φάκελος, επιλέξτε τον ριζικό φάκελο της SD card</string>
+    <string name="sd_card_otg_same">SD card και OTG οι διαδρομές συσκευών δεν μπορούν να είναι οι ίδιες</string>
+    <string name="app_on_sd_card">Φαίνεται ότι έχετε εγκαταστήσει την εφαρμογή σε μια κάρτα SD, πράγμα που καθιστά τα γραφικά στοιχεία εφαρμογών μη διαθέσιμα. Δεν θα τα δείτε ακόμη και στη λίστα των διαθέσιμων γραφικών στοιχείων.
+        Είναι ένας περιορισμός του συστήματος, οπότε αν θέλετε να χρησιμοποιήσετε τα γραφικά στοιχεία, θα πρέπει να μετακινήσετε την εφαρμογή πίσω στον εσωτερικό αποθηκευτικό χώρο.</string>
 
     <!-- File properties -->
-    <string name="properties">Properties</string>
-    <string name="path">Path</string>
-    <string name="items_selected">Items selected</string>
-    <string name="direct_children_count">Direct children count</string>
-    <string name="files_count">Total files count</string>
-    <string name="resolution">Resolution</string>
-    <string name="duration">Duration</string>
-    <string name="artist">Artist</string>
-    <string name="album">Album</string>
-    <string name="focal_length">Focal length</string>
-    <string name="exposure_time">Exposure time</string>
-    <string name="iso_speed">ISO speed</string>
-    <string name="f_number">F-number</string>
-    <string name="camera">Camera</string>
+    <string name="properties">Ιδιότητες</string>
+    <string name="path">Διαδρομή</string>
+    <string name="items_selected">Επολεγμένα στοιχεία</string>
+    <string name="direct_children_count">Απευθείας καταμέτρηση παιδιών</string>
+    <string name="files_count">Αριθμός συνολικών αρχείων</string>
+    <string name="resolution">Ανάλυση</string>
+    <string name="duration">Διάρκεια</string>
+    <string name="artist">Καλλιτέχνης</string>
+    <string name="album">Αλμπουμ</string>
+    <string name="focal_length">Εστιακό μήκος</string>
+    <string name="exposure_time">Χρόνος έκθεσης</string>
+    <string name="iso_speed">Ταχύτητα ISO</string>
+    <string name="f_number">F-αριθμός</string>
+    <string name="camera">Κάμερα</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Τίτλος τραγουδιού</string>
 
     <!-- Color customization -->
-    <string name="background_color">Background color</string>
-    <string name="text_color">Text color</string>
-    <string name="primary_color">Primary color</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
-    <string name="restore_defaults">Restore defaults</string>
-    <string name="change_color">Change color</string>
-    <string name="theme">Theme</string>
-    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
-    <string name="save">Save</string>
-    <string name="discard">Discard</string>
-    <string name="undo_changes">Undo changes</string>
-    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
-    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="background_color">Χρώμα φόντου</string>
+    <string name="text_color">Χρώμα κειμένου</string>
+    <string name="primary_color">Πρωτεύον χρώμα</string>
+    <string name="foreground_color">Χρώμα προσκηνίου</string>
+    <string name="app_icon_color">Χρώμα εικονιδίου εφαρμογής</string>
+    <string name="restore_defaults">Επαναφορά προεπιλογών</string>
+    <string name="change_color">Αλλαγή χρώματος</string>
+    <string name="theme">Θέμα</string>
+    <string name="changing_color_description">Η αλλαγή ενός χρώματος θα λλάξει το Προσαρμοσμένο θέμα</string>
+    <string name="save">Αποθήκευση</string>
+    <string name="discard">Απόρριψη</string>
+    <string name="undo_changes">Αναίρεση αλλαγών</string>
+    <string name="undo_changes_confirmation">Είστε βέβαιοι ότι θέλετε να αναιρέσετε τις αλλαγές σας?</string>
+    <string name="save_before_closing">Έχετε αλλαγές που δεν έχουν αποθηκευτεί. Αποθήκευση πριν από την έξοδο?</string>
+    <string name="apply_to_all_apps">Εφαρμογή χρωμάτων σε όλες τις Simple Apps</string>
+    <string name="share_colors_success">Τα χρώματα ενημερώθηκαν με επιτυχία. Ένα νέο θέμα που ονομάζεται  \"Κοινόχρηστο\" έχει προστεθεί, παρακαλούμε να χρησιμοποιήστε το για την ενημέρωση των χρωμάτων όλων των εφαρμ. στο μέλλον.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
@@ -177,17 +177,17 @@
     </string>
 
     <!-- Themes -->
-    <string name="light_theme">Light</string>
-    <string name="dark_theme">Dark</string>
+    <string name="light_theme">Φωτεινό</string>
+    <string name="dark_theme">Σκούρο</string>
     <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
-    <string name="black_white">Black &amp; White</string>
-    <string name="custom">Custom</string>
-    <string name="shared">Shared</string>
+    <string name="dark_red">Σκούρο κόκκινο</string>
+    <string name="black_white">Μαύρο &amp; Άσπρο</string>
+    <string name="custom">Προσαρμογή</string>
+    <string name="shared">Κοινόχρηστο</string>
 
     <!-- What's new -->
-    <string name="whats_new">What\'s new</string>
-    <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
+    <string name="whats_new">Τι νέο υπάρχει</string>
+    <string name="whats_new_disclaimer">* μόνο οι μεγαλύτερες ενημερώσεις παρατίθενται εδώ, υπάρχουν πάντα μερικές μικρότερες βελτιώσεις επίσης</string>
 
     <!-- Actionbar items -->
     <string name="delete">Delete</string>
