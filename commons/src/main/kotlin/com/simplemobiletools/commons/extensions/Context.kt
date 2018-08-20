@@ -225,7 +225,7 @@ fun Context.getPermissionString(id: Int) = when (id) {
 fun Context.getFilePublicUri(file: File, applicationId: String): Uri {
     // for images/videos/gifs try getting a media content uri first, like content://media/external/images/media/438
     // if media content uri is null, get our custom uri like content://com.simplemobiletools.gallery.provider/external_files/emulated/0/DCIM/IMG_20171104_233915.jpg
-    return if (file.isImageVideoGif()) {
+    return if (file.isMediaFile()) {
         getMediaContentUri(file.absolutePath) ?: FileProvider.getUriForFile(this, "$applicationId.provider", file)
     } else {
         FileProvider.getUriForFile(this, "$applicationId.provider", file)

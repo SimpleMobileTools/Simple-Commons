@@ -39,13 +39,15 @@ fun String.isAValidFilename(): Boolean {
     return true
 }
 
-fun String.isImageVideoGif() = isImageFast() || isVideoFast() || isGif() || isRawFast()
+fun String.isMediaFile() = isImageFast() || isVideoFast() || isGif() || isRawFast() || isSvg()
 
 fun String.isGif() = endsWith(".gif", true)
 
 fun String.isPng() = endsWith(".png", true)
 
 fun String.isJpg() = endsWith(".jpg", true) or endsWith(".jpeg")
+
+fun String.isSvg() = endsWith(".svg", true)
 
 // fast extension checks, not guaranteed to be accurate
 fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }

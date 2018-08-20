@@ -423,7 +423,7 @@ fun BaseSimpleActivity.deleteFolderBg(fileDirItem: FileDirItem, deleteMediaOnly:
             return
         }
 
-        val files = filesArr.toMutableList().filter { !deleteMediaOnly || it.isImageVideoGif() }
+        val files = filesArr.toMutableList().filter { !deleteMediaOnly || it.isMediaFile() }
         for (file in files) {
             deleteFileBg(file.toFileDirItem(applicationContext), false) { }
         }
