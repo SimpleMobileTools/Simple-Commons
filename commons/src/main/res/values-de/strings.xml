@@ -516,9 +516,9 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Häufig gestellte Fragen</string>
-    <string name="before_asking_question">Before you ask a question, please first read the</string>
+    <string name="before_asking_question">Bevor du eine Frage stellst, bitte lies diese Seite:</string>
     <string name="faq_1_title_commons">Weshalb sehe ich das Widget dieser App nicht in der Liste der Widgets?</string>
-    <string name="faq_1_text_commons">Wahrscheinlich weil du die App auf die Speicherkarte verschoben hast. In diesem Fall werden durch eine Einschränkung von Android die Widgets dieser App versteckt. Die einzige Lösung ist die App über die Geräteeinstellungen wieder in den internen Speicher zu verschieben.</string>
+    <string name="faq_1_text_commons">Wahrscheinlich, weil du die App auf die Speicherkarte verschoben hast. In diesem Fall werden durch eine Einschränkung von Android die Widgets dieser App versteckt. Die einzige Lösung ist die App über die Geräteeinstellungen wieder in den internen Speicher zu verschieben.</string>
     <string name="faq_2_title_commons">Ich will dich unterstützen, aber es ist mir nicht möglich Geld zu spenden. Gibt es eine andere Möglichkeit?</string>
     <string name="faq_2_text_commons">Ja, sicherlich. Du kannst die Apps weiterempfehlen oder gute Rückmeldung und Bewertungen geben. Du kannst ebenso helfen, indem du die Apps in neue Sprachen übersetzt oder vorhandene Übersetzungen aktualisierst.
         Die Anleitung dazu findest du unter https://github.com/SimpleMobileTools/General-Discussion oder sende mir eine Nachricht an hello@simplemobiletools.com, falls du Hilfe benötigst.</string>
@@ -552,8 +552,8 @@
     <string name="gson_title">Gson (JSON-Parser)</string>
     <string name="leak_canary_title">Leak Canary (Memory-Leak-Detektor)</string>
     <string name="number_picker_title">Number Picker (Konfigurierbarer Zahlenwähler)</string>
-    <string name="exoplayer_title">ExoPlayer (video player)</string>
-    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
-    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
-    <string name="filters_title">Android Photo Filters (image filters)</string>
+    <string name="exoplayer_title">ExoPlayer (Video-Player)</string>
+    <string name="panorama_view_title">VR Panorama View (Panoramabilder anzeigen)</string>
+    <string name="sanselan_title">Apache Sanselan (Bild-Metadaten lesen)</string>
+    <string name="filters_title">Android Photo Filters (Bilder filtern)</string>
 </resources>
