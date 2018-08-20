@@ -102,7 +102,8 @@ fun String.getExifProperties(exif: ExifInterface): String {
 }
 
 fun String.getExifDateTaken(exif: ExifInterface): String {
-    exif.getAttribute(ExifInterface.TAG_DATETIME).let {
+    val dateTime = exif.getAttribute(ExifInterface.TAG_DATETIME_ORIGINAL) ?: exif.getAttribute(ExifInterface.TAG_DATETIME)
+    dateTime.let {
         if (it?.isNotEmpty() == true) {
             try {
                 val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd kk:mm:ss", Locale.ENGLISH)
