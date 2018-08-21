@@ -253,7 +253,10 @@ fun String.highlightTextPart(textToHighlight: String, color: Int, highlightAll: 
 
     indexes.forEach {
         val endIndex = Math.min(it + textToHighlight.length, length)
-        spannableString.setSpan(ForegroundColorSpan(color), it, endIndex, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+        try {
+            spannableString.setSpan(ForegroundColorSpan(color), it, endIndex, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+        } catch (ignored: IndexOutOfBoundsException) {
+        }
     }
 
     return spannableString
