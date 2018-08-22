@@ -2,14 +2,14 @@
     <string name="ok">OK</string>
     <string name="cancel">Abbrechen</string>
     <string name="save_as">Speichern unter</string>
-    <string name="file_saved">Datei erfolgreich gespeichert</string>
+    <string name="file_saved">Datei erfolgreich gespeichert.</string>
     <string name="invalid_file_format">Ungültiges Dateiformat</string>
     <string name="out_of_memory_error">Fehler: Zu wenig Speicher</string>
     <string name="an_error_occurred">Es ist ein Fehler aufgetreten: %s</string>
     <string name="open_with">Öffnen mit</string>
     <string name="no_app_found">Keine passende App gefunden</string>
     <string name="set_as">Festlegen als</string>
-    <string name="value_copied_to_clipboard">Wert in Zwischenablage kopiert</string>
+    <string name="value_copied_to_clipboard">Wert in Zwischenablage kopiert.</string>
     <string name="unknown">Unbekannt</string>
     <string name="always">Immer</string>
     <string name="never">Nie</string>
@@ -34,25 +34,25 @@
     <string name="change_filter">Filter ändern</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Speicher-Berechtigung wird benötigt</string>
-    <string name="no_contacts_permission">Kontakte-Berechtigung wird benötigt</string>
-    <string name="no_camera_permissions">Kamera-Berechtigung wird benötigt</string>
-    <string name="no_audio_permissions">Audio-Berechtigung wird benötigt</string>
+    <string name="no_storage_permissions">Speicher-Berechtigung wird benötigt.</string>
+    <string name="no_contacts_permission">Kontakte-Berechtigung wird benötigt.</string>
+    <string name="no_camera_permissions">Kamera-Berechtigung wird benötigt.</string>
+    <string name="no_audio_permissions">Audio-Berechtigung wird benötigt.</string>
 
     <!-- Renaming -->
     <string name="rename_file">Datei umbenennen</string>
     <string name="rename_folder">Ordner umbenennen</string>
-    <string name="rename_file_error">Konnte die Datei nicht umbenennen</string>
-    <string name="rename_folder_error">Konnte den Ordner nicht umbenennen</string>
-    <string name="rename_folder_empty">Ordnername darf nicht leer sein</string>
-    <string name="rename_folder_exists">Ein Ordner mit diesem Namen existiert bereits</string>
-    <string name="rename_folder_root">Root-Ordner des Speichers kann nicht umbenannt werden</string>
-    <string name="rename_folder_ok">Ordner erfolgreich umbenannt</string>
+    <string name="rename_file_error">Konnte die Datei nicht umbenennen.</string>
+    <string name="rename_folder_error">Konnte den Ordner nicht umbenennen.</string>
+    <string name="rename_folder_empty">Ordnername darf nicht leer sein.</string>
+    <string name="rename_folder_exists">Ein Ordner mit diesem Namen existiert bereits.</string>
+    <string name="rename_folder_root">Root-Ordner des Speichers kann nicht umbenannt werden.</string>
+    <string name="rename_folder_ok">Ordner erfolgreich umbenannt.</string>
     <string name="renaming_folder">Ordner umbenennen</string>
-    <string name="filename_cannot_be_empty">Dateiname darf nicht leer sein</string>
-    <string name="filename_invalid_characters">Dateiname enthält ungültige Zeichen</string>
-    <string name="filename_invalid_characters_placeholder">Dateiname \'%s\' anthält ungültige Zeichen</string>
-    <string name="extension_cannot_be_empty">Dateiendung darf nicht leer sein</string>
+    <string name="filename_cannot_be_empty">Dateiname darf nicht leer sein.</string>
+    <string name="filename_invalid_characters">Dateiname enthält ungültige Zeichen.</string>
+    <string name="filename_invalid_characters_placeholder">Dateiname \'%s\' anthält ungültige Zeichen.</string>
+    <string name="extension_cannot_be_empty">Dateiendung darf nicht leer sein.</string>
     <string name="source_file_doesnt_exist">Quelldatei %s existiert nicht</string>
 
     <!-- Copy / Move -->
@@ -64,48 +64,48 @@
     <string name="source">Quelle</string>
     <string name="destination">Ziel</string>
     <string name="select_destination">Ziel auswählen</string>
-    <string name="click_select_destination">Klicken um Ziel auszuwählen</string>
-    <string name="invalid_destination">Konnte nicht auf ausgewähltes Ziel schreiben</string>
+    <string name="click_select_destination">Klicken, um Ziel auszuwählen</string>
+    <string name="invalid_destination">Konnte nicht auf ausgewähltes Ziel schreiben.</string>
     <string name="please_select_destination">Bitte Ziel auswählen</string>
-    <string name="source_and_destination_same">Quell- und Zielpfad sind identisch</string>
-    <string name="copy_failed">Konnte die Datei(en) nicht kopieren</string>
+    <string name="source_and_destination_same">Quell- und Zielpfad sind identisch.</string>
+    <string name="copy_failed">Konnte die Datei(en) nicht kopieren.</string>
     <string name="copying">Kopiere…</string>
-    <string name="copying_success">Datei(en) erfolgreich kopiert</string>
-    <string name="copy_move_failed">Es ist ein Fehler aufgetreten</string>
+    <string name="copying_success">Datei(en) erfolgreich kopiert.</string>
+    <string name="copy_move_failed">Es ist ein Fehler aufgetreten.</string>
     <string name="moving">Verschiebe…</string>
-    <string name="moving_success">Datei(en) erfolgreich verschoben</string>
-    <string name="moving_success_partial">Einige Dateien konnten nicht verschoben werden</string>
-    <string name="copying_success_partial">Einige Dateien konnten nicht kopiert werden</string>
-    <string name="no_files_selected">Keine Dateien ausgewählt</string>
+    <string name="moving_success">Datei(en) erfolgreich verschoben.</string>
+    <string name="moving_success_partial">Einige Dateien konnten nicht verschoben werden.</string>
+    <string name="copying_success_partial">Einige Dateien konnten nicht kopiert werden.</string>
+    <string name="no_files_selected">Keine Dateien ausgewählt.</string>
     <string name="saving">Speichern…</string>
-    <string name="could_not_create_folder">Ordner %s konnte nicht erstellt werden</string>
-    <string name="could_not_create_file">Datei %s konnte nicht erstellt werden</string>
+    <string name="could_not_create_folder">Ordner %s konnte nicht erstellt werden.</string>
+    <string name="could_not_create_file">Datei %s konnte nicht erstellt werden.</string>
 
     <!-- Create new -->
     <string name="create_new">Neuer Ordner</string>
     <string name="folder">Ordner</string>
     <string name="file">Datei</string>
     <string name="create_new_folder">Neuen Ordner erstellen</string>
-    <string name="name_taken">Ordner oder Datei mit diesem Namen existiert bereits</string>
-    <string name="invalid_name">Der Name enthält unerlaubte Zeichen</string>
-    <string name="empty_name">Bitte einen Namen angeben</string>
-    <string name="unknown_error_occurred">Ein unbekannter Fehler ist aufgetreten</string>
+    <string name="name_taken">Ordner oder Datei mit diesem Namen existiert bereits.</string>
+    <string name="invalid_name">Der Name enthält unerlaubte Zeichen.</string>
+    <string name="empty_name">Bitte einen Namen angeben.</string>
+    <string name="unknown_error_occurred">Ein unbekannter Fehler ist aufgetreten.</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Datei \"%s\" existiert bereits</string>
+    <string name="file_already_exists">Datei \"%s\" existiert bereits.</string>
     <string name="file_already_exists_overwrite">Datei \"%s\" existiert bereits. Überschreiben?</string>
     <string name="folder_already_exists">Ordner \"%s\" existiert bereits</string>
     <string name="merge">Zusammenführen</string>
     <string name="overwrite">Überschreiben</string>
     <string name="skip">Überspringen</string>
     <string name="append">\'_1\' anhängen</string>
-    <string name="apply_to_all">Bei allen Konflikten anwenden</string>
+    <string name="apply_to_all">Bei allen Konflikten anwenden?</string>
 
     <!-- File picker -->
     <string name="select_folder">Ordner auswählen</string>
     <string name="select_file">Datei auswählen</string>
-    <string name="confirm_storage_access_title">Bitte Zugriff auf externen Speicher bestätigen</string>
-    <string name="confirm_storage_access_text">Bitte am nächsten Bildschirm das Hauptverzeichnis deiner SD-Karte auswählen, um Schreibzugriff zu erlauben</string>
+    <string name="confirm_storage_access_title">Bitte Zugriff auf externen Speicher bestätigen.</string>
+    <string name="confirm_storage_access_text">Bitte auf dem nächsten Bildschirm das Hauptverzeichnis deiner SD-Karte auswählen, um Schreibzugriff zu erlauben.</string>
     <string name="confirm_storage_access_text_sd">Wenn die SD-Karte nicht angezeigt wird, versuche das</string>
     <string name="confirm_selection">Auswahl bestätigen</string>
 
@@ -121,8 +121,8 @@
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">%d Element wird gelöscht</item>
-        <item quantity="other">%d Elemente werden gelöscht</item>
+        <item quantity="one">%d Element wird gelöscht…</item>
+        <item quantity="other">%d Elemente werden gelöscht…</item>
     </plurals>
 
     <!-- Storages -->
@@ -130,10 +130,10 @@
     <string name="internal">Intern</string>
     <string name="sd_card">SD-Karte</string>
     <string name="root">Hauptverzeichnis</string>
-    <string name="wrong_root_selected">Falscher Ordner ausgewählt, bitte Hauptverzeichnis der SD-Karte auswählen</string>
-    <string name="sd_card_otg_same">SDCard- und OTG-Gerätepfad dürfen nicht identisch sein</string>
+    <string name="wrong_root_selected">Falscher Ordner ausgewählt, bitte Hauptverzeichnis der SD-Karte auswählen.</string>
+    <string name="sd_card_otg_same">SD-Card- und OTG-Gerätepfad dürfen nicht identisch sein.</string>
     <string name="app_on_sd_card">Die App wurde anscheinend auf der SD-Karte installiert, daher sind die Widgets nicht verfügbar. Sie werden auch in der Liste der Widgets nicht angezeigt.
-        Dies ist systemseitig so beschränkt. Für die Verwendung der Widgets muss die App wieder im internen Speicher installiert werden.</string>
+        Für die Verwendung der Widgets muss die App wieder im internen Speicher installiert werden.</string>
 
     <!-- File properties -->
     <string name="properties">Eigenschaften</string>
@@ -147,7 +147,7 @@
     <string name="album">Album</string>
     <string name="focal_length">Brennweite</string>
     <string name="exposure_time">Belichtungszeit</string>
-    <string name="iso_speed">Filmempfindlichkeit</string>
+    <string name="iso_speed">ISO-Empfindlichkeit</string>
     <string name="f_number">Blendenzahl</string>
     <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
@@ -162,14 +162,14 @@
     <string name="restore_defaults">Standard wiederherstellen</string>
     <string name="change_color">Farbe ändern</string>
     <string name="theme">Thema</string>
-    <string name="changing_color_description">Ändern einer Farbe setzt das Thema auf "Benutzerdefiniert"</string>
+    <string name="changing_color_description">Ändern einer Farbe setzt das Thema auf \'Benutzerdefiniert\'.</string>
     <string name="save">Speichern</string>
     <string name="discard">Verwerfen</string>
     <string name="undo_changes">Änderungen verwerfen</string>
     <string name="undo_changes_confirmation">Bist du sicher, dass du die Änderungen verwerfen willst?</string>
-    <string name="save_before_closing">Du hast ungespeicherte Änderungen. Speichern vorm Beenden?</string>
+    <string name="save_before_closing">Du hast ungespeicherte Änderungen. Sollen sie vor dem Beenden gespeichert werden?/string>
     <string name="apply_to_all_apps">Farben bei allen schlichten Apps anwenden</string>
-    <string name="share_colors_success">Farben erfolgreich aktualisiert. Ein neues Thema \'Shared\' wurde hinzugefügt, bitte verwende dieses um für alle Apps die Farben zu ändern.</string>
+    <string name="share_colors_success">Farben erfolgreich aktualisiert. Ein neues Thema \'Shared\' wurde hinzugefügt, bitte verwende dieses, um die Farben für alle Apps zu ändern.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Bitte kaufe <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> um diese Funktion freizuschalten und die Entwicklung zu unterstützen. Danke!
@@ -202,7 +202,7 @@
     <string name="unhide_folder">Ordner nicht verstecken</string>
     <string name="temporarily_show_hidden">Verstecktes kurz zeigen</string>
     <string name="stop_showing_hidden">Verstecktes wieder verbergen</string>
-    <string name="maximum_share_reached">So viel Inhalt kann nicht auf einmal geteilt werden</string>
+    <string name="maximum_share_reached">So viel Inhalt kann nicht auf einmal geteilt werden.</string>
     <string name="empty_and_disable_recycle_bin">Papierkorb leeren und deaktivieren</string>
     <string name="undo">Rückgängig</string>
     <string name="redo">Wiederholen</string>
