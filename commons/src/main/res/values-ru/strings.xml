@@ -2,7 +2,7 @@
     <string name="ok">OK</string>
     <string name="cancel">Отмена</string>
     <string name="save_as">Сохранить как</string>
-    <string name="file_saved">Файл успешно сохранён</string>
+    <string name="file_saved">Файл сохранён</string>
     <string name="invalid_file_format">Недопустимый формат файла</string>
     <string name="out_of_memory_error">Память переполнена</string>
     <string name="an_error_occurred">Произошла ошибка: %s</string>
@@ -47,7 +47,7 @@
     <string name="rename_folder_empty">Имя папки не должно быть пустым</string>
     <string name="rename_folder_exists">Папка с таким именем уже существует</string>
     <string name="rename_folder_root">Нельзя переименовать корневую папку</string>
-    <string name="rename_folder_ok">Папка переименована успешно</string>
+    <string name="rename_folder_ok">Папка переименована</string>
     <string name="renaming_folder">Изменение имени папки</string>
     <string name="filename_cannot_be_empty">Имя файла не может быть пустым</string>
     <string name="filename_invalid_characters">Имя файла содержит недопустимые символы</string>
@@ -70,10 +70,10 @@
     <string name="source_and_destination_same">Исходный и конечный пути не могут совпадать</string>
     <string name="copy_failed">Не удалось скопировать файлы</string>
     <string name="copying">Копирование…</string>
-    <string name="copying_success">Файлы скопированы успешно</string>
+    <string name="copying_success">Файлы скопированы</string>
     <string name="copy_move_failed">Произошла ошибка</string>
     <string name="moving">Перемещение…</string>
-    <string name="moving_success">Файлы успешно перемещены</string>
+    <string name="moving_success">Файлы перемещены</string>
     <string name="moving_success_partial">Некоторые файлы не могут быть перемещены</string>
     <string name="copying_success_partial">Некоторые файлы не могут быть скопированы</string>
     <string name="no_files_selected">Файлы не выбраны</string>
@@ -83,9 +83,9 @@
 
     <!-- Create new -->
     <string name="create_new">Создать</string>
-    <string name="folder">Папку</string>
+    <string name="folder">Папка</string>
     <string name="file">Файл</string>
-    <string name="create_new_folder">Создать новую папку</string>
+    <string name="create_new_folder">Новая папка</string>
     <string name="name_taken">Папка или файл с таким именем уже существует</string>
     <string name="invalid_name">Имя содержит недопустимые символы</string>
     <string name="empty_name">Пожалуйста, введите имя</string>
@@ -172,7 +172,7 @@
     <string name="undo_changes_confirmation">Действительно отменить изменения?</string>
     <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
     <string name="apply_to_all_apps">Применить цвета ко всем приложениям Simple</string>
-    <string name="share_colors_success">Цвета успешно обновлены. Добавлена новая тема с названием \"Общая\", в дальнейшем используйте её для обновления цветов всех приложений.</string>
+    <string name="share_colors_success">Цвета обновлены. Добавлена новая тема с названием \"Общая\", в дальнейшем используйте её для обновления цветов всех приложений.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Пожалуйста, купите <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, чтобы разблокировать эту функцию и поддержать разработку. Спасибо!
@@ -242,14 +242,14 @@
 
     <!-- Password protection -->
     <string name="pin">PIN-код</string>
-    <string name="enter_pin">Ввод PIN-кода</string>
+    <string name="enter_pin">Введите PIN-код</string>
     <string name="please_enter_pin">Введите PIN-код</string>
     <string name="wrong_pin">Неверный PIN-код</string>
-    <string name="repeat_pin">Повтор PIN-кода</string>
+    <string name="repeat_pin">Повторите PIN-код</string>
     <string name="pattern">Графический ключ</string>
-    <string name="insert_pattern">Установить ключ</string>
+    <string name="insert_pattern">Установите ключ</string>
     <string name="wrong_pattern">Неправильный графический ключ</string>
-    <string name="repeat_pattern">Повтор ключа</string>
+    <string name="repeat_pattern">Повторите ключ</string>
     <string name="fingerprint">Отпечаток пальца</string>
     <string name="add_fingerprint">Добавить отпечаток</string>
     <string name="place_finger">Пожалуйста, поместите палец на датчик отпечатков.</string>
@@ -257,7 +257,7 @@
     <string name="authentication_blocked">Аутентификация заблокирована, повторите попытку через некоторое время</string>
     <string name="no_fingerprints_registered">У вас нет зарегистрированных отпечатков пальцев, добавьте их в настройках вашего устройства</string>
     <string name="go_to_settings">Перейдите в настройки</string>
-    <string name="protection_setup_successfully">Пароль успешно установлен. Пожалуйста, переустановите приложение в случае, если вы его забудете.</string>
+    <string name="protection_setup_successfully">Пароль установлен. Пожалуйста, переустановите приложение в случае, если вы его забудете.</string>
     <string name="fingerprint_setup_successfully">Установка защиты выполнена успешно. Переустановите приложение в случае возникновения проблем с её отключением.</string>
 
     <!-- Times -->
@@ -401,10 +401,10 @@
     <string name="extra_large">Очень крупный</string>
     <string name="password_protect_hidden_items">Защита паролем отображения скрытых объектов</string>
     <string name="password_protect_whole_app">Защита паролем всего приложения</string>
-    <string name="keep_last_modified">Сохранять значение даты изменения файла при копировании/перемещении/переименовании</string>
+    <string name="keep_last_modified">Сохранять дату изменения файла при копировании/перемещении/переименовании</string>
     <string name="show_info_bubble">Показывать информационное окно при прокрутке элементов перетаскиванием полосы прокрутки</string>
     <string name="prevent_phone_from_sleeping">Предотвращать засыпание устройства, пока приложение находится на переднем плане</string>
-    <string name="skip_delete_confirmation">Всегда пропускать диалог подтверждения удаления</string>
+    <string name="skip_delete_confirmation">Пропускать диалог подтверждения удаления</string>
     <string name="enable_pull_to_refresh">Использовать \"потянуть-для-обновления\" в верхней части экрана</string>
     <string name="use_24_hour_time_format">Использовать 24-часовой формат времени</string>
     <string name="sunday_first">Воскресенье — начало недели</string>
@@ -431,8 +431,8 @@
     <string name="restore_this_file">Восстановить этот файл</string>
     <string name="restore_selected_files">Восстановить выбранные файлы</string>
     <string name="restore_all_files">Восстановить все файлы</string>
-    <string name="recycle_bin_emptied">Корзина успешно очищена</string>
-    <string name="files_restored_successfully">Файлы успешно восстановлены</string>
+    <string name="recycle_bin_emptied">Корзина очищена</string>
+    <string name="files_restored_successfully">Файлы восстановлены</string>
     <string name="empty_recycle_bin_confirmation">Вы действительно хотите очистить корзину? Файлы будут удалены безвозвратно.</string>
     <string name="recycle_bin_empty">Корзина пуста</string>
 
@@ -488,13 +488,13 @@
     <string name="saturday">Суббота</string>
     <string name="sunday">Воскресенье</string>
 
-    <string name="monday_letter">П</string>
-    <string name="tuesday_letter">В</string>
-    <string name="wednesday_letter">С</string>
-    <string name="thursday_letter">Ч</string>
-    <string name="friday_letter">П</string>
-    <string name="saturday_letter">С</string>
-    <string name="sunday_letter">В</string>
+    <string name="monday_letter">Пн</string>
+    <string name="tuesday_letter">Вт</string>
+    <string name="wednesday_letter">Ср</string>
+    <string name="thursday_letter">Чт</string>
+    <string name="friday_letter">Пт</string>
+    <string name="saturday_letter">Сб</string>
+    <string name="sunday_letter">Вс</string>
 
     <string name="monday_short">пн</string>
     <string name="tuesday_short">вт</string>
