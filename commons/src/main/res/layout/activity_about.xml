@@ -18,14 +18,14 @@
             android:layout_height="wrap_content"
             android:autoLink="web"
             android:text="@string/my_website"
-            android:textColorLink="@color/color_primary"/>
+            android:textColorLink="@color/color_primary"
+            android:visibility="gone"/>
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/about_website"
-            android:layout_marginTop="@dimen/activity_margin"
             android:text="@string/my_email"
             android:textColorLink="@color/color_primary"/>
 

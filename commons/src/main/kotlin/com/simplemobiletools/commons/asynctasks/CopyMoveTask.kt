@@ -208,7 +208,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     }
 
     private fun copyFile(source: FileDirItem, destination: FileDirItem) {
-        if (copyMediaOnly && !source.path.isImageVideoGif()) {
+        if (copyMediaOnly && !source.path.isMediaFile()) {
             mCurrentProgress += source.size
             return
         }

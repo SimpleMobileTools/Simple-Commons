@@ -16,7 +16,7 @@
     <string name="details">詳細資訊</string>
     <string name="notes">筆記</string>
     <string name="deleting_folder">資料夾 \'%s\' 刪除中</string>
-    <string name="none">None</string>
+    <string name="none">無</string>
 
     <!-- Favorites -->
     <string name="favorites">我的最愛</string>
@@ -131,8 +131,8 @@
     <string name="root">根目錄</string>
     <string name="wrong_root_selected">選擇了錯誤的資料夾，請選擇SD卡的根目錄</string>
     <string name="sd_card_otg_same">SD卡和OTG裝置的路徑不能相同</string>
-    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
-        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
+    <string name="app_on_sd_card">你似乎將應用程式安裝在SD卡，那會造成應用程式小工具無法使用。你甚至不會在可用的小工具列表中見到它們。
+        那是個系統限制，所以如果你想要使用小工具，你必須把應用程式移動回內部儲存空間。</string>
 
     <!-- File properties -->
     <string name="properties">屬性</string>
@@ -203,8 +203,8 @@
     <string name="stop_showing_hidden">停止顯示隱藏的檔案</string>
     <string name="maximum_share_reached">你不能一次分享這麼多內容</string>
     <string name="empty_and_disable_recycle_bin">清空並停用回收桶</string>
-    <string name="undo">Undo</string>
-    <string name="redo">Redo</string>
+    <string name="undo">復原</string>
+    <string name="redo">取消復原</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序</string>
@@ -494,14 +494,13 @@
         <![CDATA[
             哈囉 <br><br>
             希望您喜愛這應用程式。 它不含廣告，所以請購買應用程式 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 來支持開發者，這對話框也不會再出現。<br><br>
-            您可以在 <a href="https://simplemobiletools.com/donate">這裡</a> 找到更多捐贈選項。<br><br>
             感謝!
         ]]>
     </string>
     <string name="purchase">購買</string>
     <string name="update_thank_you">請更新[Simple Thank You]至最新版本</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please read the Frequently Asked Questions first, maybe the solution is there.</string>
-    <string name="read_it">Read it</string>
+    <string name="before_asking_question_read_faq">在您發問前，請先閱讀[常見問題]，或許解決方法就在那裡。</string>
+    <string name="read_it">讀它</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">

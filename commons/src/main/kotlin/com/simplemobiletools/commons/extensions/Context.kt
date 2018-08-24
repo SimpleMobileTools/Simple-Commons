@@ -90,11 +90,14 @@ fun Context.isBlackAndWhiteTheme() = baseConfig.textColor == Color.WHITE && base
 fun Context.getAdjustedPrimaryColor() = if (isBlackAndWhiteTheme()) Color.WHITE else baseConfig.primaryColor
 
 fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
-    Toast.makeText(this, id, length).show()
+    toast(getString(id), length)
 }
 
 fun Context.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
-    Toast.makeText(this, msg, length).show()
+    try {
+        Toast.makeText(applicationContext, msg, length).show()
+    } catch (e: Exception) {
+    }
 }
 
 val Context.baseConfig: BaseConfig get() = BaseConfig.newInstance(this)
@@ -213,13 +216,16 @@ fun Context.getPermissionString(id: Int) = when (id) {
     PERMISSION_READ_CALENDAR -> Manifest.permission.READ_CALENDAR
     PERMISSION_WRITE_CALENDAR -> Manifest.permission.WRITE_CALENDAR
     PERMISSION_CALL_PHONE -> Manifest.permission.CALL_PHONE
+    PERMISSION_READ_CALL_LOG -> Manifest.permission.READ_CALL_LOG
+    PERMISSION_WRITE_CALL_LOG -> Manifest.permission.WRITE_CALL_LOG
+    PERMISSION_GET_ACCOUNTS -> Manifest.permission.GET_ACCOUNTS
     else -> ""
 }
 
 fun Context.getFilePublicUri(file: File, applicationId: String): Uri {
     // for images/videos/gifs try getting a media content uri first, like content://media/external/images/media/438
     // if media content uri is null, get our custom uri like content://com.simplemobiletools.gallery.provider/external_files/emulated/0/DCIM/IMG_20171104_233915.jpg
-    return if (file.isImageVideoGif()) {
+    return if (file.isMediaFile()) {
         getMediaContentUri(file.absolutePath) ?: FileProvider.getUriForFile(this, "$applicationId.provider", file)
     } else {
         FileProvider.getUriForFile(this, "$applicationId.provider", file)

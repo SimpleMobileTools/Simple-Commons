@@ -56,13 +56,13 @@ fun Activity.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
 
 private fun showToast(activity: Activity, messageId: Int, length: Int) {
     if (!activity.isActivityDestroyed()) {
-        Toast.makeText(activity.applicationContext, messageId, length).show()
+        showToast(activity, activity.getString(messageId), length)
     }
 }
 
 private fun showToast(activity: Activity, message: String, length: Int) {
     if (!activity.isActivityDestroyed()) {
-        Toast.makeText(activity.applicationContext, message, length).show()
+        activity.applicationContext.toast(message, length)
     }
 }
 
@@ -423,7 +423,7 @@ fun BaseSimpleActivity.deleteFolderBg(fileDirItem: FileDirItem, deleteMediaOnly:
             return
         }
 
-        val files = filesArr.toMutableList().filter { !deleteMediaOnly || it.isImageVideoGif() }
+        val files = filesArr.toMutableList().filter { !deleteMediaOnly || it.isMediaFile() }
         for (file in files) {
             deleteFileBg(file.toFileDirItem(applicationContext), false) { }
         }
@@ -765,7 +765,7 @@ fun Activity.copyToClipboard(text: String) {
     toast(R.string.value_copied_to_clipboard)
 }
 
-fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0, callback: (() -> Unit)? = null) {
+fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0, titleText: String = "", callback: (() -> Unit)? = null) {
     if (isActivityDestroyed()) {
         return
     }
@@ -777,10 +777,14 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
     }
 
     var title: TextView? = null
-    if (titleId != 0) {
+    if (titleId != 0 || titleText.isNotEmpty()) {
         title = layoutInflater.inflate(R.layout.dialog_title, null) as TextView
         title.dialog_title_textview.apply {
-            setText(titleId)
+            if (titleText.isNotEmpty()) {
+                text = titleText
+            } else {
+                setText(titleId)
+            }
             setTextColor(baseConfig.textColor)
         }
     }

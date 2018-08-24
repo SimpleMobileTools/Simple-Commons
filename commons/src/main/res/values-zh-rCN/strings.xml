@@ -5,7 +5,7 @@
     <string name="file_saved">文件保存成功</string>
     <string name="invalid_file_format">无效文件格式</string>
     <string name="out_of_memory_error">内存不足</string>
-    <string name="an_error_occurred">啊哦，出错啦: %s</string>
+    <string name="an_error_occurred">啊哦，出错啦： %s</string>
     <string name="open_with">打开方式</string>
     <string name="no_app_found">未找到可用应用</string>
     <string name="set_as">设置为</string>
@@ -121,8 +121,8 @@
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Deleting %d item</item>
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="one">正在删除 %d 个项目</item>
+        <item quantity="other">正在删除 %d 个项目</item>
     </plurals>
 
     <!-- Storages -->
@@ -132,8 +132,8 @@
     <string name="root">根目录</string>
     <string name="wrong_root_selected">目录选择错误，请选择 SD 卡</string>
     <string name="sd_card_otg_same">SD 卡和 OTG 设备路径不能相同</string>
-    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
-        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
+    <string name="app_on_sd_card">您似乎已将应用程序安装在 SD 卡上，这使得应用的小部件不可用。你将无法在小部件列表里看到它们。
+        这是一个系统限制，所以如果你想要使用这些小部件，你必须将应用移回内部存储器。</string>
 
     <!-- File properties -->
     <string name="properties">属性</string>
@@ -204,8 +204,8 @@
     <string name="stop_showing_hidden">不显示隐藏的媒体文件</string>
     <string name="maximum_share_reached">您不能一次分享太多的内容</string>
     <string name="empty_and_disable_recycle_bin">清空并禁用回收站</string>
-    <string name="undo">Undo</string>
-    <string name="redo">Redo</string>
+    <string name="undo">撤销</string>
+    <string name="redo">重做</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序方式</string>
@@ -341,7 +341,7 @@
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">距闹钟响起还有：\n%s</string>
-    <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
+    <string name="reminder_triggers_in">距提醒触发还有：\n%s</string>
     <string name="alarm_warning">在依赖它之前，请确保闹钟能够正常工作。由于系统与节电有关的限制，它有时可能会失灵。</string>
     <string name="reminder_warning">在依赖它们之前，请确保提醒能够正常工作。由于系统与节电有关的限制，它们有时可能会失灵。</string>
 
@@ -354,11 +354,11 @@
     <string name="system_sounds">系统铃声</string>
     <string name="your_sounds">你的铃声</string>
     <string name="add_new_sound">添加新的铃声</string>
-    <string name="no_sound">No sound</string>
+    <string name="no_sound">无铃声</string>
 
     <!-- Settings -->
     <string name="settings">设置</string>
-    <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
+    <string name="purchase_simple_thank_you">购买 Simple Thank You</string>
     <string name="customize_colors">自定义颜色</string>
     <string name="customize_widget_colors">自定义小部件颜色</string>
     <string name="use_english_language">强制使用英语语言</string>
@@ -419,8 +419,8 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">请在下一界面选择OTG设备的根文件夹以授予访问权限</string>
-    <string name="wrong_root_selected_otg">选择错误，请正确选择OTG设备的根文件夹</string>
+    <string name="confirm_otg_storage_access_text">请在下一界面选择 OTG 设备的根文件夹以授予访问权限</string>
+    <string name="wrong_root_selected_otg">选择错误，请正确选择 OTG 设备的根文件夹</string>
 
     <!-- Dates -->
     <string name="january">一月</string>
@@ -495,14 +495,13 @@
         <![CDATA[
             你好，<br><br>
             希望你喜欢这个应用。它不包含广告，所以请购买<a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 这个应用支持一下，这样此对话框将不再出现。<br><br>
-            你可以在<a href="https://simplemobiletools.com/donate">这里</a>找到更多捐赠选项。<br><br>
             非常感谢！
         ]]>
     </string>
     <string name="purchase">购买</string>
-    <string name="update_thank_you">请更新Simple Thank You到最新版本</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please read the Frequently Asked Questions first, maybe the solution is there.</string>
-    <string name="read_it">Read it</string>
+    <string name="update_thank_you">请更新 Simple Thank You 到最新版本</string>
+    <string name="before_asking_question_read_faq">提问前请先阅读常见问题列表，或许已经有回答。</string>
+    <string name="read_it">阅读</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -519,41 +518,41 @@
     <string name="frequently_asked_questions">常见问题</string>
     <string name="before_asking_question">在提问之前，请先阅读</string>
     <string name="faq_1_title_commons">为什么我在应用小部件列表里没有找到这个应用的小部件？</string>
-    <string name="faq_1_text_commons">这很可能是因为你将应用程序移动到了SD卡。由于Android系统的限制，在这种情况下会隐藏应用程序的小部件。 唯一的解决方法是在系统设置中将应用程序移回内部存储。</string>
+    <string name="faq_1_text_commons">这很可能是因为你将应用程序移动到了SD卡。由于 Android 系统的限制，在这种情况下会隐藏应用程序的小部件。 唯一的解决方法是在系统设置中将应用程序移回内部存储。</string>
     <string name="faq_2_title_commons">我想支持你，但我不能捐赠金钱。 还有什么是我能够做的吗？</string>
-    <string name="faq_2_text_commons">当然有。你可以帮我宣传这个应用，或给个五星好评。你还可以为我的应用翻译新的语言来帮助你，或者是更新一些现有的翻译。你可以在https://github.com/SimpleMobileTools/General-Discussion找到该指南，如果你需要帮助，也可以发邮件hello@simplemobiletools.com给我。</string>
+    <string name="faq_2_text_commons">当然有。你可以帮我宣传这个应用，或给个五星好评。你还可以为我的应用翻译新的语言来帮助你，或者是更新一些现有的翻译。你可以在 https://github.com/SimpleMobileTools/General-Discussion 找到该指南，如果你需要帮助，也可以发邮件 hello@simplemobiletools.com 给我。</string>
     <string name="faq_3_title_commons">我该怎么恢复误删的文件？</string>
     <string name="faq_3_text_commons">不幸的是，你无法恢复。在确认对话框后文件将被立即删除，你并没有回收站用。</string>
     <string name="faq_4_title_commons">我不喜欢小部件的颜色，我可以修改吗？</string>
-    <string name="faq_4_text_commons">是可以的，当你在主屏幕上拖动小部件时，会出现小部件配置界面。你会在左下角看到彩色的方块，只需按下它们即可选择新的颜色。你还可以通过滑块来调整Alpha值。</string>
+    <string name="faq_4_text_commons">是可以的，当你在主屏幕上拖动小部件时，会出现小部件配置界面。你会在左下角看到彩色的方块，只需按下它们即可选择新的颜色。你还可以通过滑块来调整 Alpha 值。</string>
     <string name="faq_5_title_commons">我可以恢复已删除的文件吗？</string>
     <string name="faq_5_text_commons">如果你真的把它们删除了，那么你无法恢复。不过，您可以启用回收站，这样只会移动文件而不是直接删除。</string>
 
     <!-- License -->
     <string name="notice">此应用使用了以下三方库。谢谢。</string>
     <string name="third_party_licences">开放源代码</string>
-    <string name="kotlin_title">Kotlin (programming language)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
-    <string name="glide_title">Glide (image loading and caching)</string>
-    <string name="picasso_title">Picasso (image loading and caching)</string>
-    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
-    <string name="joda_title">Joda-Time (Java date replacement)</string>
-    <string name="stetho_title">Stetho (debugging databases)</string>
-    <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
-    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
-    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
-    <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
-    <string name="number_picker_title">Number Picker (customizable number picker)</string>
-    <string name="exoplayer_title">ExoPlayer (video player)</string>
-    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
-    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
-    <string name="filters_title">Android Photo Filters (image filters)</string>
+    <string name="kotlin_title">Kotlin (编程语言)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (可缩放视图)</string>
+    <string name="glide_title">Glide (图像加载和缓存)</string>
+    <string name="picasso_title">Picasso (图像加载和缓存)</string>
+    <string name="cropper_title">Android Image Cropper (图像裁剪和旋转)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (多列表项选择)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (从右向左滑动)</string>
+    <string name="joda_title">Joda-Time (Java日期替换)</string>
+    <string name="stetho_title">Stetho (调试数据库)</string>
+    <string name="otto_title">Otto (事件总线)</string>
+    <string name="photoview_title">PhotoView (可缩放 GIFs)</string>
+    <string name="pattern_title">PatternLockView (图案保护)</string>
+    <string name="reprint_title">Reprint (指纹保护)</string>
+    <string name="gif_drawable_title">Gif Drawable (加载 GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (调整文本大小)</string>
+    <string name="robolectric_title">Robolectric (测试框架)</string>
+    <string name="espresso_title">Espresso (测试助手)</string>
+    <string name="gson_title">Gson (JSON 解析器)</string>
+    <string name="leak_canary_title">Leak Canary (内存泄漏监测器)</string>
+    <string name="number_picker_title">Number Picker (可定制的号码选择器)</string>
+    <string name="exoplayer_title">ExoPlayer (视频播放器)</string>
+    <string name="panorama_view_title">VR Panorama View (显示全景图)</string>
+    <string name="sanselan_title">Apache Sanselan (读取图像元数据)</string>
+    <string name="filters_title">Android Photo Filters (图像过滤器)</string>
 </resources>

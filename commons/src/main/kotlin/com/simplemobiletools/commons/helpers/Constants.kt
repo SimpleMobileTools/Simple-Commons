@@ -19,6 +19,7 @@ const val IS_CUSTOMIZING_COLORS = "is_customizing_colors"
 const val ALARM_SOUND_TYPE_ALARM = 1
 const val ALARM_SOUND_TYPE_NOTIFICATION = 2
 const val YOUR_ALARM_SOUNDS_MIN_ID = 1000
+const val SHOW_FAQ_BEFORE_MAIL = "show_faq_before_mail"
 
 const val HOUR_MINUTES = 60
 const val DAY_MINUTES = 24 * HOUR_MINUTES
@@ -92,6 +93,7 @@ const val INITIAL_WIDGET_HEIGHT = "initial_widget_height"
 const val WIDGET_ID_TO_MEASURE = "widget_id_to_measure"
 const val WAS_ORANGE_ICON_CHECKED = "was_orange_icon_checked"
 const val WAS_APP_ON_SD_SHOWN = "was_app_on_sd_shown"
+const val WAS_BEFORE_ASKING_SHOWN = "was_before_asking_shown"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
@@ -163,6 +165,9 @@ const val PERMISSION_WRITE_CONTACTS = 6
 const val PERMISSION_READ_CALENDAR = 7
 const val PERMISSION_WRITE_CALENDAR = 8
 const val PERMISSION_CALL_PHONE = 9
+const val PERMISSION_READ_CALL_LOG = 10
+const val PERMISSION_WRITE_CALL_LOG = 11
+const val PERMISSION_GET_ACCOUNTS = 12
 
 // conflict resolving
 const val CONFLICT_SKIP = 1
@@ -231,3 +236,5 @@ fun getDateFormats() = arrayListOf(
         "MM/dd",
         "MM.dd"
 )
+
+val normalizeRegex = "\\p{InCombiningDiacriticalMarks}+".toRegex()

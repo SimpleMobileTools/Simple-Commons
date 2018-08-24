@@ -132,8 +132,8 @@
     <string name="root">Root</string>
     <string name="wrong_root_selected">Selezionata una cartella errata, seleziona la cartella di root della tua scheda SD</string>
     <string name="sd_card_otg_same">I percorsi della scheda SD e del dispositivo OTG non possono essere uguali</string>
-    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
-        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
+    <string name="app_on_sd_card">Sembra che l\'app sia installata nella scheda SD, ciò impedisce la disponibilità dei widget dell\'app. Non li vedrai neppure nell\'elenco dei widget disponibili.
+        Se è una limitazione di sistema, quindi se vuoi usare i widget, devi spostare l\'app nella memoria interna.</string>
 
     <!-- File properties -->
     <string name="properties">Proprietà</string>
@@ -204,8 +204,8 @@
     <string name="stop_showing_hidden">Non mostrare media nascosti</string>
     <string name="maximum_share_reached">Non puoi condividere così tanto in una volta sola</string>
     <string name="empty_and_disable_recycle_bin">Svuota e disattiva il cestino</string>
-    <string name="undo">Undo</string>
-    <string name="redo">Redo</string>
+    <string name="undo">Annulla</string>
+    <string name="redo">Ripeti</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordina per</string>
@@ -358,7 +358,7 @@
 
     <!-- Settings -->
     <string name="settings">Impostazioni</string>
-    <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Acquista Simple Thank You</string>
     <string name="customize_colors">Personalizza i colori</string>
     <string name="customize_widget_colors">Personalizza i colori del widget</string>
     <string name="use_english_language">Forza la lingua inglese</string>
@@ -495,14 +495,14 @@
         <![CDATA[
             Ciao,<br><br>
             spero che tu sia contento dell\'app. Non contiene pubblicità, per favore supportane lo sviluppo acquistando l\'app <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>. Inoltre questa finestra non verrà più mostrata.<br><br>
-            Puoi trovare ulteriori opzioni di donazione <a href="https://simplemobiletools.com/donate">qui</a>.<br><br>
             Grazie!
         ]]>
     </string>
     <string name="purchase">Acquista</string>
     <string name="update_thank_you">Per favore aggiorna Simple Thank You all\'ultima versione</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please read the Frequently Asked Questions first, maybe the solution is there.</string>
-    <string name="read_it">Read it</string>
+    <string name="before_asking_question_read_faq">Prima di porre una domanda, leggi le domande frequenti, 
+forse la soluzione è già lì.</string>
+    <string name="read_it">Leggile</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -554,8 +554,8 @@
     <string name="gson_title">Gson (parser JSON)</string>
     <string name="leak_canary_title">Leak Canary (rileva leak di memoria)</string>
     <string name="number_picker_title">Number Picker (Selettore di numeri personalizzabile)</string>
-    <string name="exoplayer_title">ExoPlayer (video player)</string>
+    <string name="exoplayer_title">ExoPlayer (lettore video)</string>
     <string name="panorama_view_title">VR Panorama View (visualizzazione panorami)</string>
     <string name="sanselan_title">Apache Sanselan (lettura metadati immagini)</string>
-    <string name="filters_title">Android Photo Filters (image filters)</string>
+    <string name="filters_title">Android Photo Filters (filtri immagine)</string>
 </resources>

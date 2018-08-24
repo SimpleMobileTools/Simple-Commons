@@ -10,6 +10,7 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import com.simplemobiletools.commons.helpers.*
+import java.text.Normalizer
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -38,13 +39,15 @@ fun String.isAValidFilename(): Boolean {
     return true
 }
 
-fun String.isImageVideoGif() = isImageFast() || isVideoFast() || isGif() || isRawFast()
+fun String.isMediaFile() = isImageFast() || isVideoFast() || isGif() || isRawFast() || isSvg()
 
 fun String.isGif() = endsWith(".gif", true)
 
 fun String.isPng() = endsWith(".png", true)
 
 fun String.isJpg() = endsWith(".jpg", true) or endsWith(".jpeg")
+
+fun String.isSvg() = endsWith(".svg", true)
 
 // fast extension checks, not guaranteed to be accurate
 fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }
@@ -99,7 +102,8 @@ fun String.getExifProperties(exif: ExifInterface): String {
 }
 
 fun String.getExifDateTaken(exif: ExifInterface): String {
-    exif.getAttribute(ExifInterface.TAG_DATETIME).let {
+    val dateTime = exif.getAttribute(ExifInterface.TAG_DATETIME_ORIGINAL) ?: exif.getAttribute(ExifInterface.TAG_DATETIME)
+    dateTime.let {
         if (it?.isNotEmpty() == true) {
             try {
                 val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd kk:mm:ss", Locale.ENGLISH)
@@ -228,19 +232,37 @@ fun String.substringTo(cnt: Int): String {
     }
 }
 
-fun String.highlightTextPart(textToHighlight: String, color: Int): SpannableString {
+fun String.highlightTextPart(textToHighlight: String, color: Int, highlightAll: Boolean = false): SpannableString {
     val spannableString = SpannableString(this)
     if (textToHighlight.isEmpty()) {
         return spannableString
     }
 
-    val startIndex = indexOf(textToHighlight, 0, true)
-    if (startIndex != -1) {
-        val endIndex = Math.min(startIndex + textToHighlight.length, length)
-        spannableString.setSpan(ForegroundColorSpan(color), startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+    var startIndex = normalizeString().indexOf(textToHighlight, 0, true)
+    val indexes = ArrayList<Int>()
+    while (startIndex >= 0) {
+        if (startIndex != -1) {
+            indexes.add(startIndex)
+        }
+
+        startIndex = normalizeString().indexOf(textToHighlight, startIndex + textToHighlight.length, true)
+        if (!highlightAll) {
+            break
+        }
     }
+
+    indexes.forEach {
+        val endIndex = Math.min(it + textToHighlight.length, length)
+        try {
+            spannableString.setSpan(ForegroundColorSpan(color), it, endIndex, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+        } catch (ignored: IndexOutOfBoundsException) {
+        }
+    }
+
     return spannableString
 }
+
+fun String.normalizeString() = Normalizer.normalize(this, Normalizer.Form.NFD).replace(normalizeRegex, "")
 
 fun String.getMimeType(): String {
     val typesMap = HashMap<String, String>().apply {

@@ -262,4 +262,8 @@ open class BaseConfig(val context: Context) {
     var wasAppOnSDShown: Boolean
         get() = prefs.getBoolean(WAS_APP_ON_SD_SHOWN, false)
         set(wasAppOnSDShown) = prefs.edit().putBoolean(WAS_APP_ON_SD_SHOWN, wasAppOnSDShown).apply()
+
+    var wasBeforeAskingShown: Boolean
+        get() = prefs.getBoolean(WAS_BEFORE_ASKING_SHOWN, false)
+        set(wasBeforeAskingShown) = prefs.edit().putBoolean(WAS_BEFORE_ASKING_SHOWN, wasBeforeAskingShown).apply()
 }

@@ -8,6 +8,7 @@ import android.text.Html
 import android.text.method.LinkMovementMethod
 import android.view.View
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FAQItem
@@ -61,7 +62,19 @@ class AboutActivity : BaseSimpleActivity() {
         val body = "$appVersion$newline$deviceOS$newline$separator$newline$newline$newline"
         val href = "$label<br><a href=\"mailto:$email?subject=$appName&body=$body\">$email</a>"
         about_email.text = Html.fromHtml(href)
-        about_email.movementMethod = LinkMovementMethod.getInstance()
+
+        if (intent.getBooleanExtra(SHOW_FAQ_BEFORE_MAIL, false) && !baseConfig.wasBeforeAskingShown) {
+            about_email.setOnClickListener {
+                baseConfig.wasBeforeAskingShown = true
+                about_email.movementMethod = LinkMovementMethod.getInstance()
+                about_email.setOnClickListener(null)
+                ConfirmationDialog(this, "", R.string.before_asking_question_read_faq, R.string.read_it, R.string.skip) {
+                    about_faq_label.performClick()
+                }
+            }
+        } else {
+            about_email.movementMethod = LinkMovementMethod.getInstance()
+        }
     }
 
     private fun setupFAQ() {
