@@ -15,9 +15,9 @@
     <string name="never">Never</string>
     <string name="details">詳細</string>
     <string name="notes">メモ</string>
-    <string name="deleting_folder">Deleting folder \'%s\'</string>
+    <string name="deleting_folder">フォルダ \'%s\' を削除しています</string>
     <string name="none">None</string>
-    <string name="label">Label</string>
+    <string name="label">ラベル</string>
 
     <!-- Favorites -->
     <string name="favorites">お気に入り</string>
@@ -35,10 +35,10 @@
     <string name="change_filter">フィルタを変更</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">ストレージへのアクセス許可が必要です</string>
+    <string name="no_contacts_permission">連絡先へのアクセス許可が必要です</string>
+    <string name="no_camera_permissions">カメラへのアクセス許可が必要です</string>
+    <string name="no_audio_permissions">マイクへのアクセス許可が必要です</string>
 
     <!-- Renaming -->
     <string name="rename_file">ファイルの名前を変更</string>
@@ -52,9 +52,9 @@
     <string name="renaming_folder">フォルダの名前を変更中</string>
     <string name="filename_cannot_be_empty">ファイル名は空にできません</string>
     <string name="filename_invalid_characters">ファイル名に無効な文字が含まれています</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
+    <string name="filename_invalid_characters_placeholder">ファイル名 \'%s\' に無効な文字が含まれています</string>
     <string name="extension_cannot_be_empty">拡張子は省略できません</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
+    <string name="source_file_doesnt_exist">ソースファイル %s が存在しません</string>
 
     <!-- Copy / Move -->
     <string name="copy">コピー</string>
@@ -95,8 +95,8 @@
     <!-- File operation conflicts -->
     <string name="file_already_exists">ファイル \"%s\" は既に存在しています</string>
     <string name="file_already_exists_overwrite">ファイル \"%s\" は既に存在しています。上書きしますか？</string>
-    <string name="folder_already_exists">Folder \"%s\" already exists</string>
-    <string name="merge">Merge</string>
+    <string name="folder_already_exists">フォルダ \"%s\" は既に存在しています</string>
+    <string name="merge">統合</string>
     <string name="overwrite">上書き</string>
     <string name="skip">スキップ</string>
     <string name="append">\'_1\' に追記する</string>
@@ -106,8 +106,8 @@
     <string name="select_folder">フォルダを選択</string>
     <string name="select_file">ファイルを選択</string>
     <string name="confirm_storage_access_title">外部ストレージのアクセスを確認してください</string>
-    <string name="confirm_storage_access_text">次の画面で SD カードのルートフォルダを選択して、書き込みアクセス許可を付与してください</string>
-    <string name="confirm_storage_access_text_sd">SD カードの内容が表示されない場合は、こちらをお試しください</string>
+    <string name="confirm_storage_access_text">次の画面で SDカードのルートフォルダを選択して、書き込みアクセス許可を付与してください</string>
+    <string name="confirm_storage_access_text_sd">SDカードの内容が表示されない場合は、こちらをお試しください</string>
     <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
@@ -122,17 +122,17 @@
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Deleting %d item</item>
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="one">%d アイテムを削除しています</item>
+        <item quantity="other">%d アイテムを削除しています</item>
     </plurals>
 
     <!-- Storages -->
     <string name="select_storage">ストレージを選択</string>
     <string name="internal">内部</string>
-    <string name="sd_card">SD カード</string>
+    <string name="sd_card">SDカード</string>
     <string name="root">ルート</string>
-    <string name="wrong_root_selected">フォルダの選択が正しくありません。SD カードを選択してください</string>
-    <string name="sd_card_otg_same">SD card and OTG device paths cannot be the same</string>
+    <string name="wrong_root_selected">フォルダの選択が正しくありません。SDカードを選択してください</string>
+    <string name="sd_card_otg_same">SDカードとOTGデバイスのパスを同じにすることはできません</string>
     <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
         It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
 
@@ -173,7 +173,7 @@
     <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
+            この機能のロックを解除して開発者をサポートするには、<a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> アプリを購入してください。
         ]]>
     </string>
 
@@ -182,7 +182,7 @@
     <string name="dark_theme">ダーク</string>
     <string name="solarized">Solarized</string>
     <string name="dark_red">Dark red</string>
-    <string name="black_white">Black &amp; White</string>
+    <string name="black_white">モノクロ</string>
     <string name="custom">カスタム</string>
     <string name="shared">Shared</string>
 
@@ -203,8 +203,8 @@
     <string name="unhide_folder">フォルダを再表示</string>
     <string name="temporarily_show_hidden">非表示の項目を一時的に表示</string>
     <string name="stop_showing_hidden">非表示項目を表示しない</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
-    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
+    <string name="maximum_share_reached">一度に複数のコンテンツを共有することはできません</string>
+    <string name="empty_and_disable_recycle_bin">ごみ箱を空にして無効にする</string>
     <string name="undo">Undo</string>
     <string name="redo">Redo</string>
 
@@ -225,15 +225,15 @@
     <string name="proceed_with_deletion">削除を続行してもよろしいですか？</string>
     <string name="deletion_confirmation">%s を削除してもよろしいですか？</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">%s をゴミ箱に移動してもよろしいですか？</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
-    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
+    <string name="are_you_sure_delete">このアイテムを削除してもよろしいですか？</string>
+    <string name="are_you_sure_recycle_bin">個のアイテムをゴミ箱に移動してもよろしいですか？</string>
     <string name="do_not_ask_again">このセッションでは再度たずねない</string>
     <string name="yes">はい</string>
     <string name="no">いいえ</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting a folder</item>
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="one">警告: フォルダを削除しようとしています</item>
+        <item quantity="other">警告: %d 個のフォルダを削除しようとしています</item>
     </plurals>
 
     <!-- Password protection -->
@@ -246,9 +246,9 @@
     <string name="insert_pattern">パターンを入力</string>
     <string name="wrong_pattern">パターンに誤りがあります</string>
     <string name="repeat_pattern">パターンを再入力</string>
-    <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
+    <string name="fingerprint">指紋</string>
+    <string name="add_fingerprint">指紋を追加</string>
+    <string name="place_finger">指紋センサーに指を置いてください</string>
     <string name="authentication_failed">Authentication failed</string>
     <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
     <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
@@ -257,8 +257,8 @@
     <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
 
     <!-- Times -->
-    <string name="yesterday">Yesterday</string>
-    <string name="today">Today</string>
+    <string name="yesterday">昨日</string>
+    <string name="today">今日</string>
     <string name="tomorrow">明日</string>
     <string name="seconds_raw">秒</string>
     <string name="minutes_raw">分</string>
@@ -361,8 +361,8 @@
     <string name="settings">設定</string>
     <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
     <string name="customize_colors">表示色のカスタマイズ</string>
-    <string name="customize_widget_colors">Customize widget colors</string>
-    <string name="use_english_language">Use English language</string>
+    <string name="customize_widget_colors">ウィジェットの色をカスタマイズ</string>
+    <string name="use_english_language">英語で表示する</string>
     <string name="avoid_whats_new">起動時に更新履歴を表示しない</string>
     <string name="show_hidden_items">Show hidden items</string>
     <string name="font_size">メモのフォントサイズ</string>
@@ -383,7 +383,7 @@
     <string name="use_same_snooze">Always use same snooze time</string>
     <string name="snooze_time">Snooze time</string>
     <string name="vibrate_on_button_press">Vibrate on button press</string>
-    <string name="move_items_into_recycle_bin">Move items into the Recycle Bin instead of deleting</string>
+    <string name="move_items_into_recycle_bin">削除の代わりにアイテムをごみ箱に移動する</string>
     <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
     <string name="empty_recycle_bin">Empty the Recycle Bin</string>
     <string name="force_portrait_mode">Force portrait mode</string>
@@ -392,9 +392,9 @@
     <string name="visibility">Visibility</string>
     <string name="security">Security</string>
     <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
-    <string name="recycle_bin">Recycle Bin</string>
-    <string name="saving_label">Saving</string>
+    <string name="file_operations">ファイル操作</string>
+    <string name="recycle_bin">ごみ箱</string>
+    <string name="saving_label">保存中</string>
     <string name="startup">Startup</string>
     <string name="text">Text</string>
 
@@ -451,13 +451,13 @@
     <string name="in_november">in November</string>
     <string name="in_december">in December</string>
 
-    <string name="monday">Monday</string>
-    <string name="tuesday">Tuesday</string>
-    <string name="wednesday">Wednesday</string>
-    <string name="thursday">Thursday</string>
-    <string name="friday">Friday</string>
-    <string name="saturday">Saturday</string>
-    <string name="sunday">Sunday</string>
+    <string name="monday">月曜日</string>
+    <string name="tuesday">火曜日</string>
+    <string name="wednesday">水曜日</string>
+    <string name="thursday">木曜日</string>
+    <string name="friday">金曜日</string>
+    <string name="saturday">土曜日</string>
+    <string name="sunday">日曜日</string>
 
     <string name="monday_letter">月</string>
     <string name="tuesday_letter">火</string>
@@ -467,24 +467,24 @@
     <string name="saturday_letter">土</string>
     <string name="sunday_letter">日</string>
 
-    <string name="monday_short">Mon</string>
-    <string name="tuesday_short">Tue</string>
-    <string name="wednesday_short">Wed</string>
-    <string name="thursday_short">Thu</string>
-    <string name="friday_short">Fri</string>
-    <string name="saturday_short">Sat</string>
-    <string name="sunday_short">Sun</string>
+    <string name="monday_short">月</string>
+    <string name="tuesday_short">火</string>
+    <string name="wednesday_short">水</string>
+    <string name="thursday_short">木</string>
+    <string name="friday_short">金</string>
+    <string name="saturday_short">土</string>
+    <string name="sunday_short">日</string>
 
     <!-- About -->
-    <string name="about">アプリについて</string>
-    <string name="website_label">もっとシンプルなアプリとソースコードは</string>
+    <string name="about">このアプリについて</string>
+    <string name="website_label">ソースコードはこちら</string>
     <string name="email_label">ご意見やご提案をお送りください</string>
     <string name="more_apps_underlined"><u>他のアプリ</u></string>
     <string name="third_party_licences_underlined"><u>サードパーティー ライセンス</u></string>
     <string name="invite_friends_underlined"><u>友達を招待</u></string>
     <string name="share_text">%2$s で %1$s を確認してください</string>
     <string name="invite_via">招待</string>
-    <string name="rate_us_underlined"><u>Play ストアで評価してください</u></string>
+    <string name="rate_us_underlined"><u>Playストアで評価してください</u></string>
     <string name="donate">寄付</string>
     <string name="donate_underlined"><u>寄付</u></string>
     <string name="follow_us">フォローしてください</string>
@@ -500,7 +500,7 @@
         ]]>
     </string>
     <string name="purchase">Purchase</string>
-    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
+    <string name="update_thank_you">\"Simple Thank You\" アプリを最新版に更新してください</string>
     <string name="before_asking_question_read_faq">Before you ask a question, please read the Frequently Asked Questions first, maybe the solution is there.</string>
     <string name="read_it">Read it</string>
 
@@ -532,7 +532,7 @@
     <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them.</string>
 
     <!-- License -->
-    <string name="notice">このアプリは、私の暮らしにゆとりを持たせるために、次のサードパーティのライブラリーを使用しています。 ありがとうございます。</string>
+    <string name="notice">このアプリは、私の暮らしにゆとりを持たせるために、次のサードパーティのライブラリーを使用しています。ありがとうございます。</string>
     <string name="third_party_licences">サードパーティー ライセンス</string>
     <string name="kotlin_title">Kotlin (プログラミング言語)</string>
     <string name="subsampling_title">Subsampling Scale Image View (ズーム可能画像ビュー)</string>
