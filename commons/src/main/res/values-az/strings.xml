@@ -16,8 +16,8 @@
     <string name="details">Detallar</string>
     <string name="notes">Qeydlər</string>
     <string name="deleting_folder">\'%s\' qovluğu silinir</string>
-    <string name="none">None</string>
-    <string name="label">Label</string>
+    <string name="none">Heçnə</string>
+    <string name="label">Etiket</string>
 
     <!-- Favorites -->
     <string name="favorites">Sevimlilər</string>
@@ -122,8 +122,8 @@
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">%d fayl silinir</item>
-        <item quantity="other">%d fayl silinir</item>
+        <item quantity="one">%d silinir</item>
+        <item quantity="other">%d silinir</item>
     </plurals>
 
     <!-- Storages -->
@@ -134,7 +134,7 @@
     <string name="wrong_root_selected">Seçilən qovluq yanlışdır, xahiş olunur SD kartın root qovluğunu seçin</string>
     <string name="sd_card_otg_same">SD kart və OTG cihaz yolu eyni ola bilməz</string>
     <string name="app_on_sd_card">Görünür tətbiqi SD karta yükləmisiniz, bu widgetlərin işləməsinin qarşısını alır. Siz widgetləri əlçatan widgetlər siyahısında belə görə bilməyəcəksiniz.
-        Bu sistem məhdudiyyətidir, əgər widgetlərin işləməsini istəyirsinizsə, tətbiqi daxili yaddaşa köçürməlisiniz.</string>
+        Bu sistem məhdudiyyətidir, əgər vidjetlərin işləməsini istəyirsinizsə, tətbiqi daxili yaddaşa köçürməlisiniz.</string>
 
     <!-- File properties -->
     <string name="properties">Xüsusiyyətlər</string>
