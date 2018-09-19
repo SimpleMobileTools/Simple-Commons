@@ -13,10 +13,7 @@ import android.support.v4.util.Pair
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.CONFLICT_OVERWRITE
-import com.simplemobiletools.commons.helpers.CONFLICT_SKIP
-import com.simplemobiletools.commons.helpers.OTG_PATH
-import com.simplemobiletools.commons.helpers.isOreoPlus
+import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.interfaces.CopyMoveListener
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
@@ -70,7 +67,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             val newPath = "$mDestinationPath/${file.name}"
             val fileExists = if (newPath.startsWith(OTG_PATH)) activity.getOTGFastDocumentFile(newPath)?.exists()
                     ?: false else File(newPath).exists()
-            if (getConflictResolution(newPath) != CONFLICT_SKIP || !fileExists) {
+            if (getConflictResolution(conflictResolutions, newPath) != CONFLICT_SKIP || !fileExists) {
                 mMaxSize += (file.size / 1000).toInt()
             }
         }
@@ -85,7 +82,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 val newPath = "$mDestinationPath/${file.name}"
                 val newFileDirItem = FileDirItem(newPath, newPath.getFilenameFromPath(), file.isDirectory)
                 if (activity.getDoesFilePathExist(newPath)) {
-                    val resolution = getConflictResolution(newPath)
+                    val resolution = getConflictResolution(conflictResolutions, newPath)
                     if (resolution == CONFLICT_SKIP) {
                         mFileCountToCopy--
                         continue
@@ -149,16 +146,6 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         mProgressHandler.postDelayed({
             updateProgress()
         }, PROGRESS_RECHECK_INTERVAL)
-    }
-
-    private fun getConflictResolution(path: String): Int {
-        return if (conflictResolutions.size == 1 && conflictResolutions.containsKey("")) {
-            conflictResolutions[""]!!
-        } else if (conflictResolutions.containsKey(path)) {
-            conflictResolutions[path]!!
-        } else {
-            CONFLICT_SKIP
-        }
     }
 
     private fun copy(source: FileDirItem, destination: FileDirItem) {

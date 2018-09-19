@@ -255,6 +255,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
         handleSAFDialog(destination) {
             copyMoveCallback = callback
+            var fileCountToCopy = fileDirItems.size
             if (isCopyOperation) {
                 startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
             } else {
@@ -263,29 +264,40 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                         startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
                     }
                 } else {
-                    toast(R.string.moving)
-                    val updatedFiles = ArrayList<FileDirItem>(fileDirItems.size * 2)
                     try {
-                        val destinationFolder = File(destination)
-                        for (oldFileDirItem in fileDirItems) {
-                            val newFile = File(destinationFolder, oldFileDirItem.name)
-                            if (!newFile.exists() && File(oldFileDirItem.path).renameTo(newFile)) {
-                                if (!baseConfig.keepLastModified) {
-                                    newFile.setLastModified(System.currentTimeMillis())
+                        checkConflicts(fileDirItems, destination, 0, LinkedHashMap()) {
+                            toast(R.string.moving)
+                            val updatedFiles = ArrayList<FileDirItem>(fileDirItems.size * 2)
+                            val destinationFolder = File(destination)
+                            for (oldFileDirItem in fileDirItems) {
+                                val newFile = File(destinationFolder, oldFileDirItem.name)
+                                if (newFile.exists()) {
+                                    if (getConflictResolution(it, newFile.absolutePath) == CONFLICT_SKIP) {
+                                        fileCountToCopy--
+                                    } else {
+                                        // this file is guaranteed to be on the internal storage, so just delete it this way
+                                        newFile.delete()
+                                    }
                                 }
-                                updatedFiles.add(newFile.toFileDirItem(applicationContext))
-                            }
-                        }
 
-                        val updatedPaths = updatedFiles.map { it.path } as ArrayList<String>
-                        rescanPaths(updatedPaths) {
-                            runOnUiThread {
-                                copyMoveListener.copySucceeded(false, fileDirItems.size == updatedFiles.size, destination)
+                                if (!newFile.exists() && File(oldFileDirItem.path).renameTo(newFile)) {
+                                    if (!baseConfig.keepLastModified) {
+                                        newFile.setLastModified(System.currentTimeMillis())
+                                    }
+                                    updatedFiles.add(newFile.toFileDirItem(applicationContext))
+                                }
                             }
-                        }
 
-                        if (updatedPaths.isEmpty()) {
-                            copyMoveListener.copySucceeded(false, false, destination)
+                            val updatedPaths = updatedFiles.map { it.path } as ArrayList<String>
+                            if (updatedPaths.isEmpty()) {
+                                copyMoveListener.copySucceeded(false, fileCountToCopy == 0, destination)
+                            } else {
+                                rescanPaths(updatedPaths) {
+                                    runOnUiThread {
+                                        copyMoveListener.copySucceeded(false, fileCountToCopy <= updatedPaths.size, destination)
+                                    }
+                                }
+                            }
                         }
                     } catch (e: Exception) {
                         showErrorToast(e)
