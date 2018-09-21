@@ -630,8 +630,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
             }
 
             if (document == null) {
-                val error = String.format(getString(R.string.could_not_create_file), fileDirItem.path)
-                showErrorToast(error)
+                showFileCreateError(fileDirItem.path)
                 callback(null)
                 return@handleSAFDialog
             }
@@ -648,8 +647,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
                     callback(null)
                 }
             } else {
-                val error = String.format(getString(R.string.could_not_create_file), fileDirItem.path)
-                showErrorToast(error)
+                showFileCreateError(fileDirItem.path)
                 callback(null)
             }
         }
@@ -667,6 +665,12 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
     }
 }
 
+fun BaseSimpleActivity.showFileCreateError(path: String) {
+    val error = String.format(getString(R.string.could_not_create_file), path)
+    baseConfig.treeUri = ""
+    showErrorToast(error)
+}
+
 fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, parentDocumentFile: DocumentFile? = null): OutputStream? {
     val targetFile = File(path)
 
@@ -682,8 +686,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
         }
 
         if (documentFile == null) {
-            val error = String.format(getString(R.string.could_not_create_file), targetFile.parent)
-            showErrorToast(error)
+            showFileCreateError(targetFile.parent)
             return null
         }
 
