@@ -5,7 +5,7 @@
     <string name="file_saved">Datoteka uspješno spremljena</string>
     <string name="invalid_file_format">Nevažeći format datoteke</string>
     <string name="out_of_memory_error">Greška, nema slobodnog prostora</string>
-    <string name="an_error_occurred">Greška se dogodila: %s</string>
+    <string name="an_error_occurred">Dogodila se greška: %s</string>
     <string name="open_with">Otvori s</string>
     <string name="no_app_found">Nema odgovarajuće aplikacije</string>
     <string name="set_as">Postavi kao</string>
@@ -42,14 +42,14 @@
 
     <!-- Renaming -->
     <string name="rename_file">Preimenuj datoteku</string>
-    <string name="rename_folder">Preimenuj direktorij</string>
+    <string name="rename_folder">Preimenuj mapu</string>
     <string name="rename_file_error">Nije moguće preimenovati datoteku</string>
-    <string name="rename_folder_error">Nije moguće preimenovati direktorij</string>
-    <string name="rename_folder_empty">Naziv direktorija ne smije biti prazan</string>
-    <string name="rename_folder_exists">Direktorij s tim imenom već postoji</string>
-    <string name="rename_folder_root">Nije moguće preimenovati root direktorij prostora za pohranu</string>
-    <string name="rename_folder_ok">Direktorij uspješno preimenovan</string>
-    <string name="renaming_folder">Preimenovanje direktorija</string>
+    <string name="rename_folder_error">Nije moguće preimenovati mapu</string>
+    <string name="rename_folder_empty">Naziv mape ne smije biti prazan</string>
+    <string name="rename_folder_exists">Mapa s tim imenom već postoji</string>
+    <string name="rename_folder_root">Nije moguće preimenovati root mapu prostora za pohranu</string>
+    <string name="rename_folder_ok">Mapa uspješno preimenovana</string>
+    <string name="renaming_folder">Preimenovanje mape</string>
     <string name="filename_cannot_be_empty">Naziv datoteke ne smije biti prazan</string>
     <string name="filename_invalid_characters">Naziv datoteke sadrži ne podržane znakove</string>
     <string name="filename_invalid_characters_placeholder">Naziv datoteke \'%s\' sadrži nevažeće znakove</string>
@@ -59,7 +59,7 @@
     <!-- Copy / Move -->
     <string name="copy">Kopiraj</string>
     <string name="move">Premjesti</string>
-    <string name="copy_move">Kopiraj / Premjesti</string>
+    <string name="copy_move">Kopiraj/Premjesti</string>
     <string name="copy_to">Kopiraj u</string>
     <string name="move_to">Premjesti u</string>
     <string name="source">Izvor</string>
@@ -67,27 +67,27 @@
     <string name="select_destination">Odabir odredišta</string>
     <string name="click_select_destination">Kliknite ovdje za odabir odredišta</string>
     <string name="invalid_destination">Nije moguće zapisivanje na odabranom odredištu</string>
-    <string name="please_select_destination">Molimo odaberite odredište</string>
+    <string name="please_select_destination">Molim odaberite odredište</string>
     <string name="source_and_destination_same">Izvor i odredište ne mogu biti isti</string>
     <string name="copy_failed">Nije moguće kopiranje datoteka</string>
     <string name="copying">Kopiranje…</string>
     <string name="copying_success">Datoteke uspješno kopirane</string>
-    <string name="copy_move_failed">Greška se dogodila</string>
+    <string name="copy_move_failed">Dogodila se greška</string>
     <string name="moving">Premještanje…</string>
     <string name="moving_success">Datoteke uspješno premještene</string>
     <string name="moving_success_partial">Neke datoteke nije bilo moguće premjestiti</string>
     <string name="copying_success_partial">Neke datoteke nije bilo moguće kopirati</string>
     <string name="no_files_selected">Nema odabranih datoteka</string>
     <string name="saving">Spremanje…</string>
-    <string name="could_not_create_folder">Nije moguće stvoriti direktorij %s</string>
+    <string name="could_not_create_folder">Nije moguće stvoriti mapu %s</string>
     <string name="could_not_create_file">Nije moguće stvoriti datoteku %s</string>
 
     <!-- Create new -->
     <string name="create_new">Stvori novo</string>
-    <string name="folder">Direktorij</string>
+    <string name="folder">Mapa</string>
     <string name="file">Datoteka</string>
-    <string name="create_new_folder">Stvori novi direktorij</string>
-    <string name="name_taken">Datoteka ili direktorij s tim nazivom već postoje</string>
+    <string name="create_new_folder">Stvori novu mapu</string>
+    <string name="name_taken">Datoteka ili mapa s tim nazivom već postoje</string>
     <string name="invalid_name">Naziv sadrži ne važeće znakove</string>
     <string name="empty_name">Molimo unesite naziv</string>
     <string name="unknown_error_occurred">Nepoznata greška se dogodila</string>
@@ -103,10 +103,10 @@
     <string name="apply_to_all">Primjeni na sve sukobe</string>
 
     <!-- File picker -->
-    <string name="select_folder">Odaberite direktorij</string>
+    <string name="select_folder">Odaberite mapu</string>
     <string name="select_file">Odaberite datoteku</string>
     <string name="confirm_storage_access_title">Potvrdite pristup vanjskom prostoru za pohranu</string>
-    <string name="confirm_storage_access_text">Molimo odaberite root direktorij SD kartice na sljedećem prozoru, da bi ste omogućili zapisivanje</string>
+    <string name="confirm_storage_access_text">Molimo odaberite root mapu SD kartice na sljedećem prozoru, da bi ste omogućili zapisivanje</string>
     <string name="confirm_storage_access_text_sd">Ukoliko ne vidite SD karticu, probajte ovo</string>
     <string name="confirm_selection">Potvrdi odabir</string>
 
@@ -134,7 +134,7 @@
     <string name="internal">Unutranji prostor za pohranu</string>
     <string name="sd_card">SD kartica</string>
     <string name="root">Root</string>
-    <string name="wrong_root_selected">Odabran je pogrešan direktorij, molimo odaberite root direktorij Vaše SD kartice</string>
+    <string name="wrong_root_selected">Odabrana je pogrešana mapa, molimo odaberite root mapu Vaše SD kartice</string>
     <string name="sd_card_otg_same">SD kartice i OTG putevi uređaja ne mogu biti isti</string>
     <string name="app_on_sd_card">Čini se da je aplikacija instalirana na SD karticu, što čini widgete aplikacije nedostupnim. Nećete ih čak ni vidjeti na popisu dostupnih widgeta.
         To je ograničenje sustava, pa ako želite upotrebljavati widgete, morate vratiti aplikaciju na unutarnju pohranu..</string>
@@ -202,8 +202,8 @@
     <string name="select_all">Odaberi sve</string>
     <string name="hide">Sakrij</string>
     <string name="unhide">Otkrij</string>
-    <string name="hide_folder">Sakrij direktorij</string>
-    <string name="unhide_folder">Otkrij direktorij</string>
+    <string name="hide_folder">Sakrij mapu</string>
+    <string name="unhide_folder">Otkrij mapu</string>
     <string name="temporarily_show_hidden">Privremeno prikaži skriveno</string>
     <string name="stop_showing_hidden">Zaustavi prikazivanje skrivenih stavki</string>
     <string name="maximum_share_reached">Nije moguće dijeliti ovoliko stavki odjednom</string>
@@ -222,7 +222,7 @@
     <string name="extension">Tip datoteke</string>
     <string name="ascending">Uzlazno</string>
     <string name="descending">Silazno</string>
-    <string name="use_for_this_folder">Koristi samo za ovaj direktorij</string>
+    <string name="use_for_this_folder">Koristi samo za ovu mapu</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Jeste li sigurni da želite nastaviti s brisanjem?</string>
@@ -254,7 +254,7 @@
     <string name="place_finger">Molimo postavite prst na senzor otiska prsta</string>
     <string name="authentication_failed">Neuspješna autentifikacija</string>
     <string name="authentication_blocked">Blokirana autentifikacija, molimo pokušajte za par trenutaka</string>
-    <string name="no_fingerprints_registered">Nemate registiranih otisaka prstiju, molimo dodajte ih u postavkama vašeg uređaja</string>
+    <string name="no_fingerprints_registered">Nemate registiranih otisaka prstiju, molimo dodajte ih u postavkama Vašeg uređaja</string>
     <string name="go_to_settings">Idi u Postavke</string>
     <string name="protection_setup_successfully">Uspješno postavljanje lozinke. Molimo reinstalirajte aplikaciju u slučaju da je zaboravite.</string>
     <string name="fingerprint_setup_successfully">Uspješno postavljanje zaštite. Molimo reinstalirajte aplikaciju u slučaju problema s resetiranjem.</string>
@@ -361,10 +361,10 @@
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Preostaje vrijeme do pokretanja alarma:\n%s</string>
+    <string name="alarm_goes_off_in">Preostalo vrijeme do pokretanja alarma:\n%s</string>
     <string name="reminder_triggers_in">Preostalo vrijeme do pokretanja podsjetnika:\n%s</string>
-    <string name="alarm_warning">Provjerite je li alarm ispravno funkcionirao prije nego što se oslonite na njega. Moglo bi se pogoršati zbog ograničenja sustava vezanih uz štednju baterije.</string>
-    <string name="reminder_warning">Pazite da podsjetnici ispravno rade prije nego što se oslonite na njih. Moglo bi se pogoršati zbog ograničenja sustava vezanih uz štednju baterije.</string>
+    <string name="alarm_warning">Provjerite da li alarm ispravno funkcionira prije nego što se oslonite na njega. Moglo bi se dogoditi pogreška zbog ograničenja sustava vezanih uz štednju baterije.</string>
+    <string name="reminder_warning">Pazite da podsjetnici ispravno rade prije nego što se oslonite na njih. Moglo bi se dogoditi pogreška zbog ograničenja sustava vezanih uz štednju baterije.</string>
 
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
@@ -383,8 +383,8 @@
     <string name="customize_colors">Prilagodi boje</string>
     <string name="customize_widget_colors">Prilagodi boje widgeta</string>
     <string name="use_english_language">Koristi Engleski jezik</string>
-    <string name="avoid_whats_new">Avoid showing What\'s New on startup</string>
-    <string name="show_hidden_items">Show hidden items</string>
+    <string name="avoid_whats_new">Izbjegavaj prikazivati ono što je novo pri pokretanju</string>
+    <string name="show_hidden_items">Prikaži skrivene stavke</string>
     <string name="font_size">Veličina fonta</string>
     <string name="small">Malo</string>
     <string name="medium">Srednje</string>
@@ -392,108 +392,108 @@
     <string name="extra_large">Puno veće</string>
     <string name="password_protect_hidden_items">Vidljivost skrivenih, lozinkom zaštićenih stavki</string>
     <string name="password_protect_whole_app">Zaštiti cijelu aplikaciju lozinkom</string>
-    <string name="keep_last_modified">Zadrži stari datum zadnje izmjene pri kopiranje/premještanju/preimenovanju datoteke</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
-    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
-    <string name="use_24_hour_time_format">Use 24-hour time format</string>
-    <string name="sunday_first">Start week on Sunday</string>
-    <string name="widgets">Widgets</string>
-    <string name="use_same_snooze">Always use same snooze time</string>
-    <string name="snooze_time">Snooze time</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
-    <string name="move_items_into_recycle_bin">Move items into the Recycle Bin instead of deleting</string>
-    <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
-    <string name="empty_recycle_bin">Empty the Recycle Bin</string>
-    <string name="force_portrait_mode">Force portrait mode</string>
+    <string name="keep_last_modified">Zadrži stari datum zadnje izmjene pri kopiranju/premještanju/preimenovanju datoteke</string>
+    <string name="show_info_bubble">Prikažite informativni mjehur prilikom pomicanja stavki pomicanjem trake za pomicanje</string>
+    <string name="prevent_phone_from_sleeping">Spriječite da uređaj prijeđe u stanje mirovanja dok je aplikacija u prvom planu</string>
+    <string name="skip_delete_confirmation">Uvijek preskoči dijaloški okvir za potvrdu brisanja</string>
+    <string name="enable_pull_to_refresh">Omogućite osvježavanje povlačenjem s vrha</string>
+    <string name="use_24_hour_time_format">Koristite 24-satni format</string>
+    <string name="sunday_first">Početak tjedna u nedjelju</string>
+    <string name="widgets">Widgeti</string>
+    <string name="use_same_snooze">Uvijek koristi isto vrijeme odgode</string>
+    <string name="snooze_time">Vrijeme odgode</string>
+    <string name="vibrate_on_button_press">Vibrirajte pritiskom gumba</string>
+    <string name="move_items_into_recycle_bin">Premjesti stavke u koš za smeće umjesto brisanja</string>
+    <string name="recycle_bin_cleaning_interval">Interval čišćenja koša za smeće</string>
+    <string name="empty_recycle_bin">Isprazni koš za smeće</string>
+    <string name="force_portrait_mode">Prikaz stavke u portretnom formatu</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
-    <string name="recycle_bin">Recycle Bin</string>
-    <string name="saving_label">Saving</string>
-    <string name="startup">Startup</string>
-    <string name="text">Text</string>
+    <string name="visibility">Vidljivost</string>
+    <string name="security">Sigurnost</string>
+    <string name="scrolling">Pomicanje</string>
+    <string name="file_operations">Radnje datoteka</string>
+    <string name="recycle_bin">Koš za smeće</string>
+    <string name="saving_label">Spremanje</string>
+    <string name="startup">Pokretanje</string>
+    <string name="text">Tekst</string>
 
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restore this file</string>
-    <string name="restore_selected_files">Restore selected files</string>
-    <string name="restore_all_files">Restore all files</string>
-    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
-    <string name="files_restored_successfully">Files have been restored successfully</string>
-    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
-    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
+    <string name="restore_this_file">Vrati ovu datoteku</string>
+    <string name="restore_selected_files">Vrati odabrane datoteke</string>
+    <string name="restore_all_files">Vrati sve datoteke</string>
+    <string name="recycle_bin_emptied">Koš za smeće je uspješno ispražnjen</string>
+    <string name="files_restored_successfully">Datoteke su uspješno vraćene</string>
+    <string name="empty_recycle_bin_confirmation">Jeste li sigurni da želite isprazniti koš za smeće? Datoteke će biti trajno izgubljene.</string>
+    <string name="recycle_bin_empty">Koš za smeće je prazan</string>
 
     <!-- Import / Export -->
-    <string name="importing">Importing…</string>
-    <string name="exporting">Exporting…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing">Uvoz…</string>
+    <string name="exporting">Izvoz…</string>
+    <string name="importing_successful">Uvoz je uspješan</string>
+    <string name="exporting_successful">Izvoz je uspješan</string>
+    <string name="importing_failed">Uvoz nije uspio</string>
+    <string name="exporting_failed">Izvoz nije uspio</string>
+    <string name="importing_some_entries_failed">Uvoz nekih unosa nije uspio</string>
+    <string name="exporting_some_entries_failed">Izvoz nekih unosa nije uspio</string>
+    <string name="no_entries_for_exporting">Nije pronađen nijedan unos za izvoz</string>
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="confirm_otg_storage_access_text">Molimo odaberite root mapu OTG uređaja na sljedećem zaslonu, kako biste odobrili pristup</string>
+    <string name="wrong_root_selected_otg">Odabrana mapa je pogrešna, odaberite root mapu svog OTG uređaja</string>
 
     <!-- Dates -->
-    <string name="january">January</string>
-    <string name="february">February</string>
-    <string name="march">March</string>
-    <string name="april">April</string>
-    <string name="may">May</string>
-    <string name="june">June</string>
-    <string name="july">July</string>
-    <string name="august">August</string>
-    <string name="september">September</string>
-    <string name="october">October</string>
-    <string name="november">November</string>
-    <string name="december">December</string>
+    <string name="january">Siječanj</string>
+    <string name="february">Veljača</string>
+    <string name="march">Ožujak</string>
+    <string name="april">Travanj</string>
+    <string name="may">Svibanj</string>
+    <string name="june">Lipanj</string>
+    <string name="july">Srpanj</string>
+    <string name="august">Kolovoz</string>
+    <string name="september">Rujan</string>
+    <string name="october">Listopad</string>
+    <string name="november">Studeni</string>
+    <string name="december">Prosinac</string>
 
     <!-- in January -->
-    <string name="in_january">in January</string>
-    <string name="in_february">in February</string>
-    <string name="in_march">in March</string>
-    <string name="in_april">in April</string>
-    <string name="in_may">in May</string>
-    <string name="in_june">in June</string>
-    <string name="in_july">in July</string>
-    <string name="in_august">in August</string>
-    <string name="in_september">in September</string>
-    <string name="in_october">in October</string>
-    <string name="in_november">in November</string>
-    <string name="in_december">in December</string>
+    <string name="in_january">u Siječnju</string>
+    <string name="in_february">u Veljači</string>
+    <string name="in_march">u Ožujku</string>
+    <string name="in_april">u Travnju</string>
+    <string name="in_may">u Svibnju</string>
+    <string name="in_june">u Lipnju</string>
+    <string name="in_july">u Srpnju</string>
+    <string name="in_august">u Kolovozu</string>
+    <string name="in_september">u Rujnu</string>
+    <string name="in_october">u Listopadu</string>
+    <string name="in_november">u Studenom</string>
+    <string name="in_december">u Prosincu</string>
 
-    <string name="monday">Monday</string>
-    <string name="tuesday">Tuesday</string>
-    <string name="wednesday">Wednesday</string>
-    <string name="thursday">Thursday</string>
-    <string name="friday">Friday</string>
-    <string name="saturday">Saturday</string>
-    <string name="sunday">Sunday</string>
+    <string name="monday">Ponedjeljak</string>
+    <string name="tuesday">Utorak</string>
+    <string name="wednesday">Srijeda</string>
+    <string name="thursday">Četvrtak</string>
+    <string name="friday">Petak</string>
+    <string name="saturday">Subota</string>
+    <string name="sunday">Nedjelja</string>
 
-    <string name="monday_letter">M</string>
-    <string name="tuesday_letter">T</string>
-    <string name="wednesday_letter">W</string>
-    <string name="thursday_letter">T</string>
-    <string name="friday_letter">F</string>
+    <string name="monday_letter">P</string>
+    <string name="tuesday_letter">U</string>
+    <string name="wednesday_letter">S</string>
+    <string name="thursday_letter">Č</string>
+    <string name="friday_letter">P</string>
     <string name="saturday_letter">S</string>
-    <string name="sunday_letter">S</string>
+    <string name="sunday_letter">N</string>
 
-    <string name="monday_short">Mon</string>
-    <string name="tuesday_short">Tue</string>
-    <string name="wednesday_short">Wed</string>
-    <string name="thursday_short">Thu</string>
-    <string name="friday_short">Fri</string>
-    <string name="saturday_short">Sat</string>
-    <string name="sunday_short">Sun</string>
+    <string name="monday_short">Pon</string>
+    <string name="tuesday_short">Uto</string>
+    <string name="wednesday_short">Sri</string>
+    <string name="thursday_short">Čet</string>
+    <string name="friday_short">Pet</string>
+    <string name="saturday_short">Sub</string>
+    <string name="sunday_short">Ned</string>
 
     <!-- About -->
     <string name="about">O nama</string>
@@ -520,62 +520,62 @@
         ]]>
     </string>
     <string name="purchase">Kupi</string>
-    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please read the Frequently Asked Questions first, maybe the solution is there.</string>
-    <string name="read_it">Read it</string>
+    <string name="update_thank_you">Molim ažurirajte Jednostavno hvala na najnoviju verziju</string>
+    <string name="before_asking_question_read_faq">Prije nego što postavite pitanje, najprije pročitajte Često postavljana pitanja, možda postoji rješenje.</string>
+    <string name="read_it">Pročitajte</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
-            Hey,<br><br>
-            just letting you know that a new app has been released recently:<br><br>
+            Hej,<br><br>
+            samo da te obavijestim da je nova aplikacija nedavno objavljena:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-            You can download it by pressing the title.<br><br>
-            Thanks
+            Možeš je preuzeti pritiskom na naslov.<br><br>
+            Hvala
         ]]>
     </string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently asked questions</string>
-    <string name="before_asking_question">Before you ask a question, please first read the</string>
-    <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
-    <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
-        in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
-    <string name="faq_2_title_commons">I want to support you, but I cannot donate money. Is there anything else I can do?</string>
-    <string name="faq_2_text_commons">Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-        You can find the guide at https://github.com/SimpleMobileTools/General-Discussion , or just shoot me a message at hello@simplemobiletools.com if you need help.</string>
-    <string name="faq_3_title_commons">I deleted some files by mistake, how can I recover them?</string>
-    <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, there is no trashbin available.</string>
-    <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
-    <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
-    <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them.</string>
+    <string name="frequently_asked_questions">Često postavljenja pitanja</string>
+    <string name="before_asking_question">Prije postavljanja pitanja, najprije pročitajte</string>
+    <string name="faq_1_title_commons">Kako ne vidim widgete ove aplikacije na popisu widgeta?</string>
+    <string name="faq_1_text_commons">Najvjerojatnije zato jer ste premjestili aplikaciju na SD karticu. Postoji ograničenje Android sustava koje skriva dane widgete aplikacije u tom slučaju.
+        Jedino je rješenje vratiti aplikaciju na internu pohranu putem postavki uređaja.</string>
+    <string name="faq_2_title_commons">Želim Vam pomoći, ali ne mogu donirati novac. Ima li još nešto što mogu učiniti?</string>
+    <string name="faq_2_text_commons">Da naravno. Možete proširiti riječ o aplikacijama ili dati dobru povratnu informaciju i ocjene. Možete također pomoći prevođenjem aplikacija na novi jezik ili ažurirati neke postojeće prijevode.
+        Vodič možete pronaći na adresi https://github.com/SimpleMobileTools/General-Discussion , ili mi pošaljite poruku na hello@simplemobiletools.com ako Vam treba pomoć.</string>
+    <string name="faq_3_title_commons">Pogrešno sam izbrisao neke datoteke, kako ih mogu vratiti?</string>
+    <string name="faq_3_text_commons">Nažalost, ne možete. Datoteke se brišu odmah nakon dijaloškog okvira za potvrdu, nema dostupnog koša za smeće.</string>
+    <string name="faq_4_title_commons">Ne sviđa mi se boja widgeta, mogu li ih promijeniti?</string>
+    <string name="faq_4_text_commons">Da, kada povlačite widget na početnom zaslonu, pojavit će se zaslon za konfiguraciju widgeta. U donjem lijevom kutu vidjet ćete obojene kvadrate, samo ih pritisnite da biste odabrali novu boju. Možete koristiti i klizač za podešavanje alphe.</string>
+    <string name="faq_5_title_commons">Mogu li nekako vratiti izbrisane datoteke?</string>
+    <string name="faq_5_text_commons">Ako su stvarno izbrisane, ne možete. Međutim, možete omogućiti upotrebu koša za smeće umjesto da ih izbrišete, u postavkama aplikacije. To će samo premjestiti datoteke u nju umjesto da ih izbriše.</string>
 
     <!-- License -->
     <string name="notice">Ova aplikacija koristi biblioteke trećih strana kako bi olakšala moj život. Hvala Vam.</string>
     <string name="third_party_licences">Licence trećih strana</string>
-    <string name="kotlin_title">Kotlin (programming language)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
-    <string name="glide_title">Glide (image loading and caching)</string>
-    <string name="picasso_title">Picasso (image loading and caching)</string>
-    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
-    <string name="joda_title">Joda-Time (Java date replacement)</string>
-    <string name="stetho_title">Stetho (debugging databases)</string>
-    <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
-    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
-    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
+    <string name="kotlin_title">Kotlin (programski jezik)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zumiranje prikaza slika)</string>
+    <string name="glide_title">Glide (učitavanje slika i predmemoriranje)</string>
+    <string name="picasso_title">Picasso (učitavanje slike i predmemoriranje)</string>
+    <string name="cropper_title">Android Image Cropper (rezanje slika i rotacija)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (odabir više stavki popisa)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (pomicanje ulijevo ili udesno)</string>
+    <string name="joda_title">Joda-Time (zamjena Java datuma)</string>
+    <string name="stetho_title">Stetho (baza podataka za uklanjanje pogrešaka)</string>
+    <string name="otto_title">Otto (predajnik događaja)</string>
+    <string name="photoview_title">PhotoView (zumirajući GIF-ove)</string>
+    <string name="pattern_title">PatternLockView (zaštita uzoraka)</string>
+    <string name="reprint_title">Reprint (zaštita otisaka prstiju)</string>
+    <string name="gif_drawable_title">Gif Drawable (učitavanje GIF-ova)</string>
+    <string name="autofittextview_title">AutoFitTextView (mijenjanje veličine teksta)</string>
+    <string name="robolectric_title">Robolectric (framework za testiranje)</string>
+    <string name="espresso_title">Espresso (pomoćnik testiranja)</string>
     <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
-    <string name="number_picker_title">Number Picker (customizable number picker)</string>
+    <string name="leak_canary_title">Leak Canary (detektor propuštanja memorije)</string>
+    <string name="number_picker_title">Number Picker (prilagodljiv birač brojeva)</string>
     <string name="exoplayer_title">ExoPlayer (video player)</string>
-    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
-    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
-    <string name="filters_title">Android Photo Filters (image filters)</string>
+    <string name="panorama_view_title">VR Panorama View (prikaz panorama)</string>
+    <string name="sanselan_title">Apache Sanselan (čitanje metapodataka slike)</string>
+    <string name="filters_title">Android Photo Filters (filteri za slike)</string>
 </resources>
