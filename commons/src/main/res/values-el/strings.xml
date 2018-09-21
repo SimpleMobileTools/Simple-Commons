@@ -345,6 +345,7 @@
     <string name="reminder_triggers_in">Χρόνος που απομένει μέχρι να ενεργοποιηθεί η υπενθύμιση:\n%s</string>
     <string name="alarm_warning">Βεβαιωθείτε ότι η ειδοποίηση λειτουργεί σωστά πριν βασιστείτε σε αυτήν. Θα μπορούσε να αποτύχει λόγω των περιορισμών του συστήματος που σχετίζονται με την εξοικονόμηση μπαταρίας.</string>
     <string name="reminder_warning">Βεβαιωθείτε ότι η υπενθύμιση λειτουργεί σωστά πριν βασιστείτε σε αυτήν. Θα μπορούσε να αποτύχει λόγω των περιορισμών του συστήματος που σχετίζονται με την εξοικονόμηση μπαταρίας.</string>
+    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
 
     <!-- Alarms -->
     <string name="alarm">Ειδοποιήσεις</string>

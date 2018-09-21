@@ -344,6 +344,7 @@
     <string name="reminder_triggers_in">Tiempo restante hasta que se active el recordatorio:\n%s</string>
     <string name="alarm_warning">Asegúrese de que la alarma funcione correctamente antes de confiar en ella. Podría comportarse mal debido a las restricciones del sistema relacionadas con el ahorro de batería.</string>
     <string name="reminder_warning">Asegúrese de que los recordatorios funcionen correctamente antes de confiar en ellos. Podrían portarse mal debido a las restricciones del sistema relacionadas con el ahorro de batería.</string>
+    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
 
     <!-- Alarms -->
     <string name="alarm">Alarma</string>
