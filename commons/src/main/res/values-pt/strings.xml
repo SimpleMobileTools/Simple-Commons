@@ -21,7 +21,7 @@
 
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
-    <string name="add_favorites">Add favorites</string>
+    <string name="add_favorites">Adicionar favoritos</string>
     <string name="add_to_favorites">Adicionar aos favoritos</string>
     <string name="remove_from_favorites">Remover dos favoritos</string>
 
@@ -342,9 +342,10 @@
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">O alarme está definido para daqui a:\n%s</string>
-    <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
+    <string name="reminder_triggers_in">O lembrete está definido para daqui a:\n%s</string>
     <string name="alarm_warning">Certifique-se de que o alarme está a funcionar corretamente antes de o utilizar na plenitude. Pode ter um comportamento errático devido a restrições do sistema.</string>
     <string name="reminder_warning">Certifique-se de que o lembrete está a funcionar corretamente antes de o utilizar na plenitude. Pode ter um comportamento errático devido a restrições do sistema.</string>
+    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
 
     <!-- Alarms -->
     <string name="alarm">Alarme</string>
@@ -359,7 +360,7 @@
 
     <!-- Settings -->
     <string name="settings">Definições</string>
-    <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Comprar Simple Thank You</string>
     <string name="customize_colors">Personalizar cores</string>
     <string name="customize_widget_colors">Personalizar cores do widget</string>
     <string name="use_english_language">Utilizar aplicação em inglês</string>
@@ -500,7 +501,7 @@
         ]]>
     </string>
     <string name="purchase">Comprar</string>
-    <string name="update_thank_you">por favor atualize a aplicação Simple Thank You para a versão mais recente</string>
+    <string name="update_thank_you">Por favor atualize a aplicação Simple Thank You para a versão mais recente</string>
     <string name="before_asking_question_read_faq">Antes de colocar uma questão, leia as FAQ pois pode já existir uma solução para o seu problema.</string>
     <string name="read_it">Ler</string>
 

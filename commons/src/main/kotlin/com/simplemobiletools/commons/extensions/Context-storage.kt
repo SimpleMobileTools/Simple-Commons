@@ -245,6 +245,11 @@ fun Context.scanPathsRecursively(paths: ArrayList<String>, callback: (() -> Unit
 }
 
 fun Context.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
+    if (paths.isEmpty()) {
+        callback?.invoke()
+        return
+    }
+
     var cnt = paths.size
     MediaScannerConnection.scanFile(applicationContext, paths.toTypedArray(), null) { s, uri ->
         if (--cnt == 0) {

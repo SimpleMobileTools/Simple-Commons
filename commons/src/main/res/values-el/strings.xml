@@ -345,6 +345,7 @@
     <string name="reminder_triggers_in">Χρόνος που απομένει μέχρι να ενεργοποιηθεί η υπενθύμιση:\n%s</string>
     <string name="alarm_warning">Βεβαιωθείτε ότι η ειδοποίηση λειτουργεί σωστά πριν βασιστείτε σε αυτήν. Θα μπορούσε να αποτύχει λόγω των περιορισμών του συστήματος που σχετίζονται με την εξοικονόμηση μπαταρίας.</string>
     <string name="reminder_warning">Βεβαιωθείτε ότι η υπενθύμιση λειτουργεί σωστά πριν βασιστείτε σε αυτήν. Θα μπορούσε να αποτύχει λόγω των περιορισμών του συστήματος που σχετίζονται με την εξοικονόμηση μπαταρίας.</string>
+    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
 
     <!-- Alarms -->
     <string name="alarm">Ειδοποιήσεις</string>
@@ -433,7 +434,7 @@
     <string name="july">Ιούλιος</string>
     <string name="august">Αύγουστος</string>
     <string name="september">Σεπτέμβριος</string>
-    <string name="october">Οκτώμβριος</string>
+    <string name="october">Οκτώβριος</string>
     <string name="november">Νοέμβριος</string>
     <string name="december">Δεκέμβριος</string>
 
@@ -447,7 +448,7 @@
     <string name="in_july">τον Ιούλιο</string>
     <string name="in_august">τον Αύγουστο</string>
     <string name="in_september">τον Σεπτέμβριο</string>
-    <string name="in_october">τον Οκτώμβριο</string>
+    <string name="in_october">τον Οκτώβριο</string>
     <string name="in_november">τον Νοέμβριο</string>
     <string name="in_december">τον Δεκέμβριο</string>
 

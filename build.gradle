@@ -3,12 +3,12 @@
 buildscript {
     ext {
         propCompileSdkVersion = 28
-        propBuildToolsVersion = "28.0.2"
+        propBuildToolsVersion = "28.0.3"
         propMinSdkVersion = 16
         propTargetSdkVersion = propCompileSdkVersion
         propVersionCode = 1
-        propVersionName = '4.7.2'
-        kotlin_version = '1.2.61'
+        propVersionName = '4.8.0'
+        kotlin_version = '1.2.71'
         support_libs = '27.1.1'
     }
 
@@ -18,7 +18,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'com.android.tools.build:gradle:3.2.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"

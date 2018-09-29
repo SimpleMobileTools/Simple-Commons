@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.helpers
 
 import android.os.Build
 import android.os.Looper
+import java.util.*
 
 const val APP_NAME = "app_name"
 const val APP_LICENSES = "app_licenses"
@@ -238,3 +239,13 @@ fun getDateFormats() = arrayListOf(
 )
 
 val normalizeRegex = "\\p{InCombiningDiacriticalMarks}+".toRegex()
+
+fun getConflictResolution(resolutions: LinkedHashMap<String, Int>, path: String): Int {
+    return if (resolutions.size == 1 && resolutions.containsKey("")) {
+        resolutions[""]!!
+    } else if (resolutions.containsKey(path)) {
+        resolutions[path]!!
+    } else {
+        CONFLICT_SKIP
+    }
+}

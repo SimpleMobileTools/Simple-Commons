@@ -17,7 +17,7 @@
     <string name="notes">Notes</string>
     <string name="deleting_folder">S\'està eliminant la carpeta \'%s\'</string>
     <string name="none">Cap</string>
-    <string name="label">Label</string>
+    <string name="label">Etiqueta</string>
 
     <!-- Favorites -->
     <string name="favorites">Preferits</string>
@@ -347,6 +347,7 @@
     <string name="reminder_triggers_in">Temps restant fins el recordatori:\n%s</string>
     <string name="alarm_warning">Assegureu-vos que l\'alarma funcioni correctament abans de confiar-hi. Pot comportar-se malament a causa de les restriccions del sistema relacionades amb l\'estalvi de bateria.</string>
     <string name="reminder_warning">Assegureu-vos que els recordatoris funcionin correctament abans de confiar-hi. Podrien comportar-se malament a causa de les restriccions del sistema relacionades amb l\'estalvi de bateria.</string>
+    <string name="notifications_disabled">Les notificacions d\'aquesta aplicació estan desactivades. Aneu a la configuració del vostre dispositiu per habilitar-los.</string>
 
     <!-- Alarms -->
     <string name="alarm">Alarma</string>
@@ -503,8 +504,8 @@
     </string>
     <string name="purchase">Comprar</string>
     <string name="update_thank_you">Si us plau, actualitzeu Simple Thank You a la darrera versió</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please read the Frequently Asked Questions first, maybe the solution is there.</string>
-    <string name="read_it">Read it</string>
+    <string name="before_asking_question_read_faq">Abans de fer una pregunta, llegiu les Preguntes més freqüents en primer lloc, potser la solució hi és.</string>
+    <string name="read_it">Llegiu</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">

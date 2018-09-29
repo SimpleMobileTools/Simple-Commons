@@ -17,7 +17,7 @@
     <string name="notes">Notas</string>
     <string name="deleting_folder">Eliminando carpeta \'%s\'</string>
     <string name="none">Ninguno</string>
-    <string name="label">Label</string>
+    <string name="label">Etiqueta</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
@@ -344,6 +344,7 @@
     <string name="reminder_triggers_in">Tiempo restante hasta que se active el recordatorio:\n%s</string>
     <string name="alarm_warning">Asegúrese de que la alarma funcione correctamente antes de confiar en ella. Podría comportarse mal debido a las restricciones del sistema relacionadas con el ahorro de batería.</string>
     <string name="reminder_warning">Asegúrese de que los recordatorios funcionen correctamente antes de confiar en ellos. Podrían portarse mal debido a las restricciones del sistema relacionadas con el ahorro de batería.</string>
+    <string name="notifications_disabled">Las notificaciones de esta aplicación están deshabilitadas. Vaya a la configuración de su dispositivo para habilitarlos.</string>
 
     <!-- Alarms -->
     <string name="alarm">Alarma</string>
@@ -500,8 +501,8 @@
     </string>
     <string name="purchase">Comprar</string>
     <string name="update_thank_you">Por favor, actualice Simple Tank You a la última versión</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please read the Frequently Asked Questions first, maybe the solution is there.</string>
-    <string name="read_it">Read it</string>
+    <string name="before_asking_question_read_faq">Antes de hacer una pregunta, lea primero las Preguntas más frecuentes, quizás la solución esté allí.</string>
+    <string name="read_it">Leer</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">

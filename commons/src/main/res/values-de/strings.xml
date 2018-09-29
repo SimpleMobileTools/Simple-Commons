@@ -223,8 +223,8 @@
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Willst du mit dem Löschen fortfahren?</string>
-    <string name="deletion_confirmation">Sollen %s Elemente wirklich gelöscht werden?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Sollen %s Elemente wirklich in den Papierkorb verschoben werden?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">Sollen %s wirklich gelöscht werden?</string>       <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Sollen %s wirklich in den Papierkorb verschoben werden?</string>        <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Soll dieses Element wirklich gelöscht werden?</string>
     <string name="are_you_sure_recycle_bin">Soll dieses Element wirklich in den Papierkorb verschoben werden?</string>
     <string name="do_not_ask_again">Nicht erneut fragen (in dieser Sitzung)</string>
@@ -345,17 +345,18 @@
     <string name="reminder_triggers_in">Verbleibende Zeit bis Alarm ausgelöst wird:\n%s</string>
     <string name="alarm_warning">Bitte stell sicher, dass der Alarm zuverlässig funktioniert, bevor Du Dich darauf verlässt. Es könnte wegen Systemeinschränkungen (z.B. Stromsparfunktion) fehlschlagen.</string>
     <string name="reminder_warning">Bitte stell sicher, dass die Erinnerung zuverlässig funktioniert, bevor Du Dich darauf verlässt. Es könnte wegen Systemeinschränkungen (z.B. Stromsparfunktion) fehlschlagen.</string>
+    <string name="notifications_disabled">Benachrichtigungen für diese App sind deaktiviert. Bitte geh in deine Systemeinstellungen und aktiviere sie.</string>
 
     <!-- Alarms -->
     <string name="alarm">Wecker</string>
-    <string name="snooze">Snooze</string>
+    <string name="snooze">Schlummern</string>
     <string name="dismiss">Abstellen</string>
     <string name="no_reminder">Keine Erinnerung</string>
     <string name="at_start">Zu Beginn</string>
     <string name="system_sounds">Systemtöne</string>
     <string name="your_sounds">Deine Töne</string>
     <string name="add_new_sound">Neuen Ton hinzufügen</string>
-    <string name="no_sound">No sound</string>
+    <string name="no_sound">Stumm</string>
 
     <!-- Settings -->
     <string name="settings">Einstellungen</string>
@@ -380,8 +381,8 @@
     <string name="use_24_hour_time_format">Benutze 24-Std.-Zeitformat</string>
     <string name="sunday_first">Beginne die Woche am Sonntag</string>
     <string name="widgets">Widgets</string>
-    <string name="use_same_snooze">Immer dasselbe Snooze-Intervall nutzen</string>
-    <string name="snooze_time">Schlummern-Intervall</string>
+    <string name="use_same_snooze">Immer den selben Schlummer-Intervall nutzen</string>
+    <string name="snooze_time">Schlummer-Intervall</string>
     <string name="vibrate_on_button_press">Bei Tastendruck vibrieren</string>
     <string name="move_items_into_recycle_bin">Elemente in den Papierkorb verschieben statt löschen</string>
     <string name="recycle_bin_cleaning_interval">Intervall zum Leeren des Papierkorbs</string>
@@ -421,7 +422,7 @@
     <!-- OTG devices -->
     <string name="otg">OTG</string>
     <string name="confirm_otg_storage_access_text">Bitte den Basis-Ordner des OTG-Geräts auf der folgenden Seite wählen, um Zugriff zu gewähren</string>
-    <string name="wrong_root_selected_otg">Falscher Ordner gewählt, bitte den Basis- (root-) Ordner des OTG-Geräts wählen</string>
+    <string name="wrong_root_selected_otg">Falscher Ordner gewählt, bitte den Basis- (Root-) Ordner des OTG-Geräts wählen</string>
 
     <!-- Dates -->
     <string name="january">Januar</string>
@@ -438,18 +439,18 @@
     <string name="december">Dezember</string>
 
     <!-- in January -->
-    <string name="in_january">in Januar</string>
-    <string name="in_february">in Februar</string>
-    <string name="in_march">in März</string>
-    <string name="in_april">in April</string>
-    <string name="in_may">in Mai</string>
-    <string name="in_june">in Juni</string>
-    <string name="in_july">in Juli</string>
-    <string name="in_august">in August</string>
-    <string name="in_september">in September</string>
-    <string name="in_october">in Oktober</string>
-    <string name="in_november">in November</string>
-    <string name="in_december">in Dezember</string>
+    <string name="in_january">im Januar</string>
+    <string name="in_february">im Februar</string>
+    <string name="in_march">im März</string>
+    <string name="in_april">im April</string>
+    <string name="in_may">im Mai</string>
+    <string name="in_june">im Juni</string>
+    <string name="in_july">im Juli</string>
+    <string name="in_august">im August</string>
+    <string name="in_september">im September</string>
+    <string name="in_october">im Oktober</string>
+    <string name="in_november">im November</string>
+    <string name="in_december">im Dezember</string>
 
     <string name="monday">Montag</string>
     <string name="tuesday">Dienstag</string>
@@ -519,7 +520,7 @@
     <string name="frequently_asked_questions">Häufig gestellte Fragen</string>
     <string name="before_asking_question">Bevor du eine Frage stellst, bitte lies diese Seite:</string>
     <string name="faq_1_title_commons">Weshalb sehe ich das Widget dieser App nicht in der Liste der Widgets?</string>
-    <string name="faq_1_text_commons">Wahrscheinlich, weil du die App auf die Speicherkarte verschoben hast. In diesem Fall werden durch eine Einschränkung von Android die Widgets dieser App versteckt. Die einzige Lösung ist die App über die Geräteeinstellungen wieder in den internen Speicher zu verschieben.</string>
+    <string name="faq_1_text_commons">Wahrscheinlich, weil du die App auf die Speicherkarte verschoben hast. In diesem Fall werden durch eine Einschränkung von Android die Widgets dieser App ausgeblendet. Die einzige Lösung ist die App über die Geräteeinstellungen wieder in den internen Speicher zu verschieben.</string>
     <string name="faq_2_title_commons">Ich will dich unterstützen, aber es ist mir nicht möglich Geld zu spenden. Gibt es eine andere Möglichkeit?</string>
     <string name="faq_2_text_commons">Ja, sicherlich. Du kannst die Apps weiterempfehlen oder gute Rückmeldung und Bewertungen geben. Du kannst ebenso helfen, indem du die Apps in neue Sprachen übersetzt oder vorhandene Übersetzungen aktualisierst.
         Die Anleitung dazu findest du unter https://github.com/SimpleMobileTools/General-Discussion oder sende mir eine Nachricht an hello@simplemobiletools.com, falls du Hilfe benötigst.</string>
