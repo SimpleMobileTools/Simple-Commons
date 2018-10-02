@@ -192,7 +192,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">Eliminar</string>
-    <string name="remove">Remove</string>
+    <string name="remove">Eliminar</string>
     <string name="rename">Canviar el nom</string>
     <string name="share">Compartir</string>
     <string name="share_via">Compartir amb</string>
@@ -412,8 +412,8 @@
     <string name="recycle_bin_empty">La paperera és buida</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Moving %d item into the Recycle Bin</item>
-        <item quantity="other">Moving %d items into the Recycle Bin</item>
+        <item quantity="one">Movent %d element a la paperera de reciclage</item>
+        <item quantity="other">Movent %d elements a la paperera de reciclage</item>
     </plurals>
 
     <!-- Import / Export -->
