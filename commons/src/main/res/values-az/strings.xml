@@ -232,7 +232,7 @@
     <string name="no">Xeyr</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">XƏBƏRDARLIQ: Qovluğu silirsiniz</item>
+        <item quantity="one">WARNING: You are deleting %d folder</item>
         <item quantity="other">XƏBƏRDARLIQ: %d sayda qovluğu silirsiniz</item>
     </plurals>
 

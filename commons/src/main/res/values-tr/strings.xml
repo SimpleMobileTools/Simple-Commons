@@ -232,7 +232,7 @@
     <string name="no">Hayır</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">UYARI: Bir klasör siliyorsunuz</item>
+        <item quantity="one">UYARI: %d klasör siliyorsunuz</item>
         <item quantity="other">UYARI: %d klasör siliyorsunuz</item>
     </plurals>
 

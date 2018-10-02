@@ -232,7 +232,7 @@
     <string name="no">Não</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">AVISO: está prestes a apagar uma pasta</item>
+        <item quantity="one">AVISO: está prestes a apagar %d pasta</item>
         <item quantity="other">AVISO: está prestes a apagar %d pastas</item>
     </plurals>
 

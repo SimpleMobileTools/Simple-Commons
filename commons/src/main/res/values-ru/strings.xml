@@ -235,7 +235,7 @@
     <string name="no">Нет</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">ПРЕДУПРЕЖДЕНИЕ: вы удаляете папку</item>
+        <item quantity="one">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папку</item>
         <item quantity="few">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папки</item>
         <item quantity="many">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папок</item>
         <item quantity="other">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папок</item>

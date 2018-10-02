@@ -232,7 +232,7 @@
     <string name="no">Não</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: Você está excluindo uma pasta</item>
+        <item quantity="one">WARNING: Você está excluindo %d pasta</item>
         <item quantity="other">WARNING: Você está excluindo %d pastas</item>
     </plurals>
 

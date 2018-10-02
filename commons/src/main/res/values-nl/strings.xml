@@ -232,7 +232,7 @@
     <string name="no">Nee</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WAARSCHUWING: Hele map zal worden verwijderd</item>
+        <item quantity="one">WAARSCHUWING: %d map zal worden verwijderd</item>
         <item quantity="other">WAARSCHUWING: %d mappen zullen worden verwijderd</item>
     </plurals>
 

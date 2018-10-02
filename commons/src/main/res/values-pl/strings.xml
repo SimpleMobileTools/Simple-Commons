@@ -233,7 +233,7 @@
     <string name="no">Nie</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">UWAGA: usuwasz folder</item>
+        <item quantity="one">UWAGA: usuwasz %d folder</item>
         <item quantity="few">UWAGA: usuwasz %d foldery</item>
         <item quantity="other">UWAGA: usuwasz %d folderów</item>
     </plurals>

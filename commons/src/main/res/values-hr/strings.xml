@@ -235,7 +235,7 @@
     <string name="no">Ne</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">UPOZORENJE: Brišete mapu</item>
+        <item quantity="one">UPOZORENJE: Brišete %d mapu</item>
         <item quantity="other">UPOZORENJE: Brišete %d mapa</item>
     </plurals>
 

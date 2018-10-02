@@ -232,7 +232,7 @@
     <string name="no">Όχι</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">Προειδοποίηση: Διαγράφετε ένα φάκελο</item>
+        <item quantity="one">Προειδοποίηση: Διαγράφετε %d φάκελο</item>
         <item quantity="other">Προειδοποίηση: Διαγράφετε %d φακέλους</item>
     </plurals>
 

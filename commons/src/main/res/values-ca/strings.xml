@@ -192,6 +192,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">Eliminar</string>
+    <string name="remove">Remove</string>
     <string name="rename">Canviar el nom</string>
     <string name="share">Compartir</string>
     <string name="share_via">Compartir amb</string>
@@ -231,7 +232,7 @@
     <string name="no">No</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">ADVERTIMENT: s\'eliminarà una carpeta</item>
+        <item quantity="one">ADVERTIMENT: s\'eliminarà %d carpeta</item>
         <item quantity="other">ADVERTIMENT: s\'eliminaran %d carpetes</item>
     </plurals>
 

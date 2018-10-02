@@ -232,7 +232,7 @@
     <string name="no">いいえ</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">警告: フォルダを削除しようとしています</item>
+        <item quantity="one">WARNING: You are deleting %d folder</item>
         <item quantity="other">警告: %d 個のフォルダを削除しようとしています</item>
     </plurals>
 

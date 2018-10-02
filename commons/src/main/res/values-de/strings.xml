@@ -232,7 +232,7 @@
     <string name="no">Nein</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNUNG: Ein Ordner soll gelöscht werden</item>
+        <item quantity="one">WARNUNG: %d Ordner soll gelöscht werden</item>
         <item quantity="other">WARNUNG: %d Ordner sollen gelöscht werden</item>
     </plurals>
 

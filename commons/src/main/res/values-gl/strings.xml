@@ -192,6 +192,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">Eliminar</string>
+    <string name="remove">Remove</string>
     <string name="rename">Renombrar</string>
     <string name="share">Compartir</string>
     <string name="share_via">Compartir con</string>
@@ -231,7 +232,7 @@
     <string name="no">No</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting a folder</item>
+        <item quantity="one">WARNING: You are deleting %d folder</item>
         <item quantity="other">WARNING: You are deleting %d folders</item>
     </plurals>
 

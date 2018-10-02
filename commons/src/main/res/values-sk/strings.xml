@@ -235,7 +235,7 @@
     <string name="no">Nie</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">UPOZORNENIE: Chystáte sa vymazať priečinok</item>
+        <item quantity="one">UPOZORNENIE: Chystáte sa vymazať %d priečinok</item>
         <item quantity="few">UPOZORNENIE: Chystáte sa vymazať %d priečinky</item>
         <item quantity="other">UPOZORNENIE: Chystáte sa vymazať %d priečinkov</item>
     </plurals>

@@ -232,7 +232,7 @@
     <string name="no">No</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">ATTENZIONE: stai per eliminare una cartella</item>
+        <item quantity="one">ATTENZIONE: stai per eliminare %d cartella</item>
         <item quantity="other">ATTENZIONE: stai per eliminare %d cartelle</item>
     </plurals>
 
