@@ -222,6 +222,7 @@ fun isLollipopPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
 fun isMarshmallowPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
 fun isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
 fun isOreoPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
+fun isPiePlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
 
 fun getDateFormats() = arrayListOf(
         "yyyy-MM-dd",
