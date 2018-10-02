@@ -409,8 +409,8 @@
     <string name="recycle_bin_empty">Papirkurven er tom</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Moving %d item into the Recycle Bin</item>
-        <item quantity="other">Moving %d items into the Recycle Bin</item>
+        <item quantity="one">Flytter %d fil til papirkurven</item>
+        <item quantity="other">Flytter %d filer til papirkurven</item>
     </plurals>
 
     <!-- Import / Export -->
