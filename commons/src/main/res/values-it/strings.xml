@@ -408,6 +408,11 @@
     <string name="empty_recycle_bin_confirmation">Sei sicuro di volere svuotare il cestino? I file verranno persi definitivamente.</string>
     <string name="recycle_bin_empty">Il cestino è vuoto</string>
 
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">Moving %d item into the Recycle Bin</item>
+        <item quantity="other">Moving %d items into the Recycle Bin</item>
+    </plurals>
+
     <!-- Import / Export -->
     <string name="importing">Importazione…</string>
     <string name="exporting">Esportazione…</string>

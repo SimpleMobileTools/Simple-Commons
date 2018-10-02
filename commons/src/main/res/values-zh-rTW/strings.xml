@@ -407,6 +407,11 @@
     <string name="empty_recycle_bin_confirmation">你確定要清空回收桶嗎?檔案將會永久消失。</string>
     <string name="recycle_bin_empty">回收桶是空的</string>
 
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">Moving %d item into the Recycle Bin</item>
+        <item quantity="other">Moving %d items into the Recycle Bin</item>
+    </plurals>
+
     <!-- Import / Export -->
     <string name="importing">正在匯入…</string>
     <string name="exporting">正在匯出…</string>

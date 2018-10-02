@@ -408,6 +408,11 @@
     <string name="empty_recycle_bin_confirmation">Geri Dönüşüm Kutusu\'nu boşaltmak istediğinizden emin misiniz? Dosyalar kalıcı olarak kaybolacak.</string>
     <string name="recycle_bin_empty">Geri Dönüşüm Kutusu boş</string>
 
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">Moving %d item into the Recycle Bin</item>
+        <item quantity="other">Moving %d items into the Recycle Bin</item>
+    </plurals>
+
     <!-- Import / Export -->
     <string name="importing">İçe aktarılıyor…</string>
     <string name="exporting">Dışa aktarılıyor…</string>

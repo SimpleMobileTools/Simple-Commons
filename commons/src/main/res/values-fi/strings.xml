@@ -408,6 +408,11 @@
     <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
     <string name="recycle_bin_empty">The Recycle Bin is empty</string>
 
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">Moving %d item into the Recycle Bin</item>
+        <item quantity="other">Moving %d items into the Recycle Bin</item>
+    </plurals>
+
     <!-- Import / Export -->
     <string name="importing">Tuodaan</string>
     <string name="exporting">Viedään</string>
