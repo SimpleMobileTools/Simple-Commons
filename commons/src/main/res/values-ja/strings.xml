@@ -108,7 +108,7 @@
     <string name="confirm_storage_access_title">外部ストレージのアクセスを確認してください</string>
     <string name="confirm_storage_access_text">次の画面で SDカードのルートフォルダを選択して、書き込みアクセス許可を付与してください</string>
     <string name="confirm_storage_access_text_sd">SDカードの内容が表示されない場合は、こちらをお試しください</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_selection">選択を確認</string>
 
     <plurals name="items">
         <item quantity="one">%d アイテム</item>
@@ -192,7 +192,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">削除</string>
-    <string name="remove">Remove</string>
+    <string name="remove">削除</string>
     <string name="rename">名前の変更</string>
     <string name="share">共有</string>
     <string name="share_via">共有</string>
@@ -232,7 +232,7 @@
     <string name="no">いいえ</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting %d folder</item>
+        <item quantity="one">警告: %d 個のフォルダを削除しようとしています</item>
         <item quantity="other">警告: %d 個のフォルダを削除しようとしています</item>
     </plurals>
 
@@ -386,7 +386,7 @@
     <string name="vibrate_on_button_press">Vibrate on button press</string>
     <string name="move_items_into_recycle_bin">削除の代わりにアイテムをごみ箱に移動する</string>
     <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
-    <string name="empty_recycle_bin">Empty the Recycle Bin</string>
+    <string name="empty_recycle_bin">ゴミ箱を空にする</string>
     <string name="force_portrait_mode">Force portrait mode</string>
 
     <!-- Setting sections -->
@@ -400,29 +400,29 @@
     <string name="text">Text</string>
 
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restore this file</string>
-    <string name="restore_selected_files">Restore selected files</string>
-    <string name="restore_all_files">Restore all files</string>
-    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
-    <string name="files_restored_successfully">Files have been restored successfully</string>
-    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
-    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
+    <string name="restore_this_file">このファイルを復元</string>
+    <string name="restore_selected_files">選択したファイルを復元</string>
+    <string name="restore_all_files">すべてのファイルを復元</string>
+    <string name="recycle_bin_emptied">ゴミ箱を空にしました</string>
+    <string name="files_restored_successfully">ファイルが正常に復元されました</string>
+    <string name="empty_recycle_bin_confirmation">ごみ箱を空にしてもよろしいですか？この操作は元に戻すことができません。</string>
+    <string name="recycle_bin_empty">ゴミ箱は空です</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Moving %d item into the Recycle Bin</item>
-        <item quantity="other">Moving %d items into the Recycle Bin</item>
+        <item quantity="one">%d個のアイテムをごみ箱に移動しています</item>
+        <item quantity="other">%d個のアイテムをごみ箱に移動しています</item>
     </plurals>
 
     <!-- Import / Export -->
-    <string name="importing">Importing…</string>
-    <string name="exporting">Exporting…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing">インポート中…</string>
+    <string name="exporting">エクスポート中…</string>
+    <string name="importing_successful">正常にインポートされました</string>
+    <string name="exporting_successful">正常にエクスポートされました</string>
+    <string name="importing_failed">インポートに失敗しました</string>
+    <string name="exporting_failed">エクスポートに失敗しました</string>
+    <string name="importing_some_entries_failed">一部のエントリのインポートに失敗しました</string>
+    <string name="exporting_some_entries_failed">一部のエントリのエクスポートに失敗しました</string>
+    <string name="no_entries_for_exporting">エクスポートするエントリが見つかりませんでした</string>
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
