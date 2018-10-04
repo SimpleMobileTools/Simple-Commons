@@ -409,8 +409,8 @@
     <string name="recycle_bin_empty">Prullenbak is leeg</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Moving %d item into the Recycle Bin</item>
-        <item quantity="other">Moving %d items into the Recycle Bin</item>
+        <item quantity="one">%d item naar de prullenbak verplaatsen</item>
+        <item quantity="other">%d items naar de prullenbak verplaatsen</item>
     </plurals>
 
     <!-- Import / Export -->
