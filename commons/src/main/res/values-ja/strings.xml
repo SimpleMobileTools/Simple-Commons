@@ -205,8 +205,8 @@
     <string name="stop_showing_hidden">非表示項目を表示しない</string>
     <string name="maximum_share_reached">一度に複数のコンテンツを共有することはできません</string>
     <string name="empty_and_disable_recycle_bin">ごみ箱を空にして無効にする</string>
-    <string name="undo">Undo</string>
-    <string name="redo">Redo</string>
+    <string name="undo">元に戻す</string>
+    <string name="redo">やり直し</string>
 
     <!-- Sorting -->
     <string name="sort_by">並べ替え</string>
@@ -249,12 +249,12 @@
     <string name="fingerprint">指紋</string>
     <string name="add_fingerprint">指紋を追加</string>
     <string name="place_finger">指紋センサーに指を置いてください</string>
-    <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
+    <string name="authentication_failed">認証に失敗しました</string>
+    <string name="authentication_blocked">認証がブロックされました、しばらくしてからもう一度お試しください</string>
+    <string name="no_fingerprints_registered">指紋がまだ登録されていません、お使いの端末の設定でいくつか追加してください</string>
     <string name="go_to_settings">設定に移動</string>
     <string name="protection_setup_successfully">パスワードの設定が完了しました。パスワードを紛失した場合は、アプリを再インストールしてください</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="fingerprint_setup_successfully">指紋認証の設定が完了しました。何らかの問題によりアプリを再インストールした場合には、再度設定し直してください。</string>
 
     <!-- Times -->
     <string name="yesterday">昨日</string>
@@ -387,11 +387,11 @@
     <string name="move_items_into_recycle_bin">削除の代わりにアイテムをごみ箱に移動する</string>
     <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
     <string name="empty_recycle_bin">ゴミ箱を空にする</string>
-    <string name="force_portrait_mode">Force portrait mode</string>
+    <string name="force_portrait_mode">ポートレートモードを強制する</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
+    <string name="security">セキュリティ</string>
     <string name="scrolling">Scrolling</string>
     <string name="file_operations">ファイル操作</string>
     <string name="recycle_bin">ごみ箱</string>
@@ -552,7 +552,7 @@
     <string name="otto_title">Otto (イベントバス)</string>
     <string name="photoview_title">PhotoView (GIF画像のズーム表示)</string>
     <string name="pattern_title">PatternLockView (パターン認証)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="reprint_title">Reprint (指紋保護)</string>
     <string name="gif_drawable_title">Gif Drawable (GIF画像の読み込み)</string>
     <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
     <string name="robolectric_title">Robolectric (testing framework)</string>
@@ -560,8 +560,8 @@
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (メモリリークの検出)</string>
     <string name="number_picker_title">Number Picker (customizable number picker)</string>
-    <string name="exoplayer_title">ExoPlayer (video player)</string>
+    <string name="exoplayer_title">ExoPlayer (動画プレーヤー)</string>
     <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
     <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
-    <string name="filters_title">Android Photo Filters (image filters)</string>
+    <string name="filters_title">Android Photo Filters (画像フィルタ)</string>
 </resources>
