@@ -1,6 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
-import android.support.v4.view.ViewPager
+import androidx.viewpager.widget.ViewPager
 
 fun ViewPager.onPageChangeListener(pageChangedAction: (newPosition: Int) -> Unit) =
         addOnPageChangeListener(object : ViewPager.OnPageChangeListener {

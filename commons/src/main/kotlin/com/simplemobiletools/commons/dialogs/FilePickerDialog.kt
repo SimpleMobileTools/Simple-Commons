@@ -2,9 +2,9 @@ package com.simplemobiletools.commons.dialogs
 
 import android.os.Environment
 import android.os.Parcelable
-import android.support.v7.app.AlertDialog
-import android.support.v7.widget.LinearLayoutManager
 import android.view.KeyEvent
+import androidx.appcompat.app.AlertDialog
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.FilepickerItemsAdapter
@@ -134,7 +134,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         adapter.addVerticalDividers(true)
 
         val layoutManager = mDialogView.filepicker_list.layoutManager as LinearLayoutManager
-        mScrollStates[mPrevPath.trimEnd('/')] = layoutManager.onSaveInstanceState()
+        mScrollStates[mPrevPath.trimEnd('/')] = layoutManager.onSaveInstanceState()!!
 
         mDialogView.apply {
             filepicker_list.adapter = adapter

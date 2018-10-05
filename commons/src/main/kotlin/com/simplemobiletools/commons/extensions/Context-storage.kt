@@ -9,9 +9,9 @@ import android.net.Uri
 import android.os.Environment
 import android.provider.DocumentsContract
 import android.provider.MediaStore
-import android.support.v4.content.FileProvider
-import android.support.v4.provider.DocumentFile
 import android.text.TextUtils
+import androidx.core.content.FileProvider
+import androidx.documentfile.provider.DocumentFile
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.OTG_PATH
 import com.simplemobiletools.commons.helpers.isLollipopPlus
@@ -342,18 +342,18 @@ fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSi
             continue
         }
 
-        val file = rootUri.findFile(part)
+        val file = rootUri!!.findFile(part)
         if (file != null) {
             rootUri = file
         }
     }
 
-    val files = rootUri.listFiles().filter { it.exists() }
+    val files = rootUri!!.listFiles().filter { it.exists() }
 
     val basePath = "${baseConfig.OTGTreeUri}/document/${baseConfig.OTGPartition}%3A"
     for (file in files) {
         val name = file.name
-        if (!shouldShowHidden && name.startsWith(".")) {
+        if (!shouldShowHidden && name!!.startsWith(".")) {
             continue
         }
 
@@ -367,12 +367,12 @@ fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSi
         }
 
         val childrenCount = if (isDirectory) {
-            file.listFiles()?.size ?: 0
+            file.listFiles().size
         } else {
             0
         }
 
-        val fileDirItem = FileDirItem(decodedPath, name, isDirectory, childrenCount, fileSize)
+        val fileDirItem = FileDirItem(decodedPath, name!!, isDirectory, childrenCount, fileSize)
         items.add(fileDirItem)
     }
 

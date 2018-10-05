@@ -73,7 +73,7 @@ data class FileDirItem(val path: String, val name: String = "", var isDirectory:
 
     fun getDirectChildrenCount(context: Context, countHiddenItems: Boolean): Int {
         return if (path.startsWith(OTG_PATH)) {
-            context.getDocumentFile(path)?.listFiles()?.filter { if (countHiddenItems) true else !it.name.startsWith(".") }?.size ?: 0
+            context.getDocumentFile(path)?.listFiles()?.filter { if (countHiddenItems) true else !it.name!!.startsWith(".") }?.size ?: 0
         } else {
             File(path).getDirectChildrenCount(countHiddenItems)
         }

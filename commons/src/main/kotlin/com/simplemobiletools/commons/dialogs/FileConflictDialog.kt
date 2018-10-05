@@ -1,7 +1,7 @@
 package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
-import android.support.v7.app.AlertDialog
+import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.R.id.conflict_dialog_radio_merge
 import com.simplemobiletools.commons.R.id.conflict_dialog_radio_skip

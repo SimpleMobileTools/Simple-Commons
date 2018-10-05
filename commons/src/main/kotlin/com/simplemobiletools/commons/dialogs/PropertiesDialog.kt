@@ -4,7 +4,7 @@ import android.app.Activity
 import android.content.res.Resources
 import android.media.ExifInterface
 import android.provider.MediaStore
-import android.support.v7.app.AlertDialog
+import androidx.appcompat.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

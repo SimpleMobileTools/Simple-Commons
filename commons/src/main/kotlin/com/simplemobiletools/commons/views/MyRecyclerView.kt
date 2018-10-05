@@ -2,11 +2,11 @@ package com.simplemobiletools.commons.views
 
 import android.content.Context
 import android.os.Handler
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.ScaleGestureDetector
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.interfaces.RecyclerScrollCallback
 
@@ -236,7 +236,7 @@ open class MyRecyclerView : RecyclerView {
         super.onScrollStateChanged(state)
         if (endlessScrollListener != null) {
             if (totalItemCount == 0) {
-                totalItemCount = adapter.itemCount
+                totalItemCount = adapter!!.itemCount
             }
 
             if (state == SCROLL_STATE_IDLE) {

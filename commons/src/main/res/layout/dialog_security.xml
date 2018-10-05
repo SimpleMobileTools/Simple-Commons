@@ -10,30 +10,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <android.support.design.widget.TabLayout
+        <com.google.android.material.tabs.TabLayout
             android:id="@+id/dialog_tab_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <android.support.design.widget.TabItem
+            <com.google.android.material.tabs.TabItem
                 android:id="@+id/dialog_tab_pattern"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/pattern"/>
 
-            <android.support.design.widget.TabItem
+            <com.google.android.material.tabs.TabItem
                 android:id="@+id/dialog_tab_pin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/pin"/>
 
-            <android.support.design.widget.TabItem
+            <com.google.android.material.tabs.TabItem
                 android:id="@+id/dialog_tab_fingerprint"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/fingerprint"/>
 
-        </android.support.design.widget.TabLayout>
+        </com.google.android.material.tabs.TabLayout>
 
         <com.simplemobiletools.commons.views.MyDialogViewPager
             android:id="@+id/dialog_tab_view_pager"
