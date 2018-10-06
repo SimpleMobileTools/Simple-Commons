@@ -345,7 +345,7 @@
     <string name="reminder_triggers_in">Tempo rimanente prima della notifica promemoria:\n%s</string>
     <string name="alarm_warning">Assicurati che la sveglia funzioni correttamente prima di fare affidamento su di essa. Potrebbe comportarsi in modo anomalo a causa di restrizioni di sistema relative al risparmio della batteria.</string>
     <string name="reminder_warning">Assicurati che i promemoria funzionino correttamente prima di fare affidamento su di essi. Potrebbero comportarsi in modo anomalo a causa di restrizioni di sistema relative al risparmio della batteria.</string>
-    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
+    <string name="notifications_disabled">Le notifiche di questa applicazione sono disattivate. Vai nelle impostazioni del dispositivo per attivarle.</string>
 
     <!-- Alarms -->
     <string name="alarm">Sveglia</string>
@@ -409,8 +409,8 @@
     <string name="recycle_bin_empty">Il cestino è vuoto</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Moving %d item into the Recycle Bin</item>
-        <item quantity="other">Moving %d items into the Recycle Bin</item>
+        <item quantity="one">Spostamento di %d elemento nel cestino</item>
+        <item quantity="other">Spostamento di %d elementi nel cestino</item>
     </plurals>
 
     <!-- Import / Export -->
