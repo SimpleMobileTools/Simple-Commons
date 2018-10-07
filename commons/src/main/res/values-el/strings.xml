@@ -345,7 +345,7 @@
     <string name="reminder_triggers_in">Χρόνος που απομένει μέχρι να ενεργοποιηθεί η υπενθύμιση:\n%s</string>
     <string name="alarm_warning">Βεβαιωθείτε ότι η ειδοποίηση λειτουργεί σωστά πριν βασιστείτε σε αυτήν. Θα μπορούσε να αποτύχει λόγω των περιορισμών του συστήματος που σχετίζονται με την εξοικονόμηση μπαταρίας.</string>
     <string name="reminder_warning">Βεβαιωθείτε ότι η υπενθύμιση λειτουργεί σωστά πριν βασιστείτε σε αυτήν. Θα μπορούσε να αποτύχει λόγω των περιορισμών του συστήματος που σχετίζονται με την εξοικονόμηση μπαταρίας.</string>
-    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
+    <string name="notifications_disabled">Οι ειδοποιήσεις αυτής της εφαρμογής είναι απενεργοποιημένες. Μεταβείτε στις ρυθμίσεις της συσκευής για να τις ενεργοποιήσετε.</string>
 
     <!-- Alarms -->
     <string name="alarm">Ειδοποιήσεις</string>
@@ -360,10 +360,10 @@
 
     <!-- Settings -->
     <string name="settings">Ρυθμίσεις</string>
-    <string name="purchase_simple_thank_you">Αγοράστε Simple σας ευχαριστώ</string>
+    <string name="purchase_simple_thank_you">Αγοράστε το Simple σας ευχαριστώ</string>
     <string name="customize_colors">Προσαρμογή χρωμάτων</string>
     <string name="customize_widget_colors">Προσαρμογή χρωμάτων widget</string>
-    <string name="use_english_language">Χρήση English γλώσσας</string>
+    <string name="use_english_language">Χρήση γλώσσας English</string>
     <string name="avoid_whats_new">Αποφύγετε την εμφάνιση, Τι νέο υπάρχει κατά την εκκίνηση</string>
     <string name="show_hidden_items">Εμφάνιση κρυφών στοιχείων</string>
     <string name="font_size">Μέγεθος κειμένου</string>
@@ -377,7 +377,7 @@
     <string name="show_info_bubble">Εμφάνιση φυσαλίδας πληροφοριών κατά την κύλιση στοιχείων στη γραμμή κύλισης</string>
     <string name="prevent_phone_from_sleeping">Αποτροπή της αναστολής λειτουργίας του τηλεφώνου ενώ η εφαρμογή βρίσκεται στο προσκήνιο</string>
     <string name="skip_delete_confirmation">Παράκαμψη πάντα το παράθυρο διαλόγου επιβεβαίωσης διαγραφής</string>
-    <string name="enable_pull_to_refresh">Ενεργοποίηση ανανέωσης με Σύρετε απο πάνω-κάτω</string>
+    <string name="enable_pull_to_refresh">Ενεργοποίηση ανανέωσης με \"Σύρετε απο πάνω-κάτω\"</string>
     <string name="use_24_hour_time_format">Χρήση 24ώρου</string>
     <string name="sunday_first">Έναρξη εβδομάδας την Κυριακή</string>
     <string name="widgets">Widgets</string>
@@ -409,8 +409,8 @@
     <string name="recycle_bin_empty">Ο Κάδος Ανακύκλωσης είναι κενός</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Moving %d item into the Recycle Bin</item>
-        <item quantity="other">Moving %d items into the Recycle Bin</item>
+        <item quantity="one">Μετακινήθηκε %d στοιχείο στον Κάδο</item>
+        <item quantity="other">Μετακινήθηκαν %d στοιχεία στον Κάδο</item>
     </plurals>
 
     <!-- Import / Export -->
@@ -501,14 +501,14 @@
     <string name="donate_please">
         <![CDATA[
             Γειά σας,<br><br>
-            Ελπίζω να απολαμβάνετε την εφαρμογή. Δεν περιέχει διαφημίσεις, παρακαλούμε να υποστηρίξει την ανάπτυξή της με την αγορά της <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
+            Ελπίζω να απολαμβάνετε την εφαρμογή. Δεν περιέχει διαφημίσεις, παρακαλώ υποστηρίξτε την ανάπτυξή της με την αγορά στο <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, θα αποτρέψει επίσης την εμφάνιση αυτού του διαλόγου.<br><br>
             Ευχαριστώ!
         ]]>
     </string>
     <string name="purchase">Αγορά</string>
     <string name="update_thank_you">Παρακαλώ ενημερώστε Simple Thank You στην τελευταία έκδοση</string>
     <string name="before_asking_question_read_faq">Πρίν κάνετε μια ερώτηση, παρακαλώ διαβάστε τις Συχνά Ερωτήσεις πρώτα, ίσως η λύση είναι εκεί.</string>
-    <string name="read_it">Διάβασέ το</string>
+    <string name="read_it">Διαβάστε τις</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -528,8 +528,8 @@
     <string name="faq_1_text_commons">Είναι πολύ πιθανό επειδή μετακινήσατε την εφαρμογή σε μια κάρτα SD. Υπάρχει ένας περιορισμός του συστήματος Android που αποκρύπτει τα συγκεκριμένα widget εφαρμογών
        σε αυτή την περίπτωση. Η μόνη λύση είναι να μετακινήσετε την εφαρμογή πίσω στην εσωτερική αποθήκευση μέσω των ρυθμίσεων της συσκευής σας.</string>
     <string name="faq_2_title_commons">Θέλω να σας υποστηρίξω, αλλά δεν μπορώ να δωρίσω χρήματα. Υπάρχει κάτι άλλο που μπορώ να κάνω;</string>
-    <string name="faq_2_text_commons">Ναι φυσικά. Μπορείτε να διαδώσετε τη λέξη σχετικά με τις εφαρμογές ή να δώσετε καλή ανατροφοδότηση και αξιολογήσεις. Μπορείτε επίσης να βοηθήσετε με τη μετάφραση των εφαρμογών σε μια νέα γλώσσα ή απλά να ενημερώσετε μερικές υπάρχουσες μεταφράσεις.
-        Μπορείτε να βρείτε τον οδηγό στο https://github.com/SimpleMobileTools/General-Discussion , ή απλά ένα μήνυμα στο hello@simplemobiletools.comαν χρειάζεσαι βοήθεια.</string>
+    <string name="faq_2_text_commons">Ναι φυσικά. Μπορείτε να διαδώσετε το όνομα σχετικά με τις εφαρμογές μας ή να δώσετε καλή ανατροφοδότηση και αξιολογήσεις. Μπορείτε επίσης να βοηθήσετε με τη μετάφραση των εφαρμογών σε μια νέα γλώσσα ή απλά να ενημερώσετε μερικές υπάρχουσες μεταφράσεις.
+        Μπορείτε να βρείτε τον οδηγό στο https://github.com/SimpleMobileTools/General-Discussion , ή απλά ένα μήνυμα στο hello@simplemobiletools.com αν χρειάζεστε βοήθεια.</string>
     <string name="faq_3_title_commons">Διαγραφή κάποιων αρχείων κατά λάθος, πώς μπορώ να τα ανακτήσω;</string>
     <string name="faq_3_text_commons">Δυστυχώς, δεν μπορείτε. Τα αρχεία διαγράφονται αμέσως μετά το παράθυρο διαλόγου επιβεβαίωσης, δεν υπάρχει διαθέσιμος Κάδος απορριμμάτων.</string>
     <string name="faq_4_title_commons">Δεν μου αρέσουν τα χρώματα widget, μπορώ να τα αλλάξω;</string>
