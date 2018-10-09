@@ -14,18 +14,10 @@ import com.simplemobiletools.commons.interfaces.RecyclerScrollCallback
 open class MyRecyclerView : RecyclerView {
     private val AUTO_SCROLL_DELAY = 25L
     private var isZoomEnabled = false
-    private var isDragSelectionEnabled = false
     private var zoomListener: MyZoomListener? = null
-    private var dragListener: MyDragListener? = null
     private var autoScrollHandler = Handler()
 
     private var scaleDetector: ScaleGestureDetector
-
-    private var dragSelectActive = false
-    private var lastDraggedIndex = -1
-    private var minReached = 0
-    private var maxReached = 0
-    private var initialSelection = 0
 
     private var hotspotHeight = 0
     private var hotspotOffsetTop = 0
@@ -110,85 +102,19 @@ open class MyRecyclerView : RecyclerView {
     }
 
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
-        if (!dragSelectActive) {
-            try {
-                super.dispatchTouchEvent(ev)
-            } catch (ignored: Exception) {
-            }
+        try {
+            super.dispatchTouchEvent(ev)
+        } catch (ignored: Exception) {
         }
 
         when (ev.action) {
             MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
-                dragSelectActive = false
                 inTopHotspot = false
                 inBottomHotspot = false
                 autoScrollHandler.removeCallbacks(autoScrollRunnable)
                 currScaleFactor = 1.0f
                 lastUp = System.currentTimeMillis()
                 return true
-            }
-
-            MotionEvent.ACTION_MOVE -> {
-                if (dragSelectActive) {
-                    val itemPosition = getItemPosition(ev)
-                    if (hotspotHeight > -1) {
-                        if (ev.y in hotspotTopBoundStart..hotspotTopBoundEnd) {
-                            inBottomHotspot = false
-                            if (!inTopHotspot) {
-                                inTopHotspot = true
-                                autoScrollHandler.removeCallbacks(autoScrollRunnable)
-                                autoScrollHandler.postDelayed(autoScrollRunnable, AUTO_SCROLL_DELAY)
-                            }
-
-                            val simulatedFactor = (hotspotTopBoundEnd - hotspotTopBoundStart).toFloat()
-                            val simulatedY = ev.y - hotspotTopBoundStart
-                            autoScrollVelocity = (simulatedFactor - simulatedY).toInt() / 2
-                        } else if (ev.y in hotspotBottomBoundStart..hotspotBottomBoundEnd) {
-                            inTopHotspot = false
-                            if (!inBottomHotspot) {
-                                inBottomHotspot = true
-                                autoScrollHandler.removeCallbacks(autoScrollRunnable)
-                                autoScrollHandler.postDelayed(autoScrollRunnable, AUTO_SCROLL_DELAY)
-                            }
-
-                            val simulatedY = ev.y + hotspotBottomBoundEnd
-                            val simulatedFactor = (hotspotBottomBoundStart + hotspotBottomBoundEnd).toFloat()
-                            autoScrollVelocity = (simulatedY - simulatedFactor).toInt() / 2
-                        } else if (inTopHotspot || inBottomHotspot) {
-                            autoScrollHandler.removeCallbacks(autoScrollRunnable)
-                            inTopHotspot = false
-                            inBottomHotspot = false
-                        }
-                    }
-
-                    if (itemPosition != RecyclerView.NO_POSITION && lastDraggedIndex != itemPosition) {
-                        lastDraggedIndex = itemPosition
-                        if (minReached == -1) {
-                            minReached = lastDraggedIndex
-                        }
-
-                        if (maxReached == -1) {
-                            maxReached = lastDraggedIndex
-                        }
-
-                        if (lastDraggedIndex > maxReached) {
-                            maxReached = lastDraggedIndex
-                        }
-
-                        if (lastDraggedIndex < minReached) {
-                            minReached = lastDraggedIndex
-                        }
-
-                        dragListener?.selectRange(initialSelection, lastDraggedIndex, minReached, maxReached)
-
-                        if (initialSelection == lastDraggedIndex) {
-                            minReached = lastDraggedIndex
-                            maxReached = lastDraggedIndex
-                        }
-                    }
-
-                    return true
-                }
             }
         }
 
@@ -199,26 +125,9 @@ open class MyRecyclerView : RecyclerView {
         }
     }
 
-    fun setupDragListener(dragListener: MyDragListener?) {
-        isDragSelectionEnabled = dragListener != null
-        this.dragListener = dragListener
-    }
-
     fun setupZoomListener(zoomListener: MyZoomListener?) {
         isZoomEnabled = zoomListener != null
         this.zoomListener = zoomListener
-    }
-
-    fun setDragSelectActive(initialSelection: Int) {
-        if (dragSelectActive || !isDragSelectionEnabled)
-            return
-
-        lastDraggedIndex = -1
-        minReached = -1
-        maxReached = -1
-        this.initialSelection = initialSelection
-        dragSelectActive = true
-        dragListener?.selectItem(initialSelection)
     }
 
     private fun getItemPosition(e: MotionEvent): Int {
@@ -307,12 +216,6 @@ open class MyRecyclerView : RecyclerView {
         fun zoomOut()
 
         fun zoomIn()
-    }
-
-    interface MyDragListener {
-        fun selectItem(position: Int)
-
-        fun selectRange(initialSelection: Int, lastDraggedIndex: Int, minReached: Int, maxReached: Int)
     }
 
     interface MyGestureListener {
