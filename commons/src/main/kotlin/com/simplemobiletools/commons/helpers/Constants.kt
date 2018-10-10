@@ -100,7 +100,7 @@ internal const val LICENSE_KOTLIN = 1
 const val LICENSE_SUBSAMPLING = 2
 const val LICENSE_GLIDE = 4
 const val LICENSE_CROPPER = 8
-const val LICENSE_MULTISELECT = 16
+const val LICENSE_FILTERS = 16
 const val LICENSE_RTL = 32
 const val LICENSE_JODA = 64
 const val LICENSE_STETHO = 128
@@ -119,7 +119,6 @@ const val LICENSE_NUMBER_PICKER = 524288
 const val LICENSE_EXOPLAYER = 1048576
 const val LICENSE_PANORAMA_VIEW = 2097152
 const val LICENSE_SANSELAN = 4194304
-const val LICENSE_FILTERS = 8388608
 
 // global intents
 const val OPEN_DOCUMENT_TREE = 1000

@@ -50,7 +50,6 @@ class LicenseActivity : BaseSimpleActivity() {
             License(LICENSE_SUBSAMPLING, R.string.subsampling_title, R.string.subsampling_text, R.string.subsampling_url),
             License(LICENSE_GLIDE, R.string.glide_title, R.string.glide_text, R.string.glide_url),
             License(LICENSE_CROPPER, R.string.cropper_title, R.string.cropper_text, R.string.cropper_url),
-            License(LICENSE_MULTISELECT, R.string.multiselect_title, R.string.multiselect_text, R.string.multiselect_url),
             License(LICENSE_RTL, R.string.rtl_viewpager_title, R.string.rtl_viewpager_text, R.string.rtl_viewpager_url),
             License(LICENSE_JODA, R.string.joda_title, R.string.joda_text, R.string.joda_url),
             License(LICENSE_STETHO, R.string.stetho_title, R.string.stetho_text, R.string.stetho_url),
