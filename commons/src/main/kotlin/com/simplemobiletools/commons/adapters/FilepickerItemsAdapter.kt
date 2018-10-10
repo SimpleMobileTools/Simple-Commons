@@ -10,12 +10,10 @@ import com.bumptech.glide.request.RequestOptions
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.FileDirItemKeyProvider
 import com.simplemobiletools.commons.helpers.OTG_PATH
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.filepicker_list_item.view.*
-import java.util.*
 
 class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: List<FileDirItem>, recyclerView: MyRecyclerView,
                              itemClick: (Any) -> Unit) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick) {
@@ -52,8 +50,6 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
     override fun getIsItemSelectable(position: Int) = false
 
     override fun getItemSelectionKey(position: Int) = fileDirItems[position].path
-
-    override fun getItemSelectionKeyProvider() = FileDirItemKeyProvider(ArrayList())
 
     override fun onViewRecycled(holder: MyRecyclerViewAdapter.ViewHolder) {
         super.onViewRecycled(holder)

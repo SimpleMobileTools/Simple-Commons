@@ -36,7 +36,6 @@ dependencies {
     implementation 'com.andrognito.patternlockview:patternlockview:1.0.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.google.code.gson:gson:2.8.2'
-    implementation 'androidx.recyclerview:recyclerview-selection:1.0.0'
 
     kapt 'com.github.bumptech.glide:compiler:4.8.0'
 }

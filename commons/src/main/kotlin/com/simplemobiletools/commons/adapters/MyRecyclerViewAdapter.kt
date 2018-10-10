@@ -6,19 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.view.ActionMode
-import androidx.recyclerview.selection.ItemKeyProvider
-import androidx.recyclerview.selection.SelectionPredicates
-import androidx.recyclerview.selection.SelectionTracker
-import androidx.recyclerview.selection.StorageStrategy
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.helpers.StringItemDetails
-import com.simplemobiletools.commons.helpers.StringItemDetailsLookup
 import com.simplemobiletools.commons.interfaces.MyActionModeCallback
-import com.simplemobiletools.commons.interfaces.MyAdapterListener
 import com.simplemobiletools.commons.views.FastScroller
 import com.simplemobiletools.commons.views.MyRecyclerView
 import java.util.*
@@ -31,15 +24,13 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     protected var primaryColor = baseConfig.primaryColor
     protected var textColor = baseConfig.textColor
     protected var backgroundColor = baseConfig.backgroundColor
-    protected var mSelectionTracker: SelectionTracker<String>? = null
-    protected var actModeCallback: MyActionModeCallback?
-    protected val adapterListener: MyAdapterListener
+    protected var actModeCallback: MyActionModeCallback
+    protected var selectedKeys = HashSet<String>()
     protected var positionOffset = 0
 
     private var actMode: ActionMode? = null
     private var actBarTextView: TextView? = null
     private var lastLongPressedItem = -1
-    private var isALongPressSelection = false
 
     abstract fun getActionMenuId(): Int
 
@@ -53,9 +44,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     abstract fun getItemSelectionKey(position: Int): String
 
-    abstract fun getItemSelectionKeyProvider(): ItemKeyProvider<String>
-
-    protected fun isOneItemSelected() = mSelectionTracker?.selection?.size() == 1
+    protected fun isOneItemSelected() = selectedKeys.size == 1
 
     init {
         fastScroller?.resetScrollPositions()
@@ -72,7 +61,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                 actBarTextView = layoutInflater.inflate(R.layout.actionbar_title, null) as TextView
                 actMode!!.customView = actBarTextView
                 actBarTextView!!.setOnClickListener {
-                    if (getSelectableItemCount() == mSelectionTracker?.selection?.size()) {
+                    if (getSelectableItemCount() == selectedKeys.size) {
                         finishActMode()
                     } else {
                         selectAll()
@@ -89,80 +78,127 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
             override fun onDestroyActionMode(actionMode: ActionMode) {
                 isSelectable = false
-                mSelectionTracker?.clearSelection()
+                selectedKeys.clear()
+                notifyDataSetChanged()
                 actBarTextView?.text = ""
                 actMode = null
                 lastLongPressedItem = -1
-                isALongPressSelection = false
             }
-        }
-
-        adapterListener = object : MyAdapterListener {
-            override fun itemLongClicked(position: Int) {
-                isALongPressSelection = true
-                lastLongPressedItem = if (lastLongPressedItem == -1) {
-                    position
-                } else {
-                    val min = Math.min(lastLongPressedItem, position)
-                    val max = Math.max(lastLongPressedItem, position)
-                    for (i in min..max) {
-                        if (getIsItemSelectable(i)) {
-                            val key = getItemSelectionKey(i)
-                            mSelectionTracker?.select(key)
-                        }
-                        isALongPressSelection = true
-                    }
-                    position
-                }
-            }
-
-            override fun getItemKey(position: Int) = getItemSelectionKey(position)
         }
     }
 
-    protected fun getSelectedKeys() = mSelectionTracker!!.selection
+    protected fun toggleItemSelection(select: Boolean, pos: Int) {
+        if (select && !getIsItemSelectable(pos)) {
+            return
+        }
 
-    protected fun isKeySelected(key: String) = mSelectionTracker?.isSelected(key) == true
+        val itemKey = getItemSelectionKey(pos)
+        if (select) {
+            selectedKeys.add(itemKey)
+        } else {
+            selectedKeys.remove(itemKey)
+        }
 
-    fun initSelectionTracker() {
-        mSelectionTracker = SelectionTracker.Builder<String>(
-                "string-items-selection",
-                recyclerView,
-                getItemSelectionKeyProvider(),
-                StringItemDetailsLookup(recyclerView),
-                StorageStrategy.createStringStorage()
-        ).withSelectionPredicate(SelectionPredicates.createSelectAnything()).build()
+        notifyItemChanged(pos)
 
-        mSelectionTracker!!.addObserver(object : SelectionTracker.SelectionObserver<String>() {
-            override fun onItemStateChanged(key: String, selected: Boolean) {
-                super.onItemStateChanged(key, selected)
-                val selectionCnt = getSelectedKeys().size()
-                if (!isALongPressSelection) {
-                    lastLongPressedItem = -1
-                }
+        if (selectedKeys.isEmpty()) {
+            finishActMode()
+            return
+        }
 
-                isALongPressSelection = false
-                if (selectionCnt > 0) {
-                    if (actMode == null) {
-                        activity.startSupportActionMode(actModeCallback!!)
-                    }
-                    val selectionText = String.format(activity.getString(R.string.progress), selectionCnt, getSelectableItemCount())
-                    actBarTextView?.text = selectionText
-                } else {
-                    actMode?.finish()
-                }
-            }
-        })
+        updateTitle(selectedKeys.size)
     }
+
+    private fun updateTitle(cnt: Int) {
+        val selectableItemCount = getSelectableItemCount()
+        val selectedCount = Math.min(cnt, selectableItemCount)
+        val oldTitle = actBarTextView?.text
+        val newTitle = "$selectedCount / $selectableItemCount"
+        if (oldTitle != newTitle) {
+            actBarTextView?.text = newTitle
+            actMode?.invalidate()
+        }
+    }
+
+    fun itemLongClicked(position: Int) {
+        recyclerView.setDragSelectActive(position)
+        lastLongPressedItem = if (lastLongPressedItem == -1) {
+            position
+        } else {
+            val min = Math.min(lastLongPressedItem, position)
+            val max = Math.max(lastLongPressedItem, position)
+            for (i in min..max) {
+                toggleItemSelection(true, i)
+            }
+            position
+        }
+    }
+
+    protected fun isKeySelected(key: String) = selectedKeys.contains(key)
 
     protected fun selectAll() {
         val cnt = itemCount - positionOffset
         for (i in 0 until cnt) {
-            if (getIsItemSelectable(i)) {
-                mSelectionTracker?.select(getItemSelectionKey(i))
-            }
+            toggleItemSelection(true, i)
         }
         lastLongPressedItem = -1
+    }
+
+    protected fun setupDragListener(enable: Boolean) {
+        if (enable) {
+            recyclerView.setupDragListener(object : MyRecyclerView.MyDragListener {
+                override fun selectItem(position: Int) {
+                    selectItemPosition(position)
+                }
+
+                override fun selectRange(initialSelection: Int, lastDraggedIndex: Int, minReached: Int, maxReached: Int) {
+                    selectItemRange(initialSelection, lastDraggedIndex - positionOffset, minReached, maxReached)
+                }
+            })
+        } else {
+            recyclerView.setupDragListener(null)
+        }
+    }
+
+    protected fun selectItemPosition(pos: Int) {
+        toggleItemSelection(true, pos)
+    }
+
+    protected fun selectItemRange(from: Int, to: Int, min: Int, max: Int) {
+        if (from == to) {
+            (min..max).filter { it != from }.forEach { toggleItemSelection(false, it) }
+            return
+        }
+
+        if (to < from) {
+            for (i in to..from) {
+                toggleItemSelection(true, i)
+            }
+
+            if (min > -1 && min < to) {
+                (min until to).filter { it != from }.forEach { toggleItemSelection(false, it) }
+            }
+
+            if (max > -1) {
+                for (i in from + 1..max) {
+                    toggleItemSelection(false, i)
+                }
+            }
+        } else {
+            for (i in from..to) {
+                toggleItemSelection(true, i)
+            }
+
+            if (max > -1 && max > to) {
+                (to + 1..max).filter { it != from }.forEach { toggleItemSelection(false, it) }
+            }
+
+            if (min > -1) {
+                for (i in min until from) {
+                    toggleItemSelection(false, i)
+                }
+            }
+        }
     }
 
     fun setupZoomListener(zoomListener: MyRecyclerView.MyZoomListener?) {
@@ -183,7 +219,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     }
 
     fun finishActMode() {
-        mSelectionTracker?.clearSelection()
+        actMode?.finish()
     }
 
     fun updateTextColor(textColor: Int) {
@@ -201,7 +237,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     protected fun createViewHolder(layoutType: Int, parent: ViewGroup?): ViewHolder {
         val view = layoutInflater.inflate(layoutType, parent, false)
-        return ViewHolder(view, adapterListener, activity, actModeCallback!!, positionOffset, itemClick)
+        return ViewHolder(view)
     }
 
     protected fun bindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder) {
@@ -216,8 +252,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         fastScroller?.measureRecyclerView()
     }
 
-    open class ViewHolder(view: View, val adapterListener: MyAdapterListener, val activity: BaseSimpleActivity? = null, val actModeCallback: MyActionModeCallback,
-                          val positionOffset: Int = 0, val itemClick: ((Any) -> (Unit))? = null) : RecyclerView.ViewHolder(view) {
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bindView(any: Any, allowSingleClick: Boolean, allowLongClick: Boolean, callback: (itemView: View, adapterPosition: Int) -> Unit): View {
             return itemView.apply {
                 callback(this, adapterPosition)
@@ -233,15 +268,24 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         }
 
         private fun viewClicked(any: Any) {
-            if (!actModeCallback.isSelectable) {
-                itemClick?.invoke(any)
+            if (actModeCallback.isSelectable) {
+                val currentPosition = adapterPosition - positionOffset
+                val isSelected = selectedKeys.contains(getItemSelectionKey(currentPosition))
+                toggleItemSelection(!isSelected, currentPosition)
+            } else {
+                itemClick.invoke(any)
             }
+            lastLongPressedItem = -1
         }
 
         private fun viewLongClicked() {
-            adapterListener.itemLongClicked(adapterPosition - positionOffset)
-        }
+            val currentPosition = adapterPosition - positionOffset
+            if (!actModeCallback.isSelectable) {
+                activity.startSupportActionMode(actModeCallback)
+            }
 
-        fun getItemDetails() = StringItemDetails(adapterPosition, adapterListener.getItemKey(adapterPosition))
+            toggleItemSelection(true, currentPosition)
+            itemLongClicked(currentPosition)
+        }
     }
 }
