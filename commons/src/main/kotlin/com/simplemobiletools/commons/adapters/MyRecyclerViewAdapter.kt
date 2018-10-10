@@ -44,6 +44,8 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     abstract fun getItemSelectionKey(position: Int): String
 
+    abstract fun getItemKeyPosition(key: String): Int
+
     protected fun isOneItemSelected() = selectedKeys.size == 1
 
     init {
@@ -78,8 +80,13 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
             override fun onDestroyActionMode(actionMode: ActionMode) {
                 isSelectable = false
+                (selectedKeys.clone() as HashSet<String>).forEach {
+                    val position = getItemKeyPosition(it)
+                    if (position != -1) {
+                        toggleItemSelection(false, position)
+                    }
+                }
                 selectedKeys.clear()
-                notifyDataSetChanged()
                 actBarTextView?.text = ""
                 actMode = null
                 lastLongPressedItem = -1
