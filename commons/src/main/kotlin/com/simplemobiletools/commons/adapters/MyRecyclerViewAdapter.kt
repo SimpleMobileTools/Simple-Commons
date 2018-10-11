@@ -110,7 +110,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
             selectedKeys.remove(itemKey)
         }
 
-        notifyItemChanged(pos)
+        notifyItemChanged(pos + positionOffset)
 
         if (selectedKeys.isEmpty()) {
             finishActMode()
@@ -159,20 +159,16 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         if (enable) {
             recyclerView.setupDragListener(object : MyRecyclerView.MyDragListener {
                 override fun selectItem(position: Int) {
-                    selectItemPosition(position)
+                    toggleItemSelection(true, position)
                 }
 
                 override fun selectRange(initialSelection: Int, lastDraggedIndex: Int, minReached: Int, maxReached: Int) {
-                    selectItemRange(initialSelection, lastDraggedIndex - positionOffset, minReached, maxReached)
+                    selectItemRange(initialSelection, Math.max(0, lastDraggedIndex - positionOffset), Math.max(0, minReached - positionOffset), maxReached - positionOffset)
                 }
             })
         } else {
             recyclerView.setupDragListener(null)
         }
-    }
-
-    protected fun selectItemPosition(pos: Int) {
-        toggleItemSelection(true, pos)
     }
 
     protected fun selectItemRange(from: Int, to: Int, min: Int, max: Int) {
