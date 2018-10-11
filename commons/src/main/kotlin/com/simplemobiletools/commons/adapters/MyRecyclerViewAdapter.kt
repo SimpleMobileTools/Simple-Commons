@@ -263,7 +263,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         fastScroller?.measureRecyclerView()
     }
 
-    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    open inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bindView(any: Any, allowSingleClick: Boolean, allowLongClick: Boolean, callback: (itemView: View, adapterPosition: Int) -> Unit): View {
             return itemView.apply {
                 callback(this, adapterPosition)
