@@ -44,7 +44,7 @@ import java.util.*
 
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
-val Context.isRTLLayout: Boolean get() = if (isJellyBean1Plus()) resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_RTL else false
+val Context.isRTLLayout: Boolean get() = resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_RTL
 
 fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAccentColor: Int = 0) {
     val textColor = if (tmpTextColor == 0) baseConfig.textColor else tmpTextColor
@@ -144,39 +144,37 @@ fun Context.getRealPathFromURI(uri: Uri): String? {
         return uri.path
     }
 
-    if (isKitkatPlus()) {
-        if (isDownloadsDocument(uri)) {
-            val id = DocumentsContract.getDocumentId(uri)
-            if (id.areDigitsOnly()) {
-                val newUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), id.toLong())
-                val path = getDataColumn(newUri)
-                if (path != null) {
-                    return path
-                }
-            }
-        } else if (isExternalStorageDocument(uri)) {
-            val documentId = DocumentsContract.getDocumentId(uri)
-            val parts = documentId.split(":")
-            if (parts[0].equals("primary", true)) {
-                return "${Environment.getExternalStorageDirectory().absolutePath}/${parts[1]}"
-            }
-        } else if (isMediaDocument(uri)) {
-            val documentId = DocumentsContract.getDocumentId(uri)
-            val split = documentId.split(":").dropLastWhile { it.isEmpty() }.toTypedArray()
-            val type = split[0]
-
-            val contentUri = when (type) {
-                "video" -> MediaStore.Video.Media.EXTERNAL_CONTENT_URI
-                "audio" -> MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
-                else -> MediaStore.Images.Media.EXTERNAL_CONTENT_URI
-            }
-
-            val selection = "_id=?"
-            val selectionArgs = arrayOf(split[1])
-            val path = getDataColumn(contentUri, selection, selectionArgs)
+    if (isDownloadsDocument(uri)) {
+        val id = DocumentsContract.getDocumentId(uri)
+        if (id.areDigitsOnly()) {
+            val newUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), id.toLong())
+            val path = getDataColumn(newUri)
             if (path != null) {
                 return path
             }
+        }
+    } else if (isExternalStorageDocument(uri)) {
+        val documentId = DocumentsContract.getDocumentId(uri)
+        val parts = documentId.split(":")
+        if (parts[0].equals("primary", true)) {
+            return "${Environment.getExternalStorageDirectory().absolutePath}/${parts[1]}"
+        }
+    } else if (isMediaDocument(uri)) {
+        val documentId = DocumentsContract.getDocumentId(uri)
+        val split = documentId.split(":").dropLastWhile { it.isEmpty() }.toTypedArray()
+        val type = split[0]
+
+        val contentUri = when (type) {
+            "video" -> MediaStore.Video.Media.EXTERNAL_CONTENT_URI
+            "audio" -> MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
+            else -> MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+        }
+
+        val selection = "_id=?"
+        val selectionArgs = arrayOf(split[1])
+        val path = getDataColumn(contentUri, selection, selectionArgs)
+        if (path != null) {
+            return path
         }
     }
 
@@ -506,10 +504,8 @@ fun Context.storeNewYourAlarmSound(resultData: Intent): AlarmSound {
 
     baseConfig.yourAlarmSounds = Gson().toJson(yourAlarmSounds)
 
-    if (isKitkatPlus()) {
-        val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION
-        contentResolver.takePersistableUriPermission(uri, takeFlags)
-    }
+    val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION
+    contentResolver.takePersistableUriPermission(uri, takeFlags)
 
     return newAlarmSound
 }

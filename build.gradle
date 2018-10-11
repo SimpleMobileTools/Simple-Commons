@@ -4,10 +4,10 @@ buildscript {
     ext {
         propCompileSdkVersion = 28
         propBuildToolsVersion = "28.0.3"
-        propMinSdkVersion = 16
+        propMinSdkVersion = 21
         propTargetSdkVersion = propCompileSdkVersion
         propVersionCode = 1
-        propVersionName = '4.10.1'
+        propVersionName = '5.0.2'
         kotlin_version = '1.2.71'
     }
 

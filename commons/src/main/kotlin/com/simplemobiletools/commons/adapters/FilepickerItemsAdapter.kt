@@ -9,7 +9,10 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withC
 import com.bumptech.glide.request.RequestOptions
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
-import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.extensions.formatSize
+import com.simplemobiletools.commons.extensions.getColoredDrawableWithColor
+import com.simplemobiletools.commons.extensions.getOTGPublicPath
+import com.simplemobiletools.commons.extensions.hasOTGConnected
 import com.simplemobiletools.commons.helpers.OTG_PATH
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.MyRecyclerView
@@ -55,7 +58,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
 
     override fun onViewRecycled(holder: MyRecyclerViewAdapter.ViewHolder) {
         super.onViewRecycled(holder)
-        if (!activity.isActivityDestroyed()) {
+        if (!activity.isDestroyed) {
             Glide.with(activity).clear(holder.itemView.list_item_icon!!)
         }
     }
@@ -90,7 +93,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
                     path
                 }
 
-                if (!activity.isActivityDestroyed()) {
+                if (!activity.isDestroyed) {
                     if (hasOTGConnected && itemToLoad is String && itemToLoad.startsWith(OTG_PATH)) {
                         itemToLoad = itemToLoad.getOTGPublicPath(activity)
                     }

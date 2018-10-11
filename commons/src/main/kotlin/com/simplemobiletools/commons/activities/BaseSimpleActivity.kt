@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.activities
 
 import android.annotation.SuppressLint
-import android.annotation.TargetApi
 import android.app.Activity
 import android.app.ActivityManager
 import android.content.Context
@@ -9,7 +8,6 @@ import android.content.Intent
 import android.graphics.BitmapFactory
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.provider.DocumentsContract
 import android.view.MenuItem
@@ -108,20 +106,15 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
         updateActionBarTitle(supportActionBar?.title.toString(), color)
         updateStatusbarColor(color)
-
-        if (isLollipopPlus()) {
-            setTaskDescription(ActivityManager.TaskDescription(null, null, color))
-        }
+        setTaskDescription(ActivityManager.TaskDescription(null, null, color))
     }
 
     fun updateStatusbarColor(color: Int) {
-        if (isLollipopPlus()) {
-            window.statusBarColor = color.darkenColor()
-        }
+        window.statusBarColor = color.darkenColor()
     }
 
     fun updateRecentsAppIcon() {
-        if (baseConfig.isUsingModifiedAppIcon && isLollipopPlus()) {
+        if (baseConfig.isUsingModifiedAppIcon) {
             val appIconIDs = getAppIconIDs()
             val currentAppIconColorIndex = getCurrentAppIconColorIndex()
             if (appIconIDs.size - 1 < currentAppIconColorIndex) {
@@ -148,9 +141,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun setTranslucentNavigation() {
-        if (isKitkatPlus()) {
-            window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
-        }
+        window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
@@ -189,7 +180,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    @TargetApi(Build.VERSION_CODES.KITKAT)
     private fun saveTreeUri(resultData: Intent) {
         val treeUri = resultData.data
         baseConfig.treeUri = treeUri.toString()

@@ -10,7 +10,6 @@ import java.util.*
 // language forcing used at "Use english language", taken from https://stackoverflow.com/a/40704077/1967672
 class MyContextWrapper(context: Context) : ContextWrapper(context) {
 
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     fun wrap(context: Context, language: String): ContextWrapper {
         var newContext = context
         val config = newContext.resources.configuration
@@ -32,11 +31,7 @@ class MyContextWrapper(context: Context) : ContextWrapper(context) {
             }
         }
 
-        if (isJellyBean1Plus()) {
-            newContext = newContext.createConfigurationContext(config)
-        } else {
-            newContext.resources.updateConfiguration(config, newContext.resources.displayMetrics)
-        }
+        newContext = newContext.createConfigurationContext(config)
         return MyContextWrapper(newContext)
     }
 

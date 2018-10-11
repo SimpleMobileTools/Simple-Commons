@@ -213,10 +213,6 @@ val appIconColorStrings = arrayListOf(
 
 fun isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 
-fun isJellyBean1Plus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1
-fun isAndroidFour() = Build.VERSION.SDK_INT <= Build.VERSION_CODES.KITKAT_WATCH
-fun isKitkatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
-fun isLollipopPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
 fun isMarshmallowPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
 fun isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
 fun isOreoPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O

@@ -14,7 +14,6 @@ import androidx.core.content.FileProvider
 import androidx.documentfile.provider.DocumentFile
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.OTG_PATH
-import com.simplemobiletools.commons.helpers.isLollipopPlus
 import com.simplemobiletools.commons.helpers.isMarshmallowPlus
 import com.simplemobiletools.commons.helpers.isNougatPlus
 import com.simplemobiletools.commons.models.FileDirItem
@@ -125,7 +124,7 @@ fun Context.getInternalStoragePath() = Environment.getExternalStorageDirectory()
 
 fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWith(sdCardPath)
 
-fun Context.needsStupidWritePermissions(path: String) = (isPathOnSD(path) || path.startsWith(OTG_PATH)) && isLollipopPlus()
+fun Context.needsStupidWritePermissions(path: String) = (isPathOnSD(path) || path.startsWith(OTG_PATH))
 
 @SuppressLint("NewApi")
 fun Context.hasProperStoredTreeUri(): Boolean {
@@ -165,10 +164,6 @@ fun Context.tryFastDocumentDelete(path: String, allowDeleteFolder: Boolean): Boo
 
 @SuppressLint("NewApi")
 fun Context.getFastDocumentFile(path: String): DocumentFile? {
-    if (!isLollipopPlus()) {
-        return null
-    }
-
     if (path.startsWith(OTG_PATH)) {
         return getOTGFastDocumentFile(path)
     }
@@ -199,10 +194,6 @@ fun Context.getOTGFastDocumentFile(path: String): DocumentFile? {
 
 @SuppressLint("NewApi")
 fun Context.getDocumentFile(path: String): DocumentFile? {
-    if (!isLollipopPlus()) {
-        return null
-    }
-
     val isOTG = path.startsWith(OTG_PATH)
     var relativePath = path.substring(if (isOTG) OTG_PATH.length else sdCardPath.length)
     if (relativePath.startsWith(File.separator)) {
