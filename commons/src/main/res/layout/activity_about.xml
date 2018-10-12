@@ -51,8 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/about_faq"
-            android:paddingBottom="@dimen/activity_margin"
             android:paddingTop="@dimen/activity_margin"
+            android:paddingBottom="@dimen/activity_margin"
             android:text="@string/more_apps_underlined"
             android:textColor="@color/color_primary"/>
 
@@ -61,8 +61,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/about_more_apps"
-            android:paddingBottom="@dimen/activity_margin"
             android:paddingTop="@dimen/activity_margin"
+            android:paddingBottom="@dimen/activity_margin"
             android:text="@string/invite_friends_underlined"
             android:textColor="@color/color_primary"/>
 
@@ -71,8 +71,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/about_invite"
-            android:paddingBottom="@dimen/activity_margin"
             android:paddingTop="@dimen/activity_margin"
+            android:paddingBottom="@dimen/activity_margin"
             android:text="@string/rate_us_underlined"
             android:textColor="@color/color_primary"/>
 
@@ -81,8 +81,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/about_rate_us"
-            android:paddingBottom="@dimen/activity_margin"
             android:paddingTop="@dimen/activity_margin"
+            android:paddingBottom="@dimen/activity_margin"
             android:text="@string/third_party_licences_underlined"
             android:textColor="@color/color_primary"/>
 
@@ -91,8 +91,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/about_license"
-            android:paddingBottom="@dimen/medium_margin"
             android:paddingTop="@dimen/activity_margin"
+            android:paddingBottom="@dimen/medium_margin"
             android:text="@string/follow_us"/>
 
         <ImageView
@@ -103,7 +103,7 @@
             android:src="@drawable/ic_facebook"/>
 
         <ImageView
-            android:id="@+id/about_gplus"
+            android:id="@+id/about_reddit"
             android:layout_width="@dimen/social_logo"
             android:layout_height="@dimen/social_logo"
             android:layout_below="@+id/about_follow_us"
@@ -111,14 +111,14 @@
             android:layout_marginRight="@dimen/medium_margin"
             android:layout_toEndOf="@+id/about_facebook"
             android:layout_toRightOf="@+id/about_facebook"
-            android:src="@drawable/ic_gplus"/>
+            android:src="@drawable/ic_reddit"/>
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_copyright"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
             android:layout_below="@+id/about_facebook"
+            android:layout_alignParentBottom="true"
             android:gravity="center_horizontal|bottom"
             android:paddingTop="@dimen/activity_margin"
             android:text="v1.0\nCopyright © Simple Mobile Tools 2017"/>
