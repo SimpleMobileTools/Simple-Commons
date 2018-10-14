@@ -42,7 +42,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     abstract fun getIsItemSelectable(position: Int): Boolean
 
-    abstract fun getItemSelectionKey(position: Int): String
+    abstract fun getItemSelectionKey(position: Int): String?
 
     abstract fun getItemKeyPosition(key: String): Int
 
@@ -100,7 +100,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         }
 
         val itemKey = getItemSelectionKey(pos)
-        if ((select && selectedKeys.contains(itemKey)) || (!select && !selectedKeys.contains(itemKey))) {
+        if (itemKey == null || (select && selectedKeys.contains(itemKey)) || (!select && !selectedKeys.contains(itemKey))) {
             return
         }
 
