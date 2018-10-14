@@ -52,9 +52,9 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
 
     override fun getIsItemSelectable(position: Int) = false
 
-    override fun getItemKeyPosition(key: String) = fileDirItems.indexOfFirst { it.path == key }
+    override fun getItemKeyPosition(key: Int) = fileDirItems.indexOfFirst { it.path.hashCode() == key }
 
-    override fun getItemSelectionKey(position: Int) = fileDirItems[position].path
+    override fun getItemSelectionKey(position: Int) = fileDirItems[position].path.hashCode()
 
     override fun onViewRecycled(holder: MyRecyclerViewAdapter.ViewHolder) {
         super.onViewRecycled(holder)

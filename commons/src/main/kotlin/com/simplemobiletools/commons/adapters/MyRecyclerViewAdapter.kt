@@ -25,7 +25,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     protected var textColor = baseConfig.textColor
     protected var backgroundColor = baseConfig.backgroundColor
     protected var actModeCallback: MyActionModeCallback
-    protected var selectedKeys = HashSet<String>()
+    protected var selectedKeys = HashSet<Int>()
     protected var positionOffset = 0
 
     private var actMode: ActionMode? = null
@@ -42,9 +42,9 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     abstract fun getIsItemSelectable(position: Int): Boolean
 
-    abstract fun getItemSelectionKey(position: Int): String?
+    abstract fun getItemSelectionKey(position: Int): Int?
 
-    abstract fun getItemKeyPosition(key: String): Int
+    abstract fun getItemKeyPosition(key: Int): Int
 
     protected fun isOneItemSelected() = selectedKeys.size == 1
 
@@ -80,7 +80,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
             override fun onDestroyActionMode(actionMode: ActionMode) {
                 isSelectable = false
-                (selectedKeys.clone() as HashSet<String>).forEach {
+                (selectedKeys.clone() as HashSet<Int>).forEach {
                     val position = getItemKeyPosition(it)
                     if (position != -1) {
                         toggleItemSelection(false, position)
@@ -145,7 +145,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         }
     }
 
-    protected fun isKeySelected(key: String) = selectedKeys.contains(key)
+    protected fun isKeySelected(key: Int) = selectedKeys.contains(key)
 
     protected fun selectAll() {
         val cnt = itemCount - positionOffset
