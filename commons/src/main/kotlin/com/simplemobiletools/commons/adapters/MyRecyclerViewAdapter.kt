@@ -99,8 +99,8 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
             return
         }
 
-        val itemKey = getItemSelectionKey(pos)
-        if (itemKey == null || (select && selectedKeys.contains(itemKey)) || (!select && !selectedKeys.contains(itemKey))) {
+        val itemKey = getItemSelectionKey(pos) ?: return
+        if ((select && selectedKeys.contains(itemKey)) || (!select && !selectedKeys.contains(itemKey))) {
             return
         }
 
