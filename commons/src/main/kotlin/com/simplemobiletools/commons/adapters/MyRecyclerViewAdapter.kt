@@ -147,8 +147,9 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     protected fun isKeySelected(key: Int) = selectedKeys.contains(key)
 
-    protected fun getSelectedItemPositions(keys: List<Int>, sortDescending: Boolean = true): ArrayList<Int> {
+    protected fun getSelectedItemPositions(sortDescending: Boolean = true): ArrayList<Int> {
         val positions = ArrayList<Int>()
+        val keys = selectedKeys.toList()
         keys.forEach {
             val position = getItemKeyPosition(it)
             if (position != -1) {
