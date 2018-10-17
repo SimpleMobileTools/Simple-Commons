@@ -571,7 +571,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                         callback?.invoke(false)
                     }
                 }
-            } catch (e: SecurityException) {
+            } catch (e: Exception) {
                 showErrorToast(e)
                 runOnUiThread {
                     callback?.invoke(false)
