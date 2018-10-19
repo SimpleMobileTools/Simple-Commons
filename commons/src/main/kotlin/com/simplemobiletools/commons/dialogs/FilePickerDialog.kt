@@ -84,17 +84,17 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                 beVisible()
                 setOnClickListener { createNewFolder() }
             }
+        }
 
-            val secondaryFabBottomMargin = activity.resources.getDimension(R.dimen.secondary_fab_bottom_margin).toInt()
-            mDialogView.filepicker_fab_show_hidden.apply {
-                beVisibleIf(!showHidden && canAddShowHiddenButton)
-                (layoutParams as CoordinatorLayout.LayoutParams).bottomMargin = secondaryFabBottomMargin
-                setOnClickListener {
-                    activity.handleHiddenFolderPasswordProtection {
-                        beGone()
-                        showHidden = true
-                        tryUpdateItems()
-                    }
+        val secondaryFabBottomMargin = activity.resources.getDimension(if (showFAB) R.dimen.secondary_fab_bottom_margin else R.dimen.activity_margin).toInt()
+        mDialogView.filepicker_fab_show_hidden.apply {
+            beVisibleIf(!showHidden && canAddShowHiddenButton)
+            (layoutParams as CoordinatorLayout.LayoutParams).bottomMargin = secondaryFabBottomMargin
+            setOnClickListener {
+                activity.handleHiddenFolderPasswordProtection {
+                    beGone()
+                    showHidden = true
+                    tryUpdateItems()
                 }
             }
         }
