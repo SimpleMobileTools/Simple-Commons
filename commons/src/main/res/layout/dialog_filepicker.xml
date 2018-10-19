@@ -15,10 +15,10 @@
             android:id="@+id/filepicker_breadcrumbs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/medium_margin"
             android:paddingLeft="@dimen/activity_margin"
+            android:paddingTop="@dimen/activity_margin"
             android:paddingRight="@dimen/activity_margin"
-            android:paddingTop="@dimen/activity_margin"/>
+            android:paddingBottom="@dimen/medium_margin"/>
 
         <com.simplemobiletools.commons.views.MyRecyclerView
             android:id="@+id/filepicker_list"
@@ -32,12 +32,12 @@
             android:id="@+id/filepicker_fastscroller"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_alignTop="@+id/filepicker_list"
             android:layout_alignBottom="@+id/filepicker_list"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/filepicker_list"
-            android:paddingLeft="@dimen/normal_margin"
-            android:paddingStart="@dimen/normal_margin">
+            android:paddingStart="@dimen/normal_margin"
+            android:paddingLeft="@dimen/normal_margin">
 
             <include layout="@layout/fastscroller_handle_vertical"/>
 
@@ -45,9 +45,18 @@
     </RelativeLayout>
 
     <com.simplemobiletools.commons.views.MyFloatingActionButton
+        android:id="@+id/filepicker_fab_show_hidden"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/activity_margin"
+        android:layout_marginBottom="@dimen/activity_margin"
+        android:src="@drawable/ic_unhide"/>
+
+    <com.simplemobiletools.commons.views.MyFloatingActionButton
         android:id="@+id/filepicker_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/activity_margin"
         android:src="@drawable/ic_plus"
