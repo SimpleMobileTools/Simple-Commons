@@ -192,6 +192,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">Eliminar</string>
+    <string name="remove">Eliminar</string>
     <string name="rename">Canviar el nom</string>
     <string name="share">Compartir</string>
     <string name="share_via">Compartir amb</string>
@@ -231,7 +232,7 @@
     <string name="no">No</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">ADVERTIMENT: s\'eliminarà una carpeta</item>
+        <item quantity="one">ADVERTIMENT: s\'eliminarà %d carpeta</item>
         <item quantity="other">ADVERTIMENT: s\'eliminaran %d carpetes</item>
     </plurals>
 
@@ -410,6 +411,11 @@
     <string name="empty_recycle_bin_confirmation">ASegur que vols buidar la paperera? El fitxer s\'eliminaran definitivament.</string>
     <string name="recycle_bin_empty">La paperera és buida</string>
 
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">Movent %d element a la paperera de reciclage</item>
+        <item quantity="other">Movent %d elements a la paperera de reciclage</item>
+    </plurals>
+
     <!-- Import / Export -->
     <string name="importing">Important…</string>
     <string name="exporting">Exportant…</string>
@@ -542,7 +548,6 @@
     <string name="glide_title">Glide (image loading and caching)</string>
     <string name="picasso_title">Picasso (image loading and caching)</string>
     <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
     <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
     <string name="joda_title">Joda-Time (Java date replacement)</string>
     <string name="stetho_title">Stetho (debugging databases)</string>

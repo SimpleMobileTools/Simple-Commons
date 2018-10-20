@@ -232,7 +232,7 @@
     <string name="no">Hayır</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">UYARI: Bir klasör siliyorsunuz</item>
+        <item quantity="one">UYARI: %d klasör siliyorsunuz</item>
         <item quantity="other">UYARI: %d klasör siliyorsunuz</item>
     </plurals>
 
@@ -408,6 +408,11 @@
     <string name="empty_recycle_bin_confirmation">Geri Dönüşüm Kutusu\'nu boşaltmak istediğinizden emin misiniz? Dosyalar kalıcı olarak kaybolacak.</string>
     <string name="recycle_bin_empty">Geri Dönüşüm Kutusu boş</string>
 
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">Moving %d item into the Recycle Bin</item>
+        <item quantity="other">Moving %d items into the Recycle Bin</item>
+    </plurals>
+
     <!-- Import / Export -->
     <string name="importing">İçe aktarılıyor…</string>
     <string name="exporting">Dışa aktarılıyor…</string>
@@ -539,7 +544,6 @@
     <string name="glide_title">Glide (görüntü yükleme ve önbellekleme)</string>
     <string name="picasso_title">Picasso (görüntü yükleme ve önbellekleme)</string>
     <string name="cropper_title">Android Image Cropper (görüntü kırpma ve döndürme)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (birden çok liste öğesi seçme)</string>
     <string name="rtl_viewpager_title">RtlViewPager (sağdan sola  kaydırma)</string>
     <string name="joda_title">Joda-Time (Java tarih değiştirme)</string>
     <string name="stetho_title">Stetho (hata ayıklama veritabanları)</string>

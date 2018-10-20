@@ -227,12 +227,12 @@
     <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s into the Recycle Bin?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
     <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
-    <string name="do_not_ask_again">Do not ask again in this session</string>
+    <string name="do_not_ask_again">Šiame seanse daugiau neklausti</string>
     <string name="yes">Taip</string>
     <string name="no">Ne</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting a folder</item>
+        <item quantity="one">WARNING: You are deleting %d folder</item>
         <item quantity="other">WARNING: You are deleting %d folders</item>
     </plurals>
 
@@ -425,6 +425,11 @@
     <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
     <string name="recycle_bin_empty">The Recycle Bin is empty</string>
 
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">Moving %d item into the Recycle Bin</item>
+        <item quantity="other">Moving %d items into the Recycle Bin</item>
+    </plurals>
+
     <!-- Import / Export -->
     <string name="importing">Importuojama…</string>
     <string name="exporting">Eksportuojama…</string>
@@ -503,6 +508,7 @@
     <string name="share_text">Sveikas, pažiūrėk %1$s %2$s</string>
     <string name="invite_via">Pakviesti per</string>
     <string name="rate_us_underlined"><u>Įvertinti mus</u></string>
+    <string name="donate">Paaukoti</string>
     <string name="donate_underlined"><u>Paaukoti</u></string>
     <string name="follow_us">Sekti mus</string>
     <string name="copyright">v %1$s\nVisos teisės saugomos© Paprasti mobilūs įrankiai %2$d</string>
@@ -554,7 +560,6 @@
     <string name="glide_title">Glide (Atvaizdų įkėlimui ir talpinimui)</string>
     <string name="picasso_title">Picasso (Atvaizdo įkėlimui ir talpinimui)</string>
     <string name="cropper_title">Android Image Cropper (Atvaizdo apkarpimui ir pasukimui)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (Keleto elementų pasirinkimui)</string>
     <string name="rtl_viewpager_title">RtlViewPager (Puslapių braukimui)</string>
     <string name="joda_title">Joda-Time (Java duomenų pakeitimui)</string>
     <string name="stetho_title">Stetho (Duomenų bazių šifravimui)</string>

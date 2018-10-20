@@ -108,7 +108,7 @@
     <string name="confirm_storage_access_title">外部ストレージのアクセスを確認してください</string>
     <string name="confirm_storage_access_text">次の画面で SDカードのルートフォルダを選択して、書き込みアクセス許可を付与してください</string>
     <string name="confirm_storage_access_text_sd">SDカードの内容が表示されない場合は、こちらをお試しください</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_selection">選択を確認</string>
 
     <plurals name="items">
         <item quantity="one">%d アイテム</item>
@@ -192,7 +192,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">削除</string>
-    <string name="remove">Remove</string>
+    <string name="remove">削除</string>
     <string name="rename">名前の変更</string>
     <string name="share">共有</string>
     <string name="share_via">共有</string>
@@ -205,8 +205,8 @@
     <string name="stop_showing_hidden">非表示項目を表示しない</string>
     <string name="maximum_share_reached">一度に複数のコンテンツを共有することはできません</string>
     <string name="empty_and_disable_recycle_bin">ごみ箱を空にして無効にする</string>
-    <string name="undo">Undo</string>
-    <string name="redo">Redo</string>
+    <string name="undo">元に戻す</string>
+    <string name="redo">やり直し</string>
 
     <!-- Sorting -->
     <string name="sort_by">並べ替え</string>
@@ -232,7 +232,7 @@
     <string name="no">いいえ</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">警告: フォルダを削除しようとしています</item>
+        <item quantity="one">警告: %d 個のフォルダを削除しようとしています</item>
         <item quantity="other">警告: %d 個のフォルダを削除しようとしています</item>
     </plurals>
 
@@ -249,12 +249,12 @@
     <string name="fingerprint">指紋</string>
     <string name="add_fingerprint">指紋を追加</string>
     <string name="place_finger">指紋センサーに指を置いてください</string>
-    <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
+    <string name="authentication_failed">認証に失敗しました</string>
+    <string name="authentication_blocked">認証がブロックされました、しばらくしてからもう一度お試しください</string>
+    <string name="no_fingerprints_registered">指紋がまだ登録されていません、お使いの端末の設定でいくつか追加してください</string>
     <string name="go_to_settings">設定に移動</string>
     <string name="protection_setup_successfully">パスワードの設定が完了しました。パスワードを紛失した場合は、アプリを再インストールしてください</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="fingerprint_setup_successfully">指紋認証の設定が完了しました。何らかの問題によりアプリを再インストールした場合には、再度設定し直してください。</string>
 
     <!-- Times -->
     <string name="yesterday">昨日</string>
@@ -386,12 +386,12 @@
     <string name="vibrate_on_button_press">Vibrate on button press</string>
     <string name="move_items_into_recycle_bin">削除の代わりにアイテムをごみ箱に移動する</string>
     <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
-    <string name="empty_recycle_bin">Empty the Recycle Bin</string>
-    <string name="force_portrait_mode">Force portrait mode</string>
+    <string name="empty_recycle_bin">ゴミ箱を空にする</string>
+    <string name="force_portrait_mode">ポートレートモードを強制する</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
+    <string name="security">セキュリティ</string>
     <string name="scrolling">Scrolling</string>
     <string name="file_operations">ファイル操作</string>
     <string name="recycle_bin">ごみ箱</string>
@@ -400,24 +400,29 @@
     <string name="text">Text</string>
 
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restore this file</string>
-    <string name="restore_selected_files">Restore selected files</string>
-    <string name="restore_all_files">Restore all files</string>
-    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
-    <string name="files_restored_successfully">Files have been restored successfully</string>
-    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
-    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
+    <string name="restore_this_file">このファイルを復元</string>
+    <string name="restore_selected_files">選択したファイルを復元</string>
+    <string name="restore_all_files">すべてのファイルを復元</string>
+    <string name="recycle_bin_emptied">ゴミ箱を空にしました</string>
+    <string name="files_restored_successfully">ファイルが正常に復元されました</string>
+    <string name="empty_recycle_bin_confirmation">ごみ箱を空にしてもよろしいですか？この操作は元に戻すことができません。</string>
+    <string name="recycle_bin_empty">ゴミ箱は空です</string>
+
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">%d個のアイテムをごみ箱に移動しています</item>
+        <item quantity="other">%d個のアイテムをごみ箱に移動しています</item>
+    </plurals>
 
     <!-- Import / Export -->
-    <string name="importing">Importing…</string>
-    <string name="exporting">Exporting…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing">インポート中…</string>
+    <string name="exporting">エクスポート中…</string>
+    <string name="importing_successful">正常にインポートされました</string>
+    <string name="exporting_successful">正常にエクスポートされました</string>
+    <string name="importing_failed">インポートに失敗しました</string>
+    <string name="exporting_failed">エクスポートに失敗しました</string>
+    <string name="importing_some_entries_failed">一部のエントリのインポートに失敗しました</string>
+    <string name="exporting_some_entries_failed">一部のエントリのエクスポートに失敗しました</string>
+    <string name="no_entries_for_exporting">エクスポートするエントリが見つかりませんでした</string>
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
@@ -540,14 +545,13 @@
     <string name="glide_title">Glide (画像ローディングとキャッシング)</string>
     <string name="picasso_title">Picasso (画像ローディングとキャッシング)</string>
     <string name="cropper_title">Android Image Cropper (画像のトリミングと回転)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (複数選択リストアイテム)</string>
     <string name="rtl_viewpager_title">RtlViewPager (右から左へのスワイプ)</string>
     <string name="joda_title">Joda-Time (Java date代替)</string>
     <string name="stetho_title">Stetho (データベースのデバッグ)</string>
     <string name="otto_title">Otto (イベントバス)</string>
     <string name="photoview_title">PhotoView (GIF画像のズーム表示)</string>
     <string name="pattern_title">PatternLockView (パターン認証)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="reprint_title">Reprint (指紋保護)</string>
     <string name="gif_drawable_title">Gif Drawable (GIF画像の読み込み)</string>
     <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
     <string name="robolectric_title">Robolectric (testing framework)</string>
@@ -555,8 +559,8 @@
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (メモリリークの検出)</string>
     <string name="number_picker_title">Number Picker (customizable number picker)</string>
-    <string name="exoplayer_title">ExoPlayer (video player)</string>
+    <string name="exoplayer_title">ExoPlayer (動画プレーヤー)</string>
     <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
     <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
-    <string name="filters_title">Android Photo Filters (image filters)</string>
+    <string name="filters_title">Android Photo Filters (画像フィルタ)</string>
 </resources>

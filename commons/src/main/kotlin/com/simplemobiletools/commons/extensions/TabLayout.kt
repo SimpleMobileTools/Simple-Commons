@@ -1,6 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
-import android.support.design.widget.TabLayout
+import com.google.android.material.tabs.TabLayout
 
 fun TabLayout.onTabSelectionChanged(tabUnselectedAction: (inactiveTab: TabLayout.Tab) -> Unit, tabSelectedAction: (activeTab: TabLayout.Tab) -> Unit) =
         setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {

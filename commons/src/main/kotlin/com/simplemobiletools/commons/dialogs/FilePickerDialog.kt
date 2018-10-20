@@ -2,9 +2,10 @@ package com.simplemobiletools.commons.dialogs
 
 import android.os.Environment
 import android.os.Parcelable
-import android.support.v7.app.AlertDialog
-import android.support.v7.widget.LinearLayoutManager
 import android.view.KeyEvent
+import androidx.appcompat.app.AlertDialog
+import androidx.coordinatorlayout.widget.CoordinatorLayout
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.FilepickerItemsAdapter
@@ -30,8 +31,9 @@ import java.util.*
 class FilePickerDialog(val activity: BaseSimpleActivity,
                        var currPath: String = Environment.getExternalStorageDirectory().toString(),
                        val pickFile: Boolean = true,
-                       val showHidden: Boolean = false,
+                       var showHidden: Boolean = false,
                        val showFAB: Boolean = false,
+                       val canAddShowHiddenButton: Boolean = false,
                        val callback: (pickedPath: String) -> Unit) : Breadcrumbs.BreadcrumbsListener {
 
     private var mFirstUpdate = true
@@ -81,6 +83,19 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             mDialogView.filepicker_fab.apply {
                 beVisible()
                 setOnClickListener { createNewFolder() }
+            }
+        }
+
+        val secondaryFabBottomMargin = activity.resources.getDimension(if (showFAB) R.dimen.secondary_fab_bottom_margin else R.dimen.activity_margin).toInt()
+        mDialogView.filepicker_fab_show_hidden.apply {
+            beVisibleIf(!showHidden && canAddShowHiddenButton)
+            (layoutParams as CoordinatorLayout.LayoutParams).bottomMargin = secondaryFabBottomMargin
+            setOnClickListener {
+                activity.handleHiddenFolderPasswordProtection {
+                    beGone()
+                    showHidden = true
+                    tryUpdateItems()
+                }
             }
         }
 
@@ -134,7 +149,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         adapter.addVerticalDividers(true)
 
         val layoutManager = mDialogView.filepicker_list.layoutManager as LinearLayoutManager
-        mScrollStates[mPrevPath.trimEnd('/')] = layoutManager.onSaveInstanceState()
+        mScrollStates[mPrevPath.trimEnd('/')] = layoutManager.onSaveInstanceState()!!
 
         mDialogView.apply {
             filepicker_list.adapter = adapter

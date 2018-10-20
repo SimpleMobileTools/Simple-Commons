@@ -9,7 +9,10 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withC
 import com.bumptech.glide.request.RequestOptions
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
-import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.extensions.formatSize
+import com.simplemobiletools.commons.extensions.getColoredDrawableWithColor
+import com.simplemobiletools.commons.extensions.getOTGPublicPath
+import com.simplemobiletools.commons.extensions.hasOTGConnected
 import com.simplemobiletools.commons.helpers.OTG_PATH
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.MyRecyclerView
@@ -29,18 +32,14 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
 
     override fun getActionMenuId() = 0
 
-    override fun prepareItemSelection(viewHolder: ViewHolder) {}
-
-    override fun markViewHolderSelection(select: Boolean, viewHolder: ViewHolder?) {}
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.filepicker_list_item, parent)
 
     override fun onBindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int) {
         val fileDirItem = fileDirItems[position]
-        val view = holder.bindView(fileDirItem, true, false) { itemView, adapterPosition ->
+        holder.bindView(fileDirItem, true, false) { itemView, adapterPosition ->
             setupView(itemView, fileDirItem)
         }
-        bindViewHolder(holder, position, view)
+        bindViewHolder(holder)
     }
 
     override fun getItemCount() = fileDirItems.size
@@ -53,10 +52,14 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
 
     override fun getIsItemSelectable(position: Int) = false
 
+    override fun getItemKeyPosition(key: Int) = fileDirItems.indexOfFirst { it.path.hashCode() == key }
+
+    override fun getItemSelectionKey(position: Int) = fileDirItems[position].path.hashCode()
+
     override fun onViewRecycled(holder: MyRecyclerViewAdapter.ViewHolder) {
         super.onViewRecycled(holder)
-        if (!activity.isActivityDestroyed()) {
-            Glide.with(activity).clear(holder.itemView?.list_item_icon!!)
+        if (!activity.isDestroyed) {
+            Glide.with(activity).clear(holder.itemView.list_item_icon!!)
         }
     }
 
@@ -90,7 +93,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
                     path
                 }
 
-                if (!activity.isActivityDestroyed()) {
+                if (!activity.isDestroyed) {
                     if (hasOTGConnected && itemToLoad is String && itemToLoad.startsWith(OTG_PATH)) {
                         itemToLoad = itemToLoad.getOTGPublicPath(activity)
                     }

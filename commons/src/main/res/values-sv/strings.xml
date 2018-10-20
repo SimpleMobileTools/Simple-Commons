@@ -9,15 +9,15 @@
     <string name="open_with">Öppna med</string>
     <string name="no_app_found">Ingen giltig app hittades</string>
     <string name="set_as">Använd som</string>
-    <string name="value_copied_to_clipboard">Värdet har kopierats till urklipp</string>
+    <string name="value_copied_to_clipboard">Värdet har kopierats till Urklipp</string>
     <string name="unknown">Okänd</string>
     <string name="always">Alltid</string>
     <string name="never">Aldrig</string>
     <string name="details">Information</string>
     <string name="notes">Anteckningar</string>
     <string name="deleting_folder">Tar bort mappen \'%s\'</string>
-    <string name="none">None</string>
-    <string name="label">Label</string>
+    <string name="none">Ingen</string>
+    <string name="label">Etikett</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoriter</string>
@@ -122,8 +122,8 @@
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Deleting %d item</item>
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="one">Tar bort %d objekt</item>
+        <item quantity="other">Tar bort %d objekt</item>
     </plurals>
 
     <!-- Storages -->
@@ -204,9 +204,9 @@
     <string name="temporarily_show_hidden">Visa dolda objekt tillfälligt</string>
     <string name="stop_showing_hidden">Sluta visa dolda objekt</string>
     <string name="maximum_share_reached">Du kan inte dela så här mycket innehåll på en gång</string>
-    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
-    <string name="undo">Undo</string>
-    <string name="redo">Redo</string>
+    <string name="empty_and_disable_recycle_bin">Töm och inaktivera Papperskorgen</string>
+    <string name="undo">Ångra</string>
+    <string name="redo">Gör om</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortera efter</string>
@@ -232,7 +232,7 @@
     <string name="no">Nej</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting a folder</item>
+        <item quantity="one">WARNING: You are deleting %d folder</item>
         <item quantity="other">WARNING: You are deleting %d folders</item>
     </plurals>
 
@@ -257,8 +257,8 @@
     <string name="fingerprint_setup_successfully">Skyddet har ställts in. Installera om appen om du inte kan ta bort skyddet.</string>
 
     <!-- Times -->
-    <string name="yesterday">Yesterday</string>
-    <string name="today">Today</string>
+    <string name="yesterday">Igår</string>
+    <string name="today">Idag</string>
     <string name="tomorrow">Imorgon</string>
     <string name="seconds_raw">sekunder</string>
     <string name="minutes_raw">minuter</string>
@@ -342,7 +342,7 @@
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Återstående tid tills alarmet ringer:\n%s</string>
-    <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
+    <string name="reminder_triggers_in">Återstående tid tills påminnelsen aktiveras:\n%s</string>
     <string name="alarm_warning">Kontrollera att alarmet fungerar som det ska innan du förlitar dig på det. Det kanske inte fungerar som det ska på grund av batterisparrelaterade systembegränsningar.</string>
     <string name="reminder_warning">Kontrollera att påminnelserna fungerar som de ska innan du förlitar dig på dem. De kanske inte fungerar som de ska på grund av batterisparrelaterade systembegränsningar.</string>
     <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
@@ -360,7 +360,7 @@
 
     <!-- Settings -->
     <string name="settings">Inställningar</string>
-    <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Köp Simple Thank You</string>
     <string name="customize_colors">Anpassa färger</string>
     <string name="customize_widget_colors">Anpassa widgetens färger</string>
     <string name="use_english_language">Använd engelska</string>
@@ -407,6 +407,11 @@
     <string name="files_restored_successfully">Files have been restored successfully</string>
     <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
     <string name="recycle_bin_empty">The Recycle Bin is empty</string>
+
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">Flyttar %d objekt till Papperskorgen</item>
+        <item quantity="other">Flyttar %d objekt till Papperskorgen</item>
+    </plurals>
 
     <!-- Import / Export -->
     <string name="importing">Importerar…</string>
@@ -540,7 +545,6 @@
     <string name="glide_title">Glide (inläsning och cachning av bilder)</string>
     <string name="picasso_title">Picasso (inläsning och cachning av bilder)</string>
     <string name="cropper_title">Android Image Cropper (beskärning och rotering av bilder)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (markering av flera listobjekt)</string>
     <string name="rtl_viewpager_title">RtlViewPager (höger-till-vänster-svepning)</string>
     <string name="joda_title">Joda-Time (ersättning för Javas datumklass)</string>
     <string name="stetho_title">Stetho (avlusning av databaser)</string>

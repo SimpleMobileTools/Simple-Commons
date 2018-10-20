@@ -1,7 +1,7 @@
 package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
-import android.support.v7.app.AlertDialog
+import androidx.appcompat.app.AlertDialog
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.simplemobiletools.commons.R

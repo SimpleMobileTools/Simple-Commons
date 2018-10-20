@@ -1,7 +1,7 @@
 package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
-import android.support.v7.app.AlertDialog
+import androidx.appcompat.app.AlertDialog
 import android.view.LayoutInflater
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.setupDialogStuff

@@ -42,7 +42,7 @@ class AboutActivity : BaseSimpleActivity() {
         setupInvite()
         setupLicense()
         setupFacebook()
-        setupGPlus()
+        setupReddit()
         setupCopyright()
     }
 
@@ -163,9 +163,9 @@ class AboutActivity : BaseSimpleActivity() {
         }
     }
 
-    private fun setupGPlus() {
-        about_gplus.setOnClickListener {
-            launchViewIntent("https://plus.google.com/communities/104880861558693868382")
+    private fun setupReddit() {
+        about_reddit.setOnClickListener {
+            launchViewIntent("https://www.reddit.com/r/SimpleMobileTools")
         }
     }
 

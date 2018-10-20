@@ -201,7 +201,7 @@
     <string name="unhide">Nicht verstecken</string>
     <string name="hide_folder">Ordner verstecken</string>
     <string name="unhide_folder">Ordner nicht verstecken</string>
-    <string name="temporarily_show_hidden">Verstecktes kurz zeigen</string>
+    <string name="temporarily_show_hidden">Verstecktes temporär zeigen</string>
     <string name="stop_showing_hidden">Verstecktes wieder verbergen</string>
     <string name="maximum_share_reached">So viel Inhalt kann nicht auf einmal geteilt werden</string>
     <string name="empty_and_disable_recycle_bin">Papierkorb leeren und deaktivieren</string>
@@ -232,7 +232,7 @@
     <string name="no">Nein</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNUNG: Ein Ordner soll gelöscht werden</item>
+        <item quantity="one">WARNUNG: %d Ordner soll gelöscht werden</item>
         <item quantity="other">WARNUNG: %d Ordner sollen gelöscht werden</item>
     </plurals>
 
@@ -408,6 +408,11 @@
     <string name="empty_recycle_bin_confirmation">Papierkorb wirklich leeren? Die Dateien sind dann unwiederbringlich gelöscht.</string>
     <string name="recycle_bin_empty">Der Papierkorb ist leer</string>
 
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">Moving %d item into the Recycle Bin</item>
+        <item quantity="other">Moving %d items into the Recycle Bin</item>
+    </plurals>
+
     <!-- Import / Export -->
     <string name="importing">Importiere…</string>
     <string name="exporting">Exportiere…</string>
@@ -539,7 +544,6 @@
     <string name="glide_title">Glide (Bilder laden und zwischenspeichern)</string>
     <string name="picasso_title">Picasso (Bilder laden und zwischenspeichern)</string>
     <string name="cropper_title">Android Image Cropper (Bilder zuschneiden und rotieren)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (Mehrfachauswahl in Listen)</string>
     <string name="rtl_viewpager_title">RtlViewPager (Rechts-Links-Wischen)</string>
     <string name="joda_title">Joda-Time (Ersatz für Datums-Implementierung in Java)</string>
     <string name="stetho_title">Stetho (Datenbanken debuggen)</string>

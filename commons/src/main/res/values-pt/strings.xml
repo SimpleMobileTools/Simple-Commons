@@ -16,8 +16,8 @@
     <string name="details">Detalhes</string>
     <string name="notes">Notas</string>
     <string name="deleting_folder">A apagar a pasta \'%s\'</string>
-    <string name="none">None</string>
-    <string name="label">Label</string>
+    <string name="none">Nenhuma</string>
+    <string name="label">Etiqueta</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
@@ -232,7 +232,7 @@
     <string name="no">Não</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">AVISO: está prestes a apagar uma pasta</item>
+        <item quantity="one">AVISO: está prestes a apagar %d pasta</item>
         <item quantity="other">AVISO: está prestes a apagar %d pastas</item>
     </plurals>
 
@@ -345,7 +345,7 @@
     <string name="reminder_triggers_in">O lembrete está definido para daqui a:\n%s</string>
     <string name="alarm_warning">Certifique-se de que o alarme está a funcionar corretamente antes de o utilizar na plenitude. Pode ter um comportamento errático devido a restrições do sistema.</string>
     <string name="reminder_warning">Certifique-se de que o lembrete está a funcionar corretamente antes de o utilizar na plenitude. Pode ter um comportamento errático devido a restrições do sistema.</string>
-    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
+    <string name="notifications_disabled">As notificações desta aplicação estão desativadas. Aceda às definições do dispositivo para as poder ativar.</string>
 
     <!-- Alarms -->
     <string name="alarm">Alarme</string>
@@ -407,6 +407,11 @@
     <string name="files_restored_successfully">Os ficheiros foram restaurados</string>
     <string name="empty_recycle_bin_confirmation">Tem a certeza de que deseja esvaziar a reciclagem? Todos os itens serão apagados permanentemente.</string>
     <string name="recycle_bin_empty">A reciclagem está vazia</string>
+
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">A mover %d item para a reciclagem</item>
+        <item quantity="other">A mover %d itens para a reciclagem</item>
+    </plurals>
 
     <!-- Import / Export -->
     <string name="importing">A importar…</string>
@@ -483,7 +488,7 @@
     <string name="more_apps_underlined"><u>Mais aplicações</u></string>
     <string name="third_party_licences_underlined"><u>Licenças de terceiros</u></string>
     <string name="invite_friends_underlined"><u>Convidar amigos</u></string>
-    <string name="share_text">Olá, experimente %1$s em %2$s</string>
+    <string name="share_text">Olá, experimenta %1$s em %2$s</string>
     <string name="invite_via">Convidar por</string>
     <string name="rate_us_underlined"><u>Avalie-nos na Play Store</u></string>
     <string name="donate">Donativos</string>
@@ -508,8 +513,8 @@
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
-            Olá,<br><br>
-            para que saibas, foi disponibilizada recentemente uma nova aplicação:<br><br>
+            Olá.<br><br>
+            Para que saibas, foi disponibilizada recentemente uma nova aplicação:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             Podes descarregar a nova aplicação carregando no título.<br><br>
             Obrigado
@@ -540,7 +545,6 @@
     <string name="glide_title">Glide (carregamento e cache de imagens)</string>
     <string name="picasso_title">Picasso (carregamento e cache de imagens)</string>
     <string name="cropper_title">Android Image Cropper (recorte e rotação de imagens)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (seleção múltipla de itens)</string>
     <string name="rtl_viewpager_title">RtlViewPager (deslizar à direita/esquerda)</string>
     <string name="joda_title">Joda-Time (sustituto para Java date)</string>
     <string name="stetho_title">Stetho (depuração a bases de dados)</string>

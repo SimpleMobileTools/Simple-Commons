@@ -408,6 +408,11 @@
     <string name="empty_recycle_bin_confirmation">Er du sikker på at du vil tømme papirkurven? Filerne vil ikke kunne genskabes.</string>
     <string name="recycle_bin_empty">Papirkurven er tom</string>
 
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">Flytter en fil til papirkurven</item>
+        <item quantity="other">Flytter %d filer til papirkurven</item>
+    </plurals>
+
     <!-- Import / Export -->
     <string name="importing">Importerer…</string>
     <string name="exporting">Eksporterer…</string>
@@ -539,7 +544,6 @@
     <string name="glide_title">Glide (billedindlæsning og -caching)</string>
     <string name="picasso_title">Picasso (billedindlæsning og -caching)</string>
     <string name="cropper_title">Android Image Cropper (beskær og roter billede)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (vælger flere elementer)</string>
     <string name="rtl_viewpager_title">RtlViewPager (højre til venstre-swiping)</string>
     <string name="joda_title">Joda-Time (Java-dato-erstatning)</string>
     <string name="stetho_title">Stetho (debugger databaser)</string>

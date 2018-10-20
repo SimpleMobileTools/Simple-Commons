@@ -3,8 +3,7 @@ package com.simplemobiletools.commons.views
 import android.content.Context
 import android.util.AttributeSet
 import android.view.MotionEvent
-
-import com.booking.rtlviewpager.RtlViewPager
+import com.duolingo.open.rtlviewpager.RtlViewPager
 
 class MyViewPager : RtlViewPager {
 

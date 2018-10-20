@@ -2,7 +2,7 @@ package com.simplemobiletools.commons.views
 
 import android.content.Context
 import android.content.res.ColorStateList
-import android.support.v7.widget.AppCompatRadioButton
+import androidx.appcompat.widget.AppCompatRadioButton
 import android.util.AttributeSet
 import com.simplemobiletools.commons.R
 

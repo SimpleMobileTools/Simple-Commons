@@ -235,7 +235,7 @@
     <string name="no">Nie</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">UPOZORNENIE: Chystáte sa vymazať priečinok</item>
+        <item quantity="one">UPOZORNENIE: Chystáte sa vymazať %d priečinok</item>
         <item quantity="few">UPOZORNENIE: Chystáte sa vymazať %d priečinky</item>
         <item quantity="other">UPOZORNENIE: Chystáte sa vymazať %d priečinkov</item>
     </plurals>
@@ -429,6 +429,12 @@
     <string name="empty_recycle_bin_confirmation">Ste si istý, že chcete vysypať odpadkový kôš? Súbory budú navždy stratené.</string>
     <string name="recycle_bin_empty">Odpadkový kôš je prázdny</string>
 
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">%d položka sa presúva do odpadkového koša</item>
+        <item quantity="few">%d položky sa presúvajú do odpadkového koša</item>
+        <item quantity="other">%d položiek sa presúva do odpadkového koša</item>
+    </plurals>
+
     <!-- Import / Export -->
     <string name="importing">Importovanie…</string>
     <string name="exporting">Exportovanie…</string>
@@ -561,7 +567,6 @@
     <string name="glide_title">Glide (načítavanie a cachovanie obrázkov)</string>
     <string name="picasso_title">Picasso (načítavanie a cachovanie obrázkov)</string>
     <string name="cropper_title">Android Image Cropper (orezávanie a otáčanie obrázkov)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (označovanie viacerých položiek zo zoznamu)</string>
     <string name="rtl_viewpager_title">RtlViewPager (swipovanie sprava vľavo)</string>
     <string name="joda_title">Joda-Time (náhrada dátumov v Jave)</string>
     <string name="stetho_title">Stetho (odladenie databáz)</string>

@@ -235,7 +235,7 @@
     <string name="no">Ne</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">UPOZORENJE: Brišete mapu</item>
+        <item quantity="one">UPOZORENJE: Brišete %d mapu</item>
         <item quantity="other">UPOZORENJE: Brišete %d mapa</item>
     </plurals>
 
@@ -428,6 +428,11 @@
     <string name="empty_recycle_bin_confirmation">Jeste li sigurni da želite isprazniti koš za smeće? Datoteke će biti trajno izgubljene.</string>
     <string name="recycle_bin_empty">Koš za smeće je prazan</string>
 
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">Moving %d item into the Recycle Bin</item>
+        <item quantity="other">Moving %d items into the Recycle Bin</item>
+    </plurals>
+
     <!-- Import / Export -->
     <string name="importing">Uvoz…</string>
     <string name="exporting">Izvoz…</string>
@@ -560,7 +565,6 @@
     <string name="glide_title">Glide (učitavanje slika i predmemoriranje)</string>
     <string name="picasso_title">Picasso (učitavanje slike i predmemoriranje)</string>
     <string name="cropper_title">Android Image Cropper (rezanje slika i rotacija)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (odabir više stavki popisa)</string>
     <string name="rtl_viewpager_title">RtlViewPager (pomicanje ulijevo ili udesno)</string>
     <string name="joda_title">Joda-Time (zamjena Java datuma)</string>
     <string name="stetho_title">Stetho (baza podataka za uklanjanje pogrešaka)</string>

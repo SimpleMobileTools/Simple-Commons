@@ -7,9 +7,9 @@ import android.content.Context
 import android.os.AsyncTask
 import android.os.Handler
 import android.provider.MediaStore
-import android.support.v4.app.NotificationCompat
-import android.support.v4.provider.DocumentFile
-import android.support.v4.util.Pair
+import androidx.core.app.NotificationCompat
+import androidx.core.util.Pair
+import androidx.documentfile.provider.DocumentFile
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
@@ -172,8 +172,8 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 }
 
                 val oldPath = "${source.path}/${child.name}"
-                val oldFileDirItem = FileDirItem(oldPath, child.name, child.isDirectory, 0, child.length())
-                val newFileDirItem = FileDirItem(newPath, child.name, child.isDirectory)
+                val oldFileDirItem = FileDirItem(oldPath, child.name!!, child.isDirectory, 0, child.length())
+                val newFileDirItem = FileDirItem(newPath, child.name!!, child.isDirectory)
                 copy(oldFileDirItem, newFileDirItem)
             }
             mTransferredFiles.add(source)

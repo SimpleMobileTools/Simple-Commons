@@ -233,7 +233,7 @@
     <string name="no">Nie</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">UWAGA: usuwasz folder</item>
+        <item quantity="one">UWAGA: usuwasz %d folder</item>
         <item quantity="few">UWAGA: usuwasz %d foldery</item>
         <item quantity="other">UWAGA: usuwasz %d folderów</item>
     </plurals>
@@ -425,6 +425,11 @@
     <string name="empty_recycle_bin_confirmation">Czy na pewno chcesz opróżnić kosz? Pliki zostaną bezpowrotnie utracone.</string>
     <string name="recycle_bin_empty">Kosz jest pusty</string>
 
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">Moving %d item into the Recycle Bin</item>
+        <item quantity="other">Moving %d items into the Recycle Bin</item>
+    </plurals>
+
     <!-- Import / Export -->
     <string name="importing">Importuję…</string>
     <string name="exporting">Eksportuję…</string>
@@ -555,7 +560,6 @@
     <string name="glide_title">Glide (ładowanie obrazów i ich przechowywanie w pamięci podręcznej)</string>
     <string name="picasso_title">Picasso (ładowanie obrazów i ich przechowywanie w pamięci podręcznej)</string>
     <string name="cropper_title">Android Image Cropper (przycinanie i obracanie obrazów)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (wybieranie wielu elementów listy)</string>
     <string name="rtl_viewpager_title">RtlViewPager (przeciąganie ekranu od prawej do lewej strony)</string>
     <string name="joda_title">Joda-Time (podmienianie daty w języku Java)</string>
     <string name="stetho_title">Stetho (bazy danych debugowania)</string>

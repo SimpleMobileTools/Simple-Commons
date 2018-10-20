@@ -232,7 +232,7 @@
     <string name="no">No</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting a folder</item>
+        <item quantity="one">WARNING: You are deleting %d folder</item>
         <item quantity="other">WARNING: You are deleting %d folders</item>
     </plurals>
 
@@ -408,6 +408,11 @@
     <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
     <string name="recycle_bin_empty">The Recycle Bin is empty</string>
 
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">Moving %d item into the Recycle Bin</item>
+        <item quantity="other">Moving %d items into the Recycle Bin</item>
+    </plurals>
+
     <!-- Import / Export -->
     <string name="importing">Importing…</string>
     <string name="exporting">Exporting…</string>
@@ -540,7 +545,6 @@
     <string name="glide_title">Glide (image loading and caching)</string>
     <string name="picasso_title">Picasso (image loading and caching)</string>
     <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
     <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
     <string name="joda_title">Joda-Time (Java date replacement)</string>
     <string name="stetho_title">Stetho (debugging databases)</string>

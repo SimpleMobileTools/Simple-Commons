@@ -16,8 +16,8 @@
     <string name="details">详细</string>
     <string name="notes">笔记</string>
     <string name="deleting_folder">正在删除目录 \'%s\'</string>
-    <string name="none">None</string>
-    <string name="label">Label</string>
+    <string name="none">无</string>
+    <string name="label">标签</string>
 
     <!-- Favorites -->
     <string name="favorites">收藏</string>
@@ -232,7 +232,7 @@
     <string name="no">否</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">警告: 你正在删除此目录</item>
+        <item quantity="one">警告: 你正在删除 %d 目录</item>
         <item quantity="other">警告: 你正在删除 %d 目录</item>
     </plurals>
 
@@ -345,7 +345,7 @@
     <string name="reminder_triggers_in">距提醒触发还有：\n%s</string>
     <string name="alarm_warning">在依赖它之前，请确保闹钟能够正常工作。由于系统与节电有关的限制，它有时可能会失灵。</string>
     <string name="reminder_warning">在依赖它们之前，请确保提醒能够正常工作。由于系统与节电有关的限制，它们有时可能会失灵。</string>
-    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
+    <string name="notifications_disabled">此应用程序的通知已被禁用。请在您的设备设置中启用它们。</string>
 
     <!-- Alarms -->
     <string name="alarm">闹钟</string>
@@ -407,6 +407,11 @@
     <string name="files_restored_successfully">恢复文件成功</string>
     <string name="empty_recycle_bin_confirmation">您确定要清空回收站吗？这些文件将永久丢失。</string>
     <string name="recycle_bin_empty">回收站是空的</string>
+
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">正在移动 %d 个项目到回收站</item>
+        <item quantity="other">正在移动 %d 个项目到回收站</item>
+    </plurals>
 
     <!-- Import / Export -->
     <string name="importing">正在导入…</string>
@@ -533,28 +538,27 @@
     <!-- License -->
     <string name="notice">此应用使用了以下三方库。谢谢。</string>
     <string name="third_party_licences">开放源代码</string>
-    <string name="kotlin_title">Kotlin (编程语言)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (可缩放视图)</string>
-    <string name="glide_title">Glide (图像加载和缓存)</string>
-    <string name="picasso_title">Picasso (图像加载和缓存)</string>
-    <string name="cropper_title">Android Image Cropper (图像裁剪和旋转)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (多列表项选择)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (从右向左滑动)</string>
-    <string name="joda_title">Joda-Time (Java日期替换)</string>
-    <string name="stetho_title">Stetho (调试数据库)</string>
-    <string name="otto_title">Otto (事件总线)</string>
-    <string name="photoview_title">PhotoView (可缩放 GIFs)</string>
-    <string name="pattern_title">PatternLockView (图案保护)</string>
-    <string name="reprint_title">Reprint (指纹保护)</string>
-    <string name="gif_drawable_title">Gif Drawable (加载 GIFs)</string>
-    <string name="autofittextview_title">AutoFitTextView (调整文本大小)</string>
-    <string name="robolectric_title">Robolectric (测试框架)</string>
-    <string name="espresso_title">Espresso (测试助手)</string>
-    <string name="gson_title">Gson (JSON 解析器)</string>
-    <string name="leak_canary_title">Leak Canary (内存泄漏监测器)</string>
-    <string name="number_picker_title">Number Picker (可定制的号码选择器)</string>
-    <string name="exoplayer_title">ExoPlayer (视频播放器)</string>
-    <string name="panorama_view_title">VR Panorama View (显示全景图)</string>
-    <string name="sanselan_title">Apache Sanselan (读取图像元数据)</string>
-    <string name="filters_title">Android Photo Filters (图像过滤器)</string>
+    <string name="kotlin_title">Kotlin (programming language)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
+    <string name="glide_title">Glide (image loading and caching)</string>
+    <string name="picasso_title">Picasso (image loading and caching)</string>
+    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
+    <string name="joda_title">Joda-Time (Java date replacement)</string>
+    <string name="stetho_title">Stetho (debugging databases)</string>
+    <string name="otto_title">Otto (event bus)</string>
+    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
+    <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
+    <string name="gson_title">Gson (JSON parser)</string>
+    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="number_picker_title">Number Picker (customizable number picker)</string>
+    <string name="exoplayer_title">ExoPlayer (video player)</string>
+    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
+    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
+    <string name="filters_title">Android Photo Filters (image filters)</string>
 </resources>

@@ -87,7 +87,6 @@ const val SNOOZE_TIME = "snooze_delay"
 const val VIBRATE_ON_BUTTON_PRESS = "vibrate_on_button_press"
 const val YOUR_ALARM_SOUNDS = "your_alarm_sounds"
 const val SILENT = "silent"
-const val FORCE_PORTRAIT = "force_portrait"
 const val OTG_PARTITION = "otg_partition"
 const val IS_USING_MODIFIED_APP_ICON = "is_using_modified_app_icon"
 const val INITIAL_WIDGET_HEIGHT = "initial_widget_height"
@@ -101,7 +100,7 @@ internal const val LICENSE_KOTLIN = 1
 const val LICENSE_SUBSAMPLING = 2
 const val LICENSE_GLIDE = 4
 const val LICENSE_CROPPER = 8
-const val LICENSE_MULTISELECT = 16
+const val LICENSE_FILTERS = 16
 const val LICENSE_RTL = 32
 const val LICENSE_JODA = 64
 const val LICENSE_STETHO = 128
@@ -120,7 +119,6 @@ const val LICENSE_NUMBER_PICKER = 524288
 const val LICENSE_EXOPLAYER = 1048576
 const val LICENSE_PANORAMA_VIEW = 2097152
 const val LICENSE_SANSELAN = 4194304
-const val LICENSE_FILTERS = 8388608
 
 // global intents
 const val OPEN_DOCUMENT_TREE = 1000
@@ -215,13 +213,10 @@ val appIconColorStrings = arrayListOf(
 
 fun isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 
-fun isJellyBean1Plus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1
-fun isAndroidFour() = Build.VERSION.SDK_INT <= Build.VERSION_CODES.KITKAT_WATCH
-fun isKitkatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
-fun isLollipopPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
 fun isMarshmallowPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
 fun isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
 fun isOreoPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
+fun isPiePlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
 
 fun getDateFormats() = arrayListOf(
         "yyyy-MM-dd",

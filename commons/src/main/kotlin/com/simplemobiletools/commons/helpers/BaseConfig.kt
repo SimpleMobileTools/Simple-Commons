@@ -235,10 +235,6 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getString(YOUR_ALARM_SOUNDS, "")
         set(yourAlarmSounds) = prefs.edit().putString(YOUR_ALARM_SOUNDS, yourAlarmSounds).apply()
 
-    var forcePortrait: Boolean
-        get() = prefs.getBoolean(FORCE_PORTRAIT, true)
-        set(forcePortrait) = prefs.edit().putBoolean(FORCE_PORTRAIT, forcePortrait).apply()
-
     var isUsingModifiedAppIcon: Boolean
         get() = prefs.getBoolean(IS_USING_MODIFIED_APP_ICON, false)
         set(isUsingModifiedAppIcon) = prefs.edit().putBoolean(IS_USING_MODIFIED_APP_ICON, isUsingModifiedAppIcon).apply()

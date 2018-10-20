@@ -45,17 +45,16 @@
 
     <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog">
         <item name="colorAccent">@color/color_primary</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/theme_light_background_color</item>
     </style>
 
     <style name="MyDialogTheme.Dark" parent="Theme.AppCompat.Dialog">
         <item name="colorAccent">@color/color_primary</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:colorBackground">@color/theme_dark_background_color</item>
+        <item name="android:windowBackground">@color/theme_dark_background_color</item>
     </style>
 
     <style name="MyBorderlessBackgroundStyle">
-        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
     </style>
 
     <style name="Theme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
@@ -74,7 +73,7 @@
     </style>
 
     <style name="PinNumberStyle" parent="PinNumberStyle.Base">
-        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
     </style>
 
     <!-- App themes -->

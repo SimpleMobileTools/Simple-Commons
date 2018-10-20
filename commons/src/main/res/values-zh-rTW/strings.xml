@@ -17,7 +17,7 @@
     <string name="notes">筆記</string>
     <string name="deleting_folder">資料夾 \'%s\' 刪除中</string>
     <string name="none">無</string>
-    <string name="label">Label</string>
+    <string name="label">標籤</string>
 
     <!-- Favorites -->
     <string name="favorites">我的最愛</string>
@@ -96,6 +96,7 @@
     <string name="file_already_exists">檔案 \"%s\" 已經存在</string>
     <string name="file_already_exists_overwrite">檔案 \"%s\" 已經存在。 要覆蓋嗎?</string>
     <string name="folder_already_exists">資料夾 \"%s\" 已經存在</string>
+    <string name="merge">合併</string>
     <string name="overwrite">覆蓋</string>
     <string name="skip">跳過</string>
     <string name="append">附加 \'_1\'</string>
@@ -231,7 +232,7 @@
     <string name="no">否</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">注意: 你正在刪除1個資料夾</item>
+        <item quantity="one">注意: 你正在刪除%d個資料夾</item>
         <item quantity="other">注意: 你正在刪除%d個資料夾</item>
     </plurals>
 
@@ -344,7 +345,7 @@
     <string name="reminder_triggers_in">提醒觸發剩餘時間:\n%s</string>
     <string name="alarm_warning">依靠鬧鐘功能之前，請先確認是否正常運作，有可能因為省電相關的系統限制而導致失靈。</string>
     <string name="reminder_warning">依靠提醒功能之前，請先確認是否正常運作，有可能因為省電相關的系統限制而導致失靈。</string>
-    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
+    <string name="notifications_disabled">這應用程式的通知被停用了。請到你的裝置設定中去啟用。</string>
 
     <!-- Alarms -->
     <string name="alarm">鬧鐘</string>
@@ -406,6 +407,11 @@
     <string name="files_restored_successfully">檔案已成功還原</string>
     <string name="empty_recycle_bin_confirmation">你確定要清空回收桶嗎?檔案將會永久消失。</string>
     <string name="recycle_bin_empty">回收桶是空的</string>
+ 
+     <plurals name="moving_items_into_bin">
+        <item quantity="one">正在移動%d個項目進回收桶</item>
+        <item quantity="other">正在移動%d個項目進回收桶</item>
+    </plurals>
 
     <!-- Import / Export -->
     <string name="importing">正在匯入…</string>
@@ -539,7 +545,6 @@
     <string name="glide_title">Glide (image loading and caching)</string>
     <string name="picasso_title">Picasso (image loading and caching)</string>
     <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (selecting multiple list items)</string>
     <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
     <string name="joda_title">Joda-Time (Java date replacement)</string>
     <string name="stetho_title">Stetho (debugging databases)</string>

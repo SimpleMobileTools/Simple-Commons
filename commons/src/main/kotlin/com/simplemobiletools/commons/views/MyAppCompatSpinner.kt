@@ -1,11 +1,11 @@
 package com.simplemobiletools.commons.views
 
 import android.content.Context
-import android.support.v7.widget.AppCompatSpinner
 import android.util.AttributeSet
 import android.view.View
 import android.widget.AdapterView
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatSpinner
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.adapters.MyArrayAdapter
 import com.simplemobiletools.commons.extensions.applyColorFilter

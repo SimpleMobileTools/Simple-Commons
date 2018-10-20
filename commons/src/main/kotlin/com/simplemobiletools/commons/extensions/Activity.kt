@@ -12,9 +12,6 @@ import android.os.Looper
 import android.os.TransactionTooLargeException
 import android.provider.DocumentsContract
 import android.provider.MediaStore
-import android.support.v4.provider.DocumentFile
-import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
 import android.text.Html
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +21,9 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import androidx.documentfile.provider.DocumentFile
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.dialogs.*
@@ -55,13 +55,13 @@ fun Activity.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
 }
 
 private fun showToast(activity: Activity, messageId: Int, length: Int) {
-    if (!activity.isActivityDestroyed()) {
+    if (!activity.isDestroyed) {
         showToast(activity, activity.getString(messageId), length)
     }
 }
 
 private fun showToast(activity: Activity, message: String, length: Int) {
-    if (!activity.isActivityDestroyed()) {
+    if (!activity.isDestroyed) {
         activity.applicationContext.toast(message, length)
     }
 }
@@ -571,7 +571,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                         callback?.invoke(false)
                     }
                 }
-            } catch (e: SecurityException) {
+            } catch (e: Exception) {
                 showErrorToast(e)
                 runOnUiThread {
                     callback?.invoke(false)
@@ -751,8 +751,6 @@ fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
     return File(directory).mkdirs()
 }
 
-fun Activity.isActivityDestroyed() = isJellyBean1Plus() && isDestroyed
-
 fun Activity.updateSharedTheme(sharedTheme: SharedTheme) {
     try {
         val contentValues = MyContentProvider.fillThemeContentValues(sharedTheme)
@@ -769,7 +767,7 @@ fun Activity.copyToClipboard(text: String) {
 }
 
 fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0, titleText: String = "", callback: (() -> Unit)? = null) {
-    if (isActivityDestroyed()) {
+    if (isDestroyed) {
         return
     }
 

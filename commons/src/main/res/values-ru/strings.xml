@@ -235,7 +235,7 @@
     <string name="no">Нет</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">ПРЕДУПРЕЖДЕНИЕ: вы удаляете папку</item>
+        <item quantity="one">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папку</item>
         <item quantity="few">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папки</item>
         <item quantity="many">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папок</item>
         <item quantity="other">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папок</item>
@@ -438,6 +438,11 @@
     <string name="empty_recycle_bin_confirmation">Вы действительно хотите очистить корзину? Файлы будут удалены безвозвратно.</string>
     <string name="recycle_bin_empty">Корзина пуста</string>
 
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">Moving %d item into the Recycle Bin</item>
+        <item quantity="other">Moving %d items into the Recycle Bin</item>
+    </plurals>
+
     <!-- Import / Export -->
     <string name="importing">Импорт…</string>
     <string name="exporting">Экспорт…</string>
@@ -570,7 +575,6 @@
     <string name="glide_title">Glide (загрузка и кэширование изображений)</string>
     <string name="picasso_title">Picasso (загрузка и кэширование изображений)</string>
     <string name="cropper_title">Android Image Cropper (обрезка и поворот изображений)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (выбор нескольких элементов списка)</string>
     <string name="rtl_viewpager_title">RtlViewPager (отображение с RTL-языками)</string>
     <string name="joda_title">Joda-Time (замена даты Java)</string>
     <string name="stetho_title">Stetho (отладка баз данных)</string>
