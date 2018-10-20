@@ -87,8 +87,12 @@ fun String.getExifProperties(exif: ExifInterface): String {
 
     exif.getAttribute(ExifInterface.TAG_EXPOSURE_TIME).let {
         if (it?.isNotEmpty() == true) {
-            val exposureSec = Math.round(1 / it.toFloat())
-            exifString += "1/${exposureSec}s  "
+            val exposureValue = it.toFloat()
+            exifString += if (exposureValue > 1f) {
+                "${exposureValue}s  "
+            } else {
+                "1/${Math.round(1 / exposureValue)}s  "
+            }
         }
     }
 
