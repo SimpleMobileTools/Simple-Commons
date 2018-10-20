@@ -55,6 +55,8 @@
     <string name="filename_invalid_characters_placeholder">Názov súboru \'%s\' obsahuje neplatné znaky</string>
     <string name="extension_cannot_be_empty">Prípona nesmie byť prázdna</string>
     <string name="source_file_doesnt_exist">Zdrojový súbor %s neexistuje</string>
+    <string name="prepend_filenames">Pridať pred názvy súborov</string>
+    <string name="append_filenames">Pridať za názvy súborov (pred prípony)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopírovať</string>

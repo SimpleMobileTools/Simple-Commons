@@ -55,6 +55,8 @@
     <string name="filename_invalid_characters_placeholder">Nazwa \'%s\' zawiera niedozwolone znaki</string>
     <string name="extension_cannot_be_empty">Rozszerzenie pliku nie może być puste</string>
     <string name="source_file_doesnt_exist">Plik źródłowy nie istnieje</string>
+    <string name="prepend_filenames">Prepend filenames</string>
+    <string name="append_filenames">Append filenames (before file extension)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopiuj</string>

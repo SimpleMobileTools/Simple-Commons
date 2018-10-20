@@ -55,6 +55,8 @@
     <string name="filename_invalid_characters_placeholder">Tiedostonimi \'%s\' sisältää kiellettyjä merkkejä</string>
     <string name="extension_cannot_be_empty">Tiedostomuoto ei voi olla tyhjä</string>
     <string name="source_file_doesnt_exist">Lähdetiedostoa %s ei löydy</string>
+    <string name="prepend_filenames">Prepend filenames</string>
+    <string name="append_filenames">Append filenames (before file extension)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopioi</string>

@@ -55,6 +55,8 @@
     <string name="filename_invalid_characters_placeholder">檔名 \'%s\' 包含無效字元</string>
     <string name="extension_cannot_be_empty">副檔名不得空白</string>
     <string name="source_file_doesnt_exist">原始檔案 %s 不存在</string>
+    <string name="prepend_filenames">Prepend filenames</string>
+    <string name="append_filenames">Append filenames (before file extension)</string>
 
     <!-- Copy / Move -->
     <string name="copy">複製</string>

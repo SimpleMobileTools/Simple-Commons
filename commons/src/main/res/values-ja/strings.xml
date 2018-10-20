@@ -55,6 +55,8 @@
     <string name="filename_invalid_characters_placeholder">ファイル名 \'%s\' に無効な文字が含まれています</string>
     <string name="extension_cannot_be_empty">拡張子は省略できません</string>
     <string name="source_file_doesnt_exist">ソースファイル %s が存在しません</string>
+    <string name="prepend_filenames">Prepend filenames</string>
+    <string name="append_filenames">Append filenames (before file extension)</string>
 
     <!-- Copy / Move -->
     <string name="copy">コピー</string>

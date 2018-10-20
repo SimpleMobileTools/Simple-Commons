@@ -55,6 +55,8 @@
     <string name="filename_invalid_characters_placeholder">Имя файла \"%s\" содержит недопустимые символы</string>
     <string name="extension_cannot_be_empty">Расширение не может быть пустым</string>
     <string name="source_file_doesnt_exist">Исходный файл \"%s\" не существует</string>
+    <string name="prepend_filenames">Prepend filenames</string>
+    <string name="append_filenames">Append filenames (before file extension)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Копировать</string>

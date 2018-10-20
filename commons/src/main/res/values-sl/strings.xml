@@ -55,6 +55,8 @@
     <string name="filename_invalid_characters_placeholder">Ime \'%s\' vsebuje neveljavne znake</string>
     <string name="extension_cannot_be_empty">Končnica ne more biti prazna</string>
     <string name="source_file_doesnt_exist">Datoteka %s ne obstaja</string>
+    <string name="prepend_filenames">Prepend filenames</string>
+    <string name="append_filenames">Append filenames (before file extension)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopiraj</string>

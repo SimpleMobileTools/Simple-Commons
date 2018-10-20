@@ -55,6 +55,8 @@
     <string name="filename_invalid_characters_placeholder">El nom de l\'arxiu  \'%s\' conté caràcters no vàlids</string>
     <string name="extension_cannot_be_empty">La extensió no pot estar buida</string>
     <string name="source_file_doesnt_exist">El fitxer %s no existeix</string>
+    <string name="prepend_filenames">Prepend filenames</string>
+    <string name="append_filenames">Append filenames (before file extension)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>

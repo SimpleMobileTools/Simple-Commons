@@ -55,6 +55,8 @@
     <string name="filename_invalid_characters_placeholder">Filnavnet \"%s\" indeholder ugyldige tegn</string>
     <string name="extension_cannot_be_empty">Filtypen kan ikke stå tom</string>
     <string name="source_file_doesnt_exist">Kildefilen %s eksisterer ikke</string>
+    <string name="prepend_filenames">Prepend filenames</string>
+    <string name="append_filenames">Append filenames (before file extension)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopier</string>
