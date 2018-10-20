@@ -273,7 +273,7 @@
     <plurals name="seconds">
         <item quantity="one">%d секунда</item>
         <item quantity="few">%d секунды</item>
-        <item quantity="other">%d секунд</item>
+        <item quantity="many">%d секунд</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d минута</item>
@@ -289,42 +289,38 @@
         <item quantity="one">%d день</item>
         <item quantity="few">%d дня</item>
         <item quantity="many">%d дней</item>
-        <item quantity="other">%d дня(-ей)</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="one">%d неделя</item>
         <item quantity="few">%d недели</item>
         <item quantity="many">%d недель</item>
-        <item quantity="other">%d недели(-ль)</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d месяц</item>
         <item quantity="few">%d месяца</item>
         <item quantity="many">%d месяцев</item>
-        <item quantity="other">%d месяца(-ев)</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d год</item>
         <item quantity="few">%d года</item>
         <item quantity="many">%d лет</item>
-        <item quantity="other">%d года(лет)</item>
     </plurals>
 
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d секунду</item>
         <item quantity="few">%d секунды</item>
-        <item quantity="other">%d секунд</item>
+        <item quantity="many">%d секунд</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d минуту</item>
         <item quantity="few">%d минуты</item>
-        <item quantity="other">%d минут</item>
+        <item quantity="many">%d минут</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d час</item>
         <item quantity="few">%d часа</item>
-        <item quantity="other">%d часов</item>
+        <item quantity="many">%d часов</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
@@ -332,32 +328,28 @@
         <item quantity="one">%d секунда до события</item>
         <item quantity="few">%d секунды до события</item>
         <item quantity="many">%d секунд до события</item>
-        <item quantity="other">%d секунд(-ы) до события</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d минута до события</item>
         <item quantity="few">%d минуты до события</item>
         <item quantity="many">%d минут до события</item>
-        <item quantity="other">%d минут(-ы) до события</item>
     </plurals>
     <plurals name="hours_before">
         <item quantity="one">%d час до события</item>
         <item quantity="few">%d часа до события</item>
         <item quantity="many">%d часов до события</item>
-        <item quantity="other">%d часа(-ов) до события</item>
     </plurals>
     <plurals name="days_before">
         <item quantity="one">%d день до события</item>
         <item quantity="few">%d дня до события</item>
         <item quantity="many">%d дней до события</item>
-        <item quantity="other">%d дня(-ей) до события</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d секунду</item>
         <item quantity="few">%d секунды</item>
-        <item quantity="other">%d секунд</item>
+        <item quantity="many">%d секунд</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d минуту</item>
@@ -439,8 +431,9 @@
     <string name="recycle_bin_empty">Корзина пуста</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Moving %d item into the Recycle Bin</item>
-        <item quantity="other">Moving %d items into the Recycle Bin</item>
+        <item quantity="one">%d элемент перемещается в корзину</item>
+        <item quantity="few">%d элемента перемещаются в корзину</item>
+        <item quantity="many">%d элементов перемещаются в корзину</item>
     </plurals>
 
     <!-- Import / Export -->
