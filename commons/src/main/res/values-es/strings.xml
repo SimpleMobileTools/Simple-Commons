@@ -55,8 +55,8 @@
     <string name="filename_invalid_characters_placeholder">El nombre del archivo \'%s\' contiene caracteres no válidos</string>
     <string name="extension_cannot_be_empty">La extensión no puede estar vacía</string>
     <string name="source_file_doesnt_exist">El archivo %s no existe</string>
-    <string name="prepend_filenames">Prepend filenames</string>
-    <string name="append_filenames">Append filenames (before file extension)</string>
+    <string name="prepend_filenames">Preponer los nombres de archivo</string>
+    <string name="append_filenames">Adjuntar nombres de archivos (antes de la extensión de archivo)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
