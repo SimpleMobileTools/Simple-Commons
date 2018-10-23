@@ -83,9 +83,10 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                 (selectedKeys.clone() as HashSet<Int>).forEach {
                     val position = getItemKeyPosition(it)
                     if (position != -1) {
-                        toggleItemSelection(false, position)
+                        toggleItemSelection(false, position, false)
                     }
                 }
+                updateTitle()
                 selectedKeys.clear()
                 actBarTextView?.text = ""
                 actMode = null
@@ -94,7 +95,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         }
     }
 
-    protected fun toggleItemSelection(select: Boolean, pos: Int) {
+    protected fun toggleItemSelection(select: Boolean, pos: Int, updateTitle: Boolean = true) {
         if (select && !getIsItemSelectable(pos)) {
             return
         }
@@ -112,17 +113,18 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
         notifyItemChanged(pos + positionOffset)
 
-        if (selectedKeys.isEmpty()) {
-            finishActMode()
-            return
+        if (updateTitle) {
+            updateTitle()
         }
 
-        updateTitle(selectedKeys.size)
+        if (selectedKeys.isEmpty()) {
+            finishActMode()
+        }
     }
 
-    private fun updateTitle(cnt: Int) {
+    private fun updateTitle() {
         val selectableItemCount = getSelectableItemCount()
-        val selectedCount = Math.min(cnt, selectableItemCount)
+        val selectedCount = Math.min(selectedKeys.size, selectableItemCount)
         val oldTitle = actBarTextView?.text
         val newTitle = "$selectedCount / $selectableItemCount"
         if (oldTitle != newTitle) {
@@ -139,8 +141,9 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
             val min = Math.min(lastLongPressedItem, position)
             val max = Math.max(lastLongPressedItem, position)
             for (i in min..max) {
-                toggleItemSelection(true, i)
+                toggleItemSelection(true, i, false)
             }
+            updateTitle()
             position
         }
     }
@@ -166,16 +169,17 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     protected fun selectAll() {
         val cnt = itemCount - positionOffset
         for (i in 0 until cnt) {
-            toggleItemSelection(true, i)
+            toggleItemSelection(true, i, false)
         }
         lastLongPressedItem = -1
+        updateTitle()
     }
 
     protected fun setupDragListener(enable: Boolean) {
         if (enable) {
             recyclerView.setupDragListener(object : MyRecyclerView.MyDragListener {
                 override fun selectItem(position: Int) {
-                    toggleItemSelection(true, position)
+                    toggleItemSelection(true, position, true)
                 }
 
                 override fun selectRange(initialSelection: Int, lastDraggedIndex: Int, minReached: Int, maxReached: Int) {
@@ -190,36 +194,36 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     protected fun selectItemRange(from: Int, to: Int, min: Int, max: Int) {
         if (from == to) {
-            (min..max).filter { it != from }.forEach { toggleItemSelection(false, it) }
+            (min..max).filter { it != from }.forEach { toggleItemSelection(false, it, true) }
             return
         }
 
         if (to < from) {
             for (i in to..from) {
-                toggleItemSelection(true, i)
+                toggleItemSelection(true, i, true)
             }
 
             if (min > -1 && min < to) {
-                (min until to).filter { it != from }.forEach { toggleItemSelection(false, it) }
+                (min until to).filter { it != from }.forEach { toggleItemSelection(false, it, true) }
             }
 
             if (max > -1) {
                 for (i in from + 1..max) {
-                    toggleItemSelection(false, i)
+                    toggleItemSelection(false, i, true)
                 }
             }
         } else {
             for (i in from..to) {
-                toggleItemSelection(true, i)
+                toggleItemSelection(true, i, true)
             }
 
             if (max > -1 && max > to) {
-                (to + 1..max).filter { it != from }.forEach { toggleItemSelection(false, it) }
+                (to + 1..max).filter { it != from }.forEach { toggleItemSelection(false, it, true) }
             }
 
             if (min > -1) {
                 for (i in min until from) {
-                    toggleItemSelection(false, i)
+                    toggleItemSelection(false, i, true)
                 }
             }
         }
@@ -295,7 +299,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
             if (actModeCallback.isSelectable) {
                 val currentPosition = adapterPosition - positionOffset
                 val isSelected = selectedKeys.contains(getItemSelectionKey(currentPosition))
-                toggleItemSelection(!isSelected, currentPosition)
+                toggleItemSelection(!isSelected, currentPosition, true)
             } else {
                 itemClick.invoke(any)
             }
@@ -308,7 +312,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                 activity.startSupportActionMode(actModeCallback)
             }
 
-            toggleItemSelection(true, currentPosition)
+            toggleItemSelection(true, currentPosition, true)
             itemLongClicked(currentPosition)
         }
     }

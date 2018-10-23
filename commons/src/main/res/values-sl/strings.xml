@@ -55,6 +55,8 @@
     <string name="filename_invalid_characters_placeholder">Ime \'%s\' vsebuje neveljavne znake</string>
     <string name="extension_cannot_be_empty">Končnica ne more biti prazna</string>
     <string name="source_file_doesnt_exist">Datoteka %s ne obstaja</string>
+    <string name="prepend_filenames">Prepend filenames</string>
+    <string name="append_filenames">Append filenames (before file extension)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopiraj</string>
@@ -587,7 +589,6 @@
     <string name="glide_title">Glide (nalaganje in predpomnjevanje slik)</string>
     <string name="picasso_title">Picasso (nalaganje in predpomnjevanje slik)</string>
     <string name="cropper_title">Android Image Cropper (obrezovanje in rotacija slik)</string>
-    <string name="multiselect_title">RecyclerView MultiSelect (izbiranje večih elementov)</string>
     <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
     <string name="joda_title">Joda-Time (nadomestitev za Java datume)</string>
     <string name="stetho_title">Stetho (debugging databases)</string>
