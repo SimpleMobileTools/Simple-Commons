@@ -487,7 +487,7 @@ fun BaseSimpleActivity.deleteFile(fileDirItem: FileDirItem, allowDeleteFolder: B
 fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     val path = fileDirItem.path
     val file = File(path)
-    if (!file.canWrite()) {
+    if (file.absolutePath.startsWith(internalStoragePath) && !file.canWrite()) {
         callback?.invoke(false)
         return
     }
