@@ -24,7 +24,7 @@ class AlphanumericComparator {
                 result = thisChunkLength - thatChunk.length
                 // If equal, the first different number counts.
                 if (result == 0) {
-                    for (i in 0..thisChunkLength - 1) {
+                    for (i in 0 until thisChunkLength) {
                         result = thisChunk[i] - thatChunk[i]
                         if (result != 0) {
                             return result
@@ -71,7 +71,5 @@ class AlphanumericComparator {
         return chunk.toString()
     }
 
-    private fun isDigit(ch: Char): Boolean {
-        return ch in '0'..'9'
-    }
+    private fun isDigit(ch: Char) = ch in '0'..'9'
 }
