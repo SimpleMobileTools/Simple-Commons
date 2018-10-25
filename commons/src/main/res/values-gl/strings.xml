@@ -18,6 +18,9 @@
     <string name="deleting_folder">Deleting folder \'%s\'</string>
     <string name="none">None</string>
     <string name="label">Label</string>
+    <string name="transparent">Transparent</string>
+    <string name="transparent_color">Transparent color</string>
+    <string name="select_a_different_color">Select a different color</string>
 
     <!-- Favorites -->
     <string name="favorites">Favorites</string>
@@ -219,6 +222,8 @@
     <string name="title">Título</string>
     <string name="filename">Nombre del archivo</string>
     <string name="extension">Extensión</string>
+    <string name="random">Random</string>
+    <string name="sort_randomly">Sort randomly</string>
     <string name="ascending">Ascendente</string>
     <string name="descending">Descendente</string>
     <string name="use_for_this_folder">Sólo para esta carpeta</string>

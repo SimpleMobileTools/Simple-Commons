@@ -1,6 +1,5 @@
 package com.simplemobiletools.commons.activities
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.ActivityManager
 import android.content.Context
@@ -82,12 +81,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         funAfterOTGPermission = null
     }
 
-    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
-        android.R.id.home -> {
-            finish()
-            true
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> finish()
+            else -> return super.onOptionsItemSelected(item)
         }
-        else -> super.onOptionsItemSelected(item)
+        return true
     }
 
     override fun attachBaseContext(newBase: Context) {
@@ -192,10 +191,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     private fun isProperOTGFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
 
-    @SuppressLint("NewApi")
     private fun isRootUri(uri: Uri) = DocumentsContract.getTreeDocumentId(uri).endsWith(":")
 
-    @SuppressLint("NewApi")
     private fun isInternalStorage(uri: Uri) = isExternalStorageDocument(uri) && DocumentsContract.getTreeDocumentId(uri).contains("primary")
 
     private fun isExternalStorageDocument(uri: Uri) = "com.android.externalstorage.documents" == uri.authority

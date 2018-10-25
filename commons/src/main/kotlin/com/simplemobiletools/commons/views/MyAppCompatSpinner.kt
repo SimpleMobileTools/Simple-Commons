@@ -23,7 +23,7 @@ class MyAppCompatSpinner : AppCompatSpinner {
 
         val cnt = adapter.count
         val items = kotlin.arrayOfNulls<Any>(cnt)
-        for (i in 0..cnt - 1)
+        for (i in 0 until cnt)
             items[i] = adapter.getItem(i)
 
         val position = selectedItemPosition

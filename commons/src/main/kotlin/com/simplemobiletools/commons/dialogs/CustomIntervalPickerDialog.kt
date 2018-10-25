@@ -1,8 +1,8 @@
 package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
-import androidx.appcompat.app.AlertDialog
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.DAY_SECONDS
@@ -39,7 +39,7 @@ class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: In
         }
 
         dialog = AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok, { dialogInterface, i -> confirmReminder() })
+                .setPositiveButton(R.string.ok) { dialogInterface, i -> confirmReminder() }
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
                     activity.setupDialogStuff(view, this) {

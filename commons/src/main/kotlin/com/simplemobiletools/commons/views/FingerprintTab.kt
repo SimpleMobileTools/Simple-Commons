@@ -2,8 +2,6 @@ package com.simplemobiletools.commons.views
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.PorterDuff
-import android.graphics.PorterDuffColorFilter
 import android.os.Handler
 import android.provider.Settings
 import android.util.AttributeSet
@@ -12,10 +10,7 @@ import com.github.ajalt.reprint.core.AuthenticationFailureReason
 import com.github.ajalt.reprint.core.AuthenticationListener
 import com.github.ajalt.reprint.core.Reprint
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.beGoneIf
-import com.simplemobiletools.commons.extensions.toast
-import com.simplemobiletools.commons.extensions.updateTextColors
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.PROTECTION_FINGERPRINT
 import com.simplemobiletools.commons.interfaces.HashListener
 import com.simplemobiletools.commons.interfaces.SecurityTab
@@ -31,7 +26,7 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
         super.onFinishInflate()
         val textColor = context.baseConfig.textColor
         context.updateTextColors(fingerprint_lock_holder)
-        fingerprint_image.colorFilter = PorterDuffColorFilter(textColor, PorterDuff.Mode.SRC_IN)
+        fingerprint_image.applyColorFilter(textColor)
 
         fingerprint_settings.setOnClickListener {
             context.startActivity(Intent(Settings.ACTION_SETTINGS))

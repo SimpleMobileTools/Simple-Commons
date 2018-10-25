@@ -1,11 +1,13 @@
 package com.simplemobiletools.commons.extensions
 
+import android.annotation.TargetApi
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Point
 import android.media.ExifInterface
 import android.media.MediaMetadataRetriever
+import android.os.Build
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
@@ -68,6 +70,7 @@ fun String.getCompressionFormat() = when (getFilenameExtension().toLowerCase()) 
 
 fun String.areDigitsOnly() = matches(Regex("[0-9]+"))
 
+@TargetApi(Build.VERSION_CODES.N)
 fun String.getExifProperties(exif: ExifInterface): String {
     var exifString = ""
     exif.getAttribute(ExifInterface.TAG_F_NUMBER).let {
@@ -105,6 +108,7 @@ fun String.getExifProperties(exif: ExifInterface): String {
     return exifString.trim()
 }
 
+@TargetApi(Build.VERSION_CODES.N)
 fun String.getExifDateTaken(exif: ExifInterface): String {
     val dateTime = exif.getAttribute(ExifInterface.TAG_DATETIME_ORIGINAL) ?: exif.getAttribute(ExifInterface.TAG_DATETIME)
     dateTime.let {

@@ -4,11 +4,11 @@ import android.app.Activity
 import android.content.res.Resources
 import android.media.ExifInterface
 import android.provider.MediaStore
-import androidx.appcompat.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.sumByInt

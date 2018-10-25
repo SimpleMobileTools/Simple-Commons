@@ -18,6 +18,9 @@
     <string name="deleting_folder">Map \'%s\' verwijderen</string>
     <string name="none">Geen</string>
     <string name="label">Label</string>
+    <string name="transparent">Transparant</string>
+    <string name="transparent_color">Transparante kleur</string>
+    <string name="select_a_different_color">Kies een andere kleur</string>
 
     <!-- Favorites -->
     <string name="favorites">Favorieten</string>
@@ -219,6 +222,8 @@
     <string name="title">Titel</string>
     <string name="filename">Bestandsnaam</string>
     <string name="extension">Extensie</string>
+    <string name="random">Random</string>
+    <string name="sort_randomly">Sort randomly</string>
     <string name="ascending">Oplopend</string>
     <string name="descending">Aflopend</string>
     <string name="use_for_this_folder">Alleen voor deze map gebruiken</string>

@@ -18,6 +18,9 @@
     <string name="deleting_folder">資料夾 \'%s\' 刪除中</string>
     <string name="none">無</string>
     <string name="label">標籤</string>
+    <string name="transparent">Transparent</string>
+    <string name="transparent_color">Transparent color</string>
+    <string name="select_a_different_color">Select a different color</string>
 
     <!-- Favorites -->
     <string name="favorites">我的最愛</string>
@@ -219,6 +222,8 @@
     <string name="title">標題</string>
     <string name="filename">檔案名稱</string>
     <string name="extension">副檔名</string>
+    <string name="random">Random</string>
+    <string name="sort_randomly">Sort randomly</string>
     <string name="ascending">遞增</string>
     <string name="descending">遞減</string>
     <string name="use_for_this_folder">僅套用於此資料夾</string>

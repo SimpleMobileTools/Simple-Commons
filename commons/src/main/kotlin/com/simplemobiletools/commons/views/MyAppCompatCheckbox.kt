@@ -2,8 +2,8 @@ package com.simplemobiletools.commons.views
 
 import android.content.Context
 import android.content.res.ColorStateList
-import androidx.appcompat.widget.AppCompatCheckBox
 import android.util.AttributeSet
+import androidx.appcompat.widget.AppCompatCheckBox
 import com.simplemobiletools.commons.R
 
 class MyAppCompatCheckbox : AppCompatCheckBox {

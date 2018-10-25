@@ -18,6 +18,9 @@
     <string name="deleting_folder">Brisanje mape \'%s\'</string>
     <string name="none">Nijedan</string>
     <string name="label">Označi</string>
+    <string name="transparent">Transparent</string>
+    <string name="transparent_color">Transparent color</string>
+    <string name="select_a_different_color">Select a different color</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoriti</string>
@@ -222,6 +225,8 @@
     <string name="title">Naslov</string>
     <string name="filename">Naziv datoteke</string>
     <string name="extension">Tip datoteke</string>
+    <string name="random">Random</string>
+    <string name="sort_randomly">Sort randomly</string>
     <string name="ascending">Uzlazno</string>
     <string name="descending">Silazno</string>
     <string name="use_for_this_folder">Koristi samo za ovu mapu</string>

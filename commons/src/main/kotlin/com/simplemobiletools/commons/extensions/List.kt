@@ -8,8 +8,8 @@ fun List<String>.getMimeType(): String {
     forEach {
         val parts = it.getMimeType().split("/")
         if (parts.size == 2) {
-            mimeGroups.add(parts.getOrElse(0, { "" }))
-            subtypes.add(parts.getOrElse(1, { "" }))
+            mimeGroups.add(parts.getOrElse(0) { "" })
+            subtypes.add(parts.getOrElse(1) { "" })
         } else {
             return "*/*"
         }

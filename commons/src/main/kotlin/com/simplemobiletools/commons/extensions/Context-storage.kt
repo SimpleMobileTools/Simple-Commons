@@ -1,6 +1,5 @@
 package com.simplemobiletools.commons.extensions
 
-import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
 import android.hardware.usb.UsbManager
@@ -58,7 +57,6 @@ fun Context.hasExternalSDCard() = sdCardPath.isNotEmpty()
 
 fun Context.hasOTGConnected() = (getSystemService(Context.USB_SERVICE) as UsbManager).deviceList.isNotEmpty()
 
-@SuppressLint("NewApi")
 fun Context.getStorageDirectories(): Array<String> {
     val paths = HashSet<String>()
     val rawExternalStorage = System.getenv("EXTERNAL_STORAGE")
@@ -126,7 +124,6 @@ fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWit
 
 fun Context.needsStupidWritePermissions(path: String) = (isPathOnSD(path) || path.startsWith(OTG_PATH))
 
-@SuppressLint("NewApi")
 fun Context.hasProperStoredTreeUri(): Boolean {
     val hasProperUri = contentResolver.persistedUriPermissions.any { it.uri.toString() == baseConfig.treeUri }
     if (!hasProperUri) {
@@ -148,7 +145,6 @@ fun Context.getMyFileUri(file: File): Uri {
     }
 }
 
-@SuppressLint("NewApi")
 fun Context.tryFastDocumentDelete(path: String, allowDeleteFolder: Boolean): Boolean {
     val document = getFastDocumentFile(path)
     return if (document?.isFile == true || allowDeleteFolder) {
@@ -162,7 +158,6 @@ fun Context.tryFastDocumentDelete(path: String, allowDeleteFolder: Boolean): Boo
     }
 }
 
-@SuppressLint("NewApi")
 fun Context.getFastDocumentFile(path: String): DocumentFile? {
     if (path.startsWith(OTG_PATH)) {
         return getOTGFastDocumentFile(path)
@@ -192,7 +187,6 @@ fun Context.getOTGFastDocumentFile(path: String): DocumentFile? {
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
 
-@SuppressLint("NewApi")
 fun Context.getDocumentFile(path: String): DocumentFile? {
     val isOTG = path.startsWith(OTG_PATH)
     var relativePath = path.substring(if (isOTG) OTG_PATH.length else sdCardPath.length)
@@ -394,7 +388,6 @@ fun Context.rescanDeletedPath(path: String, callback: (() -> Unit)? = null) {
     }
 }
 
-@SuppressLint("NewApi")
 fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     var fileDeleted = tryFastDocumentDelete(fileDirItem.path, allowDeleteFolder)
     if (!fileDeleted) {

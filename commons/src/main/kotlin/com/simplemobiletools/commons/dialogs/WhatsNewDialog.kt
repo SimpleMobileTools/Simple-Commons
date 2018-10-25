@@ -1,8 +1,8 @@
 package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
-import androidx.appcompat.app.AlertDialog
 import android.view.LayoutInflater
+import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.models.Release

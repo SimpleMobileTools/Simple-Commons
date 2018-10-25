@@ -60,6 +60,9 @@ const val PROTECTION_TYPE = "protection_type"
 const val APP_PASSWORD_PROTECTION = "app_password_protection"
 const val APP_PASSWORD_HASH = "app_password_hash"
 const val APP_PROTECTION_TYPE = "app_protection_type"
+const val DELETE_PASSWORD_PROTECTION = "delete_password_protection"
+const val DELETE_PASSWORD_HASH = "delete_password_hash"
+const val DELETE_PROTECTION_TYPE = "delete_protection_type"
 const val KEEP_LAST_MODIFIED = "keep_last_modified"
 const val USE_ENGLISH = "use_english"
 const val WAS_USE_ENGLISH_TOGGLED = "was_use_english_toggled"
@@ -142,6 +145,7 @@ const val SORT_DESCENDING = 1024
 const val SORT_BY_TITLE = 2048
 const val SORT_BY_ARTIST = 4096
 const val SORT_BY_DURATION = 8192
+const val SORT_BY_RANDOM = 16384
 
 // security
 const val WAS_PROTECTION_HANDLED = "was_protection_handled"

@@ -1,11 +1,11 @@
 package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
-import androidx.appcompat.app.AlertDialog
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.onGlobalLayout
 import com.simplemobiletools.commons.extensions.setupDialogStuff
@@ -42,7 +42,7 @@ class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, 
                 .setOnCancelListener { cancelCallback?.invoke() }
 
         if (selectedItemId != -1 && showOKButton) {
-            builder.setPositiveButton(R.string.ok, { dialog, which -> itemSelected(selectedItemId) })
+            builder.setPositiveButton(R.string.ok) { dialog, which -> itemSelected(selectedItemId) }
         }
 
         dialog = builder.create().apply {

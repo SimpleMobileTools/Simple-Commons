@@ -18,6 +18,9 @@
     <string name="deleting_folder">Διαγραφή φακέλου \'%s\'</string>
     <string name="none">Χωρίς</string>
     <string name="label">Label</string>
+    <string name="transparent">Transparent</string>
+    <string name="transparent_color">Transparent color</string>
+    <string name="select_a_different_color">Select a different color</string>
 
     <!-- Favorites -->
     <string name="favorites">Αγαπημένα</string>
@@ -219,6 +222,8 @@
     <string name="title">Τίτλο</string>
     <string name="filename">Όνομα αρχείου</string>
     <string name="extension">Επέκταση</string>
+    <string name="random">Random</string>
+    <string name="sort_randomly">Sort randomly</string>
     <string name="ascending">Αύξουσα</string>
     <string name="descending">Φθίνουσα</string>
     <string name="use_for_this_folder">Χρήση μόνο για αυτόν το φάκελο</string>

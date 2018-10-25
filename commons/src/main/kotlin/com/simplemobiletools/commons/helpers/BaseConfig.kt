@@ -120,6 +120,19 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(APP_PROTECTION_TYPE, PROTECTION_PATTERN)
         set(appProtectionType) = prefs.edit().putInt(APP_PROTECTION_TYPE, appProtectionType).apply()
 
+    // protection about deleting files/folders
+    var deletePasswordProtectionOn: Boolean
+        get() = prefs.getBoolean(DELETE_PASSWORD_PROTECTION, false)
+        set(deletePasswordProtectionOn) = prefs.edit().putBoolean(DELETE_PASSWORD_PROTECTION, deletePasswordProtectionOn).apply()
+
+    var deletePasswordHash: String
+        get() = prefs.getString(DELETE_PASSWORD_HASH, "")
+        set(deletePasswordHash) = prefs.edit().putString(DELETE_PASSWORD_HASH, deletePasswordHash).apply()
+
+    var deleteProtectionType: Int
+        get() = prefs.getInt(DELETE_PROTECTION_TYPE, PROTECTION_PATTERN)
+        set(deleteProtectionType) = prefs.edit().putInt(DELETE_PROTECTION_TYPE, deleteProtectionType).apply()
+
     var keepLastModified: Boolean
         get() = prefs.getBoolean(KEEP_LAST_MODIFIED, true)
         set(keepLastModified) = prefs.edit().putBoolean(KEEP_LAST_MODIFIED, keepLastModified).apply()
