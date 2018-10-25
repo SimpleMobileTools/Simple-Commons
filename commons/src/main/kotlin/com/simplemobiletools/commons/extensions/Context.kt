@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.content.ComponentName
 import android.content.ContentUris
 import android.content.Context
@@ -104,7 +103,6 @@ val Context.baseConfig: BaseConfig get() = BaseConfig.newInstance(this)
 val Context.sdCardPath: String get() = baseConfig.sdCardPath
 val Context.internalStoragePath: String get() = baseConfig.internalStoragePath
 
-@SuppressLint("InlinedApi", "NewApi")
 fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHardwarePresent()
 
 fun Context.getLatestMediaId(uri: Uri = MediaStore.Files.getContentUri("external")): Long {
@@ -138,7 +136,6 @@ fun Context.getLatestMediaByDateId(uri: Uri = MediaStore.Files.getContentUri("ex
 }
 
 // some helper functions were taken from https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ipaulpro/afilechooser/utils/FileUtils.java
-@SuppressLint("NewApi")
 fun Context.getRealPathFromURI(uri: Uri): String? {
     if (uri.scheme == "file") {
         return uri.path

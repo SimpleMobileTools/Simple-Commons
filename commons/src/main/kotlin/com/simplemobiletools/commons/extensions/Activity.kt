@@ -82,7 +82,6 @@ fun AppCompatActivity.updateActionBarSubtitle(text: String) {
     supportActionBar?.subtitle = Html.fromHtml("<font color='${baseConfig.primaryColor.getContrastColor().toHex()}'>$text</font>")
 }
 
-@SuppressLint("NewApi")
 fun Activity.appLaunched(appId: String) {
     baseConfig.internalStoragePath = getInternalStoragePath()
     updateSDCardPath()
@@ -483,7 +482,6 @@ fun BaseSimpleActivity.deleteFile(fileDirItem: FileDirItem, allowDeleteFolder: B
     }
 }
 
-@SuppressLint("NewApi")
 fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     val path = fileDirItem.path
     val file = File(path)
@@ -547,7 +545,6 @@ fun Activity.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = nul
     applicationContext.rescanPaths(paths, callback)
 }
 
-@SuppressLint("NewApi")
 fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((success: Boolean) -> Unit)? = null) {
     if (needsStupidWritePermissions(newPath)) {
         handleSAFDialog(newPath) {
@@ -617,6 +614,7 @@ fun Activity.hideKeyboard() {
 }
 
 fun Activity.showKeyboard(et: EditText) {
+    et.requestFocus()
     val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
     imm.showSoftInput(et, InputMethodManager.SHOW_IMPLICIT)
 }
@@ -683,7 +681,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
         var documentFile = parentDocumentFile
         if (documentFile == null) {
             if (targetFile.parentFile.exists()) {
-                documentFile = getDocumentFile(targetFile.parentFile.absolutePath)
+                documentFile = getDocumentFile(targetFile.parent)
             } else {
                 documentFile = getDocumentFile(targetFile.parentFile.parent)
                 documentFile = documentFile!!.createDirectory(targetFile.parentFile.name)
@@ -804,7 +802,7 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
         getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(baseConfig.textColor)
         getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(baseConfig.textColor)
         getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(baseConfig.textColor)
-        window.setBackgroundDrawable(ColorDrawable(baseConfig.backgroundColor))
+        window?.setBackgroundDrawable(ColorDrawable(baseConfig.backgroundColor))
     }
     callback?.invoke()
 }
@@ -833,9 +831,9 @@ fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = fa
     }
 
     val items = ArrayList<RadioItem>(seconds.size + 1)
-    seconds.mapIndexedTo(items, { index, value ->
+    seconds.mapIndexedTo(items) { index, value ->
         RadioItem(index, getFormattedSeconds(value, !isSnoozePicker), value)
-    })
+    }
 
     var selectedIndex = 0
     seconds.forEachIndexed { index, value ->

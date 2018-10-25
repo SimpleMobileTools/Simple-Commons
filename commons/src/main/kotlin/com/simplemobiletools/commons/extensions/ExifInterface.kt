@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
 import android.media.ExifInterface
-import java.io.IOException
 
 fun ExifInterface.copyTo(destination: ExifInterface) {
     val attributes = arrayOf(
@@ -38,6 +37,6 @@ fun ExifInterface.copyTo(destination: ExifInterface) {
 
     try {
         destination.saveAttributes()
-    } catch (ignored: IOException) {
+    } catch (ignored: Exception) {
     }
 }
