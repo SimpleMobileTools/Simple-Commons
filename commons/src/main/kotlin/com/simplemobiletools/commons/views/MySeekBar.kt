@@ -1,10 +1,9 @@
 package com.simplemobiletools.commons.views
 
 import android.content.Context
-import android.graphics.PorterDuff
-import android.graphics.PorterDuffColorFilter
 import android.util.AttributeSet
 import android.widget.SeekBar
+import com.simplemobiletools.commons.extensions.applyColorFilter
 
 class MySeekBar : SeekBar {
     constructor(context: Context) : super(context)
@@ -14,7 +13,7 @@ class MySeekBar : SeekBar {
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
 
     fun setColors(textColor: Int, accentColor: Int, backgroundColor: Int) {
-        progressDrawable.colorFilter = PorterDuffColorFilter(accentColor, PorterDuff.Mode.SRC_IN)
-        thumb.colorFilter = PorterDuffColorFilter(accentColor, PorterDuff.Mode.SRC_IN)
+        progressDrawable.applyColorFilter(accentColor)
+        thumb.applyColorFilter(accentColor)
     }
 }

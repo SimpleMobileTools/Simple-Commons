@@ -61,10 +61,10 @@ class SecurityDialog(val activity: Activity, val requiredHash: String, val showT
                     }
 
                     override fun onTabSelected(tab: TabLayout.Tab) {
-                        when {
-                            tab.text.toString().equals(resources.getString(R.string.pattern), true) -> viewPager.currentItem = PROTECTION_PATTERN
-                            tab.text.toString().equals(resources.getString(R.string.pin), true) -> viewPager.currentItem = PROTECTION_PIN
-                            else -> viewPager.currentItem = PROTECTION_FINGERPRINT
+                        viewPager.currentItem = when {
+                            tab.text.toString().equals(resources.getString(R.string.pattern), true) -> PROTECTION_PATTERN
+                            tab.text.toString().equals(resources.getString(R.string.pin), true) -> PROTECTION_PIN
+                            else -> PROTECTION_FINGERPRINT
                         }
 
                         updateTabVisibility()

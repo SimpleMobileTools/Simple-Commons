@@ -1,17 +1,12 @@
 package com.simplemobiletools.commons.views
 
 import android.content.Context
-import android.graphics.PorterDuff
-import android.graphics.PorterDuffColorFilter
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.getBasePath
-import com.simplemobiletools.commons.extensions.humanizePath
-import com.simplemobiletools.commons.extensions.onGlobalLayout
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.breadcrumb_item.view.*
 
@@ -122,7 +117,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
             if (childCount == 0) {
                 resources.apply {
                     background = getDrawable(R.drawable.button_background)
-                    background.colorFilter = PorterDuffColorFilter(textColor, PorterDuff.Mode.SRC_IN)
+                    background.applyColorFilter(textColor)
                     val medium = getDimension(R.dimen.medium_margin).toInt()
                     setPadding(medium, medium, medium, medium)
                 }
