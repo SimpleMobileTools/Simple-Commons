@@ -82,12 +82,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         funAfterOTGPermission = null
     }
 
-    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
-        android.R.id.home -> {
-            finish()
-            true
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> finish()
+            else -> return super.onOptionsItemSelected(item)
         }
-        else -> super.onOptionsItemSelected(item)
+        return true
     }
 
     override fun attachBaseContext(newBase: Context) {

@@ -2,9 +2,6 @@ package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
 import android.graphics.Color
-import androidx.appcompat.app.AlertDialog
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnTouchListener
@@ -12,6 +9,7 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.EditText
 import android.widget.ImageView
+import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.views.ColorPickerSquare
@@ -109,25 +107,17 @@ class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBack
             false
         })
 
-        newHexField.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-            }
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            }
-
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (s.length == 6 && !isHueBeingDragged) {
-                    try {
-                        val newColor = Color.parseColor("#$s")
-                        Color.colorToHSV(newColor, currentColorHsv)
-                        updateHue()
-                        moveColorPicker()
-                    } catch (ignored: Exception) {
-                    }
+        newHexField.onTextChangeListener {
+            if (it.length == 6 && !isHueBeingDragged) {
+                try {
+                    val newColor = Color.parseColor("#$s")
+                    Color.colorToHSV(newColor, currentColorHsv)
+                    updateHue()
+                    moveColorPicker()
+                } catch (ignored: Exception) {
                 }
             }
-        })
+        }
 
         val textColor = activity.baseConfig.textColor
         dialog = AlertDialog.Builder(activity)
