@@ -142,6 +142,7 @@ const val SORT_DESCENDING = 1024
 const val SORT_BY_TITLE = 2048
 const val SORT_BY_ARTIST = 4096
 const val SORT_BY_DURATION = 8192
+const val SORT_BY_RANDOM = 16384
 
 // security
 const val WAS_PROTECTION_HANDLED = "was_protection_handled"
