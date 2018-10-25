@@ -110,7 +110,7 @@ class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBack
         newHexField.onTextChangeListener {
             if (it.length == 6 && !isHueBeingDragged) {
                 try {
-                    val newColor = Color.parseColor("#$s")
+                    val newColor = Color.parseColor("#$it")
                     Color.colorToHSV(newColor, currentColorHsv)
                     updateHue()
                     moveColorPicker()

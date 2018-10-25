@@ -1,9 +1,9 @@
 package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
-import androidx.appcompat.app.AlertDialog
 import android.text.Html
 import android.text.method.LinkMovementMethod
+import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.launchPurchaseThankYouIntent
 import com.simplemobiletools.commons.extensions.setupDialogStuff

@@ -1,10 +1,10 @@
 package com.simplemobiletools.commons.dialogs
 
-import androidx.appcompat.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
