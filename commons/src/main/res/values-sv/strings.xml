@@ -18,9 +18,9 @@
     <string name="deleting_folder">Tar bort mappen \'%s\'</string>
     <string name="none">Ingen</string>
     <string name="label">Etikett</string>
-    <string name="transparent">Transparent</string>
-    <string name="transparent_color">Transparent color</string>
-    <string name="select_a_different_color">Select a different color</string>
+    <string name="transparent">Genomskinlig</string>
+    <string name="transparent_color">Genomskinlig färg</string>
+    <string name="select_a_different_color">Välj en annan färg</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoriter</string>
@@ -58,8 +58,8 @@
     <string name="filename_invalid_characters_placeholder">Filnamnet \'%s\' innehåller ogiltiga tecken</string>
     <string name="extension_cannot_be_empty">Filnamnstillägget får inte vara tomt</string>
     <string name="source_file_doesnt_exist">Källfilen %s finns inte</string>
-    <string name="prepend_filenames">Prepend filenames</string>
-    <string name="append_filenames">Append filenames (before file extension)</string>
+    <string name="prepend_filenames">Lägg till före filnamnen</string>
+    <string name="append_filenames">Lägg till efter filnamnen (före filnamnstilläggen)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopiera</string>
@@ -165,7 +165,7 @@
     <string name="primary_color">Primär färg</string>
     <string name="foreground_color">Förgrundsfärg</string>
     <string name="app_icon_color">Appikonens färg</string>
-    <string name="restore_defaults">Återställ förvalda värden</string>
+    <string name="restore_defaults">Återställ standardfärger</string>
     <string name="change_color">Ändra färg</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Om du ändrar en färg, ändras temat till anpassat tema</string>
@@ -232,15 +232,15 @@
     <string name="proceed_with_deletion">Är du säker på att du vill fortsätta med borttagningen?</string>
     <string name="deletion_confirmation">Är du säker på att du vill ta bort %s?</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Är du säker på att du vill flytta %s till Papperskorgen?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
-    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
+    <string name="are_you_sure_delete">Är du säker på att du vill ta bort det här objektet?</string>
+    <string name="are_you_sure_recycle_bin">Är du säker på att du vill flytta det här objektet till Papperskorgen?</string>
     <string name="do_not_ask_again">Fråga inte igen i denna session</string>
     <string name="yes">Ja</string>
     <string name="no">Nej</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting %d folder</item>
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="one">VARNING! Du håller på att ta bort %d mapp</item>
+        <item quantity="other">VARNING! Du håller på att ta bort %d mappar</item>
     </plurals>
 
     <!-- Password protection -->
@@ -407,13 +407,13 @@
     <string name="text">Text</string>
 
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restore this file</string>
-    <string name="restore_selected_files">Restore selected files</string>
-    <string name="restore_all_files">Restore all files</string>
-    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
-    <string name="files_restored_successfully">Files have been restored successfully</string>
-    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
-    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
+    <string name="restore_this_file">Återställ filen</string>
+    <string name="restore_selected_files">Återställ valda filer</string>
+    <string name="restore_all_files">Återställ alla filer</string>
+    <string name="recycle_bin_emptied">Papperskorgen har tömts</string>
+    <string name="files_restored_successfully">Filerna har återställts</string>
+    <string name="empty_recycle_bin_confirmation">Är du säker på att du vill tömma Papperskorgen? Filerna tas bort permanent.</string>
+    <string name="recycle_bin_empty">Papperskorgen är tom</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Flyttar %d objekt till Papperskorgen</item>
