@@ -59,7 +59,7 @@
     <string name="extension_cannot_be_empty">L\'estensione non può essere vuota</string>
     <string name="source_file_doesnt_exist">Il file di origine %s non esiste</string>
     <string name="prepend_filenames">Anteponi i nomi dei file</string>
-    <string name="append_filenames">Appendi i nomi dei file (prima dell\'estensione)</string>
+    <string name="append_filenames">Apponi i nomi dei file (prima dell\'estensione)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copia</string>
@@ -95,7 +95,7 @@
     <string name="name_taken">Esiste già un file o una cartella con quel nome</string>
     <string name="invalid_name">Il nome contiene caratteri non validi</string>
     <string name="empty_name">Inserisci un nome</string>
-    <string name="unknown_error_occurred">Riscontrato un errore sconosciuto</string>
+    <string name="unknown_error_occurred">Si è verificato un errore sconosciuto</string>
 
     <!-- File operation conflicts -->
     <string name="file_already_exists">Il file \"%s\" esiste già</string>
