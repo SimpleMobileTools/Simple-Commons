@@ -414,6 +414,7 @@
     <string name="files_restored_successfully">ファイルが正常に復元されました</string>
     <string name="empty_recycle_bin_confirmation">ごみ箱を空にしてもよろしいですか？この操作は元に戻すことができません。</string>
     <string name="recycle_bin_empty">ゴミ箱は空です</string>
+    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d個のアイテムをごみ箱に移動しています</item>

@@ -414,6 +414,7 @@
     <string name="files_restored_successfully">I file sono stati ripristinati correttamente</string>
     <string name="empty_recycle_bin_confirmation">Sei sicuro di volere svuotare il cestino? I file verranno persi definitivamente.</string>
     <string name="recycle_bin_empty">Il cestino è vuoto</string>
+    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Spostamento di %d elemento nel cestino</item>

@@ -414,6 +414,7 @@
     <string name="files_restored_successfully">Les fichiers récupérerés</string>
     <string name="empty_recycle_bin_confirmation">Êtes-vous sûr(-e) de vouloir vider la corbeille ? Les fichiers seront définitivement supprimés.</string>
     <string name="recycle_bin_empty">La corbeille est vide</string>
+    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Déplacement d\' %d élément dans la corbeille en cours…</item>

@@ -414,6 +414,7 @@
     <string name="files_restored_successfully">Filer er vellykket gjenopprettet</string>
     <string name="empty_recycle_bin_confirmation">Er du sikker på at du vil tømme papirkurven? Filene vil bli tapt permanent.</string>
     <string name="recycle_bin_empty">Papirkurven er tom</string>
+    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Moving %d item into the Recycle Bin</item>

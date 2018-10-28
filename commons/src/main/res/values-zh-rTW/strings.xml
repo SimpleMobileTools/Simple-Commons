@@ -414,6 +414,7 @@
     <string name="files_restored_successfully">檔案已成功還原</string>
     <string name="empty_recycle_bin_confirmation">你確定要清空回收桶嗎?檔案將會永久消失。</string>
     <string name="recycle_bin_empty">回收桶是空的</string>
+    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
  
      <plurals name="moving_items_into_bin">
         <item quantity="one">正在移動%d個項目進回收桶</item>

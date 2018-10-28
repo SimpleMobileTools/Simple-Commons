@@ -414,6 +414,7 @@
     <string name="files_restored_successfully">Fayllar uğurla geri qaytarıldı</string>
     <string name="empty_recycle_bin_confirmation">Zibil qutusunu boşaltmaq istədiyinizə əminsiniz? Fayllar tamamilə itiriləcək.</string>
     <string name="recycle_bin_empty">Zibil qutusu boşdur</string>
+    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Moving %d item into the Recycle Bin</item>

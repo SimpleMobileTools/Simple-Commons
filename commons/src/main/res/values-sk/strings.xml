@@ -435,6 +435,7 @@
     <string name="files_restored_successfully">Súbory boli úspešne obnovené</string>
     <string name="empty_recycle_bin_confirmation">Ste si istý, že chcete vysypať odpadkový kôš? Súbory budú navždy stratené.</string>
     <string name="recycle_bin_empty">Odpadkový kôš je prázdny</string>
+    <string name="moving_recycle_bin_items_disabled">Presúvanie položiek z odpadkového koša je zakázané, prosím použite možnosť Obnoviť</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d položka sa presúva do odpadkového koša</item>

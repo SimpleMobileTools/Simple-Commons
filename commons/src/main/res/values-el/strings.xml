@@ -414,6 +414,7 @@
     <string name="files_restored_successfully">Τα αρχεία έχουν επαναφερθεί με επιτυχία</string>
     <string name="empty_recycle_bin_confirmation">Είστε βέβαιοι ότι θέλετε να αδειάσετε τον Κάδο Ανακύκλωσης; Τα αρχεία θα χαθούν οριστικά.</string>
     <string name="recycle_bin_empty">Ο Κάδος Ανακύκλωσης είναι κενός</string>
+    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Μετακινήθηκε %d στοιχείο στον Κάδο</item>

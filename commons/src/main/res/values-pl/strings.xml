@@ -431,6 +431,7 @@
     <string name="files_restored_successfully">Pliki zostały przywrócone</string>
     <string name="empty_recycle_bin_confirmation">Czy na pewno chcesz opróżnić kosz? Pliki zostaną bezpowrotnie utracone.</string>
     <string name="recycle_bin_empty">Kosz jest pusty</string>
+    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Moving %d item into the Recycle Bin</item>
