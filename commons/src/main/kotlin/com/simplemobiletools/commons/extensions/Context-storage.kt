@@ -9,7 +9,6 @@ import android.os.Environment
 import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.text.TextUtils
-import android.widget.Toast
 import androidx.core.content.FileProvider
 import androidx.documentfile.provider.DocumentFile
 import com.simplemobiletools.commons.R
@@ -50,17 +49,7 @@ fun Context.getSDCardPath(): String {
     }
 
     val finalPath = sdCardPath.trimEnd('/')
-
-    // /storage/emulated/0 should probably never be an SD card path, so if it is, and the internal storage path matches a pattern, flip them
-    val fullSDpattern = Pattern.compile("^/storage/[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$")
-    toast("final $finalPath\nint $internalStoragePath \n${fullSDpattern.matcher(internalStoragePath).matches()}", Toast.LENGTH_LONG)
-    if (finalPath == "/storage/emulated/0" && fullSDpattern.matcher(internalStoragePath).matches()) {
-        baseConfig.sdCardPath = internalStoragePath
-        baseConfig.internalStoragePath = finalPath
-    } else {
-        baseConfig.sdCardPath = finalPath
-    }
-
+    baseConfig.sdCardPath = finalPath
     return finalPath
 }
 

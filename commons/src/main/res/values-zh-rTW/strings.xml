@@ -416,7 +416,7 @@
     <string name="recycle_bin_empty">回收桶是空的</string>
     <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
  
-     <plurals name="moving_items_into_bin">
+    <plurals name="moving_items_into_bin">
         <item quantity="one">正在移動%d個項目進回收桶</item>
         <item quantity="other">正在移動%d個項目進回收桶</item>
     </plurals>
