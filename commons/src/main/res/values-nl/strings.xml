@@ -414,7 +414,7 @@
     <string name="files_restored_successfully">Bestanden zijn hersteld</string>
     <string name="empty_recycle_bin_confirmation">Prullenbak echt leegmaken? De bestanden zullen permanent verwijderd worden.</string>
     <string name="recycle_bin_empty">Prullenbak is leeg</string>
-    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
+    <string name="moving_recycle_bin_items_disabled">Items uit de prullenbak verplaatsen is niet toegestaan. Gebruik de opdracht Herstellen.</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d item naar de prullenbak verplaatsen</item>
