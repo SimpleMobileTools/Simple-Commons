@@ -380,6 +380,7 @@
     <string name="extra_large">Extra large</string>
     <string name="password_protect_hidden_items">Afficher les éléments protégés par mot de passe</string>
     <string name="password_protect_whole_app">Le mot de passe protège l\'ensemble de l\'application</string>
+    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
     <string name="keep_last_modified">Conserver la valeur de l\'ancienne modification lors de la copie, du déplacement ou du renommage du fichier</string>
     <string name="show_info_bubble">Afficher une bulle d\'information des éléments lors de l\'utilisation de la barre de défilement</string>
     <string name="prevent_phone_from_sleeping">Ne pas mettre en veille tant que l\'application est active</string>
@@ -414,6 +415,7 @@
     <string name="files_restored_successfully">Les fichiers récupérerés</string>
     <string name="empty_recycle_bin_confirmation">Êtes-vous sûr(-e) de vouloir vider la corbeille ? Les fichiers seront définitivement supprimés.</string>
     <string name="recycle_bin_empty">La corbeille est vide</string>
+    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Déplacement d\' %d élément dans la corbeille en cours…</item>

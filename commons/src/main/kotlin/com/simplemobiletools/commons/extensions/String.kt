@@ -270,6 +270,7 @@ fun String.highlightTextPart(textToHighlight: String, color: Int, highlightAll: 
     return spannableString
 }
 
+// remove diacritics, for example č -> c
 fun String.normalizeString() = Normalizer.normalize(this, Normalizer.Form.NFD).replace(normalizeRegex, "")
 
 fun String.getMimeType(): String {

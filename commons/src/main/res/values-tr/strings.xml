@@ -380,6 +380,7 @@
     <string name="extra_large">Çok büyük</string>
     <string name="password_protect_hidden_items">Parola korumalı gizli öğe görünürlüğü</string>
     <string name="password_protect_whole_app">Parola tüm uygulamayı korur</string>
+    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
     <string name="keep_last_modified">Dosya kopyalama/taşıma/yeniden adlandırmada eski son değiştirilme değerini koru</string>
     <string name="show_info_bubble">Kaydırma çubuğunu sürükleyerek öğeleri kaydırmada bilgi balonunu göster</string>
     <string name="prevent_phone_from_sleeping">Uygulama ön plandayken telefonun uykuya geçmesini önle</string>
@@ -414,6 +415,7 @@
     <string name="files_restored_successfully">Dosyalar başarıyla geri yüklendi</string>
     <string name="empty_recycle_bin_confirmation">Geri Dönüşüm Kutusu\'nu boşaltmak istediğinizden emin misiniz? Dosyalar kalıcı olarak kaybolacak.</string>
     <string name="recycle_bin_empty">Geri Dönüşüm Kutusu boş</string>
+    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Moving %d item into the Recycle Bin</item>

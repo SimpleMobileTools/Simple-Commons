@@ -397,6 +397,7 @@
     <string name="extra_large">Bardzo duża</string>
     <string name="password_protect_hidden_items">Chroń widoczność ukrytych plików</string>
     <string name="password_protect_whole_app">Chroń dostęp do aplikacji</string>
+    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
     <string name="keep_last_modified">Zachowuj starą datę i czas modyfikacji przy kopiowaniu / przenoszeniu / zmianie nazwy plików</string>
     <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
     <string name="prevent_phone_from_sleeping">Zapobiegaj przejściu urządzenia  w stan uśpienia gdy aplikacja jest aktywna</string>
@@ -431,6 +432,7 @@
     <string name="files_restored_successfully">Pliki zostały przywrócone</string>
     <string name="empty_recycle_bin_confirmation">Czy na pewno chcesz opróżnić kosz? Pliki zostaną bezpowrotnie utracone.</string>
     <string name="recycle_bin_empty">Kosz jest pusty</string>
+    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Moving %d item into the Recycle Bin</item>

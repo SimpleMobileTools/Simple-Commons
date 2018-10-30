@@ -380,6 +380,7 @@
     <string name="extra_large">Çox böyük</string>
     <string name="password_protect_hidden_items">Şifrə gizlənmiş tətbiqin görünürlüyünü qoruyur</string>
     <string name="password_protect_whole_app">Şifrə bütün tətbiqi qoruyur</string>
+    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
     <string name="keep_last_modified">Faylı kopyalama/daşıma/yenidən adlandırma proseslərində son faylı saxla</string>
     <string name="show_info_bubble">Sürüşdürmə çubuğu ilə hərəkət zamanı məlumat ekranını göstər</string>
     <string name="prevent_phone_from_sleeping">Tətbiq aktiv halda olduqda telefonun yuxuya getməsinin qarşısını al</string>
@@ -414,6 +415,7 @@
     <string name="files_restored_successfully">Fayllar uğurla geri qaytarıldı</string>
     <string name="empty_recycle_bin_confirmation">Zibil qutusunu boşaltmaq istədiyinizə əminsiniz? Fayllar tamamilə itiriləcək.</string>
     <string name="recycle_bin_empty">Zibil qutusu boşdur</string>
+    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Moving %d item into the Recycle Bin</item>

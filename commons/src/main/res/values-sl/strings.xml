@@ -421,6 +421,7 @@
     <string name="extra_large">Zelo velika</string>
     <string name="password_protect_hidden_items">Zaščiti skrite elemete z geslom</string>
     <string name="password_protect_whole_app">Z geslom zaščiti celotno aplikacijo</string>
+    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
     <string name="keep_last_modified">Ohrani stari čas zadnje spremembe pri kopiranju, premikanju in preimenovanju</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
     <string name="prevent_phone_from_sleeping">Prepreči prehod v stanje mirovanja, dokler je aplikacija v ospredju</string>
@@ -455,6 +456,7 @@
     <string name="files_restored_successfully">Datoteke so bile uspešno obnovljene</string>
     <string name="empty_recycle_bin_confirmation">Res želite izprazniti Koš? Datoteke bodo izgubljene za vedno.</string>
     <string name="recycle_bin_empty">Koš je prazen</string>
+    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Premikanje %d elementa v Koš</item>
