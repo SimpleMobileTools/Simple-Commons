@@ -95,22 +95,22 @@ open class BaseConfig(val context: Context) {
         set(widgetTextColor) = prefs.edit().putInt(WIDGET_TEXT_COLOR, widgetTextColor).apply()
 
     // hidden folder visibility protection
-    var isPasswordProtectionOn: Boolean
+    var isHiddenPasswordProtectionOn: Boolean
         get() = prefs.getBoolean(PASSWORD_PROTECTION, false)
-        set(isPasswordProtectionOn) = prefs.edit().putBoolean(PASSWORD_PROTECTION, isPasswordProtectionOn).apply()
+        set(isHiddenPasswordProtectionOn) = prefs.edit().putBoolean(PASSWORD_PROTECTION, isHiddenPasswordProtectionOn).apply()
 
-    var passwordHash: String
+    var hiddenPasswordHash: String
         get() = prefs.getString(PASSWORD_HASH, "")
-        set(passwordHash) = prefs.edit().putString(PASSWORD_HASH, passwordHash).apply()
+        set(hiddenPasswordHash) = prefs.edit().putString(PASSWORD_HASH, hiddenPasswordHash).apply()
 
-    var protectionType: Int
+    var hiddenProtectionType: Int
         get() = prefs.getInt(PROTECTION_TYPE, PROTECTION_PATTERN)
-        set(protectionType) = prefs.edit().putInt(PROTECTION_TYPE, protectionType).apply()
+        set(hiddenProtectionType) = prefs.edit().putInt(PROTECTION_TYPE, hiddenProtectionType).apply()
 
     // whole app launch protection
-    var appPasswordProtectionOn: Boolean
+    var isAppPasswordProtectionOn: Boolean
         get() = prefs.getBoolean(APP_PASSWORD_PROTECTION, false)
-        set(appPasswordProtectionOn) = prefs.edit().putBoolean(APP_PASSWORD_PROTECTION, appPasswordProtectionOn).apply()
+        set(isAppPasswordProtectionOn) = prefs.edit().putBoolean(APP_PASSWORD_PROTECTION, isAppPasswordProtectionOn).apply()
 
     var appPasswordHash: String
         get() = prefs.getString(APP_PASSWORD_HASH, "")
@@ -120,10 +120,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(APP_PROTECTION_TYPE, PROTECTION_PATTERN)
         set(appProtectionType) = prefs.edit().putInt(APP_PROTECTION_TYPE, appProtectionType).apply()
 
-    // protection about deleting files/folders
-    var deletePasswordProtectionOn: Boolean
+    // file delete and move protection
+    var isDeletePasswordProtectionOn: Boolean
         get() = prefs.getBoolean(DELETE_PASSWORD_PROTECTION, false)
-        set(deletePasswordProtectionOn) = prefs.edit().putBoolean(DELETE_PASSWORD_PROTECTION, deletePasswordProtectionOn).apply()
+        set(isDeletePasswordProtectionOn) = prefs.edit().putBoolean(DELETE_PASSWORD_PROTECTION, isDeletePasswordProtectionOn).apply()
 
     var deletePasswordHash: String
         get() = prefs.getString(DELETE_PASSWORD_HASH, "")

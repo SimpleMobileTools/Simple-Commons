@@ -719,8 +719,8 @@ fun BaseSimpleActivity.getFileInputStreamSync(path: String): InputStream? {
 }
 
 fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
-    if (baseConfig.isPasswordProtectionOn) {
-        SecurityDialog(this, baseConfig.passwordHash, baseConfig.protectionType) { hash, type, success ->
+    if (baseConfig.isHiddenPasswordProtectionOn) {
+        SecurityDialog(this, baseConfig.hiddenPasswordHash, baseConfig.hiddenProtectionType) { hash, type, success ->
             if (success) {
                 callback()
             }
@@ -731,8 +731,18 @@ fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
 }
 
 fun Activity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
-    if (baseConfig.appPasswordProtectionOn) {
+    if (baseConfig.isAppPasswordProtectionOn) {
         SecurityDialog(this, baseConfig.appPasswordHash, baseConfig.appProtectionType) { hash, type, success ->
+            callback(success)
+        }
+    } else {
+        callback(true)
+    }
+}
+
+fun Activity.handleDeletePasswordProtection(callback: (success: Boolean) -> Unit) {
+    if (baseConfig.isDeletePasswordProtectionOn) {
+        SecurityDialog(this, baseConfig.deletePasswordHash, baseConfig.deleteProtectionType) { hash, type, success ->
             callback(success)
         }
     } else {
