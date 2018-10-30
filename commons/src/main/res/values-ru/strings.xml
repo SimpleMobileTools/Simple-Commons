@@ -125,13 +125,13 @@
     <plurals name="delete_items">
         <item quantity="one">%d объект</item>
         <item quantity="few">%d объекта</item>
-        <item quantity="other">%d объектов</item>
+        <item quantity="many">%d объектов</item>
     </plurals>
 
     <plurals name="deleting_items">
         <item quantity="one">Удаление %d объекта</item>
         <item quantity="few">Удаление %d объектов</item>
-        <item quantity="other">Удаление %d объектов</item>
+        <item quantity="many">Удаление %d объектов</item>
     </plurals>
 
     <!-- Storages -->
@@ -245,7 +245,6 @@
         <item quantity="one">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папку</item>
         <item quantity="few">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папки</item>
         <item quantity="many">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папок</item>
-        <item quantity="other">ПРЕДУПРЕЖДЕНИЕ: вы удаляете %d папок</item>
     </plurals>
 
     <!-- Password protection -->
@@ -402,7 +401,7 @@
     <string name="extra_large">Очень крупный</string>
     <string name="password_protect_hidden_items">Защита паролем отображения скрытых объектов</string>
     <string name="password_protect_whole_app">Защита паролем всего приложения</string>
-    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
+    <string name="password_protect_file_deletion">Защита паролем удаления и перемещения файлов</string>
     <string name="keep_last_modified">Сохранять дату изменения файла при копировании/перемещении/переименовании</string>
     <string name="show_info_bubble">Показывать информационное окно при прокрутке элементов перетаскиванием полосы прокрутки</string>
     <string name="prevent_phone_from_sleeping">Предотвращать засыпание устройства, пока приложение находится на переднем плане</string>
@@ -437,7 +436,7 @@
     <string name="files_restored_successfully">Файлы восстановлены</string>
     <string name="empty_recycle_bin_confirmation">Вы действительно хотите очистить корзину? Файлы будут удалены безвозвратно.</string>
     <string name="recycle_bin_empty">Корзина пуста</string>
-    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
+    <string name="moving_recycle_bin_items_disabled">Перемещение элементов корзины отключено, используйте восстановление</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d элемент перемещается в корзину</item>
