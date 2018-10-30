@@ -740,13 +740,15 @@ fun Activity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
     }
 }
 
-fun Activity.handleDeletePasswordProtection(callback: (success: Boolean) -> Unit) {
+fun Activity.handleDeletePasswordProtection(callback: () -> Unit) {
     if (baseConfig.isDeletePasswordProtectionOn) {
         SecurityDialog(this, baseConfig.deletePasswordHash, baseConfig.deleteProtectionType) { hash, type, success ->
-            callback(success)
+            if (success) {
+                callback()
+            }
         }
     } else {
-        callback(true)
+        callback()
     }
 }
 
