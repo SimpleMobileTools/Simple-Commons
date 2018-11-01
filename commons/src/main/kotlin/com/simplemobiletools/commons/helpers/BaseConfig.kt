@@ -181,10 +181,6 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(LAST_CONFLICT_RESOLUTION, CONFLICT_SKIP)
         set(lastConflictResolution) = prefs.edit().putInt(LAST_CONFLICT_RESOLUTION, lastConflictResolution).apply()
 
-    var avoidWhatsNew: Boolean
-        get() = prefs.getBoolean(AVOID_WHATS_NEW, false)
-        set(avoidWhatsNew) = prefs.edit().putBoolean(AVOID_WHATS_NEW, avoidWhatsNew).apply()
-
     var sorting: Int
         get() = prefs.getInt(SORT_ORDER, context.resources.getInteger(R.integer.default_sorting))
         set(sorting) = prefs.edit().putInt(SORT_ORDER, sorting).apply()

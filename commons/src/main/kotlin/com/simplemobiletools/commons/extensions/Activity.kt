@@ -358,7 +358,7 @@ fun BaseSimpleActivity.checkWhatsNew(releases: List<Release>, currVersion: Int) 
     val newReleases = arrayListOf<Release>()
     releases.filterTo(newReleases) { it.id > baseConfig.lastVersion }
 
-    if (newReleases.isNotEmpty() && !baseConfig.avoidWhatsNew) {
+    if (newReleases.isNotEmpty()) {
         WhatsNewDialog(this, newReleases)
     }
 
