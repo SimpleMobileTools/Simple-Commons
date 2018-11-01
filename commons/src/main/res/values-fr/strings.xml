@@ -489,6 +489,11 @@
     <string name="saturday_short">Sam</string>
     <string name="sunday_short">Dim</string>
 
+    <!-- Pro version -->
+    <string name="upgrade_to_pro">This version of the app is no longer maintained. Please upgrade to the Pro version.</string>
+    <string name="it_is_free">It is free till: %s</string>
+    <string name="upgrade">Upgrade</string>
+
     <!-- About -->
     <string name="about">À propos</string>
     <string name="website_label">Pour le code source, consultez</string>

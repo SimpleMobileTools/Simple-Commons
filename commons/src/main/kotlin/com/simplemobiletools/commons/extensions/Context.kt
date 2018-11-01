@@ -323,7 +323,7 @@ fun Context.getFilenameFromContentUri(uri: Uri): String? {
 }
 
 fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
-    if (!isThankYouInstalled()) {
+    if (isProApp() || !isThankYouInstalled()) {
         callback(null)
     } else {
         val cursorLoader = getMyContentProviderCursorLoader()
@@ -376,6 +376,8 @@ fun Context.getUriMimeType(path: String, newUri: Uri): String {
 }
 
 fun Context.isThankYouInstalled() = isPackageInstalled("com.simplemobiletools.thankyou")
+
+fun Context.isProApp() = packageName.removeSuffix(".debug").endsWith(".pro")
 
 fun Context.isPackageInstalled(pkgName: String): Boolean {
     return try {

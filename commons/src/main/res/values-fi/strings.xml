@@ -489,6 +489,11 @@
     <string name="saturday_short">Lau</string>
     <string name="sunday_short">Sun</string>
 
+    <!-- Pro version -->
+    <string name="upgrade_to_pro">This version of the app is no longer maintained. Please upgrade to the Pro version.</string>
+    <string name="it_is_free">It is free till: %s</string>
+    <string name="upgrade">Upgrade</string>
+
     <!-- About -->
     <string name="about">Tietoa</string>
     <string name="website_label">Lähdekoodin löydät täältä</string>

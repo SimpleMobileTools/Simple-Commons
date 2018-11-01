@@ -492,6 +492,11 @@
     <string name="saturday_short">DS</string>
     <string name="sunday_short">DG</string>
 
+    <!-- Pro version -->
+    <string name="upgrade_to_pro">This version of the app is no longer maintained. Please upgrade to the Pro version.</string>
+    <string name="it_is_free">It is free till: %s</string>
+    <string name="upgrade">Upgrade</string>
+
     <!-- About -->
     <string name="about">Sobre</string>
     <string name="website_label">Més aplicacions senzilles i codi font a</string>

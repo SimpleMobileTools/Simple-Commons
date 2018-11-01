@@ -508,6 +508,11 @@
     <string name="saturday_short">Sob</string>
     <string name="sunday_short">Nie</string>
 
+    <!-- Pro version -->
+    <string name="upgrade_to_pro">This version of the app is no longer maintained. Please upgrade to the Pro version.</string>
+    <string name="it_is_free">It is free till: %s</string>
+    <string name="upgrade">Upgrade</string>
+
     <!-- About -->
     <string name="about">O aplikacji</string>
     <string name="website_label">Nasza strona internetowa:</string>
