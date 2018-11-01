@@ -110,7 +110,7 @@ fun Activity.appLaunched(appId: String) {
     baseConfig.appRunCount++
 
     if (!baseConfig.hadThankYouInstalled) {
-        if (isProApp() || isThankYouInstalled()) {
+        if (isAProApp() || isThankYouInstalled()) {
             baseConfig.hadThankYouInstalled = true
         } else if (baseConfig.appRunCount % 50 == 0) {
             DonateDialog(this)

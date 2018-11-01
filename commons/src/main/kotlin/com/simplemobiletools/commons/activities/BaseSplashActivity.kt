@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.getSharedTheme
-import com.simplemobiletools.commons.extensions.isProApp
+import com.simplemobiletools.commons.extensions.isAProApp
 import com.simplemobiletools.commons.extensions.isThankYouInstalled
 
 abstract class BaseSplashActivity : AppCompatActivity() {
@@ -13,7 +13,7 @@ abstract class BaseSplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (!isProApp() && isThankYouInstalled() && (baseConfig.appRunCount == 0 || !baseConfig.wasSharedThemeAfterUpdateChecked)) {
+        if (!isAProApp() && isThankYouInstalled() && (baseConfig.appRunCount == 0 || !baseConfig.wasSharedThemeAfterUpdateChecked)) {
             baseConfig.wasSharedThemeAfterUpdateChecked = true
             getSharedTheme {
                 if (it != null) {
