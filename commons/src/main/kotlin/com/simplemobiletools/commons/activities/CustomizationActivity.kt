@@ -47,7 +47,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         initColorVariables()
         setupColorsPickers()
 
-        if (!isAProApp() && isThankYouInstalled()) {
+        if (isThankYouInstalled()) {
             val cursorLoader = getMyContentProviderCursorLoader()
             Thread {
                 try {

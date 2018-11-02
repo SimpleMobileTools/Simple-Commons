@@ -323,7 +323,7 @@ fun Context.getFilenameFromContentUri(uri: Uri): String? {
 }
 
 fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
-    if (isAProApp() || !isThankYouInstalled()) {
+    if (!isThankYouInstalled()) {
         callback(null)
     } else {
         val cursorLoader = getMyContentProviderCursorLoader()
