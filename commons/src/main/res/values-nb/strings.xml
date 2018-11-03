@@ -222,8 +222,8 @@
     <string name="title">Tittel</string>
     <string name="filename">Filnavn</string>
     <string name="extension">Filendelse</string>
-    <string name="random">Random</string>
-    <string name="sort_randomly">Sort randomly</string>
+    <string name="random">Tilfeldig</string>
+    <string name="sort_randomly">Sorter tilfeldig</string>
     <string name="ascending">Stigende</string>
     <string name="descending">Fallende</string>
     <string name="use_for_this_folder">Bruk kun for denne mappen</string>
@@ -367,7 +367,7 @@
 
     <!-- Settings -->
     <string name="settings">Innstillinger</string>
-    <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Kjøp Simple Thank You</string>
     <string name="customize_colors">Tilpass farger</string>
     <string name="customize_widget_colors">Tilpass modulfarger</string>
     <string name="use_english_language">Bruk engelsk språk</string>
@@ -379,7 +379,7 @@
     <string name="extra_large">Ekstra stor</string>
     <string name="password_protect_hidden_items">Passordbeskytt synlighet for skjulte elementer</string>
     <string name="password_protect_whole_app">Passordbeskytt hele appen</string>
-    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
+    <string name="password_protect_file_deletion">Passordbeskytt sletting og flytting av filer</string>
     <string name="keep_last_modified">Behold gammel Sist endret-verdi ved kopier/flytt/endre navn for filer</string>
     <string name="show_info_bubble">Vis en info-boble ved å dra i rullefeltet</string>
     <string name="prevent_phone_from_sleeping">Forhindre at telefonen går i hvilemodus mens appen er i forgrunnen</string>
@@ -417,8 +417,8 @@
     <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Moving %d item into the Recycle Bin</item>
-        <item quantity="other">Moving %d items into the Recycle Bin</item>
+        <item quantity="one">Flytter %d element til papirkurven</item>
+        <item quantity="other">Flytter %d elementer til papirkurven</item>
     </plurals>
 
     <!-- Import / Export -->
