@@ -3,11 +3,11 @@ package com.simplemobiletools.commons.dialogs
 import android.app.Activity
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.R.id.conflict_dialog_radio_merge
-import com.simplemobiletools.commons.R.id.conflict_dialog_radio_skip
+import com.simplemobiletools.commons.R.id.*
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.beVisibleIf
 import com.simplemobiletools.commons.extensions.setupDialogStuff
+import com.simplemobiletools.commons.helpers.CONFLICT_KEEP_BOTH
 import com.simplemobiletools.commons.helpers.CONFLICT_MERGE
 import com.simplemobiletools.commons.helpers.CONFLICT_OVERWRITE
 import com.simplemobiletools.commons.helpers.CONFLICT_SKIP
@@ -44,6 +44,7 @@ class FileConflictDialog(val activity: Activity, val fileDirItem: FileDirItem, v
         val resolution = when (view.conflict_dialog_radio_group.checkedRadioButtonId) {
             conflict_dialog_radio_skip -> CONFLICT_SKIP
             conflict_dialog_radio_merge -> CONFLICT_MERGE
+            conflict_dialog_radio_keep_both -> CONFLICT_KEEP_BOTH
             else -> CONFLICT_OVERWRITE
         }
 

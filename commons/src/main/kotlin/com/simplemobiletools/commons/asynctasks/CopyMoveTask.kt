@@ -80,7 +80,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         for (file in mFiles) {
             try {
                 val newPath = "$mDestinationPath/${file.name}"
-                val newFileDirItem = FileDirItem(newPath, newPath.getFilenameFromPath(), file.isDirectory)
+                var newFileDirItem = FileDirItem(newPath, newPath.getFilenameFromPath(), file.isDirectory)
                 if (activity.getDoesFilePathExist(newPath)) {
                     val resolution = getConflictResolution(conflictResolutions, newPath)
                     if (resolution == CONFLICT_SKIP) {
@@ -89,6 +89,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                     } else if (resolution == CONFLICT_OVERWRITE) {
                         newFileDirItem.isDirectory = if (File(newPath).exists()) File(newPath).isDirectory else activity.getSomeDocumentFile(newPath)!!.isDirectory
                         activity.deleteFileBg(newFileDirItem, true)
+                    } else if (resolution == CONFLICT_KEEP_BOTH) {
+                        val newFile = activity.getAlternativeFile(File(newFileDirItem.path))
+                        newFileDirItem = FileDirItem(newFile.path, newFile.name, newFile.isDirectory)
                     }
                 }
 
