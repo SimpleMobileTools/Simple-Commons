@@ -175,6 +175,7 @@ const val PERMISSION_GET_ACCOUNTS = 12
 const val CONFLICT_SKIP = 1
 const val CONFLICT_OVERWRITE = 2
 const val CONFLICT_MERGE = 3
+const val CONFLICT_KEEP_BOTH = 4
 
 const val MONDAY_BIT = 1
 const val TUESDAY_BIT = 2
