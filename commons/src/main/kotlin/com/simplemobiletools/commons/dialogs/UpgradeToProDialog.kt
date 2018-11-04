@@ -4,18 +4,19 @@ import android.app.Activity
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.getProUrl
 import com.simplemobiletools.commons.extensions.launchViewIntent
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_upgrade_to_pro.view.*
 
 class UpgradeToProDialog(val activity: Activity) {
     val packageName = activity.baseConfig.appId.removeSuffix(".debug")
-    val GALLERY_FREE_TILL = 1543104000000L     // November 25
+    val DRAW_FREE_TILL = 1543104000000L     // November 25
     val NOV_25 = "Nov 25 2018"
 
     init {
         var text = activity.getString(R.string.upgrade_to_pro)
-        if (packageName.endsWith("gallery") && System.currentTimeMillis() < GALLERY_FREE_TILL) {
+        if (packageName.endsWith("draw") && System.currentTimeMillis() < DRAW_FREE_TILL) {
             val freeTill = String.format(activity.getString(R.string.it_is_free), NOV_25)
             text += "\n$freeTill"
         }
@@ -34,7 +35,7 @@ class UpgradeToProDialog(val activity: Activity) {
     }
 
     private fun upgradeApp() {
-        activity.launchViewIntent("https://play.google.com/store/apps/details?id=com.simplemobiletools.gallery.pro")
+        activity.launchViewIntent(activity.getProUrl())
     }
 
     private fun moreInfo() {

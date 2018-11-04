@@ -114,8 +114,7 @@ fun Activity.appLaunched(appId: String) {
 }
 
 fun Activity.showDonateOrUpgradeDialog() {
-    val proPackages = arrayListOf("gallery")
-    if (proPackages.contains(baseConfig.appId.removeSuffix(".debug").removePrefix("com.simplemobiletools."))) {
+    if (getCanAppBeUpgraded()) {
         UpgradeToProDialog(this)
     } else if (!baseConfig.hadThankYouInstalled && !isThankYouInstalled()) {
         DonateDialog(this)
