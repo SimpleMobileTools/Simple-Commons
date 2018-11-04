@@ -27,10 +27,13 @@ class UpgradeToProDialog(val activity: Activity) {
 
         AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.upgrade) { dialog, which -> upgradeApp() }
-                .setNeutralButton(R.string.more_info) { dialog, which -> moreInfo() }
+                .setNeutralButton(R.string.more_info, null)
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
                     activity.setupDialogStuff(view, this)
+                    getButton(AlertDialog.BUTTON_NEUTRAL).setOnClickListener {
+                        moreInfo()
+                    }
                 }
     }
 
