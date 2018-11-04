@@ -10,14 +10,14 @@ import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_upgrade_to_pro.view.*
 
 class UpgradeToProDialog(val activity: Activity) {
-    val packageName = activity.baseConfig.appId.removeSuffix(".debug")
-    val DRAW_FREE_TILL = 1543104000000L     // November 25
-    val NOV_25 = "Nov 25 2018"
+    private val packageName = activity.baseConfig.appId.removeSuffix(".debug")
+    private val FIRST_APPS_FREE_TILL = 1541980800000L     // November 12
+    private val NOV_12 = "Nov 12 2018"
 
     init {
         var text = activity.getString(R.string.upgrade_to_pro_long)
-        if (packageName.endsWith("draw") && System.currentTimeMillis() < DRAW_FREE_TILL) {
-            val freeTill = String.format(activity.getString(R.string.it_is_free), NOV_25)
+        if ((packageName.endsWith("draw") || packageName.endsWith("gallery") || packageName.endsWith("filemanager")) && System.currentTimeMillis() < FIRST_APPS_FREE_TILL) {
+            val freeTill = String.format(activity.getString(R.string.it_is_free), NOV_12)
             text += "\n$freeTill"
         }
 
