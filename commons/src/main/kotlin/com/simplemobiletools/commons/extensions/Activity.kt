@@ -108,13 +108,17 @@ fun Activity.appLaunched(appId: String) {
         }
     }
     baseConfig.appRunCount++
+    if (baseConfig.appRunCount % 50 == 0 && !isAProApp()) {
+        showDonateOrUpgradeDialog()
+    }
+}
 
-    if (!baseConfig.hadThankYouInstalled) {
-        if (isAProApp() || isThankYouInstalled()) {
-            baseConfig.hadThankYouInstalled = true
-        } else if (baseConfig.appRunCount % 50 == 0) {
-            DonateDialog(this)
-        }
+fun Activity.showDonateOrUpgradeDialog() {
+    val proPackages = arrayListOf("gallery")
+    if (proPackages.contains(baseConfig.appId.removeSuffix(".debug").removePrefix("com.simplemobiletools."))) {
+        UpgradeToProDialog(this)
+    } else if (!baseConfig.hadThankYouInstalled && !isThankYouInstalled()) {
+        DonateDialog(this)
     }
 }
 
