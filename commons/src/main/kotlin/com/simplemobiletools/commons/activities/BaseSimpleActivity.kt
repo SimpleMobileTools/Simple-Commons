@@ -302,7 +302,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             val newName = String.format("%s(%d).%s", file.nameWithoutExtension, fileIndex, file.extension)
             newFile = File(file.parent, newName)
             fileIndex++
-        } while (newFile!!.exists())
+        } while (getDoesFilePathExist(newFile!!.absolutePath))
         return newFile
     }
 
