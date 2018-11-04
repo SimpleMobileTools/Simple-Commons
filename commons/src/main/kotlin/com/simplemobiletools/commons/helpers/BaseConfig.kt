@@ -271,4 +271,8 @@ open class BaseConfig(val context: Context) {
     var wasBeforeAskingShown: Boolean
         get() = prefs.getBoolean(WAS_BEFORE_ASKING_SHOWN, false)
         set(wasBeforeAskingShown) = prefs.edit().putBoolean(WAS_BEFORE_ASKING_SHOWN, wasBeforeAskingShown).apply()
+
+    var wasInitialUpgradeToProShown: Boolean
+        get() = prefs.getBoolean(WAS_INITIAL_UPGRADE_TO_PRO_SHOWN, false)
+        set(wasInitialUpgradeToProShown) = prefs.edit().putBoolean(WAS_INITIAL_UPGRADE_TO_PRO_SHOWN, wasInitialUpgradeToProShown).apply()
 }
