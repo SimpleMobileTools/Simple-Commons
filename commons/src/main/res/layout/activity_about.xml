@@ -53,7 +53,7 @@
             android:layout_below="@+id/about_faq"
             android:paddingTop="@dimen/activity_margin"
             android:paddingBottom="@dimen/activity_margin"
-            android:text="@string/upgrade_to_pro_underlined"
+            android:text="@string/upgrade_to_pro"
             android:textColor="@color/color_primary"/>
 
         <com.simplemobiletools.commons.views.MyTextView

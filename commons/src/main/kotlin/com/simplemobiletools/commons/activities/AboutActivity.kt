@@ -97,7 +97,7 @@ class AboutActivity : BaseSimpleActivity() {
     private fun setupUpgradeToPro() {
         about_upgrade_to_pro.beVisibleIf(getCanAppBeUpgraded())
         about_upgrade_to_pro.setOnClickListener {
-            launchViewIntent(getProUrl())
+            launchUpgradeToProIntent()
         }
 
         about_upgrade_to_pro.setTextColor(linkColor)

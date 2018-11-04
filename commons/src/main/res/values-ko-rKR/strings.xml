@@ -491,7 +491,7 @@
     <string name="sunday_short">일요일</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro">This version of the app is no longer maintained. Please upgrade to the Pro version.</string>
+    <string name="upgrade_to_pro_long">This version of the app is no longer maintained. Please upgrade to the Pro version.</string>
     <string name="it_is_free">It is free till: %s</string>
     <string name="more_info">More info</string>
     <string name="upgrade">Upgrade</string>
@@ -500,7 +500,7 @@
     <string name="about">앱정보</string>
     <string name="website_label">소스코드 공개 링크</string>
     <string name="email_label">피드백 또는 제안요청</string>
-    <string name="upgrade_to_pro_underlined"><u>Upgrade to Pro</u></string>
+    <string name="upgrade_to_pro">Upgrade to Pro</string>
     <string name="more_apps_underlined"><u>앱 더보기</u></string>
     <string name="third_party_licences_underlined"><u>서드파티 라이선스</u></string>
     <string name="invite_friends_underlined"><u>친구에게 공유</u></string>

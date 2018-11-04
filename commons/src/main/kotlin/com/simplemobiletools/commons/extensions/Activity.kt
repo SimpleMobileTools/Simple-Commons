@@ -155,6 +155,8 @@ fun Activity.isShowingSAFDialog(path: String, treeUri: String, requestCode: Int)
 
 fun Activity.launchPurchaseThankYouIntent() = launchViewIntent(getString(R.string.thank_you_url))
 
+fun Activity.launchUpgradeToProIntent() = launchViewIntent(getProUrl())
+
 fun Activity.launchViewIntent(id: Int) = launchViewIntent(getString(id))
 
 fun Activity.launchViewIntent(url: String) {

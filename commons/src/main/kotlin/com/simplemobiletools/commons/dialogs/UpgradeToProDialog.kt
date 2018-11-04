@@ -4,7 +4,7 @@ import android.app.Activity
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.getProUrl
+import com.simplemobiletools.commons.extensions.launchUpgradeToProIntent
 import com.simplemobiletools.commons.extensions.launchViewIntent
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_upgrade_to_pro.view.*
@@ -15,7 +15,7 @@ class UpgradeToProDialog(val activity: Activity) {
     val NOV_25 = "Nov 25 2018"
 
     init {
-        var text = activity.getString(R.string.upgrade_to_pro)
+        var text = activity.getString(R.string.upgrade_to_pro_long)
         if (packageName.endsWith("draw") && System.currentTimeMillis() < DRAW_FREE_TILL) {
             val freeTill = String.format(activity.getString(R.string.it_is_free), NOV_25)
             text += "\n$freeTill"
@@ -35,7 +35,7 @@ class UpgradeToProDialog(val activity: Activity) {
     }
 
     private fun upgradeApp() {
-        activity.launchViewIntent(activity.getProUrl())
+        activity.launchUpgradeToProIntent()
     }
 
     private fun moreInfo() {

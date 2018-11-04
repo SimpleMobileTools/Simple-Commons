@@ -9,5 +9,5 @@
     android:paddingTop="@dimen/bigger_margin"
     android:paddingRight="@dimen/bigger_margin"
     android:paddingBottom="@dimen/normal_margin"
-    android:text="@string/upgrade_to_pro"
+    android:text="@string/upgrade_to_pro_long"
     android:textSize="@dimen/bigger_text_size"/>

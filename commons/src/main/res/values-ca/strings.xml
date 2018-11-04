@@ -494,7 +494,7 @@
     <string name="sunday_short">DG</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro">Aquesta versió de l\'aplicació ja no es manté. Actualitzeu a la versió Pro.</string>
+    <string name="upgrade_to_pro_long">Aquesta versió de l\'aplicació ja no es manté. Actualitzeu a la versió Pro.</string>
     <string name="it_is_free">És gratuït fins a: %s</string>
     <string name="more_info">Més informació</string>
     <string name="upgrade">Actualitza</string>
@@ -503,7 +503,7 @@
     <string name="about">Sobre</string>
     <string name="website_label">Més aplicacions senzilles i codi font a</string>
     <string name="email_label">Envia els teus comentaris o suggeriments a</string>
-    <string name="upgrade_to_pro_underlined"><u>Upgrade to Pro</u></string>
+    <string name="upgrade_to_pro">Upgrade to Pro</string>
     <string name="more_apps_underlined"><u>Més aplicacions</u></string>
     <string name="third_party_licences_underlined"><u>Llicències de tercers</u></string>
     <string name="invite_friends_underlined"><u>Convida a amics</u></string>

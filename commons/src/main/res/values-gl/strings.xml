@@ -491,7 +491,7 @@
     <string name="sunday_short">Dom</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro">This version of the app is no longer maintained. Please upgrade to the Pro version.</string>
+    <string name="upgrade_to_pro_long">This version of the app is no longer maintained. Please upgrade to the Pro version.</string>
     <string name="it_is_free">It is free till: %s</string>
     <string name="more_info">More info</string>
     <string name="upgrade">Upgrade</string>
@@ -500,7 +500,7 @@
     <string name="about">Acerca de</string>
     <string name="website_label">Más aplicaciones sencillas y código fuente en</string>
     <string name="email_label">Envía tus comentarios o sugerencias a</string>
-    <string name="upgrade_to_pro_underlined"><u>Upgrade to Pro</u></string>
+    <string name="upgrade_to_pro">Upgrade to Pro</string>
     <string name="more_apps_underlined"><u>Más aplicaciones</u></string>
     <string name="third_party_licences_underlined"><u>Licencias de terceros</u></string>
     <string name="invite_friends_underlined"><u>Invitar a amigos</u></string>
