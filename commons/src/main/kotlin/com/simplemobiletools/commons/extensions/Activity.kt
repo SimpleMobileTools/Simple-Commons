@@ -150,9 +150,9 @@ fun Activity.isShowingSAFDialog(path: String, treeUri: String, requestCode: Int)
     }
 }
 
-fun Activity.launchPurchaseThankYouIntent() = launchViewIntent(resources.getString(R.string.thank_you_url))
+fun Activity.launchPurchaseThankYouIntent() = launchViewIntent(getString(R.string.thank_you_url))
 
-fun Activity.launchViewIntent(id: Int) = launchViewIntent(resources.getString(id))
+fun Activity.launchViewIntent(id: Int) = launchViewIntent(getString(id))
 
 fun Activity.launchViewIntent(url: String) {
     Thread {
