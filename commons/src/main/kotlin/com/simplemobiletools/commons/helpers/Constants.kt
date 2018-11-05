@@ -74,7 +74,6 @@ const val WAS_SHARED_THEME_AFTER_UPDATE_CHECKED = "was_shared_theme_after_update
 const val SHOW_INFO_BUBBLE = "show_info_bubble"
 const val LAST_CONFLICT_RESOLUTION = "last_conflict_resolution"
 const val LAST_CONFLICT_APPLY_TO_ALL = "last_conflict_apply_to_all"
-const val AVOID_WHATS_NEW = "avoid_whats_new"
 const val HAD_THANK_YOU_INSTALLED = "had_thank_you_installed"
 const val SKIP_DELETE_CONFIRMATION = "skip_delete_confirmation"
 const val ENABLE_PULL_TO_REFRESH = "enable_pull_to_refresh"
@@ -97,6 +96,7 @@ const val WIDGET_ID_TO_MEASURE = "widget_id_to_measure"
 const val WAS_ORANGE_ICON_CHECKED = "was_orange_icon_checked"
 const val WAS_APP_ON_SD_SHOWN = "was_app_on_sd_shown"
 const val WAS_BEFORE_ASKING_SHOWN = "was_before_asking_shown"
+const val WAS_INITIAL_UPGRADE_TO_PRO_SHOWN = "was_initial_upgrade_to_pro_shown"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
@@ -176,6 +176,7 @@ const val PERMISSION_GET_ACCOUNTS = 12
 const val CONFLICT_SKIP = 1
 const val CONFLICT_OVERWRITE = 2
 const val CONFLICT_MERGE = 3
+const val CONFLICT_KEEP_BOTH = 4
 
 const val MONDAY_BIT = 1
 const val TUESDAY_BIT = 2
@@ -248,3 +249,5 @@ fun getConflictResolution(resolutions: LinkedHashMap<String, Int>, path: String)
         CONFLICT_SKIP
     }
 }
+
+val proPackages = arrayListOf("draw", "gallery", "filemanager", "contacts")

@@ -102,6 +102,7 @@
     <string name="file_already_exists_overwrite">文件 \"%s\" 已存在。是否覆盖？</string>
     <string name="folder_already_exists">文件夹 \"%s\" 已存在</string>
     <string name="merge">合并</string>
+    <string name="keep_both">保留两者</string>
     <string name="overwrite">覆盖</string>
     <string name="skip">跳过</string>
     <string name="append">应用到 \'_1\'</string>
@@ -222,8 +223,8 @@
     <string name="title">标题</string>
     <string name="filename">文件名</string>
     <string name="extension">扩展名</string>
-    <string name="random">Random</string>
-    <string name="sort_randomly">Sort randomly</string>
+    <string name="random">随机</string>
+    <string name="sort_randomly">随机排序</string>
     <string name="ascending">递增</string>
     <string name="descending">递减</string>
     <string name="use_for_this_folder">仅应用于此文件夹</string>
@@ -371,7 +372,6 @@
     <string name="customize_colors">自定义颜色</string>
     <string name="customize_widget_colors">自定义小部件颜色</string>
     <string name="use_english_language">强制使用英语语言</string>
-    <string name="avoid_whats_new">启动时不再显示更新内容</string>
     <string name="show_hidden_items">显示隐藏的项目</string>
     <string name="font_size">字体大小</string>
     <string name="small">小</string>
@@ -380,7 +380,7 @@
     <string name="extra_large">巨大</string>
     <string name="password_protect_hidden_items">使用密码保护隐藏项</string>
     <string name="password_protect_whole_app">使用密码保护本应用</string>
-    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
+    <string name="password_protect_file_deletion">使用密码保护文件删除和移动</string>
     <string name="keep_last_modified">在复制/移动/重命名文件时保留旧的修改日期</string>
     <string name="show_info_bubble">拖动滚动条时在滚动项目旁显示一个信息气泡</string>
     <string name="prevent_phone_from_sleeping">阻止设备自动休眠</string>
@@ -415,7 +415,7 @@
     <string name="files_restored_successfully">恢复文件成功</string>
     <string name="empty_recycle_bin_confirmation">您确定要清空回收站吗？这些文件将永久丢失。</string>
     <string name="recycle_bin_empty">回收站是空的</string>
-    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
+    <string name="moving_recycle_bin_items_disabled">不允许移动回收站中的文件，请使用恢复功能。</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">正在移动 %d 个项目到回收站</item>
@@ -490,10 +490,17 @@
     <string name="saturday_short">周六</string>
     <string name="sunday_short">周日</string>
 
+    <!-- Pro version -->
+    <string name="upgrade_to_pro_long">此版本的应用不再支持维护。请升级到专业版。</string>
+    <string name="it_is_free">免费期限至: %s</string>
+    <string name="more_info">更多信息</string>
+    <string name="upgrade">升级</string>
+
     <!-- About -->
     <string name="about">关于</string>
     <string name="website_label">应用源码</string>
     <string name="email_label">发送反馈</string>
+    <string name="upgrade_to_pro">升级到专业版</string>
     <string name="more_apps_underlined"><u>更多应用</u></string>
     <string name="third_party_licences_underlined"><u>开放源代码</u></string>
     <string name="invite_friends_underlined"><u>分享给好友</u></string>

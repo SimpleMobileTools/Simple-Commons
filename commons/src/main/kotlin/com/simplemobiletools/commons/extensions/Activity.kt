@@ -108,13 +108,16 @@ fun Activity.appLaunched(appId: String) {
         }
     }
     baseConfig.appRunCount++
+    if (baseConfig.appRunCount % 50 == 0 && !isAProApp()) {
+        showDonateOrUpgradeDialog()
+    }
+}
 
-    if (!baseConfig.hadThankYouInstalled) {
-        if (isThankYouInstalled()) {
-            baseConfig.hadThankYouInstalled = true
-        } else if (baseConfig.appRunCount % 50 == 0) {
-            DonateDialog(this)
-        }
+fun Activity.showDonateOrUpgradeDialog() {
+    if (getCanAppBeUpgraded()) {
+        UpgradeToProDialog(this)
+    } else if (!baseConfig.hadThankYouInstalled && !isThankYouInstalled()) {
+        DonateDialog(this)
     }
 }
 
@@ -150,9 +153,11 @@ fun Activity.isShowingSAFDialog(path: String, treeUri: String, requestCode: Int)
     }
 }
 
-fun Activity.launchPurchaseThankYouIntent() = launchViewIntent(resources.getString(R.string.thank_you_url))
+fun Activity.launchPurchaseThankYouIntent() = launchViewIntent(getString(R.string.thank_you_url))
 
-fun Activity.launchViewIntent(id: Int) = launchViewIntent(resources.getString(id))
+fun Activity.launchUpgradeToProIntent() = launchViewIntent(getProUrl())
+
+fun Activity.launchViewIntent(id: Int) = launchViewIntent(getString(id))
 
 fun Activity.launchViewIntent(url: String) {
     Thread {
@@ -358,7 +363,7 @@ fun BaseSimpleActivity.checkWhatsNew(releases: List<Release>, currVersion: Int) 
     val newReleases = arrayListOf<Release>()
     releases.filterTo(newReleases) { it.id > baseConfig.lastVersion }
 
-    if (newReleases.isNotEmpty() && !baseConfig.avoidWhatsNew) {
+    if (newReleases.isNotEmpty()) {
         WhatsNewDialog(this, newReleases)
     }
 
@@ -719,8 +724,8 @@ fun BaseSimpleActivity.getFileInputStreamSync(path: String): InputStream? {
 }
 
 fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
-    if (baseConfig.isPasswordProtectionOn) {
-        SecurityDialog(this, baseConfig.passwordHash, baseConfig.protectionType) { hash, type, success ->
+    if (baseConfig.isHiddenPasswordProtectionOn) {
+        SecurityDialog(this, baseConfig.hiddenPasswordHash, baseConfig.hiddenProtectionType) { hash, type, success ->
             if (success) {
                 callback()
             }
@@ -731,12 +736,24 @@ fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
 }
 
 fun Activity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
-    if (baseConfig.appPasswordProtectionOn) {
+    if (baseConfig.isAppPasswordProtectionOn) {
         SecurityDialog(this, baseConfig.appPasswordHash, baseConfig.appProtectionType) { hash, type, success ->
             callback(success)
         }
     } else {
         callback(true)
+    }
+}
+
+fun Activity.handleDeletePasswordProtection(callback: () -> Unit) {
+    if (baseConfig.isDeletePasswordProtectionOn) {
+        SecurityDialog(this, baseConfig.deletePasswordHash, baseConfig.deleteProtectionType) { hash, type, success ->
+            if (success) {
+                callback()
+            }
+        }
+    } else {
+        callback()
     }
 }
 

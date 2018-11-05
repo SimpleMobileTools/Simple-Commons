@@ -102,6 +102,7 @@
     <string name="file_already_exists_overwrite">L’arxiu \"%s\" ja existeix. El vos sobreescriure?</string>
     <string name="folder_already_exists">La carpeta \"%s\" ja existeix</string>
     <string name="merge">Fusionar</string>
+    <string name="keep_both">Keep both</string>
     <string name="overwrite">Sobreescriure</string>
     <string name="skip">Saltar</string>
     <string name="append">Afegir \'_1\'</string>
@@ -374,7 +375,6 @@
     <string name="customize_colors">Canviar colors</string>
     <string name="customize_widget_colors">Personalitza els colors de widgets</string>
     <string name="use_english_language">Usar l’idioma Anglès</string>
-    <string name="avoid_whats_new">Permetre mostrar novetats a l\'inici</string>
     <string name="show_hidden_items">Mostra elements ocults</string>
     <string name="font_size">Mida de la font</string>
     <string name="small">Petita</string>
@@ -383,7 +383,7 @@
     <string name="extra_large">Enorme</string>
     <string name="password_protect_hidden_items">Contrasenya per protegir els mitjans amagats</string>
     <string name="password_protect_whole_app">Contrasenya per protegir tota l’aplicació</string>
-    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
+    <string name="password_protect_file_deletion">Protegir amb contrasenya l\'eliminació i el moviment dels fitxers</string>
     <string name="keep_last_modified">Mantenir el valor de la darrera modificació al copiar/moure/canviar el nom dels arxius</string>
     <string name="show_info_bubble">Mostra una bombolla d\'informació en elements de desplaçament mitjançant arrossegament de la barra de desplaçament</string>
     <string name="prevent_phone_from_sleeping">No deixar dormir el telèfon amb la aplicació a primer pla</string>
@@ -493,10 +493,17 @@
     <string name="saturday_short">DS</string>
     <string name="sunday_short">DG</string>
 
+    <!-- Pro version -->
+    <string name="upgrade_to_pro_long">Aquesta versió de l\'aplicació ja no es manté. Actualitzeu a la versió Pro.</string>
+    <string name="it_is_free">És gratuït fins a: %s</string>
+    <string name="more_info">Més informació</string>
+    <string name="upgrade">Actualitza</string>
+
     <!-- About -->
     <string name="about">Sobre</string>
     <string name="website_label">Més aplicacions senzilles i codi font a</string>
     <string name="email_label">Envia els teus comentaris o suggeriments a</string>
+    <string name="upgrade_to_pro">Upgrade to Pro</string>
     <string name="more_apps_underlined"><u>Més aplicacions</u></string>
     <string name="third_party_licences_underlined"><u>Llicències de tercers</u></string>
     <string name="invite_friends_underlined"><u>Convida a amics</u></string>

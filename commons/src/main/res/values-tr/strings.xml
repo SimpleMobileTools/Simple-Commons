@@ -16,11 +16,11 @@
     <string name="details">Ayrıntılar</string>
     <string name="notes">Notlar</string>
     <string name="deleting_folder">\'%s\' klasörü siliniyor</string>
-    <string name="none">None</string>
-    <string name="label">Label</string>
-    <string name="transparent">Transparent</string>
-    <string name="transparent_color">Transparent color</string>
-    <string name="select_a_different_color">Select a different color</string>
+    <string name="none">Hiçbiri</string>
+    <string name="label">Etiket</string>
+    <string name="transparent">Şeffaf</string>
+    <string name="transparent_color">Şeffaf renk</string>
+    <string name="select_a_different_color">Farklı bir renk seçin</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoriler</string>
@@ -58,8 +58,8 @@
     <string name="filename_invalid_characters_placeholder">Dosya adı \'%s\' geçersiz karakterler içeriyor</string>
     <string name="extension_cannot_be_empty">Uzantı boş olamaz</string>
     <string name="source_file_doesnt_exist">%s kaynak dosyası mevcut değil</string>
-    <string name="prepend_filenames">Prepend filenames</string>
-    <string name="append_filenames">Append filenames (before file extension)</string>
+    <string name="prepend_filenames">Ön dosya adları</string>
+    <string name="append_filenames">Dosya adlarını ekle (dosya uzantısından önce)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopyala</string>
@@ -102,6 +102,7 @@
     <string name="file_already_exists_overwrite">\"%s\" dosyası zaten var. Üzerine yazılsın mı?</string>
     <string name="folder_already_exists">\"%s\" klasörü zaten var</string>
     <string name="merge">Birleştir</string>
+    <string name="keep_both">İkisini de sakla</string>
     <string name="overwrite">Üzerine yaz</string>
     <string name="skip">Atla</string>
     <string name="append">\'_1\' ile ekle</string>
@@ -138,8 +139,8 @@
     <string name="root">Root</string>
     <string name="wrong_root_selected">Yanlış klasör seçildi, lütfen SD kartınızın kök klasörünü seçin</string>
     <string name="sd_card_otg_same">SD kart ve OTG cihaz yolları aynı olamaz</string>
-    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
-        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
+    <string name="app_on_sd_card">Uygulama, uygulama widget\'larını kullanılamaz hale getiren bir SD karta yüklenmiş görünüyor. Onları mevcut widget\'lar listesinde bile görmeyeceksiniz.
+        Bu bir sistem sınırlamasıdır, bu yüzden widget\'ları kullanmak istiyorsanız, uygulamayı dahili depolama birimine geri taşımalısınız.</string>
 
     <!-- File properties -->
     <string name="properties">Özellikler</string>
@@ -209,9 +210,9 @@
     <string name="temporarily_show_hidden">Geçici olarak gizliyi göster</string>
     <string name="stop_showing_hidden">Gizli medyayı göstermeyi bırak</string>
     <string name="maximum_share_reached">Bu kadar çok içeriği bir kerede paylaşamazsınız</string>
-    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
-    <string name="undo">Undo</string>
-    <string name="redo">Redo</string>
+    <string name="empty_and_disable_recycle_bin">Geri Dönüşüm Kutusu\'nu boşalt ve devre dışı bırak</string>
+    <string name="undo">Geri al</string>
+    <string name="redo">Yinele</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sıralama ölçütü</string>
@@ -222,8 +223,8 @@
     <string name="title">Başlık</string>
     <string name="filename">Dosya adı</string>
     <string name="extension">Uzantı</string>
-    <string name="random">Random</string>
-    <string name="sort_randomly">Sort randomly</string>
+    <string name="random">Rastgele</string>
+    <string name="sort_randomly">Rastgele sırala</string>
     <string name="ascending">Artan</string>
     <string name="descending">Azalan</string>
     <string name="use_for_this_folder">Sadece bu klasör için kullan</string>
@@ -352,7 +353,7 @@
     <string name="reminder_triggers_in">Hatırlatıcı tetiklenene kadar kalan süre:\n%s</string>
     <string name="alarm_warning">Lütfen alarma güvenmeden önce düzgün çalıştığından emin olun. Pil tasarrufu ile ilgili sistem kısıtlamaları nedeniyle yanlış davranabilir.</string>
     <string name="reminder_warning">Lütfen hatırlatıcılara güvenmeden önce düzgün çalıştıklarından emin olun. Pil tasarrufu ile ilgili sistem kısıtlamaları nedeniyle yanlış davranabilirler.</string>
-    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
+    <string name="notifications_disabled">Bu uygulamanın bildirimleri devre dışı. Lütfen bunları etkinleştirmek için cihaz ayarlarınıza gidin.</string>
 
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
@@ -367,11 +368,10 @@
 
     <!-- Settings -->
     <string name="settings">Ayarlar</string>
-    <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Basit Teşekkürler\'i Satın Al</string>
     <string name="customize_colors">Renkleri özelleştir</string>
     <string name="customize_widget_colors">Widget renklerini özelleştir</string>
     <string name="use_english_language">İngilizce dilini kullan</string>
-    <string name="avoid_whats_new">Başlangıçta Yenilikleri göstermeyi önle</string>
     <string name="show_hidden_items">Gizli öğeleri göster</string>
     <string name="font_size">Yazı tipi boyutu</string>
     <string name="small">Küçük</string>
@@ -380,7 +380,7 @@
     <string name="extra_large">Çok büyük</string>
     <string name="password_protect_hidden_items">Parola korumalı gizli öğe görünürlüğü</string>
     <string name="password_protect_whole_app">Parola tüm uygulamayı korur</string>
-    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
+    <string name="password_protect_file_deletion">Parola, dosya silinmesini ve taşınmasını korur</string>
     <string name="keep_last_modified">Dosya kopyalama/taşıma/yeniden adlandırmada eski son değiştirilme değerini koru</string>
     <string name="show_info_bubble">Kaydırma çubuğunu sürükleyerek öğeleri kaydırmada bilgi balonunu göster</string>
     <string name="prevent_phone_from_sleeping">Uygulama ön plandayken telefonun uykuya geçmesini önle</string>
@@ -415,11 +415,11 @@
     <string name="files_restored_successfully">Dosyalar başarıyla geri yüklendi</string>
     <string name="empty_recycle_bin_confirmation">Geri Dönüşüm Kutusu\'nu boşaltmak istediğinizden emin misiniz? Dosyalar kalıcı olarak kaybolacak.</string>
     <string name="recycle_bin_empty">Geri Dönüşüm Kutusu boş</string>
-    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
+    <string name="moving_recycle_bin_items_disabled">Geri Dönüşüm kutusu öğelerini taşıma devre dışı, lütfen Geri Yükle\'yi kullanın</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Moving %d item into the Recycle Bin</item>
-        <item quantity="other">Moving %d items into the Recycle Bin</item>
+        <item quantity="one">%d öğe Geri Dönüşüm Kutusu\'na taşınıyor</item>
+        <item quantity="other">%d öğe Geri Dönüşüm Kutusu\'na taşınıyor</item>
     </plurals>
 
     <!-- Import / Export -->
@@ -490,10 +490,17 @@
     <string name="saturday_short">Cmt</string>
     <string name="sunday_short">Paz</string>
 
+    <!-- Pro version -->
+    <string name="upgrade_to_pro_long">Uygulamanın bu sürümü artık sağlanmıyor. Lütfen Pro sürümüne yükseltin.</string>
+    <string name="it_is_free">Şu süre kadar ücretsiz: %s</string>
+    <string name="more_info">Daha fazla bilgi</string>
+    <string name="upgrade">Yükselt</string>
+
     <!-- About -->
     <string name="about">Hakkında</string>
     <string name="website_label">Kaynak kodları için ziyaret edin</string>
     <string name="email_label">Görüşlerinizi veya önerilerinizi buraya gönderin</string>
+    <string name="upgrade_to_pro">Pro\'ya Yükselt</string>
     <string name="more_apps_underlined"><u>Daha fazla uygulama</u></string>
     <string name="third_party_licences_underlined"><u>Üçüncü taraf lisansları</u></string>
     <string name="invite_friends_underlined"><u>Arkadaşlarınızı davet edin</u></string>
@@ -515,9 +522,9 @@
         ]]>
     </string>
     <string name="purchase">Satın al</string>
-    <string name="update_thank_you">Lütfen Simple Thank You\'yu son sürüme güncelleyin</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please read the Frequently Asked Questions first, maybe the solution is there.</string>
-    <string name="read_it">Read it</string>
+    <string name="update_thank_you">Lütfen Basit Teşekkürler\'i son sürüme güncelleyin</string>
+    <string name="before_asking_question_read_faq">Bir soru sormadan önce lütfen Sık Sorulan Sorular bölümünü okuyun, belki orada çözümü vardır.</string>
+    <string name="read_it">Oku</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -570,5 +577,5 @@
     <string name="exoplayer_title">ExoPlayer (video oynatıcı)</string>
     <string name="panorama_view_title">VR Panorama View (panorama görüntüleme)</string>
     <string name="sanselan_title">Apache Sanselan (görüntü meta verileri okuma)</string>
-    <string name="filters_title">Android Photo Filters (image filters)</string>
+    <string name="filters_title">Android Photo Filters (görüntü filtreleri)</string>
 </resources>

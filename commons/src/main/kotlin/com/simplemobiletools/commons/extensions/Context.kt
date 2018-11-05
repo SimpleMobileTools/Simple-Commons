@@ -377,6 +377,8 @@ fun Context.getUriMimeType(path: String, newUri: Uri): String {
 
 fun Context.isThankYouInstalled() = isPackageInstalled("com.simplemobiletools.thankyou")
 
+fun Context.isAProApp() = packageName.startsWith("com.simplemobiletools.") && packageName.removeSuffix(".debug").endsWith(".pro")
+
 fun Context.isPackageInstalled(pkgName: String): Boolean {
     return try {
         packageManager.getPackageInfo(pkgName, 0)
@@ -567,3 +569,7 @@ fun Context.toggleAppIconColor(appId: String, colorIndex: Int, color: Int, enabl
 fun Context.getAppIconColors() = resources.getIntArray(R.array.md_app_icon_colors).toCollection(ArrayList())
 
 fun Context.getLaunchIntent() = packageManager.getLaunchIntentForPackage(baseConfig.appId)
+
+fun Context.getCanAppBeUpgraded() = proPackages.contains(baseConfig.appId.removeSuffix(".debug").removePrefix("com.simplemobiletools."))
+
+fun Context.getProUrl() = "https://play.google.com/store/apps/details?id=${baseConfig.appId.removeSuffix(".debug")}.pro"

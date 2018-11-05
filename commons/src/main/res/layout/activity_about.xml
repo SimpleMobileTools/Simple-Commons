@@ -47,10 +47,20 @@
             android:textColor="@color/color_primary"/>
 
         <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/about_more_apps"
+            android:id="@+id/about_upgrade_to_pro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/about_faq"
+            android:paddingTop="@dimen/activity_margin"
+            android:paddingBottom="@dimen/activity_margin"
+            android:text="@string/upgrade_to_pro"
+            android:textColor="@color/color_primary"/>
+
+        <com.simplemobiletools.commons.views.MyTextView
+            android:id="@+id/about_more_apps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/about_upgrade_to_pro"
             android:paddingTop="@dimen/activity_margin"
             android:paddingBottom="@dimen/activity_margin"
             android:text="@string/more_apps_underlined"

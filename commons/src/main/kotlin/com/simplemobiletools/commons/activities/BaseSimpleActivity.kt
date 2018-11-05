@@ -257,13 +257,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                             val updatedFiles = ArrayList<FileDirItem>(fileDirItems.size * 2)
                             val destinationFolder = File(destination)
                             for (oldFileDirItem in fileDirItems) {
-                                val newFile = File(destinationFolder, oldFileDirItem.name)
+                                var newFile = File(destinationFolder, oldFileDirItem.name)
                                 if (newFile.exists()) {
-                                    if (getConflictResolution(it, newFile.absolutePath) == CONFLICT_SKIP) {
-                                        fileCountToCopy--
-                                    } else {
-                                        // this file is guaranteed to be on the internal storage, so just delete it this way
-                                        newFile.delete()
+                                    when {
+                                        getConflictResolution(it, newFile.absolutePath) == CONFLICT_SKIP -> fileCountToCopy--
+                                        getConflictResolution(it, newFile.absolutePath) == CONFLICT_KEEP_BOTH -> newFile = getAlternativeFile(newFile)
+                                        else ->
+                                            // this file is guaranteed to be on the internal storage, so just delete it this way
+                                            newFile.delete()
                                     }
                                 }
 
@@ -292,6 +293,17 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    fun getAlternativeFile(file: File): File {
+        var fileIndex = 1
+        var newFile: File?
+        do {
+            val newName = String.format("%s(%d).%s", file.nameWithoutExtension, fileIndex, file.extension)
+            newFile = File(file.parent, newName)
+            fileIndex++
+        } while (getDoesFilePathExist(newFile!!.absolutePath))
+        return newFile
     }
 
     private fun startCopyMove(files: ArrayList<FileDirItem>, destinationPath: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean, copyHidden: Boolean) {

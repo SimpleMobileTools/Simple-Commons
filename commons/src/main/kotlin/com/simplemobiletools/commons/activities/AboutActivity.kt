@@ -37,6 +37,7 @@ class AboutActivity : BaseSimpleActivity() {
         setupWebsite()
         setupEmail()
         setupFAQ()
+        setupUpgradeToPro()
         setupMoreApps()
         setupRateUs()
         setupInvite()
@@ -91,6 +92,16 @@ class AboutActivity : BaseSimpleActivity() {
 
         about_faq.setTextColor(linkColor)
         about_faq.underlineText()
+    }
+
+    private fun setupUpgradeToPro() {
+        about_upgrade_to_pro.beVisibleIf(getCanAppBeUpgraded())
+        about_upgrade_to_pro.setOnClickListener {
+            launchUpgradeToProIntent()
+        }
+
+        about_upgrade_to_pro.setTextColor(linkColor)
+        about_upgrade_to_pro.underlineText()
     }
 
     private fun openFAQ(faqItems: ArrayList<FAQItem>) {

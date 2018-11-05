@@ -102,6 +102,7 @@
     <string name="file_already_exists_overwrite">\"%s\" faylı artıq mövcuddur. Üzərinə yazılsın?</string>
     <string name="folder_already_exists">\"%s\" qovluğu artıq mövcuddur</string>
     <string name="merge">Birləşdir</string>
+    <string name="keep_both">Keep both</string>
     <string name="overwrite">Üzərinə yaz</string>
     <string name="skip">Keç</string>
     <string name="append">\'_1\' ilə əlavə et</string>
@@ -371,7 +372,6 @@
     <string name="customize_colors">Rəngləri dəyiş</string>
     <string name="customize_widget_colors">Widget rənglərini dəyiş</string>
     <string name="use_english_language">İngilis dilində işlət</string>
-    <string name="avoid_whats_new">Başlanğıcda yeni nə var göstərmə</string>
     <string name="show_hidden_items">Gizli faylları göstər</string>
     <string name="font_size">Yazı ölçüsü</string>
     <string name="small">Kiçik</string>
@@ -490,10 +490,17 @@
     <string name="saturday_short">Şnb</string>
     <string name="sunday_short">Bzr</string>
 
+    <!-- Pro version -->
+    <string name="upgrade_to_pro_long">This version of the app is no longer maintained. Please upgrade to the Pro version.</string>
+    <string name="it_is_free">It is free till: %s</string>
+    <string name="more_info">More info</string>
+    <string name="upgrade">Upgrade</string>
+
     <!-- About -->
     <string name="about">Haqqında</string>
     <string name="website_label">Kök koda keçiş üçün</string>
     <string name="email_label">Geri dönüş və tövsiyələrinizi göndərin</string>
+    <string name="upgrade_to_pro">Upgrade to Pro</string>
     <string name="more_apps_underlined"><u>Daha çox tətbiq</u></string>
     <string name="third_party_licences_underlined"><u>Üçüncü partiya lisenziyaları</u></string>
     <string name="invite_friends_underlined"><u>Dostları dəvət et</u></string>
