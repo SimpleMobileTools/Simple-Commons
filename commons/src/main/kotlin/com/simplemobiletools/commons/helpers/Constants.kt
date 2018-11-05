@@ -250,4 +250,4 @@ fun getConflictResolution(resolutions: LinkedHashMap<String, Int>, path: String)
     }
 }
 
-val proPackages = arrayListOf("draw", "gallery", "filemanager")
+val proPackages = arrayListOf("draw", "gallery", "filemanager", "contacts")
