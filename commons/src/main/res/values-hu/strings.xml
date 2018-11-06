@@ -102,7 +102,7 @@
     <string name="file_already_exists_overwrite">\"%s\" fájl már létezik. Felülírja?</string>
     <string name="folder_already_exists"> \"%s\" mappa már létezik</string>
     <string name="merge">Összevonás</string>
-    <string name="keep_both">Keep both</string>
+    <string name="keep_both">Mindkettő megtartása</string>
     <string name="overwrite">Felülírás</string>
     <string name="skip">Átlépés</string>
     <string name="append">Mellékel \'_1\'</string>
@@ -382,9 +382,9 @@
     <string name="password_protect_whole_app">Jelszavas védelem az egész alkalmazáshoz</string>
     <string name="password_protect_file_deletion">Jelszavas védelem a fájlok törléséhez és áthelyezéséhez</string>
     <string name="keep_last_modified">Tartsa meg a régi, utoljára módosítás értékét a fájl másolás/áthelyezés/átnevezés műveletnél</string>
-    <string name="show_info_bubble">Mutassa az információs buborékot görgető elemek görgetősáv húzásánál</string>
+    <string name="show_info_bubble">Mutassa az információs buborékot a görgetősáv húzásánál</string>
     <string name="prevent_phone_from_sleeping">Megakadályozza a telefon alvó állapotát, amíg az alkalmazás előtérben van</string>
-    <string name="skip_delete_confirmation">Mindig ugorja át a törlés megerősítés párbeszédet</string>
+    <string name="skip_delete_confirmation">Mindig ugorja át a törlés megerősítése kérdést</string>
     <string name="enable_pull_to_refresh">Felülről lefelé húzásos frissítés engedélyezése</string>
     <string name="use_24_hour_time_format">24 órás idő formátum használata</string>
     <string name="sunday_first">A hét kezdete vasárnap</string>
@@ -492,7 +492,7 @@
 
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Az alkalmazás ezen verziója már nincs fejlesztve. Frissítsen a Pro verzióra.</string>
-    <string name="it_is_free">Ingyenes: %s. If you download it till then, you will be able to use it for free forever.</string>
+    <string name="it_is_free">Ingyenes eddig: %s. Ha eddig letölti, akkor örökre ingyen használhatja.</string>
     <string name="more_info">További információ</string>
     <string name="upgrade">Frissítés</string>
 
@@ -523,7 +523,7 @@
 	</string>
     <string name="purchase">Vásárlás</string>
     <string name="update_thank_you">Kérjük frissítse a Simple Thank You alkalmazást a legújabb verzióra</string>
-    <string name="before_asking_question_read_faq">Mielőtt feltenné a kérdést, először nézze meg a Gyakran Ismételt Kérdéseket, abban talán már létezik a megoldás.</string>
+    <string name="before_asking_question_read_faq">Mielőtt feltenné a kérdését, először nézze meg a Gyakran Ismételt Kérdéseket, abban talán már létezik a megoldás.</string>
     <string name="read_it">Olvassa el</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
@@ -539,7 +539,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Gyakran Ismételt Kérdések</string>
-    <string name="before_asking_question">Mielőtt feltenné egy kérdést, először olvassa el a</string>
+    <string name="before_asking_question">Mielőtt feltenné egy kérdést, először olvassa el ezt:</string>
     <string name="faq_1_title_commons">Miért nem látom az alkalmazás widgetet a widgetek listáján?</string>
     <string name="faq_1_text_commons">Valószínűleg azért, mert áthelyezte az alkalmazást egy SD kártyára. Van egy Android rendszerkorlátozás, amely ebben az esetben elrejti az adott alkalmazás widgeteket.
         Az egyetlen megoldás az alkalmazás visszahelyezése a belső tárolóra az eszköz beállításain keresztül.</string>
