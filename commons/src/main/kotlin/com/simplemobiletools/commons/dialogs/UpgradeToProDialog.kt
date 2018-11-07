@@ -17,6 +17,9 @@ class UpgradeToProDialog(val activity: Activity) {
     private val CONTACTS_FREE_TILL = 1542153600000L     // November 14
     private val NOV_14 = "Nov 14 2018"
 
+    private val NOTES_FREE_TILL = 1542240000000L     // November 15
+    private val NOV_15 = "Nov 15 2018"
+
     init {
         var text = activity.getString(R.string.upgrade_to_pro_long)
         if ((packageName.endsWith("draw") || packageName.endsWith("gallery") || packageName.endsWith("filemanager")) && System.currentTimeMillis() < FIRST_APPS_FREE_TILL) {
@@ -24,6 +27,9 @@ class UpgradeToProDialog(val activity: Activity) {
             text += "\n$freeTill"
         } else if (packageName.endsWith("contacts") && System.currentTimeMillis() < CONTACTS_FREE_TILL) {
             val freeTill = String.format(activity.getString(R.string.it_is_free), NOV_14)
+            text += "\n$freeTill"
+        } else if (packageName.endsWith("notes") && System.currentTimeMillis() < NOTES_FREE_TILL) {
+            val freeTill = String.format(activity.getString(R.string.it_is_free), NOV_15)
             text += "\n$freeTill"
         }
 
