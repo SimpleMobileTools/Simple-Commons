@@ -58,8 +58,8 @@
     <string name="filename_invalid_characters_placeholder">Ime \'%s\' vsebuje neveljavne znake</string>
     <string name="extension_cannot_be_empty">Končnica ne more biti prazna</string>
     <string name="source_file_doesnt_exist">Datoteka %s ne obstaja</string>
-    <string name="prepend_filenames">Prepend filenames</string>
-    <string name="append_filenames">Append filenames (before file extension)</string>
+    <string name="prepend_filenames">Pripravi mena datotek</string>
+    <string name="append_filenames">Dodaj imena datotek (pred končnico)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopiraj</string>
@@ -102,7 +102,7 @@
     <string name="file_already_exists_overwrite">Datoteka %s že obstaja. Jo želite prepisati?</string>
     <string name="folder_already_exists">Mapa %s že obstaja</string>
     <string name="merge">Združi</string>
-    <string name="keep_both">Keep both</string>
+    <string name="keep_both">Obdrži obe</string>
     <string name="overwrite">Prepiši</string>
     <string name="skip">Preskoči</string>
     <string name="append">Dodaj \'_1\'</string>
@@ -142,17 +142,17 @@
     <string name="select_storage">Izberite</string>
     <string name="internal">Notranja shramba</string>
     <string name="sd_card">Kartica SD</string>
-    <string name="root">Koren</string>
-    <string name="wrong_root_selected">Izbrali ste napačno mapo. Izbrati morate korensko mapo kartice SD</string>
-    <string name="sd_card_otg_same">Pot do kartice SD in OTG ne moreta biti enaki</string>
-    <string name="app_on_sd_card">Aplikacijo ste namestili na kartico SD kar pomeni, da pripomočni ne bodo delovali. Ne boste jih niti videli na seznamu.\n        To je omejitev sistema zato, če želite uporabljati pripomočke, morate aplikacijo premakniti nazaj na notranjo shrambo.</string>
+    <string name="root">Korenska mapa</string>
+    <string name="wrong_root_selected">Izbrali ste napačno mapo. Izbrati morate korensko mapo SD kartice</string>
+    <string name="sd_card_otg_same">Pot do SD kartice in OTG ne moreta biti enaki</string>
+    <string name="app_on_sd_card">Aplikacijo ste namestili na SD kartico, kar pomeni, da pripomočki ne bodo delovali. Ne boste jih niti videli na seznamu.\n        To je omejitev sistema zato, če želite uporabljati pripomočke, morate aplikacijo premakniti nazaj v notranjo shrambo.</string>
 
     <!-- File properties -->
     <string name="properties">Lastnosti</string>
     <string name="path">Pot</string>
     <string name="items_selected">Elementov izbranih</string>
     <string name="direct_children_count">Število neposrednih potomcev</string>
-    <string name="files_count">Skupono število datotek</string>
+    <string name="files_count">Skupno število datotek</string>
     <string name="resolution">Ločljivost</string>
     <string name="duration">Dolžina</string>
     <string name="artist">Avtor</string>
@@ -191,9 +191,9 @@
     <!-- Themes -->
     <string name="light_theme">Svetlo</string>
     <string name="dark_theme">Temno</string>
-    <string name="solarized">Solarized</string>
+    <string name="solarized">Osončeno</string>
     <string name="dark_red">Temno rdeče</string>
-    <string name="black_white">Black &amp; White</string>
+    <string name="black_white">Črno &amp; belo</string>
     <string name="custom">Po meri</string>
     <string name="shared">Deljeno</string>
 
@@ -214,7 +214,7 @@
     <string name="unhide_folder">Odkrij mapo</string>
     <string name="temporarily_show_hidden">Začasno pokaži skrito</string>
     <string name="stop_showing_hidden">Ne prikazuj skritih medijev</string>
-    <string name="maximum_share_reached">Toliko vsebine na enkrat ni mogoče deliti</string>
+    <string name="maximum_share_reached">Toliko vsebine naenkrat ni mogoče deliti</string>
     <string name="empty_and_disable_recycle_bin">Izprazni in onemogoči Koš</string>
     <string name="undo">Razveljavi</string>
     <string name="redo">Ponovno uveljavi</string>
@@ -228,10 +228,10 @@
     <string name="title">Naslov</string>
     <string name="filename">Ime datoteke</string>
     <string name="extension">Datotečna končnica</string>
-    <string name="random">Random</string>
-    <string name="sort_randomly">Sort randomly</string>
-    <string name="ascending">Zvišujoče</string>
-    <string name="descending">Znižajoče</string>
+    <string name="random">Naključno</string>
+    <string name="sort_randomly">Razvrsti naključno</string>
+    <string name="ascending">Naraščajoče</string>
+    <string name="descending">Padajoče</string>
     <string name="use_for_this_folder">Uporabi le za to mapo</string>
 
     <!-- Confirmation dialog -->
@@ -239,8 +239,8 @@
     <string name="deletion_confirmation">Res želite izbrisati \'%s\'?</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Res želite \'%s\' premakniti v Koš?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Res želite izbrisati ta element?</string>
-    <string name="are_you_sure_recycle_bin">Res želite prematniti ta element v Koš?</string>
-    <string name="do_not_ask_again">To sejo ne vprašaj več</string>
+    <string name="are_you_sure_recycle_bin">Res želite premakniti ta element v Koš?</string>
+    <string name="do_not_ask_again">To sejo ne sprašuj več</string>
     <string name="yes">Da</string>
     <string name="no">Ne</string>
 
@@ -258,7 +258,7 @@
     <string name="wrong_pin">Napačen PIN</string>
     <string name="repeat_pin">Ponovite PIN</string>
     <string name="pattern">Vzorec</string>
-    <string name="insert_pattern">Vpišite vzorec</string>
+    <string name="insert_pattern">Narišite vzorec</string>
     <string name="wrong_pattern">Napačen vzorec</string>
     <string name="repeat_pattern">Ponovite vzorec</string>
     <string name="fingerprint">Prstni odtis</string>
@@ -266,7 +266,7 @@
     <string name="place_finger">Postavite prst na čitalec prstnih odtisov</string>
     <string name="authentication_failed">Overitev ni uspela</string>
     <string name="authentication_blocked">Overitev je blokirana, prosimo počakajte trenutek</string>
-    <string name="no_fingerprints_registered">Ragistrirali še niste nobenega prstnega odtisa. Prosimo, dodajte jih v nastavitvah naprave</string>
+    <string name="no_fingerprints_registered">Registrirali še niste nobenega prstnega odtisa. Prosimo, dodajte jih v nastavitvah naprave</string>
     <string name="go_to_settings">Odpri nastavitve</string>
     <string name="protection_setup_successfully">Geslo uspešno nastavljeno. Če ga pozabite, izbrišite in ponovno naložite aplikacijo.</string>
     <string name="fingerprint_setup_successfully">Zaščita uspešno nastavljena. Če pride do težav s ponastavitvijo, izbrišite in ponovno naložite aplikacijo.</string>
@@ -392,8 +392,8 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Čas do sprožitve alarma: %s</string>
     <string name="reminder_triggers_in">Čas do sprožitve opomnika: %s</string>
-    <string name="alarm_warning">Predlagamo, da alarm preiskusite, preden se nanj zanašate. Zaradi sistemskih omejitev, povezanih z ohranjanjem baterije, lahko zataji.</string>
-    <string name="reminder_warning">Predlagamo, da opomnike preiskusite, preden se zanašate na njih. Zaradi sistemskih omejitev, povezanih z ohranjanjem baterije, lahko zatajijo.</string>
+    <string name="alarm_warning">Predlagamo, da alarm preizkusite, preden se nanj zanašate. Zaradi sistemskih omejitev, povezanih z ohranjanjem baterije, lahko alarm zataji.</string>
+    <string name="reminder_warning">Predlagamo, da opomnike preiskusite, preden se zanašate na njih. Zaradi sistemskih omejitev, povezanih z ohranjanjem baterije, lahko opomniki zatajijo.</string>
     <string name="notifications_disabled">Obvestila so za to aplikacijo onemogočena. Vklopite jih lahko v nastavitvah naprave.</string>
 
     <!-- Alarms -->
@@ -421,9 +421,9 @@
     <string name="extra_large">Zelo velika</string>
     <string name="password_protect_hidden_items">Zaščiti skrite elemete z geslom</string>
     <string name="password_protect_whole_app">Z geslom zaščiti celotno aplikacijo</string>
-    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
+    <string name="password_protect_file_deletion">Z geslom zaščiti brisanje in premikanje datotek</string>
     <string name="keep_last_modified">Ohrani stari čas zadnje spremembe pri kopiranju, premikanju in preimenovanju</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+    <string name="show_info_bubble">Prikaži info mehurček pri premikanju drsnika</string>
     <string name="prevent_phone_from_sleeping">Prepreči prehod v stanje mirovanja, dokler je aplikacija v ospredju</string>
     <string name="skip_delete_confirmation">Vedno preskoči potrditev brisanja</string>
     <string name="enable_pull_to_refresh">Omogočite poteg z vrha za ponovno nalaganje</string>
@@ -434,9 +434,9 @@
     <string name="snooze_time">Čas dremeža</string>
     <string name="vibrate_on_button_press">Vibriraj ob pritisku gumba</string>
     <string name="move_items_into_recycle_bin">Premakni datoteke v koš namesto brisanja</string>
-    <string name="recycle_bin_cleaning_interval">Čas med čisčenji Koša</string>
-    <string name="empty_recycle_bin">Izprazni koš</string>
-    <string name="force_portrait_mode">Prisili pokončni zaslon</string>
+    <string name="recycle_bin_cleaning_interval">Čas med čiščenji Koša</string>
+    <string name="empty_recycle_bin">Izprazni Koš</string>
+    <string name="force_portrait_mode">Vsili pokončni zaslon</string>
 
     <!-- Setting sections -->
     <string name="visibility">Vidljivost</string>
@@ -456,7 +456,7 @@
     <string name="files_restored_successfully">Datoteke so bile uspešno obnovljene</string>
     <string name="empty_recycle_bin_confirmation">Res želite izprazniti Koš? Datoteke bodo izgubljene za vedno.</string>
     <string name="recycle_bin_empty">Koš je prazen</string>
-    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
+    <string name="moving_recycle_bin_items_disabled">Premikanje elementov v Košu je onemogočeno, uporabite Obnovitev</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Premikanje %d elementa v Koš</item>
@@ -479,7 +479,7 @@
     <!-- OTG devices -->
     <string name="otg">OTG</string>
     <string name="confirm_otg_storage_access_text">Izberitre korensko mapo naprave OTG na naslednjem zaslonu, da odobrite dostop</string>
-    <string name="wrong_root_selected_otg">Izbrana je bila napapačna mapa. Prosimo, izberite korensko mapo naprave OTG please select the root folder of your OTG device</string>
+    <string name="wrong_root_selected_otg">Izbrana je bila napapačna mapa. Prosimo, izberite korensko mapo naprave OTG.</string>
 
     <!-- Dates -->
     <string name="january">Januar</string>
@@ -518,11 +518,11 @@
     <string name="sunday">Nedelja</string>
 
     <string name="monday_letter">P</string>
-    <string name="tuesday_letter">Č</string>
-    <string name="wednesday_letter">N</string>
+    <string name="tuesday_letter">T</string>
+    <string name="wednesday_letter">S</string>
     <string name="thursday_letter">Č</string>
     <string name="friday_letter">P</string>
-    <string name="saturday_letter">N</string>
+    <string name="saturday_letter">S</string>
     <string name="sunday_letter">N</string>
 
     <string name="monday_short">Pon</string>
@@ -534,22 +534,22 @@
     <string name="sunday_short">Ned</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">This version of the app is no longer maintained. Please upgrade to the Pro version.</string>
-    <string name="it_is_free">It is free till: %s</string>
-    <string name="more_info">More info</string>
-    <string name="upgrade">Upgrade</string>
+    <string name="upgrade_to_pro_long">Ta verzija aplikacije se ne vzdržuje več. Prosim nadgradite na Pro verzijo.</string>
+    <string name="it_is_free">Še vedno je zastonj do: %s. Če jo naložite do takrat, jo boste lahko zastonj uporabljali neomejeno časa.</string>
+    <string name="more_info">Več informacij</string>
+    <string name="upgrade">Nadgradi</string>
 
     <!-- About -->
-    <string name="about">O</string>
+    <string name="about">O aplikaciji</string>
     <string name="website_label">Za izvorno kodo obiščite</string>
     <string name="email_label">"Svoje predloge in povratne informacije pošljite na "</string>
-    <string name="upgrade_to_pro">Upgrade to Pro</string>
-    <string name="more_apps_underlined"><u>More apps</u></string>
+    <string name="upgrade_to_pro">Nadgradi na Pro</string>
+    <string name="more_apps_underlined"><u>Več aplikacij</u></string>
     <string name="third_party_licences_underlined"><u>Licence tretjih oseb</u></string>
-    <string name="invite_friends_underlined"><u>Invite friends</u></string>
+    <string name="invite_friends_underlined"><u>Povabi prijatelje</u></string>
     <string name="share_text">Oglejte si tudi %1$s na %2$s</string>
     <string name="invite_via">Povabite preko</string>
-    <string name="rate_us_underlined"><u>Rate us</u></string>
+    <string name="rate_us_underlined"><u>Ocenite nas</u></string>
     <string name="donate">Donirajte</string>
     <string name="donate_underlined"><u>Donirajte</u></string>
     <string name="follow_us">Sledite nam</string>
@@ -565,7 +565,7 @@
         ]]>
     </string>
     <string name="purchase">Kupi</string>
-    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
+    <string name="update_thank_you">Prosimo nadgradite Simple Thank You na zadnjo verzijo</string>
     <string name="before_asking_question_read_faq">Preden postavite vprašanje, preberite Pogosta vprašanja</string>
     <string name="read_it">Preberite</string>
 

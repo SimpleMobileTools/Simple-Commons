@@ -102,7 +102,7 @@
     <string name="file_already_exists_overwrite">Bestand \"%s\" bestaat reeds. Overschrijven?</string>
     <string name="folder_already_exists">Map \"%s\" bestaat reeds</string>
     <string name="merge">Samenvoegen</string>
-    <string name="keep_both">Keep both</string>
+    <string name="keep_both">Beide behouden</string>
     <string name="overwrite">Overschrijven</string>
     <string name="skip">Overslaan</string>
     <string name="append">Voeg \'_1\' toe</string>
@@ -492,7 +492,7 @@
 
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Deze versie wordt niet langer doorontwikkeld. Overweeg te upgraden naar de Pro-versie.</string>
-    <string name="it_is_free">Gratis tot: %s</string>
+    <string name="it_is_free">Gratis tot: %s. Bij het downloaden vóór deze datum blijft deze versie altijd gratis te gebruiken.</string>
     <string name="more_info">Meer informatie</string>
     <string name="upgrade">Upgraden</string>
 
@@ -500,7 +500,7 @@
     <string name="about">Over</string>
     <string name="website_label">Bezoek voor de broncode</string>
     <string name="email_label">Stuur reacties of suggesties naar</string>
-    <string name="upgrade_to_pro">Upgrade to Pro</string>
+    <string name="upgrade_to_pro">Upgraden naar Pro-versie</string>
     <string name="more_apps_underlined"><u>Meer apps</u></string>
     <string name="third_party_licences_underlined"><u>Licenties van derden</u></string>
     <string name="invite_friends_underlined"><u>Vrienden uitnodigen</u></string>

@@ -14,8 +14,11 @@ class UpgradeToProDialog(val activity: Activity) {
     private val FIRST_APPS_FREE_TILL = 1541980800000L     // November 12
     private val NOV_12 = "Nov 12 2018"
 
-    private val CONTACTS_FREE_TILL = 1542067200000L     // November 13
-    private val NOV_13 = "Nov 13 2018"
+    private val CONTACTS_FREE_TILL = 1542153600000L     // November 14
+    private val NOV_14 = "Nov 14 2018"
+
+    private val NOTES_FREE_TILL = 1542240000000L     // November 15
+    private val NOV_15 = "Nov 15 2018"
 
     init {
         var text = activity.getString(R.string.upgrade_to_pro_long)
@@ -23,7 +26,10 @@ class UpgradeToProDialog(val activity: Activity) {
             val freeTill = String.format(activity.getString(R.string.it_is_free), NOV_12)
             text += "\n$freeTill"
         } else if (packageName.endsWith("contacts") && System.currentTimeMillis() < CONTACTS_FREE_TILL) {
-            val freeTill = String.format(activity.getString(R.string.it_is_free), NOV_13)
+            val freeTill = String.format(activity.getString(R.string.it_is_free), NOV_14)
+            text += "\n$freeTill"
+        } else if (packageName.endsWith("notes") && System.currentTimeMillis() < NOTES_FREE_TILL) {
+            val freeTill = String.format(activity.getString(R.string.it_is_free), NOV_15)
             text += "\n$freeTill"
         }
 
@@ -33,7 +39,7 @@ class UpgradeToProDialog(val activity: Activity) {
 
         AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.upgrade) { dialog, which -> upgradeApp() }
-                .setNeutralButton(R.string.more_info, null)
+                .setNeutralButton(R.string.more_info, null)     // do not dismiss the dialog on pressing More Info
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
                     activity.setupDialogStuff(view, this)
