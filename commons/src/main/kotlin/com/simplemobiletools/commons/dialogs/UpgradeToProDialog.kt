@@ -17,8 +17,8 @@ class UpgradeToProDialog(val activity: Activity) {
     private val CONTACTS_FREE_TILL = 1542153600000L     // November 14
     private val NOV_14 = "Nov 14 2018"
 
-    private val NOTES_FREE_TILL = 1542240000000L     // November 15
-    private val NOV_15 = "Nov 15 2018"
+    private val NOTES_FREE_TILL = 1542326400000L     // November 16
+    private val NOV_16 = "Nov 16 2018"
 
     init {
         var text = activity.getString(R.string.upgrade_to_pro_long)
@@ -29,7 +29,7 @@ class UpgradeToProDialog(val activity: Activity) {
             val freeTill = String.format(activity.getString(R.string.it_is_free), NOV_14)
             text += "\n$freeTill"
         } else if (packageName.endsWith("notes") && System.currentTimeMillis() < NOTES_FREE_TILL) {
-            val freeTill = String.format(activity.getString(R.string.it_is_free), NOV_15)
+            val freeTill = String.format(activity.getString(R.string.it_is_free), NOV_16)
             text += "\n$freeTill"
         }
 
