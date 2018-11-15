@@ -35,6 +35,13 @@ fun Int.getFormattedDuration(): String {
     return sb.toString()
 }
 
+fun Int.addBitIf(add: Boolean, bit: Int) =
+        if (add) {
+            addBit(bit)
+        } else {
+            removeBit(bit)
+        }
+
 // TODO: how to do "bits & ~bit" in kotlin?
 fun Int.removeBit(bit: Int) = addBit(bit) - bit
 
