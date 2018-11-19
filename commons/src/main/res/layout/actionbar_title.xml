@@ -4,6 +4,8 @@
     android:id="@+id/actionbar_title"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
     android:gravity="center_vertical|start"
+    android:paddingRight="@dimen/activity_margin"
     android:textColor="@android:color/white"
     android:textSize="@dimen/actionbar_text_size"/>
