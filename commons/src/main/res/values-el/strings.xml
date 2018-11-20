@@ -117,18 +117,18 @@
     <string name="confirm_selection">Επιβεβαιώστε την επιλογή</string>
 
     <plurals name="items">
-        <item quantity="one">%d στοιχείου</item>
+        <item quantity="one">%d στοιχείο</item>
         <item quantity="other">%d στοιχεία</item>
     </plurals>
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d στοιχείου</item>
+        <item quantity="one">%d στοιχείο</item>
         <item quantity="other">%d στοιχεία</item>
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Διαγραφή %d στοιχείου</item>
+        <item quantity="one">Διαγραφή %d στοιχείο</item>
         <item quantity="other">Διαγραφή %d στοιχεία</item>
     </plurals>
 
