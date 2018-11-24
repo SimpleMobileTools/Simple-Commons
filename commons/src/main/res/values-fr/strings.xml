@@ -15,12 +15,12 @@
     <string name="never">Jamais</string>
     <string name="details">Détails</string>
     <string name="notes">Notes</string>
-    <string name="deleting_folder">Suppression du dossier \'%s\'</string>
+    <string name="deleting_folder">Suppression du dossier \"%s\"</string>
     <string name="none">Aucun</string>
     <string name="label">Libellé</string>
     <string name="transparent">Transparent</string>
-    <string name="transparent_color">Transparent color</string>
-    <string name="select_a_different_color">Select a different color</string>
+    <string name="transparent_color">Couleur transparente</string>
+    <string name="select_a_different_color">Sélectionnez une couleur différente</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoris</string>
@@ -102,7 +102,7 @@
     <string name="file_already_exists_overwrite">Le fichier \"%s\" existe déjà. Écraser ?</string>
     <string name="folder_already_exists">Le répertoire \"%s\" existe déjà</string>
     <string name="merge">Fusionner</string>
-    <string name="keep_both">Keep both</string>
+    <string name="keep_both">Conserver les deux</string>
     <string name="overwrite">Écraser</string>
     <string name="skip">Passer</string>
     <string name="append">Ajouter un suffixe \"_1\"</string>
@@ -139,7 +139,7 @@
     <string name="root">Racine</string>
     <string name="wrong_root_selected">Dossier sélectionné incorrecte, veuillez sélectionner le dossier racine de votre carte SD</string>
     <string name="sd_card_otg_same">Les chemins de la carte SD et du stockage USB OTG ne peuvent être similaires</string>
-    <string name="app_on_sd_card">L\'application semble installée sur une carte SD, ce qui empêche l\'utilisation des widgets de l\'applications. Ils n\'apparaîtront même pas dans la liste des widgets disponibles.
+    <string name="app_on_sd_card">L\'application semble installée sur une carte SD, ce qui empêche l\'utilisation des widgets de l\'applications. Ils n\'apparaîtront pas non plus dans la liste des widgets disponibles.
         C\'est une limitation système. Si vous voulez utiliser le widget, vous devez déplacer l\'application vers la mémoire interne.</string>
 
     <!-- File properties -->
@@ -169,11 +169,11 @@
     <string name="restore_defaults">Restaurer les valeurs par défaut</string>
     <string name="change_color">Modifier la couleur</string>
     <string name="theme">Thème</string>
-    <string name="changing_color_description">Modifier une couleur rend le thème \"personnalisé\"</string>
+    <string name="changing_color_description">Modifier une couleur renomme le thème en \"personnalisé\"</string>
     <string name="save">Enregistrer</string>
     <string name="discard">Annuler</string>
     <string name="undo_changes">Annuler les changements</string>
-    <string name="undo_changes_confirmation">Êtes-vous sûr(-e) de vouloir annuler vos changements ?</string>
+    <string name="undo_changes_confirmation">Voulez-vous vraiment annuler vos changements ?</string>
     <string name="save_before_closing">Vous avez des changements non enregistrés. Enregistrer avant de quitter ?</string>
     <string name="apply_to_all_apps">Appliquer à l\'ensemble de la suite d\'applications Simples</string>
     <string name="share_colors_success">Couleurs actualisées. Un nouveau thème nommé \"Partagé\" a été ajouté. Veuillez utiliser ce thème pour actualiser les couleurs de toutes les applications à partir de maintenant.</string>
@@ -194,7 +194,7 @@
 
     <!-- What's new -->
     <string name="whats_new">Quoi de neuf ?</string>
-    <string name="whats_new_disclaimer">* seules les mises à jour les plus importantes sont listées ici. Les améliorations mineures ne sont pas détaillées.</string>
+    <string name="whats_new_disclaimer">* seules les mises à jour les plus importantes sont indiquées ici. Les améliorations mineures ne sont pas détaillées.</string>
 
     <!-- Actionbar items -->
     <string name="delete">Supprimer</string>
@@ -204,9 +204,9 @@
     <string name="share_via">Partager via</string>
     <string name="select_all">Tout sélectionner</string>
     <string name="hide">Masquer</string>
-    <string name="unhide">Dévoiler</string>
+    <string name="unhide">Faire apparaître</string>
     <string name="hide_folder">Masquer le dossier</string>
-    <string name="unhide_folder">Dévoiler le dossier</string>
+    <string name="unhide_folder">Faire apparaître le dossier</string>
     <string name="temporarily_show_hidden">Afficher les fichiers masqués</string>
     <string name="stop_showing_hidden">Ne plus afficher les médias masqués</string>
     <string name="maximum_share_reached">Impossible de partager autant de contenu à la fois</string>
@@ -223,18 +223,20 @@
     <string name="title">Titre</string>
     <string name="filename">Nom de fichier</string>
     <string name="extension">Extension</string>
-    <string name="random">Random</string>
-    <string name="sort_randomly">Sort randomly</string>
+    <string name="random">Aléatoire</string>
+    <string name="sort_randomly">Trier aléatoirement</string>
     <string name="ascending">Croissant</string>
     <string name="descending">Décroissant</string>
     <string name="use_for_this_folder">Utiliser pour ce dossier uniquement</string>
 
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Êtes-vous sûr(-e) de vouloir effectuer la suppression ?</string>
-    <string name="deletion_confirmation">Êtes-vous sûr(-e) de vouloir supprimer %s ?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Êtes-vous sûr(-e) de vouloir déplacer %s vers la corbeille ?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Êtes-vous sûr(-e) de vouloir supprimer cet élément?</string>
-    <string name="are_you_sure_recycle_bin">Êtes-vous sûr(-e) de vouloir déplacer cet élément dans la corbeille ?</string>
+    <string name="proceed_with_deletion">Voulez-vous vraiment effectuer la suppression ?</string>
+    <string name="deletion_confirmation">Voulez-vous vraiment supprimer %s ?</string>
+    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Voulez-vous vraiment déplacer %s vers la corbeille ?</string>
+    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">Voulez-vous vraiment supprimer cet élément ?</string>
+    <string name="are_you_sure_recycle_bin">Voulez-vous vraiment déplacer cet élément dans la corbeille ?</string>
     <string name="do_not_ask_again">Ne plus demander pour cette session</string>
     <string name="yes">Oui</string>
     <string name="no">Non</string>
@@ -248,7 +250,7 @@
     <string name="pin">PIN</string>
     <string name="enter_pin">Saisir le code PIN</string>
     <string name="please_enter_pin">Veuillez saisir un code PIN</string>
-    <string name="wrong_pin">PIN incorrect</string>
+    <string name="wrong_pin">Code PIN incorrect</string>
     <string name="repeat_pin">Saisissez à nouveau le code PIN</string>
     <string name="pattern">Schéma</string>
     <string name="insert_pattern">Dessinez un schéma</string>
@@ -359,7 +361,7 @@
     <string name="alarm">Réveil</string>
     <string name="snooze">Répéter</string>
     <string name="dismiss">Ignorer</string>
-    <string name="no_reminder">Pas de rappel</string>
+    <string name="no_reminder">Aucun rappel</string>
     <string name="at_start">Au démarrage</string>
     <string name="system_sounds">Sonneries système</string>
     <string name="your_sounds">Vos sonneries</string>
@@ -369,8 +371,8 @@
     <!-- Settings -->
     <string name="settings">Paramètres</string>
     <string name="purchase_simple_thank_you">Acheter Simple Thank You</string>
-    <string name="customize_colors">Personnaliser les couleurs</string>
-    <string name="customize_widget_colors">Personnaliser les couleurs du widget</string>
+    <string name="customize_colors">Modifier les couleurs</string>
+    <string name="customize_widget_colors">Modifier les couleurs du widget</string>
     <string name="use_english_language">Utiliser la langue anglaise</string>
     <string name="show_hidden_items">Afficher les éléments masqués</string>
     <string name="font_size">Taille de la police</string>
@@ -380,7 +382,7 @@
     <string name="extra_large">Extra large</string>
     <string name="password_protect_hidden_items">Afficher les éléments protégés par mot de passe</string>
     <string name="password_protect_whole_app">Le mot de passe protège l\'ensemble de l\'application</string>
-    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
+    <string name="password_protect_file_deletion">Protéger par mot de passe la suppression et le déplacement de fichiers</string>
     <string name="keep_last_modified">Conserver la valeur de l\'ancienne modification lors de la copie, du déplacement ou du renommage du fichier</string>
     <string name="show_info_bubble">Afficher une bulle d\'information des éléments lors de l\'utilisation de la barre de défilement</string>
     <string name="prevent_phone_from_sleeping">Ne pas mettre en veille tant que l\'application est active</string>
@@ -393,7 +395,7 @@
     <string name="snooze_time">Intervalle de répétition</string>
     <string name="vibrate_on_button_press">Vibrer lors de l\'appui sur un bouton</string>
     <string name="move_items_into_recycle_bin">Déplacer les éléments vers la corbeille au lieu de les supprimer</string>
-    <string name="recycle_bin_cleaning_interval">intervalle de vidage de la corbeille</string>
+    <string name="recycle_bin_cleaning_interval">Intervalle de vidage de la corbeille</string>
     <string name="empty_recycle_bin">Vider la corbeille</string>
     <string name="force_portrait_mode">Forcer le mode portrait</string>
 
@@ -413,9 +415,9 @@
     <string name="restore_all_files">Récupérer tous les fichiers </string>
     <string name="recycle_bin_emptied">Corbeille vidée</string>
     <string name="files_restored_successfully">Les fichiers récupérerés</string>
-    <string name="empty_recycle_bin_confirmation">Êtes-vous sûr(-e) de vouloir vider la corbeille ? Les fichiers seront définitivement supprimés.</string>
+    <string name="empty_recycle_bin_confirmation">Voulez-vous vraiment vider la corbeille ? Les fichiers seront définitivement supprimés.</string>
     <string name="recycle_bin_empty">La corbeille est vide</string>
-    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
+    <string name="moving_recycle_bin_items_disabled">Le déplacement des éléments de la corbeille est désactivé, veuillez utiliser la fonction de restauration.</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Déplacement d\' %d élément dans la corbeille en cours…</item>
@@ -491,16 +493,16 @@
     <string name="sunday_short">Dim</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">This version of the app is no longer maintained. Please upgrade to the Pro version.</string>
-    <string name="it_is_free">It is free till: %s. If you download it till then, you will be able to use it for free forever.</string>
-    <string name="more_info">More info</string>
-    <string name="upgrade">Upgrade</string>
+    <string name="upgrade_to_pro_long">Cette version de l\'application n\'est plus maintenue. Veuillez passer à la version Pro.</string>
+    <string name="it_is_free">C\'est gratuit jusqu\'au : %s. Si vous la téléchargez jusque-là, vous pourrez définitivement l\'utiliser gratuitement.</string>
+    <string name="more_info">Plus d\'information</string>
+    <string name="upgrade">Passer à la version Pro</string>
 
     <!-- About -->
     <string name="about">À propos</string>
     <string name="website_label">Pour le code source, consultez</string>
     <string name="email_label">Envoyez vos commentaires ou suggestions à</string>
-    <string name="upgrade_to_pro">Upgrade to Pro</string>
+    <string name="upgrade_to_pro">Passer à la version Pro</string>
     <string name="more_apps_underlined"><u>Plus d\'applications</u></string>
     <string name="third_party_licences_underlined"><u>Licences tierces</u></string>
     <string name="invite_friends_underlined"><u>Inviter des amis</u></string>
@@ -517,13 +519,13 @@
     <string name="donate_please">
         <![CDATA[
             Bonjour,<br><br>
-            Nous espérons que vous appréciez cette application. Elle ne contient aucune publicité, mais vous pouvez soutenir son développement en achetant l\'application <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Un petit Merci</a>. Cela nous permettra également de ne plus vous montrer cette boite de dialogue.<br><br>
+            Nous espérons que vous appréciez cette application. Elle ne contient aucune publicité, mais vous pouvez soutenir son développement en achetant l\'application <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>. Cela nous permettra également de ne plus vous afficher cette boite de dialogue.<br><br>
             Merci !
         ]]>
     </string>
     <string name="purchase">Acheter</string>
-    <string name="update_thank_you">Veuillez mettre à jour Simple Merci</string>
-    <string name="before_asking_question_read_faq">Avant de poser une question, consultez d\'abord la</string>
+    <string name="update_thank_you">Veuillez mettre à jour Simple Thank You</string>
+    <string name="before_asking_question_read_faq">Avant de poser une question, consultez d\'abord la Foire aux questions, peut-être que la solution y est présente.</string>
     <string name="read_it">Consulter</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
@@ -550,7 +552,7 @@
     <string name="faq_4_title_commons">Je n\'aime pas les couleurs du widget. Puis-je les changer ?</string>
     <string name="faq_4_text_commons">Oui, quand vous glissez le widget sur l\'écran d\'accueil un dialogue de configuration apparaît. Vous verrez des carrés en bas à gauche, en appuyant dessus vous pouvez choisir une nouvelle couleur. Vous pouvez aussi utiliser le curseur pour régler la transparence.</string>
     <string name="faq_5_title_commons">Puis-je restaurer les fichiers supprimés ?</string>
-    <string name="faq_5_text_commons">S\'ils ont déjà été supprimés, vous ne pouvez pas. Toutefois, vous pouvez activer l\'utilisation de la corbeille à la place de la suppression dans les paramètres de l\'application. Les fichiers seront alors placés dans la corbeille plutôt que d\'être supprimés.</string>
+    <string name="faq_5_text_commons">S\'ils ont déjà été supprimés, vous ne pouvez pas. Toutefois, vous pouvez activer l\'utilisation de la corbeille à la place de la suppression dans les paramètres de l\'application. Les fichiers seront alors placés dans la corbeille plutôt que supprimés.</string>
 
     <!-- License -->
     <string name="notice">Cette application utilise les bibliothèques tierces suivantes pour me simplifier la vie. Merci.</string>
