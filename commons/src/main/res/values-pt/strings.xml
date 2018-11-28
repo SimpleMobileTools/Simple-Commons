@@ -409,7 +409,7 @@
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restaurar este ficheiro</string>
-    <string name="restore_selected_files">Restarurar os ficheiros selecionados</string>
+    <string name="restore_selected_files">Restaurar os ficheiros selecionados</string>
     <string name="restore_all_files">Restaurar todos os ficheiros</string>
     <string name="recycle_bin_emptied">A reciclagem foi esvaziada</string>
     <string name="files_restored_successfully">Os ficheiros foram restaurados</string>
@@ -495,7 +495,7 @@
     <string name="it_is_free">É gratuita até: %s. Se a descarregar até esta data, será sua para sempre.</string>
     <string name="more_info">Mais informação</string>
     <string name="upgrade">Atualizar</string>
-    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
+    <string name="upgrade_calendar">Pode migrar os eventos locais exportando-os para um ficheiro .ics para posterior importação. Encontra os botões para importar/exportar no menu do ecrã principal.</string>
 
     <!-- About -->
     <string name="about">Acerca</string>
