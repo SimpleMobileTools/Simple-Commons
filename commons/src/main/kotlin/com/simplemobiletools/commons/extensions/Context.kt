@@ -13,6 +13,8 @@ import android.media.RingtoneManager
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
+import android.os.Handler
+import android.os.Looper
 import android.provider.BaseColumns
 import android.provider.DocumentsContract
 import android.provider.MediaStore
@@ -89,7 +91,13 @@ fun Context.isBlackAndWhiteTheme() = baseConfig.textColor == Color.WHITE && base
 fun Context.getAdjustedPrimaryColor() = if (isBlackAndWhiteTheme()) Color.WHITE else baseConfig.primaryColor
 
 fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
-    toast(getString(id), length)
+    if (isOnMainThread()) {
+        toast(getString(id), length)
+    } else {
+        Handler(Looper.getMainLooper()).post {
+            toast(getString(id), length)
+        }
+    }
 }
 
 fun Context.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
@@ -97,6 +105,14 @@ fun Context.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
         Toast.makeText(applicationContext, msg, length).show()
     } catch (e: Exception) {
     }
+}
+
+fun Context.showErrorToast(msg: String, length: Int = Toast.LENGTH_LONG) {
+    toast(String.format(getString(R.string.an_error_occurred), msg), length)
+}
+
+fun Context.showErrorToast(exception: Exception, length: Int = Toast.LENGTH_LONG) {
+    showErrorToast(exception.toString(), length)
 }
 
 val Context.baseConfig: BaseConfig get() = BaseConfig.newInstance(this)

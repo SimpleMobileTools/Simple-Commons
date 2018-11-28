@@ -20,7 +20,6 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.documentfile.provider.DocumentFile
@@ -33,46 +32,6 @@ import com.simplemobiletools.commons.views.MyTextView
 import kotlinx.android.synthetic.main.dialog_title.view.*
 import java.io.*
 import java.util.*
-
-fun Activity.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
-    if (isOnMainThread()) {
-        showToast(this, id, length)
-    } else {
-        runOnUiThread {
-            showToast(this, id, length)
-        }
-    }
-}
-
-fun Activity.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
-    if (isOnMainThread()) {
-        showToast(this, msg, length)
-    } else {
-        runOnUiThread {
-            showToast(this, msg, length)
-        }
-    }
-}
-
-private fun showToast(activity: Activity, messageId: Int, length: Int) {
-    if (!activity.isDestroyed) {
-        showToast(activity, activity.getString(messageId), length)
-    }
-}
-
-private fun showToast(activity: Activity, message: String, length: Int) {
-    if (!activity.isDestroyed) {
-        activity.applicationContext.toast(message, length)
-    }
-}
-
-fun Activity.showErrorToast(msg: String, length: Int = Toast.LENGTH_LONG) {
-    toast(String.format(getString(R.string.an_error_occurred), msg), length)
-}
-
-fun Activity.showErrorToast(exception: Exception, length: Int = Toast.LENGTH_LONG) {
-    showErrorToast(exception.toString(), length)
-}
 
 fun AppCompatActivity.updateActionBarTitle(text: String, color: Int = baseConfig.primaryColor) {
     supportActionBar?.title = Html.fromHtml("<font color='${color.getContrastColor().toHex()}'>$text</font>")
