@@ -14,7 +14,7 @@ fun File.isVideoFast() = videoExtensions.any { absolutePath.endsWith(it, true) }
 fun File.isImageFast() = photoExtensions.any { absolutePath.endsWith(it, true) }
 fun File.isAudioFast() = audioExtensions.any { absolutePath.endsWith(it, true) }
 fun File.isRawFast() = rawExtensions.any { absolutePath.endsWith(it, true) }
-fun File.isSvgFast() = absolutePath.endsWith(".svg", true)
+fun File.isSvg() = absolutePath.isSvg()
 
 fun File.isImageSlow() = absolutePath.isImageFast() || getMimeType().startsWith("image")
 fun File.isVideoSlow() = absolutePath.isVideoFast() || getMimeType().startsWith("video")
