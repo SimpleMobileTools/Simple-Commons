@@ -102,7 +102,7 @@
     <string name="file_already_exists_overwrite">El archivo \"%s\" ya existe. Sobreescribir?</string>
     <string name="folder_already_exists">La carpeta \"%s\" ya existe</string>
     <string name="merge">Fusionar</string>
-    <string name="keep_both">Keep both</string>
+    <string name="keep_both">Mantener ambos</string>
     <string name="overwrite">Sobreescribir</string>
     <string name="skip">Saltar</string>
     <string name="append">Añadir \'_1\'</string>
@@ -223,8 +223,8 @@
     <string name="title">Título</string>
     <string name="filename">Nombre del archivo</string>
     <string name="extension">Extensión</string>
-    <string name="random">Random</string>
-    <string name="sort_randomly">Sort randomly</string>
+    <string name="random">Aleatorio</string>
+    <string name="sort_randomly">Ordenar aleatoriamente</string>
     <string name="ascending">Ascendente</string>
     <string name="descending">Descendente</string>
     <string name="use_for_this_folder">Sólo para esta carpeta</string>
@@ -415,7 +415,7 @@
     <string name="files_restored_successfully">Lo ficheros han sido restaurados correctamente</string>
     <string name="empty_recycle_bin_confirmation">Seguro que quieres vaciar la papelera? Los ficheros se perderan definitivamente.</string>
     <string name="recycle_bin_empty">La papelera está vacia</string>
-    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
+    <string name="moving_recycle_bin_items_disabled">El movimiento de los elementos de la papelera de reciclaje está deshabilitado, utilice Restaurar</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Moving %d item into the Recycle Bin</item>
@@ -492,16 +492,16 @@
 
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Esta versión de la aplicación ya no se mantiene. Por favor, actualice a la versión Pro.</string>
-    <string name="it_is_free">Es gratis hasta: %s. If you download it till then, you will be able to use it for free forever.</string>
+    <string name="it_is_free">Es gratis hasta: %s. Si lo descargas hasta entonces, podrás usarlo gratis para siempre..</string>
     <string name="more_info">Más informanción</string>
     <string name="upgrade">Actualizar</string>
-    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
+    <string name="upgrade_calendar">Tienes que migrar manualmente los eventos almacenados localmente mediante la exportación en un archivo .ics, y luego importarlos. Puedes encontrar los botones de exportar / importar en el menú de la pantalla principal.</string>
 
     <!-- About -->
     <string name="about">Acerca de</string>
     <string name="website_label">Más aplicaciones sencillas y código fuente en</string>
     <string name="email_label">Envía tus comentarios o sugerencias a</string>
-    <string name="upgrade_to_pro">Upgrade to Pro</string>
+    <string name="upgrade_to_pro">Actualizar a Pro</string>
     <string name="more_apps_underlined"><u>Más aplicaciones</u></string>
     <string name="third_party_licences_underlined"><u>Licencias de terceros</u></string>
     <string name="invite_friends_underlined"><u>Invitar a amigos</u></string>
