@@ -389,7 +389,7 @@
     <string name="use_24_hour_time_format">Benutze 24-Std.-Zeitformat</string>
     <string name="sunday_first">Beginne die Woche am Sonntag</string>
     <string name="widgets">Widgets</string>
-    <string name="use_same_snooze">Immer den selben Schlummer-Intervall nutzen</string>
+    <string name="use_same_snooze">Immer dasselbe Schlummer-Intervall nutzen</string>
     <string name="snooze_time">Schlummer-Intervall</string>
     <string name="vibrate_on_button_press">Bei Tastendruck vibrieren</string>
     <string name="move_items_into_recycle_bin">Elemente in den Papierkorb verschieben statt löschen</string>
@@ -495,6 +495,7 @@
     <string name="it_is_free">Sie ist gratis bis: %s. Wenn Du sie bis dahin herunterlädst, darfst Du sie für immer gratis nutzen.</string>
     <string name="more_info">Mehr Infos</string>
     <string name="upgrade">Upgrade</string>
+    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
 
     <!-- About -->
     <string name="about">Über</string>

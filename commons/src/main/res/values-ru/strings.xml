@@ -392,7 +392,7 @@
     <string name="purchase_simple_thank_you">Купить Simple Thank You</string>
     <string name="customize_colors">Настроить цвета</string>
     <string name="customize_widget_colors">Настроить цвета виджета</string>
-    <string name="use_english_language">Use English language</string>
+    <string name="use_english_language">Использовать английский</string>
     <string name="show_hidden_items">Показывать скрытые папки</string>
     <string name="font_size">Размер шрифта</string>
     <string name="small">Мелкий</string>
@@ -517,6 +517,7 @@
     <string name="it_is_free">Это бесплатно до: %s. При загрузке до указанной даты вы получаете её бесплатно навсегда.</string>
     <string name="more_info">Подробнее</string>
     <string name="upgrade">Обновить</string>
+    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
 
     <!-- About -->
     <string name="about">О приложении</string>

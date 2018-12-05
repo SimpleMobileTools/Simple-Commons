@@ -67,7 +67,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                         val breadcrumbs = mDialogView.filepicker_breadcrumbs
                         if (breadcrumbs.childCount > 1) {
                             breadcrumbs.removeBreadcrumb()
-                            currPath = breadcrumbs.getLastItem().path
+                            currPath = breadcrumbs.getLastItem().path.trimEnd('/')
                             tryUpdateItems()
                         } else {
                             mDialog.dismiss()

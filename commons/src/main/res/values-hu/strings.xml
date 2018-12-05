@@ -283,7 +283,7 @@
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d óra</item>
-        <item quantity="other">%d nap</item>
+        <item quantity="other">%d óra</item>
     </plurals>
     <plurals name="days">
         <item quantity="one">%d nap</item>
@@ -477,9 +477,9 @@
     <string name="monday_letter">H</string>
     <string name="tuesday_letter">K</string>
     <string name="wednesday_letter">Sz</string>
-    <string name="thursday_letter">K</string>
+    <string name="thursday_letter">Cs</string>
     <string name="friday_letter">P</string>
-    <string name="saturday_letter">V</string>
+    <string name="saturday_letter">Sz</string>
     <string name="sunday_letter">V</string>
 
     <string name="monday_short">Hé</string>
@@ -495,6 +495,7 @@
     <string name="it_is_free">Ingyenes eddig: %s. Ha eddig letölti, akkor örökre ingyen használhatja.</string>
     <string name="more_info">További információ</string>
     <string name="upgrade">Frissítés</string>
+    <string name="upgrade_calendar">A helyiben tárolt eseményeket kézzel kell átvinni egy .ics fájl exportálásával, majd importálással. Az export / import gomb megtalálható a főmenüben.</string>
 
     <!-- About -->
     <string name="about">Névjegy</string>

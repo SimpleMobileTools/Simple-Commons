@@ -267,9 +267,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 }
 
                 selectionArgs = arrayOf(destinationPath)
-                activity.scanPathRecursively(destinationPath) {
-                    activity.applicationContext.contentResolver.update(uri, values, selection, selectionArgs)
-                }
+                activity.applicationContext.contentResolver.update(uri, values, selection, selectionArgs)
             }
         }
     }

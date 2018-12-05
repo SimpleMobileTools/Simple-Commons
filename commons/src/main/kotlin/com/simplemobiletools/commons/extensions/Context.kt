@@ -13,6 +13,8 @@ import android.media.RingtoneManager
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
+import android.os.Handler
+import android.os.Looper
 import android.provider.BaseColumns
 import android.provider.DocumentsContract
 import android.provider.MediaStore
@@ -94,9 +96,23 @@ fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
 
 fun Context.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
     try {
-        Toast.makeText(applicationContext, msg, length).show()
+        if (isOnMainThread()) {
+            Toast.makeText(applicationContext, msg, length).show()
+        } else {
+            Handler(Looper.getMainLooper()).post {
+                Toast.makeText(applicationContext, msg, length).show()
+            }
+        }
     } catch (e: Exception) {
     }
+}
+
+fun Context.showErrorToast(msg: String, length: Int = Toast.LENGTH_LONG) {
+    toast(String.format(getString(R.string.an_error_occurred), msg), length)
+}
+
+fun Context.showErrorToast(exception: Exception, length: Int = Toast.LENGTH_LONG) {
+    showErrorToast(exception.toString(), length)
 }
 
 val Context.baseConfig: BaseConfig get() = BaseConfig.newInstance(this)

@@ -70,7 +70,6 @@ const val WAS_SHARED_THEME_EVER_ACTIVATED = "was_shared_theme_ever_activated"
 const val IS_USING_SHARED_THEME = "is_using_shared_theme"
 const val WAS_SHARED_THEME_FORCED = "was_shared_theme_forced"
 const val WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN = "was_custom_theme_switch_description_shown"
-const val WAS_SHARED_THEME_AFTER_UPDATE_CHECKED = "was_shared_theme_after_update_checked"
 const val SHOW_INFO_BUBBLE = "show_info_bubble"
 const val LAST_CONFLICT_RESOLUTION = "last_conflict_resolution"
 const val LAST_CONFLICT_APPLY_TO_ALL = "last_conflict_apply_to_all"
@@ -192,7 +191,7 @@ const val WEEKENDS_BIT = SATURDAY_BIT or SUNDAY_BIT
 val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp")
 val videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
 val audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a", ".opus", ".flac", ".aac")
-val rawExtensions: Array<String> get() = arrayOf(".dng", ".orf", ".nef")
+val rawExtensions: Array<String> get() = arrayOf(".dng", ".orf", ".nef", ".arw")
 
 val appIconColorStrings = arrayListOf(
         ".Red",
@@ -250,4 +249,4 @@ fun getConflictResolution(resolutions: LinkedHashMap<String, Int>, path: String)
     }
 }
 
-val proPackages = arrayListOf("draw", "gallery", "filemanager", "contacts", "notes")
+val proPackages = arrayListOf("draw", "gallery", "filemanager", "contacts", "notes", "calendar")
