@@ -102,7 +102,7 @@
     <string name="file_already_exists_overwrite">L’arxiu \"%s\" ja existeix. El vos sobreescriure?</string>
     <string name="folder_already_exists">La carpeta \"%s\" ja existeix</string>
     <string name="merge">Fusionar</string>
-    <string name="keep_both">Keep both</string>
+    <string name="keep_both">Manteniu els dos</string>
     <string name="overwrite">Sobreescriure</string>
     <string name="skip">Saltar</string>
     <string name="append">Afegir \'_1\'</string>
@@ -223,8 +223,8 @@
     <string name="title">Títol</string>
     <string name="filename">Nom de l’arxiu</string>
     <string name="extension">Extensió</string>
-    <string name="random">Random</string>
-    <string name="sort_randomly">Sort randomly</string>
+    <string name="random">Aleatori</string>
+    <string name="sort_randomly">Ordena aleatoriament</string>
     <string name="ascending">Ascendent</string>
     <string name="descending">Descendent</string>
     <string name="use_for_this_folder">Només per aquesta carpeta</string>
@@ -418,7 +418,7 @@
     <string name="files_restored_successfully">El fitxers s\'han restaurat correctament</string>
     <string name="empty_recycle_bin_confirmation">ASegur que vols buidar la paperera? El fitxer s\'eliminaran definitivament.</string>
     <string name="recycle_bin_empty">La paperera és buida</string>
-    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
+    <string name="moving_recycle_bin_items_disabled">Moure a la paperara està deshabilitat. Feu servir recuperar</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Movent %d element a la paperera de reciclage</item>
@@ -495,16 +495,16 @@
 
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Aquesta versió de l\'aplicació ja no es manté. Actualitzeu a la versió Pro.</string>
-    <string name="it_is_free">És gratuït fins a: %s. If you download it till then, you will be able to use it for free forever.</string>
+    <string name="it_is_free">És gratuït fins a: %s. Si ho descarregueu fins aleshores, podreu utilitzar-lo de forma gratuïta per sempre.</string>
     <string name="more_info">Més informació</string>
     <string name="upgrade">Actualitza</string>
-    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
+    <string name="upgrade_calendar">Heu de migrar els esdeveniments emmagatzemats localment manualment mitjançant l'exportació en un fitxer .ics, i després importar-los. Podeu trobar els dos botons d'exportació / importació al menú de la pantalla principal.</string>
 
     <!-- About -->
     <string name="about">Sobre</string>
     <string name="website_label">Més aplicacions senzilles i codi font a</string>
     <string name="email_label">Envia els teus comentaris o suggeriments a</string>
-    <string name="upgrade_to_pro">Upgrade to Pro</string>
+    <string name="upgrade_to_pro">Actualitza a pro</string>
     <string name="more_apps_underlined"><u>Més aplicacions</u></string>
     <string name="third_party_licences_underlined"><u>Llicències de tercers</u></string>
     <string name="invite_friends_underlined"><u>Convida a amics</u></string>
