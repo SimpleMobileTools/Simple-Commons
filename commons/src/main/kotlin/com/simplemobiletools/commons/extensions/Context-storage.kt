@@ -24,7 +24,11 @@ import java.util.regex.Pattern
 
 // http://stackoverflow.com/a/40582634/1967672
 fun Context.getSDCardPath(): String {
-    val directories = getStorageDirectories().filter { it.trimEnd('/') != getInternalStoragePath() }
+    val directories = getStorageDirectories().filter {
+        it.trimEnd('/') != getInternalStoragePath() &&
+                (baseConfig.OTGPartition.isEmpty() || !it.trimEnd('/').endsWith(baseConfig.OTGPartition))
+    }
+
     var sdCardPath = directories.firstOrNull { !physicalPaths.contains(it.toLowerCase().trimEnd('/')) } ?: ""
 
     // on some devices no method retrieved any SD card path, so test if its not sdcard1 by any chance. It happened on an Android 5.1
