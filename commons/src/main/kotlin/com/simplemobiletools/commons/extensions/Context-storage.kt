@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.extensions
 
 import android.content.ContentValues
 import android.content.Context
+import android.hardware.usb.UsbConstants
 import android.hardware.usb.UsbManager
 import android.media.MediaScannerConnection
 import android.net.Uri
@@ -55,7 +56,15 @@ fun Context.getSDCardPath(): String {
 
 fun Context.hasExternalSDCard() = sdCardPath.isNotEmpty()
 
-fun Context.hasOTGConnected() = (getSystemService(Context.USB_SERVICE) as UsbManager).deviceList.isNotEmpty()
+fun Context.hasOTGConnected(): Boolean {
+    return try {
+        (getSystemService(Context.USB_SERVICE) as UsbManager).deviceList.any {
+            it.value.getInterface(0).interfaceClass == UsbConstants.USB_CLASS_MASS_STORAGE
+        }
+    } catch (e: Exception) {
+        false
+    }
+}
 
 fun Context.getStorageDirectories(): Array<String> {
     val paths = HashSet<String>()
