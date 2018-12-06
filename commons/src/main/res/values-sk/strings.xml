@@ -457,6 +457,7 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
+    <string name="otg_detected">Vyzerá to tak, že máte k zariadeniu pripoené OTG zariadenie. Pre správne zobrazovanie sa jeho súborov sú potrebné ďalšie oprávnenia.</string>
     <string name="confirm_otg_storage_access_text">Pre poskytnutie práv prosím zvoľte na nasledujúcej obrazovke základný priečinok OTG zariadenia</string>
     <string name="wrong_root_selected_otg">Bol zvolený nesprávny koreňový priečinok, prosím zvoľte OTG zariadenie</string>
 

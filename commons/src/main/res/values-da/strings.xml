@@ -435,6 +435,7 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
+    <string name="otg_detected">You seem to have an OTG device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
     <string name="confirm_otg_storage_access_text">Vælg rodmappen på OTG-enheden på den næste skærm for at give adgang.</string>
     <string name="wrong_root_selected_otg">Den forkerte mappe er valgt, vælg rodmappen på din OTG-enhed</string>
 

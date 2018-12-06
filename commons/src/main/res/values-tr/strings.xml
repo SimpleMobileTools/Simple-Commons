@@ -435,6 +435,7 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
+    <string name="otg_detected">You seem to have an OTG device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
     <string name="confirm_otg_storage_access_text">Erişim vermek için lütfen bir sonraki ekranda OTG cihazının kök klasörünü seçin</string>
     <string name="wrong_root_selected_otg">Yanlış klasör seçildi, lütfen OTG cihazınızın kök klasörünü seçin</string>
 
