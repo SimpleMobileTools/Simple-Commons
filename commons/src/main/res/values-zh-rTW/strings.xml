@@ -435,7 +435,7 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="otg_detected">You seem to have an OTG device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="otg_detected">似乎有OTG裝置接上了你的裝置。為確保檔案正確顯示，你必須授予額外的權限。</string>
     <string name="confirm_otg_storage_access_text">請在下個畫面選擇OTG裝置的根目錄，以授予存取權限</string>
     <string name="wrong_root_selected_otg">選擇到錯誤資料夾，請選擇你OTG裝置的根目錄</string>
 
