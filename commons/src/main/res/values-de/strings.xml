@@ -435,7 +435,7 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="otg_detected">You seem to have an OTG device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="otg_detected">Es scheint, Du hast ein OTG-Gerät an Dein Gerät angeschlossen. Du musst zusätzliche Berechtigungen gewähren, um die Dateien anzuzeigen.</string>
     <string name="confirm_otg_storage_access_text">Bitte den Basis-Ordner des OTG-Geräts auf der folgenden Seite wählen, um Zugriff zu gewähren</string>
     <string name="wrong_root_selected_otg">Falscher Ordner gewählt, bitte den Basis- (Root-) Ordner des OTG-Geräts wählen</string>
 
@@ -496,7 +496,7 @@
     <string name="it_is_free">Sie ist gratis bis: %s. Wenn Du sie bis dahin herunterlädst, darfst Du sie für immer gratis nutzen.</string>
     <string name="more_info">Mehr Infos</string>
     <string name="upgrade">Upgrade</string>
-    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
+    <string name="upgrade_calendar">Um lokal gespeicherte Ereignisse zu migrieren, musst Du sie als .ics-Datei exportieren und anschliessend importieren. Die beiden Schaltflächen befinden sich im Hauptmenü.</string>
 
     <!-- About -->
     <string name="about">Über</string>
