@@ -435,7 +435,7 @@
 
     <!-- OTG devices -->
     <string name="otg">OTG</string>
-    <string name="otg_detected">You seem to have an OTG device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="otg_detected">检测到有 OTG 设备连接到您的设备。您需要授予额外的权限以确保文件能够正确显示。</string>
     <string name="confirm_otg_storage_access_text">请在下一界面选择 OTG 设备的根文件夹以授予访问权限</string>
     <string name="wrong_root_selected_otg">选择错误，请正确选择 OTG 设备的根文件夹</string>
 
@@ -493,10 +493,10 @@
 
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">此版本的应用不再支持维护。请升级到专业版。</string>
-    <string name="it_is_free">免费期限至: %s. If you download it till then, you will be able to use it for free forever.</string>
+    <string name="it_is_free">免费期限至: %s。如果在此之后下载，你可以永久免费使用。</string>
     <string name="more_info">更多信息</string>
     <string name="upgrade">升级</string>
-    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
+    <string name="upgrade_calendar">您必须通过导出/导入.ics文件来自行转移本地存储的事件。您可以在主界面菜单中找到导出/导入选项。</string>
 
     <!-- About -->
     <string name="about">关于</string>
