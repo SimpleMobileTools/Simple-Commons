@@ -67,7 +67,7 @@ class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, va
             val otgButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
             otgButton.apply {
                 id = ID_OTG
-                text = resources.getString(R.string.otg)
+                text = resources.getString(R.string.usb)
                 isChecked = basePath == OTG_PATH
                 setOnClickListener { otgPicked() }
                 if (isChecked) {

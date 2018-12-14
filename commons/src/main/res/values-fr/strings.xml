@@ -138,7 +138,7 @@
     <string name="sd_card">Carte SD</string>
     <string name="root">Racine</string>
     <string name="wrong_root_selected">Dossier sélectionné incorrecte, veuillez sélectionner le dossier racine de votre carte SD</string>
-    <string name="sd_card_otg_same">Les chemins de la carte SD et du stockage USB OTG ne peuvent être similaires</string>
+    <string name="sd_card_usb_same">Les chemins de la carte SD et du stockage USB ne peuvent être similaires</string>
     <string name="app_on_sd_card">L\'application semble installée sur une carte SD, ce qui empêche l\'utilisation des widgets de l\'applications. Ils n\'apparaîtront pas non plus dans la liste des widgets disponibles.
         C\'est une limitation système. Si vous voulez utiliser le widget, vous devez déplacer l\'application vers la mémoire interne.</string>
 
@@ -437,10 +437,10 @@
     <string name="no_entries_for_exporting">Aucun élément pouvant être exporté n\'a été trouvé</string>
 
     <!-- OTG devices -->
-    <string name="otg">USB OTG</string>
-    <string name="otg_detected">You seem to have an OTG device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
-    <string name="confirm_otg_storage_access_text">Veuillez sélectionner le répertoire racine du périphérique USB OTG sur l\'écran suivant afin de pouvoir y accéder</string>
-    <string name="wrong_root_selected_otg">Mauvais répertoire sélectionné. Veuillez sélectionner le répertoire racine du périphérique USB OTG.</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="confirm_usb_storage_access_text">Veuillez sélectionner le répertoire racine du périphérique USB sur l\'écran suivant afin de pouvoir y accéder</string>
+    <string name="wrong_root_selected_usb">Mauvais répertoire sélectionné. Veuillez sélectionner le répertoire racine du périphérique USB.</string>
 
     <!-- Dates -->
     <string name="january">Janvier</string>

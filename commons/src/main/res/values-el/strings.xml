@@ -138,7 +138,7 @@
     <string name="sd_card">SD Card</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Επιλέξατε λάθος φάκελο, επιλέξτε τον ριζικό φάκελο της SD card</string>
-    <string name="sd_card_otg_same">SD card και OTG οι διαδρομές συσκευών δεν μπορούν να είναι οι ίδιες</string>
+    <string name="sd_card_usb_same">SD card και USB οι διαδρομές συσκευών δεν μπορούν να είναι οι ίδιες</string>
     <string name="app_on_sd_card">Φαίνεται ότι έχετε εγκαταστήσει την εφαρμογή σε μια κάρτα SD, πράγμα που καθιστά τα γραφικά στοιχεία εφαρμογών μη διαθέσιμα. Δεν θα τα δείτε ακόμη και στη λίστα των διαθέσιμων γραφικών στοιχείων.
         Είναι ένας περιορισμός του συστήματος, οπότε αν θέλετε να χρησιμοποιήσετε τα γραφικά στοιχεία, θα πρέπει να μετακινήσετε την εφαρμογή πίσω στον εσωτερικό αποθηκευτικό χώρο.</string>
 
@@ -435,10 +435,10 @@
     <string name="no_entries_for_exporting">Δεν βρέθηκαν καταχωρήσεις για Εξαγωγή</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="otg_detected">You seem to have an OTG device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
-    <string name="confirm_otg_storage_access_text">Παρακαλώ επιλέξτε τον ριζικό φάκελο της συσκευής OTG στην επόμενη οθόνη, για να παραχωρήσετε πρόσβαση</string>
-    <string name="wrong_root_selected_otg">Λάθος επιλεγμένο φάκελο, παρακαλώ επιλέξτε το ριζικό φάκελο της συσκευής OTG</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="confirm_usb_storage_access_text">Παρακαλώ επιλέξτε τον ριζικό φάκελο της συσκευής USB στην επόμενη οθόνη, για να παραχωρήσετε πρόσβαση</string>
+    <string name="wrong_root_selected_usb">Λάθος επιλεγμένο φάκελο, παρακαλώ επιλέξτε το ριζικό φάκελο της συσκευής USB</string>
 
     <!-- Dates -->
     <string name="january">Ιανουάριος</string>

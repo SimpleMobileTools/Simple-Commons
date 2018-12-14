@@ -138,7 +138,7 @@
     <string name="sd_card">SD-kaart</string>
     <string name="root">Hoofdmap</string>
     <string name="wrong_root_selected">Verkeerde map: kies de hoofdmap van de SD-kaart</string>
-    <string name="sd_card_otg_same">Paden van SD-kaart en OTG-apparaat kunnen niet gelijk zijn</string>
+    <string name="sd_card_usb_same">Paden van SD-kaart en USB-apparaat kunnen niet gelijk zijn</string>
     <string name="app_on_sd_card">Het lijkt erop dat de app is geïnstalleerd op een SD-kaart. Dit zorgt ervoor dat Android de widgets van deze app blokkeert.
         Dit is een beperking van het systeem en alleen het verplaatsen van de app naar het interne geheugen zal de widgets beschikbaar maken.</string>
 
@@ -435,10 +435,10 @@
     <string name="no_entries_for_exporting">Er zijn geen items gevonden om te exporteren</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="otg_detected">OTG-apparaat gedetecteerd. Om de bestanden op dit apparaat te weergeven heeft de app aanvullende machtigingen nodig.</string>
-    <string name="confirm_otg_storage_access_text">Selecteer in het volgende scherm de hoofdmap van het OTG-apparaat</string>
-    <string name="wrong_root_selected_otg">Verkeerde map geselecteerd, kies de hoofdmap van het OTG-apparaat</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">USB-apparaat gedetecteerd. Om de bestanden op dit apparaat te weergeven heeft de app aanvullende machtigingen nodig.</string>
+    <string name="confirm_usb_storage_access_text">Selecteer in het volgende scherm de hoofdmap van het USB-apparaat</string>
+    <string name="wrong_root_selected_usb">Verkeerde map geselecteerd, kies de hoofdmap van het USB-apparaat</string>
 
     <!-- Dates -->
     <string name="january">Januari</string>

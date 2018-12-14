@@ -116,7 +116,7 @@ fun Context.getHumanReadablePath(path: String): String {
     return getString(when (path) {
         "/" -> R.string.root
         internalStoragePath -> R.string.internal
-        OTG_PATH -> R.string.otg
+        OTG_PATH -> R.string.usb
         else -> R.string.sd_card
     })
 }

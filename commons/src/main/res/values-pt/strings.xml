@@ -138,7 +138,7 @@
     <string name="sd_card">Cartão SD</string>
     <string name="root">Raiz</string>
     <string name="wrong_root_selected">Pasta inválida, por favor selecione o cartão SD</string>
-    <string name="sd_card_otg_same">Não pode utilizar o mesmo caminho para o cartão SD e para o dispositivo OTG</string>
+    <string name="sd_card_usb_same">Não pode utilizar o mesmo caminho para o cartão SD e para o dispositivo USB</string>
     <string name="app_on_sd_card">Parece que a aplicação está instalada no cartão SD, o que torna o widget indisponível. Nem sequer aparecerá na lista de widgets disponíveis.
         Esta é uma limitação do sistema e, se quiser usar widgets, tem que mover a aplicação para o armazenamento interno.</string>
 
@@ -435,10 +435,10 @@
     <string name="no_entries_for_exporting">Não existem itens para exportação</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="otg_detected">Parece que não existe um dispositivo OTG conectado ao seu dispositivo. Para se certificar de que o ficheiro aparece, necessita de conceder algumas permissões extra.</string>
-    <string name="confirm_otg_storage_access_text">Escolha a pasta raiz do dispositivo OTG no ecrã seguinte para conceder o acesso</string>
-    <string name="wrong_root_selected_otg">Escolheu uma pasta inválida, deve selecionar a pasta raiz do dispositivo OTG</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">Parece que não existe um dispositivo USB conectado ao seu dispositivo. Para se certificar de que o ficheiro aparece, necessita de conceder algumas permissões extra.</string>
+    <string name="confirm_usb_storage_access_text">Escolha a pasta raiz do dispositivo USB no ecrã seguinte para conceder o acesso</string>
+    <string name="wrong_root_selected_usb">Escolheu uma pasta inválida, deve selecionar a pasta raiz do dispositivo USB</string>
 
     <!-- Dates -->
     <string name="january">janeiro</string>

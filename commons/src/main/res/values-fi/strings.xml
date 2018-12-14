@@ -138,7 +138,7 @@
     <string name="sd_card">Muistikortti</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Väärä kansio valittu, valitse muistikortin root-kansio</string>
-    <string name="sd_card_otg_same">Muistikortin ja OTG-laitteen polut eivät voi olla samat</string>
+    <string name="sd_card_usb_same">Muistikortin ja USB-laitteen polut eivät voi olla samat</string>
     <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
         It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
 
@@ -435,10 +435,10 @@
     <string name="no_entries_for_exporting">Vientikohteita ei löydetty</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="otg_detected">You seem to have an OTG device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
-    <string name="confirm_otg_storage_access_text">Valitse OTG-laitteen root-kansio salliaksesi pääsyn</string>
-    <string name="wrong_root_selected_otg">Väärä kansio valittu, valitse OTG-laitteen root-kansio</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="confirm_usb_storage_access_text">Valitse USB-laitteen root-kansio salliaksesi pääsyn</string>
+    <string name="wrong_root_selected_usb">Väärä kansio valittu, valitse USB-laitteen root-kansio</string>
 
     <!-- Dates -->
     <string name="january">Tammikuu</string>

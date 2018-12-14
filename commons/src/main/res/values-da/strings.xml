@@ -138,7 +138,7 @@
     <string name="sd_card">SD-kort</string>
     <string name="root">Rod</string>
     <string name="wrong_root_selected">Forkert mappe valgt, vælg rodmappen på SD-kortet</string>
-    <string name="sd_card_otg_same">Stierne til SD-kortet og OTG-enheden kan ikke være ens</string>
+    <string name="sd_card_usb_same">Stierne til SD-kortet og USB-enheden kan ikke være ens</string>
     <string name="app_on_sd_card">Det ser ud til at du har appen installeret på et SD-kort. Det gør at appens widget ikke er tilgængelig og ikke kan ses på listen med widgets.
         Dette skyldes en begrænsning i systemet, så hvis du vil bruge appens widgets må du flytte appen tilbage til det interne lager.</string>
 
@@ -435,10 +435,10 @@
     <string name="no_entries_for_exporting">Der er ikke fundet indhold til eksport</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="otg_detected">You seem to have an OTG device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
-    <string name="confirm_otg_storage_access_text">Vælg rodmappen på OTG-enheden på den næste skærm for at give adgang.</string>
-    <string name="wrong_root_selected_otg">Den forkerte mappe er valgt, vælg rodmappen på din OTG-enhed</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="confirm_usb_storage_access_text">Vælg rodmappen på USB-enheden på den næste skærm for at give adgang.</string>
+    <string name="wrong_root_selected_usb">Den forkerte mappe er valgt, vælg rodmappen på din USB-enhed</string>
 
     <!-- Dates -->
     <string name="january">Januar</string>

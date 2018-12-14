@@ -7,7 +7,7 @@
     <string name="out_of_memory_error">Errore: memoria esaurita</string>
     <string name="an_error_occurred">Si è verificato un errore: %s</string>
     <string name="open_with">Apri con</string>
-    <string name="no_app_found">Non è stata trovata nessuna applicazione valida<string>
+    <string name="no_app_found">Non è stata trovata nessuna applicazione valida</string>
     <string name="set_as">Imposta come</string>
     <string name="value_copied_to_clipboard">Valore copiato negli appunti</string>
     <string name="unknown">Sconosciuto</string>
@@ -138,7 +138,7 @@
     <string name="sd_card">Scheda SD</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Selezionata una cartella errata, seleziona la cartella di root della tua scheda SD</string>
-    <string name="sd_card_otg_same">I percorsi della scheda SD e del dispositivo OTG non possono essere uguali</string>
+    <string name="sd_card_usb_same">I percorsi della scheda SD e del dispositivo USB non possono essere uguali</string>
     <string name="app_on_sd_card">Sembra che l\'app sia installata nella scheda SD, ciò impedisce la disponibilità dei widget dell\'app. Non li vedrai neppure nell\'elenco dei widget disponibili.
         Se è una limitazione di sistema, quindi se vuoi usare i widget, devi spostare l\'app nella memoria interna.</string>
 
@@ -435,10 +435,10 @@
     <string name="no_entries_for_exporting">Nessun elemento trovato da esportare</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="otg_detected">È collegato un dispositivo OTG al dispositivo. Per assicurarsi che i file appaiano correttamente, è necessario accettare permessi aggiuntivi.</string>
-    <string name="confirm_otg_storage_access_text">Scegli la cartella di root del dispositivo OTG nella prossima schermata, per consentire l\'accesso</string>
-    <string name="wrong_root_selected_otg">Cartella selezionata errata, seleziona la cartella di root del dispositivo OTG</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">È collegato un dispositivo USB al dispositivo. Per assicurarsi che i file appaiano correttamente, è necessario accettare permessi aggiuntivi.</string>
+    <string name="confirm_usb_storage_access_text">Scegli la cartella di root del dispositivo USB nella prossima schermata, per consentire l\'accesso</string>
+    <string name="wrong_root_selected_usb">Cartella selezionata errata, seleziona la cartella di root del dispositivo USB</string>
 
     <!-- Dates -->
     <string name="january">Gennaio</string>

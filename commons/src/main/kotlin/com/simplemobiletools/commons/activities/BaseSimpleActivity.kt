@@ -148,7 +148,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         if (requestCode == OPEN_DOCUMENT_TREE && resultCode == Activity.RESULT_OK && resultData != null) {
             if (isProperSDFolder(resultData.data)) {
                 if (resultData.dataString == baseConfig.OTGTreeUri) {
-                    toast(R.string.sd_card_otg_same)
+                    toast(R.string.sd_card_usb_same)
                     return
                 }
                 saveTreeUri(resultData)
@@ -163,7 +163,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             if (isProperOTGFolder(resultData.data)) {
                 if (resultData.dataString == baseConfig.treeUri) {
                     funAfterOTGPermission?.invoke(false)
-                    toast(R.string.sd_card_otg_same)
+                    toast(R.string.sd_card_usb_same)
                     return
                 }
                 baseConfig.OTGTreeUri = resultData.dataString
@@ -172,7 +172,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 funAfterOTGPermission?.invoke(true)
                 funAfterOTGPermission = null
             } else {
-                toast(R.string.wrong_root_selected_otg)
+                toast(R.string.wrong_root_selected_usb)
                 val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
                 startActivityForResult(intent, requestCode)
             }

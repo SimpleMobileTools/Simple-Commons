@@ -138,7 +138,7 @@
     <string name="sd_card">SD kártya</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Rossz mappát választott ki, válassza ki az SD kártya gyökérmappáját</string>
-    <string name="sd_card_otg_same">Az SD kártya és az OTG eszköz elérési útvonala nem lehet azonos</string>
+    <string name="sd_card_usb_same">Az SD kártya és az USB eszköz elérési útvonala nem lehet azonos</string>
     <string name="app_on_sd_card">Úgy tűnik, hogy az alkalmazás az SD kártyára van telepítve és emiatt az alkalmazás widgetek nem érhetők el. Nem láthatók a rendelkezésre álló widgetek listáján.
         Ez egy rendszerkorlátozás. Ha használni szeretné a widgeteket, akkor át kell helyeznie az alkalmazást a belső tárterületre.</string>
 
@@ -435,10 +435,10 @@
     <string name="no_entries_for_exporting">Az exportáláshoz nem találhatóak bejegyzések</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="otg_detected">Úgy tűnik, a készülékhez egy OTG eszköz van csatlakoztatva. További engedélyeket kell megadnia, hogy a fájlok megfelelően jelenjenek meg.</string>
-    <string name="confirm_otg_storage_access_text">Kérjük, válassza ki az OTG eszköz gyökérmappáját a következő képernyőn, hogy hozzáférést biztosítson</string>
-    <string name="wrong_root_selected_otg">Rossz mappát választott ki, válassza ki az OTG eszköz gyökérmappáját</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">Úgy tűnik, a készülékhez egy USB eszköz van csatlakoztatva. További engedélyeket kell megadnia, hogy a fájlok megfelelően jelenjenek meg.</string>
+    <string name="confirm_usb_storage_access_text">Kérjük, válassza ki az USB eszköz gyökérmappáját a következő képernyőn, hogy hozzáférést biztosítson</string>
+    <string name="wrong_root_selected_usb">Rossz mappát választott ki, válassza ki az USB eszköz gyökérmappáját</string>
 
     <!-- Dates -->
     <string name="january">Január</string>

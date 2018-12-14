@@ -138,7 +138,7 @@
     <string name="sd_card">Kartu SD</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Folder salah, harap pilih folder awal Kartu SD</string>
-    <string name="sd_card_otg_same">Jalur kartu SD dan perangkat OTG tidak boleh sama</string>
+    <string name="sd_card_usb_same">Jalur kartu SD dan perangkat USB tidak boleh sama</string>
     <string name="app_on_sd_card">Kelihatannya Anda menginstal aplikasi ini di kartu SD, sehingga widget tidak tersedia. Anda tidak akan melihatnya di daftar widget.
         Ini adalah pembatasan sistem, jika Anda ingin menggunakan widget, Anda harus memindahkan aplikasi ke memori internal.</string>
 
@@ -435,10 +435,10 @@
     <string name="no_entries_for_exporting">Tidak ditemukan entri untuk diekspor</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="otg_detected">You seem to have an OTG device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
-    <string name="confirm_otg_storage_access_text">Harap pilih folder awal perangkat OTG di layar berikutnya untuk memberi akses</string>
-    <string name="wrong_root_selected_otg">Folder salah, harap pilih folder awal perangkat OTG</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="confirm_usb_storage_access_text">Harap pilih folder awal perangkat USB di layar berikutnya untuk memberi akses</string>
+    <string name="wrong_root_selected_usb">Folder salah, harap pilih folder awal perangkat USB</string>
 
     <!-- Dates -->
     <string name="january">Januari</string>

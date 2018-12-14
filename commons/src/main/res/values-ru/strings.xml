@@ -141,7 +141,7 @@
     <string name="sd_card">SD-карта</string>
     <string name="root">Корневая папка</string>
     <string name="wrong_root_selected">Папка выбрана неверно, пожалуйста, выберите SD-карту</string>
-    <string name="sd_card_otg_same">Пути к SD-карте и OTG-устройству не могут быть одинаковыми</string>
+    <string name="sd_card_usb_same">Пути к SD-карте и USB-устройству не могут быть одинаковыми</string>
     <string name="app_on_sd_card">Похоже, что приложение у вас установлено на SD-карту, а это делает виджеты приложений недоступными. Вы даже не увидите их в списке доступных виджетов.
         Это системное ограничение, поэтому, если вы хотите использовать виджеты, вам нужно переместить приложение обратно во внутреннюю память.</string>
 
@@ -457,10 +457,10 @@
     <string name="no_entries_for_exporting">Нет элементов для экспортирования</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="otg_detected">You seem to have an OTG device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
-    <string name="confirm_otg_storage_access_text">Пожалуйста, выберите корневую папку OTG-устройства на следующем экране, чтобы предоставить к нему доступ.</string>
-    <string name="wrong_root_selected_otg">Выбрана неправильная папка. Выберите корневую папку вашего OTG-устройства.</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="confirm_usb_storage_access_text">Пожалуйста, выберите корневую папку USB-устройства на следующем экране, чтобы предоставить к нему доступ.</string>
+    <string name="wrong_root_selected_usb">Выбрана неправильная папка. Выберите корневую папку вашего USB-устройства.</string>
 
     <!-- Dates -->
     <string name="january">Январь</string>

@@ -138,7 +138,7 @@
     <string name="sd_card">Targeta SD</string>
     <string name="root">Arrel /</string>
     <string name="wrong_root_selected">Has seleccionat la carpeta incorrecta. Selecciona la carpeta arrel de la targeta SD</string>
-    <string name="sd_card_otg_same">La targeta SD i el dispositiu OTG no poden ser el mateix</string>
+    <string name="sd_card_usb_same">La targeta SD i el dispositiu USB no poden ser el mateix</string>
     <string name="app_on_sd_card">Sembla que l\'aplicació està instal·lada a una targeta SD, cosa que fa que els widgets de l\'aplicació no estiguin disponibles. No els veuràs ni a la llista de widgets disponibles.
         És una limitació del sistema, de manera que si voleu utilitzar els widgets, heu de tornar a moure l\'aplicació a l\'emmagatzematge intern.</string>
 
@@ -438,10 +438,10 @@
     <string name="no_entries_for_exporting">No s\'han trobat entrades per exportar</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="otg_detected">You seem to have an OTG device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
-    <string name="confirm_otg_storage_access_text">Seleccioneu la carpeta arrel del dispositiu OTG a la pantalla següent per concedir accés</string>
-    <string name="wrong_root_selected_otg">S\'ha seleccionat la carpeta incorrecta, seleccioneu la carpeta arrel del vostre dispositiu OTG</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="confirm_usb_storage_access_text">Seleccioneu la carpeta arrel del dispositiu USB a la pantalla següent per concedir accés</string>
+    <string name="wrong_root_selected_usb">S\'ha seleccionat la carpeta incorrecta, seleccioneu la carpeta arrel del vostre dispositiu USB</string>
 
     <!-- Dates -->
     <string name="january">Gener</string>

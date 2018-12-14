@@ -138,7 +138,7 @@
     <string name="sd_card">SD卡</string>
     <string name="root">根目錄</string>
     <string name="wrong_root_selected">選擇了錯誤的資料夾，請選擇SD卡的根目錄</string>
-    <string name="sd_card_otg_same">SD卡和OTG裝置的路徑不能相同</string>
+    <string name="sd_card_usb_same">SD卡和USB裝置的路徑不能相同</string>
     <string name="app_on_sd_card">你似乎將應用程式安裝在SD卡，那會造成應用程式小工具無法使用。你甚至不會在可用的小工具列表中見到它們。
         那是個系統限制，所以如果你想要使用小工具，你必須把應用程式移動回內部儲存空間。</string>
 
@@ -435,10 +435,10 @@
     <string name="no_entries_for_exporting">未發現供匯出的項目</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="otg_detected">似乎有OTG裝置接上了你的裝置。為確保檔案正確顯示，你必須授予額外的權限。</string>
-    <string name="confirm_otg_storage_access_text">請在下個畫面選擇OTG裝置的根目錄，以授予存取權限</string>
-    <string name="wrong_root_selected_otg">選擇到錯誤資料夾，請選擇你OTG裝置的根目錄</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">似乎有USB裝置接上了你的裝置。為確保檔案正確顯示，你必須授予額外的權限。</string>
+    <string name="confirm_usb_storage_access_text">請在下個畫面選擇USB裝置的根目錄，以授予存取權限</string>
+    <string name="wrong_root_selected_usb">選擇到錯誤資料夾，請選擇你USB裝置的根目錄</string>
 
     <!-- Dates -->
     <string name="january">一月</string>

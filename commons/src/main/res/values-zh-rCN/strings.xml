@@ -138,7 +138,7 @@
     <string name="sd_card">SD 卡</string>
     <string name="root">根目录</string>
     <string name="wrong_root_selected">目录选择错误，请选择 SD 卡</string>
-    <string name="sd_card_otg_same">SD 卡和 OTG 设备路径不能相同</string>
+    <string name="sd_card_usb_same">SD 卡和 USB 设备路径不能相同</string>
     <string name="app_on_sd_card">您似乎已将应用程序安装在 SD 卡上，这使得应用的小部件不可用。你将无法在小部件列表里看到它们。
         这是一个系统限制，所以如果你想要使用这些小部件，你必须将应用移回内部存储器。</string>
 
@@ -435,10 +435,10 @@
     <string name="no_entries_for_exporting">未找到要导出的项目</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="otg_detected">检测到有 OTG 设备连接到您的设备。您需要授予额外的权限以确保文件能够正确显示。</string>
-    <string name="confirm_otg_storage_access_text">请在下一界面选择 OTG 设备的根文件夹以授予访问权限</string>
-    <string name="wrong_root_selected_otg">选择错误，请正确选择 OTG 设备的根文件夹</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">检测到有 USB 设备连接到您的设备。您需要授予额外的权限以确保文件能够正确显示。</string>
+    <string name="confirm_usb_storage_access_text">请在下一界面选择 USB 设备的根文件夹以授予访问权限</string>
+    <string name="wrong_root_selected_usb">选择错误，请正确选择 USB 设备的根文件夹</string>
 
     <!-- Dates -->
     <string name="january">一月</string>

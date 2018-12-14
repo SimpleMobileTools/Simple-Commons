@@ -138,7 +138,7 @@
     <string name="sd_card">Tarjeta SD</string>
     <string name="root">Raíz /</string>
     <string name="wrong_root_selected">Se seleccionó la carpeta incorrecta, seleccione la carpeta raíz de su tarjeta SD</string>
-    <string name="sd_card_otg_same">La targeta SD i el dispositivo OTG no pueden ser los mismos</string>
+    <string name="sd_card_usb_same">La targeta SD i el dispositivo USB no pueden ser los mismos</string>
     <string name="app_on_sd_card">Parece que tienes la aplicación instalada en una tarjeta SD, lo que hace que los widgets de la aplicación no estén disponibles. Ni siquiera los verás en la lista de widgets disponibles.
         Es una limitación del sistema, por lo que si deseas usar los widgets, debes volver a colocar la aplicación en el almacenamiento interno.</string>
 
@@ -435,10 +435,10 @@
     <string name="no_entries_for_exporting">No se han encontrado entradas para exportar</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="otg_detected">You seem to have an OTG device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
-    <string name="confirm_otg_storage_access_text">Elija la carpeta raíz del dispositivo OTG en la pantalla siguiente, para otorgar acceso</string>
-    <string name="wrong_root_selected_otg">Carpeta incorrecta, seleccione la carpeta raíz de su dispositivo OTG</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="confirm_usb_storage_access_text">Elija la carpeta raíz del dispositivo USB en la pantalla siguiente, para otorgar acceso</string>
+    <string name="wrong_root_selected_usb">Carpeta incorrecta, seleccione la carpeta raíz de su dispositivo USB</string>
 
     <!-- Dates -->
     <string name="january">Enero</string>
