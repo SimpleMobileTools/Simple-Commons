@@ -1,13 +1,13 @@
 package com.simplemobiletools.commons.extensions
 
 import android.graphics.Color
-import android.media.ExifInterface
+import androidx.exifinterface.media.ExifInterface
 import java.util.*
 
 fun Int.getContrastColor(): Int {
-    val DARK_GREY = -13421773
+    val darkGrey = -13421773
     val y = (299 * Color.red(this) + 587 * Color.green(this) + 114 * Color.blue(this)) / 1000
-    return if (y >= 149) DARK_GREY else Color.WHITE
+    return if (y >= 149) darkGrey else Color.WHITE
 }
 
 fun Int.toHex() = String.format("#%06X", 0xFFFFFF and this).toUpperCase()
@@ -59,11 +59,11 @@ fun Int.darkenColor(): Int {
         return Color.BLACK
     }
 
-    val DARK_FACTOR = 8
+    val darkFactor = 8
     var hsv = FloatArray(3)
     Color.colorToHSV(this, hsv)
     val hsl = hsv2hsl(hsv)
-    hsl[2] -= DARK_FACTOR / 100f
+    hsl[2] -= darkFactor / 100f
     if (hsl[2] < 0)
         hsl[2] = 0f
     hsv = hsl2hsv(hsl)

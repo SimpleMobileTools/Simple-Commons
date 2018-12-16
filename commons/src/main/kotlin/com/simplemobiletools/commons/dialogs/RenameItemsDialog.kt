@@ -35,7 +35,8 @@ class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<S
                             }
 
                             val validPaths = paths.filter { activity.getDoesFilePathExist(it) }
-                            val sdFilePath = validPaths.firstOrNull { activity.isPathOnSD(it) } ?: validPaths.firstOrNull()
+                            val sdFilePath = validPaths.firstOrNull { activity.isPathOnSD(it) }
+                                    ?: validPaths.firstOrNull()
                             if (sdFilePath == null) {
                                 activity.toast(R.string.unknown_error_occurred)
                                 dismiss()

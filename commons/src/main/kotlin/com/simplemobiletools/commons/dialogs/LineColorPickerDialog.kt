@@ -13,10 +13,10 @@ import java.util.*
 class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, val isPrimaryColorPicker: Boolean, val primaryColors: Int = R.array.md_primary_colors,
                             val appIconIDs: ArrayList<Int>? = null, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit) {
 
-    private val PRIMARY_COLORS_COUNT = 19
-    private val DEFAULT_PRIMARY_COLOR_INDEX = 14
-    private val DEFAULT_SECONDARY_COLOR_INDEX = 6
-    private val DEFAULT_COLOR_VALUE = activity.resources.getColor(R.color.color_primary)
+    private val primaryColorsCount = 19
+    private val defaultPrimaryColorIndex = 14
+    private val defaultSecondaryColorIndex = 6
+    private val defaultColorValue = activity.resources.getColor(R.color.color_primary)
 
     private var wasDimmedBackgroundRemoved = false
     private var dialog: AlertDialog? = null
@@ -84,11 +84,11 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
     }
 
     private fun getColorIndexes(color: Int): Pair<Int, Int> {
-        if (color == DEFAULT_COLOR_VALUE) {
+        if (color == defaultColorValue) {
             return getDefaultColorPair()
         }
 
-        for (i in 0 until PRIMARY_COLORS_COUNT) {
+        for (i in 0 until primaryColorsCount) {
             getColorsForIndex(i).indexOfFirst { color == it }.apply {
                 if (this != -1) {
                     return Pair(i, this)
@@ -103,7 +103,7 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
         view.line_color_picker_icon.setImageResource(appIconIDs?.getOrNull(index) ?: 0)
     }
 
-    private fun getDefaultColorPair() = Pair(DEFAULT_PRIMARY_COLOR_INDEX, DEFAULT_SECONDARY_COLOR_INDEX)
+    private fun getDefaultColorPair() = Pair(defaultPrimaryColorIndex, defaultSecondaryColorIndex)
 
     private fun dialogDismissed() {
         callback(false, 0)

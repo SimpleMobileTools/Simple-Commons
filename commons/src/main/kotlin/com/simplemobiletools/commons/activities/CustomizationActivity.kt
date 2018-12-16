@@ -17,13 +17,13 @@ import kotlinx.android.synthetic.main.activity_customization.*
 import java.util.*
 
 class CustomizationActivity : BaseSimpleActivity() {
-    private val THEME_LIGHT = 0
-    private val THEME_DARK = 1
-    private val THEME_SOLARIZED = 2
-    private val THEME_DARK_RED = 3
-    private val THEME_BLACK_WHITE = 4
-    private val THEME_CUSTOM = 5
-    private val THEME_SHARED = 6
+    private val themeLight = 0
+    private val themeDark = 1
+    private val themeSolarized = 2
+    private val themeDarkRed = 3
+    private val themeBlackWhite = 4
+    private val themeCustom = 5
+    private val themeShared = 6
 
     private var curTextColor = 0
     private var curBackgroundColor = 0
@@ -113,15 +113,15 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun setupThemes() {
         predefinedThemes.apply {
-            put(THEME_LIGHT, MyTheme(R.string.light_theme, R.color.theme_light_text_color, R.color.theme_light_background_color, R.color.color_primary, R.color.color_primary))
-            put(THEME_DARK, MyTheme(R.string.dark_theme, R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.color_primary, R.color.color_primary))
-            //put(THEME_SOLARIZED, MyTheme(R.string.solarized, R.color.theme_solarized_text_color, R.color.theme_solarized_background_color, R.color.theme_solarized_primary_color))
-            put(THEME_DARK_RED, MyTheme(R.string.dark_red, R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.theme_dark_red_primary_color, R.color.md_red_700))
-            put(THEME_BLACK_WHITE, MyTheme(R.string.black_white, android.R.color.white, android.R.color.black, android.R.color.black, R.color.md_grey_black))
-            put(THEME_CUSTOM, MyTheme(R.string.custom, 0, 0, 0, 0))
+            put(themeLight, MyTheme(R.string.light_theme, R.color.theme_light_text_color, R.color.theme_light_background_color, R.color.color_primary, R.color.color_primary))
+            put(themeDark, MyTheme(R.string.dark_theme, R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.color_primary, R.color.color_primary))
+            //put(themeSolarized, MyTheme(R.string.solarized, R.color.theme_solarized_text_color, R.color.theme_solarized_background_color, R.color.theme_solarized_primary_color))
+            put(themeDarkRed, MyTheme(R.string.dark_red, R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.theme_dark_red_primary_color, R.color.md_red_700))
+            put(themeBlackWhite, MyTheme(R.string.black_white, android.R.color.white, android.R.color.black, android.R.color.black, R.color.md_grey_black))
+            put(themeCustom, MyTheme(R.string.custom, 0, 0, 0, 0))
 
             if (storedSharedTheme != null) {
-                put(THEME_SHARED, MyTheme(R.string.shared, 0, 0, 0, 0))
+                put(themeShared, MyTheme(R.string.shared, 0, 0, 0, 0))
             }
         }
         setupThemePicker()
@@ -137,13 +137,13 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
 
             RadioGroupDialog(this@CustomizationActivity, items, curSelectedThemeId) {
-                if (it == THEME_SHARED && !isThankYouInstalled()) {
+                if (it == themeShared && !isThankYouInstalled()) {
                     PurchaseThankYouDialog(this)
                     return@RadioGroupDialog
                 }
 
                 updateColorTheme(it as Int, true)
-                if (it != THEME_CUSTOM && it != THEME_SHARED && !baseConfig.wasCustomThemeSwitchDescriptionShown) {
+                if (it != themeCustom && it != themeShared && !baseConfig.wasCustomThemeSwitchDescriptionShown) {
                     baseConfig.wasCustomThemeSwitchDescriptionShown = true
                     toast(R.string.changing_color_description)
                 }
@@ -156,7 +156,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_theme.text = getThemeText()
 
         resources.apply {
-            if (curSelectedThemeId == THEME_CUSTOM) {
+            if (curSelectedThemeId == themeCustom) {
                 if (useStored) {
                     curTextColor = baseConfig.customTextColor
                     curBackgroundColor = baseConfig.customBackgroundColor
@@ -170,7 +170,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     baseConfig.customTextColor = curTextColor
                     baseConfig.appIconColor = curAppIconColor
                 }
-            } else if (curSelectedThemeId == THEME_SHARED) {
+            } else if (curSelectedThemeId == themeShared) {
                 if (useStored) {
                     storedSharedTheme?.apply {
                         curTextColor = textColor
@@ -201,12 +201,12 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun getCurrentThemeId(): Int {
         if (baseConfig.isUsingSharedTheme) {
-            return THEME_SHARED
+            return themeShared
         }
 
-        var themeId = THEME_CUSTOM
+        var themeId = themeCustom
         resources.apply {
-            for ((key, value) in predefinedThemes.filter { it.key != THEME_CUSTOM && it.key != THEME_SHARED }) {
+            for ((key, value) in predefinedThemes.filter { it.key != themeCustom && it.key != themeShared }) {
                 if (curTextColor == getColor(value.textColorId) &&
                         curBackgroundColor == getColor(value.backgroundColorId) &&
                         curPrimaryColor == getColor(value.primaryColorId) &&
@@ -253,7 +253,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             checkAppIconColor()
         }
 
-        if (curSelectedThemeId == THEME_SHARED) {
+        if (curSelectedThemeId == themeShared) {
             val newSharedTheme = SharedTheme(curTextColor, curBackgroundColor, curPrimaryColor, curAppIconColor)
             updateSharedTheme(newSharedTheme)
             Intent().apply {
@@ -262,7 +262,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
         }
 
-        baseConfig.isUsingSharedTheme = curSelectedThemeId == THEME_SHARED
+        baseConfig.isUsingSharedTheme = curSelectedThemeId == themeShared
         hasUnsavedChanges = false
         if (finishAfterSave) {
             finish()
@@ -378,7 +378,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         }
     }
 
-    private fun getUpdatedTheme() = if (curSelectedThemeId == THEME_SHARED) THEME_SHARED else THEME_CUSTOM
+    private fun getUpdatedTheme() = if (curSelectedThemeId == themeShared) themeShared else themeCustom
 
     private fun applyToAll() {
         if (isThankYouInstalled()) {
@@ -388,12 +388,12 @@ class CustomizationActivity : BaseSimpleActivity() {
                     sendBroadcast(this)
                 }
 
-                if (!predefinedThemes.containsKey(THEME_SHARED)) {
-                    predefinedThemes[THEME_SHARED] = MyTheme(R.string.shared, 0, 0, 0, 0)
+                if (!predefinedThemes.containsKey(themeShared)) {
+                    predefinedThemes[themeShared] = MyTheme(R.string.shared, 0, 0, 0, 0)
                 }
                 baseConfig.wasSharedThemeEverActivated = true
                 apply_to_all_holder.beGone()
-                updateColorTheme(THEME_SHARED)
+                updateColorTheme(themeShared)
                 saveChanges(false)
             }
         } else {

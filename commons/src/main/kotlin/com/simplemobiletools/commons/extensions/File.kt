@@ -74,6 +74,7 @@ private fun getDirectoryFileCount(dir: File, countHiddenItems: Boolean): Int {
     return count
 }
 
-fun File.getDirectChildrenCount(countHiddenItems: Boolean) = listFiles()?.filter { if (countHiddenItems) true else !it.isHidden }?.size ?: 0
+fun File.getDirectChildrenCount(countHiddenItems: Boolean) = listFiles()?.filter { if (countHiddenItems) true else !it.isHidden }?.size
+        ?: 0
 
 fun File.toFileDirItem(context: Context) = FileDirItem(absolutePath, name, context.getIsPathDirectory(absolutePath), 0, length())

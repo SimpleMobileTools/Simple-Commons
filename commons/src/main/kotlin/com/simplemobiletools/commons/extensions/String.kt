@@ -5,12 +5,12 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Point
-import android.media.ExifInterface
 import android.media.MediaMetadataRetriever
 import android.os.Build
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
+import androidx.exifinterface.media.ExifInterface
 import com.simplemobiletools.commons.helpers.*
 import java.text.Normalizer
 import java.text.SimpleDateFormat
@@ -110,7 +110,8 @@ fun String.getExifProperties(exif: ExifInterface): String {
 
 @TargetApi(Build.VERSION_CODES.N)
 fun String.getExifDateTaken(exif: ExifInterface): String {
-    val dateTime = exif.getAttribute(ExifInterface.TAG_DATETIME_ORIGINAL) ?: exif.getAttribute(ExifInterface.TAG_DATETIME)
+    val dateTime = exif.getAttribute(ExifInterface.TAG_DATETIME_ORIGINAL)
+            ?: exif.getAttribute(ExifInterface.TAG_DATETIME)
     dateTime.let {
         if (it?.isNotEmpty() == true) {
             try {

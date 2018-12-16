@@ -20,10 +20,10 @@ import kotlinx.android.synthetic.main.dialog_radio_group.view.*
  *
  */
 class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, val callback: (pickedPath: String) -> Unit) {
-    private val ID_INTERNAL = 1
-    private val ID_SD = 2
-    private val ID_OTG = 3
-    private val ID_ROOT = 4
+    private val idInternal = 1
+    private val idSD = 2
+    private val idOTG = 3
+    private val idRoot = 4
 
     private var mDialog: AlertDialog
     private var radioGroup: RadioGroup
@@ -39,7 +39,7 @@ class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, va
 
         val internalButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
         internalButton.apply {
-            id = ID_INTERNAL
+            id = idInternal
             text = resources.getString(R.string.internal)
             isChecked = basePath == context.internalStoragePath
             setOnClickListener { internalPicked() }
@@ -52,7 +52,7 @@ class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, va
         if (activity.hasExternalSDCard()) {
             val sdButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
             sdButton.apply {
-                id = ID_SD
+                id = idSD
                 text = resources.getString(R.string.sd_card)
                 isChecked = basePath == context.sdCardPath
                 setOnClickListener { sdPicked() }
@@ -66,7 +66,7 @@ class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, va
         if (activity.hasOTGConnected()) {
             val otgButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
             otgButton.apply {
-                id = ID_OTG
+                id = idOTG
                 text = resources.getString(R.string.usb)
                 isChecked = basePath == OTG_PATH
                 setOnClickListener { otgPicked() }
@@ -79,7 +79,7 @@ class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, va
 
         val rootButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
         rootButton.apply {
-            id = ID_ROOT
+            id = idRoot
             text = resources.getString(R.string.root)
             isChecked = basePath == "/"
             setOnClickListener { rootPicked() }

@@ -41,7 +41,7 @@ class FastScroller : FrameLayout {
     private var fastScrollCallback: ((Int) -> Unit)? = null
     private var wasRecyclerViewContentSizeSet = false       // stop measuring and calculating content size as soon as it is manually set once
 
-    private val HANDLE_HIDE_DELAY = 1000L
+    private val handleHideDelay = 1000L
     private var recyclerView: RecyclerView? = null
     private var swipeRefreshLayout: SwipeRefreshLayout? = null
     private var bubbleHideHandler = Handler()
@@ -353,7 +353,7 @@ class FastScroller : FrameLayout {
             handleHideHandler.removeCallbacksAndMessages(null)
             handleHideHandler.postDelayed({
                 handle!!.animate().alpha(0f).start()
-            }, HANDLE_HIDE_DELAY)
+            }, handleHideDelay)
 
             if (bubble != null) {
                 bubbleHideHandler.removeCallbacksAndMessages(null)
@@ -363,7 +363,7 @@ class FastScroller : FrameLayout {
                             bubble?.text = ""
                         }
                     }
-                }, HANDLE_HIDE_DELAY)
+                }, handleHideDelay)
             }
         }
     }
@@ -380,7 +380,7 @@ class FastScroller : FrameLayout {
         } else {
             handle!!.y = getValueInRange(0, recyclerViewHeight - handleHeight, pos - handleYOffset)
             if (bubble != null && allowBubbleDisplay && handle!!.isSelected) {
-                bubble!!.y = getValueInRange(tinyMargin.toInt(), recyclerViewHeight - bubbleHeight, handle!!.y - bubbleHeight)
+                bubble!!.y = getValueInRange(tinyMargin, recyclerViewHeight - bubbleHeight, handle!!.y - bubbleHeight)
                 bubbleHideHandler.removeCallbacksAndMessages(null)
                 bubble?.alpha = 1f
             }

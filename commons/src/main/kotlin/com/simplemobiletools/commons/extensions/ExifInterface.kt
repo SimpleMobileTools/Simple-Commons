@@ -2,6 +2,8 @@ package com.simplemobiletools.commons.extensions
 
 import android.media.ExifInterface
 
+//import androidx.exifinterface.media.ExifInterface
+
 fun ExifInterface.copyTo(destination: ExifInterface) {
     val attributes = arrayOf(
             ExifInterface.TAG_APERTURE,

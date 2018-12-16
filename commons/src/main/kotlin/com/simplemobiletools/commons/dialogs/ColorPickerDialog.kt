@@ -18,13 +18,13 @@ import kotlinx.android.synthetic.main.dialog_color_picker.view.*
 // forked from https://github.com/yukuku/ambilwarna
 class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBackground: Boolean = false,
                         val currentColorCallback: ((color: Int) -> Unit)? = null, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit) {
-    lateinit var viewHue: View
-    lateinit var viewSatVal: ColorPickerSquare
-    lateinit var viewCursor: ImageView
-    lateinit var viewNewColor: ImageView
-    lateinit var viewTarget: ImageView
-    lateinit var newHexField: EditText
-    lateinit var viewContainer: ViewGroup
+    var viewHue: View
+    var viewSatVal: ColorPickerSquare
+    var viewCursor: ImageView
+    var viewNewColor: ImageView
+    var viewTarget: ImageView
+    var newHexField: EditText
+    var viewContainer: ViewGroup
     private val currentColorHsv = FloatArray(3)
     private val backgroundColor = activity.baseConfig.backgroundColor
     private var isHueBeingDragged = false

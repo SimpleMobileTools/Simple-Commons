@@ -21,7 +21,7 @@ import java.util.*
 class SelectAlarmSoundDialog(val activity: BaseSimpleActivity, val currentUri: String, val audioStream: Int, val pickAudioIntentId: Int,
                              val type: Int, val loopAudio: Boolean, val onAlarmPicked: (alarmSound: AlarmSound?) -> Unit,
                              val onAlarmSoundDeleted: (alarmSound: AlarmSound) -> Unit) {
-    private val ADD_NEW_SOUND_ID = -2
+    private val addNewSoundId = -2
 
     private val view = activity.layoutInflater.inflate(R.layout.dialog_select_alarm_sound, null)
     private var systemAlarmSounds = ArrayList<AlarmSound>()
@@ -55,7 +55,7 @@ class SelectAlarmSoundDialog(val activity: BaseSimpleActivity, val currentUri: S
         view.dialog_select_alarm_your_radio.removeAllViews()
         val token = object : TypeToken<ArrayList<AlarmSound>>() {}.type
         yourAlarmSounds = Gson().fromJson<ArrayList<AlarmSound>>(config.yourAlarmSounds, token) ?: ArrayList()
-        yourAlarmSounds.add(AlarmSound(ADD_NEW_SOUND_ID, activity.getString(R.string.add_new_sound), ""))
+        yourAlarmSounds.add(AlarmSound(addNewSoundId, activity.getString(R.string.add_new_sound), ""))
         yourAlarmSounds.forEach {
             addAlarmSound(it, view.dialog_select_alarm_your_radio)
         }
@@ -101,7 +101,7 @@ class SelectAlarmSoundDialog(val activity: BaseSimpleActivity, val currentUri: S
     private fun alarmClicked(alarmSound: AlarmSound) {
         when {
             alarmSound.uri == SILENT -> mediaPlayer?.stop()
-            alarmSound.id == ADD_NEW_SOUND_ID -> {
+            alarmSound.id == addNewSoundId -> {
                 val action = Intent.ACTION_OPEN_DOCUMENT
                 Intent(action).apply {
                     type = "audio/*"

@@ -7,6 +7,7 @@ import android.provider.Settings
 import android.util.AttributeSet
 import android.widget.RelativeLayout
 import com.github.ajalt.reprint.core.AuthenticationFailureReason
+import com.github.ajalt.reprint.core.AuthenticationFailureReason.*
 import com.github.ajalt.reprint.core.AuthenticationListener
 import com.github.ajalt.reprint.core.Reprint
 import com.simplemobiletools.commons.R
@@ -17,7 +18,7 @@ import com.simplemobiletools.commons.interfaces.SecurityTab
 import kotlinx.android.synthetic.main.tab_fingerprint.view.*
 
 class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs), SecurityTab {
-    private val RECHECK_PERIOD = 3000L
+    private val recheckPeriod = 3000L
     private val registerHandler = Handler()
 
     lateinit var hashListener: HashListener
@@ -57,15 +58,21 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
 
             override fun onFailure(failureReason: AuthenticationFailureReason, fatal: Boolean, errorMessage: CharSequence?, moduleTag: Int, errorCode: Int) {
                 when (failureReason) {
-                    AuthenticationFailureReason.AUTHENTICATION_FAILED -> context.toast(R.string.authentication_failed)
-                    AuthenticationFailureReason.LOCKED_OUT -> context.toast(R.string.authentication_blocked)
+                    AUTHENTICATION_FAILED -> context.toast(R.string.authentication_failed)
+                    LOCKED_OUT -> context.toast(R.string.authentication_blocked)
+                    NO_HARDWARE -> TODO()
+                    HARDWARE_UNAVAILABLE -> TODO()
+                    NO_FINGERPRINTS_REGISTERED -> TODO()
+                    SENSOR_FAILED -> TODO()
+                    TIMEOUT -> TODO()
+                    UNKNOWN -> TODO()
                 }
             }
         })
 
         registerHandler.postDelayed({
             checkRegisteredFingerprints()
-        }, RECHECK_PERIOD)
+        }, recheckPeriod)
     }
 
     override fun onDetachedFromWindow() {

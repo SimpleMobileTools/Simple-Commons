@@ -33,7 +33,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     var isAskingPermissions = false
     var useDynamicTheme = true
 
-    private val GENERIC_PERM_HANDLER = 100
+    private val genericPermHandler = 100
 
     companion object {
         var funAfterSAFPermission: (() -> Unit)? = null
@@ -52,7 +52,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         if (!packageName.startsWith("com.simplemobiletools.", true)) {
             if ((0..50).random() == 10 || baseConfig.appRunCount % 100 == 0) {
-                val label = "You are using a fake version of the app. For your own safety download the original one from www.simplemobiletools.com. Thanks"
+                val label = "You are using a fake version of the app. For your own safety, download the original one from www.simplemobiletools.com. Thanks."
                 ConfirmationDialog(this, label, positive = R.string.ok, negative = 0) {
                     launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
                 }
@@ -140,7 +140,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun setTranslucentNavigation() {
-        window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
+        window.setFlags(
+                WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION,
+                WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION
+        )
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
@@ -246,11 +249,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             if (isCopyOperation) {
                 startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
             } else {
-                if (source.startsWith(OTG_PATH) || destination.startsWith(OTG_PATH) || isPathOnSD(source) || isPathOnSD(destination) || fileDirItems.first().isDirectory) {
+                if (source.startsWith(OTG_PATH)
+                        || destination.startsWith(OTG_PATH)
+                        || isPathOnSD(source)
+                        || isPathOnSD(destination)
+                        || fileDirItems.first().isDirectory) {
                     handleSAFDialog(source) {
                         startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
                     }
                 } else {
+                    // this file is guaranteed to be on the internal storage, so just delete it this way
                     try {
                         checkConflicts(fileDirItems, destination, 0, LinkedHashMap()) {
                             toast(R.string.moving)
@@ -346,14 +354,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         } else {
             isAskingPermissions = true
             actionOnPermission = callback
-            ActivityCompat.requestPermissions(this, arrayOf(getPermissionString(permissionId)), GENERIC_PERM_HANDLER)
+            ActivityCompat.requestPermissions(this, arrayOf(getPermissionString(permissionId)), genericPermHandler)
         }
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         isAskingPermissions = false
-        if (requestCode == GENERIC_PERM_HANDLER && grantResults.isNotEmpty()) {
+        if (requestCode == genericPermHandler && grantResults.isNotEmpty()) {
             actionOnPermission?.invoke(grantResults[0] == 0)
         }
     }

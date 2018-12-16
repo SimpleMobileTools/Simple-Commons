@@ -12,7 +12,7 @@ import com.simplemobiletools.commons.interfaces.RecyclerScrollCallback
 
 // drag selection is based on https://github.com/afollestad/drag-select-recyclerview
 open class MyRecyclerView : RecyclerView {
-    private val AUTO_SCROLL_DELAY = 25L
+    private val autoScrollDelay = 25L
     private var isZoomEnabled = false
     private var isDragSelectionEnabled = false
     private var zoomListener: MyZoomListener? = null
@@ -97,10 +97,10 @@ open class MyRecyclerView : RecyclerView {
         override fun run() {
             if (inTopHotspot) {
                 scrollBy(0, -autoScrollVelocity)
-                autoScrollHandler.postDelayed(this, AUTO_SCROLL_DELAY)
+                autoScrollHandler.postDelayed(this, autoScrollDelay)
             } else if (inBottomHotspot) {
                 scrollBy(0, autoScrollVelocity)
-                autoScrollHandler.postDelayed(this, AUTO_SCROLL_DELAY)
+                autoScrollHandler.postDelayed(this, autoScrollDelay)
             }
         }
     }
@@ -137,7 +137,7 @@ open class MyRecyclerView : RecyclerView {
                             if (!inTopHotspot) {
                                 inTopHotspot = true
                                 autoScrollHandler.removeCallbacks(autoScrollRunnable)
-                                autoScrollHandler.postDelayed(autoScrollRunnable, AUTO_SCROLL_DELAY)
+                                autoScrollHandler.postDelayed(autoScrollRunnable, autoScrollDelay)
                             }
 
                             val simulatedFactor = (hotspotTopBoundEnd - hotspotTopBoundStart).toFloat()
@@ -148,7 +148,7 @@ open class MyRecyclerView : RecyclerView {
                             if (!inBottomHotspot) {
                                 inBottomHotspot = true
                                 autoScrollHandler.removeCallbacks(autoScrollRunnable)
-                                autoScrollHandler.postDelayed(autoScrollRunnable, AUTO_SCROLL_DELAY)
+                                autoScrollHandler.postDelayed(autoScrollRunnable, autoScrollDelay)
                             }
 
                             val simulatedY = ev.y + hotspotBottomBoundEnd
@@ -282,8 +282,8 @@ open class MyRecyclerView : RecyclerView {
     }
 
     class GestureListener(val gestureListener: MyGestureListener) : ScaleGestureDetector.SimpleOnScaleGestureListener() {
-        private val ZOOM_IN_THRESHOLD = -0.4f
-        private val ZOOM_OUT_THRESHOLD = 0.15f
+        private val zoomInThreshold = -0.4f
+        private val zoomOutThreshold = 0.15f
 
         override fun onScale(detector: ScaleGestureDetector): Boolean {
             gestureListener.apply {
@@ -291,10 +291,10 @@ open class MyRecyclerView : RecyclerView {
                     return false
 
                 val diff = getScaleFactor() - detector.scaleFactor
-                if (diff < ZOOM_IN_THRESHOLD && getScaleFactor() == 1.0f) {
+                if (diff < zoomInThreshold && getScaleFactor() == 1.0f) {
                     getZoomListener()?.zoomIn()
                     setScaleFactor(detector.scaleFactor)
-                } else if (diff > ZOOM_OUT_THRESHOLD && getScaleFactor() == 1.0f) {
+                } else if (diff > zoomOutThreshold && getScaleFactor() == 1.0f) {
                     getZoomListener()?.zoomOut()
                     setScaleFactor(detector.scaleFactor)
                 }

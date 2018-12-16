@@ -122,13 +122,13 @@ val Context.internalStoragePath: String get() = baseConfig.internalStoragePath
 fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHardwarePresent()
 
 fun Context.getLatestMediaId(uri: Uri = MediaStore.Files.getContentUri("external")): Long {
-    val MAX_VALUE = "max_value"
-    val projection = arrayOf("MAX(${BaseColumns._ID}) AS $MAX_VALUE")
+    val maxValue = "max_value"
+    val projection = arrayOf("MAX(${BaseColumns._ID}) AS $maxValue")
     var cursor: Cursor? = null
     try {
         cursor = contentResolver.query(uri, projection, null, null, null)
         if (cursor?.moveToFirst() == true) {
-            return cursor.getLongValue(MAX_VALUE)
+            return cursor.getLongValue(maxValue)
         }
     } finally {
         cursor?.close()
@@ -516,7 +516,8 @@ fun Context.storeNewYourAlarmSound(resultData: Intent): AlarmSound {
     }
 
     val token = object : TypeToken<ArrayList<AlarmSound>>() {}.type
-    val yourAlarmSounds = Gson().fromJson<ArrayList<AlarmSound>>(baseConfig.yourAlarmSounds, token) ?: ArrayList()
+    val yourAlarmSounds = Gson().fromJson<ArrayList<AlarmSound>>(baseConfig.yourAlarmSounds, token)
+            ?: ArrayList()
     val newAlarmSoundId = (yourAlarmSounds.maxBy { it.id }?.id ?: YOUR_ALARM_SOUNDS_MIN_ID) + 1
     val newAlarmSound = AlarmSound(newAlarmSoundId, filename, uri.toString())
     if (yourAlarmSounds.firstOrNull { it.uri == uri.toString() } == null) {

@@ -29,7 +29,8 @@ fun Context.getSDCardPath(): String {
                 (baseConfig.OTGPartition.isEmpty() || !it.trimEnd('/').endsWith(baseConfig.OTGPartition))
     }
 
-    var sdCardPath = directories.firstOrNull { !physicalPaths.contains(it.toLowerCase().trimEnd('/')) } ?: ""
+    var sdCardPath = directories.firstOrNull { !physicalPaths.contains(it.toLowerCase().trimEnd('/')) }
+            ?: ""
 
     // on some devices no method retrieved any SD card path, so test if its not sdcard1 by any chance. It happened on an Android 5.1
     if (sdCardPath.trimEnd('/').isEmpty()) {
@@ -42,10 +43,10 @@ fun Context.getSDCardPath(): String {
     }
 
     if (sdCardPath.isEmpty()) {
-        val SDpattern = Pattern.compile("^[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$")
+        val sdPattern = Pattern.compile("^[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$")
         try {
             File("/storage").listFiles()?.forEach {
-                if (SDpattern.matcher(it.name).matches()) {
+                if (sdPattern.matcher(it.name).matches()) {
                     sdCardPath = "/storage/${it.name}"
                 }
             }
@@ -181,7 +182,8 @@ fun Context.getFastDocumentFile(path: String): DocumentFile? {
     }
 
     val relativePath = Uri.encode(path.substring(baseConfig.sdCardPath.length).trim('/'))
-    val externalPathPart = baseConfig.sdCardPath.split("/").lastOrNull(String::isNotEmpty)?.trim('/') ?: return null
+    val externalPathPart = baseConfig.sdCardPath.split("/").lastOrNull(String::isNotEmpty)?.trim('/')
+            ?: return null
     val fullUri = "${baseConfig.treeUri}/document/$externalPathPart%3A$relativePath"
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
@@ -407,7 +409,7 @@ fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolea
         val document = getDocumentFile(fileDirItem.path)
         if (document != null && (fileDirItem.isDirectory == document.isDirectory)) {
             try {
-                fileDeleted = (document.isFile == true || allowDeleteFolder) && DocumentsContract.deleteDocument(applicationContext.contentResolver, document.uri)
+                fileDeleted = (document.isFile || allowDeleteFolder) && DocumentsContract.deleteDocument(applicationContext.contentResolver, document.uri)
             } catch (ignored: Exception) {
             }
         }

@@ -24,8 +24,9 @@ import java.util.*
 
 class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = false, val copyMediaOnly: Boolean, val conflictResolutions: LinkedHashMap<String, Int>,
                    listener: CopyMoveListener, val copyHidden: Boolean) : AsyncTask<Pair<ArrayList<FileDirItem>, String>, Void, Boolean>() {
-    private val INITIAL_PROGRESS_DELAY = 3000L
-    private val PROGRESS_RECHECK_INTERVAL = 500L
+
+    private val initialProgressDelay = 3000L
+    private val progressRecheckInterval = 500L
 
     private var mListener: WeakReference<CopyMoveListener>? = null
     private var mTransferredFiles = ArrayList<FileDirItem>()
@@ -75,7 +76,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         mProgressHandler.postDelayed({
             initProgressNotification()
             updateProgress()
-        }, INITIAL_PROGRESS_DELAY)
+        }, initialProgressDelay)
 
         for (file in mFiles) {
             try {
@@ -148,7 +149,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         mProgressHandler.removeCallbacksAndMessages(null)
         mProgressHandler.postDelayed({
             updateProgress()
-        }, PROGRESS_RECHECK_INTERVAL)
+        }, progressRecheckInterval)
     }
 
     private fun copy(source: FileDirItem, destination: FileDirItem) {
