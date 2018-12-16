@@ -1,8 +1,8 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.app.Activity
 import android.view.LayoutInflater
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.adapters.PasswordTypesAdapter
 import com.simplemobiletools.commons.extensions.*
@@ -14,7 +14,7 @@ import com.simplemobiletools.commons.interfaces.HashListener
 import com.simplemobiletools.commons.views.MyDialogViewPager
 import kotlinx.android.synthetic.main.dialog_security.view.*
 
-class SecurityDialog(val activity: Activity, val requiredHash: String, val showTabIndex: Int, val callback: (hash: String, type: Int, success: Boolean) -> Unit)
+class SecurityDialog(val activity: AppCompatActivity, val requiredHash: String, val showTabIndex: Int, val callback: (hash: String, type: Int, success: Boolean) -> Unit)
     : HashListener {
     var dialog: AlertDialog? = null
     val view = LayoutInflater.from(activity).inflate(R.layout.dialog_security, null)

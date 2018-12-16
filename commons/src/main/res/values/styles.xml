@@ -6,9 +6,7 @@
         <item name="colorAccent">@color/color_accent</item>
         <item name="android:spinnerItemStyle">@style/SpinnerItem</item>
         <item name="spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
-        <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
         <item name="buttonStyle">@style/MyTransparentButton</item>
-        <item name="android:buttonStyle">@style/MyTransparentButton</item>
     </style>
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
@@ -21,7 +19,7 @@
     </style>
 
     <style name="AppTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
-        <item name="android:fontFamily">sans-serif</item>
+        <item name="fontFamily">sans-serif</item>
         <item name="android:textSize">@dimen/actionbar_text_size</item>
     </style>
 
@@ -40,7 +38,7 @@
     <style name="MyTransparentButton" parent="Widget.AppCompat.Button">
         <item name="android:textColor">@android:color/white</item>
         <item name="background">@drawable/transparent_button</item>
-        <item name="android:background">@drawable/transparent_button</item>
+        <item name="background">@drawable/transparent_button</item>
     </style>
 
     <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog">
@@ -57,7 +55,7 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowContentOverlay">@null</item>
-        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:backgroundDimEnabled">false</item>
     </style>
@@ -69,7 +67,7 @@
     </style>
 
     <style name="PinNumberStyle" parent="PinNumberStyle.Base">
-        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="background">?attr/selectableItemBackgroundBorderless</item>
     </style>
 
     <!-- App themes -->

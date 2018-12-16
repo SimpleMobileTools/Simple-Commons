@@ -1,14 +1,14 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.app.Activity
 import android.view.LayoutInflater
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.models.Release
 import kotlinx.android.synthetic.main.dialog_whats_new.view.*
 
-class WhatsNewDialog(val activity: Activity, val releases: List<Release>) {
+class WhatsNewDialog(val activity: AppCompatActivity, val releases: List<Release>) {
     init {
         val view = LayoutInflater.from(activity).inflate(R.layout.dialog_whats_new, null)
         view.whats_new_content.text = getNewReleases()

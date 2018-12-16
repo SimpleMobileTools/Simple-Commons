@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.*
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
@@ -41,7 +40,7 @@ fun AppCompatActivity.updateActionBarSubtitle(text: String) {
     supportActionBar?.subtitle = Html.fromHtml("<font color='${baseConfig.primaryColor.getContrastColor().toHex()}'>$text</font>")
 }
 
-fun Activity.appLaunched(appId: String) {
+fun AppCompatActivity.appLaunched(appId: String) {
     baseConfig.internalStoragePath = getInternalStoragePath()
     updateSDCardPath()
     baseConfig.appId = appId
@@ -72,7 +71,7 @@ fun Activity.appLaunched(appId: String) {
     }
 }
 
-fun Activity.showDonateOrUpgradeDialog() {
+fun AppCompatActivity.showDonateOrUpgradeDialog() {
     if (getCanAppBeUpgraded()) {
         UpgradeToProDialog(this)
     } else if (!baseConfig.hadThankYouInstalled && !isThankYouInstalled()) {
@@ -80,7 +79,7 @@ fun Activity.showDonateOrUpgradeDialog() {
     }
 }
 
-fun Activity.isAppInstalledOnSDCard(): Boolean = try {
+fun AppCompatActivity.isAppInstalledOnSDCard(): Boolean = try {
     val applicationInfo = packageManager.getPackageInfo(packageName, 0).applicationInfo
     (applicationInfo.flags and ApplicationInfo.FLAG_EXTERNAL_STORAGE) == ApplicationInfo.FLAG_EXTERNAL_STORAGE
 } catch (e: Exception) {
@@ -88,7 +87,7 @@ fun Activity.isAppInstalledOnSDCard(): Boolean = try {
 }
 
 @SuppressLint("InlinedApi")
-fun Activity.isShowingSAFDialog(path: String, treeUri: String, requestCode: Int): Boolean {
+fun AppCompatActivity.isShowingSAFDialog(path: String, treeUri: String, requestCode: Int): Boolean {
     return if (needsStupidWritePermissions(path) && (treeUri.isEmpty() || !hasProperStoredTreeUri())) {
         runOnUiThread {
             WritePermissionDialog(this, false) {
@@ -112,13 +111,13 @@ fun Activity.isShowingSAFDialog(path: String, treeUri: String, requestCode: Int)
     }
 }
 
-fun Activity.launchPurchaseThankYouIntent() = launchViewIntent(getString(R.string.thank_you_url))
+fun AppCompatActivity.launchPurchaseThankYouIntent() = launchViewIntent(getString(R.string.thank_you_url))
 
-fun Activity.launchUpgradeToProIntent() = launchViewIntent(getProUrl())
+fun AppCompatActivity.launchUpgradeToProIntent() = launchViewIntent(getProUrl())
 
-fun Activity.launchViewIntent(id: Int) = launchViewIntent(getString(id))
+fun AppCompatActivity.launchViewIntent(id: Int) = launchViewIntent(getString(id))
 
-fun Activity.launchViewIntent(url: String) {
+fun AppCompatActivity.launchViewIntent(url: String) {
     Thread {
         Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
             if (resolveActivity(packageManager) != null) {
@@ -130,7 +129,7 @@ fun Activity.launchViewIntent(url: String) {
     }.start()
 }
 
-fun Activity.sharePathIntent(path: String, applicationId: String) {
+fun AppCompatActivity.sharePathIntent(path: String, applicationId: String) {
     Thread {
         val newUri = getFinalUriFromPath(path, applicationId) ?: return@Thread
         Intent().apply {
@@ -156,7 +155,7 @@ fun Activity.sharePathIntent(path: String, applicationId: String) {
     }.start()
 }
 
-fun Activity.sharePathsIntent(paths: ArrayList<String>, applicationId: String) {
+fun AppCompatActivity.sharePathsIntent(paths: ArrayList<String>, applicationId: String) {
     Thread {
         if (paths.size == 1) {
             sharePathIntent(paths.first(), applicationId)
@@ -197,7 +196,7 @@ fun Activity.sharePathsIntent(paths: ArrayList<String>, applicationId: String) {
     }.start()
 }
 
-fun Activity.setAsIntent(path: String, applicationId: String) {
+fun AppCompatActivity.setAsIntent(path: String, applicationId: String) {
     Thread {
         val newUri = getFinalUriFromPath(path, applicationId) ?: return@Thread
         Intent().apply {
@@ -215,7 +214,7 @@ fun Activity.setAsIntent(path: String, applicationId: String) {
     }.start()
 }
 
-fun Activity.openEditorIntent(path: String, applicationId: String) {
+fun AppCompatActivity.openEditorIntent(path: String, applicationId: String) {
     Thread {
         val newUri = getFinalUriFromPath(path, applicationId) ?: return@Thread
         Intent().apply {
@@ -251,7 +250,7 @@ fun Activity.openEditorIntent(path: String, applicationId: String) {
     }.start()
 }
 
-fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: String, forceMimeType: String = "") {
+fun AppCompatActivity.openPathIntent(path: String, forceChooser: Boolean, applicationId: String, forceMimeType: String = "") {
     Thread {
         val newUri = getFinalUriFromPath(path, applicationId) ?: return@Thread
         val mimeType = if (forceMimeType.isNotEmpty()) forceMimeType else getUriMimeType(path, newUri)
@@ -282,7 +281,7 @@ fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: 
     }.start()
 }
 
-fun Activity.getFinalUriFromPath(path: String, applicationId: String): Uri? {
+fun AppCompatActivity.getFinalUriFromPath(path: String, applicationId: String): Uri? {
     val uri = try {
         ensurePublicUri(path, applicationId)
     } catch (e: Exception) {
@@ -298,7 +297,7 @@ fun Activity.getFinalUriFromPath(path: String, applicationId: String): Uri? {
     return uri
 }
 
-fun Activity.tryGenericMimeType(intent: Intent, mimeType: String, uri: Uri): Boolean {
+fun AppCompatActivity.tryGenericMimeType(intent: Intent, mimeType: String, uri: Uri): Boolean {
     var genericMimeType = mimeType.getGenericMimeType()
     if (genericMimeType.isEmpty()) {
         genericMimeType = "*/*"
@@ -489,23 +488,23 @@ private fun deleteRecursively(file: File): Boolean {
     return file.delete()
 }
 
-fun Activity.scanFileRecursively(file: File, callback: (() -> Unit)? = null) {
+fun AppCompatActivity.scanFileRecursively(file: File, callback: (() -> Unit)? = null) {
     applicationContext.scanFileRecursively(file, callback)
 }
 
-fun Activity.scanPathRecursively(path: String, callback: (() -> Unit)? = null) {
+fun AppCompatActivity.scanPathRecursively(path: String, callback: (() -> Unit)? = null) {
     applicationContext.scanPathRecursively(path, callback)
 }
 
-fun Activity.scanFilesRecursively(files: ArrayList<File>, callback: (() -> Unit)? = null) {
+fun AppCompatActivity.scanFilesRecursively(files: ArrayList<File>, callback: (() -> Unit)? = null) {
     applicationContext.scanFilesRecursively(files, callback)
 }
 
-fun Activity.scanPathsRecursively(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
+fun AppCompatActivity.scanPathsRecursively(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
     applicationContext.scanPathsRecursively(paths, callback)
 }
 
-fun Activity.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
+fun AppCompatActivity.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
     applicationContext.rescanPaths(paths, callback)
 }
 
@@ -570,21 +569,21 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
     }
 }
 
-fun Activity.hideKeyboard() {
+fun AppCompatActivity.hideKeyboard() {
     val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
     inputMethodManager.hideSoftInputFromWindow((currentFocus ?: View(this)).windowToken, 0)
     window!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
     currentFocus?.clearFocus()
 }
 
-fun Activity.showKeyboard(et: EditText) {
+fun AppCompatActivity.showKeyboard(et: EditText) {
     et.requestFocus()
     val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
     imm.showSoftInput(et, InputMethodManager.SHOW_IMPLICIT)
 }
 
-fun Activity.hideKeyboard(view: View) {
-    val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+fun AppCompatActivity.hideKeyboard(view: View) {
+    val inputMethodManager = getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE) as InputMethodManager
     inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
 }
 
@@ -682,7 +681,7 @@ fun BaseSimpleActivity.getFileInputStreamSync(path: String): InputStream? {
     }
 }
 
-fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
+fun AppCompatActivity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
     if (baseConfig.isHiddenPasswordProtectionOn) {
         SecurityDialog(this, baseConfig.hiddenPasswordHash, baseConfig.hiddenProtectionType) { hash, type, success ->
             if (success) {
@@ -694,7 +693,7 @@ fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
     }
 }
 
-fun Activity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
+fun AppCompatActivity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
     if (baseConfig.isAppPasswordProtectionOn) {
         SecurityDialog(this, baseConfig.appPasswordHash, baseConfig.appProtectionType) { hash, type, success ->
             callback(success)
@@ -704,7 +703,7 @@ fun Activity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
     }
 }
 
-fun Activity.handleDeletePasswordProtection(callback: () -> Unit) {
+fun AppCompatActivity.handleDeletePasswordProtection(callback: () -> Unit) {
     if (baseConfig.isDeletePasswordProtectionOn) {
         SecurityDialog(this, baseConfig.deletePasswordHash, baseConfig.deleteProtectionType) { hash, type, success ->
             if (success) {
@@ -730,7 +729,7 @@ fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
     return File(directory).mkdirs()
 }
 
-fun Activity.updateSharedTheme(sharedTheme: SharedTheme) {
+fun AppCompatActivity.updateSharedTheme(sharedTheme: SharedTheme) {
     try {
         val contentValues = MyContentProvider.fillThemeContentValues(sharedTheme)
         applicationContext.contentResolver.update(MyContentProvider.MY_CONTENT_URI, contentValues, null, null)
@@ -739,13 +738,13 @@ fun Activity.updateSharedTheme(sharedTheme: SharedTheme) {
     }
 }
 
-fun Activity.copyToClipboard(text: String) {
+fun AppCompatActivity.copyToClipboard(text: String) {
     val clip = ClipData.newPlainText(getString(R.string.simple_commons), text)
     (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).primaryClip = clip
     toast(R.string.value_copied_to_clipboard)
 }
 
-fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0, titleText: String = "", callback: (() -> Unit)? = null) {
+fun AppCompatActivity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0, titleText: String = "", callback: (() -> Unit)? = null) {
     if (isDestroyed) {
         return
     }
@@ -783,14 +782,14 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
     callback?.invoke()
 }
 
-fun Activity.showPickSecondsDialogHelper(curMinutes: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false,
-                                         cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
+fun AppCompatActivity.showPickSecondsDialogHelper(curMinutes: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false,
+                                                  cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
     val seconds = if (curMinutes > 0) curMinutes * 60 else curMinutes
     showPickSecondsDialog(seconds, isSnoozePicker, showSecondsAtCustomDialog, cancelCallback, callback)
 }
 
-fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false,
-                                   cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
+fun AppCompatActivity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false,
+                                            cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
     hideKeyboard()
     val seconds = TreeSet<Int>()
     seconds.apply {

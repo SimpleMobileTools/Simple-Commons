@@ -1,9 +1,9 @@
 package com.simplemobiletools.commons.extensions
 
-import android.app.Activity
+import androidx.appcompat.app.AppCompatActivity
 import com.simplemobiletools.commons.R
 
-fun Activity.getThemeId(color: Int = baseConfig.primaryColor) = when (color) {
+fun AppCompatActivity.getThemeId(color: Int = baseConfig.primaryColor) = when (color) {
     -12846 -> R.style.AppTheme_Red_100
     -1074534 -> R.style.AppTheme_Red_200
     -1739917 -> R.style.AppTheme_Red_300

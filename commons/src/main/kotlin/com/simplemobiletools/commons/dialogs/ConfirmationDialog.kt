@@ -1,7 +1,7 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.app.Activity
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_message.view.*
@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.dialog_message.view.*
  * @param negative negative buttons text ID (optional)
  * @param callback an anonymous function
  */
-class ConfirmationDialog(activity: Activity, message: String = "", messageId: Int = R.string.proceed_with_deletion, positive: Int = R.string.yes,
+class ConfirmationDialog(activity: AppCompatActivity, message: String = "", messageId: Int = R.string.proceed_with_deletion, positive: Int = R.string.yes,
                          negative: Int = R.string.no, val callback: () -> Unit) {
     var dialog: AlertDialog
 

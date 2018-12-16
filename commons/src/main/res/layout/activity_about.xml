@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/about_scrollview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -109,7 +110,7 @@
             android:layout_width="@dimen/social_logo"
             android:layout_height="@dimen/social_logo"
             android:layout_below="@+id/about_follow_us"
-            android:src="@drawable/ic_facebook" />
+            app:srcCompat="@drawable/ic_facebook" />
 
         <ImageView
             android:id="@+id/about_reddit"
@@ -120,7 +121,7 @@
             android:layout_marginRight="@dimen/medium_margin"
             android:layout_toEndOf="@+id/about_facebook"
             android:layout_toRightOf="@+id/about_facebook"
-            android:src="@drawable/ic_reddit" />
+            app:srcCompat="@drawable/ic_reddit" />
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_copyright"

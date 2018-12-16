@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.simplemobiletools.commons.views.FingerprintTab xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fingerprint_lock_holder"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -18,7 +19,7 @@
         android:layout_below="@+id/fingerprint_lock_title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/activity_margin"
-        android:src="@drawable/ic_fingerprint" />
+        app:srcCompat="@drawable/ic_fingerprint" />
 
     <com.simplemobiletools.commons.views.MyTextView
         android:id="@+id/fingerprint_label"

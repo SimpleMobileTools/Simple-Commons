@@ -1,14 +1,14 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.app.Activity
 import android.content.res.Resources
-import android.media.ExifInterface
 import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import androidx.exifinterface.media.ExifInterface
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.sumByInt
@@ -31,7 +31,7 @@ class PropertiesDialog() {
      * @param path the file path
      * @param countHiddenItems toggle determining if we will count hidden files themselves and their sizes (reasonable only at directory properties)
      */
-    constructor(activity: Activity, path: String, countHiddenItems: Boolean = false) : this() {
+    constructor(activity: AppCompatActivity, path: String, countHiddenItems: Boolean = false) : this() {
         if (!activity.getDoesFilePathExist(path)) {
             activity.toast(String.format(activity.getString(R.string.source_file_doesnt_exist), path))
             return
@@ -116,7 +116,7 @@ class PropertiesDialog() {
                 }
     }
 
-    private fun updateLastModified(activity: Activity, view: View, timestamp: Long) {
+    private fun updateLastModified(activity: AppCompatActivity, view: View, timestamp: Long) {
         activity.runOnUiThread {
             view.findViewById<TextView>(R.id.properties_last_modified).property_value.text = timestamp.formatDate()
         }
@@ -129,7 +129,7 @@ class PropertiesDialog() {
      * @param path the file path
      * @param countHiddenItems toggle determining if we will count hidden files themselves and their sizes
      */
-    constructor(activity: Activity, paths: List<String>, countHiddenItems: Boolean = false) : this() {
+    constructor(activity: AppCompatActivity, paths: List<String>, countHiddenItems: Boolean = false) : this() {
         mInflater = LayoutInflater.from(activity)
         mResources = activity.resources
         val view = mInflater.inflate(R.layout.dialog_properties, null)

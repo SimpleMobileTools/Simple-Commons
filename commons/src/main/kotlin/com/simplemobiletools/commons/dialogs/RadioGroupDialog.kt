@@ -1,11 +1,11 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.app.Activity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.onGlobalLayout
 import com.simplemobiletools.commons.extensions.setupDialogStuff
@@ -13,7 +13,7 @@ import com.simplemobiletools.commons.models.RadioItem
 import kotlinx.android.synthetic.main.dialog_radio_group.view.*
 import java.util.*
 
-class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, val checkedItemId: Int = -1, val titleId: Int = 0,
+class RadioGroupDialog(val activity: AppCompatActivity, val items: ArrayList<RadioItem>, val checkedItemId: Int = -1, val titleId: Int = 0,
                        showOKButton: Boolean = false, val cancelCallback: (() -> Unit)? = null, val callback: (newValue: Any) -> Unit) {
     private val dialog: AlertDialog
     private var wasInit = false

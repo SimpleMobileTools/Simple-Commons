@@ -1,7 +1,7 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.app.Activity
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.simplemobiletools.commons.R
@@ -10,7 +10,7 @@ import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_write_permission.view.*
 import kotlinx.android.synthetic.main.dialog_write_permission_otg.view.*
 
-class WritePermissionDialog(activity: Activity, val isOTG: Boolean, val callback: () -> Unit) {
+class WritePermissionDialog(activity: AppCompatActivity, val isOTG: Boolean, val callback: () -> Unit) {
     var dialog: AlertDialog
 
     init {

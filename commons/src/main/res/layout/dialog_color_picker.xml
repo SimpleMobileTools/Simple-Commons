@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/color_picker_scrollview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -32,13 +33,13 @@
                 android:layout_marginStart="@dimen/medium_margin"
                 android:layout_toEndOf="@id/color_picker_square"
                 android:scaleType="fitXY"
-                android:src="@drawable/img_color_picker_hue" />
+                app:srcCompat="@drawable/img_color_picker_hue" />
 
             <ImageView
                 android:id="@+id/color_picker_hue_cursor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_chevron_right" />
+                app:srcCompat="@drawable/ic_chevron_right" />
 
             <ImageView
                 android:id="@+id/color_picker_cursor"
@@ -46,7 +47,7 @@
                 android:layout_height="@dimen/activity_margin"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/color_picker_circle" />
+                app:srcCompat="@drawable/color_picker_circle" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -74,7 +75,7 @@
                 android:paddingLeft="@dimen/medium_margin"
                 android:paddingRight="@dimen/medium_margin"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_arrow_right" />
+                app:srcCompat="@drawable/ic_arrow_right" />
 
             <com.simplemobiletools.commons.views.MyTextView
                 android:id="@+id/color_picker_new_hex_label"
@@ -125,7 +126,7 @@
                 android:paddingLeft="@dimen/medium_margin"
                 android:paddingRight="@dimen/medium_margin"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_arrow_right" />
+                app:srcCompat="@drawable/ic_arrow_right" />
 
             <ImageView
                 android:id="@+id/color_picker_new_color"

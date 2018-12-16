@@ -1,6 +1,5 @@
 package com.simplemobiletools.commons.activities
 
-import android.app.Activity
 import android.app.ActivityManager
 import android.content.Context
 import android.content.Intent
@@ -148,7 +147,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
         super.onActivityResult(requestCode, resultCode, resultData)
-        if (requestCode == OPEN_DOCUMENT_TREE && resultCode == Activity.RESULT_OK && resultData != null) {
+        if (requestCode == OPEN_DOCUMENT_TREE && resultCode == AppCompatActivity.RESULT_OK && resultData != null) {
             if (isProperSDFolder(resultData.data)) {
                 if (resultData.dataString == baseConfig.OTGTreeUri) {
                     toast(R.string.sd_card_usb_same)
@@ -162,7 +161,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
                 startActivityForResult(intent, requestCode)
             }
-        } else if (requestCode == OPEN_DOCUMENT_TREE_OTG && resultCode == Activity.RESULT_OK && resultData != null) {
+        } else if (requestCode == OPEN_DOCUMENT_TREE_OTG && resultCode == AppCompatActivity.RESULT_OK && resultData != null) {
             if (isProperOTGFolder(resultData.data)) {
                 if (resultData.dataString == baseConfig.treeUri) {
                     funAfterOTGPermission?.invoke(false)

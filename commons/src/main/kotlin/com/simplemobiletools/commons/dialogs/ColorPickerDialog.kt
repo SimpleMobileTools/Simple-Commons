@@ -1,6 +1,5 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.app.Activity
 import android.graphics.Color
 import android.view.MotionEvent
 import android.view.View
@@ -10,13 +9,14 @@ import android.view.WindowManager
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.views.ColorPickerSquare
 import kotlinx.android.synthetic.main.dialog_color_picker.view.*
 
 // forked from https://github.com/yukuku/ambilwarna
-class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBackground: Boolean = false,
+class ColorPickerDialog(val activity: AppCompatActivity, color: Int, val removeDimmedBackground: Boolean = false,
                         val currentColorCallback: ((color: Int) -> Unit)? = null, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit) {
     var viewHue: View
     var viewSatVal: ColorPickerSquare

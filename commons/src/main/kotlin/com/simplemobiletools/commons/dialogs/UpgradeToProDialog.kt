@@ -1,14 +1,14 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.app.Activity
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.launchUpgradeToProIntent
 import com.simplemobiletools.commons.extensions.launchViewIntent
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_upgrade_to_pro.view.*
 
-class UpgradeToProDialog(val activity: Activity) {
+class UpgradeToProDialog(val activity: AppCompatActivity) {
 
     init {
         val view = activity.layoutInflater.inflate(R.layout.dialog_upgrade_to_pro, null).apply {

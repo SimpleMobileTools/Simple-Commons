@@ -1,7 +1,7 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.app.Activity
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.R.id.*
 import com.simplemobiletools.commons.extensions.baseConfig
@@ -14,7 +14,7 @@ import com.simplemobiletools.commons.helpers.CONFLICT_SKIP
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.dialog_file_conflict.view.*
 
-class FileConflictDialog(val activity: Activity, val fileDirItem: FileDirItem, val callback: (resolution: Int, applyForAll: Boolean) -> Unit) {
+class FileConflictDialog(val activity: AppCompatActivity, val fileDirItem: FileDirItem, val callback: (resolution: Int, applyForAll: Boolean) -> Unit) {
     val view = activity.layoutInflater.inflate(R.layout.dialog_file_conflict, null)!!
 
     init {
