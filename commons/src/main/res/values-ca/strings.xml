@@ -166,7 +166,7 @@
     <string name="primary_color">Color principal</string>
     <string name="foreground_color">Color de primer pla</string>
     <string name="app_icon_color">Color de la icona d\'aplicació</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
+    <string name="bottom_navigation_bar_color">Color de la barra de navegació inferior</string>
     <string name="restore_defaults">Valors per defecte</string>
     <string name="change_color">Canviar de color</string>
     <string name="theme">Tema</string>
@@ -439,7 +439,7 @@
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="usb_detected">Sembla que teniu un dispositiu USB connectat al vostre dispositiu. Per assegurar-vos que els fitxers apareguin correctament, heu de concedir permisos addicionals.</string>
     <string name="confirm_usb_storage_access_text">Seleccioneu la carpeta arrel del dispositiu USB a la pantalla següent per concedir accés</string>
     <string name="wrong_root_selected_usb">S\'ha seleccionat la carpeta incorrecta, seleccioneu la carpeta arrel del vostre dispositiu USB</string>
 
