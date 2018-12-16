@@ -10,7 +10,8 @@ import com.simplemobiletools.commons.views.FastScroller
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.list_item.view.*
 
-class StringsAdapter(activity: BaseSimpleActivity, var strings: MutableList<String>, recyclerView: MyRecyclerView, fastScroller: FastScroller, itemClick: (Any) -> Unit) :
+class StringsAdapter(activity: BaseSimpleActivity, var strings: MutableList<String>,
+                     recyclerView: MyRecyclerView, fastScroller: FastScroller, itemClick: (Any) -> Unit) :
         MyRecyclerViewAdapter(activity, recyclerView, fastScroller, itemClick) {
 
     override fun getActionMenuId() = R.menu.cab_delete_only
@@ -31,7 +32,7 @@ class StringsAdapter(activity: BaseSimpleActivity, var strings: MutableList<Stri
 
     override fun onBindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int) {
         val item = strings[position]
-        holder.bindView(item, true, true) { itemView, layoutPosition ->
+        holder.bindView(item, true, true) { itemView, _ ->
             setupView(itemView, item)
         }
         bindViewHolder(holder)
