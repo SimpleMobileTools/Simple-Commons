@@ -166,7 +166,7 @@
     <string name="primary_color">Color principal</string>
     <string name="foreground_color">Color de primer plano</string>
     <string name="app_icon_color">Color del icono de la aplicación</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
+    <string name="bottom_navigation_bar_color">Color de la barra de navegación inferior</string>
     <string name="restore_defaults">Valores por defecto</string>
     <string name="change_color">Cambiar de color</string>
     <string name="theme">Tema</string>
@@ -436,7 +436,7 @@
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="usb_detected">Parece que tienes un dispositivo USB conectado a tu dispositivo. Para asegurarse de que sus archivos aparezcan correctamente, debe otorgar permisos adicionales.</string>
     <string name="confirm_usb_storage_access_text">Elija la carpeta raíz del dispositivo USB en la pantalla siguiente, para otorgar acceso</string>
     <string name="wrong_root_selected_usb">Carpeta incorrecta, seleccione la carpeta raíz de su dispositivo USB</string>
 
