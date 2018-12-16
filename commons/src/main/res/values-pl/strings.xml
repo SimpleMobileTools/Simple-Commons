@@ -11,9 +11,9 @@
     <string name="set_as">Ustaw jako</string>
     <string name="value_copied_to_clipboard">Wartość została skopiowana do schowka</string>
     <string name="unknown">Nieznane</string>
-    <string name="always">Zawsze</string>
-    <string name="never">Nigdy</string>
-    <string name="details">Szczegóły</string>
+    <string name="always">Zawsze</string>
+    <string name="never">Nigdy</string>
+    <string name="details">Szczegóły</string>
     <string name="notes">Notatnik</string>
     <string name="deleting_folder">Usuwam folder \'%s\'</string>
     <string name="none">None</string>
@@ -30,7 +30,7 @@
 
     <!-- Search -->
     <string name="search">Szukaj</string>
-    <string name="type_2_characters">Wpisz co najmniej 2 znaki, aby rozpocząć wyszukiwanie.</string>
+    <string name="type_2_characters">Wpisz co najmniej 2 znaki, aby rozpocząć wyszukiwanie.</string>
 
     <!-- Filters -->
     <string name="filter">Filtr</string>
@@ -38,10 +38,10 @@
     <string name="change_filter">Zmień filtr</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Wymagane jest uprawnienie \'Pamięć\'</string>
-    <string name="no_contacts_permission">Wymagane jest uprawnienie \'Kontakty\'</string>
-    <string name="no_camera_permissions">Wymagane jest uprawnienie \'Aparat\'</string>
-    <string name="no_audio_permissions"> Wymagane jest uprawnienie \'Mikrofon\'</string>
+    <string name="no_storage_permissions">Wymagane jest uprawnienie \'Pamięć\'</string>
+    <string name="no_contacts_permission">Wymagane jest uprawnienie \'Kontakty\'</string>
+    <string name="no_camera_permissions">Wymagane jest uprawnienie \'Aparat\'</string>
+    <string name="no_audio_permissions"> Wymagane jest uprawnienie \'Mikrofon\'</string>
 
     <!-- Renaming -->
     <string name="rename_file">Zmień nazwę</string>
@@ -57,7 +57,7 @@
     <string name="filename_invalid_characters">Nazwa pliku zawiera niedozwolone znaki</string>
     <string name="filename_invalid_characters_placeholder">Nazwa \'%s\' zawiera niedozwolone znaki</string>
     <string name="extension_cannot_be_empty">Rozszerzenie pliku nie może być puste</string>
-    <string name="source_file_doesnt_exist">Plik źródłowy nie istnieje</string>
+    <string name="source_file_doesnt_exist">Plik źródłowy nie istnieje</string>
     <string name="prepend_filenames">Poprzedzaj nazwy plików</string>
     <string name="append_filenames">Dołączaj nazwy plików (przed rozszerzeniem)</string>
 
@@ -100,8 +100,8 @@
     <!-- File operation conflicts -->
     <string name="file_already_exists">Plik \"%s\" już istnieje</string>
     <string name="file_already_exists_overwrite">Plik \"%s\" już istnieje. Nadpisać?</string>
-    <string name="folder_already_exists">Folder \"%s\" już istnieje</string>
-    <string name="merge">Połącz</string>
+    <string name="folder_already_exists">Folder \"%s\" już istnieje</string>
+    <string name="merge">Połącz</string>
     <string name="keep_both">Zachowaj oba</string>
     <string name="overwrite">Nadpisz</string>
     <string name="skip">Pomiń</string>
@@ -140,7 +140,7 @@
     <string name="sd_card">Karta pamięci</string>
     <string name="root">Folder główny</string>
     <string name="wrong_root_selected">Wybrano nieprawidłowy folder. Wybierz główny folder karty pamięci.</string>
-    <string name="sd_card_usb_same">Ścieżka do karty pamięci i urządzenia USB nie może być taka sama</string>
+    <string name="sd_card_usb_same">Ścieżka do karty pamięci i urządzenia USB nie może być taka sama</string>
     <string name="app_on_sd_card">Wygląda na to, że aplikacja jest zainstalowana na karcie pamięci. Przez to widżety aplikacji są niedostępne.\nJest to ograniczenie systemu. Jeśli chcesz używać widżetów, musisz przenieść ją do pamięci wewnętrznej.</string>
 
     <!-- File properties -->
@@ -159,7 +159,7 @@
     <string name="f_number">Otwór względny obiektywu</string>
     <string name="camera">Kamera/aparat</string>
     <string name="exif">Dane EXIF</string>
-    <string name="song_title">Tytuł piosenki</string>
+    <string name="song_title">Tytuł piosenki</string>
 
     <!-- Color customization -->
     <string name="background_color">Tło</string>
@@ -190,7 +190,7 @@
     <string name="dark_theme">Ciemny</string>
     <string name="solarized">Solaryzacja</string>
     <string name="dark_red">Ciemnoczerwony</string>
-    <string name="black_white">Czerń i biel</string>
+    <string name="black_white">Czerń i biel</string>
     <string name="custom">Własny</string>
     <string name="shared">Wspólny</string>
 
@@ -200,7 +200,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">Usuń</string>
-    <string name="remove">Usuń</string>
+    <string name="remove">Usuń</string>
     <string name="rename">Zmień nazwę</string>
     <string name="share">Udostępnij</string>
     <string name="share_via">Udostępnij w</string>
@@ -211,7 +211,7 @@
     <string name="unhide_folder">Odkryj folder</string>
     <string name="temporarily_show_hidden">Tymczasowo pokaż ukryte multimedia</string>
     <string name="stop_showing_hidden">Przestań pokazywać ukryte multimedia</string>
-    <string name="maximum_share_reached">Nie możesz udostępniać tak wielu danych naraz</string>
+    <string name="maximum_share_reached">Nie możesz udostępniać tak wielu danych naraz</string>
     <string name="empty_and_disable_recycle_bin">Wyczyść i wyłącz kosz</string>
     <string name="undo">Cofnij</string>
     <string name="redo">Ponów</string>
@@ -260,12 +260,12 @@
     <string name="fingerprint">Odcisk palca</string>
     <string name="add_fingerprint">Dodaj odcisk palca</string>
     <string name="place_finger">Przyłóż palec do czytnika</string>
-    <string name="authentication_failed">Uwierzytelnianie nie powiodło się.</string>
-    <string name="authentication_blocked">Uwierzytelnianie zablokowane. Spróbuj ponownie za chwilę.</string>
-    <string name="no_fingerprints_registered">Nie masz zarejestrowanych odcisków palców. Dodaj je w ustawieniach systemowych.</string>
-    <string name="go_to_settings">Przejdź do ustawień</string>
+    <string name="authentication_failed">Uwierzytelnianie nie powiodło się.</string>
+    <string name="authentication_blocked">Uwierzytelnianie zablokowane. Spróbuj ponownie za chwilę.</string>
+    <string name="no_fingerprints_registered">Nie masz zarejestrowanych odcisków palców. Dodaj je w ustawieniach systemowych.</string>
+    <string name="go_to_settings">Przejdź do ustawień</string>
     <string name="protection_setup_successfully">Hasło zostało ustawione. Jeśli je zapomnisz, przeinstaluj aplikację.</string>
-    <string name="fingerprint_setup_successfully">Zabezpieczenie zostało ustawione. W razie problemów z jego zresetowaniem przeinstaluj aplikację.</string>
+    <string name="fingerprint_setup_successfully">Zabezpieczenie zostało ustawione. W razie problemów z jego zresetowaniem przeinstaluj aplikację.</string>
 
     <!-- Times -->
     <string name="yesterday">Wczoraj</string>
@@ -389,7 +389,7 @@
     <string name="purchase_simple_thank_you">Kup aplikację \'Proste podziękowanie\'</string>
     <string name="customize_colors">Dostosuj kolory aplikacji</string>
     <string name="customize_widget_colors">Dostosuj kolory widżetu</string>
-    <string name="use_english_language">Wymuś używanie przez aplikację języka angielskiego</string><![CDATA[
+     <string name="use_english_language">Wymuś używanie przez aplikację języka angielskiego</string><![CDATA[
     
     ]]>
     <string name="show_hidden_items">Pokazuj ukryte elementy</string>
@@ -398,14 +398,14 @@
     <string name="medium">Średnia</string>
     <string name="large">Duża</string>
     <string name="extra_large">Bardzo duża</string>
-    <string name="password_protect_hidden_items">Chroń widoczność ukrytych plików</string>
-    <string name="password_protect_whole_app">Chroń dostęp do aplikacji</string>
+    <string name="password_protect_hidden_items">Chroń widoczność ukrytych plików</string>
+    <string name="password_protect_whole_app">Chroń dostęp do aplikacji</string>
     <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
-    <string name="keep_last_modified">Zachowuj starą datę i czas modyfikacji przy kopiowaniu / przenoszeniu / zmianie nazwy plików</string>
-    <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
+    <string name="keep_last_modified">Zachowuj starą datę i czas modyfikacji przy kopiowaniu / przenoszeniu / zmianie nazwy plików</string>
+    <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
     <string name="prevent_phone_from_sleeping">Zapobiegaj przejściu urządzenia  w stan uśpienia gdy aplikacja jest aktywna</string>
-    <string name="skip_delete_confirmation">Nie pokazuj okna z potwierdzeniem usunięcia elementów</string>
-    <string name="enable_pull_to_refresh">Włącz gest pociągnięcia ekranu od góry w celu odświeżenia widoku</string>
+    <string name="skip_delete_confirmation">Nie pokazuj okna z potwierdzeniem usunięcia elementów</string>
+    <string name="enable_pull_to_refresh">Włącz gest pociągnięcia ekranu od góry w celu odświeżenia widoku</string>
     <string name="use_24_hour_time_format">Używaj 24-godzinnego formatu czasu</string>
     <string name="sunday_first">Rozpoczynaj tydzień od niedzieli</string>
     <string name="widgets">Widżety</string>
@@ -418,10 +418,10 @@
     <string name="force_portrait_mode">Wymuś tryb pionowy</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Widoczność</string>
-    <string name="security">Bezpieczeństwo</string>
-    <string name="scrolling">Przewijanie</string>
-    <string name="file_operations">Operacje na plikach</string>
+    <string name="visibility">Widoczność</string>
+    <string name="security">Bezpieczeństwo</string>
+    <string name="scrolling">Przewijanie</string>
+    <string name="file_operations">Operacje na plikach</string>
     <string name="recycle_bin">Kosz</string>
     <string name="saving_label">Zachowywanie</string>
     <string name="startup">Uruchamianie</string>
@@ -446,19 +446,19 @@
     <!-- Import / Export -->
     <string name="importing">Importuję…</string>
     <string name="exporting">Eksportuję…</string>
-    <string name="importing_successful">Importowanie zakończone</string>
-    <string name="exporting_successful">Eksportowanie zakończone</string>
-    <string name="importing_failed">Importowanie nie powiodło się</string>
-    <string name="exporting_failed">Eksportowanie nie powiodło się</string>
-    <string name="importing_some_entries_failed">Importowanie niektórych wpisów nie powiodło się</string>
-    <string name="exporting_some_entries_failed">Eksportowanie niektórych wpisów nie powiodło się</string>
-    <string name="no_entries_for_exporting">Nie znalazłem żadnych wpisów do wyeksportowania</string>
+    <string name="importing_successful">Importowanie zakończone</string>
+    <string name="exporting_successful">Eksportowanie zakończone</string>
+    <string name="importing_failed">Importowanie nie powiodło się</string>
+    <string name="exporting_failed">Eksportowanie nie powiodło się</string>
+    <string name="importing_some_entries_failed">Importowanie niektórych wpisów nie powiodło się</string>
+    <string name="exporting_some_entries_failed">Eksportowanie niektórych wpisów nie powiodło się</string>
+    <string name="no_entries_for_exporting">Nie znalazłem żadnych wpisów do wyeksportowania</string>
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
-    <string name="confirm_usb_storage_access_text">Wybierz folder główny urządzenia USB na następnym ekranie, aby uzyskać dostęp do tegoż urządzenia</string>
-    <string name="wrong_root_selected_usb">Wybrany został niewłaściwy folder. Wybierz główny folder urządzenia USB.</string>
+    <string name="confirm_usb_storage_access_text">Wybierz folder główny urządzenia USB na następnym ekranie, aby uzyskać dostęp do tegoż urządzenia</string>
+    <string name="wrong_root_selected_usb">Wybrany został niewłaściwy folder. Wybierz główny folder urządzenia USB.</string>
 
     <!-- Dates -->
     <string name="january">Styczeń</string>
@@ -521,30 +521,30 @@
 
     <!-- About -->
     <string name="about">O aplikacji</string>
-    <string name="website_label">Nasza strona internetowa:</string>
+    <string name="website_label">Nasza strona internetowa:</string>
     <string name="email_label">Napisz do nas, przyślij nam swoje uwagi:</string>
     <string name="upgrade_to_pro">Zaktualizuj do wersji Pro</string>
     <string name="more_apps_underlined"><u>Więcej naszych aplikacji</u></string>
     <string name="third_party_licences_underlined"><u>Licencje innych firm</u></string>
     <string name="invite_friends_underlined"><u>Zaproponuj aplikację znajomym</u></string>
-    <string name="share_text">Hej! Sprawdź aplikację %1$s (%2$s).</string>
+    <string name="share_text">Hej! Sprawdź aplikację %1$s (%2$s).</string>
     <string name="invite_via">Wybierz sposób:</string>
     <string name="rate_us_underlined"><u>Oceń aplikację</u></string>
-    <string name="donate">Przekaż datek</string>
-    <string name="donate_underlined"><u>Przekaż datek</u></string>
+    <string name="donate">Przekaż datek</string>
+    <string name="donate_underlined"><u>Przekaż datek</u></string>
     <string name="follow_us">Śledź nas</string>
     <string name="copyright">Wersja %1$s\n© Simple Mobile Tools %2$d</string>
     <string name="additional_info">Dodatkowe informacje</string>
     <string name="app_version">Wersja aplikacji: %s</string>
     <string name="device_os">System: %s</string>
-    <string name="donate_please">
+    <string name="donate_please">
         <![CDATA[
             Witaj!<br><br>
             Mamy nadzieję, że aplikacja przypadła Ci do gustu. Jak da się zauważyć, nie zawiera ona reklam, prosimy więc o wsparcie jej rozwoju poprzez zakup specjalnej aplikacji <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Proste Podziękowanie</a>, co poskutkuje również wyłączeniem tego komunikatu.<br><br>
             Dziękujemy!
         ]]>
     </string>
-    <string name="purchase">Kup</string>
+    <string name="purchase">Kup</string>
     <string name="update_thank_you">Zaktualizuj aplikcję Proste Podziękowanie do najnowszej wersji</string>
     <string name="before_asking_question_read_faq">Zanim zadasz pytanie, przeczytaj \'Najczęściej zadawane pytania\'. Być może rozwiązanie Twojego problemu już tam jest.</string>
     <string name="read_it">Przeczytaj</string>
@@ -561,16 +561,16 @@
     </string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Często zadawane pytania (FAQ)</string>
+    <string name="frequently_asked_questions">Często zadawane pytania (FAQ)</string>
     <string name="before_asking_question">Zanim zadasz pytanie, przeczytaj najpierw</string>
-    <string name="faq_1_title_commons">Dlaczego nigdzie nie widzę widżetu aplikacji?</string>
+    <string name="faq_1_title_commons">Dlaczego nigdzie nie widzę widżetu aplikacji?</string>
     <string name="faq_1_text_commons">Zapewne dlatego, że aplikacja została zainstalowana na karcie pamięci. Jedynym rozwiązaniem problemu jest przeniesienie aplikacji do pamięci wewnętrznej. Jest to ograniczenie systemu.</string>
-    <string name="faq_2_title_commons">Chcę was wesprzeć, ale jestem bez grosza przy duszy. Mogę jakoś to zrobić inaczej?</string>
-    <string name="faq_2_text_commons">Oczywiście. Możesz powiedzieć światu o naszych aplikacjach, podzielić się opinią i oceną w Sklepie Google Play, lub też wspomóc tłumaczenie aplikacji na nowe języki (bądź poprawić już istniejące tłumaczenia). Instrukcję znajdziesz pod adresem https://github.com/SimpleMobileTools/General-Discussion . Możesz też napisać do nas na adres hello@simplemobiletools.com , jeśli potrzebujesz pomocy.</string>
-    <string name="faq_3_title_commons">Usunąłem(-am) jakieś pliki przez przypadek. Mogę je jakoś odzyskać?</string>
-    <string name="faq_3_text_commons">Pliki są usuwane zaraz po kliknięciu w oknie potwierdzającym. System Android nie ma wbudowanego kosza.</string>
-    <string name="faq_4_title_commons">Nie za bardzo podobają mi się domyślne kolory widżetów. Mogę je jakoś zmienić?</string>
-    <string name="faq_4_text_commons">Tak. Po przeciągnięciu widżetu na pulpit pojawia się okno jego konfiguracji. Zobaczysz na nim kolorowe kwadraty, za pomocą których możesz wybrać nowe kolory. Suwakiem możesz też ustawić poziom przezroczystości.</string>
+    <string name="faq_2_title_commons">Chcę was wesprzeć, ale jestem bez grosza przy duszy. Mogę jakoś to zrobić inaczej?</string>
+    <string name="faq_2_text_commons">Oczywiście. Możesz powiedzieć światu o naszych aplikacjach, podzielić się opinią i oceną w Sklepie Google Play, lub też wspomóc tłumaczenie aplikacji na nowe języki (bądź poprawić już istniejące tłumaczenia). Instrukcję znajdziesz pod adresem https://github.com/SimpleMobileTools/General-Discussion . Możesz też napisać do nas na adres hello@simplemobiletools.com , jeśli potrzebujesz pomocy.</string>
+    <string name="faq_3_title_commons">Usunąłem(-am) jakieś pliki przez przypadek. Mogę je jakoś odzyskać?</string>
+    <string name="faq_3_text_commons">Pliki są usuwane zaraz po kliknięciu w oknie potwierdzającym. System Android nie ma wbudowanego kosza.</string>
+    <string name="faq_4_title_commons">Nie za bardzo podobają mi się domyślne kolory widżetów. Mogę je jakoś zmienić?</string>
+    <string name="faq_4_text_commons">Tak. Po przeciągnięciu widżetu na pulpit pojawia się okno jego konfiguracji. Zobaczysz na nim kolorowe kwadraty, za pomocą których możesz wybrać nowe kolory. Suwakiem możesz też ustawić poziom przezroczystości.</string>
     <string name="faq_5_title_commons">Czy mogę jakoś odzyskać usunięte pliki?</string>
     <string name="faq_5_text_commons">Jeśli zostały faktycznie usunięte, no to nie bardzo (ratunkiem mogą - acz nie muszą - okazać się zewnętrzne aplikacje odzyskujące pliki). Jednakże, możesz włączyć funkcję kosza w ustawieniach niniejszej aplikacji, aby mieć pewność co do ich ewentualnego odzyskania.</string>
 
@@ -585,14 +585,14 @@
     <string name="rtl_viewpager_title">RtlViewPager (przeciąganie ekranu od prawej do lewej strony)</string>
     <string name="joda_title">Joda-Time (podmienianie daty w języku Java)</string>
     <string name="stetho_title">Stetho (bazy danych debugowania)</string>
-    <string name="otto_title">Otto (szyna zdarzeń)</string>
+    <string name="otto_title">Otto (szyna zdarzeń)</string>
     <string name="photoview_title">PhotoView (przybliżanie GIFów)</string>
-    <string name="pattern_title">PatternLockView (ochrona danych wzorem)</string>
-    <string name="reprint_title">Reprint (ochrona danych odciskiem palca)</string>
-    <string name="gif_drawable_title">Gif Drawable (ładowanie GIFów)</string>
-    <string name="autofittextview_title">AutoFitTextView (zmiana rozmiaru tekstu)</string>
-    <string name="robolectric_title">Robolectric (testowanie aplikacji)</string>
-    <string name="espresso_title">Espresso (testowanie aplikacji)</string>
+    <string name="pattern_title">PatternLockView (ochrona danych wzorem)</string>
+    <string name="reprint_title">Reprint (ochrona danych odciskiem palca)</string>
+    <string name="gif_drawable_title">Gif Drawable (ładowanie GIFów)</string>
+    <string name="autofittextview_title">AutoFitTextView (zmiana rozmiaru tekstu)</string>
+    <string name="robolectric_title">Robolectric (testowanie aplikacji)</string>
+    <string name="espresso_title">Espresso (testowanie aplikacji)</string>
     <string name="gson_title">Gson (parser JSON)</string>
     <string name="leak_canary_title">Leak Canary (wykrywanie wycieków pamięci)</string>
     <string name="number_picker_title">Number Picker (generator liczb losowych)</string>

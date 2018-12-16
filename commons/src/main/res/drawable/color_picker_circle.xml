@@ -8,7 +8,7 @@
 
             <stroke
                 android:width="4px"
-                android:color="@android:color/white"/>
+                android:color="@android:color/white" />
 
         </shape>
     </item>
@@ -21,7 +21,7 @@
 
             <stroke
                 android:width="2px"
-                android:color="@android:color/black"/>
+                android:color="@android:color/black" />
 
         </shape>
     </item>

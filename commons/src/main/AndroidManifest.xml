@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.simplemobiletools.commons">
 
     <application>
@@ -8,8 +7,8 @@
             android:name=".receivers.SharedThemeReceiver"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.simplemobiletools.commons.SHARED_THEME_ACTIVATED"/>
-                <action android:name="com.simplemobiletools.commons.SHARED_THEME_UPDATED"/>
+                <action android:name="com.simplemobiletools.commons.SHARED_THEME_ACTIVATED" />
+                <action android:name="com.simplemobiletools.commons.SHARED_THEME_UPDATED" />
             </intent-filter>
         </receiver>
     </application>
