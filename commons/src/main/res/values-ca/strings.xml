@@ -177,6 +177,8 @@
     <string name="undo_changes_confirmation">¿Segur que vols desfer els canvis?</string>
     <string name="save_before_closing">Tens canvis sense aplicar. Desar abans de sortir?</string>
     <string name="apply_to_all_apps">Aplicar els colors a totes les aplicacions Simple Apps</string>
+    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Colors actualitzats satisfactoriament. S’ha afegit un nou tema anomenat \'Shared\'. Fes -lo servidr per actualitzar els colors de les aplicacions en el futur.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -558,6 +560,9 @@
     <string name="faq_4_text_commons">Sí, mentre arrossegueu un widget a la vostra pantalla d\'inici, apareixerà una pantalla de configuració de widgets. Veureu quadrats de colors a l\'extrem inferior esquerre, només cal prémer-los per seleccionar un color nou. També podeu utilitzar el control lliscant per ajustar l\'alfa.</string>
     <string name="faq_5_title_commons">Puc recuperar d\'alguna manera els fitxers eliminats?</string>
     <string name="faq_5_text_commons">Si estan realment eliminats no pots fer-ho. Tanmateix, pots habilitar l\'ús d\'una paperera de reciclatge en comptes de suprimir definitivament a la configuració de l\'aplicació. Això només mourà els fitxers en lloc d\'eliminar-los.</string>
+    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
+    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
 
     <!-- License -->
     <string name="notice">Aquesta aplicació fa servir les següents biblioteques de tercers que ens faciliten la feina. Gràcies.</string>

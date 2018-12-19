@@ -180,6 +180,8 @@
     <string name="undo_changes_confirmation">Ste si istý, že chcete vrátiť zmeny?</string>
     <string name="save_before_closing">Máte neuložené zmeny. Chcete ich uložiť pred ukončením?</string>
     <string name="apply_to_all_apps">Použiť farby na všetky Jednoduché Aplikácie</string>
+    <string name="app_icon_color_warning">UPOZORNENIE: Niektoré spúšťače zariadení nepodporujú úpravu ikoniek. V prípade, že ikonka apky zmizne, ju skúste spustiť cez Google Play, alebo nejaký widget, ak je dostupný.
+        Ak je apka spustená, skúste nastaviť pôvodnú oranžovú farbu ikonky #F57C00. V najhoršom prípade budete musieť apku preinštalovať.</string>
     <string name="share_colors_success">Farby boli úspešne aktualizované. Bola pridaná nová \'Zdieľaná\' téma, prosím použite ju pri ďalšej úprave farieb.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -577,6 +579,9 @@
     <string name="faq_4_text_commons">Áno, po potiahnutí widgetu na plochu sa zobrazí konfiguračná obrazovka. Kliknutím na farebné štvorčeky v ľavom dolnom rohu viete zvoliť nové. Potiahnutím posuvníka viete upraviť aj priehľadnosť.</string>
     <string name="faq_5_title_commons">Viem nejakým spôsobom obnoviť vymazané súbory?</string>
     <string name="faq_5_text_commons">Ak dané súbory boli skutočne vymazané, tak nie. V nastaveniach aplikácie ale viete nastaviť používanie odpadkového koša miesto vymazávania súborov.</string>
+    <string name="faq_6_title_commons">Spúšťacia ikonka apky zmizla. Čo mám spraviť?</string>
+    <string name="faq_6_text_commons">Bude to spôsobené tým, že váš spúšťač zariadenia nepodporuje úpravu ikoniek. Skúste apku spustiť cez Google Play, alebo nejaký widget, ak je dostupný.
+        Ak je apka spustená, skúste nastaviť pôvodnú oranžovú farbu ikonky #F57C00. V najhoršom prípade budete musieť apku preinštalovať.</string>
 
     <!-- License -->
     <string name="notice">Táto aplikácia používa na uľahčenie práce nasledovné knižnice tretích strán. Ďakujeme.</string>

@@ -177,6 +177,8 @@
     <string name="undo_changes_confirmation">Wijzigingen ongedaan maken?</string>
     <string name="save_before_closing">Onopgeslagen wijzigingen. Nu opslaan?</string>
     <string name="apply_to_all_apps">Kleuren toepassen op al onze apps</string>
+    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Kleuren gewijzigd. Gebruik het nieuwe thema \'Gedeeld\' om de kleuren voor al onze apps aan te passen.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -554,6 +556,9 @@
     <string name="faq_4_text_commons">Bij het plaatsen van een widget op het startscherm zal er een instellingenvenster verschijnen. Onderaan staan gekleurde vlakken, waarmee nieuwe kleuren kunnen worden gekozen. De schuif is voor de transparantie.</string>
     <string name="faq_5_title_commons">Kan ik verwijderde bestanden herstellen?</string>
     <string name="faq_5_text_commons">Bestanden worden direct na bevestiging verwijderd, tenzij de prullenbak wordt gebruikt. De prullenbak kan bij de instellingen worden ingeschakeld.</string>
+    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
+    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
 
     <!-- License -->
     <string name="notice">Deze app maakt gebruik van de volgende libraries om het mij wat gemakkelijker te maken. Dank hiervoor.</string>

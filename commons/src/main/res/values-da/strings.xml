@@ -177,6 +177,8 @@
     <string name="undo_changes_confirmation">Er du sikker på at du vil fortryde ændringerne?</string>
     <string name="save_before_closing">Du har ændringer der ikke er gemt. Vil du gemme dem?</string>
     <string name="apply_to_all_apps">Anvend farverne på alle Simple Apps</string>
+    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Farverne er ændret. Et nyt udseende kaldet \"Tilpasset\" er tilføjet, brug det ved opdatering af alle app-farver fremover.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -554,6 +556,9 @@
     <string name="faq_4_text_commons">Jep. Når du føjer en widget til din skærm kommer muligheden for at konfigurere den frem. I nederste venstre hjørne finder du farvede kvadrater, klik på dem og vælg en ny farve. Du kan justere alfa med skyderen.</string>
     <string name="faq_5_title_commons">Kan jeg gendanne slettede filer?</string>
     <string name="faq_5_text_commons">Nej, ikke hvis de virkelig er slettet. Men du kan vælge at bruge en papirkurv i stedet for at slette noget direkte. Papirkurven aktiveres i indstillingerne.</string>
+    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
+    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
 
     <!-- License -->
     <string name="notice">Denne app bruger følgende 3.-parts biblioteker der gør at mit liv bliver lidt enklere. Tak.</string>

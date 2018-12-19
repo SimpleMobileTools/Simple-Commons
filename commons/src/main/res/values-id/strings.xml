@@ -177,6 +177,8 @@
     <string name="undo_changes_confirmation">Anda yakin ingin membuang perubahan?</string>
     <string name="save_before_closing">Perubahan Anda belum disimpan. Simpan sebelum keluar?</string>
     <string name="apply_to_all_apps">Terapkan warna ke semua Simple Apps</string>
+    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Warna berhasil diperbarui. Tema baru bernama \'Dibagikan\' telah ditambahkan, gunakan untuk memperbarui semua warna aplikasi kedepannya.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -555,6 +557,9 @@
     <string name="faq_4_text_commons">Ya, setelah Anda menyeret widget di layar beranda, layar konfigurasi widget akan muncul. Anda akan melihat kotak warna di pojok bawah kiri, tinggal sentuh untuk memilih warna baru. Anda bisa menggunakan penggeser untuk mengatur transparansi juga.</string>
     <string name="faq_5_title_commons">Bisakah saya mengembalikan file yang terhapus?</string>
     <string name="faq_5_text_commons">Jika benar-benar sudah terhapus, tidak bisa. Namun, Anda bisa menggunakan fitur Sampah di setelan aplikasi. Fitur tersebut hanya akan memindahkannya ke situ alih-alih menghapusnya permanen.</string>
+    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
+    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
 
     <!-- License -->
     <string name="notice">Aplikasi ini menggunakan library pihak ketiga berikut untuk mempermudah pekerjaan. Terima kasih.</string>

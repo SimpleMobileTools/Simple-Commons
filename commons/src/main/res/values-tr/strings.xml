@@ -177,6 +177,8 @@
     <string name="undo_changes_confirmation">Değişikliklerinizi geri almak istediğinizden emin misiniz?</string>
     <string name="save_before_closing">Kaydedilmemiş değişiklikleriniz var. Çıkmadan önce kaydedilsin mi?</string>
     <string name="apply_to_all_apps">Tüm Basit Uygulamalara renk uygula</string>
+    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">"Renkler başarıyla güncellendi. 'Paylaşılan' adlı yeni bir Tema eklendi, lütfen gelecekte tüm uygulama renklerini güncellemek için kullanınız."</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -554,6 +556,9 @@
     <string name="faq_4_text_commons">Evet, ana ekranınızda bir widget\'ı sürüklediğinizde, bir widget yapılandırma ekranı görünür. Sol alt köşede renkli kareler göreceksiniz, sadece yeni bir renk seçmek için onlara basın. Alfa\'yı da ayarlamak için kaydırıcıyı kullanabilirsiniz.</string>
     <string name="faq_5_title_commons">Bir şekilde silinen dosyaları geri yükleyebilir miyim?</string>
     <string name="faq_5_text_commons">Gerçekten silinmişlerse, yapamazsınız. Bununla birlikte, gelecekte dosyaları kaybetmemek için uygulama ayarlarındaki Silmek yerine Geri Dönüşüm Kutusuna taşı seçeneğini etkinleştirebilirsiniz. Bu, dosyaları silmek yerine sadece taşır.</string>
+    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
+    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
 
     <!-- License -->
     <string name="notice">Bu uygulama hayatımı kolaylaştırmak için aşağıdaki üçüncü taraf kitaplıklarını kullanır. Teşekkürler.</string>

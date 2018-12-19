@@ -177,6 +177,8 @@
     <string name="undo_changes_confirmation">Ar esate tikri, jog norite panaikinti pakeitimus?</string>
     <string name="save_before_closing">Turite neišsaugotų pakeitimų. Išsaugoti prieš išeinant?</string>
     <string name="apply_to_all_apps">Pritaikyti spalvas visoms paprastoms programėlėms</string>
+    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Spalvos atnaujintos sėkmingai. Nauja tema pavdinimu \'Bendra\' buvo įtraukta, prašome naudoti tai ateityje visų programėlių spalvų atnaujinimui.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -570,6 +572,9 @@
     <string name="faq_4_text_commons">Taip, kai vilksite valdiklį savo pagrindiniame ekrane, pasirodys valdiklio konfigūracijos ekranas. Apatiniame kairiajame kampe pamatysite spalvotą kvadratą, tiesiog paspauskite, kad pasirinktumėte naują spalvą. Galite naudoti slankiklį, kad galėtumėte koreguoti pagrindinę spalvą</string>
     <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
     <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them.</string>
+    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
+    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
 
     <!-- License -->
     <string name="notice">Ši programa naudoja trečiųjų šalių licensijas ir padaro mano gyvenimą geresnį. Ačiū.</string>

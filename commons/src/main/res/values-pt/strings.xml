@@ -177,6 +177,8 @@
     <string name="undo_changes_confirmation">Tem a certeza de que deseja desfazer as alterações?</string>
     <string name="save_before_closing">Existem alterações não guardadas. Deseja guardar antes de sair?</string>
     <string name="apply_to_all_apps">Aplicar cores a todas as aplicações Simple</string>
+    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Cores atualizadas com sucesso. Foi criado o novo tema \'Partilhado\', que pode utilizar para atualizar as cores de todas as aplicações Simple.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -555,6 +557,9 @@
     <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
     <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
     <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them.</string>
+    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
+    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
 
     <!-- License -->
     <string name="notice">Esta aplicação usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>

@@ -177,6 +177,8 @@
     <string name="undo_changes_confirmation">Είστε βέβαιοι ότι θέλετε να αναιρέσετε τις αλλαγές σας?</string>
     <string name="save_before_closing">Έχετε αλλαγές που δεν έχουν αποθηκευτεί. Αποθήκευση πριν από την έξοδο?</string>
     <string name="apply_to_all_apps">Εφαρμογή χρωμάτων σε όλες τις Simple Apps</string>
+    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Τα χρώματα ενημερώθηκαν με επιτυχία. Ένα νέο θέμα που ονομάζεται  \"Κοινόχρηστο\" έχει προστεθεί, παρακαλούμε να χρησιμοποιήστε το για την ενημέρωση των χρωμάτων όλων των εφαρμ. στο μέλλον.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -555,6 +557,9 @@
     <string name="faq_4_text_commons">Ναι, καθώς σύρετε ένα γραφικό στοιχείο στην αρχική οθόνη σας, εμφανίζεται μια οθόνη διαμόρφωσης widget. Θα δείτε έγχρωμα τετράγωνα στην κάτω αριστερή γωνία, απλά πατήστε τα για να επιλέξετε ένα νέο χρώμα. Μπορείτε να χρησιμοποιήσετε το ρυθμιστικό για να ρυθμίσετε το alpha επίσης.</string>
     <string name="faq_5_title_commons">Μπορώ να επαναφέρω με κάποιο τρόπο τα διαγραμμένα αρχεία;</string>
     <string name="faq_5_text_commons">Εάν έχουν πραγματικά διαγραφεί, δεν μπορείτε. Ωστόσο, μπορείτε να ενεργοποιήσετε τη χρήση του Κάδου Ανακύκλωσης αντί της διαγραφής στις ρυθμίσεις της εφαρμογής. Αυτό θα μετακινήσει απλώς τα αρχεία σε αυτόν αντί να τα διαγράψει.</string>
+    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
+    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
 
     <!-- License -->
     <string name="notice">Αυτή η εφαρμογή χρησιμοποιεί τις ακόλουθες βιβλιοθήκες τρίτων για να διευκολύνει τη ζωή μου. Ευχαριστώ.</string>
