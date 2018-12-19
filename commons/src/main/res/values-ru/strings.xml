@@ -141,7 +141,7 @@
     <string name="sd_card">SD-карта</string>
     <string name="root">Корневая папка</string>
     <string name="wrong_root_selected">Папка выбрана неверно, пожалуйста, выберите SD-карту</string>
-    <string name="sd_card_usb_same">Пути к SD-карте и USB-устройству не могут быть одинаковыми</string>
+    <string name="sd_card_usb_same">Пути к SD-карте и USB-накопителю не могут быть одинаковыми</string>
     <string name="app_on_sd_card">Похоже, что приложение у вас установлено на SD-карту, а это делает виджеты приложений недоступными. Вы даже не увидите их в списке доступных виджетов.
         Это системное ограничение, поэтому, если вы хотите использовать виджеты, вам нужно переместить приложение обратно во внутреннюю память.</string>
 
@@ -169,7 +169,7 @@
     <string name="primary_color">Основной цвет</string>
     <string name="foreground_color">Цвет переднего плана</string>
     <string name="app_icon_color">Цвет значка приложения</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
+    <string name="bottom_navigation_bar_color">Цвет нижней панели навигации</string>
     <string name="restore_defaults">Сбросить к стандартным</string>
     <string name="change_color">Изменить цвет</string>
     <string name="theme">Тема</string>
