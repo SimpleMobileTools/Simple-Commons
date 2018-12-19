@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.extensions
 
 import android.content.ContentValues
 import android.content.Context
+import android.hardware.usb.UsbConstants
 import android.hardware.usb.UsbManager
 import android.media.MediaScannerConnection
 import android.net.Uri
@@ -23,7 +24,11 @@ import java.util.regex.Pattern
 
 // http://stackoverflow.com/a/40582634/1967672
 fun Context.getSDCardPath(): String {
-    val directories = getStorageDirectories().filter { it.trimEnd('/') != getInternalStoragePath() }
+    val directories = getStorageDirectories().filter {
+        it.trimEnd('/') != getInternalStoragePath() &&
+                (baseConfig.OTGPartition.isEmpty() || !it.trimEnd('/').endsWith(baseConfig.OTGPartition))
+    }
+
     var sdCardPath = directories.firstOrNull { !physicalPaths.contains(it.toLowerCase().trimEnd('/')) } ?: ""
 
     // on some devices no method retrieved any SD card path, so test if its not sdcard1 by any chance. It happened on an Android 5.1
@@ -55,7 +60,15 @@ fun Context.getSDCardPath(): String {
 
 fun Context.hasExternalSDCard() = sdCardPath.isNotEmpty()
 
-fun Context.hasOTGConnected() = (getSystemService(Context.USB_SERVICE) as UsbManager).deviceList.isNotEmpty()
+fun Context.hasOTGConnected(): Boolean {
+    return try {
+        (getSystemService(Context.USB_SERVICE) as UsbManager).deviceList.any {
+            it.value.getInterface(0).interfaceClass == UsbConstants.USB_CLASS_MASS_STORAGE
+        }
+    } catch (e: Exception) {
+        false
+    }
+}
 
 fun Context.getStorageDirectories(): Array<String> {
     val paths = HashSet<String>()
@@ -103,7 +116,7 @@ fun Context.getHumanReadablePath(path: String): String {
     return getString(when (path) {
         "/" -> R.string.root
         internalStoragePath -> R.string.internal
-        OTG_PATH -> R.string.otg
+        OTG_PATH -> R.string.usb
         else -> R.string.sd_card
     })
 }

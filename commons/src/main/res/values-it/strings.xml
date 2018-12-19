@@ -3,11 +3,11 @@
     <string name="cancel">Annulla</string>
     <string name="save_as">Salva come</string>
     <string name="file_saved">File salvato correttamente</string>
-    <string name="invalid_file_format">Formato file non valido</string>
-    <string name="out_of_memory_error">Errore memoria esaurita</string>
+    <string name="invalid_file_format">Formato del file non valido</string>
+    <string name="out_of_memory_error">Errore: memoria esaurita</string>
     <string name="an_error_occurred">Si è verificato un errore: %s</string>
     <string name="open_with">Apri con</string>
-    <string name="no_app_found">Nessun app valida trovata</string>
+    <string name="no_app_found">Non è stata trovata nessuna applicazione valida</string>
     <string name="set_as">Imposta come</string>
     <string name="value_copied_to_clipboard">Valore copiato negli appunti</string>
     <string name="unknown">Sconosciuto</string>
@@ -20,7 +20,7 @@
     <string name="label">Etichetta</string>
     <string name="transparent">Trasparente</string>
     <string name="transparent_color">Colore trasparente</string>
-    <string name="select_a_different_color">Seleziona un colore differente</string>
+    <string name="select_a_different_color">Seleziona un colore diverso</string>
 
     <!-- Favorites -->
     <string name="favorites">Preferiti</string>
@@ -49,7 +49,7 @@
     <string name="rename_file_error">Impossibile rinominare il file</string>
     <string name="rename_folder_error">Impossibile rinominare la cartella</string>
     <string name="rename_folder_empty">Il nome della cartella non deve essere vuoto</string>
-    <string name="rename_folder_exists">Esiste già una cartella con questo nome</string>
+    <string name="rename_folder_exists">È già esistente una cartella con questo nome</string>
     <string name="rename_folder_root">Non è possibile rinominare la cartella principale</string>
     <string name="rename_folder_ok">Cartella rinominata correttamente</string>
     <string name="renaming_folder">Rinominazione cartella</string>
@@ -59,7 +59,7 @@
     <string name="extension_cannot_be_empty">L\'estensione non può essere vuota</string>
     <string name="source_file_doesnt_exist">Il file di origine %s non esiste</string>
     <string name="prepend_filenames">Anteponi i nomi dei file</string>
-    <string name="append_filenames">Apponi i nomi dei file (prima dell\'estensione)</string>
+    <string name="append_filenames">Aggiungi i nomi dei file (prima dell\'estensione)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copia</string>
@@ -70,20 +70,20 @@
     <string name="source">Origine</string>
     <string name="destination">Destinazione</string>
     <string name="select_destination">Seleziona destinazione</string>
-    <string name="click_select_destination">Clicca qui per selezionare la destinazione</string>
+    <string name="click_select_destination">Cliccare qui per selezionare la destinazione</string>
     <string name="invalid_destination">Impossibile scrivere nella destinazione selezionata</string>
-    <string name="please_select_destination">Seleziona una destinazione</string>
+    <string name="please_select_destination">Selezionare una destinazione</string>
     <string name="source_and_destination_same">Origine e destinazione non possono essere uguali</string>
     <string name="copy_failed">Impossibile copiare i file</string>
     <string name="copying">Copia in corso…</string>
     <string name="copying_success">File copiati correttamente</string>
     <string name="copy_move_failed">Si è verificato un errore</string>
-    <string name="moving">Spostamento…</string>
+    <string name="moving">Spostamento in corso…</string>
     <string name="moving_success">File spostati correttamente</string>
     <string name="moving_success_partial">Alcuni file non possono essere spostati</string>
     <string name="copying_success_partial">Alcuni file non possono essere copiati</string>
     <string name="no_files_selected">Nessun file selezionato</string>
-    <string name="saving">Salvataggio…</string>
+    <string name="saving">Salvataggio in corso…</string>
     <string name="could_not_create_folder">Impossibile creare la cartella %s</string>
     <string name="could_not_create_file">Impossibile creare il file %s</string>
 
@@ -92,15 +92,15 @@
     <string name="folder">Cartella</string>
     <string name="file">File</string>
     <string name="create_new_folder">Crea nuova cartella</string>
-    <string name="name_taken">Esiste già un file o una cartella con quel nome</string>
+    <string name="name_taken">È già esistente un file o una cartella con quel nome</string>
     <string name="invalid_name">Il nome contiene caratteri non validi</string>
     <string name="empty_name">Inserisci un nome</string>
     <string name="unknown_error_occurred">Si è verificato un errore sconosciuto</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Il file \"%s\" esiste già</string>
-    <string name="file_already_exists_overwrite">Il file \"%s\" esiste già. Sovrascrivi?</string>
-    <string name="folder_already_exists">La cartella \"%s\" esiste già</string>
+    <string name="file_already_exists">Il file \"%s\" è già esistente</string>
+    <string name="file_already_exists_overwrite">Il file \"%s\" è già esistente. Sovrascrivere?</string>
+    <string name="folder_already_exists">La cartella \"%s\" è già esistente</string>
     <string name="merge">Unisci</string>
     <string name="keep_both">Mantieni entrambi</string>
     <string name="overwrite">Sovrascrivi</string>
@@ -111,9 +111,9 @@
     <!-- File picker -->
     <string name="select_folder">Seleziona una cartella</string>
     <string name="select_file">Seleziona un file</string>
-    <string name="confirm_storage_access_title">Conferma l\'accesso all\'archiviazione esterna</string>
-    <string name="confirm_storage_access_text">Scegli la root della scheda SD nella prossima schermata, per consentire i permessi di scrittura</string>
-    <string name="confirm_storage_access_text_sd">Se non hai una scheda SD, prova questo</string>
+    <string name="confirm_storage_access_title">Confermare l\'accesso all\'archiviazione esterna</string>
+    <string name="confirm_storage_access_text">Scegliere il percorso della scheda SD nella prossima schermata, per consentire i permessi di scrittura</string>
+    <string name="confirm_storage_access_text_sd">Se non si ha una scheda SD, provare questo</string>
     <string name="confirm_selection">Conferma selezione</string>
 
     <plurals name="items">
@@ -138,7 +138,7 @@
     <string name="sd_card">Scheda SD</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Selezionata una cartella errata, seleziona la cartella di root della tua scheda SD</string>
-    <string name="sd_card_otg_same">I percorsi della scheda SD e del dispositivo OTG non possono essere uguali</string>
+    <string name="sd_card_usb_same">I percorsi della scheda SD e del dispositivo USB non possono essere uguali</string>
     <string name="app_on_sd_card">Sembra che l\'app sia installata nella scheda SD, ciò impedisce la disponibilità dei widget dell\'app. Non li vedrai neppure nell\'elenco dei widget disponibili.
         Se è una limitazione di sistema, quindi se vuoi usare i widget, devi spostare l\'app nella memoria interna.</string>
 
@@ -165,7 +165,8 @@
     <string name="text_color">Colore del testo</string>
     <string name="primary_color">Colore primario</string>
     <string name="foreground_color">Colore in primo piano</string>
-    <string name="app_icon_color">Colore icona app</string>
+    <string name="app_icon_color">Colore dell\'icona app</string>
+    <string name="bottom_navigation_bar_color">Colore della barra di navigazione</string>
     <string name="restore_defaults">Ripristina predefiniti</string>
     <string name="change_color">Cambia colore</string>
     <string name="theme">Tema</string>
@@ -173,8 +174,8 @@
     <string name="save">Salva</string>
     <string name="discard">Scarta</string>
     <string name="undo_changes">Annulla modifiche</string>
-    <string name="undo_changes_confirmation">Sei sicuro di annullare le tue modifiche?</string>
-    <string name="save_before_closing">Hai modifiche non salvate. Salvare prima di uscire?</string>
+    <string name="undo_changes_confirmation">Sicuro di annullare le modifiche?</string>
+    <string name="save_before_closing">Ci sono modifiche non salvate. Salvare prima di uscire?</string>
     <string name="apply_to_all_apps">Applica i colori a tutte le app Simple</string>
     <string name="share_colors_success">Colori aggiornati correttamente. È stato aggiunto un nuovo tema chiamato \'Condiviso\', usa quello per aggiornare tutti i colori dell\'app in futuro.</string>
     <string name="purchase_thank_you">
@@ -434,9 +435,10 @@
     <string name="no_entries_for_exporting">Nessun elemento trovato da esportare</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Scegli la cartella di root del dispositivo OTG nella prossima schermata, per consentire l\'accesso</string>
-    <string name="wrong_root_selected_otg">Cartella selezionata errata, seleziona la cartella di root del dispositivo OTG</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">È collegato un dispositivo USB al dispositivo. Per assicurarsi che i file appaiano correttamente, è necessario accettare permessi aggiuntivi.</string>
+    <string name="confirm_usb_storage_access_text">Scegli la cartella di root del dispositivo USB nella prossima schermata, per consentire l\'accesso</string>
+    <string name="wrong_root_selected_usb">Cartella selezionata errata, seleziona la cartella di root del dispositivo USB</string>
 
     <!-- Dates -->
     <string name="january">Gennaio</string>

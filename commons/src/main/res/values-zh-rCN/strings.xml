@@ -138,7 +138,7 @@
     <string name="sd_card">SD 卡</string>
     <string name="root">根目录</string>
     <string name="wrong_root_selected">目录选择错误，请选择 SD 卡</string>
-    <string name="sd_card_otg_same">SD 卡和 OTG 设备路径不能相同</string>
+    <string name="sd_card_usb_same">SD 卡和 USB 设备路径不能相同</string>
     <string name="app_on_sd_card">您似乎已将应用程序安装在 SD 卡上，这使得应用的小部件不可用。你将无法在小部件列表里看到它们。
         这是一个系统限制，所以如果你想要使用这些小部件，你必须将应用移回内部存储器。</string>
 
@@ -166,6 +166,7 @@
     <string name="primary_color">主体色</string>
     <string name="foreground_color">前景色</string>
     <string name="app_icon_color">应用图标颜色</string>
+    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
     <string name="restore_defaults">恢复默认</string>
     <string name="change_color">修改颜色</string>
     <string name="theme">主题</string>
@@ -434,9 +435,10 @@
     <string name="no_entries_for_exporting">未找到要导出的项目</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">请在下一界面选择 OTG 设备的根文件夹以授予访问权限</string>
-    <string name="wrong_root_selected_otg">选择错误，请正确选择 OTG 设备的根文件夹</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">检测到有 USB 设备连接到您的设备。您需要授予额外的权限以确保文件能够正确显示。</string>
+    <string name="confirm_usb_storage_access_text">请在下一界面选择 USB 设备的根文件夹以授予访问权限</string>
+    <string name="wrong_root_selected_usb">选择错误，请正确选择 USB 设备的根文件夹</string>
 
     <!-- Dates -->
     <string name="january">一月</string>
@@ -492,10 +494,10 @@
 
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">此版本的应用不再支持维护。请升级到专业版。</string>
-    <string name="it_is_free">免费期限至: %s. If you download it till then, you will be able to use it for free forever.</string>
+    <string name="it_is_free">免费期限至: %s。如果在此之后下载，你可以永久免费使用。</string>
     <string name="more_info">更多信息</string>
     <string name="upgrade">升级</string>
-    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
+    <string name="upgrade_calendar">您必须通过导出/导入.ics文件来自行转移本地存储的事件。您可以在主界面菜单中找到导出/导入选项。</string>
 
     <!-- About -->
     <string name="about">关于</string>

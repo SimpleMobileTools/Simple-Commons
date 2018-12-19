@@ -144,7 +144,7 @@
     <string name="sd_card">Kartica SD</string>
     <string name="root">Korenska mapa</string>
     <string name="wrong_root_selected">Izbrali ste napačno mapo. Izbrati morate korensko mapo SD kartice</string>
-    <string name="sd_card_otg_same">Pot do SD kartice in OTG ne moreta biti enaki</string>
+    <string name="sd_card_usb_same">Pot do SD kartice in USB ne moreta biti enaki</string>
     <string name="app_on_sd_card">Aplikacijo ste namestili na SD kartico, kar pomeni, da pripomočki ne bodo delovali. Ne boste jih niti videli na seznamu.\n        To je omejitev sistema zato, če želite uporabljati pripomočke, morate aplikacijo premakniti nazaj v notranjo shrambo.</string>
 
     <!-- File properties -->
@@ -171,6 +171,7 @@
     <string name="primary_color">Primarna barva</string>
     <string name="foreground_color">Barva ospredja</string>
     <string name="app_icon_color">Barva ikone aplikacije</string>
+    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
     <string name="restore_defaults">Ponastavi na privzeto</string>
     <string name="change_color">Spremeni barvo</string>
     <string name="theme">Tema</string>
@@ -477,9 +478,10 @@
     <string name="no_entries_for_exporting">Za izvoz ni bilo najdenih nobenih vnosov</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Izberitre korensko mapo naprave OTG na naslednjem zaslonu, da odobrite dostop</string>
-    <string name="wrong_root_selected_otg">Izbrana je bila napapačna mapa. Prosimo, izberite korensko mapo naprave OTG.</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="confirm_usb_storage_access_text">Izberitre korensko mapo naprave USB na naslednjem zaslonu, da odobrite dostop</string>
+    <string name="wrong_root_selected_usb">Izbrana je bila napapačna mapa. Prosimo, izberite korensko mapo naprave USB.</string>
 
     <!-- Dates -->
     <string name="january">Januar</string>

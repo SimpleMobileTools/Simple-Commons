@@ -138,7 +138,7 @@
     <string name="sd_card">SD kortelė</string>
     <string name="root">Pagrindinė</string>
     <string name="wrong_root_selected">Pasirinktas neteisingas aplankas, pasirinkite pagrindinį SD kortelės aplanką</string>
-    <string name="sd_card_otg_same">SD kortelė ir OTG įrenginio keliai negali būti tokie patys</string>
+    <string name="sd_card_usb_same">SD kortelė ir USB įrenginio keliai negali būti tokie patys</string>
     <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
         It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
 
@@ -166,6 +166,7 @@
     <string name="primary_color">Pirminė spalva</string>
     <string name="foreground_color">Priekinio plano spalva</string>
     <string name="app_icon_color">Programėlės ikonėlės spalva</string>
+    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
     <string name="restore_defaults">Atstatyti</string>
     <string name="change_color">Change color</string>
     <string name="theme">Tema</string>
@@ -451,9 +452,10 @@
     <string name="no_entries_for_exporting">Nerasta įrašų eksportavimui</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Prašome pasirinkti šakninį OTG įrenginio aplanką kitame lange, kad patvirtinti prieigą</string>
-    <string name="wrong_root_selected_otg">Pasirinktas netinkamas aplankas, pasirinkite OTG įrenginio šakninį aplanką</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="confirm_usb_storage_access_text">Prašome pasirinkti šakninį USB įrenginio aplanką kitame lange, kad patvirtinti prieigą</string>
+    <string name="wrong_root_selected_usb">Pasirinktas netinkamas aplankas, pasirinkite USB įrenginio šakninį aplanką</string>
 
     <!-- Dates -->
     <string name="january">Sausis</string>

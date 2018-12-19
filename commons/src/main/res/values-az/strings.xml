@@ -138,7 +138,7 @@
     <string name="sd_card">SD Kart</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Seçilən qovluq yanlışdır, xahiş olunur SD kartın root qovluğunu seçin</string>
-    <string name="sd_card_otg_same">SD kart və OTG cihaz yolu eyni ola bilməz</string>
+    <string name="sd_card_usb_same">SD kart və USB cihaz yolu eyni ola bilməz</string>
     <string name="app_on_sd_card">Görünür tətbiqi SD karta yükləmisiniz, bu widgetlərin işləməsinin qarşısını alır. Siz widgetləri əlçatan widgetlər siyahısında belə görə bilməyəcəksiniz.
         Bu sistem məhdudiyyətidir, əgər vidjetlərin işləməsini istəyirsinizsə, tətbiqi daxili yaddaşa köçürməlisiniz.</string>
 
@@ -166,6 +166,7 @@
     <string name="primary_color">Birinci rəng</string>
     <string name="foreground_color">Önplan rəngi</string>
     <string name="app_icon_color">Tətbiq ikonu rəngi</string>
+    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
     <string name="restore_defaults">Standarta qaytar</string>
     <string name="change_color">Rəngi dəyiş</string>
     <string name="theme">Mövzu</string>
@@ -434,9 +435,10 @@
     <string name="no_entries_for_exporting">Çıxarış üçün heçbir giriş tapılmadı</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Xahiş edirik icazə vermək üçün sonrakı ekranda çıxan OTG cihazın root qovluğunu seçin</string>
-    <string name="wrong_root_selected_otg">Yanlış qovluq seçilib, xahiş olunur OTG cihazın root qovluğunu seçin</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="confirm_usb_storage_access_text">Xahiş edirik icazə vermək üçün sonrakı ekranda çıxan USB cihazın root qovluğunu seçin</string>
+    <string name="wrong_root_selected_usb">Yanlış qovluq seçilib, xahiş olunur USB cihazın root qovluğunu seçin</string>
 
     <!-- Dates -->
     <string name="january">Yanvar</string>

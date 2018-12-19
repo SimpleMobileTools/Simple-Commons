@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_margin"
-        android:text="@string/confirm_otg_storage_access_text"/>
+        android:text="@string/confirm_usb_storage_access_text"/>
 
     <ImageView
         android:id="@+id/write_permissions_dialog_otg_image"

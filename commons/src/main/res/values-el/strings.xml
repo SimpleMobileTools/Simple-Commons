@@ -138,7 +138,7 @@
     <string name="sd_card">SD Card</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Επιλέξατε λάθος φάκελο, επιλέξτε τον ριζικό φάκελο της SD card</string>
-    <string name="sd_card_otg_same">SD card και OTG οι διαδρομές συσκευών δεν μπορούν να είναι οι ίδιες</string>
+    <string name="sd_card_usb_same">SD card και USB οι διαδρομές συσκευών δεν μπορούν να είναι οι ίδιες</string>
     <string name="app_on_sd_card">Φαίνεται ότι έχετε εγκαταστήσει την εφαρμογή σε μια κάρτα SD, πράγμα που καθιστά τα γραφικά στοιχεία εφαρμογών μη διαθέσιμα. Δεν θα τα δείτε ακόμη και στη λίστα των διαθέσιμων γραφικών στοιχείων.
         Είναι ένας περιορισμός του συστήματος, οπότε αν θέλετε να χρησιμοποιήσετε τα γραφικά στοιχεία, θα πρέπει να μετακινήσετε την εφαρμογή πίσω στον εσωτερικό αποθηκευτικό χώρο.</string>
 
@@ -166,6 +166,7 @@
     <string name="primary_color">Πρωτεύον χρώμα</string>
     <string name="foreground_color">Χρώμα προσκηνίου</string>
     <string name="app_icon_color">Χρώμα εικονιδίου εφαρμογής</string>
+    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
     <string name="restore_defaults">Επαναφορά προεπιλογών</string>
     <string name="change_color">Αλλαγή χρώματος</string>
     <string name="theme">Θέμα</string>
@@ -434,9 +435,10 @@
     <string name="no_entries_for_exporting">Δεν βρέθηκαν καταχωρήσεις για Εξαγωγή</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Παρακαλώ επιλέξτε τον ριζικό φάκελο της συσκευής OTG στην επόμενη οθόνη, για να παραχωρήσετε πρόσβαση</string>
-    <string name="wrong_root_selected_otg">Λάθος επιλεγμένο φάκελο, παρακαλώ επιλέξτε το ριζικό φάκελο της συσκευής OTG</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">Φαίνεται ότι μια συσκευή USB είναι συνδεδεμένη στη συσκευή σας. Για να βεβαιωθείτε ότι τα αρχεία της εμφανίζονται σωστά, χρειάζεται να χορηγήσετε πρόσθετα δικαιώματα.</string>
+    <string name="confirm_usb_storage_access_text">Παρακαλώ επιλέξτε τον ριζικό φάκελο της συσκευής USB στην επόμενη οθόνη, για να παραχωρήσετε πρόσβαση</string>
+    <string name="wrong_root_selected_usb">Λάθος επιλεγμένο φάκελο, παρακαλώ επιλέξτε το ριζικό φάκελο της συσκευής USB</string>
 
     <!-- Dates -->
     <string name="january">Ιανουάριος</string>
@@ -495,7 +497,7 @@
     <string name="it_is_free">Είναι δωρεάν μέχρι: %s. Εάν κάνετε λήψη μέχρι τότε, θα μπορείτε να την χρησιμοποιείτε δωρεάν για πάντα.</string>
     <string name="more_info">Περισσότερα</string>
     <string name="upgrade">Αναβάθμιση</string>
-    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
+    <string name="upgrade_calendar">Πρέπει να μεταφέρετε τοπικά αποθηκευμένα συμβάντα χειροκίνητα μέσω της εξαγωγής σε ένα αρχείο .ics, στη συνέχεια, εισαγωγή. Μπορείτε να βρείτε τα κουμπιά εξαγωγής/εισαγωγής στο μενού της κύριας οθόνης.</string>
 
     <!-- About -->
     <string name="about">Σχετικά</string>

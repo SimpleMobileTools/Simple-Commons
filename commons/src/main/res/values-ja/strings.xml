@@ -138,7 +138,7 @@
     <string name="sd_card">SDカード</string>
     <string name="root">ルート</string>
     <string name="wrong_root_selected">フォルダの選択が正しくありません。SDカードを選択してください</string>
-    <string name="sd_card_otg_same">SDカードとOTGデバイスのパスを同じにすることはできません</string>
+    <string name="sd_card_usb_same">SDカードとUSBデバイスのパスを同じにすることはできません</string>
     <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
         It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
 
@@ -166,6 +166,7 @@
     <string name="primary_color">メインカラー</string>
     <string name="foreground_color">前景色</string>
     <string name="app_icon_color">アプリアイコンの色</string>
+    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
     <string name="restore_defaults">デフォルトに戻す</string>
     <string name="change_color">色を変更</string>
     <string name="theme">テーマ</string>
@@ -356,15 +357,15 @@
     <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
 
     <!-- Alarms -->
-    <string name="alarm">Alarm</string>
-    <string name="snooze">Snooze</string>
-    <string name="dismiss">Dismiss</string>
-    <string name="no_reminder">No reminder</string>
+    <string name="alarm">アラーム</string>
+    <string name="snooze">スヌーズ</string>
+    <string name="dismiss">閉じる</string>
+    <string name="no_reminder">リマインダーなし</string>
     <string name="at_start">開始時</string>
-    <string name="system_sounds">System sounds</string>
-    <string name="your_sounds">Your sounds</string>
-    <string name="add_new_sound">Add a new sound</string>
-    <string name="no_sound">No sound</string>
+    <string name="system_sounds">システムサウンド</string>
+    <string name="your_sounds">選択したサウンド</string>
+    <string name="add_new_sound">新しいサウンドを追加</string>
+    <string name="no_sound">サウンドなし</string>
 
     <!-- Settings -->
     <string name="settings">設定</string>
@@ -379,19 +380,19 @@
     <string name="large">大</string>
     <string name="extra_large">特大</string>
     <string name="password_protect_hidden_items">非表示にした項目をパスワードで保護する</string>
-    <string name="password_protect_whole_app">Password protect the whole application</string>
-    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
-    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
+    <string name="password_protect_whole_app">アプリ全体をパスワードで保護する</string>
+    <string name="password_protect_file_deletion">ファイルの削除と移動をパスワードで保護する</string>
+    <string name="keep_last_modified">ファイルのコピー/移動/リネーム時、最終更新日が古いものを維持する</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
-    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
+    <string name="prevent_phone_from_sleeping">アプリを使用中は端末がスリープ状態にならないようにする</string>
+    <string name="skip_delete_confirmation">削除時の確認ダイアログを表示しない</string>
     <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
     <string name="use_24_hour_time_format">24時間表示を使用</string>
     <string name="sunday_first">Start week on Sunday</string>
     <string name="widgets">ウィジェット</string>
     <string name="use_same_snooze">Always use same snooze time</string>
     <string name="snooze_time">Snooze time</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="vibrate_on_button_press">ボタンを押した時に振動する</string>
     <string name="move_items_into_recycle_bin">削除の代わりにアイテムをごみ箱に移動する</string>
     <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
     <string name="empty_recycle_bin">ゴミ箱を空にする</string>
@@ -434,9 +435,10 @@
     <string name="no_entries_for_exporting">エクスポートするエントリが見つかりませんでした</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Please choose the root folder of the OTG device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_otg">Wrong folder selected, please select the root folder of your OTG device</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="confirm_usb_storage_access_text">Please choose the root folder of the USB device on the next screen, to grant access</string>
+    <string name="wrong_root_selected_usb">Wrong folder selected, please select the root folder of your USB device</string>
 
     <!-- Dates -->
     <string name="january">1月</string>

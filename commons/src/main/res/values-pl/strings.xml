@@ -140,7 +140,7 @@
     <string name="sd_card">Karta pamięci</string>
     <string name="root">Folder główny</string>
     <string name="wrong_root_selected">Wybrano nieprawidłowy folder. Wybierz główny folder karty pamięci.</string>
-    <string name="sd_card_otg_same">Ścieżka do karty pamięci i urządzenia OTG nie może być taka sama</string>
+    <string name="sd_card_usb_same">Ścieżka do karty pamięci i urządzenia USB nie może być taka sama</string>
     <string name="app_on_sd_card">Wygląda na to, że aplikacja jest zainstalowana na karcie pamięci. Przez to widżety aplikacji są niedostępne.\nJest to ograniczenie systemu. Jeśli chcesz używać widżetów, musisz przenieść ją do pamięci wewnętrznej.</string>
 
     <!-- File properties -->
@@ -167,6 +167,7 @@
     <string name="primary_color">Belka i przełączniki</string>
     <string name="foreground_color">Pierwszy plan</string>
     <string name="app_icon_color">Ikona aplikacji</string>
+    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
     <string name="restore_defaults">Przywróć domyślne</string>
     <string name="change_color">Zmień kolor</string>
     <string name="theme">Motyw</string>
@@ -454,9 +455,10 @@
     <string name="no_entries_for_exporting">Nie znalazłem żadnych wpisów do wyeksportowania</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Wybierz folder główny urządzenia OTG na następnym ekranie, aby uzyskać dostęp do tegoż urządzenia</string>
-    <string name="wrong_root_selected_otg">Wybrany został niewłaściwy folder. Wybierz główny folder urządzenia OTG.</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="confirm_usb_storage_access_text">Wybierz folder główny urządzenia USB na następnym ekranie, aby uzyskać dostęp do tegoż urządzenia</string>
+    <string name="wrong_root_selected_usb">Wybrany został niewłaściwy folder. Wybierz główny folder urządzenia USB.</string>
 
     <!-- Dates -->
     <string name="january">Styczeń</string>

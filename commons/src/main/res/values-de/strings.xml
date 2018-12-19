@@ -138,7 +138,7 @@
     <string name="sd_card">SD-Karte</string>
     <string name="root">Hauptverzeichnis</string>
     <string name="wrong_root_selected">Falscher Ordner ausgewählt, bitte Hauptverzeichnis der SD-Karte auswählen</string>
-    <string name="sd_card_otg_same">SDCard- und OTG-Gerätepfad dürfen nicht identisch sein</string>
+    <string name="sd_card_usb_same">SDCard- und USB-Gerätepfad dürfen nicht identisch sein</string>
     <string name="app_on_sd_card">Die App wurde anscheinend auf der SD-Karte installiert, daher sind die Widgets nicht verfügbar. Sie werden auch in der Liste der Widgets nicht angezeigt.
         Dies ist systemseitig so beschränkt. Für die Verwendung der Widgets muss die App wieder im internen Speicher installiert werden.</string>
 
@@ -166,6 +166,7 @@
     <string name="primary_color">Primäre Farbe</string>
     <string name="foreground_color">Vordergrundfarbe</string>
     <string name="app_icon_color">App-Icon-Farbe</string>
+    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
     <string name="restore_defaults">Standard wiederherstellen</string>
     <string name="change_color">Farbe ändern</string>
     <string name="theme">Thema</string>
@@ -434,9 +435,10 @@
     <string name="no_entries_for_exporting">Keine Einträge zum Exportieren gefunden</string>
 
     <!-- OTG devices -->
-    <string name="otg">OTG</string>
-    <string name="confirm_otg_storage_access_text">Bitte den Basis-Ordner des OTG-Geräts auf der folgenden Seite wählen, um Zugriff zu gewähren</string>
-    <string name="wrong_root_selected_otg">Falscher Ordner gewählt, bitte den Basis- (Root-) Ordner des OTG-Geräts wählen</string>
+    <string name="usb">USB</string>
+    <string name="usb_detected">Es scheint, Du hast ein USB-Gerät an Dein Gerät angeschlossen. Du musst zusätzliche Berechtigungen gewähren, um die Dateien anzuzeigen.</string>
+    <string name="confirm_usb_storage_access_text">Bitte den Basis-Ordner des USB-Geräts auf der folgenden Seite wählen, um Zugriff zu gewähren</string>
+    <string name="wrong_root_selected_usb">Falscher Ordner gewählt, bitte den Basis- (Root-) Ordner des USB-Geräts wählen</string>
 
     <!-- Dates -->
     <string name="january">Januar</string>
@@ -495,7 +497,7 @@
     <string name="it_is_free">Sie ist gratis bis: %s. Wenn Du sie bis dahin herunterlädst, darfst Du sie für immer gratis nutzen.</string>
     <string name="more_info">Mehr Infos</string>
     <string name="upgrade">Upgrade</string>
-    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
+    <string name="upgrade_calendar">Um lokal gespeicherte Ereignisse zu migrieren, musst Du sie als .ics-Datei exportieren und anschliessend importieren. Die beiden Schaltflächen befinden sich im Hauptmenü.</string>
 
     <!-- About -->
     <string name="about">Über</string>

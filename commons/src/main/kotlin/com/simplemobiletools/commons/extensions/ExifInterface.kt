@@ -2,8 +2,8 @@ package com.simplemobiletools.commons.extensions
 
 import android.media.ExifInterface
 
-fun ExifInterface.copyTo(destination: ExifInterface) {
-    val attributes = arrayOf(
+fun ExifInterface.copyTo(destination: ExifInterface, copyOrientation: Boolean = true) {
+    val attributes = arrayListOf(
             ExifInterface.TAG_APERTURE,
             ExifInterface.TAG_DATETIME,
             ExifInterface.TAG_DATETIME_DIGITIZED,
@@ -25,8 +25,11 @@ fun ExifInterface.copyTo(destination: ExifInterface) {
             ExifInterface.TAG_ISO_SPEED_RATINGS,
             ExifInterface.TAG_MAKE,
             ExifInterface.TAG_MODEL,
-            ExifInterface.TAG_ORIENTATION,
             ExifInterface.TAG_WHITE_BALANCE)
+
+    if (copyOrientation) {
+        attributes.add(ExifInterface.TAG_ORIENTATION)
+    }
 
     attributes.forEach {
         val value = getAttribute(it)
