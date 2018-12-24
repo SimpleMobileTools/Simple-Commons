@@ -131,22 +131,33 @@ class CustomizationActivity : BaseSimpleActivity() {
         curSelectedThemeId = getCurrentThemeId()
         customization_theme.text = getThemeText()
         customization_theme_holder.setOnClickListener {
-            val items = arrayListOf<RadioItem>()
-            for ((key, value) in predefinedThemes) {
-                items.add(RadioItem(key, getString(value.nameId)))
+            if (baseConfig.wasAppIconCustomizationWarningShown) {
+                themePickerClicked()
+            } else {
+                ConfirmationDialog(this, "", R.string.app_icon_color_warning, R.string.ok, 0) {
+                    baseConfig.wasAppIconCustomizationWarningShown = true
+                    themePickerClicked()
+                }
+            }
+        }
+    }
+
+    private fun themePickerClicked() {
+        val items = arrayListOf<RadioItem>()
+        for ((key, value) in predefinedThemes) {
+            items.add(RadioItem(key, getString(value.nameId)))
+        }
+
+        RadioGroupDialog(this@CustomizationActivity, items, curSelectedThemeId) {
+            if (it == THEME_SHARED && !isThankYouInstalled()) {
+                PurchaseThankYouDialog(this)
+                return@RadioGroupDialog
             }
 
-            RadioGroupDialog(this@CustomizationActivity, items, curSelectedThemeId) {
-                if (it == THEME_SHARED && !isThankYouInstalled()) {
-                    PurchaseThankYouDialog(this)
-                    return@RadioGroupDialog
-                }
-
-                updateColorTheme(it as Int, true)
-                if (it != THEME_CUSTOM && it != THEME_SHARED && !baseConfig.wasCustomThemeSwitchDescriptionShown) {
-                    baseConfig.wasCustomThemeSwitchDescriptionShown = true
-                    toast(R.string.changing_color_description)
-                }
+            updateColorTheme(it as Int, true)
+            if (it != THEME_CUSTOM && it != THEME_SHARED && !baseConfig.wasCustomThemeSwitchDescriptionShown) {
+                baseConfig.wasCustomThemeSwitchDescriptionShown = true
+                toast(R.string.changing_color_description)
             }
         }
     }
@@ -298,8 +309,17 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_text_color_holder.setOnClickListener { pickTextColor() }
         customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
         customization_primary_color_holder.setOnClickListener { pickPrimaryColor() }
-        customization_app_icon_color_holder.setOnClickListener { pickAppIconColor() }
         apply_to_all_holder.setOnClickListener { applyToAll() }
+        customization_app_icon_color_holder.setOnClickListener {
+            if (baseConfig.wasAppIconCustomizationWarningShown) {
+                pickAppIconColor()
+            } else {
+                ConfirmationDialog(this, "", R.string.app_icon_color_warning, R.string.ok, 0) {
+                    baseConfig.wasAppIconCustomizationWarningShown = true
+                    pickAppIconColor()
+                }
+            }
+        }
     }
 
     private fun hasColorChanged(old: Int, new: Int) = Math.abs(old - new) > 1

@@ -270,4 +270,8 @@ open class BaseConfig(val context: Context) {
     var wasInitialUpgradeToProShown: Boolean
         get() = prefs.getBoolean(WAS_INITIAL_UPGRADE_TO_PRO_SHOWN, false)
         set(wasInitialUpgradeToProShown) = prefs.edit().putBoolean(WAS_INITIAL_UPGRADE_TO_PRO_SHOWN, wasInitialUpgradeToProShown).apply()
+
+    var wasAppIconCustomizationWarningShown: Boolean
+        get() = prefs.getBoolean(WAS_APP_ICON_CUSTOMIZATION_WARNING_SHOWN, false)
+        set(wasAppIconCustomizationWarningShown) = prefs.edit().putBoolean(WAS_APP_ICON_CUSTOMIZATION_WARNING_SHOWN, wasAppIconCustomizationWarningShown).apply()
 }
