@@ -7,6 +7,8 @@ import android.hardware.usb.UsbManager
 import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Environment
+import android.os.Handler
+import android.os.Looper
 import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.text.TextUtils
@@ -391,7 +393,15 @@ fun Context.rescanDeletedPath(path: String, callback: (() -> Unit)? = null) {
             return
         }
 
-        MediaScannerConnection.scanFile(applicationContext, arrayOf(path), null) { s, uri ->
+        // scanFile doesnt trigger in some cases, refresh items manually after some period
+        val SCAN_FILE_MAX_DURATION = 1000L
+        val scanFileHandler = Handler(Looper.getMainLooper())
+        scanFileHandler.postDelayed({
+            callback?.invoke()
+        }, SCAN_FILE_MAX_DURATION)
+
+        MediaScannerConnection.scanFile(applicationContext, arrayOf(path), null) { path, uri ->
+            scanFileHandler.removeCallbacksAndMessages(null)
             try {
                 applicationContext.contentResolver.delete(uri, null, null)
             } catch (e: Exception) {
