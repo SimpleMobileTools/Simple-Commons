@@ -166,7 +166,7 @@
     <string name="primary_color">主体色</string>
     <string name="foreground_color">前景色</string>
     <string name="app_icon_color">应用图标颜色</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
+    <string name="bottom_navigation_bar_color">底部导航栏颜色</string>
     <string name="restore_defaults">恢复默认</string>
     <string name="change_color">修改颜色</string>
     <string name="theme">主题</string>
@@ -177,8 +177,8 @@
     <string name="undo_changes_confirmation">是否撤销您的更改？</string>
     <string name="save_before_closing">您尚未保存更改，是否保存？</string>
     <string name="apply_to_all_apps">应用到所有简约系列应用</string>
-    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="app_icon_color_warning">警告：某些桌面应用无法正确处理自定义应用图标。如果图标消失，请尝试通过 Google Play 或某个小部件启动应用（如果有的话）。
+在成功启动之后，请将图标颜色设置为默认的橙色#F57C00。在最坏的情况下，您可能必须重新安装本应用。</string>
     <string name="share_colors_success">颜色更改成功。已添加名为“共享”的新主题，以后你可以使用它来更改所有应用的颜色。</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -555,9 +555,9 @@
     <string name="faq_4_text_commons">是可以的，当你在主屏幕上拖动小部件时，会出现小部件配置界面。你会在左下角看到彩色的方块，只需按下它们即可选择新的颜色。你还可以通过滑块来调整 Alpha 值。</string>
     <string name="faq_5_title_commons">我可以恢复已删除的文件吗？</string>
     <string name="faq_5_text_commons">如果你真的把它们删除了，那么你无法恢复。不过，您可以启用回收站，这样只会移动文件而不是直接删除。</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="faq_6_title_commons">应用图标消失了。我该怎么办？</string>
+    <string name="faq_6_text_commons">这是因为某些桌面应用无法正确处理自定义应用图标。如果图标消失，请尝试通过 Google Play 或某个小部件启动应用（如果有的话）。
+在成功启动之后，请将图标颜色设置为默认的橙色#F57C00。在最坏的情况下，您可能必须重新安装本应用。</string>
 
     <!-- License -->
     <string name="notice">此应用使用了以下三方库。谢谢。</string>
