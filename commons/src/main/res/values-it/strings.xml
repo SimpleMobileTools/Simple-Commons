@@ -177,12 +177,12 @@
     <string name="undo_changes_confirmation">Sicuro di annullare le modifiche?</string>
     <string name="save_before_closing">Ci sono modifiche non salvate. Salvare prima di uscire?</string>
     <string name="apply_to_all_apps">Applica i colori a tutte le app Simple</string>
-    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="app_icon_color_warning">ATTENZIONE: alcuni lanciatori non gestiscono correttamente le personalizzazioni delle icone delle applicazioni. Se l\'icona scompare, provare ad avviare l\'applicazione dal Google Play Store oppure dal widget, se disponibile.
+        Una volta avviata, impostare l\'icona predefinita col colore arancione #F57C00. Potrebbe essere necessario reinstallare l'\applicazione se proprio non funziona.</string>
     <string name="share_colors_success">Colori aggiornati correttamente. È stato aggiunto un nuovo tema chiamato \'Condiviso\', usa quello per aggiornare tutti i colori dell\'app in futuro.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Acquista <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> per sbloccare questa funzione e supportare lo sviluppo. Grazie!
+            Acquista <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> per sbloccare questa funzione e supportare lo svilu ppo. Grazie!
         ]]>
     </string>
 
@@ -558,9 +558,9 @@ forse la soluzione è già lì.</string>
     <string name="faq_4_text_commons">Sì, quando trascini un widget nella tua schermata appare una finestra di configurazione. Vedrai dei quadrati colorati nell\'angolo in basso a sinistra, toccali per scegliere un colore. Puoi muovere l\'indicatore per regolare l\'alpha.</string>
     <string name="faq_5_title_commons">Posso recuperare in qualche modo i file eliminati?</string>
     <string name="faq_5_text_commons">Se sono stati veramente eliminati, non puoi. Tuttavia, puoi attivare nelle impostazioni l\'uso del cestino invece di eliminare. I file verranno solo spostati lì invece di essere eliminati.</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="faq_6_title_commons">L\'icona dell'\'app è scomparsa nel lanciatore. Cosa posso fare?</string>
+    <string name="faq_6_text_commons">Il proprio lanciatore non gestisce correttamente le personalizzazioni delle icone delle applicazioni. Provare ad avviare l\'applicazione dal Google Play Store oppure dal widget, se disponibile.
+	Una volta avviata, impostare l\'icona predefinita col colore arancione #F57C00. Potrebbe essere necessario reinstallare l'\applicazione se proprio non funziona.</string>
 
     <!-- License -->
     <string name="notice">Questa app usa le seguenti librerie di terze parti per semplificarmi la vita. Grazie.</string>
