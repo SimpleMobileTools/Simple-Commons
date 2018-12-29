@@ -177,6 +177,8 @@
     <string name="undo_changes_confirmation">변경된 사항을  되돌리겠습니까?</string>
     <string name="save_before_closing">변경사항을 저장하지 않았습니다. 종료전에 저장 하시겠습니까?</string>
     <string name="apply_to_all_apps">심플 시리즈 애플리케이션에 일괄적용</string>
+    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">색상이 성공적으로 변경되었습니다. \'공유\'라는 새로운 테마가 추가되었습니다. 앞으로 모든 앱 색상을 변경할때 사용하세요.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -558,6 +560,9 @@
     <string name="faq_4_text_commons">예, 홈 화면에서 위젯을 드래그하면 위젯 구성 화면이 나타납니다. 왼쪽 하단 모서리에 색깔이있는 사각형이 보일 것입니다. 그것을 눌러 새로운 색을 선택하십시오. 슬라이더를 사용하여 알파를 조정할 수도 있습니다.</string>
     <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
     <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them.</string>
+    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
+    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
 
     <!-- License -->
     <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>

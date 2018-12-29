@@ -177,6 +177,8 @@
     <string name="undo_changes_confirmation">¿Seguro que quiere deshacer los cambios?</string>
     <string name="save_before_closing">Tiene cambios sin aplicar. ¿Guardar antes de salir?</string>
     <string name="apply_to_all_apps">Aplicar colores a todas las aplicaciones Simple Apps</string>
+    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Colores actualizados correctamente. Se ha añadido un nuevo tema llamado \'Shared\', Por favor utilicelo para actualizar los colores de todas las aplicaciones en el futuro.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -555,6 +557,9 @@
     <string name="faq_4_text_commons">Sí, al arrastrar un widget en la pantalla de inicio aparece una pantalla de configuración de widgets. Verá cuadrados de colores en la esquina inferior izquierda, solo presione para elegir un nuevo color. Puede usar el control deslizante para ajustar el alfa también.</string>
     <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
     <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them.</string>
+    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
+    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
 
     <!-- License -->
     <string name="notice">Esta aplicación usa las siguientes bibliotecas de terceros que hacen mi vida más fácil. Gracias.</string>

@@ -177,6 +177,8 @@
     <string name="undo_changes_confirmation">Bist du sicher, dass du die Änderungen verwerfen willst?</string>
     <string name="save_before_closing">Du hast ungespeicherte Änderungen. Speichern vorm Beenden?</string>
     <string name="apply_to_all_apps">Farben bei allen schlichten Apps anwenden</string>
+    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Farben erfolgreich aktualisiert. Ein neues Thema \'Shared\' wurde hinzugefügt, bitte verwende dieses um für alle Apps die Farben zu ändern.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -554,6 +556,9 @@
     <string name="faq_4_text_commons">Ja, wenn du ein Widget auf den Home Screen ziehst, erscheint ein Konfigurationsmenü. In der linken unteren Ecke sind farbige Kästchen, drücke auf sie und wähle eine neue Farbe. Ausserdem kannst du den Regler nutzen, um den Alphaparameter (Transparenz) einzustellen.</string>
     <string name="faq_5_title_commons">Kann ich irgendwie gelöschte Dateien wiederherstellen?</string>
     <string name="faq_5_text_commons">Wenn diese endgültig gelöscht wurden, nein. Aber Du kannst in den App-Eintellungen den Papierkorb aktivieren, statt des direkten Löschens. Das verschiebt zu löschende Dateien nur in den Papierkorb, und löscht diese nicht endgültig.</string>
+    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
+    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
 
     <!-- License -->
     <string name="notice">Diese App nutzt die folgenden Drittanbieterbibliotheken, die mein Leben einfacher machen. Danke!</string>

@@ -177,6 +177,8 @@
     <string name="undo_changes_confirmation">Voulez-vous vraiment annuler vos changements ?</string>
     <string name="save_before_closing">Vous avez des changements non enregistrés. Enregistrer avant de quitter ?</string>
     <string name="apply_to_all_apps">Appliquer à l\'ensemble de la suite d\'applications Simples</string>
+    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Couleurs actualisées. Un nouveau thème nommé \"Partagé\" a été ajouté. Veuillez utiliser ce thème pour actualiser les couleurs de toutes les applications à partir de maintenant.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -556,6 +558,9 @@
     <string name="faq_4_text_commons">Oui, quand vous glissez le widget sur l\'écran d\'accueil un dialogue de configuration apparaît. Vous verrez des carrés en bas à gauche, en appuyant dessus vous pouvez choisir une nouvelle couleur. Vous pouvez aussi utiliser le curseur pour régler la transparence.</string>
     <string name="faq_5_title_commons">Puis-je restaurer les fichiers supprimés ?</string>
     <string name="faq_5_text_commons">S\'ils ont déjà été supprimés, vous ne pouvez pas. Toutefois, vous pouvez activer l\'utilisation de la corbeille à la place de la suppression dans les paramètres de l\'application. Les fichiers seront alors placés dans la corbeille plutôt que supprimés.</string>
+    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
+    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
 
     <!-- License -->
     <string name="notice">Cette application utilise les bibliothèques tierces suivantes pour me simplifier la vie. Merci.</string>

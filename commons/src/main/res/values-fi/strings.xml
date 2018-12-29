@@ -177,6 +177,8 @@
     <string name="undo_changes_confirmation">Haluatko varmasti perua muutokset?</string>
     <string name="save_before_closing">Sinulla on tallentamattomia muutoksia. Tallennetaanko ennen sulkemista?</string>
     <string name="apply_to_all_apps">Käytä värejä kaikissa Simple App -sovelluksissa</string>
+    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Värit päivitetty. Uusi teema nimeltä \'Jaettu\' käytä sitä jatkossa muokataksesi värejä kaikissa sovelluksissa.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -554,6 +556,9 @@
     <string name="faq_4_text_commons">Kyllä. Kun luot widgetin aloitusnäytölle aukeaa widgetin määritysikkuna. Paina värillisiä neliöitä valitaksesi uudet värit. Vierityspalkista voit myös säätää läpinäkyvyyttä.</string>
     <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
     <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them.</string>
+    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
+    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
 
     <!-- License -->
     <string name="notice">Tämä sovellus käyttää kolmannen osapuolen lisenssejä tehdäkseni elämästäni helpompaa. Kiitos.</string>

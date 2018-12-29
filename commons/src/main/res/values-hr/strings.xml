@@ -180,6 +180,8 @@
     <string name="undo_changes_confirmation">Jeste li sigurni da želite poništiti Vaše promjene?</string>
     <string name="save_before_closing">Imate ne spremljene promjene. Želite li spremiti prije izlaska?</string>
     <string name="apply_to_all_apps">Primjeni boje na sve Simple Aplikacije</string>
+    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Uspješno ažurirane boje. Nova tema pod nazivom \'Shared\' je dodana, molimo koristite ju za ažuriranje svih boja u aplikaciji u budućnosti.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -575,6 +577,9 @@
     <string name="faq_4_text_commons">Da, kada povlačite widget na početnom zaslonu, pojavit će se zaslon za konfiguraciju widgeta. U donjem lijevom kutu vidjet ćete obojene kvadrate, samo ih pritisnite da biste odabrali novu boju. Možete koristiti i klizač za podešavanje alphe.</string>
     <string name="faq_5_title_commons">Mogu li nekako vratiti izbrisane datoteke?</string>
     <string name="faq_5_text_commons">Ako su stvarno izbrisane, ne možete. Međutim, možete omogućiti upotrebu koša za smeće umjesto da ih izbrišete, u postavkama aplikacije. To će samo premjestiti datoteke u nju umjesto da ih izbriše.</string>
+    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
+    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
 
     <!-- License -->
     <string name="notice">Ova aplikacija koristi biblioteke trećih strana kako bi olakšala moj život. Hvala Vam.</string>

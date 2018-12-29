@@ -178,6 +178,8 @@
     <string name="undo_changes_confirmation">Czy na pewno chcesz cofnąć zmiany?</string>
     <string name="save_before_closing">Zapisać zmiany?</string>
     <string name="apply_to_all_apps">Zastosuj kolory do wszystkich Prostych Aplikacji</string>
+    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Kolory zostały zmienione. Utworzony został nowy, \'wspólny\' motyw - użyj go, aby zaktualizować kolorystykę wszystkich Prostych Aplikacji.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -573,6 +575,9 @@
     <string name="faq_4_text_commons">Tak. Po przeciągnięciu widżetu na pulpit pojawia się okno jego konfiguracji. Zobaczysz na nim kolorowe kwadraty, za pomocą których możesz wybrać nowe kolory. Suwakiem możesz też ustawić poziom przezroczystości.</string>
     <string name="faq_5_title_commons">Czy mogę jakoś odzyskać usunięte pliki?</string>
     <string name="faq_5_text_commons">Jeśli zostały faktycznie usunięte, no to nie bardzo (ratunkiem mogą - acz nie muszą - okazać się zewnętrzne aplikacje odzyskujące pliki). Jednakże, możesz włączyć funkcję kosza w ustawieniach niniejszej aplikacji, aby mieć pewność co do ich ewentualnego odzyskania.</string>
+    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
+    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
 
     <!-- License -->
     <string name="notice">Aplikacja korzysta z następujących bibliotek innych firm:</string>
