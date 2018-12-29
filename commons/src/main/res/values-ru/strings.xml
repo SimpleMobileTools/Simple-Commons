@@ -180,8 +180,8 @@
     <string name="undo_changes_confirmation">Действительно отменить изменения?</string>
     <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
     <string name="apply_to_all_apps">Применить цвета ко всем приложениям Simple</string>
-    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="app_icon_color_warning">ВНИМАНИЕ: некоторые программы запуска неправильно обрабатывают изменение настроек значков приложений. Если значок исчезнет, попробуйте запустить приложение через Google Play или виджет, если он доступен.
+        После запуска просто установите оранжевый цвет значка по умолчанию #F57C00. В худшем случае вам придётся переустановить приложение.</string>
     <string name="share_colors_success">Цвета обновлены. Добавлена новая тема с названием \"Общая\", в дальнейшем используйте её для обновления цветов всех приложений.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -579,9 +579,9 @@
     <string name="faq_4_text_commons">Да, при перетаскивании виджета на главный экран появляется панель его настройки. На ней вы увидите цветные квадраты в левом нижнем углу, просто нажмите их, чтобы выбрать новый цвет. Также можно использовать ползунок для настройки прозрачности.</string>
     <string name="faq_5_title_commons">Могу я как-то восстановить удалённые файлы?</string>
     <string name="faq_5_text_commons">Если они были действительно удалены, то не можете. Однако можно включить использование корзины вместо удаления в настройках приложения. Тогда файлы будут просто перемещаться в неё, а не удаляться.</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="faq_6_title_commons">Значок запуска приложения исчез. Что делать?</string>
+    <string name="faq_6_text_commons">Это вызвано тем, что ваша программа запуска не поддерживает правильно настройку значков. Если значок исчезнет, попробуйте запустить приложение через Google Play или виджет, если он доступен.
+        После запуска просто установите оранжевый цвет значка по умолчанию #F57C00. В худшем случае вам придётся переустановить приложение.</string>
 
     <!-- License -->
     <string name="notice">Это приложение использует следующие библиотеки сторонних разработчиков, чтобы облегчить мой труд. Спасибо.</string>
