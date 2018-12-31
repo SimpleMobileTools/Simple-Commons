@@ -1,0 +1,63 @@
+<resources>
+    <string name="ok">OK</string>
+    <string name="cancel">Скасувавти</string>
+    <string name="save_as">Зберегти як</string>
+    <string name="file_saved">Файл успішно збережено</string>
+    <string name="invalid_file_format">Недопустимий формат файлу</string>
+    <string name="out_of_memory_error">Недостатньо пам\'яті</string>
+    <string name="an_error_occurred">Сталася помилка: %s</string>
+    <string name="open_with">Відкрити за допомогою</string>
+    <string name="no_app_found">Не знайдено допустимих додатків</string>
+    <string name="set_as">Встановити як</string>
+    <string name="value_copied_to_clipboard">Значення скопійовано у буфер обміну</string>
+    <string name="unknown">Невідомо</string>
+    <string name="always">Завжди</string>
+    <string name="never">Ніколи</string>
+    <string name="details">Подробиці</string>
+    <string name="notes">Нотатки</string>
+    <string name="deleting_folder">Видалення теки \'%s\'</string>
+    <string name="none">Нічого</string>
+    <string name="label">Позначка</string>
+    <string name="transparent">Прозорий</string>
+    <string name="transparent_color">Колір прозорості</string>
+    <string name="select_a_different_color">Обрати інший колір</string>
+
+    <!-- Favorites -->
+    <string name="favorites">Улюблене</string>
+    <string name="add_favorites">Додати улюблене</string>
+    <string name="add_to_favorites">Додати до улюбленого</string>
+    <string name="remove_from_favorites">Видалити з улюбленого</string>
+
+    <!-- Search -->
+    <string name="search">Пошук</string>
+    <string name="type_2_characters">Введіть принаймні 2 символи, щоб почати пошук.</string>
+
+    <!-- Filters -->
+    <string name="filter">Фільтр</string>
+    <string name="no_items_found">Нічого не знайдено.</string>
+    <string name="change_filter">Змінити фільтр</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Необхідний дозвіл на доступ до внутрішньої пам\'яті</string>
+    <string name="no_contacts_permission">Необхідний дозвіл на доступ до контактів</string>
+    <string name="no_camera_permissions">Необхідний дозвіл на доступ до камери</string>
+    <string name="no_audio_permissions">Необхідний дозвіл на доступ до аудіо</string>
+
+    <!-- Renaming -->
+    <string name="rename_file">Перейменувати файл</string>
+    <string name="rename_folder">Перейменувати теку</string>
+    <string name="rename_file_error">Не вдалося перейментувати файл</string>
+    <string name="rename_folder_error">Не вдалося перейментувати теку</string>
+    <string name="rename_folder_empty">Ім\'я теки не може бути порожнім</string>
+    <string name="rename_folder_exists">Тека з таким іменем вже існує</string>
+    <string name="rename_folder_root">Не можна перейменувати кореневу теку внутрішньої пам\'яті</string>
+    <string name="rename_folder_ok">Теку успішно перейменовано</string>
+    <string name="renaming_folder">Перейменування теки</string>
+    <string name="filename_cannot_be_empty">Ім\'я файлу не може бути порожнім</string>
+    <string name="filename_invalid_characters">Ім\'я файлу містить недопустимі символи</string>
+    <string name="filename_invalid_characters_placeholder">Ім\'я файлу \'%s\' містить недопустимі символи</string>
+    <string name="extension_cannot_be_empty">Розширення не може бути порожнім</string>
+    <string name="source_file_doesnt_exist">Вихідний файл %s не існує</string>
+    <string name="prepend_filenames">Префікс імен файлів</string>
+    <string name="append_filenames">Суфікс імен файлів (перед розширенням)</string>
+</resources>
