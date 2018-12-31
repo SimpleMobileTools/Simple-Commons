@@ -52,7 +52,7 @@
     <string name="rename_folder_exists">È già esistente una cartella con questo nome</string>
     <string name="rename_folder_root">Non è possibile rinominare la cartella principale</string>
     <string name="rename_folder_ok">Cartella rinominata correttamente</string>
-    <string name="renaming_folder">Rinominazione cartella</string>
+    <string name="renaming_folder">Rinominazione cartella in corso</string>
     <string name="filename_cannot_be_empty">Il nome del file non deve essere vuoto</string>
     <string name="filename_invalid_characters">Il nome contiene caratteri non validi</string>
     <string name="filename_invalid_characters_placeholder">Il nome del file \'%s\' contiene caratteri non validi</string>
@@ -70,7 +70,7 @@
     <string name="source">Origine</string>
     <string name="destination">Destinazione</string>
     <string name="select_destination">Seleziona destinazione</string>
-    <string name="click_select_destination">Cliccare qui per selezionare la destinazione</string>
+    <string name="click_select_destination">Premere qui per selezionare la destinazione</string>
     <string name="invalid_destination">Impossibile scrivere nella destinazione selezionata</string>
     <string name="please_select_destination">Selezionare una destinazione</string>
     <string name="source_and_destination_same">Origine e destinazione non possono essere uguali</string>
@@ -91,7 +91,7 @@
     <string name="create_new">Crea nuovo</string>
     <string name="folder">Cartella</string>
     <string name="file">File</string>
-    <string name="create_new_folder">Crea nuova cartella</string>
+    <string name="create_new_folder">Crea una nuova cartella</string>
     <string name="name_taken">È già esistente un file o una cartella con quel nome</string>
     <string name="invalid_name">Il nome contiene caratteri non validi</string>
     <string name="empty_name">Inserisci un nome</string>
@@ -128,8 +128,8 @@
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Eliminazione di %d elemento</item>
-        <item quantity="other">Eliminazione di %d elementi</item>
+        <item quantity="one">Eliminazione di %d elemento in corso</item>
+        <item quantity="other">Eliminazione di %d elementi in corso</item>
     </plurals>
 
     <!-- Storages -->
@@ -137,10 +137,10 @@
     <string name="internal">Interna</string>
     <string name="sd_card">Scheda SD</string>
     <string name="root">Root</string>
-    <string name="wrong_root_selected">Selezionata una cartella errata, seleziona la cartella di root della tua scheda SD</string>
+    <string name="wrong_root_selected">È stata selezionata una cartella errata, selezionare la cartella di root della scheda SD</string>
     <string name="sd_card_usb_same">I percorsi della scheda SD e del dispositivo USB non possono essere uguali</string>
-    <string name="app_on_sd_card">Sembra che l\'app sia installata nella scheda SD, ciò impedisce la disponibilità dei widget dell\'app. Non li vedrai neppure nell\'elenco dei widget disponibili.
-        Se è una limitazione di sistema, quindi se vuoi usare i widget, devi spostare l\'app nella memoria interna.</string>
+    <string name="app_on_sd_card">Sembra che l\'app sia installata nella scheda SD, ciò impedisce l\'uso dei widget dell\'app. Non li vedrai neppure nell\'elenco dei widget disponibili.
+        È una limitazione di sistema, quindi se si vuole utilizzare i widget, si deve spostare l\'app nella memoria interna.</string>
 
     <!-- File properties -->
     <string name="properties">Proprietà</string>
@@ -176,13 +176,13 @@
     <string name="undo_changes">Annulla modifiche</string>
     <string name="undo_changes_confirmation">Sicuro di annullare le modifiche?</string>
     <string name="save_before_closing">Ci sono modifiche non salvate. Salvare prima di uscire?</string>
-    <string name="apply_to_all_apps">Applica i colori a tutte le app Simple</string>
+    <string name="apply_to_all_apps">Applica i colori a tutte le app Semplici</string>
     <string name="app_icon_color_warning">ATTENZIONE: alcuni lanciatori non gestiscono correttamente le personalizzazioni delle icone delle applicazioni. Se l\'icona scompare, provare ad avviare l\'applicazione dal Google Play Store oppure dal widget, se disponibile.
         Una volta avviata, impostare l\'icona predefinita col colore arancione #F57C00. Potrebbe essere necessario reinstallare l\'applicazione se proprio non funziona.</string>
-    <string name="share_colors_success">Colori aggiornati correttamente. È stato aggiunto un nuovo tema chiamato \'Condiviso\', usa quello per aggiornare tutti i colori dell\'app in futuro.</string>
+    <string name="share_colors_success">Colori aggiornati correttamente. È stato aggiunto un nuovo tema chiamato \'Condiviso\', usare questo per aggiornare tutti i colori dell\'app in futuro.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Acquista <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> per sbloccare questa funzione e supportare lo sviluppo. Grazie!
+            Acquista <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Semplice Ringraziamento</a> per sbloccare questa funzione e supportare lo sviluppo. Grazie!
         ]]>
     </string>
 
@@ -197,7 +197,7 @@
 
     <!-- What's new -->
     <string name="whats_new">Novità</string>
-    <string name="whats_new_disclaimer">* qui vengono elencate solo le modifiche maggiori, ci sono sempre anche altri piccoli miglioramenti</string>
+    <string name="whats_new_disclaimer">* solamente le modifiche più importanti vengono segnalate, spesso ci sono anche piccoli miglioramenti</string>
 
     <!-- Actionbar items -->
     <string name="delete">Elimina</string>
@@ -211,7 +211,7 @@
     <string name="hide_folder">Nascondi cartella</string>
     <string name="unhide_folder">Non nascondere cartella</string>
     <string name="temporarily_show_hidden">Mostra temporaneamente nascosti</string>
-    <string name="stop_showing_hidden">Non mostrare media nascosti</string>
+    <string name="stop_showing_hidden">Non mostrare i file nascosti</string>
     <string name="maximum_share_reached">Non puoi condividere così tanto in una volta sola</string>
     <string name="empty_and_disable_recycle_bin">Svuota e disattiva il cestino</string>
     <string name="undo">Annulla</string>
@@ -233,18 +233,18 @@
     <string name="use_for_this_folder">Usa solo per questa cartella</string>
 
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Sei sicuro di procedere con l\'eliminazione?</string>
-    <string name="deletion_confirmation">Sei sicuro di volere eliminare %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Sei sicuro di volere spostare nel cestino %s?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Sei sicuro di volere eliminare questo elemento?</string>
-    <string name="are_you_sure_recycle_bin">Sei sicuro di volere spostare questo elemento nel cestino?</string>
+    <string name="proceed_with_deletion">Procedere davvero con l\'eliminazione?</string>
+    <string name="deletion_confirmation">Eliminare davvero %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Spostare davvero nel cestino %s?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">Eliminare davvero questo elemento?</string>
+    <string name="are_you_sure_recycle_bin">Spostare davvero questo elemento nel cestino?</string>
     <string name="do_not_ask_again">Non chiedere nuovamente in questa sessione</string>
     <string name="yes">Sì</string>
     <string name="no">No</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">ATTENZIONE: stai per eliminare %d cartella</item>
-        <item quantity="other">ATTENZIONE: stai per eliminare %d cartelle</item>
+        <item quantity="one">ATTENZIONE: si sta per eliminare %d cartella</item>
+        <item quantity="other">ATTENZIONE: si stanno per eliminare %d cartelle</item>
     </plurals>
 
     <!-- Password protection -->
@@ -261,11 +261,11 @@
     <string name="add_fingerprint">Aggiungi un\'impronta</string>
     <string name="place_finger">Appoggia il dito sul sensore di impronte digitali</string>
     <string name="authentication_failed">Autenticazione fallita</string>
-    <string name="authentication_blocked">Autenticazione bloccata, riprova fra qualche momento</string>
-    <string name="no_fingerprints_registered">Non hai impronte registrate, aggiungine alcune nelle impostazioni del tuo dispositivo</string>
+    <string name="authentication_blocked">Autenticazione bloccata, riprovare fra qualche momento</string>
+    <string name="no_fingerprints_registered">Non si hanno impronte registrate, aggiungerne alcune nelle impostazioni del tuo dispositivo</string>
     <string name="go_to_settings">Vai alle impostazioni</string>
-    <string name="protection_setup_successfully">Password impostata correttamente. Reinstalla l\'app nel caso la dimenticassi.</string>
-    <string name="fingerprint_setup_successfully">Protezione impostata correttamente. Reinstalla l\'app in caso di problemi nel ripristinarla.</string>
+    <string name="protection_setup_successfully">Password impostata correttamente. Reinstallare l\'app in caso di dimenticanza.</string>
+    <string name="fingerprint_setup_successfully">Protezione impostata correttamente. Reinstallare l\'app in caso di problemi nel ripristinarla.</string>
  
     <!-- Times -->
     <string name="yesterday">Ieri</string>
@@ -354,9 +354,9 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Tempo rimanente prima che suoni la sveglia:\n%s</string>
     <string name="reminder_triggers_in">Tempo rimanente prima della notifica promemoria:\n%s</string>
-    <string name="alarm_warning">Assicurati che la sveglia funzioni correttamente prima di fare affidamento su di essa. Potrebbe comportarsi in modo anomalo a causa di restrizioni di sistema relative al risparmio della batteria.</string>
-    <string name="reminder_warning">Assicurati che i promemoria funzionino correttamente prima di fare affidamento su di essi. Potrebbero comportarsi in modo anomalo a causa di restrizioni di sistema relative al risparmio della batteria.</string>
-    <string name="notifications_disabled">Le notifiche di questa applicazione sono disattivate. Vai nelle impostazioni del dispositivo per attivarle.</string>
+    <string name="alarm_warning">Assicurarsi che la sveglia funzioni correttamente prima di fare affidamento su di essa. Potrebbe comportarsi in modo anomalo a causa di restrizioni di sistema relative al risparmio della batteria.</string>
+    <string name="reminder_warning">Assicurarsi che i promemoria funzionino correttamente prima di fare affidamento su di essi. Potrebbero comportarsi in modo anomalo a causa di restrizioni di sistema relative al risparmio della batteria.</string>
+    <string name="notifications_disabled">Le notifiche di questa applicazione sono disattivate. Andare nelle impostazioni del dispositivo per attivarle.</string>
 
     <!-- Alarms -->
     <string name="alarm">Sveglia</string>
@@ -365,16 +365,16 @@
     <string name="no_reminder">Nessun promemoria</string>
     <string name="at_start">All\'inizio</string>
     <string name="system_sounds">Suoni di sistema</string>
-    <string name="your_sounds">I tuoi suoni</string>
+    <string name="your_sounds">I propri suoni</string>
     <string name="add_new_sound">Aggiungi un nuovo suono</string>
     <string name="no_sound">Nessun suono</string>
 
     <!-- Settings -->
     <string name="settings">Impostazioni</string>
-    <string name="purchase_simple_thank_you">Acquista Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Acquista Semplice Ringraziamento</string>
     <string name="customize_colors">Personalizza i colori</string>
     <string name="customize_widget_colors">Personalizza i colori del widget</string>
-    <string name="use_english_language">Forza la lingua inglese</string>
+    <string name="use_english_language">Usa la lingua inglese</string>
     <string name="show_hidden_items">Mostra gli elementi nascosti</string>
     <string name="font_size">Dimensione carattere</string>
     <string name="small">Piccolo</string>
@@ -384,11 +384,11 @@
     <string name="password_protect_hidden_items">Proteggi con password gli elementi nascosti</string>
     <string name="password_protect_whole_app">Proteggi con password tutta l\'applicazione</string>
     <string name="password_protect_file_deletion">Proteggi con password l\'eliminazione e lo spostamento dei file</string>
-    <string name="keep_last_modified">Mantieni data/ora ultima modifica in copia/sposta/rinomina</string>
+    <string name="keep_last_modified">Mantieni data/ora dell\'ultima modifica in copia/sposta/rinomina</string>
     <string name="show_info_bubble">Mostra un fumetto informativo durante il trascinamento della barra di scorrimento</string>
     <string name="prevent_phone_from_sleeping">Impedisci allo schermo di spegnersi mentre l\'app è in primo piano</string>
     <string name="skip_delete_confirmation">Non chiedere mai la conferma di eliminazione</string>
-    <string name="enable_pull_to_refresh">Attiva tira-per-aggiornare dall\'alto</string>
+    <string name="enable_pull_to_refresh">Attiva l\'aggiornamento dall\'alto</string>
     <string name="use_24_hour_time_format">Usa il formato 24 ore</string>
     <string name="sunday_first">Inizio settimana di domenica</string>
     <string name="widgets">Widget</string>
@@ -416,7 +416,7 @@
     <string name="restore_all_files">Ripristina tutti i file</string>
     <string name="recycle_bin_emptied">Il cestino è stato svuotato correttamente</string>
     <string name="files_restored_successfully">I file sono stati ripristinati correttamente</string>
-    <string name="empty_recycle_bin_confirmation">Sei sicuro di volere svuotare il cestino? I file verranno persi definitivamente.</string>
+    <string name="empty_recycle_bin_confirmation">Svuotare davvero il cestino? I file verranno persi definitivamente.</string>
     <string name="recycle_bin_empty">Il cestino è vuoto</string>
     <string name="moving_recycle_bin_items_disabled">Lo spostamento degli elementi dal cestino è disabilitato, utilizzare "Ripristina"</string>
 
@@ -439,8 +439,8 @@
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">È collegato un dispositivo USB al dispositivo. Per assicurarsi che i file appaiano correttamente, è necessario accettare permessi aggiuntivi.</string>
-    <string name="confirm_usb_storage_access_text">Scegli la cartella di root del dispositivo USB nella prossima schermata, per consentire l\'accesso</string>
-    <string name="wrong_root_selected_usb">Cartella selezionata errata, seleziona la cartella di root del dispositivo USB</string>
+    <string name="confirm_usb_storage_access_text">Scegliere la cartella di root del dispositivo USB nella prossima schermata per consentire l\'accesso</string>
+    <string name="wrong_root_selected_usb">Cartella selezionata errata, selezionare la cartella di root del dispositivo USB</string>
 
     <!-- Dates -->
     <string name="january">Gennaio</string>
@@ -466,7 +466,7 @@
     <string name="in_july">a luglio</string>
     <string name="in_august">ad agosto</string>
     <string name="in_september">a settembre</string>
-    <string name="in_october">ad ottobre</string>
+    <string name="in_october">a ottobre</string>
     <string name="in_november">a novembre</string>
     <string name="in_december">a dicembre</string>
 
@@ -496,15 +496,15 @@
 
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Questa versione dell\'applicazione non è più supportata. Aggiornarla alla versione Pro.</string>
-    <string name="it_is_free">È gratuita fino a: %s. Se la scarichi entro quella data, essa sarà gratuita per sempre.</string>
+    <string name="it_is_free">È gratuita fino a: %s. Se la si scarica entro quella data, essa sarà gratuita per sempre.</string>
     <string name="more_info">Maggiori informazioni</string>
     <string name="upgrade">Aggiorna</string>
-    <string name="upgrade_calendar">Devi migrare a mano gli eventi salvati localmente esportandoli in un file .ics, poi importandoli. Puoi trovare i pulsanti esporta/importa nel menu della schermata principale.</string>
+    <string name="upgrade_calendar">Devi migrare a mano gli eventi salvati localmente esportandoli in un file .ics, poi importandoli. Si possono trovare i pulsanti esporta/importa nel menu della schermata principale.</string>
 
     <!-- About -->
     <string name="about">Informazioni</string>
-    <string name="website_label">Altre semplici app e codici sorgenti in</string>
-    <string name="email_label">Invia la tua opinione o i tuoi suggerimenti a</string>
+    <string name="website_label">Per i codici sorgenti visitare</string>
+    <string name="email_label">Invia opinioni e suggerimenti a</string>
     <string name="upgrade_to_pro">Aggiorna alla versione Pro</string>
     <string name="more_apps_underlined"><u>Altre app</u></string>
     <string name="third_party_licences_underlined"><u>Licenze di terze parti</u></string>
@@ -518,25 +518,24 @@
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Informazioni aggiuntive</string>
     <string name="app_version">Versione app: %s</string>
-    <string name="device_os">OS dispositivo: %s</string>
+    <string name="device_os">SO dispositivo: %s</string>
     <string name="donate_please">
         <![CDATA[
             Ciao,<br><br>
-            spero che tu sia contento dell\'app. Non contiene pubblicità, per favore supportane lo sviluppo acquistando l\'app <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>. Inoltre questa finestra non verrà più mostrata.<br><br>
+            spero che tu sia contento dell\'app. Non contiene pubblicità, supporta lo sviluppo acquistando l\'app <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Semplice Ringraziamento</a>. Inoltre questa finestra non verrà più mostrata.<br><br>
             Grazie!
         ]]>
     </string>
     <string name="purchase">Acquista</string>
-    <string name="update_thank_you">Per favore aggiorna Simple Thank You all\'ultima versione</string>
-    <string name="before_asking_question_read_faq">Prima di porre una domanda, leggi le domande frequenti, 
-forse la soluzione è già lì.</string>
-    <string name="read_it">Leggile</string>
+    <string name="update_thank_you">Aggiornare Semplice Ringraziamento all\'ultima versione</string>
+    <string name="before_asking_question_read_faq">Prima di porre una domanda, leggere le domande frequenti, forse la soluzione è già lì.</string>
+    <string name="read_it">Leggi</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
             Ehi,<br><br>
-	    tanto per farti sapere che è uscita una nuova app di recente:<br><br>
+	    è uscita una nuova app di recente:<br><br>
             <a href="%1$s">%2$s</a><br><br>
 	    Puoi scaricarla toccando il titolo.
             Grazie
@@ -547,23 +546,23 @@ forse la soluzione è già lì.</string>
     <string name="frequently_asked_questions">Domande frequenti</string>
     <string name="before_asking_question">Prima di porre una domanda, per favore leggi le</string>
     <string name="faq_1_title_commons">Come mai non vedo il widget di questa app nell\'elenco dei widget?</string>
-    <string name="faq_1_text_commons">Probabilmente perchè hai spostato l\'app nella scheda SD. C\'è una limitazione di sistema di Android che nasconde i widget in questione
-        in quel caso. L\'unica soluzione è spostare l\'app nell\'archiviazione interna usando le impostazioni di sistema.</string>
+    <string name="faq_1_text_commons">Probabilmente perchè si ha spostato l\'app nella scheda SD. C\'è una limitazione di sistema di Android che nasconde i widget in questione.
+        L\'unica soluzione è spostare l\'app nell\'archiviazione interna usando le impostazioni di sistema.</string>
     <string name="faq_2_title_commons">Vorrei darti supporto, ma non posso donare del denaro. Posso fare dell\'altro?</string>
-    <string name="faq_2_text_commons">Sì, certo. Puoi spargere la voce riguardo le app o dare feedback e voti positivi. Puoi anche aiutare a tradurre le app in una nuova lingua, o aggiornare le traduzioni esistenti.
-        Puoi trovare la guida su https://github.com/SimpleMobileTools/General-Discussion , o scrivimi un messaggio a hello@simplemobiletools.com se ti serve aiuto.</string>
+    <string name="faq_2_text_commons">Sì, certo. Si può spargere la voce riguardo le app o dare feedback e voti positivi. Si può anche aiutare a tradurre le app in una nuova lingua, o aggiornare le traduzioni esistenti.
+        Si può trovare la guida su https://github.com/SimpleMobileTools/General-Discussion , o scrivimi un messaggio a hello@simplemobiletools.com se ti serve aiuto.</string>
     <string name="faq_3_title_commons">Ho eliminato dei file per errore, come posso recuperarli?</string>
-    <string name="faq_3_text_commons">Purtroppo non puoi. I file vengono eliminati subito dopo la richiesta di conferma, non c\'è nessun cestino disponibile.</string>
+    <string name="faq_3_text_commons">Purtroppo non si può. I file vengono eliminati subito dopo la richiesta di conferma, non c\'è nessun cestino disponibile.</string>
     <string name="faq_4_title_commons">Non mi piacciono i colori del widget, posso cambiarli?</string>
-    <string name="faq_4_text_commons">Sì, quando trascini un widget nella tua schermata appare una finestra di configurazione. Vedrai dei quadrati colorati nell\'angolo in basso a sinistra, toccali per scegliere un colore. Puoi muovere l\'indicatore per regolare l\'alpha.</string>
+    <string name="faq_4_text_commons">Sì, quando si trascina un widget nella schermata appare una finestra di configurazione. Si vedranno dei quadrati colorati nell\'angolo in basso a sinistra, toccandoli si sceglierà un colore. Si può muovere l\'indicatore per regolare la trasparenza.</string>
     <string name="faq_5_title_commons">Posso recuperare in qualche modo i file eliminati?</string>
-    <string name="faq_5_text_commons">Se sono stati veramente eliminati, non puoi. Tuttavia, puoi attivare nelle impostazioni l\'uso del cestino invece di eliminare. I file verranno solo spostati lì invece di essere eliminati.</string>
+    <string name="faq_5_text_commons">Se sono stati veramente eliminati, non si può. Tuttavia, si può attivare nelle impostazioni l\'uso del cestino invece dell\'eliminazione diretta. I file verranno solo spostati lì invece che essere eliminati.</string>
     <string name="faq_6_title_commons">L\'icona dell\'app è scomparsa nel lanciatore. Cosa posso fare?</string>
-    <string name="faq_6_text_commons">Il proprio lanciatore non gestisce correttamente le personalizzazioni delle icone delle applicazioni. Provare ad avviare l\'applicazione dal Google Play Store oppure dal widget, se disponibile.
+    <string name="faq_6_text_commons">Il lanciatore attualmente in uso non gestisce correttamente le personalizzazioni delle icone delle applicazioni. Provare ad avviare l\'applicazione dal Google Play Store oppure dal widget, se disponibile.
 	Una volta avviata, impostare l\'icona predefinita col colore arancione #F57C00. Potrebbe essere necessario reinstallare l\'applicazione se proprio non funziona.</string>
 
     <!-- License -->
-    <string name="notice">Questa app usa le seguenti librerie di terze parti per semplificarmi la vita. Grazie.</string>
+    <string name="notice">Questa app usa le seguenti librerie di terze parti per semplificarmi la vita. Vi ringrazio.</string>
     <string name="third_party_licences">Licenze di terze parti</string>
     <string name="kotlin_title">Kotlin (linguaggio di programmazione)</string>
     <string name="subsampling_title">PhotoView (immagini ingrandibili)</string>
@@ -581,8 +580,8 @@ forse la soluzione è già lì.</string>
     <string name="autofittextview_title">AutoFitTextView (ridimensionamento testo)</string>
     <string name="robolectric_title">Robolectric (ambiente di test)</string>
     <string name="espresso_title">Espresso (aiutante nei test)</string>
-    <string name="gson_title">Gson (parser JSON)</string>
-    <string name="leak_canary_title">Leak Canary (rileva leak di memoria)</string>
+    <string name="gson_title">Gson (analizzatore JSON)</string>
+    <string name="leak_canary_title">Leak Canary (rileva i buchi di memoria)</string>
     <string name="number_picker_title">Number Picker (Selettore di numeri personalizzabile)</string>
     <string name="exoplayer_title">ExoPlayer (lettore video)</string>
     <string name="panorama_view_title">VR Panorama View (visualizzazione panorami)</string>
