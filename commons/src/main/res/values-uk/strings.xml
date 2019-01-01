@@ -62,51 +62,51 @@
     <string name="append_filenames">Суфікс імен файлів (перед розширенням)</string>
 
     <!-- Copy / Move -->
-    <string name="copy">Copy</string>
-    <string name="move">Move</string>
-    <string name="copy_move">Copy / Move</string>
-    <string name="copy_to">Copy to</string>
-    <string name="move_to">Move to</string>
-    <string name="source">Source</string>
-    <string name="destination">Destination</string>
-    <string name="select_destination">Select destination</string>
-    <string name="click_select_destination">Click here to select destination</string>
-    <string name="invalid_destination">Could not write to the selected destination</string>
-    <string name="please_select_destination">Please select a destination</string>
-    <string name="source_and_destination_same">Source and destination cannot be the same</string>
-    <string name="copy_failed">Could not copy the files</string>
-    <string name="copying">Copying…</string>
-    <string name="copying_success">Files copied successfully</string>
-    <string name="copy_move_failed">An error occurred</string>
-    <string name="moving">Moving…</string>
-    <string name="moving_success">Files moved successfully</string>
-    <string name="moving_success_partial">Some files could not be moved</string>
-    <string name="copying_success_partial">Some files could not be copied</string>
-    <string name="no_files_selected">No files selected</string>
-    <string name="saving">Saving…</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="copy">Копіювати</string>
+    <string name="move">Перемістити</string>
+    <string name="copy_move">Копіювати / Перемістити</string>
+    <string name="copy_to">Копіювати до</string>
+    <string name="move_to">Перемістити до</string>
+    <string name="source">Джерело</string>
+    <string name="destination">Місце призначення</string>
+    <string name="select_destination">Обрати місце призначення</string>
+    <string name="click_select_destination">Натисніть тут, щоб обрати місце призначення</string>
+    <string name="invalid_destination">Не вдалося записати в обране місце призначення</string>
+    <string name="please_select_destination">Оберіть місце призначення</string>
+    <string name="source_and_destination_same">Джерело та місце призначення не можуть співпадати</string>
+    <string name="copy_failed">Не вдалося скопіювати файли</string>
+    <string name="copying">Копіювання…</string>
+    <string name="copying_success">Файли успішно скопійовано</string>
+    <string name="copy_move_failed">Сталася помилка</string>
+    <string name="moving">Переміщення…</string>
+    <string name="moving_success">Файли успішно переміщено</string>
+    <string name="moving_success_partial">Деякі файли не можуть бути переміщені</string>
+    <string name="copying_success_partial">Деякі файли не можуть бути скопійовані</string>
+    <string name="no_files_selected">Не обрано жодного файлу</string>
+    <string name="saving">Збереження…</string>
+    <string name="could_not_create_folder">Не вдалося створити теку %s</string>
+    <string name="could_not_create_file">Не вдалося створити файл %s</string>
 
     <!-- Create new -->
-    <string name="create_new">Create new</string>
-    <string name="folder">Folder</string>
-    <string name="file">File</string>
-    <string name="create_new_folder">Create new folder</string>
-    <string name="name_taken">A file or folder with that name already exists</string>
-    <string name="invalid_name">The name contains invalid characters</string>
-    <string name="empty_name">Please enter a name</string>
-    <string name="unknown_error_occurred">An unknown error occurred</string>
+    <string name="create_new">Створити новий</string>
+    <string name="folder">Теку</string>
+    <string name="file">Файл</string>
+    <string name="create_new_folder">Створити нову теку</string>
+    <string name="name_taken">Файл або тека з таким іменем вже існує</string>
+    <string name="invalid_name">Ім\'я містить недопустимі символи</string>
+    <string name="empty_name">Введіть ім\'я</string>
+    <string name="unknown_error_occurred">Сталася невідома помилка</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">File \"%s\" already exists</string>
-    <string name="file_already_exists_overwrite">File \"%s\" already exists. Overwrite?</string>
-    <string name="folder_already_exists">Folder \"%s\" already exists</string>
-    <string name="merge">Merge</string>
-    <string name="keep_both">Keep both</string>
-    <string name="overwrite">Overwrite</string>
-    <string name="skip">Skip</string>
-    <string name="append">Append with \'_1\'</string>
-    <string name="apply_to_all">Apply to all</string>
+    <string name="file_already_exists">Файл \"%s\" вже існує</string>
+    <string name="file_already_exists_overwrite">Файл \"%s\" вже існує. Перезаписати?</string>
+    <string name="folder_already_exists">Тека \"%s\" вже існує</string>
+    <string name="merge">Об\'єднати</string>
+    <string name="keep_both">Зберегти обидва</string>
+    <string name="overwrite">Перезаписати</string>
+    <string name="skip">Пропустити</string>
+    <string name="append">Додати \'_1\' в кінець</string>
+    <string name="apply_to_all">Застосувати до усіх</string>
 
     <!-- File picker -->
     <string name="select_folder">Select a folder</string>
