@@ -109,113 +109,113 @@
     <string name="apply_to_all">Застосувати до усіх</string>
 
     <!-- File picker -->
-    <string name="select_folder">Select a folder</string>
-    <string name="select_file">Select a file</string>
-    <string name="confirm_storage_access_title">Confirm external storage access</string>
-    <string name="confirm_storage_access_text">Please choose the root folder of the SD card on the next screen, to grant write access</string>
-    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
+    <string name="select_folder">Обрати теку</string>
+    <string name="select_file">Обрати файл</string>
+    <string name="confirm_storage_access_title">Підтвердити дозвіл на доступ до зовнішньої пам\'яті</string>
+    <string name="confirm_storage_access_text">Щоб надати доступ на запис, оберіть кореневу теку SD-карти на наступному екрані</string>
+    <string name="confirm_storage_access_text_sd">Якщо ви не бачите SD-карту, спробуйте це</string>
     <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
-        <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">%d елемент</item>
+        <item quantity="other">%d елементів</item>
     </plurals>
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">%d елемент</item>
+        <item quantity="other">%d елементів</item>
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Deleting %d item</item>
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="one">Видалення %d елементу</item>
+        <item quantity="other">Видалення %d елементів</item>
     </plurals>
 
     <!-- Storages -->
-    <string name="select_storage">Select storage</string>
-    <string name="internal">Internal</string>
-    <string name="sd_card">SD Card</string>
-    <string name="root">Root</string>
-    <string name="wrong_root_selected">Wrong folder selected, please select the root folder of your SD card</string>
-    <string name="sd_card_usb_same">SD card and USB device paths cannot be the same</string>
-    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
-        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
+    <string name="select_storage">Обрати пам\'ять</string>
+    <string name="internal">Внутрішня</string>
+    <string name="sd_card">SD-карта</string>
+    <string name="root">Корінь</string>
+    <string name="wrong_root_selected">Обрано невірну теку. Оберіть кореневу теку вашої SD-карти</string>
+    <string name="sd_card_usb_same">Шляхи до SD-карти та USB-пристрою не можуть співпадати</string>
+    <string name="app_on_sd_card">Схоже, ви встановили додаток на SD-карту, що робить віджети додатку недоступними. Ви навіть не побачите їх у списку доступних віджетів.
+        Це обмеження системи, тож якщо ви хочете використовувати віджети, вам треба перемістити додаток до внутрішньої пам\'яті.</string>
 
     <!-- File properties -->
-    <string name="properties">Properties</string>
-    <string name="path">Path</string>
-    <string name="items_selected">Items selected</string>
-    <string name="direct_children_count">Direct children count</string>
-    <string name="files_count">Total files count</string>
-    <string name="resolution">Resolution</string>
-    <string name="duration">Duration</string>
-    <string name="artist">Artist</string>
-    <string name="album">Album</string>
-    <string name="focal_length">Focal length</string>
-    <string name="exposure_time">Exposure time</string>
-    <string name="iso_speed">ISO speed</string>
-    <string name="f_number">F-number</string>
-    <string name="camera">Camera</string>
+    <string name="properties">Властивості</string>
+    <string name="path">Шлях</string>
+    <string name="items_selected">Обрані елементи</string>
+    <string name="direct_children_count">Кількість вкладених елементів</string>
+    <string name="files_count">Загальна кількість файлів</string>
+    <string name="resolution">Роздільна здатність</string>
+    <string name="duration">Тривалість</string>
+    <string name="artist">Виконавець</string>
+    <string name="album">Альбом</string>
+    <string name="focal_length">Фокальна відстань</string>
+    <string name="exposure_time">Час експозиції</string>
+    <string name="iso_speed">Швидкість ISO</string>
+    <string name="f_number">F-номер</string>
+    <string name="camera">Камера</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
+    <string name="song_title">Назва пісні</string>
 
     <!-- Color customization -->
-    <string name="background_color">Background color</string>
-    <string name="text_color">Text color</string>
-    <string name="primary_color">Primary color</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
-    <string name="restore_defaults">Restore defaults</string>
-    <string name="change_color">Change color</string>
-    <string name="theme">Theme</string>
-    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
-    <string name="save">Save</string>
-    <string name="discard">Discard</string>
-    <string name="undo_changes">Undo changes</string>
-    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
-    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
-    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
+    <string name="background_color">Колір фону</string>
+    <string name="text_color">Колір тексту</string>
+    <string name="primary_color">Первинний колір</string>
+    <string name="foreground_color">Колір переднього плану</string>
+    <string name="app_icon_color">Колір піктограми додатку</string>
+    <string name="bottom_navigation_bar_color">Колір нижньої навігаційної панелі</string>
+    <string name="restore_defaults">Відновити замовчування</string>
+    <string name="change_color">Змінити колір</string>
+    <string name="theme">Тема</string>
+    <string name="changing_color_description">Зміна кольору увімкне Користувацьку тему</string>
+    <string name="save">Зберегти</string>
+    <string name="discard">Відмовитися</string>
+    <string name="undo_changes">Скасувати зміни</string>
+    <string name="undo_changes_confirmation">Ви впевнені, що хочете скасувати зміни?</string>
+    <string name="save_before_closing">Ви маєте незбережені зміни. Зберегти перед виходом?</string>
+    <string name="apply_to_all_apps">Застосувати кольори до усіх додатків Simple Apps</string>
+    <string name="app_icon_color_warning">УВАГА: Деякі лончери некоректно опрацьовують зміну піктограми додатків. Якщо піктограма додатку зникне, спробуйте запустити його через Google Play або віджет, якщо доступний.
+        Після запуску просто поверніть колір піктограми за-замовчуванням: #F57C00. У найгіршому випадку вам доведеться перевстановити додаток.</string>
+    <string name="share_colors_success">Кольори успішно оновлено. Було додано нову тему під назвою \'Загальна\', використовуйте її для оновлення кольорів усіх додатків у майбутньому.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
+            Будь ласка, придбайте <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, щоб розблокувати цю функцію і підтримати розробку. Дякую!
         ]]>
     </string>
 
     <!-- Themes -->
-    <string name="light_theme">Light</string>
-    <string name="dark_theme">Dark</string>
-    <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
-    <string name="black_white">Black &amp; White</string>
-    <string name="custom">Custom</string>
-    <string name="shared">Shared</string>
+    <string name="light_theme">Світла</string>
+    <string name="dark_theme">Темна</string>
+    <string name="solarized">Солярис</string>
+    <string name="dark_red">Темно-червоний</string>
+    <string name="black_white">Чорний &amp; Білий</string>
+    <string name="custom">Користувацька</string>
+    <string name="shared">Загальна</string>
 
     <!-- What's new -->
-    <string name="whats_new">What\'s new</string>
-    <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
+    <string name="whats_new">Що нового</string>
+    <string name="whats_new_disclaimer">* тут перераховані тільки великі оновлення, але завжди є менші покращення</string>
 
     <!-- Actionbar items -->
-    <string name="delete">Delete</string>
-    <string name="remove">Remove</string>
-    <string name="rename">Rename</string>
-    <string name="share">Share</string>
-    <string name="share_via">Share via</string>
-    <string name="select_all">Select all</string>
-    <string name="hide">Hide</string>
-    <string name="unhide">Unhide</string>
-    <string name="hide_folder">Hide folder</string>
-    <string name="unhide_folder">Unhide folder</string>
-    <string name="temporarily_show_hidden">Temporarily show hidden</string>
-    <string name="stop_showing_hidden">Stop showing hidden media</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
-    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
-    <string name="undo">Undo</string>
-    <string name="redo">Redo</string>
+    <string name="delete">Видалити</string>
+    <string name="remove">Видалити</string>
+    <string name="rename">Перейменувати</string>
+    <string name="share">Поділитися</string>
+    <string name="share_via">Поділитися через</string>
+    <string name="select_all">Обрати все</string>
+    <string name="hide">Приховати</string>
+    <string name="unhide">Показати</string>
+    <string name="hide_folder">Приховати теку</string>
+    <string name="unhide_folder">Показати теку</string>
+    <string name="temporarily_show_hidden">Тимчасово показати приховане</string>
+    <string name="stop_showing_hidden">Припинити показ прихованих медіа</string>
+    <string name="maximum_share_reached">Не можна поширити так багато контенту за раз</string>
+    <string name="empty_and_disable_recycle_bin">Спорожнити та вимкнути Кошик</string>
+    <string name="undo">Повернути</string>
+    <string name="redo">Повторити</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sort by</string>
