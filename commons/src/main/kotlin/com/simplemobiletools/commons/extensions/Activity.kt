@@ -2,6 +2,8 @@ package com.simplemobiletools.commons.extensions
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.AlertDialog
+import android.app.ProgressDialog.show
 import android.content.*
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
@@ -12,7 +14,6 @@ import android.os.Looper
 import android.os.TransactionTooLargeException
 import android.provider.DocumentsContract
 import android.provider.MediaStore
-import android.text.Html
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
@@ -20,9 +21,6 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
-import androidx.documentfile.provider.DocumentFile
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.dialogs.*
@@ -260,7 +258,7 @@ fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: 
             setDataAndType(newUri, mimeType)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
-            if (applicationId == "com.simplemobiletools.gallery" || applicationId == "com.simplemobiletools.gallery.debug") {
+            if (applicationId == "com.simplemobiletools.gallery.pro" || applicationId == "com.simplemobiletools.gallery.pro.debug") {
                 putExtra(IS_FROM_GALLERY, true)
             }
 
