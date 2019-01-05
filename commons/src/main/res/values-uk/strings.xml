@@ -218,187 +218,187 @@
     <string name="redo">Повторити</string>
 
     <!-- Sorting -->
-    <string name="sort_by">Sort by</string>
-    <string name="name">Name</string>
-    <string name="size">Size</string>
-    <string name="last_modified">Last modified</string>
-    <string name="date_taken">Date taken</string>
-    <string name="title">Title</string>
-    <string name="filename">Filename</string>
-    <string name="extension">Extension</string>
-    <string name="random">Random</string>
-    <string name="sort_randomly">Sort randomly</string>
-    <string name="ascending">Ascending</string>
-    <string name="descending">Descending</string>
-    <string name="use_for_this_folder">Use for this folder only</string>
+    <string name="sort_by">Сортувати за</string>
+    <string name="name">ім\'ям</string>
+    <string name="size">розміром</string>
+    <string name="last_modified">останньою зміною</string>
+    <string name="date_taken">датою зйомки</string>
+    <string name="title">заголовком</string>
+    <string name="filename">ім\'ям файлу</string>
+    <string name="extension">розширенням</string>
+    <string name="random">випадково</string>
+    <string name="sort_randomly">Сортувати випадково</string>
+    <string name="ascending">за зростанням</string>
+    <string name="descending">за спаданням</string>
+    <string name="use_for_this_folder">Використовувати тільки для цієї теки</string>
 
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
-    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s into the Recycle Bin?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
-    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
-    <string name="do_not_ask_again">Do not ask again in this session</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="proceed_with_deletion">Ви впевнені, що хочете продовжити видалення?</string>
+    <string name="deletion_confirmation">Ви впевнені, що хочете видалити %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Ви впевнені, що хочете перемістити %s у Кошик?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">Ви впевнені, що хочете видалити цей елемент?</string>
+    <string name="are_you_sure_recycle_bin">Ви впевнені, що хочете перемістити цей елемент у Кошик?</string>
+    <string name="do_not_ask_again">Більше не питати у цій сесії</string>
+    <string name="yes">Так</string>
+    <string name="no">Ні</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting %d folder</item>
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="one">УВАГА: Ви видаляєте %d теку</item>
+        <item quantity="other">УВАГА: Ви видаляєте %d тек</item>
     </plurals>
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
-    <string name="repeat_pin">Repeat PIN</string>
-    <string name="pattern">Pattern</string>
-    <string name="insert_pattern">Insert pattern</string>
-    <string name="wrong_pattern">Wrong pattern</string>
-    <string name="repeat_pattern">Repeat pattern</string>
-    <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
-    <string name="authentication_failed">Authentication failed</string>
-    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
-    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
-    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
-    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+    <string name="enter_pin">Введіть PIN</string>
+    <string name="please_enter_pin">Будь ласка, введіть PIN</string>
+    <string name="wrong_pin">Невірний PIN</string>
+    <string name="repeat_pin">Повторіть PIN</string>
+    <string name="pattern">Шаблон</string>
+    <string name="insert_pattern">Вставити шаблон</string>
+    <string name="wrong_pattern">Невірний шаблон</string>
+    <string name="repeat_pattern">Повторіть шаблон</string>
+    <string name="fingerprint">Відбиток пальця</string>
+    <string name="add_fingerprint">Додати відбиток пальця</string>
+    <string name="place_finger">Помістіть ваш палець на сканер відбитку пальця</string>
+    <string name="authentication_failed">Помилка автентифікації</string>
+    <string name="authentication_blocked">Автентифікацію заблоковано, спробуйте це раз</string>
+    <string name="no_fingerprints_registered">У вас немає зареєстрованих відбитків пальця, додайте їх у Налаштуваннях вашого пристрою</string>
+    <string name="go_to_settings">Перейти до Налаштувань</string>
+    <string name="protection_setup_successfully">Пароль успішно встановлено. Якщо ви його забудете, перевстановіть додаток.</string>
+    <string name="fingerprint_setup_successfully">Захист успішно встановлено. При проблемах з його скиданням перевстановіть додаток.</string>
 
     <!-- Times -->
-    <string name="yesterday">Yesterday</string>
-    <string name="today">Today</string>
-    <string name="tomorrow">Tomorrow</string>
-    <string name="seconds_raw">seconds</string>
-    <string name="minutes_raw">minutes</string>
-    <string name="hours_raw">hours</string>
-    <string name="days_raw">days</string>
+    <string name="yesterday">Вчора</string>
+    <string name="today">Сьогодні</string>
+    <string name="tomorrow">Завтра</string>
+    <string name="seconds_raw">секунд</string>
+    <string name="minutes_raw">хвилин</string>
+    <string name="hours_raw">годин</string>
+    <string name="days_raw">днів</string>
 
     <plurals name="seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d секунда</item>
+        <item quantity="other">%d секунд</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d хвилина</item>
+        <item quantity="other">%d хвилин</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d година</item>
+        <item quantity="other">%d годин</item>
     </plurals>
     <plurals name="days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d день</item>
+        <item quantity="other">%d днів</item>
     </plurals>
     <plurals name="weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d тиждень</item>
+        <item quantity="other">%d тижнів</item>
     </plurals>
     <plurals name="months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d місяць</item>
+        <item quantity="other">%d місяців</item>
     </plurals>
     <plurals name="years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d рік</item>
+        <item quantity="other">%d років</item>
     </plurals>
 
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d секунду</item>
+        <item quantity="other">%d секунд</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d хвилину</item>
+        <item quantity="other">%d хвилин</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d годину</item>
+        <item quantity="other">%d годин</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d second before</item>
-        <item quantity="other">%d seconds before</item>
+        <item quantity="one">за %d секунду</item>
+        <item quantity="other">за %d секунд</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">%d minute before</item>
-        <item quantity="other">%d minutes before</item>
+        <item quantity="one">за %d хвилину</item>
+        <item quantity="other">за %d хвилин</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">%d hour before</item>
-        <item quantity="other">%d hours before</item>
+        <item quantity="one">за %d годину</item>
+        <item quantity="other">за %d годин</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">%d day before</item>
-        <item quantity="other">%d days before</item>
+        <item quantity="one">за %d день</item>
+        <item quantity="other">за %d днів</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d секунду</item>
+        <item quantity="other">%d секунд</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d хвилину</item>
+        <item quantity="other">%d хвилин</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d годину</item>
+        <item quantity="other">%d годин</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
-    <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
-    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
-    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
+    <string name="alarm_goes_off_in">Час до того, як будильник вимкнеться:\n%s</string>
+    <string name="reminder_triggers_in">Час до того, як спрацює нагадування:\n%s</string>
+    <string name="alarm_warning">Переконайтеся, що будильник працює коректно, перед тим, як на нього покладатися. Він може не спрацювати через системні обмеження, пов\'язані з економією заряду батареї.</string>
+    <string name="reminder_warning">Переконайтеся, що нагадування працюють коректно, перед тим, як на них покладатися. Вони можуть не спрацювати через системні обмеження, пов\'язані з економією заряду батареї.</string>
+    <string name="notifications_disabled">Сповіщення від цього додатка заборонені. Перейдіть до Налаштувань пристрою, щоб їх увімкнути.</string>
 
     <!-- Alarms -->
-    <string name="alarm">Alarm</string>
-    <string name="snooze">Snooze</string>
-    <string name="dismiss">Dismiss</string>
-    <string name="no_reminder">No reminder</string>
-    <string name="at_start">At start</string>
-    <string name="system_sounds">System sounds</string>
-    <string name="your_sounds">Your sounds</string>
-    <string name="add_new_sound">Add a new sound</string>
-    <string name="no_sound">No sound</string>
+    <string name="alarm">Будіильник</string>
+    <string name="snooze">Відкласти</string>
+    <string name="dismiss">Відхилити</string>
+    <string name="no_reminder">Без нагадування</string>
+    <string name="at_start">При запуску</string>
+    <string name="system_sounds">Системні звуки</string>
+    <string name="your_sounds">Ваші звуки</string>
+    <string name="add_new_sound">Додати новий звук</string>
+    <string name="no_sound">Без звуку</string>
 
     <!-- Settings -->
-    <string name="settings">Settings</string>
-    <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
-    <string name="customize_colors">Customize colors</string>
-    <string name="customize_widget_colors">Customize widget colors</string>
-    <string name="use_english_language">Use English language</string>
-    <string name="show_hidden_items">Show hidden items</string>
-    <string name="font_size">Font size</string>
-    <string name="small">Small</string>
-    <string name="medium">Medium</string>
-    <string name="large">Large</string>
-    <string name="extra_large">Extra large</string>
-    <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
-    <string name="password_protect_whole_app">Password protect the whole application</string>
-    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
-    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
-    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
-    <string name="use_24_hour_time_format">Use 24-hour time format</string>
-    <string name="sunday_first">Start week on Sunday</string>
-    <string name="widgets">Widgets</string>
-    <string name="use_same_snooze">Always use same snooze time</string>
-    <string name="snooze_time">Snooze time</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
-    <string name="move_items_into_recycle_bin">Move items into the Recycle Bin instead of deleting</string>
-    <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
-    <string name="empty_recycle_bin">Empty the Recycle Bin</string>
-    <string name="force_portrait_mode">Force portrait mode</string>
+    <string name="settings">Налаштування</string>
+    <string name="purchase_simple_thank_you">Придбати Simple Thank You</string>
+    <string name="customize_colors">Налаштувати кольори</string>
+    <string name="customize_widget_colors">Налаштувати кольори віджету</string>
+    <string name="use_english_language">Використовувати англійську (Use English language)</string>
+    <string name="show_hidden_items">Показати приховані елементи</string>
+    <string name="font_size">Розмір шрифту</string>
+    <string name="small">Малий</string>
+    <string name="medium">Середній</string>
+    <string name="large">Великий</string>
+    <string name="extra_large">Надвеликий</string>
+    <string name="password_protect_hidden_items">Захистити паролем видимість прихованих елементів</string>
+    <string name="password_protect_whole_app">Захистити паролем весь додаток</string>
+    <string name="password_protect_file_deletion">Захистити паролем видалення та переміщення файлів</string>
+    <string name="keep_last_modified">Зберігати значення останньої зміни при копіюванні/переміщенні/перейменуванні файлів</string>
+    <string name="show_info_bubble">Показувати інфополе при прокручуванні елементів смугою прокрутки</string>
+    <string name="prevent_phone_from_sleeping">Запобігати засинанню телефона, поки додаток на передньому плані</string>
+    <string name="skip_delete_confirmation">Завжди пропускати діалог підтвердження видалення</string>
+    <string name="enable_pull_to_refresh">Увімкнути оновлення свайпом згори вниз</string>
+    <string name="use_24_hour_time_format">Використовувати 24-годинний формат дати</string>
+    <string name="sunday_first">Починати тиждень з неділі</string>
+    <string name="widgets">Віджети</string>
+    <string name="use_same_snooze">Завжди використовувати однаковий час відкладання</string>
+    <string name="snooze_time">Час відкладання</string>
+    <string name="vibrate_on_button_press">Вібрація при натисканні на кнопки</string>
+    <string name="move_items_into_recycle_bin">Переміщувати елементи у Кошик замість видалення</string>
+    <string name="recycle_bin_cleaning_interval">Інтервал очищення Кошика</string>
+    <string name="empty_recycle_bin">Очистити Кошик</string>
+    <string name="force_portrait_mode">Примусовий портретний режим</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>
