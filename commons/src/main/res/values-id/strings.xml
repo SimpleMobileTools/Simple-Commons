@@ -385,7 +385,7 @@
     <string name="password_protect_hidden_items">Kunci item tersembunyi dengan password</string>
     <string name="password_protect_whole_app">Kunci aplikasi dengan password</string>
     <string name="password_protect_file_deletion">Lindungi penghapusan dan pemindahan file dengan password</string>
-    <string name="keep_last_modified">Jaga tanggal terakhir diubah setelah file disalin/pindah/ubah nama</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Tampilkan gelembung info saat menggeser scrollbar</string>
     <string name="prevent_phone_from_sleeping">Cegah ponsel tidur saat aplikasi terbuka</string>
     <string name="skip_delete_confirmation">Selalu lewati dialog konfirmasi hapus</string>

@@ -385,7 +385,7 @@
     <string name="password_protect_hidden_items">Beskyt visning af skjulte elementer med en kode</string>
     <string name="password_protect_whole_app">Beskyt hele appen med en adgangskode</string>
     <string name="password_protect_file_deletion">Beskyt mod sletning og flytning med en kode</string>
-    <string name="keep_last_modified">Kopi/flyt/omdøb skal ikke påvirke ændringstidspunktet</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Vis en info-boble når jeg scroller med rullepanelet</string>
     <string name="prevent_phone_from_sleeping">Forhindr telefonen i at falde i søvn når appen er i forgrunden</string>
     <string name="skip_delete_confirmation">Spørg ikke om bekræftelse før sletning</string>

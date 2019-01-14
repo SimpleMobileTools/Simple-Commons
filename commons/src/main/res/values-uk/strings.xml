@@ -385,7 +385,7 @@
     <string name="password_protect_hidden_items">Захистити паролем видимість прихованих елементів</string>
     <string name="password_protect_whole_app">Захистити паролем весь додаток</string>
     <string name="password_protect_file_deletion">Захистити паролем видалення та переміщення файлів</string>
-    <string name="keep_last_modified">Зберігати значення останньої зміни при копіюванні/переміщенні/перейменуванні файлів</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Показувати інфополе при прокручуванні елементів смугою прокрутки</string>
     <string name="prevent_phone_from_sleeping">Запобігати засинанню телефона, поки додаток на передньому плані</string>
     <string name="skip_delete_confirmation">Завжди пропускати діалог підтвердження видалення</string>

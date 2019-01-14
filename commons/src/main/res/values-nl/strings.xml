@@ -385,7 +385,7 @@
     <string name="password_protect_hidden_items">Verborgen items met wachtwoord beveiligen</string>
     <string name="password_protect_whole_app">Hele app met wachtwoord beveiligen</string>
     <string name="password_protect_file_deletion">Bestandsoperaties Verwijderen en Verplaatsen met wachtwoord beveiligen</string>
-    <string name="keep_last_modified">Datum laatst gewijzigd behouden bij bestandsoperaties</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Bij slepen van schuifbalk extra informatie tonen</string>
     <string name="prevent_phone_from_sleeping">Slaapstand voorkomen wanneer de app actief is</string>
     <string name="skip_delete_confirmation">Niet om bevestiging vragen bij verwijderen</string>

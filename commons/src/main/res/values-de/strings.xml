@@ -385,7 +385,7 @@
     <string name="password_protect_hidden_items">Versteckte Elemente mit Muster/PIN schützen</string>
     <string name="password_protect_whole_app">Gesamte App mit Passwort schützen</string>
     <string name="password_protect_file_deletion">Mit Passwort vor Dateilöschung und -verschiebung schützen.</string>
-    <string name="keep_last_modified">Beim Modifizieren von Dateien die alte Änderungszeit beibehalten</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Beim Scrollen mit dem Scrollbalken Infofenster anzeigen</string>
     <string name="prevent_phone_from_sleeping">Verhindere, dass das Handy in den Ruhemodus wechselt, solange die App im Vordergrund läuft</string>
     <string name="skip_delete_confirmation">Verwende keinen Löschen-bestätigen-Dialog</string>

@@ -385,7 +385,7 @@
     <string name="password_protect_hidden_items">非表示にした項目をパスワードで保護する</string>
     <string name="password_protect_whole_app">アプリ全体をパスワードで保護する</string>
     <string name="password_protect_file_deletion">ファイルの削除と移動をパスワードで保護する</string>
-    <string name="keep_last_modified">ファイルのコピー/移動/リネーム時、最終更新日が古いものを維持する</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
     <string name="prevent_phone_from_sleeping">アプリを使用中は端末がスリープ状態にならないようにする</string>
     <string name="skip_delete_confirmation">削除時の確認ダイアログを表示しない</string>
