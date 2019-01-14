@@ -1,42 +1,42 @@
 <resources>
-    <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
-    <string name="save_as">Save as</string>
-    <string name="file_saved">File saved successfully</string>
-    <string name="invalid_file_format">Invalid file format</string>
+    <string name="ok">موافق</string>
+    <string name="cancel">إلغاء</string>
+    <string name="save_as">حفظ ك</string>
+    <string name="file_saved">تم حفظ الملف</string>
+    <string name="invalid_file_format">صيغة الملف غير صحيحة</string>
     <string name="out_of_memory_error">Out of memory error</string>
     <string name="an_error_occurred">An error occurred: %s</string>
-    <string name="open_with">Open with</string>
+    <string name="open_with">فتح بواسطة</string>
     <string name="edit_with">تعديل باستخدام</string>
-    <string name="no_app_found">No valid app found</string>
+    <string name="no_app_found">لا يوجد ملف صالح</string>
     <string name="set_as">Set as</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
-    <string name="unknown">Unknown</string>
-    <string name="always">Always</string>
-    <string name="never">Never</string>
-    <string name="details">Details</string>
-    <string name="notes">Notes</string>
+    <string name="value_copied_to_clipboard">تم نسخ القيمة</string>
+    <string name="unknown">غير معروف</string>
+    <string name="always">دائماً</string>
+    <string name="never">أبداً</string>
+    <string name="details">تفاصيل</string>
+    <string name="notes">ملاحظات</string>
     <string name="deleting_folder">Deleting folder \'%s\'</string>
     <string name="none">None</string>
-    <string name="label">Label</string>
-    <string name="transparent">Transparent</string>
-    <string name="transparent_color">Transparent color</string>
-    <string name="select_a_different_color">Select a different color</string>
+    <string name="label">عنوان</string>
+    <string name="transparent">شفاف</string>
+    <string name="transparent_color">لون شفاف</string>
+    <string name="select_a_different_color">إختر لون مختلف</string>
 
     <!-- Favorites -->
     <string name="favorites">المفضلة</string>
-    <string name="add_favorites">Add favorites</string>
+    <string name="add_favorites">إضافة مفضلة</string>
     <string name="add_to_favorites">اضافة الى المفضلة</string>
     <string name="remove_from_favorites">حذف من المفضلة</string>
 
     <!-- Search -->
-    <string name="search">Search</string>
+    <string name="search">بحث</string>
     <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
 
     <!-- Filters -->
-    <string name="filter">Filter</string>
+    <string name="filter">تصفية</string>
     <string name="no_items_found">No items found.</string>
-    <string name="change_filter">Change filter</string>
+    <string name="change_filter">تغيير التصفية</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Storage permission is required</string>
@@ -444,56 +444,56 @@
     <string name="wrong_root_selected_usb">Wrong folder selected, please select the root folder of your USB device</string>
 
     <!-- Dates -->
-    <string name="january">January</string>
-    <string name="february">February</string>
-    <string name="march">March</string>
-    <string name="april">April</string>
-    <string name="may">May</string>
-    <string name="june">June</string>
-    <string name="july">July</string>
-    <string name="august">August</string>
-    <string name="september">September</string>
-    <string name="october">October</string>
-    <string name="november">November</string>
-    <string name="december">December</string>
+    <string name="january">كانون الثاني</string>
+    <string name="february">شباط</string>
+    <string name="march">آذار</string>
+    <string name="april">نيسان</string>
+    <string name="may">أيار</string>
+    <string name="june">حزيران</string>
+    <string name="july">تموز</string>
+    <string name="august">آب</string>
+    <string name="september">أيلول</string>
+    <string name="october">تشرين الأول</string>
+    <string name="november">تشرين الثاني</string>
+    <string name="december">كانون الأول</string>
 
     <!-- in January -->
-    <string name="in_january">in January</string>
-    <string name="in_february">in February</string>
-    <string name="in_march">in March</string>
-    <string name="in_april">in April</string>
-    <string name="in_may">in May</string>
-    <string name="in_june">in June</string>
-    <string name="in_july">in July</string>
-    <string name="in_august">in August</string>
-    <string name="in_september">in September</string>
-    <string name="in_october">in October</string>
-    <string name="in_november">in November</string>
-    <string name="in_december">in December</string>
+    <string name="in_january">في كانون الثاني</string>
+    <string name="in_february">في شباط</string>
+    <string name="in_march">في آذار</string>
+    <string name="in_april">في نيسان</string>
+    <string name="in_may">في أيار</string>
+    <string name="in_june">في حزيران</string>
+    <string name="in_july">في تموز</string>
+    <string name="in_august">في آب</string>
+    <string name="in_september">في أيلول</string>
+    <string name="in_october">في تشرين الأول</string>
+    <string name="in_november">في تشرين الثاني</string>
+    <string name="in_december">في كانون الأول</string>
 
-    <string name="monday">Monday</string>
-    <string name="tuesday">Tuesday</string>
-    <string name="wednesday">Wednesday</string>
-    <string name="thursday">Thursday</string>
-    <string name="friday">Friday</string>
-    <string name="saturday">Saturday</string>
-    <string name="sunday">Sunday</string>
+    <string name="monday">الإثنين</string>
+    <string name="tuesday">الثالثاء</string>
+    <string name="wednesday">الأربعاء</string>
+    <string name="thursday">الخميس</string>
+    <string name="friday">الجمعة</string>
+    <string name="saturday">السبت</string>
+    <string name="sunday">الأحد</string>
 
-    <string name="monday_letter">M</string>
-    <string name="tuesday_letter">T</string>
-    <string name="wednesday_letter">W</string>
-    <string name="thursday_letter">T</string>
-    <string name="friday_letter">F</string>
-    <string name="saturday_letter">S</string>
-    <string name="sunday_letter">S</string>
+    <string name="monday_letter">إ</string>
+    <string name="tuesday_letter">ث</string>
+    <string name="wednesday_letter">أ</string>
+    <string name="thursday_letter">خ</string>
+    <string name="friday_letter">ج</string>
+    <string name="saturday_letter">س</string>
+    <string name="sunday_letter">أ</string>
 
-    <string name="monday_short">Mon</string>
-    <string name="tuesday_short">Tue</string>
-    <string name="wednesday_short">Wed</string>
-    <string name="thursday_short">Thu</string>
-    <string name="friday_short">Fri</string>
-    <string name="saturday_short">Sat</string>
-    <string name="sunday_short">Sun</string>
+    <string name="monday_short">إثن</string>
+    <string name="tuesday_short">ثلا</string>
+    <string name="wednesday_short">أرب</string>
+    <string name="thursday_short">خمي</string>
+    <string name="friday_short">جمع</string>
+    <string name="saturday_short">سبت</string>
+    <string name="sunday_short">أحد</string>
 
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">This version of the app is no longer maintained. Please upgrade to the Pro version.</string>
