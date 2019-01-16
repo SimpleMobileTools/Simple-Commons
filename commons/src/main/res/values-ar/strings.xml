@@ -31,46 +31,43 @@
 
     <!-- Search -->
     <string name="search">بحث</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
+    <string name="type_2_characters">اكتب حرفين على الأقل لبدء البحث.</string>
 
     <!-- Filters -->
     <string name="filter">تصفية</string>
-    <string name="no_items_found">No items found.</string>
+    <string name="no_items_found">لم يتم العثور على نتائج.</string>
     <string name="change_filter">تغيير التصفية</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">مطلوب إذن التخزين</string>
+    <string name="no_contacts_permission">مطلوب إذن جهات الاتصال</string>
+    <string name="no_camera_permissions">مطلوب إذن الكاميرا</string>
+    <string name="no_audio_permissions">مطلوب إذن الصوت</string>
 
     <!-- Renaming -->
-    <string name="rename_file">Rename file</string>
-    <string name="rename_folder">Rename folder</string>
-    <string name="rename_file_error">Could not rename the file</string>
-    <string name="rename_folder_error">Could not rename the folder</string>
-    <string name="rename_folder_empty">Folder name must not be empty</string>
-    <string name="rename_folder_exists">A folder with that name already exists</string>
-    <string name="rename_folder_root">Cannot rename the root folder of a storage</string>
-    <string name="rename_folder_ok">Folder renamed successfully</string>
-    <string name="renaming_folder">Renaming folder</string>
-    <string name="filename_cannot_be_empty">Filename cannot be empty</string>
-    <string name="filename_invalid_characters">Filename contains invalid characters</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
-    <string name="extension_cannot_be_empty">Extension cannot be empty</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
+    <string name="rename_file">إعادة تسمية الملف</string>
+    <string name="rename_folder">إعادة تسمية المجلد</string>
+    <string name="rename_file_error">لا يمكن إعادة تسمية الملف</string>
+    <string name="rename_folder_error">لا يمكن إعادة تسمية المجلد</string>
+    <string name="rename_folder_empty">يجب ألا يكون اسم المجلد فارغًا</string>
+    <string name="rename_folder_exists">يوجد مجلد بهذا الاسم</string>
+    <string name="rename_folder_root">لا يمكن إعادة تسمية المجلد الجذر للتخزين</string>
+    <string name="rename_folder_ok">تمت إعادة تسمية المجلد بنجاح</string>
+    <string name="renaming_folder">إعادة تسمية المجلد</string>
+    <string name="filename_cannot_be_empty">لا يمكن أن يكون اسم الملف فارغًا</string>
+    <string name="filename_invalid_characters">يحتوي اسم الملف على أحرف غير صالحة</string>
+    <string name="filename_invalid_characters_placeholder">يحتوي اسم الملف \'%s\' على أحرف غير صالحة</string>
+    <string name="extension_cannot_be_empty">لا يمكن أن يكون تنسيق الملف فارغًا</string>
+    <string name="source_file_doesnt_exist">ملف المصدر %s غير موجود</string>
     <string name="prepend_filenames">Prepend filenames</string>
     <string name="append_filenames">Append filenames (before file extension)</string>
 
     <!-- Copy / Move -->
-    <string name="copy">Copy</string>
-    <string name="move">Move</string>
-    <string name="copy_move">Copy / Move</string>
-    <string name="copy_to">Copy to</string>
-    <string name="move_to">Move to</string>
-    <string name="source">Source</string>
-    <string name="destination">Destination</string>
-    <string name="select_destination">Select destination</string>
+    <string name="copy">نسخ</string>
+    <string name="move">نقل</string>
+    <string name="copy_move">نسخ / نقل</string>
+    <string name="copy_to">نسخ إلى</string>
+    <string name="move_to">نقل إلى</string>
     <string name="click_select_destination">Click here to select destination</string>
     <string name="invalid_destination">Could not write to the selected destination</string>
     <string name="please_select_destination">Please select a destination</string>
@@ -162,22 +159,22 @@
     <string name="song_title">Song title</string>
 
     <!-- Color customization -->
-    <string name="background_color">Background color</string>
-    <string name="text_color">Text color</string>
-    <string name="primary_color">Primary color</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
-    <string name="restore_defaults">Restore defaults</string>
-    <string name="change_color">Change color</string>
-    <string name="theme">Theme</string>
-    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
-    <string name="save">Save</string>
-    <string name="discard">Discard</string>
-    <string name="undo_changes">Undo changes</string>
-    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
-    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
+    <string name="background_color">لون الخلفية</string>
+    <string name="text_color">لون الخط</string>
+    <string name="primary_color">اللون الرئيسي</string>
+    <string name="foreground_color">اللون الأمامي</string>
+    <string name="app_icon_color">لون أيقونة التطلبيق</string>
+    <string name="bottom_navigation_bar_color">لون شريط التنقل السفلي</string>
+    <string name="restore_defaults">استعادة الضبط الافتراضي</string>
+    <string name="change_color">تغيير اللون</string>
+    <string name="theme">المظهر</string>
+    <string name="changing_color_description">سوف يؤدي تغيير اللون إلى الانتقال للمظهر المخصص</string>
+    <string name="save">حفظ</string>
+    <string name="discard">تجاهل</string>
+    <string name="undo_changes">التراجع عن التغييرات</string>
+    <string name="undo_changes_confirmation">هل أنت متأكد من أنك تريد التراجع عن تغييراتك؟</string>
+    <string name="save_before_closing">لم تحفظ التغييرات. هل تريد الحفظ قبل الخروج؟</string>
+    <string name="apply_to_all_apps">تطبيق الألوان على جميع التطبيقات المشتركة</string>
     <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
         Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
@@ -188,60 +185,60 @@
     </string>
 
     <!-- Themes -->
-    <string name="light_theme">Light</string>
-    <string name="dark_theme">Dark</string>
+    <string name="light_theme">مضيء</string>
+    <string name="dark_theme">مظلم</string>
     <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
-    <string name="black_white">Black &amp; White</string>
-    <string name="custom">Custom</string>
-    <string name="shared">Shared</string>
+    <string name="dark_red">أحمر مظلم</string>
+    <string name="black_white">أسود و أبيض</string>
+    <string name="custom">مخصص</string>
+    <string name="shared">مشترك</string>
 
     <!-- What's new -->
-    <string name="whats_new">What\'s new</string>
+    <string name="whats_new">ما الجديد</string>
     <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
 
     <!-- Actionbar items -->
-    <string name="delete">Delete</string>
-    <string name="remove">Remove</string>
-    <string name="rename">Rename</string>
-    <string name="share">Share</string>
-    <string name="share_via">Share via</string>
-    <string name="select_all">Select all</string>
-    <string name="hide">Hide</string>
-    <string name="unhide">Unhide</string>
-    <string name="hide_folder">Hide folder</string>
-    <string name="unhide_folder">Unhide folder</string>
-    <string name="temporarily_show_hidden">Temporarily show hidden</string>
-    <string name="stop_showing_hidden">Stop showing hidden media</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
-    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
-    <string name="undo">Undo</string>
-    <string name="redo">Redo</string>
+    <string name="delete">حذف</string>
+    <string name="remove">إزالة</string>
+    <string name="rename">إعادة تسمية</string>
+    <string name="share">مشاركة</string>
+    <string name="share_via">مشاركة عبر</string>
+    <string name="select_all">إختيار الكل</string>
+    <string name="hide">إخفاء</string>
+    <string name="unhide">إظهار</string>
+    <string name="hide_folder">إخفاء مجلد</string>
+    <string name="unhide_folder">إظهار مجلد</string>
+    <string name="temporarily_show_hidden">إظهار المخفي مؤقتاً</string>
+    <string name="stop_showing_hidden">أوقف إظهار الوسائط المخفية</string>
+    <string name="maximum_share_reached">لا يمكنك مشاركة هذا المحتوى الكبير دفعة واحدة</string>
+    <string name="empty_and_disable_recycle_bin">إفراغ وتعطيل سلة المحذوفات</string>
+    <string name="undo">تراجع</string>
+    <string name="redo">إعادة</string>
 
     <!-- Sorting -->
-    <string name="sort_by">Sort by</string>
-    <string name="name">Name</string>
-    <string name="size">Size</string>
-    <string name="last_modified">Last modified</string>
+    <string name="sort_by">ترتيب حسب</string>
+    <string name="name">الإسم</string>
+    <string name="size">الحجم</string>
+    <string name="last_modified">آخر تعديل</string>
     <string name="date_taken">Date taken</string>
-    <string name="title">Title</string>
-    <string name="filename">Filename</string>
-    <string name="extension">Extension</string>
-    <string name="random">Random</string>
-    <string name="sort_randomly">Sort randomly</string>
-    <string name="ascending">Ascending</string>
-    <string name="descending">Descending</string>
-    <string name="use_for_this_folder">Use for this folder only</string>
+    <string name="title">العنوان</string>
+    <string name="filename">إسم الملف</string>
+    <string name="extension">التنسيق</string>
+    <string name="random">عشوائي</string>
+    <string name="sort_randomly">ترتيب عشوائي</string>
+    <string name="ascending">تصاعدي</string>
+    <string name="descending">تنازلي</string>
+    <string name="use_for_this_folder">استخدم لهذا المجلد فقط</string>
 
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
-    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s into the Recycle Bin?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
-    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item in the Recycle Bin?</string>
-    <string name="do_not_ask_again">Do not ask again in this session</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="proceed_with_deletion">هل أنت متأكد من أنك تريد متابعة الحذف؟</string>
+    <string name="deletion_confirmation">هل أنت متأكد من أنك تريد حذف %s؟</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">هل أنت متأكد من أنك تريد نقل %s إلى "سلة المحذوفات"؟</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">هل أنت متأكد أنك تريد حذف هذا العنصر؟</string>
+    <string name="are_you_sure_recycle_bin">هل أنت متأكد من أنك تريد نقل هذا العنصر في سلة المحذوفات؟</string>
+    <string name="do_not_ask_again">لا تسأل مرة أخرى في هذه الدورة</string>
+    <string name="yes">نعم</string>
+    <string name="no">كلا</string>
 
     <plurals name="delete_warning">
         <item quantity="one">WARNING: You are deleting %d folder</item>
@@ -269,33 +266,38 @@
     <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
 
     <!-- Times -->
-    <string name="yesterday">Yesterday</string>
-    <string name="today">Today</string>
-    <string name="tomorrow">Tomorrow</string>
-    <string name="seconds_raw">seconds</string>
-    <string name="minutes_raw">minutes</string>
-    <string name="hours_raw">hours</string>
-    <string name="days_raw">days</string>
+    <string name="yesterday">الأمس</string>
+    <string name="today">اليوم</string>
+    <string name="tomorrow">غداً</string>
+    <string name="seconds_raw">ثواني</string>
+    <string name="minutes_raw">دقائق</string>
+    <string name="hours_raw">ساعات</string>
+    <string name="days_raw">أيام</string>
 
     <plurals name="seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">ثانية</item>
+        <item quantity="two">ثانيتان</item>
+        <item quantity="other">%d ثوان</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">دقيقة</item>
+        <item quantity="two">دقيقتان</item>
+        <item quantity="other">%d دقائق</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">ساعة</item>
+        <item quantity="two">ساعتان</item>
+        <item quantity="other">%d ساعات</item>
     </plurals>
     <plurals name="days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">يوم</item>
+        <item quantity="two">يومان</item>
+        <item quantity="other">%d أيام</item>
     </plurals>
     <plurals name="weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">أسبوع</item>
+        <item quantity="two">أسبوعان</item>
+        <item quantity="other">%d أسابيع</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d month</item>
@@ -313,35 +315,37 @@
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d minute</item>
+        <item quantity="two">دقيقتان</item>
         <item quantity="other">%d minutes</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">ساعة</item>
+        <item quantity="other">ساعتان</item>
+        <item quantity="other">%d ساعات</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d second before</item>
-        <item quantity="other">%d seconds before</item>
+        <item quantity="one">ثانية واحدة قبل</item>
+        <item quantity="other">%d ثوان قبل</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">%d minute before</item>
-        <item quantity="other">%d minutes before</item>
+        <item quantity="one">دقيقة واحدة قبل</item>
+        <item quantity="other">%d دقائق قبل</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">%d hour before</item>
-        <item quantity="other">%d hours before</item>
+        <item quantity="one">ساعة واحدة قبل</item>
+        <item quantity="other">%d ساعات قبل</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">%d day before</item>
-        <item quantity="other">%d days before</item>
+        <item quantity="one">يوم واحد قبل</item>
+        <item quantity="other">%d أيام قبل</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">ثانية واحدة</item>
+        <item quantity="other">%d ثوان</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minute</item>
@@ -353,11 +357,11 @@
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
-    <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
-    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
-    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
+    <string name="alarm_goes_off_in">الوقت المتبقي حتى ينطفئ المنبه:\n%s</string>
+    <string name="reminder_triggers_in">الوقت المتبقي حتى يطلق التذكير:\n%s</string>
+    <string name="alarm_warning">يرجى التأكد من أن التنبيه يعمل بشكل صحيح قبل الاعتماد عليه. يمكن أن لا يعمل بالشكل المطلوب بسبب قيود النظام المتعلقة بتوفير البطارية.</string>
+    <string name="reminder_warning">يرجى التأكد من أن التذكيرات تعمل بشكل صحيح قبل الاعتماد عليها. يمكن أن لا تعمل بالشكل المطلوب بسبب قيود النظام المتعلقة بتوفير البطارية.</string>
+    <string name="notifications_disabled">إشعارات هذا التطبيق معطلة. يرجى الدخول إلى إعدادات جهازك لتفعيلها.</string>
 
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
@@ -371,17 +375,17 @@
     <string name="no_sound">No sound</string>
 
     <!-- Settings -->
-    <string name="settings">Settings</string>
+    <string name="settings">الإعدادات</string>
     <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
-    <string name="customize_colors">Customize colors</string>
-    <string name="customize_widget_colors">Customize widget colors</string>
-    <string name="use_english_language">Use English language</string>
-    <string name="show_hidden_items">Show hidden items</string>
-    <string name="font_size">Font size</string>
-    <string name="small">Small</string>
-    <string name="medium">Medium</string>
-    <string name="large">Large</string>
-    <string name="extra_large">Extra large</string>
+    <string name="customize_colors">تخصيص الألوان</string>
+    <string name="customize_widget_colors">تخصيص ألوان Widget</string>
+    <string name="use_english_language">إستخدام اللغة الإنكليزية</string>
+    <string name="show_hidden_items">عرض العناصر المخفية</string>
+    <string name="font_size">حجم الخط</string>
+    <string name="small">صغير</string>
+    <string name="medium">متوسط</string>
+    <string name="large">كبير</string>
+    <string name="extra_large">كبير جداً</string>
     <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
     <string name="password_protect_whole_app">Password protect the whole application</string>
     <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
@@ -427,15 +431,15 @@
     </plurals>
 
     <!-- Import / Export -->
-    <string name="importing">Importing…</string>
-    <string name="exporting">Exporting…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing">استيراد ...</string>
+    <string name="exporting">تصدير ...</string>
+    <string name="importing_successful">نجت عملية الإستيراد</string>
+    <string name="exporting_successful">نجحت عملية التصدير</string>
+    <string name="importing_failed">فشلت عملية الإستيراد</string>
+    <string name="exporting_failed">فشلت عملية التصدير</string>
+    <string name="importing_some_entries_failed">فشل استيراد بعض المدخلات</string>
+    <string name="exporting_some_entries_failed">فشل تصدير بعض المدخلات</string>
+    <string name="no_entries_for_exporting">لم يتم العثور على مدخلات للتصدير</string>
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
@@ -479,19 +483,19 @@
     <string name="saturday">السبت</string>
     <string name="sunday">الأحد</string>
 
-    <string name="monday_letter">إ</string>
+    <string name="monday_letter">ن</string>
     <string name="tuesday_letter">ث</string>
-    <string name="wednesday_letter">أ</string>
+    <string name="wednesday_letter">ر</string>
     <string name="thursday_letter">خ</string>
     <string name="friday_letter">ج</string>
     <string name="saturday_letter">س</string>
-    <string name="sunday_letter">أ</string>
+    <string name="sunday_letter">ح</string>
 
-    <string name="monday_short">إثن</string>
-    <string name="tuesday_short">ثلا</string>
-    <string name="wednesday_short">أرب</string>
-    <string name="thursday_short">خمي</string>
-    <string name="friday_short">جمع</string>
+    <string name="monday_short">إثنين</string>
+    <string name="tuesday_short">ثلاثاء</string>
+    <string name="wednesday_short">أربعاء</string>
+    <string name="thursday_short">خميس</string>
+    <string name="friday_short">جمعة</string>
     <string name="saturday_short">سبت</string>
     <string name="sunday_short">أحد</string>
 
@@ -503,7 +507,7 @@
     <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
 
     <!-- About -->
-    <string name="about">About</string>
+    <string name="about">حول البرنامج</string>
     <string name="website_label">For the source codes visit</string>
     <string name="email_label">Send your feedback or suggestions to</string>
     <string name="upgrade_to_pro">Upgrade to Pro</string>
@@ -589,3 +593,4 @@
     <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
     <string name="filters_title">Android Photo Filters (image filters)</string>
 </resources>
+
