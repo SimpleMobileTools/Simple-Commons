@@ -6,8 +6,8 @@
     <string name="invalid_file_format">Недопустимый формат файла</string>
     <string name="out_of_memory_error">Память переполнена</string>
     <string name="an_error_occurred">Произошла ошибка: %s</string>
-    <string name="open_with">Открыть в</string>
-    <string name="edit_with">Редактировать в</string>
+    <string name="open_with">Открыть в…</string>
+    <string name="edit_with">Редактировать в…</string>
     <string name="no_app_found">Приложение не найдено</string>
     <string name="set_as">Установить как</string>
     <string name="value_copied_to_clipboard">Значение скопировано в буфер обмена</string>
@@ -103,7 +103,7 @@
     <string name="file_already_exists_overwrite">Файл \"%s\" уже существует. Перезаписать?</string>
     <string name="folder_already_exists">Папка \"%s\" уже существует</string>
     <string name="merge">Объединить</string>
-    <string name="keep_both">Keep both</string>
+    <string name="keep_both">Оставить оба</string>
     <string name="overwrite">Перезаписать</string>
     <string name="skip">Пропустить</string>
     <string name="append">Добавить \"_1\" к имени</string>
@@ -406,7 +406,7 @@
     <string name="password_protect_hidden_items">Защита паролем отображения скрытых объектов</string>
     <string name="password_protect_whole_app">Защита паролем всего приложения</string>
     <string name="password_protect_file_deletion">Защита паролем удаления и перемещения файлов</string>
-    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
+    <string name="keep_last_modified">Не обновлять время последнего изменения при файловых операциях</string>
     <string name="show_info_bubble">Показывать информационное окно при прокрутке элементов перетаскиванием полосы прокрутки</string>
     <string name="prevent_phone_from_sleeping">Предотвращать засыпание устройства, пока приложение находится на переднем плане</string>
     <string name="skip_delete_confirmation">Пропускать диалог подтверждения удаления</string>
