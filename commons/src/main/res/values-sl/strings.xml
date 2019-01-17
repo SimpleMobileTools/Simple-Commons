@@ -7,6 +7,7 @@
     <string name="out_of_memory_error">Premalo pomnilnika!</string>
     <string name="an_error_occurred">Prišlo je do napake: %s</string>
     <string name="open_with">Odpri z</string>
+    <string name="edit_with">Uredi z</string>
     <string name="no_app_found">Ni veljavne aplikacije</string>
     <string name="set_as">Nastavi kot</string>
     <string name="value_copied_to_clipboard">Vrednost kopirana v odložišče</string>
@@ -425,7 +426,7 @@
     <string name="password_protect_hidden_items">Zaščiti skrite elemete z geslom</string>
     <string name="password_protect_whole_app">Z geslom zaščiti celotno aplikacijo</string>
     <string name="password_protect_file_deletion">Z geslom zaščiti brisanje in premikanje datotek</string>
-    <string name="keep_last_modified">Ohrani stari čas zadnje spremembe pri kopiranju, premikanju in preimenovanju</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Prikaži info mehurček pri premikanju drsnika</string>
     <string name="prevent_phone_from_sleeping">Prepreči prehod v stanje mirovanja, dokler je aplikacija v ospredju</string>
     <string name="skip_delete_confirmation">Vedno preskoči potrditev brisanja</string>

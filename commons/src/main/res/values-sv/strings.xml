@@ -7,6 +7,7 @@
     <string name="out_of_memory_error">Minnet är fullt</string>
     <string name="an_error_occurred">Ett fel har uppstått: %s</string>
     <string name="open_with">Öppna med</string>
+    <string name="edit_with">Redigera med</string>
     <string name="no_app_found">Ingen giltig app hittades</string>
     <string name="set_as">Använd som</string>
     <string name="value_copied_to_clipboard">Värdet har kopierats till Urklipp</string>
@@ -384,7 +385,7 @@
     <string name="password_protect_hidden_items">Lösenordsskydda synligheten för dolda objekt</string>
     <string name="password_protect_whole_app">Lösenordsskydda hela appen</string>
     <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
-    <string name="keep_last_modified">Behåll senast ändrad-tider när filer kopieras, flyttas eller får nya namn</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Visa en informationsbubbla när jag rullar genom objekt genom att dra rullningslisten</string>
     <string name="prevent_phone_from_sleeping">Hindra aktivering av viloläge när appen körs i förgrunden</string>
     <string name="skip_delete_confirmation">Hoppa alltid över dialogrutan för bekräftelse av borttagning</string>

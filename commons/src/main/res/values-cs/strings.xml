@@ -7,6 +7,7 @@
     <string name="out_of_memory_error">Zařízení nemá dostatek paměti</string>
     <string name="an_error_occurred">Vyskytla se chyba: %s</string>
     <string name="open_with">Otevřít pomocí</string>
+    <string name="edit_with">Upravit s</string>
     <string name="no_app_found">Nebyla nalezena žádná vhodná aplikace</string>
     <string name="set_as">Nastavit jako</string>
     <string name="value_copied_to_clipboard">Value copied to clipboard</string>
@@ -401,7 +402,7 @@
     <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
     <string name="password_protect_whole_app">Password protect the whole application</string>
     <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
-    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
     <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>

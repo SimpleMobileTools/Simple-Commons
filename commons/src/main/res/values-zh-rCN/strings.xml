@@ -7,6 +7,7 @@
     <string name="out_of_memory_error">内存不足</string>
     <string name="an_error_occurred">啊哦，出错啦： %s</string>
     <string name="open_with">打开方式</string>
+    <string name="edit_with">编辑方式</string>
     <string name="no_app_found">未找到可用应用</string>
     <string name="set_as">设置为</string>
     <string name="value_copied_to_clipboard">颜色值已复制到剪贴板</string>
@@ -384,7 +385,7 @@
     <string name="password_protect_hidden_items">使用密码保护隐藏项</string>
     <string name="password_protect_whole_app">使用密码保护本应用</string>
     <string name="password_protect_file_deletion">使用密码保护文件删除和移动</string>
-    <string name="keep_last_modified">在复制/移动/重命名文件时保留旧的修改日期</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">拖动滚动条时在滚动项目旁显示一个信息气泡</string>
     <string name="prevent_phone_from_sleeping">阻止设备自动休眠</string>
     <string name="skip_delete_confirmation">忽略删除确认对话框</string>

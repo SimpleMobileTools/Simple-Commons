@@ -10,11 +10,13 @@ import android.media.MediaMetadataRetriever
 import android.os.Build
 import android.text.Spannable
 import android.text.SpannableString
+import android.text.TextUtils
 import android.text.style.ForegroundColorSpan
 import com.simplemobiletools.commons.helpers.*
 import java.text.Normalizer
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.regex.Pattern
 
 fun String.getFilenameFromPath() = substring(lastIndexOf("/") + 1)
 
@@ -240,7 +242,7 @@ fun String.substringTo(cnt: Int): String {
     }
 }
 
-fun String.highlightTextPart(textToHighlight: String, color: Int, highlightAll: Boolean = false): SpannableString {
+fun String.highlightTextPart(textToHighlight: String, color: Int, highlightAll: Boolean = false, ignoreCharsBetweenDigits: Boolean = false): SpannableString {
     val spannableString = SpannableString(this)
     if (textToHighlight.isEmpty()) {
         return spannableString
@@ -257,6 +259,21 @@ fun String.highlightTextPart(textToHighlight: String, color: Int, highlightAll: 
         if (!highlightAll) {
             break
         }
+    }
+
+    // handle cases when we search for 643, but in reality the string contains it like 6-43
+    if (ignoreCharsBetweenDigits && indexes.isEmpty()) {
+        val regex = TextUtils.join("(\\D*)", textToHighlight.toCharArray().toTypedArray())
+        val pattern = Pattern.compile(regex)
+        val result = pattern.matcher(normalizeString())
+        if (result.find()) {
+            try {
+                spannableString.setSpan(ForegroundColorSpan(color), result.start(), result.end(), Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+            } catch (ignored: Exception) {
+            }
+        }
+
+        return spannableString
     }
 
     indexes.forEach {

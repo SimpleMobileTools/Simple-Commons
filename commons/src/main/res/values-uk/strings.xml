@@ -1,0 +1,591 @@
+<resources>
+    <string name="ok">OK</string>
+    <string name="cancel">Скасувавти</string>
+    <string name="save_as">Зберегти як</string>
+    <string name="file_saved">Файл успішно збережено</string>
+    <string name="invalid_file_format">Недопустимий формат файлу</string>
+    <string name="out_of_memory_error">Недостатньо пам\'яті</string>
+    <string name="an_error_occurred">Сталася помилка: %s</string>
+    <string name="open_with">Відкрити за допомогою</string>
+    <string name="edit_with">Редагувати за допомогою</string>
+    <string name="no_app_found">Не знайдено допустимих додатків</string>
+    <string name="set_as">Встановити як</string>
+    <string name="value_copied_to_clipboard">Значення скопійовано у буфер обміну</string>
+    <string name="unknown">Невідомо</string>
+    <string name="always">Завжди</string>
+    <string name="never">Ніколи</string>
+    <string name="details">Подробиці</string>
+    <string name="notes">Нотатки</string>
+    <string name="deleting_folder">Видалення теки \'%s\'</string>
+    <string name="none">Нічого</string>
+    <string name="label">Позначка</string>
+    <string name="transparent">Прозорий</string>
+    <string name="transparent_color">Колір прозорості</string>
+    <string name="select_a_different_color">Обрати інший колір</string>
+
+    <!-- Favorites -->
+    <string name="favorites">Улюблене</string>
+    <string name="add_favorites">Додати улюблене</string>
+    <string name="add_to_favorites">Додати до улюбленого</string>
+    <string name="remove_from_favorites">Видалити з улюбленого</string>
+
+    <!-- Search -->
+    <string name="search">Пошук</string>
+    <string name="type_2_characters">Введіть принаймні 2 символи, щоб почати пошук.</string>
+
+    <!-- Filters -->
+    <string name="filter">Фільтр</string>
+    <string name="no_items_found">Нічого не знайдено.</string>
+    <string name="change_filter">Змінити фільтр</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Необхідний дозвіл на доступ до внутрішньої пам\'яті</string>
+    <string name="no_contacts_permission">Необхідний дозвіл на доступ до контактів</string>
+    <string name="no_camera_permissions">Необхідний дозвіл на доступ до камери</string>
+    <string name="no_audio_permissions">Необхідний дозвіл на доступ до аудіо</string>
+
+    <!-- Renaming -->
+    <string name="rename_file">Перейменувати файл</string>
+    <string name="rename_folder">Перейменувати теку</string>
+    <string name="rename_file_error">Не вдалося перейментувати файл</string>
+    <string name="rename_folder_error">Не вдалося перейментувати теку</string>
+    <string name="rename_folder_empty">Ім\'я теки не може бути порожнім</string>
+    <string name="rename_folder_exists">Тека з таким іменем вже існує</string>
+    <string name="rename_folder_root">Не можна перейменувати кореневу теку внутрішньої пам\'яті</string>
+    <string name="rename_folder_ok">Теку успішно перейменовано</string>
+    <string name="renaming_folder">Перейменування теки</string>
+    <string name="filename_cannot_be_empty">Ім\'я файлу не може бути порожнім</string>
+    <string name="filename_invalid_characters">Ім\'я файлу містить недопустимі символи</string>
+    <string name="filename_invalid_characters_placeholder">Ім\'я файлу \'%s\' містить недопустимі символи</string>
+    <string name="extension_cannot_be_empty">Розширення не може бути порожнім</string>
+    <string name="source_file_doesnt_exist">Вихідний файл %s не існує</string>
+    <string name="prepend_filenames">Префікс імен файлів</string>
+    <string name="append_filenames">Суфікс імен файлів (перед розширенням)</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">Копіювати</string>
+    <string name="move">Перемістити</string>
+    <string name="copy_move">Копіювати / Перемістити</string>
+    <string name="copy_to">Копіювати до</string>
+    <string name="move_to">Перемістити до</string>
+    <string name="source">Джерело</string>
+    <string name="destination">Місце призначення</string>
+    <string name="select_destination">Обрати місце призначення</string>
+    <string name="click_select_destination">Натисніть тут, щоб обрати місце призначення</string>
+    <string name="invalid_destination">Не вдалося записати в обране місце призначення</string>
+    <string name="please_select_destination">Оберіть місце призначення</string>
+    <string name="source_and_destination_same">Джерело та місце призначення не можуть співпадати</string>
+    <string name="copy_failed">Не вдалося скопіювати файли</string>
+    <string name="copying">Копіювання…</string>
+    <string name="copying_success">Файли успішно скопійовано</string>
+    <string name="copy_move_failed">Сталася помилка</string>
+    <string name="moving">Переміщення…</string>
+    <string name="moving_success">Файли успішно переміщено</string>
+    <string name="moving_success_partial">Деякі файли не можуть бути переміщені</string>
+    <string name="copying_success_partial">Деякі файли не можуть бути скопійовані</string>
+    <string name="no_files_selected">Не обрано жодного файлу</string>
+    <string name="saving">Збереження…</string>
+    <string name="could_not_create_folder">Не вдалося створити теку %s</string>
+    <string name="could_not_create_file">Не вдалося створити файл %s</string>
+
+    <!-- Create new -->
+    <string name="create_new">Створити новий</string>
+    <string name="folder">Теку</string>
+    <string name="file">Файл</string>
+    <string name="create_new_folder">Створити нову теку</string>
+    <string name="name_taken">Файл або тека з таким іменем вже існує</string>
+    <string name="invalid_name">Ім\'я містить недопустимі символи</string>
+    <string name="empty_name">Введіть ім\'я</string>
+    <string name="unknown_error_occurred">Сталася невідома помилка</string>
+
+    <!-- File operation conflicts -->
+    <string name="file_already_exists">Файл \"%s\" вже існує</string>
+    <string name="file_already_exists_overwrite">Файл \"%s\" вже існує. Перезаписати?</string>
+    <string name="folder_already_exists">Тека \"%s\" вже існує</string>
+    <string name="merge">Об\'єднати</string>
+    <string name="keep_both">Зберегти обидва</string>
+    <string name="overwrite">Перезаписати</string>
+    <string name="skip">Пропустити</string>
+    <string name="append">Додати \'_1\' в кінець</string>
+    <string name="apply_to_all">Застосувати до усіх</string>
+
+    <!-- File picker -->
+    <string name="select_folder">Обрати теку</string>
+    <string name="select_file">Обрати файл</string>
+    <string name="confirm_storage_access_title">Підтвердити дозвіл на доступ до зовнішньої пам\'яті</string>
+    <string name="confirm_storage_access_text">Щоб надати доступ на запис, оберіть кореневу теку SD-карти на наступному екрані</string>
+    <string name="confirm_storage_access_text_sd">Якщо ви не бачите SD-карту, спробуйте це</string>
+    <string name="confirm_selection">Confirm selection</string>
+
+    <plurals name="items">
+        <item quantity="one">%d елемент</item>
+        <item quantity="other">%d елементів</item>
+    </plurals>
+
+    <!-- Are you sure you want to delete 5 items? -->
+    <plurals name="delete_items">
+        <item quantity="one">%d елемент</item>
+        <item quantity="other">%d елементів</item>
+    </plurals>
+
+    <plurals name="deleting_items">
+        <item quantity="one">Видалення %d елементу</item>
+        <item quantity="other">Видалення %d елементів</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">Обрати пам\'ять</string>
+    <string name="internal">Внутрішня</string>
+    <string name="sd_card">SD-карта</string>
+    <string name="root">Корінь</string>
+    <string name="wrong_root_selected">Обрано невірну теку. Оберіть кореневу теку вашої SD-карти</string>
+    <string name="sd_card_usb_same">Шляхи до SD-карти та USB-пристрою не можуть співпадати</string>
+    <string name="app_on_sd_card">Схоже, ви встановили додаток на SD-карту, що робить віджети додатку недоступними. Ви навіть не побачите їх у списку доступних віджетів.
+        Це обмеження системи, тож якщо ви хочете використовувати віджети, вам треба перемістити додаток до внутрішньої пам\'яті.</string>
+
+    <!-- File properties -->
+    <string name="properties">Властивості</string>
+    <string name="path">Шлях</string>
+    <string name="items_selected">Обрані елементи</string>
+    <string name="direct_children_count">Кількість вкладених елементів</string>
+    <string name="files_count">Загальна кількість файлів</string>
+    <string name="resolution">Роздільна здатність</string>
+    <string name="duration">Тривалість</string>
+    <string name="artist">Виконавець</string>
+    <string name="album">Альбом</string>
+    <string name="focal_length">Фокальна відстань</string>
+    <string name="exposure_time">Час експозиції</string>
+    <string name="iso_speed">Швидкість ISO</string>
+    <string name="f_number">F-номер</string>
+    <string name="camera">Камера</string>
+    <string name="exif">EXIF</string>
+    <string name="song_title">Назва пісні</string>
+
+    <!-- Color customization -->
+    <string name="background_color">Колір фону</string>
+    <string name="text_color">Колір тексту</string>
+    <string name="primary_color">Первинний колір</string>
+    <string name="foreground_color">Колір переднього плану</string>
+    <string name="app_icon_color">Колір піктограми додатку</string>
+    <string name="bottom_navigation_bar_color">Колір нижньої навігаційної панелі</string>
+    <string name="restore_defaults">Відновити замовчування</string>
+    <string name="change_color">Змінити колір</string>
+    <string name="theme">Тема</string>
+    <string name="changing_color_description">Зміна кольору увімкне Користувацьку тему</string>
+    <string name="save">Зберегти</string>
+    <string name="discard">Відмовитися</string>
+    <string name="undo_changes">Скасувати зміни</string>
+    <string name="undo_changes_confirmation">Ви впевнені, що хочете скасувати зміни?</string>
+    <string name="save_before_closing">Ви маєте незбережені зміни. Зберегти перед виходом?</string>
+    <string name="apply_to_all_apps">Застосувати кольори до усіх додатків Simple Apps</string>
+    <string name="app_icon_color_warning">УВАГА: Деякі лончери некоректно опрацьовують зміну піктограми додатків. Якщо піктограма додатку зникне, спробуйте запустити його через Google Play або віджет, якщо доступний.
+        Після запуску просто поверніть колір піктограми за-замовчуванням: #F57C00. У найгіршому випадку вам доведеться перевстановити додаток.</string>
+    <string name="share_colors_success">Кольори успішно оновлено. Було додано нову тему під назвою \'Загальна\', використовуйте її для оновлення кольорів усіх додатків у майбутньому.</string>
+    <string name="purchase_thank_you">
+        <![CDATA[
+            Будь ласка, придбайте <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, щоб розблокувати цю функцію і підтримати розробку. Дякую!
+        ]]>
+    </string>
+
+    <!-- Themes -->
+    <string name="light_theme">Світла</string>
+    <string name="dark_theme">Темна</string>
+    <string name="solarized">Солярис</string>
+    <string name="dark_red">Темно-червоний</string>
+    <string name="black_white">Чорний &amp; Білий</string>
+    <string name="custom">Користувацька</string>
+    <string name="shared">Загальна</string>
+
+    <!-- What's new -->
+    <string name="whats_new">Що нового</string>
+    <string name="whats_new_disclaimer">* тут перераховані тільки великі оновлення, але завжди є менші покращення</string>
+
+    <!-- Actionbar items -->
+    <string name="delete">Видалити</string>
+    <string name="remove">Видалити</string>
+    <string name="rename">Перейменувати</string>
+    <string name="share">Поділитися</string>
+    <string name="share_via">Поділитися через</string>
+    <string name="select_all">Обрати все</string>
+    <string name="hide">Приховати</string>
+    <string name="unhide">Показати</string>
+    <string name="hide_folder">Приховати теку</string>
+    <string name="unhide_folder">Показати теку</string>
+    <string name="temporarily_show_hidden">Тимчасово показати приховане</string>
+    <string name="stop_showing_hidden">Припинити показ прихованих медіа</string>
+    <string name="maximum_share_reached">Не можна поширити так багато контенту за раз</string>
+    <string name="empty_and_disable_recycle_bin">Спорожнити та вимкнути Кошик</string>
+    <string name="undo">Повернути</string>
+    <string name="redo">Повторити</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">Сортувати за</string>
+    <string name="name">ім\'ям</string>
+    <string name="size">розміром</string>
+    <string name="last_modified">останньою зміною</string>
+    <string name="date_taken">датою зйомки</string>
+    <string name="title">заголовком</string>
+    <string name="filename">ім\'ям файлу</string>
+    <string name="extension">розширенням</string>
+    <string name="random">випадково</string>
+    <string name="sort_randomly">Сортувати випадково</string>
+    <string name="ascending">за зростанням</string>
+    <string name="descending">за спаданням</string>
+    <string name="use_for_this_folder">Використовувати тільки для цієї теки</string>
+
+    <!-- Confirmation dialog -->
+    <string name="proceed_with_deletion">Ви впевнені, що хочете продовжити видалення?</string>
+    <string name="deletion_confirmation">Ви впевнені, що хочете видалити %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Ви впевнені, що хочете перемістити %s у Кошик?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">Ви впевнені, що хочете видалити цей елемент?</string>
+    <string name="are_you_sure_recycle_bin">Ви впевнені, що хочете перемістити цей елемент у Кошик?</string>
+    <string name="do_not_ask_again">Більше не питати у цій сесії</string>
+    <string name="yes">Так</string>
+    <string name="no">Ні</string>
+
+    <plurals name="delete_warning">
+        <item quantity="one">УВАГА: Ви видаляєте %d теку</item>
+        <item quantity="other">УВАГА: Ви видаляєте %d тек</item>
+    </plurals>
+
+    <!-- Password protection -->
+    <string name="pin">PIN</string>
+    <string name="enter_pin">Введіть PIN</string>
+    <string name="please_enter_pin">Будь ласка, введіть PIN</string>
+    <string name="wrong_pin">Невірний PIN</string>
+    <string name="repeat_pin">Повторіть PIN</string>
+    <string name="pattern">Шаблон</string>
+    <string name="insert_pattern">Вставити шаблон</string>
+    <string name="wrong_pattern">Невірний шаблон</string>
+    <string name="repeat_pattern">Повторіть шаблон</string>
+    <string name="fingerprint">Відбиток пальця</string>
+    <string name="add_fingerprint">Додати відбиток пальця</string>
+    <string name="place_finger">Помістіть ваш палець на сканер відбитку пальця</string>
+    <string name="authentication_failed">Помилка автентифікації</string>
+    <string name="authentication_blocked">Автентифікацію заблоковано, спробуйте це раз</string>
+    <string name="no_fingerprints_registered">У вас немає зареєстрованих відбитків пальця, додайте їх у Налаштуваннях вашого пристрою</string>
+    <string name="go_to_settings">Перейти до Налаштувань</string>
+    <string name="protection_setup_successfully">Пароль успішно встановлено. Якщо ви його забудете, перевстановіть додаток.</string>
+    <string name="fingerprint_setup_successfully">Захист успішно встановлено. При проблемах з його скиданням перевстановіть додаток.</string>
+
+    <!-- Times -->
+    <string name="yesterday">Вчора</string>
+    <string name="today">Сьогодні</string>
+    <string name="tomorrow">Завтра</string>
+    <string name="seconds_raw">секунд</string>
+    <string name="minutes_raw">хвилин</string>
+    <string name="hours_raw">годин</string>
+    <string name="days_raw">днів</string>
+
+    <plurals name="seconds">
+        <item quantity="one">%d секунда</item>
+        <item quantity="other">%d секунд</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%d хвилина</item>
+        <item quantity="other">%d хвилин</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d година</item>
+        <item quantity="other">%d годин</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d день</item>
+        <item quantity="other">%d днів</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d тиждень</item>
+        <item quantity="other">%d тижнів</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d місяць</item>
+        <item quantity="other">%d місяців</item>
+    </plurals>
+    <plurals name="years">
+        <item quantity="one">%d рік</item>
+        <item quantity="other">%d років</item>
+    </plurals>
+
+    <!-- For example: I will be there in 5 minutes -->
+    <plurals name="in_seconds">
+        <item quantity="one">%d секунду</item>
+        <item quantity="other">%d секунд</item>
+    </plurals>
+    <plurals name="in_minutes">
+        <item quantity="one">%d хвилину</item>
+        <item quantity="other">%d хвилин</item>
+    </plurals>
+    <plurals name="in_hours">
+        <item quantity="one">%d годину</item>
+        <item quantity="other">%d годин</item>
+    </plurals>
+
+    <!-- For example: Event reminder: 3 minutes before -->
+    <plurals name="seconds_before">
+        <item quantity="one">за %d секунду</item>
+        <item quantity="other">за %d секунд</item>
+    </plurals>
+    <plurals name="minutes_before">
+        <item quantity="one">за %d хвилину</item>
+        <item quantity="other">за %d хвилин</item>
+    </plurals>
+    <plurals name="hours_before">
+        <item quantity="one">за %d годину</item>
+        <item quantity="other">за %d годин</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">за %d день</item>
+        <item quantity="other">за %d днів</item>
+    </plurals>
+
+    <!-- For example: Postpone reminder by 3 minutes -->
+    <plurals name="by_seconds">
+        <item quantity="one">%d секунду</item>
+        <item quantity="other">%d секунд</item>
+    </plurals>
+    <plurals name="by_minutes">
+        <item quantity="one">%d хвилину</item>
+        <item quantity="other">%d хвилин</item>
+    </plurals>
+    <plurals name="by_hours">
+        <item quantity="one">%d годину</item>
+        <item quantity="other">%d годин</item>
+    </plurals>
+
+    <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
+    <string name="alarm_goes_off_in">Час до того, як будильник вимкнеться:\n%s</string>
+    <string name="reminder_triggers_in">Час до того, як спрацює нагадування:\n%s</string>
+    <string name="alarm_warning">Переконайтеся, що будильник працює коректно, перед тим, як на нього покладатися. Він може не спрацювати через системні обмеження, пов\'язані з економією заряду батареї.</string>
+    <string name="reminder_warning">Переконайтеся, що нагадування працюють коректно, перед тим, як на них покладатися. Вони можуть не спрацювати через системні обмеження, пов\'язані з економією заряду батареї.</string>
+    <string name="notifications_disabled">Сповіщення від цього додатка заборонені. Перейдіть до Налаштувань пристрою, щоб їх увімкнути.</string>
+
+    <!-- Alarms -->
+    <string name="alarm">Будіильник</string>
+    <string name="snooze">Відкласти</string>
+    <string name="dismiss">Відхилити</string>
+    <string name="no_reminder">Без нагадування</string>
+    <string name="at_start">При запуску</string>
+    <string name="system_sounds">Системні звуки</string>
+    <string name="your_sounds">Ваші звуки</string>
+    <string name="add_new_sound">Додати новий звук</string>
+    <string name="no_sound">Без звуку</string>
+
+    <!-- Settings -->
+    <string name="settings">Налаштування</string>
+    <string name="purchase_simple_thank_you">Придбати Simple Thank You</string>
+    <string name="customize_colors">Налаштувати кольори</string>
+    <string name="customize_widget_colors">Налаштувати кольори віджету</string>
+    <string name="use_english_language">Використовувати англійську (Use English language)</string>
+    <string name="show_hidden_items">Показати приховані елементи</string>
+    <string name="font_size">Розмір шрифту</string>
+    <string name="small">Малий</string>
+    <string name="medium">Середній</string>
+    <string name="large">Великий</string>
+    <string name="extra_large">Надвеликий</string>
+    <string name="password_protect_hidden_items">Захистити паролем видимість прихованих елементів</string>
+    <string name="password_protect_whole_app">Захистити паролем весь додаток</string>
+    <string name="password_protect_file_deletion">Захистити паролем видалення та переміщення файлів</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
+    <string name="show_info_bubble">Показувати інфополе при прокручуванні елементів смугою прокрутки</string>
+    <string name="prevent_phone_from_sleeping">Запобігати засинанню телефона, поки додаток на передньому плані</string>
+    <string name="skip_delete_confirmation">Завжди пропускати діалог підтвердження видалення</string>
+    <string name="enable_pull_to_refresh">Увімкнути оновлення свайпом згори вниз</string>
+    <string name="use_24_hour_time_format">Використовувати 24-годинний формат дати</string>
+    <string name="sunday_first">Починати тиждень з неділі</string>
+    <string name="widgets">Віджети</string>
+    <string name="use_same_snooze">Завжди використовувати однаковий час відкладання</string>
+    <string name="snooze_time">Час відкладання</string>
+    <string name="vibrate_on_button_press">Вібрація при натисканні на кнопки</string>
+    <string name="move_items_into_recycle_bin">Переміщувати елементи у Кошик замість видалення</string>
+    <string name="recycle_bin_cleaning_interval">Інтервал очищення Кошика</string>
+    <string name="empty_recycle_bin">Очистити Кошик</string>
+    <string name="force_portrait_mode">Примусовий портретний режим</string>
+
+    <!-- Setting sections -->
+    <string name="visibility">Visibility</string>
+    <string name="security">Security</string>
+    <string name="scrolling">Scrolling</string>
+    <string name="file_operations">File operations</string>
+    <string name="recycle_bin">Recycle Bin</string>
+    <string name="saving_label">Saving</string>
+    <string name="startup">Startup</string>
+    <string name="text">Text</string>
+
+    <!-- Recycle Bin -->
+    <string name="restore_this_file">Restore this file</string>
+    <string name="restore_selected_files">Restore selected files</string>
+    <string name="restore_all_files">Restore all files</string>
+    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
+    <string name="files_restored_successfully">Files have been restored successfully</string>
+    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
+    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
+    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
+
+    <plurals name="moving_items_into_bin">
+        <item quantity="one">Moving %d item into the Recycle Bin</item>
+        <item quantity="other">Moving %d items into the Recycle Bin</item>
+    </plurals>
+
+    <!-- Import / Export -->
+    <string name="importing">Importing…</string>
+    <string name="exporting">Exporting…</string>
+    <string name="importing_successful">Importing successful</string>
+    <string name="exporting_successful">Exporting successful</string>
+    <string name="importing_failed">Importing failed</string>
+    <string name="exporting_failed">Exporting failed</string>
+    <string name="importing_some_entries_failed">Importing some entries failed</string>
+    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
+    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+
+    <!-- OTG devices -->
+    <string name="usb">USB</string>
+    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="confirm_usb_storage_access_text">Please choose the root folder of the USB device on the next screen, to grant access</string>
+    <string name="wrong_root_selected_usb">Wrong folder selected, please select the root folder of your USB device</string>
+
+    <!-- Dates -->
+    <string name="january">January</string>
+    <string name="february">February</string>
+    <string name="march">March</string>
+    <string name="april">April</string>
+    <string name="may">May</string>
+    <string name="june">June</string>
+    <string name="july">July</string>
+    <string name="august">August</string>
+    <string name="september">September</string>
+    <string name="october">October</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
+
+    <!-- in January -->
+    <string name="in_january">in January</string>
+    <string name="in_february">in February</string>
+    <string name="in_march">in March</string>
+    <string name="in_april">in April</string>
+    <string name="in_may">in May</string>
+    <string name="in_june">in June</string>
+    <string name="in_july">in July</string>
+    <string name="in_august">in August</string>
+    <string name="in_september">in September</string>
+    <string name="in_october">in October</string>
+    <string name="in_november">in November</string>
+    <string name="in_december">in December</string>
+
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+
+    <string name="monday_letter">M</string>
+    <string name="tuesday_letter">T</string>
+    <string name="wednesday_letter">W</string>
+    <string name="thursday_letter">T</string>
+    <string name="friday_letter">F</string>
+    <string name="saturday_letter">S</string>
+    <string name="sunday_letter">S</string>
+
+    <string name="monday_short">Mon</string>
+    <string name="tuesday_short">Tue</string>
+    <string name="wednesday_short">Wed</string>
+    <string name="thursday_short">Thu</string>
+    <string name="friday_short">Fri</string>
+    <string name="saturday_short">Sat</string>
+    <string name="sunday_short">Sun</string>
+
+    <!-- Pro version -->
+    <string name="upgrade_to_pro_long">This version of the app is no longer maintained. Please upgrade to the Pro version.</string>
+    <string name="it_is_free">It is free till: %s. If you download it till then, you will be able to use it for free forever.</string>
+    <string name="more_info">More info</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
+
+    <!-- About -->
+    <string name="about">About</string>
+    <string name="website_label">For the source codes visit</string>
+    <string name="email_label">Send your feedback or suggestions to</string>
+    <string name="upgrade_to_pro">Upgrade to Pro</string>
+    <string name="more_apps_underlined"><u>More apps</u></string>
+    <string name="third_party_licences_underlined"><u>Third party licences</u></string>
+    <string name="invite_friends_underlined"><u>Invite friends</u></string>
+    <string name="share_text">Hey, come check out %1$s at %2$s</string>
+    <string name="invite_via">Invite via</string>
+    <string name="rate_us_underlined"><u>Rate us</u></string>
+    <string name="donate">Donate</string>
+    <string name="donate_underlined"><u>Donate</u></string>
+    <string name="follow_us">Follow us</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="additional_info">Additional info</string>
+    <string name="app_version">App version: %s</string>
+    <string name="device_os">Device OS: %s</string>
+    <string name="donate_please">
+        <![CDATA[
+            Hello,<br><br>
+            hope you are enjoying the app. It contains no ads, please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.<br><br>
+            Thank you!
+        ]]>
+    </string>
+    <string name="purchase">Purchase</string>
+    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
+    <string name="before_asking_question_read_faq">Before you ask a question, please read the Frequently Asked Questions first, maybe the solution is there.</string>
+    <string name="read_it">Read it</string>
+
+    <!-- New app (do not translate anything on the 4th line) -->
+    <string name="new_app">
+        <![CDATA[
+            Hey,<br><br>
+            just letting you know that a new app has been released recently:<br><br>
+            <a href="%1$s">%2$s</a><br><br>
+            You can download it by pressing the title.<br><br>
+            Thanks
+        ]]>
+    </string>
+
+    <!-- FAQ -->
+    <string name="frequently_asked_questions">Frequently asked questions</string>
+    <string name="before_asking_question">Before you ask a question, please first read the</string>
+    <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
+    <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
+        in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
+    <string name="faq_2_title_commons">I want to support you, but I cannot donate money. Is there anything else I can do?</string>
+    <string name="faq_2_text_commons">Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
+        You can find the guide at https://github.com/SimpleMobileTools/General-Discussion , or just shoot me a message at hello@simplemobiletools.com if you need help.</string>
+    <string name="faq_3_title_commons">I deleted some files by mistake, how can I recover them?</string>
+    <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, there is no trashbin available.</string>
+    <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
+    <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
+    <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
+    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them.</string>
+    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
+    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
+        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+
+    <!-- License -->
+    <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
+    <string name="third_party_licences">Third party licences</string>
+    <string name="kotlin_title">Kotlin (programming language)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
+    <string name="glide_title">Glide (image loading and caching)</string>
+    <string name="picasso_title">Picasso (image loading and caching)</string>
+    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
+    <string name="joda_title">Joda-Time (Java date replacement)</string>
+    <string name="stetho_title">Stetho (debugging databases)</string>
+    <string name="otto_title">Otto (event bus)</string>
+    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
+    <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
+    <string name="gson_title">Gson (JSON parser)</string>
+    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="number_picker_title">Number Picker (customizable number picker)</string>
+    <string name="exoplayer_title">ExoPlayer (video player)</string>
+    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
+    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
+    <string name="filters_title">Android Photo Filters (image filters)</string>
+</resources>

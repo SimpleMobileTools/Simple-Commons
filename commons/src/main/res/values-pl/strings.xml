@@ -7,6 +7,7 @@
     <string name="out_of_memory_error">Błąd pamięci</string>
     <string name="an_error_occurred">Wystąpił błąd: %s</string>
     <string name="open_with">Otwórz w</string>
+    <string name="edit_with">Edytuj w</string>
     <string name="no_app_found">Nie mogę znaleźć danych aplikacji</string>
     <string name="set_as">Ustaw jako</string>
     <string name="value_copied_to_clipboard">Wartość została skopiowana do schowka</string>
@@ -403,7 +404,7 @@
     <string name="password_protect_hidden_items">Chroń widoczność ukrytych plików</string>
     <string name="password_protect_whole_app">Chroń dostęp do aplikacji</string>
     <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
-    <string name="keep_last_modified">Zachowuj starą datę i czas modyfikacji przy kopiowaniu / przenoszeniu / zmianie nazwy plików</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
     <string name="prevent_phone_from_sleeping">Zapobiegaj przejściu urządzenia  w stan uśpienia gdy aplikacja jest aktywna</string>
     <string name="skip_delete_confirmation">Nie pokazuj okna z potwierdzeniem usunięcia elementów</string>

@@ -7,6 +7,7 @@
     <string name="out_of_memory_error">Došlo k chybe s nedostatkom pamäte</string>
     <string name="an_error_occurred">Došlo k chybe: %s</string>
     <string name="open_with">Otvoriť pomocou</string>
+    <string name="edit_with">Upraviť pomocou</string>
     <string name="no_app_found">Nenašla sa žiadna vhodná aplikácia</string>
     <string name="set_as">Nastaviť ako</string>
     <string name="value_copied_to_clipboard">Hodnota bola vložená do schránky</string>
@@ -405,7 +406,7 @@
     <string name="password_protect_hidden_items">Uzamknúť viditeľnosť skrytých položiek heslom</string>
     <string name="password_protect_whole_app">Uzamknúť heslom celú aplikáciu</string>
     <string name="password_protect_file_deletion">Uzamknúť heslom mazanie a presúvanie súborov</string>
-    <string name="keep_last_modified">Ponechať starú hodnotu naposledy-upravené pri kopírovaní/presúvaní/premenúvaní súborov</string>
+    <string name="keep_last_modified">Ponechať starú hodnotu naposledy-upravené pri súborových operáciách</string>
     <string name="show_info_bubble">Zobraziť informačnú bublinu pri prehliadaní položiek ťahaním posuvníka</string>
     <string name="prevent_phone_from_sleeping">Zabrániť uspaniu zariadenia kým je apka v popredí</string>
     <string name="skip_delete_confirmation">Stále preskočiť potvrdenie vymazania súborov</string>

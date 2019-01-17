@@ -215,7 +215,7 @@ fun Activity.setAsIntent(path: String, applicationId: String) {
     }.start()
 }
 
-fun Activity.openEditorIntent(path: String, applicationId: String) {
+fun Activity.openEditorIntent(path: String, forceChooser: Boolean, applicationId: String) {
     Thread {
         val newUri = getFinalUriFromPath(path, applicationId) ?: return@Thread
         Intent().apply {
@@ -240,7 +240,8 @@ fun Activity.openEditorIntent(path: String, applicationId: String) {
 
             if (resolveActivity(packageManager) != null) {
                 try {
-                    startActivityForResult(this, REQUEST_EDIT_IMAGE)
+                    val chooser = Intent.createChooser(this, getString(R.string.edit_with))
+                    startActivityForResult(if (forceChooser) chooser else this, REQUEST_EDIT_IMAGE)
                 } catch (e: SecurityException) {
                     showErrorToast(e)
                 }
@@ -260,7 +261,7 @@ fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: 
             setDataAndType(newUri, mimeType)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
-            if (applicationId == "com.simplemobiletools.gallery" || applicationId == "com.simplemobiletools.gallery.debug") {
+            if (applicationId == "com.simplemobiletools.gallery.pro" || applicationId == "com.simplemobiletools.gallery.pro.debug") {
                 putExtra(IS_FROM_GALLERY, true)
             }
 

@@ -7,6 +7,7 @@
     <string name="out_of_memory_error">Erreur : mémoire insuffisante</string>
     <string name="an_error_occurred">Une erreur est survenue : %s</string>
     <string name="open_with">Ouvrir avec</string>
+    <string name="edit_with">Modifier avec</string>
     <string name="no_app_found">Aucune application disponible</string>
     <string name="set_as">Définir en tant que</string>
     <string name="value_copied_to_clipboard">Valeur copiée dans le presse-papier</string>
@@ -386,7 +387,7 @@
     <string name="password_protect_hidden_items">Afficher les éléments protégés par mot de passe</string>
     <string name="password_protect_whole_app">Le mot de passe protège l\'ensemble de l\'application</string>
     <string name="password_protect_file_deletion">Protéger par mot de passe la suppression et le déplacement de fichiers</string>
-    <string name="keep_last_modified">Conserver la valeur de l\'ancienne modification lors de la copie, du déplacement ou du renommage du fichier</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Afficher une bulle d\'information des éléments lors de l\'utilisation de la barre de défilement</string>
     <string name="prevent_phone_from_sleeping">Ne pas mettre en veille tant que l\'application est active</string>
     <string name="skip_delete_confirmation">Ne jamais afficher le dialogue de confirmation de suppression</string>

@@ -7,6 +7,7 @@
     <string name="out_of_memory_error">메모리 부족 오류</string>
     <string name="an_error_occurred">에러발생: %s</string>
     <string name="open_with">연결 애플리케이션</string>
+    <string name="edit_with">이미지편집 프로그램 연결</string>
     <string name="no_app_found">연결 가능한 애플리케이션 없음</string>
     <string name="set_as">애플리케이션에 설정</string>
     <string name="value_copied_to_clipboard">클립보드에 복사됨</string>
@@ -384,7 +385,7 @@
     <string name="password_protect_hidden_items">숨김파일 보기 암호설정</string>
     <string name="password_protect_whole_app">애플리케이션 전체에서 암호를 이용한 보호기능 사용</string>
     <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
-    <string name="keep_last_modified">파일 복사/이동/변경 시 최종 수정시간 정보를 유지</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">스크롤바 드래그 시 항목별 툴팁 활성화</string>
     <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
     <string name="skip_delete_confirmation">삭제 확인 다이얼로그 비활성화</string>

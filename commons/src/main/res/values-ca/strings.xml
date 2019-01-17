@@ -7,6 +7,7 @@
     <string name="out_of_memory_error">Error: sense memòria</string>
     <string name="an_error_occurred">Ha ocorregut un error: %s</string>
     <string name="open_with">Obrir amb</string>
+    <string name="edit_with">Editar amb</string>
     <string name="no_app_found">No s\'ha trobat una aplicació vàlida</string>
     <string name="set_as">Establir com</string>
     <string name="value_copied_to_clipboard">Valor copiat al portaretalls</string>
@@ -387,7 +388,7 @@
     <string name="password_protect_hidden_items">Contrasenya per protegir els mitjans amagats</string>
     <string name="password_protect_whole_app">Contrasenya per protegir tota l’aplicació</string>
     <string name="password_protect_file_deletion">Protegir amb contrasenya l\'eliminació i el moviment dels fitxers</string>
-    <string name="keep_last_modified">Mantenir el valor de la darrera modificació al copiar/moure/canviar el nom dels arxius</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Mostra una bombolla d\'informació en elements de desplaçament mitjançant arrossegament de la barra de desplaçament</string>
     <string name="prevent_phone_from_sleeping">No deixar dormir el telèfon amb la aplicació a primer pla</string>
     <string name="skip_delete_confirmation">Ignora sempre el diàleg de confirmació d\'eliminació</string>

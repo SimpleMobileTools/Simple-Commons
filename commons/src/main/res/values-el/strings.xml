@@ -7,6 +7,7 @@
     <string name="out_of_memory_error">Σφάλμα Έλλειψη μνήμης</string>
     <string name="an_error_occurred">Παρουσιάστηκε σφάλμα: %s</string>
     <string name="open_with">Άνοιγμα με</string>
+    <string name="edit_with">Επεξεργασία με</string>
     <string name="no_app_found">Δεν βρέθηκε έγκυρη εφαρμογή</string>
     <string name="set_as">Ορισμός ως</string>
     <string name="value_copied_to_clipboard">Η τιμή αντιγράφηκε στο πρόχειρο</string>
@@ -384,7 +385,7 @@
     <string name="password_protect_hidden_items">Κωδικός προστασίας προβολής κρυφών στοιχείων</string>
     <string name="password_protect_whole_app">Κωδικός προστασίας  ολόκληρης της εφαρμογής</string>
     <string name="password_protect_file_deletion">Προστασία με κωδικό για διαγραφή ή μετακίνηση</string>
-    <string name="keep_last_modified">Διατηρήστε την παλιά τελευταία τροποποιημένη τιμή στην αντιγραφή/μετακίνηση/μετονομασία αρχείου</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Εμφάνιση φυσαλίδας πληροφοριών κατά την κύλιση στοιχείων στη γραμμή κύλισης</string>
     <string name="prevent_phone_from_sleeping">Αποτροπή της αναστολής λειτουργίας του τηλεφώνου ενώ η εφαρμογή βρίσκεται στο προσκήνιο</string>
     <string name="skip_delete_confirmation">Παράκαμψη πάντα το παράθυρο διαλόγου επιβεβαίωσης διαγραφής</string>

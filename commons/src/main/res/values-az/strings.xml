@@ -7,6 +7,7 @@
     <string name="out_of_memory_error">Yaddaş doludur xətası</string>
     <string name="an_error_occurred">Xəta baş verdi: %s</string>
     <string name="open_with">Bununla aç</string>
+    <string name="edit_with">Edit with</string>
     <string name="no_app_found">Etibarlı tətbiq tapılmadı</string>
     <string name="set_as">Təyin et</string>
     <string name="value_copied_to_clipboard">Miqdar panelə kopyalandı</string>
@@ -384,7 +385,7 @@
     <string name="password_protect_hidden_items">Şifrə gizlənmiş tətbiqin görünürlüyünü qoruyur</string>
     <string name="password_protect_whole_app">Şifrə bütün tətbiqi qoruyur</string>
     <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
-    <string name="keep_last_modified">Faylı kopyalama/daşıma/yenidən adlandırma proseslərində son faylı saxla</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Sürüşdürmə çubuğu ilə hərəkət zamanı məlumat ekranını göstər</string>
     <string name="prevent_phone_from_sleeping">Tətbiq aktiv halda olduqda telefonun yuxuya getməsinin qarşısını al</string>
     <string name="skip_delete_confirmation">Silmə təsdiq dialoqunu göstərmə</string>

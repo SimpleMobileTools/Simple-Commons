@@ -7,6 +7,7 @@
     <string name="out_of_memory_error">Onvoldoende geheugen</string>
     <string name="an_error_occurred">Fout opgetreden: %s</string>
     <string name="open_with">Openen met</string>
+    <string name="edit_with">Bewerken met</string>
     <string name="no_app_found">Geen app gevonden om dit bestand mee te openen</string>
     <string name="set_as">Instellen als</string>
     <string name="value_copied_to_clipboard">Gekopieerd naar klembord</string>
@@ -210,7 +211,7 @@
     <string name="unhide">Tonen</string>
     <string name="hide_folder">Map verbergen</string>
     <string name="unhide_folder">Map tonen</string>
-    <string name="temporarily_show_hidden">Verborgen items tonen</string>
+    <string name="temporarily_show_hidden">Verborgen items tijdelijk tonen</string>
     <string name="stop_showing_hidden">Verborgen items niet tonen</string>
     <string name="maximum_share_reached">Kan niet zoveel items tegelijk delen</string>
     <string name="empty_and_disable_recycle_bin">Prullenbak leegmaken en uitschakelen</string>
@@ -384,7 +385,7 @@
     <string name="password_protect_hidden_items">Verborgen items met wachtwoord beveiligen</string>
     <string name="password_protect_whole_app">Hele app met wachtwoord beveiligen</string>
     <string name="password_protect_file_deletion">Bestandsoperaties Verwijderen en Verplaatsen met wachtwoord beveiligen</string>
-    <string name="keep_last_modified">Datum laatst gewijzigd behouden bij bestandsoperaties</string>
+    <string name="keep_last_modified">Datum laatst gewijzigd na bestandsoperatie niet bijwerken</string>
     <string name="show_info_bubble">Bij slepen van schuifbalk extra informatie tonen</string>
     <string name="prevent_phone_from_sleeping">Slaapstand voorkomen wanneer de app actief is</string>
     <string name="skip_delete_confirmation">Niet om bevestiging vragen bij verwijderen</string>

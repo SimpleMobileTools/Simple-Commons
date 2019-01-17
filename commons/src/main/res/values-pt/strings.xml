@@ -7,6 +7,7 @@
     <string name="out_of_memory_error">Memória insuficiente</string>
     <string name="an_error_occurred">Ocorreu um erro: %s</string>
     <string name="open_with">Abrir com</string>
+    <string name="edit_with">Editar com</string>
     <string name="no_app_found">Nenhuma aplicação encontrada</string>
     <string name="set_as">Definir como</string>
     <string name="value_copied_to_clipboard">Valor copiado para a área de transferência</string>
@@ -384,7 +385,7 @@
     <string name="password_protect_hidden_items">Proteger itens ocultos com palavra-passe</string>
     <string name="password_protect_whole_app">Proteger aplicação com palavra-passe</string>
     <string name="password_protect_file_deletion">Impedir eliminação e movimentação de ficheiros com palavra-passe</string>
-    <string name="keep_last_modified">Manter dados da última modificação ao copiar/mover/renomear</string>
+    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Mostrar informação ao arrastar a barra de deslocamento</string>
     <string name="prevent_phone_from_sleeping">Impedir adormecimento do dispositivo se a aplicação estiver em segundo plano</string>
     <string name="skip_delete_confirmation">Ignorar sempre a confirmação para eliminação de ficheiros</string>
