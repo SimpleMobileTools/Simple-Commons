@@ -178,8 +178,7 @@
     <string name="undo_changes_confirmation">Biztos visszavonja a változtatást?</string>
     <string name="save_before_closing">Nem mentette a változtatásokat. Menti a kilépés előtt?</string>
     <string name="apply_to_all_apps">Színek alkalmazása az összes Simple Apps-ra</string>
-    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="app_icon_color_warning">FIGYELMEZTETÉS: Néhány indító nem megfelelően kezeli az alkalmazás ikon testreszabását. Abban az esetben, ha az ikon eltűnik, próbálja meg elindítani az alkalmazást a Google Playen vagy egy bizonyos widgeten keresztül, ha elérhető.\nMiután elindult, állítsa vissza az alapértelmezett narancssárga ikont. #F57C00. Lehet, hogy a legrosszabb esetben újra kell telepítenie az alkalmazást.</string>
     <string name="share_colors_success">A színek sikeresen frissültek. Hozzáadott egy új témát, amelynek neve \'Megosztott\'. Kérjük, a jövőben ezt használja az összes alkalmazás színeinek frissítéséhez.</string>
     <string name="purchase_thank_you">
 		<![CDATA[
@@ -385,7 +384,7 @@
     <string name="password_protect_hidden_items">Jelszavas védelem a rejtett elem láthatóságához</string>
     <string name="password_protect_whole_app">Jelszavas védelem az egész alkalmazáshoz</string>
     <string name="password_protect_file_deletion">Jelszavas védelem a fájlok törléséhez és áthelyezéséhez</string>
-    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
+    <string name="keep_last_modified">Tartsa a régi, utoljára módosított értéket a fájl műveleteknél</string>
     <string name="show_info_bubble">Mutassa az információs buborékot a görgetősáv húzásánál</string>
     <string name="prevent_phone_from_sleeping">Megakadályozza a telefon alvó állapotát, amíg az alkalmazás előtérben van</string>
     <string name="skip_delete_confirmation">Mindig ugorja át a törlés megerősítése kérdést</string>
@@ -558,9 +557,8 @@
     <string name="faq_4_text_commons">Igen, amikor egy widgetet futtat a kezdőképernyőn, megjelenik egy widget konfigurációs képernyő. A bal alsó sarokban színes négyzetek láthatók, csak nyomja meg és új színt választhat. Használhatja a csúszkát az alfa beállításához is.</string>
     <string name="faq_5_title_commons">Vissza tudom állítani a törölt fájlokat?</string>
     <string name="faq_5_text_commons">Ha valóban töröltek, akkor nem. Azonban engedélyezheti a Lomtár használatát az alkalmazás beállításaiban a törlés helyett. Ekkor a törlés helyett csak áthelyezi oda a fájlokat.</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="faq_6_title_commons">Az alkalmazásindító ikon eltűnt. Mit tehetek?</string>
+    <string name="faq_6_text_commons">Ennek az az oka, hogy a rendszerindító nem támogatja megfelelően az ikon testreszabását. Próbáld elindítani az alkalmazást a Google Playen vagy néhány widgeten keresztül, ha elérhető.\nMiután elindítottad, állítsd vissza az alapértelmezett narancssárga ikont #F57C00. Lehet, hogy a legrosszabb esetben újra kell telepítenie az alkalmazást.</string>
 
     <!-- License -->
     <string name="notice">Ez az alkalmazás a következő harmadik fél könyvtárait használja az életem megkönnyítésére. Köszönöm.</string>
@@ -588,4 +586,5 @@
     <string name="panorama_view_title">VR Panorama View (panorámakép megjelenítése)</string>
     <string name="sanselan_title">Apache Sanselan (kép metaadat kiolvasás)</string>
     <string name="filters_title">Android Photo Filters (kép szűrők)</string>
+    <string name="gesture_views_title">Gesztus nézetek (zoomolható képek)</string>
 </resources>

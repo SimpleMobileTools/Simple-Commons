@@ -68,6 +68,9 @@
     <string name="copy_move">نسخ / نقل</string>
     <string name="copy_to">نسخ إلى</string>
     <string name="move_to">نقل إلى</string>
+    <string name="source">Source</string>
+    <string name="destination">Destination</string>
+    <string name="select_destination">Select destination</string>
     <string name="click_select_destination">Click here to select destination</string>
     <string name="invalid_destination">Could not write to the selected destination</string>
     <string name="please_select_destination">Please select a destination</string>
@@ -320,7 +323,7 @@
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">ساعة</item>
-        <item quantity="other">ساعتان</item>
+        <item quantity="two">ساعتان</item>
         <item quantity="other">%d ساعات</item>
     </plurals>
 
@@ -592,5 +595,6 @@
     <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
     <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
     <string name="filters_title">Android Photo Filters (image filters)</string>
+    <string name="gesture_views_title">Gesture Views (zoomable images)</string>
 </resources>
 

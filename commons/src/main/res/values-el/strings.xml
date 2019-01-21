@@ -35,7 +35,7 @@
 
     <!-- Filters -->
     <string name="filter">Φίλτρο</string>
-    <string name="no_items_found">Δεν βρέθηκαν αντικείμενα.</string>
+    <string name="no_items_found">Δεν βρέθηκαν στοιχεία.</string>
     <string name="change_filter">Αλλαγή φίλτρου</string>
 
     <!-- Permissions -->
@@ -115,7 +115,7 @@
     <string name="confirm_storage_access_title">Επιβεβαιώστε την πρόσβαση στην εξωτερική αποθήκευση</string>
     <string name="confirm_storage_access_text">Επιλέξτε τον ριζικό φάκελο της κάρτας SD στην επόμενη οθόνη, για να επιτρέψετε πρόσβαση εγγραφής</string>
     <string name="confirm_storage_access_text_sd">Εάν δεν βλέπετε την κάρτα SD, δοκιμάστε αυτό</string>
-    <string name="confirm_selection">Επιβεβαιώστε την επιλογή</string>
+    <string name="confirm_selection">Επιβεβαίωση επιλογής</string>
 
     <plurals name="items">
         <item quantity="one">%d στοιχείο</item>
@@ -139,7 +139,7 @@
     <string name="sd_card">SD Card</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Επιλέξατε λάθος φάκελο, επιλέξτε τον ριζικό φάκελο της SD card</string>
-    <string name="sd_card_usb_same">SD card και USB οι διαδρομές συσκευών δεν μπορούν να είναι οι ίδιες</string>
+    <string name="sd_card_usb_same">Οι διαδρομές συσκευών SD card και USB δεν μπορούν να είναι οι ίδιες</string>
     <string name="app_on_sd_card">Φαίνεται ότι έχετε εγκαταστήσει την εφαρμογή σε μια κάρτα SD, πράγμα που καθιστά τα γραφικά στοιχεία εφαρμογών μη διαθέσιμα. Δεν θα τα δείτε ακόμη και στη λίστα των διαθέσιμων γραφικών στοιχείων.
         Είναι ένας περιορισμός του συστήματος, οπότε αν θέλετε να χρησιμοποιήσετε τα γραφικά στοιχεία, θα πρέπει να μετακινήσετε την εφαρμογή πίσω στον εσωτερικό αποθηκευτικό χώρο.</string>
 
@@ -167,7 +167,7 @@
     <string name="primary_color">Πρωτεύον χρώμα</string>
     <string name="foreground_color">Χρώμα προσκηνίου</string>
     <string name="app_icon_color">Χρώμα εικονιδίου εφαρμογής</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
+    <string name="bottom_navigation_bar_color">Χρώμα κάτω γραμμής Πλοήγησης</string>
     <string name="restore_defaults">Επαναφορά προεπιλογών</string>
     <string name="change_color">Αλλαγή χρώματος</string>
     <string name="theme">Θέμα</string>
@@ -178,8 +178,8 @@
     <string name="undo_changes_confirmation">Είστε βέβαιοι ότι θέλετε να αναιρέσετε τις αλλαγές σας?</string>
     <string name="save_before_closing">Έχετε αλλαγές που δεν έχουν αποθηκευτεί. Αποθήκευση πριν από την έξοδο?</string>
     <string name="apply_to_all_apps">Εφαρμογή χρωμάτων σε όλες τις Simple Apps</string>
-    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="app_icon_color_warning">ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Ορισμένοι Εκκινητές δεν χειρίζονται σωστά τα εικονίδια της εφαρμογής. Σε περίπτωση που το εικονίδιο εξαφανιστεί, δοκιμάστε να ξεκινήσετε την εφαρμογή μέσω του Google Play ή κάποιου Witget, αν είναι διαθέσιμο.
+        Μόλις ξεκινήσει, απλά επαναφέρετε το προεπιλεγμένο πορτοκαλί εικονίδιο #F57C00. Μπορεί να χρειαστεί να επανεγκαταστήσετε την εφαρμογή στη χειρότερη περίπτωση.</string>
     <string name="share_colors_success">Τα χρώματα ενημερώθηκαν με επιτυχία. Ένα νέο θέμα που ονομάζεται  \"Κοινόχρηστο\" έχει προστεθεί, παρακαλούμε να χρησιμοποιήστε το για την ενημέρωση των χρωμάτων όλων των εφαρμ. στο μέλλον.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -385,11 +385,11 @@
     <string name="password_protect_hidden_items">Κωδικός προστασίας προβολής κρυφών στοιχείων</string>
     <string name="password_protect_whole_app">Κωδικός προστασίας  ολόκληρης της εφαρμογής</string>
     <string name="password_protect_file_deletion">Προστασία με κωδικό για διαγραφή ή μετακίνηση</string>
-    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
+    <string name="keep_last_modified">Διατήρηση της παλιάς τροποποιημένης τιμής στις λειτουργίες αρχείων</string>
     <string name="show_info_bubble">Εμφάνιση φυσαλίδας πληροφοριών κατά την κύλιση στοιχείων στη γραμμή κύλισης</string>
     <string name="prevent_phone_from_sleeping">Αποτροπή της αναστολής λειτουργίας του τηλεφώνου ενώ η εφαρμογή βρίσκεται στο προσκήνιο</string>
     <string name="skip_delete_confirmation">Παράκαμψη πάντα το παράθυρο διαλόγου επιβεβαίωσης διαγραφής</string>
-    <string name="enable_pull_to_refresh">Ενεργοποίηση ανανέωσης με \"Σύρετε απο πάνω-κάτω\"</string>
+    <string name="enable_pull_to_refresh">Ενεργοποίηση ανανέωσης με \"Σάρωση απο πάνω-κάτω\"</string>
     <string name="use_24_hour_time_format">Χρήση 24ώρου</string>
     <string name="sunday_first">Έναρξη εβδομάδας την Κυριακή</string>
     <string name="widgets">Widgets</string>
@@ -558,9 +558,9 @@
     <string name="faq_4_text_commons">Ναι, καθώς σύρετε ένα γραφικό στοιχείο στην αρχική οθόνη σας, εμφανίζεται μια οθόνη διαμόρφωσης widget. Θα δείτε έγχρωμα τετράγωνα στην κάτω αριστερή γωνία, απλά πατήστε τα για να επιλέξετε ένα νέο χρώμα. Μπορείτε να χρησιμοποιήσετε το ρυθμιστικό για να ρυθμίσετε το alpha επίσης.</string>
     <string name="faq_5_title_commons">Μπορώ να επαναφέρω με κάποιο τρόπο τα διαγραμμένα αρχεία;</string>
     <string name="faq_5_text_commons">Εάν έχουν πραγματικά διαγραφεί, δεν μπορείτε. Ωστόσο, μπορείτε να ενεργοποιήσετε τη χρήση του Κάδου Ανακύκλωσης αντί της διαγραφής στις ρυθμίσεις της εφαρμογής. Αυτό θα μετακινήσει απλώς τα αρχεία σε αυτόν αντί να τα διαγράψει.</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="faq_6_title_commons">Το εικονίδιο εκκίνησης εφαρμογών εξαφανίστηκε. Τι μπορώ να κάνω?</string>
+    <string name="faq_6_text_commons">Προκαλείται από τον Εκκινητή σας που δεν υποστηρίζει την προσαρμογή εικονιδίων κατάλληλα. Δοκιμάστε να ξεκινήσει η εφαρμογή μέσω του Google Play ή κάποιο widget, εάν είναι διαθέσιμο.
+        Μόλις ξεκινήσει, απλά επαναφέρετε το προεπιλεγμένο πορτοκαλί εικονίδιο #F57C00. Μπορεί να χρειαστεί να επανεγκαταστήσετε την εφαρμογή στη χειρότερη περίπτωση.</string>
 
     <!-- License -->
     <string name="notice">Αυτή η εφαρμογή χρησιμοποιεί τις ακόλουθες βιβλιοθήκες τρίτων για να διευκολύνει τη ζωή μου. Ευχαριστώ.</string>
@@ -588,4 +588,5 @@
     <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
     <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
     <string name="filters_title">Android Photo Filters (image filters)</string>
+    <string name="gesture_views_title">Gesture Views (zoomable images)</string>
 </resources>
