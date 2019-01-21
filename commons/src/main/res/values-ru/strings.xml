@@ -10,7 +10,7 @@
     <string name="edit_with">Редактировать в…</string>
     <string name="no_app_found">Приложение не найдено</string>
     <string name="set_as">Установить как</string>
-    <string name="value_copied_to_clipboard">Значение скопировано в буфер обмена</string>
+    <string name="value_copied_to_clipboard">Скопировано в буфер обмена</string>
     <string name="unknown">Неизвестно</string>
     <string name="always">Всегда</string>
     <string name="never">Никогда</string>
@@ -34,9 +34,9 @@
     <string name="type_2_characters">Введите как минимум 2 символа для начала поиска.</string>
 
     <!-- Filters -->
-    <string name="filter">Фильтрация</string>
+    <string name="filter">Фильтр</string>
     <string name="no_items_found">Ничего не найдено.</string>
-    <string name="change_filter">Изменить фильтрацию</string>
+    <string name="change_filter">Изменить фильтр</string>
 
     <!-- Permissions -->
     <string name="no_storage_permissions">Требуется разрешение для доступа к хранилищу</string>
@@ -103,11 +103,11 @@
     <string name="file_already_exists_overwrite">Файл \"%s\" уже существует. Перезаписать?</string>
     <string name="folder_already_exists">Папка \"%s\" уже существует</string>
     <string name="merge">Объединить</string>
-    <string name="keep_both">Оставить оба</string>
+    <string name="keep_both">Сохранить оба</string>
     <string name="overwrite">Перезаписать</string>
     <string name="skip">Пропустить</string>
     <string name="append">Добавить \"_1\" к имени</string>
-    <string name="apply_to_all">Применить ко всем конфликтам</string>
+    <string name="apply_to_all">Применить ко всем</string>
 
     <!-- File picker -->
     <string name="select_folder">Выбор папки</string>
@@ -149,8 +149,8 @@
     <!-- File properties -->
     <string name="properties">Свойства</string>
     <string name="path">Расположение</string>
-    <string name="items_selected">Выбрано элементов</string>
-    <string name="direct_children_count">Дочерних элементов</string>
+    <string name="items_selected">Выбрано объектов</string>
+    <string name="direct_children_count">Дочерних объектов</string>
     <string name="files_count">Всего файлов внутри</string>
     <string name="resolution">Разрешение</string>
     <string name="duration">Длительность</string>
@@ -176,7 +176,7 @@
     <string name="theme">Тема</string>
     <string name="changing_color_description">Изменение цвета повлечёт переключение на пользовательскую тему.</string>
     <string name="save">Сохранить</string>
-    <string name="discard">Сбросить</string>
+    <string name="discard">Нет</string>
     <string name="undo_changes">Отменить изменения</string>
     <string name="undo_changes_confirmation">Действительно отменить изменения?</string>
     <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
@@ -242,7 +242,7 @@
     <string name="move_to_recycle_bin_confirmation">Вы действительно хотите переместить %s в корзину?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Вы действительно хотите удалить этот объект?</string>
     <string name="are_you_sure_recycle_bin">Вы действительно хотите переместить этот объект в корзину?</string>
-    <string name="do_not_ask_again">Не спрашивать снова (до следующего запуска)</string>
+    <string name="do_not_ask_again">Больше не спрашивать (до следующего запуска)</string>
     <string name="yes">Да</string>
     <string name="no">Нет</string>
 
@@ -256,7 +256,7 @@
     <string name="pin">PIN-код</string>
     <string name="enter_pin">Введите PIN-код</string>
     <string name="please_enter_pin">Введите PIN-код</string>
-    <string name="wrong_pin">Неверный PIN-код</string>
+    <string name="wrong_pin">Неправильный PIN-код</string>
     <string name="repeat_pin">Повторите PIN-код</string>
     <string name="pattern">Графический ключ</string>
     <string name="insert_pattern">Установите ключ</string>
@@ -396,7 +396,7 @@
     <string name="purchase_simple_thank_you">Купить Simple Thank You</string>
     <string name="customize_colors">Настроить цвета</string>
     <string name="customize_widget_colors">Настроить цвета виджета</string>
-    <string name="use_english_language">Использовать английский</string>
+    <string name="use_english_language">Использовать английский язык</string>
     <string name="show_hidden_items">Показывать скрытые папки</string>
     <string name="font_size">Размер шрифта</string>
     <string name="small">Мелкий</string>
@@ -410,7 +410,7 @@
     <string name="show_info_bubble">Показывать информационное окно при прокрутке элементов перетаскиванием полосы прокрутки</string>
     <string name="prevent_phone_from_sleeping">Предотвращать засыпание устройства, пока приложение находится на переднем плане</string>
     <string name="skip_delete_confirmation">Пропускать диалог подтверждения удаления</string>
-    <string name="enable_pull_to_refresh">Использовать \"потянуть-для-обновления\" в верхней части экрана</string>
+    <string name="enable_pull_to_refresh">Использовать жест \"потянуть для обновления\" в верхней части экрана</string>
     <string name="use_24_hour_time_format">Использовать 24-часовой формат времени</string>
     <string name="sunday_first">Воскресенье — начало недели</string>
     <string name="widgets">Виджеты</string>
@@ -610,5 +610,5 @@
     <string name="panorama_view_title">VR Panorama View (отображение панорам)</string>
     <string name="sanselan_title">Apache Sanselan (чтение метаданных изображений)</string>
     <string name="filters_title">Android Photo Filters (фильтры изображений)</string>
-    <string name="gesture_views_title">Gesture Views (zoomable images)</string>
+    <string name="gesture_views_title">Gesture Views (масштабирование изображений)</string>
 </resources>
