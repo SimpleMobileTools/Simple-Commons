@@ -263,14 +263,14 @@ fun String.highlightTextPart(textToHighlight: String, color: Int, highlightAll: 
 
     // handle cases when we search for 643, but in reality the string contains it like 6-43
     if (ignoreCharsBetweenDigits && indexes.isEmpty()) {
-        val regex = TextUtils.join("(\\D*)", textToHighlight.toCharArray().toTypedArray())
-        val pattern = Pattern.compile(regex)
-        val result = pattern.matcher(normalizeString())
-        if (result.find()) {
-            try {
+        try {
+            val regex = TextUtils.join("(\\D*)", textToHighlight.toCharArray().toTypedArray())
+            val pattern = Pattern.compile(regex)
+            val result = pattern.matcher(normalizeString())
+            if (result.find()) {
                 spannableString.setSpan(ForegroundColorSpan(color), result.start(), result.end(), Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
-            } catch (ignored: Exception) {
             }
+        } catch (ignored: Exception) {
         }
 
         return spannableString
