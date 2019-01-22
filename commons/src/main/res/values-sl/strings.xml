@@ -22,6 +22,7 @@
     <string name="transparent">Transparent</string>
     <string name="transparent_color">Transparent color</string>
     <string name="select_a_different_color">Select a different color</string>
+    <string name="download">Download</string>
 
     <!-- Favorites -->
     <string name="favorites">Priljubljeno</string>
@@ -441,6 +442,10 @@
     <string name="recycle_bin_cleaning_interval">Čas med čiščenji Koša</string>
     <string name="empty_recycle_bin">Izprazni Koš</string>
     <string name="force_portrait_mode">Vsili pokončni zaslon</string>
+    <string name="export_settings">Export settings</string>
+    <string name="import_settings">Import settings</string>
+    <string name="settings_exported_successfully">Settings exported successfully</string>
+    <string name="settings_imported_successfully">Settings imported successfully</string>
 
     <!-- Setting sections -->
     <string name="visibility">Vidljivost</string>
@@ -583,6 +588,12 @@
             <a href="%1$s">%2$s</a><br><br>
             Prenesete jo lahko s klikom na naslov.<br><br>
             Hvala
+        ]]>
+    </string>
+
+    <string name="sideloaded_app">
+        <![CDATA[
+            It looks like your app version is corrupt. Please download the original version from  <a href="%s">here</a>.
         ]]>
     </string>
 

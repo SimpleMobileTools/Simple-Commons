@@ -22,6 +22,7 @@
     <string name="transparent">Priesvitná</string>
     <string name="transparent_color">Priesvitná farba</string>
     <string name="select_a_different_color">Zvoliť inú farbu</string>
+    <string name="download">Stiahnuť</string>
 
     <!-- Favorites -->
     <string name="favorites">Obľúbené</string>
@@ -421,6 +422,10 @@
     <string name="recycle_bin_cleaning_interval">Interval vysypávania koša</string>
     <string name="empty_recycle_bin">Vysypať odpadkový kôš</string>
     <string name="force_portrait_mode">Stále použiť režim na výšku</string>
+    <string name="export_settings">Exportovať nastavenia</string>
+    <string name="import_settings">Importovať nastavenia</string>
+    <string name="settings_exported_successfully">Nastavenia boli úspešne exportované</string>
+    <string name="settings_imported_successfully">Nastavenia boli úspešne importované</string>
 
     <!-- Setting sections -->
     <string name="visibility">Viditeľnosť</string>
@@ -562,6 +567,12 @@
             <a href="%1$s">%2$s</a><br><br>
             Viete ju stiahnuť kliknutím na názov.<br><br>
             Vďaka
+        ]]>
+    </string>
+
+    <string name="sideloaded_app">
+        <![CDATA[
+            Zdá sa, že vaša verzia apky je poškodená. Prosím stiahnite originálnu verziu <a href="%s">tu</a>.
         ]]>
     </string>
 

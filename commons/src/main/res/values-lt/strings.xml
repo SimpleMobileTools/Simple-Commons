@@ -22,6 +22,7 @@
     <string name="transparent">Transparent</string>
     <string name="transparent_color">Transparent color</string>
     <string name="select_a_different_color">Select a different color</string>
+    <string name="download">Download</string>
 
     <!-- Favorites -->
     <string name="favorites">Mėgiamiausieji</string>
@@ -417,6 +418,10 @@
     <string name="recycle_bin_cleaning_interval">Šiukšlinės išvalymo intervalas</string>
     <string name="empty_recycle_bin">Ištuštinti šiukšlinę</string>
     <string name="force_portrait_mode">Priversti rodyti portreto rėžimu</string>
+    <string name="export_settings">Export settings</string>
+    <string name="import_settings">Import settings</string>
+    <string name="settings_exported_successfully">Settings exported successfully</string>
+    <string name="settings_imported_successfully">Settings imported successfully</string>
 
     <!-- Setting sections -->
     <string name="visibility">Matomumas</string>
@@ -557,6 +562,12 @@
             <a href="%1$s">%2$s</a><br><br>
             You can download it by pressing the title.<br><br>
             Thanks
+        ]]>
+    </string>
+
+    <string name="sideloaded_app">
+        <![CDATA[
+            It looks like your app version is corrupt. Please download the original version from  <a href="%s">here</a>.
         ]]>
     </string>
 

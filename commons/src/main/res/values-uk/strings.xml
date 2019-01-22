@@ -22,6 +22,7 @@
     <string name="transparent">Прозорий</string>
     <string name="transparent_color">Колір прозорості</string>
     <string name="select_a_different_color">Обрати інший колір</string>
+    <string name="download">Download</string>
 
     <!-- Favorites -->
     <string name="favorites">Улюблене</string>
@@ -400,6 +401,10 @@
     <string name="recycle_bin_cleaning_interval">Інтервал очищення Кошика</string>
     <string name="empty_recycle_bin">Очистити Кошик</string>
     <string name="force_portrait_mode">Примусовий портретний режим</string>
+    <string name="export_settings">Export settings</string>
+    <string name="import_settings">Import settings</string>
+    <string name="settings_exported_successfully">Settings exported successfully</string>
+    <string name="settings_imported_successfully">Settings imported successfully</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>
@@ -540,6 +545,12 @@
             <a href="%1$s">%2$s</a><br><br>
             You can download it by pressing the title.<br><br>
             Thanks
+        ]]>
+    </string>
+
+    <string name="sideloaded_app">
+        <![CDATA[
+            It looks like your app version is corrupt. Please download the original version from  <a href="%s">here</a>.
         ]]>
     </string>
 

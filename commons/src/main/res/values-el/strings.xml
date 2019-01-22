@@ -22,6 +22,7 @@
     <string name="transparent">Διαφάνεια</string>
     <string name="transparent_color">Χρώμα διαφάνειας</string>
     <string name="select_a_different_color">Επιλέξτε διαφορετικό χρώμα</string>
+    <string name="download">Download</string>
 
     <!-- Favorites -->
     <string name="favorites">Αγαπημένα</string>
@@ -400,6 +401,10 @@
     <string name="recycle_bin_cleaning_interval">Περίοδος καθαρισμού Κάδου ανακύκλωσης</string>
     <string name="empty_recycle_bin">Άδειασμα του Κάδου Ανακύκλωσης</string>
     <string name="force_portrait_mode">Εξαναγκασμός σε Πορτρέτο</string>
+    <string name="export_settings">Export settings</string>
+    <string name="import_settings">Import settings</string>
+    <string name="settings_exported_successfully">Settings exported successfully</string>
+    <string name="settings_imported_successfully">Settings imported successfully</string>
 
     <!-- Setting sections -->
     <string name="visibility">Προβολή</string>
@@ -540,6 +545,12 @@
             <a href="%1$s">%2$s</a><br><br>
             Μπορείτε να την κατεβάσετε πατώντας τον τίτλο.<br><br>
             Ευχαριστώ
+        ]]>
+    </string>
+
+    <string name="sideloaded_app">
+        <![CDATA[
+            It looks like your app version is corrupt. Please download the original version from  <a href="%s">here</a>.
         ]]>
     </string>
 
