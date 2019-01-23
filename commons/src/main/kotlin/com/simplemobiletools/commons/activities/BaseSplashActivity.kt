@@ -46,10 +46,14 @@ abstract class BaseSplashActivity : AppCompatActivity() {
     }
 
     private fun isAppSideloaded(packageName: String): Boolean {
-        return try {
-            packageManager.getInstallerPackageName(packageName) != null
-        } catch (e: Exception) {
+        return if (packageName == "-1" || packageName.endsWith(".debug")) {
             false
+        } else {
+            try {
+                packageManager.getInstallerPackageName(packageName) == null
+            } catch (e: Exception) {
+                false
+            }
         }
     }
 }
