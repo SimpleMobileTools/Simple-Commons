@@ -22,6 +22,7 @@
     <string name="transparent">Transparant</string>
     <string name="transparent_color">Transparante kleur</string>
     <string name="select_a_different_color">Kies een andere kleur</string>
+    <string name="download">Downloaden</string>
 
     <!-- Favorites -->
     <string name="favorites">Favorieten</string>
@@ -400,6 +401,10 @@
     <string name="recycle_bin_cleaning_interval">Interval prullenbak leegmaken</string>
     <string name="empty_recycle_bin">Prullenbak leegmaken</string>
     <string name="force_portrait_mode">Portretmodus forceren</string>
+    <string name="export_settings">Instellingen exporteren</string>
+    <string name="import_settings">Instellingen importeren</string>
+    <string name="settings_exported_successfully">Instellingen geëxporteerd</string>
+    <string name="settings_imported_successfully">Instellingen geïmporteerd</string>
 
     <!-- Setting sections -->
     <string name="visibility">Opmaak</string>
@@ -540,6 +545,12 @@
             <a href="%1$s">%2$s</a><br><br>
             Downloaden kan door een druk op de naam hierboven.<br><br>
             Dank u wel!
+        ]]>
+    </string>
+
+    <string name="sideloaded_app">
+        <![CDATA[
+            Het lijkt erop dat deze versie van de app corrupt is. Download de originele versie <a href="%s">hier</a>.
         ]]>
     </string>
 

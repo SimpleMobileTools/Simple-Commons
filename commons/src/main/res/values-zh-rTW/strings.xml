@@ -22,6 +22,7 @@
     <string name="transparent">透明</string>
     <string name="transparent_color">透明顏色</string>
     <string name="select_a_different_color">選取不同的顏色</string>
+    <string name="download">下載</string>
 
     <!-- Favorites -->
     <string name="favorites">我的最愛</string>
@@ -400,6 +401,10 @@
     <string name="recycle_bin_cleaning_interval">回收桶清理間隔</string>
     <string name="empty_recycle_bin">清空回收桶</string>
     <string name="force_portrait_mode">強制直向模式</string>
+    <string name="export_settings">匯出設定</string>
+    <string name="import_settings">匯入設定</string>
+    <string name="settings_exported_successfully">設定匯出成功</string>
+    <string name="settings_imported_successfully">設定匯入成功</string>
 
     <!-- Setting sections -->
     <string name="visibility">可見度</string>
@@ -540,6 +545,12 @@
             <a href="%1$s">%2$s</a><br><br>
             點標題下載來試試看吧<br><br>
             謝謝
+        ]]>
+    </string>
+
+    <string name="sideloaded_app">
+        <![CDATA[
+            你的應用程式版本似乎是損壞的。請從 <a href="%s">這裡</a> 下載原始版本。
         ]]>
     </string>
 
