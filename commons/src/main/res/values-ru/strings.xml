@@ -3,7 +3,7 @@
     <string name="cancel">Отмена</string>
     <string name="save_as">Сохранить как</string>
     <string name="file_saved">Файл сохранён</string>
-    <string name="invalid_file_format">Недопустимый формат файла</string>
+    <string name="invalid_file_format">Неправильный формат файла</string>
     <string name="out_of_memory_error">Память переполнена</string>
     <string name="an_error_occurred">Произошла ошибка: %s</string>
     <string name="open_with">Открыть в…</string>
@@ -239,8 +239,8 @@
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Подтверждение удаления</string>
-    <string name="deletion_confirmation">Вы действительно хотите удалить \"%s\"?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Вы действительно хотите переместить \"%s\" в корзину?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">Вы действительно хотите удалить %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Вы действительно хотите переместить %s в корзину?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Вы действительно хотите удалить этот объект?</string>
     <string name="are_you_sure_recycle_bin">Вы действительно хотите переместить этот объект в корзину?</string>
     <string name="do_not_ask_again">Больше не спрашивать (до следующего запуска)</string>
