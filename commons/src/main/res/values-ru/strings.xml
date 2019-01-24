@@ -9,7 +9,7 @@
     <string name="open_with">Открыть в…</string>
     <string name="edit_with">Редактировать в…</string>
     <string name="no_app_found">Приложение не найдено</string>
-    <string name="set_as">Установить как</string>
+    <string name="set_as">Установить как…</string>
     <string name="value_copied_to_clipboard">Скопировано в буфер обмена</string>
     <string name="unknown">Неизвестно</string>
     <string name="always">Всегда</string>
@@ -22,7 +22,7 @@
     <string name="transparent">Прозрачный</string>
     <string name="transparent_color">Прозрачный цвет</string>
     <string name="select_a_different_color">Выберите другой цвет</string>
-    <string name="download">Download</string>
+    <string name="download">Загрузка</string>
 
     <!-- Favorites -->
     <string name="favorites">Избранное</string>
@@ -32,11 +32,11 @@
 
     <!-- Search -->
     <string name="search">Поиск</string>
-    <string name="type_2_characters">Введите как минимум 2 символа для начала поиска.</string>
+    <string name="type_2_characters">Введите как минимум 2 символа для начала поиска</string>
 
     <!-- Filters -->
     <string name="filter">Фильтр</string>
-    <string name="no_items_found">Ничего не найдено.</string>
+    <string name="no_items_found">Ничего не найдено</string>
     <string name="change_filter">Изменить фильтр</string>
 
     <!-- Permissions -->
@@ -217,7 +217,7 @@
     <string name="unhide_folder">Показать папку</string>
     <string name="temporarily_show_hidden">Временный показ скрытых</string>
     <string name="stop_showing_hidden">Не показывать скрытые медиа</string>
-    <string name="maximum_share_reached">Слишком большой объём данных, чтобы делиться им</string>
+    <string name="maximum_share_reached">Невозможно поделиться таким большим объём данных</string>
     <string name="empty_and_disable_recycle_bin">Очистить и отключить корзину</string>
     <string name="undo">Отменить</string>
     <string name="redo">Повторить</string>
@@ -239,8 +239,8 @@
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Подтверждение удаления</string>
-    <string name="deletion_confirmation">Вы действительно хотите удалить %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Вы действительно хотите переместить %s в корзину?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">Вы действительно хотите удалить \"%s\"?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Вы действительно хотите переместить \"%s\" в корзину?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Вы действительно хотите удалить этот объект?</string>
     <string name="are_you_sure_recycle_bin">Вы действительно хотите переместить этот объект в корзину?</string>
     <string name="do_not_ask_again">Больше не спрашивать (до следующего запуска)</string>
@@ -255,22 +255,22 @@
 
     <!-- Password protection -->
     <string name="pin">PIN-код</string>
-    <string name="enter_pin">Введите PIN-код</string>
+    <string name="enter_pin">Ввод PIN-кода</string>
     <string name="please_enter_pin">Введите PIN-код</string>
     <string name="wrong_pin">Неправильный PIN-код</string>
     <string name="repeat_pin">Повторите PIN-код</string>
     <string name="pattern">Графический ключ</string>
-    <string name="insert_pattern">Установите ключ</string>
+    <string name="insert_pattern">Установить ключ</string>
     <string name="wrong_pattern">Неправильный графический ключ</string>
     <string name="repeat_pattern">Повторите ключ</string>
     <string name="fingerprint">Отпечаток пальца</string>
     <string name="add_fingerprint">Добавить отпечаток</string>
-    <string name="place_finger">Пожалуйста, поместите палец на датчик отпечатков.</string>
-    <string name="authentication_failed">Ошибка аутентификации</string>
-    <string name="authentication_blocked">Аутентификация заблокирована, повторите попытку через некоторое время</string>
-    <string name="no_fingerprints_registered">У вас нет зарегистрированных отпечатков пальцев, добавьте их в настройках вашего устройства</string>
+    <string name="place_finger">Пожалуйста, поместите палец на датчик отпечатков</string>
+    <string name="authentication_failed">Ошибка авторизации</string>
+    <string name="authentication_blocked">Авторизация заблокирована, повторите попытку через некоторое время</string>
+    <string name="no_fingerprints_registered">Отсутствуют зарегистрированные отпечатки пальцев, добавьте их в настройках устройства</string>
     <string name="go_to_settings">Перейдите в настройки</string>
-    <string name="protection_setup_successfully">Пароль установлен. Пожалуйста, переустановите приложение в случае, если вы его забудете.</string>
+    <string name="protection_setup_successfully">Пароль установлен. Переустановите приложение в случае, если вы его забудете.</string>
     <string name="fingerprint_setup_successfully">Установка защиты выполнена успешно. Переустановите приложение в случае возникновения проблем с её отключением.</string>
 
     <!-- Times -->
@@ -420,12 +420,12 @@
     <string name="vibrate_on_button_press">Вибрация при нажатии кнопок</string>
     <string name="move_items_into_recycle_bin">Перемещать объекты в корзину вместо удаления</string>
     <string name="recycle_bin_cleaning_interval">Интервал очистки корзины</string>
-    <string name="empty_recycle_bin">Очистить корзину</string>
+    <string name="empty_recycle_bin">Очистка корзины</string>
     <string name="force_portrait_mode">Принудительный портретный режим</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="export_settings">Экспорт настроек</string>
+    <string name="import_settings">Импорт настроек</string>
+    <string name="settings_exported_successfully">Настройки успешно экспортированы </string>
+    <string name="settings_imported_successfully">Настройки успешно импортированы</string>
 
     <!-- Setting sections -->
     <string name="visibility">Отображение</string>
@@ -448,9 +448,9 @@
     <string name="moving_recycle_bin_items_disabled">Перемещение элементов корзины отключено, используйте восстановление</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">%d элемент перемещается в корзину</item>
-        <item quantity="few">%d элемента перемещаются в корзину</item>
-        <item quantity="many">%d элементов перемещаются в корзину</item>
+        <item quantity="one">%d объект перемещается в корзину</item>
+        <item quantity="few">%d объекта перемещаются в корзину</item>
+        <item quantity="many">%d объектов перемещаются в корзину</item>
     </plurals>
 
     <!-- Import / Export -->
@@ -462,13 +462,13 @@
     <string name="exporting_failed">Экспортирование завершилось неудачей</string>
     <string name="importing_some_entries_failed">Импортирование некоторых элементов завершилось неудачей</string>
     <string name="exporting_some_entries_failed">Экспортирование некоторых элементов завершилось неудачей</string>
-    <string name="no_entries_for_exporting">Нет элементов для экспортирования</string>
+    <string name="no_entries_for_exporting">Отсутствуют элементы для экспортирования</string>
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">Похоже, к вашему устройству подключён USB-накопитель. Необходимо убедиться, что его файлы отображаются правильно, для этого необходимо предоставить дополнительные разрешения.</string>
+    <string name="usb_detected">К устройству подключён USB-накопитель, необходимо убедиться, что файлы на нём отображаются правильно. Для этого необходимо предоставить дополнительные разрешения.</string>
     <string name="confirm_usb_storage_access_text">Пожалуйста, выберите корневую папку USB-накопителя на следующем экране, чтобы предоставить к нему доступ.</string>
-    <string name="wrong_root_selected_usb">Выбрана неправильная папка. Выберите корневую папку вашего USB-накопителя.</string>
+    <string name="wrong_root_selected_usb">Выбрана неправильная папка. Выберите корневую папку USB-накопителя.</string>
 
     <!-- Dates -->
     <string name="january">Январь</string>
@@ -537,7 +537,7 @@
     <string name="more_apps_underlined"><u>Больше простых приложений</u></string>
     <string name="third_party_licences_underlined"><u>Лицензии третьих сторон</u></string>
     <string name="invite_friends_underlined"><u>Предложить другу</u></string>
-    <string name="share_text">Попробуй %1$s по ссылке %2$s</string>
+    <string name="share_text">Попробуйте %1$s по ссылке %2$s</string>
     <string name="invite_via">Предложить с помощью</string>
     <string name="rate_us_underlined"><u>Оценить нас в Google Play</u></string>
     <string name="donate">Поддержать разработчика</string>
@@ -572,7 +572,7 @@
 
     <string name="sideloaded_app">
         <![CDATA[
-            It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
+            Похоже, ваша версия приложения повреждена. Пожалуйста, скачайте оригинальную версию <a href="%s">отсюда</a>.
         ]]>
     </string>
 
@@ -596,7 +596,7 @@
         После запуска просто установите оранжевый цвет значка по умолчанию #F57C00. В худшем случае вам придётся переустановить приложение.</string>
 
     <!-- License -->
-    <string name="notice">Это приложение использует следующие библиотеки сторонних разработчиков, чтобы облегчить мой труд. Спасибо.</string>
+    <string name="notice">Это приложение использует следующие библиотеки сторонних разработчиков, облегчающие мой труд. Спасибо им.</string>
     <string name="third_party_licences">Лицензии третьих сторон</string>
     <string name="kotlin_title">Kotlin (язык программирования)</string>
     <string name="subsampling_title">Subsampling Scale Image View (возможность масштабирования изображений)</string>
