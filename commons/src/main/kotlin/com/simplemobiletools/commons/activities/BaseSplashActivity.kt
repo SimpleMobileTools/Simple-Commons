@@ -12,7 +12,6 @@ import com.simplemobiletools.commons.helpers.SIDELOADING_TRUE
 import com.simplemobiletools.commons.helpers.SIDELOADING_UNCHECKED
 
 abstract class BaseSplashActivity : AppCompatActivity() {
-
     abstract fun initActivity()
 
     abstract fun getAppPackageName(): String
