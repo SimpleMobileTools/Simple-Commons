@@ -22,7 +22,7 @@
     <string name="transparent">Transparente</string>
     <string name="transparent_color">Color transparente</string>
     <string name="select_a_different_color">Seleccionar un color diferente</string>
-    <string name="download">Download</string>
+    <string name="download">Descarga</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
@@ -179,12 +179,12 @@
     <string name="undo_changes_confirmation">¿Seguro que quiere deshacer los cambios?</string>
     <string name="save_before_closing">Tiene cambios sin aplicar. ¿Guardar antes de salir?</string>
     <string name="apply_to_all_apps">Aplicar colores a todas las aplicaciones Simple Apps</string>
-    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="app_icon_color_warning">ADVERTENCIA: Algunos lanzadores no manejan correctamente la personalización del icono de la aplicación. En caso de que el icono desaparezca, intente iniciar la aplicación a través de Google Play o algún widget, si está disponible.
+        Una vez iniciado, simplemente vuelva a establecer el ícono naranja predeterminado #F57C00. Es posible que tengas que volver a instalar la aplicación en el peor de los casos.</string>
     <string name="share_colors_success">Colores actualizados correctamente. Se ha añadido un nuevo tema llamado \'Shared\', Por favor utilicelo para actualizar los colores de todas las aplicaciones en el futuro.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Por favor comrpa <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> para desbloquear esta función y ayudar al desarrollo. Gracias!
+            Por favor compra <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> para desbloquear esta función y ayudar al desarrollo. Gracias!
         ]]>
     </string>
 
@@ -386,7 +386,7 @@
     <string name="password_protect_hidden_items">Contraseña para proteger los medios ocultos</string>
     <string name="password_protect_whole_app">Contraseña para proteger toda la aplicación</string>
     <string name="password_protect_file_deletion">Protegeger con contraseña eliminar y mover archivos</string>
-    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
+    <string name="keep_last_modified">Mantener el último valor modificado por última vez en las operaciones de archivo</string>
     <string name="show_info_bubble">Mostrar una burbuja de información al desplazar elementos arrastrando la barra de desplazamiento</string>
     <string name="prevent_phone_from_sleeping">No dejar dormir el teléfono con la aplicación en primer plano</string>
     <string name="skip_delete_confirmation">Omitir siempre el diálogo de confirmación de eliminación</string>
@@ -401,10 +401,10 @@
     <string name="recycle_bin_cleaning_interval">Intervalo de vaciado de la papelera de reciclaje</string>
     <string name="empty_recycle_bin">Vaciar papelera de reciclaje</string>
     <string name="force_portrait_mode">Forzar el modo retrato</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="export_settings">Exportar ajustes</string>
+    <string name="import_settings">Importar ajustes</string>
+    <string name="settings_exported_successfully">Ajustes exportados correctamente</string>
+    <string name="settings_imported_successfully">Ajustes importados correctamente</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilidad</string>
@@ -415,7 +415,7 @@
     <string name="saving_label">Guardando</string>
     <string name="startup">Puesta en marcha</string>
     <string name="text">Texto</string>
-    <string name="migrating">Migrating</string>
+    <string name="migrating">Migrando</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restaurar el fichero</string>
@@ -441,7 +441,7 @@
     <string name="exporting_failed">Exportación fallida</string>
     <string name="importing_some_entries_failed">La importación de algunas entradas ha fallado</string>
     <string name="exporting_some_entries_failed">La exportación de algunas entradas ha fallado</string>
-    <string name="no_entries_for_importing">No entries for importing have been found</string>
+    <string name="no_entries_for_importing">No se han encontrado entradas para importar</string>
     <string name="no_entries_for_exporting">No se han encontrado entradas para exportar</string>
 
     <!-- OTG devices -->
@@ -552,7 +552,7 @@
 
     <string name="sideloaded_app">
         <![CDATA[
-            It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
+            Parece que la versión de tu aplicación está dañada. Por favor descargue la versión original <a href="%s">aquí</a>.
         ]]>
     </string>
 
@@ -571,9 +571,9 @@
     <string name="faq_4_text_commons">Sí, al arrastrar un widget en la pantalla de inicio aparece una pantalla de configuración de widgets. Verá cuadrados de colores en la esquina inferior izquierda, solo presione para elegir un nuevo color. Puede usar el control deslizante para ajustar el alfa también.</string>
     <string name="faq_5_title_commons">¿Puedo de alguna manera restaurar archivos borrados?</string>
     <string name="faq_5_text_commons">Si realmente fueron eliminados, no puedes. Sin embargo, puedes habilitar el uso de una papelera de reciclaje en lugar de eliminar en la configuración de la aplicación. Eso solo moverá los archivos en lugar de eliminarlos.</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="faq_6_title_commons">El icono del iniciador de aplicaciones desapareció. ¿Que puedo hacer?</string>
+    <string name="faq_6_text_commons">Esto se debe a que el iniciador no admite correctamente la personalización de iconos. Intenta lanzar la aplicación a través de Google Play o algún widget, si está disponible.
+        Una vez iniciado, simplemente vuelva a establecer el ícono naranja predeterminado #F57C00. Es posible que tenga que volver a instalar la aplicación en el peor de los casos.</string>
 
     <!-- License -->
     <string name="notice">Esta aplicación usa las siguientes bibliotecas de terceros que hacen mi vida más fácil. Gracias.</string>
