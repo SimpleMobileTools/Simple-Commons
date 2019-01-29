@@ -574,9 +574,9 @@
     <string name="faq_4_text_commons">Sí, mentre arrossegueu un widget a la vostra pantalla d\'inici, apareixerà una pantalla de configuració de widgets. Veureu quadrats de colors a l\'extrem inferior esquerre, només cal prémer-los per seleccionar un color nou. També podeu utilitzar el control lliscant per ajustar l\'alfa.</string>
     <string name="faq_5_title_commons">Puc recuperar d\'alguna manera els fitxers eliminats?</string>
     <string name="faq_5_text_commons">Si estan realment eliminats no pots fer-ho. Tanmateix, pots habilitar l\'ús d\'una paperera de reciclatge en comptes de suprimir definitivament a la configuració de l\'aplicació. Això només mourà els fitxers en lloc d\'eliminar-los.</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="faq_6_title_commons">Ha desaparegut la icona del menú d\'aplicacions. Què puc fer?</string>
+    <string name="faq_6_text_commons">El teu llançador no és compatible amb la personalització d\'icones correctament. Intenteu iniciar l\'aplicació mitjançant Google Play o algun widget, si està disponible.
+        Un cop llançat, simplement configureu la icona de taronja per defecte # F57C00. És possible que hàgiu de tornar a instal·lar l\'aplicació en el pitjor dels casos.</string>
 
     <!-- License -->
     <string name="notice">Aquesta aplicació fa servir les següents biblioteques de tercers que ens faciliten la feina. Gràcies.</string>
