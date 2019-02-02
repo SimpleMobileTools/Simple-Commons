@@ -78,10 +78,10 @@
     <string name="source_and_destination_same">Исходный и конечный пути не могут совпадать</string>
     <string name="copy_failed">Не удалось скопировать файлы</string>
     <string name="copying">Копирование…</string>
-    <string name="copying_success">Файлы скопированы</string>
+    <string name="copying_success">Копирование завершено</string>
     <string name="copy_move_failed">Произошла ошибка</string>
     <string name="moving">Перемещение…</string>
-    <string name="moving_success">Файлы перемещены</string>
+    <string name="moving_success">Перемещение завершено</string>
     <string name="moving_success_partial">Некоторые файлы не могут быть перемещены</string>
     <string name="copying_success_partial">Некоторые файлы не могут быть скопированы</string>
     <string name="no_files_selected">Файлы не выбраны</string>
@@ -209,7 +209,7 @@
     <string name="remove">Убрать</string>
     <string name="rename">Переименовать</string>
     <string name="share">Поделиться</string>
-    <string name="share_via">Отправить через</string>
+    <string name="share_via">Поделиться через…</string>
     <string name="select_all">Выделить все</string>
     <string name="hide">Скрыть</string>
     <string name="unhide">Показать</string>
@@ -436,7 +436,7 @@
     <string name="saving_label">Сохранение</string>
     <string name="startup">Запуск</string>
     <string name="text">Текст</string>
-    <string name="migrating">Migrating</string>
+    <string name="migrating">Перенос</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Восстановить этот файл</string>
@@ -463,7 +463,7 @@
     <string name="exporting_failed">Экспортирование завершилось неудачей</string>
     <string name="importing_some_entries_failed">Импортирование некоторых элементов завершилось неудачей</string>
     <string name="exporting_some_entries_failed">Экспортирование некоторых элементов завершилось неудачей</string>
-    <string name="no_entries_for_importing">No entries for importing have been found</string>
+    <string name="no_entries_for_importing">Отсутствуют элементы для импортирования</string>
     <string name="no_entries_for_exporting">Отсутствуют элементы для экспортирования</string>
 
     <!-- OTG devices -->
