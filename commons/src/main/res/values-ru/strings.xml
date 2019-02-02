@@ -436,6 +436,7 @@
     <string name="saving_label">Сохранение</string>
     <string name="startup">Запуск</string>
     <string name="text">Текст</string>
+    <string name="migrating">Migrating</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Восстановить этот файл</string>
@@ -462,6 +463,7 @@
     <string name="exporting_failed">Экспортирование завершилось неудачей</string>
     <string name="importing_some_entries_failed">Импортирование некоторых элементов завершилось неудачей</string>
     <string name="exporting_some_entries_failed">Экспортирование некоторых элементов завершилось неудачей</string>
+    <string name="no_entries_for_importing">No entries for importing have been found</string>
     <string name="no_entries_for_exporting">Отсутствуют элементы для экспортирования</string>
 
     <!-- OTG devices -->

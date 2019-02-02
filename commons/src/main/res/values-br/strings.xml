@@ -415,6 +415,7 @@
     <string name="saving_label">Saving</string>
     <string name="startup">Startup</string>
     <string name="text">Text</string>
+    <string name="migrating">Migrating</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restore this file</string>
@@ -440,6 +441,7 @@
     <string name="exporting_failed">Exporting failed</string>
     <string name="importing_some_entries_failed">Importing some entries failed</string>
     <string name="exporting_some_entries_failed">Exporting some entries failed</string>
+    <string name="no_entries_for_importing">No entries for importing have been found</string>
     <string name="no_entries_for_exporting">No entries for exporting have been found</string>
 
     <!-- OTG devices -->

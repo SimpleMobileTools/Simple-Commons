@@ -415,6 +415,7 @@
     <string name="saving_label">正在保存</string>
     <string name="startup">启动</string>
     <string name="text">文本</string>
+    <string name="migrating">Migrating</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">恢复此文件</string>
@@ -440,6 +441,7 @@
     <string name="exporting_failed">导出失败</string>
     <string name="importing_some_entries_failed">部分项目导入失败</string>
     <string name="exporting_some_entries_failed">部分项目导出失败</string>
+    <string name="no_entries_for_importing">No entries for importing have been found</string>
     <string name="no_entries_for_exporting">未找到要导出的项目</string>
 
     <!-- OTG devices -->

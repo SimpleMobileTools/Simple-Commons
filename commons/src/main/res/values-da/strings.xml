@@ -415,6 +415,7 @@
     <string name="saving_label">Saving</string>
     <string name="startup">Startup</string>
     <string name="text">Text</string>
+    <string name="migrating">Migrating</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restore this file</string>
@@ -440,6 +441,7 @@
     <string name="exporting_failed">Eksport mislykkedes</string>
     <string name="importing_some_entries_failed">Import mislykkedes delvist</string>
     <string name="exporting_some_entries_failed">Eksport mislykkedes delvist</string>
+    <string name="no_entries_for_importing">No entries for importing have been found</string>
     <string name="no_entries_for_exporting">Der er ikke fundet indhold til eksport</string>
 
     <!-- OTG devices -->

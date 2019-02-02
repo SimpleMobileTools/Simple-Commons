@@ -414,6 +414,7 @@
     <string name="saving_label">Mentés</string>
     <string name="startup">Indítás</string>
     <string name="text">Szöveg</string>
+    <string name="migrating">Migrating</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Fájl visszaállítása</string>
@@ -439,6 +440,7 @@
     <string name="exporting_failed">Sikertelen exportálás</string>
     <string name="importing_some_entries_failed">Egyes elemek importálása nem sikerült</string>
     <string name="exporting_some_entries_failed">Egyes elemek exportálása nem sikerült</string>
+    <string name="no_entries_for_importing">No entries for importing have been found</string>
     <string name="no_entries_for_exporting">Az exportáláshoz nem találhatóak bejegyzések</string>
 
     <!-- OTG devices -->

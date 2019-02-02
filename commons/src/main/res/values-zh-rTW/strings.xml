@@ -415,6 +415,7 @@
     <string name="saving_label">儲存中</string>
     <string name="startup">啟動</string>
     <string name="text">文字</string>
+    <string name="migrating">搬移</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">還原這個檔案</string>
@@ -440,6 +441,7 @@
     <string name="exporting_failed">匯出失敗</string>
     <string name="importing_some_entries_failed">部分項目匯入失敗</string>
     <string name="exporting_some_entries_failed">部分項目匯出失敗</string>
+    <string name="no_entries_for_importing">未發現供匯入的項目</string>
     <string name="no_entries_for_exporting">未發現供匯出的項目</string>
 
     <!-- OTG devices -->

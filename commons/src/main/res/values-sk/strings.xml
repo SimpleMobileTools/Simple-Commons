@@ -436,6 +436,7 @@
     <string name="saving_label">Ukladanie</string>
     <string name="startup">Po spustení</string>
     <string name="text">Text</string>
+    <string name="migrating">Migrovanie</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Obnoviť tento súbor</string>
@@ -462,6 +463,7 @@
     <string name="exporting_failed">Exportovanie zlyhalo</string>
     <string name="importing_some_entries_failed">Importovanie niektorých položiek zlyhalo</string>
     <string name="exporting_some_entries_failed">Exportovanie niektorých položiek zlyhalo</string>
+    <string name="no_entries_for_importing">Nenašli sa žiadne položky pre import</string>
     <string name="no_entries_for_exporting">Nenašli sa žiadne položky pre export</string>
 
     <!-- OTG devices -->

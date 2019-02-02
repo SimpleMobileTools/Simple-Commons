@@ -415,6 +415,7 @@
     <string name="saving_label">Sparande</string>
     <string name="startup">Start</string>
     <string name="text">Text</string>
+    <string name="migrating">Migrating</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Återställ filen</string>
@@ -440,6 +441,7 @@
     <string name="exporting_failed">Exporten misslyckades</string>
     <string name="importing_some_entries_failed">Importen av vissa poster misslyckades</string>
     <string name="exporting_some_entries_failed">Exporten av vissa poster misslyckades</string>
+    <string name="no_entries_for_importing">No entries for importing have been found</string>
     <string name="no_entries_for_exporting">Inga poster hittades för export</string>
 
     <!-- OTG devices -->

@@ -415,6 +415,7 @@
     <string name="saving_label">保存中</string>
     <string name="startup">Startup</string>
     <string name="text">Text</string>
+    <string name="migrating">Migrating</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">このファイルを復元</string>
@@ -440,6 +441,7 @@
     <string name="exporting_failed">エクスポートに失敗しました</string>
     <string name="importing_some_entries_failed">一部のエントリのインポートに失敗しました</string>
     <string name="exporting_some_entries_failed">一部のエントリのエクスポートに失敗しました</string>
+    <string name="no_entries_for_importing">No entries for importing have been found</string>
     <string name="no_entries_for_exporting">エクスポートするエントリが見つかりませんでした</string>
 
     <!-- OTG devices -->

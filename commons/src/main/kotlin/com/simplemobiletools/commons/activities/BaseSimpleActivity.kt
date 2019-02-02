@@ -17,6 +17,7 @@ import androidx.core.util.Pair
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
+import com.simplemobiletools.commons.dialogs.ExportSettingsDialog
 import com.simplemobiletools.commons.dialogs.FileConflictDialog
 import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.extensions.*
@@ -402,6 +403,33 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         if (!baseConfig.wasAppOnSDShown && isAppInstalledOnSDCard()) {
             baseConfig.wasAppOnSDShown = true
             ConfirmationDialog(this, "", R.string.app_on_sd_card, R.string.ok, 0) {}
+        }
+    }
+
+    fun exportSettings(configItems: LinkedHashMap<String, Any>, defaultFilename: String) {
+        handlePermission(PERMISSION_WRITE_STORAGE) {
+            if (it) {
+                ExportSettingsDialog(this, defaultFilename) {
+                    val file = File(it)
+                    val fileDirItem = FileDirItem(file.absolutePath, file.name)
+                    getFileOutputStream(fileDirItem, true) {
+                        if (it == null) {
+                            toast(R.string.unknown_error_occurred)
+                            return@getFileOutputStream
+                        }
+
+                        Thread {
+                            it.bufferedWriter().use { out ->
+                                for ((key, value) in configItems) {
+                                    out.writeLn("$key=$value")
+                                }
+                            }
+
+                            toast(R.string.settings_exported_successfully)
+                        }.start()
+                    }
+                }
+            }
         }
     }
 }

@@ -417,6 +417,7 @@
     <string name="saving_label">Enregistrement en cours…</string>
     <string name="startup">Démarrage en cours…</string>
     <string name="text">Texte</string>
+    <string name="migrating">Migrating</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Récupérer ce fichier</string>
@@ -442,6 +443,7 @@
     <string name="exporting_failed">Échec de l\'exportation</string>
     <string name="importing_some_entries_failed">Échec de l\'importation de certains éléments</string>
     <string name="exporting_some_entries_failed">Échec de l\'exportation de certains éléments</string>
+    <string name="no_entries_for_importing">No entries for importing have been found</string>
     <string name="no_entries_for_exporting">Aucun élément pouvant être exporté n\'a été trouvé</string>
 
     <!-- OTG devices -->

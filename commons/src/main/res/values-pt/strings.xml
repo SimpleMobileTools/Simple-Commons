@@ -22,7 +22,7 @@
     <string name="transparent">Transparente</string>
     <string name="transparent_color">Cor transparente</string>
     <string name="select_a_different_color">Selecione uma cor diferente</string>
-    <string name="download">Download</string>
+    <string name="download">Descarregar</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
@@ -179,8 +179,8 @@
     <string name="undo_changes_confirmation">Tem a certeza de que deseja desfazer as alterações?</string>
     <string name="save_before_closing">Existem alterações não guardadas. Deseja guardar antes de sair?</string>
     <string name="apply_to_all_apps">Aplicar cores a todas as aplicações Simple</string>
-    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="app_icon_color_warning">AVISO: alguns launchers não gerem bem a personalização dos ícones. Se o ícone desaparecer, tente iniciar a aplicação através da Google Play ou do widget.
+        Depois de iniciar a aplicação, reverta para a cor original (#F57C00). No pior cenário, poderá ser necessário reinstalar a aplicação.</string>
     <string name="share_colors_success">Cores atualizadas com sucesso. Foi criado o novo tema \'Partilhado\', que pode utilizar para atualizar as cores de todas as aplicações Simple.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -401,13 +401,13 @@
     <string name="recycle_bin_cleaning_interval">Intervalo de tempo para limpar a reciclagem</string>
     <string name="empty_recycle_bin">Limpar reciclagem</string>
     <string name="force_portrait_mode">Impor modo vertical</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="export_settings">Exportar definições</string>
+    <string name="import_settings">Importar definições</string>
+    <string name="settings_exported_successfully">Definições exportadas com sucesso</string>
+    <string name="settings_imported_successfully">Definições importadas com sucesso</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibilidade</string>
+    <string name="visibility">Exibição</string>
     <string name="security">Segurança</string>
     <string name="scrolling">Deslocação</string>
     <string name="file_operations">Operações de ficheiros</string>
@@ -415,6 +415,7 @@
     <string name="saving_label">Guardar</string>
     <string name="startup">Arranque</string>
     <string name="text">Texto</string>
+    <string name="migrating">Migrating</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restaurar este ficheiro</string>
@@ -440,6 +441,7 @@
     <string name="exporting_failed">Falha ao exportar</string>
     <string name="importing_some_entries_failed">Falha ao importar alguns itens</string>
     <string name="exporting_some_entries_failed">Falha ao exportar alguns itens</string>
+    <string name="no_entries_for_importing">No entries for importing have been found</string>
     <string name="no_entries_for_exporting">Não existem itens para exportação</string>
 
     <!-- OTG devices -->

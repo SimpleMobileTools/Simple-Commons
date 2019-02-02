@@ -415,6 +415,7 @@
     <string name="saving_label">Saving</string>
     <string name="startup">Startup</string>
     <string name="text">Text</string>
+    <string name="migrating">Migrating</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restore this file</string>
@@ -440,6 +441,7 @@
     <string name="exporting_failed">내보내기 실패</string>
     <string name="importing_some_entries_failed">일부항목 가져오기에 실패함</string>
     <string name="exporting_some_entries_failed">일부항목 내보내기에 실패함</string>
+    <string name="no_entries_for_importing">No entries for importing have been found</string>
     <string name="no_entries_for_exporting">내보낼 수 있는 항목을 찾을 수 없음</string>
 
     <!-- OTG devices -->
