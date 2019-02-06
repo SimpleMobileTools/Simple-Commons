@@ -179,8 +179,8 @@
     <string name="undo_changes_confirmation">Er du sikker på at du vil fortryde ændringerne?</string>
     <string name="save_before_closing">Du har ændringer der ikke er gemt. Vil du gemme dem?</string>
     <string name="apply_to_all_apps">Anvend farverne på alle Simple Apps</string>
-    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="app_icon_color_warning">ADVARSEL: Ikke alle app-launchers kan håndtere tilpasning af ikonfarve. Hvis et ikon skulle forsvinde kan du prøve at åbne appen via Google Play eller en widget.
+       Når appen er åben kan du sætte farven til standardfarven #F57C00 igen. I værste fald må du geninstallere appen.</string>
     <string name="share_colors_success">Farverne er ændret. Et nyt udseende kaldet \"Tilpasset\" er tilføjet, brug det ved opdatering af alle app-farver fremover.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -216,9 +216,9 @@
     <string name="stop_showing_hidden">Stop visning af skjulte medier</string>
     <string name="maximum_share_reached">Du kan ikke dele så meget indhold ad gangen</string>
     <string name="empty_and_disable_recycle_bin">Tøm og deaktiver papirkurven</string>
-    <string name="undo">Undo</string>
-    <string name="redo">Redo</string>
-    <string name="print">Print</string>
+    <string name="undo">Fortryd</string>
+    <string name="redo">Gentag</string>
+    <string name="print">Udskriv</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorter efter</string>
@@ -419,11 +419,11 @@
     <string name="migrating">Migrating</string>
 
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restore this file</string>
-    <string name="restore_selected_files">Restore selected files</string>
-    <string name="restore_all_files">Restore all files</string>
-    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
-    <string name="files_restored_successfully">Files have been restored successfully</string>
+    <string name="restore_this_file">Gendan denne fil</string>
+    <string name="restore_selected_files">Gendan valgte filer</string>
+    <string name="restore_all_files">Gendan alle filer</string>
+    <string name="recycle_bin_emptied">Papirkurven blev tømt</string>
+    <string name="files_restored_successfully">Filerne blev gendannet</string>
     <string name="empty_recycle_bin_confirmation">Er du sikker på at du vil tømme papirkurven? Filerne vil ikke kunne genskabes.</string>
     <string name="recycle_bin_empty">Papirkurven er tom</string>
     <string name="moving_recycle_bin_items_disabled">Flytning af indhold i papirkurven er deaktiveret, gendan i stedet</string>
@@ -447,7 +447,7 @@
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="usb_detected">Du ser ud til at have en USB-enhed tilsluttet. For at sikre at dens filer ses ordentligt, skal du tildele flere rettigheder.</string>
     <string name="confirm_usb_storage_access_text">Vælg rodmappen på USB-enheden på den næste skærm for at give adgang.</string>
     <string name="wrong_root_selected_usb">Den forkerte mappe er valgt, vælg rodmappen på din USB-enhed</string>
 
@@ -506,9 +506,9 @@
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Denne version af appen vedligeholdes ikke længere. I stedet er der kommet en Pro-version du kan opgradere til.</string>
     <string name="it_is_free">Den er stadig gratis indtil: %s. Downloader du den indtil da kan du blive ved at bruge den gratis fremover.</string>
-    <string name="more_info">More info</string>
-    <string name="upgrade">Upgrade</string>
-    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
+    <string name="more_info">Yderligere oplysninger</string>
+    <string name="upgrade">Opgrader</string>
+    <string name="upgrade_calendar">Du må migrere lokalt gemte begivenheder ved at eksportere til en ics-fil og derpå importere den. Du finder eksport- og importknapper i hovedmenuen.</string>
 
     <!-- About -->
     <string name="about">Om</string>
@@ -553,7 +553,7 @@
 
     <string name="sideloaded_app">
         <![CDATA[
-            It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
+            Det ser ud til at din app-version er beskadiget. <a href="%s">Download den originale version her</a>.
         ]]>
     </string>
 
@@ -571,9 +571,9 @@
     <string name="faq_4_text_commons">Jep. Når du føjer en widget til din skærm kommer muligheden for at konfigurere den frem. I nederste venstre hjørne finder du farvede kvadrater, klik på dem og vælg en ny farve. Du kan justere alfa med skyderen.</string>
     <string name="faq_5_title_commons">Kan jeg gendanne slettede filer?</string>
     <string name="faq_5_text_commons">Nej, ikke hvis de virkelig er slettet. Men du kan vælge at bruge en papirkurv i stedet for at slette noget direkte. Papirkurven aktiveres i indstillingerne.</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="faq_6_title_commons">App-launcher'ens ikon forsvandt. Hvad gør jeg</string>
+    <string name="faq_6_text_commons">Det sker når din launcher ikke supporterer tilpasning af ikonet. Prøv at åbne appen via Google Play eller fra en widget.
+       Når appen er åbnet kan du ingen sætte farven til den orange standardværdi, #F57C00. I værste fald må du reinstallere appen.</string>
 
     <!-- License -->
     <string name="notice">Denne app bruger følgende 3.-parts biblioteker der gør at mit liv bliver lidt enklere. Tak.</string>
