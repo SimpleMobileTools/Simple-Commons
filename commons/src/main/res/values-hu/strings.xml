@@ -22,7 +22,7 @@
     <string name="transparent">Áttetsző</string>
     <string name="transparent_color">Áttetsző szín</string>
     <string name="select_a_different_color">Válasszon egy másik színt</string>
-    <string name="download">Download</string>
+    <string name="download">Letöltés</string>
 
     <!-- Favorites -->
     <string name="favorites">Kedvencek</string>
@@ -217,7 +217,7 @@
     <string name="empty_and_disable_recycle_bin">Lomtár kiürítése és letiltása</string>
     <string name="undo">Visszavonás</string>
     <string name="redo">Mégis</string>
-    <string name="print">Print</string>
+    <string name="print">Nyomtatás</string>
 
     <!-- Sorting -->
     <string name="sort_by">Rendezés</string>
@@ -401,10 +401,10 @@
     <string name="recycle_bin_cleaning_interval">Lomtár kiürítés időszak</string>
     <string name="empty_recycle_bin">Lomtár ürítése</string>
     <string name="force_portrait_mode">Álló mód kényszerítése</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="export_settings">Beállítások exportálása</string>
+    <string name="import_settings">Beállítások importálása</string>
+    <string name="settings_exported_successfully">A beállítások exportálása sikerült</string>
+    <string name="settings_imported_successfully">A beállítások importálása sikerült</string>
 
     <!-- Setting sections -->
     <string name="visibility">Láthatóság</string>
@@ -415,7 +415,7 @@
     <string name="saving_label">Mentés</string>
     <string name="startup">Indítás</string>
     <string name="text">Szöveg</string>
-    <string name="migrating">Migrating</string>
+    <string name="migrating">Átköltöztetés</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Fájl visszaállítása</string>
@@ -441,7 +441,7 @@
     <string name="exporting_failed">Sikertelen exportálás</string>
     <string name="importing_some_entries_failed">Egyes elemek importálása nem sikerült</string>
     <string name="exporting_some_entries_failed">Egyes elemek exportálása nem sikerült</string>
-    <string name="no_entries_for_importing">No entries for importing have been found</string>
+    <string name="no_entries_for_importing">Az importáláshoz nem találhatóak bejegyzések</string>
     <string name="no_entries_for_exporting">Az exportáláshoz nem találhatóak bejegyzések</string>
 
     <!-- OTG devices -->
@@ -536,7 +536,7 @@
 	</string>
     <string name="purchase">Vásárlás</string>
     <string name="update_thank_you">Kérjük frissítse a Simple Thank You alkalmazást a legújabb verzióra</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
+    <string name="before_asking_question_read_faq">Mielőtt kérdezne, ellenőrizze az alkalmazás beállításait, és először olvassa el a Gyakran Ismételt Kérdéseket. Talán ott van a megoldás.</string>
     <string name="read_it">Olvassa el</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
@@ -552,7 +552,7 @@
 
     <string name="sideloaded_app">
         <![CDATA[
-            It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
+            Úgy tűnik megsérült az alkalmazás. Kérjük töltse le az eredeti verziót <a href="%s">innen</a>.
         ]]>
     </string>
 
