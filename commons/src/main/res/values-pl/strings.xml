@@ -22,7 +22,7 @@
     <string name="transparent">Przezroczysty</string>
     <string name="transparent_color">Prezroczysty kolor</string>
     <string name="select_a_different_color">Wybierz inny kolor</string>
-    <string name="download">Download</string>
+    <string name="download">Pobierz</string>
 
     <!-- Favorites -->
     <string name="favorites">Ulubione</string>
@@ -169,7 +169,7 @@
     <string name="primary_color">Belka i przełączniki</string>
     <string name="foreground_color">Pierwszy plan</string>
     <string name="app_icon_color">Ikona aplikacji</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
+    <string name="bottom_navigation_bar_color">Dolny pasek nawigacyjny</string>
     <string name="restore_defaults">Przywróć domyślne</string>
     <string name="change_color">Zmień kolor</string>
     <string name="theme">Motyw</string>
@@ -180,8 +180,8 @@
     <string name="undo_changes_confirmation">Czy na pewno chcesz cofnąć zmiany?</string>
     <string name="save_before_closing">Zapisać zmiany?</string>
     <string name="apply_to_all_apps">Zastosuj kolory do wszystkich Prostych Aplikacji</string>
-    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="app_icon_color_warning">UWAGA: Niektóre launchery nie obsługują prawidłowo zmiany ikon aplikacji. Jeśli ona zniknie, uruchom aplikację przez Sklep Google Play, lub przez widżet, jeśli jest dostępny.
+        Po uruchomieniu aplikacji ustaw domyślny kolor ikony (#F57C00). W najgorszym przypadku konieczne może być przeinstalowanie aplikacji.</string>
     <string name="share_colors_success">Kolory zostały zmienione. Utworzony został nowy, \'wspólny\' motyw - użyj go, aby zaktualizować kolorystykę wszystkich Prostych Aplikacji.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -219,6 +219,7 @@
     <string name="empty_and_disable_recycle_bin">Wyczyść i wyłącz kosz</string>
     <string name="undo">Cofnij</string>
     <string name="redo">Ponów</string>
+    <string name="print">Drukuj</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortuj według parametru:</string>
@@ -404,8 +405,8 @@
     <string name="extra_large">Bardzo duża</string>
     <string name="password_protect_hidden_items">Chroń widoczność ukrytych plików</string>
     <string name="password_protect_whole_app">Chroń dostęp do aplikacji</string>
-    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
-    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
+    <string name="password_protect_file_deletion">Chroń pliki przed usunięciem i przeniesieniem</string>
+    <string name="keep_last_modified">Zachowuj starą datę modyfikacji po operacjach na plikach</string>
     <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
     <string name="prevent_phone_from_sleeping">Zapobiegaj przejściu urządzenia  w stan uśpienia gdy aplikacja jest aktywna</string>
     <string name="skip_delete_confirmation">Nie pokazuj okna z potwierdzeniem usunięcia elementów</string>
@@ -420,10 +421,10 @@
     <string name="recycle_bin_cleaning_interval">Przedział czasowy czyszczenia kosza</string>
     <string name="empty_recycle_bin">Wyczyść kosz</string>
     <string name="force_portrait_mode">Wymuś tryb pionowy</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="export_settings">Eksportuj ustawienia</string>
+    <string name="import_settings">Importuj ustawienia</string>
+    <string name="settings_exported_successfully">Ustawienia zostały wyeksportowane</string>
+    <string name="settings_imported_successfully">Ustawienia zostały zaimportowane</string>
 
     <!-- Setting sections -->
     <string name="visibility">Widoczność</string>
@@ -434,7 +435,7 @@
     <string name="saving_label">Zachowywanie</string>
     <string name="startup">Uruchamianie</string>
     <string name="text">Tekst</string>
-    <string name="migrating">Migrating</string>
+    <string name="migrating">Migracja</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Przywróć ten plik</string>
@@ -461,14 +462,14 @@
     <string name="exporting_failed">Eksportowanie nie powiodło się</string>
     <string name="importing_some_entries_failed">Importowanie niektórych wpisów nie powiodło się</string>
     <string name="exporting_some_entries_failed">Eksportowanie niektórych wpisów nie powiodło się</string>
-    <string name="no_entries_for_importing">No entries for importing have been found</string>
+    <string name="no_entries_for_importing">Nie znalazłem żadnych wpisów do zaimportowania</string>
     <string name="no_entries_for_exporting">Nie znalazłem żadnych wpisów do wyeksportowania</string>
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
-    <string name="confirm_usb_storage_access_text">Wybierz folder główny urządzenia USB na następnym ekranie, aby uzyskać dostęp do tegoż urządzenia</string>
-    <string name="wrong_root_selected_usb">Wybrany został niewłaściwy folder. Wybierz główny folder urządzenia USB.</string>
+    <string name="usb_detected">Zdaje się, że masz do urządzenia podpiętą pamięć USB. Aby mieć pewność, że pliki na niej będą poprawnie widoczne, przyznaj aplikacji dodatkowe uprawnienia.</string>
+    <string name="confirm_usb_storage_access_text">Wybierz folder główny pamięci USB na następnym ekranie, aby uzyskać do niej dostęp</string>
+    <string name="wrong_root_selected_usb">Wybrany został niewłaściwy folder. Wybierz główny folder pamięci USB.</string>
 
     <!-- Dates -->
     <string name="january">Styczeń</string>
@@ -524,10 +525,10 @@
 
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Ta wersja aplikacji nie jest już rozwijana. Zaktualizuj ją do wersji Pro.</string>
-    <string name="it_is_free">Jest darmowa do %s. Jeśli pobierzesz ją do tego czasu, będziesz mieć ją bezterminowo za darmo.</string>
+    <string name="it_is_free">Aplikacja jest darmowa do %s. Jeśli pobierzesz ją do tego czasu, będziesz mieć ją bezterminowo za darmo.</string>
     <string name="more_info">Więcej informacji</string>
     <string name="upgrade">Aktualizuj</string>
-    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
+    <string name="upgrade_calendar">Musisz przenieść przechowywane lokalnie wydarzenia ręcznie poprzez wyeskportowanie ich do pliku .ics, a następnie ich zaimportowanie. Oba służące do tego przyciski znajdziez w menu na ekranie głównym aplikacji.</string>
 
     <!-- About -->
     <string name="about">O aplikacji</string>
@@ -556,7 +557,7 @@
     </string>
     <string name="purchase">Kup</string>
     <string name="update_thank_you">Zaktualizuj aplikcję Proste Podziękowanie do najnowszej wersji</string>
-    <string name="before_asking_question_read_faq">Zanim zadasz pytanie, przeczytaj \'Najczęściej zadawane pytania\'. Być może rozwiązanie Twojego problemu już tam jest.</string>
+    <string name="before_asking_question_read_faq">Zanim zadasz pytanie, zajrzyj do sekcji często zadawanych pytań (FAQ) w ustawieniach aplikacji. Być może jest tam już rozwiązanie Twojego problemu.</string>
     <string name="read_it">Przeczytaj</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
@@ -572,7 +573,7 @@
 
     <string name="sideloaded_app">
         <![CDATA[
-            It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
+            Zdaje się, że Twoja wersja aplikacji jest uszkodzona / zmodyfikowana. Pobierz <a href="%s">stąd</a> oryginalną wersję.
         ]]>
     </string>
 
@@ -583,15 +584,15 @@
     <string name="faq_1_text_commons">Zapewne dlatego, że aplikacja została zainstalowana na karcie pamięci. Jedynym rozwiązaniem problemu jest przeniesienie aplikacji do pamięci wewnętrznej. Jest to ograniczenie systemu.</string>
     <string name="faq_2_title_commons">Chcę was wesprzeć, ale jestem bez grosza przy duszy. Mogę jakoś to zrobić inaczej?</string>
     <string name="faq_2_text_commons">Oczywiście. Możesz powiedzieć światu o naszych aplikacjach, podzielić się opinią i oceną w Sklepie Google Play, lub też wspomóc tłumaczenie aplikacji na nowe języki (bądź poprawić już istniejące tłumaczenia). Instrukcję znajdziesz pod adresem https://github.com/SimpleMobileTools/General-Discussion . Możesz też napisać do nas na adres hello@simplemobiletools.com , jeśli potrzebujesz pomocy.</string>
-    <string name="faq_3_title_commons">Usunąłem(-am) jakieś pliki przez przypadek. Mogę je jakoś odzyskać?</string>
+    <string name="faq_3_title_commons">Usunęły mi się przypadkowo jakieś pliki. Mogę je jakoś odzyskać?</string>
     <string name="faq_3_text_commons">Pliki są usuwane zaraz po kliknięciu w oknie potwierdzającym. System Android nie ma wbudowanego kosza.</string>
     <string name="faq_4_title_commons">Nie za bardzo podobają mi się domyślne kolory widżetów. Mogę je jakoś zmienić?</string>
     <string name="faq_4_text_commons">Tak. Po przeciągnięciu widżetu na pulpit pojawia się okno jego konfiguracji. Zobaczysz na nim kolorowe kwadraty, za pomocą których możesz wybrać nowe kolory. Suwakiem możesz też ustawić poziom przezroczystości.</string>
     <string name="faq_5_title_commons">Czy mogę jakoś odzyskać usunięte pliki?</string>
-    <string name="faq_5_text_commons">Jeśli zostały faktycznie usunięte, no to nie bardzo (ratunkiem mogą - acz nie muszą - okazać się zewnętrzne aplikacje odzyskujące pliki). Jednakże, możesz włączyć funkcję kosza w ustawieniach niniejszej aplikacji, aby mieć pewność co do ich ewentualnego odzyskania.</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="faq_5_text_commons">Jeśli zostały faktycznie usunięte, no to nie bardzo (ratunkiem mogą - acz nie muszą - okazać się zewnętrzne aplikacje odzyskujące pliki). Jednakże, możesz włączyć funkcję kosza w ustawieniach niniejszej aplikacji, aby mieć całkowitą pewność co do ich odzyskania.</string>
+    <string name="faq_6_title_commons">Z launchera zniknęła ikona aplikacji. Co mogę zrobić?</string>
+    <string name="faq_6_text_commons">Niektóre launchery nie obsługują prawidłowo zmiany ikon aplikacji. Uruchom aplikację przez Sklep Google Play, lub przez widżet, jeśli jest dostępny.
+        Po uruchomieniu aplikacji ustaw domyślny kolor ikony (#F57C00). W najgorszym przypadku konieczne może być przeinstalowanie aplikacji.</string>
 
     <!-- License -->
     <string name="notice">Aplikacja korzysta z następujących bibliotek innych firm:</string>
@@ -619,5 +620,5 @@
     <string name="panorama_view_title">VR Panorama View (wyświetlanie panoram)</string>
     <string name="sanselan_title">Apache Sanselan (odczytywanie metadanych obrazów)</string>
     <string name="filters_title">Android Photo Filters (fitry obrazów)</string>
-    <string name="gesture_views_title">Gesture Views (zoomable images)</string>
+    <string name="gesture_views_title">Gesture Views (przybliżanie obrazów)</string>
 </resources>

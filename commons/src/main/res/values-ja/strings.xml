@@ -22,7 +22,7 @@
     <string name="transparent">透過</string>
     <string name="transparent_color">透過色</string>
     <string name="select_a_different_color">別の色を選択する</string>
-    <string name="download">Download</string>
+    <string name="download">ダウンロード</string>
 
     <!-- Favorites -->
     <string name="favorites">お気に入り</string>
@@ -114,7 +114,7 @@
     <string name="select_folder">フォルダを選択</string>
     <string name="select_file">ファイルを選択</string>
     <string name="confirm_storage_access_title">外部ストレージのアクセスを確認してください</string>
-    <string name="confirm_storage_access_text">次の画面で SDカードのルートフォルダを選択して、書き込みアクセス許可を付与してください</string>
+    <string name="confirm_storage_access_text">次の画面でSDカードのルートフォルダを選択して、書き込みアクセス許可を付与してください</string>
     <string name="confirm_storage_access_text_sd">SDカードの内容が表示されない場合は、こちらをお試しください</string>
     <string name="confirm_selection">選択を確認</string>
 
@@ -141,8 +141,8 @@
     <string name="root">ルート</string>
     <string name="wrong_root_selected">フォルダの選択が正しくありません。SDカードを選択してください</string>
     <string name="sd_card_usb_same">SDカードとUSBデバイスのパスを同じにすることはできません</string>
-    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
-        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
+    <string name="app_on_sd_card">アプリがSDカード上にインストールされているため、アプリのウィジェットは使用できません。利用可能なウィジェットのリストにも表示されないでしょう。
+        これはシステムによる制限なので、ウィジェットを使用する場合には、アプリを内部ストレージに戻す必要があります。</string>
 
     <!-- File properties -->
     <string name="properties">プロパティ</string>
@@ -168,7 +168,7 @@
     <string name="primary_color">メインカラー</string>
     <string name="foreground_color">前景色</string>
     <string name="app_icon_color">アプリアイコンの色</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
+    <string name="bottom_navigation_bar_color">ナビゲーションバーの色</string>
     <string name="restore_defaults">デフォルトに戻す</string>
     <string name="change_color">色を変更</string>
     <string name="theme">テーマ</string>
@@ -218,6 +218,7 @@
     <string name="empty_and_disable_recycle_bin">ごみ箱を空にして無効にする</string>
     <string name="undo">元に戻す</string>
     <string name="redo">やり直し</string>
+    <string name="print">Print</string>
 
     <!-- Sorting -->
     <string name="sort_by">並べ替え</string>
@@ -228,8 +229,8 @@
     <string name="title">タイトル</string>
     <string name="filename">ファイル名</string>
     <string name="extension">拡張子</string>
-    <string name="random">Random</string>
-    <string name="sort_randomly">Sort randomly</string>
+    <string name="random">ランダム</string>
+    <string name="sort_randomly">ランダムに並び替え</string>
     <string name="ascending">昇順</string>
     <string name="descending">降順</string>
     <string name="use_for_this_folder">このフォルダのみに適用</string>
@@ -386,25 +387,25 @@
     <string name="password_protect_hidden_items">非表示にした項目をパスワードで保護する</string>
     <string name="password_protect_whole_app">アプリ全体をパスワードで保護する</string>
     <string name="password_protect_file_deletion">ファイルの削除と移動をパスワードで保護する</string>
-    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
+    <string name="keep_last_modified">ファイルの操作時、最終更新日が古いものを保持する</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
     <string name="prevent_phone_from_sleeping">アプリを使用中は端末がスリープ状態にならないようにする</string>
     <string name="skip_delete_confirmation">削除時の確認ダイアログを表示しない</string>
     <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
     <string name="use_24_hour_time_format">24時間表示を使用</string>
-    <string name="sunday_first">Start week on Sunday</string>
+    <string name="sunday_first">週の始めを日曜にする</string>
     <string name="widgets">ウィジェット</string>
     <string name="use_same_snooze">Always use same snooze time</string>
     <string name="snooze_time">Snooze time</string>
     <string name="vibrate_on_button_press">ボタンを押した時に振動する</string>
     <string name="move_items_into_recycle_bin">削除の代わりにアイテムをごみ箱に移動する</string>
-    <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
+    <string name="recycle_bin_cleaning_interval">ごみ箱を自動で空にする間隔</string>
     <string name="empty_recycle_bin">ゴミ箱を空にする</string>
     <string name="force_portrait_mode">ポートレートモードを強制する</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="export_settings">設定をエクスポート</string>
+    <string name="import_settings">設定をインポート</string>
+    <string name="settings_exported_successfully">設定は正常にエクスポートされました</string>
+    <string name="settings_imported_successfully">設定は正常にインポートされました</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>
@@ -413,9 +414,9 @@
     <string name="file_operations">ファイル操作</string>
     <string name="recycle_bin">ごみ箱</string>
     <string name="saving_label">保存中</string>
-    <string name="startup">Startup</string>
+    <string name="startup">起動時</string>
     <string name="text">Text</string>
-    <string name="migrating">Migrating</string>
+    <string name="migrating">移行中</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">このファイルを復元</string>
@@ -425,7 +426,7 @@
     <string name="files_restored_successfully">ファイルが正常に復元されました</string>
     <string name="empty_recycle_bin_confirmation">ごみ箱を空にしてもよろしいですか？この操作は元に戻すことができません。</string>
     <string name="recycle_bin_empty">ゴミ箱は空です</string>
-    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
+    <string name="moving_recycle_bin_items_disabled">ごみ箱からの移動はできません。復元を使用してください</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d個のアイテムをごみ箱に移動しています</item>
@@ -441,7 +442,7 @@
     <string name="exporting_failed">エクスポートに失敗しました</string>
     <string name="importing_some_entries_failed">一部のエントリのインポートに失敗しました</string>
     <string name="exporting_some_entries_failed">一部のエントリのエクスポートに失敗しました</string>
-    <string name="no_entries_for_importing">No entries for importing have been found</string>
+    <string name="no_entries_for_importing">インポートするエントリが見つかりませんでした</string>
     <string name="no_entries_for_exporting">エクスポートするエントリが見つかりませんでした</string>
 
     <!-- OTG devices -->
@@ -536,7 +537,7 @@
     </string>
     <string name="purchase">Purchase</string>
     <string name="update_thank_you">\"Simple Thank You\" アプリを最新版に更新してください</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please read the Frequently Asked Questions first, maybe the solution is there.</string>
+    <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
     <string name="read_it">Read it</string>
 
     <!-- New app (do not translate anything on the 4th line) -->

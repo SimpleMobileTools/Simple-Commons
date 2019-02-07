@@ -218,6 +218,7 @@
     <string name="empty_and_disable_recycle_bin">Esvaziar e desativar a reciclagem</string>
     <string name="undo">Desfazer</string>
     <string name="redo">Refazer</string>
+    <string name="print">Print</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -386,7 +387,7 @@
     <string name="password_protect_hidden_items">Proteger itens ocultos com palavra-passe</string>
     <string name="password_protect_whole_app">Proteger aplicação com palavra-passe</string>
     <string name="password_protect_file_deletion">Impedir eliminação e movimentação de ficheiros com palavra-passe</string>
-    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
+    <string name="keep_last_modified">Manter data/hora da última modificação nas operações de ficheiros</string>
     <string name="show_info_bubble">Mostrar informação ao arrastar a barra de deslocamento</string>
     <string name="prevent_phone_from_sleeping">Impedir adormecimento do dispositivo se a aplicação estiver em segundo plano</string>
     <string name="skip_delete_confirmation">Ignorar sempre a confirmação para eliminação de ficheiros</string>
@@ -415,7 +416,7 @@
     <string name="saving_label">Guardar</string>
     <string name="startup">Arranque</string>
     <string name="text">Texto</string>
-    <string name="migrating">Migrating</string>
+    <string name="migrating">Migração</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restaurar este ficheiro</string>
@@ -441,7 +442,7 @@
     <string name="exporting_failed">Falha ao exportar</string>
     <string name="importing_some_entries_failed">Falha ao importar alguns itens</string>
     <string name="exporting_some_entries_failed">Falha ao exportar alguns itens</string>
-    <string name="no_entries_for_importing">No entries for importing have been found</string>
+    <string name="no_entries_for_importing">Não existem itens para importação</string>
     <string name="no_entries_for_exporting">Não existem itens para exportação</string>
 
     <!-- OTG devices -->
@@ -536,7 +537,7 @@
     </string>
     <string name="purchase">Comprar</string>
     <string name="update_thank_you">Por favor atualize a aplicação Simple Thank You para a versão mais recente</string>
-    <string name="before_asking_question_read_faq">Antes de colocar uma questão, leia as FAQ pois pode já existir uma solução para o seu problema.</string>
+    <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
     <string name="read_it">Ler</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
@@ -552,7 +553,7 @@
 
     <string name="sideloaded_app">
         <![CDATA[
-            It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
+            Parece que a sua aplicação está danificada. Descarregue a versão original <a href="%s">aqui</a>.
         ]]>
     </string>
 
@@ -601,5 +602,5 @@
     <string name="panorama_view_title">VR Panorama View (exibição panorâmica)</string>
     <string name="sanselan_title">Apache Sanselan (leitor de meta-dados das imagens)</string>
     <string name="filters_title">Android Photo Filters (filtros de imagens)</string>
-    <string name="gesture_views_title">Gesture Views (zoomable images)</string>
+    <string name="gesture_views_title">Gesture Views (ampliação de imagens)</string>
 </resources>

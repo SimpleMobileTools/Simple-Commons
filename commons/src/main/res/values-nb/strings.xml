@@ -104,7 +104,7 @@
     <string name="file_already_exists_overwrite">Filen \"%s\" finnes allerede. Overskrive?</string>
     <string name="folder_already_exists">Mappen \"%s\" finnes allerede</string>
     <string name="merge">Sammenslå</string>
-    <string name="keep_both">Keep both</string>
+    <string name="keep_both">Behold begge</string>
     <string name="overwrite">Overskriv</string>
     <string name="skip">Hopp over</string>
     <string name="append">Tilføy \'_1\'</string>
@@ -218,6 +218,7 @@
     <string name="empty_and_disable_recycle_bin">Tøm og deaktiver papirkurven</string>
     <string name="undo">Angre</string>
     <string name="redo">Annuler angre</string>
+    <string name="print">Print</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorter etter</string>
@@ -386,7 +387,7 @@
     <string name="password_protect_hidden_items">Passordbeskytt synlighet for skjulte elementer</string>
     <string name="password_protect_whole_app">Passordbeskytt hele appen</string>
     <string name="password_protect_file_deletion">Passordbeskytt sletting og flytting av filer</string>
-    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
+    <string name="keep_last_modified">Behold sist-endret-verdi ved filoperasjoner</string>
     <string name="show_info_bubble">Vis en info-boble ved å dra i rullefeltet</string>
     <string name="prevent_phone_from_sleeping">Forhindre at telefonen går i hvilemodus mens appen er i forgrunnen</string>
     <string name="skip_delete_confirmation">Hopp alltid over dialog for slettebekreftelse</string>
@@ -536,7 +537,7 @@
     </string>
     <string name="purchase">Kjøp</string>
     <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please read the Frequently Asked Questions first, maybe the solution is there.</string>
+    <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
     <string name="read_it">Read it</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
