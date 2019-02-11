@@ -91,17 +91,19 @@ fun Activity.isAppInstalledOnSDCard(): Boolean = try {
 fun Activity.isShowingSAFDialog(path: String, treeUri: String, requestCode: Int): Boolean {
     return if (needsStupidWritePermissions(path) && (treeUri.isEmpty() || !hasProperStoredTreeUri())) {
         runOnUiThread {
-            WritePermissionDialog(this, false) {
-                Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
-                    putExtra("android.content.extra.SHOW_ADVANCED", true)
-                    if (resolveActivity(packageManager) == null) {
-                        type = "*/*"
-                    }
+            if (!isDestroyed) {
+                WritePermissionDialog(this, false) {
+                    Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
+                        putExtra("android.content.extra.SHOW_ADVANCED", true)
+                        if (resolveActivity(packageManager) == null) {
+                            type = "*/*"
+                        }
 
-                    if (resolveActivity(packageManager) != null) {
-                        startActivityForResult(this, requestCode)
-                    } else {
-                        toast(R.string.unknown_error_occurred)
+                        if (resolveActivity(packageManager) != null) {
+                            startActivityForResult(this, requestCode)
+                        } else {
+                            toast(R.string.unknown_error_occurred)
+                        }
                     }
                 }
             }
