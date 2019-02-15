@@ -459,10 +459,8 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
 
     var fileDeleted = !path.startsWith(OTG_PATH) && ((!file.exists() && file.length() == 0L) || file.delete())
     if (fileDeleted) {
-        rescanDeletedPath(path) {
-            runOnUiThread {
-                callback?.invoke(true)
-            }
+        runOnUiThread {
+            callback?.invoke(true)
         }
     } else {
         if (file.isDirectory && allowDeleteFolder) {
