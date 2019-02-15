@@ -230,7 +230,7 @@ fun Activity.openEditorIntent(path: String, forceChooser: Boolean, applicationId
             val extension = path.getFilenameExtension()
             val newFilePath = File(parent, "$newFilename.$extension")
 
-            val outputUri = if (path.startsWith(OTG_PATH)) newUri else getFinalUriFromPath("$newFilePath", applicationId)
+            val outputUri = if (isPathOnOTG(path)) newUri else getFinalUriFromPath("$newFilePath", applicationId)
             val resInfoList = packageManager.queryIntentActivities(this, PackageManager.MATCH_DEFAULT_ONLY)
             for (resolveInfo in resInfoList) {
                 val packageName = resolveInfo.activityInfo.packageName
@@ -457,7 +457,7 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
         return
     }
 
-    var fileDeleted = !path.startsWith(OTG_PATH) && ((!file.exists() && file.length() == 0L) || file.delete())
+    var fileDeleted = !isPathOnOTG(path) && ((!file.exists() && file.length() == 0L) || file.delete())
     if (fileDeleted) {
         runOnUiThread {
             callback?.invoke(true)
@@ -472,7 +472,7 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
                 handleSAFDialog(path) {
                     trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
                 }
-            } else if (path.startsWith(OTG_PATH)) {
+            } else if (isPathOnOTG(path)) {
                 trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
             }
         }
@@ -675,7 +675,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
 }
 
 fun BaseSimpleActivity.getFileInputStreamSync(path: String): InputStream? {
-    return if (path.startsWith(OTG_PATH)) {
+    return if (isPathOnOTG(path)) {
         val fileDocument = getSomeDocumentFile(path)
         applicationContext.contentResolver.openInputStream(fileDocument?.uri)
     } else {

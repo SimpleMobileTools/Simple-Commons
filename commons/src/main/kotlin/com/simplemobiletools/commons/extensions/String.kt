@@ -23,14 +23,11 @@ fun String.getFilenameFromPath() = substring(lastIndexOf("/") + 1)
 fun String.getFilenameExtension() = substring(lastIndexOf(".") + 1)
 
 fun String.getBasePath(context: Context): String {
-    return if (startsWith(context.internalStoragePath)) {
-        context.internalStoragePath
-    } else if (!context.sdCardPath.isEmpty() && startsWith(context.sdCardPath)) {
-        context.sdCardPath
-    } else if (startsWith(OTG_PATH)) {
-        OTG_PATH
-    } else {
-        "/"
+    return when {
+        startsWith(context.internalStoragePath) -> context.internalStoragePath
+        context.isPathOnSD(this) -> context.sdCardPath
+        context.isPathOnOTG(this) -> context.otgPath
+        else -> "/"
     }
 }
 
@@ -143,13 +140,7 @@ fun String.getGenericMimeType(): String {
     return "$type/*"
 }
 
-fun String.getParentPath(): String {
-    var parent = removeSuffix("/${getFilenameFromPath()}")
-    if (parent == "otg:") {
-        parent = OTG_PATH
-    }
-    return parent
-}
+fun String.getParentPath() = removeSuffix("/${getFilenameFromPath()}")
 
 fun String.getDuration() = getFileDurationSeconds()?.getFormattedDuration()
 
@@ -232,7 +223,7 @@ fun String.getImageResolution(): Point? {
 
 fun String.getPublicUri(context: Context) = context.getDocumentFile(this)?.uri ?: ""
 
-fun String.getOTGPublicPath(context: Context) = "${context.baseConfig.OTGTreeUri}/document/${context.baseConfig.OTGPartition}%3A${substring(OTG_PATH.length).replace("/", "%2F")}"
+fun String.getOTGPublicPath(context: Context) = "${context.baseConfig.OTGTreeUri}/document/${context.baseConfig.OTGPartition}%3A${substring(context.baseConfig.OTGPath.length).replace("/", "%2F")}"
 
 fun String.substringTo(cnt: Int): String {
     return if (isEmpty()) {

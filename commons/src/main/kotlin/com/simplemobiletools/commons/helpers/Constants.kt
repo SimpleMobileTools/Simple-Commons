@@ -16,7 +16,6 @@ const val REAL_FILE_PATH = "real_file_path_2"
 const val IS_FROM_GALLERY = "is_from_gallery"
 const val BROADCAST_REFRESH_MEDIA = "com.simplemobiletools.REFRESH_MEDIA"
 const val REFRESH_PATH = "refresh_path"
-const val OTG_PATH = "otg:/"
 const val IS_CUSTOMIZING_COLORS = "is_customizing_colors"
 const val ALARM_SOUND_TYPE_ALARM = 1
 const val ALARM_SOUND_TYPE_NOTIFICATION = 2

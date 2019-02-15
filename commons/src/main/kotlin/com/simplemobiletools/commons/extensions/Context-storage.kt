@@ -15,7 +15,6 @@ import android.text.TextUtils
 import androidx.core.content.FileProvider
 import androidx.documentfile.provider.DocumentFile
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.helpers.OTG_PATH
 import com.simplemobiletools.commons.helpers.isMarshmallowPlus
 import com.simplemobiletools.commons.helpers.isNougatPlus
 import com.simplemobiletools.commons.models.FileDirItem
@@ -118,7 +117,7 @@ fun Context.getHumanReadablePath(path: String): String {
     return getString(when (path) {
         "/" -> R.string.root
         internalStoragePath -> R.string.internal
-        OTG_PATH -> R.string.usb
+        otgPath -> R.string.usb
         else -> R.string.sd_card
     })
 }
@@ -128,7 +127,6 @@ fun Context.humanizePath(path: String): String {
     val basePath = path.getBasePath(this)
     return when (basePath) {
         "/" -> "${getHumanReadablePath(basePath)}$trimmedPath"
-        OTG_PATH -> path.replaceFirst(basePath, "${getHumanReadablePath(basePath).trimEnd('/')}/").replace("//", "/")
         else -> trimmedPath.replaceFirst(basePath, getHumanReadablePath(basePath))
     }
 }
@@ -137,7 +135,9 @@ fun Context.getInternalStoragePath() = Environment.getExternalStorageDirectory()
 
 fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWith(sdCardPath)
 
-fun Context.needsStupidWritePermissions(path: String) = (isPathOnSD(path) || path.startsWith(OTG_PATH))
+fun Context.isPathOnOTG(path: String) = otgPath.isNotEmpty() && path.startsWith(otgPath)
+
+fun Context.needsStupidWritePermissions(path: String) = (isPathOnSD(path) || isPathOnOTG(path))
 
 fun Context.hasProperStoredTreeUri(): Boolean {
     val hasProperUri = contentResolver.persistedUriPermissions.any { it.uri.toString() == baseConfig.treeUri }
@@ -174,7 +174,7 @@ fun Context.tryFastDocumentDelete(path: String, allowDeleteFolder: Boolean): Boo
 }
 
 fun Context.getFastDocumentFile(path: String): DocumentFile? {
-    if (path.startsWith(OTG_PATH)) {
+    if (isPathOnOTG(path)) {
         return getOTGFastDocumentFile(path)
     }
 
@@ -195,17 +195,17 @@ fun Context.getOTGFastDocumentFile(path: String): DocumentFile? {
 
     if (baseConfig.OTGPartition.isEmpty()) {
         baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/').trimEnd('/')
-        baseConfig.OTGPath = "/storage${baseConfig.OTGPartition}"
+        baseConfig.OTGPath = "/storage/${baseConfig.OTGPartition}"
     }
 
-    val relativePath = Uri.encode(path.substring(OTG_PATH.length).trim('/'))
+    val relativePath = Uri.encode(path.substring(baseConfig.OTGPath.length).trim('/'))
     val fullUri = "${baseConfig.OTGTreeUri}/document/${baseConfig.OTGPartition}%3A$relativePath"
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
 
 fun Context.getDocumentFile(path: String): DocumentFile? {
-    val isOTG = path.startsWith(OTG_PATH)
-    var relativePath = path.substring(if (isOTG) OTG_PATH.length else sdCardPath.length)
+    val isOTG = isPathOnOTG(path)
+    var relativePath = path.substring(if (isOTG) otgPath.length else sdCardPath.length)
     if (relativePath.startsWith(File.separator)) {
         relativePath = relativePath.substring(1)
     }
@@ -335,7 +335,7 @@ fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSi
 
     val parts = path.split("/").dropLastWhile { it.isEmpty() }
     for (part in parts) {
-        if (path == OTG_PATH) {
+        if (path == otgPath) {
             break
         }
 
@@ -360,7 +360,7 @@ fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSi
 
         val isDirectory = file.isDirectory
         val filePath = file.uri.toString().substring(basePath.length)
-        val decodedPath = OTG_PATH + "/" + URLDecoder.decode(filePath, "UTF-8")
+        val decodedPath = otgPath + "/" + URLDecoder.decode(filePath, "UTF-8")
         val fileSize = when {
             getProperFileSize -> file.getItemSize(shouldShowHidden)
             isDirectory -> 0L
@@ -431,11 +431,11 @@ fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolea
     }
 }
 
-fun Context.getDoesFilePathExist(path: String) = if (path.startsWith(OTG_PATH)) getOTGFastDocumentFile(path)?.exists()
+fun Context.getDoesFilePathExist(path: String) = if (isPathOnOTG(path)) getOTGFastDocumentFile(path)?.exists()
         ?: false else File(path).exists()
 
 fun Context.getIsPathDirectory(path: String): Boolean {
-    return if (path.startsWith(OTG_PATH)) {
+    return if (isPathOnOTG(path)) {
         getOTGFastDocumentFile(path)?.isDirectory ?: false
     } else {
         File(path).isDirectory

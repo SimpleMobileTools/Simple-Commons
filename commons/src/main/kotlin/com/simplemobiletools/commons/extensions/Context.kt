@@ -118,6 +118,7 @@ fun Context.showErrorToast(exception: Exception, length: Int = Toast.LENGTH_LONG
 val Context.baseConfig: BaseConfig get() = BaseConfig.newInstance(this)
 val Context.sdCardPath: String get() = baseConfig.sdCardPath
 val Context.internalStoragePath: String get() = baseConfig.internalStoragePath
+val Context.otgPath: String get() = baseConfig.OTGPath
 
 fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHardwarePresent()
 
@@ -301,7 +302,7 @@ fun Context.getMimeTypeFromUri(uri: Uri): String {
 }
 
 fun Context.ensurePublicUri(path: String, applicationId: String): Uri? {
-    return if (path.startsWith(OTG_PATH)) {
+    return if (isPathOnOTG(path)) {
         getDocumentFile(path)?.uri
     } else {
         val uri = Uri.parse(path)
@@ -533,7 +534,7 @@ fun Context.storeNewYourAlarmSound(resultData: Intent): AlarmSound {
 
 @RequiresApi(Build.VERSION_CODES.N)
 fun Context.saveImageRotation(path: String, degrees: Int): Boolean {
-    if (!isPathOnSD(path) && !path.startsWith(OTG_PATH)) {
+    if (!isPathOnSD(path) && !isPathOnOTG(path)) {
         saveExifRotation(ExifInterface(path), degrees)
         return true
     } else if (isNougatPlus()) {

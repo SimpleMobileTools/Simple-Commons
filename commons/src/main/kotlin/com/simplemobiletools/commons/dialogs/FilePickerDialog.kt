@@ -10,7 +10,6 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.FilepickerItemsAdapter
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.OTG_PATH
 import com.simplemobiletools.commons.helpers.SORT_BY_SIZE
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.Breadcrumbs
@@ -170,7 +169,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun verifyPath() {
-        if (currPath.startsWith(OTG_PATH)) {
+        if (activity.isPathOnOTG(currPath)) {
             val fileDocument = activity.getSomeDocumentFile(currPath) ?: return
             if ((pickFile && fileDocument.isFile) || (!pickFile && fileDocument.isDirectory)) {
                 sendSuccess()
@@ -184,7 +183,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun sendSuccess() {
-        currPath = if (currPath == OTG_PATH || currPath.length == 1) {
+        currPath = if (currPath.length == 1) {
             currPath
         } else {
             currPath.trimEnd('/')
@@ -194,7 +193,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun getItems(path: String, getProperFileSize: Boolean, callback: (List<FileDirItem>) -> Unit) {
-        if (path.startsWith(OTG_PATH)) {
+        if (activity.isPathOnOTG(path)) {
             activity.getOTGItems(path, showHidden, getProperFileSize, callback)
         } else {
             getRegularItems(path, getProperFileSize, callback)

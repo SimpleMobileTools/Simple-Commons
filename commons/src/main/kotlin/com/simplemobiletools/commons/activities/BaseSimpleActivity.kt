@@ -169,7 +169,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 }
                 baseConfig.OTGTreeUri = resultData.dataString
                 baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/').trimEnd('/')
-                baseConfig.OTGPath = "/storage${baseConfig.OTGPartition}"
+                baseConfig.OTGPath = "/storage/${baseConfig.OTGPartition}"
 
                 funAfterOTGPermission?.invoke(true)
                 funAfterOTGPermission = null
@@ -221,7 +221,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun handleSAFDialog(path: String, callback: () -> Unit): Boolean {
-        return if (!path.startsWith(OTG_PATH) && isShowingSAFDialog(path, baseConfig.treeUri, OPEN_DOCUMENT_TREE)) {
+        return if (!isPathOnOTG(path) && isShowingSAFDialog(path, baseConfig.treeUri, OPEN_DOCUMENT_TREE)) {
             funAfterSAFPermission = callback
             true
         } else {
@@ -248,7 +248,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             if (isCopyOperation) {
                 startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
             } else {
-                if (source.startsWith(OTG_PATH) || destination.startsWith(OTG_PATH) || isPathOnSD(source) || isPathOnSD(destination) || fileDirItems.first().isDirectory) {
+                if (isPathOnOTG(source) || isPathOnOTG(destination) || isPathOnSD(source) || isPathOnSD(destination) || fileDirItems.first().isDirectory) {
                     handleSAFDialog(source) {
                         startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
                     }

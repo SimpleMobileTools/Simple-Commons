@@ -65,7 +65,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 file.size = file.getProperSize(activity, copyHidden)
             }
             val newPath = "$mDestinationPath/${file.name}"
-            val fileExists = if (newPath.startsWith(OTG_PATH)) activity.getOTGFastDocumentFile(newPath)?.exists()
+            val fileExists = if (activity.isPathOnOTG(newPath)) activity.getOTGFastDocumentFile(newPath)?.exists()
                     ?: false else File(newPath).exists()
             if (getConflictResolution(conflictResolutions, newPath) != CONFLICT_SKIP || !fileExists) {
                 mMaxSize += (file.size / 1000).toInt()
@@ -166,7 +166,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             return
         }
 
-        if (source.path.startsWith(OTG_PATH)) {
+        if (activity.isPathOnOTG(source.path)) {
             val children = activity.getDocumentFile(source.path)?.listFiles() ?: return
             for (child in children) {
                 val newPath = "$destinationPath/${child.name}"
