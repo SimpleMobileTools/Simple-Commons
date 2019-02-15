@@ -36,8 +36,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     private val GENERIC_PERM_HANDLER = 100
 
     companion object {
-        var funAfterSAFPermission: (() -> Unit)? = null
-        var funAfterOTGPermission: ((success: Boolean) -> Unit)? = null
+        var funAfterSAFPermission: ((success: Boolean) -> Unit)? = null
     }
 
     abstract fun getAppIconIDs(): ArrayList<Int>
@@ -78,7 +77,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         funAfterSAFPermission = null
-        funAfterOTGPermission = null
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -152,7 +150,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     return
                 }
                 saveTreeUri(resultData)
-                funAfterSAFPermission?.invoke()
+                funAfterSAFPermission?.invoke(true)
                 funAfterSAFPermission = null
             } else {
                 toast(R.string.wrong_root_selected)
@@ -162,7 +160,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         } else if (requestCode == OPEN_DOCUMENT_TREE_OTG && resultCode == Activity.RESULT_OK && resultData != null) {
             if (isProperOTGFolder(resultData.data)) {
                 if (resultData.dataString == baseConfig.treeUri) {
-                    funAfterOTGPermission?.invoke(false)
+                    funAfterSAFPermission?.invoke(false)
                     toast(R.string.sd_card_usb_same)
                     return
                 }
@@ -173,8 +171,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
                 applicationContext.contentResolver.takePersistableUriPermission(resultData.data, takeFlags)
 
-                funAfterOTGPermission?.invoke(true)
-                funAfterOTGPermission = null
+                funAfterSAFPermission?.invoke(true)
+                funAfterSAFPermission = null
             } else {
                 toast(R.string.wrong_root_selected_usb)
                 val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
@@ -222,12 +220,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun handleSAFDialog(path: String, callback: () -> Unit): Boolean {
+    fun handleSAFDialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
         return if (isShowingSAFDialog(path) || isShowingOTGDialog(path)) {
             funAfterSAFPermission = callback
             true
         } else {
-            callback()
+            callback(true)
             false
         }
     }

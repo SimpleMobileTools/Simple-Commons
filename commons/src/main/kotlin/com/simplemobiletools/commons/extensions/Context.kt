@@ -534,7 +534,7 @@ fun Context.storeNewYourAlarmSound(resultData: Intent): AlarmSound {
 
 @RequiresApi(Build.VERSION_CODES.N)
 fun Context.saveImageRotation(path: String, degrees: Int): Boolean {
-    if (!isPathOnSD(path) && !isPathOnOTG(path)) {
+    if (!needsStupidWritePermissions(path)) {
         saveExifRotation(ExifInterface(path), degrees)
         return true
     } else if (isNougatPlus()) {
