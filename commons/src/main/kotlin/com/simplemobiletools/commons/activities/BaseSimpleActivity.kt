@@ -171,6 +171,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/').trimEnd('/')
                 baseConfig.OTGPath = "/storage/${baseConfig.OTGPartition}"
 
+                val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+                applicationContext.contentResolver.takePersistableUriPermission(resultData.data, takeFlags)
+
                 funAfterOTGPermission?.invoke(true)
                 funAfterOTGPermission = null
             } else {
