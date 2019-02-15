@@ -491,12 +491,10 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
         }
 
         if (!fileDeleted) {
-            if (isPathOnSD(path)) {
+            if (isPathOnSD(path) || isPathOnOTG(path)) {
                 handleSAFDialog(path) {
                     trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
                 }
-            } else if (isPathOnOTG(path)) {
-                trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
             }
         }
     }
