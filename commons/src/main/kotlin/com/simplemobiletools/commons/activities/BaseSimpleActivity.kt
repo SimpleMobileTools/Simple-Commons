@@ -223,7 +223,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun handleSAFDialog(path: String, callback: () -> Unit): Boolean {
-        return if (isShowingSAFDialog(path, baseConfig.treeUri, OPEN_DOCUMENT_TREE) || isShowingOTGDialog(path, baseConfig.OTGTreeUri, OPEN_DOCUMENT_TREE_OTG)) {
+        return if (isShowingSAFDialog(path) || isShowingOTGDialog(path)) {
             funAfterSAFPermission = callback
             true
         } else {

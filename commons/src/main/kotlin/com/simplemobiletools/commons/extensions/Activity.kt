@@ -86,8 +86,8 @@ fun Activity.isAppInstalledOnSDCard(): Boolean = try {
     false
 }
 
-fun Activity.isShowingSAFDialog(path: String, treeUri: String, requestCode: Int): Boolean {
-    return if (isPathOnSD(path) && (treeUri.isEmpty() || !hasProperStoredTreeUri(false))) {
+fun Activity.isShowingSAFDialog(path: String): Boolean {
+    return if (isPathOnSD(path) && (baseConfig.treeUri.isEmpty() || !hasProperStoredTreeUri(false))) {
         runOnUiThread {
             if (!isDestroyed) {
                 WritePermissionDialog(this, false) {
@@ -98,7 +98,7 @@ fun Activity.isShowingSAFDialog(path: String, treeUri: String, requestCode: Int)
                         }
 
                         if (resolveActivity(packageManager) != null) {
-                            startActivityForResult(this, requestCode)
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE)
                         } else {
                             toast(R.string.unknown_error_occurred)
                         }
@@ -112,8 +112,8 @@ fun Activity.isShowingSAFDialog(path: String, treeUri: String, requestCode: Int)
     }
 }
 
-fun BaseSimpleActivity.isShowingOTGDialog(path: String, treeUri: String, requestCode: Int): Boolean {
-    return if (isPathOnOTG(path) && (treeUri.isEmpty() || !hasProperStoredTreeUri(true))) {
+fun BaseSimpleActivity.isShowingOTGDialog(path: String): Boolean {
+    return if (isPathOnOTG(path) && (baseConfig.OTGTreeUri.isEmpty() || !hasProperStoredTreeUri(true))) {
         runOnUiThread {
             if (!isDestroyed) {
                 WritePermissionDialog(this, true) {
@@ -123,7 +123,7 @@ fun BaseSimpleActivity.isShowingOTGDialog(path: String, treeUri: String, request
                         }
 
                         if (resolveActivity(packageManager) != null) {
-                            startActivityForResult(this, requestCode)
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
                         } else {
                             toast(R.string.unknown_error_occurred)
                         }
