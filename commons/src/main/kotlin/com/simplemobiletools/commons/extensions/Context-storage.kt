@@ -137,12 +137,17 @@ fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWit
 
 fun Context.isPathOnOTG(path: String) = otgPath.isNotEmpty() && path.startsWith(otgPath)
 
-fun Context.needsStupidWritePermissions(path: String) = (isPathOnSD(path) || isPathOnOTG(path))
+fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) || isPathOnOTG(path)
 
-fun Context.hasProperStoredTreeUri(): Boolean {
-    val hasProperUri = contentResolver.persistedUriPermissions.any { it.uri.toString() == baseConfig.treeUri }
+fun Context.hasProperStoredTreeUri(isOTG: Boolean): Boolean {
+    val uri = if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri
+    val hasProperUri = contentResolver.persistedUriPermissions.any { it.uri.toString() == uri }
     if (!hasProperUri) {
-        baseConfig.treeUri = ""
+        if (isOTG) {
+            baseConfig.OTGTreeUri = ""
+        } else {
+            baseConfig.treeUri = ""
+        }
     }
     return hasProperUri
 }

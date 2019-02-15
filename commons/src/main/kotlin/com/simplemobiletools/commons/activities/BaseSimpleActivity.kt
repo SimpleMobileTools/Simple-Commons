@@ -19,7 +19,6 @@ import com.simplemobiletools.commons.asynctasks.CopyMoveTask
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.dialogs.ExportSettingsDialog
 import com.simplemobiletools.commons.dialogs.FileConflictDialog
-import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.interfaces.CopyMoveListener
@@ -224,7 +223,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun handleSAFDialog(path: String, callback: () -> Unit): Boolean {
-        return if (!isPathOnOTG(path) && isShowingSAFDialog(path, baseConfig.treeUri, OPEN_DOCUMENT_TREE)) {
+        return if (isShowingSAFDialog(path, baseConfig.treeUri, OPEN_DOCUMENT_TREE) || isShowingOTGDialog(path, baseConfig.OTGTreeUri, OPEN_DOCUMENT_TREE_OTG)) {
             funAfterSAFPermission = callback
             true
         } else {
@@ -378,28 +377,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         override fun copyFailed() {
             toast(R.string.copy_move_failed)
             copyMoveCallback = null
-        }
-    }
-
-    fun handleOTGPermission(callback: (success: Boolean) -> Unit) {
-        if (baseConfig.OTGTreeUri.isNotEmpty()) {
-            callback(true)
-            return
-        }
-
-        funAfterOTGPermission = callback
-        WritePermissionDialog(this, true) {
-            Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
-                if (resolveActivity(packageManager) == null) {
-                    type = "*/*"
-                }
-
-                if (resolveActivity(packageManager) != null) {
-                    startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
-                } else {
-                    toast(R.string.unknown_error_occurred)
-                }
-            }
         }
     }
 

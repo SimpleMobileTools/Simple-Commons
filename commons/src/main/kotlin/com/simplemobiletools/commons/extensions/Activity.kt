@@ -1,6 +1,5 @@
 package com.simplemobiletools.commons.extensions
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.*
 import android.content.pm.ApplicationInfo
@@ -87,14 +86,38 @@ fun Activity.isAppInstalledOnSDCard(): Boolean = try {
     false
 }
 
-@SuppressLint("InlinedApi")
 fun Activity.isShowingSAFDialog(path: String, treeUri: String, requestCode: Int): Boolean {
-    return if (needsStupidWritePermissions(path) && (treeUri.isEmpty() || !hasProperStoredTreeUri())) {
+    return if (isPathOnSD(path) && (treeUri.isEmpty() || !hasProperStoredTreeUri(false))) {
         runOnUiThread {
             if (!isDestroyed) {
                 WritePermissionDialog(this, false) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         putExtra("android.content.extra.SHOW_ADVANCED", true)
+                        if (resolveActivity(packageManager) == null) {
+                            type = "*/*"
+                        }
+
+                        if (resolveActivity(packageManager) != null) {
+                            startActivityForResult(this, requestCode)
+                        } else {
+                            toast(R.string.unknown_error_occurred)
+                        }
+                    }
+                }
+            }
+        }
+        true
+    } else {
+        false
+    }
+}
+
+fun BaseSimpleActivity.isShowingOTGDialog(path: String, treeUri: String, requestCode: Int): Boolean {
+    return if (isPathOnOTG(path) && (treeUri.isEmpty() || !hasProperStoredTreeUri(true))) {
+        runOnUiThread {
+            if (!isDestroyed) {
+                WritePermissionDialog(this, true) {
+                    Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         if (resolveActivity(packageManager) == null) {
                             type = "*/*"
                         }
