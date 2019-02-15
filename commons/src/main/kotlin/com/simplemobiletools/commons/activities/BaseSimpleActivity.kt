@@ -169,6 +169,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 }
                 baseConfig.OTGTreeUri = resultData.dataString
                 baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/')
+                baseConfig.OTGPath = "/storage${baseConfig.OTGPartition}"
 
                 funAfterOTGPermission?.invoke(true)
                 funAfterOTGPermission = null
