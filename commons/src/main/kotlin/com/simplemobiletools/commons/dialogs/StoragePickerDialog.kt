@@ -105,8 +105,10 @@ class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, va
     }
 
     private fun otgPicked() {
-        activity.getStorageDirectories().firstOrNull { it.trimEnd('/') != activity.internalStoragePath && it.trimEnd('/') != activity.sdCardPath }?.apply {
-            activity.baseConfig.OTGPath = trimEnd('/')
+        if (activity.baseConfig.OTGPath.isEmpty()) {
+            activity.getStorageDirectories().firstOrNull { it.trimEnd('/') != activity.internalStoragePath && it.trimEnd('/') != activity.sdCardPath }?.apply {
+                activity.baseConfig.OTGPath = trimEnd('/')
+            }
         }
 
         mDialog.dismiss()
