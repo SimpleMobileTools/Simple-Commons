@@ -81,7 +81,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             try {
                 val newPath = "$mDestinationPath/${file.name}"
                 var newFileDirItem = FileDirItem(newPath, newPath.getFilenameFromPath(), file.isDirectory)
-                if (activity.getDoesFilePathExist(newPath)) {
+                if (File(newPath).exists()) {
                     val resolution = getConflictResolution(conflictResolutions, newPath)
                     if (resolution == CONFLICT_SKIP) {
                         mFileCountToCopy--
@@ -170,7 +170,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             val children = activity.getDocumentFile(source.path)?.listFiles() ?: return
             for (child in children) {
                 val newPath = "$destinationPath/${child.name}"
-                if (activity.getDoesFilePathExist(newPath)) {
+                if (File(newPath).exists()) {
                     continue
                 }
 
@@ -184,7 +184,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             val children = File(source.path).list()
             for (child in children) {
                 val newPath = "$destinationPath/$child"
-                if (activity.getDoesFilePathExist(newPath)) {
+                if (File(newPath).exists()) {
                     continue
                 }
 

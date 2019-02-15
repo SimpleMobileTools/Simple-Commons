@@ -718,7 +718,7 @@ fun Activity.handleDeletePasswordProtection(callback: () -> Unit) {
 }
 
 fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
-    if (getDoesFilePathExist(directory)) {
+    if (File(directory).exists()) {
         return true
     }
 
