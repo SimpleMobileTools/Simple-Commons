@@ -35,6 +35,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getString(OTG_PARTITION, "")
         set(OTGPartition) = prefs.edit().putString(OTG_PARTITION, OTGPartition).apply()
 
+    var OTGPath: String
+        get() = prefs.getString(OTG_REAL_PATH, "")
+        set(OTGPath) = prefs.edit().putString(OTG_REAL_PATH, OTGPath).apply()
+
     var sdCardPath: String
         get() = prefs.getString(SD_CARD_PATH, getDefaultSDCardPath())
         set(sdCardPath) = prefs.edit().putString(SD_CARD_PATH, sdCardPath).apply()
