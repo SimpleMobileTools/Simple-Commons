@@ -194,7 +194,7 @@ fun Context.getOTGFastDocumentFile(path: String): DocumentFile? {
     }
 
     if (baseConfig.OTGPartition.isEmpty()) {
-        baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/')
+        baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/').trimEnd('/')
         baseConfig.OTGPath = "/storage${baseConfig.OTGPartition}"
     }
 
