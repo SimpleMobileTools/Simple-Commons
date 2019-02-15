@@ -223,8 +223,6 @@ fun String.getImageResolution(): Point? {
 
 fun String.getPublicUri(context: Context) = context.getDocumentFile(this)?.uri ?: ""
 
-fun String.getOTGPublicPath(context: Context) = "${context.baseConfig.OTGTreeUri}/document/${context.baseConfig.OTGPartition}%3A${substring(context.baseConfig.OTGPath.length).replace("/", "%2F")}"
-
 fun String.substringTo(cnt: Int): String {
     return if (isEmpty()) {
         ""
