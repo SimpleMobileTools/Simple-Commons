@@ -695,14 +695,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
     }
 }
 
-fun BaseSimpleActivity.getFileInputStreamSync(path: String): InputStream? {
-    return if (isPathOnOTG(path)) {
-        val fileDocument = getSomeDocumentFile(path)
-        applicationContext.contentResolver.openInputStream(fileDocument?.uri)
-    } else {
-        FileInputStream(File(path))
-    }
-}
+fun BaseSimpleActivity.getFileInputStreamSync(path: String) = FileInputStream(File(path))
 
 fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
     if (baseConfig.isHiddenPasswordProtectionOn) {
