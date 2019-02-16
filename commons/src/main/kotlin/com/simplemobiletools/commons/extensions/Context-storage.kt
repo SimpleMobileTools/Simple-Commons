@@ -154,7 +154,7 @@ fun Context.hasProperStoredTreeUri(isOTG: Boolean): Boolean {
 
 fun Context.isAStorageRootFolder(path: String): Boolean {
     val trimmed = path.trimEnd('/')
-    return trimmed.isEmpty() || trimmed == internalStoragePath || trimmed == sdCardPath || path == "/otg:" || path == "/storage/${baseConfig.OTGPartition}"
+    return trimmed.isEmpty() || trimmed.equals(internalStoragePath, true) || trimmed.equals(sdCardPath, true) || trimmed.equals(otgPath, true)
 }
 
 fun Context.getMyFileUri(file: File): Uri {
