@@ -427,8 +427,8 @@
     <string name="empty_recycle_bin_confirmation">Prullenbak echt leegmaken? De bestanden zullen permanent verwijderd worden.</string>
     <string name="recycle_bin_empty">Prullenbak is leeg</string>
     <string name="moving_recycle_bin_items_disabled">Items uit de prullenbak verplaatsen is niet toegestaan. Gebruik de opdracht Herstellen.</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">Prullenbak tonen</string>
+    <string name="hide_the_recycle_bin">Prullenbak verbergen</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d item naar de prullenbak verplaatsen</item>
@@ -449,7 +449,7 @@
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">USB-apparaat gedetecteerd. Om de bestanden op dit apparaat te weergeven heeft de app aanvullende machtigingen nodig.</string>
+    <string name="usb_detected">USB-apparaat gedetecteerd. Om de bestanden op dit apparaat te kunnen tonen heeft de app aanvullende machtigingen nodig.</string>
     <string name="confirm_usb_storage_access_text">Selecteer in het volgende scherm de hoofdmap van het USB-apparaat</string>
     <string name="wrong_root_selected_usb">Verkeerde map geselecteerd, kies de hoofdmap van het USB-apparaat</string>
 
