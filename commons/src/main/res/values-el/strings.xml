@@ -427,8 +427,8 @@
     <string name="empty_recycle_bin_confirmation">Είστε βέβαιοι ότι θέλετε να αδειάσετε τον Κάδο Ανακύκλωσης; Τα αρχεία θα χαθούν οριστικά.</string>
     <string name="recycle_bin_empty">Ο Κάδος Ανακύκλωσης είναι κενός</string>
     <string name="moving_recycle_bin_items_disabled">Η μετακίνηση στον Κάδο είναι ανενεργή, χρησιμοποιείστε την Επαναφορά</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">Εμφάνιση Κάδου Ανακύκλωσης</string>
+    <string name="hide_the_recycle_bin">Απόκρυψη Κάδου Ανακύκλωσης</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Μετακινήθηκε %d στοιχείο στον Κάδο</item>
