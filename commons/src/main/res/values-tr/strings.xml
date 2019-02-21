@@ -427,6 +427,8 @@
     <string name="empty_recycle_bin_confirmation">Geri Dönüşüm Kutusu\'nu boşaltmak istediğinizden emin misiniz? Dosyalar kalıcı olarak kaybolacak.</string>
     <string name="recycle_bin_empty">Geri Dönüşüm Kutusu boş</string>
     <string name="moving_recycle_bin_items_disabled">Geri Dönüşüm kutusu öğelerini taşıma devre dışı, lütfen Geri Yükle\'yi kullanın</string>
+    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
+    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d öğe Geri Dönüşüm Kutusu\'na taşınıyor</item>

@@ -427,6 +427,8 @@
     <string name="empty_recycle_bin_confirmation">您确定要清空回收站吗？这些文件将永久丢失。</string>
     <string name="recycle_bin_empty">回收站是空的</string>
     <string name="moving_recycle_bin_items_disabled">不允许移动回收站中的文件，请使用恢复功能。</string>
+    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
+    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">正在移动 %d 个项目到回收站</item>

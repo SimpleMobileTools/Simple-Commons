@@ -426,6 +426,8 @@
     <string name="empty_recycle_bin_confirmation">Biztos ki akarja üríteni a Lomtárat? A fájlok véglegesen elvesznek.</string>
     <string name="recycle_bin_empty">A Lomtár üres</string>
     <string name="moving_recycle_bin_items_disabled">A Lomtár elemek áthelyezése le van tiltva, kérjük használja a Visszaállítás lehetőséget</string>
+    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
+    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d elem áthelyezése a Lomtárba</item>

@@ -447,6 +447,8 @@
     <string name="empty_recycle_bin_confirmation">Jeste li sigurni da želite isprazniti koš za smeće? Datoteke će biti trajno izgubljene.</string>
     <string name="recycle_bin_empty">Koš za smeće je prazan</string>
     <string name="moving_recycle_bin_items_disabled">Premještanje stavki koša za smeće je onemogućeno, koristite Obnavljanje</string>
+    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
+    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Premještanje stavke %d u koš za smeće</item>

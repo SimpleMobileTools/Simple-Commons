@@ -446,6 +446,8 @@
     <string name="empty_recycle_bin_confirmation">Czy na pewno chcesz opróżnić kosz? Pliki zostaną bezpowrotnie utracone.</string>
     <string name="recycle_bin_empty">Kosz jest pusty</string>
     <string name="moving_recycle_bin_items_disabled">Przenoszenie elementów w koszu jest wyłączone. Użyj przywracania.</string>
+    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
+    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Przenoszę %d element do kosza</item>

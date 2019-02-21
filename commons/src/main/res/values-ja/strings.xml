@@ -427,6 +427,8 @@
     <string name="empty_recycle_bin_confirmation">ごみ箱を空にしてもよろしいですか？この操作は元に戻すことができません。</string>
     <string name="recycle_bin_empty">ゴミ箱は空です</string>
     <string name="moving_recycle_bin_items_disabled">ごみ箱からの移動はできません。復元を使用してください</string>
+    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
+    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d個のアイテムをごみ箱に移動しています</item>
