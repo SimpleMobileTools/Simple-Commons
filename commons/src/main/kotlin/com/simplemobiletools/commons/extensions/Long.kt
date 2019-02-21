@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
+import android.content.Context
 import android.text.format.DateFormat
 import java.text.DecimalFormat
 import java.util.*
@@ -13,8 +14,8 @@ fun Long.formatSize(): String {
     return "${DecimalFormat("#,##0.#").format(this / Math.pow(1024.0, digitGroups.toDouble()))} ${units[digitGroups]}"
 }
 
-fun Long.formatDate(): String {
+fun Long.formatDate(context: Context): String {
     val cal = Calendar.getInstance(Locale.ENGLISH)
     cal.timeInMillis = this
-    return DateFormat.format("dd.MM.yyyy kk:mm", cal).toString()
+    return DateFormat.format("${context.baseConfig.dateFormat} ${context.getTimeFormat()}", cal).toString()
 }

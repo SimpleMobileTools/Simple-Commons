@@ -99,11 +99,11 @@ class PropertiesDialog() {
         }
 
         if (fileDirItem.isDirectory) {
-            addProperty(R.string.last_modified, fileDirItem.getLastModified().formatDate())
+            addProperty(R.string.last_modified, fileDirItem.getLastModified().formatDate(activity))
         } else {
             addProperty(R.string.last_modified, "…", R.id.properties_last_modified)
             try {
-                addExifProperties(path)
+                addExifProperties(path, activity)
             } catch (e: FileNotFoundException) {
                 activity.toast(R.string.unknown_error_occurred)
                 return
@@ -119,7 +119,7 @@ class PropertiesDialog() {
 
     private fun updateLastModified(activity: Activity, view: View, timestamp: Long) {
         activity.runOnUiThread {
-            view.findViewById<TextView>(R.id.properties_last_modified).property_value.text = timestamp.formatDate()
+            view.findViewById<TextView>(R.id.properties_last_modified).property_value.text = timestamp.formatDate(activity)
         }
     }
 
@@ -168,9 +168,9 @@ class PropertiesDialog() {
                 }
     }
 
-    private fun addExifProperties(path: String) {
+    private fun addExifProperties(path: String, activity: Activity) {
         val exif = ExifInterface(path)
-        val dateTaken = path.getExifDateTaken(exif)
+        val dateTaken = path.getExifDateTaken(exif, activity)
         if (dateTaken.isNotEmpty()) {
             addProperty(R.string.date_taken, dateTaken)
         }

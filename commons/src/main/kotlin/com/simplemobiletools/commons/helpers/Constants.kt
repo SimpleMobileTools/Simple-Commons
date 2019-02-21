@@ -208,6 +208,9 @@ const val DATE_FORMAT_TWO = "dd/MM/yyyy"
 const val DATE_FORMAT_THREE = "MM/dd/yyyy"
 const val DATE_FORMAT_FOUR = "yyyy-MM-dd"
 
+const val TIME_FORMAT_12 = "hh:mm a"
+const val TIME_FORMAT_24 = "HH:mm"
+
 val appIconColorStrings = arrayListOf(
         ".Red",
         ".Pink",

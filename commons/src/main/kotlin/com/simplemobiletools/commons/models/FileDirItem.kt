@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.models
 
+import android.content.Context
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import java.io.File
@@ -47,9 +48,9 @@ data class FileDirItem(val path: String, val name: String = "", var isDirectory:
 
     fun getExtension() = if (isDirectory) name else path.substringAfterLast('.', "")
 
-    fun getBubbleText() = when {
+    fun getBubbleText(context: Context) = when {
         sorting and SORT_BY_SIZE != 0 -> size.formatSize()
-        sorting and SORT_BY_DATE_MODIFIED != 0 -> File(path).lastModified().formatDate()
+        sorting and SORT_BY_DATE_MODIFIED != 0 -> File(path).lastModified().formatDate(context)
         sorting and SORT_BY_EXTENSION != 0 -> getExtension().toLowerCase()
         else -> name
     }
