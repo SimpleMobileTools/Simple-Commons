@@ -6,6 +6,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getInternalStoragePath
 import com.simplemobiletools.commons.extensions.getSDCardPath
 import com.simplemobiletools.commons.extensions.getSharedPrefs
+import java.text.SimpleDateFormat
 import java.util.*
 
 open class BaseConfig(val context: Context) {
@@ -284,6 +285,17 @@ open class BaseConfig(val context: Context) {
         set(appSideloadingStatus) = prefs.edit().putInt(APP_SIDELOADING_STATUS, appSideloadingStatus).apply()
 
     var dateFormat: String
-        get() = prefs.getString(DATE_FORMAT, DATE_FORMAT_ONE)!!
+        get() = prefs.getString(DATE_FORMAT, getDefaultDateFormat())!!
         set(dateFormat) = prefs.edit().putString(DATE_FORMAT, dateFormat).apply()
+
+    private fun getDefaultDateFormat(): String {
+        val format = android.text.format.DateFormat.getDateFormat(context)
+        val pattern = (format as SimpleDateFormat).toLocalizedPattern()
+        return when (pattern.toLowerCase().replace(" ", "")) {
+            "dd/mm/y" -> DATE_FORMAT_TWO
+            "mm/dd/y" -> DATE_FORMAT_THREE
+            "y-mm-dd" -> DATE_FORMAT_FOUR
+            else -> DATE_FORMAT_ONE
+        }
+    }
 }
