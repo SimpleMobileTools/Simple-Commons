@@ -393,7 +393,7 @@
     <string name="skip_delete_confirmation">Spørg ikke om bekræftelse før sletning</string>
     <string name="enable_pull_to_refresh">Aktiver træk nedad for at genindlæse</string>
     <string name="use_24_hour_time_format">Brug 24-timersformat</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="change_date_and_time_format">Skift format på dato og tid</string>
     <string name="sunday_first">Søndag første ugedag</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Brug altid samme udsættelsestid</string>
@@ -428,8 +428,8 @@
     <string name="empty_recycle_bin_confirmation">Er du sikker på at du vil tømme papirkurven? Filerne vil ikke kunne genskabes.</string>
     <string name="recycle_bin_empty">Papirkurven er tom</string>
     <string name="moving_recycle_bin_items_disabled">Flytning af indhold i papirkurven er deaktiveret, gendan i stedet</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">Vis papirkurven</string>
+    <string name="hide_the_recycle_bin">Skjul papirkurven</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Flytter en fil til papirkurven</item>
