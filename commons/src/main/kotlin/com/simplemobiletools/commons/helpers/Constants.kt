@@ -100,6 +100,7 @@ const val WAS_BEFORE_ASKING_SHOWN = "was_before_asking_shown"
 const val WAS_INITIAL_UPGRADE_TO_PRO_SHOWN = "was_initial_upgrade_to_pro_shown"
 const val WAS_APP_ICON_CUSTOMIZATION_WARNING_SHOWN = "was_app_icon_customization_warning_shown"
 const val APP_SIDELOADING_STATUS = "app_sideloading_status"
+const val DATE_FORMAT = "date_format"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
@@ -201,6 +202,11 @@ val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bm
 val videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
 val audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a", ".opus", ".flac", ".aac")
 val rawExtensions: Array<String> get() = arrayOf(".dng", ".orf", ".nef", ".arw")
+
+const val DATE_FORMAT_ONE = "dd.MM.yyyy"
+const val DATE_FORMAT_TWO = "dd/MM/yyyy"
+const val DATE_FORMAT_THREE = "MM/dd/yyyy"
+const val DATE_FORMAT_FOUR = "yyyy-MM-dd"
 
 val appIconColorStrings = arrayListOf(
         ".Red",
