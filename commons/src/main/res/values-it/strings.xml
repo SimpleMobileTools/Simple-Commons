@@ -218,7 +218,7 @@
     <string name="empty_and_disable_recycle_bin">Svuota e disattiva il cestino</string>
     <string name="undo">Annulla</string>
     <string name="redo">Ripeti</string>
-    <string name="print">Print</string>
+    <string name="print">Stampa</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordina per</string>
@@ -427,8 +427,8 @@
     <string name="empty_recycle_bin_confirmation">Svuotare davvero il cestino? I file verranno persi definitivamente.</string>
     <string name="recycle_bin_empty">Il cestino è vuoto</string>
     <string name="moving_recycle_bin_items_disabled">Lo spostamento degli elementi dal cestino è disabilitato, utilizzare "Ripristina"</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">Mostra il cestino</string>
+    <string name="hide_the_recycle_bin">Nascondi il cestino</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Spostamento di %d elemento nel cestino</item>
@@ -539,7 +539,7 @@
     </string>
     <string name="purchase">Acquista</string>
     <string name="update_thank_you">Aggiornare Semplice Ringraziamento all\'ultima versione</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
+    <string name="before_asking_question_read_faq">Prima di fare una domanda, controlla le impostazioni dell\'app e le domande frequenti. Magari si trova la soluzione.</string>
     <string name="read_it">Leggi</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
