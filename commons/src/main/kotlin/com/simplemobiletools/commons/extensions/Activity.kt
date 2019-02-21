@@ -482,6 +482,7 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
 
     var fileDeleted = !isPathOnOTG(path) && ((!file.exists() && file.length() == 0L) || file.delete())
     if (fileDeleted) {
+        deleteFromMediaStore(path)
         runOnUiThread {
             callback?.invoke(true)
         }
@@ -550,6 +551,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                         if (!baseConfig.keepLastModified) {
                             updateLastModified(newPath, System.currentTimeMillis())
                         }
+                        deleteFromMediaStore(oldPath)
                         runOnUiThread {
                             callback?.invoke(true)
                         }
@@ -568,7 +570,6 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
         }
     } else if (File(oldPath).renameTo(File(newPath))) {
         if (File(newPath).isDirectory) {
-            deleteFromMediaStore(oldPath)
             rescanPaths(arrayListOf(newPath)) {
                 runOnUiThread {
                     callback?.invoke(true)
@@ -579,6 +580,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
             if (!baseConfig.keepLastModified) {
                 File(newPath).setLastModified(System.currentTimeMillis())
             }
+            deleteFromMediaStore(oldPath)
             scanPathsRecursively(arrayListOf(newPath)) {
                 runOnUiThread {
                     callback?.invoke(true)

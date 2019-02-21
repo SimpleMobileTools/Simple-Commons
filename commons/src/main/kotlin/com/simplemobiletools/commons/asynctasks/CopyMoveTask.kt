@@ -216,11 +216,10 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
             if (source.size == copiedSize) {
                 mTransferredFiles.add(source)
-                activity.scanPathRecursively(destination.path) {
-                    if (activity.baseConfig.keepLastModified) {
-                        copyOldLastModified(source.path, destination.path)
-                    }
+                if (activity.baseConfig.keepLastModified) {
+                    copyOldLastModified(source.path, destination.path)
                 }
+                activity.deleteFromMediaStore(destination.path)
             }
         } catch (e: Exception) {
             activity.showErrorToast(e)

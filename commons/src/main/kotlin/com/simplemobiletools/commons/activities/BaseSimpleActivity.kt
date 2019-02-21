@@ -256,7 +256,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     try {
                         checkConflicts(fileDirItems, destination, 0, LinkedHashMap()) {
                             toast(R.string.moving)
-                            val updatedFiles = ArrayList<FileDirItem>(fileDirItems.size * 2)
+                            val updatedFiles = ArrayList<FileDirItem>(fileDirItems.size)
                             val destinationFolder = File(destination)
                             for (oldFileDirItem in fileDirItems) {
                                 var newFile = File(destinationFolder, oldFileDirItem.name)
@@ -275,6 +275,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                                         newFile.setLastModified(System.currentTimeMillis())
                                     }
                                     updatedFiles.add(newFile.toFileDirItem(applicationContext))
+                                    deleteFromMediaStore(oldFileDirItem.path)
                                 }
                             }
 

@@ -283,7 +283,7 @@ fun Context.getFileUri(path: String) = when {
 
 // these functions update the mediastore instantly, MediaScannerConnection.scanFileRecursively takes some time to really get applied
 fun Context.deleteFromMediaStore(path: String): Boolean {
-    if (File(path).exists() || File(path).isDirectory) {
+    if (File(path).isDirectory) {
         return false
     }
 
@@ -430,9 +430,8 @@ fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolea
     }
 
     if (fileDeleted) {
-        rescanDeletedPath(fileDirItem.path) {
-            callback?.invoke(true)
-        }
+        deleteFromMediaStore(fileDirItem.path)
+        callback?.invoke(true)
     }
 }
 
