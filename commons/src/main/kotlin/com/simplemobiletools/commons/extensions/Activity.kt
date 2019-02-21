@@ -570,6 +570,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
         }
     } else if (File(oldPath).renameTo(File(newPath))) {
         if (File(newPath).isDirectory) {
+            deleteFromMediaStore(oldPath)
             rescanPaths(arrayListOf(newPath)) {
                 runOnUiThread {
                     callback?.invoke(true)
