@@ -356,16 +356,16 @@
         <item quantity="other">πρίν %d ημερ.</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d week before</item>
-        <item quantity="other">%d weeks before</item>
+        <item quantity="one">πρίν %d εβδομάδα</item>
+        <item quantity="other">πρίν %d εβδομάδες</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d month before</item>
-        <item quantity="other">%d months before</item>
+        <item quantity="one">πρίν %d μήνα</item>
+        <item quantity="other">πρίν %d μήνες</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d year before</item>
-        <item quantity="other">%d years before</item>
+        <item quantity="one">πρίν %d έτος</item>
+        <item quantity="other">πρίν %d έτη</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
@@ -382,20 +382,20 @@
         <item quantity="other">αναβολή %d ώρ.</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d ημέρα</item>
+        <item quantity="other">%d ημέρες</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d εβδομάδα</item>
+        <item quantity="other">%d εβδομάδες</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d μήνα</item>
+        <item quantity="other">%d μήνες</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d έτος</item>
+        <item quantity="other">%d έτη</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
