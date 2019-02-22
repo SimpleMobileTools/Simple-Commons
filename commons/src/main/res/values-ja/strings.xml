@@ -218,7 +218,7 @@
     <string name="empty_and_disable_recycle_bin">ごみ箱を空にして無効にする</string>
     <string name="undo">元に戻す</string>
     <string name="redo">やり直し</string>
-    <string name="print">Print</string>
+    <string name="print">印刷</string>
 
     <!-- Sorting -->
     <string name="sort_by">並べ替え</string>
@@ -393,7 +393,7 @@
     <string name="skip_delete_confirmation">削除時の確認ダイアログを表示しない</string>
     <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
     <string name="use_24_hour_time_format">24時間表示を使用</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="change_date_and_time_format">日付と時刻のフォーマットを変更</string>
     <string name="sunday_first">週の始めを日曜にする</string>
     <string name="widgets">ウィジェット</string>
     <string name="use_same_snooze">Always use same snooze time</string>
@@ -428,8 +428,8 @@
     <string name="empty_recycle_bin_confirmation">ごみ箱を空にしてもよろしいですか？この操作は元に戻すことができません。</string>
     <string name="recycle_bin_empty">ゴミ箱は空です</string>
     <string name="moving_recycle_bin_items_disabled">ごみ箱からの移動はできません。復元を使用してください</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">ごみ箱を表示</string>
+    <string name="hide_the_recycle_bin">ごみ箱を隠す</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d個のアイテムをごみ箱に移動しています</item>
