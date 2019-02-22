@@ -62,11 +62,10 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         mMaxSize = 0
         for (file in mFiles) {
             if (file.size == 0L) {
-                file.size = file.getProperSize(activity, copyHidden)
+                file.size = file.getProperSize(copyHidden)
             }
             val newPath = "$mDestinationPath/${file.name}"
-            val fileExists = if (newPath.startsWith(OTG_PATH)) activity.getOTGFastDocumentFile(newPath)?.exists()
-                    ?: false else File(newPath).exists()
+            val fileExists = File(newPath).exists()
             if (getConflictResolution(conflictResolutions, newPath) != CONFLICT_SKIP || !fileExists) {
                 mMaxSize += (file.size / 1000).toInt()
             }
@@ -81,7 +80,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             try {
                 val newPath = "$mDestinationPath/${file.name}"
                 var newFileDirItem = FileDirItem(newPath, newPath.getFilenameFromPath(), file.isDirectory)
-                if (activity.getDoesFilePathExist(newPath)) {
+                if (File(newPath).exists()) {
                     val resolution = getConflictResolution(conflictResolutions, newPath)
                     if (resolution == CONFLICT_SKIP) {
                         mFileCountToCopy--
@@ -122,7 +121,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     }
 
     private fun initProgressNotification() {
-        val channelId = "copying_moving_channel"
+        val channelId = "Copy/Move"
         val title = activity.getString(if (copyOnly) R.string.copying else R.string.moving)
         if (isOreoPlus()) {
             val importance = NotificationManager.IMPORTANCE_LOW
@@ -166,35 +165,19 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             return
         }
 
-        if (source.path.startsWith(OTG_PATH)) {
-            val children = activity.getDocumentFile(source.path)?.listFiles() ?: return
-            for (child in children) {
-                val newPath = "$destinationPath/${child.name}"
-                if (activity.getDoesFilePathExist(newPath)) {
-                    continue
-                }
-
-                val oldPath = "${source.path}/${child.name}"
-                val oldFileDirItem = FileDirItem(oldPath, child.name!!, child.isDirectory, 0, child.length())
-                val newFileDirItem = FileDirItem(newPath, child.name!!, child.isDirectory)
-                copy(oldFileDirItem, newFileDirItem)
+        val children = File(source.path).list()
+        for (child in children) {
+            val newPath = "$destinationPath/$child"
+            if (File(newPath).exists()) {
+                continue
             }
-            mTransferredFiles.add(source)
-        } else {
-            val children = File(source.path).list()
-            for (child in children) {
-                val newPath = "$destinationPath/$child"
-                if (activity.getDoesFilePathExist(newPath)) {
-                    continue
-                }
 
-                val oldFile = File(source.path, child)
-                val oldFileDirItem = oldFile.toFileDirItem(activity.applicationContext)
-                val newFileDirItem = FileDirItem(newPath, newPath.getFilenameFromPath(), oldFile.isDirectory)
-                copy(oldFileDirItem, newFileDirItem)
-            }
-            mTransferredFiles.add(source)
+            val oldFile = File(source.path, child)
+            val oldFileDirItem = oldFile.toFileDirItem(activity.applicationContext)
+            val newFileDirItem = FileDirItem(newPath, newPath.getFilenameFromPath(), oldFile.isDirectory)
+            copy(oldFileDirItem, newFileDirItem)
         }
+        mTransferredFiles.add(source)
     }
 
     private fun copyFile(source: FileDirItem, destination: FileDirItem) {
@@ -219,7 +202,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 mDocuments[directory] = activity.getDocumentFile(directory)
             }
             out = activity.getFileOutputStreamSync(destination.path, source.path.getMimeType(), mDocuments[directory])
-            inputStream = activity.getFileInputStreamSync(source.path)!!
+            inputStream = activity.getFileInputStreamSync(source.path)
 
             var copiedSize = 0L
             val buffer = ByteArray(DEFAULT_BUFFER_SIZE)
@@ -233,10 +216,12 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
             if (source.size == copiedSize) {
                 mTransferredFiles.add(source)
-                activity.scanPathRecursively(destination.path) {
-                    if (activity.baseConfig.keepLastModified) {
-                        copyOldLastModified(source.path, destination.path)
-                    }
+                if (activity.baseConfig.keepLastModified) {
+                    copyOldLastModified(source.path, destination.path)
+                }
+                activity.scanPathRecursively(destination.path)
+                if (!copyOnly) {
+                    activity.deleteFromMediaStore(source.path)
                 }
             }
         } catch (e: Exception) {

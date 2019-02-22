@@ -218,7 +218,7 @@
     <string name="empty_and_disable_recycle_bin">Svuota e disattiva il cestino</string>
     <string name="undo">Annulla</string>
     <string name="redo">Ripeti</string>
-    <string name="print">Print</string>
+    <string name="print">Stampa</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordina per</string>
@@ -321,6 +321,22 @@
         <item quantity="one">%d ora</item>
         <item quantity="other">%d ore</item>
     </plurals>
+    <plurals name="in_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="in_weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="in_months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="in_years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
@@ -339,6 +355,18 @@
         <item quantity="one">%d giorno prima</item>
         <item quantity="other">%d giorni prima</item>
     </plurals>
+    <plurals name="weeks_before">
+        <item quantity="one">%d week before</item>
+        <item quantity="other">%d weeks before</item>
+    </plurals>
+    <plurals name="months_before">
+        <item quantity="one">%d month before</item>
+        <item quantity="other">%d months before</item>
+    </plurals>
+    <plurals name="years_before">
+        <item quantity="one">%d year before</item>
+        <item quantity="other">%d years before</item>
+    </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
@@ -352,6 +380,22 @@
     <plurals name="by_hours">
         <item quantity="one">%d ora</item>
         <item quantity="other">%d ore</item>
+    </plurals>
+    <plurals name="by_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="by_weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="by_months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="by_years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -393,6 +437,7 @@
     <string name="skip_delete_confirmation">Non chiedere mai la conferma di eliminazione</string>
     <string name="enable_pull_to_refresh">Attiva l\'aggiornamento dall\'alto</string>
     <string name="use_24_hour_time_format">Usa il formato 24 ore</string>
+    <string name="change_date_and_time_format">Cambia la data e il formato dell\'ora</string>
     <string name="sunday_first">Inizio settimana di domenica</string>
     <string name="widgets">Widget</string>
     <string name="use_same_snooze">Usa sempre lo stesso tempo di ripetizione</string>
@@ -403,7 +448,7 @@
     <string name="empty_recycle_bin">Svuota il cestino</string>
     <string name="force_portrait_mode">Forza la modalità ritratto</string>
     <string name="export_settings">Esporta impostazioni</string>
-    <string name="import_settings">Imposta impostazioni</string>
+    <string name="import_settings">Importa impostazioni</string>
     <string name="settings_exported_successfully">Impostazioni esportate correttamente</string>
     <string name="settings_imported_successfully">Impostazioni importate correttamente</string>
 
@@ -427,6 +472,8 @@
     <string name="empty_recycle_bin_confirmation">Svuotare davvero il cestino? I file verranno persi definitivamente.</string>
     <string name="recycle_bin_empty">Il cestino è vuoto</string>
     <string name="moving_recycle_bin_items_disabled">Lo spostamento degli elementi dal cestino è disabilitato, utilizzare "Ripristina"</string>
+    <string name="show_the_recycle_bin">Mostra il cestino</string>
+    <string name="hide_the_recycle_bin">Nascondi il cestino</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Spostamento di %d elemento nel cestino</item>
@@ -537,7 +584,7 @@
     </string>
     <string name="purchase">Acquista</string>
     <string name="update_thank_you">Aggiornare Semplice Ringraziamento all\'ultima versione</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
+    <string name="before_asking_question_read_faq">Prima di fare una domanda, controlla le impostazioni dell\'app e le domande frequenti. Magari si trova la soluzione.</string>
     <string name="read_it">Leggi</string>
 
     <!-- New app (do not translate anything on the 4th line) -->

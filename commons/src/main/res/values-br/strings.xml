@@ -321,6 +321,22 @@
         <item quantity="one">%d hour</item>
         <item quantity="other">%d hours</item>
     </plurals>
+    <plurals name="in_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="in_weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="in_months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="in_years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
@@ -339,6 +355,18 @@
         <item quantity="one">%da zevezhioù a-raok</item>
         <item quantity="other">%da zevezhioù a-raok</item>
     </plurals>
+    <plurals name="weeks_before">
+        <item quantity="one">%d week before</item>
+        <item quantity="other">%d weeks before</item>
+    </plurals>
+    <plurals name="months_before">
+        <item quantity="one">%d month before</item>
+        <item quantity="other">%d months before</item>
+    </plurals>
+    <plurals name="years_before">
+        <item quantity="one">%d year before</item>
+        <item quantity="other">%d years before</item>
+    </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
@@ -352,6 +380,22 @@
     <plurals name="by_hours">
         <item quantity="one">%deur</item>
         <item quantity="other">%da eurioù</item>
+    </plurals>
+    <plurals name="by_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="by_weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="by_months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="by_years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -393,6 +437,7 @@
     <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
     <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
     <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="change_date_and_time_format">Change date and time format</string>
     <string name="sunday_first">Start week on Sunday</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Always use same snooze time</string>
@@ -427,6 +472,8 @@
     <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
     <string name="recycle_bin_empty">The Recycle Bin is empty</string>
     <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
+    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
+    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Moving %d item into the Recycle Bin</item>

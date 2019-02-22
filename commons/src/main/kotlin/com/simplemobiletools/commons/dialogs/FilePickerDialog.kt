@@ -10,7 +10,6 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.FilepickerItemsAdapter
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.OTG_PATH
 import com.simplemobiletools.commons.helpers.SORT_BY_SIZE
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.Breadcrumbs
@@ -44,11 +43,11 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     private var mDialogView = activity.layoutInflater.inflate(R.layout.dialog_filepicker, null)
 
     init {
-        if (!activity.getDoesFilePathExist(currPath)) {
+        if (!File(currPath).exists()) {
             currPath = activity.internalStoragePath
         }
 
-        if (!activity.getIsPathDirectory(currPath)) {
+        if (!File(currPath).isDirectory) {
             currPath = currPath.getParentPath()
         }
 
@@ -156,7 +155,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             filepicker_breadcrumbs.setBreadcrumb(currPath)
             filepicker_fastscroller.allowBubbleDisplay = context.baseConfig.showInfoBubble
             filepicker_fastscroller.setViews(filepicker_list) {
-                filepicker_fastscroller.updateBubbleText(sortedItems.getOrNull(it)?.getBubbleText() ?: "")
+                filepicker_fastscroller.updateBubbleText(sortedItems.getOrNull(it)?.getBubbleText(context) ?: "")
             }
 
             layoutManager.onRestoreInstanceState(mScrollStates[currPath.trimEnd('/')])
@@ -170,21 +169,14 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun verifyPath() {
-        if (currPath.startsWith(OTG_PATH)) {
-            val fileDocument = activity.getSomeDocumentFile(currPath) ?: return
-            if ((pickFile && fileDocument.isFile) || (!pickFile && fileDocument.isDirectory)) {
-                sendSuccess()
-            }
-        } else {
-            val file = File(currPath)
-            if ((pickFile && file.isFile) || (!pickFile && file.isDirectory)) {
-                sendSuccess()
-            }
+        val file = File(currPath)
+        if ((pickFile && file.isFile) || (!pickFile && file.isDirectory)) {
+            sendSuccess()
         }
     }
 
     private fun sendSuccess() {
-        currPath = if (currPath == OTG_PATH || currPath.length == 1) {
+        currPath = if (currPath.length == 1) {
             currPath
         } else {
             currPath.trimEnd('/')
@@ -194,14 +186,6 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun getItems(path: String, getProperFileSize: Boolean, callback: (List<FileDirItem>) -> Unit) {
-        if (path.startsWith(OTG_PATH)) {
-            activity.getOTGItems(path, showHidden, getProperFileSize, callback)
-        } else {
-            getRegularItems(path, getProperFileSize, callback)
-        }
-    }
-
-    private fun getRegularItems(path: String, getProperFileSize: Boolean, callback: (List<FileDirItem>) -> Unit) {
         val items = ArrayList<FileDirItem>()
         val base = File(path)
         val files = base.listFiles()

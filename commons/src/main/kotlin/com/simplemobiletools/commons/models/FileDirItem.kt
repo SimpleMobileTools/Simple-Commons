@@ -8,7 +8,7 @@ import java.io.File
 data class FileDirItem(val path: String, val name: String = "", var isDirectory: Boolean = false, var children: Int = 0, var size: Long = 0L) :
         Comparable<FileDirItem> {
     companion object {
-        var sorting: Int = 0
+        var sorting = 0
     }
 
     override fun compareTo(other: FileDirItem): Int {
@@ -48,44 +48,20 @@ data class FileDirItem(val path: String, val name: String = "", var isDirectory:
 
     fun getExtension() = if (isDirectory) name else path.substringAfterLast('.', "")
 
-    fun getBubbleText() = when {
+    fun getBubbleText(context: Context) = when {
         sorting and SORT_BY_SIZE != 0 -> size.formatSize()
-        sorting and SORT_BY_DATE_MODIFIED != 0 -> File(path).lastModified().formatDate()
+        sorting and SORT_BY_DATE_MODIFIED != 0 -> File(path).lastModified().formatDate(context)
         sorting and SORT_BY_EXTENSION != 0 -> getExtension().toLowerCase()
         else -> name
     }
 
-    fun getProperSize(context: Context, countHidden: Boolean): Long {
-        return if (path.startsWith(OTG_PATH)) {
-            context.getDocumentFile(path)?.getItemSize(countHidden) ?: 0
-        } else {
-            File(path).getProperSize(countHidden)
-        }
-    }
+    fun getProperSize(countHidden: Boolean) = File(path).getProperSize(countHidden)
 
-    fun getProperFileCount(context: Context, countHidden: Boolean): Int {
-        return if (path.startsWith(OTG_PATH)) {
-            context.getDocumentFile(path)?.getFileCount(countHidden) ?: 0
-        } else {
-            File(path).getFileCount(countHidden)
-        }
-    }
+    fun getProperFileCount(countHidden: Boolean) = File(path).getFileCount(countHidden)
 
-    fun getDirectChildrenCount(context: Context, countHiddenItems: Boolean): Int {
-        return if (path.startsWith(OTG_PATH)) {
-            context.getDocumentFile(path)?.listFiles()?.filter { if (countHiddenItems) true else !it.name!!.startsWith(".") }?.size ?: 0
-        } else {
-            File(path).getDirectChildrenCount(countHiddenItems)
-        }
-    }
+    fun getDirectChildrenCount(countHiddenItems: Boolean) = File(path).getDirectChildrenCount(countHiddenItems)
 
-    fun getLastModified(context: Context): Long {
-        return if (path.startsWith(OTG_PATH)) {
-            context.getFastDocumentFile(path)?.lastModified() ?: 0L
-        } else {
-            File(path).lastModified()
-        }
-    }
+    fun getLastModified() = File(path).lastModified()
 
     fun getParentPath() = path.getParentPath()
 
@@ -104,6 +80,4 @@ data class FileDirItem(val path: String, val name: String = "", var isDirectory:
     fun getVideoResolution() = path.getVideoResolution()
 
     fun getImageResolution() = path.getImageResolution()
-
-    fun getPublicUri(context: Context) = context.getDocumentFile(path)?.uri ?: ""
 }

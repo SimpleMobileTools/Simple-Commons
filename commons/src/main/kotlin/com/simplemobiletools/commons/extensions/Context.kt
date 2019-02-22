@@ -118,6 +118,7 @@ fun Context.showErrorToast(exception: Exception, length: Int = Toast.LENGTH_LONG
 val Context.baseConfig: BaseConfig get() = BaseConfig.newInstance(this)
 val Context.sdCardPath: String get() = baseConfig.sdCardPath
 val Context.internalStoragePath: String get() = baseConfig.internalStoragePath
+val Context.otgPath: String get() = baseConfig.OTGPath
 
 fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHardwarePresent()
 
@@ -301,17 +302,13 @@ fun Context.getMimeTypeFromUri(uri: Uri): String {
 }
 
 fun Context.ensurePublicUri(path: String, applicationId: String): Uri? {
-    return if (path.startsWith(OTG_PATH)) {
-        getDocumentFile(path)?.uri
+    val uri = Uri.parse(path)
+    return if (uri.scheme == "content") {
+        uri
     } else {
-        val uri = Uri.parse(path)
-        if (uri.scheme == "content") {
-            uri
-        } else {
-            val newPath = if (uri.toString().startsWith("/")) uri.toString() else uri.path
-            val file = File(newPath)
-            getFilePublicUri(file, applicationId)
-        }
+        val newPath = if (uri.toString().startsWith("/")) uri.toString() else uri.path
+        val file = File(newPath)
+        getFilePublicUri(file, applicationId)
     }
 }
 
@@ -464,13 +461,23 @@ fun Context.getFormattedSeconds(seconds: Int, showBefore: Boolean = true) = when
     -1 -> getString(R.string.no_reminder)
     0 -> getString(R.string.at_start)
     else -> {
-        if (seconds % YEAR_SECONDS == 0)
-            resources.getQuantityString(R.plurals.years, seconds / YEAR_SECONDS, seconds / YEAR_SECONDS)
-
         when {
-            seconds % MONTH_SECONDS == 0 -> resources.getQuantityString(R.plurals.months, seconds / MONTH_SECONDS, seconds / MONTH_SECONDS)
-            seconds % WEEK_SECONDS == 0 -> resources.getQuantityString(R.plurals.weeks, seconds / WEEK_SECONDS, seconds / WEEK_SECONDS)
-            seconds % DAY_SECONDS == 0 -> resources.getQuantityString(R.plurals.days, seconds / DAY_SECONDS, seconds / DAY_SECONDS)
+            seconds % YEAR_SECONDS == 0 -> {
+                val base = if (showBefore) R.plurals.years_before else R.plurals.by_years
+                resources.getQuantityString(base, seconds / YEAR_SECONDS, seconds / YEAR_SECONDS)
+            }
+            seconds % MONTH_SECONDS == 0 -> {
+                val base = if (showBefore) R.plurals.months_before else R.plurals.by_months
+                resources.getQuantityString(base, seconds / MONTH_SECONDS, seconds / MONTH_SECONDS)
+            }
+            seconds % WEEK_SECONDS == 0 -> {
+                val base = if (showBefore) R.plurals.weeks_before else R.plurals.by_weeks
+                resources.getQuantityString(base, seconds / WEEK_SECONDS, seconds / WEEK_SECONDS)
+            }
+            seconds % DAY_SECONDS == 0 -> {
+                val base = if (showBefore) R.plurals.days_before else R.plurals.by_days
+                resources.getQuantityString(base, seconds / DAY_SECONDS, seconds / DAY_SECONDS)
+            }
             seconds % HOUR_SECONDS == 0 -> {
                 val base = if (showBefore) R.plurals.hours_before else R.plurals.by_hours
                 resources.getQuantityString(base, seconds / HOUR_SECONDS, seconds / HOUR_SECONDS)
@@ -533,7 +540,7 @@ fun Context.storeNewYourAlarmSound(resultData: Intent): AlarmSound {
 
 @RequiresApi(Build.VERSION_CODES.N)
 fun Context.saveImageRotation(path: String, degrees: Int): Boolean {
-    if (!isPathOnSD(path) && !path.startsWith(OTG_PATH)) {
+    if (!needsStupidWritePermissions(path)) {
         saveExifRotation(ExifInterface(path), degrees)
         return true
     } else if (isNougatPlus()) {
@@ -589,3 +596,5 @@ fun Context.getLaunchIntent() = packageManager.getLaunchIntentForPackage(baseCon
 fun Context.getCanAppBeUpgraded() = proPackages.contains(baseConfig.appId.removeSuffix(".debug").removePrefix("com.simplemobiletools."))
 
 fun Context.getProUrl() = "https://play.google.com/store/apps/details?id=${baseConfig.appId.removeSuffix(".debug")}.pro"
+
+fun Context.getTimeFormat() = if (baseConfig.use24HourFormat) TIME_FORMAT_24 else TIME_FORMAT_12

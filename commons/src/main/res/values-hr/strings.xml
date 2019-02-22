@@ -334,6 +334,26 @@
         <item quantity="few">%d sati</item>
         <item quantity="other">%d sate</item>
     </plurals>
+    <plurals name="in_days">
+        <item quantity="one">%d day</item>
+        <item quantity="few">%d days</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="in_weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="few">%d weeks</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="in_months">
+        <item quantity="one">%d month</item>
+        <item quantity="few">%d months</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="in_years">
+        <item quantity="one">%d year</item>
+        <item quantity="few">%d years</item>
+        <item quantity="other">%d years</item>
+    </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
@@ -356,6 +376,21 @@
         <item quantity="few">%d dana prije</item>
         <item quantity="other">%d dane prije</item>
     </plurals>
+    <plurals name="weeks_before">
+        <item quantity="one">%d week before</item>
+        <item quantity="few">%d weeks before</item>
+        <item quantity="other">%d weeks before</item>
+    </plurals>
+    <plurals name="months_before">
+        <item quantity="one">%d month before</item>
+        <item quantity="few">%d months before</item>
+        <item quantity="other">%d months before</item>
+    </plurals>
+    <plurals name="years_before">
+        <item quantity="one">%d year before</item>
+        <item quantity="few">%d years before</item>
+        <item quantity="other">%d years before</item>
+    </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
@@ -372,6 +407,26 @@
         <item quantity="one">%d sat</item>
         <item quantity="few">%d sati</item>
         <item quantity="other">%d sate</item>
+    </plurals>
+    <plurals name="by_days">
+        <item quantity="one">%d day</item>
+        <item quantity="few">%d days</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="by_weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="few">%d weeks</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="by_months">
+        <item quantity="one">%d month</item>
+        <item quantity="few">%d months</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="by_years">
+        <item quantity="one">%d year</item>
+        <item quantity="few">%d years</item>
+        <item quantity="other">%d years</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -413,6 +468,7 @@
     <string name="skip_delete_confirmation">Uvijek preskoči dijaloški okvir za potvrdu brisanja</string>
     <string name="enable_pull_to_refresh">Omogućite osvježavanje povlačenjem s vrha</string>
     <string name="use_24_hour_time_format">Koristite 24-satni format</string>
+    <string name="change_date_and_time_format">Change date and time format</string>
     <string name="sunday_first">Početak tjedna u nedjelju</string>
     <string name="widgets">Widgeti</string>
     <string name="use_same_snooze">Uvijek koristi isto vrijeme odgode</string>
@@ -447,6 +503,8 @@
     <string name="empty_recycle_bin_confirmation">Jeste li sigurni da želite isprazniti koš za smeće? Datoteke će biti trajno izgubljene.</string>
     <string name="recycle_bin_empty">Koš za smeće je prazan</string>
     <string name="moving_recycle_bin_items_disabled">Premještanje stavki koša za smeće je onemogućeno, koristite Obnavljanje</string>
+    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
+    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Premještanje stavke %d u koš za smeće</item>

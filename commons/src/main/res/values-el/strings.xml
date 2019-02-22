@@ -321,6 +321,22 @@
         <item quantity="one">σε %d ώρ.</item>
         <item quantity="other">σε %d ώρ.</item>
     </plurals>
+    <plurals name="in_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="in_weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="in_months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="in_years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
@@ -339,6 +355,18 @@
         <item quantity="one">πρίν %d ημερ.</item>
         <item quantity="other">πρίν %d ημερ.</item>
     </plurals>
+    <plurals name="weeks_before">
+        <item quantity="one">%d week before</item>
+        <item quantity="other">%d weeks before</item>
+    </plurals>
+    <plurals name="months_before">
+        <item quantity="one">%d month before</item>
+        <item quantity="other">%d months before</item>
+    </plurals>
+    <plurals name="years_before">
+        <item quantity="one">%d year before</item>
+        <item quantity="other">%d years before</item>
+    </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
@@ -352,6 +380,22 @@
     <plurals name="by_hours">
         <item quantity="one">αναβολή %d ώρ.</item>
         <item quantity="other">αναβολή %d ώρ.</item>
+    </plurals>
+    <plurals name="by_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="by_weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="by_months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="by_years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -385,7 +429,7 @@
     <string name="large">Μεγάλο</string>
     <string name="extra_large">Πολύ Μεγάλο</string>
     <string name="password_protect_hidden_items">Κωδικός προστασίας προβολής κρυφών στοιχείων</string>
-    <string name="password_protect_whole_app">Κωδικός προστασίας  ολόκληρης της εφαρμογής</string>
+    <string name="password_protect_whole_app">Κωδικός προστασίας ολόκληρης της εφαρμογής</string>
     <string name="password_protect_file_deletion">Προστασία με κωδικό για διαγραφή ή μετακίνηση</string>
     <string name="keep_last_modified">Διατήρηση της παλιάς τροποποιημένης τιμής στις λειτουργίες αρχείων</string>
     <string name="show_info_bubble">Εμφάνιση φυσαλίδας πληροφοριών κατά την κύλιση στοιχείων στη γραμμή κύλισης</string>
@@ -393,6 +437,7 @@
     <string name="skip_delete_confirmation">Παράκαμψη πάντα το παράθυρο διαλόγου επιβεβαίωσης διαγραφής</string>
     <string name="enable_pull_to_refresh">Ενεργοποίηση ανανέωσης με \"Σάρωση απο πάνω-κάτω\"</string>
     <string name="use_24_hour_time_format">Χρήση 24ώρου</string>
+    <string name="change_date_and_time_format">Αλλαγή μορφής ημερομηνίας και ώρας</string>
     <string name="sunday_first">Έναρξη εβδομάδας την Κυριακή</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Χρήση πάντα του ίδιου χρόνου αναβολής</string>
@@ -427,6 +472,8 @@
     <string name="empty_recycle_bin_confirmation">Είστε βέβαιοι ότι θέλετε να αδειάσετε τον Κάδο Ανακύκλωσης; Τα αρχεία θα χαθούν οριστικά.</string>
     <string name="recycle_bin_empty">Ο Κάδος Ανακύκλωσης είναι κενός</string>
     <string name="moving_recycle_bin_items_disabled">Η μετακίνηση στον Κάδο είναι ανενεργή, χρησιμοποιείστε την Επαναφορά</string>
+    <string name="show_the_recycle_bin">Εμφάνιση Κάδου Ανακύκλωσης</string>
+    <string name="hide_the_recycle_bin">Απόκρυψη Κάδου Ανακύκλωσης</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Μετακινήθηκε %d στοιχείο στον Κάδο</item>

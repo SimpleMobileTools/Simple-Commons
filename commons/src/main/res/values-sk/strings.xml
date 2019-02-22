@@ -335,6 +335,26 @@
         <item quantity="few">%d hodiny</item>
         <item quantity="other">%d hodín</item>
     </plurals>
+    <plurals name="in_days">
+        <item quantity="one">%d deň</item>
+        <item quantity="few">%d dni</item>
+        <item quantity="other">%d dní</item>
+    </plurals>
+    <plurals name="in_weeks">
+        <item quantity="one">%d týždeň</item>
+        <item quantity="few">%d týždne</item>
+        <item quantity="other">%d týždňov</item>
+    </plurals>
+    <plurals name="in_months">
+        <item quantity="one">%d mesiac</item>
+        <item quantity="few">%d mesiace</item>
+        <item quantity="other">%d mesiacov</item>
+    </plurals>
+    <plurals name="in_years">
+        <item quantity="one">%d rok</item>
+        <item quantity="few">%d roky</item>
+        <item quantity="other">%d rokov</item>
+    </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
@@ -357,6 +377,21 @@
         <item quantity="few">%d dni vopred</item>
         <item quantity="other">%d dní vopred</item>
     </plurals>
+    <plurals name="weeks_before">
+        <item quantity="one">%d týždeň vopred</item>
+        <item quantity="few">%d týždne vopred</item>
+        <item quantity="other">%d týždňov vopred</item>
+    </plurals>
+    <plurals name="months_before">
+        <item quantity="one">%d mesiac vopred</item>
+        <item quantity="few">%d mesiace vopred</item>
+        <item quantity="other">%d mesiacov vopred</item>
+    </plurals>
+    <plurals name="years_before">
+        <item quantity="one">%d rok vopred</item>
+        <item quantity="few">%d roky vopred</item>
+        <item quantity="other">%d rokov vopred</item>
+    </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
@@ -373,6 +408,26 @@
         <item quantity="one">%d hodinu</item>
         <item quantity="few">%d hodiny</item>
         <item quantity="other">%d hodín</item>
+    </plurals>
+    <plurals name="by_days">
+        <item quantity="one">%d deň</item>
+        <item quantity="few">%d dni</item>
+        <item quantity="other">%d dni</item>
+    </plurals>
+    <plurals name="by_weeks">
+        <item quantity="one">%d týždeň</item>
+        <item quantity="few">%d týždne</item>
+        <item quantity="other">%d týždňov</item>
+    </plurals>
+    <plurals name="by_months">
+        <item quantity="one">%d mesiac</item>
+        <item quantity="few">%d mesiace</item>
+        <item quantity="other">%d mesiacov</item>
+    </plurals>
+    <plurals name="by_years">
+        <item quantity="one">%d rok</item>
+        <item quantity="few">%d roky</item>
+        <item quantity="other">%d rokov</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -414,6 +469,7 @@
     <string name="skip_delete_confirmation">Stále preskočiť potvrdenie vymazania súborov</string>
     <string name="enable_pull_to_refresh">Povoliť obnovenie súborov potiahnutím zhora</string>
     <string name="use_24_hour_time_format">Použiť 24 hodinový časový formát</string>
+    <string name="change_date_and_time_format">Zmeniť dátumový a časový formát</string>
     <string name="sunday_first">Začať týždeň nedeľou</string>
     <string name="widgets">Widgety</string>
     <string name="use_same_snooze">Použiť stále rovnaký čas s Odložiť</string>
@@ -448,6 +504,8 @@
     <string name="empty_recycle_bin_confirmation">Ste si istý, že chcete vysypať odpadkový kôš? Súbory budú navždy stratené.</string>
     <string name="recycle_bin_empty">Odpadkový kôš je prázdny</string>
     <string name="moving_recycle_bin_items_disabled">Presúvanie položiek z odpadkového koša je zakázané, prosím použite možnosť Obnoviť</string>
+    <string name="show_the_recycle_bin">Zobraziť odpadkový kôš</string>
+    <string name="hide_the_recycle_bin">Skryť odpadkový kôš</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d položka sa presúva do odpadkového koša</item>

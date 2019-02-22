@@ -5,6 +5,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import kotlinx.android.synthetic.main.dialog_export_settings.view.*
+import java.io.File
 
 class ExportSettingsDialog(val activity: BaseSimpleActivity, val defaultFilename: String, callback: (path: String) -> Unit) {
     init {
@@ -38,7 +39,7 @@ class ExportSettingsDialog(val activity: BaseSimpleActivity, val defaultFilename
                                 return@setOnClickListener
                             }
 
-                            if (activity.getDoesFilePathExist(newPath)) {
+                            if (File(newPath).exists()) {
                                 val title = String.format(activity.getString(R.string.file_already_exists_overwrite), newPath.getFilenameFromPath())
                                 ConfirmationDialog(activity, title) {
                                     callback(newPath)

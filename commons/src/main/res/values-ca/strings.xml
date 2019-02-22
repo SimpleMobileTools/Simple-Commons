@@ -218,7 +218,7 @@
     <string name="empty_and_disable_recycle_bin">Buida i desactiva la paperera de reciclatge</string>
     <string name="undo">Desfer</string>
     <string name="redo">Refer</string>
-    <string name="print">Print</string>
+    <string name="print">Imprimir</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar per</string>
@@ -321,6 +321,22 @@
         <item quantity="one">%d hora</item>
         <item quantity="other">%d hores</item>
     </plurals>
+    <plurals name="in_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="in_weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="in_months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="in_years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
@@ -339,22 +355,47 @@
         <item quantity="one">%d dia abans</item>
         <item quantity="other">%d dies abans</item>
     </plurals>
+    <plurals name="weeks_before">
+        <item quantity="one">%d week before</item>
+        <item quantity="other">%d weeks before</item>
+    </plurals>
+    <plurals name="months_before">
+        <item quantity="one">%d month before</item>
+        <item quantity="other">%d months before</item>
+    </plurals>
+    <plurals name="years_before">
+        <item quantity="one">%d year before</item>
+        <item quantity="other">%d years before</item>
+    </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d segon</item>
-        <item quantity="few">%d segons</item>
         <item quantity="other">%d segons</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minut</item>
-        <item quantity="few">%d minuts</item>
         <item quantity="other">%d minuts</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d hora</item>
-        <item quantity="few">%d hores</item>
         <item quantity="other">%d hores</item>
+    </plurals>
+    <plurals name="by_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="by_weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="by_months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="by_years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -396,6 +437,7 @@
     <string name="skip_delete_confirmation">Ignora sempre el diàleg de confirmació d\'eliminació</string>
     <string name="enable_pull_to_refresh">Activa estirar des de la part superior per refrescar</string>
     <string name="use_24_hour_time_format">Utilitzar foramt 24 houres</string>
+    <string name="change_date_and_time_format">Change date and time format</string>
     <string name="sunday_first">Començar la setmana en diumenge</string>
     <string name="widgets">Ginys</string>
     <string name="use_same_snooze">Utilitzeu sempre el mateix temps de posposat</string>
@@ -430,6 +472,8 @@
     <string name="empty_recycle_bin_confirmation">ASegur que vols buidar la paperera? El fitxer s\'eliminaran definitivament.</string>
     <string name="recycle_bin_empty">La paperera és buida</string>
     <string name="moving_recycle_bin_items_disabled">Moure a la paperara està deshabilitat. Feu servir recuperar</string>
+    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
+    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Movent %d element a la paperera de reciclage</item>
@@ -540,7 +584,7 @@
     </string>
     <string name="purchase">Comprar</string>
     <string name="update_thank_you">Si us plau, actualitzeu Simple Thank You a la darrera versió</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
+    <string name="before_asking_question_read_faq">Abans de fer una pregunta, llegiu les Preguntes més freqüents. Potser la solució hi és.</string>
     <string name="read_it">Llegiu</string>
 
     <!-- New app (do not translate anything on the 4th line) -->

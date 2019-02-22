@@ -19,7 +19,6 @@ import com.simplemobiletools.commons.asynctasks.CopyMoveTask
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.dialogs.ExportSettingsDialog
 import com.simplemobiletools.commons.dialogs.FileConflictDialog
-import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.interfaces.CopyMoveListener
@@ -37,8 +36,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     private val GENERIC_PERM_HANDLER = 100
 
     companion object {
-        var funAfterSAFPermission: (() -> Unit)? = null
-        var funAfterOTGPermission: ((success: Boolean) -> Unit)? = null
+        var funAfterSAFPermission: ((success: Boolean) -> Unit)? = null
     }
 
     abstract fun getAppIconIDs(): ArrayList<Int>
@@ -79,7 +77,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         funAfterSAFPermission = null
-        funAfterOTGPermission = null
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -153,7 +150,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     return
                 }
                 saveTreeUri(resultData)
-                funAfterSAFPermission?.invoke()
+                funAfterSAFPermission?.invoke(true)
                 funAfterSAFPermission = null
             } else {
                 toast(R.string.wrong_root_selected)
@@ -163,15 +160,19 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         } else if (requestCode == OPEN_DOCUMENT_TREE_OTG && resultCode == Activity.RESULT_OK && resultData != null) {
             if (isProperOTGFolder(resultData.data)) {
                 if (resultData.dataString == baseConfig.treeUri) {
-                    funAfterOTGPermission?.invoke(false)
+                    funAfterSAFPermission?.invoke(false)
                     toast(R.string.sd_card_usb_same)
                     return
                 }
                 baseConfig.OTGTreeUri = resultData.dataString
-                baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/')
+                baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/').trimEnd('/')
+                baseConfig.OTGPath = "/storage/${baseConfig.OTGPartition}"
 
-                funAfterOTGPermission?.invoke(true)
-                funAfterOTGPermission = null
+                val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+                applicationContext.contentResolver.takePersistableUriPermission(resultData.data, takeFlags)
+
+                funAfterSAFPermission?.invoke(true)
+                funAfterSAFPermission = null
             } else {
                 toast(R.string.wrong_root_selected_usb)
                 val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
@@ -219,12 +220,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun handleSAFDialog(path: String, callback: () -> Unit): Boolean {
-        return if (!path.startsWith(OTG_PATH) && isShowingSAFDialog(path, baseConfig.treeUri, OPEN_DOCUMENT_TREE)) {
+    fun handleSAFDialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
+        return if (isShowingSAFDialog(path) || isShowingOTGDialog(path)) {
             funAfterSAFPermission = callback
             true
         } else {
-            callback()
+            callback(true)
             false
         }
     }
@@ -236,7 +237,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             return
         }
 
-        if (!getDoesFilePathExist(destination)) {
+        if (!File(destination).exists()) {
             toast(R.string.invalid_destination)
             return
         }
@@ -247,7 +248,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             if (isCopyOperation) {
                 startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
             } else {
-                if (source.startsWith(OTG_PATH) || destination.startsWith(OTG_PATH) || isPathOnSD(source) || isPathOnSD(destination) || fileDirItems.first().isDirectory) {
+                if (isPathOnOTG(source) || isPathOnOTG(destination) || isPathOnSD(source) || isPathOnSD(destination) || fileDirItems.first().isDirectory) {
                     handleSAFDialog(source) {
                         startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
                     }
@@ -255,7 +256,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     try {
                         checkConflicts(fileDirItems, destination, 0, LinkedHashMap()) {
                             toast(R.string.moving)
-                            val updatedFiles = ArrayList<FileDirItem>(fileDirItems.size * 2)
+                            val updatedPaths = ArrayList<String>(fileDirItems.size)
                             val destinationFolder = File(destination)
                             for (oldFileDirItem in fileDirItems) {
                                 var newFile = File(destinationFolder, oldFileDirItem.name)
@@ -273,11 +274,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                                     if (!baseConfig.keepLastModified) {
                                         newFile.setLastModified(System.currentTimeMillis())
                                     }
-                                    updatedFiles.add(newFile.toFileDirItem(applicationContext))
+                                    updatedPaths.add(newFile.absolutePath)
+                                    deleteFromMediaStore(oldFileDirItem.path)
                                 }
                             }
 
-                            val updatedPaths = updatedFiles.map { it.path } as ArrayList<String>
                             if (updatedPaths.isEmpty()) {
                                 copyMoveListener.copySucceeded(false, fileCountToCopy == 0, destination)
                             } else {
@@ -303,7 +304,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             val newName = String.format("%s(%d).%s", file.nameWithoutExtension, fileIndex, file.extension)
             newFile = File(file.parent, newName)
             fileIndex++
-        } while (getDoesFilePathExist(newFile!!.absolutePath))
+        } while (File(newFile!!.absolutePath).exists())
         return newFile
     }
 
@@ -324,7 +325,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
         val file = files[index]
         val newFileDirItem = FileDirItem("$destinationPath/${file.name}", file.name, file.isDirectory)
-        if (getDoesFilePathExist(newFileDirItem.path)) {
+        if (File(newFileDirItem.path).exists()) {
             FileConflictDialog(this, newFileDirItem) { resolution, applyForAll ->
                 if (applyForAll) {
                     conflictResolutions.clear()
@@ -374,28 +375,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         override fun copyFailed() {
             toast(R.string.copy_move_failed)
             copyMoveCallback = null
-        }
-    }
-
-    fun handleOTGPermission(callback: (success: Boolean) -> Unit) {
-        if (baseConfig.OTGTreeUri.isNotEmpty()) {
-            callback(true)
-            return
-        }
-
-        funAfterOTGPermission = callback
-        WritePermissionDialog(this, true) {
-            Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
-                if (resolveActivity(packageManager) == null) {
-                    type = "*/*"
-                }
-
-                if (resolveActivity(packageManager) != null) {
-                    startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
-                } else {
-                    toast(R.string.unknown_error_occurred)
-                }
-            }
         }
     }
 

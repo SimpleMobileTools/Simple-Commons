@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.helpers
 
+import android.graphics.Color
 import android.os.Build
 import android.os.Looper
 import java.util.*
@@ -15,12 +16,12 @@ const val REAL_FILE_PATH = "real_file_path_2"
 const val IS_FROM_GALLERY = "is_from_gallery"
 const val BROADCAST_REFRESH_MEDIA = "com.simplemobiletools.REFRESH_MEDIA"
 const val REFRESH_PATH = "refresh_path"
-const val OTG_PATH = "otg:/"
 const val IS_CUSTOMIZING_COLORS = "is_customizing_colors"
 const val ALARM_SOUND_TYPE_ALARM = 1
 const val ALARM_SOUND_TYPE_NOTIFICATION = 2
 const val YOUR_ALARM_SOUNDS_MIN_ID = 1000
 const val SHOW_FAQ_BEFORE_MAIL = "show_faq_before_mail"
+val DEFAULT_WIDGET_BG_COLOR = Color.parseColor("#33000000")
 
 const val HOUR_MINUTES = 60
 const val DAY_MINUTES = 24 * HOUR_MINUTES
@@ -40,8 +41,9 @@ const val PREFS_KEY = "Prefs"
 const val APP_RUN_COUNT = "app_run_count"
 const val LAST_VERSION = "last_version"
 const val TREE_URI = "tree_uri_2"
-const val OTG_TREE_URI = "otg_tree_uri"
+const val OTG_TREE_URI = "otg_tree_uri_2"
 const val SD_CARD_PATH = "sd_card_path_2"
+const val OTG_REAL_PATH = "otg_real_path_2"
 const val INTERNAL_STORAGE_PATH = "internal_storage_path"
 const val TEXT_COLOR = "text_color"
 const val BACKGROUND_COLOR = "background_color"
@@ -88,7 +90,7 @@ const val SNOOZE_TIME = "snooze_delay"
 const val VIBRATE_ON_BUTTON_PRESS = "vibrate_on_button_press"
 const val YOUR_ALARM_SOUNDS = "your_alarm_sounds"
 const val SILENT = "silent"
-const val OTG_PARTITION = "otg_partition"
+const val OTG_PARTITION = "otg_partition_2"
 const val IS_USING_MODIFIED_APP_ICON = "is_using_modified_app_icon"
 const val INITIAL_WIDGET_HEIGHT = "initial_widget_height"
 const val WIDGET_ID_TO_MEASURE = "widget_id_to_measure"
@@ -98,6 +100,7 @@ const val WAS_BEFORE_ASKING_SHOWN = "was_before_asking_shown"
 const val WAS_INITIAL_UPGRADE_TO_PRO_SHOWN = "was_initial_upgrade_to_pro_shown"
 const val WAS_APP_ICON_CUSTOMIZATION_WARNING_SHOWN = "was_app_icon_customization_warning_shown"
 const val APP_SIDELOADING_STATUS = "app_sideloading_status"
+const val DATE_FORMAT = "date_format"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
@@ -199,6 +202,14 @@ val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bm
 val videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
 val audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a", ".opus", ".flac", ".aac")
 val rawExtensions: Array<String> get() = arrayOf(".dng", ".orf", ".nef", ".arw")
+
+const val DATE_FORMAT_ONE = "dd.MM.yyyy"
+const val DATE_FORMAT_TWO = "dd/MM/yyyy"
+const val DATE_FORMAT_THREE = "MM/dd/yyyy"
+const val DATE_FORMAT_FOUR = "yyyy-MM-dd"
+
+const val TIME_FORMAT_12 = "hh:mm a"
+const val TIME_FORMAT_24 = "HH:mm"
 
 val appIconColorStrings = arrayListOf(
         ".Red",

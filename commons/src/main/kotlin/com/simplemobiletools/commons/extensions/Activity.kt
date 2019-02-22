@@ -1,6 +1,5 @@
 package com.simplemobiletools.commons.extensions
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.*
 import android.content.pm.ApplicationInfo
@@ -87,21 +86,47 @@ fun Activity.isAppInstalledOnSDCard(): Boolean = try {
     false
 }
 
-@SuppressLint("InlinedApi")
-fun Activity.isShowingSAFDialog(path: String, treeUri: String, requestCode: Int): Boolean {
-    return if (needsStupidWritePermissions(path) && (treeUri.isEmpty() || !hasProperStoredTreeUri())) {
+fun Activity.isShowingSAFDialog(path: String): Boolean {
+    return if (isPathOnSD(path) && (baseConfig.treeUri.isEmpty() || !hasProperStoredTreeUri(false))) {
         runOnUiThread {
-            WritePermissionDialog(this, false) {
-                Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
-                    putExtra("android.content.extra.SHOW_ADVANCED", true)
-                    if (resolveActivity(packageManager) == null) {
-                        type = "*/*"
-                    }
+            if (!isDestroyed) {
+                WritePermissionDialog(this, false) {
+                    Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
+                        putExtra("android.content.extra.SHOW_ADVANCED", true)
+                        if (resolveActivity(packageManager) == null) {
+                            type = "*/*"
+                        }
 
-                    if (resolveActivity(packageManager) != null) {
-                        startActivityForResult(this, requestCode)
-                    } else {
-                        toast(R.string.unknown_error_occurred)
+                        if (resolveActivity(packageManager) != null) {
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE)
+                        } else {
+                            toast(R.string.unknown_error_occurred)
+                        }
+                    }
+                }
+            }
+        }
+        true
+    } else {
+        false
+    }
+}
+
+fun BaseSimpleActivity.isShowingOTGDialog(path: String): Boolean {
+    return if (isPathOnOTG(path) && (baseConfig.OTGTreeUri.isEmpty() || !hasProperStoredTreeUri(true))) {
+        runOnUiThread {
+            if (!isDestroyed) {
+                WritePermissionDialog(this, true) {
+                    Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
+                        if (resolveActivity(packageManager) == null) {
+                            type = "*/*"
+                        }
+
+                        if (resolveActivity(packageManager) != null) {
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
+                        } else {
+                            toast(R.string.unknown_error_occurred)
+                        }
                     }
                 }
             }
@@ -228,7 +253,7 @@ fun Activity.openEditorIntent(path: String, forceChooser: Boolean, applicationId
             val extension = path.getFilenameExtension()
             val newFilePath = File(parent, "$newFilename.$extension")
 
-            val outputUri = if (path.startsWith(OTG_PATH)) newUri else getFinalUriFromPath("$newFilePath", applicationId)
+            val outputUri = if (isPathOnOTG(path)) newUri else getFinalUriFromPath("$newFilePath", applicationId)
             val resInfoList = packageManager.queryIntentActivities(this, PackageManager.MATCH_DEFAULT_ONLY)
             for (resolveInfo in resInfoList) {
                 val packageName = resolveInfo.activityInfo.packageName
@@ -455,12 +480,11 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
         return
     }
 
-    var fileDeleted = !path.startsWith(OTG_PATH) && ((!file.exists() && file.length() == 0L) || file.delete())
+    var fileDeleted = !isPathOnOTG(path) && ((!file.exists() && file.length() == 0L) || file.delete())
     if (fileDeleted) {
-        rescanDeletedPath(path) {
-            runOnUiThread {
-                callback?.invoke(true)
-            }
+        deleteFromMediaStore(path)
+        runOnUiThread {
+            callback?.invoke(true)
         }
     } else {
         if (file.isDirectory && allowDeleteFolder) {
@@ -468,12 +492,10 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
         }
 
         if (!fileDeleted) {
-            if (isPathOnSD(path)) {
+            if (needsStupidWritePermissions(path)) {
                 handleSAFDialog(path) {
                     trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
                 }
-            } else if (path.startsWith(OTG_PATH)) {
-                trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
             }
         }
     }
@@ -529,6 +551,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                         if (!baseConfig.keepLastModified) {
                             updateLastModified(newPath, System.currentTimeMillis())
                         }
+                        deleteFromMediaStore(oldPath)
                         runOnUiThread {
                             callback?.invoke(true)
                         }
@@ -558,6 +581,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
             if (!baseConfig.keepLastModified) {
                 File(newPath).setLastModified(System.currentTimeMillis())
             }
+            deleteFromMediaStore(oldPath)
             scanPathsRecursively(arrayListOf(newPath)) {
                 runOnUiThread {
                     callback?.invoke(true)
@@ -674,14 +698,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
     }
 }
 
-fun BaseSimpleActivity.getFileInputStreamSync(path: String): InputStream? {
-    return if (path.startsWith(OTG_PATH)) {
-        val fileDocument = getSomeDocumentFile(path)
-        applicationContext.contentResolver.openInputStream(fileDocument?.uri)
-    } else {
-        FileInputStream(File(path))
-    }
-}
+fun BaseSimpleActivity.getFileInputStreamSync(path: String) = FileInputStream(File(path))
 
 fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
     if (baseConfig.isHiddenPasswordProtectionOn) {
@@ -718,7 +735,7 @@ fun Activity.handleDeletePasswordProtection(callback: () -> Unit) {
 }
 
 fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
-    if (getDoesFilePathExist(directory)) {
+    if (File(directory).exists()) {
         return true
     }
 

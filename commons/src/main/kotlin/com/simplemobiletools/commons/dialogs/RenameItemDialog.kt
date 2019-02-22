@@ -5,6 +5,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import kotlinx.android.synthetic.main.dialog_rename_item.view.*
+import java.io.File
 import java.util.*
 
 class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val callback: (newPath: String) -> Unit) {
@@ -14,7 +15,7 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
         var name = fullName
 
         val view = activity.layoutInflater.inflate(R.layout.dialog_rename_item, null).apply {
-            if (dotAt > 0 && !activity.getIsPathDirectory(path)) {
+            if (dotAt > 0 && !File(path).isDirectory) {
                 name = fullName.substring(0, dotAt)
                 val extension = fullName.substring(dotAt + 1)
                 rename_item_extension.setText(extension)
@@ -53,13 +54,13 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
                                 newName += ".$newExtension"
                             }
 
-                            if (!activity.getDoesFilePathExist(path)) {
+                            if (!File(path).exists()) {
                                 activity.toast(String.format(activity.getString(R.string.source_file_doesnt_exist), path))
                                 return@setOnClickListener
                             }
 
                             val newPath = "${path.getParentPath()}/$newName"
-                            if (activity.getDoesFilePathExist(newPath)) {
+                            if (File(newPath).exists()) {
                                 activity.toast(R.string.name_taken)
                                 return@setOnClickListener
                             }

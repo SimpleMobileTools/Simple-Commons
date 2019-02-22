@@ -8,7 +8,6 @@ import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.OTG_PATH
 import kotlinx.android.synthetic.main.dialog_radio_group.view.*
 
 /**
@@ -68,7 +67,7 @@ class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, va
             otgButton.apply {
                 id = ID_OTG
                 text = resources.getString(R.string.usb)
-                isChecked = basePath == OTG_PATH
+                isChecked = basePath == context.otgPath
                 setOnClickListener { otgPicked() }
                 if (isChecked) {
                     defaultSelectedId = id
@@ -106,14 +105,14 @@ class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, va
     }
 
     private fun otgPicked() {
-        activity.handleOTGPermission {
-            if (it) {
-                callback(OTG_PATH)
-                mDialog.dismiss()
-            } else {
-                radioGroup.check(defaultSelectedId)
+        if (activity.baseConfig.OTGPath.isEmpty()) {
+            activity.getStorageDirectories().firstOrNull { it.trimEnd('/') != activity.internalStoragePath && it.trimEnd('/') != activity.sdCardPath }?.apply {
+                activity.baseConfig.OTGPath = trimEnd('/')
             }
         }
+
+        mDialog.dismiss()
+        callback(activity.otgPath)
     }
 
     private fun rootPicked() {

@@ -6,6 +6,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getInternalStoragePath
 import com.simplemobiletools.commons.extensions.getSDCardPath
 import com.simplemobiletools.commons.extensions.getSharedPrefs
+import java.text.SimpleDateFormat
 import java.util.*
 
 open class BaseConfig(val context: Context) {
@@ -24,25 +25,29 @@ open class BaseConfig(val context: Context) {
         set(lastVersion) = prefs.edit().putInt(LAST_VERSION, lastVersion).apply()
 
     var treeUri: String
-        get() = prefs.getString(TREE_URI, "")
+        get() = prefs.getString(TREE_URI, "")!!
         set(uri) = prefs.edit().putString(TREE_URI, uri).apply()
 
     var OTGTreeUri: String
-        get() = prefs.getString(OTG_TREE_URI, "")
+        get() = prefs.getString(OTG_TREE_URI, "")!!
         set(OTGTreeUri) = prefs.edit().putString(OTG_TREE_URI, OTGTreeUri).apply()
 
     var OTGPartition: String
-        get() = prefs.getString(OTG_PARTITION, "")
+        get() = prefs.getString(OTG_PARTITION, "")!!
         set(OTGPartition) = prefs.edit().putString(OTG_PARTITION, OTGPartition).apply()
 
+    var OTGPath: String
+        get() = prefs.getString(OTG_REAL_PATH, "")!!
+        set(OTGPath) = prefs.edit().putString(OTG_REAL_PATH, OTGPath).apply()
+
     var sdCardPath: String
-        get() = prefs.getString(SD_CARD_PATH, getDefaultSDCardPath())
+        get() = prefs.getString(SD_CARD_PATH, getDefaultSDCardPath())!!
         set(sdCardPath) = prefs.edit().putString(SD_CARD_PATH, sdCardPath).apply()
 
     private fun getDefaultSDCardPath() = if (prefs.contains(SD_CARD_PATH)) "" else context.getSDCardPath()
 
     var internalStoragePath: String
-        get() = prefs.getString(INTERNAL_STORAGE_PATH, getDefaultInternalPath())
+        get() = prefs.getString(INTERNAL_STORAGE_PATH, getDefaultInternalPath())!!
         set(internalStoragePath) = prefs.edit().putString(INTERNAL_STORAGE_PATH, internalStoragePath).apply()
 
     private fun getDefaultInternalPath() = if (prefs.contains(INTERNAL_STORAGE_PATH)) "" else context.getInternalStoragePath()
@@ -87,7 +92,7 @@ open class BaseConfig(val context: Context) {
         set(customPrimaryColor) = prefs.edit().putInt(CUSTOM_PRIMARY_COLOR, customPrimaryColor).apply()
 
     var widgetBgColor: Int
-        get() = prefs.getInt(WIDGET_BG_COLOR, 1)
+        get() = prefs.getInt(WIDGET_BG_COLOR, DEFAULT_WIDGET_BG_COLOR)
         set(widgetBgColor) = prefs.edit().putInt(WIDGET_BG_COLOR, widgetBgColor).apply()
 
     var widgetTextColor: Int
@@ -100,7 +105,7 @@ open class BaseConfig(val context: Context) {
         set(isHiddenPasswordProtectionOn) = prefs.edit().putBoolean(PASSWORD_PROTECTION, isHiddenPasswordProtectionOn).apply()
 
     var hiddenPasswordHash: String
-        get() = prefs.getString(PASSWORD_HASH, "")
+        get() = prefs.getString(PASSWORD_HASH, "")!!
         set(hiddenPasswordHash) = prefs.edit().putString(PASSWORD_HASH, hiddenPasswordHash).apply()
 
     var hiddenProtectionType: Int
@@ -113,7 +118,7 @@ open class BaseConfig(val context: Context) {
         set(isAppPasswordProtectionOn) = prefs.edit().putBoolean(APP_PASSWORD_PROTECTION, isAppPasswordProtectionOn).apply()
 
     var appPasswordHash: String
-        get() = prefs.getString(APP_PASSWORD_HASH, "")
+        get() = prefs.getString(APP_PASSWORD_HASH, "")!!
         set(appPasswordHash) = prefs.edit().putString(APP_PASSWORD_HASH, appPasswordHash).apply()
 
     var appProtectionType: Int
@@ -126,7 +131,7 @@ open class BaseConfig(val context: Context) {
         set(isDeletePasswordProtectionOn) = prefs.edit().putBoolean(DELETE_PASSWORD_PROTECTION, isDeletePasswordProtectionOn).apply()
 
     var deletePasswordHash: String
-        get() = prefs.getString(DELETE_PASSWORD_HASH, "")
+        get() = prefs.getString(DELETE_PASSWORD_HASH, "")!!
         set(deletePasswordHash) = prefs.edit().putString(DELETE_PASSWORD_HASH, deletePasswordHash).apply()
 
     var deleteProtectionType: Int
@@ -236,7 +241,7 @@ open class BaseConfig(val context: Context) {
         set(vibrateOnButton) = prefs.edit().putBoolean(VIBRATE_ON_BUTTON_PRESS, vibrateOnButton).apply()
 
     var yourAlarmSounds: String
-        get() = prefs.getString(YOUR_ALARM_SOUNDS, "")
+        get() = prefs.getString(YOUR_ALARM_SOUNDS, "")!!
         set(yourAlarmSounds) = prefs.edit().putString(YOUR_ALARM_SOUNDS, yourAlarmSounds).apply()
 
     var isUsingModifiedAppIcon: Boolean
@@ -244,7 +249,7 @@ open class BaseConfig(val context: Context) {
         set(isUsingModifiedAppIcon) = prefs.edit().putBoolean(IS_USING_MODIFIED_APP_ICON, isUsingModifiedAppIcon).apply()
 
     var appId: String
-        get() = prefs.getString(APP_ID, "")
+        get() = prefs.getString(APP_ID, "")!!
         set(appId) = prefs.edit().putString(APP_ID, appId).apply()
 
     var initialWidgetHeight: Int
@@ -278,4 +283,19 @@ open class BaseConfig(val context: Context) {
     var appSideloadingStatus: Int
         get() = prefs.getInt(APP_SIDELOADING_STATUS, SIDELOADING_UNCHECKED)
         set(appSideloadingStatus) = prefs.edit().putInt(APP_SIDELOADING_STATUS, appSideloadingStatus).apply()
+
+    var dateFormat: String
+        get() = prefs.getString(DATE_FORMAT, getDefaultDateFormat())!!
+        set(dateFormat) = prefs.edit().putString(DATE_FORMAT, dateFormat).apply()
+
+    private fun getDefaultDateFormat(): String {
+        val format = android.text.format.DateFormat.getDateFormat(context)
+        val pattern = (format as SimpleDateFormat).toLocalizedPattern()
+        return when (pattern.toLowerCase().replace(" ", "")) {
+            "dd/mm/y" -> DATE_FORMAT_TWO
+            "mm/dd/y" -> DATE_FORMAT_THREE
+            "y-mm-dd" -> DATE_FORMAT_FOUR
+            else -> DATE_FORMAT_ONE
+        }
+    }
 }

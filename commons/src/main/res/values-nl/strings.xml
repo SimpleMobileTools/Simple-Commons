@@ -321,6 +321,22 @@
         <item quantity="one">%d uur</item>
         <item quantity="other">%d uren</item>
     </plurals>
+    <plurals name="in_days">
+        <item quantity="one">%d dag</item>
+        <item quantity="other">%d dagen</item>
+    </plurals>
+    <plurals name="in_weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weken</item>
+    </plurals>
+    <plurals name="in_months">
+        <item quantity="one">%d maand</item>
+        <item quantity="other">%d maanden</item>
+    </plurals>
+    <plurals name="in_years">
+        <item quantity="one">%d jaar</item>
+        <item quantity="other">%d jaren</item>
+    </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
@@ -339,6 +355,18 @@
         <item quantity="one">%d dag van tevoren</item>
         <item quantity="other">%d dagen van tevoren</item>
     </plurals>
+    <plurals name="weeks_before">
+        <item quantity="one">%d week van tevoren</item>
+        <item quantity="other">%d weken van tevoren</item>
+    </plurals>
+    <plurals name="months_before">
+        <item quantity="one">%d maand van tevoren</item>
+        <item quantity="other">%d maanden van tevoren</item>
+    </plurals>
+    <plurals name="years_before">
+        <item quantity="one">%d jaar van tevoren</item>
+        <item quantity="other">%d jaren van tevoren</item>
+    </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
@@ -352,6 +380,22 @@
     <plurals name="by_hours">
         <item quantity="one">%d uur</item>
         <item quantity="other">%d uren</item>
+    </plurals>
+    <plurals name="by_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="by_weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="by_months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="by_years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -393,6 +437,7 @@
     <string name="skip_delete_confirmation">Niet om bevestiging vragen bij verwijderen</string>
     <string name="enable_pull_to_refresh">Pull-to-refresh inschakelen</string>
     <string name="use_24_hour_time_format">24-uursformaat gebruiken</string>
+    <string name="change_date_and_time_format">Weergave datum/tijd aanpassen</string>
     <string name="sunday_first">Week op zondag beginnen</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Altijd dezelfde interval voor uitstellen gebruiken</string>
@@ -427,6 +472,8 @@
     <string name="empty_recycle_bin_confirmation">Prullenbak echt leegmaken? De bestanden zullen permanent verwijderd worden.</string>
     <string name="recycle_bin_empty">Prullenbak is leeg</string>
     <string name="moving_recycle_bin_items_disabled">Items uit de prullenbak verplaatsen is niet toegestaan. Gebruik de opdracht Herstellen.</string>
+    <string name="show_the_recycle_bin">Prullenbak tonen</string>
+    <string name="hide_the_recycle_bin">Prullenbak verbergen</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d item naar de prullenbak verplaatsen</item>
@@ -447,7 +494,7 @@
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">USB-apparaat gedetecteerd. Om de bestanden op dit apparaat te weergeven heeft de app aanvullende machtigingen nodig.</string>
+    <string name="usb_detected">USB-apparaat gedetecteerd. Om de bestanden op dit apparaat te kunnen tonen heeft de app aanvullende machtigingen nodig.</string>
     <string name="confirm_usb_storage_access_text">Selecteer in het volgende scherm de hoofdmap van het USB-apparaat</string>
     <string name="wrong_root_selected_usb">Verkeerde map geselecteerd, kies de hoofdmap van het USB-apparaat</string>
 

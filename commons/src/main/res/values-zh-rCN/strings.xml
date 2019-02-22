@@ -22,7 +22,7 @@
     <string name="transparent">透明</string>
     <string name="transparent_color">透明颜色</string>
     <string name="select_a_different_color">选择一个不同的颜色</string>
-    <string name="download">Download</string>
+    <string name="download">下载</string>
 
     <!-- Favorites -->
     <string name="favorites">收藏</string>
@@ -119,18 +119,15 @@
     <string name="confirm_selection">确认选择</string>
 
     <plurals name="items">
-        <item quantity="one">%d 个项目</item>
         <item quantity="other">%d 个项目</item>
     </plurals>
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d 个项目</item>
         <item quantity="other">%d 个项目</item>
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">正在删除 %d 个项目</item>
         <item quantity="other">正在删除 %d 个项目</item>
     </plurals>
 
@@ -218,7 +215,7 @@
     <string name="empty_and_disable_recycle_bin">清空并禁用回收站</string>
     <string name="undo">撤销</string>
     <string name="redo">重做</string>
-    <string name="print">Print</string>
+    <string name="print">打印</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序方式</string>
@@ -246,7 +243,6 @@
     <string name="no">否</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">警告: 你正在删除 %d 目录</item>
         <item quantity="other">警告: 你正在删除 %d 目录</item>
     </plurals>
 
@@ -280,78 +276,94 @@
     <string name="days_raw">天</string>
 
     <plurals name="seconds">
-        <item quantity="one">%d 秒</item>
         <item quantity="other">%d 秒</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%d 分钟</item>
         <item quantity="other">%d 分钟</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%d 小时</item>
         <item quantity="other">%d 小时</item>
     </plurals>
     <plurals name="days">
-        <item quantity="one">%d 日</item>
         <item quantity="other">%d 日</item>
     </plurals>
     <plurals name="weeks">
-        <item quantity="one">%d 周</item>
         <item quantity="other">%d 周</item>
     </plurals>
     <plurals name="months">
-        <item quantity="one">%d 月</item>
         <item quantity="other">%d 月</item>
     </plurals>
     <plurals name="years">
-        <item quantity="one">%d 年</item>
         <item quantity="other">%d 年</item>
     </plurals>
 
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d 秒</item>
         <item quantity="other">%d 秒</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d 分钟</item>
         <item quantity="other">%d 分钟</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d 小时</item>
         <item quantity="other">%d 小时</item>
+    </plurals>
+    <plurals name="in_days">
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="in_weeks">
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="in_months">
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="in_years">
+        <item quantity="other">%d years</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d 秒前</item>
         <item quantity="other">%d 秒前</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">%d 分钟前</item>
         <item quantity="other">%d 分钟前</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">%d 小时前</item>
         <item quantity="other">%d 小时前</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">%d 天前</item>
         <item quantity="other">%d 天前</item>
+    </plurals>
+    <plurals name="weeks_before">
+        <item quantity="other">%d weeks before</item>
+    </plurals>
+    <plurals name="months_before">
+        <item quantity="other">%d months before</item>
+    </plurals>
+    <plurals name="years_before">
+        <item quantity="other">%d years before</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d 秒</item>
         <item quantity="other">%d 秒</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d 分钟</item>
         <item quantity="other">%d 分钟</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d 小时</item>
         <item quantity="other">%d 小时</item>
+    </plurals>
+    <plurals name="by_days">
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="by_weeks">
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="by_months">
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="by_years">
+        <item quantity="other">%d years</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -387,12 +399,13 @@
     <string name="password_protect_hidden_items">使用密码保护隐藏项</string>
     <string name="password_protect_whole_app">使用密码保护本应用</string>
     <string name="password_protect_file_deletion">使用密码保护文件删除和移动</string>
-    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
+    <string name="keep_last_modified">操作文件时保留旧的最后修改日期</string>
     <string name="show_info_bubble">拖动滚动条时在滚动项目旁显示一个信息气泡</string>
     <string name="prevent_phone_from_sleeping">阻止设备自动休眠</string>
     <string name="skip_delete_confirmation">忽略删除确认对话框</string>
     <string name="enable_pull_to_refresh">启用顶部上拉刷新</string>
     <string name="use_24_hour_time_format">使用 24 小时制</string>
+    <string name="change_date_and_time_format">Change date and time format</string>
     <string name="sunday_first">每周以周日开头</string>
     <string name="widgets">小部件</string>
     <string name="use_same_snooze">始终使用相同的贪睡时间</string>
@@ -402,10 +415,10 @@
     <string name="recycle_bin_cleaning_interval">回收站清理间隔</string>
     <string name="empty_recycle_bin">清空回收站</string>
     <string name="force_portrait_mode">强制人像模式</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="export_settings">导出设置</string>
+    <string name="import_settings">导入设置</string>
+    <string name="settings_exported_successfully">设置导出成功</string>
+    <string name="settings_imported_successfully">设置导入成功</string>
 
     <!-- Setting sections -->
     <string name="visibility">可见度</string>
@@ -416,7 +429,7 @@
     <string name="saving_label">正在保存</string>
     <string name="startup">启动</string>
     <string name="text">文本</string>
-    <string name="migrating">Migrating</string>
+    <string name="migrating">转移</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">恢复此文件</string>
@@ -427,9 +440,10 @@
     <string name="empty_recycle_bin_confirmation">您确定要清空回收站吗？这些文件将永久丢失。</string>
     <string name="recycle_bin_empty">回收站是空的</string>
     <string name="moving_recycle_bin_items_disabled">不允许移动回收站中的文件，请使用恢复功能。</string>
+    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
+    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">正在移动 %d 个项目到回收站</item>
         <item quantity="other">正在移动 %d 个项目到回收站</item>
     </plurals>
 
@@ -442,7 +456,7 @@
     <string name="exporting_failed">导出失败</string>
     <string name="importing_some_entries_failed">部分项目导入失败</string>
     <string name="exporting_some_entries_failed">部分项目导出失败</string>
-    <string name="no_entries_for_importing">No entries for importing have been found</string>
+    <string name="no_entries_for_importing">未找到要导入的项目</string>
     <string name="no_entries_for_exporting">未找到要导出的项目</string>
 
     <!-- OTG devices -->
@@ -537,7 +551,7 @@
     </string>
     <string name="purchase">购买</string>
     <string name="update_thank_you">请更新 Simple Thank You 到最新版本</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
+    <string name="before_asking_question_read_faq">提问之前，请先打开应用设置并阅读常见问题。也许你可以在那里找到答案。</string>
     <string name="read_it">阅读</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
@@ -553,7 +567,7 @@
 
     <string name="sideloaded_app">
         <![CDATA[
-            It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
+            您的应用版本已损坏。 请<a href="%s">在此</a>下载原版应用。
         ]]>
     </string>
 
