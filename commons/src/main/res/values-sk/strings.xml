@@ -335,6 +335,26 @@
         <item quantity="few">%d hodiny</item>
         <item quantity="other">%d hodín</item>
     </plurals>
+    <plurals name="in_days">
+        <item quantity="one">%d deň</item>
+        <item quantity="few">%d dni</item>
+        <item quantity="other">%d dní</item>
+    </plurals>
+    <plurals name="in_weeks">
+        <item quantity="one">%d týždeň</item>
+        <item quantity="few">%d týždne</item>
+        <item quantity="other">%d týždňov</item>
+    </plurals>
+    <plurals name="in_months">
+        <item quantity="one">%d mesiac</item>
+        <item quantity="few">%d mesiace</item>
+        <item quantity="other">%d mesiacov</item>
+    </plurals>
+    <plurals name="in_years">
+        <item quantity="one">%d rok</item>
+        <item quantity="few">%d roky</item>
+        <item quantity="other">%d rokov</item>
+    </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
@@ -356,6 +376,21 @@
         <item quantity="one">%d deň vopred</item>
         <item quantity="few">%d dni vopred</item>
         <item quantity="other">%d dní vopred</item>
+    </plurals>
+    <plurals name="weeks_before">
+        <item quantity="one">%d týždeň vopred</item>
+        <item quantity="few">%d týždne vopred</item>
+        <item quantity="other">%d týždňov vopred</item>
+    </plurals>
+    <plurals name="months_before">
+        <item quantity="one">%d mesiac vopred</item>
+        <item quantity="few">%d mesiace vopred</item>
+        <item quantity="other">%d mesiacov vopred</item>
+    </plurals>
+    <plurals name="years_before">
+        <item quantity="one">%d rok vopred</item>
+        <item quantity="few">%d roky vopred</item>
+        <item quantity="other">%d rokov vopred</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->

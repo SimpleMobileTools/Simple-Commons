@@ -307,6 +307,18 @@
     <plurals name="in_hours">
         <item quantity="other">%d小時</item>
     </plurals>
+    <plurals name="in_days">
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="in_weeks">
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="in_months">
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="in_years">
+        <item quantity="other">%d years</item>
+    </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
@@ -320,6 +332,15 @@
     </plurals>
     <plurals name="days_before">
         <item quantity="other">%d天前</item>
+    </plurals>
+    <plurals name="weeks_before">
+        <item quantity="other">%d weeks before</item>
+    </plurals>
+    <plurals name="months_before">
+        <item quantity="other">%d months before</item>
+    </plurals>
+    <plurals name="years_before">
+        <item quantity="other">%d years before</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
