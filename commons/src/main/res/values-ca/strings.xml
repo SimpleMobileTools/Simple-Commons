@@ -343,18 +343,31 @@
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d segon</item>
-        <item quantity="few">%d segons</item>
         <item quantity="other">%d segons</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minut</item>
-        <item quantity="few">%d minuts</item>
         <item quantity="other">%d minuts</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d hora</item>
-        <item quantity="few">%d hores</item>
         <item quantity="other">%d hores</item>
+    </plurals>
+    <plurals name="by_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="by_weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="by_months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="by_years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->

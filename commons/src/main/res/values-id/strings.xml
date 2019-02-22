@@ -119,18 +119,15 @@
     <string name="confirm_selection">Konfirmasi pilihan</string>
 
     <plurals name="items">
-        <item quantity="one">%d item</item>
         <item quantity="other">%d item</item>
     </plurals>
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d item</item>
         <item quantity="other">%d item</item>
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Menghapus %d item</item>
         <item quantity="other">Menghapus %d item</item>
     </plurals>
 
@@ -246,7 +243,6 @@
     <string name="no">Tidak</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">PERHATIAN: Anda akan menghapus folder %d</item>
         <item quantity="other">PERHATIAN: Anda akan menghapus folder %d</item>
     </plurals>
 
@@ -280,78 +276,73 @@
     <string name="days_raw">hari</string>
 
     <plurals name="seconds">
-        <item quantity="one">%d detik</item>
         <item quantity="other">%d detik</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%d menit</item>
         <item quantity="other">%d menit</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%d jam</item>
         <item quantity="other">%d jam</item>
     </plurals>
     <plurals name="days">
-        <item quantity="one">%d hari</item>
         <item quantity="other">%d hari</item>
     </plurals>
     <plurals name="weeks">
-        <item quantity="one">%d minggu</item>
         <item quantity="other">%d minggu</item>
     </plurals>
     <plurals name="months">
-        <item quantity="one">%d bulan</item>
         <item quantity="other">%d bulan</item>
     </plurals>
     <plurals name="years">
-        <item quantity="one">%d tahun</item>
         <item quantity="other">%d tahun</item>
     </plurals>
 
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d detik</item>
         <item quantity="other">%d detik</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d menit</item>
         <item quantity="other">%d menit</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d jam</item>
         <item quantity="other">%d jam</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d detik sebelumnya</item>
         <item quantity="other">%d detik sebelumnya</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">%d menit sebelumnya</item>
         <item quantity="other">%d menit sebelumnya</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">%d jam sebelumnya</item>
         <item quantity="other">%d jam sebelumnya</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">%d hari sebelumnya</item>
         <item quantity="other">%d hari sebelumnya</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d detik</item>
         <item quantity="other">%d detik</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d menit</item>
         <item quantity="other">%d menit</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d jam</item>
         <item quantity="other">%d jam</item>
+    </plurals>
+    <plurals name="by_days">
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="by_weeks">
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="by_months">
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="by_years">
+        <item quantity="other">%d years</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -432,7 +423,6 @@
     <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Memindahkan %d item ke Sampah</item>
         <item quantity="other">Memindahkan %d item ke Sampah</item>
     </plurals>
 

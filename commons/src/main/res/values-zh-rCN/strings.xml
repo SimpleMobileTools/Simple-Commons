@@ -119,18 +119,15 @@
     <string name="confirm_selection">确认选择</string>
 
     <plurals name="items">
-        <item quantity="one">%d 个项目</item>
         <item quantity="other">%d 个项目</item>
     </plurals>
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d 个项目</item>
         <item quantity="other">%d 个项目</item>
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">正在删除 %d 个项目</item>
         <item quantity="other">正在删除 %d 个项目</item>
     </plurals>
 
@@ -246,7 +243,6 @@
     <string name="no">否</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">警告: 你正在删除 %d 目录</item>
         <item quantity="other">警告: 你正在删除 %d 目录</item>
     </plurals>
 
@@ -280,78 +276,73 @@
     <string name="days_raw">天</string>
 
     <plurals name="seconds">
-        <item quantity="one">%d 秒</item>
         <item quantity="other">%d 秒</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%d 分钟</item>
         <item quantity="other">%d 分钟</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%d 小时</item>
         <item quantity="other">%d 小时</item>
     </plurals>
     <plurals name="days">
-        <item quantity="one">%d 日</item>
         <item quantity="other">%d 日</item>
     </plurals>
     <plurals name="weeks">
-        <item quantity="one">%d 周</item>
         <item quantity="other">%d 周</item>
     </plurals>
     <plurals name="months">
-        <item quantity="one">%d 月</item>
         <item quantity="other">%d 月</item>
     </plurals>
     <plurals name="years">
-        <item quantity="one">%d 年</item>
         <item quantity="other">%d 年</item>
     </plurals>
 
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d 秒</item>
         <item quantity="other">%d 秒</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d 分钟</item>
         <item quantity="other">%d 分钟</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d 小时</item>
         <item quantity="other">%d 小时</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d 秒前</item>
         <item quantity="other">%d 秒前</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">%d 分钟前</item>
         <item quantity="other">%d 分钟前</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">%d 小时前</item>
         <item quantity="other">%d 小时前</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">%d 天前</item>
         <item quantity="other">%d 天前</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d 秒</item>
         <item quantity="other">%d 秒</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d 分钟</item>
         <item quantity="other">%d 分钟</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d 小时</item>
         <item quantity="other">%d 小时</item>
+    </plurals>
+    <plurals name="by_days">
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="by_weeks">
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="by_months">
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="by_years">
+        <item quantity="other">%d years</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -432,7 +423,6 @@
     <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">正在移动 %d 个项目到回收站</item>
         <item quantity="other">正在移动 %d 个项目到回收站</item>
     </plurals>
 
