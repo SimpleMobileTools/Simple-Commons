@@ -393,7 +393,7 @@
     <string name="skip_delete_confirmation">刪除不再進行確認</string>
     <string name="enable_pull_to_refresh">啟用頂端下拉更新</string>
     <string name="use_24_hour_time_format">使用24小時制</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="change_date_and_time_format">更改日期和時間格式</string>
     <string name="sunday_first">每周由星期日開始</string>
     <string name="widgets">小工具</string>
     <string name="use_same_snooze">總是使用相同延遲間隔</string>
@@ -428,8 +428,8 @@
     <string name="empty_recycle_bin_confirmation">你確定要清空回收桶嗎?檔案將會永久消失。</string>
     <string name="recycle_bin_empty">回收桶是空的</string>
     <string name="moving_recycle_bin_items_disabled">移動回收桶項目的功能已停用，請使用復原</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">顯示回收桶</string>
+    <string name="hide_the_recycle_bin">隱藏回收桶</string>
  
     <plurals name="moving_items_into_bin">
         <item quantity="one">正在移動%d個項目進回收桶</item>
