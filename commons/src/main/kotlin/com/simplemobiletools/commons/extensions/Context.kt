@@ -461,13 +461,23 @@ fun Context.getFormattedSeconds(seconds: Int, showBefore: Boolean = true) = when
     -1 -> getString(R.string.no_reminder)
     0 -> getString(R.string.at_start)
     else -> {
-        if (seconds % YEAR_SECONDS == 0)
-            resources.getQuantityString(R.plurals.years, seconds / YEAR_SECONDS, seconds / YEAR_SECONDS)
-
         when {
-            seconds % MONTH_SECONDS == 0 -> resources.getQuantityString(R.plurals.months, seconds / MONTH_SECONDS, seconds / MONTH_SECONDS)
-            seconds % WEEK_SECONDS == 0 -> resources.getQuantityString(R.plurals.weeks, seconds / WEEK_SECONDS, seconds / WEEK_SECONDS)
-            seconds % DAY_SECONDS == 0 -> resources.getQuantityString(R.plurals.days, seconds / DAY_SECONDS, seconds / DAY_SECONDS)
+            seconds % YEAR_SECONDS == 0 -> {
+                val base = if (showBefore) R.plurals.years_before else R.plurals.by_years
+                resources.getQuantityString(base, seconds / YEAR_SECONDS, seconds / YEAR_SECONDS)
+            }
+            seconds % MONTH_SECONDS == 0 -> {
+                val base = if (showBefore) R.plurals.months_before else R.plurals.by_months
+                resources.getQuantityString(base, seconds / MONTH_SECONDS, seconds / MONTH_SECONDS)
+            }
+            seconds % WEEK_SECONDS == 0 -> {
+                val base = if (showBefore) R.plurals.weeks_before else R.plurals.by_weeks
+                resources.getQuantityString(base, seconds / WEEK_SECONDS, seconds / WEEK_SECONDS)
+            }
+            seconds % DAY_SECONDS == 0 -> {
+                val base = if (showBefore) R.plurals.days_before else R.plurals.by_days
+                resources.getQuantityString(base, seconds / DAY_SECONDS, seconds / DAY_SECONDS)
+            }
             seconds % HOUR_SECONDS == 0 -> {
                 val base = if (showBefore) R.plurals.hours_before else R.plurals.by_hours
                 resources.getQuantityString(base, seconds / HOUR_SECONDS, seconds / HOUR_SECONDS)
