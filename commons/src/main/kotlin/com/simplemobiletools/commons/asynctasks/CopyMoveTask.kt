@@ -220,7 +220,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                     copyOldLastModified(source.path, destination.path)
                 }
                 activity.scanPathRecursively(destination.path)
-                activity.deleteFromMediaStore(source.path)
+                if (!copyOnly) {
+                    activity.deleteFromMediaStore(source.path)
+                }
             }
         } catch (e: Exception) {
             activity.showErrorToast(e)
