@@ -336,24 +336,24 @@
         <item quantity="many">%d часов</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d day</item>
-        <item quantity="few">%d days</item>
-        <item quantity="many">%d days</item>
+        <item quantity="one">%d день</item>
+        <item quantity="few">%d дня</item>
+        <item quantity="many">%d дней</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="few">%d weeks</item>
-        <item quantity="many">%d weeks</item>
+        <item quantity="one">%d неделю</item>
+        <item quantity="few">%d недели</item>
+        <item quantity="many">%d недель</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">%d month</item>
-        <item quantity="few">%d months</item>
-        <item quantity="many">%d months</item>
+        <item quantity="one">%d месяц</item>
+        <item quantity="few">%d месяца</item>
+        <item quantity="many">%d месяцев</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d year</item>
-        <item quantity="few">%d years</item>
-        <item quantity="many">%d years</item>
+        <item quantity="one">%d год</item>
+        <item quantity="few">%d года</item>
+        <item quantity="many">%d лет</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
@@ -378,19 +378,19 @@
         <item quantity="many">%d дней до события</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d week before</item>
-        <item quantity="few">%d weeks before</item>
-        <item quantity="many">%d weeks before</item>
+        <item quantity="one">%d неделя до события</item>
+        <item quantity="few">%d недели до события</item>
+        <item quantity="many">%d недель до события</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d month before</item>
-        <item quantity="few">%d months before</item>
-        <item quantity="many">%d months before</item>
+        <item quantity="one">%d месяц до события</item>
+        <item quantity="few">%d месяца до события</item>
+        <item quantity="many">%d месяцев до события</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d year before</item>
-        <item quantity="few">%d years before</item>
-        <item quantity="many">%d years before</item>
+        <item quantity="one">%d год до события</item>
+        <item quantity="few">%d года до события</item>
+        <item quantity="many">%d лет до события</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
@@ -410,24 +410,24 @@
         <item quantity="many">%d часов</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="few">%d days</item>
-        <item quantity="many">%d days</item>
+        <item quantity="one">%d день</item>
+        <item quantity="few">%d дня</item>
+        <item quantity="many">%d дней</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="few">%d weeks</item>
-        <item quantity="many">%d weeks</item>
+        <item quantity="one">%d неделю</item>
+        <item quantity="few">%d недели</item>
+        <item quantity="many">%d недель</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d month</item>
-        <item quantity="few">%d months</item>
-        <item quantity="many">%d months</item>
+        <item quantity="one">%d месяц</item>
+        <item quantity="few">%d месяца</item>
+        <item quantity="many">%d месяцев</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d year</item>
-        <item quantity="few">%d years</item>
-        <item quantity="many">%d years</item>
+        <item quantity="one">%d год</item>
+        <item quantity="few">%d года</item>
+        <item quantity="many">%d лет</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -469,7 +469,7 @@
     <string name="skip_delete_confirmation">Пропускать диалог подтверждения удаления</string>
     <string name="enable_pull_to_refresh">Использовать жест \"потянуть для обновления\" в верхней части экрана</string>
     <string name="use_24_hour_time_format">Использовать 24-часовой формат времени</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="change_date_and_time_format">Изменить формат даты и времени</string>
     <string name="sunday_first">Воскресенье — начало недели</string>
     <string name="widgets">Виджеты</string>
     <string name="use_same_snooze">Всегда использовать один и тот же интервал повтора</string>
@@ -504,8 +504,8 @@
     <string name="empty_recycle_bin_confirmation">Вы действительно хотите очистить корзину? Файлы будут удалены безвозвратно.</string>
     <string name="recycle_bin_empty">Корзина пуста</string>
     <string name="moving_recycle_bin_items_disabled">Перемещение элементов корзины отключено, используйте восстановление</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">Показать корзину</string>
+    <string name="hide_the_recycle_bin">Скрыть корзину</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d объект перемещается в корзину</item>
