@@ -321,50 +321,50 @@
         <item quantity="other">%d nap</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d nap</item>
+        <item quantity="other">%d nap</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d hét</item>
+        <item quantity="other">%d hét</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d hónap</item>
+        <item quantity="other">%d hónap</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d év</item>
+        <item quantity="other">%d év</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d másodperccel előtte</item>
-        <item quantity="other">%d másodperccel előtte</item>
+        <item quantity="one">%d másodperccel korábban</item>
+        <item quantity="other">%d másodperccel korábban</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">%d perccel előtte</item>
-        <item quantity="other">%d perccel előtte</item>
+        <item quantity="one">%d perccel korábban</item>
+        <item quantity="other">%d perccel korábban</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">%d órával előtte</item>
-        <item quantity="other">%d órával előtte</item>
+        <item quantity="one">%d órával korábban</item>
+        <item quantity="other">%d órával korábban</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">%d nappal előtte</item>
-        <item quantity="other">%d nappal előtte</item>
+        <item quantity="one">%d nappal korábban</item>
+        <item quantity="other">%d nappal korábban</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d week before</item>
-        <item quantity="other">%d weeks before</item>
+        <item quantity="one">%d héttel korábban</item>
+        <item quantity="other">%d héttel korábban</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d month before</item>
-        <item quantity="other">%d months before</item>
+        <item quantity="one">%d hónappal korábban</item>
+        <item quantity="other">%d hónappal korábban</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d year before</item>
-        <item quantity="other">%d years before</item>
+        <item quantity="one">%d évvel korábban</item>
+        <item quantity="other">%d évvel korábban</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
@@ -381,20 +381,20 @@
         <item quantity="other">%d nap</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d nap</item>
+        <item quantity="other">%d nap</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d hét</item>
+        <item quantity="other">%d hét</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d hónap</item>
+        <item quantity="other">%d hónap</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d év</item>
+        <item quantity="other">%d év</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -436,7 +436,7 @@
     <string name="skip_delete_confirmation">Mindig ugorja át a törlés megerősítése kérdést</string>
     <string name="enable_pull_to_refresh">Felülről lefelé húzásos frissítés engedélyezése</string>
     <string name="use_24_hour_time_format">24 órás idő formátum használata</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="change_date_and_time_format">Dátum és időformátum módosítása</string>
     <string name="sunday_first">A hét kezdete vasárnap</string>
     <string name="widgets">Widgetek</string>
     <string name="use_same_snooze">Mindig ugyanazt a szundi időt használja</string>
@@ -471,8 +471,8 @@
     <string name="empty_recycle_bin_confirmation">Biztos ki akarja üríteni a Lomtárat? A fájlok véglegesen elvesznek.</string>
     <string name="recycle_bin_empty">A Lomtár üres</string>
     <string name="moving_recycle_bin_items_disabled">A Lomtár elemek áthelyezése le van tiltva, kérjük használja a Visszaállítás lehetőséget</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">Lomtár mutatása</string>
+    <string name="hide_the_recycle_bin">Lomtár elrejtése</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d elem áthelyezése a Lomtárba</item>
