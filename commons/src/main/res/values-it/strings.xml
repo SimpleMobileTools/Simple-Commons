@@ -356,16 +356,16 @@
         <item quantity="other">%d giorni prima</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d week before</item>
-        <item quantity="other">%d weeks before</item>
+        <item quantity="one">%d settimana prima</item>
+        <item quantity="other">%d settimane prima</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d month before</item>
-        <item quantity="other">%d months before</item>
+        <item quantity="one">%d mese prima</item>
+        <item quantity="other">%d mesi prima</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d year before</item>
-        <item quantity="other">%d years before</item>
+        <item quantity="one">%d anno prima</item>
+        <item quantity="other">%d anni prima</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
