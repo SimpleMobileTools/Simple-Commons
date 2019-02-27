@@ -322,20 +322,20 @@
         <item quantity="other">%d horas</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d día</item>
+        <item quantity="other">%d días</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d semana</item>
+        <item quantity="other">%d semanas</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d mes</item>
+        <item quantity="other">%d meses</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d año</item>
+        <item quantity="other">%d años</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
@@ -356,16 +356,16 @@
         <item quantity="other">%d días antes</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d week before</item>
-        <item quantity="other">%d weeks before</item>
+        <item quantity="one">%d semana antes</item>
+        <item quantity="other">%d semanas antes</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d month before</item>
-        <item quantity="other">%d months before</item>
+        <item quantity="one">%d mes antes</item>
+        <item quantity="other">%d meses antes</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d year before</item>
-        <item quantity="other">%d years before</item>
+        <item quantity="one">%d año antes</item>
+        <item quantity="other">%d años antes</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
@@ -382,20 +382,20 @@
         <item quantity="other">%d horas</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d día</item>
+        <item quantity="other">%d días</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d semana</item>
+        <item quantity="other">%d semanas</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d mes</item>
+        <item quantity="other">%d meses</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d año</item>
+        <item quantity="other">%d años</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -437,7 +437,7 @@
     <string name="skip_delete_confirmation">Omitir siempre el diálogo de confirmación de eliminación</string>
     <string name="enable_pull_to_refresh">Habilitar tirar desde la parte superior para refrescar</string>
     <string name="use_24_hour_time_format">Usar el formato 24 horas</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="change_date_and_time_format">Cambiar formato de fecha y hora</string>
     <string name="sunday_first">Comenzar la semana en Domingo</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Siempre use el mismo tiempo de repetición</string>
@@ -472,12 +472,12 @@
     <string name="empty_recycle_bin_confirmation">Seguro que quieres vaciar la papelera? Los ficheros se perderan definitivamente.</string>
     <string name="recycle_bin_empty">La papelera está vacia</string>
     <string name="moving_recycle_bin_items_disabled">El movimiento de los elementos de la papelera de reciclaje está deshabilitado, utilice Restaurar</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">Mostrar la paplera de reciclaje</string>
+    <string name="hide_the_recycle_bin">Ocultar la papelera de reciclaje</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Moving %d item into the Recycle Bin</item>
-        <item quantity="other">Moving %d items into the Recycle Bin</item>
+        <item quantity="one">Moviendo %d elemento a la papelera</item>
+        <item quantity="other">Moviendo %d elementos a la papelera</item>
     </plurals>
 
     <!-- Import / Export -->
