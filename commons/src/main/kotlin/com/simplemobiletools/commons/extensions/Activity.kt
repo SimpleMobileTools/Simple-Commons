@@ -535,7 +535,7 @@ fun Activity.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = nul
 fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((success: Boolean) -> Unit)? = null) {
     if (needsStupidWritePermissions(newPath)) {
         handleSAFDialog(newPath) {
-            val document = getDocumentFile(oldPath)
+            val document = getSomeDocumentFile(oldPath)
             if (document == null || (File(oldPath).isDirectory != document.isDirectory)) {
                 runOnUiThread {
                     callback?.invoke(false)
