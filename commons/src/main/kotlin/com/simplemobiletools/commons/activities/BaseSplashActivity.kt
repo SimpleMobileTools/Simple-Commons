@@ -3,10 +3,10 @@ package com.simplemobiletools.commons.activities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.dialogs.AppSideloadedDialog
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.getSharedTheme
 import com.simplemobiletools.commons.extensions.isThankYouInstalled
+import com.simplemobiletools.commons.extensions.showSideloadingDialog
 import com.simplemobiletools.commons.helpers.SIDELOADING_FALSE
 import com.simplemobiletools.commons.helpers.SIDELOADING_TRUE
 import com.simplemobiletools.commons.helpers.SIDELOADING_UNCHECKED
@@ -23,6 +23,7 @@ abstract class BaseSplashActivity : AppCompatActivity() {
             val isSideloaded = isAppSideloaded()
             baseConfig.appSideloadingStatus = if (isSideloaded) SIDELOADING_TRUE else SIDELOADING_FALSE
             if (isSideloaded) {
+                baseConfig.appId = getAppPackageName()
                 showSideloadingDialog()
                 return
             }
@@ -58,13 +59,6 @@ abstract class BaseSplashActivity : AppCompatActivity() {
             false
         } catch (e: Exception) {
             true
-        }
-    }
-
-    private fun showSideloadingDialog() {
-        val packageName = getAppPackageName()
-        AppSideloadedDialog(this, packageName) {
-            finish()
         }
     }
 }

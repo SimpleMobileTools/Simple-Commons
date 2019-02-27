@@ -891,3 +891,9 @@ fun BaseSimpleActivity.getAlarmSounds(type: Int, callback: (ArrayList<AlarmSound
         }
     }
 }
+
+fun AppCompatActivity.showSideloadingDialog() {
+    AppSideloadedDialog(this) {
+        finish()
+    }
+}
