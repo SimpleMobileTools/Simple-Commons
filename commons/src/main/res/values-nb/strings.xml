@@ -382,20 +382,20 @@
         <item quantity="other">%d timer</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d dag</item>
+        <item quantity="other">%d dager</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d uke</item>
+        <item quantity="other">%d uker</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d måned</item>
+        <item quantity="other">%d måneder</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d år</item>
+        <item quantity="other">%d år</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -437,7 +437,7 @@
     <string name="skip_delete_confirmation">Hopp alltid over dialog for slettebekreftelse</string>
     <string name="enable_pull_to_refresh">Aktiver vertikal sveipebevegelse fra toppen for innholdsgjenoppfrisking</string>
     <string name="use_24_hour_time_format">Bruk 24-timers tidsformat</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="change_date_and_time_format">Endre format for dato og klokkeslett</string>
     <string name="sunday_first">Start uken på søndag</string>
     <string name="widgets">Moduler</string>
     <string name="use_same_snooze">Bruk alltid samme intervall for Snooze</string>
@@ -472,8 +472,8 @@
     <string name="empty_recycle_bin_confirmation">Er du sikker på at du vil tømme papirkurven? Filene vil bli tapt permanent.</string>
     <string name="recycle_bin_empty">Papirkurven er tom</string>
     <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">Vis papirkurven</string>
+    <string name="hide_the_recycle_bin">Skjul papirkurven</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Flytter %d element til papirkurven</item>
