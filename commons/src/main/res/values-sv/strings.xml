@@ -22,7 +22,7 @@
     <string name="transparent">Genomskinlig</string>
     <string name="transparent_color">Genomskinlig färg</string>
     <string name="select_a_different_color">Välj en annan färg</string>
-    <string name="download">Download</string>
+    <string name="download">Hämta</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoriter</string>
@@ -104,7 +104,7 @@
     <string name="file_already_exists_overwrite">Filen \"%s\" finns redan. Skriv över?</string>
     <string name="folder_already_exists">Mappen \"%s\" finns redan</string>
     <string name="merge">Slå ihop</string>
-    <string name="keep_both">Keep both</string>
+    <string name="keep_both">Behåll båda</string>
     <string name="overwrite">Skriv över</string>
     <string name="skip">Hoppa över</string>
     <string name="append">Lägg till \'_1\'</string>
@@ -168,7 +168,7 @@
     <string name="primary_color">Primär färg</string>
     <string name="foreground_color">Förgrundsfärg</string>
     <string name="app_icon_color">Appikonens färg</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
+    <string name="bottom_navigation_bar_color">Navigeringsfältets färg</string>
     <string name="restore_defaults">Återställ standardfärger</string>
     <string name="change_color">Ändra färg</string>
     <string name="theme">Tema</string>
@@ -218,7 +218,7 @@
     <string name="empty_and_disable_recycle_bin">Töm och inaktivera Papperskorgen</string>
     <string name="undo">Ångra</string>
     <string name="redo">Gör om</string>
-    <string name="print">Print</string>
+    <string name="print">Skriv ut</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortera efter</string>
@@ -229,8 +229,8 @@
     <string name="title">Titel</string>
     <string name="filename">Filnamn</string>
     <string name="extension">Filnamnstillägg</string>
-    <string name="random">Random</string>
-    <string name="sort_randomly">Sort randomly</string>
+    <string name="random">Slumpmässigt</string>
+    <string name="sort_randomly">Ordna slumpmässigt</string>
     <string name="ascending">Stigande</string>
     <string name="descending">Fallande</string>
     <string name="use_for_this_folder">Använd bara för denna mapp</string>
@@ -356,16 +356,16 @@
         <item quantity="other">%d dagar före</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d week before</item>
-        <item quantity="other">%d weeks before</item>
+        <item quantity="one">%d vecka före</item>
+        <item quantity="other">%d veckor före</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d month before</item>
-        <item quantity="other">%d months before</item>
+        <item quantity="one">%d månad före</item>
+        <item quantity="other">%d månader före</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d year before</item>
-        <item quantity="other">%d years before</item>
+        <item quantity="one">%d år före</item>
+        <item quantity="other">%d år före</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
@@ -382,20 +382,20 @@
         <item quantity="other">%d timmar</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d dag</item>
+        <item quantity="other">%d dagar</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d vecka</item>
+        <item quantity="other">%d veckor</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d månad</item>
+        <item quantity="other">%d månader</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d år</item>
+        <item quantity="other">%d år</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -420,7 +420,7 @@
     <string name="settings">Inställningar</string>
     <string name="purchase_simple_thank_you">Köp Simple Thank You</string>
     <string name="customize_colors">Anpassa färger</string>
-    <string name="customize_widget_colors">Anpassa widgetens färger</string>
+    <string name="customize_widget_colors">Anpassa widgetarnas färger</string>
     <string name="use_english_language">Använd engelska</string>
     <string name="show_hidden_items">Visa dolda objekt</string>
     <string name="font_size">Teckenstorlek</string>
@@ -430,14 +430,14 @@
     <string name="extra_large">Extra stor</string>
     <string name="password_protect_hidden_items">Lösenordsskydda synligheten för dolda objekt</string>
     <string name="password_protect_whole_app">Lösenordsskydda hela appen</string>
-    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
-    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
+    <string name="password_protect_file_deletion">Lösenordsskydda borttagning och flytt av filer</string>
+    <string name="keep_last_modified">Behåll senast ändrad-tider vid filåtgärder</string>
     <string name="show_info_bubble">Visa en informationsbubbla när jag rullar genom objekt genom att dra rullningslisten</string>
     <string name="prevent_phone_from_sleeping">Hindra aktivering av viloläge när appen körs i förgrunden</string>
     <string name="skip_delete_confirmation">Hoppa alltid över dialogrutan för bekräftelse av borttagning</string>
     <string name="enable_pull_to_refresh">Aktivera uppdatering vid svepning från överkant</string>
     <string name="use_24_hour_time_format">Använd 24-timmarsformat</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="change_date_and_time_format">Ändra datum- och tidsformat</string>
     <string name="sunday_first">Börja veckan på söndag</string>
     <string name="widgets">Widgetar</string>
     <string name="use_same_snooze">Använd alltid samma snooze-intervall</string>
@@ -447,10 +447,10 @@
     <string name="recycle_bin_cleaning_interval">Rensningsintervall för Papperskorgen</string>
     <string name="empty_recycle_bin">Töm Papperskorgen</string>
     <string name="force_portrait_mode">Lås skärmen i stående läge</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="export_settings">Exportera inställningar</string>
+    <string name="import_settings">Importera inställningar</string>
+    <string name="settings_exported_successfully">Inställningarna har exporterats</string>
+    <string name="settings_imported_successfully">Inställningarna har importerats</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighet</string>
@@ -472,8 +472,8 @@
     <string name="empty_recycle_bin_confirmation">Är du säker på att du vill tömma Papperskorgen? Filerna tas bort permanent.</string>
     <string name="recycle_bin_empty">Papperskorgen är tom</string>
     <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">Visa Papperskorgen</string>
+    <string name="hide_the_recycle_bin">Dölj Papperskorgen</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Flyttar %d objekt till Papperskorgen</item>
