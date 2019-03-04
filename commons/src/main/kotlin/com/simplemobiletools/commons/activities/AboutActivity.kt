@@ -140,7 +140,7 @@ class AboutActivity : BaseSimpleActivity() {
         } else {
             about_rate_us.setOnClickListener {
                 try {
-                    launchViewIntent("market://details?id=$packageName")
+                    launchViewIntent("market://details?id=${packageName.removeSuffix(".debug")}")
                 } catch (ignored: ActivityNotFoundException) {
                     launchViewIntent(getStoreUrl())
                 }
@@ -186,5 +186,5 @@ class AboutActivity : BaseSimpleActivity() {
         about_copyright.text = String.format(getString(R.string.copyright), versionName, year)
     }
 
-    private fun getStoreUrl() = "https://play.google.com/store/apps/details?id=$packageName"
+    private fun getStoreUrl() = "https://play.google.com/store/apps/details?id=${packageName.removeSuffix(".debug")}"
 }
