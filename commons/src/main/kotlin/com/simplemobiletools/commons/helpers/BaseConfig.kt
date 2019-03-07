@@ -65,7 +65,7 @@ open class BaseConfig(val context: Context) {
         set(primaryColor) = prefs.edit().putInt(PRIMARY_COLOR, primaryColor).apply()
 
     var lastHandledShortcutColor: Int
-        get() = prefs.getInt(LAST_HANDLED_SHORTCUT_COLOR, context.resources.getColor(R.color.color_primary))
+        get() = prefs.getInt(LAST_HANDLED_SHORTCUT_COLOR, 1)
         set(lastHandledShortcutColor) = prefs.edit().putInt(LAST_HANDLED_SHORTCUT_COLOR, lastHandledShortcutColor).apply()
 
     var appIconColor: Int
