@@ -56,7 +56,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
 
     override fun onViewRecycled(holder: MyRecyclerViewAdapter.ViewHolder) {
         super.onViewRecycled(holder)
-        if (!activity.isDestroyed) {
+        if (!activity.isDestroyed && !activity.isFinishing) {
             Glide.with(activity).clear(holder.itemView.list_item_icon!!)
         }
     }
@@ -91,7 +91,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
                     path
                 }
 
-                if (!activity.isDestroyed) {
+                if (!activity.isDestroyed && !activity.isFinishing) {
                     Glide.with(activity).load(itemToLoad).transition(withCrossFade()).apply(options).into(list_item_icon)
                 }
             }
