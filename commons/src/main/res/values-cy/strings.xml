@@ -316,7 +316,7 @@
         <item quantity="other">%d awr</item>
     </plurals>
     <plurals name="days">
-        <<item quantity="zero">%d diwrnodau</item>
+        <item quantity="zero">%d diwrnodau</item>
         <item quantity="one">%d diwrnod</item>
         <item quantity="two">%d ddiwrnod</item>
         <item quantity="few">%d diwrnod</item>
@@ -374,7 +374,7 @@
         <item quantity="other">%d awr</item>
     </plurals>
     <plurals name="in_days">
-        <<item quantity="zero">%d diwrnodau</item>
+        <item quantity="zero">%d diwrnodau</item>
         <item quantity="one">%d diwrnod</item>
         <item quantity="two">%d ddiwrnod</item>
         <item quantity="few">%d diwrnod</item>
@@ -432,7 +432,7 @@
         <item quantity="other">%d awr ymlaen llaw</item>
     </plurals>
     <plurals name="days_before">
-        <<item quantity="zero">%d diwrnodau ymlaen llaw</item>
+        <item quantity="zero">%d diwrnodau ymlaen llaw</item>
         <item quantity="one">%d diwrnod ymlaen llaw</item>
         <item quantity="two">%d ddiwrnod ymlaen llaw</item>
         <item quantity="few">%d diwrnod ymlaen llaw</item>
@@ -490,7 +490,7 @@
         <item quantity="other">%d awr</item>
     </plurals>
     <plurals name="by_days">
-        <<item quantity="zero">%d diwrnodau</item>
+        <item quantity="zero">%d diwrnodau</item>
         <item quantity="one">%d diwrnod</item>
         <item quantity="two">%d ddiwrnod</item>
         <item quantity="few">%d diwrnod</item>
@@ -701,8 +701,8 @@
     <string name="device_os">System y ddyfais: %s</string>
     <string name="donate_please">
         <![CDATA[
-            S'mae<br><br>
-            Gobeithio dy fod yn mwynhau'r ap. Nid yw'n cynnwys unrhyw hysbysebion, felly a fyddi di mor garedig â chefnogi ei ddatblygiad gan brynu ap <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>. Mi fydd hefyd yn stopio'r neges hon ymddangos eto.<br><br>
+            S\'mae<br><br>
+            Gobeithio dy fod yn mwynhau\'r ap. Nid yw\'n cynnwys unrhyw hysbysebion, felly a fyddi di mor garedig â chefnogi ei ddatblygiad gan brynu ap <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>. Mi fydd hefyd yn stopio'r neges hon ymddangos eto.<br><br>
             Diolch!
         ]]>
     </string>
@@ -714,8 +714,8 @@
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
-            S'mae,<br><br>
-            Jyst yn rhoi gwybod i ti am ap newydd wedi'i ryddhau yn ddiweddar:<br><br>
+            S\'mae,<br><br>
+            Jyst yn rhoi gwybod i ti am ap newydd wedi\'i ryddhau yn ddiweddar:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             Gellir ei lawrlwytho gan glicio'r teitl.<br><br>
             Hwyl.
@@ -724,7 +724,7 @@
 
     <string name="sideloaded_app">
         <![CDATA[
-            Mae'n ymddangos bod fersiwn dy ap yn llwgr. Lawrlwytha'r fersiwn gwreiddiol <a href="%s">yma</a>.
+            Mae\'n ymddangos bod fersiwn dy ap yn llwgr. Lawrlwytha\'r fersiwn gwreiddiol <a href="%s">yma</a>.
         ]]>
     </string>
 
@@ -737,7 +737,7 @@
     <string name="faq_2_text_commons">Oes, wrth gwrs. Gallet ddweud wrth eraill mor dda yw\'r apiau neu roi adborth a sgôr da. Gallet hefyd helpu ehangu a chywiro cyfieithiadau i\'r Gymraeg a ieithoedd eraill.
         Mae canllaw yma https://github.com/SimpleMobileTools/General-Discussion , neu anfona ebost ata\'i (yn Saesneg) hello@simplemobiletools.com os oes angen help.</string>
     <string name="faq_3_title_commons">Dw i wedi dileu ffeiliau ar gam. Sut ydw i\'n eu hadfer nhw?</string>
-    <string name="faq_3_text_commons">Yn anffodus, nid yw\'n bosib. Mae ffeiliau yn cael eu dileu ar unwaith ar ôl y deialog cadarnhau. Does dim bin sbwriel.<string>
+    <string name="faq_3_text_commons">Yn anffodus, nid yw\'n bosib. Mae ffeiliau yn cael eu dileu ar unwaith ar ôl y deialog cadarnhau. Does dim bin sbwriel.</string>
     <string name="faq_4_title_commons">Dw i\'m yn hoffi lliwiau\'r teclyn. Ga\'i newid nhw?</string>
     <string name="faq_4_text_commons">Cei. Wrth i ti lusgo teclyn ar dy sgrin gartref mae sgrin addasu\'r teclyn yn ymddangos. Gweli sgwariau lliwiau yn y gornel gwaelod chwith. Gwasga fanno i ddewis lliw newydd. Gellir defnyddio\'r llithrydd i addasu\'r alffa hefyd.</string>
     <string name="faq_5_title_commons">Ydy\'n bosib adfer ffeiliau wedi\'u dileu?</string>
