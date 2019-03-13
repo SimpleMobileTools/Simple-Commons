@@ -23,7 +23,7 @@
     <string name="transparent_color">Prezroczysty kolor</string>
     <string name="select_a_different_color">Wybierz inny kolor</string>
     <string name="download">Pobierz</string>
-    <string name="notification">Notification</string>
+    <string name="notification">Powiadomienie</string>
     <string name="email">Email</string>
 
     <!-- Favorites -->
@@ -241,7 +241,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Czy na pewno chcesz to usunąć?</string>
     <string name="deletion_confirmation">Czy na pewno chcesz usunąć %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Czy na pewno chcesz %s do kosza?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">Czy na pewno chcesz przenieść %s do kosza?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Czy na pewno chcesz usunąć ten element?</string>
     <string name="are_you_sure_recycle_bin">Czy na pewno chcesz przenieść ten element do kosza?</string>
     <string name="do_not_ask_again">Nie pytaj więcej w tej sesji</string>
@@ -467,7 +467,7 @@
     <string name="skip_delete_confirmation">Nie pokazuj okna z potwierdzeniem usunięcia elementów</string>
     <string name="enable_pull_to_refresh">Włącz gest pociągnięcia ekranu od góry w celu odświeżenia widoku</string>
     <string name="use_24_hour_time_format">Używaj 24-godzinnego formatu czasu</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="change_date_and_time_format">Zmień format daty i czasu</string>
     <string name="sunday_first">Rozpoczynaj tydzień od niedzieli</string>
     <string name="widgets">Widżety</string>
     <string name="use_same_snooze">Zawsze używaj tego samego przedziału przypomnienia</string>
