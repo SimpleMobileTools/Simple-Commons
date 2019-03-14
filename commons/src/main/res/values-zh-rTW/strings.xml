@@ -23,6 +23,8 @@
     <string name="transparent_color">透明顏色</string>
     <string name="select_a_different_color">選取不同的顏色</string>
     <string name="download">下載</string>
+    <string name="notification">Notification</string>
+    <string name="email">Email</string>
 
     <!-- Favorites -->
     <string name="favorites">我的最愛</string>
@@ -299,25 +301,25 @@
 
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="other">%d秒鐘</item>
+        <item quantity="other">%d秒鐘內</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="other">%d分鐘</item>
+        <item quantity="other">%d分鐘內</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="other">%d小時</item>
+        <item quantity="other">%d小時內</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="other">%d days</item>
+        <item quantity="other">%d天內</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="other">%d weeks</item>
+        <item quantity="other">%d週內</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="other">%d months</item>
+        <item quantity="other">%d個月內</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="other">%d years</item>
+        <item quantity="other">%d年內</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
@@ -334,13 +336,13 @@
         <item quantity="other">%d天前</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="other">%d weeks before</item>
+        <item quantity="other">%d週前</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="other">%d months before</item>
+        <item quantity="other">%d個月前</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="other">%d years before</item>
+        <item quantity="other">%d年前</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
@@ -354,16 +356,16 @@
         <item quantity="other">%d小時</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="other">%d days</item>
+        <item quantity="other">%d天</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="other">%d weeks</item>
+        <item quantity="other">%d週</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="other">%d months</item>
+        <item quantity="other">%d個月</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="other">%d years</item>
+        <item quantity="other">%d年</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->

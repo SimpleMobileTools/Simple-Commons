@@ -214,7 +214,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 bytes = inputStream.read(buffer)
             }
 
-            if (source.size == copiedSize) {
+            if (source.size == copiedSize && File(destination.path).exists()) {
                 mTransferredFiles.add(source)
                 if (activity.baseConfig.keepLastModified) {
                     copyOldLastModified(source.path, destination.path)

@@ -23,6 +23,8 @@
     <string name="transparent_color">Transparent farve</string>
     <string name="select_a_different_color">Vælg en anden farve</string>
     <string name="download">Download</string>
+    <string name="notification">Underretning</string>
+    <string name="email">E-mail</string>
 
     <!-- Favorites -->
     <string name="favorites">Bogmærker</string>
@@ -340,8 +342,8 @@
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d second before</item>
-        <item quantity="other">%d seconds before</item>
+        <item quantity="one">%d sekund før start</item>
+        <item quantity="other">%d sekunder før start</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minut før start</item>
@@ -356,22 +358,22 @@
         <item quantity="other">%d dage før start</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d week before</item>
-        <item quantity="other">%d weeks before</item>
+        <item quantity="one">%d uge før start</item>
+        <item quantity="other">%d uger før start</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d month before</item>
-        <item quantity="other">%d months before</item>
+        <item quantity="one">%d måned før start</item>
+        <item quantity="other">%d måneder før start</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d year before</item>
-        <item quantity="other">%d years before</item>
+        <item quantity="one">%d år før start</item>
+        <item quantity="other">%d år før start</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d sekund</item>
+        <item quantity="other">%d sekunder</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minut</item>
@@ -382,20 +384,20 @@
         <item quantity="other">%d timer</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d dag</item>
+        <item quantity="other">%d dage</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d uge</item>
+        <item quantity="other">%d uger</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d måned</item>
+        <item quantity="other">%d måneder</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d år</item>
+        <item quantity="other">%d år</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->

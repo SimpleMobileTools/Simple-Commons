@@ -221,7 +221,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun handleSAFDialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
-        return if (isShowingSAFDialog(path) || isShowingOTGDialog(path)) {
+        return if (!packageName.startsWith("com.simplemobiletools")) {
+            callback(true)
+            false
+        } else if (isShowingSAFDialog(path) || isShowingOTGDialog(path)) {
             funAfterSAFPermission = callback
             true
         } else {

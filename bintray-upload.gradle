@@ -54,8 +54,8 @@ bintray {
 
     configurations = ['archives']
     pkg {
-        repo = "commons"
-        name = "commons"
+        repo = "simple-commons"
+        name = "simple-commons"
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]

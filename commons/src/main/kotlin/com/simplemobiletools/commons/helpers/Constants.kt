@@ -49,6 +49,7 @@ const val TEXT_COLOR = "text_color"
 const val BACKGROUND_COLOR = "background_color"
 const val PRIMARY_COLOR = "primary_color_2"
 const val APP_ICON_COLOR = "app_icon_color"
+const val LAST_HANDLED_SHORTCUT_COLOR = "last_handled_shortcut_color"
 const val LAST_ICON_COLOR = "last_icon_color"
 const val CUSTOM_TEXT_COLOR = "custom_text_color"
 const val CUSTOM_BACKGROUND_COLOR = "custom_background_color"
@@ -237,6 +238,7 @@ fun isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 
 fun isMarshmallowPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
 fun isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
+fun isNougatMR1Plus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1
 fun isOreoPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
 fun isPiePlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
 

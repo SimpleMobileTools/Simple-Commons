@@ -23,6 +23,8 @@
     <string name="transparent_color">Color transparent</string>
     <string name="select_a_different_color">Selecciona un color diferent</string>
     <string name="download">Descarregar</string>
+    <string name="notification">Notificació</string>
+    <string name="email">Correu electrònic</string>
 
     <!-- Favorites -->
     <string name="favorites">Preferits</string>
@@ -322,20 +324,20 @@
         <item quantity="other">%d hores</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d dia</item>
+        <item quantity="other">%d dies</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d setmana</item>
+        <item quantity="other">%d setmaness</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d mes</item>
+        <item quantity="other">%d mesos</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d any</item>
+        <item quantity="other">%d anys</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
@@ -356,16 +358,16 @@
         <item quantity="other">%d dies abans</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d week before</item>
-        <item quantity="other">%d weeks before</item>
+        <item quantity="one">%d setmana abans</item>
+        <item quantity="other">%d setmanes abans</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d month before</item>
-        <item quantity="other">%d months before</item>
+        <item quantity="one">%d mes abans</item>
+        <item quantity="other">%d mesos abans</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d year before</item>
-        <item quantity="other">%d years before</item>
+        <item quantity="one">%d any abans</item>
+        <item quantity="other">%d anys abans</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
@@ -382,20 +384,20 @@
         <item quantity="other">%d hores</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d dia</item>
+        <item quantity="other">%d dies</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d setmana</item>
+        <item quantity="other">%d setmaness</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d mes</item>
+        <item quantity="other">%d mesos</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d any</item>
+        <item quantity="other">%d anys</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -437,7 +439,7 @@
     <string name="skip_delete_confirmation">Ignora sempre el diàleg de confirmació d\'eliminació</string>
     <string name="enable_pull_to_refresh">Activa estirar des de la part superior per refrescar</string>
     <string name="use_24_hour_time_format">Utilitzar foramt 24 houres</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="change_date_and_time_format">Canvia el format de data i hora</string>
     <string name="sunday_first">Començar la setmana en diumenge</string>
     <string name="widgets">Ginys</string>
     <string name="use_same_snooze">Utilitzeu sempre el mateix temps de posposat</string>
@@ -472,8 +474,8 @@
     <string name="empty_recycle_bin_confirmation">ASegur que vols buidar la paperera? El fitxer s\'eliminaran definitivament.</string>
     <string name="recycle_bin_empty">La paperera és buida</string>
     <string name="moving_recycle_bin_items_disabled">Moure a la paperara està deshabilitat. Feu servir recuperar</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">Mostra la paperera</string>
+    <string name="hide_the_recycle_bin">Oculta la paperera</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Movent %d element a la paperera de reciclage</item>

@@ -89,7 +89,7 @@ fun Activity.isAppInstalledOnSDCard(): Boolean = try {
 fun Activity.isShowingSAFDialog(path: String): Boolean {
     return if (isPathOnSD(path) && (baseConfig.treeUri.isEmpty() || !hasProperStoredTreeUri(false))) {
         runOnUiThread {
-            if (!isDestroyed) {
+            if (!isDestroyed && !isFinishing) {
                 WritePermissionDialog(this, false) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         putExtra("android.content.extra.SHOW_ADVANCED", true)
@@ -115,7 +115,7 @@ fun Activity.isShowingSAFDialog(path: String): Boolean {
 fun BaseSimpleActivity.isShowingOTGDialog(path: String): Boolean {
     return if (isPathOnOTG(path) && (baseConfig.OTGTreeUri.isEmpty() || !hasProperStoredTreeUri(true))) {
         runOnUiThread {
-            if (!isDestroyed) {
+            if (!isDestroyed && !isFinishing) {
                 WritePermissionDialog(this, true) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         if (resolveActivity(packageManager) == null) {
@@ -535,7 +535,7 @@ fun Activity.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = nul
 fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((success: Boolean) -> Unit)? = null) {
     if (needsStupidWritePermissions(newPath)) {
         handleSAFDialog(newPath) {
-            val document = getDocumentFile(oldPath)
+            val document = getSomeDocumentFile(oldPath)
             if (document == null || (File(oldPath).isDirectory != document.isDirectory)) {
                 runOnUiThread {
                     callback?.invoke(false)
@@ -764,7 +764,7 @@ fun Activity.copyToClipboard(text: String) {
 }
 
 fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0, titleText: String = "", callback: (() -> Unit)? = null) {
-    if (isDestroyed) {
+    if (isDestroyed || isFinishing) {
         return
     }
 
@@ -889,5 +889,11 @@ fun BaseSimpleActivity.getAlarmSounds(type: Int, callback: (ArrayList<AlarmSound
             showErrorToast(e)
             callback(ArrayList())
         }
+    }
+}
+
+fun AppCompatActivity.showSideloadingDialog() {
+    AppSideloadedDialog(this) {
+        finish()
     }
 }
