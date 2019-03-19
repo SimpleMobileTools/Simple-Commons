@@ -23,8 +23,8 @@
     <string name="transparent_color">透明颜色</string>
     <string name="select_a_different_color">选择一个不同的颜色</string>
     <string name="download">下载</string>
-    <string name="notification">Notification</string>
-    <string name="email">Email</string>
+    <string name="notification">通知</string>
+    <string name="email">电子邮件</string>
 
     <!-- Favorites -->
     <string name="favorites">收藏</string>
@@ -243,6 +243,7 @@
     <string name="do_not_ask_again">不再提醒</string>
     <string name="yes">是</string>
     <string name="no">否</string>
+    <string name="maybe">Maybe</string>
 
     <plurals name="delete_warning">
         <item quantity="other">警告: 你正在删除 %d 目录</item>
@@ -310,16 +311,16 @@
         <item quantity="other">%d 小时</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="other">%d days</item>
+        <item quantity="other">%d 天</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="other">%d weeks</item>
+        <item quantity="other">%d 周</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="other">%d months</item>
+        <item quantity="other">%d 月</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="other">%d years</item>
+        <item quantity="other">%d 年</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
@@ -336,13 +337,13 @@
         <item quantity="other">%d 天前</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="other">%d weeks before</item>
+        <item quantity="other">%d 周前</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="other">%d months before</item>
+        <item quantity="other">%d 月前</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="other">%d years before</item>
+        <item quantity="other">%d 年前</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
@@ -356,16 +357,16 @@
         <item quantity="other">%d 小时</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="other">%d days</item>
+        <item quantity="other">%d 天</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="other">%d weeks</item>
+        <item quantity="other">%d 周</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="other">%d months</item>
+        <item quantity="other">%d 月</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="other">%d years</item>
+        <item quantity="other">%d 年</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -407,7 +408,7 @@
     <string name="skip_delete_confirmation">忽略删除确认对话框</string>
     <string name="enable_pull_to_refresh">启用顶部上拉刷新</string>
     <string name="use_24_hour_time_format">使用 24 小时制</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="change_date_and_time_format">更改日期和时间格式</string>
     <string name="sunday_first">每周以周日开头</string>
     <string name="widgets">小部件</string>
     <string name="use_same_snooze">始终使用相同的贪睡时间</string>
@@ -442,8 +443,8 @@
     <string name="empty_recycle_bin_confirmation">您确定要清空回收站吗？这些文件将永久丢失。</string>
     <string name="recycle_bin_empty">回收站是空的</string>
     <string name="moving_recycle_bin_items_disabled">不允许移动回收站中的文件，请使用恢复功能。</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">显示回收站</string>
+    <string name="hide_the_recycle_bin">隐藏回收站</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="other">正在移动 %d 个项目到回收站</item>

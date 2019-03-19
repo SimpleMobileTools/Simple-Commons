@@ -23,7 +23,7 @@
     <string name="transparent_color">Colore trasparente</string>
     <string name="select_a_different_color">Seleziona un colore diverso</string>
     <string name="download">Download</string>
-    <string name="notification">Notification</string>
+    <string name="notification">Notifica</string>
     <string name="email">Email</string>
 
     <!-- Favorites -->
@@ -246,6 +246,7 @@
     <string name="do_not_ask_again">Non chiedere nuovamente in questa sessione</string>
     <string name="yes">Sì</string>
     <string name="no">No</string>
+    <string name="maybe">Forse</string>
 
     <plurals name="delete_warning">
         <item quantity="one">ATTENZIONE: si sta per eliminare %d cartella</item>

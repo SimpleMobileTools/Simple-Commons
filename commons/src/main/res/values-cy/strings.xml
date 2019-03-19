@@ -23,6 +23,8 @@
     <string name="transparent_color">Lliw tryloyw</string>
     <string name="select_a_different_color">Dewis lliw gwahanol</string>
     <string name="download">Lawrlwytho</string>
+    <string name="notification">Notification</string>
+    <string name="email">Email</string>
 
     <!-- Favorites -->
     <string name="favorites">Ffefrynnau</string>
@@ -256,6 +258,7 @@
     <string name="do_not_ask_again">Peidio â gofyn eto yn y sesiwn hon</string>
     <string name="yes">Ydw</string>
     <string name="no">Nac ydw</string>
+    <string name="maybe">Maybe</string>
 
     <plurals name="delete_warning">
         <item quantity="one">RHYBUDD: Rwyt am ddileu %d ffolder</item>
