@@ -26,11 +26,11 @@ import java.util.regex.Pattern
 // http://stackoverflow.com/a/40582634/1967672
 fun Context.getSDCardPath(): String {
     val directories = getStorageDirectories().filter {
-        it.trimEnd('/') != getInternalStoragePath() &&
-                (baseConfig.OTGPartition.isEmpty() || !it.trimEnd('/').endsWith(baseConfig.OTGPartition))
+        it != getInternalStoragePath() && (baseConfig.OTGPartition.isEmpty() || !it.endsWith(baseConfig.OTGPartition))
     }
 
-    var sdCardPath = directories.firstOrNull { !physicalPaths.contains(it.toLowerCase().trimEnd('/')) } ?: ""
+    val fullSDpattern = Pattern.compile("^/storage/[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$")
+    var sdCardPath = directories.firstOrNull { fullSDpattern.matcher(it).matches() } ?: directories.firstOrNull { !physicalPaths.contains(it.toLowerCase()) } ?: ""
 
     // on some devices no method retrieved any SD card path, so test if its not sdcard1 by any chance. It happened on an Android 5.1
     if (sdCardPath.trimEnd('/').isEmpty()) {
@@ -110,7 +110,7 @@ fun Context.getStorageDirectories(): Array<String> {
         val rawSecondaryStorages = rawSecondaryStoragesStr.split(File.pathSeparator.toRegex()).dropLastWhile(String::isEmpty).toTypedArray()
         Collections.addAll(paths, *rawSecondaryStorages)
     }
-    return paths.toTypedArray()
+    return paths.map { it.trimEnd('/') }.toTypedArray()
 }
 
 fun Context.getHumanReadablePath(path: String): String {
