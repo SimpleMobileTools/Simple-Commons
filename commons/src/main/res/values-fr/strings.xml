@@ -165,16 +165,16 @@
     <string name="song_title">Titre de la chanson</string>
 
     <!-- Color customization -->
-    <string name="background_color">Couleur d\'arrière-plan</string>
+    <string name="background_color">Couleur de l\'arrière-plan</string>
     <string name="text_color">Couleur du texte</string>
     <string name="primary_color">Couleur primaire</string>
     <string name="foreground_color">Couleur d\'arrière-plan</string>
-    <string name="app_icon_color">Couleur d\'arrière-plan de l\'icône de l\'application</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
+    <string name="app_icon_color">Couleur de l\'icône de l\'application</string>
+    <string name="bottom_navigation_bar_color">Couleur de la barre de navigation</string>
     <string name="restore_defaults">Restaurer les valeurs par défaut</string>
     <string name="change_color">Modifier la couleur</string>
     <string name="theme">Thème</string>
-    <string name="changing_color_description">Modifier une couleur renomme le thème en \"personnalisé\"</string>
+    <string name="changing_color_description">Modifier une couleur renomme le thème en \"Personnalisé\"</string>
     <string name="save">Enregistrer</string>
     <string name="discard">Annuler</string>
     <string name="undo_changes">Annuler les changements</string>
@@ -210,17 +210,17 @@
     <string name="share">Partager</string>
     <string name="share_via">Partager via</string>
     <string name="select_all">Tout sélectionner</string>
-    <string name="hide">Masquer</string>
+    <string name="hide">Cacher</string>
     <string name="unhide">Faire apparaître</string>
-    <string name="hide_folder">Masquer le dossier</string>
+    <string name="hide_folder">Cacher le dossier</string>
     <string name="unhide_folder">Faire apparaître le dossier</string>
-    <string name="temporarily_show_hidden">Afficher les fichiers masqués</string>
-    <string name="stop_showing_hidden">Ne plus afficher les médias masqués</string>
+    <string name="temporarily_show_hidden">Afficher les fichiers caché</string>
+    <string name="stop_showing_hidden">Masquer les fichiers cachés</string>
     <string name="maximum_share_reached">Impossible de partager autant de contenu à la fois</string>
     <string name="empty_and_disable_recycle_bin">Vider et désactiver la corbeille</string>
     <string name="undo">Annuler</string>
     <string name="redo">Répéter</string>
-    <string name="print">Print</string>
+    <string name="print">Imprimer</string>
 
     <!-- Sorting -->
     <string name="sort_by">Trier par</string>
@@ -244,11 +244,11 @@
     <string name="move_to_recycle_bin_confirmation">Voulez-vous vraiment déplacer %s vers la corbeille ?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Voulez-vous vraiment supprimer cet élément ?</string>
-    <string name="are_you_sure_recycle_bin">Voulez-vous vraiment déplacer cet élément dans la corbeille ?</string>
+    <string name="are_you_sure_recycle_bin">Voulez-vous vraiment déplacer cet élément vers la corbeille ?</string>
     <string name="do_not_ask_again">Ne plus demander pour cette session</string>
     <string name="yes">Oui</string>
     <string name="no">Non</string>
-    <string name="maybe">Maybe</string>
+    <string name="maybe">Peut-être</string>
 
     <plurals name="delete_warning">
         <item quantity="one">ATTENTION : Vous supprimez %d dossier</item>
@@ -327,20 +327,20 @@
         <item quantity="other">%d heures</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d jour</item>
+        <item quantity="other">%d jours</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d semaine</item>
+        <item quantity="other">%d semaines</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d mois</item>
+        <item quantity="other">%d mois</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d an</item>
+        <item quantity="other">%d ans</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
@@ -361,16 +361,16 @@
         <item quantity="other">%d jours avant</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d week before</item>
-        <item quantity="other">%d weeks before</item>
+        <item quantity="one">%d semaine avant</item>
+        <item quantity="other">%d semaines avant</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d month before</item>
-        <item quantity="other">%d months before</item>
+        <item quantity="one">%d mois avant</item>
+        <item quantity="other">%d mois avant</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d year before</item>
-        <item quantity="other">%d years before</item>
+        <item quantity="one">%d an avant</item>
+        <item quantity="other">%d ans avant</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
@@ -387,20 +387,20 @@
         <item quantity="other">%d heures</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d jour</item>
+        <item quantity="other">%d jours</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d semaine</item>
+        <item quantity="other">%d semaines</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d mois</item>
+        <item quantity="other">%d mois</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d an</item>
+        <item quantity="other">%d ans</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -427,22 +427,22 @@
     <string name="customize_colors">Modifier les couleurs</string>
     <string name="customize_widget_colors">Modifier les couleurs du widget</string>
     <string name="use_english_language">Utiliser la langue anglaise</string>
-    <string name="show_hidden_items">Afficher les éléments masqués</string>
+    <string name="show_hidden_items">Afficher les fichiers cachés</string>
     <string name="font_size">Taille de la police</string>
     <string name="small">Petite</string>
     <string name="medium">Moyenne</string>
     <string name="large">Large</string>
     <string name="extra_large">Extra large</string>
     <string name="password_protect_hidden_items">Afficher les éléments protégés par mot de passe</string>
-    <string name="password_protect_whole_app">Le mot de passe protège l\'ensemble de l\'application</string>
-    <string name="password_protect_file_deletion">Protéger par mot de passe la suppression et le déplacement de fichiers</string>
-    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
+    <string name="password_protect_whole_app">Protéger l\'ensemble de l\'application par mot de passe</string>
+    <string name="password_protect_file_deletion">Protéger la suppression et le déplacement de fichiers par mot de passe</string>
+    <string name="keep_last_modified">Garder la date de modification après les oprérations de fichier</string>
     <string name="show_info_bubble">Afficher une bulle d\'information des éléments lors de l\'utilisation de la barre de défilement</string>
     <string name="prevent_phone_from_sleeping">Ne pas mettre en veille tant que l\'application est active</string>
-    <string name="skip_delete_confirmation">Ne jamais afficher le dialogue de confirmation de suppression</string>
-    <string name="enable_pull_to_refresh">Activer l\'actualisation par glissement à partir du haut de l\'écran</string>
-    <string name="use_24_hour_time_format">Utiliser le format horaire sur 24 heures</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="skip_delete_confirmation">Cacher la fenêtre de confirmation de suppression</string>
+    <string name="enable_pull_to_refresh">Actualiser par glissement à partir du haut de l\'écran</string>
+    <string name="use_24_hour_time_format">Utiliser le format horaire 24 heures</string>
+    <string name="change_date_and_time_format">Modifier le format de date et heure</string>
     <string name="sunday_first">Démarrer la semaine le dimanche</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Toujours utiliser le même intervalle de répétition</string>
@@ -452,36 +452,36 @@
     <string name="recycle_bin_cleaning_interval">Intervalle de vidage de la corbeille</string>
     <string name="empty_recycle_bin">Vider la corbeille</string>
     <string name="force_portrait_mode">Forcer le mode portrait</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="export_settings">Exporter les paramètres</string>
+    <string name="import_settings">Importer les paramètres</string>
+    <string name="settings_exported_successfully">Paramètres exportés avec succès</string>
+    <string name="settings_imported_successfully">Paramètres importés avec succès</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilité</string>
     <string name="security">Sécurité</string>
     <string name="scrolling">Défilement</string>
-    <string name="file_operations">Opérations sur les fichiers</string>
+    <string name="file_operations">Opérations de fichiers</string>
     <string name="recycle_bin">Corbeille</string>
     <string name="saving_label">Enregistrement en cours…</string>
     <string name="startup">Démarrage en cours…</string>
     <string name="text">Texte</string>
-    <string name="migrating">Migrating</string>
+    <string name="migrating">Migration</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Récupérer ce fichier</string>
     <string name="restore_selected_files">Récupérer les fichiers sélectionnés</string>
     <string name="restore_all_files">Récupérer tous les fichiers </string>
     <string name="recycle_bin_emptied">Corbeille vidée</string>
-    <string name="files_restored_successfully">Les fichiers récupérerés</string>
+    <string name="files_restored_successfully">Fichiers récupérés avec succès</string>
     <string name="empty_recycle_bin_confirmation">Voulez-vous vraiment vider la corbeille ? Les fichiers seront définitivement supprimés.</string>
     <string name="recycle_bin_empty">La corbeille est vide</string>
     <string name="moving_recycle_bin_items_disabled">Le déplacement des éléments de la corbeille est désactivé, veuillez utiliser la fonction de restauration.</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">Afficher la corbeille</string>
+    <string name="hide_the_recycle_bin">Cacher la corbeille</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Déplacement d\' %d élément dans la corbeille en cours…</item>
+        <item quantity="one">Déplacement de l\'élément dans la corbeille en cours…</item>
         <item quantity="other">Déplacement de %d éléments dans la corbeille en cours…</item>
     </plurals>
 
@@ -494,7 +494,7 @@
     <string name="exporting_failed">Échec de l\'exportation</string>
     <string name="importing_some_entries_failed">Échec de l\'importation de certains éléments</string>
     <string name="exporting_some_entries_failed">Échec de l\'exportation de certains éléments</string>
-    <string name="no_entries_for_importing">No entries for importing have been found</string>
+    <string name="no_entries_for_importing">Aucun élément pouvant être importé n\'a été trouvé</string>
     <string name="no_entries_for_exporting">Aucun élément pouvant être exporté n\'a été trouvé</string>
 
     <!-- OTG devices -->
