@@ -302,4 +302,8 @@ open class BaseConfig(val context: Context) {
             else -> DATE_FORMAT_ONE
         }
     }
+
+    var wasOTGHandled: Boolean
+        get() = prefs.getBoolean(WAS_OTG_HANDLED, false)
+        set(wasOTGHandled) = prefs.edit().putBoolean(WAS_OTG_HANDLED, wasOTGHandled).apply()
 }
