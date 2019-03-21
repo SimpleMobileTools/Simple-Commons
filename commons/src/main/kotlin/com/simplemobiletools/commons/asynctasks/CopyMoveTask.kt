@@ -109,6 +109,10 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     }
 
     override fun onPostExecute(success: Boolean) {
+        if (activity.isFinishing || activity.isDestroyed) {
+            return
+        }
+
         mProgressHandler.removeCallbacksAndMessages(null)
         mNotificationManager.cancel(mNotifId)
         val listener = mListener?.get() ?: return
