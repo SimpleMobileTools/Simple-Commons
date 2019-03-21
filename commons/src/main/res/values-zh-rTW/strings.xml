@@ -23,8 +23,8 @@
     <string name="transparent_color">透明顏色</string>
     <string name="select_a_different_color">選取不同的顏色</string>
     <string name="download">下載</string>
-    <string name="notification">Notification</string>
-    <string name="email">Email</string>
+    <string name="notification">通知</string>
+    <string name="email">電子信箱</string>
 
     <!-- Favorites -->
     <string name="favorites">我的最愛</string>
@@ -243,7 +243,7 @@
     <string name="do_not_ask_again">這情況不再詢問</string>
     <string name="yes">是</string>
     <string name="no">否</string>
-    <string name="maybe">Maybe</string>
+    <string name="maybe">或許</string>
 
     <plurals name="delete_warning">
         <item quantity="other">注意: 你正在刪除%d個資料夾</item>
