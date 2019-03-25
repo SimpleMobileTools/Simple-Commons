@@ -211,10 +211,10 @@
     <string name="share_via">Partager via</string>
     <string name="select_all">Tout sélectionner</string>
     <string name="hide">Cacher</string>
-    <string name="unhide">Faire apparaître</string>
+    <string name="unhide">Ne plus cacher</string>
     <string name="hide_folder">Cacher le dossier</string>
     <string name="unhide_folder">Faire apparaître le dossier</string>
-    <string name="temporarily_show_hidden">Afficher les fichiers caché</string>
+    <string name="temporarily_show_hidden">Afficher les fichiers cachés</string>
     <string name="stop_showing_hidden">Masquer les fichiers cachés</string>
     <string name="maximum_share_reached">Impossible de partager autant de contenu à la fois</string>
     <string name="empty_and_disable_recycle_bin">Vider et désactiver la corbeille</string>
@@ -434,10 +434,10 @@
     <string name="large">Large</string>
     <string name="extra_large">Extra large</string>
     <string name="password_protect_hidden_items">Afficher les éléments protégés par mot de passe</string>
-    <string name="password_protect_whole_app">Protéger l\'ensemble de l\'application par mot de passe</string>
+    <string name="password_protect_whole_app">Protéger l\'application par mot de passe</string>
     <string name="password_protect_file_deletion">Protéger la suppression et le déplacement de fichiers par mot de passe</string>
     <string name="keep_last_modified">Garder la date de modification après les oprérations de fichier</string>
-    <string name="show_info_bubble">Afficher une bulle d\'information des éléments lors de l\'utilisation de la barre de défilement</string>
+    <string name="show_info_bubble">Afficher une bulle d\'information pendant l\'utilisation de la barre de défilement</string>
     <string name="prevent_phone_from_sleeping">Ne pas mettre en veille tant que l\'application est active</string>
     <string name="skip_delete_confirmation">Cacher la fenêtre de confirmation de suppression</string>
     <string name="enable_pull_to_refresh">Actualiser par glissement à partir du haut de l\'écran</string>
@@ -471,7 +471,7 @@
     <!-- Recycle Bin -->
     <string name="restore_this_file">Récupérer ce fichier</string>
     <string name="restore_selected_files">Récupérer les fichiers sélectionnés</string>
-    <string name="restore_all_files">Récupérer tous les fichiers </string>
+    <string name="restore_all_files">Récupérer tous les fichiers</string>
     <string name="recycle_bin_emptied">Corbeille vidée</string>
     <string name="files_restored_successfully">Fichiers récupérés avec succès</string>
     <string name="empty_recycle_bin_confirmation">Voulez-vous vraiment vider la corbeille ? Les fichiers seront définitivement supprimés.</string>
