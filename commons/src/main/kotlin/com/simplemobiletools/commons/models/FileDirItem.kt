@@ -11,6 +11,8 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
         var sorting = 0
     }
 
+    override fun toString() = "FileDirItem(path=$path, name=$name, isDirectory=$isDirectory, children=$children, size=$size)"
+
     override fun compareTo(other: FileDirItem): Int {
         return if (isDirectory && !other.isDirectory) {
             -1
