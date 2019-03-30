@@ -17,7 +17,7 @@
     <string name="details">Detaljer</string>
     <string name="notes">Noter</string>
     <string name="deleting_folder">Sletter mappen \'%s\'</string>
-    <string name="none">None</string>
+    <string name="none">Ingen</string>
     <string name="label">Label</string>
     <string name="transparent">Transparent</string>
     <string name="transparent_color">Transparent farve</string>
@@ -63,7 +63,7 @@
     <string name="extension_cannot_be_empty">Filtypen kan ikke stå tom</string>
     <string name="source_file_doesnt_exist">Kildefilen %s eksisterer ikke</string>
     <string name="prepend_filenames">Tilføj forrest til filnavne</string>
-    <string name="append_filenames">Tilføj bagest til filnavne (men før filtypenavnet)</string>
+    <string name="append_filenames">Tilføj bagerst til filnavne (men før filtypenavnet)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopier</string>
@@ -424,7 +424,7 @@
     <string name="purchase_simple_thank_you">Køb Simple Thank You</string>
     <string name="customize_colors">Rediger farver</string>
     <string name="customize_widget_colors">Rediger widget-farver</string>
-    <string name="use_english_language">Use English language</string>
+    <string name="use_english_language">Skift til Engelsk sprog</string>
     <string name="show_hidden_items">Vis skjulte elementer</string>
     <string name="font_size">Skriftstørrelse</string>
     <string name="small">Lille</string>
@@ -434,7 +434,7 @@
     <string name="password_protect_hidden_items">Beskyt visning af skjulte elementer med en kode</string>
     <string name="password_protect_whole_app">Beskyt hele appen med en adgangskode</string>
     <string name="password_protect_file_deletion">Beskyt mod sletning og flytning med en kode</string>
-    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
+    <string name="keep_last_modified">Behold den gamle senest-ændret værdi ved filoperationer</string>
     <string name="show_info_bubble">Vis en info-boble når jeg scroller med rullepanelet</string>
     <string name="prevent_phone_from_sleeping">Forhindr telefonen i at falde i søvn når appen er i forgrunden</string>
     <string name="skip_delete_confirmation">Spørg ikke om bekræftelse før sletning</string>
@@ -450,10 +450,10 @@
     <string name="recycle_bin_cleaning_interval">Interval for tømning af papirkurven</string>
     <string name="empty_recycle_bin">Tøm papirkurven</string>
     <string name="force_portrait_mode">Brug stående visning</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="export_settings">Eksportér indstillinger</string>
+    <string name="import_settings">Importér indstillinger</string>
+    <string name="settings_exported_successfully">Indstillinger eksporteret</string>
+    <string name="settings_imported_successfully">Indstillinger importeret</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighed</string>
@@ -461,10 +461,10 @@
     <string name="scrolling">Scrolling</string>
     <string name="file_operations">Filoperationer</string>
     <string name="recycle_bin">Papirkurv</string>
-    <string name="saving_label">Saving</string>
-    <string name="startup">Startup</string>
-    <string name="text">Text</string>
-    <string name="migrating">Migrating</string>
+    <string name="saving_label">Gemmer</string>
+    <string name="startup">Opstart</string>
+    <string name="text">Tekst</string>
+    <string name="migrating">Migrerer</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Gendan denne fil</string>
@@ -564,7 +564,7 @@
     <string name="about">Om</string>
     <string name="website_label">For at se kildekoden besøg</string>
     <string name="email_label">Send feedback og forslag til</string>
-    <string name="upgrade_to_pro">Upgrade to Pro</string>
+    <string name="upgrade_to_pro">Opgrader til Pro</string>
     <string name="more_apps_underlined"><u>Flere apps</u></string>
     <string name="third_party_licences_underlined"><u>3.-parts licencer</u></string>
     <string name="invite_friends_underlined"><u>Inviter venner</u></string>
@@ -647,7 +647,7 @@
     <string name="gson_title">Gson (JSON parser)</string>
     <string name="leak_canary_title">Leak Canary (detektering af pladsmangel)</string>
     <string name="number_picker_title">Number Picker (customizable number picker)</string>
-    <string name="exoplayer_title">ExoPlayer (video player)</string>
+    <string name="exoplayer_title">ExoPlayer (videoafspiller)</string>
     <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
     <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
     <string name="filters_title">Android Photo Filters (image filters)</string>
