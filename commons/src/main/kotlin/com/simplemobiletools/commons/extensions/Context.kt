@@ -201,7 +201,10 @@ fun Context.getDataColumn(uri: Uri, selection: String? = null, selectionArgs: Ar
         val projection = arrayOf(MediaStore.Files.FileColumns.DATA)
         cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
         if (cursor?.moveToFirst() == true) {
-            return cursor.getStringValue(MediaStore.Files.FileColumns.DATA)
+            val data = cursor.getStringValue(MediaStore.Files.FileColumns.DATA)
+            if (data != "null") {
+                return data
+            }
         }
     } catch (e: Exception) {
     } finally {
