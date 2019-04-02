@@ -82,7 +82,7 @@ class PropertiesDialog() {
                 addProperty(R.string.files_count, "…", R.id.properties_file_count)
             }
             fileDirItem.path.isImageSlow() -> {
-                fileDirItem.getResolution()?.let { addProperty(R.string.resolution, it.formatAsResolution()) }
+                fileDirItem.getResolution(activity)?.let { addProperty(R.string.resolution, it.formatAsResolution()) }
             }
             fileDirItem.path.isAudioSlow() -> {
                 fileDirItem.getDuration()?.let { addProperty(R.string.duration, it) }
@@ -92,7 +92,7 @@ class PropertiesDialog() {
             }
             fileDirItem.path.isVideoSlow() -> {
                 fileDirItem.getDuration()?.let { addProperty(R.string.duration, it) }
-                fileDirItem.getResolution()?.let { addProperty(R.string.resolution, it.formatAsResolution()) }
+                fileDirItem.getResolution(activity)?.let { addProperty(R.string.resolution, it.formatAsResolution()) }
                 fileDirItem.getArtist()?.let { addProperty(R.string.artist, it) }
                 fileDirItem.getAlbum()?.let { addProperty(R.string.album, it) }
             }

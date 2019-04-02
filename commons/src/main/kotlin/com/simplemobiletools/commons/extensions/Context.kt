@@ -8,7 +8,9 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.database.Cursor
 import android.graphics.Color
+import android.graphics.Point
 import android.media.ExifInterface
+import android.media.MediaMetadataRetriever
 import android.media.RingtoneManager
 import android.net.Uri
 import android.os.Build
@@ -603,3 +605,39 @@ fun Context.getCanAppBeUpgraded() = proPackages.contains(baseConfig.appId.remove
 fun Context.getProUrl() = "https://play.google.com/store/apps/details?id=${baseConfig.appId.removeSuffix(".debug")}.pro"
 
 fun Context.getTimeFormat() = if (baseConfig.use24HourFormat) TIME_FORMAT_24 else TIME_FORMAT_12
+
+fun Context.getResolution(path: String): Point? {
+    return if (path.isImageFast() || path.isImageSlow()) {
+        path.getImageResolution()
+    } else if (path.isVideoFast() || path.isVideoSlow()) {
+        getVideoResolution(path)
+    } else {
+        null
+    }
+}
+
+fun Context.getVideoResolution(path: String): Point? {
+    var point = try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(path)
+        val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH).toInt()
+        val height = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT).toInt()
+        Point(width, height)
+    } catch (ignored: Exception) {
+        null
+    }
+
+    if (point == null && path.startsWith("content://", true)) {
+        try {
+            val fd = contentResolver.openFileDescriptor(Uri.parse(path), "r")?.fileDescriptor
+            val retriever = MediaMetadataRetriever()
+            retriever.setDataSource(fd)
+            val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH).toInt()
+            val height = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT).toInt()
+            point = Point(width, height)
+        } catch (ignored: Exception) {
+        }
+    }
+
+    return point
+}

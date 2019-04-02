@@ -77,9 +77,9 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
 
     fun getSongTitle() = path.getFileSongTitle()
 
-    fun getResolution() = path.getResolution()
+    fun getResolution(context: Context) = context.getResolution(path)
 
-    fun getVideoResolution() = path.getVideoResolution()
+    fun getVideoResolution(context: Context) = context.getVideoResolution(path)
 
     fun getImageResolution() = path.getImageResolution()
 }

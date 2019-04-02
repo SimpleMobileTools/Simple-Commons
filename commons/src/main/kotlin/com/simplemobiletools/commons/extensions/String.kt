@@ -186,28 +186,6 @@ fun String.getFileSongTitle(): String? {
     }
 }
 
-fun String.getResolution(): Point? {
-    return if (isImageFast() || isImageSlow()) {
-        getImageResolution()
-    } else if (isVideoFast() || isVideoSlow()) {
-        getVideoResolution()
-    } else {
-        null
-    }
-}
-
-fun String.getVideoResolution(): Point? {
-    return try {
-        val retriever = MediaMetadataRetriever()
-        retriever.setDataSource(this)
-        val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH).toInt()
-        val height = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT).toInt()
-        Point(width, height)
-    } catch (ignored: Exception) {
-        null
-    }
-}
-
 fun String.getImageResolution(): Point? {
     val options = BitmapFactory.Options()
     options.inJustDecodeBounds = true
