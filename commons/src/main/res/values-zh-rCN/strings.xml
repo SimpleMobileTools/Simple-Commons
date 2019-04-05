@@ -243,7 +243,7 @@
     <string name="do_not_ask_again">不再提醒</string>
     <string name="yes">是</string>
     <string name="no">否</string>
-    <string name="maybe">Maybe</string>
+    <string name="maybe">也许</string>
 
     <plurals name="delete_warning">
         <item quantity="other">警告: 你正在删除 %d 目录</item>
@@ -537,8 +537,8 @@
     <string name="invite_friends_underlined"><u>分享给好友</u></string>
     <string name="share_text">请前往 %2$s 看看我们的 %1$s 吧！</string>
     <string name="invite_via">分享到</string>
-    <string name="rate_us_underlined"><u>为我们打分</u></string>
-    <string name="rate">Rate</string>
+    <string name="rate_us_underlined"><u>为我们评分</u></string>
+    <string name="rate">评分</string>
     <string name="donate">捐赠</string>
     <string name="donate_underlined"><u>捐赠</u></string>
     <string name="follow_us">关注我们</string>
@@ -557,7 +557,7 @@
     <string name="update_thank_you">请更新 Simple Thank You 到最新版本</string>
     <string name="before_asking_question_read_faq">提问之前，请先打开应用设置并阅读常见问题。也许你可以在那里找到答案。</string>
     <string name="read_it">阅读</string>
-    <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
+    <string name="rate_us_prompt">您好，\n\n看来您使用这个应用已经有一段时间了，我们真的很感激。\n\n如果您喜欢，请在Google Play上为我们评分。这对我们很有帮助。\n\n无论你做何决定，你都不会再看到这个消息了。\n\n感谢！</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -594,7 +594,7 @@
 在成功启动之后，请将图标颜色设置为默认的橙色#F57C00。在最坏的情况下，您可能必须重新安装本应用。</string>
 
     <!-- License -->
-    <string name="notice">此应用使用了以下三方库。谢谢。</string>
+    <string name="notice">此应用使用了以下三方库。致谢。</string>
     <string name="third_party_licences">开放源代码</string>
     <string name="kotlin_title">Kotlin (programming language)</string>
     <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
@@ -622,6 +622,6 @@
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">已弃用：该应用版本已不再维护，请在以下链接获取专业版 https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">别忘了如果您在2小时内卸载任何付费应用将会自动退款。如果您想在之后退款，只需通过 hello@simplemobiletools.com 联系我们即可。这样你就可以放心试用了 :)</string>
 </resources>
