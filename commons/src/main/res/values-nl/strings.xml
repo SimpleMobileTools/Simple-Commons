@@ -571,6 +571,7 @@
     <string name="share_text">Hé, bekijk %1$s eens op %2$s</string>
     <string name="invite_via">Uitnodigen via</string>
     <string name="rate_us_underlined"><u>Beoordeel ons</u></string>
+    <string name="rate">Beoordelen</string>
     <string name="donate">Doneren</string>
     <string name="donate_underlined"><u>Doneren</u></string>
     <string name="follow_us">Volg ons</string>
@@ -589,6 +590,7 @@
     <string name="update_thank_you">Er is een nieuwe versie van Simple Thank You</string>
     <string name="before_asking_question_read_faq">Controleer bij problemen eerst de instellingen van de app en neem de Veelgestelde vragen door. Wellicht is de oplossing daar reeds te vinden.</string>
     <string name="read_it">Nu lezen</string>
+    <string name="rate_us_prompt">Hallo,\n\nhet lijkt erop dat u deze app al een tijdje gebruikt, iets wat wij enorm waarderen.\n\nMogen we zo vrij zijn om u te vragen ons een beoordeling te geven op Google Play? Daarmee kunt u ons enorm helpen.\n\nDit bericht zal niet nogmaals worden getoond, ongeacht welke keuze u nu maakt.\n\nHartelijk dank!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -652,4 +654,8 @@
     <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
     <string name="filters_title">Android Photo Filters (image filters)</string>
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
+
+    <!-- Google Play listing -->
+    <string name="deprecated_app">VEROUDERD: Deze versie van de app wordt niet langer doorontwikkeld. De Pro-versie is de vinden op https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">Bij het deïnstalleren van de app binnen 2 uur na aanschaf wordt het aankoopbedrag automatisch teruggestort. Wilt u op een later tijdstip een terugbetaling, neem dan contact op via hello@simplemobiletools.com en het wordt geregeld. Zodoende blijft het gemakkelijk om de app uit te proberen :)</string>
 </resources>

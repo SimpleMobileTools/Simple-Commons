@@ -143,14 +143,14 @@
     <string name="root">Root</string>
     <string name="wrong_root_selected">Επιλέξατε λάθος φάκελο, επιλέξτε τον ριζικό φάκελο της SD card</string>
     <string name="sd_card_usb_same">Οι διαδρομές συσκευών SD card και USB δεν μπορούν να είναι οι ίδιες</string>
-    <string name="app_on_sd_card">Φαίνεται ότι έχετε εγκαταστήσει την εφαρμογή σε μια κάρτα SD, πράγμα που καθιστά τα γραφικά στοιχεία εφαρμογών μη διαθέσιμα. Δεν θα τα δείτε ακόμη και στη λίστα των διαθέσιμων γραφικών στοιχείων.
-        Είναι ένας περιορισμός του συστήματος, οπότε αν θέλετε να χρησιμοποιήσετε τα γραφικά στοιχεία, θα πρέπει να μετακινήσετε την εφαρμογή πίσω στον εσωτερικό αποθηκευτικό χώρο.</string>
+    <string name="app_on_sd_card">Φαίνεται ότι έχετε εγκαταστήσει την εφαρμογή σε μια κάρτα SD, πράγμα που καθιστά τα Γραφικά στοιχεία εφαρμογών μη διαθέσιμα. Δεν θα τα δείτε ακόμη και στη λίστα των διαθέσιμων Γραφικών στοιχείων.
+        Είναι ένας περιορισμός του συστήματος, οπότε αν θέλετε να χρησιμοποιήσετε τα Γραφικά στοιχεία, θα πρέπει να μετακινήσετε την εφαρμογή πίσω στον εσωτερικό αποθηκευτικό χώρο.</string>
 
     <!-- File properties -->
     <string name="properties">Ιδιότητες</string>
     <string name="path">Διαδρομή</string>
     <string name="items_selected">Επιλεγμένα στοιχεία</string>
-    <string name="direct_children_count">Απευθείας καταμέτρηση παιδιών</string>
+    <string name="direct_children_count">Άμμεση καταμέτρηση παιδιών</string>
     <string name="files_count">Αριθμός συνολικών αρχείων</string>
     <string name="resolution">Ανάλυση</string>
     <string name="duration">Διάρκεια</string>
@@ -174,7 +174,7 @@
     <string name="restore_defaults">Επαναφορά προεπιλογών</string>
     <string name="change_color">Αλλαγή χρώματος</string>
     <string name="theme">Θέμα</string>
-    <string name="changing_color_description">Η αλλαγή ενός χρώματος θα λλάξει το Προσαρμοσμένο θέμα</string>
+    <string name="changing_color_description">Η αλλαγή ενός χρώματος θα αλλάξει το Προσαρμοσμένο θέμα</string>
     <string name="save">Αποθήκευση</string>
     <string name="discard">Απόρριψη</string>
     <string name="undo_changes">Αναίρεση αλλαγών</string>
@@ -226,19 +226,19 @@
     <string name="sort_by">Ταξινόμηση κατά</string>
     <string name="name">Όνομα</string>
     <string name="size">Μέγεθος</string>
-    <string name="last_modified">Τελευταία τροποποίηση</string>
+    <string name="last_modified">Τελευταία τροπ/ηση</string>
     <string name="date_taken">Ημερ. λήψης</string>
     <string name="title">Τίτλο</string>
     <string name="filename">Όνομα αρχείου</string>
     <string name="extension">Επέκταση</string>
     <string name="random">Τυχαία</string>
-    <string name="sort_randomly">Τυχαία ταξινόμηση</string>
+    <string name="sort_randomly">Τυχαία ταξ/μηση</string>
     <string name="ascending">Αύξουσα</string>
     <string name="descending">Φθίνουσα</string>
-    <string name="use_for_this_folder">Χρήση μόνο για αυτόν το φάκελο</string>
+    <string name="use_for_this_folder">Χρήση μόνο σε αυτόν το φάκελο</string>
 
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Είστε βέβαιοι ότι θέλετε να συνεχίσετε με τη διαγραφή?</string>
+    <string name="proceed_with_deletion">Είστε βέβαιοι ότι θέλετε να συνεχίσετε τη διαγραφή?</string>
     <string name="deletion_confirmation">Είστε βέβαιοι ότι θέλετε να διαγράψετε %s?</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Είστε βέβαιοι ότι θέλετε να μετακινήσετε %s στον κάδο ανακύκλωσης?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το στοιχείο?</string>
@@ -434,7 +434,7 @@
     <string name="password_protect_hidden_items">Κωδικός προστασίας προβολής κρυφών στοιχείων</string>
     <string name="password_protect_whole_app">Κωδικός προστασίας ολόκληρης της εφαρμογής</string>
     <string name="password_protect_file_deletion">Προστασία με κωδικό για διαγραφή ή μετακίνηση</string>
-    <string name="keep_last_modified">Διατήρηση της παλιάς τροποποιημένης τιμής στις λειτουργίες αρχείων</string>
+    <string name="keep_last_modified">Διατήρηση προηγ/νης τροπ/μένης τιμής στις λειτουργίες αρχείων</string>
     <string name="show_info_bubble">Εμφάνιση φυσαλίδας πληροφοριών κατά την κύλιση στοιχείων στη γραμμή κύλισης</string>
     <string name="prevent_phone_from_sleeping">Αποτροπή της αναστολής λειτουργίας του τηλεφώνου ενώ η εφαρμογή βρίσκεται στο προσκήνιο</string>
     <string name="skip_delete_confirmation">Παράκαμψη πάντα το παράθυρο διαλόγου επιβεβαίωσης διαγραφής</string>
@@ -442,7 +442,7 @@
     <string name="use_24_hour_time_format">Χρήση 24ώρου</string>
     <string name="change_date_and_time_format">Αλλαγή μορφής ημερομηνίας και ώρας</string>
     <string name="sunday_first">Έναρξη εβδομάδας την Κυριακή</string>
-    <string name="widgets">Widgets</string>
+    <string name="widgets">Γραφικά στοιχεία</string>
     <string name="use_same_snooze">Χρήση πάντα του ίδιου χρόνου αναβολής</string>
     <string name="snooze_time">Χρόνος αναβολής</string>
     <string name="vibrate_on_button_press">Δόνηση κατά το πάτημα του κουμπιού</string>
@@ -558,7 +558,7 @@
     <string name="it_is_free">Είναι δωρεάν μέχρι: %s. Εάν κάνετε λήψη μέχρι τότε, θα μπορείτε να την χρησιμοποιείτε δωρεάν για πάντα.</string>
     <string name="more_info">Περισσότερα</string>
     <string name="upgrade">Αναβάθμιση</string>
-    <string name="upgrade_calendar">Πρέπει να μεταφέρετε τοπικά αποθηκευμένα συμβάντα χειροκίνητα μέσω της εξαγωγής σε ένα αρχείο .ics, στη συνέχεια, εισαγωγή. Μπορείτε να βρείτε τα κουμπιά εξαγωγής/εισαγωγής στο μενού της κύριας οθόνης.</string>
+    <string name="upgrade_calendar">Πρέπει να μεταφέρετε τα αποθηκευμένα τοπικά συμβάντα χειροκίνητα, μέσω Εξαγωγής σε αρχείο .ics και στη συνέχεια Εισαγωγή. Μπορείτε να βρείτε τις επιλογές Εξαγωγής/Εισαγωγής, στο μενού της κύριας οθόνης.</string>
 
     <!-- About -->
     <string name="about">Σχετικά</string>
@@ -571,6 +571,7 @@
     <string name="share_text">Έι, έλα να δεις %1$s στο %2$s</string>
     <string name="invite_via">Πρόσκληση μέσω</string>
     <string name="rate_us_underlined"><u>Βαθμολογήστε μας</u></string>
+    <string name="rate">Βαθμολογία</string>
     <string name="donate">Δωρεά</string>
     <string name="donate_underlined"><u>Δωρεά</u></string>
     <string name="follow_us">Ακολουθήστε μας</string>
@@ -586,9 +587,10 @@
         ]]>
     </string>
     <string name="purchase">Αγορά</string>
-    <string name="update_thank_you">Παρακαλώ ενημερώστε Simple Thank You στην τελευταία έκδοση</string>
+    <string name="update_thank_you">Παρακαλώ ενημερώστε την Simple Thank You στην τελευταία έκδοση</string>
     <string name="before_asking_question_read_faq">Πριν κάνετε μια ερώτηση, ελέγξτε τις ρυθμίσεις της εφαρμογής και διαβάστε πρώτα τις Συχνές Ερωτήσεις. Ίσως η λύση είναι εκεί.</string>
     <string name="read_it">Διαβάστε τις</string>
+    <string name="rate_us_prompt">Γειά σας,\n\nφαίνεται ότι χρησιμοποιείτε αυτήν την εφαρμογή για αρκετό καιρό ήδη, και το εκτιμούμε πραγματικά.\n\nΑν μπορούμε να σας ζητήσουμε μια χάρη, παρακαλούμε αξιολογήστε μας στο Google Play. Αυτό θα μας βοηθούσε πολύ.\n\nΑνεξάρτητα τι αποφασίσατε, δεν θα εμφανιστεί ξανά αυτό το μήνυμα.\n\nΕυχαριστώ!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -609,21 +611,21 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Συχνές ερωτήσεις</string>
-    <string name="before_asking_question">Πριν κάνετε μια ερώτηση, διαβάστε πρώτα το</string>
-    <string name="faq_1_title_commons">Γιατί δεν βλέπω αυτό τα widget εφαρμογών στη λίστα widgets;</string>
-    <string name="faq_1_text_commons">Είναι πολύ πιθανό επειδή μετακινήσατε την εφαρμογή σε μια κάρτα SD. Υπάρχει ένας περιορισμός του συστήματος Android που αποκρύπτει τα συγκεκριμένα widget εφαρμογών
+    <string name="before_asking_question">Πριν κάνετε μια ερώτηση, διαβάστε πρώτα τις</string>
+    <string name="faq_1_title_commons">Γιατί δεν βλέπω αυτό το Γραφικό στοιχείο εφαρμογής στη λίστα;</string>
+    <string name="faq_1_text_commons">Είναι πολύ πιθανό επειδή μετακινήσατε την εφαρμογή σε μια κάρτα SD. Υπάρχει ένας περιορισμός του συστήματος Android που αποκρύπτει τα συγκεκριμένα Γραφικά στοιχεία εφαρμογών
        σε αυτή την περίπτωση. Η μόνη λύση είναι να μετακινήσετε την εφαρμογή πίσω στην εσωτερική αποθήκευση μέσω των ρυθμίσεων της συσκευής σας.</string>
     <string name="faq_2_title_commons">Θέλω να σας υποστηρίξω, αλλά δεν μπορώ να δωρίσω χρήματα. Υπάρχει κάτι άλλο που μπορώ να κάνω;</string>
     <string name="faq_2_text_commons">Ναι φυσικά. Μπορείτε να διαδώσετε το όνομα σχετικά με τις εφαρμογές μας ή να δώσετε καλή ανατροφοδότηση και αξιολογήσεις. Μπορείτε επίσης να βοηθήσετε με τη μετάφραση των εφαρμογών σε μια νέα γλώσσα ή απλά να ενημερώσετε μερικές υπάρχουσες μεταφράσεις.
         Μπορείτε να βρείτε τον οδηγό στο https://github.com/SimpleMobileTools/General-Discussion , ή απλά ένα μήνυμα στο hello@simplemobiletools.com αν χρειάζεστε βοήθεια.</string>
     <string name="faq_3_title_commons">Διαγραφή κάποιων αρχείων κατά λάθος, πώς μπορώ να τα ανακτήσω;</string>
     <string name="faq_3_text_commons">Δυστυχώς, δεν μπορείτε. Τα αρχεία διαγράφονται αμέσως μετά το παράθυρο διαλόγου επιβεβαίωσης, δεν υπάρχει διαθέσιμος Κάδος απορριμμάτων.</string>
-    <string name="faq_4_title_commons">Δεν μου αρέσουν τα χρώματα widget, μπορώ να τα αλλάξω;</string>
-    <string name="faq_4_text_commons">Ναι, καθώς σύρετε ένα γραφικό στοιχείο στην αρχική οθόνη σας, εμφανίζεται μια οθόνη διαμόρφωσης widget. Θα δείτε έγχρωμα τετράγωνα στην κάτω αριστερή γωνία, απλά πατήστε τα για να επιλέξετε ένα νέο χρώμα. Μπορείτε να χρησιμοποιήσετε το ρυθμιστικό για να ρυθμίσετε το alpha επίσης.</string>
+    <string name="faq_4_title_commons">Δεν μου αρέσουν τα χρώματα του Γραφικού στοιχείου, μπορώ να τα αλλάξω;</string>
+    <string name="faq_4_text_commons">Ναι, καθώς σύρετε ένα γραφικό στοιχείο στην αρχική οθόνη σας, εμφανίζεται μια οθόνη διαμόρφωσης Γραφικού στοιχείου. Θα δείτε έγχρωμα τετράγωνα στην κάτω αριστερή γωνία, απλά πατήστε τα για να επιλέξετε ένα νέο χρώμα. Μπορείτε να χρησιμοποιήσετε το ρυθμιστικό για να ρυθμίσετε το alpha επίσης.</string>
     <string name="faq_5_title_commons">Μπορώ να επαναφέρω με κάποιο τρόπο τα διαγραμμένα αρχεία;</string>
     <string name="faq_5_text_commons">Εάν έχουν πραγματικά διαγραφεί, δεν μπορείτε. Ωστόσο, μπορείτε να ενεργοποιήσετε τη χρήση του Κάδου Ανακύκλωσης αντί της διαγραφής στις ρυθμίσεις της εφαρμογής. Αυτό θα μετακινήσει απλώς τα αρχεία σε αυτόν αντί να τα διαγράψει.</string>
     <string name="faq_6_title_commons">Το εικονίδιο εκκίνησης εφαρμογών εξαφανίστηκε. Τι μπορώ να κάνω?</string>
-    <string name="faq_6_text_commons">Προκαλείται από τον Εκκινητή σας που δεν υποστηρίζει την προσαρμογή εικονιδίων κατάλληλα. Δοκιμάστε να ξεκινήσει η εφαρμογή μέσω του Google Play ή κάποιο widget, εάν είναι διαθέσιμο.
+    <string name="faq_6_text_commons">Προκαλείται από τον Εκκινητή σας που δεν υποστηρίζει την προσαρμογή εικονιδίων κατάλληλα. Δοκιμάστε να ξεκινήσει η εφαρμογή μέσω του Google Play ή κάποιο Γραφικό στοιχείό, εάν είναι διαθέσιμο.
         Μόλις ξεκινήσει, απλά επαναφέρετε το προεπιλεγμένο πορτοκαλί εικονίδιο #F57C00. Μπορεί να χρειαστεί να επανεγκαταστήσετε την εφαρμογή στη χειρότερη περίπτωση.</string>
 
     <!-- License -->
@@ -653,4 +655,8 @@
     <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
     <string name="filters_title">Android Photo Filters (image filters)</string>
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
+
+    <!-- Google Play listing -->
+    <string name="deprecated_app">ΚΑΤΑΡΓΗΣΗ: Αυτή η έκδοση της εφαρμογής δεν υποστηρίζεται πλέον, λάβετε την έκδοση Pro εδώ https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">Μην ξεχνάτε οτι αν απεγκατασταθεί εντός 2 ωρών, θα επιστραφούν αυτόματα τα χρήματα σας. Αν θέλετε επιστροφή χρημάτων οποιαδήποτε στιγμή αργότερα, απλά επικοινωνήστε μαζί μας στο hello@simplemobiletools.com και θα τα λάβετε. Αυτό το κάνει εύκολότερο για να την δοκιμάσετε :)</string>
 </resources>

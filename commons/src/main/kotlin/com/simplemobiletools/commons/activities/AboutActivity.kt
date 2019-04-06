@@ -185,6 +185,4 @@ class AboutActivity : BaseSimpleActivity() {
         val year = Calendar.getInstance().get(Calendar.YEAR)
         about_copyright.text = String.format(getString(R.string.copyright), versionName, year)
     }
-
-    private fun getStoreUrl() = "https://play.google.com/store/apps/details?id=${packageName.removeSuffix(".debug")}"
 }

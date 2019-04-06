@@ -5,11 +5,13 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import java.io.File
 
-data class FileDirItem(val path: String, val name: String = "", var isDirectory: Boolean = false, var children: Int = 0, var size: Long = 0L) :
+open class FileDirItem(val path: String, val name: String = "", var isDirectory: Boolean = false, var children: Int = 0, var size: Long = 0L) :
         Comparable<FileDirItem> {
     companion object {
         var sorting = 0
     }
+
+    override fun toString() = "FileDirItem(path=$path, name=$name, isDirectory=$isDirectory, children=$children, size=$size)"
 
     override fun compareTo(other: FileDirItem): Int {
         return if (isDirectory && !other.isDirectory) {
@@ -75,9 +77,9 @@ data class FileDirItem(val path: String, val name: String = "", var isDirectory:
 
     fun getSongTitle() = path.getFileSongTitle()
 
-    fun getResolution() = path.getResolution()
+    fun getResolution(context: Context) = context.getResolution(path)
 
-    fun getVideoResolution() = path.getVideoResolution()
+    fun getVideoResolution(context: Context) = context.getVideoResolution(path)
 
     fun getImageResolution() = path.getImageResolution()
 }

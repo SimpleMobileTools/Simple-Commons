@@ -69,6 +69,11 @@ fun Activity.appLaunched(appId: String) {
     if (baseConfig.appRunCount % 50 == 0 && !isAProApp()) {
         showDonateOrUpgradeDialog()
     }
+
+    if (baseConfig.appRunCount > 1003 && !baseConfig.wasRateUsPromptShown) {
+        baseConfig.wasRateUsPromptShown = true
+        RateUsDialog(this)
+    }
 }
 
 fun Activity.showDonateOrUpgradeDialog() {
@@ -114,26 +119,30 @@ fun Activity.isShowingSAFDialog(path: String): Boolean {
 
 fun BaseSimpleActivity.isShowingOTGDialog(path: String): Boolean {
     return if (isPathOnOTG(path) && (baseConfig.OTGTreeUri.isEmpty() || !hasProperStoredTreeUri(true))) {
-        runOnUiThread {
-            if (!isDestroyed && !isFinishing) {
-                WritePermissionDialog(this, true) {
-                    Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
-                        if (resolveActivity(packageManager) == null) {
-                            type = "*/*"
-                        }
+        showOTGPermissionDialog()
+        true
+    } else {
+        false
+    }
+}
 
-                        if (resolveActivity(packageManager) != null) {
-                            startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
-                        } else {
-                            toast(R.string.unknown_error_occurred)
-                        }
+fun Activity.showOTGPermissionDialog() {
+    runOnUiThread {
+        if (!isDestroyed && !isFinishing) {
+            WritePermissionDialog(this, true) {
+                Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
+                    if (resolveActivity(packageManager) == null) {
+                        type = "*/*"
+                    }
+
+                    if (resolveActivity(packageManager) != null) {
+                        startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
+                    } else {
+                        toast(R.string.unknown_error_occurred)
                     }
                 }
             }
         }
-        true
-    } else {
-        false
     }
 }
 

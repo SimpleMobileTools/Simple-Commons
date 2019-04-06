@@ -102,6 +102,9 @@ const val WAS_INITIAL_UPGRADE_TO_PRO_SHOWN = "was_initial_upgrade_to_pro_shown"
 const val WAS_APP_ICON_CUSTOMIZATION_WARNING_SHOWN = "was_app_icon_customization_warning_shown"
 const val APP_SIDELOADING_STATUS = "app_sideloading_status"
 const val DATE_FORMAT = "date_format"
+const val WAS_OTG_HANDLED = "was_otg_handled_2"
+const val WAS_UPGRADED_FROM_FREE_SHOWN = "was_upgraded_from_free_shown"
+const val WAS_RATE_US_PROMPT_SHOWN = "was_rate_us_prompt_shown"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1

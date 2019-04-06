@@ -30,7 +30,8 @@ fun Context.getSDCardPath(): String {
     }
 
     val fullSDpattern = Pattern.compile("^/storage/[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$")
-    var sdCardPath = directories.firstOrNull { fullSDpattern.matcher(it).matches() } ?: directories.firstOrNull { !physicalPaths.contains(it.toLowerCase()) } ?: ""
+    var sdCardPath = directories.firstOrNull { fullSDpattern.matcher(it).matches() }
+            ?: directories.firstOrNull { !physicalPaths.contains(it.toLowerCase()) } ?: ""
 
     // on some devices no method retrieved any SD card path, so test if its not sdcard1 by any chance. It happened on an Android 5.1
     if (sdCardPath.trimEnd('/').isEmpty()) {
@@ -200,7 +201,7 @@ fun Context.getOTGFastDocumentFile(path: String): DocumentFile? {
 
     if (baseConfig.OTGPartition.isEmpty()) {
         baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/').trimEnd('/')
-        baseConfig.OTGPath = "/storage/${baseConfig.OTGPartition}"
+        updateOTGPathFromPartition()
     }
 
     val relativePath = Uri.encode(path.substring(baseConfig.OTGPath.length).trim('/'))
@@ -432,6 +433,14 @@ fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolea
     if (fileDeleted) {
         deleteFromMediaStore(fileDirItem.path)
         callback?.invoke(true)
+    }
+}
+
+fun Context.updateOTGPathFromPartition() {
+    baseConfig.OTGPath = if (File("/storage/${baseConfig.OTGPartition}").exists()) {
+        "/storage/${baseConfig.OTGPartition}"
+    } else {
+        "/mnt/media_rw/${baseConfig.OTGPartition}"
     }
 }
 

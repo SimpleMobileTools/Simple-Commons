@@ -302,4 +302,16 @@ open class BaseConfig(val context: Context) {
             else -> DATE_FORMAT_ONE
         }
     }
+
+    var wasOTGHandled: Boolean
+        get() = prefs.getBoolean(WAS_OTG_HANDLED, false)
+        set(wasOTGHandled) = prefs.edit().putBoolean(WAS_OTG_HANDLED, wasOTGHandled).apply()
+
+    var wasUpgradedFromFreeShown: Boolean
+        get() = prefs.getBoolean(WAS_UPGRADED_FROM_FREE_SHOWN, false)
+        set(wasUpgradedFromFreeShown) = prefs.edit().putBoolean(WAS_UPGRADED_FROM_FREE_SHOWN, wasUpgradedFromFreeShown).apply()
+
+    var wasRateUsPromptShown: Boolean
+        get() = prefs.getBoolean(WAS_RATE_US_PROMPT_SHOWN, false)
+        set(wasRateUsPromptShown) = prefs.edit().putBoolean(WAS_RATE_US_PROMPT_SHOWN, wasRateUsPromptShown).apply()
 }

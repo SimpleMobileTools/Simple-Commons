@@ -166,7 +166,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 }
                 baseConfig.OTGTreeUri = resultData.dataString
                 baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/').trimEnd('/')
-                baseConfig.OTGPath = "/storage/${baseConfig.OTGPartition}"
+                updateOTGPathFromPartition()
 
                 val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
                 applicationContext.contentResolver.takePersistableUriPermission(resultData.data, takeFlags)

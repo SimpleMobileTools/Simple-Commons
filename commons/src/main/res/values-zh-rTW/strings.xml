@@ -23,8 +23,8 @@
     <string name="transparent_color">透明顏色</string>
     <string name="select_a_different_color">選取不同的顏色</string>
     <string name="download">下載</string>
-    <string name="notification">Notification</string>
-    <string name="email">Email</string>
+    <string name="notification">通知</string>
+    <string name="email">電子信箱</string>
 
     <!-- Favorites -->
     <string name="favorites">我的最愛</string>
@@ -243,7 +243,7 @@
     <string name="do_not_ask_again">這情況不再詢問</string>
     <string name="yes">是</string>
     <string name="no">否</string>
-    <string name="maybe">Maybe</string>
+    <string name="maybe">或許</string>
 
     <plurals name="delete_warning">
         <item quantity="other">注意: 你正在刪除%d個資料夾</item>
@@ -538,6 +538,7 @@
     <string name="share_text">嘿，來試試看「%1$s」吧！ %2$s</string>
     <string name="invite_via">邀請</string>
     <string name="rate_us_underlined"><u>為我們評分</u></string>
+    <string name="rate">Rate</string>
     <string name="donate">捐贈</string>
     <string name="donate_underlined"><u>捐贈</u></string>
     <string name="follow_us">追蹤我們</string>
@@ -556,6 +557,7 @@
     <string name="update_thank_you">請更新[Simple Thank You]至最新版本</string>
     <string name="before_asking_question_read_faq">在您發問前，請先檢查程式設定及閱讀[常見問題]。或許解決方法就在那裡。</string>
     <string name="read_it">讀它</string>
+    <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -620,4 +622,8 @@
     <string name="sanselan_title">Apache Sanselan（讀取圖片詮釋資料）</string>
     <string name="filters_title">Android Photo Filters（圖片過濾器）</string>
     <string name="gesture_views_title">Gesture Views (可縮放的圖片)</string>
+
+    <!-- Google Play listing -->
+    <string name="deprecated_app">已捨棄: 這版本的應用程式不再維護，在這取得專業版  https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">別忘記如果您在2小時內解除安裝任何付費應用程式，將會自動被退款。若您在之後隨時想退款，只要透過 @simplemobiletools.com 聯絡我們，即可收到退款。這麼一來輕鬆就能試用了 :)</string>
 </resources>
