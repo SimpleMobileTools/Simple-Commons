@@ -238,7 +238,7 @@
     <string name="sort_randomly">Случайный порядок</string>
     <string name="ascending">По возрастанию</string>
     <string name="descending">По убыванию</string>
-    <string name="use_for_this_folder">Использовать только для этой папки</string>
+    <string name="use_for_this_folder">Использовать только для данной папки</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Подтверждение удаления</string>
@@ -623,7 +623,7 @@
     <string name="update_thank_you">Пожалуйста, обновите \"Simple Thank You\" до последней версии.</string>
     <string name="before_asking_question_read_faq">Прежде чем задать вопрос, пожалуйста, проверьте настройки приложения и прочтите FAQ (часто задаваемые вопросы). Возможно, решение есть.</string>
     <string name="read_it">Прочитать</string>
-    <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
+    <string name="rate_us_prompt">Привет,\n\nпохоже, вы уже давно используете данное приложение и мы очень ценим это.\n\nНе могли бы вы оказать нам услугу и оценить его в Google Play? Это действительно очень нам поможет.\n\nНезависимо от вашего решения данное сообщение больше не появится.\n\nСпасибо!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -690,6 +690,6 @@
     <string name="gesture_views_title">Gesture Views (масштабирование изображений)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">УСТАРЕВШЕЕ: данная версия приложения больше не поддерживается, переходите на версию Pro https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">Не забывайте, что если вы удалите любое платное приложение в течение 2 часов, вам будет автоматически возвращена сумма покупки. Если вы захотите вернуть деньги позднее, просто свяжитесь с нами по адресу hello@simplemobiletools.com и вы их получите. Так что можно легко опробовать это приложение :)</string>
 </resources>
