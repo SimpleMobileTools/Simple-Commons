@@ -63,7 +63,7 @@
     <string name="extension_cannot_be_empty">Filtypen kan ikke stå tom</string>
     <string name="source_file_doesnt_exist">Kildefilen %s eksisterer ikke</string>
     <string name="prepend_filenames">Tilføj forrest til filnavne</string>
-    <string name="append_filenames">Tilføj bagerst til filnavne (men før filtypenavnet)</string>
+    <string name="append_filenames">Tilføj bagerst til filnavne (foran filtypenavnet)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopier</string>
@@ -424,7 +424,7 @@
     <string name="purchase_simple_thank_you">Køb Simple Thank You</string>
     <string name="customize_colors">Rediger farver</string>
     <string name="customize_widget_colors">Rediger widget-farver</string>
-    <string name="use_english_language">Skift til Engelsk sprog</string>
+    <string name="use_english_language">Anvend engelsk sprog</string>
     <string name="show_hidden_items">Vis skjulte elementer</string>
     <string name="font_size">Skriftstørrelse</string>
     <string name="small">Lille</string>
@@ -434,7 +434,7 @@
     <string name="password_protect_hidden_items">Beskyt visning af skjulte elementer med en kode</string>
     <string name="password_protect_whole_app">Beskyt hele appen med en adgangskode</string>
     <string name="password_protect_file_deletion">Beskyt mod sletning og flytning med en kode</string>
-    <string name="keep_last_modified">Behold den gamle senest-ændret værdi ved filoperationer</string>
+    <string name="keep_last_modified">Behold den gamle senest ændrede værdi ved filoperationer</string>
     <string name="show_info_bubble">Vis en info-boble når jeg scroller med rullepanelet</string>
     <string name="prevent_phone_from_sleeping">Forhindr telefonen i at falde i søvn når appen er i forgrunden</string>
     <string name="skip_delete_confirmation">Spørg ikke om bekræftelse før sletning</string>
@@ -450,8 +450,8 @@
     <string name="recycle_bin_cleaning_interval">Interval for tømning af papirkurven</string>
     <string name="empty_recycle_bin">Tøm papirkurven</string>
     <string name="force_portrait_mode">Brug stående visning</string>
-    <string name="export_settings">Eksportér indstillinger</string>
-    <string name="import_settings">Importér indstillinger</string>
+    <string name="export_settings">Eksporter indstillinger</string>
+    <string name="import_settings">Importer indstillinger</string>
     <string name="settings_exported_successfully">Indstillinger eksporteret</string>
     <string name="settings_imported_successfully">Indstillinger importeret</string>
 
