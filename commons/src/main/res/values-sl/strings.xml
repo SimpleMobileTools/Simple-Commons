@@ -19,18 +19,18 @@
     <string name="deleting_folder">Brisanje mape \'%s\'</string>
     <string name="none">Nič</string>
     <string name="label">Oznaka</string>
-    <string name="transparent">Transparent</string>
-    <string name="transparent_color">Transparent color</string>
-    <string name="select_a_different_color">Select a different color</string>
-    <string name="download">Download</string>
-    <string name="notification">Notification</string>
+    <string name="transparent">Prosojno</string>
+    <string name="transparent_color">Prosojna barva</string>
+    <string name="select_a_different_color">Izberi drugo barvo</string>
+    <string name="download">Shrani lokalno</string>
+    <string name="notification">Obvestilo</string>
     <string name="email">Email</string>
 
     <!-- Favorites -->
     <string name="favorites">Priljubljeno</string>
     <string name="add_favorites">Dodaj priljubljene</string>
     <string name="add_to_favorites">Dodaj med priljubljene</string>
-    <string name="remove_from_favorites">Odstrani od priljubljenih</string>
+    <string name="remove_from_favorites">Odstrani iz priljubljenih</string>
 
     <!-- Search -->
     <string name="search">Iskanje</string>
@@ -175,7 +175,7 @@
     <string name="primary_color">Primarna barva</string>
     <string name="foreground_color">Barva ospredja</string>
     <string name="app_icon_color">Barva ikone aplikacije</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
+    <string name="bottom_navigation_bar_color">Barva spodnje navigacijske vrstice</string>
     <string name="restore_defaults">Ponastavi na privzeto</string>
     <string name="change_color">Spremeni barvo</string>
     <string name="theme">Tema</string>
@@ -186,8 +186,8 @@
     <string name="undo_changes_confirmation">Res želite razveljaviti spremembe?</string>
     <string name="save_before_closing">Imate neshranjene spremembe. Jih želite shraniti pred izhodom?</string>
     <string name="apply_to_all_apps">Uveljavite barve za vse aplikacije iz serije Simple Apps</string>
-    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="app_icon_color_warning">OPOZORILO: Nekateri zaganjalniki ne znajo upravljati z ikono aplikacije, nastavljene po meri. Če ikona izgine, poskusite zagnati aplikacijo skozi Google Play ali kak drug pripomoček, če je to možno.
+        Ko je zagnana, nastavite nazaj privzeto oranžno ikono #F57C00. V najslabšem primeru bo potrebno aplikacijo ponovno namestiti.</string>
     <string name="share_colors_success">Barve so bile uspešno posodobljene. Nova tema \'Deljeno\' je bila dodana. V prihodnje za spreminjanje barv uporabljajte to.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -225,7 +225,7 @@
     <string name="empty_and_disable_recycle_bin">Izprazni in onemogoči Koš</string>
     <string name="undo">Razveljavi</string>
     <string name="redo">Ponovno uveljavi</string>
-    <string name="print">Print</string>
+    <string name="print">Natisni</string>
 
     <!-- Sorting -->
     <string name="sort_by">Razvrsti po</string>
@@ -251,7 +251,7 @@
     <string name="do_not_ask_again">To sejo ne sprašuj več</string>
     <string name="yes">Da</string>
     <string name="no">Ne</string>
-    <string name="maybe">Maybe</string>
+    <string name="maybe">Mogoče</string>
 
     <plurals name="delete_warning">
         <item quantity="one">OPOZORILO: Brišete %d mapo</item>
@@ -334,63 +334,63 @@
 
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d sekunda</item>
+        <item quantity="one">%d sekundo</item>
         <item quantity="two">%d sekundi</item>
         <item quantity="few">%d sekunde</item>
         <item quantity="other">%d sekund</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minuta</item>
+        <item quantity="one">%d minuto</item>
         <item quantity="two">%d minuti</item>
         <item quantity="few">%d minute</item>
         <item quantity="other">%d minut</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d ura</item>
+        <item quantity="one">%d uro</item>
         <item quantity="two">%d uri</item>
         <item quantity="few">%d ure</item>
         <item quantity="other">%d ur</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d day</item>
-        <item quantity="two">%d days</item>
-        <item quantity="few">%d days</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d dan</item>
+        <item quantity="two">%d dni</item>
+        <item quantity="few">%d dni</item>
+        <item quantity="other">%d dni</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="two">%d weeks</item>
-        <item quantity="few">%d weeks</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d teden</item>
+        <item quantity="two">%d tedna</item>
+        <item quantity="few">%d tedne</item>
+        <item quantity="other">%d tednov</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">%d month</item>
-        <item quantity="two">%d months</item>
-        <item quantity="few">%d months</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d mesec</item>
+        <item quantity="two">%d meseca</item>
+        <item quantity="few">%d mesece</item>
+        <item quantity="other">%d mesecev</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d year</item>
-        <item quantity="two">%d years</item>
-        <item quantity="few">%d years</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d leto</item>
+        <item quantity="two">%d leti</item>
+        <item quantity="few">%d leta</item>
+        <item quantity="other">%d let</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d sekunda prej</item>
+        <item quantity="one">%d sekundo prej</item>
         <item quantity="two">%d sekundi prej</item>
         <item quantity="few">%d sekunde prej</item>
         <item quantity="other">%d sekund prej</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">%d minuta prej</item>
+        <item quantity="one">%d minuto prej</item>
         <item quantity="two">%d minuti prej</item>
         <item quantity="few">%d minute prej</item>
         <item quantity="other">%d minut prej</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">%d ura prej</item>
+        <item quantity="one">%d uro prej</item>
         <item quantity="two">%d uri prej</item>
         <item quantity="few">%d ure prej</item>
         <item quantity="other">%d ur prej</item>
@@ -402,66 +402,66 @@
         <item quantity="other">%d dni prej</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d week before</item>
-        <item quantity="two">%d weeks before</item>
-        <item quantity="few">%d weeks before</item>
-        <item quantity="other">%d weeks before</item>
+        <item quantity="one">%d teden prej</item>
+        <item quantity="two">%d tedna prej</item>
+        <item quantity="few">%d tedne prej</item>
+        <item quantity="other">%d tednov prej</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d month before</item>
-        <item quantity="two">%d months before</item>
-        <item quantity="few">%d months before</item>
-        <item quantity="other">%d months before</item>
+        <item quantity="one">%d mesec prej</item>
+        <item quantity="two">%d meseca prej</item>
+        <item quantity="few">%d mesece prej</item>
+        <item quantity="other">%d mesecev prej</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d year before</item>
-        <item quantity="two">%d years before</item>
-        <item quantity="few">%d years before</item>
-        <item quantity="other">%d years before</item>
+        <item quantity="one">%d leto prej</item>
+        <item quantity="two">%d leti prej</item>
+        <item quantity="few">%d leta prej</item>
+        <item quantity="other">%d let prej</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d sekunda</item>
+        <item quantity="one">%d sekundo</item>
         <item quantity="two">%d sekundi</item>
         <item quantity="few">%d sekunde</item>
         <item quantity="other">%d sekund</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d minuta</item>
+        <item quantity="one">%d minuto</item>
         <item quantity="two">%d minuti</item>
         <item quantity="few">%d minute</item>
         <item quantity="other">%d minut</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d ura</item>
+        <item quantity="one">%d uro</item>
         <item quantity="two">%d uri</item>
         <item quantity="few">%d ure</item>
         <item quantity="other">%d ur</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="two">%d days</item>
-        <item quantity="few">%d days</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d dan</item>
+        <item quantity="two">%d dni</item>
+        <item quantity="few">%d dni</item>
+        <item quantity="other">%d dni</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="two">%d weeks</item>
-        <item quantity="few">%d weeks</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d teden</item>
+        <item quantity="two">%d tedna</item>
+        <item quantity="few">%d tedne</item>
+        <item quantity="other">%d tednov</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d month</item>
-        <item quantity="two">%d months</item>
-        <item quantity="few">%d months</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d mesec</item>
+        <item quantity="two">%d meseca</item>
+        <item quantity="few">%d mesece</item>
+        <item quantity="other">%d mesecev</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d year</item>
-        <item quantity="two">%d years</item>
-        <item quantity="few">%d years</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d leto</item>
+        <item quantity="two">%d leti</item>
+        <item quantity="few">%d leta</item>
+        <item quantity="other">%d let</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -497,13 +497,13 @@
     <string name="password_protect_hidden_items">Zaščiti skrite elemete z geslom</string>
     <string name="password_protect_whole_app">Z geslom zaščiti celotno aplikacijo</string>
     <string name="password_protect_file_deletion">Z geslom zaščiti brisanje in premikanje datotek</string>
-    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
+    <string name="keep_last_modified">Obdrži stare vrednosti atributa zadnjič spremenjeno</string>
     <string name="show_info_bubble">Prikaži info mehurček pri premikanju drsnika</string>
     <string name="prevent_phone_from_sleeping">Prepreči prehod v stanje mirovanja, dokler je aplikacija v ospredju</string>
     <string name="skip_delete_confirmation">Vedno preskoči potrditev brisanja</string>
     <string name="enable_pull_to_refresh">Omogočite poteg z vrha za ponovno nalaganje</string>
     <string name="use_24_hour_time_format">Uporabljaj 24-urni format</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="change_date_and_time_format">Spremeni obliko zapisa datuma in ure</string>
     <string name="sunday_first">Začni teden v nedeljo</string>
     <string name="widgets">Pripomočki</string>
     <string name="use_same_snooze">Vedno uporabi enak čas dremeža</string>
@@ -513,10 +513,10 @@
     <string name="recycle_bin_cleaning_interval">Čas med čiščenji Koša</string>
     <string name="empty_recycle_bin">Izprazni Koš</string>
     <string name="force_portrait_mode">Vsili pokončni zaslon</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="export_settings">Izvozi nastavitve</string>
+    <string name="import_settings">Uvozi nastavitve</string>
+    <string name="settings_exported_successfully">Nastavitve uspešno izvožene</string>
+    <string name="settings_imported_successfully">Nastavitve uspešno uvožene</string>
 
     <!-- Setting sections -->
     <string name="visibility">Vidljivost</string>
@@ -527,7 +527,7 @@
     <string name="saving_label">Shranjevanje</string>
     <string name="startup">Zagon</string>
     <string name="text">Besedilo</string>
-    <string name="migrating">Migrating</string>
+    <string name="migrating">Migracija</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Obnovi to datoteko</string>
@@ -538,8 +538,8 @@
     <string name="empty_recycle_bin_confirmation">Res želite izprazniti Koš? Datoteke bodo izgubljene za vedno.</string>
     <string name="recycle_bin_empty">Koš je prazen</string>
     <string name="moving_recycle_bin_items_disabled">Premikanje elementov v Košu je onemogočeno, uporabite Obnovitev</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">Pokaži Koš</string>
+    <string name="hide_the_recycle_bin">Skrij Koš</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Premikanje %d elementa v Koš</item>
@@ -557,12 +557,12 @@
     <string name="exporting_failed">Izvažanje neuspešno</string>
     <string name="importing_some_entries_failed">Uvažanje nekaterih vnosov ni uspelo</string>
     <string name="exporting_some_entries_failed">Izvažanje nekaterih vnosov ni uspelo</string>
-    <string name="no_entries_for_importing">No entries for importing have been found</string>
+    <string name="no_entries_for_importing">Za uvoz ni bilo najdenih nobenih vnosov</string>
     <string name="no_entries_for_exporting">Za izvoz ni bilo najdenih nobenih vnosov</string>
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="usb_detected">Kot kaže, imate na napravo priključeno USB napravo. Da zagotovite pravilno prikazovanje datotek, morate odobriti dodatna dovoljenja.</string>
     <string name="confirm_usb_storage_access_text">Izberitre korensko mapo naprave USB na naslednjem zaslonu, da odobrite dostop</string>
     <string name="wrong_root_selected_usb">Izbrana je bila napapačna mapa. Prosimo, izberite korensko mapo naprave USB.</string>
 
@@ -623,7 +623,7 @@
     <string name="it_is_free">Še vedno je zastonj do: %s. Če jo naložite do takrat, jo boste lahko zastonj uporabljali neomejeno časa.</string>
     <string name="more_info">Več informacij</string>
     <string name="upgrade">Nadgradi</string>
-    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
+    <string name="upgrade_calendar">Lokalno shranjene dogodke lahko migrirate ročno preko izvoza v .ics datoteko, katero kasneje uvozite nazaj. Opcije za uvoz/izvoz najdete v meniju na glavnem zaslonu.</string>
 
     <!-- About -->
     <string name="about">O aplikaciji</string>
@@ -636,7 +636,7 @@
     <string name="share_text">Oglejte si tudi %1$s na %2$s</string>
     <string name="invite_via">Povabite preko</string>
     <string name="rate_us_underlined"><u>Ocenite nas</u></string>
-    <string name="rate">Rate</string>
+    <string name="rate">Ocenite</string>
     <string name="donate">Donirajte</string>
     <string name="donate_underlined"><u>Donirajte</u></string>
     <string name="follow_us">Sledite nam</string>
@@ -653,9 +653,9 @@
     </string>
     <string name="purchase">Kupi</string>
     <string name="update_thank_you">Prosimo nadgradite Simple Thank You na zadnjo verzijo</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
+    <string name="before_asking_question_read_faq">Pred zastavljanjem vprašanje preverite nastavitve aplikacije in preberite pogosta vprašanja in odgovore. Morda je rešitev že tam.</string>
     <string name="read_it">Preberite</string>
-    <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
+    <string name="rate_us_prompt">Živjo,\n\nizgleda, da že nekaj časa uporabljate aplikacijo. To zares cenimo.\n\nLahko nam naredite uslugo in nas ocenite na Google Play. To bi nam res pomagalo.\n\nKakorkoli se že boste odločili, tega sporočila ne bomo več prikazovali.\n\nHvala!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -670,7 +670,7 @@
 
     <string name="sideloaded_app">
         <![CDATA[
-            It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
+            Izgleda, da je vaša verzija aplikacije pokvarjena. Prosimo naložite originalno verzijo od <a href="%s">tukaj</a>.
         ]]>
     </string>
 
@@ -688,9 +688,9 @@
     <string name="faq_4_text_commons">Seveda. Ko pripomoček dodate na domači zaslon, sem vam prikaže zaslon z nastavitvami. S klikom na barvne kvadratke, lahko izberete novo barvo. Z drsnikom lahko nastavljate tudi prosojnost.</string>
     <string name="faq_5_title_commons">Lahko kako obnovim izbrisane datoteke?</string>
     <string name="faq_5_text_commons">Če so bile res izbrisane, jih ne morete. Lahko pa v nastavitvah omogočite Koš. Tako bodo datoteke premaknjene v Koš, od koder jih lahko obnovite, ne pa popolnoma izbrisane.</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="faq_6_title_commons">Ikona v zaganjalniku je izginila. Kaj lahko naredim?</string>
+    <string name="faq_6_text_commons">Nekateri zaganjalniki ne prepoznajo posebej nastavljenih ikon. Poskusite zagnati aplikacijo preko Google Play ali kakega pripomočka, če je to mogoče.
+        Ko se bo aplikacija zagnala, nastavite nazaj originalno privzeto oranžno ikono #F57C00. V najslabšem primeru bo potrebno aplikacijo ponovno naložiti.</string>
 
     <!-- License -->
     <string name="notice">Da si olajšamo delo, aplikacija uporablja naslednje programske knjižnice. Hvala.</string>
@@ -700,27 +700,27 @@
     <string name="glide_title">Glide (nalaganje in predpomnjevanje slik)</string>
     <string name="picasso_title">Picasso (nalaganje in predpomnjevanje slik)</string>
     <string name="cropper_title">Android Image Cropper (obrezovanje in rotacija slik)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (potegi levo in desno)</string>
     <string name="joda_title">Joda-Time (nadomestitev za Java datume)</string>
-    <string name="stetho_title">Stetho (debugging databases)</string>
-    <string name="otto_title">Otto (event bus)</string>
+    <string name="stetho_title">Stetho (razhroščevalne baze)</string>
+    <string name="otto_title">Otto (dogodkovno vodilo)</string>
     <string name="photoview_title">PhotoView (povečevanje slik GIF)</string>
     <string name="pattern_title">PatternLockView (zaščita z vzorci)</string>
     <string name="reprint_title">Reprint (zaščita s prtnimi odtisi)</string>
-    <string name="gif_drawable_title">Robolectric (testing framework)</string>
+    <string name="gif_drawable_title">Robolectric (testno okolje)</string>
     <string name="autofittextview_title">AutoFitTextView (spreminjanje velikosti besedila)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
+    <string name="robolectric_title">Robolectric (testno okolje)</string>
+    <string name="espresso_title">Espresso (testirni pomočnik)</string>
     <string name="gson_title">Gson (razčenjevalec JSON)</string>
     <string name="leak_canary_title">Leak Canary (memory leak detektor)</string>
-    <string name="number_picker_title">Number Picker (prilagodljiv pripomoček za izbrianje številk)</string>
+    <string name="number_picker_title">Number Picker (prilagodljiv pripomoček za izbiranje številk)</string>
     <string name="exoplayer_title">ExoPlayer (predvajalnik videjev)</string>
     <string name="panorama_view_title">VR Panorama View (prikazovanje panoram)</string>
     <string name="sanselan_title">Apache Sanselan (branje metapodatkov slik)</string>
     <string name="filters_title">Android Photo Filters (filtri za slike)</string>
-    <string name="gesture_views_title">Gesture Views (zoomable images)</string>
+    <string name="gesture_views_title">Gesture Views (povečljive slike)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">ZASTARELO: Ta verzija aplikacije se ne vzdržuje več, pridobite si Pro verzijo na https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">Ne pozabite - če odstranite katerokoli plačljivo aplikacijo v dveh urah, dobite povrnjen avtomatično denar. Če želite povrnitev denarja po preteku tega časa, nas kontaktirajte na hello@simplemobiletools.com in poskrbeli bomo za to. Zaradi tega je preizkušanje aplikacije še bolj preprosto. :)</string>
 </resources>
