@@ -90,6 +90,7 @@
     <string name="saving">Yn cadw…</string>
     <string name="could_not_create_folder">Methwyd â chreu\'r ffolder %s</string>
     <string name="could_not_create_file">Methwyd â chreu\'r ffeil %s</string>
+    <string name="no_new_items">No new items have been found</string>
 
     <!-- Create new -->
     <string name="create_new">Creu newydd</string>
@@ -621,7 +622,7 @@
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">Mae\’n ymddangos bod dyfais USB wedi\’i chysylltu â dy ddyfais. I sicrhau bod ei ffeiliau yn ymddangos yn gywir, rhaid rhoi caniatâd ychwanegol.</string>
+    <string name="usb_detected">Mae’n ymddangos bod dyfais USB wedi’i chysylltu â dy ddyfais. I sicrhau bod ei ffeiliau yn ymddangos yn gywir, rhaid rhoi caniatâd ychwanegol.</string>
     <string name="confirm_usb_storage_access_text">Dewisa ffolder craidd y ddyfais USB ar y sgrin nesaf i roi caniatâd</string>
     <string name="wrong_root_selected_usb">Dewiswyd y ffolder anghywir. Dewisa ffolder craidd dy ddyfais USB</string>
 
@@ -706,7 +707,7 @@
     <string name="donate_please">
         <![CDATA[
             S\'mae<br><br>
-            Gobeithio dy fod yn mwynhau\'r ap. Nid yw\'n cynnwys unrhyw hysbysebion, felly a fyddi di mor garedig â chefnogi ei ddatblygiad gan brynu ap <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>. Mi fydd hefyd yn stopio'r neges hon ymddangos eto.<br><br>
+            Gobeithio dy fod yn mwynhau\'r ap. Nid yw\'n cynnwys unrhyw hysbysebion, felly a fyddi di mor garedig â chefnogi ei ddatblygiad gan brynu ap <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>. Mi fydd hefyd yn stopio\'r neges hon ymddangos eto.<br><br>
             Diolch!
         ]]>
     </string>
