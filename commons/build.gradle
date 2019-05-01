@@ -38,6 +38,9 @@ dependencies {
     implementation 'com.duolingo.open:rtl-viewpager:1.0.3'
 
     kapt 'com.github.bumptech.glide:compiler:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    implementation 'androidx.core:core-ktx:1.0.1'
 }
 
 apply from: '../bintray-upload.gradle'

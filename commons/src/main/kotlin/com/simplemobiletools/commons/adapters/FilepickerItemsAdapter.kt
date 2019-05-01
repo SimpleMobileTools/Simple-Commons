@@ -11,7 +11,6 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.formatSize
 import com.simplemobiletools.commons.extensions.getColoredDrawableWithColor
-import com.simplemobiletools.commons.extensions.hasOTGConnected
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.filepicker_list_item.view.*
@@ -21,7 +20,6 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
 
     private val folderDrawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_folder, textColor)
     private val fileDrawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_file, textColor)
-    private val hasOTGConnected = activity.hasOTGConnected()
 
     init {
         folderDrawable.alpha = 180
@@ -32,7 +30,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.filepicker_list_item, parent)
 
-    override fun onBindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val fileDirItem = fileDirItems[position]
         holder.bindView(fileDirItem, true, false) { itemView, adapterPosition ->
             setupView(itemView, fileDirItem)
@@ -54,7 +52,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
 
     override fun getItemSelectionKey(position: Int) = fileDirItems[position].path.hashCode()
 
-    override fun onViewRecycled(holder: MyRecyclerViewAdapter.ViewHolder) {
+    override fun onViewRecycled(holder: ViewHolder) {
         super.onViewRecycled(holder)
         if (!activity.isDestroyed && !activity.isFinishing) {
             Glide.with(activity).clear(holder.itemView.list_item_icon!!)
@@ -77,7 +75,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
                         .centerCrop()
                         .error(fileDrawable)
 
-                var itemToLoad = if (fileDirItem.name.endsWith(".apk", true)) {
+                val itemToLoad = if (fileDirItem.name.endsWith(".apk", true)) {
                     val packageInfo = context.packageManager.getPackageArchiveInfo(path, PackageManager.GET_ACTIVITIES)
                     if (packageInfo != null) {
                         val appInfo = packageInfo.applicationInfo
