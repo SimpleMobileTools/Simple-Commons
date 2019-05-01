@@ -23,7 +23,7 @@
     <string name="transparent_color">Áttetsző szín</string>
     <string name="select_a_different_color">Válasszon egy másik színt</string>
     <string name="download">Letöltés</string>
-    <string name="notification">Notification</string>
+    <string name="notification">Értesítés</string>
     <string name="email">Email</string>
 
     <!-- Favorites -->
@@ -90,7 +90,7 @@
     <string name="saving">Mentés…</string>
     <string name="could_not_create_folder">Nem lehet elkészíteni a mappát %s</string>
     <string name="could_not_create_file">Nem lehet elkészíteni a fájlt %s</string>
-    <string name="no_new_items">No new items have been found</string>
+    <string name="no_new_items">Nem található új elem</string>
 
     <!-- Create new -->
     <string name="create_new">Új készítés</string>
@@ -246,7 +246,7 @@
     <string name="do_not_ask_again">Ne mutassa újra ebben a menetben</string>
     <string name="yes">Igen</string>
     <string name="no">Nem</string>
-    <string name="maybe">Maybe</string>
+    <string name="maybe">Talán</string>
 
     <plurals name="delete_warning">
         <item quantity="one">FIGYELEM: Törli %d mappát!</item>
@@ -571,7 +571,7 @@
     <string name="share_text">Gyere el %1$s - %2$s</string>
     <string name="invite_via">Hívja meg</string>
     <string name="rate_us_underlined"><u>Értékeljen minket</u></string>
-    <string name="rate">Rate</string>
+    <string name="rate">Értékelés</string>
     <string name="donate">Támogatás</string>
     <string name="donate_underlined"><u>Támogatás</u></string>
     <string name="follow_us">Kövessen minket</string>
