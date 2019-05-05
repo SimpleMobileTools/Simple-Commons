@@ -90,7 +90,7 @@
     <string name="saving">儲存中…</string>
     <string name="could_not_create_folder">無法建立資料夾 %s</string>
     <string name="could_not_create_file">無法建立檔案 %s</string>
-    <string name="no_new_items">No new items have been found</string>
+    <string name="no_new_items">未發現新的項目</string>
 
     <!-- Create new -->
     <string name="create_new">新增</string>
@@ -219,7 +219,7 @@
     <string name="undo">復原</string>
     <string name="redo">取消復原</string>
     <string name="print">列印</string>
-    <string name="create_shortcut">Create shortcut</string>
+    <string name="create_shortcut">建立捷徑</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序</string>
@@ -235,7 +235,7 @@
     <string name="ascending">遞增</string>
     <string name="descending">遞減</string>
     <string name="use_for_this_folder">僅套用於此資料夾</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">以實際值來排序數字部分</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">確定要進行刪除嗎?</string>
