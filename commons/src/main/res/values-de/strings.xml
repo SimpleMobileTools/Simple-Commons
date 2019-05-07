@@ -90,7 +90,7 @@
     <string name="saving">Speichern…</string>
     <string name="could_not_create_folder">Ordner %s konnte nicht erstellt werden</string>
     <string name="could_not_create_file">Datei %s konnte nicht erstellt werden</string>
-    <string name="no_new_items">No new items have been found</string>
+    <string name="no_new_items">Keine neuen Elemente gefunden</string>
 
     <!-- Create new -->
     <string name="create_new">Neuer Ordner</string>
@@ -222,7 +222,7 @@
     <string name="undo">Rückgängig</string>
     <string name="redo">Wiederholen</string>
     <string name="print">Drucken</string>
-    <string name="create_shortcut">Create shortcut</string>
+    <string name="create_shortcut">Verknüpfung erstellen</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortieren nach</string>
@@ -249,7 +249,7 @@
     <string name="do_not_ask_again">Nicht erneut fragen (in dieser Sitzung)</string>
     <string name="yes">Ja</string>
     <string name="no">Nein</string>
-    <string name="maybe">Maybe</string>
+    <string name="maybe">Vielleicht</string>
 
     <plurals name="delete_warning">
         <item quantity="one">WARNUNG: %d Ordner soll gelöscht werden</item>
@@ -574,7 +574,7 @@
     <string name="share_text">Hey, wirf mal einen Blick auf %1$s: %2$s</string>
     <string name="invite_via">Einladen via</string>
     <string name="rate_us_underlined"><u>Bewerte uns im Play Store</u></string>
-    <string name="rate">Rate</string>
+    <string name="rate">Bewertung</string>
     <string name="donate">Spenden</string>
     <string name="donate_underlined"><u>Spenden</u></string>
     <string name="follow_us">Folge uns</string>
@@ -591,9 +591,9 @@
     </string>
     <string name="purchase">Kaufen</string>
     <string name="update_thank_you">Bitte Simple Thank You auf die neueste Version aktualisieren</string>
-    <string name="before_asking_question_read_faq">Bevor du eine Frage stellst, überprüfe bitte die App Einstellungen und lese dir die häufig gestellten Fragen (FAQ) durch. Vielleicht findest du dort eine Lösung.</string>
+    <string name="before_asking_question_read_faq">Bevor du eine Frage stellst, überprüfe bitte die App-Einstellungen und lese dir die häufig gestellten Fragen (FAQ) durch. Vielleicht findest du dort eine Lösung.</string>
     <string name="read_it">Bitte lesen</string>
-    <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
+    <string name="rate_us_prompt">Hallo,\n\nes sieht so aus, als würdest du diese App schon einige Zeit benutzen und wir schätzen das sehr.\n\nWenn wir dich um einen Gefallen bitten können, bitte bewerte uns auf Google Play. Das würde uns wirklich sehr helfen.\n\nEgal wie du dich entscheidest, wirst du diese Nachricht nicht noch einmal bekommen.\n\nDanke!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -659,6 +659,6 @@
     <string name="gesture_views_title">Gesture Views (Zoombare Bilder)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">DEPRECATED: Diese Version der App wird nicht länger unterstützt. Hol dir die Pro-Version unter https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">Vergiss nicht, wenn du eine bezahlte App innerhalb von 2 Stunden deinstalliert, wird dir der Betrag erstattet. Wenn du später eine Rückerstattung möchtest, kontaktiere uns einfach unter hello@simplemobiletools.com und du wirst sie bekommen. Das macht es einfach, die App einfach auszuprobieren :)</string>
 </resources>
