@@ -222,6 +222,7 @@
     <string name="undo">تراجع</string>
     <string name="redo">إعادة</string>
     <string name="print">Print</string>
+    <string name="create_shortcut">Create shortcut</string>
 
     <!-- Sorting -->
     <string name="sort_by">ترتيب حسب</string>
@@ -237,6 +238,7 @@
     <string name="ascending">تصاعدي</string>
     <string name="descending">تنازلي</string>
     <string name="use_for_this_folder">استخدم لهذا المجلد فقط</string>
+    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">هل أنت متأكد من أنك تريد متابعة الحذف؟</string>

@@ -227,6 +227,7 @@
     <string name="undo">Razveljavi</string>
     <string name="redo">Ponovno uveljavi</string>
     <string name="print">Natisni</string>
+    <string name="create_shortcut">Create shortcut</string>
 
     <!-- Sorting -->
     <string name="sort_by">Razvrsti po</string>
@@ -242,6 +243,7 @@
     <string name="ascending">Naraščajoče</string>
     <string name="descending">Padajoče</string>
     <string name="use_for_this_folder">Uporabi le za to mapo</string>
+    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Res želite nadaljevati s tem izborom?</string>

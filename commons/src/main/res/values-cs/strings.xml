@@ -225,6 +225,7 @@
     <string name="undo">Zpět</string>
     <string name="redo">Znovu</string>
     <string name="print">Tisk</string>
+    <string name="create_shortcut">Create shortcut</string>
 
     <!-- Sorting -->
     <string name="sort_by">Seřadit dle</string>
@@ -240,6 +241,7 @@
     <string name="ascending">Vzestupně</string>
     <string name="descending">Sestupně</string>
     <string name="use_for_this_folder">Použít pouze pro tuto složku</string>
+    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Opravdu chcete smazat dané soubory/složky?</string>
@@ -253,7 +255,7 @@
     <string name="maybe">Možná</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">UPOZORNĚNÍ: Chystáte se smazat %d složku/item>
+        <item quantity="one">UPOZORNĚNÍ: Chystáte se smazat %d složku</item>
         <item quantity="few">UPOZORNĚNÍ: Chystáte se smazat %d složky</item>
         <item quantity="other">UPOZORNĚNÍ: Chystáte se smazat %d složek</item>
     </plurals>
@@ -483,7 +485,7 @@
     <string name="recycle_bin_cleaning_interval">Interval vysypání koše</string>
     <string name="empty_recycle_bin">Vysypat odpadkový koš</string>
     <string name="force_portrait_mode">Vynutit zobrazení na výšku</string>
-    <string name="export_settings">Export nastavení/string>
+    <string name="export_settings">Export nastavení</string>
     <string name="import_settings">Import nastavení</string>
     <string name="settings_exported_successfully">Nastavení bylo úspěšně exportováno</string>
     <string name="settings_imported_successfully">Nastavení bylo úspěšně importováno</string>

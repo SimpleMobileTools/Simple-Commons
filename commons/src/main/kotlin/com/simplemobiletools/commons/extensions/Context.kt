@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.extensions
 
 import android.Manifest
+import android.app.Activity
 import android.content.ComponentName
 import android.content.ContentUris
 import android.content.Context
@@ -99,13 +100,23 @@ fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
 fun Context.toast(msg: String, length: Int = Toast.LENGTH_SHORT) {
     try {
         if (isOnMainThread()) {
-            Toast.makeText(applicationContext, msg, length).show()
+            doToast(this, msg, length)
         } else {
             Handler(Looper.getMainLooper()).post {
-                Toast.makeText(applicationContext, msg, length).show()
+                doToast(this, msg, length)
             }
         }
     } catch (e: Exception) {
+    }
+}
+
+private fun doToast(context: Context, message: String, length: Int) {
+    if (context is Activity) {
+        if (!context.isFinishing && !context.isDestroyed) {
+            Toast.makeText(context, message, length).show()
+        }
+    } else {
+        Toast.makeText(context, message, length).show()
     }
 }
 

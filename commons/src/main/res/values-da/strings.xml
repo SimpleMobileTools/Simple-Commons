@@ -222,6 +222,7 @@
     <string name="undo">Fortryd</string>
     <string name="redo">Gentag</string>
     <string name="print">Udskriv</string>
+    <string name="create_shortcut">Create shortcut</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorter efter</string>
@@ -237,6 +238,7 @@
     <string name="ascending">Stigende</string>
     <string name="descending">Faldende</string>
     <string name="use_for_this_folder">Anvend kun på denne mappe</string>
+    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Er du sikker på at du vil fortsætte med at slette?</string>

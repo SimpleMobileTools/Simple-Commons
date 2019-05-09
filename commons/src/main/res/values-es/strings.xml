@@ -222,6 +222,7 @@
     <string name="undo">Deshacer</string>
     <string name="redo">Rehacer</string>
     <string name="print">Imprimir</string>
+    <string name="create_shortcut">Create shortcut</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -237,6 +238,7 @@
     <string name="ascending">Ascendente</string>
     <string name="descending">Descendente</string>
     <string name="use_for_this_folder">Sólo para esta carpeta</string>
+    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">¿Está seguro de querer continuar con la eliminación?</string>

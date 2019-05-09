@@ -222,6 +222,7 @@
     <string name="undo">Ångra</string>
     <string name="redo">Gör om</string>
     <string name="print">Skriv ut</string>
+    <string name="create_shortcut">Create shortcut</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortera efter</string>
@@ -237,6 +238,7 @@
     <string name="ascending">Stigande</string>
     <string name="descending">Fallande</string>
     <string name="use_for_this_folder">Använd bara för denna mapp</string>
+    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Är du säker på att du vill fortsätta med borttagningen?</string>

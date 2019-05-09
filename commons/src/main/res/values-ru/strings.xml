@@ -225,6 +225,7 @@
     <string name="undo">Отменить</string>
     <string name="redo">Повторить</string>
     <string name="print">Печать</string>
+    <string name="create_shortcut">Create shortcut</string>
 
     <!-- Sorting -->
     <string name="sort_by">Сортировать по…</string>
@@ -240,6 +241,7 @@
     <string name="ascending">По возрастанию</string>
     <string name="descending">По убыванию</string>
     <string name="use_for_this_folder">Использовать только для данной папки</string>
+    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Подтверждение удаления</string>

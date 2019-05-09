@@ -105,6 +105,7 @@ const val DATE_FORMAT = "date_format"
 const val WAS_OTG_HANDLED = "was_otg_handled_2"
 const val WAS_UPGRADED_FROM_FREE_SHOWN = "was_upgraded_from_free_shown"
 const val WAS_RATE_US_PROMPT_SHOWN = "was_rate_us_prompt_shown"
+const val WAS_SORTING_BY_NUMERIC_VALUE_ADDED = "was_sorting_by_numeric_value_added"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
@@ -155,6 +156,7 @@ const val SORT_BY_TITLE = 2048
 const val SORT_BY_ARTIST = 4096
 const val SORT_BY_DURATION = 8192
 const val SORT_BY_RANDOM = 16384
+const val SORT_USE_NUMERIC_VALUE = 32768
 
 // security
 const val WAS_PROTECTION_HANDLED = "was_protection_handled"

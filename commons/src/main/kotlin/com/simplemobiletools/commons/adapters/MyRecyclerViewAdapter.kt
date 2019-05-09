@@ -270,7 +270,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         return ViewHolder(view)
     }
 
-    protected fun bindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder) {
+    protected fun bindViewHolder(holder: ViewHolder) {
         holder.itemView.tag = holder
     }
 

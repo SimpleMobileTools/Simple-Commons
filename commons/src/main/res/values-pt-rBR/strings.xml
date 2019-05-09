@@ -222,6 +222,7 @@
     <string name="undo">Undo</string>
     <string name="redo">Redo</string>
     <string name="print">Print</string>
+    <string name="create_shortcut">Create shortcut</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -237,6 +238,7 @@
     <string name="ascending">Crescente</string>
     <string name="descending">Decrescente</string>
     <string name="use_for_this_folder">Apenas para esta pasta</string>
+    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Deseja realmente excluir?</string>

@@ -222,6 +222,7 @@
     <string name="undo">Ongedaan maken</string>
     <string name="redo">Opnieuw</string>
     <string name="print">Printen</string>
+    <string name="create_shortcut">Snelkoppeling maken</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorteren op</string>
@@ -237,6 +238,7 @@
     <string name="ascending">Oplopend</string>
     <string name="descending">Aflopend</string>
     <string name="use_for_this_folder">Alleen voor deze map gebruiken</string>
+    <string name="sort_numeric_parts">Numerieke delen op daadwerkelijke waarde sorteren</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Deze items verwijderen?</string>

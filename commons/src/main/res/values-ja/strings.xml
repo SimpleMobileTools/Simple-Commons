@@ -219,6 +219,7 @@
     <string name="undo">元に戻す</string>
     <string name="redo">やり直し</string>
     <string name="print">印刷</string>
+    <string name="create_shortcut">Create shortcut</string>
 
     <!-- Sorting -->
     <string name="sort_by">並べ替え</string>
@@ -234,6 +235,7 @@
     <string name="ascending">昇順</string>
     <string name="descending">降順</string>
     <string name="use_for_this_folder">このフォルダのみに適用</string>
+    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">削除を続行してもよろしいですか？</string>

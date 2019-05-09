@@ -222,6 +222,7 @@
     <string name="undo">Undo</string>
     <string name="redo">Redo</string>
     <string name="print">Print</string>
+    <string name="create_shortcut">Create shortcut</string>
 
     <!-- Sorting -->
     <string name="sort_by">Rūšiuoti pagal</string>
@@ -237,6 +238,7 @@
     <string name="ascending">Didėjančiai</string>
     <string name="descending">Mažėjančiai</string>
     <string name="use_for_this_folder">Taikyti tik šiam aplankui</string>
+    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Ar tikrai norite ištrinti?</string>
