@@ -64,6 +64,7 @@
     <string name="source_file_doesnt_exist">Quelldatei %s existiert nicht</string>
     <string name="prepend_filenames">Dateinamen voranstellen</string>
     <string name="append_filenames">Dateinamen anhängen (vor Dateiendung)</string>
+    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopieren</string>

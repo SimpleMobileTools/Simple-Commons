@@ -64,6 +64,7 @@
     <string name="source_file_doesnt_exist">Il file di origine %s non esiste</string>
     <string name="prepend_filenames">Anteponi i nomi dei file</string>
     <string name="append_filenames">Aggiungi i nomi dei file (prima dell\'estensione)</string>
+    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copia</string>
