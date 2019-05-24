@@ -45,7 +45,7 @@ class RenameItemsPatternDialog(val activity: BaseSimpleActivity, val paths: Arra
                                     val dt = simpleDateFormat.parse(dateTime)
                                     val cal = Calendar.getInstance()
                                     cal.time = dt
-                                    val year = ensureTwoDigits(cal.get(Calendar.YEAR))
+                                    val year = cal.get(Calendar.YEAR).toString()
                                     val month = ensureTwoDigits(cal.get(Calendar.MONTH) + 1)
                                     val day = ensureTwoDigits(cal.get(Calendar.DAY_OF_MONTH))
                                     val hours = ensureTwoDigits(cal.get(Calendar.HOUR_OF_DAY))
