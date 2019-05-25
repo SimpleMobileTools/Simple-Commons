@@ -39,31 +39,52 @@ class RenameItemsPatternDialog(val activity: BaseSimpleActivity, val paths: Arra
                                                 ?: exif.getAttribute(ExifInterface.TAG_DATETIME)
                                     } else {
                                         exif.getAttribute(ExifInterface.TAG_DATETIME)
-                                    } ?: continue
+                                    }
 
-                                    val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd kk:mm:ss", Locale.ENGLISH)
-                                    val dt = simpleDateFormat.parse(dateTime)
-                                    val cal = Calendar.getInstance()
-                                    cal.time = dt
-                                    val year = cal.get(Calendar.YEAR).toString()
-                                    val month = ensureTwoDigits(cal.get(Calendar.MONTH) + 1)
-                                    val day = ensureTwoDigits(cal.get(Calendar.DAY_OF_MONTH))
-                                    val hours = ensureTwoDigits(cal.get(Calendar.HOUR_OF_DAY))
-                                    val minutes = ensureTwoDigits(cal.get(Calendar.MINUTE))
-                                    val seconds = ensureTwoDigits(cal.get(Calendar.SECOND))
+                                    var newName = view.rename_items_value.value
+                                    if (dateTime != null) {
+                                        val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd kk:mm:ss", Locale.ENGLISH)
+                                        val dt = simpleDateFormat.parse(dateTime)
+                                        val cal = Calendar.getInstance()
+                                        cal.time = dt
+                                        val year = cal.get(Calendar.YEAR).toString()
+                                        val month = ensureTwoDigits(cal.get(Calendar.MONTH) + 1)
+                                        val day = ensureTwoDigits(cal.get(Calendar.DAY_OF_MONTH))
+                                        val hours = ensureTwoDigits(cal.get(Calendar.HOUR_OF_DAY))
+                                        val minutes = ensureTwoDigits(cal.get(Calendar.MINUTE))
+                                        val seconds = ensureTwoDigits(cal.get(Calendar.SECOND))
 
-                                    val newName = view.rename_items_value.value
-                                            .replace("%Y", year, false)
-                                            .replace("%M", month, false)
-                                            .replace("%D", day, false)
-                                            .replace("%h", hours, false)
-                                            .replace("%m", minutes, false)
-                                            .replace("%s", seconds, false)
+                                        newName = newName
+                                                .replace("%Y", year, false)
+                                                .replace("%M", month, false)
+                                                .replace("%D", day, false)
+                                                .replace("%h", hours, false)
+                                                .replace("%m", minutes, false)
+                                                .replace("%s", seconds, false)
+                                    } else {
+                                        newName = newName
+                                                .replace("%Y", "", false)
+                                                .replace("%M", "", false)
+                                                .replace("%D", "", false)
+                                                .replace("%h", "", false)
+                                                .replace("%m", "", false)
+                                                .replace("%s", "", false)
+                                    }
 
-                                    val newPath = "${path.getParentPath()}/$newName"
+                                    var newPath = "${path.getParentPath()}/$newName"
 
-                                    if (File(newPath).exists()) {
-                                        continue
+                                    var currentIndex = 0
+                                    while (File(newPath).exists()) {
+                                        currentIndex++
+                                        var extension = ""
+                                        val name = if (newName.contains(".")) {
+                                            extension = ".${newName.substringAfterLast(".")}"
+                                            newName.substringBeforeLast(".")
+                                        } else {
+                                            newName
+                                        }
+
+                                        newPath = "${path.getParentPath()}/$name~$currentIndex$extension"
                                     }
 
                                     activity.renameFile(path, newPath) {
