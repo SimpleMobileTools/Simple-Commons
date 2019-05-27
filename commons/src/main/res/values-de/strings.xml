@@ -64,6 +64,7 @@
     <string name="source_file_doesnt_exist">Quelldatei %s existiert nicht</string>
     <string name="prepend_filenames">Dateinamen voranstellen</string>
     <string name="append_filenames">Dateinamen anhängen (vor Dateiendung)</string>
+    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopieren</string>
@@ -238,7 +239,7 @@
     <string name="ascending">Aufsteigend</string>
     <string name="descending">Absteigend</string>
     <string name="use_for_this_folder">Nur auf diesen Ordner anwenden</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">Numerische Teile nach aktuellem Wert sortieren</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Willst du mit dem Löschen fortfahren?</string>

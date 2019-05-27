@@ -64,6 +64,7 @@
     <string name="source_file_doesnt_exist">%s kaynak dosyası mevcut değil</string>
     <string name="prepend_filenames">Ön dosya adları</string>
     <string name="append_filenames">Dosya adlarını ekle (dosya uzantısından önce)</string>
+    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopyala</string>

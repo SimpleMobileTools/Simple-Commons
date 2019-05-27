@@ -64,6 +64,7 @@
     <string name="source_file_doesnt_exist">Källfilen %s finns inte</string>
     <string name="prepend_filenames">Lägg till före filnamnen</string>
     <string name="append_filenames">Lägg till efter filnamnen (före filnamnstilläggen)</string>
+    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopiera</string>

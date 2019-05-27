@@ -426,6 +426,8 @@ fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolea
             try {
                 fileDeleted = (document.isFile || allowDeleteFolder) && DocumentsContract.deleteDocument(applicationContext.contentResolver, document.uri)
             } catch (ignored: Exception) {
+                baseConfig.treeUri = ""
+                baseConfig.sdCardPath = ""
             }
         }
     }

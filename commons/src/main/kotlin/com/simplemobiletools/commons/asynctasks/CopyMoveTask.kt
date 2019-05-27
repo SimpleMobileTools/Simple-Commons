@@ -41,6 +41,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     private var mCurrentProgress = 0L
     private var mMaxSize = 0
     private var mNotifId = 0
+    private var mIsTaskOver = false
     private var mProgressHandler = Handler()
 
     init {
@@ -142,6 +143,12 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
     }
 
     private fun updateProgress() {
+        if (mIsTaskOver) {
+            mNotificationManager.cancel(mNotifId)
+            cancel(true)
+            return
+        }
+
         mNotificationBuilder.apply {
             setContentText(mCurrFilename)
             setProgress(mMaxSize, (mCurrentProgress / 1000).toInt(), false)
@@ -151,6 +158,10 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         mProgressHandler.removeCallbacksAndMessages(null)
         mProgressHandler.postDelayed({
             updateProgress()
+
+            if (mCurrentProgress / 1000 > mMaxSize) {
+                mIsTaskOver = true
+            }
         }, PROGRESS_RECHECK_INTERVAL)
     }
 

@@ -64,6 +64,7 @@
     <string name="source_file_doesnt_exist">A forrás fájl %s nem létezik</string>
     <string name="prepend_filenames">Fájlnevek megadása</string>
     <string name="append_filenames">Fájlnevek csatolása (fájl kiterjesztés előtt)</string>
+    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
 
     <!-- Copy / Move -->
     <string name="copy">Másolás</string>

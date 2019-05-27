@@ -64,6 +64,7 @@
     <string name="source_file_doesnt_exist">Kildefilen %s eksisterer ikke</string>
     <string name="prepend_filenames">Tilføj forrest til filnavne</string>
     <string name="append_filenames">Tilføj bagerst til filnavne (foran filtypenavnet)</string>
+    <string name="rename_date_time_pattern">%Y - år\n%M - måned\n%D - dag\n%h - time\n%m - minut\n%s - sekund</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopier</string>
@@ -90,7 +91,7 @@
     <string name="saving">Gemmer…</string>
     <string name="could_not_create_folder">Kunne ikke oprette mappen %s</string>
     <string name="could_not_create_file">Kunne ikke oprette filen %s</string>
-    <string name="no_new_items">No new items have been found</string>
+    <string name="no_new_items">Der blev ikke fundet nogen nye filer</string>
 
     <!-- Create new -->
     <string name="create_new">Opret ny</string>

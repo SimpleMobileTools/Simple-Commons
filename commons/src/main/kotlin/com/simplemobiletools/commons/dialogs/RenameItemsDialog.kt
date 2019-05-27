@@ -43,9 +43,8 @@ class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<S
                                 return@setOnClickListener
                             }
 
-                            var pathsCnt = validPaths.size
-
                             activity.handleSAFDialog(sdFilePath) {
+                                var pathsCnt = validPaths.size
                                 for (path in validPaths) {
                                     val fullName = path.getFilenameFromPath()
                                     var dotAt = fullName.lastIndexOf(".")
