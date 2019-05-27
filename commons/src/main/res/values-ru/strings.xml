@@ -64,7 +64,7 @@
     <string name="source_file_doesnt_exist">Исходный файл \"%s\" не существует</string>
     <string name="prepend_filenames">Перед именем файла</string>
     <string name="append_filenames">После имени файла (до расширения)</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="rename_date_time_pattern">%Y - год\n%M - месяц\n%D - день\n%h - час\n%m - минута\n%s - секунда</string>
 
     <!-- Copy / Move -->
     <string name="copy">Копировать</string>
@@ -167,7 +167,7 @@
     <string name="f_number">Относительное отверстие</string>
     <string name="camera">Камера</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Название песни</string>
+    <string name="song_title">Название композиции</string>
 
     <!-- Color customization -->
     <string name="background_color">Цвет фона</string>
