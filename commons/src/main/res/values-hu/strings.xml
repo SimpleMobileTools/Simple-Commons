@@ -626,7 +626,7 @@
     <string name="faq_4_title_commons">Nem tetszik a widget színe, meg tudom változtatni őket?</string>
     <string name="faq_4_text_commons">Igen, amikor egy widgetet futtat a kezdőképernyőn, megjelenik egy widget konfigurációs képernyő. A bal alsó sarokban színes négyzetek láthatók, csak nyomja meg és új színt választhat. Használhatja a csúszkát az alfa beállításához is.</string>
     <string name="faq_5_title_commons">Vissza tudom állítani a törölt fájlokat?</string>
-    <string name="faq_5_text_commons">Ha valóban töröltek, akkor nem. Azonban engedélyezheti a Lomtár használatát az alkalmazás beállításaiban a törlés helyett. Ekkor a törlés helyett csak áthelyezi oda a fájlokat.</string>
+    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
     <string name="faq_6_title_commons">Az alkalmazásindító ikon eltűnt. Mit tehetek?</string>
     <string name="faq_6_text_commons">Ennek az az oka, hogy a rendszerindító nem támogatja megfelelően az ikon testreszabását. Próbáld elindítani az alkalmazást a Google Playen vagy néhány widgeten keresztül, ha elérhető.\nMiután elindítottad, állítsd vissza az alapértelmezett narancssárga ikont #F57C00. Lehet, hogy a legrosszabb esetben újra kell telepítenie az alkalmazást.</string>
 

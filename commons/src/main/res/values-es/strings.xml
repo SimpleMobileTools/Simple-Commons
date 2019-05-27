@@ -627,7 +627,7 @@
     <string name="faq_4_title_commons">No me gustan los colores del widget, ¿puedo cambiarlos?</string>
     <string name="faq_4_text_commons">Sí, al arrastrar un widget en la pantalla de inicio aparece una pantalla de configuración de widgets. Verá cuadrados de colores en la esquina inferior izquierda, solo presione para elegir un nuevo color. Puede usar el control deslizante para ajustar el alfa también.</string>
     <string name="faq_5_title_commons">¿Puedo de alguna manera restaurar archivos borrados?</string>
-    <string name="faq_5_text_commons">Si realmente fueron eliminados, no puedes. Sin embargo, puedes habilitar el uso de una papelera de reciclaje en lugar de eliminar en la configuración de la aplicación. Eso solo moverá los archivos en lugar de eliminarlos.</string>
+    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
     <string name="faq_6_title_commons">El icono del iniciador de aplicaciones desapareció. ¿Que puedo hacer?</string>
     <string name="faq_6_text_commons">Esto se debe a que el iniciador no admite correctamente la personalización de iconos. Intenta lanzar la aplicación a través de Google Play o algún widget, si está disponible.
         Una vez iniciado, simplemente vuelva a establecer el ícono naranja predeterminado #F57C00. Es posible que tenga que volver a instalar la aplicación en el peor de los casos.</string>

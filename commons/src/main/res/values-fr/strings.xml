@@ -628,7 +628,7 @@
     <string name="faq_4_title_commons">Je n\'aime pas les couleurs du widget. Puis-je les changer ?</string>
     <string name="faq_4_text_commons">Oui, quand vous glissez le widget sur l\'écran d\'accueil un dialogue de configuration apparaît. Vous verrez des carrés en bas à gauche, en appuyant dessus vous pouvez choisir une nouvelle couleur. Vous pouvez aussi utiliser le curseur pour régler la transparence.</string>
     <string name="faq_5_title_commons">Puis-je restaurer les fichiers supprimés ?</string>
-    <string name="faq_5_text_commons">S\'ils ont déjà été supprimés, vous ne pouvez pas. Toutefois, vous pouvez activer l\'utilisation de la corbeille à la place de la suppression dans les paramètres de l\'application. Les fichiers seront alors placés dans la corbeille plutôt que supprimés.</string>
+    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
     <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
     <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
         Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
