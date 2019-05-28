@@ -64,7 +64,7 @@
     <string name="source_file_doesnt_exist">原始檔案 %s 不存在</string>
     <string name="prepend_filenames">檔名前綴</string>
     <string name="append_filenames">附加檔名（在副檔名前）</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="rename_date_time_pattern">%Y - 年\n%M - 月\n%D - 日\n%h - 小時\n%m - 分鐘\n%s - 秒鐘</string>
 
     <!-- Copy / Move -->
     <string name="copy">複製</string>
@@ -594,7 +594,7 @@
     <string name="faq_4_title_commons">我不喜歡小工具的顏色，我能更改嗎?</string>
     <string name="faq_4_text_commons">可啊，當你在主畫面拖動小工具時，會出現小工具設置畫面。你會在左下角看到顏色方塊，點下去再挑個新顏色就好了。你也能用拉條來調整透明度。</string>
     <string name="faq_5_title_commons">我有辦法恢復被刪除的檔案嗎?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
+    <string name="faq_5_text_commons">如果它們確實被刪除了，那沒辦法。然而，預設情況下啟用了回收桶，使得檔案並沒有被刪除，只是被移動到桶內。</string>
     <string name="faq_6_title_commons">應用程式啟動器上的圖標消失了。我該怎麼辦?</string>
     <string name="faq_6_text_commons">這是由於你的啟動器無法正確地支援圖標自訂。如果可以，試著透過Google Play或某些小工具來啟動應用程式。
         一旦啟動，只要設回預設的橘色圖標 #F57C00 即可。最糟的情況，你可能必須重新安裝應用程式。</string>
