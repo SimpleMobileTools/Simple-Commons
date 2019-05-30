@@ -223,7 +223,7 @@
     <string name="undo">Annuler</string>
     <string name="redo">Répéter</string>
     <string name="print">Imprimer</string>
-    <string name="create_shortcut">Create shortcut</string>
+    <string name="create_shortcut">Créer un raccourci</string>
 
     <!-- Sorting -->
     <string name="sort_by">Trier par</string>
@@ -611,7 +611,7 @@
 
     <string name="sideloaded_app">
         <![CDATA[
-            It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
+            La version de votre application semble corrompue. Merci de télécharger la version originale <a href="%s">ici</a>.
         ]]>
     </string>
 
@@ -628,10 +628,10 @@
     <string name="faq_4_title_commons">Je n\'aime pas les couleurs du widget. Puis-je les changer ?</string>
     <string name="faq_4_text_commons">Oui, quand vous glissez le widget sur l\'écran d\'accueil un dialogue de configuration apparaît. Vous verrez des carrés en bas à gauche, en appuyant dessus vous pouvez choisir une nouvelle couleur. Vous pouvez aussi utiliser le curseur pour régler la transparence.</string>
     <string name="faq_5_title_commons">Puis-je restaurer les fichiers supprimés ?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="faq_5_text_commons">S\'ils ont été réellement supprimés, vous ne pouvez pas. Cependant, une corbeille étant activée par défaut, les fichiers ont peut-être simplement été déplacés dans la corbeille au lieu d\'être supprimer.</string>
+    <string name="faq_6_title_commons">L\'icône du lanceur d'applications a disparu. Que puis-je faire ?</string>
+    <string name="faq_6_text_commons">Votre lanceur ne prend pas correctement en charge la personnalisation des icônes. Essayez de lancer l\'application via Google Play ou un widget, le cas échéant.
+        Une fois lancé, il vous suffit de redéfinir l\'icône orange par défaut #F57C00. Dans le pire des cas, vous devrez peut-être réinstaller l\'application.</string>
 
     <!-- License -->
     <string name="notice">Cette application utilise les bibliothèques tierces suivantes pour me simplifier la vie. Merci.</string>
