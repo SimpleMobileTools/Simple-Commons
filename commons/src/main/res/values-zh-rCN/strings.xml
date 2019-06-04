@@ -64,7 +64,7 @@
     <string name="source_file_doesnt_exist">原文件 %s 不存在</string>
     <string name="prepend_filenames">文件名前缀</string>
     <string name="append_filenames">文件名后缀(格式后缀之前)</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="rename_date_time_pattern">%Y - 年\n%M - 月\n%D - 日\n%h - 时\n%m - 分\n%s - 秒</string>
 
     <!-- Copy / Move -->
     <string name="copy">复制</string>
@@ -91,7 +91,7 @@
     <string name="saving">正在保存…</string>
     <string name="could_not_create_folder">创建文件夹 %s 失败</string>
     <string name="could_not_create_file">创建文件 %s 失败</string>
-    <string name="no_new_items">No new items have been found</string>
+    <string name="no_new_items">没有找到新的项目</string>
 
     <!-- Create new -->
     <string name="create_new">新建</string>
@@ -220,7 +220,7 @@
     <string name="undo">撤销</string>
     <string name="redo">重做</string>
     <string name="print">打印</string>
-    <string name="create_shortcut">Create shortcut</string>
+    <string name="create_shortcut">创建快捷方式</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序方式</string>
@@ -236,7 +236,7 @@
     <string name="ascending">递增</string>
     <string name="descending">递减</string>
     <string name="use_for_this_folder">仅应用于此文件夹</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">按实际值排序数字部分</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">是否执行此删除操作？</string>
@@ -592,7 +592,7 @@
     <string name="faq_4_title_commons">我不喜欢小部件的颜色，我可以修改吗？</string>
     <string name="faq_4_text_commons">是可以的，当你在主屏幕上拖动小部件时，会出现小部件配置界面。你会在左下角看到彩色的方块，只需按下它们即可选择新的颜色。你还可以通过滑块来调整 Alpha 值。</string>
     <string name="faq_5_title_commons">我可以恢复已删除的文件吗？</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
+    <string name="faq_5_text_commons">如果你确实把它们删除了，那么你无法恢复。不过，默认情况下启用了回收站，所以文件可能被移动到回收站了而不是被删除了。</string>
     <string name="faq_6_title_commons">应用图标消失了。我该怎么办？</string>
     <string name="faq_6_text_commons">这是因为某些桌面应用无法正确处理自定义应用图标。如果图标消失，请尝试通过 Google Play 或某个小部件启动应用（如果有的话）。
 在成功启动之后，请将图标颜色设置为默认的橙色#F57C00。在最坏的情况下，您可能必须重新安装本应用。</string>
