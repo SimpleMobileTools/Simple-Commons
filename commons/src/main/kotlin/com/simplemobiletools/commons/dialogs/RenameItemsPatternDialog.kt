@@ -71,6 +71,11 @@ class RenameItemsPatternDialog(val activity: BaseSimpleActivity, val paths: Arra
                                                 .replace("%s", "", false)
                                     }
 
+                                    if (!newName.contains(".") && path.contains(".")) {
+                                        val extension = path.substringAfterLast(".")
+                                        newName += ".$extension"
+                                    }
+
                                     var newPath = "${path.getParentPath()}/$newName"
 
                                     var currentIndex = 0

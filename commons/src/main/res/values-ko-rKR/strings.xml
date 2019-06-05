@@ -597,7 +597,7 @@
     <string name="faq_4_title_commons">위젯 색상이 마음에 들지 않을 경우 변경할 수 있나요?</string>
     <string name="faq_4_text_commons">예, 홈 화면에서 위젯을 드래그하면 위젯 구성 화면이 나타납니다. 왼쪽 하단 모서리에 색깔이있는 사각형이 보일 것입니다. 그것을 눌러 새로운 색을 선택하십시오. 슬라이더를 사용하여 알파를 조정할 수도 있습니다.</string>
     <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, you can enable using a Recycle Bin instead of deleting in the app settings. That will just move the files in it instead of deleting them.</string>
+    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
     <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
     <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
         Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>

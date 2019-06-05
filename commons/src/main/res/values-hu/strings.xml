@@ -64,7 +64,7 @@
     <string name="source_file_doesnt_exist">A forrás fájl %s nem létezik</string>
     <string name="prepend_filenames">Fájlnevek megadása</string>
     <string name="append_filenames">Fájlnevek csatolása (fájl kiterjesztés előtt)</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="rename_date_time_pattern">%É - év\\n%H - hónap\\n%N - nap\\n%ó - óra\\n%p - perc\\n%mp - másodperc</string>
 
     <!-- Copy / Move -->
     <string name="copy">Másolás</string>
@@ -222,7 +222,7 @@
     <string name="undo">Visszavonás</string>
     <string name="redo">Mégis</string>
     <string name="print">Nyomtatás</string>
-    <string name="create_shortcut">Create shortcut</string>
+    <string name="create_shortcut">Parancsikon létrehozása</string>
 
     <!-- Sorting -->
     <string name="sort_by">Rendezés</string>
@@ -238,7 +238,7 @@
     <string name="ascending">Növekvő</string>
     <string name="descending">Csökkenő</string>
     <string name="use_for_this_folder">Csak ehhez a mappához használja</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">Rendezze a numerikus részeket az aktuális értékkel</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Biztosan folytatja a törlést?</string>
@@ -593,7 +593,7 @@
     <string name="update_thank_you">Kérjük frissítse a Simple Thank You alkalmazást a legújabb verzióra</string>
     <string name="before_asking_question_read_faq">Mielőtt kérdezne, ellenőrizze az alkalmazás beállításait, és először olvassa el a Gyakran Ismételt Kérdéseket. Talán ott van a megoldás.</string>
     <string name="read_it">Olvassa el</string>
-    <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
+    <string name="rate_us_prompt">Hello,\\n\\Úgy tűnik elég régen használja ezt az alkalmazést és ezt mi igazán nagyra értékeljük.\\n\\nHa megkérhetjük egy szívességre, kérjük, értékeljen minket a Google Playen. Ez igazán segítene nekünk.\\n\\nFüggetlenül attól, hogy hogyan dönt, nem fogja látni ezt az üzenetet újra.\\n\\nKöszönjük!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -626,7 +626,7 @@
     <string name="faq_4_title_commons">Nem tetszik a widget színe, meg tudom változtatni őket?</string>
     <string name="faq_4_text_commons">Igen, amikor egy widgetet futtat a kezdőképernyőn, megjelenik egy widget konfigurációs képernyő. A bal alsó sarokban színes négyzetek láthatók, csak nyomja meg és új színt választhat. Használhatja a csúszkát az alfa beállításához is.</string>
     <string name="faq_5_title_commons">Vissza tudom állítani a törölt fájlokat?</string>
-    <string name="faq_5_text_commons">Ha valóban töröltek, akkor nem. Azonban engedélyezheti a Lomtár használatát az alkalmazás beállításaiban a törlés helyett. Ekkor a törlés helyett csak áthelyezi oda a fájlokat.</string>
+    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
     <string name="faq_6_title_commons">Az alkalmazásindító ikon eltűnt. Mit tehetek?</string>
     <string name="faq_6_text_commons">Ennek az az oka, hogy a rendszerindító nem támogatja megfelelően az ikon testreszabását. Próbáld elindítani az alkalmazást a Google Playen vagy néhány widgeten keresztül, ha elérhető.\nMiután elindítottad, állítsd vissza az alapértelmezett narancssárga ikont #F57C00. Lehet, hogy a legrosszabb esetben újra kell telepítenie az alkalmazást.</string>
 
@@ -659,6 +659,6 @@
     <string name="gesture_views_title">Gesztus nézetek (zoomolható képek)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">ELAVULT: Az alkalmazás ezen verziója már nem fog frissülni, a Pro verziót a https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro címen találja meg.</string>
+    <string name="pro_app_refund">Ne felejtse el, hogy ha 2 órán belül eltávolítja a fizetős alkalmazásunkat, akkor automatikusan visszatérítjük az árát. Ha később bármikor mégis visszatérítést szeretne, lépjen kapcsolatba velünk a hello@simplemobiletools.com címen, és visszakapja. Ez is megkönnyíti a kipróbálást :)</string>
 </resources>
