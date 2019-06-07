@@ -64,7 +64,7 @@
     <string name="source_file_doesnt_exist">El fitxer %s no existeix</string>
     <string name="prepend_filenames">Posar abans noms de fitxer</string>
     <string name="append_filenames">Afegeix noms de fitxer (abans de l\'extensió de fitxer)</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="rename_date_time_pattern">%Y - any\n%M - mes\n%D - dia\n%h - hora\n%m - minut\n%s - segon</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
@@ -91,7 +91,7 @@
     <string name="saving">Desant…</string>
     <string name="could_not_create_folder">No es pot crear la carpeta %s</string>
     <string name="could_not_create_file">No es pot crear l\'arxiu %s</string>
-    <string name="no_new_items">No new items have been found</string>
+    <string name="no_new_items">No s’ha trobat cap element nou</string>
 
     <!-- Create new -->
     <string name="create_new">Crear nova</string>
@@ -223,7 +223,7 @@
     <string name="undo">Desfer</string>
     <string name="redo">Refer</string>
     <string name="print">Imprimir</string>
-    <string name="create_shortcut">Create shortcut</string>
+    <string name="create_shortcut">Crear accès directe</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar per</string>
@@ -239,7 +239,7 @@
     <string name="ascending">Ascendent</string>
     <string name="descending">Descendent</string>
     <string name="use_for_this_folder">Només per aquesta carpeta</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">Ordenar les parts numèriques segons el valor real</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Estas segur que vols continuar amb l’eliminació?</string>
@@ -575,7 +575,7 @@
     <string name="share_text">Hola, vine i mira %1$s a %2$s</string>
     <string name="invite_via">Convida amb</string>
     <string name="rate_us_underlined"><u>vota\'ns a Play Store</u></string>
-    <string name="rate">Rate</string>
+    <string name="rate">Puntua</string>
     <string name="donate">Donar</string>
     <string name="donate_underlined"><u>Donar</u></string>
     <string name="follow_us">Segueix-nos</string>
@@ -594,7 +594,7 @@
     <string name="update_thank_you">Si us plau, actualitzeu Simple Thank You a la darrera versió</string>
     <string name="before_asking_question_read_faq">Abans de fer una pregunta, llegiu les Preguntes més freqüents. Potser la solució hi és.</string>
     <string name="read_it">Llegiu</string>
-    <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
+    <string name="rate_us_prompt">Hola,\n\nsembla que esteu utilitzant aquesta aplicació ja des de fa molt de temps, i ho agraïm realment.\n\nSi us demanem un favor, cal que ens puntueu a Google Play. En realitat, això ens ajudarà molt.\n\nNo importa que decidiu, no tornareu a veure aquest missatge.\n\nGràcies</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -627,7 +627,7 @@
     <string name="faq_4_title_commons">No m\'agraden els colors del widget, puc canviar-los?</string>
     <string name="faq_4_text_commons">Sí, mentre arrossegueu un widget a la vostra pantalla d\'inici, apareixerà una pantalla de configuració de widgets. Veureu quadrats de colors a l\'extrem inferior esquerre, només cal prémer-los per seleccionar un color nou. També podeu utilitzar el control lliscant per ajustar l\'alfa.</string>
     <string name="faq_5_title_commons">Puc recuperar d\'alguna manera els fitxers eliminats?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
+    <string name="faq_5_text_commons">Si es van esborrar totalment, no ho podeu fer. Tanmateix, hi ha una Paperera de reciclatge habilitada per defecte, que farà que els fitxers es moguin allà en comptes de suprimir-los.</string>
     <string name="faq_6_title_commons">Ha desaparegut la icona del menú d\'aplicacions. Què puc fer?</string>
     <string name="faq_6_text_commons">El teu llançador no és compatible amb la personalització d\'icones correctament. Intenteu iniciar l\'aplicació mitjançant Google Play o algun widget, si està disponible.
         Un cop llançat, simplement configureu la icona de taronja per defecte # F57C00. És possible que hàgiu de tornar a instal·lar l\'aplicació en el pitjor dels casos.</string>
@@ -661,6 +661,6 @@
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">DESCONTINUADA: Aquesta versió de l’aplicació ja no es manté, obteniu la versió Pro a l'adreça https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">No us oblideu que si desinstal·leu qualsevol aplicació de pagament en un termini de 2 hores, se us retornarà automàticament. Si voleu un reemborsament en qualsevol moment més tard, poseu-vos en contacte amb nosaltres a hello@simplemobiletools.com i ho rebreu. Això fa que sigui fàcil provar-ho :)</string>
 </resources>
