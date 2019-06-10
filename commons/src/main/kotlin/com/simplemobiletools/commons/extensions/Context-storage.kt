@@ -282,18 +282,19 @@ fun Context.getFileUri(path: String) = when {
 }
 
 // these functions update the mediastore instantly, MediaScannerConnection.scanFileRecursively takes some time to really get applied
-fun Context.deleteFromMediaStore(path: String): Boolean {
+fun Context.deleteFromMediaStore(path: String) {
     if (File(path).isDirectory) {
-        return false
+        return
     }
 
-    return try {
-        val where = "${MediaStore.MediaColumns.DATA} = ?"
-        val args = arrayOf(path)
-        contentResolver.delete(getFileUri(path), where, args) == 1
-    } catch (e: Exception) {
-        false
-    }
+    Thread {
+        try {
+            val where = "${MediaStore.MediaColumns.DATA} = ?"
+            val args = arrayOf(path)
+            contentResolver.delete(getFileUri(path), where, args)
+        } catch (e: Exception) {
+        }
+    }.start()
 }
 
 fun Context.updateInMediaStore(oldPath: String, newPath: String) {
