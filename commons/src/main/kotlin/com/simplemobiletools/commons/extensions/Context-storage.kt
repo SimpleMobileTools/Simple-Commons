@@ -292,7 +292,7 @@ fun Context.deleteFromMediaStore(path: String) {
             val where = "${MediaStore.MediaColumns.DATA} = ?"
             val args = arrayOf(path)
             contentResolver.delete(getFileUri(path), where, args)
-        } catch (e: Exception) {
+        } catch (ignored: Exception) {
         }
     }.start()
 }
