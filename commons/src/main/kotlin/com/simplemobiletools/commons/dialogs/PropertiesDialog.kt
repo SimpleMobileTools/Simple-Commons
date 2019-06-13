@@ -70,7 +70,7 @@ class PropertiesDialog() {
                         val dateModified = cursor.getLongValue(MediaStore.Images.Media.DATE_MODIFIED) * 1000L
                         updateLastModified(activity, view, dateModified)
                     } else {
-                        updateLastModified(activity, view, fileDirItem.getLastModified())
+                        updateLastModified(activity, view, fileDirItem.modified)
                     }
                 }
             }
@@ -99,7 +99,7 @@ class PropertiesDialog() {
         }
 
         if (fileDirItem.isDirectory) {
-            addProperty(R.string.last_modified, fileDirItem.getLastModified().formatDate(activity))
+            addProperty(R.string.last_modified, fileDirItem.modified.formatDate(activity))
         } else {
             addProperty(R.string.last_modified, "…", R.id.properties_last_modified)
             try {
