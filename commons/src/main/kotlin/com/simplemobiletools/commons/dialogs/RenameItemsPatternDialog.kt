@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.dialogs
 
 import android.media.ExifInterface
+import android.text.format.DateFormat
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
@@ -34,42 +35,38 @@ class RenameItemsPatternDialog(val activity: BaseSimpleActivity, val paths: Arra
                                 var pathsCnt = validPaths.size
                                 for (path in validPaths) {
                                     val exif = ExifInterface(path)
-                                    val dateTime = if (isNougatPlus()) {
+                                    var dateTime = if (isNougatPlus()) {
                                         exif.getAttribute(ExifInterface.TAG_DATETIME_ORIGINAL)
                                                 ?: exif.getAttribute(ExifInterface.TAG_DATETIME)
                                     } else {
                                         exif.getAttribute(ExifInterface.TAG_DATETIME)
                                     }
 
-                                    var newName = view.rename_items_value.value
-                                    if (dateTime != null) {
-                                        val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd kk:mm:ss", Locale.ENGLISH)
-                                        val dt = simpleDateFormat.parse(dateTime)
-                                        val cal = Calendar.getInstance()
-                                        cal.time = dt
-                                        val year = cal.get(Calendar.YEAR).toString()
-                                        val month = ensureTwoDigits(cal.get(Calendar.MONTH) + 1)
-                                        val day = ensureTwoDigits(cal.get(Calendar.DAY_OF_MONTH))
-                                        val hours = ensureTwoDigits(cal.get(Calendar.HOUR_OF_DAY))
-                                        val minutes = ensureTwoDigits(cal.get(Calendar.MINUTE))
-                                        val seconds = ensureTwoDigits(cal.get(Calendar.SECOND))
-
-                                        newName = newName
-                                                .replace("%Y", year, false)
-                                                .replace("%M", month, false)
-                                                .replace("%D", day, false)
-                                                .replace("%h", hours, false)
-                                                .replace("%m", minutes, false)
-                                                .replace("%s", seconds, false)
-                                    } else {
-                                        newName = newName
-                                                .replace("%Y", "", false)
-                                                .replace("%M", "", false)
-                                                .replace("%D", "", false)
-                                                .replace("%h", "", false)
-                                                .replace("%m", "", false)
-                                                .replace("%s", "", false)
+                                    if (dateTime == null) {
+                                        val calendar = Calendar.getInstance(Locale.ENGLISH)
+                                        calendar.timeInMillis = File(path).lastModified()
+                                        dateTime = DateFormat.format("yyyy:MM:dd kk:mm:ss", calendar).toString()
                                     }
+
+                                    var newName = view.rename_items_value.value
+                                    val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd kk:mm:ss", Locale.ENGLISH)
+                                    val dt = simpleDateFormat.parse(dateTime)
+                                    val cal = Calendar.getInstance()
+                                    cal.time = dt
+                                    val year = cal.get(Calendar.YEAR).toString()
+                                    val month = ensureTwoDigits(cal.get(Calendar.MONTH) + 1)
+                                    val day = ensureTwoDigits(cal.get(Calendar.DAY_OF_MONTH))
+                                    val hours = ensureTwoDigits(cal.get(Calendar.HOUR_OF_DAY))
+                                    val minutes = ensureTwoDigits(cal.get(Calendar.MINUTE))
+                                    val seconds = ensureTwoDigits(cal.get(Calendar.SECOND))
+
+                                    newName = newName
+                                            .replace("%Y", year, false)
+                                            .replace("%M", month, false)
+                                            .replace("%D", day, false)
+                                            .replace("%h", hours, false)
+                                            .replace("%m", minutes, false)
+                                            .replace("%s", seconds, false)
 
                                     if (newName.isEmpty()) {
                                         continue
