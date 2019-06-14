@@ -12,7 +12,9 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.TextUtils
 import android.text.style.ForegroundColorSpan
+import com.bumptech.glide.signature.ObjectKey
 import com.simplemobiletools.commons.helpers.*
+import java.io.File
 import java.text.Normalizer
 import java.text.SimpleDateFormat
 import java.util.*
@@ -252,6 +254,13 @@ fun String.highlightTextPart(textToHighlight: String, color: Int, highlightAll: 
     }
 
     return spannableString
+}
+
+fun String.getFileSignature() = ObjectKey(getFileKey())
+
+fun String.getFileKey(): String {
+    val file = File(this)
+    return "${file.absolutePath}${file.lastModified()}"
 }
 
 // remove diacritics, for example č -> c
