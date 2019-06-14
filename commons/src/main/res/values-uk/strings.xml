@@ -64,7 +64,7 @@
     <string name="source_file_doesnt_exist">Вихідний файл %s не існує</string>
     <string name="prepend_filenames">Префікс імен файлів</string>
     <string name="append_filenames">Суфікс імен файлів (перед розширенням)</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="rename_date_time_pattern">%Y - рік\n%M - місяць\n%D - день\n%h - година\n%m - хвилина\n%s - секунда</string>
 
     <!-- Copy / Move -->
     <string name="copy">Копіювати</string>
@@ -80,15 +80,15 @@
     <string name="please_select_destination">Оберіть місце призначення</string>
     <string name="source_and_destination_same">Джерело та місце призначення не можуть співпадати</string>
     <string name="copy_failed">Не вдалося скопіювати файли</string>
-    <string name="copying">Копіювання…</string>
+    <string name="copying">Триває копіювання…</string>
     <string name="copying_success">Файли успішно скопійовано</string>
     <string name="copy_move_failed">Сталася помилка</string>
-    <string name="moving">Переміщення…</string>
+    <string name="moving">Триває переміщення…</string>
     <string name="moving_success">Файли успішно переміщено</string>
     <string name="moving_success_partial">Деякі файли не можуть бути переміщені</string>
     <string name="copying_success_partial">Деякі файли не можуть бути скопійовані</string>
     <string name="no_files_selected">Не обрано жодного файлу</string>
-    <string name="saving">Збереження…</string>
+    <string name="saving">Триває збереження…</string>
     <string name="could_not_create_folder">Не вдалося створити теку %s</string>
     <string name="could_not_create_file">Не вдалося створити файл %s</string>
     <string name="no_new_items">Не знайдено нових елементів</string>
@@ -269,7 +269,7 @@
     <string name="repeat_pattern">Повторіть шаблон</string>
     <string name="fingerprint">Відбиток пальця</string>
     <string name="add_fingerprint">Додати відбиток пальця</string>
-    <string name="place_finger">Помістіть ваш палець на сканер відбитку пальця</string>
+    <string name="place_finger">Помістіть ваш палець на сканер відбитка пальця</string>
     <string name="authentication_failed">Помилка автентифікації</string>
     <string name="authentication_blocked">Автентифікацію заблоковано, спробуйте це раз</string>
     <string name="no_fingerprints_registered">У вас немає зареєстрованих відбитків пальця, додайте їх у Налаштуваннях вашого пристрою</string>
@@ -288,31 +288,31 @@
 
     <plurals name="seconds">
         <item quantity="one">%d секунда</item>
-        <item quantity="other">%d секунд</item>
+        <item quantity="other">%d секунди</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d хвилина</item>
-        <item quantity="other">%d хвилин</item>
+        <item quantity="other">%d хвилини</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d година</item>
-        <item quantity="other">%d годин</item>
+        <item quantity="other">%d години</item>
     </plurals>
     <plurals name="days">
         <item quantity="one">%d день</item>
-        <item quantity="other">%d днів</item>
+        <item quantity="other">%d дні</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="one">%d тиждень</item>
-        <item quantity="other">%d тижнів</item>
+        <item quantity="other">%d тижні</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d місяць</item>
-        <item quantity="other">%d місяців</item>
+        <item quantity="other">%d місяці</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d рік</item>
-        <item quantity="other">%d років</item>
+        <item quantity="other">%d роки</item>
     </plurals>
 
     <!-- For example: I will be there in 5 minutes -->
@@ -329,20 +329,20 @@
         <item quantity="other">%d годин</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d день</item>
+        <item quantity="other">%d днів</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d тиждень</item>
+        <item quantity="other">%d тижнів</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d місяць</item>
+        <item quantity="other">%d місяців</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d рік</item>
+        <item quantity="other">%d років</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
@@ -427,7 +427,7 @@
     <string name="settings">Налаштування</string>
     <string name="purchase_simple_thank_you">Придбати Simple Thank You</string>
     <string name="customize_colors">Налаштувати кольори</string>
-    <string name="customize_widget_colors">Налаштувати кольори віджету</string>
+    <string name="customize_widget_colors">Налаштувати кольори віджета</string>
     <string name="use_english_language">Використовувати англійську (Use English language)</string>
     <string name="show_hidden_items">Показати приховані елементи</string>
     <string name="font_size">Розмір шрифту</string>
@@ -450,7 +450,7 @@
     <string name="use_same_snooze">Завжди використовувати однаковий час відкладання</string>
     <string name="snooze_time">Час відкладання</string>
     <string name="vibrate_on_button_press">Вібрація при натисканні на кнопки</string>
-    <string name="move_items_into_recycle_bin">Переміщувати елементи у Кошик замість видалення</string>
+    <string name="move_items_into_recycle_bin">Переміщати елементи у Кошик замість видаляти</string>
     <string name="recycle_bin_cleaning_interval">Інтервал очищення Кошика</string>
     <string name="empty_recycle_bin">Очистити Кошик</string>
     <string name="force_portrait_mode">Примусовий портретний режим</string>
@@ -464,7 +464,7 @@
     <string name="security">Безпека</string>
     <string name="scrolling">Прокручування</string>
     <string name="file_operations">Дії з файлами</string>
-    <string name="recycle_bin">Корзина</string>
+    <string name="recycle_bin">Кошик</string>
     <string name="saving_label">Триває збереження</string>
     <string name="startup">Запуск</string>
     <string name="text">Текст</string>
@@ -474,24 +474,24 @@
     <string name="restore_this_file">Відновити цей файл</string>
     <string name="restore_selected_files">Відновити обрані файли</string>
     <string name="restore_all_files">Відновити всі файли</string>
-    <string name="recycle_bin_emptied">Корзину спорожнено успішно</string>
-    <string name="files_restored_successfully">Файли відновлено успішно</string>
-    <string name="empty_recycle_bin_confirmation">Ви впевнені, що хочете спорожнити Корзину? Файли будуть втрачені безповоротно.</string>
-    <string name="recycle_bin_empty">Корзина порожня</string>
-    <string name="moving_recycle_bin_items_disabled">Переміщення елементів з корзини відключено, будь ласка, використовуйте опцію Відновити</string>
-    <string name="show_the_recycle_bin">Показати Корзину</string>
-    <string name="hide_the_recycle_bin">Приховати Корзину</string>
+    <string name="recycle_bin_emptied">Кошик успішно спорожнено</string>
+    <string name="files_restored_successfully">Файли успішно відновлено</string>
+    <string name="empty_recycle_bin_confirmation">Ви впевнені, що хочете спорожнити Кошик? Файли будуть втрачені назавжди.</string>
+    <string name="recycle_bin_empty">Кошик порожній</string>
+    <string name="moving_recycle_bin_items_disabled">Переміщення елементів з Кошика відключено, будь ласка, використовуйте опцію Відновити</string>
+    <string name="show_the_recycle_bin">Показати Кошик</string>
+    <string name="hide_the_recycle_bin">Приховати Кошик</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Переміщення %d елемента в Корзину</item>
-        <item quantity="other">Переміщення %d елементів у Корзину</item>
+        <item quantity="one">Переміщення %d елемента в Кошик</item>
+        <item quantity="other">Переміщення %d елементів у Кошик</item>
     </plurals>
 
     <!-- Import / Export -->
     <string name="importing">Триває імпортування…</string>
     <string name="exporting">Триває експортування…</string>
-    <string name="importing_successful">Імпортування завершено успішно</string>
-    <string name="exporting_successful">Експортування завершено успішно</string>
+    <string name="importing_successful">Імпортування успішно завершено</string>
+    <string name="exporting_successful">Експортування успішно завершено</string>
     <string name="importing_failed">Не вдалось імпортувати</string>
     <string name="exporting_failed">Не вдалось експортувати</string>
     <string name="importing_some_entries_failed">Не вдалось імпортувати деякі елементи</string>
@@ -562,7 +562,7 @@
     <string name="it_is_free">Це безкоштовно до: %s. Якщо ви завантажите додаток до вказаної дати, ви отримаєте його безкоштовно назавжди.</string>
     <string name="more_info">Більше інформації</string>
     <string name="upgrade">Оновити</string>
-    <string name="upgrade_calendar">Вам доведеться власноруч перемістити події, що зберігаються локально, експортувавши їх в .ics файл, потім імпортувавши. Ви знайдете кнопку експорту/імпорту в меню головного екрану.</string>
+    <string name="upgrade_calendar">Вам доведеться власноруч перемістити події, що зберігаються локально, експортувавши їх в .ics файл, потім імпортувавши. Ви знайдете кнопку експорту/імпорту в меню головного екрана.</string>
 
     <!-- About -->
     <string name="about">Про додаток</string>
@@ -623,13 +623,13 @@
     <string name="faq_2_text_commons">Так, звичайно. Ви можете поширити інформацію про додатки або залишити хороший відгук і оцінки. Ви також можете допомогти перекласти додатки на нові мови або просто оновити існуючі переклади.
         Ви знайдете вказівки за адресою https://github.com/SimpleMobileTools/General-Discussion , або просто напишіть мені повідомлення на hello@simplemobiletools.com , якщо вам необхідна допомога.</string>
     <string name="faq_3_title_commons">Я випадково видалив деякі файли, як я можу їх відновити?</string>
-    <string name="faq_3_text_commons">На жаль, ви не можете. Файли видаляються негайно після діалогу-підтвердження, функції типу \"корзини\" не передбачено.</string>
+    <string name="faq_3_text_commons">На жаль, ви не можете. Файли видаляються негайно після діалогу-підтвердження, функції типу \"Кошик\" не передбачено.</string>
     <string name="faq_4_title_commons">Мені не подобаються кольори віджета, чи можу я їх змінити?</string>
-    <string name="faq_4_text_commons">Так, коли ви перетягуєте віджет на головний екран, з\'являється панель його налаштувань. Ви побачите кольорові квадрати в нижньому лівому куті, просто натисніть їх, щоб обрати новий колір. Ви також можете використати повзунок, щоб налаштувати ступінь прозорості.</string>
+    <string name="faq_4_text_commons">Так, коли ви перетягуєте віджет на головний екран, з\'являється панель його налаштувань. Ви побачите кольорові квадрати в нижньому лівому куті, просто натисніть їх, щоб обрати новий колір. Ви також можете використати ковзну панель, щоб налаштувати ступінь прозорості.</string>
     <string name="faq_5_title_commons">Чи можу я якось відновити видалені файли?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
+    <string name="faq_5_text_commons">На жаль, ні, якщо вони були дійсно видалені. Однак стандартно увімкнена функція Кошика, вона переміщає файли в Кошик замість їх видаляти.</string>
     <string name="faq_6_title_commons">Значок запуску додатка зник. Що робити?</string>
-    <string name="faq_6_text_commons">Це спичинено тим, що ваша програма запуску не підтримує правильно налаштування значків. Спробуйте запустити додаток через Google Play або віджет, якщо доступний.
+    <string name="faq_6_text_commons">Це спичинено тим, що ваша програма запуску неправильно підтримує налаштування значків. Спробуйте запустити додаток через Google Play або віджет, якщо він доступний.
         Після запуску встановіть типовий оранжевий колір значка #F57C00. У найгіршому випадку вам доведеться перевстановити додаток.</string>
 
     <!-- License -->
@@ -662,5 +662,5 @@
 
     <!-- Google Play listing -->
     <string name="deprecated_app">Застаріла: Ця версія додатка більше не підтримується, встановіть версію Pro за адресою https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Пам\'ятайте: якщо ви видалите будь-який платний додаток протягом 2 годин, вам буде автоматично повернена сума покупки. Якщо ви захочете повернути гроші пізніше, сконтактуйте з нами за адресою hello@simplemobiletools.com і ви їх отримаєте. Таким чином ви можете легко спробувати додаток :)</string>
+    <string name="pro_app_refund">Пам\'ятайте: якщо ви видалите будь-який платний додаток протягом 2 годин, вам буде автоматично повернена сума покупки. Якщо ви захочете повернути гроші пізніше, сконтактуйте з нами за адресою hello@simplemobiletools.com , і ви їх отримаєте. Таким чином ви можете легко спробувати додаток :)</string>
 </resources>
