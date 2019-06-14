@@ -379,7 +379,7 @@ fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSi
             0
         }
 
-        val fileDirItem = FileDirItem(decodedPath, name!!, isDirectory, childrenCount, fileSize)
+        val fileDirItem = FileDirItem(decodedPath, name!!, isDirectory, childrenCount, fileSize, file.lastModified())
         items.add(fileDirItem)
     }
 

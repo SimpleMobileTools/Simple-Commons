@@ -43,7 +43,7 @@ class PropertiesDialog() {
         val view = mInflater.inflate(R.layout.dialog_properties, null)
         mPropertyView = view.properties_holder
 
-        val fileDirItem = FileDirItem(path, path.getFilenameFromPath(), File(path).isDirectory)
+        val fileDirItem = FileDirItem(path, path.getFilenameFromPath(), File(path).isDirectory, 0, 0, File(path).lastModified())
         addProperty(R.string.name, fileDirItem.name)
         addProperty(R.string.path, fileDirItem.getParentPath())
         addProperty(R.string.size, "…", R.id.properties_size)
@@ -138,7 +138,7 @@ class PropertiesDialog() {
 
         val fileDirItems = ArrayList<FileDirItem>(paths.size)
         paths.forEach {
-            val fileDirItem = FileDirItem(it, it.getFilenameFromPath(), File(it).isDirectory)
+            val fileDirItem = FileDirItem(it, it.getFilenameFromPath(), File(it).isDirectory, 0, 0, File(it).lastModified())
             fileDirItems.add(fileDirItem)
         }
 
