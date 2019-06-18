@@ -14,6 +14,7 @@ import java.util.*
 
 class RenameItemsPatternDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String>, val callback: () -> Unit) {
     init {
+        var ignoreClicks = false
         val view = activity.layoutInflater.inflate(R.layout.dialog_rename_items_pattern, null)
 
         AlertDialog.Builder(activity)
@@ -23,6 +24,10 @@ class RenameItemsPatternDialog(val activity: BaseSimpleActivity, val paths: Arra
                     activity.setupDialogStuff(view, this, R.string.rename) {
                         showKeyboard(view.rename_items_value)
                         getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+                            if (ignoreClicks) {
+                                return@setOnClickListener
+                            }
+
                             val validPaths = paths.filter { File(it).exists() }
                             val sdFilePath = validPaths.firstOrNull { activity.isPathOnSD(it) } ?: validPaths.firstOrNull()
                             if (sdFilePath == null) {
@@ -32,6 +37,7 @@ class RenameItemsPatternDialog(val activity: BaseSimpleActivity, val paths: Arra
                             }
 
                             activity.handleSAFDialog(sdFilePath) {
+                                ignoreClicks = true
                                 var pathsCnt = validPaths.size
                                 for (path in validPaths) {
                                     val exif = ExifInterface(path)
@@ -101,6 +107,7 @@ class RenameItemsPatternDialog(val activity: BaseSimpleActivity, val paths: Arra
                                                 dismiss()
                                             }
                                         } else {
+                                            ignoreClicks = false
                                             activity.toast(R.string.unknown_error_occurred)
                                             dismiss()
                                         }

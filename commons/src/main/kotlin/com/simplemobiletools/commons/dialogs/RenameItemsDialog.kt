@@ -11,7 +11,7 @@ import java.util.*
 
 class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String>, val callback: () -> Unit) {
     init {
-
+        var ignoreClicks = false
         val view = activity.layoutInflater.inflate(R.layout.dialog_rename_items, null)
 
         AlertDialog.Builder(activity)
@@ -21,6 +21,10 @@ class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<S
                     activity.setupDialogStuff(view, this, R.string.rename) {
                         showKeyboard(view.rename_items_value)
                         getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+                            if (ignoreClicks) {
+                                return@setOnClickListener
+                            }
+
                             val valueToAdd = view.rename_items_value.value
                             val append = view.rename_items_radio_group.checkedRadioButtonId == rename_items_radio_append.id
 
@@ -44,6 +48,7 @@ class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<S
                             }
 
                             activity.handleSAFDialog(sdFilePath) {
+                                ignoreClicks = true
                                 var pathsCnt = validPaths.size
                                 for (path in validPaths) {
                                     val fullName = path.getFilenameFromPath()
@@ -75,6 +80,7 @@ class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<S
                                                 dismiss()
                                             }
                                         } else {
+                                            ignoreClicks = false
                                             activity.toast(R.string.unknown_error_occurred)
                                             dismiss()
                                         }
