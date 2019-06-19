@@ -48,7 +48,7 @@ fun String.isGif() = endsWith(".gif", true)
 
 fun String.isPng() = endsWith(".png", true)
 
-fun String.isJpg() = endsWith(".jpg", true) or endsWith(".jpeg")
+fun String.isJpg() = endsWith(".jpg", true) or endsWith(".jpeg", true)
 
 fun String.isSvg() = endsWith(".svg", true)
 
