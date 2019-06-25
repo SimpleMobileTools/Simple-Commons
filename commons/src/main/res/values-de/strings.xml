@@ -276,6 +276,9 @@
     <string name="go_to_settings">Einstellungen öffnen</string>
     <string name="protection_setup_successfully">Muster/PIN erfolgreich gespeichert. Falls vergessen, muss die App neu installiert werden.</string>
     <string name="fingerprint_setup_successfully">Schutz erfolgreich eingerichtet. Falls beim Zurücksetzen Probleme auftreten, bitte die App neu installieren.</string>
+    <string name="lock_folder">Lock folder</string>
+    <string name="unlock_folder">Unlock folder</string>
+    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
 
     <!-- Times -->
     <string name="yesterday">Gestern</string>

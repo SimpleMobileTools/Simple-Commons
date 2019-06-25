@@ -272,6 +272,9 @@
     <string name="go_to_settings">설정으로 이동</string>
     <string name="protection_setup_successfully">암호 설정이 완료되었습니다. 암호를 기억하지 못하는경우 앱을 다시 설치하시기 바랍니다.</string>
     <string name="fingerprint_setup_successfully">보안 설정이 성공적으로 완료되었습니다. 재설정 시 문제가 발생하면 앱을 다시 설치하시기 바랍니다.</string>
+    <string name="lock_folder">Lock folder</string>
+    <string name="unlock_folder">Unlock folder</string>
+    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
 
     <!-- Times -->
     <string name="yesterday">Yesterday</string>

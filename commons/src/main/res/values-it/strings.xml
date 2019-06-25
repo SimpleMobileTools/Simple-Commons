@@ -276,6 +276,9 @@
     <string name="go_to_settings">Vai alle impostazioni</string>
     <string name="protection_setup_successfully">Password impostata correttamente. Reinstallare l\'app in caso di dimenticanza.</string>
     <string name="fingerprint_setup_successfully">Protezione impostata correttamente. Reinstallare l\'app in caso di problemi nel ripristinarla.</string>
+    <string name="lock_folder">Lock folder</string>
+    <string name="unlock_folder">Unlock folder</string>
+    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
  
     <!-- Times -->
     <string name="yesterday">Ieri</string>

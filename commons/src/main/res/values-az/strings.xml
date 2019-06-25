@@ -276,6 +276,9 @@
     <string name="go_to_settings">Parametrlərə get</string>
     <string name="protection_setup_successfully">Şifrə təyini uğurludur. Əgər şifrəni unutsanız, tətbiqi yenidən yükləyin.</string>
     <string name="fingerprint_setup_successfully">Qoruma təyini uğurludur. Əgər təzələmə problemi yaşasanız, tətbiqi yenidən yükləyin.</string>
+    <string name="lock_folder">Lock folder</string>
+    <string name="unlock_folder">Unlock folder</string>
+    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
 
     <!-- Times -->
     <string name="yesterday">Dünən</string>

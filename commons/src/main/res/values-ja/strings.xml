@@ -272,6 +272,9 @@
     <string name="go_to_settings">設定に移動</string>
     <string name="protection_setup_successfully">パスワードの設定が完了しました。パスワードを紛失した場合は、アプリを再インストールしてください</string>
     <string name="fingerprint_setup_successfully">指紋認証の設定が完了しました。何らかの問題によりアプリを再インストールした場合には、再度設定し直してください。</string>
+    <string name="lock_folder">Lock folder</string>
+    <string name="unlock_folder">Unlock folder</string>
+    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
 
     <!-- Times -->
     <string name="yesterday">昨日</string>

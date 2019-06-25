@@ -283,6 +283,9 @@
     <string name="go_to_settings">Odpri nastavitve</string>
     <string name="protection_setup_successfully">Geslo uspešno nastavljeno. Če ga pozabite, izbrišite in ponovno naložite aplikacijo.</string>
     <string name="fingerprint_setup_successfully">Zaščita uspešno nastavljena. Če pride do težav s ponastavitvijo, izbrišite in ponovno naložite aplikacijo.</string>
+    <string name="lock_folder">Lock folder</string>
+    <string name="unlock_folder">Unlock folder</string>
+    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
 
     <!-- Times -->
     <string name="yesterday">Včeraj</string>

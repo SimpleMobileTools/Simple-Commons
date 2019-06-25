@@ -276,6 +276,9 @@
     <string name="go_to_settings">Mene asetuksiin</string>
     <string name="protection_setup_successfully">Salasana tallennettu. Asenna sovellus uudelleen jos unohdat sen.</string>
     <string name="fingerprint_setup_successfully">Suojaus onnistui. Asenna sovellus uudelleen jos kohtaat ongelmia.</string>
+    <string name="lock_folder">Lock folder</string>
+    <string name="unlock_folder">Unlock folder</string>
+    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
 
     <!-- Times -->
     <string name="yesterday">Yesterday</string>
