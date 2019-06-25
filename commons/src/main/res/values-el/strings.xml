@@ -276,9 +276,9 @@
     <string name="go_to_settings">Μετάβαση στις Ρυθμίσεις</string>
     <string name="protection_setup_successfully">Ο κωδικός πρόσβασης ολοκληρώθηκε με επιτυχία. Εγκαταστήστε ξανά την εφαρμογή σε περίπτωση που τον ξεχάσετε.</string>
     <string name="fingerprint_setup_successfully">Η ρύθμιση προστασίας ολοκληρώθηκε με επιτυχία. Εγκαταστήστε ξανά την εφαρμογή σε περίπτωση προβλημάτων με την επαναφορά της.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="lock_folder">Κλείδωμα Φακέλου</string>
+    <string name="unlock_folder">Ξεκλείδωμα Φακέλου</string>
+    <string name="lock_folder_notice">Αυτή η προστασία λειτουργεί μόνο για αυτήν την εφαρμογή, δεν πρόκειται να αντικαταστήσει την πραγματική κρυπτογράφηση του Συστήματος.</string>
 
     <!-- Times -->
     <string name="yesterday">Χθές</string>
