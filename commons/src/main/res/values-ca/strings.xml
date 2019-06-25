@@ -276,9 +276,9 @@
     <string name="go_to_settings">Anar als ajustaments</string>
     <string name="protection_setup_successfully">Configuració de la contrasenya amb èxit. Torneu a instal·lar l\'aplicació en cas que l\'oblideu.</string>
     <string name="fingerprint_setup_successfully">Configuració de la protecció amb èxit. Torneu a instal·lar l\'aplicació en cas de problemes amb restablir-la.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="lock_folder">Bloquejar carpeta</string>
+    <string name="unlock_folder">Desbloquejar carpeta</string>
+    <string name="lock_folder_notice">Aquesta protecció només funciona en aquesta aplicació. No substituirà un xifratge real de carpetes a tot el sistema.</string>
 
     <!-- Times -->
     <string name="yesterday">Ahir</string>
