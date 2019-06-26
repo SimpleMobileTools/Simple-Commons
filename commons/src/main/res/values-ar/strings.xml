@@ -13,7 +13,7 @@
     <string name="value_copied_to_clipboard">تم نسخ القيمة</string>
     <string name="unknown">غير معروف</string>
     <string name="always">دائماً</string>
-    <string name="never">أبداً</string>
+    <string name="never">أبدًا</string>
     <string name="details">تفاصيل</string>
     <string name="notes">ملاحظات</string>
     <string name="deleting_folder">Deleting folder \'%s\'</string>
@@ -21,7 +21,7 @@
     <string name="label">عنوان</string>
     <string name="transparent">شفاف</string>
     <string name="transparent_color">لون شفاف</string>
-    <string name="select_a_different_color">إختر لون مختلف</string>
+    <string name="select_a_different_color">اختر لونًا مختلفًا</string>
     <string name="download">Download</string>
     <string name="notification">Notification</string>
     <string name="email">Email</string>
@@ -29,7 +29,7 @@
     <!-- Favorites -->
     <string name="favorites">المفضلة</string>
     <string name="add_favorites">إضافة مفضلة</string>
-    <string name="add_to_favorites">اضافة الى المفضلة</string>
+    <string name="add_to_favorites">إضافة إلى المفضلة</string>
     <string name="remove_from_favorites">حذف من المفضلة</string>
 
     <!-- Search -->
@@ -171,7 +171,7 @@
     <string name="text_color">لون الخط</string>
     <string name="primary_color">اللون الرئيسي</string>
     <string name="foreground_color">اللون الأمامي</string>
-    <string name="app_icon_color">لون أيقونة التطلبيق</string>
+    <string name="app_icon_color">لون أيقونة التطبيق</string>
     <string name="bottom_navigation_bar_color">لون شريط التنقل السفلي</string>
     <string name="restore_defaults">استعادة الضبط الافتراضي</string>
     <string name="change_color">تغيير اللون</string>
@@ -211,12 +211,12 @@
     <string name="rename">إعادة تسمية</string>
     <string name="share">مشاركة</string>
     <string name="share_via">مشاركة عبر</string>
-    <string name="select_all">إختيار الكل</string>
+    <string name="select_all">اختيار الكل</string>
     <string name="hide">إخفاء</string>
     <string name="unhide">إظهار</string>
     <string name="hide_folder">إخفاء مجلد</string>
     <string name="unhide_folder">إظهار مجلد</string>
-    <string name="temporarily_show_hidden">إظهار المخفي مؤقتاً</string>
+    <string name="temporarily_show_hidden">إظهار المخفي مؤقتًا</string>
     <string name="stop_showing_hidden">أوقف إظهار الوسائط المخفية</string>
     <string name="maximum_share_reached">لا يمكنك مشاركة هذا المحتوى الكبير دفعة واحدة</string>
     <string name="empty_and_disable_recycle_bin">إفراغ وتعطيل سلة المحذوفات</string>
@@ -227,7 +227,7 @@
 
     <!-- Sorting -->
     <string name="sort_by">ترتيب حسب</string>
-    <string name="name">الإسم</string>
+    <string name="name">الاسم</string>
     <string name="size">الحجم</string>
     <string name="last_modified">آخر تعديل</string>
     <string name="date_taken">Date taken</string>
@@ -246,11 +246,11 @@
     <string name="deletion_confirmation">هل أنت متأكد من أنك تريد حذف %s؟</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">هل أنت متأكد من أنك تريد نقل %s إلى "سلة المحذوفات"؟</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">هل أنت متأكد أنك تريد حذف هذا العنصر؟</string>
-    <string name="are_you_sure_recycle_bin">هل أنت متأكد من أنك تريد نقل هذا العنصر في سلة المحذوفات؟</string>
+    <string name="are_you_sure_recycle_bin">هل أنت متأكد من أنك تريد نقل هذا العنصر إلى سلة المحذوفات؟</string>
     <string name="do_not_ask_again">لا تسأل مرة أخرى في هذه الدورة</string>
     <string name="yes">نعم</string>
-    <string name="no">كلا</string>
-    <string name="maybe">Maybe</string>
+    <string name="no">لا</string>
+    <string name="maybe">ربما</string>
 
     <plurals name="delete_warning">
         <item quantity="one">WARNING: You are deleting %d folder</item>
@@ -283,7 +283,7 @@
     <!-- Times -->
     <string name="yesterday">الأمس</string>
     <string name="today">اليوم</string>
-    <string name="tomorrow">غداً</string>
+    <string name="tomorrow">غدًا</string>
     <string name="seconds_raw">ثواني</string>
     <string name="minutes_raw">دقائق</string>
     <string name="hours_raw">ساعات</string>
@@ -315,23 +315,23 @@
         <item quantity="other">%d أسابيع</item>
     </plurals>
     <plurals name="months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d شهر</item>
+        <item quantity="other">%d أشهر</item>
     </plurals>
     <plurals name="years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d سنة</item>
+        <item quantity="other">%d سنوات</item>
     </plurals>
 
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d ثانية</item>
+        <item quantity="other">%d ثوانٍ</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minute</item>
+        <item quantity="one">%d دقيقة</item>
         <item quantity="two">دقيقتان</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="other">%d دقائق</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">ساعة</item>
@@ -339,20 +339,20 @@
         <item quantity="other">%d ساعات</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d يوم</item>
+        <item quantity="other">%d أيام</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d أسبوع</item>
+        <item quantity="other">%d أسابيع</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d شهر</item>
+        <item quantity="other">%d شهور</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d سنة</item>
+        <item quantity="other">%d سنوات</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
@@ -373,16 +373,16 @@
         <item quantity="other">%d أيام قبل</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d week before</item>
-        <item quantity="other">%d weeks before</item>
+        <item quantity="one">%d أسبوع واحد قبل</item>
+        <item quantity="other">%d أسابيع قبل</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d month before</item>
-        <item quantity="other">%d months before</item>
+        <item quantity="one">%d شهر واحد قبل</item>
+        <item quantity="other">%d أشهر قبل</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d year before</item>
-        <item quantity="other">%d years before</item>
+        <item quantity="one">%d سنة واحدة قبل</item>
+        <item quantity="other">%d سنوات قبل</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
@@ -391,28 +391,28 @@
         <item quantity="other">%d ثوان</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d دقيقة</item>
+        <item quantity="other">%d دقائق</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d ساعة</item>
+        <item quantity="other">%d ساعات</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d يوم</item>
+        <item quantity="other">%d أيام</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d أسبوع</item>
+        <item quantity="other">%d أسابيع</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d شهر</item>
+        <item quantity="other">%d أشهر</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d سنة</item>
+        <item quantity="other">%d سنوات</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -438,7 +438,7 @@
     <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
     <string name="customize_colors">تخصيص الألوان</string>
     <string name="customize_widget_colors">تخصيص ألوان Widget</string>
-    <string name="use_english_language">إستخدام اللغة الإنكليزية</string>
+    <string name="use_english_language">إستخدام اللغة الإنجليزية</string>
     <string name="show_hidden_items">عرض العناصر المخفية</string>
     <string name="font_size">حجم الخط</string>
     <string name="small">صغير</string>
@@ -500,14 +500,14 @@
     <!-- Import / Export -->
     <string name="importing">استيراد ...</string>
     <string name="exporting">تصدير ...</string>
-    <string name="importing_successful">نجت عملية الإستيراد</string>
-    <string name="exporting_successful">نجحت عملية التصدير</string>
-    <string name="importing_failed">فشلت عملية الإستيراد</string>
-    <string name="exporting_failed">فشلت عملية التصدير</string>
+    <string name="importing_successful">نجح الاستيراد</string>
+    <string name="exporting_successful">نجح التصدير</string>
+    <string name="importing_failed">فشل الاستيراد</string>
+    <string name="exporting_failed">فشل التصدير</string>
     <string name="importing_some_entries_failed">فشل استيراد بعض المدخلات</string>
     <string name="exporting_some_entries_failed">فشل تصدير بعض المدخلات</string>
-    <string name="no_entries_for_importing">No entries for importing have been found</string>
-    <string name="no_entries_for_exporting">لم يتم العثور على مدخلات للتصدير</string>
+    <string name="no_entries_for_importing">لم توجد مدخلات للاستيراد</string>
+    <string name="no_entries_for_exporting">لم توجد مدخلات للتصدير</string>
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
@@ -516,35 +516,35 @@
     <string name="wrong_root_selected_usb">Wrong folder selected, please select the root folder of your USB device</string>
 
     <!-- Dates -->
-    <string name="january">كانون الثاني</string>
-    <string name="february">شباط</string>
-    <string name="march">آذار</string>
-    <string name="april">نيسان</string>
-    <string name="may">أيار</string>
-    <string name="june">حزيران</string>
-    <string name="july">تموز</string>
-    <string name="august">آب</string>
-    <string name="september">أيلول</string>
-    <string name="october">تشرين الأول</string>
-    <string name="november">تشرين الثاني</string>
-    <string name="december">كانون الأول</string>
+    <string name="january">يناير</string>
+    <string name="february">فبراير</string>
+    <string name="march">مارس</string>
+    <string name="april">أبريل</string>
+    <string name="may">مايو</string>
+    <string name="june">يونيو</string>
+    <string name="july">يوليو</string>
+    <string name="august">أغسطس</string>
+    <string name="september">سبتمبر</string>
+    <string name="october">أكتوبر</string>
+    <string name="november">نوفمبر</string>
+    <string name="december">ديسمبر</string>
 
     <!-- in January -->
-    <string name="in_january">في كانون الثاني</string>
-    <string name="in_february">في شباط</string>
-    <string name="in_march">في آذار</string>
-    <string name="in_april">في نيسان</string>
-    <string name="in_may">في أيار</string>
-    <string name="in_june">في حزيران</string>
-    <string name="in_july">في تموز</string>
-    <string name="in_august">في آب</string>
-    <string name="in_september">في أيلول</string>
-    <string name="in_october">في تشرين الأول</string>
-    <string name="in_november">في تشرين الثاني</string>
-    <string name="in_december">في كانون الأول</string>
+    <string name="in_january">في يناير</string>
+    <string name="in_february">في فبراير</string>
+    <string name="in_march">في مارس</string>
+    <string name="in_april">في أبريل</string>
+    <string name="in_may">في مايو</string>
+    <string name="in_june">في يونيو</string>
+    <string name="in_july">في يوليو</string>
+    <string name="in_august">في أغسطس</string>
+    <string name="in_september">في سبتمبر</string>
+    <string name="in_october">في أكتوبر</string>
+    <string name="in_november">في نوفمبر</string>
+    <string name="in_december">في ديسمبر</string>
 
     <string name="monday">الإثنين</string>
-    <string name="tuesday">الثالثاء</string>
+    <string name="tuesday">الثلاثاء</string>
     <string name="wednesday">الأربعاء</string>
     <string name="thursday">الخميس</string>
     <string name="friday">الجمعة</string>
