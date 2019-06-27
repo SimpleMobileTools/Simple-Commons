@@ -241,6 +241,16 @@ val appIconColorStrings = arrayListOf(
 
 fun isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 
+fun ensureBackgroundThread(callback: () -> Unit) {
+    if (isOnMainThread()) {
+        Thread {
+            callback()
+        }.start()
+    } else {
+        callback()
+    }
+}
+
 fun isMarshmallowPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
 fun isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
 fun isNougatMR1Plus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1

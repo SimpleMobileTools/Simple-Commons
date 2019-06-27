@@ -358,9 +358,9 @@ fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
         callback(null)
     } else {
         val cursorLoader = getMyContentProviderCursorLoader()
-        Thread {
+        ensureBackgroundThread {
             callback(getSharedThemeSync(cursorLoader))
-        }.start()
+        }
     }
 }
 
@@ -389,13 +389,13 @@ fun Context.getCurrentFormattedDateTime(): String {
 }
 
 fun Context.updateSDCardPath() {
-    Thread {
+    ensureBackgroundThread {
         val oldPath = baseConfig.sdCardPath
         baseConfig.sdCardPath = getSDCardPath()
         if (oldPath != baseConfig.sdCardPath) {
             baseConfig.treeUri = ""
         }
-    }.start()
+    }
 }
 
 fun Context.getUriMimeType(path: String, newUri: Uri): String {

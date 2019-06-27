@@ -13,6 +13,7 @@ import android.text.TextUtils
 import androidx.core.content.FileProvider
 import androidx.documentfile.provider.DocumentFile
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.helpers.isMarshmallowPlus
 import com.simplemobiletools.commons.helpers.isNougatPlus
 import com.simplemobiletools.commons.models.FileDirItem
@@ -287,18 +288,18 @@ fun Context.deleteFromMediaStore(path: String) {
         return
     }
 
-    Thread {
+    ensureBackgroundThread {
         try {
             val where = "${MediaStore.MediaColumns.DATA} = ?"
             val args = arrayOf(path)
             contentResolver.delete(getFileUri(path), where, args)
         } catch (ignored: Exception) {
         }
-    }.start()
+    }
 }
 
 fun Context.updateInMediaStore(oldPath: String, newPath: String) {
-    Thread {
+    ensureBackgroundThread {
         val values = ContentValues().apply {
             put(MediaStore.MediaColumns.DATA, newPath)
             put(MediaStore.MediaColumns.DISPLAY_NAME, newPath.getFilenameFromPath())
@@ -312,7 +313,7 @@ fun Context.updateInMediaStore(oldPath: String, newPath: String) {
             contentResolver.update(uri, values, selection, selectionArgs)
         } catch (ignored: Exception) {
         }
-    }.start()
+    }
 }
 
 fun Context.updateLastModified(path: String, lastModified: Long) {

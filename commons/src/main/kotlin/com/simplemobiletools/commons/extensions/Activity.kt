@@ -7,7 +7,6 @@ import android.content.pm.PackageManager
 import android.graphics.drawable.ColorDrawable
 import android.media.RingtoneManager
 import android.net.Uri
-import android.os.Looper
 import android.os.TransactionTooLargeException
 import android.provider.DocumentsContract
 import android.provider.MediaStore
@@ -153,7 +152,7 @@ fun Activity.launchUpgradeToProIntent() = launchViewIntent(getProUrl())
 fun Activity.launchViewIntent(id: Int) = launchViewIntent(getString(id))
 
 fun Activity.launchViewIntent(url: String) {
-    Thread {
+    ensureBackgroundThread {
         Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
             if (resolveActivity(packageManager) != null) {
                 startActivity(this)
@@ -161,12 +160,12 @@ fun Activity.launchViewIntent(url: String) {
                 toast(R.string.no_app_found)
             }
         }
-    }.start()
+    }
 }
 
 fun Activity.sharePathIntent(path: String, applicationId: String) {
-    Thread {
-        val newUri = getFinalUriFromPath(path, applicationId) ?: return@Thread
+    ensureBackgroundThread {
+        val newUri = getFinalUriFromPath(path, applicationId) ?: return@ensureBackgroundThread
         Intent().apply {
             action = Intent.ACTION_SEND
             putExtra(Intent.EXTRA_STREAM, newUri)
@@ -187,17 +186,17 @@ fun Activity.sharePathIntent(path: String, applicationId: String) {
                 }
             }
         }
-    }.start()
+    }
 }
 
 fun Activity.sharePathsIntent(paths: ArrayList<String>, applicationId: String) {
-    Thread {
+    ensureBackgroundThread {
         if (paths.size == 1) {
             sharePathIntent(paths.first(), applicationId)
         } else {
             val uriPaths = ArrayList<String>()
             val newUris = paths.map {
-                val uri = getFinalUriFromPath(it, applicationId) ?: return@Thread
+                val uri = getFinalUriFromPath(it, applicationId) ?: return@ensureBackgroundThread
                 uriPaths.add(uri.path)
                 uri
             } as ArrayList<Uri>
@@ -228,12 +227,12 @@ fun Activity.sharePathsIntent(paths: ArrayList<String>, applicationId: String) {
                 }
             }
         }
-    }.start()
+    }
 }
 
 fun Activity.setAsIntent(path: String, applicationId: String) {
-    Thread {
-        val newUri = getFinalUriFromPath(path, applicationId) ?: return@Thread
+    ensureBackgroundThread {
+        val newUri = getFinalUriFromPath(path, applicationId) ?: return@ensureBackgroundThread
         Intent().apply {
             action = Intent.ACTION_ATTACH_DATA
             setDataAndType(newUri, getUriMimeType(path, newUri))
@@ -246,12 +245,12 @@ fun Activity.setAsIntent(path: String, applicationId: String) {
                 toast(R.string.no_app_found)
             }
         }
-    }.start()
+    }
 }
 
 fun Activity.openEditorIntent(path: String, forceChooser: Boolean, applicationId: String) {
-    Thread {
-        val newUri = getFinalUriFromPath(path, applicationId) ?: return@Thread
+    ensureBackgroundThread {
+        val newUri = getFinalUriFromPath(path, applicationId) ?: return@ensureBackgroundThread
         Intent().apply {
             action = Intent.ACTION_EDIT
             setDataAndType(newUri, getUriMimeType(path, newUri))
@@ -283,12 +282,12 @@ fun Activity.openEditorIntent(path: String, forceChooser: Boolean, applicationId
                 toast(R.string.no_app_found)
             }
         }
-    }.start()
+    }
 }
 
 fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: String, forceMimeType: String = "") {
-    Thread {
-        val newUri = getFinalUriFromPath(path, applicationId) ?: return@Thread
+    ensureBackgroundThread {
+        val newUri = getFinalUriFromPath(path, applicationId) ?: return@ensureBackgroundThread
         val mimeType = if (forceMimeType.isNotEmpty()) forceMimeType else getUriMimeType(path, newUri)
         Intent().apply {
             action = Intent.ACTION_VIEW
@@ -314,7 +313,7 @@ fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: 
                 }
             }
         }
-    }.start()
+    }
 }
 
 fun Activity.getFinalUriFromPath(path: String, applicationId: String): Uri? {
@@ -365,11 +364,7 @@ fun BaseSimpleActivity.checkWhatsNew(releases: List<Release>, currVersion: Int) 
 }
 
 fun BaseSimpleActivity.deleteFolders(folders: ArrayList<FileDirItem>, deleteMediaOnly: Boolean = true, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
-    if (Looper.myLooper() == Looper.getMainLooper()) {
-        Thread {
-            deleteFoldersBg(folders, deleteMediaOnly, callback)
-        }.start()
-    } else {
+    ensureBackgroundThread {
         deleteFoldersBg(folders, deleteMediaOnly, callback)
     }
 }
@@ -401,11 +396,7 @@ fun BaseSimpleActivity.deleteFoldersBg(folders: ArrayList<FileDirItem>, deleteMe
 }
 
 fun BaseSimpleActivity.deleteFolder(folder: FileDirItem, deleteMediaOnly: Boolean = true, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
-    if (Looper.myLooper() == Looper.getMainLooper()) {
-        Thread {
-            deleteFolderBg(folder, deleteMediaOnly, callback)
-        }.start()
-    } else {
+    ensureBackgroundThread {
         deleteFolderBg(folder, deleteMediaOnly, callback)
     }
 }
@@ -436,11 +427,7 @@ fun BaseSimpleActivity.deleteFolderBg(fileDirItem: FileDirItem, deleteMediaOnly:
 }
 
 fun BaseSimpleActivity.deleteFiles(files: ArrayList<FileDirItem>, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
-    if (Looper.myLooper() == Looper.getMainLooper()) {
-        Thread {
-            deleteFilesBg(files, allowDeleteFolder, callback)
-        }.start()
-    } else {
+    ensureBackgroundThread {
         deleteFilesBg(files, allowDeleteFolder, callback)
     }
 }
@@ -472,11 +459,7 @@ fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<FileDirItem>, allowDeleteF
 }
 
 fun BaseSimpleActivity.deleteFile(fileDirItem: FileDirItem, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
-    if (Looper.myLooper() == Looper.getMainLooper()) {
-        Thread {
-            deleteFileBg(fileDirItem, allowDeleteFolder, callback)
-        }.start()
-    } else {
+    ensureBackgroundThread {
         deleteFileBg(fileDirItem, allowDeleteFolder, callback)
     }
 }

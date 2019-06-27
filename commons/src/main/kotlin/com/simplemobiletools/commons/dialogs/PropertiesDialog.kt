@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.helpers.sumByInt
 import com.simplemobiletools.commons.helpers.sumByLong
 import com.simplemobiletools.commons.models.FileDirItem
@@ -48,7 +49,7 @@ class PropertiesDialog() {
         addProperty(R.string.path, fileDirItem.getParentPath())
         addProperty(R.string.size, "…", R.id.properties_size)
 
-        Thread {
+        ensureBackgroundThread {
             val fileCount = fileDirItem.getProperFileCount(countHiddenItems)
             val size = fileDirItem.getProperSize(countHiddenItems).formatSize()
             activity.runOnUiThread {
@@ -74,7 +75,7 @@ class PropertiesDialog() {
                     }
                 }
             }
-        }.start()
+        }
 
         when {
             fileDirItem.isDirectory -> {
@@ -152,14 +153,14 @@ class PropertiesDialog() {
         addProperty(R.string.size, "…", R.id.properties_size)
         addProperty(R.string.files_count, "…", R.id.properties_file_count)
 
-        Thread {
+        ensureBackgroundThread {
             val fileCount = fileDirItems.sumByInt { it.getProperFileCount(countHiddenItems) }
             val size = fileDirItems.sumByLong { it.getProperSize(countHiddenItems) }.formatSize()
             activity.runOnUiThread {
                 view.findViewById<TextView>(R.id.properties_size).property_value.text = size
                 view.findViewById<TextView>(R.id.properties_file_count).property_value.text = fileCount.toString()
             }
-        }.start()
+        }
 
         AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.ok, null)

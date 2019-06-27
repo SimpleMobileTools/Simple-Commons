@@ -11,6 +11,7 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.FilepickerItemsAdapter
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.SORT_BY_SIZE
+import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.Breadcrumbs
 import kotlinx.android.synthetic.main.dialog_filepicker.view.*
@@ -119,13 +120,13 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun tryUpdateItems() {
-        Thread {
+        ensureBackgroundThread {
             getItems(currPath, activity.baseConfig.sorting and SORT_BY_SIZE != 0) {
                 activity.runOnUiThread {
                     updateItems(it)
                 }
             }
-        }.start()
+        }
     }
 
     private fun updateItems(items: List<FileDirItem>) {
