@@ -276,6 +276,9 @@
     <string name="go_to_settings">Ir a la configuración</string>
     <string name="protection_setup_successfully">Se ha agregado la contraseña exitosamente. Por favor, vuelva a instalar la aplicación en caso de que la olvide.</string>
     <string name="fingerprint_setup_successfully">Configuración de protección con éxito. Por favor, vuelva a instalar la aplicación en caso de problemas al restablecerla.</string>
+    <string name="lock_folder">Lock folder</string>
+    <string name="unlock_folder">Unlock folder</string>
+    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
 
     <!-- Times -->
     <string name="yesterday">Yesterday</string>

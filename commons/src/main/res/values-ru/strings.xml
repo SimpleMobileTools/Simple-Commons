@@ -280,6 +280,9 @@
     <string name="go_to_settings">Перейдите в настройки</string>
     <string name="protection_setup_successfully">Пароль установлен. Переустановите приложение в случае, если вы его забудете.</string>
     <string name="fingerprint_setup_successfully">Установка защиты выполнена успешно. Переустановите приложение в случае возникновения проблем с её отключением.</string>
+    <string name="lock_folder">Lock folder</string>
+    <string name="unlock_folder">Unlock folder</string>
+    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
 
     <!-- Times -->
     <string name="yesterday">Вчера</string>

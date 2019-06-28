@@ -280,6 +280,9 @@
     <string name="go_to_settings">Ísť do nastavení</string>
     <string name="protection_setup_successfully">Heslo bolo úspešne nastavené. Ak ho zabudnete, prosím preinštalujte aplikáciu.</string>
     <string name="fingerprint_setup_successfully">Ochrana bola úspešne nastavená. Prosím preinštalujte aplikáciu v prípade problémov s jej zmenou.</string>
+    <string name="lock_folder">Uzamknúť priečinok</string>
+    <string name="unlock_folder">Odomknúť priečinok</string>
+    <string name="lock_folder_notice">Táto ochrana funguje iba v tejto aplikácii, nemá za cieľ nahradiť šifrovanie fungujúce po celom systéme.</string>
 
     <!-- Times -->
     <string name="yesterday">Včera</string>

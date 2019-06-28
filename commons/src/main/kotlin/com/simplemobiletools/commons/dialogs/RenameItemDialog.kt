@@ -10,6 +10,7 @@ import java.util.*
 
 class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val callback: (newPath: String) -> Unit) {
     init {
+        var ignoreClicks = false
         val fullName = path.getFilenameFromPath()
         val dotAt = fullName.lastIndexOf(".")
         var name = fullName
@@ -35,6 +36,10 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
                     activity.setupDialogStuff(view, this, R.string.rename) {
                         showKeyboard(view.rename_item_name)
                         getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+                            if (ignoreClicks) {
+                                return@setOnClickListener
+                            }
+
                             var newName = view.rename_item_name.value
                             val newExtension = view.rename_item_extension.value
 
@@ -66,7 +71,9 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
                             }
 
                             updatedPaths.add(newPath)
+                            ignoreClicks = true
                             activity.renameFile(path, newPath) {
+                                ignoreClicks = false
                                 if (it) {
                                     callback(newPath)
                                     dismiss()

@@ -10,6 +10,7 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.APP_ICON_IDS
 import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
 import com.simplemobiletools.commons.helpers.MyContentProvider
+import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.models.MyTheme
 import com.simplemobiletools.commons.models.RadioItem
 import com.simplemobiletools.commons.models.SharedTheme
@@ -49,7 +50,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         if (isThankYouInstalled()) {
             val cursorLoader = getMyContentProviderCursorLoader()
-            Thread {
+            ensureBackgroundThread {
                 try {
                     storedSharedTheme = getSharedThemeSync(cursorLoader)
                     if (storedSharedTheme == null) {
@@ -66,7 +67,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     toast(R.string.update_thank_you)
                     finish()
                 }
-            }.start()
+            }
         } else {
             setupThemes()
             baseConfig.isUsingSharedTheme = false

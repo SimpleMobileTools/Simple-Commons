@@ -102,7 +102,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
             }
 
             currPath = "${currPath.trimEnd('/')}/"
-            val item = FileDirItem(currPath, dir, true, 0, 0)
+            val item = FileDirItem(currPath, dir, true, 0, 0, 0)
             addBreadcrumb(item, i > 0)
         }
     }

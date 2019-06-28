@@ -400,7 +400,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                             return@getFileOutputStream
                         }
 
-                        Thread {
+                        ensureBackgroundThread {
                             it.bufferedWriter().use { out ->
                                 for ((key, value) in configItems) {
                                     out.writeLn("$key=$value")
@@ -408,7 +408,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                             }
 
                             toast(R.string.settings_exported_successfully)
-                        }.start()
+                        }
                     }
                 }
             }

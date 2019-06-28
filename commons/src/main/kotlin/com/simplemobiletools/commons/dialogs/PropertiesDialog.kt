@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.helpers.sumByInt
 import com.simplemobiletools.commons.helpers.sumByLong
 import com.simplemobiletools.commons.models.FileDirItem
@@ -43,12 +44,12 @@ class PropertiesDialog() {
         val view = mInflater.inflate(R.layout.dialog_properties, null)
         mPropertyView = view.properties_holder
 
-        val fileDirItem = FileDirItem(path, path.getFilenameFromPath(), File(path).isDirectory)
+        val fileDirItem = FileDirItem(path, path.getFilenameFromPath(), File(path).isDirectory, 0, 0, File(path).lastModified())
         addProperty(R.string.name, fileDirItem.name)
         addProperty(R.string.path, fileDirItem.getParentPath())
         addProperty(R.string.size, "…", R.id.properties_size)
 
-        Thread {
+        ensureBackgroundThread {
             val fileCount = fileDirItem.getProperFileCount(countHiddenItems)
             val size = fileDirItem.getProperSize(countHiddenItems).formatSize()
             activity.runOnUiThread {
@@ -70,11 +71,11 @@ class PropertiesDialog() {
                         val dateModified = cursor.getLongValue(MediaStore.Images.Media.DATE_MODIFIED) * 1000L
                         updateLastModified(activity, view, dateModified)
                     } else {
-                        updateLastModified(activity, view, fileDirItem.getLastModified())
+                        updateLastModified(activity, view, fileDirItem.modified)
                     }
                 }
             }
-        }.start()
+        }
 
         when {
             fileDirItem.isDirectory -> {
@@ -99,7 +100,7 @@ class PropertiesDialog() {
         }
 
         if (fileDirItem.isDirectory) {
-            addProperty(R.string.last_modified, fileDirItem.getLastModified().formatDate(activity))
+            addProperty(R.string.last_modified, fileDirItem.modified.formatDate(activity))
         } else {
             addProperty(R.string.last_modified, "…", R.id.properties_last_modified)
             try {
@@ -138,7 +139,7 @@ class PropertiesDialog() {
 
         val fileDirItems = ArrayList<FileDirItem>(paths.size)
         paths.forEach {
-            val fileDirItem = FileDirItem(it, it.getFilenameFromPath(), File(it).isDirectory)
+            val fileDirItem = FileDirItem(it, it.getFilenameFromPath(), File(it).isDirectory, 0, 0, File(it).lastModified())
             fileDirItems.add(fileDirItem)
         }
 
@@ -152,14 +153,14 @@ class PropertiesDialog() {
         addProperty(R.string.size, "…", R.id.properties_size)
         addProperty(R.string.files_count, "…", R.id.properties_file_count)
 
-        Thread {
+        ensureBackgroundThread {
             val fileCount = fileDirItems.sumByInt { it.getProperFileCount(countHiddenItems) }
             val size = fileDirItems.sumByLong { it.getProperSize(countHiddenItems) }.formatSize()
             activity.runOnUiThread {
                 view.findViewById<TextView>(R.id.properties_size).property_value.text = size
                 view.findViewById<TextView>(R.id.properties_file_count).property_value.text = fileCount.toString()
             }
-        }.start()
+        }
 
         AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.ok, null)

@@ -64,7 +64,7 @@
     <string name="source_file_doesnt_exist">O ficheiro de origem %s não existe</string>
     <string name="prepend_filenames">Introduzir antes do nome do ficheiro</string>
     <string name="append_filenames">Introduzir depois do nome do ficheiro (e antes da extensão)</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="rename_date_time_pattern">%Y - ano\n%M - mês\n%D - dia\n%h - horas\n%m - minutos\n%s - segundos</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
@@ -276,6 +276,9 @@
     <string name="go_to_settings">Ir para Definições</string>
     <string name="protection_setup_successfully">Palavra-passe definida com sucesso. Deve reinstalar esta aplicação se não se lembrar da palavra-passe.</string>
     <string name="fingerprint_setup_successfully">Proteção definida com sucesso. Deve reinstalar a aplicação se ocorrerem problemas.</string>
+    <string name="lock_folder">Lock folder</string>
+    <string name="unlock_folder">Unlock folder</string>
+    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
 
     <!-- Times -->
     <string name="yesterday">Ontem</string>

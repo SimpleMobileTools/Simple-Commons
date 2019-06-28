@@ -188,7 +188,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             }
 
             val oldFile = File(source.path, child)
-            val oldFileDirItem = oldFile.toFileDirItem(activity.applicationContext)
+            val oldFileDirItem = oldFile.toFileDirItem()
             val newFileDirItem = FileDirItem(newPath, newPath.getFilenameFromPath(), oldFile.isDirectory)
             copy(oldFileDirItem, newFileDirItem)
         }

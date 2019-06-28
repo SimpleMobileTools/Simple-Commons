@@ -276,6 +276,9 @@
     <string name="go_to_settings">Ga naar Instellingen</string>
     <string name="protection_setup_successfully">Wachtwoord ingesteld. Herinstalleer deze app indien u het wachtwoord vergeet.</string>
     <string name="fingerprint_setup_successfully">Vingerafdruk beveiliging ingesteld. Herinstalleer deze app indien u niet meer met uw vingerafdruk kunt authenticeren.</string>
+    <string name="lock_folder">Map vergrendelen</string>
+    <string name="unlock_folder">Map ontgrendelen</string>
+    <string name="lock_folder_notice">Deze bescherming werkt alleen binnen de app en is dus geen vervanging voor een daadwerkelijke encryptie van de map.</string>
 
     <!-- Times -->
     <string name="yesterday">Gisteren</string>

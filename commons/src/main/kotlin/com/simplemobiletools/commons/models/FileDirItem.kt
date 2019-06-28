@@ -5,13 +5,13 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import java.io.File
 
-open class FileDirItem(val path: String, val name: String = "", var isDirectory: Boolean = false, var children: Int = 0, var size: Long = 0L) :
+open class FileDirItem(val path: String, val name: String = "", var isDirectory: Boolean = false, var children: Int = 0, var size: Long = 0L, var modified: Long = 0L) :
         Comparable<FileDirItem> {
     companion object {
         var sorting = 0
     }
 
-    override fun toString() = "FileDirItem(path=$path, name=$name, isDirectory=$isDirectory, children=$children, size=$size)"
+    override fun toString() = "FileDirItem(path=$path, name=$name, isDirectory=$isDirectory, children=$children, size=$size, modified=$modified)"
 
     override fun compareTo(other: FileDirItem): Int {
         return if (isDirectory && !other.isDirectory) {
@@ -28,11 +28,9 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
                     else -> -1
                 }
                 sorting and SORT_BY_DATE_MODIFIED != 0 -> {
-                    val file = File(path)
-                    val otherFile = File(other.path)
                     result = when {
-                        file.lastModified() == otherFile.lastModified() -> 0
-                        file.lastModified() > otherFile.lastModified() -> 1
+                        modified == other.modified -> 0
+                        modified > other.modified -> 1
                         else -> -1
                     }
                 }
@@ -52,7 +50,7 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
 
     fun getBubbleText(context: Context) = when {
         sorting and SORT_BY_SIZE != 0 -> size.formatSize()
-        sorting and SORT_BY_DATE_MODIFIED != 0 -> File(path).lastModified().formatDate(context)
+        sorting and SORT_BY_DATE_MODIFIED != 0 -> modified.formatDate(context)
         sorting and SORT_BY_EXTENSION != 0 -> getExtension().toLowerCase()
         else -> name
     }
@@ -62,8 +60,6 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
     fun getProperFileCount(countHidden: Boolean) = File(path).getFileCount(countHidden)
 
     fun getDirectChildrenCount(countHiddenItems: Boolean) = File(path).getDirectChildrenCount(countHiddenItems)
-
-    fun getLastModified() = File(path).lastModified()
 
     fun getParentPath() = path.getParentPath()
 
