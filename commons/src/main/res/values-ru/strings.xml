@@ -280,9 +280,9 @@
     <string name="go_to_settings">Перейдите в настройки</string>
     <string name="protection_setup_successfully">Пароль установлен. Переустановите приложение в случае, если вы его забудете.</string>
     <string name="fingerprint_setup_successfully">Установка защиты выполнена успешно. Переустановите приложение в случае возникновения проблем с её отключением.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="lock_folder">Защитить папку</string>
+    <string name="unlock_folder">Снять защиту папки</string>
+    <string name="lock_folder_notice">Данная защита работает только в этом приложении, она не должна заменять собой реальное общесистемное шифрование.</string>
 
     <!-- Times -->
     <string name="yesterday">Вчера</string>
@@ -663,7 +663,7 @@
     <string name="faq_4_title_commons">Мне не нравятся цвета виджета, я могу их изменить?</string>
     <string name="faq_4_text_commons">Да, при перетаскивании виджета на главный экран появляется панель его настройки. На ней вы увидите цветные квадраты в левом нижнем углу, просто нажмите их, чтобы выбрать новый цвет. Также можно использовать ползунок для настройки прозрачности.</string>
     <string name="faq_5_title_commons">Могу я как-то восстановить удалённые файлы?</string>
-    <string name="faq_5_text_commons">Если они были действительно были удалены, то не можете. Однако по умолчанию используется \"корзина\" и файлы перемещатются в неё вместо реального удаления.</string>
+    <string name="faq_5_text_commons">Если они были действительно были удалены, то не можете. Однако по умолчанию используется \"корзина\" и файлы перемещаются в неё вместо реального удаления.</string>
     <string name="faq_6_title_commons">Значок запуска приложения исчез. Что делать?</string>
     <string name="faq_6_text_commons">Это вызвано тем, что ваша программа запуска не поддерживает правильно настройку значков. Если значок исчезнет, попробуйте запустить приложение через Google Play или виджет, если он доступен.
         После запуска просто установите оранжевый цвет значка по умолчанию #F57C00. В худшем случае вам придётся переустановить приложение.</string>
