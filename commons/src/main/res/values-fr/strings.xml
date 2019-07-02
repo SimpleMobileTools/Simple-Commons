@@ -63,7 +63,7 @@
     <string name="extension_cannot_be_empty">L\'extension ne peut pas rester vide</string>
     <string name="source_file_doesnt_exist">Le fichier source %s n\'existe pas</string>
     <string name="prepend_filenames">Ajouter un préfixe aux noms de fichiers</string>
-    <string name="append_filenames">Ajouter un suffixe aux noms de fichiers (avant l\'extension du fichier)</string>
+    <string name="append_filenames">Ajouter un suffixe aux noms de fichiers</string>
     <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
 
     <!-- Copy / Move -->
