@@ -726,15 +726,13 @@ fun Activity.handleDeletePasswordProtection(callback: () -> Unit) {
     }
 }
 
-fun Activity.handleLockedFolderOpening(path: String, callback: () -> Unit) {
+fun Activity.handleLockedFolderOpening(path: String, callback: (success: Boolean) -> Unit) {
     if (baseConfig.isFolderProtected(path)) {
         SecurityDialog(this, baseConfig.getFolderProtectionHash(path), baseConfig.getFolderProtectionType(path)) { hash, type, success ->
-            if (success) {
-                callback()
-            }
+            callback(success)
         }
     } else {
-        callback()
+        callback(true)
     }
 }
 
