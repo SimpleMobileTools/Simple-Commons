@@ -143,10 +143,10 @@ open class BaseConfig(val context: Context) {
         set(deleteProtectionType) = prefs.edit().putInt(DELETE_PROTECTION_TYPE, deleteProtectionType).apply()
 
     // folder locking
-    fun addFolderProtection(path: String, hash: String, type: String) {
+    fun addFolderProtection(path: String, hash: String, type: Int) {
         prefs.edit()
                 .putString("$PROTECTED_FOLDER_HASH$path", hash)
-                .putString("$PROTECTED_FOLDER_TYPE$path", type)
+                .putInt("$PROTECTED_FOLDER_TYPE$path", type)
                 .apply()
     }
 
@@ -157,11 +157,11 @@ open class BaseConfig(val context: Context) {
                 .apply()
     }
 
-    fun isFolderProtected(path: String) = getFolderProtectionHash(path).isNotEmpty()
+    fun isFolderProtected(path: String) = getFolderProtectionType(path) != PROTECTION_NONE
 
     fun getFolderProtectionHash(path: String) = prefs.getString("$PROTECTED_FOLDER_HASH$path", "") ?: ""
 
-    fun getFolderProtectionType(path: String) = prefs.getString("$PROTECTED_FOLDER_TYPE$path", "") ?: ""
+    fun getFolderProtectionType(path: String) = prefs.getInt("$PROTECTED_FOLDER_TYPE$path", PROTECTION_NONE)
 
     var keepLastModified: Boolean
         get() = prefs.getBoolean(KEEP_LAST_MODIFIED, true)
