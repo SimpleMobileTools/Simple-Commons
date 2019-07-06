@@ -23,8 +23,8 @@
     <string name="transparent_color">Genomskinlig färg</string>
     <string name="select_a_different_color">Välj en annan färg</string>
     <string name="download">Hämta</string>
-    <string name="notification">Notification</string>
-    <string name="email">Email</string>
+    <string name="notification">Avisering</string>
+    <string name="email">E-post</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoriter</string>
@@ -64,7 +64,7 @@
     <string name="source_file_doesnt_exist">Källfilen %s finns inte</string>
     <string name="prepend_filenames">Lägg till före filnamnen</string>
     <string name="append_filenames">Lägg till efter filnamnen</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="rename_date_time_pattern">%Y - år\n%M - månad\n%D - dag\n%h - timme\n%m - minut\n%s - sekund</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopiera</string>
@@ -91,7 +91,7 @@
     <string name="saving">Sparar…</string>
     <string name="could_not_create_folder">Det gick inte att skapa mappen %s</string>
     <string name="could_not_create_file">Det gick inte att skapa filen %s</string>
-    <string name="no_new_items">No new items have been found</string>
+    <string name="no_new_items">Inga nya objekt hittades</string>
 
     <!-- Create new -->
     <string name="create_new">Skapa ny</string>
@@ -223,7 +223,7 @@
     <string name="undo">Ångra</string>
     <string name="redo">Gör om</string>
     <string name="print">Skriv ut</string>
-    <string name="create_shortcut">Create shortcut</string>
+    <string name="create_shortcut">Skapa genväg</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortera efter</string>
@@ -239,7 +239,7 @@
     <string name="ascending">Stigande</string>
     <string name="descending">Fallande</string>
     <string name="use_for_this_folder">Använd bara för denna mapp</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">Sortera numeriska delar efter faktiskt värde</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Är du säker på att du vill fortsätta med borttagningen?</string>
@@ -250,7 +250,7 @@
     <string name="do_not_ask_again">Fråga inte igen i denna session</string>
     <string name="yes">Ja</string>
     <string name="no">Nej</string>
-    <string name="maybe">Maybe</string>
+    <string name="maybe">Kanske</string>
 
     <plurals name="delete_warning">
         <item quantity="one">VARNING! Du håller på att ta bort %d mapp</item>
@@ -276,8 +276,8 @@
     <string name="go_to_settings">Gå till Inställningar</string>
     <string name="protection_setup_successfully">Lösenordet har ställts in. Installera om appen om du glömmer bort det.</string>
     <string name="fingerprint_setup_successfully">Skyddet har ställts in. Installera om appen om du inte kan ta bort skyddet.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
+    <string name="lock_folder">Lås mapp</string>
+    <string name="unlock_folder">Lås upp mapp</string>
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
 
     <!-- Times -->
@@ -332,50 +332,50 @@
         <item quantity="other">%d timmar</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d dag</item>
+        <item quantity="other">%d dagar</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d vecka</item>
+        <item quantity="other">%d veckor</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d månad</item>
+        <item quantity="other">%d månader</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d år</item>
+        <item quantity="other">%d år</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d sekund före</item>
-        <item quantity="other">%d sekunder före</item>
+        <item quantity="one">%d sekund innan</item>
+        <item quantity="other">%d sekunder innan</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">%d minut före</item>
-        <item quantity="other">%d minuter före</item>
+        <item quantity="one">%d minut innan</item>
+        <item quantity="other">%d minuter innan</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">%d timme före</item>
-        <item quantity="other">%d timmar före</item>
+        <item quantity="one">%d timme innan</item>
+        <item quantity="other">%d timmar innan</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">%d dag före</item>
-        <item quantity="other">%d dagar före</item>
+        <item quantity="one">%d dag innan</item>
+        <item quantity="other">%d dagar innan</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d vecka före</item>
-        <item quantity="other">%d veckor före</item>
+        <item quantity="one">%d vecka innan</item>
+        <item quantity="other">%d veckor innan</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d månad före</item>
-        <item quantity="other">%d månader före</item>
+        <item quantity="one">%d månad innan</item>
+        <item quantity="other">%d månader innan</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d år före</item>
-        <item quantity="other">%d år före</item>
+        <item quantity="one">%d år innan</item>
+        <item quantity="other">%d år innan</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
@@ -471,7 +471,7 @@
     <string name="saving_label">Sparande</string>
     <string name="startup">Start</string>
     <string name="text">Text</string>
-    <string name="migrating">Migrating</string>
+    <string name="migrating">Migrering</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Återställ filen</string>
@@ -481,7 +481,7 @@
     <string name="files_restored_successfully">Filerna har återställts</string>
     <string name="empty_recycle_bin_confirmation">Är du säker på att du vill tömma Papperskorgen? Filerna tas bort permanent.</string>
     <string name="recycle_bin_empty">Papperskorgen är tom</string>
-    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
+    <string name="moving_recycle_bin_items_disabled">Flytt av objekt i Papperskorgen är inaktiverad, använd Återställ</string>
     <string name="show_the_recycle_bin">Visa Papperskorgen</string>
     <string name="hide_the_recycle_bin">Dölj Papperskorgen</string>
 
@@ -499,8 +499,8 @@
     <string name="exporting_failed">Exporten misslyckades</string>
     <string name="importing_some_entries_failed">Importen av vissa poster misslyckades</string>
     <string name="exporting_some_entries_failed">Exporten av vissa poster misslyckades</string>
-    <string name="no_entries_for_importing">No entries for importing have been found</string>
-    <string name="no_entries_for_exporting">Inga poster hittades för export</string>
+    <string name="no_entries_for_importing">Inga poster som kan importeras hittades</string>
+    <string name="no_entries_for_exporting">Inga poster som kan exporteras hittades</string>
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
@@ -571,14 +571,14 @@
     <string name="about">Om</string>
     <string name="website_label">Du hittar källkoden på</string>
     <string name="email_label">Skicka dina synpunkter och förslag till</string>
-    <string name="upgrade_to_pro">Upgrade to Pro</string>
+    <string name="upgrade_to_pro">Uppgradera till Pro</string>
     <string name="more_apps_underlined"><u>Fler appar</u></string>
     <string name="third_party_licences_underlined"><u>Tredjepartslicenser</u></string>
     <string name="invite_friends_underlined"><u>Bjud in vänner</u></string>
     <string name="share_text">Hej, läs om %1$s på %2$s</string>
     <string name="invite_via">Bjud in via</string>
     <string name="rate_us_underlined"><u>Betygsätt oss</u></string>
-    <string name="rate">Rate</string>
+    <string name="rate">Betygsätt</string>
     <string name="donate">Donera</string>
     <string name="donate_underlined"><u>Donera</u></string>
     <string name="follow_us">Följ oss</string>
