@@ -82,6 +82,13 @@ class PropertiesDialog() {
                         addProperty(R.string.gps_coordinates, "${latLon[0]}, ${latLon[1]}")
                     }
                 }
+
+                val altitude = exif.getAltitude(0.0)
+                if (altitude != 0.0) {
+                    activity.runOnUiThread {
+                        addProperty(R.string.altitude, "${altitude}m")
+                    }
+                }
             }
         }
 
