@@ -139,8 +139,12 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
         val adapter = FilepickerItemsAdapter(activity, sortedItems, mDialogView.filepicker_list) {
             if ((it as FileDirItem).isDirectory) {
-                currPath = it.path
-                tryUpdateItems()
+                activity.handleLockedFolderOpening(it.path) { success ->
+                    if (success) {
+                        currPath = it.path
+                        tryUpdateItems()
+                    }
+                }
             } else if (pickFile) {
                 currPath = it.path
                 verifyPath()

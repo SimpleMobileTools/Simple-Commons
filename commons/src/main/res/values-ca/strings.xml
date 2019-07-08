@@ -63,7 +63,7 @@
     <string name="extension_cannot_be_empty">La extensió no pot estar buida</string>
     <string name="source_file_doesnt_exist">El fitxer %s no existeix</string>
     <string name="prepend_filenames">Posar abans noms de fitxer</string>
-    <string name="append_filenames">Afegeix noms de fitxer (abans de l\'extensió de fitxer)</string>
+    <string name="append_filenames">Afegeix noms de fitxer</string>
     <string name="rename_date_time_pattern">%Y - any\n%M - mes\n%D - dia\n%h - hora\n%m - minut\n%s - segon</string>
 
     <!-- Copy / Move -->
@@ -165,6 +165,8 @@
     <string name="camera">Càmera</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Títol de la canço</string>
+    <string name="gps_coordinates">GPS coordinates</string>
+    <string name="altitude">Altitude</string>
 
     <!-- Color customization -->
     <string name="background_color">Color del fons</string>

@@ -63,7 +63,7 @@
     <string name="extension_cannot_be_empty">Тип датотеке не може бити празан</string>
     <string name="source_file_doesnt_exist">Изворни код датотеке %s не постоји</string>
     <string name="prepend_filenames">Додај префикс именима датотека</string>
-    <string name="append_filenames">Додај суфикс именима датотека (пре екстензије датотеке)</string>
+    <string name="append_filenames">Додај суфикс именима датотека</string>
     <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
 
     <!-- Copy / Move -->
@@ -164,6 +164,8 @@
     <string name="camera">Камера</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Име песме</string>
+    <string name="gps_coordinates">GPS coordinates</string>
+    <string name="altitude">Altitude</string>
 
     <!-- Color customization -->
     <string name="background_color">Боја позадине</string>

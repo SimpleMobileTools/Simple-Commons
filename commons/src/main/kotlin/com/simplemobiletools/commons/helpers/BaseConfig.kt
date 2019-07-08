@@ -142,6 +142,27 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(DELETE_PROTECTION_TYPE, PROTECTION_PATTERN)
         set(deleteProtectionType) = prefs.edit().putInt(DELETE_PROTECTION_TYPE, deleteProtectionType).apply()
 
+    // folder locking
+    fun addFolderProtection(path: String, hash: String, type: Int) {
+        prefs.edit()
+                .putString("$PROTECTED_FOLDER_HASH$path", hash)
+                .putInt("$PROTECTED_FOLDER_TYPE$path", type)
+                .apply()
+    }
+
+    fun removeFolderProtection(path: String) {
+        prefs.edit()
+                .remove("$PROTECTED_FOLDER_HASH$path")
+                .remove("$PROTECTED_FOLDER_TYPE$path")
+                .apply()
+    }
+
+    fun isFolderProtected(path: String) = getFolderProtectionType(path) != PROTECTION_NONE
+
+    fun getFolderProtectionHash(path: String) = prefs.getString("$PROTECTED_FOLDER_HASH$path", "") ?: ""
+
+    fun getFolderProtectionType(path: String) = prefs.getInt("$PROTECTED_FOLDER_TYPE$path", PROTECTION_NONE)
+
     var keepLastModified: Boolean
         get() = prefs.getBoolean(KEEP_LAST_MODIFIED, true)
         set(keepLastModified) = prefs.edit().putBoolean(KEEP_LAST_MODIFIED, keepLastModified).apply()
@@ -293,7 +314,7 @@ open class BaseConfig(val context: Context) {
         set(dateFormat) = prefs.edit().putString(DATE_FORMAT, dateFormat).apply()
 
     private fun getDefaultDateFormat(): String {
-        val format = android.text.format.DateFormat.getDateFormat(context)
+        val format = DateFormat.getDateFormat(context)
         val pattern = (format as SimpleDateFormat).toLocalizedPattern()
         return when (pattern.toLowerCase().replace(" ", "")) {
             "dd/mm/y" -> DATE_FORMAT_TWO
@@ -318,4 +339,8 @@ open class BaseConfig(val context: Context) {
     var wasSortingByNumericValueAdded: Boolean
         get() = prefs.getBoolean(WAS_SORTING_BY_NUMERIC_VALUE_ADDED, false)
         set(wasSortingByNumericValueAdded) = prefs.edit().putBoolean(WAS_SORTING_BY_NUMERIC_VALUE_ADDED, wasSortingByNumericValueAdded).apply()
+
+    var wasFolderLockingNoticeShown: Boolean
+        get() = prefs.getBoolean(WAS_FOLDER_LOCKING_NOTICE_SHOWN, false)
+        set(wasFolderLockingNoticeShown) = prefs.edit().putBoolean(WAS_FOLDER_LOCKING_NOTICE_SHOWN, wasFolderLockingNoticeShown).apply()
 }

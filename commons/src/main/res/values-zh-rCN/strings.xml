@@ -63,7 +63,7 @@
     <string name="extension_cannot_be_empty">扩展名不能为空</string>
     <string name="source_file_doesnt_exist">原文件 %s 不存在</string>
     <string name="prepend_filenames">文件名前缀</string>
-    <string name="append_filenames">文件名后缀(格式后缀之前)</string>
+    <string name="append_filenames">文件名后缀</string>
     <string name="rename_date_time_pattern">%Y - 年\n%M - 月\n%D - 日\n%h - 时\n%m - 分\n%s - 秒</string>
 
     <!-- Copy / Move -->
@@ -162,6 +162,8 @@
     <string name="camera">相机</string>
     <string name="exif">EXIF</string>
     <string name="song_title">歌曲标题</string>
+    <string name="gps_coordinates">GPS coordinates</string>
+    <string name="altitude">Altitude</string>
 
     <!-- Color customization -->
     <string name="background_color">背景色</string>

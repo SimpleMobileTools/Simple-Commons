@@ -63,7 +63,7 @@
     <string name="extension_cannot_be_empty">Расширение не может быть пустым</string>
     <string name="source_file_doesnt_exist">Исходный файл \"%s\" не существует</string>
     <string name="prepend_filenames">Перед именем файла</string>
-    <string name="append_filenames">После имени файла (до расширения)</string>
+    <string name="append_filenames">После имени файла</string>
     <string name="rename_date_time_pattern">%Y - год\n%M - месяц\n%D - день\n%h - час\n%m - минута\n%s - секунда</string>
 
     <!-- Copy / Move -->
@@ -168,6 +168,8 @@
     <string name="camera">Камера</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Название композиции</string>
+    <string name="gps_coordinates">GPS coordinates</string>
+    <string name="altitude">Altitude</string>
 
     <!-- Color customization -->
     <string name="background_color">Цвет фона</string>

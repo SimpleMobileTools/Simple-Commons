@@ -11,6 +11,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.formatSize
 import com.simplemobiletools.commons.extensions.getColoredDrawableWithColor
+import com.simplemobiletools.commons.extensions.isGif
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.filepicker_list_item.view.*
@@ -90,7 +91,11 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
                 }
 
                 if (!activity.isDestroyed && !activity.isFinishing) {
-                    Glide.with(activity).load(itemToLoad).transition(withCrossFade()).apply(options).into(list_item_icon)
+                    if (itemToLoad.toString().isGif()) {
+                        Glide.with(activity).asBitmap().load(itemToLoad).apply(options).into(list_item_icon)
+                    } else {
+                        Glide.with(activity).load(itemToLoad).transition(withCrossFade()).apply(options).into(list_item_icon)
+                    }
                 }
             }
         }

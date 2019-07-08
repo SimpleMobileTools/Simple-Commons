@@ -66,6 +66,9 @@ const val APP_PROTECTION_TYPE = "app_protection_type"
 const val DELETE_PASSWORD_PROTECTION = "delete_password_protection"
 const val DELETE_PASSWORD_HASH = "delete_password_hash"
 const val DELETE_PROTECTION_TYPE = "delete_protection_type"
+const val PROTECTED_FOLDER_PATH = "protected_folder_path_"
+const val PROTECTED_FOLDER_HASH = "protected_folder_hash_"
+const val PROTECTED_FOLDER_TYPE = "protected_folder_type_"
 const val KEEP_LAST_MODIFIED = "keep_last_modified"
 const val USE_ENGLISH = "use_english"
 const val WAS_USE_ENGLISH_TOGGLED = "was_use_english_toggled"
@@ -106,6 +109,7 @@ const val WAS_OTG_HANDLED = "was_otg_handled_2"
 const val WAS_UPGRADED_FROM_FREE_SHOWN = "was_upgraded_from_free_shown"
 const val WAS_RATE_US_PROMPT_SHOWN = "was_rate_us_prompt_shown"
 const val WAS_SORTING_BY_NUMERIC_VALUE_ADDED = "was_sorting_by_numeric_value_added"
+const val WAS_FOLDER_LOCKING_NOTICE_SHOWN = "was_folder_locking_notice_shown"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
@@ -160,6 +164,7 @@ const val SORT_USE_NUMERIC_VALUE = 32768
 
 // security
 const val WAS_PROTECTION_HANDLED = "was_protection_handled"
+const val PROTECTION_NONE = -1
 const val PROTECTION_PATTERN = 0
 const val PROTECTION_PIN = 1
 const val PROTECTION_FINGERPRINT = 2

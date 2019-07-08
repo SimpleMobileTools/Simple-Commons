@@ -726,6 +726,16 @@ fun Activity.handleDeletePasswordProtection(callback: () -> Unit) {
     }
 }
 
+fun Activity.handleLockedFolderOpening(path: String, callback: (success: Boolean) -> Unit) {
+    if (baseConfig.isFolderProtected(path)) {
+        SecurityDialog(this, baseConfig.getFolderProtectionHash(path), baseConfig.getFolderProtectionType(path)) { hash, type, success ->
+            callback(success)
+        }
+    } else {
+        callback(true)
+    }
+}
+
 fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
     if (File(directory).exists()) {
         return true

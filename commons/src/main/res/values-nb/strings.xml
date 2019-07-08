@@ -63,7 +63,7 @@
     <string name="extension_cannot_be_empty">Extension cannot be empty</string>
     <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
     <string name="prepend_filenames">Prepend filenames</string>
-    <string name="append_filenames">Append filenames (before file extension)</string>
+    <string name="append_filenames">Append filenames</string>
     <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
 
     <!-- Copy / Move -->
@@ -165,6 +165,8 @@
     <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Sangtittel</string>
+    <string name="gps_coordinates">GPS coordinates</string>
+    <string name="altitude">Altitude</string>
 
     <!-- Color customization -->
     <string name="background_color">Bakgrunnsfarge</string>

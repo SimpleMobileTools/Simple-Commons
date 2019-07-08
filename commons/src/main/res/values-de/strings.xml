@@ -63,7 +63,7 @@
     <string name="extension_cannot_be_empty">Dateiendung darf nicht leer sein</string>
     <string name="source_file_doesnt_exist">Quelldatei %s existiert nicht</string>
     <string name="prepend_filenames">Dateinamen voranstellen</string>
-    <string name="append_filenames">Dateinamen anhängen (vor Dateiendung)</string>
+    <string name="append_filenames">Dateinamen anhängen</string>
     <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
 
     <!-- Copy / Move -->
@@ -165,6 +165,8 @@
     <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Liedtitel</string>
+    <string name="gps_coordinates">GPS coordinates</string>
+    <string name="altitude">Altitude</string>
 
     <!-- Color customization -->
     <string name="background_color">Hintergrundfarbe</string>
