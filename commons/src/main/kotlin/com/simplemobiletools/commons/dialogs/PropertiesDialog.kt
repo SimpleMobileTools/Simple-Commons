@@ -186,17 +186,17 @@ class PropertiesDialog() {
 
     private fun addExifProperties(path: String, activity: Activity) {
         val exif = ExifInterface(path)
-        val dateTaken = path.getExifDateTaken(exif, activity)
+        val dateTaken = exif.getExifDateTaken(activity)
         if (dateTaken.isNotEmpty()) {
             addProperty(R.string.date_taken, dateTaken)
         }
 
-        val cameraModel = path.getExifCameraModel(exif)
+        val cameraModel = exif.getExifCameraModel()
         if (cameraModel.isNotEmpty()) {
             addProperty(R.string.camera, cameraModel)
         }
 
-        val exifString = path.getExifProperties(exif)
+        val exifString = exif.getExifProperties()
         if (exifString.isNotEmpty()) {
             addProperty(R.string.exif, exifString)
         }

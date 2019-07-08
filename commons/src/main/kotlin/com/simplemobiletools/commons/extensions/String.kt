@@ -1,13 +1,10 @@
 package com.simplemobiletools.commons.extensions
 
-import android.annotation.TargetApi
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Point
-import android.media.ExifInterface
 import android.media.MediaMetadataRetriever
-import android.os.Build
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.TextUtils
@@ -16,7 +13,6 @@ import com.bumptech.glide.signature.ObjectKey
 import com.simplemobiletools.commons.helpers.*
 import java.io.File
 import java.text.Normalizer
-import java.text.SimpleDateFormat
 import java.util.*
 import java.util.regex.Pattern
 
@@ -70,69 +66,6 @@ fun String.getCompressionFormat() = when (getFilenameExtension().toLowerCase()) 
 }
 
 fun String.areDigitsOnly() = matches(Regex("[0-9]+"))
-
-@TargetApi(Build.VERSION_CODES.N)
-fun String.getExifProperties(exif: ExifInterface): String {
-    var exifString = ""
-    exif.getAttribute(ExifInterface.TAG_F_NUMBER).let {
-        if (it?.isNotEmpty() == true) {
-            val number = it.trimEnd('0').trimEnd('.')
-            exifString += "F/$number  "
-        }
-    }
-
-    exif.getAttribute(ExifInterface.TAG_FOCAL_LENGTH).let {
-        if (it?.isNotEmpty() == true) {
-            val values = it.split('/')
-            val focalLength = "${values[0].toDouble() / values[1].toDouble()}mm"
-            exifString += "$focalLength  "
-        }
-    }
-
-    exif.getAttribute(ExifInterface.TAG_EXPOSURE_TIME).let {
-        if (it?.isNotEmpty() == true) {
-            val exposureValue = it.toFloat()
-            exifString += if (exposureValue > 1f) {
-                "${exposureValue}s  "
-            } else {
-                "1/${Math.round(1 / exposureValue)}s  "
-            }
-        }
-    }
-
-    exif.getAttribute(ExifInterface.TAG_ISO_SPEED_RATINGS).let {
-        if (it?.isNotEmpty() == true) {
-            exifString += "ISO-$it"
-        }
-    }
-
-    return exifString.trim()
-}
-
-@TargetApi(Build.VERSION_CODES.N)
-fun String.getExifDateTaken(exif: ExifInterface, context: Context): String {
-    val dateTime = exif.getAttribute(ExifInterface.TAG_DATETIME_ORIGINAL) ?: exif.getAttribute(ExifInterface.TAG_DATETIME)
-    dateTime.let {
-        if (it?.isNotEmpty() == true) {
-            try {
-                val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd kk:mm:ss", Locale.ENGLISH)
-                return simpleDateFormat.parse(it).time.formatDate(context).trim()
-            } catch (ignored: Exception) {
-            }
-        }
-    }
-    return ""
-}
-
-fun String.getExifCameraModel(exif: ExifInterface): String {
-    exif.getAttribute(ExifInterface.TAG_MAKE).let {
-        if (it?.isNotEmpty() == true) {
-            val model = exif.getAttribute(ExifInterface.TAG_MODEL)
-            return "$it $model".trim()
-        }
-    }
-    return ""
-}
 
 fun String.getGenericMimeType(): String {
     if (!contains("/"))
