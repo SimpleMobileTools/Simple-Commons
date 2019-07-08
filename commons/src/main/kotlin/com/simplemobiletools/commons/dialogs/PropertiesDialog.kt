@@ -74,6 +74,14 @@ class PropertiesDialog() {
                         updateLastModified(activity, view, fileDirItem.modified)
                     }
                 }
+
+                val exif = ExifInterface(fileDirItem.path)
+                val latLon = FloatArray(2)
+                if (exif.getLatLong(latLon)) {
+                    activity.runOnUiThread {
+                        addProperty(R.string.gps_coordinates, "${latLon[0]}, ${latLon[1]}")
+                    }
+                }
             }
         }
 
