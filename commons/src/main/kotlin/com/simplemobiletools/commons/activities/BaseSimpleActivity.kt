@@ -329,7 +329,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         val file = files[index]
         val newFileDirItem = FileDirItem("$destinationPath/${file.name}", file.name, file.isDirectory)
         if (File(newFileDirItem.path).exists()) {
-            FileConflictDialog(this, newFileDirItem) { resolution, applyForAll ->
+            FileConflictDialog(this, newFileDirItem, files.size > 1) { resolution, applyForAll ->
                 if (applyForAll) {
                     conflictResolutions.clear()
                     conflictResolutions[""] = resolution
