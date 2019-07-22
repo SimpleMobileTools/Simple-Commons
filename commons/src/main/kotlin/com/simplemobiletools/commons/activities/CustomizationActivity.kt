@@ -27,7 +27,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private var curBackgroundColor = 0
     private var curPrimaryColor = 0
     private var curAppIconColor = 0
-    private var curNavigationBarColor = DEFAULT_NAVIGATION_BAR_COLOR
+    private var curNavigationBarColor = INVALID_NAVIGATION_BAR_COLOR
     private var curSelectedThemeId = 0
     private var originalAppIconColor = 0
     private var hasUnsavedChanges = false
@@ -42,6 +42,11 @@ class CustomizationActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
+
+        if (baseConfig.defaultNavigationBarColor == INVALID_NAVIGATION_BAR_COLOR) {
+            baseConfig.defaultNavigationBarColor = window.navigationBarColor
+            baseConfig.navigationBarColor = window.navigationBarColor
+        }
 
         initColorVariables()
         setupColorsPickers()

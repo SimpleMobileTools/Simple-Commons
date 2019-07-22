@@ -12,7 +12,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.DEFAULT_NAVIGATION_BAR_COLOR
+import com.simplemobiletools.commons.helpers.INVALID_NAVIGATION_BAR_COLOR
 import com.simplemobiletools.commons.views.ColorPickerSquare
 import kotlinx.android.synthetic.main.dialog_color_picker.view.*
 
@@ -158,7 +158,7 @@ class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBack
     }
 
     private fun useDefault() {
-        callback(true, DEFAULT_NAVIGATION_BAR_COLOR)
+        callback(true, activity.baseConfig.defaultNavigationBarColor)
     }
 
     private fun getHexCode(color: Int) = color.toHex().substring(1)
