@@ -397,14 +397,18 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickNavigationBarColor() {
-        ColorPickerDialog(this, curBackgroundColor, showUseDefaultButton = true) { wasPositivePressed, color ->
+        ColorPickerDialog(this, curBackgroundColor, true, true, currentColorCallback = {
+            updateNavigationBarColor(it)
+        }, callback = { wasPositivePressed, color ->
             if (wasPositivePressed) {
                 if (hasColorChanged(curNavigationBarColor, color)) {
                     setCurrentNavigarionBarColor(color)
                     colorChanged()
                 }
+            } else {
+                updateNavigationBarColor(curNavigationBarColor)
             }
-        }
+        })
     }
 
     private fun pickAppIconColor() {
