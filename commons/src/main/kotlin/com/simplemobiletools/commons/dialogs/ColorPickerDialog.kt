@@ -12,11 +12,12 @@ import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.DEFAULT_NAVIGATION_BAR_COLOR
 import com.simplemobiletools.commons.views.ColorPickerSquare
 import kotlinx.android.synthetic.main.dialog_color_picker.view.*
 
 // forked from https://github.com/yukuku/ambilwarna
-class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBackground: Boolean = false,
+class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBackground: Boolean = false, val showUseDefaultButton: Boolean = false,
                         val currentColorCallback: ((color: Int) -> Unit)? = null, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit) {
     lateinit var viewHue: View
     lateinit var viewSatVal: ColorPickerSquare
@@ -120,17 +121,22 @@ class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBack
         }
 
         val textColor = activity.baseConfig.textColor
-        dialog = AlertDialog.Builder(activity)
+        val builder = AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.ok) { dialog, which -> confirmNewColor() }
                 .setNegativeButton(R.string.cancel) { dialog, which -> dialogDismissed() }
                 .setOnCancelListener { dialogDismissed() }
-                .create().apply {
-                    activity.setupDialogStuff(view, this) {
-                        view.color_picker_arrow.applyColorFilter(textColor)
-                        view.color_picker_hex_arrow.applyColorFilter(textColor)
-                        viewCursor.applyColorFilter(textColor)
-                    }
-                }
+
+        if (showUseDefaultButton) {
+            builder.setNeutralButton(R.string.use_default) { dialog, which -> useDefault() }
+        }
+
+        dialog = builder.create().apply {
+            activity.setupDialogStuff(view, this) {
+                view.color_picker_arrow.applyColorFilter(textColor)
+                view.color_picker_hex_arrow.applyColorFilter(textColor)
+                viewCursor.applyColorFilter(textColor)
+            }
+        }
 
         view.onGlobalLayout {
             moveHuePicker()
@@ -149,6 +155,10 @@ class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBack
         } else {
             callback(true, getColor())
         }
+    }
+
+    private fun useDefault() {
+        callback(true, DEFAULT_NAVIGATION_BAR_COLOR)
     }
 
     private fun getHexCode(color: Int) = color.toHex().substring(1)
