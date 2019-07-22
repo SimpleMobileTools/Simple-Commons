@@ -64,6 +64,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(PRIMARY_COLOR, context.resources.getColor(R.color.color_primary))
         set(primaryColor) = prefs.edit().putInt(PRIMARY_COLOR, primaryColor).apply()
 
+    var navigationBarColor: Int
+        get() = prefs.getInt(NAVIGATION_BAR_COLOR, DEFAULT_NAVIGATION_BAR_COLOR)
+        set(navigationBarColor) = prefs.edit().putInt(NAVIGATION_BAR_COLOR, navigationBarColor).apply()
+
     var lastHandledShortcutColor: Int
         get() = prefs.getInt(LAST_HANDLED_SHORTCUT_COLOR, 1)
         set(lastHandledShortcutColor) = prefs.edit().putInt(LAST_HANDLED_SHORTCUT_COLOR, lastHandledShortcutColor).apply()

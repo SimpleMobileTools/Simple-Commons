@@ -67,6 +67,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
         updateActionbarColor()
         updateRecentsAppIcon()
+        updateNavigationBarColor()
     }
 
     override fun onStop() {
@@ -108,6 +109,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     fun updateStatusbarColor(color: Int) {
         window.statusBarColor = color.darkenColor()
+    }
+
+    fun updateNavigationBarColor(color: Int = baseConfig.navigationBarColor) {
+        if (color != DEFAULT_NAVIGATION_BAR_COLOR) {
+            window.navigationBarColor = color
+        }
     }
 
     fun updateRecentsAppIcon() {
