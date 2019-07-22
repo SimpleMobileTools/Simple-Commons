@@ -112,9 +112,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun updateNavigationBarColor(color: Int = baseConfig.navigationBarColor) {
-        if (color != DEFAULT_NAVIGATION_BAR_COLOR) {
-            window.navigationBarColor = color
-        }
+        window.navigationBarColor = color
     }
 
     fun updateRecentsAppIcon() {

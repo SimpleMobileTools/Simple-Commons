@@ -21,7 +21,7 @@ const val ALARM_SOUND_TYPE_ALARM = 1
 const val ALARM_SOUND_TYPE_NOTIFICATION = 2
 const val YOUR_ALARM_SOUNDS_MIN_ID = 1000
 const val SHOW_FAQ_BEFORE_MAIL = "show_faq_before_mail"
-const val DEFAULT_NAVIGATION_BAR_COLOR = -2
+const val DEFAULT_NAVIGATION_BAR_COLOR = -1
 val DEFAULT_WIDGET_BG_COLOR = Color.parseColor("#33000000")
 
 const val HOUR_MINUTES = 60
