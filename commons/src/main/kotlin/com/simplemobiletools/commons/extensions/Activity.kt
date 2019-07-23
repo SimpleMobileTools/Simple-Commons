@@ -75,6 +75,7 @@ fun Activity.appLaunched(appId: String) {
     }
 
     if (baseConfig.navigationBarColor == INVALID_NAVIGATION_BAR_COLOR) {
+        baseConfig.defaultNavigationBarColor = window.navigationBarColor
         baseConfig.navigationBarColor = window.navigationBarColor
     }
 }

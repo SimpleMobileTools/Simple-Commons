@@ -99,9 +99,9 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(CUSTOM_PRIMARY_COLOR, primaryColor)
         set(customPrimaryColor) = prefs.edit().putInt(CUSTOM_PRIMARY_COLOR, customPrimaryColor).apply()
 
-    var customAppIconColor: Int
-        get() = prefs.getInt(CUSTOM_APP_ICON_COLOR, primaryColor)
-        set(customPrimaryColor) = prefs.edit().putInt(CUSTOM_PRIMARY_COLOR, customPrimaryColor).apply()
+    var customNavigationBarColor: Int
+        get() = prefs.getInt(CUSTOM_NAVIGATION_BAR_COLOR, INVALID_NAVIGATION_BAR_COLOR)
+        set(customNavigationBarColor) = prefs.edit().putInt(CUSTOM_NAVIGATION_BAR_COLOR, customNavigationBarColor).apply()
 
     var widgetBgColor: Int
         get() = prefs.getInt(WIDGET_BG_COLOR, DEFAULT_WIDGET_BG_COLOR)
