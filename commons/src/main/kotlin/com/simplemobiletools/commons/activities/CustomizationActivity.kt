@@ -414,11 +414,9 @@ class CustomizationActivity : BaseSimpleActivity() {
             updateNavigationBarColor(it)
         }, callback = { wasPositivePressed, color ->
             if (wasPositivePressed) {
-                if (hasColorChanged(curNavigationBarColor, color)) {
-                    setCurrentNavigationBarColor(color)
-                    colorChanged()
-                    updateColorTheme(getUpdatedTheme())
-                }
+                setCurrentNavigationBarColor(color)
+                colorChanged()
+                updateColorTheme(getUpdatedTheme())
             } else {
                 updateNavigationBarColor(curNavigationBarColor)
             }
