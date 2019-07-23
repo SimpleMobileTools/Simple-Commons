@@ -171,7 +171,6 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun updateColorTheme(themeId: Int, useStored: Boolean = false) {
         curSelectedThemeId = themeId
         customization_theme.text = getThemeText()
-        curNavigationBarColor = baseConfig.navigationBarColor
 
         resources.apply {
             if (curSelectedThemeId == THEME_CUSTOM) {
@@ -418,6 +417,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 if (hasColorChanged(curNavigationBarColor, color)) {
                     setCurrentNavigationBarColor(color)
                     colorChanged()
+                    updateColorTheme(getUpdatedTheme())
                 }
             } else {
                 updateNavigationBarColor(curNavigationBarColor)
