@@ -21,6 +21,7 @@ const val ALARM_SOUND_TYPE_ALARM = 1
 const val ALARM_SOUND_TYPE_NOTIFICATION = 2
 const val YOUR_ALARM_SOUNDS_MIN_ID = 1000
 const val SHOW_FAQ_BEFORE_MAIL = "show_faq_before_mail"
+const val INVALID_NAVIGATION_BAR_COLOR = -1
 val DEFAULT_WIDGET_BG_COLOR = Color.parseColor("#33000000")
 
 const val HOUR_MINUTES = 60
@@ -49,12 +50,14 @@ const val TEXT_COLOR = "text_color"
 const val BACKGROUND_COLOR = "background_color"
 const val PRIMARY_COLOR = "primary_color_2"
 const val APP_ICON_COLOR = "app_icon_color"
+const val NAVIGATION_BAR_COLOR = "navigation_bar_color"
+const val DEFAULT_NAVIGATION_BAR_COLOR = "default_navigation_bar_color"
 const val LAST_HANDLED_SHORTCUT_COLOR = "last_handled_shortcut_color"
 const val LAST_ICON_COLOR = "last_icon_color"
 const val CUSTOM_TEXT_COLOR = "custom_text_color"
 const val CUSTOM_BACKGROUND_COLOR = "custom_background_color"
 const val CUSTOM_PRIMARY_COLOR = "custom_primary_color"
-const val CUSTOM_APP_ICON_COLOR = "custom_app_icon_color"
+const val CUSTOM_NAVIGATION_BAR_COLOR = "custom_navigation_bar_color"
 const val WIDGET_BG_COLOR = "widget_bg_color"
 const val WIDGET_TEXT_COLOR = "widget_text_color"
 const val PASSWORD_PROTECTION = "password_protection"
@@ -209,10 +212,10 @@ const val SIDELOADING_UNCHECKED = 0
 const val SIDELOADING_TRUE = 1
 const val SIDELOADING_FALSE = 2
 
-val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp")
+val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp", ".heic", ".heif")
 val videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
 val audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a", ".opus", ".flac", ".aac")
-val rawExtensions: Array<String> get() = arrayOf(".dng", ".orf", ".nef", ".arw", ".cr2")
+val rawExtensions: Array<String> get() = arrayOf(".dng", ".orf", ".nef", ".arw", ".cr2", ".rw2")
 
 const val DATE_FORMAT_ONE = "dd.MM.yyyy"
 const val DATE_FORMAT_TWO = "dd/MM/yyyy"

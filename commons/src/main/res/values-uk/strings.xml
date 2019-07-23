@@ -176,6 +176,8 @@
     <string name="app_icon_color">Колір піктограми додатка</string>
     <string name="bottom_navigation_bar_color">Колір нижньої навігаційної панелі</string>
     <string name="restore_defaults">Відновити стандартні параметри</string>
+    <string name="use_default">Use default</string>
+    <string name="default_color">Default</string>
     <string name="change_color">Змінити колір</string>
     <string name="theme">Тема</string>
     <string name="changing_color_description">Зміна кольору увімкне Користувацьку тему</string>
@@ -229,17 +231,17 @@
 
     <!-- Sorting -->
     <string name="sort_by">Сортувати за</string>
-    <string name="name">ім\'ям</string>
-    <string name="size">розміром</string>
-    <string name="last_modified">останньою зміною</string>
-    <string name="date_taken">датою зйомки</string>
-    <string name="title">заголовком</string>
-    <string name="filename">ім\'ям файлу</string>
-    <string name="extension">розширенням</string>
-    <string name="random">випадково</string>
+    <string name="name">Ім\'я</string>
+    <string name="size">Розмір</string>
+    <string name="last_modified">Остання зміна</string>
+    <string name="date_taken">Дата зйомки</string>
+    <string name="title">Заголовок</string>
+    <string name="filename">Ім\'я файла</string>
+    <string name="extension">Розширення</string>
+    <string name="random">Випадково</string>
     <string name="sort_randomly">Сортувати випадково</string>
-    <string name="ascending">за зростанням</string>
-    <string name="descending">за спаданням</string>
+    <string name="ascending">За зростанням</string>
+    <string name="descending">За спаданням</string>
     <string name="use_for_this_folder">Використовувати тільки для цієї теки</string>
     <string name="sort_numeric_parts">Сортувати за значенням числової частини</string>
 
@@ -278,9 +280,9 @@
     <string name="go_to_settings">Перейти до Налаштувань</string>
     <string name="protection_setup_successfully">Пароль успішно встановлено. Якщо ви його забудете, перевстановіть додаток.</string>
     <string name="fingerprint_setup_successfully">Захист успішно встановлено. При проблемах з його скиданням перевстановіть додаток.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="lock_folder">Заблокувати теку</string>
+    <string name="unlock_folder">Розблокувати теку</string>
+    <string name="lock_folder_notice">Цей захист працює тільки у цьому додатку, він не призначений для заміни загальносистемного шифрування тек.</string>
 
     <!-- Times -->
     <string name="yesterday">Вчора</string>
@@ -506,9 +508,9 @@
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">Здається, до вашого пристрою приєднано USB пристрій. Для коректного відображення його файлів вам необхідно надати додаткові дозволи.</string>
-    <string name="confirm_usb_storage_access_text">Будь ласка, оберіть кореневу теку USB пристрою далі, щоб надати доступ</string>
-    <string name="wrong_root_selected_usb">Обрана невірна тека, будь ласка оберіть кореневу теку вашого USB пристрою</string>
+    <string name="usb_detected">Здається, до вашого пристрою приєднано USB-пристрій. Для коректного відображення його файлів вам необхідно надати додаткові дозволи.</string>
+    <string name="confirm_usb_storage_access_text">Будь ласка, оберіть кореневу теку USB-пристрою далі, щоб надати доступ</string>
+    <string name="wrong_root_selected_usb">Обрано невірну теку, будь ласка, оберіть кореневу теку вашого USB-пристрою</string>
 
     <!-- Dates -->
     <string name="january">Січень</string>
@@ -567,7 +569,7 @@
     <string name="it_is_free">Це безкоштовно до: %s. Якщо ви завантажите додаток до вказаної дати, ви отримаєте його безкоштовно назавжди.</string>
     <string name="more_info">Більше інформації</string>
     <string name="upgrade">Оновити</string>
-    <string name="upgrade_calendar">Вам доведеться власноруч перемістити події, що зберігаються локально, експортувавши їх в .ics файл, потім імпортувавши. Ви знайдете кнопку експорту/імпорту в меню головного екрана.</string>
+    <string name="upgrade_calendar">Вам доведеться власноруч перемістити події, що зберігаються локально, експортувавши їх в .ics файл, а потім імпортувавши з нього. Ви знайдете кнопку експорту/імпорту в меню головного екрана.</string>
 
     <!-- About -->
     <string name="about">Про додаток</string>
@@ -591,13 +593,13 @@
     <string name="donate_please">
         <![CDATA[
             Привіт,<br><br>
-            сподівають, вам подобається додаток. Він не містить реклами, будь ласка, підтримайте його розробку, придбавши додаток <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>. Покупка також відмінить повторне спливання цього повідомлення.<br><br>
+            сподіваюсь, вам подобається додаток. Він не містить реклами, будь ласка, підтримайте його розробку, придбавши додаток <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>. Покупка також відмінить повторне спливання цього повідомлення.<br><br>
             Спасибі!
         ]]>
     </string>
     <string name="purchase">Придбати</string>
     <string name="update_thank_you">Будь ласка, оновіть Simple Thank You до останньої версії</string>
-    <string name="before_asking_question_read_faq">Перш ніж запитувати, будь ласка, ознайомтесь із налаштуваннями додатка та прочитайте Часто Задавані Питання. Можливо, відповідь там.</string>
+    <string name="before_asking_question_read_faq">Перш ніж запитувати, будь ласка, ознайомтесь із налаштуваннями додатка та прочитайте Часті Питання. Можливо, відповідь там.</string>
     <string name="read_it">Прочитати</string>
     <string name="rate_us_prompt">Привіт,\n\nздається, ви вже давно користуєтесь цим додатком, і ми це високо цінуємо.\n\nЧи могли б ви зробити нам послугу і оцінити додаток в Google Play? Це дійсно дуже нам допоможе.\n\nНезалежно від того, що ви вирішите, ви не побачите знову це повідомлення.\n\nСпасибі!</string>
 
@@ -614,19 +616,19 @@
 
     <string name="sideloaded_app">
         <![CDATA[
-            Схоже, що ваша версія додатка пошкоджена. Будь ласка, завантажте оригінальну версію <a href="%s">here</a>.
+            Схоже, що ваша версія додатка пошкоджена. Будь ласка, завантажте оригінальну версію <a href="%s">тут</a>.
         ]]>
     </string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Часто задавані питання - ЧаПи</string>
+    <string name="frequently_asked_questions">Часті питання - ЧаПи</string>
     <string name="before_asking_question">Перш ніж запитувати, будь ласка, прочитайте</string>
     <string name="faq_1_title_commons">Чому я не бачу віджета цього додатка у списку віджетів?</string>
     <string name="faq_1_text_commons">Найімовірніше тому, що ви перемістили додаток на SD карту. В системі Android існує обмеження, що приховує віджети додатка
         в цьому випадку. Єдине рішення - перемістити додаток назад у Внутрішню Пам\'ять з допомогою налаштувань вашого пристрою.</string>
     <string name="faq_2_title_commons">Я хочу вас підтримати, але я не можу пожертвувати гроші. Чи є ще щось, що я можу зробити?</string>
     <string name="faq_2_text_commons">Так, звичайно. Ви можете поширити інформацію про додатки або залишити хороший відгук і оцінки. Ви також можете допомогти перекласти додатки на нові мови або просто оновити існуючі переклади.
-        Ви знайдете вказівки за адресою https://github.com/SimpleMobileTools/General-Discussion , або просто напишіть мені повідомлення на hello@simplemobiletools.com , якщо вам необхідна допомога.</string>
+        Ви знайдете вказівки за адресою https://github.com/SimpleMobileTools/General-Discussion або просто напишіть мені повідомлення на hello@simplemobiletools.com, якщо вам необхідна допомога.</string>
     <string name="faq_3_title_commons">Я випадково видалив деякі файли, як я можу їх відновити?</string>
     <string name="faq_3_text_commons">На жаль, ви не можете. Файли видаляються негайно після діалогу-підтвердження, функції типу \"Кошик\" не передбачено.</string>
     <string name="faq_4_title_commons">Мені не подобаються кольори віджета, чи можу я їх змінити?</string>
@@ -634,7 +636,7 @@
     <string name="faq_5_title_commons">Чи можу я якось відновити видалені файли?</string>
     <string name="faq_5_text_commons">На жаль, ні, якщо вони були дійсно видалені. Однак стандартно увімкнена функція Кошика, вона переміщає файли в Кошик замість їх видаляти.</string>
     <string name="faq_6_title_commons">Значок запуску додатка зник. Що робити?</string>
-    <string name="faq_6_text_commons">Це спичинено тим, що ваша програма запуску неправильно підтримує налаштування значків. Спробуйте запустити додаток через Google Play або віджет, якщо він доступний.
+    <string name="faq_6_text_commons">Це спричинено тим, що ваша програма запуску неправильно підтримує налаштування значків. Спробуйте запустити додаток через Google Play або віджет, якщо він доступний.
         Після запуску встановіть типовий оранжевий колір значка #F57C00. У найгіршому випадку вам доведеться перевстановити додаток.</string>
 
     <!-- License -->
@@ -667,5 +669,5 @@
 
     <!-- Google Play listing -->
     <string name="deprecated_app">Застаріла: Ця версія додатка більше не підтримується, встановіть версію Pro за адресою https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Пам\'ятайте: якщо ви видалите будь-який платний додаток протягом 2 годин, вам буде автоматично повернена сума покупки. Якщо ви захочете повернути гроші пізніше, сконтактуйте з нами за адресою hello@simplemobiletools.com , і ви їх отримаєте. Таким чином ви можете легко спробувати додаток :)</string>
+    <string name="pro_app_refund">Пам\'ятайте: якщо ви видалите будь-який платний додаток протягом 2 годин, вам буде автоматично повернена сума покупки. Якщо ви захочете повернути гроші пізніше, сконтактуйте з нами за адресою hello@simplemobiletools.com, і ви їх отримаєте. Таким чином ви можете легко спробувати додаток :)</string>
 </resources>

@@ -64,7 +64,7 @@
     <string name="source_file_doesnt_exist">Le fichier source %s n\'existe pas</string>
     <string name="prepend_filenames">Ajouter un préfixe aux noms de fichiers</string>
     <string name="append_filenames">Ajouter un suffixe aux noms de fichiers</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="rename_date_time_pattern">%Y - année\n%M - mois\n%D - jour\n%h - heure\n%m - minute\n%s - seconde</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copier</string>
@@ -91,7 +91,7 @@
     <string name="saving">Enregistrement en cours…</string>
     <string name="could_not_create_folder">Impossible de créer le dossier %s</string>
     <string name="could_not_create_file">Impossible de créer le fichier %s</string>
-    <string name="no_new_items">No new items have been found</string>
+    <string name="no_new_items">Pas de nouveaux éléments trouvés</string>
 
     <!-- Create new -->
     <string name="create_new">Créer un nouveau</string>
@@ -165,7 +165,7 @@
     <string name="camera">Caméra</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Titre de la chanson</string>
-    <string name="gps_coordinates">GPS coordinates</string>
+    <string name="gps_coordinates">Coordonnées GPS</string>
     <string name="altitude">Altitude</string>
 
     <!-- Color customization -->
@@ -176,6 +176,8 @@
     <string name="app_icon_color">Couleur de l\'icône de l\'application</string>
     <string name="bottom_navigation_bar_color">Couleur de la barre de navigation</string>
     <string name="restore_defaults">Restaurer les valeurs par défaut</string>
+    <string name="use_default">Utiliser les défauts</string>
+    <string name="default_color">Défaut</string>
     <string name="change_color">Modifier la couleur</string>
     <string name="theme">Thème</string>
     <string name="changing_color_description">Modifier une couleur renomme le thème en \"Personnalisé\"</string>
@@ -432,7 +434,7 @@
 
     <!-- Settings -->
     <string name="settings">Paramètres</string>
-    <string name="purchase_simple_thank_you">Acheter Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Acheter Simple Merci</string>
     <string name="customize_colors">Modifier les couleurs</string>
     <string name="customize_widget_colors">Modifier les couleurs du widget</string>
     <string name="use_english_language">Utiliser la langue anglaise</string>

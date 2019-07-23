@@ -162,8 +162,8 @@
     <string name="camera">相機</string>
     <string name="exif">EXIF</string>
     <string name="song_title">歌名</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="gps_coordinates">GPS座標</string>
+    <string name="altitude">海拔高度</string>
 
     <!-- Color customization -->
     <string name="background_color">背景顏色</string>
@@ -173,6 +173,8 @@
     <string name="app_icon_color">應用程式圖標顏色</string>
     <string name="bottom_navigation_bar_color">底部導航列顏色</string>
     <string name="restore_defaults">恢復預設</string>
+    <string name="use_default">Use default</string>
+    <string name="default_color">Default</string>
     <string name="change_color">改變顏色</string>
     <string name="theme">主題</string>
     <string name="changing_color_description">改變顏色將切換成[自訂]主題</string>
@@ -274,7 +276,7 @@
     <string name="go_to_settings">前往[設定]</string>
     <string name="protection_setup_successfully">密碼設置成功。若遺忘了，請重新安裝應用程式。</string>
     <string name="fingerprint_setup_successfully">保護設置成功。若再次設置時發生問題，請重新安裝應用程式。</string>
-    <string name="lock_folder">鎖定資料夾</string>
+    <string name="lock_folder">上鎖資料夾</string>
     <string name="unlock_folder">解鎖資料夾</string>
     <string name="lock_folder_notice">這保護僅限作用於此應用程式，並不該用來取代真正系統級的資料夾加密。</string>
 

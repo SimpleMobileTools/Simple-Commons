@@ -37,6 +37,7 @@ import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_APP_ICON_COLOR
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_BACKGROUND_COLOR
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_LAST_UPDATED_TS
+import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_NAVIGATION_BAR_COLOR
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_PRIMARY_COLOR
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_TEXT_COLOR
 import com.simplemobiletools.commons.models.AlarmSound
@@ -372,8 +373,9 @@ fun Context.getSharedThemeSync(cursorLoader: CursorLoader): SharedTheme? {
             val backgroundColor = cursor.getIntValue(COL_BACKGROUND_COLOR)
             val primaryColor = cursor.getIntValue(COL_PRIMARY_COLOR)
             val appIconColor = cursor.getIntValue(COL_APP_ICON_COLOR)
+            val navigationBarColor = cursor.getIntValue(COL_NAVIGATION_BAR_COLOR)
             val lastUpdatedTS = cursor.getIntValue(COL_LAST_UPDATED_TS)
-            return SharedTheme(textColor, backgroundColor, primaryColor, appIconColor, lastUpdatedTS)
+            return SharedTheme(textColor, backgroundColor, primaryColor, appIconColor, navigationBarColor, lastUpdatedTS)
         }
     }
     return null

@@ -165,8 +165,8 @@
     <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Sangtitel</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="gps_coordinates">GPS-koordinater</string>
+    <string name="altitude">Højde</string>
 
     <!-- Color customization -->
     <string name="background_color">Baggrundsfarve</string>
@@ -174,8 +174,10 @@
     <string name="primary_color">Primær farve</string>
     <string name="foreground_color">Forgrundsfarve</string>
     <string name="app_icon_color">Farve til appens ikon</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
+    <string name="bottom_navigation_bar_color">Farve på nederste navigationslinje</string>
     <string name="restore_defaults">Gendan standarder</string>
+    <string name="use_default">Use default</string>
+    <string name="default_color">Default</string>
     <string name="change_color">Skift farve</string>
     <string name="theme">Udseende</string>
     <string name="changing_color_description">Ændring af farve vil også medføre skift til tilpasset udseende</string>
@@ -225,7 +227,7 @@
     <string name="undo">Fortryd</string>
     <string name="redo">Gentag</string>
     <string name="print">Udskriv</string>
-    <string name="create_shortcut">Create shortcut</string>
+    <string name="create_shortcut">Opret genvej</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorter efter</string>
@@ -241,7 +243,7 @@
     <string name="ascending">Stigende</string>
     <string name="descending">Faldende</string>
     <string name="use_for_this_folder">Anvend kun på denne mappe</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">Sorter nummerisk indhold efter værdi</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Er du sikker på at du vil fortsætte med at slette?</string>
@@ -278,8 +280,8 @@
     <string name="go_to_settings">Gå til indstillingerne</string>
     <string name="protection_setup_successfully">Adgangskoden er oprettet. Geninstaller appen hvis du glemmer den.</string>
     <string name="fingerprint_setup_successfully">Beskyttelsen er oprettet. Geninstaller appen hvis du har problemer med at gendanne den.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
+    <string name="lock_folder">Lås mappe</string>
+    <string name="unlock_folder">Lås mappe op</string>
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
 
     <!-- Times -->
@@ -334,20 +336,20 @@
         <item quantity="other">%d timer</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d dag</item>
+        <item quantity="other">%d dage</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d uge</item>
+        <item quantity="other">%d uger</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d måned</item>
+        <item quantity="other">%d måneder</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d år</item>
+        <item quantity="other">%d år</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
@@ -501,7 +503,7 @@
     <string name="exporting_failed">Eksport mislykkedes</string>
     <string name="importing_some_entries_failed">Import mislykkedes delvist</string>
     <string name="exporting_some_entries_failed">Eksport mislykkedes delvist</string>
-    <string name="no_entries_for_importing">No entries for importing have been found</string>
+    <string name="no_entries_for_importing">Der blev ikke fundet indhold til import</string>
     <string name="no_entries_for_exporting">Der er ikke fundet indhold til eksport</string>
 
     <!-- OTG devices -->
@@ -597,7 +599,7 @@
     </string>
     <string name="purchase">Køb</string>
     <string name="update_thank_you">Opdater venligst Simple Thank You til den seneste version</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
+    <string name="before_asking_question_read_faq">Inden du stiller et spørgsmål bedes du først tjekke appens indstillinger og læse de \"Ofte stillede spørgsmål\", måske finder du svaret der.</string>
     <string name="read_it">Læs det</string>
     <string name="rate_us_prompt">Hej\n\nDet ser ud til at du har brugt denne app et godt stykke tid, og det er vi virkelig glade for.\n\nHvis vi til gengæld må bede om en tjeneste, vil vi sætte stor pris på din vurdering på Google Play. Det ville være en kæmpe hjælp.\n\nUanset hvad du beslutter dig for, vil du ikke se denne besked igen.\n\nPå forhånd tak!</string>
 
@@ -665,6 +667,6 @@
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">FORÆLDET: Denne version af appen vedligeholdes ikke længere, skift til Pro-versionen her https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">Husk at hvis du afinstallerer en betalt app indenfor 2 timer, får du automatisk pengene tilbage. Vil du have refunderet beløbet på et senere tidspunkt, så send en mail til hello@simplemobiletools.com . På den måde kan du prøvekøre appen uden omkostninger :)</string>
 </resources>

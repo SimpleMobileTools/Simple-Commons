@@ -162,8 +162,8 @@
     <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Judul lagu</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="gps_coordinates">Koordinat GPS</string>
+    <string name="altitude">Ketinggian</string>
 
     <!-- Color customization -->
     <string name="background_color">Warna latar belakang</string>
@@ -173,6 +173,8 @@
     <string name="app_icon_color">Warna ikon aplikasi</string>
     <string name="bottom_navigation_bar_color">Warna bilah navigasi bawah</string>
     <string name="restore_defaults">Kembalikan ke default</string>
+    <string name="use_default">Use default</string>
+    <string name="default_color">Default</string>
     <string name="change_color">Ubah warna</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Mengubah warna akan mengalihkannya ke tema Khusus</string>

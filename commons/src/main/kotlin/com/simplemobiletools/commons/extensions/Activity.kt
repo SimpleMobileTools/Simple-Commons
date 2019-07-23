@@ -73,6 +73,11 @@ fun Activity.appLaunched(appId: String) {
         baseConfig.wasRateUsPromptShown = true
         RateUsDialog(this)
     }
+
+    if (baseConfig.navigationBarColor == INVALID_NAVIGATION_BAR_COLOR) {
+        baseConfig.defaultNavigationBarColor = window.navigationBarColor
+        baseConfig.navigationBarColor = window.navigationBarColor
+    }
 }
 
 fun Activity.showDonateOrUpgradeDialog() {

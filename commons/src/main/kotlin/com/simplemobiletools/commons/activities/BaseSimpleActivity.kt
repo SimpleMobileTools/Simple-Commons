@@ -67,6 +67,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
         updateActionbarColor()
         updateRecentsAppIcon()
+        updateNavigationBarColor()
     }
 
     override fun onStop() {
@@ -108,6 +109,15 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     fun updateStatusbarColor(color: Int) {
         window.statusBarColor = color.darkenColor()
+    }
+
+    fun updateNavigationBarColor(color: Int = baseConfig.navigationBarColor) {
+        if (baseConfig.navigationBarColor != INVALID_NAVIGATION_BAR_COLOR) {
+            try {
+                window.navigationBarColor = color
+            } catch (ignored: Exception) {
+            }
+        }
     }
 
     fun updateRecentsAppIcon() {
@@ -329,7 +339,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         val file = files[index]
         val newFileDirItem = FileDirItem("$destinationPath/${file.name}", file.name, file.isDirectory)
         if (File(newFileDirItem.path).exists()) {
-            FileConflictDialog(this, newFileDirItem) { resolution, applyForAll ->
+            FileConflictDialog(this, newFileDirItem, files.size > 1) { resolution, applyForAll ->
                 if (applyForAll) {
                     conflictResolutions.clear()
                     conflictResolutions[""] = resolution

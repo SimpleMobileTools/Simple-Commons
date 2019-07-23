@@ -44,6 +44,7 @@ abstract class BaseSplashActivity : AppCompatActivity() {
                         backgroundColor = it.backgroundColor
                         primaryColor = it.primaryColor
                         appIconColor = it.appIconColor
+                        navigationBarColor = it.navigationBarColor
                     }
                 }
                 initActivity()

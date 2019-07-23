@@ -165,8 +165,8 @@
     <string name="camera">Càmera</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Títol de la canço</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="gps_coordinates">Coordenades GPS</string>
+    <string name="altitude">Altitud</string>
 
     <!-- Color customization -->
     <string name="background_color">Color del fons</string>
@@ -176,6 +176,8 @@
     <string name="app_icon_color">Color de la icona d\'aplicació</string>
     <string name="bottom_navigation_bar_color">Color de la barra de navegació inferior</string>
     <string name="restore_defaults">Valors per defecte</string>
+    <string name="use_default">Use default</string>
+    <string name="default_color">Default</string>
     <string name="change_color">Canviar de color</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Canviar un color farà que canvii a tema personalitzat</string>

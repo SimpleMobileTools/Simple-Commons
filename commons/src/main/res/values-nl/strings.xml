@@ -165,8 +165,8 @@
     <string name="camera">Camera</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Titel</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="gps_coordinates">GPS-coördinaten</string>
+    <string name="altitude">Hoogte</string>
 
     <!-- Color customization -->
     <string name="background_color">Achtergrondkleur</string>
@@ -176,6 +176,8 @@
     <string name="app_icon_color">Kleur app-icoon</string>
     <string name="bottom_navigation_bar_color">Kleur navigatiebalk onder aan het scherm</string>
     <string name="restore_defaults">Standaardwaarden</string>
+    <string name="use_default">Standaardkleur gebruiken</string>
+    <string name="default_color">Standaard</string>
     <string name="change_color">Kleur veranderen</string>
     <string name="theme">Thema</string>
     <string name="changing_color_description">Zodra een kleur veranderd wordt zal het aangepaste thema worden gebruikt</string>

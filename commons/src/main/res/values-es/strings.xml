@@ -165,8 +165,8 @@
     <string name="camera">Cámara</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Título de la canción</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="gps_coordinates">Coordenadas GPS</string>
+    <string name="altitude">Altitud</string>
 
     <!-- Color customization -->
     <string name="background_color">Color del fondo</string>
@@ -176,6 +176,8 @@
     <string name="app_icon_color">Color del icono de la aplicación</string>
     <string name="bottom_navigation_bar_color">Color de la barra de navegación inferior</string>
     <string name="restore_defaults">Valores por defecto</string>
+    <string name="use_default">Use default</string>
+    <string name="default_color">Default</string>
     <string name="change_color">Cambiar de color</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Cambiar un color hará que cambie a tema personalizado</string>

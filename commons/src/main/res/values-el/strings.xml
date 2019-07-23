@@ -165,8 +165,8 @@
     <string name="camera">Κάμερα</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Τίτλος τραγουδιού</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="gps_coordinates">Συντεταγμένες GPS</string>
+    <string name="altitude">Υψόμετρο</string>
 
     <!-- Color customization -->
     <string name="background_color">Χρώμα φόντου</string>
@@ -176,6 +176,8 @@
     <string name="app_icon_color">Χρώμα εικονιδίου εφαρμογής</string>
     <string name="bottom_navigation_bar_color">Χρώμα κάτω γραμμής Πλοήγησης</string>
     <string name="restore_defaults">Επαναφορά προεπιλογών</string>
+    <string name="use_default">Χρήση προεπιλογής</string>
+    <string name="default_color">Προεπιλογή</string>
     <string name="change_color">Αλλαγή χρώματος</string>
     <string name="theme">Θέμα</string>
     <string name="changing_color_description">Η αλλαγή ενός χρώματος θα αλλάξει το Προσαρμοσμένο θέμα</string>
