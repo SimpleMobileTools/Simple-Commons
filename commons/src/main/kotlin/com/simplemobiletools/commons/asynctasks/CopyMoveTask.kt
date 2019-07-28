@@ -229,6 +229,8 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 bytes = inputStream.read(buffer)
             }
 
+            out?.flush()
+
             if (source.size == copiedSize && File(destination.path).exists()) {
                 mTransferredFiles.add(source)
                 if (activity.baseConfig.keepLastModified) {
