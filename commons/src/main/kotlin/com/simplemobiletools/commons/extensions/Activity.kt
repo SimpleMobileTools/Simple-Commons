@@ -899,6 +899,30 @@ fun BaseSimpleActivity.getAlarmSounds(type: Int, callback: (ArrayList<AlarmSound
     }
 }
 
+fun AppCompatActivity.checkAppSideloading(): Boolean {
+    val isSideloaded = when (baseConfig.appSideloadingStatus) {
+        SIDELOADING_TRUE -> true
+        SIDELOADING_FALSE -> false
+        else -> isAppSideloaded()
+    }
+
+    baseConfig.appSideloadingStatus = if (isSideloaded) SIDELOADING_TRUE else SIDELOADING_FALSE
+    if (isSideloaded) {
+        showSideloadingDialog()
+    }
+
+    return isSideloaded
+}
+
+fun AppCompatActivity.isAppSideloaded(): Boolean {
+    return try {
+        getDrawable(R.drawable.ic_camera)
+        false
+    } catch (e: Exception) {
+        true
+    }
+}
+
 fun AppCompatActivity.showSideloadingDialog() {
     AppSideloadedDialog(this) {
         finish()

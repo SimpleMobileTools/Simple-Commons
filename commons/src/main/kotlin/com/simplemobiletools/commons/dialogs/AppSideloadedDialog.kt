@@ -5,14 +5,14 @@ import android.text.Html
 import android.text.method.LinkMovementMethod
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.getStringsPackageName
 import com.simplemobiletools.commons.extensions.launchViewIntent
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_textview.view.*
 
 class AppSideloadedDialog(val activity: Activity, val callback: () -> Unit) {
-    var dialog: AlertDialog
-    val url = "https://play.google.com/store/apps/details?id=${activity.baseConfig.appId.removeSuffix(".debug")}"
+    private var dialog: AlertDialog
+    private val url = "https://play.google.com/store/apps/details?id=${activity.getStringsPackageName()}"
 
     init {
         val view = activity.layoutInflater.inflate(R.layout.dialog_textview, null).apply {
