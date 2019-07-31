@@ -12,12 +12,11 @@ import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.INVALID_NAVIGATION_BAR_COLOR
 import com.simplemobiletools.commons.views.ColorPickerSquare
 import kotlinx.android.synthetic.main.dialog_color_picker.view.*
 
 // forked from https://github.com/yukuku/ambilwarna
-class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBackground: Boolean = false, val showUseDefaultButton: Boolean = false,
+class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBackground: Boolean = false, showUseDefaultButton: Boolean = false,
                         val currentColorCallback: ((color: Int) -> Unit)? = null, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit) {
     lateinit var viewHue: View
     lateinit var viewSatVal: ColorPickerSquare

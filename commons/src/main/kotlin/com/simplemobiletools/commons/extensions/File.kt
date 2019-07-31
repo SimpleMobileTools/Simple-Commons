@@ -1,9 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
-import com.simplemobiletools.commons.helpers.audioExtensions
-import com.simplemobiletools.commons.helpers.photoExtensions
-import com.simplemobiletools.commons.helpers.rawExtensions
-import com.simplemobiletools.commons.helpers.videoExtensions
+import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 
@@ -77,3 +74,19 @@ private fun getDirectoryFileCount(dir: File, countHiddenItems: Boolean): Int {
 fun File.getDirectChildrenCount(countHiddenItems: Boolean) = listFiles()?.filter { if (countHiddenItems) true else !it.isHidden }?.size ?: 0
 
 fun File.toFileDirItem() = FileDirItem(absolutePath, name, File(absolutePath).isDirectory, 0, length(), lastModified())
+
+fun File.containsNoMedia() = isDirectory && File(this, NOMEDIA).exists()
+
+fun File.doesThisOrParentHaveNoMedia(): Boolean {
+    var curFile = this
+    while (true) {
+        if (curFile.containsNoMedia()) {
+            return true
+        }
+        curFile = curFile.parentFile ?: break
+        if (curFile.absolutePath == "/") {
+            break
+        }
+    }
+    return false
+}

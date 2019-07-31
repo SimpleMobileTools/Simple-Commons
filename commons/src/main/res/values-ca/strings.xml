@@ -64,6 +64,9 @@
     <string name="source_file_doesnt_exist">El fitxer %s no existeix</string>
     <string name="prepend_filenames">Posar abans noms de fitxer</string>
     <string name="append_filenames">Afegeix noms de fitxer</string>
+    <string name="simple_renaming">Simple renaming</string>
+    <string name="pattern_renaming">Pattern</string>
+    <string name="string_to_add">String to add</string>
     <string name="rename_date_time_pattern">%Y - any\n%M - mes\n%D - dia\n%h - hora\n%m - minut\n%s - segon</string>
 
     <!-- Copy / Move -->
@@ -176,8 +179,8 @@
     <string name="app_icon_color">Color de la icona d\'aplicació</string>
     <string name="bottom_navigation_bar_color">Color de la barra de navegació inferior</string>
     <string name="restore_defaults">Valors per defecte</string>
-    <string name="use_default">Use default</string>
-    <string name="default_color">Default</string>
+    <string name="use_default">Utilitzar per defecte</string>
+    <string name="default_color">Per defecte</string>
     <string name="change_color">Canviar de color</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Canviar un color farà que canvii a tema personalitzat</string>

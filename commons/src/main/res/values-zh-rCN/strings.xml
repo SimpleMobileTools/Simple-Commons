@@ -64,6 +64,9 @@
     <string name="source_file_doesnt_exist">原文件 %s 不存在</string>
     <string name="prepend_filenames">文件名前缀</string>
     <string name="append_filenames">文件名后缀</string>
+    <string name="simple_renaming">Simple renaming</string>
+    <string name="pattern_renaming">Pattern</string>
+    <string name="string_to_add">String to add</string>
     <string name="rename_date_time_pattern">%Y - 年\n%M - 月\n%D - 日\n%h - 时\n%m - 分\n%s - 秒</string>
 
     <!-- Copy / Move -->

@@ -215,13 +215,16 @@ fun Context.getDocumentFile(path: String): DocumentFile? {
         relativePath = relativePath.substring(1)
     }
 
-    var document = DocumentFile.fromTreeUri(applicationContext, Uri.parse(if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri))
-    val parts = relativePath.split("/").filter { it.isNotEmpty() }
-    for (part in parts) {
-        document = document?.findFile(part)
+    return try {
+        var document = DocumentFile.fromTreeUri(applicationContext, Uri.parse(if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri))
+        val parts = relativePath.split("/").filter { it.isNotEmpty() }
+        for (part in parts) {
+            document = document?.findFile(part)
+        }
+        return document
+    } catch (ignored: Exception) {
+        null
     }
-
-    return document
 }
 
 fun Context.getSomeDocumentFile(path: String) = getFastDocumentFile(path) ?: getDocumentFile(path)

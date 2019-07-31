@@ -64,6 +64,9 @@
     <string name="source_file_doesnt_exist">Zdrojový súbor %s neexistuje</string>
     <string name="prepend_filenames">Pridať pred názvy súborov</string>
     <string name="append_filenames">Pridať za názvy súborov</string>
+    <string name="simple_renaming">Jednoduché premenovanie</string>
+    <string name="pattern_renaming">Vzor</string>
+    <string name="string_to_add">Reťazec na pridanie</string>
     <string name="rename_date_time_pattern">%Y - rok\n%M - mesiac\n%D - deň\n%h - hodina\n%m - minúta\n%s - sekunda</string>
 
     <!-- Copy / Move -->

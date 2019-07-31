@@ -26,7 +26,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     protected var textColor = baseConfig.textColor
     protected var backgroundColor = baseConfig.backgroundColor
     protected var actModeCallback: MyActionModeCallback
-    protected var selectedKeys = HashSet<Int>()
+    protected var selectedKeys = LinkedHashSet<Int>()
     protected var positionOffset = 0
 
     private var actMode: ActionMode? = null

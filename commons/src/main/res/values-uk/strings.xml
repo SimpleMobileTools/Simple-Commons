@@ -64,6 +64,9 @@
     <string name="source_file_doesnt_exist">Вихідний файл %s не існує</string>
     <string name="prepend_filenames">Префікс імен файлів</string>
     <string name="append_filenames">Суфікс імен файлів</string>
+    <string name="simple_renaming">Simple renaming</string>
+    <string name="pattern_renaming">Pattern</string>
+    <string name="string_to_add">String to add</string>
     <string name="rename_date_time_pattern">%Y - рік\n%M - місяць\n%D - день\n%h - година\n%m - хвилина\n%s - секунда</string>
 
     <!-- Copy / Move -->
