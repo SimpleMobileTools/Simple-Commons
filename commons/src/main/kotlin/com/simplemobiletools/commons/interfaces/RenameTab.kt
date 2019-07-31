@@ -1,7 +1,9 @@
 package com.simplemobiletools.commons.interfaces
 
-interface RenameTab {
-    fun initTab(paths: ArrayList<String>)
+import com.simplemobiletools.commons.activities.BaseSimpleActivity
 
-    fun dialogConfirmed()
+interface RenameTab {
+    fun initTab(activity: BaseSimpleActivity, paths: ArrayList<String>)
+
+    fun dialogConfirmed(callback: () -> Unit)
 }

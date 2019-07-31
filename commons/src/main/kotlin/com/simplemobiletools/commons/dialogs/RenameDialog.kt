@@ -1,10 +1,10 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.app.Activity
 import android.view.LayoutInflater
 import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.RenameAdapter
 import com.simplemobiletools.commons.extensions.onPageChangeListener
 import com.simplemobiletools.commons.extensions.onTabSelectionChanged
@@ -15,7 +15,7 @@ import com.simplemobiletools.commons.views.MyViewPager
 import kotlinx.android.synthetic.main.dialog_rename.view.*
 import java.util.*
 
-class RenameDialog(val activity: Activity, val paths: ArrayList<String>) {
+class RenameDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String>) {
     var dialog: AlertDialog? = null
     val view = LayoutInflater.from(activity).inflate(R.layout.dialog_rename, null)
     var tabsAdapter: RenameAdapter
@@ -24,7 +24,7 @@ class RenameDialog(val activity: Activity, val paths: ArrayList<String>) {
     init {
         view.apply {
             viewPager = findViewById(R.id.dialog_tab_view_pager)
-            tabsAdapter = RenameAdapter(context, paths)
+            tabsAdapter = RenameAdapter(activity, paths)
             viewPager.adapter = tabsAdapter
             viewPager.onPageChangeListener {
                 dialog_tab_layout.getTabAt(it)!!.select()
@@ -40,18 +40,20 @@ class RenameDialog(val activity: Activity, val paths: ArrayList<String>) {
 
         dialog = AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.ok, null)
-                .setNegativeButton(R.string.cancel) { dialog, which -> onCancelFail() }
+                .setNegativeButton(R.string.cancel) { dialog, which -> dismissDialog() }
                 .create().apply {
                     activity.setupDialogStuff(view, this).apply {
                         window?.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM)
-                        getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener({
-                            tabsAdapter.dialogConfirmed(viewPager.currentItem)
-                        })
+                        getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+                            tabsAdapter.dialogConfirmed(viewPager.currentItem) {
+                                dismissDialog()
+                            }
+                        }
                     }
                 }
     }
 
-    private fun onCancelFail() {
+    private fun dismissDialog() {
         dialog!!.dismiss()
     }
 }
