@@ -173,6 +173,10 @@ const val PROTECTION_PATTERN = 0
 const val PROTECTION_PIN = 1
 const val PROTECTION_FINGERPRINT = 2
 
+// renaming
+const val RENAME_SIMPLE = 0
+const val RENAME_PATTERN = 1
+
 const val SHOW_ALL_TABS = -1
 const val SHOW_PATTERN = 0
 const val SHOW_PIN = 1
