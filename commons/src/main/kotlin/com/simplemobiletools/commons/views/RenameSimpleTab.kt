@@ -20,12 +20,12 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
         this.paths = paths
     }
 
-    override fun dialogConfirmed(callback: () -> Unit) {
+    override fun dialogConfirmed(callback: (success: Boolean) -> Unit) {
         val valueToAdd = rename_simple_value.value
         val append = rename_simple_radio_group.checkedRadioButtonId == rename_simple_radio_append.id
 
         if (valueToAdd.isEmpty()) {
-            callback()
+            callback(false)
             return
         }
 
@@ -70,7 +70,7 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
                     if (it) {
                         pathsCnt--
                         if (pathsCnt == 0) {
-                            callback()
+                            callback(true)
                         }
                     } else {
                         ignoreClicks = false

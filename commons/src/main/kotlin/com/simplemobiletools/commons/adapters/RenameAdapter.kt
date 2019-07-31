@@ -36,7 +36,7 @@ class RenameAdapter(val activity: BaseSimpleActivity, val paths: ArrayList<Strin
         else -> throw RuntimeException("Only 2 tabs allowed")
     }
 
-    fun dialogConfirmed(position: Int, callback: () -> Unit) {
+    fun dialogConfirmed(position: Int, callback: (success: Boolean) -> Unit) {
         tabs[position].dialogConfirmed(callback)
     }
 }

@@ -26,14 +26,14 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
         this.paths = paths
     }
 
-    override fun dialogConfirmed(callback: () -> Unit) {
+    override fun dialogConfirmed(callback: (success: Boolean) -> Unit) {
         if (ignoreClicks) {
             return
         }
 
         var newName = rename_items_value.value
         if (newName.isEmpty()) {
-            callback()
+            callback(false)
             return
         }
 
@@ -110,7 +110,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                     if (it) {
                         pathsCnt--
                         if (pathsCnt == 0) {
-                            callback()
+                            callback(true)
                         }
                     } else {
                         ignoreClicks = false
