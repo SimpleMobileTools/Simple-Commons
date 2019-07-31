@@ -6,6 +6,7 @@ import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.RenameAdapter
+import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.onPageChangeListener
 import com.simplemobiletools.commons.extensions.onTabSelectionChanged
 import com.simplemobiletools.commons.extensions.setupDialogStuff
@@ -29,6 +30,7 @@ class RenameDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String
             viewPager.onPageChangeListener {
                 dialog_tab_layout.getTabAt(it)!!.select()
             }
+            viewPager.currentItem = activity.baseConfig.lastRenameUsed
 
             dialog_tab_layout.onTabSelectionChanged(tabSelectedAction = {
                 viewPager.currentItem = when {
@@ -48,6 +50,7 @@ class RenameDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String
                             tabsAdapter.dialogConfirmed(viewPager.currentItem) {
                                 dismissDialog()
                                 if (it) {
+                                    activity.baseConfig.lastRenameUsed = viewPager.currentItem
                                     callback()
                                 }
                             }

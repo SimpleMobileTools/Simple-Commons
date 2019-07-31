@@ -351,4 +351,8 @@ open class BaseConfig(val context: Context) {
     var wasFolderLockingNoticeShown: Boolean
         get() = prefs.getBoolean(WAS_FOLDER_LOCKING_NOTICE_SHOWN, false)
         set(wasFolderLockingNoticeShown) = prefs.edit().putBoolean(WAS_FOLDER_LOCKING_NOTICE_SHOWN, wasFolderLockingNoticeShown).apply()
+
+    var lastRenameUsed: Int
+        get() = prefs.getInt(LAST_RENAME_USED, RENAME_SIMPLE)
+        set(lastRenameUsed) = prefs.edit().putInt(LAST_RENAME_USED, lastRenameUsed).apply()
 }
