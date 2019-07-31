@@ -94,7 +94,7 @@
     <string name="saving">Lagrer…</string>
     <string name="could_not_create_folder">Kunne ikke opprette mappen %s</string>
     <string name="could_not_create_file">Kunne ikke opprette filen %s</string>
-    <string name="no_new_items">No new items have been found</string>
+    <string name="no_new_items">Ingen nye elementer er funnet</string>
 
     <!-- Create new -->
     <string name="create_new">Opprett ny</string>
@@ -168,8 +168,8 @@
     <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Sangtittel</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="gps_coordinates">GPS-koordinater</string>
+    <string name="altitude">Høyde</string>
 
     <!-- Color customization -->
     <string name="background_color">Bakgrunnsfarge</string>
@@ -177,10 +177,10 @@
     <string name="primary_color">Primærfarge</string>
     <string name="foreground_color">Forgrunnsfarge</string>
     <string name="app_icon_color">Farge for app-ikon</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
+    <string name="bottom_navigation_bar_color">Farge på nedre navigeringslinje</string>
     <string name="restore_defaults">Gjenopprett standard</string>
-    <string name="use_default">Use default</string>
-    <string name="default_color">Default</string>
+    <string name="use_default">Bruk standard</string>
+    <string name="default_color">Standard</string>
     <string name="change_color">Endre farge</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Endring av farge vil gjøre at det skiftes til Tilpasset tema</string>
@@ -230,7 +230,7 @@
     <string name="undo">Angre</string>
     <string name="redo">Annuler angre</string>
     <string name="print">Skriv ut</string>
-    <string name="create_shortcut">Create shortcut</string>
+    <string name="create_shortcut">Opprett snarvei</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorter etter</string>
