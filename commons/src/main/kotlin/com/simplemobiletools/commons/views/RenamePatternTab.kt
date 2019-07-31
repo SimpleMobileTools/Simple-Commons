@@ -5,4 +5,13 @@ import android.util.AttributeSet
 import android.widget.RelativeLayout
 import com.simplemobiletools.commons.interfaces.RenameTab
 
-class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs), RenameTab
+class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs), RenameTab {
+    var paths = ArrayList<String>()
+
+    override fun initTab(paths: ArrayList<String>) {
+        this.paths = paths
+    }
+
+    override fun dialogConfirmed() {
+    }
+}

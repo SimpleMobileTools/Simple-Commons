@@ -39,11 +39,14 @@ class RenameDialog(val activity: Activity, val paths: ArrayList<String>) {
         }
 
         dialog = AlertDialog.Builder(activity)
+                .setPositiveButton(R.string.ok, null)
                 .setNegativeButton(R.string.cancel) { dialog, which -> onCancelFail() }
-                .setOnCancelListener { onCancelFail() }
                 .create().apply {
                     activity.setupDialogStuff(view, this).apply {
                         window?.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM)
+                        getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener({
+                            tabsAdapter.dialogConfirmed(viewPager.currentItem)
+                        })
                     }
                 }
     }

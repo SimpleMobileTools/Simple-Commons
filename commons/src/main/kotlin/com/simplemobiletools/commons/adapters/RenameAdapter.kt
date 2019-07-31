@@ -17,6 +17,7 @@ class RenameAdapter(val context: Context, val paths: ArrayList<String>) : PagerA
         val view = LayoutInflater.from(context).inflate(layoutSelection(position), container, false)
         container.addView(view)
         tabs.put(position, view as RenameTab)
+        (view as RenameTab).initTab(paths)
         return view
     }
 
@@ -33,5 +34,9 @@ class RenameAdapter(val context: Context, val paths: ArrayList<String>) : PagerA
         0 -> R.layout.tab_rename_simple
         1 -> R.layout.tab_rename_pattern
         else -> throw RuntimeException("Only 2 tabs allowed")
+    }
+
+    fun dialogConfirmed(position: Int) {
+        tabs[position].dialogConfirmed()
     }
 }
