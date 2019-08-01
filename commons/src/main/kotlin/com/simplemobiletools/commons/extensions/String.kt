@@ -5,6 +5,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Point
 import android.media.MediaMetadataRetriever
+import android.os.StatFs
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.TextUtils
@@ -198,6 +199,12 @@ fun String.getFileSignature() = ObjectKey(getFileKey())
 fun String.getFileKey(): String {
     val file = File(this)
     return "${file.absolutePath}${file.lastModified()}"
+}
+
+fun String.getAvailableStorageB(): Long {
+    val stat = StatFs(this)
+    val bytesAvailable = stat.blockSizeLong * stat.availableBlocksLong
+    return bytesAvailable
 }
 
 // remove diacritics, for example č -> c

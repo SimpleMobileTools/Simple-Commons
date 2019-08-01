@@ -11,6 +11,7 @@ import android.os.Bundle
 import android.provider.DocumentsContract
 import android.view.MenuItem
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.util.Pair
@@ -322,10 +323,17 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     private fun startCopyMove(files: ArrayList<FileDirItem>, destinationPath: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean, copyHidden: Boolean) {
-        checkConflicts(files, destinationPath, 0, LinkedHashMap()) {
-            toast(if (isCopyOperation) R.string.copying else R.string.moving)
-            val pair = Pair(files, destinationPath)
-            CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
+        val availableSpace = destinationPath.getAvailableStorageB()
+        val sumToCopy = files.sumByLong { it.getProperSize(copyHidden) }
+        if (sumToCopy < availableSpace) {
+            checkConflicts(files, destinationPath, 0, LinkedHashMap()) {
+                toast(if (isCopyOperation) R.string.copying else R.string.moving)
+                val pair = Pair(files, destinationPath)
+                CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
+            }
+        } else {
+            val text = String.format(getString(R.string.no_space), sumToCopy.formatSize(), availableSpace.formatSize())
+            toast(text, Toast.LENGTH_LONG)
         }
     }
 
