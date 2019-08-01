@@ -95,7 +95,7 @@
     <string name="could_not_create_folder">Nem lehet elkészíteni a mappát %s</string>
     <string name="could_not_create_file">Nem lehet elkészíteni a fájlt %s</string>
     <string name="no_new_items">Nem található új elem</string>
-    <string name="no_space">The destination does not have enough space available</string>
+    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Új készítés</string>

@@ -95,7 +95,7 @@
     <string name="could_not_create_folder">Não foi possível criar pasta %s</string>
     <string name="could_not_create_file">Não foi possível criar o arquivo %s</string>
     <string name="no_new_items">Nenhum novo ítem foi encontrado</string>
-    <string name="no_space">The destination does not have enough space available</string>
+    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Criar</string>

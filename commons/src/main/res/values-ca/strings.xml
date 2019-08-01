@@ -95,7 +95,7 @@
     <string name="could_not_create_folder">No es pot crear la carpeta %s</string>
     <string name="could_not_create_file">No es pot crear l\'arxiu %s</string>
     <string name="no_new_items">No s’ha trobat cap element nou</string>
-    <string name="no_space">The destination does not have enough space available</string>
+    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Crear nova</string>
