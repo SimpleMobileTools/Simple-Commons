@@ -95,7 +95,7 @@
     <string name="could_not_create_folder">Kon de map %s niet aanmaken</string>
     <string name="could_not_create_file">Kon het bestand %s niet aanmaken</string>
     <string name="no_new_items">Geen nieuwe items gevonden</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_space">Er is onvoldoende ruimte beschikbaar.\nBenodigd: %1$s, beschikbaar: %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Nieuw</string>
