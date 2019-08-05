@@ -122,7 +122,7 @@
     <string name="select_folder">Select a folder</string>
     <string name="select_file">Select a file</string>
     <string name="confirm_storage_access_title">Confirm external storage access</string>
-    <string name="confirm_storage_access_text">Please choose the root folder of the SD card on the next screen, to grant write access</string>
+    <string name="confirm_storage_access_text">Please choose the top folder of the SD card on the next screen, to grant write access</string>
     <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
     <string name="confirm_selection">Confirm selection</string>
 
@@ -520,7 +520,7 @@
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
-    <string name="confirm_usb_storage_access_text">Please choose the root folder of the USB device on the next screen, to grant access</string>
+    <string name="confirm_usb_storage_access_text">Please choose the top folder of the USB device on the next screen, to grant access</string>
     <string name="wrong_root_selected_usb">Wrong folder selected, please select the root folder of your USB device</string>
 
     <!-- Dates -->
