@@ -60,11 +60,11 @@ class RenameItemsPatternDialog(val activity: BaseSimpleActivity, val paths: Arra
                                     val cal = Calendar.getInstance()
                                     cal.time = dt
                                     val year = cal.get(Calendar.YEAR).toString()
-                                    val month = ensureTwoDigits(cal.get(Calendar.MONTH) + 1)
-                                    val day = ensureTwoDigits(cal.get(Calendar.DAY_OF_MONTH))
-                                    val hours = ensureTwoDigits(cal.get(Calendar.HOUR_OF_DAY))
-                                    val minutes = ensureTwoDigits(cal.get(Calendar.MINUTE))
-                                    val seconds = ensureTwoDigits(cal.get(Calendar.SECOND))
+                                    val month = (cal.get(Calendar.MONTH) + 1).ensureTwoDigits()
+                                    val day = (cal.get(Calendar.DAY_OF_MONTH)).ensureTwoDigits()
+                                    val hours = (cal.get(Calendar.HOUR_OF_DAY)).ensureTwoDigits()
+                                    val minutes = (cal.get(Calendar.MINUTE)).ensureTwoDigits()
+                                    val seconds = (cal.get(Calendar.SECOND)).ensureTwoDigits()
 
                                     newName = newName
                                             .replace("%Y", year, false)
@@ -117,13 +117,5 @@ class RenameItemsPatternDialog(val activity: BaseSimpleActivity, val paths: Arra
                         }
                     }
                 }
-    }
-
-    private fun ensureTwoDigits(value: Int): String {
-        return if (value.toString().length == 1) {
-            "0$value"
-        } else {
-            value.toString()
-        }
     }
 }

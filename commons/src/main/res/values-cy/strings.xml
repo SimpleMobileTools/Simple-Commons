@@ -95,6 +95,7 @@
     <string name="could_not_create_folder">Methwyd â chreu\'r ffolder %s</string>
     <string name="could_not_create_file">Methwyd â chreu\'r ffeil %s</string>
     <string name="no_new_items">No new items have been found</string>
+    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Creu newydd</string>

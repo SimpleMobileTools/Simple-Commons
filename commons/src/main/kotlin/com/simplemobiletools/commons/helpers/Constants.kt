@@ -114,6 +114,7 @@ const val WAS_UPGRADED_FROM_FREE_SHOWN = "was_upgraded_from_free_shown"
 const val WAS_RATE_US_PROMPT_SHOWN = "was_rate_us_prompt_shown"
 const val WAS_SORTING_BY_NUMERIC_VALUE_ADDED = "was_sorting_by_numeric_value_added"
 const val WAS_FOLDER_LOCKING_NOTICE_SHOWN = "was_folder_locking_notice_shown"
+const val LAST_RENAME_USED = "last_rename_used"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
@@ -173,6 +174,10 @@ const val PROTECTION_PATTERN = 0
 const val PROTECTION_PIN = 1
 const val PROTECTION_FINGERPRINT = 2
 
+// renaming
+const val RENAME_SIMPLE = 0
+const val RENAME_PATTERN = 1
+
 const val SHOW_ALL_TABS = -1
 const val SHOW_PATTERN = 0
 const val SHOW_PIN = 1
@@ -216,7 +221,7 @@ const val SIDELOADING_FALSE = 2
 val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp", ".heic", ".heif")
 val videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
 val audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a", ".opus", ".flac", ".aac")
-val rawExtensions: Array<String> get() = arrayOf(".dng", ".orf", ".nef", ".arw", ".cr2", ".rw2")
+val rawExtensions: Array<String> get() = arrayOf(".dng", ".orf", ".nef", ".arw", ".rw2", ".cr2", ".cr3")
 
 const val DATE_FORMAT_ONE = "dd.MM.yyyy"
 const val DATE_FORMAT_TWO = "dd/MM/yyyy"

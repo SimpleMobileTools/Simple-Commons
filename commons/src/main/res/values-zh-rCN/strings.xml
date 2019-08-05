@@ -64,9 +64,9 @@
     <string name="source_file_doesnt_exist">原文件 %s 不存在</string>
     <string name="prepend_filenames">文件名前缀</string>
     <string name="append_filenames">文件名后缀</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
-    <string name="string_to_add">String to add</string>
+    <string name="simple_renaming">简单重命名</string>
+    <string name="pattern_renaming">图案</string>
+    <string name="string_to_add">要添加的字符串</string>
     <string name="rename_date_time_pattern">%Y - 年\n%M - 月\n%D - 日\n%h - 时\n%m - 分\n%s - 秒</string>
 
     <!-- Copy / Move -->
@@ -95,6 +95,7 @@
     <string name="could_not_create_folder">创建文件夹 %s 失败</string>
     <string name="could_not_create_file">创建文件 %s 失败</string>
     <string name="no_new_items">没有找到新的项目</string>
+    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">新建</string>
@@ -165,8 +166,8 @@
     <string name="camera">相机</string>
     <string name="exif">EXIF</string>
     <string name="song_title">歌曲标题</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="gps_coordinates">GPS 坐标</string>
+    <string name="altitude">海拔高度</string>
 
     <!-- Color customization -->
     <string name="background_color">背景色</string>
@@ -176,8 +177,8 @@
     <string name="app_icon_color">应用图标颜色</string>
     <string name="bottom_navigation_bar_color">底部导航栏颜色</string>
     <string name="restore_defaults">恢复默认</string>
-    <string name="use_default">Use default</string>
-    <string name="default_color">Default</string>
+    <string name="use_default">使用默认</string>
+    <string name="default_color">默认</string>
     <string name="change_color">修改颜色</string>
     <string name="theme">主题</string>
     <string name="changing_color_description">更改颜色将切换到自定义主题</string>
@@ -279,9 +280,9 @@
     <string name="go_to_settings">去设置</string>
     <string name="protection_setup_successfully">密码设置成功。如果你不慎遗忘了，请重新安装本应用。</string>
     <string name="fingerprint_setup_successfully">指纹保护设置成功。如果出现问题，请重新安装本应用。</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="lock_folder">锁定文件夹</string>
+    <string name="unlock_folder">解锁文件夹</string>
+    <string name="lock_folder_notice">加密功能仅在app内生效， 并不能用来取代真正的系统级文件夹加密</string>
 
     <!-- Times -->
     <string name="yesterday">昨天</string>

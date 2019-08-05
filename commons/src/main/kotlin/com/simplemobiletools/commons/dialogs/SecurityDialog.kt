@@ -18,8 +18,8 @@ class SecurityDialog(val activity: Activity, val requiredHash: String, val showT
     : HashListener {
     var dialog: AlertDialog? = null
     val view = LayoutInflater.from(activity).inflate(R.layout.dialog_security, null)
-    lateinit var tabsAdapter: PasswordTypesAdapter
-    lateinit var viewPager: MyDialogViewPager
+    var tabsAdapter: PasswordTypesAdapter
+    var viewPager: MyDialogViewPager
 
     init {
         view.apply {

@@ -95,6 +95,7 @@
     <string name="could_not_create_folder">Impossible de créer le dossier %s</string>
     <string name="could_not_create_file">Impossible de créer le fichier %s</string>
     <string name="no_new_items">Pas de nouveaux éléments trouvés</string>
+    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Créer un nouveau</string>

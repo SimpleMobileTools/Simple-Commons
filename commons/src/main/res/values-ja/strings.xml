@@ -95,6 +95,7 @@
     <string name="could_not_create_folder">フォルダ %s を作成できません</string>
     <string name="could_not_create_file">ファイル %s を作成できません</string>
     <string name="no_new_items">No new items have been found</string>
+    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">新規作成</string>
@@ -479,7 +480,7 @@
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
-    <string name="confirm_usb_storage_access_text">Please choose the root folder of the USB device on the next screen, to grant access</string>
+    <string name="confirm_usb_storage_access_text">Please choose the top folder of the USB device on the next screen, to grant access</string>
     <string name="wrong_root_selected_usb">Wrong folder selected, please select the root folder of your USB device</string>
 
     <!-- Dates -->

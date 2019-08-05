@@ -95,6 +95,7 @@
     <string name="could_not_create_folder">Kunne ikke oprette mappen %s</string>
     <string name="could_not_create_file">Kunne ikke oprette filen %s</string>
     <string name="no_new_items">Der blev ikke fundet nogen nye filer</string>
+    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Opret ny</string>

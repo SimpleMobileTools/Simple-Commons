@@ -541,21 +541,19 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
             }
 
             try {
-                val uri = DocumentsContract.renameDocument(applicationContext.contentResolver, document.uri, newPath.getFilenameFromPath())
-                if (document.uri != uri) {
-                    updateInMediaStore(oldPath, newPath)
-                    rescanPaths(arrayListOf(oldPath, newPath)) {
-                        if (!baseConfig.keepLastModified) {
-                            updateLastModified(newPath, System.currentTimeMillis())
-                        }
-                        deleteFromMediaStore(oldPath)
-                        runOnUiThread {
-                            callback?.invoke(true)
-                        }
+                try {
+                    DocumentsContract.renameDocument(applicationContext.contentResolver, document.uri, newPath.getFilenameFromPath())
+                } catch (ignored: FileNotFoundException) {
+                    // FileNotFoundException is thrown in some weird cases, but renaming works just fine
+                }
+                updateInMediaStore(oldPath, newPath)
+                rescanPaths(arrayListOf(oldPath, newPath)) {
+                    if (!baseConfig.keepLastModified) {
+                        updateLastModified(newPath, System.currentTimeMillis())
                     }
-                } else {
+                    deleteFromMediaStore(oldPath)
                     runOnUiThread {
-                        callback?.invoke(false)
+                        callback?.invoke(true)
                     }
                 }
             } catch (e: Exception) {
