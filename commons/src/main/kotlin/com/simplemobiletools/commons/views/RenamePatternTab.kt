@@ -31,8 +31,8 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
             return
         }
 
-        var newName = rename_items_value.value
-        if (newName.isEmpty()) {
+        val newNameRaw = rename_items_value.value
+        if (newNameRaw.isEmpty()) {
             callback(false)
             return
         }
@@ -73,7 +73,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                 val minutes = (cal.get(Calendar.MINUTE)).ensureTwoDigits()
                 val seconds = (cal.get(Calendar.SECOND)).ensureTwoDigits()
 
-                newName = newName
+                var newName = rename_items_value.value
                         .replace("%Y", year, false)
                         .replace("%M", month, false)
                         .replace("%D", day, false)
