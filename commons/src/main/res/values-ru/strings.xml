@@ -95,7 +95,7 @@
     <string name="could_not_create_folder">Не удалось создать папку \"%s\"</string>
     <string name="could_not_create_file">Не удалось создать файл \"%s\"</string>
     <string name="no_new_items">Ничего не найдено</string>
-    <string name="no_space">В месте назначения недостаточно свободного места.\nНеобходимо %1$s, доступно %2$s</string>
+    <string name="no_space">По выбранному пути назначения недостаточно свободного места.\nНеобходимо %1$s, доступно %2$s.</string>
 
     <!-- Create new -->
     <string name="create_new">Создать</string>
