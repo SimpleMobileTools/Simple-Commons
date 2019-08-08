@@ -914,7 +914,7 @@ fun AppCompatActivity.checkAppSideloading(): Boolean {
 
 fun AppCompatActivity.isAppSideloaded(): Boolean {
     return try {
-        getDrawable(R.drawable.ic_camera)
+        getDrawable(R.drawable.ic_camera_vector)
         false
     } catch (e: Exception) {
         true

@@ -157,7 +157,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:padding="@dimen/activity_margin"
-                android:src="@drawable/ic_check"/>
+                android:src="@drawable/ic_check_vector"/>
 
         </LinearLayout>
     </LinearLayout>
