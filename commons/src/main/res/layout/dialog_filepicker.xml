@@ -35,9 +35,7 @@
             android:layout_alignTop="@+id/filepicker_list"
             android:layout_alignBottom="@+id/filepicker_list"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:paddingStart="@dimen/normal_margin"
-            android:paddingLeft="@dimen/normal_margin">
+            android:paddingStart="@dimen/normal_margin">
 
             <include layout="@layout/fastscroller_handle_vertical"/>
 
@@ -49,9 +47,9 @@
         android:layout_width="@dimen/fab_size"
         android:layout_height="@dimen/fab_size"
         android:layout_gravity="bottom|end"
-        android:layout_marginRight="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/activity_margin"
         android:layout_marginBottom="@dimen/activity_margin"
-        android:src="@drawable/ic_unhide"/>
+        android:src="@drawable/ic_unhide_vector"/>
 
     <com.simplemobiletools.commons.views.MyFloatingActionButton
         android:id="@+id/filepicker_fab"
@@ -59,7 +57,7 @@
         android:layout_height="@dimen/fab_size"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/activity_margin"
-        android:src="@drawable/ic_plus"
+        android:src="@drawable/ic_plus_vector"
         android:visibility="gone"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
