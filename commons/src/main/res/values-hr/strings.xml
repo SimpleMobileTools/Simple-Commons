@@ -673,6 +673,8 @@
     <string name="faq_6_title_commons">Ikona pokretača aplikacija je nestala. Što mogu učiniti?</string>
     <string name="faq_6_text_commons">Uzrok je to što pokretač ne podržava ispravnu prilagodbu ikone. Pokušajte pokrenuti aplikaciju putem Google Playa ili nekog widgeta, ako je dostupan.
         Nakon pokretanja, zadanu ikonu postavite na narančastu #F57C00. Možda će biti potrebno ponovno instalirati aplikaciju ako to ne radi.</string>
+    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
+    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
 
     <!-- License -->
     <string name="notice">Ova aplikacija koristi biblioteke trećih strana kako bi olakšala moj život. Hvala Vam.</string>

@@ -641,6 +641,8 @@
     <string name="faq_6_title_commons">App-launcher\'ens ikon forsvandt. Hvad gør jeg</string>
     <string name="faq_6_text_commons">Det sker når din launcher ikke supporterer tilpasning af ikonet. Prøv at åbne appen via Google Play eller fra en widget.
        Når appen er åbnet kan du ingen sætte farven til den orange standardværdi, #F57C00. I værste fald må du reinstallere appen.</string>
+    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
+    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
 
     <!-- License -->
     <string name="notice">Denne app bruger følgende 3.-parts biblioteker der gør at mit liv bliver lidt enklere. Tak.</string>

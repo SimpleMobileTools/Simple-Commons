@@ -609,6 +609,8 @@
     <string name="faq_6_title_commons">應用程式啟動器上的圖標消失了。我該怎麼辦?</string>
     <string name="faq_6_text_commons">這是由於你的啟動器無法正確地支援圖標自訂。如果可以，試著透過Google Play或某些小工具來啟動應用程式。
         一旦啟動，只要設回預設的橘色圖標 #F57C00 即可。最糟的情況，你可能必須重新安裝應用程式。</string>
+    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
+    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
 
     <!-- License -->
     <string name="notice">這程式使用了下列的第三方函式庫來讓我工作簡化。感謝。</string>

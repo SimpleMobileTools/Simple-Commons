@@ -640,6 +640,8 @@
     <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
     <string name="faq_6_title_commons">Az alkalmazásindító ikon eltűnt. Mit tehetek?</string>
     <string name="faq_6_text_commons">Ennek az az oka, hogy a rendszerindító nem támogatja megfelelően az ikon testreszabását. Próbáld elindítani az alkalmazást a Google Playen vagy néhány widgeten keresztül, ha elérhető.\nMiután elindítottad, állítsd vissza az alapértelmezett narancssárga ikont #F57C00. Lehet, hogy a legrosszabb esetben újra kell telepítenie az alkalmazást.</string>
+    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
+    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
 
     <!-- License -->
     <string name="notice">Ez az alkalmazás a következő harmadik fél könyvtárait használja az életem megkönnyítésére. Köszönöm.</string>
