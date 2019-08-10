@@ -25,6 +25,7 @@ class PropertiesDialog() {
     private lateinit var mInflater: LayoutInflater
     private lateinit var mPropertyView: ViewGroup
     private lateinit var mResources: Resources
+    private lateinit var mActivity: Activity
 
     /**
      * A File Properties dialog constructor with an optional parameter, usable at 1 file selected
@@ -39,6 +40,7 @@ class PropertiesDialog() {
             return
         }
 
+        mActivity = activity
         mInflater = LayoutInflater.from(activity)
         mResources = activity.resources
         val view = mInflater.inflate(R.layout.dialog_properties, null)
@@ -147,6 +149,7 @@ class PropertiesDialog() {
      * @param countHiddenItems toggle determining if we will count hidden files themselves and their sizes
      */
     constructor(activity: Activity, paths: List<String>, countHiddenItems: Boolean = false) : this() {
+        mActivity = activity
         mInflater = LayoutInflater.from(activity)
         mResources = activity.resources
         val view = mInflater.inflate(R.layout.dialog_properties, null)
@@ -223,6 +226,11 @@ class PropertiesDialog() {
             property_label.text = mResources.getString(labelId)
             property_value.text = value
             mPropertyView.properties_holder.addView(this)
+
+            property_value.setOnLongClickListener {
+                mActivity.copyToClipboard(property_value.value)
+                true
+            }
 
             if (viewId != 0) {
                 id = viewId
