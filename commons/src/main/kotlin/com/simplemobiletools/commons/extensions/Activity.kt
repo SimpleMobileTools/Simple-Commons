@@ -290,7 +290,7 @@ fun Activity.openEditorIntent(path: String, forceChooser: Boolean, applicationId
     }
 }
 
-fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: String, forceMimeType: String = "") {
+fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: String, forceMimeType: String = "", extras: HashMap<String, Boolean>) {
     ensureBackgroundThread {
         val newUri = getFinalUriFromPath(path, applicationId) ?: return@ensureBackgroundThread
         val mimeType = if (forceMimeType.isNotEmpty()) forceMimeType else getUriMimeType(path, newUri)
@@ -301,6 +301,10 @@ fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: 
 
             if (applicationId == "com.simplemobiletools.gallery.pro" || applicationId == "com.simplemobiletools.gallery.pro.debug") {
                 putExtra(IS_FROM_GALLERY, true)
+            }
+
+            for ((key, value) in extras) {
+                putExtra(key, value)
             }
 
             putExtra(REAL_FILE_PATH, path)
