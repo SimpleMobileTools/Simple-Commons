@@ -50,6 +50,10 @@ class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBack
 
             val hexCode = getHexCode(color)
             color_picker_old_hex.text = "#$hexCode"
+            color_picker_old_hex.setOnLongClickListener {
+                activity.copyToClipboard(hexCode)
+                true
+            }
             newHexField.setText(hexCode)
         }
 
