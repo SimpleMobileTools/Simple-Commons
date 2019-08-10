@@ -19,7 +19,7 @@
         android:layout_below="@+id/fingerprint_lock_title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/activity_margin"
-        android:src="@drawable/ic_fingerprint"/>
+        android:src="@drawable/ic_fingerprint_vector"/>
 
     <com.simplemobiletools.commons.views.MyTextView
         android:id="@+id/fingerprint_label"

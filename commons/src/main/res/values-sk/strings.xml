@@ -675,6 +675,8 @@
     <string name="faq_6_title_commons">Spúšťacia ikonka apky zmizla. Čo mám spraviť?</string>
     <string name="faq_6_text_commons">Bude to spôsobené tým, že váš spúšťač zariadenia nepodporuje úpravu ikoniek. Skúste apku spustiť cez Google Play, alebo nejaký widget, ak je dostupný.
         Ak je apka spustená, skúste nastaviť pôvodnú oranžovú farbu ikonky #F57C00. V najhoršom prípade budete musieť apku preinštalovať.</string>
+    <string name="faq_7_title_commons">Peniaze som mal stiahnuté z účtu, ale neviem stiahnuť aplikáciu. Čo s tým?</string>
+    <string name="faq_7_text_commons">Platby sú plne spravované Googlom, ich systém z času na čas nefunguje. Skúste vymazať cache apky Google Play, reštartujte zariadenie a skúste apku opäť stiahnuť.</string>
 
     <!-- License -->
     <string name="notice">Táto aplikácia používa na uľahčenie práce nasledovné knižnice tretích strán. Ďakujeme.</string>

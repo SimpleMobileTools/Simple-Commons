@@ -30,6 +30,7 @@ import com.simplemobiletools.commons.views.MyTextView
 import kotlinx.android.synthetic.main.dialog_title.view.*
 import java.io.*
 import java.util.*
+import kotlin.collections.HashMap
 
 fun AppCompatActivity.updateActionBarTitle(text: String, color: Int = baseConfig.primaryColor) {
     supportActionBar?.title = Html.fromHtml("<font color='${color.getContrastColor().toHex()}'>$text</font>")
@@ -290,7 +291,7 @@ fun Activity.openEditorIntent(path: String, forceChooser: Boolean, applicationId
     }
 }
 
-fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: String, forceMimeType: String = "") {
+fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: String, forceMimeType: String = "", extras: HashMap<String, Boolean> = HashMap()) {
     ensureBackgroundThread {
         val newUri = getFinalUriFromPath(path, applicationId) ?: return@ensureBackgroundThread
         val mimeType = if (forceMimeType.isNotEmpty()) forceMimeType else getUriMimeType(path, newUri)
@@ -301,6 +302,10 @@ fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: 
 
             if (applicationId == "com.simplemobiletools.gallery.pro" || applicationId == "com.simplemobiletools.gallery.pro.debug") {
                 putExtra(IS_FROM_GALLERY, true)
+            }
+
+            for ((key, value) in extras) {
+                putExtra(key, value)
             }
 
             putExtra(REAL_FILE_PATH, path)
@@ -914,7 +919,7 @@ fun AppCompatActivity.checkAppSideloading(): Boolean {
 
 fun AppCompatActivity.isAppSideloaded(): Boolean {
     return try {
-        getDrawable(R.drawable.ic_camera)
+        getDrawable(R.drawable.ic_camera_vector)
         false
     } catch (e: Exception) {
         true

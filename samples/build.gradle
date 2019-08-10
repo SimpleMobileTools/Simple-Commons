@@ -12,6 +12,7 @@ android {
         targetSdkVersion propTargetSdkVersion
         versionCode propVersionCode
         versionName propVersionName
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {

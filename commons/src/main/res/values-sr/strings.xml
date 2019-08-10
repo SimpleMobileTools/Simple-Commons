@@ -639,6 +639,8 @@
     <string name="faq_6_title_commons">Икона покретача апликација је нестала. Шта да урадим?</string>
     <string name="faq_6_text_commons">То је узроковано изостатком подршке вашег покретача за прилагођавање икона. Пробајте да покренете апликацију преко Гугл плеја или неког виџета, ако су доступни.
         Кад се покрене, подесите подразумевајућу наранџасту икону #F57C00. Можда будете морали да реинсталирате апликацију, у најгорем случају.</string>
+    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
+    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
 
     <!-- License -->
     <string name="notice">Ова апликација користи следеће библиотеке које припадају трећим лицима, како би учинили наш живот лакшим. Хвала вам.</string>

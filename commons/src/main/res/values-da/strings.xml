@@ -64,9 +64,9 @@
     <string name="source_file_doesnt_exist">Kildefilen %s eksisterer ikke</string>
     <string name="prepend_filenames">Tilføj forrest til filnavne</string>
     <string name="append_filenames">Tilføj bagerst til filnavne</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
-    <string name="string_to_add">String to add</string>
+    <string name="simple_renaming">Simple omdøbning</string>
+    <string name="pattern_renaming">Mønster</string>
+    <string name="string_to_add">Tekststreng der skal tilføjes</string>
     <string name="rename_date_time_pattern">%Y - år\n%M - måned\n%D - dag\n%h - time\n%m - minut\n%s - sekund</string>
 
     <!-- Copy / Move -->
@@ -95,7 +95,7 @@
     <string name="could_not_create_folder">Kunne ikke oprette mappen %s</string>
     <string name="could_not_create_file">Kunne ikke oprette filen %s</string>
     <string name="no_new_items">Der blev ikke fundet nogen nye filer</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_space">Der er ikke plads nok.\nDer skal bruges %1$s, der er %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Opret ny</string>
@@ -641,6 +641,8 @@
     <string name="faq_6_title_commons">App-launcher\'ens ikon forsvandt. Hvad gør jeg</string>
     <string name="faq_6_text_commons">Det sker når din launcher ikke supporterer tilpasning af ikonet. Prøv at åbne appen via Google Play eller fra en widget.
        Når appen er åbnet kan du ingen sætte farven til den orange standardværdi, #F57C00. I værste fald må du reinstallere appen.</string>
+    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
+    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
 
     <!-- License -->
     <string name="notice">Denne app bruger følgende 3.-parts biblioteker der gør at mit liv bliver lidt enklere. Tak.</string>

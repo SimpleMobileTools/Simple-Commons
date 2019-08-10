@@ -609,6 +609,8 @@
     <string name="faq_6_title_commons">Ikon launcher aplikasi menghilang. Apa yang bisa saya lakukan?</string>
     <string name="faq_6_text_commons">Hal tersebut disebabkan oleh launcher anda yang tidak mendukung kustomisasi ikon dengan benar. Coba jalankan aplikasi melalui Google Play atau widget, jika tersedia.
         Setelah dijalankan, cukup kembalikan warna ikon default oranye #F57C00. Jika masih tidak bisa, anda mungkin harus memasang ulang aplikasi.</string>
+    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
+    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
 
     <!-- License -->
     <string name="notice">Aplikasi ini menggunakan pustaka pihak ketiga berikut untuk mempermudah pekerjaan. Terima kasih.</string>

@@ -641,6 +641,8 @@
     <string name="faq_6_title_commons">Het icoon voor de app is verdwenen uit mijn launcher. Wat moet ik doen?</string>
     <string name="faq_6_text_commons">Sommige launchers kunnen niet goed omgaan met aangepaste app-iconen. Als het icoon verdwijnt, probeer de app dan te starten via de Play Store of een widget.
         Zodra de app gestart is kan het icoon middels de standaardkleur #F57C00 worden hersteld. In het ergste geval dient de app opnieuw te worden geïnstalleerd.</string>
+    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
+    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
 
     <!-- License -->
     <string name="notice">Deze app maakt gebruik van de volgende libraries om het mij wat gemakkelijker te maken. Dank hiervoor.</string>

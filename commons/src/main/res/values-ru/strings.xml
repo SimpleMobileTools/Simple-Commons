@@ -675,6 +675,8 @@
     <string name="faq_6_title_commons">Значок запуска приложения исчез. Что делать?</string>
     <string name="faq_6_text_commons">Это вызвано тем, что ваша программа запуска не поддерживает правильно настройку значков. Если значок исчезнет, попробуйте запустить приложение через Google Play или виджет, если он доступен.
         После запуска просто установите оранжевый цвет значка по умолчанию #F57C00. В худшем случае вам придётся переустановить приложение.</string>
+    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
+    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
 
     <!-- License -->
     <string name="notice">Это приложение использует следующие библиотеки сторонних разработчиков, облегчающие мой труд. Спасибо им.</string>
