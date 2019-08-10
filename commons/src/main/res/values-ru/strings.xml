@@ -95,7 +95,7 @@
     <string name="could_not_create_folder">Не удалось создать папку \"%s\"</string>
     <string name="could_not_create_file">Не удалось создать файл \"%s\"</string>
     <string name="no_new_items">Ничего не найдено</string>
-    <string name="no_space">По выбранному пути назначения недостаточно свободного места.\nНеобходимо %1$s, доступно %2$s.</string>
+    <string name="no_space">По выбранному пути недостаточно свободного места.\nНеобходимо %1$s, доступно %2$s.</string>
 
     <!-- Create new -->
     <string name="create_new">Создать</string>
@@ -173,7 +173,7 @@
     <string name="exif">EXIF</string>
     <string name="song_title">Название композиции</string>
     <string name="gps_coordinates">Координаты GPS</string>
-    <string name="altitude">Высота</string>
+    <string name="altitude">Высота над уровнем моря</string>
 
     <!-- Color customization -->
     <string name="background_color">Цвет фона</string>
@@ -619,7 +619,7 @@
     <string name="share_text">Попробуйте %1$s по ссылке %2$s</string>
     <string name="invite_via">Предложить с помощью</string>
     <string name="rate_us_underlined"><u>Оценить нас в Google Play</u></string>
-    <string name="rate">Rate</string>
+    <string name="rate">Оценить</string>
     <string name="donate">Поддержать разработчика</string>
     <string name="donate_underlined"><u>Поддержать разработчика</u></string>
     <string name="follow_us">Подписаться на нас</string>
@@ -659,7 +659,7 @@
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Часто задаваемые вопросы</string>
-    <string name="before_asking_question">Перед тем как задать вопрос, пожалуйста, сначала прочитайте</string>
+    <string name="before_asking_question">Прежде чем задать вопрос, пожалуйста, прочитайте</string>
     <string name="faq_1_title_commons">Почему я не вижу виджет этого приложения в списке виджетов?</string>
     <string name="faq_1_text_commons">Это, скорее всего, потому, что вы перенесли приложение на SD-карту. Существует ограничение системы Android, которое скрывает виджеты приложения
         в этом случае. Единственное решение — переместить приложение обратно во внутреннее хранилище через настройки вашего устройства.</string>
@@ -675,8 +675,8 @@
     <string name="faq_6_title_commons">Значок запуска приложения исчез. Что делать?</string>
     <string name="faq_6_text_commons">Это вызвано тем, что ваша программа запуска не поддерживает правильно настройку значков. Если значок исчезнет, попробуйте запустить приложение через Google Play или виджет, если он доступен.
         После запуска просто установите оранжевый цвет значка по умолчанию #F57C00. В худшем случае вам придётся переустановить приложение.</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
+    <string name="faq_7_title_commons">Деньги были списаны с моего банковского счета, но я не могу загрузить приложение. Что можно сделать?</string>
+    <string name="faq_7_text_commons">Платежи полностью обрабатываются Google, их система время от времени даёт сбои. Просто очистите кеш приложения Google Play и перезагрузите устройство, затем повторите попытку загрузки.</string>
 
     <!-- License -->
     <string name="notice">Это приложение использует следующие библиотеки сторонних разработчиков, облегчающие мой труд. Спасибо им.</string>
