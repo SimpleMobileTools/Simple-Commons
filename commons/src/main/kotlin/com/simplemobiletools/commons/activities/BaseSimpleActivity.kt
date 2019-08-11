@@ -9,6 +9,7 @@ import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.DocumentsContract
+import android.view.Menu
 import android.view.MenuItem
 import android.view.WindowManager
 import android.widget.Toast
@@ -136,6 +137,24 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             val description = ActivityManager.TaskDescription(title, recentsIcon, color)
             setTaskDescription(description)
         }
+    }
+
+    fun updateMenuItemColors(menu: Menu?, useCrossAsBack: Boolean = false, baseColor: Int = baseConfig.primaryColor) {
+        if (menu == null) {
+            return
+        }
+
+        val color = baseColor.getContrastColor()
+        for (i in 0 until menu.size()) {
+            try {
+                menu.getItem(i)?.icon?.setTint(color)
+            } catch (ignored: Exception) {
+            }
+        }
+
+        val drawableId = if (useCrossAsBack) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector
+        val icon = resources.getColoredDrawableWithColor(drawableId, color)
+        supportActionBar?.setHomeAsUpIndicator(icon)
     }
 
     private fun getCurrentAppIconColorIndex(): Int {
