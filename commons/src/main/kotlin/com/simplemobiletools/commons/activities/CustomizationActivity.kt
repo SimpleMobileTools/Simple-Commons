@@ -99,7 +99,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_customization, menu)
         menu.findItem(R.id.save).isVisible = hasUnsavedChanges
-        updateMenuItemColors(menu, true)
+        updateMenuItemColors(menu, true, curPrimaryColor)
         this.menu = menu
         return true
     }
@@ -183,6 +183,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     curPrimaryColor = baseConfig.customPrimaryColor
                     curNavigationBarColor = baseConfig.customNavigationBarColor
                     setTheme(getThemeId(curPrimaryColor))
+                    updateMenuItemColors(menu, true, curPrimaryColor)
                     setupColorsPickers()
                 } else {
                     baseConfig.customPrimaryColor = curPrimaryColor
@@ -202,6 +203,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     }
                     setTheme(getThemeId(curPrimaryColor))
                     setupColorsPickers()
+                    updateMenuItemColors(menu, true, curPrimaryColor)
                 }
             } else {
                 val theme = predefinedThemes[curSelectedThemeId]!!
@@ -212,6 +214,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 curNavigationBarColor = getThemeNavigationColor(curSelectedThemeId)
                 setTheme(getThemeId(curPrimaryColor))
                 colorChanged()
+                updateMenuItemColors(menu, true, curPrimaryColor)
             }
         }
 
@@ -404,8 +407,8 @@ class CustomizationActivity : BaseSimpleActivity() {
                     colorChanged()
                     updateColorTheme(getUpdatedTheme())
                     setTheme(getThemeId(color))
-                    updateMenuItemColors(menu, true, color)
                 }
+                updateMenuItemColors(menu, true, color)
             } else {
                 updateActionbarColor(curPrimaryColor)
                 setTheme(getThemeId(curPrimaryColor))
