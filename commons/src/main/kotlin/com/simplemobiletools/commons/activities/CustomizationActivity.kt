@@ -99,7 +99,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_customization, menu)
         menu.findItem(R.id.save).isVisible = hasUnsavedChanges
-        updateMenuItemColors(menu)
+        updateMenuItemColors(menu, true)
         this.menu = menu
         return true
     }
