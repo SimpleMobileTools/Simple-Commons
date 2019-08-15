@@ -235,6 +235,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 mTransferredFiles.add(source)
                 if (activity.baseConfig.keepLastModified) {
                     copyOldLastModified(source.path, destination.path)
+                    File(destination.path).setLastModified(File(source.path).lastModified())
                 }
                 activity.scanPathRecursively(destination.path)
                 if (!copyOnly) {
