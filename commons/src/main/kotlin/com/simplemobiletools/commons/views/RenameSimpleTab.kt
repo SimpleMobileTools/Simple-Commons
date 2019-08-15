@@ -15,6 +15,11 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
     var activity: BaseSimpleActivity? = null
     var paths = ArrayList<String>()
 
+    override fun onFinishInflate() {
+        super.onFinishInflate()
+        context.updateTextColors(rename_simple_holder)
+    }
+
     override fun initTab(activity: BaseSimpleActivity, paths: ArrayList<String>) {
         this.activity = activity
         this.paths = paths
