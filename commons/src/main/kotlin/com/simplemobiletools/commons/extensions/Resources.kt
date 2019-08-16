@@ -1,19 +1,20 @@
 package com.simplemobiletools.commons.extensions
 
 import android.content.res.Resources
-import android.graphics.*
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.Drawable
 
 fun Resources.getColoredBitmap(resourceId: Int, newColor: Int): Bitmap {
-    val options = BitmapFactory.Options()
-    options.inMutable = true
-    val bmp = BitmapFactory.decodeResource(this, resourceId, options)
-    val paint = Paint()
-    val filter = PorterDuffColorFilter(newColor, PorterDuff.Mode.SRC_IN)
-    paint.colorFilter = filter
-    val canvas = Canvas(bmp)
-    canvas.drawBitmap(bmp, 0f, 0f, paint)
-    return bmp
+    val drawable = getDrawable(resourceId)
+    val bitmap = Bitmap.createBitmap(drawable.intrinsicWidth, drawable.intrinsicHeight, Bitmap.Config.ARGB_8888)
+    val canvas = Canvas(bitmap)
+    drawable.setBounds(0, 0, canvas.width, canvas.height)
+    drawable.colorFilter = PorterDuffColorFilter(newColor, PorterDuff.Mode.SRC_IN)
+    drawable.draw(canvas)
+    return bitmap
 }
 
 fun Resources.getColoredDrawable(drawableId: Int, colorId: Int, alpha: Int = 255) = getColoredDrawableWithColor(drawableId, getColor(colorId), alpha)
