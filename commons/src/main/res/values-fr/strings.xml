@@ -62,11 +62,11 @@
     <string name="filename_invalid_characters_placeholder">Le nom du fichier \"%s\" contient des caractères incorrectes</string>
     <string name="extension_cannot_be_empty">L\'extension ne peut pas rester vide</string>
     <string name="source_file_doesnt_exist">Le fichier source %s n\'existe pas</string>
-    <string name="prepend_filenames">Ajouter un préfixe aux noms de fichiers</string>
-    <string name="append_filenames">Ajouter un suffixe aux noms de fichiers</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
-    <string name="string_to_add">String to add</string>
+    <string name="prepend_filenames">Ajouter un préfixe aux noms des fichiers</string>
+    <string name="append_filenames">Ajouter un suffixe aux noms des fichiers</string>
+    <string name="simple_renaming">Simple</string>
+    <string name="pattern_renaming">Modèle</string>
+    <string name="string_to_add">Caractères à ajouter</string>
     <string name="rename_date_time_pattern">%Y - année\n%M - mois\n%D - jour\n%h - heure\n%m - minute\n%s - seconde</string>
 
     <!-- Copy / Move -->
@@ -95,7 +95,7 @@
     <string name="could_not_create_folder">Impossible de créer le dossier %s</string>
     <string name="could_not_create_file">Impossible de créer le fichier %s</string>
     <string name="no_new_items">Pas de nouveaux éléments trouvés</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_space">La destination n\'a pas assez d\'espace disponible.\nRequis %1$s, disponible %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Créer un nouveau</string>
@@ -643,8 +643,8 @@
     <string name="faq_6_title_commons">L\'icône du lanceur d\'applications a disparu. Que puis-je faire ?</string>
     <string name="faq_6_text_commons">Votre lanceur ne prend pas correctement en charge la personnalisation des icônes. Essayez de lancer l\'application via Google Play ou un widget, le cas échéant.
         Une fois lancé, il vous suffit de redéfinir l\'icône orange par défaut #F57C00. Dans le pire des cas, vous devrez peut-être réinstaller l\'application.</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
+    <string name="faq_7_title_commons">L\'argent a été débiter de mon compte bancaire, mais je ne peux pas télécharger l\'application. Que puis-je faire ?</string>
+    <string name="faq_7_text_commons">Les paiements sont entièrement gérés par Google, leur système se heurte parfois à des problèmes. Effacez simplement le cache de votre application Google Play, redémarrez votre appareil, puis réessayez de télécharger.</string>
 
     <!-- License -->
     <string name="notice">Cette application utilise les bibliothèques tierces suivantes pour me simplifier la vie. Merci.</string>
