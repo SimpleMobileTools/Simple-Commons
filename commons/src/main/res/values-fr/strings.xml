@@ -148,13 +148,13 @@
     <string name="sd_card">Carte SD</string>
     <string name="root">Racine</string>
     <string name="wrong_root_selected">Dossier sélectionné incorrecte, veuillez sélectionner le dossier racine de votre carte SD</string>
-    <string name="sd_card_usb_same">Les chemins de la carte SD et du stockage USB ne peuvent être similaires</string>
+    <string name="sd_card_usb_same">Les emplacements de la carte SD et du stockage USB ne peuvent être similaires</string>
     <string name="app_on_sd_card">L\'application semble installée sur une carte SD, ce qui empêche l\'utilisation des widgets de l\'applications. Ils n\'apparaîtront pas non plus dans la liste des widgets disponibles.
         C\'est une limitation système. Si vous voulez utiliser le widget, vous devez déplacer l\'application vers la mémoire interne.</string>
 
     <!-- File properties -->
     <string name="properties">Propriétés</string>
-    <string name="path">Chemin</string>
+    <string name="path">Eplacement</string>
     <string name="items_selected">Éléments sélectionnés</string>
     <string name="direct_children_count">Nombre total de fichiers enfants directs</string>
     <string name="files_count">Nombre total de fichiers</string>
@@ -223,7 +223,7 @@
     <string name="hide">Cacher</string>
     <string name="unhide">Ne plus cacher</string>
     <string name="hide_folder">Cacher le dossier</string>
-    <string name="unhide_folder">Faire apparaître le dossier</string>
+    <string name="unhide_folder">Ne plus cacher le dossier</string>
     <string name="temporarily_show_hidden">Afficher les fichiers cachés</string>
     <string name="stop_showing_hidden">Masquer les fichiers cachés</string>
     <string name="maximum_share_reached">Impossible de partager autant de contenu à la fois</string>
@@ -269,16 +269,16 @@
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">Saisir le code PIN</string>
+    <string name="enter_pin">Saisir un code PIN</string>
     <string name="please_enter_pin">Veuillez saisir un code PIN</string>
     <string name="wrong_pin">Code PIN incorrect</string>
     <string name="repeat_pin">Saisissez à nouveau le code PIN</string>
     <string name="pattern">Schéma</string>
-    <string name="insert_pattern">Dessinez un schéma</string>
+    <string name="insert_pattern">Dessiner un schéma</string>
     <string name="wrong_pattern">Schéma incorrect</string>
-    <string name="repeat_pattern">Redessinez le schéma</string>
+    <string name="repeat_pattern">Redessiner le schéma</string>
     <string name="fingerprint">Empreinte</string>
-    <string name="add_fingerprint">Ajouter une empreinte</string>
+    <string name="add_fingerprint">Capturer une empreinte</string>
     <string name="place_finger">Veuillez placer votre doigt sur le capteur d\'empreinte digitale</string>
     <string name="authentication_failed">Échec de l\'identification</string>
     <string name="authentication_blocked">Identification bloquée. Veuillez réessayer dans quelques instants.</string>
@@ -448,7 +448,7 @@
     <string name="medium">Moyenne</string>
     <string name="large">Large</string>
     <string name="extra_large">Extra large</string>
-    <string name="password_protect_hidden_items">Afficher les éléments protégés par mot de passe</string>
+    <string name="password_protect_hidden_items">Protéger les éléments cachés par mot de passe</string>
     <string name="password_protect_whole_app">Protéger l\'application par mot de passe</string>
     <string name="password_protect_file_deletion">Protéger la suppression et le déplacement de fichiers par mot de passe</string>
     <string name="keep_last_modified">Garder la date de modification après les oprérations de fichier</string>
