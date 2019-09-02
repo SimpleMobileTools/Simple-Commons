@@ -28,9 +28,10 @@ class CustomizationActivity : BaseSimpleActivity() {
     private var curBackgroundColor = 0
     private var curPrimaryColor = 0
     private var curAppIconColor = 0
-    private var curNavigationBarColor = INVALID_NAVIGATION_BAR_COLOR
     private var curSelectedThemeId = 0
     private var originalAppIconColor = 0
+    private var lastSavePromptTS = 0L
+    private var curNavigationBarColor = INVALID_NAVIGATION_BAR_COLOR
     private var hasUnsavedChanges = false
     private var predefinedThemes = LinkedHashMap<Int, MyTheme>()
     private var curPrimaryLineColorPicker: LineColorPickerDialog? = null
@@ -113,7 +114,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     override fun onBackPressed() {
-        if (hasUnsavedChanges) {
+        if (hasUnsavedChanges && System.currentTimeMillis() - lastSavePromptTS > SAVE_DISCARD_PROMPT_INTERVAL) {
             promptSaveDiscard()
         } else {
             super.onBackPressed()
@@ -260,6 +261,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getThemeNavigationColor(themeId: Int) = if (themeId == THEME_BLACK_WHITE) Color.BLACK else baseConfig.defaultNavigationBarColor
 
     private fun promptSaveDiscard() {
+        lastSavePromptTS = System.currentTimeMillis()
         ConfirmationAdvancedDialog(this, "", R.string.save_before_closing, R.string.save, R.string.discard) {
             if (it) {
                 saveChanges(true)
