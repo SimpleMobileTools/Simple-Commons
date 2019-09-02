@@ -64,10 +64,10 @@
     <string name="source_file_doesnt_exist">Il file di origine %s non esiste</string>
     <string name="prepend_filenames">Anteponi i nomi dei file</string>
     <string name="append_filenames">Aggiungi i nomi dei file</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
-    <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="simple_renaming">Rinominazione semplice</string>
+    <string name="pattern_renaming">Modello</string>
+    <string name="string_to_add">Stringa da aggiungere</string>
+    <string name="rename_date_time_pattern">%Y - anno\n%M - mese\n%D - giorno\n%h - ora\n%m - minuto\n%s - secondo</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copia</string>
@@ -94,8 +94,8 @@
     <string name="saving">Salvataggio in corso…</string>
     <string name="could_not_create_folder">Impossibile creare la cartella %s</string>
     <string name="could_not_create_file">Impossibile creare il file %s</string>
-    <string name="no_new_items">No new items have been found</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_new_items">Nessun nuovo elemento trovato</string>
+    <string name="no_space">La destinazione non ha abbastanza spazio disponibile.\nRichiesti %1$s, disponibili %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Crea nuovo</string>
@@ -166,11 +166,11 @@
     <string name="exposure_time">Tempo di esposizione</string>
     <string name="iso_speed">Velocità ISO</string>
     <string name="f_number">Rapporto focale</string>
-    <string name="camera">Camera</string>
+    <string name="camera">Fotocamera</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Titolo canzone</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="gps_coordinates">Coordinate GPS</string>
+    <string name="altitude">Altitudine</string>
 
     <!-- Color customization -->
     <string name="background_color">Colore di sfondo</string>
@@ -180,8 +180,8 @@
     <string name="app_icon_color">Colore dell\'icona app</string>
     <string name="bottom_navigation_bar_color">Colore della barra di navigazione</string>
     <string name="restore_defaults">Ripristina predefiniti</string>
-    <string name="use_default">Use default</string>
-    <string name="default_color">Default</string>
+    <string name="use_default">Usa predefinito</string>
+    <string name="default_color">Predefinito</string>
     <string name="change_color">Cambia colore</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Modificando un colore, il tema diventerà personale</string>
@@ -231,7 +231,7 @@
     <string name="undo">Annulla</string>
     <string name="redo">Ripeti</string>
     <string name="print">Stampa</string>
-    <string name="create_shortcut">Create shortcut</string>
+    <string name="create_shortcut">Crea scorciatoia</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordina per</string>
@@ -247,7 +247,7 @@
     <string name="ascending">Ascendente</string>
     <string name="descending">Discendente</string>
     <string name="use_for_this_folder">Usa solo per questa cartella</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">Ordina le parti numeriche per valore</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Procedere davvero con l\'eliminazione?</string>
@@ -284,9 +284,9 @@
     <string name="go_to_settings">Vai alle impostazioni</string>
     <string name="protection_setup_successfully">Password impostata correttamente. Reinstallare l\'app in caso di dimenticanza.</string>
     <string name="fingerprint_setup_successfully">Protezione impostata correttamente. Reinstallare l\'app in caso di problemi nel ripristinarla.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="lock_folder">Blocca cartella</string>
+    <string name="unlock_folder">Sblocca cartella</string>
+    <string name="lock_folder_notice">Questa protezione funziona solo nell\'app, non è pensata per sostituire una vera cifratura delle cartelle a livello di sistema.</string>
  
     <!-- Times -->
     <string name="yesterday">Ieri</string>
@@ -400,8 +400,8 @@
         <item quantity="other">%d ore</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d giorno</item>
+        <item quantity="other">%d giorni</item>
     </plurals>
     <plurals name="by_weeks">
         <item quantity="one">%d settimana</item>
@@ -638,12 +638,12 @@
     <string name="faq_4_title_commons">Non mi piacciono i colori del widget, posso cambiarli?</string>
     <string name="faq_4_text_commons">Sì, quando si trascina un widget nella schermata appare una finestra di configurazione. Si vedranno dei quadrati colorati nell\'angolo in basso a sinistra, toccandoli si sceglierà un colore. Si può muovere l\'indicatore per regolare la trasparenza.</string>
     <string name="faq_5_title_commons">Posso recuperare in qualche modo i file eliminati?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
+    <string name="faq_5_text_commons">Se sono stati veramente eliminati, non puoi. Tuttavia, c\'è un cestino attivato in modo predefinito, farà sì che i file vengano spostati nel cestino invece di eliminarli.</string>
     <string name="faq_6_title_commons">L\'icona dell\'app è scomparsa nel lanciatore. Cosa posso fare?</string>
     <string name="faq_6_text_commons">Il lanciatore attualmente in uso non gestisce correttamente le personalizzazioni delle icone delle applicazioni. Provare ad avviare l\'applicazione dal Google Play Store oppure dal widget, se disponibile.
 	Una volta avviata, impostare l\'icona predefinita col colore arancione #F57C00. Potrebbe essere necessario reinstallare l\'applicazione se proprio non funziona.</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
+    <string name="faq_7_title_commons">I soldi sono stati detratti dal mio conto corrente, ma non posso scaricare l\'app. Cosa posso fare?</string>
+    <string name="faq_7_text_commons">I pagamenti sono gestiti totalmente da Google, il loro sistema si guasta di tanto in tanto. Svuota la cache dell\'app Google Play e riavvia il tuo dispositivo, poi riprova a scaricare.</string>
 
     <!-- License -->
     <string name="notice">Questa app usa le seguenti librerie di terze parti per semplificarmi la vita. Vi ringrazio.</string>
