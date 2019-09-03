@@ -96,7 +96,7 @@ fun Activity.isAppInstalledOnSDCard(): Boolean = try {
     false
 }
 
-fun Activity.isShowingSAFDialog(path: String): Boolean {
+fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
     return if (isPathOnSD(path) && (baseConfig.treeUri.isEmpty() || !hasProperStoredTreeUri(false))) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
@@ -108,6 +108,7 @@ fun Activity.isShowingSAFDialog(path: String): Boolean {
                         }
 
                         if (resolveActivity(packageManager) != null) {
+                            checkedDocumentPath = path
                             startActivityForResult(this, OPEN_DOCUMENT_TREE)
                         } else {
                             toast(R.string.unknown_error_occurred)
@@ -124,14 +125,14 @@ fun Activity.isShowingSAFDialog(path: String): Boolean {
 
 fun BaseSimpleActivity.isShowingOTGDialog(path: String): Boolean {
     return if (isPathOnOTG(path) && (baseConfig.OTGTreeUri.isEmpty() || !hasProperStoredTreeUri(true))) {
-        showOTGPermissionDialog()
+        showOTGPermissionDialog(path)
         true
     } else {
         false
     }
 }
 
-fun Activity.showOTGPermissionDialog() {
+fun BaseSimpleActivity.showOTGPermissionDialog(path: String) {
     runOnUiThread {
         if (!isDestroyed && !isFinishing) {
             WritePermissionDialog(this, true) {
@@ -141,6 +142,7 @@ fun Activity.showOTGPermissionDialog() {
                     }
 
                     if (resolveActivity(packageManager) != null) {
+                        checkedDocumentPath = path
                         startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
                     } else {
                         toast(R.string.unknown_error_occurred)

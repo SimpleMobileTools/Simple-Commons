@@ -28,12 +28,14 @@ import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 import java.util.*
+import java.util.regex.Pattern
 
 abstract class BaseSimpleActivity : AppCompatActivity() {
     var copyMoveCallback: ((destinationPath: String) -> Unit)? = null
     var actionOnPermission: ((granted: Boolean) -> Unit)? = null
     var isAskingPermissions = false
     var useDynamicTheme = true
+    var checkedDocumentPath = ""
 
     private val GENERIC_PERM_HANDLER = 100
 
@@ -173,12 +175,21 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
         super.onActivityResult(requestCode, resultCode, resultData)
-        if (requestCode == OPEN_DOCUMENT_TREE && resultCode == Activity.RESULT_OK && resultData != null) {
-            if (isProperSDFolder(resultData.data)) {
+        val partition = try {
+            checkedDocumentPath.substring(9, 18)
+        } catch (e: Exception) {
+            ""
+        }
+        val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
+
+        if (requestCode == OPEN_DOCUMENT_TREE && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+            val isProperPartition = partition.isEmpty() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
+            if (isProperSDFolder(resultData.data!!) && isProperPartition) {
                 if (resultData.dataString == baseConfig.OTGTreeUri) {
                     toast(R.string.sd_card_usb_same)
                     return
                 }
+
                 saveTreeUri(resultData)
                 funAfterSAFPermission?.invoke(true)
                 funAfterSAFPermission = null
@@ -187,8 +198,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
                 startActivityForResult(intent, requestCode)
             }
-        } else if (requestCode == OPEN_DOCUMENT_TREE_OTG && resultCode == Activity.RESULT_OK && resultData != null) {
-            if (isProperOTGFolder(resultData.data)) {
+        } else if (requestCode == OPEN_DOCUMENT_TREE_OTG && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+            val isProperPartition = partition.isEmpty() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
+            if (isProperOTGFolder(resultData.data!!) && isProperPartition) {
                 if (resultData.dataString == baseConfig.treeUri) {
                     funAfterSAFPermission?.invoke(false)
                     toast(R.string.sd_card_usb_same)
