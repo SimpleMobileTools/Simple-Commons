@@ -76,6 +76,15 @@
         <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
     </style>
 
+    <style name="Base.Widget.AppCompat.ActionMode" parent="">
+        <item name="background">@drawable/actionmenu_background</item>
+        <item name="backgroundSplit">?attr/actionModeSplitBackground</item>
+        <item name="height">?attr/actionBarSize</item>
+        <item name="titleTextStyle">@style/TextAppearance.AppCompat.Widget.ActionMode.Title</item>
+        <item name="subtitleTextStyle">@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle</item>
+        <item name="closeItemLayout">@layout/abc_action_mode_close_item_material</item>
+    </style>
+
     <!-- App themes -->
     <style name="AppTheme.Red_100" parent="AppTheme.Base">
         <item name="colorPrimary">@color/md_red_100</item>
