@@ -183,7 +183,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
 
         if (requestCode == OPEN_DOCUMENT_TREE && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-            val isProperPartition = partition.isEmpty() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
+            val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
             if (isProperSDFolder(resultData.data!!) && isProperPartition) {
                 if (resultData.dataString == baseConfig.OTGTreeUri) {
                     toast(R.string.sd_card_usb_same)
@@ -199,7 +199,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 startActivityForResult(intent, requestCode)
             }
         } else if (requestCode == OPEN_DOCUMENT_TREE_OTG && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-            val isProperPartition = partition.isEmpty() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
+            val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
             if (isProperOTGFolder(resultData.data!!) && isProperPartition) {
                 if (resultData.dataString == baseConfig.treeUri) {
                     funAfterSAFPermission?.invoke(false)
