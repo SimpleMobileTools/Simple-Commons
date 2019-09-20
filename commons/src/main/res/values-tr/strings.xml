@@ -23,8 +23,8 @@
     <string name="transparent_color">Şeffaf renk</string>
     <string name="select_a_different_color">Farklı bir renk seçin</string>
     <string name="download">İndir</string>
-    <string name="notification">Notification</string>
-    <string name="email">Email</string>
+    <string name="notification">Bildirim</string>
+    <string name="email">E-posta</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoriler</string>
@@ -64,10 +64,10 @@
     <string name="source_file_doesnt_exist">%s kaynak dosyası mevcut değil</string>
     <string name="prepend_filenames">Ön dosya adları</string>
     <string name="append_filenames">Dosya adlarını ekle</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
-    <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="simple_renaming">Basit yeniden adlandırma</string>
+    <string name="pattern_renaming">Desen</string>
+    <string name="string_to_add">Eklenecek dize</string>
+    <string name="rename_date_time_pattern">%Y - yıl\n%M - ay\n%D - gün\n%h - saat\n%m - dakika\n%s - saniye</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopyala</string>
@@ -94,8 +94,8 @@
     <string name="saving">Kaydediliyor…</string>
     <string name="could_not_create_folder">%s klasörü oluşturulamıyor</string>
     <string name="could_not_create_file">%s dosyası oluşturulamıyor</string>
-    <string name="no_new_items">No new items have been found</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_new_items">Yeni öğe bulunamadı</string>
+    <string name="no_space">Hedef yeterli alana sahip değil.\nGereken %1$s, kullanılabilir %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Yeni oluştur</string>
@@ -170,7 +170,7 @@
     <string name="exif">EXIF</string>
     <string name="song_title">Şarkı başlığı</string>
     <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="altitude">Rakım</string>
 
     <!-- Color customization -->
     <string name="background_color">Arka plan rengi</string>
@@ -180,8 +180,8 @@
     <string name="app_icon_color">Uygulama simgesi rengi</string>
     <string name="bottom_navigation_bar_color">Alt gezinti çubuğu rengi</string>
     <string name="restore_defaults">Varsayılanları geri yükle</string>
-    <string name="use_default">Use default</string>
-    <string name="default_color">Default</string>
+    <string name="use_default">Varsayılanı kullan</string>
+    <string name="default_color">Varsayılan</string>
     <string name="change_color">Rengi değiştir</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Bir rengin değiştirilmesi, Özel temaya geçilmesini sağlayacaktır</string>
@@ -230,8 +230,8 @@
     <string name="empty_and_disable_recycle_bin">Geri Dönüşüm Kutusu\'nu boşalt ve devre dışı bırak</string>
     <string name="undo">Geri al</string>
     <string name="redo">Yinele</string>
-    <string name="print">Print</string>
-    <string name="create_shortcut">Create shortcut</string>
+    <string name="print">Yazdır</string>
+    <string name="create_shortcut">Kısayol oluştur</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sıralama ölçütü</string>
@@ -247,7 +247,7 @@
     <string name="ascending">Artan</string>
     <string name="descending">Azalan</string>
     <string name="use_for_this_folder">Sadece bu klasör için kullan</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">Sayısal parçaları gerçek değere göre sırala</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Silme işlemine devam etmek istediğinizden emin misiniz?</string>
@@ -258,7 +258,7 @@
     <string name="do_not_ask_again">Bu oturumda tekrar sorma</string>
     <string name="yes">Evet</string>
     <string name="no">Hayır</string>
-    <string name="maybe">Maybe</string>
+    <string name="maybe">Belki</string>
 
     <plurals name="delete_warning">
         <item quantity="one">UYARI: %d klasör siliyorsunuz</item>
@@ -284,9 +284,9 @@
     <string name="go_to_settings">Ayarlar\'a git</string>
     <string name="protection_setup_successfully">Parola kurulumu başarılı oldu. Lütfen unuttuğunuz durumda uygulamayı yeniden yükleyin.</string>
     <string name="fingerprint_setup_successfully">Koruma kurulumu başarıyla gerçekleştirildi. Sıfırlama ile ilgili sorunlar olması durumunda lütfen uygulamayı yeniden yükleyin.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="lock_folder">Klasörü kilitle</string>
+    <string name="unlock_folder">Klasörün kilidini aç</string>
+    <string name="lock_folder_notice">Bu koruma yalnızca bu uygulamada çalışır, gerçek bir sistem çapında klasör şifrelemesinin yerini almaz.</string>
 
     <!-- Times -->
     <string name="yesterday">Dün</string>
@@ -340,20 +340,20 @@
         <item quantity="other">%d saat</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d gün</item>
+        <item quantity="other">%d gün</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d hafta</item>
+        <item quantity="other">%d hafta</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d ay</item>
+        <item quantity="other">%d ay</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d yıl</item>
+        <item quantity="other">%d yıl</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
@@ -374,16 +374,16 @@
         <item quantity="other">%d gün önce</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d week before</item>
-        <item quantity="other">%d weeks before</item>
+        <item quantity="one">%d hafta önce</item>
+        <item quantity="other">%d hafta önce</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d month before</item>
-        <item quantity="other">%d months before</item>
+        <item quantity="one">%d ay önce</item>
+        <item quantity="other">%d ay önce</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d year before</item>
-        <item quantity="other">%d years before</item>
+        <item quantity="one">%d yıl önce</item>
+        <item quantity="other">%d yıl önce</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
@@ -400,20 +400,20 @@
         <item quantity="other">%d saat</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d gün</item>
+        <item quantity="other">%d gün</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d hafta</item>
+        <item quantity="other">%d hafta</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d ay</item>
+        <item quantity="other">%d ay</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d yıl</item>
+        <item quantity="other">%d yıl</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -450,12 +450,12 @@
     <string name="password_protect_whole_app">Parola tüm uygulamayı korur</string>
     <string name="password_protect_file_deletion">Parola, dosya silinmesini ve taşınmasını korur</string>
     <string name="keep_last_modified">Dosya işlemlerinde eski son değiştirme değerini koru</string>
-    <string name="show_info_bubble">Kaydırma çubuğunu sürükleyerek öğeleri kaydırmada bilgi balonunu göster</string>
+    <string name="show_info_bubble">Kaydırma çubuğunu sürükleyerek öğeleri kaydırırken bilgi balonunu göster</string>
     <string name="prevent_phone_from_sleeping">Uygulama ön plandayken telefonun uykuya geçmesini önle</string>
     <string name="skip_delete_confirmation">Her zaman silme onayı penceresini atla</string>
     <string name="enable_pull_to_refresh">Üstten yenilemek için çekmeyi etkinleştir</string>
     <string name="use_24_hour_time_format">24 saat biçimini kullan</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="change_date_and_time_format">Tarih ve saat biçimini değiştir</string>
     <string name="sunday_first">Pazar günü hafta başlangıcı</string>
     <string name="widgets">Widget\'lar</string>
     <string name="use_same_snooze">Her zaman aynı erteleme süresini kullan</string>
@@ -490,8 +490,8 @@
     <string name="empty_recycle_bin_confirmation">Geri Dönüşüm Kutusu\'nu boşaltmak istediğinizden emin misiniz? Dosyalar kalıcı olarak kaybolacak.</string>
     <string name="recycle_bin_empty">Geri Dönüşüm Kutusu boş</string>
     <string name="moving_recycle_bin_items_disabled">Geri Dönüşüm kutusu öğelerini taşıma devre dışı, lütfen Geri Yükle\'yi kullanın</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">Geri Dönüşüm Kutusunu göster</string>
+    <string name="hide_the_recycle_bin">Geri Dönüşüm Kutusunu gizle</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d öğe Geri Dönüşüm Kutusu\'na taşınıyor</item>
@@ -507,7 +507,7 @@
     <string name="exporting_failed">Dışa aktarılamadı</string>
     <string name="importing_some_entries_failed">Bazı öğeler içe aktarılamadı</string>
     <string name="exporting_some_entries_failed">Bazı öğeler dışa aktarılamadı</string>
-    <string name="no_entries_for_importing">İçe aktarılacak girdi bulunamadı</string>
+    <string name="no_entries_for_importing">İçe aktarılacak öğe bulunamadı</string>
     <string name="no_entries_for_exporting">Dışa aktarılacak öğe bulunamadı</string>
 
     <!-- OTG devices -->
@@ -578,7 +578,7 @@
     <!-- About -->
     <string name="about">Hakkında</string>
     <string name="website_label">Kaynak kodları için ziyaret edin</string>
-    <string name="email_label">Görüşlerinizi veya önerilerinizi buraya gönderin</string>
+    <string name="email_label">Görüşlerinizi veya önerilerinizi şuraya gönderin:</string>
     <string name="upgrade_to_pro">Pro\'ya Yükselt</string>
     <string name="more_apps_underlined"><u>Daha fazla uygulama</u></string>
     <string name="third_party_licences_underlined"><u>Üçüncü taraf lisansları</u></string>
@@ -586,8 +586,8 @@
     <string name="share_text">Selam, %1$s adlı harika bir uygulama buldum. %2$s adresinden indir</string>
     <string name="invite_via">Şununla davet et</string>
     <string name="rate_us_underlined"><u>Bizi değerlendirin</u></string>
-    <string name="rate">Rate</string>
-    <string name="donate">Bağış yapın</string>
+    <string name="rate">Oyla</string>
+    <string name="donate">Bağış yap</string>
     <string name="donate_underlined"><u>Bağış yapın</u></string>
     <string name="follow_us">Bizi takip edin</string>
     <string name="copyright">v %1$s\nTelif hakkı © Simple Mobile Tools %2$d</string>
@@ -605,7 +605,7 @@
     <string name="update_thank_you">Lütfen Basit Teşekkürler\'i son sürüme güncelleyin</string>
     <string name="before_asking_question_read_faq">Bir soru sormadan önce, lütfen uygulama ayarlarını kontrol edin ve önce Sık Sorulan Sorular bölümünü okuyun. Belki çözüm oradadır.</string>
     <string name="read_it">Oku</string>
-    <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
+    <string name="rate_us_prompt">Merhaba,\n\nzaten bir süredir bu uygulamayı kullanıyor gibi görünüyorsunuz ve gerçekten takdir ediyoruz.\n\nSizden bir iyilik isteyebilirsek, lütfen bizi Google Play\'de oylayın. Bu bize gerçekten çok yardımcı olacak.\n\nNasıl karar verirseniz verin, bu mesajı bir daha görmeyeceksiniz.\n\nTeşekkürler!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -637,12 +637,12 @@
     <string name="faq_4_title_commons">Widget renklerini beğenmedim, değiştirebilir miyim?</string>
     <string name="faq_4_text_commons">Evet, ana ekranınızda bir widget\'ı sürüklediğinizde, bir widget yapılandırma ekranı görünür. Sol alt köşede renkli kareler göreceksiniz, sadece yeni bir renk seçmek için onlara basın. Alfa\'yı da ayarlamak için kaydırıcıyı kullanabilirsiniz.</string>
     <string name="faq_5_title_commons">Bir şekilde silinen dosyaları geri yükleyebilir miyim?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
+    <string name="faq_5_text_commons">Gerçekten silinmişlerse, yapamazsınız. Ancak, varsayılan olarak etkinleştirilmiş bir Geri Dönüşüm Kutusu vardır, dosyaların silinmek yerine depoya taşınmasına neden olur.</string>
     <string name="faq_6_title_commons">Uygulama başlatıcısı simgesi kayboldu. Ne yapabilirim?</string>
     <string name="faq_6_text_commons">Başlatıcınızın, simge özelleştirmesini doğru şekilde desteklememesi nedeniyle ortaya çıkar. Uygulamayı Google Play\'den veya varsa bir widget aracılığıyla başlatmayı deneyin.
         Başlatıldıktan sonra, sadece varsayılan turuncu simgeyi #F57C00 geri ayarlayın. En kötü durumda uygulamayı yeniden yüklemeniz gerekebilir.</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
+    <string name="faq_7_title_commons">Para banka hesabımdan düşüldü, ancak uygulamayı indiremiyorum. Ne yapabilirim?</string>
+    <string name="faq_7_text_commons">Ödemeler tamamen Google tarafından işlenir, zaman zaman sistemleri aksar. Sadece Google Play uygulama önbelleğinizi temizleyin ve cihazınızı yeniden başlatın, ardından yeniden indirmeyi deneyin.</string>
 
     <!-- License -->
     <string name="notice">Bu uygulama hayatımı kolaylaştırmak için aşağıdaki üçüncü taraf kitaplıklarını kullanır. Teşekkürler.</string>
@@ -673,6 +673,6 @@
     <string name="gesture_views_title">Gesture Views (yakınlaştırılabilir görüntüler)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">Kullanımdan kaldırıldı: Uygulamanın bu sürümü artık sağlanmıyor, Pro sürümünü şuradan indirin: https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">Ücretli herhangi bir uygulamayı 2 saat içinde kaldırırsanız, otomatik olarak iade edileceğini unutmayın. İstediğiniz zaman geri ödeme yapmak isterseniz, hello@simplemobiletools.com adresinden bizimle iletişime geçmeniz yeterli olacaktır. Bu denemeyi kolaylaştırır :)</string>
 </resources>
