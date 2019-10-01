@@ -647,7 +647,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
         }
     } else {
         val file = File(fileDirItem.path)
-        if (!file.parentFile.exists()) {
+        if (file.parentFile?.exists() == false) {
             file.parentFile.mkdirs()
         }
 
@@ -671,7 +671,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
     return if (needsStupidWritePermissions(path)) {
         var documentFile = parentDocumentFile
         if (documentFile == null) {
-            if (targetFile.parentFile.exists()) {
+            if (targetFile.parentFile?.exists() == true) {
                 documentFile = getDocumentFile(targetFile.parent)
             } else {
                 documentFile = getDocumentFile(targetFile.parentFile.parent)
@@ -687,7 +687,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
         val newDocument = documentFile.createFile(mimeType, path.getFilenameFromPath())
         applicationContext.contentResolver.openOutputStream(newDocument!!.uri)
     } else {
-        if (!targetFile.parentFile.exists()) {
+        if (targetFile.parentFile?.exists() == false) {
             targetFile.parentFile.mkdirs()
         }
 

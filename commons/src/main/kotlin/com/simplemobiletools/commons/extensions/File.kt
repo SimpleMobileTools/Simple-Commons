@@ -4,7 +4,7 @@ import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 
-fun File.isMediaFile() = absolutePath.isImageFast() || absolutePath.isVideoFast() || absolutePath.isGif() || absolutePath.isRawFast() || absolutePath.isSvg()
+fun File.isMediaFile() = absolutePath.isMediaFile()
 fun File.isGif() = absolutePath.endsWith(".gif", true)
 fun File.isVideoFast() = videoExtensions.any { absolutePath.endsWith(it, true) }
 fun File.isImageFast() = photoExtensions.any { absolutePath.endsWith(it, true) }

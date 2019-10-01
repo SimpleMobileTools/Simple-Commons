@@ -39,7 +39,7 @@ fun String.isAValidFilename(): Boolean {
     return true
 }
 
-fun String.isMediaFile() = isImageFast() || isVideoFast() || isGif() || isRawFast() || isSvg()
+fun String.isMediaFile() = isImageFast() || isVideoFast() || isGif() || isRawFast() || isSvg() || isPortrait()
 
 fun String.isGif() = endsWith(".gif", true)
 
