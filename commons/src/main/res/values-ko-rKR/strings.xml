@@ -101,7 +101,7 @@
     <string name="create_new">새로 만들기</string>
     <string name="folder">폴더</string>
     <string name="file">파일</string>
-    <string name="create_new_folder">새로운 폴더 만들기</string>
+    <string name="create_new_folder">새 폴더 만들기</string>
     <string name="name_taken">동일한 이름의 파일 또는 폴더가 이미 존재합니다</string>
     <string name="invalid_name">이름에 사용 할 수 없는 문자가 있습니다</string>
     <string name="empty_name">이름이 입력되지 않았습니다</string>
@@ -211,7 +211,7 @@
     <!-- Actionbar items -->
     <string name="delete">삭제</string>
     <string name="remove">제거</string>
-    <string name="rename">이름변경</string>
+    <string name="rename">이름 변경</string>
     <string name="share">공유</string>
     <string name="share_via">공유 방법</string>
     <string name="select_all">전체 선택</string>
@@ -403,10 +403,10 @@
     <!-- Settings -->
     <string name="settings">설정</string>
     <string name="purchase_simple_thank_you">심플 Thank You 구매하기</string>
-    <string name="customize_colors">앱 테마 및 색상 설정</string>
+    <string name="customize_colors">테마 및 색상 설정</string>
     <string name="customize_widget_colors">위젯 색상 설정</string>
     <string name="use_english_language">영어로 언어 전환</string>
-    <string name="show_hidden_items">숨김 항목 활성화</string>
+    <string name="show_hidden_items">숨김 항목 보이기</string>
     <string name="font_size">폰트 크기</string>
     <string name="small">작게</string>
     <string name="medium">중간</string>
@@ -439,13 +439,13 @@
     <!-- Setting sections -->
     <string name="visibility">표시</string>
     <string name="security">보안</string>
-    <string name="scrolling">스크롤링</string>
+    <string name="scrolling">스크롤</string>
     <string name="file_operations">파일 작업</string>
     <string name="recycle_bin">휴지통</string>
-    <string name="saving_label">저장중</string>
-    <string name="startup">시작중</string>
+    <string name="saving_label">저장</string>
+    <string name="startup">시작</string>
     <string name="text">텍스트</string>
-    <string name="migrating">옮기는 중</string>
+    <string name="migrating">옮기기</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">이 파일 복원하기</string>
