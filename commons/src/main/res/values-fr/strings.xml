@@ -62,11 +62,11 @@
     <string name="filename_invalid_characters_placeholder">Le nom du fichier \"%s\" contient des caractères incorrectes</string>
     <string name="extension_cannot_be_empty">L\'extension ne peut pas rester vide</string>
     <string name="source_file_doesnt_exist">Le fichier source %s n\'existe pas</string>
-    <string name="prepend_filenames">Ajouter un préfixe aux noms de fichiers</string>
-    <string name="append_filenames">Ajouter un suffixe aux noms de fichiers</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
-    <string name="string_to_add">String to add</string>
+    <string name="prepend_filenames">Ajouter un préfixe aux noms des fichiers</string>
+    <string name="append_filenames">Ajouter un suffixe aux noms des fichiers</string>
+    <string name="simple_renaming">Simple</string>
+    <string name="pattern_renaming">Modèle</string>
+    <string name="string_to_add">Caractères à ajouter</string>
     <string name="rename_date_time_pattern">%Y - année\n%M - mois\n%D - jour\n%h - heure\n%m - minute\n%s - seconde</string>
 
     <!-- Copy / Move -->
@@ -95,7 +95,7 @@
     <string name="could_not_create_folder">Impossible de créer le dossier %s</string>
     <string name="could_not_create_file">Impossible de créer le fichier %s</string>
     <string name="no_new_items">Pas de nouveaux éléments trouvés</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_space">La destination n\'a pas assez d\'espace disponible.\nRequis %1$s, disponible %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Créer un nouveau</string>
@@ -148,13 +148,13 @@
     <string name="sd_card">Carte SD</string>
     <string name="root">Racine</string>
     <string name="wrong_root_selected">Dossier sélectionné incorrecte, veuillez sélectionner le dossier racine de votre carte SD</string>
-    <string name="sd_card_usb_same">Les chemins de la carte SD et du stockage USB ne peuvent être similaires</string>
+    <string name="sd_card_usb_same">Les emplacements de la carte SD et du stockage USB ne peuvent être similaires</string>
     <string name="app_on_sd_card">L\'application semble installée sur une carte SD, ce qui empêche l\'utilisation des widgets de l\'applications. Ils n\'apparaîtront pas non plus dans la liste des widgets disponibles.
         C\'est une limitation système. Si vous voulez utiliser le widget, vous devez déplacer l\'application vers la mémoire interne.</string>
 
     <!-- File properties -->
     <string name="properties">Propriétés</string>
-    <string name="path">Chemin</string>
+    <string name="path">Eplacement</string>
     <string name="items_selected">Éléments sélectionnés</string>
     <string name="direct_children_count">Nombre total de fichiers enfants directs</string>
     <string name="files_count">Nombre total de fichiers</string>
@@ -223,7 +223,7 @@
     <string name="hide">Cacher</string>
     <string name="unhide">Ne plus cacher</string>
     <string name="hide_folder">Cacher le dossier</string>
-    <string name="unhide_folder">Faire apparaître le dossier</string>
+    <string name="unhide_folder">Ne plus cacher le dossier</string>
     <string name="temporarily_show_hidden">Afficher les fichiers cachés</string>
     <string name="stop_showing_hidden">Masquer les fichiers cachés</string>
     <string name="maximum_share_reached">Impossible de partager autant de contenu à la fois</string>
@@ -269,16 +269,16 @@
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">Saisir le code PIN</string>
+    <string name="enter_pin">Saisir un code PIN</string>
     <string name="please_enter_pin">Veuillez saisir un code PIN</string>
     <string name="wrong_pin">Code PIN incorrect</string>
     <string name="repeat_pin">Saisissez à nouveau le code PIN</string>
     <string name="pattern">Schéma</string>
-    <string name="insert_pattern">Dessinez un schéma</string>
+    <string name="insert_pattern">Dessiner un schéma</string>
     <string name="wrong_pattern">Schéma incorrect</string>
-    <string name="repeat_pattern">Redessinez le schéma</string>
+    <string name="repeat_pattern">Redessiner le schéma</string>
     <string name="fingerprint">Empreinte</string>
-    <string name="add_fingerprint">Ajouter une empreinte</string>
+    <string name="add_fingerprint">Capturer une empreinte</string>
     <string name="place_finger">Veuillez placer votre doigt sur le capteur d\'empreinte digitale</string>
     <string name="authentication_failed">Échec de l\'identification</string>
     <string name="authentication_blocked">Identification bloquée. Veuillez réessayer dans quelques instants.</string>
@@ -448,7 +448,7 @@
     <string name="medium">Moyenne</string>
     <string name="large">Large</string>
     <string name="extra_large">Extra large</string>
-    <string name="password_protect_hidden_items">Afficher les éléments protégés par mot de passe</string>
+    <string name="password_protect_hidden_items">Protéger les éléments cachés par mot de passe</string>
     <string name="password_protect_whole_app">Protéger l\'application par mot de passe</string>
     <string name="password_protect_file_deletion">Protéger la suppression et le déplacement de fichiers par mot de passe</string>
     <string name="keep_last_modified">Garder la date de modification après les oprérations de fichier</string>
@@ -571,7 +571,8 @@
     <string name="sunday_short">Dim</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Cette version de l\'application n\'est plus maintenue. Veuillez passer à la version Pro.</string>
+    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
+    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
     <string name="it_is_free">C\'est gratuit jusqu\'au : %s. Si vous la téléchargez jusque-là, vous pourrez définitivement l\'utiliser gratuitement.</string>
     <string name="more_info">Plus d\'information</string>
     <string name="upgrade">Passer à la version Pro</string>
@@ -643,8 +644,8 @@
     <string name="faq_6_title_commons">L\'icône du lanceur d\'applications a disparu. Que puis-je faire ?</string>
     <string name="faq_6_text_commons">Votre lanceur ne prend pas correctement en charge la personnalisation des icônes. Essayez de lancer l\'application via Google Play ou un widget, le cas échéant.
         Une fois lancé, il vous suffit de redéfinir l\'icône orange par défaut #F57C00. Dans le pire des cas, vous devrez peut-être réinstaller l\'application.</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
+    <string name="faq_7_title_commons">L\'argent a été débiter de mon compte bancaire, mais je ne peux pas télécharger l\'application. Que puis-je faire ?</string>
+    <string name="faq_7_text_commons">Les paiements sont entièrement gérés par Google, leur système se heurte parfois à des problèmes. Effacez simplement le cache de votre application Google Play, redémarrez votre appareil, puis réessayez de télécharger.</string>
 
     <!-- License -->
     <string name="notice">Cette application utilise les bibliothèques tierces suivantes pour me simplifier la vie. Merci.</string>

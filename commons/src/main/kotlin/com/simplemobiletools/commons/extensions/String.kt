@@ -39,7 +39,7 @@ fun String.isAValidFilename(): Boolean {
     return true
 }
 
-fun String.isMediaFile() = isImageFast() || isVideoFast() || isGif() || isRawFast() || isSvg()
+fun String.isMediaFile() = isImageFast() || isVideoFast() || isGif() || isRawFast() || isSvg() || isPortrait()
 
 fun String.isGif() = endsWith(".gif", true)
 
@@ -48,6 +48,8 @@ fun String.isPng() = endsWith(".png", true)
 fun String.isJpg() = endsWith(".jpg", true) or endsWith(".jpeg", true)
 
 fun String.isSvg() = endsWith(".svg", true)
+
+fun String.isPortrait() = getFilenameFromPath().contains("portrait", true) && File(this).parentFile?.name?.startsWith("img_", true) == true
 
 // fast extension checks, not guaranteed to be accurate
 fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }

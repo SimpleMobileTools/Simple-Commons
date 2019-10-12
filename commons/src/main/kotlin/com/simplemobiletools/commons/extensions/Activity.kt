@@ -96,7 +96,7 @@ fun Activity.isAppInstalledOnSDCard(): Boolean = try {
     false
 }
 
-fun Activity.isShowingSAFDialog(path: String): Boolean {
+fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
     return if (isPathOnSD(path) && (baseConfig.treeUri.isEmpty() || !hasProperStoredTreeUri(false))) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
@@ -108,6 +108,7 @@ fun Activity.isShowingSAFDialog(path: String): Boolean {
                         }
 
                         if (resolveActivity(packageManager) != null) {
+                            checkedDocumentPath = path
                             startActivityForResult(this, OPEN_DOCUMENT_TREE)
                         } else {
                             toast(R.string.unknown_error_occurred)
@@ -124,14 +125,14 @@ fun Activity.isShowingSAFDialog(path: String): Boolean {
 
 fun BaseSimpleActivity.isShowingOTGDialog(path: String): Boolean {
     return if (isPathOnOTG(path) && (baseConfig.OTGTreeUri.isEmpty() || !hasProperStoredTreeUri(true))) {
-        showOTGPermissionDialog()
+        showOTGPermissionDialog(path)
         true
     } else {
         false
     }
 }
 
-fun Activity.showOTGPermissionDialog() {
+fun BaseSimpleActivity.showOTGPermissionDialog(path: String) {
     runOnUiThread {
         if (!isDestroyed && !isFinishing) {
             WritePermissionDialog(this, true) {
@@ -141,6 +142,7 @@ fun Activity.showOTGPermissionDialog() {
                     }
 
                     if (resolveActivity(packageManager) != null) {
+                        checkedDocumentPath = path
                         startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
                     } else {
                         toast(R.string.unknown_error_occurred)
@@ -645,7 +647,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
         }
     } else {
         val file = File(fileDirItem.path)
-        if (!file.parentFile.exists()) {
+        if (file.parentFile?.exists() == false) {
             file.parentFile.mkdirs()
         }
 
@@ -669,7 +671,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
     return if (needsStupidWritePermissions(path)) {
         var documentFile = parentDocumentFile
         if (documentFile == null) {
-            if (targetFile.parentFile.exists()) {
+            if (targetFile.parentFile?.exists() == true) {
                 documentFile = getDocumentFile(targetFile.parent)
             } else {
                 documentFile = getDocumentFile(targetFile.parentFile.parent)
@@ -685,7 +687,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
         val newDocument = documentFile.createFile(mimeType, path.getFilenameFromPath())
         applicationContext.contentResolver.openOutputStream(newDocument!!.uri)
     } else {
-        if (!targetFile.parentFile.exists()) {
+        if (targetFile.parentFile?.exists() == false) {
             targetFile.parentFile.mkdirs()
         }
 

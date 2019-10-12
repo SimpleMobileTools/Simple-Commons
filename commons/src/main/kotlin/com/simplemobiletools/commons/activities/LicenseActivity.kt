@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.activities
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
@@ -43,6 +44,11 @@ class LicenseActivity : BaseSimpleActivity() {
                 licenses_holder.addView(this)
             }
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        updateMenuItemColors(menu)
+        return super.onCreateOptionsMenu(menu)
     }
 
     private fun initLicenses() = arrayOf(

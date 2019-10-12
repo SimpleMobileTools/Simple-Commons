@@ -373,7 +373,7 @@ fun Context.getSharedThemeSync(cursorLoader: CursorLoader): SharedTheme? {
             val backgroundColor = cursor.getIntValue(COL_BACKGROUND_COLOR)
             val primaryColor = cursor.getIntValue(COL_PRIMARY_COLOR)
             val appIconColor = cursor.getIntValue(COL_APP_ICON_COLOR)
-            val navigationBarColor = cursor.getIntValue(COL_NAVIGATION_BAR_COLOR)
+            val navigationBarColor = cursor.getIntValueOrNull(COL_NAVIGATION_BAR_COLOR) ?: INVALID_NAVIGATION_BAR_COLOR
             val lastUpdatedTS = cursor.getIntValue(COL_LAST_UPDATED_TS)
             return SharedTheme(textColor, backgroundColor, primaryColor, appIconColor, navigationBarColor, lastUpdatedTS)
         }
@@ -386,7 +386,7 @@ fun Context.getMyContentProviderCursorLoader() = CursorLoader(this, MyContentPro
 fun Context.getDialogTheme() = if (baseConfig.backgroundColor.getContrastColor() == Color.WHITE) R.style.MyDialogTheme_Dark else R.style.MyDialogTheme
 
 fun Context.getCurrentFormattedDateTime(): String {
-    val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd_HH-mm", Locale.getDefault())
+    val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd_HH-mm-ss", Locale.getDefault())
     return simpleDateFormat.format(Date(System.currentTimeMillis()))
 }
 

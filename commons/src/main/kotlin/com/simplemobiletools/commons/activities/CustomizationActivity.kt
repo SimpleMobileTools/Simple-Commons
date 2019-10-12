@@ -28,13 +28,15 @@ class CustomizationActivity : BaseSimpleActivity() {
     private var curBackgroundColor = 0
     private var curPrimaryColor = 0
     private var curAppIconColor = 0
-    private var curNavigationBarColor = INVALID_NAVIGATION_BAR_COLOR
     private var curSelectedThemeId = 0
     private var originalAppIconColor = 0
+    private var lastSavePromptTS = 0L
+    private var curNavigationBarColor = INVALID_NAVIGATION_BAR_COLOR
     private var hasUnsavedChanges = false
     private var predefinedThemes = LinkedHashMap<Int, MyTheme>()
     private var curPrimaryLineColorPicker: LineColorPickerDialog? = null
     private var storedSharedTheme: SharedTheme? = null
+    private var menu: Menu? = null
 
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
@@ -98,6 +100,8 @@ class CustomizationActivity : BaseSimpleActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_customization, menu)
         menu.findItem(R.id.save).isVisible = hasUnsavedChanges
+        updateMenuItemColors(menu, true, curPrimaryColor)
+        this.menu = menu
         return true
     }
 
@@ -110,7 +114,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     override fun onBackPressed() {
-        if (hasUnsavedChanges) {
+        if (hasUnsavedChanges && System.currentTimeMillis() - lastSavePromptTS > SAVE_DISCARD_PROMPT_INTERVAL) {
             promptSaveDiscard()
         } else {
             super.onBackPressed()
@@ -180,6 +184,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     curPrimaryColor = baseConfig.customPrimaryColor
                     curNavigationBarColor = baseConfig.customNavigationBarColor
                     setTheme(getThemeId(curPrimaryColor))
+                    updateMenuItemColors(menu, true, curPrimaryColor)
                     setupColorsPickers()
                 } else {
                     baseConfig.customPrimaryColor = curPrimaryColor
@@ -199,6 +204,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     }
                     setTheme(getThemeId(curPrimaryColor))
                     setupColorsPickers()
+                    updateMenuItemColors(menu, true, curPrimaryColor)
                 }
             } else {
                 val theme = predefinedThemes[curSelectedThemeId]!!
@@ -209,6 +215,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 curNavigationBarColor = getThemeNavigationColor(curSelectedThemeId)
                 setTheme(getThemeId(curPrimaryColor))
                 colorChanged()
+                updateMenuItemColors(menu, true, curPrimaryColor)
             }
         }
 
@@ -254,6 +261,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getThemeNavigationColor(themeId: Int) = if (themeId == THEME_BLACK_WHITE) Color.BLACK else baseConfig.defaultNavigationBarColor
 
     private fun promptSaveDiscard() {
+        lastSavePromptTS = System.currentTimeMillis()
         ConfirmationAdvancedDialog(this, "", R.string.save_before_closing, R.string.save, R.string.discard) {
             if (it) {
                 saveChanges(true)
@@ -393,7 +401,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickPrimaryColor() {
-        curPrimaryLineColorPicker = LineColorPickerDialog(this, curPrimaryColor, true) { wasPositivePressed, color ->
+        curPrimaryLineColorPicker = LineColorPickerDialog(this, curPrimaryColor, true, menu = menu) { wasPositivePressed, color ->
             curPrimaryLineColorPicker = null
             if (wasPositivePressed) {
                 if (hasColorChanged(curPrimaryColor, color)) {
@@ -402,9 +410,11 @@ class CustomizationActivity : BaseSimpleActivity() {
                     updateColorTheme(getUpdatedTheme())
                     setTheme(getThemeId(color))
                 }
+                updateMenuItemColors(menu, true, color)
             } else {
                 updateActionbarColor(curPrimaryColor)
                 setTheme(getThemeId(curPrimaryColor))
+                updateMenuItemColors(menu, true, curPrimaryColor)
             }
         }
     }

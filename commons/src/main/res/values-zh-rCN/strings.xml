@@ -95,7 +95,7 @@
     <string name="could_not_create_folder">创建文件夹 %s 失败</string>
     <string name="could_not_create_file">创建文件 %s 失败</string>
     <string name="no_new_items">没有找到新的项目</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_space">目标位置没有足够的可用空间。\n需要 %1$s，可用 %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">新建</string>
@@ -536,7 +536,8 @@
     <string name="sunday_short">周日</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">此版本的应用不再支持维护。请升级到专业版。</string>
+    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
+    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
     <string name="it_is_free">免费期限至: %s。如果在此之后下载，你可以永久免费使用。</string>
     <string name="more_info">更多信息</string>
     <string name="upgrade">升级</string>
@@ -607,8 +608,8 @@
     <string name="faq_6_title_commons">应用图标消失了。我该怎么办？</string>
     <string name="faq_6_text_commons">这是因为某些桌面应用无法正确处理自定义应用图标。如果图标消失，请尝试通过 Google Play 或某个小部件启动应用（如果有的话）。
 在成功启动之后，请将图标颜色设置为默认的橙色#F57C00。在最坏的情况下，您可能必须重新安装本应用。</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
+    <string name="faq_7_title_commons">我已付费，但我无法下载这个应用，我该怎么办？</string>
+    <string name="faq_7_text_commons">支付完全是由Google处理的，他们的系统有时会发生故障。你可以在清除Google Play的应用数据之后，重启设备并再次尝试下载。</string>
 
     <!-- License -->
     <string name="notice">此应用使用了以下三方库。致谢。</string>

@@ -64,9 +64,9 @@
     <string name="source_file_doesnt_exist">O ficheiro de origem %s não existe</string>
     <string name="prepend_filenames">Introduzir antes do nome do ficheiro</string>
     <string name="append_filenames">Introduzir depois do nome do ficheiro</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
-    <string name="string_to_add">String to add</string>
+    <string name="simple_renaming">Mudar nome</string>
+    <string name="pattern_renaming">Padrão</string>
+    <string name="string_to_add">Texto a adicionar</string>
     <string name="rename_date_time_pattern">%Y - ano\n%M - mês\n%D - dia\n%h - horas\n%m - minutos\n%s - segundos</string>
 
     <!-- Copy / Move -->
@@ -95,7 +95,7 @@
     <string name="could_not_create_folder">Não foi possível criar a pasta %s</string>
     <string name="could_not_create_file">Não foi possível criar o ficheiro %s</string>
     <string name="no_new_items">Não foram encontrados novos itens</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_space">Não existe espaço livre suficiente no local de destino.\nPrecisa de %1$s e apenas existe %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Criar</string>
@@ -169,7 +169,7 @@
     <string name="camera">Câmara</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Título da faixa</string>
-    <string name="gps_coordinates">GPS coordinates</string>
+    <string name="gps_coordinates">Coordenadas GPS</string>
     <string name="altitude">Altitude</string>
 
     <!-- Color customization -->
@@ -180,8 +180,8 @@
     <string name="app_icon_color">Cor do ícone da aplicação</string>
     <string name="bottom_navigation_bar_color">Cor da barra de navegação inferior</string>
     <string name="restore_defaults">Restaurar predefinições</string>
-    <string name="use_default">Use default</string>
-    <string name="default_color">Default</string>
+    <string name="use_default">Utilizar padrão</string>
+    <string name="default_color">Padrão</string>
     <string name="change_color">Alterar cor</string>
     <string name="theme">Tema</string>
     <string name="changing_color_description">Se alterar uma cor, ativa o modo de tema personalizado</string>
@@ -569,7 +569,8 @@
     <string name="sunday_short">dom</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Esta versão da aplicação já não é suportada. Por favor atualize para a versão Pro.</string>
+    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
+    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
     <string name="it_is_free">É gratuita até: %s. Se a descarregar até esta data, será sua para sempre.</string>
     <string name="more_info">Mais informação</string>
     <string name="upgrade">Atualizar</string>

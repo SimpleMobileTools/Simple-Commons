@@ -9,6 +9,7 @@ import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.DocumentsContract
+import android.view.Menu
 import android.view.MenuItem
 import android.view.WindowManager
 import android.widget.Toast
@@ -27,12 +28,14 @@ import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 import java.util.*
+import java.util.regex.Pattern
 
 abstract class BaseSimpleActivity : AppCompatActivity() {
     var copyMoveCallback: ((destinationPath: String) -> Unit)? = null
     var actionOnPermission: ((granted: Boolean) -> Unit)? = null
     var isAskingPermissions = false
     var useDynamicTheme = true
+    var checkedDocumentPath = ""
 
     private val GENERIC_PERM_HANDLER = 100
 
@@ -138,6 +141,24 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
+    fun updateMenuItemColors(menu: Menu?, useCrossAsBack: Boolean = false, baseColor: Int = baseConfig.primaryColor) {
+        if (menu == null) {
+            return
+        }
+
+        val color = baseColor.getContrastColor()
+        for (i in 0 until menu.size()) {
+            try {
+                menu.getItem(i)?.icon?.setTint(color)
+            } catch (ignored: Exception) {
+            }
+        }
+
+        val drawableId = if (useCrossAsBack) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector
+        val icon = resources.getColoredDrawableWithColor(drawableId, color)
+        supportActionBar?.setHomeAsUpIndicator(icon)
+    }
+
     private fun getCurrentAppIconColorIndex(): Int {
         val appIconColor = baseConfig.appIconColor
         getAppIconColors().forEachIndexed { index, color ->
@@ -154,12 +175,21 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
         super.onActivityResult(requestCode, resultCode, resultData)
-        if (requestCode == OPEN_DOCUMENT_TREE && resultCode == Activity.RESULT_OK && resultData != null) {
-            if (isProperSDFolder(resultData.data)) {
+        val partition = try {
+            checkedDocumentPath.substring(9, 18)
+        } catch (e: Exception) {
+            ""
+        }
+        val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
+
+        if (requestCode == OPEN_DOCUMENT_TREE && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+            val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
+            if (isProperSDFolder(resultData.data!!) && isProperPartition) {
                 if (resultData.dataString == baseConfig.OTGTreeUri) {
                     toast(R.string.sd_card_usb_same)
                     return
                 }
+
                 saveTreeUri(resultData)
                 funAfterSAFPermission?.invoke(true)
                 funAfterSAFPermission = null
@@ -168,8 +198,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
                 startActivityForResult(intent, requestCode)
             }
-        } else if (requestCode == OPEN_DOCUMENT_TREE_OTG && resultCode == Activity.RESULT_OK && resultData != null) {
-            if (isProperOTGFolder(resultData.data)) {
+        } else if (requestCode == OPEN_DOCUMENT_TREE_OTG && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+            val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
+            if (isProperOTGFolder(resultData.data!!) && isProperPartition) {
                 if (resultData.dataString == baseConfig.treeUri) {
                     funAfterSAFPermission?.invoke(false)
                     toast(R.string.sd_card_usb_same)
@@ -224,6 +255,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun startCustomizationActivity() {
+        if (!packageName.contains("slootelibomelpmis".reversed(), true)) {
+            if (baseConfig.appRunCount > 100) {
+                val label = "You are using a fake version of the app. For your own safety download the original one from www.simplemobiletools.com. Thanks"
+                ConfirmationDialog(this, label, positive = R.string.ok, negative = 0) {
+                    launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
+                }
+                return
+            }
+        }
+
         Intent(applicationContext, CustomizationActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIDs())
             putExtra(APP_LAUNCHER_NAME, getAppLauncherName())

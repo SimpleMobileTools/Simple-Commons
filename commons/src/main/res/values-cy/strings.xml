@@ -693,7 +693,8 @@
     <string name="sunday_short">Sul</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Ni chynhelir y fersiwn hwn o\'r ap mwyach. Uwchraddia i\'r fersiwn Pro.</string>
+    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
+    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
     <string name="it_is_free">Mae am ddim tan: %s. Os wyt yn ei lawrlwytho cyn hynny, bydd yn bosib ei ddefnydido am ddim am byth.</string>
     <string name="more_info">Mwy o wybodaeth</string>
     <string name="upgrade">Uwchraddio</string>
@@ -737,7 +738,7 @@
             S\'mae,<br><br>
             Jyst yn rhoi gwybod i ti am ap newydd wedi\'i ryddhau yn ddiweddar:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-            Gellir ei lawrlwytho gan glicio'r teitl.<br><br>
+            Gellir ei lawrlwytho gan glicio\'r teitl.<br><br>
             Hwyl.
         ]]>
     </string>

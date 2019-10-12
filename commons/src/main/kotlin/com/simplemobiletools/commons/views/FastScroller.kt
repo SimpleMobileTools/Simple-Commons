@@ -109,7 +109,7 @@ class FastScroller : FrameLayout {
     }
 
     fun measureRecyclerView() {
-        if (recyclerView == null) {
+        if (recyclerView == null || recyclerView!!.adapter == null) {
             return
         }
 

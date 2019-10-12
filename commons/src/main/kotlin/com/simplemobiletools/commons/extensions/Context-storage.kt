@@ -13,9 +13,7 @@ import android.text.TextUtils
 import androidx.core.content.FileProvider
 import androidx.documentfile.provider.DocumentFile
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.helpers.ensureBackgroundThread
-import com.simplemobiletools.commons.helpers.isMarshmallowPlus
-import com.simplemobiletools.commons.helpers.isNougatPlus
+import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 import java.net.URLDecoder
@@ -28,7 +26,7 @@ fun Context.getSDCardPath(): String {
         it != getInternalStoragePath() && (baseConfig.OTGPartition.isEmpty() || !it.endsWith(baseConfig.OTGPartition))
     }
 
-    val fullSDpattern = Pattern.compile("^/storage/[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$")
+    val fullSDpattern = Pattern.compile(SD_OTG_PATTERN)
     var sdCardPath = directories.firstOrNull { fullSDpattern.matcher(it).matches() }
             ?: directories.firstOrNull { !physicalPaths.contains(it.toLowerCase()) } ?: ""
 
@@ -43,7 +41,7 @@ fun Context.getSDCardPath(): String {
     }
 
     if (sdCardPath.isEmpty()) {
-        val SDpattern = Pattern.compile("^[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$")
+        val SDpattern = Pattern.compile(SD_OTG_SHORT)
         try {
             File("/storage").listFiles()?.forEach {
                 if (SDpattern.matcher(it.name).matches()) {

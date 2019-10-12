@@ -1,40 +1,40 @@
 <resources>
     <string name="ok">확인</string>
     <string name="cancel">취소</string>
-    <string name="save_as">다른이름으로 저장</string>
+    <string name="save_as">다른 이름으로 저장</string>
     <string name="file_saved">파일저장 성공</string>
     <string name="invalid_file_format">잘못된 파일 형식</string>
     <string name="out_of_memory_error">메모리 부족 오류</string>
     <string name="an_error_occurred">에러발생: %s</string>
-    <string name="open_with">연결 애플리케이션</string>
-    <string name="edit_with">이미지편집 프로그램 연결</string>
-    <string name="no_app_found">연결 가능한 애플리케이션 없음</string>
-    <string name="set_as">애플리케이션에 설정</string>
+    <string name="open_with">다른 앱으로 열기</string>
+    <string name="edit_with">편집 앱으로 열기</string>
+    <string name="no_app_found">연결 가능한 앱 없음</string>
+    <string name="set_as">다른 앱에 설정</string>
     <string name="value_copied_to_clipboard">클립보드에 복사됨</string>
     <string name="unknown">알 수 없음</string>
-    <string name="always">Always</string>
+    <string name="always">항상</string>
     <string name="never">사용 안함</string>
-    <string name="details">Details</string>
-    <string name="notes">Notes</string>
-    <string name="deleting_folder">Deleting folder \'%s\'</string>
-    <string name="none">None</string>
-    <string name="label">Label</string>
-    <string name="transparent">Transparent</string>
-    <string name="transparent_color">Transparent color</string>
-    <string name="select_a_different_color">Select a different color</string>
-    <string name="download">Download</string>
-    <string name="notification">Notification</string>
-    <string name="email">Email</string>
+    <string name="details">세부 정보</string>
+    <string name="notes">추가 정보</string>
+    <string name="deleting_folder">\'%s\' 폴더를 삭제</string>
+    <string name="none">없음</string>
+    <string name="label">라벨</string>
+    <string name="transparent">투명</string>
+    <string name="transparent_color">투명 색상</string>
+    <string name="select_a_different_color">다른 색을 선택해 주세요</string>
+    <string name="download">다운로드</string>
+    <string name="notification">알림</string>
+    <string name="email">이메일</string>
 
     <!-- Favorites -->
     <string name="favorites">즐겨찾기</string>
-    <string name="add_favorites">Add favorites</string>
+    <string name="add_favorites">즐겨찾기 추가</string>
     <string name="add_to_favorites">즐겨찾기에 추가</string>
     <string name="remove_from_favorites">즐겨찾기에서 제거</string>
 
     <!-- Search -->
     <string name="search">검색</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
+    <string name="type_2_characters">최소 두 글자를 입력해 주세요</string>
 
     <!-- Filters -->
     <string name="filter">필터</string>
@@ -52,22 +52,22 @@
     <string name="rename_folder">폴더명 변경</string>
     <string name="rename_file_error">파일명을 변경 할 수 없음</string>
     <string name="rename_folder_error">폴더명을 변경 할 수 없음</string>
-    <string name="rename_folder_empty">폴더명은 반드시 입력되어야 함</string>
-    <string name="rename_folder_exists">폴더명이 이미 존재함</string>
-    <string name="rename_folder_root">저장소의 루트폴더 이름은 변경 할 수 없음</string>
+    <string name="rename_folder_empty">폴더명이 입력되지 않았습니다</string>
+    <string name="rename_folder_exists">폴더명이 이미 존재합니다</string>
+    <string name="rename_folder_root">저장소의 루트폴더 이름은 변경 할 수 없습니다</string>
     <string name="rename_folder_ok">폴더명 변경 성공</string>
     <string name="renaming_folder">폴더명 변경</string>
-    <string name="filename_cannot_be_empty">파일명이 비어있으면 안됨</string>
-    <string name="filename_invalid_characters">파일명에 사용할 수 없는 문자가 포함됨</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
-    <string name="extension_cannot_be_empty">확장자가 비어있으면 안됨</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
-    <string name="prepend_filenames">Prepend filenames</string>
-    <string name="append_filenames">Append filenames</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
-    <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="filename_cannot_be_empty">파일명이 입력되지 않았습니다</string>
+    <string name="filename_invalid_characters">파일명에 사용할 수 없는 문자가 있습니다</string>
+    <string name="filename_invalid_characters_placeholder">파일명 \'%s\'에 사용할 수 없는 문자가 있습니다</string>
+    <string name="extension_cannot_be_empty">확장자가 입력되지 않았습니다</string>
+    <string name="source_file_doesnt_exist">원본 파일 %s 이(가) 존재하지 않습니다</string>
+    <string name="prepend_filenames">앞에 이름 덧붙이기</string>
+    <string name="append_filenames">뒤에 이름 덧붙이기</string>
+    <string name="simple_renaming">심플 이름 바꾸기</string>
+    <string name="pattern_renaming">패턴</string>
+    <string name="string_to_add">추가할 문장</string>
+    <string name="rename_date_time_pattern">%Y - 년\n%M - 월\n%D - 일\n%h - 시\n%m - 분\n%s - 초</string>
 
     <!-- Copy / Move -->
     <string name="copy">복사</string>
@@ -78,65 +78,65 @@
     <string name="source">원본</string>
     <string name="destination">대상</string>
     <string name="select_destination">대상 선택</string>
-    <string name="click_select_destination">대상을 선택하려면 여기를 클릭하세요.</string>
-    <string name="invalid_destination">대상경로에 생성 할 수 없음</string>
-    <string name="please_select_destination">대상 경로를 선택하세요.</string>
-    <string name="source_and_destination_same">원본파일과 대상파일은 동일할 수 없음</string>
-    <string name="copy_failed">파일을 복사 할 수 없음</string>
+    <string name="click_select_destination">대상을 선택하려면 여기를 탭하세요.</string>
+    <string name="invalid_destination">대상경로에 생성 불가</string>
+    <string name="please_select_destination">대상 경로를 선택하세요</string>
+    <string name="source_and_destination_same">대상과 원본이 같습니다.</string>
+    <string name="copy_failed">파일복사 실패</string>
     <string name="copying">복사중…</string>
     <string name="copying_success">파일복사 성공</string>
-    <string name="copy_move_failed">에러발생</string>
+    <string name="copy_move_failed">오류발생</string>
     <string name="moving">이동중…</string>
     <string name="moving_success">파일이동 성공</string>
     <string name="moving_success_partial">일부 파일을 이동 할 수 없음</string>
     <string name="copying_success_partial">일부 파일을 복사 할 수 없음</string>
-    <string name="no_files_selected">파일이 선택되지 않음</string>
+    <string name="no_files_selected">파일이 선택되지 않았습니다</string>
     <string name="saving">저장중…</string>
     <string name="could_not_create_folder">%s 폴더 생성에 실패함</string>
     <string name="could_not_create_file">%s 파일 생성에 실패함</string>
-    <string name="no_new_items">No new items have been found</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_new_items">새 항목을 찾을 수 없음</string>
+    <string name="no_space">대상 경로의 공간이 부족합니다.\n필요 공간: %1$s, 사용 가능: %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">새로 만들기</string>
     <string name="folder">폴더</string>
     <string name="file">파일</string>
-    <string name="create_new_folder">새로운 폴더 만들기</string>
-    <string name="name_taken">동일한 이름의 파일 또는 폴더가 이미 존재함</string>
-    <string name="invalid_name">이름에 사용 할 수 없는 문자가 포함됨</string>
-    <string name="empty_name">이름을 입력 하세요.</string>
-    <string name="unknown_error_occurred">알 수 없는 에러가 발생함</string>
+    <string name="create_new_folder">새 폴더 만들기</string>
+    <string name="name_taken">동일한 이름의 파일 또는 폴더가 이미 존재합니다</string>
+    <string name="invalid_name">이름에 사용 할 수 없는 문자가 있습니다</string>
+    <string name="empty_name">이름이 입력되지 않았습니다</string>
+    <string name="unknown_error_occurred">알 수 없는 에러가 발생하였습니다</string>
 
     <!-- File operation conflicts -->
     <string name="file_already_exists">\"%s\" 파일이 이미 존재합니다.</string>
     <string name="file_already_exists_overwrite">\"%s\" 파일이 이미 존재합니다. 덮어쓰시겠습니까?</string>
-    <string name="folder_already_exists">Folder \"%s\" already exists</string>
-    <string name="merge">Merge</string>
-    <string name="keep_both">Keep both</string>
+    <string name="folder_already_exists">\"%s\" 폴더가 이미 존재합니다.</string>
+    <string name="merge">합치기</string>
+    <string name="keep_both">둘 다 유지</string>
     <string name="overwrite">덮어쓰기</string>
     <string name="skip">건너뛰기</string>
-    <string name="append">\'_1\' 문자열을 추가함</string>
-    <string name="apply_to_all">모든 출돌에 적용</string>
+    <string name="append">\'_1\' 문자열을 추가하기</string>
+    <string name="apply_to_all">모든 충돌에 적용</string>
 
     <!-- File picker -->
     <string name="select_folder">폴더 선택</string>
     <string name="select_file">파일 선택</string>
-    <string name="confirm_storage_access_title">외장 메모리 접근허용</string>
+    <string name="confirm_storage_access_title">외장 메모리 접근 허용</string>
     <string name="confirm_storage_access_text">쓰기 권한을 부여하려면 다음 화면에서 SD 카드의 루트 폴더를 선택하세요.</string>
     <string name="confirm_storage_access_text_sd">SD 카드가 보이지 않으면 시도해보세요.</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_selection">선택 확인</string>
 
     <plurals name="items">
-        <item quantity="other">%d items</item>
+        <item quantity="other">%d개 항목</item>
     </plurals>
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="other">%d items</item>
+        <item quantity="other">%d개 항목</item>
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="other">%d개 항목 삭제중</item>
     </plurals>
 
     <!-- Storages -->
@@ -145,52 +145,50 @@
     <string name="sd_card">외장 메모리</string>
     <string name="root">루트</string>
     <string name="wrong_root_selected">잘못된 폴더가 선택되었습니다. SD 카드의 루트 폴더를 선택하세요.</string>
-    <string name="sd_card_usb_same">SD card and USB device paths cannot be the same</string>
-    <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
-        It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
+    <string name="sd_card_usb_same">SD카드와 USB 장치의 경로가 중복되었습니다.</string>
+    <string name="app_on_sd_card">시스템 제한으로 SD카드에 설치한 앱은 위젯을 사용할 수 없습니다. 위젯을 사용하시려면 내장 메모리에 앱을 옮겨 주시기 바랍니다</string>
 
     <!-- File properties -->
     <string name="properties">속성</string>
     <string name="path">경로</string>
-    <string name="items_selected">선택된 항목 수</string>
-    <string name="direct_children_count">Direct children count</string>
+    <string name="items_selected">선택한 항목 수</string>
+    <string name="direct_children_count">하위 항목 수</string>
     <string name="files_count">전체 파일 수</string>
     <string name="resolution">해상도</string>
-    <string name="duration">Duration</string>
-    <string name="artist">Artist</string>
-    <string name="album">Album</string>
-    <string name="focal_length">Focal length</string>
-    <string name="exposure_time">Exposure time</string>
-    <string name="iso_speed">ISO speed</string>
+    <string name="duration">길이</string>
+    <string name="artist">가수</string>
+    <string name="album">앨범</string>
+    <string name="focal_length">초점 거리</string>
+    <string name="exposure_time">노출 시간</string>
+    <string name="iso_speed">ISO 속도</string>
     <string name="f_number">F-number</string>
-    <string name="camera">Camera</string>
+    <string name="camera">카메라</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="song_title">음악 제목</string>
+    <string name="gps_coordinates">GPS 좌표</string>
+    <string name="altitude">고도</string>
 
     <!-- Color customization -->
     <string name="background_color">배경 색상</string>
     <string name="text_color">텍스트 색상</string>
     <string name="primary_color">주요 색상(테마)</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
-    <string name="restore_defaults">기본설정으로 변경</string>
-    <string name="use_default">Use default</string>
-    <string name="default_color">Default</string>
-    <string name="change_color">Change color</string>
+    <string name="foreground_color">그리기 색상</string>
+    <string name="app_icon_color">앱 아이콘 색상</string>
+    <string name="bottom_navigation_bar_color">네비게이션 바 색상</string>
+    <string name="restore_defaults">기본설정으로 되돌리기</string>
+    <string name="use_default">기본설정 사용</string>
+    <string name="default_color">기본값</string>
+    <string name="change_color">색상 변경</string>
     <string name="theme">테마</string>
-    <string name="changing_color_description">주요 색상(테마)을 변경하면 사용자정의 테마로 전환됩니다.</string>
+    <string name="changing_color_description">주요 색상(테마)을 변경하면 사용자 정의 테마로 전환됩니다.</string>
     <string name="save">저장</string>
     <string name="discard">취소</string>
     <string name="undo_changes">변경사항 되돌리기</string>
-    <string name="undo_changes_confirmation">변경된 사항을  되돌리겠습니까?</string>
-    <string name="save_before_closing">변경사항을 저장하지 않았습니다. 종료전에 저장 하시겠습니까?</string>
-    <string name="apply_to_all_apps">심플 시리즈 애플리케이션에 일괄적용</string>
-    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
-    <string name="share_colors_success">색상이 성공적으로 변경되었습니다. \'공유\'라는 새로운 테마가 추가되었습니다. 앞으로 모든 앱 색상을 변경할때 사용하세요.</string>
+    <string name="undo_changes_confirmation">변경된 사항을 취소하시겠습니까?</string>
+    <string name="save_before_closing">아직 변경사항을 저장하지 않았습니다. 종료전에 저장 하시겠습니까?</string>
+    <string name="apply_to_all_apps">심플 시리즈 앱에 일괄적용</string>
+    <string name="app_icon_color_warning">경고 : 일부 런처는 앱 아이콘 커스터마이징을 제대로 지원하지 않습니다. 앱의 아이콘이 사라졌다면, 플레이 스토어나 위젯을 통하여 앱을 실행한 뒤 기본값인 주황색(#F57C00)으로 다시 변경해주시기 바랍니다. 최악의 경우에는 앱을 재설치 해야할 수도 있습니다.</string>
+    <string name="share_colors_success">색상이 성공적으로 변경되었습니다. \'공유\'라는 새로운 테마가 추가되었습니다. 앞으로 모든 앱의 색상을 변경할때 사용하세요.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             이 기능을 이용하시려면 개발지원을 위해 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 앱을 구매해주세요. 감사합니다!
@@ -204,31 +202,31 @@
     <string name="dark_red">Dark red</string>
     <string name="black_white">Black &amp; White</string>
     <string name="custom">사용자 정의</string>
-    <string name="shared">Shared</string>
+    <string name="shared">공유</string>
 
     <!-- What's new -->
     <string name="whats_new">새로운 기능</string>
-    <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
+    <string name="whats_new_disclaimer">* 주요 업데이트만 여기에 표시됩니다. 작은 업데이트도 항상 진행되고 있습니다.</string>
 
     <!-- Actionbar items -->
     <string name="delete">삭제</string>
-    <string name="remove">Remove</string>
-    <string name="rename">이름변경</string>
+    <string name="remove">제거</string>
+    <string name="rename">이름 변경</string>
     <string name="share">공유</string>
-    <string name="share_via">공유방법</string>
-    <string name="select_all">전체선택</string>
+    <string name="share_via">공유 방법</string>
+    <string name="select_all">전체 선택</string>
     <string name="hide">숨김</string>
-    <string name="unhide">Unhide</string>
+    <string name="unhide">숨김 해제</string>
     <string name="hide_folder">폴더 숨김</string>
-    <string name="unhide_folder">Unhide folder</string>
+    <string name="unhide_folder">폴더숨김 해제</string>
     <string name="temporarily_show_hidden">숨김파일 임시보기</string>
     <string name="stop_showing_hidden">숨김파일 임시보기 해제</string>
-    <string name="maximum_share_reached">한 번에 많은 콘텐츠를 공유 할 수 없습니다.</string>
-    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
-    <string name="undo">Undo</string>
-    <string name="redo">Redo</string>
-    <string name="print">Print</string>
-    <string name="create_shortcut">Create shortcut</string>
+    <string name="maximum_share_reached">한 번에 공유 할 수 있는 항목 수를 초과하였습니다.</string>
+    <string name="empty_and_disable_recycle_bin">휴지통을 비우고 비활성화하기</string>
+    <string name="undo">뒤로</string>
+    <string name="redo">앞으로</string>
+    <string name="print">인쇄</string>
+    <string name="create_shortcut">바로가기 생성</string>
 
     <!-- Sorting -->
     <string name="sort_by">정렬 방식</string>
@@ -238,27 +236,27 @@
     <string name="date_taken">촬영 날짜</string>
     <string name="title">제목</string>
     <string name="filename">파일명</string>
-    <string name="extension">파일종류</string>
-    <string name="random">Random</string>
-    <string name="sort_randomly">Sort randomly</string>
-    <string name="ascending">오름차 순</string>
-    <string name="descending">내림차 순</string>
+    <string name="extension">파일 확장자</string>
+    <string name="random">랜덤</string>
+    <string name="sort_randomly">랜덤 정렬</string>
+    <string name="ascending">오름차순</string>
+    <string name="descending">내림차순</string>
     <string name="use_for_this_folder">현재 폴더만 적용</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">실제 숫자 값으로 숫자 정렬</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">정말로 삭제 하시겠습니까?</string>
-    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s into the Recycle Bin?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
-    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
-    <string name="do_not_ask_again">다시 물어보지 않음</string>
+    <string name="deletion_confirmation">%s을 정말 삭제 하시겠습니까?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">%s을 정말 휴지통으로 이동하시겠습니까?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">이 항목을 정말 삭제하시겠습니까?</string>
+    <string name="are_you_sure_recycle_bin">이 항목을 정말 휴지통으로 이동하시겠습니까?</string>
+    <string name="do_not_ask_again">다시 물어보지 않기</string>
     <string name="yes">네</string>
     <string name="no">아니요</string>
-    <string name="maybe">Maybe</string>
+    <string name="maybe">아마도</string>
 
     <plurals name="delete_warning">
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="other">경고 : %d개 폴더를 삭제합니다</item>
     </plurals>
 
     <!-- Password protection -->
@@ -275,194 +273,194 @@
     <string name="add_fingerprint">지문 추가</string>
     <string name="place_finger">지문 센서에 손가락을 올려주세요.</string>
     <string name="authentication_failed">인증 실패</string>
-    <string name="authentication_blocked">인증이 차단 되었으니, 잠시 후 다시 시도하십시오.</string>
+    <string name="authentication_blocked">인증이 차단 되었습니다. 잠시 후 다시 시도하십시오.</string>
     <string name="no_fingerprints_registered">등록 된 지문이 없습니다. 기기의 설정에서 지문을 추가하십시오.</string>
     <string name="go_to_settings">설정으로 이동</string>
-    <string name="protection_setup_successfully">암호 설정이 완료되었습니다. 암호를 기억하지 못하는경우 앱을 다시 설치하시기 바랍니다.</string>
+    <string name="protection_setup_successfully">암호 설정이 완료되었습니다. 암호를 기억하지 못하는 경우 앱을 다시 설치하시기 바랍니다.</string>
     <string name="fingerprint_setup_successfully">보안 설정이 성공적으로 완료되었습니다. 재설정 시 문제가 발생하면 앱을 다시 설치하시기 바랍니다.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="lock_folder">폴더 잠그기</string>
+    <string name="unlock_folder">폴더 잠금 해제</string>
+    <string name="lock_folder_notice">이 보안 설정은 이 앱에서만 작동하며, 실제 시스템 폴더 암호화를 대체할 수 없습니다.</string>
 
     <!-- Times -->
-    <string name="yesterday">Yesterday</string>
-    <string name="today">Today</string>
-    <string name="tomorrow">Tomorrow</string>
-    <string name="seconds_raw">seconds</string>
+    <string name="yesterday">어제</string>
+    <string name="today">오늘</string>
+    <string name="tomorrow">내일</string>
+    <string name="seconds_raw">초</string>
     <string name="minutes_raw">분</string>
     <string name="hours_raw">시간</string>
     <string name="days_raw">일</string>
 
     <plurals name="seconds">
-        <item quantity="other">%d seconds</item>
+        <item quantity="other">%d초</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="other">%d minutes</item>
+        <item quantity="other">%d분</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="other">%d hours</item>
+        <item quantity="other">%d시간</item>
     </plurals>
     <plurals name="days">
-        <item quantity="other">%d days</item>
+        <item quantity="other">%d일</item>
     </plurals>
     <plurals name="weeks">
-        <item quantity="other">%d weeks</item>
+        <item quantity="other">%d주</item>
     </plurals>
     <plurals name="months">
-        <item quantity="other">%d months</item>
+        <item quantity="other">%d달</item>
     </plurals>
     <plurals name="years">
-        <item quantity="other">%d years</item>
+        <item quantity="other">%d년</item>
     </plurals>
 
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="other">%d seconds</item>
+        <item quantity="other">%d초 내</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="other">%d minutes</item>
+        <item quantity="other">%d분 내</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="other">%d hours</item>
+        <item quantity="other">%d시간 내</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="other">%d days</item>
+        <item quantity="other">%d일 내</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="other">%d weeks</item>
+        <item quantity="other">%d주 내</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="other">%d months</item>
+        <item quantity="other">%d달 내</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="other">%d years</item>
+        <item quantity="other">%d년 내</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="other">%d seconds before</item>
+        <item quantity="other">%d초 전</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="other">%d 분 전</item>
+        <item quantity="other">%d분 전</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="other">%d 시간 전</item>
+        <item quantity="other">%d시간 전</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="other">%d 일 전</item>
+        <item quantity="other">%d일 전</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="other">%d weeks before</item>
+        <item quantity="other">%d일 전</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="other">%d months before</item>
+        <item quantity="other">%d달 전</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="other">%d years before</item>
+        <item quantity="other">%d년 전</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="other">%d seconds</item>
+        <item quantity="other">%d초간</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="other">%d 분</item>
+        <item quantity="other">%d분간</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="other">%d 시</item>
+        <item quantity="other">%d시간</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="other">%d days</item>
+        <item quantity="other">%d일간</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="other">%d weeks</item>
+        <item quantity="other">%d주간</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="other">%d months</item>
+        <item quantity="other">%d달간</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="other">%d years</item>
+        <item quantity="other">%d년간</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
-    <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
-    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
-    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
+    <string name="alarm_goes_off_in">알람이 울리기까지 남은 시간:\n%s</string>
+    <string name="reminder_triggers_in">알림이 작동하기까지 남은 시간:\n%s</string>
+    <string name="alarm_warning">알람을 사용하기 전 제대로 작동하는지 먼저 확인하시기 바랍니다. 배터리 절약과 관련된 시스템 제한으로 오작동 할 가능성이 있습니다.</string>
+    <string name="reminder_warning">알림을 사용하기 전 제대로 작동하는지 먼저 확인하시기 바랍니다. 배터리 절약과 관련된 시스템 제한으로 오작동 할 가능성이 있습니다.</string>
+    <string name="notifications_disabled">이 앱의 알림 설정이 비활성화 되어 있습니다. 기기 설정에서 활성화 해 주시기 바랍니다.</string>
 
     <!-- Alarms -->
-    <string name="alarm">Alarm</string>
+    <string name="alarm">알람</string>
     <string name="snooze">스누즈</string>
-    <string name="dismiss">Dismiss</string>
+    <string name="dismiss">취소</string>
     <string name="no_reminder">알림 없음</string>
     <string name="at_start">시작할 때</string>
-    <string name="system_sounds">System sounds</string>
-    <string name="your_sounds">Your sounds</string>
-    <string name="add_new_sound">Add a new sound</string>
-    <string name="no_sound">No sound</string>
+    <string name="system_sounds">시스템 소리</string>
+    <string name="your_sounds">사용자 소리</string>
+    <string name="add_new_sound">소리 추가</string>
+    <string name="no_sound">소리 없음</string>
 
     <!-- Settings -->
     <string name="settings">설정</string>
-    <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
-    <string name="customize_colors">앱 테마 및 색상 설정</string>
-    <string name="customize_widget_colors">Customize widget colors</string>
-    <string name="use_english_language">영어 사용</string>
-    <string name="show_hidden_items">숨김항목 활성화</string>
+    <string name="purchase_simple_thank_you">심플 Thank You 구매하기</string>
+    <string name="customize_colors">테마 및 색상 설정</string>
+    <string name="customize_widget_colors">위젯 색상 설정</string>
+    <string name="use_english_language">영어로 언어 전환</string>
+    <string name="show_hidden_items">숨김 항목 보이기</string>
     <string name="font_size">폰트 크기</string>
     <string name="small">작게</string>
     <string name="medium">중간</string>
     <string name="large">크게</string>
     <string name="extra_large">아주 크게</string>
-    <string name="password_protect_hidden_items">숨김파일 보기 암호설정</string>
-    <string name="password_protect_whole_app">애플리케이션 전체에서 암호를 이용한 보호기능 사용</string>
-    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
-    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
-    <string name="show_info_bubble">스크롤바 드래그 시 항목별 툴팁 활성화</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
-    <string name="skip_delete_confirmation">삭제 확인 다이얼로그 비활성화</string>
-    <string name="enable_pull_to_refresh">상하단 스와이프 동작으로 새로고침</string>
-    <string name="use_24_hour_time_format">Use 24-hour time format</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
-    <string name="sunday_first">Start week on Sunday</string>
-    <string name="widgets">Widgets</string>
-    <string name="use_same_snooze">Always use same snooze time</string>
-    <string name="snooze_time">Snooze time</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
-    <string name="move_items_into_recycle_bin">Move items into the Recycle Bin instead of deleting</string>
-    <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
-    <string name="empty_recycle_bin">Empty the Recycle Bin</string>
-    <string name="force_portrait_mode">Force portrait mode</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="password_protect_hidden_items">숨김 파일 보기 암호설정</string>
+    <string name="password_protect_whole_app">앱 전체에 암호설정</string>
+    <string name="password_protect_file_deletion">파일 삭제와 이동에 암호설정</string>
+    <string name="keep_last_modified">파일 작업 시 오래된 마지막 변경 값을 유지</string>
+    <string name="show_info_bubble">스크롤바 드래그 시 툴팁 활성화</string>
+    <string name="prevent_phone_from_sleeping">앱 실행중 화면 자동 꺼짐 방지</string>
+    <string name="skip_delete_confirmation">삭제 확인창 비활성화</string>
+    <string name="enable_pull_to_refresh">아래로 스와이프하여 새로고침하기</string>
+    <string name="use_24_hour_time_format">24시간 표시 사용</string>
+    <string name="change_date_and_time_format">날짜 및 시간 표시 형식 변경</string>
+    <string name="sunday_first">일요일부터 한 주 시작</string>
+    <string name="widgets">위젯</string>
+    <string name="use_same_snooze">항상 같은 스누즈 시간 사용</string>
+    <string name="snooze_time">스누즈 시간</string>
+    <string name="vibrate_on_button_press">버튼 진동 피드백 사용</string>
+    <string name="move_items_into_recycle_bin">삭제 시 휴지통으로 이동</string>
+    <string name="recycle_bin_cleaning_interval">휴지통 비움 주기</string>
+    <string name="empty_recycle_bin">휴지통 비우기</string>
+    <string name="force_portrait_mode">세로보기 강제</string>
+    <string name="export_settings">설정 내보내기</string>
+    <string name="import_settings">설정 가져오기</string>
+    <string name="settings_exported_successfully">설정 내보내기 완료</string>
+    <string name="settings_imported_successfully">설정 가져오기 완료</string>
 
     <!-- Setting sections -->
-    <string name="visibility">가시성</string>
+    <string name="visibility">표시</string>
     <string name="security">보안</string>
-    <string name="scrolling">스크롤링</string>
+    <string name="scrolling">스크롤</string>
     <string name="file_operations">파일 작업</string>
-    <string name="recycle_bin">Recycle Bin</string>
-    <string name="saving_label">Saving</string>
-    <string name="startup">Startup</string>
-    <string name="text">Text</string>
-    <string name="migrating">Migrating</string>
+    <string name="recycle_bin">휴지통</string>
+    <string name="saving_label">저장</string>
+    <string name="startup">시작</string>
+    <string name="text">텍스트</string>
+    <string name="migrating">옮기기</string>
 
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restore this file</string>
-    <string name="restore_selected_files">Restore selected files</string>
-    <string name="restore_all_files">Restore all files</string>
-    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
-    <string name="files_restored_successfully">Files have been restored successfully</string>
-    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
-    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
-    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="restore_this_file">이 파일 복원하기</string>
+    <string name="restore_selected_files">선택한 파일 복원하기</string>
+    <string name="restore_all_files">모든 파일 복원하기</string>
+    <string name="recycle_bin_emptied">휴지통이 성공적으로 비워졌습니다.</string>
+    <string name="files_restored_successfully">파일이 성공적으로 복원되었습니다.</string>
+    <string name="empty_recycle_bin_confirmation">휴지통을 비우시겠습니까? 비워진 파일은 복구할 수 없습니다.</string>
+    <string name="recycle_bin_empty">휴지통이 비어있습니다.</string>
+    <string name="moving_recycle_bin_items_disabled">휴지통 내의 파일은 복원하기 전까진 옮길 수 없습니다.</string>
+    <string name="show_the_recycle_bin">휴지통 보이기</string>
+    <string name="hide_the_recycle_bin">휴지통 숨기기</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="other">Moving %d items into the Recycle Bin</item>
+        <item quantity="other">%d개 항목을 휴지통으로 이동하고 있습니다</item>
     </plurals>
 
     <!-- Import / Export -->
@@ -472,16 +470,16 @@
     <string name="exporting_successful">내보내기 성공</string>
     <string name="importing_failed">가져오기 실패</string>
     <string name="exporting_failed">내보내기 실패</string>
-    <string name="importing_some_entries_failed">일부항목 가져오기에 실패함</string>
-    <string name="exporting_some_entries_failed">일부항목 내보내기에 실패함</string>
-    <string name="no_entries_for_importing">No entries for importing have been found</string>
-    <string name="no_entries_for_exporting">내보낼 수 있는 항목을 찾을 수 없음</string>
+    <string name="importing_some_entries_failed">일부 항목 가져오기에 실패함</string>
+    <string name="exporting_some_entries_failed">일부 항목 내보내기에 실패함</string>
+    <string name="no_entries_for_importing">가져올 항복을 찾을 수 없음</string>
+    <string name="no_entries_for_exporting">내보낼 항목을 찾을 수 없음</string>
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
-    <string name="confirm_usb_storage_access_text">Please choose the top folder of the USB device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_usb">Wrong folder selected, please select the root folder of your USB device</string>
+    <string name="usb_detected">기기에 USB장치가 연결되어 있습니다. USB의 파일을 표시하려면 추가 권한이 필요합니다.</string>
+    <string name="confirm_usb_storage_access_text">다음에 표시되는 화면에서 USB의 루트 폴더를 선택해 주시기 바랍니다.</string>
+    <string name="wrong_root_selected_usb">잘못된 폴더가 선택되었습니다. USB의 루트 폴더(가장 윗 폴더)를 선택해 주시기 바랍니다.</string>
 
     <!-- Dates -->
     <string name="january">1월</string>
@@ -498,18 +496,18 @@
     <string name="december">12월</string>
 
     <!-- in January -->
-    <string name="in_january">in January</string>
-    <string name="in_february">in February</string>
-    <string name="in_march">in March</string>
-    <string name="in_april">in April</string>
-    <string name="in_may">in May</string>
-    <string name="in_june">in June</string>
-    <string name="in_july">in July</string>
-    <string name="in_august">in August</string>
-    <string name="in_september">in September</string>
-    <string name="in_october">in October</string>
-    <string name="in_november">in November</string>
-    <string name="in_december">in December</string>
+    <string name="in_january">in 1월</string>
+    <string name="in_february">in 2월</string>
+    <string name="in_march">in 3월</string>
+    <string name="in_april">in 4월</string>
+    <string name="in_may">in 5월</string>
+    <string name="in_june">in 6월</string>
+    <string name="in_july">in 7월</string>
+    <string name="in_august">in 8월</string>
+    <string name="in_september">in 9월</string>
+    <string name="in_october">in 10월</string>
+    <string name="in_november">in 11월</string>
+    <string name="in_december">in 12월</string>
 
     <string name="monday">월요일</string>
     <string name="tuesday">화요일</string>
@@ -536,114 +534,112 @@
     <string name="sunday_short">일요일</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">This version of the app is no longer maintained. Please upgrade to the Pro version.</string>
+    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
+    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
     <string name="it_is_free">It is free till: %s. If you download it till then, you will be able to use it for free forever.</string>
     <string name="more_info">More info</string>
     <string name="upgrade">Upgrade</string>
     <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
 
     <!-- About -->
-    <string name="about">앱정보</string>
+    <string name="about">앱 정보</string>
     <string name="website_label">소스코드 공개 링크</string>
-    <string name="email_label">피드백 또는 제안요청</string>
-    <string name="upgrade_to_pro">Upgrade to Pro</string>
+    <string name="email_label">피드백 또는 제안 요청</string>
+    <string name="upgrade_to_pro">Pro버전으로 업데이트</string>
     <string name="more_apps_underlined"><u>앱 더보기</u></string>
     <string name="third_party_licences_underlined"><u>서드파티 라이선스</u></string>
     <string name="invite_friends_underlined"><u>친구에게 공유</u></string>
-    <string name="share_text">%1$s 애플리케이션을 다운받으세요. %2$s</string>
-    <string name="invite_via">애플리케이션 선택</string>
+    <string name="share_text">%1$s 앱을 다운받으세요. %2$s</string>
+    <string name="invite_via">공유 선택</string>
     <string name="rate_us_underlined"><u>앱 평가하기</u></string>
-    <string name="rate">Rate</string>
-    <string name="donate">기부</string>
+    <string name="rate">평점 주기</string>
+    <string name="donate">기부하기</string>
     <string name="donate_underlined"><u>기부하기</u></string>
-    <string name="follow_us">Follow us</string>
+    <string name="follow_us">팔로우</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="additional_info">Additional info</string>
-    <string name="app_version">App version: %s</string>
-    <string name="device_os">Device OS: %s</string>
+    <string name="additional_info">추가 정보</string>
+    <string name="app_version">앱 버전: %s</string>
+    <string name="device_os">기기 OS: %s</string>
     <string name="donate_please">
         <![CDATA[
             안녕하세요.<br>
             우리의 애플리케이션이 도움이 되길 바랍니다.<br>
-            사용하고 계신 애플리케이션은 광고 및 인앱 결제가 없는 무료 애플리케이션이므로 별도의 수익이 발생하지 않습니다.<br>
+            사용하고 계신 애플리케이션은 광고 및 인앱 결제가 없는 무료 애플리케이션으로 별도의 수익이 발생하지 않습니다.<br>
             당신이 원하신다면 개발지원을 위해 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 앱을 다운받아 지원 하실 수 있습니다.<br>
             \'Simple Thank You\' 앱이 설치되면 이 다이얼로그는 비 활성화 됩니다.<br>
             감사합니다.
         ]]>
     </string>
     <string name="purchase">구매</string>
-    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
-    <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
-    <string name="read_it">Read it</string>
-    <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
-
+    <string name="update_thank_you">Simple Thank You를 최신 버전으로 업데이트 해 주세요.</string>
+    <string name="before_asking_question_read_faq">질문하기 전에 FAQ를 먼저 읽어 주세요. 해답이 있을지도 모릅니다.</string>
+    <string name="read_it">읽어보기</string>
+    <string name="rate_us_prompt">이 앱을 자주 사용하시는군요! 혹시 시간이 되신다면 구글 플레이스토어에서 평점을 부탁드립니다. 평점은 저희에게 많은 도움이 됩니다. 감사합니다! (이 메시지는 다시 표시되지 않습니다)</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
-            Hey,<br><br>
-            just letting you know that a new app has been released recently:<br><br>
+            안녕하세요,<br><br>
+            저희의 새로운 앱이 출시되었습니다:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-            You can download it by pressing the title.<br><br>
-            Thanks
+            위 링크를 탭하여 받을 수 있습니다.<br><br>
+            감사합니다.
         ]]>
     </string>
 
     <string name="sideloaded_app">
         <![CDATA[
-            It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
+            앱 버전이 유효하지 않습니다. 원본을 설치해 주세요. <a href="%s">here</a>.
         ]]>
     </string>
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">자주 묻는 질문</string>
     <string name="before_asking_question">Before you ask a question, please first read the</string>
-    <string name="faq_1_title_commons">위젯 목록에 이앱이 표시되지 않으면 어떻게 해야 하나요?</string>
-    <string name="faq_1_text_commons">SD 카드에서 앱을 이동했기 때문에 그럴 가능성이 큽니다. 그런경우 안드로이드 시스템 정책에 따라 위젯이 보이지 않게됩니다. 
-        유일한 해결책은 기기 설정을 통해 앱을 내부 저장소로 다시 이동하는 것입니다.</string>
-    <string name="faq_2_title_commons">기부가 아닌 다른 방법으로 당신을 지원하고 싶습니다. 다른 방법이 있나요?</string>
-    <string name="faq_2_text_commons">예, 물론입니다. 앱에 대한 의견을 전하거나 좋은 피드백과 평가를 제공 할 수 있습니다. 또한 새로운 언어로 앱을 번역하거나 기존 번역을 업데이트하면 도움이됩니다.
-        가이드는 https://github.com/SimpleMobileTools/General-Discussion에서 찾을 수 있습니다. 도움이 필요하면 hello@simplemobiletools.com으로 메시지를 보내시기 바랍니다.</string>
+    <string name="faq_1_title_commons">위젯 목록에 이 앱이 표시되지 않으면 어떻게 해야 하나요?</string>
+    <string name="faq_1_text_commons">앱을 SD카드에 설치했기 때문인 가능성이 큽니다. 안드로이드 시스템 제한으로 SD카드에 설치한 앱은 위젯을 사용할 수 없습니다. 이런 경우에는 위젯을 사용하시려면 내장 메모리로 앱을 옮기는 방법밖에는 없습니다.</string>
+    <string name="faq_2_title_commons">기부가 아닌 다른 방법으로 앱을 지원하고 싶습니다. 다른 방법이 있나요?</string>
+    <string name="faq_2_text_commons">예, 물론입니다. 다른 사람에게 앱을 추천하시거나, 좋은 피드백과 평가를 제공해 주실 수 있습니다. 또한 새로운 언어로 앱을 번역하거나 기존 번역을 업데이트 하면 도움이 됩니다.
+        번역 가이드는 https://github.com/SimpleMobileTools/General-Discussion에서 찾아볼 수 있습니다. 도움이 필요하시다면 hello@simplemobiletools.com으로 메시지를 보내주시기 바랍니다.</string>
     <string name="faq_3_title_commons">실수로 일부 파일을 삭제했는데 어떻게 복구 할 수 있습니까?</string>
-    <string name="faq_3_text_commons">불행하게도 불가능합니다. 파일은 바로 삭제되며 사용 가능한 휴지통이 없습니다.</string>
-    <string name="faq_4_title_commons">위젯 색상이 마음에 들지 않을 경우 변경할 수 있나요?</string>
-    <string name="faq_4_text_commons">예, 홈 화면에서 위젯을 드래그하면 위젯 구성 화면이 나타납니다. 왼쪽 하단 모서리에 색깔이있는 사각형이 보일 것입니다. 그것을 눌러 새로운 색을 선택하십시오. 슬라이더를 사용하여 알파를 조정할 수도 있습니다.</string>
-    <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
+    <string name="faq_3_text_commons">아쉽게도 불가능합니다. 휴지통을 거치지 않고 삭제를 선택한 파일은 바로 삭제됩니다.</string>
+    <string name="faq_4_title_commons">위젯 색상이 마음에 들지 않는데 변경할 수 있나요?</string>
+    <string name="faq_4_text_commons">네, 홈 화면에서 위젯을 드래그하면 나오는 위젯 설정 화면에서, 화면 하단 왼쪽에 있는 색 사각형을 터치하여 색상을 변경할 수 있습니다. 슬라이더를 사용하여 투명도를 조정할 수도 있습니다.</string>
+    <string name="faq_5_title_commons">어떻게든 삭제된 파일을 복구할 수는 없을까요?</string>
+    <string name="faq_5_text_commons">파일이 정말로 삭제되었다면 그건 불가능합니다. 그러나 휴지통으로 옮기는 옵션이 활성화 되어 있었다면, 파일은 휴지통으로 이동하여 있을 것입니다.</string>
+    <string name="faq_6_title_commons">앱 아이콘이 사라졌습니다. 어떻게 해야 하나요?</string>
+    <string name="faq_6_text_commons">일부 런처는 앱 아이콘 커스터마이징을 제대로 지원하지 않아 앱의 아이콘이 사라질 수 있습니다. 이런 경우에는 플레이 스토어나 위젯을 통하여 앱을 실행한 뒤 기본값인 주황색(#F57C00)으로 다시 변경해주시기 바랍니다. 최악의 경우에는 앱을 재설치 해야할 수도 있습니다.</string>
+    <string name="faq_7_title_commons">앱 결제를 완료했는데 앱을 다운받을 수 없습니다. 어떻게 해야 하나요?</string>
+    <string name="faq_7_text_commons">앱의 결제는 구글이 관리합니다. 때때로 구글의 시스템에서 오류가 발생할 수도 있습니다. 플레이스토어 앱의 캐시를 지우고, 다시 다운받아 보시기 바랍니다.</string>
 
     <!-- License -->
-    <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
+    <string name="notice">이 앱은 삶을 간편하게 만들어주는 다음의 서드파티 라이브버리를 사용합니다. 감사합니다.</string>
     <string name="third_party_licences">서드파티 라이선스</string>
-    <string name="kotlin_title">Kotlin (programming language)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
-    <string name="glide_title">Glide (image loading and caching)</string>
-    <string name="picasso_title">Picasso (image loading and caching)</string>
-    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
-    <string name="joda_title">Joda-Time (Java date replacement)</string>
-    <string name="stetho_title">Stetho (debugging databases)</string>
-    <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
-    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
-    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
+    <string name="kotlin_title">Kotlin (프로그래밍 언어)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (확대 가능한 이미지 보기)</string>
+    <string name="glide_title">Glide (이미지 로딩과 캐싱)</string>
+    <string name="picasso_title">Picasso (이미지 로딩과 캐싱)</string>
+    <string name="cropper_title">Android Image Cropper (이미지 자르기와 회전)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (Right-to-left 스와이핑)</string>
+    <string name="joda_title">Joda-Time (Java 날짜 대체)</string>
+    <string name="stetho_title">Stetho (데이터베이스 디버깅)</string>
+    <string name="otto_title">Otto (이벤트 bus)</string>
+    <string name="photoview_title">PhotoView (확대 가능한 GIF)</string>
+    <string name="pattern_title">PatternLockView (패턴 보안 기능)</string>
+    <string name="reprint_title">Reprint (지문 보안 기능)</string>
+    <string name="gif_drawable_title">Gif Drawable (GIF 로딩)</string>
+    <string name="autofittextview_title">AutoFitTextView (텍스트 크기 변경)</string>
+    <string name="robolectric_title">Robolectric (프레임워크 테스팅)</string>
+    <string name="espresso_title">Espresso (테스트 도움)</string>
     <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
-    <string name="number_picker_title">Number Picker (customizable number picker)</string>
-    <string name="exoplayer_title">ExoPlayer (video player)</string>
-    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
-    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
-    <string name="filters_title">Android Photo Filters (image filters)</string>
-    <string name="gesture_views_title">Gesture Views (zoomable images)</string>
+    <string name="leak_canary_title">Leak Canary (메모리 누수 감지기)</string>
+    <string name="number_picker_title">Number Picker (편집가능 숫자 선택기)</string>
+    <string name="exoplayer_title">ExoPlayer (영상 재생기)</string>
+    <string name="panorama_view_title">VR Panorama View (파노라마 뷰어)</string>
+    <string name="sanselan_title">Apache Sanselan (이미지 메타데이터 읽기)</string>
+    <string name="filters_title">Android Photo Filters (이미지 필터)</string>
+    <string name="gesture_views_title">Gesture Views (확대 가능한 이미지)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">구버전 경고: 이 버전의 앱은 더이상 관리되지 않습니다. Pro 버전을 설치해 주세요: https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">플레이스토어에서 구매한 앱은 2시간 내에 삭제하면 자동으로 환불받을 수 있다는 사실을 항상 잊지 마시기 바랍니다. 만약 이후에 환불이 필요하시다면, hello@simplemobiletools.com 으로 연락 주시면 해결해 드리겠습니다. 이제 한번 써보는 것도 나쁘지 않겠죠 :)</string>
 </resources>
