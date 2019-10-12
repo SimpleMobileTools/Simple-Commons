@@ -602,8 +602,8 @@
     <string name="sunday_short">вс</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">Ваша версия приложения больше не будет обновляться. Пожалуйста, обновите её до версии Pro, чтобы получать исправления и улучшения.</string>
+    <string name="upgrade_to_pro_long_click">Ваша версия приложения больше не будет обновляться. Пожалуйста, обновите её до версии Pro, чтобы получать исправления и улучшения, нажав здесь.</string>
     <string name="it_is_free">Это бесплатно до: %s. При загрузке до указанной даты вы получаете её бесплатно навсегда.</string>
     <string name="more_info">Подробнее</string>
     <string name="upgrade">Обновить</string>
@@ -684,10 +684,10 @@
     <string name="third_party_licences">Лицензии третьих сторон</string>
     <string name="kotlin_title">Kotlin (язык программирования)</string>
     <string name="subsampling_title">Subsampling Scale Image View (возможность масштабирования изображений)</string>
-    <string name="glide_title">Glide (загрузка и кэширование изображений)</string>
-    <string name="picasso_title">Picasso (загрузка и кэширование изображений)</string>
+    <string name="glide_title">Glide (загрузка и кеширование изображений)</string>
+    <string name="picasso_title">Picasso (загрузка и кеширование изображений)</string>
     <string name="cropper_title">Android Image Cropper (обрезка и поворот изображений)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (отображение с RTL-языками)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (отображение на RTL-языках)</string>
     <string name="joda_title">Joda-Time (замена даты Java)</string>
     <string name="stetho_title">Stetho (отладка баз данных)</string>
     <string name="otto_title">Otto (шина событий)</string>
