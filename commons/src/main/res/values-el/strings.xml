@@ -569,8 +569,8 @@
     <string name="sunday_short">Κυρ</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">Η έκδοση της εφαρμογής σας δεν θα ενημερώνεται πλέον. Παρακαλώ αναβαθμίστε την στην έκδοση Pro για να λάβετε νέες επιδιορθώσεις και βελτιώσεις.</string>
+    <string name="upgrade_to_pro_long_click">Η έκδοση της εφαρμογής σας δεν θα ενημερώνεται πλέον. Παρακαλώ αναβαθμίστε την στην έκδοση Pro για να λάβετε νέες επιδιορθώσεις και βελτιώσεις πατώντας εδώ.</string>
     <string name="it_is_free">Είναι δωρεάν μέχρι: %s. Εάν κάνετε λήψη μέχρι τότε, θα μπορείτε να την χρησιμοποιείτε δωρεάν για πάντα.</string>
     <string name="more_info">Περισσότερα</string>
     <string name="upgrade">Αναβάθμιση</string>
@@ -645,10 +645,10 @@
         Μόλις ξεκινήσει, απλά επαναφέρετε το προεπιλεγμένο πορτοκαλί εικονίδιο #F57C00. Μπορεί να χρειαστεί να επανεγκαταστήσετε την εφαρμογή στη χειρότερη περίπτωση.</string>
     <string name="faq_7_title_commons">Τα χρήματα αφαιρέθηκαν από τον τραπεζικό μου λογαριασμό, αλλά δεν μπορώ να κατεβάσω την εφαρμογή. Τι μπορώ να κάνω?</string>
     <string name="faq_7_text_commons">Οι πληρωμές διαχειρίζονται πλήρως από την Google, το σύστημα της δυσλειτουργεί περιστασιακά. Απλώς καθαρίστε την προσωρινή μνήμη εφαρμογών του Google Play, επανεκκινήστε τη συσκευή σας, και προσπαθήστε ξανά να την κατεβάσετε.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
+    <string name="faq_8_title_commons">Γιατί πρέπει να αναβαθμίσω σε έκδοση Pro;</string>
+    <string name="faq_8_text_commons">Καθώς η έκδοση της εφαρμογής σας δεν ενημερώνεται πλέον, τα σφάλματα που εντοπίσατε ίσως δεν θα διορθωθούν ποτέ. Επίσης, δεν θα προστεθούν νέες λειτουργίες. Μπορείτε να αγοράσετε την έκδοση Pro στο Google Play με ένα μικρό χρηματικό ποσό.
+        Πρόκειται για εφάπαξ πληρωμή, πράγμα που σημαίνει ότι μόλις την αγοράσετε, δεν θα χρειαστεί να την πληρώσετε ξανά. Ούτε καν μετά τη λήψη μιας νέας συσκευής. Εάν δεν σας αρέσει η έκδοση Pro, μπορείτε να την απεγκαταστήσετε μέσα σε λίγες ώρες και θα λάβετε αυτόματα τα χρήματά σας πίσω.
+        Αν θέλετε επιστροφή χρημάτων οποιαδήποτε στιγμή αργότερα, απλά επικοινωνήστε μαζί μας στη διεύθυνση hello@simplemobiletools.com και θα τα λάβετε.</string>
 
     <!-- License -->
     <string name="notice">Αυτή η εφαρμογή χρησιμοποιεί τις ακόλουθες βιβλιοθήκες τρίτων για να διευκολύνει τη ζωή μου. Ευχαριστώ.</string>
