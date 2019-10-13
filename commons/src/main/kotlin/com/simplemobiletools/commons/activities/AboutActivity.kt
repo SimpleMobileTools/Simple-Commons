@@ -187,7 +187,11 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupCopyright() {
-        val versionName = intent.getStringExtra(APP_VERSION_NAME) ?: ""
+        var versionName = intent.getStringExtra(APP_VERSION_NAME) ?: ""
+        if (baseConfig.appId.removeSuffix(".debug").endsWith(".pro")) {
+            versionName += " ${getString(R.string.pro)}"
+        }
+
         val year = Calendar.getInstance().get(Calendar.YEAR)
         about_copyright.text = String.format(getString(R.string.copyright), versionName, year)
     }
