@@ -617,7 +617,7 @@
     <string name="more_apps_underlined"><u>Viac aplikácií</u></string>
     <string name="third_party_licences_underlined"><u>Licencie tretích strán</u></string>
     <string name="invite_friends_underlined"><u>Pozvať priateľov</u></string>
-    <string name="share_text">Čauko, skús %1$s na %2$s</string>
+    <string name="share_text">Ahoj, skús %1$s na %2$s</string>
     <string name="invite_via">Pozvať cez</string>
     <string name="rate_us_underlined"><u>Ohodnotiť aplikáciu</u></string>
     <string name="rate">Ohodnotiť</string>
@@ -678,6 +678,10 @@
         Ak je apka spustená, skúste nastaviť pôvodnú oranžovú farbu ikonky #F57C00. V najhoršom prípade budete musieť apku preinštalovať.</string>
     <string name="faq_7_title_commons">Peniaze som mal stiahnuté z účtu, ale neviem stiahnuť aplikáciu. Čo s tým?</string>
     <string name="faq_7_text_commons">Platby sú plne spravované Googlom, ich systém z času na čas nefunguje. Skúste vymazať cache apky Google Play, reštartujte zariadenie a skúste apku opäť stiahnuť.</string>
+    <string name="faq_8_title_commons">Prečo by som si mal stiahnuť Pro verziu?</string>
+    <string name="faq_8_text_commons">Keďže táto verzia aplikácie už nebude aktualizovaná, chyby, ktoré ste možno našli, nebudú nikdy opravené. Taktiež už nepribudnú žiadne nové funkcie. Pro verziu si viete kúpiť lacno na Google Play.
+        Ide o jednorázovú platbu, čo znamená, že ak ju raz zaplatíte, už nikdy nebudete musieť platiť nič. Ani vtedy, ak si kúpite nové zariadenie. Ak sa vám Pro verzia nebude páčiť, môžete ju do pár hodín odinštalovať a peniaze vám budú automaticky vrátené.
+        Ak budete chcieť vrátiť apku kedykoľvek neskôr, stačí, ak nám napíšete na hello@simplemobiletools.com a peniaze vám vrátime.</string>
 
     <!-- License -->
     <string name="notice">Táto aplikácia používa na uľahčenie práce nasledovné knižnice tretích strán. Ďakujeme.</string>

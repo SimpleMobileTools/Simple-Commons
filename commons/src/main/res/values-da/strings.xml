@@ -569,8 +569,8 @@
     <string name="sunday_short">Søn</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">Din version af appen opdateres ikke længere. Opgrader til Pro-versionen, og du vil få fejlrettelser og andre forbedringer.</string>
+    <string name="upgrade_to_pro_long_click">Din version af appen opdateres ikke længere. For at få nye fejlrettelser og andre forbedringer må du opgradere til Pro-versionen ved at klikke her.</string>
     <string name="it_is_free">Den er stadig gratis indtil: %s. Downloader du den indtil da kan du blive ved at bruge den gratis fremover.</string>
     <string name="more_info">Yderligere oplysninger</string>
     <string name="upgrade">Opgrader</string>
@@ -594,7 +594,7 @@
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Yderligere info</string>
     <string name="app_version">App version: %s</string>
-    <string name="device_os">Device OS: %s</string>
+    <string name="device_os">Enheds-OS: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hej<br><br>
@@ -644,6 +644,10 @@
        Når appen er åbnet kan du ingen sætte farven til den orange standardværdi, #F57C00. I værste fald må du reinstallere appen.</string>
     <string name="faq_7_title_commons">Pengene er trukket fra min bankkoto, men jeg kan ikke downloade appen. Hvad gør jeg nu?</string>
     <string name="faq_7_text_commons">Betalinger håndteres af Google, men deres system fejler af og til. Ryd cachen til din Google Play-app og genstart din enhed. Prøv så at downloade appen igen.</string>
+    <string name="faq_8_title_commons">Hvorfor skulle jeg opgradere til Pro-versionen?</string>
+    <string name="faq_8_text_commons">Da din version af appen ikke opdateres længere, kan den indeholde fejl der aldrig bliver rettet. Der vil heller ikke komme nye funktioner til den. Du kan købe Pro-versionen på Google Play for et lille beløb.
+        Det er en engangsinvestering, har du betalt een gang skal du aldrig gøre det igen, heller ikke hvis du skifter mobil eller tablet. Kan du ikke lide Pro-versionen, kan du afinstallere den indenfor nogle få timer og du vil automatisk få dine penge tilbage.
+        Vil du på et senere tidspunkt have pengene refunderet, skal du blot sende en mail til hello@simplemobiletools.com, så klarer vi det.</string>
 
     <!-- License -->
     <string name="notice">Denne app bruger følgende 3.-parts biblioteker der gør at mit liv bliver lidt enklere. Tak.</string>
