@@ -536,8 +536,8 @@
     <string name="sunday_short">周日</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">您的应用版本将不会再收到更新。请升级到专业版以获取最新的程序修复和改进。</string>
+    <string name="upgrade_to_pro_long_click">您的应用版本不会再收到更新。请点击此处升级到专业版以获取最新的程序修复和改进。</string>
     <string name="it_is_free">免费期限至: %s。如果在此之后下载，你可以永久免费使用。</string>
     <string name="more_info">更多信息</string>
     <string name="upgrade">升级</string>
@@ -610,10 +610,10 @@
 在成功启动之后，请将图标颜色设置为默认的橙色#F57C00。在最坏的情况下，您可能必须重新安装本应用。</string>
     <string name="faq_7_title_commons">我已付费，但我无法下载这个应用，我该怎么办？</string>
     <string name="faq_7_text_commons">支付完全是由Google处理的，他们的系统有时会发生故障。你可以在清除Google Play的应用数据之后，重启设备并再次尝试下载。</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
+    <string name="faq_8_title_commons">为什么我需要升级到专业版？</string>
+    <string name="faq_8_text_commons">由于您的应用程序版本不再更新，bug可能将永远得不到修复，也不会再添加任何新功能。 您可以在Google Play上花少量的钱来购买专业版。
+         这是一次性付款，意味着您在购买之后就不再收费，即使你更换了新的设备。 如果您不喜欢Pro版本，可以在几个小时内将其卸载，之后您将自动收到退款。
+         如果您想要在此之后退款，请通过hello@simplemobiletools.com与我们联系。</string>
 
     <!-- License -->
     <string name="notice">此应用使用了以下三方库。致谢。</string>
