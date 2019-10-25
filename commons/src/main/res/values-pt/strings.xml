@@ -569,8 +569,8 @@
     <string name="sunday_short">dom</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">A sua aplicação já não será atualizada. Adquira a versão Pro para receber correções e melhorias.</string>
+    <string name="upgrade_to_pro_long_click">A sua aplicação já não será atualizada. Adquira a versão Pro para receber correções e melhorias.</string>
     <string name="it_is_free">É gratuita até: %s. Se a descarregar até esta data, será sua para sempre.</string>
     <string name="more_info">Mais informação</string>
     <string name="upgrade">Atualizar</string>
@@ -605,6 +605,7 @@
     <string name="purchase">Comprar</string>
     <string name="update_thank_you">Por favor atualize a aplicação Simple Thank You para a versão mais recente</string>
     <string name="before_asking_question_read_faq">Antes de colocar uma questão, verifique as FAQ. Pode ser que a solução esteja lá.</string>
+    <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
     <string name="read_it">Ler</string>
     <string name="rate_us_prompt">Olá,\n\nparece que está a utilizar esta aplicação há algum tempo, o que nos deixa satisfeitos.\n\nGostaríamos de lhe pedir o favor de nos avaliar na Google Play. Isso iria ajudar-nos bastante.\n\nIndependentemente da sua escolha, esta mensagem não será mostrada novamente.\n\nObrigado!</string>
 
@@ -626,8 +627,8 @@
     </string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently asked questions</string>
-    <string name="before_asking_question">Before you ask a question, please first read the</string>
+    <string name="frequently_asked_questions">Perguntas frquentes</string>
+    <string name="before_asking_question">Antes de colocar uma questão, leia as</string>
     <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
     <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
         in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>

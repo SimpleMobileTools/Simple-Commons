@@ -569,8 +569,8 @@
     <string name="sunday_short">DG</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">La versió de l\'aplicació ja no s\'actualitzarà. Actualitzeu a la versió Pro per rebre noves solucions i altres millores.</string>
+    <string name="upgrade_to_pro_long_click">La versió de l\'aplicació ja no s\'actualitzarà. Actualitzeu a la versió Pro per rebre noves solucions i altres millores fent clic aquí.</string>
     <string name="it_is_free">És gratuït fins a: %s. Si ho descarregueu fins aleshores, podreu utilitzar-lo de forma gratuïta per sempre.</string>
     <string name="more_info">Més informació</string>
     <string name="upgrade">Actualitza</string>
@@ -605,6 +605,7 @@
     <string name="purchase">Comprar</string>
     <string name="update_thank_you">Si us plau, actualitzeu Simple Thank You a la darrera versió</string>
     <string name="before_asking_question_read_faq">Abans de fer una pregunta, llegiu les Preguntes més freqüents. Potser la solució hi és.</string>
+    <string name="make_sure_latest">Assegureu-vos també que utilitzeu la versió més recent de l\'aplicació.</string>
     <string name="read_it">Llegiu</string>
     <string name="rate_us_prompt">Hola,\n\nsembla que esteu utilitzant aquesta aplicació ja des de fa molt de temps, i ho agraïm realment.\n\nSi us demanem un favor, cal que ens puntueu a Google Play. En realitat, això ens ajudarà molt.\n\nNo importa que decidiu, no tornareu a veure aquest missatge.\n\nGràcies</string>
 
@@ -645,10 +646,10 @@
         Un cop llançat, simplement configureu la icona de taronja per defecte # F57C00. És possible que hàgiu de tornar a instal·lar l\'aplicació en el pitjor dels casos.</string>
     <string name="faq_7_title_commons">Els diners han estat deduïts del meu compte bancari, però no puc descarregar l\'aplicació. Què puc fer?</string>
     <string name="faq_7_text_commons">Google fa que els pagaments siguin completament gestionats i alguns cops això genera problemes de sistema. Només cal que esborris la memòria cau de l\’aplicació Google Play i reiniciis el dispositiu. A continuació prova a baixar-la de nou.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
+    <string name="faq_8_title_commons">Per què he d'actualitzar a la versió Pro?</string>
+    <string name="faq_8_text_commons">Com que la versió de l\'aplicació ja no s'actualitza, els errors que heu vist, no seran corregits. Tampoc s\’hi afegiran noves funcions. Podeu comprar la versió Pro a Google Play per una petita quantitat de diners.
+         Es tracta d\’un pagament únic, cosa que significa que un cop l\’adquireixis, no hauràs de tornar a pagar mai més. Ni tan sols després de canviar de dispositiu. Si no us agrada la versió Pro, podeu desinstal·lar-la en poques hores i automàticament obtindreu els diners.
+         Si voleu un reemborsament en qualsevol moment més tard, només cal que contacteu amb nosaltres a l\'adreça hello@simplemobiletools.com i ho aconseguireu.</string>
 
     <!-- License -->
     <string name="notice">Aquesta aplicació fa servir les següents biblioteques de tercers que ens faciliten la feina. Gràcies.</string>
