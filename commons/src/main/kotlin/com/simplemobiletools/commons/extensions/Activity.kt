@@ -75,7 +75,7 @@ fun Activity.appLaunched(appId: String) {
         RateUsDialog(this)
     }
 
-    if (baseConfig.navigationBarColor == INVALID_NAVIGATION_BAR_COLOR) {
+    if (baseConfig.navigationBarColor == INVALID_NAVIGATION_BAR_COLOR && (window.attributes.flags and WindowManager.LayoutParams.FLAG_FULLSCREEN == 0)) {
         baseConfig.defaultNavigationBarColor = window.navigationBarColor
         baseConfig.navigationBarColor = window.navigationBarColor
     }
