@@ -536,8 +536,8 @@
     <string name="sunday_short">週日</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">你的應用程式版本將不再更新。請更新到專業版以獲得新的修復和其他改善。</string>
+    <string name="upgrade_to_pro_long_click">你的應用程式版本將不再更新。請點擊這裡，更新到專業版以獲得新的修復和其他改善。</string>
     <string name="it_is_free">它在此日期前免費：%s。如果您在到期前下載，將能夠永久免費使用。</string>
     <string name="more_info">更多資訊</string>
     <string name="upgrade">升級</string>
@@ -572,7 +572,7 @@
     <string name="purchase">購買</string>
     <string name="update_thank_you">請更新[Simple Thank You]至最新版本</string>
     <string name="before_asking_question_read_faq">在您發問前，請先檢查程式設定及閱讀[常見問題]。或許解決方法就在那裡。</string>
-    <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
+    <string name="make_sure_latest">並且確保您正使用最新的應用程式版本。</string>
     <string name="read_it">讀它</string>
     <string name="rate_us_prompt">哈囉\n\n您似乎已經使用這應用程式一段時間了，我們相當感激。\n\n如果我們能請您幫個忙，請在Google Play上為我們評分。這對我們很有幫助。\n\n無論您的決定如何，都不會再看到這則訊息。\n\n感謝!</string>
 
@@ -613,10 +613,10 @@
         一旦啟動，只要設回預設的橘色圖標 #F57C00 即可。最糟的情況，你可能必須重新安裝應用程式。</string>
     <string name="faq_7_title_commons">錢已經從我的銀行帳戶扣除，但我無法下載這應用程式。我能怎麼做?</string>
     <string name="faq_7_text_commons">支付完全交由Google處理，他們的系統偶爾會發生故障。只要清除您的Google Play應用程式快取並重新啟動裝置，然後再次嘗試下載。</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
+    <string name="faq_8_title_commons">為什麼我應該升級到專業版?</string>
+    <string name="faq_8_text_commons">由於你的程式版本不再更新，將永遠不會修復可能遇到的錯誤，也不會再添加新功能。你可以在Google Play上用一小筆錢購買專業版。
+        這是一次性付款。也就是說，一旦你購買了將不必再次付費，即使之後有新裝置也不用。如果你不喜歡專業版，則可以在幾個小時內解除安裝，將自動拿回你的錢。
+        之後如果何時想退款，只要你以 hello@simplemobiletools.com 聯絡我們然後就能獲得退款了。</string>
 
     <!-- License -->
     <string name="notice">這程式使用了下列的第三方函式庫來讓我工作簡化。感謝。</string>
