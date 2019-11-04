@@ -48,7 +48,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             currPath = activity.internalStoragePath
         }
 
-        if (!File(currPath).isDirectory) {
+        if (!activity.getIsPathDirectory(currPath)) {
             currPath = currPath.getParentPath()
         }
 
@@ -185,10 +185,6 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                 sendSuccess()
             }
         }
-            /*val file = File(currPath)
-            if ((pickFile && file.isFile) || (!pickFile && file.isDirectory)) {
-                sendSuccess()
-            }*/
     }
 
     private fun sendSuccess() {

@@ -426,7 +426,7 @@ fun BaseSimpleActivity.deleteFolderBg(fileDirItem: FileDirItem, deleteMediaOnly:
 
         val files = filesArr.toMutableList().filter { !deleteMediaOnly || it.isMediaFile() }
         for (file in files) {
-            deleteFileBg(file.toFileDirItem(), false) { }
+            deleteFileBg(file.toFileDirItem(applicationContext), false) { }
         }
 
         if (folder.listFiles()?.isEmpty() == true) {
@@ -491,7 +491,7 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
             callback?.invoke(true)
         }
     } else {
-        if (file.isDirectory && allowDeleteFolder) {
+        if (getIsPathDirectory(file.absolutePath) && allowDeleteFolder) {
             fileDeleted = deleteRecursively(file)
         }
 
@@ -700,7 +700,14 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
     }
 }
 
-fun BaseSimpleActivity.getFileInputStreamSync(path: String) = FileInputStream(File(path))
+fun BaseSimpleActivity.getFileInputStreamSync(path: String): InputStream? {
+    return if (isPathOnOTG(path)) {
+        val fileDocument = getSomeDocumentFile(path)
+        applicationContext.contentResolver.openInputStream(fileDocument?.uri)
+    } else {
+        FileInputStream(File(path))
+    }
+}
 
 fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
     if (baseConfig.isHiddenPasswordProtectionOn) {

@@ -19,7 +19,6 @@ import com.simplemobiletools.commons.helpers.sumByLong
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.dialog_properties.view.*
 import kotlinx.android.synthetic.main.property_item.view.*
-import java.io.File
 import java.io.FileNotFoundException
 import java.util.*
 
@@ -46,16 +45,16 @@ class PropertiesDialog() {
         mInflater = LayoutInflater.from(activity)
         mResources = activity.resources
         val view = mInflater.inflate(R.layout.dialog_properties, null)
-        mPropertyView = view.properties_holder
+        mPropertyView = view.properties_holder!!
 
-        val fileDirItem = FileDirItem(path, path.getFilenameFromPath(), File(path).isDirectory, 0, 0, File(path).lastModified())
+        val fileDirItem = FileDirItem(path, path.getFilenameFromPath(), activity.getIsPathDirectory(path))
         addProperty(R.string.name, fileDirItem.name)
         addProperty(R.string.path, fileDirItem.getParentPath())
         addProperty(R.string.size, "…", R.id.properties_size)
 
         ensureBackgroundThread {
-            val fileCount = fileDirItem.getProperFileCount(countHiddenItems)
-            val size = fileDirItem.getProperSize(countHiddenItems).formatSize()
+            val fileCount = fileDirItem.getProperFileCount(activity, countHiddenItems)
+            val size = fileDirItem.getProperSize(activity, countHiddenItems).formatSize()
             activity.runOnUiThread {
                 view.findViewById<TextView>(R.id.properties_size).property_value.text = size
 
@@ -75,7 +74,7 @@ class PropertiesDialog() {
                         val dateModified = cursor.getLongValue(MediaStore.Images.Media.DATE_MODIFIED) * 1000L
                         updateLastModified(activity, view, dateModified)
                     } else {
-                        updateLastModified(activity, view, fileDirItem.modified)
+                        updateLastModified(activity, view, fileDirItem.getLastModified(activity))
                     }
                 }
 
@@ -103,7 +102,7 @@ class PropertiesDialog() {
 
         when {
             fileDirItem.isDirectory -> {
-                addProperty(R.string.direct_children_count, fileDirItem.getDirectChildrenCount(countHiddenItems).toString())
+                addProperty(R.string.direct_children_count, fileDirItem.getDirectChildrenCount(activity, countHiddenItems).toString())
                 addProperty(R.string.files_count, "…", R.id.properties_file_count)
             }
             fileDirItem.path.isImageSlow() -> {
@@ -124,7 +123,7 @@ class PropertiesDialog() {
         }
 
         if (fileDirItem.isDirectory) {
-            addProperty(R.string.last_modified, fileDirItem.modified.formatDate(activity))
+            addProperty(R.string.last_modified, fileDirItem.getLastModified(activity).formatDate(activity))
         } else {
             addProperty(R.string.last_modified, "…", R.id.properties_last_modified)
             try {
@@ -164,7 +163,7 @@ class PropertiesDialog() {
 
         val fileDirItems = ArrayList<FileDirItem>(paths.size)
         paths.forEach {
-            val fileDirItem = FileDirItem(it, it.getFilenameFromPath(), File(it).isDirectory, 0, 0, File(it).lastModified())
+            val fileDirItem = FileDirItem(it, it.getFilenameFromPath(), activity.getIsPathDirectory(it))
             fileDirItems.add(fileDirItem)
         }
 
@@ -179,8 +178,8 @@ class PropertiesDialog() {
         addProperty(R.string.files_count, "…", R.id.properties_file_count)
 
         ensureBackgroundThread {
-            val fileCount = fileDirItems.sumByInt { it.getProperFileCount(countHiddenItems) }
-            val size = fileDirItems.sumByLong { it.getProperSize(countHiddenItems) }.formatSize()
+            val fileCount = fileDirItems.sumByInt { it.getProperFileCount(activity, countHiddenItems) }
+            val size = fileDirItems.sumByLong { it.getProperSize(activity, countHiddenItems) }.formatSize()
             activity.runOnUiThread {
                 view.findViewById<TextView>(R.id.properties_size).property_value.text = size
                 view.findViewById<TextView>(R.id.properties_file_count).property_value.text = fileCount.toString()

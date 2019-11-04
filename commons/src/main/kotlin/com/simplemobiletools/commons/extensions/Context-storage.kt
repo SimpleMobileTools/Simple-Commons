@@ -286,7 +286,7 @@ fun Context.getFileUri(path: String) = when {
 
 // these functions update the mediastore instantly, MediaScannerConnection.scanFileRecursively takes some time to really get applied
 fun Context.deleteFromMediaStore(path: String) {
-    if (File(path).isDirectory) {
+    if (getDoesFilePathExist(path) || getIsPathDirectory(path)) {
         return
     }
 
@@ -424,6 +424,14 @@ fun Context.getDoesFilePathExist(path: String, otgPathToUse: String? = null): Bo
         getOTGFastDocumentFile(path)?.exists() ?: false
     } else {
         File(path).exists()
+    }
+}
+
+fun Context.getIsPathDirectory(path: String): Boolean {
+    return if (isPathOnOTG(path)) {
+        getOTGFastDocumentFile(path)?.isDirectory ?: false
+    } else {
+        File(path).isDirectory
     }
 }
 

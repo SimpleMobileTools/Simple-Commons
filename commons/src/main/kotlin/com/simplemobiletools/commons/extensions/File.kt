@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
+import android.content.Context
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
@@ -74,7 +75,7 @@ private fun getDirectoryFileCount(dir: File, countHiddenItems: Boolean): Int {
 
 fun File.getDirectChildrenCount(countHiddenItems: Boolean) = listFiles()?.filter { if (countHiddenItems) true else !it.isHidden }?.size ?: 0
 
-fun File.toFileDirItem() = FileDirItem(absolutePath, name, File(absolutePath).isDirectory, 0, length(), lastModified())
+fun File.toFileDirItem(context: Context) = FileDirItem(absolutePath, name, context.getIsPathDirectory(absolutePath), 0, length(), lastModified())
 
 fun File.containsNoMedia() = isDirectory && File(this, NOMEDIA).exists()
 

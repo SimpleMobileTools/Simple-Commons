@@ -388,7 +388,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     private fun startCopyMove(files: ArrayList<FileDirItem>, destinationPath: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean, copyHidden: Boolean) {
         val availableSpace = destinationPath.getAvailableStorageB()
-        val sumToCopy = files.sumByLong { it.getProperSize(copyHidden) }
+        val sumToCopy = files.sumByLong { it.getProperSize(applicationContext, copyHidden) }
         if (sumToCopy < availableSpace) {
             checkConflicts(files, destinationPath, 0, LinkedHashMap()) {
                 toast(if (isCopyOperation) R.string.copying else R.string.moving)
