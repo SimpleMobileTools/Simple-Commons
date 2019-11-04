@@ -191,17 +191,18 @@ fun Context.getFastDocumentFile(path: String): DocumentFile? {
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
 
-fun Context.getOTGFastDocumentFile(path: String): DocumentFile? {
+fun Context.getOTGFastDocumentFile(path: String, otgPathToUse: String? = null): DocumentFile? {
     if (baseConfig.OTGTreeUri.isEmpty()) {
         return null
     }
 
+    val otgPath = otgPathToUse ?: baseConfig.OTGPath
     if (baseConfig.OTGPartition.isEmpty()) {
         baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/').trimEnd('/')
         updateOTGPathFromPartition()
     }
 
-    val relativePath = Uri.encode(path.substring(baseConfig.OTGPath.length).trim('/'))
+    val relativePath = Uri.encode(path.substring(otgPath.length).trim('/'))
     val fullUri = "${baseConfig.OTGTreeUri}/document/${baseConfig.OTGPartition}%3A$relativePath"
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
@@ -409,7 +410,8 @@ fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolea
 }
 
 fun Context.updateOTGPathFromPartition() {
-    baseConfig.OTGPath = if (File("/storage/${baseConfig.OTGPartition}").exists()) {
+    val otgPath = "/storage/${baseConfig.OTGPartition}"
+    baseConfig.OTGPath = if (getOTGFastDocumentFile(otgPath, otgPath)?.exists() == true) {
         "/storage/${baseConfig.OTGPartition}"
     } else {
         "/mnt/media_rw/${baseConfig.OTGPartition}"
