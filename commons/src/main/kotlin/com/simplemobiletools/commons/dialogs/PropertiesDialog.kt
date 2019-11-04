@@ -19,7 +19,6 @@ import com.simplemobiletools.commons.helpers.sumByLong
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.dialog_properties.view.*
 import kotlinx.android.synthetic.main.property_item.view.*
-import java.io.FileNotFoundException
 import java.util.*
 
 class PropertiesDialog() {
@@ -128,8 +127,8 @@ class PropertiesDialog() {
             addProperty(R.string.last_modified, "…", R.id.properties_last_modified)
             try {
                 addExifProperties(path, activity)
-            } catch (e: FileNotFoundException) {
-                activity.toast(R.string.unknown_error_occurred)
+            } catch (e: Exception) {
+                activity.showErrorToast(e)
                 return
             }
         }
@@ -194,7 +193,12 @@ class PropertiesDialog() {
     }
 
     private fun addExifProperties(path: String, activity: Activity) {
-        val exif = ExifInterface(path)
+        val exif = if (isNougatPlus() && activity.isPathOnOTG(path)) {
+            ExifInterface((activity as BaseSimpleActivity).getFileInputStreamSync(path))
+        } else {
+            ExifInterface(path)
+        }
+
         val dateTaken = exif.getExifDateTaken(activity)
         if (dateTaken.isNotEmpty()) {
             addProperty(R.string.date_taken, dateTaken)
