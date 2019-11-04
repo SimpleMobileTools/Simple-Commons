@@ -10,8 +10,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
+import com.simplemobiletools.commons.helpers.isNougatPlus
 import com.simplemobiletools.commons.helpers.sumByInt
 import com.simplemobiletools.commons.helpers.sumByLong
 import com.simplemobiletools.commons.models.FileDirItem
@@ -77,7 +79,12 @@ class PropertiesDialog() {
                     }
                 }
 
-                val exif = ExifInterface(fileDirItem.path)
+                val exif = if (isNougatPlus() && activity.isPathOnOTG(fileDirItem.path)) {
+                    ExifInterface((activity as BaseSimpleActivity).getFileInputStreamSync(fileDirItem.path))
+                } else {
+                    ExifInterface(fileDirItem.path)
+                }
+
                 val latLon = FloatArray(2)
                 if (exif.getLatLong(latLon)) {
                     activity.runOnUiThread {
