@@ -671,7 +671,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
     return if (needsStupidWritePermissions(path)) {
         var documentFile = parentDocumentFile
         if (documentFile == null) {
-            if (targetFile.parentFile?.exists() == true) {
+            if (getDoesFilePathExist(targetFile.parentFile.absolutePath)) {
                 documentFile = getDocumentFile(targetFile.parent)
             } else {
                 documentFile = getDocumentFile(targetFile.parentFile.parent)
