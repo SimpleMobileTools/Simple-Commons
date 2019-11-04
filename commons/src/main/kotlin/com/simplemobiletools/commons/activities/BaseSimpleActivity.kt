@@ -315,7 +315,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             return
         }
 
-        if (!File(destination).exists()) {
+        if (!getDoesFilePathExist(destination)) {
             toast(R.string.invalid_destination)
             return
         }
@@ -382,7 +382,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             val newName = String.format("%s(%d).%s", file.nameWithoutExtension, fileIndex, file.extension)
             newFile = File(file.parent, newName)
             fileIndex++
-        } while (File(newFile!!.absolutePath).exists())
+        } while (getDoesFilePathExist(newFile!!.absolutePath))
         return newFile
     }
 
@@ -410,7 +410,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
         val file = files[index]
         val newFileDirItem = FileDirItem("$destinationPath/${file.name}", file.name, file.isDirectory)
-        if (File(newFileDirItem.path).exists()) {
+        if (getDoesFilePathExist(newFileDirItem.path)) {
             FileConflictDialog(this, newFileDirItem, files.size > 1) { resolution, applyForAll ->
                 if (applyForAll) {
                     conflictResolutions.clear()

@@ -42,7 +42,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
             return
         }
 
-        val validPaths = paths.filter { File(it).exists() }
+        val validPaths = paths.filter { activity?.getDoesFilePathExist(it) == true }
         val sdFilePath = validPaths.firstOrNull { activity?.isPathOnSD(it) == true } ?: validPaths.firstOrNull()
         if (sdFilePath == null) {
             activity?.toast(R.string.unknown_error_occurred)
@@ -98,7 +98,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                 var newPath = "${path.getParentPath()}/$newName"
 
                 var currentIndex = 0
-                while (File(newPath).exists()) {
+                while (activity?.getDoesFilePathExist(newPath) == true) {
                     currentIndex++
                     var extension = ""
                     val name = if (newName.contains(".")) {

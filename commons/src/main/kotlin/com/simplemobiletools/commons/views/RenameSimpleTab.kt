@@ -8,7 +8,6 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.interfaces.RenameTab
 import kotlinx.android.synthetic.main.tab_rename_simple.view.*
-import java.io.File
 
 class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs), RenameTab {
     var ignoreClicks = false
@@ -39,7 +38,7 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
             return
         }
 
-        val validPaths = paths.filter { File(it).exists() }
+        val validPaths = paths.filter { activity?.getDoesFilePathExist(it) == true }
         val sdFilePath = validPaths.firstOrNull { activity?.isPathOnSD(it) == true } ?: validPaths.firstOrNull()
         if (sdFilePath == null) {
             activity?.toast(R.string.unknown_error_occurred)
@@ -67,7 +66,7 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
 
                 val newPath = "${path.getParentPath()}/$newName"
 
-                if (File(newPath).exists()) {
+                if (activity?.getDoesFilePathExist(newPath) == true) {
                     continue
                 }
 

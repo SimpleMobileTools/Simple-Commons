@@ -629,7 +629,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
                 return@handleSAFDialog
             }
 
-            if (!File(fileDirItem.path).exists()) {
+            if (!getDoesFilePathExist(fileDirItem.path)) {
                 document = document.createFile("", fileDirItem.name)
             }
 
@@ -747,7 +747,7 @@ fun Activity.handleLockedFolderOpening(path: String, callback: (success: Boolean
 }
 
 fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
-    if (File(directory).exists()) {
+    if (getDoesFilePathExist(directory)) {
         return true
     }
 

@@ -59,13 +59,13 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
                                 newName += ".$newExtension"
                             }
 
-                            if (!File(path).exists()) {
+                            if (!activity.getDoesFilePathExist(path)) {
                                 activity.toast(String.format(activity.getString(R.string.source_file_doesnt_exist), path))
                                 return@setOnClickListener
                             }
 
                             val newPath = "${path.getParentPath()}/$newName"
-                            if (File(newPath).exists()) {
+                            if (activity.getDoesFilePathExist(newPath)) {
                                 activity.toast(R.string.name_taken)
                                 return@setOnClickListener
                             }

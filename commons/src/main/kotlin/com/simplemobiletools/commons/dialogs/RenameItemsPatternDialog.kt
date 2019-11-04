@@ -28,7 +28,7 @@ class RenameItemsPatternDialog(val activity: BaseSimpleActivity, val paths: Arra
                                 return@setOnClickListener
                             }
 
-                            val validPaths = paths.filter { File(it).exists() }
+                            val validPaths = paths.filter { activity.getDoesFilePathExist(it) }
                             val sdFilePath = validPaths.firstOrNull { activity.isPathOnSD(it) } ?: validPaths.firstOrNull()
                             if (sdFilePath == null) {
                                 activity.toast(R.string.unknown_error_occurred)
@@ -86,7 +86,7 @@ class RenameItemsPatternDialog(val activity: BaseSimpleActivity, val paths: Arra
                                     var newPath = "${path.getParentPath()}/$newName"
 
                                     var currentIndex = 0
-                                    while (File(newPath).exists()) {
+                                    while (activity.getDoesFilePathExist(newPath)) {
                                         currentIndex++
                                         var extension = ""
                                         val name = if (newName.contains(".")) {

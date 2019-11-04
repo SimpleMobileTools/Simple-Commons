@@ -66,7 +66,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 file.size = file.getProperSize(copyHidden)
             }
             val newPath = "$mDestinationPath/${file.name}"
-            val fileExists = File(newPath).exists()
+            val fileExists = activity.getDoesFilePathExist(newPath)
             if (getConflictResolution(conflictResolutions, newPath) != CONFLICT_SKIP || !fileExists) {
                 mMaxSize += (file.size / 1000).toInt()
             }
@@ -81,13 +81,13 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
             try {
                 val newPath = "$mDestinationPath/${file.name}"
                 var newFileDirItem = FileDirItem(newPath, newPath.getFilenameFromPath(), file.isDirectory)
-                if (File(newPath).exists()) {
+                if (activity.getDoesFilePathExist(newPath)) {
                     val resolution = getConflictResolution(conflictResolutions, newPath)
                     if (resolution == CONFLICT_SKIP) {
                         mFileCountToCopy--
                         continue
                     } else if (resolution == CONFLICT_OVERWRITE) {
-                        newFileDirItem.isDirectory = if (File(newPath).exists()) File(newPath).isDirectory else activity.getSomeDocumentFile(newPath)!!.isDirectory
+                        newFileDirItem.isDirectory = if (activity.getDoesFilePathExist(newPath)) File(newPath).isDirectory else activity.getSomeDocumentFile(newPath)!!.isDirectory
                         activity.deleteFileBg(newFileDirItem, true)
                     } else if (resolution == CONFLICT_KEEP_BOTH) {
                         val newFile = activity.getAlternativeFile(File(newFileDirItem.path))
@@ -183,7 +183,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
         val children = File(source.path).list()
         for (child in children) {
             val newPath = "$destinationPath/$child"
-            if (File(newPath).exists()) {
+            if (activity.getDoesFilePathExist(newPath)) {
                 continue
             }
 
@@ -231,7 +231,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
             out?.flush()
 
-            if (source.size == copiedSize && File(destination.path).exists()) {
+            if (source.size == copiedSize && activity.getDoesFilePathExist(destination.path)) {
                 mTransferredFiles.add(source)
                 if (activity.baseConfig.keepLastModified) {
                     copyOldLastModified(source.path, destination.path)

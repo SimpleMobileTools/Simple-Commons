@@ -35,7 +35,7 @@ class PropertiesDialog() {
      * @param countHiddenItems toggle determining if we will count hidden files themselves and their sizes (reasonable only at directory properties)
      */
     constructor(activity: Activity, path: String, countHiddenItems: Boolean = false) : this() {
-        if (!File(path).exists()) {
+        if (!activity.getDoesFilePathExist(path)) {
             activity.toast(String.format(activity.getString(R.string.source_file_doesnt_exist), path))
             return
         }

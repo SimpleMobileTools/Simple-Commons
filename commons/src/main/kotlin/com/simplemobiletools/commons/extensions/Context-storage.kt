@@ -418,6 +418,9 @@ fun Context.updateOTGPathFromPartition() {
     }
 }
 
+fun Context.getDoesFilePathExist(path: String) = if (baseConfig.OTGPath.isNotEmpty() && path.startsWith(baseConfig.OTGPath)) getOTGFastDocumentFile(path)?.exists()
+        ?: false else File(path).exists()
+
 // avoid these being set as SD card paths
 private val physicalPaths = arrayListOf(
         "/storage/sdcard1", // Motorola Xoom
