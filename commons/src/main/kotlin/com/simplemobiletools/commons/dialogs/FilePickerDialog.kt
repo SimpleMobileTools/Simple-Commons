@@ -174,10 +174,21 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun verifyPath() {
-        val file = File(currPath)
-        if ((pickFile && file.isFile) || (!pickFile && file.isDirectory)) {
-            sendSuccess()
+        if (activity.isPathOnOTG(currPath)) {
+            val fileDocument = activity.getSomeDocumentFile(currPath) ?: return
+            if ((pickFile && fileDocument.isFile) || (!pickFile && fileDocument.isDirectory)) {
+                sendSuccess()
+            }
+        } else {
+            val file = File(currPath)
+            if ((pickFile && file.isFile) || (!pickFile && file.isDirectory)) {
+                sendSuccess()
+            }
         }
+            /*val file = File(currPath)
+            if ((pickFile && file.isFile) || (!pickFile && file.isDirectory)) {
+                sendSuccess()
+            }*/
     }
 
     private fun sendSuccess() {
@@ -191,6 +202,14 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun getItems(path: String, getProperFileSize: Boolean, callback: (List<FileDirItem>) -> Unit) {
+        if (activity.isPathOnOTG(path)) {
+            activity.getOTGItems(path, showHidden, getProperFileSize, callback)
+        } else {
+            getRegularItems(path, getProperFileSize, callback)
+        }
+    }
+
+    private fun getRegularItems(path: String, getProperFileSize: Boolean, callback: (List<FileDirItem>) -> Unit) {
         val items = ArrayList<FileDirItem>()
         val base = File(path)
         val files = base.listFiles()

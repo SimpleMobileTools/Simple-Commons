@@ -21,6 +21,7 @@ import com.simplemobiletools.commons.asynctasks.CopyMoveTask
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.dialogs.ExportSettingsDialog
 import com.simplemobiletools.commons.dialogs.FileConflictDialog
+import com.simplemobiletools.commons.dialogs.WritePermissionDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.interfaces.CopyMoveListener
@@ -282,6 +283,28 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         } else {
             callback(true)
             false
+        }
+    }
+
+    fun handleOTGPermission(callback: (success: Boolean) -> Unit) {
+        if (baseConfig.OTGTreeUri.isNotEmpty()) {
+            callback(true)
+            return
+        }
+
+        funAfterSAFPermission = callback
+        WritePermissionDialog(this, true) {
+            Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
+                if (resolveActivity(packageManager) == null) {
+                    type = "*/*"
+                }
+
+                if (resolveActivity(packageManager) != null) {
+                    startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
+                } else {
+                    toast(R.string.unknown_error_occurred)
+                }
+            }
         }
     }
 
