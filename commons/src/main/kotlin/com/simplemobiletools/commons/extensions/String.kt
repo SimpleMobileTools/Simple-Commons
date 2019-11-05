@@ -206,9 +206,13 @@ fun String.getFileKey(): String {
 }
 
 fun String.getAvailableStorageB(): Long {
-    val stat = StatFs(this)
-    val bytesAvailable = stat.blockSizeLong * stat.availableBlocksLong
-    return bytesAvailable
+    return try {
+        val stat = StatFs(this)
+        val bytesAvailable = stat.blockSizeLong * stat.availableBlocksLong
+        bytesAvailable
+    } catch (e: Exception) {
+        -1L
+    }
 }
 
 // remove diacritics, for example č -> c
