@@ -54,8 +54,9 @@ class RenameItemsPatternDialog(val activity: BaseSimpleActivity, val paths: Arra
                                         dateTime = DateFormat.format("yyyy:MM:dd kk:mm:ss", calendar).toString()
                                     }
 
+                                    val pattern = if (dateTime.substring(4, 5) == "-") "yyyy-MM-dd kk:mm:ss" else "yyyy:MM:dd kk:mm:ss"
                                     var newName = view.rename_items_value.value
-                                    val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd kk:mm:ss", Locale.ENGLISH)
+                                    val simpleDateFormat = SimpleDateFormat(pattern, Locale.ENGLISH)
                                     val dt = simpleDateFormat.parse(dateTime)
                                     val cal = Calendar.getInstance()
                                     cal.time = dt
