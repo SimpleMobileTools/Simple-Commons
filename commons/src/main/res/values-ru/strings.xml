@@ -67,7 +67,7 @@
     <string name="simple_renaming">Простое переименование</string>
     <string name="pattern_renaming">Шаблон</string>
     <string name="string_to_add">Строка для добавления</string>
-    <string name="rename_date_time_pattern">%Y - год\n%M - месяц\n%D - день\n%h - час\n%m - минута\n%s - секунда\n%i - number increasing from 1</string>
+    <string name="rename_date_time_pattern">%Y - год\n%M - месяц\n%D - день\n%h - час\n%m - минута\n%s - секунда\n%i - порядковый номер с 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Копировать</string>
