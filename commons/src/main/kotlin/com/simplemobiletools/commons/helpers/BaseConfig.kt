@@ -355,4 +355,8 @@ open class BaseConfig(val context: Context) {
     var lastRenameUsed: Int
         get() = prefs.getInt(LAST_RENAME_USED, RENAME_SIMPLE)
         set(lastRenameUsed) = prefs.edit().putInt(LAST_RENAME_USED, lastRenameUsed).apply()
+
+    var lastRenamePatternUsed: String
+        get() = prefs.getString(LAST_RENAME_PATTERN_USED, "")!!
+        set(lastRenamePatternUsed) = prefs.edit().putString(LAST_RENAME_PATTERN_USED, lastRenamePatternUsed).apply()
 }

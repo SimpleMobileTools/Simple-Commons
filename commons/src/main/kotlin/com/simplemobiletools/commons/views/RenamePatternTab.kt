@@ -29,6 +29,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
     override fun initTab(activity: BaseSimpleActivity, paths: ArrayList<String>) {
         this.activity = activity
         this.paths = paths
+        rename_items_value.setText(activity.baseConfig.lastRenamePatternUsed)
     }
 
     override fun dialogConfirmed(callback: (success: Boolean) -> Unit) {
@@ -49,6 +50,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
             return
         }
 
+        activity?.baseConfig?.lastRenamePatternUsed = rename_items_value.value
         activity?.handleSAFDialog(sdFilePath) {
             ignoreClicks = true
             var pathsCnt = validPaths.size
