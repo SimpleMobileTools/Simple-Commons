@@ -53,7 +53,9 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
         activity?.baseConfig?.lastRenamePatternUsed = rename_items_value.value
         activity?.handleSAFDialog(sdFilePath) {
             ignoreClicks = true
+            var currentIncrementalNumber = 1
             var pathsCnt = validPaths.size
+            val numbersCnt = pathsCnt.toString().length
             for (path in validPaths) {
                 val exif = ExifInterface(path)
                 var dateTime = if (isNougatPlus()) {
@@ -71,7 +73,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
 
                 val pattern = if (dateTime.substring(4, 5) == "-") "yyyy-MM-dd kk:mm:ss" else "yyyy:MM:dd kk:mm:ss"
                 val simpleDateFormat = SimpleDateFormat(pattern, Locale.ENGLISH)
-                val dt = simpleDateFormat.parse(dateTime)
+                val dt = simpleDateFormat.parse(dateTime.replace("T", " "))
                 val cal = Calendar.getInstance()
                 cal.time = dt
                 val year = cal.get(Calendar.YEAR).toString()
@@ -88,6 +90,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                         .replace("%h", hours, false)
                         .replace("%m", minutes, false)
                         .replace("%s", seconds, false)
+                        .replace("%i", String.format("%0${numbersCnt}d", currentIncrementalNumber))
 
                 if (newName.isEmpty()) {
                     continue
@@ -114,6 +117,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                     newPath = "${path.getParentPath()}/$name~$currentIndex$extension"
                 }
 
+                currentIncrementalNumber++
                 activity?.renameFile(path, newPath) {
                     if (it) {
                         pathsCnt--
