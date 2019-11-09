@@ -67,7 +67,7 @@
     <string name="simple_renaming">Jednoduché premenovanie</string>
     <string name="pattern_renaming">Vzor</string>
     <string name="string_to_add">Reťazec na pridanie</string>
-    <string name="rename_date_time_pattern">%Y - rok\n%M - mesiac\n%D - deň\n%h - hodina\n%m - minúta\n%s - sekunda</string>
+    <string name="rename_date_time_pattern">%Y - rok\n%M - mesiac\n%D - deň\n%h - hodina\n%m - minúta\n%s - sekunda\n%i - číslo narastajúce od 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopírovať</string>

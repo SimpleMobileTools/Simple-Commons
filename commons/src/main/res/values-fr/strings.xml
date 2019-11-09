@@ -67,7 +67,7 @@
     <string name="simple_renaming">Simple</string>
     <string name="pattern_renaming">Modèle</string>
     <string name="string_to_add">Caractères à ajouter</string>
-    <string name="rename_date_time_pattern">%Y - année\n%M - mois\n%D - jour\n%h - heure\n%m - minute\n%s - seconde</string>
+    <string name="rename_date_time_pattern">%Y - année\n%M - mois\n%D - jour\n%h - heure\n%m - minute\n%s - seconde\n%i - number increasing from 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copier</string>

@@ -67,7 +67,7 @@
     <string name="simple_renaming">심플 이름 바꾸기</string>
     <string name="pattern_renaming">패턴</string>
     <string name="string_to_add">추가할 문장</string>
-    <string name="rename_date_time_pattern">%Y - 년\n%M - 월\n%D - 일\n%h - 시\n%m - 분\n%s - 초</string>
+    <string name="rename_date_time_pattern">%Y - 년\n%M - 월\n%D - 일\n%h - 시\n%m - 분\n%s - 초\n%i - number increasing from 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">복사</string>

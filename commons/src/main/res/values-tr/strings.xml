@@ -67,7 +67,7 @@
     <string name="simple_renaming">Basit yeniden adlandırma</string>
     <string name="pattern_renaming">Desen</string>
     <string name="string_to_add">Eklenecek dize</string>
-    <string name="rename_date_time_pattern">%Y - yıl\n%M - ay\n%D - gün\n%h - saat\n%m - dakika\n%s - saniye</string>
+    <string name="rename_date_time_pattern">%Y - yıl\n%M - ay\n%D - gün\n%h - saat\n%m - dakika\n%s - saniye\n%i - number increasing from 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopyala</string>

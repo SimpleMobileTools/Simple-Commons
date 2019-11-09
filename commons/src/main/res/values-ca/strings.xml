@@ -67,7 +67,7 @@
     <string name="simple_renaming">Reanomenat simple</string>
     <string name="pattern_renaming">Patró</string>
     <string name="string_to_add">Cadena per afegir</string>
-    <string name="rename_date_time_pattern">%Y - any\n%M - mes\n%D - dia\n%h - hora\n%m - minut\n%s - segon</string>
+    <string name="rename_date_time_pattern">%Y - any\n%M - mes\n%D - dia\n%h - hora\n%m - minut\n%s - segon\n%i - number increasing from 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
