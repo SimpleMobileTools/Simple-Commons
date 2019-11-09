@@ -336,7 +336,12 @@ fun Context.updateLastModified(path: String, lastModified: Long) {
 fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSize: Boolean, callback: (ArrayList<FileDirItem>) -> Unit) {
     val items = ArrayList<FileDirItem>()
     val OTGTreeUri = baseConfig.OTGTreeUri
-    var rootUri = DocumentFile.fromTreeUri(applicationContext, Uri.parse(OTGTreeUri))
+    var rootUri = try {
+        DocumentFile.fromTreeUri(applicationContext, Uri.parse(OTGTreeUri))
+    } catch (ignored: Exception) {
+        null
+    }
+
     if (rootUri == null) {
         callback(items)
         return
