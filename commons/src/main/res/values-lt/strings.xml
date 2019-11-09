@@ -67,7 +67,7 @@
     <string name="simple_renaming">Simple renaming</string>
     <string name="pattern_renaming">Pattern</string>
     <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second</string>
+    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second\n%i - number increasing from 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopijuoti</string>

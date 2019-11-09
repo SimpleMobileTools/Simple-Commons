@@ -6,7 +6,6 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import kotlinx.android.synthetic.main.dialog_rename_items.*
 import kotlinx.android.synthetic.main.dialog_rename_items.view.*
-import java.io.File
 import java.util.*
 
 class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String>, val callback: () -> Unit) {
@@ -39,7 +38,7 @@ class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<S
                                 return@setOnClickListener
                             }
 
-                            val validPaths = paths.filter { File(it).exists() }
+                            val validPaths = paths.filter { activity.getDoesFilePathExist(it) }
                             val sdFilePath = validPaths.firstOrNull { activity.isPathOnSD(it) } ?: validPaths.firstOrNull()
                             if (sdFilePath == null) {
                                 activity.toast(R.string.unknown_error_occurred)
@@ -68,7 +67,7 @@ class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<S
 
                                     val newPath = "${path.getParentPath()}/$newName"
 
-                                    if (File(newPath).exists()) {
+                                    if (activity.getDoesFilePathExist(newPath)) {
                                         continue
                                     }
 

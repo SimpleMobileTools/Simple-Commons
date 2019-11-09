@@ -70,12 +70,12 @@ fun Activity.appLaunched(appId: String) {
         showDonateOrUpgradeDialog()
     }
 
-    if (baseConfig.appRunCount > 203 && !baseConfig.wasRateUsPromptShown) {
+    if (baseConfig.appRunCount > 175 && !baseConfig.wasRateUsPromptShown) {
         baseConfig.wasRateUsPromptShown = true
         RateUsDialog(this)
     }
 
-    if (baseConfig.navigationBarColor == INVALID_NAVIGATION_BAR_COLOR) {
+    if (baseConfig.navigationBarColor == INVALID_NAVIGATION_BAR_COLOR && (window.attributes.flags and WindowManager.LayoutParams.FLAG_FULLSCREEN == 0)) {
         baseConfig.defaultNavigationBarColor = window.navigationBarColor
         baseConfig.navigationBarColor = window.navigationBarColor
     }
@@ -426,7 +426,7 @@ fun BaseSimpleActivity.deleteFolderBg(fileDirItem: FileDirItem, deleteMediaOnly:
 
         val files = filesArr.toMutableList().filter { !deleteMediaOnly || it.isMediaFile() }
         for (file in files) {
-            deleteFileBg(file.toFileDirItem(), false) { }
+            deleteFileBg(file.toFileDirItem(applicationContext), false) { }
         }
 
         if (folder.listFiles()?.isEmpty() == true) {
@@ -491,7 +491,7 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
             callback?.invoke(true)
         }
     } else {
-        if (file.isDirectory && allowDeleteFolder) {
+        if (getIsPathDirectory(file.absolutePath) && allowDeleteFolder) {
             fileDeleted = deleteRecursively(file)
         }
 
@@ -629,7 +629,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
                 return@handleSAFDialog
             }
 
-            if (!File(fileDirItem.path).exists()) {
+            if (!getDoesFilePathExist(fileDirItem.path)) {
                 document = document.createFile("", fileDirItem.name)
             }
 
@@ -671,7 +671,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
     return if (needsStupidWritePermissions(path)) {
         var documentFile = parentDocumentFile
         if (documentFile == null) {
-            if (targetFile.parentFile?.exists() == true) {
+            if (getDoesFilePathExist(targetFile.parentFile.absolutePath)) {
                 documentFile = getDocumentFile(targetFile.parent)
             } else {
                 documentFile = getDocumentFile(targetFile.parentFile.parent)
@@ -700,7 +700,14 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
     }
 }
 
-fun BaseSimpleActivity.getFileInputStreamSync(path: String) = FileInputStream(File(path))
+fun BaseSimpleActivity.getFileInputStreamSync(path: String): InputStream? {
+    return if (isPathOnOTG(path)) {
+        val fileDocument = getSomeDocumentFile(path)
+        applicationContext.contentResolver.openInputStream(fileDocument?.uri)
+    } else {
+        FileInputStream(File(path))
+    }
+}
 
 fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
     if (baseConfig.isHiddenPasswordProtectionOn) {
@@ -747,7 +754,7 @@ fun Activity.handleLockedFolderOpening(path: String, callback: (success: Boolean
 }
 
 fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
-    if (File(directory).exists()) {
+    if (getDoesFilePathExist(directory)) {
         return true
     }
 

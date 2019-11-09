@@ -39,6 +39,8 @@ fun String.isAValidFilename(): Boolean {
     return true
 }
 
+fun String.getOTGPublicPath(context: Context) = "${context.baseConfig.OTGTreeUri}/document/${context.baseConfig.OTGPartition}%3A${substring(context.baseConfig.OTGPath.length).replace("/", "%2F")}"
+
 fun String.isMediaFile() = isImageFast() || isVideoFast() || isGif() || isRawFast() || isSvg() || isPortrait()
 
 fun String.isGif() = endsWith(".gif", true)
@@ -204,9 +206,13 @@ fun String.getFileKey(): String {
 }
 
 fun String.getAvailableStorageB(): Long {
-    val stat = StatFs(this)
-    val bytesAvailable = stat.blockSizeLong * stat.availableBlocksLong
-    return bytesAvailable
+    return try {
+        val stat = StatFs(this)
+        val bytesAvailable = stat.blockSizeLong * stat.availableBlocksLong
+        bytesAvailable
+    } catch (e: Exception) {
+        -1L
+    }
 }
 
 // remove diacritics, for example č -> c

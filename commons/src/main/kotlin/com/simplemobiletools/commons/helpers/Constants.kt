@@ -119,6 +119,7 @@ const val WAS_RATE_US_PROMPT_SHOWN = "was_rate_us_prompt_shown"
 const val WAS_SORTING_BY_NUMERIC_VALUE_ADDED = "was_sorting_by_numeric_value_added"
 const val WAS_FOLDER_LOCKING_NOTICE_SHOWN = "was_folder_locking_notice_shown"
 const val LAST_RENAME_USED = "last_rename_used"
+const val LAST_RENAME_PATTERN_USED = "last_rename_pattern_used"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1

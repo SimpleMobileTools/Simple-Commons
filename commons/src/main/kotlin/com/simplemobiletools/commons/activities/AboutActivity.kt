@@ -75,7 +75,8 @@ class AboutActivity : BaseSimpleActivity() {
                 baseConfig.wasBeforeAskingShown = true
                 about_email.movementMethod = LinkMovementMethod.getInstance()
                 about_email.setOnClickListener(null)
-                ConfirmationDialog(this, "", R.string.before_asking_question_read_faq, R.string.read_it, R.string.skip) {
+                val msg = "${getString(R.string.before_asking_question_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
+                ConfirmationDialog(this, msg, 0, R.string.read_it, R.string.skip) {
                     about_faq_label.performClick()
                 }
             }

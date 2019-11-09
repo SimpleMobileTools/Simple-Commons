@@ -55,11 +55,37 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
         else -> name
     }
 
-    fun getProperSize(countHidden: Boolean) = File(path).getProperSize(countHidden)
+    fun getProperSize(context: Context, countHidden: Boolean): Long {
+        return if (context.isPathOnOTG(path)) {
+            context.getDocumentFile(path)?.getItemSize(countHidden) ?: 0
+        } else {
+            File(path).getProperSize(countHidden)
+        }
+    }
 
-    fun getProperFileCount(countHidden: Boolean) = File(path).getFileCount(countHidden)
+    fun getProperFileCount(context: Context, countHidden: Boolean): Int {
+        return if (context.isPathOnOTG(path)) {
+            context.getDocumentFile(path)?.getFileCount(countHidden) ?: 0
+        } else {
+            File(path).getFileCount(countHidden)
+        }
+    }
 
-    fun getDirectChildrenCount(countHiddenItems: Boolean) = File(path).getDirectChildrenCount(countHiddenItems)
+    fun getDirectChildrenCount(context: Context, countHiddenItems: Boolean): Int {
+        return if (context.isPathOnOTG(path)) {
+            context.getDocumentFile(path)?.listFiles()?.filter { if (countHiddenItems) true else !it.name!!.startsWith(".") }?.size ?: 0
+        } else {
+            File(path).getDirectChildrenCount(countHiddenItems)
+        }
+    }
+
+    fun getLastModified(context: Context): Long {
+        return if (context.isPathOnOTG(path)) {
+            context.getFastDocumentFile(path)?.lastModified() ?: 0L
+        } else {
+            File(path).lastModified()
+        }
+    }
 
     fun getParentPath() = path.getParentPath()
 
@@ -78,4 +104,6 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
     fun getVideoResolution(context: Context) = context.getVideoResolution(path)
 
     fun getImageResolution() = path.getImageResolution()
+
+    fun getPublicUri(context: Context) = context.getDocumentFile(path)?.uri ?: ""
 }

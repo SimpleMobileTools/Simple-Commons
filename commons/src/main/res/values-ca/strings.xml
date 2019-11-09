@@ -67,7 +67,7 @@
     <string name="simple_renaming">Reanomenat simple</string>
     <string name="pattern_renaming">Patró</string>
     <string name="string_to_add">Cadena per afegir</string>
-    <string name="rename_date_time_pattern">%Y - any\n%M - mes\n%D - dia\n%h - hora\n%m - minut\n%s - segon</string>
+    <string name="rename_date_time_pattern">%Y - any\n%M - mes\n%D - dia\n%h - hora\n%m - minut\n%s - segon\n%i - number increasing from 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
@@ -646,8 +646,8 @@
         Un cop llançat, simplement configureu la icona de taronja per defecte # F57C00. És possible que hàgiu de tornar a instal·lar l\'aplicació en el pitjor dels casos.</string>
     <string name="faq_7_title_commons">Els diners han estat deduïts del meu compte bancari, però no puc descarregar l\'aplicació. Què puc fer?</string>
     <string name="faq_7_text_commons">Google fa que els pagaments siguin completament gestionats i alguns cops això genera problemes de sistema. Només cal que esborris la memòria cau de l\’aplicació Google Play i reiniciis el dispositiu. A continuació prova a baixar-la de nou.</string>
-    <string name="faq_8_title_commons">Per què he d'actualitzar a la versió Pro?</string>
-    <string name="faq_8_text_commons">Com que la versió de l\'aplicació ja no s'actualitza, els errors que heu vist, no seran corregits. Tampoc s\’hi afegiran noves funcions. Podeu comprar la versió Pro a Google Play per una petita quantitat de diners.
+    <string name="faq_8_title_commons">Per què he d\'actualitzar a la versió Pro?</string>
+    <string name="faq_8_text_commons">Com que la versió de l\'aplicació ja no s\'actualitza, els errors que heu vist, no seran corregits. Tampoc s\’hi afegiran noves funcions. Podeu comprar la versió Pro a Google Play per una petita quantitat de diners.
          Es tracta d\’un pagament únic, cosa que significa que un cop l\’adquireixis, no hauràs de tornar a pagar mai més. Ni tan sols després de canviar de dispositiu. Si no us agrada la versió Pro, podeu desinstal·lar-la en poques hores i automàticament obtindreu els diners.
          Si voleu un reemborsament en qualsevol moment més tard, només cal que contacteu amb nosaltres a l\'adreça hello@simplemobiletools.com i ho aconseguireu.</string>
 

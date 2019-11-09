@@ -29,6 +29,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
     override fun initTab(activity: BaseSimpleActivity, paths: ArrayList<String>) {
         this.activity = activity
         this.paths = paths
+        rename_items_value.setText(activity.baseConfig.lastRenamePatternUsed)
     }
 
     override fun dialogConfirmed(callback: (success: Boolean) -> Unit) {
@@ -42,13 +43,14 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
             return
         }
 
-        val validPaths = paths.filter { File(it).exists() }
+        val validPaths = paths.filter { activity?.getDoesFilePathExist(it) == true }
         val sdFilePath = validPaths.firstOrNull { activity?.isPathOnSD(it) == true } ?: validPaths.firstOrNull()
         if (sdFilePath == null) {
             activity?.toast(R.string.unknown_error_occurred)
             return
         }
 
+        activity?.baseConfig?.lastRenamePatternUsed = rename_items_value.value
         activity?.handleSAFDialog(sdFilePath) {
             ignoreClicks = true
             var pathsCnt = validPaths.size
@@ -67,7 +69,8 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                     dateTime = DateFormat.format("yyyy:MM:dd kk:mm:ss", calendar).toString()
                 }
 
-                val simpleDateFormat = SimpleDateFormat("yyyy:MM:dd kk:mm:ss", Locale.ENGLISH)
+                val pattern = if (dateTime.substring(4, 5) == "-") "yyyy-MM-dd kk:mm:ss" else "yyyy:MM:dd kk:mm:ss"
+                val simpleDateFormat = SimpleDateFormat(pattern, Locale.ENGLISH)
                 val dt = simpleDateFormat.parse(dateTime)
                 val cal = Calendar.getInstance()
                 cal.time = dt
@@ -98,7 +101,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                 var newPath = "${path.getParentPath()}/$newName"
 
                 var currentIndex = 0
-                while (File(newPath).exists()) {
+                while (activity?.getDoesFilePathExist(newPath) == true) {
                     currentIndex++
                     var extension = ""
                     val name = if (newName.contains(".")) {

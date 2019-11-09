@@ -191,17 +191,18 @@ fun Context.getFastDocumentFile(path: String): DocumentFile? {
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
 
-fun Context.getOTGFastDocumentFile(path: String): DocumentFile? {
+fun Context.getOTGFastDocumentFile(path: String, otgPathToUse: String? = null): DocumentFile? {
     if (baseConfig.OTGTreeUri.isEmpty()) {
         return null
     }
 
+    val otgPath = otgPathToUse ?: baseConfig.OTGPath
     if (baseConfig.OTGPartition.isEmpty()) {
         baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/').trimEnd('/')
         updateOTGPathFromPartition()
     }
 
-    val relativePath = Uri.encode(path.substring(baseConfig.OTGPath.length).trim('/'))
+    val relativePath = Uri.encode(path.substring(otgPath.length).trim('/'))
     val fullUri = "${baseConfig.OTGTreeUri}/document/${baseConfig.OTGPartition}%3A$relativePath"
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
@@ -285,7 +286,7 @@ fun Context.getFileUri(path: String) = when {
 
 // these functions update the mediastore instantly, MediaScannerConnection.scanFileRecursively takes some time to really get applied
 fun Context.deleteFromMediaStore(path: String) {
-    if (File(path).isDirectory) {
+    if (getDoesFilePathExist(path) || getIsPathDirectory(path)) {
         return
     }
 
@@ -335,7 +336,12 @@ fun Context.updateLastModified(path: String, lastModified: Long) {
 fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSize: Boolean, callback: (ArrayList<FileDirItem>) -> Unit) {
     val items = ArrayList<FileDirItem>()
     val OTGTreeUri = baseConfig.OTGTreeUri
-    var rootUri = DocumentFile.fromTreeUri(applicationContext, Uri.parse(OTGTreeUri))
+    var rootUri = try {
+        DocumentFile.fromTreeUri(applicationContext, Uri.parse(OTGTreeUri))
+    } catch (ignored: Exception) {
+        null
+    }
+
     if (rootUri == null) {
         callback(items)
         return
@@ -409,10 +415,28 @@ fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolea
 }
 
 fun Context.updateOTGPathFromPartition() {
-    baseConfig.OTGPath = if (File("/storage/${baseConfig.OTGPartition}").exists()) {
+    val otgPath = "/storage/${baseConfig.OTGPartition}"
+    baseConfig.OTGPath = if (getOTGFastDocumentFile(otgPath, otgPath)?.exists() == true) {
         "/storage/${baseConfig.OTGPartition}"
     } else {
         "/mnt/media_rw/${baseConfig.OTGPartition}"
+    }
+}
+
+fun Context.getDoesFilePathExist(path: String, otgPathToUse: String? = null): Boolean {
+    val otgPath = otgPathToUse ?: baseConfig.OTGPath
+    return if (otgPath.isNotEmpty() && path.startsWith(otgPath)) {
+        getOTGFastDocumentFile(path)?.exists() ?: false
+    } else {
+        File(path).exists()
+    }
+}
+
+fun Context.getIsPathDirectory(path: String): Boolean {
+    return if (isPathOnOTG(path)) {
+        getOTGFastDocumentFile(path)?.isDirectory ?: false
+    } else {
+        File(path).isDirectory
     }
 }
 
