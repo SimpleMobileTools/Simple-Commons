@@ -360,10 +360,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                             if (updatedPaths.isEmpty()) {
                                 copyMoveListener.copySucceeded(false, fileCountToCopy == 0, destination)
                             } else {
-                                rescanPaths(updatedPaths) {
-                                    runOnUiThread {
-                                        copyMoveListener.copySucceeded(false, fileCountToCopy <= updatedPaths.size, destination)
-                                    }
+                                runOnUiThread {
+                                    copyMoveListener.copySucceeded(false, fileCountToCopy <= updatedPaths.size, destination)
                                 }
                             }
                         }
