@@ -70,7 +70,7 @@ fun Activity.appLaunched(appId: String) {
         showDonateOrUpgradeDialog()
     }
 
-    if (baseConfig.appRunCount > 225 && !baseConfig.wasRateUsPromptShown) {
+    if (baseConfig.appRunCount > 175 && !baseConfig.wasRateUsPromptShown) {
         baseConfig.wasRateUsPromptShown = true
         RateUsDialog(this)
     }
