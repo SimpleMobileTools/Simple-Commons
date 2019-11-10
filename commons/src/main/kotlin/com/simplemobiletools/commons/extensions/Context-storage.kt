@@ -338,7 +338,11 @@ fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSi
     val OTGTreeUri = baseConfig.OTGTreeUri
     var rootUri = try {
         DocumentFile.fromTreeUri(applicationContext, Uri.parse(OTGTreeUri))
-    } catch (ignored: Exception) {
+    } catch (e: Exception) {
+        showErrorToast(e)
+        baseConfig.OTGPath = ""
+        baseConfig.OTGTreeUri = ""
+        baseConfig.OTGPartition = ""
         null
     }
 
