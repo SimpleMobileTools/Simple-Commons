@@ -67,7 +67,7 @@
     <string name="simple_renaming">Simple</string>
     <string name="pattern_renaming">Modèle</string>
     <string name="string_to_add">Caractères à ajouter</string>
-    <string name="rename_date_time_pattern">%Y - année\n%M - mois\n%D - jour\n%h - heure\n%m - minute\n%s - seconde\n%i - number increasing from 1</string>
+    <string name="rename_date_time_pattern">%Y - année\n%M - mois\n%D - jour\n%h - heure\n%m - minute\n%s - seconde\n%i - Incrémentation depuis 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copier</string>
@@ -514,7 +514,7 @@
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="usb_detected">Il semblerait qu'un périphérique USB soit connecté à votre périphérique. Pour que les fichiers de ce périphérique s'affichent correctement, vous devez accorder des autorisations supplémentaires.</string>
     <string name="confirm_usb_storage_access_text">Veuillez sélectionner le répertoire racine du périphérique USB sur l\'écran suivant afin de pouvoir y accéder</string>
     <string name="wrong_root_selected_usb">Mauvais répertoire sélectionné. Veuillez sélectionner le répertoire racine du périphérique USB.</string>
 
@@ -571,12 +571,12 @@
     <string name="sunday_short">Dim</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">La version de votre application ne sera plus mise à jour. Veuillez installer la version Pro pour recevoir des correctifs et autres améliorations.</string>
+    <string name="upgrade_to_pro_long_click">La version de votre application ne sera plus mise à jour. Veuillez installer la version Pro pour recevoir des correctifs et autres améliorations en cliquant ici.</string>
     <string name="it_is_free">C\'est gratuit jusqu\'au : %s. Si vous la téléchargez jusque-là, vous pourrez définitivement l\'utiliser gratuitement.</string>
     <string name="more_info">Plus d\'information</string>
     <string name="upgrade">Passer à la version Pro</string>
-    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
+    <string name="upgrade_calendar">Vous devez migrer manuellement les événements stockés localement via une exportation dans un fichier .ics, puis une importation. Vous pouvez trouver les boutons d'exportation/importation dans le menu de l'écran principal.</string>
 
     <!-- About -->
     <string name="about">À propos</string>
@@ -647,10 +647,10 @@
         Une fois lancé, il vous suffit de redéfinir l\'icône orange par défaut #F57C00. Dans le pire des cas, vous devrez peut-être réinstaller l\'application.</string>
     <string name="faq_7_title_commons">L\'argent a été débiter de mon compte bancaire, mais je ne peux pas télécharger l\'application. Que puis-je faire ?</string>
     <string name="faq_7_text_commons">Les paiements sont entièrement gérés par Google, leur système se heurte parfois à des problèmes. Effacez simplement le cache de votre application Google Play, redémarrez votre appareil, puis réessayez de télécharger.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
+    <string name="faq_8_title_commons">Pourquoi devrais-je passer à la version Pro ?</string>
+    <string name="faq_8_text_commons">La version de votre application n'étant plus mise à jour, les bugs que vous avez peut-être repérés ne seront jamais corrigés. Il n'y aura pas non plus de nouvelles fonctions ajoutées. Vous pouvez acheter la version Pro sur Google Play pour une petite somme d'argent.
+         C'est un paiement unique, ce qui signifie qu'une fois que vous l'achetez, vous n'aurez plus jamais à payer. Pas même après avoir acheté un nouvel appareil. Si vous n’aimez pas la version Pro, vous pouvez simplement la désinstaller après quelques heures et vous serez automatiquement remboursé.
+         Si vous souhaitez un remboursement à tout moment, contactez-nous à l'adresse hello@simplemobiletools.com et vous l'obtiendrez. </string>
 
     <!-- License -->
     <string name="notice">Cette application utilise les bibliothèques tierces suivantes pour me simplifier la vie. Merci.</string>
@@ -681,6 +681,6 @@
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">ATTENTION : cette version de l'application n'est plus maintenue. Procurez-vous la version Pro à l'adresse https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">N’oubliez pas que si vous désinstallez une application payante dans les 2 heures, vous serez automatiquement remboursé. Si vous souhaitez un remboursement à tout moment, contactez-nous à hello@simplemobiletools.com et vous l'obtiendrez. Alors n'hésitez pas à l'essayer :)</string>
 </resources>
