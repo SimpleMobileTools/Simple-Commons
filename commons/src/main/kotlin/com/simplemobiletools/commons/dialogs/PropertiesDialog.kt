@@ -78,7 +78,7 @@ class PropertiesDialog() {
                 }
 
                 val exif = if (isNougatPlus() && activity.isPathOnOTG(fileDirItem.path)) {
-                    ExifInterface((activity as BaseSimpleActivity).getFileInputStreamSync(fileDirItem.path))
+                    ExifInterface((activity as BaseSimpleActivity).getFileInputStreamSync(fileDirItem.path)!!)
                 } else {
                     ExifInterface(fileDirItem.path)
                 }
@@ -194,7 +194,7 @@ class PropertiesDialog() {
 
     private fun addExifProperties(path: String, activity: Activity) {
         val exif = if (isNougatPlus() && activity.isPathOnOTG(path)) {
-            ExifInterface((activity as BaseSimpleActivity).getFileInputStreamSync(path))
+            ExifInterface((activity as BaseSimpleActivity).getFileInputStreamSync(path)!!)
         } else {
             ExifInterface(path)
         }

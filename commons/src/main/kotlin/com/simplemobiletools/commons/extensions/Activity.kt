@@ -205,7 +205,7 @@ fun Activity.sharePathsIntent(paths: ArrayList<String>, applicationId: String) {
             val uriPaths = ArrayList<String>()
             val newUris = paths.map {
                 val uri = getFinalUriFromPath(it, applicationId) ?: return@ensureBackgroundThread
-                uriPaths.add(uri.path)
+                uriPaths.add(uri.path!!)
                 uri
             } as ArrayList<Uri>
 
@@ -703,7 +703,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
 fun BaseSimpleActivity.getFileInputStreamSync(path: String): InputStream? {
     return if (isPathOnOTG(path)) {
         val fileDocument = getSomeDocumentFile(path)
-        applicationContext.contentResolver.openInputStream(fileDocument?.uri)
+        applicationContext.contentResolver.openInputStream(fileDocument?.uri!!)
     } else {
         FileInputStream(File(path))
     }
@@ -778,7 +778,7 @@ fun Activity.updateSharedTheme(sharedTheme: SharedTheme) {
 
 fun Activity.copyToClipboard(text: String) {
     val clip = ClipData.newPlainText(getString(R.string.simple_commons), text)
-    (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).primaryClip = clip
+    (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).setPrimaryClip(clip)
     toast(R.string.value_copied_to_clipboard)
 }
 

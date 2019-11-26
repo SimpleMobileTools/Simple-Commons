@@ -47,7 +47,7 @@ class SelectAlarmSoundDialog(val activity: BaseSimpleActivity, val currentUri: S
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
                     activity.setupDialogStuff(view, this)
-                    window.volumeControlStream = audioStream
+                    window?.volumeControlStream = audioStream
                 }
     }
 

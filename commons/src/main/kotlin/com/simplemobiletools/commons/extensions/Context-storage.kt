@@ -82,7 +82,7 @@ fun Context.getStorageDirectories(): Array<String> {
             if (TextUtils.isEmpty(rawExternalStorage)) {
                 paths.addAll(physicalPaths)
             } else {
-                paths.add(rawExternalStorage)
+                paths.add(rawExternalStorage!!)
             }
         }
     } else {
@@ -98,14 +98,14 @@ fun Context.getStorageDirectories(): Array<String> {
 
         val rawUserId = if (isDigit) lastFolder else ""
         if (TextUtils.isEmpty(rawUserId)) {
-            paths.add(rawEmulatedStorageTarget)
+            paths.add(rawEmulatedStorageTarget!!)
         } else {
             paths.add(rawEmulatedStorageTarget + File.separator + rawUserId)
         }
     }
 
     if (!TextUtils.isEmpty(rawSecondaryStoragesStr)) {
-        val rawSecondaryStorages = rawSecondaryStoragesStr.split(File.pathSeparator.toRegex()).dropLastWhile(String::isEmpty).toTypedArray()
+        val rawSecondaryStorages = rawSecondaryStoragesStr!!.split(File.pathSeparator.toRegex()).dropLastWhile(String::isEmpty).toTypedArray()
         Collections.addAll(paths, *rawSecondaryStorages)
     }
     return paths.map { it.trimEnd('/') }.toTypedArray()
@@ -167,7 +167,7 @@ fun Context.tryFastDocumentDelete(path: String, allowDeleteFolder: Boolean): Boo
     val document = getFastDocumentFile(path)
     return if (document?.isFile == true || allowDeleteFolder) {
         try {
-            DocumentsContract.deleteDocument(contentResolver, document?.uri)
+            DocumentsContract.deleteDocument(contentResolver, document?.uri!!)
         } catch (e: Exception) {
             false
         }
