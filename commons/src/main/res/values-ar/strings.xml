@@ -260,7 +260,7 @@
 
     <plurals name="delete_warning">
         <item quantity="one">تحذير: أنت تقوم بحذف %d مجلد</item>
-        <item quantity="other">تحذير: أنت تقوم بحذف %d محلات</item>
+        <item quantity="other">تحذير: أنت تقوم بحذف %d مجلدات</item>
     </plurals>
 
     <!-- Password protection -->
