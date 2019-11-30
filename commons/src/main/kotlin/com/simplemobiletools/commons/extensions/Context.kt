@@ -311,7 +311,7 @@ fun Context.getMimeTypeFromUri(uri: Uri): String {
     var mimetype = uri.path?.getMimeType() ?: ""
     if (mimetype.isEmpty()) {
         try {
-            mimetype = contentResolver.getType(uri)!!
+            mimetype = contentResolver.getType(uri) ?: ""
         } catch (e: IllegalStateException) {
         }
     }
