@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.extensions
 
 import android.content.ContentValues
 import android.content.Context
+import android.content.Intent
 import android.hardware.usb.UsbConstants
 import android.hardware.usb.UsbManager
 import android.media.MediaScannerConnection
@@ -257,6 +258,13 @@ fun Context.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null
     if (paths.isEmpty()) {
         callback?.invoke()
         return
+    }
+
+    for (path in paths) {
+        Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE).apply {
+            data = Uri.fromFile(File(path))
+            sendBroadcast(this)
+        }
     }
 
     var cnt = paths.size
