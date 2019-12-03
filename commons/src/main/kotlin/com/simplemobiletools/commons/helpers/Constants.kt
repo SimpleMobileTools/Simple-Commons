@@ -120,6 +120,8 @@ const val WAS_SORTING_BY_NUMERIC_VALUE_ADDED = "was_sorting_by_numeric_value_add
 const val WAS_FOLDER_LOCKING_NOTICE_SHOWN = "was_folder_locking_notice_shown"
 const val LAST_RENAME_USED = "last_rename_used"
 const val LAST_RENAME_PATTERN_USED = "last_rename_pattern_used"
+const val LAST_EXPORTED_SETTINGS_FOLDER = "last_exported_settings_folder"
+const val LAST_EXPORTED_SETTINGS_FILE = "last_exported_settings_file"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1

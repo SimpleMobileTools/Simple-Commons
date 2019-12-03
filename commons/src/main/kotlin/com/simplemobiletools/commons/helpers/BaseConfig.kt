@@ -359,4 +359,12 @@ open class BaseConfig(val context: Context) {
     var lastRenamePatternUsed: String
         get() = prefs.getString(LAST_RENAME_PATTERN_USED, "")!!
         set(lastRenamePatternUsed) = prefs.edit().putString(LAST_RENAME_PATTERN_USED, lastRenamePatternUsed).apply()
+
+    var lastExportedSettingsFolder: String
+        get() = prefs.getString(LAST_EXPORTED_SETTINGS_FOLDER, "")!!
+        set(lastExportedSettingsFolder) = prefs.edit().putString(LAST_EXPORTED_SETTINGS_FOLDER, lastExportedSettingsFolder).apply()
+
+    var lastExportedSettingsFile: String
+        get() = prefs.getString(LAST_EXPORTED_SETTINGS_FILE, "")!!
+        set(lastExportedSettingsFile) = prefs.edit().putString(LAST_EXPORTED_SETTINGS_FILE, lastExportedSettingsFile).apply()
 }
