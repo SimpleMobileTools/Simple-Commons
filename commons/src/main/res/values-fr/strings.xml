@@ -484,11 +484,11 @@
     <string name="migrating">Migration</string>
 
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Récupérer ce fichier</string>
-    <string name="restore_selected_files">Récupérer les fichiers sélectionnés</string>
-    <string name="restore_all_files">Récupérer tous les fichiers</string>
+    <string name="restore_this_file">Restaurer ce fichier</string>
+    <string name="restore_selected_files">Restaurer les fichiers sélectionnés</string>
+    <string name="restore_all_files">Restaurer tous les fichiers</string>
     <string name="recycle_bin_emptied">Corbeille vidée</string>
-    <string name="files_restored_successfully">Fichiers récupérés avec succès</string>
+    <string name="files_restored_successfully">Fichiers restaurés avec succès</string>
     <string name="empty_recycle_bin_confirmation">Voulez-vous vraiment vider la corbeille ? Les fichiers seront définitivement supprimés.</string>
     <string name="recycle_bin_empty">La corbeille est vide</string>
     <string name="moving_recycle_bin_items_disabled">Le déplacement des éléments de la corbeille est désactivé, veuillez utiliser la fonction de restauration.</string>
