@@ -34,6 +34,7 @@ import java.util.regex.Pattern
 abstract class BaseSimpleActivity : AppCompatActivity() {
     var copyMoveCallback: ((destinationPath: String) -> Unit)? = null
     var actionOnPermission: ((granted: Boolean) -> Unit)? = null
+    var showCopyMoveToasts = true
     var isAskingPermissions = false
     var useDynamicTheme = true
     var checkedDocumentPath = ""
@@ -309,7 +310,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun copyMoveFilesTo(fileDirItems: ArrayList<FileDirItem>, source: String, destination: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean,
-                        copyHidden: Boolean, callback: (destinationPath: String) -> Unit) {
+                        copyHidden: Boolean, showToasts: Boolean, forceCopyMoveTask: Boolean, callback: (destinationPath: String) -> Unit) {
         if (source == destination) {
             toast(R.string.source_and_destination_same)
             return
@@ -321,14 +322,15 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         handleSAFDialog(destination) {
+            showCopyMoveToasts = showToasts
             copyMoveCallback = callback
             var fileCountToCopy = fileDirItems.size
-            if (isCopyOperation) {
-                startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
+            if (isCopyOperation || forceCopyMoveTask) {
+                startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden, showToasts)
             } else {
                 if (isPathOnOTG(source) || isPathOnOTG(destination) || isPathOnSD(source) || isPathOnSD(destination) || fileDirItems.first().isDirectory) {
                     handleSAFDialog(source) {
-                        startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
+                        startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden, showToasts)
                     }
                 } else {
                     try {
@@ -384,12 +386,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         return newFile
     }
 
-    private fun startCopyMove(files: ArrayList<FileDirItem>, destinationPath: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean, copyHidden: Boolean) {
+    private fun startCopyMove(files: ArrayList<FileDirItem>, destinationPath: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean, copyHidden: Boolean,
+                              showToasts: Boolean) {
         val availableSpace = destinationPath.getAvailableStorageB()
         val sumToCopy = files.sumByLong { it.getProperSize(applicationContext, copyHidden) }
         if (availableSpace == -1L || sumToCopy < availableSpace) {
             checkConflicts(files, destinationPath, 0, LinkedHashMap()) {
-                toast(if (isCopyOperation) R.string.copying else R.string.moving)
+                if (showToasts) {
+                    toast(if (isCopyOperation) R.string.copying else R.string.moving)
+                }
+
                 val pair = Pair(files, destinationPath)
                 CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
             }
@@ -445,10 +451,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     val copyMoveListener = object : CopyMoveListener {
         override fun copySucceeded(copyOnly: Boolean, copiedAll: Boolean, destinationPath: String) {
-            if (copyOnly) {
-                toast(if (copiedAll) R.string.copying_success else R.string.copying_success_partial)
-            } else {
-                toast(if (copiedAll) R.string.moving_success else R.string.moving_success_partial)
+            if (showCopyMoveToasts) {
+                if (copyOnly) {
+                    toast(if (copiedAll) R.string.copying_success else R.string.copying_success_partial)
+                } else {
+                    toast(if (copiedAll) R.string.moving_success else R.string.moving_success_partial)
+                }
             }
 
             copyMoveCallback?.invoke(destinationPath)
@@ -456,7 +464,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         override fun copyFailed() {
-            toast(R.string.copy_move_failed)
+            if (showCopyMoveToasts) {
+                toast(R.string.copy_move_failed)
+            }
+
             copyMoveCallback = null
         }
     }
