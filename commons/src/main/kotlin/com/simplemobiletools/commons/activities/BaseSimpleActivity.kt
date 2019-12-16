@@ -274,6 +274,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
+    // synchronous return value determines only if we are showing the SAF dialog, callback result tells if the SD or OTG permission has been granted
     fun handleSAFDialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
         return if (!packageName.startsWith("com.simplemobiletools")) {
             callback(true)
@@ -322,6 +323,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         handleSAFDialog(destination) {
+            if (!it) {
+                copyMoveListener.copyFailed()
+                return@handleSAFDialog
+            }
+
             showCopyMoveToasts = showToasts
             copyMoveCallback = callback
             var fileCountToCopy = fileDirItems.size
@@ -330,7 +336,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             } else {
                 if (isPathOnOTG(source) || isPathOnOTG(destination) || isPathOnSD(source) || isPathOnSD(destination) || fileDirItems.first().isDirectory) {
                     handleSAFDialog(source) {
-                        startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden, showToasts)
+                        if (it) {
+                            startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden, showToasts)
+                        }
                     }
                 } else {
                     try {

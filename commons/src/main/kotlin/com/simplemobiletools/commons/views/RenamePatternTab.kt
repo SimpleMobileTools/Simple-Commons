@@ -52,6 +52,10 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
 
         activity?.baseConfig?.lastRenamePatternUsed = rename_items_value.value
         activity?.handleSAFDialog(sdFilePath) {
+            if (!it) {
+                return@handleSAFDialog
+            }
+
             ignoreClicks = true
             var currentIncrementalNumber = 1
             var pathsCnt = validPaths.size

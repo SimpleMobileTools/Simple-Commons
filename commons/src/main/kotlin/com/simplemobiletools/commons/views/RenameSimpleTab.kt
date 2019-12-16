@@ -46,6 +46,10 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
         }
 
         activity?.handleSAFDialog(sdFilePath) {
+            if (!it) {
+                return@handleSAFDialog
+            }
+
             ignoreClicks = true
             var pathsCnt = validPaths.size
             for (path in validPaths) {
