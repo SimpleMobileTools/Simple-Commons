@@ -183,43 +183,51 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
         val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
 
-        if (requestCode == OPEN_DOCUMENT_TREE && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-            val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
-            if (isProperSDFolder(resultData.data!!) && isProperPartition) {
-                if (resultData.dataString == baseConfig.OTGTreeUri) {
-                    toast(R.string.sd_card_usb_same)
-                    return
-                }
+        if (requestCode == OPEN_DOCUMENT_TREE) {
+            if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+                val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
+                if (isProperSDFolder(resultData.data!!) && isProperPartition) {
+                    if (resultData.dataString == baseConfig.OTGTreeUri) {
+                        toast(R.string.sd_card_usb_same)
+                        return
+                    }
 
-                saveTreeUri(resultData)
-                funAfterSAFPermission?.invoke(true)
-                funAfterSAFPermission = null
+                    saveTreeUri(resultData)
+                    funAfterSAFPermission?.invoke(true)
+                    funAfterSAFPermission = null
+                } else {
+                    toast(R.string.wrong_root_selected)
+                    val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
+                    startActivityForResult(intent, requestCode)
+                }
             } else {
-                toast(R.string.wrong_root_selected)
-                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
-                startActivityForResult(intent, requestCode)
+                funAfterSAFPermission?.invoke(false)
             }
-        } else if (requestCode == OPEN_DOCUMENT_TREE_OTG && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-            val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
-            if (isProperOTGFolder(resultData.data!!) && isProperPartition) {
-                if (resultData.dataString == baseConfig.treeUri) {
-                    funAfterSAFPermission?.invoke(false)
-                    toast(R.string.sd_card_usb_same)
-                    return
+        } else if (requestCode == OPEN_DOCUMENT_TREE_OTG) {
+            if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+                val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
+                if (isProperOTGFolder(resultData.data!!) && isProperPartition) {
+                    if (resultData.dataString == baseConfig.treeUri) {
+                        funAfterSAFPermission?.invoke(false)
+                        toast(R.string.sd_card_usb_same)
+                        return
+                    }
+                    baseConfig.OTGTreeUri = resultData.dataString!!
+                    baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/').trimEnd('/')
+                    updateOTGPathFromPartition()
+
+                    val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+                    applicationContext.contentResolver.takePersistableUriPermission(resultData.data!!, takeFlags)
+
+                    funAfterSAFPermission?.invoke(true)
+                    funAfterSAFPermission = null
+                } else {
+                    toast(R.string.wrong_root_selected_usb)
+                    val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
+                    startActivityForResult(intent, requestCode)
                 }
-                baseConfig.OTGTreeUri = resultData.dataString!!
-                baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/').trimEnd('/')
-                updateOTGPathFromPartition()
-
-                val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
-                applicationContext.contentResolver.takePersistableUriPermission(resultData.data!!, takeFlags)
-
-                funAfterSAFPermission?.invoke(true)
-                funAfterSAFPermission = null
             } else {
-                toast(R.string.wrong_root_selected_usb)
-                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
-                startActivityForResult(intent, requestCode)
+                funAfterSAFPermission?.invoke(false)
             }
         }
     }
