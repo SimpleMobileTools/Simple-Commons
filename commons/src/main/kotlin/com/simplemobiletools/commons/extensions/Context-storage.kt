@@ -216,7 +216,8 @@ fun Context.getDocumentFile(path: String): DocumentFile? {
     }
 
     return try {
-        var document = DocumentFile.fromTreeUri(applicationContext, Uri.parse(if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri))
+        val treeUri = Uri.parse(if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri)
+        var document = DocumentFile.fromTreeUri(applicationContext, treeUri)
         val parts = relativePath.split("/").filter { it.isNotEmpty() }
         for (part in parts) {
             document = document?.findFile(part)

@@ -719,7 +719,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
 }
 
 fun BaseSimpleActivity.getFileInputStreamSync(path: String): InputStream? {
-    return if (isPathOnOTG(path)) {
+    return if (needsStupidWritePermissions(path)) {
         val fileDocument = getSomeDocumentFile(path)
         applicationContext.contentResolver.openInputStream(fileDocument?.uri!!)
     } else {

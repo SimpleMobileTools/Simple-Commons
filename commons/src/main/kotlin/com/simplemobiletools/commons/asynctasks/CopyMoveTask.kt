@@ -97,7 +97,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
                 copy(file, newFileDirItem)
             } catch (e: Exception) {
-                activity.toast(e.toString())
+                activity.showErrorToast(e)
                 return false
             }
         }
