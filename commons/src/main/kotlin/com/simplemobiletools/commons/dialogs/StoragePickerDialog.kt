@@ -76,17 +76,19 @@ class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, va
             radioGroup.addView(otgButton, layoutParams)
         }
 
-        val rootButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
-        rootButton.apply {
-            id = ID_ROOT
-            text = resources.getString(R.string.root)
-            isChecked = basePath == "/"
-            setOnClickListener { rootPicked() }
-            if (isChecked) {
-                defaultSelectedId = id
+        if (activity.baseConfig.appId.contains("filemanager")) {
+            val rootButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
+            rootButton.apply {
+                id = ID_ROOT
+                text = resources.getString(R.string.root)
+                isChecked = basePath == "/"
+                setOnClickListener { rootPicked() }
+                if (isChecked) {
+                    defaultSelectedId = id
+                }
             }
+            radioGroup.addView(rootButton, layoutParams)
         }
-        radioGroup.addView(rootButton, layoutParams)
 
         mDialog = AlertDialog.Builder(activity)
                 .create().apply {
