@@ -36,10 +36,7 @@ fun Context.getSDCardPath(): String {
         try {
             File("/storage").listFiles()?.forEach {
                 if (SDpattern.matcher(it.name).matches()) {
-                    val potentialPath = "/storage/${it.name}"
-                    if (!potentialPath.equals(Environment.getExternalStorageDirectory().absolutePath, true)) {
-                        sdCardPath = potentialPath
-                    }
+                    sdCardPath = "/storage/${it.name}"
                 }
             }
         } catch (e: Exception) {
@@ -123,13 +120,16 @@ fun Context.humanizePath(path: String): String {
     }
 }
 
-fun Context.getInternalStoragePath() = Environment.getExternalStorageDirectory().absolutePath.trimEnd('/')
+fun Context.getInternalStoragePath() = if (File("/storage/emulated/0").exists()) "/storage/emulated/0" else Environment.getExternalStorageDirectory().absolutePath.trimEnd('/')
 
 fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWith(sdCardPath)
 
 fun Context.isPathOnOTG(path: String) = otgPath.isNotEmpty() && path.startsWith(otgPath)
 
-fun Context.needsStupidWritePermissions(path: String) = isPathOnSD(path) || isPathOnOTG(path)
+// no need to use DocumentFile if an SD card is set as the default storage
+fun Context.needsStupidWritePermissions(path: String) = (isPathOnSD(path) || isPathOnOTG(path)) && !isSDCardSetAsDefaultStorage()
+
+fun Context.isSDCardSetAsDefaultStorage() = sdCardPath.isNotEmpty() && Environment.getExternalStorageDirectory().absolutePath.equals(sdCardPath, true)
 
 fun Context.hasProperStoredTreeUri(isOTG: Boolean): Boolean {
     val uri = if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri
