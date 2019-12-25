@@ -24,29 +24,22 @@ import java.util.regex.Pattern
 // http://stackoverflow.com/a/40582634/1967672
 fun Context.getSDCardPath(): String {
     val directories = getStorageDirectories().filter {
-        it != getInternalStoragePath() && !it.equals("/storage/emulated/0", true) && (baseConfig.OTGPartition.isEmpty() || !it.endsWith(baseConfig.OTGPartition))
+        !it.equals(getInternalStoragePath()) && !it.equals("/storage/emulated/0", true) && (baseConfig.OTGPartition.isEmpty() || !it.endsWith(baseConfig.OTGPartition))
     }
 
     val fullSDpattern = Pattern.compile(SD_OTG_PATTERN)
     var sdCardPath = directories.firstOrNull { fullSDpattern.matcher(it).matches() }
             ?: directories.firstOrNull { !physicalPaths.contains(it.toLowerCase()) } ?: ""
 
-    // on some devices no method retrieved any SD card path, so test if its not sdcard1 by any chance. It happened on an Android 5.1
-    if (sdCardPath.trimEnd('/').isEmpty()) {
-        val file = File("/storage/sdcard1")
-        if (file.exists()) {
-            return file.absolutePath
-        }
-
-        sdCardPath = directories.firstOrNull() ?: ""
-    }
-
     if (sdCardPath.isEmpty()) {
         val SDpattern = Pattern.compile(SD_OTG_SHORT)
         try {
             File("/storage").listFiles()?.forEach {
                 if (SDpattern.matcher(it.name).matches()) {
-                    sdCardPath = "/storage/${it.name}"
+                    val potentialPath = "/storage/${it.name}"
+                    if (!potentialPath.equals(Environment.getExternalStorageDirectory().absolutePath, true)) {
+                        sdCardPath = potentialPath
+                    }
                 }
             }
         } catch (e: Exception) {
