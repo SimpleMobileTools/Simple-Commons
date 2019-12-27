@@ -215,7 +215,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">Eliminar</string>
-    <string name="remove">Remove</string>
+    <string name="remove">Remover</string>
     <string name="rename">Renombrar</string>
     <string name="share">Compartir</string>
     <string name="share_via">Compartir con</string>
@@ -231,7 +231,7 @@
     <string name="undo">Deshacer</string>
     <string name="redo">Rehacer</string>
     <string name="print">Imprimir</string>
-    <string name="create_shortcut">Create shortcut</string>
+    <string name="create_shortcut">Crear atajo</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -251,7 +251,7 @@
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">¿Está seguro de querer continuar con la eliminación?</string>
-    <string name="deletion_confirmation">Estas seguro que quieres borrar %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="deletion_confirmation">¿Estas seguro que quieres borrar %s?</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">¿Estás seguro de que quieres mover %s a la papelera de reciclaje?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">¿Seguro que quieres eliminar este elemento?</string>
     <string name="are_you_sure_recycle_bin">¿Seguro que quieres enviar este elemento a la papelera?</string>
@@ -569,8 +569,8 @@
     <string name="sunday_short">Dom</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">La versión de tu aplicación ya no será actualizada. Por favor, mejora a la versión Pro para recibir nuevas correcciones y otras mejoras.</string>
+    <string name="upgrade_to_pro_long_click">La versión de tu aplicación ya no será actualizada. Por favor, mejora a la versión Pro para recibir nuevas correcciones y otras mejoras clickeando aquí.</string>
     <string name="it_is_free">Es gratis hasta: %s. Si lo descargas hasta entonces, podrás usarlo gratis para siempre..</string>
     <string name="more_info">Más informanción</string>
     <string name="upgrade">Actualizar</string>
@@ -586,15 +586,15 @@
     <string name="invite_friends_underlined"><u>Invitar a amigos</u></string>
     <string name="share_text">Hola, ven y mira %1$s en %2$s</string>
     <string name="invite_via">Invitar con</string>
-    <string name="rate_us_underlined"><u>Vótanos en Play Store</u></string>
-    <string name="rate">Rate</string>
+    <string name="rate_us_underlined"><u>Califícanos en Play Store</u></string>
+    <string name="rate">Puntuar</string>
     <string name="donate">Donar</string>
     <string name="donate_underlined"><u>Donar</u></string>
     <string name="follow_us">Síguenos</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Información adicional</string>
-    <string name="app_version">App version: %s</string>
-    <string name="device_os">Device OS: %s</string>
+    <string name="app_version">Versión de la app: %s</string>
+    <string name="device_os">SO del dispositivo: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hola,<br><br>
@@ -607,7 +607,7 @@
     <string name="before_asking_question_read_faq">Antes de hacer una pregunta, lea las Preguntas más frecuentes. Quizás la solución esté allí.</string>
     <string name="make_sure_latest">También asegúrese de estar utilizando la última versión de la aplicación.</string>
     <string name="read_it">Leer</string>
-    <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
+    <string name="rate_us_prompt">Hola,\n\nparece que ya has usado esta aplicación, y realmente lo apreciamos.\n\nSi te podemos pedir un favor, por favor, puntúanos en Google Play. Eso realmente nos ayudaría mucho.\n\nNo importa lo que decidas, no verás este mensaje de nuevo.\n\n!Gracias!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -640,16 +640,16 @@
     <string name="faq_4_title_commons">No me gustan los colores del widget, ¿puedo cambiarlos?</string>
     <string name="faq_4_text_commons">Sí, al arrastrar un widget en la pantalla de inicio aparece una pantalla de configuración de widgets. Verá cuadrados de colores en la esquina inferior izquierda, solo presione para elegir un nuevo color. Puede usar el control deslizante para ajustar el alfa también.</string>
     <string name="faq_5_title_commons">¿Puedo de alguna manera restaurar archivos borrados?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
+    <string name="faq_5_text_commons">Si realmente fueron eliminados, no puedes. Sin embargo, hay una Papelera de Reciclaje activada por defecto, esta hará que los archivos solo seán movidos a la papelera en lugar de eliminarlos.</string>
     <string name="faq_6_title_commons">El icono del iniciador de aplicaciones desapareció. ¿Que puedo hacer?</string>
     <string name="faq_6_text_commons">Esto se debe a que el iniciador no admite correctamente la personalización de iconos. Intenta lanzar la aplicación a través de Google Play o algún widget, si está disponible.
         Una vez iniciado, simplemente vuelva a establecer el ícono naranja predeterminado #F57C00. Es posible que tenga que volver a instalar la aplicación en el peor de los casos.</string>
     <string name="faq_7_title_commons">El dinero se ha deducido de mi cuenta bancaria, pero no puedo descargar la aplicación. ¿Que puedo hacer?</string>
     <string name="faq_7_text_commons">Los pagos son manejados completamente por Google, su sistema falla de vez en cuando. Simplemente borre el caché de su aplicación Google Play y reinicie su dispositivo, luego intente descargarlo nuevamente.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
+    <string name="faq_8_title_commons">¿Por qué debería actualziar a la versión Pro?</string>
+    <string name="faq_8_text_commons">Ya que la versión de tu aplicación ya no será actualizada, los errores que tiene podrían nunca ser arreglados. Tampoco se añadirán nuevas funciones. Puedes comprar la versión Pro en Google Play por una pequeña cantidad de dinero.
+        Solo pagas una vez, lo que significa que, una vez que la hayas comprado, nunca tendrás que pagar de nuevo. Incluso cuando consigas un nuevo dispositivo. Si no te gusta la versión Pro, puedes solo desisntalarla en un periodo de unas horas y automáticamente recibirás tu dinero de vuelta.
+        Si quieres un rembolso en cualquier otro momento, solo contáctanos en hello@simplemobiletools.com y lo tendrás.</string>
 
     <!-- License -->
     <string name="notice">Esta aplicación usa las siguientes bibliotecas de terceros que hacen mi vida más fácil. Gracias.</string>
