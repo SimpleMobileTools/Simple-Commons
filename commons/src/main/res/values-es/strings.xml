@@ -654,32 +654,32 @@
     <!-- License -->
     <string name="notice">Esta aplicación usa las siguientes bibliotecas de terceros que hacen mi vida más fácil. Gracias.</string>
     <string name="third_party_licences">Licencias de terceros</string>
-    <string name="kotlin_title">Kotlin (Programming language)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
-    <string name="glide_title">Glide (image loading and caching)</string>
-    <string name="picasso_title">Picasso (image loading and caching)</string>
-    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
-    <string name="joda_title">Joda-Time (Java date replacement)</string>
-    <string name="stetho_title">Stetho (debugging databases)</string>
-    <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
-    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
-    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
-    <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="kotlin_title">Kotlin (Lenguaje de programación)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (Visor de imágenes con zoom)</string>
+    <string name="glide_title">Glide (Carga y almacenamiento en caché de imágenes)</string>
+    <string name="picasso_title">Picasso (Carga y almacenamiento en caché de imágenes)</string>
+    <string name="cropper_title">Android Image Cropper (Recortador y rotador de imágenes)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (Desplazamiento de izquierda a derecha)</string>
+    <string name="joda_title">Joda-Time (Remplazo a la fecha de Java)</string>
+    <string name="stetho_title">Stetho (Debugger de bases de datos)</string>
+    <string name="otto_title">Otto (Bus de eventos)</string>
+    <string name="photoview_title">PhotoView (GIFs con zoom)</string>
+    <string name="pattern_title">PatternLockView (Protección con patrón)</string>
+    <string name="reprint_title">Reprint (Protección con huella digital)</string>
+    <string name="gif_drawable_title">Gif Drawable (Carga de GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (Redimensionador de texto)</string>
+    <string name="robolectric_title">Robolectric (Framework de pruebas)</string>
+    <string name="espresso_title">Espresso (Auxiliar de pruebas)</string>
+    <string name="gson_title">Gson (Convertidor de JSON)</string>
+    <string name="leak_canary_title">Leak Canary (Detector de falta de memoria)</string>
     <string name="number_picker_title">Selector de número (selector de número personalizable)</string>
-    <string name="exoplayer_title">ExoPlayer (video player)</string>
-    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
-    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
-    <string name="filters_title">Android Photo Filters (image filters)</string>
-    <string name="gesture_views_title">Gesture Views (zoomable images)</string>
+    <string name="exoplayer_title">ExoPlayer (Reproductor de video)</string>
+    <string name="panorama_view_title">VR Panorama View (Mostrador de panoramas)</string>
+    <string name="sanselan_title">Apache Sanselan (Lector de metadatos de imagen)</string>
+    <string name="filters_title">Android Photo Filters (Filtros de imagen)</string>
+    <string name="gesture_views_title">Gesture Views (Imágenes con zoom)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">OBSOLETO: Esta versión de la aplicación ya no es mantenida, obtén la versión Pro en https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">No olvides que si desisntalas cualquier aplicación de paga dentro de un periodo de 2 horas, automáticamente recibirás un rembolso. Si quieres un rembolso en cualquier otro momento, solo contáctanos en hello@simplemobiletools.com y lo recibirás. Eso hace que sea fácil probarlo :)</string>
 </resources>
