@@ -67,7 +67,7 @@
     <string name="simple_renaming">Basit yeniden adlandırma</string>
     <string name="pattern_renaming">Desen</string>
     <string name="string_to_add">Eklenecek dize</string>
-    <string name="rename_date_time_pattern">%Y - yıl\n%M - ay\n%D - gün\n%h - saat\n%m - dakika\n%s - saniye\n%i - number increasing from 1</string>
+    <string name="rename_date_time_pattern">%Y - yıl\n%M - ay\n%D - gün\n%h - saat\n%m - dakika\n%s - saniye\n%i - 1\'den artan sayı</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopyala</string>
@@ -569,8 +569,8 @@
     <string name="sunday_short">Paz</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">Uygulama sürümünüz artık güncellenmeyecek. Yeni düzeltmeler ve diğer iyileştirmeleri almak için lütfen Pro sürümüne yükseltin.</string>
+    <string name="upgrade_to_pro_long_click">Uygulama sürümünüz artık güncellenmeyecek. Buraya tıklayarak yeni düzeltmeler ve diğer iyileştirmeleri almak için lütfen Pro sürümüne yükseltin.</string>
     <string name="it_is_free">Şu süre kadar ücretsiz: %s. O zamana kadar indirirseniz, sonsuza dek ücretsiz olarak kullanabileceksiniz.</string>
     <string name="more_info">Daha fazla bilgi</string>
     <string name="upgrade">Yükselt</string>
@@ -605,7 +605,7 @@
     <string name="purchase">Satın al</string>
     <string name="update_thank_you">Lütfen Basit Teşekkürler\'i son sürüme güncelleyin</string>
     <string name="before_asking_question_read_faq">Bir soru sormadan önce, lütfen uygulama ayarlarını kontrol edin ve önce Sık Sorulan Sorular bölümünü okuyun. Belki çözüm oradadır.</string>
-    <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
+    <string name="make_sure_latest">Ayrıca uygulamanın en son sürümünü kullandığınızdan emin olun.</string>
     <string name="read_it">Oku</string>
     <string name="rate_us_prompt">Merhaba,\n\nzaten bir süredir bu uygulamayı kullanıyor gibi görünüyorsunuz ve gerçekten takdir ediyoruz.\n\nSizden bir iyilik isteyebilirsek, lütfen bizi Google Play\'de oylayın. Bu bize gerçekten çok yardımcı olacak.\n\nNasıl karar verirseniz verin, bu mesajı bir daha görmeyeceksiniz.\n\nTeşekkürler!</string>
 
@@ -645,10 +645,10 @@
         Başlatıldıktan sonra, sadece varsayılan turuncu simgeyi #F57C00 geri ayarlayın. En kötü durumda uygulamayı yeniden yüklemeniz gerekebilir.</string>
     <string name="faq_7_title_commons">Para banka hesabımdan düşüldü, ancak uygulamayı indiremiyorum. Ne yapabilirim?</string>
     <string name="faq_7_text_commons">Ödemeler tamamen Google tarafından işlenir, zaman zaman sistemleri aksar. Sadece Google Play uygulama önbelleğinizi temizleyin ve cihazınızı yeniden başlatın, ardından yeniden indirmeyi deneyin.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
+    <string name="faq_8_title_commons">Neden Pro sürümüne yükseltmeliyim?</string>
+    <string name="faq_8_text_commons">Uygulama sürümünüz artık güncellenmediğinden, tespit ettiğiniz hatalar asla düzeltilmeyecektir. Ayrıca yeni işlevler eklenmeyecektir. Pro sürümünü Google Play\'den az miktarda para karşılığında satın alabilirsiniz.
+        Bir kerelik ödeme, yani bir kez satın aldığınızda, bir daha asla ödeme yapmanız gerekmeyeceği anlamına gelir. Yeni bir cihaz aldıktan sonra bile. Pro sürümünü beğenmediyseniz, birkaç saat içinde kaldırabilirsiniz ve paranızı otomatik olarak geri alırsınız.
+        Daha sonra istediğiniz zaman geri ödeme almak isterseniz, hello@simplemobiletools.com adresinden bizimle iletişime geçmeniz yeterlidir.</string>
 
     <!-- License -->
     <string name="notice">Bu uygulama hayatımı kolaylaştırmak için aşağıdaki üçüncü taraf kitaplıklarını kullanır. Teşekkürler.</string>
