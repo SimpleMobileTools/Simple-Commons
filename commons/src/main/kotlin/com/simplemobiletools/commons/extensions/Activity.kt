@@ -4,10 +4,8 @@ import android.app.Activity
 import android.content.*
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
-import android.graphics.drawable.ColorDrawable
 import android.media.RingtoneManager
 import android.net.Uri
-import android.os.Environment
 import android.os.TransactionTooLargeException
 import android.provider.DocumentsContract
 import android.provider.MediaStore
@@ -839,7 +837,9 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
         getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(baseConfig.textColor)
         getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(baseConfig.textColor)
         getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(baseConfig.textColor)
-        window?.setBackgroundDrawable(ColorDrawable(baseConfig.backgroundColor))
+
+        val bgDrawable = resources.getColoredDrawableWithColor(R.drawable.dialog_bg, baseConfig.backgroundColor)
+        window?.setBackgroundDrawable(bgDrawable)
     }
     callback?.invoke()
 }
