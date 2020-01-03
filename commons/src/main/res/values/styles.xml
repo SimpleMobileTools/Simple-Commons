@@ -87,10 +87,12 @@
 
     <style name="LightActionBarItems" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="colorAccent">@color/white</item>
+        <item name="android:textColorHint">@color/hint_white</item>
     </style>
 
     <style name="DarkActionBarItems" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="colorAccent">@color/dark_grey</item>
+        <item name="android:textColorHint">@color/hint_black</item>
     </style>
 
     <!-- App themes -->

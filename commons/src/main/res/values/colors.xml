@@ -10,6 +10,9 @@
     <color name="gradient_grey_start">#CC000000</color>
     <color name="dark_grey">#FF333333</color>
 
+    <color name="hint_white">#99FFFFFF</color>
+    <color name="hint_black">#66000000</color>
+
     <!-- Color Customization -->
     <color name="theme_light_text_color">@color/md_grey_600</color>
     <color name="theme_light_background_color">@color/md_grey_white</color>
