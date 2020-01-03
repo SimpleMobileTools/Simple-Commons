@@ -184,7 +184,7 @@
     <string name="default_color">Predefinito</string>
     <string name="change_color">Cambia colore</string>
     <string name="theme">Tema</string>
-    <string name="changing_color_description">Modificando un colore, il tema diventerà personale</string>
+    <string name="changing_color_description">Modificando un colore, il tema diventerà personalizzato</string>
     <string name="save">Salva</string>
     <string name="discard">Scarta</string>
     <string name="undo_changes">Annulla modifiche</string>
@@ -206,7 +206,7 @@
     <string name="solarized">Solarizzato</string>
     <string name="dark_red">Rosso scuro</string>
     <string name="black_white">Bianco e nero</string>
-    <string name="custom">Personale</string>
+    <string name="custom">Personalizzato</string>
     <string name="shared">Condiviso</string>
 
     <!-- What's new -->
@@ -569,8 +569,8 @@
     <string name="sunday_short">Dom</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">La versione della tua app non verrà più aggiornata. Aggiorna alla versione Pro per ricevere nuove correzioni ed altri miglioramenti.</string>
+    <string name="upgrade_to_pro_long_click">La versione della tua app non verrà più aggiornata. Aggiorna alla versione Pro per ricevere nuove correzioni ed altri miglioramenti cliccando qui.</string>
     <string name="it_is_free">È gratuita fino a: %s. Se la si scarica entro quella data, essa sarà gratuita per sempre.</string>
     <string name="more_info">Maggiori informazioni</string>
     <string name="upgrade">Aggiorna</string>
@@ -605,7 +605,7 @@
     <string name="purchase">Acquista</string>
     <string name="update_thank_you">Aggiornare Semplice Ringraziamento all\'ultima versione</string>
     <string name="before_asking_question_read_faq">Prima di fare una domanda, controlla le impostazioni dell\'app e le domande frequenti. Magari si trova la soluzione.</string>
-    <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
+    <string name="make_sure_latest">Assicurati anche che stai usando la versione più recente dell\'app.</string>
     <string name="read_it">Leggi</string>
     <string name="rate_us_prompt">Ciao,\n\nstai utilizzando questa app da un po\' di tempo e ne siamo veramente grati..\n\nValutaci su Google Play se vuoi farci un favore, ci aiuterà tantissimo.\n\nNon è importante cosa sceglierai, non vedrai più questo messaggio una volta ancora.\n\nGrazie!</string>
 
@@ -646,10 +646,10 @@
 	Una volta avviata, impostare l\'icona predefinita col colore arancione #F57C00. Potrebbe essere necessario reinstallare l\'applicazione se proprio non funziona.</string>
     <string name="faq_7_title_commons">I soldi sono stati detratti dal mio conto corrente, ma non posso scaricare l\'app. Cosa posso fare?</string>
     <string name="faq_7_text_commons">I pagamenti sono gestiti totalmente da Google, il loro sistema si guasta di tanto in tanto. Svuota la cache dell\'app Google Play e riavvia il tuo dispositivo, poi riprova a scaricare.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
+    <string name="faq_8_title_commons">Perchè dovrei aggiornare alla versione Pro?</string>
+    <string name="faq_8_text_commons">Dato che la tua versione non verrà più aggiornata, gli errori che potresti trovare non verranno mai corretti. Non ci saranno inoltre nuove funzioni aggiuntive. Puoi acquistare la versione Pro su Google Play per una piccola cifra.
+        Si paga una sola volta, ciò significa che quando la acquisti non dovrai mai più pagare. Neanche quando userai un nuovo dispositivo. Se non ti piacerà la versione Pro, ti basta disinstallarla entro alcune ore e otterrai automaticamente un rimborso.
+        Se vuoi chiedere un rimborso in un momento successivo, contattaci su hello@simplemobiletools.com e lo otterrai.</string>
 
     <!-- License -->
     <string name="notice">Questa app usa le seguenti librerie di terze parti per semplificarmi la vita. Vi ringrazio.</string>
