@@ -67,7 +67,7 @@
     <string name="simple_renaming">Egyszerű átnevezés</string>
     <string name="pattern_renaming">Minta</string>
     <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%É - év\\n%H - hónap\\n%N - nap\\n%ó - óra\\n%p - perc\\n%mp - másodperc\n%i - number increasing from 1</string>
+    <string name="rename_date_time_pattern">%É - év\n%H - hónap\n%N - nap\n%ó - óra\n%p - perc\n%mp - másodperc\n%i - number increasing from 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Másolás</string>
@@ -606,7 +606,7 @@
     <string name="before_asking_question_read_faq">Mielőtt kérdezne, ellenőrizze az alkalmazás beállításait, és először olvassa el a Gyakran Ismételt Kérdéseket. Talán ott van a megoldás.</string>
     <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
     <string name="read_it">Olvassa el</string>
-    <string name="rate_us_prompt">Hello,\n\nÚgy tűnik elég régen használja ezt az alkalmazést és ezt mi igazán nagyra értékeljük.\\n\\nHa megkérhetjük egy szívességre, kérjük, értékeljen minket a Google Playen. Ez igazán segítene nekünk.\\n\\nFüggetlenül attól, hogy hogyan dönt, nem fogja látni ezt az üzenetet újra.\\n\\nKöszönjük!</string>
+    <string name="rate_us_prompt">Hello,\n\nÚgy tűnik elég régen használja ezt az alkalmazést és ezt mi igazán nagyra értékeljük.\n\nHa megkérhetjük egy szívességre, kérjük, értékeljen minket a Google Playen. Ez igazán segítene nekünk.\n\nFüggetlenül attól, hogy hogyan dönt, nem fogja látni ezt az üzenetet újra.\n\nKöszönjük!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
