@@ -67,7 +67,7 @@
     <string name="simple_renaming">Egyszerű átnevezés</string>
     <string name="pattern_renaming">Minta</string>
     <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%Y - év\n%M - hónap\n%D - nap\n%h - óra\n%m - perc\n%s - másodperc\n%i - 1-től növekvő szám</string>
+    <string name="rename_date_time_pattern">%É - év\\n%H - hónap\\n%N - nap\\n%ó - óra\\n%p - perc\\n%mp - másodperc\n%i - number increasing from 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Másolás</string>
@@ -250,7 +250,7 @@
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Biztosan folytatja a törlést?</string>
-    <string name="deletion_confirmation">Biztos törölni akarja ezt: %s?</string>        <!-- Are you sure you want to delete 5 items? -->
+    <string name="deletion_confirmation">Biztos törölni akarja ezt: %s?</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Biztos át akarja helyezni %s fájlt a Lomtárba?</string>     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Biztos törölni akarja ezt az elemet?</string>
     <string name="are_you_sure_recycle_bin">Biztos át akarja helyezni ezt az elemet a Lomtárba?</string>
