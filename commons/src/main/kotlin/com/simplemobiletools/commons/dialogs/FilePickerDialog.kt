@@ -34,6 +34,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                        var showHidden: Boolean = false,
                        val showFAB: Boolean = false,
                        val canAddShowHiddenButton: Boolean = false,
+                       val forceShowRoot: Boolean = false,
                        val callback: (pickedPath: String) -> Unit) : Breadcrumbs.BreadcrumbsListener {
 
     private var mFirstUpdate = true
@@ -231,7 +232,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
     override fun breadcrumbClicked(id: Int) {
         if (id == 0) {
-            StoragePickerDialog(activity, currPath) {
+            StoragePickerDialog(activity, currPath, forceShowRoot) {
                 currPath = it
                 tryUpdateItems()
             }
