@@ -150,7 +150,7 @@
     <string name="wrong_root_selected">Rossz mappát választott ki, válassza ki az SD kártya gyökérmappáját</string>
     <string name="sd_card_usb_same">Az SD kártya és az USB eszköz elérési útvonala nem lehet azonos</string>
     <string name="app_on_sd_card">Úgy tűnik, hogy az alkalmazás az SD kártyára van telepítve és emiatt az alkalmazás widgetek nem érhetők el. Nem láthatók a rendelkezésre álló widgetek listáján.
-Ez egy rendszerkorlátozás. Ha használni szeretné a widgeteket, akkor át kell helyeznie az alkalmazást a belső tárterületre.</string>
+        Ez egy rendszerkorlátozás. Ha használni szeretné a widgeteket, akkor át kell helyeznie az alkalmazást a belső tárterületre.</string>
 
     <!-- File properties -->
     <string name="properties">Tulajdonságok</string>
@@ -246,14 +246,12 @@ Ez egy rendszerkorlátozás. Ha használni szeretné a widgeteket, akkor át kel
     <string name="ascending">Növekvő</string>
     <string name="descending">Csökkenő</string>
     <string name="use_for_this_folder">Csak ehhez a mappához használja</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">Rendezze a numerikus részeket az aktuális értékkel</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Biztosan folytatja a törlést?</string>
-    <string name="deletion_confirmation">Biztos törölni akarja ezt: %s?</string>
-    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Biztos át akarja helyezni %s fájlt a Lomtárba?</string>
-    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">Biztos törölni akarja ezt: %s?</string>        <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Biztos át akarja helyezni %s fájlt a Lomtárba?</string>     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Biztos törölni akarja ezt az elemet?</string>
     <string name="are_you_sure_recycle_bin">Biztos át akarja helyezni ezt az elemet a Lomtárba?</string>
     <string name="do_not_ask_again">Ne mutassa újra ebben a menetben</string>
@@ -297,6 +295,7 @@ Ez egy rendszerkorlátozás. Ha használni szeretné a widgeteket, akkor át kel
     <string name="minutes_raw">perc</string>
     <string name="hours_raw">óra</string>
     <string name="days_raw">nap</string>
+
     <plurals name="seconds">
         <item quantity="one">%d másodperc</item>
         <item quantity="other">%d másodperc</item>
@@ -596,12 +595,12 @@ Ez egy rendszerkorlátozás. Ha használni szeretné a widgeteket, akkor át kel
     <string name="app_version">Alkalmazás verzió: %s</string>
     <string name="device_os">Eszköz OS: %s</string>
     <string name="donate_please">
-		<![CDATA[
+        <![CDATA[
             Hello,<br><br>
             remélem tetszett az alkalmazás. Nem tartalmaz hirdetéseket. Kérem támogasd a fejlesztést a <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> megvásárlásával. Utána ez a párbeszédablak sem látszik újra.<br><br>
             Köszönöm!
         ]]>
-	</string>
+    </string>
     <string name="purchase">Vásárlás</string>
     <string name="update_thank_you">Kérjük frissítse a Simple Thank You alkalmazást a legújabb verzióra</string>
     <string name="before_asking_question_read_faq">Mielőtt kérdezne, ellenőrizze az alkalmazás beállításait, és először olvassa el a Gyakran Ismételt Kérdéseket. Talán ott van a megoldás.</string>
@@ -611,20 +610,20 @@ Ez egy rendszerkorlátozás. Ha használni szeretné a widgeteket, akkor át kel
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
-		<![CDATA[
+        <![CDATA[
             Szia!<br><br>
             csak tájékoztatni szeretnélek, hogy megjelent egy új alkalmazás:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             A címre kattintva lehet letölteni.<br><br>
             Köszönöm
         ]]>
-	</string>
+    </string>
 
     <string name="sideloaded_app">
-		<![CDATA[
+        <![CDATA[
             Úgy tűnik megsérült az alkalmazás. Kérjük töltse le az eredeti verziót <a href="%s">innen</a>.
         ]]>
-	</string>
+    </string>
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Gyakran Ismételt Kérdések</string>
