@@ -38,11 +38,11 @@
 
     <!-- Filters -->
     <string name="filter">Filtrar</string>
-    <string name="no_items_found">No se encontraron artículos.</string>
+    <string name="no_items_found">No se encontraron elementos</string>
     <string name="change_filter">Cambiar filtro</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Se requiere permiso de almacenamiento</string>
+    <string name="no_storage_permissions">Se requiere permiso de Almacenamiento</string>
     <string name="no_contacts_permission">Se requiere permiso de Contactos</string>
     <string name="no_camera_permissions">Se requiere permiso para la Cámara</string>
     <string name="no_audio_permissions">Se requiere permiso de Audio</string>
@@ -67,7 +67,7 @@
     <string name="simple_renaming">Renombrado simple</string>
     <string name="pattern_renaming">Modelo</string>
     <string name="string_to_add">Cadena para agregar</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second\n%i - número aumentando desde 1</string>
+    <string name="rename_date_time_pattern">%Y - Año\n%M - Mes\n%D - Día\n%h - Hora\n%m - Minuto\n%s - Segundo\n%i - número aumentando desde 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
@@ -94,8 +94,8 @@
     <string name="saving">Guardando…</string>
     <string name="could_not_create_folder">No se puede crear la carpeta %s</string>
     <string name="could_not_create_file">No se puede crear el fichero %s</string>
-    <string name="no_new_items">No new items have been found</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_new_items">No se han encontrado elementos nuevos</string>
+    <string name="no_space">El destino no tiene suficiente espacio libre.\nRequerido: %1$s, Disponible: %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Crear nueva</string>
@@ -109,7 +109,7 @@
 
     <!-- File operation conflicts -->
     <string name="file_already_exists">El archivo \"%s\" ya existe</string>
-    <string name="file_already_exists_overwrite">El archivo \"%s\" ya existe. Sobreescribir?</string>
+    <string name="file_already_exists_overwrite">El archivo \"%s\" ya existe. ¿Sobreescribir?</string>
     <string name="folder_already_exists">La carpeta \"%s\" ya existe</string>
     <string name="merge">Fusionar</string>
     <string name="keep_both">Mantener ambos</string>
@@ -184,14 +184,14 @@
     <string name="default_color">Por defecto</string>
     <string name="change_color">Cambiar de color</string>
     <string name="theme">Tema</string>
-    <string name="changing_color_description">Cambiar un color hará que cambie a tema personalizado</string>
+    <string name="changing_color_description">Cambiar un color hará que cambie al tema personalizado</string>
     <string name="save">Guardar</string>
     <string name="discard">Deshacer</string>
     <string name="undo_changes">Deshacer cambios</string>
     <string name="undo_changes_confirmation">¿Seguro que quiere deshacer los cambios?</string>
     <string name="save_before_closing">Tiene cambios sin aplicar. ¿Guardar antes de salir?</string>
     <string name="apply_to_all_apps">Aplicar colores a todas las aplicaciones Simple Apps</string>
-    <string name="app_icon_color_warning">ADVERTENCIA: Algunos lanzadores no manejan correctamente la personalización del icono de la aplicación. En caso de que el icono desaparezca, intente iniciar la aplicación a través de Google Play o algún widget, si está disponible.
+    <string name="app_icon_color_warning">ADVERTENCIA: Algunos launchers no manejan correctamente la personalización del icono de la aplicación. En caso de que el icono desaparezca, intente iniciar la aplicación a través de Google Play o algún widget, si está disponible.
         Una vez iniciado, simplemente vuelva a establecer el ícono naranja predeterminado #F57C00. Es posible que tengas que volver a instalar la aplicación en el peor de los casos.</string>
     <string name="share_colors_success">Colores actualizados correctamente. Se ha añadido un nuevo tema llamado \'Shared\', Por favor utilicelo para actualizar los colores de todas las aplicaciones en el futuro.</string>
     <string name="purchase_thank_you">
@@ -203,9 +203,9 @@
     <!-- Themes -->
     <string name="light_theme">Claro</string>
     <string name="dark_theme">Oscuro</string>
-    <string name="solarized">Solarized</string>
+    <string name="solarized">Solarizado</string>
     <string name="dark_red">Rojo Oscuro</string>
-    <string name="black_white">Blanco &amp; Negro</string>
+    <string name="black_white">Blanco y Negro</string>
     <string name="custom">Personalizado</string>
     <string name="shared">Compartido</string>
 
@@ -247,7 +247,7 @@
     <string name="ascending">Ascendente</string>
     <string name="descending">Descendente</string>
     <string name="use_for_this_folder">Sólo para esta carpeta</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">Ordenar partes numéricas por su valor</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">¿Está seguro de querer continuar con la eliminación?</string>
