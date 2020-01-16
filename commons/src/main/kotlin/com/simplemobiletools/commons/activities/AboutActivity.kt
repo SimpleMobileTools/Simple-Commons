@@ -9,6 +9,7 @@ import android.text.method.LinkMovementMethod
 import android.view.Menu
 import android.view.View
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
@@ -76,7 +77,7 @@ class AboutActivity : BaseSimpleActivity() {
                 about_email.movementMethod = LinkMovementMethod.getInstance()
                 about_email.setOnClickListener(null)
                 val msg = "${getString(R.string.before_asking_question_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
-                ConfirmationDialog(this, msg, 0, R.string.read_it, R.string.skip) {
+                ConfirmationDialog(this, msg, 0, R.string.read_faq, R.string.skip) {
                     about_faq_label.performClick()
                 }
             }
@@ -146,10 +147,22 @@ class AboutActivity : BaseSimpleActivity() {
             about_rate_us.visibility = View.GONE
         } else {
             about_rate_us.setOnClickListener {
-                try {
-                    launchViewIntent("market://details?id=${packageName.removeSuffix(".debug")}")
-                } catch (ignored: ActivityNotFoundException) {
-                    launchViewIntent(getStoreUrl())
+                if (baseConfig.wasBeforeRateShown) {
+                    try {
+                        launchViewIntent("market://details?id=${packageName.removeSuffix(".debug")}")
+                    } catch (ignored: ActivityNotFoundException) {
+                        launchViewIntent(getStoreUrl())
+                    }
+                } else {
+                    baseConfig.wasBeforeRateShown = true
+                    val msg = "${getString(R.string.before_rate_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
+                    ConfirmationAdvancedDialog(this, msg, 0, R.string.read_faq, R.string.skip) {
+                        if (it) {
+                            about_faq_label.performClick()
+                        } else {
+                            about_rate_us.performClick()
+                        }
+                    }
                 }
             }
         }
