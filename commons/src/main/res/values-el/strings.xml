@@ -67,7 +67,7 @@
     <string name="simple_renaming">Απλή μετονομασία</string>
     <string name="pattern_renaming">Μοτίβο</string>
     <string name="string_to_add">Συμβολοσειρά για προσθήκη</string>
-    <string name="rename_date_time_pattern">%Y - έτος\n%M - μήνας\n%D - ημέρα\n%h - ώρα\n%m - λεπτό\n%s - δευτ/το\n%i - number increasing from 1</string>
+    <string name="rename_date_time_pattern">%Y - έτος\n%M - μήνας\n%D - ημέρα\n%h - ώρα\n%m - λεπτό\n%s - δευτ/το\n%i - αύξηση αριθμού από 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Αντιγραφή</string>
@@ -196,7 +196,7 @@
     <string name="share_colors_success">Τα χρώματα ενημερώθηκαν με επιτυχία. Ένα νέο θέμα που ονομάζεται  \"Κοινόχρηστο\" έχει προστεθεί, παρακαλούμε να χρησιμοποιήστε το για την ενημέρωση των χρωμάτων όλων των εφαρμ. στο μέλλον.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Παρακαλώ αγοράστε <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> για να ξεκλειδώσετε αυτή τη λειτουργία και να υποστηρίξει την ανάπτυξη. Ευχαριστώ!
+            Παρακαλώ αγοράστε <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> για να ξεκλειδώσετε αυτή τη λειτουργία για να υποστηρίξετε την ανάπτυξη. Ευχαριστώ!
         ]]>
     </string>
 
@@ -605,8 +605,10 @@
     <string name="purchase">Αγορά</string>
     <string name="update_thank_you">Παρακαλώ ενημερώστε την Simple Thank You στην τελευταία έκδοση</string>
     <string name="before_asking_question_read_faq">Πριν κάνετε μια ερώτηση, ελέγξτε τις ρυθμίσεις της εφαρμογής και διαβάστε πρώτα τις Συχνές Ερωτήσεις. Ίσως η λύση είναι εκεί.</string>
+    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
     <string name="make_sure_latest">Επίσης, βεβαιωθείτε ότι χρησιμοποιείτε την τελευταία έκδοση της εφαρμογής.</string>
     <string name="read_it">Διαβάστε τις</string>
+    <string name="read_faq">Read FAQ</string>
     <string name="rate_us_prompt">Γειά σας,\n\nφαίνεται ότι χρησιμοποιείτε αυτήν την εφαρμογή για αρκετό καιρό ήδη, και το εκτιμούμε πραγματικά.\n\nΑν μπορούμε να σας ζητήσουμε μια χάρη, παρακαλούμε αξιολογήστε μας στο Google Play. Αυτό θα μας βοηθούσε πολύ.\n\nΑνεξάρτητα τι αποφασίσατε, δεν θα εμφανιστεί ξανά αυτό το μήνυμα.\n\nΕυχαριστώ!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->

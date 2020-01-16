@@ -67,7 +67,7 @@
     <string name="simple_renaming">Reanomenat simple</string>
     <string name="pattern_renaming">Patró</string>
     <string name="string_to_add">Cadena per afegir</string>
-    <string name="rename_date_time_pattern">%Y - any\n%M - mes\n%D - dia\n%h - hora\n%m - minut\n%s - segon\n%i - number increasing from 1</string>
+    <string name="rename_date_time_pattern">%Y - any\n%M - mes\n%D - dia\n%h - hora\n%m - minut\n%s - segon\n%i - nombre augmentant des de 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
@@ -605,8 +605,10 @@
     <string name="purchase">Comprar</string>
     <string name="update_thank_you">Si us plau, actualitzeu Simple Thank You a la darrera versió</string>
     <string name="before_asking_question_read_faq">Abans de fer una pregunta, llegiu les Preguntes més freqüents. Potser la solució hi és.</string>
+    <string name="before_rate_read_faq">Abans de fer-nos una valoració, comproveu la configuració de l\'aplicació i llegiu les preguntes més freqüents. Si teniu problemes, potser la solució hi és.</string>
     <string name="make_sure_latest">Assegureu-vos també que utilitzeu la versió més recent de l\'aplicació.</string>
     <string name="read_it">Llegiu</string>
+    <string name="read_faq">Llegir Preguntes Freqüents</string>
     <string name="rate_us_prompt">Hola,\n\nsembla que esteu utilitzant aquesta aplicació ja des de fa molt de temps, i ho agraïm realment.\n\nSi us demanem un favor, cal que ens puntueu a Google Play. En realitat, això ens ajudarà molt.\n\nNo importa que decidiu, no tornareu a veure aquest missatge.\n\nGràcies</string>
 
     <!-- New app (do not translate anything on the 4th line) -->

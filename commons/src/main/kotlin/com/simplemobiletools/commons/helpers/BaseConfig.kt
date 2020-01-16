@@ -305,6 +305,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(WAS_BEFORE_ASKING_SHOWN, false)
         set(wasBeforeAskingShown) = prefs.edit().putBoolean(WAS_BEFORE_ASKING_SHOWN, wasBeforeAskingShown).apply()
 
+    var wasBeforeRateShown: Boolean
+        get() = prefs.getBoolean(WAS_BEFORE_RATE_SHOWN, false)
+        set(wasBeforeRateShown) = prefs.edit().putBoolean(WAS_BEFORE_RATE_SHOWN, wasBeforeRateShown).apply()
+
     var wasInitialUpgradeToProShown: Boolean
         get() = prefs.getBoolean(WAS_INITIAL_UPGRADE_TO_PRO_SHOWN, false)
         set(wasInitialUpgradeToProShown) = prefs.edit().putBoolean(WAS_INITIAL_UPGRADE_TO_PRO_SHOWN, wasInitialUpgradeToProShown).apply()
@@ -359,4 +363,12 @@ open class BaseConfig(val context: Context) {
     var lastRenamePatternUsed: String
         get() = prefs.getString(LAST_RENAME_PATTERN_USED, "")!!
         set(lastRenamePatternUsed) = prefs.edit().putString(LAST_RENAME_PATTERN_USED, lastRenamePatternUsed).apply()
+
+    var lastExportedSettingsFolder: String
+        get() = prefs.getString(LAST_EXPORTED_SETTINGS_FOLDER, "")!!
+        set(lastExportedSettingsFolder) = prefs.edit().putString(LAST_EXPORTED_SETTINGS_FOLDER, lastExportedSettingsFolder).apply()
+
+    var lastExportedSettingsFile: String
+        get() = prefs.getString(LAST_EXPORTED_SETTINGS_FILE, "")!!
+        set(lastExportedSettingsFile) = prefs.edit().putString(LAST_EXPORTED_SETTINGS_FILE, lastExportedSettingsFile).apply()
 }

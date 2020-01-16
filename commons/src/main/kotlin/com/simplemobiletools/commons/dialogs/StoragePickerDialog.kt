@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.dialog_radio_group.view.*
  * @param callback an anonymous function
  *
  */
-class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, val callback: (pickedPath: String) -> Unit) {
+class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, forceShowRoot: Boolean, val callback: (pickedPath: String) -> Unit) {
     private val ID_INTERNAL = 1
     private val ID_SD = 2
     private val ID_OTG = 3
@@ -76,17 +76,20 @@ class StoragePickerDialog(val activity: BaseSimpleActivity, currPath: String, va
             radioGroup.addView(otgButton, layoutParams)
         }
 
-        val rootButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
-        rootButton.apply {
-            id = ID_ROOT
-            text = resources.getString(R.string.root)
-            isChecked = basePath == "/"
-            setOnClickListener { rootPicked() }
-            if (isChecked) {
-                defaultSelectedId = id
+        // allow for example excluding the root folder at the gallery
+        if (activity.baseConfig.appId.contains("filemanager") || forceShowRoot) {
+            val rootButton = inflater.inflate(R.layout.radio_button, null) as RadioButton
+            rootButton.apply {
+                id = ID_ROOT
+                text = resources.getString(R.string.root)
+                isChecked = basePath == "/"
+                setOnClickListener { rootPicked() }
+                if (isChecked) {
+                    defaultSelectedId = id
+                }
             }
+            radioGroup.addView(rootButton, layoutParams)
         }
-        radioGroup.addView(rootButton, layoutParams)
 
         mDialog = AlertDialog.Builder(activity)
                 .create().apply {

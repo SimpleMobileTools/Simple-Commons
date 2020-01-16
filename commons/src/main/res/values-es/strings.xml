@@ -38,11 +38,11 @@
 
     <!-- Filters -->
     <string name="filter">Filtrar</string>
-    <string name="no_items_found">No se encontraron artículos.</string>
+    <string name="no_items_found">No se encontraron elementos</string>
     <string name="change_filter">Cambiar filtro</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Se requiere permiso de almacenamiento</string>
+    <string name="no_storage_permissions">Se requiere permiso de Almacenamiento</string>
     <string name="no_contacts_permission">Se requiere permiso de Contactos</string>
     <string name="no_camera_permissions">Se requiere permiso para la Cámara</string>
     <string name="no_audio_permissions">Se requiere permiso de Audio</string>
@@ -67,7 +67,7 @@
     <string name="simple_renaming">Renombrado simple</string>
     <string name="pattern_renaming">Modelo</string>
     <string name="string_to_add">Cadena para agregar</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second\n%i - number increasing from 1</string>
+    <string name="rename_date_time_pattern">%Y - Año\n%M - Mes\n%D - Día\n%h - Hora\n%m - Minuto\n%s - Segundo\n%i - número aumentando desde 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
@@ -94,8 +94,8 @@
     <string name="saving">Guardando…</string>
     <string name="could_not_create_folder">No se puede crear la carpeta %s</string>
     <string name="could_not_create_file">No se puede crear el fichero %s</string>
-    <string name="no_new_items">No new items have been found</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_new_items">No se han encontrado elementos nuevos</string>
+    <string name="no_space">El destino no tiene suficiente espacio libre.\nRequerido: %1$s, Disponible: %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Crear nueva</string>
@@ -109,7 +109,7 @@
 
     <!-- File operation conflicts -->
     <string name="file_already_exists">El archivo \"%s\" ya existe</string>
-    <string name="file_already_exists_overwrite">El archivo \"%s\" ya existe. Sobreescribir?</string>
+    <string name="file_already_exists_overwrite">El archivo \"%s\" ya existe. ¿Sobreescribir?</string>
     <string name="folder_already_exists">La carpeta \"%s\" ya existe</string>
     <string name="merge">Fusionar</string>
     <string name="keep_both">Mantener ambos</string>
@@ -184,14 +184,14 @@
     <string name="default_color">Por defecto</string>
     <string name="change_color">Cambiar de color</string>
     <string name="theme">Tema</string>
-    <string name="changing_color_description">Cambiar un color hará que cambie a tema personalizado</string>
+    <string name="changing_color_description">Cambiar un color hará que cambie al tema personalizado</string>
     <string name="save">Guardar</string>
     <string name="discard">Deshacer</string>
     <string name="undo_changes">Deshacer cambios</string>
     <string name="undo_changes_confirmation">¿Seguro que quiere deshacer los cambios?</string>
     <string name="save_before_closing">Tiene cambios sin aplicar. ¿Guardar antes de salir?</string>
     <string name="apply_to_all_apps">Aplicar colores a todas las aplicaciones Simple Apps</string>
-    <string name="app_icon_color_warning">ADVERTENCIA: Algunos lanzadores no manejan correctamente la personalización del icono de la aplicación. En caso de que el icono desaparezca, intente iniciar la aplicación a través de Google Play o algún widget, si está disponible.
+    <string name="app_icon_color_warning">ADVERTENCIA: Algunos launchers no manejan correctamente la personalización del icono de la aplicación. En caso de que el icono desaparezca, intente iniciar la aplicación a través de Google Play o algún widget, si está disponible.
         Una vez iniciado, simplemente vuelva a establecer el ícono naranja predeterminado #F57C00. Es posible que tengas que volver a instalar la aplicación en el peor de los casos.</string>
     <string name="share_colors_success">Colores actualizados correctamente. Se ha añadido un nuevo tema llamado \'Shared\', Por favor utilicelo para actualizar los colores de todas las aplicaciones en el futuro.</string>
     <string name="purchase_thank_you">
@@ -203,9 +203,9 @@
     <!-- Themes -->
     <string name="light_theme">Claro</string>
     <string name="dark_theme">Oscuro</string>
-    <string name="solarized">Solarized</string>
+    <string name="solarized">Solarizado</string>
     <string name="dark_red">Rojo Oscuro</string>
-    <string name="black_white">Blanco &amp; Negro</string>
+    <string name="black_white">Blanco y Negro</string>
     <string name="custom">Personalizado</string>
     <string name="shared">Compartido</string>
 
@@ -215,7 +215,7 @@
 
     <!-- Actionbar items -->
     <string name="delete">Eliminar</string>
-    <string name="remove">Remove</string>
+    <string name="remove">Remover</string>
     <string name="rename">Renombrar</string>
     <string name="share">Compartir</string>
     <string name="share_via">Compartir con</string>
@@ -231,7 +231,7 @@
     <string name="undo">Deshacer</string>
     <string name="redo">Rehacer</string>
     <string name="print">Imprimir</string>
-    <string name="create_shortcut">Create shortcut</string>
+    <string name="create_shortcut">Crear atajo</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -247,11 +247,11 @@
     <string name="ascending">Ascendente</string>
     <string name="descending">Descendente</string>
     <string name="use_for_this_folder">Sólo para esta carpeta</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">Ordenar partes numéricas por su valor</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">¿Está seguro de querer continuar con la eliminación?</string>
-    <string name="deletion_confirmation">Estas seguro que quieres borrar %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="deletion_confirmation">¿Estas seguro que quieres borrar %s?</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">¿Estás seguro de que quieres mover %s a la papelera de reciclaje?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">¿Seguro que quieres eliminar este elemento?</string>
     <string name="are_you_sure_recycle_bin">¿Seguro que quieres enviar este elemento a la papelera?</string>
@@ -569,8 +569,8 @@
     <string name="sunday_short">Dom</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">La versión de tu aplicación ya no será actualizada. Por favor, mejora a la versión Pro para recibir nuevas correcciones y otras mejoras.</string>
+    <string name="upgrade_to_pro_long_click">La versión de tu aplicación ya no será actualizada. Por favor, mejora a la versión Pro para recibir nuevas correcciones y otras mejoras clickeando aquí.</string>
     <string name="it_is_free">Es gratis hasta: %s. Si lo descargas hasta entonces, podrás usarlo gratis para siempre..</string>
     <string name="more_info">Más informanción</string>
     <string name="upgrade">Actualizar</string>
@@ -586,15 +586,15 @@
     <string name="invite_friends_underlined"><u>Invitar a amigos</u></string>
     <string name="share_text">Hola, ven y mira %1$s en %2$s</string>
     <string name="invite_via">Invitar con</string>
-    <string name="rate_us_underlined"><u>Vótanos en Play Store</u></string>
-    <string name="rate">Rate</string>
+    <string name="rate_us_underlined"><u>Califícanos en Play Store</u></string>
+    <string name="rate">Puntuar</string>
     <string name="donate">Donar</string>
     <string name="donate_underlined"><u>Donar</u></string>
     <string name="follow_us">Síguenos</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Información adicional</string>
-    <string name="app_version">App version: %s</string>
-    <string name="device_os">Device OS: %s</string>
+    <string name="app_version">Versión de la app: %s</string>
+    <string name="device_os">SO del dispositivo: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hola,<br><br>
@@ -605,9 +605,11 @@
     <string name="purchase">Comprar</string>
     <string name="update_thank_you">Por favor, actualice Simple Tank You a la última versión</string>
     <string name="before_asking_question_read_faq">Antes de hacer una pregunta, lea las Preguntas más frecuentes. Quizás la solución esté allí.</string>
+    <string name="before_rate_read_faq">Antes de calificarnos, verifique la configuración de la aplicación y lea primero las Preguntas frecuentes. Si tiene algún problema, tal vez la solución esté ahí.</string>
     <string name="make_sure_latest">También asegúrese de estar utilizando la última versión de la aplicación.</string>
     <string name="read_it">Leer</string>
-    <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
+    <string name="read_faq">Leer Preguntas Frecuentes</string>
+    <string name="rate_us_prompt">Hola,\n\nparece que ya has usado esta aplicación, y realmente lo apreciamos.\n\nSi te podemos pedir un favor, por favor, puntúanos en Google Play. Eso realmente nos ayudaría mucho.\n\nNo importa lo que decidas, no verás este mensaje de nuevo.\n\n!Gracias!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -640,46 +642,46 @@
     <string name="faq_4_title_commons">No me gustan los colores del widget, ¿puedo cambiarlos?</string>
     <string name="faq_4_text_commons">Sí, al arrastrar un widget en la pantalla de inicio aparece una pantalla de configuración de widgets. Verá cuadrados de colores en la esquina inferior izquierda, solo presione para elegir un nuevo color. Puede usar el control deslizante para ajustar el alfa también.</string>
     <string name="faq_5_title_commons">¿Puedo de alguna manera restaurar archivos borrados?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
+    <string name="faq_5_text_commons">Si realmente fueron eliminados, no puedes. Sin embargo, hay una Papelera de Reciclaje activada por defecto, esta hará que los archivos solo seán movidos a la papelera en lugar de eliminarlos.</string>
     <string name="faq_6_title_commons">El icono del iniciador de aplicaciones desapareció. ¿Que puedo hacer?</string>
     <string name="faq_6_text_commons">Esto se debe a que el iniciador no admite correctamente la personalización de iconos. Intenta lanzar la aplicación a través de Google Play o algún widget, si está disponible.
         Una vez iniciado, simplemente vuelva a establecer el ícono naranja predeterminado #F57C00. Es posible que tenga que volver a instalar la aplicación en el peor de los casos.</string>
     <string name="faq_7_title_commons">El dinero se ha deducido de mi cuenta bancaria, pero no puedo descargar la aplicación. ¿Que puedo hacer?</string>
     <string name="faq_7_text_commons">Los pagos son manejados completamente por Google, su sistema falla de vez en cuando. Simplemente borre el caché de su aplicación Google Play y reinicie su dispositivo, luego intente descargarlo nuevamente.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
+    <string name="faq_8_title_commons">¿Por qué debería actualziar a la versión Pro?</string>
+    <string name="faq_8_text_commons">Ya que la versión de tu aplicación ya no será actualizada, los errores que tiene podrían nunca ser arreglados. Tampoco se añadirán nuevas funciones. Puedes comprar la versión Pro en Google Play por una pequeña cantidad de dinero.
+        Solo pagas una vez, lo que significa que, una vez que la hayas comprado, nunca tendrás que pagar de nuevo. Incluso cuando consigas un nuevo dispositivo. Si no te gusta la versión Pro, puedes solo desisntalarla en un periodo de unas horas y automáticamente recibirás tu dinero de vuelta.
+        Si quieres un rembolso en cualquier otro momento, solo contáctanos en hello@simplemobiletools.com y lo tendrás.</string>
 
     <!-- License -->
     <string name="notice">Esta aplicación usa las siguientes bibliotecas de terceros que hacen mi vida más fácil. Gracias.</string>
     <string name="third_party_licences">Licencias de terceros</string>
-    <string name="kotlin_title">Kotlin (Programming language)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
-    <string name="glide_title">Glide (image loading and caching)</string>
-    <string name="picasso_title">Picasso (image loading and caching)</string>
-    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
-    <string name="joda_title">Joda-Time (Java date replacement)</string>
-    <string name="stetho_title">Stetho (debugging databases)</string>
-    <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
-    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
-    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
-    <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
+    <string name="kotlin_title">Kotlin (Lenguaje de programación)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (Visor de imágenes con zoom)</string>
+    <string name="glide_title">Glide (Carga y almacenamiento en caché de imágenes)</string>
+    <string name="picasso_title">Picasso (Carga y almacenamiento en caché de imágenes)</string>
+    <string name="cropper_title">Android Image Cropper (Recortador y rotador de imágenes)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (Desplazamiento de izquierda a derecha)</string>
+    <string name="joda_title">Joda-Time (Remplazo a la fecha de Java)</string>
+    <string name="stetho_title">Stetho (Debugger de bases de datos)</string>
+    <string name="otto_title">Otto (Bus de eventos)</string>
+    <string name="photoview_title">PhotoView (GIFs con zoom)</string>
+    <string name="pattern_title">PatternLockView (Protección con patrón)</string>
+    <string name="reprint_title">Reprint (Protección con huella digital)</string>
+    <string name="gif_drawable_title">Gif Drawable (Carga de GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (Redimensionador de texto)</string>
+    <string name="robolectric_title">Robolectric (Framework de pruebas)</string>
+    <string name="espresso_title">Espresso (Auxiliar de pruebas)</string>
+    <string name="gson_title">Gson (Convertidor de JSON)</string>
+    <string name="leak_canary_title">Leak Canary (Detector de falta de memoria)</string>
     <string name="number_picker_title">Selector de número (selector de número personalizable)</string>
-    <string name="exoplayer_title">ExoPlayer (video player)</string>
-    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
-    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
-    <string name="filters_title">Android Photo Filters (image filters)</string>
-    <string name="gesture_views_title">Gesture Views (zoomable images)</string>
+    <string name="exoplayer_title">ExoPlayer (Reproductor de video)</string>
+    <string name="panorama_view_title">VR Panorama View (Mostrador de panoramas)</string>
+    <string name="sanselan_title">Apache Sanselan (Lector de metadatos de imagen)</string>
+    <string name="filters_title">Android Photo Filters (Filtros de imagen)</string>
+    <string name="gesture_views_title">Gesture Views (Imágenes con zoom)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">OBSOLETO: Esta versión de la aplicación ya no es mantenida, obtén la versión Pro en https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">No olvides que si desisntalas cualquier aplicación de paga dentro de un periodo de 2 horas, automáticamente recibirás un rembolso. Si quieres un rembolso en cualquier otro momento, solo contáctanos en hello@simplemobiletools.com y lo recibirás. Eso hace que sea fácil probarlo :)</string>
 </resources>

@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.*
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
-import android.graphics.drawable.ColorDrawable
 import android.media.RingtoneManager
 import android.net.Uri
 import android.os.TransactionTooLargeException
@@ -97,7 +96,7 @@ fun Activity.isAppInstalledOnSDCard(): Boolean = try {
 }
 
 fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
-    return if (isPathOnSD(path) && (baseConfig.treeUri.isEmpty() || !hasProperStoredTreeUri(false))) {
+    return if (isPathOnSD(path) && !isSDCardSetAsDefaultStorage() && (baseConfig.treeUri.isEmpty() || !hasProperStoredTreeUri(false))) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
                 WritePermissionDialog(this, false) {
@@ -205,7 +204,7 @@ fun Activity.sharePathsIntent(paths: ArrayList<String>, applicationId: String) {
             val uriPaths = ArrayList<String>()
             val newUris = paths.map {
                 val uri = getFinalUriFromPath(it, applicationId) ?: return@ensureBackgroundThread
-                uriPaths.add(uri.path)
+                uriPaths.add(uri.path!!)
                 uri
             } as ArrayList<Uri>
 
@@ -392,6 +391,10 @@ fun BaseSimpleActivity.deleteFoldersBg(folders: ArrayList<FileDirItem>, deleteMe
     }
 
     handleSAFDialog(needPermissionForPath) {
+        if (!it) {
+            return@handleSAFDialog
+        }
+
         folders.forEachIndexed { index, folder ->
             deleteFolderBg(folder, deleteMediaOnly) {
                 if (it)
@@ -454,6 +457,10 @@ fun BaseSimpleActivity.deleteFilesBg(files: ArrayList<FileDirItem>, allowDeleteF
 
     var wasSuccess = false
     handleSAFDialog(files[0].path) {
+        if (!it) {
+            return@handleSAFDialog
+        }
+
         files.forEachIndexed { index, file ->
             deleteFileBg(file, allowDeleteFolder) {
                 if (it) {
@@ -498,7 +505,9 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
         if (!fileDeleted) {
             if (needsStupidWritePermissions(path)) {
                 handleSAFDialog(path) {
-                    trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
+                    if (it) {
+                        trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
+                    }
                 }
             }
         }
@@ -539,6 +548,10 @@ fun Activity.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = nul
 fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((success: Boolean) -> Unit)? = null) {
     if (needsStupidWritePermissions(newPath)) {
         handleSAFDialog(newPath) {
+            if (!it) {
+                return@handleSAFDialog
+            }
+
             val document = getSomeDocumentFile(oldPath)
             if (document == null || (File(oldPath).isDirectory != document.isDirectory)) {
                 runOnUiThread {
@@ -618,6 +631,10 @@ fun Activity.hideKeyboard(view: View) {
 fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreatingNewFile: Boolean = false, callback: (outputStream: OutputStream?) -> Unit) {
     if (needsStupidWritePermissions(fileDirItem.path)) {
         handleSAFDialog(fileDirItem.path) {
+            if (!it) {
+                return@handleSAFDialog
+            }
+
             var document = getDocumentFile(fileDirItem.path)
             if (document == null && allowCreatingNewFile) {
                 document = getDocumentFile(fileDirItem.getParentPath())
@@ -684,8 +701,13 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
             return null
         }
 
-        val newDocument = documentFile.createFile(mimeType, path.getFilenameFromPath())
-        applicationContext.contentResolver.openOutputStream(newDocument!!.uri)
+        try {
+            val newDocument = documentFile.createFile(mimeType, path.getFilenameFromPath())
+            applicationContext.contentResolver.openOutputStream(newDocument!!.uri)
+        } catch (e: Exception) {
+            showErrorToast(e)
+            null
+        }
     } else {
         if (targetFile.parentFile?.exists() == false) {
             targetFile.parentFile.mkdirs()
@@ -701,9 +723,9 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
 }
 
 fun BaseSimpleActivity.getFileInputStreamSync(path: String): InputStream? {
-    return if (isPathOnOTG(path)) {
+    return if (needsStupidWritePermissions(path)) {
         val fileDocument = getSomeDocumentFile(path)
-        applicationContext.contentResolver.openInputStream(fileDocument?.uri)
+        applicationContext.contentResolver.openInputStream(fileDocument?.uri!!)
     } else {
         FileInputStream(File(path))
     }
@@ -778,7 +800,7 @@ fun Activity.updateSharedTheme(sharedTheme: SharedTheme) {
 
 fun Activity.copyToClipboard(text: String) {
     val clip = ClipData.newPlainText(getString(R.string.simple_commons), text)
-    (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).primaryClip = clip
+    (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).setPrimaryClip(clip)
     toast(R.string.value_copied_to_clipboard)
 }
 
@@ -815,7 +837,9 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
         getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(baseConfig.textColor)
         getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(baseConfig.textColor)
         getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(baseConfig.textColor)
-        window?.setBackgroundDrawable(ColorDrawable(baseConfig.backgroundColor))
+
+        val bgDrawable = resources.getColoredDrawableWithColor(R.drawable.dialog_bg, baseConfig.backgroundColor)
+        window?.setBackgroundDrawable(bgDrawable)
     }
     callback?.invoke()
 }

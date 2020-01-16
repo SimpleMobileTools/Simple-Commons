@@ -47,6 +47,10 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     abstract fun getItemKeyPosition(key: Int): Int
 
+    abstract fun onActionModeCreated()
+
+    abstract fun onActionModeDestroyed()
+
     protected fun isOneItemSelected() = selectedKeys.size == 1
 
     init {
@@ -72,6 +76,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                     }
                 }
                 activity.menuInflater.inflate(getActionMenuId(), menu)
+                onActionModeCreated()
                 return true
             }
 
@@ -93,6 +98,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                 actBarTextView?.text = ""
                 actMode = null
                 lastLongPressedItem = -1
+                onActionModeDestroyed()
             }
         }
     }

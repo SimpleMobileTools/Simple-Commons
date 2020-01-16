@@ -23,7 +23,7 @@ class ColorPickerSquare(context: Context, attrs: AttributeSet) : View(context, a
         val dalam = LinearGradient(0f, 0f, measuredWidth.toFloat(), 0f, Color.WHITE, rgb, TileMode.CLAMP)
         val shader = ComposeShader(luar, dalam, PorterDuff.Mode.MULTIPLY)
         paint!!.shader = shader
-        canvas.drawRect(0f, 0f, measuredWidth.toFloat(), measuredHeight.toFloat(), paint)
+        canvas.drawRect(0f, 0f, measuredWidth.toFloat(), measuredHeight.toFloat(), paint!!)
     }
 
     fun setHue(hue: Float) {

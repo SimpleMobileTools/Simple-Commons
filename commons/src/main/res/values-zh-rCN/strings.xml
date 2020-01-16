@@ -252,7 +252,7 @@
     <string name="move_to_recycle_bin_confirmation">你确定要移动 %s到回收站？</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">你确定要删除此项目吗？</string>
     <string name="are_you_sure_recycle_bin">你确定要移动此项目到回收站吗？</string>
-    <string name="do_not_ask_again">不再提醒</string>
+    <string name="do_not_ask_again">重启前不再提醒</string>
     <string name="yes">是</string>
     <string name="no">否</string>
     <string name="maybe">也许</string>
@@ -572,8 +572,10 @@
     <string name="purchase">购买</string>
     <string name="update_thank_you">请更新 Simple Thank You 到最新版本</string>
     <string name="before_asking_question_read_faq">提问之前，请先打开应用设置并阅读常见问题。也许你可以在那里找到答案。</string>
+    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
     <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
     <string name="read_it">阅读</string>
+    <string name="read_faq">Read FAQ</string>
     <string name="rate_us_prompt">您好，\n\n看来您使用这个应用已经有一段时间了，我们真的很感激。\n\n如果您喜欢，请在Google Play上为我们评分。这对我们很有帮助。\n\n无论你做何决定，你都不会再看到这个消息了。\n\n感谢！</string>
 
     <!-- New app (do not translate anything on the 4th line) -->

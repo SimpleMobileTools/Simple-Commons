@@ -67,7 +67,7 @@
     <string name="simple_renaming">Ubah nama</string>
     <string name="pattern_renaming">Pola</string>
     <string name="string_to_add">Kata untuk ditambahkan</string>
-    <string name="rename_date_time_pattern">%Y - tahun\n%M - bulan\n%D - hari\n%h - jam\n%m - menit\n%s - detik\n%i - number increasing from 1</string>
+    <string name="rename_date_time_pattern">%Y - tahun\n%M - bulan\n%D - hari\n%h - jam\n%m - menit\n%s - detik\n%i - angka bertambah mulai dari 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Salin</string>
@@ -572,8 +572,10 @@
     <string name="purchase">Beli</string>
     <string name="update_thank_you">Silakan perbarui Simple Thank You ke versi terbaru</string>
     <string name="before_asking_question_read_faq">Sebelum anda bertanya, silakan periksa pengaturan aplikasi dan baca Pertanyaan yang Paling Sering Ditanyakan terlebih dahulu. Mungkin solusi yang anda cari ada di sana.</string>
+    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
     <string name="make_sure_latest">Pastikan juga anda menggunakan versi aplikasi terbaru.</string>
     <string name="read_it">Baca</string>
+    <string name="read_faq">Read FAQ</string>
     <string name="rate_us_prompt">Halo,\n\nsepertinya anda sudah menggunakan aplikasi ini cukup lama, dan kami sangat menghargainya.\n\nJika anda tidak keberatan, silakan nilai kami di Google Play. Itu akan sangat membantu kami.\n\nApapun keputusan anda, anda tidak akan melihat pesan ini lagi.\n\nTerima kasih!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->

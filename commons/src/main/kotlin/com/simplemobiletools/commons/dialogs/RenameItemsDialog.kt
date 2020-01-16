@@ -47,6 +47,10 @@ class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<S
                             }
 
                             activity.handleSAFDialog(sdFilePath) {
+                                if (!it) {
+                                    return@handleSAFDialog
+                                }
+
                                 ignoreClicks = true
                                 var pathsCnt = validPaths.size
                                 for (path in validPaths) {

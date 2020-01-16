@@ -25,7 +25,7 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
             }
 
             rename_item_name.setText(name)
-            rename_item_path.text = activity.humanizePath(path.getParentPath())
+            rename_item_path.text = "${activity.humanizePath(path.getParentPath()).trimEnd('/')}/"
         }
 
         AlertDialog.Builder(activity)

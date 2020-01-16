@@ -52,6 +52,10 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
 
     override fun getItemSelectionKey(position: Int) = fileDirItems[position].path.hashCode()
 
+    override fun onActionModeCreated() {}
+
+    override fun onActionModeDestroyed() {}
+
     override fun onViewRecycled(holder: ViewHolder) {
         super.onViewRecycled(holder)
         if (!activity.isDestroyed && !activity.isFinishing) {

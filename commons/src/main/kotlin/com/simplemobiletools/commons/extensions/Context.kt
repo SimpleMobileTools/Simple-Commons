@@ -308,10 +308,10 @@ fun Context.getFilenameFromUri(uri: Uri): String {
 }
 
 fun Context.getMimeTypeFromUri(uri: Uri): String {
-    var mimetype = uri.path.getMimeType()
+    var mimetype = uri.path?.getMimeType() ?: ""
     if (mimetype.isEmpty()) {
         try {
-            mimetype = contentResolver.getType(uri)
+            mimetype = contentResolver.getType(uri) ?: ""
         } catch (e: IllegalStateException) {
         }
     }
@@ -539,7 +539,7 @@ fun Context.grantReadUriPermission(uriString: String) {
 
 fun Context.storeNewYourAlarmSound(resultData: Intent): AlarmSound {
     val uri = resultData.data
-    var filename = getFilenameFromUri(uri)
+    var filename = getFilenameFromUri(uri!!)
     if (filename.isEmpty()) {
         filename = getString(R.string.alarm)
     }
@@ -569,7 +569,7 @@ fun Context.saveImageRotation(path: String, degrees: Int): Boolean {
         val documentFile = getSomeDocumentFile(path)
         if (documentFile != null) {
             val parcelFileDescriptor = contentResolver.openFileDescriptor(documentFile.uri, "rw")
-            val fileDescriptor = parcelFileDescriptor.fileDescriptor
+            val fileDescriptor = parcelFileDescriptor!!.fileDescriptor
             saveExifRotation(ExifInterface(fileDescriptor), degrees)
             return true
         }

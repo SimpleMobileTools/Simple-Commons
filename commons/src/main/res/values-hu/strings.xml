@@ -63,11 +63,11 @@
     <string name="extension_cannot_be_empty">A kiterjesztés nem lehet üres</string>
     <string name="source_file_doesnt_exist">A forrás fájl %s nem létezik</string>
     <string name="prepend_filenames">Fájlnevek megadása</string>
-    <string name="append_filenames">Fájlnevek csatolása</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
+    <string name="append_filenames">Fájlnevek hozzáadása</string>
+    <string name="simple_renaming">Egyszerű átnevezés</string>
+    <string name="pattern_renaming">Minta</string>
     <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%É - év\\n%H - hónap\\n%N - nap\\n%ó - óra\\n%p - perc\\n%mp - másodperc\n%i - number increasing from 1</string>
+    <string name="rename_date_time_pattern">%É - év\n%H - hónap\n%N - nap\n%ó - óra\n%p - perc\n%mp - másodperc\n%i - number increasing from 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Másolás</string>
@@ -169,8 +169,8 @@
     <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Dal címe</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="gps_coordinates">GPS koordináták</string>
+    <string name="altitude">Magasság</string>
 
     <!-- Color customization -->
     <string name="background_color">Háttérszín</string>
@@ -180,8 +180,8 @@
     <string name="app_icon_color">Alkalmazás ikon színe</string>
     <string name="bottom_navigation_bar_color">Alsó navigációs sáv színe</string>
     <string name="restore_defaults">Alapértelmezések visszaállítása</string>
-    <string name="use_default">Use default</string>
-    <string name="default_color">Default</string>
+    <string name="use_default">Alapértelmezett használata</string>
+    <string name="default_color">Alapértelmezett</string>
     <string name="change_color">Szín változtatása</string>
     <string name="theme">Téma</string>
     <string name="changing_color_description">A szín megváltoztatásával átvált az Egyéni témára</string>
@@ -230,7 +230,7 @@
     <string name="undo">Visszavonás</string>
     <string name="redo">Mégis</string>
     <string name="print">Nyomtatás</string>
-    <string name="create_shortcut">Parancsikon létrehozása</string>
+    <string name="create_shortcut">Parancsikon készítése</string>
 
     <!-- Sorting -->
     <string name="sort_by">Rendezés</string>
@@ -283,8 +283,8 @@
     <string name="go_to_settings">Ugrás a Beállításokhoz</string>
     <string name="protection_setup_successfully">A jelszó beállítása sikerült. Ha elfelejteti, akkor újra kell telepíteni az alkalmazást.</string>
     <string name="fingerprint_setup_successfully">A védelem beállítása sikerült. Az újraindítással kapcsolatos problémák esetén telepítse újra az alkalmazást.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
+    <string name="lock_folder">Mappa zárolása</string>
+    <string name="unlock_folder">Mappa zárolás feloldása</string>
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
 
     <!-- Times -->
@@ -454,7 +454,7 @@
     <string name="skip_delete_confirmation">Mindig ugorja át a törlés megerősítése kérdést</string>
     <string name="enable_pull_to_refresh">Felülről lefelé húzásos frissítés engedélyezése</string>
     <string name="use_24_hour_time_format">24 órás idő formátum használata</string>
-    <string name="change_date_and_time_format">Dátum és időformátum módosítása</string>
+    <string name="change_date_and_time_format">Dátum és idő formátum módosítása</string>
     <string name="sunday_first">A hét kezdete vasárnap</string>
     <string name="widgets">Widgetek</string>
     <string name="use_same_snooze">Mindig ugyanazt a szundi időt használja</string>
@@ -478,7 +478,7 @@
     <string name="saving_label">Mentés</string>
     <string name="startup">Indítás</string>
     <string name="text">Szöveg</string>
-    <string name="migrating">Átköltöztetés</string>
+    <string name="migrating">Áttelepítés</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Fájl visszaállítása</string>
@@ -595,22 +595,24 @@
     <string name="app_version">Alkalmazás verzió: %s</string>
     <string name="device_os">Eszköz OS: %s</string>
     <string name="donate_please">
-		<![CDATA[
+        <![CDATA[
             Hello,<br><br>
             remélem tetszett az alkalmazás. Nem tartalmaz hirdetéseket. Kérem támogasd a fejlesztést a <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> megvásárlásával. Utána ez a párbeszédablak sem látszik újra.<br><br>
             Köszönöm!
         ]]>
-	</string>
+    </string>
     <string name="purchase">Vásárlás</string>
     <string name="update_thank_you">Kérjük frissítse a Simple Thank You alkalmazást a legújabb verzióra</string>
     <string name="before_asking_question_read_faq">Mielőtt kérdezne, ellenőrizze az alkalmazás beállításait, és először olvassa el a Gyakran Ismételt Kérdéseket. Talán ott van a megoldás.</string>
+    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
     <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
     <string name="read_it">Olvassa el</string>
-    <string name="rate_us_prompt">Hello,\\n\\Úgy tűnik elég régen használja ezt az alkalmazést és ezt mi igazán nagyra értékeljük.\\n\\nHa megkérhetjük egy szívességre, kérjük, értékeljen minket a Google Playen. Ez igazán segítene nekünk.\\n\\nFüggetlenül attól, hogy hogyan dönt, nem fogja látni ezt az üzenetet újra.\\n\\nKöszönjük!</string>
+    <string name="read_faq">Read FAQ</string>
+    <string name="rate_us_prompt">Hello,\n\nÚgy tűnik elég régen használja ezt az alkalmazést és ezt mi igazán nagyra értékeljük.\n\nHa megkérhetjük egy szívességre, kérjük, értékeljen minket a Google Playen. Ez igazán segítene nekünk.\n\nFüggetlenül attól, hogy hogyan dönt, nem fogja látni ezt az üzenetet újra.\n\nKöszönjük!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
-		<![CDATA[
+        <![CDATA[
             Szia!<br><br>
             csak tájékoztatni szeretnélek, hogy megjelent egy új alkalmazás:<br><br>
             <a href="%1$s">%2$s</a><br><br>

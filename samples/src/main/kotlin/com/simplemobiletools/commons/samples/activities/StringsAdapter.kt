@@ -29,6 +29,10 @@ class StringsAdapter(activity: BaseSimpleActivity, var strings: MutableList<Stri
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.list_item, parent)
 
+    override fun onActionModeCreated() {}
+
+    override fun onActionModeDestroyed() {}
+
     override fun onBindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int) {
         val item = strings[position]
         holder.bindView(item, true, true) { itemView, layoutPosition ->

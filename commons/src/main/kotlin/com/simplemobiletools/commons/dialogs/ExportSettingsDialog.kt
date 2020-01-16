@@ -8,7 +8,13 @@ import kotlinx.android.synthetic.main.dialog_export_settings.view.*
 
 class ExportSettingsDialog(val activity: BaseSimpleActivity, val defaultFilename: String, callback: (path: String) -> Unit) {
     init {
-        var folder = activity.internalStoragePath
+        val lastUsedFolder = activity.baseConfig.lastExportedSettingsFolder
+        var folder = if (lastUsedFolder.isNotEmpty() && activity.getDoesFilePathExist(lastUsedFolder)) {
+            lastUsedFolder
+        } else {
+            activity.internalStoragePath
+        }
+
         val view = activity.layoutInflater.inflate(R.layout.dialog_export_settings, null).apply {
             export_settings_filename.setText(defaultFilename)
             export_settings_path.text = activity.humanizePath(folder)
@@ -32,12 +38,14 @@ class ExportSettingsDialog(val activity: BaseSimpleActivity, val defaultFilename
                                 return@setOnClickListener
                             }
 
+                            activity.baseConfig.lastExportedSettingsFile = filename
                             val newPath = "${folder.trimEnd('/')}/$filename"
                             if (!newPath.getFilenameFromPath().isAValidFilename()) {
                                 activity.toast(R.string.filename_invalid_characters)
                                 return@setOnClickListener
                             }
 
+                            activity.baseConfig.lastExportedSettingsFolder = folder
                             if (activity.getDoesFilePathExist(newPath)) {
                                 val title = String.format(activity.getString(R.string.file_already_exists_overwrite), newPath.getFilenameFromPath())
                                 ConfirmationDialog(activity, title) {

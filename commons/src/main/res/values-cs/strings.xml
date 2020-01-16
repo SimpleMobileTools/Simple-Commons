@@ -64,10 +64,10 @@
     <string name="source_file_doesnt_exist">Zdrojový soubor %s neexistuje</string>
     <string name="prepend_filenames">Přidat před názvy souborů</string>
     <string name="append_filenames">Přidat za názvy souborů</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
-    <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second\n%i - number increasing from 1</string>
+    <string name="simple_renaming">Jednoduché přejmenování</string>
+    <string name="pattern_renaming">Vzor</string>
+    <string name="string_to_add">Přidat řetězec</string>
+    <string name="rename_date_time_pattern">%Y - rok\n%M - měsíc\n%D - den\n%h - hodina\n%m - minuta\n%s - sekunda\n%i - číslo narůstající od 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopírovat</string>
@@ -94,8 +94,8 @@
     <string name="saving">Ukládání…</string>
     <string name="could_not_create_folder">Nepodařilo se vytvořit složku %s</string>
     <string name="could_not_create_file">Nepodařilo se vytvořit soubor %s</string>
-    <string name="no_new_items">No new items have been found</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_new_items">Nenalezeny žádné nové položky</string>
+    <string name="no_space">V cíli není dostatek místa.\nPotřeba %1$s, k dispozici %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Nový</string>
@@ -172,8 +172,8 @@
     <string name="camera">Fotoaparát</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Název skladby</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="gps_coordinates">GPS souřadnice</string>
+    <string name="altitude">Nadmořská výška</string>
 
     <!-- Color customization -->
     <string name="background_color">Barva pozadí</string>
@@ -183,18 +183,18 @@
     <string name="app_icon_color">Barva ikony aplikace</string>
     <string name="bottom_navigation_bar_color">Barva spodní navigační lišty</string>
     <string name="restore_defaults">Obnovit výchozí</string>
-    <string name="use_default">Use default</string>
-    <string name="default_color">Default</string>
+    <string name="use_default">Použít výchozí</string>
+    <string name="default_color">Výchozí</string>
     <string name="change_color">Změnit barvu</string>
     <string name="theme">Motiv</string>
     <string name="changing_color_description">Změna barvy změní motiv na Vlastní</string>
     <string name="save">Uložit</string>
     <string name="discard">Zahodit</string>
-    <string name="undo_changes">Vrátit změny zpět</string>
-    <string name="undo_changes_confirmation">Opravdu chcete vrátit změny zpět?</string>
+    <string name="undo_changes">Vrátit změny</string>
+    <string name="undo_changes_confirmation">Opravdu chcete vrátit změny?</string>
     <string name="save_before_closing">Máte neuložené změny. Uložit před zavřením?</string>
     <string name="apply_to_all_apps">Použít barvy na všechny Simple Apps</string>
-    <string name="app_icon_color_warning">UPOZORNĚNÍ: Některé launchers nepodporují změnu ikony. V případě, že ikona aplikace zmizí, zkuste ji spustit skrze Obchod Google Play, nebo nějaký widget, pokud je dostupný.
+    <string name="app_icon_color_warning">UPOZORNĚNÍ: Některé spouštěče nepodporují změnu ikony. V případě, že ikona aplikace zmizí, zkuste ji spustit skrze Obchod Google Play, nebo některý widget, pokud je dostupný.
                 Po spuštění aplikace zkuste nastavit původní oranžovou barvu ikony #F57C00. V nejhorším případě budete muset aplikaci přeinstalovat.</string>
     <string name="share_colors_success">Barvy úspěšně aktualizovány. Byl přidán nový motiv \'Sdílená\', v budoucnu jej prosím použijte pro úpravu barev u všech Jednoduchých aplikací zárověň.</string>
     <string name="purchase_thank_you">
@@ -234,7 +234,7 @@
     <string name="undo">Zpět</string>
     <string name="redo">Znovu</string>
     <string name="print">Tisk</string>
-    <string name="create_shortcut">Create shortcut</string>
+    <string name="create_shortcut">Vytvořit zkratku</string>
 
     <!-- Sorting -->
     <string name="sort_by">Seřadit dle</string>
@@ -250,7 +250,7 @@
     <string name="ascending">Vzestupně</string>
     <string name="descending">Sestupně</string>
     <string name="use_for_this_folder">Použít pouze pro tuto složku</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">Řadit části s čísly podle hodnoty</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Opravdu chcete smazat dané soubory/složky?</string>
@@ -288,9 +288,9 @@
     <string name="go_to_settings">Přejít do Nastavení</string>
     <string name="protection_setup_successfully">Heslo bylo úspěšně nastaveno. Pokud jej zapomenete, prosím přeinstalujte aplikaci.</string>
     <string name="fingerprint_setup_successfully">Ochrana byla úspěšně nastavena. V případě problémů s její změnou prosím přeinstalujte aplikaci.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="lock_folder">Uzamknout složku</string>
+    <string name="unlock_folder">Odemknout složku</string>
+    <string name="lock_folder_notice">Tato ochrana funguje pouze v této aplikaci, nemá za cíl nahradit šifrování fungující napříč systémem.</string>
 
     <!-- Times -->
     <string name="yesterday">Včera</string>
@@ -602,8 +602,8 @@
     <string name="sunday_short">Ne</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">Tato verze aplikace již není podporována. Pro nové opravy a jiná vylepšení prosím přejděte na Pro verzi.</string>
+    <string name="upgrade_to_pro_long_click">Tato verze aplikace již nebude dále aktualizována. Pro nové opravy a jiná vylepšení prosím přejděte na Pro verzi kliknutím sem.</string>
     <string name="it_is_free">Bude bezplatná do: %s. Pokud si ji do té doby stáhnete, budete ji moci používat bezplatně navždy.</string>
     <string name="more_info">Více informací</string>
     <string name="upgrade">Stáhnout</string>
@@ -638,8 +638,10 @@
     <string name="purchase">Koupit</string>
     <string name="update_thank_you">Prosím aktualizujte Jednoduché děkuji na nejnovější verzi</string>
     <string name="before_asking_question_read_faq">Před položením otázky se prosím podívejte do nastavení aplikace a přečtěte si často kladené otázky. Možná v nich naleznete svou odpověď.</string>
-    <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
+    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
+    <string name="make_sure_latest">Také se ujistěte, že používáte nejnovější verzi aplikace.</string>
     <string name="read_it">Přečíst</string>
+    <string name="read_faq">Read FAQ</string>
     <string name="rate_us_prompt">Zdravím,\n\nzdá se, že již tuto aplikaci používáte nějaký čas a velmi si toho ceníme.\n\nMůžeme-li vás proto požádat o laskavost, prosím ohodnoťte nás na Google Play. Moc by nám to pomohlo.\n\nBez ohledu na to, jak se rozhodnete, tato zpráva se vám již nezobrazí.\n\nĎěkuji!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
@@ -673,16 +675,16 @@
     <string name="faq_4_title_commons">Nelíbí se mi barvy widgetu, mohu je změnit?</string>
     <string name="faq_4_text_commons">Ano, po přidání widgetu na domovskou obrazovku se zobrazí obrazovka s konfigurací. Ťuknutím na barevné čtverečky v levém dolním rohu můžete navolit nové barvy. Tažením posuvníku můžete upravit i průhlednost.</string>
     <string name="faq_5_title_commons">Mohu nějakým způsobem obnovit smazané soubory?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
+    <string name="faq_5_text_commons">Pokud byly skutečně smazány, bohužel nijak. Ve výchozím nastavení je však povolen koš, díky kterému jsou soubory pouze přesunuty do něj, namísto okamžitého vymazání.</string>
     <string name="faq_6_title_commons">Ikona aplikace zmizela z domovské obrazovky. Co s tím?</string>
     <string name="faq_6_text_commons">Bude to způsobeno tím, že váš launcher nepodporuje úpravu ikon korektně. Zkuste aplikaci spustit skrze Obchod Play nebo nějaký widget, pokud je dostupný.
         Po spuštění aplikace zkuste nastavit původní oranžovou barvu ikony #F57C00. V nejhorším případě budete muset aplikaci přeinstalovat.</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
+    <string name="faq_7_title_commons">Peníze mi byly z bankovního účtu odepsány, aplikaci však nemohu stáhnout. Co s tím?</string>
+    <string name="faq_7_text_commons">Platby jsou plně spravovány Googlem, jejich systém však občas nefunguje tak jak by měl. Zkuste vymazat mezipaměť aplikace Obchod Play, restartujte zařízení a zkuste aplikaci stáhnout znovu.</string>
+    <string name="faq_8_title_commons">Proč bych měl přejít na Pro verzi?</string>
+    <string name="faq_8_text_commons">Tato verze aplikace již nebude aktualizována. Chyby, které jste možná objevili, proto nebudou nikdy opraveny. Také již nepřibudou žádné nové funkce. Pro verzi získáte za malý poplatek v Obchodě Google Play.
+        Jde o jednorázovou platbu, což znamená, že po zakoupení již nebudete muset nic platit znovu. Ani při koupi nového zařízení. Pokud se vám Pro verze nebude líbit, můžete ji do pár hodin odinstalovat a peníze vám budou automaticky vráceny.
+        Pokud budete chtít aplikaci vrátit kdykoliv později, stačí nám napsat na hello@simplemobiletools.com a peníze vám vrátíme.</string>
 
     <!-- License -->
     <string name="notice">Tato aplikace používá pro ulehčení mé práce následující knihovny třetích stran. Děkuji.</string>

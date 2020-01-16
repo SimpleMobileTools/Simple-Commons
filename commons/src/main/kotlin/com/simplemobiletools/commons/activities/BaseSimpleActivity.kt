@@ -183,43 +183,51 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
         val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
 
-        if (requestCode == OPEN_DOCUMENT_TREE && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-            val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
-            if (isProperSDFolder(resultData.data!!) && isProperPartition) {
-                if (resultData.dataString == baseConfig.OTGTreeUri) {
-                    toast(R.string.sd_card_usb_same)
-                    return
-                }
+        if (requestCode == OPEN_DOCUMENT_TREE) {
+            if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+                val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
+                if (isProperSDFolder(resultData.data!!) && isProperPartition) {
+                    if (resultData.dataString == baseConfig.OTGTreeUri) {
+                        toast(R.string.sd_card_usb_same)
+                        return
+                    }
 
-                saveTreeUri(resultData)
-                funAfterSAFPermission?.invoke(true)
-                funAfterSAFPermission = null
+                    saveTreeUri(resultData)
+                    funAfterSAFPermission?.invoke(true)
+                    funAfterSAFPermission = null
+                } else {
+                    toast(R.string.wrong_root_selected)
+                    val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
+                    startActivityForResult(intent, requestCode)
+                }
             } else {
-                toast(R.string.wrong_root_selected)
-                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
-                startActivityForResult(intent, requestCode)
+                funAfterSAFPermission?.invoke(false)
             }
-        } else if (requestCode == OPEN_DOCUMENT_TREE_OTG && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-            val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
-            if (isProperOTGFolder(resultData.data!!) && isProperPartition) {
-                if (resultData.dataString == baseConfig.treeUri) {
-                    funAfterSAFPermission?.invoke(false)
-                    toast(R.string.sd_card_usb_same)
-                    return
+        } else if (requestCode == OPEN_DOCUMENT_TREE_OTG) {
+            if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+                val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
+                if (isProperOTGFolder(resultData.data!!) && isProperPartition) {
+                    if (resultData.dataString == baseConfig.treeUri) {
+                        funAfterSAFPermission?.invoke(false)
+                        toast(R.string.sd_card_usb_same)
+                        return
+                    }
+                    baseConfig.OTGTreeUri = resultData.dataString!!
+                    baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/').trimEnd('/')
+                    updateOTGPathFromPartition()
+
+                    val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+                    applicationContext.contentResolver.takePersistableUriPermission(resultData.data!!, takeFlags)
+
+                    funAfterSAFPermission?.invoke(true)
+                    funAfterSAFPermission = null
+                } else {
+                    toast(R.string.wrong_root_selected_usb)
+                    val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
+                    startActivityForResult(intent, requestCode)
                 }
-                baseConfig.OTGTreeUri = resultData.dataString
-                baseConfig.OTGPartition = baseConfig.OTGTreeUri.removeSuffix("%3A").substringAfterLast('/').trimEnd('/')
-                updateOTGPathFromPartition()
-
-                val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
-                applicationContext.contentResolver.takePersistableUriPermission(resultData.data, takeFlags)
-
-                funAfterSAFPermission?.invoke(true)
-                funAfterSAFPermission = null
             } else {
-                toast(R.string.wrong_root_selected_usb)
-                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
-                startActivityForResult(intent, requestCode)
+                funAfterSAFPermission?.invoke(false)
             }
         }
     }
@@ -229,7 +237,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         baseConfig.treeUri = treeUri.toString()
 
         val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
-        applicationContext.contentResolver.takePersistableUriPermission(treeUri, takeFlags)
+        applicationContext.contentResolver.takePersistableUriPermission(treeUri!!, takeFlags)
     }
 
     private fun isProperSDFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
@@ -273,6 +281,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
+    // synchronous return value determines only if we are showing the SAF dialog, callback result tells if the SD or OTG permission has been granted
     fun handleSAFDialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
         return if (!packageName.startsWith("com.simplemobiletools")) {
             callback(true)
@@ -321,6 +330,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         handleSAFDialog(destination) {
+            if (!it) {
+                copyMoveListener.copyFailed()
+                return@handleSAFDialog
+            }
+
             copyMoveCallback = callback
             var fileCountToCopy = fileDirItems.size
             if (isCopyOperation) {
@@ -328,7 +342,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             } else {
                 if (isPathOnOTG(source) || isPathOnOTG(destination) || isPathOnSD(source) || isPathOnSD(destination) || fileDirItems.first().isDirectory) {
                     handleSAFDialog(source) {
-                        startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
+                        if (it) {
+                            startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
+                        }
                     }
                 } else {
                     try {
@@ -360,10 +376,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                             if (updatedPaths.isEmpty()) {
                                 copyMoveListener.copySucceeded(false, fileCountToCopy == 0, destination)
                             } else {
-                                rescanPaths(updatedPaths) {
-                                    runOnUiThread {
-                                        copyMoveListener.copySucceeded(false, fileCountToCopy <= updatedPaths.size, destination)
-                                    }
+                                runOnUiThread {
+                                    copyMoveListener.copySucceeded(false, fileCountToCopy <= updatedPaths.size, destination)
                                 }
                             }
                         }
@@ -470,9 +484,15 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun exportSettings(configItems: LinkedHashMap<String, Any>, defaultFilename: String) {
+    fun exportSettings(configItems: LinkedHashMap<String, Any>) {
         handlePermission(PERMISSION_WRITE_STORAGE) {
             if (it) {
+                var defaultFilename = baseConfig.lastExportedSettingsFile
+                if (defaultFilename.isEmpty()) {
+                    val appName = baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro").removePrefix("com.simplemobiletools.")
+                    defaultFilename = "$appName-settings.txt"
+                }
+
                 ExportSettingsDialog(this, defaultFilename) {
                     val file = File(it)
                     val fileDirItem = FileDirItem(file.absolutePath, file.name)

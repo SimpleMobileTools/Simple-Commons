@@ -67,7 +67,7 @@
     <string name="simple_renaming">Mudar nome</string>
     <string name="pattern_renaming">Padrão</string>
     <string name="string_to_add">Texto a adicionar</string>
-    <string name="rename_date_time_pattern">%Y - ano\n%M - mês\n%D - dia\n%h - horas\n%m - minutos\n%s - segundos\n%i - number increasing from 1</string>
+    <string name="rename_date_time_pattern">%Y - ano\n%M - mês\n%D - dia\n%h - horas\n%m - minutos\n%s - segundos\n%i - incremento númerico a partir de 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
@@ -95,7 +95,7 @@
     <string name="could_not_create_folder">Não foi possível criar a pasta %s</string>
     <string name="could_not_create_file">Não foi possível criar o ficheiro %s</string>
     <string name="no_new_items">Não foram encontrados novos itens</string>
-    <string name="no_space">Não existe espaço livre suficiente no local de destino.\nPrecisa de %1$s e apenas existe %2$s</string>
+    <string name="no_space">Não existe espaço livre suficiente destino.\nPrecisa de %1$s e apenas existe %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Criar</string>
@@ -605,8 +605,10 @@
     <string name="purchase">Comprar</string>
     <string name="update_thank_you">Por favor atualize a aplicação Simple Thank You para a versão mais recente</string>
     <string name="before_asking_question_read_faq">Antes de colocar uma questão, verifique as FAQ. Pode ser que a solução esteja lá.</string>
-    <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
+    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
+    <string name="make_sure_latest">Certifique-se de que está a utilizar a versão mais recente.</string>
     <string name="read_it">Ler</string>
+    <string name="read_faq">Read FAQ</string>
     <string name="rate_us_prompt">Olá,\n\nparece que está a utilizar esta aplicação há algum tempo, o que nos deixa satisfeitos.\n\nGostaríamos de lhe pedir o favor de nos avaliar na Google Play. Isso iria ajudar-nos bastante.\n\nIndependentemente da sua escolha, esta mensagem não será mostrada novamente.\n\nObrigado!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->

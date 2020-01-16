@@ -22,7 +22,7 @@ import java.io.OutputStream
 import java.lang.ref.WeakReference
 import java.util.*
 
-class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = false, val copyMediaOnly: Boolean, val conflictResolutions: LinkedHashMap<String, Int>,
+class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val copyMediaOnly: Boolean, val conflictResolutions: LinkedHashMap<String, Int>,
                    listener: CopyMoveListener, val copyHidden: Boolean) : AsyncTask<Pair<ArrayList<FileDirItem>, String>, Void, Boolean>() {
     private val INITIAL_PROGRESS_DELAY = 3000L
     private val PROGRESS_RECHECK_INTERVAL = 500L
@@ -89,6 +89,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                     } else if (resolution == CONFLICT_OVERWRITE) {
                         newFileDirItem.isDirectory = if (activity.getDoesFilePathExist(newPath)) File(newPath).isDirectory else activity.getSomeDocumentFile(newPath)!!.isDirectory
                         activity.deleteFileBg(newFileDirItem, true)
+                        if (!newFileDirItem.isDirectory) {
+                            activity.deleteFromMediaStore(newFileDirItem.path)
+                        }
                     } else if (resolution == CONFLICT_KEEP_BOTH) {
                         val newFile = activity.getAlternativeFile(File(newFileDirItem.path))
                         newFileDirItem = FileDirItem(newFile.path, newFile.name, newFile.isDirectory)
@@ -97,13 +100,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
 
                 copy(file, newFileDirItem)
             } catch (e: Exception) {
-                activity.toast(e.toString())
+                activity.showErrorToast(e)
                 return false
             }
-        }
-
-        if (!copyOnly) {
-            activity.deleteFilesBg(mTransferredFiles) {}
         }
 
         return true
@@ -255,6 +254,9 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean = fal
                 }
 
                 if (!copyOnly) {
+                    inputStream.close()
+                    out?.close()
+                    activity.deleteFileBg(source)
                     activity.deleteFromMediaStore(source.path)
                 }
             }

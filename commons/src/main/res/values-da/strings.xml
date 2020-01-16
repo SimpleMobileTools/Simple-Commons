@@ -67,7 +67,7 @@
     <string name="simple_renaming">Simple omdøbning</string>
     <string name="pattern_renaming">Mønster</string>
     <string name="string_to_add">Tekststreng der skal tilføjes</string>
-    <string name="rename_date_time_pattern">%Y - år\n%M - måned\n%D - dag\n%h - time\n%m - minut\n%s - sekund\n%i - number increasing from 1</string>
+    <string name="rename_date_time_pattern">%Y - år\n%M - måned\n%D - dag\n%h - time\n%m - minut\n%s - sekund\n%i - tal stigende fra 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopier</string>
@@ -605,8 +605,10 @@
     <string name="purchase">Køb</string>
     <string name="update_thank_you">Opdater venligst Simple Thank You til den seneste version</string>
     <string name="before_asking_question_read_faq">Inden du stiller et spørgsmål bedes du først tjekke appens indstillinger og læse de \"Ofte stillede spørgsmål\", måske finder du svaret der.</string>
+    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
     <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
     <string name="read_it">Læs det</string>
+    <string name="read_faq">Read FAQ</string>
     <string name="rate_us_prompt">Hej\n\nDet ser ud til at du har brugt denne app et godt stykke tid, og det er vi virkelig glade for.\n\nHvis vi til gengæld må bede om en tjeneste, vil vi sætte stor pris på din vurdering på Google Play. Det ville være en kæmpe hjælp.\n\nUanset hvad du beslutter dig for, vil du ikke se denne besked igen.\n\nPå forhånd tak!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
