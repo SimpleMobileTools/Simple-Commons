@@ -184,7 +184,7 @@
     <string name="default_color">Προεπιλογή</string>
     <string name="change_color">Αλλαγή χρώματος</string>
     <string name="theme">Θέμα</string>
-    <string name="changing_color_description">Η αλλαγή ενός χρώματος θα αλλάξει το Προσαρμοσμένο θέμα</string>
+    <string name="changing_color_description">Η αλλαγή ενός χρώματος θα αλλάξει το Προεπιλεγμένο θέμα</string>
     <string name="save">Αποθήκευση</string>
     <string name="discard">Απόρριψη</string>
     <string name="undo_changes">Αναίρεση αλλαγών</string>
@@ -196,7 +196,7 @@
     <string name="share_colors_success">Τα χρώματα ενημερώθηκαν με επιτυχία. Ένα νέο θέμα που ονομάζεται  \"Κοινόχρηστο\" έχει προστεθεί, παρακαλούμε να χρησιμοποιήστε το για την ενημέρωση των χρωμάτων όλων των εφαρμ. στο μέλλον.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Παρακαλώ αγοράστε <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> για να ξεκλειδώσετε αυτή τη λειτουργία για να υποστηρίξετε την ανάπτυξη. Ευχαριστώ!
+            Παρακαλώ αγοράστε την <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> για να ξεκλειδώσετε αυτή τη λειτουργία για να υποστηρίξετε την ανάπτυξη. Ευχαριστώ!
         ]]>
     </string>
 
@@ -485,9 +485,9 @@
     <string name="restore_this_file">Επαναφορά αυτού του αρχείου</string>
     <string name="restore_selected_files">Επαναφορά επιλεγμένων αρχείων</string>
     <string name="restore_all_files">Επαναφορά όλων των αρχείων</string>
-    <string name="recycle_bin_emptied">Ο Κάδος Ανακύκλωσης έχει αδειάσει με επιτυχία</string>
-    <string name="files_restored_successfully">Τα αρχεία έχουν επαναφερθεί με επιτυχία</string>
-    <string name="empty_recycle_bin_confirmation">Είστε βέβαιοι ότι θέλετε να αδειάσετε τον Κάδο Ανακύκλωσης; Τα αρχεία θα χαθούν οριστικά.</string>
+    <string name="recycle_bin_emptied">Ο Κάδος Ανακύκλωσης άδειασε επιτυχώς</string>
+    <string name="files_restored_successfully">Τα αρχεία επαναφέρθηκαν επιτυχώς</string>
+    <string name="empty_recycle_bin_confirmation">Σίγουρα θέλετε να αδειάσετε τον Κάδο Ανακύκλωσης; Τα αρχεία θα χαθούν οριστικά.</string>
     <string name="recycle_bin_empty">Ο Κάδος Ανακύκλωσης είναι κενός</string>
     <string name="moving_recycle_bin_items_disabled">Η μετακίνηση στον Κάδο είναι ανενεργή, χρησιμοποιείστε την Επαναφορά</string>
     <string name="show_the_recycle_bin">Εμφάνιση Κάδου Ανακύκλωσης</string>
@@ -513,8 +513,8 @@
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Φαίνεται ότι μια συσκευή USB είναι συνδεδεμένη στη συσκευή σας. Για να βεβαιωθείτε ότι τα αρχεία της εμφανίζονται σωστά, χρειάζεται να χορηγήσετε πρόσθετα δικαιώματα.</string>
-    <string name="confirm_usb_storage_access_text">Παρακαλώ επιλέξτε τον ριζικό φάκελο της συσκευής USB στην επόμενη οθόνη, για να παραχωρήσετε πρόσβαση</string>
-    <string name="wrong_root_selected_usb">Λάθος επιλεγμένο φάκελο, παρακαλώ επιλέξτε το ριζικό φάκελο της συσκευής USB</string>
+    <string name="confirm_usb_storage_access_text">Παρακαλώ επιλέξτε τον ριζικό κατάλογο της συσκευής USB στην επόμενη οθόνη, για παραχώρηση πρόσβασης</string>
+    <string name="wrong_root_selected_usb">Λάθος επιλεγμένος κατάλογος, παρακαλώ επιλέξτε το ριζικό κατάλογο της συσκευής USB</string>
 
     <!-- Dates -->
     <string name="january">Ιανουάριος</string>
@@ -604,11 +604,11 @@
     </string>
     <string name="purchase">Αγορά</string>
     <string name="update_thank_you">Παρακαλώ ενημερώστε την Simple Thank You στην τελευταία έκδοση</string>
-    <string name="before_asking_question_read_faq">Πριν κάνετε μια ερώτηση, ελέγξτε τις ρυθμίσεις της εφαρμογής και διαβάστε πρώτα τις Συχνές Ερωτήσεις. Ίσως η λύση είναι εκεί.</string>
-    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
+    <string name="before_asking_question_read_faq">Πριν κάνετε μια ερώτηση, ελέγξτε τις ρυθμίσεις της εφαρμογής και διαβάστε πρώτα τις Συχνές Ερωτήσεις. Ίσως η λύση υπάρχει εκεί.</string>
+    <string name="before_rate_read_faq">Πριν μας αξιολογήσετε, ελέγξτε τις ρυθμίσεις εφαρμογής και διαβάστε πρώτα τις Συχνές Ερωτήσεις. Αν έχετε προβλήματα, ίσως η λύση υπάρχει εκεί.</string>
     <string name="make_sure_latest">Επίσης, βεβαιωθείτε ότι χρησιμοποιείτε την τελευταία έκδοση της εφαρμογής.</string>
     <string name="read_it">Διαβάστε τις</string>
-    <string name="read_faq">Read FAQ</string>
+    <string name="read_faq">Συχνές Ερωτήσεις</string>
     <string name="rate_us_prompt">Γειά σας,\n\nφαίνεται ότι χρησιμοποιείτε αυτήν την εφαρμογή για αρκετό καιρό ήδη, και το εκτιμούμε πραγματικά.\n\nΑν μπορούμε να σας ζητήσουμε μια χάρη, παρακαλούμε αξιολογήστε μας στο Google Play. Αυτό θα μας βοηθούσε πολύ.\n\nΑνεξάρτητα τι αποφασίσατε, δεν θα εμφανιστεί ξανά αυτό το μήνυμα.\n\nΕυχαριστώ!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
