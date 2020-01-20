@@ -101,6 +101,7 @@
         <item name="colorPrimaryDark">@color/md_red_100_dark</item>
         <item name="colorAccent">@color/md_red_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -109,6 +110,7 @@
         <item name="colorPrimaryDark">@color/md_red_200_dark</item>
         <item name="colorAccent">@color/md_red_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -117,6 +119,7 @@
         <item name="colorPrimaryDark">@color/md_red_300_dark</item>
         <item name="colorAccent">@color/md_red_300</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -125,6 +128,7 @@
         <item name="colorPrimaryDark">@color/md_red_400_dark</item>
         <item name="colorAccent">@color/md_red_400</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
         md_grey_white
     </style>
@@ -134,6 +138,7 @@
         <item name="colorPrimaryDark">@color/md_red_500_dark</item>
         <item name="colorAccent">@color/md_red_500</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -142,6 +147,7 @@
         <item name="colorPrimaryDark">@color/md_red_600_dark</item>
         <item name="colorAccent">@color/md_red_600</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -150,6 +156,7 @@
         <item name="colorPrimaryDark">@color/md_red_700_dark</item>
         <item name="colorAccent">@color/md_red_700</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -158,6 +165,7 @@
         <item name="colorPrimaryDark">@color/md_red_800_dark</item>
         <item name="colorAccent">@color/md_red_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -166,6 +174,7 @@
         <item name="colorPrimaryDark">@color/md_red_900_dark</item>
         <item name="colorAccent">@color/md_red_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -174,6 +183,7 @@
         <item name="colorPrimaryDark">@color/md_pink_100_dark</item>
         <item name="colorAccent">@color/md_pink_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -182,6 +192,7 @@
         <item name="colorPrimaryDark">@color/md_pink_200_dark</item>
         <item name="colorAccent">@color/md_pink_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -190,6 +201,7 @@
         <item name="colorPrimaryDark">@color/md_pink_300_dark</item>
         <item name="colorAccent">@color/md_pink_300</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -198,6 +210,7 @@
         <item name="colorPrimaryDark">@color/md_pink_400_dark</item>
         <item name="colorAccent">@color/md_pink_400</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -206,6 +219,7 @@
         <item name="colorPrimaryDark">@color/md_pink_500_dark</item>
         <item name="colorAccent">@color/md_pink_500</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -214,6 +228,7 @@
         <item name="colorPrimaryDark">@color/md_pink_600_dark</item>
         <item name="colorAccent">@color/md_pink_600</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -222,6 +237,7 @@
         <item name="colorPrimaryDark">@color/md_pink_700_dark</item>
         <item name="colorAccent">@color/md_pink_700</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -230,6 +246,7 @@
         <item name="colorPrimaryDark">@color/md_pink_800_dark</item>
         <item name="colorAccent">@color/md_pink_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -238,6 +255,7 @@
         <item name="colorPrimaryDark">@color/md_pink_900_dark</item>
         <item name="colorAccent">@color/md_pink_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -246,6 +264,7 @@
         <item name="colorPrimaryDark">@color/md_purple_100_dark</item>
         <item name="colorAccent">@color/md_purple_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -254,6 +273,7 @@
         <item name="colorPrimaryDark">@color/md_purple_200_dark</item>
         <item name="colorAccent">@color/md_purple_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -262,6 +282,7 @@
         <item name="colorPrimaryDark">@color/md_purple_300_dark</item>
         <item name="colorAccent">@color/md_purple_300</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -270,6 +291,7 @@
         <item name="colorPrimaryDark">@color/md_purple_400_dark</item>
         <item name="colorAccent">@color/md_purple_400</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -278,6 +300,7 @@
         <item name="colorPrimaryDark">@color/md_purple_500_dark</item>
         <item name="colorAccent">@color/md_purple_500</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -286,6 +309,7 @@
         <item name="colorPrimaryDark">@color/md_purple_600_dark</item>
         <item name="colorAccent">@color/md_purple_600</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -294,6 +318,7 @@
         <item name="colorPrimaryDark">@color/md_purple_700_dark</item>
         <item name="colorAccent">@color/md_purple_700</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -302,6 +327,7 @@
         <item name="colorPrimaryDark">@color/md_purple_800_dark</item>
         <item name="colorAccent">@color/md_purple_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -310,6 +336,7 @@
         <item name="colorPrimaryDark">@color/md_purple_900_dark</item>
         <item name="colorAccent">@color/md_purple_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -318,6 +345,7 @@
         <item name="colorPrimaryDark">@color/md_deep_purple_100_dark</item>
         <item name="colorAccent">@color/md_deep_purple_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -326,6 +354,7 @@
         <item name="colorPrimaryDark">@color/md_deep_purple_200_dark</item>
         <item name="colorAccent">@color/md_deep_purple_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -334,6 +363,7 @@
         <item name="colorPrimaryDark">@color/md_deep_purple_300_dark</item>
         <item name="colorAccent">@color/md_deep_purple_300</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -342,6 +372,7 @@
         <item name="colorPrimaryDark">@color/md_deep_purple_400_dark</item>
         <item name="colorAccent">@color/md_deep_purple_400</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -350,6 +381,7 @@
         <item name="colorPrimaryDark">@color/md_deep_purple_500_dark</item>
         <item name="colorAccent">@color/md_deep_purple_500</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -358,6 +390,7 @@
         <item name="colorPrimaryDark">@color/md_deep_purple_600_dark</item>
         <item name="colorAccent">@color/md_deep_purple_600</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -366,6 +399,7 @@
         <item name="colorPrimaryDark">@color/md_deep_purple_700_dark</item>
         <item name="colorAccent">@color/md_deep_purple_700</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -374,6 +408,7 @@
         <item name="colorPrimaryDark">@color/md_deep_purple_800_dark</item>
         <item name="colorAccent">@color/md_deep_purple_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -382,6 +417,7 @@
         <item name="colorPrimaryDark">@color/md_deep_purple_900_dark</item>
         <item name="colorAccent">@color/md_deep_purple_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -390,6 +426,7 @@
         <item name="colorPrimaryDark">@color/md_indigo_100_dark</item>
         <item name="colorAccent">@color/md_indigo_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -398,6 +435,7 @@
         <item name="colorPrimaryDark">@color/md_indigo_200_dark</item>
         <item name="colorAccent">@color/md_indigo_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -406,6 +444,7 @@
         <item name="colorPrimaryDark">@color/md_indigo_300_dark</item>
         <item name="colorAccent">@color/md_indigo_300</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -414,6 +453,7 @@
         <item name="colorPrimaryDark">@color/md_indigo_400_dark</item>
         <item name="colorAccent">@color/md_indigo_400</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -422,6 +462,7 @@
         <item name="colorPrimaryDark">@color/md_indigo_500_dark</item>
         <item name="colorAccent">@color/md_indigo_500</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -430,6 +471,7 @@
         <item name="colorPrimaryDark">@color/md_indigo_600_dark</item>
         <item name="colorAccent">@color/md_indigo_600</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -438,6 +480,7 @@
         <item name="colorPrimaryDark">@color/md_indigo_700_dark</item>
         <item name="colorAccent">@color/md_indigo_700</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -446,6 +489,7 @@
         <item name="colorPrimaryDark">@color/md_indigo_800_dark</item>
         <item name="colorAccent">@color/md_indigo_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -454,6 +498,7 @@
         <item name="colorPrimaryDark">@color/md_indigo_900_dark</item>
         <item name="colorAccent">@color/md_indigo_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -462,6 +507,7 @@
         <item name="colorPrimaryDark">@color/md_blue_100_dark</item>
         <item name="colorAccent">@color/md_blue_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -470,6 +516,7 @@
         <item name="colorPrimaryDark">@color/md_blue_200_dark</item>
         <item name="colorAccent">@color/md_blue_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -478,6 +525,7 @@
         <item name="colorPrimaryDark">@color/md_blue_300_dark</item>
         <item name="colorAccent">@color/md_blue_300</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -486,6 +534,7 @@
         <item name="colorPrimaryDark">@color/md_blue_400_dark</item>
         <item name="colorAccent">@color/md_blue_400</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -494,6 +543,7 @@
         <item name="colorPrimaryDark">@color/md_blue_500_dark</item>
         <item name="colorAccent">@color/md_blue_500</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -502,6 +552,7 @@
         <item name="colorPrimaryDark">@color/md_blue_600_dark</item>
         <item name="colorAccent">@color/md_blue_600</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -510,6 +561,7 @@
         <item name="colorPrimaryDark">@color/md_blue_700_dark</item>
         <item name="colorAccent">@color/md_blue_700</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -518,6 +570,7 @@
         <item name="colorPrimaryDark">@color/md_blue_800_dark</item>
         <item name="colorAccent">@color/md_blue_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -526,6 +579,7 @@
         <item name="colorPrimaryDark">@color/md_blue_900_dark</item>
         <item name="colorAccent">@color/md_blue_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -534,6 +588,7 @@
         <item name="colorPrimaryDark">@color/md_light_blue_100_dark</item>
         <item name="colorAccent">@color/md_light_blue_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -542,6 +597,7 @@
         <item name="colorPrimaryDark">@color/md_light_blue_200_dark</item>
         <item name="colorAccent">@color/md_light_blue_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -550,6 +606,7 @@
         <item name="colorPrimaryDark">@color/md_light_blue_300_dark</item>
         <item name="colorAccent">@color/md_light_blue_300</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -558,6 +615,7 @@
         <item name="colorPrimaryDark">@color/md_light_blue_400_dark</item>
         <item name="colorAccent">@color/md_light_blue_400</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -566,6 +624,7 @@
         <item name="colorPrimaryDark">@color/md_light_blue_500_dark</item>
         <item name="colorAccent">@color/md_light_blue_500</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -574,6 +633,7 @@
         <item name="colorPrimaryDark">@color/md_light_blue_600_dark</item>
         <item name="colorAccent">@color/md_light_blue_600</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -582,6 +642,7 @@
         <item name="colorPrimaryDark">@color/md_light_blue_700_dark</item>
         <item name="colorAccent">@color/md_light_blue_700</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -590,6 +651,7 @@
         <item name="colorPrimaryDark">@color/md_light_blue_800_dark</item>
         <item name="colorAccent">@color/md_light_blue_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -598,6 +660,7 @@
         <item name="colorPrimaryDark">@color/md_light_blue_900_dark</item>
         <item name="colorAccent">@color/md_light_blue_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -606,6 +669,7 @@
         <item name="colorPrimaryDark">@color/md_cyan_100_dark</item>
         <item name="colorAccent">@color/md_cyan_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -614,6 +678,7 @@
         <item name="colorPrimaryDark">@color/md_cyan_200_dark</item>
         <item name="colorAccent">@color/md_cyan_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -622,6 +687,7 @@
         <item name="colorPrimaryDark">@color/md_cyan_300_dark</item>
         <item name="colorAccent">@color/md_cyan_300</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -630,6 +696,7 @@
         <item name="colorPrimaryDark">@color/md_cyan_400_dark</item>
         <item name="colorAccent">@color/md_cyan_400</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -638,6 +705,7 @@
         <item name="colorPrimaryDark">@color/md_cyan_500_dark</item>
         <item name="colorAccent">@color/md_cyan_500</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -646,6 +714,7 @@
         <item name="colorPrimaryDark">@color/md_cyan_600_dark</item>
         <item name="colorAccent">@color/md_cyan_600</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -654,6 +723,7 @@
         <item name="colorPrimaryDark">@color/md_cyan_700_dark</item>
         <item name="colorAccent">@color/md_cyan_700</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -662,6 +732,7 @@
         <item name="colorPrimaryDark">@color/md_cyan_800_dark</item>
         <item name="colorAccent">@color/md_cyan_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -670,6 +741,7 @@
         <item name="colorPrimaryDark">@color/md_cyan_900_dark</item>
         <item name="colorAccent">@color/md_cyan_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -678,6 +750,7 @@
         <item name="colorPrimaryDark">@color/md_teal_100_dark</item>
         <item name="colorAccent">@color/md_teal_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -686,6 +759,7 @@
         <item name="colorPrimaryDark">@color/md_teal_200_dark</item>
         <item name="colorAccent">@color/md_teal_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -694,6 +768,7 @@
         <item name="colorPrimaryDark">@color/md_teal_300_dark</item>
         <item name="colorAccent">@color/md_teal_300</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -702,6 +777,7 @@
         <item name="colorPrimaryDark">@color/md_teal_400_dark</item>
         <item name="colorAccent">@color/md_teal_400</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -710,6 +786,7 @@
         <item name="colorPrimaryDark">@color/md_teal_500_dark</item>
         <item name="colorAccent">@color/md_teal_500</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -718,6 +795,7 @@
         <item name="colorPrimaryDark">@color/md_teal_600_dark</item>
         <item name="colorAccent">@color/md_teal_600</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -726,6 +804,7 @@
         <item name="colorPrimaryDark">@color/md_teal_700_dark</item>
         <item name="colorAccent">@color/md_teal_700</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -734,6 +813,7 @@
         <item name="colorPrimaryDark">@color/md_teal_800_dark</item>
         <item name="colorAccent">@color/md_teal_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -742,6 +822,7 @@
         <item name="colorPrimaryDark">@color/md_teal_900_dark</item>
         <item name="colorAccent">@color/md_teal_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -750,6 +831,7 @@
         <item name="colorPrimaryDark">@color/md_green_100_dark</item>
         <item name="colorAccent">@color/md_green_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -758,6 +840,7 @@
         <item name="colorPrimaryDark">@color/md_green_200_dark</item>
         <item name="colorAccent">@color/md_green_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -766,6 +849,7 @@
         <item name="colorPrimaryDark">@color/md_green_300_dark</item>
         <item name="colorAccent">@color/md_green_300</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -774,6 +858,7 @@
         <item name="colorPrimaryDark">@color/md_green_400_dark</item>
         <item name="colorAccent">@color/md_green_400</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -782,6 +867,7 @@
         <item name="colorPrimaryDark">@color/md_green_500_dark</item>
         <item name="colorAccent">@color/md_green_500</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -790,6 +876,7 @@
         <item name="colorPrimaryDark">@color/md_green_600_dark</item>
         <item name="colorAccent">@color/md_green_600</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -798,6 +885,7 @@
         <item name="colorPrimaryDark">@color/md_green_700_dark</item>
         <item name="colorAccent">@color/md_green_700</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -806,6 +894,7 @@
         <item name="colorPrimaryDark">@color/md_green_800_dark</item>
         <item name="colorAccent">@color/md_green_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -814,6 +903,7 @@
         <item name="colorPrimaryDark">@color/md_green_900_dark</item>
         <item name="colorAccent">@color/md_green_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -822,6 +912,7 @@
         <item name="colorPrimaryDark">@color/md_light_green_100_dark</item>
         <item name="colorAccent">@color/md_light_green_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -830,6 +921,7 @@
         <item name="colorPrimaryDark">@color/md_light_green_200_dark</item>
         <item name="colorAccent">@color/md_light_green_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -838,6 +930,7 @@
         <item name="colorPrimaryDark">@color/md_light_green_300_dark</item>
         <item name="colorAccent">@color/md_light_green_300</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -846,6 +939,7 @@
         <item name="colorPrimaryDark">@color/md_light_green_400_dark</item>
         <item name="colorAccent">@color/md_light_green_400</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -854,6 +948,7 @@
         <item name="colorPrimaryDark">@color/md_light_green_500_dark</item>
         <item name="colorAccent">@color/md_light_green_500</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -862,6 +957,7 @@
         <item name="colorPrimaryDark">@color/md_light_green_600_dark</item>
         <item name="colorAccent">@color/md_light_green_600</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -870,6 +966,7 @@
         <item name="colorPrimaryDark">@color/md_light_green_700_dark</item>
         <item name="colorAccent">@color/md_light_green_700</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -878,6 +975,7 @@
         <item name="colorPrimaryDark">@color/md_light_green_800_dark</item>
         <item name="colorAccent">@color/md_light_green_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -886,6 +984,7 @@
         <item name="colorPrimaryDark">@color/md_light_green_900_dark</item>
         <item name="colorAccent">@color/md_light_green_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -894,6 +993,7 @@
         <item name="colorPrimaryDark">@color/md_lime_100_dark</item>
         <item name="colorAccent">@color/md_lime_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -902,6 +1002,7 @@
         <item name="colorPrimaryDark">@color/md_lime_200_dark</item>
         <item name="colorAccent">@color/md_lime_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -910,6 +1011,7 @@
         <item name="colorPrimaryDark">@color/md_lime_300_dark</item>
         <item name="colorAccent">@color/md_lime_300</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -918,6 +1020,7 @@
         <item name="colorPrimaryDark">@color/md_lime_400_dark</item>
         <item name="colorAccent">@color/md_lime_400</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -926,6 +1029,7 @@
         <item name="colorPrimaryDark">@color/md_lime_500_dark</item>
         <item name="colorAccent">@color/md_lime_500</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -934,6 +1038,7 @@
         <item name="colorPrimaryDark">@color/md_lime_600_dark</item>
         <item name="colorAccent">@color/md_lime_600</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -942,6 +1047,7 @@
         <item name="colorPrimaryDark">@color/md_lime_700_dark</item>
         <item name="colorAccent">@color/md_lime_700</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -950,6 +1056,7 @@
         <item name="colorPrimaryDark">@color/md_lime_800_dark</item>
         <item name="colorAccent">@color/md_lime_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -958,6 +1065,7 @@
         <item name="colorPrimaryDark">@color/md_lime_900_dark</item>
         <item name="colorAccent">@color/md_lime_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -966,6 +1074,7 @@
         <item name="colorPrimaryDark">@color/md_yellow_100_dark</item>
         <item name="colorAccent">@color/md_yellow_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -974,6 +1083,7 @@
         <item name="colorPrimaryDark">@color/md_yellow_200_dark</item>
         <item name="colorAccent">@color/md_yellow_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -982,6 +1092,7 @@
         <item name="colorPrimaryDark">@color/md_yellow_300_dark</item>
         <item name="colorAccent">@color/md_yellow_300</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -990,6 +1101,7 @@
         <item name="colorPrimaryDark">@color/md_yellow_400_dark</item>
         <item name="colorAccent">@color/md_yellow_400</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -998,6 +1110,7 @@
         <item name="colorPrimaryDark">@color/md_yellow_500_dark</item>
         <item name="colorAccent">@color/md_yellow_500</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1006,6 +1119,7 @@
         <item name="colorPrimaryDark">@color/md_yellow_600_dark</item>
         <item name="colorAccent">@color/md_yellow_600</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1014,6 +1128,7 @@
         <item name="colorPrimaryDark">@color/md_yellow_700_dark</item>
         <item name="colorAccent">@color/md_yellow_700</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1022,6 +1137,7 @@
         <item name="colorPrimaryDark">@color/md_yellow_800_dark</item>
         <item name="colorAccent">@color/md_yellow_800</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1030,6 +1146,7 @@
         <item name="colorPrimaryDark">@color/md_yellow_900_dark</item>
         <item name="colorAccent">@color/md_yellow_900</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1038,6 +1155,7 @@
         <item name="colorPrimaryDark">@color/md_amber_100_dark</item>
         <item name="colorAccent">@color/md_amber_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1046,6 +1164,7 @@
         <item name="colorPrimaryDark">@color/md_amber_200_dark</item>
         <item name="colorAccent">@color/md_amber_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1054,6 +1173,7 @@
         <item name="colorPrimaryDark">@color/md_amber_300_dark</item>
         <item name="colorAccent">@color/md_amber_300</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1062,6 +1182,7 @@
         <item name="colorPrimaryDark">@color/md_amber_400_dark</item>
         <item name="colorAccent">@color/md_amber_400</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1070,6 +1191,7 @@
         <item name="colorPrimaryDark">@color/md_amber_500_dark</item>
         <item name="colorAccent">@color/md_amber_500</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1078,6 +1200,7 @@
         <item name="colorPrimaryDark">@color/md_amber_600_dark</item>
         <item name="colorAccent">@color/md_amber_600</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1086,6 +1209,7 @@
         <item name="colorPrimaryDark">@color/md_amber_700_dark</item>
         <item name="colorAccent">@color/md_amber_700</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1094,6 +1218,7 @@
         <item name="colorPrimaryDark">@color/md_amber_800_dark</item>
         <item name="colorAccent">@color/md_amber_800</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1102,6 +1227,7 @@
         <item name="colorPrimaryDark">@color/md_amber_900_dark</item>
         <item name="colorAccent">@color/md_amber_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1110,6 +1236,7 @@
         <item name="colorPrimaryDark">@color/md_orange_100_dark</item>
         <item name="colorAccent">@color/md_orange_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1118,6 +1245,7 @@
         <item name="colorPrimaryDark">@color/md_orange_200_dark</item>
         <item name="colorAccent">@color/md_orange_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1126,6 +1254,7 @@
         <item name="colorPrimaryDark">@color/md_orange_300_dark</item>
         <item name="colorAccent">@color/md_orange_300</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1134,6 +1263,7 @@
         <item name="colorPrimaryDark">@color/md_orange_400_dark</item>
         <item name="colorAccent">@color/md_orange_400</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1142,6 +1272,7 @@
         <item name="colorPrimaryDark">@color/md_orange_500_dark</item>
         <item name="colorAccent">@color/md_orange_500</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1150,6 +1281,7 @@
         <item name="colorPrimaryDark">@color/md_orange_600_dark</item>
         <item name="colorAccent">@color/md_orange_600</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1158,6 +1290,7 @@
         <item name="colorPrimaryDark">@color/md_orange_700_dark</item>
         <item name="colorAccent">@color/md_orange_700</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1166,6 +1299,7 @@
         <item name="colorPrimaryDark">@color/md_orange_800_dark</item>
         <item name="colorAccent">@color/md_orange_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1174,6 +1308,7 @@
         <item name="colorPrimaryDark">@color/md_orange_900_dark</item>
         <item name="colorAccent">@color/md_orange_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1182,6 +1317,7 @@
         <item name="colorPrimaryDark">@color/md_deep_orange_100_dark</item>
         <item name="colorAccent">@color/md_deep_orange_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1190,6 +1326,7 @@
         <item name="colorPrimaryDark">@color/md_deep_orange_200_dark</item>
         <item name="colorAccent">@color/md_deep_orange_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1198,6 +1335,7 @@
         <item name="colorPrimaryDark">@color/md_deep_orange_300_dark</item>
         <item name="colorAccent">@color/md_deep_orange_300</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1206,6 +1344,7 @@
         <item name="colorPrimaryDark">@color/md_deep_orange_400_dark</item>
         <item name="colorAccent">@color/md_deep_orange_400</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1214,6 +1353,7 @@
         <item name="colorPrimaryDark">@color/md_deep_orange_500_dark</item>
         <item name="colorAccent">@color/md_deep_orange_500</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1222,6 +1362,7 @@
         <item name="colorPrimaryDark">@color/md_deep_orange_600_dark</item>
         <item name="colorAccent">@color/md_deep_orange_600</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1230,6 +1371,7 @@
         <item name="colorPrimaryDark">@color/md_deep_orange_700_dark</item>
         <item name="colorAccent">@color/md_deep_orange_700</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1238,6 +1380,7 @@
         <item name="colorPrimaryDark">@color/md_deep_orange_800_dark</item>
         <item name="colorAccent">@color/md_deep_orange_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1246,6 +1389,7 @@
         <item name="colorPrimaryDark">@color/md_deep_orange_900_dark</item>
         <item name="colorAccent">@color/md_deep_orange_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1254,6 +1398,7 @@
         <item name="colorPrimaryDark">@color/md_brown_100_dark</item>
         <item name="colorAccent">@color/md_brown_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1262,6 +1407,7 @@
         <item name="colorPrimaryDark">@color/md_brown_200_dark</item>
         <item name="colorAccent">@color/md_brown_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1270,6 +1416,7 @@
         <item name="colorPrimaryDark">@color/md_brown_300_dark</item>
         <item name="colorAccent">@color/md_brown_300</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1278,6 +1425,7 @@
         <item name="colorPrimaryDark">@color/md_brown_400_dark</item>
         <item name="colorAccent">@color/md_brown_400</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1286,6 +1434,7 @@
         <item name="colorPrimaryDark">@color/md_brown_500_dark</item>
         <item name="colorAccent">@color/md_brown_500</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1294,6 +1443,7 @@
         <item name="colorPrimaryDark">@color/md_brown_600_dark</item>
         <item name="colorAccent">@color/md_brown_600</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1302,6 +1452,7 @@
         <item name="colorPrimaryDark">@color/md_brown_700_dark</item>
         <item name="colorAccent">@color/md_brown_700</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1310,6 +1461,7 @@
         <item name="colorPrimaryDark">@color/md_brown_800_dark</item>
         <item name="colorAccent">@color/md_brown_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1318,6 +1470,7 @@
         <item name="colorPrimaryDark">@color/md_brown_900_dark</item>
         <item name="colorAccent">@color/md_brown_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1326,6 +1479,7 @@
         <item name="colorPrimaryDark">@color/md_blue_grey_100_dark</item>
         <item name="colorAccent">@color/md_blue_grey_100</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1334,6 +1488,7 @@
         <item name="colorPrimaryDark">@color/md_blue_grey_200_dark</item>
         <item name="colorAccent">@color/md_blue_grey_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1342,6 +1497,7 @@
         <item name="colorPrimaryDark">@color/md_blue_grey_300_dark</item>
         <item name="colorAccent">@color/md_blue_grey_300</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1350,6 +1506,7 @@
         <item name="colorPrimaryDark">@color/md_blue_grey_400_dark</item>
         <item name="colorAccent">@color/md_blue_grey_400</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1358,6 +1515,7 @@
         <item name="colorPrimaryDark">@color/md_blue_grey_500_dark</item>
         <item name="colorAccent">@color/md_blue_grey_500</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1366,6 +1524,7 @@
         <item name="colorPrimaryDark">@color/md_blue_grey_600_dark</item>
         <item name="colorAccent">@color/md_blue_grey_600</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1374,6 +1533,7 @@
         <item name="colorPrimaryDark">@color/md_blue_grey_700_dark</item>
         <item name="colorAccent">@color/md_blue_grey_700</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1382,6 +1542,7 @@
         <item name="colorPrimaryDark">@color/md_blue_grey_800_dark</item>
         <item name="colorAccent">@color/md_blue_grey_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1390,6 +1551,7 @@
         <item name="colorPrimaryDark">@color/md_blue_grey_900_dark</item>
         <item name="colorAccent">@color/md_blue_grey_900</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1398,6 +1560,7 @@
         <item name="colorPrimaryDark">@color/md_grey_white_dark</item>
         <item name="colorAccent">@color/md_grey_white</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1406,6 +1569,7 @@
         <item name="colorPrimaryDark">@color/md_grey_200_dark</item>
         <item name="colorAccent">@color/md_grey_200</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1414,6 +1578,7 @@
         <item name="colorPrimaryDark">@color/md_grey_300_dark</item>
         <item name="colorAccent">@color/md_grey_300</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1422,6 +1587,7 @@
         <item name="colorPrimaryDark">@color/md_grey_400_dark</item>
         <item name="colorAccent">@color/md_grey_400</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1430,6 +1596,7 @@
         <item name="colorPrimaryDark">@color/md_grey_500_dark</item>
         <item name="colorAccent">@color/md_grey_500</item>
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
     </style>
 
@@ -1438,6 +1605,7 @@
         <item name="colorPrimaryDark">@color/md_grey_600_dark</item>
         <item name="colorAccent">@color/md_grey_600</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1446,6 +1614,7 @@
         <item name="colorPrimaryDark">@color/md_grey_700_dark</item>
         <item name="colorAccent">@color/md_grey_700</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1454,6 +1623,7 @@
         <item name="colorPrimaryDark">@color/md_grey_800_dark</item>
         <item name="colorAccent">@color/md_grey_800</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
@@ -1462,6 +1632,7 @@
         <item name="colorPrimaryDark">@color/md_grey_black_dark</item>
         <item name="colorAccent">@color/md_grey_black</item>
         <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
     </style>
 
