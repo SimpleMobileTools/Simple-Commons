@@ -373,6 +373,6 @@ open class BaseConfig(val context: Context) {
         set(lastExportedSettingsFile) = prefs.edit().putString(LAST_EXPORTED_SETTINGS_FILE, lastExportedSettingsFile).apply()
 
     var fontSize: Int
-        get() = prefs.getInt(FONT_SIZE, FONT_SIZE_MEDIUM)
+        get() = prefs.getInt(FONT_SIZE, context.resources.getInteger(R.integer.default_font_size))
         set(size) = prefs.edit().putInt(FONT_SIZE, size).apply()
 }
