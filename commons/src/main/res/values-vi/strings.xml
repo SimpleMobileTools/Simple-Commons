@@ -292,10 +292,10 @@
     <string name="yesterday">Hôm qua</string>
     <string name="today">Hôm nay</string>
     <string name="tomorrow">Ngày mai</string>
-    <string name="giây_raw">giây</string>
-    <string name="phút_raw">phút</string>
-    <string name="giờ_raw">giờ</string>
-    <string name="ngày_raw">ngày</string>
+    <string name="seconds_raw">giây</string>
+    <string name="minutes_raw">phút</string>
+    <string name="hours_raw">giờ</string>
+    <string name="days_raw">ngày</string>
 
     <plurals name="seconds">
         <item quantity="one">%d second</item>
@@ -680,6 +680,7 @@
     <string name="sanselan_title">Apache Sanselan (đọc siêu dữ liệu hình ảnh)</string>
     <string name="filters_title">Bộ lọc ảnh Android (bộ lọc hình ảnh)</string>
     <string name="gesture_views_title">Chế độ xem cử chỉ (hình ảnh có thể phóng to)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">THÔNG BÁO: Phiên bản của ứng dụng này không còn được duy trì, hãy tải phiên bản Pro tại https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
