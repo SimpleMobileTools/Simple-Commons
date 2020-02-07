@@ -72,6 +72,8 @@ fun String.getCompressionFormat() = when (getFilenameExtension().toLowerCase()) 
 
 fun String.areDigitsOnly() = matches(Regex("[0-9]+"))
 
+fun String.areLettersOnly() = matches(Regex("[a-zA-Z]+"))
+
 fun String.getGenericMimeType(): String {
     if (!contains("/"))
         return this

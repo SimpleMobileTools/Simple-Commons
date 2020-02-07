@@ -549,6 +549,7 @@
     <string name="email_label">傳送您的反饋或建議</string>
     <string name="upgrade_to_pro">升級至專業版</string>
     <string name="more_apps_underlined"><u>更多應用程式</u></string>
+    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
     <string name="third_party_licences_underlined"><u>第三方授權</u></string>
     <string name="invite_friends_underlined"><u>邀請朋友</u></string>
     <string name="share_text">嘿，來試試看「%1$s」吧！ %2$s</string>
@@ -572,10 +573,10 @@
     <string name="purchase">購買</string>
     <string name="update_thank_you">請更新[Simple Thank You]至最新版本</string>
     <string name="before_asking_question_read_faq">在您發問前，請先檢查程式設定及閱讀[常見問題]。或許解決方法就在那裡。</string>
-    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
+    <string name="before_rate_read_faq">在您給我們評價前，請先檢查程式設定及閱讀[常見問題]。如果您遇到任何困難，或許解決方法就在那裡。</string>
     <string name="make_sure_latest">並且確保您正使用最新的應用程式版本。</string>
     <string name="read_it">讀它</string>
-    <string name="read_faq">Read FAQ</string>
+    <string name="read_faq">閱讀FAQ</string>
     <string name="rate_us_prompt">哈囉\n\n您似乎已經使用這應用程式一段時間了，我們相當感激。\n\n如果我們能請您幫個忙，請在Google Play上為我們評分。這對我們很有幫助。\n\n無論您的決定如何，都不會再看到這則訊息。\n\n感謝!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
@@ -647,6 +648,7 @@
     <string name="sanselan_title">Apache Sanselan（讀取圖片詮釋資料）</string>
     <string name="filters_title">Android Photo Filters（圖片過濾器）</string>
     <string name="gesture_views_title">Gesture Views (可縮放的圖片)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">已捨棄: 這版本的應用程式不再維護，在這取得專業版  https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

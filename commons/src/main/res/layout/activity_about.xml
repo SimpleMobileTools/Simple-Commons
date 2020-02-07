@@ -63,7 +63,7 @@
             android:layout_below="@+id/about_upgrade_to_pro"
             android:paddingTop="@dimen/activity_margin"
             android:paddingBottom="@dimen/activity_margin"
-            android:text="@string/more_apps_underlined"
+            android:text="@string/more_apps_from_us_underlined"
             android:textColor="@color/color_primary"/>
 
         <com.simplemobiletools.commons.views.MyTextView

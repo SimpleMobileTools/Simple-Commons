@@ -123,6 +123,7 @@ const val LAST_RENAME_USED = "last_rename_used"
 const val LAST_RENAME_PATTERN_USED = "last_rename_pattern_used"
 const val LAST_EXPORTED_SETTINGS_FOLDER = "last_exported_settings_folder"
 const val LAST_EXPORTED_SETTINGS_FILE = "last_exported_settings_file"
+const val FONT_SIZE = "font_size"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
@@ -149,6 +150,7 @@ const val LICENSE_EXOPLAYER = 1048576
 const val LICENSE_PANORAMA_VIEW = 2097152
 const val LICENSE_SANSELAN = 4194304
 const val LICENSE_GESTURE_VIEWS = 8388608
+const val LICENSE_INDICATOR_FAST_SCROLL = 16777216
 
 // global intents
 const val OPEN_DOCUMENT_TREE = 1000
@@ -210,6 +212,12 @@ const val CONFLICT_SKIP = 1
 const val CONFLICT_OVERWRITE = 2
 const val CONFLICT_MERGE = 3
 const val CONFLICT_KEEP_BOTH = 4
+
+// font sizes
+const val FONT_SIZE_SMALL = 0
+const val FONT_SIZE_MEDIUM = 1
+const val FONT_SIZE_LARGE = 2
+const val FONT_SIZE_EXTRA_LARGE = 3
 
 const val MONDAY_BIT = 1
 const val TUESDAY_BIT = 2

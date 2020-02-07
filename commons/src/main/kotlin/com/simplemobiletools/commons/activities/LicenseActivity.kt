@@ -75,6 +75,7 @@ class LicenseActivity : BaseSimpleActivity() {
             License(LICENSE_PANORAMA_VIEW, R.string.panorama_view_title, R.string.panorama_view_text, R.string.panorama_view_url),
             License(LICENSE_SANSELAN, R.string.sanselan_title, R.string.sanselan_text, R.string.sanselan_url),
             License(LICENSE_FILTERS, R.string.filters_title, R.string.filters_text, R.string.filters_url),
-            License(LICENSE_GESTURE_VIEWS, R.string.gesture_views_title, R.string.gesture_views_text, R.string.gesture_views_url)
+            License(LICENSE_GESTURE_VIEWS, R.string.gesture_views_title, R.string.gesture_views_text, R.string.gesture_views_url),
+            License(LICENSE_INDICATOR_FAST_SCROLL, R.string.indicator_fast_scroll_title, R.string.indicator_fast_scroll_text, R.string.indicator_fast_scroll_url)
     )
 }

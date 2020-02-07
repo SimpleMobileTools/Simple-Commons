@@ -660,3 +660,17 @@ fun Context.getVideoResolution(path: String): Point? {
 }
 
 fun Context.getStringsPackageName() = getString(R.string.package_name)
+
+fun Context.getFontSizeText() = getString(when (baseConfig.fontSize) {
+    FONT_SIZE_SMALL -> R.string.small
+    FONT_SIZE_MEDIUM -> R.string.medium
+    FONT_SIZE_LARGE -> R.string.large
+    else -> R.string.extra_large
+})
+
+fun Context.getTextSize() = when (baseConfig.fontSize) {
+    FONT_SIZE_SMALL -> resources.getDimension(R.dimen.smaller_text_size)
+    FONT_SIZE_MEDIUM -> resources.getDimension(R.dimen.bigger_text_size)
+    FONT_SIZE_LARGE -> resources.getDimension(R.dimen.big_text_size)
+    else -> resources.getDimension(R.dimen.extra_big_text_size)
+}

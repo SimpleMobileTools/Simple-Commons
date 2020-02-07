@@ -582,6 +582,7 @@
     <string name="email_label">Stuur reacties of suggesties naar</string>
     <string name="upgrade_to_pro">Upgraden naar Pro-versie</string>
     <string name="more_apps_underlined"><u>Meer apps</u></string>
+    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
     <string name="third_party_licences_underlined"><u>Licenties van derden</u></string>
     <string name="invite_friends_underlined"><u>Vrienden uitnodigen</u></string>
     <string name="share_text">Hé, bekijk %1$s eens op %2$s</string>
@@ -605,10 +606,10 @@
     <string name="purchase">Kopen</string>
     <string name="update_thank_you">Er is een nieuwe versie van Simple Thank You</string>
     <string name="before_asking_question_read_faq">Controleer bij problemen eerst de instellingen van de app en neem de Veelgestelde vragen door. Wellicht is de oplossing daar reeds te vinden.</string>
-    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
+    <string name="before_rate_read_faq">Neem de Veelgestelde vragen en de instellingen van de app even door voordat u ons een beoordeling geeft. Wellicht is de oplossing daar reeds te vinden.</string>
     <string name="make_sure_latest">Zorg er ook voor dat de laatste versie van de app is geïnstalleerd.</string>
     <string name="read_it">Nu lezen</string>
-    <string name="read_faq">Read FAQ</string>
+    <string name="read_faq">Veelgestelde vragen</string>
     <string name="rate_us_prompt">Hallo,\n\nhet lijkt erop dat u deze app al een tijdje gebruikt, iets wat wij enorm waarderen.\n\nMogen we zo vrij zijn om u te vragen ons een beoordeling te geven op Google Play? Daarmee kunt u ons enorm helpen.\n\nDit bericht zal niet nogmaals worden getoond, ongeacht welke keuze u nu maakt.\n\nHartelijk dank!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
@@ -679,6 +680,7 @@
     <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
     <string name="filters_title">Android Photo Filters (image filters)</string>
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">VEROUDERD: Deze versie van de app wordt niet langer doorontwikkeld. De Pro-versie is de vinden op https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

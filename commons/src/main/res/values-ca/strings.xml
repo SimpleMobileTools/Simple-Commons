@@ -582,6 +582,7 @@
     <string name="email_label">Envia els teus comentaris o suggeriments a</string>
     <string name="upgrade_to_pro">Actualitza a pro</string>
     <string name="more_apps_underlined"><u>Més aplicacions</u></string>
+    <string name="more_apps_from_us_underlined"><u>Més aplicacions nostres</u></string>
     <string name="third_party_licences_underlined"><u>Llicències de tercers</u></string>
     <string name="invite_friends_underlined"><u>Convida a amics</u></string>
     <string name="share_text">Hola, vine i mira %1$s a %2$s</string>
@@ -680,6 +681,7 @@
     <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
     <string name="filters_title">Android Photo Filters (image filters)</string>
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">DESCONTINUADA: Aquesta versió de l’aplicació ja no es manté, obteniu la versió Pro a l\'adreça https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

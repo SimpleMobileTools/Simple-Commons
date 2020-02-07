@@ -23,8 +23,8 @@
     <string name="transparent_color">透過色</string>
     <string name="select_a_different_color">別の色を選択する</string>
     <string name="download">ダウンロード</string>
-    <string name="notification">Notification</string>
-    <string name="email">Email</string>
+    <string name="notification">通知</string>
+    <string name="email">メールアドレス</string>
 
     <!-- Favorites -->
     <string name="favorites">お気に入り</string>
@@ -228,7 +228,7 @@
     <string name="undo">元に戻す</string>
     <string name="redo">やり直し</string>
     <string name="print">印刷</string>
-    <string name="create_shortcut">Create shortcut</string>
+    <string name="create_shortcut">ショートカットを作成</string>
 
     <!-- Sorting -->
     <string name="sort_by">並べ替え</string>
@@ -408,7 +408,7 @@
     <string name="customize_colors">表示色のカスタマイズ</string>
     <string name="customize_widget_colors">ウィジェットの色をカスタマイズ</string>
     <string name="use_english_language">英語で表示する</string>
-    <string name="show_hidden_items">Show hidden items</string>
+    <string name="show_hidden_items">非表示のアイテムを表示する</string>
     <string name="font_size">メモのフォントサイズ</string>
     <string name="small">小</string>
     <string name="medium">通常</string>
@@ -418,7 +418,7 @@
     <string name="password_protect_whole_app">アプリ全体をパスワードで保護する</string>
     <string name="password_protect_file_deletion">ファイルの削除と移動をパスワードで保護する</string>
     <string name="keep_last_modified">ファイルの操作時、最終更新日が古いものを保持する</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+    <string name="show_info_bubble">スクロールバーをドラッグ中にアイテムの情報を表示する</string>
     <string name="prevent_phone_from_sleeping">アプリを使用中は端末がスリープ状態にならないようにする</string>
     <string name="skip_delete_confirmation">削除時の確認ダイアログを表示しない</string>
     <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
@@ -439,9 +439,9 @@
     <string name="settings_imported_successfully">設定は正常にインポートされました</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
+    <string name="visibility">表示・非表示</string>
     <string name="security">セキュリティ</string>
-    <string name="scrolling">Scrolling</string>
+    <string name="scrolling">スクロール</string>
     <string name="file_operations">ファイル操作</string>
     <string name="recycle_bin">ごみ箱</string>
     <string name="saving_label">保存中</string>
@@ -549,6 +549,7 @@
     <string name="email_label">ご意見やご提案をお送りください</string>
     <string name="upgrade_to_pro">Upgrade to Pro</string>
     <string name="more_apps_underlined"><u>他のアプリ</u></string>
+    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
     <string name="third_party_licences_underlined"><u>サードパーティー ライセンス</u></string>
     <string name="invite_friends_underlined"><u>友達を招待</u></string>
     <string name="share_text">%2$s で %1$s を確認してください</string>
@@ -647,6 +648,7 @@
     <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
     <string name="filters_title">Android Photo Filters (画像フィルタ)</string>
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
