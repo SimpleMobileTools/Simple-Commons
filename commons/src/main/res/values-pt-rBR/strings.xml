@@ -54,7 +54,7 @@
     <string name="rename_folder_error">Não foi possível renomear a pasta</string>
     <string name="rename_folder_empty">O nome da pasta não pode estar vazio</string>
     <string name="rename_folder_exists">Já existe uma pasta com este nome</string>
-    <string name="rename_folder_root">Não se pode renomear uma pasta raiz</string>
+    <string name="rename_folder_root">Não é possível renomear a pasta raiz de um armazenamento</string>
     <string name="rename_folder_ok">A pasta foi renomeada com sucesso</string>
     <string name="renaming_folder">Renomeando a pasta</string>
     <string name="filename_cannot_be_empty">O nome do arquivo não pode ficar em branco</string>
@@ -95,7 +95,7 @@
     <string name="could_not_create_folder">Não foi possível criar pasta %s</string>
     <string name="could_not_create_file">Não foi possível criar o arquivo %s</string>
     <string name="no_new_items">Nenhum novo ítem foi encontrado</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_space">O destino não tem espaço suficiente disponível.\nRequerido %1$s, disponível %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Criar</string>
@@ -121,10 +121,10 @@
     <!-- File picker -->
     <string name="select_folder">Selecionar pasta</string>
     <string name="select_file">Selecionar arquivo</string>
-    <string name="confirm_storage_access_title">Confirmação de acesso ao armazenamento externo</string>
-    <string name="confirm_selection">Confirmar seleção</string>
+    <string name="confirm_storage_access_title">Confirmar acesso ao armazenamento externo</string>
     <string name="confirm_storage_access_text">Por favor escolha a pasta raiz do cartão SD no próximo passo para conceder acesso de escrita</string>
     <string name="confirm_storage_access_text_sd">Se você não encontrar o cartão SD, tente isto</string>
+    <string name="confirm_selection">Confirmar seleção</string>
 
     <plurals name="items">
         <item quantity="one">%d item</item>
@@ -149,7 +149,8 @@
     <string name="root">Raiz</string>
     <string name="wrong_root_selected">Pasta inválida, por favor selecione a raiz do cartão SD</string>
     <string name="sd_card_usb_same">As pastas do cartão SD e do dispositivo USB não podem ser a mesma</string>
-    <string name="app_on_sd_card">Parece que você instalou o aplicativo em um cartão SD, o que torna os widgets indisponíveis. Você não os verá na lista de widgets. Isto é uma limitação do sistema operacional, e case você queira ter acesso aos widgets será preciso mover o aplicativo para o armazenamento interno.</string>
+    <string name="app_on_sd_card">Parece que você instalou o aplicativo em um cartão SD, o que torna os widgets indisponíveis. Você não os verá na lista de widgets.
+        Isto é uma limitação do sistema operacional, caso você queira ter acesso aos widgets será preciso mover o aplicativo para o armazenamento interno.</string>
 
     <!-- File properties -->
     <string name="properties">Propriedades</string>
@@ -175,22 +176,23 @@
     <string name="background_color">Cor de fundo</string>
     <string name="text_color">Cor do texto</string>
     <string name="primary_color">Cor primária</string>
-    <string name="foreground_color">Cor da fonte</string>
+    <string name="foreground_color">Cor do primeiro plano</string>
     <string name="app_icon_color">Cor do ícone do aplicativo</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
+    <string name="bottom_navigation_bar_color">Cor da barra de navegação inferior</string>
     <string name="restore_defaults">Restaurar predefinições</string>
-    <string name="use_default">Use default</string>
-    <string name="default_color">Default</string>
+    <string name="use_default">Usar padrão</string>
+    <string name="default_color">Padrão</string>
     <string name="change_color">Mudar cor</string>
     <string name="theme">Tema</string>
-    <string name="changing_color_description">Mudança nas cores irá alternar para um tema personalizado</string>
+    <string name="changing_color_description">Alterar uma cor fará com que mude para o tema Personalizado</string>
     <string name="save">Salvar</string>
     <string name="discard">Descartar</string>
     <string name="undo_changes">Desfazer alterações</string>
     <string name="undo_changes_confirmation">Tem certeza que deseja desfazer as alterações?</string>
     <string name="save_before_closing">Existem alterações não salvas. Salvar antes de sair?</string>
-    <string name="apply_to_all_apps">Aplicar cores a todos os apps Simple</string>
-    <string name="app_icon_color_warning">AVISO: Alguns lançadores não são capazes de lidar corretamente com a customização de ícones. Nestes casos, se o icone desaparecer tente abrir o aplicativo pelo Google Play, ou através de um widget, e reverta a cor do ícone para o valor padrão (laranja #F57C00). No pior dos casos pode ser preciso reinstalar o aplicativo.</string>
+    <string name="apply_to_all_apps">Aplicar cores a todos os aplicativos Simple</string>
+    <string name="app_icon_color_warning">AVISO: Alguns lançadores não são capazes de lidar corretamente com a customização de ícones. Nestes casos, se o icone desaparecer tente abrir o aplicativo pelo Google Play, ou através de um widget, se disponível.
+        Ao entrar, simplesmente reverta a cor do ícone para o valor padrão (laranja #F57C00). No pior dos casos pode ser preciso reinstalar o aplicativo.</string>
     <string name="share_colors_success">Cores atualizadas com sucesso. Um novo tema chamado \'Compartilhado\' foi adicionado, use-o para atualizar as cores de todos os apps no futuro.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -209,7 +211,7 @@
 
     <!-- What's new -->
     <string name="whats_new">Novidades</string>
-    <string name="whats_new_disclaimer">* apenas as alterações significativas são listadas aqui, mas existem sempre mais alterações do que as aqui referidas</string>
+    <string name="whats_new_disclaimer">* apenas as alterações significativas são listadas aqui, mas também há sempre algumas melhorias pequenas não mencionadas</string>
 
     <!-- Actionbar items -->
     <string name="delete">Excluir</string>
@@ -219,12 +221,12 @@
     <string name="share_via">Compartilhar via</string>
     <string name="select_all">Selecionar tudo</string>
     <string name="hide">Ocultar</string>
-    <string name="unhide">Mostrar</string>
+    <string name="unhide">Exibir</string>
     <string name="hide_folder">Ocultar pasta</string>
     <string name="unhide_folder">Reexibir pasta</string>
-    <string name="temporarily_show_hidden">Temporariamente mostrar pastas ocultas</string>
+    <string name="temporarily_show_hidden">Exibir ocultos temporariamente</string>
     <string name="stop_showing_hidden">Parar de exibir mídia oculta</string>
-    <string name="maximum_share_reached">Não é possível compartilhar essa quantidade toda de arquivos de uma só vez</string>
+    <string name="maximum_share_reached">Não é possível compartilhar todos esses arquivos de uma só vez</string>
     <string name="empty_and_disable_recycle_bin">Esvaziar e desativar a Lixeira</string>
     <string name="undo">Desfazer</string>
     <string name="redo">Refazer</string>
@@ -240,12 +242,12 @@
     <string name="title">Título</string>
     <string name="filename">Nome do arquivo</string>
     <string name="extension">Extensão</string>
-    <string name="random">Aleatoriamente</string>
+    <string name="random">Aleatório</string>
     <string name="sort_randomly">Ordenar aleatoriamente</string>
     <string name="ascending">Crescente</string>
     <string name="descending">Decrescente</string>
     <string name="use_for_this_folder">Apenas para esta pasta</string>
-    <string name="sort_numeric_parts">Ordenar numeros pelo seu valor</string>
+    <string name="sort_numeric_parts">Ordenar numeros pelo seu valor real</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Deseja realmente excluir?</string>
@@ -278,13 +280,13 @@
     <string name="place_finger">Posicione seu dedo sobre o leitor de digitais</string>
     <string name="authentication_failed">Autenticação falhou</string>
     <string name="authentication_blocked">Autenticação bloqueada, favor tentar novamente em instantes</string>
-    <string name="no_fingerprints_registered">Você não tem digitais cadastradas. Favor adiconar alguma nas configurações do seu aparelho</string>
-    <string name="go_to_settings">Ir para configurações</string>
+    <string name="no_fingerprints_registered">Você não tem digitais cadastradas. Favor adiconar alguma nas Configurações do seu dispositivo</string>
+    <string name="go_to_settings">Ir para Configurações</string>
     <string name="protection_setup_successfully">Senha criada com sucesso. Reinstale o app caso você a esqueça.</string>
-    <string name="fingerprint_setup_successfully">Proteção criada com sucesso. Reinstale o app caso tenha problemas em redefinir.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="fingerprint_setup_successfully">Proteção criada com sucesso. Reinstale o app caso tenha problemas ao redefini-la.</string>
+    <string name="lock_folder">Bloquear pasta</string>
+    <string name="unlock_folder">Desbloquear pasta</string>
+    <string name="lock_folder_notice">Esta proteção funciona apenas neste aplicativo, não foi criada para substituir uma criptografia de pasta real a nível de sistema.</string>
 
     <!-- Times -->
     <string name="yesterday">Ontem</string>
@@ -356,32 +358,32 @@
 
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">%d segundo antes</item>
-        <item quantity="other">%d segundos antes</item>
+        <item quantity="one">%d segundo atrás</item>
+        <item quantity="other">%d segundos atrás</item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">%d minuto antes</item>
-        <item quantity="other">%d minutos antes</item>
+        <item quantity="one">%d minuto atrás</item>
+        <item quantity="other">%d minutos atrás</item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">%d hora antes</item>
-        <item quantity="other">%d horas antes</item>
+        <item quantity="one">%d hora atrás</item>
+        <item quantity="other">%d horas atrás</item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">%d dia antes</item>
-        <item quantity="other">%d dias antes</item>
+        <item quantity="one">%d dia atrás</item>
+        <item quantity="other">%d dias atrás</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d semana antes</item>
-        <item quantity="other">%d semanas antes</item>
+        <item quantity="one">%d semana atrás</item>
+        <item quantity="other">%d semanas atrás</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d mês antes</item>
-        <item quantity="other">%d meses antes</item>
+        <item quantity="one">%d mês atrás</item>
+        <item quantity="other">%d meses atrás</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d ano antes</item>
-        <item quantity="other">%d anos antes</item>
+        <item quantity="one">%d ano atrás</item>
+        <item quantity="other">%d anos atrás</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
@@ -417,8 +419,8 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Tempo restante até o alarme disparar:\n%s</string>
     <string name="reminder_triggers_in">Tempo restante até o lembrete:\n%s</string>
-    <string name="alarm_warning">Por favor, verifique se o alarme funciona corretamente antes de confiar nele. Ele pode se comportar mal devido a restrições do sistema relacionadas à economia de bateria.</string>
-    <string name="reminder_warning">Certifique-se de que os lembretes funcionam corretamente antes de confiar neles. Eles podem se comportar mal devido a restrições do sistema relacionadas à economia de bateria.</string>
+    <string name="alarm_warning">Por favor, verifique se o alarme funciona corretamente antes de confiar nele. Ele pode não funcionar direito devido a restrições de sistema relacionadas à economia de bateria.</string>
+    <string name="reminder_warning">Certifique-se de que os lembretes funcionam corretamente antes de confiar neles. Eles podem se funcionar direito devido a restrições de sistema relacionadas à economia de bateria.</string>
     <string name="notifications_disabled">As notificações deste aplicativo foram desativadas pelo sistema. Por favor, reative-as através nas configurações do seu aparelho.</string>
 
     <!-- Alarms -->
@@ -438,7 +440,7 @@
     <string name="customize_colors">Personalizar cores</string>
     <string name="customize_widget_colors">Personalizar cores de widget</string>
     <string name="use_english_language">Usar o idioma inglês</string>
-    <string name="show_hidden_items">Mostrar itens ocultos</string>
+    <string name="show_hidden_items">Exibir itens ocultos</string>
     <string name="font_size">Tamanho do texto</string>
     <string name="small">Pequeno</string>
     <string name="medium">Médio</string>
@@ -447,21 +449,21 @@
     <string name="password_protect_hidden_items">Proteger com senha a visualização de itens ocultos</string>
     <string name="password_protect_whole_app">Proteger com senha todo o app</string>
     <string name="password_protect_file_deletion">Proteger com senha as operações de excluir e mover arquivos</string>
-    <string name="keep_last_modified">Não atualizar o valor de data de modificação nas operações com arquivo</string>
-    <string name="show_info_bubble">Mostrar bolha de informação ao rolar usando a barra de rolagem</string>
-    <string name="prevent_phone_from_sleeping">Impedir que o telefone durma enquanto o aplicativo está em primeiro plano</string>
+    <string name="keep_last_modified">Não atualizar o valor Data de modificação nas operações com arquivo</string>
+    <string name="show_info_bubble">Exibir bolha de informação ao rolar usando a barra de rolagem</string>
+    <string name="prevent_phone_from_sleeping">Impedir que o telefone entre em suspensão enquanto o aplicativo estiver em primeiro plano</string>
     <string name="skip_delete_confirmation">Sempre pular confirmação de exclusão</string>
     <string name="enable_pull_to_refresh">Habilitar puxar do topo da tela para atualizar o conteúdo</string>
-    <string name="use_24_hour_time_format">Usar formato de tempo 24-horas</string>
+    <string name="use_24_hour_time_format">Usar horário do formato 24-horas</string>
     <string name="change_date_and_time_format">Alterar formato de data e hora</string>
-    <string name="sunday_first">Iniciar a semana no domingo</string>
+    <string name="sunday_first">Iniciar a semana no Domingo</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Sempre usar o mesmo tempo de soneca</string>
     <string name="snooze_time">Tempo de soneca</string>
     <string name="vibrate_on_button_press">Vibrar ao pressionar o botão</string>
     <string name="move_items_into_recycle_bin">Mover itens para a Lixeira em vez de excluir</string>
     <string name="recycle_bin_cleaning_interval">Intervalo de limpeza da Lixeira</string>
-    <string name="empty_recycle_bin">Lixeira vazia</string>
+    <string name="empty_recycle_bin">Esvaziar Lixeira</string>
     <string name="force_portrait_mode">Forçar modo retrato</string>
     <string name="export_settings">Exportar configurações</string>
     <string name="import_settings">Importar configurações</string>
@@ -488,7 +490,7 @@
     <string name="empty_recycle_bin_confirmation">Deseja realmente esvaziar a Lixeira? Os arquivos serão excluidos permanentemente.</string>
     <string name="recycle_bin_empty">A Lixeira está vazia</string>
     <string name="moving_recycle_bin_items_disabled">Não é permitido mover itens da Lixeira. Por favor, use a função Restaurar</string>
-    <string name="show_the_recycle_bin">Mostrar a Lixeira</string>
+    <string name="show_the_recycle_bin">Exibir a Lixeira</string>
     <string name="hide_the_recycle_bin">Ocultar a Lixeira</string>
 
     <plurals name="moving_items_into_bin">
@@ -503,44 +505,44 @@
     <string name="exporting_successful">Exportado com sucesso</string>
     <string name="importing_failed">Falha na importação</string>
     <string name="exporting_failed">Falha na exportação</string>
-    <string name="importing_some_entries_failed">Houve falha em alguns ítens da importação</string>
-    <string name="exporting_some_entries_failed">Houve falha em alguns ítens da exportação</string>
-    <string name="no_entries_for_importing">Não foram encontrados ítens para importar</string>
-    <string name="no_entries_for_exporting">Não foram encontramos ítens para exportar</string>
+    <string name="importing_some_entries_failed">Houve falha em alguns itens da importação</string>
+    <string name="exporting_some_entries_failed">Houve falha em alguns itens da exportação</string>
+    <string name="no_entries_for_importing">Não foram encontrados itens para importar</string>
+    <string name="no_entries_for_exporting">Não foram encontramos itens para exportar</string>
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">Você parece estar conectado a um dispositivo USB. Para que os arquivos deste dispositivo sejam exibidos corretamente, podem ser precisas permissões adicionais.</string>
+    <string name="usb_detected">Parece que você possui um dispositivo USB conectado. Para que os arquivos deste dispositivo sejam exibidos corretamente, pode ser preciso permissões adicionais.</string>
     <string name="confirm_usb_storage_access_text">Por favor, escolha a pasta raiz do dispositivo USB na próxima tela, para conceder acesso</string>
-    <string name="wrong_root_selected_usb">Pasta errada selecionada, selecione a pasta raiz do seu dispositivo USB</string>
+    <string name="wrong_root_selected_usb">Pasta inválida, por favor selecione a raiz do seu dispositivo USB</string>
 
     <!-- Dates -->
-    <string name="january">janeiro</string>
-    <string name="february">fevereiro</string>
-    <string name="march">março</string>
-    <string name="april">abril</string>
-    <string name="may">maio</string>
-    <string name="june">junho</string>
-    <string name="july">julho</string>
-    <string name="august">agosto</string>
-    <string name="september">setembro</string>
-    <string name="october">outubro</string>
-    <string name="november">novembro</string>
-    <string name="december">dezembro</string>
+    <string name="january">Janeiro</string>
+    <string name="february">Fevereiro</string>
+    <string name="march">Março</string>
+    <string name="april">Abril</string>
+    <string name="may">Maio</string>
+    <string name="june">Junho</string>
+    <string name="july">Julho</string>
+    <string name="august">Agosto</string>
+    <string name="september">Setembro</string>
+    <string name="october">Outubro</string>
+    <string name="november">Novembro</string>
+    <string name="december">Dezembro</string>
 
     <!-- In January -->
-    <string name="in_january">em janeiro</string>
-    <string name="in_february">em fevereiro</string>
-    <string name="in_march">em março</string>
-    <string name="in_april">em abril</string>
-    <string name="in_may">em maio</string>
-    <string name="in_june">em junho</string>
-    <string name="in_july">em julho</string>
-    <string name="in_august">em agosto</string>
-    <string name="in_september">em setembro</string>
-    <string name="in_october">em outubro</string>
-    <string name="in_november">em novembro</string>
-    <string name="in_december">em dezembro</string>
+    <string name="in_january">em Janeiro</string>
+    <string name="in_february">em Fevereiro</string>
+    <string name="in_march">em Março</string>
+    <string name="in_april">em Abril</string>
+    <string name="in_may">em Maio</string>
+    <string name="in_june">em Junho</string>
+    <string name="in_july">em Julho</string>
+    <string name="in_august">em Agosto</string>
+    <string name="in_september">em Setembro</string>
+    <string name="in_october">em Outubro</string>
+    <string name="in_november">em Novembro</string>
+    <string name="in_december">em Dezembro</string>
 
     <string name="monday">Segunda-feira</string>
     <string name="tuesday">Terça-feira</string>
@@ -558,37 +560,37 @@
     <string name="saturday_letter">S</string>
     <string name="sunday_letter">D</string>
 
-    <string name="monday_short">seg</string>
-    <string name="tuesday_short">ter</string>
-    <string name="wednesday_short">qua</string>
-    <string name="thursday_short">qui</string>
-    <string name="friday_short">sex</string>
-    <string name="saturday_short">sáb</string>
-    <string name="sunday_short">dom</string>
+    <string name="monday_short">Seg</string>
+    <string name="tuesday_short">Ter</string>
+    <string name="wednesday_short">Qua</string>
+    <string name="thursday_short">Qui</string>
+    <string name="friday_short">Sex</string>
+    <string name="saturday_short">Sáb</string>
+    <string name="sunday_short">Dom</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">A versão do seu aplicativo não será mais atualizada. Atualize para a versão Pro para receber novas correções e outras melhorias.</string>
+    <string name="upgrade_to_pro_long_click">A versão do seu aplicativo não será mais atualizada. Atualize para a versão Pro para receber novas correções e outras melhorias clicando aqui.</string>
     <string name="it_is_free">Grátis até: %s. Se você baixar antes disso, poderá utilizar gratuitamente para sempre.</string>
     <string name="more_info">Mais informação</string>
     <string name="upgrade">Atualizar</string>
-    <string name="upgrade_calendar">Você precisará migrar de forma manual os eventos armazenados localmente. Você pode fazer isso exportando-os para um arquivo .ics, e depois importando este arquivo. Os botões de importar e importar se encontram no menu principal.</string>
+    <string name="upgrade_calendar">Você precisará migrar de forma manual os eventos armazenados localmente. Você pode fazer isso exportando-os para um arquivo .ics, e depois importando este arquivo. Você pode encontrar os botões de importar/exportar no menu da tela inicial.</string>
 
     <!-- About -->
     <string name="about">Sobre</string>
-    <string name="website_label">Mais aplicativos Simple e código-fonte em</string>
+    <string name="website_label">Para os código-fonte visite</string>
     <string name="email_label">Envie os seus comentários ou sugestões para</string>
     <string name="upgrade_to_pro">Atualizar para versão Pro</string>
     <string name="more_apps_underlined"><u>Mais aplicativos</u></string>
-    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
+    <string name="more_apps_from_us_underlined"><u>More aplicativos nossos</u></string>
     <string name="third_party_licences_underlined"><u>Licenças de terceiros</u></string>
     <string name="invite_friends_underlined"><u>Convidar amigos</u></string>
-    <string name="share_text">Olá, experimente %1$s em %2$s</string>
+    <string name="share_text">Opa, dê uma olhada no %1$s em %2$s</string>
     <string name="invite_via">Convidar via</string>
     <string name="rate_us_underlined"><u>Nos avalie na Play Store</u></string>
     <string name="rate">Avaliar</string>
-    <string name="donate">Doações</string>
-    <string name="donate_underlined"><u>Doações</u></string>
+    <string name="donate">Doar</string>
+    <string name="donate_underlined"><u>Doar</u></string>
     <string name="follow_us">Siga-nos</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Informações adicionais</string>
@@ -597,19 +599,18 @@
     <string name="donate_please">
         <![CDATA[
             Olá,<br><br>
-            Esperamos que esteja gostando do app. Ele não contém anúncios, então apoie o desenvolvimento adquirindo o <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, ele também bloqueia este diálogo de aparecer.<br><br>
+            Esperamos que esteja gostando do app. Ele não contém anúncios, então apoie o desenvolvimento adquirindo o <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, ele também impede este diálogo de aparecer novamente.<br><br>
             Obrigado!
         ]]>
     </string>
     <string name="purchase">Comprar</string>
     <string name="update_thank_you">Por favor, atualize o Simple Thank You para a versão mais recente</string>
-    <string name="before_asking_question_read_faq">Antes de fazer uma pergunta, por favor verifique as configurações do aplicativo e a nossa lista de Perguntas Frequentes.</string>
-    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
-    <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
+    <string name="before_asking_question_read_faq">Antes de fazer uma pergunta, por favor verifique as configurações do aplicativo e leia a lista de Perguntas Frequentes.</string>
+    <string name="before_rate_read_faq">Antes de nos avaliar, por favor verifique as configurações do aplicativo e leia a lista de Perguntas Frequentes. Se você tiver algum problema, talvez a solução esteja lá.</string>
+    <string name="make_sure_latest">Verifique também se você está usando a versão mais recente do aplicativo.</string>
     <string name="read_it">Ler</string>
-    <string name="read_faq">Read FAQ</string>
-    <string name="rate_us_prompt">Olá,\n\nParece que você já está utilizando este app a algum tempo, e nós agradecemos a você por isso.\n\nPor favor, considere nos avaliar na loja do Google Play. Isso iria nos ajudar bastante.\n\nDe uma forma ou de outra, não iremos pedir novamente.\n\nObrigado!
-</string>
+    <string name="read_faq">Leia as Perguntas Frequentes</string>
+    <string name="rate_us_prompt">Olá,\n\nParece que você já está utilizando este app a algum tempo, e nós agradecemos a você por isso.\n\nPor favor, considere nos avaliar na Google Play. Isso iria nos ajudar bastante.\n\nDe uma forma ou de outra, você não verá esta mensagem novamente.\n\nObrigado!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -632,10 +633,11 @@
     <string name="frequently_asked_questions">Perguntas Frequentes</string>
     <string name="before_asking_question">Antes de fazer uma pergunta, leia primeiro as</string>
     <string name="faq_1_title_commons">Por que não vejo o widget deste aplicativo na lista de widgets?</string>
-    <string name="faq_1_text_commons">O mais provável é que você tenha movido o aplicativo para um cartão SD. Existe uma limitação do sistema Android que oculta os widgets de aplicativos fornecidos neste caso. A única solução é mover o aplicativo de volta para o armazenamento interno por meio das configurações do dispositivo.</string>
+    <string name="faq_1_text_commons">O mais provável é que você tenha movido o aplicativo para um cartão SD. Existe uma limitação do sistema Android que oculta os widgets de aplicativos fornecidos neste caso.
+        A única solução é mover o aplicativo de volta para o Armazenamento Interno por meio das configurações do seu dispositivo.</string>
     <string name="faq_2_title_commons">Eu gostaria de apoiá-los, mas não posso doar dinheiro. Há algo mais que eu possa fazer?</string>
-    <string name="faq_2_text_commons">Certamente. Você pode divulgar os aplicativos ou dar um bom feedback e classificação. Você também pode ajudar traduzindo os aplicativos em um novo idioma ou apenas atualizando algumas traduções existentes.
-        Você pode encontrar o guia em https://github.com/SimpleMobileTools/General-Discussion , ou apenas me mande uma mensagem para hello@simplemobiletools.com se precisar de ajuda.</string>
+    <string name="faq_2_text_commons">Claro. Você pode divulgar os aplicativos ou dar um bom feedback e classificação. Você também pode ajudar traduzindo os aplicativos em um novo idioma ou apenas atualizando algumas traduções existentes.
+        Você pode encontrar o guia em https://github.com/SimpleMobileTools/General-Discussion , ou apenas me mande uma mensagem em hello@simplemobiletools.com se precisar de ajuda.</string>
     <string name="faq_3_title_commons">Eu exclui alguns arquivos por engano, como posso recuperá-los?</string>
     <string name="faq_3_text_commons">Infelizmente, você não pode. Os arquivos são apagados instantaneamente após a caixa de diálogo de confirmação, não há lixeira disponível.</string>
     <string name="faq_4_title_commons">Eu não gosto das cores do widget, posso mudá-las?</string>
@@ -645,12 +647,12 @@
     <string name="faq_6_title_commons">O ícone do app desapareceu. O que posso fazer?</string>
     <string name="faq_6_text_commons">Isso deve ter ocorrido porque o seu lançador de aplicativos não suporta corretamente a customização de ícones. Tente abrir o app pela loja do Google Play ou por um widget, se possível.
     Uma vez aberto o app, configure a cor do ícone de volta para o valor padrão (laranja #F57C00). No pior dos casos pode ser preciso reinstalar o app.</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
+    <string name="faq_7_title_commons">O dinheiro foi deduzido da minha conta bancária, mas não consigo fazer o download do aplicativo. O que eu posso fazer?</string>
+    <string name="faq_7_text_commons">Os pagamentos são totalmente gerenciados pelo Google, o sistema deles falha de vez em quanto. Apenas limpe o cache do aplicativo Google Play, reinicie o dispositivo e tente baixá-lo novamente.</string>
+    <string name="faq_8_title_commons">Por que eu deveria atualizar para a versão Pro?</string>
+    <string name="faq_8_text_commons">Como a versão do seu aplicativo não é mais atualizada, os erros que você talvez tenha encontrado nunca serão corrigidos. Também não haverá novas funções adicionadas. Você pode comprar a versão Pro no Google Play por uma pequena quantia em dinheiro.
+        É um pagamento único, o que significa que, uma vez que você o compre, nunca precisará pagar novamente. Nem mesmo depois de adquirir um novo dispositivo. Se você não gostar da versão Pro, basta desinstalá-la em algumas horas e você receberá seu dinheiro automaticamente.
+        Se você quiser um reembolso a qualquer momento depois, basta entrar em contato conosco pelo e-mail hello@simplemobiletools.com e você o receberá.</string>
 
     <!-- License -->
     <string name="notice">Este aplicativo usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>
@@ -683,5 +685,5 @@
 
     <!-- Google Play listing -->
     <string name="deprecated_app">OBSOLETO: Esta versão do app não recebe mais atualizações. Por favor obtenha a versão Pro em https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Não se esqueça de que se você desinstalar um aplicativo pago em menos de duas horas você receberá reembolsado(a) automaticamente. Se você precisar de um reembolso após isso, entre em contato conosco através hello@simplemobiletools.com. Esperamos que isso facilite que você experimente o app.</string>
+    <string name="pro_app_refund">Não se esqueça de que se você desinstalar um aplicativo pago em menos de duas horas você receberá reembolsado(a) automaticamente. Se você precisar de um reembolso após isso, entre em contato conosco através hello@simplemobiletools.com. Isso torna tudo mais fácil se você quiser testar :)</string>
 </resources>
