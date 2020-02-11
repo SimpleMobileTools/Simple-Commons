@@ -582,13 +582,13 @@
     <string name="email_label">Envie os seus comentários ou sugestões para</string>
     <string name="upgrade_to_pro">Atualizar para Pro</string>
     <string name="more_apps_underlined"><u>Mais aplicações</u></string>
-    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
+    <string name="more_apps_from_us_underlined"><u>Mais aplicações nossas</u></string>
     <string name="third_party_licences_underlined"><u>Licenças de terceiros</u></string>
     <string name="invite_friends_underlined"><u>Convidar amigos</u></string>
     <string name="share_text">Olá, experimenta %1$s em %2$s</string>
     <string name="invite_via">Convidar por</string>
     <string name="rate_us_underlined"><u>Avalie-nos na Play Store</u></string>
-    <string name="rate">Rate</string>
+    <string name="rate">Avaliar</string>
     <string name="donate">Donativos</string>
     <string name="donate_underlined"><u>Donativos</u></string>
     <string name="follow_us">Siga-nos</string>
@@ -609,7 +609,7 @@
     <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
     <string name="make_sure_latest">Certifique-se de que está a utilizar a versão mais recente.</string>
     <string name="read_it">Ler</string>
-    <string name="read_faq">Read FAQ</string>
+    <string name="read_faq">Ler FAQ</string>
     <string name="rate_us_prompt">Olá,\n\nparece que está a utilizar esta aplicação há algum tempo, o que nos deixa satisfeitos.\n\nGostaríamos de lhe pedir o favor de nos avaliar na Google Play. Isso iria ajudar-nos bastante.\n\nIndependentemente da sua escolha, esta mensagem não será mostrada novamente.\n\nObrigado!</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
@@ -681,7 +681,7 @@
     <string name="sanselan_title">Apache Sanselan (leitor de meta-dados das imagens)</string>
     <string name="filters_title">Android Photo Filters (filtros de imagens)</string>
     <string name="gesture_views_title">Gesture Views (ampliação de imagens)</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letras na barra de deslocação)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">AVISO: Esta versão da aplicação já não está a ser desenvolvida. Pode obter a versão Pro em https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
