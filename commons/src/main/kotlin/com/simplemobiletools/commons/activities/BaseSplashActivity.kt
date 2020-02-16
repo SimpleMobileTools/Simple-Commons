@@ -21,7 +21,7 @@ abstract class BaseSplashActivity : AppCompatActivity() {
             return
         }
 
-        if (isThankYouInstalled() && baseConfig.appRunCount == 0) {
+        if (isThankYouInstalled()) {
             getSharedTheme {
                 if (it != null) {
                     baseConfig.apply {
@@ -32,8 +32,12 @@ abstract class BaseSplashActivity : AppCompatActivity() {
                         textColor = it.textColor
                         backgroundColor = it.backgroundColor
                         primaryColor = it.primaryColor
-                        appIconColor = it.appIconColor
                         navigationBarColor = it.navigationBarColor
+                    }
+
+                    if (baseConfig.appIconColor != it.appIconColor) {
+                        baseConfig.appIconColor = it.appIconColor
+                        checkAppIconColor()
                     }
                 }
                 initActivity()
