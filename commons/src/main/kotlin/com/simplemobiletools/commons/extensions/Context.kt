@@ -145,6 +145,7 @@ fun Context.getLatestMediaId(uri: Uri = MediaStore.Files.getContentUri("external
         if (cursor?.moveToFirst() == true) {
             return cursor.getLongValue(MAX_VALUE)
         }
+    } catch (ignored: Exception) {
     } finally {
         cursor?.close()
     }
@@ -160,6 +161,7 @@ fun Context.getLatestMediaByDateId(uri: Uri = MediaStore.Files.getContentUri("ex
         if (cursor?.moveToFirst() == true) {
             return cursor.getLongValue(BaseColumns._ID)
         }
+    } catch (ignored: Exception) {
     } finally {
         cursor?.close()
     }
