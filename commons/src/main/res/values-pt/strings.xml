@@ -64,7 +64,7 @@
     <string name="source_file_doesnt_exist">O ficheiro de origem %s não existe</string>
     <string name="prepend_filenames">Introduzir antes do nome do ficheiro</string>
     <string name="append_filenames">Introduzir depois do nome do ficheiro</string>
-    <string name="simple_renaming">Mudar nome</string>
+    <string name="simple_renaming">Renomear</string>
     <string name="pattern_renaming">Padrão</string>
     <string name="string_to_add">Texto a adicionar</string>
     <string name="rename_date_time_pattern">%Y - ano\n%M - mês\n%D - dia\n%h - horas\n%m - minutos\n%s - segundos\n%i - incremento númerico a partir de 1</string>
@@ -95,7 +95,7 @@
     <string name="could_not_create_folder">Não foi possível criar a pasta %s</string>
     <string name="could_not_create_file">Não foi possível criar o ficheiro %s</string>
     <string name="no_new_items">Não foram encontrados novos itens</string>
-    <string name="no_space">Não existe espaço livre suficiente destino.\nPrecisa de %1$s e apenas existe %2$s</string>
+    <string name="no_space">Não existe espaço livre suficiente no destino.\nPrecisa de %1$s e apenas existem %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Criar</string>
@@ -606,7 +606,7 @@
     <string name="purchase">Comprar</string>
     <string name="update_thank_you">Por favor atualize a aplicação Simple Thank You para a versão mais recente</string>
     <string name="before_asking_question_read_faq">Antes de colocar uma questão, verifique as FAQ. Pode ser que a solução esteja lá.</string>
-    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
+    <string name="before_rate_read_faq">Antes de dar uma avaliação, analise as definições da aplicação e leia as FAQ. Pode ser que a solução para o seu problema esteja aí mesmo.</string>
     <string name="make_sure_latest">Certifique-se de que está a utilizar a versão mais recente.</string>
     <string name="read_it">Ler</string>
     <string name="read_faq">Ler FAQ</string>
@@ -630,7 +630,7 @@
     </string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Perguntas frquentes</string>
+    <string name="frequently_asked_questions">Perguntas frequentes</string>
     <string name="before_asking_question">Antes de colocar uma questão, leia as</string>
     <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
     <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
@@ -669,7 +669,7 @@
     <string name="photoview_title">PhotoView (animação de GIFs)</string>
     <string name="pattern_title">PatternLockView (proteção com padrões)</string>
     <string name="reprint_title">Reprint (proteção com impressões digitais)</string>
-    <string name="gif_drawable_title">Gif Drawable (carregamento de GIFs)</string>
+    <string name="gif_drawable_title">Gif Drawable (carregamento de GIF)</string>
     <string name="autofittextview_title">AutoFitTextView (redimensionamento de texto)</string>
     <string name="robolectric_title">Robolectric (framework de testes)</string>
     <string name="espresso_title">Espresso (apoio aos testes)</string>
