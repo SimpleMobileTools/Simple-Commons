@@ -24,7 +24,7 @@ class AppSideloadedDialog(val activity: Activity, val callback: () -> Unit) {
         dialog = AlertDialog.Builder(activity)
                 .setNegativeButton(R.string.cancel) { dialog, which -> negativePressed() }
                 .setPositiveButton(R.string.download, null)
-                .setOnDismissListener { negativePressed() }
+                .setOnCancelListener { negativePressed() }
                 .create().apply {
                     activity.setupDialogStuff(view, this)
                     getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
