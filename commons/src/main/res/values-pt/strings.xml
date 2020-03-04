@@ -64,7 +64,7 @@
     <string name="source_file_doesnt_exist">O ficheiro de origem %s não existe</string>
     <string name="prepend_filenames">Introduzir antes do nome do ficheiro</string>
     <string name="append_filenames">Introduzir depois do nome do ficheiro</string>
-    <string name="simple_renaming">Mudar nome</string>
+    <string name="simple_renaming">Renomear</string>
     <string name="pattern_renaming">Padrão</string>
     <string name="string_to_add">Texto a adicionar</string>
     <string name="rename_date_time_pattern">%Y - ano\n%M - mês\n%D - dia\n%h - horas\n%m - minutos\n%s - segundos\n%i - incremento númerico a partir de 1</string>
@@ -95,7 +95,7 @@
     <string name="could_not_create_folder">Não foi possível criar a pasta %s</string>
     <string name="could_not_create_file">Não foi possível criar o ficheiro %s</string>
     <string name="no_new_items">Não foram encontrados novos itens</string>
-    <string name="no_space">Não existe espaço livre suficiente destino.\nPrecisa de %1$s e apenas existe %2$s</string>
+    <string name="no_space">Não existe espaço livre suficiente no destino.\nPrecisa de %1$s e apenas existem %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Criar</string>
@@ -582,13 +582,13 @@
     <string name="email_label">Envie os seus comentários ou sugestões para</string>
     <string name="upgrade_to_pro">Atualizar para Pro</string>
     <string name="more_apps_underlined"><u>Mais aplicações</u></string>
-    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
+    <string name="more_apps_from_us_underlined"><u>Mais aplicações nossas</u></string>
     <string name="third_party_licences_underlined"><u>Licenças de terceiros</u></string>
     <string name="invite_friends_underlined"><u>Convidar amigos</u></string>
     <string name="share_text">Olá, experimenta %1$s em %2$s</string>
     <string name="invite_via">Convidar por</string>
     <string name="rate_us_underlined"><u>Avalie-nos na Play Store</u></string>
-    <string name="rate">Rate</string>
+    <string name="rate">Avaliar</string>
     <string name="donate">Donativos</string>
     <string name="donate_underlined"><u>Donativos</u></string>
     <string name="follow_us">Siga-nos</string>
@@ -606,11 +606,12 @@
     <string name="purchase">Comprar</string>
     <string name="update_thank_you">Por favor atualize a aplicação Simple Thank You para a versão mais recente</string>
     <string name="before_asking_question_read_faq">Antes de colocar uma questão, verifique as FAQ. Pode ser que a solução esteja lá.</string>
-    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
+    <string name="before_rate_read_faq">Antes de dar uma avaliação, analise as definições da aplicação e leia as FAQ. Pode ser que a solução para o seu problema esteja aí mesmo.</string>
     <string name="make_sure_latest">Certifique-se de que está a utilizar a versão mais recente.</string>
     <string name="read_it">Ler</string>
-    <string name="read_faq">Read FAQ</string>
+    <string name="read_faq">Ler FAQ</string>
     <string name="rate_us_prompt">Olá,\n\nparece que está a utilizar esta aplicação há algum tempo, o que nos deixa satisfeitos.\n\nGostaríamos de lhe pedir o favor de nos avaliar na Google Play. Isso iria ajudar-nos bastante.\n\nIndependentemente da sua escolha, esta mensagem não será mostrada novamente.\n\nObrigado!</string>
+    <string name="rate_our_app">Rate our app please :)</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -630,7 +631,7 @@
     </string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Perguntas frquentes</string>
+    <string name="frequently_asked_questions">Perguntas frequentes</string>
     <string name="before_asking_question">Antes de colocar uma questão, leia as</string>
     <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
     <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
@@ -669,7 +670,7 @@
     <string name="photoview_title">PhotoView (animação de GIFs)</string>
     <string name="pattern_title">PatternLockView (proteção com padrões)</string>
     <string name="reprint_title">Reprint (proteção com impressões digitais)</string>
-    <string name="gif_drawable_title">Gif Drawable (carregamento de GIFs)</string>
+    <string name="gif_drawable_title">Gif Drawable (carregamento de GIF)</string>
     <string name="autofittextview_title">AutoFitTextView (redimensionamento de texto)</string>
     <string name="robolectric_title">Robolectric (framework de testes)</string>
     <string name="espresso_title">Espresso (apoio aos testes)</string>
@@ -681,7 +682,7 @@
     <string name="sanselan_title">Apache Sanselan (leitor de meta-dados das imagens)</string>
     <string name="filters_title">Android Photo Filters (filtros de imagens)</string>
     <string name="gesture_views_title">Gesture Views (ampliação de imagens)</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letras na barra de deslocação)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">AVISO: Esta versão da aplicação já não está a ser desenvolvida. Pode obter a versão Pro em https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

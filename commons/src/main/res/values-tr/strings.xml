@@ -582,7 +582,7 @@
     <string name="email_label">Görüşlerinizi veya önerilerinizi şuraya gönderin:</string>
     <string name="upgrade_to_pro">Pro\'ya Yükselt</string>
     <string name="more_apps_underlined"><u>Daha fazla uygulama</u></string>
-    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
+    <string name="more_apps_from_us_underlined"><u>Diğer uygulamalarımız</u></string>
     <string name="third_party_licences_underlined"><u>Üçüncü taraf lisansları</u></string>
     <string name="invite_friends_underlined"><u>Arkadaşlarınızı davet edin</u></string>
     <string name="share_text">Selam, %1$s adlı harika bir uygulama buldum. %2$s adresinden indir</string>
@@ -606,11 +606,12 @@
     <string name="purchase">Satın al</string>
     <string name="update_thank_you">Lütfen Basit Teşekkürler\'i son sürüme güncelleyin</string>
     <string name="before_asking_question_read_faq">Bir soru sormadan önce, lütfen uygulama ayarlarını kontrol edin ve önce Sık Sorulan Sorular bölümünü okuyun. Belki çözüm oradadır.</string>
-    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
+    <string name="before_rate_read_faq">Bize puan vermeden önce lütfen uygulama ayarlarını kontrol edin ve önce Sık Sorulan Sorular bölümünü okuyun. Herhangi bir sorunuz varsa, belki çözüm oradadır.</string>
     <string name="make_sure_latest">Ayrıca uygulamanın en son sürümünü kullandığınızdan emin olun.</string>
     <string name="read_it">Oku</string>
-    <string name="read_faq">Read FAQ</string>
+    <string name="read_faq">SSS\'yi oku</string>
     <string name="rate_us_prompt">Merhaba,\n\nzaten bir süredir bu uygulamayı kullanıyor gibi görünüyorsunuz ve gerçekten takdir ediyoruz.\n\nSizden bir iyilik isteyebilirsek, lütfen bizi Google Play\'de oylayın. Bu bize gerçekten çok yardımcı olacak.\n\nNasıl karar verirseniz verin, bu mesajı bir daha görmeyeceksiniz.\n\nTeşekkürler!</string>
+    <string name="rate_our_app">Rate our app please :)</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -680,9 +681,9 @@
     <string name="sanselan_title">Apache Sanselan (görüntü meta verileri okuma)</string>
     <string name="filters_title">Android Photo Filters (görüntü filtreleri)</string>
     <string name="gesture_views_title">Gesture Views (yakınlaştırılabilir görüntüler)</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (kaydırma çubuğundaki harfler)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">Kullanımdan kaldırıldı: Uygulamanın bu sürümü artık sağlanmıyor, Pro sürümünü şuradan indirin: https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Ücretli herhangi bir uygulamayı 2 saat içinde kaldırırsanız, otomatik olarak iade edileceğini unutmayın. İstediğiniz zaman geri ödeme yapmak isterseniz, hello@simplemobiletools.com adresinden bizimle iletişime geçmeniz yeterli olacaktır. Bu denemeyi kolaylaştırır :)</string>
+    <string name="pro_app_refund">Ücretli herhangi bir uygulamayı 2 saat içinde kaldırırsanız, otomatik olarak iade edileceğini unutmayın. İstediğiniz zaman geri ödeme almak isterseniz, hello@simplemobiletools.com adresinden bizimle iletişime geçmeniz yeterli olacaktır. Bu denemeyi kolaylaştırır :)</string>
 </resources>
