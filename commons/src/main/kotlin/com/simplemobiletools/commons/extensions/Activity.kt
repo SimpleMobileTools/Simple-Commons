@@ -64,13 +64,13 @@ fun Activity.appLaunched(appId: String) {
             baseConfig.lastIconColor = primaryColor
         }
     }
+
     baseConfig.appRunCount++
     if (baseConfig.appRunCount > 10 && baseConfig.appRunCount % 50 == 0 && !isAProApp()) {
         showDonateOrUpgradeDialog()
     }
 
-    if (baseConfig.appRunCount > 60 && !baseConfig.wasRateUsPromptShown) {
-        baseConfig.wasRateUsPromptShown = true
+    if (baseConfig.appRunCount % 60 == 0 && !baseConfig.wasAppRated) {
         RateStarsDialog(this)
     }
 
