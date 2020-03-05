@@ -22,7 +22,7 @@
     <string name="transparent">Transparent</string>
     <string name="transparent_color">Couleur transparente</string>
     <string name="select_a_different_color">Sélectionnez une couleur différente</string>
-    <string name="download">Download</string>
+    <string name="download">Télécharger</string>
     <string name="notification">Notification</string>
     <string name="email">Email</string>
 
@@ -438,7 +438,7 @@
 
     <!-- Settings -->
     <string name="settings">Paramètres</string>
-    <string name="purchase_simple_thank_you">Acheter Simple Merci</string>
+    <string name="purchase_simple_thank_you">Acheter Simple Thank You</string>
     <string name="customize_colors">Modifier les couleurs</string>
     <string name="customize_widget_colors">Modifier les couleurs du widget</string>
     <string name="use_english_language">Utiliser la langue anglaise</string>
@@ -584,13 +584,13 @@
     <string name="email_label">Envoyez vos commentaires ou suggestions à</string>
     <string name="upgrade_to_pro">Passer à la version Pro</string>
     <string name="more_apps_underlined"><u>Plus d\'applications</u></string>
-    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
+    <string name="more_apps_from_us_underlined"><u>Plus d\'applications</u></string>
     <string name="third_party_licences_underlined"><u>Licences tierces</u></string>
     <string name="invite_friends_underlined"><u>Inviter des amis</u></string>
     <string name="share_text">Salut, viens voir %1$s à %2$s</string>
     <string name="invite_via">Inviter via</string>
     <string name="rate_us_underlined"><u>Nous évaluer</u></string>
-    <string name="rate">Rate</string>
+    <string name="rate">Notez</string>
     <string name="donate">Effectuer un don</string>
     <string name="donate_underlined"><u>Effectuer un don</u></string>
     <string name="follow_us">Suivez-nous</string>
@@ -683,8 +683,8 @@
     <string name="panorama_view_title">VR Panorama View (affichage des panoramas)</string>
     <string name="sanselan_title">Apache Sanselan (lecture de métadonnées d\'image)</string>
     <string name="filters_title">Android Photo Filters (filtres d\'image)</string>
-    <string name="gesture_views_title">Gesture Views (zoomable images)</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="gesture_views_title">Gesture Views (zoom d\'images)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (lettre sur barre de défilement)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">ATTENTION : cette version de l\'application n\'est plus maintenue. Procurez-vous la version Pro à l\'adresse https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
