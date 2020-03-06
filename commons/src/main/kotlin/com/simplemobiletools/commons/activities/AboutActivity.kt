@@ -1,6 +1,5 @@
 package com.simplemobiletools.commons.activities
 
-import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -148,11 +147,7 @@ class AboutActivity : BaseSimpleActivity() {
         } else {
             about_rate_us.setOnClickListener {
                 if (baseConfig.wasBeforeRateShown) {
-                    try {
-                        launchViewIntent("market://details?id=${packageName.removeSuffix(".debug")}")
-                    } catch (ignored: ActivityNotFoundException) {
-                        launchViewIntent(getStoreUrl())
-                    }
+                    redirectToRateUs()
                 } else {
                     baseConfig.wasBeforeRateShown = true
                     val msg = "${getString(R.string.before_rate_read_faq)}\n\n${getString(R.string.make_sure_latest)}"

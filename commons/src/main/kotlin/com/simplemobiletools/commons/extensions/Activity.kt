@@ -64,14 +64,14 @@ fun Activity.appLaunched(appId: String) {
             baseConfig.lastIconColor = primaryColor
         }
     }
+
     baseConfig.appRunCount++
     if (baseConfig.appRunCount > 10 && baseConfig.appRunCount % 50 == 0 && !isAProApp()) {
         showDonateOrUpgradeDialog()
     }
 
-    if (baseConfig.appRunCount > 60 && !baseConfig.wasRateUsPromptShown) {
-        baseConfig.wasRateUsPromptShown = true
-        RateUsDialog(this)
+    if (baseConfig.appRunCount % 60 == 0 && !baseConfig.wasAppRated) {
+        RateStarsDialog(this)
     }
 
     if (baseConfig.navigationBarColor == INVALID_NAVIGATION_BAR_COLOR && (window.attributes.flags and WindowManager.LayoutParams.FLAG_FULLSCREEN == 0)) {
@@ -167,6 +167,14 @@ fun Activity.launchViewIntent(url: String) {
                 toast(R.string.no_app_found)
             }
         }
+    }
+}
+
+fun Activity.redirectToRateUs() {
+    try {
+        launchViewIntent("market://details?id=${packageName.removeSuffix(".debug")}")
+    } catch (ignored: ActivityNotFoundException) {
+        launchViewIntent(getStoreUrl())
     }
 }
 

@@ -348,6 +348,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getBoolean(WAS_RATE_US_PROMPT_SHOWN, false)
         set(wasRateUsPromptShown) = prefs.edit().putBoolean(WAS_RATE_US_PROMPT_SHOWN, wasRateUsPromptShown).apply()
 
+    var wasAppRated: Boolean
+        get() = prefs.getBoolean(WAS_APP_RATED, false)
+        set(wasAppRated) = prefs.edit().putBoolean(WAS_APP_RATED, wasAppRated).apply()
+
     var wasSortingByNumericValueAdded: Boolean
         get() = prefs.getBoolean(WAS_SORTING_BY_NUMERIC_VALUE_ADDED, false)
         set(wasSortingByNumericValueAdded) = prefs.edit().putBoolean(WAS_SORTING_BY_NUMERIC_VALUE_ADDED, wasSortingByNumericValueAdded).apply()
