@@ -183,6 +183,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     curBackgroundColor = baseConfig.customBackgroundColor
                     curPrimaryColor = baseConfig.customPrimaryColor
                     curNavigationBarColor = baseConfig.customNavigationBarColor
+                    curAppIconColor = baseConfig.customAppIconColor
                     setTheme(getThemeId(curPrimaryColor))
                     updateMenuItemColors(menu, true, curPrimaryColor)
                     setupColorsPickers()
@@ -191,7 +192,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     baseConfig.customBackgroundColor = curBackgroundColor
                     baseConfig.customTextColor = curTextColor
                     baseConfig.customNavigationBarColor = curNavigationBarColor
-                    baseConfig.appIconColor = curAppIconColor
+                    baseConfig.customAppIconColor = curAppIconColor
                 }
             } else if (curSelectedThemeId == THEME_SHARED) {
                 if (useStored) {
