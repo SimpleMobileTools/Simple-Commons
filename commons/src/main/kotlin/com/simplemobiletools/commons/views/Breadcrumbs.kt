@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.views
 
 import android.content.Context
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
@@ -14,6 +15,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
     private var availableWidth = 0
     private var inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
     private var textColor = context.baseConfig.textColor
+    private var fontSize = resources.getDimension(R.dimen.bigger_text_size)
     private var lastPath = ""
 
     var listener: BreadcrumbsListener? = null
@@ -125,6 +127,8 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
 
             breadcrumb_text.text = textToAdd
             breadcrumb_text.setTextColor(textColor)
+            breadcrumb_text.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
+
             addView(this)
             setOnClickListener(this@Breadcrumbs)
 
@@ -134,6 +138,11 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
 
     fun updateColor(color: Int) {
         textColor = color
+        setBreadcrumb(lastPath)
+    }
+
+    fun updateFontSize(size: Float) {
+        fontSize = size
         setBreadcrumb(lastPath)
     }
 
