@@ -28,6 +28,7 @@ import com.simplemobiletools.commons.interfaces.CopyMoveListener
 import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
+import java.io.OutputStream
 import java.util.*
 import java.util.regex.Pattern
 
@@ -37,6 +38,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     var isAskingPermissions = false
     var useDynamicTheme = true
     var checkedDocumentPath = ""
+    var configItemsToExport = LinkedHashMap<String, Any>()
 
     private val GENERIC_PERM_HANDLER = 100
 
@@ -229,6 +231,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             } else {
                 funAfterSAFPermission?.invoke(false)
             }
+        } else if (requestCode == SELECT_EXPORT_SETTINGS_FILE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+            val outputStream = contentResolver.openOutputStream(resultData.data!!)
+            exportSettingsTo(outputStream, configItemsToExport)
         }
     }
 
@@ -485,29 +490,45 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun exportSettings(configItems: LinkedHashMap<String, Any>) {
-        handlePermission(PERMISSION_WRITE_STORAGE) {
-            if (it) {
-                ExportSettingsDialog(this, getExportSettingsFilename(), false) {
-                    val file = File(it)
-                    val fileDirItem = FileDirItem(file.absolutePath, file.name)
-                    getFileOutputStream(fileDirItem, true) {
-                        if (it == null) {
-                            toast(R.string.unknown_error_occurred)
-                            return@getFileOutputStream
-                        }
+        if (isQPlus()) {
+            configItemsToExport = configItems
+            ExportSettingsDialog(this, getExportSettingsFilename(), true) { path, filename ->
+                Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
+                    type = "text/plain"
+                    putExtra(Intent.EXTRA_TITLE, filename)
+                    addCategory(Intent.CATEGORY_OPENABLE)
 
-                        ensureBackgroundThread {
-                            it.bufferedWriter().use { out ->
-                                for ((key, value) in configItems) {
-                                    out.writeLn("$key=$value")
-                                }
-                            }
-
-                            toast(R.string.settings_exported_successfully)
+                    startActivityForResult(this, SELECT_EXPORT_SETTINGS_FILE_INTENT)
+                }
+            }
+        } else {
+            handlePermission(PERMISSION_WRITE_STORAGE) {
+                if (it) {
+                    ExportSettingsDialog(this, getExportSettingsFilename(), false) { path, filename ->
+                        val file = File(path)
+                        getFileOutputStream(file.toFileDirItem(this), true) {
+                            exportSettingsTo(it, configItems)
                         }
                     }
                 }
             }
+        }
+    }
+
+    private fun exportSettingsTo(outputStream: OutputStream?, configItems: LinkedHashMap<String, Any>) {
+        if (outputStream == null) {
+            toast(R.string.unknown_error_occurred)
+            return
+        }
+
+        ensureBackgroundThread {
+            outputStream.bufferedWriter().use { out ->
+                for ((key, value) in configItems) {
+                    out.writeLn("$key=$value")
+                }
+            }
+
+            toast(R.string.settings_exported_successfully)
         }
     }
 

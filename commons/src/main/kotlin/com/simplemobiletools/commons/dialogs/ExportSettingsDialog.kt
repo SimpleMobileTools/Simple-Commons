@@ -7,7 +7,7 @@ import com.simplemobiletools.commons.extensions.*
 import kotlinx.android.synthetic.main.dialog_export_settings.view.*
 
 class ExportSettingsDialog(val activity: BaseSimpleActivity, val defaultFilename: String, val hidePath: Boolean,
-                           callback: (path: String) -> Unit) {
+                           callback: (path: String, filename: String) -> Unit) {
     init {
         val lastUsedFolder = activity.baseConfig.lastExportedSettingsFolder
         var folder = if (lastUsedFolder.isNotEmpty() && activity.getDoesFilePathExist(lastUsedFolder)) {
@@ -56,11 +56,11 @@ class ExportSettingsDialog(val activity: BaseSimpleActivity, val defaultFilename
                             if (activity.getDoesFilePathExist(newPath)) {
                                 val title = String.format(activity.getString(R.string.file_already_exists_overwrite), newPath.getFilenameFromPath())
                                 ConfirmationDialog(activity, title) {
-                                    callback(newPath)
+                                    callback(newPath, filename)
                                     dismiss()
                                 }
                             } else {
-                                callback(newPath)
+                                callback(newPath, filename)
                                 dismiss()
                             }
                         }
