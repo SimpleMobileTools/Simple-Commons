@@ -487,13 +487,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun exportSettings(configItems: LinkedHashMap<String, Any>) {
         handlePermission(PERMISSION_WRITE_STORAGE) {
             if (it) {
-                var defaultFilename = baseConfig.lastExportedSettingsFile
-                if (defaultFilename.isEmpty()) {
-                    val appName = baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro").removePrefix("com.simplemobiletools.")
-                    defaultFilename = "$appName-settings.txt"
-                }
-
-                ExportSettingsDialog(this, defaultFilename, false) {
+                ExportSettingsDialog(this, getExportSettingsFilename(), false) {
                     val file = File(it)
                     val fileDirItem = FileDirItem(file.absolutePath, file.name)
                     getFileOutputStream(fileDirItem, true) {
@@ -515,5 +509,15 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    private fun getExportSettingsFilename(): String {
+        var defaultFilename = baseConfig.lastExportedSettingsFile
+        if (defaultFilename.isEmpty()) {
+            val appName = baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro").removePrefix("com.simplemobiletools.")
+            defaultFilename = "$appName-settings.txt"
+        }
+
+        return defaultFilename
     }
 }
