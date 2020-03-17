@@ -493,7 +493,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     defaultFilename = "$appName-settings.txt"
                 }
 
-                ExportSettingsDialog(this, defaultFilename) {
+                ExportSettingsDialog(this, defaultFilename, false) {
                     val file = File(it)
                     val fileDirItem = FileDirItem(file.absolutePath, file.name)
                     getFileOutputStream(fileDirItem, true) {
