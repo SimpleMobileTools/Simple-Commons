@@ -53,7 +53,7 @@ class ExportSettingsDialog(val activity: BaseSimpleActivity, val defaultFilename
                             }
 
                             activity.baseConfig.lastExportedSettingsFolder = folder
-                            if (activity.getDoesFilePathExist(newPath)) {
+                            if (!hidePath && activity.getDoesFilePathExist(newPath)) {
                                 val title = String.format(activity.getString(R.string.file_already_exists_overwrite), newPath.getFilenameFromPath())
                                 ConfirmationDialog(activity, title) {
                                     callback(newPath, filename)
