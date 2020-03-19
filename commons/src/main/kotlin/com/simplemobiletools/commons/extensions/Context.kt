@@ -301,11 +301,7 @@ fun Context.getFilenameFromUri(uri: Uri): String {
     return if (uri.scheme == "file") {
         File(uri.toString()).name
     } else {
-        var name = getFilenameFromContentUri(uri) ?: ""
-        if (name.isEmpty()) {
-            name = uri.lastPathSegment ?: ""
-        }
-        name
+        getFilenameFromContentUri(uri) ?: uri.lastPathSegment ?: ""
     }
 }
 
@@ -355,7 +351,7 @@ fun Context.getFilenameFromContentUri(uri: Uri): String? {
     } finally {
         cursor?.close()
     }
-    return ""
+    return null
 }
 
 fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
