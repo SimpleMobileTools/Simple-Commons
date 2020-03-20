@@ -154,7 +154,7 @@
 
     <!-- File properties -->
     <string name="properties">Propriétés</string>
-    <string name="path">Eplacement</string>
+    <string name="path">Emplacement</string>
     <string name="items_selected">Éléments sélectionnés</string>
     <string name="direct_children_count">Nombre total de fichiers enfants directs</string>
     <string name="files_count">Nombre total de fichiers</string>
@@ -191,8 +191,7 @@
     <string name="undo_changes_confirmation">Voulez-vous vraiment annuler vos changements ?</string>
     <string name="save_before_closing">Vous avez des changements non enregistrés. Enregistrer avant de quitter ?</string>
     <string name="apply_to_all_apps">Appliquer à l\'ensemble de la suite d\'applications Simples</string>
-    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="app_icon_color_warning">AVERTISSEMENT: certains lanceurs ne gèrent pas correctement la personnalisation des icônes d'applications. Au cas où l'icône disparaîtrait, essayez de lancer l'application via Google Play ou un widget, si disponible. Une fois lancé, réglez simplement l'icône orange par défaut # F57C00. Vous devrez peut-être réinstaller l'application dans le pire des cas.</string>
     <string name="share_colors_success">Couleurs actualisées. Un nouveau thème nommé \"Partagé\" a été ajouté. Veuillez utiliser ce thème pour actualiser les couleurs de toutes les applications à partir de maintenant.</string>
     <string name="purchase_thank_you">
         <![CDATA[
