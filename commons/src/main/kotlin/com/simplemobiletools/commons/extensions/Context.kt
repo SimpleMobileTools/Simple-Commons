@@ -7,6 +7,7 @@ import android.content.ContentUris
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.database.Cursor
 import android.graphics.Color
 import android.graphics.Point
@@ -24,6 +25,7 @@ import android.provider.MediaStore
 import android.provider.OpenableColumns
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
@@ -672,3 +674,60 @@ fun Context.getTextSize() = when (baseConfig.fontSize) {
     FONT_SIZE_LARGE -> resources.getDimension(R.dimen.big_text_size)
     else -> resources.getDimension(R.dimen.extra_big_text_size)
 }
+
+val Context.windowManager: WindowManager get() = getSystemService(Context.WINDOW_SERVICE) as WindowManager
+val Context.portrait get() = resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT
+val Context.navigationBarRight: Boolean get() = usableScreenSize.x < realScreenSize.x
+val Context.navigationBarBottom: Boolean get() = usableScreenSize.y < realScreenSize.y
+val Context.navigationBarHeight: Int get() = if (navigationBarBottom) navigationBarSize.y else 0
+val Context.navigationBarWidth: Int get() = if (navigationBarRight) navigationBarSize.x else 0
+
+internal val Context.navigationBarSize: Point
+    get() = when {
+        navigationBarRight -> Point(newNavigationBarHeight, usableScreenSize.y)
+        navigationBarBottom -> Point(usableScreenSize.x, newNavigationBarHeight)
+        else -> Point()
+    }
+
+internal val Context.newNavigationBarHeight: Int
+    get() {
+        var navigationBarHeight = 0
+        val resourceId = resources.getIdentifier("navigation_bar_height", "dimen", "android")
+        if (resourceId > 0) {
+            navigationBarHeight = resources.getDimensionPixelSize(resourceId)
+        }
+        return navigationBarHeight
+    }
+
+internal val Context.statusBarHeight: Int
+    get() {
+        var statusBarHeight = 0
+        val resourceId = resources.getIdentifier("status_bar_height", "dimen", "android")
+        if (resourceId > 0) {
+            statusBarHeight = resources.getDimensionPixelSize(resourceId)
+        }
+        return statusBarHeight
+    }
+
+internal val Context.actionBarHeight: Int
+    get() {
+        val styledAttributes = theme.obtainStyledAttributes(intArrayOf(android.R.attr.actionBarSize))
+        val actionBarHeight = styledAttributes.getDimension(0, 0f)
+        styledAttributes.recycle()
+        return actionBarHeight.toInt()
+    }
+
+
+val Context.usableScreenSize: Point
+    get() {
+        val size = Point()
+        windowManager.defaultDisplay.getSize(size)
+        return size
+    }
+
+val Context.realScreenSize: Point
+    get() {
+        val size = Point()
+        windowManager.defaultDisplay.getRealSize(size)
+        return size
+    }
