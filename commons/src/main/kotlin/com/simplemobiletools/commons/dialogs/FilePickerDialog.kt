@@ -156,7 +156,6 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                 verifyPath()
             }
         }
-        adapter.addVerticalDividers(true)
 
         val layoutManager = mDialogView.filepicker_list.layoutManager as LinearLayoutManager
         mScrollStates[mPrevPath.trimEnd('/')] = layoutManager.onSaveInstanceState()!!
