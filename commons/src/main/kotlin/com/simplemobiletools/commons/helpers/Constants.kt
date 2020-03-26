@@ -163,6 +163,7 @@ const val SELECT_EXPORT_SETTINGS_FILE_INTENT = 1004
 
 // sorting
 const val SORT_ORDER = "sort_order"
+const val SORT_FOLDER_PREFIX = "sort_folder_"       // storing folder specific values at using "Use for this folder only"
 const val SORT_BY_NAME = 1
 const val SORT_BY_DATE_MODIFIED = 2
 const val SORT_BY_SIZE = 4

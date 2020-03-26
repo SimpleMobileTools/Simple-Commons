@@ -222,6 +222,22 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(SORT_ORDER, context.resources.getInteger(R.integer.default_sorting))
         set(sorting) = prefs.edit().putInt(SORT_ORDER, sorting).apply()
 
+    fun saveCustomSorting(path: String, value: Int) {
+        if (path.isEmpty()) {
+            sorting = value
+        } else {
+            prefs.edit().putInt(SORT_FOLDER_PREFIX + path.toLowerCase(), value).apply()
+        }
+    }
+
+    fun getFolderSorting(path: String) = prefs.getInt(SORT_FOLDER_PREFIX + path.toLowerCase(), sorting)
+
+    fun removeCustomSorting(path: String) {
+        prefs.edit().remove(SORT_FOLDER_PREFIX + path.toLowerCase()).apply()
+    }
+
+    fun hasCustomSorting(path: String) = prefs.contains(SORT_FOLDER_PREFIX + path.toLowerCase())
+
     var hadThankYouInstalled: Boolean
         get() = prefs.getBoolean(HAD_THANK_YOU_INSTALLED, false)
         set(hadThankYouInstalled) = prefs.edit().putBoolean(HAD_THANK_YOU_INSTALLED, hadThankYouInstalled).apply()
