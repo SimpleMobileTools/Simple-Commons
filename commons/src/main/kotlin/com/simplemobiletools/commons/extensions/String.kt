@@ -9,9 +9,13 @@ import android.os.StatFs
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.TextUtils
+import android.text.style.BackgroundColorSpan
 import android.text.style.ForegroundColorSpan
+import android.widget.TextView
+import androidx.core.graphics.ColorUtils
 import com.bumptech.glide.signature.ObjectKey
 import com.simplemobiletools.commons.helpers.*
+import com.simplemobiletools.commons.views.MyEditText
 import java.io.File
 import java.text.Normalizer
 import java.util.*
@@ -198,6 +202,26 @@ fun String.highlightTextPart(textToHighlight: String, color: Int, highlightAll: 
     }
 
     return spannableString
+}
+
+fun String.searchMatches(textToHighlight: String): ArrayList<Int> {
+    val indexes = arrayListOf<Int>()
+    var indexOf = indexOf(textToHighlight, 0, true)
+
+    var offset = 0
+    while (offset < length && indexOf != -1) {
+        indexOf = indexOf(textToHighlight, offset, true)
+
+        if (indexOf == -1) {
+            break
+        } else {
+            indexes.add(indexOf)
+        }
+
+        offset = indexOf + 1
+    }
+
+    return indexes
 }
 
 fun String.getFileSignature() = ObjectKey(getFileKey())
