@@ -96,6 +96,12 @@ fun Context.isBlackAndWhiteTheme() = baseConfig.textColor == Color.WHITE && base
 
 fun Context.getAdjustedPrimaryColor() = if (isBlackAndWhiteTheme()) Color.WHITE else baseConfig.primaryColor
 
+fun Context.getFABIconColor() = if (isBlackAndWhiteTheme()) {
+    Color.BLACK
+} else {
+    baseConfig.primaryColor.getContrastColor()
+}
+
 fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
     toast(getString(id), length)
 }
