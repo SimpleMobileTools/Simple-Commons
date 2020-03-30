@@ -17,6 +17,8 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
+import java.io.FileInputStream
+import java.io.InputStream
 import java.net.URLDecoder
 import java.util.*
 import java.util.regex.Pattern
@@ -427,6 +429,15 @@ fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolea
     if (fileDeleted) {
         deleteFromMediaStore(fileDirItem.path)
         callback?.invoke(true)
+    }
+}
+
+fun Context.getFileInputStreamSync(path: String): InputStream? {
+    return if (isPathOnOTG(path)) {
+        val fileDocument = getSomeDocumentFile(path)
+        applicationContext.contentResolver.openInputStream(fileDocument?.uri!!)
+    } else {
+        FileInputStream(File(path))
     }
 }
 
