@@ -1,7 +1,10 @@
 package com.simplemobiletools.commons.extensions
 
+import android.content.Context
 import android.graphics.Color
 import android.media.ExifInterface
+import android.text.format.DateFormat
+import java.text.DecimalFormat
 import java.util.*
 
 fun Int.getContrastColor(): Int {
@@ -33,6 +36,22 @@ fun Int.getFormattedDuration(): String {
     sb.append(String.format(Locale.getDefault(), "%02d", minutes))
     sb.append(":").append(String.format(Locale.getDefault(), "%02d", seconds))
     return sb.toString()
+}
+
+fun Int.formatSize(): String {
+    if (this <= 0) {
+        return "0 B"
+    }
+
+    val units = arrayOf("B", "kB", "MB", "GB", "TB")
+    val digitGroups = (Math.log10(toDouble()) / Math.log10(1024.0)).toInt()
+    return "${DecimalFormat("#,##0.#").format(this / Math.pow(1024.0, digitGroups.toDouble()))} ${units[digitGroups]}"
+}
+
+fun Int.formatDate(context: Context): String {
+    val cal = Calendar.getInstance(Locale.ENGLISH)
+    cal.timeInMillis = this * 1000L
+    return DateFormat.format("${context.baseConfig.dateFormat} ${context.getTimeFormat()}", cal).toString()
 }
 
 fun Int.addBitIf(add: Boolean, bit: Int) =

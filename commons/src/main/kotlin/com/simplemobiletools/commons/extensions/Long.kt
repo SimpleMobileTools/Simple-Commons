@@ -6,8 +6,9 @@ import java.text.DecimalFormat
 import java.util.*
 
 fun Long.formatSize(): String {
-    if (this <= 0)
+    if (this <= 0) {
         return "0 B"
+    }
 
     val units = arrayOf("B", "kB", "MB", "GB", "TB")
     val digitGroups = (Math.log10(toDouble()) / Math.log10(1024.0)).toInt()
