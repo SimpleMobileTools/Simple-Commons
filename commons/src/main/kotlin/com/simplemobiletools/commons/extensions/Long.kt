@@ -18,5 +18,5 @@ fun Long.formatSize(): String {
 fun Long.formatDate(context: Context): String {
     val cal = Calendar.getInstance(Locale.ENGLISH)
     cal.timeInMillis = this
-    return DateFormat.format("${context.baseConfig.dateFormat} ${context.getTimeFormat()}", cal).toString()
+    return DateFormat.format("${context.baseConfig.dateFormat}, ${context.getTimeFormat()}", cal).toString()
 }

@@ -51,7 +51,7 @@ fun Int.formatSize(): String {
 fun Int.formatDate(context: Context): String {
     val cal = Calendar.getInstance(Locale.ENGLISH)
     cal.timeInMillis = this * 1000L
-    return DateFormat.format("${context.baseConfig.dateFormat} ${context.getTimeFormat()}", cal).toString()
+    return DateFormat.format("${context.baseConfig.dateFormat}, ${context.getTimeFormat()}", cal).toString()
 }
 
 fun Int.addBitIf(add: Boolean, bit: Int) =

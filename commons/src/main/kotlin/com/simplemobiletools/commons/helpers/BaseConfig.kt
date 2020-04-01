@@ -352,6 +352,10 @@ open class BaseConfig(val context: Context) {
             "dd/mm/y" -> DATE_FORMAT_TWO
             "mm/dd/y" -> DATE_FORMAT_THREE
             "y-mm-dd" -> DATE_FORMAT_FOUR
+            "dmmmmy" -> DATE_FORMAT_FIVE
+            "mmmmdy" -> DATE_FORMAT_SIX
+            "mm-dd-y" -> DATE_FORMAT_SEVEN
+            "dd-mm-y" -> DATE_FORMAT_EIGHT
             else -> DATE_FORMAT_ONE
         }
     }
