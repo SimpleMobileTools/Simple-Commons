@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.simplemobiletools.commons.views.MyTextView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.simplemobiletools.commons.views.MyTextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/message"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="@dimen/activity_margin"
+    android:lineSpacingExtra="@dimen/small_margin"
     android:paddingLeft="@dimen/big_margin"
-    android:paddingRight="@dimen/big_margin"
     android:paddingTop="@dimen/big_margin"
-    android:textSize="@dimen/bigger_text_size"/>
+    android:paddingRight="@dimen/big_margin"
+    android:paddingBottom="@dimen/activity_margin"
+    android:textSize="@dimen/bigger_text_size" />
