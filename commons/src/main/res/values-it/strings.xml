@@ -585,7 +585,7 @@
     <string name="email_label">Invia opinioni e suggerimenti a</string>
     <string name="upgrade_to_pro">Aggiorna alla versione Pro</string>
     <string name="more_apps_underlined"><u>Altre app</u></string>
-    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
+    <string name="more_apps_from_us_underlined"><u>Altre nostre app</u></string>
     <string name="third_party_licences_underlined"><u>Licenze di terze parti</u></string>
     <string name="invite_friends_underlined"><u>Invita un amico</u></string>
     <string name="share_text">Ciao, controlla %1$s su %2$s</string>
@@ -609,13 +609,13 @@
     <string name="purchase">Acquista</string>
     <string name="update_thank_you">Aggiornare Semplice Ringraziamento all\'ultima versione</string>
     <string name="before_asking_question_read_faq">Prima di fare una domanda, controlla le impostazioni dell\'app e le domande frequenti. Magari si trova la soluzione.</string>
-    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
-    <string name="make_sure_latest">Assicurati anche che stai usando la versione più recente dell\'app.</string>
+    <string name="before_rate_read_faq">Prima di valutarci, controlla le impostazioni dell\'app e leggi le domande frequenti. Se riscontri problemi, la soluzione potrebbe trovarsi là.</string>
+    <string name="make_sure_latest">Assicurati anche che tu stia usando la versione più recente dell\'app.</string>
     <string name="read_it">Leggi</string>
-    <string name="read_faq">Read FAQ</string>
+    <string name="read_faq">Domande frequenti</string>
     <string name="rate_us_prompt">Ciao,\n\nstai utilizzando questa app da un po\' di tempo e ne siamo veramente grati..\n\nValutaci su Google Play se vuoi farci un favore, ci aiuterà tantissimo.\n\nNon è importante cosa sceglierai, non vedrai più questo messaggio una volta ancora.\n\nGrazie!</string>
-    <string name="rate_our_app">Rate our app please :)</string>
-    <string name="thank_you">Thank you</string>
+    <string name="rate_our_app">Valuta la nostra app per favore :)</string>
+    <string name="thank_you">Grazie</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -671,7 +671,7 @@
     <string name="joda_title">Joda-Time (sostituto di \"Java date\")</string>
     <string name="stetho_title">Stetho (debug database)</string>
     <string name="otto_title">Otto (bus eventi)</string>
-    <string name="photoview_title">PhotoView (GIF zoomabili)</string>
+    <string name="photoview_title">PhotoView (GIF ingrandibili)</string>
     <string name="pattern_title">PatternLockView (sequenza di protezione)</string>
     <string name="reprint_title">Reprint (protezione impronta)</string>
     <string name="gif_drawable_title">Gif Drawable (caricamento GIF)</string>
@@ -680,15 +680,15 @@
     <string name="espresso_title">Espresso (aiutante nei test)</string>
     <string name="gson_title">Gson (analizzatore JSON)</string>
     <string name="leak_canary_title">Leak Canary (rileva i buchi di memoria)</string>
-    <string name="number_picker_title">Number Picker (Selettore di numeri personalizzabile)</string>
+    <string name="number_picker_title">Number Picker (selettore di numeri personalizzabile)</string>
     <string name="exoplayer_title">ExoPlayer (lettore video)</string>
     <string name="panorama_view_title">VR Panorama View (visualizzazione panorami)</string>
     <string name="sanselan_title">Apache Sanselan (lettura metadati immagini)</string>
     <string name="filters_title">Android Photo Filters (filtri immagine)</string>
     <string name="gesture_views_title">Gesture Views (immagini ingrandibili)</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (lettere su barre di scorrimento)</string>
+    <string name="event_bus_title">Event Bus (comunicazione all\'interno dell\'app)</string>
+    <string name="audio_record_view_title">Audio Record View (visualizzazione audio)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATA: Questa versione dell\'app non è più supportata, ottieni la versione Pro a https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
