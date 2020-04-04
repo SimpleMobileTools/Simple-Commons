@@ -4,13 +4,15 @@ import android.content.Context
 import android.graphics.Color
 import android.media.ExifInterface
 import android.text.format.DateFormat
+import android.text.format.DateUtils
+import android.text.format.Time
 import java.text.DecimalFormat
 import java.util.*
 
 fun Int.getContrastColor(): Int {
-    val DARK_GREY = -13421773
+    val DARK_GREY = 0xFF333333.toInt()
     val y = (299 * Color.red(this) + 587 * Color.green(this) + 114 * Color.blue(this)) / 1000
-    return if (y >= 149) DARK_GREY else Color.WHITE
+    return if (y >= 149 && this != Color.BLACK) DARK_GREY else Color.WHITE
 }
 
 fun Int.toHex() = String.format("#%06X", 0xFFFFFF and this).toUpperCase()
@@ -52,6 +54,38 @@ fun Int.formatDate(context: Context): String {
     val cal = Calendar.getInstance(Locale.ENGLISH)
     cal.timeInMillis = this * 1000L
     return DateFormat.format("${context.baseConfig.dateFormat}, ${context.getTimeFormat()}", cal).toString()
+}
+
+
+// if the given date is today, we show only the time. Else we show the date and optionally the time too
+fun Int.formatDateOrTime(context: Context, hideTimeAtOtherDays: Boolean): String {
+    val cal = Calendar.getInstance(Locale.ENGLISH)
+    cal.timeInMillis = this * 1000L
+
+    return if (DateUtils.isToday(this * 1000L)) {
+        DateFormat.format(context.getTimeFormat(), cal).toString()
+    } else {
+        var format = context.baseConfig.dateFormat
+        if (isThisYear()) {
+            format = format.replace("y", "").trim().trim('-').trim('.').trim('/')
+        }
+
+        if (!hideTimeAtOtherDays) {
+            format += ", ${context.getTimeFormat()}"
+        }
+
+        DateFormat.format(format, cal).toString()
+    }
+}
+
+fun Int.isThisYear(): Boolean {
+    val time = Time()
+    time.set(this * 1000L)
+
+    val thenYear = time.year
+    time.set(System.currentTimeMillis())
+
+    return (thenYear == time.year)
 }
 
 fun Int.addBitIf(add: Boolean, bit: Int) =
