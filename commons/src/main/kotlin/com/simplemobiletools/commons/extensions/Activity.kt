@@ -248,6 +248,30 @@ fun Activity.sharePathsIntent(paths: ArrayList<String>, applicationId: String) {
     }
 }
 
+fun Activity.shareTextIntent(text: String) {
+    ensureBackgroundThread {
+        Intent().apply {
+            action = Intent.ACTION_SEND
+            type = "text/plain"
+            putExtra(Intent.EXTRA_TEXT, text)
+
+            try {
+                if (resolveActivity(packageManager) != null) {
+                    startActivity(Intent.createChooser(this, getString(R.string.share_via)))
+                } else {
+                    toast(R.string.no_app_found)
+                }
+            } catch (e: RuntimeException) {
+                if (e.cause is TransactionTooLargeException) {
+                    toast(R.string.maximum_share_reached)
+                } else {
+                    showErrorToast(e)
+                }
+            }
+        }
+    }
+}
+
 fun Activity.setAsIntent(path: String, applicationId: String) {
     ensureBackgroundThread {
         val newUri = getFinalUriFromPath(path, applicationId) ?: return@ensureBackgroundThread
