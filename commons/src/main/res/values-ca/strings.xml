@@ -10,6 +10,7 @@
     <string name="edit_with">Editar amb</string>
     <string name="no_app_found">No s\'ha trobat una aplicació vàlida</string>
     <string name="set_as">Establir com</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="value_copied_to_clipboard">Valor copiat al portaretalls</string>
     <string name="unknown">Desconegut</string>
     <string name="always">Sempre</string>
@@ -25,6 +26,9 @@
     <string name="download">Descarregar</string>
     <string name="notification">Notificació</string>
     <string name="email">Correu electrònic</string>
+    <string name="previous">Anterior</string>
+    <string name="playpause">Reproduir / Pausa</string>
+    <string name="next">Següent</string>
 
     <!-- Favorites -->
     <string name="favorites">Preferits</string>
@@ -684,6 +688,8 @@
     <string name="filters_title">Android Photo Filters (image filters)</string>
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">DESCONTINUADA: Aquesta versió de l’aplicació ja no es manté, obteniu la versió Pro a l\'adreça https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

@@ -10,6 +10,7 @@
     <string name="edit_with">Chỉnh sửa với</string>
     <string name="no_app_found">Không tìm thấy ứng dụng hợp lệ</string>
     <string name="set_as">Đặt làm...</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="value_copied_to_clipboard">Giá trị được sao chép vào clipboard</string>
     <string name="unknown">Không xác định</string>
     <string name="always">Luôn luôn</string>
@@ -25,6 +26,9 @@
     <string name="download">Tải xuống</string>
     <string name="notification">Thông báo</string>
     <string name="email">Email</string>
+    <string name="previous">Previous</string>
+    <string name="playpause">Play / Pause</string>
+    <string name="next">Next</string>
 
     <!-- Favorites -->
     <string name="favorites">Yêu thích</string>
@@ -684,6 +688,8 @@
     <string name="filters_title">Bộ lọc ảnh Android (bộ lọc hình ảnh)</string>
     <string name="gesture_views_title">Chế độ xem cử chỉ (hình ảnh có thể phóng to)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">THÔNG BÁO: Phiên bản của ứng dụng này không còn được duy trì, hãy tải phiên bản Pro tại https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

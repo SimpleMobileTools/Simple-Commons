@@ -10,6 +10,7 @@
     <string name="edit_with">Editar con</string>
     <string name="no_app_found">No se encontró una aplicación válida</string>
     <string name="set_as">Establecer como</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="value_copied_to_clipboard">Valor copiado al portapapeles</string>
     <string name="unknown">Desconocido</string>
     <string name="always">Siempre</string>
@@ -25,6 +26,9 @@
     <string name="download">Descarga</string>
     <string name="notification">Notificación</string>
     <string name="email">Correo electrónico</string>
+    <string name="previous">Anterior</string>
+    <string name="playpause">Reproducir / Pausar</string>
+    <string name="next">Siguiente</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
@@ -684,6 +688,8 @@
     <string name="filters_title">Android Photo Filters (Filtros de imagen)</string>
     <string name="gesture_views_title">Gesture Views (Imágenes con zoom)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">OBSOLETO: Esta versión de la aplicación ya no es mantenida, obtén la versión Pro en https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

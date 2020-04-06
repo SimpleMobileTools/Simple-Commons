@@ -10,6 +10,7 @@
     <string name="edit_with">Редактировать в…</string>
     <string name="no_app_found">Приложение не найдено</string>
     <string name="set_as">Установить как…</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="value_copied_to_clipboard">Скопировано в буфер обмена</string>
     <string name="unknown">Неизвестно</string>
     <string name="always">Всегда</string>
@@ -25,6 +26,9 @@
     <string name="download">Загрузка</string>
     <string name="notification">Уведомление</string>
     <string name="email">Электронная почта</string>
+    <string name="previous">Предыдущая</string>
+    <string name="playpause">Воспроизведение / Пауза</string>
+    <string name="next">Следующая</string>
 
     <!-- Favorites -->
     <string name="favorites">Избранное</string>
@@ -717,6 +721,8 @@
     <string name="filters_title">Android Photo Filters (фильтры изображений)</string>
     <string name="gesture_views_title">Gesture Views (масштабирование изображений)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (буквы на полосе прокрутки)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">УСТАРЕВШЕЕ: данная версия приложения больше не поддерживается, переходите на версию Pro https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

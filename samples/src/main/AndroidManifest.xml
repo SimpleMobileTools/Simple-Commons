@@ -9,6 +9,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/commons_launcher"
         android:label="@string/smtco_app_name"
+        android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activities.MainActivity">

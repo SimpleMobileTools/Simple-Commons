@@ -27,7 +27,10 @@ import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.*
 import com.simplemobiletools.commons.views.MyTextView
 import kotlinx.android.synthetic.main.dialog_title.view.*
-import java.io.*
+import java.io.File
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.io.OutputStream
 import java.util.*
 import kotlin.collections.HashMap
 
@@ -239,6 +242,30 @@ fun Activity.sharePathsIntent(paths: ArrayList<String>, applicationId: String) {
                     } else {
                         showErrorToast(e)
                     }
+                }
+            }
+        }
+    }
+}
+
+fun Activity.shareTextIntent(text: String) {
+    ensureBackgroundThread {
+        Intent().apply {
+            action = Intent.ACTION_SEND
+            type = "text/plain"
+            putExtra(Intent.EXTRA_TEXT, text)
+
+            try {
+                if (resolveActivity(packageManager) != null) {
+                    startActivity(Intent.createChooser(this, getString(R.string.share_via)))
+                } else {
+                    toast(R.string.no_app_found)
+                }
+            } catch (e: RuntimeException) {
+                if (e.cause is TransactionTooLargeException) {
+                    toast(R.string.maximum_share_reached)
+                } else {
+                    showErrorToast(e)
                 }
             }
         }
@@ -727,15 +754,6 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
             showErrorToast(e)
             null
         }
-    }
-}
-
-fun BaseSimpleActivity.getFileInputStreamSync(path: String): InputStream? {
-    return if (isPathOnOTG(path)) {
-        val fileDocument = getSomeDocumentFile(path)
-        applicationContext.contentResolver.openInputStream(fileDocument?.uri!!)
-    } else {
-        FileInputStream(File(path))
     }
 }
 

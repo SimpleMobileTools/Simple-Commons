@@ -58,7 +58,11 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             currPath = activity.internalStoragePath
         }
 
-        mDialogView.filepicker_breadcrumbs.listener = this
+        mDialogView.filepicker_breadcrumbs.apply {
+            listener = this@FilePickerDialog
+            updateFontSize(activity.getTextSize())
+        }
+
         tryUpdateItems()
 
         val builder = AlertDialog.Builder(activity)
@@ -122,23 +126,24 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
     private fun tryUpdateItems() {
         ensureBackgroundThread {
-            getItems(currPath, activity.baseConfig.sorting and SORT_BY_SIZE != 0) {
+            getItems(currPath, activity.baseConfig.getFolderSorting(currPath) and SORT_BY_SIZE != 0) {
                 activity.runOnUiThread {
-                    updateItems(it)
+                    updateItems(it as ArrayList<FileDirItem>)
                 }
             }
         }
     }
 
-    private fun updateItems(items: List<FileDirItem>) {
+    private fun updateItems(items: ArrayList<FileDirItem>) {
         if (!containsDirectory(items) && !mFirstUpdate && !pickFile && !showFAB) {
             verifyPath()
             return
         }
 
-        val sortedItems = items.sortedWith(compareBy({ !it.isDirectory }, { it.name.toLowerCase() }))
+        FileDirItem.sorting = activity.baseConfig.getFolderSorting(currPath)
+        items.sort()
 
-        val adapter = FilepickerItemsAdapter(activity, sortedItems, mDialogView.filepicker_list) {
+        val adapter = FilepickerItemsAdapter(activity, items, mDialogView.filepicker_list) {
             if ((it as FileDirItem).isDirectory) {
                 activity.handleLockedFolderOpening(it.path) { success ->
                     if (success) {
@@ -151,7 +156,6 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                 verifyPath()
             }
         }
-        adapter.addVerticalDividers(true)
 
         val layoutManager = mDialogView.filepicker_list.layoutManager as LinearLayoutManager
         mScrollStates[mPrevPath.trimEnd('/')] = layoutManager.onSaveInstanceState()!!
@@ -161,7 +165,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             filepicker_breadcrumbs.setBreadcrumb(currPath)
             filepicker_fastscroller.allowBubbleDisplay = context.baseConfig.showInfoBubble
             filepicker_fastscroller.setViews(filepicker_list) {
-                filepicker_fastscroller.updateBubbleText(sortedItems.getOrNull(it)?.getBubbleText(context) ?: "")
+                filepicker_fastscroller.updateBubbleText(items.getOrNull(it)?.getBubbleText(context) ?: "")
             }
 
             layoutManager.onRestoreInstanceState(mScrollStates[currPath.trimEnd('/')])

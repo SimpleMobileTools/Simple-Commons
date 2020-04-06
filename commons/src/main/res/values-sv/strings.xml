@@ -10,6 +10,7 @@
     <string name="edit_with">Redigera med</string>
     <string name="no_app_found">Ingen giltig app hittades</string>
     <string name="set_as">Använd som</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="value_copied_to_clipboard">Värdet har kopierats till Urklipp</string>
     <string name="unknown">Okänd</string>
     <string name="always">Alltid</string>
@@ -25,6 +26,9 @@
     <string name="download">Hämta</string>
     <string name="notification">Avisering</string>
     <string name="email">E-post</string>
+    <string name="previous">Föregående</string>
+    <string name="playpause">Spela / Pausa</string>
+    <string name="next">Nästa</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoriter</string>
@@ -684,6 +688,8 @@
     <string name="filters_title">Android Photo Filters (image filters)</string>
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

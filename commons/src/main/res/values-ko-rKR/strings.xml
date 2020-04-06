@@ -10,6 +10,7 @@
     <string name="edit_with">편집 앱으로 열기</string>
     <string name="no_app_found">연결 가능한 앱 없음</string>
     <string name="set_as">다른 앱에 설정</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="value_copied_to_clipboard">클립보드에 복사됨</string>
     <string name="unknown">알 수 없음</string>
     <string name="always">항상</string>
@@ -25,6 +26,9 @@
     <string name="download">다운로드</string>
     <string name="notification">알림</string>
     <string name="email">이메일</string>
+    <string name="previous">이전</string>
+    <string name="playpause">재생 / 정지</string>
+    <string name="next">다음</string>
 
     <!-- Favorites -->
     <string name="favorites">즐겨찾기</string>
@@ -649,6 +653,8 @@
     <string name="filters_title">Android Photo Filters (이미지 필터)</string>
     <string name="gesture_views_title">Gesture Views (확대 가능한 이미지)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">구버전 경고: 이 버전의 앱은 더이상 관리되지 않습니다. Pro 버전을 설치해 주세요: https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

@@ -10,6 +10,7 @@
     <string name="edit_with">تعديل باستخدام</string>
     <string name="no_app_found">لم يتم العثور على تطبيق صالح</string>
     <string name="set_as">تعيين كـ</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="value_copied_to_clipboard">تم نسخ القيمة إلي الحافظة</string>
     <string name="unknown">غير معروف</string>
     <string name="always">دائماً</string>
@@ -25,6 +26,9 @@
     <string name="download">تنزيل</string>
     <string name="notification">الإشعارات</string>
     <string name="email">البريد الإلكتروني</string>
+    <string name="previous">Previous</string>
+    <string name="playpause">Play / Pause</string>
+    <string name="next">Next</string>
 
     <!-- Favorites -->
     <string name="favorites">المفضلة</string>
@@ -677,6 +681,8 @@
     <string name="filters_title">فلاتر الصور</string>
     <string name="gesture_views_title">الصور القابلة للتكبير</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">لم يعد يجري العمل عليه: لم يعد هذا الإصدار من التطبيق يجري العمل عليه، قم بالحصول على الإصدار الـ Pro على https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

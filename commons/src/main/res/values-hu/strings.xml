@@ -10,6 +10,7 @@
     <string name="edit_with">Szerkesztés ezzel</string>
     <string name="no_app_found">Nem található érvényes alkalmazás</string>
     <string name="set_as">Beállítás ennek</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="value_copied_to_clipboard">Érték másolva a vágólapra</string>
     <string name="unknown">Ismeretlen</string>
     <string name="always">Mindig</string>
@@ -25,6 +26,9 @@
     <string name="download">Letöltés</string>
     <string name="notification">Értesítés</string>
     <string name="email">Email</string>
+    <string name="previous">Előző</string>
+    <string name="playpause">Lejátszás/szüneteltetés</string>
+    <string name="next">Következő</string>
 
     <!-- Favorites -->
     <string name="favorites">Kedvencek</string>
@@ -610,8 +614,8 @@
     <string name="read_it">Olvassa el</string>
     <string name="read_faq">Read FAQ</string>
     <string name="rate_us_prompt">Hello,\n\nÚgy tűnik elég régen használja ezt az alkalmazést és ezt mi igazán nagyra értékeljük.\n\nHa megkérhetjük egy szívességre, kérjük, értékeljen minket a Google Playen. Ez igazán segítene nekünk.\n\nFüggetlenül attól, hogy hogyan dönt, nem fogja látni ezt az üzenetet újra.\n\nKöszönjük!</string>
-    <string name="rate_our_app">Rate our app please :)</string>
-    <string name="thank_you">Thank you</string>
+    <string name="rate_our_app">Értékelje kérem az aplikációnkat :)</string>
+    <string name="thank_you">Köszönjük</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -682,6 +686,8 @@
     <string name="filters_title">Android Photo Filters (kép szűrők)</string>
     <string name="gesture_views_title">Gesztus nézetek (zoomolható képek)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">ELAVULT: Az alkalmazás ezen verziója már nem fog frissülni, a Pro verziót a https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro címen találja meg.</string>

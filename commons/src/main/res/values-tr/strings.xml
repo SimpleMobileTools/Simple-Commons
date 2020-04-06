@@ -10,6 +10,7 @@
     <string name="edit_with">Şununla düzenle</string>
     <string name="no_app_found">Geçerli bir uygulama bulunamadı</string>
     <string name="set_as">Ayarla</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="value_copied_to_clipboard">Değer panoya kopyalandı</string>
     <string name="unknown">Bilinmeyen</string>
     <string name="always">Her zaman</string>
@@ -25,6 +26,9 @@
     <string name="download">İndir</string>
     <string name="notification">Bildirim</string>
     <string name="email">E-posta</string>
+    <string name="previous">Önceki</string>
+    <string name="playpause">Çal / Duraklat</string>
+    <string name="next">Sonraki</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoriler</string>
@@ -683,6 +687,8 @@
     <string name="filters_title">Android Photo Filters (görüntü filtreleri)</string>
     <string name="gesture_views_title">Gesture Views (yakınlaştırılabilir görüntüler)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (kaydırma çubuğundaki harfler)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">Kullanımdan kaldırıldı: Uygulamanın bu sürümü artık sağlanmıyor, Pro sürümünü şuradan indirin: https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

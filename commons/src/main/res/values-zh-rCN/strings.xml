@@ -10,6 +10,7 @@
     <string name="edit_with">编辑方式</string>
     <string name="no_app_found">未找到可用应用</string>
     <string name="set_as">设置为</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="value_copied_to_clipboard">颜色值已复制到剪贴板</string>
     <string name="unknown">未知</string>
     <string name="always">总是</string>
@@ -25,6 +26,9 @@
     <string name="download">下载</string>
     <string name="notification">通知</string>
     <string name="email">电子邮件</string>
+    <string name="previous">Previous</string>
+    <string name="playpause">Play / Pause</string>
+    <string name="next">Next</string>
 
     <!-- Favorites -->
     <string name="favorites">收藏</string>
@@ -649,6 +653,8 @@
     <string name="filters_title">Android Photo Filters (image filters)</string>
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">已弃用：该应用版本已不再维护，请在以下链接获取专业版 https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

@@ -10,6 +10,7 @@
     <string name="edit_with">Upraviť pomocou</string>
     <string name="no_app_found">Nenašla sa žiadna vhodná aplikácia</string>
     <string name="set_as">Nastaviť ako</string>
+    <string name="copy_to_clipboard">Skopírovať do schránky</string>
     <string name="value_copied_to_clipboard">Hodnota bola vložená do schránky</string>
     <string name="unknown">Neznámy</string>
     <string name="always">Vždy</string>
@@ -25,6 +26,9 @@
     <string name="download">Stiahnuť</string>
     <string name="notification">Pripomienka</string>
     <string name="email">Email</string>
+    <string name="previous">Predošlá</string>
+    <string name="playpause">Hrať / Pauznúť</string>
+    <string name="next">Nasledujúca</string>
 
     <!-- Favorites -->
     <string name="favorites">Obľúbené</string>
@@ -644,7 +648,7 @@
     <string name="read_it">Prečítať</string>
     <string name="read_faq">Prečítať ČKO</string>
     <string name="rate_us_prompt">Zdravím,\n\nzdá sa, že už nejaký čas používate túto aplikáciu a to si veľmi ceníme.\n\nAk Vás môžeme požiadať o láskavosť, prosím ohodnoťte nás na Google Play. Naozaj by nám to veľmi pomohlo.\n\nBez ohľadu na to, ako sa rozhodnete, túto správu už neuvidíte.\n\nVďaka!</string>
-    <string name="rate_our_app">Prosím ohodnoťte našu aplikáciu :)</string>
+    <string name="rate_our_app">Ohodnoťte našu aplikáciu, prosím :)</string>
     <string name="thank_you">Ďakujeme</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
@@ -717,6 +721,8 @@
     <string name="filters_title">Android Photo Filters (filtre obrázkov)</string>
     <string name="gesture_views_title">Gesture Views (priblížiteľné obrázky)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (písmená na posuvníku)</string>
+    <string name="event_bus_title">Event Bus (komunikácia vrámci apky)</string>
+    <string name="audio_record_view_title">Audio Record View (vizualizácia zvukov)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">ZASTARALÁ: Táto verzia aplikácie už nie je podporovaná. Stiahnite si Pro verziu na https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

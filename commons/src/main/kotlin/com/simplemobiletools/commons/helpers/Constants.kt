@@ -63,6 +63,7 @@ const val CUSTOM_TEXT_COLOR = "custom_text_color"
 const val CUSTOM_BACKGROUND_COLOR = "custom_background_color"
 const val CUSTOM_PRIMARY_COLOR = "custom_primary_color"
 const val CUSTOM_NAVIGATION_BAR_COLOR = "custom_navigation_bar_color"
+const val CUSTOM_APP_ICON_COLOR = "custom_app_icon_color"
 const val WIDGET_BG_COLOR = "widget_bg_color"
 const val WIDGET_TEXT_COLOR = "widget_text_color"
 const val PASSWORD_PROTECTION = "password_protection"
@@ -152,15 +153,19 @@ const val LICENSE_PANORAMA_VIEW = 2097152
 const val LICENSE_SANSELAN = 4194304
 const val LICENSE_GESTURE_VIEWS = 8388608
 const val LICENSE_INDICATOR_FAST_SCROLL = 16777216
+const val LICENSE_EVENT_BUS = 33554432
+const val LICENSE_AUDIO_RECORD_VIEW = 67108864
 
 // global intents
 const val OPEN_DOCUMENT_TREE = 1000
 const val OPEN_DOCUMENT_TREE_OTG = 1001
 const val REQUEST_SET_AS = 1002
 const val REQUEST_EDIT_IMAGE = 1003
+const val SELECT_EXPORT_SETTINGS_FILE_INTENT = 1004
 
 // sorting
 const val SORT_ORDER = "sort_order"
+const val SORT_FOLDER_PREFIX = "sort_folder_"       // storing folder specific values at using "Use for this folder only"
 const val SORT_BY_NAME = 1
 const val SORT_BY_DATE_MODIFIED = 2
 const val SORT_BY_SIZE = 4
@@ -207,6 +212,7 @@ const val PERMISSION_CALL_PHONE = 9
 const val PERMISSION_READ_CALL_LOG = 10
 const val PERMISSION_WRITE_CALL_LOG = 11
 const val PERMISSION_GET_ACCOUNTS = 12
+const val PERMISSION_READ_SMS = 13
 
 // conflict resolving
 const val CONFLICT_SKIP = 1
@@ -244,6 +250,10 @@ const val DATE_FORMAT_ONE = "dd.MM.yyyy"
 const val DATE_FORMAT_TWO = "dd/MM/yyyy"
 const val DATE_FORMAT_THREE = "MM/dd/yyyy"
 const val DATE_FORMAT_FOUR = "yyyy-MM-dd"
+const val DATE_FORMAT_FIVE = "d MMMM yyyy"
+const val DATE_FORMAT_SIX = "MMMM d yyyy"
+const val DATE_FORMAT_SEVEN = "MM-dd-yyyy"
+const val DATE_FORMAT_EIGHT = "dd-MM-yyyy"
 
 const val TIME_FORMAT_12 = "hh:mm a"
 const val TIME_FORMAT_24 = "HH:mm"
@@ -287,6 +297,7 @@ fun isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
 fun isNougatMR1Plus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1
 fun isOreoPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
 fun isPiePlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
+fun isQPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
 
 fun getDateFormats() = arrayListOf(
         "yyyy-MM-dd",

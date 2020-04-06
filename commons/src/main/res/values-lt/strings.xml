@@ -10,6 +10,7 @@
     <string name="edit_with">Redaguoti su</string>
     <string name="no_app_found">Nerasta tinkamos programėlės</string>
     <string name="set_as">Nustatyti kaip</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="value_copied_to_clipboard">Reikšmė nukopijuota į iškarpinė</string>
     <string name="unknown">Nežinoma</string>
     <string name="always">Visada</string>
@@ -25,6 +26,9 @@
     <string name="download">Download</string>
     <string name="notification">Notification</string>
     <string name="email">Email</string>
+    <string name="previous">Prieš tai buvusi</string>
+    <string name="playpause">Groti / Pristabdyti</string>
+    <string name="next">Kita</string>
 
     <!-- Favorites -->
     <string name="favorites">Mėgiamiausieji</string>
@@ -706,6 +710,8 @@
     <string name="filters_title">Android Photo Filters (image filters)</string>
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

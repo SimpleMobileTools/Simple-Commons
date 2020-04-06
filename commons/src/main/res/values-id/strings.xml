@@ -10,6 +10,7 @@
     <string name="edit_with">Sunting dengan</string>
     <string name="no_app_found">Tidak ada aplikasi yang sesuai</string>
     <string name="set_as">Setel sebagai</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="value_copied_to_clipboard">Nilai disalin ke papan klip</string>
     <string name="unknown">Tidak diketahui</string>
     <string name="always">Selalu</string>
@@ -25,6 +26,9 @@
     <string name="download">Unduh</string>
     <string name="notification">Notifikasi</string>
     <string name="email">Email</string>
+    <string name="previous">Sebelumnya</string>
+    <string name="playpause">Putar / Jeda</string>
+    <string name="next">Berikutnya</string>
 
     <!-- Favorites -->
     <string name="favorites">Favorit</string>
@@ -651,6 +655,8 @@
     <string name="filters_title">Android Photo Filters (image filters)</string>
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">TIDAK DIDUKUNG: Versi aplikasi ini tidak lagi dikembangkan, dapatkan versi Pro di https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

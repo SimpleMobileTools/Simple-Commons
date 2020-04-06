@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.adapters
 
 import android.content.pm.PackageManager
+import android.util.TypedValue
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
@@ -20,10 +21,12 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
     private val folderDrawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_folder_vector, textColor)
     private val fileDrawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_file_vector, textColor)
     private val hasOTGConnected = activity.hasOTGConnected()
+    private var fontSize = 0f
 
     init {
         folderDrawable.alpha = 180
         fileDrawable.alpha = 180
+        fontSize = activity.getTextSize()
     }
 
     override fun getActionMenuId() = 0
@@ -67,7 +70,10 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
         view.apply {
             list_item_name.text = fileDirItem.name
             list_item_name.setTextColor(textColor)
+            list_item_name.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
+
             list_item_details.setTextColor(textColor)
+            list_item_details.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
 
             if (fileDirItem.isDirectory) {
                 list_item_icon.setImageDrawable(folderDrawable)

@@ -10,6 +10,7 @@
     <string name="edit_with">Uredi z</string>
     <string name="no_app_found">Ni veljavne aplikacije</string>
     <string name="set_as">Nastavi kot</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="value_copied_to_clipboard">Vrednost kopirana v odložišče</string>
     <string name="unknown">Neznano</string>
     <string name="always">Vedno</string>
@@ -25,6 +26,9 @@
     <string name="download">Shrani lokalno</string>
     <string name="notification">Obvestilo</string>
     <string name="email">Email</string>
+    <string name="previous">Previous</string>
+    <string name="playpause">Play / Pause</string>
+    <string name="next">Next</string>
 
     <!-- Favorites -->
     <string name="favorites">Priljubljeno</string>
@@ -748,6 +752,8 @@
     <string name="filters_title">Android Photo Filters (filtri za slike)</string>
     <string name="gesture_views_title">Gesture Views (povečljive slike)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">ZASTARELO: Ta verzija aplikacije se ne vzdržuje več, pridobite si Pro verzijo na https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

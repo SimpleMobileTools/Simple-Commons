@@ -10,6 +10,7 @@
     <string name="edit_with">Muokkaa sovelluksella</string>
     <string name="no_app_found">Sovelluksia ei löydetty</string>
     <string name="set_as">Aseta</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="value_copied_to_clipboard">Kopioitu leikepöydälle</string>
     <string name="unknown">Tuntematon</string>
     <string name="always">Aina</string>
@@ -25,6 +26,9 @@
     <string name="download">Download</string>
     <string name="notification">Notification</string>
     <string name="email">Email</string>
+    <string name="previous">Previous</string>
+    <string name="playpause">Play / Pause</string>
+    <string name="next">Next</string>
 
     <!-- Favorites -->
     <string name="favorites">Favorites</string>
@@ -683,6 +687,8 @@
     <string name="filters_title">Android Photo Filters (image filters)</string>
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

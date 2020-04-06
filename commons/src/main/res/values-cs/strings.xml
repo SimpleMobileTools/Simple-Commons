@@ -10,6 +10,7 @@
     <string name="edit_with">Upravit s</string>
     <string name="no_app_found">Nenalezena žádná vhodná aplikace</string>
     <string name="set_as">Nastavit jako</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="value_copied_to_clipboard">Hodnota byla vložena do schránky</string>
     <string name="unknown">Neznámý</string>
     <string name="always">Vždy</string>
@@ -25,6 +26,9 @@
     <string name="download">Stáhnout</string>
     <string name="notification">Oznámení</string>
     <string name="email">E-mail</string>
+    <string name="previous">Předchozí</string>
+    <string name="playpause">Hrát / Pauza</string>
+    <string name="next">Následující</string>
 
     <!-- Favorites -->
     <string name="favorites">Oblíbené</string>
@@ -644,8 +648,8 @@
     <string name="read_it">Přečíst</string>
     <string name="read_faq">Přečíst ČKO</string>
     <string name="rate_us_prompt">Zdravím,\n\nzdá se, že již tuto aplikaci používáte nějaký čas a velmi si toho ceníme.\n\nMůžeme-li vás proto požádat o laskavost, ohodnoťte nás prosím na Google Play. Moc by nám to pomohlo.\n\nBez ohledu na to, jak se rozhodnete, tato zpráva se vám již nezobrazí.\n\nĎěkujeme!</string>
-    <string name="rate_our_app">Rate our app please :)</string>
-    <string name="thank_you">Thank you</string>
+    <string name="rate_our_app">Ohodnoťte naši aplikaci, prosím :)</string>
+    <string name="thank_you">Děkujeme</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -717,6 +721,8 @@
     <string name="filters_title">Android Photo Filters (filtry obrázků)</string>
     <string name="gesture_views_title">Gesture Views (přiblížitelné obrázky)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (písmena na posuvníku)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">ZASTARALÁ: Tato verze aplikace již není podporována, stáhněte si Pro verzi na https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

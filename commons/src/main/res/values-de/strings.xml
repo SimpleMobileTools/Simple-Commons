@@ -10,6 +10,7 @@
     <string name="edit_with">Bearbeiten mit</string>
     <string name="no_app_found">Keine passende App gefunden</string>
     <string name="set_as">Festlegen als</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="value_copied_to_clipboard">Wert in Zwischenablage kopiert</string>
     <string name="unknown">Unbekannt</string>
     <string name="always">Immer</string>
@@ -25,6 +26,9 @@
     <string name="download">Download</string>
     <string name="notification">Benachrichtigung</string>
     <string name="email">E-Mail</string>
+    <string name="previous">Vorheriger Titel</string>
+    <string name="playpause">Wiedergabe / Pause</string>
+    <string name="next">Nächster Titel</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoriten</string>
@@ -611,8 +615,8 @@
     <string name="read_it">Bitte lesen</string>
     <string name="read_faq">Read FAQ</string>
     <string name="rate_us_prompt">Hallo,\n\nes sieht so aus, als würdest du diese App schon einige Zeit benutzen und wir schätzen das sehr.\n\nWenn wir dich um einen Gefallen bitten können, bitte bewerte uns auf Google Play. Das würde uns wirklich sehr helfen.\n\nEgal wie du dich entscheidest, wirst du diese Nachricht nicht noch einmal bekommen.\n\nDanke!</string>
-    <string name="rate_our_app">Rate our app please :)</string>
-    <string name="thank_you">Thank you</string>
+    <string name="rate_our_app">Bewerten Sie unsere App bitte :)</string>
+    <string name="thank_you">Danke</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -683,6 +687,8 @@
     <string name="filters_title">Android Photo Filters (Bilder filtern)</string>
     <string name="gesture_views_title">Gesture Views (Zoombare Bilder)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="event_bus_title">Event Bus (communication within the app)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: Diese Version der App wird nicht länger unterstützt. Hol dir die Pro-Version unter https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
