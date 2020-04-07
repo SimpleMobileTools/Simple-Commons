@@ -306,6 +306,31 @@ fun Context.getMediaContent(path: String, uri: Uri): Uri? {
     return null
 }
 
+fun Context.queryCursor(
+        uri: Uri,
+        projection: Array<String>,
+        selection: String? = null,
+        selectionArgs: Array<String>? = null,
+        sortOrder: String? = null,
+        showErrors: Boolean = false,
+        callback: (cursor: Cursor) -> Unit
+) {
+    try {
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, sortOrder)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                do {
+                    callback(cursor)
+                } while (cursor.moveToNext())
+            }
+        }
+    } catch (e: Exception) {
+        if (showErrors) {
+            showErrorToast(e)
+        }
+    }
+}
+
 fun Context.getFilenameFromUri(uri: Uri): String {
     return if (uri.scheme == "file") {
         File(uri.toString()).name
