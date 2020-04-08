@@ -29,6 +29,7 @@
     <string name="previous">Previous</string>
     <string name="playpause">Play / Pause</string>
     <string name="next">Next</string>
+    <string name="number">Rhif</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Rheoli rhifau wedi\'u rhwystro</string>
@@ -37,6 +38,8 @@
     <string name="block_number">Rhwystro rhif</string>
     <string name="block_numbers">Rhwystro rhifau</string>
     <string name="blocked_numbers">Rhifau wedi\'u rhwystro</string>
+    <string name="must_make_default_dialer">Rhaid gwneud yr ap hwn yr ap deialu rhagosodedig er mwyn defnyddio rhifau wedi\'u rhwystro.</string>
+    <string name="set_as_default">Defnyddio fel y rhagosodedig</string>
 
     <!-- Favorites -->
     <string name="favorites">Ffefrynnau</string>

@@ -29,6 +29,7 @@
     <string name="previous">Előző</string>
     <string name="playpause">Lejátszás/szüneteltetés</string>
     <string name="next">Következő</string>
+    <string name="number">Telefonszám</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Zárolt telefonszámok kezelése</string>
@@ -37,6 +38,8 @@
     <string name="block_number">Telefonszám zárolása</string>
     <string name="block_numbers">Telefonszámok zárolása</string>
     <string name="blocked_numbers">Zárolt telefonszámok</string>
+    <string name="must_make_default_dialer">A zárolt telefonszámok használatához be kell állítani, hogy ez az app legyen az alapértelmezett tárcsázó.</string>
+    <string name="set_as_default">Alapértelmezés beállítása</string>
 
     <!-- Favorites -->
     <string name="favorites">Kedvencek</string>

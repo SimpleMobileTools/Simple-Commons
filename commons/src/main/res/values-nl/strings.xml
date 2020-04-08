@@ -29,6 +29,7 @@
     <string name="previous">Vorige</string>
     <string name="playpause">Afspelen / Pauzeren</string>
     <string name="next">Volgende</string>
+    <string name="number">Nummer</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Geblokkeerde nummers beheren</string>
@@ -37,6 +38,8 @@
     <string name="block_number">Nummer blokkeren</string>
     <string name="block_numbers">Nummers blokkeren</string>
     <string name="blocked_numbers">Geblokkeerde nummers</string>
+    <string name="must_make_default_dialer">Maak van deze app de standaardapp voor bellen om nummers te kunnen blokkeren.</string>
+    <string name="set_as_default">Als standaard instellen</string>
 
     <!-- Favorites -->
     <string name="favorites">Favorieten</string>

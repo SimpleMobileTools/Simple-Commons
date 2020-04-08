@@ -29,6 +29,7 @@
     <string name="previous">Prijašnja</string>
     <string name="playpause">Reproduciraj / Pauziraj</string>
     <string name="next">Sljedeća</string>
+    <string name="number">Broj</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Upravljanje blokiranim brojevima</string>
@@ -37,6 +38,8 @@
     <string name="block_number">Blokiraj broj</string>
     <string name="block_numbers">Blokiraj brojeve</string>
     <string name="blocked_numbers">Blokirani brojevi</string>
+    <string name="must_make_default_dialer">Morate napraviti ovu aplikaciju zadanom aplikacijom za biranje da biste bili u mogućnosti koristiti blokirane brojeve.</string>
+    <string name="set_as_default">Postavi na zadano</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoriti</string>

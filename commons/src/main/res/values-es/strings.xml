@@ -29,6 +29,7 @@
     <string name="previous">Anterior</string>
     <string name="playpause">Reproducir / Pausar</string>
     <string name="next">Siguiente</string>
+    <string name="number">Número</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrar números bloqueados</string>
@@ -37,6 +38,8 @@
     <string name="block_number">Bloquear número</string>
     <string name="block_numbers">Bloquear números</string>
     <string name="blocked_numbers">Números bloqueados</string>
+    <string name="must_make_default_dialer">Tienes que hacer esta aplicación la aplicación de marcación por defecto para hacer uso de los números bloqueados.</string>
+    <string name="set_as_default">Establecer como por defecto</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>

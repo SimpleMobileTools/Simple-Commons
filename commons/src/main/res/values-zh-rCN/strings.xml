@@ -29,6 +29,7 @@
     <string name="previous">Previous</string>
     <string name="playpause">Play / Pause</string>
     <string name="next">Next</string>
+    <string name="number">号码</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">管理黑名单</string>
@@ -37,6 +38,8 @@
     <string name="block_number">加入黑名单</string>
     <string name="block_numbers">加入黑名单</string>
     <string name="blocked_numbers">黑名单</string>
+    <string name="must_make_default_dialer">你必须将这应用程序设为默认的拨号程序来使用黑名单。</string>
+    <string name="set_as_default">设为默认</string>
 
     <!-- Favorites -->
     <string name="favorites">收藏</string>

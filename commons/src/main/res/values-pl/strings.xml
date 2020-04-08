@@ -29,6 +29,7 @@
     <string name="previous">Poprzedni</string>
     <string name="playpause">Odtwórz / zatrzymaj</string>
     <string name="next">Następny</string>
+    <string name="number">Numer</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Zarządzaj zablokowanymi numerami</string>
@@ -37,6 +38,8 @@
     <string name="block_number">Zablokuj numer</string>
     <string name="block_numbers">Zablokuj numery</string>
     <string name="blocked_numbers">Zablokowane numery</string>
+    <string name="must_make_default_dialer">Musisz ustawić tę aplikację jako domyślną aplikację telefoniczną, aby móc korzystać z funkcji blokowania numerów.</string>
+    <string name="set_as_default">Ustaw jako domyślną</string>
 
     <!-- Favorites -->
     <string name="favorites">Ulubione</string>

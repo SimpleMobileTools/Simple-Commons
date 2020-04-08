@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.activities
 
+import android.annotation.TargetApi
 import android.app.Activity
 import android.app.ActivityManager
 import android.content.Context
@@ -7,8 +8,10 @@ import android.content.Intent
 import android.graphics.BitmapFactory
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.provider.DocumentsContract
+import android.telecom.TelecomManager
 import android.view.Menu
 import android.view.MenuItem
 import android.view.WindowManager
@@ -540,5 +543,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         return defaultFilename
+    }
+
+    @TargetApi(Build.VERSION_CODES.M)
+    protected fun launchSetDefaultDialerIntent() {
+        Intent(TelecomManager.ACTION_CHANGE_DEFAULT_DIALER).putExtra(TelecomManager.EXTRA_CHANGE_DEFAULT_DIALER_PACKAGE_NAME, packageName).apply {
+            if (resolveActivity(packageManager) != null) {
+                startActivityForResult(this, REQUEST_CODE_SET_DEFAULT_DIALER)
+            } else {
+                toast(R.string.no_app_found)
+            }
+        }
     }
 }

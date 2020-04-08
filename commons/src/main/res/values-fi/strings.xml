@@ -29,6 +29,7 @@
     <string name="previous">Previous</string>
     <string name="playpause">Play / Pause</string>
     <string name="next">Next</string>
+    <string name="number">Numero</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Muuta estettyjä numeroita</string>
@@ -37,6 +38,8 @@
     <string name="block_number">Estä numero</string>
     <string name="block_numbers">Estä numeroja</string>
     <string name="blocked_numbers">Estetyt numerot</string>
+    <string name="must_make_default_dialer">Soittajan täytyy olla oletus</string>
+    <string name="set_as_default">Aseta oletukseksi</string>
 
     <!-- Favorites -->
     <string name="favorites">Favorites</string>

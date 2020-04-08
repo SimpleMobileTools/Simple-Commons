@@ -29,6 +29,7 @@
     <string name="previous">Önceki</string>
     <string name="playpause">Çal / Duraklat</string>
     <string name="next">Sonraki</string>
+    <string name="number">Numara</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Engelli numaraları yönet</string>
@@ -37,6 +38,8 @@
     <string name="block_number">Numarayı engelle</string>
     <string name="block_numbers">Numaraları engelle</string>
     <string name="blocked_numbers">Engelli numaralar</string>
+    <string name="must_make_default_dialer">Engellenen numaraları kullanmak için bu uygulamayı varsayılan çevirici uygulaması yapmalısınız.</string>
+    <string name="set_as_default">Varsayılan olarak ayarla</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoriler</string>

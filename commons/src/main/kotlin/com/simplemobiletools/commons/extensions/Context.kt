@@ -1,11 +1,9 @@
 package com.simplemobiletools.commons.extensions
 
 import android.Manifest
+import android.annotation.TargetApi
 import android.app.Activity
-import android.content.ComponentName
-import android.content.ContentUris
-import android.content.Context
-import android.content.Intent
+import android.content.*
 import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.database.Cursor
@@ -20,9 +18,11 @@ import android.os.Environment
 import android.os.Handler
 import android.os.Looper
 import android.provider.BaseColumns
+import android.provider.BlockedNumberContract.BlockedNumbers
 import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.provider.OpenableColumns
+import android.telecom.TelecomManager
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
@@ -43,6 +43,7 @@ import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_NAV
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_PRIMARY_COLOR
 import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_TEXT_COLOR
 import com.simplemobiletools.commons.models.AlarmSound
+import com.simplemobiletools.commons.models.BlockedNumber
 import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.*
 import java.io.File
@@ -707,6 +708,7 @@ fun Context.getTextSize() = when (baseConfig.fontSize) {
     else -> resources.getDimension(R.dimen.extra_big_text_size)
 }
 
+val Context.telecomManager: TelecomManager get() = getSystemService(Context.TELECOM_SERVICE) as TelecomManager
 val Context.windowManager: WindowManager get() = getSystemService(Context.WINDOW_SERVICE) as WindowManager
 val Context.portrait get() = resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT
 val Context.navigationBarRight: Boolean get() = usableScreenSize.x < realScreenSize.x
@@ -763,3 +765,58 @@ val Context.realScreenSize: Point
         windowManager.defaultDisplay.getRealSize(size)
         return size
     }
+
+// we need the Default Dialer functionality only in Simple Contacts
+@TargetApi(Build.VERSION_CODES.M)
+fun Context.isDefaultDialer(): Boolean {
+    return if (!packageName.startsWith("com.simplemobiletools.contacts")) {
+        true
+    } else {
+        isMarshmallowPlus() && telecomManager.defaultDialerPackage == packageName
+    }
+}
+
+@TargetApi(Build.VERSION_CODES.N)
+fun Context.getBlockedNumbers(): ArrayList<BlockedNumber> {
+    val blockedNumbers = ArrayList<BlockedNumber>()
+    if (!isNougatPlus() || !isDefaultDialer()) {
+        return blockedNumbers
+    }
+
+    val uri = BlockedNumbers.CONTENT_URI
+    val projection = arrayOf(
+            BlockedNumbers.COLUMN_ID,
+            BlockedNumbers.COLUMN_ORIGINAL_NUMBER,
+            BlockedNumbers.COLUMN_E164_NUMBER
+    )
+
+    queryCursor(uri, projection) { cursor ->
+        val id = cursor.getLongValue(BlockedNumbers.COLUMN_ID)
+        val number = cursor.getStringValue(BlockedNumbers.COLUMN_ORIGINAL_NUMBER) ?: ""
+        val normalizedNumber = cursor.getStringValue(BlockedNumbers.COLUMN_E164_NUMBER) ?: ""
+        val blockedNumber = BlockedNumber(id, number, normalizedNumber)
+        blockedNumbers.add(blockedNumber)
+    }
+
+    return blockedNumbers
+}
+
+@TargetApi(Build.VERSION_CODES.N)
+fun Context.addBlockedNumber(number: String) {
+    ContentValues().apply {
+        put(BlockedNumbers.COLUMN_ORIGINAL_NUMBER, number)
+        try {
+            contentResolver.insert(BlockedNumbers.CONTENT_URI, this)
+        } catch (e: Exception) {
+            showErrorToast(e)
+        }
+    }
+}
+
+@TargetApi(Build.VERSION_CODES.N)
+fun Context.deleteBlockedNumber(number: String) {
+    val values = ContentValues()
+    values.put(BlockedNumbers.COLUMN_ORIGINAL_NUMBER, number)
+    val uri = contentResolver.insert(BlockedNumbers.CONTENT_URI, values)
+    contentResolver.delete(uri!!, null, null)
+}

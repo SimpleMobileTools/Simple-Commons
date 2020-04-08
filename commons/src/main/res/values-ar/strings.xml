@@ -29,6 +29,7 @@
     <string name="previous">Previous</string>
     <string name="playpause">Play / Pause</string>
     <string name="next">Next</string>
+    <string name="number">رقم</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">إدارة الأرقام المحظورة</string>
@@ -37,6 +38,8 @@
     <string name="block_number">حظر رقم</string>
     <string name="block_numbers">حظر أرقام</string>
     <string name="blocked_numbers">أرقام محظورة</string>
+    <string name="must_make_default_dialer">عليك أن تجعل هذا التطبيق المتصل الإفتراضي للإستفادة من الأرقام المحظورة.</string>
+    <string name="set_as_default">ضبط الى الافتراضي</string>
 
     <!-- Favorites -->
     <string name="favorites">المفضلة</string>

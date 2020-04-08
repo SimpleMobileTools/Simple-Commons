@@ -29,6 +29,7 @@
     <string name="previous">Předchozí</string>
     <string name="playpause">Hrát / Pauza</string>
     <string name="next">Následující</string>
+    <string name="number">Číslo</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Spravovat blokovaná čísla</string>
@@ -37,6 +38,8 @@
     <string name="block_number">Blokovat číslo</string>
     <string name="block_numbers">Blokovat čísla</string>
     <string name="blocked_numbers">Blokovaná čísla</string>
+    <string name="must_make_default_dialer">Pro použití blokování čísel musíte nastavit aplikaci jako výchozí pro správu hovorů.</string>
+    <string name="set_as_default">Nastavit jako výchozí</string>
 
     <!-- Favorites -->
     <string name="favorites">Oblíbené</string>

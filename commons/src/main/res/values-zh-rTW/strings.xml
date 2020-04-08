@@ -29,6 +29,7 @@
     <string name="previous">上一首</string>
     <string name="playpause">播放 / 暫停</string>
     <string name="next">下一首</string>
+    <string name="number">號碼</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">管理黑名單</string>
@@ -37,6 +38,8 @@
     <string name="block_number">封鎖號碼</string>
     <string name="block_numbers">封鎖號碼</string>
     <string name="blocked_numbers">黑名單</string>
+    <string name="must_make_default_dialer">你必須將這應用程式設為預設的撥號程式來使用黑名單。</string>
+    <string name="set_as_default">設為預設</string>
 
     <!-- Favorites -->
     <string name="favorites">我的最愛</string>
