@@ -794,7 +794,8 @@ fun Context.getBlockedNumbers(): ArrayList<BlockedNumber> {
         val id = cursor.getLongValue(BlockedNumbers.COLUMN_ID)
         val number = cursor.getStringValue(BlockedNumbers.COLUMN_ORIGINAL_NUMBER) ?: ""
         val normalizedNumber = cursor.getStringValue(BlockedNumbers.COLUMN_E164_NUMBER) ?: ""
-        val blockedNumber = BlockedNumber(id, number, normalizedNumber)
+        val comparableNumber = normalizedNumber.trimToComparableNumber()
+        val blockedNumber = BlockedNumber(id, number, normalizedNumber, comparableNumber)
         blockedNumbers.add(blockedNumber)
     }
 
