@@ -29,18 +29,18 @@
     <string name="previous">Anterior</string>
     <string name="playpause">Reproduir / Pausa</string>
     <string name="next">Següent</string>
-    <string name="number">Number</string>
+    <string name="number">Número</string>
 
     <!-- Blocked numbers -->
-    <string name="manage_blocked_numbers">Manage blocked numbers</string>
-    <string name="not_blocking_anyone">You are not blocking anyone.</string>
-    <string name="add_a_blocked_number">Add a blocked number</string>
-    <string name="block_number">Block number</string>
-    <string name="block_numbers">Block numbers</string>
-    <string name="blocked_numbers">Blocked numbers</string>
-    <string name="must_make_default_dialer">You have to make this app the default dialer app to make use of blocked numbers.</string>
-    <string name="set_as_default">Set as default</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
+    <string name="manage_blocked_numbers">Gestiona els números bloquejats</string>
+    <string name="not_blocking_anyone">No estàs bloquejant cap número.</string>
+    <string name="add_a_blocked_number">Afegiu un número bloquejat</string>
+    <string name="block_number">Bloquejar número</string>
+    <string name="block_numbers">Bloquejar números</string>
+    <string name="blocked_numbers">Números bloquejats</string>
+    <string name="must_make_default_dialer">Heu de fer que aquesta aplicació sigui l\’aplicació de marca predeterminada per utilitzar els números bloquejats.</string>
+    <string name="set_as_default">Establir com a defecte</string>
+    <string name="block_confirmation">Segur que voleu bloquejar \"%s\"?</string>
 
     <!-- Favorites -->
     <string name="favorites">Preferits</string>
