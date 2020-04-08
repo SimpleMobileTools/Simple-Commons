@@ -29,6 +29,18 @@
     <string name="previous">前へ</string>
     <string name="playpause">再生 / 一時停止</string>
     <string name="next">次へ</string>
+    <string name="number">番号</string>
+
+    <!-- Blocked numbers -->
+    <string name="manage_blocked_numbers">ブロックした番号を管理</string>
+    <string name="not_blocking_anyone">まだ誰もブロックしていません.</string>
+    <string name="add_a_blocked_number">ブロックする番号を追加</string>
+    <string name="block_number">Block number</string>
+    <string name="block_numbers">Block numbers</string>
+    <string name="blocked_numbers">Blocked numbers</string>
+    <string name="must_make_default_dialer">You have to make this app the default dialer app to make use of blocked numbers.</string>
+    <string name="set_as_default">Set as default</string>
+    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
 
     <!-- Favorites -->
     <string name="favorites">お気に入り</string>

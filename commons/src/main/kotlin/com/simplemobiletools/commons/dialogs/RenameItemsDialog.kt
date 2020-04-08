@@ -24,7 +24,7 @@ class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<S
                                 return@setOnClickListener
                             }
 
-                            val valueToAdd = view.rename_items_value.value
+                            val valueToAdd = view.rename_items_value.text.toString()
                             val append = view.rename_items_radio_group.checkedRadioButtonId == rename_items_radio_append.id
 
                             if (valueToAdd.isEmpty()) {

@@ -29,6 +29,18 @@
     <string name="previous">Sebelumnya</string>
     <string name="playpause">Putar / Jeda</string>
     <string name="next">Berikutnya</string>
+    <string name="number">Nomor</string>
+
+    <!-- Blocked numbers -->
+    <string name="manage_blocked_numbers">Kelola nomor yang diblokir</string>
+    <string name="not_blocking_anyone">Anda tidak memblokir siapapun.</string>
+    <string name="add_a_blocked_number">Tambahkan nomor yang diblokir</string>
+    <string name="block_number">Blokir nomor</string>
+    <string name="block_numbers">Blokir nomor</string>
+    <string name="blocked_numbers">Nomor yang diblokir</string>
+    <string name="must_make_default_dialer">Anda harus mengatur aplikasi ini sebagai aplikasi dialer default untuk menggunakan fitur pemblokir nomor.</string>
+    <string name="set_as_default">Tetapkan sebagai default</string>
+    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
 
     <!-- Favorites -->
     <string name="favorites">Favorit</string>

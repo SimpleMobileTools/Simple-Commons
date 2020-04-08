@@ -162,6 +162,7 @@ const val OPEN_DOCUMENT_TREE_OTG = 1001
 const val REQUEST_SET_AS = 1002
 const val REQUEST_EDIT_IMAGE = 1003
 const val SELECT_EXPORT_SETTINGS_FILE_INTENT = 1004
+const val REQUEST_CODE_SET_DEFAULT_DIALER = 1005
 
 // sorting
 const val SORT_ORDER = "sort_order"

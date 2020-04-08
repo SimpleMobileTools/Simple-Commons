@@ -29,6 +29,18 @@
     <string name="previous">Попередній</string>
     <string name="playpause">Відтворення / Пауза</string>
     <string name="next">Наступний</string>
+    <string name="number">Номер</string>
+
+    <!-- Blocked numbers -->
+    <string name="manage_blocked_numbers">Керувати блокованими номерами</string>
+    <string name="not_blocking_anyone">Немає блокованих номерів.</string>
+    <string name="add_a_blocked_number">Додати номер до блокованих</string>
+    <string name="block_number">Блокувати номер</string>
+    <string name="block_numbers">Блокувати номери</string>
+    <string name="blocked_numbers">Заблоковані номери</string>
+    <string name="must_make_default_dialer">Щоб використовувати функцію блокування номерів, вам необхідно встановити цей додаток як стандартний для роботи з контактами.</string>
+    <string name="set_as_default">Встановити додаток як стандартний</string>
+    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
 
     <!-- Favorites -->
     <string name="favorites">Улюблене</string>

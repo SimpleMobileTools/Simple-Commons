@@ -63,6 +63,10 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
             }
 
             override fun onCreateActionMode(actionMode: ActionMode, menu: Menu?): Boolean {
+                if (getActionMenuId() == 0) {
+                    return true
+                }
+
                 isSelectable = true
                 actMode = actionMode
                 actBarTextView = layoutInflater.inflate(R.layout.actionbar_title, null) as TextView
