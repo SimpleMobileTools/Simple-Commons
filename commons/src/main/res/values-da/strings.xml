@@ -30,6 +30,14 @@
     <string name="playpause">Play / Pause</string>
     <string name="next">Next</string>
 
+    <!-- Blocked numbers -->
+    <string name="manage_blocked_numbers">Administrér blokerede numre</string>
+    <string name="not_blocking_anyone">Du blokerer ikke nogen</string>
+    <string name="add_a_blocked_number">Tilføj et blokeret nummer</string>
+    <string name="block_number">Blokér nummer</string>
+    <string name="block_numbers">Blokér numre</string>
+    <string name="blocked_numbers">Blokerede numre</string>
+
     <!-- Favorites -->
     <string name="favorites">Bogmærker</string>
     <string name="add_favorites">Tilføj bogmærker</string>

@@ -30,6 +30,14 @@
     <string name="playpause">Play / Pause</string>
     <string name="next">Next</string>
 
+    <!-- Blocked numbers -->
+    <string name="manage_blocked_numbers">管理黑名单</string>
+    <string name="not_blocking_anyone">你的黑名单为空</string>
+    <string name="add_a_blocked_number">添加黑名单号码</string>
+    <string name="block_number">加入黑名单</string>
+    <string name="block_numbers">加入黑名单</string>
+    <string name="blocked_numbers">黑名单</string>
+
     <!-- Favorites -->
     <string name="favorites">收藏</string>
     <string name="add_favorites">添加收藏</string>

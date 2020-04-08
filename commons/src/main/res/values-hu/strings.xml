@@ -30,6 +30,14 @@
     <string name="playpause">Lejátszás/szüneteltetés</string>
     <string name="next">Következő</string>
 
+    <!-- Blocked numbers -->
+    <string name="manage_blocked_numbers">Zárolt telefonszámok kezelése</string>
+    <string name="not_blocking_anyone">Nincs még zárolt szám.</string>
+    <string name="add_a_blocked_number">Zárolt telefonszám hozzáadása</string>
+    <string name="block_number">Telefonszám zárolása</string>
+    <string name="block_numbers">Telefonszámok zárolása</string>
+    <string name="blocked_numbers">Zárolt telefonszámok</string>
+
     <!-- Favorites -->
     <string name="favorites">Kedvencek</string>
     <string name="add_favorites">Kedvencek hozzáadása</string>

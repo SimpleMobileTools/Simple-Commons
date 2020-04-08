@@ -30,6 +30,14 @@
     <string name="playpause">Play / Pause</string>
     <string name="next">Next</string>
 
+    <!-- Blocked numbers -->
+    <string name="manage_blocked_numbers">إدارة الأرقام المحظورة</string>
+    <string name="not_blocking_anyone">لم تحظر أي شخص.</string>
+    <string name="add_a_blocked_number">إضافة رقم محظور</string>
+    <string name="block_number">حظر رقم</string>
+    <string name="block_numbers">حظر أرقام</string>
+    <string name="blocked_numbers">أرقام محظورة</string>
+
     <!-- Favorites -->
     <string name="favorites">المفضلة</string>
     <string name="add_favorites">إضافة مفضلة</string>

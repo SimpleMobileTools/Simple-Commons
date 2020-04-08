@@ -30,6 +30,14 @@
     <string name="playpause">Відтворення / Пауза</string>
     <string name="next">Наступний</string>
 
+    <!-- Blocked numbers -->
+    <string name="manage_blocked_numbers">Керувати блокованими номерами</string>
+    <string name="not_blocking_anyone">Немає блокованих номерів.</string>
+    <string name="add_a_blocked_number">Додати номер до блокованих</string>
+    <string name="block_number">Блокувати номер</string>
+    <string name="block_numbers">Блокувати номери</string>
+    <string name="blocked_numbers">Заблоковані номери</string>
+
     <!-- Favorites -->
     <string name="favorites">Улюблене</string>
     <string name="add_favorites">Додати улюблене</string>

@@ -30,6 +30,14 @@
     <string name="playpause">Play / Pause</string>
     <string name="next">Next</string>
 
+    <!-- Blocked numbers -->
+    <string name="manage_blocked_numbers">Muuta estettyjä numeroita</string>
+    <string name="not_blocking_anyone">Et estä ketään.</string>
+    <string name="add_a_blocked_number">Lisää estetty numero</string>
+    <string name="block_number">Estä numero</string>
+    <string name="block_numbers">Estä numeroja</string>
+    <string name="blocked_numbers">Estetyt numerot</string>
+
     <!-- Favorites -->
     <string name="favorites">Favorites</string>
     <string name="add_favorites">Add favorites</string>
