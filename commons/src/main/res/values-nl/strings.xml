@@ -29,6 +29,18 @@
     <string name="previous">Vorige</string>
     <string name="playpause">Afspelen / Pauzeren</string>
     <string name="next">Volgende</string>
+    <string name="number">Nummer</string>
+
+    <!-- Blocked numbers -->
+    <string name="manage_blocked_numbers">Geblokkeerde nummers beheren</string>
+    <string name="not_blocking_anyone">Geen geblokkeerde nummers.</string>
+    <string name="add_a_blocked_number">Geblokkeerd nummer toevoegen</string>
+    <string name="block_number">Nummer blokkeren</string>
+    <string name="block_numbers">Nummers blokkeren</string>
+    <string name="blocked_numbers">Geblokkeerde nummers</string>
+    <string name="must_make_default_dialer">Maak van deze app de standaardapp voor bellen om nummers te kunnen blokkeren.</string>
+    <string name="set_as_default">Als standaard instellen</string>
+    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
 
     <!-- Favorites -->
     <string name="favorites">Favorieten</string>

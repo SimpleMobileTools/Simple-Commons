@@ -29,6 +29,18 @@
     <string name="previous">Προηγούμενο</string>
     <string name="playpause">Αναπαραγωγή / Παύση</string>
     <string name="next">Επόμενο</string>
+    <string name="number">Αριθμός</string>
+
+    <!-- Blocked numbers -->
+    <string name="manage_blocked_numbers">Διαχείριση αποκλεισμένων αριθμών</string>
+    <string name="not_blocking_anyone">Χωρίς αποκλεισμο κανενός.</string>
+    <string name="add_a_blocked_number">Προσθήκη ένος αποκλεισμένου αριθμού</string>
+    <string name="block_number">Αποκλεισμό αριθμού</string>
+    <string name="block_numbers">Αποκλεισμό αριθμών</string>
+    <string name="blocked_numbers">Αποκλεισμένοι αριθμοί</string>
+    <string name="must_make_default_dialer">Θα πρέπει να οριστεί προεπιλεγμένη εφαρμογή για χρήση αποκλεισμένων αριθμών.</string>
+    <string name="set_as_default">Ορισμός ως προεπιλογής</string>
+    <string name="block_confirmation">Σίγουρα να αποκλειστεί ο \"%s\"?</string>
 
     <!-- Favorites -->
     <string name="favorites">Αγαπημένα</string>
