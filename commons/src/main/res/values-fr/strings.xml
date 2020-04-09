@@ -10,7 +10,7 @@
     <string name="edit_with">Modifier avec</string>
     <string name="no_app_found">Aucune application disponible</string>
     <string name="set_as">Définir en tant que</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_to_clipboard">Copier dans le presse-papier</string>
     <string name="value_copied_to_clipboard">Valeur copiée dans le presse-papier</string>
     <string name="unknown">Inconnu</string>
     <string name="always">Toujours</string>
@@ -32,15 +32,15 @@
     <string name="number">Numéro</string>
 
     <!-- Blocked numbers -->
-    <string name="manage_blocked_numbers">Manage blocked numbers</string>
-    <string name="not_blocking_anyone">You are not blocking anyone.</string>
+    <string name="manage_blocked_numbers">Gérer les numéros bloqués</string>
+    <string name="not_blocking_anyone">Vous ne bloquez personne.</string>
     <string name="add_a_blocked_number">Ajouter un numéro bloqué</string>
-    <string name="block_number">Numéro bloquer</string>
-    <string name="block_numbers">Numéros bloquer</string>
-    <string name="blocked_numbers">Numéros bloquer</string>
-    <string name="must_make_default_dialer">You have to make this app the default dialer app to make use of blocked numbers.</string>
-    <string name="set_as_default">Set as default</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
+    <string name="block_number">Numéro bloqué</string>
+    <string name="block_numbers">Numéros bloqués</string>
+    <string name="blocked_numbers">Numéros bloqués</string>
+    <string name="must_make_default_dialer">Cette appli. doit être l\’appli. de num.  par défaut pour utiliser num. bloqués</string>
+    <string name="set_as_default">Définir par défaut</string>
+    <string name="block_confirmation">Êtes-vous sûr de vouloir bloquer \"%s\"?</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoris</string>
@@ -170,9 +170,9 @@
 
     <!-- File properties -->
     <string name="properties">Propriétés</string>
-    <string name="path">Eplacement</string>
+    <string name="path">Emplacement</string>
     <string name="items_selected">Éléments sélectionnés</string>
-    <string name="direct_children_count">Nombre total de fichiers enfants directs</string>
+    <string name="direct_children_count">Nombre total de fichiers entrants directs</string>
     <string name="files_count">Nombre total de fichiers</string>
     <string name="resolution">Résolution</string>
     <string name="duration">Durée</string>
@@ -207,8 +207,8 @@
     <string name="undo_changes_confirmation">Voulez-vous vraiment annuler vos changements ?</string>
     <string name="save_before_closing">Vous avez des changements non enregistrés. Enregistrer avant de quitter ?</string>
     <string name="apply_to_all_apps">Appliquer à l\'ensemble de la suite d\'applications Simples</string>
-    <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+    <string name="app_icon_color_warning">AVERTISSEMENT: certains lanceurs ne gèrent pas correctement la personnalisation des icônes d\'applications. Au cas où l\'icône disparaîtrait, essayez de lancer l\'application via Google Play ou un widget, si disponible.
+        Une fois lancé, réglez simplement l\'icône orange par défaut # F57C00. Vous devrez peut-être réinstaller l\'application dans le pire des cas.</string>
     <string name="share_colors_success">Couleurs actualisées. Un nouveau thème nommé \"Partagé\" a été ajouté. Veuillez utiliser ce thème pour actualiser les couleurs de toutes les applications à partir de maintenant.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -701,8 +701,8 @@
     <string name="filters_title">Android Photo Filters (filtres d\'image)</string>
     <string name="gesture_views_title">Gesture Views (zoom d\'images)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (lettre sur barre de défilement)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
+    <string name="event_bus_title">Event Bus (communication au sein de l'application.)</string>
+    <string name="audio_record_view_title">Audio Record View (audio visualisation)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">ATTENTION : cette version de l\'application n\'est plus maintenue. Procurez-vous la version Pro à l\'adresse https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
