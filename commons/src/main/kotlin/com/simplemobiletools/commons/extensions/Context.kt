@@ -23,6 +23,7 @@ import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.provider.OpenableColumns
 import android.telecom.TelecomManager
+import android.telephony.PhoneNumberUtils
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
@@ -793,7 +794,7 @@ fun Context.getBlockedNumbers(): ArrayList<BlockedNumber> {
     queryCursor(uri, projection) { cursor ->
         val id = cursor.getLongValue(BlockedNumbers.COLUMN_ID)
         val number = cursor.getStringValue(BlockedNumbers.COLUMN_ORIGINAL_NUMBER) ?: ""
-        val normalizedNumber = cursor.getStringValue(BlockedNumbers.COLUMN_E164_NUMBER) ?: ""
+        val normalizedNumber = cursor.getStringValue(BlockedNumbers.COLUMN_E164_NUMBER) ?: number
         val comparableNumber = normalizedNumber.trimToComparableNumber()
         val blockedNumber = BlockedNumber(id, number, normalizedNumber, comparableNumber)
         blockedNumbers.add(blockedNumber)
@@ -806,6 +807,7 @@ fun Context.getBlockedNumbers(): ArrayList<BlockedNumber> {
 fun Context.addBlockedNumber(number: String) {
     ContentValues().apply {
         put(BlockedNumbers.COLUMN_ORIGINAL_NUMBER, number)
+        put(BlockedNumbers.COLUMN_E164_NUMBER, PhoneNumberUtils.normalizeNumber(number))
         try {
             contentResolver.insert(BlockedNumbers.CONTENT_URI, this)
         } catch (e: Exception) {
@@ -816,8 +818,7 @@ fun Context.addBlockedNumber(number: String) {
 
 @TargetApi(Build.VERSION_CODES.N)
 fun Context.deleteBlockedNumber(number: String) {
-    val values = ContentValues()
-    values.put(BlockedNumbers.COLUMN_ORIGINAL_NUMBER, number)
-    val uri = contentResolver.insert(BlockedNumbers.CONTENT_URI, values)
-    contentResolver.delete(uri!!, null, null)
+    val selection = "${BlockedNumbers.COLUMN_ORIGINAL_NUMBER} = ?"
+    val selectionArgs = arrayOf(number)
+    contentResolver.delete(BlockedNumbers.CONTENT_URI, selection, selectionArgs)
 }
