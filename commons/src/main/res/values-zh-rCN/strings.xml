@@ -30,6 +30,9 @@
     <string name="playpause">Play / Pause</string>
     <string name="next">Next</string>
     <string name="number">号码</string>
+    <string name="no_contacts_found">未发现联系人</string>
+    <string name="request_the_required_permissions">请求必要的权限</string>
+    <string name="no_access_to_contacts">The app could not access your contacts</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">管理黑名单</string>

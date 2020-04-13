@@ -30,6 +30,9 @@
     <string name="playpause">Reproducir / Pausar</string>
     <string name="next">Siguiente</string>
     <string name="number">Número</string>
+    <string name="no_contacts_found">No se encontraron contactos</string>
+    <string name="request_the_required_permissions">Solicitar los permisos requeridos</string>
+    <string name="no_access_to_contacts">The app could not access your contacts</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrar números bloqueados</string>
