@@ -10,7 +10,7 @@
     <string name="edit_with">Editar com</string>
     <string name="no_app_found">Nenhuma aplicação encontrada</string>
     <string name="set_as">Definir como</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_to_clipboard">Copiar para a área de transferência</string>
     <string name="value_copied_to_clipboard">Valor copiado para a área de transferência</string>
     <string name="unknown">Desconhecido</string>
     <string name="always">Sempre</string>
@@ -40,7 +40,7 @@
     <string name="blocked_numbers">Números bloqueados</string>
     <string name="must_make_default_dialer">Tem que tornar esta a aplicação padrão para poder bloquear números.</string>
     <string name="set_as_default">Definir como padrão</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
+    <string name="block_confirmation">Tem a certeza de que deseja bloquear \"%s\"?</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
@@ -50,7 +50,7 @@
 
     <!-- Search -->
     <string name="search">Pesquisar</string>
-    <string name="type_2_characters">Digite, pelo menos, 2 caracteres para iniciar a pesquisa.</string>
+    <string name="type_2_characters">Inytroduza, pelo menos, 2 caracteres para iniciar a pesquisa.</string>
 
     <!-- Filters -->
     <string name="filter">Filtrar</string>
@@ -120,7 +120,7 @@
     <string name="create_new_folder">Criar nova pasta</string>
     <string name="name_taken">Já existe um ficheiro ou pasta com este nome</string>
     <string name="invalid_name">O nome contém caracteres inválidos</string>
-    <string name="empty_name">Digite um nome</string>
+    <string name="empty_name">Introduza um nome</string>
     <string name="unknown_error_occurred">Ocorreu um erro desconhecido</string>
 
     <!-- File operation conflicts -->
@@ -627,8 +627,8 @@
     <string name="read_it">Ler</string>
     <string name="read_faq">Ler FAQ</string>
     <string name="rate_us_prompt">Olá,\n\nparece que está a utilizar esta aplicação há algum tempo, o que nos deixa satisfeitos.\n\nGostaríamos de lhe pedir o favor de nos avaliar na Google Play. Isso iria ajudar-nos bastante.\n\nIndependentemente da sua escolha, esta mensagem não será mostrada novamente.\n\nObrigado!</string>
-    <string name="rate_our_app">Rate our app please :)</string>
-    <string name="thank_you">Thank you</string>
+    <string name="rate_our_app">Avalie a nossa aplicação :)</string>
+    <string name="thank_you">Obrigado</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -684,7 +684,7 @@
     <string name="joda_title">Joda-Time (sustituto para Java date)</string>
     <string name="stetho_title">Stetho (depuração a bases de dados)</string>
     <string name="otto_title">Otto (canal de eventos)</string>
-    <string name="photoview_title">PhotoView (animação de GIFs)</string>
+    <string name="photoview_title">PhotoView (animação de GIF)</string>
     <string name="pattern_title">PatternLockView (proteção com padrões)</string>
     <string name="reprint_title">Reprint (proteção com impressões digitais)</string>
     <string name="gif_drawable_title">Gif Drawable (carregamento de GIF)</string>
@@ -700,9 +700,9 @@
     <string name="filters_title">Android Photo Filters (filtros de imagens)</string>
     <string name="gesture_views_title">Gesture Views (ampliação de imagens)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letras na barra de deslocação)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
-    <string name="sms_mms_title">SMS MMS (MMS handling)</string>
+    <string name="event_bus_title">Event Bus (comunicação entre aplicações)</string>
+    <string name="audio_record_view_title">Audio Record View (visualização de áudio)</string>
+    <string name="sms_mms_title">SMS MMS (gestão de MMS)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">AVISO: Esta versão da aplicação já não está a ser desenvolvida. Pode obter a versão Pro em https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
