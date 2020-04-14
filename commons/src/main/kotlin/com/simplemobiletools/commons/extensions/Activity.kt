@@ -682,7 +682,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
             }
 
             if (!getDoesFilePathExist(fileDirItem.path)) {
-                document = document.createFile("", fileDirItem.name)
+                document = document.createFile("", fileDirItem.name) ?: getDocumentFile(fileDirItem.path)
             }
 
             if (document?.exists() == true) {
