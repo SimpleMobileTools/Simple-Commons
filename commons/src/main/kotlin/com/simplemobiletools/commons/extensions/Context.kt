@@ -20,7 +20,7 @@ import android.os.Looper
 import android.provider.BaseColumns
 import android.provider.BlockedNumberContract.BlockedNumbers
 import android.provider.DocumentsContract
-import android.provider.MediaStore
+import android.provider.MediaStore.*
 import android.provider.OpenableColumns
 import android.telecom.TelecomManager
 import android.telephony.PhoneNumberUtils
@@ -147,7 +147,7 @@ val Context.otgPath: String get() = baseConfig.OTGPath
 
 fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHardwarePresent()
 
-fun Context.getLatestMediaId(uri: Uri = MediaStore.Files.getContentUri("external")): Long {
+fun Context.getLatestMediaId(uri: Uri = Files.getContentUri("external")): Long {
     val MAX_VALUE = "max_value"
     val projection = arrayOf("MAX(${BaseColumns._ID}) AS $MAX_VALUE")
     var cursor: Cursor? = null
@@ -163,9 +163,9 @@ fun Context.getLatestMediaId(uri: Uri = MediaStore.Files.getContentUri("external
     return 0
 }
 
-fun Context.getLatestMediaByDateId(uri: Uri = MediaStore.Files.getContentUri("external")): Long {
+fun Context.getLatestMediaByDateId(uri: Uri = Files.getContentUri("external")): Long {
     val projection = arrayOf(BaseColumns._ID)
-    val sortOrder = "${MediaStore.Images.ImageColumns.DATE_TAKEN} DESC"
+    val sortOrder = "${Images.ImageColumns.DATE_TAKEN} DESC"
     var cursor: Cursor? = null
     try {
         cursor = contentResolver.query(uri, projection, null, null, sortOrder)
@@ -206,9 +206,9 @@ fun Context.getRealPathFromURI(uri: Uri): String? {
         val type = split[0]
 
         val contentUri = when (type) {
-            "video" -> MediaStore.Video.Media.EXTERNAL_CONTENT_URI
-            "audio" -> MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
-            else -> MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+            "video" -> Video.Media.EXTERNAL_CONTENT_URI
+            "audio" -> Audio.Media.EXTERNAL_CONTENT_URI
+            else -> Images.Media.EXTERNAL_CONTENT_URI
         }
 
         val selection = "_id=?"
@@ -225,10 +225,10 @@ fun Context.getRealPathFromURI(uri: Uri): String? {
 fun Context.getDataColumn(uri: Uri, selection: String? = null, selectionArgs: Array<String>? = null): String? {
     var cursor: Cursor? = null
     try {
-        val projection = arrayOf(MediaStore.Files.FileColumns.DATA)
+        val projection = arrayOf(Files.FileColumns.DATA)
         cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
         if (cursor?.moveToFirst() == true) {
-            val data = cursor.getStringValue(MediaStore.Files.FileColumns.DATA)
+            val data = cursor.getStringValue(Files.FileColumns.DATA)
             if (data != "null") {
                 return data
             }
@@ -272,7 +272,7 @@ fun Context.getFilePublicUri(file: File, applicationId: String): Uri {
     var uri = if (file.isMediaFile()) {
         getMediaContentUri(file.absolutePath)
     } else {
-        getMediaContent(file.absolutePath, MediaStore.Files.getContentUri("external"))
+        getMediaContent(file.absolutePath, Files.getContentUri("external"))
     }
 
     if (uri == null) {
@@ -284,23 +284,23 @@ fun Context.getFilePublicUri(file: File, applicationId: String): Uri {
 
 fun Context.getMediaContentUri(path: String): Uri? {
     val uri = when {
-        path.isImageFast() -> MediaStore.Images.Media.EXTERNAL_CONTENT_URI
-        path.isVideoFast() -> MediaStore.Video.Media.EXTERNAL_CONTENT_URI
-        else -> MediaStore.Files.getContentUri("external")
+        path.isImageFast() -> Images.Media.EXTERNAL_CONTENT_URI
+        path.isVideoFast() -> Video.Media.EXTERNAL_CONTENT_URI
+        else -> Files.getContentUri("external")
     }
 
     return getMediaContent(path, uri)
 }
 
 fun Context.getMediaContent(path: String, uri: Uri): Uri? {
-    val projection = arrayOf(MediaStore.Images.Media._ID)
-    val selection = MediaStore.Images.Media.DATA + "= ?"
+    val projection = arrayOf(Images.Media._ID)
+    val selection = Images.Media.DATA + "= ?"
     val selectionArgs = arrayOf(path)
     var cursor: Cursor? = null
     try {
         cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
         if (cursor?.moveToFirst() == true) {
-            val id = cursor.getIntValue(MediaStore.Images.Media._ID).toString()
+            val id = cursor.getIntValue(Images.Media._ID).toString()
             return Uri.withAppendedPath(uri, id)
         }
     } catch (e: Exception) {

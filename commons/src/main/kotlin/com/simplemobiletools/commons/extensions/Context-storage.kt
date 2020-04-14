@@ -9,7 +9,7 @@ import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Environment
 import android.provider.DocumentsContract
-import android.provider.MediaStore
+import android.provider.MediaStore.*
 import android.text.TextUtils
 import androidx.core.content.FileProvider
 import androidx.documentfile.provider.DocumentFile
@@ -293,9 +293,9 @@ fun getPaths(file: File): ArrayList<String> {
 }
 
 fun Context.getFileUri(path: String) = when {
-    path.isImageSlow() -> MediaStore.Images.Media.EXTERNAL_CONTENT_URI
-    path.isVideoSlow() -> MediaStore.Video.Media.EXTERNAL_CONTENT_URI
-    else -> MediaStore.Files.getContentUri("external")
+    path.isImageSlow() -> Images.Media.EXTERNAL_CONTENT_URI
+    path.isVideoSlow() -> Video.Media.EXTERNAL_CONTENT_URI
+    else -> Files.getContentUri("external")
 }
 
 // these functions update the mediastore instantly, MediaScannerConnection.scanFileRecursively takes some time to really get applied
@@ -306,7 +306,7 @@ fun Context.deleteFromMediaStore(path: String) {
 
     ensureBackgroundThread {
         try {
-            val where = "${MediaStore.MediaColumns.DATA} = ?"
+            val where = "${MediaColumns.DATA} = ?"
             val args = arrayOf(path)
             contentResolver.delete(getFileUri(path), where, args)
         } catch (ignored: Exception) {
@@ -317,12 +317,12 @@ fun Context.deleteFromMediaStore(path: String) {
 fun Context.updateInMediaStore(oldPath: String, newPath: String) {
     ensureBackgroundThread {
         val values = ContentValues().apply {
-            put(MediaStore.MediaColumns.DATA, newPath)
-            put(MediaStore.MediaColumns.DISPLAY_NAME, newPath.getFilenameFromPath())
-            put(MediaStore.MediaColumns.TITLE, newPath.getFilenameFromPath())
+            put(MediaColumns.DATA, newPath)
+            put(MediaColumns.DISPLAY_NAME, newPath.getFilenameFromPath())
+            put(MediaColumns.TITLE, newPath.getFilenameFromPath())
         }
         val uri = getFileUri(oldPath)
-        val selection = "${MediaStore.MediaColumns.DATA} = ?"
+        val selection = "${MediaColumns.DATA} = ?"
         val selectionArgs = arrayOf(oldPath)
 
         try {
@@ -334,11 +334,11 @@ fun Context.updateInMediaStore(oldPath: String, newPath: String) {
 
 fun Context.updateLastModified(path: String, lastModified: Long) {
     val values = ContentValues().apply {
-        put(MediaStore.MediaColumns.DATE_MODIFIED, lastModified / 1000)
+        put(MediaColumns.DATE_MODIFIED, lastModified / 1000)
     }
     File(path).setLastModified(lastModified)
     val uri = getFileUri(path)
-    val selection = "${MediaStore.MediaColumns.DATA} = ?"
+    val selection = "${MediaColumns.DATA} = ?"
     val selectionArgs = arrayOf(path)
 
     try {
