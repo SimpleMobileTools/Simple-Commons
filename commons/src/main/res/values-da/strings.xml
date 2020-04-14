@@ -10,7 +10,7 @@
     <string name="edit_with">Rediger med</string>
     <string name="no_app_found">Der blev ikke fundet en gyldig app</string>
     <string name="set_as">Anvend som</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_to_clipboard">Kopier til udklipsholder</string>
     <string name="value_copied_to_clipboard">Værdi kopieret til udklipsholder</string>
     <string name="unknown">Ukendt</string>
     <string name="always">Altid</string>
@@ -26,13 +26,13 @@
     <string name="download">Download</string>
     <string name="notification">Underretning</string>
     <string name="email">E-mail</string>
-    <string name="previous">Previous</string>
-    <string name="playpause">Play / Pause</string>
-    <string name="next">Next</string>
+    <string name="previous">Forrige</string>
+    <string name="playpause">Afspil / Pause</string>
+    <string name="next">Næste</string>
     <string name="number">Nummer</string>
     <string name="no_contacts_found">Ingen kontakter fundet</string>
     <string name="request_the_required_permissions">Anmod om de krævede tilladelser</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
+    <string name="no_access_to_contacts">Appen kunne ikke tilgå dine kontakter</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrér blokerede numre</string>
@@ -43,7 +43,7 @@
     <string name="blocked_numbers">Blokerede numre</string>
     <string name="must_make_default_dialer">Du skal gøre denne app til standardopkaldsappen for at gøre brug af blokerede numre.</string>
     <string name="set_as_default">Gør til standard</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
+    <string name="block_confirmation">Er du sikker på at du vil blokere \"%s\"?</string>
 
     <!-- Favorites -->
     <string name="favorites">Bogmærker</string>
@@ -630,7 +630,7 @@
     <string name="read_it">Læs det</string>
     <string name="read_faq">Read OSS</string>
     <string name="rate_us_prompt">Hej\n\nDet ser ud til at du har brugt denne app et godt stykke tid, og det er vi virkelig glade for.\n\nHvis vi til gengæld må bede om en tjeneste, vil vi sætte stor pris på din vurdering på Google Play. Det ville være en kæmpe hjælp.\n\nUanset hvad du beslutter dig for, vil du ikke se denne besked igen.\n\nPå forhånd tak!</string>
-    <string name="rate_our_app">Vær sød at vurdere vores app :)</string>
+    <string name="rate_our_app">Vurder vores app :)</string>
     <string name="thank_you">Tak skal du have</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
@@ -702,9 +702,9 @@
     <string name="filters_title">Android Photo Filters (image filters)</string>
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="event_bus_title">Event Bus (intern kommunikation i appen)</string>
+    <string name="audio_record_view_title">Audio Record View (audio-visualisering)</string>
+    <string name="sms_mms_title">SMS MMS (håndtering af SMS og MMS)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">FORÆLDET: Denne version af appen vedligeholdes ikke længere, skift til Pro-versionen her https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
