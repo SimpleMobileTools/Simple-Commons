@@ -32,7 +32,7 @@
     <string name="number">Номер</string>
     <string name="no_contacts_found">Контакты не найдены</string>
     <string name="request_the_required_permissions">Запрос необходимых разрешений</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
+    <string name="no_access_to_contacts">Приложение не может получить доступ к вашим контактам</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Управление блокируемыми номерами</string>
@@ -213,7 +213,7 @@
     <string name="undo_changes_confirmation">Действительно отменить изменения?</string>
     <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
     <string name="apply_to_all_apps">Применить цвета ко всем приложениям Simple</string>
-    <string name="app_icon_color_warning">ВНИМАНИЕ: некоторые программы запуска неправильно обрабатывают изменение настроек значков приложений. Если значок исчезнет, попробуйте запустить приложение через Google Play или виджет, если он доступен.
+    <string name="app_icon_color_warning">ВНИМАНИЕ: некоторые рабочие столы неправильно обрабатывают изменение настроек значков приложений. Если значок исчезнет, попробуйте запустить приложение через Google Play или виджет, если он доступен.
         После запуска просто установите оранжевый цвет значка по умолчанию #F57C00. В худшем случае вам придётся переустановить приложение.</string>
     <string name="share_colors_success">Цвета обновлены. Добавлена новая тема с названием \"Общая\", в дальнейшем используйте её для обновления цветов всех приложений.</string>
     <string name="purchase_thank_you">
@@ -488,7 +488,7 @@
     <!-- Settings -->
     <string name="settings">Настройки</string>
     <string name="purchase_simple_thank_you">Купить Simple Thank You</string>
-    <string name="customize_colors">Настроить цвета</string>
+    <string name="customize_colors">Настройки интерфейса</string>
     <string name="customize_widget_colors">Настроить цвета виджета</string>
     <string name="use_english_language">Использовать английский язык</string>
     <string name="show_hidden_items">Показывать скрытые папки</string>
@@ -506,7 +506,7 @@
     <string name="skip_delete_confirmation">Пропускать диалог подтверждения удаления</string>
     <string name="enable_pull_to_refresh">Использовать жест \"потянуть для обновления\" в верхней части экрана</string>
     <string name="use_24_hour_time_format">Использовать 24-часовой формат времени</string>
-    <string name="change_date_and_time_format">Изменить формат даты и времени</string>
+    <string name="change_date_and_time_format">Формат даты и времени</string>
     <string name="sunday_first">Воскресенье — начало недели</string>
     <string name="widgets">Виджеты</string>
     <string name="use_same_snooze">Всегда использовать один и тот же интервал повтора</string>
@@ -699,7 +699,7 @@
     <string name="faq_5_title_commons">Могу я как-то восстановить удалённые файлы?</string>
     <string name="faq_5_text_commons">Если они были действительно были удалены, то не можете. Однако по умолчанию используется \"корзина\" и файлы перемещаются в неё вместо реального удаления.</string>
     <string name="faq_6_title_commons">Значок запуска приложения исчез. Что делать?</string>
-    <string name="faq_6_text_commons">Это вызвано тем, что ваша программа запуска не поддерживает правильно настройку значков. Если значок исчезнет, попробуйте запустить приложение через Google Play или виджет, если он доступен.
+    <string name="faq_6_text_commons">Это вызвано тем, что ваш рабочий стол неправильно отображает значок приложения. Если значок исчезнет, попробуйте запустить приложение через Google Play или виджет, если он доступен.
         После запуска просто установите оранжевый цвет значка по умолчанию #F57C00. В худшем случае вам придётся переустановить приложение.</string>
     <string name="faq_7_title_commons">Деньги были списаны с моего банковского счета, но я не могу загрузить приложение. Что можно сделать?</string>
     <string name="faq_7_text_commons">Платежи полностью обрабатываются Google, их система время от времени даёт сбои. Просто очистите кеш приложения Google Play и перезагрузите устройство, затем повторите попытку загрузки.</string>
@@ -738,7 +738,7 @@
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (буквы на полосе прокрутки)</string>
     <string name="event_bus_title">Event Bus (коммуникация внутри приложения)</string>
     <string name="audio_record_view_title">Audio Record View (звуковая визуализация)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="sms_mms_title">SMS, MMS (обработка SMS и MMS)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">УСТАРЕВШЕЕ: данная версия приложения больше не поддерживается, переходите на версию Pro https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
