@@ -549,7 +549,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     protected fun launchSetDefaultDialerIntent() {
         if (isQPlus()) {
             val roleManager = getSystemService(RoleManager::class.java)
-            if (!roleManager!!.isRoleHeld(RoleManager.ROLE_DIALER)) {
+            if (roleManager!!.isRoleAvailable(RoleManager.ROLE_DIALER) && !roleManager.isRoleHeld(RoleManager.ROLE_DIALER)) {
                 val intent = roleManager.createRequestRoleIntent(RoleManager.ROLE_DIALER)
                 startActivityForResult(intent, REQUEST_CODE_SET_DEFAULT_DIALER)
             }

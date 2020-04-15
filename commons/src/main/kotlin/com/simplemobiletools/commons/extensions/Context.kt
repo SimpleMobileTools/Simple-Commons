@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.extensions
 import android.Manifest
 import android.annotation.TargetApi
 import android.app.Activity
+import android.app.role.RoleManager
 import android.content.*
 import android.content.pm.PackageManager
 import android.content.res.Configuration
@@ -776,6 +777,9 @@ val Context.realScreenSize: Point
 fun Context.isDefaultDialer(): Boolean {
     return if (!packageName.startsWith("com.simplemobiletools.contacts")) {
         true
+    } else if (packageName.startsWith("com.simplemobiletools.contacts") && isQPlus()) {
+        val roleManager = getSystemService(RoleManager::class.java)
+        roleManager!!.isRoleAvailable(RoleManager.ROLE_DIALER) && roleManager.isRoleHeld(RoleManager.ROLE_DIALER)
     } else {
         isMarshmallowPlus() && telecomManager.defaultDialerPackage == packageName
     }
