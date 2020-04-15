@@ -284,6 +284,21 @@ val appIconColorStrings = arrayListOf(
         ".Grey_black"
 )
 
+// most app icon colors from md_app_icon_colors with reduced alpha
+// used at showing contact placeholders without image
+val letterBackgroundColors = arrayListOf(
+        0xCCD32F2F,
+        0xCCC2185B,
+        0xCC1976D2,
+        0xCC0288D1,
+        0xCC0097A7,
+        0xCC00796B,
+        0xCC388E3C,
+        0xCC689F38,
+        0xCCF57C00,
+        0xCCE64A19
+)
+
 fun isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 
 fun ensureBackgroundThread(callback: () -> Unit) {
