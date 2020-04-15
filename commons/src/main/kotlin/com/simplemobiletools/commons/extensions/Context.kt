@@ -8,6 +8,8 @@ import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.database.Cursor
 import android.graphics.*
+import android.graphics.drawable.Drawable
+import android.graphics.drawable.LayerDrawable
 import android.media.ExifInterface
 import android.media.MediaMetadataRetriever
 import android.media.RingtoneManager
@@ -853,4 +855,11 @@ fun Context.getContactLetterIcon(name: String): Bitmap {
     canvas.drawText(letter, xPos, yPos, textPaint)
     view.draw(canvas)
     return bitmap
+}
+
+fun Context.getColoredGroupIcon(title: String): Drawable {
+    val icon = resources.getDrawable(R.drawable.ic_group_circle_bg)
+    val bgColor = letterBackgroundColors[Math.abs(title.hashCode()) % letterBackgroundColors.size].toInt()
+    (icon as LayerDrawable).findDrawableByLayerId(R.id.attendee_circular_background).applyColorFilter(bgColor)
+    return icon
 }
