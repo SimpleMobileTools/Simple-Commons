@@ -10,16 +10,16 @@
     <string name="edit_with">Bearbeiten mit</string>
     <string name="no_app_found">Keine passende App gefunden</string>
     <string name="set_as">Festlegen als</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_to_clipboard">In die Zwischenablage kopieren</string>
     <string name="value_copied_to_clipboard">Wert in Zwischenablage kopiert</string>
     <string name="unknown">Unbekannt</string>
     <string name="always">Immer</string>
     <string name="never">Nie</string>
     <string name="details">Details</string>
     <string name="notes">Notizen</string>
-    <string name="deleting_folder">Lösche Ordner \'%s\'</string>
+    <string name="deleting_folder">Lösche Ordner \"%s\"</string>
     <string name="none">nichts</string>
-    <string name="label">Label</string>
+    <string name="label">Bezeichnung</string>
     <string name="transparent">Transparent</string>
     <string name="transparent_color">Transparente Farbe</string>
     <string name="select_a_different_color">Wähle eine andere Farbe aus</string>
@@ -32,7 +32,7 @@
     <string name="number">Nummer</string>
     <string name="no_contacts_found">Keine Kontakte gefunden</string>
     <string name="request_the_required_permissions">Benötigte Berechtigungen anfordern</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
+    <string name="no_access_to_contacts">Die App kann nicht auf deine Kontakte zugreifen</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Blockierte Nummern verwalten</string>
@@ -43,7 +43,7 @@
     <string name="blocked_numbers">Blockierte Nummern</string>
     <string name="must_make_default_dialer">Du musst diese App als Standardtelefonie-App einstellen, um Nummern blockieren zu können.</string>
     <string name="set_as_default">Als Standard auswählen</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
+    <string name="block_confirmation">Soll \"%s\" blockiert werden?</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoriten</string>
@@ -73,20 +73,20 @@
     <string name="rename_folder_error">Konnte den Ordner nicht umbenennen</string>
     <string name="rename_folder_empty">Ordnername darf nicht leer sein</string>
     <string name="rename_folder_exists">Ein Ordner mit diesem Namen existiert bereits</string>
-    <string name="rename_folder_root">Root-Ordner des Speichers kann nicht umbenannt werden</string>
+    <string name="rename_folder_root">Das Hauptverzeichnis des Speichers kann nicht umbenannt werden</string>
     <string name="rename_folder_ok">Ordner erfolgreich umbenannt</string>
     <string name="renaming_folder">Ordner umbenennen</string>
     <string name="filename_cannot_be_empty">Dateiname darf nicht leer sein</string>
     <string name="filename_invalid_characters">Dateiname enthält ungültige Zeichen</string>
-    <string name="filename_invalid_characters_placeholder">Dateiname \'%s\' anthält ungültige Zeichen</string>
+    <string name="filename_invalid_characters_placeholder">Dateiname \"%s\" enthält ungültige Zeichen</string>
     <string name="extension_cannot_be_empty">Dateiendung darf nicht leer sein</string>
-    <string name="source_file_doesnt_exist">Quelldatei %s existiert nicht</string>
+    <string name="source_file_doesnt_exist">Quelldatei \"%s\" existiert nicht</string>
     <string name="prepend_filenames">Dateinamen voranstellen</string>
     <string name="append_filenames">Dateinamen anhängen</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
+    <string name="simple_renaming">Einfaches umbenennen</string>
+    <string name="pattern_renaming">Muster</string>
     <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second\n%i - number increasing from 1</string>
+    <string name="rename_date_time_pattern">%Y - Jahr\n%M - Monat\n%D - Tag\n%h - Stunde\n%m - Minute\n%s - Sekunde\n%i - Aufsteigender Index, beginnt bei 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopieren</string>
@@ -114,7 +114,7 @@
     <string name="could_not_create_folder">Ordner %s konnte nicht erstellt werden</string>
     <string name="could_not_create_file">Datei %s konnte nicht erstellt werden</string>
     <string name="no_new_items">Keine neuen Elemente gefunden</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_space">Der freie Platz im Zielverzeichnis ist nicht ausreichend.\nErforderlich: %1$s; Vorhanden: %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Neuer Ordner</string>
@@ -134,7 +134,7 @@
     <string name="keep_both">Beide behalten</string>
     <string name="overwrite">Überschreiben</string>
     <string name="skip">Überspringen</string>
-    <string name="append">\'_1\' anhängen</string>
+    <string name="append">\"_1\" anhängen</string>
     <string name="apply_to_all">Bei allen Konflikten anwenden</string>
 
     <!-- File picker -->
@@ -167,7 +167,7 @@
     <string name="sd_card">SD-Karte</string>
     <string name="root">Hauptverzeichnis</string>
     <string name="wrong_root_selected">Falscher Ordner ausgewählt, bitte Hauptverzeichnis der SD-Karte auswählen</string>
-    <string name="sd_card_usb_same">SDCard- und USB-Gerätepfad dürfen nicht identisch sein</string>
+    <string name="sd_card_usb_same">SD-Karten- und USB-Gerätepfad dürfen nicht identisch sein</string>
     <string name="app_on_sd_card">Die App wurde anscheinend auf der SD-Karte installiert, daher sind die Widgets nicht verfügbar. Sie werden auch in der Liste der Widgets nicht angezeigt.
         Dies ist systemseitig so beschränkt. Für die Verwendung der Widgets muss die App wieder im internen Speicher installiert werden.</string>
 
@@ -188,8 +188,8 @@
     <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Liedtitel</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="gps_coordinates">GPS Koordinaten</string>
+    <string name="altitude">Höhe</string>
 
     <!-- Color customization -->
     <string name="background_color">Hintergrundfarbe</string>
@@ -198,12 +198,12 @@
     <string name="foreground_color">Vordergrundfarbe</string>
     <string name="app_icon_color">App-Icon-Farbe</string>
     <string name="bottom_navigation_bar_color">Farbe der unteren Navigationsleiste</string>
-    <string name="restore_defaults">Standard wiederherstellen</string>
-    <string name="use_default">Use default</string>
-    <string name="default_color">Default</string>
+    <string name="restore_defaults">Vorgabe wiederherstellen</string>
+    <string name="use_default">Vorgabe benutzen</string>
+    <string name="default_color">Vorgabe</string>
     <string name="change_color">Farbe ändern</string>
     <string name="theme">Thema</string>
-    <string name="changing_color_description">Ändern einer Farbe setzt das Thema auf "Benutzerdefiniert"</string>
+    <string name="changing_color_description">Ändern einer Farbe setzt das Thema auf \"Benutzerdefiniert\"</string>
     <string name="save">Speichern</string>
     <string name="discard">Verwerfen</string>
     <string name="undo_changes">Änderungen verwerfen</string>
@@ -212,7 +212,7 @@
     <string name="apply_to_all_apps">Farben bei allen schlichten Apps anwenden</string>
     <string name="app_icon_color_warning">WARNUNG: Einige Launcher behandeln die Anpassung von App-Icons nicht richtig. Sollte das Icon verschwinden, versuche die App mit Google Play oder einem Widget (wenn verfügbar) zu starten.
         Wenn die App gestartet ist, setze das Icon zurück auf das standardmäßige Orange #F57C00. Im schlimmsten Fall kann es passieren, dass du die App erneut installieren musst.</string>
-    <string name="share_colors_success">Farben erfolgreich aktualisiert. Ein neues Thema \'Shared\' wurde hinzugefügt, bitte verwende dieses um für alle Apps die Farben zu ändern.</string>
+    <string name="share_colors_success">Farben erfolgreich aktualisiert. Ein neues Thema \"Shared\" wurde hinzugefügt, bitte verwende dieses um für alle Apps die Farben zu ändern.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Bitte kaufe <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> um diese Funktion freizuschalten und die Entwicklung zu unterstützen. Danke!
@@ -270,8 +270,8 @@
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Willst du mit dem Löschen fortfahren?</string>
-    <string name="deletion_confirmation">Sollen %s wirklich gelöscht werden?</string>       <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Sollen %s wirklich in den Papierkorb verschoben werden?</string>        <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">Sollen wirklich %s Elemente gelöscht werden?</string>       <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Sollen wirklich %s Elemente in den Papierkorb verschoben werden?</string>        <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Soll dieses Element wirklich gelöscht werden?</string>
     <string name="are_you_sure_recycle_bin">Soll dieses Element wirklich in den Papierkorb verschoben werden?</string>
     <string name="do_not_ask_again">Nicht erneut fragen (in dieser Sitzung)</string>
@@ -303,9 +303,9 @@
     <string name="go_to_settings">Einstellungen öffnen</string>
     <string name="protection_setup_successfully">Muster/PIN erfolgreich gespeichert. Falls vergessen, muss die App neu installiert werden.</string>
     <string name="fingerprint_setup_successfully">Schutz erfolgreich eingerichtet. Falls beim Zurücksetzen Probleme auftreten, bitte die App neu installieren.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="lock_folder">Ordner sperren</string>
+    <string name="unlock_folder">Ordner entsperren</string>
+    <string name="lock_folder_notice">Dieser Schutz ist nur innerhalb dieser App wirksam und kann keine systemweite Datenträgerverschlüsselung ersetzen.</string>
 
     <!-- Times -->
     <string name="yesterday">Gestern</string>
@@ -440,7 +440,7 @@
     <string name="reminder_triggers_in">Verbleibende Zeit bis Alarm ausgelöst wird:\n%s</string>
     <string name="alarm_warning">Bitte stell sicher, dass der Alarm zuverlässig funktioniert, bevor Du Dich darauf verlässt. Es könnte wegen Systemeinschränkungen (z.B. Stromsparfunktion) fehlschlagen.</string>
     <string name="reminder_warning">Bitte stell sicher, dass die Erinnerung zuverlässig funktioniert, bevor Du Dich darauf verlässt. Es könnte wegen Systemeinschränkungen (z.B. Stromsparfunktion) fehlschlagen.</string>
-    <string name="notifications_disabled">Benachrichtigungen für diese App sind deaktiviert. Bitte geh in deine Systemeinstellungen und aktiviere sie.</string>
+    <string name="notifications_disabled">Benachrichtigungen für diese App sind deaktiviert. Wechsle in die Systemeinstellungen und aktiviere sie.</string>
 
     <!-- Alarms -->
     <string name="alarm">Wecker</string>
@@ -470,10 +470,10 @@
     <string name="password_protect_file_deletion">Mit Passwort vor Dateilöschung und -verschiebung schützen</string>
     <string name="keep_last_modified">Altes Änderungsdatum bei Dateioperationen behalten</string>
     <string name="show_info_bubble">Beim Scrollen mit dem Scrollbalken Infofenster anzeigen</string>
-    <string name="prevent_phone_from_sleeping">Verhindere, dass das Handy in den Ruhemodus wechselt, solange die App im Vordergrund läuft</string>
+    <string name="prevent_phone_from_sleeping">Verhindere, dass das Gerät in den Ruhemodus wechselt, solange die App im Vordergrund läuft</string>
     <string name="skip_delete_confirmation">Verwende keinen Löschen-bestätigen-Dialog</string>
     <string name="enable_pull_to_refresh">Ermögliche \"Auffrischen\" durch Ziehen von der oberen Kante</string>
-    <string name="use_24_hour_time_format">Benutze 24-Std.-Zeitformat</string>
+    <string name="use_24_hour_time_format">Benutze 24-Stunden-Zählung</string>
     <string name="change_date_and_time_format">Datums- und Zeitformat ändern</string>
     <string name="sunday_first">Beginne die Woche am Sonntag</string>
     <string name="widgets">Widgets</string>
@@ -532,8 +532,8 @@
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Es scheint, Du hast ein USB-Gerät an Dein Gerät angeschlossen. Du musst zusätzliche Berechtigungen gewähren, um die Dateien anzuzeigen.</string>
-    <string name="confirm_usb_storage_access_text">Bitte den Basis-Ordner des USB-Geräts auf der folgenden Seite wählen, um Zugriff zu gewähren</string>
-    <string name="wrong_root_selected_usb">Falscher Ordner gewählt, bitte den Basis- (Root-) Ordner des USB-Geräts wählen</string>
+    <string name="confirm_usb_storage_access_text">Bitte das Hauptverzeichnis des USB-Geräts auf der folgenden Seite wählen, um Zugriff zu gewähren</string>
+    <string name="wrong_root_selected_usb">Falscher Ordner gewählt, bitte das Hauptverzeichnis des USB-Geräts wählen</string>
 
     <!-- Dates -->
     <string name="january">Januar</string>
@@ -588,12 +588,12 @@
     <string name="sunday_short">So</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">Deine App-Version wird keine weiteren Aktualisierungen erhalten. Wechsle zur Pro Version, um Fehlerkorrekturen, Verbesserungen und neue Funktionen zu erhalten.</string>
+    <string name="upgrade_to_pro_long_click">Deine App-Version wird keine weiteren Aktualisierungen erhalten. Wechsle zur Pro Version, um Fehlerkorrekturen, Verbesserungen und neue Funktionen zu erhalten indem Du hier tippst.</string>
     <string name="it_is_free">Sie ist gratis bis: %s. Wenn Du sie bis dahin herunterlädst, darfst Du sie für immer gratis nutzen.</string>
     <string name="more_info">Mehr Infos</string>
     <string name="upgrade">Upgrade</string>
-    <string name="upgrade_calendar">Um lokal gespeicherte Ereignisse zu migrieren, musst Du sie als .ics-Datei exportieren und anschließend importieren. Die beiden Schaltflächen befinden sich im Hauptmenü.</string>
+    <string name="upgrade_calendar">Um lokal gespeicherte Ereignisse zu migrieren, musst Du sie als ics-Datei exportieren und anschließend importieren. Die beiden Schaltflächen befinden sich im Hauptmenü.</string>
 
     <!-- About -->
     <string name="about">Über</string>
@@ -601,7 +601,7 @@
     <string name="email_label">Vorschläge und Feedback bitte senden an</string>
     <string name="upgrade_to_pro">Upgrade auf Pro</string>
     <string name="more_apps_underlined"><u>Weitere Apps</u></string>
-    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
+    <string name="more_apps_from_us_underlined"><u>Weitere Apps von uns</u></string>
     <string name="third_party_licences_underlined"><u>Drittanbieterlizenzen</u></string>
     <string name="invite_friends_underlined"><u>Freunde einladen</u></string>
     <string name="share_text">Hey, wirf mal einen Blick auf %1$s: %2$s</string>
@@ -623,12 +623,12 @@
         ]]>
     </string>
     <string name="purchase">Kaufen</string>
-    <string name="update_thank_you">Bitte Simple Thank You auf die neueste Version aktualisieren</string>
+    <string name="update_thank_you">Bitte \"Simple Thank You\" auf die neueste Version aktualisieren</string>
     <string name="before_asking_question_read_faq">Bevor du eine Frage stellst, überprüfe bitte die App-Einstellungen und lese dir die häufig gestellten Fragen (FAQ) durch. Vielleicht findest du dort eine Lösung.</string>
-    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
-    <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
+    <string name="before_rate_read_faq">Bevor du eine Bewertung abgibst, schaue bitte in die Einstellungen der App und lese dir die häufig gestellten Fragen (FAQ) durch. Vielleicht findest du dort eine Lösung.</string>
+    <string name="make_sure_latest">Stell bitte auch sicher, dass du die aktuelle Version der App benutzt.</string>
     <string name="read_it">Bitte lesen</string>
-    <string name="read_faq">Read FAQ</string>
+    <string name="read_faq">Lese die FAQ</string>
     <string name="rate_us_prompt">Hallo,\n\nes sieht so aus, als würdest du diese App schon einige Zeit benutzen und wir schätzen das sehr.\n\nWenn wir dich um einen Gefallen bitten können, bitte bewerte uns auf Google Play. Das würde uns wirklich sehr helfen.\n\nEgal wie du dich entscheidest, wirst du diese Nachricht nicht noch einmal bekommen.\n\nDanke!</string>
     <string name="rate_our_app">Bewerten Sie unsere App bitte :)</string>
     <string name="thank_you">Danke</string>
@@ -661,18 +661,20 @@
     <string name="faq_3_title_commons">Ich habe versehentlich einige Dateien gelöscht. Wie kann ich diese wiederherstellen?</string>
     <string name="faq_3_text_commons">Unglücklicherweise gar nicht. Dateien werden sofort nach dem Bestätigungsdialog gelöscht, sprich ein Papierkorb ist nicht vorhanden.</string>
     <string name="faq_4_title_commons">Ich mag die Farben des Widgets nicht. Kann ich sie wechseln?</string>
-    <string name="faq_4_text_commons">Ja, wenn du ein Widget auf den Home Screen ziehst, erscheint ein Konfigurationsmenü. In der linken unteren Ecke sind farbige Kästchen, drücke auf sie und wähle eine neue Farbe. Ausserdem kannst du den Regler nutzen, um den Alphaparameter (Transparenz) einzustellen.</string>
-    <string name="faq_5_title_commons">Kann ich irgendwie gelöschte Dateien wiederherstellen?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
+    <string name="faq_4_text_commons">Ja, wenn du ein Widget auf den Home Screen ziehst, erscheint ein Konfigurationsmenü. In der linken unteren Ecke sind farbige Kästchen, drücke auf sie und wähle eine neue Farbe. Außerdem kannst du den Regler nutzen, um den Alphaparameter (Transparenz) einzustellen.</string>
+    <string name="faq_5_title_commons">Kann ich gelöschte Dateien wiederherstellen?</string>
+    <string name="faq_5_text_commons">Wurden die Dateien endgültig gelöst, sind sie verloren. Standardmäßig ist jedoch der Papierkorb aktiviert. Dateien werden dann in den Papierkorb verschoben anstatt gelöscht.
+        Von dort können die Dateien wiederhergestellt werden.</string>
     <string name="faq_6_title_commons">Das App-Icon im Launcher ist verschwunden. Was kann ich tun?</string>
     <string name="faq_6_text_commons">Das passiert, wenn dein Launcher das Anpassen von App-Icons nicht richtig unterstützt. Versuche die App über Google Play oder ein Widget (wenn verfügbar) zu starten.
         Wenn die App gestartet ist, setze das Icon zurück auf das standardmäßige Orange #F57C00. Im schlimmsten Fall kann es passieren, dass du die App erneut installieren musst.</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
+    <string name="faq_7_title_commons">Der Betrag wurde von meinem Konto abgebucht, aber ich kann die App nicht herunterladen. Was kann ich machen?</string>
+    <string name="faq_7_text_commons">Die Zahlungen werden durch Google gehandhabt. Dabei kommt es gelegentlich zu Verzögerungen. Leere den Google Play App Cache und starte dein Gerät neu und versuche erneut die App herunterzuladen.</string>
+    <string name="faq_8_title_commons">Warum sollte ich auf die Pro Version aufrüsten?</string>
+    <string name="faq_8_text_commons">Deine App wird keine weiteren Aktualisierungen erhalten. Bekannte und später gefundene Fehler werden nicht beseitigt werden. Es werden auch keine neuen Funktionen mehr hinzugefügt werden.
+        Du kannst die Pro Version auf Google Play für einen kleinen Betrag kaufen. Dies ist eine Einmalzahlung. Auch nach einem Gerätewechsel kannst du weiter die Pro Version nutzen ohne erneute dafür bezahlen zu müssen.
+        Sollte Dir die Pro Version nicht gefallen, kannst Du sie einfach innerhalb einiger Stunden deinstallieren und wirst Dein Geld automatisch zurück erhalten.
+        Möchtest du zu einem späteren Zeitpunkt dein Geld erstattet bekommen, dann kontaktiere uns einfach unter hello@simplemobiletools.com und du wirst sie bekommen.</string>
 
     <!-- License -->
     <string name="notice">Diese App nutzt die folgenden Drittanbieterbibliotheken, die mein Leben einfacher machen. Danke!</string>
@@ -701,12 +703,12 @@
     <string name="sanselan_title">Apache Sanselan (Bild-Metadaten lesen)</string>
     <string name="filters_title">Android Photo Filters (Bilder filtern)</string>
     <string name="gesture_views_title">Gesture Views (Zoombare Bilder)</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (Buchstaben auf dem Scrollbalken)</string>
+    <string name="event_bus_title">Event Bus (Kommunikation innerhal der App)</string>
+    <string name="audio_record_view_title">Audio Record View (Audio Visualisierung)</string>
+    <string name="sms_mms_title">SMS MMS (SMS und MMS Handhabung)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: Diese Version der App wird nicht länger unterstützt. Hol dir die Pro-Version unter https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="deprecated_app">Veraltet: Diese Version der App wird nicht länger unterstützt. Hol dir die Pro-Version unter https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Vergiss nicht, wenn du eine bezahlte App innerhalb von 2 Stunden deinstalliert, wird dir der Betrag erstattet. Wenn du später eine Rückerstattung möchtest, kontaktiere uns einfach unter hello@simplemobiletools.com und du wirst sie bekommen. Das macht es einfach, die App einfach auszuprobieren :)</string>
 </resources>
