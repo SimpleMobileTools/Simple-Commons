@@ -10,7 +10,7 @@
     <string name="edit_with">Edytuj w</string>
     <string name="no_app_found">Nie mogę znaleźć danych aplikacji</string>
     <string name="set_as">Ustaw jako</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_to_clipboard">Kopiuj do schowka</string>
     <string name="value_copied_to_clipboard">Wartość została skopiowana do schowka</string>
     <string name="unknown">Nieznane</string>
     <string name="always">Zawsze</string>
@@ -30,6 +30,9 @@
     <string name="playpause">Odtwórz / zatrzymaj</string>
     <string name="next">Następny</string>
     <string name="number">Numer</string>
+    <string name="no_contacts_found">Nie znaleziono kontaktów</string>
+    <string name="request_the_required_permissions">Wymagaj koniecznych uprawnień</string>
+    <string name="no_access_to_contacts">The app could not access your contacts</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Zarządzaj zablokowanymi numerami</string>
@@ -83,7 +86,7 @@
     <string name="simple_renaming">Simple renaming</string>
     <string name="pattern_renaming">Pattern</string>
     <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second\n%i - number increasing from 1</string>
+    <string name="rename_date_time_pattern">%Y - rok\n%M - miesiąc\n%D - dzień\n%h - godzina\n%m - minuta\n%s - sekunda\n%i - numer rosnący od 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopiuj</string>
@@ -302,8 +305,8 @@
     <string name="go_to_settings">Przejdź do ustawień</string>
     <string name="protection_setup_successfully">Hasło zostało ustawione. Jeśli je zapomnisz, przeinstaluj aplikację.</string>
     <string name="fingerprint_setup_successfully">Zabezpieczenie zostało ustawione. W razie problemów z jego zresetowaniem przeinstaluj aplikację.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
+    <string name="lock_folder">Zablokuj folder</string>
+    <string name="unlock_folder">Odblokuj folder</string>
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
 
     <!-- Times -->
@@ -626,14 +629,14 @@
     <string name="website_label">Nasza strona internetowa:</string>
     <string name="email_label">Napisz do nas, przyślij nam swoje uwagi:</string>
     <string name="upgrade_to_pro">Zaktualizuj do wersji Pro</string>
-    <string name="more_apps_underlined"><u>Więcej naszych aplikacji</u></string>
-    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
+    <string name="more_apps_underlined"><u>Więcej aplikacji</u></string>
+    <string name="more_apps_from_us_underlined"><u>Więcej naszych aplikacji</u></string>
     <string name="third_party_licences_underlined"><u>Licencje innych firm</u></string>
     <string name="invite_friends_underlined"><u>Zaproponuj aplikację znajomym</u></string>
     <string name="share_text">Hej! Sprawdź aplikację %1$s (%2$s).</string>
     <string name="invite_via">Wybierz sposób:</string>
     <string name="rate_us_underlined"><u>Oceń aplikację</u></string>
-    <string name="rate">Rate</string>
+    <string name="rate">Oceń</string>
     <string name="donate">Przekaż datek</string>
     <string name="donate_underlined"><u>Przekaż datek</u></string>
     <string name="follow_us">Śledź nas</string>
@@ -729,6 +732,7 @@
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
     <string name="event_bus_title">Event Bus (communication within the app)</string>
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
+    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

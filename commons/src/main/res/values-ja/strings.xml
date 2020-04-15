@@ -30,6 +30,9 @@
     <string name="playpause">再生 / 一時停止</string>
     <string name="next">次へ</string>
     <string name="number">番号</string>
+    <string name="no_contacts_found">連絡先が見つかりません</string>
+    <string name="request_the_required_permissions">Request the required permissions</string>
+    <string name="no_access_to_contacts">The app could not access your contacts</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">ブロックした番号を管理</string>
@@ -669,6 +672,7 @@
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
     <string name="event_bus_title">Event Bus (communication within the app)</string>
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
+    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

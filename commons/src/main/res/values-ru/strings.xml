@@ -30,6 +30,9 @@
     <string name="playpause">Воспроизведение / Пауза</string>
     <string name="next">Следующая</string>
     <string name="number">Номер</string>
+    <string name="no_contacts_found">Контакты не найдены</string>
+    <string name="request_the_required_permissions">Запрос необходимых разрешений</string>
+    <string name="no_access_to_contacts">The app could not access your contacts</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Управление блокируемыми номерами</string>
@@ -735,6 +738,7 @@
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (буквы на полосе прокрутки)</string>
     <string name="event_bus_title">Event Bus (коммуникация внутри приложения)</string>
     <string name="audio_record_view_title">Audio Record View (звуковая визуализация)</string>
+    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">УСТАРЕВШЕЕ: данная версия приложения больше не поддерживается, переходите на версию Pro https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

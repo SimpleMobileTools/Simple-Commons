@@ -30,6 +30,9 @@
     <string name="playpause">Αναπαραγωγή / Παύση</string>
     <string name="next">Επόμενο</string>
     <string name="number">Αριθμός</string>
+    <string name="no_contacts_found">Δεν βρέθηκαν Επαφές</string>
+    <string name="request_the_required_permissions">Ζητούνται τα απαιτούμενα δικαιώματα</string>
+    <string name="no_access_to_contacts">Η εφαρμογή δεν έχει πρόσβαση στις επαφές σας</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Διαχείριση αποκλεισμένων αριθμών</string>
@@ -702,6 +705,7 @@
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
     <string name="event_bus_title">Event Bus (communication within the app)</string>
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
+    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">ΚΑΤΑΡΓΗΣΗ: Αυτή η έκδοση της εφαρμογής δεν υποστηρίζεται πλέον, λάβετε την έκδοση Pro εδώ https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

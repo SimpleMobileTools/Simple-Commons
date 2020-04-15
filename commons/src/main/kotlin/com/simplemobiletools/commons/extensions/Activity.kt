@@ -682,7 +682,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
             }
 
             if (!getDoesFilePathExist(fileDirItem.path)) {
-                document = document.createFile("", fileDirItem.name)
+                document = document.createFile("", fileDirItem.name) ?: getDocumentFile(fileDirItem.path)
             }
 
             if (document?.exists() == true) {
@@ -738,7 +738,8 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
 
         try {
             val newDocument = documentFile.createFile(mimeType, path.getFilenameFromPath())
-            applicationContext.contentResolver.openOutputStream(newDocument!!.uri)
+            val newUri = newDocument?.uri ?: getDocumentFile(path)!!.uri
+            applicationContext.contentResolver.openOutputStream(newUri)
         } catch (e: Exception) {
             showErrorToast(e)
             null

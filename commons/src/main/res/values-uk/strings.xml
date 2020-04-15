@@ -30,6 +30,9 @@
     <string name="playpause">Відтворення / Пауза</string>
     <string name="next">Наступний</string>
     <string name="number">Номер</string>
+    <string name="no_contacts_found">Контактів не знайдено</string>
+    <string name="request_the_required_permissions">Запит на необхідні дозволи</string>
+    <string name="no_access_to_contacts">The app could not access your contacts</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Керувати блокованими номерами</string>
@@ -702,6 +705,7 @@
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
     <string name="event_bus_title">Event Bus (communication within the app)</string>
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
+    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">Застаріла: Ця версія додатка більше не підтримується, встановіть версію Pro за адресою https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

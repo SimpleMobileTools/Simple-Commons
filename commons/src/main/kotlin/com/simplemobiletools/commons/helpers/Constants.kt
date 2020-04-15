@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.helpers
 import android.graphics.Color
 import android.os.Build
 import android.os.Looper
+import android.util.Log
 import java.util.*
 
 const val APP_NAME = "app_name"
@@ -155,6 +156,7 @@ const val LICENSE_GESTURE_VIEWS = 8388608
 const val LICENSE_INDICATOR_FAST_SCROLL = 16777216
 const val LICENSE_EVENT_BUS = 33554432
 const val LICENSE_AUDIO_RECORD_VIEW = 67108864
+const val LICENSE_SMS_MMS = 134217728
 
 // global intents
 const val OPEN_DOCUMENT_TREE = 1000
@@ -214,6 +216,7 @@ const val PERMISSION_READ_CALL_LOG = 10
 const val PERMISSION_WRITE_CALL_LOG = 11
 const val PERMISSION_GET_ACCOUNTS = 12
 const val PERMISSION_READ_SMS = 13
+const val PERMISSION_SEND_SMS = 14
 
 // conflict resolving
 const val CONFLICT_SKIP = 1
@@ -328,3 +331,5 @@ fun getConflictResolution(resolutions: LinkedHashMap<String, Int>, path: String)
 }
 
 val proPackages = arrayListOf("draw", "gallery", "filemanager", "contacts", "notes", "calendar")
+
+fun mydebug(message: String) = Log.e("DEBUG", message)

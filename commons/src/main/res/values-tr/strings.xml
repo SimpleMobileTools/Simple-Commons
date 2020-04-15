@@ -30,6 +30,9 @@
     <string name="playpause">Çal / Duraklat</string>
     <string name="next">Sonraki</string>
     <string name="number">Numara</string>
+    <string name="no_contacts_found">Kişi bulunamadı</string>
+    <string name="request_the_required_permissions">Gerekli izinleri iste</string>
+    <string name="no_access_to_contacts">The app could not access your contacts</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Engelli numaraları yönet</string>
@@ -701,6 +704,7 @@
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (kaydırma çubuğundaki harfler)</string>
     <string name="event_bus_title">Event Bus (communication within the app)</string>
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
+    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">Kullanımdan kaldırıldı: Uygulamanın bu sürümü artık sağlanmıyor, Pro sürümünü şuradan indirin: https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

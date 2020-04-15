@@ -30,6 +30,9 @@
     <string name="playpause">Hrát / Pauza</string>
     <string name="next">Následující</string>
     <string name="number">Číslo</string>
+    <string name="no_contacts_found">Nenalezeny žádné kontakty.</string>
+    <string name="request_the_required_permissions">Vyžádat potřebná oprávnění</string>
+    <string name="no_access_to_contacts">The app could not access your contacts</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Spravovat blokovaná čísla</string>
@@ -735,6 +738,7 @@
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (písmena na posuvníku)</string>
     <string name="event_bus_title">Event Bus (communication within the app)</string>
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
+    <string name="sms_mms_title">SMS MMS (spravovanie SMS a MMS)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">ZASTARALÁ: Tato verze aplikace již není podporována, stáhněte si Pro verzi na https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

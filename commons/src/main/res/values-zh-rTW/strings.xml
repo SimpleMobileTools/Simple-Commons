@@ -30,6 +30,9 @@
     <string name="playpause">播放 / 暫停</string>
     <string name="next">下一首</string>
     <string name="number">號碼</string>
+    <string name="no_contacts_found">未發現聯絡人</string>
+    <string name="request_the_required_permissions">請求必要的權限</string>
+    <string name="no_access_to_contacts">The app could not access your contacts</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">管理黑名單</string>
@@ -669,6 +672,7 @@
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (滾動條上字母)</string>
     <string name="event_bus_title">Event Bus (應用程式溝通)</string>
     <string name="audio_record_view_title">Audio Record View (音訊視覺化)</string>
+    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">已捨棄: 這版本的應用程式不再維護，在這取得專業版  https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

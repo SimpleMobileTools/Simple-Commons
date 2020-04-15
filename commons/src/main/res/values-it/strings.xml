@@ -30,6 +30,9 @@
     <string name="playpause">Riproduci / Pausa</string>
     <string name="next">Successiva</string>
     <string name="number">Numero</string>
+    <string name="no_contacts_found">Nessun contatto trovato</string>
+    <string name="request_the_required_permissions">Richiedi le permissioni necessarie</string>
+    <string name="no_access_to_contacts">The app could not access your contacts</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gestisci i numeri bloccati</string>
@@ -702,6 +705,7 @@
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (lettere su barre di scorrimento)</string>
     <string name="event_bus_title">Event Bus (comunicazione all\'interno dell\'app)</string>
     <string name="audio_record_view_title">Audio Record View (visualizzazione audio)</string>
+    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATA: Questa versione dell\'app non è più supportata, ottieni la versione Pro a https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
