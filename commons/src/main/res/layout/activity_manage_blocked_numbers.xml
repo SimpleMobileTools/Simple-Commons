@@ -18,11 +18,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:paddingStart="@dimen/big_margin"
+        android:alpha="0.8"
+        android:paddingStart="@dimen/activity_margin"
         android:paddingTop="@dimen/activity_margin"
-        android:paddingEnd="@dimen/big_margin"
+        android:paddingEnd="@dimen/activity_margin"
         android:text="@string/not_blocking_anyone"
         android:textSize="@dimen/bigger_text_size"
+        android:textStyle="italic"
         android:visibility="gone" />
 
     <com.simplemobiletools.commons.views.MyTextView

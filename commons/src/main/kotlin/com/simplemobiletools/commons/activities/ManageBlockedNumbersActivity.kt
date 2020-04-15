@@ -15,7 +15,7 @@ import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.BlockedNumber
 import kotlinx.android.synthetic.main.activity_manage_blocked_numbers.*
-import java.util.ArrayList
+import java.util.*
 
 class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewListener {
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
