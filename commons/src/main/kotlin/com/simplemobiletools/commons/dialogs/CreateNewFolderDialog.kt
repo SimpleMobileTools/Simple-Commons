@@ -46,7 +46,8 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                     if (it) {
                         try {
                             val documentFile = activity.getDocumentFile(path.getParentPath())
-                            if (documentFile?.createDirectory(path.getFilenameFromPath()) != null) {
+                            val newDir = documentFile?.createDirectory(path.getFilenameFromPath()) ?: activity.getDocumentFile(path)
+                            if (newDir != null) {
                                 sendSuccess(alertDialog, path)
                             } else {
                                 activity.toast(R.string.unknown_error_occurred)
