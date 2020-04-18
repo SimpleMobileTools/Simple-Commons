@@ -362,6 +362,19 @@ fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: 
     }
 }
 
+fun Activity.showLocationOnMap(coordinates: String) {
+    val uriBegin = "geo:$coordinates"
+    val encodedQuery = Uri.encode(coordinates)
+    val uriString = "$uriBegin?q=$encodedQuery&z=16"
+    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uriString))
+    val packageManager = packageManager
+    if (intent.resolveActivity(packageManager) != null) {
+        startActivity(intent)
+    } else {
+        toast(R.string.no_app_found)
+    }
+}
+
 fun Activity.getFinalUriFromPath(path: String, applicationId: String): Uri? {
     val uri = try {
         ensurePublicUri(path, applicationId)
