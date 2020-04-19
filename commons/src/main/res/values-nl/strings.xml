@@ -10,7 +10,7 @@
     <string name="edit_with">Bewerken met</string>
     <string name="no_app_found">Geen app gevonden om dit bestand mee te openen</string>
     <string name="set_as">Instellen als</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_to_clipboard">Naar klembord kopiëren</string>
     <string name="value_copied_to_clipboard">Gekopieerd naar klembord</string>
     <string name="unknown">Onbekend</string>
     <string name="always">Altijd</string>
@@ -32,7 +32,7 @@
     <string name="number">Nummer</string>
     <string name="no_contacts_found">Geen contacten gevonden</string>
     <string name="request_the_required_permissions">Om benodigde machtigingen vragen</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
+    <string name="no_access_to_contacts">De app heeft geen toegang tot uw contacten</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Geblokkeerde nummers beheren</string>
@@ -43,7 +43,7 @@
     <string name="blocked_numbers">Geblokkeerde nummers</string>
     <string name="must_make_default_dialer">Maak van deze app de standaardapp voor bellen om nummers te kunnen blokkeren.</string>
     <string name="set_as_default">Als standaard instellen</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
+    <string name="block_confirmation">Nummer \"%s\" blokkeren?</string>
 
     <!-- Favorites -->
     <string name="favorites">Favorieten</string>
