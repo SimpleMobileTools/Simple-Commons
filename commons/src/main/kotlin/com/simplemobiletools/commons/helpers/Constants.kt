@@ -127,6 +127,7 @@ const val LAST_RENAME_PATTERN_USED = "last_rename_pattern_used"
 const val LAST_EXPORTED_SETTINGS_FOLDER = "last_exported_settings_folder"
 const val LAST_EXPORTED_SETTINGS_FILE = "last_exported_settings_file"
 const val FONT_SIZE = "font_size"
+const val WAS_MESSENGER_RECORDER_SHOWN = "was_messenger_recorder_shown"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1

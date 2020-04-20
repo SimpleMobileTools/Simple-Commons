@@ -638,16 +638,17 @@
     <string name="new_app">
         <![CDATA[
             Ehi,<br><br>
-	    è uscita una nuova app di recente:<br><br>
+            è uscita una nuova app di recente:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-	    Puoi scaricarla toccando il titolo.
+            <a href="%3$s">%4$s</a><br><br>
+            Puoi scaricarla toccando il titolo.
             Grazie
         ]]>
     </string>
 
     <string name="sideloaded_app">
         <![CDATA[
-	    Sembra che la propria versione sia corrotta. Scaricare la versione originale <a href="%s">qui</a>.
+        Sembra che la propria versione sia corrotta. Scaricare la versione originale <a href="%s">qui</a>.
         ]]>
     </string>
 
