@@ -33,6 +33,7 @@
     <string name="no_contacts_found">Контакты не найдены</string>
     <string name="request_the_required_permissions">Запрос необходимых разрешений</string>
     <string name="no_access_to_contacts">Приложение не может получить доступ к вашим контактам</string>
+    <string name="insert_text_here">Insert text here</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Управление блокируемыми номерами</string>
@@ -672,6 +673,7 @@
             Привет,<br><br>
             просто сообщаю, что недавно было выпущено новое приложение:<br><br>
             <a href="%1$s">%2$s</a><br><br>
+            <a href="%3$s">%4$s</a><br><br>
             Вы можете скачать его, нажав на заголовок.<br><br>
             Спасибо
         ]]>
@@ -743,4 +745,7 @@
     <!-- Google Play listing -->
     <string name="deprecated_app">УСТАРЕВШЕЕ: данная версия приложения больше не поддерживается, переходите на версию Pro https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Не забывайте, что если вы удалите любое платное приложение в течение 2 часов, вам будет автоматически возвращена сумма покупки. Если вы захотите вернуть деньги позднее, просто свяжитесь с нами по адресу hello@simplemobiletools.com и вы их получите. Так что можно легко опробовать это приложение :)</string>
+
+    <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
+    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
 </resources>

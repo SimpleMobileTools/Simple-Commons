@@ -1,14 +1,14 @@
 package com.simplemobiletools.commons.activities
 
-import android.annotation.TargetApi
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.ActivityManager
+import android.app.role.RoleManager
 import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.provider.DocumentsContract
 import android.telecom.TelecomManager
@@ -545,13 +545,21 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         return defaultFilename
     }
 
-    @TargetApi(Build.VERSION_CODES.M)
+    @SuppressLint("InlinedApi")
     protected fun launchSetDefaultDialerIntent() {
-        Intent(TelecomManager.ACTION_CHANGE_DEFAULT_DIALER).putExtra(TelecomManager.EXTRA_CHANGE_DEFAULT_DIALER_PACKAGE_NAME, packageName).apply {
-            if (resolveActivity(packageManager) != null) {
-                startActivityForResult(this, REQUEST_CODE_SET_DEFAULT_DIALER)
-            } else {
-                toast(R.string.no_app_found)
+        if (isQPlus()) {
+            val roleManager = getSystemService(RoleManager::class.java)
+            if (roleManager!!.isRoleAvailable(RoleManager.ROLE_DIALER) && !roleManager.isRoleHeld(RoleManager.ROLE_DIALER)) {
+                val intent = roleManager.createRequestRoleIntent(RoleManager.ROLE_DIALER)
+                startActivityForResult(intent, REQUEST_CODE_SET_DEFAULT_DIALER)
+            }
+        } else {
+            Intent(TelecomManager.ACTION_CHANGE_DEFAULT_DIALER).putExtra(TelecomManager.EXTRA_CHANGE_DEFAULT_DIALER_PACKAGE_NAME, packageName).apply {
+                if (resolveActivity(packageManager) != null) {
+                    startActivityForResult(this, REQUEST_CODE_SET_DEFAULT_DIALER)
+                } else {
+                    toast(R.string.no_app_found)
+                }
             }
         }
     }

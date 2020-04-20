@@ -33,6 +33,7 @@
     <string name="no_contacts_found">لم يتم العثور على جهات اتصال</string>
     <string name="request_the_required_permissions">طلب الأذونات المطلوبة</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
+    <string name="insert_text_here">Insert text here</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">إدارة الأرقام المحظورة</string>
@@ -637,6 +638,7 @@
             مهلاً,<br><br>
             فقط لإخبارك أنه تم إصدار تطبيق جديد مؤخراً:<br><br>
             <a href="%1$s">%2$s</a><br><br>
+            <a href="%3$s">%4$s</a><br><br>
             يمكنك تنزيله بالضغط على العنوان.<br><br>
             شكراً
         ]]>
@@ -703,4 +705,7 @@
     <!-- Google Play listing -->
     <string name="deprecated_app">لم يعد يجري العمل عليه: لم يعد هذا الإصدار من التطبيق يجري العمل عليه، قم بالحصول على الإصدار الـ Pro على https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">لا تنسى أنه إذا قمت بإلغاء تثبيت أي تطبيق مدفوع في غضون ساعتين ، فسيتم إسترداد أموالك تلقائياً. إذا كنت تريد إسترداد الأموال في أي وقت لاحق ، فأتصل بنا على hello@simplemobiletools.com وستحصل عليه. هذا يجعل من السهل تجربته :)</string>
+
+    <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
+    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
 </resources>

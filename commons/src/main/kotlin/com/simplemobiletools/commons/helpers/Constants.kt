@@ -26,7 +26,7 @@ const val SHOW_FAQ_BEFORE_MAIL = "show_faq_before_mail"
 const val INVALID_NAVIGATION_BAR_COLOR = -1
 const val CHOPPED_LIST_DEFAULT_SIZE = 50
 const val SAVE_DISCARD_PROMPT_INTERVAL = 1000L
-val DEFAULT_WIDGET_BG_COLOR = Color.parseColor("#33000000")
+val DEFAULT_WIDGET_BG_COLOR = Color.parseColor("#AA000000")
 const val SD_OTG_PATTERN = "^/storage/[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$"
 const val SD_OTG_SHORT = "^[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$"
 
@@ -127,6 +127,7 @@ const val LAST_RENAME_PATTERN_USED = "last_rename_pattern_used"
 const val LAST_EXPORTED_SETTINGS_FOLDER = "last_exported_settings_folder"
 const val LAST_EXPORTED_SETTINGS_FILE = "last_exported_settings_file"
 const val FONT_SIZE = "font_size"
+const val WAS_MESSENGER_RECORDER_SHOWN = "was_messenger_recorder_shown"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
@@ -282,6 +283,21 @@ val appIconColorStrings = arrayListOf(
         ".Brown",
         ".Blue_grey",
         ".Grey_black"
+)
+
+// most app icon colors from md_app_icon_colors with reduced alpha
+// used at showing contact placeholders without image
+val letterBackgroundColors = arrayListOf(
+        0xCCD32F2F,
+        0xCCC2185B,
+        0xCC1976D2,
+        0xCC0288D1,
+        0xCC0097A7,
+        0xCC00796B,
+        0xCC388E3C,
+        0xCC689F38,
+        0xCCF57C00,
+        0xCCE64A19
 )
 
 fun isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()

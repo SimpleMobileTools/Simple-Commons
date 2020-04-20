@@ -227,7 +227,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             val curPath = file.absolutePath
             val curName = curPath.getFilenameFromPath()
             val size = if (getProperFileSize) file.getProperSize(showHidden) else file.length()
-            items.add(FileDirItem(curPath, curName, file.isDirectory, file.getDirectChildrenCount(showHidden), size))
+            items.add(FileDirItem(curPath, curName, file.isDirectory, file.getDirectChildrenCount(showHidden), size, file.lastModified()))
         }
         callback(items)
     }

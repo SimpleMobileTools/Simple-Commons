@@ -33,6 +33,7 @@
     <string name="no_contacts_found">Nenašli sa žiadne kontakty</string>
     <string name="request_the_required_permissions">Vyžiadať potrebné oprávnenia</string>
     <string name="no_access_to_contacts">Nepodarilo sa získať zoznam kontaktov</string>
+    <string name="insert_text_here">Zadajte text sem</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Spravovať blokované čísla</string>
@@ -672,6 +673,7 @@
             Zdravím,<br><br>
             iba vám oznamujem, že bola nedávno vydaná nová aplikácia:<br><br>
             <a href="%1$s">%2$s</a><br><br>
+            <a href="%3$s">%4$s</a><br><br>
             Viete ju stiahnuť kliknutím na názov.<br><br>
             Vďaka
         ]]>
@@ -743,4 +745,7 @@
     <!-- Google Play listing -->
     <string name="deprecated_app">ZASTARALÁ: Táto verzia aplikácie už nie je podporovaná. Stiahnite si Pro verziu na https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Nezabudnite, že ak odinštalujete platenú verziu do 2 hodín, peniaze vám budú automaticky vrátené. Ak ich budete chcieť späť hocikedy neskôr, len nám dajte vedieť na hello@simplemobiletools.com. To vám zabezpečí jednoduchý spôsob na ich vyskúšanie :)</string>
+
+    <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
+    <string name="developer_description">Skupina jednoduchých, open source Android apiek s nastaviteľnými widgetmi, bez reklám a nepotrebných oprávnení.</string>
 </resources>

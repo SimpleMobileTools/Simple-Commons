@@ -237,9 +237,15 @@ class PropertiesDialog() {
             property_value.text = value
             mPropertyView.properties_holder.addView(this)
 
-            property_value.setOnLongClickListener {
+            setOnLongClickListener {
                 mActivity.copyToClipboard(property_value.value)
                 true
+            }
+
+            if (labelId == R.string.gps_coordinates) {
+                setOnClickListener {
+                    mActivity.showLocationOnMap(value)
+                }
             }
 
             if (viewId != 0) {

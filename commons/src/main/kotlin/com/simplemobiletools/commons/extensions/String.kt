@@ -251,6 +251,9 @@ fun String.trimToComparableNumber(): String {
     return normalizedNumber.substring(startIndex)
 }
 
+// get the contact names first letter at showing the placeholder without image
+fun String.getNameLetter() = normalizeString().toCharArray().getOrNull(0)?.toString()?.toUpperCase(Locale.getDefault()) ?: "S"
+
 fun String.getMimeType(): String {
     val typesMap = HashMap<String, String>().apply {
         put("323", "text/h323")

@@ -403,4 +403,9 @@ open class BaseConfig(val context: Context) {
     var fontSize: Int
         get() = prefs.getInt(FONT_SIZE, context.resources.getInteger(R.integer.default_font_size))
         set(size) = prefs.edit().putInt(FONT_SIZE, size).apply()
+
+    // notify the users about new SMS Messenger and Voice Recorder released
+    var wasMessengerRecorderShown: Boolean
+        get() = prefs.getBoolean(WAS_MESSENGER_RECORDER_SHOWN, false)
+        set(wasMessengerRecorderShown) = prefs.edit().putBoolean(WAS_MESSENGER_RECORDER_SHOWN, wasMessengerRecorderShown).apply()
 }

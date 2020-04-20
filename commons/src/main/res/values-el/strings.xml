@@ -33,6 +33,7 @@
     <string name="no_contacts_found">Δεν βρέθηκαν Επαφές</string>
     <string name="request_the_required_permissions">Ζητούνται τα απαιτούμενα δικαιώματα</string>
     <string name="no_access_to_contacts">Η εφαρμογή δεν έχει πρόσβαση στις επαφές σας</string>
+    <string name="insert_text_here">Εισαγωγή κειμένου εδώ</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Διαχείριση αποκλεισμένων αριθμών</string>
@@ -639,6 +640,7 @@
             Γειά σας,<br><br>
            απλά σας ενημερώνω ότι πρόσφατα κυκλοφόρησε μια νέα εφαρμογή:<br><br>
             <a href="%1$s">%2$s</a><br><br>
+            <a href="%3$s">%4$s</a><br><br>
             Μπορείτε να την κατεβάσετε πατώντας τον τίτλο.<br><br>
             Ευχαριστώ
         ]]>
@@ -710,4 +712,7 @@
     <!-- Google Play listing -->
     <string name="deprecated_app">ΚΑΤΑΡΓΗΣΗ: Αυτή η έκδοση της εφαρμογής δεν υποστηρίζεται πλέον, λάβετε την έκδοση Pro εδώ https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Μην ξεχνάτε οτι αν απεγκατασταθεί εντός 2 ωρών, θα επιστραφούν αυτόματα τα χρήματα σας. Αν θέλετε επιστροφή χρημάτων οποιαδήποτε στιγμή αργότερα, απλά επικοινωνήστε μαζί μας στο hello@simplemobiletools.com και θα τα λάβετε. Αυτό το κάνει εύκολότερο για να την δοκιμάσετε :)</string>
+
+    <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
+    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
 </resources>

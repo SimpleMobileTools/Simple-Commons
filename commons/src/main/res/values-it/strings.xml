@@ -33,6 +33,7 @@
     <string name="no_contacts_found">Nessun contatto trovato</string>
     <string name="request_the_required_permissions">Richiedi le permissioni necessarie</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
+    <string name="insert_text_here">Insert text here</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gestisci i numeri bloccati</string>
@@ -637,16 +638,17 @@
     <string name="new_app">
         <![CDATA[
             Ehi,<br><br>
-	    è uscita una nuova app di recente:<br><br>
+            è uscita una nuova app di recente:<br><br>
             <a href="%1$s">%2$s</a><br><br>
-	    Puoi scaricarla toccando il titolo.
+            <a href="%3$s">%4$s</a><br><br>
+            Puoi scaricarla toccando il titolo.
             Grazie
         ]]>
     </string>
 
     <string name="sideloaded_app">
         <![CDATA[
-	    Sembra che la propria versione sia corrotta. Scaricare la versione originale <a href="%s">qui</a>.
+        Sembra che la propria versione sia corrotta. Scaricare la versione originale <a href="%s">qui</a>.
         ]]>
     </string>
 
@@ -710,4 +712,7 @@
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATA: Questa versione dell\'app non è più supportata, ottieni la versione Pro a https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Non dimenticarti che se disinstalli qualsiasi app a pagamento entro le due ore dall\'acquisto, verrai automaticamente rimborsato. Se vuoi essere rimborsato quando vuoi dopo le due ore, puoi contattarci a hello@simplemobiletools.com. In questo modo puoi facilmente provare l\'app :)</string>
+
+    <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
+    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
 </resources>
