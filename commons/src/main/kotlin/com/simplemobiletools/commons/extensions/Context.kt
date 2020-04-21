@@ -719,7 +719,7 @@ val Context.windowManager: WindowManager get() = getSystemService(Context.WINDOW
 val Context.portrait get() = resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT
 val Context.navigationBarRight: Boolean get() = usableScreenSize.x < realScreenSize.x
 val Context.navigationBarBottom: Boolean get() = usableScreenSize.y < realScreenSize.y
-val Context.navigationBarHeight: Int get() = if (navigationBarBottom) navigationBarSize.y else 0
+val Context.navigationBarHeight: Int get() = if (navigationBarBottom && navigationBarHeight != usableScreenSize.y) navigationBarSize.y else 0
 val Context.navigationBarWidth: Int get() = if (navigationBarRight) navigationBarSize.x else 0
 
 val Context.navigationBarSize: Point
