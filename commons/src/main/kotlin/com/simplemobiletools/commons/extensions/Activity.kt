@@ -741,6 +741,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
             } else {
                 documentFile = getDocumentFile(targetFile.parentFile.parent)
                 documentFile = documentFile!!.createDirectory(targetFile.parentFile.name)
+                        ?: getDocumentFile(targetFile.parentFile.absolutePath)
             }
         }
 
@@ -750,9 +751,8 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
         }
 
         try {
-            val newDocument = documentFile.createFile(mimeType, path.getFilenameFromPath())
-            val newUri = newDocument?.uri ?: getDocumentFile(path)!!.uri
-            applicationContext.contentResolver.openOutputStream(newUri)
+            val newDocument = documentFile.createFile(mimeType, path.getFilenameFromPath()) ?: getDocumentFile(path)
+            applicationContext.contentResolver.openOutputStream(newDocument!!.uri)
         } catch (e: Exception) {
             showErrorToast(e)
             null
@@ -822,7 +822,7 @@ fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
 
     if (needsStupidWritePermissions(directory)) {
         val documentFile = getDocumentFile(directory.getParentPath()) ?: return false
-        val newDir = documentFile.createDirectory(directory.getFilenameFromPath())
+        val newDir = documentFile.createDirectory(directory.getFilenameFromPath()) ?: getDocumentFile(directory)
         return newDir != null
     }
 
