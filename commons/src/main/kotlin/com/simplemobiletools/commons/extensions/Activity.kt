@@ -363,7 +363,7 @@ fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: 
 }
 
 fun Activity.showLocationOnMap(coordinates: String) {
-    val uriBegin = "geo:$coordinates"
+    val uriBegin = "geo:${coordinates.replace(" ", "")}"
     val encodedQuery = Uri.encode(coordinates)
     val uriString = "$uriBegin?q=$encodedQuery&z=16"
     val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uriString))
