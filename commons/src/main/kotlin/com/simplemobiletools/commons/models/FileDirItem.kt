@@ -4,6 +4,7 @@ import android.content.Context
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import java.io.File
+import java.text.DateFormat
 
 open class FileDirItem(val path: String, val name: String = "", var isDirectory: Boolean = false, var children: Int = 0, var size: Long = 0L, var modified: Long = 0L) :
         Comparable<FileDirItem> {
@@ -48,9 +49,9 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
 
     fun getExtension() = if (isDirectory) name else path.substringAfterLast('.', "")
 
-    fun getBubbleText(context: Context) = when {
+    fun getBubbleText(context: Context, dateFormat: String? = null, timeFormat: String? = null) = when {
         sorting and SORT_BY_SIZE != 0 -> size.formatSize()
-        sorting and SORT_BY_DATE_MODIFIED != 0 -> modified.formatDate(context)
+        sorting and SORT_BY_DATE_MODIFIED != 0 -> modified.formatDate(context, dateFormat, timeFormat)
         sorting and SORT_BY_EXTENSION != 0 -> getExtension().toLowerCase()
         else -> name
     }
