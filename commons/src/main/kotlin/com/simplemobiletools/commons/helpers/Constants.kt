@@ -387,6 +387,7 @@ fun getFilePlaceholderDrawables(context: Context): HashMap<String, Drawable> {
         put("psd", R.drawable.ic_file_psd)
         put("rtf", R.drawable.ic_file_rtf)
         put("sesx", R.drawable.ic_file_sesx)
+        put("sql", R.drawable.ic_file_sql)
         put("svg", R.drawable.ic_file_svg)
         put("txt", R.drawable.ic_file_txt)
         put("vcf", R.drawable.ic_file_vcf)
