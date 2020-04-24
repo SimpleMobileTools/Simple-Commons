@@ -88,9 +88,9 @@ fun String.getGenericMimeType(): String {
 
 fun String.getParentPath() = removeSuffix("/${getFilenameFromPath()}")
 
-fun String.containsNoMedia() = File(this).containsNoMedia()
+fun String.containsNoMedia(context: Context) = File(this).containsNoMedia(context)
 
-fun String.doesThisOrParentHaveNoMedia() = File(this).doesThisOrParentHaveNoMedia()
+fun String.doesThisOrParentHaveNoMedia(context: Context) = File(this).doesThisOrParentHaveNoMedia(context)
 
 fun String.getDuration() = getFileDurationSeconds()?.getFormattedDuration()
 
