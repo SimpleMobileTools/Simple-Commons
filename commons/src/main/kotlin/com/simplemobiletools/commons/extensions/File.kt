@@ -81,7 +81,11 @@ fun File.containsNoMedia(context: Context): Boolean {
     return if (!isDirectory) {
         false
     } else if (context.isPathOnSD(absolutePath)) {
-        context.getFastDocumentFile("$absolutePath/$NOMEDIA")?.exists() ?: false
+        try {
+            context.getFastDocumentFile("$absolutePath/$NOMEDIA")?.exists() ?: false
+        } catch (e: Exception) {
+            false
+        }
     } else {
         File(this, NOMEDIA).exists()
     }
