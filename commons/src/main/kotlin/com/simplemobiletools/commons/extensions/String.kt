@@ -9,13 +9,9 @@ import android.os.StatFs
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.TextUtils
-import android.text.style.BackgroundColorSpan
 import android.text.style.ForegroundColorSpan
-import android.widget.TextView
-import androidx.core.graphics.ColorUtils
 import com.bumptech.glide.signature.ObjectKey
 import com.simplemobiletools.commons.helpers.*
-import com.simplemobiletools.commons.views.MyEditText
 import java.io.File
 import java.text.Normalizer
 import java.util.*
@@ -88,9 +84,9 @@ fun String.getGenericMimeType(): String {
 
 fun String.getParentPath() = removeSuffix("/${getFilenameFromPath()}")
 
-fun String.containsNoMedia(context: Context) = File(this).containsNoMedia(context)
+fun String.containsNoMedia() = File(this).containsNoMedia()
 
-fun String.doesThisOrParentHaveNoMedia(context: Context) = File(this).doesThisOrParentHaveNoMedia(context)
+fun String.doesThisOrParentHaveNoMedia() = File(this).doesThisOrParentHaveNoMedia()
 
 fun String.getDuration() = getFileDurationSeconds()?.getFormattedDuration()
 
