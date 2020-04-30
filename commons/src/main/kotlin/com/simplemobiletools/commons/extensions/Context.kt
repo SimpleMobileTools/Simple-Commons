@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.extensions
 import android.Manifest
 import android.annotation.TargetApi
 import android.app.Activity
+import android.app.NotificationManager
 import android.app.role.RoleManager
 import android.content.*
 import android.content.pm.PackageManager
@@ -73,21 +74,21 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
 
     val cnt = viewGroup.childCount
     (0 until cnt).map { viewGroup.getChildAt(it) }
-            .forEach {
-                when (it) {
-                    is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyAppCompatSpinner -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyEditText -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyAutoCompleteTextView -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyButton -> it.setColors(textColor, accentColor, backgroundColor)
-                    is ViewGroup -> updateTextColors(it, textColor, accentColor)
-                }
+        .forEach {
+            when (it) {
+                is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyAppCompatSpinner -> it.setColors(textColor, accentColor, backgroundColor)
+                is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyEditText -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyAutoCompleteTextView -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
+                is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyButton -> it.setColors(textColor, accentColor, backgroundColor)
+                is ViewGroup -> updateTextColors(it, textColor, accentColor)
             }
+        }
 }
 
 fun Context.getLinkTextColor(): Int {
@@ -152,7 +153,7 @@ fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHa
 
 fun Context.getLatestMediaId(uri: Uri = Files.getContentUri("external")): Long {
     val projection = arrayOf(
-            BaseColumns._ID
+        BaseColumns._ID
     )
     val sortOrder = "${BaseColumns._ID} DESC LIMIT 1"
     try {
@@ -169,7 +170,7 @@ fun Context.getLatestMediaId(uri: Uri = Files.getContentUri("external")): Long {
 
 fun Context.getLatestMediaByDateId(uri: Uri = Files.getContentUri("external")): Long {
     val projection = arrayOf(
-            BaseColumns._ID
+        BaseColumns._ID
     )
     val sortOrder = "${Images.ImageColumns.DATE_TAKEN} DESC LIMIT 1"
     try {
@@ -316,13 +317,13 @@ fun Context.getMediaContent(path: String, uri: Uri): Uri? {
 }
 
 fun Context.queryCursor(
-        uri: Uri,
-        projection: Array<String>,
-        selection: String? = null,
-        selectionArgs: Array<String>? = null,
-        sortOrder: String? = null,
-        showErrors: Boolean = false,
-        callback: (cursor: Cursor) -> Unit
+    uri: Uri,
+    projection: Array<String>,
+    selection: String? = null,
+    selectionArgs: Array<String>? = null,
+    sortOrder: String? = null,
+    showErrors: Boolean = false,
+    callback: (cursor: Cursor) -> Unit
 ) {
     try {
         val cursor = contentResolver.query(uri, projection, selection, selectionArgs, sortOrder)
@@ -718,6 +719,7 @@ fun Context.getTextSize() = when (baseConfig.fontSize) {
 
 val Context.telecomManager: TelecomManager get() = getSystemService(Context.TELECOM_SERVICE) as TelecomManager
 val Context.windowManager: WindowManager get() = getSystemService(Context.WINDOW_SERVICE) as WindowManager
+val Context.notificationManager: NotificationManager get() = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 val Context.portrait get() = resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT
 val Context.navigationBarRight: Boolean get() = usableScreenSize.x < realScreenSize.x
 val Context.navigationBarBottom: Boolean get() = usableScreenSize.y < realScreenSize.y
@@ -796,9 +798,9 @@ fun Context.getBlockedNumbers(): ArrayList<BlockedNumber> {
 
     val uri = BlockedNumbers.CONTENT_URI
     val projection = arrayOf(
-            BlockedNumbers.COLUMN_ID,
-            BlockedNumbers.COLUMN_ORIGINAL_NUMBER,
-            BlockedNumbers.COLUMN_E164_NUMBER
+        BlockedNumbers.COLUMN_ID,
+        BlockedNumbers.COLUMN_ORIGINAL_NUMBER,
+        BlockedNumbers.COLUMN_E164_NUMBER
     )
 
     queryCursor(uri, projection) { cursor ->
