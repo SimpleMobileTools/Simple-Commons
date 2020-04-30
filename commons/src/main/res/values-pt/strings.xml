@@ -32,8 +32,8 @@
     <string name="number">Número</string>
     <string name="no_contacts_found">Não existem contactos</string>
     <string name="request_the_required_permissions">Pedir permissão necessária</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
-    <string name="insert_text_here">Insert text here</string>
+    <string name="no_access_to_contacts">Não foi possível aceder aos contactos</string>
+    <string name="insert_text_here">Introduza aqui o texto</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gerir números bloqueados</string>
@@ -707,12 +707,12 @@
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letras na barra de deslocação)</string>
     <string name="event_bus_title">Event Bus (comunicação entre aplicações)</string>
     <string name="audio_record_view_title">Audio Record View (visualização de áudio)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="sms_mms_title">SMS MMS (gestão de SMS e MMS)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">AVISO: Esta versão da aplicação já não está a ser desenvolvida. Pode obter a versão Pro em https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Não se esqueça de desinstalar qualquer aplicação paga no prazo de 2 horas para ser reembolsado automaticamente. Para ser reembolsado posteriormente, contacte-nos para hello@simplemobiletools.com. Assim é mais fácil testar :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Um grupo de aplicações simples, open source, para Android com widgets personalizados, sem anúncios nem permissões desnecessárias.</string>
 </resources>
