@@ -22,6 +22,7 @@ import android.os.Handler
 import android.os.Looper
 import android.provider.BaseColumns
 import android.provider.BlockedNumberContract.BlockedNumbers
+import android.provider.ContactsContract
 import android.provider.DocumentsContract
 import android.provider.MediaStore.*
 import android.provider.OpenableColumns
@@ -870,4 +871,52 @@ fun Context.getColoredGroupIcon(title: String): Drawable {
     val bgColor = letterBackgroundColors[Math.abs(title.hashCode()) % letterBackgroundColors.size].toInt()
     (icon as LayerDrawable).findDrawableByLayerId(R.id.attendee_circular_background).applyColorFilter(bgColor)
     return icon
+}
+
+fun Context.getNameFromPhoneNumber(number: String): String {
+    if (!hasPermission(PERMISSION_READ_CONTACTS)) {
+        return number
+    }
+
+    val uri = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode(number))
+    val projection = arrayOf(
+        ContactsContract.PhoneLookup.DISPLAY_NAME
+    )
+
+    try {
+        val cursor = contentResolver.query(uri, projection, null, null, null)
+        cursor.use {
+            if (cursor?.moveToFirst() == true) {
+                return cursor.getStringValue(ContactsContract.PhoneLookup.DISPLAY_NAME)
+            }
+        }
+    } catch (e: Exception) {
+        showErrorToast(e)
+    }
+
+    return number
+}
+
+fun Context.getPhotoUriFromPhoneNumber(number: String): String {
+    if (!hasPermission(PERMISSION_READ_CONTACTS)) {
+        return ""
+    }
+
+    val uri = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode(number))
+    val projection = arrayOf(
+        ContactsContract.PhoneLookup.PHOTO_URI
+    )
+
+    try {
+        val cursor = contentResolver.query(uri, projection, null, null, null)
+        cursor.use {
+            if (cursor?.moveToFirst() == true) {
+                return cursor.getStringValue(ContactsContract.PhoneLookup.PHOTO_URI) ?: ""
+            }
+        }
+    } catch (e: Exception) {
+        showErrorToast(e)
+    }
+
+    return ""
 }
