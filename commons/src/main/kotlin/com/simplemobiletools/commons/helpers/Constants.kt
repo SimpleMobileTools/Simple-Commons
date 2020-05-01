@@ -221,6 +221,7 @@ const val PERMISSION_WRITE_CALL_LOG = 11
 const val PERMISSION_GET_ACCOUNTS = 12
 const val PERMISSION_READ_SMS = 13
 const val PERMISSION_SEND_SMS = 14
+const val PERMISSION_READ_PHONE_STATE = 15
 
 // conflict resolving
 const val CONFLICT_SKIP = 1
