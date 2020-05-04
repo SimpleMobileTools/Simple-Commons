@@ -90,9 +90,9 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
 
     fun getParentPath() = path.getParentPath()
 
-    fun getDuration() = path.getDuration()
+    fun getDuration(context: Context) = context.getVideoDuration(path)?.getFormattedDuration()
 
-    fun getFileDurationSeconds() = path.getFileDurationSeconds()
+    fun getFileDurationSeconds(context: Context) = context.getVideoDuration(path)
 
     fun getArtist() = path.getFileArtist()
 

@@ -88,20 +88,6 @@ fun String.containsNoMedia() = File(this).containsNoMedia()
 
 fun String.doesThisOrParentHaveNoMedia() = File(this).doesThisOrParentHaveNoMedia()
 
-fun String.getDuration() = getFileDurationSeconds()?.getFormattedDuration()
-
-fun String.getFileDurationSeconds(): Int? {
-    return try {
-        val retriever = MediaMetadataRetriever()
-        retriever.setDataSource(this)
-        val time = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)
-        val timeInMs = java.lang.Long.parseLong(time)
-        (timeInMs / 1000).toInt()
-    } catch (e: Exception) {
-        null
-    }
-}
-
 fun String.getFileArtist(): String? {
     return try {
         val retriever = MediaMetadataRetriever()

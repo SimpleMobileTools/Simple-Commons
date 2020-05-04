@@ -703,6 +703,35 @@ fun Context.getVideoResolution(path: String): Point? {
     return point
 }
 
+fun Context.getVideoDuration(path: String): Int? {
+    val projection = arrayOf(
+        Video.Media.DURATION
+    )
+
+    val uri = Files.getContentUri("external")
+    val selection = "${Video.Media.DATA} = ?"
+    val selectionArgs = arrayOf(path)
+
+    try {
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return Math.round(cursor.getIntValue(Video.Media.DURATION) / 1000.toDouble()).toInt()
+            }
+        }
+    } catch (ignored: Exception) {
+    }
+
+    try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(path)
+        return Math.round(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION).toInt() / 1000f)
+    } catch (ignored: Exception) {
+    }
+
+    return null
+}
+
 fun Context.getStringsPackageName() = getString(R.string.package_name)
 
 fun Context.getFontSizeText() = getString(when (baseConfig.fontSize) {
