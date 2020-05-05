@@ -4,7 +4,6 @@ import android.content.Context
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import java.io.File
-import java.text.DateFormat
 
 open class FileDirItem(val path: String, val name: String = "", var isDirectory: Boolean = false, var children: Int = 0, var size: Long = 0L, var modified: Long = 0L) :
         Comparable<FileDirItem> {
@@ -90,9 +89,9 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
 
     fun getParentPath() = path.getParentPath()
 
-    fun getDuration(context: Context) = context.getVideoDuration(path)?.getFormattedDuration()
+    fun getDuration(context: Context) = context.getDuration(path)?.getFormattedDuration()
 
-    fun getFileDurationSeconds(context: Context) = context.getVideoDuration(path)
+    fun getFileDurationSeconds(context: Context) = context.getDuration(path)
 
     fun getArtist() = path.getFileArtist()
 
