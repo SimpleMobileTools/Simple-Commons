@@ -1,5 +1,5 @@
 <resources>
-    <string name="ok">حسنا</string>
+    <string name="ok">موافق</string>
     <string name="cancel">إلغاء</string>
     <string name="save_as">حفظ كـ</string>
     <string name="file_saved">تم حفظ الملف بنجاح</string>
@@ -26,14 +26,14 @@
     <string name="download">تنزيل</string>
     <string name="notification">الإشعارات</string>
     <string name="email">البريد الإلكتروني</string>
-    <string name="previous">Previous</string>
-    <string name="playpause">Play / Pause</string>
-    <string name="next">Next</string>
+    <string name="previous">السابق</string>
+    <string name="playpause">تشغيل / إيقاف مؤقت</string>
+    <string name="next">التالى</string>
     <string name="number">رقم</string>
     <string name="no_contacts_found">لم يتم العثور على جهات اتصال</string>
     <string name="request_the_required_permissions">طلب الأذونات المطلوبة</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
-    <string name="insert_text_here">Insert text here</string>
+    <string name="no_access_to_contacts">يتعذر على التطبيق الوصول إلى جهات الاتصال الخاصة بك</string>
+    <string name="insert_text_here">إدراج النص هنا</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">إدارة الأرقام المحظورة</string>
@@ -44,7 +44,7 @@
     <string name="blocked_numbers">أرقام محظورة</string>
     <string name="must_make_default_dialer">عليك أن تجعل هذا التطبيق المتصل الإفتراضي للإستفادة من الأرقام المحظورة.</string>
     <string name="set_as_default">ضبط الى الافتراضي</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
+    <string name="block_confirmation">هل تريد بالتأكيد حظر \"%s\"؟</string>
 
     <!-- Favorites -->
     <string name="favorites">المفضلة</string>
@@ -598,9 +598,9 @@
     <string name="about">حول</string>
     <string name="website_label">للحصول علي أكواد المصدر، تفضل بزيارة</string>
     <string name="email_label">أرسل ملاحظاتك أو اقتراحاتك إلى</string>
-    <string name="upgrade_to_pro">الترقية إلى Pro</string>
+    <string name="upgrade_to_pro">االترقية إلى الإصدار البرو (Pro)</string>
     <string name="more_apps_underlined"><u>المزيد من التطبيقات</u></string>
-    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
+    <string name="more_apps_from_us_underlined"><u>المزيد من تطبيقاتنا</u></string>
     <string name="third_party_licences_underlined"><u>تراخيص الجهات الخارجية</u></string>
     <string name="invite_friends_underlined"><u>دعوة الأصدقاء</u></string>
     <string name="share_text">مهلاً, تعال تحقق من %1$s فى %2$s</string>
@@ -624,13 +624,13 @@
     <string name="purchase">شراء</string>
     <string name="update_thank_you">يرجى تحديث تطبيق (Simple Thank You) إلى أحدث إصدار</string>
     <string name="before_asking_question_read_faq">قبل ان تسأل سؤالاً ، يرجى التحقق من إعدادات التطبيق وقراءة الأسئلة المتداولة أولاً. ربما يكون الحل موجوداً.</string>
-    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
+    <string name="before_rate_read_faq">قبل أن تقيمنا ، يرجى التحقق من إعدادات التطبيق وقراءة الأسئلة الشائعة أولاً. إذا كان لديك أي مشاكل ، فربما يكون الحل موجوداً.</string>
     <string name="make_sure_latest">تأكد أيضاً من أنك تستخدم أحدث إصدار من التطبيق.</string>
     <string name="read_it">اقرأها</string>
-    <string name="read_faq">Read FAQ</string>
+    <string name="read_faq">إقرأ الأسئلة المتداولة</string>
     <string name="rate_us_prompt">مرحباً,\n\nيبدو أنك تستخدم هذا التطبيق لفترة طويلة بالفعل, ونحن نقدر ذلك حقاً.\n\nإذا استطعنا أن نطلب منك خدمة, فيرجى تقييمنا على Google Play. هذا سيساعدنا كثيراً \n\nوبغض النظر عن قرارك, لن تري هذه الرسالة مره أخري.\n\nشكراً!</string>
-    <string name="rate_our_app">Rate our app please :)</string>
-    <string name="thank_you">Thank you</string>
+    <string name="rate_our_app">قيم تطبيقنا من فضلك :)</string>
+    <string name="thank_you">شكراً جزيلاً</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -697,15 +697,15 @@
     <string name="sanselan_title">أباتشي سانسيلان (قراءة البيانات الوصفية للصور)</string>
     <string name="filters_title">فلاتر الصور</string>
     <string name="gesture_views_title">الصور القابلة للتكبير</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="indicator_fast_scroll_title">التمرير السريع للمؤشر (الحروف على شريط التمرير)</string>
+    <string name="event_bus_title">ناقل الحدث (التواصل داخل التطبيق)</string>
+    <string name="audio_record_view_title">عرض سجل الصوت (التصور الصوتي)</string>
+    <string name="sms_mms_title">SMS MMS (معالجة الرسائل القصيرة ورسائل الوسائط المتعددة)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">لم يعد يجري العمل عليه: لم يعد هذا الإصدار من التطبيق يجري العمل عليه، قم بالحصول على الإصدار الـ Pro على https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">لا تنسى أنه إذا قمت بإلغاء تثبيت أي تطبيق مدفوع في غضون ساعتين ، فسيتم إسترداد أموالك تلقائياً. إذا كنت تريد إسترداد الأموال في أي وقت لاحق ، فأتصل بنا على hello@simplemobiletools.com وستحصل عليه. هذا يجعل من السهل تجربته :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">مجموعة بسيطة، من تطبيقات أندرويد المفتوحة المصدر ذات الودجات القابلة للتخصيص، بدون إعلانات أو أذونات غير ضرورية.</string>
 </resources>
