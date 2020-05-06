@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory
 import android.graphics.Point
 import android.os.StatFs
 import android.provider.MediaStore
+import android.telephony.PhoneNumberUtils
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.TextUtils
@@ -205,6 +206,8 @@ fun String.trimToComparableNumber(): String {
 
 // get the contact names first letter at showing the placeholder without image
 fun String.getNameLetter() = normalizeString().toCharArray().getOrNull(0)?.toString()?.toUpperCase(Locale.getDefault()) ?: "A"
+
+fun String.normalizePhoneNumber() = PhoneNumberUtils.normalizeNumber(this)
 
 fun String.getMimeType(): String {
     val typesMap = HashMap<String, String>().apply {
