@@ -60,7 +60,11 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
         return if (context.isPathOnOTG(path)) {
             context.getDocumentFile(path)?.getItemSize(countHidden) ?: 0
         } else if (isNougatPlus() && path.startsWith("content://")) {
-            context.contentResolver.openInputStream(Uri.parse(path))?.available()?.toLong() ?: 0L
+            try {
+                context.contentResolver.openInputStream(Uri.parse(path))?.available()?.toLong() ?: 0L
+            } catch (e: Exception) {
+                0L
+            }
         } else {
             File(path).getProperSize(countHidden)
         }

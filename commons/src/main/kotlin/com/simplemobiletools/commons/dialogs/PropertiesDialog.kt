@@ -81,7 +81,11 @@ class PropertiesDialog() {
                 val exif = if (isNougatPlus() && activity.isPathOnOTG(fileDirItem.path)) {
                     ExifInterface((activity as BaseSimpleActivity).getFileInputStreamSync(fileDirItem.path)!!)
                 } else if (isNougatPlus() && fileDirItem.path.startsWith("content://")) {
-                    ExifInterface(activity.contentResolver.openInputStream(Uri.parse(fileDirItem.path)))
+                    try {
+                        ExifInterface(activity.contentResolver.openInputStream(Uri.parse(fileDirItem.path)))
+                    } catch (e: Exception) {
+                        return@ensureBackgroundThread
+                    }
                 } else {
                     ExifInterface(fileDirItem.path)
                 }
@@ -199,7 +203,11 @@ class PropertiesDialog() {
         val exif = if (isNougatPlus() && activity.isPathOnOTG(path)) {
             ExifInterface((activity as BaseSimpleActivity).getFileInputStreamSync(path)!!)
         } else if (isNougatPlus() && path.startsWith("content://")) {
-            ExifInterface(activity.contentResolver.openInputStream(Uri.parse(path)))
+            try {
+                ExifInterface(activity.contentResolver.openInputStream(Uri.parse(path)))
+            } catch (e: Exception) {
+                return
+            }
         } else {
             ExifInterface(path)
         }
