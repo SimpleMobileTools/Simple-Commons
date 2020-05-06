@@ -112,7 +112,7 @@ class PropertiesDialog() {
             }
             fileDirItem.path.isAudioSlow() -> {
                 fileDirItem.getDuration(activity)?.let { addProperty(R.string.duration, it) }
-                fileDirItem.getSongTitle()?.let { addProperty(R.string.song_title, it) }
+                fileDirItem.getTitle(activity)?.let { addProperty(R.string.song_title, it) }
                 fileDirItem.getArtist()?.let { addProperty(R.string.artist, it) }
                 fileDirItem.getAlbum()?.let { addProperty(R.string.album, it) }
             }

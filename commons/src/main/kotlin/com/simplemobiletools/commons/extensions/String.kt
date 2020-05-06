@@ -109,16 +109,6 @@ fun String.getFileAlbum(): String? {
     }
 }
 
-fun String.getFileSongTitle(): String? {
-    return try {
-        val retriever = MediaMetadataRetriever()
-        retriever.setDataSource(this)
-        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE)
-    } catch (ignored: Exception) {
-        null
-    }
-}
-
 fun String.getImageResolution(): Point? {
     val options = BitmapFactory.Options()
     options.inJustDecodeBounds = true

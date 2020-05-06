@@ -722,14 +722,41 @@ fun Context.getDuration(path: String): Int? {
     } catch (ignored: Exception) {
     }
 
-    try {
+    return try {
         val retriever = MediaMetadataRetriever()
         retriever.setDataSource(path)
-        return Math.round(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION).toInt() / 1000f)
+        Math.round(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION).toInt() / 1000f)
+    } catch (ignored: Exception) {
+        null
+    }
+}
+
+fun Context.getTitle(path: String): String? {
+    val projection = arrayOf(
+        MediaColumns.TITLE
+    )
+
+    val uri = getFileUri(path)
+    val selection = if (path.startsWith("content://")) "${BaseColumns._ID} = ?" else "${MediaColumns.DATA} = ?"
+    val selectionArgs = if (path.startsWith("content://")) arrayOf(path.substringAfterLast("/")) else arrayOf(path)
+
+    try {
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getStringValue(MediaColumns.TITLE)
+            }
+        }
     } catch (ignored: Exception) {
     }
 
-    return null
+    return try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(path)
+        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE)
+    } catch (ignored: Exception) {
+        null
+    }
 }
 
 fun Context.getStringsPackageName() = getString(R.string.package_name)

@@ -121,7 +121,7 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
 
     fun getAlbum() = path.getFileAlbum()
 
-    fun getSongTitle() = path.getFileSongTitle()
+    fun getTitle(context: Context) = context.getTitle(path)
 
     fun getResolution(context: Context) = context.getResolution(path)
 
