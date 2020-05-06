@@ -117,7 +117,7 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
 
     fun getFileDurationSeconds(context: Context) = context.getDuration(path)
 
-    fun getArtist() = path.getFileArtist()
+    fun getArtist(context: Context) = context.getArtist(path)
 
     fun getAlbum() = path.getFileAlbum()
 
