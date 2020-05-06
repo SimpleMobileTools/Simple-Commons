@@ -705,18 +705,18 @@ fun Context.getVideoResolution(path: String): Point? {
 
 fun Context.getDuration(path: String): Int? {
     val projection = arrayOf(
-        Video.Media.DURATION
+        MediaColumns.DURATION
     )
 
-    val uri = Files.getContentUri("external")
-    val selection = "${Video.Media.DATA} = ?"
-    val selectionArgs = arrayOf(path)
+    val uri = getFileUri(path)
+    val selection = if (path.startsWith("content://")) "${BaseColumns._ID} = ?" else "${MediaColumns.DATA} = ?"
+    val selectionArgs = if (path.startsWith("content://")) arrayOf(path.substringAfterLast("/")) else arrayOf(path)
 
     try {
         val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
         cursor?.use {
             if (cursor.moveToFirst()) {
-                return Math.round(cursor.getIntValue(Video.Media.DURATION) / 1000.toDouble()).toInt()
+                return Math.round(cursor.getIntValue(MediaColumns.DURATION) / 1000.toDouble()).toInt()
             }
         }
     } catch (ignored: Exception) {
