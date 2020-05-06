@@ -2,8 +2,6 @@ package com.simplemobiletools.commons.models
 
 import android.content.Context
 import android.net.Uri
-import android.provider.BaseColumns
-import android.provider.MediaStore
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import java.io.File
@@ -85,29 +83,12 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
     }
 
     fun getLastModified(context: Context): Long {
-        if (context.isPathOnOTG(path)) {
-            return context.getFastDocumentFile(path)?.lastModified() ?: 0L
+        return if (context.isPathOnOTG(path)) {
+            context.getFastDocumentFile(path)?.lastModified() ?: 0L
         } else if (isNougatPlus() && path.startsWith("content://")) {
-            val projection = arrayOf(
-                MediaStore.MediaColumns.DATE_MODIFIED
-            )
-
-            val uri = context.getFileUri(path)
-            val selection = "${BaseColumns._ID} = ?"
-            val selectionArgs = arrayOf(path.substringAfterLast("/"))
-
-            try {
-                val cursor = context.contentResolver.query(uri, projection, selection, selectionArgs, null)
-                cursor?.use {
-                    if (cursor.moveToFirst()) {
-                        return cursor.getLongValue(MediaStore.MediaColumns.DATE_MODIFIED) * 1000
-                    }
-                }
-            } catch (ignored: Exception) {
-            }
-            return 0
+            context.getMediaStoreLastModified(path)
         } else {
-            return File(path).lastModified()
+            File(path).lastModified()
         }
     }
 

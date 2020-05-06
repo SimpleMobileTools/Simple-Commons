@@ -815,6 +815,27 @@ fun Context.getAlbum(path: String): String? {
     }
 }
 
+fun Context.getMediaStoreLastModified(path: String): Long {
+    val projection = arrayOf(
+        MediaColumns.DATE_MODIFIED
+    )
+
+    val uri = getFileUri(path)
+    val selection = "${BaseColumns._ID} = ?"
+    val selectionArgs = arrayOf(path.substringAfterLast("/"))
+
+    try {
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getLongValue(MediaColumns.DATE_MODIFIED) * 1000
+            }
+        }
+    } catch (ignored: Exception) {
+    }
+    return 0
+}
+
 fun Context.getStringsPackageName() = getString(R.string.package_name)
 
 fun Context.getFontSizeText() = getString(when (baseConfig.fontSize) {
