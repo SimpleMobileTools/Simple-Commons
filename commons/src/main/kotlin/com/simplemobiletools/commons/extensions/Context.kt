@@ -787,6 +787,34 @@ fun Context.getArtist(path: String): String? {
     }
 }
 
+fun Context.getAlbum(path: String): String? {
+    val projection = arrayOf(
+        Audio.Media.ALBUM
+    )
+
+    val uri = getFileUri(path)
+    val selection = if (path.startsWith("content://")) "${BaseColumns._ID} = ?" else "${MediaColumns.DATA} = ?"
+    val selectionArgs = if (path.startsWith("content://")) arrayOf(path.substringAfterLast("/")) else arrayOf(path)
+
+    try {
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getStringValue(Audio.Media.ALBUM)
+            }
+        }
+    } catch (ignored: Exception) {
+    }
+
+    return try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(path)
+        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUM)
+    } catch (ignored: Exception) {
+        null
+    }
+}
+
 fun Context.getStringsPackageName() = getString(R.string.package_name)
 
 fun Context.getFontSizeText() = getString(when (baseConfig.fontSize) {

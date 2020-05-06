@@ -119,7 +119,7 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
 
     fun getArtist(context: Context) = context.getArtist(path)
 
-    fun getAlbum() = path.getFileAlbum()
+    fun getAlbum(context: Context) = context.getAlbum(path)
 
     fun getTitle(context: Context) = context.getTitle(path)
 

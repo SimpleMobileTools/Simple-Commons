@@ -114,13 +114,13 @@ class PropertiesDialog() {
                 fileDirItem.getDuration(activity)?.let { addProperty(R.string.duration, it) }
                 fileDirItem.getTitle(activity)?.let { addProperty(R.string.song_title, it) }
                 fileDirItem.getArtist(activity)?.let { addProperty(R.string.artist, it) }
-                fileDirItem.getAlbum()?.let { addProperty(R.string.album, it) }
+                fileDirItem.getAlbum(activity)?.let { addProperty(R.string.album, it) }
             }
             fileDirItem.path.isVideoSlow() -> {
                 fileDirItem.getDuration(activity)?.let { addProperty(R.string.duration, it) }
                 fileDirItem.getResolution(activity)?.let { addProperty(R.string.resolution, it.formatAsResolution()) }
                 fileDirItem.getArtist(activity)?.let { addProperty(R.string.artist, it) }
-                fileDirItem.getAlbum()?.let { addProperty(R.string.album, it) }
+                fileDirItem.getAlbum(activity)?.let { addProperty(R.string.album, it) }
             }
         }
 
