@@ -1,6 +1,9 @@
 package com.simplemobiletools.commons.models
 
 import android.content.Context
+import android.net.Uri
+import android.provider.BaseColumns
+import android.provider.MediaStore
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import java.io.File
@@ -58,6 +61,8 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
     fun getProperSize(context: Context, countHidden: Boolean): Long {
         return if (context.isPathOnOTG(path)) {
             context.getDocumentFile(path)?.getItemSize(countHidden) ?: 0
+        } else if (isNougatPlus() && path.startsWith("content://")) {
+            context.contentResolver.openInputStream(Uri.parse(path))?.available()?.toLong() ?: 0L
         } else {
             File(path).getProperSize(countHidden)
         }
@@ -80,10 +85,29 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
     }
 
     fun getLastModified(context: Context): Long {
-        return if (context.isPathOnOTG(path)) {
-            context.getFastDocumentFile(path)?.lastModified() ?: 0L
+        if (context.isPathOnOTG(path)) {
+            return context.getFastDocumentFile(path)?.lastModified() ?: 0L
+        } else if (isNougatPlus() && path.startsWith("content://")) {
+            val projection = arrayOf(
+                MediaStore.MediaColumns.DATE_MODIFIED
+            )
+
+            val uri = context.getFileUri(path)
+            val selection = "${BaseColumns._ID} = ?"
+            val selectionArgs = arrayOf(path.substringAfterLast("/"))
+
+            try {
+                val cursor = context.contentResolver.query(uri, projection, selection, selectionArgs, null)
+                cursor?.use {
+                    if (cursor.moveToFirst()) {
+                        return cursor.getLongValue(MediaStore.MediaColumns.DATE_MODIFIED) * 1000
+                    }
+                }
+            } catch (ignored: Exception) {
+            }
+            return 0
         } else {
-            File(path).lastModified()
+            return File(path).lastModified()
         }
     }
 

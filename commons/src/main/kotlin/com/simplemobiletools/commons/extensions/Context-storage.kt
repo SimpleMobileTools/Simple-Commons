@@ -295,6 +295,7 @@ fun getPaths(file: File): ArrayList<String> {
 fun Context.getFileUri(path: String) = when {
     path.isImageSlow() -> Images.Media.EXTERNAL_CONTENT_URI
     path.isVideoSlow() -> Video.Media.EXTERNAL_CONTENT_URI
+    path.isAudioSlow() -> Audio.Media.EXTERNAL_CONTENT_URI
     else -> Files.getContentUri("external")
 }
 
