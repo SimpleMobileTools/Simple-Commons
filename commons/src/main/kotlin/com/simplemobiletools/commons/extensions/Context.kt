@@ -9,7 +9,8 @@ import android.content.*
 import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.database.Cursor
-import android.graphics.*
+import android.graphics.Color
+import android.graphics.Point
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
 import android.media.ExifInterface
@@ -22,7 +23,6 @@ import android.os.Handler
 import android.os.Looper
 import android.provider.BaseColumns
 import android.provider.BlockedNumberContract.BlockedNumbers
-import android.provider.ContactsContract
 import android.provider.DocumentsContract
 import android.provider.MediaStore.*
 import android.provider.OpenableColumns
@@ -31,7 +31,6 @@ import android.telephony.PhoneNumberUtils
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
-import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
@@ -968,41 +967,4 @@ fun Context.deleteBlockedNumber(number: String) {
     val selection = "${BlockedNumbers.COLUMN_ORIGINAL_NUMBER} = ?"
     val selectionArgs = arrayOf(number)
     contentResolver.delete(BlockedNumbers.CONTENT_URI, selection, selectionArgs)
-}
-
-fun Context.getContactLetterIcon(name: String): Bitmap {
-    val letter = name.getNameLetter()
-    val size = resources.getDimension(R.dimen.normal_icon_size).toInt()
-    val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
-    val canvas = Canvas(bitmap)
-    val view = TextView(this)
-    view.layout(0, 0, size, size)
-
-    val circlePaint = Paint().apply {
-        color = letterBackgroundColors[Math.abs(name.hashCode()) % letterBackgroundColors.size].toInt()
-        isAntiAlias = true
-    }
-
-    val wantedTextSize = size / 2f
-    val textPaint = Paint().apply {
-        color = circlePaint.color.getContrastColor()
-        isAntiAlias = true
-        textAlign = Paint.Align.CENTER
-        textSize = wantedTextSize
-    }
-
-    canvas.drawCircle(size / 2f, size / 2f, size / 2f, circlePaint)
-
-    val xPos = canvas.width / 2f
-    val yPos = canvas.height / 2 - (textPaint.descent() + textPaint.ascent()) / 2
-    canvas.drawText(letter, xPos, yPos, textPaint)
-    view.draw(canvas)
-    return bitmap
-}
-
-fun Context.getColoredGroupIcon(title: String): Drawable {
-    val icon = resources.getDrawable(R.drawable.ic_group_circle_bg)
-    val bgColor = letterBackgroundColors[Math.abs(title.hashCode()) % letterBackgroundColors.size].toInt()
-    (icon as LayerDrawable).findDrawableByLayerId(R.id.attendee_circular_background).applyColorFilter(bgColor)
-    return icon
 }

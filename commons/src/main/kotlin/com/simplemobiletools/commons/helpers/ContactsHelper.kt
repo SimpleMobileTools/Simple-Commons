@@ -1,6 +1,12 @@
 package com.simplemobiletools.commons.helpers
 
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Paint
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Drawable
+import android.graphics.drawable.LayerDrawable
 import android.net.Uri
 import android.provider.ContactsContract
 import android.provider.ContactsContract.CommonDataKinds
@@ -8,6 +14,13 @@ import android.provider.ContactsContract.CommonDataKinds.Organization
 import android.provider.ContactsContract.CommonDataKinds.StructuredName
 import android.provider.ContactsContract.PhoneLookup
 import android.text.TextUtils
+import android.widget.ImageView
+import android.widget.TextView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.request.RequestOptions
+import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.SimpleContact
 
@@ -161,5 +174,59 @@ class ContactsHelper(val context: Context) {
         }
 
         return ""
+    }
+
+    fun loadContactImage(path: String, imageView: ImageView, placeholderName: String, placeholderImage: Drawable? = null) {
+        val placeholder = placeholderImage ?: BitmapDrawable(context.resources, getContactLetterIcon(placeholderName))
+
+        val options = RequestOptions()
+            .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+            .error(placeholder)
+            .centerCrop()
+
+        Glide.with(context)
+            .load(path)
+            .transition(DrawableTransitionOptions.withCrossFade())
+            .placeholder(placeholder)
+            .apply(options)
+            .apply(RequestOptions.circleCropTransform())
+            .into(imageView)
+    }
+
+    fun getContactLetterIcon(name: String): Bitmap {
+        val letter = name.getNameLetter()
+        val size = context.resources.getDimension(R.dimen.normal_icon_size).toInt()
+        val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        val view = TextView(context)
+        view.layout(0, 0, size, size)
+
+        val circlePaint = Paint().apply {
+            color = letterBackgroundColors[Math.abs(name.hashCode()) % letterBackgroundColors.size].toInt()
+            isAntiAlias = true
+        }
+
+        val wantedTextSize = size / 2f
+        val textPaint = Paint().apply {
+            color = circlePaint.color.getContrastColor()
+            isAntiAlias = true
+            textAlign = Paint.Align.CENTER
+            textSize = wantedTextSize
+        }
+
+        canvas.drawCircle(size / 2f, size / 2f, size / 2f, circlePaint)
+
+        val xPos = canvas.width / 2f
+        val yPos = canvas.height / 2 - (textPaint.descent() + textPaint.ascent()) / 2
+        canvas.drawText(letter, xPos, yPos, textPaint)
+        view.draw(canvas)
+        return bitmap
+    }
+
+    fun getColoredGroupIcon(title: String): Drawable {
+        val icon = context.resources.getDrawable(R.drawable.ic_group_circle_bg)
+        val bgColor = letterBackgroundColors[Math.abs(title.hashCode()) % letterBackgroundColors.size].toInt()
+        (icon as LayerDrawable).findDrawableByLayerId(R.id.attendee_circular_background).applyColorFilter(bgColor)
+        return icon
     }
 }
