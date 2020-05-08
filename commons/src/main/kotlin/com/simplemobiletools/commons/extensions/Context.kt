@@ -11,8 +11,6 @@ import android.content.res.Configuration
 import android.database.Cursor
 import android.graphics.Color
 import android.graphics.Point
-import android.graphics.drawable.Drawable
-import android.graphics.drawable.LayerDrawable
 import android.media.ExifInterface
 import android.media.MediaMetadataRetriever
 import android.media.RingtoneManager
