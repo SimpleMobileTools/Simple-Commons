@@ -23,7 +23,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.SimpleContact
 
-class ContactsHelper(val context: Context) {
+class SimpleContactsHelper(val context: Context) {
     fun getAvailableContacts(callback: (ArrayList<SimpleContact>) -> Unit) {
         ensureBackgroundThread {
             val names = getContactNames()
