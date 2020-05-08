@@ -30,8 +30,8 @@ class ContactsHelper(val context: Context) {
             val names = getContactNames()
             var allContacts = getContactPhoneNumbers()
             allContacts.forEach {
-                val contactId = it.id
-                val contact = names.firstOrNull { it.id == contactId }
+                val contactId = it.rawId
+                val contact = names.firstOrNull { it.rawId == contactId }
                 val name = contact?.name
                 if (name != null) {
                     it.name = name
@@ -57,6 +57,7 @@ class ContactsHelper(val context: Context) {
         val contacts = ArrayList<SimpleContact>()
         val uri = ContactsContract.Data.CONTENT_URI
         val projection = arrayOf(
+            ContactsContract.Data.RAW_CONTACT_ID,
             ContactsContract.Data.CONTACT_ID,
             StructuredName.PREFIX,
             StructuredName.GIVEN_NAME,
@@ -76,7 +77,8 @@ class ContactsHelper(val context: Context) {
         )
 
         context.queryCursor(uri, projection, selection, selectionArgs) { cursor ->
-            val id = cursor.getIntValue(ContactsContract.Data.CONTACT_ID)
+            val rawId = cursor.getIntValue(ContactsContract.Data.RAW_CONTACT_ID)
+            val contactId = cursor.getIntValue(ContactsContract.Data.CONTACT_ID)
             val mimetype = cursor.getStringValue(ContactsContract.Data.MIMETYPE)
             val photoUri = cursor.getStringValue(StructuredName.PHOTO_THUMBNAIL_URI) ?: ""
             val isPerson = mimetype == StructuredName.CONTENT_ITEM_TYPE
@@ -89,7 +91,7 @@ class ContactsHelper(val context: Context) {
                 if (firstName.isNotEmpty() || middleName.isNotEmpty() || familyName.isNotEmpty()) {
                     val names = arrayOf(prefix, firstName, middleName, familyName, suffix).filter { it.isNotEmpty() }
                     val fullName = TextUtils.join(" ", names)
-                    val contact = SimpleContact(id, fullName, photoUri, "")
+                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, "")
                     contacts.add(contact)
                 }
             }
@@ -100,7 +102,7 @@ class ContactsHelper(val context: Context) {
                 val jobTitle = cursor.getStringValue(Organization.TITLE) ?: ""
                 if (company.isNotEmpty() || jobTitle.isNotEmpty()) {
                     val fullName = "$company $jobTitle".trim()
-                    val contact = SimpleContact(id, fullName, photoUri, "")
+                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, "")
                     contacts.add(contact)
                 }
             }
@@ -112,21 +114,22 @@ class ContactsHelper(val context: Context) {
         val contacts = ArrayList<SimpleContact>()
         val uri = CommonDataKinds.Phone.CONTENT_URI
         val projection = arrayOf(
+            ContactsContract.Data.RAW_CONTACT_ID,
             ContactsContract.Data.CONTACT_ID,
             CommonDataKinds.Phone.NORMALIZED_NUMBER
         )
 
         context.queryCursor(uri, projection) { cursor ->
-            val id = cursor.getIntValue(ContactsContract.Data.CONTACT_ID)
+            val rawId = cursor.getIntValue(ContactsContract.Data.RAW_CONTACT_ID)
+            val contactId = cursor.getIntValue(ContactsContract.Data.CONTACT_ID)
             val phoneNumber = cursor.getStringValue(CommonDataKinds.Phone.NORMALIZED_NUMBER)
             if (phoneNumber != null) {
-                val contact = SimpleContact(id, "", "", phoneNumber)
+                val contact = SimpleContact(rawId, contactId, "", "", phoneNumber)
                 contacts.add(contact)
             }
         }
         return contacts
     }
-
 
     fun getNameFromPhoneNumber(number: String): String {
         if (!context.hasPermission(PERMISSION_READ_CONTACTS)) {
