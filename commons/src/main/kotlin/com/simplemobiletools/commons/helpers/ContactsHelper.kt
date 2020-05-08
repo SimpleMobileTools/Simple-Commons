@@ -9,10 +9,9 @@ import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
 import android.net.Uri
 import android.provider.ContactsContract
-import android.provider.ContactsContract.CommonDataKinds
+import android.provider.ContactsContract.*
 import android.provider.ContactsContract.CommonDataKinds.Organization
 import android.provider.ContactsContract.CommonDataKinds.StructuredName
-import android.provider.ContactsContract.PhoneLookup
 import android.text.TextUtils
 import android.widget.ImageView
 import android.widget.TextView
@@ -231,5 +230,23 @@ class ContactsHelper(val context: Context) {
         val bgColor = letterBackgroundColors[Math.abs(title.hashCode()) % letterBackgroundColors.size].toInt()
         (icon as LayerDrawable).findDrawableByLayerId(R.id.attendee_circular_background).applyColorFilter(bgColor)
         return icon
+    }
+
+    fun getContactLookupKey(contactId: String): String {
+        val uri = Data.CONTENT_URI
+        val projection = arrayOf(Data.CONTACT_ID, Data.LOOKUP_KEY)
+        val selection = "${Data.MIMETYPE} = ? AND ${Data.RAW_CONTACT_ID} = ?"
+        val selectionArgs = arrayOf(StructuredName.CONTENT_ITEM_TYPE, contactId)
+
+        val cursor = context.contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                val id = cursor.getIntValue(Data.CONTACT_ID)
+                val lookupKey = cursor.getStringValue(Data.LOOKUP_KEY)
+                return "$lookupKey/$id"
+            }
+        }
+
+        return ""
     }
 }

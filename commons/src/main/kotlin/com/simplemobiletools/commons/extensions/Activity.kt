@@ -7,6 +7,7 @@ import android.content.pm.PackageManager
 import android.media.RingtoneManager
 import android.net.Uri
 import android.os.TransactionTooLargeException
+import android.provider.ContactsContract
 import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.text.Html
@@ -358,6 +359,18 @@ fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: 
                     toast(R.string.no_app_found)
                 }
             }
+        }
+    }
+}
+
+fun Activity.launchViewContactIntent(uri: Uri) {
+    Intent().apply {
+        action = ContactsContract.QuickContact.ACTION_QUICK_CONTACT
+        data = uri
+        if (resolveActivity(packageManager) != null) {
+            startActivity(this)
+        } else {
+            toast(R.string.no_app_found)
         }
     }
 }
