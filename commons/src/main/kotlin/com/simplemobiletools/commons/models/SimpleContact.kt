@@ -1,5 +1,7 @@
 package com.simplemobiletools.commons.models
 
+import android.telephony.PhoneNumberUtils
+import com.simplemobiletools.commons.extensions.normalizePhoneNumber
 import com.simplemobiletools.commons.extensions.normalizeString
 
 data class SimpleContact(val rawId: Int, val contactId: Int, var name: String, var photoUri: String, var phoneNumber: String) : Comparable<SimpleContact> {
@@ -19,6 +21,18 @@ data class SimpleContact(val rawId: Int, val contactId: Int, var name: String, v
             } else {
                 firstString.compareTo(secondString, true)
             }
+        }
+    }
+
+    fun doesContainPhoneNumber(text: String): Boolean {
+        return if (text.isNotEmpty()) {
+            val normalizedText = text.normalizePhoneNumber()
+            PhoneNumberUtils.compare(phoneNumber.normalizePhoneNumber(), normalizedText) ||
+                    phoneNumber.contains(text) ||
+                    phoneNumber.normalizePhoneNumber().contains(normalizedText) ||
+                    phoneNumber.contains(normalizedText)
+        } else {
+            false
         }
     }
 }
