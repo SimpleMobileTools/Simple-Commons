@@ -911,7 +911,7 @@ val Context.realScreenSize: Point
 // we need the Default Dialer functionality only in Simple Dialer and in Simple Contacts for now
 @TargetApi(Build.VERSION_CODES.M)
 fun Context.isDefaultDialer(): Boolean {
-    return if (!packageName.startsWith("com.simplemobiletools.contacts") && packageName.startsWith("com.simplemobiletools.dialer")) {
+    return if (!packageName.startsWith("com.simplemobiletools.contacts") && !packageName.startsWith("com.simplemobiletools.dialer")) {
         true
     } else if ((packageName.startsWith("com.simplemobiletools.contacts") || packageName.startsWith("com.simplemobiletools.dialer")) && isQPlus()) {
         val roleManager = getSystemService(RoleManager::class.java)
