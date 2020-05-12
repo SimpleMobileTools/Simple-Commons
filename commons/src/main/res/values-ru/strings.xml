@@ -165,6 +165,13 @@
         <item quantity="many">Удаление %d объектов</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d контакт</item>
+        <item quantity="few">%d контакта</item>
+        <item quantity="many">%d контактов</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Выбрать хранилище</string>
     <string name="internal">Внутренняя память</string>

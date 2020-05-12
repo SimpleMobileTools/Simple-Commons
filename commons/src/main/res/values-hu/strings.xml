@@ -162,6 +162,12 @@
         <item quantity="other">%d elem törlése</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d contact</item>
+        <item quantity="other">%d contacts</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Válasszon tárolót</string>
     <string name="internal">Belső</string>

@@ -159,6 +159,12 @@
         <item quantity="other">%d個項目刪除中</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d個聯絡人</item>
+        <item quantity="other">%d個聯絡人</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">選擇儲存空間</string>
     <string name="internal">內部儲存空間</string>

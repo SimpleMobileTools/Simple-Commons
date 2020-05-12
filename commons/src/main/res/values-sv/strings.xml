@@ -162,6 +162,12 @@
         <item quantity="other">Tar bort %d objekt</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d kontakt</item>
+        <item quantity="other">%d kontakter</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Välj lagringsplats</string>
     <string name="internal">Internt</string>

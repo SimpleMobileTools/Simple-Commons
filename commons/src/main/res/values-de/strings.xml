@@ -162,6 +162,12 @@
         <item quantity="other">%d Elemente werden gelöscht</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d Kontakt</item>
+        <item quantity="other">%d Kontakte</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Speicher auswählen</string>
     <string name="internal">Intern</string>

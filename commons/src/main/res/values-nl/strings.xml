@@ -162,6 +162,12 @@
         <item quantity="other">%d items verwijderen</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d contact</item>
+        <item quantity="other">%d contacten</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Opslag kiezen</string>
     <string name="internal">Interne opslag</string>

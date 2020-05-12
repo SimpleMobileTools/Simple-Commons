@@ -159,6 +159,12 @@
         <item quantity="other">Menghapus %d item</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d kontak</item>
+        <item quantity="other">%d kontak</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Pilih penyimpanan</string>
     <string name="internal">Internal</string>

@@ -162,6 +162,12 @@
         <item quantity="other">%d öğe siliniyor</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d kişi</item>
+        <item quantity="other">%d kişi</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Depolama seç</string>
     <string name="internal">Dahili</string>

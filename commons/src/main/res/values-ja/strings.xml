@@ -159,6 +159,12 @@
         <item quantity="other">%d アイテムを削除しています</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d contact</item>
+        <item quantity="other">%d contacts</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">ストレージを選択</string>
     <string name="internal">内部</string>

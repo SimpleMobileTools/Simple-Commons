@@ -162,6 +162,12 @@
         <item quantity="other">Διαγραφή %d στοιχεία</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d επαφή</item>
+        <item quantity="other">%d επαφές</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Επιλέξτε αποθήκευση</string>
     <string name="internal">Εσωτερική</string>

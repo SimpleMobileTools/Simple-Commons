@@ -159,6 +159,12 @@
         <item quantity="other">%d개 항목 삭제중</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d contact</item>
+        <item quantity="other">%d contacts</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">저장공간 선택</string>
     <string name="internal">내장 메모리</string>

@@ -165,6 +165,13 @@
         <item quantity="other">Odstraňuje se %d položek</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d kontakt</item>
+        <item quantity="few">%d kontakty</item>
+        <item quantity="other">%d kontaktů</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Zvolit úložiště</string>
     <string name="internal">Interní</string>
