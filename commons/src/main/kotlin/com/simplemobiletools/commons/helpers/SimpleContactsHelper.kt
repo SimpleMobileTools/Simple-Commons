@@ -8,7 +8,6 @@ import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
 import android.net.Uri
-import android.provider.ContactsContract
 import android.provider.ContactsContract.*
 import android.provider.ContactsContract.CommonDataKinds.Organization
 import android.provider.ContactsContract.CommonDataKinds.StructuredName
@@ -54,10 +53,10 @@ class SimpleContactsHelper(val context: Context) {
 
     private fun getContactNames(): List<SimpleContact> {
         val contacts = ArrayList<SimpleContact>()
-        val uri = ContactsContract.Data.CONTENT_URI
+        val uri = Data.CONTENT_URI
         val projection = arrayOf(
-            ContactsContract.Data.RAW_CONTACT_ID,
-            ContactsContract.Data.CONTACT_ID,
+            Data.RAW_CONTACT_ID,
+            Data.CONTACT_ID,
             StructuredName.PREFIX,
             StructuredName.GIVEN_NAME,
             StructuredName.MIDDLE_NAME,
@@ -66,19 +65,19 @@ class SimpleContactsHelper(val context: Context) {
             StructuredName.PHOTO_THUMBNAIL_URI,
             Organization.COMPANY,
             Organization.TITLE,
-            ContactsContract.Data.MIMETYPE
+            Data.MIMETYPE
         )
 
-        val selection = "${ContactsContract.Data.MIMETYPE} = ? OR ${ContactsContract.Data.MIMETYPE} = ?"
+        val selection = "${Data.MIMETYPE} = ? OR ${Data.MIMETYPE} = ?"
         val selectionArgs = arrayOf(
             StructuredName.CONTENT_ITEM_TYPE,
             Organization.CONTENT_ITEM_TYPE
         )
 
         context.queryCursor(uri, projection, selection, selectionArgs) { cursor ->
-            val rawId = cursor.getIntValue(ContactsContract.Data.RAW_CONTACT_ID)
-            val contactId = cursor.getIntValue(ContactsContract.Data.CONTACT_ID)
-            val mimetype = cursor.getStringValue(ContactsContract.Data.MIMETYPE)
+            val rawId = cursor.getIntValue(Data.RAW_CONTACT_ID)
+            val contactId = cursor.getIntValue(Data.CONTACT_ID)
+            val mimetype = cursor.getStringValue(Data.MIMETYPE)
             val photoUri = cursor.getStringValue(StructuredName.PHOTO_THUMBNAIL_URI) ?: ""
             val isPerson = mimetype == StructuredName.CONTENT_ITEM_TYPE
             if (isPerson) {
@@ -113,14 +112,14 @@ class SimpleContactsHelper(val context: Context) {
         val contacts = ArrayList<SimpleContact>()
         val uri = CommonDataKinds.Phone.CONTENT_URI
         val projection = arrayOf(
-            ContactsContract.Data.RAW_CONTACT_ID,
-            ContactsContract.Data.CONTACT_ID,
+            Data.RAW_CONTACT_ID,
+            Data.CONTACT_ID,
             CommonDataKinds.Phone.NORMALIZED_NUMBER
         )
 
         context.queryCursor(uri, projection) { cursor ->
-            val rawId = cursor.getIntValue(ContactsContract.Data.RAW_CONTACT_ID)
-            val contactId = cursor.getIntValue(ContactsContract.Data.CONTACT_ID)
+            val rawId = cursor.getIntValue(Data.RAW_CONTACT_ID)
+            val contactId = cursor.getIntValue(Data.CONTACT_ID)
             val phoneNumber = cursor.getStringValue(CommonDataKinds.Phone.NORMALIZED_NUMBER)
             if (phoneNumber != null) {
                 val contact = SimpleContact(rawId, contactId, "", "", phoneNumber)
@@ -248,5 +247,17 @@ class SimpleContactsHelper(val context: Context) {
         }
 
         return ""
+    }
+
+    fun deleteContactRawIDs(ids: ArrayList<Int>, callback: () -> Unit) {
+        ensureBackgroundThread {
+            val uri = Data.CONTENT_URI
+            ids.chunked(30).forEach { chunk ->
+                val selection = "${Data.RAW_CONTACT_ID} IN (${getQuestionMarks(chunk.size)})"
+                val selectionArgs = chunk.map { it.toString() }.toTypedArray()
+                context.contentResolver.delete(uri, selection, selectionArgs)
+            }
+            callback()
+        }
     }
 }

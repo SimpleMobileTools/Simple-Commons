@@ -7,6 +7,7 @@ import android.os.Build
 import android.os.Looper
 import android.util.Log
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.overloads.times
 import java.util.*
 
 const val APP_NAME = "app_name"
@@ -268,40 +269,40 @@ const val TIME_FORMAT_12 = "hh:mm a"
 const val TIME_FORMAT_24 = "HH:mm"
 
 val appIconColorStrings = arrayListOf(
-        ".Red",
-        ".Pink",
-        ".Purple",
-        ".Deep_purple",
-        ".Indigo",
-        ".Blue",
-        ".Light_blue",
-        ".Cyan",
-        ".Teal",
-        ".Green",
-        ".Light_green",
-        ".Lime",
-        ".Yellow",
-        ".Amber",
-        ".Orange",
-        ".Deep_orange",
-        ".Brown",
-        ".Blue_grey",
-        ".Grey_black"
+    ".Red",
+    ".Pink",
+    ".Purple",
+    ".Deep_purple",
+    ".Indigo",
+    ".Blue",
+    ".Light_blue",
+    ".Cyan",
+    ".Teal",
+    ".Green",
+    ".Light_green",
+    ".Lime",
+    ".Yellow",
+    ".Amber",
+    ".Orange",
+    ".Deep_orange",
+    ".Brown",
+    ".Blue_grey",
+    ".Grey_black"
 )
 
 // most app icon colors from md_app_icon_colors with reduced alpha
 // used at showing contact placeholders without image
 val letterBackgroundColors = arrayListOf(
-        0xCCD32F2F,
-        0xCCC2185B,
-        0xCC1976D2,
-        0xCC0288D1,
-        0xCC0097A7,
-        0xCC00796B,
-        0xCC388E3C,
-        0xCC689F38,
-        0xCCF57C00,
-        0xCCE64A19
+    0xCCD32F2F,
+    0xCCC2185B,
+    0xCC1976D2,
+    0xCC0288D1,
+    0xCC0097A7,
+    0xCC00796B,
+    0xCC388E3C,
+    0xCC689F38,
+    0xCCF57C00,
+    0xCCE64A19
 )
 
 fun isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
@@ -325,18 +326,18 @@ fun isPiePlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
 fun isQPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
 
 fun getDateFormats() = arrayListOf(
-        "yyyy-MM-dd",
-        "yyyyMMdd",
-        "yyyy.MM.dd",
-        "yy-MM-dd",
-        "yyMMdd",
-        "yy.MM.dd",
-        "yy/MM/dd",
-        "MM-dd",
-        "--MM-dd",
-        "MMdd",
-        "MM/dd",
-        "MM.dd"
+    "yyyy-MM-dd",
+    "yyyyMMdd",
+    "yyyy.MM.dd",
+    "yy-MM-dd",
+    "yyMMdd",
+    "yy.MM.dd",
+    "yy/MM/dd",
+    "MM-dd",
+    "--MM-dd",
+    "MMdd",
+    "MM/dd",
+    "MM.dd"
 )
 
 val normalizeRegex = "\\p{InCombiningDiacriticalMarks}+".toRegex()
@@ -354,6 +355,8 @@ fun getConflictResolution(resolutions: LinkedHashMap<String, Int>, path: String)
 val proPackages = arrayListOf("draw", "gallery", "filemanager", "contacts", "notes", "calendar")
 
 fun mydebug(message: String) = Log.e("DEBUG", message)
+
+fun getQuestionMarks(size: Int) = ("?," * size).trimEnd(',')
 
 fun getFilePlaceholderDrawables(context: Context): HashMap<String, Drawable> {
     val fileDrawables = HashMap<String, Drawable>()
