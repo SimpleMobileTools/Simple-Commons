@@ -44,7 +44,7 @@ class SimpleContactsHelper(val context: Context) {
             allContacts = allContacts.filter { it.name.isNotEmpty() }.distinctBy {
                 val startIndex = Math.max(0, it.phoneNumber.length - 9)
                 it.phoneNumber.substring(startIndex)
-            }.toMutableList() as ArrayList<SimpleContact>
+            }.distinctBy { it.rawId }.toMutableList() as ArrayList<SimpleContact>
 
             allContacts.sort()
             callback(allContacts)
