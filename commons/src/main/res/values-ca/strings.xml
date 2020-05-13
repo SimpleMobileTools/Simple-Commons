@@ -164,8 +164,8 @@
 
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
-        <item quantity="one">%d contact</item>
-        <item quantity="other">%d contacts</item>
+        <item quantity="one">%d contacte</item>
+        <item quantity="other">%d contactes</item>
     </plurals>
 
     <!-- Storages -->
@@ -258,7 +258,7 @@
     <string name="redo">Refer</string>
     <string name="print">Imprimir</string>
     <string name="create_shortcut">Crear accès directe</string>
-    <string name="add_number_to_contact">Add number to contact</string>
+    <string name="add_number_to_contact">Afegeix el número als contactes</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar per</string>
