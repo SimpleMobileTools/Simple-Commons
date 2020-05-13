@@ -15,6 +15,7 @@ import android.text.TextUtils
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DecodeFormat
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
@@ -258,6 +259,32 @@ class SimpleContactsHelper(val context: Context) {
                 context.contentResolver.delete(uri, selection, selectionArgs)
             }
             callback()
+        }
+    }
+
+    fun getShortcutImage(path: String, placeholderName: String, callback: (image: Bitmap) -> Unit) {
+        ensureBackgroundThread {
+            val placeholder = BitmapDrawable(context.resources, getContactLetterIcon(placeholderName))
+            try {
+                val options = RequestOptions()
+                    .format(DecodeFormat.PREFER_ARGB_8888)
+                    .diskCacheStrategy(DiskCacheStrategy.NONE)
+                    .error(placeholder)
+                    .centerCrop()
+
+                val size = context.resources.getDimension(R.dimen.shortcut_size).toInt()
+                val bitmap = Glide.with(context).asBitmap()
+                    .load(path)
+                    .placeholder(placeholder)
+                    .apply(options)
+                    .apply(RequestOptions.circleCropTransform())
+                    .into(size, size)
+                    .get()
+
+                callback(bitmap)
+            } catch (ignored: Exception) {
+                callback(placeholder.bitmap)
+            }
         }
     }
 }
