@@ -645,10 +645,11 @@
     <string name="new_app">
         <![CDATA[
             Hey,<br><br>
-            just letting you know that a new app has been released recently:<br><br>
+            just letting you know that some new apps have been released recently:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
-            You can download it by pressing the title.<br><br>
+            <a href="%5$s">%6$s</a><br><br>
+            You can download them by pressing their titles or icons.<br><br>
             Thanks
         ]]>
     </string>

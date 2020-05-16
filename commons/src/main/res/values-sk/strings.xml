@@ -679,10 +679,11 @@
     <string name="new_app">
         <![CDATA[
             Zdravím,<br><br>
-            iba vám oznamujem, že bola nedávno vydaná nová aplikácia:<br><br>
+            iba vám oznamujeme, že boli nedávno vydané nové aplikácie:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
-            Viete ju stiahnuť kliknutím na názov.<br><br>
+            <a href="%5$s">%6$s</a><br><br>
+            Viete ich stiahnuť kliknutím na ich názov, alebo ikonku.<br><br>
             Vďaka
         ]]>
     </string>
