@@ -143,7 +143,7 @@
     <string name="select_file">Выбор файла</string>
     <string name="confirm_storage_access_title">Предоставление доступа к внешнему накопителю</string>
     <string name="confirm_storage_access_text">Чтобы предоставить право на запись, пожалуйста, выберите корневую папку SD-карты на следующем шаге</string>
-    <string name="confirm_storage_access_text_sd">Если вы не видите SD-карту, попробуйте это</string>
+    <string name="confirm_storage_access_text_sd">Если SD-карта не видна, попробуйте это</string>
     <string name="confirm_selection">Подтвердить выделение</string>
 
     <plurals name="items">
@@ -256,13 +256,13 @@
     <string name="unhide_folder">Показать папку</string>
     <string name="temporarily_show_hidden">Временный показ скрытых</string>
     <string name="stop_showing_hidden">Не показывать скрытые медиа</string>
-    <string name="maximum_share_reached">Функция \"Поделиться\" не поддерживает такой большой объём данных</string>
+    <string name="maximum_share_reached">Слишком большой объём данных для функции \"Поделиться\"</string>
     <string name="empty_and_disable_recycle_bin">Очистить и отключить корзину</string>
     <string name="undo">Отменить</string>
     <string name="redo">Повторить</string>
     <string name="print">Печать</string>
     <string name="create_shortcut">Создать ярлык</string>
-    <string name="add_number_to_contact">Add number to contact</string>
+    <string name="add_number_to_contact">Добавить номер контакту</string>
 
     <!-- Sorting -->
     <string name="sort_by">Сортировать по…</string>
@@ -514,7 +514,7 @@
     <string name="prevent_phone_from_sleeping">Предотвращать засыпание устройства, пока приложение находится на переднем плане</string>
     <string name="skip_delete_confirmation">Пропускать диалог подтверждения удаления</string>
     <string name="enable_pull_to_refresh">Использовать жест \"потянуть для обновления\" в верхней части экрана</string>
-    <string name="use_24_hour_time_format">Использовать 24-часовой формат времени</string>
+    <string name="use_24_hour_time_format">24-часовой формат времени</string>
     <string name="change_date_and_time_format">Формат даты и времени</string>
     <string name="sunday_first">Воскресенье — начало недели</string>
     <string name="widgets">Виджеты</string>
@@ -632,7 +632,7 @@
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Ваша версия приложения больше не будет обновляться. Пожалуйста, обновите её до версии Pro, чтобы получать исправления и улучшения.</string>
     <string name="upgrade_to_pro_long_click">Ваша версия приложения больше не будет обновляться. Пожалуйста, обновите её до версии Pro, чтобы получать исправления и улучшения, нажав здесь.</string>
-    <string name="it_is_free">Это бесплатно до: %s. При загрузке до указанной даты вы получаете её бесплатно навсегда.</string>
+    <string name="it_is_free">Это бесплатно до %s. При загрузке до указанной даты вы получаете её бесплатно навсегда.</string>
     <string name="more_info">Подробнее</string>
     <string name="upgrade">Обновить</string>
     <string name="upgrade_calendar">Локально сохранённые события необходимо перенести вручную через экспорт и последующий импорт ics-файла. Кнопки экспорта/импорта находятся в главном меню.</string>
@@ -679,11 +679,11 @@
     <string name="new_app">
         <![CDATA[
             Привет,<br><br>
-            просто сообщаю, что недавно было выпущено новое приложение:<br><br>
+            просто сообщаю, что недавно были выпущены новые приложения:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
             <a href="%5$s">%6$s</a><br><br>
-            Вы можете скачать его, нажав на заголовок.<br><br>
+            Их можно скачать, нажимая на заголовок.<br><br>
             Спасибо
         ]]>
     </string>
@@ -700,7 +700,7 @@
     <string name="faq_1_title_commons">Почему я не вижу виджет этого приложения в списке виджетов?</string>
     <string name="faq_1_text_commons">Это, скорее всего, потому, что вы перенесли приложение на SD-карту. Существует ограничение системы Android, которое скрывает виджеты приложения
         в этом случае. Единственное решение — переместить приложение обратно во внутреннее хранилище через настройки вашего устройства.</string>
-    <string name="faq_2_title_commons">Я хочу поддержать вас, но могу пожертвовать деньги. Есть ли что-нибудь ещё, что я могу сделать?</string>
+    <string name="faq_2_title_commons">Я хочу поддержать вас, но не могу пожертвовать деньги. Есть ли что-нибудь ещё, что я могу сделать?</string>
     <string name="faq_2_text_commons">Да, конечно. Вы можете распространять информацию о приложениях или давать хорошие отзывы и оценки. Также вы можете помочь, переведя приложения на новый язык или просто обновив существующие переводы.
         Руководство можно найти по адресу https://github.com/SimpleMobileTools/General-Discussion или просто написать мне короткое сообщение на hello@simplemobiletools.com , если вам нужна помощь.</string>
     <string name="faq_3_title_commons">Я по ошибке удалил некоторые файлы, как их восстановить?</string>
@@ -716,7 +716,7 @@
     <string name="faq_7_text_commons">Платежи полностью обрабатываются Google, их система время от времени даёт сбои. Просто очистите кеш приложения Google Play и перезагрузите устройство, затем повторите попытку загрузки.</string>
     <string name="faq_8_title_commons">Почему следует перейти на версию Pro?</string>
     <string name="faq_8_text_commons">Поскольку версия приложения больше не обновляется, ошибки, которые вы, возможно, заметили, никогда не будут исправлены. Также не будет добавлено никаких новых функций. Вы можете приобрести Pro-версию на Google Play за очень небольшую сумму.
-        Это однократная покупка, которая означает, что вам никогда не придётся платить снова. Даже после смены устройства. Если вам не понравится версия Pro, вы можете просто удалить её в течение нескольких часов, после чего автоматически получите свои деньги обратно.
+        Это разовая покупка, которая означает, что вам никогда не придётся платить снова. Даже после смены устройства. Если вам не понравится версия Pro, вы можете просто удалить её в течение нескольких часов, после чего автоматически получите свои деньги обратно.
         Если вы захотите вернуть деньги в любое время позже, просто свяжитесь с нами по адресу hello@simplemobiletools.com и мы вернём их.</string>
 
     <!-- License -->
