@@ -165,6 +165,13 @@
         <item quantity="other">Odstraňuje sa %d položiek</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d kontakt</item>
+        <item quantity="few">%d kontakty</item>
+        <item quantity="other">%d kontaktov</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Zvoľte úložisko</string>
     <string name="internal">Interné</string>
@@ -255,6 +262,7 @@
     <string name="redo">Obnoviť</string>
     <string name="print">Tlačiť</string>
     <string name="create_shortcut">Vytvoriť skratku</string>
+    <string name="add_number_to_contact">Priradiť číslo kontaktu</string>
 
     <!-- Sorting -->
     <string name="sort_by">Na zoradenie použiť</string>
@@ -671,10 +679,11 @@
     <string name="new_app">
         <![CDATA[
             Zdravím,<br><br>
-            iba vám oznamujem, že bola nedávno vydaná nová aplikácia:<br><br>
+            iba vám oznamujeme, že boli nedávno vydané nové aplikácie:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
-            Viete ju stiahnuť kliknutím na názov.<br><br>
+            <a href="%5$s">%6$s</a><br><br>
+            Viete ich stiahnuť kliknutím na ich názov, alebo ikonku.<br><br>
             Vďaka
         ]]>
     </string>

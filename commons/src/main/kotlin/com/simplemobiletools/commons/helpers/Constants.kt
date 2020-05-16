@@ -1,9 +1,13 @@
 package com.simplemobiletools.commons.helpers
 
+import android.content.Context
 import android.graphics.Color
+import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Looper
 import android.util.Log
+import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.overloads.times
 import java.util.*
 
 const val APP_NAME = "app_name"
@@ -29,6 +33,7 @@ const val SAVE_DISCARD_PROMPT_INTERVAL = 1000L
 val DEFAULT_WIDGET_BG_COLOR = Color.parseColor("#AA000000")
 const val SD_OTG_PATTERN = "^/storage/[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$"
 const val SD_OTG_SHORT = "^[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$"
+const val KEY_PHONE = "phone"
 
 const val HOUR_MINUTES = 60
 const val DAY_MINUTES = 24 * HOUR_MINUTES
@@ -218,6 +223,7 @@ const val PERMISSION_WRITE_CALL_LOG = 11
 const val PERMISSION_GET_ACCOUNTS = 12
 const val PERMISSION_READ_SMS = 13
 const val PERMISSION_SEND_SMS = 14
+const val PERMISSION_READ_PHONE_STATE = 15
 
 // conflict resolving
 const val CONFLICT_SKIP = 1
@@ -264,40 +270,40 @@ const val TIME_FORMAT_12 = "hh:mm a"
 const val TIME_FORMAT_24 = "HH:mm"
 
 val appIconColorStrings = arrayListOf(
-        ".Red",
-        ".Pink",
-        ".Purple",
-        ".Deep_purple",
-        ".Indigo",
-        ".Blue",
-        ".Light_blue",
-        ".Cyan",
-        ".Teal",
-        ".Green",
-        ".Light_green",
-        ".Lime",
-        ".Yellow",
-        ".Amber",
-        ".Orange",
-        ".Deep_orange",
-        ".Brown",
-        ".Blue_grey",
-        ".Grey_black"
+    ".Red",
+    ".Pink",
+    ".Purple",
+    ".Deep_purple",
+    ".Indigo",
+    ".Blue",
+    ".Light_blue",
+    ".Cyan",
+    ".Teal",
+    ".Green",
+    ".Light_green",
+    ".Lime",
+    ".Yellow",
+    ".Amber",
+    ".Orange",
+    ".Deep_orange",
+    ".Brown",
+    ".Blue_grey",
+    ".Grey_black"
 )
 
 // most app icon colors from md_app_icon_colors with reduced alpha
 // used at showing contact placeholders without image
 val letterBackgroundColors = arrayListOf(
-        0xCCD32F2F,
-        0xCCC2185B,
-        0xCC1976D2,
-        0xCC0288D1,
-        0xCC0097A7,
-        0xCC00796B,
-        0xCC388E3C,
-        0xCC689F38,
-        0xCCF57C00,
-        0xCCE64A19
+    0xCCD32F2F,
+    0xCCC2185B,
+    0xCC1976D2,
+    0xCC0288D1,
+    0xCC0097A7,
+    0xCC00796B,
+    0xCC388E3C,
+    0xCC689F38,
+    0xCCF57C00,
+    0xCCE64A19
 )
 
 fun isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
@@ -316,22 +322,23 @@ fun isMarshmallowPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
 fun isNougatPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
 fun isNougatMR1Plus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1
 fun isOreoPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
+fun isOreoMr1Plus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1
 fun isPiePlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
 fun isQPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
 
 fun getDateFormats() = arrayListOf(
-        "yyyy-MM-dd",
-        "yyyyMMdd",
-        "yyyy.MM.dd",
-        "yy-MM-dd",
-        "yyMMdd",
-        "yy.MM.dd",
-        "yy/MM/dd",
-        "MM-dd",
-        "--MM-dd",
-        "MMdd",
-        "MM/dd",
-        "MM.dd"
+    "yyyy-MM-dd",
+    "yyyyMMdd",
+    "yyyy.MM.dd",
+    "yy-MM-dd",
+    "yyMMdd",
+    "yy.MM.dd",
+    "yy/MM/dd",
+    "MM-dd",
+    "--MM-dd",
+    "MMdd",
+    "MM/dd",
+    "MM.dd"
 )
 
 val normalizeRegex = "\\p{InCombiningDiacriticalMarks}+".toRegex()
@@ -349,3 +356,54 @@ fun getConflictResolution(resolutions: LinkedHashMap<String, Int>, path: String)
 val proPackages = arrayListOf("draw", "gallery", "filemanager", "contacts", "notes", "calendar")
 
 fun mydebug(message: String) = Log.e("DEBUG", message)
+
+fun getQuestionMarks(size: Int) = ("?," * size).trimEnd(',')
+
+fun getFilePlaceholderDrawables(context: Context): HashMap<String, Drawable> {
+    val fileDrawables = HashMap<String, Drawable>()
+    hashMapOf<String, Int>().apply {
+        put("aep", R.drawable.ic_file_aep)
+        put("ai", R.drawable.ic_file_ai)
+        put("avi", R.drawable.ic_file_avi)
+        put("css", R.drawable.ic_file_css)
+        put("csv", R.drawable.ic_file_csv)
+        put("dbf", R.drawable.ic_file_dbf)
+        put("doc", R.drawable.ic_file_doc)
+        put("docx", R.drawable.ic_file_doc)
+        put("dwg", R.drawable.ic_file_dwg)
+        put("exe", R.drawable.ic_file_exe)
+        put("fla", R.drawable.ic_file_fla)
+        put("flv", R.drawable.ic_file_flv)
+        put("htm", R.drawable.ic_file_html)
+        put("html", R.drawable.ic_file_html)
+        put("ics", R.drawable.ic_file_ics)
+        put("indd", R.drawable.ic_file_indd)
+        put("iso", R.drawable.ic_file_iso)
+        put("jpg", R.drawable.ic_file_jpg)
+        put("jpeg", R.drawable.ic_file_jpg)
+        put("js", R.drawable.ic_file_js)
+        put("json", R.drawable.ic_file_json)
+        put("m4a", R.drawable.ic_file_m4a)
+        put("mp3", R.drawable.ic_file_mp3)
+        put("mp4", R.drawable.ic_file_mp4)
+        put("ogg", R.drawable.ic_file_ogg)
+        put("pdf", R.drawable.ic_file_pdf)
+        put("plproj", R.drawable.ic_file_plproj)
+        put("prproj", R.drawable.ic_file_prproj)
+        put("psd", R.drawable.ic_file_psd)
+        put("rtf", R.drawable.ic_file_rtf)
+        put("sesx", R.drawable.ic_file_sesx)
+        put("sql", R.drawable.ic_file_sql)
+        put("svg", R.drawable.ic_file_svg)
+        put("txt", R.drawable.ic_file_txt)
+        put("vcf", R.drawable.ic_file_vcf)
+        put("wav", R.drawable.ic_file_wav)
+        put("wmv", R.drawable.ic_file_wmv)
+        put("xls", R.drawable.ic_file_xls)
+        put("xml", R.drawable.ic_file_xml)
+        put("zip", R.drawable.ic_file_zip)
+    }.forEach { (key, value) ->
+        fileDrawables[key] = context.resources.getDrawable(value)
+    }
+    return fileDrawables
+}

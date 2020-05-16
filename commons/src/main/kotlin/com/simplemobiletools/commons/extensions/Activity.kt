@@ -7,8 +7,11 @@ import android.content.pm.PackageManager
 import android.media.RingtoneManager
 import android.net.Uri
 import android.os.TransactionTooLargeException
+import android.provider.ContactsContract
 import android.provider.DocumentsContract
 import android.provider.MediaStore
+import android.telecom.PhoneAccountHandle
+import android.telecom.TelecomManager
 import android.text.Html
 import android.view.View
 import android.view.ViewGroup
@@ -362,8 +365,39 @@ fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: 
     }
 }
 
+fun Activity.launchViewContactIntent(uri: Uri) {
+    Intent().apply {
+        action = ContactsContract.QuickContact.ACTION_QUICK_CONTACT
+        data = uri
+        if (resolveActivity(packageManager) != null) {
+            startActivity(this)
+        } else {
+            toast(R.string.no_app_found)
+        }
+    }
+}
+
+fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountHandle? = null) {
+    handlePermission(PERMISSION_CALL_PHONE) {
+        val action = if (it) Intent.ACTION_CALL else Intent.ACTION_DIAL
+        Intent(action).apply {
+            data = Uri.fromParts("tel", recipient, null)
+
+            if (handle != null && isMarshmallowPlus()) {
+                putExtra(TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, handle)
+            }
+
+            if (resolveActivity(packageManager) != null) {
+                startActivity(this)
+            } else {
+                toast(R.string.no_app_found)
+            }
+        }
+    }
+}
+
 fun Activity.showLocationOnMap(coordinates: String) {
-    val uriBegin = "geo:$coordinates"
+    val uriBegin = "geo:${coordinates.replace(" ", "")}"
     val encodedQuery = Uri.encode(coordinates)
     val uriString = "$uriBegin?q=$encodedQuery&z=16"
     val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uriString))
@@ -741,6 +775,7 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
             } else {
                 documentFile = getDocumentFile(targetFile.parentFile.parent)
                 documentFile = documentFile!!.createDirectory(targetFile.parentFile.name)
+                    ?: getDocumentFile(targetFile.parentFile.absolutePath)
             }
         }
 
@@ -750,9 +785,8 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
         }
 
         try {
-            val newDocument = documentFile.createFile(mimeType, path.getFilenameFromPath())
-            val newUri = newDocument?.uri ?: getDocumentFile(path)!!.uri
-            applicationContext.contentResolver.openOutputStream(newUri)
+            val newDocument = documentFile.createFile(mimeType, path.getFilenameFromPath()) ?: getDocumentFile(path)
+            applicationContext.contentResolver.openOutputStream(newDocument!!.uri)
         } catch (e: Exception) {
             showErrorToast(e)
             null
@@ -822,7 +856,7 @@ fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
 
     if (needsStupidWritePermissions(directory)) {
         val documentFile = getDocumentFile(directory.getParentPath()) ?: return false
-        val newDir = documentFile.createDirectory(directory.getFilenameFromPath())
+        val newDir = documentFile.createDirectory(directory.getFilenameFromPath()) ?: getDocumentFile(directory)
         return newDir != null
     }
 

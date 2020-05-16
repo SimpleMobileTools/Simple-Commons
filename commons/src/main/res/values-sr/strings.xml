@@ -162,6 +162,12 @@
         <item quantity="other">Бришем %d ставки</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d contact</item>
+        <item quantity="other">%d contacts</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Изабери складиште</string>
     <string name="internal">Унутрашња</string>
@@ -251,6 +257,7 @@
     <string name="redo">Поврати измене</string>
     <string name="print">Штампај</string>
     <string name="create_shortcut">Create shortcut</string>
+    <string name="add_number_to_contact">Add number to contact</string>
 
     <!-- Sorting -->
     <string name="sort_by">Сортирај према</string>
@@ -640,6 +647,7 @@
             само вас обавештавамо да је нова апликација објављена:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
             Можете је преузети притиском на наслов.<br><br>
             Хвала
         ]]>

@@ -77,7 +77,13 @@ fun File.getDirectChildrenCount(countHiddenItems: Boolean) = listFiles()?.filter
 
 fun File.toFileDirItem(context: Context) = FileDirItem(absolutePath, name, context.getIsPathDirectory(absolutePath), 0, length(), lastModified())
 
-fun File.containsNoMedia() = isDirectory && File(this, NOMEDIA).exists()
+fun File.containsNoMedia(): Boolean {
+    return if (!isDirectory) {
+        false
+    } else {
+        File(this, NOMEDIA).exists()
+    }
+}
 
 fun File.doesThisOrParentHaveNoMedia(): Boolean {
     var curFile = this
@@ -86,6 +92,20 @@ fun File.doesThisOrParentHaveNoMedia(): Boolean {
             return true
         }
         curFile = curFile.parentFile ?: break
+        if (curFile.absolutePath == "/") {
+            break
+        }
+    }
+    return false
+}
+
+fun File.doesParentHaveNoMedia(): Boolean {
+    var curFile = parentFile
+    while (true) {
+        if (curFile?.containsNoMedia() == true) {
+            return true
+        }
+        curFile = curFile?.parentFile ?: break
         if (curFile.absolutePath == "/") {
             break
         }

@@ -10,7 +10,7 @@
     <string name="edit_with">编辑方式</string>
     <string name="no_app_found">未找到可用应用</string>
     <string name="set_as">设置为</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_to_clipboard">复制到剪贴板</string>
     <string name="value_copied_to_clipboard">颜色值已复制到剪贴板</string>
     <string name="unknown">未知</string>
     <string name="always">总是</string>
@@ -26,14 +26,14 @@
     <string name="download">下载</string>
     <string name="notification">通知</string>
     <string name="email">电子邮件</string>
-    <string name="previous">Previous</string>
-    <string name="playpause">Play / Pause</string>
-    <string name="next">Next</string>
+    <string name="previous">上一首</string>
+    <string name="playpause">播放/暂停</string>
+    <string name="next">下一首</string>
     <string name="number">号码</string>
     <string name="no_contacts_found">未发现联系人</string>
     <string name="request_the_required_permissions">请求必要的权限</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
-    <string name="insert_text_here">Insert text here</string>
+    <string name="no_access_to_contacts">该应用无法访问联系人</string>
+    <string name="insert_text_here">在此输入文本</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">管理黑名单</string>
@@ -44,7 +44,7 @@
     <string name="blocked_numbers">黑名单</string>
     <string name="must_make_default_dialer">你必须将这应用程序设为默认的拨号程序来使用黑名单。</string>
     <string name="set_as_default">设为默认</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
+    <string name="block_confirmation">你确定要将 \"%s\" 添加到黑名单吗？</string>
 
     <!-- Favorites -->
     <string name="favorites">收藏</string>
@@ -87,7 +87,7 @@
     <string name="simple_renaming">简单重命名</string>
     <string name="pattern_renaming">图案</string>
     <string name="string_to_add">要添加的字符串</string>
-    <string name="rename_date_time_pattern">%Y - 年\n%M - 月\n%D - 日\n%h - 时\n%m - 分\n%s - 秒\n%i - number increasing from 1</string>
+    <string name="rename_date_time_pattern">%Y - 年\n%M - 月\n%D - 日\n%h - 时\n%m - 分\n%s - 秒\n%i - 数字从1递增</string>
 
     <!-- Copy / Move -->
     <string name="copy">复制</string>
@@ -157,6 +157,12 @@
 
     <plurals name="deleting_items">
         <item quantity="other">正在删除 %d 个项目</item>
+    </plurals>
+
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d contact</item>
+        <item quantity="other">%d contacts</item>
     </plurals>
 
     <!-- Storages -->
@@ -249,6 +255,7 @@
     <string name="redo">重做</string>
     <string name="print">打印</string>
     <string name="create_shortcut">创建快捷方式</string>
+    <string name="add_number_to_contact">Add number to contact</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序方式</string>
@@ -569,7 +576,7 @@
     <string name="email_label">发送反馈</string>
     <string name="upgrade_to_pro">升级到专业版</string>
     <string name="more_apps_underlined"><u>更多应用</u></string>
-    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
+    <string name="more_apps_from_us_underlined"><u>我们的其他应用</u></string>
     <string name="third_party_licences_underlined"><u>开放源代码</u></string>
     <string name="invite_friends_underlined"><u>分享给好友</u></string>
     <string name="share_text">请前往 %2$s 看看我们的 %1$s 吧！</string>
@@ -593,13 +600,13 @@
     <string name="purchase">购买</string>
     <string name="update_thank_you">请更新 Simple Thank You 到最新版本</string>
     <string name="before_asking_question_read_faq">提问之前，请先打开应用设置并阅读常见问题。也许你可以在那里找到答案。</string>
-    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
-    <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
+    <string name="before_rate_read_faq">评分之前，请先打开应用设置并阅读常见问题。也许你可以在那里找到答案。</string>
+    <string name="make_sure_latest">另外，请确保您正在使用的是最新版本的应用。</string>
     <string name="read_it">阅读</string>
     <string name="read_faq">Read FAQ</string>
     <string name="rate_us_prompt">您好，\n\n看来您使用这个应用已经有一段时间了，我们真的很感激。\n\n如果您喜欢，请在Google Play上为我们评分。这对我们很有帮助。\n\n无论你做何决定，你都不会再看到这个消息了。\n\n感谢！</string>
-    <string name="rate_our_app">Rate our app please :)</string>
-    <string name="thank_you">Thank you</string>
+    <string name="rate_our_app">请为我们的应用评分 :)</string>
+    <string name="thank_you">非常感谢</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -608,6 +615,7 @@
             最近发布了一个新的应用：<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
             你可以点击标题来下载。<br><br>
             谢谢。
         ]]>
@@ -679,5 +687,5 @@
     <string name="pro_app_refund">别忘了如果您在2小时内卸载任何付费应用将会自动退款。如果您想在之后退款，只需通过 hello@simplemobiletools.com 联系我们即可。这样你就可以放心试用了 :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">一组简约且开源的 Android 应用程序，可自定义小部件，并且没有广告和不必要的权限。</string>
 </resources>

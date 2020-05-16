@@ -162,6 +162,12 @@
         <item quantity="other">%d Elemente werden gelöscht</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d Kontakt</item>
+        <item quantity="other">%d Kontakte</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Speicher auswählen</string>
     <string name="internal">Intern</string>
@@ -252,6 +258,7 @@
     <string name="redo">Wiederholen</string>
     <string name="print">Drucken</string>
     <string name="create_shortcut">Verknüpfung erstellen</string>
+    <string name="add_number_to_contact">Add number to contact</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortieren nach</string>
@@ -641,6 +648,7 @@
             nur eine kleine Info zu einer neu veröffentlichten App:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
             Du kannst sie durch Drücken auf den Namen herunterladen.<br><br>
             Danke
         ]]>

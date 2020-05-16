@@ -162,6 +162,12 @@
         <item quantity="other">Tar bort %d objekt</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d kontakt</item>
+        <item quantity="other">%d kontakter</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Välj lagringsplats</string>
     <string name="internal">Internt</string>
@@ -252,6 +258,7 @@
     <string name="redo">Gör om</string>
     <string name="print">Skriv ut</string>
     <string name="create_shortcut">Skapa genväg</string>
+    <string name="add_number_to_contact">Add number to contact</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortera efter</string>
@@ -641,6 +648,7 @@
             jag vill bara meddela att en ny app nyligen har publicerats:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
             Du kan hämta den genom att trycka på titeln.<br><br>
             Tack
         ]]>

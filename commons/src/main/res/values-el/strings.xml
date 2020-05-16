@@ -162,6 +162,12 @@
         <item quantity="other">Διαγραφή %d στοιχεία</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d επαφή</item>
+        <item quantity="other">%d επαφές</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Επιλέξτε αποθήκευση</string>
     <string name="internal">Εσωτερική</string>
@@ -252,6 +258,7 @@
     <string name="redo">Επανάληψη</string>
     <string name="print">Εκτύπωση</string>
     <string name="create_shortcut">Δημιουργία συντόμευσης</string>
+    <string name="add_number_to_contact">Προσθήκη αριθμού επαφής</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ταξινόμηση κατά</string>
@@ -641,6 +648,7 @@
            απλά σας ενημερώνω ότι πρόσφατα κυκλοφόρησε μια νέα εφαρμογή:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
             Μπορείτε να την κατεβάσετε πατώντας τον τίτλο.<br><br>
             Ευχαριστώ
         ]]>
@@ -714,5 +722,5 @@
     <string name="pro_app_refund">Μην ξεχνάτε οτι αν απεγκατασταθεί εντός 2 ωρών, θα επιστραφούν αυτόματα τα χρήματα σας. Αν θέλετε επιστροφή χρημάτων οποιαδήποτε στιγμή αργότερα, απλά επικοινωνήστε μαζί μας στο hello@simplemobiletools.com και θα τα λάβετε. Αυτό το κάνει εύκολότερο για να την δοκιμάσετε :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Μια ομάδα Απλών εφαρμογών Android ανοιχτού κώδικα με προσαρμόσιμα γραφικά στοιχεία, χωρίς διαφημίσεις και περιττά δικαιώματα.</string>
 </resources>

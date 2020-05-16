@@ -162,6 +162,12 @@
         <item quantity="other">Eliminant %d elements</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d contacte</item>
+        <item quantity="other">%d contactes</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Selecciona emmagatzematge</string>
     <string name="internal">Emmagatzematge intern</string>
@@ -252,6 +258,7 @@
     <string name="redo">Refer</string>
     <string name="print">Imprimir</string>
     <string name="create_shortcut">Crear accès directe</string>
+    <string name="add_number_to_contact">Afegeix el número als contactes</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar per</string>
@@ -641,6 +648,7 @@
             només informar-te que una nova aplicació s\'ha publicat recentment:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
             Pots descarregar-la prement el títol.<br><br>
             Gràcies
         ]]>
@@ -714,5 +722,5 @@
     <string name="pro_app_refund">No us oblideu que si desinstal·leu qualsevol aplicació de pagament en un termini de 2 hores, se us retornarà automàticament. Si voleu un reemborsament en qualsevol moment més tard, poseu-vos en contacte amb nosaltres a hello@simplemobiletools.com i ho rebreu. Això fa que sigui fàcil provar-ho :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Un grup d\'aplicacions Android simples i de codi obert amb widgets personalitzables, sense anuncis ni permisos innecessaris.</string>
 </resources>

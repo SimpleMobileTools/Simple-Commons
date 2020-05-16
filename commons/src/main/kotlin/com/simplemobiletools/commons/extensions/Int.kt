@@ -51,12 +51,13 @@ fun Int.formatSize(): String {
     return "${DecimalFormat("#,##0.#").format(this / Math.pow(1024.0, digitGroups.toDouble()))} ${units[digitGroups]}"
 }
 
-fun Int.formatDate(context: Context): String {
+fun Int.formatDate(context: Context, dateFormat: String? = null, timeFormat: String? = null): String {
+    val useDateFormat = dateFormat ?: context.baseConfig.dateFormat
+    val useTimeFormat = timeFormat ?: context.getTimeFormat()
     val cal = Calendar.getInstance(Locale.ENGLISH)
     cal.timeInMillis = this * 1000L
-    return DateFormat.format("${context.baseConfig.dateFormat}, ${context.getTimeFormat()}", cal).toString()
+    return DateFormat.format("$useDateFormat, $useTimeFormat", cal).toString()
 }
-
 
 // if the given date is today, we show only the time. Else we show the date and optionally the time too
 fun Int.formatDateOrTime(context: Context, hideTimeAtOtherDays: Boolean): String {

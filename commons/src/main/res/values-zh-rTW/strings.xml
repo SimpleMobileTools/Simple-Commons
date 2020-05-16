@@ -159,6 +159,12 @@
         <item quantity="other">%d個項目刪除中</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d個聯絡人</item>
+        <item quantity="other">%d個聯絡人</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">選擇儲存空間</string>
     <string name="internal">內部儲存空間</string>
@@ -249,6 +255,7 @@
     <string name="redo">取消復原</string>
     <string name="print">列印</string>
     <string name="create_shortcut">建立捷徑</string>
+    <string name="add_number_to_contact">Add number to contact</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序</string>
@@ -608,6 +615,7 @@
             告訴你最近有一個新的應用程式剛發布:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
             點標題下載來試試看吧<br><br>
             謝謝
         ]]>

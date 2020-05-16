@@ -159,6 +159,12 @@
         <item quantity="other">%d アイテムを削除しています</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d contact</item>
+        <item quantity="other">%d contacts</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">ストレージを選択</string>
     <string name="internal">内部</string>
@@ -249,6 +255,7 @@
     <string name="redo">やり直し</string>
     <string name="print">印刷</string>
     <string name="create_shortcut">ショートカットを作成</string>
+    <string name="add_number_to_contact">Add number to contact</string>
 
     <!-- Sorting -->
     <string name="sort_by">並べ替え</string>
@@ -605,10 +612,11 @@
     <string name="new_app">
         <![CDATA[
             Hey,<br><br>
-            just letting you know that a new app has been released recently:<br><br>
+            just letting you know that some new apps have been released recently:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
-            You can download it by pressing the title.<br><br>
+            <a href="%5$s">%6$s</a><br><br>
+            You can download them by pressing their titles or icons.<br><br>
             Thanks
         ]]>
     </string>

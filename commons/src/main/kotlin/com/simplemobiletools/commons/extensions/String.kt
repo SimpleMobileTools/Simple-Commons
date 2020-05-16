@@ -4,18 +4,15 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Point
-import android.media.MediaMetadataRetriever
 import android.os.StatFs
+import android.provider.MediaStore
+import android.telephony.PhoneNumberUtils
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.TextUtils
-import android.text.style.BackgroundColorSpan
 import android.text.style.ForegroundColorSpan
-import android.widget.TextView
-import androidx.core.graphics.ColorUtils
 import com.bumptech.glide.signature.ObjectKey
 import com.simplemobiletools.commons.helpers.*
-import com.simplemobiletools.commons.views.MyEditText
 import java.io.File
 import java.text.Normalizer
 import java.util.*
@@ -64,9 +61,9 @@ fun String.isImageFast() = photoExtensions.any { endsWith(it, true) }
 fun String.isAudioFast() = audioExtensions.any { endsWith(it, true) }
 fun String.isRawFast() = rawExtensions.any { endsWith(it, true) }
 
-fun String.isImageSlow() = isImageFast() || getMimeType().startsWith("image")
-fun String.isVideoSlow() = isVideoFast() || getMimeType().startsWith("video")
-fun String.isAudioSlow() = isAudioFast() || getMimeType().startsWith("audio")
+fun String.isImageSlow() = isImageFast() || getMimeType().startsWith("image") || startsWith(MediaStore.Images.Media.EXTERNAL_CONTENT_URI.toString())
+fun String.isVideoSlow() = isVideoFast() || getMimeType().startsWith("video") || startsWith(MediaStore.Video.Media.EXTERNAL_CONTENT_URI.toString())
+fun String.isAudioSlow() = isAudioFast() || getMimeType().startsWith("audio") || startsWith(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI.toString())
 
 fun String.getCompressionFormat() = when (getFilenameExtension().toLowerCase()) {
     "png" -> Bitmap.CompressFormat.PNG
@@ -91,50 +88,6 @@ fun String.getParentPath() = removeSuffix("/${getFilenameFromPath()}")
 fun String.containsNoMedia() = File(this).containsNoMedia()
 
 fun String.doesThisOrParentHaveNoMedia() = File(this).doesThisOrParentHaveNoMedia()
-
-fun String.getDuration() = getFileDurationSeconds()?.getFormattedDuration()
-
-fun String.getFileDurationSeconds(): Int? {
-    return try {
-        val retriever = MediaMetadataRetriever()
-        retriever.setDataSource(this)
-        val time = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)
-        val timeInMs = java.lang.Long.parseLong(time)
-        (timeInMs / 1000).toInt()
-    } catch (e: Exception) {
-        null
-    }
-}
-
-fun String.getFileArtist(): String? {
-    return try {
-        val retriever = MediaMetadataRetriever()
-        retriever.setDataSource(this)
-        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST)
-    } catch (ignored: Exception) {
-        null
-    }
-}
-
-fun String.getFileAlbum(): String? {
-    return try {
-        val retriever = MediaMetadataRetriever()
-        retriever.setDataSource(this)
-        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUM)
-    } catch (ignored: Exception) {
-        null
-    }
-}
-
-fun String.getFileSongTitle(): String? {
-    return try {
-        val retriever = MediaMetadataRetriever()
-        retriever.setDataSource(this)
-        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE)
-    } catch (ignored: Exception) {
-        null
-    }
-}
 
 fun String.getImageResolution(): Point? {
     val options = BitmapFactory.Options()
@@ -252,7 +205,24 @@ fun String.trimToComparableNumber(): String {
 }
 
 // get the contact names first letter at showing the placeholder without image
-fun String.getNameLetter() = normalizeString().toCharArray().getOrNull(0)?.toString()?.toUpperCase(Locale.getDefault()) ?: "S"
+fun String.getNameLetter() = normalizeString().toCharArray().getOrNull(0)?.toString()?.toUpperCase(Locale.getDefault()) ?: "A"
+
+fun String.normalizePhoneNumber() = PhoneNumberUtils.normalizeNumber(this)
+
+fun String.highlightTextFromNumbers(textToHighlight: String, adjustedPrimaryColor: Int): SpannableString {
+    val spannableString = SpannableString(this)
+    val digits = PhoneNumberUtils.convertKeypadLettersToDigits(this)
+    if (digits.contains(textToHighlight)) {
+        val startIndex = digits.indexOf(textToHighlight, 0, true)
+        val endIndex = Math.min(startIndex + textToHighlight.length, length)
+        try {
+            spannableString.setSpan(ForegroundColorSpan(adjustedPrimaryColor), startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+        } catch (ignored: IndexOutOfBoundsException) {
+        }
+    }
+
+    return spannableString
+}
 
 fun String.getMimeType(): String {
     val typesMap = HashMap<String, String>().apply {
@@ -856,5 +826,6 @@ fun String.getMimeType(): String {
         put("z", "application/x-compress")
         put("zip", "application/zip")
     }
+
     return typesMap[getFilenameExtension().toLowerCase()] ?: ""
 }

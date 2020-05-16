@@ -32,12 +32,12 @@
     <string name="number">Numéro</string>
     <string name="no_contacts_found">Aucun contact n\'a été trouvé</string>
     <string name="request_the_required_permissions">Demander les autorisations nécessaires</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
-    <string name="insert_text_here">Insert text here</string>
+    <string name="no_access_to_contacts">L\'application n\'a pu accéder à vos contacts</string>
+    <string name="insert_text_here">Insérer votre texte</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gérer les numéros bloqués</string>
-    <string name="not_blocking_anyone">Vous ne bloquez personne.</string>
+    <string name="not_blocking_anyone">Aucun numéro n\'est bloqué</string>
     <string name="add_a_blocked_number">Ajouter un numéro bloqué</string>
     <string name="block_number">Numéro bloqué</string>
     <string name="block_numbers">Numéros bloqués</string>
@@ -158,8 +158,14 @@
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Suppression d\' %d élément en cours…</item>
+        <item quantity="one">Suppression d\'%d élément en cours…</item>
         <item quantity="other">Suppression de %d éléments en cours…</item>
+    </plurals>
+
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d contact</item>
+        <item quantity="other">%d contacts</item>
     </plurals>
 
     <!-- Storages -->
@@ -167,7 +173,7 @@
     <string name="internal">Interne</string>
     <string name="sd_card">Carte SD</string>
     <string name="root">Racine</string>
-    <string name="wrong_root_selected">Dossier sélectionné incorrecte, veuillez sélectionner le dossier racine de votre carte SD</string>
+    <string name="wrong_root_selected">Dossier sélectionné incorrect, veuillez sélectionner le dossier racine de votre carte SD</string>
     <string name="sd_card_usb_same">Les emplacements de la carte SD et du stockage USB ne peuvent être similaires</string>
     <string name="app_on_sd_card">L\'application semble installée sur une carte SD, ce qui empêche l\'utilisation des widgets de l\'applications. Ils n\'apparaîtront pas non plus dans la liste des widgets disponibles.
         C\'est une limitation système. Si vous voulez utiliser le widget, vous devez déplacer l\'application vers la mémoire interne.</string>
@@ -252,6 +258,7 @@
     <string name="redo">Répéter</string>
     <string name="print">Imprimer</string>
     <string name="create_shortcut">Créer un raccourci</string>
+    <string name="add_number_to_contact">Add number to contact</string>
 
     <!-- Sorting -->
     <string name="sort_by">Trier par</string>
@@ -467,7 +474,7 @@
     <string name="small">Petite</string>
     <string name="medium">Moyenne</string>
     <string name="large">Large</string>
-    <string name="extra_large">Extra large</string>
+    <string name="extra_large">Extra-large</string>
     <string name="password_protect_hidden_items">Protéger les éléments cachés par mot de passe</string>
     <string name="password_protect_whole_app">Protéger l\'application par mot de passe</string>
     <string name="password_protect_file_deletion">Protéger la suppression et le déplacement de fichiers par mot de passe</string>
@@ -643,6 +650,7 @@
             Une nouvelle application a été publiée récemment :<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
             Vous pouvez la télécharger en appuyant sur le titre.<br><br>
             Merci
         ]]>

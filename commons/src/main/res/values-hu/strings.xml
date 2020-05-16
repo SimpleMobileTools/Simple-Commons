@@ -162,6 +162,12 @@
         <item quantity="other">%d elem törlése</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d contact</item>
+        <item quantity="other">%d contacts</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Válasszon tárolót</string>
     <string name="internal">Belső</string>
@@ -251,6 +257,7 @@
     <string name="redo">Mégis</string>
     <string name="print">Nyomtatás</string>
     <string name="create_shortcut">Parancsikon készítése</string>
+    <string name="add_number_to_contact">Add number to contact</string>
 
     <!-- Sorting -->
     <string name="sort_by">Rendezés</string>
@@ -640,6 +647,7 @@
             csak tájékoztatni szeretnélek, hogy megjelent egy új alkalmazás:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
             A címre kattintva lehet letölteni.<br><br>
             Köszönöm
         ]]>

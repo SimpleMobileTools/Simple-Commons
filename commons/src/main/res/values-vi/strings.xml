@@ -162,6 +162,12 @@
         <item quantity="other">Deleting %d items</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d contact</item>
+        <item quantity="other">%d contacts</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Chọn nơi lưu trữ</string>
     <string name="internal">Bộ nhớ trong</string>
@@ -252,6 +258,7 @@
     <string name="redo">Khôi phục</string>
     <string name="print">In</string>
     <string name="create_shortcut">Tạo phím tắt</string>
+    <string name="add_number_to_contact">Add number to contact</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sắp xếp theo</string>
@@ -641,6 +648,7 @@
             chỉ cho bạn biết rằng một ứng dụng mới đã được phát hành gần đây:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
             Bạn có thể tải xuống bằng cách nhấn vào tiêu đề.<br><br>
             Thanks
         ]]>

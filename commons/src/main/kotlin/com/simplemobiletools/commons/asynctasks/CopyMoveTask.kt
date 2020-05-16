@@ -35,7 +35,6 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
     private var mDestinationPath = ""
 
     // progress indication
-    private var mNotificationManager: NotificationManager
     private var mNotificationBuilder: NotificationCompat.Builder
     private var mCurrFilename = ""
     private var mCurrentProgress = 0L
@@ -46,7 +45,6 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
 
     init {
         mListener = WeakReference(listener)
-        mNotificationManager = activity.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         mNotificationBuilder = NotificationCompat.Builder(activity)
     }
 
@@ -114,7 +112,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
         }
 
         mProgressHandler.removeCallbacksAndMessages(null)
-        mNotificationManager.cancel(mNotifId)
+        activity.notificationManager.cancel(mNotifId)
         val listener = mListener?.get() ?: return
 
         if (success) {
@@ -132,7 +130,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
             NotificationChannel(channelId, title, importance).apply {
                 enableLights(false)
                 enableVibration(false)
-                mNotificationManager.createNotificationChannel(this)
+                activity.notificationManager.createNotificationChannel(this)
             }
         }
 
@@ -143,7 +141,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
 
     private fun updateProgress() {
         if (mIsTaskOver) {
-            mNotificationManager.cancel(mNotifId)
+            activity.notificationManager.cancel(mNotifId)
             cancel(true)
             return
         }
@@ -151,7 +149,7 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
         mNotificationBuilder.apply {
             setContentText(mCurrFilename)
             setProgress(mMaxSize, (mCurrentProgress / 1000).toInt(), false)
-            mNotificationManager.notify(mNotifId, build())
+            activity.notificationManager.notify(mNotifId, build())
         }
 
         mProgressHandler.removeCallbacksAndMessages(null)

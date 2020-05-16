@@ -162,6 +162,12 @@
         <item quantity="other">Eliminazione di %d elementi in corso</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d contact</item>
+        <item quantity="other">%d contacts</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Seleziona archiviazione</string>
     <string name="internal">Interna</string>
@@ -252,6 +258,7 @@
     <string name="redo">Ripeti</string>
     <string name="print">Stampa</string>
     <string name="create_shortcut">Crea scorciatoia</string>
+    <string name="add_number_to_contact">Add number to contact</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordina per</string>
@@ -641,6 +648,7 @@
             è uscita una nuova app di recente:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
             Puoi scaricarla toccando il titolo.
             Grazie
         ]]>

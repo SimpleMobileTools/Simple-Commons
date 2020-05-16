@@ -33,7 +33,7 @@
     <string name="no_contacts_found">Geen contacten gevonden</string>
     <string name="request_the_required_permissions">Om benodigde machtigingen vragen</string>
     <string name="no_access_to_contacts">De app heeft geen toegang tot uw contacten</string>
-    <string name="insert_text_here">Insert text here</string>
+    <string name="insert_text_here">Voeg hier tekst in</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Geblokkeerde nummers beheren</string>
@@ -162,6 +162,12 @@
         <item quantity="other">%d items verwijderen</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d contact</item>
+        <item quantity="other">%d contacten</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Opslag kiezen</string>
     <string name="internal">Interne opslag</string>
@@ -252,6 +258,7 @@
     <string name="redo">Opnieuw</string>
     <string name="print">Printen</string>
     <string name="create_shortcut">Snelkoppeling maken</string>
+    <string name="add_number_to_contact">Nummer aan contact toevoegen</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorteren op</string>
@@ -641,7 +648,8 @@
             Er is recentelijk een nieuwe app uitgebracht:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
-            Downloaden kan door een druk op de naam hierboven.<br><br>
+            <a href="%5$s">%6$s</a><br><br>
+            Download de app door op de naam hierboven te klikken.<br><br>
             Dank u wel!
         ]]>
     </string>
@@ -713,5 +721,5 @@
     <string name="pro_app_refund">Bij het deïnstalleren van de app binnen 2 uur na aanschaf wordt het aankoopbedrag automatisch teruggestort. Wilt u op een later tijdstip een terugbetaling, neem dan contact op via hello@simplemobiletools.com en het wordt geregeld. Zodoende blijft het gemakkelijk om de app uit te proberen :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Een collectie van eenvoudige open source Android-apps met widgets, zonder advertenties en zonder onnodige machtigingen.</string>
 </resources>

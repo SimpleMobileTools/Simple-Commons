@@ -33,7 +33,7 @@
     <string name="no_contacts_found">Ingen kontakter fundet</string>
     <string name="request_the_required_permissions">Anmod om de krævede tilladelser</string>
     <string name="no_access_to_contacts">Appen kunne ikke tilgå dine kontakter</string>
-    <string name="insert_text_here">Insert text here</string>
+    <string name="insert_text_here">Indsæt tekst her</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrér blokerede numre</string>
@@ -162,6 +162,12 @@
         <item quantity="other">Sletter %d elementer</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d contact</item>
+        <item quantity="other">%d contacts</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Vælg lager</string>
     <string name="internal">Intern</string>
@@ -252,6 +258,7 @@
     <string name="redo">Gentag</string>
     <string name="print">Udskriv</string>
     <string name="create_shortcut">Opret genvej</string>
+    <string name="add_number_to_contact">Add number to contact</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorter efter</string>
@@ -641,6 +648,7 @@
             - synes lige du skulle vide at der er kommet en ny app:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
             Du kan downloade den med et klik på titlen.<br><br>
             Tak
         ]]>
@@ -713,5 +721,5 @@
     <string name="pro_app_refund">Husk at hvis du afinstallerer en betalt app indenfor 2 timer, får du automatisk pengene tilbage. Vil du have refunderet beløbet på et senere tidspunkt, så send en mail til hello@simplemobiletools.com . På den måde kan du prøvekøre appen uden omkostninger :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">En gruppe simple, open source apps til Android med widgets, der kan tilpasses, uden reklamer og unødvendige tilladelser.</string>
 </resources>

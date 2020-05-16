@@ -3,14 +3,15 @@ package com.simplemobiletools.commons.extensions
 import android.Manifest
 import android.annotation.TargetApi
 import android.app.Activity
+import android.app.NotificationManager
 import android.app.role.RoleManager
 import android.content.*
 import android.content.pm.PackageManager
+import android.content.pm.ShortcutManager
 import android.content.res.Configuration
 import android.database.Cursor
-import android.graphics.*
-import android.graphics.drawable.Drawable
-import android.graphics.drawable.LayerDrawable
+import android.graphics.Color
+import android.graphics.Point
 import android.media.ExifInterface
 import android.media.MediaMetadataRetriever
 import android.media.RingtoneManager
@@ -29,7 +30,6 @@ import android.telephony.PhoneNumberUtils
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
-import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
@@ -73,21 +73,21 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
 
     val cnt = viewGroup.childCount
     (0 until cnt).map { viewGroup.getChildAt(it) }
-            .forEach {
-                when (it) {
-                    is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyAppCompatSpinner -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyEditText -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyAutoCompleteTextView -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyButton -> it.setColors(textColor, accentColor, backgroundColor)
-                    is ViewGroup -> updateTextColors(it, textColor, accentColor)
-                }
+        .forEach {
+            when (it) {
+                is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyAppCompatSpinner -> it.setColors(textColor, accentColor, backgroundColor)
+                is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyEditText -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyAutoCompleteTextView -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
+                is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyButton -> it.setColors(textColor, accentColor, backgroundColor)
+                is ViewGroup -> updateTextColors(it, textColor, accentColor)
             }
+        }
 }
 
 fun Context.getLinkTextColor(): Int {
@@ -151,33 +151,35 @@ val Context.otgPath: String get() = baseConfig.OTGPath
 fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHardwarePresent()
 
 fun Context.getLatestMediaId(uri: Uri = Files.getContentUri("external")): Long {
-    val MAX_VALUE = "max_value"
-    val projection = arrayOf("MAX(${BaseColumns._ID}) AS $MAX_VALUE")
-    var cursor: Cursor? = null
+    val projection = arrayOf(
+        BaseColumns._ID
+    )
+    val sortOrder = "${BaseColumns._ID} DESC LIMIT 1"
     try {
-        cursor = contentResolver.query(uri, projection, null, null, null)
-        if (cursor?.moveToFirst() == true) {
-            return cursor.getLongValue(MAX_VALUE)
+        val cursor = contentResolver.query(uri, projection, null, null, sortOrder)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getLongValue(BaseColumns._ID)
+            }
         }
     } catch (ignored: Exception) {
-    } finally {
-        cursor?.close()
     }
     return 0
 }
 
 fun Context.getLatestMediaByDateId(uri: Uri = Files.getContentUri("external")): Long {
-    val projection = arrayOf(BaseColumns._ID)
-    val sortOrder = "${Images.ImageColumns.DATE_TAKEN} DESC"
-    var cursor: Cursor? = null
+    val projection = arrayOf(
+        BaseColumns._ID
+    )
+    val sortOrder = "${Images.ImageColumns.DATE_TAKEN} DESC LIMIT 1"
     try {
-        cursor = contentResolver.query(uri, projection, null, null, sortOrder)
-        if (cursor?.moveToFirst() == true) {
-            return cursor.getLongValue(BaseColumns._ID)
+        val cursor = contentResolver.query(uri, projection, null, null, sortOrder)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getLongValue(BaseColumns._ID)
+            }
         }
     } catch (ignored: Exception) {
-    } finally {
-        cursor?.close()
     }
     return 0
 }
@@ -266,6 +268,7 @@ fun Context.getPermissionString(id: Int) = when (id) {
     PERMISSION_GET_ACCOUNTS -> Manifest.permission.GET_ACCOUNTS
     PERMISSION_READ_SMS -> Manifest.permission.READ_SMS
     PERMISSION_SEND_SMS -> Manifest.permission.SEND_SMS
+    PERMISSION_READ_PHONE_STATE -> Manifest.permission.READ_PHONE_STATE
     else -> ""
 }
 
@@ -314,13 +317,13 @@ fun Context.getMediaContent(path: String, uri: Uri): Uri? {
 }
 
 fun Context.queryCursor(
-        uri: Uri,
-        projection: Array<String>,
-        selection: String? = null,
-        selectionArgs: Array<String>? = null,
-        sortOrder: String? = null,
-        showErrors: Boolean = false,
-        callback: (cursor: Cursor) -> Unit
+    uri: Uri,
+    projection: Array<String>,
+    selection: String? = null,
+    selectionArgs: Array<String>? = null,
+    sortOrder: String? = null,
+    showErrors: Boolean = false,
+    callback: (cursor: Cursor) -> Unit
 ) {
     try {
         val cursor = contentResolver.query(uri, projection, selection, selectionArgs, sortOrder)
@@ -698,6 +701,139 @@ fun Context.getVideoResolution(path: String): Point? {
     return point
 }
 
+fun Context.getDuration(path: String): Int? {
+    val projection = arrayOf(
+        MediaColumns.DURATION
+    )
+
+    val uri = getFileUri(path)
+    val selection = if (path.startsWith("content://")) "${BaseColumns._ID} = ?" else "${MediaColumns.DATA} = ?"
+    val selectionArgs = if (path.startsWith("content://")) arrayOf(path.substringAfterLast("/")) else arrayOf(path)
+
+    try {
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return Math.round(cursor.getIntValue(MediaColumns.DURATION) / 1000.toDouble()).toInt()
+            }
+        }
+    } catch (ignored: Exception) {
+    }
+
+    return try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(path)
+        Math.round(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION).toInt() / 1000f)
+    } catch (ignored: Exception) {
+        null
+    }
+}
+
+fun Context.getTitle(path: String): String? {
+    val projection = arrayOf(
+        MediaColumns.TITLE
+    )
+
+    val uri = getFileUri(path)
+    val selection = if (path.startsWith("content://")) "${BaseColumns._ID} = ?" else "${MediaColumns.DATA} = ?"
+    val selectionArgs = if (path.startsWith("content://")) arrayOf(path.substringAfterLast("/")) else arrayOf(path)
+
+    try {
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getStringValue(MediaColumns.TITLE)
+            }
+        }
+    } catch (ignored: Exception) {
+    }
+
+    return try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(path)
+        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE)
+    } catch (ignored: Exception) {
+        null
+    }
+}
+
+fun Context.getArtist(path: String): String? {
+    val projection = arrayOf(
+        Audio.Media.ARTIST
+    )
+
+    val uri = getFileUri(path)
+    val selection = if (path.startsWith("content://")) "${BaseColumns._ID} = ?" else "${MediaColumns.DATA} = ?"
+    val selectionArgs = if (path.startsWith("content://")) arrayOf(path.substringAfterLast("/")) else arrayOf(path)
+
+    try {
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getStringValue(Audio.Media.ARTIST)
+            }
+        }
+    } catch (ignored: Exception) {
+    }
+
+    return try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(path)
+        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST)
+    } catch (ignored: Exception) {
+        null
+    }
+}
+
+fun Context.getAlbum(path: String): String? {
+    val projection = arrayOf(
+        Audio.Media.ALBUM
+    )
+
+    val uri = getFileUri(path)
+    val selection = if (path.startsWith("content://")) "${BaseColumns._ID} = ?" else "${MediaColumns.DATA} = ?"
+    val selectionArgs = if (path.startsWith("content://")) arrayOf(path.substringAfterLast("/")) else arrayOf(path)
+
+    try {
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getStringValue(Audio.Media.ALBUM)
+            }
+        }
+    } catch (ignored: Exception) {
+    }
+
+    return try {
+        val retriever = MediaMetadataRetriever()
+        retriever.setDataSource(path)
+        retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUM)
+    } catch (ignored: Exception) {
+        null
+    }
+}
+
+fun Context.getMediaStoreLastModified(path: String): Long {
+    val projection = arrayOf(
+        MediaColumns.DATE_MODIFIED
+    )
+
+    val uri = getFileUri(path)
+    val selection = "${BaseColumns._ID} = ?"
+    val selectionArgs = arrayOf(path.substringAfterLast("/"))
+
+    try {
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getLongValue(MediaColumns.DATE_MODIFIED) * 1000
+            }
+        }
+    } catch (ignored: Exception) {
+    }
+    return 0
+}
+
 fun Context.getStringsPackageName() = getString(R.string.package_name)
 
 fun Context.getFontSizeText() = getString(when (baseConfig.fontSize) {
@@ -716,10 +852,13 @@ fun Context.getTextSize() = when (baseConfig.fontSize) {
 
 val Context.telecomManager: TelecomManager get() = getSystemService(Context.TELECOM_SERVICE) as TelecomManager
 val Context.windowManager: WindowManager get() = getSystemService(Context.WINDOW_SERVICE) as WindowManager
+val Context.notificationManager: NotificationManager get() = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+val Context.shortcutManager: ShortcutManager get() = getSystemService(ShortcutManager::class.java) as ShortcutManager
+
 val Context.portrait get() = resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT
 val Context.navigationBarRight: Boolean get() = usableScreenSize.x < realScreenSize.x
 val Context.navigationBarBottom: Boolean get() = usableScreenSize.y < realScreenSize.y
-val Context.navigationBarHeight: Int get() = if (navigationBarBottom) navigationBarSize.y else 0
+val Context.navigationBarHeight: Int get() = if (navigationBarBottom && navigationBarSize.y != usableScreenSize.y) navigationBarSize.y else 0
 val Context.navigationBarWidth: Int get() = if (navigationBarRight) navigationBarSize.x else 0
 
 val Context.navigationBarSize: Point
@@ -772,12 +911,12 @@ val Context.realScreenSize: Point
         return size
     }
 
-// we need the Default Dialer functionality only in Simple Contacts
+// we need the Default Dialer functionality only in Simple Dialer and in Simple Contacts for now
 @TargetApi(Build.VERSION_CODES.M)
 fun Context.isDefaultDialer(): Boolean {
-    return if (!packageName.startsWith("com.simplemobiletools.contacts")) {
+    return if (!packageName.startsWith("com.simplemobiletools.contacts") && !packageName.startsWith("com.simplemobiletools.dialer")) {
         true
-    } else if (packageName.startsWith("com.simplemobiletools.contacts") && isQPlus()) {
+    } else if ((packageName.startsWith("com.simplemobiletools.contacts") || packageName.startsWith("com.simplemobiletools.dialer")) && isQPlus()) {
         val roleManager = getSystemService(RoleManager::class.java)
         roleManager!!.isRoleAvailable(RoleManager.ROLE_DIALER) && roleManager.isRoleHeld(RoleManager.ROLE_DIALER)
     } else {
@@ -794,9 +933,9 @@ fun Context.getBlockedNumbers(): ArrayList<BlockedNumber> {
 
     val uri = BlockedNumbers.CONTENT_URI
     val projection = arrayOf(
-            BlockedNumbers.COLUMN_ID,
-            BlockedNumbers.COLUMN_ORIGINAL_NUMBER,
-            BlockedNumbers.COLUMN_E164_NUMBER
+        BlockedNumbers.COLUMN_ID,
+        BlockedNumbers.COLUMN_ORIGINAL_NUMBER,
+        BlockedNumbers.COLUMN_E164_NUMBER
     )
 
     queryCursor(uri, projection) { cursor ->
@@ -829,41 +968,4 @@ fun Context.deleteBlockedNumber(number: String) {
     val selection = "${BlockedNumbers.COLUMN_ORIGINAL_NUMBER} = ?"
     val selectionArgs = arrayOf(number)
     contentResolver.delete(BlockedNumbers.CONTENT_URI, selection, selectionArgs)
-}
-
-fun Context.getContactLetterIcon(name: String): Bitmap {
-    val letter = name.getNameLetter()
-    val size = resources.getDimension(R.dimen.normal_icon_size).toInt()
-    val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
-    val canvas = Canvas(bitmap)
-    val view = TextView(this)
-    view.layout(0, 0, size, size)
-
-    val circlePaint = Paint().apply {
-        color = letterBackgroundColors[Math.abs(name.hashCode()) % letterBackgroundColors.size].toInt()
-        isAntiAlias = true
-    }
-
-    val wantedTextSize = size / 2f
-    val textPaint = Paint().apply {
-        color = circlePaint.color.getContrastColor()
-        isAntiAlias = true
-        textAlign = Paint.Align.CENTER
-        textSize = wantedTextSize
-    }
-
-    canvas.drawCircle(size / 2f, size / 2f, size / 2f, circlePaint)
-
-    val xPos = canvas.width / 2f
-    val yPos = canvas.height / 2 - (textPaint.descent() + textPaint.ascent()) / 2
-    canvas.drawText(letter, xPos, yPos, textPaint)
-    view.draw(canvas)
-    return bitmap
-}
-
-fun Context.getColoredGroupIcon(title: String): Drawable {
-    val icon = resources.getDrawable(R.drawable.ic_group_circle_bg)
-    val bgColor = letterBackgroundColors[Math.abs(title.hashCode()) % letterBackgroundColors.size].toInt()
-    (icon as LayerDrawable).findDrawableByLayerId(R.id.attendee_circular_background).applyColorFilter(bgColor)
-    return icon
 }

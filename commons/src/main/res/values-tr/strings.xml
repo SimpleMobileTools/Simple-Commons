@@ -162,6 +162,12 @@
         <item quantity="other">%d öğe siliniyor</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d kişi</item>
+        <item quantity="other">%d kişi</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Depolama seç</string>
     <string name="internal">Dahili</string>
@@ -252,6 +258,7 @@
     <string name="redo">Yinele</string>
     <string name="print">Yazdır</string>
     <string name="create_shortcut">Kısayol oluştur</string>
+    <string name="add_number_to_contact">Add number to contact</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sıralama ölçütü</string>
@@ -641,6 +648,7 @@
             kısa bir süre önce yeni uygulamamın yayınlandığını bilmenizi istiyorum:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
             Başlığa basarak indirebilirsiniz.<br><br>
             Teşekkürler
         ]]>

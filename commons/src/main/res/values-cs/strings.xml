@@ -165,6 +165,13 @@
         <item quantity="other">Odstraňuje se %d položek</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d kontakt</item>
+        <item quantity="few">%d kontakty</item>
+        <item quantity="other">%d kontaktů</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">Zvolit úložiště</string>
     <string name="internal">Interní</string>
@@ -255,6 +262,7 @@
     <string name="redo">Znovu</string>
     <string name="print">Tisk</string>
     <string name="create_shortcut">Vytvořit zkratku</string>
+    <string name="add_number_to_contact">Add number to contact</string>
 
     <!-- Sorting -->
     <string name="sort_by">Seřadit dle</string>
@@ -674,6 +682,7 @@
             pouze bych vám chtěl oznámit, že byla nedávno uveřejněna nová aplikace:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
             Stáhnete ji klepnutím na název.<br><br>
             Děkuji
         ]]>

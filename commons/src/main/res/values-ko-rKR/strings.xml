@@ -159,6 +159,12 @@
         <item quantity="other">%d개 항목 삭제중</item>
     </plurals>
 
+    <!-- Are you sure you want to delete 5 contacts? -->
+    <plurals name="delete_contacts">
+        <item quantity="one">%d contact</item>
+        <item quantity="other">%d contacts</item>
+    </plurals>
+
     <!-- Storages -->
     <string name="select_storage">저장공간 선택</string>
     <string name="internal">내장 메모리</string>
@@ -247,6 +253,7 @@
     <string name="redo">앞으로</string>
     <string name="print">인쇄</string>
     <string name="create_shortcut">바로가기 생성</string>
+    <string name="add_number_to_contact">Add number to contact</string>
 
     <!-- Sorting -->
     <string name="sort_by">정렬 방식</string>
@@ -608,6 +615,7 @@
             저희의 새로운 앱이 출시되었습니다:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
+            <a href="%5$s">%6$s</a><br><br>
             위 링크를 탭하여 받을 수 있습니다.<br><br>
             감사합니다.
         ]]>

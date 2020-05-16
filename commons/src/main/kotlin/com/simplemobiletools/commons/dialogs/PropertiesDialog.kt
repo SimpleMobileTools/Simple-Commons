@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.dialogs
 import android.app.Activity
 import android.content.res.Resources
 import android.media.ExifInterface
+import android.net.Uri
 import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
@@ -35,7 +36,7 @@ class PropertiesDialog() {
      * @param countHiddenItems toggle determining if we will count hidden files themselves and their sizes (reasonable only at directory properties)
      */
     constructor(activity: Activity, path: String, countHiddenItems: Boolean = false) : this() {
-        if (!activity.getDoesFilePathExist(path)) {
+        if (!activity.getDoesFilePathExist(path) && !path.startsWith("content://")) {
             activity.toast(String.format(activity.getString(R.string.source_file_doesnt_exist), path))
             return
         }
@@ -79,6 +80,12 @@ class PropertiesDialog() {
 
                 val exif = if (isNougatPlus() && activity.isPathOnOTG(fileDirItem.path)) {
                     ExifInterface((activity as BaseSimpleActivity).getFileInputStreamSync(fileDirItem.path)!!)
+                } else if (isNougatPlus() && fileDirItem.path.startsWith("content://")) {
+                    try {
+                        ExifInterface(activity.contentResolver.openInputStream(Uri.parse(fileDirItem.path)))
+                    } catch (e: Exception) {
+                        return@ensureBackgroundThread
+                    }
                 } else {
                     ExifInterface(fileDirItem.path)
                 }
@@ -108,16 +115,16 @@ class PropertiesDialog() {
                 fileDirItem.getResolution(activity)?.let { addProperty(R.string.resolution, it.formatAsResolution()) }
             }
             fileDirItem.path.isAudioSlow() -> {
-                fileDirItem.getDuration()?.let { addProperty(R.string.duration, it) }
-                fileDirItem.getSongTitle()?.let { addProperty(R.string.song_title, it) }
-                fileDirItem.getArtist()?.let { addProperty(R.string.artist, it) }
-                fileDirItem.getAlbum()?.let { addProperty(R.string.album, it) }
+                fileDirItem.getDuration(activity)?.let { addProperty(R.string.duration, it) }
+                fileDirItem.getTitle(activity)?.let { addProperty(R.string.song_title, it) }
+                fileDirItem.getArtist(activity)?.let { addProperty(R.string.artist, it) }
+                fileDirItem.getAlbum(activity)?.let { addProperty(R.string.album, it) }
             }
             fileDirItem.path.isVideoSlow() -> {
-                fileDirItem.getDuration()?.let { addProperty(R.string.duration, it) }
+                fileDirItem.getDuration(activity)?.let { addProperty(R.string.duration, it) }
                 fileDirItem.getResolution(activity)?.let { addProperty(R.string.resolution, it.formatAsResolution()) }
-                fileDirItem.getArtist()?.let { addProperty(R.string.artist, it) }
-                fileDirItem.getAlbum()?.let { addProperty(R.string.album, it) }
+                fileDirItem.getArtist(activity)?.let { addProperty(R.string.artist, it) }
+                fileDirItem.getAlbum(activity)?.let { addProperty(R.string.album, it) }
             }
         }
 
@@ -134,10 +141,10 @@ class PropertiesDialog() {
         }
 
         AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok, null)
-                .create().apply {
-                    activity.setupDialogStuff(view, this, R.string.properties)
-                }
+            .setPositiveButton(R.string.ok, null)
+            .create().apply {
+                activity.setupDialogStuff(view, this, R.string.properties)
+            }
     }
 
     private fun updateLastModified(activity: Activity, view: View, timestamp: Long) {
@@ -186,15 +193,21 @@ class PropertiesDialog() {
         }
 
         AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok, null)
-                .create().apply {
-                    activity.setupDialogStuff(view, this, R.string.properties)
-                }
+            .setPositiveButton(R.string.ok, null)
+            .create().apply {
+                activity.setupDialogStuff(view, this, R.string.properties)
+            }
     }
 
     private fun addExifProperties(path: String, activity: Activity) {
         val exif = if (isNougatPlus() && activity.isPathOnOTG(path)) {
             ExifInterface((activity as BaseSimpleActivity).getFileInputStreamSync(path)!!)
+        } else if (isNougatPlus() && path.startsWith("content://")) {
+            try {
+                ExifInterface(activity.contentResolver.openInputStream(Uri.parse(path)))
+            } catch (e: Exception) {
+                return
+            }
         } else {
             ExifInterface(path)
         }

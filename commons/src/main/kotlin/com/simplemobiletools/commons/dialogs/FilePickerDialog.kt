@@ -40,6 +40,8 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     private var mFirstUpdate = true
     private var mPrevPath = ""
     private var mScrollStates = HashMap<String, Parcelable>()
+    private val mDateFormat = activity.baseConfig.dateFormat
+    private val mTimeFormat = activity.getTimeFormat()
 
     private lateinit var mDialog: AlertDialog
     private var mDialogView = activity.layoutInflater.inflate(R.layout.dialog_filepicker, null)
@@ -165,7 +167,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             filepicker_breadcrumbs.setBreadcrumb(currPath)
             filepicker_fastscroller.allowBubbleDisplay = context.baseConfig.showInfoBubble
             filepicker_fastscroller.setViews(filepicker_list) {
-                filepicker_fastscroller.updateBubbleText(items.getOrNull(it)?.getBubbleText(context) ?: "")
+                filepicker_fastscroller.updateBubbleText(items.getOrNull(it)?.getBubbleText(context, mDateFormat, mTimeFormat) ?: "")
             }
 
             layoutManager.onRestoreInstanceState(mScrollStates[currPath.trimEnd('/')])
