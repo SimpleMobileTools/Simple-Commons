@@ -654,6 +654,23 @@
         ]]>
     </string>
 
+    <string name="simple_app_launcher">Simple App Launcher</string>
+    <string name="simple_calculator">Simple Calculator</string>
+    <string name="simple_calendar">Simple Calendar</string>
+    <string name="simple_camera">Simple Camera</string>
+    <string name="simple_clock">Simple Clock</string>
+    <string name="simple_contacts">Simple Contacts</string>
+    <string name="simple_dialer">Simple Dialer</string>
+    <string name="simple_draw">Simple Draw</string>
+    <string name="simple_file_manager">Simple File Manager</string>
+    <string name="simple_flashlight">Simple Flashlight</string>
+    <string name="simple_gallery">Simple Gallery</string>
+    <string name="simple_music_player">Simple Music Player</string>
+    <string name="simple_notes">Simple Notes</string>
+    <string name="simple_sms_messenger">Simple SMS Messenger</string>
+    <string name="simple_thank_you">Simple Thank You</string>
+    <string name="simple_voice_recorder">Simple Voice Recorder</string>
+
     <string name="sideloaded_app">
         <![CDATA[
             Parece que a sua aplicação está danificada. Descarregue a versão original <a href="%s">aqui</a>.
