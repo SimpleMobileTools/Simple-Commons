@@ -19,7 +19,7 @@ class NewAppsIconsDialog(val activity: Activity) {
             val text = String.format(activity.getString(R.string.new_app),
                 dialerUrl, activity.getString(R.string.simple_dialer),
                 smsMessengerUrl, activity.getString(R.string.simple_sms_messenger),
-                voiceRecorderUrl, activity.getString(R.string.simple_voice_recorder),
+                voiceRecorderUrl, activity.getString(R.string.simple_voice_recorder)
             )
 
             new_apps_text.text = Html.fromHtml(text)
