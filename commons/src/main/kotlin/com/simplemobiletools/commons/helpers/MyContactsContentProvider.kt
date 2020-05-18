@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.helpers
 
+import android.content.Context
 import android.database.Cursor
 import android.net.Uri
 import com.simplemobiletools.commons.extensions.getIntValue
@@ -18,8 +19,13 @@ class MyContactsContentProvider {
         const val COL_PHOTO_URI = "photo_uri"
         const val COL_PHONE_NUMBER = "phone_number"
 
-        fun getSimpleContacts(cursor: Cursor?): ArrayList<SimpleContact> {
+        fun getSimpleContacts(context: Context, cursor: Cursor?): ArrayList<SimpleContact> {
             val contacts = ArrayList<SimpleContact>()
+            val packageName = context.packageName.removeSuffix(".debug")
+            if (packageName != "com.simplemobiletools.dialer" && packageName != "com.simplemobiletools.smsmessenger") {
+                return contacts
+            }
+
             try {
                 cursor?.use {
                     if (cursor.moveToFirst()) {
