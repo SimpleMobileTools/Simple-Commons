@@ -503,10 +503,18 @@
     <string name="scrolling">Cuộn</string>
     <string name="file_operations">Thao tác tập tin</string>
     <string name="recycle_bin">Thùng rác</string>
-    <string name="saving_label">Đang lưu... </string>
+    <string name="saving_label">Đang lưu… </string>
     <string name="startup">Mở đầu</string>
     <string name="text">Văn bản</string>
     <string name="migrating">Di chuyển</string>
+
+    <!-- Default tabs to open -->
+    <string name="default_tab_to_open">Tab to open at app start</string>
+    <string name="contacts_tab">Contacts</string>
+    <string name="favorites_tab">Favorites</string>
+    <string name="call_history_tab">Call History</string>
+    <string name="groups_tab">Groups</string>
+    <string name="last_used_tab">Last used one</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Khôi phục tập tin này</string>

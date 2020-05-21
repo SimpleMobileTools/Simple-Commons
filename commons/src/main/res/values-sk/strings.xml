@@ -541,6 +541,14 @@
     <string name="text">Text</string>
     <string name="migrating">Migrovanie</string>
 
+    <!-- Default tabs to open -->
+    <string name="default_tab_to_open">Karta otvorená po spustení apky</string>
+    <string name="contacts_tab">Kontakty</string>
+    <string name="favorites_tab">Obľúbené</string>
+    <string name="call_history_tab">História volaní</string>
+    <string name="groups_tab">Skupiny</string>
+    <string name="last_used_tab">Naposledy použitá</string>
+
     <!-- Recycle Bin -->
     <string name="restore_this_file">Obnoviť tento súbor</string>
     <string name="restore_selected_files">Obnoviť vybrané súbory</string>
