@@ -133,6 +133,7 @@ const val LAST_EXPORTED_SETTINGS_FOLDER = "last_exported_settings_folder"
 const val LAST_EXPORTED_SETTINGS_FILE = "last_exported_settings_file"
 const val FONT_SIZE = "font_size"
 const val WAS_MESSENGER_RECORDER_SHOWN = "was_messenger_recorder_shown"
+const val DEFAULT_TAB = "default_tab"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
@@ -251,6 +252,13 @@ const val WEEKENDS_BIT = SATURDAY_BIT or SUNDAY_BIT
 const val SIDELOADING_UNCHECKED = 0
 const val SIDELOADING_TRUE = 1
 const val SIDELOADING_FALSE = 2
+
+// default tabs
+const val TAB_CONTACTS = 1
+const val TAB_FAVORITES = 2
+const val TAB_CALL_HISTORY = 3
+const val TAB_GROUPS = 4
+const val TAB_LAST_USED = 5
 
 val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp", ".heic", ".heif")
 val videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
