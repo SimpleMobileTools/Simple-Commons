@@ -254,11 +254,11 @@ const val SIDELOADING_TRUE = 1
 const val SIDELOADING_FALSE = 2
 
 // default tabs
+const val TAB_LAST_USED = 0
 const val TAB_CONTACTS = 1
 const val TAB_FAVORITES = 2
-const val TAB_CALL_HISTORY = 3
-const val TAB_GROUPS = 4
-const val TAB_LAST_USED = 5
+const val TAB_CALL_HISTORY = 4
+const val TAB_GROUPS = 8
 
 val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp", ".heic", ".heif")
 val videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")
