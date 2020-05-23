@@ -971,3 +971,12 @@ fun Context.deleteBlockedNumber(number: String) {
     val selectionArgs = arrayOf(number)
     contentResolver.delete(BlockedNumbers.CONTENT_URI, selection, selectionArgs)
 }
+
+fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
+    if (!isNougatPlus()) {
+        return false
+    }
+
+    val numberToCompare = number.trimToComparableNumber()
+    return blockedNumbers.map { it.numberToCompare }.contains(numberToCompare) || blockedNumbers.map { it.number }.contains(numberToCompare)
+}
