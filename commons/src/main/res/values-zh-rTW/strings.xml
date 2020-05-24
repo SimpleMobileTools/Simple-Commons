@@ -646,6 +646,23 @@
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
 
+    <string name="app_launcher_short">App Launcher</string>
+    <string name="calculator_short">計算機</string>
+    <string name="calendar_short">行事曆</string>
+    <string name="camera_short">相機</string>
+    <string name="clock_short">簡易時鐘</string>
+    <string name="contacts_short">通訊錄</string>
+    <string name="dialer_short">Dialer</string>
+    <string name="draw_short">繪圖</string>
+    <string name="file_manager_short">檔案管理器</string>
+    <string name="flashlight_short">手電筒</string>
+    <string name="gallery_short">相簿</string>
+    <string name="music_player_short">音樂播放器</string>
+    <string name="notes_short">筆記</string>
+    <string name="sms_messenger_short">SMS Messenger</string>
+    <string name="thank_you_short">Thank You</string>
+    <string name="voice_recorder_short">Voice Recorder</string>
+
     <string name="sideloaded_app">
         <![CDATA[
             你的應用程式版本似乎是損壞的。請從 <a href="%s">這裡</a> 下載原始版本。
