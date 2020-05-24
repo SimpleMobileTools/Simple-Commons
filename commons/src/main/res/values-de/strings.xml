@@ -33,7 +33,7 @@
     <string name="no_contacts_found">Keine Kontakte gefunden</string>
     <string name="request_the_required_permissions">Benötigte Berechtigungen anfordern</string>
     <string name="no_access_to_contacts">Die App kann nicht auf deine Kontakte zugreifen</string>
-    <string name="insert_text_here">Insert text here</string>
+    <string name="insert_text_here">Text hier einfügen</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Blockierte Nummern verwalten</string>
@@ -258,7 +258,7 @@
     <string name="redo">Wiederholen</string>
     <string name="print">Drucken</string>
     <string name="create_shortcut">Verknüpfung erstellen</string>
-    <string name="add_number_to_contact">Add number to contact</string>
+    <string name="add_number_to_contact">füge Nummer zu Kontakt hinzu</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortieren nach</string>
@@ -509,12 +509,12 @@
     <string name="migrating">Migrieren</string>
 
     <!-- Default tabs to open -->
-    <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
+    <string name="default_tab_to_open">Tab welcher beim App Start angezeigt wird</string>
+    <string name="contacts_tab">Kontakte</string>
+    <string name="favorites_tab">Favoriten</string>
+    <string name="call_history_tab">Anrufliste</string>
     <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
+    <string name="last_used_tab">zuletzt verwendeter Tab</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Diese Datei wiederherstellen</string>
