@@ -14,6 +14,7 @@ import java.util.*
 
 class ChangeDateTimeFormatDialog(val activity: Activity, val datesOnly: Boolean = false, val callback: () -> Unit) {
     val view = activity.layoutInflater.inflate(R.layout.dialog_change_date_time_format, null)!!
+    val sampleTS = 1557964800000    // May 16, 2019
 
     init {
         view.apply {
@@ -68,8 +69,8 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val datesOnly: Boolean 
     }
 
     private fun formatDateSample(format: String): String {
-        val cal = Calendar.getInstance().time
+        val cal = Calendar.getInstance(Locale.ENGLISH)
+        cal.timeInMillis = sampleTS
         return DateFormat.format(format, cal).toString()
-
     }
 }
