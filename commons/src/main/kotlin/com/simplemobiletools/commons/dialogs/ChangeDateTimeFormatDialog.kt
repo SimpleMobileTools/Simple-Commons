@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
 import android.text.format.DateFormat
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.R.id.*
@@ -11,7 +12,7 @@ import com.simplemobiletools.commons.helpers.*
 import kotlinx.android.synthetic.main.dialog_change_date_time_format.view.*
 import java.util.*
 
-class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Unit) {
+class ChangeDateTimeFormatDialog(val activity: Activity, val datesOnly: Boolean = false, val callback: () -> Unit) {
     val view = activity.layoutInflater.inflate(R.layout.dialog_change_date_time_format, null)!!
     val sampleTS = 1557964800000    // May 16, 2019
 
@@ -25,7 +26,9 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Uni
             change_date_time_dialog_radio_six.text = formatDateSample(DATE_FORMAT_SIX)
             change_date_time_dialog_radio_seven.text = formatDateSample(DATE_FORMAT_SEVEN)
             change_date_time_dialog_radio_eight.text = formatDateSample(DATE_FORMAT_EIGHT)
+            change_date_time_dialog_radio_nine.text = formatDateSample(DATE_FORMAT_NINE)
 
+            change_date_time_dialog_24_hour.visibility = if (datesOnly) View.INVISIBLE else View.VISIBLE
             change_date_time_dialog_24_hour.isChecked = activity.baseConfig.use24HourFormat
 
             val formatButton = when (activity.baseConfig.dateFormat) {

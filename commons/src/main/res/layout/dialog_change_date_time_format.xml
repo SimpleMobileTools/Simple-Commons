@@ -84,6 +84,14 @@
             android:paddingBottom="@dimen/normal_margin"
             tools:text="MMMM d yyyy" />
 
+        <com.simplemobiletools.commons.views.MyCompatRadioButton
+            android:id="@+id/change_date_time_dialog_radio_nine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/normal_margin"
+            android:paddingBottom="@dimen/normal_margin"
+            tools:text="dd. MMMM yyyy" />
+
     </RadioGroup>
 
     <com.simplemobiletools.commons.views.MyAppCompatCheckbox
