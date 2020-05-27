@@ -27,7 +27,7 @@
     <string name="notification">Notificação</string>
     <string name="email">E-mail</string>
     <string name="previous">Anterior</string>
-    <string name="playpause">Reproduzir / Pausa</string>
+    <string name="playpause">Reproduzir/Pausa</string>
     <string name="next">Seguinte</string>
     <string name="number">Número</string>
     <string name="no_contacts_found">Não existem contactos</string>
@@ -42,7 +42,7 @@
     <string name="block_number">Bloquear número</string>
     <string name="block_numbers">Bloquear números</string>
     <string name="blocked_numbers">Números bloqueados</string>
-    <string name="must_make_default_dialer">Tem que tornar esta a aplicação padrão para poder bloquear números.</string>
+    <string name="must_make_default_dialer">Tem que tornar esta aplicação como predefinição para poder bloquear números.</string>
     <string name="set_as_default">Definir como padrão</string>
     <string name="block_confirmation">Tem a certeza de que deseja bloquear \"%s\"?</string>
 
@@ -54,7 +54,7 @@
 
     <!-- Search -->
     <string name="search">Pesquisar</string>
-    <string name="type_2_characters">Inytroduza, pelo menos, 2 caracteres para iniciar a pesquisa.</string>
+    <string name="type_2_characters">Introduza, pelo menos, 2 caracteres para iniciar a pesquisa.</string>
 
     <!-- Filters -->
     <string name="filter">Filtrar</string>
@@ -509,16 +509,16 @@
     <string name="migrating">Migração</string>
 
     <!-- Default tabs to open -->
-    <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
+    <string name="default_tab_to_open">Separador a mostrar ao iniciar</string>
+    <string name="contacts_tab">Contactos</string>
+    <string name="favorites_tab">Favoritos</string>
+    <string name="call_history_tab">Histórico de chamadas</string>
+    <string name="groups_tab">Grupos</string>
+    <string name="last_used_tab">Último utilizado</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restaurar este ficheiro</string>
-    <string name="restore_selected_files">Restaurar os ficheiros selecionados</string>
+    <string name="restore_selected_files">Restaurar ficheiros selecionados</string>
     <string name="restore_all_files">Restaurar todos os ficheiros</string>
     <string name="recycle_bin_emptied">A reciclagem foi limpa</string>
     <string name="files_restored_successfully">Os ficheiros foram restaurados</string>
