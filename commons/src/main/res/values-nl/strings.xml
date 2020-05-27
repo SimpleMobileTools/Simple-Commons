@@ -222,7 +222,7 @@
     <string name="share_colors_success">Kleuren gewijzigd. Gebruik het nieuwe thema \'Gedeeld\' om de kleuren voor al onze apps aan te passen.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Om deze functie te gebruiken en om verdere ontwikkeling te ondersteunen kunt u <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> aanschaffen. Alvast bedankt!
+            Om deze functie te gebruiken en om verdere ontwikkeling te ondersteunen kunt u <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Eenvoudig Bedankje</a> aanschaffen. Alvast bedankt!
         ]]>
     </string>
 
@@ -463,7 +463,7 @@
 
     <!-- Settings -->
     <string name="settings">Instellingen</string>
-    <string name="purchase_simple_thank_you">Simple Thank You kopen</string>
+    <string name="purchase_simple_thank_you">Eenvoudig Bedankje kopen</string>
     <string name="customize_colors">Kleuren aanpassen</string>
     <string name="customize_widget_colors">Kleuren voor widget aanpassen</string>
     <string name="use_english_language">Use English language</string>
@@ -507,6 +507,14 @@
     <string name="startup">Opstarten</string>
     <string name="text">Tekst</string>
     <string name="migrating">Migreren</string>
+
+    <!-- Default tabs to open -->
+    <string name="default_tab_to_open">Tab openen bij opstarten</string>
+    <string name="contacts_tab">Contacten</string>
+    <string name="favorites_tab">Favorieten</string>
+    <string name="call_history_tab">Oproepgeschiedenis</string>
+    <string name="groups_tab">Groepen</string>
+    <string name="last_used_tab">Laatst gebruikt</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Bestand herstellen</string>
@@ -626,12 +634,12 @@
     <string name="donate_please">
         <![CDATA[
             Hallo,<br><br>
-            Hopelijk vindt u dit een fijne app. Het bevat geen advertenties, maar u kunt de verdere ontwikkeling wel ondersteunen door de app <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> aan te schaffen. Dit zal ook voorkomen dat dit venster nog eens verschijnt.<br><br>
+            Hopelijk vindt u dit een fijne app. Het bevat geen advertenties, maar u kunt de verdere ontwikkeling wel ondersteunen door de app <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Eenvoudig Bedankje</a> aan te schaffen. Dit zal ook voorkomen dat dit venster nog eens verschijnt.<br><br>
             Dank u wel!
         ]]>
     </string>
     <string name="purchase">Kopen</string>
-    <string name="update_thank_you">Er is een nieuwe versie van Simple Thank You</string>
+    <string name="update_thank_you">Er is een nieuwe versie van Eenvoudig Bedankje</string>
     <string name="before_asking_question_read_faq">Controleer bij problemen eerst de instellingen van de app en neem de Veelgestelde vragen door. Wellicht is de oplossing daar reeds te vinden.</string>
     <string name="before_rate_read_faq">Neem de Veelgestelde vragen en de instellingen van de app even door voordat u ons een beoordeling geeft. Wellicht is de oplossing daar reeds te vinden.</string>
     <string name="make_sure_latest">Zorg er ook voor dat de laatste versie van de app is geïnstalleerd.</string>
@@ -645,7 +653,7 @@
     <string name="new_app">
         <![CDATA[
             Hallo,<br><br>
-            Er is recentelijk een nieuwe app uitgebracht:<br><br>
+            Er zijn recentelijk nieuwe apps uitgebracht:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
             <a href="%5$s">%6$s</a><br><br>
@@ -653,6 +661,40 @@
             Dank u wel!
         ]]>
     </string>
+
+    <string name="simple_app_launcher">Eenvoudige App Launcher</string>
+    <string name="simple_calculator">Eenvoudige Rekenmachine</string>
+    <string name="simple_calendar">Eenvoudige Agenda</string>
+    <string name="simple_camera">Eenvoudige Camera</string>
+    <string name="simple_clock">Eenvoudige Klok</string>
+    <string name="simple_contacts">Eenvoudig Adresboek</string>
+    <string name="simple_dialer">Eenvoudige Telefoon</string>
+    <string name="simple_draw">Eenvoudig Tekenen</string>
+    <string name="simple_file_manager">Eenvoudig Bestandsbeheer</string>
+    <string name="simple_flashlight">Eenvoudige Zaklamp</string>
+    <string name="simple_gallery">Eenvoudige Galerij</string>
+    <string name="simple_music_player">Eenvoudige Muziekspeler</string>
+    <string name="simple_notes">Eenvoudige Notities</string>
+    <string name="simple_sms_messenger">Eenvoudig Berichtenbeheer (SMS)</string>
+    <string name="simple_thank_you">Eenvoudig Bedankje</string>
+    <string name="simple_voice_recorder">Eenvoudige Voicerecorder</string>
+
+    <string name="app_launcher_short">App Launcher</string>
+    <string name="calculator_short">Rekenmachine</string>
+    <string name="calendar_short">Agenda</string>
+    <string name="camera_short">Camera</string>
+    <string name="clock_short">Klok</string>
+    <string name="contacts_short">Contacten</string>
+    <string name="dialer_short">Telefoon</string>
+    <string name="draw_short">Tekenen</string>
+    <string name="file_manager_short">Bestandsbeheer</string>
+    <string name="flashlight_short">Zaklamp</string>
+    <string name="gallery_short">Galerij</string>
+    <string name="music_player_short">Muziek</string>
+    <string name="notes_short">Notities</string>
+    <string name="sms_messenger_short">Berichten</string>
+    <string name="thank_you_short">Bedankt!</string>
+    <string name="voice_recorder_short">Voicerecorder</string>
 
     <string name="sideloaded_app">
         <![CDATA[

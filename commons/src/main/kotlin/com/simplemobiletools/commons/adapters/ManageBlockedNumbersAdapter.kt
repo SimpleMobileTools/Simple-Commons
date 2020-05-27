@@ -18,13 +18,13 @@ class ManageBlockedNumbersAdapter(activity: BaseSimpleActivity, var blockedNumbe
         setupDragListener(true)
     }
 
-    override fun getActionMenuId() = R.menu.cab_remove_only
+    override fun getActionMenuId() = R.menu.cab_delete_only
 
     override fun prepareActionMode(menu: Menu) {}
 
     override fun actionItemPressed(id: Int) {
         when (id) {
-            R.id.cab_remove -> removeSelection()
+            R.id.cab_delete -> deleteSelection()
         }
     }
 
@@ -64,16 +64,16 @@ class ManageBlockedNumbersAdapter(activity: BaseSimpleActivity, var blockedNumbe
         }
     }
 
-    private fun removeSelection() {
-        val removeBlockedNumbers = ArrayList<BlockedNumber>(selectedKeys.size)
+    private fun deleteSelection() {
+        val deleteBlockedNumbers = ArrayList<BlockedNumber>(selectedKeys.size)
         val positions = getSelectedItemPositions()
 
         getSelectedItems().forEach {
-            removeBlockedNumbers.add(it)
+            deleteBlockedNumbers.add(it)
             activity.deleteBlockedNumber(it.number)
         }
 
-        blockedNumbers.removeAll(removeBlockedNumbers)
+        blockedNumbers.removeAll(deleteBlockedNumbers)
         removeSelectedItems(positions)
         if (blockedNumbers.isEmpty()) {
             listener?.refreshItems()

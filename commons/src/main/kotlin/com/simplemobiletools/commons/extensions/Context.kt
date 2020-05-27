@@ -427,6 +427,8 @@ fun Context.getSharedThemeSync(cursorLoader: CursorLoader): SharedTheme? {
 
 fun Context.getMyContentProviderCursorLoader() = CursorLoader(this, MyContentProvider.MY_CONTENT_URI, null, null, null, null)
 
+fun Context.getMyContactsContentProviderCursorLoader() = CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, null, null, null)
+
 fun Context.getDialogTheme() = if (baseConfig.backgroundColor.getContrastColor() == Color.WHITE) R.style.MyDialogTheme_Dark else R.style.MyDialogTheme
 
 fun Context.getCurrentFormattedDateTime(): String {
@@ -968,4 +970,13 @@ fun Context.deleteBlockedNumber(number: String) {
     val selection = "${BlockedNumbers.COLUMN_ORIGINAL_NUMBER} = ?"
     val selectionArgs = arrayOf(number)
     contentResolver.delete(BlockedNumbers.CONTENT_URI, selection, selectionArgs)
+}
+
+fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNumber> = getBlockedNumbers()): Boolean {
+    if (!isNougatPlus()) {
+        return false
+    }
+
+    val numberToCompare = number.trimToComparableNumber()
+    return blockedNumbers.map { it.numberToCompare }.contains(numberToCompare) || blockedNumbers.map { it.number }.contains(numberToCompare)
 }

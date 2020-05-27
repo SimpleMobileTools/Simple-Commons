@@ -476,6 +476,14 @@
     <string name="text">Text</string>
     <string name="migrating">移行中</string>
 
+    <!-- Default tabs to open -->
+    <string name="default_tab_to_open">Tab to open at app start</string>
+    <string name="contacts_tab">Contacts</string>
+    <string name="favorites_tab">Favorites</string>
+    <string name="call_history_tab">Call History</string>
+    <string name="groups_tab">Groups</string>
+    <string name="last_used_tab">Last used one</string>
+
     <!-- Recycle Bin -->
     <string name="restore_this_file">このファイルを復元</string>
     <string name="restore_selected_files">選択したファイルを復元</string>
@@ -620,6 +628,40 @@
             Thanks
         ]]>
     </string>
+
+    <string name="simple_app_launcher">Simple App Launcher</string>
+    <string name="simple_calculator">Simple Calculator</string>
+    <string name="simple_calendar">Simple Calendar</string>
+    <string name="simple_camera">Simple Camera</string>
+    <string name="simple_clock">Simple Clock</string>
+    <string name="simple_contacts">Simple Contacts</string>
+    <string name="simple_dialer">Simple Dialer</string>
+    <string name="simple_draw">Simple Draw</string>
+    <string name="simple_file_manager">Simple File Manager</string>
+    <string name="simple_flashlight">Simple Flashlight</string>
+    <string name="simple_gallery">Simple Gallery</string>
+    <string name="simple_music_player">Simple Music Player</string>
+    <string name="simple_notes">Simple Notes</string>
+    <string name="simple_sms_messenger">Simple SMS Messenger</string>
+    <string name="simple_thank_you">Simple Thank You</string>
+    <string name="simple_voice_recorder">Simple Voice Recorder</string>
+
+    <string name="app_launcher_short">App Launcher</string>
+    <string name="calculator_short">電卓</string>
+    <string name="calendar_short">カレンダー</string>
+    <string name="camera_short">カメラ</string>
+    <string name="clock_short">時計</string>
+    <string name="contacts_short">連絡先</string>
+    <string name="dialer_short">Dialer</string>
+    <string name="draw_short">ドロー</string>
+    <string name="file_manager_short">ファイルマネージャー</string>
+    <string name="flashlight_short">フラッシュライト</string>
+    <string name="gallery_short">ギャラリー</string>
+    <string name="music_player_short">ミュージックプレイヤー</string>
+    <string name="notes_short">メモ</string>
+    <string name="sms_messenger_short">SMS Messenger</string>
+    <string name="thank_you_short">Thank You</string>
+    <string name="voice_recorder_short">Voice Recorder</string>
 
     <string name="sideloaded_app">
         <![CDATA[

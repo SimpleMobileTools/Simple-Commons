@@ -33,7 +33,7 @@
     <string name="no_contacts_found">Keine Kontakte gefunden</string>
     <string name="request_the_required_permissions">Benötigte Berechtigungen anfordern</string>
     <string name="no_access_to_contacts">Die App kann nicht auf deine Kontakte zugreifen</string>
-    <string name="insert_text_here">Insert text here</string>
+    <string name="insert_text_here">Text hier einfügen</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Blockierte Nummern verwalten</string>
@@ -258,7 +258,7 @@
     <string name="redo">Wiederholen</string>
     <string name="print">Drucken</string>
     <string name="create_shortcut">Verknüpfung erstellen</string>
-    <string name="add_number_to_contact">Add number to contact</string>
+    <string name="add_number_to_contact">füge Nummer zu Kontakt hinzu</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortieren nach</string>
@@ -508,6 +508,14 @@
     <string name="text">Text</string>
     <string name="migrating">Migrieren</string>
 
+    <!-- Default tabs to open -->
+    <string name="default_tab_to_open">Tab welcher beim App Start angezeigt wird</string>
+    <string name="contacts_tab">Kontakte</string>
+    <string name="favorites_tab">Favoriten</string>
+    <string name="call_history_tab">Anrufliste</string>
+    <string name="groups_tab">Groups</string>
+    <string name="last_used_tab">zuletzt verwendeter Tab</string>
+
     <!-- Recycle Bin -->
     <string name="restore_this_file">Diese Datei wiederherstellen</string>
     <string name="restore_selected_files">Markierte Dateien wiederherstellen</string>
@@ -653,6 +661,40 @@
             Danke
         ]]>
     </string>
+
+    <string name="simple_app_launcher">Simple App Launcher</string>
+    <string name="simple_calculator">Simple Calculator</string>
+    <string name="simple_calendar">Simple Calendar</string>
+    <string name="simple_camera">Simple Camera</string>
+    <string name="simple_clock">Simple Clock</string>
+    <string name="simple_contacts">Simple Contacts</string>
+    <string name="simple_dialer">Simple Dialer</string>
+    <string name="simple_draw">Simple Draw</string>
+    <string name="simple_file_manager">Simple File Manager</string>
+    <string name="simple_flashlight">Simple Flashlight</string>
+    <string name="simple_gallery">Simple Gallery</string>
+    <string name="simple_music_player">Simple Music Player</string>
+    <string name="simple_notes">Simple Notes</string>
+    <string name="simple_sms_messenger">Simple SMS Messenger</string>
+    <string name="simple_thank_you">Simple Thank You</string>
+    <string name="simple_voice_recorder">Simple Voice Recorder</string>
+
+    <string name="app_launcher_short">App Launcher</string>
+    <string name="calculator_short">Rechner</string>
+    <string name="calendar_short">Kalender</string>
+    <string name="camera_short">Kamera</string>
+    <string name="clock_short">Uhr</string>
+    <string name="contacts_short">Kontakte</string>
+    <string name="dialer_short">Dialer</string>
+    <string name="draw_short">Zeichenblock</string>
+    <string name="file_manager_short">Dateimanager</string>
+    <string name="flashlight_short">Taschenlampe</string>
+    <string name="gallery_short">Galerie</string>
+    <string name="music_player_short">Musik-Player</string>
+    <string name="notes_short">Notizblock</string>
+    <string name="sms_messenger_short">SMS Messenger</string>
+    <string name="thank_you_short">Dankeschön</string>
+    <string name="voice_recorder_short">Voice Recorder</string>
 
     <string name="sideloaded_app">
         <![CDATA[

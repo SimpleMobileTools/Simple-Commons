@@ -17,9 +17,9 @@ class NewAppsIconsDialog(val activity: Activity) {
             val voiceRecorderUrl = "https://play.google.com/store/apps/details?id=com.simplemobiletools.voicerecorder"
 
             val text = String.format(activity.getString(R.string.new_app),
-                dialerUrl, "Simple Dialer",
-                smsMessengerUrl, "Simple SMS Messenger",
-                voiceRecorderUrl, "Simple Voice Recorder"
+                dialerUrl, activity.getString(R.string.simple_dialer),
+                smsMessengerUrl, activity.getString(R.string.simple_sms_messenger),
+                voiceRecorderUrl, activity.getString(R.string.simple_voice_recorder)
             )
 
             new_apps_text.text = Html.fromHtml(text)

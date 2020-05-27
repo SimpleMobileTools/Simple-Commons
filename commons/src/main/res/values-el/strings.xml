@@ -508,6 +508,14 @@
     <string name="text">Κείμενο</string>
     <string name="migrating">Μετεγκατάσταση</string>
 
+    <!-- Default tabs to open -->
+    <string name="default_tab_to_open">Tab to open at app start</string>
+    <string name="contacts_tab">Contacts</string>
+    <string name="favorites_tab">Favorites</string>
+    <string name="call_history_tab">Call History</string>
+    <string name="groups_tab">Groups</string>
+    <string name="last_used_tab">Last used one</string>
+
     <!-- Recycle Bin -->
     <string name="restore_this_file">Επαναφορά αυτού του αρχείου</string>
     <string name="restore_selected_files">Επαναφορά επιλεγμένων αρχείων</string>
@@ -653,6 +661,40 @@
             Ευχαριστώ
         ]]>
     </string>
+
+    <string name="simple_app_launcher">Απλός Εκκινητής</string>
+    <string name="simple_calculator">Απλή Αριθμομηχανή</string>
+    <string name="simple_calendar">Απλό Ημερολόγιο</string>
+    <string name="simple_camera">Απλή Κάμερα</string>
+    <string name="simple_clock">Απλό Ρολόι</string>
+    <string name="simple_contacts">Απλές Επαφές</string>
+    <string name="simple_dialer">Απλή Κλήση</string>
+    <string name="simple_draw">Απλή Ζωγραφική</string>
+    <string name="simple_file_manager">Απλός Διαχειριστής Αρχείων</string>
+    <string name="simple_flashlight">Απλός Φακός</string>
+    <string name="simple_gallery">Απλή Συλλογή</string>
+    <string name="simple_music_player">Απλός Music Player</string>
+    <string name="simple_notes">Απλές Σημειώσεις</string>
+    <string name="simple_sms_messenger">Απλός SMS Messenger</string>
+    <string name="simple_thank_you">Απλά Σας ευχαριστούμε</string>
+    <string name="simple_voice_recorder">Απλή Εγγραφή Φωνής</string>
+
+    <string name="app_launcher_short">App Launcher</string>
+    <string name="calculator_short">Αριθμομηχανή</string>
+    <string name="calendar_short">Ημερολόγιο</string>
+    <string name="camera_short">Κάμερα</string>
+    <string name="clock_short">Ρολόι</string>
+    <string name="contacts_short">Επαφές</string>
+    <string name="dialer_short">Dialer</string>
+    <string name="draw_short">Ζωγραφική</string>
+    <string name="file_manager_short">Αρχεία</string>
+    <string name="flashlight_short">Φακός</string>
+    <string name="gallery_short">Συλλογή</string>
+    <string name="music_player_short">Μουσική</string>
+    <string name="notes_short">Σημειώσεις</string>
+    <string name="sms_messenger_short">SMS Messenger</string>
+    <string name="thank_you_short">Σας ευχαριστώ</string>
+    <string name="voice_recorder_short">Voice Recorder</string>
 
     <string name="sideloaded_app">
         <![CDATA[

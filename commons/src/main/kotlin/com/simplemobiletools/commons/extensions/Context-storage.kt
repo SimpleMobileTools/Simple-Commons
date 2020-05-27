@@ -243,7 +243,7 @@ fun Context.scanPathRecursively(path: String, callback: (() -> Unit)? = null) {
     scanPathsRecursively(arrayListOf(path), callback)
 }
 
-fun Context.scanFilesRecursively(files: ArrayList<File>, callback: (() -> Unit)? = null) {
+fun Context.scanFilesRecursively(files: List<File>, callback: (() -> Unit)? = null) {
     val allPaths = ArrayList<String>()
     for (file in files) {
         allPaths.addAll(getPaths(file))
@@ -251,7 +251,7 @@ fun Context.scanFilesRecursively(files: ArrayList<File>, callback: (() -> Unit)?
     rescanPaths(allPaths, callback)
 }
 
-fun Context.scanPathsRecursively(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
+fun Context.scanPathsRecursively(paths: List<String>, callback: (() -> Unit)? = null) {
     val allPaths = ArrayList<String>()
     for (path in paths) {
         allPaths.addAll(getPaths(File(path)))
@@ -260,7 +260,7 @@ fun Context.scanPathsRecursively(paths: ArrayList<String>, callback: (() -> Unit
 }
 
 // avoid calling this multiple times in row, it can delete whole folder contents
-fun Context.rescanPaths(paths: ArrayList<String>, callback: (() -> Unit)? = null) {
+fun Context.rescanPaths(paths: List<String>, callback: (() -> Unit)? = null) {
     if (paths.isEmpty()) {
         callback?.invoke()
         return

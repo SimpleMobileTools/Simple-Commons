@@ -541,6 +541,14 @@
     <string name="text">Text</string>
     <string name="migrating">Migrovanie</string>
 
+    <!-- Default tabs to open -->
+    <string name="default_tab_to_open">Karta otvorená po spustení apky</string>
+    <string name="contacts_tab">Kontakty</string>
+    <string name="favorites_tab">Obľúbené</string>
+    <string name="call_history_tab">História volaní</string>
+    <string name="groups_tab">Skupiny</string>
+    <string name="last_used_tab">Naposledy použitá</string>
+
     <!-- Recycle Bin -->
     <string name="restore_this_file">Obnoviť tento súbor</string>
     <string name="restore_selected_files">Obnoviť vybrané súbory</string>
@@ -687,6 +695,40 @@
             Vďaka
         ]]>
     </string>
+
+    <string name="simple_app_launcher">Jednoduchý spúšťač aplikácií</string>
+    <string name="simple_calculator">Jednoduchá kalkulačka</string>
+    <string name="simple_calendar">Jednoduchý kalendár</string>
+    <string name="simple_camera">Jednoduchý fotoaparát</string>
+    <string name="simple_clock">Jednoduché hodinky</string>
+    <string name="simple_contacts">Jednoduché kontakty</string>
+    <string name="simple_dialer">Jednoduchý telefón</string>
+    <string name="simple_draw">Jednoduché kreslenie</string>
+    <string name="simple_file_manager">Jednoduchý správca súborov</string>
+    <string name="simple_flashlight">Jednoduchá baterka</string>
+    <string name="simple_gallery">Jednoduchá galéria</string>
+    <string name="simple_music_player">Jednoduchý hudobný prehrávač</string>
+    <string name="simple_notes">Jednoduché poznámky</string>
+    <string name="simple_sms_messenger">Jednoduché SMS správy</string>
+    <string name="simple_thank_you">Jednoduché ďakujem</string>
+    <string name="simple_voice_recorder">Jednoduchý nahrávač zvuku</string>
+
+    <string name="app_launcher_short">Spúšťač aplikácií</string>
+    <string name="calculator_short">Kalkulačka</string>
+    <string name="calendar_short">Kalendár</string>
+    <string name="camera_short">Kamera</string>
+    <string name="clock_short">Hodinky</string>
+    <string name="contacts_short">Kontakty</string>
+    <string name="dialer_short">Telefón</string>
+    <string name="draw_short">Kreslenie</string>
+    <string name="file_manager_short">Správca súborov</string>
+    <string name="flashlight_short">Batéria</string>
+    <string name="gallery_short">Galéria</string>
+    <string name="music_player_short">Hudobný prehrávač</string>
+    <string name="notes_short">Poznámky</string>
+    <string name="sms_messenger_short">SMS správy</string>
+    <string name="thank_you_short">Ďakujem</string>
+    <string name="voice_recorder_short">Nahrávač zvuku</string>
 
     <string name="sideloaded_app">
         <![CDATA[

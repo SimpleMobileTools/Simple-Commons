@@ -157,16 +157,16 @@ open class BaseConfig(val context: Context) {
     // folder locking
     fun addFolderProtection(path: String, hash: String, type: Int) {
         prefs.edit()
-                .putString("$PROTECTED_FOLDER_HASH$path", hash)
-                .putInt("$PROTECTED_FOLDER_TYPE$path", type)
-                .apply()
+            .putString("$PROTECTED_FOLDER_HASH$path", hash)
+            .putInt("$PROTECTED_FOLDER_TYPE$path", type)
+            .apply()
     }
 
     fun removeFolderProtection(path: String) {
         prefs.edit()
-                .remove("$PROTECTED_FOLDER_HASH$path")
-                .remove("$PROTECTED_FOLDER_TYPE$path")
-                .apply()
+            .remove("$PROTECTED_FOLDER_HASH$path")
+            .remove("$PROTECTED_FOLDER_TYPE$path")
+            .apply()
     }
 
     fun isFolderProtected(path: String) = getFolderProtectionType(path) != PROTECTION_NONE
@@ -408,4 +408,8 @@ open class BaseConfig(val context: Context) {
     var wasMessengerRecorderShown: Boolean
         get() = prefs.getBoolean(WAS_MESSENGER_RECORDER_SHOWN, false)
         set(wasMessengerRecorderShown) = prefs.edit().putBoolean(WAS_MESSENGER_RECORDER_SHOWN, wasMessengerRecorderShown).apply()
+
+    var defaultTab: Int
+        get() = prefs.getInt(DEFAULT_TAB, TAB_LAST_USED)
+        set(defaultTab) = prefs.edit().putInt(DEFAULT_TAB, defaultTab).apply()
 }
