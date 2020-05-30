@@ -10,7 +10,7 @@
     <string name="edit_with">Modifica con</string>
     <string name="no_app_found">Non è stata trovata nessuna applicazione valida</string>
     <string name="set_as">Imposta come</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_to_clipboard">Copia negli appunti</string>
     <string name="value_copied_to_clipboard">Valore copiato negli appunti</string>
     <string name="unknown">Sconosciuto</string>
     <string name="always">Sempre</string>
@@ -31,9 +31,9 @@
     <string name="next">Successiva</string>
     <string name="number">Numero</string>
     <string name="no_contacts_found">Nessun contatto trovato</string>
-    <string name="request_the_required_permissions">Richiedi le permissioni necessarie</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
-    <string name="insert_text_here">Insert text here</string>
+    <string name="request_the_required_permissions">Richiedi le autorizzazioni necessarie</string>
+    <string name="no_access_to_contacts">L\'app non è riuscita ad accedere ai tuoi contatti</string>
+    <string name="insert_text_here">Inserisci qui il testo</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gestisci i numeri bloccati</string>
@@ -44,7 +44,7 @@
     <string name="blocked_numbers">Numeri bloccati</string>
     <string name="must_make_default_dialer">È necessario impostare quest\'app come predefinita per utilizzare i numeri bloccati.</string>
     <string name="set_as_default">Imposta come predefinita</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
+    <string name="block_confirmation">Sei sicuro di volere bloccare \"%s\"?</string>
 
     <!-- Favorites -->
     <string name="favorites">Preferiti</string>
@@ -164,8 +164,8 @@
 
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
-        <item quantity="one">%d contact</item>
-        <item quantity="other">%d contacts</item>
+        <item quantity="one">%d contatto</item>
+        <item quantity="other">%d contatti</item>
     </plurals>
 
     <!-- Storages -->
@@ -258,7 +258,7 @@
     <string name="redo">Ripeti</string>
     <string name="print">Stampa</string>
     <string name="create_shortcut">Crea scorciatoia</string>
-    <string name="add_number_to_contact">Add number to contact</string>
+    <string name="add_number_to_contact">Aggiungi numero al contatto</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordina per</string>
@@ -509,12 +509,12 @@
     <string name="migrating">Migrazione</string>
 
     <!-- Default tabs to open -->
-    <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
+    <string name="default_tab_to_open">Scheda da aprire all\'avvio dell\'app</string>
+    <string name="contacts_tab">Contatti</string>
+    <string name="favorites_tab">Preferiti</string>
+    <string name="call_history_tab">Cronologia chiamate</string>
+    <string name="groups_tab">Gruppi</string>
+    <string name="last_used_tab">L\'ultima usata</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Ripristina questo file</string>
@@ -662,39 +662,39 @@
         ]]>
     </string>
 
-    <string name="simple_app_launcher">Simple App Launcher</string>
-    <string name="simple_calculator">Simple Calculator</string>
-    <string name="simple_calendar">Simple Calendar</string>
-    <string name="simple_camera">Simple Camera</string>
-    <string name="simple_clock">Simple Clock</string>
-    <string name="simple_contacts">Simple Contacts</string>
-    <string name="simple_dialer">Simple Dialer</string>
-    <string name="simple_draw">Simple Draw</string>
-    <string name="simple_file_manager">Simple File Manager</string>
-    <string name="simple_flashlight">Simple Flashlight</string>
-    <string name="simple_gallery">Simple Gallery</string>
-    <string name="simple_music_player">Simple Music Player</string>
-    <string name="simple_notes">Simple Notes</string>
-    <string name="simple_sms_messenger">Simple SMS Messenger</string>
-    <string name="simple_thank_you">Simple Thank You</string>
-    <string name="simple_voice_recorder">Simple Voice Recorder</string>
+    <string name="simple_app_launcher">Semplice Lanciatore di app</string>
+    <string name="simple_calculator">Semplice Calcolatrice</string>
+    <string name="simple_calendar">Semplice Calendario</string>
+    <string name="simple_camera">Semplice Fotocamera</string>
+    <string name="simple_clock">Semplice Orologio</string>
+    <string name="simple_contacts">Semplice Contatti</string>
+    <string name="simple_dialer">Semplice Telefono</string>
+    <string name="simple_draw">Semplice Disegnare</string>
+    <string name="simple_file_manager">Semplice Gestore dei file</string>
+    <string name="simple_flashlight">Semplice Torcia</string>
+    <string name="simple_gallery">Semplice Galleria</string>
+    <string name="simple_music_player">Semplice Riproduttore musicale</string>
+    <string name="simple_notes">Semplice Note</string>
+    <string name="simple_sms_messenger">Semplice Messaggi SMS</string>
+    <string name="simple_thank_you">Semplice Ringraziamento</string>
+    <string name="simple_voice_recorder">Semplice Registratore vocale</string>
 
-    <string name="app_launcher_short">App Launcher</string>
+    <string name="app_launcher_short">Lanciatore di app</string>
     <string name="calculator_short">Calcolatrice</string>
     <string name="calendar_short">Calendario</string>
     <string name="camera_short">Fotocamera</string>
     <string name="clock_short">Orologio</string>
     <string name="contacts_short">Contatti</string>
-    <string name="dialer_short">Dialer</string>
+    <string name="dialer_short">Telefono</string>
     <string name="draw_short">Disegna</string>
     <string name="file_manager_short">Gestore dei file</string>
     <string name="flashlight_short">Torcia</string>
     <string name="gallery_short">Galleria</string>
     <string name="music_player_short">Riproduttore musicale</string>
     <string name="notes_short">Note</string>
-    <string name="sms_messenger_short">SMS Messenger</string>
+    <string name="sms_messenger_short">Messaggi SMS</string>
     <string name="thank_you_short">Ringraziamento</string>
-    <string name="voice_recorder_short">Voice Recorder</string>
+    <string name="voice_recorder_short">Registratore vocale</string>
 
     <string name="sideloaded_app">
         <![CDATA[
@@ -757,12 +757,12 @@
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (lettere su barre di scorrimento)</string>
     <string name="event_bus_title">Event Bus (comunicazione all\'interno dell\'app)</string>
     <string name="audio_record_view_title">Audio Record View (visualizzazione audio)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="sms_mms_title">SMS MMS (gestione SMS e MMS)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATA: Questa versione dell\'app non è più supportata, ottieni la versione Pro a https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Non dimenticarti che se disinstalli qualsiasi app a pagamento entro le due ore dall\'acquisto, verrai automaticamente rimborsato. Se vuoi essere rimborsato quando vuoi dopo le due ore, puoi contattarci a hello@simplemobiletools.com. In questo modo puoi facilmente provare l\'app :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Un gruppo di app Android semplici, open source, con widget personalizzabili, senza pubblicità ed autorizzazioni inutili.</string>
 </resources>
