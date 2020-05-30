@@ -161,8 +161,8 @@
 
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
-        <item quantity="one">%d contact</item>
-        <item quantity="other">%d contacts</item>
+        <item quantity="one">%d 联系人</item>
+        <item quantity="other">%d 联系人</item>
     </plurals>
 
     <!-- Storages -->
@@ -255,7 +255,7 @@
     <string name="redo">重做</string>
     <string name="print">打印</string>
     <string name="create_shortcut">创建快捷方式</string>
-    <string name="add_number_to_contact">Add number to contact</string>
+    <string name="add_number_to_contact">添加号码至联系人</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序方式</string>
@@ -477,12 +477,12 @@
     <string name="migrating">转移</string>
 
     <!-- Default tabs to open -->
-    <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
+    <string name="default_tab_to_open">应用启动时打开的页面</string>
+    <string name="contacts_tab">联系人</string>
+    <string name="favorites_tab">收藏</string>
+    <string name="call_history_tab">通话记录</string>
+    <string name="groups_tab">分组</string>
+    <string name="last_used_tab">上次使用的</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">恢复此文件</string>
