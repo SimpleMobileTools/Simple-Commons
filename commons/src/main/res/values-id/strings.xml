@@ -272,6 +272,10 @@
     <string name="descending">Turun</string>
     <string name="use_for_this_folder">Gunakan hanya untuk folder ini saja</string>
     <string name="sort_numeric_parts">Urutkan bagian numerik menurut nilai sebenarnya</string>
+    <string name="first_name">Nama depan</string>
+    <string name="middle_name">Nama tengah</string>
+    <string name="surname">Nama belakang</string>
+    <string name="full_name">Full name</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Apakah anda yakin ingin melanjutkan penghapusan?</string>
@@ -464,6 +468,7 @@
     <string name="import_settings">Impor pengaturan</string>
     <string name="settings_exported_successfully">Pengaturan berhail diekspor</string>
     <string name="settings_imported_successfully">Pengaturan berhail diimpor</string>
+    <string name="start_name_with_surname">Nama dimulai dengan nama belakang</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilitas</string>

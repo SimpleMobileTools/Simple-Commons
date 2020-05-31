@@ -275,6 +275,10 @@
     <string name="descending">Décroissant</string>
     <string name="use_for_this_folder">Utiliser pour ce dossier uniquement</string>
     <string name="sort_numeric_parts">Trier les parties numériques</string>
+    <string name="first_name">Prénom</string>
+    <string name="middle_name">Deuxième prénom</string>
+    <string name="surname">Nom</string>
+    <string name="full_name">Full name</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Voulez-vous vraiment effectuer la suppression ?</string>
@@ -498,6 +502,7 @@
     <string name="import_settings">Importer les paramètres</string>
     <string name="settings_exported_successfully">Paramètres exportés avec succès</string>
     <string name="settings_imported_successfully">Paramètres importés avec succès</string>
+    <string name="start_name_with_surname">Trier les contacts par nom de famille</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilité</string>

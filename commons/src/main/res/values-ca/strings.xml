@@ -275,6 +275,10 @@
     <string name="descending">Descendent</string>
     <string name="use_for_this_folder">Només per aquesta carpeta</string>
     <string name="sort_numeric_parts">Ordenar les parts numèriques segons el valor real</string>
+    <string name="first_name">First name</string>
+    <string name="middle_name">Middle name</string>
+    <string name="surname">Surname</string>
+    <string name="full_name">Full name</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Estas segur que vols continuar amb l’eliminació?</string>
@@ -496,6 +500,7 @@
     <string name="import_settings">Importar ajustaments</string>
     <string name="settings_exported_successfully">Ajustaments exportats correctament</string>
     <string name="settings_imported_successfully">Ajustaments importats correctament</string>
+    <string name="start_name_with_surname">Start name with surname</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilitat</string>

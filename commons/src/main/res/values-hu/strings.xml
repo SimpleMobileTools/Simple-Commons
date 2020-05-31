@@ -274,6 +274,10 @@
     <string name="descending">Csökkenő</string>
     <string name="use_for_this_folder">Csak ehhez a mappához használja</string>
     <string name="sort_numeric_parts">Rendezze a numerikus részeket az aktuális értékkel</string>
+    <string name="first_name">Keresztnév</string>
+    <string name="middle_name">Középső név</string>
+    <string name="surname">Vezetéknév</string>
+    <string name="full_name">Full name</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Biztosan folytatja a törlést?</string>
@@ -495,6 +499,7 @@
     <string name="import_settings">Beállítások importálása</string>
     <string name="settings_exported_successfully">A beállítások exportálása sikerült</string>
     <string name="settings_imported_successfully">A beállítások importálása sikerült</string>
+    <string name="start_name_with_surname">Vezetéknév, keresztnév sorrend</string>
 
     <!-- Setting sections -->
     <string name="visibility">Láthatóság</string>

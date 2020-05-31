@@ -275,6 +275,10 @@
     <string name="descending">Descending</string>
     <string name="use_for_this_folder">Use for this folder only</string>
     <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="first_name">First name</string>
+    <string name="middle_name">Middle name</string>
+    <string name="surname">Surname</string>
+    <string name="full_name">Full name</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
@@ -496,6 +500,7 @@
     <string name="import_settings">Import settings</string>
     <string name="settings_exported_successfully">Settings exported successfully</string>
     <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="start_name_with_surname">Start name with surname</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>

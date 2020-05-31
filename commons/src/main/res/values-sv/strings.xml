@@ -275,6 +275,10 @@
     <string name="descending">Fallande</string>
     <string name="use_for_this_folder">Använd bara för denna mapp</string>
     <string name="sort_numeric_parts">Sortera numeriska delar efter faktiskt värde</string>
+    <string name="first_name">Förnamn</string>
+    <string name="middle_name">Mellannamn</string>
+    <string name="surname">Efternamn</string>
+    <string name="full_name">Full name</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Är du säker på att du vill fortsätta med borttagningen?</string>
@@ -496,6 +500,7 @@
     <string name="import_settings">Importera inställningar</string>
     <string name="settings_exported_successfully">Inställningarna har exporterats</string>
     <string name="settings_imported_successfully">Inställningarna har importerats</string>
+    <string name="start_name_with_surname">Visa efternamn först</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighet</string>

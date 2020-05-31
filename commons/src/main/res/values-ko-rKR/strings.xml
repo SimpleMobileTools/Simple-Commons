@@ -270,6 +270,10 @@
     <string name="descending">내림차순</string>
     <string name="use_for_this_folder">현재 폴더만 적용</string>
     <string name="sort_numeric_parts">실제 숫자 값으로 숫자 정렬</string>
+    <string name="first_name">이름</string>
+    <string name="middle_name">중간 이름</string>
+    <string name="surname">성</string>
+    <string name="full_name">Full name</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">정말로 삭제 하시겠습니까?</string>
@@ -462,6 +466,7 @@
     <string name="import_settings">설정 가져오기</string>
     <string name="settings_exported_successfully">설정 내보내기 완료</string>
     <string name="settings_imported_successfully">설정 가져오기 완료</string>
+    <string name="start_name_with_surname">성을 먼저 표시</string>
 
     <!-- Setting sections -->
     <string name="visibility">표시</string>

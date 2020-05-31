@@ -275,6 +275,10 @@
     <string name="descending">Giảm dần</string>
     <string name="use_for_this_folder">Chỉ sử dụng cho thư mục này</string>
     <string name="sort_numeric_parts">Sắp xếp các phần số theo giá trị thực</string>
+    <string name="first_name">First name</string>
+    <string name="middle_name">Middle name</string>
+    <string name="surname">Surname</string>
+    <string name="full_name">Full name</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Bạn có chắc chắn muốn tiến hành xóa?</string>
@@ -496,6 +500,7 @@
     <string name="import_settings">Nhập cài đặt</string>
     <string name="settings_exported_successfully">Cài đặt được xuất thành công</string>
     <string name="settings_imported_successfully">Cài đặt được nhập thành công</string>
+    <string name="start_name_with_surname">Start name with surname</string>
 
     <!-- Setting sections -->
     <string name="visibility">Hiển thị</string>
@@ -534,8 +539,8 @@
     </plurals>
 
     <!-- Import / Export -->
-    <string name="importing">Đang nhập... </string>
-    <string name="exporting">Đang xuất... </string>
+    <string name="importing">Đang nhập… </string>
+    <string name="exporting">Đang xuất… </string>
     <string name="importing_successful">Nhập thành công</string>
     <string name="exporting_successful">Xuất thành công</string>
     <string name="importing_failed">Nhập thất bại</string>

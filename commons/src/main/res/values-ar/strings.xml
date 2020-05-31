@@ -273,6 +273,10 @@
     <string name="descending">تنازلي</string>
     <string name="use_for_this_folder">إستخدام لهذا المجلد فقط</string>
     <string name="sort_numeric_parts">فرز أسماء الملفات حسب القيمة الفعلية</string>
+    <string name="first_name">الاسم</string>
+    <string name="middle_name">اسم الأب</string>
+    <string name="surname">الشهرة</string>
+    <string name="full_name">Full name</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">هل تريد بالتأكيد متابعة عملية الحذف ؟</string>
@@ -494,6 +498,7 @@
     <string name="import_settings">إعدادات الإستيراد</string>
     <string name="settings_exported_successfully">تم تصدير الإعدادات بنجاح</string>
     <string name="settings_imported_successfully">تم إستيراد الإعدادات بنجاح</string>
+    <string name="start_name_with_surname">الاسم يبدأ بالشهرة</string>
 
     <!-- Setting sections -->
     <string name="visibility">الرؤية</string>
