@@ -412,4 +412,8 @@ open class BaseConfig(val context: Context) {
     var defaultTab: Int
         get() = prefs.getInt(DEFAULT_TAB, TAB_LAST_USED)
         set(defaultTab) = prefs.edit().putInt(DEFAULT_TAB, defaultTab).apply()
+
+    var startNameWithSurname: Boolean
+        get() = prefs.getBoolean(START_NAME_WITH_SURNAME, false)
+        set(startNameWithSurname) = prefs.edit().putBoolean(START_NAME_WITH_SURNAME, startNameWithSurname).apply()
 }
