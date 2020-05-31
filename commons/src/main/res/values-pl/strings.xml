@@ -492,9 +492,7 @@
     <string name="purchase_simple_thank_you">Kup aplikację \'Proste podziękowanie\'</string>
     <string name="customize_colors">Dostosuj kolory aplikacji</string>
     <string name="customize_widget_colors">Dostosuj kolory widżetu</string>
-    <string name="use_english_language">Wymuś używanie przez aplikację języka angielskiego</string><![CDATA[
-    
-    ]]>
+    <string name="use_english_language">Wymuś używanie przez aplikację języka angielskiego</string>
     <string name="show_hidden_items">Pokazuj ukryte elementy</string>
     <string name="font_size">Rozmiar czcionki</string>
     <string name="small">Mała</string>
@@ -524,6 +522,7 @@
     <string name="import_settings">Importuj ustawienia</string>
     <string name="settings_exported_successfully">Ustawienia zostały wyeksportowane</string>
     <string name="settings_imported_successfully">Ustawienia zostały zaimportowane</string>
+    <string name="start_name_with_surname">Zacznij nazwę od nazwiska</string>
 
     <!-- Setting sections -->
     <string name="visibility">Widoczność</string>
