@@ -54,6 +54,7 @@ class SimpleContactsHelper(val context: Context) {
 
     private fun getContactNames(favoritesOnly: Boolean): List<SimpleContact> {
         val contacts = ArrayList<SimpleContact>()
+        val startNameWithSurname = context.baseConfig.startNameWithSurname
         val uri = Data.CONTENT_URI
         val projection = arrayOf(
             Data.RAW_CONTACT_ID,
@@ -93,7 +94,12 @@ class SimpleContactsHelper(val context: Context) {
                 val familyName = cursor.getStringValue(StructuredName.FAMILY_NAME) ?: ""
                 val suffix = cursor.getStringValue(StructuredName.SUFFIX) ?: ""
                 if (firstName.isNotEmpty() || middleName.isNotEmpty() || familyName.isNotEmpty()) {
-                    val names = arrayOf(prefix, firstName, middleName, familyName, suffix).filter { it.isNotEmpty() }
+                    val names = if (startNameWithSurname) {
+                        arrayOf(prefix, familyName, middleName, firstName, suffix).filter { it.isNotEmpty() }
+                    } else {
+                        arrayOf(prefix, firstName, middleName, familyName, suffix).filter { it.isNotEmpty() }
+                    }
+
                     val fullName = TextUtils.join(" ", names)
                     val contact = SimpleContact(rawId, contactId, fullName, photoUri, "")
                     contacts.add(contact)

@@ -275,6 +275,10 @@
     <string name="descending">Φθίνουσα</string>
     <string name="use_for_this_folder">Χρήση μόνο σε αυτόν το φάκελο</string>
     <string name="sort_numeric_parts">Αριθμητ. τμήμ. κατά πραγμ. τιμή</string>
+    <string name="first_name">Όνομα</string>
+    <string name="middle_name">Μεσαίο όνομα</string>
+    <string name="surname">Επώνυμο</string>
+    <string name="full_name">Full name</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Είστε βέβαιοι ότι θέλετε να συνεχίσετε τη διαγραφή?</string>
@@ -496,6 +500,7 @@
     <string name="import_settings">Εισαγωγή ρυθμίσεων</string>
     <string name="settings_exported_successfully">Επιτυχής εξαγωγή ρυθμίσεων</string>
     <string name="settings_imported_successfully">Επιτυχής εισαγωγή ρυθμίσεων</string>
+    <string name="start_name_with_surname">Εμφάνιση πρώτα το επώνυμο</string>
 
     <!-- Setting sections -->
     <string name="visibility">Προβολή</string>

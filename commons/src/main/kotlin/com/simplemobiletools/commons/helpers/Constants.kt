@@ -134,6 +134,7 @@ const val LAST_EXPORTED_SETTINGS_FILE = "last_exported_settings_file"
 const val FONT_SIZE = "font_size"
 const val WAS_MESSENGER_RECORDER_SHOWN = "was_messenger_recorder_shown"
 const val DEFAULT_TAB = "default_tab"
+const val START_NAME_WITH_SURNAME = "start_name_with_surname"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
@@ -192,6 +193,7 @@ const val SORT_BY_ARTIST = 4096
 const val SORT_BY_DURATION = 8192
 const val SORT_BY_RANDOM = 16384
 const val SORT_USE_NUMERIC_VALUE = 32768
+const val SORT_BY_FULL_NAME = 65536
 
 // security
 const val WAS_PROTECTION_HANDLED = "was_protection_handled"

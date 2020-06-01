@@ -272,6 +272,10 @@
     <string name="descending">遞減</string>
     <string name="use_for_this_folder">僅套用於此資料夾</string>
     <string name="sort_numeric_parts">以實際值來排序數字部分</string>
+    <string name="first_name">名字</string>
+    <string name="middle_name">中間名</string>
+    <string name="surname">姓氏</string>
+    <string name="full_name">Full name</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">確定要進行刪除嗎?</string>
@@ -464,6 +468,7 @@
     <string name="import_settings">匯入設定</string>
     <string name="settings_exported_successfully">設定匯出成功</string>
     <string name="settings_imported_successfully">設定匯入成功</string>
+    <string name="start_name_with_surname">姓氏在前</string>
 
     <!-- Setting sections -->
     <string name="visibility">可見度</string>

@@ -37,14 +37,14 @@
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">管理黑名单</string>
-    <string name="not_blocking_anyone">你的黑名单为空</string>
+    <string name="not_blocking_anyone">您的黑名单为空</string>
     <string name="add_a_blocked_number">添加黑名单号码</string>
     <string name="block_number">加入黑名单</string>
     <string name="block_numbers">加入黑名单</string>
     <string name="blocked_numbers">黑名单</string>
-    <string name="must_make_default_dialer">你必须将这应用程序设为默认的拨号程序来使用黑名单。</string>
+    <string name="must_make_default_dialer">您必须将这应用程序设为默认的拨号程序来使用黑名单。</string>
     <string name="set_as_default">设为默认</string>
-    <string name="block_confirmation">你确定要将 \"%s\" 添加到黑名单吗？</string>
+    <string name="block_confirmation">您确定要将 \"%s\" 添加到黑名单吗？</string>
 
     <!-- Favorites -->
     <string name="favorites">收藏</string>
@@ -161,8 +161,8 @@
 
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
-        <item quantity="one">%d contact</item>
-        <item quantity="other">%d contacts</item>
+        <item quantity="one">%d 联系人</item>
+        <item quantity="other">%d 联系人</item>
     </plurals>
 
     <!-- Storages -->
@@ -172,8 +172,8 @@
     <string name="root">根目录</string>
     <string name="wrong_root_selected">目录选择错误，请选择 SD 卡</string>
     <string name="sd_card_usb_same">SD 卡和 USB 设备路径不能相同</string>
-    <string name="app_on_sd_card">您似乎已将应用程序安装在 SD 卡上，这使得应用的小部件不可用。你将无法在小部件列表里看到它们。
-        这是一个系统限制，所以如果你想要使用这些小部件，你必须将应用移回内部存储器。</string>
+    <string name="app_on_sd_card">您似乎已将应用程序安装在 SD 卡上，这使得应用的小部件不可用。您将无法在小部件列表里看到它们。
+        这是一个系统限制，所以如果您想要使用这些小部件，您必须将应用移回内部存储器。</string>
 
     <!-- File properties -->
     <string name="properties">属性</string>
@@ -216,7 +216,7 @@
     <string name="apply_to_all_apps">应用到所有简约系列应用</string>
     <string name="app_icon_color_warning">警告：某些桌面应用无法正确处理自定义应用图标。如果图标消失，请尝试通过 Google Play 或某个小部件启动应用（如果有的话）。
 在成功启动之后，请将图标颜色设置为默认的橙色#F57C00。在最坏的情况下，您可能必须重新安装本应用。</string>
-    <string name="share_colors_success">颜色更改成功。已添加名为“共享”的新主题，以后你可以使用它来更改所有应用的颜色。</string>
+    <string name="share_colors_success">颜色更改成功。已添加名为“共享”的新主题，以后您可以使用它来更改所有应用的颜色。</string>
     <string name="purchase_thank_you">
         <![CDATA[
             请购买 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 以解锁此功能并支持开发。感谢！
@@ -255,7 +255,7 @@
     <string name="redo">重做</string>
     <string name="print">打印</string>
     <string name="create_shortcut">创建快捷方式</string>
-    <string name="add_number_to_contact">Add number to contact</string>
+    <string name="add_number_to_contact">添加号码至联系人</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序方式</string>
@@ -272,20 +272,24 @@
     <string name="descending">递减</string>
     <string name="use_for_this_folder">仅应用于此文件夹</string>
     <string name="sort_numeric_parts">按实际值排序数字部分</string>
+    <string name="first_name">名字</string>
+    <string name="middle_name">中间名</string>
+    <string name="surname">姓氏</string>
+    <string name="full_name">Full name</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">是否执行此删除操作？</string>
-    <string name="deletion_confirmation">你确定要删除 %s？</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">你确定要移动 %s到回收站？</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">你确定要删除此项目吗？</string>
-    <string name="are_you_sure_recycle_bin">你确定要移动此项目到回收站吗？</string>
+    <string name="deletion_confirmation">您确定要删除 %s？</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">您确定要移动 %s到回收站？</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">您确定要删除此项目吗？</string>
+    <string name="are_you_sure_recycle_bin">您确定要移动此项目到回收站吗？</string>
     <string name="do_not_ask_again">重启前不再提醒</string>
     <string name="yes">是</string>
     <string name="no">否</string>
     <string name="maybe">也许</string>
 
     <plurals name="delete_warning">
-        <item quantity="other">警告: 你正在删除 %d 目录</item>
+        <item quantity="other">警告: 您正在删除 %d 目录</item>
     </plurals>
 
     <!-- Password protection -->
@@ -303,9 +307,9 @@
     <string name="place_finger">请将手指放在指纹传感器上</string>
     <string name="authentication_failed">验证失败</string>
     <string name="authentication_blocked">验证已被阻止，请稍后再试</string>
-    <string name="no_fingerprints_registered">您还没有注册指纹，请先给你的设备添加一些指纹</string>
+    <string name="no_fingerprints_registered">您还没有注册指纹，请先给您的设备添加一些指纹</string>
     <string name="go_to_settings">去设置</string>
-    <string name="protection_setup_successfully">密码设置成功。如果你不慎遗忘了，请重新安装本应用。</string>
+    <string name="protection_setup_successfully">密码设置成功。如果您不慎遗忘了，请重新安装本应用。</string>
     <string name="fingerprint_setup_successfully">指纹保护设置成功。如果出现问题，请重新安装本应用。</string>
     <string name="lock_folder">锁定文件夹</string>
     <string name="unlock_folder">解锁文件夹</string>
@@ -425,7 +429,7 @@
     <string name="no_reminder">不再提醒</string>
     <string name="at_start">开始时</string>
     <string name="system_sounds">系统铃声</string>
-    <string name="your_sounds">你的铃声</string>
+    <string name="your_sounds">您的铃声</string>
     <string name="add_new_sound">添加新的铃声</string>
     <string name="no_sound">无铃声</string>
 
@@ -464,6 +468,7 @@
     <string name="import_settings">导入设置</string>
     <string name="settings_exported_successfully">设置导出成功</string>
     <string name="settings_imported_successfully">设置导入成功</string>
+    <string name="start_name_with_surname">姓氏在前</string>
 
     <!-- Setting sections -->
     <string name="visibility">可见度</string>
@@ -477,12 +482,12 @@
     <string name="migrating">转移</string>
 
     <!-- Default tabs to open -->
-    <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
+    <string name="default_tab_to_open">应用启动时打开的页面</string>
+    <string name="contacts_tab">联系人</string>
+    <string name="favorites_tab">收藏</string>
+    <string name="call_history_tab">通话记录</string>
+    <string name="groups_tab">分组</string>
+    <string name="last_used_tab">上次使用的</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">恢复此文件</string>
@@ -573,7 +578,7 @@
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">您的应用版本将不会再收到更新。请升级到专业版以获取最新的程序修复和改进。</string>
     <string name="upgrade_to_pro_long_click">您的应用版本不会再收到更新。请点击此处升级到专业版以获取最新的程序修复和改进。</string>
-    <string name="it_is_free">免费期限至: %s。如果在此之后下载，你可以永久免费使用。</string>
+    <string name="it_is_free">免费期限至: %s。如果在此之后下载，您可以永久免费使用。</string>
     <string name="more_info">更多信息</string>
     <string name="upgrade">升级</string>
     <string name="upgrade_calendar">您必须通过导出/导入.ics文件来自行转移本地存储的事件。您可以在主界面菜单中找到导出/导入选项。</string>
@@ -600,19 +605,19 @@
     <string name="device_os">设备系统：%s</string>
     <string name="donate_please">
         <![CDATA[
-            你好，<br><br>
-            希望你喜欢这个应用。它不包含广告，所以请购买<a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 这个应用支持一下，这样此对话框将不再出现。<br><br>
+            您好，<br><br>
+            希望您喜欢这个应用。它不包含广告，所以请购买<a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 这个应用支持一下，这样此对话框将不再出现。<br><br>
             非常感谢！
         ]]>
     </string>
     <string name="purchase">购买</string>
     <string name="update_thank_you">请更新 Simple Thank You 到最新版本</string>
-    <string name="before_asking_question_read_faq">提问之前，请先打开应用设置并阅读常见问题。也许你可以在那里找到答案。</string>
-    <string name="before_rate_read_faq">评分之前，请先打开应用设置并阅读常见问题。也许你可以在那里找到答案。</string>
+    <string name="before_asking_question_read_faq">提问之前，请先打开应用设置并阅读常见问题。也许您可以在那里找到答案。</string>
+    <string name="before_rate_read_faq">评分之前，请先打开应用设置并阅读常见问题。也许您可以在那里找到答案。</string>
     <string name="make_sure_latest">另外，请确保您正在使用的是最新版本的应用。</string>
     <string name="read_it">阅读</string>
-    <string name="read_faq">Read FAQ</string>
-    <string name="rate_us_prompt">您好，\n\n看来您使用这个应用已经有一段时间了，我们真的很感激。\n\n如果您喜欢，请在Google Play上为我们评分。这对我们很有帮助。\n\n无论你做何决定，你都不会再看到这个消息了。\n\n感谢！</string>
+    <string name="read_faq">阅读常见问题</string>
+    <string name="rate_us_prompt">您好，\n\n看来您使用这个应用已经有一段时间了，我们真的很感激。\n\n如果您喜欢，请在Google Play上为我们评分。这对我们很有帮助。\n\n无论您做何决定，您都不会再看到这个消息了。\n\n感谢！</string>
     <string name="rate_our_app">请为我们的应用评分 :)</string>
     <string name="thank_you">非常感谢</string>
 
@@ -624,7 +629,7 @@
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
             <a href="%5$s">%6$s</a><br><br>
-            你可以点击标题来下载。<br><br>
+            您可以点击标题来下载。<br><br>
             谢谢。
         ]]>
     </string>
@@ -673,23 +678,23 @@
     <string name="frequently_asked_questions">常见问题</string>
     <string name="before_asking_question">在提问之前，请先阅读</string>
     <string name="faq_1_title_commons">为什么我在应用小部件列表里没有找到这个应用的小部件？</string>
-    <string name="faq_1_text_commons">这很可能是因为你将应用程序移动到了SD卡。由于 Android 系统的限制，在这种情况下会隐藏应用程序的小部件。 唯一的解决方法是在系统设置中将应用程序移回内部存储。</string>
-    <string name="faq_2_title_commons">我想支持你，但我不能捐赠金钱。 还有什么是我能够做的吗？</string>
-    <string name="faq_2_text_commons">当然有。你可以帮我宣传这个应用，或给个五星好评。你还可以为我的应用翻译新的语言来帮助你，或者是更新一些现有的翻译。你可以在 https://github.com/SimpleMobileTools/General-Discussion 找到该指南，如果你需要帮助，也可以发邮件 hello@simplemobiletools.com 给我。</string>
+    <string name="faq_1_text_commons">这很可能是因为您将应用程序移动到了SD卡。由于 Android 系统的限制，在这种情况下会隐藏应用程序的小部件。 唯一的解决方法是在系统设置中将应用程序移回内部存储。</string>
+    <string name="faq_2_title_commons">我想支持您，但我不能捐赠金钱。 还有什么是我能够做的吗？</string>
+    <string name="faq_2_text_commons">当然有。您可以帮我宣传这个应用，或给个五星好评。您还可以为我的应用翻译新的语言来帮助您，或者是更新一些现有的翻译。您可以在 https://github.com/SimpleMobileTools/General-Discussion 找到该指南，如果您需要帮助，也可以发邮件 hello@simplemobiletools.com 给我。</string>
     <string name="faq_3_title_commons">我该怎么恢复误删的文件？</string>
-    <string name="faq_3_text_commons">不幸的是，你无法恢复。在确认对话框后文件将被立即删除，你并没有回收站用。</string>
+    <string name="faq_3_text_commons">不幸的是，您无法恢复。在确认对话框后文件将被立即删除，您并没有回收站用。</string>
     <string name="faq_4_title_commons">我不喜欢小部件的颜色，我可以修改吗？</string>
-    <string name="faq_4_text_commons">是可以的，当你在主屏幕上拖动小部件时，会出现小部件配置界面。你会在左下角看到彩色的方块，只需按下它们即可选择新的颜色。你还可以通过滑块来调整 Alpha 值。</string>
+    <string name="faq_4_text_commons">是可以的，当您在主屏幕上拖动小部件时，会出现小部件配置界面。您会在左下角看到彩色的方块，只需按下它们即可选择新的颜色。您还可以通过滑块来调整 Alpha 值。</string>
     <string name="faq_5_title_commons">我可以恢复已删除的文件吗？</string>
-    <string name="faq_5_text_commons">如果你确实把它们删除了，那么你无法恢复。不过，默认情况下启用了回收站，所以文件可能被移动到回收站了而不是被删除了。</string>
+    <string name="faq_5_text_commons">如果您确实把它们删除了，那么您无法恢复。不过，默认情况下启用了回收站，所以文件可能被移动到回收站了而不是被删除了。</string>
     <string name="faq_6_title_commons">应用图标消失了。我该怎么办？</string>
     <string name="faq_6_text_commons">这是因为某些桌面应用无法正确处理自定义应用图标。如果图标消失，请尝试通过 Google Play 或某个小部件启动应用（如果有的话）。
 在成功启动之后，请将图标颜色设置为默认的橙色#F57C00。在最坏的情况下，您可能必须重新安装本应用。</string>
     <string name="faq_7_title_commons">我已付费，但我无法下载这个应用，我该怎么办？</string>
-    <string name="faq_7_text_commons">支付完全是由Google处理的，他们的系统有时会发生故障。你可以在清除Google Play的应用数据之后，重启设备并再次尝试下载。</string>
+    <string name="faq_7_text_commons">支付完全是由Google处理的，他们的系统有时会发生故障。您可以在清除Google Play的应用数据之后，重启设备并再次尝试下载。</string>
     <string name="faq_8_title_commons">为什么我需要升级到专业版？</string>
     <string name="faq_8_text_commons">由于您的应用程序版本不再更新，bug可能将永远得不到修复，也不会再添加任何新功能。 您可以在Google Play上花少量的钱来购买专业版。
-         这是一次性付款，意味着您在购买之后就不再收费，即使你更换了新的设备。 如果您不喜欢Pro版本，可以在几个小时内将其卸载，之后您将自动收到退款。
+         这是一次性付款，意味着您在购买之后就不再收费，即使您更换了新的设备。 如果您不喜欢Pro版本，可以在几个小时内将其卸载，之后您将自动收到退款。
          如果您想要在此之后退款，请通过hello@simplemobiletools.com与我们联系。</string>
 
     <!-- License -->
@@ -726,7 +731,7 @@
 
     <!-- Google Play listing -->
     <string name="deprecated_app">已弃用：该应用版本已不再维护，请在以下链接获取专业版 https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">别忘了如果您在2小时内卸载任何付费应用将会自动退款。如果您想在之后退款，只需通过 hello@simplemobiletools.com 联系我们即可。这样你就可以放心试用了 :)</string>
+    <string name="pro_app_refund">别忘了如果您在2小时内卸载任何付费应用将会自动退款。如果您想在之后退款，只需通过 hello@simplemobiletools.com 联系我们即可。这样您就可以放心试用了 :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">一组简约且开源的 Android 应用程序，可自定义小部件，并且没有广告和不必要的权限。</string>

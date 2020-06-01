@@ -275,6 +275,10 @@
     <string name="descending">Aflopend</string>
     <string name="use_for_this_folder">Alleen voor deze map gebruiken</string>
     <string name="sort_numeric_parts">Numerieke delen op daadwerkelijke waarde sorteren</string>
+    <string name="first_name">Voornaam</string>
+    <string name="middle_name">Tweede voornaam</string>
+    <string name="surname">Achternaam</string>
+    <string name="full_name">Volledige naam</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Deze items verwijderen?</string>
@@ -496,6 +500,7 @@
     <string name="import_settings">Instellingen importeren</string>
     <string name="settings_exported_successfully">Instellingen geëxporteerd</string>
     <string name="settings_imported_successfully">Instellingen geïmporteerd</string>
+    <string name="start_name_with_surname">Beginnen met achternaam</string>
 
     <!-- Setting sections -->
     <string name="visibility">Opmaak</string>

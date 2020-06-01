@@ -274,6 +274,10 @@
     <string name="descending">Опадајуће</string>
     <string name="use_for_this_folder">Користи само за ову фасциклу</string>
     <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="first_name">First name</string>
+    <string name="middle_name">Middle name</string>
+    <string name="surname">Surname</string>
+    <string name="full_name">Full name</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Да ли сте сигурни да желите да наставите са брисањем?</string>
@@ -495,6 +499,7 @@
     <string name="import_settings">Увези подешавања</string>
     <string name="settings_exported_successfully">Подешавања извежена успешно</string>
     <string name="settings_imported_successfully">Подешавања увежена успешно</string>
+    <string name="start_name_with_surname">Start name with surname</string>
 
     <!-- Setting sections -->
     <string name="visibility">Видљивост</string>
