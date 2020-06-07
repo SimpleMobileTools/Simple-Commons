@@ -22,7 +22,13 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
         } else {
             var result: Int
             when {
-                sorting and SORT_BY_NAME != 0 -> result = name.toLowerCase().compareTo(other.name.toLowerCase())
+                sorting and SORT_BY_NAME != 0 -> {
+                    result = if (sorting and SORT_USE_NUMERIC_VALUE != 0) {
+                        AlphanumericComparator().compare(name.toLowerCase(), other.name.toLowerCase())
+                    } else {
+                        name.toLowerCase().compareTo(other.name.toLowerCase())
+                    }
+                }
                 sorting and SORT_BY_SIZE != 0 -> result = when {
                     size == other.size -> 0
                     size > other.size -> 1
