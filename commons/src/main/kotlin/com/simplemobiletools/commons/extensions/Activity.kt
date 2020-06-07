@@ -76,7 +76,7 @@ fun Activity.appLaunched(appId: String) {
         showDonateOrUpgradeDialog()
     }
 
-    if (baseConfig.appRunCount % 60 == 0 && !baseConfig.wasAppRated) {
+    if (baseConfig.appRunCount % 40 == 0 && !baseConfig.wasAppRated) {
         RateStarsDialog(this)
     }
 
