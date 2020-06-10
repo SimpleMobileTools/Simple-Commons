@@ -278,7 +278,7 @@
     <string name="first_name">Όνομα</string>
     <string name="middle_name">Μεσαίο όνομα</string>
     <string name="surname">Επώνυμο</string>
-    <string name="full_name">Full name</string>
+    <string name="full_name">Πλήρες όνομα</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Είστε βέβαιοι ότι θέλετε να συνεχίσετε τη διαγραφή?</string>
@@ -514,12 +514,12 @@
     <string name="migrating">Μετεγκατάσταση</string>
 
     <!-- Default tabs to open -->
-    <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
+    <string name="default_tab_to_open">Καρτέλα για άνοιγμα κατά την έναρξη της εφαρμογής</string>
+    <string name="contacts_tab">Επαφές</string>
+    <string name="favorites_tab">Αγαπημένες</string>
+    <string name="call_history_tab">Ιστορικό κλήσεων</string>
+    <string name="groups_tab">Ομάδες</string>
+    <string name="last_used_tab">Τελευταία χρήση</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Επαναφορά αυτού του αρχείου</string>
