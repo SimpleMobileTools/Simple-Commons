@@ -16,7 +16,7 @@ import com.simplemobiletools.commons.views.MyViewPager
 import kotlinx.android.synthetic.main.dialog_rename.view.*
 import java.util.*
 
-class RenameDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String>, val callback: () -> Unit) {
+class RenameDialog(useMediaFileExtension: Boolean, val activity: BaseSimpleActivity, val paths: ArrayList<String>, val callback: () -> Unit) {
     var dialog: AlertDialog? = null
     val view = LayoutInflater.from(activity).inflate(R.layout.dialog_rename, null)
     var tabsAdapter: RenameAdapter
@@ -51,7 +51,7 @@ class RenameDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String
                     activity.setupDialogStuff(view, this).apply {
                         window?.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM)
                         getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-                            tabsAdapter.dialogConfirmed(viewPager.currentItem) {
+                            tabsAdapter.dialogConfirmed(useMediaFileExtension, viewPager.currentItem) {
                                 dismissDialog()
                                 if (it) {
                                     activity.baseConfig.lastRenameUsed = viewPager.currentItem
