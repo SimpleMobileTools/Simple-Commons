@@ -64,7 +64,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                 val exif = ExifInterface(path)
                 var dateTime = if (isNougatPlus()) {
                     exif.getAttribute(ExifInterface.TAG_DATETIME_ORIGINAL)
-                            ?: exif.getAttribute(ExifInterface.TAG_DATETIME)
+                        ?: exif.getAttribute(ExifInterface.TAG_DATETIME)
                 } else {
                     exif.getAttribute(ExifInterface.TAG_DATETIME)
                 }
@@ -88,19 +88,19 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                 val seconds = (cal.get(Calendar.SECOND)).ensureTwoDigits()
 
                 var newName = rename_items_value.value
-                        .replace("%Y", year, false)
-                        .replace("%M", month, false)
-                        .replace("%D", day, false)
-                        .replace("%h", hours, false)
-                        .replace("%m", minutes, false)
-                        .replace("%s", seconds, false)
-                        .replace("%i", String.format("%0${numbersCnt}d", currentIncrementalNumber))
+                    .replace("%Y", year, false)
+                    .replace("%M", month, false)
+                    .replace("%D", day, false)
+                    .replace("%h", hours, false)
+                    .replace("%m", minutes, false)
+                    .replace("%s", seconds, false)
+                    .replace("%i", String.format("%0${numbersCnt}d", currentIncrementalNumber))
 
                 if (newName.isEmpty()) {
                     continue
                 }
 
-                if (!newName.contains(".") && path.contains(".")) {
+                if ((!newName.contains(".") && path.contains(".")) || !".${newName.substringAfterLast(".")}".isMediaFile()) {
                     val extension = path.substringAfterLast(".")
                     newName += ".$extension"
                 }
