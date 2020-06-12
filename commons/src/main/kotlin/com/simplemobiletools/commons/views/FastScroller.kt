@@ -20,7 +20,6 @@ import com.simplemobiletools.commons.extensions.onGlobalLayout
 // based on https://blog.stylingandroid.com/recyclerview-fastscroll-part-1
 class FastScroller : FrameLayout {
     var isHorizontal = false
-    var allowBubbleDisplay = false
     var measureItemIndex = 0
 
     private var handle: View? = null
@@ -371,7 +370,7 @@ class FastScroller : FrameLayout {
     private fun setPosition(pos: Float) {
         if (isHorizontal) {
             handle!!.x = getValueInRange(0, recyclerViewWidth - handleWidth, pos - handleXOffset)
-            if (bubble != null && allowBubbleDisplay && handle!!.isSelected) {
+            if (bubble != null && handle!!.isSelected) {
                 val bubbleWidth = bubble!!.width
                 bubble!!.x = getValueInRange(tinyMargin, recyclerViewWidth - bubbleWidth, handle!!.x - bubbleWidth)
                 bubbleHideHandler.removeCallbacksAndMessages(null)
@@ -379,8 +378,8 @@ class FastScroller : FrameLayout {
             }
         } else {
             handle!!.y = getValueInRange(0, recyclerViewHeight - handleHeight, pos - handleYOffset)
-            if (bubble != null && allowBubbleDisplay && handle!!.isSelected) {
-                bubble!!.y = getValueInRange(tinyMargin.toInt(), recyclerViewHeight - bubbleHeight, handle!!.y - bubbleHeight)
+            if (bubble != null && handle!!.isSelected) {
+                bubble!!.y = getValueInRange(tinyMargin, recyclerViewHeight - bubbleHeight, handle!!.y - bubbleHeight)
                 bubbleHideHandler.removeCallbacksAndMessages(null)
                 bubble?.alpha = 1f
             }
