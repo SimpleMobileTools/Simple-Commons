@@ -50,7 +50,7 @@
     <string name="favorites">Favoris</string>
     <string name="add_favorites">Ajouter des favoris</string>
     <string name="add_to_favorites">Ajouter aux favoris</string>
-    <string name="remove_from_favorites">Supprimer des favoris</string>
+    <string name="remove_from_favorites">Retirer des favoris</string>
 
     <!-- Search -->
     <string name="search">Recherche</string>
@@ -479,9 +479,9 @@
     <string name="medium">Moyenne</string>
     <string name="large">Large</string>
     <string name="extra_large">Extra-large</string>
-    <string name="password_protect_hidden_items">Protéger les éléments cachés par mot de passe</string>
-    <string name="password_protect_whole_app">Protéger l\'application par mot de passe</string>
-    <string name="password_protect_file_deletion">Protéger la suppression et le déplacement de fichiers par mot de passe</string>
+    <string name="password_protect_hidden_items">Protéger les éléments cachés par schéma, code PIN ou empreinte</string>
+    <string name="password_protect_whole_app">Protéger l\'application par schéma, code PIN ou empreinte</string>
+    <string name="password_protect_file_deletion">Protéger la suppression et le déplacement de fichiers par schéma, code PIN ou empreinte</string>
     <string name="keep_last_modified">Garder la date de modification après les opérations de fichier</string>
     <string name="show_info_bubble">Afficher une bulle d\'information pendant l\'utilisation de la barre de défilement</string>
     <string name="prevent_phone_from_sleeping">Ne pas mettre en veille tant que l\'application est active</string>
