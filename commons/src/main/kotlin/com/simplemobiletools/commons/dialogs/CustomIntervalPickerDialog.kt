@@ -10,7 +10,7 @@ import com.simplemobiletools.commons.helpers.HOUR_SECONDS
 import com.simplemobiletools.commons.helpers.MINUTE_SECONDS
 import kotlinx.android.synthetic.main.dialog_custom_interval_picker.view.*
 
-class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: Int = 0, val showSeconds: Boolean = false, val callback: (minutes: Int) -> Unit) {
+class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: Int = 0, val showSeconds: Boolean = false, val callback: (seconds: Long) -> Unit) {
     var dialog: AlertDialog
     var view = (activity.layoutInflater.inflate(R.layout.dialog_custom_interval_picker, null) as ViewGroup)
 
@@ -51,8 +51,8 @@ class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: In
     private fun confirmReminder() {
         val value = view.dialog_custom_interval_value.value
         val multiplier = getMultiplier(view.dialog_radio_view.checkedRadioButtonId)
-        val minutes = Integer.valueOf(if (value.isEmpty()) "0" else value)
-        callback(minutes * multiplier)
+        val seconds = (if (value.isEmpty()) 0L else value.toLong())
+        callback(seconds * multiplier.toLong())
         activity.hideKeyboard()
         dialog.dismiss()
     }
