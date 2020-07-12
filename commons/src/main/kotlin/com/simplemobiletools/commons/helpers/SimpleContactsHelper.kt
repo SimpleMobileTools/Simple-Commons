@@ -141,7 +141,6 @@ class SimpleContactsHelper(val context: Context) {
             if (contacts.firstOrNull { it.rawId == rawId } == null) {
                 contacts.add(SimpleContact(rawId, contactId, "", "", ArrayList()))
             }
-            mydebug("number $phoneNumber, $rawId, $contactId")
             contacts.firstOrNull { it.rawId == rawId }?.phoneNumbers?.add(phoneNumber)
         }
         return contacts
