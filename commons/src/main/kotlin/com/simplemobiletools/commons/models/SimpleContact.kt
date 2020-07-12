@@ -4,7 +4,7 @@ import android.telephony.PhoneNumberUtils
 import com.simplemobiletools.commons.extensions.normalizePhoneNumber
 import com.simplemobiletools.commons.extensions.normalizeString
 
-data class SimpleContact(val rawId: Int, val contactId: Int, var name: String, var photoUri: String, var phoneNumber: String) : Comparable<SimpleContact> {
+data class SimpleContact(val rawId: Int, val contactId: Int, var name: String, var photoUri: String, var phoneNumbers: ArrayList<String>) : Comparable<SimpleContact> {
     override fun compareTo(other: SimpleContact): Int {
         val firstString = name.normalizeString()
         val secondString = other.name.normalizeString()
@@ -27,10 +27,12 @@ data class SimpleContact(val rawId: Int, val contactId: Int, var name: String, v
     fun doesContainPhoneNumber(text: String): Boolean {
         return if (text.isNotEmpty()) {
             val normalizedText = text.normalizePhoneNumber()
-            PhoneNumberUtils.compare(phoneNumber.normalizePhoneNumber(), normalizedText) ||
-                    phoneNumber.contains(text) ||
-                    phoneNumber.normalizePhoneNumber().contains(normalizedText) ||
-                    phoneNumber.contains(normalizedText)
+            phoneNumbers.any { phoneNumber ->
+                PhoneNumberUtils.compare(phoneNumber.normalizePhoneNumber(), normalizedText) ||
+                        phoneNumber.contains(text) ||
+                        phoneNumber.normalizePhoneNumber().contains(normalizedText) ||
+                        phoneNumber.contains(normalizedText)
+            }
         } else {
             false
         }

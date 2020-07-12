@@ -3,6 +3,8 @@ package com.simplemobiletools.commons.helpers
 import android.content.Context
 import android.database.Cursor
 import android.net.Uri
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.simplemobiletools.commons.extensions.getIntValue
 import com.simplemobiletools.commons.extensions.getStringValue
 import com.simplemobiletools.commons.models.SimpleContact
@@ -18,7 +20,7 @@ class MyContactsContentProvider {
         const val COL_CONTACT_ID = "contact_id"
         const val COL_NAME = "name"
         const val COL_PHOTO_URI = "photo_uri"
-        const val COL_PHONE_NUMBER = "phone_number"
+        const val COL_PHONE_NUMBERS = "phone_numbers"
 
         fun getSimpleContacts(context: Context, cursor: Cursor?): ArrayList<SimpleContact> {
             val contacts = ArrayList<SimpleContact>()
@@ -35,8 +37,11 @@ class MyContactsContentProvider {
                             val contactId = cursor.getIntValue(COL_CONTACT_ID)
                             val name = cursor.getStringValue(COL_NAME)
                             val photoUri = cursor.getStringValue(COL_PHOTO_URI)
-                            val phoneNumber = cursor.getStringValue(COL_PHONE_NUMBER)
-                            val contact = SimpleContact(rawId, contactId, name, photoUri, phoneNumber)
+                            val phoneNumbersJson = cursor.getStringValue(COL_PHONE_NUMBERS)
+
+                            val token = object : TypeToken<ArrayList<String>>() {}.type
+                            val phoneNumbers = Gson().fromJson<ArrayList<String>>(phoneNumbersJson, token) ?: ArrayList()
+                            val contact = SimpleContact(rawId, contactId, name, photoUri, phoneNumbers)
                             contacts.add(contact)
                         } while (cursor.moveToNext())
                     }

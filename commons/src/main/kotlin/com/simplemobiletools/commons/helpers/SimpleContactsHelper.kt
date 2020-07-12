@@ -43,8 +43,8 @@ class SimpleContactsHelper(val context: Context) {
             }
 
             allContacts = allContacts.filter { it.name.isNotEmpty() }.distinctBy {
-                val startIndex = Math.max(0, it.phoneNumber.length - 9)
-                it.phoneNumber.substring(startIndex)
+                val startIndex = Math.max(0, it.phoneNumbers.first().length - 9)
+                it.phoneNumbers.first().substring(startIndex)
             }.distinctBy { it.rawId }.toMutableList() as ArrayList<SimpleContact>
 
             allContacts.sort()
@@ -101,7 +101,7 @@ class SimpleContactsHelper(val context: Context) {
                     }
 
                     val fullName = TextUtils.join(" ", names)
-                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, "")
+                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList())
                     contacts.add(contact)
                 }
             }
@@ -112,7 +112,7 @@ class SimpleContactsHelper(val context: Context) {
                 val jobTitle = cursor.getStringValue(Organization.TITLE) ?: ""
                 if (company.isNotEmpty() || jobTitle.isNotEmpty()) {
                     val fullName = "$company $jobTitle".trim()
-                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, "")
+                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList())
                     contacts.add(contact)
                 }
             }
@@ -138,8 +138,11 @@ class SimpleContactsHelper(val context: Context) {
 
             val rawId = cursor.getIntValue(Data.RAW_CONTACT_ID)
             val contactId = cursor.getIntValue(Data.CONTACT_ID)
-            val contact = SimpleContact(rawId, contactId, "", "", phoneNumber)
-            contacts.add(contact)
+            if (contacts.firstOrNull { it.rawId == rawId } == null) {
+                contacts.add(SimpleContact(rawId, contactId, "", "", ArrayList()))
+            }
+            mydebug("number $phoneNumber, $rawId, $contactId")
+            contacts.firstOrNull { it.rawId == rawId }?.phoneNumbers?.add(phoneNumber)
         }
         return contacts
     }
