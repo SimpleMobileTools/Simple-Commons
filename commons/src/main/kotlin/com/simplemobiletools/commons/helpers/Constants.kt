@@ -339,6 +339,7 @@ fun isPiePlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
 fun isQPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
 
 fun getDateFormats() = arrayListOf(
+    "--MM-dd",
     "yyyy-MM-dd",
     "yyyyMMdd",
     "yyyy.MM.dd",
@@ -347,7 +348,6 @@ fun getDateFormats() = arrayListOf(
     "yy.MM.dd",
     "yy/MM/dd",
     "MM-dd",
-    "--MM-dd",
     "MMdd",
     "MM/dd",
     "MM.dd"
