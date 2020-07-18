@@ -253,7 +253,7 @@
     <string name="temporarily_show_hidden">Mostrar ocultas temporariamente</string>
     <string name="stop_showing_hidden">Não mostrar multimédia oculta</string>
     <string name="maximum_share_reached">Não pode partilhar tantos itens em simultâneoo</string>
-    <string name="empty_and_disable_recycle_bin">Esvaziar e desativar a reciclagem</string>
+    <string name="empty_and_disable_recycle_bin">Esvaziar e desativar reciclagem</string>
     <string name="undo">Desfazer</string>
     <string name="redo">Refazer</string>
     <string name="print">Imprimir</string>
@@ -278,7 +278,7 @@
     <string name="first_name">Primeiro nome</string>
     <string name="middle_name">Segundo nome</string>
     <string name="surname">Apelido</string>
-    <string name="full_name">Full name</string>
+    <string name="full_name">Nome completo</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Tem a certeza de que deseja continuar com a eliminação?</string>
@@ -323,6 +323,7 @@
     <string name="yesterday">Ontem</string>
     <string name="today">Hoje</string>
     <string name="tomorrow">Amanhã</string>
+    <string name="hide_year">Ocultar ano</string>
     <string name="seconds_raw">segundos</string>
     <string name="minutes_raw">minutos</string>
     <string name="hours_raw">horas</string>
@@ -609,8 +610,8 @@
     <string name="sunday_short">dom</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">A sua aplicação já não será atualizada. Adquira a versão Pro para receber correções e melhorias.</string>
-    <string name="upgrade_to_pro_long_click">A sua aplicação já não será atualizada. Adquira a versão Pro para receber correções e melhorias.</string>
+    <string name="upgrade_to_pro_long">Esta aplicação já não receberá atualizações. Adquira a versão Pro para receber correções e melhorias.</string>
+    <string name="upgrade_to_pro_long_click">Esta aplicação já não receberá atualizações. Adquira a versão Pro para receber correções e melhorias.</string>
     <string name="it_is_free">É gratuita até: %s. Se a descarregar até esta data, será sua para sempre.</string>
     <string name="more_info">Mais informação</string>
     <string name="upgrade">Atualizar</string>
@@ -627,7 +628,7 @@
     <string name="invite_friends_underlined"><u>Convidar amigos</u></string>
     <string name="share_text">Olá, experimenta %1$s em %2$s</string>
     <string name="invite_via">Convidar por</string>
-    <string name="rate_us_underlined"><u>Avalie-nos na Play Store</u></string>
+    <string name="rate_us_underlined"><u>Avalie-nos na Google Play</u></string>
     <string name="rate">Avaliar</string>
     <string name="donate">Donativos</string>
     <string name="donate_underlined"><u>Donativos</u></string>
@@ -690,16 +691,16 @@
     <string name="camera_short">Câmara</string>
     <string name="clock_short">Relógio</string>
     <string name="contacts_short">Contactos</string>
-    <string name="dialer_short">Dialer</string>
+    <string name="dialer_short">Marcador</string>
     <string name="draw_short">Desenho</string>
     <string name="file_manager_short">Gestor de ficheiros</string>
     <string name="flashlight_short">Lanterna</string>
     <string name="gallery_short">Galeria</string>
     <string name="music_player_short">Reprodutor de músicas</string>
     <string name="notes_short">Notas</string>
-    <string name="sms_messenger_short">SMS Messenger</string>
+    <string name="sms_messenger_short">Mensagens</string>
     <string name="thank_you_short">Thank You</string>
-    <string name="voice_recorder_short">Voice Recorder</string>
+    <string name="voice_recorder_short">Gravador de voz</string>
 
     <string name="sideloaded_app">
         <![CDATA[

@@ -164,8 +164,8 @@
 
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
-        <item quantity="one">%d contact</item>
-        <item quantity="other">%d contacts</item>
+        <item quantity="one">%d kontakt</item>
+        <item quantity="other">%d kontakter</item>
     </plurals>
 
     <!-- Storages -->
@@ -258,7 +258,7 @@
     <string name="redo">Gentag</string>
     <string name="print">Udskriv</string>
     <string name="create_shortcut">Opret genvej</string>
-    <string name="add_number_to_contact">Add number to contact</string>
+    <string name="add_number_to_contact">Føj nummer til kontakt</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorter efter</string>
@@ -317,12 +317,13 @@
     <string name="fingerprint_setup_successfully">Beskyttelsen er oprettet. Geninstaller appen hvis du har problemer med at gendanne den.</string>
     <string name="lock_folder">Lås mappe</string>
     <string name="unlock_folder">Lås mappe op</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="lock_folder_notice">Denne beskyttelse virker kun i denne app, den er ikke beregnet som erstatning for rigtig kryptering af mapper på systemniveau.</string>
 
     <!-- Times -->
     <string name="yesterday">I går</string>
     <string name="today">I dag</string>
     <string name="tomorrow">I morgen</string>
+    <string name="hide_year">Hide year</string>
     <string name="seconds_raw">sekunder</string>
     <string name="minutes_raw">minutter</string>
     <string name="hours_raw">timer</string>
@@ -515,11 +516,11 @@
 
     <!-- Default tabs to open -->
     <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
+    <string name="contacts_tab">Kontakter</string>
+    <string name="favorites_tab">Foretrukne</string>
+    <string name="call_history_tab">Opkaldshistorik</string>
+    <string name="groups_tab">Grupper</string>
+    <string name="last_used_tab">Senest brugte</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Gendan denne fil</string>
@@ -685,21 +686,21 @@
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
 
     <string name="app_launcher_short">App Launcher</string>
-    <string name="calculator_short">Calculator</string>
-    <string name="calendar_short">Calendar</string>
-    <string name="camera_short">Camera</string>
-    <string name="clock_short">Clock</string>
-    <string name="contacts_short">Contacts</string>
+    <string name="calculator_short">Lommeregner</string>
+    <string name="calendar_short">Kalender</string>
+    <string name="camera_short">Kamera</string>
+    <string name="clock_short">Ur</string>
+    <string name="contacts_short">Kontakter</string>
     <string name="dialer_short">Dialer</string>
-    <string name="draw_short">Draw</string>
-    <string name="file_manager_short">File Manager</string>
-    <string name="flashlight_short">Flashlight</string>
-    <string name="gallery_short">Gallery</string>
-    <string name="music_player_short">Music Player</string>
-    <string name="notes_short">Notes</string>
+    <string name="draw_short">Tegning</string>
+    <string name="file_manager_short">Filhåndtering</string>
+    <string name="flashlight_short">Blitz</string>
+    <string name="gallery_short">Galleri</string>
+    <string name="music_player_short">Musikafspiller</string>
+    <string name="notes_short">Noter</string>
     <string name="sms_messenger_short">SMS Messenger</string>
-    <string name="thank_you_short">Thank You</string>
-    <string name="voice_recorder_short">Voice Recorder</string>
+    <string name="thank_you_short">Tak skal du have</string>
+    <string name="voice_recorder_short">Lydoptager</string>
 
     <string name="sideloaded_app">
         <![CDATA[

@@ -24,7 +24,7 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
         this.paths = paths
     }
 
-    override fun dialogConfirmed(callback: (success: Boolean) -> Unit) {
+    override fun dialogConfirmed(useMediaFileExtension: Boolean, callback: (success: Boolean) -> Unit) {
         val valueToAdd = rename_simple_value.value
         val append = rename_simple_radio_group.checkedRadioButtonId == rename_simple_radio_append.id
 
