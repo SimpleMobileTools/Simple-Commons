@@ -215,6 +215,7 @@
     <string name="apply_to_all_apps">심플 시리즈 앱에 일괄적용</string>
     <string name="app_icon_color_warning">경고 : 일부 런처는 앱 아이콘 커스터마이징을 제대로 지원하지 않습니다. 앱의 아이콘이 사라졌다면, 플레이 스토어나 위젯을 통하여 앱을 실행한 뒤 기본값인 주황색(#F57C00)으로 다시 변경해주시기 바랍니다. 최악의 경우에는 앱을 재설치 해야할 수도 있습니다.</string>
     <string name="share_colors_success">색상이 성공적으로 변경되었습니다. \'공유\'라는 새로운 테마가 추가되었습니다. 앞으로 모든 앱의 색상을 변경할때 사용하세요.</string>
+    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             이 기능을 이용하시려면 개발지원을 위해 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 앱을 구매해주세요. 감사합니다!

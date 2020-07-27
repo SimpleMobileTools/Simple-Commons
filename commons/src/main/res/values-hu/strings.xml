@@ -219,6 +219,7 @@
     <string name="apply_to_all_apps">Színek alkalmazása az összes Simple Apps-ra</string>
     <string name="app_icon_color_warning">FIGYELMEZTETÉS: Néhány indító nem megfelelően kezeli az alkalmazás ikon testreszabását. Abban az esetben, ha az ikon eltűnik, próbálja meg elindítani az alkalmazást a Google Playen vagy egy bizonyos widgeten keresztül, ha elérhető.\nMiután elindult, állítsa vissza az alapértelmezett narancssárga ikont. #F57C00. Lehet, hogy a legrosszabb esetben újra kell telepítenie az alkalmazást.</string>
     <string name="share_colors_success">A színek sikeresen frissültek. Hozzáadott egy új témát, amelynek neve \'Megosztott\'. Kérjük, a jövőben ezt használja az összes alkalmazás színeinek frissítéséhez.</string>
+    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
     <string name="purchase_thank_you">
 		<![CDATA[
             Kérjük vásárolja meg a <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> alkalmazást a funkció feloldásához és a fejlesztés támogatásához. Köszönöm!

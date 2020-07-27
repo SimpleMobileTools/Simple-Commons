@@ -217,6 +217,7 @@
     <string name="app_icon_color_warning">警告：某些桌面应用无法正确处理自定义应用图标。如果图标消失，请尝试通过 Google Play 或某个小部件启动应用（如果有的话）。
 在成功启动之后，请将图标颜色设置为默认的橙色#F57C00。在最坏的情况下，您可能必须重新安装本应用。</string>
     <string name="share_colors_success">颜色更改成功。已添加名为“共享”的新主题，以后您可以使用它来更改所有应用的颜色。</string>
+    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             请购买 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 以解锁此功能并支持开发。感谢！

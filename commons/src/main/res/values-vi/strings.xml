@@ -220,6 +220,7 @@
     <string name="app_icon_color_warning">CẢNH BÁO: Một số trình khởi chạy không xử lý tùy chỉnh biểu tượng ứng dụng đúng cách. Trong trường hợp biểu tượng biến mất, hãy thử khởi chạy ứng dụng qua Google Play hoặc một số tiện ích, nếu có.
          Sau khi khởi chạy, chỉ cần đặt lại biểu tượng màu cam mặc định #F57C00. Bạn có thể phải cài đặt lại ứng dụng trong trường hợp xấu nhất.</string>
     <string name="share_colors_success">Màu sắc được cập nhật thành công. Một chủ đề mới có tên \'Shared\' đã được thêm vào, vui lòng sử dụng chủ đề đó để cập nhật tất cả các màu của ứng dụng trong tương lai.</string>
+    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Làm ơn hãy mua ứng dụng <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> để mở khóa tính năng này và hỗ trợ nhà phát triển. Cảm ơn!

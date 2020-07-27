@@ -220,6 +220,7 @@
     <string name="app_icon_color_warning">ADVERTIMENT: alguns llançadors no gestionen la personalització de la icona d\'aplicació correctament. En cas que la icona desaparegui, proveu de llançar l\'aplicació mitjançant Google Play o algun widget, si està disponible.
         Un cop llançat, simplement configureu la icona de color taronja per defecte #F57C00. És possible que hàgiu de tornar a instal·lar l\'aplicació en el pitjor dels casos.</string>
     <string name="share_colors_success">Colors actualitzats satisfactoriament. S’ha afegit un nou tema anomenat \'Shared\'. Fes -lo servidr per actualitzar els colors de les aplicacions en el futur.</string>
+    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Sius plau compra la aplicació <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> per desblocar aquesta fucnió i ajudar al desenvolupament. Gràcies!
