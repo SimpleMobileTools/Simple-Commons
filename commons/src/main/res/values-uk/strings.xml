@@ -220,6 +220,7 @@
     <string name="app_icon_color_warning">УВАГА: Деякі лончери некоректно опрацьовують зміну піктограми додатків. Якщо піктограма додатка зникне, спробуйте запустити його через Google Play або віджет, якщо доступний.
         Після запуску просто поверніть стандартний колір піктограми: #F57C00. У найгіршому випадку вам доведеться перевстановити додаток.</string>
     <string name="share_colors_success">Кольори успішно оновлено. Було додано нову тему під назвою \'Загальна\', використовуйте її для оновлення кольорів усіх додатків у майбутньому.</string>
+    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Будь ласка, придбайте <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, щоб розблокувати цю функцію і підтримати розробку. Дякую!
