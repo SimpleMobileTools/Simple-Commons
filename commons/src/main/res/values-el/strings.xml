@@ -216,11 +216,11 @@
     <string name="undo_changes">Αναίρεση αλλαγών</string>
     <string name="undo_changes_confirmation">Είστε βέβαιοι ότι θέλετε να αναιρέσετε τις αλλαγές σας?</string>
     <string name="save_before_closing">Έχετε αλλαγές που δεν έχουν αποθηκευτεί. Αποθήκευση πριν από την έξοδο?</string>
-    <string name="apply_to_all_apps">Εφαρμογή χρωμάτων σε όλες τις Simple Apps</string>
+    <string name="apply_to_all_apps">Εφαρμογή χρωμάτων σε όλες τις Απλές Εφαρμογές</string>
     <string name="app_icon_color_warning">ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Ορισμένοι Εκκινητές δεν χειρίζονται σωστά τα εικονίδια της εφαρμογής. Σε περίπτωση που το εικονίδιο εξαφανιστεί, δοκιμάστε να ξεκινήσετε την εφαρμογή μέσω του Google Play ή κάποιου Witget, αν είναι διαθέσιμο.
         Μόλις ξεκινήσει, απλά επαναφέρετε το προεπιλεγμένο πορτοκαλί εικονίδιο #F57C00. Μπορεί να χρειαστεί να επανεγκαταστήσετε την εφαρμογή στη χειρότερη περίπτωση.</string>
     <string name="share_colors_success">Τα χρώματα ενημερώθηκαν με επιτυχία. Ένα νέο θέμα που ονομάζεται  \"Κοινόχρηστο\" έχει προστεθεί, παρακαλούμε να χρησιμοποιήστε το για την ενημέρωση των χρωμάτων όλων των εφαρμ. στο μέλλον.</string>
-    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
+    <string name="shared_theme_note">Σημειώστε ότι αν και χρησιμοποιείτε την έκδοση εφαρμογής Pro, εξακολουθείτε να χρειάζεστε το \"Απλά Σας Ευχαριστώ\" για τεχνικούς λόγους. Φροντίζει για το συγχρονισμό χρωμάτων.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Παρακαλώ αγοράστε την <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Απλά Σας Ευχαριστώ</a> για να ξεκλειδώσετε αυτή τη λειτουργία για να υποστηρίξετε την ανάπτυξη. Ευχαριστώ!
@@ -469,7 +469,7 @@
 
     <!-- Settings -->
     <string name="settings">Ρυθμίσεις</string>
-    <string name="purchase_simple_thank_you">Αγοράστε το Simple σας ευχαριστώ</string>
+    <string name="purchase_simple_thank_you">Αγοράστε το \"Απλά Σας ευχαριστώ\"</string>
     <string name="customize_colors">Προσαρμογή χρωμάτων</string>
     <string name="customize_widget_colors">Προσαρμογή χρωμάτων widget</string>
     <string name="use_english_language">Χρήση γλώσσας English</string>
@@ -626,7 +626,7 @@
     <string name="more_apps_underlined"><u>Περισσότερες εφαρμογές</u></string>
     <string name="more_apps_from_us_underlined"><u>Περισσότερες εφαρμογές από εμάς</u></string>
     <string name="third_party_licences_underlined"><u>Άδειες τρίτων</u></string>
-    <string name="invite_friends_underlined"><u>Προσκαλέσετε φίλους</u></string>
+    <string name="invite_friends_underlined"><u>Πρόσκληση φίλων</u></string>
     <string name="share_text">Έι, έλα να δεις %1$s στο %2$s</string>
     <string name="invite_via">Πρόσκληση μέσω</string>
     <string name="rate_us_underlined"><u>Βαθμολογήστε μας</u></string>
@@ -683,7 +683,7 @@
     <string name="simple_music_player">Απλός Music Player</string>
     <string name="simple_notes">Απλές Σημειώσεις</string>
     <string name="simple_sms_messenger">Απλός SMS Messenger</string>
-    <string name="simple_thank_you">Απλά Σας ευχαριστούμε</string>
+    <string name="simple_thank_you">Απλά Σας ευχαριστώ</string>
     <string name="simple_voice_recorder">Απλή Εγγραφή Φωνής</string>
 
     <string name="app_launcher_short">App Launcher</string>
