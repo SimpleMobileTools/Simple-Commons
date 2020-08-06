@@ -237,10 +237,10 @@ class CustomizationActivity : BaseSimpleActivity() {
         resources.apply {
             for ((key, value) in predefinedThemes.filter { it.key != THEME_CUSTOM && it.key != THEME_SHARED }) {
                 if (curTextColor == getColor(value.textColorId) &&
-                        curBackgroundColor == getColor(value.backgroundColorId) &&
-                        curPrimaryColor == getColor(value.primaryColorId) &&
-                        curAppIconColor == getColor(value.appIconColorId) &&
-                        curNavigationBarColor == getThemeNavigationColor(key)
+                    curBackgroundColor == getColor(value.backgroundColorId) &&
+                    curPrimaryColor == getColor(value.primaryColorId) &&
+                    curAppIconColor == getColor(value.appIconColorId) &&
+                    curNavigationBarColor == getThemeNavigationColor(key)
                 ) {
                     themeId = key
                 }
