@@ -10,7 +10,7 @@
     <string name="edit_with">Editar con</string>
     <string name="no_app_found">No se encontró una aplicación válida</string>
     <string name="set_as">Establecer como</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_to_clipboard">Copiar al portapapeles</string>
     <string name="value_copied_to_clipboard">Valor copiado al portapapeles</string>
     <string name="unknown">Desconocido</string>
     <string name="always">Siempre</string>
@@ -44,7 +44,7 @@
     <string name="blocked_numbers">Números bloqueados</string>
     <string name="must_make_default_dialer">Tienes que hacer esta aplicación la aplicación de marcación por defecto para hacer uso de los números bloqueados.</string>
     <string name="set_as_default">Establecer como por defecto</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
+    <string name="block_confirmation">¿Estás seguro de que quieres bloquear a \"%s\"?</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
@@ -174,7 +174,7 @@
     <string name="sd_card">Tarjeta SD</string>
     <string name="root">Raíz /</string>
     <string name="wrong_root_selected">Se seleccionó la carpeta incorrecta, seleccione la carpeta raíz de su tarjeta SD</string>
-    <string name="sd_card_usb_same">La targeta SD i el dispositivo USB no pueden ser los mismos</string>
+    <string name="sd_card_usb_same">La tarjeta SD y el dispositivo USB no pueden ser los mismos</string>
     <string name="app_on_sd_card">Parece que tienes la aplicación instalada en una tarjeta SD, lo que hace que los widgets de la aplicación no estén disponibles. Ni siquiera los verás en la lista de widgets disponibles.
         Es una limitación del sistema, por lo que si deseas usar los widgets, debes volver a colocar la aplicación en el almacenamiento interno.</string>
 
@@ -191,7 +191,7 @@
     <string name="focal_length">Longitud focal</string>
     <string name="exposure_time">Tiempo de exposición</string>
     <string name="iso_speed">Velocidad ISO</string>
-    <string name="f_number">F-number</string>
+    <string name="f_number">Número F</string>
     <string name="camera">Cámara</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Título de la canción</string>
@@ -219,11 +219,11 @@
     <string name="apply_to_all_apps">Aplicar colores a todas las aplicaciones Simple Apps</string>
     <string name="app_icon_color_warning">ADVERTENCIA: Algunos launchers no manejan correctamente la personalización del icono de la aplicación. En caso de que el icono desaparezca, intente iniciar la aplicación a través de Google Play o algún widget, si está disponible.
         Una vez iniciado, simplemente vuelva a establecer el ícono naranja predeterminado #F57C00. Es posible que tengas que volver a instalar la aplicación en el peor de los casos.</string>
-    <string name="share_colors_success">Colores actualizados correctamente. Se ha añadido un nuevo tema llamado \'Shared\', Por favor utilicelo para actualizar los colores de todas las aplicaciones en el futuro.</string>
-    <string name="shared_theme_note">Tenga en cuenta que aunque esté utilizando la versión de la aplicación Pro, aún necesita Simple Thank You por razones técnicas. Se encarga de la sincronización del color.</string>
+    <string name="share_colors_success">Colores actualizados correctamente. Se ha añadido un nuevo tema llamado \'Compartido\', por favor utilicelo para actualizar los colores de todas las aplicaciones en el futuro.</string>
+    <string name="shared_theme_note">Tenga en cuenta que aunque esté utilizando la versión de la aplicación Pro, aún necesita Simple Gracias por razones técnicas. Se encarga de la sincronización del color.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Por favor compra <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> para desbloquear esta función y ayudar al desarrollo. Gracias!
+            Por favor compra <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Gracias</a> para desbloquear esta función y ayudar al desarrollo. ¡Gracias!
         ]]>
     </string>
 
@@ -279,7 +279,7 @@
     <string name="first_name">Primer nombre</string>
     <string name="middle_name">Segundo nombre</string>
     <string name="surname">Apellido</string>
-    <string name="full_name">Full name</string>
+    <string name="full_name">Nombre completo</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">¿Está seguro de querer continuar con la eliminación?</string>
@@ -304,21 +304,21 @@
     <string name="wrong_pin">PIN erróneo</string>
     <string name="repeat_pin">Repetir PIN</string>
     <string name="pattern">Patrón</string>
-    <string name="insert_pattern">Inserte Patrón</string>
+    <string name="insert_pattern">Inserte patrón</string>
     <string name="wrong_pattern">Patrón erroneo</string>
-    <string name="repeat_pattern">Repetir Patrón</string>
+    <string name="repeat_pattern">Repetir patrón</string>
     <string name="fingerprint">Huella dactilar</string>
-    <string name="add_fingerprint">Añadir Huella dactilar</string>
-    <string name="place_finger">Por favor pon el dedo en el lector de Huella dactilares</string>
+    <string name="add_fingerprint">Añadir huella dactilar</string>
+    <string name="place_finger">Por favor pon el dedo en el lector de huellas dactilares</string>
     <string name="authentication_failed">Autenticación fallida</string>
     <string name="authentication_blocked">Autenticación bloqueada, por favor intente de nuevo en un momento</string>
-    <string name="no_fingerprints_registered">No tiene huellas dactilares registradas, por favor agregue algunas en la Configuración de su dispositivo</string>
+    <string name="no_fingerprints_registered">No tiene huellas dactilares registradas, por favor agregue algunas en la configuración de su dispositivo</string>
     <string name="go_to_settings">Ir a la configuración</string>
     <string name="protection_setup_successfully">Se ha agregado la contraseña con éxito. Por favor, vuelva a instalar la aplicación en caso de que la olvide.</string>
     <string name="fingerprint_setup_successfully">Configuración de protección con éxito. Por favor, vuelva a instalar la aplicación en caso de problemas al restablecerla.</string>
     <string name="lock_folder">Bloquear carpeta</string>
     <string name="unlock_folder">Desbloquear carpeta</string>
-    <string name="lock_folder_notice">Esta protección funciona solo en esta aplicación, no reemplaza un cifrado de carpetas en todo el sistema.</string>
+    <string name="lock_folder_notice">Esta protección funciona sólo en esta aplicación, no reemplaza un cifrado de carpetas en todo el sistema.</string>
 
     <!-- Times -->
     <string name="yesterday">Ayer</string>
@@ -469,7 +469,7 @@
 
     <!-- Settings -->
     <string name="settings">Ajustes</string>
-    <string name="purchase_simple_thank_you">Compra Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Compra Simple Gracias</string>
     <string name="customize_colors">Cambiar colores</string>
     <string name="customize_widget_colors">Personaliza los colores del widget</string>
     <string name="use_english_language">Usar el idioma Inglés</string>
@@ -481,7 +481,7 @@
     <string name="extra_large">Enorme</string>
     <string name="password_protect_hidden_items">Contraseña para proteger los medios ocultos</string>
     <string name="password_protect_whole_app">Contraseña para proteger toda la aplicación</string>
-    <string name="password_protect_file_deletion">Protegeger con contraseña eliminar y mover archivos</string>
+    <string name="password_protect_file_deletion">Proteger con contraseña eliminar y mover archivos</string>
     <string name="keep_last_modified">Mantener el último valor modificado por última vez en las operaciones de archivo</string>
     <string name="show_info_bubble">Mostrar una burbuja de información al desplazar elementos arrastrando la barra de desplazamiento</string>
     <string name="prevent_phone_from_sleeping">No dejar dormir el teléfono con la aplicación en primer plano</string>
@@ -494,7 +494,7 @@
     <string name="use_same_snooze">Siempre use el mismo tiempo de repetición</string>
     <string name="snooze_time">Tiempo de repetición</string>
     <string name="vibrate_on_button_press">Vibrar al presionar un botón</string>
-    <string name="move_items_into_recycle_bin">Mover los elementos en la Papelera de reciclaje en lugar de eliminar</string>
+    <string name="move_items_into_recycle_bin">Mover los elementos en la papelera de reciclaje en lugar de eliminar</string>
     <string name="recycle_bin_cleaning_interval">Intervalo de vaciado de la papelera de reciclaje</string>
     <string name="empty_recycle_bin">Vaciar papelera de reciclaje</string>
     <string name="force_portrait_mode">Forzar el modo retrato</string>
@@ -516,12 +516,12 @@
     <string name="migrating">Migrando</string>
 
     <!-- Default tabs to open -->
-    <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
+    <string name="default_tab_to_open">Pestaña para abrir al inicio de la aplicación</string>
+    <string name="contacts_tab">Contactos</string>
+    <string name="favorites_tab">Favoritos</string>
+    <string name="call_history_tab">Historial de llamadas</string>
+    <string name="groups_tab">Grupos</string>
+    <string name="last_used_tab">La última usada</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restaurar el fichero</string>
@@ -529,7 +529,7 @@
     <string name="restore_all_files">Restaurar todos los ficheros</string>
     <string name="recycle_bin_emptied">La papelera se ha vaciado</string>
     <string name="files_restored_successfully">Lo ficheros han sido restaurados correctamente</string>
-    <string name="empty_recycle_bin_confirmation">Seguro que quieres vaciar la papelera? Los ficheros se perderan definitivamente.</string>
+    <string name="empty_recycle_bin_confirmation">¿Seguro que quieres vaciar la papelera? Los ficheros se perderan definitivamente.</string>
     <string name="recycle_bin_empty">La papelera está vacia</string>
     <string name="moving_recycle_bin_items_disabled">El movimiento de los elementos de la papelera de reciclaje está deshabilitado, utilice Restaurar</string>
     <string name="show_the_recycle_bin">Mostrar la paplera de reciclaje</string>
@@ -555,7 +555,7 @@
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Parece que tienes un dispositivo USB conectado a tu dispositivo. Para asegurarse de que sus archivos aparezcan correctamente, debe otorgar permisos adicionales.</string>
-    <string name="confirm_usb_storage_access_text">Elija la carpeta raíz del dispositivo USB en la pantalla siguiente, para otorgar acceso</string>
+    <string name="confirm_usb_storage_access_text">Elija la carpeta raíz del dispositivo USB en la siguiente pantalla para otorgar acceso</string>
     <string name="wrong_root_selected_usb">Carpeta incorrecta, seleccione la carpeta raíz de su dispositivo USB</string>
 
     <!-- Dates -->
@@ -612,9 +612,9 @@
 
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">La versión de tu aplicación ya no será actualizada. Por favor, mejora a la versión Pro para recibir nuevas correcciones y otras mejoras.</string>
-    <string name="upgrade_to_pro_long_click">La versión de tu aplicación ya no será actualizada. Por favor, mejora a la versión Pro para recibir nuevas correcciones y otras mejoras clickeando aquí.</string>
+    <string name="upgrade_to_pro_long_click">La versión de tu aplicación ya no será actualizada. Por favor, mejora a la versión Pro para recibir nuevas correcciones y otras mejoras haciendo clic aquí.</string>
     <string name="it_is_free">Es gratis hasta: %s. Si lo descargas hasta entonces, podrás usarlo gratis para siempre..</string>
-    <string name="more_info">Más informanción</string>
+    <string name="more_info">Más información</string>
     <string name="upgrade">Actualizar</string>
     <string name="upgrade_calendar">Tienes que migrar manualmente los eventos almacenados localmente mediante la exportación en un archivo .ics, y luego importarlos. Puedes encontrar los botones de exportar / importar en el menú de la pantalla principal.</string>
 
@@ -641,18 +641,18 @@
     <string name="donate_please">
         <![CDATA[
             Hola,<br><br>
-            Espero que estés disfrutando de la aplicación. No contiene anuncios, por lo que debe respaldar su desarrollo comprando la aplicación <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, también evitará que este diálogo vuelva a aparecer.<br><br>
-            Gracias!
+            Espero que estés disfrutando de la aplicación. No contiene anuncios, por lo que debe respaldar su desarrollo comprando la aplicación <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Gracias</a>, también evitará que este diálogo vuelva a aparecer.<br><br>
+            ¡Gracias!
         ]]>
     </string>
     <string name="purchase">Comprar</string>
     <string name="update_thank_you">Por favor, actualice Simple Tank You a la última versión</string>
-    <string name="before_asking_question_read_faq">Antes de hacer una pregunta, lea las Preguntas más frecuentes. Quizás la solución esté allí.</string>
-    <string name="before_rate_read_faq">Antes de calificarnos, verifique la configuración de la aplicación y lea primero las Preguntas frecuentes. Si tiene algún problema, tal vez la solución esté ahí.</string>
+    <string name="before_asking_question_read_faq">Antes de hacer una pregunta, lea las preguntas más frecuentes. Quizás la solución esté ahí.</string>
+    <string name="before_rate_read_faq">Antes de calificarnos, verifique la configuración de la aplicación y lea primero las preguntas frecuentes. Si tiene algún problema, tal vez la solución esté ahí.</string>
     <string name="make_sure_latest">También asegúrese de estar utilizando la última versión de la aplicación.</string>
     <string name="read_it">Leer</string>
     <string name="read_faq">Leer Preguntas Frecuentes</string>
-    <string name="rate_us_prompt">Hola,\n\nparece que ya has usado esta aplicación, y realmente lo apreciamos.\n\nSi te podemos pedir un favor, por favor, puntúanos en Google Play. Eso realmente nos ayudaría mucho.\n\nNo importa lo que decidas, no verás este mensaje de nuevo.\n\n!Gracias!</string>
+    <string name="rate_us_prompt">Hola,\n\nparece que ya has usado esta aplicación, y realmente lo apreciamos.\n\nSi te podemos pedir un favor, por favor, puntúanos en Google Play. Eso realmente nos ayudaría mucho.\n\nNo importa lo que decidas, no verás este mensaje de nuevo.\n\n¡Gracias!</string>
     <string name="rate_our_app">Califica nuestra aplicación por favor :)</string>
     <string name="thank_you">Gracias</string>
 
@@ -660,7 +660,7 @@
     <string name="new_app">
         <![CDATA[
             Hola,<br><br>
-            solo te informamos que recientemente se ha lanzado una nueva aplicación:<br><br>
+            sólo te informamos que recientemente se ha lanzado una nueva aplicación:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
             <a href="%5$s">%6$s</a><br><br>
@@ -669,22 +669,22 @@
         ]]>
     </string>
 
-    <string name="simple_app_launcher">Simple App Launcher</string>
-    <string name="simple_calculator">Simple Calculator</string>
-    <string name="simple_calendar">Simple Calendar</string>
-    <string name="simple_camera">Simple Camera</string>
-    <string name="simple_clock">Simple Clock</string>
-    <string name="simple_contacts">Simple Contacts</string>
-    <string name="simple_dialer">Simple Dialer</string>
-    <string name="simple_draw">Simple Draw</string>
-    <string name="simple_file_manager">Simple File Manager</string>
-    <string name="simple_flashlight">Simple Flashlight</string>
-    <string name="simple_gallery">Simple Gallery</string>
-    <string name="simple_music_player">Simple Music Player</string>
-    <string name="simple_notes">Simple Notes</string>
-    <string name="simple_sms_messenger">Simple SMS Messenger</string>
-    <string name="simple_thank_you">Simple Thank You</string>
-    <string name="simple_voice_recorder">Simple Voice Recorder</string>
+    <string name="simple_app_launcher">Launcher App Simple</string>
+    <string name="simple_calculator">Calculadora Simple</string>
+    <string name="simple_calendar">Calendario Simple</string>
+    <string name="simple_camera">Cámara Simple</string>
+    <string name="simple_clock">Reloj Simple</string>
+    <string name="simple_contacts">Contactos Simples</string>
+    <string name="simple_dialer">Marcador Simple</string>
+    <string name="simple_draw">Dibuja Simple</string>
+    <string name="simple_file_manager">Administrador Simple de Archivos</string>
+    <string name="simple_flashlight">Linterna Simple</string>
+    <string name="simple_gallery">Galería Simple</string>
+    <string name="simple_music_player">Reproductor Simple de Música</string>
+    <string name="simple_notes">Notas Simples</string>
+    <string name="simple_sms_messenger">Mensajero SMS Simple</string>
+    <string name="simple_thank_you">Simple Gracias</string>
+    <string name="simple_voice_recorder">Grabadora de Voz Simple</string>
 
     <string name="app_launcher_short">App Launcher</string>
     <string name="calculator_short">Calculadora</string>
@@ -692,16 +692,16 @@
     <string name="camera_short">Cámara</string>
     <string name="clock_short">Reloj</string>
     <string name="contacts_short">Contactos</string>
-    <string name="dialer_short">Dialer</string>
+    <string name="dialer_short">Marcador</string>
     <string name="draw_short">Dibujo</string>
     <string name="file_manager_short">Administrador de archivos</string>
     <string name="flashlight_short">Linterna</string>
     <string name="gallery_short">Galería</string>
     <string name="music_player_short">Reproductor de música</string>
     <string name="notes_short">Notas</string>
-    <string name="sms_messenger_short">SMS Messenger</string>
-    <string name="thank_you_short">Thank You</string>
-    <string name="voice_recorder_short">Voice Recorder</string>
+    <string name="sms_messenger_short">Mensajero SMS</string>
+    <string name="thank_you_short">Gracias</string>
+    <string name="voice_recorder_short">Grabadora de voz</string>
 
     <string name="sideloaded_app">
         <![CDATA[
@@ -721,18 +721,18 @@
     <string name="faq_3_title_commons">Borré algunos archivos por error, ¿cómo puedo recuperarlos?</string>
     <string name="faq_3_text_commons">Tristemente, no puedes. Los archivos se eliminan instantáneamente después del diálogo de confirmación, no hay papelera disponible.</string>
     <string name="faq_4_title_commons">No me gustan los colores del widget, ¿puedo cambiarlos?</string>
-    <string name="faq_4_text_commons">Sí, al arrastrar un widget en la pantalla de inicio aparece una pantalla de configuración de widgets. Verá cuadrados de colores en la esquina inferior izquierda, solo presione para elegir un nuevo color. Puede usar el control deslizante para ajustar el alfa también.</string>
+    <string name="faq_4_text_commons">Sí, al arrastrar un widget en la pantalla de inicio aparece una pantalla de configuración de widgets. Verá cuadrados de colores en la esquina inferior izquierda, sólo presione para elegir un nuevo color. Puede usar el control deslizante para ajustar el alfa también.</string>
     <string name="faq_5_title_commons">¿Puedo de alguna manera restaurar archivos borrados?</string>
-    <string name="faq_5_text_commons">Si realmente fueron eliminados, no puedes. Sin embargo, hay una Papelera de Reciclaje activada por defecto, esta hará que los archivos solo seán movidos a la papelera en lugar de eliminarlos.</string>
-    <string name="faq_6_title_commons">El icono del iniciador de aplicaciones desapareció. ¿Que puedo hacer?</string>
-    <string name="faq_6_text_commons">Esto se debe a que el iniciador no admite correctamente la personalización de iconos. Intenta lanzar la aplicación a través de Google Play o algún widget, si está disponible.
+    <string name="faq_5_text_commons">Si realmente fueron eliminados, no puedes. Sin embargo, hay una Papelera de Reciclaje activada por defecto, esta hará que los archivos sólo sean movidos a la papelera en lugar de eliminarlos.</string>
+    <string name="faq_6_title_commons">El icono del launcher de aplicaciones desapareció. ¿Qué puedo hacer?</string>
+    <string name="faq_6_text_commons">Esto se debe a que el launcher no admite correctamente la personalización de iconos. Intenta lanzar la aplicación a través de Google Play o algún widget, si está disponible.
         Una vez iniciado, simplemente vuelva a establecer el ícono naranja predeterminado #F57C00. Es posible que tenga que volver a instalar la aplicación en el peor de los casos.</string>
-    <string name="faq_7_title_commons">El dinero se ha deducido de mi cuenta bancaria, pero no puedo descargar la aplicación. ¿Que puedo hacer?</string>
+    <string name="faq_7_title_commons">El dinero se ha deducido de mi cuenta bancaria, pero no puedo descargar la aplicación. ¿Qué puedo hacer?</string>
     <string name="faq_7_text_commons">Los pagos son manejados completamente por Google, su sistema falla de vez en cuando. Simplemente borre el caché de su aplicación Google Play y reinicie su dispositivo, luego intente descargarlo nuevamente.</string>
     <string name="faq_8_title_commons">¿Por qué debería actualziar a la versión Pro?</string>
     <string name="faq_8_text_commons">Ya que la versión de tu aplicación ya no será actualizada, los errores que tiene podrían nunca ser arreglados. Tampoco se añadirán nuevas funciones. Puedes comprar la versión Pro en Google Play por una pequeña cantidad de dinero.
-        Solo pagas una vez, lo que significa que, una vez que la hayas comprado, nunca tendrás que pagar de nuevo. Incluso cuando consigas un nuevo dispositivo. Si no te gusta la versión Pro, puedes solo desisntalarla en un periodo de unas horas y automáticamente recibirás tu dinero de vuelta.
-        Si quieres un rembolso en cualquier otro momento, solo contáctanos en hello@simplemobiletools.com y lo tendrás.</string>
+        Sólo pagas una vez, lo que significa que, una vez que la hayas comprado, nunca tendrás que pagar de nuevo. Incluso cuando consigas un nuevo dispositivo. Si no te gusta la versión Pro, puedes sólo desinstalarla en un periodo de unas horas y automáticamente recibirás tu dinero de vuelta.
+        Si quieres un rembolso en cualquier otro momento, sólo contáctanos en hello@simplemobiletools.com y lo tendrás.</string>
 
     <!-- License -->
     <string name="notice">Esta aplicación usa las siguientes bibliotecas de terceros que hacen mi vida más fácil. Gracias.</string>
@@ -755,20 +755,20 @@
     <string name="espresso_title">Espresso (Auxiliar de pruebas)</string>
     <string name="gson_title">Gson (Convertidor de JSON)</string>
     <string name="leak_canary_title">Leak Canary (Detector de falta de memoria)</string>
-    <string name="number_picker_title">Selector de número (selector de número personalizable)</string>
+    <string name="number_picker_title">Selector de número (Selector de número personalizable)</string>
     <string name="exoplayer_title">ExoPlayer (Reproductor de video)</string>
     <string name="panorama_view_title">VR Panorama View (Mostrador de panoramas)</string>
     <string name="sanselan_title">Apache Sanselan (Lector de metadatos de imagen)</string>
     <string name="filters_title">Android Photo Filters (Filtros de imagen)</string>
     <string name="gesture_views_title">Gesture Views (Imágenes con zoom)</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (Letras en la barra de desplazamiento)</string>
+    <string name="event_bus_title">Event Bus (Comunicación dentro de la aplicación)</string>
+    <string name="audio_record_view_title">Audio Record View (Visualización de audio)</string>
+    <string name="sms_mms_title">SMS MMS (Manejo de SMS y MMS)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">OBSOLETO: Esta versión de la aplicación ya no es mantenida, obtén la versión Pro en https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">No olvides que si desisntalas cualquier aplicación de paga dentro de un periodo de 2 horas, automáticamente recibirás un rembolso. Si quieres un rembolso en cualquier otro momento, solo contáctanos en hello@simplemobiletools.com y lo recibirás. Eso hace que sea fácil probarlo :)</string>
+    <string name="pro_app_refund">No olvides que si desinstalas cualquier aplicación de paga dentro de un periodo de 2 horas, automáticamente recibirás un rembolso. Si quieres un rembolso en cualquier otro momento, sólo contáctanos en hello@simplemobiletools.com y lo recibirás. Eso hace que sea fácil probarlo :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Un grupo de aplicaciones de Android simples y de código abierto con widgets personalizables, sin anuncios y permisos innecesarios.</string>
