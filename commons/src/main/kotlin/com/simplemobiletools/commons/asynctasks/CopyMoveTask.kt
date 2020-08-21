@@ -3,7 +3,6 @@ package com.simplemobiletools.commons.asynctasks
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.ContentValues
-import android.content.Context
 import android.os.AsyncTask
 import android.os.Handler
 import android.provider.MediaStore
@@ -135,8 +134,8 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
         }
 
         mNotificationBuilder.setContentTitle(title)
-                .setSmallIcon(R.drawable.ic_copy)
-                .setChannelId(channelId)
+            .setSmallIcon(R.drawable.ic_copy)
+            .setChannelId(channelId)
     }
 
     private fun updateProgress() {
@@ -268,8 +267,8 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
 
     private fun copyOldLastModified(sourcePath: String, destinationPath: String) {
         val projection = arrayOf(
-                MediaStore.Images.Media.DATE_TAKEN,
-                MediaStore.Images.Media.DATE_MODIFIED)
+            MediaStore.Images.Media.DATE_TAKEN,
+            MediaStore.Images.Media.DATE_MODIFIED)
         val uri = MediaStore.Files.getContentUri("external")
         val selection = "${MediaStore.MediaColumns.DATA} = ?"
         var selectionArgs = arrayOf(sourcePath)

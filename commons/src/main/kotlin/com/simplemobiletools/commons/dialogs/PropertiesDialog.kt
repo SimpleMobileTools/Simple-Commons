@@ -82,7 +82,7 @@ class PropertiesDialog() {
                     ExifInterface((activity as BaseSimpleActivity).getFileInputStreamSync(fileDirItem.path)!!)
                 } else if (isNougatPlus() && fileDirItem.path.startsWith("content://")) {
                     try {
-                        ExifInterface(activity.contentResolver.openInputStream(Uri.parse(fileDirItem.path)))
+                        ExifInterface(activity.contentResolver.openInputStream(Uri.parse(fileDirItem.path))!!)
                     } catch (e: Exception) {
                         return@ensureBackgroundThread
                     }
@@ -204,7 +204,7 @@ class PropertiesDialog() {
             ExifInterface((activity as BaseSimpleActivity).getFileInputStreamSync(path)!!)
         } else if (isNougatPlus() && path.startsWith("content://")) {
             try {
-                ExifInterface(activity.contentResolver.openInputStream(Uri.parse(path)))
+                ExifInterface(activity.contentResolver.openInputStream(Uri.parse(path))!!)
             } catch (e: Exception) {
                 return
             }
