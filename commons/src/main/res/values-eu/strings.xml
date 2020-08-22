@@ -42,8 +42,8 @@
     <string name="block_number">Blokeatu zenbakia</string>
     <string name="block_numbers">Blokeatu zenbakiak</string>
     <string name="blocked_numbers">Blokeatutako zenbakiak</string>
-    <string name="must_make_default_dialer">You have to make this app the default dialer app to make use of blocked numbers.</string>
-    <string name="set_as_default">Set as default</string>
+    <string name="must_make_default_dialer">Blokeatutako zenbakiak erabiltzeko aplikazio honek markatzaile-aplikazio lehenetsia izan behar du.</string>
+    <string name="set_as_default">Ezarri lehenetsi gisa</string>
     <string name="block_confirmation">Ziur zaude \"%s\" blokeatu nahi duzula?</string>
 
     <!-- Favorites -->
@@ -74,7 +74,7 @@
     <string name="rename_folder_error">Ezin izan da karpeta hori berrizendatu</string>
     <string name="rename_folder_empty">Karpetaren izenak ezin du hutsik egon</string>
     <string name="rename_folder_exists">Izen hori duen karpeta badago</string>
-    <string name="rename_folder_root">Cannot rename the root folder of a storage</string>
+    <string name="rename_folder_root">Ezin da biltegiratzearen erro-karpeta berrizendatu</string>
     <string name="rename_folder_ok">Karpeta ondo berrizendatu da</string>
     <string name="renaming_folder">Karpeta berrizendatzen</string>
     <string name="filename_cannot_be_empty">Fitxategi-izenak ezin du hutsik egon</string>
@@ -87,7 +87,7 @@
     <string name="simple_renaming">Berrizendatze sinplea</string>
     <string name="pattern_renaming">Eredua</string>
     <string name="string_to_add">Gehitzeko katea</string>
-    <string name="rename_date_time_pattern">%Y - urtea\n%M - hilabete\n%D - eguna\n%h - ordua\n%m - minutua\n%s - segundoa\n%i - 1 baino gehiago den zenbakia</string>
+    <string name="rename_date_time_pattern">%Y - urtea\n%M - hilabetea\n%D - eguna\n%h - ordua\n%m - minutua\n%s - segundoa\n%i - 1 baino gehiago den zenbakia</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopiatu</string>
@@ -142,7 +142,7 @@
     <string name="select_folder">Hautatu karpeta</string>
     <string name="select_file">Hautatu fitxategia</string>
     <string name="confirm_storage_access_title">Baieztatu kanpoko biltegiratzea atzitzea</string>
-    <string name="confirm_storage_access_text">Please choose the top folder of the SD card on the next screen, to grant write access</string>
+    <string name="confirm_storage_access_text">Hautatu SD txartelaren karpeta nagusia hurrengo pantailan, idazteko baimena emateko</string>
     <string name="confirm_storage_access_text_sd">SD txartela ez badakusazu, saiatu honekin</string>
     <string name="confirm_selection">Berretsi hautaketa</string>
 
@@ -188,8 +188,8 @@
     <string name="duration">Iraupena</string>
     <string name="artist">Artista</string>
     <string name="album">Albuma</string>
-    <string name="focal_length">Focal length</string>
-    <string name="exposure_time">Esposizio denbora</string>
+    <string name="focal_length">Foku-distantzia</string>
+    <string name="exposure_time">Esposizio-denbora</string>
     <string name="iso_speed">ISO abiadura</string>
     <string name="f_number">F-zenbakia</string>
     <string name="camera">Kamera</string>
@@ -204,7 +204,7 @@
     <string name="primary_color">Kolore nagutia</string>
     <string name="foreground_color">Aurreko planoaren kolorea</string>
     <string name="app_icon_color">Aplikazioaren ikonoaren kolorea</string>
-    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
+    <string name="bottom_navigation_bar_color">Beheko nabigazio-barraren kolorea</string>
     <string name="restore_defaults">Berrezarri lehenetsiak</string>
     <string name="use_default">Erabili lehenetsia</string>
     <string name="default_color">Lehenetsia</string>
@@ -218,7 +218,7 @@
     <string name="save_before_closing">Gorde gabeko aldaketak dituzu. Gorde atera baino lehen?</string>
     <string name="apply_to_all_apps">Aplikatu koloreak Simple aplikazio guztiei</string>
     <string name="app_icon_color_warning">ABISUA: Abiarazle batzuek aplikazio-ikonoaren pertsonalizazioa ez dute ondo kudeatu. Ikonoa desagertuz gero, saiatu aplikazioa Google Play bidez edo widgeten baten bidez abiarazten, eskuragarri badago.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
+        Behin abiarazi duzularik, berrezarri lehenetsitako ikono laranja (#F57C00). Kasurik okerrenean aplikazioa berrinstalatu dezakezu.</string>
     <string name="share_colors_success">Koloreak ondo eguneratu dira. \'Shared\' deituriko gai berria gehitu da, erabili hori aplikazio guztien koloreak eguneratzeko etorkizunean.</string>
     <string name="shared_theme_note">Kontuan hartu Pro bertsioa erabili arren, Simple Thank You izaten jarraitu behar duzula arrazoi teknikoak direla eta. Kolorearen sinkronizazioaz arduratzen da.</string>
     <string name="purchase_thank_you">
@@ -230,9 +230,9 @@
     <!-- Themes -->
     <string name="light_theme">Argia</string>
     <string name="dark_theme">Iluna</string>
-    <string name="solarized">Solarized</string>
+    <string name="solarized">Eguzkitsua</string>
     <string name="dark_red">Gorri iluna</string>
-    <string name="black_white">Beltza &amp; Zuria</string>
+    <string name="black_white">Zuri-beltza</string>
     <string name="custom">Pertsonalizatuta</string>
     <string name="shared">Partekatuta</string>
 
@@ -516,24 +516,24 @@
     <string name="migrating">Migrating</string>
 
     <!-- Default tabs to open -->
-    <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
+    <string name="default_tab_to_open">Aplikazioa hasterakoan irekiko den fitxa</string>
+    <string name="contacts_tab">Kontaktuak</string>
+    <string name="favorites_tab">Gogokoak</string>
+    <string name="call_history_tab">Deien historia</string>
+    <string name="groups_tab">Taldeak</string>
+    <string name="last_used_tab">Erabilitako azkena</string>
 
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restore this file</string>
-    <string name="restore_selected_files">Restore selected files</string>
-    <string name="restore_all_files">Restore all files</string>
-    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
-    <string name="files_restored_successfully">Files have been restored successfully</string>
-    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
-    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
-    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="restore_this_file">Leheneratu fitxategi hau</string>
+    <string name="restore_selected_files">Leheneratu hautatutako fitxategiak</string>
+    <string name="restore_all_files">Leheneratu fitxategi guztiak</string>
+    <string name="recycle_bin_emptied">Zakarrontzia ondo hustu da</string>
+    <string name="files_restored_successfully">Fitxategiak ondo leheneratu dira</string>
+    <string name="empty_recycle_bin_confirmation">Ziur zaude zakarrontzia hustu nahi duzula? Fitxategiak behin betiko galduko dira.</string>
+    <string name="recycle_bin_empty">Zakarrontzia hutsik dago</string>
+    <string name="moving_recycle_bin_items_disabled">Elementuak zakarrontzira mugitzea desgaituta dago, erabili Leheneratu</string>
+    <string name="show_the_recycle_bin">Erakutsi zakarrontzia</string>
+    <string name="hide_the_recycle_bin">Ezkutatu zakarrontzia</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">elementu %d zakarrontzira mugitzen</item>
@@ -554,9 +554,9 @@
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
-    <string name="confirm_usb_storage_access_text">Please choose the top folder of the USB device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_usb">Wrong folder selected, please select the root folder of your USB device</string>
+    <string name="usb_detected">Badirudi USB gailuren bat konektatuta duzula zure gailura. Fitxategiak ondo agertzen direla ziurtatzeko, baimen gehigarriak eman behar dituzu.</string>
+    <string name="confirm_usb_storage_access_text">Hautatu USB gailuaren karpeta nagusia hurrengo pantailan, baimena emateko</string>
+    <string name="wrong_root_selected_usb">Karpeta okerra hautatu da, hautatu USB gailuaren erro-karpeta</string>
 
     <!-- Dates -->
     <string name="january">Urtarrila</string>
@@ -611,12 +611,12 @@
     <string name="sunday_short">Ig</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
-    <string name="it_is_free">It is free till: %s. If you download it till then, you will be able to use it for free forever.</string>
-    <string name="more_info">More info</string>
-    <string name="upgrade">Upgrade</string>
-    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
+    <string name="upgrade_to_pro_long">Zure aplikazioaren bertsioa ez da berriro berrituko. Aldatu Pro bertsiora konponketa eta hobekuntza gehiago jasotzeko.</string>
+    <string name="upgrade_to_pro_long_click">Zure aplikazioaren bertsioa ez da berriro berrituko. Aldatu Pro bertsiora konponketa eta hobekuntza gehiago jasotzeko hemen klik eginez.</string>
+    <string name="it_is_free">%s arte dohainik da. Hori baino lehen deskargatuz gero, betiko dohainik erabili ahal izango duzu.</string>
+    <string name="more_info">Informazio gehiago</string>
+    <string name="upgrade">Bertsio-berritu</string>
+    <string name="upgrade_calendar">Eskuz biltegiratutako gertaerak migratu behar dituzu .ics fitxategi batean esportatuz, eta gero inportatuz. Esportazio- eta inportazio-botoiak pantaila nagusiaren menuan aurki ditzakezu.</string>
 
     <!-- About -->
     <string name="about">Honi buruz</string>
@@ -664,7 +664,7 @@
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
             <a href="%5$s">%6$s</a><br><br>
-            Izenbiruetan edota ikonoetan klik eginez deskargatu ditzakezu.<br><br>
+            Izenburuetan edota ikonoetan klik eginez deskargatu ditzakezu.<br><br>
             Eskerrik asko
         ]]>
     </string>
@@ -739,14 +739,14 @@
     <string name="third_party_licences">Hirugarrenen lizentziak</string>
     <string name="kotlin_title">Kotlin (programazio-hizkuntza)</string>
     <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
-    <string name="glide_title">Glide (image loading and caching)</string>
-    <string name="picasso_title">Picasso (image loading and caching)</string>
+    <string name="glide_title">Glide (irudiak kargatzea eta cachean gordetzea)</string>
+    <string name="picasso_title">Picasso (irudiak kargatzea eta cachean gordetzea)</string>
     <string name="cropper_title">Android Image Cropper (irudia moztu eta biratu)</string>
     <string name="rtl_viewpager_title">RtlViewPager (eskuinetik ezkerrerantz hatza-pasatzeko)</string>
     <string name="joda_title">Joda-Time (Java data ordezkapena)</string>
-    <string name="stetho_title">Stetho (debugging databases)</string>
+    <string name="stetho_title">Stetho (datu-baseen arazketa)</string>
     <string name="otto_title">Otto (gertaera busa)</string>
-    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
+    <string name="photoview_title">PhotoView (zoom egin ditzakezun GIFak)</string>
     <string name="pattern_title">PatternLockView (eredu-babesa)</string>
     <string name="reprint_title">Reprint (hatz-markaren babesa)</string>
     <string name="gif_drawable_title">Gif Drawable (GIFak kargatzeko)</string>
