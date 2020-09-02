@@ -223,7 +223,7 @@
     <string name="shared_theme_note">Huomioi, että vaikka käytössäsi on sovelluksen Pro-versio, Simple Thank You tarvitaan teknisistä syistä mm. värien synkronointiin.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Osta <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> avataksesi ominaisuuden ja tukeaksesi kehitystä. Kiitos!
+            Osta <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">KiitosSimple Thank You</a> avataksesi ominaisuuden ja tukeaksesi kehitystä. Kiitos!
         ]]>
     </string>
 
@@ -288,7 +288,7 @@
     <string name="are_you_sure_delete">Haluatko varmasti poistaa tämän kohteen?</string>
     <string name="are_you_sure_recycle_bin">Haluatko varmasti siirtää tämän kohteen roskakoriin?</string>
     <string name="do_not_ask_again">Älä kysy uudestaan tällä istunnolla</string>
-    <string name="yes">Poista</string>
+    <string name="yes">Kyllä</string>
     <string name="no">Peruuta</string>
     <string name="maybe">Ehkä</string>
 
@@ -734,46 +734,46 @@
         Jos haluat palauttaa myöhemmin. ota yhteyttä hello@simplemobiletools.com ja maksusi palautetaan.</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
-    <string name="why_upgrade">Get the Pro version now!</string>
-    <string name="why_upgrade_basic_version">Basic</string>
+    <string name="why_upgrade">Hanki Pro-versio nyt!</string>
+    <string name="why_upgrade_basic_version">Perus</string>
     <string name="why_upgrade_pro_version">Pro</string>
-    <string name="why_upgrade_no_ads">No ads</string>
-    <string name="why_upgrade_no_internet_access">No internet access</string>
-    <string name="why_upgrade_footer">+ 100% Money Back Guarantee</string>
+    <string name="why_upgrade_no_ads">Ei mainoksia</string>
+    <string name="why_upgrade_no_internet_access">Ei internetyhteyttä</string>
+    <string name="why_upgrade_footer">+ 100% rahat takaisin-takuu</string>
 
     <!-- Gallery Pro -->
-    <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
-    <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
-    <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
-    <string name="why_upgrade_folder_locking">Individual folder locking</string>
-    <string name="why_upgrade_printing_support">Printing support</string>
+    <string name="why_upgrade_advanced_photo_editor">Kehittyt valokuvaeditori</string>
+    <string name="why_upgrade_heic_support">Tuki HEIC/HEIF-tiedostoille</string>
+    <string name="why_upgrade_batch_renaming">Kehittynyt monen tiedoston uudelleennimeäminen kerralla </string>
+    <string name="why_upgrade_folder_locking">Yksittäisten hakemistojen lukitseminen</string>
+    <string name="why_upgrade_printing_support">Tuki tulostamiselle</string>
 
     <!-- Calendar Pro -->
-    <string name="why_upgrade_time_zone_support">Time zone support</string>
-    <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
-    <string name="why_upgrade_easy_event_importing">Easy event importing</string>
-    <string name="why_upgrade_new_widgets">New widgets</string>
-    <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
+    <string name="why_upgrade_time_zone_support">Tuki aikavyöhykkeille</string>
+    <string name="why_upgrade_attendees_emails">Osallistujat ja sähköpostimuistutukset</string>
+    <string name="why_upgrade_easy_event_importing">Helppo tapahtumien tuonti</string>
+    <string name="why_upgrade_new_widgets">Uudet widgetit</string>
+    <string name="why_upgrade_duplicate_contact_merging">Paranneltu kontaktikopioiden yhdistäminen</string>
 
     <!-- Contacts Pro -->
-    <string name="why_upgrade_speed_dial">Speed dial support</string>
-    <string name="why_upgrade_improved_scrollbar">Improved scrollbar</string>
-    <string name="why_upgrade_easy_contact_importing">Easy contact importing</string>
-    <string name="why_upgrade_font_size_customization">Font size customization</string>
-    <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
+    <string name="why_upgrade_speed_dial">Pikavalinta</string>
+    <string name="why_upgrade_improved_scrollbar">Paranneltu vierityspalkki</string>
+    <string name="why_upgrade_easy_contact_importing">Helppo kontaktien tuonti</string>
+    <string name="why_upgrade_font_size_customization">Fonttikoon kustomointi</string>
+    <string name="why_upgrade_private_contact_sharing">Vaihtoehtona sovellustemme välinen kontaktien jako</string>
 
     <!-- Notes Pro -->
-    <string name="why_upgrade_checklists">Checklists</string>
-    <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
+    <string name="why_upgrade_checklists">Tarkistuslistat</string>
+    <string name="why_upgrade_different_note_per_widget">Widget-kohtainen muistiinpano ja värit</string>
 
     <!-- File Manager Pro -->
-    <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
-    <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
-    <string name="why_upgrade_file_compression">File compression support</string>
+    <string name="why_upgrade_date_and_time_format">Päivämäärän ja ajan näyttömuotojen kustomointi</string>
+    <string name="why_upgrade_shortcuts">Pikakuvakkeet kotivalikkoon</string>
+    <string name="why_upgrade_file_compression">Tuki tiedostojen pakkaukselle</string>
 
     <!-- Draw Pro -->
-    <string name="why_upgrade_background_color_customization">Background color customization</string>
-    <string name="why_upgrade_file_importing">File importing support</string>
+    <string name="why_upgrade_background_color_customization">Taustavärin kustomointi</string>
+    <string name="why_upgrade_file_importing">Tuki tiedostojen tuonnille</string>
 
     <!-- License -->
     <string name="notice">Tämä sovellus käyttää kolmannen osapuolen lisenssejä tehdäkseni elämästäni helpompaa. Kiitos.</string>
@@ -808,9 +808,9 @@
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">VANHENTUNUT:: Tätä sovellusversiota ei enää ylläpidetä, hanki Pro-versio osoitteesta https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">Muista, että saat rahasi automaattisesti takaisin, jos poistat minkä tahansa maksullisista sovelluksistamme kahden tunnin sisällä asentamisesta. Jos haluat rahasi milloin vain myöhemmin takaisin, ota yhteyttä sähköpostitse hello@simplemobiletools.com ja saat rahat takaisin. Tämä tekee kokeilun helpoksi :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Kokoelma yksinkertaisia vapaan lähdekoodin Android-sovelluksia kustomoitavilla widgeteillä, ilman mainoksia ja tarpeettomia käyttöoikeuksia.</string>
 </resources>
