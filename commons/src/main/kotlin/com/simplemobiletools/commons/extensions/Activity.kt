@@ -158,9 +158,21 @@ fun BaseSimpleActivity.showOTGPermissionDialog(path: String) {
     }
 }
 
-fun Activity.launchPurchaseThankYouIntent() = launchViewIntent(getString(R.string.thank_you_url))
+fun Activity.launchPurchaseThankYouIntent() {
+    try {
+        launchViewIntent("market://details?id=com.simplemobiletools.thankyou")
+    } catch (ignored: Exception) {
+        launchViewIntent(getString(R.string.thank_you_url))
+    }
+}
 
-fun Activity.launchUpgradeToProIntent() = launchViewIntent(getProUrl())
+fun Activity.launchUpgradeToProIntent() {
+    try {
+        launchViewIntent("market://details?id=${baseConfig.appId.removeSuffix(".debug")}.pro")
+    } catch (ignored: Exception) {
+        launchViewIntent(getStoreUrl())
+    }
+}
 
 fun Activity.launchViewIntent(id: Int) = launchViewIntent(getString(id))
 
