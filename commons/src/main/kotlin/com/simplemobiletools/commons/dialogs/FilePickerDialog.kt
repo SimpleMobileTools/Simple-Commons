@@ -128,7 +128,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
     private fun tryUpdateItems() {
         ensureBackgroundThread {
-            getItems(currPath, activity.baseConfig.getFolderSorting(currPath) and SORT_BY_SIZE != 0) {
+            getItems(currPath) {
                 activity.runOnUiThread {
                     updateItems(it as ArrayList<FileDirItem>)
                 }
@@ -142,10 +142,9 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             return
         }
 
-        FileDirItem.sorting = activity.baseConfig.getFolderSorting(currPath)
-        items.sort()
+        val sortedItems = items.sortedWith(compareBy({ !it.isDirectory }, { it.name.toLowerCase() }))
 
-        val adapter = FilepickerItemsAdapter(activity, items, mDialogView.filepicker_list) {
+        val adapter = FilepickerItemsAdapter(activity, sortedItems, mDialogView.filepicker_list) {
             if ((it as FileDirItem).isDirectory) {
                 activity.handleLockedFolderOpening(it.path) { success ->
                     if (success) {
@@ -166,7 +165,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             filepicker_list.adapter = adapter
             filepicker_breadcrumbs.setBreadcrumb(currPath)
             filepicker_fastscroller.setViews(filepicker_list) {
-                filepicker_fastscroller.updateBubbleText(items.getOrNull(it)?.getBubbleText(context, mDateFormat, mTimeFormat) ?: "")
+                filepicker_fastscroller.updateBubbleText(sortedItems.getOrNull(it)?.getBubbleText(context, mDateFormat, mTimeFormat) ?: "")
             }
 
             layoutManager.onRestoreInstanceState(mScrollStates[currPath.trimEnd('/')])
@@ -203,15 +202,15 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         mDialog.dismiss()
     }
 
-    private fun getItems(path: String, getProperFileSize: Boolean, callback: (List<FileDirItem>) -> Unit) {
+    private fun getItems(path: String, callback: (List<FileDirItem>) -> Unit) {
         if (activity.isPathOnOTG(path)) {
-            activity.getOTGItems(path, showHidden, getProperFileSize, callback)
+            activity.getOTGItems(path, showHidden, callback)
         } else {
-            getRegularItems(path, getProperFileSize, callback)
+            getRegularItems(path, callback)
         }
     }
 
-    private fun getRegularItems(path: String, getProperFileSize: Boolean, callback: (List<FileDirItem>) -> Unit) {
+    private fun getRegularItems(path: String, callback: (List<FileDirItem>) -> Unit) {
         val items = ArrayList<FileDirItem>()
         val base = File(path)
         val files = base.listFiles()
@@ -227,7 +226,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
             val curPath = file.absolutePath
             val curName = curPath.getFilenameFromPath()
-            val size = if (getProperFileSize) file.getProperSize(showHidden) else file.length()
+            val size = file.length()
             items.add(FileDirItem(curPath, curName, file.isDirectory, file.getDirectChildrenCount(showHidden), size, file.lastModified()))
         }
         callback(items)

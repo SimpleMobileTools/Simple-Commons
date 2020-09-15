@@ -348,7 +348,7 @@ fun Context.updateLastModified(path: String, lastModified: Long) {
     }
 }
 
-fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSize: Boolean, callback: (ArrayList<FileDirItem>) -> Unit) {
+fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, callback: (ArrayList<FileDirItem>) -> Unit) {
     val items = ArrayList<FileDirItem>()
     val OTGTreeUri = baseConfig.OTGTreeUri
     var rootUri = try {
@@ -395,7 +395,6 @@ fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSi
         val filePath = file.uri.toString().substring(basePath.length)
         val decodedPath = otgPath + "/" + URLDecoder.decode(filePath, "UTF-8")
         val fileSize = when {
-            getProperFileSize -> file.getItemSize(shouldShowHidden)
             isDirectory -> 0L
             else -> file.length()
         }
