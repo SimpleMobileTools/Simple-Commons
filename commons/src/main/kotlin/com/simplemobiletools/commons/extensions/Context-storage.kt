@@ -348,7 +348,7 @@ fun Context.updateLastModified(path: String, lastModified: Long) {
     }
 }
 
-fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, callback: (ArrayList<FileDirItem>) -> Unit) {
+fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSize: Boolean, callback: (ArrayList<FileDirItem>) -> Unit) {
     val items = ArrayList<FileDirItem>()
     val OTGTreeUri = baseConfig.OTGTreeUri
     var rootUri = try {
@@ -395,6 +395,7 @@ fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, callback: (Arra
         val filePath = file.uri.toString().substring(basePath.length)
         val decodedPath = otgPath + "/" + URLDecoder.decode(filePath, "UTF-8")
         val fileSize = when {
+            getProperFileSize -> file.getItemSize(shouldShowHidden)
             isDirectory -> 0L
             else -> file.length()
         }
@@ -469,18 +470,18 @@ fun Context.getIsPathDirectory(path: String): Boolean {
 
 // avoid these being set as SD card paths
 private val physicalPaths = arrayListOf(
-        "/storage/sdcard1", // Motorola Xoom
-        "/storage/extsdcard", // Samsung SGS3
-        "/storage/sdcard0/external_sdcard", // User request
-        "/mnt/extsdcard", "/mnt/sdcard/external_sd", // Samsung galaxy family
-        "/mnt/external_sd", "/mnt/media_rw/sdcard1", // 4.4.2 on CyanogenMod S3
-        "/removable/microsd", // Asus transformer prime
-        "/mnt/emmc", "/storage/external_SD", // LG
-        "/storage/ext_sd", // HTC One Max
-        "/storage/removable/sdcard1", // Sony Xperia Z1
-        "/data/sdext", "/data/sdext2", "/data/sdext3", "/data/sdext4", "/sdcard1", // Sony Xperia Z
-        "/sdcard2", // HTC One M8s
-        "/storage/usbdisk0",
-        "/storage/usbdisk1",
-        "/storage/usbdisk2"
+    "/storage/sdcard1", // Motorola Xoom
+    "/storage/extsdcard", // Samsung SGS3
+    "/storage/sdcard0/external_sdcard", // User request
+    "/mnt/extsdcard", "/mnt/sdcard/external_sd", // Samsung galaxy family
+    "/mnt/external_sd", "/mnt/media_rw/sdcard1", // 4.4.2 on CyanogenMod S3
+    "/removable/microsd", // Asus transformer prime
+    "/mnt/emmc", "/storage/external_SD", // LG
+    "/storage/ext_sd", // HTC One Max
+    "/storage/removable/sdcard1", // Sony Xperia Z1
+    "/data/sdext", "/data/sdext2", "/data/sdext3", "/data/sdext4", "/sdcard1", // Sony Xperia Z
+    "/sdcard2", // HTC One M8s
+    "/storage/usbdisk0",
+    "/storage/usbdisk1",
+    "/storage/usbdisk2"
 )

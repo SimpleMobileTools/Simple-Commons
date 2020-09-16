@@ -204,7 +204,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
     private fun getItems(path: String, callback: (List<FileDirItem>) -> Unit) {
         if (activity.isPathOnOTG(path)) {
-            activity.getOTGItems(path, showHidden, callback)
+            activity.getOTGItems(path, showHidden, false, callback)
         } else {
             getRegularItems(path, callback)
         }
