@@ -34,6 +34,7 @@
             android:layout_toEndOf="@+id/item_contact_image"
             android:ellipsize="end"
             android:maxLines="1"
+            android:paddingEnd="@dimen/activity_margin"
             android:textSize="@dimen/big_text_size"
             tools:text="John Doe" />
 
