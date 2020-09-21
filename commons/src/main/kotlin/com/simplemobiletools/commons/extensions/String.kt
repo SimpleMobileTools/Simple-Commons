@@ -717,7 +717,7 @@ fun String.getMimeType(): String {
         put("vbs", "text/vbscript")
         put("vcf", "text/x-vcard")
         put("vcproj", "application/xml")
-        put("vcs", "text/plain")
+        put("vcs", "text/calendar")
         put("vcxproj", "application/xml")
         put("vddproj", "text/plain")
         put("vdp", "text/plain")
