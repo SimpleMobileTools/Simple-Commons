@@ -44,6 +44,8 @@ fun String.getOTGPublicPath(context: Context) = "${context.baseConfig.OTGTreeUri
 
 fun String.isMediaFile() = isImageFast() || isVideoFast() || isGif() || isRawFast() || isSvg() || isPortrait()
 
+fun String.isWebP() = endsWith(".webp", true)
+
 fun String.isGif() = endsWith(".gif", true)
 
 fun String.isPng() = endsWith(".png", true)
