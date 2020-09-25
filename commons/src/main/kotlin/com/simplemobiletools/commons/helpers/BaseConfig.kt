@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.helpers
 
 import android.content.Context
+import android.graphics.Color
 import android.text.format.DateFormat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getInternalStoragePath
@@ -108,7 +109,7 @@ open class BaseConfig(val context: Context) {
         set(customNavigationBarColor) = prefs.edit().putInt(CUSTOM_NAVIGATION_BAR_COLOR, customNavigationBarColor).apply()
 
     var widgetBgColor: Int
-        get() = prefs.getInt(WIDGET_BG_COLOR, DEFAULT_WIDGET_BG_COLOR)
+        get() = prefs.getInt(WIDGET_BG_COLOR, Color.parseColor(DEFAULT_WIDGET_BG_COLOR))
         set(widgetBgColor) = prefs.edit().putInt(WIDGET_BG_COLOR, widgetBgColor).apply()
 
     var widgetTextColor: Int

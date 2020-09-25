@@ -4,6 +4,7 @@ import android.content.Context
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
+import java.security.MessageDigest
 
 fun File.isMediaFile() = absolutePath.isMediaFile()
 fun File.isGif() = absolutePath.endsWith(".gif", true)
@@ -112,3 +113,21 @@ fun File.doesParentHaveNoMedia(): Boolean {
     }
     return false
 }
+
+fun File.getDigest(algorithm: String): String =
+        this.inputStream().use { fis ->
+            val md = MessageDigest.getInstance(algorithm)
+            val buffer = ByteArray(8192)
+            generateSequence {
+                when (val bytesRead = fis.read(buffer)) {
+                    -1 -> null
+                    else -> bytesRead
+                }
+            }.forEach { bytesRead -> md.update(buffer, 0, bytesRead) }
+            md.digest().joinToString("") { "%02x".format(it) }
+        }
+
+fun File.md5(): String = this.getDigest(MD5)
+fun File.sha1(): String = this.getDigest(SHA1)
+fun File.sha256(): String = this.getDigest(SHA256)
+fun File.sha512(): String = this.getDigest(SHA512)

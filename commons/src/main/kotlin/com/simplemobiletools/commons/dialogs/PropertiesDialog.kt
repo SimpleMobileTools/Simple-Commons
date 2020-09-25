@@ -20,6 +20,7 @@ import com.simplemobiletools.commons.helpers.sumByLong
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.dialog_properties.view.*
 import kotlinx.android.synthetic.main.property_item.view.*
+import java.io.File
 import java.util.*
 
 class PropertiesDialog() {
@@ -138,6 +139,12 @@ class PropertiesDialog() {
                 activity.showErrorToast(e)
                 return
             }
+
+            val file = File(path)
+            addProperty(R.string.md5, file.md5())
+            addProperty(R.string.sha1, file.sha1())
+            addProperty(R.string.sha256, file.sha256())
+            addProperty(R.string.sha512, file.sha512())
         }
 
         AlertDialog.Builder(activity)
