@@ -36,6 +36,7 @@ const val SD_OTG_SHORT = "^[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$"
 const val KEY_PHONE = "phone"
 const val CONTACT_ID = "contact_id"
 const val IS_PRIVATE = "is_private"
+const val MD5 = "MD5"
 
 const val HOUR_MINUTES = 60
 const val DAY_MINUTES = 24 * HOUR_MINUTES

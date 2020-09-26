@@ -20,6 +20,7 @@ import com.simplemobiletools.commons.helpers.sumByLong
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.dialog_properties.view.*
 import kotlinx.android.synthetic.main.property_item.view.*
+import java.io.File
 import java.util.*
 
 class PropertiesDialog() {
@@ -137,6 +138,14 @@ class PropertiesDialog() {
             } catch (e: Exception) {
                 activity.showErrorToast(e)
                 return
+            }
+
+            addProperty(R.string.md5, "…", R.id.properties_md5)
+            ensureBackgroundThread {
+                val md5 = File(path).md5()
+                activity.runOnUiThread {
+                    view.findViewById<TextView>(R.id.properties_md5).property_value.text = md5
+                }
             }
         }
 
