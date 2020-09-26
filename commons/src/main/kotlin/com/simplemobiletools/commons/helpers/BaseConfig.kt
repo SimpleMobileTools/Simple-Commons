@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.helpers
 
 import android.content.Context
-import android.graphics.Color
 import android.text.format.DateFormat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getInternalStoragePath
