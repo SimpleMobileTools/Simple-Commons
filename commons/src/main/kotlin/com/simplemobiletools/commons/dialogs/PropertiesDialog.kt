@@ -140,11 +140,13 @@ class PropertiesDialog() {
                 return
             }
 
-            addProperty(R.string.md5, "…", R.id.properties_md5)
-            ensureBackgroundThread {
-                val md5 = File(path).md5()
-                activity.runOnUiThread {
-                    view.findViewById<TextView>(R.id.properties_md5).property_value.text = md5
+            if (activity.baseConfig.appId.removeSuffix(".debug") == "com.simplemobiletools.filemanager.pro") {
+                addProperty(R.string.md5, "…", R.id.properties_md5)
+                ensureBackgroundThread {
+                    val md5 = File(path).md5()
+                    activity.runOnUiThread {
+                        view.findViewById<TextView>(R.id.properties_md5).property_value.text = md5
+                    }
                 }
             }
         }
