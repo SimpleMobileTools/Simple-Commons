@@ -109,10 +109,15 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             }
         }
 
+        mDialogView.filepicker_favorites_label.text = "${activity.getString(R.string.favorites)}:"
         mDialogView.filepicker_fab_show_favorites.apply {
             beVisibleIf(showFavoritesButton && context.baseConfig.favorites.isNotEmpty())
             setOnClickListener {
-
+                if (mDialogView.filepicker_favorites_holder.isVisible()) {
+                    hideFavorites()
+                } else {
+                    showFavorites()
+                }
             }
         }
 
@@ -243,6 +248,22 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun containsDirectory(items: List<FileDirItem>) = items.any { it.isDirectory }
+
+    private fun showFavorites() {
+        mDialogView.apply {
+            filepicker_favorites_holder.beVisible()
+            filepicker_files_holder.beGone()
+            filepicker_fab_show_favorites.setImageResource(R.drawable.ic_folder_vector)
+        }
+    }
+
+    private fun hideFavorites() {
+        mDialogView.apply {
+            filepicker_favorites_holder.beGone()
+            filepicker_files_holder.beVisible()
+            filepicker_fab_show_favorites.setImageResource(R.drawable.ic_star_on_vector)
+        }
+    }
 
     override fun breadcrumbClicked(id: Int) {
         if (id == 0) {
