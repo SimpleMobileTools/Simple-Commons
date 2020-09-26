@@ -140,11 +140,13 @@ class PropertiesDialog() {
                 return
             }
 
-            val file = File(path)
-            addProperty(R.string.md5, file.md5())
-            addProperty(R.string.sha1, file.sha1())
-            addProperty(R.string.sha256, file.sha256())
-            addProperty(R.string.sha512, file.sha512())
+            addProperty(R.string.md5, "…", R.id.properties_md5)
+            ensureBackgroundThread {
+                val md5 = File(path).md5()
+                activity.runOnUiThread {
+                    view.findViewById<TextView>(R.id.properties_md5).property_value.text = md5
+                }
+            }
         }
 
         AlertDialog.Builder(activity)

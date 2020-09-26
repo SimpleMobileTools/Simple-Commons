@@ -73,9 +73,6 @@
 
     <!-- Message digest algorithms -->
     <string name="md5">MD5</string>
-    <string name="sha1">SHA-1</string>
-    <string name="sha256">SHA-256</string>
-    <string name="sha512">SHA-512</string>
 
     <string-array name="months">
         <item>@string/january</item>

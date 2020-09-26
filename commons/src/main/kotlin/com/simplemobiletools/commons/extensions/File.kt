@@ -128,6 +128,3 @@ fun File.getDigest(algorithm: String): String =
         }
 
 fun File.md5(): String = this.getDigest(MD5)
-fun File.sha1(): String = this.getDigest(SHA1)
-fun File.sha256(): String = this.getDigest(SHA256)
-fun File.sha512(): String = this.getDigest(SHA512)
