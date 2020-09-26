@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade
 import com.bumptech.glide.request.RequestOptions
 import com.simplemobiletools.commons.R
@@ -86,6 +87,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
                 val path = fileDirItem.path
                 val placeholder = fileDrawables.getOrElse(fileDirItem.name.substringAfterLast(".").toLowerCase(Locale.getDefault()), { fileDrawable })
                 val options = RequestOptions()
+                        .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
                         .centerCrop()
                         .error(placeholder)
 
