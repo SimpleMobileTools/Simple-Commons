@@ -8,6 +8,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.adapters.FilepickerFavoritesAdapter
 import com.simplemobiletools.commons.adapters.FilepickerItemsAdapter
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
@@ -66,6 +67,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         }
 
         tryUpdateItems()
+        setupFavorites()
 
         val builder = AlertDialog.Builder(activity)
             .setNegativeButton(R.string.cancel, null)
@@ -248,6 +250,15 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun containsDirectory(items: List<FileDirItem>) = items.any { it.isDirectory }
+
+    private fun setupFavorites() {
+        FilepickerFavoritesAdapter(activity, activity.baseConfig.favorites.toMutableList(), mDialogView.filepicker_favorites_list) {
+            currPath = it as String
+            verifyPath()
+        }.apply {
+            mDialogView.filepicker_favorites_list.adapter = this
+        }
+    }
 
     private fun showFavorites() {
         mDialogView.apply {
