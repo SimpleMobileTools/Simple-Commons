@@ -476,7 +476,7 @@ fun Context.getFolderLastModifieds(folder: String): HashMap<String, Long> {
     )
 
     val uri = Files.getContentUri("external")
-    val selection = "${Images.Media.DATA} LIKE ? AND ${Images.Media.DATA} NOT LIKE ?"
+    val selection = "${Images.Media.DATA} LIKE ? AND ${Images.Media.DATA} NOT LIKE ? AND ${Images.Media.MIME_TYPE} IS NOT NULL" // avoid selecting folders
     val selectionArgs = arrayOf("$folder/%", "$folder/%/%")
 
     val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
