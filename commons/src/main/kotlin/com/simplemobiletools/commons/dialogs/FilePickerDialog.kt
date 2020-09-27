@@ -271,7 +271,8 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         mDialogView.apply {
             filepicker_favorites_holder.beVisible()
             filepicker_files_holder.beGone()
-            filepicker_fab_show_favorites.setImageResource(R.drawable.ic_folder_vector)
+            val drawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_folder_vector, activity.getAdjustedPrimaryColor().getContrastColor())
+            filepicker_fab_show_favorites.setImageDrawable(drawable)
         }
     }
 
@@ -279,7 +280,8 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         mDialogView.apply {
             filepicker_favorites_holder.beGone()
             filepicker_files_holder.beVisible()
-            filepicker_fab_show_favorites.setImageResource(R.drawable.ic_star_on_vector)
+            val drawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_star_on_vector, activity.getAdjustedPrimaryColor().getContrastColor())
+            filepicker_fab_show_favorites.setImageDrawable(drawable)
         }
     }
 
