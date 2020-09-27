@@ -31,7 +31,7 @@ fun Context.getSDCardPath(): String {
 
     val fullSDpattern = Pattern.compile(SD_OTG_PATTERN)
     var sdCardPath = directories.firstOrNull { fullSDpattern.matcher(it).matches() }
-            ?: directories.firstOrNull { !physicalPaths.contains(it.toLowerCase()) } ?: ""
+        ?: directories.firstOrNull { !physicalPaths.contains(it.toLowerCase()) } ?: ""
 
     // on some devices no method retrieved any SD card path, so test if its not sdcard1 by any chance. It happened on an Android 5.1
     if (sdCardPath.trimEnd('/').isEmpty()) {
@@ -80,7 +80,7 @@ fun Context.getStorageDirectories(): Array<String> {
     if (TextUtils.isEmpty(rawEmulatedStorageTarget)) {
         if (isMarshmallowPlus()) {
             getExternalFilesDirs(null).filterNotNull().map { it.absolutePath }
-                    .mapTo(paths) { it.substring(0, it.indexOf("Android/data")) }
+                .mapTo(paths) { it.substring(0, it.indexOf("Android/data")) }
         } else {
             if (TextUtils.isEmpty(rawExternalStorage)) {
                 paths.addAll(physicalPaths)
@@ -466,6 +466,36 @@ fun Context.getIsPathDirectory(path: String): Boolean {
     } else {
         File(path).isDirectory
     }
+}
+
+fun Context.getFolderLastModifieds(folder: String): HashMap<String, Long> {
+    val lastModifieds = HashMap<String, Long>()
+    val projection = arrayOf(
+        Images.Media.DISPLAY_NAME,
+        Images.Media.DATE_MODIFIED
+    )
+
+    val uri = Files.getContentUri("external")
+    val selection = "${Images.Media.DATA} LIKE ? AND ${Images.Media.DATA} NOT LIKE ?"
+    val selectionArgs = arrayOf("$folder/%", "$folder/%/%")
+
+    val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+    cursor?.use {
+        if (cursor.moveToFirst()) {
+            do {
+                try {
+                    val lastModified = cursor.getLongValue(Images.Media.DATE_MODIFIED) * 1000
+                    if (lastModified != 0L) {
+                        val name = cursor.getStringValue(Images.Media.DISPLAY_NAME)
+                        lastModifieds["$folder/$name"] = lastModified
+                    }
+                } catch (e: Exception) {
+                }
+            } while (cursor.moveToNext())
+        }
+    }
+
+    return lastModifieds
 }
 
 // avoid these being set as SD card paths
