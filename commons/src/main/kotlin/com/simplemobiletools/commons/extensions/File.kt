@@ -37,7 +37,7 @@ private fun getDirectorySize(dir: File, countHiddenItems: Boolean): Long {
             for (i in files.indices) {
                 if (files[i].isDirectory) {
                     size += getDirectorySize(files[i], countHiddenItems)
-                } else if (!files[i].isHidden && !dir.isHidden || countHiddenItems) {
+                } else if (!files[i].name.startsWith('.') && !dir.name.startsWith('.') || countHiddenItems) {
                     size += files[i].length()
                 }
             }
@@ -65,7 +65,7 @@ private fun getDirectoryFileCount(dir: File, countHiddenItems: Boolean): Int {
                 if (file.isDirectory) {
                     count++
                     count += getDirectoryFileCount(file, countHiddenItems)
-                } else if (!file.isHidden || countHiddenItems) {
+                } else if (!file.name.startsWith('.') || countHiddenItems) {
                     count++
                 }
             }
@@ -74,7 +74,7 @@ private fun getDirectoryFileCount(dir: File, countHiddenItems: Boolean): Int {
     return count
 }
 
-fun File.getDirectChildrenCount(countHiddenItems: Boolean) = listFiles()?.filter { if (countHiddenItems) true else !it.isHidden }?.size ?: 0
+fun File.getDirectChildrenCount(countHiddenItems: Boolean) = listFiles()?.filter { if (countHiddenItems) true else !it.name.startsWith('.') }?.size ?: 0
 
 fun File.toFileDirItem(context: Context) = FileDirItem(absolutePath, name, context.getIsPathDirectory(absolutePath), 0, length(), lastModified())
 

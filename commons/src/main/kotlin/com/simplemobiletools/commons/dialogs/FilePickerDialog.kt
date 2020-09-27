@@ -237,7 +237,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         }
 
         for (file in files) {
-            if (!showHidden && file.isHidden) {
+            if (!showHidden && file.name.startsWith('.')) {
                 continue
             }
 
