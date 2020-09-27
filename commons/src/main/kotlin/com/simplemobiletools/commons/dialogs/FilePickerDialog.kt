@@ -160,7 +160,6 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         }
 
         val sortedItems = items.sortedWith(compareBy({ !it.isDirectory }, { it.name.toLowerCase() }))
-
         val adapter = FilepickerItemsAdapter(activity, sortedItems, mDialogView.filepicker_list) {
             if ((it as FileDirItem).isDirectory) {
                 activity.handleLockedFolderOpening(it.path) { success ->
@@ -248,7 +247,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             var lastModified = lastModifieds.remove(curPath)
             val isDirectory = if (lastModified != null) false else file.isDirectory
             if (lastModified == null) {
-                lastModified = 0    // we don't actually need the real lastModified that badly, do not check file.lastModified
+                lastModified = 0    // we don't actually need the real lastModified that badly, do not check file.lastModified()
             }
 
             val children = if (isDirectory) file.getDirectChildrenCount(showHidden) else 0
