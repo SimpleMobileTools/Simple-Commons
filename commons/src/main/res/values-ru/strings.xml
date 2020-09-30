@@ -42,7 +42,7 @@
     <string name="block_number">Блокировать номер</string>
     <string name="block_numbers">Блокировать номера</string>
     <string name="blocked_numbers">Заблокированные номера</string>
-    <string name="must_make_default_dialer">Вы должны сделать \"Simple Contacts\" приложением по умолчанию для набора номера, чтобы использовать блокировку номеров.</string>
+    <string name="must_make_default_dialer">Чтобы использовать блокировку, необходимо сделать \"Simple Contacts\" приложением по умолчанию для набора номера.</string>
     <string name="set_as_default">Установить по умолчанию</string>
     <string name="block_confirmation">Вы уверены, что хотите заблокировать \"%s\"?</string>
 
@@ -720,13 +720,13 @@
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
 
-    <string name="app_launcher_short">App Launcher</string>
+    <string name="app_launcher_short">Рабочий стол</string>
     <string name="calculator_short">Калькулятор</string>
     <string name="calendar_short">Календарь</string>
     <string name="camera_short">Камера</string>
     <string name="clock_short">Часы</string>
     <string name="contacts_short">Контакты</string>
-    <string name="dialer_short">Dialer</string>
+    <string name="dialer_short">Набор номера</string>
     <string name="draw_short">Рисунки</string>
     <string name="file_manager_short">Файловый менеджер</string>
     <string name="flashlight_short">Фонарик</string>
@@ -773,7 +773,7 @@
     <string name="why_upgrade_basic_version">Базовая</string>
     <string name="why_upgrade_pro_version">Pro</string>
     <string name="why_upgrade_no_ads">Никакой рекламы</string>
-    <string name="why_upgrade_no_internet_access">Без доступа к Интернету</string>
+    <string name="why_upgrade_no_internet_access">Без доступа к интернету</string>
     <string name="why_upgrade_footer">+ 100% гарантия возврата денег</string>
 
     <!-- Gallery Pro -->
@@ -785,7 +785,7 @@
 
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Поддержка часовых поясов</string>
-    <string name="why_upgrade_attendees_emails">Посетители и напоминания по электронной почте</string>
+    <string name="why_upgrade_attendees_emails">Участники и напоминания по электронной почте</string>
     <string name="why_upgrade_easy_event_importing">Удобный импорт событий</string>
     <string name="why_upgrade_new_widgets">Новые виджеты</string>
 
@@ -822,7 +822,7 @@
     <string name="photoview_title">PhotoView (масштабирование GIF)</string>
     <string name="pattern_title">PatternLockView (защита графическим ключом)</string>
     <string name="reprint_title">Reprint (защита по отпечатку пальца)</string>
-    <string name="gif_drawable_title">Gif Drawable (загрузка GIFов)</string>
+    <string name="gif_drawable_title">Gif Drawable (отображение GIF)</string>
     <string name="autofittextview_title">AutoFitTextView (масштабирование текста)</string>
     <string name="robolectric_title">Robolectric (фреймворк для тестирования)</string>
     <string name="espresso_title">Espresso (помощник по тестированию)</string>
@@ -838,7 +838,7 @@
     <string name="event_bus_title">Event Bus (коммуникация внутри приложения)</string>
     <string name="audio_record_view_title">Audio Record View (звуковая визуализация)</string>
     <string name="sms_mms_title">SMS, MMS (обработка SMS и MMS)</string>
-    <string name="apng_title">APNG Android (animated WebP support)</string>
+    <string name="apng_title">APNG Android (отображение анимации WebP)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">УСТАРЕВШЕЕ: данная версия приложения больше не поддерживается, переходите на версию Pro https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
