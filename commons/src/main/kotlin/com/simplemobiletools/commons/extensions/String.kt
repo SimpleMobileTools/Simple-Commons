@@ -44,6 +44,8 @@ fun String.getOTGPublicPath(context: Context) = "${context.baseConfig.OTGTreeUri
 
 fun String.isMediaFile() = isImageFast() || isVideoFast() || isGif() || isRawFast() || isSvg() || isPortrait()
 
+fun String.isWebP() = endsWith(".webp", true)
+
 fun String.isGif() = endsWith(".gif", true)
 
 fun String.isPng() = endsWith(".png", true)
@@ -717,7 +719,7 @@ fun String.getMimeType(): String {
         put("vbs", "text/vbscript")
         put("vcf", "text/x-vcard")
         put("vcproj", "application/xml")
-        put("vcs", "text/plain")
+        put("vcs", "text/calendar")
         put("vcxproj", "application/xml")
         put("vddproj", "text/plain")
         put("vdp", "text/plain")

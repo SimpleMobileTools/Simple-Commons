@@ -25,7 +25,7 @@
     <string name="select_a_different_color">Valitse eri väri</string>
     <string name="download">Lataa</string>
     <string name="notification">Ilmoitus</string>
-    <string name="email">Email</string>
+    <string name="email">Sähköposti</string>
     <string name="previous">Edellinen</string>
     <string name="playpause">Toista / Tauota</string>
     <string name="next">Seuraava</string>
@@ -74,7 +74,7 @@
     <string name="rename_folder_error">Kansiota ei voitu uudelleennimetä</string>
     <string name="rename_folder_empty">Kansiolle täytyy antaa nimi</string>
     <string name="rename_folder_exists">Nimi on jo käytössä</string>
-    <string name="rename_folder_root">Root-kansiota ei voi uudelleennimetä</string>
+    <string name="rename_folder_root">Juurihakemistoa ei voi uudelleennimetä</string>
     <string name="rename_folder_ok">Kansio uudelleennimetty</string>
     <string name="renaming_folder">Uudelleennimetään kansio</string>
     <string name="filename_cannot_be_empty">Tiedostolle täytyy antaa nimi</string>
@@ -142,7 +142,7 @@
     <string name="select_folder">Valitse kansio</string>
     <string name="select_file">Valitse tiedosto</string>
     <string name="confirm_storage_access_title">Vahvista pääsy ulkoiseen tallennustilaan</string>
-    <string name="confirm_storage_access_text">Valitse muistikortin root-kansio seuraavaksi antaaksesi kirjoitusoikeuden</string>
+    <string name="confirm_storage_access_text">Valitse muistikortin juurihakemisto seuraavaksi antaaksesi kirjoitusoikeuden</string>
     <string name="confirm_storage_access_text_sd">Jos et näe muistikorttia, kokeile tätä</string>
     <string name="confirm_selection">Vahvista valinta</string>
 
@@ -172,8 +172,8 @@
     <string name="select_storage">Valitse tallennustila</string>
     <string name="internal">Sisäinen</string>
     <string name="sd_card">Muistikortti</string>
-    <string name="root">Root</string>
-    <string name="wrong_root_selected">Väärä kansio valittu, valitse muistikortin root-kansio</string>
+    <string name="root">Juurihakemisto</string>
+    <string name="wrong_root_selected">Väärä kansio valittu, valitse muistikortin juurihakemisto</string>
     <string name="sd_card_usb_same">Muistikortin ja USB-laitteen polut eivät voi olla samat</string>
     <string name="app_on_sd_card">Sovellus on asennettu muistikortille, jonka vuoksi widgetit eivät ole käytettävissä. Niitä ei näytetä widget-listalla.
         Kyseessä on järjestelmän rajoitus, joten jos haluat käyttää widgetejä, siirrä sovellus takaisin sisäiseen tallennustilaan.</string>
@@ -195,8 +195,8 @@
     <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Kappaleen nimi</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="gps_coordinates">GPS-koordinaatit</string>
+    <string name="altitude">Korkeus</string>
 
     <!-- Color customization -->
     <string name="background_color">Taustaväri</string>
@@ -220,10 +220,10 @@
     <string name="app_icon_color_warning">VAROITUS: Jotkin käynnistinohjelmat eivät käsittele kuvakkeen mukauttamista oikein. Jos kuvake häviää, käynnistä sovellus Google Playn tai jonkin widgetin kautta, jos mahdollista.
         Käynnistyksen jälkeen palauta kuvakkeen oranssi oletusväri #F57C00. Pahimmillaan saatat joutua asentamaan sovelluksen uudelleen.</string>
     <string name="share_colors_success">Värit päivitetty. Uusi teema nimeltä \'Jaettu\' käytä sitä jatkossa muokataksesi värejä kaikissa sovelluksissa.</string>
-    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
+    <string name="shared_theme_note">Huomioi, että vaikka käytössäsi on sovelluksen Pro-versio, Simple Thank You tarvitaan teknisistä syistä mm. värien synkronointiin.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Osta <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> avataksesi ominaisuuden ja tukeaksesi kehitystä. Kiitos!
+            Osta <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">KiitosSimple Thank You</a> avataksesi ominaisuuden ja tukeaksesi kehitystä. Kiitos!
         ]]>
     </string>
 
@@ -288,7 +288,7 @@
     <string name="are_you_sure_delete">Haluatko varmasti poistaa tämän kohteen?</string>
     <string name="are_you_sure_recycle_bin">Haluatko varmasti siirtää tämän kohteen roskakoriin?</string>
     <string name="do_not_ask_again">Älä kysy uudestaan tällä istunnolla</string>
-    <string name="yes">Poista</string>
+    <string name="yes">Kyllä</string>
     <string name="no">Peruuta</string>
     <string name="maybe">Ehkä</string>
 
@@ -324,7 +324,7 @@
     <string name="yesterday">Eilen</string>
     <string name="today">Tänään</string>
     <string name="tomorrow">Huomenna</string>
-    <string name="hide_year">Hide year</string>
+    <string name="hide_year">Piilota vuosi</string>
     <string name="seconds_raw">sekunnit</string>
     <string name="minutes_raw">minuutit</string>
     <string name="hours_raw">tunnit</string>
@@ -699,7 +699,7 @@
     <string name="gallery_short">Galleria</string>
     <string name="music_player_short">Musiikkisoitin</string>
     <string name="notes_short">Muistiinpanot</string>
-    <string name="sms_messenger_short">SMS Messenger</string>
+    <string name="sms_messenger_short">Viestit</string>
     <string name="thank_you_short">Thank You</string>
     <string name="voice_recorder_short">Ääninauhuri</string>
 
@@ -733,6 +733,45 @@
         Kyseessä on kertamaksu, joka tarkoittaa sitä, että oston jälkeen sinun ei koskaan enää tarvitse maksaa siitä. Ei edes uuden laitteen hankinnan jälkeen. Jos et pidä Pro-versiosta, voit poistaa sen muutaman tunnin kuluessa ja saat automaattisesti rahasi takaisin.
         Jos haluat palauttaa myöhemmin. ota yhteyttä hello@simplemobiletools.com ja maksusi palautetaan.</string>
 
+    <!-- Pro comparison (shown in the deprecated free apps) -->
+    <string name="why_upgrade">Hanki Pro-versio nyt!</string>
+    <string name="why_upgrade_basic_version">Perus</string>
+    <string name="why_upgrade_pro_version">Pro</string>
+    <string name="why_upgrade_no_ads">Ei mainoksia</string>
+    <string name="why_upgrade_no_internet_access">Ei internetyhteyttä</string>
+    <string name="why_upgrade_footer">+ 100% rahat takaisin-takuu</string>
+
+    <!-- Gallery Pro -->
+    <string name="why_upgrade_advanced_photo_editor">Kehittyt valokuvaeditori</string>
+    <string name="why_upgrade_heic_support">Tuki HEIC/HEIF-tiedostoille</string>
+    <string name="why_upgrade_batch_renaming">Kehittynyt monen tiedoston uudelleennimeäminen kerralla </string>
+    <string name="why_upgrade_folder_locking">Yksittäisten hakemistojen lukitseminen</string>
+    <string name="why_upgrade_printing_support">Tuki tulostamiselle</string>
+
+    <!-- Calendar Pro -->
+    <string name="why_upgrade_time_zone_support">Tuki aikavyöhykkeille</string>
+    <string name="why_upgrade_attendees_emails">Osallistujat ja sähköpostimuistutukset</string>
+    <string name="why_upgrade_easy_event_importing">Helppo tapahtumien tuonti</string>
+    <string name="why_upgrade_new_widgets">Uudet widgetit</string>
+
+    <!-- Contacts Pro -->
+    <string name="why_upgrade_duplicate_contact_merging">Paranneltu kontaktikopioiden yhdistäminen</string>
+    <string name="why_upgrade_font_size_customization">Fonttikoon kustomointi</string>
+    <string name="why_upgrade_private_contact_sharing">Vaihtoehtona sovellustemme välinen kontaktien jako</string>
+
+    <!-- Notes Pro -->
+    <string name="why_upgrade_checklists">Tarkistuslistat</string>
+    <string name="why_upgrade_different_note_per_widget">Widget-kohtainen muistiinpano ja värit</string>
+
+    <!-- File Manager Pro -->
+    <string name="why_upgrade_date_and_time_format">Päivämäärän ja ajan näyttömuotojen kustomointi</string>
+    <string name="why_upgrade_shortcuts">Pikakuvakkeet kotivalikkoon</string>
+    <string name="why_upgrade_file_compression">Tuki tiedostojen pakkaukselle</string>
+
+    <!-- Draw Pro -->
+    <string name="why_upgrade_background_color_customization">Taustavärin kustomointi</string>
+    <string name="why_upgrade_file_importing">Tuki tiedostojen tuonnille</string>
+
     <!-- License -->
     <string name="notice">Tämä sovellus käyttää kolmannen osapuolen lisenssejä tehdäkseni elämästäni helpompaa. Kiitos.</string>
     <string name="third_party_licences">Kolmansien osapuolien lisenssit</string>
@@ -764,11 +803,12 @@
     <string name="event_bus_title">Event Bus (communication within the app)</string>
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="apng_title">APNG Android (animated WebP support)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">VANHENTUNUT:: Tätä sovellusversiota ei enää ylläpidetä, hanki Pro-versio osoitteesta https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">Muista, että saat rahasi automaattisesti takaisin, jos poistat minkä tahansa maksullisista sovelluksistamme kahden tunnin sisällä asentamisesta. Jos haluat rahasi milloin vain myöhemmin takaisin, ota yhteyttä sähköpostitse hello@simplemobiletools.com ja saat rahat takaisin. Tämä tekee kokeilun helpoksi :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Kokoelma yksinkertaisia vapaan lähdekoodin Android-sovelluksia kustomoitavilla widgeteillä, ilman mainoksia ja tarpeettomia käyttöoikeuksia.</string>
 </resources>

@@ -36,6 +36,7 @@ const val SD_OTG_SHORT = "^[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$"
 const val KEY_PHONE = "phone"
 const val CONTACT_ID = "contact_id"
 const val IS_PRIVATE = "is_private"
+const val MD5 = "MD5"
 
 const val HOUR_MINUTES = 60
 const val DAY_MINUTES = 24 * HOUR_MINUTES
@@ -137,6 +138,7 @@ const val FONT_SIZE = "font_size"
 const val WAS_MESSENGER_RECORDER_SHOWN = "was_messenger_recorder_shown"
 const val DEFAULT_TAB = "default_tab"
 const val START_NAME_WITH_SURNAME = "start_name_with_surname"
+const val FAVORITES = "favorites"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
@@ -167,6 +169,7 @@ const val LICENSE_INDICATOR_FAST_SCROLL = 16777216
 const val LICENSE_EVENT_BUS = 33554432
 const val LICENSE_AUDIO_RECORD_VIEW = 67108864
 const val LICENSE_SMS_MMS = 134217728
+const val LICENSE_APNG = 268435456
 
 // global intents
 const val OPEN_DOCUMENT_TREE = 1000
@@ -337,6 +340,7 @@ fun isOreoPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
 fun isOreoMr1Plus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1
 fun isPiePlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
 fun isQPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
+fun isRPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
 
 fun getDateFormats() = arrayListOf(
     "--MM-dd",

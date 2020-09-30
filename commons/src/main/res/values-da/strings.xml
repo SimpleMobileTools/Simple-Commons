@@ -220,7 +220,7 @@
     <string name="app_icon_color_warning">ADVARSEL: Ikke alle app-launchers kan håndtere tilpasning af ikonfarve. Hvis et ikon skulle forsvinde kan du prøve at åbne appen via Google Play eller en widget.
        Når appen er åben kan du sætte farven til standardfarven #F57C00 igen. I værste fald må du geninstallere appen.</string>
     <string name="share_colors_success">Farverne er ændret. Et nyt udseende kaldet \"Tilpasset\" er tilføjet, brug det ved opdatering af alle app-farver fremover.</string>
-    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
+    <string name="shared_theme_note">Bemærk at selv om du bruger appens Pro-version, skal du af tekniske årsager stadig have Simple Thank You. Den tager sig af farvesynkronisering.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Køb <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> for at låse denne funktion op og understøtte appens udvikling. Tak!
@@ -324,7 +324,7 @@
     <string name="yesterday">I går</string>
     <string name="today">I dag</string>
     <string name="tomorrow">I morgen</string>
-    <string name="hide_year">Hide year</string>
+    <string name="hide_year">Skjul årstal</string>
     <string name="seconds_raw">sekunder</string>
     <string name="minutes_raw">minutter</string>
     <string name="hours_raw">timer</string>
@@ -733,6 +733,45 @@
         Det er en engangsinvestering, har du betalt een gang skal du aldrig gøre det igen, heller ikke hvis du skifter mobil eller tablet. Kan du ikke lide Pro-versionen, kan du afinstallere den indenfor nogle få timer og du vil automatisk få dine penge tilbage.
         Vil du på et senere tidspunkt have pengene refunderet, skal du blot sende en mail til hello@simplemobiletools.com, så klarer vi det.</string>
 
+    <!-- Pro comparison (shown in the deprecated free apps) -->
+    <string name="why_upgrade">Få Pro-versionen nu!</string>
+    <string name="why_upgrade_basic_version">Basic</string>
+    <string name="why_upgrade_pro_version">Pro</string>
+    <string name="why_upgrade_no_ads">Ingen reklamer</string>
+    <string name="why_upgrade_no_internet_access">Ingen internetadgang</string>
+    <string name="why_upgrade_footer">+ Fuld tilfredshed eller pengene tilbage</string>
+
+    <!-- Gallery Pro -->
+    <string name="why_upgrade_advanced_photo_editor">Avanceret fotoredigering</string>
+    <string name="why_upgrade_heic_support">HEIC/HEIF filunderstøttelse</string>
+    <string name="why_upgrade_batch_renaming">Avanceret masseomdøbning af filer</string>
+    <string name="why_upgrade_folder_locking">Individuel låsning af mapper</string>
+    <string name="why_upgrade_printing_support">Udskrivningssupport</string>
+
+    <!-- Calendar Pro -->
+    <string name="why_upgrade_time_zone_support">Tidszone-support</string>
+    <string name="why_upgrade_attendees_emails">Deltager- og mail-påmindelser</string>
+    <string name="why_upgrade_easy_event_importing">Nem import af begivenheder</string>
+    <string name="why_upgrade_new_widgets">Nye widgets</string>
+
+    <!-- Contacts Pro -->
+    <string name="why_upgrade_duplicate_contact_merging">Forbedret sammenfletning af duplikerede kontakter</string>
+    <string name="why_upgrade_font_size_customization">Skræddersyet skriftstørrelse</string>
+    <string name="why_upgrade_private_contact_sharing">Mulighed for deling af private kontakter med dine apps</string>
+
+    <!-- Notes Pro -->
+    <string name="why_upgrade_checklists">Tjeklister</string>
+    <string name="why_upgrade_different_note_per_widget">Forskellig note og farver per widget</string>
+
+    <!-- File Manager Pro -->
+    <string name="why_upgrade_date_and_time_format">Tilpasning af format på dato og tid</string>
+    <string name="why_upgrade_shortcuts">Genveje til startside</string>
+    <string name="why_upgrade_file_compression">Understøtter pakning af filer</string>
+
+    <!-- Draw Pro -->
+    <string name="why_upgrade_background_color_customization">Selvvalgt baggrundsfarve</string>
+    <string name="why_upgrade_file_importing">Understøtter filimport</string>
+
     <!-- License -->
     <string name="notice">Denne app bruger følgende 3.-parts biblioteker der gør at mit liv bliver lidt enklere. Tak.</string>
     <string name="third_party_licences">3.-parts licencer</string>
@@ -764,6 +803,7 @@
     <string name="event_bus_title">Event Bus (intern kommunikation i appen)</string>
     <string name="audio_record_view_title">Audio Record View (audio-visualisering)</string>
     <string name="sms_mms_title">SMS MMS (håndtering af SMS og MMS)</string>
+    <string name="apng_title">APNG Android (animated WebP support)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">FORÆLDET: Denne version af appen vedligeholdes ikke længere, skift til Pro-versionen her https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

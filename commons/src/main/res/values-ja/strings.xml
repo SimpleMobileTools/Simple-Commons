@@ -701,6 +701,45 @@
         It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
         If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
 
+    <!-- Pro comparison (shown in the deprecated free apps) -->
+    <string name="why_upgrade">今すぐProバージョンをゲットしよう！</string>
+    <string name="why_upgrade_basic_version">ベーシック</string>
+    <string name="why_upgrade_pro_version">プロ</string>
+    <string name="why_upgrade_no_ads">広告なし</string>
+    <string name="why_upgrade_no_internet_access">インターネットにアクセス不要</string>
+    <string name="why_upgrade_footer">+ 100％返金保証</string>
+
+    <!-- Gallery Pro -->
+    <string name="why_upgrade_advanced_photo_editor">上級な写真編集</string>
+    <string name="why_upgrade_heic_support">HEIC / HEIFファイル対応</string>
+    <string name="why_upgrade_batch_renaming">上級なバッチファイル名の変更</string>
+    <string name="why_upgrade_folder_locking">個々のフォルダーのロック</string>
+    <string name="why_upgrade_printing_support">印刷対応</string>
+
+    <!-- Calendar Pro -->
+    <string name="why_upgrade_time_zone_support">現地時間対応</string>
+    <string name="why_upgrade_attendees_emails">出席者とメール通知</string>
+    <string name="why_upgrade_easy_event_importing">簡単なイベントの入力</string>
+    <string name="why_upgrade_new_widgets">新しいウィジェット</string>
+
+    <!-- Contacts Pro -->
+    <string name="why_upgrade_duplicate_contact_merging">重複した連絡先登録を改善</string>
+    <string name="why_upgrade_font_size_customization">文字サイズのカスタマイズ</string>
+    <string name="why_upgrade_private_contact_sharing">アプリ内で個別連絡先をシェアするオプション</string>
+
+    <!-- Notes Pro -->
+    <string name="why_upgrade_checklists">チェックリスト</string>
+    <string name="why_upgrade_different_note_per_widget">各ウィジェットに違うメモと色</string>
+
+    <!-- File Manager Pro -->
+    <string name="why_upgrade_date_and_time_format">日付と時刻のフォーマットのカスタマイズ</string>
+    <string name="why_upgrade_shortcuts">ホーム画面のショートカット</string>
+    <string name="why_upgrade_file_compression">ファイル圧縮対応</string>
+
+    <!-- Draw Pro -->
+    <string name="why_upgrade_background_color_customization">背景色のカスタマイズ</string>
+    <string name="why_upgrade_file_importing">ファイル入力対応</string>
+
     <!-- License -->
     <string name="notice">このアプリは、私の暮らしにゆとりを持たせるために、次のサードパーティのライブラリーを使用しています。ありがとうございます。</string>
     <string name="third_party_licences">サードパーティー ライセンス</string>
@@ -732,6 +771,7 @@
     <string name="event_bus_title">Event Bus (communication within the app)</string>
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="apng_title">APNG Android (animated WebP support)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

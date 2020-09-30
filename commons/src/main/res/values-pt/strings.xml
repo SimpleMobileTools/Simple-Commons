@@ -220,7 +220,7 @@
     <string name="app_icon_color_warning">AVISO: alguns launchers não gerem bem a personalização dos ícones. Se o ícone desaparecer, tente iniciar a aplicação através da Google Play ou do widget.
         Depois de iniciar a aplicação, reverta para a cor original (#F57C00). No pior cenário, poderá ser necessário reinstalar a aplicação.</string>
     <string name="share_colors_success">Cores atualizadas com sucesso. Foi criado o novo tema \'Partilhado\', que pode utilizar para atualizar as cores de todas as aplicações Simple.</string>
-    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
+    <string name="shared_theme_note">Tenha em atenção que, mesmo que esteja a utilizar a versão Pro, tem que instalar a aplicação Simple Thank You por motivos técnicos. Esta aplicação controla a sincronização de cores.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Por favor compre a aplicação <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> para desbloquear esta funcionalidade e ajudar no desenvolvimento. Obrigado!
@@ -734,6 +734,45 @@
         It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
         If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
 
+    <!-- Pro comparison (shown in the deprecated free apps) -->
+    <string name="why_upgrade">Atualize para a versão Pro agora!</string>
+    <string name="why_upgrade_basic_version">Básico</string>
+    <string name="why_upgrade_pro_version">Pro</string>
+    <string name="why_upgrade_no_ads">Sem anúncios</string>
+    <string name="why_upgrade_no_internet_access">Sem acesso à Internet</string>
+    <string name="why_upgrade_footer">+ Garantia 100% de reembolso</string>
+
+    <!-- Gallery Pro -->
+    <string name="why_upgrade_advanced_photo_editor">Editor de fotos avançado</string>
+    <string name="why_upgrade_heic_support">Suporte para ficheiros HEIC/HEIF</string>
+    <string name="why_upgrade_batch_renaming">Mudar nome de ficheiros em lote</string>
+    <string name="why_upgrade_folder_locking">Bloqueio individual de pastas</string>
+    <string name="why_upgrade_printing_support">Suporte a impressão</string>
+
+    <!-- Calendar Pro -->
+    <string name="why_upgrade_time_zone_support">Suporte a fuso-horário</string>
+    <string name="why_upgrade_attendees_emails">Participantes e lembretes por e-mail</string>
+    <string name="why_upgrade_easy_event_importing">Importação simplificada de eventos</string>
+    <string name="why_upgrade_new_widgets">Novos widgets</string>
+
+    <!-- Contacts Pro -->
+    <string name="why_upgrade_duplicate_contact_merging">Melhorias na junção de contactos duplicados</string>
+    <string name="why_upgrade_font_size_customization">Personalização do tipo de letra</string>
+    <string name="why_upgrade_private_contact_sharing">Partilha opcional de contactos entre as aplicações Simple</string>
+
+    <!-- Notes Pro -->
+    <string name="why_upgrade_checklists">Listas</string>
+    <string name="why_upgrade_different_note_per_widget">Notas e cores diferentes por widgets</string>
+
+    <!-- File Manager Pro -->
+    <string name="why_upgrade_date_and_time_format">Personalização do formato de data e hora</string>
+    <string name="why_upgrade_shortcuts">Atalhos no ecrã principal</string>
+    <string name="why_upgrade_file_compression">Suporte para compressão de arquivos</string>
+
+    <!-- Draw Pro -->
+    <string name="why_upgrade_background_color_customization">Personalização da cor de fundo</string>
+    <string name="why_upgrade_file_importing">Suporte a importação de ficheiros</string>
+
     <!-- License -->
     <string name="notice">Esta aplicação usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>
     <string name="third_party_licences">Licenças de terceiros</string>
@@ -765,6 +804,7 @@
     <string name="event_bus_title">Event Bus (comunicação entre aplicações)</string>
     <string name="audio_record_view_title">Audio Record View (visualização de áudio)</string>
     <string name="sms_mms_title">SMS MMS (gestão de SMS e MMS)</string>
+    <string name="apng_title">APNG Android (animated WebP support)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">AVISO: Esta versão da aplicação já não está a ser desenvolvida. Pode obter a versão Pro em https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

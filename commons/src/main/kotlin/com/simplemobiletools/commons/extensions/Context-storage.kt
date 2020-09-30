@@ -31,7 +31,7 @@ fun Context.getSDCardPath(): String {
 
     val fullSDpattern = Pattern.compile(SD_OTG_PATTERN)
     var sdCardPath = directories.firstOrNull { fullSDpattern.matcher(it).matches() }
-            ?: directories.firstOrNull { !physicalPaths.contains(it.toLowerCase()) } ?: ""
+        ?: directories.firstOrNull { !physicalPaths.contains(it.toLowerCase()) } ?: ""
 
     // on some devices no method retrieved any SD card path, so test if its not sdcard1 by any chance. It happened on an Android 5.1
     if (sdCardPath.trimEnd('/').isEmpty()) {
@@ -80,7 +80,7 @@ fun Context.getStorageDirectories(): Array<String> {
     if (TextUtils.isEmpty(rawEmulatedStorageTarget)) {
         if (isMarshmallowPlus()) {
             getExternalFilesDirs(null).filterNotNull().map { it.absolutePath }
-                    .mapTo(paths) { it.substring(0, it.indexOf("Android/data")) }
+                .mapTo(paths) { it.substring(0, it.indexOf("Android/data")) }
         } else {
             if (TextUtils.isEmpty(rawExternalStorage)) {
                 paths.addAll(physicalPaths)
@@ -468,20 +468,50 @@ fun Context.getIsPathDirectory(path: String): Boolean {
     }
 }
 
+fun Context.getFolderLastModifieds(folder: String): HashMap<String, Long> {
+    val lastModifieds = HashMap<String, Long>()
+    val projection = arrayOf(
+        Images.Media.DISPLAY_NAME,
+        Images.Media.DATE_MODIFIED
+    )
+
+    val uri = Files.getContentUri("external")
+    val selection = "${Images.Media.DATA} LIKE ? AND ${Images.Media.DATA} NOT LIKE ? AND ${Images.Media.MIME_TYPE} IS NOT NULL" // avoid selecting folders
+    val selectionArgs = arrayOf("$folder/%", "$folder/%/%")
+
+    val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+    cursor?.use {
+        if (cursor.moveToFirst()) {
+            do {
+                try {
+                    val lastModified = cursor.getLongValue(Images.Media.DATE_MODIFIED) * 1000
+                    if (lastModified != 0L) {
+                        val name = cursor.getStringValue(Images.Media.DISPLAY_NAME)
+                        lastModifieds["$folder/$name"] = lastModified
+                    }
+                } catch (e: Exception) {
+                }
+            } while (cursor.moveToNext())
+        }
+    }
+
+    return lastModifieds
+}
+
 // avoid these being set as SD card paths
 private val physicalPaths = arrayListOf(
-        "/storage/sdcard1", // Motorola Xoom
-        "/storage/extsdcard", // Samsung SGS3
-        "/storage/sdcard0/external_sdcard", // User request
-        "/mnt/extsdcard", "/mnt/sdcard/external_sd", // Samsung galaxy family
-        "/mnt/external_sd", "/mnt/media_rw/sdcard1", // 4.4.2 on CyanogenMod S3
-        "/removable/microsd", // Asus transformer prime
-        "/mnt/emmc", "/storage/external_SD", // LG
-        "/storage/ext_sd", // HTC One Max
-        "/storage/removable/sdcard1", // Sony Xperia Z1
-        "/data/sdext", "/data/sdext2", "/data/sdext3", "/data/sdext4", "/sdcard1", // Sony Xperia Z
-        "/sdcard2", // HTC One M8s
-        "/storage/usbdisk0",
-        "/storage/usbdisk1",
-        "/storage/usbdisk2"
+    "/storage/sdcard1", // Motorola Xoom
+    "/storage/extsdcard", // Samsung SGS3
+    "/storage/sdcard0/external_sdcard", // User request
+    "/mnt/extsdcard", "/mnt/sdcard/external_sd", // Samsung galaxy family
+    "/mnt/external_sd", "/mnt/media_rw/sdcard1", // 4.4.2 on CyanogenMod S3
+    "/removable/microsd", // Asus transformer prime
+    "/mnt/emmc", "/storage/external_SD", // LG
+    "/storage/ext_sd", // HTC One Max
+    "/storage/removable/sdcard1", // Sony Xperia Z1
+    "/data/sdext", "/data/sdext2", "/data/sdext3", "/data/sdext4", "/sdcard1", // Sony Xperia Z
+    "/sdcard2", // HTC One M8s
+    "/storage/usbdisk0",
+    "/storage/usbdisk1",
+    "/storage/usbdisk2"
 )

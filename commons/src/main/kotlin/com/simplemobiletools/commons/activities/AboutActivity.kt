@@ -66,7 +66,7 @@ class AboutActivity : BaseSimpleActivity() {
         val deviceOS = String.format(getString(R.string.device_os), Build.VERSION.RELEASE)
         val newline = "%0D%0A"
         val separator = "------------------------------"
-        val body = "$appVersion$newline$deviceOS$newline$separator$newline$newline$newline"
+        val body = "$appVersion$newline$deviceOS$newline$separator$newline$newline"
         val href = "$label<br><a href=\"mailto:$email?subject=$appName&body=$body\">$email</a>"
         about_email.text = Html.fromHtml(href)
 

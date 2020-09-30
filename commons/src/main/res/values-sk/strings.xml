@@ -768,6 +768,45 @@
         Ide o jednorázovú platbu, čo znamená, že ak ju raz zaplatíte, už nikdy nebudete musieť platiť nič. Ani vtedy, ak si kúpite nové zariadenie. Ak sa vám Pro verzia nebude páčiť, môžete ju do pár hodín odinštalovať a peniaze vám budú automaticky vrátené.
         Ak budete chcieť vrátiť apku kedykoľvek neskôr, stačí, ak nám napíšete na hello@simplemobiletools.com a peniaze vám vrátime.</string>
 
+    <!-- Pro comparison (shown in the deprecated free apps) -->
+    <string name="why_upgrade">Prejdite na Pro verziu teraz!</string>
+    <string name="why_upgrade_basic_version">Základná</string>
+    <string name="why_upgrade_pro_version">Pro</string>
+    <string name="why_upgrade_no_ads">Žiadne reklamy</string>
+    <string name="why_upgrade_no_internet_access">Žiadny prístup na internet</string>
+    <string name="why_upgrade_footer">+ 100% Garancia vrátenia peňazí</string>
+
+    <!-- Gallery Pro -->
+    <string name="why_upgrade_advanced_photo_editor">Pokročilý editor fotiek</string>
+    <string name="why_upgrade_heic_support">Podpora pre súbory HEIC/HEIF</string>
+    <string name="why_upgrade_batch_renaming">Pokročilé skupinové premenovávanie súborov</string>
+    <string name="why_upgrade_folder_locking">Uzamykanie jednotlivých priečinkov</string>
+    <string name="why_upgrade_printing_support">Podpora tlače</string>
+
+    <!-- Calendar Pro -->
+    <string name="why_upgrade_time_zone_support">Podpora časových pásiem</string>
+    <string name="why_upgrade_attendees_emails">Účastníci a emailové pripomienky</string>
+    <string name="why_upgrade_easy_event_importing">Jednoduché importovanie udalostí</string>
+    <string name="why_upgrade_new_widgets">Nové widgety</string>
+
+    <!-- Contacts Pro -->
+    <string name="why_upgrade_duplicate_contact_merging">Pokročilé spájanie duplicitných kontaktov</string>
+    <string name="why_upgrade_font_size_customization">Nastaviteľná veľkosť písma</string>
+    <string name="why_upgrade_private_contact_sharing">Voliteľné zdieľanie súkromných kontaktov vrámci našich apiek</string>
+
+    <!-- Notes Pro -->
+    <string name="why_upgrade_checklists">Zoznamy položiek</string>
+    <string name="why_upgrade_different_note_per_widget">Iná poznámka a farby na každom widgete</string>
+
+    <!-- File Manager Pro -->
+    <string name="why_upgrade_date_and_time_format">Nastaviteľný formát dátumu a času</string>
+    <string name="why_upgrade_shortcuts">Odkazy na domovskú stránku</string>
+    <string name="why_upgrade_file_compression">Kompresia súborov</string>
+
+    <!-- Draw Pro -->
+    <string name="why_upgrade_background_color_customization">Meniteľná farba pozadia</string>
+    <string name="why_upgrade_file_importing">Podpora importovania súborov</string>
+
     <!-- License -->
     <string name="notice">Táto aplikácia používa na uľahčenie práce nasledovné knižnice tretích strán. Ďakujeme.</string>
     <string name="third_party_licences">Knižnice tretích strán</string>
@@ -799,6 +838,7 @@
     <string name="event_bus_title">Event Bus (komunikácia vrámci apky)</string>
     <string name="audio_record_view_title">Audio Record View (vizualizácia zvukov)</string>
     <string name="sms_mms_title">SMS MMS (spravovanie SMS a MMS)</string>
+    <string name="apng_title">APNG Android (podpora pre animované WebP súbory)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">ZASTARALÁ: Táto verzia aplikácie už nie je podporovaná. Stiahnite si Pro verziu na https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

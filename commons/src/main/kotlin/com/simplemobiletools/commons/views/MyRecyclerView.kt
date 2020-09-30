@@ -132,7 +132,7 @@ open class MyRecyclerView : RecyclerView {
                 if (dragSelectActive) {
                     val itemPosition = getItemPosition(ev)
                     if (hotspotHeight > -1) {
-                        if (ev.y in hotspotTopBoundStart..hotspotTopBoundEnd) {
+                        if (ev.y in hotspotTopBoundStart.toFloat()..hotspotTopBoundEnd.toFloat()) {
                             inBottomHotspot = false
                             if (!inTopHotspot) {
                                 inTopHotspot = true
@@ -143,7 +143,7 @@ open class MyRecyclerView : RecyclerView {
                             val simulatedFactor = (hotspotTopBoundEnd - hotspotTopBoundStart).toFloat()
                             val simulatedY = ev.y - hotspotTopBoundStart
                             autoScrollVelocity = (simulatedFactor - simulatedY).toInt() / 2
-                        } else if (ev.y in hotspotBottomBoundStart..hotspotBottomBoundEnd) {
+                        } else if (ev.y in hotspotBottomBoundStart.toFloat()..hotspotBottomBoundEnd.toFloat()) {
                             inTopHotspot = false
                             if (!inBottomHotspot) {
                                 inBottomHotspot = true

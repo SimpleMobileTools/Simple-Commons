@@ -416,4 +416,8 @@ open class BaseConfig(val context: Context) {
     var startNameWithSurname: Boolean
         get() = prefs.getBoolean(START_NAME_WITH_SURNAME, false)
         set(startNameWithSurname) = prefs.edit().putBoolean(START_NAME_WITH_SURNAME, startNameWithSurname).apply()
+
+    var favorites: MutableSet<String>
+        get() = prefs.getStringSet(FAVORITES, HashSet())!!
+        set(favorites) = prefs.edit().remove(FAVORITES).putStringSet(FAVORITES, favorites).apply()
 }

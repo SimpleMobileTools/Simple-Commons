@@ -734,6 +734,45 @@
          Đó là thanh toán một lần, có nghĩa là một khi bạn mua nó, bạn sẽ không bao giờ phải mua lại. Ngay cả sau khi nhận được một thiết bị mới. Nếu bạn không thích phiên bản Pro, bạn có thể gỡ cài đặt trong vòng vài giờ và bạn sẽ tự động lấy lại tiền.
          Nếu bạn muốn hoàn lại tiền bất cứ lúc nào sau đó, chỉ cần liên hệ với chúng tôi tại hello@simplemobiletools.com và bạn sẽ nhận được nó.</string>
 
+    <!-- Pro comparison (shown in the deprecated free apps) -->
+    <string name="why_upgrade">Get the Pro version now!</string>
+    <string name="why_upgrade_basic_version">Basic</string>
+    <string name="why_upgrade_pro_version">Pro</string>
+    <string name="why_upgrade_no_ads">No ads</string>
+    <string name="why_upgrade_no_internet_access">No internet access</string>
+    <string name="why_upgrade_footer">+ 100% Money Back Guarantee</string>
+
+    <!-- Gallery Pro -->
+    <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
+    <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
+    <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
+    <string name="why_upgrade_folder_locking">Individual folder locking</string>
+    <string name="why_upgrade_printing_support">Printing support</string>
+
+    <!-- Calendar Pro -->
+    <string name="why_upgrade_time_zone_support">Time zone support</string>
+    <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
+    <string name="why_upgrade_easy_event_importing">Easy event importing</string>
+    <string name="why_upgrade_new_widgets">New widgets</string>
+
+    <!-- Contacts Pro -->
+    <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
+    <string name="why_upgrade_font_size_customization">Font size customization</string>
+    <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
+
+    <!-- Notes Pro -->
+    <string name="why_upgrade_checklists">Checklists</string>
+    <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
+
+    <!-- File Manager Pro -->
+    <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
+    <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
+    <string name="why_upgrade_file_compression">File compression support</string>
+
+    <!-- Draw Pro -->
+    <string name="why_upgrade_background_color_customization">Background color customization</string>
+    <string name="why_upgrade_file_importing">File importing support</string>
+
     <!-- License -->
     <string name="notice">Ứng dụng này sử dụng các thư viện bên thứ ba sau đây để giúp tôi thực hiện dễ dàng hơn. Cảm ơn.</string>
     <string name="third_party_licences">Giấy phép bên thứ ba</string>
@@ -765,6 +804,7 @@
     <string name="event_bus_title">Event Bus (communication within the app)</string>
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="apng_title">APNG Android (animated WebP support)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">THÔNG BÁO: Phiên bản của ứng dụng này không còn được duy trì, hãy tải phiên bản Pro tại https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

@@ -27,11 +27,17 @@ data class SimpleContact(val rawId: Int, val contactId: Int, var name: String, v
     fun doesContainPhoneNumber(text: String): Boolean {
         return if (text.isNotEmpty()) {
             val normalizedText = text.normalizePhoneNumber()
-            phoneNumbers.any { phoneNumber ->
-                PhoneNumberUtils.compare(phoneNumber.normalizePhoneNumber(), normalizedText) ||
-                        phoneNumber.contains(text) ||
-                        phoneNumber.normalizePhoneNumber().contains(normalizedText) ||
-                        phoneNumber.contains(normalizedText)
+            if (normalizedText.isEmpty()) {
+                phoneNumbers.any { phoneNumber ->
+                    phoneNumber.contains(text)
+                }
+            } else {
+                phoneNumbers.any { phoneNumber ->
+                    PhoneNumberUtils.compare(phoneNumber.normalizePhoneNumber(), normalizedText) ||
+                            phoneNumber.contains(text) ||
+                            phoneNumber.normalizePhoneNumber().contains(normalizedText) ||
+                            phoneNumber.contains(normalizedText)
+                }
             }
         } else {
             false

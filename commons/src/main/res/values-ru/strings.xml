@@ -768,6 +768,45 @@
         Это разовая покупка, которая означает, что вам никогда не придётся платить снова. Даже после смены устройства. Если вам не понравится версия Pro, вы можете просто удалить её в течение нескольких часов, после чего автоматически получите свои деньги обратно.
         Если вы захотите вернуть деньги в любое время позже, просто свяжитесь с нами по адресу hello@simplemobiletools.com и мы вернём их.</string>
 
+    <!-- Pro comparison (shown in the deprecated free apps) -->
+    <string name="why_upgrade">Получите Pro-версию прямо сейчас!</string>
+    <string name="why_upgrade_basic_version">Базовая</string>
+    <string name="why_upgrade_pro_version">Pro</string>
+    <string name="why_upgrade_no_ads">Никакой рекламы</string>
+    <string name="why_upgrade_no_internet_access">Без доступа к Интернету</string>
+    <string name="why_upgrade_footer">+ 100% гарантия возврата денег</string>
+
+    <!-- Gallery Pro -->
+    <string name="why_upgrade_advanced_photo_editor">Продвинутый фоторедактор</string>
+    <string name="why_upgrade_heic_support">Поддержка файлов HEIC/HEIF</string>
+    <string name="why_upgrade_batch_renaming">Продвинутое переименование пакетных файлов</string>
+    <string name="why_upgrade_folder_locking">Индивидуальная блокировка папок</string>
+    <string name="why_upgrade_printing_support">Поддержка печати</string>
+
+    <!-- Calendar Pro -->
+    <string name="why_upgrade_time_zone_support">Поддержка часовых поясов</string>
+    <string name="why_upgrade_attendees_emails">Посетители и напоминания по электронной почте</string>
+    <string name="why_upgrade_easy_event_importing">Удобный импорт событий</string>
+    <string name="why_upgrade_new_widgets">Новые виджеты</string>
+
+    <!-- Contacts Pro -->
+    <string name="why_upgrade_duplicate_contact_merging">Улучшенная функция слияния контактов</string>
+    <string name="why_upgrade_font_size_customization">Настройка размера шрифта</string>
+    <string name="why_upgrade_private_contact_sharing">Дополнительный обмен конфиденциальными контактами в наших приложениях</string>
+
+    <!-- Notes Pro -->
+    <string name="why_upgrade_checklists">Контрольные списки</string>
+    <string name="why_upgrade_different_note_per_widget">Разные заметки и цвета для каждого виджета</string>
+
+    <!-- File Manager Pro -->
+    <string name="why_upgrade_date_and_time_format">Настройка формата даты и времени</string>
+    <string name="why_upgrade_shortcuts">Ярлыки на главном экране</string>
+    <string name="why_upgrade_file_compression">Поддержка сжатия файлов</string>
+
+    <!-- Draw Pro -->
+    <string name="why_upgrade_background_color_customization">Настройка цвета фона</string>
+    <string name="why_upgrade_file_importing">Поддержка импорта файлов</string>
+
     <!-- License -->
     <string name="notice">Это приложение использует следующие библиотеки сторонних разработчиков, облегчающие мой труд. Спасибо им.</string>
     <string name="third_party_licences">Лицензии третьих сторон</string>
@@ -799,6 +838,7 @@
     <string name="event_bus_title">Event Bus (коммуникация внутри приложения)</string>
     <string name="audio_record_view_title">Audio Record View (звуковая визуализация)</string>
     <string name="sms_mms_title">SMS, MMS (обработка SMS и MMS)</string>
+    <string name="apng_title">APNG Android (animated WebP support)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">УСТАРЕВШЕЕ: данная версия приложения больше не поддерживается, переходите на версию Pro https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

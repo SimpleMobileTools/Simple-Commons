@@ -8,9 +8,9 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.adapters.FilepickerFavoritesAdapter
 import com.simplemobiletools.commons.adapters.FilepickerItemsAdapter
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.SORT_BY_SIZE
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.Breadcrumbs
@@ -35,6 +35,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                        val showFAB: Boolean = false,
                        val canAddShowHiddenButton: Boolean = false,
                        val forceShowRoot: Boolean = false,
+                       val showFavoritesButton: Boolean = false,
                        val callback: (pickedPath: String) -> Unit) : Breadcrumbs.BreadcrumbsListener {
 
     private var mFirstUpdate = true
@@ -66,22 +67,23 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         }
 
         tryUpdateItems()
+        setupFavorites()
 
         val builder = AlertDialog.Builder(activity)
-                .setNegativeButton(R.string.cancel, null)
-                .setOnKeyListener { dialogInterface, i, keyEvent ->
-                    if (keyEvent.action == KeyEvent.ACTION_UP && i == KeyEvent.KEYCODE_BACK) {
-                        val breadcrumbs = mDialogView.filepicker_breadcrumbs
-                        if (breadcrumbs.childCount > 1) {
-                            breadcrumbs.removeBreadcrumb()
-                            currPath = breadcrumbs.getLastItem().path.trimEnd('/')
-                            tryUpdateItems()
-                        } else {
-                            mDialog.dismiss()
-                        }
+            .setNegativeButton(R.string.cancel, null)
+            .setOnKeyListener { dialogInterface, i, keyEvent ->
+                if (keyEvent.action == KeyEvent.ACTION_UP && i == KeyEvent.KEYCODE_BACK) {
+                    val breadcrumbs = mDialogView.filepicker_breadcrumbs
+                    if (breadcrumbs.childCount > 1) {
+                        breadcrumbs.removeBreadcrumb()
+                        currPath = breadcrumbs.getLastItem().path.trimEnd('/')
+                        tryUpdateItems()
+                    } else {
+                        mDialog.dismiss()
                     }
-                    true
                 }
+                true
+            }
 
         if (!pickFile)
             builder.setPositiveButton(R.string.ok, null)
@@ -94,14 +96,29 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         }
 
         val secondaryFabBottomMargin = activity.resources.getDimension(if (showFAB) R.dimen.secondary_fab_bottom_margin else R.dimen.activity_margin).toInt()
+        mDialogView.filepicker_fabs_holder.apply {
+            (layoutParams as CoordinatorLayout.LayoutParams).bottomMargin = secondaryFabBottomMargin
+        }
+
         mDialogView.filepicker_fab_show_hidden.apply {
             beVisibleIf(!showHidden && canAddShowHiddenButton)
-            (layoutParams as CoordinatorLayout.LayoutParams).bottomMargin = secondaryFabBottomMargin
             setOnClickListener {
                 activity.handleHiddenFolderPasswordProtection {
                     beGone()
                     showHidden = true
                     tryUpdateItems()
+                }
+            }
+        }
+
+        mDialogView.filepicker_favorites_label.text = "${activity.getString(R.string.favorites)}:"
+        mDialogView.filepicker_fab_show_favorites.apply {
+            beVisibleIf(showFavoritesButton && context.baseConfig.favorites.isNotEmpty())
+            setOnClickListener {
+                if (mDialogView.filepicker_favorites_holder.isVisible()) {
+                    hideFavorites()
+                } else {
+                    showFavorites()
                 }
             }
         }
@@ -128,7 +145,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
     private fun tryUpdateItems() {
         ensureBackgroundThread {
-            getItems(currPath, activity.baseConfig.getFolderSorting(currPath) and SORT_BY_SIZE != 0) {
+            getItems(currPath) {
                 activity.runOnUiThread {
                     updateItems(it as ArrayList<FileDirItem>)
                 }
@@ -142,10 +159,8 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             return
         }
 
-        FileDirItem.sorting = activity.baseConfig.getFolderSorting(currPath)
-        items.sort()
-
-        val adapter = FilepickerItemsAdapter(activity, items, mDialogView.filepicker_list) {
+        val sortedItems = items.sortedWith(compareBy({ !it.isDirectory }, { it.name.toLowerCase() }))
+        val adapter = FilepickerItemsAdapter(activity, sortedItems, mDialogView.filepicker_list) {
             if ((it as FileDirItem).isDirectory) {
                 activity.handleLockedFolderOpening(it.path) { success ->
                     if (success) {
@@ -166,7 +181,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             filepicker_list.adapter = adapter
             filepicker_breadcrumbs.setBreadcrumb(currPath)
             filepicker_fastscroller.setViews(filepicker_list) {
-                filepicker_fastscroller.updateBubbleText(items.getOrNull(it)?.getBubbleText(context, mDateFormat, mTimeFormat) ?: "")
+                filepicker_fastscroller.updateBubbleText(sortedItems.getOrNull(it)?.getBubbleText(context, mDateFormat, mTimeFormat) ?: "")
             }
 
             layoutManager.onRestoreInstanceState(mScrollStates[currPath.trimEnd('/')])
@@ -203,15 +218,16 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         mDialog.dismiss()
     }
 
-    private fun getItems(path: String, getProperFileSize: Boolean, callback: (List<FileDirItem>) -> Unit) {
+    private fun getItems(path: String, callback: (List<FileDirItem>) -> Unit) {
         if (activity.isPathOnOTG(path)) {
-            activity.getOTGItems(path, showHidden, getProperFileSize, callback)
+            activity.getOTGItems(path, showHidden, false, callback)
         } else {
-            getRegularItems(path, getProperFileSize, callback)
+            val lastModifieds = activity.getFolderLastModifieds(path)
+            getRegularItems(path, lastModifieds, callback)
         }
     }
 
-    private fun getRegularItems(path: String, getProperFileSize: Boolean, callback: (List<FileDirItem>) -> Unit) {
+    private fun getRegularItems(path: String, lastModifieds: HashMap<String, Long>, callback: (List<FileDirItem>) -> Unit) {
         val items = ArrayList<FileDirItem>()
         val base = File(path)
         val files = base.listFiles()
@@ -221,19 +237,53 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         }
 
         for (file in files) {
-            if (!showHidden && file.isHidden) {
+            if (!showHidden && file.name.startsWith('.')) {
                 continue
             }
 
             val curPath = file.absolutePath
             val curName = curPath.getFilenameFromPath()
-            val size = if (getProperFileSize) file.getProperSize(showHidden) else file.length()
-            items.add(FileDirItem(curPath, curName, file.isDirectory, file.getDirectChildrenCount(showHidden), size, file.lastModified()))
+            val size = file.length()
+            var lastModified = lastModifieds.remove(curPath)
+            val isDirectory = if (lastModified != null) false else file.isDirectory
+            if (lastModified == null) {
+                lastModified = 0    // we don't actually need the real lastModified that badly, do not check file.lastModified()
+            }
+
+            val children = if (isDirectory) file.getDirectChildrenCount(showHidden) else 0
+            items.add(FileDirItem(curPath, curName, isDirectory, children, size, lastModified))
         }
         callback(items)
     }
 
     private fun containsDirectory(items: List<FileDirItem>) = items.any { it.isDirectory }
+
+    private fun setupFavorites() {
+        FilepickerFavoritesAdapter(activity, activity.baseConfig.favorites.toMutableList(), mDialogView.filepicker_favorites_list) {
+            currPath = it as String
+            verifyPath()
+        }.apply {
+            mDialogView.filepicker_favorites_list.adapter = this
+        }
+    }
+
+    private fun showFavorites() {
+        mDialogView.apply {
+            filepicker_favorites_holder.beVisible()
+            filepicker_files_holder.beGone()
+            val drawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_folder_vector, activity.getAdjustedPrimaryColor().getContrastColor())
+            filepicker_fab_show_favorites.setImageDrawable(drawable)
+        }
+    }
+
+    private fun hideFavorites() {
+        mDialogView.apply {
+            filepicker_favorites_holder.beGone()
+            filepicker_files_holder.beVisible()
+            val drawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_star_on_vector, activity.getAdjustedPrimaryColor().getContrastColor())
+            filepicker_fab_show_favorites.setImageDrawable(drawable)
+        }
+    }
 
     override fun breadcrumbClicked(id: Int) {
         if (id == 0) {

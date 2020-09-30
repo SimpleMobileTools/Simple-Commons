@@ -20,6 +20,7 @@ import com.simplemobiletools.commons.helpers.sumByLong
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.dialog_properties.view.*
 import kotlinx.android.synthetic.main.property_item.view.*
+import java.io.File
 import java.util.*
 
 class PropertiesDialog() {
@@ -82,7 +83,7 @@ class PropertiesDialog() {
                     ExifInterface((activity as BaseSimpleActivity).getFileInputStreamSync(fileDirItem.path)!!)
                 } else if (isNougatPlus() && fileDirItem.path.startsWith("content://")) {
                     try {
-                        ExifInterface(activity.contentResolver.openInputStream(Uri.parse(fileDirItem.path)))
+                        ExifInterface(activity.contentResolver.openInputStream(Uri.parse(fileDirItem.path))!!)
                     } catch (e: Exception) {
                         return@ensureBackgroundThread
                     }
@@ -137,6 +138,16 @@ class PropertiesDialog() {
             } catch (e: Exception) {
                 activity.showErrorToast(e)
                 return
+            }
+
+            if (activity.baseConfig.appId.removeSuffix(".debug") == "com.simplemobiletools.filemanager.pro") {
+                addProperty(R.string.md5, "…", R.id.properties_md5)
+                ensureBackgroundThread {
+                    val md5 = File(path).md5()
+                    activity.runOnUiThread {
+                        view.findViewById<TextView>(R.id.properties_md5).property_value.text = md5
+                    }
+                }
             }
         }
 
@@ -204,7 +215,7 @@ class PropertiesDialog() {
             ExifInterface((activity as BaseSimpleActivity).getFileInputStreamSync(path)!!)
         } else if (isNougatPlus() && path.startsWith("content://")) {
             try {
-                ExifInterface(activity.contentResolver.openInputStream(Uri.parse(path)))
+                ExifInterface(activity.contentResolver.openInputStream(Uri.parse(path))!!)
             } catch (e: Exception) {
                 return
             }

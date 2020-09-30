@@ -4,6 +4,7 @@ import android.content.Context
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
+import java.security.MessageDigest
 
 fun File.isMediaFile() = absolutePath.isMediaFile()
 fun File.isGif() = absolutePath.endsWith(".gif", true)
@@ -36,7 +37,7 @@ private fun getDirectorySize(dir: File, countHiddenItems: Boolean): Long {
             for (i in files.indices) {
                 if (files[i].isDirectory) {
                     size += getDirectorySize(files[i], countHiddenItems)
-                } else if (!files[i].isHidden && !dir.isHidden || countHiddenItems) {
+                } else if (!files[i].name.startsWith('.') && !dir.name.startsWith('.') || countHiddenItems) {
                     size += files[i].length()
                 }
             }
@@ -64,7 +65,7 @@ private fun getDirectoryFileCount(dir: File, countHiddenItems: Boolean): Int {
                 if (file.isDirectory) {
                     count++
                     count += getDirectoryFileCount(file, countHiddenItems)
-                } else if (!file.isHidden || countHiddenItems) {
+                } else if (!file.name.startsWith('.') || countHiddenItems) {
                     count++
                 }
             }
@@ -73,7 +74,7 @@ private fun getDirectoryFileCount(dir: File, countHiddenItems: Boolean): Int {
     return count
 }
 
-fun File.getDirectChildrenCount(countHiddenItems: Boolean) = listFiles()?.filter { if (countHiddenItems) true else !it.isHidden }?.size ?: 0
+fun File.getDirectChildrenCount(countHiddenItems: Boolean) = listFiles()?.filter { if (countHiddenItems) true else !it.name.startsWith('.') }?.size ?: 0
 
 fun File.toFileDirItem(context: Context) = FileDirItem(absolutePath, name, context.getIsPathDirectory(absolutePath), 0, length(), lastModified())
 
@@ -112,3 +113,19 @@ fun File.doesParentHaveNoMedia(): Boolean {
     }
     return false
 }
+
+fun File.getDigest(algorithm: String): String {
+    return inputStream().use { fis ->
+        val md = MessageDigest.getInstance(algorithm)
+        val buffer = ByteArray(8192)
+        generateSequence {
+            when (val bytesRead = fis.read(buffer)) {
+                -1 -> null
+                else -> bytesRead
+            }
+        }.forEach { bytesRead -> md.update(buffer, 0, bytesRead) }
+        md.digest().joinToString("") { "%02x".format(it) }
+    }
+}
+
+fun File.md5(): String = this.getDigest(MD5)

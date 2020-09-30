@@ -733,6 +733,45 @@
         Bir kerelik ödeme, yani bir kez satın aldığınızda, bir daha asla ödeme yapmanız gerekmeyeceği anlamına gelir. Yeni bir cihaz aldıktan sonra bile. Pro sürümünü beğenmediyseniz, birkaç saat içinde kaldırabilirsiniz ve paranızı otomatik olarak geri alırsınız.
         Daha sonra istediğiniz zaman geri ödeme almak isterseniz, hello@simplemobiletools.com adresinden bizimle iletişime geçmeniz yeterlidir.</string>
 
+    <!-- Pro comparison (shown in the deprecated free apps) -->
+    <string name="why_upgrade">﻿Pro versiyonu hemen alın!</string>
+    <string name="why_upgrade_basic_version">Basic</string>
+    <string name="why_upgrade_pro_version">Pro</string>
+    <string name="why_upgrade_no_ads">Reklam yok</string>
+    <string name="why_upgrade_no_internet_access">İnternet erişimine gerek yok</string>
+    <string name="why_upgrade_footer">+ %100 Para İadesi Garantisi</string>
+
+    <!-- Gallery Pro -->
+    <string name="why_upgrade_advanced_photo_editor">Gelişmiş foto editörü</string>
+    <string name="why_upgrade_heic_support">HEIC/HEIF dosya desteği</string>
+    <string name="why_upgrade_batch_renaming">Gelişmiş toplu dosya adlandırma</string>
+    <string name="why_upgrade_folder_locking">Kişisel klasör kilidi</string>
+    <string name="why_upgrade_printing_support">Yazıcı desteği</string>
+
+    <!-- Calendar Pro -->
+    <string name="why_upgrade_time_zone_support">Zaman dilimi desteği</string>
+    <string name="why_upgrade_attendees_emails">Toplantı ve eposta hatırlatıcıları</string>
+    <string name="why_upgrade_easy_event_importing">Kolay etkinlik ekleme</string>
+    <string name="why_upgrade_new_widgets">Yeni aletler</string>
+
+    <!-- Contacts Pro -->
+    <string name="why_upgrade_duplicate_contact_merging">Rehberde tekrarlanan kişilerin birleştirilmesi</string>
+    <string name="why_upgrade_font_size_customization">Metin boyutu kişiselleştirme</string>
+    <string name="why_upgrade_private_contact_sharing">Uygulamalarımız arasında tercihe bağlı rehber bilgileri paylaşma</string>
+
+    <!-- Notes Pro -->
+    <string name="why_upgrade_checklists">Kontrol listeleri</string>
+    <string name="why_upgrade_different_note_per_widget">Her araç için farklı not ve renkler</string>
+
+    <!-- File Manager Pro -->
+    <string name="why_upgrade_date_and_time_format">Saat ve tarih formatını kişiselleştirme</string>
+    <string name="why_upgrade_shortcuts">Ana sayfada kısayollar</string>
+    <string name="why_upgrade_file_compression">Dosya sıkıştırma desteği</string>
+
+    <!-- Draw Pro -->
+    <string name="why_upgrade_background_color_customization">Arka plan renklerini kişiselleştirme</string>
+    <string name="why_upgrade_file_importing">Dosya ekleme desteği</string>
+
     <!-- License -->
     <string name="notice">Bu uygulama hayatımı kolaylaştırmak için aşağıdaki üçüncü taraf kitaplıklarını kullanır. Teşekkürler.</string>
     <string name="third_party_licences">Üçüncü taraf lisansları</string>
@@ -764,6 +803,7 @@
     <string name="event_bus_title">Event Bus (communication within the app)</string>
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="apng_title">APNG Android (animated WebP support)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">Kullanımdan kaldırıldı: Uygulamanın bu sürümü artık sağlanmıyor, Pro sürümünü şuradan indirin: https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

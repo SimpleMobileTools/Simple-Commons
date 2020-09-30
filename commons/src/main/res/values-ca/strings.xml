@@ -220,7 +220,7 @@
     <string name="app_icon_color_warning">ADVERTIMENT: alguns llançadors no gestionen la personalització de la icona d\'aplicació correctament. En cas que la icona desaparegui, proveu de llançar l\'aplicació mitjançant Google Play o algun widget, si està disponible.
         Un cop llançat, simplement configureu la icona de color taronja per defecte #F57C00. És possible que hàgiu de tornar a instal·lar l\'aplicació en el pitjor dels casos.</string>
     <string name="share_colors_success">Colors actualitzats satisfactoriament. S’ha afegit un nou tema anomenat \'Shared\'. Fes -lo servidr per actualitzar els colors de les aplicacions en el futur.</string>
-    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
+    <string name="shared_theme_note">Tingueu en compte que tot i que utilitzeu la versió d\'aplicació Pro, encara heu de tenir Simple Tank you per motius tècnics. S\'ocupa de la sincronització del color.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Sius plau compra la aplicació <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> per desblocar aquesta fucnió i ajudar al desenvolupament. Gràcies!
@@ -529,7 +529,7 @@
     <string name="restore_all_files">Restaura tots els fitxers</string>
     <string name="recycle_bin_emptied">La paperea s\'ha buidat correctament</string>
     <string name="files_restored_successfully">El fitxers s\'han restaurat correctament</string>
-    <string name="empty_recycle_bin_confirmation">ASegur que vols buidar la paperera? El fitxer s\'eliminaran definitivament.</string>
+    <string name="empty_recycle_bin_confirmation">Segur que vols buidar la paperera? El fitxer s\'eliminaran definitivament.</string>
     <string name="recycle_bin_empty">La paperera és buida</string>
     <string name="moving_recycle_bin_items_disabled">Moure a la paperara està deshabilitat. Feu servir recuperar</string>
     <string name="show_the_recycle_bin">Mostra la paperera</string>
@@ -734,6 +734,45 @@
          Es tracta d\’un pagament únic, cosa que significa que un cop l\’adquireixis, no hauràs de tornar a pagar mai més. Ni tan sols després de canviar de dispositiu. Si no us agrada la versió Pro, podeu desinstal·lar-la en poques hores i automàticament obtindreu els diners.
          Si voleu un reemborsament en qualsevol moment més tard, només cal que contacteu amb nosaltres a l\'adreça hello@simplemobiletools.com i ho aconseguireu.</string>
 
+    <!-- Pro comparison (shown in the deprecated free apps) -->
+    <string name="why_upgrade">Obteniu la versió Pro ara mateix.</string>
+    <string name="why_upgrade_basic_version">Bàsic</string>
+    <string name="why_upgrade_pro_version">Pro</string>
+    <string name="why_upgrade_no_ads">Sense anuncis</string>
+    <string name="why_upgrade_no_internet_access">No hi ha accés a Internet</string>
+    <string name="why_upgrade_footer">+ 100% de garantia de devolució</string>
+
+    <!-- Gallery Pro -->
+    <string name="why_upgrade_advanced_photo_editor">Editor de fotos avançat</string>
+    <string name="why_upgrade_heic_support">Suport als fitxers HEIC / HEIF</string>
+    <string name="why_upgrade_batch_renaming">Canvi de nom del fitxer per lots avançat</string>
+    <string name="why_upgrade_folder_locking">Bloqueig individual de carpetes</string>
+    <string name="why_upgrade_printing_support">Suport d\'impressió</string>
+
+    <!-- Calendar Pro -->
+    <string name="why_upgrade_time_zone_support">Suport a la zona horària</string>
+    <string name="why_upgrade_attendees_emails">Assistents i recordatoris per correu electrònic</string>
+    <string name="why_upgrade_easy_event_importing">Importació fàcil d\'esdeveniments</string>
+    <string name="why_upgrade_new_widgets">Ginys nous</string>
+
+    <!-- Contacts Pro -->
+    <string name="why_upgrade_duplicate_contact_merging">S\'ha millorat la combinació de contactes duplicats</string>
+    <string name="why_upgrade_font_size_customization">Personalització de la mida del tipus de lletra</string>
+    <string name="why_upgrade_private_contact_sharing">Compartir contactes privats opcionals a les nostres aplicacions</string>
+
+    <!-- Notes Pro -->
+    <string name="why_upgrade_checklists">Llistes de comprovació</string>
+    <string name="why_upgrade_different_note_per_widget">Nota i colors diferents per widget</string>
+
+    <!-- File Manager Pro -->
+    <string name="why_upgrade_date_and_time_format">Personalització del format de data i hora</string>
+    <string name="why_upgrade_shortcuts">Dreceres de pantalla inicial</string>
+    <string name="why_upgrade_file_compression">Suport de compressió de fitxers</string>
+
+    <!-- Draw Pro -->
+    <string name="why_upgrade_background_color_customization">Personalització del color de fons</string>
+    <string name="why_upgrade_file_importing">Suport per a la importació de fitxers</string>
+
     <!-- License -->
     <string name="notice">Aquesta aplicació fa servir les següents biblioteques de tercers que ens faciliten la feina. Gràcies.</string>
     <string name="third_party_licences">Llicències de tercers</string>
@@ -765,6 +804,7 @@
     <string name="event_bus_title">Event Bus (communication within the app)</string>
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="apng_title">APNG Android (animated WebP support)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">DESCONTINUADA: Aquesta versió de l’aplicació ja no es manté, obteniu la versió Pro a l\'adreça https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>

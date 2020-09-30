@@ -701,6 +701,45 @@
         這是一次性付款。也就是說，一旦你購買了將不必再次付費，即使之後有新裝置也不用。如果你不喜歡專業版，則可以在幾個小時內解除安裝，將自動拿回你的錢。
         之後如果何時想退款，只要你以 hello@simplemobiletools.com 聯絡我們然後就能獲得退款了。</string>
 
+    <!-- Pro comparison (shown in the deprecated free apps) -->
+    <string name="why_upgrade">Get the Pro version now!</string>
+    <string name="why_upgrade_basic_version">Basic</string>
+    <string name="why_upgrade_pro_version">Pro</string>
+    <string name="why_upgrade_no_ads">No ads</string>
+    <string name="why_upgrade_no_internet_access">No internet access</string>
+    <string name="why_upgrade_footer">+ 100% Money Back Guarantee</string>
+
+    <!-- Gallery Pro -->
+    <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
+    <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
+    <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
+    <string name="why_upgrade_folder_locking">Individual folder locking</string>
+    <string name="why_upgrade_printing_support">Printing support</string>
+
+    <!-- Calendar Pro -->
+    <string name="why_upgrade_time_zone_support">Time zone support</string>
+    <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
+    <string name="why_upgrade_easy_event_importing">Easy event importing</string>
+    <string name="why_upgrade_new_widgets">New widgets</string>
+
+    <!-- Contacts Pro -->
+    <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
+    <string name="why_upgrade_font_size_customization">Font size customization</string>
+    <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
+
+    <!-- Notes Pro -->
+    <string name="why_upgrade_checklists">Checklists</string>
+    <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
+
+    <!-- File Manager Pro -->
+    <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
+    <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
+    <string name="why_upgrade_file_compression">File compression support</string>
+
+    <!-- Draw Pro -->
+    <string name="why_upgrade_background_color_customization">Background color customization</string>
+    <string name="why_upgrade_file_importing">File importing support</string>
+
     <!-- License -->
     <string name="notice">這程式使用了下列的第三方函式庫來讓我工作簡化。感謝。</string>
     <string name="third_party_licences">第三方授權</string>
@@ -732,6 +771,7 @@
     <string name="event_bus_title">Event Bus (應用程式溝通)</string>
     <string name="audio_record_view_title">Audio Record View (音訊視覺化)</string>
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="apng_title">APNG Android (animated WebP support)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">已捨棄: 這版本的應用程式不再維護，在這取得專業版  https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
