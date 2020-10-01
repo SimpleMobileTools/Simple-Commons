@@ -1,14 +1,13 @@
 package com.simplemobiletools.commons.views
 
 import android.content.Context
-import android.media.ExifInterface
 import android.text.format.DateFormat
 import android.util.AttributeSet
 import android.widget.RelativeLayout
+import androidx.exifinterface.media.ExifInterface
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.isNougatPlus
 import com.simplemobiletools.commons.interfaces.RenameTab
 import kotlinx.android.synthetic.main.dialog_rename_items_pattern.view.*
 import java.io.File
@@ -62,12 +61,8 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
             val numbersCnt = pathsCnt.toString().length
             for (path in validPaths) {
                 val exif = ExifInterface(path)
-                var dateTime = if (isNougatPlus()) {
-                    exif.getAttribute(ExifInterface.TAG_DATETIME_ORIGINAL)
+                var dateTime = exif.getAttribute(ExifInterface.TAG_DATETIME_ORIGINAL)
                         ?: exif.getAttribute(ExifInterface.TAG_DATETIME)
-                } else {
-                    exif.getAttribute(ExifInterface.TAG_DATETIME)
-                }
 
                 if (dateTime == null) {
                     val calendar = Calendar.getInstance(Locale.ENGLISH)

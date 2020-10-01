@@ -1,15 +1,13 @@
 package com.simplemobiletools.commons.extensions
 
-import android.annotation.TargetApi
 import android.content.Context
-import android.media.ExifInterface
-import android.os.Build
+import androidx.exifinterface.media.ExifInterface
 import java.text.SimpleDateFormat
 import java.util.*
 
 fun ExifInterface.copyTo(destination: ExifInterface, copyOrientation: Boolean = true) {
     val attributes = arrayListOf(
-            ExifInterface.TAG_APERTURE,
+            ExifInterface.TAG_F_NUMBER, // Replaces TAG_APERTURE
             ExifInterface.TAG_DATETIME,
             ExifInterface.TAG_DATETIME_DIGITIZED,
             ExifInterface.TAG_DATETIME_ORIGINAL,
@@ -27,7 +25,7 @@ fun ExifInterface.copyTo(destination: ExifInterface, copyOrientation: Boolean = 
             ExifInterface.TAG_GPS_TIMESTAMP,
             ExifInterface.TAG_IMAGE_LENGTH,
             ExifInterface.TAG_IMAGE_WIDTH,
-            ExifInterface.TAG_ISO_SPEED_RATINGS,
+            ExifInterface.TAG_PHOTOGRAPHIC_SENSITIVITY, // Replaces TAG_ISO_SPEED_RATINGS
             ExifInterface.TAG_MAKE,
             ExifInterface.TAG_MODEL,
             ExifInterface.TAG_WHITE_BALANCE)
@@ -49,7 +47,6 @@ fun ExifInterface.copyTo(destination: ExifInterface, copyOrientation: Boolean = 
     }
 }
 
-@TargetApi(Build.VERSION_CODES.N)
 fun ExifInterface.getExifProperties(): String {
     var exifString = ""
     getAttribute(ExifInterface.TAG_F_NUMBER).let {
@@ -78,7 +75,7 @@ fun ExifInterface.getExifProperties(): String {
         }
     }
 
-    getAttribute(ExifInterface.TAG_ISO_SPEED_RATINGS).let {
+    getAttribute(ExifInterface.TAG_PHOTOGRAPHIC_SENSITIVITY).let {
         if (it?.isNotEmpty() == true) {
             exifString += "ISO-$it"
         }
@@ -87,7 +84,6 @@ fun ExifInterface.getExifProperties(): String {
     return exifString.trim()
 }
 
-@TargetApi(Build.VERSION_CODES.N)
 fun ExifInterface.getExifDateTaken(context: Context): String {
     val dateTime = getAttribute(ExifInterface.TAG_DATETIME_ORIGINAL) ?: getAttribute(ExifInterface.TAG_DATETIME)
     dateTime.let {
