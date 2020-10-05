@@ -26,7 +26,7 @@ fun Int.adjustAlpha(factor: Float): Int {
     return Color.argb(alpha, red, green, blue)
 }
 
-fun Int.getFormattedDuration(): String {
+fun Int.getFormattedDuration(forceShowHours: Boolean = false): String {
     val sb = StringBuilder(8)
     val hours = this / 3600
     val minutes = this % 3600 / 60
@@ -34,6 +34,8 @@ fun Int.getFormattedDuration(): String {
 
     if (this >= 3600) {
         sb.append(String.format(Locale.getDefault(), "%02d", hours)).append(":")
+    } else if (forceShowHours) {
+        sb.append("0:")
     }
 
     sb.append(String.format(Locale.getDefault(), "%02d", minutes))
