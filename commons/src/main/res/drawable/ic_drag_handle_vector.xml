@@ -3,10 +3,13 @@
     android:height="24dp"
     android:viewportWidth="24"
     android:viewportHeight="24">
-    <group>
-        <clip-path android:pathData="M0,0h24v24H0V0z M 0,0" />
-        <path
-            android:fillColor="#FFFFFFFF"
-            android:pathData="M20,9H4v2h16V9zM4,15h16v-2H4v2z" />
-    </group>
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M3.7681,6.311L20.3843,6.311A0.9676,0.9676 0,0 1,21.3519 7.2786L21.3519,7.2786A0.9676,0.9676 0,0 1,20.3843 8.2462L3.7681,8.2462A0.9676,0.9676 0,0 1,2.8006 7.2786L2.8006,7.2786A0.9676,0.9676 0,0 1,3.7681 6.311z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M3.7588,15.7538L20.375,15.7538A0.9676,0.9676 0,0 1,21.3426 16.7214L21.3426,16.7214A0.9676,0.9676 0,0 1,20.375 17.689L3.7588,17.689A0.9676,0.9676 0,0 1,2.7913 16.7214L2.7913,16.7214A0.9676,0.9676 0,0 1,3.7588 15.7538z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M3.6157,11.0324L20.2319,11.0324A0.9676,0.9676 0,0 1,21.1994 12L21.1994,12A0.9676,0.9676 0,0 1,20.2319 12.9676L3.6157,12.9676A0.9676,0.9676 0,0 1,2.6481 12L2.6481,12A0.9676,0.9676 0,0 1,3.6157 11.0324z" />
 </vector>
