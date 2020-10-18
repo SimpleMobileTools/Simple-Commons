@@ -10,7 +10,7 @@
     <string name="edit_with">他のアプリで編集</string>
     <string name="no_app_found">有効なアプリが見つかりません</string>
     <string name="set_as">他で使う</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_to_clipboard">クリップボードにコピー</string>
     <string name="value_copied_to_clipboard">値をクリップボードにコピーしました</string>
     <string name="unknown">不明</string>
     <string name="always">常に</string>
@@ -33,7 +33,7 @@
     <string name="no_contacts_found">連絡先が見つかりません</string>
     <string name="request_the_required_permissions">Request the required permissions</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
-    <string name="insert_text_here">Insert text here</string>
+    <string name="insert_text_here">ここにテキストを入力</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">ブロックした番号を管理</string>
@@ -121,7 +121,7 @@
     <string name="create_new">新規作成</string>
     <string name="folder">フォルダ</string>
     <string name="file">ファイル</string>
-    <string name="create_new_folder">フォルダ新規作成</string>
+    <string name="create_new_folder">フォルダの新規作成</string>
     <string name="name_taken">同名のファイルまたはフォルダが既に存在しています</string>
     <string name="invalid_name">名前に無効な文字が含まれています</string>
     <string name="empty_name">名前を入力してください</string>
@@ -132,7 +132,7 @@
     <string name="file_already_exists_overwrite">ファイル \"%s\" は既に存在しています。上書きしますか？</string>
     <string name="folder_already_exists">フォルダ \"%s\" は既に存在しています</string>
     <string name="merge">統合</string>
-    <string name="keep_both">Keep both</string>
+    <string name="keep_both">両方を保持</string>
     <string name="overwrite">上書き</string>
     <string name="skip">スキップ</string>
     <string name="append">\'_1\' に追記する</string>
@@ -281,9 +281,9 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">削除を続行してもよろしいですか？</string>
     <string name="deletion_confirmation">%s を削除してもよろしいですか？</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">%s をゴミ箱に移動してもよろしいですか？</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="move_to_recycle_bin_confirmation">%s をごみ箱に移動してもよろしいですか？</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">このアイテムを削除してもよろしいですか？</string>
-    <string name="are_you_sure_recycle_bin">個のアイテムをゴミ箱に移動してもよろしいですか？</string>
+    <string name="are_you_sure_recycle_bin">個のアイテムをごみ箱に移動してもよろしいですか？</string>
     <string name="do_not_ask_again">このセッションでは再度たずねない</string>
     <string name="yes">はい</string>
     <string name="no">いいえ</string>
@@ -312,9 +312,9 @@
     <string name="go_to_settings">設定に移動</string>
     <string name="protection_setup_successfully">パスワードの設定が完了しました。パスワードを紛失した場合は、アプリを再インストールしてください</string>
     <string name="fingerprint_setup_successfully">指紋認証の設定が完了しました。何らかの問題によりアプリを再インストールした場合には、再度設定し直してください。</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="lock_folder">フォルダを保護</string>
+    <string name="unlock_folder">フォルダの保護を解除</string>
+    <string name="lock_folder_notice">この保護はこのアプリ内でのみ機能します。実際にシステム全体のフォルダ暗号化を置き換えるものではありません。</string>
 
     <!-- Times -->
     <string name="yesterday">昨日</string>
@@ -359,16 +359,16 @@
         <item quantity="other">%d時間</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="other">%d days</item>
+        <item quantity="other">%d日</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="other">%d weeks</item>
+        <item quantity="other">%d週間</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="other">%d months</item>
+        <item quantity="other">%dヶ月</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="other">%d years</item>
+        <item quantity="other">%d年</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
@@ -385,13 +385,13 @@
         <item quantity="other">%d日前</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="other">%d weeks before</item>
+        <item quantity="other">%d週間前</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="other">%d months before</item>
+        <item quantity="other">%dヶ月前</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="other">%d years before</item>
+        <item quantity="other">%d年前</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
@@ -402,19 +402,19 @@
         <item quantity="other">%d分</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="other">%d時</item>
+        <item quantity="other">%d時間</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="other">%d days</item>
+        <item quantity="other">%d日</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="other">%d weeks</item>
+        <item quantity="other">%d週間</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="other">%d months</item>
+        <item quantity="other">%dヶ月</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="other">%d years</item>
+        <item quantity="other">%d年</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -459,12 +459,12 @@
     <string name="change_date_and_time_format">日付と時刻のフォーマットを変更</string>
     <string name="sunday_first">週の始めを日曜にする</string>
     <string name="widgets">ウィジェット</string>
-    <string name="use_same_snooze">Always use same snooze time</string>
-    <string name="snooze_time">Snooze time</string>
+    <string name="use_same_snooze">常に同じスヌーズ間隔を使用する</string>
+    <string name="snooze_time">スヌーズ間隔</string>
     <string name="vibrate_on_button_press">ボタンを押した時に振動する</string>
     <string name="move_items_into_recycle_bin">削除の代わりにアイテムをごみ箱に移動する</string>
     <string name="recycle_bin_cleaning_interval">ごみ箱を自動で空にする間隔</string>
-    <string name="empty_recycle_bin">ゴミ箱を空にする</string>
+    <string name="empty_recycle_bin">ごみ箱を空にする</string>
     <string name="force_portrait_mode">ポートレートモードを強制する</string>
     <string name="export_settings">設定をエクスポート</string>
     <string name="import_settings">設定をインポート</string>
@@ -495,10 +495,10 @@
     <string name="restore_this_file">このファイルを復元</string>
     <string name="restore_selected_files">選択したファイルを復元</string>
     <string name="restore_all_files">すべてのファイルを復元</string>
-    <string name="recycle_bin_emptied">ゴミ箱を空にしました</string>
+    <string name="recycle_bin_emptied">ごみ箱を空にしました</string>
     <string name="files_restored_successfully">ファイルが正常に復元されました</string>
     <string name="empty_recycle_bin_confirmation">ごみ箱を空にしてもよろしいですか？この操作は元に戻すことができません。</string>
-    <string name="recycle_bin_empty">ゴミ箱は空です</string>
+    <string name="recycle_bin_empty">ごみ箱は空です</string>
     <string name="moving_recycle_bin_items_disabled">ごみ箱からの移動はできません。復元を使用してください</string>
     <string name="show_the_recycle_bin">ごみ箱を表示</string>
     <string name="hide_the_recycle_bin">ごみ箱を隠す</string>
@@ -589,9 +589,9 @@
     <string name="about">このアプリについて</string>
     <string name="website_label">ソースコードはこちら</string>
     <string name="email_label">ご意見やご提案をお送りください</string>
-    <string name="upgrade_to_pro">Upgrade to Pro</string>
+    <string name="upgrade_to_pro">Proバージョンにアップグレード</string>
     <string name="more_apps_underlined"><u>他のアプリ</u></string>
-    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
+    <string name="more_apps_from_us_underlined"><u>私たちの他のアプリ</u></string>
     <string name="third_party_licences_underlined"><u>サードパーティー ライセンス</u></string>
     <string name="invite_friends_underlined"><u>友達を招待</u></string>
     <string name="share_text">%2$s で %1$s を確認してください</string>
@@ -653,18 +653,18 @@
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
 
-    <string name="app_launcher_short">App Launcher</string>
+    <string name="app_launcher_short">アプリ ランチャー</string>
     <string name="calculator_short">電卓</string>
     <string name="calendar_short">カレンダー</string>
     <string name="camera_short">カメラ</string>
     <string name="clock_short">時計</string>
-    <string name="contacts_short">連絡先</string>
+    <string name="contacts_short">連絡帳</string>
     <string name="dialer_short">Dialer</string>
     <string name="draw_short">ドロー</string>
     <string name="file_manager_short">ファイルマネージャー</string>
     <string name="flashlight_short">フラッシュライト</string>
     <string name="gallery_short">ギャラリー</string>
-    <string name="music_player_short">ミュージックプレイヤー</string>
+    <string name="music_player_short">ミュージックプレーヤー</string>
     <string name="notes_short">メモ</string>
     <string name="sms_messenger_short">SMS Messenger</string>
     <string name="thank_you_short">Thank You</string>
@@ -677,8 +677,8 @@
     </string>
 
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently asked questions</string>
-    <string name="before_asking_question">Before you ask a question, please first read the</string>
+    <string name="frequently_asked_questions">よくある質問</string>
+    <string name="before_asking_question">質問する前にまずこれを読んでください</string>
     <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
     <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
         in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
