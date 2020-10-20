@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
 import com.simplemobiletools.commons.interfaces.MyActionModeCallback
 import com.simplemobiletools.commons.views.FastScroller
 import com.simplemobiletools.commons.views.MyRecyclerView
@@ -23,6 +24,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     protected val resources = activity.resources!!
     protected val layoutInflater = activity.layoutInflater
     protected var primaryColor = baseConfig.primaryColor
+    protected var adjustedPrimaryColor = activity.getAdjustedPrimaryColor()
     protected var textColor = baseConfig.textColor
     protected var backgroundColor = baseConfig.backgroundColor
     protected var actModeCallback: MyActionModeCallback
