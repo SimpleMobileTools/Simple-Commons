@@ -700,6 +700,10 @@
     <string name="faq_8_text_commons">由於你的程式版本不再更新，將永遠不會修復可能遇到的錯誤，也不會再添加新功能。你可以在Google Play上用一小筆錢購買專業版。
         這是一次性付款。也就是說，一旦你購買了將不必再次付費，即使之後有新裝置也不用。如果你不喜歡專業版，則可以在幾個小時內解除安裝，將自動拿回你的錢。
         之後如果何時想退款，只要你以 hello@simplemobiletools.com 聯絡我們然後就能獲得退款了。</string>
+    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
+    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
+        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
+        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Get the Pro version now!</string>
