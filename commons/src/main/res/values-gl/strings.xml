@@ -1,5 +1,5 @@
 <resources>
-    <string name="ok">OK</string>
+    <string name="ok">Aceptar</string>
     <string name="cancel">Cancelar</string>
     <string name="save_as">Gardar como</string>
     <string name="file_saved">Ficheiro gardado con éxito</string>
@@ -8,10 +8,10 @@
     <string name="an_error_occurred">Ocorreu un erro: %s</string>
     <string name="open_with">Abrir con</string>
     <string name="edit_with">Editar con</string>
-    <string name="no_app_found">Non se atopou unha aplicación válida</string>
+    <string name="no_app_found">Non se atopou un aplicativo válido</string>
     <string name="set_as">Establecer como</string>
-    <string name="copy_to_clipboard">Copiar ao portarretallos</string>
-    <string name="value_copied_to_clipboard">Valor copiado no portarretallos</string>
+    <string name="copy_to_clipboard">Copiar ao portapapeis</string>
+    <string name="value_copied_to_clipboard">Valor copiado no portapapeis</string>
     <string name="unknown">Descoñecido</string>
     <string name="always">Sempre</string>
     <string name="never">Nunca</string>
@@ -32,32 +32,32 @@
     <string name="number">Número</string>
     <string name="no_contacts_found">Non se atoparon contactos</string>
     <string name="request_the_required_permissions">Solicitar os permisos necesarios</string>
-    <string name="no_access_to_contacts">A aplicación non puido acceder aos teus contactos</string>
+    <string name="no_access_to_contacts">O aplicativo non puido acceder aos teus contactos</string>
     <string name="insert_text_here">Introduce o texto aquí</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrar números bloqueados</string>
-    <string name="not_blocking_anyone">Non estás bloqueando a ninguén.</string>
-    <string name="add_a_blocked_number">Engadir un número a bloquear</string>
+    <string name="not_blocking_anyone">Non hai ninguén bloqueado.</string>
+    <string name="add_a_blocked_number">Engadir un número para bloquear</string>
     <string name="block_number">Bloquear número</string>
     <string name="block_numbers">Bloquear números</string>
     <string name="blocked_numbers">Números bloqueados</string>
-    <string name="must_make_default_dialer">Para facer uso dos números bloqueados tes que poñer esta aplicación como o marcador telefónico por defecto.</string>
+    <string name="must_make_default_dialer">Para facer uso dos números bloqueados, tes que poñer este aplicativo como o marcador telefónico por defecto.</string>
     <string name="set_as_default">Poñer por defecto</string>
-    <string name="block_confirmation">Seguro que queres bloquear \"%s\"?</string>
+    <string name="block_confirmation">Seguro que queres bloquear a \"%s\"?</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
-    <string name="add_favorites">Engadir favoritos</string>
+    <string name="add_favorites">Engadir a favoritos</string>
     <string name="add_to_favorites">Engadir aos favoritos</string>
-    <string name="remove_from_favorites">Quitar dos favoritos</string>
+    <string name="remove_from_favorites">Eliminar dos favoritos</string>
 
     <!-- Search -->
     <string name="search">Buscar</string>
     <string name="type_2_characters">Escribe polo menos dous caracteres para iniciar a busca.</string>
 
     <!-- Filters -->
-    <string name="filter">Filtrar</string>
+    <string name="filter">Filtro</string>
     <string name="no_items_found">Non se atopou ningún elemento.</string>
     <string name="change_filter">Cambiar filtro</string>
 
@@ -70,11 +70,11 @@
     <!-- Renaming -->
     <string name="rename_file">Renomear ficheiro</string>
     <string name="rename_folder">Renomear cartafol</string>
-    <string name="rename_file_error">No se puido renomea-lo ficheiro</string>
-    <string name="rename_folder_error">No se puido renomea-lo cartafol</string>
+    <string name="rename_file_error">No se puido renomear o ficheiro</string>
+    <string name="rename_folder_error">No se puido renomear o cartafol</string>
     <string name="rename_folder_empty">O nome do cartafol non pode estar baleiro</string>
     <string name="rename_folder_exists">Xa existe un cartafol con ese nome</string>
-    <string name="rename_folder_root">Non se pode cambia-lo nome do cartafol raíz do almacenamento</string>
+    <string name="rename_folder_root">Non se pode cambiar o nome do cartafol raíz do almacenamento</string>
     <string name="rename_folder_ok">Cartafol renomeado correctamente</string>
     <string name="renaming_folder">Renomeando cartafol</string>
     <string name="filename_cannot_be_empty">O nome do ficheiro non pode estar baleiro</string>
@@ -87,7 +87,7 @@
     <string name="simple_renaming">Renomeado simple</string>
     <string name="pattern_renaming">Patrón</string>
     <string name="string_to_add">Cadea a engadir</string>
-    <string name="rename_date_time_pattern">%Y - ano\n%M - mes\n%D - día\n%h - hora\n%m - minuto\n%s - segundo\n%i - número incremental dende 1</string>
+    <string name="rename_date_time_pattern">%Y - ano\n%M - mes\n%D - día\n%h - hora\n%m - minuto\n%s - segundo\n%i - número incremental desde 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
@@ -98,7 +98,7 @@
     <string name="source">Orixe</string>
     <string name="destination">Destino</string>
     <string name="select_destination">Seleccionar destino</string>
-    <string name="click_select_destination">Pulsa aquí para escoller o destino</string>
+    <string name="click_select_destination">Prema aquí para escoller o destino</string>
     <string name="invalid_destination">Non se puido escribir no destino escollido</string>
     <string name="please_select_destination">Escolle un destino</string>
     <string name="source_and_destination_same">A orixe e o destino non poden coincidir</string>
@@ -115,7 +115,7 @@
     <string name="could_not_create_folder">Non se puido crear o cartafol %s</string>
     <string name="could_not_create_file">Non se puido crear o ficheiro %s</string>
     <string name="no_new_items">Non se atoparon elementos novos</string>
-    <string name="no_space">O destino non ten suficiente espacio dispoñible.\nNecesario %1$s, dispoñible %2$s</string>
+    <string name="no_space">O destino non ten suficiente espazo dispoñible.\nNecesario %1$s, dispoñible %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Crear novo</string>
@@ -158,8 +158,8 @@
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Borrando %d elemento</item>
-        <item quantity="other">Borrando %d elementos</item>
+        <item quantity="one">Eliminando %d elemento</item>
+        <item quantity="other">Eliminando %d elementos</item>
     </plurals>
 
     <!-- Are you sure you want to delete 5 contacts? -->
@@ -175,8 +175,8 @@
     <string name="root">Raíz /</string>
     <string name="wrong_root_selected">Seleccionouse o cartafol incorrecto; por favor, escolle o cartafol raíz da túa tarxeta SD</string>
     <string name="sd_card_usb_same">Os directorios da tarxeta SD e do dispositivo USB non poden coincidir</string>
-    <string name="app_on_sd_card">Parece que tes a aplicación instalada na tarxeta SD, o que ocasiona que os widgets da aplicación non estean dispoñibles. Nin sequera os verás na lista de widgets dispoñibles.
-        Isto é unha limitación do sistema, así que se queres usa-los widgets, tes que mover a aplicación ao almacenamento interno.</string>
+    <string name="app_on_sd_card">Parece que tes o aplicativo instalado na tarxeta SD, o que ocasiona que os widgets do aplicativo non estean dispoñibles. Non os verás na lista de widgets dispoñibles.
+        Isto é unha limitación do sistema, así que se queres usar os widgets, tes que mover o aplicativo ao almacenamento interno.</string>
 
     <!-- File properties -->
     <string name="properties">Propiedades</string>
@@ -203,7 +203,7 @@
     <string name="text_color">Cor do texto</string>
     <string name="primary_color">Cor principal</string>
     <string name="foreground_color">Cor de primeiro plano</string>
-    <string name="app_icon_color">Cor do icono da aplicación</string>
+    <string name="app_icon_color">Cor da icona do aplicativo</string>
     <string name="bottom_navigation_bar_color">Cor da barra de navegación inferior</string>
     <string name="restore_defaults">Valores por defecto</string>
     <string name="use_default">Usar valor por defecto</string>
@@ -214,16 +214,16 @@
     <string name="save">Gardar</string>
     <string name="discard">Desfacer</string>
     <string name="undo_changes">Desfacer cambios</string>
-    <string name="undo_changes_confirmation">Seguro que queres desface-los cambios?</string>
+    <string name="undo_changes_confirmation">Seguro que queres desfacer os cambios?</string>
     <string name="save_before_closing">Tes cambios sen aplicar. Gardar antes de saír?</string>
-    <string name="apply_to_all_apps">Aplicar cores a tódalas aplicacións Simple Apps</string>
-    <string name="app_icon_color_warning">AVISO: Algúns lanzadores non manexan ben a personalización do icono das aplicacións. Se o icono desaparece, intenta inicia-la aplicación mediante o Google Play ou algún widget, se está dispoñible.
-        Unha vez que a inicies, volve a axustar o icono ao laranxa por defecto #F57C00. No peor dos casos, pode que teñas que volver a instalar a aplicación.</string>
-    <string name="share_colors_success">Cores actualizadas correctamente. Engadiuse un novo tema chamado \'Compartido\'. Utilízao para actualizar as cores de tódalas aplicacións no futuro.</string>
-    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
+    <string name="apply_to_all_apps">Aplicar cores a todos os aplicativos. Simple Apps</string>
+    <string name="app_icon_color_warning">AVISO: algúns lanzadores non manexan ben a personalización da icona dos aplicativos. Se a icona desaparece, intenta iniciar o aplicativo mediante o Google Play ou algún widget, se está dispoñible.
+        Unha vez que a inicies, volve a axustar a icona ao laranxa por defecto #F57C00. No peor dos casos, pode que teñas que volver a instalar o aplicativo.</string>
+    <string name="share_colors_success">Cores actualizadas correctamente. Engadiuse un novo tema chamado \'Compartido\'. Utilízao para actualizar as cores de todos os aplicativos no futuro.</string>
+    <string name="shared_theme_note">Ten en conta que, aínda que use a versión pro do aplicativo, segue necesitando Simple Thank You para controlar a sincronización da cor.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Por favor, compra <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> para desbloquear esta función e axudar co desenvolvemento. Gracias!
+            Por favor, compra <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> para desbloquear esta función e axudar co desenvolvemento. Grazas!
         ]]>
     </string>
 
@@ -238,7 +238,7 @@
 
     <!-- What's new -->
     <string name="whats_new">Novidades</string>
-    <string name="whats_new_disclaimer">* Só se enumeran aquí as actualizacións máis grandes, sempre hai algunas melloras pequenas tamén</string>
+    <string name="whats_new_disclaimer">* Só se enumeran aquí as actualizacións máis grandes, sempre hai tamén algunhas melloras pequenas</string>
 
     <!-- Actionbar items -->
     <string name="delete">Eliminar</string>
@@ -252,14 +252,14 @@
     <string name="hide_folder">Ocultar cartafol</string>
     <string name="unhide_folder">Amosar cartafol</string>
     <string name="temporarily_show_hidden">Amosar ocultos temporalmente</string>
-    <string name="stop_showing_hidden">Deixar de amosa-los ocultos</string>
+    <string name="stop_showing_hidden">Deixar de amosar os ocultos</string>
     <string name="maximum_share_reached">Non podes compartir todo este contido á vez</string>
     <string name="empty_and_disable_recycle_bin">Baleirar e desactivar a Papeleira</string>
     <string name="undo">Desfacer</string>
     <string name="redo">Refacer</string>
     <string name="print">Imprimir</string>
     <string name="create_shortcut">Crear atallo</string>
-    <string name="add_number_to_contact">Engadir número a contacto</string>
+    <string name="add_number_to_contact">Engadir número a Contactos</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -288,13 +288,13 @@
     <string name="are_you_sure_delete">Seguro que queres eliminar este elemento?</string>
     <string name="are_you_sure_recycle_bin">Seguro que queres mover este elemento á Papeleira?</string>
     <string name="do_not_ask_again">Non preguntar de novo nesta sesión</string>
-    <string name="yes">Sí</string>
+    <string name="yes">Si</string>
     <string name="no">Non</string>
     <string name="maybe">Pode ser</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">AVISO: Vas eliminar %d cartafol</item>
-        <item quantity="other">AVISO: Vas eliminar %d cartafois</item>
+        <item quantity="one">AVISO: vas eliminar %d cartafol</item>
+        <item quantity="other">AVISO: vas eliminar %d cartafois</item>
     </plurals>
 
     <!-- Password protection -->
@@ -305,30 +305,30 @@
     <string name="repeat_pin">Repetir PIN</string>
     <string name="pattern">Patrón</string>
     <string name="insert_pattern">Insire patrón</string>
-    <string name="wrong_pattern">Patrón erroneo</string>
+    <string name="wrong_pattern">Patrón erróneo</string>
     <string name="repeat_pattern">Repetir patrón</string>
-    <string name="fingerprint">Pegada dactilar</string>
-    <string name="add_fingerprint">Engadir pegada dactilar</string>
-    <string name="place_finger">Pon o dedo no lector de pegadas dactilares</string>
+    <string name="fingerprint">Pegada dixital</string>
+    <string name="add_fingerprint">Engadir pegada dixital</string>
+    <string name="place_finger">Pon o dedo no lector de pegadas dixitais</string>
     <string name="authentication_failed">Autenticación fallada</string>
     <string name="authentication_blocked">Autenticación bloqueada; por favor, inténtao de novo dentro dun pouco</string>
-    <string name="no_fingerprints_registered">Non tes pegadas dactilares rexistradas; por favor, agrega algunhas na Configuración do teu dispositivo</string>
+    <string name="no_fingerprints_registered">Non tes pegadas dixitais rexistradas; por favor, engada algunhas na Configuración do teu dispositivo</string>
     <string name="go_to_settings">Ir á Configuración</string>
-    <string name="protection_setup_successfully">Engadiuse o contrasinal correctamente. Por favor, volve a instala-la aplicación en caso de que te esquezas dela.</string>
-    <string name="fingerprint_setup_successfully">Protección configurada correctamente. Por favor, volve a instala-la aplicación en caso de que teñas problemas ao restablecela.</string>
+    <string name="protection_setup_successfully">Engadiuse o contrasinal correctamente. Por favor, volve a instalar o aplicativo en caso de que te esquezas dela.</string>
+    <string name="fingerprint_setup_successfully">Protección configurada correctamente. Por favor, volve a instalar o aplicativo en caso de que teñas problemas ao restablecela.</string>
     <string name="lock_folder">Bloquear cartafol</string>
     <string name="unlock_folder">Desbloquear cartafol</string>
-    <string name="lock_folder_notice">Esta protección só funciona nesta app, non está pensada para reemprazar un cifrado de cartafois real a nivel de sistema.</string>
+    <string name="lock_folder_notice">Esta protección só funciona neste app, non está pensado para reemprazar un cifrado de cartafois real a nivel de sistema.</string>
 
     <!-- Times -->
     <string name="yesterday">Onte</string>
     <string name="today">Hoxe</string>
     <string name="tomorrow">Mañá</string>
-    <string name="hide_year">Hide year</string>
-    <string name="seconds_raw">segundos</string>
-    <string name="minutes_raw">minutos</string>
-    <string name="hours_raw">horas</string>
-    <string name="days_raw">días</string>
+    <string name="hide_year">Agochar ano_</string>
+    <string name="seconds_raw">Segundos</string>
+    <string name="minutes_raw">Minutos</string>
+    <string name="hours_raw">Horas</string>
+    <string name="days_raw">Días</string>
 
     <plurals name="seconds">
         <item quantity="one">%d segundo</item>
@@ -454,11 +454,11 @@
     <string name="reminder_triggers_in">Tempo que falta para o recordatorio:\n%s</string>
     <string name="alarm_warning">Por favor, asegúrate de que a alarma funciona correctamente antes de confiares nela. Pode non funcionar ben debido a restricións do sistema relacionadas co aforro de batería.</string>
     <string name="reminder_warning">Por favor, asegúrate de que os recordatorios funcionan correctamente antes de confiares neles. Poden non funcionar ben debido a restricións do sistema relacionadas co aforro de batería.</string>
-    <string name="notifications_disabled">As notificacións desta aplicación están desactivadas. Por favor, vai á configuración do dispositivo e actívaas.</string>
+    <string name="notifications_disabled">As notificacións deste aplicativo están desactivadas. Por favor, vai á configuración do dispositivo e actívaas.</string>
 
     <!-- Alarms -->
     <string name="alarm">Alarma</string>
-    <string name="snooze">Atrasar</string>
+    <string name="snooze">Pospoñer</string>
     <string name="dismiss">Descartar</string>
     <string name="no_reminder">Sen recordatorio</string>
     <string name="at_start">Ao inicio</string>
@@ -472,19 +472,19 @@
     <string name="purchase_simple_thank_you">Comprar Simple Thank You</string>
     <string name="customize_colors">Cambiar cores</string>
     <string name="customize_widget_colors">Personalizar cores do widget</string>
-    <string name="use_english_language">Usa-lo idioma inglés</string>
+    <string name="use_english_language">Usar o idioma inglés</string>
     <string name="show_hidden_items">Amosar elementos ocultos</string>
     <string name="font_size">Tamaño da fonte</string>
     <string name="small">Pequena</string>
     <string name="medium">Mediana</string>
     <string name="large">Grande</string>
     <string name="extra_large">Enorme</string>
-    <string name="password_protect_hidden_items">Contrasinal para protexe-los elementos ocultos</string>
-    <string name="password_protect_whole_app">Contrasinal para protexer toda a aplicación</string>
+    <string name="password_protect_hidden_items">Contrasinal para protexer os elementos ocultos</string>
+    <string name="password_protect_whole_app">Contrasinal para protexer todo o aplicativo</string>
     <string name="password_protect_file_deletion">Contrasinal para protexer borrado e movemento de ficheiros</string>
-    <string name="keep_last_modified">Mante-la data de última modificación antiga ao operar con ficheiros</string>
-    <string name="show_info_bubble">Amosar unha burbulla de información ao arrastra-la barra de desprazamento</string>
-    <string name="prevent_phone_from_sleeping">Impedir que se apague a pantalla mentres a app estea en primeiro plano</string>
+    <string name="keep_last_modified">Manter a data de última modificación antiga ao operar con ficheiros</string>
+    <string name="show_info_bubble">Amosar unha burbulla de información ao arrastrar a barra de desprazamento</string>
+    <string name="prevent_phone_from_sleeping">Impedir que se apague a pantalla mentres o app estea en primeiro plano</string>
     <string name="skip_delete_confirmation">Omitir sempre o diálogo de confirmación de eliminación</string>
     <string name="enable_pull_to_refresh">Habilitar tirar desde a parte superior para actualizar</string>
     <string name="use_24_hour_time_format">Usar formato de 24 horas</string>
@@ -493,16 +493,16 @@
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Usar sempre o mesmo tempo de aprazamento</string>
     <string name="snooze_time">Tempo de aprazamento</string>
-    <string name="vibrate_on_button_press">Vibrar en cada pulsación de tecla</string>
-    <string name="move_items_into_recycle_bin">Mover elementos á Papeleira en vez de eliminar</string>
+    <string name="vibrate_on_button_press">Vibrar en cada vez que se preme unha tecla</string>
+    <string name="move_items_into_recycle_bin">Mover elementos á Papeleira no canto de eliminar</string>
     <string name="recycle_bin_cleaning_interval">Intervalo de limpeza da Papeleira</string>
     <string name="empty_recycle_bin">Baleirar a Papeleira</string>
-    <string name="force_portrait_mode">Forzar modo en vertical</string>
+    <string name="force_portrait_mode">Forzar modo vertical</string>
     <string name="export_settings">Exportar axustes</string>
     <string name="import_settings">Importar axustes</string>
     <string name="settings_exported_successfully">Axustes exportados correctamente</string>
     <string name="settings_imported_successfully">Axustes importados correctamente</string>
-    <string name="start_name_with_surname">Empeza-lo nome cos apelidos</string>
+    <string name="start_name_with_surname">Empezar o nome cos apelidos</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilidade</string>
@@ -516,7 +516,7 @@
     <string name="migrating">Migración</string>
 
     <!-- Default tabs to open -->
-    <string name="default_tab_to_open">Pestana a abrir ao inicio</string>
+    <string name="default_tab_to_open">Lapela predeterminada ao inicio</string>
     <string name="contacts_tab">Contactos</string>
     <string name="favorites_tab">Favoritos</string>
     <string name="call_history_tab">Historial de chamadas</string>
@@ -526,14 +526,14 @@
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restaurar este ficheiro</string>
     <string name="restore_selected_files">Restaurar ficheiros seleccionados</string>
-    <string name="restore_all_files">Restaurar tódolos ficheiros</string>
+    <string name="restore_all_files">Restaurar todos os ficheiros</string>
     <string name="recycle_bin_emptied">A Papeleira baleirouse correctamente</string>
     <string name="files_restored_successfully">Os ficheiros restauráronse correctamente</string>
-    <string name="empty_recycle_bin_confirmation">Seguro que queres baleira-la Papeleira? Os ficheiros perderanse para sempre.</string>
+    <string name="empty_recycle_bin_confirmation">Seguro que queres baleirar a Papeleira? Os ficheiros perderanse para sempre.</string>
     <string name="recycle_bin_empty">A Papeleira está baleira</string>
     <string name="moving_recycle_bin_items_disabled">Mover ficheiros da Papeleira está inhabilitado, utiliza Restaurar</string>
-    <string name="show_the_recycle_bin">Amosa-la Papeleira</string>
-    <string name="hide_the_recycle_bin">Oculta-la Papeleira</string>
+    <string name="show_the_recycle_bin">Amosar a Papeleira</string>
+    <string name="hide_the_recycle_bin">Ocultar a Papeleira</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Movendo %d elemento á Papeleira</item>
@@ -570,7 +570,7 @@
     <string name="september">Setembro</string>
     <string name="october">Outubro</string>
     <string name="november">Novembro</string>
-    <string name="december">Nadal</string>
+    <string name="december">Decembro</string>
 
     <!-- in January -->
     <string name="in_january">en xaneiro</string>
@@ -584,7 +584,7 @@
     <string name="in_september">en setembro</string>
     <string name="in_october">en outubro</string>
     <string name="in_november">en novembro</string>
-    <string name="in_december">en Nadal</string>
+    <string name="in_december">en decembro</string>
 
     <string name="monday">Luns</string>
     <string name="tuesday">Martes</string>
@@ -611,21 +611,21 @@
     <string name="sunday_short">Dom</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">A versión da app que tes non se vai volver actualizar. Actualiza á versión Pro para recibir novas correccións e outras melloras.</string>
-    <string name="upgrade_to_pro_long_click">A versión da app que tes non se vai volver actualizar. Actualiza á versión Pro para recibir novas correccións e outras melloras pulsando aquí.</string>
+    <string name="upgrade_to_pro_long">A versión do app que tes non se vai volver actualizar. Actualiza á versión Pro para recibir novas correccións e outras melloras.</string>
+    <string name="upgrade_to_pro_long_click">A versión do app que tes non se vai volver actualizar. Actualiza á versión Pro para recibir novas correccións e outras melloras premendo aquí.</string>
     <string name="it_is_free">É gratuito ata: %s. Se o descargas antes desa data, poderás usalo gratis para sempre.</string>
     <string name="more_info">Máis información</string>
     <string name="upgrade">Actualizar</string>
-    <string name="upgrade_calendar">Tes que migra-los eventos almacenados localmente exportándoos a un ficheiro .ics, e despois importalo. Podes atopar estes dous botóns, exportar e importar, no menú da pantalla principal.</string>
+    <string name="upgrade_calendar">Tes que migrar os eventos almacenados localmente exportándoos a un ficheiro .ics, e despois importalo. Podes atopar estes dous botóns, exportar e importar, no menú da pantalla principal.</string>
 
     <!-- About -->
     <string name="about">Acerca de</string>
-    <string name="website_label">Máis aplicacións sinxelas e código fonte en</string>
+    <string name="website_label">Máis aplicativos sinxelos e código fonte en</string>
     <string name="email_label">Envía os teus comentarios ou suxerencias a</string>
     <string name="upgrade_to_pro">Actualiza a Pro</string>
-    <string name="more_apps_underlined"><u>Máis aplicacións</u></string>
-    <string name="more_apps_from_us_underlined"><u>Máis aplicacións nosas</u></string>
-    <string name="third_party_licences_underlined"><u>Licencias de terceiros</u></string>
+    <string name="more_apps_underlined"><u>Máis aplicativos</u></string>
+    <string name="more_apps_from_us_underlined"><u>Máis aplicativos nosos</u></string>
+    <string name="third_party_licences_underlined"><u>Licenzas de terceiros</u></string>
     <string name="invite_friends_underlined"><u>Convidar a amigos</u></string>
     <string name="share_text">Ola, bótalle un ollo a %1$s en %2$s</string>
     <string name="invite_via">Convidar con</string>
@@ -636,36 +636,36 @@
     <string name="follow_us">Síguenos</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Información adicional</string>
-    <string name="app_version">Versión da app: %s</string>
+    <string name="app_version">Versión do app: %s</string>
     <string name="device_os">SO do dispositivo: %s</string>
     <string name="donate_please">
         <![CDATA[
             Ola,<br><br>
-            Espero que esteas desfrutando da aplicación. Non contén anuncios, polo que che agradecemos que respaldes o seu desenvolvemento comprando a aplicación <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, e tamén evitará que este diálogo volva a aparecer.<br><br>
-            Gracias!
+            Espero que esteas disfrutando do aplicativo. Non contén anuncios, polo que che agradecemos que respaldes o seu desenvolvemento comprando o aplicativo <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, e tamén evitará que este diálogo volva a aparecer.<br><br>
+            Grazas!
         ]]>
     </string>
     <string name="purchase">Comprar</string>
     <string name="update_thank_you">Actualiza Simple Thank You á última versión</string>
-    <string name="before_asking_question_read_faq">Antes de que fagas unha pregunta, primeiro comproba os axustes da app e le as Preguntas Máis Frecuentes. Pode que a solución estea aí.</string>
-    <string name="before_rate_read_faq">Antes de que nos puntúes, primeiro comproba os axustes da app e le as Preguntas Máis Frecuentes. Se tes algún problema, pode que a solución estea aí.</string>
-    <string name="make_sure_latest">Asegúrate tamén de que esteas usando a última versión da app.</string>
+    <string name="before_asking_question_read_faq">Antes de que fagas unha pregunta, primeiro comproba os axustes do app e le as Preguntas Máis Frecuentes. Pode que a solución estea aí.</string>
+    <string name="before_rate_read_faq">Antes de que nos puntúes, primeiro comproba os axustes do app e le as Preguntas Máis Frecuentes. Se tes algún problema, pode que a solución estea aí.</string>
+    <string name="make_sure_latest">Asegúrate tamén de que esteas usando a última versión do app.</string>
     <string name="read_it">Ler</string>
-    <string name="read_faq">Ler FAQ</string>
-    <string name="rate_us_prompt">Ola,\n\nparece que xa levas un tempo usando esta app, e nós apreciámoscho.\n\nSe non che importa, por favor, valóranos no Google Play. Iso axudaríanos moito.\n\nDecidas o que decidas, non volverás ver esta mensaxe de novo.\n\nGracias!</string>
-    <string name="rate_our_app">Valora a nosa app, por favor :)</string>
-    <string name="thank_you">Gracias</string>
+    <string name="read_faq">Ler Preguntas Máis Frecuentes</string>
+    <string name="rate_us_prompt">Ola,\n\nparece que xa levas un tempo usando este app, e nós apreciámoscho.\n\nSe non che importa, por favor, valóranos no Google Play. Iso axudaríanos moito.\n\nDecidas o que decidas, non volverás ver esta mensaxe de novo.\n\nGrazas!</string>
+    <string name="rate_our_app">Valora o noso app, por favor :)</string>
+    <string name="thank_you">Grazas</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
             Ola,<br><br>
-            simplemente che informamos de que se lanzaron recentemente novas aplicacións:<br><br>
+            simplemente informámosche de que se lanzaron recentemente novos aplicativos:<br><br>
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
             <a href="%5$s">%6$s</a><br><br>
-            Podes descargalas pulsando no seu título ou icona.<br><br>
-            Gracias
+            Podes descargalas premendo no seu título ou icona.<br><br>
+            Grazas
         ]]>
     </string>
 
@@ -705,78 +705,80 @@
 
     <string name="sideloaded_app">
         <![CDATA[
-            Parece que a túa versión da app está corrupta. Descarga a versión orixinal <a href="%s">aquí</a>.
+            Parece que a túa versión do app está corrupta. Descarga a versión orixinal <a href="%s">aquí</a>.
         ]]>
     </string>
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Preguntas frecuentes</string>
-    <string name="before_asking_question">Before you ask a question, please first read the</string>
-    <string name="faq_1_title_commons">¿Cómo es que no veo este widget de aplicaciones en la lista de widgets?</string>
-    <string name="faq_1_text_commons">Lo más probable es que haya movido la aplicación en una tarjeta SD. Hay una limitación del sistema Android que oculta los widgets de la aplicación dada
-        en ese caso. La única solución es volver a colocar la aplicación en el almacenamiento interno a través de la configuración de su dispositivo.</string>
-    <string name="faq_2_title_commons">Quiero apoyarte, pero no puedo donar dinero. ¿Hay algo mas que pueda hacer?</string>
-    <string name="faq_2_text_commons">Sí, por supuesto. Puede correr la voz sobre las aplicaciones o dar buenos comentarios y valoraciones. También puede ayudar traduciendo las aplicaciones en un nuevo idioma o simplemente actualizar algunas traducciones existentes.
-        Puede encontrar la guía en https://github.com/SimpleMobileTools/General-Discussion, o simplemente envíeme un mensaje a hello@simplemobiletools.com si necesita ayuda.</string>
-    <string name="faq_3_title_commons">Borré algunos archivos por error, ¿cómo puedo recuperarlos?</string>
-    <string name="faq_3_text_commons">Tristemente, no puedes. Los archivos se eliminan instantáneamente después del diálogo de confirmación, no hay papelera disponible.</string>
-    <string name="faq_4_title_commons">No me gustan los colores del widget, ¿puedo cambiarlos?</string>
-    <string name="faq_4_text_commons">Sí, al arrastrar un widget en la pantalla de inicio aparece una pantalla de configuración de widgets. Verá cuadrados de colores en la esquina inferior izquierda, solo presione para elegir un nuevo color. Puede usar el control deslizante para ajustar el alfa también.</string>
-    <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
+    <string name="before_asking_question">Antes de faceres unha pregunta, por favor primeiro lea o</string>
+    <string name="faq_1_title_commons">Como é que no vexo este widget de aplicativos na lista de widgets?</string>
+    <string name="faq_1_text_commons">O máis probable é que se movese o aplicativo nunha tarxeta SD. Hai unha limitación do sistema Android que oculta os widgets do aplicativo.
+        nese caso. A única solución é volver a colocar o aplicativo no almacenamiento interno a través da configuración do teu dispositivo.</string>
+    <string name="faq_2_title_commons">Quero apoiarte, pero non podo donar cartos. Hai algo máis que poida facer?</string>
+    <string name="faq_2_text_commons">Si, por suposto. Pode correr a voz sobre os aplicativos ou dar bos comentarios e valoracións. Tamén pode axudar traducindo os aplicativos nun novo idioma ou simplemente actualizar algunhas traducións existentes.
+        Puede encontrar la guía en https://github.com/SimpleMobileTools/General-Discussion, ou simplemente envíame unha mensaxe a hello@simplemobiletools.com se necesitas axuda.</string>
+    <string name="faq_3_title_commons">Borréei algúns arquivos por erro, como podo recuperalos?</string>
+    <string name="faq_3_text_commons">Tristemente, non podes. Os arquivos elimínanse instantaneamente despois do diálogo de confirmación, non hai papeleira dispoñible.</string>
+    <string name="faq_4_title_commons">Non me gustan as cores do widget, podo cambialos?</string>
+    <string name="faq_4_text_commons">Si, ao arrastrar un widget na pantalla de inicio aparece unha pantalla de configuración de widgets. Verá cadrados de cores na esquina inferior esquerda, só presione para elixir unha nova cor. Pode usar o control deslizante para axustar as letras tamén.</string>
+    <string name="faq_5_title_commons">Podo dalgún modo restaurar os ficheiros eliminados?</string>
+    <string name="faq_5_text_commons">Se están realmente eliminados, non. Pero hai unha Papeleira activada por defecto, á que van os ficheiros que se moveron á Papeleira no canto de eliminalos. </string>
+    <string name="faq_6_title_commons">Desapareceu a icona do iniciador de aplicativos. Que podo facer? </string>
+    <string name="faq_6_text_commons">Isto é causado polo teu iniciador que non dá soporte adecuadamente á icona personalizada. Se está dispoñible, intenta iniciar o aplicativo vía Google Play ou por algún widget.Unha vez iniciado, establece de novo a icona laranxa predeterminada #F57C00. No peor dos casos, pode ter que reinstalar o aplicativo.</string>
+    <string name="faq_7_title_commons">Os cartos colléronse da miña conta bancaria pero eu non podo descargar o aplicativo. Que podo facer?</string>
+    <string name="faq_7_text_commons">O pagamento está ligado a Google e pode ser que o seu sistema teña erros de vez en cando. Limpe o caché do aplicativo de Google Play e reinicie o seu dispositivo e despois vola a descargalo.</string>
+    <string name="faq_8_title_commons">Por que debo actualizar á versión Pro?</string>
+    <string name="faq_8_text_commons">Como non se vai actualizar máis o teu aplicativo, os bugs que teñas non serán corrixidos. Tampouco se engadirán novas funcións. Podes comprar a versión Pro en Google Play por unha cantidade pequena de cartos. É un pagamento que se fai só unha vez, é dicir, non volves pagar por isto.
+        Nin tan sequera ao cambiar de móbil. Se non che gusta a versión Pro, podes simplemente desinstalala e devolveráseche os cartos  automaticamente.Se queres que che devolvamos os cartos máis tarde, envíanos un correo electrónico a hello@simplemobiletools.com e darémoscho.</string>
+    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
+    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
+        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
+        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
-    <string name="why_upgrade">Get the Pro version now!</string>
-    <string name="why_upgrade_basic_version">Basic</string>
+    <string name="why_upgrade">Descargue a versión Pro agora!</string>
+    <string name="why_upgrade_basic_version">Básica</string>
     <string name="why_upgrade_pro_version">Pro</string>
-    <string name="why_upgrade_no_ads">No ads</string>
-    <string name="why_upgrade_no_internet_access">No internet access</string>
-    <string name="why_upgrade_footer">+ 100% Money Back Guarantee</string>
+    <string name="why_upgrade_no_ads">Non hai anuncios</string>
+    <string name="why_upgrade_no_internet_access">No acceso a Internet</string>
+    <string name="why_upgrade_footer">Garantido ao 100% os teus cartos de volta</string>
 
     <!-- Gallery Pro -->
-    <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
-    <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
-    <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
-    <string name="why_upgrade_folder_locking">Individual folder locking</string>
-    <string name="why_upgrade_printing_support">Printing support</string>
+    <string name="why_upgrade_advanced_photo_editor"> Editor de fotos avanzado</string>
+    <string name="why_upgrade_heic_support">Soporte a ficheiros HEIC/HEIF</string>
+    <string name="why_upgrade_batch_renaming">Renomear lote de ficheiros avanzado</string>
+    <string name="why_upgrade_folder_locking">Pechando o cartafol individual</string>
+    <string name="why_upgrade_printing_support">Soporte impresora</string>
 
     <!-- Calendar Pro -->
-    <string name="why_upgrade_time_zone_support">Time zone support</string>
-    <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
-    <string name="why_upgrade_easy_event_importing">Easy event importing</string>
-    <string name="why_upgrade_new_widgets">New widgets</string>
+    <string name="why_upgrade_time_zone_support">Soporte ao fuso horario</string>
+    <string name="why_upgrade_attendees_emails">Recordatorios e participantes</string>
+    <string name="why_upgrade_easy_event_importing">Importando eventos</string>
+    <string name="why_upgrade_new_widgets">Novo widgets</string>
 
     <!-- Contacts Pro -->
-    <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
-    <string name="why_upgrade_font_size_customization">Font size customization</string>
-    <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
+    <string name="why_upgrade_duplicate_contact_merging">Mellorando a combinación de contactos duplicados</string>
+    <string name="why_upgrade_font_size_customization">Personalización do tamaño da letra</string>
+    <string name="why_upgrade_private_contact_sharing">Contacto privado opcional nos aplicativos</string>
 
     <!-- Notes Pro -->
-    <string name="why_upgrade_checklists">Checklists</string>
-    <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
+    <string name="why_upgrade_checklists">Listas de verificación</string>
+    <string name="why_upgrade_different_note_per_widget">Diferentes notas e cores por widget</string>
 
     <!-- File Manager Pro -->
-    <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
-    <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
-    <string name="why_upgrade_file_compression">File compression support</string>
+    <string name="why_upgrade_date_and_time_format">Personalización do formato da data e hora</string>
+    <string name="why_upgrade_shortcuts">Atallos na pantalla principal</string>
+    <string name="why_upgrade_file_compression">Soporte da compresión do ficheiro</string>
 
     <!-- Draw Pro -->
-    <string name="why_upgrade_background_color_customization">Background color customization</string>
-    <string name="why_upgrade_file_importing">File importing support</string>
+    <string name="why_upgrade_background_color_customization">Personalización da cor de fondo</string>
+    <string name="why_upgrade_file_importing">Importando o ficheiro de soporte</string>
 
     <!-- License -->
-    <string name="notice">Esta aplicación usa las siguientes bibliotecas de terceros que hacen mi vida más fácil. Gracias.</string>
-    <string name="third_party_licences">Licencias de terceros</string>
-    <string name="kotlin_title">Kotlin (Programming language)</string>
+    <string name="notice">Este aplicativo usa as seguintes bibliotecas de terceiros que fan a miña vida máis fácil. Grazas.</string>
+    <string name="third_party_licences">Licenzas de terceiros</string>
+    <string name="kotlin_title">Kotlin (programming language)</string>
     <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
     <string name="glide_title">Glide (image loading and caching)</string>
     <string name="picasso_title">Picasso (image loading and caching)</string>
@@ -807,7 +809,7 @@
     <string name="apng_title">APNG Android (animated WebP support)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">OBSOLETA: Esta versión da app xa non se está mantendo, obtén a versión Pro en https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="deprecated_app">OBSOLETA: Esta versión do app xa non se está mantendo, obtén a versión Pro en https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Non esquezas que se desinstalas calquera app de pago antes de 2 horas, devolveránseche os cartos automáticamente. Se queres unha devolución máis tarde, contáctanos en hello@simplemobiletools.com e terala. Isto fai que sexa fácil probala :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->

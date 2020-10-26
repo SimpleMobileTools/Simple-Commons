@@ -259,7 +259,7 @@ open class BaseConfig(val context: Context) {
         set(preventPhoneFromSleeping) = prefs.edit().putBoolean(PREVENT_PHONE_FROM_SLEEPING, preventPhoneFromSleeping).apply()
 
     var lastUsedViewPagerPage: Int
-        get() = prefs.getInt(LAST_USED_VIEW_PAGER_PAGE, 0)
+        get() = prefs.getInt(LAST_USED_VIEW_PAGER_PAGE, context.resources.getInteger(R.integer.default_viewpager_page))
         set(lastUsedViewPagerPage) = prefs.edit().putInt(LAST_USED_VIEW_PAGER_PAGE, lastUsedViewPagerPage).apply()
 
     var use24HourFormat: Boolean

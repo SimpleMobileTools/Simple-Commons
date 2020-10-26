@@ -358,34 +358,36 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     try {
                         checkConflicts(fileDirItems, destination, 0, LinkedHashMap()) {
                             toast(R.string.moving)
-                            val updatedPaths = ArrayList<String>(fileDirItems.size)
-                            val destinationFolder = File(destination)
-                            for (oldFileDirItem in fileDirItems) {
-                                var newFile = File(destinationFolder, oldFileDirItem.name)
-                                if (newFile.exists()) {
-                                    when {
-                                        getConflictResolution(it, newFile.absolutePath) == CONFLICT_SKIP -> fileCountToCopy--
-                                        getConflictResolution(it, newFile.absolutePath) == CONFLICT_KEEP_BOTH -> newFile = getAlternativeFile(newFile)
-                                        else ->
-                                            // this file is guaranteed to be on the internal storage, so just delete it this way
-                                            newFile.delete()
+                            ensureBackgroundThread {
+                                val updatedPaths = ArrayList<String>(fileDirItems.size)
+                                val destinationFolder = File(destination)
+                                for (oldFileDirItem in fileDirItems) {
+                                    var newFile = File(destinationFolder, oldFileDirItem.name)
+                                    if (newFile.exists()) {
+                                        when {
+                                            getConflictResolution(it, newFile.absolutePath) == CONFLICT_SKIP -> fileCountToCopy--
+                                            getConflictResolution(it, newFile.absolutePath) == CONFLICT_KEEP_BOTH -> newFile = getAlternativeFile(newFile)
+                                            else ->
+                                                // this file is guaranteed to be on the internal storage, so just delete it this way
+                                                newFile.delete()
+                                        }
+                                    }
+
+                                    if (!newFile.exists() && File(oldFileDirItem.path).renameTo(newFile)) {
+                                        if (!baseConfig.keepLastModified) {
+                                            newFile.setLastModified(System.currentTimeMillis())
+                                        }
+                                        updatedPaths.add(newFile.absolutePath)
+                                        deleteFromMediaStore(oldFileDirItem.path)
                                     }
                                 }
 
-                                if (!newFile.exists() && File(oldFileDirItem.path).renameTo(newFile)) {
-                                    if (!baseConfig.keepLastModified) {
-                                        newFile.setLastModified(System.currentTimeMillis())
-                                    }
-                                    updatedPaths.add(newFile.absolutePath)
-                                    deleteFromMediaStore(oldFileDirItem.path)
-                                }
-                            }
-
-                            if (updatedPaths.isEmpty()) {
-                                copyMoveListener.copySucceeded(false, fileCountToCopy == 0, destination)
-                            } else {
                                 runOnUiThread {
-                                    copyMoveListener.copySucceeded(false, fileCountToCopy <= updatedPaths.size, destination)
+                                    if (updatedPaths.isEmpty()) {
+                                        copyMoveListener.copySucceeded(false, fileCountToCopy == 0, destination)
+                                    } else {
+                                        copyMoveListener.copySucceeded(false, fileCountToCopy <= updatedPaths.size, destination)
+                                    }
                                 }
                             }
                         }
