@@ -78,8 +78,8 @@
     <string name="rename_folder_ok">Dossier renommé</string>
     <string name="renaming_folder">Modification en cours…</string>
     <string name="filename_cannot_be_empty">Impossible d\'utiliser un nom de fichier vide</string>
-    <string name="filename_invalid_characters">Le nom de fichier contient des caractères incorrectes</string>
-    <string name="filename_invalid_characters_placeholder">Le nom du fichier \"%s\" contient des caractères incorrectes</string>
+    <string name="filename_invalid_characters">Le nom de fichier contient des caractères incorrects</string>
+    <string name="filename_invalid_characters_placeholder">Le nom du fichier \"%s\" contient des caractères incorrects</string>
     <string name="extension_cannot_be_empty">L\'extension ne peut pas rester vide</string>
     <string name="source_file_doesnt_exist">Le fichier source %s n\'existe pas</string>
     <string name="prepend_filenames">Ajouter un préfixe aux noms des fichiers</string>
@@ -123,7 +123,7 @@
     <string name="file">Fichier</string>
     <string name="create_new_folder">Créer un nouveau dossier</string>
     <string name="name_taken">Un répertoire ou un fichier portant ce nom existe déjà</string>
-    <string name="invalid_name">Le nom contient des caractères incorrectes</string>
+    <string name="invalid_name">Le nom contient des caractères incorrects</string>
     <string name="empty_name">Veuillez saisir un nom</string>
     <string name="unknown_error_occurred">Une erreur inconnue est survenue</string>
 
@@ -206,7 +206,7 @@
     <string name="app_icon_color">Couleur de l\'icône de l\'application</string>
     <string name="bottom_navigation_bar_color">Couleur de la barre de navigation</string>
     <string name="restore_defaults">Restaurer les valeurs par défaut</string>
-    <string name="use_default">Utiliser les défauts</string>
+    <string name="use_default">Utiliser les valeurs par défaut</string>
     <string name="default_color">Défaut</string>
     <string name="change_color">Modifier la couleur</string>
     <string name="theme">Thème</string>
@@ -217,10 +217,10 @@
     <string name="undo_changes_confirmation">Voulez-vous vraiment annuler vos changements ?</string>
     <string name="save_before_closing">Vous avez des changements non enregistrés. Enregistrer avant de quitter ?</string>
     <string name="apply_to_all_apps">Appliquer à l\'ensemble de la suite d\'applications Simples</string>
-    <string name="app_icon_color_warning">AVERTISSEMENT: certains lanceurs ne gèrent pas correctement la personnalisation des icônes d\'applications. Au cas où l\'icône disparaîtrait, essayez de lancer l\'application via Google Play ou un widget, si disponible.
+    <string name="app_icon_color_warning">AVERTISSEMENT : certains lanceurs ne gèrent pas correctement la personnalisation des icônes d\'applications. Au cas où l\'icône disparaîtrait, essayez de lancer l\'application via Google Play ou un widget, si disponible.
         Une fois lancé, réglez simplement l\'icône orange par défaut # F57C00. Vous devrez peut-être réinstaller l\'application dans le pire des cas.</string>
     <string name="share_colors_success">Couleurs actualisées. Un nouveau thème nommé \"Partagé\" a été ajouté. Veuillez utiliser ce thème pour actualiser les couleurs de toutes les applications à partir de maintenant.</string>
-    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
+    <string name="shared_theme_note">Veuillez noter que même si vous utilisez la version Pro de l\'application, vous aurez toujours besoin de Simple Thank You pour des raisons techniques. Elle s\'occupe de la synchronisation des couleurs.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Veuillez acheter <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Un petit Merci</a> pour déverrouiller cette fonctionnalité et soutenir le développeur. Merci !
@@ -259,7 +259,7 @@
     <string name="redo">Répéter</string>
     <string name="print">Imprimer</string>
     <string name="create_shortcut">Créer un raccourci</string>
-    <string name="add_number_to_contact">Add number to contact</string>
+    <string name="add_number_to_contact">Ajouter un numéro aux contacts</string>
 
     <!-- Sorting -->
     <string name="sort_by">Trier par</string>
@@ -279,7 +279,7 @@
     <string name="first_name">Prénom</string>
     <string name="middle_name">Deuxième prénom</string>
     <string name="surname">Nom</string>
-    <string name="full_name">Full name</string>
+    <string name="full_name">Nom complet</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Voulez-vous vraiment effectuer la suppression ?</string>
@@ -316,8 +316,8 @@
     <string name="authentication_blocked">Identification bloquée. Veuillez réessayer dans quelques instants.</string>
     <string name="no_fingerprints_registered">Vous n\'avez aucune empreinte digitale enregistrée. Veuillez en ajouter depuis les paramètres de votre appareil</string>
     <string name="go_to_settings">Aller aux Paramètres</string>
-    <string name="protection_setup_successfully">Mot de passe défini. Veuillez réinstaller l\'application en cas problèmes de réinitialisation.</string>
-    <string name="fingerprint_setup_successfully">Protection définie. Veuillez réinstaller l\'application en cas problèmes de réinitialisation.</string>
+    <string name="protection_setup_successfully">Mot de passe défini. Veuillez réinstaller l\'application en cas de problèmes de réinitialisation.</string>
+    <string name="fingerprint_setup_successfully">Protection définie. Veuillez réinstaller l\'application en cas de problèmes de réinitialisation.</string>
     <string name="lock_folder">Verrouiller le dossier</string>
     <string name="unlock_folder">Déverrouiller le dossier</string>
     <string name="lock_folder_notice">Le verrouillage ne fonctionne que dans cette application. Cette protection ne remplace pas un cryptage de dossier système.</string>
@@ -326,7 +326,7 @@
     <string name="yesterday">Hier</string>
     <string name="today">Aujourd\'hui</string>
     <string name="tomorrow">Demain</string>
-    <string name="hide_year">Hide year</string>
+    <string name="hide_year">Cacher l\'année</string>
     <string name="seconds_raw">secondes</string>
     <string name="minutes_raw">minutes</string>
     <string name="hours_raw">heures</string>
@@ -618,7 +618,7 @@
     <string name="it_is_free">C\'est gratuit jusqu\'au : %s. Si vous la téléchargez jusque-là, vous pourrez définitivement l\'utiliser gratuitement.</string>
     <string name="more_info">Plus d\'information</string>
     <string name="upgrade">Passer à la version Pro</string>
-    <string name="upgrade_calendar">Vous devez migrer manuellement les événements stockés localement via une exportation dans un fichier .ics, puis une importation. Vous pouvez trouver les boutons d\'exportation/importation dans le menu de l\'écran principal.</string>
+    <string name="upgrade_calendar">Vous devez migrer manuellement les évènements stockés localement via une exportation dans un fichier .ics, puis une importation. Vous pouvez trouver les boutons d\'exportation/importation dans le menu de l\'écran principal.</string>
 
     <!-- About -->
     <string name="about">À propos</string>
@@ -719,25 +719,25 @@
     <string name="faq_2_title_commons">Je voudrais vous apporter mon soutien, mais je ne peux pas vous donner de l\'argent. Y a-t-il autre chose que je puisse faire ?</string>
     <string name="faq_2_text_commons">Oui, bien sûr. Vous pouvez recommander cette application et/ou mettre une bonne évaluation. Vous pouvez aussi nous aider en traduisant les applications dans une nouvelle langue, ou en actualisant les traductions existantes.
         Vous pouvez trouver le guide à l\'adresse https://github.com/SimpleMobileTools/General-Discussion , ou simplement m\'envoyer un courriel à hello@simplemobiletools.com si vous avez besoin d\'aide.</string>
-    <string name="faq_3_title_commons">J\'ai effacé des fichiers par erreurs. Comment les récupérer ?</string>
+    <string name="faq_3_title_commons">J\'ai effacé des fichiers par erreur. Comment les récupérer ?</string>
     <string name="faq_3_text_commons">C\'est malheureusement impossible, car les fichiers sont supprimés instantanément après le dialogue de confirmation et il n\'y a pas de corbeille.</string>
     <string name="faq_4_title_commons">Je n\'aime pas les couleurs du widget. Puis-je les changer ?</string>
     <string name="faq_4_text_commons">Oui, quand vous glissez le widget sur l\'écran d\'accueil un dialogue de configuration apparaît. Vous verrez des carrés en bas à gauche, en appuyant dessus vous pouvez choisir une nouvelle couleur. Vous pouvez aussi utiliser le curseur pour régler la transparence.</string>
     <string name="faq_5_title_commons">Puis-je restaurer les fichiers supprimés ?</string>
-    <string name="faq_5_text_commons">S\'ils ont été réellement supprimés, vous ne pouvez pas. Cependant, une corbeille étant activée par défaut, les fichiers ont peut-être simplement été déplacés dans la corbeille au lieu d\'être supprimer.</string>
+    <string name="faq_5_text_commons">S\'ils ont été réellement supprimés, vous ne pouvez pas. Cependant, une corbeille étant activée par défaut, les fichiers ont peut-être simplement été déplacés dans la corbeille au lieu d\'être supprimés.</string>
     <string name="faq_6_title_commons">L\'icône du lanceur d\'applications a disparu. Que puis-je faire ?</string>
     <string name="faq_6_text_commons">Votre lanceur ne prend pas correctement en charge la personnalisation des icônes. Essayez de lancer l\'application via Google Play ou un widget, le cas échéant.
         Une fois lancé, il vous suffit de redéfinir l\'icône orange par défaut #F57C00. Dans le pire des cas, vous devrez peut-être réinstaller l\'application.</string>
-    <string name="faq_7_title_commons">L\'argent a été débiter de mon compte bancaire, mais je ne peux pas télécharger l\'application. Que puis-je faire ?</string>
+    <string name="faq_7_title_commons">L\'argent a été débité de mon compte bancaire, mais je ne peux pas télécharger l\'application. Que puis-je faire ?</string>
     <string name="faq_7_text_commons">Les paiements sont entièrement gérés par Google, leur système se heurte parfois à des problèmes. Effacez simplement le cache de votre application Google Play, redémarrez votre appareil, puis réessayez de télécharger.</string>
     <string name="faq_8_title_commons">Pourquoi devrais-je passer à la version Pro ?</string>
     <string name="faq_8_text_commons">La version de votre application n\'étant plus mise à jour, les bugs que vous avez peut-être repérés ne seront jamais corrigés. Il n\'y aura pas non plus de nouvelles fonctions ajoutées. Vous pouvez acheter la version Pro sur Google Play pour une petite somme d\'argent.
          C\'est un paiement unique, ce qui signifie qu\'une fois que vous l\'achetez, vous n\'aurez plus jamais à payer. Pas même après avoir acheté un nouvel appareil. Si vous n’aimez pas la version Pro, vous pouvez simplement la désinstaller après quelques heures et vous serez automatiquement remboursé.
          Si vous souhaitez un remboursement à tout moment, contactez-nous à l\'adresse hello@simplemobiletools.com et vous l\'obtiendrez. </string>
-    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
-    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
-        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
-        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
+    <string name="faq_9_title_commons">Comment puis-je sélectionner plusieurs objects en même temps ?</string>
+    <string name="faq_9_text_commons">Il y a plusieurs façon de faire cela. La première est de passer en mode de sélection en appuyant longuement sur un objet, puis en cliquant simplement sur les autres objets pour les sélectionner. La deuxième est similaire à la sélection d\'objets sur PC avec une souris,
+        passez en mode de sélection en appuyant longuement sur un objet, puis en maintenant votre doigt appuyé, glissez le sur plusieurs objets pour les sélectionner. La troisième façon de sélectionner plusieurs objets est d\'appuyer longuement sur un objet, puis appuyer longuement sur un autre et tout ce qui sera entre les deux objets sera sélectionné. Si vous
+        voulez sélectionner tous les objets, appuyez longuement sur un objet, et cliquez sur le compteur de sélection dans le coin supérieur gauche. Cela sélectionnera ou désélectionnera tous les objets.</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Obtenez la version Pro maintenant !</string>
@@ -757,7 +757,7 @@
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Support des fuseaux horaires</string>
     <string name="why_upgrade_attendees_emails">Participants et rappels par courrier électronique</string>
-    <string name="why_upgrade_easy_event_importing">Importation facile des événements</string>
+    <string name="why_upgrade_easy_event_importing">Importation facile des évènements</string>
     <string name="why_upgrade_new_widgets">Nouveaux widgets</string>
 
     <!-- Contacts Pro -->
@@ -808,13 +808,13 @@
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (lettre sur barre de défilement)</string>
     <string name="event_bus_title">Event Bus (communication au sein de l\'application.)</string>
     <string name="audio_record_view_title">Audio Record View (audio visualisation)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
-    <string name="apng_title">APNG Android (animated WebP support)</string>
+    <string name="sms_mms_title">SMS MMS (gestion SMS et MMS)</string>
+    <string name="apng_title">APNG Android (support WebP animé)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">ATTENTION : cette version de l\'application n\'est plus maintenue. Procurez-vous la version Pro à l\'adresse https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">N’oubliez pas que si vous désinstallez une application payante dans les 2 heures, vous serez automatiquement remboursé. Si vous souhaitez un remboursement à tout moment, contactez-nous à hello@simplemobiletools.com et vous l\'obtiendrez. Alors n\'hésitez pas à l\'essayer :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Un groupe d\'applications Android open-source simples avec widgets personnalisables, sans publicités ni permissions inutiles.</string>
 </resources>
