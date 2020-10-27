@@ -174,7 +174,7 @@ class SimpleContactsHelper(val context: Context) {
         val requiredType = if (getBirthdays) CommonDataKinds.Event.TYPE_BIRTHDAY.toString() else CommonDataKinds.Event.TYPE_ANNIVERSARY.toString()
         val selectionArgs = arrayOf(CommonDataKinds.Event.CONTENT_ITEM_TYPE, requiredType)
 
-        context.queryCursor(uri, projection, selection, selectionArgs, showErrors = true) { cursor ->
+        context.queryCursor(uri, projection, selection, selectionArgs) { cursor ->
             val id = cursor.getIntValue(Data.RAW_CONTACT_ID)
             val startDate = cursor.getStringValue(CommonDataKinds.Event.START_DATE) ?: return@queryCursor
 
