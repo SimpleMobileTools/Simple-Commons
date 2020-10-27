@@ -4,7 +4,8 @@ import android.telephony.PhoneNumberUtils
 import com.simplemobiletools.commons.extensions.normalizePhoneNumber
 import com.simplemobiletools.commons.extensions.normalizeString
 
-data class SimpleContact(val rawId: Int, val contactId: Int, var name: String, var photoUri: String, var phoneNumbers: ArrayList<String>) : Comparable<SimpleContact> {
+data class SimpleContact(val rawId: Int, val contactId: Int, var name: String, var photoUri: String, var phoneNumbers: ArrayList<String>,
+                         var birthdays: ArrayList<String>, var anniversaries: ArrayList<String>) : Comparable<SimpleContact> {
     override fun compareTo(other: SimpleContact): Int {
         val firstString = name.normalizeString()
         val secondString = other.name.normalizeString()
