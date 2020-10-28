@@ -5,6 +5,7 @@ import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 import java.security.MessageDigest
+import java.util.*
 
 fun File.isMediaFile() = absolutePath.isMediaFile()
 fun File.isGif() = absolutePath.endsWith(".gif", true)
@@ -74,7 +75,8 @@ private fun getDirectoryFileCount(dir: File, countHiddenItems: Boolean): Int {
     return count
 }
 
-fun File.getDirectChildrenCount(countHiddenItems: Boolean) = listFiles()?.filter { if (countHiddenItems) true else !it.name.startsWith('.') }?.size ?: 0
+fun File.getDirectChildrenCount(countHiddenItems: Boolean) = listFiles()?.filter { if (countHiddenItems) true else !it.name.startsWith('.') }?.size
+    ?: 0
 
 fun File.toFileDirItem(context: Context) = FileDirItem(absolutePath, name, context.getIsPathDirectory(absolutePath), 0, length(), lastModified())
 
@@ -86,10 +88,10 @@ fun File.containsNoMedia(): Boolean {
     }
 }
 
-fun File.doesThisOrParentHaveNoMedia(): Boolean {
+fun File.doesThisOrParentHaveNoMedia(noMediaFolders: ArrayList<String> = ArrayList()): Boolean {
     var curFile = this
     while (true) {
-        if (curFile.containsNoMedia()) {
+        if (noMediaFolders.contains(curFile.absolutePath) || curFile.containsNoMedia()) {
             return true
         }
         curFile = curFile.parentFile ?: break

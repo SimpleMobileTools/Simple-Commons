@@ -94,7 +94,7 @@ fun String.getParentPath() = removeSuffix("/${getFilenameFromPath()}")
 
 fun String.containsNoMedia() = File(this).containsNoMedia()
 
-fun String.doesThisOrParentHaveNoMedia() = File(this).doesThisOrParentHaveNoMedia()
+fun String.doesThisOrParentHaveNoMedia(noMediaFolders: ArrayList<String> = ArrayList()) = File(this).doesThisOrParentHaveNoMedia(noMediaFolders)
 
 fun String.getImageResolution(): Point? {
     val options = BitmapFactory.Options()
