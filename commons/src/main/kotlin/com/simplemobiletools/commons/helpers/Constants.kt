@@ -321,6 +321,10 @@ val letterBackgroundColors = arrayListOf(
     0xCCE64A19
 )
 
+// view types
+const val VIEW_TYPE_GRID = 1
+const val VIEW_TYPE_LIST = 2
+
 fun isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 
 fun ensureBackgroundThread(callback: () -> Unit) {
