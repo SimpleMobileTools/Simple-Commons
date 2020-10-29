@@ -35,6 +35,11 @@
     <string name="no_access_to_contacts">Programėlė gali nepasiekti kontaktų</string>
     <string name="insert_text_here">Įterpkite tekstą čia</string>
 
+    <!-- View types -->
+    <string name="change_view_type">Keisti peržiūros tipą</string>
+    <string name="grid">Tinklelis</string>
+    <string name="list">Sąrašas</string>
+
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Tvarkyti blokuojamus numerius</string>
     <string name="not_blocking_anyone">Jūs nieko neblokuojate.</string>

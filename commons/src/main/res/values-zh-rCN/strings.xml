@@ -35,6 +35,11 @@
     <string name="no_access_to_contacts">该应用无法访问联系人</string>
     <string name="insert_text_here">在此输入文本</string>
 
+    <!-- View types -->
+    <string name="change_view_type">更改视图类型</string>
+    <string name="grid">网格</string>
+    <string name="list">列表</string>
+
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">管理黑名单</string>
     <string name="not_blocking_anyone">您的黑名单为空</string>

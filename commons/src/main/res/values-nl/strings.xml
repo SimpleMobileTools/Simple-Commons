@@ -35,6 +35,11 @@
     <string name="no_access_to_contacts">De app heeft geen toegang tot uw contacten</string>
     <string name="insert_text_here">Voeg hier tekst in</string>
 
+    <!-- View types -->
+    <string name="change_view_type">Weergave</string>
+    <string name="grid">Raster</string>
+    <string name="list">Lijst</string>
+
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Geblokkeerde nummers beheren</string>
     <string name="not_blocking_anyone">Geen geblokkeerde nummers.</string>

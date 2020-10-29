@@ -35,6 +35,11 @@
     <string name="no_access_to_contacts">Aplikazioak ezingo da kontaktuetan sartu</string>
     <string name="insert_text_here">Txertatu testua hemen</string>
 
+    <!-- View types -->
+    <string name="change_view_type">Change view type</string>
+    <string name="grid">Grid</string>
+    <string name="list">List</string>
+
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Kudeatu blokeatutako zenbakiak</string>
     <string name="not_blocking_anyone">Ez duzu inor blokeatu.</string>

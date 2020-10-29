@@ -35,6 +35,11 @@
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
 
+    <!-- View types -->
+    <string name="change_view_type">改變瀏覽類型</string>
+    <string name="grid">格狀</string>
+    <string name="list">列表</string>
+
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">管理黑名單</string>
     <string name="not_blocking_anyone">你沒有封鎖任何人</string>

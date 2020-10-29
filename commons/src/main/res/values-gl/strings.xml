@@ -35,6 +35,11 @@
     <string name="no_access_to_contacts">O aplicativo non puido acceder aos teus contactos</string>
     <string name="insert_text_here">Introduce o texto aquí</string>
 
+    <!-- View types -->
+    <string name="change_view_type">Cambiar o tipo de vista</string>
+    <string name="grid">Grella</string>
+    <string name="list">Lista</string>
+
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrar números bloqueados</string>
     <string name="not_blocking_anyone">Non hai ninguén bloqueado.</string>

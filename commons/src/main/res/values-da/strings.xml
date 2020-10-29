@@ -35,6 +35,11 @@
     <string name="no_access_to_contacts">Appen kunne ikke tilgå dine kontakter</string>
     <string name="insert_text_here">Indsæt tekst her</string>
 
+    <!-- View types -->
+    <string name="change_view_type">Skift visning</string>
+    <string name="grid">Gitter</string>
+    <string name="list">Liste</string>
+
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrér blokerede numre</string>
     <string name="not_blocking_anyone">Du blokerer ikke nogen</string>

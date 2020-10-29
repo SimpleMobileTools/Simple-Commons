@@ -35,6 +35,11 @@
     <string name="no_access_to_contacts">Sovelluksella ei ole käyttöoikeutta yhteystietoihin</string>
     <string name="insert_text_here">Lisää teksti tähän</string>
 
+    <!-- View types -->
+    <string name="change_view_type">Vaihda näkymää</string>
+    <string name="grid">Ruudukko</string>
+    <string name="list">Lista</string>
+
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Hallitse estettyjä numeroita</string>
     <string name="not_blocking_anyone">Ei estettyjä numeroita.</string>

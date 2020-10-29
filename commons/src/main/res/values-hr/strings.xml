@@ -35,6 +35,11 @@
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
 
+    <!-- View types -->
+    <string name="change_view_type">Promijeni vrstu prikaza</string>
+    <string name="grid">Mreža</string>
+    <string name="list">Lista</string>
+
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Upravljanje blokiranim brojevima</string>
     <string name="not_blocking_anyone">Ne blokirate nikoga.</string>

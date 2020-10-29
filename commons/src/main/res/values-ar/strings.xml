@@ -35,6 +35,11 @@
     <string name="no_access_to_contacts">يتعذر على التطبيق الوصول إلى جهات الاتصال الخاصة بك</string>
     <string name="insert_text_here">إدراج النص هنا</string>
 
+    <!-- View types -->
+    <string name="change_view_type">تغيير نوع العرض</string>
+    <string name="grid">الشبكة</string>
+    <string name="list">القائمة</string>
+
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">إدارة الأرقام المحظورة</string>
     <string name="not_blocking_anyone">لم تحظر أي شخص.</string>

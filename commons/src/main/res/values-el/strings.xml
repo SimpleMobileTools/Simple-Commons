@@ -35,6 +35,11 @@
     <string name="no_access_to_contacts">Η εφαρμογή δεν έχει πρόσβαση στις επαφές σας</string>
     <string name="insert_text_here">Εισαγωγή κειμένου εδώ</string>
 
+    <!-- View types -->
+    <string name="change_view_type">Αλλαγή τύπου εμφάνισης</string>
+    <string name="grid">Πλέγμα</string>
+    <string name="list">Λίστα</string>
+
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Διαχείριση αποκλεισμένων αριθμών</string>
     <string name="not_blocking_anyone">Χωρίς αποκλεισμο κανενός.</string>

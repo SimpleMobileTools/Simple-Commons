@@ -35,6 +35,11 @@
     <string name="no_access_to_contacts">L\'app non è riuscita ad accedere ai tuoi contatti</string>
     <string name="insert_text_here">Inserisci qui il testo</string>
 
+    <!-- View types -->
+    <string name="change_view_type">Cambia modalità visualizzazione</string>
+    <string name="grid">Griglia</string>
+    <string name="list">Elenco</string>
+
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gestisci i numeri bloccati</string>
     <string name="not_blocking_anyone">Nessun numero bloccato.</string>

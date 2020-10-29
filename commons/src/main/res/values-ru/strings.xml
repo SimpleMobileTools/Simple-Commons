@@ -35,6 +35,11 @@
     <string name="no_access_to_contacts">Приложение не может получить доступ к вашим контактам</string>
     <string name="insert_text_here">Введите текст здесь</string>
 
+    <!-- View types -->
+    <string name="change_view_type">Вид</string>
+    <string name="grid">Сетка</string>
+    <string name="list">Список</string>
+
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Управление блокируемыми номерами</string>
     <string name="not_blocking_anyone">Нет блокируемых номеров</string>

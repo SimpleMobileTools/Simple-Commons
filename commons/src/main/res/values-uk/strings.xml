@@ -35,6 +35,11 @@
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
 
+    <!-- View types -->
+    <string name="change_view_type">Змінити тип перегляду</string>
+    <string name="grid">Сітка</string>
+    <string name="list">Список</string>
+
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Керувати блокованими номерами</string>
     <string name="not_blocking_anyone">Немає блокованих номерів.</string>
