@@ -29,6 +29,7 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
     private var fileDrawables = HashMap<String, Drawable>()
     private val hasOTGConnected = activity.hasOTGConnected()
     private var fontSize = 0f
+    private val cornerRadius = resources.getDimension(R.dimen.rounded_corner_radius_small).toInt()
 
     init {
         initDrawables()
@@ -89,9 +90,9 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
                 val path = fileDirItem.path
                 val placeholder = fileDrawables.getOrElse(fileDirItem.name.substringAfterLast(".").toLowerCase(Locale.getDefault()), { fileDrawable })
                 val options = RequestOptions()
-                        .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-                        .centerCrop()
-                        .error(placeholder)
+                    .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+                    .centerCrop()
+                    .error(placeholder)
 
                 var itemToLoad = if (fileDirItem.name.endsWith(".apk", true)) {
                     val packageInfo = context.packageManager.getPackageArchiveInfo(path, PackageManager.GET_ACTIVITIES)
@@ -115,13 +116,12 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
                             itemToLoad = itemToLoad.getOTGPublicPath(activity)
                         }
 
-                        val cornerRadius = resources.getDimension(R.dimen.rounded_corner_radius_small).toInt()
                         Glide.with(activity)
-                                .load(itemToLoad)
-                                .transition(withCrossFade())
-                                .apply(options)
-                                .transform(CenterCrop(), RoundedCorners(cornerRadius))
-                                .into(list_item_icon)
+                            .load(itemToLoad)
+                            .transition(withCrossFade())
+                            .apply(options)
+                            .transform(CenterCrop(), RoundedCorners(cornerRadius))
+                            .into(list_item_icon)
                     }
                 }
             }
