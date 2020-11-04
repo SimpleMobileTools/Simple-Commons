@@ -11,7 +11,9 @@
     <string name="no_app_found">Приложение не найдено</string>
     <string name="set_as">Установить как…</string>
     <string name="copy_to_clipboard">Копировать в буфер обмена</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Скопировано в буфер обмена</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Неизвестно</string>
     <string name="always">Всегда</string>
     <string name="never">Никогда</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Запрос необходимых разрешений</string>
     <string name="no_access_to_contacts">Приложение не может получить доступ к вашим контактам</string>
     <string name="insert_text_here">Введите текст здесь</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Вид</string>
+    <string name="grid">Сетка</string>
+    <string name="list">Список</string>
+    <string name="increase_column_count">Добавить столбец</string>
+    <string name="reduce_column_count">Убрать столбец</string>
+    <string name="change_cover_image">Изменить обложку</string>
+    <string name="select_photo">Выбрать изображение</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Управление блокируемыми номерами</string>
@@ -251,6 +262,7 @@
     <string name="share">Поделиться</string>
     <string name="share_via">Поделиться через…</string>
     <string name="select_all">Выделить все</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Скрыть</string>
     <string name="unhide">Показать</string>
     <string name="hide_folder">Скрыть папку</string>

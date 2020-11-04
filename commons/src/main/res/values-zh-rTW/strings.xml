@@ -11,7 +11,9 @@
     <string name="no_app_found">找不到應用程式</string>
     <string name="set_as">設為</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">數值複製到剪貼簿</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">未知的</string>
     <string name="always">總是</string>
     <string name="never">從不</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">請求必要的權限</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">改變瀏覽類型</string>
+    <string name="grid">格狀</string>
+    <string name="list">列表</string>
+    <string name="increase_column_count">增加欄數</string>
+    <string name="reduce_column_count">減少欄數</string>
+    <string name="change_cover_image">更換封面圖片</string>
+    <string name="select_photo">選擇相片</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">管理黑名單</string>
@@ -244,6 +255,7 @@
     <string name="share">分享</string>
     <string name="share_via">分享方式</string>
     <string name="select_all">全選</string>
+    <string name="select_text">Select text</string>
     <string name="hide">隱藏</string>
     <string name="unhide">取消隱藏</string>
     <string name="hide_folder">隱藏資料夾</string>

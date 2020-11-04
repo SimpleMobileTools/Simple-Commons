@@ -11,7 +11,9 @@
     <string name="no_app_found">有効なアプリが見つかりません</string>
     <string name="set_as">他で使う</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">値をクリップボードにコピーしました</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">不明</string>
     <string name="always">常に</string>
     <string name="never">何もしない</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Request the required permissions</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">表示形式の変更</string>
+    <string name="grid">グリッド</string>
+    <string name="list">リスト</string>
+    <string name="increase_column_count">列数を増やす</string>
+    <string name="reduce_column_count">列数を減らす</string>
+    <string name="change_cover_image">カバー画像を変更</string>
+    <string name="select_photo">写真を選択</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">ブロックした番号を管理</string>
@@ -244,6 +255,7 @@
     <string name="share">共有</string>
     <string name="share_via">共有</string>
     <string name="select_all">すべて選択</string>
+    <string name="select_text">Select text</string>
     <string name="hide">非表示</string>
     <string name="unhide">再表示</string>
     <string name="hide_folder">フォルダを非表示</string>
@@ -421,7 +433,7 @@
     <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
     <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
     <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. Check your device battery and notification settings, if there is nothing blocking the reminders, or killing the app in the background.</string>
     <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
 
     <!-- Alarms -->

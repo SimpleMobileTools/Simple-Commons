@@ -11,7 +11,9 @@
     <string name="no_app_found">لم يتم العثور على تطبيق صالح</string>
     <string name="set_as">تعيين كـ</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">تم نسخ القيمة إلي الحافظة</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">غير معروف</string>
     <string name="always">دائماً</string>
     <string name="never">أبداً</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">طلب الأذونات المطلوبة</string>
     <string name="no_access_to_contacts">يتعذر على التطبيق الوصول إلى جهات الاتصال الخاصة بك</string>
     <string name="insert_text_here">إدراج النص هنا</string>
+
+    <!-- View types -->
+    <string name="change_view_type">تغيير نوع العرض</string>
+    <string name="grid">الشبكة</string>
+    <string name="list">القائمة</string>
+    <string name="increase_column_count">زيادة عدد الأعمدة</string>
+    <string name="reduce_column_count">تقليل عدد الأعمدة</string>
+    <string name="change_cover_image">تغيير صورة الغلاف</string>
+    <string name="select_photo">تحديد صورة</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">إدارة الأرقام المحظورة</string>
@@ -245,6 +256,7 @@
     <string name="share">مشاركة</string>
     <string name="share_via">مشاركة عبر</string>
     <string name="select_all">تحديد الكل</string>
+    <string name="select_text">Select text</string>
     <string name="hide">إخفاء</string>
     <string name="unhide">إظهار</string>
     <string name="hide_folder">إخفاء المجلد</string>

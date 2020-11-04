@@ -11,7 +11,9 @@
     <string name="no_app_found">Ingen gyldig app funnet</string>
     <string name="set_as">Sett som</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Verdi kopiert til utklippstavle</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Ukjent</string>
     <string name="always">Alltid</string>
     <string name="never">Aldri</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Request the required permissions</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Endre visningstype</string>
+    <string name="grid">Rutenett</string>
+    <string name="list">Liste</string>
+    <string name="increase_column_count">Øk antall kolonner</string>
+    <string name="reduce_column_count">Reduser antall kolonner</string>
+    <string name="change_cover_image">Endre omslagsbilde</string>
+    <string name="select_photo">Velg foto</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Manage blocked numbers</string>
@@ -247,6 +258,7 @@
     <string name="share">Del</string>
     <string name="share_via">Del via</string>
     <string name="select_all">Velg alle</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Skjul</string>
     <string name="unhide">Ikke skjul</string>
     <string name="hide_folder">Skjul mappe</string>

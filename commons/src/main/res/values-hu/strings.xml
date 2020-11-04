@@ -11,7 +11,9 @@
     <string name="no_app_found">Nem található érvényes alkalmazás</string>
     <string name="set_as">Beállítás ennek</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Érték másolva a vágólapra</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Ismeretlen</string>
     <string name="always">Mindig</string>
     <string name="never">Soha</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">A kívánt jogosultságok igénylése</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Nézet típus változtatása</string>
+    <string name="grid">Rács</string>
+    <string name="list">Lista</string>
+    <string name="increase_column_count">Növelje az oszlopok számát</string>
+    <string name="reduce_column_count">Csökkentse az oszlopok számát</string>
+    <string name="change_cover_image">Borítókép változtatása</string>
+    <string name="select_photo">Válasszon fotót</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Zárolt telefonszámok kezelése</string>
@@ -246,6 +257,7 @@
     <string name="share">Megosztás</string>
     <string name="share_via">Megosztva ezzel</string>
     <string name="select_all">Összes kiválasztása</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Elrejtés</string>
     <string name="unhide">Elrejtés megszüntetés</string>
     <string name="hide_folder">Mappa elrejtése</string>

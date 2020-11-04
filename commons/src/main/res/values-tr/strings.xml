@@ -11,7 +11,9 @@
     <string name="no_app_found">Geçerli bir uygulama bulunamadı</string>
     <string name="set_as">Ayarla</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Değer panoya kopyalandı</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Bilinmeyen</string>
     <string name="always">Her zaman</string>
     <string name="never">Asla</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Gerekli izinleri iste</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Görünüm türünü değiştir</string>
+    <string name="grid">Izgara</string>
+    <string name="list">Liste</string>
+    <string name="increase_column_count">Sütun sayısını artır</string>
+    <string name="reduce_column_count">Sütun sayısını azalt</string>
+    <string name="change_cover_image">Kapak resmini değiştir</string>
+    <string name="select_photo">Fotoğraf seç</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Engelli numaraları yönet</string>
@@ -247,6 +258,7 @@
     <string name="share">Paylaş</string>
     <string name="share_via">Şununla paylaş</string>
     <string name="select_all">Tümünü seç</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Gizle</string>
     <string name="unhide">Göster</string>
     <string name="hide_folder">Klasörü gizle</string>

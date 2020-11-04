@@ -11,7 +11,9 @@
     <string name="no_app_found">Nenašla sa žiadna vhodná aplikácia</string>
     <string name="set_as">Nastaviť ako</string>
     <string name="copy_to_clipboard">Skopírovať do schránky</string>
+    <string name="copy_number_to_clipboard">Skopírovať číslo do schránky</string>
     <string name="value_copied_to_clipboard">Hodnota bola vložená do schránky</string>
+    <string name="dial_number">Vytočiť číslo</string>
     <string name="unknown">Neznámy</string>
     <string name="always">Vždy</string>
     <string name="never">Nikdy</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Vyžiadať potrebné oprávnenia</string>
     <string name="no_access_to_contacts">Nepodarilo sa získať zoznam kontaktov</string>
     <string name="insert_text_here">Zadajte text sem</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Zmeniť typ zobrazenia</string>
+    <string name="grid">Mriežka</string>
+    <string name="list">Zoznam</string>
+    <string name="increase_column_count">Zvýšiť počet stĺpcov</string>
+    <string name="reduce_column_count">Znížiť počet stĺpcov</string>
+    <string name="change_cover_image">Zmeniť obal albumu</string>
+    <string name="select_photo">Zvoliť foto</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Spravovať blokované čísla</string>
@@ -250,7 +261,8 @@
     <string name="rename">Premenovať</string>
     <string name="share">Zdieľať</string>
     <string name="share_via">Zdieľať cez</string>
-    <string name="select_all">Vybrať všetko</string>
+    <string name="select_all">Označiť všetko</string>
+    <string name="select_text">Označiť text</string>
     <string name="hide">Skryť</string>
     <string name="unhide">Odkryť</string>
     <string name="hide_folder">Skryť priečinok</string>
@@ -486,7 +498,7 @@
     <string name="alarm_goes_off_in">Zostávajúci čas do zvonenia budíka:\n%s</string>
     <string name="reminder_triggers_in">Zostávajúci čas do pripomienky:\n%s</string>
     <string name="alarm_warning">Pred tým, ako by ste sa na budík spoliehali, sa prosím uistite, že funguje správne. Niektoré systémové obmedzenia spojené so zlepšením výdrže batérie môžu spôsobiť problémy.</string>
-    <string name="reminder_warning">Pred tým, ako by ste sa na pripomienky spoliehali, sa prosím uistite, že fungujú správne. Niektoré systémové obmedzenia spojené so zlepšením výdrže batérie môžu spôsobiť problémy.</string>
+    <string name="reminder_warning">Pred tým, ako by ste sa na pripomienky spoliehali, sa prosím uistite, že fungujú správne. Pozrite sa do nastavení batérie a pripomienok vášho zariadenia, či nič neblokuje pripomienky, alebo nevypína na pozadí apku.</string>
     <string name="notifications_disabled">Pripomienky tejto aplikácie sú vypnuté. Pre ich zapnutie prosím choďte do nastavení zariadenia.</string>
 
     <!-- Alarms -->

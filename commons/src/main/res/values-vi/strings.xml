@@ -11,7 +11,9 @@
     <string name="no_app_found">Không tìm thấy ứng dụng hợp lệ</string>
     <string name="set_as">Đặt làm...</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Giá trị được sao chép vào clipboard</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Không xác định</string>
     <string name="always">Luôn luôn</string>
     <string name="never">Không bao giờ</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Request the required permissions</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Thay đổi kiểu xem</string>
+    <string name="grid">Lưới</string>
+    <string name="list">Danh sách</string>
+    <string name="increase_column_count">Tăng số lượng cột</string>
+    <string name="reduce_column_count">Giảm số lượng cột</string>
+    <string name="change_cover_image">Thay đổi ảnh bìa</string>
+    <string name="select_photo">Chọn ảnh</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Manage blocked numbers</string>
@@ -247,6 +258,7 @@
     <string name="share">Chia sẻ</string>
     <string name="share_via">Chia sẻ qua</string>
     <string name="select_all">Chọn tất cả</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Ẩn</string>
     <string name="unhide">Bỏ ẩn</string>
     <string name="hide_folder">Ẩn thư mục</string>

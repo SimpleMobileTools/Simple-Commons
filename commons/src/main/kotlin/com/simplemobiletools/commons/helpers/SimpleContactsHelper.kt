@@ -12,6 +12,7 @@ import android.provider.ContactsContract.*
 import android.provider.ContactsContract.CommonDataKinds.Organization
 import android.provider.ContactsContract.CommonDataKinds.StructuredName
 import android.text.TextUtils
+import android.util.SparseArray
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
@@ -46,6 +47,20 @@ class SimpleContactsHelper(val context: Context) {
                 val startIndex = Math.max(0, it.phoneNumbers.first().length - 9)
                 it.phoneNumbers.first().substring(startIndex)
             }.distinctBy { it.rawId }.toMutableList() as ArrayList<SimpleContact>
+
+            val birthdays = getContactEvents(true)
+            var size = birthdays.size()
+            for (i in 0 until size) {
+                val key = birthdays.keyAt(i)
+                allContacts.firstOrNull { it.rawId == key }?.birthdays = birthdays.valueAt(i)
+            }
+
+            val anniversaries = getContactEvents(false)
+            size = anniversaries.size()
+            for (i in 0 until size) {
+                val key = anniversaries.keyAt(i)
+                allContacts.firstOrNull { it.rawId == key }?.anniversaries = anniversaries.valueAt(i)
+            }
 
             allContacts.sort()
             callback(allContacts)
@@ -101,7 +116,7 @@ class SimpleContactsHelper(val context: Context) {
                     }
 
                     val fullName = TextUtils.join(" ", names)
-                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList())
+                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList())
                     contacts.add(contact)
                 }
             }
@@ -112,7 +127,7 @@ class SimpleContactsHelper(val context: Context) {
                 val jobTitle = cursor.getStringValue(Organization.TITLE) ?: ""
                 if (company.isNotEmpty() || jobTitle.isNotEmpty()) {
                     val fullName = "$company $jobTitle".trim()
-                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList())
+                    val contact = SimpleContact(rawId, contactId, fullName, photoUri, ArrayList(), ArrayList(), ArrayList())
                     contacts.add(contact)
                 }
             }
@@ -139,11 +154,38 @@ class SimpleContactsHelper(val context: Context) {
             val rawId = cursor.getIntValue(Data.RAW_CONTACT_ID)
             val contactId = cursor.getIntValue(Data.CONTACT_ID)
             if (contacts.firstOrNull { it.rawId == rawId } == null) {
-                contacts.add(SimpleContact(rawId, contactId, "", "", ArrayList()))
+                val contact = SimpleContact(rawId, contactId, "", "", ArrayList(), ArrayList(), ArrayList())
+                contacts.add(contact)
             }
             contacts.firstOrNull { it.rawId == rawId }?.phoneNumbers?.add(phoneNumber)
         }
         return contacts
+    }
+
+    fun getContactEvents(getBirthdays: Boolean): SparseArray<ArrayList<String>> {
+        val eventDates = SparseArray<ArrayList<String>>()
+        val uri = Data.CONTENT_URI
+        val projection = arrayOf(
+            Data.RAW_CONTACT_ID,
+            CommonDataKinds.Event.START_DATE
+        )
+
+        val selection = "${CommonDataKinds.Event.MIMETYPE} = ? AND ${CommonDataKinds.Event.TYPE} = ?"
+        val requiredType = if (getBirthdays) CommonDataKinds.Event.TYPE_BIRTHDAY.toString() else CommonDataKinds.Event.TYPE_ANNIVERSARY.toString()
+        val selectionArgs = arrayOf(CommonDataKinds.Event.CONTENT_ITEM_TYPE, requiredType)
+
+        context.queryCursor(uri, projection, selection, selectionArgs) { cursor ->
+            val id = cursor.getIntValue(Data.RAW_CONTACT_ID)
+            val startDate = cursor.getStringValue(CommonDataKinds.Event.START_DATE) ?: return@queryCursor
+
+            if (eventDates[id] == null) {
+                eventDates.put(id, ArrayList())
+            }
+
+            eventDates[id]!!.add(startDate)
+        }
+
+        return eventDates
     }
 
     fun getNameFromPhoneNumber(number: String): String {

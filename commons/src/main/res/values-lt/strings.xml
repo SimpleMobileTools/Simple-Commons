@@ -11,7 +11,9 @@
     <string name="no_app_found">Nerasta tinkamos programėlės</string>
     <string name="set_as">Nustatyti kaip</string>
     <string name="copy_to_clipboard">Kopijuoti į iškarpinę</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Reikšmė nukopijuota į iškarpinė</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Nežinoma</string>
     <string name="always">Visada</string>
     <string name="never">Niekada</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Paprašyti reikiamų leidimų</string>
     <string name="no_access_to_contacts">Programėlė gali nepasiekti kontaktų</string>
     <string name="insert_text_here">Įterpkite tekstą čia</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Keisti peržiūros tipą</string>
+    <string name="grid">Tinklelis</string>
+    <string name="list">Sąrašas</string>
+    <string name="increase_column_count">Padidinti stulpelių skaičių</string>
+    <string name="reduce_column_count">Sumažinti stulpelių skaičių</string>
+    <string name="change_cover_image">Pakeisti viršelio atvaizdą</string>
+    <string name="select_photo">Pasirinkti nuotrauką</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Tvarkyti blokuojamus numerius</string>
@@ -247,6 +258,7 @@
     <string name="share">Dalintis</string>
     <string name="share_via">Dalintis per</string>
     <string name="select_all">Pasirinkti viską</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Slėpti</string>
     <string name="unhide">Neslėpti</string>
     <string name="hide_folder">Slėpti aplanką</string>

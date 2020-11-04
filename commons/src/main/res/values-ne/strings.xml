@@ -1,161 +1,161 @@
 <resources>
-    <string name="ok">אישור</string>
-    <string name="cancel">ביטול</string>
-    <string name="save_as">שמירה בשם</string>
-    <string name="file_saved">קובץ נשמר</string>
-    <string name="invalid_file_format">פורמט קובץ שגוי</string>
-    <string name="out_of_memory_error">שגיאת זיכרון</string>
-    <string name="an_error_occurred">שגיאה: %s</string>
-    <string name="open_with">פתיחה באמצעות</string>
-    <string name="edit_with">עריכה באמצעות</string>
-    <string name="no_app_found">לא נמצאה אפליקציה מתאימה</string>
-    <string name="set_as">קבע כ</string>
-    <string name="copy_to_clipboard">העתקה לקליפבורד</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save_as">Save as</string>
+    <string name="file_saved">File saved successfully</string>
+    <string name="invalid_file_format">Invalid file format</string>
+    <string name="out_of_memory_error">Out of memory error</string>
+    <string name="an_error_occurred">An error occurred: %s</string>
+    <string name="open_with">Open with</string>
+    <string name="edit_with">Edit with</string>
+    <string name="no_app_found">No valid app found</string>
+    <string name="set_as">Set as</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="copy_number_to_clipboard">Copy number to clipboard</string>
-    <string name="value_copied_to_clipboard">הועתק לקליפבורד</string>
+    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
     <string name="dial_number">Dial number</string>
-    <string name="unknown">לא ידוע</string>
-    <string name="always">תמיד</string>
-    <string name="never">לעולם לא</string>
-    <string name="details">פרטים</string>
-    <string name="notes">הערות</string>
-    <string name="deleting_folder">מוחק תיקייה \'%s\'</string>
+    <string name="unknown">Unknown</string>
+    <string name="always">Always</string>
+    <string name="never">Never</string>
+    <string name="details">Details</string>
+    <string name="notes">Notes</string>
+    <string name="deleting_folder">Deleting folder \'%s\'</string>
     <string name="none">None</string>
-    <string name="label">תווית</string>
+    <string name="label">Label</string>
     <string name="transparent">Transparent</string>
     <string name="transparent_color">Transparent color</string>
     <string name="select_a_different_color">Select a different color</string>
-    <string name="download">הורדה</string>
+    <string name="download">Download</string>
     <string name="notification">Notification</string>
-    <string name="email">אימייל</string>
-    <string name="previous">הקודם</string>
-    <string name="playpause">הפעל / הפסק</string>
-    <string name="next">הבא</string>
-    <string name="number">מספר</string>
-    <string name="no_contacts_found">לא נמצאו אנשי קשר</string>
-    <string name="request_the_required_permissions">נדרשים הרשאות</string>
-    <string name="no_access_to_contacts">לא ניתן לגשת לאנשי הקשר</string>
-    <string name="insert_text_here">הוספת טקסט</string>
+    <string name="email">Email</string>
+    <string name="previous">Previous</string>
+    <string name="playpause">Play / Pause</string>
+    <string name="next">Next</string>
+    <string name="number">Number</string>
+    <string name="no_contacts_found">No contacts found</string>
+    <string name="request_the_required_permissions">Request the required permissions</string>
+    <string name="no_access_to_contacts">The app could not access your contacts</string>
+    <string name="insert_text_here">Insert text here</string>
 
     <!-- View types -->
-    <string name="change_view_type">Change view type</string>
-    <string name="grid">Grid</string>
-    <string name="list">List</string>
-    <string name="increase_column_count">Increase column count</string>
-    <string name="reduce_column_count">Reduce column count</string>
-    <string name="change_cover_image">Change cover image</string>
-    <string name="select_photo">Select photo</string>
+    <string name="change_view_type">भ्यू प्रकार परिवर्तन गर्नुहोस</string>
+    <string name="grid">कोठे</string>
+    <string name="list">सुची</string>
+    <string name="increase_column_count">कोलम सङ्खा बढाउनुहोस</string>
+    <string name="reduce_column_count">कोलम सङ्खा घटाउनुहोस</string>
+    <string name="change_cover_image">कभर तस्बिर परिवर्तन गर्नुहोस</string>
+    <string name="select_photo">फोटो चयन गर्नुहोस</string>
 
     <!-- Blocked numbers -->
-    <string name="manage_blocked_numbers">ניהול מספרים חסומים</string>
-    <string name="not_blocking_anyone">אין חסימות</string>
-    <string name="add_a_blocked_number">הוספת מספר חסום</string>
-    <string name="block_number">חסום מספר</string>
-    <string name="block_numbers">חסום מספרים</string>
-    <string name="blocked_numbers">מספרים חסומים</string>
-    <string name="must_make_default_dialer">נדרש לבחור את האפליקצייה כברירת מחדל בכדי לחסום מספרים.</string>
-    <string name="set_as_default">קבע כברירת מחדל</string>
-    <string name="block_confirmation">האם לחסום את \"%s\"?</string>
+    <string name="manage_blocked_numbers">Manage blocked numbers</string>
+    <string name="not_blocking_anyone">You are not blocking anyone.</string>
+    <string name="add_a_blocked_number">Add a blocked number</string>
+    <string name="block_number">Block number</string>
+    <string name="block_numbers">Block numbers</string>
+    <string name="blocked_numbers">Blocked numbers</string>
+    <string name="must_make_default_dialer">You have to make this app the default dialer app to make use of blocked numbers.</string>
+    <string name="set_as_default">Set as default</string>
+    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
 
     <!-- Favorites -->
-    <string name="favorites">מועדפים</string>
-    <string name="add_favorites">הוספה למועדפים</string>
-    <string name="add_to_favorites">הוסף למועדפים</string>
-    <string name="remove_from_favorites">הסרה ממועדפים</string>
+    <string name="favorites">Favorites</string>
+    <string name="add_favorites">Add favorites</string>
+    <string name="add_to_favorites">Add to favorites</string>
+    <string name="remove_from_favorites">Remove from favorites</string>
 
     <!-- Search -->
-    <string name="search">חיפוש</string>
-    <string name="type_2_characters">הקלד/י לפחות 2 תווים כדי להתחיל חיפוש</string>
+    <string name="search">Search</string>
+    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
 
     <!-- Filters -->
-    <string name="filter">סינון</string>
-    <string name="no_items_found">לא נמצאו פריטים.</string>
-    <string name="change_filter">שינוי סינון</string>
+    <string name="filter">Filter</string>
+    <string name="no_items_found">No items found.</string>
+    <string name="change_filter">Change filter</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">נדרשים הרשאות אחסון</string>
-    <string name="no_contacts_permission">נדרשים הרשאות אנשי קשר</string>
-    <string name="no_camera_permissions">נדרשים הרשאות מצלמה</string>
-    <string name="no_audio_permissions">נדרשים הרשאות אודיו</string>
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
 
     <!-- Renaming -->
-    <string name="rename_file">שנה שם קובץ</string>
-    <string name="rename_folder">שנה שם תיקייה</string>
-    <string name="rename_file_error">לא ניתן לשנות את שם הקובץ</string>
-    <string name="rename_folder_error">לא ניתן לשנות את שם התיקייה</string>
-    <string name="rename_folder_empty">שם התיקייה לא יכול להיות ריק</string>
-    <string name="rename_folder_exists">קיימת תיקייה עם שם זה</string>
-    <string name="rename_folder_root">לא ניתן לשנות את תיקיית האב של האחסון</string>
-    <string name="rename_folder_ok">שם תיקייה עודכן</string>
-    <string name="renaming_folder">מעדכן שם תיקייה</string>
-    <string name="filename_cannot_be_empty">שם קובץ לא יכול להיות ריק</string>
-    <string name="filename_invalid_characters">שם קובץ כולל תווים לא חוקיים</string>
-    <string name="filename_invalid_characters_placeholder">שם קובץ \'%s\' מכיל תווים לא חוקיים</string>
-    <string name="extension_cannot_be_empty">תוסף לא יכול להיות ריק</string>
-    <string name="source_file_doesnt_exist">קובץ מקור %s לא קיים</string>
+    <string name="rename_file">Rename file</string>
+    <string name="rename_folder">Rename folder</string>
+    <string name="rename_file_error">Could not rename the file</string>
+    <string name="rename_folder_error">Could not rename the folder</string>
+    <string name="rename_folder_empty">Folder name must not be empty</string>
+    <string name="rename_folder_exists">A folder with that name already exists</string>
+    <string name="rename_folder_root">Cannot rename the root folder of a storage</string>
+    <string name="rename_folder_ok">Folder renamed successfully</string>
+    <string name="renaming_folder">Renaming folder</string>
+    <string name="filename_cannot_be_empty">Filename cannot be empty</string>
+    <string name="filename_invalid_characters">Filename contains invalid characters</string>
+    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
+    <string name="extension_cannot_be_empty">Extension cannot be empty</string>
+    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
     <string name="prepend_filenames">Prepend filenames</string>
     <string name="append_filenames">Append filenames</string>
     <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">דפוס</string>
-    <string name="string_to_add">מחרוזת להוספה</string>
+    <string name="pattern_renaming">Pattern</string>
+    <string name="string_to_add">String to add</string>
     <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second\n%i - number increasing from 1</string>
 
     <!-- Copy / Move -->
-    <string name="copy">העתק</string>
-    <string name="move">העבר</string>
-    <string name="copy_move">העתק / העבר</string>
-    <string name="copy_to">העתק אל</string>
-    <string name="move_to">העבר אל</string>
-    <string name="source">מקור</string>
-    <string name="destination">יעד</string>
-    <string name="select_destination">בחירת יעד</string>
-    <string name="click_select_destination">לחץ לבחירת יעד</string>
-    <string name="invalid_destination">לא ניתן לכתוב אל היעד הנבחר</string>
-    <string name="please_select_destination">נא לבחור יעד</string>
-    <string name="source_and_destination_same">מקור ויעד לא יכולים להיות זהים</string>
-    <string name="copy_failed">לא ניתן להעתיק את הקבצים</string>
-    <string name="copying">מעתיק...</string>
-    <string name="copying_success">קבצים הועתקו בהצלחה</string>
-    <string name="copy_move_failed">אירעה שגיאה</string>
-    <string name="moving">מעביר...</string>
-    <string name="moving_success">קובץ הועבר בהצלחה</string>
-    <string name="moving_success_partial">חלק מהקבצים לא הועברו</string>
-    <string name="copying_success_partial">חלק מהקבצים לא הועתקו</string>
-    <string name="no_files_selected">לא נבחרו קבצים</string>
-    <string name="saving">שומר...</string>
-    <string name="could_not_create_folder">לא ניתן ליצור תיקייה %s</string>
-    <string name="could_not_create_file">לא ניתן ליצור קובת %s</string>
-    <string name="no_new_items">לא נמצאו פריטים חדשים</string>
+    <string name="copy">Copy</string>
+    <string name="move">Move</string>
+    <string name="copy_move">Copy / Move</string>
+    <string name="copy_to">Copy to</string>
+    <string name="move_to">Move to</string>
+    <string name="source">Source</string>
+    <string name="destination">Destination</string>
+    <string name="select_destination">Select destination</string>
+    <string name="click_select_destination">Click here to select destination</string>
+    <string name="invalid_destination">Could not write to the selected destination</string>
+    <string name="please_select_destination">Please select a destination</string>
+    <string name="source_and_destination_same">Source and destination cannot be the same</string>
+    <string name="copy_failed">Could not copy the files</string>
+    <string name="copying">Copying…</string>
+    <string name="copying_success">Files copied successfully</string>
+    <string name="copy_move_failed">An error occurred</string>
+    <string name="moving">Moving…</string>
+    <string name="moving_success">Files moved successfully</string>
+    <string name="moving_success_partial">Some files could not be moved</string>
+    <string name="copying_success_partial">Some files could not be copied</string>
+    <string name="no_files_selected">No files selected</string>
+    <string name="saving">Saving…</string>
+    <string name="could_not_create_folder">Could not create folder %s</string>
+    <string name="could_not_create_file">Could not create file %s</string>
+    <string name="no_new_items">No new items have been found</string>
     <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
 
     <!-- Create new -->
-    <string name="create_new">צור חדש</string>
-    <string name="folder">תיקיה</string>
-    <string name="file">קובץ</string>
-    <string name="create_new_folder">יצירת תיקייה חדשה</string>
-    <string name="name_taken">קובץ או תיקייה עם שם זהה כבר קיימים</string>
-    <string name="invalid_name">השם מכיל תווים לא חוקיים</string>
-    <string name="empty_name">נא להכניס שם</string>
-    <string name="unknown_error_occurred">שגיאה לא ידועה אירעה</string>
+    <string name="create_new">Create new</string>
+    <string name="folder">Folder</string>
+    <string name="file">File</string>
+    <string name="create_new_folder">Create new folder</string>
+    <string name="name_taken">A file or folder with that name already exists</string>
+    <string name="invalid_name">The name contains invalid characters</string>
+    <string name="empty_name">Please enter a name</string>
+    <string name="unknown_error_occurred">An unknown error occurred</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">הקובץ \"%s\" כבר קיים</string>
-    <string name="file_already_exists_overwrite">הקובץ \"%s\" כבר קיים. לדרוס?</string>
-    <string name="folder_already_exists">התיקייה \"%s\" כבר קיימת</string>
-    <string name="merge">מזג</string>
-    <string name="keep_both">שמור את שניהם</string>
-    <string name="overwrite">דרוס</string>
-    <string name="skip">דלג</string>
+    <string name="file_already_exists">File \"%s\" already exists</string>
+    <string name="file_already_exists_overwrite">File \"%s\" already exists. Overwrite?</string>
+    <string name="folder_already_exists">Folder \"%s\" already exists</string>
+    <string name="merge">Merge</string>
+    <string name="keep_both">Keep both</string>
+    <string name="overwrite">Overwrite</string>
+    <string name="skip">Skip</string>
     <string name="append">Append with \'_1\'</string>
-    <string name="apply_to_all">החל על הכל</string>
+    <string name="apply_to_all">Apply to all</string>
 
     <!-- File picker -->
-    <string name="select_folder">בחר/י תיקייה</string>
-    <string name="select_file">בחר/י קובץ</string>
-    <string name="confirm_storage_access_title">אישור גישה לאחסון חיצוני</string>
-    <string name="confirm_storage_access_text">נא לבחור את תיקיית האב של כרטיס ה SD במסך הבא, כדי להעניק הרשאות גישה</string>
-    <string name="confirm_storage_access_text_sd">אם לא מופיע כרטיס ה SD, ניתן לנסות</string>
-    <string name="confirm_selection">אישור בחירה</string>
+    <string name="select_folder">Select a folder</string>
+    <string name="select_file">Select a file</string>
+    <string name="confirm_storage_access_title">Confirm external storage access</string>
+    <string name="confirm_storage_access_text">Please choose the top folder of the SD card on the next screen, to grant write access</string>
+    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
+    <string name="confirm_selection">Confirm selection</string>
 
     <plurals name="items">
         <item quantity="one">%d item</item>
@@ -180,9 +180,9 @@
     </plurals>
 
     <!-- Storages -->
-    <string name="select_storage">בחירת אחסון</string>
-    <string name="internal">פנימי</string>
-    <string name="sd_card">כרטיס SD</string>
+    <string name="select_storage">Select storage</string>
+    <string name="internal">Internal</string>
+    <string name="sd_card">SD Card</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Wrong folder selected, please select the root folder of your SD card</string>
     <string name="sd_card_usb_same">SD card and USB device paths cannot be the same</string>
@@ -190,44 +190,44 @@
         It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
 
     <!-- File properties -->
-    <string name="properties">מאפיינים</string>
-    <string name="path">נתיב</string>
-    <string name="items_selected">פריטים נבחרים</string>
+    <string name="properties">Properties</string>
+    <string name="path">Path</string>
+    <string name="items_selected">Items selected</string>
     <string name="direct_children_count">Direct children count</string>
     <string name="files_count">Total files count</string>
-    <string name="resolution">רזולוצייה</string>
+    <string name="resolution">Resolution</string>
     <string name="duration">Duration</string>
-    <string name="artist">אומן</string>
-    <string name="album">אלבום</string>
+    <string name="artist">Artist</string>
+    <string name="album">Album</string>
     <string name="focal_length">Focal length</string>
     <string name="exposure_time">Exposure time</string>
     <string name="iso_speed">ISO speed</string>
     <string name="f_number">F-number</string>
-    <string name="camera">מצלמה</string>
+    <string name="camera">Camera</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">כותר שיר</string>
+    <string name="song_title">Song title</string>
     <string name="gps_coordinates">GPS coordinates</string>
     <string name="altitude">Altitude</string>
 
     <!-- Color customization -->
     <string name="background_color">Background color</string>
-    <string name="text_color">צבע טקסט</string>
-    <string name="primary_color">צבע עיקרי</string>
-    <string name="foreground_color">צבע חזית</string>
-    <string name="app_icon_color">צבע אייקון תוכנה</string>
-    <string name="bottom_navigation_bar_color">צבע סרגל ניווט</string>
-    <string name="restore_defaults">שיחזור ברירת מחדל</string>
-    <string name="use_default">שימוש בברירת מחדל</string>
-    <string name="default_color">ברירת מחדל</string>
-    <string name="change_color">שנה צבע</string>
-    <string name="theme">ערכת נושא</string>
-    <string name="changing_color_description">שינוי צבע יגרום לשימוש בערכת נושא מותאמת</string>
-    <string name="save">שמור</string>
-    <string name="discard">השלך</string>
-    <string name="undo_changes">בטל שינויים</string>
-    <string name="undo_changes_confirmation">האם לבטל שינויים?</string>
-    <string name="save_before_closing">ישנם שינויים לא שומרים. לשמור לפני יציאה?</string>
-    <string name="apply_to_all_apps">קבע צבעים עבור על אפליקציות Simple Apps</string>
+    <string name="text_color">Text color</string>
+    <string name="primary_color">Primary color</string>
+    <string name="foreground_color">Foreground color</string>
+    <string name="app_icon_color">App icon color</string>
+    <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
+    <string name="restore_defaults">Restore defaults</string>
+    <string name="use_default">Use default</string>
+    <string name="default_color">Default</string>
+    <string name="change_color">Change color</string>
+    <string name="theme">Theme</string>
+    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
+    <string name="save">Save</string>
+    <string name="discard">Discard</string>
+    <string name="undo_changes">Undo changes</string>
+    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
+    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
+    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
     <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
         Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
@@ -239,70 +239,70 @@
     </string>
 
     <!-- Themes -->
-    <string name="light_theme">בהיר</string>
-    <string name="dark_theme">כהה</string>
+    <string name="light_theme">Light</string>
+    <string name="dark_theme">Dark</string>
     <string name="solarized">Solarized</string>
-    <string name="dark_red">אדום כהה</string>
-    <string name="black_white">שחור ולבן</string>
-    <string name="custom">מותאם אישית</string>
-    <string name="shared">משותף</string>
+    <string name="dark_red">Dark red</string>
+    <string name="black_white">Black &amp; White</string>
+    <string name="custom">Custom</string>
+    <string name="shared">Shared</string>
 
     <!-- What's new -->
-    <string name="whats_new">מה חדש</string>
+    <string name="whats_new">What\'s new</string>
     <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
 
     <!-- Actionbar items -->
-    <string name="delete">מחק</string>
-    <string name="remove">הסר</string>
-    <string name="rename">שנה שם</string>
-    <string name="share">שתף</string>
-    <string name="share_via">שתף דרך</string>
-    <string name="select_all">בחר הכל</string>
+    <string name="delete">Delete</string>
+    <string name="remove">Remove</string>
+    <string name="rename">Rename</string>
+    <string name="share">Share</string>
+    <string name="share_via">Share via</string>
+    <string name="select_all">Select all</string>
     <string name="select_text">Select text</string>
-    <string name="hide">הסתר</string>
-    <string name="unhide">בטל הסתרה</string>
-    <string name="hide_folder">הסתר תיקייה</string>
-    <string name="unhide_folder">בטל הסתרת תיקייה</string>
-    <string name="temporarily_show_hidden">הצג הכל באופן זמני</string>
-    <string name="stop_showing_hidden">הספק הצגה של מדיה</string>
-    <string name="maximum_share_reached">לא ניתן לשתף כמות זו בבת אחת</string>
-    <string name="empty_and_disable_recycle_bin">רוקן והשבת את סל המחזור</string>
-    <string name="undo">שחזר</string>
-    <string name="redo">בצע מחדש</string>
-    <string name="print">הדפס</string>
-    <string name="create_shortcut">צור קיצור דרך</string>
-    <string name="add_number_to_contact">הוסף מספר לאנשי קשר</string>
+    <string name="hide">Hide</string>
+    <string name="unhide">Unhide</string>
+    <string name="hide_folder">Hide folder</string>
+    <string name="unhide_folder">Unhide folder</string>
+    <string name="temporarily_show_hidden">Temporarily show hidden</string>
+    <string name="stop_showing_hidden">Stop showing hidden media</string>
+    <string name="maximum_share_reached">You cannot share this much content at once</string>
+    <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
+    <string name="undo">Undo</string>
+    <string name="redo">Redo</string>
+    <string name="print">Print</string>
+    <string name="create_shortcut">Create shortcut</string>
+    <string name="add_number_to_contact">Add number to contact</string>
 
     <!-- Sorting -->
-    <string name="sort_by">מיין לפי</string>
-    <string name="name">שם</string>
-    <string name="size">גודל</string>
-    <string name="last_modified">עודן לאחרונה</string>
+    <string name="sort_by">Sort by</string>
+    <string name="name">Name</string>
+    <string name="size">Size</string>
+    <string name="last_modified">Last modified</string>
     <string name="date_taken">Date taken</string>
-    <string name="title">כותרת</string>
-    <string name="filename">שם קובץ</string>
-    <string name="extension">תוסף</string>
-    <string name="random">אקראי</string>
-    <string name="sort_randomly">מיין בצורה אקראית</string>
+    <string name="title">Title</string>
+    <string name="filename">Filename</string>
+    <string name="extension">Extension</string>
+    <string name="random">Random</string>
+    <string name="sort_randomly">Sort randomly</string>
     <string name="ascending">Ascending</string>
     <string name="descending">Descending</string>
-    <string name="use_for_this_folder">השתמש בתיקייה זו בלבד</string>
+    <string name="use_for_this_folder">Use for this folder only</string>
     <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
-    <string name="first_name">שם</string>
-    <string name="middle_name">שם אמצעי</string>
-    <string name="surname">שם משפחה</string>
-    <string name="full_name">שם מלא</string>
+    <string name="first_name">First name</string>
+    <string name="middle_name">Middle name</string>
+    <string name="surname">Surname</string>
+    <string name="full_name">Full name</string>
 
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">להמשיך במחיקה?</string>
-    <string name="deletion_confirmation">האם למחוק את %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">האם להעביר את %s לסל המחזור?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">האם למחוק פריט זה?</string>
-    <string name="are_you_sure_recycle_bin">האם להעביר פריט זה לסל המחזור?</string>
+    <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
+    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s into the Recycle Bin?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
+    <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
     <string name="do_not_ask_again">Do not ask again in this session</string>
-    <string name="yes">כן</string>
-    <string name="no">לא</string>
-    <string name="maybe">אולי</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="maybe">Maybe</string>
 
     <plurals name="delete_warning">
         <item quantity="one">WARNING: You are deleting %d folder</item>
@@ -311,36 +311,36 @@
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">הכנס PIN</string>
-    <string name="please_enter_pin">נא להכניס PIN</string>
-    <string name="wrong_pin">שגיאה ב PIN</string>
-    <string name="repeat_pin">חזור על PIN</string>
-    <string name="pattern">דפוס</string>
-    <string name="insert_pattern">הכנס דפוס</string>
-    <string name="wrong_pattern">דפוס שגוי</string>
-    <string name="repeat_pattern">חזור על דפוס</string>
-    <string name="fingerprint">טביעת אצבע</string>
-    <string name="add_fingerprint">הוספת טביעת אצבע</string>
-    <string name="place_finger">נא להניח את טביעת האצבע על החיישן</string>
-    <string name="authentication_failed">זיהוי נכשל</string>
-    <string name="authentication_blocked">זיהוי חסוי. נא לנסות שוב מאוחר יותר</string>
-    <string name="no_fingerprints_registered">אין טביעות אצבע רשומות. נא להוסיף בהגדרות המכשיר</string>
-    <string name="go_to_settings">עבור להגדרות</string>
-    <string name="protection_setup_successfully">סיסמה הוגדרה בהצלחה. נא להתקין שוב את האפליקציה במיקרה של איבוד הסיסמה.</string>
+    <string name="enter_pin">Enter PIN</string>
+    <string name="please_enter_pin">Please enter a PIN</string>
+    <string name="wrong_pin">Wrong PIN</string>
+    <string name="repeat_pin">Repeat PIN</string>
+    <string name="pattern">Pattern</string>
+    <string name="insert_pattern">Insert pattern</string>
+    <string name="wrong_pattern">Wrong pattern</string>
+    <string name="repeat_pattern">Repeat pattern</string>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="add_fingerprint">Add fingerprint</string>
+    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
+    <string name="authentication_failed">Authentication failed</string>
+    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
+    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
     <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
-    <string name="lock_folder">נעל תיקייה</string>
-    <string name="unlock_folder">בטל נעילת תיקייה</string>
+    <string name="lock_folder">Lock folder</string>
+    <string name="unlock_folder">Unlock folder</string>
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
 
     <!-- Times -->
-    <string name="yesterday">אתמול</string>
-    <string name="today">היום</string>
-    <string name="tomorrow">אתמול</string>
-    <string name="hide_year">הסתר שנה</string>
-    <string name="seconds_raw">שניות</string>
-    <string name="minutes_raw">דקות</string>
-    <string name="hours_raw">שעות</string>
-    <string name="days_raw">ימים</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="hide_year">Hide year</string>
+    <string name="seconds_raw">seconds</string>
+    <string name="minutes_raw">minutes</string>
+    <string name="hours_raw">hours</string>
+    <string name="days_raw">days</string>
 
     <plurals name="seconds">
         <item quantity="one">%d second</item>
@@ -473,79 +473,79 @@
     <string name="snooze">Snooze</string>
     <string name="dismiss">Dismiss</string>
     <string name="no_reminder">No reminder</string>
-    <string name="at_start">בהתחלה</string>
-    <string name="system_sounds">צלילי מערכת</string>
-    <string name="your_sounds">הצלילים שלך</string>
-    <string name="add_new_sound">הוספת צליל</string>
+    <string name="at_start">At start</string>
+    <string name="system_sounds">System sounds</string>
+    <string name="your_sounds">Your sounds</string>
+    <string name="add_new_sound">Add a new sound</string>
     <string name="no_sound">No sound</string>
 
     <!-- Settings -->
-    <string name="settings">הגדרות</string>
+    <string name="settings">Settings</string>
     <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
-    <string name="customize_colors">התאם צבעים</string>
-    <string name="customize_widget_colors">התאם צבעי יישומון</string>
-    <string name="use_english_language">השתמש בשפה האנגלית</string>
-    <string name="show_hidden_items">הצג פריטים מוסתרים</string>
-    <string name="font_size">גודל פונט</string>
-    <string name="small">קטן</string>
-    <string name="medium">בינוני</string>
-    <string name="large">גדול</string>
-    <string name="extra_large">ענק</string>
+    <string name="customize_colors">Customize colors</string>
+    <string name="customize_widget_colors">Customize widget colors</string>
+    <string name="use_english_language">Use English language</string>
+    <string name="show_hidden_items">Show hidden items</string>
+    <string name="font_size">Font size</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="extra_large">Extra large</string>
     <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
     <string name="password_protect_whole_app">Password protect the whole application</string>
     <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
     <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
     <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
-    <string name="skip_delete_confirmation">תמיד לדלג על אישור מחיקה</string>
-    <string name="enable_pull_to_refresh">הפעל סנכרון על ידי משיכה מלמעלה</string>
-    <string name="use_24_hour_time_format">השתמש בפורמט של 24 שעות</string>
-    <string name="change_date_and_time_format">שנה פורמט תאריך ושעה</string>
-    <string name="sunday_first">יום ראשון בשבוע</string>
-    <string name="widgets">יישומונים</string>
+    <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
+    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="use_24_hour_time_format">Use 24-hour time format</string>
+    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="sunday_first">Start week on Sunday</string>
+    <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Always use same snooze time</string>
     <string name="snooze_time">Snooze time</string>
-    <string name="vibrate_on_button_press">רטט בלחיצה על כפתור</string>
-    <string name="move_items_into_recycle_bin">העבר לסל המחזור במקום מחיקה</string>
-    <string name="recycle_bin_cleaning_interval">זמן ריקון של סל המחזור</string>
-    <string name="empty_recycle_bin">רוקן את סל המחזור</string>
-    <string name="force_portrait_mode">אלץ מצב אנכי</string>
-    <string name="export_settings">ייצא הגדרות</string>
-    <string name="import_settings">יבא הגדרות</string>
-    <string name="settings_exported_successfully">הגדרות הוצאו בהצלחה</string>
-    <string name="settings_imported_successfully">הגדרות יובאו בהצלחה</string>
-    <string name="start_name_with_surname">התחל שם בשם משפחה</string>
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="move_items_into_recycle_bin">Move items into the Recycle Bin instead of deleting</string>
+    <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
+    <string name="empty_recycle_bin">Empty the Recycle Bin</string>
+    <string name="force_portrait_mode">Force portrait mode</string>
+    <string name="export_settings">Export settings</string>
+    <string name="import_settings">Import settings</string>
+    <string name="settings_exported_successfully">Settings exported successfully</string>
+    <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="start_name_with_surname">Start name with surname</string>
 
     <!-- Setting sections -->
-    <string name="visibility">נראות</string>
-    <string name="security">אבטחה</string>
-    <string name="scrolling">גלילה</string>
-    <string name="file_operations">פעולות קובץ</string>
-    <string name="recycle_bin">סל מחזור</string>
-    <string name="saving_label">שומר</string>
+    <string name="visibility">Visibility</string>
+    <string name="security">Security</string>
+    <string name="scrolling">Scrolling</string>
+    <string name="file_operations">File operations</string>
+    <string name="recycle_bin">Recycle Bin</string>
+    <string name="saving_label">Saving</string>
     <string name="startup">Startup</string>
-    <string name="text">טקסט</string>
+    <string name="text">Text</string>
     <string name="migrating">Migrating</string>
 
     <!-- Default tabs to open -->
-    <string name="default_tab_to_open">טאב בפתיחת האפליקצייה</string>
-    <string name="contacts_tab">אנשי קשר</string>
-    <string name="favorites_tab">מועדפים</string>
-    <string name="call_history_tab">היסטוריית שיחות</string>
-    <string name="groups_tab">קבוצות</string>
-    <string name="last_used_tab">בשימוש לאחרונה</string>
+    <string name="default_tab_to_open">Tab to open at app start</string>
+    <string name="contacts_tab">Contacts</string>
+    <string name="favorites_tab">Favorites</string>
+    <string name="call_history_tab">Call History</string>
+    <string name="groups_tab">Groups</string>
+    <string name="last_used_tab">Last used one</string>
 
     <!-- Recycle Bin -->
-    <string name="restore_this_file">שחזר קובץ זה</string>
-    <string name="restore_selected_files">שחזר קבצים נבחרים</string>
-    <string name="restore_all_files">שחזר את כל הקבצים</string>
-    <string name="recycle_bin_emptied">סל המחזור רוקן בהצלחה</string>
-    <string name="files_restored_successfully">קבצים שוחזרו בהצלחה</string>
-    <string name="empty_recycle_bin_confirmation">האם לרוקן את סל המחזור? הקבצים יימחקו לצמיתות.</string>
-    <string name="recycle_bin_empty">סל המחזור ריק</string>
-    <string name="moving_recycle_bin_items_disabled">העברה של פריטי סל המחזור מבוטלת. נא להשתמש בשחזור</string>
-    <string name="show_the_recycle_bin">הצג את סל המחזור</string>
-    <string name="hide_the_recycle_bin">הסתר את סל המחזור</string>
+    <string name="restore_this_file">Restore this file</string>
+    <string name="restore_selected_files">Restore selected files</string>
+    <string name="restore_all_files">Restore all files</string>
+    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
+    <string name="files_restored_successfully">Files have been restored successfully</string>
+    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
+    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
+    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
+    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
+    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Moving %d item into the Recycle Bin</item>
@@ -553,16 +553,16 @@
     </plurals>
 
     <!-- Import / Export -->
-    <string name="importing">מייבא...</string>
-    <string name="exporting">מייצא...</string>
-    <string name="importing_successful">ייבוא הצליח</string>
-    <string name="exporting_successful">ייצוא הצליח</string>
-    <string name="importing_failed">ייבוא נכשל</string>
-    <string name="exporting_failed">ייצוא נכשל</string>
-    <string name="importing_some_entries_failed">ייבוא חלק מהרשומות נכשל</string>
-    <string name="exporting_some_entries_failed">ייצוא חלק מהרשומות נכשל</string>
-    <string name="no_entries_for_importing">לא נמצאו רשומות לייבוא</string>
-    <string name="no_entries_for_exporting">לא נמצאו רשומות לייצוא</string>
+    <string name="importing">Importing…</string>
+    <string name="exporting">Exporting…</string>
+    <string name="importing_successful">Importing successful</string>
+    <string name="exporting_successful">Exporting successful</string>
+    <string name="importing_failed">Importing failed</string>
+    <string name="exporting_failed">Exporting failed</string>
+    <string name="importing_some_entries_failed">Importing some entries failed</string>
+    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
+    <string name="no_entries_for_importing">No entries for importing have been found</string>
+    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
@@ -571,67 +571,67 @@
     <string name="wrong_root_selected_usb">Wrong folder selected, please select the root folder of your USB device</string>
 
     <!-- Dates -->
-    <string name="january">ינואר</string>
-    <string name="february">פברואר</string>
-    <string name="march">מרץ</string>
-    <string name="april">אפריל</string>
-    <string name="may">מאי</string>
-    <string name="june">יוני</string>
-    <string name="july">יולי</string>
-    <string name="august">אוגוסט</string>
-    <string name="september">ספטמבר</string>
-    <string name="october">אוקטובר</string>
-    <string name="november">נובמבר</string>
-    <string name="december">דצמבר</string>
+    <string name="january">January</string>
+    <string name="february">February</string>
+    <string name="march">March</string>
+    <string name="april">April</string>
+    <string name="may">May</string>
+    <string name="june">June</string>
+    <string name="july">July</string>
+    <string name="august">August</string>
+    <string name="september">September</string>
+    <string name="october">October</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
 
     <!-- in January -->
-    <string name="in_january">בינואר</string>
-    <string name="in_february">בפברואר</string>
-    <string name="in_march">במרץ</string>
-    <string name="in_april">באפריל</string>
-    <string name="in_may">במאי</string>
-    <string name="in_june">ביוני</string>
-    <string name="in_july">ביולי</string>
-    <string name="in_august">באוגוסט</string>
-    <string name="in_september">בספטמבר</string>
-    <string name="in_october">באוקטובר</string>
-    <string name="in_november">בנובמבר</string>
-    <string name="in_december">בדצמבר</string>
+    <string name="in_january">in January</string>
+    <string name="in_february">in February</string>
+    <string name="in_march">in March</string>
+    <string name="in_april">in April</string>
+    <string name="in_may">in May</string>
+    <string name="in_june">in June</string>
+    <string name="in_july">in July</string>
+    <string name="in_august">in August</string>
+    <string name="in_september">in September</string>
+    <string name="in_october">in October</string>
+    <string name="in_november">in November</string>
+    <string name="in_december">in December</string>
 
-    <string name="monday">שני</string>
-    <string name="tuesday">שלישי</string>
-    <string name="wednesday">רביעי</string>
-    <string name="thursday">חמישי</string>
-    <string name="friday">שישי</string>
-    <string name="saturday">שבת</string>
-    <string name="sunday">ראשון</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
 
-    <string name="monday_letter">ב\'</string>
-    <string name="tuesday_letter">ג\'</string>
-    <string name="wednesday_letter">ד\'</string>
-    <string name="thursday_letter">ה\'</string>
-    <string name="friday_letter">ו\'</string>
-    <string name="saturday_letter">ש\'</string>
-    <string name="sunday_letter">א\'</string>
+    <string name="monday_letter">M</string>
+    <string name="tuesday_letter">T</string>
+    <string name="wednesday_letter">W</string>
+    <string name="thursday_letter">T</string>
+    <string name="friday_letter">F</string>
+    <string name="saturday_letter">S</string>
+    <string name="sunday_letter">S</string>
 
-    <string name="monday_short">ב\'</string>
-    <string name="tuesday_short">ג\'</string>
-    <string name="wednesday_short">ד\'</string>
-    <string name="thursday_short">ה\'</string>
-    <string name="friday_short">ו\'</string>
-    <string name="saturday_short">ז\'</string>
-    <string name="sunday_short">א\'</string>
+    <string name="monday_short">Mon</string>
+    <string name="tuesday_short">Tue</string>
+    <string name="wednesday_short">Wed</string>
+    <string name="thursday_short">Thu</string>
+    <string name="friday_short">Fri</string>
+    <string name="saturday_short">Sat</string>
+    <string name="sunday_short">Sun</string>
 
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
     <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
     <string name="it_is_free">It is free till: %s. If you download it till then, you will be able to use it for free forever.</string>
-    <string name="more_info">מידע נוסף</string>
-    <string name="upgrade">עדכון</string>
+    <string name="more_info">More info</string>
+    <string name="upgrade">Upgrade</string>
     <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
 
     <!-- About -->
-    <string name="about">אודות</string>
+    <string name="about">About</string>
     <string name="website_label">For the source codes visit</string>
     <string name="email_label">Send your feedback or suggestions to</string>
     <string name="upgrade_to_pro">Upgrade to Pro</string>
@@ -642,12 +642,12 @@
     <string name="share_text">Hey, come check out %1$s at %2$s</string>
     <string name="invite_via">Invite via</string>
     <string name="rate_us_underlined"><u>Rate us</u></string>
-    <string name="rate">דרג</string>
-    <string name="donate">תרום</string>
+    <string name="rate">Rate</string>
+    <string name="donate">Donate</string>
     <string name="donate_underlined"><u>Donate</u></string>
     <string name="follow_us">Follow us</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="additional_info">מידע נוסף</string>
+    <string name="additional_info">Additional info</string>
     <string name="app_version">App version: %s</string>
     <string name="device_os">Device OS: %s</string>
     <string name="donate_please">
@@ -699,21 +699,21 @@
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
 
     <string name="app_launcher_short">App Launcher</string>
-    <string name="calculator_short">מחשבון</string>
-    <string name="calendar_short">יומן</string>
-    <string name="camera_short">מצלמה</string>
-    <string name="clock_short">שעון</string>
-    <string name="contacts_short">אנשי קשר</string>
-    <string name="dialer_short">חייגן</string>
-    <string name="draw_short">צייר</string>
-    <string name="file_manager_short">סייר קבצים</string>
-    <string name="flashlight_short">פנס</string>
-    <string name="gallery_short">גלריה</string>
-    <string name="music_player_short">נגן מוזיקה</string>
-    <string name="notes_short">פתקים</string>
-    <string name="sms_messenger_short">הודעות SMS</string>
+    <string name="calculator_short">Calculator</string>
+    <string name="calendar_short">Calendar</string>
+    <string name="camera_short">Camera</string>
+    <string name="clock_short">Clock</string>
+    <string name="contacts_short">Contacts</string>
+    <string name="dialer_short">Dialer</string>
+    <string name="draw_short">Draw</string>
+    <string name="file_manager_short">File Manager</string>
+    <string name="flashlight_short">Flashlight</string>
+    <string name="gallery_short">Gallery</string>
+    <string name="music_player_short">Music Player</string>
+    <string name="notes_short">Notes</string>
+    <string name="sms_messenger_short">SMS Messenger</string>
     <string name="thank_you_short">Thank You</string>
-    <string name="voice_recorder_short">רשמקול</string>
+    <string name="voice_recorder_short">Voice Recorder</string>
 
     <string name="sideloaded_app">
         <![CDATA[

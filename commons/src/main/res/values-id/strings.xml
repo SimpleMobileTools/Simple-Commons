@@ -11,7 +11,9 @@
     <string name="no_app_found">Tidak ada aplikasi yang sesuai</string>
     <string name="set_as">Setel sebagai</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Nilai disalin ke papan klip</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Tidak diketahui</string>
     <string name="always">Selalu</string>
     <string name="never">Jangan pernah</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Meminta izin yang diperlukan</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Ubah tampilan</string>
+    <string name="grid">Kotak</string>
+    <string name="list">Daftar</string>
+    <string name="increase_column_count">Tambah jumlah kolom</string>
+    <string name="reduce_column_count">Kurangi jumlah kolom</string>
+    <string name="change_cover_image">Ubah gambar kover</string>
+    <string name="select_photo">Pilih foto</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Kelola nomor yang diblokir</string>
@@ -244,6 +255,7 @@
     <string name="share">Bagikan</string>
     <string name="share_via">Bagikan via</string>
     <string name="select_all">Pilih semua</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Sembunyikan</string>
     <string name="unhide">Tampilkan</string>
     <string name="hide_folder">Sembunyikan folder</string>

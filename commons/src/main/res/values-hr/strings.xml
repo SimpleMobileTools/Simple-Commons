@@ -11,7 +11,9 @@
     <string name="no_app_found">Nema odgovarajuće aplikacije</string>
     <string name="set_as">Postavi kao</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Vrijednost spremljena u međuspremnik</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Nepoznato</string>
     <string name="always">Uvijek</string>
     <string name="never">Nikad</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Zatraži potrebna dopuštenja</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Promijeni vrstu prikaza</string>
+    <string name="grid">Mreža</string>
+    <string name="list">Lista</string>
+    <string name="increase_column_count">Povećaj broj stupaca</string>
+    <string name="reduce_column_count">Smanji broj stupaca</string>
+    <string name="change_cover_image">Promjeni naslovnu sliku</string>
+    <string name="select_photo">Odaberi sliku</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Upravljanje blokiranim brojevima</string>
@@ -250,6 +261,7 @@
     <string name="share">Dijeli</string>
     <string name="share_via">Dijeli preko</string>
     <string name="select_all">Odaberi sve</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Sakrij</string>
     <string name="unhide">Otkrij</string>
     <string name="hide_folder">Sakrij mapu</string>

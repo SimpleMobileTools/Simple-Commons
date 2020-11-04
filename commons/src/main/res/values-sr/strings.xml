@@ -11,7 +11,9 @@
     <string name="no_app_found">Није пронађена одговарајућа апликација</string>
     <string name="set_as">Подеси као</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Вредност копирана у клипборд</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Непознато</string>
     <string name="always">Увек</string>
     <string name="never">Никад</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Request the required permissions</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Промени тип прегледа</string>
+    <string name="grid">Мрежа</string>
+    <string name="list">Листа</string>
+    <string name="increase_column_count">Повећај број колона</string>
+    <string name="reduce_column_count">Смањи број колона</string>
+    <string name="change_cover_image">Промени насловну слику</string>
+    <string name="select_photo">Изабери фотографију</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Manage blocked numbers</string>
@@ -246,6 +257,7 @@
     <string name="share">Подели</string>
     <string name="share_via">Подели путем</string>
     <string name="select_all">Означи све</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Сакриј</string>
     <string name="unhide">Прикажи</string>
     <string name="hide_folder">Склони фасциклу</string>

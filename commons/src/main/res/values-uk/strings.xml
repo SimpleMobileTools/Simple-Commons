@@ -11,7 +11,9 @@
     <string name="no_app_found">Не знайдено допустимих додатків</string>
     <string name="set_as">Встановити як</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Значення скопійовано у буфер обміну</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Невідомо</string>
     <string name="always">Завжди</string>
     <string name="never">Ніколи</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Запит на необхідні дозволи</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Змінити тип перегляду</string>
+    <string name="grid">Сітка</string>
+    <string name="list">Список</string>
+    <string name="increase_column_count">Збільшити кількість колонок</string>
+    <string name="reduce_column_count">Зменшити кількість колонок</string>
+    <string name="change_cover_image">Змінити обкладинку</string>
+    <string name="select_photo">Вибрати фото</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Керувати блокованими номерами</string>
@@ -247,6 +258,7 @@
     <string name="share">Поділитися</string>
     <string name="share_via">Поділитися через</string>
     <string name="select_all">Обрати все</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Приховати</string>
     <string name="unhide">Показати</string>
     <string name="hide_folder">Приховати теку</string>

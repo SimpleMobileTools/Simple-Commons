@@ -11,7 +11,9 @@
     <string name="no_app_found">Ni veljavne aplikacije</string>
     <string name="set_as">Nastavi kot</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Vrednost kopirana v odložišče</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Neznano</string>
     <string name="always">Vedno</string>
     <string name="never">Nikoli</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Request the required permissions</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Spremeni tip pogleda</string>
+    <string name="grid">Mreža</string>
+    <string name="list">Seznam</string>
+    <string name="increase_column_count">Povečaj število stolpcev</string>
+    <string name="reduce_column_count">Zmanjšaj število stolpcev</string>
+    <string name="change_cover_image">Spremeni naslovno fotografijo</string>
+    <string name="select_photo">Izberi fotografijo</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Manage blocked numbers</string>
@@ -252,6 +263,7 @@
     <string name="share">Deli</string>
     <string name="share_via">Deli preko</string>
     <string name="select_all">Izberi vse</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Skrij</string>
     <string name="unhide">Odkrij</string>
     <string name="hide_folder">Skrij mapo</string>

@@ -7,6 +7,7 @@ import android.app.role.RoleManager
 import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
+import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
@@ -40,6 +41,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     var actionOnPermission: ((granted: Boolean) -> Unit)? = null
     var isAskingPermissions = false
     var useDynamicTheme = true
+    var showTransparentTop = false
     var checkedDocumentPath = ""
     var configItemsToExport = LinkedHashMap<String, Any>()
 
@@ -55,7 +57,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         if (useDynamicTheme) {
-            setTheme(getThemeId())
+            setTheme(getThemeId(showTransparentTop = showTransparentTop))
         }
 
         super.onCreate(savedInstanceState)
@@ -72,10 +74,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         if (useDynamicTheme) {
-            setTheme(getThemeId())
+            setTheme(getThemeId(showTransparentTop = showTransparentTop))
             updateBackgroundColor()
         }
-        updateActionbarColor()
+
+        if (showTransparentTop) {
+            window.statusBarColor = Color.TRANSPARENT
+        } else {
+            updateActionbarColor()
+        }
+
         updateRecentsAppIcon()
         updateNavigationBarColor()
     }

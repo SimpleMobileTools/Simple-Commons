@@ -11,7 +11,9 @@
     <string name="no_app_found">Nie mogę znaleźć danych aplikacji</string>
     <string name="set_as">Ustaw jako</string>
     <string name="copy_to_clipboard">Kopiuj do schowka</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Wartość została skopiowana do schowka</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Nieznane</string>
     <string name="always">Zawsze</string>
     <string name="never">Nigdy</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Wymagaj koniecznych uprawnień</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Zmień typ widoku</string>
+    <string name="grid">Siatka</string>
+    <string name="list">Lista</string>
+    <string name="increase_column_count">Zwiększ liczbę kolumn</string>
+    <string name="reduce_column_count">Zmniejsz liczbę kolumn</string>
+    <string name="change_cover_image">Zmień okładkę</string>
+    <string name="select_photo">Wybierz obraz</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Zarządzaj zablokowanymi numerami</string>
@@ -248,6 +259,7 @@
     <string name="share">Udostępnij</string>
     <string name="share_via">Udostępnij w</string>
     <string name="select_all">Zaznacz wszystko</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Ukryj</string>
     <string name="unhide">Odkryj</string>
     <string name="hide_folder">Ukryj folder</string>

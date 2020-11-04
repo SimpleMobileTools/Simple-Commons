@@ -655,19 +655,21 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
             }
 
             try {
-                try {
-                    DocumentsContract.renameDocument(applicationContext.contentResolver, document.uri, newPath.getFilenameFromPath())
-                } catch (ignored: FileNotFoundException) {
-                    // FileNotFoundException is thrown in some weird cases, but renaming works just fine
-                }
-                updateInMediaStore(oldPath, newPath)
-                rescanPaths(arrayListOf(oldPath, newPath)) {
-                    if (!baseConfig.keepLastModified) {
-                        updateLastModified(newPath, System.currentTimeMillis())
+                ensureBackgroundThread {
+                    try {
+                        DocumentsContract.renameDocument(applicationContext.contentResolver, document.uri, newPath.getFilenameFromPath())
+                    } catch (ignored: FileNotFoundException) {
+                        // FileNotFoundException is thrown in some weird cases, but renaming works just fine
                     }
-                    deleteFromMediaStore(oldPath)
-                    runOnUiThread {
-                        callback?.invoke(true)
+                    updateInMediaStore(oldPath, newPath)
+                    rescanPaths(arrayListOf(oldPath, newPath)) {
+                        if (!baseConfig.keepLastModified) {
+                            updateLastModified(newPath, System.currentTimeMillis())
+                        }
+                        deleteFromMediaStore(oldPath)
+                        runOnUiThread {
+                            callback?.invoke(true)
+                        }
                     }
                 }
             } catch (e: Exception) {

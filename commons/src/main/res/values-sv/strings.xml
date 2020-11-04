@@ -11,7 +11,9 @@
     <string name="no_app_found">Ingen giltig app hittades</string>
     <string name="set_as">Använd som</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Värdet har kopierats till Urklipp</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Okänd</string>
     <string name="always">Alltid</string>
     <string name="never">Aldrig</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Begär de behörigheter som krävs</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Ändra vy</string>
+    <string name="grid">Rutnät</string>
+    <string name="list">Lista</string>
+    <string name="increase_column_count">Öka antalet kolumner</string>
+    <string name="reduce_column_count">Minska antalet kolumner</string>
+    <string name="change_cover_image">Byt omslagsbild</string>
+    <string name="select_photo">Välj foto</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Hantera blockerade nummer</string>
@@ -247,6 +258,7 @@
     <string name="share">Dela</string>
     <string name="share_via">Dela via</string>
     <string name="select_all">Välj alla</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Dölj</string>
     <string name="unhide">Visa</string>
     <string name="hide_folder">Dölj mapp</string>

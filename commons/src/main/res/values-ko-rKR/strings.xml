@@ -11,7 +11,9 @@
     <string name="no_app_found">연결 가능한 앱 없음</string>
     <string name="set_as">다른 앱에 설정</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">클립보드에 복사됨</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">알 수 없음</string>
     <string name="always">항상</string>
     <string name="never">사용 안함</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Request the required permissions</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">보기 방식 변경</string>
+    <string name="grid">타일</string>
+    <string name="list">목록</string>
+    <string name="increase_column_count">섬네일크기 축소</string>
+    <string name="reduce_column_count">섬네일크기 확대</string>
+    <string name="change_cover_image">커버 사진 변경</string>
+    <string name="select_photo">사진 선택</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Manage blocked numbers</string>
@@ -242,6 +253,7 @@
     <string name="share">공유</string>
     <string name="share_via">공유 방법</string>
     <string name="select_all">전체 선택</string>
+    <string name="select_text">Select text</string>
     <string name="hide">숨김</string>
     <string name="unhide">숨김 해제</string>
     <string name="hide_folder">폴더 숨김</string>

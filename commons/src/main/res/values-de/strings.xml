@@ -11,7 +11,9 @@
     <string name="no_app_found">Keine passende App gefunden</string>
     <string name="set_as">Festlegen als</string>
     <string name="copy_to_clipboard">In die Zwischenablage kopieren</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Wert in Zwischenablage kopiert</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Unbekannt</string>
     <string name="always">Immer</string>
     <string name="never">Nie</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Benötigte Berechtigungen anfordern</string>
     <string name="no_access_to_contacts">Die App kann nicht auf deine Kontakte zugreifen</string>
     <string name="insert_text_here">Text hier einfügen</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Darstellung ändern</string>
+    <string name="grid">Gitternetz</string>
+    <string name="list">Liste</string>
+    <string name="increase_column_count">Kacheln verkleinern</string>
+    <string name="reduce_column_count">Kacheln vergrößern</string>
+    <string name="change_cover_image">Coverbild ändern</string>
+    <string name="select_photo">Auswählen</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Blockierte Nummern verwalten</string>
@@ -247,6 +258,7 @@
     <string name="share">Teilen</string>
     <string name="share_via">Teilen via</string>
     <string name="select_all">Alle auswählen</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Verstecken</string>
     <string name="unhide">Nicht verstecken</string>
     <string name="hide_folder">Ordner verstecken</string>

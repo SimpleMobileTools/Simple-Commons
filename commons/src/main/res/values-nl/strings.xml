@@ -11,7 +11,9 @@
     <string name="no_app_found">Geen app gevonden om dit bestand mee te openen</string>
     <string name="set_as">Instellen als</string>
     <string name="copy_to_clipboard">Naar klembord kopiëren</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Gekopieerd naar klembord</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Onbekend</string>
     <string name="always">Altijd</string>
     <string name="never">Nooit</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Om benodigde machtigingen vragen</string>
     <string name="no_access_to_contacts">De app heeft geen toegang tot uw contacten</string>
     <string name="insert_text_here">Voeg hier tekst in</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Weergave</string>
+    <string name="grid">Raster</string>
+    <string name="list">Lijst</string>
+    <string name="increase_column_count">Meer kolommen</string>
+    <string name="reduce_column_count">Minder kolommen</string>
+    <string name="change_cover_image">Afbeelding omslag wijzigen</string>
+    <string name="select_photo">Foto selecteren</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Geblokkeerde nummers beheren</string>
@@ -247,6 +258,7 @@
     <string name="share">Delen</string>
     <string name="share_via">Delen via</string>
     <string name="select_all">Alles selecteren</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Verbergen</string>
     <string name="unhide">Tonen</string>
     <string name="hide_folder">Map verbergen</string>

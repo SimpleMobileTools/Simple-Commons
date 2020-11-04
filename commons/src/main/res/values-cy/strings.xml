@@ -11,7 +11,9 @@
     <string name="no_app_found">Ni chanfuwyd ap dilys</string>
     <string name="set_as">Gosod fel</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Copïwyd y gwerth i\'r clipfwrdd</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Anhysbys</string>
     <string name="always">Pob tro</string>
     <string name="never">Byth</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Gofyn am y caniatâd sydd ei angen</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Change view type</string>
+    <string name="grid">Grid</string>
+    <string name="list">List</string>
+    <string name="increase_column_count">Increase column count</string>
+    <string name="reduce_column_count">Reduce column count</string>
+    <string name="change_cover_image">Change cover image</string>
+    <string name="select_photo">Select photo</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Rheoli rhifau wedi\'u rhwystro</string>
@@ -259,6 +270,7 @@
     <string name="share">Rhannu</string>
     <string name="share_via">Rhannu gyda</string>
     <string name="select_all">Dewis y cwbl</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Cuddio</string>
     <string name="unhide">Datguddio</string>
     <string name="hide_folder">Cuddio ffolder</string>

@@ -11,7 +11,9 @@
     <string name="no_app_found">Nenalezena žádná vhodná aplikace</string>
     <string name="set_as">Nastavit jako</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Hodnota byla vložena do schránky</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Neznámý</string>
     <string name="always">Vždy</string>
     <string name="never">Nikdy</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Vyžádat potřebná oprávnění</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Změnit typ zobrazení</string>
+    <string name="grid">Mřížka</string>
+    <string name="list">Seznam</string>
+    <string name="increase_column_count">Zvýšit počet sloupců</string>
+    <string name="reduce_column_count">Snížit počet sloupců</string>
+    <string name="change_cover_image">Změnit obal alba</string>
+    <string name="select_photo">Vybrat fotografii</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Spravovat blokovaná čísla</string>
@@ -251,6 +262,7 @@
     <string name="share">Sdílet</string>
     <string name="share_via">Sdílet pomocí</string>
     <string name="select_all">Označit vše</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Skrýt</string>
     <string name="unhide">Odkrýt</string>
     <string name="hide_folder">Skrýt složku</string>

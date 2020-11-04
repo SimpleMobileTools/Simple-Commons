@@ -11,7 +11,9 @@
     <string name="no_app_found">Δεν βρέθηκε έγκυρη εφαρμογή</string>
     <string name="set_as">Ορισμός ως</string>
     <string name="copy_to_clipboard">Αντιγραφή στο Πρόχειρο</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Η τιμή αντιγράφηκε στο πρόχειρο</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Άγνωστο</string>
     <string name="always">Πάντα</string>
     <string name="never">Ποτέ</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Ζητούνται τα απαιτούμενα δικαιώματα</string>
     <string name="no_access_to_contacts">Η εφαρμογή δεν έχει πρόσβαση στις επαφές σας</string>
     <string name="insert_text_here">Εισαγωγή κειμένου εδώ</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Αλλαγή τύπου εμφάνισης</string>
+    <string name="grid">Πλέγμα</string>
+    <string name="list">Λίστα</string>
+    <string name="increase_column_count">Αύξηση αριθμού στηλών</string>
+    <string name="reduce_column_count">Μείωση αριθμού στηλών</string>
+    <string name="change_cover_image">Αλλαγή εξώφυλλου φακέλου</string>
+    <string name="select_photo">Επιλογή φωτογραφίας</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Διαχείριση αποκλεισμένων αριθμών</string>
@@ -247,6 +258,7 @@
     <string name="share">Κοινόχρηστο</string>
     <string name="share_via">Κοινόχρηστο μέσω</string>
     <string name="select_all">Επιλογή όλων</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Απόκρυψη</string>
     <string name="unhide">Επανεμφάνιση</string>
     <string name="hide_folder">Απόκρυψη φακέλου</string>

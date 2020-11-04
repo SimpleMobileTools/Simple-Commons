@@ -11,7 +11,9 @@
     <string name="no_app_found">Non se atopou un aplicativo válido</string>
     <string name="set_as">Establecer como</string>
     <string name="copy_to_clipboard">Copiar ao portapapeis</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Valor copiado no portapapeis</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Descoñecido</string>
     <string name="always">Sempre</string>
     <string name="never">Nunca</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Solicitar os permisos necesarios</string>
     <string name="no_access_to_contacts">O aplicativo non puido acceder aos teus contactos</string>
     <string name="insert_text_here">Introduce o texto aquí</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Cambiar o tipo de vista</string>
+    <string name="grid">Grella</string>
+    <string name="list">Lista</string>
+    <string name="increase_column_count">Aumenta o número de columnas</string>
+    <string name="reduce_column_count">Reduce o número de columnas</string>
+    <string name="change_cover_image">Cambiar a imaxe de portada</string>
+    <string name="select_photo">Escolle foto</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrar números bloqueados</string>
@@ -247,6 +258,7 @@
     <string name="share">Compartir</string>
     <string name="share_via">Compartir con</string>
     <string name="select_all">Seleccionar todo</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Ocultar</string>
     <string name="unhide">Amosar</string>
     <string name="hide_folder">Ocultar cartafol</string>

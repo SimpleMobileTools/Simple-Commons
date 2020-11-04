@@ -11,7 +11,9 @@
     <string name="no_app_found">Ingen gyldig app funnet</string>
     <string name="set_as">Sett som</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Value copied to clipboard</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Unknown</string>
     <string name="always">Always</string>
     <string name="never">Aldri</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Request the required permissions</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Change view type</string>
+    <string name="grid">Grid</string>
+    <string name="list">List</string>
+    <string name="increase_column_count">Increase column count</string>
+    <string name="reduce_column_count">Reduce column count</string>
+    <string name="change_cover_image">Change cover image</string>
+    <string name="select_photo">Select photo</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Manage blocked numbers</string>
@@ -247,6 +258,7 @@
     <string name="share">Del</string>
     <string name="share_via">Del via</string>
     <string name="select_all">Select all</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Hide</string>
     <string name="unhide">Unhide</string>
     <string name="hide_folder">Hide folder</string>
@@ -453,7 +465,7 @@
     <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
     <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
     <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
+    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. Check your device battery and notification settings, if there is nothing blocking the reminders, or killing the app in the background.</string>
     <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
 
     <!-- Alarms -->

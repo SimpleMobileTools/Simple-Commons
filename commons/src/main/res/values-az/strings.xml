@@ -11,7 +11,9 @@
     <string name="no_app_found">Etibarlı tətbiq tapılmadı</string>
     <string name="set_as">Təyin et</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Miqdar panelə kopyalandı</string>
+    <string name="dial_number">Dial number</string>
     <string name="unknown">Bilinməyən</string>
     <string name="always">Həmişə</string>
     <string name="never">Heç vaxt</string>
@@ -34,6 +36,15 @@
     <string name="request_the_required_permissions">Lazım olan icazələri istə</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+
+    <!-- View types -->
+    <string name="change_view_type">Change view type</string>
+    <string name="grid">Grid</string>
+    <string name="list">List</string>
+    <string name="increase_column_count">Increase column count</string>
+    <string name="reduce_column_count">Reduce column count</string>
+    <string name="change_cover_image">Change cover image</string>
+    <string name="select_photo">Select photo</string>
 
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Manage blocked numbers</string>
@@ -247,6 +258,7 @@
     <string name="share">Paylaş</string>
     <string name="share_via">Paylaş</string>
     <string name="select_all">Hamsını seç</string>
+    <string name="select_text">Select text</string>
     <string name="hide">Gizlət</string>
     <string name="unhide">Gizlətmə</string>
     <string name="hide_folder">Qovluğu gizlət</string>
