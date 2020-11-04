@@ -11,9 +11,9 @@
     <string name="no_app_found">Приложение не найдено</string>
     <string name="set_as">Установить как…</string>
     <string name="copy_to_clipboard">Копировать в буфер обмена</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
+    <string name="copy_number_to_clipboard">Копировать номер в буфер обмена</string>
     <string name="value_copied_to_clipboard">Скопировано в буфер обмена</string>
-    <string name="dial_number">Dial number</string>
+    <string name="dial_number">Набрать номер</string>
     <string name="unknown">Неизвестно</string>
     <string name="always">Всегда</string>
     <string name="never">Никогда</string>
@@ -29,7 +29,7 @@
     <string name="notification">Уведомление</string>
     <string name="email">Электронная почта</string>
     <string name="previous">Предыдущая</string>
-    <string name="playpause">Воспроизведение / Пауза</string>
+    <string name="playpause">Воспроизведение/Пауза</string>
     <string name="next">Следующая</string>
     <string name="number">Номер</string>
     <string name="no_contacts_found">Контакты не найдены</string>
@@ -158,22 +158,22 @@
     <string name="confirm_selection">Подтвердить выделение</string>
 
     <plurals name="items">
-        <item quantity="one">%d объект</item>
-        <item quantity="few">%d объекта</item>
-        <item quantity="many">%d объектов</item>
+        <item quantity="one">%d элемент</item>
+        <item quantity="few">%d элемента</item>
+        <item quantity="many">%d элементов</item>
     </plurals>
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d объект</item>
-        <item quantity="few">%d объекта</item>
-        <item quantity="many">%d объектов</item>
+        <item quantity="one">%d элемент</item>
+        <item quantity="few">%d элемента</item>
+        <item quantity="many">%d элементов</item>
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Удаление %d объекта</item>
-        <item quantity="few">Удаление %d объектов</item>
-        <item quantity="many">Удаление %d объектов</item>
+        <item quantity="one">Удаление %d элемента</item>
+        <item quantity="few">Удаление %d элементов</item>
+        <item quantity="many">Удаление %d элементов</item>
     </plurals>
 
     <!-- Are you sure you want to delete 5 contacts? -->
@@ -196,8 +196,8 @@
     <!-- File properties -->
     <string name="properties">Свойства</string>
     <string name="path">Расположение</string>
-    <string name="items_selected">Выбрано объектов</string>
-    <string name="direct_children_count">Дочерних объектов</string>
+    <string name="items_selected">Выбрано элементов</string>
+    <string name="direct_children_count">Дочерних элементов</string>
     <string name="files_count">Всего файлов внутри</string>
     <string name="resolution">Разрешение</string>
     <string name="duration">Длительность</string>
@@ -262,7 +262,7 @@
     <string name="share">Поделиться</string>
     <string name="share_via">Поделиться через…</string>
     <string name="select_all">Выделить все</string>
-    <string name="select_text">Select text</string>
+    <string name="select_text">Выделить текст</string>
     <string name="hide">Скрыть</string>
     <string name="unhide">Показать</string>
     <string name="hide_folder">Скрыть папку</string>
@@ -301,8 +301,8 @@
     <string name="proceed_with_deletion">Подтверждение удаления</string>
     <string name="deletion_confirmation">Вы действительно хотите удалить %s?</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Вы действительно хотите переместить %s в корзину?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Вы действительно хотите удалить этот объект?</string>
-    <string name="are_you_sure_recycle_bin">Вы действительно хотите переместить этот объект в корзину?</string>
+    <string name="are_you_sure_delete">Вы действительно хотите удалить этот элемент?</string>
+    <string name="are_you_sure_recycle_bin">Вы действительно хотите переместить этот элемент в корзину?</string>
     <string name="do_not_ask_again">Больше не спрашивать (до следующего запуска)</string>
     <string name="yes">Да</string>
     <string name="no">Нет</string>
@@ -524,7 +524,7 @@
     <string name="medium">Нормальный</string>
     <string name="large">Крупный</string>
     <string name="extra_large">Очень крупный</string>
-    <string name="password_protect_hidden_items">Защита паролем отображения скрытых объектов</string>
+    <string name="password_protect_hidden_items">Защита паролем отображения скрытых элементов</string>
     <string name="password_protect_whole_app">Защита паролем всего приложения</string>
     <string name="password_protect_file_deletion">Защита паролем удаления и перемещения файлов</string>
     <string name="keep_last_modified">Не обновлять время последнего изменения при файловых операциях</string>
@@ -539,7 +539,7 @@
     <string name="use_same_snooze">Всегда использовать один и тот же интервал повтора</string>
     <string name="snooze_time">Интервал повтора</string>
     <string name="vibrate_on_button_press">Вибрация при нажатии кнопок</string>
-    <string name="move_items_into_recycle_bin">Перемещать объекты в корзину вместо удаления</string>
+    <string name="move_items_into_recycle_bin">Перемещать элементы в корзину вместо удаления</string>
     <string name="recycle_bin_cleaning_interval">Интервал очистки корзины</string>
     <string name="empty_recycle_bin">Очистка корзины</string>
     <string name="force_portrait_mode">Принудительный портретный режим</string>
@@ -581,9 +581,9 @@
     <string name="hide_the_recycle_bin">Скрыть корзину</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">%d объект перемещается в корзину</item>
-        <item quantity="few">%d объекта перемещаются в корзину</item>
-        <item quantity="many">%d объектов перемещаются в корзину</item>
+        <item quantity="one">%d элемент перемещается в корзину</item>
+        <item quantity="few">%d элемента перемещаются в корзину</item>
+        <item quantity="many">%d элементов перемещаются в корзину</item>
     </plurals>
 
     <!-- Import / Export -->
