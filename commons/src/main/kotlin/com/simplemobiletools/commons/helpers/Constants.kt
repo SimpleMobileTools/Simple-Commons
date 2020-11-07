@@ -199,6 +199,7 @@ const val SORT_BY_DURATION = 8192
 const val SORT_BY_RANDOM = 16384
 const val SORT_USE_NUMERIC_VALUE = 32768
 const val SORT_BY_FULL_NAME = 65536
+const val SORT_BY_CUSTOM = 131072
 
 // security
 const val WAS_PROTECTION_HANDLED = "was_protection_handled"
