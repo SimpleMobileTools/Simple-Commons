@@ -259,6 +259,10 @@ fun Context.scanPathsRecursively(paths: List<String>, callback: (() -> Unit)? = 
     rescanPaths(allPaths, callback)
 }
 
+fun Context.rescanPath(path: String, callback: (() -> Unit)? = null) {
+    rescanPaths(arrayListOf(path), callback)
+}
+
 // avoid calling this multiple times in row, it can delete whole folder contents
 fun Context.rescanPaths(paths: List<String>, callback: (() -> Unit)? = null) {
     if (paths.isEmpty()) {
