@@ -111,7 +111,7 @@
     <string name="select_destination">Выберите путь назначения</string>
     <string name="click_select_destination">Нажмите здесь, чтобы выбрать расположение</string>
     <string name="invalid_destination">Не удалось записать в выбранное расположение</string>
-    <string name="please_select_destination">Пожалуйста, выберите путь назначения</string>
+    <string name="please_select_destination">Выберите путь назначения</string>
     <string name="source_and_destination_same">Исходный и конечный пути не могут совпадать</string>
     <string name="copy_failed">Не удалось скопировать файлы</string>
     <string name="copying">Копирование…</string>
@@ -135,7 +135,7 @@
     <string name="create_new_folder">Новая папка</string>
     <string name="name_taken">Папка или файл с таким именем уже существует</string>
     <string name="invalid_name">Имя содержит недопустимые символы</string>
-    <string name="empty_name">Пожалуйста, введите имя</string>
+    <string name="empty_name">Введите имя</string>
     <string name="unknown_error_occurred">Произошла неизвестная ошибка</string>
 
     <!-- File operation conflicts -->
@@ -153,7 +153,7 @@
     <string name="select_folder">Выбор папки</string>
     <string name="select_file">Выбор файла</string>
     <string name="confirm_storage_access_title">Предоставление доступа к внешнему накопителю</string>
-    <string name="confirm_storage_access_text">Чтобы предоставить право на запись, пожалуйста, выберите корневую папку SD-карты на следующем шаге</string>
+    <string name="confirm_storage_access_text">Чтобы предоставить право на запись, выберите корневую папку SD-карты на следующем шаге</string>
     <string name="confirm_storage_access_text_sd">Если SD-карта не видна, попробуйте это</string>
     <string name="confirm_selection">Подтвердить выделение</string>
 
@@ -188,7 +188,7 @@
     <string name="internal">Внутренняя память</string>
     <string name="sd_card">SD-карта</string>
     <string name="root">Корневая папка</string>
-    <string name="wrong_root_selected">Папка выбрана неверно, пожалуйста, выберите SD-карту</string>
+    <string name="wrong_root_selected">Папка выбрана неверно, выберите SD-карту</string>
     <string name="sd_card_usb_same">Пути к SD-карте и USB-накопителю не могут быть одинаковыми</string>
     <string name="app_on_sd_card">Похоже, что приложение у вас установлено на SD-карту, а это делает виджеты приложений недоступными. Вы даже не увидите их в списке доступных виджетов.
         Это системное ограничение, поэтому, если вы хотите использовать виджеты, вам нужно переместить приложение обратно во внутреннюю память.</string>
@@ -296,8 +296,8 @@
     <string name="middle_name">Отчество</string>
     <string name="surname">Фамилия</string>
     <string name="full_name">Полное имя</string>
-    <string name="use_custom_sorting">Use custom sorting</string>
-    <string name="change_order">Change order</string>
+    <string name="use_custom_sorting">Произвольная сортировка</string>
+    <string name="change_order">Изменить порядок</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Подтверждение удаления</string>
@@ -328,7 +328,7 @@
     <string name="repeat_pattern">Повторите ключ</string>
     <string name="fingerprint">Отпечаток пальца</string>
     <string name="add_fingerprint">Добавить отпечаток</string>
-    <string name="place_finger">Пожалуйста, поместите палец на датчик отпечатков</string>
+    <string name="place_finger">Поместите палец на датчик отпечатков</string>
     <string name="authentication_failed">Ошибка авторизации</string>
     <string name="authentication_blocked">Авторизация заблокирована, повторите попытку через некоторое время</string>
     <string name="no_fingerprints_registered">Отсутствуют зарегистрированные отпечатки пальцев, добавьте их в настройках устройства</string>
@@ -499,9 +499,9 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Время, оставшееся до срабатывания будильника:\n%s</string>
     <string name="reminder_triggers_in">Время, оставшееся до срабатывания напоминания:\n%s</string>
-    <string name="alarm_warning">Пожалуйста, убедитесь, что будильник работает правильно, прежде чем полагаться на него. Он может не работать должным образом из-за системных ограничений, связанных с экономией батареи.</string>
-    <string name="reminder_warning">Пожалуйста, убедитесь, что напоминания работают правильно, прежде чем полагаться на них. Они могут не работать должным образом из-за системных ограничений, связанных с экономией батареи.</string>
-    <string name="notifications_disabled">Уведомления этого приложения отключены. Пожалуйста, перейдите в настройки устройства и включите их.</string>
+    <string name="alarm_warning">Убедитесь, что будильник работает правильно, прежде чем полагаться на него. Он может не работать должным образом из-за системных ограничений, связанных с экономией батареи.</string>
+    <string name="reminder_warning">Убедитесь, что напоминания работают правильно, прежде чем полагаться на них. Они могут не работать должным образом из-за системных ограничений, связанных с экономией батареи.</string>
+    <string name="notifications_disabled">Уведомления этого приложения отключены. Перейдите в настройки устройства и включите их.</string>
 
     <!-- Alarms -->
     <string name="alarm">Будильник</string>
@@ -603,7 +603,7 @@
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">К устройству подключён USB-накопитель, необходимо убедиться, что файлы на нём отображаются правильно. Для этого необходимо предоставить дополнительные разрешения.</string>
-    <string name="confirm_usb_storage_access_text">Пожалуйста, выберите корневую папку USB-накопителя на следующем экране, чтобы предоставить к нему доступ.</string>
+    <string name="confirm_usb_storage_access_text">Выберите корневую папку USB-накопителя на следующем экране, чтобы предоставить к нему доступ.</string>
     <string name="wrong_root_selected_usb">Выбрана неправильная папка. Выберите корневую папку USB-накопителя.</string>
 
     <!-- Dates -->
@@ -659,8 +659,8 @@
     <string name="sunday_short">вс</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Ваша версия приложения больше не будет обновляться. Пожалуйста, обновите её до версии Pro, чтобы получать исправления и улучшения.</string>
-    <string name="upgrade_to_pro_long_click">Ваша версия приложения больше не будет обновляться. Пожалуйста, обновите её до версии Pro, чтобы получать исправления и улучшения, нажав здесь.</string>
+    <string name="upgrade_to_pro_long">Ваша версия приложения больше не будет обновляться. Обновите её до версии Pro, чтобы получать исправления и улучшения.</string>
+    <string name="upgrade_to_pro_long_click">Ваша версия приложения больше не будет обновляться. Обновите её до версии Pro, чтобы получать исправления и улучшения, нажав здесь.</string>
     <string name="it_is_free">Это бесплатно до %s. При загрузке до указанной даты вы получаете её бесплатно навсегда.</string>
     <string name="more_info">Подробнее</string>
     <string name="upgrade">Обновить</string>
@@ -694,9 +694,9 @@
         ]]>
     </string>
     <string name="purchase">Купить</string>
-    <string name="update_thank_you">Пожалуйста, обновите \"Simple Thank You\" до последней версии.</string>
-    <string name="before_asking_question_read_faq">Прежде чем задать вопрос, пожалуйста, изучите настройки приложения и прочтите FAQ (часто задаваемые вопросы). Возможно, решение есть.</string>
-    <string name="before_rate_read_faq">Прежде чем поставить оценку, пожалуйста, изучите настройки приложения и прочтите FAQ (часто задаваемые вопросы). Если у вас возникли какие-то проблемы, возможно, решение уже есть.</string>
+    <string name="update_thank_you">Обновите \"Simple Thank You\" до последней версии.</string>
+    <string name="before_asking_question_read_faq">Прежде чем задать вопрос, изучите настройки приложения и прочтите FAQ (часто задаваемые вопросы). Возможно, решение есть.</string>
+    <string name="before_rate_read_faq">Прежде чем поставить оценку, изучите настройки приложения и прочтите FAQ (часто задаваемые вопросы). Если у вас возникли какие-то проблемы, возможно, решение уже есть.</string>
     <string name="make_sure_latest">Также убедитесь, что используете последнюю версию приложения.</string>
     <string name="read_it">Прочитать</string>
     <string name="read_faq">Прочитать FAQ</string>
@@ -753,13 +753,13 @@
 
     <string name="sideloaded_app">
         <![CDATA[
-            Похоже, ваша версия приложения повреждена. Пожалуйста, скачайте оригинальную версию <a href="%s">отсюда</a>.
+            Похоже, ваша версия приложения повреждена. Скачайте оригинальную версию <a href="%s">отсюда</a>.
         ]]>
     </string>
 
     <!-- FAQ -->
     <string name="frequently_asked_questions">Часто задаваемые вопросы</string>
-    <string name="before_asking_question">Прежде чем задать вопрос, пожалуйста, прочитайте</string>
+    <string name="before_asking_question">Прежде чем задать вопрос, прочитайте</string>
     <string name="faq_1_title_commons">Почему я не вижу виджет этого приложения в списке виджетов?</string>
     <string name="faq_1_text_commons">Это, скорее всего, потому, что вы перенесли приложение на SD-карту. Существует ограничение системы Android, которое скрывает виджеты приложения
         в этом случае. Единственное решение — переместить приложение обратно во внутреннее хранилище через настройки вашего устройства.</string>
