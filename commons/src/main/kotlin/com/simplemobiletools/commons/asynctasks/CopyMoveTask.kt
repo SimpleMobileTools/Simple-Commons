@@ -245,7 +245,14 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
 
             if (source.size == copiedSize && activity.getDoesFilePathExist(destination.path)) {
                 mTransferredFiles.add(source)
-                if (activity.baseConfig.keepLastModified) {
+                if (copyOnly && destination.path.isAudioFast()) {
+                    activity.rescanPath(destination.path) {
+                        if (activity.baseConfig.keepLastModified) {
+                            copyOldLastModified(source.path, destination.path)
+                            File(destination.path).setLastModified(File(source.path).lastModified())
+                        }
+                    }
+                } else if (activity.baseConfig.keepLastModified) {
                     copyOldLastModified(source.path, destination.path)
                     File(destination.path).setLastModified(File(source.path).lastModified())
                 }

@@ -635,6 +635,10 @@ fun Activity.scanPathsRecursively(paths: List<String>, callback: (() -> Unit)? =
     applicationContext.scanPathsRecursively(paths, callback)
 }
 
+fun Activity.rescanPath(path: String, callback: (() -> Unit)? = null) {
+    applicationContext.rescanPath(path, callback)
+}
+
 fun Activity.rescanPaths(paths: List<String>, callback: (() -> Unit)? = null) {
     applicationContext.rescanPaths(paths, callback)
 }
@@ -682,7 +686,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
     } else if (File(oldPath).renameTo(File(newPath))) {
         if (File(newPath).isDirectory) {
             deleteFromMediaStore(oldPath)
-            rescanPaths(arrayListOf(newPath)) {
+            rescanPath(newPath) {
                 runOnUiThread {
                     callback?.invoke(true)
                 }

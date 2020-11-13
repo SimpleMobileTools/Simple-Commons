@@ -1,5 +1,5 @@
 <resources>
-    <string name="ok">OK</string>
+    <string name="ok">Aceptar</string>
     <string name="cancel">Cancelar</string>
     <string name="save_as">Guardar como</string>
     <string name="file_saved">Archivo guardado con éxito</string>
@@ -11,9 +11,9 @@
     <string name="no_app_found">No se encontró una aplicación válida</string>
     <string name="set_as">Establecer como</string>
     <string name="copy_to_clipboard">Copiar al portapapeles</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
+    <string name="copy_number_to_clipboard">Copiar número al portapapeles</string>
     <string name="value_copied_to_clipboard">Valor copiado al portapapeles</string>
-    <string name="dial_number">Dial number</string>
+    <string name="dial_number">Marcar número</string>
     <string name="unknown">Desconocido</string>
     <string name="always">Siempre</string>
     <string name="never">Nunca</string>
@@ -29,7 +29,7 @@
     <string name="notification">Notificación</string>
     <string name="email">Correo electrónico</string>
     <string name="previous">Anterior</string>
-    <string name="playpause">Reproducir / Pausar</string>
+    <string name="playpause">Reproducir/pausar</string>
     <string name="next">Siguiente</string>
     <string name="number">Número</string>
     <string name="no_contacts_found">No se encontraron contactos</string>
@@ -59,8 +59,8 @@
 
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
-    <string name="add_favorites">Agregar a favoritos</string>
-    <string name="add_to_favorites">Agregar a favoritos</string>
+    <string name="add_favorites">Añadir a favoritos</string>
+    <string name="add_to_favorites">Añadir a favoritos</string>
     <string name="remove_from_favorites">Eliminar de favoritos</string>
 
     <!-- Search -->
@@ -103,7 +103,7 @@
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
     <string name="move">Mover</string>
-    <string name="copy_move">Copiar/Mover</string>
+    <string name="copy_move">Copiar/mover</string>
     <string name="copy_to">Copiar a</string>
     <string name="move_to">Mover a</string>
     <string name="source">Origen</string>
@@ -242,14 +242,14 @@
     <string name="light_theme">Claro</string>
     <string name="dark_theme">Oscuro</string>
     <string name="solarized">Solarizado</string>
-    <string name="dark_red">Rojo Oscuro</string>
-    <string name="black_white">Blanco y Negro</string>
+    <string name="dark_red">Rojo oscuro</string>
+    <string name="black_white">Blanco y negro</string>
     <string name="custom">Personalizado</string>
     <string name="shared">Compartido</string>
 
     <!-- What's new -->
     <string name="whats_new">Novedades</string>
-    <string name="whats_new_disclaimer">* Sólo las actualizaciones más grandes se enumeran aquí, siempre hay algunas pequeñas mejoras también</string>
+    <string name="whats_new_disclaimer">* Solo las actualizaciones más grandes se enumeran aquí, siempre hay algunas pequeñas mejoras también</string>
 
     <!-- Actionbar items -->
     <string name="delete">Eliminar</string>
@@ -258,7 +258,7 @@
     <string name="share">Compartir</string>
     <string name="share_via">Compartir con</string>
     <string name="select_all">Seleccionar todo</string>
-    <string name="select_text">Select text</string>
+    <string name="select_text">Seleccionar texto</string>
     <string name="hide">Ocultar</string>
     <string name="unhide">Mostrar</string>
     <string name="hide_folder">Ocultar carpeta</string>
@@ -286,12 +286,14 @@
     <string name="sort_randomly">Ordenar aleatoriamente</string>
     <string name="ascending">Ascendente</string>
     <string name="descending">Descendente</string>
-    <string name="use_for_this_folder">Sólo para esta carpeta</string>
+    <string name="use_for_this_folder">Solo para esta carpeta</string>
     <string name="sort_numeric_parts">Ordenar partes numéricas por su valor</string>
     <string name="first_name">Primer nombre</string>
     <string name="middle_name">Segundo nombre</string>
     <string name="surname">Apellido</string>
     <string name="full_name">Nombre completo</string>
+    <string name="use_custom_sorting">Use custom sorting</string>
+    <string name="change_order">Change order</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">¿Está seguro de querer continuar con la eliminación?</string>
@@ -316,9 +318,9 @@
     <string name="wrong_pin">PIN erróneo</string>
     <string name="repeat_pin">Repetir PIN</string>
     <string name="pattern">Patrón</string>
-    <string name="insert_pattern">Inserte patrón</string>
+    <string name="insert_pattern">Inserte Patrón</string>
     <string name="wrong_pattern">Patrón erroneo</string>
-    <string name="repeat_pattern">Repetir patrón</string>
+    <string name="repeat_pattern">Repetir Patrón</string>
     <string name="fingerprint">Huella dactilar</string>
     <string name="add_fingerprint">Añadir huella dactilar</string>
     <string name="place_finger">Por favor pon el dedo en el lector de huellas dactilares</string>
@@ -330,7 +332,7 @@
     <string name="fingerprint_setup_successfully">Configuración de protección con éxito. Por favor, vuelva a instalar la aplicación en caso de problemas al restablecerla.</string>
     <string name="lock_folder">Bloquear carpeta</string>
     <string name="unlock_folder">Desbloquear carpeta</string>
-    <string name="lock_folder_notice">Esta protección funciona sólo en esta aplicación, no reemplaza un cifrado de carpetas en todo el sistema.</string>
+    <string name="lock_folder_notice">Esta protección funciona solo en esta aplicación, no reemplaza un cifrado de carpetas en todo el sistema.</string>
 
     <!-- Times -->
     <string name="yesterday">Ayer</string>
@@ -481,7 +483,7 @@
 
     <!-- Settings -->
     <string name="settings">Ajustes</string>
-    <string name="purchase_simple_thank_you">Compra Simple Gracias</string>
+    <string name="purchase_simple_thank_you">Comprar Simple Gracias</string>
     <string name="customize_colors">Cambiar colores</string>
     <string name="customize_widget_colors">Personaliza los colores del widget</string>
     <string name="use_english_language">Usar el idioma Inglés</string>
@@ -625,7 +627,7 @@
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">La versión de tu aplicación ya no será actualizada. Por favor, mejora a la versión Pro para recibir nuevas correcciones y otras mejoras.</string>
     <string name="upgrade_to_pro_long_click">La versión de tu aplicación ya no será actualizada. Por favor, mejora a la versión Pro para recibir nuevas correcciones y otras mejoras haciendo clic aquí.</string>
-    <string name="it_is_free">Es gratis hasta: %s. Si lo descargas hasta entonces, podrás usarlo gratis para siempre..</string>
+    <string name="it_is_free">Es gratis hasta: %s. Si lo descargas hasta entonces, podrás usarlo gratis para siempre.</string>
     <string name="more_info">Más información</string>
     <string name="upgrade">Actualizar</string>
     <string name="upgrade_calendar">Tienes que migrar manualmente los eventos almacenados localmente mediante la exportación en un archivo .ics, y luego importarlos. Puedes encontrar los botones de exportar / importar en el menú de la pantalla principal.</string>
@@ -658,7 +660,7 @@
         ]]>
     </string>
     <string name="purchase">Comprar</string>
-    <string name="update_thank_you">Por favor, actualice Simple Tank You a la última versión</string>
+    <string name="update_thank_you">Por favor, actualice Simple Gracias a la última versión</string>
     <string name="before_asking_question_read_faq">Antes de hacer una pregunta, lea las preguntas más frecuentes. Quizás la solución esté ahí.</string>
     <string name="before_rate_read_faq">Antes de calificarnos, verifique la configuración de la aplicación y lea primero las preguntas frecuentes. Si tiene algún problema, tal vez la solución esté ahí.</string>
     <string name="make_sure_latest">También asegúrese de estar utilizando la última versión de la aplicación.</string>
@@ -741,14 +743,14 @@
         Una vez iniciado, simplemente vuelva a establecer el ícono naranja predeterminado #F57C00. Es posible que tenga que volver a instalar la aplicación en el peor de los casos.</string>
     <string name="faq_7_title_commons">El dinero se ha deducido de mi cuenta bancaria, pero no puedo descargar la aplicación. ¿Qué puedo hacer?</string>
     <string name="faq_7_text_commons">Los pagos son manejados completamente por Google, su sistema falla de vez en cuando. Simplemente borre el caché de su aplicación Google Play y reinicie su dispositivo, luego intente descargarlo nuevamente.</string>
-    <string name="faq_8_title_commons">¿Por qué debería actualziar a la versión Pro?</string>
+    <string name="faq_8_title_commons">¿Por qué debería actualizar a la versión Pro?</string>
     <string name="faq_8_text_commons">Ya que la versión de tu aplicación ya no será actualizada, los errores que tiene podrían nunca ser arreglados. Tampoco se añadirán nuevas funciones. Puedes comprar la versión Pro en Google Play por una pequeña cantidad de dinero.
         Sólo pagas una vez, lo que significa que, una vez que la hayas comprado, nunca tendrás que pagar de nuevo. Incluso cuando consigas un nuevo dispositivo. Si no te gusta la versión Pro, puedes sólo desinstalarla en un periodo de unas horas y automáticamente recibirás tu dinero de vuelta.
         Si quieres un rembolso en cualquier otro momento, sólo contáctanos en hello@simplemobiletools.com y lo tendrás.</string>
-    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
-    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
-        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
-        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
+    <string name="faq_9_title_commons">¿Cómo puedo seleccionar varios elementos a la vez?</string>
+    <string name="faq_9_text_commons">Hay varias formas de hacerlo. La primera es iniciar el modo de selección pulsando durante mucho tiempo un elemento, luego pulse brevemente en otros elementos para seleccionarlos. La segunda forma es similar a seleccionar elementos en PCs con un ratón,
+        solo tiene que iniciar el modo de selección pulsando durante mucho tiempo un elemento, luego, con el dedo aún hacia abajo, arrástrelo por otros elementos para seleccionar. La tercera forma de seleccionar varios elementos es presionar durante mucho tiempo un elemento, luego presionando prolongadamente otro y todo lo demás se selecciona. Si
+        desea seleccionar todos los elementos, solo mantén presionado un elemento, luego pulse en el contador de elementos seleccionados en la esquina superior izquierda. Eso seleccionará o anulará la selección de todo.</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">¡Obtén la versión Pro ahora!</string>
@@ -820,11 +822,11 @@
     <string name="event_bus_title">Event Bus (Comunicación dentro de la aplicación)</string>
     <string name="audio_record_view_title">Audio Record View (Visualización de audio)</string>
     <string name="sms_mms_title">SMS MMS (Manejo de SMS y MMS)</string>
-    <string name="apng_title">APNG Android (animated WebP support)</string>
+    <string name="apng_title">APNG Android (Soporte WebP animado)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">OBSOLETO: Esta versión de la aplicación ya no es mantenida, obtén la versión Pro en https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">No olvides que si desinstalas cualquier aplicación de paga dentro de un periodo de 2 horas, automáticamente recibirás un rembolso. Si quieres un rembolso en cualquier otro momento, sólo contáctanos en hello@simplemobiletools.com y lo recibirás. Eso hace que sea fácil probarlo :)</string>
+    <string name="pro_app_refund">No olvides que si desinstalas cualquier aplicación de paga dentro de un periodo de 2 horas, automáticamente recibirás un rembolso. Si quieres un rembolso en cualquier otro momento, solo contáctanos en hello@simplemobiletools.com y lo recibirás. Eso hace que sea fácil probarlo :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Un grupo de aplicaciones de Android simples y de código abierto con widgets personalizables, sin anuncios y permisos innecesarios.</string>

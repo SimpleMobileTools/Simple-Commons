@@ -10,7 +10,7 @@
     <string name="edit_with">Rediger med</string>
     <string name="no_app_found">Ingen gyldig app funnet</string>
     <string name="set_as">Sett som</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="copy_to_clipboard">Kopier til utklippstavle</string>
     <string name="copy_number_to_clipboard">Copy number to clipboard</string>
     <string name="value_copied_to_clipboard">Verdi kopiert til utklippstavle</string>
     <string name="dial_number">Dial number</string>
@@ -126,7 +126,7 @@
     <string name="could_not_create_folder">Kunne ikke opprette mappen %s</string>
     <string name="could_not_create_file">Kunne ikke opprette filen %s</string>
     <string name="no_new_items">Ingen nye elementer er funnet</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_space">Det er ikke nok plass tilgjengelig.\nKreves %1$s, tilgjengelig %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Opprett ny</string>
@@ -292,6 +292,8 @@
     <string name="middle_name">Middle name</string>
     <string name="surname">Surname</string>
     <string name="full_name">Full name</string>
+    <string name="use_custom_sorting">Use custom sorting</string>
+    <string name="change_order">Change order</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Er du sikker på at du vil fortsette med slettingen?</string>
@@ -336,7 +338,7 @@
     <string name="yesterday">I går</string>
     <string name="today">I dag</string>
     <string name="tomorrow">I morgen</string>
-    <string name="hide_year">Hide year</string>
+    <string name="hide_year">Skjul år</string>
     <string name="seconds_raw">sekunder</string>
     <string name="minutes_raw">minutter</string>
     <string name="hours_raw">timer</string>
