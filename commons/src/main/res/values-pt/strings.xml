@@ -11,9 +11,9 @@
     <string name="no_app_found">Nenhuma aplicação encontrada</string>
     <string name="set_as">Definir como</string>
     <string name="copy_to_clipboard">Copiar para a área de transferência</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
+    <string name="copy_number_to_clipboard">Copiar número para a área de transferência</string>
     <string name="value_copied_to_clipboard">Valor copiado para a área de transferência</string>
-    <string name="dial_number">Dial number</string>
+    <string name="dial_number">Marcar número</string>
     <string name="unknown">Desconhecido</string>
     <string name="always">Sempre</string>
     <string name="never">Nunca</string>
@@ -216,7 +216,7 @@
     <string name="foreground_color">Cor secundária</string>
     <string name="app_icon_color">Cor do ícone da aplicação</string>
     <string name="bottom_navigation_bar_color">Cor da barra de navegação inferior</string>
-    <string name="restore_defaults">Restaurar predefinições</string>
+    <string name="restore_defaults">Repor predefinições</string>
     <string name="use_default">Utilizar padrão</string>
     <string name="default_color">Padrão</string>
     <string name="change_color">Alterar cor</string>
@@ -292,8 +292,8 @@
     <string name="middle_name">Segundo nome</string>
     <string name="surname">Apelido</string>
     <string name="full_name">Nome completo</string>
-    <string name="use_custom_sorting">Use custom sorting</string>
-    <string name="change_order">Change order</string>
+    <string name="use_custom_sorting">Ordenação personalizada</string>
+    <string name="change_order">Alterar ordem</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Tem a certeza de que deseja continuar com a eliminação?</string>
@@ -700,7 +700,7 @@
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
 
-    <string name="app_launcher_short">App Launcher</string>
+    <string name="app_launcher_short">Lançador</string>
     <string name="calculator_short">Calculadora</string>
     <string name="calendar_short">Calendário</string>
     <string name="camera_short">Câmara</string>
@@ -711,7 +711,7 @@
     <string name="file_manager_short">Gestor de ficheiros</string>
     <string name="flashlight_short">Lanterna</string>
     <string name="gallery_short">Galeria</string>
-    <string name="music_player_short">Reprodutor de músicas</string>
+    <string name="music_player_short">Reprodutor</string>
     <string name="notes_short">Notas</string>
     <string name="sms_messenger_short">Mensagens</string>
     <string name="thank_you_short">Thank You</string>
