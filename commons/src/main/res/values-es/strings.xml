@@ -292,8 +292,8 @@
     <string name="middle_name">Segundo nombre</string>
     <string name="surname">Apellido</string>
     <string name="full_name">Nombre completo</string>
-    <string name="use_custom_sorting">Use custom sorting</string>
-    <string name="change_order">Change order</string>
+    <string name="use_custom_sorting">Usar ordenamiento personalizado</string>
+    <string name="change_order">Cambiar orden</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">¿Está seguro de querer continuar con la eliminación?</string>
@@ -321,15 +321,15 @@
     <string name="insert_pattern">Inserte Patrón</string>
     <string name="wrong_pattern">Patrón erroneo</string>
     <string name="repeat_pattern">Repetir Patrón</string>
-    <string name="fingerprint">Huella dactilar</string>
-    <string name="add_fingerprint">Añadir huella dactilar</string>
-    <string name="place_finger">Por favor pon el dedo en el lector de huellas dactilares</string>
+    <string name="fingerprint">Huella</string>
+    <string name="add_fingerprint">Añadir huella</string>
+    <string name="place_finger">Por favor pon el dedo en el lector de huellas</string>
     <string name="authentication_failed">Autenticación fallida</string>
     <string name="authentication_blocked">Autenticación bloqueada, por favor intente de nuevo en un momento</string>
     <string name="no_fingerprints_registered">No tiene huellas dactilares registradas, por favor agregue algunas en la configuración de su dispositivo</string>
     <string name="go_to_settings">Ir a la configuración</string>
     <string name="protection_setup_successfully">Se ha agregado la contraseña con éxito. Por favor, vuelva a instalar la aplicación en caso de que la olvide.</string>
-    <string name="fingerprint_setup_successfully">Configuración de protección con éxito. Por favor, vuelva a instalar la aplicación en caso de problemas al restablecerla.</string>
+    <string name="fingerprint_setup_successfully">Configuración de protección con éxito. Por favor, vuelva a instalar la aplicación en caso de problemas al desbloquear.</string>
     <string name="lock_folder">Bloquear carpeta</string>
     <string name="unlock_folder">Desbloquear carpeta</string>
     <string name="lock_folder_notice">Esta protección funciona solo en esta aplicación, no reemplaza un cifrado de carpetas en todo el sistema.</string>
@@ -568,7 +568,7 @@
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">Parece que tienes un dispositivo USB conectado a tu dispositivo. Para asegurarse de que sus archivos aparezcan correctamente, debe otorgar permisos adicionales.</string>
+    <string name="usb_detected">Parece que tienes un dispositivo USB conectado a tu dispositivo. Para asegurar que sus archivos aparezcan correctamente, debes otorgar permisos adicionales.</string>
     <string name="confirm_usb_storage_access_text">Elija la carpeta raíz del dispositivo USB en la siguiente pantalla para otorgar acceso</string>
     <string name="wrong_root_selected_usb">Carpeta incorrecta, seleccione la carpeta raíz de su dispositivo USB</string>
 
