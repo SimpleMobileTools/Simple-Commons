@@ -11,9 +11,9 @@
     <string name="no_app_found">Δεν βρέθηκε έγκυρη εφαρμογή</string>
     <string name="set_as">Ορισμός ως</string>
     <string name="copy_to_clipboard">Αντιγραφή στο Πρόχειρο</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
+    <string name="copy_number_to_clipboard">Αντιγραφή αριθμού στο Πρόχειρο</string>
     <string name="value_copied_to_clipboard">Η τιμή αντιγράφηκε στο πρόχειρο</string>
-    <string name="dial_number">Dial number</string>
+    <string name="dial_number">Κλήση αριθμού</string>
     <string name="unknown">Άγνωστο</string>
     <string name="always">Πάντα</string>
     <string name="never">Ποτέ</string>
@@ -258,7 +258,7 @@
     <string name="share">Κοινόχρηστο</string>
     <string name="share_via">Κοινόχρηστο μέσω</string>
     <string name="select_all">Επιλογή όλων</string>
-    <string name="select_text">Select text</string>
+    <string name="select_text">Επιλογή κειμένου</string>
     <string name="hide">Απόκρυψη</string>
     <string name="unhide">Επανεμφάνιση</string>
     <string name="hide_folder">Απόκρυψη φακέλου</string>
@@ -292,7 +292,7 @@
     <string name="middle_name">Μεσαίο όνομα</string>
     <string name="surname">Επώνυμο</string>
     <string name="full_name">Πλήρες όνομα</string>
-    <string name="use_custom_sorting">Προσαρμοσμένη ταξινόμηση</string>
+    <string name="use_custom_sorting">Προσαρ/μένη ταξ/μηση</string>
     <string name="change_order">Αλλαγή σειράς</string>
 
     <!-- Confirmation dialog -->
