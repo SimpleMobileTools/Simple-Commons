@@ -747,12 +747,12 @@
     <string name="faq_8_text_commons">Com que la versió de l\'aplicació ja no s\'actualitza, els errors que heu vist, no seran corregits. Tampoc s\’hi afegiran noves funcions. Podeu comprar la versió Pro a Google Play per una petita quantitat de diners.
          Es tracta d\’un pagament únic, cosa que significa que un cop l\’adquireixis, no hauràs de tornar a pagar mai més. Ni tan sols després de canviar de dispositiu. Si no us agrada la versió Pro, podeu desinstal·lar-la en poques hores i automàticament obtindreu els diners.
          Si voleu un reemborsament en qualsevol moment més tard, només cal que contacteu amb nosaltres a l\'adreça hello@simplemobiletools.com i ho aconseguireu.</string>
-    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
-    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
-        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
-        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
-    <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
-    <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
+    <string name="faq_9_title_commons">Com puc seleccionar diversos elements alhora?</string>
+    <string name="faq_9_text_commons">Hi ha diverses maneres de fer-ho. El primer és iniciar el mode de selecció prement un element i, a continuació, fer clic breu sobre els altres per seleccionar-los. La segona forma és similar a la selecció d\’elements en ordinadors amb un ratolí,
+         només cal que inicieu el mode de selecció prement un element i, tot seguit, arrossegueu-lo amb el dit cap a altres elements per seleccionar-lo. La tercera manera de seleccionar diversos elements consisteix en prémer llargament un element, després en prémer llargament un altre i es selecciona tot el que hi ha entre els dos. Si tu
+         voleu seleccionar tots els elements; només cal que premeu llargament un element i, a continuació, feu clic al comptador d\’elements seleccionats a l\’extrem superior esquerre. Això seleccionarà o anul·larà la selecció de tot.</string>
+    <string name="faq_10_title_commons">He comprat l'aplicació, però no la puc baixar en cap altre dispositiu.</string>
+    <string name="faq_10_text_commons">Proveu d\'esborrar la memòria cau de l\'aplicació Google Play i reinicieu el dispositiu. Es tracta d\'un problema de Google Play, que no està realment relacionat amb l\'aplicació en si.</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Obteniu la versió Pro ara mateix.</string>
@@ -827,7 +827,7 @@
     <string name="apng_title">APNG Android (animated WebP support)</string>
 
     <!-- Google Play listing -->
-    <string name="deprecated_app">DESCONTINUADA: Aquesta versió de l’aplicació ja no es manté, obteniu la versió Pro a l\'adreça https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="deprecated_app">DESCONTINUADA: Aquesta versió de l\’aplicació ja no es manté, obteniu la versió Pro a l\'adreça https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">No us oblideu que si desinstal·leu qualsevol aplicació de pagament en un termini de 2 hores, se us retornarà automàticament. Si voleu un reemborsament en qualsevol moment més tard, poseu-vos en contacte amb nosaltres a hello@simplemobiletools.com i ho rebreu. Això fa que sigui fàcil provar-ho :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
