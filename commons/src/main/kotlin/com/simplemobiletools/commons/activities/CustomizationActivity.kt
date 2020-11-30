@@ -326,11 +326,12 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun setupColorsPickers() {
-        customization_text_color.setFillWithStroke(curTextColor, curBackgroundColor)
-        customization_primary_color.setFillWithStroke(curPrimaryColor, curBackgroundColor)
-        customization_background_color.setFillWithStroke(curBackgroundColor, curBackgroundColor)
-        customization_app_icon_color.setFillWithStroke(curAppIconColor, curBackgroundColor)
-        customization_navigation_bar_color.setFillWithStroke(curNavigationBarColor, curBackgroundColor)
+        val cornerRadius = getCornerRadius()
+        customization_text_color.setFillWithStroke(curTextColor, curBackgroundColor, cornerRadius)
+        customization_primary_color.setFillWithStroke(curPrimaryColor, curBackgroundColor, cornerRadius)
+        customization_background_color.setFillWithStroke(curBackgroundColor, curBackgroundColor, cornerRadius)
+        customization_app_icon_color.setFillWithStroke(curAppIconColor, curBackgroundColor, cornerRadius)
+        customization_navigation_bar_color.setFillWithStroke(curNavigationBarColor, curBackgroundColor, cornerRadius)
 
         customization_text_color_holder.setOnClickListener { pickTextColor() }
         customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
