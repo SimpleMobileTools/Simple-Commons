@@ -382,7 +382,11 @@ fun Activity.launchViewContactIntent(uri: Uri) {
         action = ContactsContract.QuickContact.ACTION_QUICK_CONTACT
         data = uri
         if (resolveActivity(packageManager) != null) {
-            startActivity(this)
+            try {
+                startActivity(this)
+            } catch (e: Exception) {
+                showErrorToast(e)
+            }
         } else {
             toast(R.string.no_app_found)
         }
