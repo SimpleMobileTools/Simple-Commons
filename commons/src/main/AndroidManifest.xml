@@ -3,6 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.simplemobiletools.commons">
 
+    <!-- required for working contentproviders between apps on Android 11+ -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
     <uses-feature
         android:name="android.hardware.faketouch"
         android:required="false"/>
