@@ -10,8 +10,8 @@
     <string name="edit_with">Şununla düzenle</string>
     <string name="no_app_found">Geçerli bir uygulama bulunamadı</string>
     <string name="set_as">Ayarla</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
+    <string name="copy_to_clipboard">Panoya kopyala</string>
+    <string name="copy_number_to_clipboard">Numarayı panoya kopyala</string>
     <string name="value_copied_to_clipboard">Değer panoya kopyalandı</string>
     <string name="dial_number">Dial number</string>
     <string name="unknown">Bilinmeyen</string>
@@ -34,8 +34,8 @@
     <string name="number">Numara</string>
     <string name="no_contacts_found">Kişi bulunamadı</string>
     <string name="request_the_required_permissions">Gerekli izinleri iste</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
-    <string name="insert_text_here">Insert text here</string>
+    <string name="no_access_to_contacts">Uygulama, kişilerinize erişemedi</string>
+    <string name="insert_text_here">Metni buraya girin</string>
 
     <!-- View types -->
     <string name="change_view_type">Görünüm türünü değiştir</string>
@@ -55,7 +55,7 @@
     <string name="blocked_numbers">Engelli numaralar</string>
     <string name="must_make_default_dialer">Engellenen numaraları kullanmak için bu uygulamayı varsayılan çevirici uygulaması yapmalısınız.</string>
     <string name="set_as_default">Varsayılan olarak ayarla</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
+    <string name="block_confirmation">\"%s\" gerçekten engellensin mi?</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoriler</string>
@@ -231,7 +231,7 @@
     <string name="app_icon_color_warning">UYARI: Bazı başlatıcılar uygulama simgesi özelleştirmesini düzgün kullanamıyor. Simgenin kaybolması durumunda, uygulamayı Google Play\'den veya varsa bir widget kullanarak başlatmayı deneyin.
         Başlatıldıktan sonra, sadece varsayılan turuncu simgeyi #F57C00 geri ayarlayın. En kötü durumda uygulamayı yeniden yüklemeniz gerekebilir.</string>
     <string name="share_colors_success">"Renkler başarıyla güncellendi. 'Paylaşılan' adlı yeni bir Tema eklendi, lütfen gelecekte tüm uygulama renklerini güncellemek için kullanınız."</string>
-    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
+    <string name="shared_theme_note">Pro uygulama sürümünü kullanıyor olsanız bile, teknik nedenlerden dolayı yine de Basit Teşekkürler\'e ihtiyacınız olduğunu unutmayın. Renk senkronizasyonunu o yapar.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Bu işlevin kilidini açmak ve geliştirmeyi desteklemek için lütfen <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Basit Teşekkürler</a>\'i satın alın. Teşekkürler!
@@ -258,7 +258,7 @@
     <string name="share">Paylaş</string>
     <string name="share_via">Şununla paylaş</string>
     <string name="select_all">Tümünü seç</string>
-    <string name="select_text">Select text</string>
+    <string name="select_text">Metin seç</string>
     <string name="hide">Gizle</string>
     <string name="unhide">Göster</string>
     <string name="hide_folder">Klasörü gizle</string>
@@ -271,7 +271,7 @@
     <string name="redo">Yinele</string>
     <string name="print">Yazdır</string>
     <string name="create_shortcut">Kısayol oluştur</string>
-    <string name="add_number_to_contact">Add number to contact</string>
+    <string name="add_number_to_contact">Kişiye numara ekle</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sıralama ölçütü</string>
@@ -291,9 +291,9 @@
     <string name="first_name">Adı</string>
     <string name="middle_name">Göbek adı</string>
     <string name="surname">Soyadı</string>
-    <string name="full_name">Full name</string>
-    <string name="use_custom_sorting">Use custom sorting</string>
-    <string name="change_order">Change order</string>
+    <string name="full_name">Tam adı</string>
+    <string name="use_custom_sorting">Özel sıralama kullan</string>
+    <string name="change_order">Düzeni değiştir</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Silme işlemine devam etmek istediğinizden emin misiniz?</string>
@@ -338,7 +338,7 @@
     <string name="yesterday">Dün</string>
     <string name="today">Bugün</string>
     <string name="tomorrow">Yarın</string>
-    <string name="hide_year">Hide year</string>
+    <string name="hide_year">Yılı gizle</string>
     <string name="seconds_raw">saniye</string>
     <string name="minutes_raw">dakika</string>
     <string name="hours_raw">saat</string>
@@ -530,12 +530,12 @@
     <string name="migrating">Geçiş</string>
 
     <!-- Default tabs to open -->
-    <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
+    <string name="default_tab_to_open">Uygulama başlatıldığında açılacak sekme</string>
+    <string name="contacts_tab">Kişiler</string>
+    <string name="favorites_tab">Favoriler</string>
+    <string name="call_history_tab">Arama Geçmişi</string>
+    <string name="groups_tab">Gruplar</string>
+    <string name="last_used_tab">Son kullanılan</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Bu dosyayı geri yükle</string>
@@ -683,30 +683,30 @@
         ]]>
     </string>
 
-    <string name="simple_app_launcher">Simple App Launcher</string>
-    <string name="simple_calculator">Simple Calculator</string>
-    <string name="simple_calendar">Simple Calendar</string>
-    <string name="simple_camera">Simple Camera</string>
-    <string name="simple_clock">Simple Clock</string>
-    <string name="simple_contacts">Simple Contacts</string>
-    <string name="simple_dialer">Simple Dialer</string>
-    <string name="simple_draw">Simple Draw</string>
-    <string name="simple_file_manager">Simple File Manager</string>
-    <string name="simple_flashlight">Simple Flashlight</string>
-    <string name="simple_gallery">Simple Gallery</string>
-    <string name="simple_music_player">Simple Music Player</string>
-    <string name="simple_notes">Simple Notes</string>
-    <string name="simple_sms_messenger">Simple SMS Messenger</string>
-    <string name="simple_thank_you">Simple Thank You</string>
-    <string name="simple_voice_recorder">Simple Voice Recorder</string>
+    <string name="simple_app_launcher">Basit Uygulama Başlatıcı</string>
+    <string name="simple_calculator">Basit Hesap Makinesi</string>
+    <string name="simple_calendar">Basit Takvim</string>
+    <string name="simple_camera">Basit Kamera</string>
+    <string name="simple_clock">Basit Saat</string>
+    <string name="simple_contacts">Basit Kişiler</string>
+    <string name="simple_dialer">Basit Çevirici</string>
+    <string name="simple_draw">Basit Çizim</string>
+    <string name="simple_file_manager">Basit Dosya Yöneticisi</string>
+    <string name="simple_flashlight">Basit Fener</string>
+    <string name="simple_gallery">Basit Galeri</string>
+    <string name="simple_music_player">Basit Müzik Çalar</string>
+    <string name="simple_notes">Basit Notlar</string>
+    <string name="simple_sms_messenger">Basit SMS Messenger</string>
+    <string name="simple_thank_you">Basit Teşekkürler</string>
+    <string name="simple_voice_recorder">Basit Ses Kaydedici</string>
 
-    <string name="app_launcher_short">App Launcher</string>
+    <string name="app_launcher_short">Uygulama Başlatıcı</string>
     <string name="calculator_short">Hesap Makinesi</string>
     <string name="calendar_short">Takvim</string>
     <string name="camera_short">Kamera</string>
     <string name="clock_short">Saat</string>
     <string name="contacts_short">Kişiler</string>
-    <string name="dialer_short">Dialer</string>
+    <string name="dialer_short">Çevirici</string>
     <string name="draw_short">Çizim</string>
     <string name="file_manager_short">Dosya Yöneticisi</string>
     <string name="flashlight_short">Fener</string>
@@ -715,7 +715,7 @@
     <string name="notes_short">Notlar</string>
     <string name="sms_messenger_short">SMS Messenger</string>
     <string name="thank_you_short">Teşekkürler</string>
-    <string name="voice_recorder_short">Voice Recorder</string>
+    <string name="voice_recorder_short">Ses Kaydedici</string>
 
     <string name="sideloaded_app">
         <![CDATA[
@@ -746,21 +746,21 @@
     <string name="faq_8_text_commons">Uygulama sürümünüz artık güncellenmediğinden, tespit ettiğiniz hatalar asla düzeltilmeyecektir. Ayrıca yeni işlevler eklenmeyecektir. Pro sürümünü Google Play\'den az miktarda para karşılığında satın alabilirsiniz.
         Bir kerelik ödeme, yani bir kez satın aldığınızda, bir daha asla ödeme yapmanız gerekmeyeceği anlamına gelir. Yeni bir cihaz aldıktan sonra bile. Pro sürümünü beğenmediyseniz, birkaç saat içinde kaldırabilirsiniz ve paranızı otomatik olarak geri alırsınız.
         Daha sonra istediğiniz zaman geri ödeme almak isterseniz, hello@simplemobiletools.com adresinden bizimle iletişime geçmeniz yeterlidir.</string>
-    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
-    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
-        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
-        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
+    <string name="faq_9_title_commons">Aynı anda birden çok öğeyi nasıl seçebilirim?</string>
+    <string name="faq_9_text_commons">Bunu yapmanın birçok yolu var. İlki, bir öğeye uzun süre basarak seçim modunu başlatmak, ardından diğerlerini seçmek için kısa tıklamaktır. İkinci yol, PC\'lerdeki öğeleri fareyle seçmeye benzer, yalnızca bir öğeye uzun basarak seçim modunu başlatın ve ardından parmağınızı aşağı doğru kaydırarak diğer öğelere sürükleyin. Birden fazla öğe seçmenin üçüncü yolu, bir öğeye uzun süre basmak, ardından diğerine uzun basmaktır. Tüm öğeleri seçmek istiyorsanız, yalnızca bir öğeye uzun basın, ardından sol üst köşedeki seçili öğe sayacına tıklayın. Bu, her şeyi seçecek veya seçimini kaldıracaktır.</string>
+    <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
+    <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
-    <string name="why_upgrade">﻿Pro versiyonu hemen alın!</string>
-    <string name="why_upgrade_basic_version">Basic</string>
+    <string name="why_upgrade">﻿Pro sürümünü şimdi alın!</string>
+    <string name="why_upgrade_basic_version">Temel</string>
     <string name="why_upgrade_pro_version">Pro</string>
-    <string name="why_upgrade_no_ads">Reklam yok</string>
-    <string name="why_upgrade_no_internet_access">İnternet erişimine gerek yok</string>
+    <string name="why_upgrade_no_ads">Reklamsız</string>
+    <string name="why_upgrade_no_internet_access">İnternet erişimi yok</string>
     <string name="why_upgrade_footer">+ %100 Para İadesi Garantisi</string>
 
     <!-- Gallery Pro -->
-    <string name="why_upgrade_advanced_photo_editor">Gelişmiş foto editörü</string>
+    <string name="why_upgrade_advanced_photo_editor">Gelişmiş fotoğraf düzenleyici</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF dosya desteği</string>
     <string name="why_upgrade_batch_renaming">Gelişmiş toplu dosya adlandırma</string>
     <string name="why_upgrade_folder_locking">Kişisel klasör kilidi</string>
@@ -768,9 +768,9 @@
 
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Zaman dilimi desteği</string>
-    <string name="why_upgrade_attendees_emails">Toplantı ve eposta hatırlatıcıları</string>
+    <string name="why_upgrade_attendees_emails">Toplantı ve e-posta hatırlatıcıları</string>
     <string name="why_upgrade_easy_event_importing">Kolay etkinlik ekleme</string>
-    <string name="why_upgrade_new_widgets">Yeni aletler</string>
+    <string name="why_upgrade_new_widgets">Yeni widget\'lar</string>
 
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Rehberde tekrarlanan kişilerin birleştirilmesi</string>
@@ -811,22 +811,22 @@
     <string name="espresso_title">Espresso (test yardımcısı)</string>
     <string name="gson_title">Gson (JSON ayrıştırıcısı)</string>
     <string name="leak_canary_title">Leak Canary (bellek sızıntısı dedektörü)</string>
-    <string name="number_picker_title">Number Picker (özelleştirilebilir sayı seçici)</string>
+    <string name="number_picker_title">Number Picker (özelleştirilebilir numara seçici)</string>
     <string name="exoplayer_title">ExoPlayer (video oynatıcı)</string>
     <string name="panorama_view_title">VR Panorama View (panorama görüntüleme)</string>
     <string name="sanselan_title">Apache Sanselan (görüntü meta verileri okuma)</string>
     <string name="filters_title">Android Photo Filters (görüntü filtreleri)</string>
     <string name="gesture_views_title">Gesture Views (yakınlaştırılabilir görüntüler)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (kaydırma çubuğundaki harfler)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
-    <string name="apng_title">APNG Android (animated WebP support)</string>
+    <string name="event_bus_title">Event Bus (uygulama içi iletişim)</string>
+    <string name="audio_record_view_title">Audio Record View (ses görselleştirme)</string>
+    <string name="sms_mms_title">SMS MMS (SMS ve MMS yönetimi)</string>
+    <string name="apng_title">APNG Android (hareketli WebP desteği)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">Kullanımdan kaldırıldı: Uygulamanın bu sürümü artık sağlanmıyor, Pro sürümünü şuradan indirin: https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Ücretli herhangi bir uygulamayı 2 saat içinde kaldırırsanız, otomatik olarak iade edileceğini unutmayın. İstediğiniz zaman geri ödeme almak isterseniz, hello@simplemobiletools.com adresinden bizimle iletişime geçmeniz yeterli olacaktır. Bu denemeyi kolaylaştırır :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Özelleştirilebilir widget\'lara sahip, reklamlar ve gereksiz izinler içermeyen bir grup basit, açık kaynaklı Android uygulaması.</string>
 </resources>

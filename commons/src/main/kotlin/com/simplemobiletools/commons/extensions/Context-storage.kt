@@ -410,7 +410,8 @@ fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSi
             0
         }
 
-        val fileDirItem = FileDirItem(decodedPath, name!!, isDirectory, childrenCount, fileSize, file.lastModified())
+        val lastModified = file.lastModified()
+        val fileDirItem = FileDirItem(decodedPath, name!!, isDirectory, childrenCount, fileSize, lastModified)
         items.add(fileDirItem)
     }
 
@@ -483,20 +484,23 @@ fun Context.getFolderLastModifieds(folder: String): HashMap<String, Long> {
     val selection = "${Images.Media.DATA} LIKE ? AND ${Images.Media.DATA} NOT LIKE ? AND ${Images.Media.MIME_TYPE} IS NOT NULL" // avoid selecting folders
     val selectionArgs = arrayOf("$folder/%", "$folder/%/%")
 
-    val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
-    cursor?.use {
-        if (cursor.moveToFirst()) {
-            do {
-                try {
-                    val lastModified = cursor.getLongValue(Images.Media.DATE_MODIFIED) * 1000
-                    if (lastModified != 0L) {
-                        val name = cursor.getStringValue(Images.Media.DISPLAY_NAME)
-                        lastModifieds["$folder/$name"] = lastModified
+    try {
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                do {
+                    try {
+                        val lastModified = cursor.getLongValue(Images.Media.DATE_MODIFIED) * 1000
+                        if (lastModified != 0L) {
+                            val name = cursor.getStringValue(Images.Media.DISPLAY_NAME)
+                            lastModifieds["$folder/$name"] = lastModified
+                        }
+                    } catch (e: Exception) {
                     }
-                } catch (e: Exception) {
-                }
-            } while (cursor.moveToNext())
+                } while (cursor.moveToNext())
+            }
         }
+    } catch (e: Exception) {
     }
 
     return lastModifieds

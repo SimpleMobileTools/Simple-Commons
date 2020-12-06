@@ -752,6 +752,8 @@
     <string name="faq_9_text_commons">Il y a plusieurs façon de faire cela. La première est de passer en mode de sélection en appuyant longuement sur un objet, puis en cliquant simplement sur les autres objets pour les sélectionner. La deuxième est similaire à la sélection d\'objets sur PC avec une souris,
         passez en mode de sélection en appuyant longuement sur un objet, puis en maintenant votre doigt appuyé, glissez le sur plusieurs objets pour les sélectionner. La troisième façon de sélectionner plusieurs objets est d\'appuyer longuement sur un objet, puis appuyer longuement sur un autre et tout ce qui sera entre les deux objets sera sélectionné. Si vous
         voulez sélectionner tous les objets, appuyez longuement sur un objet, et cliquez sur le compteur de sélection dans le coin supérieur gauche. Cela sélectionnera ou désélectionnera tous les objets.</string>
+    <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
+    <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Obtenez la version Pro maintenant !</string>

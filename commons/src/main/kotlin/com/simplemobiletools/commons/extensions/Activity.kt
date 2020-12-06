@@ -664,7 +664,12 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                         DocumentsContract.renameDocument(applicationContext.contentResolver, document.uri, newPath.getFilenameFromPath())
                     } catch (ignored: FileNotFoundException) {
                         // FileNotFoundException is thrown in some weird cases, but renaming works just fine
+                    } catch (e: Exception) {
+                        showErrorToast(e)
+                        callback?.invoke(false)
+                        return@ensureBackgroundThread
                     }
+
                     updateInMediaStore(oldPath, newPath)
                     rescanPaths(arrayListOf(oldPath, newPath)) {
                         if (!baseConfig.keepLastModified) {

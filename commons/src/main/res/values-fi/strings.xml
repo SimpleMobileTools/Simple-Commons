@@ -11,9 +11,9 @@
     <string name="no_app_found">Sovelluksia ei löydetty</string>
     <string name="set_as">Aseta</string>
     <string name="copy_to_clipboard">Kopioi leikepöydälle</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
+    <string name="copy_number_to_clipboard">Kopioi numero leikepöydälle</string>
     <string name="value_copied_to_clipboard">Kopioitu leikepöydälle</string>
-    <string name="dial_number">Dial number</string>
+    <string name="dial_number">Soita numeroon</string>
     <string name="unknown">Tuntematon</string>
     <string name="always">Aina</string>
     <string name="never">Ei koskaan</string>
@@ -186,8 +186,8 @@
     <string name="root">Juurihakemisto</string>
     <string name="wrong_root_selected">Väärä kansio valittu, valitse muistikortin juurihakemisto</string>
     <string name="sd_card_usb_same">Muistikortin ja USB-laitteen polut eivät voi olla samat</string>
-    <string name="app_on_sd_card">Sovellus on asennettu muistikortille, jonka vuoksi widgetit eivät ole käytettävissä. Niitä ei näytetä widget-listalla.
-        Kyseessä on järjestelmän rajoitus, joten jos haluat käyttää widgetejä, siirrä sovellus takaisin sisäiseen tallennustilaan.</string>
+    <string name="app_on_sd_card">Sovellus on asennettu muistikortille, jonka vuoksi pienoissovellukset eivät ole käytettävissä. Niitä ei näytetä pienoissovellusten listalla.
+        Kyseessä on järjestelmän rajoitus, joten jos haluat käyttää pienoissovelluksia, siirrä sovellus takaisin sisäiseen tallennustilaan.</string>
 
     <!-- File properties -->
     <string name="properties">Ominaisuudet</string>
@@ -228,7 +228,7 @@
     <string name="undo_changes_confirmation">Haluatko varmasti perua muutokset?</string>
     <string name="save_before_closing">Sinulla on tallentamattomia muutoksia. Tallennetaanko ennen sulkemista?</string>
     <string name="apply_to_all_apps">Käytä värejä kaikissa Simple App -sovelluksissa</string>
-    <string name="app_icon_color_warning">VAROITUS: Jotkin käynnistinohjelmat eivät käsittele kuvakkeen mukauttamista oikein. Jos kuvake häviää, käynnistä sovellus Google Playn tai jonkin widgetin kautta, jos mahdollista.
+    <string name="app_icon_color_warning">VAROITUS: Jotkin käynnistinohjelmat eivät käsittele kuvakkeen mukauttamista oikein. Jos kuvake häviää, käynnistä sovellus Google Playn tai jonkin pienoissovelluksen kautta, jos mahdollista.
         Käynnistyksen jälkeen palauta kuvakkeen oranssi oletusväri #F57C00. Pahimmillaan saatat joutua asentamaan sovelluksen uudelleen.</string>
     <string name="share_colors_success">Värit päivitetty. Uusi teema nimeltä \'Jaettu\' käytä sitä jatkossa muokataksesi värejä kaikissa sovelluksissa.</string>
     <string name="shared_theme_note">Huomioi, että vaikka käytössäsi on sovelluksen Pro-versio, Simple Thank You tarvitaan teknisistä syistä mm. värien synkronointiin.</string>
@@ -292,8 +292,8 @@
     <string name="middle_name">Toinen nimi</string>
     <string name="surname">Sukunimi</string>
     <string name="full_name">Koko nimi</string>
-    <string name="use_custom_sorting">Use custom sorting</string>
-    <string name="change_order">Change order</string>
+    <string name="use_custom_sorting">Käytä mukautettua lajittelua</string>
+    <string name="change_order">Vaihda järjestystä</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Haluatko varmasti jatkaa poistotoimintoon?</string>
@@ -485,7 +485,7 @@
     <string name="settings">Asetukset</string>
     <string name="purchase_simple_thank_you">Osta Simple Thank You</string>
     <string name="customize_colors">Muokkaa sovelluksen värejä</string>
-    <string name="customize_widget_colors">Mukauta widgetin värejä</string>
+    <string name="customize_widget_colors">Mukauta pienoissovelluksen värejä</string>
     <string name="use_english_language">Käytä englannin kieltä</string>
     <string name="show_hidden_items">Näytä piilotetut tiedostot</string>
     <string name="font_size">Fonttikoko</string>
@@ -504,7 +504,7 @@
     <string name="use_24_hour_time_format">Käytä 24:n tunnin kelloa</string>
     <string name="change_date_and_time_format">Vaihda päivämäärän ja kellonajan muotoa</string>
     <string name="sunday_first">Aloita viikko sunnuntaista</string>
-    <string name="widgets">Widgetit</string>
+    <string name="widgets">Pienoissovellukset</string>
     <string name="use_same_snooze">Käytä aina samaa torkkuaikaa</string>
     <string name="snooze_time">Torkkuaika</string>
     <string name="vibrate_on_button_press">Tärinä koskettaessa</string>
@@ -726,19 +726,19 @@
     <!-- FAQ -->
     <string name="frequently_asked_questions">Usein kysytyt kysymykset</string>
     <string name="before_asking_question">Ennen kuin esität kysymyksen, luethan ensin</string>
-    <string name="faq_1_title_commons">Miksi en näe tämän sovelluksen widgettiä widget-valikossa?</string>
+    <string name="faq_1_title_commons">Miksi en näe tämän sovelluksen pienoissovellusta pienoissovellusvalikossa?</string>
     <string name="faq_1_text_commons">Todennäköisesti asensit sovelluksen ulkoiselle muistikortille. Tässä tapauksessa ainoa vaihtoehto on uudelleenasentaa sovellus laitteen sisäiseen tallennustilaan.</string>
     <string name="faq_2_title_commons">Haluan tukea sinua, mutta minulla ei ole varaa lahjoittaa. Voinko auttaa jotenkin muuten?</string>
     <string name="faq_2_text_commons">Tottakai. Voit kertoa ystävillesi sovelluksista ja antaa hyviä arvosteluja ja palautetta. Voit myös auttaa kääntämällä sovelluksen uudelle kielelle tai korjata käännösvirheitä.
         Ohjeet löydät täältä https://github.com/SimpleMobileTools/General-Discussion , tai lähettämällä viestiä osoitteeseen hello@simplemobiletools.com jos Sinulla on kysyttävää.</string>
     <string name="faq_3_title_commons">Poistin tiedostoja vahingossa, miten palautan ne?</string>
     <string name="faq_3_text_commons">Valitettavasti se ei ole mahdollista. Tiedostot poistetaan aina pysyvästi.</string>
-    <string name="faq_4_title_commons">En pidä widgetin väreistä, voinko vaihtaa ne?</string>
-    <string name="faq_4_text_commons">Kyllä. Kun luot widgetin aloitusnäytölle aukeaa widgetin määritysikkuna. Paina värillisiä neliöitä valitaksesi uudet värit. Vierityspalkista voit myös säätää läpinäkyvyyttä.</string>
+    <string name="faq_4_title_commons">En pidä pienoissovelluksen väreistä, voinko vaihtaa ne?</string>
+    <string name="faq_4_text_commons">Kyllä. Kun luot pienoissovelluksen aloitusnäytölle aukeaa pienoissovelluksen määritysikkuna. Paina värillisiä neliöitä valitaksesi uudet värit. Vierityspalkista voit myös säätää läpinäkyvyyttä.</string>
     <string name="faq_5_title_commons">Voinko jotenkin palauttaa poistetut tiedostot?</string>
     <string name="faq_5_text_commons">Jos ne todella on poistettu, et voi palauttaa niitä. Oletuksena poistetut tiedostot siirretään roskakoriin, joten varmista, onko tiedostot roskakorissa.</string>
     <string name="faq_6_title_commons">Sovelluksen kuvake hävisi. Mitä voin tehdä?</string>
-    <string name="faq_6_text_commons">Tämä johtuu siitä, että käynnistimesi ei tue kuvakkeiden mukauttamista oikein. Yritä käynnistää sovellus Google Playn tai jonkun widgetin kautta, jos mahdollista.
+    <string name="faq_6_text_commons">Tämä johtuu siitä, että käynnistimesi ei tue kuvakkeiden mukauttamista oikein. Yritä käynnistää sovellus Google Playn tai jonkun pienoissovelluksen kautta, jos mahdollista.
         Käynnistyksen jälkeen palauta kuvakkeen oranssi oletusväri #F57C00. Pahimmillaan saatat joutua asentamaan sovelluksen uudelleen.</string>
     <string name="faq_7_title_commons">Tiliäni on on veloitettu, mutta en voi ladata sovellusta. Mitä voin tehdä?</string>
     <string name="faq_7_text_commons">Google hoitaa maksut täysin, ajoittain heidän järjestelmässä on häiriöitä. Tyhjennä Google Play-sovelluksen välimuisti, käynnistä laitteesi uudelleen ja yritä latausta uudelleen.</string>
@@ -746,10 +746,10 @@
     <string name="faq_8_text_commons">Koska sovellusversiotasi ei enää päivitetä, et saa korjauksia mahdollisiin bugeihin etkä uusia ominaisuuksia. Voit ostaa Pro-version Google Playsta edullisesti.
         Kyseessä on kertamaksu, joka tarkoittaa sitä, että oston jälkeen sinun ei koskaan enää tarvitse maksaa siitä. Ei edes uuden laitteen hankinnan jälkeen. Jos et pidä Pro-versiosta, voit poistaa sen muutaman tunnin kuluessa ja saat automaattisesti rahasi takaisin.
         Jos haluat palauttaa myöhemmin. ota yhteyttä hello@simplemobiletools.com ja maksusi palautetaan.</string>
-    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
-    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
-        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
-        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
+    <string name="faq_9_title_commons">Kuinka valitsen useamman kohteen kerralla?</string>
+    <string name="faq_9_text_commons">Siihen on useampi tapa. Ensimmäinen on aloittaa valitsemistila painamalla pitkään yhtä kohdetta ja sen jälkeen napauttamalla muita valittavia kohteita. Toinen tapa on vastaava kuin kohteiden valinta tietokoneella: paina pitkään yhtä kohdetta ja vie sormi muiden valittavien kohteen yli. Kolmas tapa on painaa ensimmäistä kohdetta pitkään ja sen jälkeen viimeistä kohdetta painamalla pitkään valitaan kaikki kohteet niiden väliltä. Jos haluat valita kaikki kohteet, paina vain yhtä kohdetta pitkään ja sen jälkeen valittujen kohteiden lukumäärää yläpalkista napauttamalla valitset kaikki kohteet tai poistat kaikista valinnan.</string>
+    <string name="faq_10_title_commons">Olen ostanut sovelluksen, mutta en voi ladata sitä toiselle laitteelle.</string>
+    <string name="faq_10_text_commons">Koita tyhjentää Google Play-sovelluksen välimuisti ja käynnistää laite uudestaan. Kyseessä on jokin Google Playn bugi joka ei varsinaisesti liity itse sovellukseen.</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Hanki Pro-versio nyt!</string>
@@ -770,7 +770,7 @@
     <string name="why_upgrade_time_zone_support">Tuki aikavyöhykkeille</string>
     <string name="why_upgrade_attendees_emails">Osallistujat ja sähköpostimuistutukset</string>
     <string name="why_upgrade_easy_event_importing">Helppo tapahtumien tuonti</string>
-    <string name="why_upgrade_new_widgets">Uudet widgetit</string>
+    <string name="why_upgrade_new_widgets">Uudet pienoissovellukset</string>
 
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Paranneltu kontaktikopioiden yhdistäminen</string>
@@ -779,7 +779,7 @@
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Tarkistuslistat</string>
-    <string name="why_upgrade_different_note_per_widget">Widget-kohtainen muistiinpano ja värit</string>
+    <string name="why_upgrade_different_note_per_widget">Pienoissovelluskohtainen muistiinpano ja värit</string>
 
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Päivämäärän ja ajan näyttömuotojen kustomointi</string>
@@ -828,5 +828,5 @@
     <string name="pro_app_refund">Muista, että saat rahasi automaattisesti takaisin, jos poistat minkä tahansa maksullisista sovelluksistamme kahden tunnin sisällä asentamisesta. Jos haluat rahasi milloin vain myöhemmin takaisin, ota yhteyttä sähköpostitse hello@simplemobiletools.com ja saat rahat takaisin. Tämä tekee kokeilun helpoksi :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">Kokoelma yksinkertaisia vapaan lähdekoodin Android-sovelluksia kustomoitavilla widgeteillä, ilman mainoksia ja tarpeettomia käyttöoikeuksia.</string>
+    <string name="developer_description">Yksinkertaisia vapaan lähdekoodin Android-sovelluksia kustomoitavilla pienoissovelluksilla, ilman mainoksia ja tarpeettomia käyttöoikeuksia.</string>
 </resources>
