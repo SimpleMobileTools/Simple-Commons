@@ -10,8 +10,8 @@
     <string name="edit_with">Редагувати за допомогою</string>
     <string name="no_app_found">Не знайдено допустимих додатків</string>
     <string name="set_as">Встановити як</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
+    <string name="copy_to_clipboard">Копіювати у буфер обміну</string>
+    <string name="copy_number_to_clipboard">Копіювати номер у буфер обміну</string>
     <string name="value_copied_to_clipboard">Значення скопійовано у буфер обміну</string>
     <string name="dial_number">Dial number</string>
     <string name="unknown">Невідомо</string>
@@ -34,8 +34,8 @@
     <string name="number">Номер</string>
     <string name="no_contacts_found">Контактів не знайдено</string>
     <string name="request_the_required_permissions">Запит на необхідні дозволи</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
-    <string name="insert_text_here">Insert text here</string>
+    <string name="no_access_to_contacts">Додаток не має доступу до контактів</string>
+    <string name="insert_text_here">Вставте текст сюди</string>
 
     <!-- View types -->
     <string name="change_view_type">Змінити тип перегляду</string>
@@ -55,7 +55,7 @@
     <string name="blocked_numbers">Заблоковані номери</string>
     <string name="must_make_default_dialer">Щоб використовувати функцію блокування номерів, вам необхідно встановити цей додаток як стандартний для роботи з контактами.</string>
     <string name="set_as_default">Встановити додаток як стандартний</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
+    <string name="block_confirmation">Ви впевнені що хочете заблокувати \"%s\"?</string>
 
     <!-- Favorites -->
     <string name="favorites">Улюблене</string>
@@ -175,7 +175,7 @@
 
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
-        <item quantity="one">%d contact</item>
+        <item quantity="one">%d контакт</item>
         <item quantity="other">%d contacts</item>
     </plurals>
 
@@ -271,7 +271,7 @@
     <string name="redo">Повторити</string>
     <string name="print">Друкувати</string>
     <string name="create_shortcut">Створити посилання</string>
-    <string name="add_number_to_contact">Add number to contact</string>
+    <string name="add_number_to_contact">Додати номер до контактів</string>
 
     <!-- Sorting -->
     <string name="sort_by">Сортувати за</string>
@@ -531,10 +531,10 @@
 
     <!-- Default tabs to open -->
     <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
+    <string name="contacts_tab">Контакти</string>
+    <string name="favorites_tab">Обране</string>
+    <string name="call_history_tab">Історія дзвінків</string>
+    <string name="groups_tab">Групи</string>
     <string name="last_used_tab">Last used one</string>
 
     <!-- Recycle Bin -->
@@ -625,8 +625,8 @@
     <string name="sunday_short">Нед</string>
 
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
+    <string name="upgrade_to_pro_long">Ця версія додатку більше не буде оновлюватися. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
+    <string name="upgrade_to_pro_long_click">Ця версія додатку більше не буде оновлюватися. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
     <string name="it_is_free">Це безкоштовно до: %s. Якщо ви завантажите додаток до вказаної дати, ви отримаєте його безкоштовно назавжди.</string>
     <string name="more_info">Більше інформації</string>
     <string name="upgrade">Оновити</string>
@@ -667,8 +667,8 @@
     <string name="read_it">Прочитати</string>
     <string name="read_faq">Read FAQ</string>
     <string name="rate_us_prompt">Привіт,\n\nздається, ви вже давно користуєтесь цим додатком, і ми це високо цінуємо.\n\nЧи могли б ви зробити нам послугу і оцінити додаток в Google Play? Це дійсно дуже нам допоможе.\n\nНезалежно від того, що ви вирішите, ви не побачите знову це повідомлення.\n\nСпасибі!</string>
-    <string name="rate_our_app">Rate our app please :)</string>
-    <string name="thank_you">Thank you</string>
+    <string name="rate_our_app">Оцініть наш додаток :)</string>
+    <string name="thank_you">Подяка</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
