@@ -427,9 +427,17 @@ fun Context.getSharedThemeSync(cursorLoader: CursorLoader): SharedTheme? {
 
 fun Context.getMyContentProviderCursorLoader() = CursorLoader(this, MyContentProvider.MY_CONTENT_URI, null, null, null, null)
 
-fun Context.getMyContactsCursor() = CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, null, null, null)
+fun Context.getMyContactsCursor() = try {
+    CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, null, null, null)
+} catch (e: Exception) {
+    null
+}
 
-fun Context.getMyFavoriteContactsCursor() = CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, MyContactsContentProvider.FAVORITES_ONLY, null, null)
+fun Context.getMyFavoriteContactsCursor() = try {
+    CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, MyContactsContentProvider.FAVORITES_ONLY, null, null)
+} catch (e: Exception) {
+    null
+}
 
 fun Context.getDialogTheme() = if (baseConfig.backgroundColor.getContrastColor() == Color.WHITE) R.style.MyDialogTheme_Dark else R.style.MyDialogTheme
 
