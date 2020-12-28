@@ -466,7 +466,16 @@ fun Context.getUriMimeType(path: String, newUri: Uri): String {
 
 fun Context.isThankYouInstalled() = isPackageInstalled("com.simplemobiletools.thankyou")
 
-fun Context.isOrWasThankYouInstalled() = baseConfig.hadThankYouInstalled || isThankYouInstalled()
+fun Context.isOrWasThankYouInstalled(): Boolean {
+    return when {
+        baseConfig.hadThankYouInstalled -> true
+        isThankYouInstalled() -> {
+            baseConfig.hadThankYouInstalled = true
+            true
+        }
+        else -> false
+    }
+}
 
 fun Context.isAProApp() = packageName.startsWith("com.simplemobiletools.") && packageName.removeSuffix(".debug").endsWith(".pro")
 
