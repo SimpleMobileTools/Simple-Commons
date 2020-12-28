@@ -11,9 +11,9 @@
     <string name="no_app_found">Der blev ikke fundet en gyldig app</string>
     <string name="set_as">Anvend som</string>
     <string name="copy_to_clipboard">Kopier til udklipsholder</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
-    <string name="value_copied_to_clipboard">Værdi kopieret til udklipsholder</string>
-    <string name="dial_number">Dial number</string>
+    <string name="copy_number_to_clipboard">Kopier nummeret til udklipsholderen</string>
+    <string name="value_copied_to_clipboard">Værdi kopieret til udklipsholderen</string>
+    <string name="dial_number">Opkaldsnummer</string>
     <string name="unknown">Ukendt</string>
     <string name="always">Altid</string>
     <string name="never">Aldrig</string>
@@ -258,7 +258,7 @@
     <string name="share">Del</string>
     <string name="share_via">Del via</string>
     <string name="select_all">Vælg alle</string>
-    <string name="select_text">Select text</string>
+    <string name="select_text">Vælg tekst</string>
     <string name="hide">Skjul</string>
     <string name="unhide">Vis</string>
     <string name="hide_folder">Skjul mappe</string>
@@ -291,9 +291,9 @@
     <string name="first_name">Fornavn</string>
     <string name="middle_name">Mellemnavn</string>
     <string name="surname">Efternavn</string>
-    <string name="full_name">Full name</string>
-    <string name="use_custom_sorting">Use custom sorting</string>
-    <string name="change_order">Change order</string>
+    <string name="full_name">Fulde navn</string>
+    <string name="use_custom_sorting">Brug brugerdefineret rækkefølge</string>
+    <string name="change_order">Skift rækkefølge</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Er du sikker på at du vil fortsætte med at slette?</string>
@@ -485,7 +485,7 @@
     <string name="settings">Indstillinger</string>
     <string name="purchase_simple_thank_you">Køb Simple Thank You</string>
     <string name="customize_colors">Rediger farver</string>
-    <string name="customize_colors_locked">Rediger farver (Locked)</string>
+    <string name="customize_colors_locked">Rediger farver (Låst)</string>
     <string name="customize_widget_colors">Rediger widget-farver</string>
     <string name="use_english_language">Anvend engelsk sprog</string>
     <string name="show_hidden_items">Vis skjulte elementer</string>
