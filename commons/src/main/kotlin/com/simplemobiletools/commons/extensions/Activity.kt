@@ -412,6 +412,17 @@ fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountH
     }
 }
 
+fun Activity.launchSendSMSIntent(recipient: String) {
+    Intent(Intent.ACTION_SENDTO).apply {
+        data = Uri.fromParts("smsto", recipient, null)
+        if (resolveActivity(packageManager) != null) {
+            startActivity(this)
+        } else {
+            toast(R.string.no_app_found)
+        }
+    }
+}
+
 fun Activity.showLocationOnMap(coordinates: String) {
     val uriBegin = "geo:${coordinates.replace(" ", "")}"
     val encodedQuery = Uri.encode(coordinates)
