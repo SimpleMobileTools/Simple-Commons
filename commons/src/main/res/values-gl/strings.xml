@@ -272,6 +272,9 @@
     <string name="print">Imprimir</string>
     <string name="create_shortcut">Crear atallo</string>
     <string name="add_number_to_contact">Engadir número a Contactos</string>
+    <string name="view_contact_details">View contact details</string>
+    <string name="call_from_sim_1">Call from SIM 1</string>
+    <string name="call_from_sim_2">Call from SIM 2</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -485,6 +488,7 @@
     <string name="settings">Axustes</string>
     <string name="purchase_simple_thank_you">Comprar Simple Thank You</string>
     <string name="customize_colors">Cambiar cores</string>
+    <string name="customize_colors_locked">Cambiar cores (Locked)</string>
     <string name="customize_widget_colors">Personalizar cores do widget</string>
     <string name="use_english_language">Usar o idioma inglés</string>
     <string name="show_hidden_items">Amosar elementos ocultos</string>

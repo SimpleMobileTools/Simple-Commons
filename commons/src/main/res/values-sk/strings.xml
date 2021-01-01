@@ -276,6 +276,9 @@
     <string name="print">Tlačiť</string>
     <string name="create_shortcut">Vytvoriť skratku</string>
     <string name="add_number_to_contact">Priradiť číslo kontaktu</string>
+    <string name="view_contact_details">Zobraziť detaily kontaktu</string>
+    <string name="call_from_sim_1">Zavolať zo SIM 1</string>
+    <string name="call_from_sim_2">Zavolať zo SIM 2</string>
 
     <!-- Sorting -->
     <string name="sort_by">Na zoradenie použiť</string>
@@ -518,6 +521,7 @@
     <string name="settings">Nastavenia</string>
     <string name="purchase_simple_thank_you">Kúpiť Jednoduché Ďakujem</string>
     <string name="customize_colors">Upraviť farby</string>
+    <string name="customize_colors_locked">Upraviť farby (Uzamknuté)</string>
     <string name="customize_widget_colors">Upraviť farby widgetov</string>
     <string name="use_english_language">Použiť angličtinu</string>
     <string name="show_hidden_items">Zobraziť skryté položky</string>

@@ -427,9 +427,17 @@ fun Context.getSharedThemeSync(cursorLoader: CursorLoader): SharedTheme? {
 
 fun Context.getMyContentProviderCursorLoader() = CursorLoader(this, MyContentProvider.MY_CONTENT_URI, null, null, null, null)
 
-fun Context.getMyContactsCursor() = CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, null, null, null)
+fun Context.getMyContactsCursor() = try {
+    CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, null, null, null)
+} catch (e: Exception) {
+    null
+}
 
-fun Context.getMyFavoriteContactsCursor() = CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, MyContactsContentProvider.FAVORITES_ONLY, null, null)
+fun Context.getMyFavoriteContactsCursor() = try {
+    CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, MyContactsContentProvider.FAVORITES_ONLY, null, null)
+} catch (e: Exception) {
+    null
+}
 
 fun Context.getDialogTheme() = if (baseConfig.backgroundColor.getContrastColor() == Color.WHITE) R.style.MyDialogTheme_Dark else R.style.MyDialogTheme
 
@@ -458,7 +466,28 @@ fun Context.getUriMimeType(path: String, newUri: Uri): String {
 
 fun Context.isThankYouInstalled() = isPackageInstalled("com.simplemobiletools.thankyou")
 
+fun Context.isOrWasThankYouInstalled(): Boolean {
+    return when {
+        baseConfig.hadThankYouInstalled -> true
+        isThankYouInstalled() -> {
+            baseConfig.hadThankYouInstalled = true
+            true
+        }
+        else -> false
+    }
+}
+
 fun Context.isAProApp() = packageName.startsWith("com.simplemobiletools.") && packageName.removeSuffix(".debug").endsWith(".pro")
+
+fun Context.getCustomizeColorsString(): String {
+    val textId = if (isOrWasThankYouInstalled()) {
+        R.string.customize_colors
+    } else {
+        R.string.customize_colors_locked
+    }
+
+    return getString(textId)
+}
 
 fun Context.isPackageInstalled(pkgName: String): Boolean {
     return try {

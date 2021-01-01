@@ -89,7 +89,7 @@ fun Activity.appLaunched(appId: String) {
 fun Activity.showDonateOrUpgradeDialog() {
     if (getCanAppBeUpgraded()) {
         UpgradeToProDialog(this)
-    } else if (!baseConfig.hadThankYouInstalled && !isThankYouInstalled()) {
+    } else if (!isOrWasThankYouInstalled()) {
         DonateDialog(this)
     }
 }
@@ -382,7 +382,11 @@ fun Activity.launchViewContactIntent(uri: Uri) {
         action = ContactsContract.QuickContact.ACTION_QUICK_CONTACT
         data = uri
         if (resolveActivity(packageManager) != null) {
-            startActivity(this)
+            try {
+                startActivity(this)
+            } catch (e: Exception) {
+                showErrorToast(e)
+            }
         } else {
             toast(R.string.no_app_found)
         }
@@ -404,6 +408,17 @@ fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountH
             } else {
                 toast(R.string.no_app_found)
             }
+        }
+    }
+}
+
+fun Activity.launchSendSMSIntent(recipient: String) {
+    Intent(Intent.ACTION_SENDTO).apply {
+        data = Uri.fromParts("smsto", recipient, null)
+        if (resolveActivity(packageManager) != null) {
+            startActivity(this)
+        } else {
+            toast(R.string.no_app_found)
         }
     }
 }

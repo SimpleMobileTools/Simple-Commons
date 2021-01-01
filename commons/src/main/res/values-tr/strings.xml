@@ -272,6 +272,9 @@
     <string name="print">Yazdır</string>
     <string name="create_shortcut">Kısayol oluştur</string>
     <string name="add_number_to_contact">Kişiye numara ekle</string>
+    <string name="view_contact_details">View contact details</string>
+    <string name="call_from_sim_1">Call from SIM 1</string>
+    <string name="call_from_sim_2">Call from SIM 2</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sıralama ölçütü</string>
@@ -313,14 +316,14 @@
 
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">PIN girin</string>
-    <string name="please_enter_pin">Lütfen PIN girin</string>
+    <string name="enter_pin">PIN\'i gir</string>
+    <string name="please_enter_pin">Lütfen PIN\'i girin</string>
     <string name="wrong_pin">Yanlış PIN</string>
-    <string name="repeat_pin">PIN\'i tekrarla</string>
+    <string name="repeat_pin">PIN\'i tekrar gir</string>
     <string name="pattern">Desen</string>
-    <string name="insert_pattern">Desen ekle</string>
+    <string name="insert_pattern">Deseni çiz</string>
     <string name="wrong_pattern">Yanlış desen</string>
-    <string name="repeat_pattern">Deseni tekrarla</string>
+    <string name="repeat_pattern">Deseni tekrar çiz</string>
     <string name="fingerprint">Parmak izi</string>
     <string name="add_fingerprint">Parmak izi ekle</string>
     <string name="place_finger">Lütfen parmağınızı parmak izi sensörüne yerleştirin</string>
@@ -328,8 +331,8 @@
     <string name="authentication_blocked">Kimlik doğrulama engellendi, lütfen birazdan tekrar deneyin</string>
     <string name="no_fingerprints_registered">Parmak iziniz kayıtlı değil, lütfen cihazınızın Ayarlar bölümünden ekleyin</string>
     <string name="go_to_settings">Ayarlar\'a git</string>
-    <string name="protection_setup_successfully">Parola kurulumu başarılı oldu. Lütfen unuttuğunuz durumda uygulamayı yeniden yükleyin.</string>
-    <string name="fingerprint_setup_successfully">Koruma kurulumu başarıyla gerçekleştirildi. Sıfırlama ile ilgili sorunlar olması durumunda lütfen uygulamayı yeniden yükleyin.</string>
+    <string name="protection_setup_successfully">Parola kurulumu başarıyla yapıldı. Unutursanız lütfen uygulamayı yeniden yükleyin.</string>
+    <string name="fingerprint_setup_successfully">Koruma kurulumu başarıyla yapıldı. Sıfırlamayla ilgili sorun olursa lütfen uygulamayı yeniden yükleyin.</string>
     <string name="lock_folder">Klasörü kilitle</string>
     <string name="unlock_folder">Klasörün kilidini aç</string>
     <string name="lock_folder_notice">Bu koruma yalnızca bu uygulamada çalışır, gerçek bir sistem çapında klasör şifrelemesinin yerini almaz.</string>
@@ -485,6 +488,7 @@
     <string name="settings">Ayarlar</string>
     <string name="purchase_simple_thank_you">Basit Teşekkürler\'i Satın Al</string>
     <string name="customize_colors">Renkleri özelleştir</string>
+    <string name="customize_colors_locked">Renkleri özelleştir (Locked)</string>
     <string name="customize_widget_colors">Widget renklerini özelleştir</string>
     <string name="use_english_language">İngilizce dilini kullan</string>
     <string name="show_hidden_items">Gizli öğeleri göster</string>
@@ -493,9 +497,9 @@
     <string name="medium">Orta</string>
     <string name="large">Büyük</string>
     <string name="extra_large">Çok büyük</string>
-    <string name="password_protect_hidden_items">Parola korumalı gizli öğe görünürlüğü</string>
-    <string name="password_protect_whole_app">Parola tüm uygulamayı korur</string>
-    <string name="password_protect_file_deletion">Parola, dosya silinmesini ve taşınmasını korur</string>
+    <string name="password_protect_hidden_items">Gizli öğe görünürlüğünü parola ile koru</string>
+    <string name="password_protect_whole_app">Tüm uygulamayı parola ile koru</string>
+    <string name="password_protect_file_deletion">Parola korumalı dosya silme ve taşıma</string>
     <string name="keep_last_modified">Dosya işlemlerinde eski son değiştirme değerini koru</string>
     <string name="show_info_bubble">Kaydırma çubuğunu sürükleyerek öğeleri kaydırırken bilgi balonunu göster</string>
     <string name="prevent_phone_from_sleeping">Uygulama ön plandayken telefonun uykuya geçmesini önle</string>

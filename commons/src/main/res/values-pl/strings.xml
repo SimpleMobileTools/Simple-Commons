@@ -273,6 +273,9 @@
     <string name="print">Drukuj</string>
     <string name="create_shortcut">Create shortcut</string>
     <string name="add_number_to_contact">Add number to contact</string>
+    <string name="view_contact_details">View contact details</string>
+    <string name="call_from_sim_1">Call from SIM 1</string>
+    <string name="call_from_sim_2">Call from SIM 2</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sortuj według parametru:</string>
@@ -511,6 +514,7 @@
     <string name="settings">Ustawienia</string>
     <string name="purchase_simple_thank_you">Kup aplikację \'Proste podziękowanie\'</string>
     <string name="customize_colors">Dostosuj kolory aplikacji</string>
+    <string name="customize_colors_locked">Dostosuj kolory aplikacji (Locked)</string>
     <string name="customize_widget_colors">Dostosuj kolory widżetu</string>
     <string name="use_english_language">Wymuś używanie przez aplikację języka angielskiego</string>
     <string name="show_hidden_items">Pokazuj ukryte elementy</string>

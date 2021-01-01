@@ -270,6 +270,9 @@
     <string name="print">طباعة</string>
     <string name="create_shortcut">إنشاء أختصار</string>
     <string name="add_number_to_contact">Add number to contact</string>
+    <string name="view_contact_details">View contact details</string>
+    <string name="call_from_sim_1">Call from SIM 1</string>
+    <string name="call_from_sim_2">Call from SIM 2</string>
 
     <!-- Sorting -->
     <string name="sort_by">فرز حسب</string>
@@ -483,6 +486,7 @@
     <string name="settings">الإعدادات</string>
     <string name="purchase_simple_thank_you">شراء تطبيق (Simple Thank You)</string>
     <string name="customize_colors">تخصيص الألوان</string>
+    <string name="customize_colors_locked">تخصيص الألوان (Locked)</string>
     <string name="customize_widget_colors">تخصيص ألوان الويدجت</string>
     <string name="use_english_language">إستخدام اللغة الإنجليزية</string>
     <string name="show_hidden_items">إظهار العناصر المخفية</string>

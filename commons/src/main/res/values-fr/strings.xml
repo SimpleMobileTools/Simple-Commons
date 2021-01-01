@@ -272,6 +272,9 @@
     <string name="print">Imprimer</string>
     <string name="create_shortcut">Créer un raccourci</string>
     <string name="add_number_to_contact">Ajouter un numéro aux contacts</string>
+    <string name="view_contact_details">View contact details</string>
+    <string name="call_from_sim_1">Call from SIM 1</string>
+    <string name="call_from_sim_2">Call from SIM 2</string>
 
     <!-- Sorting -->
     <string name="sort_by">Trier par</string>
@@ -487,6 +490,7 @@
     <string name="settings">Paramètres</string>
     <string name="purchase_simple_thank_you">Acheter Simple Thank You</string>
     <string name="customize_colors">Modifier les couleurs</string>
+    <string name="customize_colors_locked">Modifier les couleurs (Locked)</string>
     <string name="customize_widget_colors">Modifier les couleurs du widget</string>
     <string name="use_english_language">Utiliser la langue anglaise</string>
     <string name="show_hidden_items">Afficher les fichiers cachés</string>

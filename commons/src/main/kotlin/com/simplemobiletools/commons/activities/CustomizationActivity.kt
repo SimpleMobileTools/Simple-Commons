@@ -297,6 +297,8 @@ class CustomizationActivity : BaseSimpleActivity() {
         }
 
         baseConfig.isUsingSharedTheme = curSelectedThemeId == THEME_SHARED
+        baseConfig.shouldUseSharedTheme = curSelectedThemeId == THEME_SHARED
+
         hasUnsavedChanges = false
         if (finishAfterSave) {
             finish()

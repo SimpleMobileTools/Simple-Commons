@@ -269,6 +269,9 @@
     <string name="print">印刷</string>
     <string name="create_shortcut">ショートカットを作成</string>
     <string name="add_number_to_contact">コンタクトに番号を追加</string>
+    <string name="view_contact_details">View contact details</string>
+    <string name="call_from_sim_1">Call from SIM 1</string>
+    <string name="call_from_sim_2">Call from SIM 2</string>
 
     <!-- Sorting -->
     <string name="sort_by">並べ替え</string>
@@ -453,6 +456,7 @@
     <string name="settings">設定</string>
     <string name="purchase_simple_thank_you">Simple Thank Youを購入</string>
     <string name="customize_colors">表示色のカスタマイズ</string>
+    <string name="customize_colors_locked">表示色のカスタマイズ (Locked)</string>
     <string name="customize_widget_colors">ウィジェットの色をカスタマイズ</string>
     <string name="use_english_language">英語で表示する</string>
     <string name="show_hidden_items">非表示のアイテムを表示する</string>
