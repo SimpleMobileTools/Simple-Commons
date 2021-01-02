@@ -272,6 +272,7 @@ class SimpleContactsHelper(val context: Context) {
             isAntiAlias = true
             textAlign = Paint.Align.CENTER
             textSize = wantedTextSize
+            style = Paint.Style.FILL
         }
 
         canvas.drawCircle(size / 2f, size / 2f, size / 2f, circlePaint)
