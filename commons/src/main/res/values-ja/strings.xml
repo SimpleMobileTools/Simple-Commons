@@ -126,7 +126,7 @@
     <string name="could_not_create_folder">フォルダ %s を作成できません</string>
     <string name="could_not_create_file">ファイル %s を作成できません</string>
     <string name="no_new_items">新しいアイテムは見つかりませんでした</string>
-    <string name="no_space">宛先に十分なスペースがありません。\n要求された %1$, 利用可能 %2$s</string>
+    <string name="no_space">宛先に十分なスペースがありません。 要求された %1$s, 利用可能 %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">新規作成</string>

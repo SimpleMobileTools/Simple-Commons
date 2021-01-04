@@ -436,12 +436,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
             }
         } else {
-            try {
-                val text = String.format(getString(R.string.no_space), sumToCopy.formatSize(), availableSpace.formatSize())
-                    toast(text, Toast.LENGTH_LONG)
-            } catch (e: Exception) {
-                showErrorToast(e)
-            }
+            val text = String.format(getString(R.string.no_space), sumToCopy.formatSize(), availableSpace.formatSize())
+            toast(text, Toast.LENGTH_LONG)
         }
     }
 
