@@ -834,4 +834,5 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Un grupo de apps simples e de código aberto con widgets personalizables, sen anuncios nin permisos innecesarios.</string>
+    <string name="deletion_confirmation_with_size">Seguro que queres eliminar %s? (%s MB)</string>
 </resources>

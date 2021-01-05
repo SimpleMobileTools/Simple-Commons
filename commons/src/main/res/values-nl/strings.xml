@@ -835,4 +835,5 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Een collectie van eenvoudige open source Android-apps met widgets, zonder advertenties en zonder onnodige machtigingen.</string>
+    <string name="deletion_confirmation_with_size">Are you sure you want to delete %s? (%s MB)</string>
 </resources>

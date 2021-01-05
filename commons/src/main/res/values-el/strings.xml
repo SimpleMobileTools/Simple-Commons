@@ -836,4 +836,5 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Μια ομάδα Απλών εφαρμογών Android ανοιχτού κώδικα με προσαρμόσιμα γραφικά στοιχεία, χωρίς διαφημίσεις και περιττά δικαιώματα.</string>
+    <string name="deletion_confirmation_with_size">Είστε βέβαιοι ότι θέλετε να διαγράψετε %s? (%s MB)</string>
 </resources>

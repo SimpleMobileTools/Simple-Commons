@@ -837,4 +837,5 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Eine Serie einfacher Open-Source-Android-Apps mit anpassbaren Widgets ohne Werbung und unnötigen Berechtigungen.</string>
+    <string name="deletion_confirmation_with_size">Are you sure you want to delete %s? (%s MB)</string>
 </resources>

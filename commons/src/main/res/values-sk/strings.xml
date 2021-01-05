@@ -870,4 +870,5 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Skupina jednoduchých, open source Android apiek s nastaviteľnými widgetmi, bez reklám a nepotrebných oprávnení.</string>
+    <string name="deletion_confirmation_with_size">Ste si istý, že chcete vymazať %s? (%s MB)</string>
 </resources>

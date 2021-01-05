@@ -835,4 +835,5 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">En gruppe simple, open source apps til Android med widgets, der kan tilpasses, uden reklamer og unødvendige tilladelser.</string>
+    <string name="deletion_confirmation_with_size">Er du sikker på at du vil slette %s? (%s MB)</string>
 </resources>

@@ -833,4 +833,5 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Özelleştirilebilir widget\'lara sahip, reklamlar ve gereksiz izinler içermeyen bir grup basit, açık kaynaklı Android uygulaması.</string>
+    <string name="deletion_confirmation_with_size">Are you sure you want to delete %s? (%s MB)</string>
 </resources>

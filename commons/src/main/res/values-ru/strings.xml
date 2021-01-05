@@ -871,4 +871,5 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Группа простых приложений для Android с открытым исходным кодом с настраиваемыми виджетами, без рекламы и ненужных разрешений.</string>
+    <string name="deletion_confirmation_with_size">Вы действительно хотите удалить %s? (%s MB)</string>
 </resources>
