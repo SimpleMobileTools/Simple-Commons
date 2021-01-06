@@ -301,6 +301,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Er du sikker på at du vil fortsætte med at slette?</string>
     <string name="deletion_confirmation">Er du sikker på at du vil slette %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="deletion_confirmation_with_size">Er du sikker på at du vil slette %s? (%s MB)</string>
     <string name="move_to_recycle_bin_confirmation">Er du sikker på at du vil flytte %s til papirkurven?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Er du sikker på at du vil slette dette?</string>
     <string name="are_you_sure_recycle_bin">Er du sikker på at du vil flytte dette til papirkurven?</string>
@@ -835,5 +836,4 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">En gruppe simple, open source apps til Android med widgets, der kan tilpasses, uden reklamer og unødvendige tilladelser.</string>
-    <string name="deletion_confirmation_with_size">Er du sikker på at du vil slette %s? (%s MB)</string>
 </resources>

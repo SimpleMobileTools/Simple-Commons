@@ -301,6 +301,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Voulez-vous vraiment effectuer la suppression ?</string>
     <string name="deletion_confirmation">Voulez-vous vraiment supprimer %s?</string>
+    <string name="deletion_confirmation_with_size">Voulez-vous vraiment supprimer %s? (%s MB)</string>
     <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Voulez-vous vraiment déplacer %s vers la corbeille ?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
@@ -837,5 +838,4 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Un groupe d\'applications Android open-source simples avec widgets personnalisables, sans publicités ni permissions inutiles.</string>
-    <string name="deletion_confirmation_with_size">Voulez-vous vraiment supprimer %s? (%s MB)</string>
 </resources>

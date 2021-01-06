@@ -301,6 +301,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Haluatko varmasti jatkaa poistotoimintoon?</string>
     <string name="deletion_confirmation">Haluatko varmasti poistaa %s?</string> <!-- Are you sure you want to delete 5 items? -->
+    <string name="deletion_confirmation_with_size">Haluatko varmasti poistaa %s? (%s MB)</string>
     <string name="move_to_recycle_bin_confirmation">Haluatko varmasti siirtää kohteen %s roskakoriin?</string> <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Haluatko varmasti poistaa tämän kohteen?</string>
     <string name="are_you_sure_recycle_bin">Haluatko varmasti siirtää tämän kohteen roskakoriin?</string>
@@ -833,5 +834,4 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Yksinkertaisia vapaan lähdekoodin Android-sovelluksia kustomoitavilla pienoissovelluksilla, ilman mainoksia ja tarpeettomia käyttöoikeuksia.</string>
-    <string name="deletion_confirmation_with_size">Haluatko varmasti poistaa %s? (%s MB)</string>
 </resources>

@@ -298,6 +298,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">是否执行此删除操作？</string>
     <string name="deletion_confirmation">您确定要删除 %s？</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="deletion_confirmation_with_size">Are you sure you want to delete %s? (%s MB)</string>
     <string name="move_to_recycle_bin_confirmation">您确定要移动 %s到回收站？</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">您确定要删除此项目吗？</string>
     <string name="are_you_sure_recycle_bin">您确定要移动此项目到回收站吗？</string>
@@ -801,5 +802,4 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">一组简约且开源的 Android 应用程序，可自定义小部件，并且没有广告和不必要的权限。</string>
-    <string name="deletion_confirmation_with_size">Are you sure you want to delete %s? (%s MB)</string>
 </resources>

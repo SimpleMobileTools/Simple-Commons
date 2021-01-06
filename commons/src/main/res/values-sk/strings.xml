@@ -305,6 +305,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Ste si istý, že chcete pokračovať s vymazaním?</string>
     <string name="deletion_confirmation">Ste si istý, že chcete vymazať %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="deletion_confirmation_with_size">Ste si istý, že chcete vymazať %s? (%s MB)</string>
     <string name="move_to_recycle_bin_confirmation">Ste si istý, že chcete vyhodiť %s do koša?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Ste si istý, že chcete vymazať túto položku?</string>
     <string name="are_you_sure_recycle_bin">Ste si istý, že chcete vyhodiť túto položku do odpadkového koša?</string>
@@ -870,5 +871,4 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Skupina jednoduchých, open source Android apiek s nastaviteľnými widgetmi, bez reklám a nepotrebných oprávnení.</string>
-    <string name="deletion_confirmation_with_size">Ste si istý, že chcete vymazať %s? (%s MB)</string>
 </resources>

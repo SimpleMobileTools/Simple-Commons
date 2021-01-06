@@ -301,6 +301,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Estas segur que vols continuar amb l’eliminació?</string>
     <string name="deletion_confirmation">Esteu segur que voleu suprimir %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="deletion_confirmation_with_size">Esteu segur que voleu suprimir %s? (%s MB)</string>
     <string name="move_to_recycle_bin_confirmation">Estàs segur que vols moure %s a la paperera?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Segur que voleu eliminar aquest element?</string>
     <string name="are_you_sure_recycle_bin">Segur que voleu moure aquest element a la paperera?</string>
@@ -836,5 +837,4 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Un grup d\'aplicacions Android simples i de codi obert amb widgets personalitzables, sense anuncis ni permisos innecessaris.</string>
-    <string name="deletion_confirmation_with_size">Esteu segur que voleu suprimir %s? (%s MB)</string>
 </resources>

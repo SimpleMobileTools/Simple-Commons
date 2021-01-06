@@ -301,6 +301,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Silme işlemine devam etmek istediğinizden emin misiniz?</string>
     <string name="deletion_confirmation">%s gerçekten silinsin mi?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="deletion_confirmation_with_size">Are you sure you want to delete %s? (%s MB)</string>
     <string name="move_to_recycle_bin_confirmation">%s gerçekten Geri Dönüşüm Kutusuna taşınsın mı?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Bu öğeyi silmek istediğinizden emin misiniz?</string>
     <string name="are_you_sure_recycle_bin">Bu öğeyi Geri Dönüşüm Kutusu\'na taşımak istediğinizden emin misiniz?</string>
@@ -833,5 +834,4 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Özelleştirilebilir widget\'lara sahip, reklamlar ve gereksiz izinler içermeyen bir grup basit, açık kaynaklı Android uygulaması.</string>
-    <string name="deletion_confirmation_with_size">Are you sure you want to delete %s? (%s MB)</string>
 </resources>

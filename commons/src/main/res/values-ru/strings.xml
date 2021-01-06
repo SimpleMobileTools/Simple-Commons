@@ -305,6 +305,7 @@
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Подтверждение удаления</string>
     <string name="deletion_confirmation">Вы действительно хотите удалить %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="deletion_confirmation_with_size">Вы действительно хотите удалить %s? (%s MB)</string>
     <string name="move_to_recycle_bin_confirmation">Вы действительно хотите переместить %s в корзину?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Вы действительно хотите удалить этот элемент?</string>
     <string name="are_you_sure_recycle_bin">Вы действительно хотите переместить этот элемент в корзину?</string>
@@ -871,5 +872,4 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Группа простых приложений для Android с открытым исходным кодом с настраиваемыми виджетами, без рекламы и ненужных разрешений.</string>
-    <string name="deletion_confirmation_with_size">Вы действительно хотите удалить %s? (%s MB)</string>
 </resources>
