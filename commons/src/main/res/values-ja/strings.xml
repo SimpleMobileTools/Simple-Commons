@@ -34,7 +34,7 @@
     <string name="number">番号</string>
     <string name="no_contacts_found">連絡先が見つかりません</string>
     <string name="request_the_required_permissions">要求された許可をリクエスト</string>
-    <string name="no_access_to_contacts">連絡先情報にコンタクトすることが出来ませんでした</string>
+    <string name="no_access_to_contacts">連絡先情報にアクセスすることが出来ませんでした</string>
     <string name="insert_text_here">ここにテキストを挿入</string>
 
     <!-- View types -->
@@ -126,7 +126,7 @@
     <string name="could_not_create_folder">フォルダ %s を作成できません</string>
     <string name="could_not_create_file">ファイル %s を作成できません</string>
     <string name="no_new_items">新しいアイテムは見つかりませんでした</string>
-    <string name="no_space">宛先に十分なスペースがありません。 要求された %1$s, 利用可能 %2$s</string>
+    <string name="no_space">保存先に十分な空き容量がありません。 必要容量 %1$s, 空き容量 %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">新規作成</string>
@@ -143,7 +143,7 @@
     <string name="file_already_exists_overwrite">ファイル \"%s\" は既に存在しています。上書きしますか？</string>
     <string name="folder_already_exists">フォルダ \"%s\" は既に存在しています</string>
     <string name="merge">統合</string>
-    <string name="keep_both">どちらもキープ</string>
+    <string name="keep_both">両方保持する</string>
     <string name="overwrite">上書き</string>
     <string name="skip">スキップ</string>
     <string name="append">\'_1\' に追記する</string>
@@ -172,7 +172,6 @@
 
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
-        <item quantity="one">%d コンタクト</item>
         <item quantity="other">%d コンタクト</item>
     </plurals>
 
@@ -190,7 +189,7 @@
     <string name="properties">プロパティ</string>
     <string name="path">パス</string>
     <string name="items_selected">アイテム選択</string>
-    <string name="direct_children_count">直接の子の数</string>
+    <string name="direct_children_count">ファイル数+フォルダ数(サブフォルダ除く)</string>
     <string name="files_count">合計ファイル数</string>
     <string name="resolution">解像度</string>
     <string name="duration">期間</string>
@@ -203,7 +202,7 @@
     <string name="camera">カメラ名</string>
     <string name="exif">EXIF</string>
     <string name="song_title">曲名</string>
-    <string name="gps_coordinates">GPS coordinates</string>
+    <string name="gps_coordinates">GPS座標値</string>
     <string name="altitude">高度</string>
 
     <!-- Color customization -->
@@ -218,7 +217,7 @@
     <string name="default_color">デフォルト</string>
     <string name="change_color">色を変更</string>
     <string name="theme">テーマ</string>
-    <string name="changing_color_description">色を変更すると、テーマが「カスタム」に切り替わります</string>
+    <string name="changing_color_description">色を変更すると、テーマが \'カスタム\' に切り替わります</string>
     <string name="save">保存</string>
     <string name="discard">破棄</string>
     <string name="undo_changes">変更を元に戻す</string>
@@ -268,10 +267,10 @@
     <string name="redo">やり直し</string>
     <string name="print">印刷</string>
     <string name="create_shortcut">ショートカットを作成</string>
-    <string name="add_number_to_contact">コンタクトに番号を追加</string>
-    <string name="view_contact_details">View contact details</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="add_number_to_contact">連絡先に番号を追加</string>
+    <string name="view_contact_details">連絡先の詳細を表示</string>
+    <string name="call_from_sim_1">SIM 1 から電話</string>
+    <string name="call_from_sim_2">SIM 2 から電話</string>
 
     <!-- Sorting -->
     <string name="sort_by">並べ替え</string>
@@ -376,16 +375,16 @@
         <item quantity="other">%d時間</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="other">%d 日</item>
+        <item quantity="other">%d日</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="other">%d 週</item>
+        <item quantity="other">%d週</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="other">%d ヶ月</item>
+        <item quantity="other">%dヶ月</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="other">%d 年</item>
+        <item quantity="other">%d年</item>
     </plurals>
 
     <!-- For example: Event reminder: 3 minutes before -->
@@ -402,13 +401,13 @@
         <item quantity="other">%d日前</item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="other">%d 週間前</item>
+        <item quantity="other">%d週間前</item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="other">%d ヶ月前</item>
+        <item quantity="other">%dヶ月前</item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="other">%d 年前</item>
+        <item quantity="other">%d年前</item>
     </plurals>
 
     <!-- For example: Postpone reminder by 3 minutes -->
@@ -422,16 +421,16 @@
         <item quantity="other">%d時</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="other">%d 日</item>
+        <item quantity="other">%d日</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="other">%d 週間</item>
+        <item quantity="other">%d週間</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="other">%d ヶ月</item>
+        <item quantity="other">%dヶ月</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="other">%d 年</item>
+        <item quantity="other">%d年</item>
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
@@ -458,7 +457,7 @@
     <string name="customize_colors">表示色のカスタマイズ</string>
     <string name="customize_colors_locked">表示色のカスタマイズ (Locked)</string>
     <string name="customize_widget_colors">ウィジェットの色をカスタマイズ</string>
-    <string name="use_english_language">英語で表示する</string>
+    <string name="use_english_language">Use English language</string>
     <string name="show_hidden_items">非表示のアイテムを表示する</string>
     <string name="font_size">メモのフォントサイズ</string>
     <string name="small">小</string>
