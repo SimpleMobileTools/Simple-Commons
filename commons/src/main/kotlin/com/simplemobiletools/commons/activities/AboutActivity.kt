@@ -10,6 +10,7 @@ import android.view.View
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
+import com.simplemobiletools.commons.dialogs.RateStarsDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FAQItem
@@ -147,7 +148,7 @@ class AboutActivity : BaseSimpleActivity() {
         } else {
             about_rate_us.setOnClickListener {
                 if (baseConfig.wasBeforeRateShown) {
-                    redirectToRateUs()
+                    RateStarsDialog(this)
                 } else {
                     baseConfig.wasBeforeRateShown = true
                     val msg = "${getString(R.string.before_rate_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
