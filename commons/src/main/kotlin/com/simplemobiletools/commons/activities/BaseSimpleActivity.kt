@@ -10,13 +10,16 @@ import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.provider.DocumentsContract
+import android.provider.Settings
 import android.telecom.TelecomManager
 import android.view.Menu
 import android.view.MenuItem
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.util.Pair
@@ -302,6 +305,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             startCustomizationActivity()
         } else {
             launchPurchaseThankYouIntent()
+        }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun launchCustomizeNotificationsIntent() {
+        Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).apply {
+            putExtra(Settings.EXTRA_APP_PACKAGE, packageName)
+            startActivity(this)
         }
     }
 
