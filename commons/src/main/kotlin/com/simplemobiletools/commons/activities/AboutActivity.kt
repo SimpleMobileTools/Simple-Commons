@@ -148,7 +148,11 @@ class AboutActivity : BaseSimpleActivity() {
         } else {
             about_rate_us.setOnClickListener {
                 if (baseConfig.wasBeforeRateShown) {
-                    RateStarsDialog(this)
+                    if (baseConfig.wasAppRated) {
+                        redirectToRateUs()
+                    } else {
+                        RateStarsDialog(this)
+                    }
                 } else {
                     baseConfig.wasBeforeRateShown = true
                     val msg = "${getString(R.string.before_rate_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
