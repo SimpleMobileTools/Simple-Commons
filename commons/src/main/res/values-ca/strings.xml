@@ -272,9 +272,9 @@
     <string name="print">Imprimir</string>
     <string name="create_shortcut">Crear accès directe</string>
     <string name="add_number_to_contact">Afegeix el número als contactes</string>
-    <string name="view_contact_details">View contact details</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="view_contact_details">Veure els detalls de contacte</string>
+    <string name="call_from_sim_1">Truca des de la SIM 1</string>
+    <string name="call_from_sim_2">Truca des de la SIM 2</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar per</string>
@@ -490,6 +490,7 @@
     <string name="customize_colors">Canviar colors</string>
     <string name="customize_colors_locked">Canviar colors (Bloquejat)</string>
     <string name="customize_widget_colors">Personalitza els colors de widgets</string>
+    <string name="customize_notifications">Personalitzeu les notificacions</string>
     <string name="use_english_language">Usar l’idioma Anglès</string>
     <string name="show_hidden_items">Mostra elements ocults</string>
     <string name="font_size">Mida de la font</string>
@@ -521,6 +522,7 @@
     <string name="settings_exported_successfully">Ajustaments exportats correctament</string>
     <string name="settings_imported_successfully">Ajustaments importats correctament</string>
     <string name="start_name_with_surname">Start name with surname</string>
+    <string name="clear_cache">Clear cache</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilitat</string>

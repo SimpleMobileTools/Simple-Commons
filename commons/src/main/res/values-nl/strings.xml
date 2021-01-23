@@ -273,8 +273,8 @@
     <string name="create_shortcut">Snelkoppeling maken</string>
     <string name="add_number_to_contact">Nummer aan contact toevoegen</string>
     <string name="view_contact_details">Contactgegevens</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="call_from_sim_1">Met SIM 1 bellen</string>
+    <string name="call_from_sim_2">Met SIM 2 bellen</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorteren op</string>
@@ -490,6 +490,7 @@
     <string name="customize_colors">Kleuren aanpassen</string>
     <string name="customize_colors_locked">Kleuren aanpassen (Vergrendeld)</string>
     <string name="customize_widget_colors">Kleuren voor widget aanpassen</string>
+    <string name="customize_notifications">Notificaties aanpassen</string>
     <string name="use_english_language">Use English language</string>
     <string name="show_hidden_items">Verborgen items tonen</string>
     <string name="font_size">Lettergrootte</string>
@@ -521,6 +522,7 @@
     <string name="settings_exported_successfully">Instellingen geëxporteerd</string>
     <string name="settings_imported_successfully">Instellingen geïmporteerd</string>
     <string name="start_name_with_surname">Beginnen met achternaam</string>
+    <string name="clear_cache">Cache opschonen</string>
 
     <!-- Setting sections -->
     <string name="visibility">Opmaak</string>

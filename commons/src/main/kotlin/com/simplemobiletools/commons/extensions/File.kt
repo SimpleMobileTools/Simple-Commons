@@ -88,12 +88,22 @@ fun File.containsNoMedia(): Boolean {
     }
 }
 
-fun File.doesThisOrParentHaveNoMedia(noMediaFolders: ArrayList<String> = ArrayList()): Boolean {
+fun File.doesThisOrParentHaveNoMedia(folderNoMediaStatuses: HashMap<String, Boolean>, callback: ((path: String, hasNoMedia: Boolean) -> Unit)?): Boolean {
     var curFile = this
     while (true) {
-        if (noMediaFolders.contains(curFile.absolutePath) || curFile.containsNoMedia()) {
+        val noMediaPath = "${curFile.absolutePath}/$NOMEDIA"
+        val hasNoMedia = if (folderNoMediaStatuses.keys.contains(noMediaPath)) {
+            folderNoMediaStatuses[noMediaPath]!!
+        } else {
+            val contains = curFile.containsNoMedia()
+            callback?.invoke(curFile.absolutePath, contains)
+            contains
+        }
+
+        if (hasNoMedia) {
             return true
         }
+
         curFile = curFile.parentFile ?: break
         if (curFile.absolutePath == "/") {
             break

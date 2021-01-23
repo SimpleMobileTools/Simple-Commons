@@ -17,7 +17,7 @@
     <string name="unknown">Tuntematon</string>
     <string name="always">Aina</string>
     <string name="never">Ei koskaan</string>
-    <string name="details">Yksityiskohdat</string>
+    <string name="details">Tiedot</string>
     <string name="notes">Muistiinpanot</string>
     <string name="deleting_folder">Poistetaan kansio \'%s\'</string>
     <string name="none">Ei mitään</string>
@@ -258,7 +258,7 @@
     <string name="share">Jaa</string>
     <string name="share_via">Jaa sovelluksella</string>
     <string name="select_all">Valitse kaikki</string>
-    <string name="select_text">Select text</string>
+    <string name="select_text">Valitse teksti</string>
     <string name="hide">Piilota</string>
     <string name="unhide">Näytä piilotetut</string>
     <string name="hide_folder">Piilota kansio</string>
@@ -272,9 +272,9 @@
     <string name="print">Tulosta</string>
     <string name="create_shortcut">Luo pikakuvake</string>
     <string name="add_number_to_contact">Lisää numero yhteystietoon</string>
-    <string name="view_contact_details">View contact details</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="view_contact_details">Näytä yhteystieto</string>
+    <string name="call_from_sim_1">Soita SIM 1-kortilla</string>
+    <string name="call_from_sim_2">Soita SIM 2-kortilla</string>
 
     <!-- Sorting -->
     <string name="sort_by">Järjestä</string>
@@ -490,6 +490,7 @@
     <string name="customize_colors">Muokkaa sovelluksen värejä</string>
     <string name="customize_colors_locked">Muokkaa sovelluksen värejä (Locked)</string>
     <string name="customize_widget_colors">Mukauta pienoissovelluksen värejä</string>
+    <string name="customize_notifications">Mukauta ilmoituksia</string>
     <string name="use_english_language">Käytä englannin kieltä</string>
     <string name="show_hidden_items">Näytä piilotetut tiedostot</string>
     <string name="font_size">Fonttikoko</string>
@@ -521,6 +522,7 @@
     <string name="settings_exported_successfully">Asetukset viety onnistuneesti</string>
     <string name="settings_imported_successfully">Asetukset tuotu onnistuneesti</string>
     <string name="start_name_with_surname">Aloita sukunimellä</string>
+    <string name="clear_cache">Tyhjennä välimuisti</string>
 
     <!-- Setting sections -->
     <string name="visibility">Näkyvyys</string>
@@ -797,34 +799,34 @@
     <!-- License -->
     <string name="notice">Tämä sovellus käyttää kolmannen osapuolen lisenssejä tehdäkseni elämästäni helpompaa. Kiitos.</string>
     <string name="third_party_licences">Kolmansien osapuolien lisenssit</string>
-    <string name="kotlin_title">Kotlin (programming language)</string>
+    <string name="kotlin_title">Kotlin (ohjelmointikieli)</string>
     <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
-    <string name="glide_title">Glide (image loading and caching)</string>
-    <string name="picasso_title">Picasso (image loading and caching)</string>
-    <string name="cropper_title">Android Image Cropper (image crop and rotate)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (right to left swiping)</string>
+    <string name="glide_title">Glide (kuvien lataus ja välimuisti)</string>
+    <string name="picasso_title">Picasso (kuvien lataus ja välimuisti)</string>
+    <string name="cropper_title">Android Image Cropper (kuvien rajaus ja kierto)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (oikealta vasemmalle-pyyhkäisy)</string>
     <string name="joda_title">Joda-Time (Java date replacement)</string>
     <string name="stetho_title">Stetho (debugging databases)</string>
     <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
+    <string name="photoview_title">PhotoView (zoomattavat GIF-tiedostot)</string>
     <string name="pattern_title">PatternLockView (pattern protection)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="reprint_title">Reprint (sormenjälkisuojaus)</string>
     <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
     <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
     <string name="robolectric_title">Robolectric (testing framework)</string>
     <string name="espresso_title">Espresso (testing helper)</string>
-    <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
-    <string name="number_picker_title">Number Picker (customizable number picker)</string>
-    <string name="exoplayer_title">ExoPlayer (video player)</string>
-    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
-    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
-    <string name="filters_title">Android Photo Filters (image filters)</string>
+    <string name="gson_title">Gson (JSON-jäsennys)</string>
+    <string name="leak_canary_title">Leak Canary (muistivuotojen havaitseminen)</string>
+    <string name="number_picker_title">Number Picker (mukautettava numeronvalitsin)</string>
+    <string name="exoplayer_title">ExoPlayer (videosoitin)</string>
+    <string name="panorama_view_title">VR Panorama View (panoraamakuvien näyttö)</string>
+    <string name="sanselan_title">Apache Sanselan (kuvien metadatan luku)</string>
+    <string name="filters_title">Android Photo Filters (kuvasuodattimet)</string>
     <string name="gesture_views_title">Gesture Views (zoomable images)</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (kirjaimet vierityspalkissa)</string>
     <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="audio_record_view_title">Audio Record View (äänen visualisointi)</string>
+    <string name="sms_mms_title">SMS MMS (SMS ja MMS-viestien käsittely)</string>
     <string name="apng_title">APNG Android (animated WebP support)</string>
 
     <!-- Google Play listing -->

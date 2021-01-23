@@ -272,9 +272,9 @@
     <string name="print">Imprimir</string>
     <string name="create_shortcut">Crear atajo</string>
     <string name="add_number_to_contact">Anadir el número a contactos</string>
-    <string name="view_contact_details">View contact details</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="view_contact_details">Ver detalles de contacto</string>
+    <string name="call_from_sim_1">Llamar desde SIM 1</string>
+    <string name="call_from_sim_2">Llamar desde SIM 2</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -490,6 +490,7 @@
     <string name="customize_colors">Cambiar colores</string>
     <string name="customize_colors_locked">Cambiar colores (Locked)</string>
     <string name="customize_widget_colors">Personaliza los colores del widget</string>
+    <string name="customize_notifications">Customize notifications</string>
     <string name="use_english_language">Usar el idioma Inglés</string>
     <string name="show_hidden_items">Mostrar elementos ocultos</string>
     <string name="font_size">Tamaño de fuente</string>
@@ -521,6 +522,7 @@
     <string name="settings_exported_successfully">Ajustes exportados correctamente</string>
     <string name="settings_imported_successfully">Ajustes importados correctamente</string>
     <string name="start_name_with_surname">Mostrar nombre por apellido</string>
+    <string name="clear_cache">Clear cache</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilidad</string>
@@ -807,7 +809,7 @@
     <string name="cropper_title">Android Image Cropper (Recortador y rotador de imágenes)</string>
     <string name="rtl_viewpager_title">RtlViewPager (Desplazamiento de izquierda a derecha)</string>
     <string name="joda_title">Joda-Time (Remplazo a la fecha de Java)</string>
-    <string name="stetho_title">Stetho (Debugger de bases de datos)</string>
+    <string name="stetho_title">Stetho (Depurador de bases de datos)</string>
     <string name="otto_title">Otto (Bus de eventos)</string>
     <string name="photoview_title">PhotoView (GIFs con zoom)</string>
     <string name="pattern_title">PatternLockView (Protección con patrón)</string>
@@ -818,7 +820,7 @@
     <string name="espresso_title">Espresso (Auxiliar de pruebas)</string>
     <string name="gson_title">Gson (Convertidor de JSON)</string>
     <string name="leak_canary_title">Leak Canary (Detector de falta de memoria)</string>
-    <string name="number_picker_title">Selector de número (Selector de número personalizable)</string>
+    <string name="number_picker_title">Number Picker (Selector de número personalizable)</string>
     <string name="exoplayer_title">ExoPlayer (Reproductor de video)</string>
     <string name="panorama_view_title">VR Panorama View (Mostrador de panoramas)</string>
     <string name="sanselan_title">Apache Sanselan (Lector de metadatos de imagen)</string>

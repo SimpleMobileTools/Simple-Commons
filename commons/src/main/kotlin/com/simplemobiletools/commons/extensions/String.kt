@@ -94,7 +94,8 @@ fun String.getParentPath() = removeSuffix("/${getFilenameFromPath()}")
 
 fun String.containsNoMedia() = File(this).containsNoMedia()
 
-fun String.doesThisOrParentHaveNoMedia(noMediaFolders: ArrayList<String> = ArrayList()) = File(this).doesThisOrParentHaveNoMedia(noMediaFolders)
+fun String.doesThisOrParentHaveNoMedia(folderNoMediaStatuses: HashMap<String, Boolean>, callback: ((path: String, hasNoMedia: Boolean) -> Unit)?) =
+    File(this).doesThisOrParentHaveNoMedia(folderNoMediaStatuses, callback)
 
 fun String.getImageResolution(): Point? {
     val options = BitmapFactory.Options()
@@ -184,11 +185,17 @@ fun String.searchMatches(textToHighlight: String): ArrayList<Int> {
     return indexes
 }
 
-fun String.getFileSignature() = ObjectKey(getFileKey())
+fun String.getFileSignature(lastModified: Long? = null) = ObjectKey(getFileKey(lastModified))
 
-fun String.getFileKey(): String {
+fun String.getFileKey(lastModified: Long? = null): String {
     val file = File(this)
-    return "${file.absolutePath}${file.lastModified()}"
+    val modified = if (lastModified != null && lastModified > 0) {
+        lastModified
+    } else {
+        file.lastModified()
+    }
+
+    return "${file.absolutePath}$modified"
 }
 
 fun String.getAvailableStorageB(): Long {

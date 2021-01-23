@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.models
 
 import android.content.Context
 import android.net.Uri
+import com.bumptech.glide.signature.ObjectKey
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import java.io.File
@@ -121,4 +122,16 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
     fun getImageResolution() = path.getImageResolution()
 
     fun getPublicUri(context: Context) = context.getDocumentFile(path)?.uri ?: ""
+
+    fun getSignature(): String {
+        val lastModified = if (modified > 1) {
+            modified
+        } else {
+            File(path).lastModified()
+        }
+
+        return "$path-$lastModified-$size"
+    }
+
+    fun getKey() = ObjectKey(getSignature())
 }

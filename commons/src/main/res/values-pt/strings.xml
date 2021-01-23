@@ -53,7 +53,7 @@
     <string name="block_number">Bloquear número</string>
     <string name="block_numbers">Bloquear números</string>
     <string name="blocked_numbers">Números bloqueados</string>
-    <string name="must_make_default_dialer">Tem que tornar esta aplicação como predefinição para poder bloquear números.</string>
+    <string name="must_make_default_dialer">Tem que tornar esta aplicação como padrão para poder bloquear números.</string>
     <string name="set_as_default">Definir como padrão</string>
     <string name="block_confirmation">Tem a certeza de que deseja bloquear \"%s\"?</string>
 
@@ -95,7 +95,7 @@
     <string name="source_file_doesnt_exist">O ficheiro de origem %s não existe</string>
     <string name="prepend_filenames">Introduzir antes do nome do ficheiro</string>
     <string name="append_filenames">Introduzir depois do nome do ficheiro</string>
-    <string name="simple_renaming">Renomear</string>
+    <string name="simple_renaming">Mudar nome</string>
     <string name="pattern_renaming">Padrão</string>
     <string name="string_to_add">Texto a adicionar</string>
     <string name="rename_date_time_pattern">%Y - ano\n%M - mês\n%D - dia\n%h - horas\n%m - minutos\n%s - segundos\n%i - incremento númerico a partir de 1</string>
@@ -254,7 +254,7 @@
     <!-- Actionbar items -->
     <string name="delete">Apagar</string>
     <string name="remove">Remover</string>
-    <string name="rename">Renomear</string>
+    <string name="rename">Mudar nome</string>
     <string name="share">Partilhar</string>
     <string name="share_via">Partilhar por</string>
     <string name="select_all">Selecionar tudo</string>
@@ -273,8 +273,8 @@
     <string name="create_shortcut">Criar atalho</string>
     <string name="add_number_to_contact">Adicionar número a um contacto existente</string>
     <string name="view_contact_details">View contact details</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="call_from_sim_1">Ligar do SIM 1</string>
+    <string name="call_from_sim_2">Ligar do SIM 2</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -488,8 +488,9 @@
     <string name="settings">Definições</string>
     <string name="purchase_simple_thank_you">Comprar Simple Thank You</string>
     <string name="customize_colors">Personalizar cores</string>
-    <string name="customize_colors_locked">Personalizar cores (Locked)</string>
+    <string name="customize_colors_locked">Personalizar cores (Bloqueado)</string>
     <string name="customize_widget_colors">Personalizar cores do widget</string>
+    <string name="customize_notifications">Customize notifications</string>
     <string name="use_english_language">Utilizar aplicação em inglês</string>
     <string name="show_hidden_items">Mostrar itens ocultos</string>
     <string name="font_size">Tamanho do texto</string>
@@ -521,6 +522,7 @@
     <string name="settings_exported_successfully">Definições exportadas com sucesso</string>
     <string name="settings_imported_successfully">Definições importadas com sucesso</string>
     <string name="start_name_with_surname">Ordenar por apelido</string>
+    <string name="clear_cache">Clear cache</string>
 
     <!-- Setting sections -->
     <string name="visibility">Exibição</string>
