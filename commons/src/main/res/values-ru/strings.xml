@@ -55,7 +55,7 @@
     <string name="blocked_numbers">Заблокированные номера</string>
     <string name="must_make_default_dialer">Чтобы использовать блокировку, необходимо сделать \"Simple Contacts\" приложением по умолчанию для набора номера.</string>
     <string name="set_as_default">Установить по умолчанию</string>
-    <string name="block_confirmation">Вы уверены, что хотите заблокировать \"%s\"?</string>
+    <string name="block_confirmation">Заблокировать \"%s\"?</string>
 
     <!-- Favorites -->
     <string name="favorites">Избранное</string>
@@ -191,7 +191,7 @@
     <string name="wrong_root_selected">Папка выбрана неверно, выберите SD-карту</string>
     <string name="sd_card_usb_same">Пути к SD-карте и USB-накопителю не могут быть одинаковыми</string>
     <string name="app_on_sd_card">Похоже, что приложение у вас установлено на SD-карту, а это делает виджеты приложений недоступными. Вы даже не увидите их в списке доступных виджетов.
-        Это системное ограничение, поэтому, если вы хотите использовать виджеты, вам нужно переместить приложение обратно во внутреннюю память.</string>
+        Это системное ограничение, поэтому, если хотите использовать виджеты, вам нужно переместить приложение обратно во внутреннюю память.</string>
 
     <!-- File properties -->
     <string name="properties">Свойства</string>
@@ -229,7 +229,7 @@
     <string name="save">Сохранить</string>
     <string name="discard">Нет</string>
     <string name="undo_changes">Отменить изменения</string>
-    <string name="undo_changes_confirmation">Действительно отменить изменения?</string>
+    <string name="undo_changes_confirmation">Отменить изменения?</string>
     <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
     <string name="apply_to_all_apps">Применить цвета ко всем приложениям Simple</string>
     <string name="app_icon_color_warning">ВНИМАНИЕ: некоторые рабочие столы неправильно обрабатывают изменение настроек значков приложений. Если значок исчезнет, попробуйте запустить приложение через Google Play или виджет, если он доступен.
@@ -304,10 +304,10 @@
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Подтверждение удаления</string>
-    <string name="deletion_confirmation">Вы действительно хотите удалить %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Вы действительно хотите переместить %s в корзину?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Вы действительно хотите удалить этот элемент?</string>
-    <string name="are_you_sure_recycle_bin">Вы действительно хотите переместить этот элемент в корзину?</string>
+    <string name="deletion_confirmation">Удалить %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Переместить %s в корзину?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="are_you_sure_delete">Удалить этот элемент?</string>
+    <string name="are_you_sure_recycle_bin">Переместить этот элемент в корзину?</string>
     <string name="do_not_ask_again">Больше не спрашивать (до следующего запуска)</string>
     <string name="yes">Да</string>
     <string name="no">Нет</string>
@@ -523,7 +523,7 @@
     <string name="customize_colors">Настройки интерфейса</string>
     <string name="customize_colors_locked">Настройки интерфейса (заблокировано)</string>
     <string name="customize_widget_colors">Настроить цвета виджета</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="customize_notifications">Настроить уведомления</string>
     <string name="use_english_language">Использовать английский язык</string>
     <string name="show_hidden_items">Показывать скрытые папки</string>
     <string name="font_size">Размер шрифта</string>
@@ -555,7 +555,7 @@
     <string name="settings_exported_successfully">Настройки успешно экспортированы </string>
     <string name="settings_imported_successfully">Настройки успешно импортированы</string>
     <string name="start_name_with_surname">Показывать сначала фамилию</string>
-    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cache">Очистить кеш</string>
 
     <!-- Setting sections -->
     <string name="visibility">Отображение</string>
@@ -582,7 +582,7 @@
     <string name="restore_all_files">Восстановить все файлы</string>
     <string name="recycle_bin_emptied">Корзина очищена</string>
     <string name="files_restored_successfully">Файлы восстановлены</string>
-    <string name="empty_recycle_bin_confirmation">Вы действительно хотите очистить корзину? Файлы будут удалены безвозвратно.</string>
+    <string name="empty_recycle_bin_confirmation">Очистить корзину? Файлы будут удалены безвозвратно.</string>
     <string name="recycle_bin_empty">Корзина пуста</string>
     <string name="moving_recycle_bin_items_disabled">Перемещение элементов корзины отключено, используйте восстановление</string>
     <string name="show_the_recycle_bin">Показать корзину</string>
