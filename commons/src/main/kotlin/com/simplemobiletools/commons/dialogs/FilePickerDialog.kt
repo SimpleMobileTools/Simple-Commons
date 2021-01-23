@@ -287,7 +287,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
     override fun breadcrumbClicked(id: Int) {
         if (id == 0) {
-            StoragePickerDialog(activity, currPath, forceShowRoot) {
+            StoragePickerDialog(activity, currPath, forceShowRoot, true) {
                 currPath = it
                 tryUpdateItems()
             }
