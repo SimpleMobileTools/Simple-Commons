@@ -8,6 +8,8 @@ import android.hardware.usb.UsbManager
 import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Environment
+import android.os.Handler
+import android.os.Looper
 import android.provider.DocumentsContract
 import android.provider.MediaStore.*
 import android.text.TextUtils
@@ -304,8 +306,9 @@ fun Context.getFileUri(path: String) = when {
 }
 
 // these functions update the mediastore instantly, MediaScannerConnection.scanFileRecursively takes some time to really get applied
-fun Context.deleteFromMediaStore(path: String) {
+fun Context.deleteFromMediaStore(path: String, callback: ((needsRescan: Boolean) -> Unit)? = null) {
     if (getIsPathDirectory(path)) {
+        callback?.invoke(false)
         return
     }
 
@@ -313,9 +316,28 @@ fun Context.deleteFromMediaStore(path: String) {
         try {
             val where = "${MediaColumns.DATA} = ?"
             val args = arrayOf(path)
-            contentResolver.delete(getFileUri(path), where, args)
+            val success = contentResolver.delete(getFileUri(path), where, args) != 1
+            callback?.invoke(success)
         } catch (ignored: Exception) {
         }
+        callback?.invoke(true)
+    }
+}
+
+fun Context.rescanAndDeletePath(path: String, callback: () -> Unit) {
+    val SCAN_FILE_MAX_DURATION = 1000L
+    val scanFileHandler = Handler(Looper.getMainLooper())
+    scanFileHandler.postDelayed({
+        callback()
+    }, SCAN_FILE_MAX_DURATION)
+
+    MediaScannerConnection.scanFile(applicationContext, arrayOf(path), null) { path, uri ->
+        scanFileHandler.removeCallbacksAndMessages(null)
+        try {
+            applicationContext.contentResolver.delete(uri, null, null)
+        } catch (e: Exception) {
+        }
+        callback()
     }
 }
 
