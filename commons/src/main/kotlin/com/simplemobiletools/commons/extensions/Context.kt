@@ -50,6 +50,7 @@ import com.simplemobiletools.commons.models.AlarmSound
 import com.simplemobiletools.commons.models.BlockedNumber
 import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.*
+import org.joda.time.LocalTime
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -552,13 +553,17 @@ fun Context.formatSecondsToTimeString(totalSeconds: Int): String {
     return result
 }
 
-fun Context.getFormattedMinutes(minutes: Int, showBefore: Boolean = true) = getFormattedSeconds(if (minutes <= 0) minutes else minutes * 60, showBefore)
+fun Context.getFormattedMinutes(minutes: Int, showBefore: Boolean = true) = getFormattedSeconds(if (minutes == -1) minutes else minutes * 60, showBefore)
 
 fun Context.getFormattedSeconds(seconds: Int, showBefore: Boolean = true) = when (seconds) {
     -1 -> getString(R.string.no_reminder)
     0 -> getString(R.string.at_start)
     else -> {
         when {
+            seconds < 0 && seconds > -60*60*24 -> {
+                val minutes = -seconds / 60
+                getString(R.string.during_day_at).format(minutes / 60, minutes % 60)
+            }
             seconds % YEAR_SECONDS == 0 -> {
                 val base = if (showBefore) R.plurals.years_before else R.plurals.by_years
                 resources.getQuantityString(base, seconds / YEAR_SECONDS, seconds / YEAR_SECONDS)
