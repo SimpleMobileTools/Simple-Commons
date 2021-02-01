@@ -11,9 +11,9 @@
     <string name="no_app_found">Keine passende App gefunden</string>
     <string name="set_as">Festlegen als</string>
     <string name="copy_to_clipboard">In die Zwischenablage kopieren</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
+    <string name="copy_number_to_clipboard">Kopiere die Nummer in die Zwischenablage</string>
     <string name="value_copied_to_clipboard">Wert in Zwischenablage kopiert</string>
-    <string name="dial_number">Dial number</string>
+    <string name="dial_number">Nummer anrufen</string>
     <string name="unknown">Unbekannt</string>
     <string name="always">Immer</string>
     <string name="never">Nie</string>
@@ -243,7 +243,7 @@
     <string name="dark_theme">Dunkel</string>
     <string name="solarized">Solarisiert</string>
     <string name="dark_red">Dunkelrot</string>
-    <string name="white">White</string>
+    <string name="white">Weiß</string>
     <string name="black_white">Schwarz-Weiß</string>
     <string name="custom">Benutzerdefiniert</string>
     <string name="shared">Geteilt</string>
@@ -259,7 +259,7 @@
     <string name="share">Teilen</string>
     <string name="share_via">Teilen via</string>
     <string name="select_all">Alle auswählen</string>
-    <string name="select_text">Select text</string>
+    <string name="select_text">Text auswählen</string>
     <string name="hide">Verstecken</string>
     <string name="unhide">Nicht verstecken</string>
     <string name="hide_folder">Ordner verstecken</string>
@@ -272,10 +272,10 @@
     <string name="redo">Wiederholen</string>
     <string name="print">Drucken</string>
     <string name="create_shortcut">Verknüpfung erstellen</string>
-    <string name="add_number_to_contact">füge Nummer zu Kontakt hinzu</string>
-    <string name="view_contact_details">View contact details</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="add_number_to_contact">Füge Nummer zu Kontakt hinzu</string>
+    <string name="view_contact_details">Kontaktdetails anzeigen</string>
+    <string name="call_from_sim_1">Von SIM 1 anrufen</string>
+    <string name="call_from_sim_2">Von SIM 2 anrufen</string>
     <string name="toggle_filename">Beschriftungen ein/aus</string>
 
     <!-- Sorting -->
@@ -297,8 +297,8 @@
     <string name="middle_name">Zweiter Vorname</string>
     <string name="surname">Nachname</string>
     <string name="full_name">Vollständiger Name</string>
-    <string name="use_custom_sorting">Use custom sorting</string>
-    <string name="change_order">Change order</string>
+    <string name="use_custom_sorting">Nutze benutzerdefiniertes Sortieren</string>
+    <string name="change_order">Reihenfolge ändern</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Willst du mit dem Löschen fortfahren?</string>
@@ -343,7 +343,7 @@
     <string name="yesterday">Gestern</string>
     <string name="today">Heute</string>
     <string name="tomorrow">Morgen</string>
-    <string name="hide_year">Hide year</string>
+    <string name="hide_year">Jahr verstecken</string>
     <string name="seconds_raw">Sekunden</string>
     <string name="minutes_raw">Minuten</string>
     <string name="hours_raw">Stunden</string>
@@ -492,7 +492,7 @@
     <string name="customize_colors">Farben anpassen</string>
     <string name="customize_colors_locked">Farben anpassen (Locked)</string>
     <string name="customize_widget_colors">Widget Farben anpassen</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="customize_notifications">Benachrichtigungen anpassen</string>
     <string name="use_english_language">App in Englisch verwenden</string>
     <string name="show_hidden_items">Versteckte Elemente anzeigen</string>
     <string name="font_size">Schriftgröße</string>
@@ -524,7 +524,7 @@
     <string name="settings_exported_successfully">Einstellungen erfolgreich exportiert</string>
     <string name="settings_imported_successfully">Einstellungen erfolgreich importiert</string>
     <string name="start_name_with_surname">Namen mit Nachnamen beginnen</string>
-    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cache">Cache leeren</string>
 
     <!-- Setting sections -->
     <string name="visibility">Sichtbarkeit</string>
@@ -542,8 +542,8 @@
     <string name="contacts_tab">Kontakte</string>
     <string name="favorites_tab">Favoriten</string>
     <string name="call_history_tab">Anrufliste</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">zuletzt verwendeter Tab</string>
+    <string name="groups_tab">Gruppen</string>
+    <string name="last_used_tab">Zuletzt verwendeter Tab</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Diese Datei wiederherstellen</string>
@@ -744,7 +744,7 @@
     <string name="faq_4_title_commons">Ich mag die Farben des Widgets nicht. Kann ich sie wechseln?</string>
     <string name="faq_4_text_commons">Ja, wenn du ein Widget auf den Home Screen ziehst, erscheint ein Konfigurationsmenü. In der linken unteren Ecke sind farbige Kästchen, drücke auf sie und wähle eine neue Farbe. Außerdem kannst du den Regler nutzen, um den Alphaparameter (Transparenz) einzustellen.</string>
     <string name="faq_5_title_commons">Kann ich gelöschte Dateien wiederherstellen?</string>
-    <string name="faq_5_text_commons">Wurden die Dateien endgültig gelöst, sind sie verloren. Standardmäßig ist jedoch der Papierkorb aktiviert. Dateien werden dann in den Papierkorb verschoben anstatt gelöscht.
+    <string name="faq_5_text_commons">Wurden die Dateien endgültig gelöscht, sind sie verloren. Standardmäßig ist jedoch der Papierkorb aktiviert. Dateien werden dann in den Papierkorb verschoben anstatt gelöscht.
         Von dort können die Dateien wiederhergestellt werden.</string>
     <string name="faq_6_title_commons">Das App-Icon im Launcher ist verschwunden. Was kann ich tun?</string>
     <string name="faq_6_text_commons">Das passiert, wenn dein Launcher das Anpassen von App-Icons nicht richtig unterstützt. Versuche die App über Google Play oder ein Widget (wenn verfügbar) zu starten.
