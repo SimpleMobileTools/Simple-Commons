@@ -243,7 +243,7 @@
     <string name="dark_theme">Σκούρο</string>
     <string name="solarized">Solarized</string>
     <string name="dark_red">Σκούρο κόκκινο</string>
-    <string name="white">White</string>
+    <string name="white">Άσπρο</string>
     <string name="black_white">Μαύρο &amp; Άσπρο</string>
     <string name="custom">Προσαρμογή</string>
     <string name="shared">Κοινόχρηστο</string>
@@ -274,8 +274,8 @@
     <string name="create_shortcut">Δημιουργία συντόμευσης</string>
     <string name="add_number_to_contact">Προσθήκη αριθμού επαφής</string>
     <string name="view_contact_details">Προβολή λεπτομερειών επαφής</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="call_from_sim_1">Κλήση απο SIM 1</string>
+    <string name="call_from_sim_2">Κλήση απο SIM 2</string>
     <string name="toggle_filename">Αλλαγή προβολής ονόματος αρχείων</string>
 
     <!-- Sorting -->
@@ -492,7 +492,7 @@
     <string name="customize_colors">Προσαρμογή χρωμάτων</string>
     <string name="customize_colors_locked">Προσαρμογή χρωμάτων (Κλειδωμένο)</string>
     <string name="customize_widget_colors">Προσαρμογή χρωμάτων widget</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="customize_notifications">Προσαρμογή ειδοποιήσεων</string>
     <string name="use_english_language">Χρήση γλώσσας English</string>
     <string name="show_hidden_items">Εμφάνιση κρυφών στοιχείων</string>
     <string name="font_size">Μέγεθος κειμένου</string>
@@ -524,7 +524,7 @@
     <string name="settings_exported_successfully">Επιτυχής εξαγωγή ρυθμίσεων</string>
     <string name="settings_imported_successfully">Επιτυχής εισαγωγή ρυθμίσεων</string>
     <string name="start_name_with_surname">Εμφάνιση πρώτα το επώνυμο</string>
-    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cache">Καθαρισμός cache</string>
 
     <!-- Setting sections -->
     <string name="visibility">Προβολή</string>
