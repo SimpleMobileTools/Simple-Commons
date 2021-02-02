@@ -243,6 +243,7 @@
     <string name="dark_theme">Mørk</string>
     <string name="solarized">Solarized</string>
     <string name="dark_red">Mørkerød</string>
+    <string name="white">Hvid</string>
     <string name="black_white">Sort &amp; hvid</string>
     <string name="custom">Tilpasset</string>
     <string name="shared">Gemt</string>
@@ -272,9 +273,10 @@
     <string name="print">Udskriv</string>
     <string name="create_shortcut">Opret genvej</string>
     <string name="add_number_to_contact">Føj nummer til kontakt</string>
-    <string name="view_contact_details">View contact details</string>
+    <string name="view_contact_details">Vis kontaktoplysninger</string>
     <string name="call_from_sim_1">Call from SIM 1</string>
     <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="toggle_filename">Skift filnavnets synlighed</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorter efter</string>

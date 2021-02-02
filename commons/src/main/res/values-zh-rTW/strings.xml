@@ -240,6 +240,7 @@
     <string name="dark_theme">灰暗主題</string>
     <string name="solarized">Solarized</string>
     <string name="dark_red">深紅主題</string>
+    <string name="white">White</string>
     <string name="black_white">黑白主題</string>
     <string name="custom">自訂</string>
     <string name="shared">分享</string>
@@ -272,6 +273,7 @@
     <string name="view_contact_details">View contact details</string>
     <string name="call_from_sim_1">Call from SIM 1</string>
     <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="toggle_filename">顯示檔案名稱</string>
 
     <!-- Sorting -->
     <string name="sort_by">排序</string>
