@@ -93,11 +93,11 @@ fun Int.isThisYear(): Boolean {
 }
 
 fun Int.addBitIf(add: Boolean, bit: Int) =
-        if (add) {
-            addBit(bit)
-        } else {
-            removeBit(bit)
-        }
+    if (add) {
+        addBit(bit)
+    } else {
+        removeBit(bit)
+    }
 
 // TODO: how to do "bits & ~bit" in kotlin?
 fun Int.removeBit(bit: Int) = addBit(bit) - bit
@@ -110,10 +110,8 @@ fun ClosedRange<Int>.random() = Random().nextInt(endInclusive - start) + start
 
 // taken from https://stackoverflow.com/a/40964456/1967672
 fun Int.darkenColor(): Int {
-    if (this == Color.WHITE) {
-        return -2105377
-    } else if (this == Color.BLACK) {
-        return Color.BLACK
+    if (this == Color.WHITE || this == Color.BLACK) {
+        return this
     }
 
     val DARK_FACTOR = 8
@@ -172,9 +170,9 @@ fun Int.ensureTwoDigits(): String {
 
 fun Int.getColorStateList(): ColorStateList {
     val states = arrayOf(intArrayOf(android.R.attr.state_enabled),
-            intArrayOf(-android.R.attr.state_enabled),
-            intArrayOf(-android.R.attr.state_checked),
-            intArrayOf(android.R.attr.state_pressed)
+        intArrayOf(-android.R.attr.state_enabled),
+        intArrayOf(-android.R.attr.state_checked),
+        intArrayOf(android.R.attr.state_pressed)
     )
     val colors = intArrayOf(this, this, this, this)
     return ColorStateList(states, colors)

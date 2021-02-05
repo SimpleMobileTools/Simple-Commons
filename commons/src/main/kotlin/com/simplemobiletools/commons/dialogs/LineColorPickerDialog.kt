@@ -7,6 +7,7 @@ import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.isMarshmallowPlus
 import com.simplemobiletools.commons.interfaces.LineColorPickerListener
 import kotlinx.android.synthetic.main.dialog_line_color_picker.view.*
 import java.util.*
@@ -61,12 +62,12 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
         }
 
         dialog = AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
-                .setNegativeButton(R.string.cancel) { dialog, which -> dialogDismissed() }
-                .setOnCancelListener { dialogDismissed() }
-                .create().apply {
-                    activity.setupDialogStuff(view, this)
-                }
+            .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
+            .setNegativeButton(R.string.cancel) { dialog, which -> dialogDismissed() }
+            .setOnCancelListener { dialogDismissed() }
+            .create().apply {
+                activity.setupDialogStuff(view, this)
+            }
     }
 
     fun getSpecificColor() = view.secondary_line_color_picker.getCurrentColor()
@@ -81,6 +82,14 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
             if (!wasDimmedBackgroundRemoved) {
                 dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
                 wasDimmedBackgroundRemoved = true
+            }
+
+            if (isMarshmallowPlus()) {
+                if (color.getContrastColor() == 0xFF333333.toInt()) {
+                    activity.window.decorView.systemUiVisibility = view.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
+                } else {
+                    activity.window.decorView.systemUiVisibility = view.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
+                }
             }
         }
     }

@@ -62,10 +62,10 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
     val textColor = if (tmpTextColor == 0) baseConfig.textColor else tmpTextColor
     val backgroundColor = baseConfig.backgroundColor
     val accentColor = if (tmpAccentColor == 0) {
-        if (isBlackAndWhiteTheme()) {
-            Color.WHITE
-        } else {
-            baseConfig.primaryColor
+        when {
+            isBlackAndWhiteTheme() -> Color.WHITE
+            isWhiteTheme() -> Color.BLACK
+            else -> baseConfig.primaryColor
         }
     } else {
         tmpAccentColor
@@ -100,12 +100,18 @@ fun Context.getLinkTextColor(): Int {
 
 fun Context.isBlackAndWhiteTheme() = baseConfig.textColor == Color.WHITE && baseConfig.primaryColor == Color.BLACK && baseConfig.backgroundColor == Color.BLACK
 
-fun Context.getAdjustedPrimaryColor() = if (isBlackAndWhiteTheme()) Color.WHITE else baseConfig.primaryColor
+fun Context.isWhiteTheme() = baseConfig.textColor == Color.BLACK && baseConfig.primaryColor == Color.WHITE && baseConfig.backgroundColor == Color.WHITE
 
-fun Context.getFABIconColor() = if (isBlackAndWhiteTheme()) {
-    Color.BLACK
-} else {
-    baseConfig.primaryColor.getContrastColor()
+fun Context.getAdjustedPrimaryColor() = when {
+    isBlackAndWhiteTheme() -> Color.WHITE
+    isWhiteTheme() -> Color.BLACK
+    else -> baseConfig.primaryColor
+}
+
+fun Context.getFABIconColor() = when {
+    isBlackAndWhiteTheme() -> Color.BLACK
+    isWhiteTheme() -> Color.WHITE
+    else -> baseConfig.primaryColor.getContrastColor()
 }
 
 fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
