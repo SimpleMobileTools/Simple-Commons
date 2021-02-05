@@ -241,8 +241,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 if (curTextColor == getColor(value.textColorId) &&
                     curBackgroundColor == getColor(value.backgroundColorId) &&
                     curPrimaryColor == getColor(value.primaryColorId) &&
-                    curAppIconColor == getColor(value.appIconColorId) &&
-                    curNavigationBarColor == getThemeNavigationColor(key)
+                    curAppIconColor == getColor(value.appIconColorId)
                 ) {
                     themeId = key
                 }
@@ -286,7 +285,13 @@ class CustomizationActivity : BaseSimpleActivity() {
             backgroundColor = curBackgroundColor
             primaryColor = curPrimaryColor
             appIconColor = curAppIconColor
-            navigationBarColor = curNavigationBarColor
+
+            // -1 is used as an invalid value, lets make use of it for white
+            navigationBarColor = if (curNavigationBarColor == INVALID_NAVIGATION_BAR_COLOR) {
+                -2
+            } else {
+                curNavigationBarColor
+            }
         }
 
         if (didAppIconColorChange) {
