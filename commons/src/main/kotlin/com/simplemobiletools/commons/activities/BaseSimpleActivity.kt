@@ -146,6 +146,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             try {
                 val colorToUse = if (color == -2) -1 else color
                 window.navigationBarColor = colorToUse
+
+                if (isOreoPlus()) {
+                    if (color.getContrastColor() == 0xFF333333.toInt()) {
+                        window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
+                    } else {
+                        window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
+                    }
+                }
             } catch (ignored: Exception) {
             }
         }
