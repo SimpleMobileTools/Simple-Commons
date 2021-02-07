@@ -64,7 +64,7 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
     val accentColor = if (tmpAccentColor == 0) {
         when {
             isBlackAndWhiteTheme() -> Color.WHITE
-            isWhiteTheme() -> Color.BLACK
+            isWhiteTheme() -> DARK_GREY
             else -> baseConfig.primaryColor
         }
     } else {
@@ -100,11 +100,11 @@ fun Context.getLinkTextColor(): Int {
 
 fun Context.isBlackAndWhiteTheme() = baseConfig.textColor == Color.WHITE && baseConfig.primaryColor == Color.BLACK && baseConfig.backgroundColor == Color.BLACK
 
-fun Context.isWhiteTheme() = baseConfig.textColor == Color.BLACK && baseConfig.primaryColor == Color.WHITE && baseConfig.backgroundColor == Color.WHITE
+fun Context.isWhiteTheme() = baseConfig.textColor == DARK_GREY && baseConfig.primaryColor == Color.WHITE && baseConfig.backgroundColor == Color.WHITE
 
 fun Context.getAdjustedPrimaryColor() = when {
     isBlackAndWhiteTheme() -> Color.WHITE
-    isWhiteTheme() -> Color.BLACK
+    isWhiteTheme() -> DARK_GREY
     else -> baseConfig.primaryColor
 }
 

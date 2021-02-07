@@ -37,6 +37,7 @@ const val KEY_PHONE = "phone"
 const val CONTACT_ID = "contact_id"
 const val IS_PRIVATE = "is_private"
 const val MD5 = "MD5"
+val DARK_GREY = 0xFF333333.toInt()
 
 const val HOUR_MINUTES = 60
 const val DAY_MINUTES = 24 * HOUR_MINUTES
