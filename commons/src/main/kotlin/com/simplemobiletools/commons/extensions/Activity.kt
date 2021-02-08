@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.extensions
 
 import android.app.Activity
+import android.app.TimePickerDialog
 import android.content.*
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
@@ -965,13 +966,13 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
     callback?.invoke()
 }
 
-fun Activity.showPickSecondsDialogHelper(curMinutes: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false,
+fun Activity.showPickSecondsDialogHelper(curMinutes: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false, showDuringDayOption: Boolean = false,
                                          cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
-    val seconds = if (curMinutes > 0) curMinutes * 60 else curMinutes
-    showPickSecondsDialog(seconds, isSnoozePicker, showSecondsAtCustomDialog, cancelCallback, callback)
+    val seconds = if (curMinutes == -1) curMinutes else curMinutes * 60
+    showPickSecondsDialog(seconds, isSnoozePicker, showSecondsAtCustomDialog, showDuringDayOption, cancelCallback, callback)
 }
 
-fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false,
+fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false, showDuringDayOption: Boolean = false,
                                    cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
     hideKeyboard()
     val seconds = TreeSet<Int>()
@@ -1000,15 +1001,27 @@ fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = fa
         }
     }
 
+    if(showDuringDayOption) {
+        items.add(RadioItem(-3, getString(R.string.during_day_at_x)))
+    }
+
     items.add(RadioItem(-2, getString(R.string.custom)))
 
     RadioGroupDialog(this, items, selectedIndex, showOKButton = isSnoozePicker, cancelCallback = cancelCallback) {
-        if (it == -2) {
-            CustomIntervalPickerDialog(this, showSeconds = showSecondsAtCustomDialog) {
-                callback(it)
+        when (it) {
+            -2 -> {
+                CustomIntervalPickerDialog(this, showSeconds = showSecondsAtCustomDialog) {
+                    callback(it)
+                }
             }
-        } else {
-            callback(it as Int)
+            -3 -> {
+                TimePickerDialog(this, getDialogTheme(),
+                        {view, hourOfDay, minute -> callback(hourOfDay * -3600 + minute * -60)},
+                        curSeconds / 3600, curSeconds % 3600, baseConfig.use24HourFormat).show()
+            }
+            else -> {
+                callback(it as Int)
+            }
         }
     }
 }
