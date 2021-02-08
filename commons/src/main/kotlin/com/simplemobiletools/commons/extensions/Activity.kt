@@ -1001,11 +1001,11 @@ fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = fa
         }
     }
 
-    if(showDuringDayOption) {
-        items.add(RadioItem(-3, getString(R.string.during_day_at_x)))
-    }
-
     items.add(RadioItem(-2, getString(R.string.custom)))
+
+    if (showDuringDayOption) {
+        items.add(RadioItem(-3, getString(R.string.during_day_at_hh_mm)))
+    }
 
     RadioGroupDialog(this, items, selectedIndex, showOKButton = isSnoozePicker, cancelCallback = cancelCallback) {
         when (it) {
@@ -1016,8 +1016,8 @@ fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = fa
             }
             -3 -> {
                 TimePickerDialog(this, getDialogTheme(),
-                        {view, hourOfDay, minute -> callback(hourOfDay * -3600 + minute * -60)},
-                        curSeconds / 3600, curSeconds % 3600, baseConfig.use24HourFormat).show()
+                    { view, hourOfDay, minute -> callback(hourOfDay * -3600 + minute * -60) },
+                    curSeconds / 3600, curSeconds % 3600, baseConfig.use24HourFormat).show()
             }
             else -> {
                 callback(it as Int)

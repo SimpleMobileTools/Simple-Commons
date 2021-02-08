@@ -50,7 +50,6 @@ import com.simplemobiletools.commons.models.AlarmSound
 import com.simplemobiletools.commons.models.BlockedNumber
 import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.*
-import org.joda.time.LocalTime
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -566,7 +565,7 @@ fun Context.getFormattedSeconds(seconds: Int, showBefore: Boolean = true) = when
     0 -> getString(R.string.at_start)
     else -> {
         when {
-            seconds < 0 && seconds > -60*60*24 -> {
+            seconds < 0 && seconds > -60 * 60 * 24 -> {
                 val minutes = -seconds / 60
                 getString(R.string.during_day_at).format(minutes / 60, minutes % 60)
             }
