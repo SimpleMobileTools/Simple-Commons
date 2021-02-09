@@ -65,7 +65,7 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
     val accentColor = if (tmpAccentColor == 0) {
         when {
             isBlackAndWhiteTheme() -> Color.WHITE
-            isWhiteTheme() -> DARK_GREY
+            isWhiteTheme() -> baseConfig.accentColor
             else -> baseConfig.primaryColor
         }
     } else {
@@ -105,13 +105,13 @@ fun Context.isWhiteTheme() = baseConfig.textColor == DARK_GREY && baseConfig.pri
 
 fun Context.getAdjustedPrimaryColor() = when {
     isBlackAndWhiteTheme() -> Color.WHITE
-    isWhiteTheme() -> DARK_GREY
+    isWhiteTheme() -> baseConfig.accentColor
     else -> baseConfig.primaryColor
 }
 
 fun Context.getFABIconColor() = when {
     isBlackAndWhiteTheme() -> Color.BLACK
-    isWhiteTheme() -> Color.WHITE
+    isWhiteTheme() -> baseConfig.accentColor
     else -> baseConfig.primaryColor.getContrastColor()
 }
 

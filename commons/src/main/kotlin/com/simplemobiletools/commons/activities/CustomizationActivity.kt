@@ -455,7 +455,14 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickAccentColor() {
-
+        ColorPickerDialog(this, curAccentColor) { wasPositivePressed, color ->
+            if (wasPositivePressed) {
+                if (hasColorChanged(curAccentColor, color)) {
+                    curAccentColor = color
+                    colorChanged()
+                }
+            }
+        }
     }
 
     private fun pickNavigationBarColor() {
