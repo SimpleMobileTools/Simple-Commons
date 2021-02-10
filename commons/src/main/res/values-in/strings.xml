@@ -210,6 +210,7 @@
     <string name="background_color">Warna latar belakang</string>
     <string name="text_color">Warna teks</string>
     <string name="primary_color">Warna utama</string>
+    <string name="accent_color_white">Accent color of white theme</string>
     <string name="foreground_color">Warna latar depan</string>
     <string name="app_icon_color">Warna ikon aplikasi</string>
     <string name="bottom_navigation_bar_color">Warna bilah navigasi bawah</string>
@@ -453,6 +454,8 @@
     <string name="your_sounds">Suara khusus</string>
     <string name="add_new_sound">Tambah suara baru</string>
     <string name="no_sound">Tidak ada suara</string>
+    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
+    <string name="during_day_at">During the day at %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Pengaturan</string>

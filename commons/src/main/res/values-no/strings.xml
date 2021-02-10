@@ -213,6 +213,7 @@
     <string name="background_color">Bakgrunnsfarge</string>
     <string name="text_color">Tekstfarge</string>
     <string name="primary_color">Primærfarge</string>
+    <string name="accent_color_white">Accent color of white theme</string>
     <string name="foreground_color">Foreground color</string>
     <string name="app_icon_color">App icon color</string>
     <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
@@ -485,6 +486,8 @@
     <string name="your_sounds">Your sounds</string>
     <string name="add_new_sound">Add a new sound</string>
     <string name="no_sound">No sound</string>
+    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
+    <string name="during_day_at">During the day at %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Innstillinger</string>

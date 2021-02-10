@@ -209,6 +209,7 @@
     <string name="background_color">背景色</string>
     <string name="text_color">文字色</string>
     <string name="primary_color">メインカラー</string>
+    <string name="accent_color_white">Accent color of white theme</string>
     <string name="foreground_color">前景色</string>
     <string name="app_icon_color">アプリアイコンの色</string>
     <string name="bottom_navigation_bar_color">ナビゲーションバーの色</string>
@@ -452,6 +453,8 @@
     <string name="your_sounds">選択したサウンド</string>
     <string name="add_new_sound">新しいサウンドを追加</string>
     <string name="no_sound">サウンドなし</string>
+    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
+    <string name="during_day_at">During the day at %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">設定</string>

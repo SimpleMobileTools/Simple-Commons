@@ -126,10 +126,39 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/customization_app_icon_color_holder"
+            android:id="@+id/customization_accent_color_holder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/customization_primary_color_holder"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/activity_margin"
+            android:visibility="gone">
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/customization_accent_color_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/medium_margin"
+                android:paddingRight="@dimen/medium_margin"
+                android:text="@string/accent_color_white" />
+
+            <ImageView
+                android:id="@+id/customization_accent_color"
+                android:layout_width="@dimen/color_sample_size"
+                android:layout_height="@dimen/color_sample_size"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:clickable="false" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/customization_app_icon_color_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customization_accent_color_holder"
             android:layout_marginTop="@dimen/medium_margin"
             android:background="?attr/selectableItemBackground"
             android:padding="@dimen/activity_margin">

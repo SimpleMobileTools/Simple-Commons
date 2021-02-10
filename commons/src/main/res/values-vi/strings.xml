@@ -213,6 +213,7 @@
     <string name="background_color">Màu nền</string>
     <string name="text_color">Màu văn bản</string>
     <string name="primary_color">Màu chính</string>
+    <string name="accent_color_white">Accent color of white theme</string>
     <string name="foreground_color">Màu nền</string>
     <string name="app_icon_color">Màu biểu tượng ứng dụng</string>
     <string name="bottom_navigation_bar_color">Màu thanh điều hướng phía dưới</string>
@@ -485,6 +486,8 @@
     <string name="your_sounds">Âm báo của bạn</string>
     <string name="add_new_sound">Thêm một âm báo mới</string>
     <string name="no_sound">Không có âm báo</string>
+    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
+    <string name="during_day_at">During the day at %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Cài đặt</string>

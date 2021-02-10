@@ -225,6 +225,7 @@
     <string name="background_color">Lliw cefndir</string>
     <string name="text_color">Lliw testun</string>
     <string name="primary_color">Prif liw</string>
+    <string name="accent_color_white">Accent color of white theme</string>
     <string name="foreground_color">Lliw blaendir</string>
     <string name="app_icon_color">Lliw eicon yr ap</string>
     <string name="bottom_navigation_bar_color">Lliw bar llywio gwaelod</string>
@@ -609,6 +610,8 @@
     <string name="your_sounds">Dy synau di</string>
     <string name="add_new_sound">Ychwanegu sŵn newydd</string>
     <string name="no_sound">Dim sŵn</string>
+    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
+    <string name="during_day_at">During the day at %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Gosodiadau</string>

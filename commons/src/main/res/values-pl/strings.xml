@@ -214,6 +214,7 @@
     <string name="background_color">Tło</string>
     <string name="text_color">Tekst</string>
     <string name="primary_color">Belka i przełączniki</string>
+    <string name="accent_color_white">Accent color of white theme</string>
     <string name="foreground_color">Pierwszy plan</string>
     <string name="app_icon_color">Ikona aplikacji</string>
     <string name="bottom_navigation_bar_color">Dolny pasek nawigacyjny</string>
@@ -511,6 +512,8 @@
     <string name="your_sounds">Dźwięki użytkownika</string>
     <string name="add_new_sound">Dodaj nowy dźwięk</string>
     <string name="no_sound">Brak dźwięku</string>
+    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
+    <string name="during_day_at">During the day at %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Ustawienia</string>

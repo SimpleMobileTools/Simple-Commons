@@ -213,6 +213,7 @@
     <string name="background_color">Achtergrondkleur</string>
     <string name="text_color">Tekstkleur</string>
     <string name="primary_color">Primaire kleur</string>
+    <string name="accent_color_white">Accent voor wit thema</string>
     <string name="foreground_color">Kleur voorgrond</string>
     <string name="app_icon_color">Kleur app-icoon</string>
     <string name="bottom_navigation_bar_color">Kleur navigatiebalk onder aan het scherm</string>
@@ -485,6 +486,8 @@
     <string name="your_sounds">Eigen geluiden</string>
     <string name="add_new_sound">Nieuw geluid toevoegen</string>
     <string name="no_sound">Geen geluid</string>
+    <string name="during_day_at_hh_mm">Overdag om uu:mm</string>
+    <string name="during_day_at">Overdag om %02d.%02du</string>
 
     <!-- Settings -->
     <string name="settings">Instellingen</string>

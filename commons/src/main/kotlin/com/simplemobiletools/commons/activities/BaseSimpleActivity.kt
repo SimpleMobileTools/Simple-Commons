@@ -17,6 +17,7 @@ import android.provider.Settings
 import android.telecom.TelecomManager
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -130,12 +131,29 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     fun updateStatusbarColor(color: Int) {
         window.statusBarColor = color.darkenColor()
+
+        if (isMarshmallowPlus()) {
+            if (color.getContrastColor() == 0xFF333333.toInt()) {
+                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
+            } else {
+                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
+            }
+        }
     }
 
     fun updateNavigationBarColor(color: Int = baseConfig.navigationBarColor) {
         if (baseConfig.navigationBarColor != INVALID_NAVIGATION_BAR_COLOR) {
             try {
-                window.navigationBarColor = color
+                val colorToUse = if (color == -2) -1 else color
+                window.navigationBarColor = colorToUse
+
+                if (isOreoPlus()) {
+                    if (color.getContrastColor() == 0xFF333333.toInt()) {
+                        window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
+                    } else {
+                        window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
+                    }
+                }
             } catch (ignored: Exception) {
             }
         }

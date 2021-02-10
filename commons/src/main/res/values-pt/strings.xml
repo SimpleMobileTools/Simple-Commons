@@ -213,6 +213,7 @@
     <string name="background_color">Cor de fundo</string>
     <string name="text_color">Cor do tipo de letra</string>
     <string name="primary_color">Cor primária</string>
+    <string name="accent_color_white">Accent color of white theme</string>
     <string name="foreground_color">Cor secundária</string>
     <string name="app_icon_color">Cor do ícone da aplicação</string>
     <string name="bottom_navigation_bar_color">Cor da barra de navegação inferior</string>
@@ -485,6 +486,8 @@
     <string name="your_sounds">Meus sons</string>
     <string name="add_new_sound">Adicionar um novo som</string>
     <string name="no_sound">Sem som</string>
+    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
+    <string name="during_day_at">During the day at %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Definições</string>

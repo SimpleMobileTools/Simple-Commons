@@ -209,6 +209,7 @@
     <string name="background_color">배경 색상</string>
     <string name="text_color">텍스트 색상</string>
     <string name="primary_color">주요 색상(테마)</string>
+    <string name="accent_color_white">Accent color of white theme</string>
     <string name="foreground_color">그리기 색상</string>
     <string name="app_icon_color">앱 아이콘 색상</string>
     <string name="bottom_navigation_bar_color">네비게이션 바 색상</string>
@@ -451,6 +452,8 @@
     <string name="your_sounds">사용자 소리</string>
     <string name="add_new_sound">소리 추가</string>
     <string name="no_sound">소리 없음</string>
+    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
+    <string name="during_day_at">During the day at %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">설정</string>

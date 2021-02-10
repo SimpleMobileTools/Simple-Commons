@@ -213,6 +213,7 @@
     <string name="background_color">Couleur de l\'arrière-plan</string>
     <string name="text_color">Couleur du texte</string>
     <string name="primary_color">Couleur primaire</string>
+    <string name="accent_color_white">Accent color of white theme</string>
     <string name="foreground_color">Couleur d\'arrière-plan</string>
     <string name="app_icon_color">Couleur de l\'icône de l\'application</string>
     <string name="bottom_navigation_bar_color">Couleur de la barre de navigation</string>
@@ -243,7 +244,7 @@
     <string name="dark_theme">Sombre</string>
     <string name="solarized">Solarisé</string>
     <string name="dark_red">Noir et Rouge</string>
-    <string name="white">White</string>
+    <string name="white">Blanc</string>
     <string name="black_white">Noir et Blanc</string>
     <string name="custom">Personnalisé</string>
     <string name="shared">Partagé</string>
@@ -487,6 +488,8 @@
     <string name="your_sounds">Vos sonneries</string>
     <string name="add_new_sound">Ajouter une nouvelle sonnerie</string>
     <string name="no_sound">Aucune sonnerie</string>
+    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
+    <string name="during_day_at">During the day at %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Paramètres</string>

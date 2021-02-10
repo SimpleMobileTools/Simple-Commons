@@ -213,6 +213,7 @@
     <string name="background_color">Hondoaren kolorea</string>
     <string name="text_color">Testuaren kolorea</string>
     <string name="primary_color">Kolore nagusia</string>
+    <string name="accent_color_white">Accent color of white theme</string>
     <string name="foreground_color">Aurreko planoaren kolorea</string>
     <string name="app_icon_color">Aplikazioaren ikonoaren kolorea</string>
     <string name="bottom_navigation_bar_color">Beheko nabigazio-barraren kolorea</string>
@@ -485,6 +486,8 @@
     <string name="your_sounds">Zure soinuak</string>
     <string name="add_new_sound">Gehitu soinu berria</string>
     <string name="no_sound">Soinurik ez</string>
+    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
+    <string name="during_day_at">During the day at %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Ezarpenak</string>

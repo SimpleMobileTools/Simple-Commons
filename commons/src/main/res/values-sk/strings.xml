@@ -217,6 +217,7 @@
     <string name="background_color">Farba pozadia</string>
     <string name="text_color">Farba textu</string>
     <string name="primary_color">Primárna farba</string>
+    <string name="accent_color_white">Akcentová farba bielej témy</string>
     <string name="foreground_color">Farba popredia</string>
     <string name="app_icon_color">Farba spúšťacej ikonky apky</string>
     <string name="bottom_navigation_bar_color">Farba spodnej navigačnej lišty</string>
@@ -518,6 +519,8 @@
     <string name="your_sounds">Vaše zvuky</string>
     <string name="add_new_sound">Pridať nový zvuk</string>
     <string name="no_sound">Žiadny zvuk</string>
+    <string name="during_day_at_hh_mm">Počas dňa o hh:mm</string>
+    <string name="during_day_at">Počas dňa o %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Nastavenia</string>

@@ -213,6 +213,7 @@
     <string name="background_color">Χρώμα φόντου</string>
     <string name="text_color">Χρώμα κειμένου</string>
     <string name="primary_color">Πρωτεύον χρώμα</string>
+    <string name="accent_color_white">Accent color of white theme</string>
     <string name="foreground_color">Χρώμα προσκηνίου</string>
     <string name="app_icon_color">Χρώμα εικονιδίου εφαρμογής</string>
     <string name="bottom_navigation_bar_color">Χρώμα κάτω γραμμής Πλοήγησης</string>
@@ -485,6 +486,8 @@
     <string name="your_sounds">Οι ήχοι σας</string>
     <string name="add_new_sound">Προσθέστε νέο ήχο</string>
     <string name="no_sound">Χωρίς ήχο</string>
+    <string name="during_day_at_hh_mm">Κατά τη διάρκεια της ημέρας στις hh:mm</string>
+    <string name="during_day_at">Κατά τη διάρκεια της ημέρας στις %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Ρυθμίσεις</string>
