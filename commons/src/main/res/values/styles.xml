@@ -11,6 +11,8 @@
         <item name="android:buttonStyle">@style/MyTransparentButton</item>
         <item name="android:itemBackground">@color/default_background_color</item>
         <item name="android:textColor">@color/default_text_color</item>
+        <item name="android:colorControlHighlight">@color/activated_item_foreground</item>
+        <item name="colorControlHighlight">@color/activated_item_foreground</item>
     </style>
 
     <style name="TranslucentTheme" parent="Theme.AppCompat.NoActionBar" />
