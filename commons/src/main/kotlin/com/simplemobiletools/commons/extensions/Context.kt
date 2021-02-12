@@ -74,21 +74,21 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
 
     val cnt = viewGroup.childCount
     (0 until cnt).map { viewGroup.getChildAt(it) }
-            .forEach {
-                when (it) {
-                    is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyAppCompatSpinner -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyEditText -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyAutoCompleteTextView -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor)
-                    is MyButton -> it.setColors(textColor, accentColor, backgroundColor)
-                    is ViewGroup -> updateTextColors(it, textColor, accentColor)
-                }
+        .forEach {
+            when (it) {
+                is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyAppCompatSpinner -> it.setColors(textColor, accentColor, backgroundColor)
+                is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyEditText -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyAutoCompleteTextView -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
+                is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor)
+                is MyButton -> it.setColors(textColor, accentColor, backgroundColor)
+                is ViewGroup -> updateTextColors(it, textColor, accentColor)
             }
+        }
 }
 
 fun Context.getLinkTextColor(): Int {
@@ -107,12 +107,6 @@ fun Context.getAdjustedPrimaryColor() = when {
     isBlackAndWhiteTheme() -> Color.WHITE
     isWhiteTheme() -> baseConfig.accentColor
     else -> baseConfig.primaryColor
-}
-
-fun Context.getFABIconColor() = when {
-    isBlackAndWhiteTheme() -> Color.BLACK
-    isWhiteTheme() -> baseConfig.accentColor
-    else -> baseConfig.primaryColor.getContrastColor()
 }
 
 fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
@@ -159,7 +153,7 @@ fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHa
 
 fun Context.getLatestMediaId(uri: Uri = Files.getContentUri("external")): Long {
     val projection = arrayOf(
-            BaseColumns._ID
+        BaseColumns._ID
     )
     val sortOrder = "${BaseColumns._ID} DESC LIMIT 1"
     try {
@@ -176,7 +170,7 @@ fun Context.getLatestMediaId(uri: Uri = Files.getContentUri("external")): Long {
 
 fun Context.getLatestMediaByDateId(uri: Uri = Files.getContentUri("external")): Long {
     val projection = arrayOf(
-            BaseColumns._ID
+        BaseColumns._ID
     )
     val sortOrder = "${Images.ImageColumns.DATE_TAKEN} DESC LIMIT 1"
     try {
@@ -324,13 +318,13 @@ fun Context.getMediaContent(path: String, uri: Uri): Uri? {
 }
 
 fun Context.queryCursor(
-        uri: Uri,
-        projection: Array<String>,
-        selection: String? = null,
-        selectionArgs: Array<String>? = null,
-        sortOrder: String? = null,
-        showErrors: Boolean = false,
-        callback: (cursor: Cursor) -> Unit
+    uri: Uri,
+    projection: Array<String>,
+    selection: String? = null,
+    selectionArgs: Array<String>? = null,
+    sortOrder: String? = null,
+    showErrors: Boolean = false,
+    callback: (cursor: Cursor) -> Unit
 ) {
     try {
         val cursor = contentResolver.query(uri, projection, selection, selectionArgs, sortOrder)
@@ -636,7 +630,7 @@ fun Context.storeNewYourAlarmSound(resultData: Intent): AlarmSound {
 
     val token = object : TypeToken<ArrayList<AlarmSound>>() {}.type
     val yourAlarmSounds = Gson().fromJson<ArrayList<AlarmSound>>(baseConfig.yourAlarmSounds, token)
-            ?: ArrayList()
+        ?: ArrayList()
     val newAlarmSoundId = (yourAlarmSounds.maxBy { it.id }?.id ?: YOUR_ALARM_SOUNDS_MIN_ID) + 1
     val newAlarmSound = AlarmSound(newAlarmSoundId, filename, uri.toString())
     if (yourAlarmSounds.firstOrNull { it.uri == uri.toString() } == null) {
@@ -752,7 +746,7 @@ fun Context.getVideoResolution(path: String): Point? {
 
 fun Context.getDuration(path: String): Int? {
     val projection = arrayOf(
-            MediaColumns.DURATION
+        MediaColumns.DURATION
     )
 
     val uri = getFileUri(path)
@@ -780,7 +774,7 @@ fun Context.getDuration(path: String): Int? {
 
 fun Context.getTitle(path: String): String? {
     val projection = arrayOf(
-            MediaColumns.TITLE
+        MediaColumns.TITLE
     )
 
     val uri = getFileUri(path)
@@ -808,7 +802,7 @@ fun Context.getTitle(path: String): String? {
 
 fun Context.getArtist(path: String): String? {
     val projection = arrayOf(
-            Audio.Media.ARTIST
+        Audio.Media.ARTIST
     )
 
     val uri = getFileUri(path)
@@ -836,7 +830,7 @@ fun Context.getArtist(path: String): String? {
 
 fun Context.getAlbum(path: String): String? {
     val projection = arrayOf(
-            Audio.Media.ALBUM
+        Audio.Media.ALBUM
     )
 
     val uri = getFileUri(path)
@@ -864,7 +858,7 @@ fun Context.getAlbum(path: String): String? {
 
 fun Context.getMediaStoreLastModified(path: String): Long {
     val projection = arrayOf(
-            MediaColumns.DATE_MODIFIED
+        MediaColumns.DATE_MODIFIED
     )
 
     val uri = getFileUri(path)
@@ -984,9 +978,9 @@ fun Context.getBlockedNumbers(): ArrayList<BlockedNumber> {
 
     val uri = BlockedNumbers.CONTENT_URI
     val projection = arrayOf(
-            BlockedNumbers.COLUMN_ID,
-            BlockedNumbers.COLUMN_ORIGINAL_NUMBER,
-            BlockedNumbers.COLUMN_E164_NUMBER
+        BlockedNumbers.COLUMN_ID,
+        BlockedNumbers.COLUMN_ORIGINAL_NUMBER,
+        BlockedNumbers.COLUMN_E164_NUMBER
     )
 
     queryCursor(uri, projection) { cursor ->

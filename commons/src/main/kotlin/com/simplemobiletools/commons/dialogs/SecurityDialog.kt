@@ -42,7 +42,7 @@ class SecurityDialog(val activity: Activity, val requiredHash: String, val showT
                     dialog_tab_layout.removeTabAt(PROTECTION_FINGERPRINT)
 
                 dialog_tab_layout.setTabTextColors(textColor, textColor)
-                dialog_tab_layout.setSelectedTabIndicatorColor(context.baseConfig.primaryColor)
+                dialog_tab_layout.setSelectedTabIndicatorColor(context.getAdjustedPrimaryColor())
                 dialog_tab_layout.onTabSelectionChanged(tabSelectedAction = {
                     viewPager.currentItem = when {
                         it.text.toString().equals(resources.getString(R.string.pattern), true) -> PROTECTION_PATTERN
