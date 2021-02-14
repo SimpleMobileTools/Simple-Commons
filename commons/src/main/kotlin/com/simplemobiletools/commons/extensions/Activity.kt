@@ -1029,16 +1029,13 @@ fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = fa
 fun BaseSimpleActivity.getAlarmSounds(type: Int, callback: (ArrayList<AlarmSound>) -> Unit) {
     val alarms = ArrayList<AlarmSound>()
     val manager = RingtoneManager(this)
-    manager.setType(if (type == ALARM_SOUND_TYPE_NOTIFICATION) RingtoneManager.TYPE_NOTIFICATION else RingtoneManager.TYPE_ALARM)
+    manager.setType(type)
 
     try {
         val cursor = manager.cursor
         var curId = 1
         val silentAlarm = AlarmSound(curId++, getString(R.string.no_sound), SILENT)
         alarms.add(silentAlarm)
-
-        val defaultAlarm = getDefaultAlarmSound(type)
-        alarms.add(defaultAlarm)
 
         while (cursor.moveToNext()) {
             val title = cursor.getString(RingtoneManager.TITLE_COLUMN_INDEX)
