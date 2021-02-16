@@ -62,7 +62,7 @@ fun Int.formatDate(context: Context, dateFormat: String? = null, timeFormat: Str
 }
 
 // if the given date is today, we show only the time. Else we show the date and optionally the time too
-fun Int.formatDateOrTime(context: Context, hideTimeAtOtherDays: Boolean): String {
+fun Int.formatDateOrTime(context: Context, hideTimeAtOtherDays: Boolean, showYearEvenIfCurrent: Boolean): String {
     val cal = Calendar.getInstance(Locale.ENGLISH)
     cal.timeInMillis = this * 1000L
 
@@ -70,7 +70,7 @@ fun Int.formatDateOrTime(context: Context, hideTimeAtOtherDays: Boolean): String
         DateFormat.format(context.getTimeFormat(), cal).toString()
     } else {
         var format = context.baseConfig.dateFormat
-        if (isThisYear()) {
+        if (!showYearEvenIfCurrent && isThisYear()) {
             format = format.replace("y", "").trim().trim('-').trim('.').trim('/')
         }
 
