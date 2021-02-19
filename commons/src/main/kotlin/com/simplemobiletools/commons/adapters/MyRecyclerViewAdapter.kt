@@ -273,6 +273,8 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     fun updatePrimaryColor(primaryColor: Int) {
         this.primaryColor = primaryColor
+        adjustedPrimaryColor = activity.getAdjustedPrimaryColor()
+        contrastColor = adjustedPrimaryColor.getContrastColor()
     }
 
     fun updateBackgroundColor(backgroundColor: Int) {
