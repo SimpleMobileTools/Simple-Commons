@@ -73,7 +73,9 @@ class SecurityDialog(val activity: Activity, val requiredHash: String, val showT
 
     override fun receivedHash(hash: String, type: Int) {
         callback(hash, type, true)
-        dialog?.dismiss()
+        if (!activity.isFinishing) {
+            dialog?.dismiss()
+        }
     }
 
     private fun updateTabVisibility() {
