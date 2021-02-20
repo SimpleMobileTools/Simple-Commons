@@ -109,12 +109,6 @@ fun Context.getAdjustedPrimaryColor() = when {
     else -> baseConfig.primaryColor
 }
 
-fun Context.getFABIconColor() = when {
-    isBlackAndWhiteTheme() -> Color.BLACK
-    isWhiteTheme() -> baseConfig.accentColor
-    else -> baseConfig.primaryColor.getContrastColor()
-}
-
 fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
     toast(getString(id), length)
 }
@@ -420,14 +414,17 @@ fun Context.getSharedThemeSync(cursorLoader: CursorLoader): SharedTheme? {
     val cursor = cursorLoader.loadInBackground()
     cursor?.use {
         if (cursor.moveToFirst()) {
-            val textColor = cursor.getIntValue(COL_TEXT_COLOR)
-            val backgroundColor = cursor.getIntValue(COL_BACKGROUND_COLOR)
-            val primaryColor = cursor.getIntValue(COL_PRIMARY_COLOR)
-            val accentColor = cursor.getIntValue(COL_ACCENT_COLOR)
-            val appIconColor = cursor.getIntValue(COL_APP_ICON_COLOR)
-            val navigationBarColor = cursor.getIntValueOrNull(COL_NAVIGATION_BAR_COLOR) ?: INVALID_NAVIGATION_BAR_COLOR
-            val lastUpdatedTS = cursor.getIntValue(COL_LAST_UPDATED_TS)
-            return SharedTheme(textColor, backgroundColor, primaryColor, appIconColor, navigationBarColor, lastUpdatedTS, accentColor)
+            try {
+                val textColor = cursor.getIntValue(COL_TEXT_COLOR)
+                val backgroundColor = cursor.getIntValue(COL_BACKGROUND_COLOR)
+                val primaryColor = cursor.getIntValue(COL_PRIMARY_COLOR)
+                val accentColor = cursor.getIntValue(COL_ACCENT_COLOR)
+                val appIconColor = cursor.getIntValue(COL_APP_ICON_COLOR)
+                val navigationBarColor = cursor.getIntValueOrNull(COL_NAVIGATION_BAR_COLOR) ?: INVALID_NAVIGATION_BAR_COLOR
+                val lastUpdatedTS = cursor.getIntValue(COL_LAST_UPDATED_TS)
+                return SharedTheme(textColor, backgroundColor, primaryColor, appIconColor, navigationBarColor, lastUpdatedTS, accentColor)
+            } catch (e: Exception) {
+            }
         }
     }
     return null
@@ -603,18 +600,16 @@ fun Context.getFormattedSeconds(seconds: Int, showBefore: Boolean = true) = when
     }
 }
 
-fun Context.getDefaultAlarmUri(type: Int) = RingtoneManager.getDefaultUri(if (type == ALARM_SOUND_TYPE_NOTIFICATION) RingtoneManager.TYPE_NOTIFICATION else RingtoneManager.TYPE_ALARM)
-
 fun Context.getDefaultAlarmTitle(type: Int): String {
     val alarmString = getString(R.string.alarm)
     return try {
-        RingtoneManager.getRingtone(this, getDefaultAlarmUri(type))?.getTitle(this) ?: alarmString
+        RingtoneManager.getRingtone(this, RingtoneManager.getDefaultUri(type))?.getTitle(this) ?: alarmString
     } catch (e: Exception) {
         alarmString
     }
 }
 
-fun Context.getDefaultAlarmSound(type: Int) = AlarmSound(0, getDefaultAlarmTitle(type), getDefaultAlarmUri(type).toString())
+fun Context.getDefaultAlarmSound(type: Int) = AlarmSound(0, getDefaultAlarmTitle(type), RingtoneManager.getDefaultUri(type).toString())
 
 fun Context.grantReadUriPermission(uriString: String) {
     try {
@@ -632,7 +627,8 @@ fun Context.storeNewYourAlarmSound(resultData: Intent): AlarmSound {
     }
 
     val token = object : TypeToken<ArrayList<AlarmSound>>() {}.type
-    val yourAlarmSounds = Gson().fromJson<ArrayList<AlarmSound>>(baseConfig.yourAlarmSounds, token) ?: ArrayList()
+    val yourAlarmSounds = Gson().fromJson<ArrayList<AlarmSound>>(baseConfig.yourAlarmSounds, token)
+        ?: ArrayList()
     val newAlarmSoundId = (yourAlarmSounds.maxBy { it.id }?.id ?: YOUR_ALARM_SOUNDS_MIN_ID) + 1
     val newAlarmSound = AlarmSound(newAlarmSoundId, filename, uri.toString())
     if (yourAlarmSounds.firstOrNull { it.uri == uri.toString() } == null) {

@@ -6,10 +6,7 @@ import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.RenameAdapter
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.onPageChangeListener
-import com.simplemobiletools.commons.extensions.onTabSelectionChanged
-import com.simplemobiletools.commons.extensions.setupDialogStuff
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.RENAME_PATTERN
 import com.simplemobiletools.commons.helpers.RENAME_SIMPLE
 import com.simplemobiletools.commons.views.MyViewPager
@@ -34,7 +31,7 @@ class RenameDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String
 
             val textColor = context.baseConfig.textColor
             dialog_tab_layout.setTabTextColors(textColor, textColor)
-            dialog_tab_layout.setSelectedTabIndicatorColor(context.baseConfig.primaryColor)
+            dialog_tab_layout.setSelectedTabIndicatorColor(context.getAdjustedPrimaryColor())
 
             dialog_tab_layout.onTabSelectionChanged(tabSelectedAction = {
                 viewPager.currentItem = when {

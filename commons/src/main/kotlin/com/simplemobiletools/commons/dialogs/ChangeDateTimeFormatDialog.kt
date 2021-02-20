@@ -13,7 +13,7 @@ import java.util.*
 
 class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Unit) {
     val view = activity.layoutInflater.inflate(R.layout.dialog_change_date_time_format, null)!!
-    val sampleTS = 1557964800000    // May 16, 2019
+    val sampleTS = 1613422500000    // February 15, 2021
 
     init {
         view.apply {

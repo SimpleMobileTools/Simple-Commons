@@ -170,8 +170,8 @@ class FastScroller : FrameLayout {
         hideHandle()
     }
 
-    fun updatePrimaryColor() {
-        handle!!.background.applyColorFilter(context.getAdjustedPrimaryColor())
+    fun updatePrimaryColor(color: Int = context.getAdjustedPrimaryColor()) {
+        handle!!.background.applyColorFilter(color)
         updateBubblePrimaryColor()
     }
 
@@ -181,8 +181,8 @@ class FastScroller : FrameLayout {
         updateBubbleBackgroundColor()
     }
 
-    fun updateBubblePrimaryColor() {
-        getBubbleBackgroundDrawable()?.setStroke(resources.displayMetrics.density.toInt(), context.getAdjustedPrimaryColor())
+    fun updateBubblePrimaryColor(color: Int = context.getAdjustedPrimaryColor()) {
+        getBubbleBackgroundDrawable()?.setStroke(resources.displayMetrics.density.toInt(), color)
     }
 
     fun updateBubbleTextColor() {

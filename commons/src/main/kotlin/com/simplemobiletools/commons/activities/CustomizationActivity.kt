@@ -143,7 +143,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun setupThemePicker() {
         curSelectedThemeId = getCurrentThemeId()
         customization_theme.text = getThemeText()
-        customization_accent_color_holder.beVisibleIf(curSelectedThemeId == THEME_WHITE)
+        customization_accent_color_holder.beVisibleIf(curSelectedThemeId == THEME_WHITE || isWhiteTheme())
         customization_theme_holder.setOnClickListener {
             if (baseConfig.wasAppIconCustomizationWarningShown) {
                 themePickerClicked()
@@ -234,7 +234,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         updateBackgroundColor(curBackgroundColor)
         updateActionbarColor(curPrimaryColor)
         updateNavigationBarColor(curNavigationBarColor)
-        customization_accent_color_holder.beVisibleIf(curSelectedThemeId == THEME_WHITE)
+        customization_accent_color_holder.beVisibleIf(curSelectedThemeId == THEME_WHITE || isWhiteTheme())
     }
 
     private fun getCurrentThemeId(): Int {
@@ -362,7 +362,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_primary_color_holder.setOnClickListener { pickPrimaryColor() }
         customization_accent_color_holder.setOnClickListener { pickAccentColor() }
 
-        customization_accent_color_holder.beVisibleIf(curSelectedThemeId == THEME_WHITE)
+        customization_accent_color_holder.beVisibleIf(curSelectedThemeId == THEME_WHITE || isWhiteTheme())
 
         customization_navigation_bar_color_holder.setOnClickListener { pickNavigationBarColor() }
         apply_to_all_holder.setOnClickListener { applyToAll() }

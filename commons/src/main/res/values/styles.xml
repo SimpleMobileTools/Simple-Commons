@@ -11,6 +11,8 @@
         <item name="android:buttonStyle">@style/MyTransparentButton</item>
         <item name="android:itemBackground">@color/default_background_color</item>
         <item name="android:textColor">@color/default_text_color</item>
+        <item name="android:colorControlHighlight">@color/activated_item_foreground</item>
+        <item name="colorControlHighlight">@color/activated_item_foreground</item>
     </style>
 
     <style name="TranslucentTheme" parent="Theme.AppCompat.NoActionBar" />
@@ -98,6 +100,22 @@
     </style>
 
     <!-- App themes -->
+    <!-- White -->
+    <style name="AppTheme.White" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_grey_white</item>
+        <item name="colorPrimaryDark">@color/md_grey_white_dark</item>
+        <item name="colorAccent">@color/md_grey_white</item>
+        <item name="actionBarTheme">@style/DarkActionBarItems</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
+        <item name="android:itemBackground">@color/md_grey_white</item>
+        <item name="android:itemTextAppearance">@style/AppTheme.White.TextStyle</item>
+    </style>
+
+    <style name="AppTheme.White.TextStyle">
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
     <style name="AppTheme.Red_100" parent="AppTheme.Base">
         <item name="colorPrimary">@color/md_red_100</item>
         <item name="colorPrimaryDark">@color/md_red_100_dark</item>
@@ -132,7 +150,6 @@
         <item name="actionBarTheme">@style/LightActionBarItems</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-        md_grey_white
     </style>
 
     <style name="AppTheme.Red_500" parent="AppTheme.Base">
