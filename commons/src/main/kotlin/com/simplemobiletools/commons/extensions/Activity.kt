@@ -931,10 +931,11 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
         return
     }
 
+    val adjustedPrimaryColor = getAdjustedPrimaryColor()
     if (view is ViewGroup)
         updateTextColors(view)
     else if (view is MyTextView) {
-        view.setColors(baseConfig.textColor, getAdjustedPrimaryColor(), baseConfig.backgroundColor)
+        view.setColors(baseConfig.textColor, adjustedPrimaryColor, baseConfig.backgroundColor)
     }
 
     var title: TextView? = null
@@ -956,9 +957,9 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
         setCustomTitle(title)
         setCanceledOnTouchOutside(true)
         show()
-        getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(baseConfig.textColor)
-        getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(baseConfig.textColor)
-        getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(baseConfig.textColor)
+        getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(adjustedPrimaryColor)
+        getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(adjustedPrimaryColor)
+        getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(adjustedPrimaryColor)
 
         val bgDrawable = resources.getColoredDrawableWithColor(R.drawable.dialog_bg, baseConfig.backgroundColor)
         window?.setBackgroundDrawable(bgDrawable)
