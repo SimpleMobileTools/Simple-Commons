@@ -7,4 +7,5 @@
     android:paddingTop="@dimen/activity_margin"
     android:paddingEnd="@dimen/activity_margin"
     android:textSize="@dimen/actionbar_text_size"
+    android:fontFamily="sans-serif-light"
     android:textStyle="bold" />
