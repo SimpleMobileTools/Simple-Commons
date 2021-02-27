@@ -117,6 +117,13 @@
         <item name="android:textColor">@color/dark_grey</item>
     </style>
 
+    <style name="AppTheme.White.NoActionBar" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/md_grey_white</item>
+        <item name="colorPrimaryDark">@color/md_grey_white_dark</item>
+        <item name="colorAccent">@color/md_grey_white</item>
+        <item name="android:colorControlActivated">@color/dark_grey</item>
+    </style>
+
     <style name="AppTheme.BlackAndWhite" parent="AppTheme.Base">
         <item name="colorPrimary">@color/md_grey_black</item>
         <item name="colorPrimaryDark">@color/md_grey_black_dark</item>
@@ -131,6 +138,13 @@
 
     <style name="AppTheme.BlackAndWhite.TextStyle">
         <item name="android:textColor">@color/md_grey_white</item>
+    </style>
+
+    <style name="AppTheme.BlackAndWhite.NoActionBar" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/md_grey_black</item>
+        <item name="colorPrimaryDark">@color/md_grey_black_dark</item>
+        <item name="colorAccent">@color/md_grey_black</item>
+        <item name="android:colorControlActivated">@color/md_grey_white</item>
     </style>
 
     <style name="AppTheme.Red_100" parent="AppTheme.Base">
