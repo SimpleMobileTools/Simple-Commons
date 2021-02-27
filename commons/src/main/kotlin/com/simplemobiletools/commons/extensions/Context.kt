@@ -73,22 +73,22 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
     }
 
     val cnt = viewGroup.childCount
-    (0 until cnt).map { viewGroup.getChildAt(it) }
-        .forEach {
-            when (it) {
-                is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyAppCompatSpinner -> it.setColors(textColor, accentColor, backgroundColor)
-                is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyEditText -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyAutoCompleteTextView -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
-                is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyButton -> it.setColors(textColor, accentColor, backgroundColor)
-                is ViewGroup -> updateTextColors(it, textColor, accentColor)
-            }
+    (0 until cnt).map { viewGroup.getChildAt(it) }.forEach {
+        when (it) {
+            is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyAppCompatSpinner -> it.setColors(textColor, accentColor, backgroundColor)
+            is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyEditText -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyAutoCompleteTextView -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
+            is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyButton -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyTextInputLayout -> it.setColors(textColor, accentColor, backgroundColor)
+            is ViewGroup -> updateTextColors(it, textColor, accentColor)
         }
+    }
 }
 
 fun Context.getLinkTextColor(): Int {

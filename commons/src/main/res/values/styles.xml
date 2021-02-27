@@ -110,10 +110,27 @@
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
         <item name="android:itemBackground">@color/md_grey_white</item>
         <item name="android:itemTextAppearance">@style/AppTheme.White.TextStyle</item>
+        <item name="android:colorControlActivated">@color/color_primary</item>
     </style>
 
     <style name="AppTheme.White.TextStyle">
         <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="AppTheme.BlackAndWhite" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/md_grey_black</item>
+        <item name="colorPrimaryDark">@color/md_grey_black_dark</item>
+        <item name="colorAccent">@color/md_grey_black</item>
+        <item name="actionBarTheme">@style/LightActionBarItems</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:textColorPrimary">@color/theme_light_background_color</item>
+        <item name="android:itemBackground">@color/md_grey_black</item>
+        <item name="android:itemTextAppearance">@style/AppTheme.BlackAndWhite.TextStyle</item>
+        <item name="android:colorControlActivated">@color/md_grey_white</item>
+    </style>
+
+    <style name="AppTheme.BlackAndWhite.TextStyle">
+        <item name="android:textColor">@color/md_grey_white</item>
     </style>
 
     <style name="AppTheme.Red_100" parent="AppTheme.Base">

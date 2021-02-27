@@ -37,6 +37,10 @@ const val IS_PRIVATE = "is_private"
 const val MD5 = "MD5"
 val DARK_GREY = 0xFF333333.toInt()
 
+const val LOWER_ALPHA = 2.5f
+const val MEDIUM_ALPHA = 5f
+const val HIGHER_ALPHA = 7.5f
+
 const val HOUR_MINUTES = 60
 const val DAY_MINUTES = 24 * HOUR_MINUTES
 const val WEEK_MINUTES = DAY_MINUTES * 7
