@@ -110,7 +110,7 @@
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
         <item name="android:itemBackground">@color/md_grey_white</item>
         <item name="android:itemTextAppearance">@style/AppTheme.White.TextStyle</item>
-        <item name="android:colorControlActivated">@color/color_primary</item>
+        <item name="android:colorControlActivated">@color/dark_grey</item>
     </style>
 
     <style name="AppTheme.White.TextStyle">
