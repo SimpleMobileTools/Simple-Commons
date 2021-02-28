@@ -143,7 +143,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun setupThemePicker() {
         curSelectedThemeId = getCurrentThemeId()
         customization_theme.text = getThemeText()
-        customization_accent_color_holder.beVisibleIf(curSelectedThemeId == THEME_WHITE || isWhiteTheme())
+        handleAccentColorLayout()
         customization_theme_holder.setOnClickListener {
             if (baseConfig.wasAppIconCustomizationWarningShown) {
                 themePickerClicked()
@@ -234,7 +234,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         updateBackgroundColor(curBackgroundColor)
         updateActionbarColor(curPrimaryColor)
         updateNavigationBarColor(curNavigationBarColor)
-        customization_accent_color_holder.beVisibleIf(curSelectedThemeId == THEME_WHITE || isWhiteTheme())
+        handleAccentColorLayout()
     }
 
     private fun getCurrentThemeId(): Int {
@@ -362,8 +362,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_primary_color_holder.setOnClickListener { pickPrimaryColor() }
         customization_accent_color_holder.setOnClickListener { pickAccentColor() }
 
-        customization_accent_color_holder.beVisibleIf(curSelectedThemeId == THEME_WHITE || isWhiteTheme())
-
+        handleAccentColorLayout()
         customization_navigation_bar_color_holder.setOnClickListener { pickNavigationBarColor() }
         apply_to_all_holder.setOnClickListener { applyToAll() }
         customization_app_icon_color_holder.setOnClickListener {
@@ -404,6 +403,15 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun setCurrentNavigationBarColor(color: Int) {
         curNavigationBarColor = color
         updateNavigationBarColor(color)
+    }
+
+    private fun handleAccentColorLayout() {
+        customization_accent_color_holder.beVisibleIf(curSelectedThemeId == THEME_WHITE || isWhiteTheme() || curSelectedThemeId == THEME_BLACK_WHITE || isBlackAndWhiteTheme())
+        customization_accent_color_label.text = getString(if (curSelectedThemeId == THEME_WHITE || isWhiteTheme()) {
+            R.string.accent_color_white
+        } else {
+            R.string.accent_color_black_and_white
+        })
     }
 
     private fun pickTextColor() {
