@@ -227,19 +227,18 @@ fun Context.getRealPathFromURI(uri: Uri): String? {
 }
 
 fun Context.getDataColumn(uri: Uri, selection: String? = null, selectionArgs: Array<String>? = null): String? {
-    var cursor: Cursor? = null
     try {
         val projection = arrayOf(Files.FileColumns.DATA)
-        cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
-        if (cursor?.moveToFirst() == true) {
-            val data = cursor.getStringValue(Files.FileColumns.DATA)
-            if (data != "null") {
-                return data
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                val data = cursor.getStringValue(Files.FileColumns.DATA)
+                if (data != "null") {
+                    return data
+                }
             }
         }
     } catch (e: Exception) {
-    } finally {
-        cursor?.close()
     }
     return null
 }
@@ -301,16 +300,15 @@ fun Context.getMediaContent(path: String, uri: Uri): Uri? {
     val projection = arrayOf(Images.Media._ID)
     val selection = Images.Media.DATA + "= ?"
     val selectionArgs = arrayOf(path)
-    var cursor: Cursor? = null
     try {
-        cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
-        if (cursor?.moveToFirst() == true) {
-            val id = cursor.getIntValue(Images.Media._ID).toString()
-            return Uri.withAppendedPath(uri, id)
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                val id = cursor.getIntValue(Images.Media._ID).toString()
+                return Uri.withAppendedPath(uri, id)
+            }
         }
     } catch (e: Exception) {
-    } finally {
-        cursor?.close()
     }
     return null
 }
@@ -384,34 +382,32 @@ fun Context.ensurePublicUri(uri: Uri, applicationId: String): Uri {
 }
 
 fun Context.getFilenameFromContentUri(uri: Uri): String? {
-    var cursor: Cursor? = null
     val projection = arrayOf(
         OpenableColumns.DISPLAY_NAME
     )
 
     try {
-        cursor = contentResolver.query(uri, projection, null, null, null)
-        if (cursor?.moveToFirst() == true) {
-            return cursor.getStringValue(OpenableColumns.DISPLAY_NAME)
+        val cursor = contentResolver.query(uri, projection, null, null, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getStringValue(OpenableColumns.DISPLAY_NAME)
+            }
         }
     } catch (e: Exception) {
-    } finally {
-        cursor?.close()
     }
     return null
 }
 
 fun Context.getSizeFromContentUri(uri: Uri): Long {
-    var cursor: Cursor? = null
     val projection = arrayOf(OpenableColumns.SIZE)
     try {
-        cursor = contentResolver.query(uri, projection, null, null, null)
-        if (cursor?.moveToFirst() == true) {
-            return cursor.getLongValue(OpenableColumns.SIZE)
+        val cursor = contentResolver.query(uri, projection, null, null, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getLongValue(OpenableColumns.SIZE)
+            }
         }
     } catch (e: Exception) {
-    } finally {
-        cursor?.close()
     }
     return 0L
 }
