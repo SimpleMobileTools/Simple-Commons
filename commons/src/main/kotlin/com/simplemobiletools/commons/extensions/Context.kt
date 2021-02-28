@@ -388,6 +388,7 @@ fun Context.getFilenameFromContentUri(uri: Uri): String? {
     val projection = arrayOf(
         OpenableColumns.DISPLAY_NAME
     )
+
     try {
         cursor = contentResolver.query(uri, projection, null, null, null)
         if (cursor?.moveToFirst() == true) {
@@ -398,6 +399,21 @@ fun Context.getFilenameFromContentUri(uri: Uri): String? {
         cursor?.close()
     }
     return null
+}
+
+fun Context.getSizeFromContentUri(uri: Uri): Long {
+    var cursor: Cursor? = null
+    val projection = arrayOf(OpenableColumns.SIZE)
+    try {
+        cursor = contentResolver.query(uri, projection, null, null, null)
+        if (cursor?.moveToFirst() == true) {
+            return cursor.getLongValue(OpenableColumns.SIZE)
+        }
+    } catch (e: Exception) {
+    } finally {
+        cursor?.close()
+    }
+    return 0L
 }
 
 fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
