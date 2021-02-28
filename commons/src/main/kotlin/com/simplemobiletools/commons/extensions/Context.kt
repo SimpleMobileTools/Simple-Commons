@@ -385,8 +385,11 @@ fun Context.ensurePublicUri(uri: Uri, applicationId: String): Uri {
 
 fun Context.getFilenameFromContentUri(uri: Uri): String? {
     var cursor: Cursor? = null
+    val projection = arrayOf(
+        OpenableColumns.DISPLAY_NAME
+    )
     try {
-        cursor = contentResolver.query(uri, null, null, null, null)
+        cursor = contentResolver.query(uri, projection, null, null, null)
         if (cursor?.moveToFirst() == true) {
             return cursor.getStringValue(OpenableColumns.DISPLAY_NAME)
         }
