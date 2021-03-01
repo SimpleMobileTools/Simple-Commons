@@ -406,13 +406,17 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun handleAccentColorLayout() {
-        customization_accent_color_holder.beVisibleIf(curSelectedThemeId == THEME_WHITE || isWhiteTheme() || curSelectedThemeId == THEME_BLACK_WHITE || isBlackAndWhiteTheme())
-        customization_accent_color_label.text = getString(if (curSelectedThemeId == THEME_WHITE || isWhiteTheme()) {
+        customization_accent_color_holder.beVisibleIf(curSelectedThemeId == THEME_WHITE || isCurrentWhiteTheme() || curSelectedThemeId == THEME_BLACK_WHITE || isCurrentBlackAndWhiteTheme())
+        customization_accent_color_label.text = getString(if (curSelectedThemeId == THEME_WHITE || isCurrentWhiteTheme()) {
             R.string.accent_color_white
         } else {
             R.string.accent_color_black_and_white
         })
     }
+
+    private fun isCurrentWhiteTheme() = curTextColor == DARK_GREY && curPrimaryColor == Color.WHITE && curBackgroundColor == Color.WHITE
+
+    private fun isCurrentBlackAndWhiteTheme() = curTextColor == Color.WHITE && curPrimaryColor == Color.BLACK && curBackgroundColor == Color.BLACK
 
     private fun pickTextColor() {
         ColorPickerDialog(this, curTextColor) { wasPositivePressed, color ->
