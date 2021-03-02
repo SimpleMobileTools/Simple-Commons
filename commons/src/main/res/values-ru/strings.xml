@@ -218,7 +218,7 @@
     <string name="text_color">Цвет текста</string>
     <string name="primary_color">Основной цвет</string>
     <string name="accent_color_white">Цвет акцента белой темы</string>
-    <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
+    <string name="accent_color_black_and_white">Цвет акцента чёрно-белой темы</string>
     <string name="foreground_color">Цвет переднего плана</string>
     <string name="app_icon_color">Цвет значка приложения</string>
     <string name="bottom_navigation_bar_color">Цвет нижней панели навигации</string>
@@ -526,10 +526,10 @@
     <!-- Settings -->
     <string name="settings">Настройки</string>
     <string name="purchase_simple_thank_you">Купить Simple Thank You</string>
-    <string name="customize_colors">Настройки интерфейса</string>
-    <string name="customize_colors_locked">Настройки интерфейса (заблокировано)</string>
-    <string name="customize_widget_colors">Настроить цвета виджета</string>
-    <string name="customize_notifications">Настроить уведомления</string>
+    <string name="customize_colors">Настройка интерфейса</string>
+    <string name="customize_colors_locked">Настройка интерфейса (заблокировано)</string>
+    <string name="customize_widget_colors">Настройка цветов виджета</string>
+    <string name="customize_notifications">Настройка уведомлений</string>
     <string name="use_english_language">Использовать английский язык</string>
     <string name="show_hidden_items">Показывать скрытые папки</string>
     <string name="font_size">Размер шрифта</string>
@@ -561,7 +561,7 @@
     <string name="settings_exported_successfully">Настройки успешно экспортированы </string>
     <string name="settings_imported_successfully">Настройки успешно импортированы</string>
     <string name="start_name_with_surname">Показывать сначала фамилию</string>
-    <string name="clear_cache">Очистить кеш</string>
+    <string name="clear_cache">Очистка кеша</string>
 
     <!-- Setting sections -->
     <string name="visibility">Отображение</string>
@@ -878,5 +878,5 @@
     <string name="pro_app_refund">Не забывайте, что если вы удалите любое платное приложение в течение 2 часов, вам будет автоматически возвращена сумма покупки. Если вы захотите вернуть деньги позднее, просто свяжитесь с нами по адресу hello@simplemobiletools.com и вы их получите. Так что можно легко опробовать это приложение :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">Группа простых приложений для Android с открытым исходным кодом с настраиваемыми виджетами, без рекламы и ненужных разрешений.</string>
+    <string name="developer_description">Группа простых приложений для Android с открытым исходным кодом с настраиваемыми виджетами без рекламы и ненужных разрешений.</string>
 </resources>
