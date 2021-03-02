@@ -4,7 +4,8 @@ import android.app.Activity
 import com.simplemobiletools.commons.R
 
 fun Activity.getThemeId(color: Int = baseConfig.primaryColor, showTransparentTop: Boolean = false) = when {
-    isWhiteTheme() -> R.style.AppTheme_White
+    isBlackAndWhiteTheme() -> if (showTransparentTop) R.style.AppTheme_BlackAndWhite_NoActionBar else R.style.AppTheme_BlackAndWhite
+    isWhiteTheme() -> if (showTransparentTop) R.style.AppTheme_White_NoActionBar else R.style.AppTheme_White
     showTransparentTop -> {
         when (color) {
             -12846 -> R.style.AppTheme_Red_100_core

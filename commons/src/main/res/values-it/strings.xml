@@ -214,6 +214,7 @@
     <string name="text_color">Colore del testo</string>
     <string name="primary_color">Colore primario</string>
     <string name="accent_color_white">Accent color of white theme</string>
+    <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
     <string name="foreground_color">Colore in primo piano</string>
     <string name="app_icon_color">Colore dell\'icona app</string>
     <string name="bottom_navigation_bar_color">Colore della barra di navigazione</string>
@@ -526,7 +527,7 @@
     <string name="import_settings">Importa impostazioni</string>
     <string name="settings_exported_successfully">Impostazioni esportate correttamente</string>
     <string name="settings_imported_successfully">Impostazioni importate correttamente</string>
-    <string name="start_name_with_surname">Prima il nome poi il cognome</string>
+    <string name="start_name_with_surname">Prima il cognome poi il nome</string>
     <string name="clear_cache">Clear cache</string>
 
     <!-- Setting sections -->

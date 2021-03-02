@@ -213,7 +213,8 @@
     <string name="background_color">Arka plan rengi</string>
     <string name="text_color">Metin rengi</string>
     <string name="primary_color">Ana renk</string>
-    <string name="accent_color_white">Accent color of white theme</string>
+    <string name="accent_color_white">Beyaz temanın vurgu rengi</string>
+    <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
     <string name="foreground_color">Ön plan rengi</string>
     <string name="app_icon_color">Uygulama simgesi rengi</string>
     <string name="bottom_navigation_bar_color">Alt gezinti çubuğu rengi</string>
@@ -244,7 +245,7 @@
     <string name="dark_theme">Karanlık</string>
     <string name="solarized">Solarized</string>
     <string name="dark_red">Koyu Kırmızı</string>
-    <string name="white">White</string>
+    <string name="white">Beyaz</string>
     <string name="black_white">Siyah &amp; Beyaz</string>
     <string name="custom">Özel</string>
     <string name="shared">Paylaşılan</string>
@@ -274,9 +275,9 @@
     <string name="print">Yazdır</string>
     <string name="create_shortcut">Kısayol oluştur</string>
     <string name="add_number_to_contact">Kişiye numara ekle</string>
-    <string name="view_contact_details">View contact details</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="view_contact_details">İletişim bilgilerini görüntüle</string>
+    <string name="call_from_sim_1">SIM 1\'den ara</string>
+    <string name="call_from_sim_2">SIM 2\'den ara</string>
     <string name="toggle_filename">Dosya adı görünürlüğünü aç/kapat</string>
 
     <!-- Sorting -->
@@ -486,16 +487,16 @@
     <string name="your_sounds">Sesleriniz</string>
     <string name="add_new_sound">Yeni bir ses ekle</string>
     <string name="no_sound">Ses yok</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="during_day_at_hh_mm">Gün boyunca ss:dd</string>
+    <string name="during_day_at">Gün boyunca %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Ayarlar</string>
     <string name="purchase_simple_thank_you">Basit Teşekkürler\'i Satın Al</string>
     <string name="customize_colors">Renkleri özelleştir</string>
-    <string name="customize_colors_locked">Renkleri özelleştir (Locked)</string>
+    <string name="customize_colors_locked">Renkleri özelleştir (Kilitli)</string>
     <string name="customize_widget_colors">Widget renklerini özelleştir</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="customize_notifications">Bildirimleri özelleştir</string>
     <string name="use_english_language">İngilizce dilini kullan</string>
     <string name="show_hidden_items">Gizli öğeleri göster</string>
     <string name="font_size">Yazı tipi boyutu</string>
@@ -527,7 +528,7 @@
     <string name="settings_exported_successfully">Ayarlar başarıyla dışa aktarıldı</string>
     <string name="settings_imported_successfully">Ayarlar başarıyla içe aktarıldı</string>
     <string name="start_name_with_surname">Soyadı ile başla</string>
-    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cache">Önbelleği temizle</string>
 
     <!-- Setting sections -->
     <string name="visibility">Görünürlük</string>
@@ -759,8 +760,8 @@
         Daha sonra istediğiniz zaman geri ödeme almak isterseniz, hello@simplemobiletools.com adresinden bizimle iletişime geçmeniz yeterlidir.</string>
     <string name="faq_9_title_commons">Aynı anda birden çok öğeyi nasıl seçebilirim?</string>
     <string name="faq_9_text_commons">Bunu yapmanın birçok yolu var. İlki, bir öğeye uzun süre basarak seçim modunu başlatmak, ardından diğerlerini seçmek için kısa tıklamaktır. İkinci yol, PC\'lerdeki öğeleri fareyle seçmeye benzer, yalnızca bir öğeye uzun basarak seçim modunu başlatın ve ardından parmağınızı aşağı doğru kaydırarak diğer öğelere sürükleyin. Birden fazla öğe seçmenin üçüncü yolu, bir öğeye uzun süre basmak, ardından diğerine uzun basmaktır. Tüm öğeleri seçmek istiyorsanız, yalnızca bir öğeye uzun basın, ardından sol üst köşedeki seçili öğe sayacına tıklayın. Bu, her şeyi seçecek veya seçimini kaldıracaktır.</string>
-    <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
-    <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
+    <string name="faq_10_title_commons">Uygulamayı satın aldım ancak başka bir cihaza indiremiyorum.</string>
+    <string name="faq_10_text_commons">Google Play uygulama önbelleğinizi temizlemeyi ve cihazınızı yeniden başlatmayı deneyin. Bazı Google Play aksaklıkları, gerçekten uygulamanın kendisiyle ilgili değil.</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">﻿Pro sürümünü şimdi alın!</string>

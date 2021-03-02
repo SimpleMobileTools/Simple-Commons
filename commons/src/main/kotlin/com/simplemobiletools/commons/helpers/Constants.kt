@@ -35,7 +35,12 @@ const val KEY_PHONE = "phone"
 const val CONTACT_ID = "contact_id"
 const val IS_PRIVATE = "is_private"
 const val MD5 = "MD5"
+const val SHORT_ANIMATION_DURATION = 150L
 val DARK_GREY = 0xFF333333.toInt()
+
+const val LOWER_ALPHA = 0.25f
+const val MEDIUM_ALPHA = 0.5f
+const val HIGHER_ALPHA = 0.75f
 
 const val HOUR_MINUTES = 60
 const val DAY_MINUTES = 24 * HOUR_MINUTES

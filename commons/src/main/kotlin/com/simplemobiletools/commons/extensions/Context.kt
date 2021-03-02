@@ -64,8 +64,7 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
     val backgroundColor = baseConfig.backgroundColor
     val accentColor = if (tmpAccentColor == 0) {
         when {
-            isBlackAndWhiteTheme() -> Color.WHITE
-            isWhiteTheme() -> baseConfig.accentColor
+            isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
             else -> baseConfig.primaryColor
         }
     } else {
@@ -73,22 +72,22 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
     }
 
     val cnt = viewGroup.childCount
-    (0 until cnt).map { viewGroup.getChildAt(it) }
-        .forEach {
-            when (it) {
-                is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyAppCompatSpinner -> it.setColors(textColor, accentColor, backgroundColor)
-                is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyEditText -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyAutoCompleteTextView -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
-                is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyButton -> it.setColors(textColor, accentColor, backgroundColor)
-                is ViewGroup -> updateTextColors(it, textColor, accentColor)
-            }
+    (0 until cnt).map { viewGroup.getChildAt(it) }.forEach {
+        when (it) {
+            is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyAppCompatSpinner -> it.setColors(textColor, accentColor, backgroundColor)
+            is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyEditText -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyAutoCompleteTextView -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
+            is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyButton -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyTextInputLayout -> it.setColors(textColor, accentColor, backgroundColor)
+            is ViewGroup -> updateTextColors(it, textColor, accentColor)
         }
+    }
 }
 
 fun Context.getLinkTextColor(): Int {
@@ -104,8 +103,7 @@ fun Context.isBlackAndWhiteTheme() = baseConfig.textColor == Color.WHITE && base
 fun Context.isWhiteTheme() = baseConfig.textColor == DARK_GREY && baseConfig.primaryColor == Color.WHITE && baseConfig.backgroundColor == Color.WHITE
 
 fun Context.getAdjustedPrimaryColor() = when {
-    isBlackAndWhiteTheme() -> Color.WHITE
-    isWhiteTheme() -> baseConfig.accentColor
+    isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
     else -> baseConfig.primaryColor
 }
 
@@ -229,19 +227,18 @@ fun Context.getRealPathFromURI(uri: Uri): String? {
 }
 
 fun Context.getDataColumn(uri: Uri, selection: String? = null, selectionArgs: Array<String>? = null): String? {
-    var cursor: Cursor? = null
     try {
         val projection = arrayOf(Files.FileColumns.DATA)
-        cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
-        if (cursor?.moveToFirst() == true) {
-            val data = cursor.getStringValue(Files.FileColumns.DATA)
-            if (data != "null") {
-                return data
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                val data = cursor.getStringValue(Files.FileColumns.DATA)
+                if (data != "null") {
+                    return data
+                }
             }
         }
     } catch (e: Exception) {
-    } finally {
-        cursor?.close()
     }
     return null
 }
@@ -303,16 +300,15 @@ fun Context.getMediaContent(path: String, uri: Uri): Uri? {
     val projection = arrayOf(Images.Media._ID)
     val selection = Images.Media.DATA + "= ?"
     val selectionArgs = arrayOf(path)
-    var cursor: Cursor? = null
     try {
-        cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
-        if (cursor?.moveToFirst() == true) {
-            val id = cursor.getIntValue(Images.Media._ID).toString()
-            return Uri.withAppendedPath(uri, id)
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                val id = cursor.getIntValue(Images.Media._ID).toString()
+                return Uri.withAppendedPath(uri, id)
+            }
         }
     } catch (e: Exception) {
-    } finally {
-        cursor?.close()
     }
     return null
 }
@@ -386,17 +382,34 @@ fun Context.ensurePublicUri(uri: Uri, applicationId: String): Uri {
 }
 
 fun Context.getFilenameFromContentUri(uri: Uri): String? {
-    var cursor: Cursor? = null
+    val projection = arrayOf(
+        OpenableColumns.DISPLAY_NAME
+    )
+
     try {
-        cursor = contentResolver.query(uri, null, null, null, null)
-        if (cursor?.moveToFirst() == true) {
-            return cursor.getStringValue(OpenableColumns.DISPLAY_NAME)
+        val cursor = contentResolver.query(uri, projection, null, null, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getStringValue(OpenableColumns.DISPLAY_NAME)
+            }
         }
     } catch (e: Exception) {
-    } finally {
-        cursor?.close()
     }
     return null
+}
+
+fun Context.getSizeFromContentUri(uri: Uri): Long {
+    val projection = arrayOf(OpenableColumns.SIZE)
+    try {
+        val cursor = contentResolver.query(uri, projection, null, null, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getLongValue(OpenableColumns.SIZE)
+            }
+        }
+    } catch (e: Exception) {
+    }
+    return 0L
 }
 
 fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {

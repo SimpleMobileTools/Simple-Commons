@@ -142,7 +142,7 @@
     <string name="file_already_exists">Já existe um ficheiro com o nome \"%s\"</string>
     <string name="file_already_exists_overwrite">Já existe um ficheiro com o nome \"%s\". Substituir?</string>
     <string name="folder_already_exists">Já existe uma pasta com o nome \"%s\"</string>
-    <string name="merge">Unir</string>
+    <string name="merge">Combinar</string>
     <string name="keep_both">Manter ambos</string>
     <string name="overwrite">Substituir</string>
     <string name="skip">Ignorar</string>
@@ -213,7 +213,8 @@
     <string name="background_color">Cor de fundo</string>
     <string name="text_color">Cor do tipo de letra</string>
     <string name="primary_color">Cor primária</string>
-    <string name="accent_color_white">Accent color of white theme</string>
+    <string name="accent_color_white">Cor de destaque para o tema Branco</string>
+    <string name="accent_color_black_and_white">Cor de destaque para o tema Preto e branco</string>
     <string name="foreground_color">Cor secundária</string>
     <string name="app_icon_color">Cor do ícone da aplicação</string>
     <string name="bottom_navigation_bar_color">Cor da barra de navegação inferior</string>
@@ -244,7 +245,7 @@
     <string name="dark_theme">Escuro</string>
     <string name="solarized">Solar</string>
     <string name="dark_red">Vermelho escuro</string>
-    <string name="white">White</string>
+    <string name="white">Branco</string>
     <string name="black_white">Preto e branco</string>
     <string name="custom">Personalizado</string>
     <string name="shared">Partilhado</string>
@@ -260,7 +261,7 @@
     <string name="share">Partilhar</string>
     <string name="share_via">Partilhar por</string>
     <string name="select_all">Selecionar tudo</string>
-    <string name="select_text">Select text</string>
+    <string name="select_text">Selecionar texto</string>
     <string name="hide">Ocultar</string>
     <string name="unhide">Mostrar</string>
     <string name="hide_folder">Ocultar pasta</string>
@@ -274,7 +275,7 @@
     <string name="print">Imprimir</string>
     <string name="create_shortcut">Criar atalho</string>
     <string name="add_number_to_contact">Adicionar número a um contacto existente</string>
-    <string name="view_contact_details">View contact details</string>
+    <string name="view_contact_details">Ver detalhes do contacto</string>
     <string name="call_from_sim_1">Ligar do SIM 1</string>
     <string name="call_from_sim_2">Ligar do SIM 2</string>
     <string name="toggle_filename">Mostrar/ocultar nome do ficheiro</string>
@@ -329,7 +330,7 @@
     <string name="repeat_pattern">Repita o padrão</string>
     <string name="fingerprint">Impressão digital</string>
     <string name="add_fingerprint">Adicionar impressão digital</string>
-    <string name="place_finger">Coloque o seu dedo no sensor de impressões digitais</string>
+    <string name="place_finger">Coloque o dedo no sensor de impressões digitais</string>
     <string name="authentication_failed">Falha de autenticação</string>
     <string name="authentication_blocked">Autenticação bloqueada. Por favor tente mais tarde.</string>
     <string name="no_fingerprints_registered">Não tem impressões digitais registadas. Adicione a sua impressão digital nas definições do dispositivo.</string>
@@ -486,8 +487,8 @@
     <string name="your_sounds">Meus sons</string>
     <string name="add_new_sound">Adicionar um novo som</string>
     <string name="no_sound">Sem som</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="during_day_at_hh_mm">Durante o dia às hh:mm</string>
+    <string name="during_day_at">Durante o dia às %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Definições</string>
@@ -495,7 +496,7 @@
     <string name="customize_colors">Personalizar cores</string>
     <string name="customize_colors_locked">Personalizar cores (Bloqueado)</string>
     <string name="customize_widget_colors">Personalizar cores do widget</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="customize_notifications">Personalizar notificações</string>
     <string name="use_english_language">Utilizar aplicação em inglês</string>
     <string name="show_hidden_items">Mostrar itens ocultos</string>
     <string name="font_size">Tamanho do texto</string>
@@ -527,7 +528,7 @@
     <string name="settings_exported_successfully">Definições exportadas com sucesso</string>
     <string name="settings_imported_successfully">Definições importadas com sucesso</string>
     <string name="start_name_with_surname">Ordenar por apelido</string>
-    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cache">Limpar cache</string>
 
     <!-- Setting sections -->
     <string name="visibility">Exibição</string>
@@ -793,10 +794,10 @@
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Listas</string>
-    <string name="why_upgrade_different_note_per_widget">Notas e cores diferentes por widgets</string>
+    <string name="why_upgrade_different_note_per_widget">Notas e cores diferentes por widget</string>
 
     <!-- File Manager Pro -->
-    <string name="why_upgrade_date_and_time_format">Personalização do formato de data e hora</string>
+    <string name="why_upgrade_date_and_time_format">Personalização do formato de data e de hora</string>
     <string name="why_upgrade_shortcuts">Atalhos no ecrã principal</string>
     <string name="why_upgrade_file_compression">Suporte para compressão de arquivos</string>
 
