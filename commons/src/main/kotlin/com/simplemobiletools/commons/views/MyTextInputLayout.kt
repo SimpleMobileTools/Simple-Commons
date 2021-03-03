@@ -20,7 +20,7 @@ class MyTextInputLayout : TextInputLayout {
     fun setColors(textColor: Int, accentColor: Int, backgroundColor: Int) {
         try {
             editText!!.setTextColor(textColor)
-            editText!!.backgroundTintList = ColorStateList.valueOf(textColor)
+            editText!!.backgroundTintList = ColorStateList.valueOf(accentColor)
 
             val hintColor = if (editText!!.value.isEmpty()) textColor.adjustAlpha(HIGHER_ALPHA) else textColor
             val defaultTextColor = TextInputLayout::class.java.getDeclaredField("defaultHintTextColor")
