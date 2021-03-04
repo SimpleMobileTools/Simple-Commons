@@ -248,7 +248,8 @@ class CustomizationActivity : BaseSimpleActivity() {
                 if (curTextColor == getColor(value.textColorId) &&
                     curBackgroundColor == getColor(value.backgroundColorId) &&
                     curPrimaryColor == getColor(value.primaryColorId) &&
-                    curAppIconColor == getColor(value.appIconColorId)
+                    curAppIconColor == getColor(value.appIconColorId) &&
+                    curNavigationBarColor == baseConfig.defaultNavigationBarColor
                 ) {
                     themeId = key
                 }
