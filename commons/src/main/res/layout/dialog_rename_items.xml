@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/rename_items_holder"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/activity_margin">
 
-    <com.simplemobiletools.commons.views.MyEditText
-        android:id="@+id/rename_items_value"
+    <com.simplemobiletools.commons.views.MyTextInputLayout
+        android:id="@+id/rename_items_hint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_margin"
-        android:hint="@string/string_to_add"
-        android:singleLine="true"
-        android:textCursorDrawable="@null"
-        android:textSize="@dimen/normal_text_size"/>
+        android:hint="@string/string_to_add">
+
+        <com.simplemobiletools.commons.views.MyEditText
+            android:id="@+id/rename_items_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_margin"
+            android:singleLine="true"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/normal_text_size" />
+    </com.simplemobiletools.commons.views.MyTextInputLayout>
 
     <RadioGroup
         android:id="@+id/rename_items_radio_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rename_items_value">
+        android:layout_below="@+id/rename_items_hint">
 
         <com.simplemobiletools.commons.views.MyCompatRadioButton
             android:id="@+id/rename_items_radio_append"
@@ -29,7 +34,7 @@
             android:checked="true"
             android:paddingTop="@dimen/normal_margin"
             android:paddingBottom="@dimen/normal_margin"
-            android:text="@string/append_filenames"/>
+            android:text="@string/append_filenames" />
 
         <com.simplemobiletools.commons.views.MyCompatRadioButton
             android:id="@+id/rename_items_radio_prepend"
@@ -37,6 +42,6 @@
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/normal_margin"
             android:paddingBottom="@dimen/normal_margin"
-            android:text="@string/prepend_filenames"/>
+            android:text="@string/prepend_filenames" />
     </RadioGroup>
 </RelativeLayout>
