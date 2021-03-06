@@ -13,6 +13,7 @@
         <item name="android:textColor">@color/default_text_color</item>
         <item name="android:colorControlHighlight">@color/activated_item_foreground</item>
         <item name="colorControlHighlight">@color/activated_item_foreground</item>
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
     </style>
 
     <style name="TranslucentTheme" parent="Theme.AppCompat.NoActionBar" />
@@ -97,6 +98,14 @@
     <style name="DarkActionBarItems" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="colorAccent">@color/dark_grey</item>
         <item name="android:textColorHint">@color/hint_black</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetModalStyle</item>
+    </style>
+
+    <style name="BottomSheetModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_bg</item>
     </style>
 
     <!-- App themes -->
