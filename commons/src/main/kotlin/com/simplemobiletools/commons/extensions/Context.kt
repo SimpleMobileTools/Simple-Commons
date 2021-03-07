@@ -1034,3 +1034,9 @@ fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNum
     val numberToCompare = number.trimToComparableNumber()
     return blockedNumbers.map { it.numberToCompare }.contains(numberToCompare) || blockedNumbers.map { it.number }.contains(numberToCompare)
 }
+
+fun Context.copyToClipboard(text: String) {
+    val clip = ClipData.newPlainText(getString(R.string.simple_commons), text)
+    (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).setPrimaryClip(clip)
+    toast(R.string.value_copied_to_clipboard)
+}

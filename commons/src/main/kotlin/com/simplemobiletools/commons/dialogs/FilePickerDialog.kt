@@ -184,6 +184,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                 filepicker_fastscroller.updateBubbleText(sortedItems.getOrNull(it)?.getBubbleText(context, mDateFormat, mTimeFormat) ?: "")
             }
 
+            filepicker_list.scheduleLayoutAnimation()
             layoutManager.onRestoreInstanceState(mScrollStates[currPath.trimEnd('/')])
             filepicker_list.onGlobalLayout {
                 filepicker_fastscroller.setScrollToY(filepicker_list.computeVerticalScrollOffset())

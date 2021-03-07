@@ -412,8 +412,8 @@ fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSi
 
     val basePath = "${baseConfig.OTGTreeUri}/document/${baseConfig.OTGPartition}%3A"
     for (file in files) {
-        val name = file.name
-        if (!shouldShowHidden && name!!.startsWith(".")) {
+        val name = file.name ?: continue
+        if (!shouldShowHidden && name.startsWith(".")) {
             continue
         }
 
@@ -433,7 +433,7 @@ fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSi
         }
 
         val lastModified = file.lastModified()
-        val fileDirItem = FileDirItem(decodedPath, name!!, isDirectory, childrenCount, fileSize, lastModified)
+        val fileDirItem = FileDirItem(decodedPath, name, isDirectory, childrenCount, fileSize, lastModified)
         items.add(fileDirItem)
     }
 

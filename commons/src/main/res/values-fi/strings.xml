@@ -214,7 +214,7 @@
     <string name="text_color">Tekstin väri</string>
     <string name="primary_color">Ensisijainen väri</string>
     <string name="accent_color_white">Valkoisen teeman aksenttiväri</string>
-    <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
+    <string name="accent_color_black_and_white">Mustavalkoisen teeman aksenttiväri</string>
     <string name="foreground_color">Etualan väri</string>
     <string name="app_icon_color">Sovelluksen ikonin väri</string>
     <string name="bottom_navigation_bar_color">Alapalkin väri</string>
@@ -770,6 +770,7 @@
     <string name="why_upgrade_no_ads">Ei mainoksia</string>
     <string name="why_upgrade_no_internet_access">Ei internetyhteyttä</string>
     <string name="why_upgrade_footer">+ 100% rahat takaisin-takuu</string>
+    <string name="why_upgrade_improved_design">Kehittyneempi ulkoasu</string>
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Kehittyt valokuvaeditori</string>
