@@ -73,7 +73,7 @@ fun Activity.appLaunched(appId: String) {
     }
 
     baseConfig.appRunCount++
-    if (baseConfig.appRunCount % 50 == 0 && !isAProApp()) {
+    if (baseConfig.appRunCount % 30 == 0 && !isAProApp()) {
         showDonateOrUpgradeDialog()
     }
 
