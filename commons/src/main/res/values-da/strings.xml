@@ -213,8 +213,8 @@
     <string name="background_color">Baggrundsfarve</string>
     <string name="text_color">Tekstfarve</string>
     <string name="primary_color">Primær farve</string>
-    <string name="accent_color_white">Accent color of white theme</string>
-    <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
+    <string name="accent_color_white">Effektfarve på det hvide udseende</string>
+    <string name="accent_color_black_and_white">Effektfarve på det sorte &amp; hvide udseende</string>
     <string name="foreground_color">Forgrundsfarve</string>
     <string name="app_icon_color">Farve til appens ikon</string>
     <string name="bottom_navigation_bar_color">Farve på nederste navigationslinje</string>
@@ -487,8 +487,8 @@
     <string name="your_sounds">Dine lyde</string>
     <string name="add_new_sound">Tilføj en ny lyd</string>
     <string name="no_sound">Ingen lyd</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="during_day_at_hh_mm">I løbet af dagen kl. hh:mm</string>
+    <string name="during_day_at">I løbet af dagen kl. %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Indstillinger</string>
@@ -772,7 +772,7 @@
     <string name="why_upgrade_no_ads">Ingen reklamer</string>
     <string name="why_upgrade_no_internet_access">Ingen internetadgang</string>
     <string name="why_upgrade_footer">+ Fuld tilfredshed eller pengene tilbage</string>
-    <string name="why_upgrade_improved_design">Improved design</string>
+    <string name="why_upgrade_improved_design">Forbedret design</string>
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Avanceret fotoredigering</string>
@@ -791,7 +791,7 @@
     <string name="why_upgrade_duplicate_contact_merging">Forbedret sammenfletning af duplikerede kontakter</string>
     <string name="why_upgrade_font_size_customization">Skræddersyet skriftstørrelse</string>
     <string name="why_upgrade_private_contact_sharing">Mulighed for deling af private kontakter med dine apps</string>
-    <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Kontaktspecifikke ringetoner</string>
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Tjeklister</string>
