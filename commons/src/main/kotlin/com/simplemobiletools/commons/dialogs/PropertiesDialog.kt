@@ -253,8 +253,9 @@ class PropertiesDialog() {
     }
 
     private fun addProperty(labelId: Int, value: String?, viewId: Int = 0) {
-        if (value == null)
+        if (value == null) {
             return
+        }
 
         mInflater.inflate(R.layout.property_item, mPropertyView, false).apply {
             property_value.setTextColor(mActivity.baseConfig.textColor)
