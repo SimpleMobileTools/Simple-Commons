@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.ActivityManager
 import android.app.role.RoleManager
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
@@ -357,13 +358,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         funAfterSAFPermission = callback
         WritePermissionDialog(this, true) {
             Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
-                if (resolveActivity(packageManager) == null) {
+                try {
+                    startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
+                    return@apply
+                } catch (e: Exception) {
                     type = "*/*"
                 }
 
-                if (resolveActivity(packageManager) != null) {
+                try {
                     startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
-                } else {
+                } catch (e: Exception) {
                     toast(R.string.unknown_error_occurred)
                 }
             }
@@ -602,10 +606,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             }
         } else {
             Intent(TelecomManager.ACTION_CHANGE_DEFAULT_DIALER).putExtra(TelecomManager.EXTRA_CHANGE_DEFAULT_DIALER_PACKAGE_NAME, packageName).apply {
-                if (resolveActivity(packageManager) != null) {
+                try {
                     startActivityForResult(this, REQUEST_CODE_SET_DEFAULT_DIALER)
-                } else {
+                } catch (e: ActivityNotFoundException) {
                     toast(R.string.no_app_found)
+                } catch (e: Exception) {
+                    showErrorToast(e)
                 }
             }
         }
