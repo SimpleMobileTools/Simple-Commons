@@ -445,14 +445,11 @@ fun Context.getSharedThemeSync(cursorLoader: CursorLoader): SharedTheme? {
 
 fun Context.getMyContentProviderCursorLoader() = CursorLoader(this, MyContentProvider.MY_CONTENT_URI, null, null, null, null)
 
-fun Context.getMyContactsCursor() = try {
-    CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, null, null, null)
-} catch (e: Exception) {
-    null
-}
-
-fun Context.getMyFavoriteContactsCursor() = try {
-    CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, MyContactsContentProvider.FAVORITES_ONLY, null, null)
+fun Context.getMyContactsCursor(favoritesOnly: Boolean, withPhoneNumbersOnly: Boolean) = try {
+    val getFavoritesOnly = if (favoritesOnly) "1" else "0"
+    val getWithPhoneNumbersOnly = if (withPhoneNumbersOnly) "1" else "0"
+    val args = arrayOf(getFavoritesOnly, getWithPhoneNumbersOnly)
+    CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, null, args, null)
 } catch (e: Exception) {
     null
 }
