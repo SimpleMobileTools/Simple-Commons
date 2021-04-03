@@ -180,11 +180,7 @@ fun Activity.launchViewIntent(id: Int) = launchViewIntent(getString(id))
 fun Activity.launchViewIntent(url: String) {
     ensureBackgroundThread {
         Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
-            if (resolveActivity(packageManager) != null) {
-                startActivity(this)
-            } else {
-                toast(R.string.no_app_found)
-            }
+            launchActivityIntent(this)
         }
     }
 }
@@ -382,15 +378,7 @@ fun Activity.launchViewContactIntent(uri: Uri) {
     Intent().apply {
         action = ContactsContract.QuickContact.ACTION_QUICK_CONTACT
         data = uri
-        if (resolveActivity(packageManager) != null) {
-            try {
-                startActivity(this)
-            } catch (e: Exception) {
-                showErrorToast(e)
-            }
-        } else {
-            toast(R.string.no_app_found)
-        }
+        launchActivityIntent(this)
     }
 }
 
@@ -404,11 +392,7 @@ fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountH
                 putExtra(TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, handle)
             }
 
-            if (resolveActivity(packageManager) != null) {
-                startActivity(this)
-            } else {
-                toast(R.string.no_app_found)
-            }
+            launchActivityIntent(this)
         }
     }
 }
@@ -416,11 +400,7 @@ fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountH
 fun Activity.launchSendSMSIntent(recipient: String) {
     Intent(Intent.ACTION_SENDTO).apply {
         data = Uri.fromParts("smsto", recipient, null)
-        if (resolveActivity(packageManager) != null) {
-            startActivity(this)
-        } else {
-            toast(R.string.no_app_found)
-        }
+        launchActivityIntent(this)
     }
 }
 
@@ -429,12 +409,7 @@ fun Activity.showLocationOnMap(coordinates: String) {
     val encodedQuery = Uri.encode(coordinates)
     val uriString = "$uriBegin?q=$encodedQuery&z=16"
     val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uriString))
-    val packageManager = packageManager
-    if (intent.resolveActivity(packageManager) != null) {
-        startActivity(intent)
-    } else {
-        toast(R.string.no_app_found)
-    }
+    launchActivityIntent(intent)
 }
 
 fun Activity.getFinalUriFromPath(path: String, applicationId: String): Uri? {
