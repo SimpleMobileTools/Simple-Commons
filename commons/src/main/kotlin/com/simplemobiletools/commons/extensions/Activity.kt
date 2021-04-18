@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.extensions
 import android.app.Activity
 import android.app.TimePickerDialog
 import android.content.*
+import android.content.Intent.EXTRA_STREAM
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.media.RingtoneManager
@@ -206,7 +207,8 @@ fun Activity.sharePathIntent(path: String, applicationId: String) {
         val newUri = getFinalUriFromPath(path, applicationId) ?: return@ensureBackgroundThread
         Intent().apply {
             action = Intent.ACTION_SEND
-            putExtra(Intent.EXTRA_STREAM, newUri)
+            putExtra(EXTRA_STREAM, newUri)
+            clipData = ClipData.newRawUri(null, newUri)
             type = getUriMimeType(path, newUri)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
@@ -248,7 +250,7 @@ fun Activity.sharePathsIntent(paths: List<String>, applicationId: String) {
                 action = Intent.ACTION_SEND_MULTIPLE
                 type = mimeType
                 addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                putParcelableArrayListExtra(Intent.EXTRA_STREAM, newUris)
+                putParcelableArrayListExtra(EXTRA_STREAM, newUris)
 
                 try {
                     startActivity(Intent.createChooser(this, getString(R.string.share_via)))
