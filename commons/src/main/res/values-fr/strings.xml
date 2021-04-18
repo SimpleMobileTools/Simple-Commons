@@ -140,7 +140,7 @@
 
     <!-- File operation conflicts -->
     <string name="file_already_exists">Le fichier \"%s\" existe déjà</string>
-    <string name="file_already_exists_overwrite">Le fichier \"%s\" existe déjà. L'écraser ?</string>
+    <string name="file_already_exists_overwrite">Le fichier \"%s\" existe déjà. L\'écraser ?</string>
     <string name="folder_already_exists">Le répertoire \"%s\" existe déjà</string>
     <string name="merge">Fusionner</string>
     <string name="keep_both">Conserver les deux</string>
@@ -187,7 +187,7 @@
     <string name="wrong_root_selected">Dossier sélectionné incorrect, veuillez sélectionner le dossier racine de votre carte SD</string>
     <string name="sd_card_usb_same">Les emplacements de la carte SD et du stockage USB ne peuvent être similaires</string>
     <string name="app_on_sd_card">L\'application semble installée sur une carte SD, ce qui empêche l\'utilisation des widgets de l\'applications. Ils n\'apparaîtront pas dans la liste des widgets disponibles.
-        Il s\'agit d'une limitation système. Si vous souhaitez utiliser des widgets, vous devez déplacer l\'application vers la mémoire interne.</string>
+        Il s\'agit d\'une limitation système. Si vous souhaitez utiliser des widgets, vous devez déplacer l\'application vers la mémoire interne.</string>
 
     <!-- File properties -->
     <string name="properties">Propriétés</string>
@@ -213,8 +213,8 @@
     <string name="background_color">Couleur de l\'arrière-plan</string>
     <string name="text_color">Couleur du texte</string>
     <string name="primary_color">Couleur principale</string>
-    <string name="accent_color_white">Couleur d'accentuation du thème blanc</string>
-    <string name="accent_color_black_and_white">Couleur d'accentuation du thème noir &amp; blanc</string>
+    <string name="accent_color_white">Couleur d\'accentuation du thème blanc</string>
+    <string name="accent_color_black_and_white">Couleur d\'accentuation du thème noir &amp; blanc</string>
     <string name="foreground_color">Couleur d\'arrière-plan</string>
     <string name="app_icon_color">Couleur d\'icône de l\'application</string>
     <string name="bottom_navigation_bar_color">Couleur de la barre de navigation</string>
@@ -233,7 +233,7 @@
     <string name="app_icon_color_warning">AVERTISSEMENT : certains lanceurs ne gèrent pas correctement la personnalisation des icônes d\'applications. Au cas où l\'icône disparaîtrait, essayez de lancer l\'application via Google Play ou un widget.
         Une fois lancé, réglez simplement l\'icône orange par défaut #F57C00. Dans le pire des cas vous devrez peut-être réinstaller l\'application.</string>
     <string name="share_colors_success">Couleurs actualisées. Un nouveau thème nommé \"Partagé\" a été ajouté. Veuillez utiliser ce thème pour actualiser les couleurs de toutes les applications à partir de maintenant.</string>
-    <string name="shared_theme_note">Veuillez noter que même si vous utilisez la version Pro de l\'application, pour des raisons techniques, vous aurez toujours besoin de Simple Thank You car c'est elle qui gère la synchronisation des couleurs.</string>
+    <string name="shared_theme_note">Veuillez noter que même si vous utilisez la version Pro de l\'application, pour des raisons techniques, vous aurez toujours besoin de Simple Thank You car c\'est elle qui gère la synchronisation des couleurs.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Veuillez acheter <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Un petit Merci</a> pour déverrouiller cette fonctionnalité et soutenir le développeur. Merci !
@@ -564,7 +564,7 @@
     <string name="hide_the_recycle_bin">Masquer la corbeille</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Déplacement de l\'élément dans la corbeille en cours…</item>
+        <item quantity="one">Déplacement de %d élément dans la corbeille en cours…</item>
         <item quantity="other">Déplacement de %d éléments dans la corbeille en cours…</item>
     </plurals>
 
@@ -675,13 +675,13 @@
     </string>
     <string name="purchase">Acheter</string>
     <string name="update_thank_you">Veuillez mettre à jour Simple Thank You</string>
-    <string name="before_asking_question_read_faq">Avant de poser une question, veuillez vérifier les paramètres de l\'application et lire la foire aux questions. Il est possible que la solution s'y trouve.</string>
-    <string name="before_rate_read_faq">Avant de nous évaluer, veuillez vérifier les paramètres de l\'application et lire la foire aux questions. Si vous rencontrez des problèmes, il est possible que la solution s'y trouve.</string>
+    <string name="before_asking_question_read_faq">Avant de poser une question, veuillez vérifier les paramètres de l\'application et lire la foire aux questions. Il est possible que la solution s\'y trouve.</string>
+    <string name="before_rate_read_faq">Avant de nous évaluer, veuillez vérifier les paramètres de l\'application et lire la foire aux questions. Si vous rencontrez des problèmes, il est possible que la solution s\'y trouve.</string>
     <string name="make_sure_latest">Assurez-vous également que vous utilisez la version la plus récente de l\'application.</string>
     <string name="read_it">Consulter</string>
     <string name="read_faq">Lire la FAQ</string>
     <string name="rate_us_prompt">Bonjour,\n\nil semblerait que vous utilisez cette application depuis un certain temps et nous vous en remercions.\n\nSi nous pouvons vous demander une faveur, veuillez nous évaluer sur Google Play. Cela nous aiderait beaucoup.\n\nPeu importe le contenu de votre évaluation, vous ne verrez plus ce message.\n\nMerci d\'avance !</string>
-    <string name="rate_our_app">Merc d'évaluez notre application :)</string>
+    <string name="rate_our_app">Merc d\'évaluez notre application :)</string>
     <string name="thank_you">Merci</string>
 
     <!-- New app (do not translate anything on the 4th line) -->
@@ -714,7 +714,7 @@
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
 
-    <string name="app_launcher_short">Lanceur d'applications</string>
+    <string name="app_launcher_short">Lanceur d\'applications</string>
     <string name="calculator_short">Calculatrice</string>
     <string name="calendar_short">Calendrier</string>
     <string name="camera_short">Appareil photo</string>
@@ -781,7 +781,7 @@
     <string name="why_upgrade_heic_support">Support du dossier HEIC/HEIF</string>
     <string name="why_upgrade_batch_renaming">Renommage avancé des fichiers batch</string>
     <string name="why_upgrade_folder_locking">Verrouillage des dossiers individuels</string>
-    <string name="why_upgrade_printing_support">Support d'impression</string>
+    <string name="why_upgrade_printing_support">Support d\'impression</string>
 
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Support des fuseaux horaires</string>
@@ -800,13 +800,13 @@
     <string name="why_upgrade_different_note_per_widget">Différentes couleurs par widget</string>
 
     <!-- File Manager Pro -->
-    <string name="why_upgrade_date_and_time_format">Personnalisation du format de date et d'heure</string>
-    <string name="why_upgrade_shortcuts">Raccourcis pour l'écran d'accueil</string>
+    <string name="why_upgrade_date_and_time_format">Personnalisation du format de date et d\'heure</string>
+    <string name="why_upgrade_shortcuts">Raccourcis pour l\'écran d\'accueil</string>
     <string name="why_upgrade_file_compression">Prend en charge la compression de fichiers</string>
 
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Personnalisation de la couleur de fond</string>
-    <string name="why_upgrade_file_importing">Prend en charge l'import de fichiers</string>
+    <string name="why_upgrade_file_importing">Prend en charge l\'import de fichiers</string>
 
     <!-- License -->
     <string name="notice">Cette application utilise les bibliothèques tierces suivantes pour me simplifier la vie. Merci.</string>
