@@ -12,7 +12,7 @@
     <string name="set_as">设置为</string>
     <string name="copy_to_clipboard">复制到剪贴板</string>
     <string name="copy_number_to_clipboard">复制号码到剪贴板</string>
-    <string name="value_copied_to_clipboard">颜色值已复制到剪贴板</string>
+    <string name="value_copied_to_clipboard">内容已复制到剪贴板</string>
     <string name="dial_number">拨号</string>
     <string name="unknown">未知</string>
     <string name="always">总是</string>
@@ -210,8 +210,8 @@
     <string name="background_color">背景色</string>
     <string name="text_color">文本颜色</string>
     <string name="primary_color">主体色</string>
-    <string name="accent_color_white">Accent color of white theme</string>
-    <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
+    <string name="accent_color_white">白色主题的强调色</string>
+    <string name="accent_color_black_and_white">黑 &amp; 白色主题的强调色</string>
     <string name="foreground_color">前景色</string>
     <string name="app_icon_color">应用图标颜色</string>
     <string name="bottom_navigation_bar_color">底部导航栏颜色</string>
@@ -230,10 +230,10 @@
     <string name="app_icon_color_warning">警告：某些桌面应用无法正确处理自定义应用图标。如果图标消失，请尝试通过 Google Play 或某个小部件启动应用（如果有的话）。
 在成功启动之后，请将图标颜色设置为默认的橙色#F57C00。在最坏的情况下，您可能必须重新安装本应用。</string>
     <string name="share_colors_success">颜色更改成功。已添加名为“共享”的新主题，以后您可以使用它来更改所有应用的颜色。</string>
-    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
+    <string name="shared_theme_note">注意尽管您已经使用 Pro 版本的应用，由于技术原因您仍然需要简易感谢。它用来负责颜色同步。</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            请购买 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 以解锁此功能并支持开发。感谢！
+            请购买 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">简易感谢</a> 以解锁此功能并支持开发。感谢！
         ]]>
     </string>
 
@@ -242,7 +242,7 @@
     <string name="dark_theme">深色主题</string>
     <string name="solarized">Solarized</string>
     <string name="dark_red">深红</string>
-    <string name="white">White</string>
+    <string name="white">白色</string>
     <string name="black_white">黑白</string>
     <string name="custom">自定义</string>
     <string name="shared">共享</string>
@@ -335,13 +335,13 @@
     <string name="fingerprint_setup_successfully">指纹保护设置成功。如果出现问题，请重新安装本应用。</string>
     <string name="lock_folder">锁定文件夹</string>
     <string name="unlock_folder">解锁文件夹</string>
-    <string name="lock_folder_notice">加密功能仅在app内生效， 并不能用来取代真正的系统级文件夹加密</string>
+    <string name="lock_folder_notice">加密功能仅在应用内生效， 并不能用来取代真正的系统级文件夹加密</string>
 
     <!-- Times -->
     <string name="yesterday">昨天</string>
     <string name="today">今天</string>
     <string name="tomorrow">明天</string>
-    <string name="hide_year">Hide year</string>
+    <string name="hide_year">隐藏年份</string>
     <string name="seconds_raw">秒</string>
     <string name="minutes_raw">分钟</string>
     <string name="hours_raw">小时</string>
@@ -455,8 +455,8 @@
     <string name="your_sounds">您的铃声</string>
     <string name="add_new_sound">添加新的铃声</string>
     <string name="no_sound">无铃声</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="during_day_at_hh_mm">在日间的 小时:分钟 内</string>
+    <string name="during_day_at">在日间的 %02d:%02d 内</string>
 
     <!-- Settings -->
     <string name="settings">设置</string>
@@ -639,7 +639,7 @@
         ]]>
     </string>
     <string name="purchase">购买</string>
-    <string name="update_thank_you">请更新 Simple Thank You 到最新版本</string>
+    <string name="update_thank_you">请更新简易感谢到最新版本</string>
     <string name="before_asking_question_read_faq">提问之前，请先打开应用设置并阅读常见问题。也许您可以在那里找到答案。</string>
     <string name="before_rate_read_faq">评分之前，请先打开应用设置并阅读常见问题。也许您可以在那里找到答案。</string>
     <string name="make_sure_latest">另外，请确保您正在使用的是最新版本的应用。</string>
@@ -724,12 +724,12 @@
     <string name="faq_8_text_commons">由于您的应用程序版本不再更新，bug可能将永远得不到修复，也不会再添加任何新功能。 您可以在Google Play上花少量的钱来购买专业版。
          这是一次性付款，意味着您在购买之后就不再收费，即使您更换了新的设备。 如果您不喜欢Pro版本，可以在几个小时内将其卸载，之后您将自动收到退款。
          如果您想要在此之后退款，请通过hello@simplemobiletools.com与我们联系。</string>
-    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
-    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
-        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
-        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
-    <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
-    <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
+    <string name="faq_9_title_commons">我如何一次性选择多个项目?</string>
+    <string name="faq_9_text_commons">有多种方式可以做到。第一种是长按一个项目进入选择模式，然后轻轻点击其余项目来选择它们。第二种方式类似于在电脑上使用鼠标选择项目，
+        长按一个项目进入选择模式，然后用您的手指向下滑过其它项目来实现选择。第三种选择多个项目的方式是长按一个项目，然后长按另一个从而选择它们之间全部的项目。如果您
+        想要选择所有的项目，只需长安一个项目，然后点击在左上角的项目计数器。这样将会选择或者取消选择全部项目。</string>
+    <string name="faq_10_title_commons">我已经购买了这个应用，但我无法在另外的设备下载它。</string>
+    <string name="faq_10_text_commons">尝试清除您 Google Play 应用缓存并重启您的设备。这是某些 Google Play 的小问题，并非应用程序本身的问题。</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Get the Pro version now!</string>
