@@ -262,12 +262,12 @@
     <string name="share_via">Partager via</string>
     <string name="select_all">Tout sélectionner</string>
     <string name="select_text">Sélectionner le texte</string>
-    <string name="hide">Masquer</string>
-    <string name="unhide">Ne plus masquer</string>
-    <string name="hide_folder">Masquer le dossier</string>
+    <string name="hide">Cacher</string>
+    <string name="unhide">Ne plus cacher</string>
+    <string name="hide_folder">Cacher le dossier</string>
     <string name="unhide_folder">Ne plus msquer le dossier</string>
-    <string name="temporarily_show_hidden">Afficher temporairement les fichiers masqués</string>
-    <string name="stop_showing_hidden">Afficher les fichiers masqués</string>
+    <string name="temporarily_show_hidden">Afficher les fichiers cachés</string>
+    <string name="stop_showing_hidden">Cacher les fichiers cachés</string>
     <string name="maximum_share_reached">Impossible de partager autant de contenu à la fois</string>
     <string name="empty_and_disable_recycle_bin">Vider et désactiver la corbeille</string>
     <string name="undo">Annuler</string>
@@ -347,7 +347,7 @@
     <string name="yesterday">Hier</string>
     <string name="today">Aujourd\'hui</string>
     <string name="tomorrow">Demain</string>
-    <string name="hide_year">Masquer l\'année</string>
+    <string name="hide_year">Cacher l\'année</string>
     <string name="seconds_raw">secondes</string>
     <string name="minutes_raw">minutes</string>
     <string name="hours_raw">heures</string>
@@ -500,13 +500,13 @@
     <string name="customize_widget_colors">Modifier les couleurs du widget</string>
     <string name="customize_notifications">Personnaliser les notifications</string>
     <string name="use_english_language">Utiliser la langue anglaise</string>
-    <string name="show_hidden_items">Afficher les fichiers masqués</string>
+    <string name="show_hidden_items">Afficher les fichiers cachés</string>
     <string name="font_size">Taille des caractères</string>
     <string name="small">Petite</string>
     <string name="medium">Moyenne</string>
     <string name="large">Large</string>
     <string name="extra_large">Extra-large</string>
-    <string name="password_protect_hidden_items">Protéger les éléments masqués par schéma, code PIN ou empreinte</string>
+    <string name="password_protect_hidden_items">Protéger les éléments cachés par schéma, code PIN ou empreinte</string>
     <string name="password_protect_whole_app">Protéger l\'application par schéma, code PIN ou empreinte</string>
     <string name="password_protect_file_deletion">Protéger la suppression et le déplacement de fichiers par schéma, code PIN ou empreinte</string>
     <string name="keep_last_modified">Conserver la date de modification après les opérations sur les fichiers</string>
@@ -533,7 +533,7 @@
     <string name="clear_cache">Supprimer le cache</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibilité</string>
+    <string name="visibility">Visibilité</string>a
     <string name="security">Sécurité</string>
     <string name="scrolling">Défilement</string>
     <string name="file_operations">Opérations de fichiers</string>
@@ -561,7 +561,7 @@
     <string name="recycle_bin_empty">La corbeille est vide</string>
     <string name="moving_recycle_bin_items_disabled">Le déplacement des éléments vers la corbeille est désactivé, veuillez utiliser la fonction de restauration.</string>
     <string name="show_the_recycle_bin">Afficher la corbeille</string>
-    <string name="hide_the_recycle_bin">Masquer la corbeille</string>
+    <string name="hide_the_recycle_bin">Cacher la corbeille</string>
 
     <plurals name="moving_items_into_bin">
         <item quantity="one">Déplacement de %d élément dans la corbeille en cours…</item>
