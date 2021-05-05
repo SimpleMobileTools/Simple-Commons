@@ -10,10 +10,10 @@
     <string name="edit_with">Editar com</string>
     <string name="no_app_found">Nenhum aplicativo encontrado</string>
     <string name="set_as">Definir como</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
+    <string name="copy_to_clipboard">Copiar para área de transferência</string>
+    <string name="copy_number_to_clipboard">Copiar número para área de transferência</string>
     <string name="value_copied_to_clipboard">Valor copiado para a área de transferência</string>
-    <string name="dial_number">Dial number</string>
+    <string name="dial_number">Discar número</string>
     <string name="unknown">Desconhecido</string>
     <string name="always">Sempre</string>
     <string name="never">Nunca</string>
@@ -28,14 +28,14 @@
     <string name="download">Download</string>
     <string name="notification">Notificação</string>
     <string name="email">Email</string>
-    <string name="previous">Previous</string>
-    <string name="playpause">Play / Pause</string>
-    <string name="next">Next</string>
+    <string name="previous">Anterior</string>
+    <string name="playpause">Reproduzir / Pausar</string>
+    <string name="next">Próximo</string>
     <string name="number">Número</string>
     <string name="no_contacts_found">Nenhum contato encontrado</string>
     <string name="request_the_required_permissions">Pedir as permissões necessárias</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
-    <string name="insert_text_here">Insert text here</string>
+    <string name="no_access_to_contacts">O aplicativo não pode acessar seus contatos</string>
+    <string name="insert_text_here">Insira o texto aqui</string>
 
     <!-- View types -->
     <string name="change_view_type">Alterar modo de visualização</string>
@@ -55,7 +55,7 @@
     <string name="blocked_numbers">Números bloqueados</string>
     <string name="must_make_default_dialer">Você precisa tornar este aplicativo padrão para poder bloquear números.</string>
     <string name="set_as_default">Definir como padrão</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
+    <string name="block_confirmation">Tem certeza que deseja bloquear \"%s\"?</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
@@ -95,10 +95,10 @@
     <string name="source_file_doesnt_exist">Arquivo de origem %s não existe</string>
     <string name="prepend_filenames">Adicionar ao início dos nomes</string>
     <string name="append_filenames">Adicionar ao fim dos nomes</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
-    <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%Y - ano\n%M - mês\n%D - dia\n%h - hora\n%m - minuto\n%s - segundo\n%i - number increasing from 1</string>
+    <string name="simple_renaming">Renomeação simples</string>
+    <string name="pattern_renaming">Padrão</string>
+    <string name="string_to_add">Texto a adicionar</string>
+    <string name="rename_date_time_pattern">%Y - ano\n%M - mês\n%D - dia\n%h - hora\n%m - minuto\n%s - segundo\n%i – aumento numérico de 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>
@@ -213,8 +213,8 @@
     <string name="background_color">Cor de fundo</string>
     <string name="text_color">Cor do texto</string>
     <string name="primary_color">Cor primária</string>
-    <string name="accent_color_white">Accent color of white theme</string>
-    <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
+    <string name="accent_color_white">Cor de destaque do tema branco</string>
+    <string name="accent_color_black_and_white">Cor de destaque do tema Preto &amp; Branco</string>
     <string name="foreground_color">Cor do primeiro plano</string>
     <string name="app_icon_color">Cor do ícone do aplicativo</string>
     <string name="bottom_navigation_bar_color">Cor da barra de navegação inferior</string>
@@ -233,7 +233,7 @@
     <string name="app_icon_color_warning">AVISO: Alguns lançadores não são capazes de lidar corretamente com a customização de ícones. Nestes casos, se o icone desaparecer tente abrir o aplicativo pelo Google Play, ou através de um widget, se disponível.
         Ao entrar, simplesmente reverta a cor do ícone para o valor padrão (laranja #F57C00). No pior dos casos pode ser preciso reinstalar o aplicativo.</string>
     <string name="share_colors_success">Cores atualizadas com sucesso. Um novo tema chamado \'Compartilhado\' foi adicionado, use-o para atualizar as cores de todos os apps no futuro.</string>
-    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
+    <string name="shared_theme_note">Embora você esteja usando a versão Pro do aplicativo, o Simple Thank You ainda é necessário para fins técnicos. Ele realiza a sincronização de cores.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Por favor compre o <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Agradecimento Simple</a> para desbloquear esta função e apoiar o desenvolvimento. Obrigado!
@@ -245,7 +245,7 @@
     <string name="dark_theme">Escuro</string>
     <string name="solarized">Ensolarado</string>
     <string name="dark_red">Vermelho Escuro</string>
-    <string name="white">White</string>
+    <string name="white">Branco</string>
     <string name="black_white">Preto &amp; branco</string>
     <string name="custom">Personalizado</string>
     <string name="shared">Compartilhado</string>
@@ -261,7 +261,7 @@
     <string name="share">Compartilhar</string>
     <string name="share_via">Compartilhar via</string>
     <string name="select_all">Selecionar tudo</string>
-    <string name="select_text">Select text</string>
+    <string name="select_text">Selecionar texto</string>
     <string name="hide">Ocultar</string>
     <string name="unhide">Exibir</string>
     <string name="hide_folder">Ocultar pasta</string>
@@ -274,10 +274,10 @@
     <string name="redo">Refazer</string>
     <string name="print">Imprimir</string>
     <string name="create_shortcut">Criar atalho</string>
-    <string name="add_number_to_contact">Add number to contact</string>
-    <string name="view_contact_details">View contact details</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="add_number_to_contact">Adicionar número ao contato</string>
+    <string name="view_contact_details">Ver detalhes de contato</string>
+    <string name="call_from_sim_1">Chamada no SIM 1</string>
+    <string name="call_from_sim_2">Chamada no SIM 2</string>
     <string name="toggle_filename">Exibir/ocultar nome do arquivo</string>
 
     <!-- Sorting -->
@@ -298,9 +298,9 @@
     <string name="first_name">Primeiro nome</string>
     <string name="middle_name">Nome do meio</string>
     <string name="surname">Sobrenome</string>
-    <string name="full_name">Full name</string>
-    <string name="use_custom_sorting">Use custom sorting</string>
-    <string name="change_order">Change order</string>
+    <string name="full_name">Nome completo</string>
+    <string name="use_custom_sorting">Usar ordenação personalizada</string>
+    <string name="change_order">Alterar ordem</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Deseja realmente excluir?</string>
@@ -487,8 +487,8 @@
     <string name="your_sounds">Seus sons</string>
     <string name="add_new_sound">Adicionar um novo som</string>
     <string name="no_sound">Sem som</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="during_day_at_hh_mm">Durante o dia às hh:mm</string>
+    <string name="during_day_at">Durante o dia às %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Configurações</string>
@@ -496,7 +496,7 @@
     <string name="customize_colors">Personalizar cores</string>
     <string name="customize_colors_locked">Personalizar cores (Locked)</string>
     <string name="customize_widget_colors">Personalizar cores de widget</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="customize_notifications">Personalizar notificações</string>
     <string name="use_english_language">Usar o idioma inglês</string>
     <string name="show_hidden_items">Exibir itens ocultos</string>
     <string name="font_size">Tamanho do texto</string>
@@ -528,7 +528,7 @@
     <string name="settings_exported_successfully">Configurações exportadas com sucesso</string>
     <string name="settings_imported_successfully">Configurações importadas com sucesso</string>
     <string name="start_name_with_surname">Ordenar por sobrenome</string>
-    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cache">Limpar cache</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilidade</string>
@@ -542,12 +542,12 @@
     <string name="migrating">Migrando</string>
 
     <!-- Default tabs to open -->
-    <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
+    <string name="default_tab_to_open">Aba exibida na inicialização do aplicativo</string>
+    <string name="contacts_tab">Contatos</string>
+    <string name="favorites_tab">Favoritos</string>
+    <string name="call_history_tab">Histórico de chamadas</string>
+    <string name="groups_tab">Grupos</string>
+    <string name="last_used_tab">Última usada</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restaurar este arquivo</string>
@@ -759,12 +759,10 @@
     <string name="faq_8_text_commons">Como a versão do seu aplicativo não é mais atualizada, os erros que você talvez tenha encontrado nunca serão corrigidos. Também não haverá novas funções adicionadas. Você pode comprar a versão Pro no Google Play por uma pequena quantia em dinheiro.
         É um pagamento único, o que significa que, uma vez que você o compre, nunca precisará pagar novamente. Nem mesmo depois de adquirir um novo dispositivo. Se você não gostar da versão Pro, basta desinstalá-la em algumas horas e você receberá seu dinheiro automaticamente.
         Se você quiser um reembolso a qualquer momento depois, basta entrar em contato conosco pelo e-mail hello@simplemobiletools.com e você o receberá.</string>
-    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
-    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
-        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
-        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
-    <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
-    <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
+    <string name="faq_9_title_commons">Como posso selecionar múltiplos itens de uma só vez?</string>
+    <string name="faq_9_text_commons">Existem muitas formas de fazer isso. A primeira delas é acessar o modo de seleção, mantendo um item pressionado e clicando nos demais para selecioná-los. A segunda maneira é similar à seleção de itens com um mouse em um computador: basta acessar o modo de seleção, mantendo um item pressionado e arrastar seu dedo para selecionar os demais itens. A terceira forma de seleção múltipla é manter um item pressionado e, em seguida, pressionar outro para que todos os itens entre eles sejam selecionados. Caso deseje selecionar todos os itens, basta manter um deles pressionado e clicar na contagem de itens selecionados no canto superior esquerdo da tela. Essa ação selecionará ou removerá a seleção de todos os itens.</string>
+    <string name="faq_10_title_commons">Comprei o aplicativo, mas não consigo realizar seu download em outro dispositivo.</string>
+    <string name="faq_10_text_commons">Experimente limpar o cache do aplicativo Google Play e reiniciar seu dispositivo. Trata-se de uma falha do Google Play e não está relacionada ao aplicativo em si.</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Atualize para a versão pro agora!</string>
@@ -773,7 +771,7 @@
     <string name="why_upgrade_no_ads">Sem anúncios</string>
     <string name="why_upgrade_no_internet_access">Sem acesso à internet</string>
     <string name="why_upgrade_footer">+ Garantia 100% de Reembolso</string>
-    <string name="why_upgrade_improved_design">Improved design</string>
+    <string name="why_upgrade_improved_design">Design aprimorado</string>
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor de fotos avançado</string>
@@ -792,7 +790,7 @@
     <string name="why_upgrade_duplicate_contact_merging">Junção de contatos duplicados melhorada</string>
     <string name="why_upgrade_font_size_customization">Personalização do tamanho da letra</string>
     <string name="why_upgrade_private_contact_sharing">Compartilhamento entre contatos opcional dentro de nossos apps</string>
-    <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Toques personalizados para os contatos</string>
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Listas</string>
@@ -834,16 +832,16 @@
     <string name="sanselan_title">Apache Sanselan (leitura de metadados de imagem)</string>
     <string name="filters_title">Android Photo Filters (filtros de imagem)</string>
     <string name="gesture_views_title">Gesture Views (zoom para imagens)</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
-    <string name="apng_title">APNG Android (animated WebP support)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letras na barra de rolagem)</string>
+    <string name="event_bus_title">Event Bus (comunicação dentro do aplicativo)</string>
+    <string name="audio_record_view_title">Audio Record View (visualização de áudio)</string>
+    <string name="sms_mms_title">SMS MMS (uso de SMS e MMS)</string>
+    <string name="apng_title">APNG Android (suporte para WebP animado)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">OBSOLETO: Esta versão do app não recebe mais atualizações. Por favor obtenha a versão Pro em https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Não se esqueça de que se você desinstalar um aplicativo pago em menos de duas horas você receberá reembolsado(a) automaticamente. Se você precisar de um reembolso após isso, entre em contato conosco através hello@simplemobiletools.com. Isso torna tudo mais fácil se você quiser testar :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Um grupo de aplicações simples, open source, para Android com widgets personalizados, sem anúncios nem permissões desnecessárias.</string>
 </resources>
