@@ -27,11 +27,11 @@ class RateStarsDialog(val activity: Activity) {
         }
 
         dialog = AlertDialog.Builder(activity)
-                .setNegativeButton(R.string.cancel) { dialog, which -> dialogCancelled(false) }
-                .setOnCancelListener { dialogCancelled(false) }
-                .create().apply {
-                    activity.setupDialogStuff(view, this)
-                }
+            .setNegativeButton(R.string.cancel) { dialog, which -> dialogCancelled(false) }
+            .setOnCancelListener { dialogCancelled(false) }
+            .create().apply {
+                activity.setupDialogStuff(view, this, cancelOnTouchOutside = false)
+            }
     }
 
     private fun dialogCancelled(showThankYou: Boolean) {

@@ -26,7 +26,7 @@ class PurchaseThankYouDialog(val activity: Activity) {
             .setPositiveButton(R.string.purchase) { dialog, which -> activity.launchPurchaseThankYouIntent() }
             .setNegativeButton(R.string.cancel, null)
             .create().apply {
-                activity.setupDialogStuff(view, this)
+                activity.setupDialogStuff(view, this, cancelOnTouchOutside = false)
             }
     }
 }

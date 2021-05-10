@@ -33,7 +33,7 @@ class NewAppsIconsDialog(val activity: Activity) {
         AlertDialog.Builder(activity)
             .setPositiveButton(R.string.ok, null)
             .create().apply {
-                activity.setupDialogStuff(view, this)
+                activity.setupDialogStuff(view, this, cancelOnTouchOutside = false)
             }
     }
 }
