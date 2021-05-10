@@ -904,7 +904,7 @@ fun Activity.updateSharedTheme(sharedTheme: SharedTheme) {
     }
 }
 
-fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0, titleText: String = "", callback: (() -> Unit)? = null) {
+fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0, titleText: String = "", cancelOnTouchOutside: Boolean = true, callback: (() -> Unit)? = null) {
     if (isDestroyed || isFinishing) {
         return
     }
@@ -933,7 +933,7 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
         setView(view)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         setCustomTitle(title)
-        setCanceledOnTouchOutside(true)
+        setCanceledOnTouchOutside(cancelOnTouchOutside)
         show()
         getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(adjustedPrimaryColor)
         getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(adjustedPrimaryColor)
