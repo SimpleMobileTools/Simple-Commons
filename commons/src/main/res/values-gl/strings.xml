@@ -681,6 +681,11 @@
     <string name="rate_us_prompt">Ola,\n\nparece que xa levas un tempo usando este app, e nós apreciámoscho.\n\nSe non che importa, por favor, valóranos no Google Play. Iso axudaríanos moito.\n\nDecidas o que decidas, non volverás ver esta mensaxe de novo.\n\nGrazas!</string>
     <string name="rate_our_app">Valora o noso app, por favor :)</string>
     <string name="thank_you">Grazas</string>
+    <string name="widget_locked">
+        <![CDATA[
+            The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
+        ]]>
+    </string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
