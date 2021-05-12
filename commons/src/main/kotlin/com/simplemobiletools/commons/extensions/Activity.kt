@@ -208,7 +208,6 @@ fun Activity.sharePathIntent(path: String, applicationId: String) {
         Intent().apply {
             action = Intent.ACTION_SEND
             putExtra(EXTRA_STREAM, newUri)
-            clipData = ClipData.newRawUri(null, newUri)
             type = getUriMimeType(path, newUri)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
