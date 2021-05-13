@@ -1,10 +1,13 @@
 package com.simplemobiletools.commons.samples.activities
 
 import android.os.Bundle
+import android.os.Handler
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.appLaunched
+import com.simplemobiletools.commons.helpers.mydebug
 import com.simplemobiletools.commons.samples.BuildConfig
 import com.simplemobiletools.commons.samples.R
+import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : BaseSimpleActivity() {
@@ -20,5 +23,17 @@ class MainActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         appLaunched(BuildConfig.APPLICATION_ID)
+
+        /*val letters = arrayListOf("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q")
+        StringsAdapter(this, letters, media_grid, media_refresh_layout) {
+        }.apply {
+            media_grid.adapter = this
+        }
+
+        media_refresh_layout.setOnRefreshListener {
+            Handler().postDelayed({
+                media_refresh_layout.isRefreshing = false
+            }, 1000L)
+        }*/
     }
 }

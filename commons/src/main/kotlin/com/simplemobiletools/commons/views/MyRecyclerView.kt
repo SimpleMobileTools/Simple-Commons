@@ -15,7 +15,6 @@ open class MyRecyclerView : RecyclerView {
     private val AUTO_SCROLL_DELAY = 25L
     private var isZoomEnabled = false
     private var isDragSelectionEnabled = false
-    private var isDragAndDropping = false
     private var zoomListener: MyZoomListener? = null
     private var dragListener: MyDragListener? = null
     private var autoScrollHandler = Handler()
@@ -116,10 +115,6 @@ open class MyRecyclerView : RecyclerView {
                 super.dispatchTouchEvent(ev)
             } catch (ignored: Exception) {
             }
-        }
-
-        if (isDragAndDropping) {
-            return true
         }
 
         when (ev.action) {
@@ -224,10 +219,6 @@ open class MyRecyclerView : RecyclerView {
         this.initialSelection = initialSelection
         dragSelectActive = true
         dragListener?.selectItem(initialSelection)
-    }
-
-    fun setDragAndDropActive(isDragging: Boolean) {
-        isDragAndDropping = isDragging
     }
 
     private fun getItemPosition(e: MotionEvent): Int {
