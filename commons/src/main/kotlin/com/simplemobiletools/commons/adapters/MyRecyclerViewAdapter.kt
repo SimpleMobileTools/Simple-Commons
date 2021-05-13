@@ -32,8 +32,8 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     protected var actModeCallback: MyActionModeCallback
     protected var selectedKeys = LinkedHashSet<Int>()
     protected var positionOffset = 0
+    protected var actMode: ActionMode? = null
 
-    private var actMode: ActionMode? = null
     private var actBarTextView: TextView? = null
     private var lastLongPressedItem = -1
 
