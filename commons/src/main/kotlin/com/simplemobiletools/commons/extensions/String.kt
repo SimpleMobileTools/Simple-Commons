@@ -256,7 +256,7 @@ fun String.getDateTimeFromDateString(showYearsSince: Boolean, viewToUpdate: Text
             }
 
             var formattedString = date.toString(localPattern)
-            if (showYearsSince) {
+            if (showYearsSince && hasYear) {
                 formattedString += " (${Years.yearsBetween(date, DateTime.now()).years})"
             }
 
