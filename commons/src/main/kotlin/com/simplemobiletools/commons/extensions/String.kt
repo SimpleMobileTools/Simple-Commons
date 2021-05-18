@@ -15,6 +15,7 @@ import android.widget.TextView
 import com.bumptech.glide.signature.ObjectKey
 import com.simplemobiletools.commons.helpers.*
 import org.joda.time.DateTime
+import org.joda.time.Years
 import org.joda.time.format.DateTimeFormat
 import java.io.File
 import java.text.DateFormat
@@ -238,7 +239,7 @@ fun String.highlightTextFromNumbers(textToHighlight: String, adjustedPrimaryColo
     return spannableString
 }
 
-fun String.getDateTimeFromDateString(viewToUpdate: TextView? = null): DateTime {
+fun String.getDateTimeFromDateString(showYearsSince: Boolean, viewToUpdate: TextView? = null): DateTime {
     val dateFormats = getDateFormats()
     var date = DateTime()
     for (format in dateFormats) {
@@ -254,7 +255,11 @@ fun String.getDateTimeFromDateString(viewToUpdate: TextView? = null): DateTime {
                 date = date.withYear(DateTime().year)
             }
 
-            val formattedString = date.toString(localPattern)
+            var formattedString = date.toString(localPattern)
+            if (showYearsSince) {
+                formattedString += " (${Years.yearsBetween(date, DateTime.now()).years})"
+            }
+
             viewToUpdate?.text = formattedString
             break
         } catch (ignored: Exception) {

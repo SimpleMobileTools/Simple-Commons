@@ -1,13 +1,10 @@
 package com.simplemobiletools.commons.samples.activities
 
 import android.os.Bundle
-import android.os.Handler
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.appLaunched
-import com.simplemobiletools.commons.helpers.mydebug
 import com.simplemobiletools.commons.samples.BuildConfig
 import com.simplemobiletools.commons.samples.R
-import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : BaseSimpleActivity() {
