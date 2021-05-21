@@ -543,7 +543,8 @@
     <string name="text">Κείμενο</string>
     <string name="migrating">Μετεγκατάσταση</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Διαχείριση εμφανιζόμενων καρτελών</string>
     <string name="default_tab_to_open">Καρτέλα για άνοιγμα κατά την έναρξη της εφαρμογής</string>
     <string name="contacts_tab">Επαφές</string>
     <string name="favorites_tab">Αγαπημένες</string>

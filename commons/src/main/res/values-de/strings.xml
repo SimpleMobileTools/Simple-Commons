@@ -543,7 +543,8 @@
     <string name="text">Text</string>
     <string name="migrating">Migrieren</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Anzuzeigende Tabs festlegen</string>
     <string name="default_tab_to_open">Tab welcher beim App Start angezeigt wird</string>
     <string name="contacts_tab">Kontakte</string>
     <string name="favorites_tab">Favoriten</string>

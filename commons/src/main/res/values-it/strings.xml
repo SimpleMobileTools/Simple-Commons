@@ -543,7 +543,8 @@
     <string name="text">Testo</string>
     <string name="migrating">Migrazione</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Gestisci le schede mostrate</string>
     <string name="default_tab_to_open">Scheda da aprire all\'avvio dell\'app</string>
     <string name="contacts_tab">Contatti</string>
     <string name="favorites_tab">Preferiti</string>

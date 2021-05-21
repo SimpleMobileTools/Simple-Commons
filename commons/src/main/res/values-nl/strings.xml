@@ -543,7 +543,8 @@
     <string name="text">Tekst</string>
     <string name="migrating">Migreren</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Tabs tonen/verbergen</string>
     <string name="default_tab_to_open">Tab openen bij opstarten</string>
     <string name="contacts_tab">Contacten</string>
     <string name="favorites_tab">Favorieten</string>

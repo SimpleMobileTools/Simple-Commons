@@ -511,7 +511,8 @@
     <string name="text">Teks</string>
     <string name="migrating">Memindahkan</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Kelola tab yang ditampilkan</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
     <string name="contacts_tab">Contacts</string>
     <string name="favorites_tab">Favorites</string>

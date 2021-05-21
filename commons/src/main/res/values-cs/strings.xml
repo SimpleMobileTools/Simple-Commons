@@ -576,15 +576,16 @@
     <string name="text">Text</string>
     <string name="migrating">Přesunout</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Spravovat zobrazené karty</string>
     <string name="default_tab_to_open">Kartu otevřete při spuštění aplikace</string>
     <string name="contacts_tab">Kontakty</string>
     <string name="favorites_tab">Oblíbenés</string>
     <string name="call_history_tab">Historie volání</string>
     <string name="groups_tab">Skupiny</string>
     <string name="last_used_tab">Naposledy použité</string>
-    <string name="files_tab">Files</string>
-    <string name="recent_files_tab">Recent files</string>
+    <string name="files_tab">Soubory</string>
+    <string name="recent_files_tab">Nejnovější soubory</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Obnovit tento soubor</string>

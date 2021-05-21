@@ -543,7 +543,8 @@
     <string name="text">Texto</string>
     <string name="migrating">Migrando</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Gerenciar abas visíveis</string>
     <string name="default_tab_to_open">Aba exibida na inicialização do aplicativo</string>
     <string name="contacts_tab">Contatos</string>
     <string name="favorites_tab">Favoritos</string>

@@ -543,7 +543,8 @@
     <string name="text">Texto</string>
     <string name="migrating">Migrando</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Administrar pestañas mostradas</string>
     <string name="default_tab_to_open">Pestaña para abrir al inicio de la aplicación</string>
     <string name="contacts_tab">Contactos</string>
     <string name="favorites_tab">Favoritos</string>

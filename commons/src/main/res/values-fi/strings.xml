@@ -543,7 +543,8 @@
     <string name="text">Teksti</string>
     <string name="migrating">Yhdistäminen</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Valitse sovelluksen välilehdet</string>
     <string name="default_tab_to_open">Välilehti, joka avataan sovelluksen käynnistyessä</string>
     <string name="contacts_tab">Yhteystiedot</string>
     <string name="favorites_tab">Suosikit</string>

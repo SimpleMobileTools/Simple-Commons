@@ -545,7 +545,8 @@
     <string name="text">Texte</string>
     <string name="migrating">Migration</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Gérer les onglets affichés</string>
     <string name="default_tab_to_open">Onglet à ouvrir au démarrage de l\'application</string>
     <string name="contacts_tab">Contacts</string>
     <string name="favorites_tab">Favoris</string>

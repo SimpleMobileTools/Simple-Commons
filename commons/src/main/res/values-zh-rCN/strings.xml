@@ -511,7 +511,8 @@
     <string name="text">文本</string>
     <string name="migrating">转移</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">管理显示的页面</string>
     <string name="default_tab_to_open">应用启动时打开的页面</string>
     <string name="contacts_tab">联系人</string>
     <string name="favorites_tab">收藏</string>

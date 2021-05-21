@@ -543,7 +543,8 @@
     <string name="text">Текст</string>
     <string name="migrating">Перенесення</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Керування вкладками, що відображаються</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
     <string name="contacts_tab">Контакти</string>
     <string name="favorites_tab">Обране</string>
