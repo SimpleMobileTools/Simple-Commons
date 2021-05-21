@@ -551,8 +551,8 @@
     <string name="call_history_tab">Oproepgeschiedenis</string>
     <string name="groups_tab">Groepen</string>
     <string name="last_used_tab">Laatst gebruikt</string>
-    <string name="files_tab">Files</string>
-    <string name="recent_files_tab">Recent files</string>
+    <string name="files_tab">Bestanden</string>
+    <string name="recent_files_tab">Recente bestanden</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Bestand herstellen</string>
@@ -806,13 +806,13 @@
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Checklists</string>
     <string name="why_upgrade_different_note_per_widget">Verschillende notities en kleuren per widget</string>
-    <string name="why_upgrade_note_locking">Note locking</string>
+    <string name="why_upgrade_note_locking">Notities vergrendelen</string>
 
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Formaat datum en tijd aanpassen</string>
     <string name="why_upgrade_shortcuts">Snelkoppelingen op het startscherm</string>
     <string name="why_upgrade_file_compression">Ondersteuning voor bestandscompressie</string>
-    <string name="why_upgrade_recents_tab">Tab with recent files</string>
+    <string name="why_upgrade_recents_tab">Tab met recente bestanden</string>
 
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Achtergrondkleur aanpassen</string>
