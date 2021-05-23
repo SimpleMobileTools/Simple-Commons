@@ -348,6 +348,9 @@
     <string name="minutes_raw">menit</string>
     <string name="hours_raw">jam</string>
     <string name="days_raw">hari</string>
+    <string name="seconds_letter">s</string>
+    <string name="minutes_letter">m</string>
+    <string name="hours_letter">h</string>
 
     <plurals name="seconds">
         <item quantity="other">%d detik</item>

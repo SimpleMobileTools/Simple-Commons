@@ -346,6 +346,9 @@
     <string name="minutes_raw">분</string>
     <string name="hours_raw">시간</string>
     <string name="days_raw">일</string>
+    <string name="seconds_letter">s</string>
+    <string name="minutes_letter">m</string>
+    <string name="hours_letter">h</string>
 
     <plurals name="seconds">
         <item quantity="other">%d초</item>

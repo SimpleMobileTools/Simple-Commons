@@ -354,6 +354,9 @@
     <string name="minutes_raw">minutes</string>
     <string name="hours_raw">heures</string>
     <string name="days_raw">jours</string>
+    <string name="seconds_letter">s</string>
+    <string name="minutes_letter">m</string>
+    <string name="hours_letter">h</string>
 
     <plurals name="seconds">
         <item quantity="one">%d seconde</item>
