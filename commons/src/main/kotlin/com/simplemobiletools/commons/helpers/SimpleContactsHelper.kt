@@ -48,6 +48,31 @@ class SimpleContactsHelper(val context: Context) {
                 it.phoneNumbers.first().substring(startIndex)
             }.distinctBy { it.rawId }.toMutableList() as ArrayList<SimpleContact>
 
+            // if there are duplicate contacts with the same name, while the first one has phone numbers 1234 and 4567, second one has only 4567,
+            // use just the first contact
+            val contactsToRemove = ArrayList<SimpleContact>()
+            allContacts.groupBy { it.name }.forEach {
+                val contacts = it.value.toMutableList() as ArrayList<SimpleContact>
+                if (contacts.size > 1) {
+                    contacts.sortByDescending { it.phoneNumbers.size }
+                    if (contacts.any { it.phoneNumbers.size == 1 } && contacts.any { it.phoneNumbers.size > 1 }) {
+                        val multipleNumbersContact = contacts.first()
+                        contacts.subList(1, contacts.size).forEach { contact ->
+                            if (contact.phoneNumbers.all { multipleNumbersContact.doesContainPhoneNumber(it) }) {
+                                val contactToRemove = allContacts.firstOrNull { it.rawId == contact.rawId }
+                                if (contactToRemove != null) {
+                                    contactsToRemove.add(contactToRemove)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            contactsToRemove.forEach {
+                allContacts.remove(it)
+            }
+
             val birthdays = getContactEvents(true)
             var size = birthdays.size()
             for (i in 0 until size) {
