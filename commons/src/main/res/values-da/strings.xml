@@ -279,8 +279,8 @@
     <string name="call_from_sim_1">Call from SIM 1</string>
     <string name="call_from_sim_2">Call from SIM 2</string>
     <string name="toggle_filename">Skift filnavnets synlighed</string>
-    <string name="move_to_top">Move to the top</string>
-    <string name="move_to_bottom">Move to the bottom</string>
+    <string name="move_to_top">Flyt til toppen</string>
+    <string name="move_to_bottom">Flyt til bunden</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorter efter</string>
@@ -555,7 +555,7 @@
     <string name="groups_tab">Grupper</string>
     <string name="last_used_tab">Senest brugte</string>
     <string name="files_tab">Files</string>
-    <string name="recent_files_tab">Recent files</string>
+    <string name="recent_files_tab">Seneste filer</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Gendan denne fil</string>
@@ -691,7 +691,7 @@
     <string name="thank_you">Tak skal du have</string>
     <string name="widget_locked">
         <![CDATA[
-            The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
+            Widget\'en er låst.<br>Køb venligst <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> for at åbne den.
         ]]>
     </string>
 
@@ -809,13 +809,13 @@
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Tjeklister</string>
     <string name="why_upgrade_different_note_per_widget">Forskellig note og farver per widget</string>
-    <string name="why_upgrade_note_locking">Note locking</string>
+    <string name="why_upgrade_note_locking">Note-låsning</string>
 
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Tilpasning af format på dato og tid</string>
     <string name="why_upgrade_shortcuts">Genveje til startside</string>
     <string name="why_upgrade_file_compression">Understøtter pakning af filer</string>
-    <string name="why_upgrade_recents_tab">Tab with recent files</string>
+    <string name="why_upgrade_recents_tab">Fane med seneste filer</string>
 
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Selvvalgt baggrundsfarve</string>
