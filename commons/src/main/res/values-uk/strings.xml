@@ -13,7 +13,7 @@
     <string name="copy_to_clipboard">Копіювати у буфер обміну</string>
     <string name="copy_number_to_clipboard">Копіювати номер у буфер обміну</string>
     <string name="value_copied_to_clipboard">Значення скопійовано у буфер обміну</string>
-    <string name="dial_number">Dial number</string>
+    <string name="dial_number">Набрати номер</string>
     <string name="unknown">Невідомо</string>
     <string name="always">Завжди</string>
     <string name="never">Ніколи</string>
@@ -95,10 +95,10 @@
     <string name="source_file_doesnt_exist">Вихідний файл %s не існує</string>
     <string name="prepend_filenames">Префікс імен файлів</string>
     <string name="append_filenames">Суфікс імен файлів</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
-    <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%Y - рік\n%M - місяць\n%D - день\n%h - година\n%m - хвилина\n%s - секунда\n%i - number increasing from 1</string>
+    <string name="simple_renaming">Просте перейменування</string>
+    <string name="pattern_renaming">Шаблон</string>
+    <string name="string_to_add">Рядок для додавання</string>
+    <string name="rename_date_time_pattern">%Y - рік\n%M - місяць\n%D - день\n%h - година\n%m - хвилина\n%s - секунда\n%i - номер від 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">Копіювати</string>
@@ -126,7 +126,7 @@
     <string name="could_not_create_folder">Не вдалося створити теку %s</string>
     <string name="could_not_create_file">Не вдалося створити файл %s</string>
     <string name="no_new_items">Не знайдено нових елементів</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="no_space">Місце призначення не має достатньо вільного місця.\nНеобхідно %1$s, доступно %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Створити новий</string>
@@ -176,7 +176,7 @@
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d контакт</item>
-        <item quantity="other">%d contacts</item>
+        <item quantity="other">%d контактів</item>
     </plurals>
 
     <!-- Storages -->
@@ -206,21 +206,21 @@
     <string name="camera">Камера</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Назва пісні</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="gps_coordinates">GPS координати</string>
+    <string name="altitude">Висота над рівнем моря</string>
 
     <!-- Color customization -->
     <string name="background_color">Колір фону</string>
     <string name="text_color">Колір тексту</string>
     <string name="primary_color">Первинний колір</string>
-    <string name="accent_color_white">Accent color of white theme</string>
-    <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
+    <string name="accent_color_white">Колір акцента білої теми</string>
+    <string name="accent_color_black_and_white">Колір акцента чорно-білої теми</string>
     <string name="foreground_color">Колір переднього плану</string>
     <string name="app_icon_color">Колір піктограми додатка</string>
     <string name="bottom_navigation_bar_color">Колір нижньої навігаційної панелі</string>
     <string name="restore_defaults">Відновити стандартні параметри</string>
-    <string name="use_default">Use default</string>
-    <string name="default_color">Default</string>
+    <string name="use_default">Використовувати типово</string>
+    <string name="default_color">Типово</string>
     <string name="change_color">Змінити колір</string>
     <string name="theme">Тема</string>
     <string name="changing_color_description">Зміна кольору увімкне Користувацьку тему</string>
@@ -233,7 +233,7 @@
     <string name="app_icon_color_warning">УВАГА: Деякі лончери некоректно опрацьовують зміну піктограми додатків. Якщо піктограма додатка зникне, спробуйте запустити його через Google Play або віджет, якщо доступний.
         Після запуску просто поверніть стандартний колір піктограми: #F57C00. У найгіршому випадку вам доведеться перевстановити додаток.</string>
     <string name="share_colors_success">Кольори успішно оновлено. Було додано нову тему під назвою \'Загальна\', використовуйте її для оновлення кольорів усіх додатків у майбутньому.</string>
-    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
+    <string name="shared_theme_note">Зауважте, що хоча ви користуєтеся версією Pro додатка, вам необхідний додаток Просто Подяка з технічних причин. Він подбає про синхронізацію кольору.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Будь ласка, придбайте <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, щоб розблокувати цю функцію і підтримати розробку. Дякую!
@@ -261,7 +261,7 @@
     <string name="share">Поділитися</string>
     <string name="share_via">Поділитися через</string>
     <string name="select_all">Обрати все</string>
-    <string name="select_text">Select text</string>
+    <string name="select_text">Обрати текст</string>
     <string name="hide">Приховати</string>
     <string name="unhide">Показати</string>
     <string name="hide_folder">Приховати теку</string>
@@ -275,12 +275,12 @@
     <string name="print">Друкувати</string>
     <string name="create_shortcut">Створити посилання</string>
     <string name="add_number_to_contact">Додати номер до контактів</string>
-    <string name="view_contact_details">View contact details</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="view_contact_details">Переглянути деталі контакту</string>
+    <string name="call_from_sim_1">Виклик з SIM 1</string>
+    <string name="call_from_sim_2">Виклик з SIM 2</string>
     <string name="toggle_filename">Перемкнути відображення імені файлу</string>
-    <string name="move_to_top">Move to the top</string>
-    <string name="move_to_bottom">Move to the bottom</string>
+    <string name="move_to_top">Перемістити наверх</string>
+    <string name="move_to_bottom">Перемістити вниз</string>
 
     <!-- Sorting -->
     <string name="sort_by">Сортувати за</string>
@@ -300,9 +300,9 @@
     <string name="first_name">Ім\'я</string>
     <string name="middle_name">По-батькові</string>
     <string name="surname">Прізвище</string>
-    <string name="full_name">Full name</string>
-    <string name="use_custom_sorting">Use custom sorting</string>
-    <string name="change_order">Change order</string>
+    <string name="full_name">Повне ім\'я</string>
+    <string name="use_custom_sorting">Сортувати власноруч</string>
+    <string name="change_order">Змінити порядок</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Ви впевнені, що хочете продовжити видалення?</string>
@@ -347,14 +347,14 @@
     <string name="yesterday">Вчора</string>
     <string name="today">Сьогодні</string>
     <string name="tomorrow">Завтра</string>
-    <string name="hide_year">Hide year</string>
+    <string name="hide_year">Приховати рік</string>
     <string name="seconds_raw">секунд</string>
     <string name="minutes_raw">хвилин</string>
     <string name="hours_raw">годин</string>
     <string name="days_raw">днів</string>
-    <string name="seconds_letter">s</string>
-    <string name="minutes_letter">m</string>
-    <string name="hours_letter">h</string>
+    <string name="seconds_letter">с</string>
+    <string name="minutes_letter">х</string>
+    <string name="hours_letter">г</string>
 
     <plurals name="seconds">
         <item quantity="one">%d секунда</item>
@@ -476,7 +476,7 @@
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Час до того, як будильник вимкнеться:\n%s</string>
+    <string name="alarm_goes_off_in">Сигнал будильника зазвучить через:\n%s</string>
     <string name="reminder_triggers_in">Час до того, як спрацює нагадування:\n%s</string>
     <string name="alarm_warning">Переконайтеся, що будильник працює коректно, перед тим, як на нього покладатися. Він може не спрацювати через системні обмеження, пов\'язані з економією заряду батареї.</string>
     <string name="reminder_warning">Переконайтеся, що нагадування працюють коректно, перед тим, як на них покладатися. Вони можуть не спрацювати через системні обмеження, пов\'язані з економією заряду батареї.</string>
@@ -492,8 +492,8 @@
     <string name="your_sounds">Ваші звуки</string>
     <string name="add_new_sound">Додати новий звук</string>
     <string name="no_sound">Без звуку</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="during_day_at_hh_mm">Протягом дня о гг:хх</string>
+    <string name="during_day_at">Протягом дня о %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Налаштування</string>
@@ -501,7 +501,7 @@
     <string name="customize_colors">Налаштувати кольори</string>
     <string name="customize_colors_locked">Налаштувати кольори (Locked)</string>
     <string name="customize_widget_colors">Налаштувати кольори віджета</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="customize_notifications">Налаштувати повідомлення</string>
     <string name="use_english_language">Використовувати англійську (Use English language)</string>
     <string name="show_hidden_items">Показати приховані елементи</string>
     <string name="font_size">Розмір шрифту</string>
@@ -533,7 +533,7 @@
     <string name="settings_exported_successfully">Налаштування успішно експортовано</string>
     <string name="settings_imported_successfully">Налаштування успішно імпортовано</string>
     <string name="start_name_with_surname">Показувати спочатку прізвище</string>
-    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cache">Очистити кеш</string>
 
     <!-- Setting sections -->
     <string name="visibility">Відображення</string>
@@ -548,14 +548,14 @@
 
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Керування вкладками, що відображаються</string>
-    <string name="default_tab_to_open">Tab to open at app start</string>
+    <string name="default_tab_to_open">Вкладка, що відкривається при запуску додатка</string>
     <string name="contacts_tab">Контакти</string>
     <string name="favorites_tab">Обране</string>
     <string name="call_history_tab">Історія дзвінків</string>
     <string name="groups_tab">Групи</string>
-    <string name="last_used_tab">Last used one</string>
-    <string name="files_tab">Files</string>
-    <string name="recent_files_tab">Recent files</string>
+    <string name="last_used_tab">Останнє використане</string>
+    <string name="files_tab">Файли</string>
+    <string name="recent_files_tab">Нещодавні файли</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Відновити цей файл</string>
@@ -658,7 +658,7 @@
     <string name="email_label">Надсилайте ваші відгуки і пропозиції до</string>
     <string name="upgrade_to_pro">Оновити до версії Pro</string>
     <string name="more_apps_underlined"><u>Більше додатків</u></string>
-    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
+    <string name="more_apps_from_us_underlined"><u>Більше додатків від нас</u></string>
     <string name="third_party_licences_underlined"><u>Ліцензії третіх сторін</u></string>
     <string name="invite_friends_underlined"><u>Запропонувати друзям</u></string>
     <string name="share_text">Спробуй %1$s за посиланням %2$s</string>
@@ -682,10 +682,10 @@
     <string name="purchase">Придбати</string>
     <string name="update_thank_you">Будь ласка, оновіть Simple Thank You до останньої версії</string>
     <string name="before_asking_question_read_faq">Перш ніж запитувати, будь ласка, ознайомтесь із налаштуваннями додатка та прочитайте Часті Питання. Можливо, відповідь там.</string>
-    <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
-    <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
+    <string name="before_rate_read_faq">Перш ніж ви оціните нас, будь ласка перегляньте налаштування додатка та прочитайте Часті Питання. Якщо у вас виникнуть проблеми, можливо там буде вирішення.</string>
+    <string name="make_sure_latest">Також переконайтеся, що ви користуєтеся найновішою версією додатка.</string>
     <string name="read_it">Прочитати</string>
-    <string name="read_faq">Read FAQ</string>
+    <string name="read_faq">Читати ЧаПи</string>
     <string name="rate_us_prompt">Привіт,\n\nздається, ви вже давно користуєтесь цим додатком, і ми це високо цінуємо.\n\nЧи могли б ви зробити нам послугу і оцінити додаток в Google Play? Це дійсно дуже нам допоможе.\n\nНезалежно від того, що ви вирішите, ви не побачите знову це повідомлення.\n\nСпасибі!</string>
     <string name="rate_our_app">Оцініть наш додаток :)</string>
     <string name="thank_you">Подяка</string>
@@ -731,16 +731,16 @@
     <string name="camera_short">Камера</string>
     <string name="clock_short">Годинник</string>
     <string name="contacts_short">Контакти</string>
-    <string name="dialer_short">Dialer</string>
+    <string name="dialer_short">Телефон</string>
     <string name="draw_short">Малювання</string>
     <string name="file_manager_short">Менеджер Файлів</string>
     <string name="flashlight_short">Ліхтарик</string>
     <string name="gallery_short">Галерея</string>
     <string name="music_player_short">Музичний Програвач</string>
     <string name="notes_short">Нотатник</string>
-    <string name="sms_messenger_short">SMS Messenger</string>
+    <string name="sms_messenger_short">SMS Повідомлення</string>
     <string name="thank_you_short">Подяка</string>
-    <string name="voice_recorder_short">Voice Recorder</string>
+    <string name="voice_recorder_short">Диктофон</string>
 
     <string name="sideloaded_app">
         <![CDATA[
@@ -766,18 +766,18 @@
     <string name="faq_6_title_commons">Значок запуску додатка зник. Що робити?</string>
     <string name="faq_6_text_commons">Це спричинено тим, що ваша програма запуску неправильно підтримує налаштування значків. Спробуйте запустити додаток через Google Play або віджет, якщо він доступний.
         Після запуску встановіть типовий оранжевий колір значка #F57C00. У найгіршому випадку вам доведеться перевстановити додаток.</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
-    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
-    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
-        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
-        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
-    <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
-    <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
+    <string name="faq_7_title_commons">Гроші списано з мого банківського рахунку, проте я не можу завантажити додаток. Що мені робити?</string>
+    <string name="faq_7_text_commons">Сплатою рахунків цілком керує Google, у їхній системі трапляються збої час від часу. Для початку очистіть кеш додатка Google Play та перезапустіть ваш пристрій, потім спробуйте завантажити його знову.</string>
+    <string name="faq_8_title_commons">Чому мені слід перейти на версію Pro?</string>
+    <string name="faq_8_text_commons">Оскільки версія вашого додатка більше не оновлюється, помилки, які ви можливо виявили, ніколи не будуть виправлені. Також не буде додано ніяких нових функцій. Ви можете придбати версію Pro через Google Play за деяку незначну плату.
+        Це одноразова плата і означає, що як тільки ви придбаєте його, вам більше не доведеться знову платити. Навіть якщо ви придбаєте новий пристрій. Якщо вам не сподобається версія Pro, ви можете просто деінсталювати її протягом кількох годин, і ви автоматично отримаєте сплачені кошти назад.
+        Якщо ви захочете повернути кошти пізніше, просто напишіть нам сюди hello@simplemobiletools.com, і ви їх отримаєте.</string>
+    <string name="faq_9_title_commons">Як мені обрати декілька елементів одразу?</string>
+    <string name="faq_9_text_commons">Ви можете це зробити кількома способами. Перший спосіб - увімкнути режим виділення, натиснувши тривалий час на одному з елементів, потім виділяти інші коротким натисненням на них. Другий спосіб подібний до обирання елементів на комп\'ютері з допомогою мишки,
+        увімкніть режим виділення, натиснувши тривалий час на одному з елементів, потім, не відпускаючи пальця, проведіть ним по інших елементах для вибору. Третій спосіб виділити декілька елементів - тривале натиснення на одному елементі, потім тривале натиснення на іншому, і все, що розміщене між ними, буде виділене. Якщо ви
+        хочете виділити всі елементи, тривалим натисненням виділіть один елемент, потім натисніть на лічильник елементів у верхньому лівому куті. Ця дія виділить або відмінить виділення всіх елементів.</string>
+    <string name="faq_10_title_commons">Я придбав додаток, проте не можу завантажити його на іншому пристроєві.</string>
+    <string name="faq_10_text_commons">Спробуйте очистити кеш вашого додатка Google Play і перезапустіть ваш пристрій. Це помилка в роботі Google Play, що насправді не повязана з самим додатком.</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Отримайте Pro-версію просто зараз!</string>
@@ -786,7 +786,7 @@
     <string name="why_upgrade_no_ads">Жодної реклами</string>
     <string name="why_upgrade_no_internet_access">Без доступу до Інтернету</string>
     <string name="why_upgrade_footer">+ 100% гарантія повернення коштів</string>
-    <string name="why_upgrade_improved_design">Improved design</string>
+    <string name="why_upgrade_improved_design">Покращений дизайн</string>
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Удосконалений фоторедактор</string>
@@ -804,19 +804,19 @@
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Удосконалена функція злиття контактів</string>
     <string name="why_upgrade_font_size_customization">Налаштування розміру шрифту</string>
-    <string name="why_upgrade_private_contact_sharing">Додатковий обмін конфіденційними контактами в наших</string>
-    <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
+    <string name="why_upgrade_private_contact_sharing">Додатковий обмін конфіденційними контактами в наших додатках</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Налаштування мелодій виклику для контакту</string>
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Контрольні списки</string>
     <string name="why_upgrade_different_note_per_widget">Різні замітки та кольори для кожного віджета</string>
-    <string name="why_upgrade_note_locking">Note locking</string>
+    <string name="why_upgrade_note_locking">Блокування нотаток</string>
 
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Налаштування формату дати та часу</string>
     <string name="why_upgrade_shortcuts">Ярлики на головному екрані</string>
     <string name="why_upgrade_file_compression">Підтримка стиснення файлів</string>
-    <string name="why_upgrade_recents_tab">Tab with recent files</string>
+    <string name="why_upgrade_recents_tab">Вкладка з нещодавніми файлами</string>
 
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Налаштування кольору фону</string>
@@ -849,11 +849,11 @@
     <string name="sanselan_title">Apache Sanselan (читання метаданих зображень)</string>
     <string name="filters_title">Android Photo Filters (фільтри зображень)</string>
     <string name="gesture_views_title">Gesture Views (масштабування зображень)</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
-    <string name="apng_title">APNG Android (animated WebP support)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (літери на прокрутці)</string>
+    <string name="event_bus_title">Event Bus (комунікація в додатку)</string>
+    <string name="audio_record_view_title">Audio Record View (аудіо візуалізація)</string>
+    <string name="sms_mms_title">SMS MMS (обробка SMS та MMS)</string>
+    <string name="apng_title">APNG Android (підтримка анімацій WebP)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">Застаріла: Ця версія додатка більше не підтримується, встановіть версію Pro за адресою https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
