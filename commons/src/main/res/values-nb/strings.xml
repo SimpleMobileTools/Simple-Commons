@@ -296,7 +296,7 @@
     <string name="ascending">Stigende</string>
     <string name="descending">Fallende</string>
     <string name="use_for_this_folder">Bruk kun for denne mappen</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">Sorter numeriske deler etter faktisk verdi</string>
     <string name="first_name">First name</string>
     <string name="middle_name">Middle name</string>
     <string name="surname">Surname</string>
@@ -339,8 +339,8 @@
     <string name="go_to_settings">Gå til Innstillinger</string>
     <string name="protection_setup_successfully">Passord er stilt inn. Installer appen på nytt hvis du glemmer det.</string>
     <string name="fingerprint_setup_successfully">Beskyttelse er stilt inn. Installer appen på nytt i tilfelle problemer med å tilbakestille.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
+    <string name="lock_folder">Lås mappe</string>
+    <string name="unlock_folder">Lås opp mappe</string>
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
 
     <!-- Times -->
@@ -533,7 +533,7 @@
     <string name="settings_exported_successfully">Innstillinger eksportert</string>
     <string name="settings_imported_successfully">Innstillinger importert</string>
     <string name="start_name_with_surname">Start name with surname</string>
-    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cache">Tøm hurtiglager</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighet</string>
