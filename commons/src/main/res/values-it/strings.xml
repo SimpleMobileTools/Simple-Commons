@@ -11,9 +11,9 @@
     <string name="no_app_found">Non è stata trovata nessuna applicazione valida</string>
     <string name="set_as">Imposta come</string>
     <string name="copy_to_clipboard">Copia negli appunti</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
+    <string name="copy_number_to_clipboard">Copia numero negli appunti</string>
     <string name="value_copied_to_clipboard">Valore copiato negli appunti</string>
-    <string name="dial_number">Dial number</string>
+    <string name="dial_number">Componi numero</string>
     <string name="unknown">Sconosciuto</string>
     <string name="always">Sempre</string>
     <string name="never">Mai</string>
@@ -25,7 +25,7 @@
     <string name="transparent">Trasparente</string>
     <string name="transparent_color">Colore trasparente</string>
     <string name="select_a_different_color">Seleziona un colore diverso</string>
-    <string name="download">Download</string>
+    <string name="download">Scarica</string>
     <string name="notification">Notifica</string>
     <string name="email">Email</string>
     <string name="previous">Precedente</string>
@@ -139,9 +139,9 @@
     <string name="unknown_error_occurred">Si è verificato un errore sconosciuto</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Il file \"%s\" è già esistente</string>
-    <string name="file_already_exists_overwrite">Il file \"%s\" è già esistente. Sovrascrivere?</string>
-    <string name="folder_already_exists">La cartella \"%s\" è già esistente</string>
+    <string name="file_already_exists">Il file \"%s\" esiste già</string>
+    <string name="file_already_exists_overwrite">Il file \"%s\" esiste già. Sovrascrivere?</string>
+    <string name="folder_already_exists">La cartella \"%s\" esiste già</string>
     <string name="merge">Unisci</string>
     <string name="keep_both">Mantieni entrambi</string>
     <string name="overwrite">Sovrascrivi</string>
@@ -213,8 +213,8 @@
     <string name="background_color">Colore di sfondo</string>
     <string name="text_color">Colore del testo</string>
     <string name="primary_color">Colore primario</string>
-    <string name="accent_color_white">Accent color of white theme</string>
-    <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
+    <string name="accent_color_white">Colore di risalto del tema Bianco</string>
+    <string name="accent_color_black_and_white">Colore di risalto del tema Bianco e nero</string>
     <string name="foreground_color">Colore in primo piano</string>
     <string name="app_icon_color">Colore dell\'icona app</string>
     <string name="bottom_navigation_bar_color">Colore della barra di navigazione</string>
@@ -233,7 +233,7 @@
     <string name="app_icon_color_warning">ATTENZIONE: alcuni lanciatori non gestiscono correttamente le personalizzazioni delle icone delle applicazioni. Se l\'icona scompare, provare ad avviare l\'applicazione dal Google Play Store oppure dal widget, se disponibile.
         Una volta avviata, impostare l\'icona predefinita col colore arancione #F57C00. Potrebbe essere necessario reinstallare l\'applicazione se proprio non funziona.</string>
     <string name="share_colors_success">Colori aggiornati correttamente. È stato aggiunto un nuovo tema chiamato \'Condiviso\', usare questo per aggiornare tutti i colori dell\'app in futuro.</string>
-    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
+    <string name="shared_theme_note">Nota che sebbene tu stia usando la versione Pro, ti serve comunque Semplice Ringraziamento per motivi tecnici. Si occupa della sincronizzazione del colore.</string>
     <string name="purchase_thank_you">
         <![CDATA[
             Acquista <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Semplice Ringraziamento</a> per sbloccare questa funzione e supportare lo sviluppo. Grazie!
@@ -245,7 +245,7 @@
     <string name="dark_theme">Scuro</string>
     <string name="solarized">Solarizzato</string>
     <string name="dark_red">Rosso scuro</string>
-    <string name="white">White</string>
+    <string name="white">Bianco</string>
     <string name="black_white">Bianco e nero</string>
     <string name="custom">Personalizzato</string>
     <string name="shared">Condiviso</string>
@@ -261,7 +261,7 @@
     <string name="share">Condividi</string>
     <string name="share_via">Condividi via</string>
     <string name="select_all">Seleziona tutto</string>
-    <string name="select_text">Select text</string>
+    <string name="select_text">Seleziona testo</string>
     <string name="hide">Nascondi</string>
     <string name="unhide">Non nascondere</string>
     <string name="hide_folder">Nascondi cartella</string>
@@ -275,12 +275,12 @@
     <string name="print">Stampa</string>
     <string name="create_shortcut">Crea scorciatoia</string>
     <string name="add_number_to_contact">Aggiungi numero al contatto</string>
-    <string name="view_contact_details">View contact details</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="view_contact_details">Vedi dettagli del contatto</string>
+    <string name="call_from_sim_1">Chiama dalla SIM 1</string>
+    <string name="call_from_sim_2">Chiama dalla SIM 2</string>
     <string name="toggle_filename">Visibilità nome del file</string>
-    <string name="move_to_top">Move to the top</string>
-    <string name="move_to_bottom">Move to the bottom</string>
+    <string name="move_to_top">Sposta in cima</string>
+    <string name="move_to_bottom">Sposta in fondo</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordina per</string>
@@ -300,9 +300,9 @@
     <string name="first_name">Nome</string>
     <string name="middle_name">Secondo nome</string>
     <string name="surname">Cognome</string>
-    <string name="full_name">Full name</string>
-    <string name="use_custom_sorting">Use custom sorting</string>
-    <string name="change_order">Change order</string>
+    <string name="full_name">Nome completo</string>
+    <string name="use_custom_sorting">Usa ordinamento personalizzato</string>
+    <string name="change_order">Cambia ordine</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Procedere davvero con l\'eliminazione?</string>
@@ -335,7 +335,7 @@
     <string name="place_finger">Appoggia il dito sul sensore di impronte digitali</string>
     <string name="authentication_failed">Autenticazione fallita</string>
     <string name="authentication_blocked">Autenticazione bloccata, riprovare fra qualche momento</string>
-    <string name="no_fingerprints_registered">Non si hanno impronte registrate, aggiungerne alcune nelle impostazioni del tuo dispositivo</string>
+    <string name="no_fingerprints_registered">Non ci sono impronte registrate, aggiungerne alcune nelle impostazioni del tuo dispositivo</string>
     <string name="go_to_settings">Vai alle impostazioni</string>
     <string name="protection_setup_successfully">Password impostata correttamente. Reinstallare l\'app in caso di dimenticanza.</string>
     <string name="fingerprint_setup_successfully">Protezione impostata correttamente. Reinstallare l\'app in caso di problemi nel ripristinarla.</string>
@@ -347,14 +347,14 @@
     <string name="yesterday">Ieri</string>
     <string name="today">Oggi</string>
     <string name="tomorrow">Domani</string>
-    <string name="hide_year">Hide year</string>
+    <string name="hide_year">Nascondi anno</string>
     <string name="seconds_raw">secondi</string>
     <string name="minutes_raw">minuti</string>
     <string name="hours_raw">ore</string>
     <string name="days_raw">giorni</string>
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
-    <string name="hours_letter">h</string>
+    <string name="hours_letter">o</string>
 
     <plurals name="seconds">
         <item quantity="one">%d secondo</item>
@@ -492,8 +492,8 @@
     <string name="your_sounds">I propri suoni</string>
     <string name="add_new_sound">Aggiungi un nuovo suono</string>
     <string name="no_sound">Nessun suono</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="during_day_at_hh_mm">Durante il giorno alle oo:mm</string>
+    <string name="during_day_at">Durante il giorno alle %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Impostazioni</string>
@@ -501,7 +501,7 @@
     <string name="customize_colors">Personalizza i colori</string>
     <string name="customize_colors_locked">Personalizza i colori (Locked)</string>
     <string name="customize_widget_colors">Personalizza i colori del widget</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="customize_notifications">Personalizza le notifiche</string>
     <string name="use_english_language">Usa la lingua inglese</string>
     <string name="show_hidden_items">Mostra gli elementi nascosti</string>
     <string name="font_size">Dimensione carattere</string>
@@ -533,7 +533,7 @@
     <string name="settings_exported_successfully">Impostazioni esportate correttamente</string>
     <string name="settings_imported_successfully">Impostazioni importate correttamente</string>
     <string name="start_name_with_surname">Prima il cognome poi il nome</string>
-    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cache">Svuota la cache</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilità</string>
@@ -554,8 +554,8 @@
     <string name="call_history_tab">Cronologia chiamate</string>
     <string name="groups_tab">Gruppi</string>
     <string name="last_used_tab">L\'ultima usata</string>
-    <string name="files_tab">Files</string>
-    <string name="recent_files_tab">Recent files</string>
+    <string name="files_tab">File</string>
+    <string name="recent_files_tab">File recenti</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Ripristina questo file</string>
@@ -691,7 +691,7 @@
     <string name="thank_you">Grazie</string>
     <string name="widget_locked">
         <![CDATA[
-            The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
+            Il widget è bloccato.<br>Acquista <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Semplice Ringraziamento</a> per sbloccarlo.
         ]]>
     </string>
 
@@ -772,32 +772,32 @@
     <string name="faq_8_text_commons">Dato che la tua versione non verrà più aggiornata, gli errori che potresti trovare non verranno mai corretti. Non ci saranno inoltre nuove funzioni aggiuntive. Puoi acquistare la versione Pro su Google Play per una piccola cifra.
         Si paga una sola volta, ciò significa che quando la acquisti non dovrai mai più pagare. Neanche quando userai un nuovo dispositivo. Se non ti piacerà la versione Pro, ti basta disinstallarla entro alcune ore e otterrai automaticamente un rimborso.
         Se vuoi chiedere un rimborso in un momento successivo, contattaci su hello@simplemobiletools.com e lo otterrai.</string>
-    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
-    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
-        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
-        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
-    <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
-    <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
+    <string name="faq_9_title_commons">Come posso selezionare più elementi alla volta?</string>
+    <string name="faq_9_text_commons">Ci sono diversi modi per farlo. Il primo è aprire la modalità di selezione premendo a lungo un elemento, poi toccare gli altri elementi da selezionare. Il secondo è simile alla selezione di elementi sul PC con il mouse,
+        apri la modalità di selezione premendo a lungo un elemento, poi con il dito ancora premuto trascinalo sugli altri elementi da selezionare. Il terzo modo di selezionare più elementi è premendone a lungo uno, poi premere a lungo un altro e tutti quelli in mezzo vegono selezionati. Se
+        vuoi selezionare tutti gli elementi, premine uno a lungo, poi tocca il contatore di elementi selezionati nell'angolo in alto a sinistra. Ciò selezionerà o deselezionerà tutto in un colpo solo.</string>
+    <string name="faq_10_title_commons">Ho acquistato l/'app, ma non posso scaricarla su un altro dispositivo.</string>
+    <string name="faq_10_text_commons">Prova a svuotare la cache dell/'app Google Play e a riavviare il dispositivo. È un errore di Google Play, non correlato all/'app in questione.</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Ottieni subito la versione Pro!</string>
-    <string name="why_upgrade_basic_version">Basic</string>
+    <string name="why_upgrade_basic_version">Base</string>
     <string name="why_upgrade_pro_version">Pro</string>
     <string name="why_upgrade_no_ads">No pubblicità</string>
     <string name="why_upgrade_no_internet_access">No accesso a Internet</string>
-    <string name="why_upgrade_footer">+ 100% garanzia soddisfatti o rimborsati</string>
-    <string name="why_upgrade_improved_design">Improved design</string>
+    <string name="why_upgrade_footer">+ 100% garantito soddisfatti o rimborsati</string>
+    <string name="why_upgrade_improved_design">Design migliorato</string>
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor fotografico avanzato</string>
     <string name="why_upgrade_heic_support">Supporto file HEIC/HEIF</string>
-    <string name="why_upgrade_batch_renaming">Ridenominazione avanzata dei file batch</string>
+    <string name="why_upgrade_batch_renaming">Ridenominazione avanzata di file multipli</string>
     <string name="why_upgrade_folder_locking">Bloccaggio individuale delle cartelle</string>
     <string name="why_upgrade_printing_support">Supporto per la stampa</string>
 
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Supporto per il fuso orario</string>
-    <string name="why_upgrade_attendees_emails">Partecipanti e promemoria via e-mail</string>
+    <string name="why_upgrade_attendees_emails">Partecipanti e promemoria via email</string>
     <string name="why_upgrade_easy_event_importing">Facile importazione di eventi</string>
     <string name="why_upgrade_new_widgets">Nuovi widget</string>
 
@@ -805,18 +805,18 @@
     <string name="why_upgrade_duplicate_contact_merging">Fusione di contatti duplicati migliorata</string>
     <string name="why_upgrade_font_size_customization">Personalizzazione della dimensione dei caratteri</string>
     <string name="why_upgrade_private_contact_sharing">Condivisione opzionale dei contatti privati tra le nostre applicazioni</string>
-    <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Suonerie personalizzate per contatto</string>
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Liste di controllo</string>
     <string name="why_upgrade_different_note_per_widget">Note e colori diversi per ogni widget</string>
-    <string name="why_upgrade_note_locking">Note locking</string>
+    <string name="why_upgrade_note_locking">Bloccaggio di note</string>
 
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Personalizzazione del formato di data e ora</string>
     <string name="why_upgrade_shortcuts">Scorciatoie della schermata iniziale</string>
     <string name="why_upgrade_file_compression">Supporto per la compressione dei file</string>
-    <string name="why_upgrade_recents_tab">Tab with recent files</string>
+    <string name="why_upgrade_recents_tab">Scheda con file recenti</string>
 
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Personalizzazione del colore di sfondo</string>
@@ -853,7 +853,7 @@
     <string name="event_bus_title">Event Bus (comunicazione all\'interno dell\'app)</string>
     <string name="audio_record_view_title">Audio Record View (visualizzazione audio)</string>
     <string name="sms_mms_title">SMS MMS (gestione SMS e MMS)</string>
-    <string name="apng_title">APNG Android (animated WebP support)</string>
+    <string name="apng_title">APNG Android (supporto WebP animati)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATA: Questa versione dell\'app non è più supportata, ottieni la versione Pro a https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
