@@ -554,8 +554,8 @@
     <string name="call_history_tab">Puheluhistoria</string>
     <string name="groups_tab">Ryhmät</string>
     <string name="last_used_tab">Viimeksi käytetty</string>
-    <string name="files_tab">Files</string>
-    <string name="recent_files_tab">Recent files</string>
+    <string name="files_tab">Tiedostot</string>
+    <string name="recent_files_tab">Viimeksi käytetyt tiedostot</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Palauta tämä tiedosto</string>
@@ -689,7 +689,7 @@
     <string name="rate_us_prompt">Hei,\n\nnäyttää siltä, että olet käyttänyt tätä sovellusta jo jonkin aikaa, arvostamme sitä.\n\nPyytäisimme sinua lisäämään arvostelun Google Playhyn, se auttaisi meitä paljon.\n\Huolimatta siitä miten toimit, et nää tätä viestä enää.\n\nKiitos!</string>
     <string name="rate_our_app">Arvostele sovelluksemme, kiitos :)</string>
     <string name="thank_you">Kiitos</string>
-    <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
+    <string name="widget_locked_pro">Pienoissovellus on käytössä vain Pro-versiossa.</string>
     <string name="widget_locked">
         <![CDATA[
             Pienoissovellus on lukittu.<br>Osta <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> avataksesi lukituksen.
@@ -808,13 +808,13 @@
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Tarkistuslistat</string>
     <string name="why_upgrade_different_note_per_widget">Pienoissovelluskohtainen muistiinpano ja värit</string>
-    <string name="why_upgrade_note_locking">Note locking</string>
+    <string name="why_upgrade_note_locking">Muistiinpanojen lukitseminen</string>
 
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Päivämäärän ja ajan näyttömuotojen kustomointi</string>
     <string name="why_upgrade_shortcuts">Pikakuvakkeet kotivalikkoon</string>
     <string name="why_upgrade_file_compression">Tuki tiedostojen pakkaukselle</string>
-    <string name="why_upgrade_recents_tab">Tab with recent files</string>
+    <string name="why_upgrade_recents_tab">Viimeisimmät tiedostot-välilehti</string>
 
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Taustavärin kustomointi</string>
