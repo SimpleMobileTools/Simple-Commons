@@ -342,7 +342,7 @@
     <string name="lock_folder">Blocca cartella</string>
     <string name="unlock_folder">Sblocca cartella</string>
     <string name="lock_folder_notice">Questa protezione funziona solo nell\'app, non è pensata per sostituire una vera cifratura delle cartelle a livello di sistema.</string>
- 
+
     <!-- Times -->
     <string name="yesterday">Ieri</string>
     <string name="today">Oggi</string>
@@ -776,9 +776,9 @@
     <string name="faq_9_title_commons">Come posso selezionare più elementi alla volta?</string>
     <string name="faq_9_text_commons">Ci sono diversi modi per farlo. Il primo è aprire la modalità di selezione premendo a lungo un elemento, poi toccare gli altri elementi da selezionare. Il secondo è simile alla selezione di elementi sul PC con il mouse,
         apri la modalità di selezione premendo a lungo un elemento, poi con il dito ancora premuto trascinalo sugli altri elementi da selezionare. Il terzo modo di selezionare più elementi è premendone a lungo uno, poi premere a lungo un altro e tutti quelli in mezzo vegono selezionati. Se
-        vuoi selezionare tutti gli elementi, premine uno a lungo, poi tocca il contatore di elementi selezionati nell'angolo in alto a sinistra. Ciò selezionerà o deselezionerà tutto in un colpo solo.</string>
-    <string name="faq_10_title_commons">Ho acquistato l/'app, ma non posso scaricarla su un altro dispositivo.</string>
-    <string name="faq_10_text_commons">Prova a svuotare la cache dell/'app Google Play e a riavviare il dispositivo. È un errore di Google Play, non correlato all/'app in questione.</string>
+        vuoi selezionare tutti gli elementi, premine uno a lungo, poi tocca il contatore di elementi selezionati nell\'angolo in alto a sinistra. Ciò selezionerà o deselezionerà tutto in un colpo solo.</string>
+    <string name="faq_10_title_commons">Ho acquistato l\'app, ma non posso scaricarla su un altro dispositivo.</string>
+    <string name="faq_10_text_commons">Prova a svuotare la cache dell\'app Google Play e a riavviare il dispositivo. È un errore di Google Play, non correlato all\'app in questione.</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Ottieni subito la versione Pro!</string>
