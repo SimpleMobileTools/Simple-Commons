@@ -41,9 +41,9 @@
     <string name="change_view_type">Aldatu ikuspegi mota</string>
     <string name="grid">Sareta</string>
     <string name="list">Zerrenda</string>
-    <string name="increase_column_count">Increase column count</string>
-    <string name="reduce_column_count">Reduce column count</string>
-    <string name="change_cover_image">Change cover image</string>
+    <string name="increase_column_count">Gehitu errenkadak</string>
+    <string name="reduce_column_count">Gutxitu errenkadak</string>
+    <string name="change_cover_image">Aldatu azaleko argazkia</string>
     <string name="select_photo">Hautatu argazkia</string>
 
     <!-- Blocked numbers -->
@@ -213,8 +213,8 @@
     <string name="background_color">Hondoaren kolorea</string>
     <string name="text_color">Testuaren kolorea</string>
     <string name="primary_color">Kolore nagusia</string>
-    <string name="accent_color_white">Accent color of white theme</string>
-    <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
+    <string name="accent_color_white">Gai zuriaren kolore orokorra</string>
+    <string name="accent_color_black_and_white">Gai beltzaren eta zuriaren kolore orokorra</string>
     <string name="foreground_color">Aurreko planoaren kolorea</string>
     <string name="app_icon_color">Aplikazioaren ikonoaren kolorea</string>
     <string name="bottom_navigation_bar_color">Beheko nabigazio-barraren kolorea</string>
@@ -245,7 +245,7 @@
     <string name="dark_theme">Iluna</string>
     <string name="solarized">Eguzkitsua</string>
     <string name="dark_red">Gorri iluna</string>
-    <string name="white">White</string>
+    <string name="white">Zuria</string>
     <string name="black_white">Zuri-beltza</string>
     <string name="custom">Pertsonalizatuta</string>
     <string name="shared">Partekatuta</string>
@@ -279,8 +279,8 @@
     <string name="call_from_sim_1">Deitu 1. SIMetik</string>
     <string name="call_from_sim_2">Deitu 2. SIMetik</string>
     <string name="toggle_filename">Aldatu fitxategi-izenaren ikusgaitasuna</string>
-    <string name="move_to_top">Move to the top</string>
-    <string name="move_to_bottom">Move to the bottom</string>
+    <string name="move_to_top">Mugitu goiko aldera</string>
+    <string name="move_to_bottom">Mugitu beheko aldera</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenatze-irizpidea</string>
@@ -296,12 +296,12 @@
     <string name="ascending">Gorantz</string>
     <string name="descending">Beherantz</string>
     <string name="use_for_this_folder">Erabili karpeta hau soilik</string>
-    <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
+    <string name="sort_numeric_parts">Ordenatu zenbakizko zatiak balio errealaren arabera</string>
     <string name="first_name">Izena</string>
     <string name="middle_name">Bigarren izena</string>
     <string name="surname">Abizena</string>
     <string name="full_name">Izen-abizenak</string>
-    <string name="use_custom_sorting">Use custom sorting</string>
+    <string name="use_custom_sorting">Erabili pertsonalizatutako ordenatzea</string>
     <string name="change_order">Aldatu ordena</string>
 
     <!-- Confirmation dialog -->
@@ -476,11 +476,11 @@
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
-    <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
-    <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
-    <string name="reminder_warning">Please make sure the reminders work properly before relying on them. They could misbehave due to system restrictions related to battery saving.</string>
-    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
+    <string name="alarm_goes_off_in">Alarma itzaltzeko geratzen den denbora:\n%s</string>
+    <string name="reminder_triggers_in">Oroigarria azaltzeko geratzen den denbora:\n%s</string>
+    <string name="alarm_warning">Mesedez, ziurtatu alarma ondo dabilela. Arazoak egon daitezke bateria aurreztearekin zerikusia duten sistemaren murrizketak direla-eta.</string>
+    <string name="reminder_warning">Mesedez, ziurtatu oroigarria ondo dabilela. Arazoak egon daitezke bateria aurreztearekin zerikusia duten sistemaren murrizketak direla-eta.</string>
+    <string name="notifications_disabled">Aplikazio honen jakinarazpenak desgaituta daude. Gailuko ezarpenetan gaitu ditzakezu.</string>
 
     <!-- Alarms -->
     <string name="alarm">Alarma</string>
@@ -492,35 +492,35 @@
     <string name="your_sounds">Zure soinuak</string>
     <string name="add_new_sound">Gehitu soinu berria</string>
     <string name="no_sound">Soinurik ez</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="during_day_at_hh_mm">Egunean zehar ordu honetan: hh:mm</string>
+    <string name="during_day_at">Egunean zehar ordun honetan: %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Ezarpenak</string>
     <string name="purchase_simple_thank_you">Erosi Simple Thank You</string>
     <string name="customize_colors">Pertsonalizatu koloreak</string>
-    <string name="customize_colors_locked">Pertsonalizatu koloreak (Locked)</string>
+    <string name="customize_colors_locked">Pertsonalizatu koloreak (Blokeatuta)</string>
     <string name="customize_widget_colors">Pertsonalizatu widgeten koloreak</string>
-    <string name="customize_notifications">Customize notifications</string>
-    <string name="use_english_language">Erabili ingeles hizkuntza</string>
+    <string name="customize_notifications">Pertsonalizatu jakinarazpenak</string>
+    <string name="use_english_language">Erabili ingelesa</string>
     <string name="show_hidden_items">Erakutsi ezkutatutako elementuak</string>
     <string name="font_size">Letra-tamaina</string>
     <string name="small">Txikia</string>
     <string name="medium">Ertaina</string>
     <string name="large">Handia</string>
     <string name="extra_large">Oso handia</string>
-    <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
-    <string name="password_protect_whole_app">Password protect the whole application</string>
-    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
+    <string name="password_protect_hidden_items">Babestu pasahitzarekin ezkutatutako elementuen bistaratzea</string>
+    <string name="password_protect_whole_app">Babestu pasahitzarekin aplikazio osoa</string>
+    <string name="password_protect_file_deletion">Babestu pasahitzarekin fitxategien ezabatzea eta mugitzea</string>
     <string name="keep_last_modified">Keep old last-modified value at file operations</string>
     <string name="show_info_bubble">Erakutsi informazio-burbuila elementu higigarrietan korritze-barra arrastatuz</string>
-    <string name="prevent_phone_from_sleeping">Prevent phone from sleeping while the app is in foreground</string>
+    <string name="prevent_phone_from_sleeping">Eragotzi mugikorra lo geratzea aplikazio hau atzeko planoan dagoen bitartean</string>
     <string name="skip_delete_confirmation">Saltatu ezabatzeko konfirmazio elkarrizketa-koadroa beti</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="enable_pull_to_refresh">Gaitu "behera egin freskatzeko" goiko aldetik</string>
     <string name="use_24_hour_time_format">Erabili 24 orduko ordu-formatua</string>
     <string name="change_date_and_time_format">Aldatu data- eta ordu-formatua</string>
     <string name="sunday_first">Hasi astea igandean</string>
-    <string name="widgets">Widgetak</string>
+    <string name="widgets">Trepetak</string>
     <string name="use_same_snooze">Erabili atzeratze-denbora berdina beti</string>
     <string name="snooze_time">Atzeratze-denbora</string>
     <string name="vibrate_on_button_press">Egin dar-dar botoia sakatzerakoan</string>
@@ -554,8 +554,8 @@
     <string name="call_history_tab">Deien historia</string>
     <string name="groups_tab">Taldeak</string>
     <string name="last_used_tab">Erabilitako azkena</string>
-    <string name="files_tab">Files</string>
-    <string name="recent_files_tab">Recent files</string>
+    <string name="files_tab">Fitxategiak</string>
+    <string name="recent_files_tab">Azken fitxategiak</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Leheneratu fitxategi hau</string>
@@ -689,7 +689,7 @@
     <string name="rate_us_prompt">Aupa,\n\nbadirudi aplikazio hau denbora batez erabiltzen daramazula, eskerrik asko.\n\nFabore bat eskatuko dizugu: balora gaitzazu Google Play-en. Asko lagunduko liguke horrek.\n\nErabakitzen duzuna erabakitzen duzula, mezu hau ez duzu berriro ikusiko.\n\nMila esker!</string>
     <string name="rate_our_app">Baloratu gure aplikazioa, mesedez :)</string>
     <string name="thank_you">Eskerrik asko</string>
-    <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
+    <string name="widget_locked_pro">Trepeta blokeatuta dago.\nEguneratu Pro bertsiora desblokeatzeko.</string>
     <string name="widget_locked">
         <![CDATA[
             The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
