@@ -94,8 +94,8 @@
     <string name="filename_invalid_characters_placeholder">Dateiname \"%s\" enthält ungültige Zeichen</string>
     <string name="extension_cannot_be_empty">Dateiendung darf nicht leer sein</string>
     <string name="source_file_doesnt_exist">Quelldatei \"%s\" existiert nicht</string>
-    <string name="prepend_filenames">Dateinamen voranstellen</string>
-    <string name="append_filenames">Dateinamen anhängen</string>
+    <string name="prepend_filenames">Text dem Dateinamen voranstellen</string>
+    <string name="append_filenames">Text dem Dateinamen anhängen</string>
     <string name="simple_renaming">Einfaches umbenennen</string>
     <string name="pattern_renaming">Muster</string>
     <string name="string_to_add">Text zum Hinzufügen</string>
