@@ -1,7 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancel·lar</string>
-    <string name="later">Later</string>
+    <string name="later">Més tard</string>
     <string name="save_as">Desar com</string>
     <string name="file_saved">Arxiu desat amb éxit</string>
     <string name="invalid_file_format">Format d\'arxiu no vàlid</string>
@@ -312,7 +312,7 @@
     <string name="are_you_sure_delete">Segur que voleu eliminar aquest element?</string>
     <string name="are_you_sure_recycle_bin">Segur que voleu moure aquest element a la paperera?</string>
     <string name="do_not_ask_again">No tornar a preguntar en aquesta sessió</string>
-    <string name="do_not_show_again">Do not show again</string>
+    <string name="do_not_show_again">No mostrar de nou</string>
     <string name="yes">Si</string>
     <string name="no">No</string>
     <string name="maybe">Pot ser</string>
@@ -809,7 +809,7 @@
     <string name="why_upgrade_font_size_customization">Personalització de la mida del tipus de lletra</string>
     <string name="why_upgrade_private_contact_sharing">Compartir contactes privats opcionals a les nostres aplicacions</string>
     <string name="why_upgrade_customizable_contact_ringtones">Tons de contacte personalitzables</string>
-    <string name="why_upgrade_contact_filtering">Contact filtering</string>
+    <string name="why_upgrade_contact_filtering">Filtratge de contactes</string>
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Llistes de comprovació</string>
@@ -825,7 +825,7 @@
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Personalització del color de fons</string>
     <string name="why_upgrade_file_importing">Suport per a la importació de fitxers</string>
-    <string name="why_upgrade_zooming">Zooming</string>
+    <string name="why_upgrade_zooming">Ampliació</string>
 
     <!-- License -->
     <string name="notice">Aquesta aplicació fa servir les següents biblioteques de tercers que ens faciliten la feina. Gràcies.</string>
