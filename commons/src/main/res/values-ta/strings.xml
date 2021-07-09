@@ -1,31 +1,31 @@
 <resources>
     <string name="ok">சரி</string>
     <string name="cancel">ரத்துசெய்</string>
-    <string name="later">Later</string>
-    <string name="save_as">என சேமிக்கவும்</string>
+    <string name="later">பின்னர்</string>
+    <string name="save_as">இவ்வாறு சேமி</string>
     <string name="file_saved">கோப்பு வெற்றிகரமாக சேமிக்கப்பட்டது</string>
     <string name="invalid_file_format">தவறான கோப்பு வடிவம்</string>
     <string name="out_of_memory_error">நினைவக பிழை இல்லை</string>
     <string name="an_error_occurred">பிழை ஏற்பட்டது: %s</string>
-    <string name="open_with">உடன் திறக்கவும்</string>
-    <string name="edit_with">உடன் திருத்தவும்</string>
-    <string name="no_app_found">சரியான செயலி எதுவும் கிடைக்கவில்லை</string>
-    <string name="set_as">அமை</string>
-    <string name="copy_to_clipboard">கிளிப்போர்டுக்கு நகலெடுக்கவும்</string>
-    <string name="copy_number_to_clipboard">கிளிப்போர்டுக்கு எண்ணை நகலெடுக்கவும்</string>
-    <string name="value_copied_to_clipboard">மதிப்பு கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது</string>
+    <string name="open_with">இதனுடன் திற</string>
+    <string name="edit_with">இதனுடன் திருத்து</string>
+    <string name="no_app_found">சரியான செயலி ஏதுமில்லை</string>
+    <string name="set_as">இதுவாக அமை</string>
+    <string name="copy_to_clipboard">நினைவிக்கு நகலெடு</string>
+    <string name="copy_number_to_clipboard">நினைவிக்கு எண்ணை நகலெடு</string>
+    <string name="value_copied_to_clipboard">மதிப்பு நினைவிக்கு நகலெடுக்கப்பட்டது</string>
     <string name="dial_number">டயல் எண்</string>
     <string name="unknown">தெரியவில்லை</string>
     <string name="always">எப்போதும்</string>
-    <string name="never">ஒருபோதும்</string>
+    <string name="never">ஒருபோதுமில்லை</string>
     <string name="details">விவரங்கள்</string>
     <string name="notes">குறிப்புகள்</string>
     <string name="deleting_folder"> \'%s\' கோப்புறையை நீக்குகிறது</string>
-    <string name="none">எதுவுமில்லை</string>
-    <string name="label">லேபிள்</string>
-    <string name="transparent">ஒளி புகும்</string>
-    <string name="transparent_color">ஒளி புகும் நிறம்</string>
-    <string name="select_a_different_color">வேறு நிறத்தைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="none">ஏதுமில்லை</string>
+    <string name="label">சிட்டை</string>
+    <string name="transparent">ஒளிபுகும்</string>
+    <string name="transparent_color">ஒளிபுகு நிறம்</string>
+    <string name="select_a_different_color">வேறு நிறத்தைத் தேர்ந்தெடு</string>
     <string name="download">பதிவிறக்கு</string>
     <string name="notification">அறிவிப்பு</string>
     <string name="email">மின்னஞ்சல்</string>
@@ -33,18 +33,18 @@
     <string name="playpause">இயக்கு / இடைநிறுத்து</string>
     <string name="next">அடுத்தது</string>
     <string name="number">எண்</string>
-    <string name="no_contacts_found">தொடர்புகள் எதுவும் கிடைக்கவில்லை</string>
+    <string name="no_contacts_found">தொடர்புகள் ஏதுமில்லை</string>
     <string name="request_the_required_permissions">தேவையான அனுமதிகளைக் கோருங்கள்</string>
-    <string name="no_access_to_contacts">செயலியால் உங்கள் தொடர்புகளை அணுக முடியவில்லை</string>
+    <string name="no_access_to_contacts">செயலியால் உங்கள் தொடர்புகளை அணுக இயலவில்லை</string>
     <string name="insert_text_here">உரையை இங்கே சேர்க்கவும்</string>
 
     <!-- View types -->
-    <string name="change_view_type">பார்வை வகையை மாற்றவும்</string>
+    <string name="change_view_type">காட்சி வகையை மாற்று</string>
     <string name="grid">கட்டம்</string>
     <string name="list">பட்டியல்</string>
-    <string name="increase_column_count">நெடுவரிசை எண்ணிக்கையை அதிகரி</string>
-    <string name="reduce_column_count">நெடுவரிசை எண்ணிக்கையைக் குறை</string>
-    <string name="change_cover_image">அட்டைப் படத்தை மாற்றவும்</string>
+    <string name="increase_column_count">நெடுவரிசை அதிகரி</string>
+    <string name="reduce_column_count">நெடுவரிசை குறை</string>
+    <string name="change_cover_image">அட்டைப் படத்தை மாற்று</string>
     <string name="select_photo">புகைப்படத்தைத் தேர்ந்தெடு</string>
 
     <!-- Blocked numbers -->
@@ -54,8 +54,8 @@
     <string name="block_number">எண்ணைத் தடு</string>
     <string name="block_numbers">எண்களைத் தடு</string>
     <string name="blocked_numbers">தடுக்கப்பட்ட எண்கள்</string>
-    <string name="must_make_default_dialer">தடுக்கப்பட்ட எண்களைப் பயன்படுத்த இந்த பயன்பாட்டை இயல்புநிலை டயலர் பயன்பாடாக மாற்ற வேண்டும்.</string>
-    <string name="set_as_default">இயல்புநிலைக்கு அமை</string>
+    <string name="must_make_default_dialer">தடுக்கப்பட்ட எண்களைப் பயன்படுத்த இப்பயன்பாட்டை இயல்புநிலை டயலர் பயன்பாடாக மாற்ற வேண்டும்.</string>
+    <string name="set_as_default">இயல்புநிலையாக அமை</string>
     <string name="block_confirmation">\"%s\" ஐத் தடுக்க விரும்புகிறீர்களா?</string>
 
     <!-- Favorites -->
@@ -115,69 +115,69 @@
     <string name="please_select_destination">Please select a destination</string>
     <string name="source_and_destination_same">Source and destination cannot be the same</string>
     <string name="copy_failed">Could not copy the files</string>
-    <string name="copying">Copying…</string>
-    <string name="copying_success">Files copied successfully</string>
-    <string name="copy_move_failed">An error occurred</string>
-    <string name="moving">Moving…</string>
-    <string name="moving_success">Files moved successfully</string>
+    <string name="copying">நகலெடுக்கிறது…</string>
+    <string name="copying_success">கோப்புகள் வெற்றிகரமாக நகலெடுக்கப்பட்டது</string>
+    <string name="copy_move_failed">ஒரு பிழை ஏற்பட்டது</string>
+    <string name="moving">நகர்த்துகிறது…</string>
+    <string name="moving_success">கோப்புகள் வெற்றிகரமாக நகர்த்தப்பட்டது</string>
     <string name="moving_success_partial">Some files could not be moved</string>
     <string name="copying_success_partial">Some files could not be copied</string>
     <string name="no_files_selected">No files selected</string>
-    <string name="saving">Saving…</string>
+    <string name="saving">சேமிக்கிறது…</string>
     <string name="could_not_create_folder">Could not create folder %s</string>
     <string name="could_not_create_file">Could not create file %s</string>
-    <string name="no_new_items">No new items have been found</string>
+    <string name="no_new_items">புது உருப்படிகள் ஏதுமில்லை</string>
     <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
 
     <!-- Create new -->
     <string name="create_new">Create new</string>
-    <string name="folder">Folder</string>
-    <string name="file">File</string>
-    <string name="create_new_folder">Create new folder</string>
+    <string name="folder">கோப்புறை</string>
+    <string name="file">கோப்பு</string>
+    <string name="create_new_folder">புது கோப்புறை உருவாக்கு</string>
     <string name="name_taken">A file or folder with that name already exists</string>
     <string name="invalid_name">The name contains invalid characters</string>
-    <string name="empty_name">Please enter a name</string>
-    <string name="unknown_error_occurred">An unknown error occurred</string>
+    <string name="empty_name">பெயரை உள்ளிடவும்</string>
+    <string name="unknown_error_occurred">ஓர் அறியா பிழை ஏற்பட்டது</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">File \"%s\" already exists</string>
-    <string name="file_already_exists_overwrite">File \"%s\" already exists. Overwrite?</string>
-    <string name="folder_already_exists">Folder \"%s\" already exists</string>
-    <string name="merge">Merge</string>
-    <string name="keep_both">Keep both</string>
-    <string name="overwrite">Overwrite</string>
+    <string name="file_already_exists">கோப்பு \"%s\" ஏற்கனவே உள்ளது</string>
+    <string name="file_already_exists_overwrite">கோப்பு \"%s\" ஏற்கனவே உள்ளது. மேலெழுதவா?</string>
+    <string name="folder_already_exists">கோப்புறை \"%s\" ஏற்கனவே உள்ளது</string>
+    <string name="merge">ஒன்றுசேர்</string>
+    <string name="keep_both">இரண்டையும் வைத்திரு</string>
+    <string name="overwrite">மேலெழுது</string>
     <string name="skip">Skip</string>
     <string name="append">Append with \'_1\'</string>
     <string name="apply_to_all">Apply to all</string>
 
     <!-- File picker -->
-    <string name="select_folder">Select a folder</string>
-    <string name="select_file">Select a file</string>
+    <string name="select_folder">கோப்புறையை தேர்ந்தெடு</string>
+    <string name="select_file">கோப்பை தேர்ந்தெடு</string>
     <string name="confirm_storage_access_title">Confirm external storage access</string>
     <string name="confirm_storage_access_text">Please choose the top folder of the SD card on the next screen, to grant write access</string>
     <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_selection">தேர்வை உறுதிசெய்</string>
 
     <plurals name="items">
-        <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">%d உருப்படி</item>
+        <item quantity="other">%d உருப்படிகள்</item>
     </plurals>
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">%d உருப்படி</item>
+        <item quantity="other">%d உருப்படிகள்</item>
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Deleting %d item</item>
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="one">%d உருப்படியை அழிக்கிறது</item>
+        <item quantity="other">%d உருப்படிகளை அழிக்கிறது</item>
     </plurals>
 
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
-        <item quantity="one">%d contact</item>
-        <item quantity="other">%d contacts</item>
+        <item quantity="one">%d தொடர்பு</item>
+        <item quantity="other">%d தொடர்புகள்</item>
     </plurals>
 
     <!-- Storages -->
@@ -191,45 +191,45 @@
         It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
 
     <!-- File properties -->
-    <string name="properties">Properties</string>
-    <string name="path">Path</string>
-    <string name="items_selected">Items selected</string>
+    <string name="properties">பண்புகள்</string>
+    <string name="path">பாதை</string>
+    <string name="items_selected">உருப்படிகள் தேர்ந்தெடுக்கப்பட்டது</string>
     <string name="direct_children_count">Direct children count</string>
-    <string name="files_count">Total files count</string>
+    <string name="files_count">மொத்த கோப்புகள் எண்ணிக்கை</string>
     <string name="resolution">Resolution</string>
-    <string name="duration">Duration</string>
-    <string name="artist">Artist</string>
+    <string name="duration">கால‌ அளவு</string>
+    <string name="artist">கலைஞர்</string>
     <string name="album">Album</string>
-    <string name="focal_length">Focal length</string>
-    <string name="exposure_time">Exposure time</string>
-    <string name="iso_speed">ISO speed</string>
+    <string name="focal_length">குவியத்தூரம்</string>
+    <string name="exposure_time">வெளிக்கொணர்தல் நேரம்</string>
+    <string name="iso_speed">ISO வேகம்</string>
     <string name="f_number">F-number</string>
-    <string name="camera">Camera</string>
+    <string name="camera">படக்கருவி</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="song_title">பாடல் தலைப்பு</string>
+    <string name="gps_coordinates">GPS ஆய அச்சுகள்</string>
+    <string name="altitude">உயரம்</string>
 
     <!-- Color customization -->
-    <string name="background_color">Background color</string>
-    <string name="text_color">Text color</string>
+    <string name="background_color">பின்புல நிறம்</string>
+    <string name="text_color">சொற்சர நிறம்</string>
     <string name="primary_color">Primary color</string>
     <string name="accent_color_white">Accent color of white theme</string>
     <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
-    <string name="foreground_color">Foreground color</string>
-    <string name="app_icon_color">App icon color</string>
+    <string name="foreground_color">முன்புல நிறம்</string>
+    <string name="app_icon_color">செயலி படவுரு நிறம்</string>
     <string name="bottom_navigation_bar_color">Bottom navigation bar color</string>
-    <string name="restore_defaults">Restore defaults</string>
-    <string name="use_default">Use default</string>
-    <string name="default_color">Default</string>
-    <string name="change_color">Change color</string>
+    <string name="restore_defaults">இயல்புநிலைகளை மீட்டமை</string>
+    <string name="use_default">இயல்புநிலையை பயன்படுத்து</string>
+    <string name="default_color">இயல்புநிலை</string>
+    <string name="change_color">நிறம் மாற்று</string>
     <string name="theme">Theme</string>
     <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
-    <string name="save">Save</string>
-    <string name="discard">Discard</string>
-    <string name="undo_changes">Undo changes</string>
-    <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
-    <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
+    <string name="save">சேமி</string>
+    <string name="discard">கைவிடு</string>
+    <string name="undo_changes">மாற்றங்களை செயல்தவிர்</string>
+    <string name="undo_changes_confirmation">உமது மாற்றங்களை செயல்தவிர்க்க உறுதியா?</string>
+    <string name="save_before_closing">சேமிக்காத மாற்றங்களுள்ளன. வெளியேறும்முன் சேமிக்கவா?</string>
     <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
     <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
         Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
@@ -252,31 +252,31 @@
     <string name="shared">Shared</string>
 
     <!-- What's new -->
-    <string name="whats_new">What\'s new</string>
+    <string name="whats_new">பதிது என்ன</string>
     <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
 
     <!-- Actionbar items -->
-    <string name="delete">Delete</string>
-    <string name="remove">Remove</string>
-    <string name="rename">Rename</string>
-    <string name="share">Share</string>
-    <string name="share_via">Share via</string>
-    <string name="select_all">Select all</string>
-    <string name="select_text">Select text</string>
-    <string name="hide">Hide</string>
-    <string name="unhide">Unhide</string>
-    <string name="hide_folder">Hide folder</string>
-    <string name="unhide_folder">Unhide folder</string>
-    <string name="temporarily_show_hidden">Temporarily show hidden</string>
+    <string name="delete">அழி</string>
+    <string name="remove">நீக்கு</string>
+    <string name="rename">மறுபெயரிடு</string>
+    <string name="share">பகிர்</string>
+    <string name="share_via">இதன்மூலம் பகிர்</string>
+    <string name="select_all">எல்லாம் தேர்ந்தெடு</string>
+    <string name="select_text">சொற்சரத்தை தேர்ந்தெடு</string>
+    <string name="hide">மறை</string>
+    <string name="unhide">மறைக்காதே</string>
+    <string name="hide_folder">கோப்புறையை மறை</string>
+    <string name="unhide_folder">கோப்புறையை மறைக்காதே</string>
+    <string name="temporarily_show_hidden">மறைத்தவையை தற்காலிகமாக காட்டு</string>
     <string name="stop_showing_hidden">Stop showing hidden media</string>
     <string name="maximum_share_reached">You cannot share this much content at once</string>
     <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
-    <string name="undo">Undo</string>
+    <string name="undo">செயல்தவிர்</string>
     <string name="redo">Redo</string>
-    <string name="print">Print</string>
-    <string name="create_shortcut">Create shortcut</string>
-    <string name="add_number_to_contact">Add number to contact</string>
-    <string name="view_contact_details">View contact details</string>
+    <string name="print">அச்சிடு</string>
+    <string name="create_shortcut">குறுக்குவழி உருவாக்கு</string>
+    <string name="add_number_to_contact">எண்ணைத் தொடர்புக்குச் சேர்</string>
+    <string name="view_contact_details">தொடர்பு விவரங்களைப் பார்</string>
     <string name="call_from_sim_1">Call from SIM 1</string>
     <string name="call_from_sim_2">Call from SIM 2</string>
     <string name="toggle_filename">Toggle filename visibility</string>
@@ -284,107 +284,107 @@
     <string name="move_to_bottom">Move to the bottom</string>
 
     <!-- Sorting -->
-    <string name="sort_by">Sort by</string>
-    <string name="name">Name</string>
-    <string name="size">Size</string>
+    <string name="sort_by">இதன்படி வரிசைபடுத்து</string>
+    <string name="name">பெயர்</string>
+    <string name="size">அளவு</string>
     <string name="last_modified">Last modified</string>
-    <string name="date_taken">Date taken</string>
-    <string name="title">Title</string>
-    <string name="filename">Filename</string>
-    <string name="extension">Extension</string>
+    <string name="date_taken">எடுக்கப்பட்ட தேதி</string>
+    <string name="title">தலைப்பு</string>
+    <string name="filename">கோப்புப்பெயர்</string>
+    <string name="extension">நீட்டிப்பு</string>
     <string name="random">Random</string>
     <string name="sort_randomly">Sort randomly</string>
     <string name="ascending">Ascending</string>
     <string name="descending">Descending</string>
     <string name="use_for_this_folder">Use for this folder only</string>
     <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
-    <string name="first_name">First name</string>
+    <string name="first_name">முதற் பெயர்</string>
     <string name="middle_name">Middle name</string>
     <string name="surname">Surname</string>
-    <string name="full_name">Full name</string>
+    <string name="full_name">முழு பெயர்</string>
     <string name="use_custom_sorting">Use custom sorting</string>
     <string name="change_order">Change order</string>
 
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
-    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
+    <string name="deletion_confirmation">%s-ஐ அழிக்க நீங்கள் உறுதியா?</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s into the Recycle Bin?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
+    <string name="are_you_sure_delete">இவ்வுருப்படியை அழிக்க நீங்கள் உறுதியா?</string>
     <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
-    <string name="do_not_ask_again">Do not ask again in this session</string>
-    <string name="do_not_show_again">Do not show again</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
-    <string name="maybe">Maybe</string>
+    <string name="do_not_ask_again">இவ்வமர்வில் மீண்டும் கேட்காதே</string>
+    <string name="do_not_show_again">மீண்டும் காட்டாதே</string>
+    <string name="yes">ஆம்</string>
+    <string name="no">இல்லை</string>
+    <string name="maybe">ஒருவேலை</string>
 
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting %d folder</item>
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="one">எச்சரிக்கை: %d கோப்புறையை அழிக்கிறீர்கள்</item>
+        <item quantity="other">எச்சரிக்கை: %d கோப்புறைகளை அழிக்கிறீர்கள்</item>
     </plurals>
 
     <!-- Password protection -->
-    <string name="pin">PIN</string>
-    <string name="enter_pin">Enter PIN</string>
-    <string name="please_enter_pin">Please enter a PIN</string>
-    <string name="wrong_pin">Wrong PIN</string>
+    <string name="pin">குறியீட்டெண்</string>
+    <string name="enter_pin">குறியீட்டெண்ணை உள்ளிடு</string>
+    <string name="please_enter_pin">ஒரு குறியீட்டெண்ணை உள்ளிடவும்</string>
+    <string name="wrong_pin">தவறான குறியீட்டெண்</string>
     <string name="repeat_pin">Repeat PIN</string>
     <string name="pattern">Pattern</string>
     <string name="insert_pattern">Insert pattern</string>
     <string name="wrong_pattern">Wrong pattern</string>
     <string name="repeat_pattern">Repeat pattern</string>
-    <string name="fingerprint">Fingerprint</string>
-    <string name="add_fingerprint">Add fingerprint</string>
-    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
+    <string name="fingerprint">கைரேகை</string>
+    <string name="add_fingerprint">கைரேகை சேர்</string>
+    <string name="place_finger">கைரேகை உணர்வியில் உமது விரலை வைக்கவும்</string>
     <string name="authentication_failed">Authentication failed</string>
     <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
     <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
-    <string name="go_to_settings">Go to Settings</string>
+    <string name="go_to_settings">அமைப்புகளுக்கு செல்</string>
     <string name="protection_setup_successfully">Password setup successfully. Please reinstall the app in case you forget it.</string>
     <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
+    <string name="lock_folder">கோப்புறையை பூட்டு</string>
+    <string name="unlock_folder">கோப்புறையை பூட்டவிழ்</string>
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
 
     <!-- Times -->
-    <string name="yesterday">Yesterday</string>
-    <string name="today">Today</string>
-    <string name="tomorrow">Tomorrow</string>
-    <string name="hide_year">Hide year</string>
-    <string name="seconds_raw">seconds</string>
-    <string name="minutes_raw">minutes</string>
-    <string name="hours_raw">hours</string>
-    <string name="days_raw">days</string>
-    <string name="seconds_letter">s</string>
-    <string name="minutes_letter">m</string>
-    <string name="hours_letter">h</string>
+    <string name="yesterday">நேற்று</string>
+    <string name="today">இன்று</string>
+    <string name="tomorrow">நாளை</string>
+    <string name="hide_year">ஆண்டை மறை</string>
+    <string name="seconds_raw">விநாடிகள்</string>
+    <string name="minutes_raw">நிமிடங்கள்</string>
+    <string name="hours_raw">மணிநேரங்கள்</string>
+    <string name="days_raw">நாட்கள்</string>
+    <string name="seconds_letter">வி</string>
+    <string name="minutes_letter">நி</string>
+    <string name="hours_letter">ம</string>
 
     <plurals name="seconds">
-        <item quantity="one">%d second</item>
-        <item quantity="other">%d seconds</item>
+        <item quantity="one">%d விநாடி</item>
+        <item quantity="other">%d விநாடிகள்</item>
     </plurals>
     <plurals name="minutes">
-        <item quantity="one">%d minute</item>
-        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d நிமிடம்</item>
+        <item quantity="other">%d நிமிடங்கள்</item>
     </plurals>
     <plurals name="hours">
-        <item quantity="one">%d hour</item>
-        <item quantity="other">%d hours</item>
+        <item quantity="one">%d மணிநேரம்</item>
+        <item quantity="other">%d மணிநேரங்கள்</item>
     </plurals>
     <plurals name="days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one">%d நாள்</item>
+        <item quantity="other">%d நாட்கள்</item>
     </plurals>
     <plurals name="weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d வாரம்</item>
+        <item quantity="other">%d வாரங்கள்</item>
     </plurals>
     <plurals name="months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one">%d மாதம்</item>
+        <item quantity="other">%d மாதங்கள்</item>
     </plurals>
     <plurals name="years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one">%d ஆண்டு</item>
+        <item quantity="other">%d ஆண்டுகள்</item>
     </plurals>
 
     <!-- For example: I will be there in 5 minutes -->
@@ -498,19 +498,19 @@
     <string name="during_day_at">During the day at %02d:%02d</string>
 
     <!-- Settings -->
-    <string name="settings">Settings</string>
+    <string name="settings">அமைப்புகள்</string>
     <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
     <string name="customize_colors">Customize colors</string>
     <string name="customize_colors_locked">Customize colors (Locked)</string>
     <string name="customize_widget_colors">Customize widget colors</string>
     <string name="customize_notifications">Customize notifications</string>
-    <string name="use_english_language">Use English language</string>
-    <string name="show_hidden_items">Show hidden items</string>
-    <string name="font_size">Font size</string>
-    <string name="small">Small</string>
-    <string name="medium">Medium</string>
-    <string name="large">Large</string>
-    <string name="extra_large">Extra large</string>
+    <string name="use_english_language">ஆங்கில மொழியை பயன்படுத்து</string>
+    <string name="show_hidden_items">மறைத்த உருப்படிகளை காட்டு</string>
+    <string name="font_size">எழுத்துரு அளவு</string>
+    <string name="small">சிறிது</string>
+    <string name="medium">நடுத்தர</string>
+    <string name="large">பெரிது</string>
+    <string name="extra_large">மிகப் பெரிது</string>
     <string name="password_protect_hidden_items">Password protect hidden item visibility</string>
     <string name="password_protect_whole_app">Password protect the whole application</string>
     <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
@@ -520,69 +520,69 @@
     <string name="skip_delete_confirmation">Always skip delete confirmation dialog</string>
     <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
     <string name="use_24_hour_time_format">Use 24-hour time format</string>
-    <string name="change_date_and_time_format">Change date and time format</string>
+    <string name="change_date_and_time_format">தேதி மற்றும் நேர வடிவமைப்பை மாற்று</string>
     <string name="sunday_first">Start week on Sunday</string>
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Always use same snooze time</string>
     <string name="snooze_time">Snooze time</string>
     <string name="vibrate_on_button_press">Vibrate on button press</string>
-    <string name="move_items_into_recycle_bin">Move items into the Recycle Bin instead of deleting</string>
+    <string name="move_items_into_recycle_bin">அழிப்பதற்கு பதில் மறுசுழற்சி தொட்டிக்குள் உருப்படிகளை நகர்த்து</string>
     <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
-    <string name="empty_recycle_bin">Empty the Recycle Bin</string>
+    <string name="empty_recycle_bin">மறுசுழற்சி தொட்டியை காலியாக்கு</string>
     <string name="force_portrait_mode">Force portrait mode</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
+    <string name="export_settings">அமைப்புகள் ஏற்றுமதி</string>
+    <string name="import_settings">அமைப்புகள் இறக்குமதி</string>
+    <string name="settings_exported_successfully">அமைப்புகள் ஏற்றுமதி வெற்றி</string>
+    <string name="settings_imported_successfully">அமைப்புகள் இறக்குமதி வெற்றி</string>
     <string name="start_name_with_surname">Start name with surname</string>
-    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cache">பிடிதரவை துடை</string>
 
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
-    <string name="recycle_bin">Recycle Bin</string>
-    <string name="saving_label">Saving</string>
+    <string name="visibility">தெரிவுநிலை</string>
+    <string name="security">பாதுகாப்பு</string>
+    <string name="scrolling">உருட்டுதல்</string>
+    <string name="file_operations">கோப்பு செயல்பாடுகள்</string>
+    <string name="recycle_bin">மறுசுழற்சி தொட்டி</string>
+    <string name="saving_label">சேமிக்கிறது</string>
     <string name="startup">Startup</string>
-    <string name="text">Text</string>
-    <string name="migrating">Migrating</string>
+    <string name="text">சொற்சரம்</string>
+    <string name="migrating">இடம்பெயர்கிறது</string>
 
     <!-- Default tab to open -->
-    <string name="manage_shown_tabs">Manage shown tabs</string>
+    <string name="manage_shown_tabs">காட்டப்படும் தாவல்களை நிர்வகி</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
-    <string name="files_tab">Files</string>
-    <string name="recent_files_tab">Recent files</string>
+    <string name="contacts_tab">தொடர்புகள்</string>
+    <string name="favorites_tab">பிடித்தமானவை</string>
+    <string name="call_history_tab">அழைப்பு வரலாறு</string>
+    <string name="groups_tab">குழுக்கள்</string>
+    <string name="last_used_tab">கடைசியாக பயன்படுத்தியது</string>
+    <string name="files_tab">கோப்புகள்</string>
+    <string name="recent_files_tab">அண்மை கோப்புகள்</string>
 
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restore this file</string>
-    <string name="restore_selected_files">Restore selected files</string>
-    <string name="restore_all_files">Restore all files</string>
-    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
-    <string name="files_restored_successfully">Files have been restored successfully</string>
-    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
-    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
+    <string name="restore_this_file">இககோப்பை மீட்டமை</string>
+    <string name="restore_selected_files">தேர்ந்தெடுத்த கோப்புகளை மீட்டமை</string>
+    <string name="restore_all_files">எல்லா கோப்புகளையும் மீட்டமை</string>
+    <string name="recycle_bin_emptied">மறுசுழற்சி தொட்டி வெற்றிகரமாக காலியாக்கப்பட்டது</string>
+    <string name="files_restored_successfully">கோப்புகள் வெற்றிகரமாக மீட்டமைக்கப்பட்டன</string>
+    <string name="empty_recycle_bin_confirmation">மறுசுழற்சி தொட்டியை காலியாக்க நீங்கள் உறுதியா? கோப்புகளை நிரந்தரமாக இழப்பீர்கள்.</string>
+    <string name="recycle_bin_empty">மறுசுழற்சி தொட்டி காலி</string>
     <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">மறுசுழற்சி தொட்டியை காட்டு</string>
+    <string name="hide_the_recycle_bin">மறுசுழற்சி தொட்டியை மறை</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Moving %d item into the Recycle Bin</item>
-        <item quantity="other">Moving %d items into the Recycle Bin</item>
+        <item quantity="one">%d உருப்படியை மறுசுழற்சி தொட்டிக்குள் நகர்த்துகிறது</item>
+        <item quantity="other">%d உருப்படிகளை மறுசுழற்சி தொட்டிக்குள் நகர்த்துகிறது</item>
     </plurals>
 
     <!-- Import / Export -->
-    <string name="importing">Importing…</string>
-    <string name="exporting">Exporting…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
+    <string name="importing">ஏற்றுகிறது…</string>
+    <string name="exporting">இறக்குகிறது…</string>
+    <string name="importing_successful">ஏற்றுமதி வெற்றி</string>
+    <string name="exporting_successful">வெற்றி</string>
+    <string name="importing_failed">ஏற்றுமதி தோல்வி</string>
+    <string name="exporting_failed">இறக்குமதி தோல்வி</string>
     <string name="importing_some_entries_failed">Importing some entries failed</string>
     <string name="exporting_some_entries_failed">Exporting some entries failed</string>
     <string name="no_entries_for_importing">No entries for importing have been found</string>
@@ -595,84 +595,84 @@
     <string name="wrong_root_selected_usb">Wrong folder selected, please select the root folder of your USB device</string>
 
     <!-- Dates -->
-    <string name="january">January</string>
-    <string name="february">February</string>
-    <string name="march">March</string>
-    <string name="april">April</string>
-    <string name="may">May</string>
-    <string name="june">June</string>
-    <string name="july">July</string>
-    <string name="august">August</string>
-    <string name="september">September</string>
-    <string name="october">October</string>
-    <string name="november">November</string>
-    <string name="december">December</string>
+    <string name="january">ஜனவரி</string>
+    <string name="february">பிப்ரவரி</string>
+    <string name="march">மார்ச்</string>
+    <string name="april">ஏப்ரல்</string>
+    <string name="may">மே</string>
+    <string name="june">ஜூன்</string>
+    <string name="july">ஜூலை</string>
+    <string name="august">ஆகஸ்ட்</string>
+    <string name="september">செப்டம்பர்</string>
+    <string name="october">அக்டோபர்</string>
+    <string name="november">நவம்பர்</string>
+    <string name="december">டிசம்பர்</string>
 
     <!-- in January -->
-    <string name="in_january">in January</string>
-    <string name="in_february">in February</string>
-    <string name="in_march">in March</string>
-    <string name="in_april">in April</string>
-    <string name="in_may">in May</string>
-    <string name="in_june">in June</string>
-    <string name="in_july">in July</string>
-    <string name="in_august">in August</string>
-    <string name="in_september">in September</string>
-    <string name="in_october">in October</string>
-    <string name="in_november">in November</string>
-    <string name="in_december">in December</string>
+    <string name="in_january">ஜனவரியில்</string>
+    <string name="in_february">பிப்ரவரியில்</string>
+    <string name="in_march">மார்ச்சில்</string>
+    <string name="in_april">ஏப்ரலில்</string>
+    <string name="in_may">மேயில்</string>
+    <string name="in_june">ஜூனில்</string>
+    <string name="in_july">ஜூலையில்</string>
+    <string name="in_august">ஆகஸ்டில்</string>
+    <string name="in_september">செப்டம்பரில்</string>
+    <string name="in_october">அக்டோபரில்</string>
+    <string name="in_november">நவம்பரில்</string>
+    <string name="in_december">டிசம்பரில்</string>
 
-    <string name="monday">Monday</string>
-    <string name="tuesday">Tuesday</string>
-    <string name="wednesday">Wednesday</string>
-    <string name="thursday">Thursday</string>
-    <string name="friday">Friday</string>
-    <string name="saturday">Saturday</string>
-    <string name="sunday">Sunday</string>
+    <string name="monday">திங்கள்</string>
+    <string name="tuesday">செவ்வாய்</string>
+    <string name="wednesday">புதன்</string>
+    <string name="thursday">வியாழன்</string>
+    <string name="friday">வெள்ளி</string>
+    <string name="saturday">சனி</string>
+    <string name="sunday">ஞாயிறு</string>
 
-    <string name="monday_letter">M</string>
-    <string name="tuesday_letter">T</string>
-    <string name="wednesday_letter">W</string>
-    <string name="thursday_letter">T</string>
-    <string name="friday_letter">F</string>
-    <string name="saturday_letter">S</string>
-    <string name="sunday_letter">S</string>
+    <string name="monday_letter">தி</string>
+    <string name="tuesday_letter">செ</string>
+    <string name="wednesday_letter">பு</string>
+    <string name="thursday_letter">வி</string>
+    <string name="friday_letter">வெ</string>
+    <string name="saturday_letter">ச</string>
+    <string name="sunday_letter">ஞா</string>
 
-    <string name="monday_short">Mon</string>
-    <string name="tuesday_short">Tue</string>
-    <string name="wednesday_short">Wed</string>
-    <string name="thursday_short">Thu</string>
-    <string name="friday_short">Fri</string>
-    <string name="saturday_short">Sat</string>
-    <string name="sunday_short">Sun</string>
+    <string name="monday_short">தி</string>
+    <string name="tuesday_short">செ</string>
+    <string name="wednesday_short">பு</string>
+    <string name="thursday_short">வி</string>
+    <string name="friday_short">வெ</string>
+    <string name="saturday_short">ச</string>
+    <string name="sunday_short">ஞா</string>
 
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
     <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
     <string name="it_is_free">It is free till: %s. If you download it till then, you will be able to use it for free forever.</string>
-    <string name="more_info">More info</string>
-    <string name="upgrade">Upgrade</string>
+    <string name="more_info">மேலும் தகவல்</string>
+    <string name="upgrade">தரமுயர்த்து</string>
     <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
 
     <!-- About -->
-    <string name="about">About</string>
+    <string name="about">பற்றி</string>
     <string name="website_label">For the source codes visit</string>
     <string name="email_label">Send your feedback or suggestions to</string>
     <string name="upgrade_to_pro">Upgrade to Pro</string>
-    <string name="more_apps_underlined"><u>More apps</u></string>
-    <string name="more_apps_from_us_underlined"><u>More apps from us</u></string>
-    <string name="third_party_licences_underlined"><u>Third party licences</u></string>
-    <string name="invite_friends_underlined"><u>Invite friends</u></string>
+    <string name="more_apps_underlined"><u>மேலும் செயலிகள்</u></string>
+    <string name="more_apps_from_us_underlined"><u>எங்களிடமிருந்து மேலும் செயலிகள்</u></string>
+    <string name="third_party_licences_underlined"><u>Third party licence</u></string>
+    <string name="invite_friends_underlined"><u>நன்பர்களை அழைப்பிடு</u></string>
     <string name="share_text">Hey, come check out %1$s at %2$s</string>
     <string name="invite_via">Invite via</string>
-    <string name="rate_us_underlined"><u>Rate us</u></string>
-    <string name="rate">Rate</string>
-    <string name="donate">Donate</string>
-    <string name="donate_underlined"><u>Donate</u></string>
-    <string name="follow_us">Follow us</string>
+    <string name="rate_us_underlined"><u>எம்மை மதிப்பிடு</u></string>
+    <string name="rate">மதிப்பிடு</string>
+    <string name="donate">நன்கொடையளி</string>
+    <string name="donate_underlined"><u>நன்கொடையளி</u></string>
+    <string name="follow_us">எம்மை பின்தொடர்</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="additional_info">Additional info</string>
-    <string name="app_version">App version: %s</string>
+    <string name="app_version">செயலி பதிப்பு: %s</string>
     <string name="device_os">Device OS: %s</string>
     <string name="donate_please">
         <![CDATA[
@@ -711,39 +711,39 @@
         ]]>
     </string>
 
-    <string name="simple_app_launcher">Simple App Launcher</string>
-    <string name="simple_calculator">Simple Calculator</string>
-    <string name="simple_calendar">Simple Calendar</string>
-    <string name="simple_camera">Simple Camera</string>
-    <string name="simple_clock">Simple Clock</string>
-    <string name="simple_contacts">Simple Contacts</string>
+    <string name="simple_app_launcher">எளிய செயலி ஏவி</string>
+    <string name="simple_calculator">எளிய கணிப்பபொறி</string>
+    <string name="simple_calendar">எளிய நாட்காட்டி</string>
+    <string name="simple_camera">எளிய படக்கருவி</string>
+    <string name="simple_clock">எளிய கடிகாரம்</string>
+    <string name="simple_contacts">எளிய தொடர்புகள்</string>
     <string name="simple_dialer">Simple Dialer</string>
     <string name="simple_draw">Simple Draw</string>
-    <string name="simple_file_manager">Simple File Manager</string>
-    <string name="simple_flashlight">Simple Flashlight</string>
-    <string name="simple_gallery">Simple Gallery</string>
-    <string name="simple_music_player">Simple Music Player</string>
-    <string name="simple_notes">Simple Notes</string>
-    <string name="simple_sms_messenger">Simple SMS Messenger</string>
-    <string name="simple_thank_you">Simple Thank You</string>
-    <string name="simple_voice_recorder">Simple Voice Recorder</string>
+    <string name="simple_file_manager">எளிய கோப்பு நிர்வாகி</string>
+    <string name="simple_flashlight">எளிய ஒளிவிளக்கு</string>
+    <string name="simple_gallery">எளிய காட்சியகம்</string>
+    <string name="simple_music_player">எளிய இசை இயக்கி</string>
+    <string name="simple_notes">எளிய குறிப்புகள்</string>
+    <string name="simple_sms_messenger">எளிய குறுஞ்செய்தி தூதர்</string>
+    <string name="simple_thank_you">எளிய நன்றி</string>
+    <string name="simple_voice_recorder">எளிய குரல் பதிவான்</string>
 
-    <string name="app_launcher_short">App Launcher</string>
-    <string name="calculator_short">Calculator</string>
-    <string name="calendar_short">Calendar</string>
-    <string name="camera_short">Camera</string>
-    <string name="clock_short">Clock</string>
-    <string name="contacts_short">Contacts</string>
+    <string name="app_launcher_short">செயலி ஏவி</string>
+    <string name="calculator_short">கணிப்பபொறி</string>
+    <string name="calendar_short">நாட்காட்டி</string>
+    <string name="camera_short">படக்கருவி</string>
+    <string name="clock_short">கடிகாரம்</string>
+    <string name="contacts_short">தொடர்புகள்</string>
     <string name="dialer_short">Dialer</string>
     <string name="draw_short">Draw</string>
-    <string name="file_manager_short">File Manager</string>
-    <string name="flashlight_short">Flashlight</string>
-    <string name="gallery_short">Gallery</string>
-    <string name="music_player_short">Music Player</string>
-    <string name="notes_short">Notes</string>
-    <string name="sms_messenger_short">SMS Messenger</string>
-    <string name="thank_you_short">Thank You</string>
-    <string name="voice_recorder_short">Voice Recorder</string>
+    <string name="file_manager_short">கோபீபு நிர்வாகி</string>
+    <string name="flashlight_short">ஒளிவிளக்கு</string>
+    <string name="gallery_short">காட்சியகம்</string>
+    <string name="music_player_short">இசை இயக்கி</string>
+    <string name="notes_short">குறிப்புகள்</string>
+    <string name="sms_messenger_short">குறுஞ்செய்தி தூதர்</string>
+    <string name="thank_you_short">நன்றி</string>
+    <string name="voice_recorder_short">குரல் பதிவான்</string>
 
     <string name="sideloaded_app">
         <![CDATA[
@@ -787,49 +787,49 @@
     <string name="why_upgrade_basic_version">Basic</string>
     <string name="why_upgrade_pro_version">Pro</string>
     <string name="why_upgrade_no_ads">No ads</string>
-    <string name="why_upgrade_no_internet_access">No internet access</string>
+    <string name="why_upgrade_no_internet_access">இணைய அணுகல் இல்லை</string>
     <string name="why_upgrade_footer">+ 100% Money Back Guarantee</string>
     <string name="why_upgrade_improved_design">Improved design</string>
 
     <!-- Gallery Pro -->
-    <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
-    <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
+    <string name="why_upgrade_advanced_photo_editor">மேம்பட்ட புகைப்பட திருத்தி</string>
+    <string name="why_upgrade_heic_support">HEIC/HEIF கோபீபு ஆதரவு</string>
     <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
     <string name="why_upgrade_folder_locking">Individual folder locking</string>
-    <string name="why_upgrade_printing_support">Printing support</string>
+    <string name="why_upgrade_printing_support">அச்சிடுதல் ஆதரவு</string>
 
     <!-- Calendar Pro -->
-    <string name="why_upgrade_time_zone_support">Time zone support</string>
+    <string name="why_upgrade_time_zone_support">நேர மண்டல ஆதரவு</string>
     <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
-    <string name="why_upgrade_easy_event_importing">Easy event importing</string>
+    <string name="why_upgrade_easy_event_importing">எளிதான நிகழ்வு இறக்குமதி</string>
     <string name="why_upgrade_new_widgets">New widgets</string>
 
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
-    <string name="why_upgrade_font_size_customization">Font size customization</string>
+    <string name="why_upgrade_font_size_customization">எழுத்துரு அளவு தனிப்பயனாக்கம்</string>
     <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
     <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
-    <string name="why_upgrade_contact_filtering">Contact filtering</string>
+    <string name="why_upgrade_contact_filtering">தொடர்பு வடிகட்டல்</string>
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Checklists</string>
     <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
-    <string name="why_upgrade_note_locking">Note locking</string>
+    <string name="why_upgrade_note_locking">குறிப்பு பூட்டல்</string>
 
     <!-- File Manager Pro -->
-    <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
-    <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
-    <string name="why_upgrade_file_compression">File compression support</string>
-    <string name="why_upgrade_recents_tab">Tab with recent files</string>
+    <string name="why_upgrade_date_and_time_format">தேதி மற்றும் நேர வடிவமைப்பு தனிப்பயனாக்கம்</string>
+    <string name="why_upgrade_shortcuts">முகப்புத்திரை குறுக்குவழிகள்</string>
+    <string name="why_upgrade_file_compression">கோப்பு சுருக்கம் ஆதரவு</string>
+    <string name="why_upgrade_recents_tab">அண்மை கோப்புகள் கொண்ட தாவல்</string>
 
     <!-- Draw Pro -->
-    <string name="why_upgrade_background_color_customization">Background color customization</string>
-    <string name="why_upgrade_file_importing">File importing support</string>
+    <string name="why_upgrade_background_color_customization">பின்னணி நிறம் தனிப்பயனாக்கம்</string>
+    <string name="why_upgrade_file_importing">கோப்பு இறக்குமதி ஆதரவு</string>
     <string name="why_upgrade_zooming">Zooming</string>
 
     <!-- License -->
     <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
-    <string name="third_party_licences">Third party licences</string>
+    <string name="third_party_licences">மூன்றாம் தரப்பபு உரிமங்கள்</string>
     <string name="kotlin_title">Kotlin (programming language)</string>
     <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
     <string name="glide_title">Glide (image loading and caching)</string>
