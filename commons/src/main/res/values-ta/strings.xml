@@ -580,7 +580,7 @@
     <string name="importing">ஏற்றுகிறது…</string>
     <string name="exporting">இறக்குகிறது…</string>
     <string name="importing_successful">ஏற்றுமதி வெற்றி</string>
-    <string name="exporting_successful">வெற்றி</string>
+    <string name="exporting_successful">இறக்குமதி வெற்றி</string>
     <string name="importing_failed">ஏற்றுமதி தோல்வி</string>
     <string name="exporting_failed">இறக்குமதி தோல்வி</string>
     <string name="importing_some_entries_failed">Importing some entries failed</string>
@@ -661,7 +661,7 @@
     <string name="upgrade_to_pro">Upgrade to Pro</string>
     <string name="more_apps_underlined"><u>மேலும் செயலிகள்</u></string>
     <string name="more_apps_from_us_underlined"><u>எங்களிடமிருந்து மேலும் செயலிகள்</u></string>
-    <string name="third_party_licences_underlined"><u>Third party licence</u></string>
+    <string name="third_party_licences_underlined"><u>Third party licences</u></string>
     <string name="invite_friends_underlined"><u>நன்பர்களை அழைப்பிடு</u></string>
     <string name="share_text">Hey, come check out %1$s at %2$s</string>
     <string name="invite_via">Invite via</string>
@@ -736,7 +736,7 @@
     <string name="contacts_short">தொடர்புகள்</string>
     <string name="dialer_short">Dialer</string>
     <string name="draw_short">Draw</string>
-    <string name="file_manager_short">கோபீபு நிர்வாகி</string>
+    <string name="file_manager_short">கோப்பு நிர்வாகி</string>
     <string name="flashlight_short">ஒளிவிளக்கு</string>
     <string name="gallery_short">காட்சியகம்</string>
     <string name="music_player_short">இசை இயக்கி</string>
@@ -793,7 +793,7 @@
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">மேம்பட்ட புகைப்பட திருத்தி</string>
-    <string name="why_upgrade_heic_support">HEIC/HEIF கோபீபு ஆதரவு</string>
+    <string name="why_upgrade_heic_support">HEIC/HEIF கோப்பு ஆதரவு</string>
     <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
     <string name="why_upgrade_folder_locking">Individual folder locking</string>
     <string name="why_upgrade_printing_support">அச்சிடுதல் ஆதரவு</string>
@@ -823,13 +823,13 @@
     <string name="why_upgrade_recents_tab">அண்மை கோப்புகள் கொண்ட தாவல்</string>
 
     <!-- Draw Pro -->
-    <string name="why_upgrade_background_color_customization">பின்னணி நிறம் தனிப்பயனாக்கம்</string>
+    <string name="why_upgrade_background_color_customization">பின்புல நிறம் தனிப்பயனாக்கம்</string>
     <string name="why_upgrade_file_importing">கோப்பு இறக்குமதி ஆதரவு</string>
     <string name="why_upgrade_zooming">Zooming</string>
 
     <!-- License -->
     <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
-    <string name="third_party_licences">மூன்றாம் தரப்பபு உரிமங்கள்</string>
+    <string name="third_party_licences">மூன்றாம் தரப்பு உரிமங்கள்</string>
     <string name="kotlin_title">Kotlin (programming language)</string>
     <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
     <string name="glide_title">Glide (image loading and caching)</string>
