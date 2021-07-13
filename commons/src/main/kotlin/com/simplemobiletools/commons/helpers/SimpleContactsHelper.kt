@@ -231,7 +231,8 @@ class SimpleContactsHelper(val context: Context) {
                 }
             }
         } catch (e: Exception) {
-            context.showErrorToast(e)
+            context.toast("40")
+            //context.showErrorToast(e)
         }
 
         return number
@@ -255,7 +256,8 @@ class SimpleContactsHelper(val context: Context) {
                 }
             }
         } catch (e: Exception) {
-            context.showErrorToast(e)
+            context.toast("41")
+            //context.showErrorToast(e)
         }
 
         return ""
