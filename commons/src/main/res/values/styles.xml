@@ -57,13 +57,13 @@
     </style>
 
     <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog">
-        <item name="colorAccent">@color/color_primary</item>
+        <item name="colorAccent">@color/color_accent</item>
         <item name="android:windowBackground">@color/theme_light_background_color</item>
         <item name="android:textColor">@color/theme_light_text_color</item>
     </style>
 
     <style name="MyDialogTheme.Dark" parent="Theme.AppCompat.Dialog">
-        <item name="colorAccent">@color/color_primary</item>
+        <item name="colorAccent">@color/color_accent</item>
         <item name="android:windowBackground">@color/theme_dark_background_color</item>
         <item name="android:textColor">@color/theme_dark_text_color</item>
     </style>

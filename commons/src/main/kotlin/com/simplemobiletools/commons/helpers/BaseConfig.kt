@@ -65,7 +65,7 @@ open class BaseConfig(val context: Context) {
         set(primaryColor) = prefs.edit().putInt(PRIMARY_COLOR, primaryColor).apply()
 
     var accentColor: Int
-        get() = prefs.getInt(ACCENT_COLOR, context.resources.getColor(R.color.color_primary))
+        get() = prefs.getInt(ACCENT_COLOR, context.resources.getColor(R.color.color_accent))
         set(accentColor) = prefs.edit().putInt(ACCENT_COLOR, accentColor).apply()
 
     var navigationBarColor: Int
