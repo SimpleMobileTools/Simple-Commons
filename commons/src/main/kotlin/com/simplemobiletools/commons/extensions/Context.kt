@@ -652,7 +652,7 @@ fun Context.storeNewYourAlarmSound(resultData: Intent): AlarmSound {
     val token = object : TypeToken<ArrayList<AlarmSound>>() {}.type
     val yourAlarmSounds = Gson().fromJson<ArrayList<AlarmSound>>(baseConfig.yourAlarmSounds, token)
         ?: ArrayList()
-    val newAlarmSoundId = (yourAlarmSounds.maxBy { it.id }?.id ?: YOUR_ALARM_SOUNDS_MIN_ID) + 1
+    val newAlarmSoundId = (yourAlarmSounds.maxByOrNull { it.id }?.id ?: YOUR_ALARM_SOUNDS_MIN_ID) + 1
     val newAlarmSound = AlarmSound(newAlarmSoundId, filename, uri.toString())
     if (yourAlarmSounds.firstOrNull { it.uri == uri.toString() } == null) {
         yourAlarmSounds.add(newAlarmSound)
