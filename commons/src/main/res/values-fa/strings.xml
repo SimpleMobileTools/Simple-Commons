@@ -3,18 +3,18 @@
     <string name="cancel">لغو</string>
     <string name="later">بعدا</string>
     <string name="save_as">ذخیره به عنوان</string>
-    <string name="file_saved">File saved successfully</string>
-    <string name="invalid_file_format">Invalid file format</string>
-    <string name="out_of_memory_error">Out of memory error</string>
-    <string name="an_error_occurred">An error occurred: %s</string>
-    <string name="open_with">Open with</string>
-    <string name="edit_with">Edit with</string>
-    <string name="no_app_found">No valid app found</string>
-    <string name="set_as">Set as</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
-    <string name="dial_number">Dial number</string>
+    <string name="file_saved">پرونده با موفقیت ذخیره شد</string>
+    <string name="invalid_file_format">قالب پروندهٔ نامعتبر</string>
+    <string name="out_of_memory_error">خطای خروج از حافظه</string>
+    <string name="an_error_occurred">یک خطا رخ داد: %s</string>
+    <string name="open_with">بازکردن با</string>
+    <string name="edit_with">ویرایش با</string>
+    <string name="no_app_found">برنامهٔ معتبری پیدا نشد</string>
+    <string name="set_as">تنظیم به عنوان</string>
+    <string name="copy_to_clipboard">رونوشت به بریده‌دان</string>
+    <string name="copy_number_to_clipboard">رونوشت شماره به بریده‌دان</string>
+    <string name="value_copied_to_clipboard">مقدار به بریده‌دان رونوشت شد</string>
+    <string name="dial_number">شماره گردان</string>
     <string name="unknown">ناشناس</string>
     <string name="always">همیشه</string>
     <string name="never">هرگز</string>
@@ -34,23 +34,23 @@
     <string name="next">بعدی</string>
     <string name="number">شماره</string>
     <string name="no_contacts_found">مخاطبی پیدا نشد</string>
-    <string name="request_the_required_permissions">Request the required permissions</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
+    <string name="request_the_required_permissions">درخواست مجوزهای مورد نیاز</string>
+    <string name="no_access_to_contacts">این برنامه به مخاطبین‌تان دسترسی ندارد</string>
     <string name="insert_text_here">متن را اینجا وارد کنید</string>
 
     <!-- View types -->
-    <string name="change_view_type">Change view type</string>
+    <string name="change_view_type">تغییر حالت نمایش</string>
     <string name="grid">شبکه</string>
     <string name="list">لیست</string>
-    <string name="increase_column_count">Increase column count</string>
-    <string name="reduce_column_count">Reduce column count</string>
-    <string name="change_cover_image">Change cover image</string>
+    <string name="increase_column_count">افزایش تعداد ستون</string>
+    <string name="reduce_column_count">کاهش تعداد ستون</string>
+    <string name="change_cover_image">تغییر تصویر پوشش</string>
     <string name="select_photo">گزینش تصویر</string>
 
     <!-- Blocked numbers -->
-    <string name="manage_blocked_numbers">Manage blocked numbers</string>
+    <string name="manage_blocked_numbers">مدیریت شماره‌های مسدود شده</string>
     <string name="not_blocking_anyone">You are not blocking anyone.</string>
-    <string name="add_a_blocked_number">Add a blocked number</string>
+    <string name="add_a_blocked_number">افزودن یک شماره مسدود شده</string>
     <string name="block_number">مسدود کردن شماره</string>
     <string name="block_numbers">مسدود کردن شماره‌ها</string>
     <string name="blocked_numbers">شماره‌های مسدود شده</string>
@@ -66,40 +66,40 @@
 
     <!-- Search -->
     <string name="search">جست‌وجو</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
+    <string name="type_2_characters">حداقل دو نویسه برای شروع جست‌وجو بنویسید.</string>
 
     <!-- Filters -->
-    <string name="filter">Filter</string>
-    <string name="no_items_found">No items found.</string>
-    <string name="change_filter">Change filter</string>
+    <string name="filter">پالایش</string>
+    <string name="no_items_found">موردی پیدا نشد.</string>
+    <string name="change_filter">تغییر پالایش</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
+    <string name="no_storage_permissions">مجوز انبار مورد نیاز است</string>
+    <string name="no_contacts_permission">مجوز مخاطبین مورد نیاز است</string>
+    <string name="no_camera_permissions">مجوز دوربین مورد نیاز است</string>
+    <string name="no_audio_permissions">مجوز صدا مورد نیاز است</string>
 
     <!-- Renaming -->
-    <string name="rename_file">Rename file</string>
-    <string name="rename_folder">Rename folder</string>
-    <string name="rename_file_error">Could not rename the file</string>
-    <string name="rename_folder_error">Could not rename the folder</string>
-    <string name="rename_folder_empty">Folder name must not be empty</string>
-    <string name="rename_folder_exists">A folder with that name already exists</string>
-    <string name="rename_folder_root">Cannot rename the root folder of a storage</string>
-    <string name="rename_folder_ok">Folder renamed successfully</string>
-    <string name="renaming_folder">Renaming folder</string>
+    <string name="rename_file">تغییرنام پرونده</string>
+    <string name="rename_folder">تغییرنام پوشه</string>
+    <string name="rename_file_error">نمی‌توان پرونده را تغییرنام داد</string>
+    <string name="rename_folder_error">نمی‌توان پوشه را تغییرنام داد</string>
+    <string name="rename_folder_empty">نام پوشه نمی‌تواند خالی باشد</string>
+    <string name="rename_folder_exists">یک پوشه با همین نام هم‌اکنون وجود دارد</string>
+    <string name="rename_folder_root">نمی‌توان پوشهٔ ریشه یک انبار را تغییرنام داد</string>
+    <string name="rename_folder_ok">پوشه با موفقیت تغییرنام یافت</string>
+    <string name="renaming_folder">درحال تغییرنام پوشه</string>
     <string name="filename_cannot_be_empty">نام پرونده نمیتواند خالی باشد</string>
     <string name="filename_invalid_characters">نام پرونده دارای نویسه‌های نامعتبر است</string>
     <string name="filename_invalid_characters_placeholder">نام پرونده \'%s\' دارای نویسه‌های نامعتبر است</string>
     <string name="extension_cannot_be_empty">پسوند نمیتواند خالی باشد</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
-    <string name="prepend_filenames">Prepend filenames</string>
-    <string name="append_filenames">Append filenames</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
-    <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second\n%i - number increasing from 1</string>
+    <string name="source_file_doesnt_exist">پروندهٔ منبع %s وجود ندارد</string>
+    <string name="prepend_filenames">افزودن به ابتدای نام پرونده</string>
+    <string name="append_filenames">افزودن به انتهای نام پرونده</string>
+    <string name="simple_renaming">تغییرنام آسان</string>
+    <string name="pattern_renaming">الگو</string>
+    <string name="string_to_add">رشته برای افزودن</string>
+    <string name="rename_date_time_pattern">%Y - سال\n%M - ماه\n%D - روز\n%h - ساعت\n%m - دقیقه\n%s - ثانیه\n%i - افزایش اعداد با شروع از 1</string>
 
     <!-- Copy / Move -->
     <string name="copy">رونوشت</string>
@@ -115,14 +115,14 @@
     <string name="please_select_destination">Please select a destination</string>
     <string name="source_and_destination_same">Source and destination cannot be the same</string>
     <string name="copy_failed">Could not copy the files</string>
-    <string name="copying">Copying…</string>
+    <string name="copying">درحال رونوشت…</string>
     <string name="copying_success">Files copied successfully</string>
     <string name="copy_move_failed">An error occurred</string>
-    <string name="moving">Moving…</string>
+    <string name="moving">درحال جابه‌جایی…</string>
     <string name="moving_success">Files moved successfully</string>
     <string name="moving_success_partial">Some files could not be moved</string>
     <string name="copying_success_partial">Some files could not be copied</string>
-    <string name="no_files_selected">No files selected</string>
+    <string name="no_files_selected">پرونده‌ای گزیده نشده است</string>
     <string name="saving">درحال ذخیره…</string>
     <string name="could_not_create_folder">Could not create folder %s</string>
     <string name="could_not_create_file">Could not create file %s</string>
@@ -140,14 +140,14 @@
     <string name="unknown_error_occurred">An unknown error occurred</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">File \"%s\" already exists</string>
-    <string name="file_already_exists_overwrite">File \"%s\" already exists. Overwrite?</string>
-    <string name="folder_already_exists">Folder \"%s\" already exists</string>
+    <string name="file_already_exists">پرونده \"%s\" هم‌اکنون وجود دارد</string>
+    <string name="file_already_exists_overwrite">پرونده \"%s\" هم‌اکنون وجود دارد. بازنویسی شود؟</string>
+    <string name="folder_already_exists">پوشه \"%s\" هم‌اکنون وجود دارد</string>
     <string name="merge">ادغام</string>
     <string name="keep_both">نگه‌داشتن هر دو</string>
     <string name="overwrite">بازنویسی</string>
     <string name="skip">بعدی</string>
-    <string name="append">Append with \'_1\'</string>
+    <string name="append">افزودن \'_1\' به انتها</string>
     <string name="apply_to_all">اعمال به همه</string>
 
     <!-- File picker -->
@@ -170,14 +170,14 @@
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">Deleting %d item</item>
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="one">درحال حذف %d مورد</item>
+        <item quantity="other">درحال حذف %d مورد</item>
     </plurals>
 
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
-        <item quantity="one">%d contact</item>
-        <item quantity="other">%d contacts</item>
+        <item quantity="one">%d مخاطب</item>
+        <item quantity="other">%d مخاطب</item>
     </plurals>
 
     <!-- Storages -->
@@ -193,22 +193,22 @@
     <!-- File properties -->
     <string name="properties">ویژگی‌ها</string>
     <string name="path">مسیر</string>
-    <string name="items_selected">Items selected</string>
+    <string name="items_selected">موارد گزیده شدند</string>
     <string name="direct_children_count">Direct children count</string>
-    <string name="files_count">Total files count</string>
-    <string name="resolution">Resolution</string>
-    <string name="duration">Duration</string>
-    <string name="artist">Artist</string>
-    <string name="album">Album</string>
-    <string name="focal_length">Focal length</string>
-    <string name="exposure_time">Exposure time</string>
-    <string name="iso_speed">ISO speed</string>
+    <string name="files_count">تعداد همه پرونده‌ها</string>
+    <string name="resolution">وضوح</string>
+    <string name="duration">مدت</string>
+    <string name="artist">هنرمند</string>
+    <string name="album">آلبوم</string>
+    <string name="focal_length">فاصله کانونی</string>
+    <string name="exposure_time">زمان نوردهی</string>
+    <string name="iso_speed">سرعت ISO</string>
     <string name="f_number">F-number</string>
-    <string name="camera">Camera</string>
+    <string name="camera">دوربین</string>
     <string name="exif">EXIF</string>
-    <string name="song_title">Song title</string>
-    <string name="gps_coordinates">GPS coordinates</string>
-    <string name="altitude">Altitude</string>
+    <string name="song_title">عنوان آهنگ</string>
+    <string name="gps_coordinates">مختصات جی‌پی‌اس</string>
+    <string name="altitude">ارتفاع از سطح دريا</string>
 
     <!-- Color customization -->
     <string name="background_color">رنگ پس‌زمینه</string>
@@ -224,7 +224,7 @@
     <string name="default_color">پیش‌گزیده</string>
     <string name="change_color">تغییر رنگ</string>
     <string name="theme">شِما</string>
-    <string name="changing_color_description">Changing a color will make it switch to Custom theme</string>
+    <string name="changing_color_description">تغییر یک رنگ آن را به شِما سفارشی تعویض خواهد میکند</string>
     <string name="save">ذخیره</string>
     <string name="discard">دورانداختن</string>
     <string name="undo_changes">برگرداندن تغییرات</string>
@@ -244,7 +244,7 @@
     <!-- Themes -->
     <string name="light_theme">روشن</string>
     <string name="dark_theme">تاریک</string>
-    <string name="solarized">Solarized</string>
+    <string name="solarized">آفتابی</string>
     <string name="dark_red">قرمز تاریک</string>
     <string name="white">سفید</string>
     <string name="black_white">سیاه &amp; سفید</string>
@@ -252,7 +252,7 @@
     <string name="shared">اشتراک گذاری شد</string>
 
     <!-- What's new -->
-    <string name="whats_new">What\'s new</string>
+    <string name="whats_new">چه چیز جدید است</string>
     <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
 
     <!-- Actionbar items -->
@@ -265,30 +265,30 @@
     <string name="select_text">گزینش متن</string>
     <string name="hide">مخفی</string>
     <string name="unhide">آشکار</string>
-    <string name="hide_folder">Hide folder</string>
-    <string name="unhide_folder">Unhide folder</string>
-    <string name="temporarily_show_hidden">Temporarily show hidden</string>
-    <string name="stop_showing_hidden">Stop showing hidden media</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
+    <string name="hide_folder">مخفی کردن پوشه</string>
+    <string name="unhide_folder">آشکار کردن پوشه</string>
+    <string name="temporarily_show_hidden">نمایش موقت رسانه‌های مخفی</string>
+    <string name="stop_showing_hidden">توقف نمایش رسانه‌های مخفی</string>
+    <string name="maximum_share_reached">شما نمی‌توانید همه این مخاطبین را یکباره به اشتراک بگذارید</string>
     <string name="empty_and_disable_recycle_bin">Empty and disable the Recycle Bin</string>
     <string name="undo">برگرداندن</string>
     <string name="redo">انجام دوباره</string>
     <string name="print">چاپ</string>
     <string name="create_shortcut">ساخت میانبر</string>
-    <string name="add_number_to_contact">Add number to contact</string>
-    <string name="view_contact_details">View contact details</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="add_number_to_contact">افزودن شماره به مخاطبین</string>
+    <string name="view_contact_details">نمایش جزئیات مخاطب</string>
+    <string name="call_from_sim_1">تماس با سیم‌کارت 1</string>
+    <string name="call_from_sim_2">تماس با سیم‌کارت 2</string>
     <string name="toggle_filename">Toggle filename visibility</string>
-    <string name="move_to_top">Move to the top</string>
-    <string name="move_to_bottom">Move to the bottom</string>
+    <string name="move_to_top">جابه‌جایی به بالا</string>
+    <string name="move_to_bottom">جابه‌جایی به پایین</string>
 
     <!-- Sorting -->
     <string name="sort_by">مرتب سازی بر اساس</string>
     <string name="name">نام</string>
     <string name="size">اندازه</string>
-    <string name="last_modified">Last modified</string>
-    <string name="date_taken">Date taken</string>
+    <string name="last_modified">اخرین اصلاح</string>
+    <string name="date_taken">تاریخ گرفتن</string>
     <string name="title">عنوان</string>
     <string name="filename">نام پرونده</string>
     <string name="extension">پسوند</string>
