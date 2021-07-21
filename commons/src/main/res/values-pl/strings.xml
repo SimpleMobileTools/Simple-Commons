@@ -20,7 +20,7 @@
     <string name="never">Nigdy</string>
     <string name="details">Szczegóły</string>
     <string name="notes">Notatki</string>
-    <string name="deleting_folder">Usuwam folder \"%s\"</string>
+    <string name="deleting_folder">Usuwam folder „%s”</string>
     <string name="none">Brak</string>
     <string name="label">Etykieta</string>
     <string name="transparent">Przezroczysty</string>
@@ -56,7 +56,7 @@
     <string name="blocked_numbers">Zablokowane numery</string>
     <string name="must_make_default_dialer">Musisz ustawić tę aplikację jako domyślną aplikację telefonu, aby móc korzystać z funkcji blokowania numerów.</string>
     <string name="set_as_default">Ustaw jako domyślną</string>
-    <string name="block_confirmation">Czy na pewno chcesz zablokować \"%s\"?</string>
+    <string name="block_confirmation">Czy na pewno chcesz zablokować „%s”?</string>
 
     <!-- Favorites -->
     <string name="favorites">Ulubione</string>
@@ -74,10 +74,10 @@
     <string name="change_filter">Zmień filtr</string>
 
     <!-- Permissions -->
-    <string name="no_storage_permissions">Wymagane jest uprawnienie \"Pamięć\"</string>
-    <string name="no_contacts_permission">Wymagane jest uprawnienie \"Kontakty\"</string>
-    <string name="no_camera_permissions">Wymagane jest uprawnienie \"Aparat\"</string>
-    <string name="no_audio_permissions"> Wymagane jest uprawnienie \"Mikrofon\"</string>
+    <string name="no_storage_permissions">Wymagane jest uprawnienie „Pamięć”</string>
+    <string name="no_contacts_permission">Wymagane jest uprawnienie „Kontakty”</string>
+    <string name="no_camera_permissions">Wymagane jest uprawnienie „Aparat”</string>
+    <string name="no_audio_permissions"> Wymagane jest uprawnienie „Mikrofon”</string>
 
     <!-- Renaming -->
     <string name="rename_file">Zmień nazwę pliku</string>
@@ -91,7 +91,7 @@
     <string name="renaming_folder">Zmieniam nazwę folderu…</string>
     <string name="filename_cannot_be_empty">Nazwa pliku nie może być pusta</string>
     <string name="filename_invalid_characters">Nazwa pliku zawiera niedozwolone znaki</string>
-    <string name="filename_invalid_characters_placeholder">Nazwa \"%s\" zawiera niedozwolone znaki</string>
+    <string name="filename_invalid_characters_placeholder">Nazwa „%s” zawiera niedozwolone znaki</string>
     <string name="extension_cannot_be_empty">Rozszerzenie pliku nie może być puste</string>
     <string name="source_file_doesnt_exist">Plik źródłowy nie istnieje</string>
     <string name="prepend_filenames">Poprzedzaj nazwy plików</string>
@@ -110,7 +110,7 @@
     <string name="source">Źródło</string>
     <string name="destination">Cel</string>
     <string name="select_destination">Wybierz miejsce docelowe</string>
-    <string name="click_select_destination">Kliknij tutaj, aby wybrać miejsce docelowe</string>
+    <string name="click_select_destination">Naciśnij tutaj, aby wybrać miejsce docelowe</string>
     <string name="invalid_destination">Nie można zapisać w tym miejscu</string>
     <string name="please_select_destination">Wybierz miejsce docelowe</string>
     <string name="source_and_destination_same">Miejsca źródłowe i docelowe nie mogą być takie same</string>
@@ -140,14 +140,14 @@
     <string name="unknown_error_occurred">Wystąpił nieznany błąd</string>
 
     <!-- File operation conflicts -->
-    <string name="file_already_exists">Plik \"%s\" już istnieje</string>
-    <string name="file_already_exists_overwrite">Plik \"%s\" już istnieje. Nadpisać?</string>
-    <string name="folder_already_exists">Folder \"%s\" już istnieje</string>
+    <string name="file_already_exists">Plik „%s” już istnieje</string>
+    <string name="file_already_exists_overwrite">Plik „%s” już istnieje. Nadpisać?</string>
+    <string name="folder_already_exists">Folder „%s” już istnieje</string>
     <string name="merge">Połącz</string>
     <string name="keep_both">Zachowaj oba</string>
     <string name="overwrite">Nadpisz</string>
     <string name="skip">Pomiń</string>
-    <string name="append">Dodaj końcówkę \"_1\"</string>
+    <string name="append">Dodaj końcówkę „_1”</string>
     <string name="apply_to_all">Zastosuj dla wszystkich</string>
 
     <!-- File picker -->
@@ -233,13 +233,13 @@
     <string name="undo_changes_confirmation">Czy na pewno chcesz cofnąć zmiany?</string>
     <string name="save_before_closing">Zapisać zmiany?</string>
     <string name="apply_to_all_apps">Zastosuj kolory we wszystkich Prostych aplikacjach</string>
-    <string name="app_icon_color_warning">UWAGA: Niektóre launchery nie obsługują prawidłowo zmiany ikon aplikacji. Jeśli ona zniknie, uruchom aplikację przez Sklep Google Play lub poprzez widżet, jeśli jest dostępny.
+    <string name="app_icon_color_warning">UWAGA: Niektóre launchery nie obsługują prawidłowo zmiany ikon aplikacji. Jeśli ona zniknie, uruchom aplikację przez Sklep Google Play lub przez widżet, jeśli jest dostępny.
         Po uruchomieniu aplikacji ustaw domyślny kolor ikony (#F57C00). W najgorszym przypadku konieczne może być przeinstalowanie aplikacji.</string>
-    <string name="share_colors_success">Kolory zostały zmienione. Utworzony został nowy, \"wspólny\" motyw - użyj go, aby zaktualizować kolorystykę we wszystkich Prostych aplikacjach.</string>
-    <string name="shared_theme_note">Zauważ, że nawet jeśli używasz wersji Pro aplikacji, nadal potrzebujesz aplikacji "Proste podziękowanie" z powodów technicznych, która zajmuje się synchronizacją kolorów.</string>
+    <string name="share_colors_success">Kolory zostały zmienione. Utworzony został nowy, „wspólny” motyw - użyj go, aby zaktualizować kolorystykę we wszystkich Prostych aplikacjach.</string>
+    <string name="shared_theme_note">Zauważ, że nawet jeśli używasz wersji Pro aplikacji, nadal potrzebujesz aplikacji „Proste podziękowanie” z powodów technicznych, która zajmuje się synchronizacją kolorów.</string>
     <string name="purchase_thank_you">
         <![CDATA[
-            Aby odblokować tę funkcję (i wesprzeć przy okazji rozwój niniejszej aplikacji), kup aplikację <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Proste podziękowanie</a>.
+            Aby odblokować tę funkcję (i przy okazji wesprzeć rozwój niniejszej aplikacji), kup aplikację <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Proste podziękowanie</a>.
         ]]>
     </string>
 
@@ -314,7 +314,7 @@
     <string name="are_you_sure_delete">Czy na pewno chcesz usunąć ten element?</string>
     <string name="are_you_sure_recycle_bin">Czy na pewno chcesz przenieść ten element do kosza?</string>
     <string name="do_not_ask_again">Nie pytaj więcej w tej sesji</string>
-    <string name="do_not_show_again">Do not show again</string>
+    <string name="do_not_show_again">Nie pokazuj ponownie</string>
     <string name="yes">Tak</string>
     <string name="no">Nie</string>
     <string name="maybe">Być może</string>
@@ -526,12 +526,12 @@
 
     <!-- Settings -->
     <string name="settings">Ustawienia</string>
-    <string name="purchase_simple_thank_you">Kup aplikację \"Proste podziękowanie\"</string>
+    <string name="purchase_simple_thank_you">Kup aplikację „Proste podziękowanie”</string>
     <string name="customize_colors">Dostosuj kolory aplikacji</string>
     <string name="customize_colors_locked">Dostosuj kolory aplikacji (Zablokowane)</string>
     <string name="customize_widget_colors">Dostosuj kolory widżetu</string>
     <string name="customize_notifications">Dostosuj powiadomienia</string>
-    <string name="use_english_language">Wymuś używanie przez aplikację języka angielskiego</string>
+    <string name="use_english_language">Wymuszaj używanie przez aplikację języka angielskiego</string>
     <string name="show_hidden_items">Pokazuj ukryte elementy</string>
     <string name="font_size">Rozmiar czcionki</string>
     <string name="small">Mała</string>
@@ -561,7 +561,7 @@
     <string name="import_settings">Importuj ustawienia</string>
     <string name="settings_exported_successfully">Ustawienia zostały wyeksportowane</string>
     <string name="settings_imported_successfully">Ustawienia zostały zaimportowane</string>
-    <string name="start_name_with_surname">Zacznij nazwę od nazwiska</string>
+    <string name="start_name_with_surname">Zaczynaj nazwę od nazwiska</string>
     <string name="clear_cache">Wyczyść pamięć podręczną</string>
 
     <!-- Setting sections -->
@@ -675,11 +675,11 @@
 
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Twoja wersja aplikacji nie będzie już aktualizowana. Uaktualnij do wersji Pro, aby otrzymać nowe poprawki i inne ulepszenia.</string>
-    <string name="upgrade_to_pro_long_click">Twoja wersja aplikacji nie będzie już aktualizowana. Uaktualnij do wersji Pro, aby otrzymywać nowe poprawki i inne ulepszenia, przez kliknięcie tutaj.</string>
+    <string name="upgrade_to_pro_long_click">Twoja wersja aplikacji nie będzie już aktualizowana. Uaktualnij do wersji Pro, aby otrzymywać nowe poprawki i inne ulepszenia, przez naciśnięcie tutaj.</string>
     <string name="it_is_free">Aplikacja jest darmowa do %s. Jeśli pobierzesz ją do tego czasu, będziesz mieć ją za darmo bezterminowo.</string>
     <string name="more_info">Więcej informacji</string>
     <string name="upgrade">Uaktualnij</string>
-    <string name="upgrade_calendar">Musisz przenieść przechowywane lokalnie wydarzenia ręcznie poprzez wyeksportowanie ich do pliku .ics, a następnie ich zaimportowanie. Oba służące do tego przyciski znajdziez w menu na ekranie głównym aplikacji.</string>
+    <string name="upgrade_calendar">Musisz przenieść przechowywane lokalnie wydarzenia ręcznie przez wyeksportowanie ich do pliku .ics, a następnie ich zaimportowanie. Oba służące do tego przyciski znajdziez w menu na ekranie głównym aplikacji.</string>
 
     <!-- About -->
     <string name="about">O aplikacji</string>
@@ -704,12 +704,12 @@
     <string name="donate_please">
         <![CDATA[
             Witaj!<br><br>
-            Mamy nadzieję, że aplikacja przypadła Ci do gustu. Jak można zauważyć, nie zawiera reklam, prosimy więc o wsparcie jej rozwoju poprzez zakup specjalnej aplikacji <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Proste podziękowanie</a>, co poskutkuje również wyłączeniem tego komunikatu.<br><br>
+            Mamy nadzieję, że aplikacja przypadła Ci do gustu. Jak można zauważyć, nie zawiera reklam, prosimy więc o wsparcie jej rozwoju przez zakup specjalnej aplikacji <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Proste podziękowanie</a>, co poskutkuje również wyłączeniem tego komunikatu.<br><br>
             Dziękujemy!
         ]]>
     </string>
     <string name="purchase">Kup</string>
-    <string name="update_thank_you">Zaktualizuj aplikcję Proste podziękowanie do najnowszej wersji</string>
+    <string name="update_thank_you">Zaktualizuj aplikację Proste podziękowanie do najnowszej wersji</string>
     <string name="before_asking_question_read_faq">Zanim zadasz pytanie, zajrzyj do sekcji często zadawanych pytań (FAQ) w ustawieniach aplikacji. Być może jest tam już rozwiązanie Twojego problemu.</string>
     <string name="before_rate_read_faq">Zanim nas ocenisz, sprawdź najpierw ustawienia aplikacji i przeczytaj często zadawane pytania. Jeśli masz jakieś problemy, może rozwiązanie już tam jest.</string>
     <string name="make_sure_latest">Upewnij się, czy używasz najnowszej wersji aplikacji.</string>
@@ -733,7 +733,7 @@
             <a href="%1$s">%2$s</a><br><br>
             <a href="%3$s">%4$s</a><br><br>
             <a href="%5$s">%6$s</a><br><br>
-            Możesz ją pobrać, klikając powyższy odnośnik.<br><br>
+            Możesz ją pobrać, naciskając powyższy odnośnik.<br><br>
             Dziękujemy!
         ]]>
     </string>
@@ -786,7 +786,7 @@
     <string name="faq_2_title_commons">Chcę Was wesprzeć, ale nie mam jak wpłacić pieniędzy. Czy mogę zrobić coś innego?</string>
     <string name="faq_2_text_commons">Oczywiście. Możesz powiedzieć światu o naszych aplikacjach, podzielić się opinią i oceną w Sklepie Google Play, lub też wspomóc tłumaczenie aplikacji na nowe języki (bądź poprawić już istniejące tłumaczenia). Instrukcję znajdziesz pod adresem https://github.com/SimpleMobileTools/General-Discussion . Możesz też napisać do nas na adres hello@simplemobiletools.com , jeśli potrzebujesz pomocy.</string>
     <string name="faq_3_title_commons">Przypadkowo usunąłem kilka plików. Mogę je jakoś odzyskać?</string>
-    <string name="faq_3_text_commons">Pliki są usuwane zaraz po kliknięciu w oknie potwierdzającym. System Android nie ma wbudowanego kosza.</string>
+    <string name="faq_3_text_commons">Pliki są usuwane zaraz po naciśnięciu w oknie potwierdzającym. System Android nie ma wbudowanego kosza.</string>
     <string name="faq_4_title_commons">Nie podobają mi się domyślne kolory widżetów. Mogę je jakoś zmienić?</string>
     <string name="faq_4_text_commons">Tak. Po przeciągnięciu widżetu na pulpit pojawia się okno jego konfiguracji. Zobaczysz na nim kolorowe kwadraty, za pomocą których możesz wybrać nowe kolory. Suwakiem możesz też ustawić poziom przezroczystości.</string>
     <string name="faq_5_title_commons">Czy mogę jakoś odzyskać usunięte pliki?</string>
