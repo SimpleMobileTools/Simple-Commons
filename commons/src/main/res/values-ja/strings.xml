@@ -55,6 +55,8 @@
     <string name="block_number">番号をブロックする</string>
     <string name="block_numbers">複数の番号をブロックする</string>
     <string name="blocked_numbers">ブロックした番号</string>
+    <string name="export_blocked_numbers">Export blocked numbers</string>
+    <string name="import_blocked_numbers">Import blocked numbers</string>
     <string name="must_make_default_dialer">番号ブロックを活用するには、このアプリをデフォルトの電話アプリにする必要があります</string>
     <string name="set_as_default">デフォルトとして設定</string>
     <string name="block_confirmation">本当に\"%s\"をブロックしますか？</string>

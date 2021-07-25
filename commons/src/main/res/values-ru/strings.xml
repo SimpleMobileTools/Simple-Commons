@@ -55,6 +55,8 @@
     <string name="block_number">Блокировать номер</string>
     <string name="block_numbers">Блокировать номера</string>
     <string name="blocked_numbers">Заблокированные номера</string>
+    <string name="export_blocked_numbers">Export blocked numbers</string>
+    <string name="import_blocked_numbers">Import blocked numbers</string>
     <string name="must_make_default_dialer">Чтобы использовать блокировку, необходимо сделать \"Simple Contacts\" приложением по умолчанию для набора номера.</string>
     <string name="set_as_default">Установить по умолчанию</string>
     <string name="block_confirmation">Заблокировать \"%s\"?</string>
