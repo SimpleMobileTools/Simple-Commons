@@ -55,8 +55,8 @@
     <string name="block_number">Zablokuj numer</string>
     <string name="block_numbers">Zablokuj numery</string>
     <string name="blocked_numbers">Zablokowane numery</string>
-    <string name="export_blocked_numbers">Export blocked numbers</string>
-    <string name="import_blocked_numbers">Import blocked numbers</string>
+    <string name="export_blocked_numbers">Eksportuj zablokowane numery</string>
+    <string name="import_blocked_numbers">Importuj zablokowane numery</string>
     <string name="must_make_default_dialer">Musisz ustawić tę aplikację jako domyślną aplikację telefonu, aby móc korzystać z funkcji blokowania numerów.</string>
     <string name="set_as_default">Ustaw jako domyślną</string>
     <string name="block_confirmation">Czy na pewno chcesz zablokować „%s”?</string>
@@ -683,7 +683,7 @@
     <string name="it_is_free">Aplikacja jest darmowa do %s. Jeśli pobierzesz ją do tego czasu, będziesz mieć ją za darmo bezterminowo.</string>
     <string name="more_info">Więcej informacji</string>
     <string name="upgrade">Uaktualnij</string>
-    <string name="upgrade_calendar">Musisz przenieść przechowywane lokalnie wydarzenia ręcznie przez wyeksportowanie ich do pliku .ics, a następnie ich zaimportowanie. Oba służące do tego przyciski znajdziez w menu na ekranie głównym aplikacji.</string>
+    <string name="upgrade_calendar">Musisz przenieść przechowywane lokalnie wydarzenia ręcznie przez wyeksportowanie ich do pliku .ics, a następnie ich zaimportowanie. Oba służące do tego przyciski znajdziesz w menu na ekranie głównym aplikacji.</string>
 
     <!-- About -->
     <string name="about">O aplikacji</string>
