@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">Pedir permissão necessária</string>
     <string name="no_access_to_contacts">Não foi possível aceder aos contactos</string>
     <string name="insert_text_here">Introduza aqui o texto</string>
+    <string name="call_person">Ligar a %s</string>
 
     <!-- View types -->
     <string name="change_view_type">Tipo de exibição</string>
@@ -536,6 +537,7 @@
     <string name="settings_imported_successfully">Definições importadas com sucesso</string>
     <string name="start_name_with_surname">Ordenar por apelido</string>
     <string name="clear_cache">Limpar cache</string>
+    <string name="show_call_confirmation_dialog">Mostrar diálogo para confirmar a chamada</string>
 
     <!-- Setting sections -->
     <string name="visibility">Exibição</string>

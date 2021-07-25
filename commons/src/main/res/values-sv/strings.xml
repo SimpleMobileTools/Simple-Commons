@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">Begär de behörigheter som krävs</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+    <string name="call_person">Ring %s</string>
 
     <!-- View types -->
     <string name="change_view_type">Ändra vy</string>
@@ -536,6 +537,7 @@
     <string name="settings_imported_successfully">Inställningarna har importerats</string>
     <string name="start_name_with_surname">Visa efternamn först</string>
     <string name="clear_cache">Clear cache</string>
+    <string name="show_call_confirmation_dialog">Visa en bekräftelsedialogruta före uppringning</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighet</string>

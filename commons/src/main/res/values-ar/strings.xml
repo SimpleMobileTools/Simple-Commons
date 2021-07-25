@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">طلب الأذونات المطلوبة</string>
     <string name="no_access_to_contacts">يتعذر على التطبيق الوصول إلى جهات الاتصال الخاصة بك</string>
     <string name="insert_text_here">إدراج النص هنا</string>
+    <string name="call_person">Call %s</string>
 
     <!-- View types -->
     <string name="change_view_type">تغيير نوع العرض</string>
@@ -534,6 +535,7 @@
     <string name="settings_imported_successfully">تم إستيراد الإعدادات بنجاح</string>
     <string name="start_name_with_surname">الاسم يبدأ بالشهرة</string>
     <string name="clear_cache">Clear cache</string>
+    <string name="show_call_confirmation_dialog">إظهار مربع حوار تأكيد الاتصال قبل بدء مكالمة</string>
 
     <!-- Setting sections -->
     <string name="visibility">الرؤية</string>

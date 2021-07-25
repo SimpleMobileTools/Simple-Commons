@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">Request the required permissions</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+    <string name="call_person">Call %s</string>
 
     <!-- View types -->
     <string name="change_view_type">Thay đổi kiểu xem</string>
@@ -536,6 +537,7 @@
     <string name="settings_imported_successfully">Cài đặt được nhập thành công</string>
     <string name="start_name_with_surname">Start name with surname</string>
     <string name="clear_cache">Clear cache</string>
+    <string name="show_call_confirmation_dialog">Show a call confirmation dialog before initiating a call</string>
 
     <!-- Setting sections -->
     <string name="visibility">Hiển thị</string>

@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">Vyžiadať potrebné oprávnenia</string>
     <string name="no_access_to_contacts">Nepodarilo sa získať zoznam kontaktov</string>
     <string name="insert_text_here">Zadajte text sem</string>
+    <string name="call_person">Zavolať %s</string>
 
     <!-- View types -->
     <string name="change_view_type">Zmeniť typ zobrazenia</string>
@@ -569,6 +570,7 @@
     <string name="settings_imported_successfully">Nastavenia boli úspešne importované</string>
     <string name="start_name_with_surname">Začať meno priezviskom</string>
     <string name="clear_cache">Vymazať cache</string>
+    <string name="show_call_confirmation_dialog">Zobraziť pred spustením hovoru okno na jeho potvrdenie</string>
 
     <!-- Setting sections -->
     <string name="visibility">Viditeľnosť</string>

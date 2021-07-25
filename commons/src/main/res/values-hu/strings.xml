@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">A kívánt jogosultságok igénylése</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+    <string name="call_person">%s hívása</string>
 
     <!-- View types -->
     <string name="change_view_type">Nézet típus változtatása</string>
@@ -535,6 +536,7 @@
     <string name="settings_imported_successfully">A beállítások importálása sikerült</string>
     <string name="start_name_with_surname">Vezetéknév, keresztnév sorrend</string>
     <string name="clear_cache">Clear cache</string>
+    <string name="show_call_confirmation_dialog">Jóváhagyás kérése telefonhívás indítása előtt</string>
 
     <!-- Setting sections -->
     <string name="visibility">Láthatóság</string>

@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">Poproś o wymagane uprawnienia</string>
     <string name="no_access_to_contacts">Aplikacja nie mogła uzyskać dostępu do Twoich kontaktów</string>
     <string name="insert_text_here">Tutaj wstaw tekst</string>
+    <string name="call_person">Zadzwoń do: %s</string>
 
     <!-- View types -->
     <string name="change_view_type">Zmień typ widoku</string>
@@ -563,6 +564,7 @@
     <string name="settings_imported_successfully">Ustawienia zostały zaimportowane</string>
     <string name="start_name_with_surname">Zaczynaj nazwę od nazwiska</string>
     <string name="clear_cache">Wyczyść pamięć podręczną</string>
+    <string name="show_call_confirmation_dialog">Pokazuj okno potwierdzenia zadzwonienia przed zainicjowaniem połączenia</string>
 
     <!-- Setting sections -->
     <string name="visibility">Widoczność</string>

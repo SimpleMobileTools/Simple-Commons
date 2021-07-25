@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">Запит на необхідні дозволи</string>
     <string name="no_access_to_contacts">Додаток не має доступу до контактів</string>
     <string name="insert_text_here">Вставте текст сюди</string>
+    <string name="call_person">Телефонувати %s</string>
 
     <!-- View types -->
     <string name="change_view_type">Змінити тип перегляду</string>
@@ -536,6 +537,7 @@
     <string name="settings_imported_successfully">Налаштування успішно імпортовано</string>
     <string name="start_name_with_surname">Показувати спочатку прізвище</string>
     <string name="clear_cache">Очистити кеш</string>
+    <string name="show_call_confirmation_dialog">Показувати діалог підтвердження виклику</string>
 
     <!-- Setting sections -->
     <string name="visibility">Відображення</string>

@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">请求必要的权限</string>
     <string name="no_access_to_contacts">该应用无法访问联系人</string>
     <string name="insert_text_here">在此输入文本</string>
+    <string name="call_person">打电话给 %s</string>
 
     <!-- View types -->
     <string name="change_view_type">更改视图类型</string>
@@ -504,6 +505,7 @@
     <string name="settings_imported_successfully">设置导入成功</string>
     <string name="start_name_with_surname">姓氏在前</string>
     <string name="clear_cache">清除缓存</string>
+    <string name="show_call_confirmation_dialog">开始通话前显示通话确认框</string>
 
     <!-- Setting sections -->
     <string name="visibility">可见度</string>

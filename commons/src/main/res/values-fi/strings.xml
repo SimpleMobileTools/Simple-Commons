@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">Pyydä tarvittavia oikeuksia</string>
     <string name="no_access_to_contacts">Sovelluksella ei ole käyttöoikeutta yhteystietoihin</string>
     <string name="insert_text_here">Lisää teksti tähän</string>
+    <string name="call_person">Soita %s</string>
 
     <!-- View types -->
     <string name="change_view_type">Vaihda näkymää</string>
@@ -536,6 +537,7 @@
     <string name="settings_imported_successfully">Asetukset tuotu onnistuneesti</string>
     <string name="start_name_with_surname">Aloita sukunimellä</string>
     <string name="clear_cache">Tyhjennä välimuisti</string>
+    <string name="show_call_confirmation_dialog">Näytä soiton vahvistusruutu ennen soittoa</string>
 
     <!-- Setting sections -->
     <string name="visibility">Näkyvyys</string>

@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">Запрос необходимых разрешений</string>
     <string name="no_access_to_contacts">Приложение не может получить доступ к вашим контактам</string>
     <string name="insert_text_here">Введите текст здесь</string>
+    <string name="call_person">Вызов %s</string>
 
     <!-- View types -->
     <string name="change_view_type">Вид</string>
@@ -569,6 +570,7 @@
     <string name="settings_imported_successfully">Настройки успешно импортированы</string>
     <string name="start_name_with_surname">Показывать сначала фамилию</string>
     <string name="clear_cache">Очистка кеша</string>
+    <string name="show_call_confirmation_dialog">Показывать диалог подтверждения вызова</string>
 
     <!-- Setting sections -->
     <string name="visibility">Отображение</string>

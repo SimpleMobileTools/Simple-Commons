@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">Solicitar los permisos requeridos</string>
     <string name="no_access_to_contacts">La aplicación no puede acceder a tus contactos</string>
     <string name="insert_text_here">Introduce el texto aquí</string>
+    <string name="call_person">Llamar a %s</string>
 
     <!-- View types -->
     <string name="change_view_type">Cambiar tipo de vista</string>
@@ -536,6 +537,7 @@
     <string name="settings_imported_successfully">Ajustes importados correctamente</string>
     <string name="start_name_with_surname">Mostrar nombre por apellido</string>
     <string name="clear_cache">Clear cache</string>
+    <string name="show_call_confirmation_dialog">Mostrar un cuadro de confirmación antes de iniciar una llamada</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilidad</string>

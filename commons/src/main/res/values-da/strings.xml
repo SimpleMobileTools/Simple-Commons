@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">Anmod om de krævede tilladelser</string>
     <string name="no_access_to_contacts">Appen kunne ikke tilgå dine kontakter</string>
     <string name="insert_text_here">Indsæt tekst her</string>
+    <string name="call_person">Ring til %s</string>
 
     <!-- View types -->
     <string name="change_view_type">Skift visning</string>
@@ -536,6 +537,7 @@
     <string name="settings_imported_successfully">Indstillinger importeret</string>
     <string name="start_name_with_surname">Start navn med efternavn</string>
     <string name="clear_cache">Ryd cache</string>
+    <string name="show_call_confirmation_dialog">Vis en opkaldsbekræftelsesdialog før du starter et opkald</string>
 
     <!-- Setting sections -->
     <string name="visibility">Synlighed</string>

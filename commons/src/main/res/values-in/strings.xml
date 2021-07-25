@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">Meminta izin yang diperlukan</string>
     <string name="no_access_to_contacts">The app could not access your contacts</string>
     <string name="insert_text_here">Insert text here</string>
+    <string name="call_person">Panggil %s</string>
 
     <!-- View types -->
     <string name="change_view_type">Ubah tampilan</string>
@@ -504,6 +505,7 @@
     <string name="settings_imported_successfully">Pengaturan berhail diimpor</string>
     <string name="start_name_with_surname">Nama dimulai dengan nama belakang</string>
     <string name="clear_cache">Clear cache</string>
+    <string name="show_call_confirmation_dialog">Tampilkan dialog konfirmasi panggilan sebelum melakukan panggilan</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilitas</string>

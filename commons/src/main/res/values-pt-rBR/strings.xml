@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">Pedir as permissões necessárias</string>
     <string name="no_access_to_contacts">O aplicativo não pode acessar seus contatos</string>
     <string name="insert_text_here">Insira o texto aqui</string>
+    <string name="call_person">Ligar para %s</string>
 
     <!-- View types -->
     <string name="change_view_type">Alterar modo de visualização</string>
@@ -536,6 +537,7 @@
     <string name="settings_imported_successfully">Configurações importadas com sucesso</string>
     <string name="start_name_with_surname">Ordenar por sobrenome</string>
     <string name="clear_cache">Limpar cache</string>
+    <string name="show_call_confirmation_dialog">Mostrar diálogo para confirmar a chamada antes de ligar</string>
 
     <!-- Setting sections -->
     <string name="visibility">Visibilidade</string>

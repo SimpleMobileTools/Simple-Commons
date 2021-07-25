@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">Vyžádat potřebná oprávnění</string>
     <string name="no_access_to_contacts">Aplikace nemohla získat přístup k vašim kontaktům</string>
     <string name="insert_text_here">Sem vložte text</string>
+    <string name="call_person">Zavolat %s</string>
 
     <!-- View types -->
     <string name="change_view_type">Změnit typ zobrazení</string>
@@ -569,6 +570,7 @@
     <string name="settings_imported_successfully">Nastavení bylo úspěšně importováno</string>
     <string name="start_name_with_surname">Nejprve příjmení</string>
     <string name="clear_cache">Vyčistit mezipaměť</string>
+    <string name="show_call_confirmation_dialog">Před zahájením hovoru zobrazit potvrzovací dialog</string>
 
     <!-- Setting sections -->
     <string name="visibility">Viditelnost</string>

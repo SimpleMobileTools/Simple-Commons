@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">Gerekli izinleri iste</string>
     <string name="no_access_to_contacts">Uygulama, kişilerinize erişemedi</string>
     <string name="insert_text_here">Metni buraya girin</string>
+    <string name="call_person">%s kişisini ara</string>
 
     <!-- View types -->
     <string name="change_view_type">Görünüm türünü değiştir</string>
@@ -536,6 +537,7 @@
     <string name="settings_imported_successfully">Ayarlar başarıyla içe aktarıldı</string>
     <string name="start_name_with_surname">Soyadı ile başla</string>
     <string name="clear_cache">Önbelleği temizle</string>
+    <string name="show_call_confirmation_dialog">Arama başlatmadan önce arama onayı penceresi göster</string>
 
     <!-- Setting sections -->
     <string name="visibility">Görünürlük</string>

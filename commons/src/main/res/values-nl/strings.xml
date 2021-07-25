@@ -37,6 +37,7 @@
     <string name="request_the_required_permissions">Om benodigde machtigingen vragen</string>
     <string name="no_access_to_contacts">De app heeft geen toegang tot uw contacten</string>
     <string name="insert_text_here">Voeg hier tekst in</string>
+    <string name="call_person">%s bellen</string>
 
     <!-- View types -->
     <string name="change_view_type">Weergave</string>
@@ -536,6 +537,7 @@
     <string name="settings_imported_successfully">Instellingen geïmporteerd</string>
     <string name="start_name_with_surname">Beginnen met achternaam</string>
     <string name="clear_cache">Cache opschonen</string>
+    <string name="show_call_confirmation_dialog">Om bevestiging vragen voor het bellen</string>
 
     <!-- Setting sections -->
     <string name="visibility">Opmaak</string>
