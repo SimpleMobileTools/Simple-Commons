@@ -5,7 +5,7 @@
         android:id="@+id/cab_copy_number"
         android:icon="@drawable/ic_copy"
         android:title="@string/copy_number_to_clipboard"
-        app:showAsAction="never" />
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/cab_delete"
         android:icon="@drawable/ic_delete_vector"
