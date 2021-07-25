@@ -21,7 +21,7 @@ class ManageBlockedNumbersAdapter(
         setupDragListener(true)
     }
 
-    override fun getActionMenuId() = R.menu.cab_delete_only
+    override fun getActionMenuId() = R.menu.cab_blocked_numbers
 
     override fun prepareActionMode(menu: Menu) {
         menu.apply {
