@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.extensions.copyToClipboard
 import com.simplemobiletools.commons.extensions.deleteBlockedNumber
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.BlockedNumber
@@ -12,18 +13,25 @@ import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.item_manage_blocked_number.view.*
 import java.util.*
 
-class ManageBlockedNumbersAdapter(activity: BaseSimpleActivity, var blockedNumbers: ArrayList<BlockedNumber>, val listener: RefreshRecyclerViewListener?,
-                                  recyclerView: MyRecyclerView, itemClick: (Any) -> Unit) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick) {
+class ManageBlockedNumbersAdapter(
+    activity: BaseSimpleActivity, var blockedNumbers: ArrayList<BlockedNumber>, val listener: RefreshRecyclerViewListener?,
+    recyclerView: MyRecyclerView, itemClick: (Any) -> Unit
+) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick) {
     init {
         setupDragListener(true)
     }
 
     override fun getActionMenuId() = R.menu.cab_delete_only
 
-    override fun prepareActionMode(menu: Menu) {}
+    override fun prepareActionMode(menu: Menu) {
+        menu.apply {
+            findItem(R.id.cab_copy_number).isVisible = isOneItemSelected()
+        }
+    }
 
     override fun actionItemPressed(id: Int) {
         when (id) {
+            R.id.cab_copy_number -> copyNumberToClipboard()
             R.id.cab_delete -> deleteSelection()
         }
     }
@@ -62,6 +70,12 @@ class ManageBlockedNumbersAdapter(activity: BaseSimpleActivity, var blockedNumbe
                 setTextColor(textColor)
             }
         }
+    }
+
+    private fun copyNumberToClipboard() {
+        val selectedNumber = getSelectedItems().firstOrNull() ?: return
+        activity.copyToClipboard(selectedNumber.number)
+        finishActMode()
     }
 
     private fun deleteSelection() {
