@@ -146,6 +146,7 @@ const val WAS_MESSENGER_RECORDER_SHOWN = "was_messenger_recorder_shown"
 const val DEFAULT_TAB = "default_tab"
 const val START_NAME_WITH_SURNAME = "start_name_with_surname"
 const val FAVORITES = "favorites"
+const val SHOW_CALL_CONFIRMATION = "show_call_confirmation"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1

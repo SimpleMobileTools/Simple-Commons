@@ -434,4 +434,8 @@ open class BaseConfig(val context: Context) {
     var favorites: MutableSet<String>
         get() = prefs.getStringSet(FAVORITES, HashSet())!!
         set(favorites) = prefs.edit().remove(FAVORITES).putStringSet(FAVORITES, favorites).apply()
+
+    var showCallConfirmation: Boolean
+        get() = prefs.getBoolean(SHOW_CALL_CONFIRMATION, false)
+        set(showCallConfirmation) = prefs.edit().putBoolean(SHOW_CALL_CONFIRMATION, showCallConfirmation).apply()
 }
