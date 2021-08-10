@@ -7,6 +7,7 @@ import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.exifinterface.media.ExifInterface
@@ -57,10 +58,10 @@ class PropertiesDialog() {
             val fileCount = fileDirItem.getProperFileCount(activity, countHiddenItems)
             val size = fileDirItem.getProperSize(activity, countHiddenItems).formatSize()
             activity.runOnUiThread {
-                view.findViewById<TextView>(R.id.properties_size).property_value.text = size
+                (view.findViewById<LinearLayout>(R.id.properties_size).property_value as TextView).text = size
 
                 if (fileDirItem.isDirectory) {
-                    view.findViewById<TextView>(R.id.properties_file_count).property_value.text = fileCount.toString()
+                    (view.findViewById<LinearLayout>(R.id.properties_file_count).property_value as TextView).text = fileCount.toString()
                 }
             }
 
@@ -145,7 +146,7 @@ class PropertiesDialog() {
                 ensureBackgroundThread {
                     val md5 = File(path).md5()
                     activity.runOnUiThread {
-                        view.findViewById<TextView>(R.id.properties_md5).property_value.text = md5
+                        (view.findViewById<LinearLayout>(R.id.properties_md5).property_value as TextView).text = md5
                     }
                 }
             }
@@ -160,7 +161,7 @@ class PropertiesDialog() {
 
     private fun updateLastModified(activity: Activity, view: View, timestamp: Long) {
         activity.runOnUiThread {
-            view.findViewById<TextView>(R.id.properties_last_modified).property_value.text = timestamp.formatDate(activity)
+            (view.findViewById<LinearLayout>(R.id.properties_last_modified).property_value as TextView).text = timestamp.formatDate(activity)
         }
     }
 
@@ -198,8 +199,8 @@ class PropertiesDialog() {
             val fileCount = fileDirItems.sumByInt { it.getProperFileCount(activity, countHiddenItems) }
             val size = fileDirItems.sumByLong { it.getProperSize(activity, countHiddenItems) }.formatSize()
             activity.runOnUiThread {
-                view.findViewById<TextView>(R.id.properties_size).property_value.text = size
-                view.findViewById<TextView>(R.id.properties_file_count).property_value.text = fileCount.toString()
+                (view.findViewById<LinearLayout>(R.id.properties_size).property_value as TextView).text = size
+                (view.findViewById<LinearLayout>(R.id.properties_file_count).property_value as TextView).text = fileCount.toString()
             }
         }
 
