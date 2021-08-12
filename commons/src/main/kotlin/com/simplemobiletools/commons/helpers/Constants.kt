@@ -291,6 +291,12 @@ const val DATE_FORMAT_FIVE = "d MMMM yyyy"
 const val DATE_FORMAT_SIX = "MMMM d yyyy"
 const val DATE_FORMAT_SEVEN = "MM-dd-yyyy"
 const val DATE_FORMAT_EIGHT = "dd-MM-yyyy"
+const val DATE_FORMAT_NINE = "yyyyMMdd"
+const val DATE_FORMAT_TEN = "yyyy.MM.dd"
+const val DATE_FORMAT_ELEVEN = "yy-MM-dd"
+const val DATE_FORMAT_TWELVE = "yyMMdd"
+const val DATE_FORMAT_THIRTEEN = "yy.MM.dd"
+const val DATE_FORMAT_FOURTEEN = "yy/MM/dd"
 
 const val TIME_FORMAT_12 = "hh:mm a"
 const val TIME_FORMAT_24 = "HH:mm"
@@ -370,6 +376,16 @@ fun getDateFormats() = arrayListOf(
     "MMdd",
     "MM/dd",
     "MM.dd"
+)
+
+fun getDateFormatsWithYear() = arrayListOf(
+    DATE_FORMAT_FOUR,
+    DATE_FORMAT_NINE,
+    DATE_FORMAT_TEN,
+    DATE_FORMAT_ELEVEN,
+    DATE_FORMAT_TWELVE,
+    DATE_FORMAT_THIRTEEN,
+    DATE_FORMAT_FOURTEEN,
 )
 
 val normalizeRegex = "\\p{InCombiningDiacriticalMarks}+".toRegex()
