@@ -67,8 +67,7 @@ class ExportBlockedNumbersDialog(
                                 }
 
                                 ensureBackgroundThread {
-                                    config.lastBlockedNumbersExportPath =
-                                        file.absolutePath.getParentPath()
+                                    config.lastBlockedNumbersExportPath = file.absolutePath.getParentPath()
                                     callback(file)
                                     dismiss()
                                 }

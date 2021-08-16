@@ -44,6 +44,9 @@ import kotlinx.android.synthetic.main.activity_manage_blocked_numbers.manage_blo
 import kotlinx.android.synthetic.main.activity_manage_blocked_numbers.manage_blocked_numbers_wrapper
 
 class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewListener {
+    private val PICK_IMPORT_SOURCE_INTENT = 11
+    private val PICK_EXPORT_FILE_INTENT = 21
+
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
     override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
@@ -77,7 +80,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.add_blocked_number -> addOrEditBlockedNumber()
-            R.id.import_blocked_numbers -> tryImportBlockedContacts()
+            R.id.import_blocked_numbers -> tryImportBlockedNumbers()
             R.id.export_blocked_numbers -> tryExportBlockedNumbers()
             else -> return super.onOptionsItemSelected(item)
         }
@@ -120,7 +123,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         }
     }
 
-    private fun tryImportBlockedContacts() {
+    private fun tryImportBlockedNumbers() {
         if (isQPlus()) {
             Intent(Intent.ACTION_GET_CONTENT).apply {
                 addCategory(Intent.CATEGORY_OPENABLE)
@@ -130,15 +133,15 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         } else {
             handlePermission(PERMISSION_READ_STORAGE) {
                 if (it) {
-                    pickFileToImportBlockedContacts()
+                    pickFileToImportBlockedNumbers()
                 }
             }
         }
     }
 
-    private fun tryImportBlockedContactsFromFile(uri: Uri) {
+    private fun tryImportBlockedNumbersFromFile(uri: Uri) {
         when (uri.scheme) {
-            "file" -> importBlockedContacts(uri.path!!)
+            "file" -> importBlockedNumbers(uri.path!!)
             "content" -> {
                 val tempFile = getTempFile("blocked", "blocked_numbers.txt")
                 if (tempFile == null) {
@@ -150,7 +153,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
                     val inputStream = contentResolver.openInputStream(uri)
                     val out = FileOutputStream(tempFile)
                     inputStream!!.copyTo(out)
-                    importBlockedContacts(tempFile.absolutePath)
+                    importBlockedNumbers(tempFile.absolutePath)
                 } catch (e: Exception) {
                     showErrorToast(e)
                 }
@@ -159,13 +162,13 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         }
     }
 
-    private fun pickFileToImportBlockedContacts() {
+    private fun pickFileToImportBlockedNumbers() {
         FilePickerDialog(this) {
-            importBlockedContacts(it)
+            importBlockedNumbers(it)
         }
     }
 
-    private fun importBlockedContacts(path: String) {
+    private fun importBlockedNumbers(path: String) {
         ensureBackgroundThread {
             val result = BlockedNumbersImporter(this).importBlockedNumbers(path)
             toast(when (result) {
@@ -178,9 +181,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
 
     private fun tryExportBlockedNumbers() {
         if (isQPlus()) {
-            ExportBlockedNumbersDialog(this,
-                baseConfig.lastBlockedNumbersExportPath,
-                true) { file ->
+            ExportBlockedNumbersDialog(this, baseConfig.lastBlockedNumbersExportPath, true) { file ->
                 Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
                     type = "text/plain"
                     putExtra(Intent.EXTRA_TITLE, file.name)
@@ -192,9 +193,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         } else {
             handlePermission(PERMISSION_WRITE_STORAGE) {
                 if (it) {
-                    ExportBlockedNumbersDialog(this,
-                        baseConfig.lastBlockedNumbersExportPath,
-                        false) { file ->
+                    ExportBlockedNumbersDialog(this, baseConfig.lastBlockedNumbersExportPath, false) { file ->
                         getFileOutputStream(
                             file.toFileDirItem(this),
                             allowCreatingNewFile = true,
@@ -235,7 +234,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
             resultData != null &&
             resultData.data != null
         ) {
-            tryImportBlockedContactsFromFile(resultData.data!!)
+            tryImportBlockedNumbersFromFile(resultData.data!!)
         } else if (requestCode == PICK_EXPORT_FILE_INTENT &&
             resultCode == Activity.RESULT_OK &&
             resultData != null &&
@@ -244,10 +243,5 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
             val outputStream = contentResolver.openOutputStream(resultData.data!!)
             exportBlockedNumbersTo(outputStream)
         }
-    }
-
-    companion object {
-        private const val PICK_IMPORT_SOURCE_INTENT = 11
-        private const val PICK_EXPORT_FILE_INTENT = 21
     }
 }
