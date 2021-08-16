@@ -1,21 +1,47 @@
 package com.simplemobiletools.commons.activities
 
+import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.adapters.ManageBlockedNumbersAdapter
 import com.simplemobiletools.commons.dialogs.AddBlockedNumberDialog
-import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.dialogs.ExportBlockedNumbersDialog
+import com.simplemobiletools.commons.dialogs.FilePickerDialog
+import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.beVisibleIf
+import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
+import com.simplemobiletools.commons.extensions.getBlockedNumbers
+import com.simplemobiletools.commons.extensions.getFileOutputStream
+import com.simplemobiletools.commons.extensions.getTempFile
+import com.simplemobiletools.commons.extensions.isDefaultDialer
+import com.simplemobiletools.commons.extensions.showErrorToast
+import com.simplemobiletools.commons.extensions.toFileDirItem
+import com.simplemobiletools.commons.extensions.toast
+import com.simplemobiletools.commons.extensions.underlineText
+import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.APP_ICON_IDS
 import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
+import com.simplemobiletools.commons.helpers.BlockedNumbersExporter
+import com.simplemobiletools.commons.helpers.BlockedNumbersExporter.ExportResult
+import com.simplemobiletools.commons.helpers.BlockedNumbersImporter
+import com.simplemobiletools.commons.helpers.PERMISSION_READ_STORAGE
+import com.simplemobiletools.commons.helpers.PERMISSION_WRITE_STORAGE
 import com.simplemobiletools.commons.helpers.REQUEST_CODE_SET_DEFAULT_DIALER
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
+import com.simplemobiletools.commons.helpers.isQPlus
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.BlockedNumber
-import kotlinx.android.synthetic.main.activity_manage_blocked_numbers.*
-import java.util.*
+import java.io.FileOutputStream
+import java.io.OutputStream
+import java.util.ArrayList
+import kotlinx.android.synthetic.main.activity_manage_blocked_numbers.manage_blocked_numbers_list
+import kotlinx.android.synthetic.main.activity_manage_blocked_numbers.manage_blocked_numbers_placeholder
+import kotlinx.android.synthetic.main.activity_manage_blocked_numbers.manage_blocked_numbers_placeholder_2
+import kotlinx.android.synthetic.main.activity_manage_blocked_numbers.manage_blocked_numbers_wrapper
 
 class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewListener {
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
@@ -51,6 +77,8 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.add_blocked_number -> addOrEditBlockedNumber()
+            R.id.import_blocked_numbers -> tryImportBlockedContacts()
+            R.id.export_blocked_numbers -> tryExportBlockedNumbers()
             else -> return super.onOptionsItemSelected(item)
         }
         return true
@@ -61,15 +89,20 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
     }
 
     private fun updatePlaceholderTexts() {
-        manage_blocked_numbers_placeholder.text = getString(if (isDefaultDialer()) R.string.not_blocking_anyone else R.string.must_make_default_dialer)
-        manage_blocked_numbers_placeholder_2.text = getString(if (isDefaultDialer()) R.string.add_a_blocked_number else R.string.set_as_default)
+        manage_blocked_numbers_placeholder.text =
+            getString(if (isDefaultDialer()) R.string.not_blocking_anyone else R.string.must_make_default_dialer)
+        manage_blocked_numbers_placeholder_2.text =
+            getString(if (isDefaultDialer()) R.string.add_a_blocked_number else R.string.set_as_default)
     }
 
     private fun updateBlockedNumbers() {
         ensureBackgroundThread {
             val blockedNumbers = getBlockedNumbers()
             runOnUiThread {
-                ManageBlockedNumbersAdapter(this, blockedNumbers, this, manage_blocked_numbers_list) {
+                ManageBlockedNumbersAdapter(this,
+                    blockedNumbers,
+                    this,
+                    manage_blocked_numbers_list) {
                     addOrEditBlockedNumber(it as BlockedNumber)
                 }.apply {
                     manage_blocked_numbers_list.adapter = this
@@ -87,11 +120,134 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         }
     }
 
+    private fun tryImportBlockedContacts() {
+        if (isQPlus()) {
+            Intent(Intent.ACTION_GET_CONTENT).apply {
+                addCategory(Intent.CATEGORY_OPENABLE)
+                type = "text/plain"
+                startActivityForResult(this, PICK_IMPORT_SOURCE_INTENT)
+            }
+        } else {
+            handlePermission(PERMISSION_READ_STORAGE) {
+                if (it) {
+                    pickFileToImportBlockedContacts()
+                }
+            }
+        }
+    }
+
+    private fun tryImportBlockedContactsFromFile(uri: Uri) {
+        when (uri.scheme) {
+            "file" -> importBlockedContacts(uri.path!!)
+            "content" -> {
+                val tempFile = getTempFile("blocked", "blocked_numbers.txt")
+                if (tempFile == null) {
+                    toast(R.string.unknown_error_occurred)
+                    return
+                }
+
+                try {
+                    val inputStream = contentResolver.openInputStream(uri)
+                    val out = FileOutputStream(tempFile)
+                    inputStream!!.copyTo(out)
+                    importBlockedContacts(tempFile.absolutePath)
+                } catch (e: Exception) {
+                    showErrorToast(e)
+                }
+            }
+            else -> toast(R.string.invalid_file_format)
+        }
+    }
+
+    private fun pickFileToImportBlockedContacts() {
+        FilePickerDialog(this) {
+            importBlockedContacts(it)
+        }
+    }
+
+    private fun importBlockedContacts(path: String) {
+        ensureBackgroundThread {
+            val result = BlockedNumbersImporter(this).importBlockedNumbers(path)
+            toast(when (result) {
+                BlockedNumbersImporter.ImportResult.IMPORT_OK -> R.string.importing_successful
+                BlockedNumbersImporter.ImportResult.IMPORT_FAIL -> R.string.no_items_found
+            })
+            updateBlockedNumbers()
+        }
+    }
+
+    private fun tryExportBlockedNumbers() {
+        if (isQPlus()) {
+            ExportBlockedNumbersDialog(this,
+                baseConfig.lastBlockedNumbersExportPath,
+                true) { file ->
+                Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
+                    type = "text/plain"
+                    putExtra(Intent.EXTRA_TITLE, file.name)
+                    addCategory(Intent.CATEGORY_OPENABLE)
+
+                    startActivityForResult(this, PICK_EXPORT_FILE_INTENT)
+                }
+            }
+        } else {
+            handlePermission(PERMISSION_WRITE_STORAGE) {
+                if (it) {
+                    ExportBlockedNumbersDialog(this,
+                        baseConfig.lastBlockedNumbersExportPath,
+                        false) { file ->
+                        getFileOutputStream(
+                            file.toFileDirItem(this),
+                            allowCreatingNewFile = true,
+                        ) { out ->
+                            exportBlockedNumbersTo(out)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private fun exportBlockedNumbersTo(outputStream: OutputStream?) {
+        ensureBackgroundThread {
+            val blockedNumbers = getBlockedNumbers()
+            if (blockedNumbers.isEmpty()) {
+                toast(R.string.no_entries_for_exporting)
+            } else {
+                BlockedNumbersExporter().exportBlockedNumbers(blockedNumbers, outputStream) {
+                    toast(
+                        when (it) {
+                            ExportResult.EXPORT_OK -> R.string.exporting_successful
+                            ExportResult.EXPORT_FAIL -> R.string.exporting_failed
+                        }
+                    )
+                }
+            }
+        }
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
         super.onActivityResult(requestCode, resultCode, resultData)
         if (requestCode == REQUEST_CODE_SET_DEFAULT_DIALER && isDefaultDialer()) {
             updatePlaceholderTexts()
             updateBlockedNumbers()
+        } else if (requestCode == PICK_IMPORT_SOURCE_INTENT &&
+            resultCode == Activity.RESULT_OK &&
+            resultData != null &&
+            resultData.data != null
+        ) {
+            tryImportBlockedContactsFromFile(resultData.data!!)
+        } else if (requestCode == PICK_EXPORT_FILE_INTENT &&
+            resultCode == Activity.RESULT_OK &&
+            resultData != null &&
+            resultData.data != null
+        ) {
+            val outputStream = contentResolver.openOutputStream(resultData.data!!)
+            exportBlockedNumbersTo(outputStream)
         }
+    }
+
+    companion object {
+        private const val PICK_IMPORT_SOURCE_INTENT = 11
+        private const val PICK_EXPORT_FILE_INTENT = 21
     }
 }
