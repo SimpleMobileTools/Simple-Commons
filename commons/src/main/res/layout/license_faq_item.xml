@@ -16,6 +16,7 @@
     <com.simplemobiletools.commons.views.MyTextView
         android:id="@+id/license_faq_text"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:autoLink="email|web" />
 
 </LinearLayout>
