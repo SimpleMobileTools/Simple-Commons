@@ -9,6 +9,7 @@ import java.util.*
 
 fun File.isMediaFile() = absolutePath.isMediaFile()
 fun File.isGif() = absolutePath.endsWith(".gif", true)
+fun File.isApng() = absolutePath.endsWith(".apng", true)
 fun File.isVideoFast() = videoExtensions.any { absolutePath.endsWith(it, true) }
 fun File.isImageFast() = photoExtensions.any { absolutePath.endsWith(it, true) }
 fun File.isAudioFast() = audioExtensions.any { absolutePath.endsWith(it, true) }
