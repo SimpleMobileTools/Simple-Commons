@@ -144,10 +144,12 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
     private fun importBlockedNumbers(path: String) {
         ensureBackgroundThread {
             val result = BlockedNumbersImporter(this).importBlockedNumbers(path)
-            toast(when (result) {
-                BlockedNumbersImporter.ImportResult.IMPORT_OK -> R.string.importing_successful
-                BlockedNumbersImporter.ImportResult.IMPORT_FAIL -> R.string.no_items_found
-            })
+            toast(
+                when (result) {
+                    BlockedNumbersImporter.ImportResult.IMPORT_OK -> R.string.importing_successful
+                    BlockedNumbersImporter.ImportResult.IMPORT_FAIL -> R.string.no_items_found
+                }
+            )
             updateBlockedNumbers()
         }
     }
