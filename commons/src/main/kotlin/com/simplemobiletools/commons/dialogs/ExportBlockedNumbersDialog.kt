@@ -18,7 +18,6 @@ class ExportBlockedNumbersDialog(
     private val config = activity.baseConfig
 
     init {
-
         val view = activity.layoutInflater.inflate(R.layout.dialog_export_blocked_numbers, null).apply {
             export_blocked_numbers_folder.text = activity.humanizePath(realPath)
             export_blocked_numbers_filename.setText("${activity.getString(R.string.blocked_numbers)}_${activity.getCurrentFormattedDateTime()}")
