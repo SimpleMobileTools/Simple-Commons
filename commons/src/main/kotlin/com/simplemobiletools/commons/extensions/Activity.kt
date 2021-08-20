@@ -6,7 +6,6 @@ import android.content.*
 import android.content.Intent.EXTRA_STREAM
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
-import android.content.res.ColorStateList
 import android.media.RingtoneManager
 import android.net.Uri
 import android.os.TransactionTooLargeException
@@ -705,7 +704,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
         val tempToNewSucceeds = tempFile.renameTo(newFile)
         if (oldToTempSucceeds && tempToNewSucceeds) {
             if (newFile.isDirectory) {
-                deleteFromMediaStore(oldPath)
+                updateInMediaStore(oldPath , newPath)
                 rescanPath(newPath) {
                     runOnUiThread {
                         callback?.invoke(true)
@@ -716,7 +715,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                 if (!baseConfig.keepLastModified) {
                     newFile.setLastModified(System.currentTimeMillis())
                 }
-                deleteFromMediaStore(oldPath)
+                updateInMediaStore(oldPath , newPath)
                 scanPathsRecursively(arrayListOf(newPath)) {
                     runOnUiThread {
                         callback?.invoke(true)
@@ -937,20 +936,15 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
         }
     }
 
-    val buttonStates = arrayOf(intArrayOf(android.R.attr.state_enabled), intArrayOf(-android.R.attr.state_enabled))
-    val adjustedPrimaryColor50Alpha = adjustedPrimaryColor.adjustAlpha(0.5f)
-    val buttonColors = intArrayOf(adjustedPrimaryColor, adjustedPrimaryColor50Alpha)
-    val primaryButtonColor = ColorStateList(buttonStates, buttonColors)
-
     dialog.apply {
         setView(view)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         setCustomTitle(title)
         setCanceledOnTouchOutside(cancelOnTouchOutside)
         show()
-        getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(primaryButtonColor)
-        getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(primaryButtonColor)
-        getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(primaryButtonColor)
+        getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(adjustedPrimaryColor)
+        getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(adjustedPrimaryColor)
+        getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(adjustedPrimaryColor)
 
         val bgDrawable = resources.getColoredDrawableWithColor(R.drawable.dialog_bg, baseConfig.backgroundColor)
         window?.setBackgroundDrawable(bgDrawable)

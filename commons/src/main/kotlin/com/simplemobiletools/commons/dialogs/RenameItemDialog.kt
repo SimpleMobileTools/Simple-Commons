@@ -32,12 +32,7 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
             .create().apply {
                 activity.setupDialogStuff(view, this, R.string.rename) {
                     showKeyboard(view.rename_item_name)
-                    val positiveButton = getButton(AlertDialog.BUTTON_POSITIVE)
-                    positiveButton.isEnabled = false
-                    view.rename_item_name.onTextChangeListener { newName->
-                        positiveButton.isEnabled = name != newName
-                    }
-                    positiveButton.setOnClickListener {
+                    getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                         if (ignoreClicks) {
                             return@setOnClickListener
                         }
@@ -67,6 +62,12 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
                         }
 
                         val newPath = "${path.getParentPath()}/$newName"
+
+                        if(path == newPath){
+                            activity.toast(R.string.name_taken)
+                            return@setOnClickListener
+                        }
+
                         if(!path.equals(newPath, ignoreCase = true) && activity.getDoesFilePathExist(newPath)){
                             activity.toast(R.string.name_taken)
                             return@setOnClickListener
