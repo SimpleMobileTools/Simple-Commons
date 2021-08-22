@@ -696,29 +696,37 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                 }
             }
         }
-    } else if (File(oldPath).renameTo(File(newPath))) {
-        if (File(newPath).isDirectory) {
-            deleteFromMediaStore(oldPath)
-            rescanPath(newPath) {
-                runOnUiThread {
-                    callback?.invoke(true)
+    } else {
+        val oldFile = File(oldPath)
+        val newFile = File(newPath)
+        val tempFile = oldFile.createTempFile()
+        val oldToTempSucceeds = oldFile.renameTo(tempFile)
+        val tempToNewSucceeds = tempFile.renameTo(newFile)
+        if (oldToTempSucceeds && tempToNewSucceeds) {
+            if (newFile.isDirectory) {
+                updateInMediaStore(oldPath, newPath)
+                rescanPath(newPath) {
+                    runOnUiThread {
+                        callback?.invoke(true)
+                    }
+                    scanPathRecursively(newPath)
                 }
-                scanPathRecursively(newPath)
+            } else {
+                if (!baseConfig.keepLastModified) {
+                    newFile.setLastModified(System.currentTimeMillis())
+                }
+                updateInMediaStore(oldPath, newPath)
+                scanPathsRecursively(arrayListOf(newPath)) {
+                    runOnUiThread {
+                        callback?.invoke(true)
+                    }
+                }
             }
         } else {
-            if (!baseConfig.keepLastModified) {
-                File(newPath).setLastModified(System.currentTimeMillis())
+            tempFile.delete()
+            runOnUiThread {
+                callback?.invoke(false)
             }
-            deleteFromMediaStore(oldPath)
-            scanPathsRecursively(arrayListOf(newPath)) {
-                runOnUiThread {
-                    callback?.invoke(true)
-                }
-            }
-        }
-    } else {
-        runOnUiThread {
-            callback?.invoke(false)
         }
     }
 }

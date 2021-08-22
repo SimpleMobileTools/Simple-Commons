@@ -142,3 +142,11 @@ fun File.getDigest(algorithm: String): String {
 }
 
 fun File.md5(): String = this.getDigest(MD5)
+
+fun File.createTempFile(): File {
+    return if (isDirectory) {
+        createTempDir("temp", "${System.currentTimeMillis()}", parentFile)
+    } else {
+        createTempFile("temp", "${System.currentTimeMillis()}", parentFile)
+    }
+}
