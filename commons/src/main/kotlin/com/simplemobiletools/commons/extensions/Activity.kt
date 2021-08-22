@@ -704,7 +704,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
         val tempToNewSucceeds = tempFile.renameTo(newFile)
         if (oldToTempSucceeds && tempToNewSucceeds) {
             if (newFile.isDirectory) {
-                updateInMediaStore(oldPath , newPath)
+                updateInMediaStore(oldPath, newPath)
                 rescanPath(newPath) {
                     runOnUiThread {
                         callback?.invoke(true)
@@ -715,7 +715,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                 if (!baseConfig.keepLastModified) {
                     newFile.setLastModified(System.currentTimeMillis())
                 }
-                updateInMediaStore(oldPath , newPath)
+                updateInMediaStore(oldPath, newPath)
                 scanPathsRecursively(arrayListOf(newPath)) {
                     runOnUiThread {
                         callback?.invoke(true)
