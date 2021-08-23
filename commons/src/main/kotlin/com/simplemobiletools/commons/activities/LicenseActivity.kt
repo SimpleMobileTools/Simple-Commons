@@ -8,7 +8,7 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.License
 import kotlinx.android.synthetic.main.activity_license.*
-import kotlinx.android.synthetic.main.license_item.*
+import kotlinx.android.synthetic.main.license_item.view.*
 import java.util.*
 
 class LicenseActivity : BaseSimpleActivity() {

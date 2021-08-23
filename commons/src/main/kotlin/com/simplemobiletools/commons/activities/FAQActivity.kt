@@ -12,7 +12,7 @@ import com.simplemobiletools.commons.helpers.APP_ICON_IDS
 import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
 import com.simplemobiletools.commons.models.FAQItem
 import kotlinx.android.synthetic.main.activity_faq.*
-import kotlinx.android.synthetic.main.faq_item.*
+import kotlinx.android.synthetic.main.faq_item.view.*
 import java.util.*
 
 class FAQActivity : BaseSimpleActivity() {
