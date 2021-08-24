@@ -20,9 +20,7 @@ class BiometricIdTab(context: Context, attrs: AttributeSet) : ConstraintLayout(c
         context.updateTextColors(biometric_lock_holder)
 
         open_biometric_dialog.setOnClickListener {
-            biometricPromptHost.activity?.showBiometricPrompt {
-                hashListener.receivedHash("", PROTECTION_FINGERPRINT)
-            }
+            biometricPromptHost.activity?.showBiometricPrompt(successCallback = hashListener::receivedHash)
         }
     }
 

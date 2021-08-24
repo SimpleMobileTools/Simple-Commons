@@ -863,14 +863,41 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
     }
 }
 
-fun FragmentActivity.showBiometricPrompt(successCallback: (BiometricPrompt.AuthenticationResult) -> Unit) {
+fun FragmentActivity.performSecurityCheck(
+    protectionType: Int,
+    requiredHash: String,
+    successCallback: ((String, Int) -> Unit)? = null,
+    failureCallback: (() -> Unit)? = null
+) {
+    if (protectionType == PROTECTION_FINGERPRINT && isTargetSdkVersion30Plus()) {
+        showBiometricPrompt(successCallback, failureCallback)
+    } else {
+        SecurityDialog(
+            activity = this,
+            requiredHash = requiredHash,
+            showTabIndex = protectionType,
+            callback = { hash, type, success ->
+                if (success) {
+                    successCallback?.invoke(hash, type)
+                } else {
+                    failureCallback?.invoke()
+                }
+            }
+        )
+    }
+}
+
+fun FragmentActivity.showBiometricPrompt(
+    successCallback: ((String, Int) -> Unit)? = null,
+    failureCallback: (() -> Unit)? = null
+) {
     Class2BiometricAuthPrompt.Builder(getText(R.string.authenticate), getText(R.string.cancel))
         .build()
         .startAuthentication(
             AuthPromptHost(this),
             object : AuthPromptCallback() {
                 override fun onAuthenticationSucceeded(activity: FragmentActivity?, result: BiometricPrompt.AuthenticationResult) {
-                    successCallback(result)
+                    successCallback?.invoke("", PROTECTION_FINGERPRINT)
                 }
 
                 override fun onAuthenticationError(activity: FragmentActivity?, errorCode: Int, errString: CharSequence) {
@@ -878,10 +905,12 @@ fun FragmentActivity.showBiometricPrompt(successCallback: (BiometricPrompt.Authe
                     if (!isCanceledByUser) {
                         toast(errString.toString())
                     }
+                    failureCallback?.invoke()
                 }
 
                 override fun onAuthenticationFailed(activity: FragmentActivity?) {
                     toast(R.string.authentication_failed)
+                    failureCallback?.invoke()
                 }
             }
         )
