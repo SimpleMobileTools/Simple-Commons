@@ -340,12 +340,12 @@
     <string name="insert_pattern">Wprowadź wzór</string>
     <string name="wrong_pattern">Nieprawidłowy wzór</string>
     <string name="repeat_pattern">Wprowadź wzór ponownie</string>
-    <string name="biometrics">Biometrics</string>
+    <string name="biometrics">Biometria</string>
     <string name="fingerprint">Odcisk palca</string>
     <string name="add_fingerprint">Dodaj odcisk palca</string>
     <string name="place_finger">Przyłóż palec do czytnika</string>
-    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
-    <string name="authenticate">Authenticate</string>
+    <string name="open_biometric_dialog">Otwórz okno weryfikacji biometrycznej</string>
+    <string name="authenticate">Uwierzytelnij</string>
     <string name="authentication_failed">Uwierzytelnianie nie powiodło się.</string>
     <string name="authentication_blocked">Uwierzytelnianie zablokowane. Spróbuj ponownie za chwilę.</string>
     <string name="no_fingerprints_registered">Nie masz zarejestrowanych odcisków palców. Dodaj je w ustawieniach systemowych.</string>
