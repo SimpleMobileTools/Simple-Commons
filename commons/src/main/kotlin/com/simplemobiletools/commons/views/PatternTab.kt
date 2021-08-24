@@ -5,6 +5,7 @@ import android.os.Handler
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.widget.RelativeLayout
+import androidx.biometric.auth.AuthPromptHost
 import com.andrognito.patternlockview.PatternLockView
 import com.andrognito.patternlockview.listener.PatternLockViewListener
 import com.andrognito.patternlockview.utils.PatternLockUtils
@@ -52,7 +53,7 @@ class PatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(context
         })
     }
 
-    override fun initTab(requiredHash: String, listener: HashListener, scrollView: MyScrollView) {
+    override fun initTab(requiredHash: String, listener: HashListener, scrollView: MyScrollView, biometricPromptHost: AuthPromptHost) {
         this.requiredHash = requiredHash
         this.scrollView = scrollView
         hash = requiredHash

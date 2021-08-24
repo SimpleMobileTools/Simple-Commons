@@ -336,9 +336,12 @@
     <string name="insert_pattern">Унесите шаблон</string>
     <string name="wrong_pattern">Погрешан шаблон</string>
     <string name="repeat_pattern">Поновите шаблон</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Отисак прста</string>
     <string name="add_fingerprint">Додајте отисак прста</string>
     <string name="place_finger">Молимо вас ставите ваш прст на сензор за отисак прста</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Провера идентитета неуспешна</string>
     <string name="authentication_blocked">Провера идентитета блокирана, покушајте поново касније</string>
     <string name="no_fingerprints_registered">Немате регистрованих отисака прстију, додајте неке у Подешавања вашег уређаја</string>

@@ -337,9 +337,12 @@
     <string name="insert_pattern">Sartu eredua</string>
     <string name="wrong_pattern">Okerreko eredua</string>
     <string name="repeat_pattern">Errepikatu eredua</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Hatz-marka</string>
     <string name="add_fingerprint">Gehitu hatz-marka</string>
     <string name="place_finger">Jarri hatza hatz-markaren sensorean</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Autentifikazioak huts egin du</string>
     <string name="authentication_blocked">Autentifikazioa blokeatuta, saiatu berriro geroago</string>
     <string name="no_fingerprints_registered">Ez duzu hatz-markarik erregistratu, gehitu batzuk zeure gailuko ezarpenetan</string>

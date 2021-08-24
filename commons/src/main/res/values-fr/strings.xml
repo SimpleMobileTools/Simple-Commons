@@ -339,9 +339,12 @@
     <string name="insert_pattern">Dessiner un schéma</string>
     <string name="wrong_pattern">Schéma incorrect</string>
     <string name="repeat_pattern">Redessiner le schéma</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Empreinte</string>
     <string name="add_fingerprint">Capturer une empreinte</string>
     <string name="place_finger">Veuillez placer votre doigt sur le capteur d\'empreinte digitale</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Échec de l\'identification</string>
     <string name="authentication_blocked">Identification bloquée. Veuillez réessayer dans quelques instants.</string>
     <string name="no_fingerprints_registered">Vous n\'avez aucune empreinte digitale enregistrée. Veuillez en ajouter depuis les paramètres de votre appareil</string>

@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.views
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.RelativeLayout
+import androidx.biometric.auth.AuthPromptHost
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.PROTECTION_PIN
@@ -38,7 +39,7 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
         pin_ok.applyColorFilter(context.baseConfig.textColor)
     }
 
-    override fun initTab(requiredHash: String, listener: HashListener, scrollView: MyScrollView) {
+    override fun initTab(requiredHash: String, listener: HashListener, scrollView: MyScrollView, biometricPromptHost: AuthPromptHost) {
         this.requiredHash = requiredHash
         hash = requiredHash
         hashListener = listener
@@ -98,7 +99,7 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
         messageDigest.update(pin.toByteArray(charset("UTF-8")))
         val digest = messageDigest.digest()
         val bigInteger = BigInteger(1, digest)
-        return String.format(Locale.getDefault(), "%0${digest.size * 2}x", bigInteger).toLowerCase()
+        return String.format(Locale.getDefault(), "%0${digest.size * 2}x", bigInteger).lowercase(Locale.getDefault())
     }
 
     override fun visibilityChanged(isVisible: Boolean) {}

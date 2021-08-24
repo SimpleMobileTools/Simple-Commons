@@ -342,9 +342,12 @@
     <string name="insert_pattern">Установить ключ</string>
     <string name="wrong_pattern">Неправильный графический ключ</string>
     <string name="repeat_pattern">Повторите ключ</string>
+    <string name="biometrics">Биометрические данные</string>
     <string name="fingerprint">Отпечаток пальца</string>
     <string name="add_fingerprint">Добавить отпечаток</string>
     <string name="place_finger">Поместите палец на датчик отпечатков</string>
+    <string name="open_biometric_dialog">Открыть диалог подтверджения биометрических данных</string>
+    <string name="authenticate">Авторизуйтесь</string>
     <string name="authentication_failed">Ошибка авторизации</string>
     <string name="authentication_blocked">Авторизация заблокирована, повторите попытку через некоторое время</string>
     <string name="no_fingerprints_registered">Отсутствуют зарегистрированные отпечатки пальцев, добавьте их в настройках устройства</string>

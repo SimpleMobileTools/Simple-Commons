@@ -337,9 +337,12 @@
     <string name="insert_pattern">Inserisci una sequenza</string>
     <string name="wrong_pattern">Sequenza errata</string>
     <string name="repeat_pattern">Ripeti la sequenza</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Impronta</string>
     <string name="add_fingerprint">Aggiungi un\'impronta</string>
     <string name="place_finger">Appoggia il dito sul sensore di impronte digitali</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Autenticazione fallita</string>
     <string name="authentication_blocked">Autenticazione bloccata, riprovare fra qualche momento</string>
     <string name="no_fingerprints_registered">Non ci sono impronte registrate, aggiungerne alcune nelle impostazioni del tuo dispositivo</string>

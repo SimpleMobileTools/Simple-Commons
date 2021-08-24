@@ -342,9 +342,12 @@
     <string name="insert_pattern">Zadejte vzor</string>
     <string name="wrong_pattern">Nesprávný vzor</string>
     <string name="repeat_pattern">Opakovat vzor</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Otisk</string>
     <string name="add_fingerprint">Potvrďte otisk prstu</string>
     <string name="place_finger">Prosím přiložte prst na senzor otisku prstu</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Ověření selhalo</string>
     <string name="authentication_blocked">Ověření je blokováno, zkuste to prosím později</string>
     <string name="no_fingerprints_registered">Nejsou registrovány žádné otisky prstu, prosím přidejte nějaké v nastavení svého zařízení</string>

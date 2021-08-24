@@ -331,9 +331,12 @@
     <string name="insert_pattern">패턴 입력</string>
     <string name="wrong_pattern">패턴이 잘못 입력되었습니다.</string>
     <string name="repeat_pattern">패턴 확인</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">지문</string>
     <string name="add_fingerprint">지문 추가</string>
     <string name="place_finger">지문 센서에 손가락을 올려주세요.</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">인증 실패</string>
     <string name="authentication_blocked">인증이 차단 되었습니다. 잠시 후 다시 시도하십시오.</string>
     <string name="no_fingerprints_registered">등록 된 지문이 없습니다. 기기의 설정에서 지문을 추가하십시오.</string>

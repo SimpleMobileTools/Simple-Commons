@@ -337,9 +337,12 @@
     <string name="insert_pattern">Rita mönster</string>
     <string name="wrong_pattern">Du har ritat fel mönster</string>
     <string name="repeat_pattern">Upprepa mönster</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Fingeravtryck</string>
     <string name="add_fingerprint">Lägg till fingeravtryck</string>
     <string name="place_finger">Placera fingret på fingeravtrycksläsaren</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Autentiseringen misslyckades</string>
     <string name="authentication_blocked">Autentisering blockeras, försök igen om en stund</string>
     <string name="no_fingerprints_registered">Du har inga registrerade fingeravtryck, lägg till några i Inställningarna på din enhet</string>

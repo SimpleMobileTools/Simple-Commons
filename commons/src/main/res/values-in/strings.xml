@@ -333,9 +333,12 @@
     <string name="insert_pattern">Masukkan pola</string>
     <string name="wrong_pattern">Pola salah</string>
     <string name="repeat_pattern">Ulangi pola</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Sidik jari</string>
     <string name="add_fingerprint">Tambah sidik jari</string>
     <string name="place_finger">Tempatkan jari anda pada sensor sidik jari</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Autentikasi gagal</string>
     <string name="authentication_blocked">Autentikasi diblokir, silakan coba lagi nanti</string>
     <string name="no_fingerprints_registered">Anda belum mendaftarkan sidik jari, silakan tambahkan di Pengaturan perangkat anda</string>
