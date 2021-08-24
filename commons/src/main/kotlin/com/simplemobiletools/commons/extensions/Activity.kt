@@ -8,7 +8,6 @@ import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.media.RingtoneManager
 import android.net.Uri
-import android.os.Build
 import android.os.TransactionTooLargeException
 import android.provider.ContactsContract
 import android.provider.DocumentsContract
@@ -23,9 +22,12 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.biometric.BiometricPrompt
+import androidx.biometric.auth.AuthPromptCallback
+import androidx.biometric.auth.AuthPromptHost
+import androidx.biometric.auth.Class2BiometricAuthPrompt
 import androidx.documentfile.provider.DocumentFile
 import androidx.fragment.app.FragmentActivity
 import com.simplemobiletools.commons.R
@@ -859,6 +861,30 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
             null
         }
     }
+}
+
+fun FragmentActivity.showBiometricPrompt(successCallback: (BiometricPrompt.AuthenticationResult) -> Unit) {
+    Class2BiometricAuthPrompt.Builder(getText(R.string.authenticate), getText(R.string.cancel))
+        .build()
+        .startAuthentication(
+            AuthPromptHost(this),
+            object : AuthPromptCallback() {
+                override fun onAuthenticationSucceeded(activity: FragmentActivity?, result: BiometricPrompt.AuthenticationResult) {
+                    successCallback(result)
+                }
+
+                override fun onAuthenticationError(activity: FragmentActivity?, errorCode: Int, errString: CharSequence) {
+                    val isCanceledByUser = errorCode == BiometricPrompt.ERROR_NEGATIVE_BUTTON || errorCode == BiometricPrompt.ERROR_USER_CANCELED
+                    if (!isCanceledByUser) {
+                        toast(errString.toString())
+                    }
+                }
+
+                override fun onAuthenticationFailed(activity: FragmentActivity?) {
+                    toast(R.string.authentication_failed)
+                }
+            }
+        )
 }
 
 fun FragmentActivity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
