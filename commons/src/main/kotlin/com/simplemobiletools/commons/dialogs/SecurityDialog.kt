@@ -50,8 +50,9 @@ class SecurityDialog(
             if (showTabIndex == SHOW_ALL_TABS) {
                 val textColor = context.baseConfig.textColor
 
-                if (!shouldShowBiometricIdTab()) {
-                    dialog_tab_layout.removeTabAt(PROTECTION_FINGERPRINT)
+                if (shouldShowBiometricIdTab()) {
+                    val tabTitle = if (context.isTargetSdkVersion30Plus()) R.string.biometrics else R.string.fingerprint
+                    dialog_tab_layout.addTab(dialog_tab_layout.newTab().setText(tabTitle), PROTECTION_FINGERPRINT)
                 }
 
                 dialog_tab_layout.setTabTextColors(textColor, textColor)
