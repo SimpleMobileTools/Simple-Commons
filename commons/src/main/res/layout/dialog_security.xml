@@ -31,7 +31,7 @@
                 android:id="@+id/dialog_tab_fingerprint"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/fingerprint"/>
+                android:text="@string/biometrics"/>
 
         </com.google.android.material.tabs.TabLayout>
 
