@@ -63,10 +63,18 @@ fun Activity.appLaunched(appId: String) {
             }
 
             val defaultClassName = "${baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity"
-            packageManager.setComponentEnabledSetting(ComponentName(baseConfig.appId, defaultClassName), PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, PackageManager.DONT_KILL_APP)
+            packageManager.setComponentEnabledSetting(
+                ComponentName(baseConfig.appId, defaultClassName),
+                PackageManager.COMPONENT_ENABLED_STATE_DEFAULT,
+                PackageManager.DONT_KILL_APP
+            )
 
             val orangeClassName = "${baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity.Orange"
-            packageManager.setComponentEnabledSetting(ComponentName(baseConfig.appId, orangeClassName), PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
+            packageManager.setComponentEnabledSetting(
+                ComponentName(baseConfig.appId, orangeClassName),
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                PackageManager.DONT_KILL_APP
+            )
 
             baseConfig.appIconColor = primaryColor
             baseConfig.lastIconColor = primaryColor
@@ -348,7 +356,13 @@ fun Activity.openEditorIntent(path: String, forceChooser: Boolean, applicationId
     }
 }
 
-fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: String, forceMimeType: String = "", extras: HashMap<String, Boolean> = HashMap()) {
+fun Activity.openPathIntent(
+    path: String,
+    forceChooser: Boolean,
+    applicationId: String,
+    forceMimeType: String = "",
+    extras: HashMap<String, Boolean> = HashMap()
+) {
     ensureBackgroundThread {
         val newUri = getFinalUriFromPath(path, applicationId) ?: return@ensureBackgroundThread
         val mimeType = if (forceMimeType.isNotEmpty()) forceMimeType else getUriMimeType(path, newUri)
@@ -911,7 +925,14 @@ fun Activity.updateSharedTheme(sharedTheme: SharedTheme) {
     }
 }
 
-fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0, titleText: String = "", cancelOnTouchOutside: Boolean = true, callback: (() -> Unit)? = null) {
+fun Activity.setupDialogStuff(
+    view: View,
+    dialog: AlertDialog,
+    titleId: Int = 0,
+    titleText: String = "",
+    cancelOnTouchOutside: Boolean = true,
+    callback: (() -> Unit)? = null
+) {
     if (isDestroyed || isFinishing) {
         return
     }
@@ -936,15 +957,22 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
         }
     }
 
+    // if we use the same primary and background color, use the text color for dialog confirmation buttons
+    val dialogButtonColor = if (adjustedPrimaryColor == baseConfig.backgroundColor) {
+        baseConfig.textColor
+    } else {
+        adjustedPrimaryColor
+    }
+
     dialog.apply {
         setView(view)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         setCustomTitle(title)
         setCanceledOnTouchOutside(cancelOnTouchOutside)
         show()
-        getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(adjustedPrimaryColor)
-        getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(adjustedPrimaryColor)
-        getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(adjustedPrimaryColor)
+        getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(dialogButtonColor)
+        getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(dialogButtonColor)
+        getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(dialogButtonColor)
 
         val bgDrawable = resources.getColoredDrawableWithColor(R.drawable.dialog_bg, baseConfig.backgroundColor)
         window?.setBackgroundDrawable(bgDrawable)
@@ -952,14 +980,18 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
     callback?.invoke()
 }
 
-fun Activity.showPickSecondsDialogHelper(curMinutes: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false, showDuringDayOption: Boolean = false,
-                                         cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
+fun Activity.showPickSecondsDialogHelper(
+    curMinutes: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false, showDuringDayOption: Boolean = false,
+    cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit
+) {
     val seconds = if (curMinutes == -1) curMinutes else curMinutes * 60
     showPickSecondsDialog(seconds, isSnoozePicker, showSecondsAtCustomDialog, showDuringDayOption, cancelCallback, callback)
 }
 
-fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false, showDuringDayOption: Boolean = false,
-                                   cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
+fun Activity.showPickSecondsDialog(
+    curSeconds: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false, showDuringDayOption: Boolean = false,
+    cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit
+) {
     hideKeyboard()
     val seconds = TreeSet<Int>()
     seconds.apply {
@@ -1001,9 +1033,11 @@ fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = fa
                 }
             }
             -3 -> {
-                TimePickerDialog(this, getDialogTheme(),
+                TimePickerDialog(
+                    this, getDialogTheme(),
                     { view, hourOfDay, minute -> callback(hourOfDay * -3600 + minute * -60) },
-                    curSeconds / 3600, curSeconds % 3600, baseConfig.use24HourFormat).show()
+                    curSeconds / 3600, curSeconds % 3600, baseConfig.use24HourFormat
+                ).show()
             }
             else -> {
                 callback(it as Int)
