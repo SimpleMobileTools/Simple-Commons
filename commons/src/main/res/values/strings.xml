@@ -340,6 +340,8 @@
     <string name="fingerprint">Fingerprint</string>
     <string name="add_fingerprint">Add fingerprint</string>
     <string name="place_finger">Please place your finger on the fingerprint sensor</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Authentication failed</string>
     <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
     <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>

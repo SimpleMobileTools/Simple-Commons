@@ -340,6 +340,8 @@
     <string name="fingerprint">Parmak izi</string>
     <string name="add_fingerprint">Parmak izi ekle</string>
     <string name="place_finger">Lütfen parmağınızı parmak izi sensörüne yerleştirin</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Kimlik doğrulama başarısız</string>
     <string name="authentication_blocked">Kimlik doğrulama engellendi, lütfen birazdan tekrar deneyin</string>
     <string name="no_fingerprints_registered">Parmak iziniz kayıtlı değil, lütfen cihazınızın Ayarlar bölümünden ekleyin</string>

@@ -347,6 +347,8 @@
     <string name="fingerprint">Prstni odtis</string>
     <string name="add_fingerprint">Dodaj prstni odtis</string>
     <string name="place_finger">Postavite prst na čitalec prstnih odtisov</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Overitev ni uspela</string>
     <string name="authentication_blocked">Overitev je blokirana, prosimo počakajte trenutek</string>
     <string name="no_fingerprints_registered">Registrirali še niste nobenega prstnega odtisa. Prosimo, dodajte jih v nastavitvah naprave</string>

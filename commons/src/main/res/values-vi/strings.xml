@@ -340,6 +340,8 @@
     <string name="fingerprint">Vân tay</string>
     <string name="add_fingerprint">Thêm dấu vân tay</string>
     <string name="place_finger">Vui lòng đặt ngón tay của bạn trên cảm biến vân tay</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Quá trình xác thực đã thất bại</string>
     <string name="authentication_blocked">Xác thực bị chặn, vui lòng thử lại sau giây lát</string>
     <string name="no_fingerprints_registered">Bạn chưa đăng ký dấu vân tay, vui lòng thêm trong Cài đặt của thiết bị</string>

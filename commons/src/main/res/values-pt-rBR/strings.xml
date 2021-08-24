@@ -340,6 +340,8 @@
     <string name="fingerprint">Digital</string>
     <string name="add_fingerprint">Adicionar digital</string>
     <string name="place_finger">Posicione seu dedo sobre o leitor de digitais</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Autenticação falhou</string>
     <string name="authentication_blocked">Autenticação bloqueada, favor tentar novamente em instantes</string>
     <string name="no_fingerprints_registered">Você não tem digitais cadastradas. Favor adiconar alguma nas Configurações do seu dispositivo</string>

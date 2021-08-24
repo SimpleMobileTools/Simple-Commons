@@ -343,6 +343,8 @@
     <string name="fingerprint">Odcisk palca</string>
     <string name="add_fingerprint">Dodaj odcisk palca</string>
     <string name="place_finger">Przyłóż palec do czytnika</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Uwierzytelnianie nie powiodło się.</string>
     <string name="authentication_blocked">Uwierzytelnianie zablokowane. Spróbuj ponownie za chwilę.</string>
     <string name="no_fingerprints_registered">Nie masz zarejestrowanych odcisków palców. Dodaj je w ustawieniach systemowych.</string>

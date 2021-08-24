@@ -8,6 +8,7 @@ import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.media.RingtoneManager
 import android.net.Uri
+import android.os.Build
 import android.os.TransactionTooLargeException
 import android.provider.ContactsContract
 import android.provider.DocumentsContract
@@ -22,9 +23,11 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.documentfile.provider.DocumentFile
+import androidx.fragment.app.FragmentActivity
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.dialogs.*
@@ -63,10 +66,18 @@ fun Activity.appLaunched(appId: String) {
             }
 
             val defaultClassName = "${baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity"
-            packageManager.setComponentEnabledSetting(ComponentName(baseConfig.appId, defaultClassName), PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, PackageManager.DONT_KILL_APP)
+            packageManager.setComponentEnabledSetting(
+                ComponentName(baseConfig.appId, defaultClassName),
+                PackageManager.COMPONENT_ENABLED_STATE_DEFAULT,
+                PackageManager.DONT_KILL_APP
+            )
 
             val orangeClassName = "${baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity.Orange"
-            packageManager.setComponentEnabledSetting(ComponentName(baseConfig.appId, orangeClassName), PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
+            packageManager.setComponentEnabledSetting(
+                ComponentName(baseConfig.appId, orangeClassName),
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                PackageManager.DONT_KILL_APP
+            )
 
             baseConfig.appIconColor = primaryColor
             baseConfig.lastIconColor = primaryColor
@@ -348,7 +359,13 @@ fun Activity.openEditorIntent(path: String, forceChooser: Boolean, applicationId
     }
 }
 
-fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: String, forceMimeType: String = "", extras: HashMap<String, Boolean> = HashMap()) {
+fun Activity.openPathIntent(
+    path: String,
+    forceChooser: Boolean,
+    applicationId: String,
+    forceMimeType: String = "",
+    extras: HashMap<String, Boolean> = HashMap()
+) {
     ensureBackgroundThread {
         val newUri = getFinalUriFromPath(path, applicationId) ?: return@ensureBackgroundThread
         val mimeType = if (forceMimeType.isNotEmpty()) forceMimeType else getUriMimeType(path, newUri)
@@ -395,7 +412,7 @@ fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountH
         Intent(action).apply {
             data = Uri.fromParts("tel", recipient, null)
 
-            if (handle != null && isMarshmallowPlus()) {
+            if (isMarshmallowPlus() && handle != null) {
                 putExtra(TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, handle)
             }
 
@@ -844,9 +861,9 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
     }
 }
 
-fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
+fun FragmentActivity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
     if (baseConfig.isHiddenPasswordProtectionOn) {
-        SecurityDialog(this, baseConfig.hiddenPasswordHash, baseConfig.hiddenProtectionType) { hash, type, success ->
+        SecurityDialog(this, baseConfig.hiddenPasswordHash, baseConfig.hiddenProtectionType) { _, _, success ->
             if (success) {
                 callback()
             }
@@ -856,9 +873,9 @@ fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
     }
 }
 
-fun Activity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
+fun FragmentActivity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
     if (baseConfig.isAppPasswordProtectionOn) {
-        SecurityDialog(this, baseConfig.appPasswordHash, baseConfig.appProtectionType) { hash, type, success ->
+        SecurityDialog(this, baseConfig.appPasswordHash, baseConfig.appProtectionType) { _, _, success ->
             callback(success)
         }
     } else {
@@ -866,9 +883,9 @@ fun Activity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
     }
 }
 
-fun Activity.handleDeletePasswordProtection(callback: () -> Unit) {
+fun FragmentActivity.handleDeletePasswordProtection(callback: () -> Unit) {
     if (baseConfig.isDeletePasswordProtectionOn) {
-        SecurityDialog(this, baseConfig.deletePasswordHash, baseConfig.deleteProtectionType) { hash, type, success ->
+        SecurityDialog(this, baseConfig.deletePasswordHash, baseConfig.deleteProtectionType) { _, _, success ->
             if (success) {
                 callback()
             }
@@ -878,9 +895,9 @@ fun Activity.handleDeletePasswordProtection(callback: () -> Unit) {
     }
 }
 
-fun Activity.handleLockedFolderOpening(path: String, callback: (success: Boolean) -> Unit) {
+fun FragmentActivity.handleLockedFolderOpening(path: String, callback: (success: Boolean) -> Unit) {
     if (baseConfig.isFolderProtected(path)) {
-        SecurityDialog(this, baseConfig.getFolderProtectionHash(path), baseConfig.getFolderProtectionType(path)) { hash, type, success ->
+        SecurityDialog(this, baseConfig.getFolderProtectionHash(path), baseConfig.getFolderProtectionType(path)) { _, _, success ->
             callback(success)
         }
     } else {
@@ -911,7 +928,14 @@ fun Activity.updateSharedTheme(sharedTheme: SharedTheme) {
     }
 }
 
-fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0, titleText: String = "", cancelOnTouchOutside: Boolean = true, callback: (() -> Unit)? = null) {
+fun Activity.setupDialogStuff(
+    view: View,
+    dialog: AlertDialog,
+    titleId: Int = 0,
+    titleText: String = "",
+    cancelOnTouchOutside: Boolean = true,
+    callback: (() -> Unit)? = null
+) {
     if (isDestroyed || isFinishing) {
         return
     }
@@ -952,14 +976,18 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
     callback?.invoke()
 }
 
-fun Activity.showPickSecondsDialogHelper(curMinutes: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false, showDuringDayOption: Boolean = false,
-                                         cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
+fun Activity.showPickSecondsDialogHelper(
+    curMinutes: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false, showDuringDayOption: Boolean = false,
+    cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit
+) {
     val seconds = if (curMinutes == -1) curMinutes else curMinutes * 60
     showPickSecondsDialog(seconds, isSnoozePicker, showSecondsAtCustomDialog, showDuringDayOption, cancelCallback, callback)
 }
 
-fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false, showDuringDayOption: Boolean = false,
-                                   cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
+fun Activity.showPickSecondsDialog(
+    curSeconds: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false, showDuringDayOption: Boolean = false,
+    cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit
+) {
     hideKeyboard()
     val seconds = TreeSet<Int>()
     seconds.apply {
@@ -1001,9 +1029,11 @@ fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = fa
                 }
             }
             -3 -> {
-                TimePickerDialog(this, getDialogTheme(),
+                TimePickerDialog(
+                    this, getDialogTheme(),
                     { view, hourOfDay, minute -> callback(hourOfDay * -3600 + minute * -60) },
-                    curSeconds / 3600, curSeconds % 3600, baseConfig.use24HourFormat).show()
+                    curSeconds / 3600, curSeconds % 3600, baseConfig.use24HourFormat
+                ).show()
             }
             else -> {
                 callback(it as Int)

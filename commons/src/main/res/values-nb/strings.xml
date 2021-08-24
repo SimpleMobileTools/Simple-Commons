@@ -340,6 +340,8 @@
     <string name="fingerprint">Fingeravtrykk</string>
     <string name="add_fingerprint">Legg til fingeravtrykk</string>
     <string name="place_finger">Plasser fingeren på fingeravtrykksensoren</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Autentisering feilet</string>
     <string name="authentication_blocked">Autentisering blokkert, prøv igjen</string>
     <string name="no_fingerprints_registered">Du har ingen fingeravtrykk registrert, legg til i enhetens innstillinger</string>

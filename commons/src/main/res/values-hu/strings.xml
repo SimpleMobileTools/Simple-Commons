@@ -339,6 +339,8 @@
     <string name="fingerprint">Ujjlenyomat</string>
     <string name="add_fingerprint">Ujjlenyomat hozzáadása</string>
     <string name="place_finger">Helyezze az ujját az ujjlenyomat érzékelőre</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Sikertelen hitelesítés</string>
     <string name="authentication_blocked">A hitelesítés blokkolva, próbálkozzon újra egy kicsit később</string>
     <string name="no_fingerprints_registered">Nincsenek regisztrált ujjlenyomatok, kérjük, adjon hozzá néhányat a készülék Beállításaiban</string>

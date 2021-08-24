@@ -32,6 +32,7 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.biometric.BiometricManager
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.exifinterface.media.ExifInterface
@@ -150,7 +151,16 @@ val Context.sdCardPath: String get() = baseConfig.sdCardPath
 val Context.internalStoragePath: String get() = baseConfig.internalStoragePath
 val Context.otgPath: String get() = baseConfig.OTGPath
 
+val Context.targetSdkVersion: Int get() = applicationInfo.targetSdkVersion
+
+fun Context.isTargetSdkVersion30Plus(): Boolean = targetSdkVersion >= Build.VERSION_CODES.R
+
 fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHardwarePresent()
+
+fun Context.isBiometricIdAvailable(): Boolean = when (BiometricManager.from(this).canAuthenticate(BiometricManager.Authenticators.BIOMETRIC_WEAK)) {
+    BiometricManager.BIOMETRIC_SUCCESS, BiometricManager.BIOMETRIC_STATUS_UNKNOWN -> true
+    else -> false
+}
 
 fun Context.getLatestMediaId(uri: Uri = Files.getContentUri("external")): Long {
     val projection = arrayOf(
@@ -900,12 +910,14 @@ fun Context.getMediaStoreLastModified(path: String): Long {
 
 fun Context.getStringsPackageName() = getString(R.string.package_name)
 
-fun Context.getFontSizeText() = getString(when (baseConfig.fontSize) {
-    FONT_SIZE_SMALL -> R.string.small
-    FONT_SIZE_MEDIUM -> R.string.medium
-    FONT_SIZE_LARGE -> R.string.large
-    else -> R.string.extra_large
-})
+fun Context.getFontSizeText() = getString(
+    when (baseConfig.fontSize) {
+        FONT_SIZE_SMALL -> R.string.small
+        FONT_SIZE_MEDIUM -> R.string.medium
+        FONT_SIZE_LARGE -> R.string.large
+        else -> R.string.extra_large
+    }
+)
 
 fun Context.getTextSize() = when (baseConfig.fontSize) {
     FONT_SIZE_SMALL -> resources.getDimension(R.dimen.smaller_text_size)

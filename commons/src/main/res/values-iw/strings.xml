@@ -340,6 +340,8 @@
     <string name="fingerprint">טביעת אצבע</string>
     <string name="add_fingerprint">הוספת טביעת אצבע</string>
     <string name="place_finger">נא להניח את טביעת האצבע על החיישן</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">זיהוי נכשל</string>
     <string name="authentication_blocked">זיהוי חסוי. נא לנסות שוב מאוחר יותר</string>
     <string name="no_fingerprints_registered">אין טביעות אצבע רשומות. נא להוסיף בהגדרות המכשיר</string>

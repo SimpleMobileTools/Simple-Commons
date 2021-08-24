@@ -340,6 +340,8 @@
     <string name="fingerprint">اثر انگشت</string>
     <string name="add_fingerprint">افزودن اثر انگشت</string>
     <string name="place_finger">لطفا انگشت خود را روی حسگر اثر انگشت قرار دهید</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">احراز هویت ناموفق</string>
     <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
     <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>

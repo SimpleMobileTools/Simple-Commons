@@ -335,6 +335,8 @@
     <string name="fingerprint">指紋</string>
     <string name="add_fingerprint">指紋を追加</string>
     <string name="place_finger">指紋センサーに指を置いてください</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">認証に失敗しました</string>
     <string name="authentication_blocked">認証がブロックされました、しばらくしてからもう一度お試しください</string>
     <string name="no_fingerprints_registered">指紋がまだ登録されていません、お使いの端末の設定でいくつか追加してください</string>

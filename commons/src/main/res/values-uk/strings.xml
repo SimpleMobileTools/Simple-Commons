@@ -340,6 +340,8 @@
     <string name="fingerprint">Відбиток пальця</string>
     <string name="add_fingerprint">Додати відбиток пальця</string>
     <string name="place_finger">Помістіть ваш палець на сканер відбитка пальця</string>
+    <string name="open_biometric_dialog">Відкрити діалог підтвердження біометричних даних</string>
+    <string name="authenticate">Авторизуйтеся</string>
     <string name="authentication_failed">Помилка автентифікації</string>
     <string name="authentication_blocked">Автентифікацію заблоковано, спробуйте це раз</string>
     <string name="no_fingerprints_registered">У вас немає зареєстрованих відбитків пальця, додайте їх у Налаштуваннях вашого пристрою</string>

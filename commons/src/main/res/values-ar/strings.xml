@@ -338,6 +338,8 @@
     <string name="fingerprint">البصمة</string>
     <string name="add_fingerprint">إضافة بصمة</string>
     <string name="place_finger">يرجى وضع إصبعك على مستشعر البصمة</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">فشلت المسابقة</string>
     <string name="authentication_blocked">تم حظر المصادقة ، يرجى المحاولة مره أخرى بعد قليل</string>
     <string name="no_fingerprints_registered">ليس لديك بصمات مسجلة ، يرجى إضافة بعضها في إعدادات جهازك</string>

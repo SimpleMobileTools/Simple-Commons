@@ -340,6 +340,8 @@
     <string name="fingerprint">Sormenjälki</string>
     <string name="add_fingerprint">Lisää sormenjälki</string>
     <string name="place_finger">Aseta sormi sormenjälkitunnistimelle</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Kirjautuminen epäonnistui</string>
     <string name="authentication_blocked">Kirjautuminen estetty, yritä myöhemmin uudelleen</string>
     <string name="no_fingerprints_registered">Sinulla ei ole tallennettuja sormenjälkiä, lisää niitä laitteesi asetuksista</string>

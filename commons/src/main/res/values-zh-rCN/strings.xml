@@ -336,6 +336,8 @@
     <string name="fingerprint">指纹</string>
     <string name="add_fingerprint">添加指纹</string>
     <string name="place_finger">请将手指放在指纹传感器上</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">验证失败</string>
     <string name="authentication_blocked">验证已被阻止，请稍后再试</string>
     <string name="no_fingerprints_registered">您还没有注册指纹，请先给您的设备添加一些指纹</string>

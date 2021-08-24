@@ -340,6 +340,8 @@
     <string name="fingerprint">Empremta digital</string>
     <string name="add_fingerprint">Afegeix Empremta digital</string>
     <string name="place_finger">Si us plau posa el teu dit al sensor d’empremta digital</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">L\'autenticació ha fallat</string>
     <string name="authentication_blocked">L\'autenticació està bloquejada. Prova-ho d’aquí un moment</string>
     <string name="no_fingerprints_registered">No tens empremtes digitals registrades. Afegeix-ne alguna a la configuració del dispositiu</string>
