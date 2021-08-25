@@ -7,13 +7,17 @@ import android.hardware.usb.UsbConstants
 import android.hardware.usb.UsbManager
 import android.media.MediaScannerConnection
 import android.net.Uri
+import android.os.Build
 import android.os.Environment
 import android.os.Handler
 import android.os.Looper
 import android.provider.DocumentsContract
 import android.provider.MediaStore.*
+import android.provider.OpenableColumns
 import android.text.TextUtils
+import androidx.annotation.RequiresApi
 import androidx.core.content.FileProvider
+import androidx.core.net.toUri
 import androidx.documentfile.provider.DocumentFile
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.*
@@ -139,6 +143,9 @@ fun Context.getInternalStoragePath() = if (File("/storage/emulated/0").exists())
 fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWith(sdCardPath)
 
 fun Context.isPathOnOTG(path: String) = otgPath.isNotEmpty() && path.startsWith(otgPath)
+
+fun Context.isAndroidDataRoot(path: String) = (path == (internalStoragePath.plus(ANDROID_DIR)) || path == otgPath.plus(ANDROID_DIR) || path == sdCardPath.plus(ANDROID_DIR))
+
 
 // no need to use DocumentFile if an SD card is set as the default storage
 fun Context.needsStupidWritePermissions(path: String) = (isPathOnSD(path) || isPathOnOTG(path)) && !isSDCardSetAsDefaultStorage()
@@ -436,6 +443,60 @@ fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSi
         val fileDirItem = FileDirItem(decodedPath, name, isDirectory, childrenCount, fileSize, lastModified)
         items.add(fileDirItem)
     }
+
+    callback(items)
+}
+
+const val MIME_TYPE_IS_DIRECTORY = "vnd.android.document/directory"
+
+@RequiresApi(Build.VERSION_CODES.O)
+fun Context.getStorageItems(path: String, shouldShowHidden: Boolean, getProperFileSize: Boolean, callback: (ArrayList<FileDirItem>) -> Unit) {
+    val items = ArrayList<FileDirItem>()
+    val treeUri = baseConfig.treeUri
+    val document = getFastDocumentFile(path)
+    val files = document?.listFiles()
+    val childrenUri  = try {
+         DocumentsContract.buildChildDocumentsUriUsingTree(treeUri.toUri(), document?.uri.toString())
+    } catch (e: Exception) {
+        showErrorToast(e)
+        baseConfig.treeUri = ""
+        null
+    }
+    if (childrenUri == null) {
+        callback(items)
+        return
+    }
+
+    contentResolver.query(childrenUri, null, null, null)
+        ?.use { cursor ->
+            val nameIndex = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
+            val mimeIndex = cursor.getColumnIndex("mime_type")
+            while (cursor.moveToNext()) {
+                val name = cursor.getString(nameIndex) ?: continue
+                if (!shouldShowHidden && name.startsWith(".")) {
+                    continue
+                }
+
+                val mimeType = cursor.getString(mimeIndex)
+                val isDirectory = mimeType == MIME_TYPE_IS_DIRECTORY
+
+                val fileSize = when {
+                    getProperFileSize -> 0L
+                    isDirectory -> 0L
+                    else -> 0L
+                }
+
+                val childrenCount = if (isDirectory) {
+                    0
+                } else {
+                    0
+                }
+
+                val lastModified = 0L
+                val fileDirItem = FileDirItem(path, name, isDirectory, childrenCount, fileSize, lastModified)
+                items.add(fileDirItem)
+            }
+        }
 
     callback(items)
 }

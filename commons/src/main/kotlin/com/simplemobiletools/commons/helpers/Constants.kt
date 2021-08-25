@@ -301,6 +301,9 @@ const val DATE_FORMAT_FOURTEEN = "yy/MM/dd"
 const val TIME_FORMAT_12 = "hh:mm a"
 const val TIME_FORMAT_24 = "HH:mm"
 
+//storage
+const val ANDROID_DIR = "/Android"
+
 val appIconColorStrings = arrayListOf(
     ".Red",
     ".Pink",

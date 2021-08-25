@@ -4,13 +4,13 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion propCompileSdkVersion
+    compileSdkVersion 30
 
     defaultConfig {
-        minSdkVersion propMinSdkVersion
-        targetSdkVersion propTargetSdkVersion
-        versionCode propVersionCode
-        versionName propVersionName
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0.0"
     }
 
     buildTypes {
@@ -47,4 +47,4 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
 }
 
-apply from: '../bintray-upload.gradle'
+//apply from: '../bintray-upload.gradle'

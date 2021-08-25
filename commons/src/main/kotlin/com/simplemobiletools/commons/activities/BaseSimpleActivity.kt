@@ -16,6 +16,7 @@ import android.os.Bundle
 import android.provider.DocumentsContract
 import android.provider.Settings
 import android.telecom.TelecomManager
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -54,6 +55,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     companion object {
         var funAfterSAFPermission: ((success: Boolean) -> Unit)? = null
+        private const val TAG = "BaseSimpleActivity"
     }
 
     abstract fun getAppIconIDs(): ArrayList<Int>
@@ -211,17 +213,20 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
         super.onActivityResult(requestCode, resultCode, resultData)
+        Log.i(TAG, "onActivityResult: checkedDocumentPath=$checkedDocumentPath")
         val partition = try {
             checkedDocumentPath.substring(9, 18)
         } catch (e: Exception) {
             ""
         }
+
+        Log.i(TAG, "onActivityResult: partition=$partition")
         val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
 
         if (requestCode == OPEN_DOCUMENT_TREE) {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
                 val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
-                if (isProperSDFolder(resultData.data!!) && isProperPartition) {
+                if (isAndroidDataRoot(checkedDocumentPath) || (isProperSDFolder(resultData.data!!) && isProperPartition)) {
                     if (resultData.dataString == baseConfig.OTGTreeUri) {
                         toast(R.string.sd_card_usb_same)
                         return
