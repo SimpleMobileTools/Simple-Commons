@@ -2,13 +2,14 @@ package com.simplemobiletools.commons.views
 
 import android.content.Context
 import android.content.res.ColorStateList
+import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.HorizontalScrollView
 import android.widget.LinearLayout
-import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.FileDirItem
@@ -23,6 +24,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
     private var isLayoutDirty = true
     private var isScrollToSelectedItemPending = false
     private var isFirstScroll = true
+    private var stickyRootInitialLeft = 0
 
     private val textColorStateList: ColorStateList
         get() = ColorStateList(
@@ -44,6 +46,45 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
         itemsLayout.setPaddingRelative(paddingStart, paddingTop, paddingEnd, paddingBottom)
         setPaddingRelative(0, 0, 0, 0)
         addView(itemsLayout, LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT))
+        onGlobalLayout {
+            stickyRootInitialLeft = if (itemsLayout.childCount > 0) {
+                itemsLayout.getChildAt(0).left
+            } else {
+                0
+            }
+        }
+    }
+
+    private fun recomputeStickyRootLocation(left: Int) {
+        stickyRootInitialLeft = left
+        handleRootStickiness(scrollX)
+    }
+
+    private fun handleRootStickiness(scrollX: Int) {
+        if (scrollX > stickyRootInitialLeft) {
+            stickRoot(scrollX - stickyRootInitialLeft)
+        } else {
+            freeRoot()
+        }
+    }
+
+    private fun freeRoot() {
+        if (itemsLayout.childCount > 0) {
+            itemsLayout.getChildAt(0).translationX = 0f
+        }
+    }
+
+    private fun stickRoot(translationX: Int) {
+        if (itemsLayout.childCount > 0) {
+            val root = itemsLayout.getChildAt(0)
+            root.translationX = translationX.toFloat()
+            ViewCompat.setTranslationZ(root, translationZ)
+        }
+    }
+
+    override fun onScrollChanged(scrollX: Int, scrollY: Int, oldScrollX: Int, oldScrollY: Int) {
+        super.onScrollChanged(scrollX, scrollY, oldScrollX, oldScrollY)
+        handleRootStickiness(scrollX)
     }
 
     override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
@@ -54,6 +95,8 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
             scrollToSelectedItem()
             isScrollToSelectedItemPending = false
         }
+
+        recomputeStickyRootLocation(left)
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -139,8 +182,14 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
 
             if (itemsLayout.childCount == 0) {
                 resources.apply {
-                    background = ContextCompat.getDrawable(context, R.drawable.button_background)
-                    background.applyColorFilter(textColor)
+                    val shapeDrawable = GradientDrawable()
+                    shapeDrawable.shape = GradientDrawable.RECTANGLE
+                    shapeDrawable.cornerRadius = getDimension(R.dimen.medium_margin)
+                    shapeDrawable.mutate()
+                    shapeDrawable.setColor(context.baseConfig.backgroundColor)
+                    shapeDrawable.setStroke(getDimensionPixelOffset(R.dimen.tiny_margin), textColorStateList)
+                    background = shapeDrawable
+                    elevation = getDimension(R.dimen.medium_margin)
                     val medium = getDimension(R.dimen.medium_margin).toInt()
                     setPadding(medium, medium, medium, medium)
                 }
