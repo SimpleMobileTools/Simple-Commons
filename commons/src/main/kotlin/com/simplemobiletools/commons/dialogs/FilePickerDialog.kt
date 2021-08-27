@@ -74,7 +74,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             .setOnKeyListener { dialogInterface, i, keyEvent ->
                 if (keyEvent.action == KeyEvent.ACTION_UP && i == KeyEvent.KEYCODE_BACK) {
                     val breadcrumbs = mDialogView.filepicker_breadcrumbs
-                    if (breadcrumbs.childCount > 1) {
+                    if (breadcrumbs.itemsCount > 1) {
                         breadcrumbs.removeBreadcrumb()
                         currPath = breadcrumbs.getLastItem().path.trimEnd('/')
                         tryUpdateItems()
@@ -296,7 +296,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                 tryUpdateItems()
             }
         } else {
-            val item = mDialogView.filepicker_breadcrumbs.getChildAt(id).tag as FileDirItem
+            val item = mDialogView.filepicker_breadcrumbs.getItem(id)
             if (currPath != item.path.trimEnd('/')) {
                 currPath = item.path
                 tryUpdateItems()
