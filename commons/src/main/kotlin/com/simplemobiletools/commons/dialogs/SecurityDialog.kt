@@ -40,7 +40,7 @@ class SecurityDialog(
             )
             viewPager.adapter = tabsAdapter
             viewPager.onPageChangeListener {
-                dialog_tab_layout.getTabAt(it)!!.select()
+                dialog_tab_layout.getTabAt(it)?.select()
             }
 
             viewPager.onGlobalLayout {
