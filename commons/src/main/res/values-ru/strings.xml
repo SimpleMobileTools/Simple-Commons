@@ -1,7 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Отмена</string>
-    <string name="nothing">Nothing</string>
+    <string name="nothing">Ничего</string>
     <string name="later">Позже</string>
     <string name="save_as">Сохранить как</string>
     <string name="file_saved">Файл сохранён</string>
@@ -296,7 +296,7 @@
     <string name="name">Имя</string>
     <string name="size">Размер</string>
     <string name="last_modified">Время изменения</string>
-    <string name="date_created">Дата создания</string>
+    <string name="date_created">Время создания</string>
     <string name="date_taken">Время создания</string>
     <string name="title">Название</string>
     <string name="filename">Имя файла</string>
@@ -347,7 +347,7 @@
     <string name="add_fingerprint">Добавить отпечаток</string>
     <string name="place_finger">Поместите палец на датчик отпечатков</string>
     <string name="open_biometric_dialog">Открыть диалог подтверджения биометрических данных</string>
-    <string name="authenticate">Авторизуйтесь</string>
+    <string name="authenticate">Авторизация</string>
     <string name="authentication_failed">Ошибка авторизации</string>
     <string name="authentication_blocked">Авторизация заблокирована, повторите попытку через некоторое время</string>
     <string name="no_fingerprints_registered">Отсутствуют зарегистрированные отпечатки пальцев, добавьте их в настройках устройства</string>
