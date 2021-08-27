@@ -2,13 +2,14 @@ package com.simplemobiletools.commons.views
 
 import android.content.Context
 import android.content.res.ColorStateList
-import android.graphics.drawable.GradientDrawable
+import android.graphics.drawable.ColorDrawable
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.HorizontalScrollView
 import android.widget.LinearLayout
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
@@ -25,6 +26,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
     private var isScrollToSelectedItemPending = false
     private var isFirstScroll = true
     private var stickyRootInitialLeft = 0
+    private var rootStartPadding = 0
 
     private val textColorStateList: ColorStateList
         get() = ColorStateList(
@@ -43,7 +45,8 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
         isHorizontalScrollBarEnabled = false
         itemsLayout = LinearLayout(context)
         itemsLayout.orientation = LinearLayout.HORIZONTAL
-        itemsLayout.setPaddingRelative(paddingStart, paddingTop, paddingEnd, paddingBottom)
+        rootStartPadding = paddingStart
+        itemsLayout.setPaddingRelative(0, paddingTop, paddingEnd, paddingBottom)
         setPaddingRelative(0, 0, 0, 0)
         addView(itemsLayout, LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT))
         onGlobalLayout {
@@ -122,7 +125,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
         val cnt = itemsLayout.childCount
         for (i in 0 until cnt) {
             val child = itemsLayout.getChildAt(i)
-            if ((child.tag as? FileDirItem)?.path == "$lastPath/") {
+            if ((child.tag as? FileDirItem)?.path?.trimEnd('/') == lastPath.trimEnd('/')) {
                 selectedIndex = i
                 break
             }
@@ -174,45 +177,61 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
     }
 
     private fun addBreadcrumb(item: FileDirItem, index: Int, addPrefix: Boolean) {
-        inflater.inflate(R.layout.breadcrumb_item, itemsLayout, false).apply {
-            var textToAdd = item.name
-            if (addPrefix) {
-                textToAdd = "> $textToAdd"
-            }
 
-            if (itemsLayout.childCount == 0) {
+        if (itemsLayout.childCount == 0) {
+            inflater.inflate(R.layout.breadcrumb_first_item, itemsLayout, false).apply {
                 resources.apply {
-                    val shapeDrawable = GradientDrawable()
-                    shapeDrawable.shape = GradientDrawable.RECTANGLE
-                    shapeDrawable.cornerRadius = getDimension(R.dimen.medium_margin)
-                    shapeDrawable.mutate()
-                    shapeDrawable.setColor(context.baseConfig.backgroundColor)
-                    shapeDrawable.setStroke(getDimensionPixelOffset(R.dimen.tiny_margin), textColorStateList)
-                    background = shapeDrawable
+                    breadcrumb_text.background = ContextCompat.getDrawable(context, R.drawable.button_background)
+                    breadcrumb_text.background.applyColorFilter(textColor)
                     elevation = getDimension(R.dimen.medium_margin)
+                    background = ColorDrawable(context.baseConfig.backgroundColor)
                     val medium = getDimension(R.dimen.medium_margin).toInt()
-                    setPadding(medium, medium, medium, medium)
+                    breadcrumb_text.setPadding(medium, medium, medium, medium)
+                    setPadding(rootStartPadding, 0, 0, 0)
                 }
-            }
 
-            isActivated = item.path == "$lastPath/"
-            breadcrumb_text.text = textToAdd
-            breadcrumb_text.setTextColor(textColorStateList)
-            breadcrumb_text.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
+                isActivated = item.path.trimEnd('/') == lastPath.trimEnd('/')
+                breadcrumb_text.text = item.name
+                breadcrumb_text.setTextColor(textColorStateList)
+                breadcrumb_text.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
 
-            itemsLayout.addView(this)
+                itemsLayout.addView(this)
 
-            setOnClickListener { v ->
-                if (itemsLayout.getChildAt(index) != null && itemsLayout.getChildAt(index) == v) {
-                    if ((v.tag as? FileDirItem)?.path == lastPath) {
-                        scrollToSelectedItem()
-                    } else {
+                breadcrumb_text.setOnClickListener {
+                    if (itemsLayout.getChildAt(index) != null) {
                         listener?.breadcrumbClicked(index)
                     }
                 }
-            }
 
-            tag = item
+                tag = item
+            }
+        } else {
+            inflater.inflate(R.layout.breadcrumb_item, itemsLayout, false).apply {
+                var textToAdd = item.name
+                if (addPrefix) {
+                    textToAdd = "> $textToAdd"
+                }
+
+                isActivated = item.path.trimEnd('/') == lastPath.trimEnd('/')
+
+                breadcrumb_text.text = textToAdd
+                breadcrumb_text.setTextColor(textColorStateList)
+                breadcrumb_text.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
+
+                itemsLayout.addView(this)
+
+                setOnClickListener { v ->
+                    if (itemsLayout.getChildAt(index) != null && itemsLayout.getChildAt(index) == v) {
+                        if ((v.tag as? FileDirItem)?.path?.trimEnd('/') == lastPath.trimEnd('/')) {
+                            scrollToSelectedItem()
+                        } else {
+                            listener?.breadcrumbClicked(index)
+                        }
+                    }
+                }
+
+                tag = item
+            }
         }
     }
 
