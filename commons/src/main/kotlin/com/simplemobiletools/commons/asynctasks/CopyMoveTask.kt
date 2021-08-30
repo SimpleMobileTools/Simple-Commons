@@ -86,9 +86,6 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
                     } else if (resolution == CONFLICT_OVERWRITE) {
                         newFileDirItem.isDirectory = if (activity.getDoesFilePathExist(newPath)) File(newPath).isDirectory else activity.getSomeDocumentFile(newPath)!!.isDirectory
                         activity.deleteFileBg(newFileDirItem, true)
-                        if (!newFileDirItem.isDirectory) {
-                            activity.deleteFromMediaStore(newFileDirItem.path)
-                        }
                     } else if (resolution == CONFLICT_KEEP_BOTH) {
                         val newFile = activity.getAlternativeFile(File(newFileDirItem.path))
                         newFileDirItem = FileDirItem(newFile.path, newFile.name, newFile.isDirectory)
