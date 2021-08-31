@@ -193,7 +193,7 @@
     <string name="internal">Interné</string>
     <string name="sd_card">SD karta</string>
     <string name="root">Koreňový priečinok</string>
-    <string name="wrong_root_selected">Bol zvolený nesprávny koreňový priečinok, prosím zvoľte SD kartu</string>
+    <string name="wrong_root_selected">Bol zvolený nesprávny priečinok, prosím zvoľte hlavný priečinok SD karty</string>
     <string name="sd_card_usb_same">Cesta k SD karte a USB zariadeniu nesmie byť rovnaká</string>
     <string name="app_on_sd_card">Vyzerá to tak, že máte aplikáciu nainštalovanú na SD karte, čo spôsobí nedostupnosť widgetov. Ani ich neuvidíte na zozname dostupných widgetov.
         Ide o systémové obmedzenie, čiže ak chcete widgety používať, musíte presunúť aplikáciu späť na internú pamäť.</string>
@@ -635,7 +635,7 @@
     <string name="usb">USB</string>
     <string name="usb_detected">Vyzerá to tak, že máte k zariadeniu pripoené USB zariadenie. Pre správne zobrazovanie sa jeho súborov sú potrebné ďalšie oprávnenia.</string>
     <string name="confirm_usb_storage_access_text">Pre poskytnutie práv prosím zvoľte na nasledujúcej obrazovke základný priečinok USB zariadenia</string>
-    <string name="wrong_root_selected_usb">Bol zvolený nesprávny koreňový priečinok, prosím zvoľte USB zariadenie</string>
+    <string name="wrong_root_selected_usb">Bol zvolený nesprávny priečinok, prosím zvoľte hlavný priečinok USB zariadenia</string>
 
     <!-- Dates -->
     <string name="january">Január</string>
