@@ -442,4 +442,9 @@ open class BaseConfig(val context: Context) {
     var showCallConfirmation: Boolean
         get() = prefs.getBoolean(SHOW_CALL_CONFIRMATION, false)
         set(showCallConfirmation) = prefs.edit().putBoolean(SHOW_CALL_CONFIRMATION, showCallConfirmation).apply()
+
+    // color picker last used colors
+    internal var colorPickerRecentColors: LinkedList<Int>
+        get() = LinkedList(prefs.getString(COLOR_PICKER_RECENT_COLORS, null)?.lines()?.map { it.toInt() } ?: emptyList())
+        set(recentColors) = prefs.edit().putString(COLOR_PICKER_RECENT_COLORS, recentColors.joinToString(separator = "\n")).apply()
 }

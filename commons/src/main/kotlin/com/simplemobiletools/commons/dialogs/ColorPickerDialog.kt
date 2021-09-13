@@ -14,19 +14,30 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.views.ColorPickerSquare
 import kotlinx.android.synthetic.main.dialog_color_picker.view.*
+import java.util.*
+
+private const val RECENT_COLORS_NUMBER = 5
 
 // forked from https://github.com/yukuku/ambilwarna
-class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBackground: Boolean = false, showUseDefaultButton: Boolean = false,
-                        val currentColorCallback: ((color: Int) -> Unit)? = null, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit) {
-    lateinit var viewHue: View
-    lateinit var viewSatVal: ColorPickerSquare
-    lateinit var viewCursor: ImageView
-    lateinit var viewNewColor: ImageView
-    lateinit var viewTarget: ImageView
-    lateinit var newHexField: EditText
-    lateinit var viewContainer: ViewGroup
+class ColorPickerDialog(
+    val activity: Activity,
+    color: Int,
+    showRecentColors: Boolean = false,
+    val removeDimmedBackground: Boolean = false,
+    showUseDefaultButton: Boolean = false,
+    val currentColorCallback: ((color: Int) -> Unit)? = null,
+    val callback: (wasPositivePressed: Boolean, color: Int) -> Unit
+) {
+    var viewHue: View
+    var viewSatVal: ColorPickerSquare
+    var viewCursor: ImageView
+    var viewNewColor: ImageView
+    var viewTarget: ImageView
+    var newHexField: EditText
+    var viewContainer: ViewGroup
+    private val baseConfig = activity.baseConfig
     private val currentColorHsv = FloatArray(3)
-    private val backgroundColor = activity.baseConfig.backgroundColor
+    private val backgroundColor = baseConfig.backgroundColor
     private val cornerRadius = activity.getCornerRadius()
     private var isHueBeingDragged = false
     private var wasDimmedBackgroundRemoved = false
@@ -57,6 +68,10 @@ class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBack
                 true
             }
             newHexField.setText(hexCode)
+
+            if (showRecentColors) {
+                setupRecentColors()
+            }
         }
 
         viewHue.setOnTouchListener(OnTouchListener { v, event ->
@@ -125,11 +140,11 @@ class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBack
             }
         }
 
-        val textColor = activity.baseConfig.textColor
+        val textColor = baseConfig.textColor
         val builder = AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok) { dialog, which -> confirmNewColor() }
-                .setNegativeButton(R.string.cancel) { dialog, which -> dialogDismissed() }
-                .setOnCancelListener { dialogDismissed() }
+            .setPositiveButton(R.string.ok) { dialog, which -> confirmNewColor() }
+            .setNegativeButton(R.string.cancel) { dialog, which -> dialogDismissed() }
+            .setOnCancelListener { dialogDismissed() }
 
         if (showUseDefaultButton) {
             builder.setNeutralButton(R.string.use_default) { dialog, which -> useDefault() }
@@ -149,21 +164,57 @@ class ColorPickerDialog(val activity: Activity, color: Int, val removeDimmedBack
         }
     }
 
+    private fun View.setupRecentColors() {
+        val recentColors = baseConfig.colorPickerRecentColors
+        if (recentColors.isNotEmpty()) {
+            recent_colors.beVisible()
+            val squareSize = context.resources.getDimensionPixelSize(R.dimen.normal_icon_size)
+            recentColors.take(RECENT_COLORS_NUMBER).forEach { recentColor ->
+                val recentColorView = ImageView(context)
+                recentColorView.id = View.generateViewId()
+                recentColorView.layoutParams = ViewGroup.LayoutParams(squareSize, squareSize)
+                recentColorView.setFillWithStroke(recentColor, backgroundColor)
+                recentColorView.setOnClickListener { newHexField.setText(getHexCode(recentColor)) }
+                recent_colors.addView(recentColorView)
+                recent_colors_flow.addView(recentColorView)
+            }
+        }
+    }
+
     private fun dialogDismissed() {
         callback(false, 0)
     }
 
     private fun confirmNewColor() {
         val hexValue = newHexField.value
-        if (hexValue.length == 6) {
-            callback(true, Color.parseColor("#$hexValue"))
+        val newColor = if (hexValue.length == 6) {
+            Color.parseColor("#$hexValue")
         } else {
-            callback(true, getColor())
+            getColor()
         }
+        addRecentColor(newColor)
+
+        callback(true, newColor)
     }
 
     private fun useDefault() {
-        callback(true, activity.baseConfig.defaultNavigationBarColor)
+        val defaultColor = baseConfig.defaultNavigationBarColor
+        addRecentColor(defaultColor)
+
+        callback(true, defaultColor)
+    }
+
+    private fun addRecentColor(color: Int) {
+        var recentColors = baseConfig.colorPickerRecentColors
+
+        recentColors.remove(color)
+        if (recentColors.size >= RECENT_COLORS_NUMBER) {
+            val numberOfColorsToDrop = recentColors.size - RECENT_COLORS_NUMBER + 1
+            recentColors = LinkedList(recentColors.dropLast(numberOfColorsToDrop))
+        }
+        recentColors.addFirst(color)
+
+        baseConfig.colorPickerRecentColors = recentColors
     }
 
     private fun getHexCode(color: Int) = color.toHex().substring(1)

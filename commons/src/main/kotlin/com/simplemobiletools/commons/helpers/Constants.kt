@@ -150,6 +150,7 @@ const val DEFAULT_TAB = "default_tab"
 const val START_NAME_WITH_SURNAME = "start_name_with_surname"
 const val FAVORITES = "favorites"
 const val SHOW_CALL_CONFIRMATION = "show_call_confirmation"
+internal const val COLOR_PICKER_RECENT_COLORS = "color_picker_recent_colors"
 
 // licenses
 internal const val LICENSE_KOTLIN = 1
