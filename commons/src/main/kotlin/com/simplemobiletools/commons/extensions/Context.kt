@@ -338,7 +338,7 @@ fun Context.getMediaContent(path: String, uri: Uri): Uri? {
 
 fun Context.queryCursor(
     uri: Uri,
-    projection: Array<String>,
+    projection: Array<String>? = null,
     selection: String? = null,
     selectionArgs: Array<String>? = null,
     sortOrder: String? = null,
