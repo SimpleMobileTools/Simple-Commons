@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Hủy bỏ</string>
+    <string name="nothing">Nothing</string>
     <string name="later">Later</string>
     <string name="save_as">Lưu thành</string>
     <string name="file_saved">Tệp đã được lưu thành công</string>
@@ -291,6 +292,7 @@
     <string name="name">Tên</string>
     <string name="size">Kích thước</string>
     <string name="last_modified">Sửa đổi lần cuối</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">Ngày chụp</string>
     <string name="title">Tiêu đề</string>
     <string name="filename">Tên tệp</string>
@@ -335,9 +337,12 @@
     <string name="insert_pattern">Chèn mẫu hình</string>
     <string name="wrong_pattern">Mẫu hình sai</string>
     <string name="repeat_pattern">Lặp lại mẫu hình</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Vân tay</string>
     <string name="add_fingerprint">Thêm dấu vân tay</string>
     <string name="place_finger">Vui lòng đặt ngón tay của bạn trên cảm biến vân tay</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Quá trình xác thực đã thất bại</string>
     <string name="authentication_blocked">Xác thực bị chặn, vui lòng thử lại sau giây lát</string>
     <string name="no_fingerprints_registered">Bạn chưa đăng ký dấu vân tay, vui lòng thêm trong Cài đặt của thiết bị</string>

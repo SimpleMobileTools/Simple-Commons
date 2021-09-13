@@ -27,12 +27,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/pin"/>
 
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/dialog_tab_fingerprint"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/fingerprint"/>
-
         </com.google.android.material.tabs.TabLayout>
 
         <com.simplemobiletools.commons.views.MyDialogViewPager

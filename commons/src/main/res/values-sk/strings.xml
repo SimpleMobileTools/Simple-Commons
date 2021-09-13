@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Zrušiť</string>
+    <string name="nothing">Nič</string>
     <string name="later">Neskôr</string>
     <string name="save_as">Uložiť ako</string>
     <string name="file_saved">Súbor bol úspešne uložený</string>
@@ -192,7 +193,7 @@
     <string name="internal">Interné</string>
     <string name="sd_card">SD karta</string>
     <string name="root">Koreňový priečinok</string>
-    <string name="wrong_root_selected">Bol zvolený nesprávny koreňový priečinok, prosím zvoľte SD kartu</string>
+    <string name="wrong_root_selected">Bol zvolený nesprávny priečinok, prosím zvoľte hlavný priečinok SD karty</string>
     <string name="sd_card_usb_same">Cesta k SD karte a USB zariadeniu nesmie byť rovnaká</string>
     <string name="app_on_sd_card">Vyzerá to tak, že máte aplikáciu nainštalovanú na SD karte, čo spôsobí nedostupnosť widgetov. Ani ich neuvidíte na zozname dostupných widgetov.
         Ide o systémové obmedzenie, čiže ak chcete widgety používať, musíte presunúť aplikáciu späť na internú pamäť.</string>
@@ -295,6 +296,7 @@
     <string name="name">Názov</string>
     <string name="size">Veľkosť</string>
     <string name="last_modified">Dátum poslednej úpravy</string>
+    <string name="date_created">Dátum vytvorenia</string>
     <string name="date_taken">Dátum vytvorenia</string>
     <string name="title">Názov</string>
     <string name="filename">Názov súboru</string>
@@ -340,9 +342,12 @@
     <string name="insert_pattern">Zadajte vzor</string>
     <string name="wrong_pattern">Nesprávny vzor</string>
     <string name="repeat_pattern">Zopakujte vzor</string>
+    <string name="biometrics">Biometria</string>
     <string name="fingerprint">Odtlačok</string>
     <string name="add_fingerprint">Pridať odtlačok prsta</string>
     <string name="place_finger">Prosím priložte prst ku senzoru odtlačku prsta</string>
+    <string name="open_biometric_dialog">Otvoriť dialóg na biometrické overenie</string>
+    <string name="authenticate">Overenie</string>
     <string name="authentication_failed">Overovanie zlyhalo</string>
     <string name="authentication_blocked">Overovanie je zablokované, prosím skúste o chvíľu</string>
     <string name="no_fingerprints_registered">Nemáte zaregistrované žiadne odtlačky, prosím pridajte nejaké v Nastaveniach zariadenia</string>
@@ -630,7 +635,7 @@
     <string name="usb">USB</string>
     <string name="usb_detected">Vyzerá to tak, že máte k zariadeniu pripoené USB zariadenie. Pre správne zobrazovanie sa jeho súborov sú potrebné ďalšie oprávnenia.</string>
     <string name="confirm_usb_storage_access_text">Pre poskytnutie práv prosím zvoľte na nasledujúcej obrazovke základný priečinok USB zariadenia</string>
-    <string name="wrong_root_selected_usb">Bol zvolený nesprávny koreňový priečinok, prosím zvoľte USB zariadenie</string>
+    <string name="wrong_root_selected_usb">Bol zvolený nesprávny priečinok, prosím zvoľte hlavný priečinok USB zariadenia</string>
 
     <!-- Dates -->
     <string name="january">Január</string>

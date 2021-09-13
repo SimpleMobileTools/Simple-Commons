@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancelar</string>
+    <string name="nothing">Nothing</string>
     <string name="later">Mais tarde</string>
     <string name="save_as">Salvar como</string>
     <string name="file_saved">Arquivo salvo com sucesso</string>
@@ -291,6 +292,7 @@
     <string name="name">Nome</string>
     <string name="size">Tamanho</string>
     <string name="last_modified">Data de modificação</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">Data de criação</string>
     <string name="title">Título</string>
     <string name="filename">Nome do arquivo</string>
@@ -335,9 +337,12 @@
     <string name="insert_pattern">Inserir padrão</string>
     <string name="wrong_pattern">Padrão errado</string>
     <string name="repeat_pattern">Repetir padrão</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Digital</string>
     <string name="add_fingerprint">Adicionar digital</string>
     <string name="place_finger">Posicione seu dedo sobre o leitor de digitais</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Autenticação falhou</string>
     <string name="authentication_blocked">Autenticação bloqueada, favor tentar novamente em instantes</string>
     <string name="no_fingerprints_registered">Você não tem digitais cadastradas. Favor adiconar alguma nas Configurações do seu dispositivo</string>

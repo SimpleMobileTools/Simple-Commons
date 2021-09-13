@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">確定</string>
     <string name="cancel">取消</string>
+    <string name="nothing">Nothing</string>
     <string name="later">Later</string>
     <string name="save_as">儲存</string>
     <string name="file_saved">成功儲存檔案</string>
@@ -288,6 +289,7 @@
     <string name="name">名稱</string>
     <string name="size">大小</string>
     <string name="last_modified">最後修改</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">拍照日期</string>
     <string name="title">標題</string>
     <string name="filename">檔案名稱</string>
@@ -331,9 +333,12 @@
     <string name="insert_pattern">畫出解鎖圖形</string>
     <string name="wrong_pattern">解鎖圖形錯誤</string>
     <string name="repeat_pattern">再次畫出解鎖圖形</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">指紋</string>
     <string name="add_fingerprint">添加指紋</string>
     <string name="place_finger">請將您的手指放置在指紋感應器上</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">驗證失敗</string>
     <string name="authentication_blocked">驗證被限制，請稍後再重試</string>
     <string name="no_fingerprints_registered">你尚未有登錄的指紋，請在裝置的[設定]內添加</string>

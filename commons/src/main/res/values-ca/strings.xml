@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancel·lar</string>
+    <string name="nothing">Res</string>
     <string name="later">Més tard</string>
     <string name="save_as">Desar com</string>
     <string name="file_saved">Arxiu desat amb éxit</string>
@@ -291,6 +292,7 @@
     <string name="name">Nom</string>
     <string name="size">Mida</string>
     <string name="last_modified">Modificació</string>
+    <string name="date_created">Data de creació</string>
     <string name="date_taken">Creació</string>
     <string name="title">Títol</string>
     <string name="filename">Nom de l’arxiu</string>
@@ -335,9 +337,12 @@
     <string name="insert_pattern">Introdueix patró</string>
     <string name="wrong_pattern">Patró erroni</string>
     <string name="repeat_pattern">Repeteix patró</string>
+    <string name="biometrics">Biometria</string>
     <string name="fingerprint">Empremta digital</string>
     <string name="add_fingerprint">Afegeix Empremta digital</string>
     <string name="place_finger">Si us plau posa el teu dit al sensor d’empremta digital</string>
+    <string name="open_biometric_dialog">Obre el quadre de diàleg de verificació d’identificació biomètric</string>
+    <string name="authenticate">Autenticar-se</string>
     <string name="authentication_failed">L\'autenticació ha fallat</string>
     <string name="authentication_blocked">L\'autenticació està bloquejada. Prova-ho d’aquí un moment</string>
     <string name="no_fingerprints_registered">No tens empremtes digitals registrades. Afegeix-ne alguna a la configuració del dispositiu</string>

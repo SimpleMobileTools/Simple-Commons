@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">U redu</string>
     <string name="cancel">Poništi</string>
+    <string name="nothing">Nothing</string>
     <string name="later">Later</string>
     <string name="save_as">Spremi kao</string>
     <string name="file_saved">Datoteka uspješno spremljena</string>
@@ -294,6 +295,7 @@
     <string name="name">Naziv</string>
     <string name="size">Veličina</string>
     <string name="last_modified">Datum zadnje izmjenjene</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">Datum stvaranja</string>
     <string name="title">Naslov</string>
     <string name="filename">Naziv datoteke</string>
@@ -338,9 +340,12 @@
     <string name="insert_pattern">Unesite uzorak</string>
     <string name="wrong_pattern">Krivi uzorak</string>
     <string name="repeat_pattern">Ponovite uzorak</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Otisak prsta</string>
     <string name="add_fingerprint">Dodajte otisak prsta</string>
     <string name="place_finger">Molimo postavite prst na senzor otiska prsta</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Neuspješna autentifikacija</string>
     <string name="authentication_blocked">Blokirana autentifikacija, molimo pokušajte za par trenutaka</string>
     <string name="no_fingerprints_registered">Nemate registiranih otisaka prstiju, molimo dodajte ih u postavkama Vašeg uređaja</string>

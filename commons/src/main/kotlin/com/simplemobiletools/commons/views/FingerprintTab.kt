@@ -6,6 +6,7 @@ import android.os.Handler
 import android.provider.Settings
 import android.util.AttributeSet
 import android.widget.RelativeLayout
+import androidx.biometric.auth.AuthPromptHost
 import com.github.ajalt.reprint.core.AuthenticationFailureReason
 import com.github.ajalt.reprint.core.AuthenticationListener
 import com.github.ajalt.reprint.core.Reprint
@@ -33,7 +34,7 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
         }
     }
 
-    override fun initTab(requiredHash: String, listener: HashListener, scrollView: MyScrollView) {
+    override fun initTab(requiredHash: String, listener: HashListener, scrollView: MyScrollView, biometricPromptHost: AuthPromptHost) {
         hashListener = listener
     }
 

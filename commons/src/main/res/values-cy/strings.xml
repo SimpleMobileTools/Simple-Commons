@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">Iawn</string>
     <string name="cancel">Diddymu</string>
+    <string name="nothing">Nothing</string>
     <string name="later">Later</string>
     <string name="save_as">Cadw fel</string>
     <string name="file_saved">Cadwyd y ffeil yn llwyddiannus</string>
@@ -303,6 +304,7 @@
     <string name="name">Enw</string>
     <string name="size">Maint</string>
     <string name="last_modified">Newidiwyd diwethaf</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">Dyddiad tynnwyd</string>
     <string name="title">Teitl</string>
     <string name="filename">Enw ffeil</string>
@@ -347,9 +349,12 @@
     <string name="insert_pattern">Rho batrwm</string>
     <string name="wrong_pattern">Patrwm anghywir</string>
     <string name="repeat_pattern">Rho\'r patrwm eto</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Ôl byd</string>
     <string name="add_fingerprint">Ychwanegu ôl bys</string>
     <string name="place_finger">Gosoda dy fys ar y synhwyrydd olion bysedd</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Methodd y dilysiad</string>
     <string name="authentication_blocked">Rhwystrwyd y dilysiad. Rho gynnig arall arni mewn eiliad</string>
     <string name="no_fingerprints_registered">Does dim olion bysedd wedi\'u cofrestru. Ychwanega rai yn Gosodiadau dy ddyfais.</string>

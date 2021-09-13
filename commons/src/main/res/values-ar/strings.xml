@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">موافق</string>
     <string name="cancel">إلغاء</string>
+    <string name="nothing">Nothing</string>
     <string name="later">Later</string>
     <string name="save_as">حفظ كـ</string>
     <string name="file_saved">تم حفظ الملف بنجاح</string>
@@ -289,6 +290,7 @@
     <string name="name">الإسم</string>
     <string name="size">الحجم</string>
     <string name="last_modified">آخر تعديل</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">تاريخ الإلتقاط</string>
     <string name="title">العنوان</string>
     <string name="filename">إسم الملف</string>
@@ -333,9 +335,12 @@
     <string name="insert_pattern">إدراج النمط</string>
     <string name="wrong_pattern">النمط غير صحيح</string>
     <string name="repeat_pattern">تكرار النمط</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">البصمة</string>
     <string name="add_fingerprint">إضافة بصمة</string>
     <string name="place_finger">يرجى وضع إصبعك على مستشعر البصمة</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">فشلت المسابقة</string>
     <string name="authentication_blocked">تم حظر المصادقة ، يرجى المحاولة مره أخرى بعد قليل</string>
     <string name="no_fingerprints_registered">ليس لديك بصمات مسجلة ، يرجى إضافة بعضها في إعدادات جهازك</string>

@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annuller</string>
+    <string name="nothing">Nothing</string>
     <string name="later">Senere</string>
     <string name="save_as">Gem som</string>
     <string name="file_saved">Fil gemt</string>
@@ -291,6 +292,7 @@
     <string name="name">Navn</string>
     <string name="size">Størrelse</string>
     <string name="last_modified">Senest ændret</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">Eksponeringsdato</string>
     <string name="title">Titel</string>
     <string name="filename">Filnavn</string>
@@ -335,9 +337,12 @@
     <string name="insert_pattern">Indsæt mønster</string>
     <string name="wrong_pattern">Forkert mønster</string>
     <string name="repeat_pattern">Gentag mønster</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Fingeraftryk</string>
     <string name="add_fingerprint">Tilføj fingeraftryk</string>
     <string name="place_finger">Sæt din finger på sensoren</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Godkendelsen fejlede</string>
     <string name="authentication_blocked">Godkendelse blokeret, prøv igen om lidt</string>
     <string name="no_fingerprints_registered">Du har ingen registrerede fingeraftryk, tilføj nogle i indstillingerne på din enhed</string>

@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Скасувати</string>
+    <string name="nothing">Nothing</string>
     <string name="later">Пізніше</string>
     <string name="save_as">Зберегти як</string>
     <string name="file_saved">Файл успішно збережено</string>
@@ -291,6 +292,7 @@
     <string name="name">Ім\'я</string>
     <string name="size">Розмір</string>
     <string name="last_modified">Остання зміна</string>
+    <string name="date_created">Дата створення</string>
     <string name="date_taken">Дата зйомки</string>
     <string name="title">Заголовок</string>
     <string name="filename">Ім\'я файла</string>
@@ -335,9 +337,12 @@
     <string name="insert_pattern">Вставити шаблон</string>
     <string name="wrong_pattern">Невірний шаблон</string>
     <string name="repeat_pattern">Повторіть шаблон</string>
+    <string name="biometrics">Біометричні дані</string>
     <string name="fingerprint">Відбиток пальця</string>
     <string name="add_fingerprint">Додати відбиток пальця</string>
     <string name="place_finger">Помістіть ваш палець на сканер відбитка пальця</string>
+    <string name="open_biometric_dialog">Відкрити діалог підтвердження біометричних даних</string>
+    <string name="authenticate">Авторизуйтеся</string>
     <string name="authentication_failed">Помилка автентифікації</string>
     <string name="authentication_blocked">Автентифікацію заблоковано, спробуйте це раз</string>
     <string name="no_fingerprints_registered">У вас немає зареєстрованих відбитків пальця, додайте їх у Налаштуваннях вашого пристрою</string>

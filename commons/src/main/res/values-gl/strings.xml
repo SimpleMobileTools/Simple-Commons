@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">Aceptar</string>
     <string name="cancel">Cancelar</string>
+    <string name="nothing">Nothing</string>
     <string name="later">Later</string>
     <string name="save_as">Gardar como</string>
     <string name="file_saved">Ficheiro gardado con éxito</string>
@@ -291,6 +292,7 @@
     <string name="name">Nome</string>
     <string name="size">Tamaño</string>
     <string name="last_modified">Modificación</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">Creación</string>
     <string name="title">Título</string>
     <string name="filename">Nome do ficheiro</string>
@@ -335,9 +337,12 @@
     <string name="insert_pattern">Insire patrón</string>
     <string name="wrong_pattern">Patrón erróneo</string>
     <string name="repeat_pattern">Repetir patrón</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Pegada dixital</string>
     <string name="add_fingerprint">Engadir pegada dixital</string>
     <string name="place_finger">Pon o dedo no lector de pegadas dixitais</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Autenticación fallada</string>
     <string name="authentication_blocked">Autenticación bloqueada; por favor, inténtao de novo dentro dun pouco</string>
     <string name="no_fingerprints_registered">Non tes pegadas dixitais rexistradas; por favor, engada algunhas na Configuración do teu dispositivo</string>

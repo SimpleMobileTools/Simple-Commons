@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annuleren</string>
+    <string name="nothing">Niets</string>
     <string name="later">Later</string>
     <string name="save_as">Opslaan als</string>
     <string name="file_saved">Bestand opgeslagen</string>
@@ -291,6 +292,7 @@
     <string name="name">Naam</string>
     <string name="size">Grootte</string>
     <string name="last_modified">Laatst gewijzigd</string>
+    <string name="date_created">Aangemaakt</string>
     <string name="date_taken">Datum opname</string>
     <string name="title">Titel</string>
     <string name="filename">Bestandsnaam</string>
@@ -335,9 +337,12 @@
     <string name="insert_pattern">Teken een patroon</string>
     <string name="wrong_pattern">Verkeerde patroon</string>
     <string name="repeat_pattern">Herhaal het patroon</string>
+    <string name="biometrics">Biometrie</string>
     <string name="fingerprint">Vingerafdruk</string>
     <string name="add_fingerprint">Voeg vingerafdruk toe</string>
     <string name="place_finger">Plaats uw vinger op de sensor</string>
+    <string name="open_biometric_dialog">Biometrische identificatie openen</string>
+    <string name="authenticate">Authenticeren</string>
     <string name="authentication_failed">Authenticatie mislukt</string>
     <string name="authentication_blocked">Authenticatie geblokkeerd, probeer het op een ander moment</string>
     <string name="no_fingerprints_registered">Er zijn geen vingerafdrukken geregistreerd. Voeg deze toe via de instellingen van uw toestel.</string>

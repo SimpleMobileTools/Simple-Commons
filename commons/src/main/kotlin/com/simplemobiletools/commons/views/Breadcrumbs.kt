@@ -1,88 +1,154 @@
 package com.simplemobiletools.commons.views
 
 import android.content.Context
+import android.content.res.ColorStateList
+import android.graphics.drawable.ColorDrawable
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.HorizontalScrollView
 import android.widget.LinearLayout
+import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.breadcrumb_item.view.*
 
-class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs), View.OnClickListener {
-    private var availableWidth = 0
-    private var inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(context, attrs) {
+    private val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+    private val itemsLayout: LinearLayout
     private var textColor = context.baseConfig.textColor
     private var fontSize = resources.getDimension(R.dimen.bigger_text_size)
     private var lastPath = ""
+    private var isLayoutDirty = true
+    private var isScrollToSelectedItemPending = false
+    private var isFirstScroll = true
+    private var stickyRootInitialLeft = 0
+    private var rootStartPadding = 0
 
+    private val textColorStateList: ColorStateList
+        get() = ColorStateList(
+            arrayOf(intArrayOf(android.R.attr.state_activated), intArrayOf()),
+            intArrayOf(
+                textColor,
+                textColor.adjustAlpha(0.6f)
+            )
+        )
+
+    val itemsCount: Int
+        get() = itemsLayout.childCount
     var listener: BreadcrumbsListener? = null
 
     init {
+        isHorizontalScrollBarEnabled = false
+        itemsLayout = LinearLayout(context)
+        itemsLayout.orientation = LinearLayout.HORIZONTAL
+        rootStartPadding = paddingStart
+        itemsLayout.setPaddingRelative(0, paddingTop, paddingEnd, paddingBottom)
+        setPaddingRelative(0, 0, 0, 0)
+        addView(itemsLayout, LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT))
         onGlobalLayout {
-            availableWidth = width
+            stickyRootInitialLeft = if (itemsLayout.childCount > 0) {
+                itemsLayout.getChildAt(0).left
+            } else {
+                0
+            }
         }
     }
 
-    override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
-        val childRight = measuredWidth - paddingRight
-        val childBottom = measuredHeight - paddingBottom
-        val childHeight = childBottom - paddingTop
+    private fun recomputeStickyRootLocation(left: Int) {
+        stickyRootInitialLeft = left
+        handleRootStickiness(scrollX)
+    }
 
-        val usableWidth = availableWidth - paddingLeft - paddingRight
-        var maxHeight = 0
-        var curWidth: Int
-        var curHeight: Int
-        var curLeft = paddingLeft
-        var curTop = paddingTop
-
-        val cnt = childCount
-        for (i in 0 until cnt) {
-            val child = getChildAt(i)
-
-            child.measure(MeasureSpec.makeMeasureSpec(usableWidth, MeasureSpec.AT_MOST),
-                    MeasureSpec.makeMeasureSpec(childHeight, MeasureSpec.AT_MOST))
-            curWidth = child.measuredWidth
-            curHeight = child.measuredHeight
-
-            if (curLeft + curWidth >= childRight) {
-                curLeft = paddingLeft
-                curTop += maxHeight
-                maxHeight = 0
-            }
-
-            child.layout(curLeft, curTop, curLeft + curWidth, curTop + curHeight)
-            if (maxHeight < curHeight)
-                maxHeight = curHeight
-
-            curLeft += curWidth
+    private fun handleRootStickiness(scrollX: Int) {
+        if (scrollX > stickyRootInitialLeft) {
+            stickRoot(scrollX - stickyRootInitialLeft)
+        } else {
+            freeRoot()
         }
+    }
+
+    private fun freeRoot() {
+        if (itemsLayout.childCount > 0) {
+            itemsLayout.getChildAt(0).translationX = 0f
+        }
+    }
+
+    private fun stickRoot(translationX: Int) {
+        if (itemsLayout.childCount > 0) {
+            val root = itemsLayout.getChildAt(0)
+            root.translationX = translationX.toFloat()
+            ViewCompat.setTranslationZ(root, translationZ)
+        }
+    }
+
+    override fun onScrollChanged(scrollX: Int, scrollY: Int, oldScrollX: Int, oldScrollY: Int) {
+        super.onScrollChanged(scrollX, scrollY, oldScrollX, oldScrollY)
+        handleRootStickiness(scrollX)
+    }
+
+    override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
+        super.onLayout(changed, left, top, right, bottom)
+
+        isLayoutDirty = false
+        if (isScrollToSelectedItemPending) {
+            scrollToSelectedItem()
+            isScrollToSelectedItemPending = false
+        }
+
+        recomputeStickyRootLocation(left)
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        val usableWidth = availableWidth - paddingLeft - paddingRight
-        var width = 0
-        var rowHeight = 0
-        var lines = 1
+        val heightMode = MeasureSpec.getMode(heightMeasureSpec)
+        var heightMeasureSpec = heightMeasureSpec
+        if (heightMode == MeasureSpec.UNSPECIFIED || heightMode == MeasureSpec.AT_MOST) {
+            var height = context.resources.getDimensionPixelSize(R.dimen.breadcrumbs_layout_height)
+            if (heightMode == MeasureSpec.AT_MOST) {
+                height = height.coerceAtMost(MeasureSpec.getSize(heightMeasureSpec))
+            }
+            heightMeasureSpec = MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY)
+        }
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+    }
 
-        val cnt = childCount
+    private fun scrollToSelectedItem() {
+        if (isLayoutDirty) {
+            isScrollToSelectedItemPending = true
+            return
+        }
+
+        var selectedIndex = itemsLayout.childCount - 1
+        val cnt = itemsLayout.childCount
         for (i in 0 until cnt) {
-            val child = getChildAt(i)
-            measureChild(child, widthMeasureSpec, heightMeasureSpec)
-            width += child.measuredWidth
-            rowHeight = child.measuredHeight
-
-            if (width / usableWidth > 0) {
-                lines++
-                width = child.measuredWidth
+            val child = itemsLayout.getChildAt(i)
+            if ((child.tag as? FileDirItem)?.path?.trimEnd('/') == lastPath.trimEnd('/')) {
+                selectedIndex = i
+                break
             }
         }
 
-        val parentWidth = MeasureSpec.getSize(widthMeasureSpec)
-        val calculatedHeight = paddingTop + paddingBottom + rowHeight * lines
-        setMeasuredDimension(parentWidth, calculatedHeight)
+        val selectedItemView = itemsLayout.getChildAt(selectedIndex)
+        val scrollX = if (layoutDirection == View.LAYOUT_DIRECTION_LTR) {
+            selectedItemView.left - itemsLayout.paddingStart
+        } else {
+            selectedItemView.right - width + itemsLayout.paddingStart
+        }
+        if (!isFirstScroll && isShown) {
+            smoothScrollTo(scrollX, 0)
+        } else {
+            scrollTo(scrollX, 0)
+        }
+        isFirstScroll = false
+    }
+
+    override fun requestLayout() {
+        isLayoutDirty = true
+
+        super.requestLayout()
     }
 
     fun setBreadcrumb(fullPath: String) {
@@ -91,7 +157,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
         var currPath = basePath
         val tempPath = context.humanizePath(fullPath)
 
-        removeAllViewsInLayout()
+        itemsLayout.removeAllViews()
         val dirs = tempPath.split("/").dropLastWhile(String::isEmpty)
         for (i in dirs.indices) {
             val dir = dirs[i]
@@ -105,34 +171,67 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
 
             currPath = "${currPath.trimEnd('/')}/"
             val item = FileDirItem(currPath, dir, true, 0, 0, 0)
-            addBreadcrumb(item, i > 0)
+            addBreadcrumb(item, i, i > 0)
+            scrollToSelectedItem()
         }
     }
 
-    private fun addBreadcrumb(item: FileDirItem, addPrefix: Boolean) {
-        inflater.inflate(R.layout.breadcrumb_item, null, false).apply {
-            var textToAdd = item.name
-            if (addPrefix) {
-                textToAdd = "/ $textToAdd"
-            }
+    private fun addBreadcrumb(item: FileDirItem, index: Int, addPrefix: Boolean) {
 
-            if (childCount == 0) {
+        if (itemsLayout.childCount == 0) {
+            inflater.inflate(R.layout.breadcrumb_first_item, itemsLayout, false).apply {
                 resources.apply {
-                    background = getDrawable(R.drawable.button_background)
-                    background.applyColorFilter(textColor)
+                    breadcrumb_text.background = ContextCompat.getDrawable(context, R.drawable.button_background)
+                    breadcrumb_text.background.applyColorFilter(textColor)
+                    elevation = getDimension(R.dimen.medium_margin)
+                    background = ColorDrawable(context.baseConfig.backgroundColor)
                     val medium = getDimension(R.dimen.medium_margin).toInt()
-                    setPadding(medium, medium, medium, medium)
+                    breadcrumb_text.setPadding(medium, medium, medium, medium)
+                    setPadding(rootStartPadding, 0, 0, 0)
                 }
+
+                isActivated = item.path.trimEnd('/') == lastPath.trimEnd('/')
+                breadcrumb_text.text = item.name
+                breadcrumb_text.setTextColor(textColorStateList)
+                breadcrumb_text.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
+
+                itemsLayout.addView(this)
+
+                breadcrumb_text.setOnClickListener {
+                    if (itemsLayout.getChildAt(index) != null) {
+                        listener?.breadcrumbClicked(index)
+                    }
+                }
+
+                tag = item
             }
+        } else {
+            inflater.inflate(R.layout.breadcrumb_item, itemsLayout, false).apply {
+                var textToAdd = item.name
+                if (addPrefix) {
+                    textToAdd = "> $textToAdd"
+                }
 
-            breadcrumb_text.text = textToAdd
-            breadcrumb_text.setTextColor(textColor)
-            breadcrumb_text.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
+                isActivated = item.path.trimEnd('/') == lastPath.trimEnd('/')
 
-            addView(this)
-            setOnClickListener(this@Breadcrumbs)
+                breadcrumb_text.text = textToAdd
+                breadcrumb_text.setTextColor(textColorStateList)
+                breadcrumb_text.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize)
 
-            tag = item
+                itemsLayout.addView(this)
+
+                setOnClickListener { v ->
+                    if (itemsLayout.getChildAt(index) != null && itemsLayout.getChildAt(index) == v) {
+                        if ((v.tag as? FileDirItem)?.path?.trimEnd('/') == lastPath.trimEnd('/')) {
+                            scrollToSelectedItem()
+                        } else {
+                            listener?.breadcrumbClicked(index)
+                        }
+                    }
+                }
+
+                tag = item
+            }
         }
     }
 
@@ -147,19 +246,13 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : LinearLayout(context,
     }
 
     fun removeBreadcrumb() {
-        removeView(getChildAt(childCount - 1))
+        itemsLayout.removeView(itemsLayout.getChildAt(itemsLayout.childCount - 1))
     }
 
-    fun getLastItem() = getChildAt(childCount - 1).tag as FileDirItem
+    fun getItem(index: Int) = itemsLayout.getChildAt(index).tag as FileDirItem
 
-    override fun onClick(v: View) {
-        val cnt = childCount
-        for (i in 0 until cnt) {
-            if (getChildAt(i) != null && getChildAt(i) == v) {
-                listener?.breadcrumbClicked(i)
-            }
-        }
-    }
+    fun getLastItem() = itemsLayout.getChildAt(itemsLayout.childCount - 1).tag as FileDirItem
+
 
     interface BreadcrumbsListener {
         fun breadcrumbClicked(id: Int)

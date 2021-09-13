@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annuler</string>
+    <string name="nothing">Nothing</string>
     <string name="later">Plus tard</string>
     <string name="save_as">Enregistrer sous</string>
     <string name="file_saved">Fichier enregistré</string>
@@ -291,6 +292,7 @@
     <string name="name">Nom</string>
     <string name="size">Dimension</string>
     <string name="last_modified">Date de modification</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">Date de prise de vue</string>
     <string name="title">Titre</string>
     <string name="filename">Nom de fichier</string>
@@ -337,9 +339,12 @@
     <string name="insert_pattern">Dessiner un schéma</string>
     <string name="wrong_pattern">Schéma incorrect</string>
     <string name="repeat_pattern">Redessiner le schéma</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Empreinte</string>
     <string name="add_fingerprint">Capturer une empreinte</string>
     <string name="place_finger">Veuillez placer votre doigt sur le capteur d\'empreinte digitale</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Échec de l\'identification</string>
     <string name="authentication_blocked">Identification bloquée. Veuillez réessayer dans quelques instants.</string>
     <string name="no_fingerprints_registered">Vous n\'avez aucune empreinte digitale enregistrée. Veuillez en ajouter depuis les paramètres de votre appareil</string>

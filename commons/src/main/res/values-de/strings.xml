@@ -1,6 +1,7 @@
 ﻿<resources>
     <string name="ok">OK</string>
     <string name="cancel">Abbrechen</string>
+    <string name="nothing">Nothing</string>
     <string name="later">Später</string>
     <string name="save_as">Speichern unter</string>
     <string name="file_saved">Datei erfolgreich gespeichert</string>
@@ -291,6 +292,7 @@
     <string name="name">Name</string>
     <string name="size">Größe</string>
     <string name="last_modified">Änderungsdatum</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">Aufnahmedatum</string>
     <string name="title">Titel</string>
     <string name="filename">Dateiname</string>
@@ -335,9 +337,12 @@
     <string name="insert_pattern">Muster zeichnen</string>
     <string name="wrong_pattern">Falsches Muster</string>
     <string name="repeat_pattern">Muster wiederholen</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Fingerabdruck</string>
     <string name="add_fingerprint">Fingerabdruck hinzufügen</string>
     <string name="place_finger">Bitte den Finger auf den Fingerabdrucksensor legen</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Authentifizierung fehlgeschlagen</string>
     <string name="authentication_blocked">Authentifizierung blockiert, bitte in Kürze erneut versuchen</string>
     <string name="no_fingerprints_registered">Keine Fingerabdrücke registriert, bitte in den Geräteeinstellungen hinzufügen</string>

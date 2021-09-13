@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Ακύρωση</string>
+    <string name="nothing">Τίποτα</string>
     <string name="later">Αργότερα</string>
     <string name="save_as">Αποθήκευση ως</string>
     <string name="file_saved">Αποθηκεύθηκε επιτυχώς</string>
@@ -291,6 +292,7 @@
     <string name="name">Όνομα</string>
     <string name="size">Μέγεθος</string>
     <string name="last_modified">Τελευταία τροπ/ηση</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">Ημερ. λήψης</string>
     <string name="title">Τίτλο</string>
     <string name="filename">Όνομα αρχείου</string>
@@ -335,9 +337,12 @@
     <string name="insert_pattern">Εισαγωγή μοτίβου</string>
     <string name="wrong_pattern">Λάθος μοτίβο</string>
     <string name="repeat_pattern">Επανάληψη μοτίβου</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Δακτυλικό αποτύπωμα</string>
     <string name="add_fingerprint">Προσθήκη δακτυλικού αποτυπώματος</string>
     <string name="place_finger">Παρακαλώ τοποθετήστε το δάκτυλό σας στον αισθητήρα δακτυλικών αποτυπωμάτων</string>
+    <string name="open_biometric_dialog">Άνοιγμα διαλόγου βιομετρικής πιστοποίησης ID</string>
+    <string name="authenticate">Πιστοποίηση</string>
     <string name="authentication_failed">Ο έλεγχος ταυτότητας απέτυχε</string>
     <string name="authentication_blocked">Αποκλεισμός ελέγχου ταυτότητας, προσπαθήστε ξανά σε λίγο</string>
     <string name="no_fingerprints_registered">Δεν έχετε καταχωρήσει δακτυλικά αποτυπώματα, προσθέστε μερικά στις Ρυθμίσεις της συσκευής σας</string>

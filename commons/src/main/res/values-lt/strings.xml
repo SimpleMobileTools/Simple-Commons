@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">Gerai</string>
     <string name="cancel">Atšaukti</string>
+    <string name="nothing">Nothing</string>
     <string name="later">Later</string>
     <string name="save_as">Išsaugoti kaip</string>
     <string name="file_saved">Byla išsaugota sėkmingai</string>
@@ -291,6 +292,7 @@
     <string name="name">Vardą</string>
     <string name="size">Dydį</string>
     <string name="last_modified">Paskutinį redagavimą</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">Sukūrimo datą</string>
     <string name="title">Pavadinimą</string>
     <string name="filename">Bylos pavadinimą</string>
@@ -335,9 +337,12 @@
     <string name="insert_pattern">Įtraukti modelį</string>
     <string name="wrong_pattern">Klaidingas modelis</string>
     <string name="repeat_pattern">Pakartoti modelį</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Piršto atspaudas</string>
     <string name="add_fingerprint">Pridėti piršto atspaudą</string>
     <string name="place_finger">Prašome uždėti savo pirštą ant pirštų atspaudų jutiklio</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Autentifikacija nepavyko</string>
     <string name="authentication_blocked">Autentifikacija blokuojama, prašome pabandyti iš naujo vėliau</string>
     <string name="no_fingerprints_registered">Neturite registruotų pirštų atspaudų, prašome įtraukti Jūsų įrenginio nustatymuose</string>

@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">キャンセル</string>
+    <string name="nothing">Nothing</string>
     <string name="later">後で</string>
     <string name="save_as">名前を付けて保存</string>
     <string name="file_saved">ファイルを正常に保存しました</string>
@@ -287,6 +288,7 @@
     <string name="name">名前</string>
     <string name="size">サイズ</string>
     <string name="last_modified">最終更新日時</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">撮影日時</string>
     <string name="title">タイトル</string>
     <string name="filename">ファイル名</string>
@@ -330,9 +332,12 @@
     <string name="insert_pattern">パターンを入力</string>
     <string name="wrong_pattern">パターンに誤りがあります</string>
     <string name="repeat_pattern">パターンを再入力</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">指紋</string>
     <string name="add_fingerprint">指紋を追加</string>
     <string name="place_finger">指紋センサーに指を置いてください</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">認証に失敗しました</string>
     <string name="authentication_blocked">認証がブロックされました、しばらくしてからもう一度お試しください</string>
     <string name="no_fingerprints_registered">指紋がまだ登録されていません、お使いの端末の設定でいくつか追加してください</string>

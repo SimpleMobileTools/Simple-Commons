@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Mégsem</string>
+    <string name="nothing">Nothing</string>
     <string name="later">Később</string>
     <string name="save_as">Mentés másként</string>
     <string name="file_saved">Sikeres fájl mentés</string>
@@ -290,6 +291,7 @@
     <string name="name">Név</string>
     <string name="size">Méret</string>
     <string name="last_modified">Utolsó módosítás</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">Dátum</string>
     <string name="title">Cím</string>
     <string name="filename">Fájlnév</string>
@@ -334,9 +336,12 @@
     <string name="insert_pattern">Minta beillesztése</string>
     <string name="wrong_pattern">Hibás minta</string>
     <string name="repeat_pattern">Minta ismétlése</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Ujjlenyomat</string>
     <string name="add_fingerprint">Ujjlenyomat hozzáadása</string>
     <string name="place_finger">Helyezze az ujját az ujjlenyomat érzékelőre</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Sikertelen hitelesítés</string>
     <string name="authentication_blocked">A hitelesítés blokkolva, próbálkozzon újra egy kicsit később</string>
     <string name="no_fingerprints_registered">Nincsenek regisztrált ujjlenyomatok, kérjük, adjon hozzá néhányat a készülék Beállításaiban</string>

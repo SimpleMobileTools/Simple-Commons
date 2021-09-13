@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Peruuta</string>
+    <string name="nothing">Ei mitään</string>
     <string name="later">Myöhemmin</string>
     <string name="save_as">Tallenna nimellä</string>
     <string name="file_saved">Tallennettu</string>
@@ -249,7 +250,7 @@
     <string name="dark_theme">Tumma</string>
     <string name="solarized">Solarisoitu</string>
     <string name="dark_red">Tumman punainen</string>
-    <string name="white">White</string>
+    <string name="white">Valkoinen</string>
     <string name="black_white">Musta &amp; Valkoinen</string>
     <string name="custom">Oma</string>
     <string name="shared">Jaettu</string>
@@ -291,6 +292,7 @@
     <string name="name">Nimen perusteella</string>
     <string name="size">Koon perusteella</string>
     <string name="last_modified">Viimeksi muokattu</string>
+    <string name="date_created">Luontipäivämäärä</string>
     <string name="date_taken">Viimeksi kuvattu</string>
     <string name="title">Otsikko</string>
     <string name="filename">Tiedostonimi</string>
@@ -335,9 +337,12 @@
     <string name="insert_pattern">Syötä kuvio</string>
     <string name="wrong_pattern">Väärä kuvio</string>
     <string name="repeat_pattern">Toista kuvio</string>
+    <string name="biometrics">Biometria</string>
     <string name="fingerprint">Sormenjälki</string>
     <string name="add_fingerprint">Lisää sormenjälki</string>
     <string name="place_finger">Aseta sormi sormenjälkitunnistimelle</string>
+    <string name="open_biometric_dialog">Avaa biometrisen tunnistautumisen lomake</string>
+    <string name="authenticate">Tunnistaudu</string>
     <string name="authentication_failed">Kirjautuminen epäonnistui</string>
     <string name="authentication_blocked">Kirjautuminen estetty, yritä myöhemmin uudelleen</string>
     <string name="no_fingerprints_registered">Sinulla ei ole tallennettuja sormenjälkiä, lisää niitä laitteesi asetuksista</string>
@@ -497,8 +502,8 @@
     <string name="your_sounds">Omat äänet</string>
     <string name="add_new_sound">Lisää uusi ääni</string>
     <string name="no_sound">Ei ääntä</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="during_day_at_hh_mm">Päivällä kello hh:mm</string>
+    <string name="during_day_at">Päivällä kello %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Asetukset</string>

@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Anuluj</string>
+    <string name="nothing">Nic</string>
     <string name="later">Później</string>
     <string name="save_as">Zapisz jako</string>
     <string name="file_saved">Plik został zapisany</string>
@@ -9,18 +10,18 @@
     <string name="an_error_occurred">Wystąpił błąd: %s</string>
     <string name="open_with">Otwórz w</string>
     <string name="edit_with">Edytuj w</string>
-    <string name="no_app_found">Nie mogę znaleźć danych aplikacji</string>
+    <string name="no_app_found">Nie znaleziono odpowiedniej aplikacji</string>
     <string name="set_as">Ustaw jako</string>
     <string name="copy_to_clipboard">Kopiuj do schowka</string>
     <string name="copy_number_to_clipboard">Skopiuj numer do schowka</string>
-    <string name="value_copied_to_clipboard">Wartość została skopiowana do schowka</string>
+    <string name="value_copied_to_clipboard">Wartość skopiowano do schowka</string>
     <string name="dial_number">Wybierz numer</string>
     <string name="unknown">Nieznane</string>
     <string name="always">Zawsze</string>
     <string name="never">Nigdy</string>
     <string name="details">Szczegóły</string>
     <string name="notes">Notatki</string>
-    <string name="deleting_folder">Usuwam folder „%s”</string>
+    <string name="deleting_folder">Usuwanie folderu „%s”</string>
     <string name="none">Brak</string>
     <string name="label">Etykieta</string>
     <string name="transparent">Przezroczysty</string>
@@ -73,7 +74,7 @@
 
     <!-- Filters -->
     <string name="filter">Filtr</string>
-    <string name="no_items_found">Nic nie znalazłem.</string>
+    <string name="no_items_found">Nic nie znaleziono.</string>
     <string name="change_filter">Zmień filtr</string>
 
     <!-- Permissions -->
@@ -225,7 +226,7 @@
     <string name="app_icon_color">Ikona aplikacji</string>
     <string name="bottom_navigation_bar_color">Dolny pasek nawigacyjny</string>
     <string name="restore_defaults">Przywróć domyślne</string>
-    <string name="use_default">Użyj domyślnych</string>
+    <string name="use_default">Użyj domyślnego</string>
     <string name="default_color">Domyślny</string>
     <string name="change_color">Zmień kolor</string>
     <string name="theme">Motyw</string>
@@ -258,7 +259,7 @@
 
     <!-- What's new -->
     <string name="whats_new">Co nowego</string>
-    <string name="whats_new_disclaimer">* Wymienione są tylko większe zmiany</string>
+    <string name="whats_new_disclaimer">* Tutaj wymienione są tylko większe aktualizacje, ale zawsze są też mniejsze usprawnienia.</string>
 
     <!-- Actionbar items -->
     <string name="delete">Usuń</string>
@@ -284,7 +285,7 @@
     <string name="view_contact_details">Wyświetl szczegóły kontaktu</string>
     <string name="call_from_sim_1">Zadzwoń z karty SIM 1</string>
     <string name="call_from_sim_2">Zadzwoń z karty SIM 2</string>
-    <string name="toggle_filename">Pokazuj/Ukrywaj nazwy plików</string>
+    <string name="toggle_filename">Pokaż/Ukryj nazwy plików</string>
     <string name="move_to_top">Przesuń na górę</string>
     <string name="move_to_bottom">Przesuń na dół</string>
 
@@ -293,7 +294,8 @@
     <string name="name">Nazwa</string>
     <string name="size">Rozmiar</string>
     <string name="last_modified">Data modyfikacji</string>
-    <string name="date_taken">Data utworzenia</string>
+    <string name="date_created">Data utworzenia</string>
+    <string name="date_taken">Data wykonania</string>
     <string name="title">Tytuł</string>
     <string name="filename">Nazwa pliku</string>
     <string name="extension">Rozszerzenie</string>
@@ -338,9 +340,12 @@
     <string name="insert_pattern">Wprowadź wzór</string>
     <string name="wrong_pattern">Nieprawidłowy wzór</string>
     <string name="repeat_pattern">Wprowadź wzór ponownie</string>
+    <string name="biometrics">Biometria</string>
     <string name="fingerprint">Odcisk palca</string>
     <string name="add_fingerprint">Dodaj odcisk palca</string>
     <string name="place_finger">Przyłóż palec do czytnika</string>
+    <string name="open_biometric_dialog">Otwórz okno weryfikacji biometrycznej</string>
+    <string name="authenticate">Uwierzytelnij</string>
     <string name="authentication_failed">Uwierzytelnianie nie powiodło się.</string>
     <string name="authentication_blocked">Uwierzytelnianie zablokowane. Spróbuj ponownie za chwilę.</string>
     <string name="no_fingerprints_registered">Nie masz zarejestrowanych odcisków palców. Dodaj je w ustawieniach systemowych.</string>
@@ -544,7 +549,7 @@
     <string name="password_protect_hidden_items">Chroń widoczność ukrytych plików</string>
     <string name="password_protect_whole_app">Chroń dostęp do aplikacji</string>
     <string name="password_protect_file_deletion">Chroń pliki przed usunięciem i przeniesieniem</string>
-    <string name="keep_last_modified">Zachowaj starą datę modyfikacji po operacjach na plikach</string>
+    <string name="keep_last_modified">Utrzymuj starą datę modyfikacji po operacjach na plikach</string>
     <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
     <string name="prevent_phone_from_sleeping">Zapobiegaj przejściu urządzenia w stan uśpienia, gdy aplikacja jest aktywna</string>
     <string name="skip_delete_confirmation">Nie pokazuj okna z potwierdzeniem usunięcia elementów</string>
@@ -714,7 +719,7 @@
     </string>
     <string name="purchase">Kup</string>
     <string name="update_thank_you">Zaktualizuj aplikację Proste podziękowanie do najnowszej wersji</string>
-    <string name="before_asking_question_read_faq">Zanim zadasz pytanie, zajrzyj do sekcji często zadawanych pytań (FAQ) w ustawieniach aplikacji. Być może jest tam już rozwiązanie Twojego problemu.</string>
+    <string name="before_asking_question_read_faq">Zanim zadasz pytanie, najpierw sprawdź ustawienia aplikacji i przeczytaj często zadawane pytania. Może znajduje się tam rozwiązanie.</string>
     <string name="before_rate_read_faq">Zanim nas ocenisz, sprawdź najpierw ustawienia aplikacji i przeczytaj często zadawane pytania. Jeśli masz jakieś problemy, może rozwiązanie już tam jest.</string>
     <string name="make_sure_latest">Upewnij się, czy używasz najnowszej wersji aplikacji.</string>
     <string name="read_it">Przeczytaj to</string>
@@ -788,7 +793,7 @@
     <string name="faq_1_title_commons">Dlaczego nigdzie nie widzę widżetu aplikacji?</string>
     <string name="faq_1_text_commons">Zapewne dlatego, że aplikacja została zainstalowana na karcie pamięci. Jedynym rozwiązaniem problemu jest przeniesienie aplikacji do pamięci wewnętrznej. Jest to ograniczenie systemu.</string>
     <string name="faq_2_title_commons">Chcę Was wesprzeć, ale nie mam jak wpłacić pieniędzy. Czy mogę zrobić coś innego?</string>
-    <string name="faq_2_text_commons">Oczywiście. Możesz powiedzieć światu o naszych aplikacjach, podzielić się opinią i oceną w Sklepie Google Play, lub też wspomóc tłumaczenie aplikacji na nowe języki (bądź poprawić już istniejące tłumaczenia). Instrukcję znajdziesz pod adresem https://github.com/SimpleMobileTools/General-Discussion . Możesz też napisać do nas na adres hello@simplemobiletools.com , jeśli potrzebujesz pomocy.</string>
+    <string name="faq_2_text_commons">Oczywiście. Możesz powiedzieć światu o naszych aplikacjach, podzielić się opinią i oceną w Sklepie Google Play, lub też wspomóc tłumaczenie aplikacji na nowe języki (bądź poprawić już istniejące tłumaczenia). Instrukcję znajdziesz pod adresem https://github.com/SimpleMobileTools/General-Discussion. Możesz też napisać do nas na adres hello@simplemobiletools.com, jeśli potrzebujesz pomocy.</string>
     <string name="faq_3_title_commons">Przypadkowo usunąłem kilka plików. Mogę je jakoś odzyskać?</string>
     <string name="faq_3_text_commons">Pliki są usuwane zaraz po naciśnięciu w oknie potwierdzającym. System Android nie ma wbudowanego kosza.</string>
     <string name="faq_4_title_commons">Nie podobają mi się domyślne kolory widżetów. Mogę je jakoś zmienić?</string>

@@ -24,7 +24,12 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.biometric.BiometricPrompt
+import androidx.biometric.auth.AuthPromptCallback
+import androidx.biometric.auth.AuthPromptHost
+import androidx.biometric.auth.Class2BiometricAuthPrompt
 import androidx.documentfile.provider.DocumentFile
+import androidx.fragment.app.FragmentActivity
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.dialogs.*
@@ -63,10 +68,18 @@ fun Activity.appLaunched(appId: String) {
             }
 
             val defaultClassName = "${baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity"
-            packageManager.setComponentEnabledSetting(ComponentName(baseConfig.appId, defaultClassName), PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, PackageManager.DONT_KILL_APP)
+            packageManager.setComponentEnabledSetting(
+                ComponentName(baseConfig.appId, defaultClassName),
+                PackageManager.COMPONENT_ENABLED_STATE_DEFAULT,
+                PackageManager.DONT_KILL_APP
+            )
 
             val orangeClassName = "${baseConfig.appId.removeSuffix(".debug")}.activities.SplashActivity.Orange"
-            packageManager.setComponentEnabledSetting(ComponentName(baseConfig.appId, orangeClassName), PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
+            packageManager.setComponentEnabledSetting(
+                ComponentName(baseConfig.appId, orangeClassName),
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                PackageManager.DONT_KILL_APP
+            )
 
             baseConfig.appIconColor = primaryColor
             baseConfig.lastIconColor = primaryColor
@@ -348,7 +361,13 @@ fun Activity.openEditorIntent(path: String, forceChooser: Boolean, applicationId
     }
 }
 
-fun Activity.openPathIntent(path: String, forceChooser: Boolean, applicationId: String, forceMimeType: String = "", extras: HashMap<String, Boolean> = HashMap()) {
+fun Activity.openPathIntent(
+    path: String,
+    forceChooser: Boolean,
+    applicationId: String,
+    forceMimeType: String = "",
+    extras: HashMap<String, Boolean> = HashMap()
+) {
     ensureBackgroundThread {
         val newUri = getFinalUriFromPath(path, applicationId) ?: return@ensureBackgroundThread
         val mimeType = if (forceMimeType.isNotEmpty()) forceMimeType else getUriMimeType(path, newUri)
@@ -395,7 +414,7 @@ fun BaseSimpleActivity.launchCallIntent(recipient: String, handle: PhoneAccountH
         Intent(action).apply {
             data = Uri.fromParts("tel", recipient, null)
 
-            if (handle != null && isMarshmallowPlus()) {
+            if (isMarshmallowPlus() && handle != null) {
                 putExtra(TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, handle)
             }
 
@@ -696,29 +715,37 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                 }
             }
         }
-    } else if (File(oldPath).renameTo(File(newPath))) {
-        if (File(newPath).isDirectory) {
-            deleteFromMediaStore(oldPath)
-            rescanPath(newPath) {
-                runOnUiThread {
-                    callback?.invoke(true)
+    } else {
+        val oldFile = File(oldPath)
+        val newFile = File(newPath)
+        val tempFile = oldFile.createTempFile()
+        val oldToTempSucceeds = oldFile.renameTo(tempFile)
+        val tempToNewSucceeds = tempFile.renameTo(newFile)
+        if (oldToTempSucceeds && tempToNewSucceeds) {
+            if (newFile.isDirectory) {
+                updateInMediaStore(oldPath, newPath)
+                rescanPath(newPath) {
+                    runOnUiThread {
+                        callback?.invoke(true)
+                    }
+                    scanPathRecursively(newPath)
                 }
-                scanPathRecursively(newPath)
+            } else {
+                if (!baseConfig.keepLastModified) {
+                    newFile.setLastModified(System.currentTimeMillis())
+                }
+                updateInMediaStore(oldPath, newPath)
+                scanPathsRecursively(arrayListOf(newPath)) {
+                    runOnUiThread {
+                        callback?.invoke(true)
+                    }
+                }
             }
         } else {
-            if (!baseConfig.keepLastModified) {
-                File(newPath).setLastModified(System.currentTimeMillis())
+            tempFile.delete()
+            runOnUiThread {
+                callback?.invoke(false)
             }
-            deleteFromMediaStore(oldPath)
-            scanPathsRecursively(arrayListOf(newPath)) {
-                runOnUiThread {
-                    callback?.invoke(true)
-                }
-            }
-        }
-    } else {
-        runOnUiThread {
-            callback?.invoke(false)
         }
     }
 }
@@ -836,9 +863,62 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
     }
 }
 
-fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
+fun FragmentActivity.performSecurityCheck(
+    protectionType: Int,
+    requiredHash: String,
+    successCallback: ((String, Int) -> Unit)? = null,
+    failureCallback: (() -> Unit)? = null
+) {
+    if (protectionType == PROTECTION_FINGERPRINT && isTargetSdkVersion30Plus()) {
+        showBiometricPrompt(successCallback, failureCallback)
+    } else {
+        SecurityDialog(
+            activity = this,
+            requiredHash = requiredHash,
+            showTabIndex = protectionType,
+            callback = { hash, type, success ->
+                if (success) {
+                    successCallback?.invoke(hash, type)
+                } else {
+                    failureCallback?.invoke()
+                }
+            }
+        )
+    }
+}
+
+fun FragmentActivity.showBiometricPrompt(
+    successCallback: ((String, Int) -> Unit)? = null,
+    failureCallback: (() -> Unit)? = null
+) {
+    Class2BiometricAuthPrompt.Builder(getText(R.string.authenticate), getText(R.string.cancel))
+        .build()
+        .startAuthentication(
+            AuthPromptHost(this),
+            object : AuthPromptCallback() {
+                override fun onAuthenticationSucceeded(activity: FragmentActivity?, result: BiometricPrompt.AuthenticationResult) {
+                    successCallback?.invoke("", PROTECTION_FINGERPRINT)
+                }
+
+                override fun onAuthenticationError(activity: FragmentActivity?, errorCode: Int, errString: CharSequence) {
+                    val isCanceledByUser = errorCode == BiometricPrompt.ERROR_NEGATIVE_BUTTON || errorCode == BiometricPrompt.ERROR_USER_CANCELED
+                    if (!isCanceledByUser) {
+                        toast(errString.toString())
+                    }
+                    failureCallback?.invoke()
+                }
+
+                override fun onAuthenticationFailed(activity: FragmentActivity?) {
+                    toast(R.string.authentication_failed)
+                    failureCallback?.invoke()
+                }
+            }
+        )
+}
+
+fun FragmentActivity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
     if (baseConfig.isHiddenPasswordProtectionOn) {
-        SecurityDialog(this, baseConfig.hiddenPasswordHash, baseConfig.hiddenProtectionType) { hash, type, success ->
+        SecurityDialog(this, baseConfig.hiddenPasswordHash, baseConfig.hiddenProtectionType) { _, _, success ->
             if (success) {
                 callback()
             }
@@ -848,9 +928,9 @@ fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
     }
 }
 
-fun Activity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
+fun FragmentActivity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
     if (baseConfig.isAppPasswordProtectionOn) {
-        SecurityDialog(this, baseConfig.appPasswordHash, baseConfig.appProtectionType) { hash, type, success ->
+        SecurityDialog(this, baseConfig.appPasswordHash, baseConfig.appProtectionType) { _, _, success ->
             callback(success)
         }
     } else {
@@ -858,9 +938,9 @@ fun Activity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
     }
 }
 
-fun Activity.handleDeletePasswordProtection(callback: () -> Unit) {
+fun FragmentActivity.handleDeletePasswordProtection(callback: () -> Unit) {
     if (baseConfig.isDeletePasswordProtectionOn) {
-        SecurityDialog(this, baseConfig.deletePasswordHash, baseConfig.deleteProtectionType) { hash, type, success ->
+        SecurityDialog(this, baseConfig.deletePasswordHash, baseConfig.deleteProtectionType) { _, _, success ->
             if (success) {
                 callback()
             }
@@ -870,9 +950,9 @@ fun Activity.handleDeletePasswordProtection(callback: () -> Unit) {
     }
 }
 
-fun Activity.handleLockedFolderOpening(path: String, callback: (success: Boolean) -> Unit) {
+fun FragmentActivity.handleLockedFolderOpening(path: String, callback: (success: Boolean) -> Unit) {
     if (baseConfig.isFolderProtected(path)) {
-        SecurityDialog(this, baseConfig.getFolderProtectionHash(path), baseConfig.getFolderProtectionType(path)) { hash, type, success ->
+        SecurityDialog(this, baseConfig.getFolderProtectionHash(path), baseConfig.getFolderProtectionType(path)) { _, _, success ->
             callback(success)
         }
     } else {
@@ -903,7 +983,14 @@ fun Activity.updateSharedTheme(sharedTheme: SharedTheme) {
     }
 }
 
-fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0, titleText: String = "", cancelOnTouchOutside: Boolean = true, callback: (() -> Unit)? = null) {
+fun Activity.setupDialogStuff(
+    view: View,
+    dialog: AlertDialog,
+    titleId: Int = 0,
+    titleText: String = "",
+    cancelOnTouchOutside: Boolean = true,
+    callback: (() -> Unit)? = null
+) {
     if (isDestroyed || isFinishing) {
         return
     }
@@ -928,15 +1015,22 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
         }
     }
 
+    // if we use the same primary and background color, use the text color for dialog confirmation buttons
+    val dialogButtonColor = if (adjustedPrimaryColor == baseConfig.backgroundColor) {
+        baseConfig.textColor
+    } else {
+        adjustedPrimaryColor
+    }
+
     dialog.apply {
         setView(view)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         setCustomTitle(title)
         setCanceledOnTouchOutside(cancelOnTouchOutside)
         show()
-        getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(adjustedPrimaryColor)
-        getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(adjustedPrimaryColor)
-        getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(adjustedPrimaryColor)
+        getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(dialogButtonColor)
+        getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(dialogButtonColor)
+        getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(dialogButtonColor)
 
         val bgDrawable = resources.getColoredDrawableWithColor(R.drawable.dialog_bg, baseConfig.backgroundColor)
         window?.setBackgroundDrawable(bgDrawable)
@@ -944,14 +1038,18 @@ fun Activity.setupDialogStuff(view: View, dialog: AlertDialog, titleId: Int = 0,
     callback?.invoke()
 }
 
-fun Activity.showPickSecondsDialogHelper(curMinutes: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false, showDuringDayOption: Boolean = false,
-                                         cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
+fun Activity.showPickSecondsDialogHelper(
+    curMinutes: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false, showDuringDayOption: Boolean = false,
+    cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit
+) {
     val seconds = if (curMinutes == -1) curMinutes else curMinutes * 60
     showPickSecondsDialog(seconds, isSnoozePicker, showSecondsAtCustomDialog, showDuringDayOption, cancelCallback, callback)
 }
 
-fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false, showDuringDayOption: Boolean = false,
-                                   cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit) {
+fun Activity.showPickSecondsDialog(
+    curSeconds: Int, isSnoozePicker: Boolean = false, showSecondsAtCustomDialog: Boolean = false, showDuringDayOption: Boolean = false,
+    cancelCallback: (() -> Unit)? = null, callback: (seconds: Int) -> Unit
+) {
     hideKeyboard()
     val seconds = TreeSet<Int>()
     seconds.apply {
@@ -993,9 +1091,11 @@ fun Activity.showPickSecondsDialog(curSeconds: Int, isSnoozePicker: Boolean = fa
                 }
             }
             -3 -> {
-                TimePickerDialog(this, getDialogTheme(),
+                TimePickerDialog(
+                    this, getDialogTheme(),
                     { view, hourOfDay, minute -> callback(hourOfDay * -3600 + minute * -60) },
-                    curSeconds / 3600, curSeconds % 3600, baseConfig.use24HourFormat).show()
+                    curSeconds / 3600, curSeconds % 3600, baseConfig.use24HourFormat
+                ).show()
             }
             else -> {
                 callback(it as Int)
@@ -1072,4 +1172,16 @@ fun AppCompatActivity.showSideloadingDialog() {
     AppSideloadedDialog(this) {
         finish()
     }
+}
+
+fun BaseSimpleActivity.getTempFile(folderName: String, fileName: String): File? {
+    val folder = File(cacheDir, fileName)
+    if (!folder.exists()) {
+        if (!folder.mkdir()) {
+            toast(R.string.unknown_error_occurred)
+            return null
+        }
+    }
+
+    return File(folder, fileName)
 }

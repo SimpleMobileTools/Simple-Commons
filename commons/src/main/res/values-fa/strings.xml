@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">باشه</string>
     <string name="cancel">لغو</string>
+    <string name="nothing">Nothing</string>
     <string name="later">بعدا</string>
     <string name="save_as">ذخیره به عنوان</string>
     <string name="file_saved">پرونده با موفقیت ذخیره شد</string>
@@ -188,7 +189,7 @@
     <string name="internal">داخلی</string>
     <string name="sd_card">کارت حافظه</string>
     <string name="root">ریشه</string>
-    <string name="wrong_root_selected">Wrong folder selected, please select the root folder of your SD card</string>
+    <string name="wrong_root_selected">Wrong folder selected, please select the main folder of your SD card</string>
     <string name="sd_card_usb_same">SD card and USB device paths cannot be the same</string>
     <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
         It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
@@ -291,6 +292,7 @@
     <string name="name">نام</string>
     <string name="size">اندازه</string>
     <string name="last_modified">اخرین اصلاح</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">تاریخ گرفتن</string>
     <string name="title">عنوان</string>
     <string name="filename">نام پرونده</string>
@@ -335,9 +337,12 @@
     <string name="insert_pattern">الگو را وارد کنید</string>
     <string name="wrong_pattern">الگو اشتباه است</string>
     <string name="repeat_pattern">الگو را تکرار کنید</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">اثر انگشت</string>
     <string name="add_fingerprint">افزودن اثر انگشت</string>
     <string name="place_finger">لطفا انگشت خود را روی حسگر اثر انگشت قرار دهید</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">احراز هویت ناموفق</string>
     <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
     <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
@@ -596,7 +601,7 @@
     <string name="usb">یو‌اس‌بی</string>
     <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
     <string name="confirm_usb_storage_access_text">Please choose the top folder of the USB device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_usb">Wrong folder selected, please select the root folder of your USB device</string>
+    <string name="wrong_root_selected_usb">Wrong folder selected, please select the main folder of your USB device</string>
 
     <!-- Dates -->
     <string name="january">ژانویه</string>

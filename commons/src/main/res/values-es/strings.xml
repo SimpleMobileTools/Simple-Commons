@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">Aceptar</string>
     <string name="cancel">Cancelar</string>
+    <string name="nothing">Nothing</string>
     <string name="later">Mas tarde</string>
     <string name="save_as">Guardar como</string>
     <string name="file_saved">Archivo guardado con éxito</string>
@@ -291,6 +292,7 @@
     <string name="name">Nombre</string>
     <string name="size">Tamaño</string>
     <string name="last_modified">Modificación</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">Creación</string>
     <string name="title">Título</string>
     <string name="filename">Nombre del archivo</string>
@@ -335,9 +337,12 @@
     <string name="insert_pattern">Inserte Patrón</string>
     <string name="wrong_pattern">Patrón erroneo</string>
     <string name="repeat_pattern">Repetir Patrón</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">Huella</string>
     <string name="add_fingerprint">Añadir huella</string>
     <string name="place_finger">Por favor pon el dedo en el lector de huellas</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">Autenticación fallida</string>
     <string name="authentication_blocked">Autenticación bloqueada, por favor intente de nuevo en un momento</string>
     <string name="no_fingerprints_registered">No tiene huellas dactilares registradas, por favor agregue algunas en la configuración de su dispositivo</string>

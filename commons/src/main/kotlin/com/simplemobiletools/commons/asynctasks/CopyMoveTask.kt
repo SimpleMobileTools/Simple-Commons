@@ -12,7 +12,10 @@ import androidx.documentfile.provider.DocumentFile
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.*
+import com.simplemobiletools.commons.helpers.CONFLICT_KEEP_BOTH
+import com.simplemobiletools.commons.helpers.CONFLICT_SKIP
+import com.simplemobiletools.commons.helpers.getConflictResolution
+import com.simplemobiletools.commons.helpers.isOreoPlus
 import com.simplemobiletools.commons.interfaces.CopyMoveListener
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
@@ -21,8 +24,10 @@ import java.io.OutputStream
 import java.lang.ref.WeakReference
 import java.util.*
 
-class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val copyMediaOnly: Boolean, val conflictResolutions: LinkedHashMap<String, Int>,
-                   listener: CopyMoveListener, val copyHidden: Boolean) : AsyncTask<Pair<ArrayList<FileDirItem>, String>, Void, Boolean>() {
+class CopyMoveTask(
+    val activity: BaseSimpleActivity, val copyOnly: Boolean, val copyMediaOnly: Boolean, val conflictResolutions: LinkedHashMap<String, Int>,
+    listener: CopyMoveListener, val copyHidden: Boolean
+) : AsyncTask<Pair<ArrayList<FileDirItem>, String>, Void, Boolean>() {
     private val INITIAL_PROGRESS_DELAY = 3000L
     private val PROGRESS_RECHECK_INTERVAL = 500L
 
@@ -83,12 +88,6 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
                     if (resolution == CONFLICT_SKIP) {
                         mFileCountToCopy--
                         continue
-                    } else if (resolution == CONFLICT_OVERWRITE) {
-                        newFileDirItem.isDirectory = if (activity.getDoesFilePathExist(newPath)) File(newPath).isDirectory else activity.getSomeDocumentFile(newPath)!!.isDirectory
-                        activity.deleteFileBg(newFileDirItem, true)
-                        if (!newFileDirItem.isDirectory) {
-                            activity.deleteFromMediaStore(newFileDirItem.path)
-                        }
                     } else if (resolution == CONFLICT_KEEP_BOTH) {
                         val newFile = activity.getAlternativeFile(File(newFileDirItem.path))
                         newFileDirItem = FileDirItem(newFile.path, newFile.name, newFile.isDirectory)
@@ -275,7 +274,8 @@ class CopyMoveTask(val activity: BaseSimpleActivity, val copyOnly: Boolean, val 
     private fun copyOldLastModified(sourcePath: String, destinationPath: String) {
         val projection = arrayOf(
             MediaStore.Images.Media.DATE_TAKEN,
-            MediaStore.Images.Media.DATE_MODIFIED)
+            MediaStore.Images.Media.DATE_MODIFIED
+        )
         val uri = MediaStore.Files.getContentUri("external")
         val selection = "${MediaStore.MediaColumns.DATA} = ?"
         var selectionArgs = arrayOf(sourcePath)

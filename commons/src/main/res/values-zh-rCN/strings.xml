@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">确认</string>
     <string name="cancel">取消</string>
+    <string name="nothing">Nothing</string>
     <string name="later">Later</string>
     <string name="save_as">保存</string>
     <string name="file_saved">文件保存成功</string>
@@ -288,6 +289,7 @@
     <string name="name">名称</string>
     <string name="size">大小</string>
     <string name="last_modified">修改日期</string>
+    <string name="date_created">Date created</string>
     <string name="date_taken">拍摄日期</string>
     <string name="title">标题</string>
     <string name="filename">文件名</string>
@@ -331,9 +333,12 @@
     <string name="insert_pattern">绘制图案</string>
     <string name="wrong_pattern">图案错误</string>
     <string name="repeat_pattern">重复图案</string>
+    <string name="biometrics">Biometrics</string>
     <string name="fingerprint">指纹</string>
     <string name="add_fingerprint">添加指纹</string>
     <string name="place_finger">请将手指放在指纹传感器上</string>
+    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
+    <string name="authenticate">Authenticate</string>
     <string name="authentication_failed">验证失败</string>
     <string name="authentication_blocked">验证已被阻止，请稍后再试</string>
     <string name="no_fingerprints_registered">您还没有注册指纹，请先给您的设备添加一些指纹</string>

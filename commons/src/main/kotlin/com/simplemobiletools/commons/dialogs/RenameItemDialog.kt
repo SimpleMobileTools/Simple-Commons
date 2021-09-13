@@ -62,7 +62,13 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
                         }
 
                         val newPath = "${path.getParentPath()}/$newName"
-                        if (activity.getDoesFilePathExist(newPath)) {
+
+                        if (path == newPath) {
+                            activity.toast(R.string.name_taken)
+                            return@setOnClickListener
+                        }
+
+                        if (!path.equals(newPath, ignoreCase = true) && activity.getDoesFilePathExist(newPath)) {
                             activity.toast(R.string.name_taken)
                             return@setOnClickListener
                         }
