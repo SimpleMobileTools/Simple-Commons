@@ -27,7 +27,7 @@
                 app:flow_horizontalGap="@dimen/activity_margin"
                 app:flow_verticalGap="@dimen/medium_margin"
                 app:flow_maxElementsWrap="5"
-                app:flow_wrapMode="aligned"
+                app:flow_wrapMode="chain"
                 app:flow_horizontalStyle="packed"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
