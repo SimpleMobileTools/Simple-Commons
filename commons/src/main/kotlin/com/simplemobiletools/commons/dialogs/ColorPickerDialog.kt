@@ -168,12 +168,12 @@ class ColorPickerDialog(
         val recentColors = baseConfig.colorPickerRecentColors
         if (recentColors.isNotEmpty()) {
             recent_colors.beVisible()
-            val squareSize = context.resources.getDimensionPixelSize(R.dimen.normal_icon_size)
+            val squareSize = context.resources.getDimensionPixelSize(R.dimen.colorpicker_hue_width)
             recentColors.take(RECENT_COLORS_NUMBER).forEach { recentColor ->
                 val recentColorView = ImageView(context)
                 recentColorView.id = View.generateViewId()
                 recentColorView.layoutParams = ViewGroup.LayoutParams(squareSize, squareSize)
-                recentColorView.setFillWithStroke(recentColor, backgroundColor)
+                recentColorView.setFillWithStroke(recentColor, backgroundColor, cornerRadius)
                 recentColorView.setOnClickListener { newHexField.setText(getHexCode(recentColor)) }
                 recent_colors.addView(recentColorView)
                 recent_colors_flow.addView(recentColorView)
