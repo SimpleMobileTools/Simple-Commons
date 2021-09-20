@@ -55,7 +55,9 @@ import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.*
 import java.io.File
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.ArrayList
+import java.util.Date
+import java.util.Locale
 
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
@@ -338,7 +340,7 @@ fun Context.getMediaContent(path: String, uri: Uri): Uri? {
 
 fun Context.queryCursor(
     uri: Uri,
-    projection: Array<String>? = null,
+    projection: Array<String>,
     selection: String? = null,
     selectionArgs: Array<String>? = null,
     sortOrder: String? = null,
