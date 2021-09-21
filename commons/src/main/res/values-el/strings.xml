@@ -104,8 +104,8 @@
     <string name="pattern_renaming">Μοτίβο</string>
     <string name="string_to_add">Συμβολοσειρά για προσθήκη</string>
     <string name="rename_date_time_pattern">%Y - έτος\n%M - μήνας\n%D - ημέρα\n%h - ώρα\n%m - λεπτό\n%s - δευτ/το\n%i - αύξηση αριθμού από 1</string>
-    <string name="filename_without_txt">Filename (without .txt)</string>
-    <string name="filename_without_json">Filename (without .json)</string>
+    <string name="filename_without_txt">Όνομα αρχείου (χωρίς .txt)</string>
+    <string name="filename_without_json">Όνομα αρχείου (χωρίς .json)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Αντιγραφή</string>
@@ -339,7 +339,7 @@
     <string name="insert_pattern">Εισαγωγή μοτίβου</string>
     <string name="wrong_pattern">Λάθος μοτίβο</string>
     <string name="repeat_pattern">Επανάληψη μοτίβου</string>
-    <string name="biometrics">Biometrics</string>
+    <string name="biometrics">Βιομετρικά</string>
     <string name="fingerprint">Δακτυλικό αποτύπωμα</string>
     <string name="add_fingerprint">Προσθήκη δακτυλικού αποτυπώματος</string>
     <string name="place_finger">Παρακαλώ τοποθετήστε το δάκτυλό σας στον αισθητήρα δακτυλικών αποτυπωμάτων</string>
@@ -520,7 +520,7 @@
     <string name="small">Μικρό</string>
     <string name="medium">Μεσαίο</string>
     <string name="large">Μεγάλο</string>
-    <string name="extra_large">Πολύ Μεγάλο</string>
+    <string name="extra_large">Τεράστιο</string>
     <string name="password_protect_hidden_items">Κωδικός προστασίας προβολής κρυφών στοιχείων</string>
     <string name="password_protect_whole_app">Κωδικός προστασίας ολόκληρης της εφαρμογής</string>
     <string name="password_protect_file_deletion">Προστασία με κωδικό για διαγραφή ή μετακίνηση</string>
@@ -577,7 +577,7 @@
     <string name="recycle_bin_emptied">Ο Κάδος Ανακύκλωσης άδειασε επιτυχώς</string>
     <string name="files_restored_successfully">Τα αρχεία επαναφέρθηκαν επιτυχώς</string>
     <string name="empty_recycle_bin_confirmation">Σίγουρα θέλετε να αδειάσετε τον Κάδο Ανακύκλωσης; Τα αρχεία θα χαθούν οριστικά.</string>
-    <string name="recycle_bin_empty">Ο Κάδος Ανακύκλωσης είναι κενός</string>
+    <string name="recycle_bin_empty">Ο Κάδος Ανακύκλωσης είναι άδειος</string>
     <string name="moving_recycle_bin_items_disabled">Η μετακίνηση στον Κάδο είναι ανενεργή, χρησιμοποιείστε την Επαναφορά</string>
     <string name="show_the_recycle_bin">Εμφάνιση Κάδου Ανακύκλωσης</string>
     <string name="hide_the_recycle_bin">Απόκρυψη Κάδου Ανακύκλωσης</string>
@@ -702,7 +702,7 @@
     <string name="rate_us_prompt">Γειά σας,\n\nφαίνεται ότι χρησιμοποιείτε αυτήν την εφαρμογή ήδη για αρκετό καιρό, και το εκτιμούμε πραγματικά.\n\nΑν μπορούμε να σας ζητήσουμε μια χάρη, παρακαλούμε αξιολογήστε μας στο Google Play. Αυτό θα μας βοηθούσε πολύ.\n\nΑνεξάρτητα τι αποφασίσατε, δεν θα εμφανιστεί ξανά αυτό το μήνυμα.\n\nΕυχαριστούμε!</string>
     <string name="rate_our_app">Βαθμολογήστε την εφαρμογή μας παρακαλώ :)</string>
     <string name="thank_you">Σας Ευχαριστούμε</string>
-    <string name="widget_locked_pro">Το widget είναι κλειδωμένο.\nΠαρακαλώ αναβαθμίστε σε Pro έκδοση, για να το ξεκλειδώστε το.</string>
+    <string name="widget_locked_pro">Το widget είναι κλειδωμένο.\nΠαρακαλώ αναβαθμίστε σε Pro έκδοση, για να το ξεκλειδώσετε.</string>
     <string name="widget_locked">
         <![CDATA[
             Αυτό το γραφικό είναι κλειδωμένο.<br>Παρακαλώ αγοράστε το <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> για να το ξεκλειδώσετε.
@@ -824,7 +824,7 @@
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Λίστες ελέγχου</string>
-    <string name="why_upgrade_different_note_per_widget">Διαφορετική σημείωση και χρώματα ανά γραφικό συστατικό</string>
+    <string name="why_upgrade_different_note_per_widget">Διαφορετική σημείωση και χρώματα ανά γραφικό στοιχείο</string>
     <string name="why_upgrade_note_locking">Κλείδωμα Σημείωσης</string>
 
     <!-- File Manager Pro -->
