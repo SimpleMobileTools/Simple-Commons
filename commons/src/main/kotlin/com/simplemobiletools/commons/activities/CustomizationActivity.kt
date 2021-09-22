@@ -479,7 +479,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickNavigationBarColor() {
-        ColorPickerDialog(this, curNavigationBarColor, true, true, currentColorCallback = {
+        ColorPickerDialog(this, curNavigationBarColor, true, true, true, currentColorCallback = {
             updateNavigationBarColor(it)
         }, callback = { wasPositivePressed, color ->
             if (wasPositivePressed) {
