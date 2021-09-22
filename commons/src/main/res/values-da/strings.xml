@@ -1,7 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annuller</string>
-    <string name="nothing">Nothing</string>
+    <string name="nothing">Intet</string>
     <string name="later">Senere</string>
     <string name="save_as">Gem som</string>
     <string name="file_saved">Fil gemt</string>
@@ -56,8 +56,8 @@
     <string name="block_number">Blokér nummer</string>
     <string name="block_numbers">Blokér numre</string>
     <string name="blocked_numbers">Blokerede numre</string>
-    <string name="export_blocked_numbers">Export blocked numbers</string>
-    <string name="import_blocked_numbers">Import blocked numbers</string>
+    <string name="export_blocked_numbers">Eksporter blokerede numre</string>
+    <string name="import_blocked_numbers">Importer blokerede numre</string>
     <string name="must_make_default_dialer">Du skal gøre denne app til standardopkaldsappen for at gøre brug af blokerede numre.</string>
     <string name="set_as_default">Gør til standard</string>
     <string name="block_confirmation">Er du sikker på at du vil blokere \"%s\"?</string>
@@ -104,8 +104,8 @@
     <string name="pattern_renaming">Mønster</string>
     <string name="string_to_add">Tekststreng der skal tilføjes</string>
     <string name="rename_date_time_pattern">%Y - år\n%M - måned\n%D - dag\n%h - time\n%m - minut\n%s - sekund\n%i - tal stigende fra 1</string>
-    <string name="filename_without_txt">Filename (without .txt)</string>
-    <string name="filename_without_json">Filename (without .json)</string>
+    <string name="filename_without_txt">Filenavn (uden .txt)</string>
+    <string name="filename_without_json">Filenavn (uden .json)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopier</string>
@@ -294,7 +294,7 @@
     <string name="name">Navn</string>
     <string name="size">Størrelse</string>
     <string name="last_modified">Senest ændret</string>
-    <string name="date_created">Date created</string>
+    <string name="date_created">Oprettelsesdato</string>
     <string name="date_taken">Eksponeringsdato</string>
     <string name="title">Titel</string>
     <string name="filename">Filnavn</string>
@@ -319,7 +319,7 @@
     <string name="are_you_sure_delete">Er du sikker på at du vil slette dette?</string>
     <string name="are_you_sure_recycle_bin">Er du sikker på at du vil flytte dette til papirkurven?</string>
     <string name="do_not_ask_again">Spørg ikke igen i denne session</string>
-    <string name="do_not_show_again">Do not show again</string>
+    <string name="do_not_show_again">Vis ikke dette igen</string>
     <string name="yes">Ja</string>
     <string name="no">Nej</string>
     <string name="maybe">Måske</string>
@@ -343,8 +343,8 @@
     <string name="fingerprint">Fingeraftryk</string>
     <string name="add_fingerprint">Tilføj fingeraftryk</string>
     <string name="place_finger">Sæt din finger på sensoren</string>
-    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
-    <string name="authenticate">Authenticate</string>
+    <string name="open_biometric_dialog">Åbn dialogboksen til verifikation af biometrisk ID</string>
+    <string name="authenticate">Godkend</string>
     <string name="authentication_failed">Godkendelsen fejlede</string>
     <string name="authentication_blocked">Godkendelse blokeret, prøv igen om lidt</string>
     <string name="no_fingerprints_registered">Du har ingen registrerede fingeraftryk, tilføj nogle i indstillingerne på din enhed</string>
