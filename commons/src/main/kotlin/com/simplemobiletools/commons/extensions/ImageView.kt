@@ -10,7 +10,7 @@ fun ImageView.setFillWithStroke(fillColor: Int, backgroundColor: Int, cornerRadi
         shape = GradientDrawable.RECTANGLE
         setColor(fillColor)
         setStroke(2, strokeColor)
-        setBackgroundDrawable(this)
+        background = this
 
         if (cornerRadiusSize != 0f) {
             cornerRadius = cornerRadiusSize

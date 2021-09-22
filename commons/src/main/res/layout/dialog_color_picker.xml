@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/color_picker_scrollview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,10 +12,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/recent_colors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin">
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/recent_colors_flow"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:flow_horizontalAlign="start"
+                app:flow_horizontalGap="@dimen/activity_margin"
+                app:flow_verticalGap="@dimen/medium_margin"
+                app:flow_maxElementsWrap="5"
+                app:flow_wrapMode="chain"
+                app:flow_horizontalStyle="packed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <RelativeLayout
             android:id="@+id/color_picker_top_holder"
             android:layout_width="match_parent"
             android:layout_height="@dimen/colorpicker_size_with_padding"
+            android:layout_below="@+id/recent_colors"
             android:gravity="center_horizontal">
 
             <com.simplemobiletools.commons.views.ColorPickerSquare
