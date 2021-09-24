@@ -103,9 +103,9 @@
     <string name="simple_renaming">Простое переименование</string>
     <string name="pattern_renaming">Шаблон</string>
     <string name="string_to_add">Строка для добавления</string>
-    <string name="rename_date_time_pattern">%Y - год\n%M - месяц\n%D - день\n%h - час\n%m - минута\n%s - секунда\n%i - порядковый номер с 1</string>
-    <string name="filename_without_txt">Filename (without .txt)</string>
-    <string name="filename_without_json">Filename (without .json)</string>
+    <string name="rename_date_time_pattern">%Y — год\n%M — месяц\n%D — день\n%h — час\n%m — минута\n%s — секунда\n%i — порядковый номер с 1</string>
+    <string name="filename_without_txt">Имя файла (без .txt)</string>
+    <string name="filename_without_json">Имя файла (без .json)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Копировать</string>
@@ -521,8 +521,8 @@
     </plurals>
 
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Время, оставшееся до срабатывания будильника:\n%s</string>
-    <string name="reminder_triggers_in">Время, оставшееся до срабатывания напоминания:\n%s</string>
+    <string name="alarm_goes_off_in">Время до срабатывания будильника:\n%s</string>
+    <string name="reminder_triggers_in">Время до срабатывания напоминания:\n%s</string>
     <string name="alarm_warning">Убедитесь, что будильник работает правильно, прежде чем полагаться на него. Он может не работать должным образом из-за системных ограничений, связанных с экономией батареи.</string>
     <string name="reminder_warning">Убедитесь, что напоминания работают правильно, прежде чем полагаться на них. Они могут не работать должным образом из-за системных ограничений, связанных с экономией батареи.</string>
     <string name="notifications_disabled">Уведомления этого приложения отключены. Перейдите в настройки устройства и включите их.</string>
