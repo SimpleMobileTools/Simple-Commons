@@ -22,7 +22,6 @@ private const val RECENT_COLORS_NUMBER = 5
 class ColorPickerDialog(
     val activity: Activity,
     color: Int,
-    showRecentColors: Boolean = false,
     val removeDimmedBackground: Boolean = false,
     showUseDefaultButton: Boolean = false,
     val currentColorCallback: ((color: Int) -> Unit)? = null,
@@ -68,10 +67,7 @@ class ColorPickerDialog(
                 true
             }
             newHexField.setText(hexCode)
-
-            if (showRecentColors) {
-                setupRecentColors()
-            }
+            setupRecentColors()
         }
 
         viewHue.setOnTouchListener(OnTouchListener { v, event ->
