@@ -47,5 +47,3 @@ dependencies {
     kapt 'com.github.bumptech.glide:compiler:4.10.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
 }
-
-apply from: '../bintray-upload.gradle'
