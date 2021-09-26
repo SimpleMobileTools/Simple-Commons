@@ -7,7 +7,7 @@ buildscript {
         propTargetSdkVersion = propCompileSdkVersion
         propVersionCode = 1
         propVersionName = '5.34.26'
-        kotlin_version = '1.5.21'
+        kotlin_version = '1.5.31'
     }
 
     repositories {
@@ -16,7 +16,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath 'com.android.tools.build:gradle:7.0.2'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
