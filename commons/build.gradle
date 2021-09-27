@@ -2,6 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion propCompileSdkVersion
@@ -44,4 +45,14 @@ dependencies {
     api 'com.github.bumptech.glide:glide:4.10.0'
     kapt 'com.github.bumptech.glide:compiler:4.10.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+}
+
+project.afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+            }
+        }
+    }
 }
