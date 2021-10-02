@@ -14,6 +14,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.DocumentsContract
+import android.provider.MediaStore
 import android.provider.Settings
 import android.telecom.TelecomManager
 import android.view.Menu
@@ -51,9 +52,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     var configItemsToExport = LinkedHashMap<String, Any>()
 
     private val GENERIC_PERM_HANDLER = 100
+    private val DELETE_FILE_SDK_30_HANDLER = 300
 
     companion object {
         var funAfterSAFPermission: ((success: Boolean) -> Unit)? = null
+        var funAfterDelete30File: ((success: Boolean) -> Unit)? = null
     }
 
     abstract fun getAppIconIDs(): ArrayList<Int>
@@ -220,7 +223,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
         if (requestCode == OPEN_DOCUMENT_TREE) {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-                val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
+                val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition)
+                    .matches() && resultData.dataString!!.contains(partition))
                 if (isProperSDFolder(resultData.data!!) && isProperPartition) {
                     if (resultData.dataString == baseConfig.OTGTreeUri) {
                         toast(R.string.sd_card_usb_same)
@@ -240,7 +244,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             }
         } else if (requestCode == OPEN_DOCUMENT_TREE_OTG) {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-                val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
+                val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition)
+                    .matches() && resultData.dataString!!.contains(partition))
                 if (isProperOTGFolder(resultData.data!!) && isProperPartition) {
                     if (resultData.dataString == baseConfig.treeUri) {
                         funAfterSAFPermission?.invoke(false)
@@ -267,6 +272,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         } else if (requestCode == SELECT_EXPORT_SETTINGS_FILE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
             val outputStream = contentResolver.openOutputStream(resultData.data!!)
             exportSettingsTo(outputStream, configItemsToExport)
+        } else if (requestCode == DELETE_FILE_SDK_30_HANDLER) {
+            funAfterDelete30File?.invoke(resultCode == Activity.RESULT_OK)
         }
     }
 
@@ -374,8 +381,21 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun copyMoveFilesTo(fileDirItems: ArrayList<FileDirItem>, source: String, destination: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean,
-                        copyHidden: Boolean, callback: (destinationPath: String) -> Unit) {
+    @SuppressLint("NewApi")
+    fun deleteSDK30Uris(uris: List<Uri>, callback: (success: Boolean) -> Unit) {
+        if (isRPlus()) {
+            funAfterDelete30File = callback
+            val deleteRequest = MediaStore.createDeleteRequest(contentResolver, uris).intentSender
+            startIntentSenderForResult(deleteRequest, DELETE_FILE_SDK_30_HANDLER, null, 0, 0, 0)
+        } else {
+            callback(false)
+        }
+    }
+
+    fun copyMoveFilesTo(
+        fileDirItems: ArrayList<FileDirItem>, source: String, destination: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean,
+        copyHidden: Boolean, callback: (destinationPath: String) -> Unit
+    ) {
         if (source == destination) {
             toast(R.string.source_and_destination_same)
             return
@@ -459,7 +479,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         return newFile
     }
 
-    private fun startCopyMove(files: ArrayList<FileDirItem>, destinationPath: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean, copyHidden: Boolean) {
+    private fun startCopyMove(
+        files: ArrayList<FileDirItem>,
+        destinationPath: String,
+        isCopyOperation: Boolean,
+        copyPhotoVideoOnly: Boolean,
+        copyHidden: Boolean
+    ) {
         val availableSpace = destinationPath.getAvailableStorageB()
         val sumToCopy = files.sumByLong { it.getProperSize(applicationContext, copyHidden) }
         if (availableSpace == -1L || sumToCopy < availableSpace) {
@@ -474,8 +500,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun checkConflicts(files: ArrayList<FileDirItem>, destinationPath: String, index: Int, conflictResolutions: LinkedHashMap<String, Int>,
-                       callback: (resolutions: LinkedHashMap<String, Int>) -> Unit) {
+    fun checkConflicts(
+        files: ArrayList<FileDirItem>, destinationPath: String, index: Int, conflictResolutions: LinkedHashMap<String, Int>,
+        callback: (resolutions: LinkedHashMap<String, Int>) -> Unit
+    ) {
         if (index == files.size) {
             callback(conflictResolutions)
             return
