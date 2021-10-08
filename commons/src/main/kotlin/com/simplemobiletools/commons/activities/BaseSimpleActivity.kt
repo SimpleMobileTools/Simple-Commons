@@ -385,8 +385,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun deleteSDK30Uris(uris: List<Uri>, callback: (success: Boolean) -> Unit) {
         if (isRPlus()) {
             funAfterDelete30File = callback
-            val deleteRequest = MediaStore.createDeleteRequest(contentResolver, uris).intentSender
-            startIntentSenderForResult(deleteRequest, DELETE_FILE_SDK_30_HANDLER, null, 0, 0, 0)
+            try {
+                val deleteRequest = MediaStore.createDeleteRequest(contentResolver, uris).intentSender
+                startIntentSenderForResult(deleteRequest, DELETE_FILE_SDK_30_HANDLER, null, 0, 0, 0)
+            } catch (e: Exception) {
+                showErrorToast(e)
+            }
         } else {
             callback(false)
         }
