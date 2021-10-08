@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
+import android.content.ContentUris
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
@@ -28,7 +29,10 @@ import java.util.regex.Pattern
 // http://stackoverflow.com/a/40582634/1967672
 fun Context.getSDCardPath(): String {
     val directories = getStorageDirectories().filter {
-        !it.equals(getInternalStoragePath()) && !it.equals("/storage/emulated/0", true) && (baseConfig.OTGPartition.isEmpty() || !it.endsWith(baseConfig.OTGPartition))
+        !it.equals(getInternalStoragePath()) && !it.equals(
+            "/storage/emulated/0",
+            true
+        ) && (baseConfig.OTGPartition.isEmpty() || !it.endsWith(baseConfig.OTGPartition))
     }
 
     val fullSDpattern = Pattern.compile(SD_OTG_PATTERN)
@@ -117,12 +121,14 @@ fun Context.getStorageDirectories(): Array<String> {
 }
 
 fun Context.getHumanReadablePath(path: String): String {
-    return getString(when (path) {
-        "/" -> R.string.root
-        internalStoragePath -> R.string.internal
-        otgPath -> R.string.usb
-        else -> R.string.sd_card
-    })
+    return getString(
+        when (path) {
+            "/" -> R.string.root
+            internalStoragePath -> R.string.internal
+            otgPath -> R.string.usb
+            else -> R.string.sd_card
+        }
+    )
 }
 
 fun Context.humanizePath(path: String): String {
@@ -134,7 +140,8 @@ fun Context.humanizePath(path: String): String {
     }
 }
 
-fun Context.getInternalStoragePath() = if (File("/storage/emulated/0").exists()) "/storage/emulated/0" else Environment.getExternalStorageDirectory().absolutePath.trimEnd('/')
+fun Context.getInternalStoragePath() =
+    if (File("/storage/emulated/0").exists()) "/storage/emulated/0" else Environment.getExternalStorageDirectory().absolutePath.trimEnd('/')
 
 fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWith(sdCardPath)
 
@@ -545,3 +552,44 @@ private val physicalPaths = arrayListOf(
     "/storage/usbdisk1",
     "/storage/usbdisk2"
 )
+
+fun Context.getFileUrisFromFileDirItems(fileDirItems: List<FileDirItem>): ArrayList<Uri> {
+    val fileUris = ArrayList<Uri>()
+    val allIds = getMediaStoreIds(this)
+    val filePaths = fileDirItems.map { it.path.lowercase(Locale.getDefault()) }
+    for ((filePath, mediaStoreId) in allIds) {
+        if (filePaths.contains(filePath.lowercase(Locale.getDefault()))) {
+            val baseUri = getFileUri(filePath)
+            val uri = ContentUris.withAppendedId(baseUri, mediaStoreId)
+            fileUris.add(uri)
+        }
+    }
+
+    return fileUris
+}
+
+fun getMediaStoreIds(context: Context): HashMap<String, Long> {
+    val ids = HashMap<String, Long>()
+    val projection = arrayOf(
+        Images.Media.DATA,
+        Images.Media._ID
+    )
+
+    val uri = Files.getContentUri("external")
+
+    try {
+        context.queryCursor(uri, projection) { cursor ->
+            try {
+                val id = cursor.getLongValue(Images.Media._ID)
+                if (id != 0L) {
+                    val path = cursor.getStringValue(Images.Media.DATA)
+                    ids[path] = id
+                }
+            } catch (e: Exception) {
+            }
+        }
+    } catch (e: Exception) {
+    }
+
+    return ids
+}
