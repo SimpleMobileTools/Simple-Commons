@@ -147,6 +147,10 @@ fun File.createTempFile(): File {
     return if (isDirectory) {
         createTempDir("temp", "${System.currentTimeMillis()}", parentFile)
     } else {
-        createTempFile("temp", "${System.currentTimeMillis()}", parentFile)
+        if (isRPlus()) {
+            kotlin.io.path.createTempFile("temp", "${System.currentTimeMillis()}").toFile()
+        } else {
+            createTempFile("temp", "${System.currentTimeMillis()}", parentFile)
+        }
     }
 }
