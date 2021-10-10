@@ -457,9 +457,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
                                 runOnUiThread {
                                     if (updatedPaths.isEmpty()) {
-                                        copyMoveListener.copySucceeded(false, fileCountToCopy == 0, destination)
+                                        copyMoveListener.copySucceeded(false, fileCountToCopy == 0, destination, false)
                                     } else {
-                                        copyMoveListener.copySucceeded(false, fileCountToCopy <= updatedPaths.size, destination)
+                                        copyMoveListener.copySucceeded(false, fileCountToCopy <= updatedPaths.size, destination, updatedPaths.size == 1)
                                     }
                                 }
                             }
@@ -551,11 +551,31 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     val copyMoveListener = object : CopyMoveListener {
-        override fun copySucceeded(copyOnly: Boolean, copiedAll: Boolean, destinationPath: String) {
+        override fun copySucceeded(copyOnly: Boolean, copiedAll: Boolean, destinationPath: String, wasCopyingOneFileOnly: Boolean) {
             if (copyOnly) {
-                toast(if (copiedAll) R.string.copying_success else R.string.copying_success_partial)
+                toast(
+                    if (copiedAll) {
+                        if (wasCopyingOneFileOnly) {
+                            R.string.copying_success_one
+                        } else {
+                            R.string.copying_success
+                        }
+                    } else {
+                        R.string.copying_success_partial
+                    }
+                )
             } else {
-                toast(if (copiedAll) R.string.moving_success else R.string.moving_success_partial)
+                toast(
+                    if (copiedAll) {
+                        if (wasCopyingOneFileOnly) {
+                            R.string.moving_success_one
+                        } else {
+                            R.string.moving_success
+                        }
+                    } else {
+                        R.string.moving_success_partial
+                    }
+                )
             }
 
             copyMoveCallback?.invoke(destinationPath)
