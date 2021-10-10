@@ -123,9 +123,11 @@
     <string name="copy_failed">يتعذر نسخ الملفات</string>
     <string name="copying">جارٍ النسخ …</string>
     <string name="copying_success">تم نسخ الملفات بنجاح</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">حدث خطأ</string>
     <string name="moving">جارٍ النقل …</string>
     <string name="moving_success">تم نقل الملفات بنجاح</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">يتعذر نقل بعض الملفات</string>
     <string name="copying_success_partial">يتعذر نسخ بعض الملفات</string>
     <string name="no_files_selected">لا توجد ملفات محددة</string>

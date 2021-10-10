@@ -123,9 +123,11 @@
     <string name="copy_failed">Kopiranje ni bilo mogoče</string>
     <string name="copying">Kopiranje…</string>
     <string name="copying_success">Datoteke uspešno kopirane</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">Prišlo je do napake</string>
     <string name="moving">Premikanje…</string>
     <string name="moving_success">Datoteke premaknjene uspešno</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">Nekaterih datotek ni bilo mogoče premakniti</string>
     <string name="copying_success_partial">Nekaterih datotek ni bilo mogoče kopirati</string>
     <string name="no_files_selected">Nobena datoteka ni izbrana</string>

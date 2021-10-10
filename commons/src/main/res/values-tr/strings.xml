@@ -123,9 +123,11 @@
     <string name="copy_failed">Dosyalar kopyalanamadı</string>
     <string name="copying">Kopyalanıyor…</string>
     <string name="copying_success">Dosyalar başarıyla kopyalandı</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">Bir hata oluştu</string>
     <string name="moving">Taşınıyor…</string>
     <string name="moving_success">Dosyalar başarıyla taşındı</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">Bazı dosyalar taşınamadı</string>
     <string name="copying_success_partial">Bazı dosyalar kopyalanamadı</string>
     <string name="no_files_selected">Hiçbir dosya seçilmedi</string>

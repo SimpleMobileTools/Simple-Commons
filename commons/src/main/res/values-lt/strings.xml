@@ -123,9 +123,11 @@
     <string name="copy_failed">Bylos negali būti kopijuojamos</string>
     <string name="copying">Kopijuojama…</string>
     <string name="copying_success">Sėkmingai padarytos bylų kopijos</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">Klaida</string>
     <string name="moving">Perkeliama…</string>
     <string name="moving_success">Bylos perkeltos sėkmingai</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">Kai kurios bylos negali būti perkeltos</string>
     <string name="copying_success_partial">Kai kurios bylos negali būti kopijuojamos</string>
     <string name="no_files_selected">Nepasirinktos bylos</string>

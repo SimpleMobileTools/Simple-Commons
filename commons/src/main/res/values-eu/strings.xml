@@ -123,9 +123,11 @@
     <string name="copy_failed">Ezin izan dira fitxategiak kopiatu</string>
     <string name="copying">Kopiatu…</string>
     <string name="copying_success">Fitxategiak ondo kopiatu dira</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">Errorea gertatu da</string>
     <string name="moving">Mugitzen…</string>
     <string name="moving_success">Fitxategiak ondo mugitu dira</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">Fitxategi batzuk ezin izan dira mugitu</string>
     <string name="copying_success_partial">Fitxategi batzuk ezin izan dira kopiatu</string>
     <string name="no_files_selected">Fitxategirik ez da hautatu</string>

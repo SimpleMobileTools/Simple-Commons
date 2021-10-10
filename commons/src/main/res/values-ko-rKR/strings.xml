@@ -123,9 +123,11 @@
     <string name="copy_failed">파일복사 실패</string>
     <string name="copying">복사중…</string>
     <string name="copying_success">파일복사 성공</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">오류발생</string>
     <string name="moving">이동중…</string>
     <string name="moving_success">파일이동 성공</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">일부 파일을 이동 할 수 없음</string>
     <string name="copying_success_partial">일부 파일을 복사 할 수 없음</string>
     <string name="no_files_selected">파일이 선택되지 않았습니다</string>

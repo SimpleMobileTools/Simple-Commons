@@ -123,9 +123,11 @@
     <string name="copy_failed">Αδύνατη η αντιγραφή των αρχείων</string>
     <string name="copying">Αντιγράφονται…</string>
     <string name="copying_success">Τα αρχεία αντιγράφηκαν με επιτυχία</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">Ένα σφάλμα παρουσιάστηκε</string>
     <string name="moving">Μετακινούνται…</string>
     <string name="moving_success">Τα αρχεία μετακινήθηκαν με επιτυχία</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">Αδύνατη η μετακίνηση ορισμένων αρχείων</string>
     <string name="copying_success_partial">Αδύνατη η αντιγραφή ορισμένων αρχείων</string>
     <string name="no_files_selected">Δεν έχουν επιλεγεί αρχεία</string>

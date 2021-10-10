@@ -123,9 +123,11 @@
     <string name="copy_failed">Could not copy the files</string>
     <string name="copying">நகலெடுக்கிறது…</string>
     <string name="copying_success">கோப்புகள் வெற்றிகரமாக நகலெடுக்கப்பட்டது</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">ஒரு பிழை ஏற்பட்டது</string>
     <string name="moving">நகர்த்துகிறது…</string>
     <string name="moving_success">கோப்புகள் வெற்றிகரமாக நகர்த்தப்பட்டது</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">Some files could not be moved</string>
     <string name="copying_success_partial">Some files could not be copied</string>
     <string name="no_files_selected">No files selected</string>

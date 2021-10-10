@@ -123,9 +123,11 @@
     <string name="copy_failed">Det gick inte att kopiera filerna</string>
     <string name="copying">Kopierar…</string>
     <string name="copying_success">Filerna har kopierats</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">Ett fel har uppstått</string>
     <string name="moving">Flyttar…</string>
     <string name="moving_success">Filerna har flyttats</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">Det gick inte att flytta vissa filer</string>
     <string name="copying_success_partial">Det gick inte att kopiera vissa filer</string>
     <string name="no_files_selected">Inga filer har valts</string>

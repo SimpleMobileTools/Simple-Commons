@@ -123,9 +123,11 @@
     <string name="copy_failed">Tiedostoja ei voitu kopioida</string>
     <string name="copying">Kopioidaan…</string>
     <string name="copying_success">Tiedostot kopioitu</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">Tapahtui virhe</string>
     <string name="moving">Siirretään…</string>
     <string name="moving_success">Tiedostot siirretty</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">Kaikkia tiedostoja ei voitu siirtää</string>
     <string name="copying_success_partial">Kaikkia tiedostoja ei voitu kopioida</string>
     <string name="no_files_selected">Ei valittuja tiedostoja</string>

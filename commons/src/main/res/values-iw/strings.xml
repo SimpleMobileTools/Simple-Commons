@@ -123,9 +123,11 @@
     <string name="copy_failed">לא ניתן להעתיק את הקבצים</string>
     <string name="copying">מעתיק...</string>
     <string name="copying_success">קבצים הועתקו בהצלחה</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">אירעה שגיאה</string>
     <string name="moving">מעביר...</string>
     <string name="moving_success">קובץ הועבר בהצלחה</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">חלק מהקבצים לא הועברו</string>
     <string name="copying_success_partial">חלק מהקבצים לא הועתקו</string>
     <string name="no_files_selected">לא נבחרו קבצים</string>

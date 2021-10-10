@@ -123,9 +123,11 @@
     <string name="copy_failed">Kunne ikke kopiere filerne</string>
     <string name="copying">Kopierer…</string>
     <string name="copying_success">Filerne er kopieret</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">Der opstod en fejl</string>
     <string name="moving">Flytter…</string>
     <string name="moving_success">Filerne er flyttet</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">Ikke alle filer blev flyttet</string>
     <string name="copying_success_partial">Nogle filer blev ikke kopieret</string>
     <string name="no_files_selected">Der er ikke valgt nogen filer</string>

@@ -123,9 +123,11 @@
     <string name="copy_failed">Nem lehet másolni a fájlt</string>
     <string name="copying">Másolás…</string>
     <string name="copying_success">Sikeres fájl másolás</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">Hiba történt</string>
     <string name="moving">Áthelyezés…</string>
     <string name="moving_success">A fájl áthelyezése sikerült</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">Egyes fájlokat nem lehet áthelyezni</string>
     <string name="copying_success_partial">Egyes fájlokat nem lehet másolni</string>
     <string name="no_files_selected">Nincs fájl kiválasztva</string>

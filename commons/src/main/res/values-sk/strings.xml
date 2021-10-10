@@ -123,9 +123,11 @@
     <string name="copy_failed">Nepodarilo sa skopírovať súbory</string>
     <string name="copying">Kopírovanie…</string>
     <string name="copying_success">Súbory boli úspešne skopírované</string>
+    <string name="copying_success_one">Súbor bol úspešne skopírovaný</string>
     <string name="copy_move_failed">Došlo k chybe</string>
     <string name="moving">Presúvanie…</string>
     <string name="moving_success">Súbory boli úspešne presunuté</string>
+    <string name="moving_success_one">Súbor bol úspešne presunutý</string>
     <string name="moving_success_partial">Nepodarilo sa presunúť niektoré súbory</string>
     <string name="copying_success_partial">Nepodarilo sa skopírovať niektoré súbory</string>
     <string name="no_files_selected">Niesú označené žiadne súbory</string>

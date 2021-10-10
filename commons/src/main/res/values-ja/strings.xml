@@ -123,9 +123,11 @@
     <string name="copy_failed">ファイルをコピーできませんでした</string>
     <string name="copying">コピー中…</string>
     <string name="copying_success">ファイルを正常にコピーしました</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">エラーが発生しました</string>
     <string name="moving">移動中…</string>
     <string name="moving_success">ファイルを正常に移動しました</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">一部のファイルが移動できませんでした</string>
     <string name="copying_success_partial">一部のファイルがコピーできませんでした</string>
     <string name="no_files_selected">ファイルが選択されていません</string>

@@ -123,9 +123,11 @@
     <string name="copy_failed">Nepodařilo se zkopírovat soubory</string>
     <string name="copying">Kopírování…</string>
     <string name="copying_success">Soubory byly úspěšně zkopírovány</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">Vyskytla se chyba</string>
     <string name="moving">Přesouvání…</string>
     <string name="moving_success">Soubory byly úspěšně přesunuty</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">Některé soubory se nepodařilo přesunout</string>
     <string name="copying_success_partial">Některé soubory se nepodařilo zkopírovat</string>
     <string name="no_files_selected">Nejsou vybrány žádné soubory</string>

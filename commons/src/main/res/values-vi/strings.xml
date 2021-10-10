@@ -123,9 +123,11 @@
     <string name="copy_failed">Không thể sao chép các tập tin</string>
     <string name="copying">Đang sao chép... </string>
     <string name="copying_success">Tập tin được sao chép thành công</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">Đã xảy ra lỗi</string>
     <string name="moving">Di chuyển... </string>
     <string name="moving_success">Tập tin đã được chuyển thành công</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">Một số tệp không thể di chuyển</string>
     <string name="copying_success_partial">Một số tệp không thể sao chép</string>
     <string name="no_files_selected">Không có tập tin nào được chọn</string>

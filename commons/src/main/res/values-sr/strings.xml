@@ -123,9 +123,11 @@
     <string name="copy_failed">Не могу да копирам датотеке</string>
     <string name="copying">Копирам…</string>
     <string name="copying_success">Датотеке успешно ископиране</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">Дошло је до грешке</string>
     <string name="moving">Премештам…</string>
     <string name="moving_success">Датотеке успешно премештене</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">Неке датотеке се не могу преместити</string>
     <string name="copying_success_partial">Неке датотеке се не могу ископирати</string>
     <string name="no_files_selected">Ни једна датотека није означена</string>

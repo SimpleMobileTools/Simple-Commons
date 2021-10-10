@@ -123,9 +123,11 @@
     <string name="copy_failed">Impossibile copiare i file</string>
     <string name="copying">Copia in corso…</string>
     <string name="copying_success">File copiati correttamente</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">Si è verificato un errore</string>
     <string name="moving">Spostamento in corso…</string>
     <string name="moving_success">File spostati correttamente</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">Alcuni file non possono essere spostati</string>
     <string name="copying_success_partial">Alcuni file non possono essere copiati</string>
     <string name="no_files_selected">Nessun file selezionato</string>

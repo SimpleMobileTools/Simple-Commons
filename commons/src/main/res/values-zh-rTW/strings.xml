@@ -123,9 +123,11 @@
     <string name="copy_failed">無法複製檔案</string>
     <string name="copying">複製中…</string>
     <string name="copying_success">成功複製檔案</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">發生錯誤</string>
     <string name="moving">移動中…</string>
     <string name="moving_success">成功移動檔案</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">部分檔案無法被移動</string>
     <string name="copying_success_partial">部分檔案無法被複製</string>
     <string name="no_files_selected">未選擇檔案</string>

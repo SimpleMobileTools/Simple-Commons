@@ -123,9 +123,11 @@
     <string name="copy_failed">Tidak bisa menyalin berkas</string>
     <string name="copying">Menyalin…</string>
     <string name="copying_success">Berkas berhasil disalin</string>
+    <string name="copying_success_one">File copied successfully</string>
     <string name="copy_move_failed">Telah terjadi kesalahan</string>
     <string name="moving">Memindahkan…</string>
     <string name="moving_success">Berkas berhasil dipindahkan</string>
+    <string name="moving_success_one">File moved successfully</string>
     <string name="moving_success_partial">Beberapa berkas tidak bisa dipindahkan</string>
     <string name="copying_success_partial">Beberapa berkas tidak bisa disalin</string>
     <string name="no_files_selected">Tidak ada berkas yang dipilih</string>
