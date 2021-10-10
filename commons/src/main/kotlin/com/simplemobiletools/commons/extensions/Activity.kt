@@ -629,16 +629,6 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
             }
         }
     } else {
-        if (isRPlus()) {
-            val fileUris = getFileUrisFromFileDirItems(arrayListOf(fileDirItem))
-            deleteSDK30Uris(fileUris) { success ->
-                runOnUiThread {
-                    callback?.invoke(success)
-                }
-            }
-            return
-        }
-
         if (getIsPathDirectory(file.absolutePath) && allowDeleteFolder) {
             fileDeleted = deleteRecursively(file)
         }
@@ -648,6 +638,13 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
                 handleSAFDialog(path) {
                     if (it) {
                         trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
+                    }
+                }
+            } else if (isRPlus()) {
+                val fileUris = getFileUrisFromFileDirItems(arrayListOf(fileDirItem))
+                deleteSDK30Uris(fileUris) { success ->
+                    runOnUiThread {
+                        callback?.invoke(success)
                     }
                 }
             }
