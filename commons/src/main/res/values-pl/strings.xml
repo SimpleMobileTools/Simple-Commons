@@ -73,7 +73,7 @@
     <string name="type_2_characters">Wpisz co najmniej 2 znaki, aby rozpocząć wyszukiwanie.</string>
 
     <!-- Filters -->
-    <string name="filter">Filtr</string>
+    <string name="filter">Filtruj</string>
     <string name="no_items_found">Nic nie znaleziono.</string>
     <string name="change_filter">Zmień filtr</string>
 
@@ -123,11 +123,11 @@
     <string name="copy_failed">Nie można skopiować pliku</string>
     <string name="copying">Kopiowanie…</string>
     <string name="copying_success">Pliki zostały skopiowane</string>
-    <string name="copying_success_one">File copied successfully</string>
+    <string name="copying_success_one">Plik został skopiowany</string>
     <string name="copy_move_failed">Wystąpił błąd</string>
     <string name="moving">Przenoszenie…</string>
     <string name="moving_success">Pliki zostały przeniesione</string>
-    <string name="moving_success_one">File moved successfully</string>
+    <string name="moving_success_one">Plik został przeniesiony</string>
     <string name="moving_success_partial">Niektóre pliki nie mogą być przeniesione</string>
     <string name="copying_success_partial">Niektóre pliki nie mogą być skopiowane</string>
     <string name="no_files_selected">Nie wybrano żadnych plików</string>
@@ -294,7 +294,7 @@
     <string name="move_to_bottom">Przesuń na dół</string>
 
     <!-- Sorting -->
-    <string name="sort_by">Sortuj według parametru</string>
+    <string name="sort_by">Sortuj według</string>
     <string name="name">Nazwa</string>
     <string name="size">Rozmiar</string>
     <string name="last_modified">Data modyfikacji</string>
