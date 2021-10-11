@@ -122,12 +122,12 @@
     <string name="source_and_destination_same">Исходный и конечный пути не могут совпадать</string>
     <string name="copy_failed">Не удалось скопировать файлы</string>
     <string name="copying">Копирование…</string>
-    <string name="copying_success">Копирование завершено</string>
-    <string name="copying_success_one">File copied successfully</string>
+    <string name="copying_success">Копирование файлов завершено</string>
+    <string name="copying_success_one">Копирование файла завершено</string>
     <string name="copy_move_failed">Произошла ошибка</string>
     <string name="moving">Перемещение…</string>
-    <string name="moving_success">Перемещение завершено</string>
-    <string name="moving_success_one">File moved successfully</string>
+    <string name="moving_success">Перемещение файлов завершено</string>
+    <string name="moving_success_one">Перемещение файла завершено</string>
     <string name="moving_success_partial">Некоторые файлы не могут быть перемещены</string>
     <string name="copying_success_partial">Некоторые файлы не могут быть скопированы</string>
     <string name="no_files_selected">Файлы не выбраны</string>
