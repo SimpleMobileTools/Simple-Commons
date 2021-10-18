@@ -829,6 +829,53 @@
     <string name="faq_10_title_commons">Kúpil som si apku, neviem ju ale stiahnuť na inom zariadení.</string>
     <string name="faq_10_text_commons">Skúste vymazať cache apky Google Play a reštartovať vaše zariadenie. Ide o nejakú chybu v Google Play, nie v samotnej apke.</string>
 
+    <!-- Contributors -->
+    <string name="contributors">Prispievatelia</string>
+    <string name="translation">Preklad</string>
+    <string name="development">Vývoj</string>
+    <string name="other_help">Iná pomoc</string>
+    <string name="contributors_label">Tento zoznam obsahuje každého, kto citeľne pomohol ktorejkoľvek apke z celej sady Simple Mobile Tools, nie iba tejto apke. Preklady sú spracovávané dobrovoľníkmi,
+        dajte nám vedieť, ak chcete pomôcť tiež. Návod na prekladanie je na https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , alebo ak máte nejaké otázky, tak nám jednoducho napíšte na hello@simplemobiletools.com.
+        Ďakujeme všetkým prispievateľom a iným podporovateľom!</string>
+    <string name="translation_arabic">Arabčina</string>
+    <string name="translation_azerbaijani">Azerbajdžančina</string>
+    <string name="translation_breton">Bretónčina</string>
+    <string name="translation_catalan">Katalánčina</string>
+    <string name="translation_czech">Čeština</string>
+    <string name="translation_welsh">Waleština</string>
+    <string name="translation_danish">Dánčina</string>
+    <string name="translation_german">Nemčina</string>
+    <string name="translation_greek">Gréčtina</string>
+    <string name="translation_spanish">Španielčina</string>
+    <string name="translation_basque">Baskitčina</string>
+    <string name="translation_persian">Perzština</string>
+    <string name="translation_finnish">Fínčina</string>
+    <string name="translation_french">Francúzština</string>
+    <string name="translation_galician">Galičtina</string>
+    <string name="translation_hindi">Hindčina</string>
+    <string name="translation_croatian">Chorvátčina</string>
+    <string name="translation_hungarian">Maďarčina</string>
+    <string name="translation_indonesian">Indonézština</string>
+    <string name="translation_italian">Taliančina</string>
+    <string name="translation_hebrew">Hebrejčina</string>
+    <string name="translation_japanese">Japončina</string>
+    <string name="translation_korean">Kórejčina</string>
+    <string name="translation_lithuanian">Litovčina</string>
+    <string name="translation_norwegian">Nórčina</string>
+    <string name="translation_dutch">Holandčina</string>
+    <string name="translation_polish">Poľština</string>
+    <string name="translation_portuguese">Portugalčina</string>
+    <string name="translation_russian">Ruština</string>
+    <string name="translation_slovak">Slovenčina</string>
+    <string name="translation_slovenian">Slovinčina</string>
+    <string name="translation_serbian">Srbčina</string>
+    <string name="translation_swedish">Švédčina</string>
+    <string name="translation_tamil">Tamilčina</string>
+    <string name="translation_turkish">Turečtina</string>
+    <string name="translation_ukrainian">Ukrajinčina</string>
+    <string name="translation_vietnamese">Vietnamčina</string>
+    <string name="translation_chinese">Čínština</string>
+
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Prejdite na Pro verziu teraz!</string>
     <string name="why_upgrade_basic_version">Základná</string>

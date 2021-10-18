@@ -795,6 +795,53 @@
     <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
     <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
 
+    <!-- Contributors -->
+    <string name="contributors">Contributors</string>
+    <string name="translation">Translation</string>
+    <string name="development">Development</string>
+    <string name="other_help">Other help</string>
+    <string name="contributors_label">This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
+        let us know if you want to help too. The guide to translating is at https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , or just contact us at hello@simplemobiletools.com if you have any questions.
+        Thanks to all contributors and other supporters!</string>
+    <string name="translation_arabic">Arabic</string>
+    <string name="translation_azerbaijani">Azerbaijani</string>
+    <string name="translation_breton">Breton</string>
+    <string name="translation_catalan">Catalan</string>
+    <string name="translation_czech">Czech</string>
+    <string name="translation_welsh">Welsh</string>
+    <string name="translation_danish">Danish</string>
+    <string name="translation_german">German</string>
+    <string name="translation_greek">Greek</string>
+    <string name="translation_spanish">Spanish</string>
+    <string name="translation_basque">Basque</string>
+    <string name="translation_persian">Persian</string>
+    <string name="translation_finnish">Finnish</string>
+    <string name="translation_french">French</string>
+    <string name="translation_galician">Galician</string>
+    <string name="translation_hindi">Hindi</string>
+    <string name="translation_croatian">Croatian</string>
+    <string name="translation_hungarian">Hungarian</string>
+    <string name="translation_indonesian">Indonesian</string>
+    <string name="translation_italian">Italian</string>
+    <string name="translation_hebrew">Hebrew</string>
+    <string name="translation_japanese">Japanese</string>
+    <string name="translation_korean">Korean</string>
+    <string name="translation_lithuanian">Lithuanian</string>
+    <string name="translation_norwegian">Norwegian</string>
+    <string name="translation_dutch">Dutch</string>
+    <string name="translation_polish">Polish</string>
+    <string name="translation_portuguese">Portuguese</string>
+    <string name="translation_russian">Russian</string>
+    <string name="translation_slovak">Slovak</string>
+    <string name="translation_slovenian">Slovenian</string>
+    <string name="translation_serbian">Serbian</string>
+    <string name="translation_swedish">Swedish</string>
+    <string name="translation_tamil">Tamil</string>
+    <string name="translation_turkish">Turkish</string>
+    <string name="translation_ukrainian">Ukrainian</string>
+    <string name="translation_vietnamese">Vietnamese</string>
+    <string name="translation_chinese">Chinese</string>
+
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">प्रो संस्करण अभी प्राप्त करें!</string>
     <string name="why_upgrade_basic_version">बेसिक</string>
