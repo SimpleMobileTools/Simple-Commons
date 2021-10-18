@@ -123,11 +123,11 @@
     <string name="copy_failed">Αδύνατη η αντιγραφή των αρχείων</string>
     <string name="copying">Αντιγράφονται…</string>
     <string name="copying_success">Τα αρχεία αντιγράφηκαν με επιτυχία</string>
-    <string name="copying_success_one">File copied successfully</string>
+    <string name="copying_success_one">Το αρχείο αντιγράφηκε με επιτυχία</string>
     <string name="copy_move_failed">Ένα σφάλμα παρουσιάστηκε</string>
     <string name="moving">Μετακινούνται…</string>
     <string name="moving_success">Τα αρχεία μετακινήθηκαν με επιτυχία</string>
-    <string name="moving_success_one">File moved successfully</string>
+    <string name="moving_success_one">Το αρχείο μετακινήθηκε με επιτυχία</string>
     <string name="moving_success_partial">Αδύνατη η μετακίνηση ορισμένων αρχείων</string>
     <string name="copying_success_partial">Αδύνατη η αντιγραφή ορισμένων αρχείων</string>
     <string name="no_files_selected">Δεν έχουν επιλεγεί αρχεία</string>
@@ -796,13 +796,13 @@
     <string name="faq_10_text_commons">Δοκιμάστε να διαγράψετε την προσωρινή μνήμη εφαρμογών Google Play και να επανεκκινήσετε τη συσκευή σας. Πρόκειται για κάποιο πρόβλημα του Google Play, το οποίο δεν σχετίζεται με την ίδια την εφαρμογή.</string>
 
     <!-- Contributors -->
-    <string name="contributors">Contributors</string>
-    <string name="translation">Translation</string>
-    <string name="development">Development</string>
-    <string name="other_help">Other help</string>
-    <string name="contributors_label">This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-        let us know if you want to help too. The guide to translating is at https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , or just contact us at hello@simplemobiletools.com if you have any questions.
-        Thanks to all contributors and other supporters!</string>
+    <string name="contributors">Συντελεστές</string>
+    <string name="translation">Μετάφραση</string>
+    <string name="development">Ανάπτυξη</string>
+    <string name="other_help">Άλλη Βοήθεια</string>
+    <string name="contributors_label">Αυτή η λίστα περιέχει όλους όσους βοήθησαν αισθητά οποιαδήποτε εφαρμογή της σουίτας Simple Mobile Tools, όχι μόνο αυτή. Οι μεταφράσεις γίνονται από εθελοντές,
+        πείτε μας αν θέλετε να βοηθήσετε κι εσείς. Ο οδηγός μετάφρασης βρίσκεται στη διεύθυνση https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , ή επικοινωνήστε μαζί μας στη διεύθυνση hello@simplemobiletools.com αν έχετε ερωτήσεις.
+        Ευχαριστούμε όλους τους συνεισφέροντες και άλλους υποστηρικτές!</string>
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_breton">Breton</string>
