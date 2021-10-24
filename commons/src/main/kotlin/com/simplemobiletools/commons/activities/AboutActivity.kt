@@ -42,6 +42,7 @@ class AboutActivity : BaseSimpleActivity() {
         setupMoreApps()
         setupRateUs()
         setupInvite()
+        setupContributors()
         setupLicense()
         setupFacebook()
         setupReddit()
@@ -129,6 +130,15 @@ class AboutActivity : BaseSimpleActivity() {
             }
         }
         about_invite.setTextColor(linkColor)
+    }
+
+    private fun setupContributors() {
+        about_contributors.setTextColor(linkColor)
+        about_contributors.underlineText()
+        about_contributors.setOnClickListener {
+            val intent = Intent(applicationContext, ContributorsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setupRateUs() {
