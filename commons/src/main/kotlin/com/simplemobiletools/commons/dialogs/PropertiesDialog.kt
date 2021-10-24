@@ -14,10 +14,7 @@ import androidx.exifinterface.media.ExifInterface
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.ensureBackgroundThread
-import com.simplemobiletools.commons.helpers.isNougatPlus
-import com.simplemobiletools.commons.helpers.sumByInt
-import com.simplemobiletools.commons.helpers.sumByLong
+import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.dialog_properties.view.*
 import kotlinx.android.synthetic.main.property_item.view.*
@@ -57,11 +54,19 @@ class PropertiesDialog() {
         ensureBackgroundThread {
             val fileCount = fileDirItem.getProperFileCount(activity, countHiddenItems)
             val size = fileDirItem.getProperSize(activity, countHiddenItems).formatSize()
+
+            val directChildrenCount = if (fileDirItem.isDirectory) {
+                fileDirItem.getDirectChildrenCount(activity, countHiddenItems).toString()
+            } else {
+                0
+            }
+
             activity.runOnUiThread {
                 (view.findViewById<LinearLayout>(R.id.properties_size).property_value as TextView).text = size
 
                 if (fileDirItem.isDirectory) {
                     (view.findViewById<LinearLayout>(R.id.properties_file_count).property_value as TextView).text = fileCount.toString()
+                    (view.findViewById<LinearLayout>(R.id.properties_direct_children_count).property_value as TextView).text = directChildrenCount.toString()
                 }
             }
 
@@ -110,7 +115,7 @@ class PropertiesDialog() {
 
         when {
             fileDirItem.isDirectory -> {
-                addProperty(R.string.direct_children_count, fileDirItem.getDirectChildrenCount(activity, countHiddenItems).toString())
+                addProperty(R.string.direct_children_count, "…", R.id.properties_direct_children_count)
                 addProperty(R.string.files_count, "…", R.id.properties_file_count)
             }
             fileDirItem.path.isImageSlow() -> {
