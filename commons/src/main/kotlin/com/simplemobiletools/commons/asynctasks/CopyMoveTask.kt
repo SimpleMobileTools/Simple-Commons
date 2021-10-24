@@ -154,7 +154,7 @@ class CopyMoveTask(
         mProgressHandler.postDelayed({
             updateProgress()
 
-            if (mCurrentProgress / 1000 > mMaxSize) {
+            if (mCurrentProgress / 1000 >= mMaxSize) {
                 mIsTaskOver = true
             }
         }, PROGRESS_RECHECK_INTERVAL)
