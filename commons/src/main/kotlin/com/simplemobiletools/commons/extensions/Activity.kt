@@ -36,13 +36,13 @@ import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.*
 import com.simplemobiletools.commons.views.MyTextView
-import kotlinx.android.synthetic.main.dialog_title.view.*
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.FileOutputStream
 import java.io.OutputStream
 import java.util.*
 import kotlin.collections.HashMap
+import kotlinx.android.synthetic.main.dialog_title.view.*
 
 fun AppCompatActivity.updateActionBarTitle(text: String, color: Int = baseConfig.primaryColor) {
     supportActionBar?.title = Html.fromHtml("<font color='${color.getContrastColor().toHex()}'>$text</font>")
@@ -117,14 +117,14 @@ fun Activity.isAppInstalledOnSDCard(): Boolean = try {
 }
 
 fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
-    return if (((isPathOnSD(path) || isAndroidDataRoot(path))  && !isSDCardSetAsDefaultStorage() && (baseConfig.treeUri.isEmpty() || !hasProperStoredTreeUri(false)))) {
+    return if ((isPathOnSD(path) && !isSDCardSetAsDefaultStorage() && (baseConfig.sdTreeUri.isEmpty() || !hasProperStoredTreeUri(false)))) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
                 WritePermissionDialog(this, false) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         putExtra("android.content.extra.SHOW_ADVANCED", true)
                         try {
-                            startActivityForResult(this, OPEN_DOCUMENT_TREE)
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE_SD)
                             checkedDocumentPath = path
                             return@apply
                         } catch (e: Exception) {
@@ -132,7 +132,38 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
                         }
 
                         try {
-                            startActivityForResult(this, OPEN_DOCUMENT_TREE)
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE_SD)
+                            checkedDocumentPath = path
+                        } catch (e: Exception) {
+                            toast(R.string.unknown_error_occurred)
+                        }
+                    }
+                }
+            }
+        }
+        true
+    } else {
+        false
+    }
+}
+
+fun BaseSimpleActivity.isShowingSAFPrimaryDialog(path: String): Boolean {
+    return if (isSAFOnlyRoot(path) && (baseConfig.primaryTreeUri.isEmpty() || !hasProperStoredPrimaryTreeUri())) {
+        runOnUiThread {
+            if (!isDestroyed && !isFinishing) {
+                WritePermissionDialog(this, false) {
+                    Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
+                        putExtra("android.content.extra.SHOW_ADVANCED", true)
+                        try {
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE_PRIMARY)
+                            checkedDocumentPath = path
+                            return@apply
+                        } catch (e: Exception) {
+                            type = "*/*"
+                        }
+
+                        try {
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE_PRIMARY)
                             checkedDocumentPath = path
                         } catch (e: Exception) {
                             toast(R.string.unknown_error_occurred)
@@ -496,7 +527,7 @@ fun BaseSimpleActivity.deleteFoldersBg(folders: List<FileDirItem>, deleteMediaOn
     var wasSuccess = false
     var needPermissionForPath = ""
     for (folder in folders) {
-        if (needsStupidWritePermissions(folder.path) && baseConfig.treeUri.isEmpty()) {
+        if (needsStupidWritePermissions(folder.path) && baseConfig.sdTreeUri.isEmpty()) {
             needPermissionForPath = folder.path
             break
         }
@@ -818,7 +849,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
 
 fun BaseSimpleActivity.showFileCreateError(path: String) {
     val error = String.format(getString(R.string.could_not_create_file), path)
-    baseConfig.treeUri = ""
+    baseConfig.sdTreeUri = ""
     showErrorToast(error)
 }
 

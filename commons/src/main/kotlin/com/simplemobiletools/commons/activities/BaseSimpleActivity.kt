@@ -221,12 +221,37 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         Log.i(TAG, "onActivityResult: partition=$partition")
+        Log.i(TAG, "onActivityResult: checkedDocumentPath=$checkedDocumentPath")
+        Log.i(TAG, "onActivityResult: treeUri=${resultData?.data}")
         val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
 
-        if (requestCode == OPEN_DOCUMENT_TREE) {
+        if (requestCode == OPEN_DOCUMENT_TREE_PRIMARY) {
+            if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+                if (isProperInternalRoot(resultData.data!!)) {
+                    if (resultData.dataString == baseConfig.primaryTreeUri) {
+                        toast(R.string.sd_card_usb_same)
+                        return
+                    }
+
+                    val treeUri = resultData.data
+                    baseConfig.primaryTreeUri = treeUri.toString()
+
+                    val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+                    applicationContext.contentResolver.takePersistableUriPermission(treeUri!!, takeFlags)
+                    funAfterSAFPermission?.invoke(true)
+                    funAfterSAFPermission = null
+                } else {
+                    toast(R.string.wrong_root_selected)
+                    val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
+                    startActivityForResult(intent, requestCode)
+                }
+            } else {
+                funAfterSAFPermission?.invoke(false)
+            }
+        } else if (requestCode == OPEN_DOCUMENT_TREE_SD) {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
                 val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
-                if (isAndroidDataRoot(checkedDocumentPath) || (isProperSDFolder(resultData.data!!) && isProperPartition)) {
+                if (isProperSDFolder(resultData.data!!) && isProperPartition) {
                     if (resultData.dataString == baseConfig.OTGTreeUri) {
                         toast(R.string.sd_card_usb_same)
                         return
@@ -247,7 +272,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
                 val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
                 if (isProperOTGFolder(resultData.data!!) && isProperPartition) {
-                    if (resultData.dataString == baseConfig.treeUri) {
+                    if (resultData.dataString == baseConfig.sdTreeUri) {
                         funAfterSAFPermission?.invoke(false)
                         toast(R.string.sd_card_usb_same)
                         return
@@ -277,7 +302,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     private fun saveTreeUri(resultData: Intent) {
         val treeUri = resultData.data
-        baseConfig.treeUri = treeUri.toString()
+        baseConfig.sdTreeUri = treeUri.toString()
 
         val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
         applicationContext.contentResolver.takePersistableUriPermission(treeUri!!, takeFlags)
@@ -287,7 +312,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     private fun isProperOTGFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
 
-    private fun isRootUri(uri: Uri) = DocumentsContract.getTreeDocumentId(uri).endsWith(":")
+    @SuppressLint("NewApi")
+    private fun isProperInternalRoot(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && isInternalStorage(uri)
+
+    private fun isRootUri(uri: Uri) = uri.lastPathSegment?.endsWith(":") ?: false
 
     private fun isInternalStorage(uri: Uri) = isExternalStorageDocument(uri) && DocumentsContract.getTreeDocumentId(uri).contains("primary")
 
@@ -346,6 +374,19 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             callback(true)
             false
         } else if (isShowingSAFDialog(path) || isShowingOTGDialog(path)) {
+            funAfterSAFPermission = callback
+            true
+        } else {
+            callback(true)
+            false
+        }
+    }
+
+    fun handlePrimarySAFDialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
+        return if (!packageName.startsWith("com.simplemobiletools")) {
+            callback(true)
+            false
+        } else if (isShowingSAFPrimaryDialog(path)) {
             funAfterSAFPermission = callback
             true
         } else {

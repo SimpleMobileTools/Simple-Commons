@@ -12,8 +12,8 @@ import android.os.Environment
 import android.os.Handler
 import android.os.Looper
 import android.provider.DocumentsContract
+import android.provider.DocumentsContract.Document
 import android.provider.MediaStore.*
-import android.provider.OpenableColumns
 import android.text.TextUtils
 import androidx.annotation.RequiresApi
 import androidx.core.content.FileProvider
@@ -26,13 +26,19 @@ import java.io.File
 import java.io.FileInputStream
 import java.io.InputStream
 import java.net.URLDecoder
-import java.util.*
+import java.util.ArrayList
+import java.util.Collections
+import java.util.HashMap
+import java.util.HashSet
 import java.util.regex.Pattern
 
 // http://stackoverflow.com/a/40582634/1967672
 fun Context.getSDCardPath(): String {
     val directories = getStorageDirectories().filter {
-        !it.equals(getInternalStoragePath()) && !it.equals("/storage/emulated/0", true) && (baseConfig.OTGPartition.isEmpty() || !it.endsWith(baseConfig.OTGPartition))
+        !it.equals(getInternalStoragePath()) && !it.equals(
+            "/storage/emulated/0",
+            true
+        ) && (baseConfig.OTGPartition.isEmpty() || !it.endsWith(baseConfig.OTGPartition))
     }
 
     val fullSDpattern = Pattern.compile(SD_OTG_PATTERN)
@@ -121,12 +127,14 @@ fun Context.getStorageDirectories(): Array<String> {
 }
 
 fun Context.getHumanReadablePath(path: String): String {
-    return getString(when (path) {
-        "/" -> R.string.root
-        internalStoragePath -> R.string.internal
-        otgPath -> R.string.usb
-        else -> R.string.sd_card
-    })
+    return getString(
+        when (path) {
+            "/" -> R.string.root
+            internalStoragePath -> R.string.internal
+            otgPath -> R.string.usb
+            else -> R.string.sd_card
+        }
+    )
 }
 
 fun Context.humanizePath(path: String): String {
@@ -138,14 +146,24 @@ fun Context.humanizePath(path: String): String {
     }
 }
 
-fun Context.getInternalStoragePath() = if (File("/storage/emulated/0").exists()) "/storage/emulated/0" else Environment.getExternalStorageDirectory().absolutePath.trimEnd('/')
+fun Context.getInternalStoragePath() =
+    if (File("/storage/emulated/0").exists()) "/storage/emulated/0" else Environment.getExternalStorageDirectory().absolutePath.trimEnd('/')
 
 fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWith(sdCardPath)
 
 fun Context.isPathOnOTG(path: String) = otgPath.isNotEmpty() && path.startsWith(otgPath)
 
-fun Context.isAndroidDataRoot(path: String) = (path == (internalStoragePath.plus(ANDROID_DIR)) || path == otgPath.plus(ANDROID_DIR) || path == sdCardPath.plus(ANDROID_DIR))
+val DIRS_ACCESSIBLE_ONLY_WITH_SAF = listOf("/Android")
 
+fun Context.getSAFOnlyDirs(): List<String> {
+    return DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$internalStoragePath$it" }
+}
+
+fun Context.isSAFOnlyRoot(path: String): Boolean {
+    val dirs = getSAFOnlyDirs()
+    val result = dirs.any { path.startsWith(it) }
+    return result
+}
 
 // no need to use DocumentFile if an SD card is set as the default storage
 fun Context.needsStupidWritePermissions(path: String) = (isPathOnSD(path) || isPathOnOTG(path)) && !isSDCardSetAsDefaultStorage()
@@ -153,14 +171,23 @@ fun Context.needsStupidWritePermissions(path: String) = (isPathOnSD(path) || isP
 fun Context.isSDCardSetAsDefaultStorage() = sdCardPath.isNotEmpty() && Environment.getExternalStorageDirectory().absolutePath.equals(sdCardPath, true)
 
 fun Context.hasProperStoredTreeUri(isOTG: Boolean): Boolean {
-    val uri = if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri
+    val uri = if (isOTG) baseConfig.OTGTreeUri else baseConfig.sdTreeUri
     val hasProperUri = contentResolver.persistedUriPermissions.any { it.uri.toString() == uri }
     if (!hasProperUri) {
         if (isOTG) {
             baseConfig.OTGTreeUri = ""
         } else {
-            baseConfig.treeUri = ""
+            baseConfig.sdTreeUri = ""
         }
+    }
+    return hasProperUri
+}
+
+fun Context.hasProperStoredPrimaryTreeUri(): Boolean {
+    val uri = baseConfig.primaryTreeUri
+    val hasProperUri = contentResolver.persistedUriPermissions.any { it.uri.toString() == uri }
+    if (!hasProperUri) {
+        baseConfig.primaryTreeUri = ""
     }
     return hasProperUri
 }
@@ -202,7 +229,7 @@ fun Context.getFastDocumentFile(path: String): DocumentFile? {
 
     val relativePath = Uri.encode(path.substring(baseConfig.sdCardPath.length).trim('/'))
     val externalPathPart = baseConfig.sdCardPath.split("/").lastOrNull(String::isNotEmpty)?.trim('/') ?: return null
-    val fullUri = "${baseConfig.treeUri}/document/$externalPathPart%3A$relativePath"
+    val fullUri = "${baseConfig.sdTreeUri}/document/$externalPathPart%3A$relativePath"
     return DocumentFile.fromSingleUri(this, Uri.parse(fullUri))
 }
 
@@ -230,7 +257,7 @@ fun Context.getDocumentFile(path: String): DocumentFile? {
     }
 
     return try {
-        val treeUri = Uri.parse(if (isOTG) baseConfig.OTGTreeUri else baseConfig.treeUri)
+        val treeUri = Uri.parse(if (isOTG) baseConfig.OTGTreeUri else baseConfig.sdTreeUri)
         var document = DocumentFile.fromTreeUri(applicationContext, treeUri)
         val parts = relativePath.split("/").filter { it.isNotEmpty() }
         for (part in parts) {
@@ -447,59 +474,89 @@ fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSi
     callback(items)
 }
 
-const val MIME_TYPE_IS_DIRECTORY = "vnd.android.document/directory"
 
 @RequiresApi(Build.VERSION_CODES.O)
-fun Context.getStorageItems(path: String, shouldShowHidden: Boolean, getProperFileSize: Boolean, callback: (ArrayList<FileDirItem>) -> Unit) {
+fun Context.getStorageItemsWithTreeUri(path: String, shouldShowHidden: Boolean, getProperFileSize: Boolean, callback: (ArrayList<FileDirItem>) -> Unit) {
     val items = ArrayList<FileDirItem>()
-    val treeUri = baseConfig.treeUri
-    val document = getFastDocumentFile(path)
-    val files = document?.listFiles()
-    val childrenUri  = try {
-         DocumentsContract.buildChildDocumentsUriUsingTree(treeUri.toUri(), document?.uri.toString())
+    val rootDocumentFile = try {
+        DocumentFile.fromTreeUri(applicationContext, baseConfig.primaryTreeUri.toUri())
     } catch (e: Exception) {
         showErrorToast(e)
-        baseConfig.treeUri = ""
+        baseConfig.primaryTreeUri = ""
         null
     }
-    if (childrenUri == null) {
+
+    if (rootDocumentFile == null) {
         callback(items)
         return
     }
 
-    contentResolver.query(childrenUri, null, null, null)
-        ?.use { cursor ->
-            val nameIndex = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
-            val mimeIndex = cursor.getColumnIndex("mime_type")
-            while (cursor.moveToNext()) {
-                val name = cursor.getString(nameIndex) ?: continue
+    val treeUri = baseConfig.primaryTreeUri.toUri()
+    // uri should be a concatenation of the tree uri and the path without the internal storage path
+    val relativePath = path.substring(baseConfig.internalStoragePath.length).trim('/')
+    val documentId = "primary:$relativePath"
+    val childrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(treeUri, documentId)
+    val projection = arrayOf(Document.COLUMN_DOCUMENT_ID, Document.COLUMN_DISPLAY_NAME, Document.COLUMN_MIME_TYPE)
+
+    val rawCursor = contentResolver.query(childrenUri, projection, null, null)!!
+    val cursor = ExternalStorageProviderHack.transformQueryResult(childrenUri, rawCursor)
+    cursor.use {
+        if (cursor.moveToFirst()) {
+            do {
+                val documentId = cursor.getStringValue(Document.COLUMN_DOCUMENT_ID)
+                val name = cursor.getStringValue(Document.COLUMN_DISPLAY_NAME)
+                val mimeType = cursor.getStringValue(Document.COLUMN_MIME_TYPE)
+                val isDirectory = mimeType == Document.MIME_TYPE_DIR
+                val filePath = documentId.substring("primary:".length)
                 if (!shouldShowHidden && name.startsWith(".")) {
                     continue
                 }
 
-                val mimeType = cursor.getString(mimeIndex)
-                val isDirectory = mimeType == MIME_TYPE_IS_DIRECTORY
-
+                val decodedPath = internalStoragePath + "/" + URLDecoder.decode(filePath, "UTF-8")
                 val fileSize = when {
-                    getProperFileSize -> 0L
+                    getProperFileSize -> getFileSize(treeUri, documentId)
                     isDirectory -> 0L
-                    else -> 0L
+                    else -> getFileSize(treeUri, documentId)
                 }
 
                 val childrenCount = if (isDirectory) {
-                    0
+                    getChildrenCount(treeUri, documentId)
                 } else {
                     0
                 }
 
-                val lastModified = 0L
-                val fileDirItem = FileDirItem(path, name, isDirectory, childrenCount, fileSize, lastModified)
+                val lastModified = System.currentTimeMillis()
+                val fileDirItem = FileDirItem(decodedPath, name, isDirectory, childrenCount, fileSize, lastModified)
                 items.add(fileDirItem)
-            }
+            } while (cursor.moveToNext())
         }
-
+    }
     callback(items)
 }
+
+fun Context.getChildrenCount(treeUri: Uri, documentId: String): Int {
+    val projection = arrayOf(Document.COLUMN_DOCUMENT_ID)
+    val childrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(treeUri, documentId)
+    val rawCursor = contentResolver.query(childrenUri, projection, null, null, null)!!
+    val cursor = ExternalStorageProviderHack.transformQueryResult(childrenUri, rawCursor)
+    val count = cursor.count
+    return count
+}
+
+fun Context.getFileSize(treeUri: Uri, documentId: String): Long {
+    val projection = arrayOf(Document.COLUMN_SIZE)
+    val childrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(treeUri, documentId)
+    val rawCursor = contentResolver.query(childrenUri, projection, null, null, null)!!
+    val cursor = ExternalStorageProviderHack.transformQueryResult(childrenUri, rawCursor)
+    var size = 0L
+    cursor.use { c ->
+        if (c.moveToFirst()) {
+            size = c.getLongValue(Document.COLUMN_SIZE)
+        }
+    }
+    return size
+}
+
 
 fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     var fileDeleted = tryFastDocumentDelete(fileDirItem.path, allowDeleteFolder)
@@ -509,7 +566,7 @@ fun Context.trySAFFileDelete(fileDirItem: FileDirItem, allowDeleteFolder: Boolea
             try {
                 fileDeleted = (document.isFile || allowDeleteFolder) && DocumentsContract.deleteDocument(applicationContext.contentResolver, document.uri)
             } catch (ignored: Exception) {
-                baseConfig.treeUri = ""
+                baseConfig.sdTreeUri = ""
                 baseConfig.sdCardPath = ""
             }
         }

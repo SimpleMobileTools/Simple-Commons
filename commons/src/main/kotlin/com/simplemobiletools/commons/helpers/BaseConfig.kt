@@ -7,7 +7,9 @@ import com.simplemobiletools.commons.extensions.getInternalStoragePath
 import com.simplemobiletools.commons.extensions.getSDCardPath
 import com.simplemobiletools.commons.extensions.getSharedPrefs
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Calendar
+import java.util.HashSet
+import java.util.Locale
 
 open class BaseConfig(val context: Context) {
     protected val prefs = context.getSharedPrefs()
@@ -24,9 +26,13 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(LAST_VERSION, 0)
         set(lastVersion) = prefs.edit().putInt(LAST_VERSION, lastVersion).apply()
 
-    var treeUri: String
-        get() = prefs.getString(TREE_URI, "")!!
-        set(uri) = prefs.edit().putString(TREE_URI, uri).apply()
+    var primaryTreeUri: String
+        get() = prefs.getString(PRIMARY_TREE_URI, "")!!
+        set(uri) = prefs.edit().putString(PRIMARY_TREE_URI, uri).apply()
+
+    var sdTreeUri: String
+        get() = prefs.getString(SD_TREE_URI, "")!!
+        set(uri) = prefs.edit().putString(SD_TREE_URI, uri).apply()
 
     var OTGTreeUri: String
         get() = prefs.getString(OTG_TREE_URI, "")!!

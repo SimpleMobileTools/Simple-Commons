@@ -8,7 +8,8 @@ import android.os.Looper
 import android.util.Log
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.overloads.times
-import java.util.*
+import java.util.HashMap
+import java.util.LinkedHashMap
 
 const val APP_NAME = "app_name"
 const val APP_LICENSES = "app_licenses"
@@ -61,7 +62,8 @@ const val YEAR_SECONDS = YEAR_MINUTES * 60
 const val PREFS_KEY = "Prefs"
 const val APP_RUN_COUNT = "app_run_count"
 const val LAST_VERSION = "last_version"
-const val TREE_URI = "tree_uri_2"
+const val SD_TREE_URI = "tree_uri_2"
+const val PRIMARY_TREE_URI = "primary_tree_uri_2"
 const val OTG_TREE_URI = "otg_tree_uri_2"
 const val SD_CARD_PATH = "sd_card_path_2"
 const val OTG_REAL_PATH = "otg_real_path_2"
@@ -183,8 +185,9 @@ const val LICENSE_SMS_MMS = 134217728
 const val LICENSE_APNG = 268435456
 
 // global intents
-const val OPEN_DOCUMENT_TREE = 1000
+const val OPEN_DOCUMENT_TREE_PRIMARY = 1000
 const val OPEN_DOCUMENT_TREE_OTG = 1001
+const val OPEN_DOCUMENT_TREE_SD = 1002
 const val REQUEST_SET_AS = 1002
 const val REQUEST_EDIT_IMAGE = 1003
 const val SELECT_EXPORT_SETTINGS_FILE_INTENT = 1004
@@ -304,9 +307,6 @@ const val DATE_FORMAT_FOURTEEN = "yy/MM/dd"
 
 const val TIME_FORMAT_12 = "hh:mm a"
 const val TIME_FORMAT_24 = "HH:mm"
-
-//storage
-const val ANDROID_DIR = "/Android"
 
 val appIconColorStrings = arrayListOf(
     ".Red",
