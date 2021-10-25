@@ -64,6 +64,21 @@
             tools:text="Jenny, Jim" />
 
         <com.simplemobiletools.commons.views.MyTextView
+            android:id="@+id/contributors_bengali_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:text="@string/translation_bengali"
+            android:textAllCaps="true" />
+
+        <com.simplemobiletools.commons.views.MyTextView
+            android:id="@+id/contributors_bengali"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/translators_bengali"
+            tools:text="Jenny, Jim" />
+
+        <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/contributors_breton_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -391,6 +406,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/translators_lithuanian"
+            tools:text="Jenny, Jim" />
+
+        <com.simplemobiletools.commons.views.MyTextView
+            android:id="@+id/contributors_nepali_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:text="@string/translation_nepali"
+            android:textAllCaps="true" />
+
+        <com.simplemobiletools.commons.views.MyTextView
+            android:id="@+id/contributors_nepali"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/translators_nepali"
             tools:text="Jenny, Jim" />
 
         <com.simplemobiletools.commons.views.MyTextView
