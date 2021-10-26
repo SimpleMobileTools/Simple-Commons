@@ -84,13 +84,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_margin"
             android:text="@string/translation_breton"
-            android:textAllCaps="true" />
+            android:textAllCaps="true"
+            android:visibility="gone" />
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/contributors_breton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/translators_breton"
+            android:visibility="gone"
             tools:text="Jenny, Jim" />
 
         <com.simplemobiletools.commons.views.MyTextView
@@ -534,13 +536,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_margin"
             android:text="@string/translation_serbian"
-            android:textAllCaps="true" />
+            android:textAllCaps="true"
+            android:visibility="gone" />
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/contributors_serbian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/translators_serbian"
+            android:visibility="gone"
             tools:text="Jenny, Jim" />
 
         <com.simplemobiletools.commons.views.MyTextView
@@ -609,13 +613,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_margin"
             android:text="@string/translation_vietnamese"
-            android:textAllCaps="true" />
+            android:textAllCaps="true"
+            android:visibility="gone" />
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/contributors_vietnamese"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/translators_vietnamese"
+            android:visibility="gone"
             tools:text="Jenny, Jim" />
 
         <com.simplemobiletools.commons.views.MyTextView
