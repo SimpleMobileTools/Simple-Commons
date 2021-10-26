@@ -26,6 +26,11 @@
         tools:node="remove" />
 
     <application>
+        <activity
+            android:name="com.simplemobiletools.commons.activities.ContributorsActivity"
+            android:label="@string/contributors"
+            android:parentActivityName="com.simplemobiletools.commons.activities.AboutActivity" />
+
         <receiver
             android:name=".receivers.SharedThemeReceiver"
             android:enabled="true"
