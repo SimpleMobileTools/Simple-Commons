@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.activities
 
 import android.os.Bundle
+import android.view.Menu
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
 import com.simplemobiletools.commons.extensions.underlineText
@@ -26,5 +27,10 @@ class ContributorsActivity : BaseSimpleActivity() {
 
         contributors_translation_label.setTextColor(getAdjustedPrimaryColor())
         contributors_translation_label.underlineText()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        updateMenuItemColors(menu)
+        return super.onCreateOptionsMenu(menu)
     }
 }
