@@ -1,7 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annuler</string>
-    <string name="nothing">Nothing</string>
+    <string name="nothing">Aucun</string>
     <string name="later">Plus tard</string>
     <string name="save_as">Enregistrer sous</string>
     <string name="file_saved">Fichier enregistré</string>
@@ -56,11 +56,11 @@
     <string name="block_number">Bloquer le numéro</string>
     <string name="block_numbers">Bloquer les numéros</string>
     <string name="blocked_numbers">Numéros bloqués</string>
-    <string name="export_blocked_numbers">Export blocked numbers</string>
-    <string name="import_blocked_numbers">Import blocked numbers</string>
-    <string name="must_make_default_dialer">Cette appli. doit être l\’appli. de numérotation  par défaut pour utiliser num. bloqués</string>
+    <string name="export_blocked_numbers">Exporter les numéros bloqués</string>
+    <string name="import_blocked_numbers">Importer les numéros bloqués</string>
+    <string name="must_make_default_dialer">Cette application doit être l\’application de numérotation par défaut pour utiliser les numéros bloqués.</string>
     <string name="set_as_default">Définir par défaut</string>
-    <string name="block_confirmation">Êtes-vous certain de vouloir bloquer \"%s\"?</string>
+    <string name="block_confirmation">Voulez-vous vraiment bloquer \"%s\" ?</string>
 
     <!-- Favorites -->
     <string name="favorites">Favoris</string>
@@ -104,8 +104,8 @@
     <string name="pattern_renaming">Modèle</string>
     <string name="string_to_add">Caractères à ajouter</string>
     <string name="rename_date_time_pattern">%Y - année\n%M - mois\n%D - jour\n%h - heure\n%m - minute\n%s - seconde\n%i - Incrémentation débute à 1</string>
-    <string name="filename_without_txt">Filename (without .txt)</string>
-    <string name="filename_without_json">Filename (without .json)</string>
+    <string name="filename_without_txt">Nom de fichier (sans .txt)</string>
+    <string name="filename_without_json">Nom de fichier (sans .json)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copier</string>
@@ -113,7 +113,7 @@
     <string name="copy_move">Copier ou déplacer</string>
     <string name="copy_to">Copier vers</string>
     <string name="move_to">Déplacer vers</string>
-    <string name="source">Origine</string>
+    <string name="source">Source</string>
     <string name="destination">Destination</string>
     <string name="select_destination">Sélectionner la destination</string>
     <string name="click_select_destination">Appuyez ici pour sélectionner la destination</string>
@@ -123,11 +123,11 @@
     <string name="copy_failed">Impossible de copier les fichiers</string>
     <string name="copying">Copie en cours…</string>
     <string name="copying_success">Fichiers copiés</string>
-    <string name="copying_success_one">File copied successfully</string>
+    <string name="copying_success_one">Fichier copié avec succès</string>
     <string name="copy_move_failed">Une erreur est survenue</string>
     <string name="moving">Déplacement en cours…</string>
     <string name="moving_success">Fichiers déplacés</string>
-    <string name="moving_success_one">File moved successfully</string>
+    <string name="moving_success_one">Fichier déplacé avec succès</string>
     <string name="moving_success_partial">Certains fichiers n\'ont pas pu être déplacés</string>
     <string name="copying_success_partial">Certains fichiers n\'ont pas pu être copiés</string>
     <string name="no_files_selected">Aucun fichier sélectionné</string>
@@ -343,12 +343,12 @@
     <string name="insert_pattern">Dessiner un schéma</string>
     <string name="wrong_pattern">Schéma incorrect</string>
     <string name="repeat_pattern">Redessiner le schéma</string>
-    <string name="biometrics">Biometrics</string>
+    <string name="biometrics">Biométrie</string>
     <string name="fingerprint">Empreinte</string>
     <string name="add_fingerprint">Capturer une empreinte</string>
     <string name="place_finger">Veuillez placer votre doigt sur le capteur d\'empreinte digitale</string>
-    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
-    <string name="authenticate">Authenticate</string>
+    <string name="open_biometric_dialog">Ouvrir la boîte de dialogue de vérification d'identité biométrique</string>
+    <string name="authenticate">Authentifier</string>
     <string name="authentication_failed">Échec de l\'identification</string>
     <string name="authentication_blocked">Identification bloquée. Veuillez réessayer dans quelques instants.</string>
     <string name="no_fingerprints_registered">Vous n\'avez aucune empreinte digitale enregistrée. Veuillez en ajouter depuis les paramètres de votre appareil</string>
@@ -515,7 +515,7 @@
     <string name="settings">Paramètres</string>
     <string name="purchase_simple_thank_you">Acheter Simple Thank You</string>
     <string name="customize_colors">Modifier les couleurs</string>
-    <string name="customize_colors_locked">Modifier les couleurs (Verrouillé)</string>
+    <string name="customize_colors_locked">Modifier les couleurs (verrouillé)</string>
     <string name="customize_widget_colors">Modifier les couleurs du widget</string>
     <string name="customize_notifications">Personnaliser les notifications</string>
     <string name="use_english_language">Utiliser la langue anglaise</string>
@@ -571,7 +571,7 @@
     <string name="call_history_tab">Historique d\'appels</string>
     <string name="groups_tab">Groupes</string>
     <string name="last_used_tab">Le dernier utilisé</string>
-    <string name="files_tab">Files</string>
+    <string name="files_tab">Fichiers</string>
     <string name="recent_files_tab">Fichiers récents</string>
 
     <!-- Recycle Bin -->
@@ -706,10 +706,10 @@
     <string name="rate_us_prompt">Bonjour,\n\nil semblerait que vous utilisez cette application depuis un certain temps et nous vous en remercions.\n\nSi nous pouvons vous demander une faveur, veuillez nous évaluer sur Google Play. Cela nous aiderait beaucoup.\n\nPeu importe le contenu de votre évaluation, vous ne verrez plus ce message.\n\nMerci d\'avance !</string>
     <string name="rate_our_app">Merci d’évaluer notre application :)</string>
     <string name="thank_you">Merci</string>
-    <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
+    <string name="widget_locked_pro">Le widget est verrouillé.\nVeuillez passer à la version Pro pour le déverrouiller.</string>
     <string name="widget_locked">
         <![CDATA[
-            The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
+            Le widget est verrouillé.<br>Veuillez acheter <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> pour le déverrouiller.
         ]]>
     </string>
 
@@ -743,22 +743,22 @@
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
 
-    <string name="app_launcher_short">Lanceur d\'applications</string>
-    <string name="calculator_short">Calculatrice</string>
-    <string name="calendar_short">Calendrier</string>
-    <string name="camera_short">Appareil photo</string>
-    <string name="clock_short">Horloge mondiale</string>
+    <string name="app_launcher_short">App Launcher</string>
+    <string name="calculator_short">Calculator</string>
+    <string name="calendar_short">Calendarr</string>
+    <string name="camera_short">Camera</string>
+    <string name="clock_short">Clock</string>
     <string name="contacts_short">Contacts</string>
     <string name="dialer_short">Dialer</string>
-    <string name="draw_short">Dessin</string>
-    <string name="file_manager_short">Gestionnaire de fichiers</string>
-    <string name="flashlight_short">Lampe de Poche</string>
-    <string name="gallery_short">Galerie</string>
-    <string name="music_player_short">Lecteur de Musique</string>
+    <string name="draw_short">Draw</string>
+    <string name="file_manager_short">File Manager</string>
+    <string name="flashlight_short">Flashlight</string>
+    <string name="gallery_short">Gallery</string>
+    <string name="music_player_short">Music Player</string>
     <string name="notes_short">Notes</string>
-    <string name="sms_messenger_short">SMS</string>
-    <string name="thank_you_short">Merci</string>
-    <string name="voice_recorder_short">Enregistreur vocal</string>
+    <string name="sms_messenger_short">SMS Messenger</string>
+    <string name="thank_you_short">Thank You</string>
+    <string name="voice_recorder_short">Voice Recorder</string>
 
     <string name="sideloaded_app">
         <![CDATA[
@@ -797,53 +797,53 @@
     <string name="faq_10_text_commons">Essayez de vider le cache de votre application Google Play et de redémarrer votre appareil. C\'est un problème de Google Play, pas vraiment lié à l\'application elle-même.</string>
 
     <!-- Contributors -->
-    <string name="contributors">Contributors</string>
-    <string name="translation">Translation</string>
-    <string name="development">Development</string>
-    <string name="other_help">Other help</string>
-    <string name="contributors_label">This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-        let us know if you want to help too. The guide to translating is at https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , or just contact us at hello@simplemobiletools.com if you have any questions.
-        Thanks to all contributors and other supporters!</string>
-    <string name="translation_arabic">Arabic</string>
-    <string name="translation_azerbaijani">Azerbaijani</string>
+    <string name="contributors">Contributeurs</string>
+    <string name="translation">Traduction</string>
+    <string name="development">Développement</string>
+    <string name="other_help">Autre aide</string>
+    <string name="contributors_label">Cette liste contient tous ceux qui ont sensiblement aidé n'importe quelle application de la suite Simple Mobile Tools, pas seulement celle-ci. Les traductions sont assurées par des bénévoles,
+        faites-nous savoir si vous voulez aussi aider. Le guide de traduction se trouve sur https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file, ou contactez-nous simplement à hello@simplemobiletools.com si vous Avez-vous des questions.
+        Merci à tous les contributeurs et autres supporters !</string>
+    <string name="translation_arabic">Arabe</string>
+    <string name="translation_azerbaijani">Azerbaïdjanais</string>
     <string name="translation_bengali">Bengali</string>
     <string name="translation_breton">Breton</string>
     <string name="translation_catalan">Catalan</string>
-    <string name="translation_czech">Czech</string>
-    <string name="translation_welsh">Welsh</string>
-    <string name="translation_danish">Danish</string>
-    <string name="translation_german">German</string>
-    <string name="translation_greek">Greek</string>
-    <string name="translation_spanish">Spanish</string>
+    <string name="translation_czech">Tchèque</string>
+    <string name="translation_welsh">Gallois</string>
+    <string name="translation_danish">Danois</string>
+    <string name="translation_german">Allemand</string>
+    <string name="translation_greek">Grec</string>
+    <string name="translation_spanish">Espagnol</string>
     <string name="translation_basque">Basque</string>
-    <string name="translation_persian">Persian</string>
-    <string name="translation_finnish">Finnish</string>
-    <string name="translation_french">French</string>
-    <string name="translation_galician">Galician</string>
+    <string name="translation_persian">Persan</string>
+    <string name="translation_finnish">Finlandais</string>
+    <string name="translation_french">Français</string>
+    <string name="translation_galician">Galicien</string>
     <string name="translation_hindi">Hindi</string>
-    <string name="translation_croatian">Croatian</string>
-    <string name="translation_hungarian">Hungarian</string>
-    <string name="translation_indonesian">Indonesian</string>
-    <string name="translation_italian">Italian</string>
-    <string name="translation_hebrew">Hebrew</string>
-    <string name="translation_japanese">Japanese</string>
-    <string name="translation_korean">Korean</string>
-    <string name="translation_lithuanian">Lithuanian</string>
-    <string name="translation_nepali">Nepali</string>
-    <string name="translation_norwegian">Norwegian</string>
-    <string name="translation_dutch">Dutch</string>
-    <string name="translation_polish">Polish</string>
-    <string name="translation_portuguese">Portuguese</string>
-    <string name="translation_russian">Russian</string>
-    <string name="translation_slovak">Slovak</string>
-    <string name="translation_slovenian">Slovenian</string>
-    <string name="translation_serbian">Serbian</string>
-    <string name="translation_swedish">Swedish</string>
+    <string name="translation_croatian">Croate</string>
+    <string name="translation_hungarian">Hongrois</string>
+    <string name="translation_indonesian">Indonésien</string>
+    <string name="translation_italian">Italien</string>
+    <string name="translation_hebrew">Hébreu</string>
+    <string name="translation_japanese">Japonais</string>
+    <string name="translation_korean">Coréen</string>
+    <string name="translation_lithuanian">Lituanien</string>
+    <string name="translation_nepali">Népalais</string>
+    <string name="translation_norwegian">Norvégien</string>
+    <string name="translation_dutch">Néerlandais</string>
+    <string name="translation_polish">Polonais</string>
+    <string name="translation_portuguese">Portuguais</string>
+    <string name="translation_russian">Russe</string>
+    <string name="translation_slovak">Slovaque</string>
+    <string name="translation_slovenian">Slovène</string>
+    <string name="translation_serbian">Serbe</string>
+    <string name="translation_swedish">Suédois</string>
     <string name="translation_tamil">Tamil</string>
-    <string name="translation_turkish">Turkish</string>
-    <string name="translation_ukrainian">Ukrainian</string>
-    <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese">Chinese</string>
+    <string name="translation_turkish">Turc</string>
+    <string name="translation_ukrainian">Ukrainien</string>
+    <string name="translation_vietnamese">Vietnamien</string>
+    <string name="translation_chinese">Chinois</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Obtenez la version Pro maintenant !</string>
@@ -856,15 +856,15 @@
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Éditeur de photos avancé</string>
-    <string name="why_upgrade_heic_support">Support du dossier HEIC/HEIF</string>
-    <string name="why_upgrade_batch_renaming">Renommage avancé des fichiers batch</string>
+    <string name="why_upgrade_heic_support">Support des fichiers HEIC/HEIF</string>
+    <string name="why_upgrade_batch_renaming">Renommage avancé des fichiers par lot</string>
     <string name="why_upgrade_folder_locking">Verrouillage des dossiers individuels</string>
-    <string name="why_upgrade_printing_support">Support d\'impression</string>
+    <string name="why_upgrade_printing_support">Support de l\'impression</string>
 
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Support des fuseaux horaires</string>
     <string name="why_upgrade_attendees_emails">Participants et rappels par courrier électronique</string>
-    <string name="why_upgrade_easy_event_importing">Import facile des évènements</string>
+    <string name="why_upgrade_easy_event_importing">Importation facile des évènements</string>
     <string name="why_upgrade_new_widgets">Nouveaux widgets</string>
 
     <!-- Contacts Pro -->
@@ -877,7 +877,7 @@
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Listes de contrôle</string>
     <string name="why_upgrade_different_note_per_widget">Différentes couleurs par widget</string>
-    <string name="why_upgrade_note_locking">Note locking</string>
+    <string name="why_upgrade_note_locking">Verrouillage des notes</string>
 
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Personnalisation du format de date et d\'heure</string>
@@ -887,8 +887,8 @@
 
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Personnalisation de la couleur de fond</string>
-    <string name="why_upgrade_file_importing">Prend en charge l\'import de fichiers</string>
-    <string name="why_upgrade_zooming">Zooming</string>
+    <string name="why_upgrade_file_importing">Prend en charge l\'importation de fichiers</string>
+    <string name="why_upgrade_zooming">Zoom</string>
 
     <!-- License -->
     <string name="notice">Cette application utilise les bibliothèques tierces suivantes pour me simplifier la vie. Merci.</string>
