@@ -54,7 +54,7 @@ object ExternalStorageProviderHack {
             }
             val extraCursor = MatrixCursor(CHILD_DOCUMENTS_CURSOR_COLUMN_NAMES)
             if (!hasDataRow) {
-                extraCursor.newRow()
+                extraCursor.newRow()                                                                                                                                                                                                                                                                                                                          
                     .add(
                         DocumentsContract.Document.COLUMN_DOCUMENT_ID,
                         EXTERNAL_STORAGE_PROVIDER_PRIMARY_ANDROID_DATA_DOCUMENT_ID

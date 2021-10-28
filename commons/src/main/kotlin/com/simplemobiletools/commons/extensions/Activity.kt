@@ -148,7 +148,7 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
 }
 
 fun BaseSimpleActivity.isShowingSAFPrimaryDialog(path: String): Boolean {
-    return if (isSAFOnlyRoot(path) && (baseConfig.primaryTreeUri.isEmpty() || !hasProperStoredPrimaryTreeUri())) {
+    return if (isSAFOnlyRoot(path) && (baseConfig.primaryAndroidTreeUri.isEmpty() || !hasProperStoredPrimaryTreeUri())) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
                 WritePermissionDialog(this, false) {
@@ -628,42 +628,47 @@ fun BaseSimpleActivity.deleteFile(fileDirItem: FileDirItem, allowDeleteFolder: B
 
 fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     val path = fileDirItem.path
-    val file = File(path)
-    if (file.absolutePath.startsWith(internalStoragePath) && !file.canWrite()) {
-        callback?.invoke(false)
-        return
-    }
+    if (isRPlus() && isSAFOnlyRoot(path)) {
+        deleteSAFOnlyDir(path, allowDeleteFolder, callback)
+    } else {
+        val file = File(path)
+        if (file.absolutePath.startsWith(internalStoragePath) && !file.canWrite()) {
+            callback?.invoke(false)
+            return
+        }
 
-    var fileDeleted = !isPathOnOTG(path) && ((!file.exists() && file.length() == 0L) || file.delete())
-    if (fileDeleted) {
-        deleteFromMediaStore(path) { needsRescan ->
-            if (needsRescan) {
-                rescanAndDeletePath(path) {
+        var fileDeleted = !isPathOnOTG(path) && ((!file.exists() && file.length() == 0L) || file.delete())
+        if (fileDeleted) {
+            deleteFromMediaStore(path) { needsRescan ->
+                if (needsRescan) {
+                    rescanAndDeletePath(path) {
+                        runOnUiThread {
+                            callback?.invoke(true)
+                        }
+                    }
+                } else {
                     runOnUiThread {
                         callback?.invoke(true)
                     }
                 }
-            } else {
-                runOnUiThread {
-                    callback?.invoke(true)
-                }
             }
-        }
-    } else {
-        if (getIsPathDirectory(file.absolutePath) && allowDeleteFolder) {
-            fileDeleted = deleteRecursively(file)
-        }
+        } else {
+            if (getIsPathDirectory(file.absolutePath) && allowDeleteFolder) {
+                fileDeleted = deleteRecursively(file)
+            }
 
-        if (!fileDeleted) {
-            if (needsStupidWritePermissions(path)) {
-                handleSAFDialog(path) {
-                    if (it) {
-                        trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
+            if (!fileDeleted) {
+                if (needsStupidWritePermissions(path)) {
+                    handleSAFDialog(path) {
+                        if (it) {
+                            trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
+                        }
                     }
                 }
             }
         }
     }
+
 }
 
 private fun deleteRecursively(file: File): Boolean {

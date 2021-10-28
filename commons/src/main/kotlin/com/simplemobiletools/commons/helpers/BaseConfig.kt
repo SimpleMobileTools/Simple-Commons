@@ -26,7 +26,7 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(LAST_VERSION, 0)
         set(lastVersion) = prefs.edit().putInt(LAST_VERSION, lastVersion).apply()
 
-    var primaryTreeUri: String
+    var primaryAndroidTreeUri: String
         get() = prefs.getString(PRIMARY_TREE_URI, "")!!
         set(uri) = prefs.edit().putString(PRIMARY_TREE_URI, uri).apply()
 

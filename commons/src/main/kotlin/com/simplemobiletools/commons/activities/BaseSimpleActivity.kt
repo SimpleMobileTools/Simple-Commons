@@ -223,24 +223,26 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         Log.i(TAG, "onActivityResult: partition=$partition")
         Log.i(TAG, "onActivityResult: checkedDocumentPath=$checkedDocumentPath")
         Log.i(TAG, "onActivityResult: treeUri=${resultData?.data}")
+        Log.i(TAG, "onActivityResult: tree documentId=${DocumentsContract.getTreeDocumentId(resultData?.data)}")
         val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
 
         if (requestCode == OPEN_DOCUMENT_TREE_PRIMARY) {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-                if (isProperInternalRoot(resultData.data!!)) {
-                    if (resultData.dataString == baseConfig.primaryTreeUri) {
+                if (isProperInternalAndroidRoot(resultData.data!!)) {
+                    if (resultData.dataString == baseConfig.primaryAndroidTreeUri) {
                         toast(R.string.sd_card_usb_same)
                         return
                     }
 
                     val treeUri = resultData.data
-                    baseConfig.primaryTreeUri = treeUri.toString()
+                    baseConfig.primaryAndroidTreeUri = treeUri.toString()
 
                     val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
                     applicationContext.contentResolver.takePersistableUriPermission(treeUri!!, takeFlags)
                     funAfterSAFPermission?.invoke(true)
                     funAfterSAFPermission = null
                 } else {
+                    //TODO: refactor error message, select Android dir
                     toast(R.string.wrong_root_selected)
                     val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
                     startActivityForResult(intent, requestCode)
@@ -314,10 +316,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     @SuppressLint("NewApi")
     private fun isProperInternalRoot(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && isInternalStorage(uri)
+    private fun isProperInternalAndroidRoot(uri: Uri) = isExternalStorageDocument(uri) && isInternalStorageAndroidDir(uri)
 
     private fun isRootUri(uri: Uri) = uri.lastPathSegment?.endsWith(":") ?: false
 
     private fun isInternalStorage(uri: Uri) = isExternalStorageDocument(uri) && DocumentsContract.getTreeDocumentId(uri).contains("primary")
+    private fun isInternalStorageAndroidDir(uri: Uri) = isExternalStorageDocument(uri) && DocumentsContract.getTreeDocumentId(uri).contains("primary:Android")
 
     private fun isExternalStorageDocument(uri: Uri) = "com.android.externalstorage.documents" == uri.authority
 
