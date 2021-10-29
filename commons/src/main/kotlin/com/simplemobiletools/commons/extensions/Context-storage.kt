@@ -165,6 +165,10 @@ fun Context.isSAFOnlyRoot(path: String): Boolean {
     return result
 }
 
+fun Context.isRestrictedAndroidDir(path: String): Boolean {
+    return isRPlus() && isSAFOnlyRoot(path)
+}
+
 // no need to use DocumentFile if an SD card is set as the default storage
 fun Context.needsStupidWritePermissions(path: String) = (isPathOnSD(path) || isPathOnOTG(path)) && !isSDCardSetAsDefaultStorage()
 
@@ -578,6 +582,14 @@ fun Context.createSAFOnlyFile(path: String): Boolean {
     val documentId = "primary:$relativePath"
     val parentUri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
     return DocumentsContract.createDocument(contentResolver, parentUri, path.getMimeType(), path.getFilenameFromPath()) != null
+}
+
+fun Context.renameSAFOnlyDocument(oldPath: String, newPath: String): Boolean {
+    val treeUri = baseConfig.primaryAndroidTreeUri.toUri()
+    val relativePath = oldPath.substring(baseConfig.internalStoragePath.length).trim('/')
+    val documentId = "primary:$relativePath"
+    val parentUri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
+    return DocumentsContract.renameDocument(contentResolver, parentUri, newPath.getFilenameFromPath()) != null
 }
 
 private const val TAG = "Context-storage"

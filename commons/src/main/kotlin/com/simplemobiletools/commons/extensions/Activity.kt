@@ -752,35 +752,49 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
             }
         }
     } else {
-        val oldFile = File(oldPath)
-        val newFile = File(newPath)
-        val tempFile = oldFile.createTempFile()
-        val oldToTempSucceeds = oldFile.renameTo(tempFile)
-        val tempToNewSucceeds = tempFile.renameTo(newFile)
-        if (oldToTempSucceeds && tempToNewSucceeds) {
-            if (newFile.isDirectory) {
-                updateInMediaStore(oldPath, newPath)
-                rescanPath(newPath) {
-                    runOnUiThread {
-                        callback?.invoke(true)
-                    }
-                    scanPathRecursively(newPath)
+        if (isRestrictedAndroidDir(oldPath)) {
+            try {
+                val success = renameSAFOnlyDocument(oldPath, newPath)
+                runOnUiThread {
+                    callback?.invoke(success)
                 }
-            } else {
-                if (!baseConfig.keepLastModified) {
-                    newFile.setLastModified(System.currentTimeMillis())
-                }
-                updateInMediaStore(oldPath, newPath)
-                scanPathsRecursively(arrayListOf(newPath)) {
-                    runOnUiThread {
-                        callback?.invoke(true)
-                    }
+            } catch (e: Exception) {
+                showErrorToast(e)
+                runOnUiThread {
+                    callback?.invoke(false)
                 }
             }
         } else {
-            tempFile.delete()
-            runOnUiThread {
-                callback?.invoke(false)
+            val oldFile = File(oldPath)
+            val newFile = File(newPath)
+            val tempFile = oldFile.createTempFile()
+            val oldToTempSucceeds = oldFile.renameTo(tempFile)
+            val tempToNewSucceeds = tempFile.renameTo(newFile)
+            if (oldToTempSucceeds && tempToNewSucceeds) {
+                if (newFile.isDirectory) {
+                    updateInMediaStore(oldPath, newPath)
+                    rescanPath(newPath) {
+                        runOnUiThread {
+                            callback?.invoke(true)
+                        }
+                        scanPathRecursively(newPath)
+                    }
+                } else {
+                    if (!baseConfig.keepLastModified) {
+                        newFile.setLastModified(System.currentTimeMillis())
+                    }
+                    updateInMediaStore(oldPath, newPath)
+                    scanPathsRecursively(arrayListOf(newPath)) {
+                        runOnUiThread {
+                            callback?.invoke(true)
+                        }
+                    }
+                }
+            } else {
+                tempFile.delete()
+                runOnUiThread {
+                    callback?.invoke(false)
+                }
             }
         }
     }
