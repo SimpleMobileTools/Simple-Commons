@@ -88,6 +88,13 @@ class PropertiesDialog() {
                     } catch (e: Exception) {
                         return@ensureBackgroundThread
                     }
+                } else if (activity.isRestrictedAndroidDir(path)) {
+                    try {
+                        ExifInterface(activity.contentResolver.openInputStream(activity.getPrimaryAndroidSAFUri(path))!!)
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                        return@ensureBackgroundThread
+                    }
                 } else {
                     ExifInterface(fileDirItem.path)
                 }
@@ -110,7 +117,7 @@ class PropertiesDialog() {
 
         when {
             fileDirItem.isDirectory -> {
-                addProperty(R.string.direct_children_count, fileDirItem.getDirectChildrenCount(activity, countHiddenItems).toString())
+                addProperty(R.string.direct_children_count, fileDirItem.getDirectChildrenCount(activity as BaseSimpleActivity, countHiddenItems).toString())
                 addProperty(R.string.files_count, "…", R.id.properties_file_count)
             }
             fileDirItem.path.isImageSlow() -> {
@@ -144,7 +151,11 @@ class PropertiesDialog() {
             if (activity.baseConfig.appId.removeSuffix(".debug") == "com.simplemobiletools.filemanager.pro") {
                 addProperty(R.string.md5, "…", R.id.properties_md5)
                 ensureBackgroundThread {
-                    val md5 = File(path).md5()
+                    val md5 = if (activity.isRestrictedAndroidDir(path)) {
+                        activity.contentResolver.openInputStream(activity.getPrimaryAndroidSAFUri(path))?.md5()
+                    } else {
+                        File(path).md5()
+                    }
                     activity.runOnUiThread {
                         (view.findViewById<LinearLayout>(R.id.properties_md5).property_value as TextView).text = md5
                     }
@@ -218,6 +229,13 @@ class PropertiesDialog() {
             try {
                 ExifInterface(activity.contentResolver.openInputStream(Uri.parse(path))!!)
             } catch (e: Exception) {
+                return
+            }
+        } else if (activity.isRestrictedAndroidDir(path)) {
+            try {
+                ExifInterface(activity.contentResolver.openInputStream(activity.getPrimaryAndroidSAFUri(path))!!)
+            } catch (e: Exception) {
+                e.printStackTrace()
                 return
             }
         } else {

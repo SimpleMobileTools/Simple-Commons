@@ -95,14 +95,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         updateNavigationBarColor()
     }
 
-    override fun onStop() {
-        super.onStop()
-        actionOnPermission = null
-    }
-
     override fun onDestroy() {
         super.onDestroy()
         funAfterSAFPermission = null
+        actionOnPermission = null
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -223,14 +219,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         Log.i(TAG, "onActivityResult: partition=$partition")
         Log.i(TAG, "onActivityResult: checkedDocumentPath=$checkedDocumentPath")
         Log.i(TAG, "onActivityResult: treeUri=${resultData?.data}")
-        Log.i(TAG, "onActivityResult: tree documentId=${DocumentsContract.getTreeDocumentId(resultData?.data)}")
+        Log.i(TAG, "onActivityResult: tree documentId=${resultData?.data?.let { DocumentsContract.getTreeDocumentId(it) }}")
         val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
 
         if (requestCode == OPEN_DOCUMENT_TREE_PRIMARY) {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
                 if (isProperInternalAndroidRoot(resultData.data!!)) {
-                    if (resultData.dataString == baseConfig.primaryAndroidTreeUri) {
-                        toast(R.string.sd_card_usb_same)
+                    if (resultData.dataString == baseConfig.OTGTreeUri || resultData.dataString == baseConfig.sdTreeUri) {
+                        toast("Select internal storage")
                         return
                     }
 
@@ -447,7 +443,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             if (isCopyOperation) {
                 startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
             } else {
-                if (isPathOnOTG(source) || isPathOnOTG(destination) || isPathOnSD(source) || isPathOnSD(destination) || fileDirItems.first().isDirectory) {
+                if (isPathOnOTG(source) || isPathOnOTG(destination) || isPathOnSD(source) || isPathOnSD(destination) || isRestrictedAndroidDir(source) || isRestrictedAndroidDir(destination) || fileDirItems.first().isDirectory) {
                     handleSAFDialog(source) {
                         if (it) {
                             startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)

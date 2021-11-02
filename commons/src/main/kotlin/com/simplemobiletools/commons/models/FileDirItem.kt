@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.models
 
+import android.app.Activity
 import android.content.Context
 import android.net.Uri
 import com.bumptech.glide.signature.ObjectKey
@@ -7,7 +8,14 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import java.io.File
 
-open class FileDirItem(val path: String, val name: String = "", var isDirectory: Boolean = false, var children: Int = 0, var size: Long = 0L, var modified: Long = 0L) :
+open class FileDirItem(
+    val path: String,
+    val name: String = "",
+    var isDirectory: Boolean = false,
+    var children: Int = 0,
+    var size: Long = 0L,
+    var modified: Long = 0L
+) :
     Comparable<FileDirItem> {
     companion object {
         var sorting = 0
@@ -72,24 +80,42 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
             } catch (e: Exception) {
                 context.getSizeFromContentUri(Uri.parse(path))
             }
+        } else if (context.isRestrictedAndroidDir(path)) {
+            context.getSAFOnlyFileSize(path)
         } else {
             File(path).getProperSize(countHidden)
         }
     }
 
     fun getProperFileCount(context: Context, countHidden: Boolean): Int {
-        return if (context.isPathOnOTG(path)) {
-            context.getDocumentFile(path)?.getFileCount(countHidden) ?: 0
-        } else {
-            File(path).getFileCount(countHidden)
+        return when {
+            context.isPathOnOTG(path) -> {
+                context.getDocumentFile(path)?.getFileCount(countHidden) ?: 0
+            }
+            context.isRestrictedAndroidDir(path) -> {
+                context.getSAFOnlyFileCount(path, countHidden)
+            }
+            else -> {
+                File(path).getFileCount(countHidden)
+            }
         }
     }
 
     fun getDirectChildrenCount(context: Context, countHiddenItems: Boolean): Int {
-        return if (context.isPathOnOTG(path)) {
-            context.getDocumentFile(path)?.listFiles()?.filter { if (countHiddenItems) true else !it.name!!.startsWith(".") }?.size ?: 0
-        } else {
-            File(path).getDirectChildrenCount(countHiddenItems)
+        return when {
+            context.isPathOnOTG(path) -> {
+                context.getDocumentFile(path)?.listFiles()?.filter { if (countHiddenItems) true else !it.name!!.startsWith(".") }?.size ?: 0
+            }
+            context.isRestrictedAndroidDir(path) -> {
+                try {
+                    context.getSAFOnlyDirectChildrenCount(path, countHiddenItems)
+                } catch (e: Exception) {
+                    0
+                }
+            }
+            else -> {
+                File(path).getDirectChildrenCount(context, countHiddenItems)
+            }
         }
     }
 
@@ -98,6 +124,8 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
             context.getFastDocumentFile(path)?.lastModified() ?: 0L
         } else if (isNougatPlus() && path.startsWith("content://")) {
             context.getMediaStoreLastModified(path)
+        } else if (context.isRestrictedAndroidDir(path)) {
+            context.getSAFOnlyLastModified(path)
         } else {
             File(path).lastModified()
         }
@@ -119,7 +147,7 @@ open class FileDirItem(val path: String, val name: String = "", var isDirectory:
 
     fun getVideoResolution(context: Context) = context.getVideoResolution(path)
 
-    fun getImageResolution() = path.getImageResolution()
+    fun getImageResolution(context: Context) = context.getImageResolution(path)
 
     fun getPublicUri(context: Context) = context.getDocumentFile(path)?.uri ?: ""
 

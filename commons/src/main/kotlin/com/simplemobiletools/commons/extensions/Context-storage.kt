@@ -153,7 +153,7 @@ fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWit
 
 fun Context.isPathOnOTG(path: String) = otgPath.isNotEmpty() && path.startsWith(otgPath)
 
-val DIRS_ACCESSIBLE_ONLY_WITH_SAF = listOf("/Android")
+val DIRS_ACCESSIBLE_ONLY_WITH_SAF = listOf("/Android/data", "/Android/obb")
 
 fun Context.getSAFOnlyDirs(): List<String> {
     return DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$internalStoragePath$it" }
@@ -480,12 +480,10 @@ fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSi
 
 
 @RequiresApi(Build.VERSION_CODES.O)
-fun Context.getStorageItemsWithTreeUri(path: String, shouldShowHidden: Boolean, getProperFileSize: Boolean, callback: (ArrayList<FileDirItem>) -> Unit) {
+fun Context.getStorageItemsWithTreeUri(path: String, shouldShowHidden: Boolean, getProperFileSize: Boolean = true, callback: (ArrayList<FileDirItem>) -> Unit) {
     val items = ArrayList<FileDirItem>()
     val treeUri = baseConfig.primaryAndroidTreeUri.toUri()
-    val relativePath = path.substring(baseConfig.internalStoragePath.length).trim('/')
-    val documentId = "primary:$relativePath"
-
+    val documentId = getPrimaryAndroidSAFDocumentId(path)
     val childrenUri = try {
         DocumentsContract.buildChildDocumentsUriUsingTree(treeUri, documentId)
     } catch (e: Exception) {
@@ -499,7 +497,7 @@ fun Context.getStorageItemsWithTreeUri(path: String, shouldShowHidden: Boolean, 
         return
     }
 
-    val projection = arrayOf(Document.COLUMN_DOCUMENT_ID, Document.COLUMN_DISPLAY_NAME, Document.COLUMN_MIME_TYPE)
+    val projection = arrayOf(Document.COLUMN_DOCUMENT_ID, Document.COLUMN_DISPLAY_NAME, Document.COLUMN_MIME_TYPE, Document.COLUMN_LAST_MODIFIED)
     val rawCursor = contentResolver.query(childrenUri, projection, null, null)!!
     val cursor = ExternalStorageProviderHack.transformQueryResult(childrenUri, rawCursor)
     cursor.use {
@@ -508,6 +506,7 @@ fun Context.getStorageItemsWithTreeUri(path: String, shouldShowHidden: Boolean, 
                 val docId = cursor.getStringValue(Document.COLUMN_DOCUMENT_ID)
                 val name = cursor.getStringValue(Document.COLUMN_DISPLAY_NAME)
                 val mimeType = cursor.getStringValue(Document.COLUMN_MIME_TYPE)
+                val lastModified = cursor.getLongValue(Document.COLUMN_LAST_MODIFIED)
                 val isDirectory = mimeType == Document.MIME_TYPE_DIR
                 val filePath = docId.substring("primary:".length)
                 if (!shouldShowHidden && name.startsWith(".")) {
@@ -522,12 +521,11 @@ fun Context.getStorageItemsWithTreeUri(path: String, shouldShowHidden: Boolean, 
                 }
 
                 val childrenCount = if (isDirectory) {
-                    getChildrenCount(treeUri, docId, shouldShowHidden)
+                    getDirectChildrenCount(treeUri, docId, shouldShowHidden)
                 } else {
                     0
                 }
 
-                val lastModified = System.currentTimeMillis()
                 val fileDirItem = FileDirItem(decodedPath, name, isDirectory, childrenCount, fileSize, lastModified)
                 items.add(fileDirItem)
             } while (cursor.moveToNext())
@@ -536,7 +534,7 @@ fun Context.getStorageItemsWithTreeUri(path: String, shouldShowHidden: Boolean, 
     callback(items)
 }
 
-fun Context.getChildrenCount(treeUri: Uri, documentId: String, shouldShowHidden: Boolean): Int {
+fun Context.getDirectChildrenCount(treeUri: Uri, documentId: String, shouldShowHidden: Boolean): Int {
     val projection = arrayOf(Document.COLUMN_DOCUMENT_ID)
     val childrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(treeUri, documentId)
     val rawCursor = contentResolver.query(childrenUri, projection, null, null, null)!!
@@ -544,55 +542,152 @@ fun Context.getChildrenCount(treeUri: Uri, documentId: String, shouldShowHidden:
     return if (shouldShowHidden) {
         cursor.count
     } else {
-        val children = mutableListOf<String>()
+        var count = 0
         cursor.use {
             while (cursor.moveToNext()) {
-                children.add(cursor.getStringValue(Document.COLUMN_DOCUMENT_ID))
+                val docId = cursor.getStringValue(Document.COLUMN_DOCUMENT_ID)
+                if (!docId.getFilenameFromPath().startsWith('.') || shouldShowHidden) {
+                    count++
+                }
             }
         }
-        children.filter { !it.getFilenameFromPath().startsWith(".") }.size
+        count
+    }
+}
+
+fun Context.getProperChildrenCount(treeUri: Uri, documentId: String, shouldShowHidden: Boolean): Int {
+    val projection = arrayOf(Document.COLUMN_DOCUMENT_ID, Document.COLUMN_MIME_TYPE)
+    val childrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(treeUri, documentId)
+    val rawCursor = contentResolver.query(childrenUri, projection, null, null, null)!!
+    val cursor = ExternalStorageProviderHack.transformQueryResult(childrenUri, rawCursor)
+    return if (cursor.count > 0) {
+        var count = 0
+        cursor.use {
+            while (cursor.moveToNext()) {
+                val docId = cursor.getStringValue(Document.COLUMN_DOCUMENT_ID)
+                val mimeType = cursor.getStringValue(Document.COLUMN_MIME_TYPE)
+                if (mimeType == Document.MIME_TYPE_DIR) {
+                    count++
+                    count += getProperChildrenCount(treeUri, docId, shouldShowHidden)
+                } else if (!docId.getFilenameFromPath().startsWith('.') || shouldShowHidden) {
+                    count++
+                }
+            }
+        }
+        count
+    } else {
+        1
     }
 }
 
 fun Context.getFileSize(treeUri: Uri, documentId: String): Long {
     val projection = arrayOf(Document.COLUMN_SIZE)
-    val childrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(treeUri, documentId)
-    val rawCursor = contentResolver.query(childrenUri, projection, null, null, null)!!
-    val cursor = ExternalStorageProviderHack.transformQueryResult(childrenUri, rawCursor)
-    var size = 0L
-    cursor.use { c ->
-        if (c.moveToFirst()) {
-            size = c.getLongValue(Document.COLUMN_SIZE)
-        }
+    val documentUri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
+    return contentResolver.query(documentUri, projection, null, null, null)?.use { cursor ->
+        if (cursor.moveToFirst()) cursor.getLongValue(Document.COLUMN_SIZE) else 0L
+    } ?: 0L
+}
+
+fun Context.getPrimaryAndroidSAFDocumentId(path: String): String {
+    val relativePath = path.substring(baseConfig.internalStoragePath.length).trim('/')
+    return "primary:$relativePath"
+}
+
+fun Context.getPrimaryAndroidSAFUri(path: String): Uri {
+    val treeUri = baseConfig.primaryAndroidTreeUri.toUri()
+    val documentId = getPrimaryAndroidSAFDocumentId(path)
+    return DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
+}
+
+fun Context.getPrimaryAndroidSAFDocument(path: String): DocumentFile? {
+    val primaryAndroidPath = File(internalStoragePath, "Android").path
+    var relativePath = path.substring(primaryAndroidPath.length)
+    if (relativePath.startsWith(File.separator)) {
+        relativePath = relativePath.substring(1)
     }
-    return size
+
+    return try {
+        val treeUri = baseConfig.primaryAndroidTreeUri.toUri()
+        var document = DocumentFile.fromTreeUri(applicationContext, treeUri)
+        val files = document?.listFiles()?.map { it.name }
+        val parts = relativePath.split("/").filter { it.isNotEmpty() }
+        for (part in parts) {
+            document = document?.findFile(part)
+        }
+        document
+    } catch (ignored: Exception) {
+        null
+    }
+}
+
+fun Context.getSomePrimaryAndroidSAFDocument(path: String): DocumentFile? = getFastPrimaryAndroidSAFDocument(path) ?: getPrimaryAndroidSAFDocument(path)
+
+fun Context.getFastPrimaryAndroidSAFDocument(path: String): DocumentFile? {
+    val uri = getPrimaryAndroidSAFUri(path)
+    return DocumentFile.fromSingleUri(this, uri)
+}
+
+fun Context.getPrimaryAndroidSAFChildrenUri(path: String): Uri {
+    val treeUri = baseConfig.primaryAndroidTreeUri.toUri()
+    val documentId = getPrimaryAndroidSAFDocumentId(path)
+    return DocumentsContract.buildChildDocumentsUriUsingTree(treeUri, documentId)
 }
 
 fun Context.createSAFOnlyDirectory(path: String): Boolean {
     val treeUri = baseConfig.primaryAndroidTreeUri.toUri()
-    val relativePath = path.getParentPath().substring(baseConfig.internalStoragePath.length).trim('/')
-    val documentId = "primary:$relativePath"
+    val parentPath = path.getParentPath()
+    if (!getDoesFilePathExist(parentPath)) {
+        createSAFOnlyDirectory(parentPath)
+    }
+    val documentId = getPrimaryAndroidSAFDocumentId(parentPath)
     val parentUri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
-    return DocumentsContract.createDocument(contentResolver, parentUri, Document.MIME_TYPE_DIR, path.getFilenameFromPath()) != null
+    val createdUri = DocumentsContract.createDocument(contentResolver, parentUri, Document.MIME_TYPE_DIR, path.getFilenameFromPath())
+    return createdUri != null
 }
 
 fun Context.createSAFOnlyFile(path: String): Boolean {
     val treeUri = baseConfig.primaryAndroidTreeUri.toUri()
-    val relativePath = path.getParentPath().substring(baseConfig.internalStoragePath.length).trim('/')
-    val documentId = "primary:$relativePath"
+    val documentId = getPrimaryAndroidSAFDocumentId(path.getParentPath())
     val parentUri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
     return DocumentsContract.createDocument(contentResolver, parentUri, path.getMimeType(), path.getFilenameFromPath()) != null
 }
 
 fun Context.renameSAFOnlyDocument(oldPath: String, newPath: String): Boolean {
     val treeUri = baseConfig.primaryAndroidTreeUri.toUri()
-    val relativePath = oldPath.substring(baseConfig.internalStoragePath.length).trim('/')
-    val documentId = "primary:$relativePath"
+    val documentId = getPrimaryAndroidSAFDocumentId(oldPath)
     val parentUri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
     return DocumentsContract.renameDocument(contentResolver, parentUri, newPath.getFilenameFromPath()) != null
 }
 
-private const val TAG = "Context-storage"
+fun Context.getSAFOnlyFileSize(path: String): Long {
+    val treeUri = baseConfig.primaryAndroidTreeUri.toUri()
+    val documentId = getPrimaryAndroidSAFDocumentId(path)
+    val size = getFileSize(treeUri, documentId)
+    return size
+}
+
+fun Context.getSAFOnlyFileCount(path: String, countHidden: Boolean): Int {
+    val treeUri = baseConfig.primaryAndroidTreeUri.toUri()
+    val documentId = getPrimaryAndroidSAFDocumentId(path)
+    val size = getProperChildrenCount(treeUri, documentId, countHidden)
+    return size
+}
+
+fun Context.getSAFOnlyDirectChildrenCount(path: String, countHidden: Boolean): Int {
+    val treeUri = baseConfig.primaryAndroidTreeUri.toUri()
+    val documentId = getPrimaryAndroidSAFDocumentId(path)
+    return getDirectChildrenCount(treeUri, documentId, countHidden)
+}
+
+fun Context.getSAFOnlyLastModified(path: String): Long {
+    val treeUri = baseConfig.primaryAndroidTreeUri.toUri()
+    val documentId = getPrimaryAndroidSAFDocumentId(path)
+    val projection = arrayOf(Document.COLUMN_LAST_MODIFIED)
+    val documentUri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
+    return contentResolver.query(documentUri, projection, null, null, null)?.use { cursor ->
+        if (cursor.moveToFirst()) cursor.getLongValue(Document.COLUMN_LAST_MODIFIED) else 0L
+    } ?: 0L
+}
 
 fun Context.deleteSAFOnlyDir(path: String, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     val treeUri = baseConfig.primaryAndroidTreeUri.toUri()
@@ -633,6 +728,9 @@ fun Context.getFileInputStreamSync(path: String): InputStream? {
     return if (isPathOnOTG(path)) {
         val fileDocument = getSomeDocumentFile(path)
         applicationContext.contentResolver.openInputStream(fileDocument?.uri!!)
+    } else if (isRestrictedAndroidDir(path)) {
+        val uri = getPrimaryAndroidSAFUri(path)
+        applicationContext.contentResolver.openInputStream(uri)
     } else {
         FileInputStream(File(path))
     }
@@ -649,7 +747,9 @@ fun Context.updateOTGPathFromPartition() {
 
 fun Context.getDoesFilePathExist(path: String, otgPathToUse: String? = null): Boolean {
     val otgPath = otgPathToUse ?: baseConfig.OTGPath
-    return if (otgPath.isNotEmpty() && path.startsWith(otgPath)) {
+    return if (isRestrictedAndroidDir(path)) {
+        getFastPrimaryAndroidSAFDocument(path)?.exists() ?: false
+    } else if (otgPath.isNotEmpty() && path.startsWith(otgPath)) {
         getOTGFastDocumentFile(path)?.exists() ?: false
     } else {
         File(path).exists()
@@ -657,7 +757,9 @@ fun Context.getDoesFilePathExist(path: String, otgPathToUse: String? = null): Bo
 }
 
 fun Context.getIsPathDirectory(path: String): Boolean {
-    return if (isPathOnOTG(path)) {
+    return if (isRestrictedAndroidDir(path)) {
+        getFastPrimaryAndroidSAFDocument(path)?.isDirectory ?: false
+    } else if (isPathOnOTG(path)) {
         getOTGFastDocumentFile(path)?.isDirectory ?: false
     } else {
         File(path).isDirectory

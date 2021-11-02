@@ -5,8 +5,8 @@ import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
-import kotlinx.android.synthetic.main.dialog_create_new_folder.view.*
 import java.io.File
+import kotlinx.android.synthetic.main.dialog_create_new_folder.view.*
 
 class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, val callback: (path: String) -> Unit) {
     init {
@@ -57,6 +57,7 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                         }
                     }
                 }
+                activity.isRestrictedAndroidDir(path) && activity.createSAFOnlyDirectory(path) -> sendSuccess(alertDialog, path)
                 File(path).mkdirs() -> sendSuccess(alertDialog, path)
                 else -> activity.toast(R.string.unknown_error_occurred)
             }

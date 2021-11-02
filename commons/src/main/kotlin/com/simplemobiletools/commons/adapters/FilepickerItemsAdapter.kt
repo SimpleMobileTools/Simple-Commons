@@ -18,11 +18,16 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.getFilePlaceholderDrawables
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.MyRecyclerView
-import kotlinx.android.synthetic.main.filepicker_list_item.view.*
-import java.util.*
+import java.util.HashMap
+import java.util.Locale
+import kotlinx.android.synthetic.main.filepicker_list_item.view.list_item_details
+import kotlinx.android.synthetic.main.filepicker_list_item.view.list_item_icon
+import kotlinx.android.synthetic.main.filepicker_list_item.view.list_item_name
 
-class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: List<FileDirItem>, recyclerView: MyRecyclerView,
-                             itemClick: (Any) -> Unit) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick) {
+class FilepickerItemsAdapter(
+    activity: BaseSimpleActivity, val fileDirItems: List<FileDirItem>, recyclerView: MyRecyclerView,
+    itemClick: (Any) -> Unit
+) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick) {
 
     private lateinit var fileDrawable: Drawable
     private lateinit var folderDrawable: Drawable
@@ -110,13 +115,15 @@ class FilepickerItemsAdapter(activity: BaseSimpleActivity, val fileDirItems: Lis
                 }
 
                 if (!activity.isDestroyed && !activity.isFinishing) {
+                    if (activity.isRestrictedAndroidDir(path)) {
+                        itemToLoad = activity.getPrimaryAndroidSAFUri(path)
+                    } else if (hasOTGConnected && itemToLoad is String && activity.isPathOnOTG(itemToLoad)) {
+                        itemToLoad = itemToLoad.getOTGPublicPath(activity)
+                    }
+
                     if (itemToLoad.toString().isGif()) {
                         Glide.with(activity).asBitmap().load(itemToLoad).apply(options).into(list_item_icon)
                     } else {
-                        if (hasOTGConnected && itemToLoad is String && activity.isPathOnOTG(itemToLoad)) {
-                            itemToLoad = itemToLoad.getOTGPublicPath(activity)
-                        }
-
                         Glide.with(activity)
                             .load(itemToLoad)
                             .transition(withCrossFade())

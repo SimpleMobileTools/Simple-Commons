@@ -71,7 +71,7 @@ fun String.isImageFast() = photoExtensions.any { endsWith(it, true) }
 fun String.isAudioFast() = audioExtensions.any { endsWith(it, true) }
 fun String.isRawFast() = rawExtensions.any { endsWith(it, true) }
 
-fun String.isImageSlow() = isImageFast() || getMimeType().startsWith("image") || startsWith(MediaStore.Images.Media.EXTERNAL_CONTENT_URI.toString())
+fun String. isImageSlow() = isImageFast() || getMimeType().startsWith("image") || startsWith(MediaStore.Images.Media.EXTERNAL_CONTENT_URI.toString())
 fun String.isVideoSlow() = isVideoFast() || getMimeType().startsWith("video") || startsWith(MediaStore.Video.Media.EXTERNAL_CONTENT_URI.toString())
 fun String.isAudioSlow() = isAudioFast() || getMimeType().startsWith("audio") || startsWith(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI.toString())
 
@@ -94,16 +94,21 @@ fun String.getGenericMimeType(): String {
 }
 
 fun String.getParentPath() = removeSuffix("/${getFilenameFromPath()}")
+fun String.relativizeWith(path: String) = this.substring(path.length)
 
 fun String.containsNoMedia() = File(this).containsNoMedia()
 
 fun String.doesThisOrParentHaveNoMedia(folderNoMediaStatuses: HashMap<String, Boolean>, callback: ((path: String, hasNoMedia: Boolean) -> Unit)?) =
     File(this).doesThisOrParentHaveNoMedia(folderNoMediaStatuses, callback)
 
-fun String.getImageResolution(): Point? {
+fun String.getImageResolution(context: Context): Point? {
     val options = BitmapFactory.Options()
     options.inJustDecodeBounds = true
-    BitmapFactory.decodeFile(this, options)
+    if(context.isRestrictedAndroidDir(this)){
+        BitmapFactory.decodeStream(context.contentResolver.openInputStream(context.getPrimaryAndroidSAFUri(this)), null, options)
+    }else{
+        BitmapFactory.decodeFile(this, options)
+    }
     val width = options.outWidth
     val height = options.outHeight
     return if (width > 0 && height > 0) {

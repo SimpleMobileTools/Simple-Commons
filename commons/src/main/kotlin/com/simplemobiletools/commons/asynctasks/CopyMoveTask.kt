@@ -22,7 +22,8 @@ import java.io.File
 import java.io.InputStream
 import java.io.OutputStream
 import java.lang.ref.WeakReference
-import java.util.*
+import java.util.ArrayList
+import java.util.LinkedHashMap
 
 class CopyMoveTask(
     val activity: BaseSimpleActivity, val copyOnly: Boolean, val copyMediaOnly: Boolean, val conflictResolutions: LinkedHashMap<String, Int>,
@@ -189,6 +190,21 @@ class CopyMoveTask(
                 copy(oldFileDirItem, newFileDirItem)
             }
             mTransferredFiles.add(source)
+        } else if (activity.isRestrictedAndroidDir(source.path)) {
+            activity.getStorageItemsWithTreeUri(source.path, true) { files ->
+                for (child in files) {
+                    val newPath = "$destinationPath/${child.name}"
+                    if (activity.getDoesFilePathExist(newPath)) {
+                        continue
+                    }
+
+                    val oldPath = "${source.path}/${child.name}"
+                    val oldFileDirItem = FileDirItem(oldPath, child.name, child.isDirectory, 0, child.size)
+                    val newFileDirItem = FileDirItem(newPath, child.name, child.isDirectory)
+                    copy(oldFileDirItem, newFileDirItem)
+                }
+                mTransferredFiles.add(source)
+            }
         } else {
             val children = File(source.path).list()
             for (child in children) {
@@ -264,6 +280,7 @@ class CopyMoveTask(
                 }
             }
         } catch (e: Exception) {
+            e.printStackTrace()
             activity.showErrorToast(e)
         } finally {
             inputStream?.close()

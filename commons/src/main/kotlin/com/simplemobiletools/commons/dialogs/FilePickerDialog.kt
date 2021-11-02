@@ -28,15 +28,17 @@ import java.util.*
  * @param showFAB toggle the displaying of a Floating Action Button for creating new folders
  * @param callback the callback used for returning the selected file/folder
  */
-class FilePickerDialog(val activity: BaseSimpleActivity,
-                       var currPath: String = Environment.getExternalStorageDirectory().toString(),
-                       val pickFile: Boolean = true,
-                       var showHidden: Boolean = false,
-                       val showFAB: Boolean = false,
-                       val canAddShowHiddenButton: Boolean = false,
-                       val forceShowRoot: Boolean = false,
-                       val showFavoritesButton: Boolean = false,
-                       val callback: (pickedPath: String) -> Unit) : Breadcrumbs.BreadcrumbsListener {
+class FilePickerDialog(
+    val activity: BaseSimpleActivity,
+    var currPath: String = Environment.getExternalStorageDirectory().toString(),
+    val pickFile: Boolean = true,
+    var showHidden: Boolean = false,
+    val showFAB: Boolean = false,
+    val canAddShowHiddenButton: Boolean = false,
+    val forceShowRoot: Boolean = false,
+    val showFavoritesButton: Boolean = false,
+    val callback: (pickedPath: String) -> Unit
+) : Breadcrumbs.BreadcrumbsListener {
 
     private var mFirstUpdate = true
     private var mPrevPath = ""
@@ -204,6 +206,11 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
             if ((pickFile && fileDocument.isFile) || (!pickFile && fileDocument.isDirectory)) {
                 sendSuccess()
             }
+        } else if (activity.isRestrictedAndroidDir(currPath)) {
+            val document = activity.getSomePrimaryAndroidSAFDocument(currPath) ?: return
+            if ((pickFile && document.isFile) || (!pickFile && document.isDirectory)) {
+                sendSuccess()
+            }
         } else {
             val file = File(currPath)
             if ((pickFile && file.isFile) || (!pickFile && file.isDirectory)) {
@@ -233,31 +240,39 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
     private fun getRegularItems(path: String, lastModifieds: HashMap<String, Long>, callback: (List<FileDirItem>) -> Unit) {
         val items = ArrayList<FileDirItem>()
-        val base = File(path)
-        val files = base.listFiles()
-        if (files == null) {
+
+        if (activity.isRestrictedAndroidDir(path)) {
+            activity.handlePrimarySAFDialog(path) {
+                activity.getStorageItemsWithTreeUri(path, showHidden) {
+                    callback(it)
+                }
+            }
+        } else {
+            val base = File(path)
+            val files = base.listFiles()
+            if (files == null) {
+                callback(items)
+                return
+            }
+            for (file in files) {
+                if (!showHidden && file.name.startsWith('.')) {
+                    continue
+                }
+
+                val curPath = file.absolutePath
+                val curName = curPath.getFilenameFromPath()
+                val size = file.length()
+                var lastModified = lastModifieds.remove(curPath)
+                val isDirectory = if (lastModified != null) false else file.isDirectory
+                if (lastModified == null) {
+                    lastModified = 0    // we don't actually need the real lastModified that badly, do not check file.lastModified()
+                }
+
+                val children = if (isDirectory) file.getDirectChildrenCount(activity, showHidden) else 0
+                items.add(FileDirItem(curPath, curName, isDirectory, children, size, lastModified))
+            }
             callback(items)
-            return
         }
-
-        for (file in files) {
-            if (!showHidden && file.name.startsWith('.')) {
-                continue
-            }
-
-            val curPath = file.absolutePath
-            val curName = curPath.getFilenameFromPath()
-            val size = file.length()
-            var lastModified = lastModifieds.remove(curPath)
-            val isDirectory = if (lastModified != null) false else file.isDirectory
-            if (lastModified == null) {
-                lastModified = 0    // we don't actually need the real lastModified that badly, do not check file.lastModified()
-            }
-
-            val children = if (isDirectory) file.getDirectChildrenCount(showHidden) else 0
-            items.add(FileDirItem(curPath, curName, isDirectory, children, size, lastModified))
-        }
-        callback(items)
     }
 
     private fun containsDirectory(items: List<FileDirItem>) = items.any { it.isDirectory }

@@ -76,7 +76,7 @@ private fun getDirectoryFileCount(dir: File, countHiddenItems: Boolean): Int {
     return count
 }
 
-fun File.getDirectChildrenCount(countHiddenItems: Boolean) = listFiles()?.filter { if (countHiddenItems) true else !it.name.startsWith('.') }?.size
+fun File.getDirectChildrenCount(context: Context, countHiddenItems: Boolean) = if(context.isSAFOnlyRoot(path)) context.getSAFOnlyDirectChildrenCount(path, countHiddenItems) else listFiles()?.filter { if (countHiddenItems) true else !it.name.startsWith('.') }?.size
     ?: 0
 
 fun File.toFileDirItem(context: Context) = FileDirItem(absolutePath, name, context.getIsPathDirectory(absolutePath), 0, length(), lastModified())
@@ -128,17 +128,7 @@ fun File.doesParentHaveNoMedia(): Boolean {
 }
 
 fun File.getDigest(algorithm: String): String {
-    return inputStream().use { fis ->
-        val md = MessageDigest.getInstance(algorithm)
-        val buffer = ByteArray(8192)
-        generateSequence {
-            when (val bytesRead = fis.read(buffer)) {
-                -1 -> null
-                else -> bytesRead
-            }
-        }.forEach { bytesRead -> md.update(buffer, 0, bytesRead) }
-        md.digest().joinToString("") { "%02x".format(it) }
-    }
+    return inputStream().getDigest(algorithm)
 }
 
 fun File.md5(): String = this.getDigest(MD5)

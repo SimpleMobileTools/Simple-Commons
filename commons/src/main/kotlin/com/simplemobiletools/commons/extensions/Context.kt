@@ -10,6 +10,7 @@ import android.content.pm.PackageManager
 import android.content.pm.ShortcutManager
 import android.content.res.Configuration
 import android.database.Cursor
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.Point
 import android.media.MediaMetadataRetriever
@@ -383,7 +384,9 @@ fun Context.getMimeTypeFromUri(uri: Uri): String {
 }
 
 fun Context.ensurePublicUri(path: String, applicationId: String): Uri? {
-    return if (isPathOnOTG(path)) {
+    return if (isRestrictedAndroidDir(path)) {
+        getPrimaryAndroidSAFUri(path)
+    } else if (isPathOnOTG(path)) {
         getDocumentFile(path)?.uri
     } else {
         val uri = Uri.parse(path)
@@ -743,9 +746,26 @@ fun Context.getTimeFormat() = if (baseConfig.use24HourFormat) TIME_FORMAT_24 els
 
 fun Context.getResolution(path: String): Point? {
     return if (path.isImageFast() || path.isImageSlow()) {
-        path.getImageResolution()
+        getImageResolution(path)
     } else if (path.isVideoFast() || path.isVideoSlow()) {
         getVideoResolution(path)
+    } else {
+        null
+    }
+}
+
+fun Context.getImageResolution(path: String): Point? {
+    val options = BitmapFactory.Options()
+    options.inJustDecodeBounds = true
+    if (isRestrictedAndroidDir(path)) {
+        BitmapFactory.decodeStream(contentResolver.openInputStream(getPrimaryAndroidSAFUri(path)), null, options)
+    } else {
+        BitmapFactory.decodeFile(path, options)
+    }
+    val width = options.outWidth
+    val height = options.outHeight
+    return if (width > 0 && height > 0) {
+        Point(options.outWidth, options.outHeight)
     } else {
         null
     }
@@ -754,7 +774,11 @@ fun Context.getResolution(path: String): Point? {
 fun Context.getVideoResolution(path: String): Point? {
     var point = try {
         val retriever = MediaMetadataRetriever()
-        retriever.setDataSource(path)
+        if (isRestrictedAndroidDir(path)) {
+            retriever.setDataSource(this, getPrimaryAndroidSAFUri(path))
+        } else {
+            retriever.setDataSource(path)
+        }
         val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH)!!.toInt()
         val height = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT)!!.toInt()
         Point(width, height)
