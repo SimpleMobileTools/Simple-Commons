@@ -193,7 +193,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
 
             updateColorTheme(it as Int, true)
-            if (it != THEME_CUSTOM && it != THEME_SHARED && !baseConfig.wasCustomThemeSwitchDescriptionShown) {
+            if (it != THEME_CUSTOM && it != THEME_SHARED && it != THEME_AUTO && !baseConfig.wasCustomThemeSwitchDescriptionShown) {
                 baseConfig.wasCustomThemeSwitchDescriptionShown = true
                 toast(R.string.changing_color_description)
             }
