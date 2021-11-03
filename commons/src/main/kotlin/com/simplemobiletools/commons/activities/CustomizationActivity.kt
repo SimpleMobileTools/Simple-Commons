@@ -24,6 +24,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private val THEME_CUSTOM = 5
     private val THEME_SHARED = 6
     private val THEME_WHITE = 7
+    private val THEME_AUTO = 8
 
     private var curTextColor = 0
     private var curBackgroundColor = 0
@@ -125,6 +126,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun setupThemes() {
         predefinedThemes.apply {
+            put(THEME_AUTO, getAutoThemeColors())
             put(
                 THEME_LIGHT,
                 MyTheme(
@@ -163,6 +165,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun setupThemePicker() {
         curSelectedThemeId = getCurrentThemeId()
+        updateAutoThemeFields()
         customization_theme.text = getThemeText()
         handleAccentColorLayout()
         customization_theme_holder.setOnClickListener {
@@ -255,17 +258,27 @@ class CustomizationActivity : BaseSimpleActivity() {
         updateBackgroundColor(curBackgroundColor)
         updateActionbarColor(curPrimaryColor)
         updateNavigationBarColor(curNavigationBarColor)
+        updateAutoThemeFields()
         handleAccentColorLayout()
+    }
+
+    private fun getAutoThemeColors(): MyTheme {
+        val isUsingSystemDarkTheme = isUsingSystemDarkTheme()
+        val textColor = if (isUsingSystemDarkTheme) R.color.theme_dark_text_color else R.color.theme_light_text_color
+        val backgroundColor = if (isUsingSystemDarkTheme) R.color.theme_dark_background_color else R.color.theme_light_background_color
+        return MyTheme(R.string.auto_theme, textColor, backgroundColor, R.color.color_primary, R.color.color_primary)
     }
 
     private fun getCurrentThemeId(): Int {
         if (baseConfig.isUsingSharedTheme) {
             return THEME_SHARED
+        } else if (baseConfig.isUsingAutoTheme) {
+            return THEME_AUTO
         }
 
         var themeId = THEME_CUSTOM
         resources.apply {
-            for ((key, value) in predefinedThemes.filter { it.key != THEME_CUSTOM && it.key != THEME_SHARED }) {
+            for ((key, value) in predefinedThemes.filter { it.key != THEME_CUSTOM && it.key != THEME_SHARED && it.key != THEME_AUTO }) {
                 if (curTextColor == getColor(value.textColorId) &&
                     curBackgroundColor == getColor(value.backgroundColorId) &&
                     curPrimaryColor == getColor(value.primaryColorId) &&
@@ -293,7 +306,16 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getThemeNavigationColor(themeId: Int) = when (themeId) {
         THEME_BLACK_WHITE -> Color.BLACK
         THEME_WHITE -> Color.WHITE
+        THEME_AUTO -> if (isUsingSystemDarkTheme()) Color.BLACK else -2
+        THEME_LIGHT -> Color.WHITE
+        THEME_DARK -> Color.BLACK
         else -> baseConfig.defaultNavigationBarColor
+    }
+
+    private fun updateAutoThemeFields() {
+        arrayOf(customization_text_color_holder, customization_background_color_holder, customization_navigation_bar_color_holder).forEach {
+            it.beVisibleIf(curSelectedThemeId != THEME_AUTO)
+        }
     }
 
     private fun promptSaveDiscard() {
@@ -340,6 +362,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         baseConfig.isUsingSharedTheme = curSelectedThemeId == THEME_SHARED
         baseConfig.shouldUseSharedTheme = curSelectedThemeId == THEME_SHARED
+        baseConfig.isUsingAutoTheme = curSelectedThemeId == THEME_AUTO
 
         hasUnsavedChanges = false
         if (finishAfterSave) {
