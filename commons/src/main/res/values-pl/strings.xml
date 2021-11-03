@@ -103,7 +103,7 @@
     <string name="simple_renaming">Prosta zmiana nazwy</string>
     <string name="pattern_renaming">Wzór</string>
     <string name="string_to_add">Ciąg do dodania</string>
-    <string name="rename_date_time_pattern">%Y - rok\n%M - miesiąc\n%D - dzień\n%h - godzina\n%m - minuta\n%s - sekunda\n%i - numer rosnący od 1</string>
+    <string name="rename_date_time_pattern">%Y — rok\n%M — miesiąc\n%D — dzień\n%h — godzina\n%m — minuta\n%s — sekunda\n%i — numer rosnący od 1</string>
     <string name="filename_without_txt">Nazwa pliku (bez .txt)</string>
     <string name="filename_without_json">Nazwa pliku (bez .json)</string>
 
@@ -243,7 +243,7 @@
     <string name="apply_to_all_apps">Zastosuj kolory we wszystkich Prostych aplikacjach</string>
     <string name="app_icon_color_warning">UWAGA: Niektóre launchery nie obsługują prawidłowo zmiany ikon aplikacji. Jeśli ona zniknie, uruchom aplikację przez Sklep Google Play lub przez widżet, jeśli jest dostępny.
         Po uruchomieniu aplikacji ustaw domyślny kolor ikony (#F57C00). W najgorszym przypadku konieczne może być przeinstalowanie aplikacji.</string>
-    <string name="share_colors_success">Kolory zostały zmienione. Utworzony został nowy, „wspólny” motyw - użyj go, aby zaktualizować kolorystykę we wszystkich Prostych aplikacjach.</string>
+    <string name="share_colors_success">Kolory zostały zmienione. Dodano nowy motyw o nazwie „wspólny” — użyj go do aktualizacji kolorystyki we wszystkich Prostych aplikacjach w przyszłości.</string>
     <string name="shared_theme_note">Zauważ, że nawet jeśli używasz wersji Pro aplikacji, nadal potrzebujesz aplikacji „Proste podziękowanie” z powodów technicznych. Zajmuje się ona synchronizacją kolorów.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -858,7 +858,7 @@
     <string name="translation_dutch">niderlandzki</string>
     <string name="translation_polish">polski</string>
     <string name="translation_portuguese">portugalski</string>
-    <string name="translation_romanian">Romanian</string>
+    <string name="translation_romanian">rumuński</string>
     <string name="translation_russian">rosyjski</string>
     <string name="translation_slovak">słowacki</string>
     <string name="translation_slovenian">słoweński</string>
@@ -927,10 +927,10 @@
     <string name="joda_title">Joda-Time (zamiennik obsługi dat w Javie)</string>
     <string name="stetho_title">Stetho (debugowanie baz danych)</string>
     <string name="otto_title">Otto (szyna zdarzeń)</string>
-    <string name="photoview_title">PhotoView (przybliżanie GIFów)</string>
+    <string name="photoview_title">PhotoView (przybliżanie GIF-ów)</string>
     <string name="pattern_title">PatternLockView (ochrona danych wzorem)</string>
     <string name="reprint_title">Reprint (ochrona danych odciskiem palca)</string>
-    <string name="gif_drawable_title">Gif Drawable (ładowanie GIFów)</string>
+    <string name="gif_drawable_title">Gif Drawable (ładowanie GIF-ów)</string>
     <string name="autofittextview_title">AutoFitTextView (zmiana rozmiaru tekstu)</string>
     <string name="robolectric_title">Robolectric (testowanie aplikacji)</string>
     <string name="espresso_title">Espresso (testowanie aplikacji)</string>
@@ -945,7 +945,7 @@
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (litery na pasku przewijania)</string>
     <string name="event_bus_title">Event Bus (komunikacja w aplikacji)</string>
     <string name="audio_record_view_title">Audio Record View (wizualizacja audio)</string>
-    <string name="sms_mms_title">SMS MMS (obsługa SMS i MMS)</string>
+    <string name="sms_mms_title">SMS MMS (obsługa SMS-ów i MMS-ów)</string>
     <string name="apng_title">APNG Android (obsługa animowanych WebP)</string>
 
     <!-- Google Play listing -->
@@ -953,5 +953,5 @@
     <string name="pro_app_refund">Nie zapomnij, że jeśli odinstalujesz jakąkolwiek płatną aplikację w ciągu 2 godzin, automatycznie otrzymasz zwrot pieniędzy. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie później, wystarczy skontaktować się z nami na hello@simplemobiletools.com i dostaniesz go. To sprawia, że są łatwe do wypróbowania :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">Zestaw prostych, otwartych aplikacji na Androida z konfigurowalnymi widżetami, bez reklam i zbędnych uprawnień.</string>
+    <string name="developer_description">Zestaw prostych, otwartoźródłowych aplikacji na Androida z konfigurowalnymi widżetami, bez reklam i zbędnych uprawnień.</string>
 </resources>
