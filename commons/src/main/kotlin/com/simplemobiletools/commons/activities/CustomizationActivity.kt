@@ -242,9 +242,13 @@ class CustomizationActivity : BaseSimpleActivity() {
                 val theme = predefinedThemes[curSelectedThemeId]!!
                 curTextColor = getColor(theme.textColorId)
                 curBackgroundColor = getColor(theme.backgroundColorId)
-                curPrimaryColor = getColor(theme.primaryColorId)
-                curAccentColor = getColor(R.color.color_primary)
-                curAppIconColor = getColor(theme.appIconColorId)
+
+                if (curSelectedThemeId != THEME_AUTO) {
+                    curPrimaryColor = getColor(theme.primaryColorId)
+                    curAccentColor = getColor(R.color.color_primary)
+                    curAppIconColor = getColor(theme.appIconColorId)
+                }
+
                 curNavigationBarColor = getThemeNavigationColor(curSelectedThemeId)
                 setTheme(getThemeId(curPrimaryColor))
                 colorChanged()
