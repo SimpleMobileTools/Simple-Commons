@@ -76,7 +76,7 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
         if (isPrimaryColorPicker) {
             activity.updateActionbarColor(color)
             activity.setTheme(activity.getThemeId(color))
-            activity.updateMenuItemColors(menu, true, color)
+            activity.updateMenuItemColors(menu, color)
 
             if (!wasDimmedBackgroundRemoved) {
                 dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
