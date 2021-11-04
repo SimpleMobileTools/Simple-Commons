@@ -115,7 +115,7 @@ class CopyMoveTask(
         val listener = mListener?.get() ?: return
 
         if (success) {
-            listener.copySucceeded(copyOnly, mTransferredFiles.size >= mFileCountToCopy, mDestinationPath)
+            listener.copySucceeded(copyOnly, mTransferredFiles.size >= mFileCountToCopy, mDestinationPath, mTransferredFiles.size == 1)
         } else {
             listener.copyFailed()
         }
@@ -155,7 +155,7 @@ class CopyMoveTask(
         mProgressHandler.postDelayed({
             updateProgress()
 
-            if (mCurrentProgress / 1000 > mMaxSize) {
+            if (mCurrentProgress / 1000 >= mMaxSize) {
                 mIsTaskOver = true
             }
         }, PROGRESS_RECHECK_INTERVAL)

@@ -122,10 +122,12 @@
     <string name="source_and_destination_same">Исходный и конечный пути не могут совпадать</string>
     <string name="copy_failed">Не удалось скопировать файлы</string>
     <string name="copying">Копирование…</string>
-    <string name="copying_success">Копирование завершено</string>
+    <string name="copying_success">Копирование файлов завершено</string>
+    <string name="copying_success_one">Копирование файла завершено</string>
     <string name="copy_move_failed">Произошла ошибка</string>
     <string name="moving">Перемещение…</string>
-    <string name="moving_success">Перемещение завершено</string>
+    <string name="moving_success">Перемещение файлов завершено</string>
+    <string name="moving_success_one">Перемещение файла завершено</string>
     <string name="moving_success_partial">Некоторые файлы не могут быть перемещены</string>
     <string name="copying_success_partial">Некоторые файлы не могут быть скопированы</string>
     <string name="no_files_selected">Файлы не выбраны</string>
@@ -254,6 +256,7 @@
     <!-- Themes -->
     <string name="light_theme">Светлая</string>
     <string name="dark_theme">Тёмная</string>
+    <string name="auto_theme">Автовыбор</string>
     <string name="solarized">Солнечная</string>
     <string name="dark_red">Тёмно-красная</string>
     <string name="white">Белая</string>
@@ -827,6 +830,56 @@
         Если нужно выбрать все элементы, длительным нажатием выделите один элемент, а затем нажмите на счётчик выбранных элементов в левом верхнем углу. Это действие выберет или отменит выбор всего.</string>
     <string name="faq_10_title_commons">Я купил приложение, но не могу загрузить его на другое устройство.</string>
     <string name="faq_10_text_commons">Попробуйте очистить кеш приложения Google Play и перезагрузить устройство. Это какая-то ошибка в Google Play, не связанная с самим приложением.</string>
+
+    <!-- Contributors -->
+    <string name="contributors">Участники</string>
+    <string name="translation">Перевод</string>
+    <string name="development">Разработка</string>
+    <string name="other_help">Другая помощь</string>
+    <string name="contributors_label">В данном списке перечислены все, кто заметно помог любому приложению из набора Simple Mobile Tools, а не только этому. Переводы осуществляются добровольцами,
+        дайте знать, если тоже хотите помочь. Руководство по переводу размещено здесь: https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file; также можно связаться с нами по адресу hello@simplemobiletools.com, если будут вопросы.
+        Спасибо всем участникам и другим помощникам!</string>
+    <string name="translation_arabic">Арабский</string>
+    <string name="translation_azerbaijani">Азербайджанский</string>
+    <string name="translation_bengali">Бенгальский</string>
+    <string name="translation_breton">Бретонский</string>
+    <string name="translation_catalan">Каталанский</string>
+    <string name="translation_czech">Чешский</string>
+    <string name="translation_welsh">Валлийский</string>
+    <string name="translation_danish">Датский</string>
+    <string name="translation_german">Немецкий</string>
+    <string name="translation_greek">Греческий</string>
+    <string name="translation_spanish">Испанский</string>
+    <string name="translation_basque">Баскский</string>
+    <string name="translation_persian">Персидский</string>
+    <string name="translation_finnish">Финский</string>
+    <string name="translation_french">Французкий</string>
+    <string name="translation_galician">Галицкий</string>
+    <string name="translation_hindi">Хинди</string>
+    <string name="translation_croatian">Хорватский</string>
+    <string name="translation_hungarian">Венгерский</string>
+    <string name="translation_indonesian">Индонезийский</string>
+    <string name="translation_italian">Итальянский</string>
+    <string name="translation_hebrew">Иврит</string>
+    <string name="translation_japanese">Японский</string>
+    <string name="translation_korean">Корейский</string>
+    <string name="translation_lithuanian">Литовский</string>
+    <string name="translation_nepali">Непальский</string>
+    <string name="translation_norwegian">Норвежский</string>
+    <string name="translation_dutch">Голландский</string>
+    <string name="translation_polish">Польский</string>
+    <string name="translation_portuguese">Португальский</string>
+    <string name="translation_romanian">Румынский</string>
+    <string name="translation_russian">Русский</string>
+    <string name="translation_slovak">Словацкий</string>
+    <string name="translation_slovenian">Словенский</string>
+    <string name="translation_serbian">Сербский</string>
+    <string name="translation_swedish">Шведский</string>
+    <string name="translation_tamil">Тамильский</string>
+    <string name="translation_turkish">Турецкий</string>
+    <string name="translation_ukrainian">Украинский</string>
+    <string name="translation_vietnamese">Вьетнамский</string>
+    <string name="translation_chinese">Китайский</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Получите Pro-версию прямо сейчас!</string>

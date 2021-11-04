@@ -86,6 +86,10 @@
 
     </RadioGroup>
 
+    <include
+        android:id="@+id/sorting_dialog_order_divider"
+        layout="@layout/divider" />
+
     <com.simplemobiletools.commons.views.MyAppCompatCheckbox
         android:id="@+id/change_date_time_dialog_24_hour"
         android:layout_width="match_parent"

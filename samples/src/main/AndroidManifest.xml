@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.simplemobiletools.commons.samples">
+    package="com.simplemobiletools.commons.samples">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".App"
@@ -15,19 +15,13 @@
 
         <activity android:name=".activities.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity
-            android:name="com.simplemobiletools.commons.activities.FAQActivity"/>
-        <activity
-            android:name="com.simplemobiletools.commons.activities.AboutActivity"/>
-        <activity
-            android:name="com.simplemobiletools.commons.activities.LicenseActivity"/>
-        <activity
-            android:name="com.simplemobiletools.commons.activities.CustomizationActivity"/>
+        <activity android:name="com.simplemobiletools.commons.activities.AboutActivity" />
+        <activity android:name="com.simplemobiletools.commons.activities.CustomizationActivity" />
     </application>
 </manifest>

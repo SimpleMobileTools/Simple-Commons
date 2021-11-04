@@ -39,10 +39,10 @@ class AboutActivity : BaseSimpleActivity() {
         setupWebsite()
         setupEmail()
         setupFAQ()
-        setupUpgradeToPro()
         setupMoreApps()
         setupRateUs()
         setupInvite()
+        setupContributors()
         setupLicense()
         setupFacebook()
         setupReddit()
@@ -102,16 +102,6 @@ class AboutActivity : BaseSimpleActivity() {
         about_faq.underlineText()
     }
 
-    private fun setupUpgradeToPro() {
-        about_upgrade_to_pro.beVisibleIf(getCanAppBeUpgraded())
-        about_upgrade_to_pro.setOnClickListener {
-            launchUpgradeToProIntent()
-        }
-
-        about_upgrade_to_pro.setTextColor(linkColor)
-        about_upgrade_to_pro.underlineText()
-    }
-
     private fun openFAQ(faqItems: ArrayList<FAQItem>) {
         Intent(applicationContext, FAQActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIDs())
@@ -140,6 +130,15 @@ class AboutActivity : BaseSimpleActivity() {
             }
         }
         about_invite.setTextColor(linkColor)
+    }
+
+    private fun setupContributors() {
+        about_contributors.setTextColor(linkColor)
+        about_contributors.underlineText()
+        about_contributors.setOnClickListener {
+            val intent = Intent(applicationContext, ContributorsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setupRateUs() {

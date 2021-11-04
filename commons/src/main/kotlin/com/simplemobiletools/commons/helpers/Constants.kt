@@ -106,6 +106,7 @@ const val USE_ENGLISH = "use_english"
 const val WAS_USE_ENGLISH_TOGGLED = "was_use_english_toggled"
 const val WAS_SHARED_THEME_EVER_ACTIVATED = "was_shared_theme_ever_activated"
 const val IS_USING_SHARED_THEME = "is_using_shared_theme"
+const val IS_USING_AUTO_THEME = "is_using_auto_theme"
 const val SHOULD_USE_SHARED_THEME = "should_use_shared_theme"
 const val WAS_SHARED_THEME_FORCED = "was_shared_theme_forced"
 const val WAS_CUSTOM_THEME_SWITCH_DESCRIPTION_SHOWN = "was_custom_theme_switch_description_shown"
@@ -289,6 +290,7 @@ const val TAB_CALL_HISTORY = 4
 const val TAB_GROUPS = 8
 const val TAB_FILES = 16
 const val TAB_RECENT_FILES = 32
+const val TAB_STORAGE_ANALYSIS = 64
 
 val photoExtensions: Array<String> get() = arrayOf(".jpg", ".png", ".jpeg", ".bmp", ".webp", ".heic", ".heif", ".apng")
 val videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".avi", ".3gp", ".mov", ".m4v", ".3gpp")

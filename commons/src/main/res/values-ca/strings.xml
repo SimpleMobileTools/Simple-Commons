@@ -123,9 +123,11 @@
     <string name="copy_failed">No s\'ha pogut copiar els arxius</string>
     <string name="copying">Copiant…</string>
     <string name="copying_success">Arxius copiats correctament</string>
+    <string name="copying_success_one">El fitxer s\'ha copiat correctament</string>
     <string name="copy_move_failed">Ha ocorregut un error</string>
     <string name="moving">Movent…</string>
     <string name="moving_success">Arxius moguts correctament</string>
+    <string name="moving_success_one">El fitxer s\'ha mogut correctament</string>
     <string name="moving_success_partial">Alguns arxius no s\'han pogut moure</string>
     <string name="copying_success_partial">Alguns arxius no s\'han pogut copiar</string>
     <string name="no_files_selected">No hi ha elements seleccionats</string>
@@ -250,6 +252,7 @@
     <!-- Themes -->
     <string name="light_theme">Clar</string>
     <string name="dark_theme">Fosc</string>
+    <string name="auto_theme">Auto</string>
     <string name="solarized">Solaritzat</string>
     <string name="dark_red">Vermell fosc</string>
     <string name="white">Blanc</string>
@@ -792,6 +795,56 @@
          voleu seleccionar tots els elements; només cal que premeu llargament un element i, a continuació, feu clic al comptador d\’elements seleccionats a l\’extrem superior esquerre. Això seleccionarà o anul·larà la selecció de tot.</string>
     <string name="faq_10_title_commons">He comprat l\'aplicació, però no la puc baixar en cap altre dispositiu.</string>
     <string name="faq_10_text_commons">Proveu d\'esborrar la memòria cau de l\'aplicació Google Play i reinicieu el dispositiu. Es tracta d\'un problema de Google Play, que no està realment relacionat amb l\'aplicació en si.</string>
+
+    <!-- Contributors -->
+    <string name="contributors">Contributors</string>
+    <string name="translation">Translation</string>
+    <string name="development">Development</string>
+    <string name="other_help">Other help</string>
+    <string name="contributors_label">This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
+        let us know if you want to help too. The guide to translating is at https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , or just contact us at hello@simplemobiletools.com if you have any questions.
+        Thanks to all contributors and other supporters!</string>
+    <string name="translation_arabic">Arabic</string>
+    <string name="translation_azerbaijani">Azerbaijani</string>
+    <string name="translation_bengali">Bengali</string>
+    <string name="translation_breton">Breton</string>
+    <string name="translation_catalan">Catalan</string>
+    <string name="translation_czech">Czech</string>
+    <string name="translation_welsh">Welsh</string>
+    <string name="translation_danish">Danish</string>
+    <string name="translation_german">German</string>
+    <string name="translation_greek">Greek</string>
+    <string name="translation_spanish">Spanish</string>
+    <string name="translation_basque">Basque</string>
+    <string name="translation_persian">Persian</string>
+    <string name="translation_finnish">Finnish</string>
+    <string name="translation_french">French</string>
+    <string name="translation_galician">Galician</string>
+    <string name="translation_hindi">Hindi</string>
+    <string name="translation_croatian">Croatian</string>
+    <string name="translation_hungarian">Hungarian</string>
+    <string name="translation_indonesian">Indonesian</string>
+    <string name="translation_italian">Italian</string>
+    <string name="translation_hebrew">Hebrew</string>
+    <string name="translation_japanese">Japanese</string>
+    <string name="translation_korean">Korean</string>
+    <string name="translation_lithuanian">Lithuanian</string>
+    <string name="translation_nepali">Nepali</string>
+    <string name="translation_norwegian">Norwegian</string>
+    <string name="translation_dutch">Dutch</string>
+    <string name="translation_polish">Polish</string>
+    <string name="translation_portuguese">Portuguese</string>
+    <string name="translation_romanian">Romanian</string>
+    <string name="translation_russian">Russian</string>
+    <string name="translation_slovak">Slovak</string>
+    <string name="translation_slovenian">Slovenian</string>
+    <string name="translation_serbian">Serbian</string>
+    <string name="translation_swedish">Swedish</string>
+    <string name="translation_tamil">Tamil</string>
+    <string name="translation_turkish">Turkish</string>
+    <string name="translation_ukrainian">Ukrainian</string>
+    <string name="translation_vietnamese">Vietnamese</string>
+    <string name="translation_chinese">Chinese</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Obteniu la versió Pro ara mateix.</string>

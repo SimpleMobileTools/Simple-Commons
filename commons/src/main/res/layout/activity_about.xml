@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/about_scrollview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,7 +18,7 @@
             android:autoLink="web"
             android:text="@string/my_website"
             android:textColorLink="@color/color_primary"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_email"
@@ -27,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/about_website"
             android:text="@string/my_email"
-            android:textColorLink="@color/color_primary"/>
+            android:textColorLink="@color/color_primary" />
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_faq_label"
@@ -35,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/about_email"
             android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/before_asking_question"/>
+            android:text="@string/before_asking_question" />
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_faq"
@@ -44,27 +43,17 @@
             android:layout_below="@+id/about_faq_label"
             android:paddingBottom="@dimen/activity_margin"
             android:text="@string/frequently_asked_questions"
-            android:textColor="@color/color_primary"/>
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/about_upgrade_to_pro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/about_faq"
-            android:paddingTop="@dimen/activity_margin"
-            android:paddingBottom="@dimen/activity_margin"
-            android:text="@string/upgrade_to_pro"
-            android:textColor="@color/color_primary"/>
+            android:textColor="@color/color_primary" />
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_more_apps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/about_upgrade_to_pro"
+            android:layout_below="@+id/about_faq"
             android:paddingTop="@dimen/activity_margin"
             android:paddingBottom="@dimen/activity_margin"
             android:text="@string/more_apps_from_us_underlined"
-            android:textColor="@color/color_primary"/>
+            android:textColor="@color/color_primary" />
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_invite"
@@ -74,7 +63,7 @@
             android:paddingTop="@dimen/activity_margin"
             android:paddingBottom="@dimen/activity_margin"
             android:text="@string/invite_friends_underlined"
-            android:textColor="@color/color_primary"/>
+            android:textColor="@color/color_primary" />
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_rate_us"
@@ -84,17 +73,27 @@
             android:paddingTop="@dimen/activity_margin"
             android:paddingBottom="@dimen/activity_margin"
             android:text="@string/rate_us_underlined"
-            android:textColor="@color/color_primary"/>
+            android:textColor="@color/color_primary" />
 
         <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/about_license"
+            android:id="@+id/about_contributors"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/about_rate_us"
             android:paddingTop="@dimen/activity_margin"
             android:paddingBottom="@dimen/activity_margin"
+            android:text="@string/contributors"
+            android:textColor="@color/color_primary" />
+
+        <com.simplemobiletools.commons.views.MyTextView
+            android:id="@+id/about_license"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/about_contributors"
+            android:paddingTop="@dimen/activity_margin"
+            android:paddingBottom="@dimen/activity_margin"
             android:text="@string/third_party_licences_underlined"
-            android:textColor="@color/color_primary"/>
+            android:textColor="@color/color_primary" />
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_follow_us"
@@ -103,14 +102,14 @@
             android:layout_below="@+id/about_license"
             android:paddingTop="@dimen/activity_margin"
             android:paddingBottom="@dimen/medium_margin"
-            android:text="@string/follow_us"/>
+            android:text="@string/follow_us" />
 
         <ImageView
             android:id="@+id/about_facebook"
             android:layout_width="@dimen/social_logo"
             android:layout_height="@dimen/social_logo"
             android:layout_below="@+id/about_follow_us"
-            android:src="@drawable/ic_facebook_vector"/>
+            android:src="@drawable/ic_facebook_vector" />
 
         <ImageView
             android:id="@+id/about_reddit"
@@ -120,7 +119,7 @@
             android:layout_marginLeft="@dimen/medium_margin"
             android:layout_marginRight="@dimen/medium_margin"
             android:layout_toEndOf="@+id/about_facebook"
-            android:src="@drawable/ic_reddit_vector"/>
+            android:src="@drawable/ic_reddit_vector" />
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/about_copyright"
@@ -130,7 +129,7 @@
             android:layout_alignParentBottom="true"
             android:gravity="center_horizontal|bottom"
             android:paddingTop="@dimen/activity_margin"
-            android:text="v1.0\nCopyright © Simple Mobile Tools 2017"/>
+            android:text="v1.0\nCopyright © Simple Mobile Tools 2017" />
 
     </RelativeLayout>
 </ScrollView>

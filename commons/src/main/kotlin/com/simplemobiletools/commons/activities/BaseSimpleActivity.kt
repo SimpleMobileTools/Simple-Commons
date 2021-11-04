@@ -14,6 +14,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.DocumentsContract
+import android.provider.MediaStore
 import android.provider.Settings
 import android.telecom.TelecomManager
 import android.util.Log
@@ -52,9 +53,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     var configItemsToExport = LinkedHashMap<String, Any>()
 
     private val GENERIC_PERM_HANDLER = 100
+    private val DELETE_FILE_SDK_30_HANDLER = 300
 
     companion object {
         var funAfterSAFPermission: ((success: Boolean) -> Unit)? = null
+        var funAfterDelete30File: ((success: Boolean) -> Unit)? = null
         private const val TAG = "BaseSimpleActivity"
     }
 
@@ -297,6 +300,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         } else if (requestCode == SELECT_EXPORT_SETTINGS_FILE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
             val outputStream = contentResolver.openOutputStream(resultData.data!!)
             exportSettingsTo(outputStream, configItemsToExport)
+        } else if (requestCode == DELETE_FILE_SDK_30_HANDLER) {
+            funAfterDelete30File?.invoke(resultCode == Activity.RESULT_OK)
         }
     }
 
@@ -430,6 +435,21 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("NewApi")
+    fun deleteSDK30Uris(uris: List<Uri>, callback: (success: Boolean) -> Unit) {
+        if (isRPlus()) {
+            funAfterDelete30File = callback
+            try {
+                val deleteRequest = MediaStore.createDeleteRequest(contentResolver, uris).intentSender
+                startIntentSenderForResult(deleteRequest, DELETE_FILE_SDK_30_HANDLER, null, 0, 0, 0)
+            } catch (e: Exception) {
+                showErrorToast(e)
+            }
+        } else {
+            callback(false)
+        }
+    }
+
     fun copyMoveFilesTo(
         fileDirItems: ArrayList<FileDirItem>, source: String, destination: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean,
         copyHidden: Boolean, callback: (destinationPath: String) -> Unit
@@ -494,9 +514,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
                                 runOnUiThread {
                                     if (updatedPaths.isEmpty()) {
-                                        copyMoveListener.copySucceeded(false, fileCountToCopy == 0, destination)
+                                        copyMoveListener.copySucceeded(false, fileCountToCopy == 0, destination, false)
                                     } else {
-                                        copyMoveListener.copySucceeded(false, fileCountToCopy <= updatedPaths.size, destination)
+                                        copyMoveListener.copySucceeded(false, fileCountToCopy <= updatedPaths.size, destination, updatedPaths.size == 1)
                                     }
                                 }
                             }
@@ -588,11 +608,31 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     val copyMoveListener = object : CopyMoveListener {
-        override fun copySucceeded(copyOnly: Boolean, copiedAll: Boolean, destinationPath: String) {
+        override fun copySucceeded(copyOnly: Boolean, copiedAll: Boolean, destinationPath: String, wasCopyingOneFileOnly: Boolean) {
             if (copyOnly) {
-                toast(if (copiedAll) R.string.copying_success else R.string.copying_success_partial)
+                toast(
+                    if (copiedAll) {
+                        if (wasCopyingOneFileOnly) {
+                            R.string.copying_success_one
+                        } else {
+                            R.string.copying_success
+                        }
+                    } else {
+                        R.string.copying_success_partial
+                    }
+                )
             } else {
-                toast(if (copiedAll) R.string.moving_success else R.string.moving_success_partial)
+                toast(
+                    if (copiedAll) {
+                        if (wasCopyingOneFileOnly) {
+                            R.string.moving_success_one
+                        } else {
+                            R.string.moving_success
+                        }
+                    } else {
+                        R.string.moving_success_partial
+                    }
+                )
             }
 
             copyMoveCallback?.invoke(destinationPath)
