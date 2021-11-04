@@ -16,8 +16,10 @@ import kotlinx.android.synthetic.main.dialog_message.view.*
  * @param negative negative buttons text ID (optional)
  * @param callback an anonymous function
  */
-class ConfirmationDialog(activity: Activity, message: String = "", messageId: Int = R.string.proceed_with_deletion, positive: Int = R.string.yes,
-                         negative: Int = R.string.no, val callback: () -> Unit) {
+class ConfirmationDialog(
+    activity: Activity, message: String = "", messageId: Int = R.string.proceed_with_deletion, positive: Int = R.string.yes,
+    negative: Int = R.string.no, val cancelOnTouchOutside: Boolean = true, val callback: () -> Unit
+) {
     var dialog: AlertDialog
 
     init {
@@ -25,13 +27,13 @@ class ConfirmationDialog(activity: Activity, message: String = "", messageId: In
         view.message.text = if (message.isEmpty()) activity.resources.getString(messageId) else message
 
         val builder = AlertDialog.Builder(activity)
-                .setPositiveButton(positive) { dialog, which -> dialogConfirmed() }
+            .setPositiveButton(positive) { dialog, which -> dialogConfirmed() }
 
         if (negative != 0)
             builder.setNegativeButton(negative, null)
 
         dialog = builder.create().apply {
-            activity.setupDialogStuff(view, this)
+            activity.setupDialogStuff(view, this, cancelOnTouchOutside = cancelOnTouchOutside)
         }
     }
 

@@ -104,6 +104,8 @@
     <string name="pattern_renaming">Pattern</string>
     <string name="string_to_add">String to add</string>
     <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second\n%i - number increasing from 1</string>
+    <string name="filename_without_txt">Filename (without .txt)</string>
+    <string name="filename_without_json">Filename (without .json)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopier</string>

@@ -104,6 +104,8 @@
     <string name="pattern_renaming">Modelo</string>
     <string name="string_to_add">Cadena para agregar</string>
     <string name="rename_date_time_pattern">%Y - Año\n%M - Mes\n%D - Día\n%h - Hora\n%m - Minuto\n%s - Segundo\n%i - número aumentando desde 1</string>
+    <string name="filename_without_txt">Filename (without .txt)</string>
+    <string name="filename_without_json">Filename (without .json)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>

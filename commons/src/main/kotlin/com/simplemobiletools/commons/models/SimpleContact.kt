@@ -44,4 +44,24 @@ data class SimpleContact(val rawId: Int, val contactId: Int, var name: String, v
             false
         }
     }
+
+    fun doesHavePhoneNumber(text: String): Boolean {
+        return if (text.isNotEmpty()) {
+            val normalizedText = text.normalizePhoneNumber()
+            if (normalizedText.isEmpty()) {
+                phoneNumbers.any { phoneNumber ->
+                    phoneNumber == text
+                }
+            } else {
+                phoneNumbers.any { phoneNumber ->
+                    PhoneNumberUtils.compare(phoneNumber.normalizePhoneNumber(), normalizedText) ||
+                        phoneNumber == text ||
+                        phoneNumber.normalizePhoneNumber() == normalizedText ||
+                        phoneNumber == normalizedText
+                }
+            }
+        } else {
+            false
+        }
+    }
 }

@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.dialogs
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
@@ -18,9 +19,11 @@ import com.simplemobiletools.commons.views.MyCompatRadioButton
 import kotlinx.android.synthetic.main.dialog_select_alarm_sound.view.*
 import java.util.*
 
-class SelectAlarmSoundDialog(val activity: BaseSimpleActivity, val currentUri: String, val audioStream: Int, val pickAudioIntentId: Int,
-                             val type: Int, val loopAudio: Boolean, val onAlarmPicked: (alarmSound: AlarmSound?) -> Unit,
-                             val onAlarmSoundDeleted: (alarmSound: AlarmSound) -> Unit) {
+class SelectAlarmSoundDialog(
+    val activity: BaseSimpleActivity, val currentUri: String, val audioStream: Int, val pickAudioIntentId: Int,
+    val type: Int, val loopAudio: Boolean, val onAlarmPicked: (alarmSound: AlarmSound?) -> Unit,
+    val onAlarmSoundDeleted: (alarmSound: AlarmSound) -> Unit
+) {
     private val ADD_NEW_SOUND_ID = -2
 
     private val view = activity.layoutInflater.inflate(R.layout.dialog_select_alarm_sound, null)
@@ -42,13 +45,13 @@ class SelectAlarmSoundDialog(val activity: BaseSimpleActivity, val currentUri: S
         addYourAlarms()
 
         dialog = AlertDialog.Builder(activity)
-                .setOnDismissListener { mediaPlayer?.stop() }
-                .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
-                .setNegativeButton(R.string.cancel, null)
-                .create().apply {
-                    activity.setupDialogStuff(view, this)
-                    window?.volumeControlStream = audioStream
-                }
+            .setOnDismissListener { mediaPlayer?.stop() }
+            .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
+            .setNegativeButton(R.string.cancel, null)
+            .create().apply {
+                activity.setupDialogStuff(view, this)
+                window?.volumeControlStream = audioStream
+            }
     }
 
     private fun addYourAlarms() {
@@ -103,10 +106,15 @@ class SelectAlarmSoundDialog(val activity: BaseSimpleActivity, val currentUri: S
             alarmSound.uri == SILENT -> mediaPlayer?.stop()
             alarmSound.id == ADD_NEW_SOUND_ID -> {
                 val action = Intent.ACTION_OPEN_DOCUMENT
-                Intent(action).apply {
+                val intent = Intent(action).apply {
                     type = "audio/*"
-                    activity.startActivityForResult(this, pickAudioIntentId)
                     flags = flags or Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION
+                }
+
+                try {
+                    activity.startActivityForResult(intent, pickAudioIntentId)
+                } catch (e: ActivityNotFoundException) {
+                    activity.toast(R.string.no_app_found)
                 }
                 dialog.dismiss()
             }
