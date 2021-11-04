@@ -137,8 +137,8 @@
 
             <ImageView
                 android:id="@+id/color_picker_old_color"
-                android:layout_width="@dimen/colorpicker_color_width"
-                android:layout_height="match_parent"
+                android:layout_width="@dimen/colorpicker_items_height"
+                android:layout_height="@dimen/colorpicker_items_height"
                 android:layout_toStartOf="@+id/color_picker_arrow"
                 android:background="@android:color/white" />
 
@@ -154,8 +154,8 @@
 
             <ImageView
                 android:id="@+id/color_picker_new_color"
-                android:layout_width="@dimen/colorpicker_color_width"
-                android:layout_height="match_parent"
+                android:layout_width="@dimen/colorpicker_items_height"
+                android:layout_height="@dimen/colorpicker_items_height"
                 android:layout_toEndOf="@+id/color_picker_arrow"
                 android:background="@android:color/white" />
         </RelativeLayout>
