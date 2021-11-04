@@ -540,7 +540,7 @@
     <!-- Settings -->
     <string name="settings">Ustawienia</string>
     <string name="purchase_simple_thank_you">Kup aplikację „Proste podziękowanie”</string>
-    <string name="general_settings">General</string>
+    <string name="general_settings">Ogólne</string>
     <string name="customize_colors">Dostosuj kolory aplikacji</string>
     <string name="customize_colors_locked">Dostosuj kolory aplikacji (Zablokowane)</string>
     <string name="customize_widget_colors">Dostosuj kolory widżetu</string>
@@ -680,13 +680,13 @@
     <string name="saturday_letter">S</string>
     <string name="sunday_letter">N</string>
 
-    <string name="monday_short">Pon.</string>
-    <string name="tuesday_short">Wt.</string>
-    <string name="wednesday_short">Śr.</string>
-    <string name="thursday_short">Czw.</string>
-    <string name="friday_short">Pt.</string>
-    <string name="saturday_short">Sob.</string>
-    <string name="sunday_short">Ndz.</string>
+    <string name="monday_short">pon.</string>
+    <string name="tuesday_short">wt.</string>
+    <string name="wednesday_short">śr.</string>
+    <string name="thursday_short">czw.</string>
+    <string name="friday_short">pt.</string>
+    <string name="saturday_short">sob.</string>
+    <string name="sunday_short">niedz.</string>
 
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Twoja wersja aplikacji nie będzie już aktualizowana. Uaktualnij do wersji Pro, aby otrzymywać nowe poprawki i inne ulepszenia.</string>
