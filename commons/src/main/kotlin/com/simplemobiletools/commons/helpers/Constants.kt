@@ -11,6 +11,8 @@ import com.simplemobiletools.commons.overloads.times
 import java.util.HashMap
 import java.util.LinkedHashMap
 
+const val EXTERNAL_STORAGE_PROVIDER_AUTHORITY = "com.android.externalstorage.documents"
+
 const val APP_NAME = "app_name"
 const val APP_LICENSES = "app_licenses"
 const val APP_FAQ = "app_faq"
@@ -63,7 +65,9 @@ const val PREFS_KEY = "Prefs"
 const val APP_RUN_COUNT = "app_run_count"
 const val LAST_VERSION = "last_version"
 const val SD_TREE_URI = "tree_uri_2"
-const val PRIMARY_TREE_URI = "primary_tree_uri_2"
+const val PRIMARY_ANDROID_TREE_URI = "primary_android_tree_uri_2"
+const val OTG_ANDROID_TREE_URI = "otg_android_tree_uri_2"
+const val SD_ANDROID_TREE_URI = "sd_android_tree_uri_2"
 const val OTG_TREE_URI = "otg_tree_uri_2"
 const val SD_CARD_PATH = "sd_card_path_2"
 const val OTG_REAL_PATH = "otg_real_path_2"

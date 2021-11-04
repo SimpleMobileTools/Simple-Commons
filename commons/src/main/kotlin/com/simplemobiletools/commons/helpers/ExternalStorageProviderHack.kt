@@ -1,10 +1,12 @@
 package com.simplemobiletools.commons.helpers
 
+import android.content.Context
 import android.database.Cursor
 import android.database.MatrixCursor
 import android.database.MergeCursor
 import android.net.Uri
 import android.provider.DocumentsContract
+import com.simplemobiletools.commons.extensions.getStorageRootId
 import com.simplemobiletools.commons.extensions.getStringValue
 
 // On Android 11, ExternalStorageProvider no longer returns Android/data and Android/obb as children
@@ -12,14 +14,8 @@ import com.simplemobiletools.commons.extensions.getStringValue
 // still accessible.
 // https://github.com/zhanghai/MaterialFiles/blob/master/app/src/main/java/me/zhanghai/android/files/provider/document/resolver/ExternalStorageProviderPrimaryAndroidDataHack.kt
 object ExternalStorageProviderHack {
-    private const val EXTERNAL_STORAGE_PROVIDER_AUTHORITY = "com.android.externalstorage.documents"
-    private const val EXTERNAL_STORAGE_PROVIDER_PRIMARY_ANDROID_DOCUMENT_ID = "primary:Android"
-    private const val EXTERNAL_STORAGE_PROVIDER_PRIMARY_ANDROID_DATA_DOCUMENT_ID =
-        "primary:Android/data"
-    private const val EXTERNAL_STORAGE_PROVIDER_PRIMARY_ANDROID_DATA_DISPLAY_NAME = "data"
-    private const val EXTERNAL_STORAGE_PROVIDER_PRIMARY_ANDROID_OBB_DOCUMENT_ID =
-        "primary:Android/obb"
-    private const val EXTERNAL_STORAGE_PROVIDER_PRIMARY_ANDROID_OBB_DISPLAY_NAME = "obb"
+    private const val ANDROID_DATA_DISPLAY_NAME = "data"
+    private const val ANDROID_OBB_DISPLAY_NAME = "obb"
 
     private val CHILD_DOCUMENTS_CURSOR_COLUMN_NAMES = arrayOf(
         DocumentsContract.Document.COLUMN_DOCUMENT_ID,
@@ -29,17 +25,29 @@ object ExternalStorageProviderHack {
         DocumentsContract.Document.COLUMN_SIZE,
     )
 
-    fun transformQueryResult(uri: Uri, cursor: Cursor): Cursor {
+    private fun getAndroidDocumentId(rootDocId:String): String {
+        return "$rootDocId:Android"
+    }
+
+    private fun getAndroidDataDocumentId(rootDocId:String): String {
+        return "${getAndroidDocumentId(rootDocId)}/data"
+    }
+
+    private fun getAndroidObbDocumentId(rootDocId:String): String {
+        return "${getAndroidDocumentId(rootDocId)}/obb"
+    }
+
+    fun transformQueryResult(rootDocId:String, uri: Uri, cursor: Cursor): Cursor {
         val documentId = DocumentsContract.getDocumentId(uri)
-        if (uri.authority == EXTERNAL_STORAGE_PROVIDER_AUTHORITY && documentId == EXTERNAL_STORAGE_PROVIDER_PRIMARY_ANDROID_DOCUMENT_ID) {
+        if (uri.authority == EXTERNAL_STORAGE_PROVIDER_AUTHORITY && documentId == getAndroidDocumentId(rootDocId)) {
             var hasDataRow = false
             var hasObbRow = false
             try {
                 while (cursor.moveToNext()) {
                     when (cursor.getStringValue(DocumentsContract.Document.COLUMN_DOCUMENT_ID)) {
-                        EXTERNAL_STORAGE_PROVIDER_PRIMARY_ANDROID_DATA_DOCUMENT_ID ->
+                        getAndroidDataDocumentId(rootDocId) ->
                             hasDataRow = true
-                        EXTERNAL_STORAGE_PROVIDER_PRIMARY_ANDROID_OBB_DOCUMENT_ID ->
+                        getAndroidObbDocumentId(rootDocId) ->
                             hasObbRow = true
                     }
                     if (hasDataRow && hasObbRow) {
@@ -54,14 +62,14 @@ object ExternalStorageProviderHack {
             }
             val extraCursor = MatrixCursor(CHILD_DOCUMENTS_CURSOR_COLUMN_NAMES)
             if (!hasDataRow) {
-                extraCursor.newRow()                                                                                                                                                                                                                                                                                                                          
+                extraCursor.newRow()
                     .add(
                         DocumentsContract.Document.COLUMN_DOCUMENT_ID,
-                        EXTERNAL_STORAGE_PROVIDER_PRIMARY_ANDROID_DATA_DOCUMENT_ID
+                        getAndroidDataDocumentId(rootDocId)
                     )
                     .add(
                         DocumentsContract.Document.COLUMN_DISPLAY_NAME,
-                        EXTERNAL_STORAGE_PROVIDER_PRIMARY_ANDROID_DATA_DISPLAY_NAME
+                        ANDROID_DATA_DISPLAY_NAME
                     )
                     .add(
                         DocumentsContract.Document.COLUMN_MIME_TYPE,
@@ -69,7 +77,7 @@ object ExternalStorageProviderHack {
                     )
                     .add(
                         DocumentsContract.Document.COLUMN_LAST_MODIFIED,
-                       System.currentTimeMillis()
+                        System.currentTimeMillis()
                     )
                     .add(
                         DocumentsContract.Document.COLUMN_SIZE,
@@ -80,11 +88,11 @@ object ExternalStorageProviderHack {
                 extraCursor.newRow()
                     .add(
                         DocumentsContract.Document.COLUMN_DOCUMENT_ID,
-                        EXTERNAL_STORAGE_PROVIDER_PRIMARY_ANDROID_OBB_DOCUMENT_ID
+                        getAndroidObbDocumentId(rootDocId)
                     )
                     .add(
                         DocumentsContract.Document.COLUMN_DISPLAY_NAME,
-                        EXTERNAL_STORAGE_PROVIDER_PRIMARY_ANDROID_OBB_DISPLAY_NAME
+                        ANDROID_OBB_DISPLAY_NAME
                     )
                     .add(
                         DocumentsContract.Document.COLUMN_MIME_TYPE,

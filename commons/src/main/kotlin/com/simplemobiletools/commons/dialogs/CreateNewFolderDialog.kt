@@ -42,6 +42,7 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
     private fun createFolder(path: String, alertDialog: AlertDialog) {
         try {
             when {
+                activity.isRestrictedAndroidDir(path) && activity.createSAFOnlyDirectory(path) -> sendSuccess(alertDialog, path)
                 activity.needsStupidWritePermissions(path) -> activity.handleSAFDialog(path) {
                     if (it) {
                         try {
@@ -57,11 +58,11 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                         }
                     }
                 }
-                activity.isRestrictedAndroidDir(path) && activity.createSAFOnlyDirectory(path) -> sendSuccess(alertDialog, path)
                 File(path).mkdirs() -> sendSuccess(alertDialog, path)
                 else -> activity.toast(R.string.unknown_error_occurred)
             }
         } catch (e: Exception) {
+            e.printStackTrace()
             activity.showErrorToast(e)
         }
     }

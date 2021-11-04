@@ -224,14 +224,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
         if (requestCode == OPEN_DOCUMENT_TREE_PRIMARY) {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-                if (isProperInternalAndroidRoot(resultData.data!!)) {
+                if (isProperAndroidRoot(checkedDocumentPath, resultData.data!!)) {
                     if (resultData.dataString == baseConfig.OTGTreeUri || resultData.dataString == baseConfig.sdTreeUri) {
                         toast("Select internal storage")
                         return
                     }
 
                     val treeUri = resultData.data
-                    baseConfig.primaryAndroidTreeUri = treeUri.toString()
+                    storeAndroidTreeUri(checkedDocumentPath, treeUri.toString())
 
                     val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
                     applicationContext.contentResolver.takePersistableUriPermission(treeUri!!, takeFlags)
@@ -248,8 +248,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             }
         } else if (requestCode == OPEN_DOCUMENT_TREE_SD) {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-                val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
-                if (isProperSDFolder(resultData.data!!) && isProperPartition) {
+                val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition)
+                    .matches() && resultData.dataString!!.contains(partition))
+                if (isProperSDRootFolder(resultData.data!!) && isProperPartition) {
                     if (resultData.dataString == baseConfig.OTGTreeUri) {
                         toast(R.string.sd_card_usb_same)
                         return
@@ -268,8 +269,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             }
         } else if (requestCode == OPEN_DOCUMENT_TREE_OTG) {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-                val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition).matches() && resultData.dataString!!.contains(partition))
-                if (isProperOTGFolder(resultData.data!!) && isProperPartition) {
+                val isProperPartition = partition.isEmpty() || !sdOtgPattern.matcher(partition).matches() || (sdOtgPattern.matcher(partition)
+                    .matches() && resultData.dataString!!.contains(partition))
+                if (isProperOTGRootFolder(resultData.data!!) && isProperPartition) {
                     if (resultData.dataString == baseConfig.sdTreeUri) {
                         funAfterSAFPermission?.invoke(false)
                         toast(R.string.sd_card_usb_same)
@@ -306,20 +308,28 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         applicationContext.contentResolver.takePersistableUriPermission(treeUri!!, takeFlags)
     }
 
-    private fun isProperSDFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
+    private fun isProperSDRootFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
+    private fun isProperSDFolder(uri: Uri) = isExternalStorageDocument(uri)  && !isInternalStorage(uri)
 
-    private fun isProperOTGFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
-
-    @SuppressLint("NewApi")
-    private fun isProperInternalRoot(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && isInternalStorage(uri)
-    private fun isProperInternalAndroidRoot(uri: Uri) = isExternalStorageDocument(uri) && isInternalStorageAndroidDir(uri)
+    private fun isProperOTGRootFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
+    private fun isProperOTGFolder(uri: Uri) = isExternalStorageDocument(uri) && !isInternalStorage(uri)
 
     private fun isRootUri(uri: Uri) = uri.lastPathSegment?.endsWith(":") ?: false
 
     private fun isInternalStorage(uri: Uri) = isExternalStorageDocument(uri) && DocumentsContract.getTreeDocumentId(uri).contains("primary")
-    private fun isInternalStorageAndroidDir(uri: Uri) = isExternalStorageDocument(uri) && DocumentsContract.getTreeDocumentId(uri).contains("primary:Android")
+    private fun isAndroidDir(uri: Uri) = isExternalStorageDocument(uri) && DocumentsContract.getTreeDocumentId(uri).contains(":Android")
+    private fun isInternalStorageAndroidDir(uri: Uri) = isInternalStorage(uri) && isAndroidDir(uri)
+    private fun isOTGAndroidDir(uri: Uri) = isProperOTGFolder(uri) && isAndroidDir(uri)
+    private fun isSDAndroidDir(uri: Uri) = isProperSDFolder(uri) && isAndroidDir(uri)
+    private fun isExternalStorageDocument(uri: Uri) = EXTERNAL_STORAGE_PROVIDER_AUTHORITY == uri.authority
 
-    private fun isExternalStorageDocument(uri: Uri) = "com.android.externalstorage.documents" == uri.authority
+    private fun isProperAndroidRoot(path: String, uri: Uri): Boolean {
+        return when {
+            isPathOnOTG(path) -> isOTGAndroidDir(uri)
+            isPathOnSD(path) -> isSDAndroidDir(uri)
+            else -> isInternalStorageAndroidDir(uri)
+        }
+    }
 
     fun startAboutActivity(appNameId: Int, licenseMask: Int, versionName: String, faqItems: ArrayList<FAQItem>, showFAQBeforeMail: Boolean) {
         Intent(applicationContext, AboutActivity::class.java).apply {
@@ -420,8 +430,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun copyMoveFilesTo(fileDirItems: ArrayList<FileDirItem>, source: String, destination: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean,
-                        copyHidden: Boolean, callback: (destinationPath: String) -> Unit) {
+    fun copyMoveFilesTo(
+        fileDirItems: ArrayList<FileDirItem>, source: String, destination: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean,
+        copyHidden: Boolean, callback: (destinationPath: String) -> Unit
+    ) {
         if (source == destination) {
             toast(R.string.source_and_destination_same)
             return
@@ -443,7 +455,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             if (isCopyOperation) {
                 startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
             } else {
-                if (isPathOnOTG(source) || isPathOnOTG(destination) || isPathOnSD(source) || isPathOnSD(destination) || isRestrictedAndroidDir(source) || isRestrictedAndroidDir(destination) || fileDirItems.first().isDirectory) {
+                if (isPathOnOTG(source) || isPathOnOTG(destination) || isPathOnSD(source) || isPathOnSD(destination) || isRestrictedAndroidDir(source) || isRestrictedAndroidDir(
+                        destination
+                    ) || fileDirItems.first().isDirectory
+                ) {
                     handleSAFDialog(source) {
                         if (it) {
                             startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
@@ -505,7 +520,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         return newFile
     }
 
-    private fun startCopyMove(files: ArrayList<FileDirItem>, destinationPath: String, isCopyOperation: Boolean, copyPhotoVideoOnly: Boolean, copyHidden: Boolean) {
+    private fun startCopyMove(
+        files: ArrayList<FileDirItem>,
+        destinationPath: String,
+        isCopyOperation: Boolean,
+        copyPhotoVideoOnly: Boolean,
+        copyHidden: Boolean
+    ) {
         val availableSpace = destinationPath.getAvailableStorageB()
         val sumToCopy = files.sumByLong { it.getProperSize(applicationContext, copyHidden) }
         if (availableSpace == -1L || sumToCopy < availableSpace) {
@@ -520,8 +541,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun checkConflicts(files: ArrayList<FileDirItem>, destinationPath: String, index: Int, conflictResolutions: LinkedHashMap<String, Int>,
-                       callback: (resolutions: LinkedHashMap<String, Int>) -> Unit) {
+    fun checkConflicts(
+        files: ArrayList<FileDirItem>, destinationPath: String, index: Int, conflictResolutions: LinkedHashMap<String, Int>,
+        callback: (resolutions: LinkedHashMap<String, Int>) -> Unit
+    ) {
         if (index == files.size) {
             callback(conflictResolutions)
             return

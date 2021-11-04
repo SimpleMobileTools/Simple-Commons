@@ -43,7 +43,6 @@ import java.io.OutputStream
 import java.util.*
 import kotlin.collections.HashMap
 import kotlinx.android.synthetic.main.dialog_title.view.*
-import org.w3c.dom.Document
 
 fun AppCompatActivity.updateActionBarTitle(text: String, color: Int = baseConfig.primaryColor) {
     supportActionBar?.title = Html.fromHtml("<font color='${color.getContrastColor().toHex()}'>$text</font>")
@@ -118,7 +117,7 @@ fun Activity.isAppInstalledOnSDCard(): Boolean = try {
 }
 
 fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
-    return if ((isPathOnSD(path) && !isSDCardSetAsDefaultStorage() && (baseConfig.sdTreeUri.isEmpty() || !hasProperStoredTreeUri(false)))) {
+    return if ((!isRPlus() && isPathOnSD(path) && !isSDCardSetAsDefaultStorage() && (baseConfig.sdTreeUri.isEmpty() || !hasProperStoredTreeUri(false)))) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
                 WritePermissionDialog(this, false) {
@@ -149,7 +148,7 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
 }
 
 fun BaseSimpleActivity.isShowingSAFPrimaryDialog(path: String): Boolean {
-    return if (isRPlus() && isSAFOnlyRoot(path) && (baseConfig.primaryAndroidTreeUri.isEmpty() || !hasProperStoredPrimaryTreeUri())) {
+    return if (isRestrictedAndroidDir(path) && (getAndroidTreeUri(path).isEmpty() || !hasProperStoredAndroidDirTreeUri(path))) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
                 WritePermissionDialog(this, false) {
@@ -180,7 +179,7 @@ fun BaseSimpleActivity.isShowingSAFPrimaryDialog(path: String): Boolean {
 }
 
 fun BaseSimpleActivity.isShowingOTGDialog(path: String): Boolean {
-    return if (isPathOnOTG(path) && (baseConfig.OTGTreeUri.isEmpty() || !hasProperStoredTreeUri(true))) {
+    return if (!isRPlus() && isPathOnOTG(path) && (baseConfig.OTGTreeUri.isEmpty() || !hasProperStoredTreeUri(true))) {
         showOTGPermissionDialog(path)
         true
     } else {
