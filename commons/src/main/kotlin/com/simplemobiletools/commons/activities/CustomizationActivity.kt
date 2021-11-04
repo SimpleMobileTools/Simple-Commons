@@ -406,6 +406,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_background_color.setFillWithStroke(curBackgroundColor, curBackgroundColor)
         customization_app_icon_color.setFillWithStroke(curAppIconColor, curBackgroundColor)
         customization_navigation_bar_color.setFillWithStroke(curNavigationBarColor, curBackgroundColor)
+        apply_to_all.setTextColor(baseConfig.primaryColor.getContrastColor())
 
         customization_text_color_holder.setOnClickListener { pickTextColor() }
         customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
@@ -414,7 +415,10 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         handleAccentColorLayout()
         customization_navigation_bar_color_holder.setOnClickListener { pickNavigationBarColor() }
-        apply_to_all_holder.setOnClickListener { applyToAll() }
+        apply_to_all.setOnClickListener {
+            applyToAll()
+        }
+
         customization_app_icon_color_holder.setOnClickListener {
             if (baseConfig.wasAppIconCustomizationWarningShown) {
                 pickAppIconColor()
