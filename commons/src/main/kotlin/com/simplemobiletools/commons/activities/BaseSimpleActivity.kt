@@ -134,7 +134,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun updateStatusbarColor(color: Int) {
-        window.statusBarColor = color.darkenColor()
+        window.statusBarColor = color
 
         if (isMarshmallowPlus()) {
             if (color.getContrastColor() == 0xFF333333.toInt()) {
