@@ -180,7 +180,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun updateMenuItemColors(menu: Menu?, baseColor: Int = baseConfig.primaryColor) {
+    fun updateMenuItemColors(menu: Menu?, useCrossAsBack: Boolean = false, baseColor: Int = baseConfig.primaryColor) {
         if (menu == null) {
             return
         }
@@ -192,6 +192,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             } catch (ignored: Exception) {
             }
         }
+
+        val drawableId = if (useCrossAsBack) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector
+        val icon = resources.getColoredDrawableWithColor(drawableId, color)
+        supportActionBar?.setHomeAsUpIndicator(icon)
     }
 
     private fun getCurrentAppIconColorIndex(): Int {

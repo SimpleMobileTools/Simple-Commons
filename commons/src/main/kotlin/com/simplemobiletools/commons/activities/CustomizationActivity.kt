@@ -103,7 +103,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_customization, menu)
         menu.findItem(R.id.save).isVisible = hasUnsavedChanges
-        updateMenuItemColors(menu, curPrimaryColor)
+        updateMenuItemColors(menu, true, curPrimaryColor)
         this.menu = menu
         return true
     }
@@ -216,7 +216,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     curNavigationBarColor = baseConfig.customNavigationBarColor
                     curAppIconColor = baseConfig.customAppIconColor
                     setTheme(getThemeId(curPrimaryColor))
-                    updateMenuItemColors(menu, curPrimaryColor)
+                    updateMenuItemColors(menu, true, curPrimaryColor)
                     setupColorsPickers()
                 } else {
                     baseConfig.customPrimaryColor = curPrimaryColor
@@ -238,7 +238,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     }
                     setTheme(getThemeId(curPrimaryColor))
                     setupColorsPickers()
-                    updateMenuItemColors(menu, curPrimaryColor)
+                    updateMenuItemColors(menu, true, curPrimaryColor)
                 }
             } else {
                 val theme = predefinedThemes[curSelectedThemeId]!!
@@ -254,7 +254,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 curNavigationBarColor = getThemeNavigationColor(curSelectedThemeId)
                 setTheme(getThemeId(curPrimaryColor))
                 colorChanged()
-                updateMenuItemColors(menu, curPrimaryColor)
+                updateMenuItemColors(menu, true, curPrimaryColor)
             }
         }
 
@@ -513,11 +513,11 @@ class CustomizationActivity : BaseSimpleActivity() {
                     updateColorTheme(getUpdatedTheme())
                     setTheme(getThemeId(color))
                 }
-                updateMenuItemColors(menu, color)
+                updateMenuItemColors(menu, true, color)
             } else {
                 updateActionbarColor(curPrimaryColor)
                 setTheme(getThemeId(curPrimaryColor))
-                updateMenuItemColors(menu, curPrimaryColor)
+                updateMenuItemColors(menu, true, curPrimaryColor)
             }
         }
     }
