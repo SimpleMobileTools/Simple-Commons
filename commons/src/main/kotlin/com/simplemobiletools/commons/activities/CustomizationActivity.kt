@@ -82,7 +82,6 @@ class CustomizationActivity : BaseSimpleActivity() {
             baseConfig.isUsingSharedTheme = false
         }
 
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_cross_vector)
         updateTextColors(customization_holder)
         originalAppIconColor = baseConfig.appIconColor
     }
