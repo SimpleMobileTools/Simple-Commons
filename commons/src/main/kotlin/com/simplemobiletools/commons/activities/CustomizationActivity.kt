@@ -2,6 +2,8 @@ package com.simplemobiletools.commons.activities
 
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.drawable.LayerDrawable
+import android.graphics.drawable.RippleDrawable
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -405,7 +407,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_background_color.setFillWithStroke(curBackgroundColor, curBackgroundColor)
         customization_app_icon_color.setFillWithStroke(curAppIconColor, curBackgroundColor)
         customization_navigation_bar_color.setFillWithStroke(curNavigationBarColor, curBackgroundColor)
-        apply_to_all.setTextColor(baseConfig.primaryColor.getContrastColor())
+        apply_to_all.setTextColor(curPrimaryColor.getContrastColor())
 
         customization_text_color_holder.setOnClickListener { pickTextColor() }
         customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
@@ -451,6 +453,14 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun setCurrentPrimaryColor(color: Int) {
         curPrimaryColor = color
         updateActionbarColor(color)
+
+        if (color == baseConfig.primaryColor) {
+            apply_to_all.setBackgroundResource(R.drawable.button_background_rounded)
+        } else {
+            val applyBackground = resources.getDrawable(R.drawable.button_background_rounded) as RippleDrawable
+            (applyBackground as LayerDrawable).findDrawableByLayerId(R.id.button_background_holder).applyColorFilter(color)
+            apply_to_all.background = applyBackground
+        }
     }
 
     private fun setCurrentNavigationBarColor(color: Int) {
