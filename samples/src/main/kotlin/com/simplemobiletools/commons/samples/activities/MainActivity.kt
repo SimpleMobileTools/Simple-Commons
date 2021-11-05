@@ -22,7 +22,7 @@ class MainActivity : BaseSimpleActivity() {
         appLaunched(BuildConfig.APPLICATION_ID)
 
         //startCustomizationActivity()
-        //startAboutActivity(R.string.smtco_app_name, 3, "0.2", ArrayList(), false)
+        //startAboutActivity(R.string.smtco_app_name, 3, "0.2", arrayListOf(FAQItem(R.string.faq_1_title_commons, R.string.faq_1_text_commons)), false)
 
         /*val letters = arrayListOf("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q")
         StringsAdapter(this, letters, media_grid, media_refresh_layout) {
