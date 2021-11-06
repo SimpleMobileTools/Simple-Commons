@@ -805,9 +805,14 @@
     <string name="translation">Käännös</string>
     <string name="development">Kehitys</string>
     <string name="other_help">Muu apu</string>
-    <string name="contributors_label">Tämä lista sisältää Simple Mobile Tools-sovellusten luomiseen merkittävästi osallistuneita. Käännökset ovat vapaaehtoisien tekemiä,
-        ota meihin yhteyttä jos haluat myös olla avuksi. Ohje kääntämiseen löytyy osoiteesta https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , tai ota yhteys meihin sähköpostitse hello@simplemobiletools.com jos sinulla on kysymyksiä.
-        Kiitos kaikille osallistujille ja muille tukijoille!</string>
+    <string name="contributors_label">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+
     <string name="translation_arabic">Arabia</string>
     <string name="translation_azerbaijani">Azeri</string>
     <string name="translation_bengali">Bengali</string>

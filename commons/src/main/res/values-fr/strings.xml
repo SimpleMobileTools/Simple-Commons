@@ -809,9 +809,14 @@
     <string name="translation">Traduction</string>
     <string name="development">Développement</string>
     <string name="other_help">Autre aide</string>
-    <string name="contributors_label">Cette liste contient tous ceux qui ont sensiblement aidé n\'importe quelle application de la suite Simple Mobile Tools, pas seulement celle-ci. Les traductions sont assurées par des bénévoles,
-        faites-nous savoir si vous voulez aussi aider. Le guide de traduction se trouve sur https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file, ou contactez-nous simplement à hello@simplemobiletools.com si vous Avez-vous des questions.
-        Merci à tous les contributeurs et autres supporters !</string>
+    <string name="contributors_label">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+
     <string name="translation_arabic">Arabe</string>
     <string name="translation_azerbaijani">Azerbaïdjanais</string>
     <string name="translation_bengali">Bengali</string>

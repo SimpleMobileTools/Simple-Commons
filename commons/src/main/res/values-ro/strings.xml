@@ -808,9 +808,14 @@
     <string name="translation">Traducere</string>
     <string name="development">Dezvoltare</string>
     <string name="other_help">Alte ajutoare</string>
-    <string name="contributors_label">Această listă conține pe toți cei care au ajutat în mod vizibil orice aplicație din suita Simple Mobile Tools, nu numai aceasta. Traducerile sunt efectuate de voluntari,
-        anunţaţi-ne dacă doriţi să ne ajutaţi. Ghidul de traducere se găsește la https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , sau pur și simplu contactați-ne la hello@simplemobiletools.com dacă aveți întrebări.
-        Mulțumim tuturor contribuitorilor și celorlalți susținători!</string>
+    <string name="contributors_label">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+
     <string name="translation_arabic">Arabică</string>
     <string name="translation_azerbaijani">Azeră</string>
     <string name="translation_bengali">Bengală</string>

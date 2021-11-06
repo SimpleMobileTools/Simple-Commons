@@ -808,9 +808,14 @@
     <string name="translation">Μετάφραση</string>
     <string name="development">Ανάπτυξη</string>
     <string name="other_help">Άλλη Βοήθεια</string>
-    <string name="contributors_label">Αυτή η λίστα περιέχει όλους όσους βοήθησαν αισθητά οποιαδήποτε εφαρμογή της σουίτας Simple Mobile Tools, όχι μόνο αυτή. Οι μεταφράσεις γίνονται από εθελοντές,
-        πείτε μας αν θέλετε να βοηθήσετε κι εσείς. Ο οδηγός μετάφρασης βρίσκεται στη διεύθυνση https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , ή επικοινωνήστε μαζί μας στη διεύθυνση hello@simplemobiletools.com αν έχετε ερωτήσεις.
-        Ευχαριστούμε όλους τους συνεισφέροντες και άλλους υποστηρικτές!</string>
+    <string name="contributors_label">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>

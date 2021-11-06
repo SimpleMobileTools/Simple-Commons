@@ -842,9 +842,14 @@
     <string name="translation">Preklad</string>
     <string name="development">Vývoj</string>
     <string name="other_help">Iná pomoc</string>
-    <string name="contributors_label">Tento zoznam obsahuje každého, kto citeľne pomohol ktorejkoľvek apke z celej sady Simple Mobile Tools, nie iba tejto apke. Preklady sú spracovávané dobrovoľníkmi,
-        dajte nám vedieť, ak chcete pomôcť tiež. Návod na prekladanie je na https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , alebo ak máte nejaké otázky, tak nám jednoducho napíšte na hello@simplemobiletools.com.
-        Ďakujeme všetkým prispievateľom a iným podporovateľom!</string>
+    <string name="contributors_label">
+        <![CDATA[
+            Tento zoznam obsahuje každého, kto citeľne pomohol ktorejkoľvek apke z celej sady Simple Mobile Tools, nie iba tejto apke. Preklady sú spracovávané dobrovoľníkmi,
+            dajte nám vedieť, ak chcete pomôcť tiež. Návod na prekladanie je na <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">tejto webstránke</a>, alebo ak máte nejaké otázky, tak nám jednoducho napíšte na <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a>.
+            Ďakujeme všetkým prispievateľom a iným podporovateľom!
+        ]]>
+    </string>
+
     <string name="translation_arabic">Arabčina</string>
     <string name="translation_azerbaijani">Azerbajdžančina</string>
     <string name="translation_bengali">Bengálčina</string>
