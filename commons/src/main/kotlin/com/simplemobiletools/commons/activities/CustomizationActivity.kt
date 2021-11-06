@@ -266,6 +266,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         updateActionbarColor(curPrimaryColor)
         updateNavigationBarColor(curNavigationBarColor)
         updateAutoThemeFields()
+        updateApplyToAllColors(curPrimaryColor)
         handleAccentColorLayout()
     }
 
@@ -453,12 +454,15 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun setCurrentPrimaryColor(color: Int) {
         curPrimaryColor = color
         updateActionbarColor(color)
+        updateApplyToAllColors(color)
+    }
 
-        if (color == baseConfig.primaryColor) {
+    private fun updateApplyToAllColors(newColor: Int) {
+        if (newColor == baseConfig.primaryColor) {
             apply_to_all.setBackgroundResource(R.drawable.button_background_rounded)
         } else {
             val applyBackground = resources.getDrawable(R.drawable.button_background_rounded) as RippleDrawable
-            (applyBackground as LayerDrawable).findDrawableByLayerId(R.id.button_background_holder).applyColorFilter(color)
+            (applyBackground as LayerDrawable).findDrawableByLayerId(R.id.button_background_holder).applyColorFilter(newColor)
             apply_to_all.background = applyBackground
         }
     }
