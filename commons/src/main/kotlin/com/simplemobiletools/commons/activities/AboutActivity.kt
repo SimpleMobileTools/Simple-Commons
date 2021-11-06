@@ -210,12 +210,13 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupVersion() {
-        var versionName = intent.getStringExtra(APP_VERSION_NAME) ?: ""
+        var version = intent.getStringExtra(APP_VERSION_NAME) ?: ""
         if (baseConfig.appId.removeSuffix(".debug").endsWith(".pro")) {
-            versionName += " ${getString(R.string.pro)}"
+            version += " ${getString(R.string.pro)}"
         }
 
-        about_version.text = versionName
+        val fullVersion = String.format(getString(R.string.version_placeholder, version))
+        about_version.text = fullVersion
         about_version_holder.setOnClickListener {
             if (firstVersionClickTS == 0L) {
                 firstVersionClickTS = System.currentTimeMillis()
