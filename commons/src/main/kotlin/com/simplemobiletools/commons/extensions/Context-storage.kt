@@ -27,10 +27,7 @@ import java.io.File
 import java.io.FileInputStream
 import java.io.InputStream
 import java.net.URLDecoder
-import java.util.ArrayList
-import java.util.Collections
-import java.util.HashMap
-import java.util.HashSet
+import java.util.*
 import java.util.regex.Pattern
 
 // http://stackoverflow.com/a/40582634/1967672
@@ -154,6 +151,8 @@ fun Context.isPathOnSD(path: String) = sdCardPath.isNotEmpty() && path.startsWit
 
 fun Context.isPathOnOTG(path: String) = otgPath.isNotEmpty() && path.startsWith(otgPath)
 
+fun Context.isPathOnInternalStorage(path: String) = internalStoragePath.isNotEmpty() && path.startsWith(internalStoragePath)
+
 val DIRS_ACCESSIBLE_ONLY_WITH_SAF = listOf("/Android/data", "/Android/obb")
 
 fun Context.getSAFOnlyDirs(): List<String> {
@@ -207,12 +206,39 @@ fun Context.getAndroidTreeUri(path: String): String {
     }
 }
 
+fun Context.getTreeUriFromRoot(path: String): String {
+    return when {
+        isPathOnOTG(path) -> baseConfig.otgAndroidTreeUri
+        isPathOnSD(path) -> baseConfig.sdAndroidTreeUri
+        else -> baseConfig.primaryAndroidTreeUri
+    }
+}
+
 fun Context.storeAndroidTreeUri(path: String, treeUri: String) {
     return when {
         isPathOnOTG(path) -> baseConfig.otgAndroidTreeUri = treeUri
         isPathOnSD(path) -> baseConfig.sdAndroidTreeUri = treeUri
         else -> baseConfig.primaryAndroidTreeUri = treeUri
     }
+}
+
+fun Context.createDocumentUri(fullPath: String): Uri {
+    val storageId = if (fullPath.startsWith('/')) {
+        when {
+            fullPath.startsWith(internalStoragePath) -> "primary"
+            else -> fullPath.substringAfter("/storage/", "").substringBefore('/')
+        }
+    } else {
+        fullPath.substringBefore(':', "").substringAfterLast('/')
+    }
+    val relativePath =    when {
+        fullPath.startsWith(internalStoragePath) -> fullPath.substring(internalStoragePath.length).trim('/')
+        else -> fullPath.substringAfter(storageId).trim('/')
+    }
+    val treeUri = DocumentsContract.buildTreeDocumentUri(EXTERNAL_STORAGE_PROVIDER_AUTHORITY, "$storageId:")
+    val documentId = "${storageId}:$relativePath"
+    val uri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
+    return uri
 }
 
 fun Context.getStorageRootId(path: String): String {
@@ -723,8 +749,7 @@ fun Context.getSAFOnlyLastModified(path: String): Long {
 
 fun Context.deleteSAFOnlyDir(path: String, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     val treeUri = getAndroidTreeUri(path).toUri()
-    val relativePath = path.substring(path.getBasePath(this).length).trim('/')
-    val documentId = "primary:$relativePath"
+    val documentId = getAndroidSAFDocumentId(path)
     val uri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
     val document = DocumentFile.fromSingleUri(this, uri)
     try {

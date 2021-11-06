@@ -7,9 +7,7 @@ import com.simplemobiletools.commons.extensions.getInternalStoragePath
 import com.simplemobiletools.commons.extensions.getSDCardPath
 import com.simplemobiletools.commons.extensions.getSharedPrefs
 import java.text.SimpleDateFormat
-import java.util.Calendar
-import java.util.HashSet
-import java.util.Locale
+import java.util.*
 
 open class BaseConfig(val context: Context) {
     protected val prefs = context.getSharedPrefs()

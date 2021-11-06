@@ -790,9 +790,6 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                 }
             }
         }
-    } else if (isRPlus()) {
-        val success = File(oldPath).renameTo(File(newPath))
-        callback?.invoke(success)
     } else {
         val oldFile = File(oldPath)
         val newFile = File(newPath)

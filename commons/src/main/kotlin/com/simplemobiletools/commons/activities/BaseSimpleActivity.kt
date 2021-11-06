@@ -219,10 +219,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             ""
         }
 
-        Log.i(TAG, "onActivityResult: partition=$partition")
-        Log.i(TAG, "onActivityResult: checkedDocumentPath=$checkedDocumentPath")
-        Log.i(TAG, "onActivityResult: treeUri=${resultData?.data}")
-        Log.i(TAG, "onActivityResult: tree documentId=${resultData?.data?.let { DocumentsContract.getTreeDocumentId(it) }}")
         val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
 
         if (requestCode == OPEN_DOCUMENT_TREE_PRIMARY) {
@@ -314,7 +310,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     private fun isProperSDRootFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
-    private fun isProperSDFolder(uri: Uri) = isExternalStorageDocument(uri)  && !isInternalStorage(uri)
+    private fun isProperSDFolder(uri: Uri) = isExternalStorageDocument(uri) && !isInternalStorage(uri)
 
     private fun isProperOTGRootFolder(uri: Uri) = isExternalStorageDocument(uri) && isRootUri(uri) && !isInternalStorage(uri)
     private fun isProperOTGFolder(uri: Uri) = isExternalStorageDocument(uri) && !isInternalStorage(uri)
