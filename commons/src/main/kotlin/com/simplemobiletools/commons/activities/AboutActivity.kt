@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.Intent.*
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
 import android.view.Menu
 import androidx.core.net.toUri
 import com.simplemobiletools.commons.R
@@ -19,6 +20,11 @@ import java.util.*
 class AboutActivity : BaseSimpleActivity() {
     private var appName = ""
     private var linkColor = 0
+
+    private var firstVersionClickTS = 0L
+    private var clicksSinceFirstClick = 0
+    private val EASTER_EGG_TIME_LIMIT = 3000L
+    private val EASTER_EGG_REQUIRED_CLICKS = 7
 
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
@@ -37,9 +43,18 @@ class AboutActivity : BaseSimpleActivity() {
             about_contributors_icon,
             about_more_apps_icon,
             about_email_icon,
-            about_licenses_icon
+            about_licenses_icon,
+            about_version_icon
         ).forEach {
             it.applyColorFilter(baseConfig.textColor)
+        }
+
+        arrayOf(about_support, about_help_us, about_social, about_other).forEach {
+            it.setTextColor(getAdjustedPrimaryColor())
+        }
+
+        arrayOf(about_support_holder, about_help_us_holder, about_social_holder, about_other_holder).forEach {
+            it.background.applyColorFilter(baseConfig.backgroundColor.getContrastColor())
         }
     }
 
@@ -56,7 +71,7 @@ class AboutActivity : BaseSimpleActivity() {
         setupLicense()
         setupFacebook()
         setupReddit()
-        setupCopyright()
+        setupVersion()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -106,7 +121,6 @@ class AboutActivity : BaseSimpleActivity() {
 
     private fun setupFAQ() {
         val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
-        about_faq_holder.beVisibleIf(faqItems.isNotEmpty())
         about_faq_holder.setOnClickListener {
             Intent(applicationContext, FAQActivity::class.java).apply {
                 putExtra(APP_ICON_IDS, getAppIconIDs())
@@ -177,7 +191,7 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupFacebook() {
-        about_facebook.setOnClickListener {
+        about_facebook_holder.setOnClickListener {
             var link = "https://www.facebook.com/simplemobiletools"
             try {
                 packageManager.getPackageInfo("com.facebook.katana", 0)
@@ -190,18 +204,33 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupReddit() {
-        about_reddit.setOnClickListener {
+        about_reddit_holder.setOnClickListener {
             launchViewIntent("https://www.reddit.com/r/SimpleMobileTools")
         }
     }
 
-    private fun setupCopyright() {
+    private fun setupVersion() {
         var versionName = intent.getStringExtra(APP_VERSION_NAME) ?: ""
         if (baseConfig.appId.removeSuffix(".debug").endsWith(".pro")) {
             versionName += " ${getString(R.string.pro)}"
         }
 
-        val year = Calendar.getInstance().get(Calendar.YEAR)
-        about_copyright.text = String.format(getString(R.string.copyright), versionName, year)
+        about_version.text = versionName
+        about_version_holder.setOnClickListener {
+            if (firstVersionClickTS == 0L) {
+                firstVersionClickTS = System.currentTimeMillis()
+                Handler().postDelayed({
+                    firstVersionClickTS = 0L
+                    clicksSinceFirstClick = 0
+                }, EASTER_EGG_TIME_LIMIT)
+            }
+
+            clicksSinceFirstClick++
+            if (clicksSinceFirstClick >= EASTER_EGG_REQUIRED_CLICKS) {
+                toast(R.string.hello)
+                firstVersionClickTS = 0L
+                clicksSinceFirstClick = 0
+            }
+        }
     }
 }
