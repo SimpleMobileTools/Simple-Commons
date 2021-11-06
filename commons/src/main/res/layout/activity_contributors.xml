@@ -17,7 +17,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/development"
-            android:textColor="@color/color_primary" />
+            android:textColor="@color/color_primary"
+            android:textFontWeight="600" />
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/contributors_development"
@@ -32,7 +33,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_margin"
             android:text="@string/translation"
-            android:textColor="@color/color_primary" />
+            android:textColor="@color/color_primary"
+            android:textFontWeight="600" />
 
         <com.simplemobiletools.commons.views.MyTextView
             android:id="@+id/contributors_arabic_label"
@@ -654,13 +656,12 @@
             android:text="@string/translators_chinese"
             tools:text="Jenny, Jim" />
 
-        <com.simplemobiletools.commons.views.MyTextView
+        <TextView
             android:id="@+id/contributors_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/big_margin"
-            android:autoLink="email|web"
-            android:text="@string/contributors_label" />
+            android:textColorLink="@color/color_primary" />
 
     </LinearLayout>
 </ScrollView>

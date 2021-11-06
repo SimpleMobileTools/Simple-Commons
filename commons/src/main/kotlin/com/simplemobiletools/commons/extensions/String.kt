@@ -9,8 +9,10 @@ import android.provider.MediaStore
 import android.telephony.PhoneNumberUtils
 import android.text.Spannable
 import android.text.SpannableString
+import android.text.TextPaint
 import android.text.TextUtils
 import android.text.style.ForegroundColorSpan
+import android.text.style.URLSpan
 import android.widget.TextView
 import com.bumptech.glide.signature.ObjectKey
 import com.simplemobiletools.commons.helpers.*
@@ -46,7 +48,8 @@ fun String.isAValidFilename(): Boolean {
     return true
 }
 
-fun String.getOTGPublicPath(context: Context) = "${context.baseConfig.OTGTreeUri}/document/${context.baseConfig.OTGPartition}%3A${substring(context.baseConfig.OTGPath.length).replace("/", "%2F")}"
+fun String.getOTGPublicPath(context: Context) =
+    "${context.baseConfig.OTGTreeUri}/document/${context.baseConfig.OTGPartition}%3A${substring(context.baseConfig.OTGPath.length).replace("/", "%2F")}"
 
 fun String.isMediaFile() = isImageFast() || isVideoFast() || isGif() || isRawFast() || isSvg() || isPortrait()
 
@@ -268,6 +271,26 @@ fun String.getDateTimeFromDateString(showYearsSince: Boolean, viewToUpdate: Text
         }
     }
     return date
+}
+
+fun TextView.removeUnderlines() {
+    val spannable = SpannableString(text)
+    val spans = spannable.getSpans(0, spannable.length, URLSpan::class.java)
+    for (span in spans) {
+        val start = spannable.getSpanStart(span)
+        val end = spannable.getSpanEnd(span)
+        spannable.removeSpan(span)
+        val newSpan = URLSpanNoUnderline(span.url)
+        spannable.setSpan(newSpan, start, end, 0)
+    }
+    text = spannable
+}
+
+private class URLSpanNoUnderline(url: String?) : URLSpan(url) {
+    override fun updateDrawState(textPaint: TextPaint) {
+        super.updateDrawState(textPaint)
+        textPaint.isUnderlineText = false
+    }
 }
 
 fun String.getMimeType(): String {

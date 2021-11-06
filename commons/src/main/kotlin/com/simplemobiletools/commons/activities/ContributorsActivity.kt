@@ -1,10 +1,12 @@
 package com.simplemobiletools.commons.activities
 
 import android.os.Bundle
+import android.text.Html
+import android.text.method.LinkMovementMethod
 import android.view.Menu
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
-import com.simplemobiletools.commons.extensions.underlineText
+import com.simplemobiletools.commons.extensions.removeUnderlines
 import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.APP_ICON_IDS
 import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
@@ -21,12 +23,12 @@ class ContributorsActivity : BaseSimpleActivity() {
         setContentView(R.layout.activity_contributors)
 
         updateTextColors(contributors_holder)
-
         contributors_development_label.setTextColor(getAdjustedPrimaryColor())
-        contributors_development_label.underlineText()
-
         contributors_translation_label.setTextColor(getAdjustedPrimaryColor())
-        contributors_translation_label.underlineText()
+
+        contributors_label.text = Html.fromHtml(getString(R.string.contributors_label))
+        contributors_label.removeUnderlines()
+        contributors_label.movementMethod = LinkMovementMethod.getInstance()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
