@@ -10,7 +10,7 @@ fun ImageView.setFillWithStroke(fillColor: Int, backgroundColor: Int) {
         setColor(fillColor)
         background = this
 
-        if (backgroundColor == fillColor && fillColor == -2 && backgroundColor == -1) {
+        if (backgroundColor == fillColor || fillColor == -2 && backgroundColor == -1) {
             val strokeColor = backgroundColor.getContrastColor().adjustAlpha(0.5f)
             setStroke(2, strokeColor)
         }
