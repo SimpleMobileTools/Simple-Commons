@@ -685,13 +685,13 @@
     <string name="donate_underlined"><u>Δωρεά</u></string>
     <string name="follow_us">Ακολουθήστε μας</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="support">Support</string>
-    <string name="help_us">Help us</string>
-    <string name="social">Social</string>
-    <string name="other">Other</string>
-    <string name="version_placeholder">Version %s</string>
-    <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="support">Υποστήριξη</string>
+    <string name="help_us">Βοηθήστε μας</string>
+    <string name="social">Κοινωνικά</string>
+    <string name="other">Άλλα</string>
+    <string name="version_placeholder">Έκδοση %s</string>
+    <string name="hello">Γειά :)</string>
+    <string name="about_footer">Φτιάχτηκε με &#10084;&#65039; στην Σλοβακία</string>
     <string name="additional_info">Πρόσθετες πληροφορίες</string>
     <string name="app_version">Έκδοση εφαρμογής: %s</string>
     <string name="device_os">OS Συσκευής: %s</string>
@@ -779,12 +779,8 @@
     <string name="faq_1_text_commons">Είναι πολύ πιθανό επειδή μετακινήσατε την εφαρμογή σε μια κάρτα SD. Υπάρχει ένας περιορισμός του συστήματος Android που αποκρύπτει τα συγκεκριμένα Γραφικά στοιχεία εφαρμογών
        σε αυτή την περίπτωση. Η μόνη λύση είναι να μετακινήσετε την εφαρμογή πίσω στην εσωτερική αποθήκευση μέσω των ρυθμίσεων της συσκευής σας.</string>
     <string name="faq_2_title_commons">Θέλω να σας υποστηρίξω, αλλά δεν μπορώ να δωρίσω χρήματα. Υπάρχει κάτι άλλο που μπορώ να κάνω;</string>
-    <string name="faq_2_text_commons">
-        <![CDATA[
-            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-        ]]>
-    </string>
+    <string name="faq_2_text_commons">Ναι φυσικά. Μπορείτε να διαδώσετε το όνομα σχετικά με τις εφαρμογές μας ή να γράψετε καλά σχόλια και αξιολογήσεις. Μπορείτε επίσης να βοηθήσετε με τη μετάφραση των εφαρμογών σε μια νέα γλώσσα ή απλά να ενημερώσετε μερικές υπάρχουσες μεταφράσεις.
+        Μπορείτε να βρείτε τον οδηγό στο https://github.com/SimpleMobileTools/General-Discussion , ή απλά ένα μήνυμα στο hello@simplemobiletools.com αν χρειάζεστε βοήθεια.</string>
     <string name="faq_3_title_commons">Διαγραφή κάποιων αρχείων κατά λάθος, πώς μπορώ να τα ανακτήσω;</string>
     <string name="faq_3_text_commons">Δυστυχώς, δεν μπορείτε. Τα αρχεία διαγράφονται αμέσως μετά το παράθυρο διαλόγου επιβεβαίωσης, δεν υπάρχει διαθέσιμος Κάδος ανακύκλωσης.</string>
     <string name="faq_4_title_commons">Δεν μου αρέσουν τα χρώματα του Γραφικού στοιχείου, μπορώ να τα αλλάξω;</string>
@@ -814,9 +810,9 @@
     <string name="other_help">Άλλη Βοήθεια</string>
     <string name="contributors_label">
         <![CDATA[
-            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
+            Αυτή η λίστα περιέχει όλους όσους βοήθησαν αισθητά οποιαδήποτε εφαρμογή μέσα στη σουίτα Simple Mobile Tools, όχι μόνο αυτή. Οι μεταφράσεις γίνονται από εθελοντές,
+            πείτε μας αν θέλετε να βοηθήσετε κι εσείς. Ο οδηγός για τη μετάφραση βρίσκεται στη διεύθυνση <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">ιστότοπος</a>, ή επικοινωνήστε μαζί μας στο <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> αν έχετε οποιεσδήποτε ερωτήσεις.
+            Ευχαριστούμε όλους τους συνεισφέροντες και υποστηρικτές!
         ]]>
     </string>
 
