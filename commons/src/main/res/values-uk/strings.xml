@@ -779,8 +779,12 @@
     <string name="faq_1_text_commons">Найімовірніше тому, що ви перемістили додаток на SD карту. В системі Android існує обмеження, що приховує віджети додатка
         в цьому випадку. Єдине рішення - перемістити додаток назад у Внутрішню Пам\'ять з допомогою налаштувань вашого пристрою.</string>
     <string name="faq_2_title_commons">Я хочу вас підтримати, але я не можу пожертвувати гроші. Чи є ще щось, що я можу зробити?</string>
-    <string name="faq_2_text_commons">Так, звичайно. Ви можете поширити інформацію про додатки або залишити хороший відгук і оцінки. Ви також можете допомогти перекласти додатки на нові мови або просто оновити існуючі переклади.
-        Ви знайдете вказівки за адресою https://github.com/SimpleMobileTools/General-Discussion або просто напишіть мені повідомлення на hello@simplemobiletools.com, якщо вам необхідна допомога.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
+            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Я випадково видалив деякі файли, як я можу їх відновити?</string>
     <string name="faq_3_text_commons">На жаль, ви не можете. Файли видаляються негайно після діалогу-підтвердження, функції типу \"Кошик\" не передбачено.</string>
     <string name="faq_4_title_commons">Мені не подобаються кольори віджета, чи можу я їх змінити?</string>

@@ -746,8 +746,12 @@
     <string name="faq_1_title_commons">위젯 목록에 이 앱이 표시되지 않으면 어떻게 해야 하나요?</string>
     <string name="faq_1_text_commons">앱을 SD카드에 설치했기 때문인 가능성이 큽니다. 안드로이드 시스템 제한으로 SD카드에 설치한 앱은 위젯을 사용할 수 없습니다. 이런 경우에는 위젯을 사용하시려면 내장 메모리로 앱을 옮기는 방법밖에는 없습니다.</string>
     <string name="faq_2_title_commons">기부가 아닌 다른 방법으로 앱을 지원하고 싶습니다. 다른 방법이 있나요?</string>
-    <string name="faq_2_text_commons">예, 물론입니다. 다른 사람에게 앱을 추천하시거나, 좋은 피드백과 평가를 제공해 주실 수 있습니다. 또한 새로운 언어로 앱을 번역하거나 기존 번역을 업데이트 하면 도움이 됩니다.
-        번역 가이드는 https://github.com/SimpleMobileTools/General-Discussion에서 찾아볼 수 있습니다. 도움이 필요하시다면 hello@simplemobiletools.com으로 메시지를 보내주시기 바랍니다.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
+            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">실수로 일부 파일을 삭제했는데 어떻게 복구 할 수 있습니까?</string>
     <string name="faq_3_text_commons">아쉽게도 불가능합니다. 휴지통을 거치지 않고 삭제를 선택한 파일은 바로 삭제됩니다.</string>
     <string name="faq_4_title_commons">위젯 색상이 마음에 들지 않는데 변경할 수 있나요?</string>

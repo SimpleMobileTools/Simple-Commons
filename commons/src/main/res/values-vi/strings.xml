@@ -777,10 +777,14 @@
     <string name="before_asking_question">Trước khi bạn đặt câu hỏi, trước tiên hãy đọc</string>
     <string name="faq_1_title_commons">Tại sao tôi không thấy widget ứng dụng này trong danh sách widget?</string>
     <string name="faq_1_text_commons">Rất có thể là do bạn đã di chuyển ứng dụng vào thẻ SD. Có một giới hạn hệ thống Android ẩn các widget ứng dụng đã cho
-         trong trường hợp đó. Giải pháp duy nhất là chuyển ứng dụng trở lại Bộ nhớ trong thông qua cài đặt thiết bị của bạn.</string>
+        trong trường hợp đó. Giải pháp duy nhất là chuyển ứng dụng trở lại Bộ nhớ trong thông qua cài đặt thiết bị của bạn.</string>
     <string name="faq_2_title_commons">Tôi muốn hỗ trợ bạn, nhưng tôi không thể quyên góp tiền. Tôi có thể làm gì khác không?</string>
-    <string name="faq_2_text_commons">Phải, tất nhiên. Bạn có thể truyền bá về các ứng dụng hoặc đưa ra phản hồi và xếp hạng tốt. Bạn cũng có thể giúp đỡ bằng cách dịch các ứng dụng bằng ngôn ngữ mới hoặc chỉ cập nhật một số bản dịch hiện có.
-         Bạn có thể tìm thấy hướng dẫn tại https://github.com/SimpleMobileTools/General-Discussion hoặc chỉ cần gửi tin nhắn cho tôi tại hello@simplemobiletools.com nếu bạn cần trợ giúp.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
+            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Tôi đã xóa một số tệp do nhầm lẫn, làm cách nào để khôi phục chúng?</string>
     <string name="faq_3_text_commons">Đáng buồn thay, bạn không thể. Các tập tin sẽ bị xóa ngay lập tức sau hộp thoại xác nhận, không có thùng rác nào có sẵn.</string>
     <string name="faq_4_title_commons">Tôi không thích màu của widget, tôi có thể thay đổi chúng không?</string>
@@ -789,13 +793,13 @@
     <string name="faq_5_text_commons">Nếu chúng thực sự bị xóa, bạn không thể. Tuy nhiên, có một Thùng rác được bật theo mặc định, nó sẽ khiến các tệp được di chuyển vào Thùng thay vì xóa chúng.</string>
     <string name="faq_6_title_commons">Biểu tượng khởi chạy ứng dụng này biến mất. Tôi có thể làm gì?</string>
     <string name="faq_6_text_commons">Nguyên nhân là do trình khởi chạy của bạn không hỗ trợ tùy chỉnh biểu tượng đúng cách. Hãy thử khởi chạy ứng dụng thông qua Google Play hoặc một số tiện ích nếu có.
-         Sau khi khởi chạy, chỉ cần đặt lại biểu tượng màu cam mặc định #F57C00. Bạn có thể phải cài đặt lại ứng dụng trong trường hợp xấu nhất.</string>
+        Sau khi khởi chạy, chỉ cần đặt lại biểu tượng màu cam mặc định #F57C00. Bạn có thể phải cài đặt lại ứng dụng trong trường hợp xấu nhất.</string>
     <string name="faq_7_title_commons">Tiền đã được khấu trừ từ tài khoản ngân hàng của tôi, nhưng tôi không thể tải xuống ứng dụng. Tôi có thể làm gì?</string>
     <string name="faq_7_text_commons">Thanh toán được xử lý hoàn toàn bởi Google, hệ thống của họ thỉnh thoảng bị trục trặc. Chỉ cần xóa bộ nhớ cache ứng dụng Google Play của bạn và khởi động lại thiết bị của bạn, sau đó thử tải xuống lại.</string>
     <string name="faq_8_title_commons">Tại sao tôi nên nâng cấp lên phiên bản Pro?</string>
     <string name="faq_8_text_commons">Vì phiên bản ứng dụng của bạn không còn được cập nhật, các lỗi bạn có thể phát hiện sẽ không bao giờ được sửa. Cũng sẽ không có chức năng mới được thêm vào. Bạn có thể mua phiên bản Pro trên Google Play với một khoản tiền nhỏ.
-         Đó là thanh toán một lần, có nghĩa là một khi bạn mua nó, bạn sẽ không bao giờ phải mua lại. Ngay cả sau khi nhận được một thiết bị mới. Nếu bạn không thích phiên bản Pro, bạn có thể gỡ cài đặt trong vòng vài giờ và bạn sẽ tự động lấy lại tiền.
-         Nếu bạn muốn hoàn lại tiền bất cứ lúc nào sau đó, chỉ cần liên hệ với chúng tôi tại hello@simplemobiletools.com và bạn sẽ nhận được nó.</string>
+        Đó là thanh toán một lần, có nghĩa là một khi bạn mua nó, bạn sẽ không bao giờ phải mua lại. Ngay cả sau khi nhận được một thiết bị mới. Nếu bạn không thích phiên bản Pro, bạn có thể gỡ cài đặt trong vòng vài giờ và bạn sẽ tự động lấy lại tiền.
+        Nếu bạn muốn hoàn lại tiền bất cứ lúc nào sau đó, chỉ cần liên hệ với chúng tôi tại hello@simplemobiletools.com và bạn sẽ nhận được nó.</string>
     <string name="faq_9_title_commons">How can I select multiple items at once?</string>
     <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
         just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you

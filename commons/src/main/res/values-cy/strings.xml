@@ -902,8 +902,12 @@
     <string name="faq_1_title_commons">Pam nad ydw i\'n gweld teclyn yr ap hwn yn y rhestr teclynnau?</string>
     <string name="faq_1_text_commons">Mwyaf debyg wyt wedi symud yr ap i gerdyn SD. Mae rhwystr yn system Android sy\'n cuddio teclynnau apiau sydd ar y cerdyn SD. Yr unig datrysiad yw mynd i osodiadau dy ddyfais a symud yr ap nôl i\'r storfa fewnol.</string>
     <string name="faq_2_title_commons">Dw i eisiau cefnogi, ond dw i methu rhoi arian. Oes rhywbeth arall galla\'i wneud?</string>
-    <string name="faq_2_text_commons">Oes, wrth gwrs. Gallet ddweud wrth eraill mor dda yw\'r apiau neu roi adborth a sgôr da. Gallet hefyd helpu ehangu a chywiro cyfieithiadau i\'r Gymraeg a ieithoedd eraill.
-        Mae canllaw yma https://github.com/SimpleMobileTools/General-Discussion , neu anfona ebost ata\'i (yn Saesneg) hello@simplemobiletools.com os oes angen help.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
+            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Dw i wedi dileu ffeiliau ar gam. Sut ydw i\'n eu hadfer nhw?</string>
     <string name="faq_3_text_commons">Yn anffodus, nid yw\'n bosib. Mae ffeiliau yn cael eu dileu ar unwaith ar ôl y deialog cadarnhau. Does dim bin sbwriel.</string>
     <string name="faq_4_title_commons">Dw i\'m yn hoffi lliwiau\'r teclyn. Ga\'i newid nhw?</string>

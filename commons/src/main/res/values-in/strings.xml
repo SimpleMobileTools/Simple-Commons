@@ -746,8 +746,12 @@
     <string name="faq_1_text_commons">Kemungkinan besar karena anda memindahkan aplikasi ke kartu SD. Ada keterbatasan sistem Android yang akan menyembunyikan widget aplikasi
         karena hal tersebut. Satu-satunya solusi adalah memindahkannya kembali ke Penyimpanan Internal melalui pengaturan perangkat anda.</string>
     <string name="faq_2_title_commons">Saya ingin mendukung Anda, tetapi saya tidak bisa berdonasi. Adakah cara lain yang bisa saya lakukan?</string>
-    <string name="faq_2_text_commons">Tentu saja ada. Anda bisa membagikan aplikasi ini atau memberikan umpanbalik dan nilai yang baik. Anda juga bisa membantu menerjemahkan aplikasi ke dalam bahasa baru, atau cukup perbarui terjemahan yang sudah ada.
-        Anda bisa melihat panduannya di https://github.com/SimpleMobileTools/General-Discussion , atau email saya di hello@simplemobiletools.com jika butuh bantuan.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
+            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Saya tidak sengaja menghapus berkas, bagaimana saya memulihkannya?</string>
     <string name="faq_3_text_commons">Sayangnya tidak bisa. Berkas akan dihapus secara permanen setelah dialog konfirmasi, tidak ada keranjang keranjang sampah yang tersedia.</string>
     <string name="faq_4_title_commons">Saya tidak suka warna widget, bisakah saya mengubahnya?</string>

@@ -843,8 +843,12 @@
     <string name="faq_1_title_commons">Zakaj aplikacije ne vidim na seznamu pripomočkov?</string>
     <string name="faq_1_text_commons">Najverjetneje zato, ker ste aplikacijo premaknili na kartico SD. Zaradi omejite sistema Android se pripomočki takih aplikacij ne prikažejo. Edina rešitev je, da aplikacijo premaknete nazaj na notranjo shrambo.</string>
     <string name="faq_2_title_commons">Želim vas podpirati, ampak ne morem donirati denarja. Lahko pomagam kako drugače?</string>
-    <string name="faq_2_text_commons">Seveda! Aplikacijo lahko pokažete prijateljem, nam dateje dobre ocene in povratne informacije. Pomagate lahko tudi tako, da aplikacije prevedete v nov jezik, ali pa posodobite obstoječe prevode.
-        Navodila lahko najdete na https://github.com/SimpleMobileTools/General-Discussion , ali pa nam pošljete sporočilo na hello@simplemobiletools.com , če potrebujete pomoč.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
+            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Po pomoti sem izbrisal nekaj datotek. Jih lahko obnovim?</string>
     <string name="faq_3_text_commons">Na žalost, ne. Datoteke so izbrisane takoj po potrditvi.</string>
     <string name="faq_4_title_commons">Barve pripomočkov mi niso všeč. Jih lahko spremenim?</string>

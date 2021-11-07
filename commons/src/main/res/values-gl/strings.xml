@@ -779,8 +779,12 @@
     <string name="faq_1_text_commons">O máis probable é que se movese o aplicativo nunha tarxeta SD. Hai unha limitación do sistema Android que oculta os widgets do aplicativo.
         nese caso. A única solución é volver a colocar o aplicativo no almacenamiento interno a través da configuración do teu dispositivo.</string>
     <string name="faq_2_title_commons">Quero apoiarte, pero non podo donar cartos. Hai algo máis que poida facer?</string>
-    <string name="faq_2_text_commons">Si, por suposto. Pode correr a voz sobre os aplicativos ou dar bos comentarios e valoracións. Tamén pode axudar traducindo os aplicativos nun novo idioma ou simplemente actualizar algunhas traducións existentes.
-        Puede encontrar la guía en https://github.com/SimpleMobileTools/General-Discussion, ou simplemente envíame unha mensaxe a hello@simplemobiletools.com se necesitas axuda.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
+            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Borréei algúns arquivos por erro, como podo recuperalos?</string>
     <string name="faq_3_text_commons">Tristemente, non podes. Os arquivos elimínanse instantaneamente despois do diálogo de confirmación, non hai papeleira dispoñible.</string>
     <string name="faq_4_title_commons">Non me gustan as cores do widget, podo cambialos?</string>

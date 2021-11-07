@@ -778,8 +778,12 @@
     <string name="faq_1_text_commons">Valószínűleg azért, mert áthelyezte az alkalmazást egy SD kártyára. Van egy Android rendszerkorlátozás, amely ebben az esetben elrejti az adott alkalmazás widgeteket.
         Az egyetlen megoldás az alkalmazás visszahelyezése a belső tárolóra az eszköz beállításain keresztül.</string>
     <string name="faq_2_title_commons">Szeretném támogatni, de nem tudok pénzt adni. Van még valami, amit tehetek?</string>
-    <string name="faq_2_text_commons">Természetesen. Megoszthatja az alkalmazásokról szóló információkat vagy visszajelzéseket és értékeléseket adhat. Segítséget is nyújthat azzal is, hogy az alkalmazásokat egy új nyelvre fordítja, vagy csak frissíti a meglévő fordításokat.
-        Az útmutatót megtalálhatja a https://github.com/SimpleMobileTools/General-Discussion címen, vagy csak írjon egy üzenetet a hello@simplemobiletools.com, ha segítségre van szüksége.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
+            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Tévedésből töröltem néhány fájlt, hogyan tudom visszaszerezni?</string>
     <string name="faq_3_text_commons">Sajnos nem lehet. A fájlok azonnal törlődnek a megerősítő párbeszédablak után, ott nincs elérhető Lomtár.</string>
     <string name="faq_4_title_commons">Nem tetszik a widget színe, meg tudom változtatni őket?</string>

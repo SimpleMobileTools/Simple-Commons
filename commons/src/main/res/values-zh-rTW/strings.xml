@@ -746,8 +746,12 @@
     <string name="faq_1_text_commons">這很可能是因為你把應用程式移動到SD卡。那樣的話，有個隱藏特定程式小工具的Android系統限制存在。
 	    只有一個解決方法，就是經由你的裝置設定，把應用程式移動回內部儲存空間。</string>
     <string name="faq_2_title_commons">我想要支持您，但我無法捐款。還有什麼我能做的嗎?</string>
-    <string name="faq_2_text_commons">當然好囉。你可以推廣關於這應用程式，或是給予好的反饋和評分。你也可以幫忙把這應用程式翻譯成新的語言，或者只更新一些現有的翻譯。
-	    你可以在 https://github.com/SimpleMobileTools/General-Discussion 找到教學，或者若你需要幫忙，只要發個訊息到 hello@simplemobiletools.com。</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
+            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">我誤刪了一些檔案，如何復原?</string>
     <string name="faq_3_text_commons">不幸地，沒有辦法。檔案經確認後就立即刪除了，沒有垃圾筒可用。</string>
     <string name="faq_4_title_commons">我不喜歡小工具的顏色，我能更改嗎?</string>

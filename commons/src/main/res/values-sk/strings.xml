@@ -813,8 +813,12 @@
     <string name="faq_1_text_commons">Je to pravdepodobne spôsobené tým, že ste apku presunuli na SD kartu. Ide o systémové obmedzenie, ktoré v tomto prípade skryje widget apky.
         Jediným riešením je presunutie apky späť na internú pamäť cez nastavnenia zariadenia.</string>
     <string name="faq_2_title_commons">Chcem vás podporiť, ale neviem poslať peniaze. Viem pre vás urobiť aj niečo iné?</string>
-    <string name="faq_2_text_commons">Áno, samozrejme. Môžete napr. šíriť apky medzi známymi, alebo nám poslať užitočnú odozvu a hodnotenia. Viete pomôcť aj preložením apiek do nových jazykov, alebo upraviť existujúce preklady.
-        Návod nájdete na https://github.com/SimpleMobileTools/General-Discussion , alebo mi v prípade potreby pošlite email na hello@simplemobiletools.com.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Áno, samozrejme. Môžete napr. šíriť apky medzi známymi, alebo nám poslať užitočnú odozvu a hodnotenia. Viete pomôcť aj preložením apiek do nových jazykov, alebo upraviť existujúce preklady.
+            Návod na prekladanie je na <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">tejto webstránke</a>, alebo nám v prípade potreby napíšte na <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a>.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Náhodou som vymazal niektoré súbory, viem ich obnoviť?</string>
     <string name="faq_3_text_commons">Žiaľ, nie. Súbory sú mazané okamžite po potvrdení, nie je dostupný žiadny smetný kôš.</string>
     <string name="faq_4_title_commons">Nepáčia sa mi farby widgetu, viem ich zmeniť?</string>

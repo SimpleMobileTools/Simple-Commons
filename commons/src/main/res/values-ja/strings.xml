@@ -744,8 +744,12 @@
     <string name="faq_1_title_commons">ウィジェットリストにこのアプリが表示されないのはなぜ？</string>
     <string name="faq_1_text_commons">おそらく、SDカード内にアプリが保存されているからです。その場合、アンドロイドには特定のアプリウィジェットを非表示にするシステム制限があります。デバイスの設定から、アプリを内部ストレージへ移動してください。</string>
     <string name="faq_2_title_commons">支援をしたいけど、お金の寄付が出来ません。他に出来ることはありますか？</string>
-    <string name="faq_2_text_commons">もちろんです。アプリについての良い口コミや、良いフィードバックや評価も支援になります。翻訳や、翻訳のチェックも支援になります。
-        こちらのWEBアドレスからガイドをご覧ください。https://github.com/SimpleMobileTools/General-Discussion もしくは、こちらのメールアドレスにお問い合わせください。hello@simplemobiletools.com　</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
+            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">間違えてファイルを削除してしまいました。どうすれば復元できますか？</string>
     <string name="faq_3_text_commons">残念ながら復元は出来ません。一度了承するとファイルは即座に削除され、ゴミ箱も利用不可となります。</string>
     <string name="faq_4_title_commons">ウィジェットの色が好みじゃないです。変更出来ますか？</string>
