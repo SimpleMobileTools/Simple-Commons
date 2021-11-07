@@ -19,6 +19,9 @@ class MyAppCompatCheckbox : AppCompatCheckBox {
         setTextColor(textColor)
         if (isMarshmallowPlus()) {
             buttonDrawable?.applyColorFilter(accentColor)
+            compoundDrawablesRelative.forEach {
+                it?.applyColorFilter(accentColor)
+            }
         } else {
             val colorStateList = ColorStateList(
                 arrayOf(
