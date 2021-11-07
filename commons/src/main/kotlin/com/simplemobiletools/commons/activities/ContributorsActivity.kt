@@ -24,12 +24,20 @@ class ContributorsActivity : BaseSimpleActivity() {
         contributors_development_label.setTextColor(getAdjustedPrimaryColor())
         contributors_translation_label.setTextColor(getAdjustedPrimaryColor())
 
-        contributors_label.text = Html.fromHtml(getString(R.string.contributors_label))
-        contributors_label.movementMethod = LinkMovementMethod.getInstance()
-        contributors_label.removeUnderlines()
+        contributors_label.apply {
+            setTextColor(baseConfig.textColor)
+            text = Html.fromHtml(getString(R.string.contributors_label))
+            setLinkTextColor(getAdjustedPrimaryColor())
+            movementMethod = LinkMovementMethod.getInstance()
+            removeUnderlines()
+        }
 
         contributors_development_icon.applyColorFilter(baseConfig.textColor)
         contributors_footer_icon.applyColorFilter(baseConfig.textColor)
+
+        arrayOf(contributors_development_holder, contributors_translation_holder).forEach {
+            it.background.applyColorFilter(baseConfig.backgroundColor.getContrastColor())
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

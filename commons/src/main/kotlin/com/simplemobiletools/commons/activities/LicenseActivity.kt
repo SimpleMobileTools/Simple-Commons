@@ -5,10 +5,7 @@ import android.view.LayoutInflater
 import android.view.Menu
 import android.widget.LinearLayout
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
-import com.simplemobiletools.commons.extensions.launchViewIntent
-import com.simplemobiletools.commons.extensions.updateTextColors
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.License
 import kotlinx.android.synthetic.main.activity_license.*
@@ -35,6 +32,7 @@ class LicenseActivity : BaseSimpleActivity() {
         licenses.filter { licenseMask and it.id != 0 }.forEach {
             val license = it
             inflater.inflate(R.layout.item_license, null).apply {
+                background.applyColorFilter(baseConfig.backgroundColor.getContrastColor())
                 license_title.apply {
                     text = getString(license.titleId)
                     setTextColor(titleColor)

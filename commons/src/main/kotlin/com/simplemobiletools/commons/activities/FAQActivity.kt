@@ -7,9 +7,7 @@ import android.view.LayoutInflater
 import android.view.Menu
 import android.widget.LinearLayout
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
-import com.simplemobiletools.commons.extensions.removeUnderlines
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.APP_FAQ
 import com.simplemobiletools.commons.helpers.APP_ICON_IDS
 import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
@@ -36,6 +34,7 @@ class FAQActivity : BaseSimpleActivity() {
         faqItems.forEach {
             val faqItem = it
             inflater.inflate(R.layout.item_faq, null).apply {
+                background.applyColorFilter(baseConfig.backgroundColor.getContrastColor())
                 faq_title.apply {
                     text = if (faqItem.title is Int) getString(faqItem.title) else faqItem.title as String
                     setTextColor(titleColor)
@@ -44,6 +43,7 @@ class FAQActivity : BaseSimpleActivity() {
                 faq_text.apply {
                     text = if (faqItem.text is Int) Html.fromHtml(getString(faqItem.text)) else faqItem.text as String
                     setTextColor(textColor)
+                    setLinkTextColor(getAdjustedPrimaryColor())
 
                     movementMethod = LinkMovementMethod.getInstance()
                     removeUnderlines()
