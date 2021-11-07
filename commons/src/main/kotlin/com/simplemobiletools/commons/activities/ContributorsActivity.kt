@@ -5,9 +5,7 @@ import android.text.Html
 import android.text.method.LinkMovementMethod
 import android.view.Menu
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
-import com.simplemobiletools.commons.extensions.removeUnderlines
-import com.simplemobiletools.commons.extensions.updateTextColors
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.APP_ICON_IDS
 import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
 import kotlinx.android.synthetic.main.activity_contributors.*
@@ -27,8 +25,11 @@ class ContributorsActivity : BaseSimpleActivity() {
         contributors_translation_label.setTextColor(getAdjustedPrimaryColor())
 
         contributors_label.text = Html.fromHtml(getString(R.string.contributors_label))
-        contributors_label.removeUnderlines()
         contributors_label.movementMethod = LinkMovementMethod.getInstance()
+        contributors_label.removeUnderlines()
+
+        contributors_development_icon.applyColorFilter(baseConfig.textColor)
+        contributors_footer_icon.applyColorFilter(baseConfig.textColor)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

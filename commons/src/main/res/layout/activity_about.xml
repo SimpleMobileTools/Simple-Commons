@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <android.widget.TextView
+        <TextView
             android:id="@+id/about_support"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
             </RelativeLayout>
         </LinearLayout>
 
-        <android.widget.TextView
+        <TextView
             android:id="@+id/about_help_us"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -199,7 +199,7 @@
             </RelativeLayout>
         </LinearLayout>
 
-        <android.widget.TextView
+        <TextView
             android:id="@+id/about_social"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -281,7 +281,7 @@
             </RelativeLayout>
         </LinearLayout>
 
-        <android.widget.TextView
+        <TextView
             android:id="@+id/about_other"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

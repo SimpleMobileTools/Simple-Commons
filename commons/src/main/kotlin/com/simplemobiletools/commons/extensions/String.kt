@@ -273,26 +273,6 @@ fun String.getDateTimeFromDateString(showYearsSince: Boolean, viewToUpdate: Text
     return date
 }
 
-fun TextView.removeUnderlines() {
-    val spannable = SpannableString(text)
-    val spans = spannable.getSpans(0, spannable.length, URLSpan::class.java)
-    for (span in spans) {
-        val start = spannable.getSpanStart(span)
-        val end = spannable.getSpanEnd(span)
-        spannable.removeSpan(span)
-        val newSpan = URLSpanNoUnderline(span.url)
-        spannable.setSpan(newSpan, start, end, 0)
-    }
-    text = spannable
-}
-
-private class URLSpanNoUnderline(url: String?) : URLSpan(url) {
-    override fun updateDrawState(textPaint: TextPaint) {
-        super.updateDrawState(textPaint)
-        textPaint.isUnderlineText = false
-    }
-}
-
 fun String.getMimeType(): String {
     val typesMap = HashMap<String, String>().apply {
         put("323", "text/h323")
