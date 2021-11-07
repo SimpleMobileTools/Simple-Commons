@@ -17,7 +17,7 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.dialog_properties.view.*
-import kotlinx.android.synthetic.main.property_item.view.*
+import kotlinx.android.synthetic.main.item_property.view.*
 import java.io.File
 import java.util.*
 
@@ -263,7 +263,7 @@ class PropertiesDialog() {
             return
         }
 
-        mInflater.inflate(R.layout.property_item, mPropertyView, false).apply {
+        mInflater.inflate(R.layout.item_property, mPropertyView, false).apply {
             property_value.setTextColor(mActivity.baseConfig.textColor)
             property_label.setTextColor(mActivity.baseConfig.textColor)
 

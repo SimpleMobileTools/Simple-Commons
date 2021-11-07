@@ -14,7 +14,7 @@ import androidx.core.view.ViewCompat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.models.FileDirItem
-import kotlinx.android.synthetic.main.breadcrumb_item.view.*
+import kotlinx.android.synthetic.main.item_breadcrumb.view.*
 
 class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(context, attrs) {
     private val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -179,7 +179,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
     private fun addBreadcrumb(item: FileDirItem, index: Int, addPrefix: Boolean) {
 
         if (itemsLayout.childCount == 0) {
-            inflater.inflate(R.layout.breadcrumb_first_item, itemsLayout, false).apply {
+            inflater.inflate(R.layout.item_breadcrumb_first, itemsLayout, false).apply {
                 resources.apply {
                     breadcrumb_text.background = ContextCompat.getDrawable(context, R.drawable.button_background)
                     breadcrumb_text.background.applyColorFilter(textColor)
@@ -206,7 +206,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
                 tag = item
             }
         } else {
-            inflater.inflate(R.layout.breadcrumb_item, itemsLayout, false).apply {
+            inflater.inflate(R.layout.item_breadcrumb, itemsLayout, false).apply {
                 var textToAdd = item.name
                 if (addPrefix) {
                     textToAdd = "> $textToAdd"
