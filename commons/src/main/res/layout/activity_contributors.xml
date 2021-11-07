@@ -24,8 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/medium_margin"
-            android:background="@drawable/section_holder_stroke"
-            android:orientation="vertical">
+            android:background="@drawable/section_holder_stroke">
 
             <ImageView
                 android:id="@+id/contributors_development_icon"
@@ -68,7 +67,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/medium_margin"
             android:background="@drawable/section_holder_stroke"
-            android:orientation="vertical"
             android:paddingTop="@dimen/normal_margin"
             android:paddingBottom="@dimen/activity_margin">
 
