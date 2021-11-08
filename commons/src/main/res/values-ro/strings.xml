@@ -103,7 +103,7 @@
     <string name="simple_renaming">Redenumire simplă</string>
     <string name="pattern_renaming">Model</string>
     <string name="string_to_add">Şir de caractere de adăugat</string>
-    <string name="rename_date_time_pattern">%Y - an\n%M - lună\n%D - zi\n%h - oră\n%m - minut\n%s - secondă\n%i - number increasing from 1</string>
+    <string name="rename_date_time_pattern">%Y - an\n%M - lună\n%D - zi\n%h - oră\n%m - minut\n%s - secondă\n%i - numărul crescând de la 1</string>
     <string name="filename_without_txt">Numele fişierului (fără .txt)</string>
     <string name="filename_without_json">Numele fişierului (fără .json)</string>
 
@@ -279,7 +279,7 @@
     <string name="temporarily_show_hidden">Afişează temporar elementele ascunse</string>
     <string name="stop_showing_hidden">Opreşte afişarea elementelor ascunse</string>
     <string name="maximum_share_reached">Nu puteți distribui atât de mult conținut deodată</string>
-    <string name="empty_and_disable_recycle_bin">Goleste și dezactivează coșul de reciclare</string>
+    <string name="empty_and_disable_recycle_bin">Goleşte și dezactivează coșul de reciclare</string>
     <string name="undo">Anulaţi</string>
     <string name="redo">Reveniţi</string>
     <string name="print">Printează</string>
@@ -514,7 +514,7 @@
     <string name="settings">Setări</string>
     <string name="purchase_simple_thank_you">Cumpără Simple Thank You</string>
     <string name="general_settings">General</string>
-    <string name="color_customization">Color customization</string>
+    <string name="color_customization">Personalizarea culorilor</string>
     <string name="customize_colors">Personalizați culorile</string>
     <string name="customize_colors_locked">Personalizați culorile (Blocat)</string>
     <string name="customize_widget_colors">Personalizați culorile widgetului</string>
@@ -687,12 +687,12 @@
     <string name="follow_us">Urmăriți-ne</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="support">Support</string>
-    <string name="help_us">Help us</string>
+    <string name="help_us">Ajutaţi-ne</string>
     <string name="social">Social</string>
-    <string name="other">Other</string>
+    <string name="other">Altele</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="about_footer">Realizat cu &#10084;&#65039; în Slovacia</string>
     <string name="additional_info">Informații suplimentare</string>
     <string name="app_version">Versiunea aplicației: %s</string>
     <string name="device_os">Dispozitivul OS: %s</string>
@@ -782,8 +782,8 @@
     <string name="faq_2_title_commons">Vreau să te sprijin, dar nu pot dona bani. Pot să fac altceva?</string>
     <string name="faq_2_text_commons">
         <![CDATA[
-            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+            Da, bineînțeles. Puteți să răspândiți vestea despre aplicațiile Simple sau să oferiți feedback și evaluări bune pe magaziul Google Play. De asemenea, puteți ajuta prin traducerea aplicațiilor într-o limbă nouă sau doar prin actualizarea unor traduceri existente.
+            Ghidul de traducere se găsește la <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">acest site</a>, sau pur și simplu contactați-ne la <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> dacă aveți întrebări.
         ]]>
     </string>
     <string name="faq_3_title_commons">Am șters niște fișiere din greșeală, cum pot să le recuperez?</string>
@@ -795,7 +795,7 @@
     <string name="faq_6_title_commons">Pictograma lansatorului de aplicații a dispărut. Ce pot să fac?</string>
     <string name="faq_6_text_commons">Acest lucru este cauzat de faptul că lansatorul nu acceptă în mod corespunzător personalizarea pictogramelor. Încercați să lansați aplicația prin Google Play sau prin intermediul unui widget, dacă este disponibil.
         Odată lansat, trebuie doar să setați înapoi culoarea pictogramei la valoarea implicită portocaliu #F57C00. În cel mai rău caz, s-ar putea să trebuiască să reinstalați aplicația.</string>
-    <string name="faq_7_title_commons">TBanii au fost decontați din contul meu bancar, dar nu pot descărca aplicația. Ce pot face?he money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
+    <string name="faq_7_title_commons">Banii au fost decontați din contul meu bancar, dar nu pot descărca aplicația. Ce pot face?</string>
     <string name="faq_7_text_commons">Plățile sunt gestionate în totalitate de Google, dar sistemul lor are probleme din când în când. Pur și simplu ștergeți memoria cache a aplicației Google Play și reporniți dispozitivul, apoi încercați din nou să o descărcați.</string>
     <string name="faq_8_title_commons">De ce ar trebui să trec la versiunea Pro?</string>
     <string name="faq_8_text_commons">Deoarece versiunea aplicației dvs. nu mai este actualizată, erorile pe care poate le-ați detectat nu vor fi rezolvate niciodată. De asemenea, nu vor fi adăugate funcții noi. Puteți achiziționa versiunea Pro de pe Google Play pentru o sumă modestă de bani.
@@ -861,9 +861,9 @@
     <string name="translation_turkish">Turcă</string>
     <string name="translation_ukrainian">Ucraineană</string>
     <string name="translation_vietnamese">Vietnameză</string>
-    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
-    <string name="translation_chinese_cn">Chinese (Simplified)</string>
-    <string name="translation_chinese_tw">Chinese (Traditional)</string>
+    <string name="translation_chinese_hk">Chineză (Hong Kong)</string>
+    <string name="translation_chinese_cn">Chineză (Simplificată)</string>
+    <string name="translation_chinese_tw">Chineză (Tradiţională)</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Obțineți versiunea Pro acum!</string>
