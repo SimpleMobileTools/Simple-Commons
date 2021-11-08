@@ -150,7 +150,7 @@
     <!-- File operation conflicts -->
     <string name="file_already_exists">Le fichier \"%s\" existe déjà</string>
     <string name="file_already_exists_overwrite">Le fichier \"%s\" existe déjà. L\'écraser ?</string>
-    <string name="folder_already_exists">Le répertoire \"%s\" existe déjà</string>
+    <string name="folder_already_exists">Le dossier \"%s\" existe déjà</string>
     <string name="merge">Fusionner</string>
     <string name="keep_both">Conserver les deux</string>
     <string name="overwrite">Écraser</string>
@@ -254,7 +254,7 @@
     <string name="dark_theme">Sombre</string>
     <string name="auto_theme">Automatique</string>
     <string name="solarized">Solarisé</string>
-    <string name="dark_red">Noir et Rouge</string>
+    <string name="dark_red">Rouge sombre</string>
     <string name="white">Blanc</string>
     <string name="black_white">Noir et Blanc</string>
     <string name="custom">Personnalisé</string>
@@ -516,7 +516,7 @@
     <string name="settings">Paramètres</string>
     <string name="purchase_simple_thank_you">Acheter Simple Thank You</string>
     <string name="general_settings">Général</string>
-    <string name="color_customization">Color customization</string>
+    <string name="color_customization">Personnalisation des couleurs</string>
     <string name="customize_colors">Modifier les couleurs</string>
     <string name="customize_colors_locked">Modifier les couleurs (verrouillé)</string>
     <string name="customize_widget_colors">Modifier les couleurs du widget</string>
@@ -552,7 +552,7 @@
     <string name="settings_exported_successfully">Paramètres exportés avec succès</string>
     <string name="settings_imported_successfully">Paramètres importés avec succès</string>
     <string name="start_name_with_surname">Trier les contacts par nom de famille</string>
-    <string name="clear_cache">Supprimer le cache</string>
+    <string name="clear_cache">Vider le cache</string>
     <string name="show_call_confirmation_dialog">Afficher une confirmation avant de faire un appel</string>
 
     <!-- Setting sections -->
@@ -597,20 +597,20 @@
     <!-- Import / Export -->
     <string name="importing">Importer…</string>
     <string name="exporting">Exporter…</string>
-    <string name="importing_successful">Import terminé</string>
-    <string name="exporting_successful">Export terminé</string>
-    <string name="importing_failed">Échec de l\'import</string>
-    <string name="exporting_failed">Échec de l\'export</string>
-    <string name="importing_some_entries_failed">Échec de l\'import de certains éléments</string>
-    <string name="exporting_some_entries_failed">Échec de l\'export de certains éléments</string>
+    <string name="importing_successful">Importation terminée</string>
+    <string name="exporting_successful">Exportation terminée</string>
+    <string name="importing_failed">Échec de l\'importation</string>
+    <string name="exporting_failed">Échec de l\'exportation</string>
+    <string name="importing_some_entries_failed">Échec de l\'importation de certains éléments</string>
+    <string name="exporting_some_entries_failed">Échec de l\'exportation de certains éléments</string>
     <string name="no_entries_for_importing">Aucun élément pouvant être importé n\'a été trouvé</string>
     <string name="no_entries_for_exporting">Aucun élément pouvant être exporté n\'a été trouvé</string>
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Il semblerait qu\'un périphérique USB soit connecté à votre appareil. Pour que les fichiers de ce périphérique s\'affichent correctement, vous devez accorder des autorisations supplémentaires.</string>
-    <string name="confirm_usb_storage_access_text">Veuillez sélectionner le répertoire racine du périphérique USB sur l\'écran suivant afin de pouvoir y accéder</string>
-    <string name="wrong_root_selected_usb">Erreur de répertoire. Veuillez sélectionner le répertoire racine du périphérique USB.</string>
+    <string name="confirm_usb_storage_access_text">Veuillez sélectionner le dossier racine du périphérique USB sur l\'écran suivant afin de pouvoir y accéder</string>
+    <string name="wrong_root_selected_usb">Erreur de dossier. Veuillez sélectionner le dossier racine du périphérique USB.</string>
 
     <!-- Dates -->
     <string name="january">Janvier</string>
@@ -685,16 +685,16 @@
     <string name="rate_us">Nous évaluer</string>
     <string name="rate">Notez</string>
     <string name="donate">Effectuer un don</string>
-    <string name="donate_underlined"><u>Effectuer un don</u></string>
+    <string name="donate_underlined"><u>Faire un don</u></string>
     <string name="follow_us">Suivez-nous</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="support">Support</string>
-    <string name="help_us">Help us</string>
-    <string name="social">Social</string>
-    <string name="other">Other</string>
+    <string name="help_us">Aidez nous</string>
+    <string name="social">Réseaux</string>
+    <string name="other">Autre</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="about_footer">Fait avec &#10084;&#65039; en Slovaquie</string>
     <string name="additional_info">Informations supplémentaires</string>
     <string name="app_version">Version de l\'application : %s</string>
     <string name="device_os">Système d\'exploitation de l\'appareil : %s</string>
@@ -862,9 +862,9 @@
     <string name="translation_turkish">Turc</string>
     <string name="translation_ukrainian">Ukrainien</string>
     <string name="translation_vietnamese">Vietnamien</string>
-    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
-    <string name="translation_chinese_cn">Chinese (Simplified)</string>
-    <string name="translation_chinese_tw">Chinese (Traditional)</string>
+    <string name="translation_chinese_hk">Chinois (Hong Kong)</string>
+    <string name="translation_chinese_cn">Chinois (Simplifié)</string>
+    <string name="translation_chinese_tw">Chinois (Traditionel)</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Obtenez la version Pro maintenant !</string>
