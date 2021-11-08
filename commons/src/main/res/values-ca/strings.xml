@@ -514,7 +514,7 @@
     <string name="settings">Ajustaments</string>
     <string name="purchase_simple_thank_you">Compra Simple Thank You</string>
     <string name="general_settings">General</string>
-    <string name="color_customization">Color customization</string>
+    <string name="color_customization">Personalització del color</string>
     <string name="customize_colors">Canviar colors</string>
     <string name="customize_colors_locked">Canviar colors (Bloquejat)</string>
     <string name="customize_widget_colors">Personalitza els colors de widgets</string>
@@ -686,13 +686,13 @@
     <string name="donate_underlined"><u>Donar</u></string>
     <string name="follow_us">Segueix-nos</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="support">Support</string>
-    <string name="help_us">Help us</string>
+    <string name="support">Suport</string>
+    <string name="help_us">Ajuda'ns</string>
     <string name="social">Social</string>
-    <string name="other">Other</string>
-    <string name="version_placeholder">Version %s</string>
-    <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="other">Altres</string>
+    <string name="version_placeholder">Versió %s</string>
+    <string name="hello">Hola :)</string>
+    <string name="about_footer">Fet amb &#10084;&#65039; in Slovakia</string>
     <string name="additional_info">Informació adicional</string>
     <string name="app_version">Versió de la APP: %s</string>
     <string name="device_os">Sistema operatiu: %s</string>
@@ -782,8 +782,8 @@
     <string name="faq_2_title_commons">Vull donar-vos suport, però no puc donar diners. Hi ha alguna cosa més que pugui fer?</string>
     <string name="faq_2_text_commons">
         <![CDATA[
-            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+            Sí, per suposat. Podeu difondre les aplicacions o donar bones valoracions i comentaris. També podeu ajudar traduint les aplicacions a un idioma nou o simplement actualitzant algunes traduccions existents.
+             La guia per traduir es troba a <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">aquest lloc web</a> , o simplement poseu-vos en contacte amb nosaltres a <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> si teniu cap pregunta.
         ]]>
     </string>
     <string name="faq_3_title_commons">He esborrat alguns fitxers per error, com puc recuperar-los?</string>
@@ -810,14 +810,14 @@
 
     <!-- Contributors -->
     <string name="contributors">Contributors</string>
-    <string name="translation">Translation</string>
-    <string name="development">Development</string>
-    <string name="other_help">Other help</string>
+    <string name="translation">Traducció</string>
+    <string name="development">Desenvolupament</string>
+    <string name="other_help">Altres ajudes</string>
     <string name="contributors_label">
         <![CDATA[
-            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
+            Aquesta llista conté tots els que van ajudar notablement a qualsevol aplicació de la suite Simple Mobile Tools, no només aquesta. Les traduccions són gestionades per voluntaris,
+             fes-nos saber si tu també vols ajudar. La guia per traduir es troba a <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">aquest lloc web</a> , o simplement poseu-vos en contacte amb nosaltres a <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> si teniu cap pregunta.
+             Gràcies a tots els col·laboradors i altres col·laboradors!
         ]]>
     </string>
 
@@ -825,7 +825,7 @@
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
     <string name="translation_breton">Breton</string>
-    <string name="translation_catalan">Catalan</string>
+    <string name="translation_catalan">Català</string>
     <string name="translation_czech">Czech</string>
     <string name="translation_welsh">Welsh</string>
     <string name="translation_danish">Danish</string>
