@@ -393,11 +393,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun handlePrimarySAFDialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
+    fun handlePrimaryAndroidSAFDialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
         return if (!packageName.startsWith("com.simplemobiletools")) {
             callback(true)
             false
-        } else if (isShowingSAFPrimaryDialog(path)) {
+        } else if (isShowingSAFPrimaryAndroidDialog(path)) {
             funAfterSAFPermission = callback
             true
         } else {

@@ -242,7 +242,7 @@ class FilePickerDialog(
         val items = ArrayList<FileDirItem>()
 
         if (activity.isRestrictedAndroidDir(path)) {
-            activity.handlePrimarySAFDialog(path) {
+            activity.handlePrimaryAndroidSAFDialog(path) {
                 activity.getStorageItemsWithTreeUri(path, showHidden) {
                     callback(it)
                 }

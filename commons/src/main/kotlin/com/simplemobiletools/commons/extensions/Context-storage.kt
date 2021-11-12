@@ -156,15 +156,11 @@ fun Context.isPathOnInternalStorage(path: String) = internalStoragePath.isNotEmp
 val DIRS_ACCESSIBLE_ONLY_WITH_SAF = listOf("/Android/data", "/Android/obb")
 
 fun Context.getSAFOnlyDirs(): List<String> {
-    return DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$internalStoragePath$it" }.toMutableList() +
-        DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$sdCardPath$it" }.toMutableList() +
-        DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$otgPath$it" }.toMutableList()
+    return DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$internalStoragePath$it" }
 }
 
 fun Context.isSAFOnlyRoot(path: String): Boolean {
-    val dirs = getSAFOnlyDirs()
-    val result = dirs.any { path.startsWith(it) }
-    return result
+    return getSAFOnlyDirs().any { path.startsWith(it) }
 }
 
 fun Context.isRestrictedAndroidDir(path: String): Boolean {
@@ -231,14 +227,13 @@ fun Context.createDocumentUri(fullPath: String): Uri {
     } else {
         fullPath.substringBefore(':', "").substringAfterLast('/')
     }
-    val relativePath =    when {
+    val relativePath = when {
         fullPath.startsWith(internalStoragePath) -> fullPath.substring(internalStoragePath.length).trim('/')
         else -> fullPath.substringAfter(storageId).trim('/')
     }
     val treeUri = DocumentsContract.buildTreeDocumentUri(EXTERNAL_STORAGE_PROVIDER_AUTHORITY, "$storageId:")
     val documentId = "${storageId}:$relativePath"
-    val uri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
-    return uri
+    return DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
 }
 
 fun Context.getStorageRootId(path: String): String {

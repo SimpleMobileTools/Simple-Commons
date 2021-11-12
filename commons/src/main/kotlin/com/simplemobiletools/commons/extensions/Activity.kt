@@ -147,13 +147,14 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
     }
 }
 
-fun BaseSimpleActivity.isShowingSAFPrimaryDialog(path: String): Boolean {
+fun BaseSimpleActivity.isShowingSAFPrimaryAndroidDialog(path: String): Boolean {
     return if (isRestrictedAndroidDir(path) && (getAndroidTreeUri(path).isEmpty() || !hasProperStoredAndroidDirTreeUri(path))) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
                 WritePermissionDialog(this, false) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         putExtra("android.content.extra.SHOW_ADVANCED", true)
+                        putExtra(DocumentsContract.EXTRA_INITIAL_URI, createDocumentUri("${path.getBasePath(this@isShowingSAFPrimaryAndroidDialog).trimEnd('/')}/Android"))
                         try {
                             startActivityForResult(this, OPEN_DOCUMENT_TREE_PRIMARY)
                             checkedDocumentPath = path
@@ -727,12 +728,12 @@ fun Activity.rescanPaths(paths: List<String>, callback: (() -> Unit)? = null) {
 
 fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((success: Boolean) -> Unit)? = null) {
     if (isRestrictedAndroidDir(oldPath)) {
-        handlePrimarySAFDialog(oldPath) {
+        handlePrimaryAndroidSAFDialog(oldPath) {
             if (!it) {
                 runOnUiThread {
                     callback?.invoke(false)
                 }
-                return@handlePrimarySAFDialog
+                return@handlePrimaryAndroidSAFDialog
             }
             try {
                 val success = renameSAFOnlyDocument(oldPath, newPath)
