@@ -133,7 +133,17 @@
         <item name="android:clickable">false</item>
         <item name="drawableEndCompat">?android:attr/listChoiceIndicatorMultiple</item>
         <item name="android:drawablePadding">@dimen/activity_margin</item>
-        <item name="paddingStart">@dimen/medium_margin</item>
+        <item name="android:paddingStart">@dimen/medium_margin</item>
+    </style>
+
+    <style name="SettingsLeftLabelStyle">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:paddingStart">@dimen/medium_margin</item>
+    </style>
+
+    <style name="SettingsRightTextualValueStyle">
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:paddingEnd">@dimen/medium_margin</item>
     </style>
 
     <!-- App themes -->
