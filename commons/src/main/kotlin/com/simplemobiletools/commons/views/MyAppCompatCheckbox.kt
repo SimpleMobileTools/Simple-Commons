@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatCheckBox
+import com.simplemobiletools.commons.extensions.adjustAlpha
 
 class MyAppCompatCheckbox : AppCompatCheckBox {
     constructor(context: Context) : super(context)
@@ -19,7 +20,7 @@ class MyAppCompatCheckbox : AppCompatCheckBox {
                 intArrayOf(-android.R.attr.state_checked),
                 intArrayOf(android.R.attr.state_checked)
             ),
-            intArrayOf(textColor, accentColor)
+            intArrayOf(textColor.adjustAlpha(0.8f), accentColor)
         )
         supportButtonTintList = colorStateList
     }
