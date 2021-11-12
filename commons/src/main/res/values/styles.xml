@@ -127,6 +127,15 @@
         <item name="android:background">@drawable/bottom_sheet_bg</item>
     </style>
 
+    <style name="SettingsCheckboxStyle">
+        <item name="android:background">@null</item>
+        <item name="android:button">@null</item>
+        <item name="android:clickable">false</item>
+        <item name="drawableEndCompat">?android:attr/listChoiceIndicatorMultiple</item>
+        <item name="android:drawablePadding">@dimen/activity_margin</item>
+        <item name="paddingStart">@dimen/medium_margin</item>
+    </style>
+
     <!-- App themes -->
     <!-- White -->
     <style name="AppTheme.White" parent="AppTheme.Base">
