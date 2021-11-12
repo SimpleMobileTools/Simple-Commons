@@ -140,7 +140,6 @@
         <item name="android:clickable">false</item>
         <item name="drawableEndCompat">?android:attr/listChoiceIndicatorMultiple</item>
         <item name="android:drawablePadding">@dimen/activity_margin</item>
-        <item name="android:paddingStart">@dimen/medium_margin</item>
     </style>
 
     <style name="SettingsLeftLabelStyle">
@@ -151,6 +150,7 @@
         <item name="android:layout_alignParentEnd">true</item>
         <item name="android:maxLines">3</item>
         <item name="android:ellipsize">end</item>
+        <item name="android:paddingEnd">@dimen/small_margin</item>
     </style>
 
     <style name="SettingsHolderCheckboxStyle">
