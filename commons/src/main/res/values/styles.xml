@@ -127,6 +127,12 @@
         <item name="android:background">@drawable/bottom_sheet_bg</item>
     </style>
 
+    <style name="SettingsSectionLabelStyle">
+        <item name="android:layout_marginTop">@dimen/activity_margin</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/big_text_size</item>
+    </style>
+
     <style name="SettingsCheckboxStyle">
         <item name="android:background">@null</item>
         <item name="android:button">@null</item>
