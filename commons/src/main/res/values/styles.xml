@@ -144,6 +144,22 @@
     <style name="SettingsRightTextualValueStyle">
         <item name="android:layout_alignParentEnd">true</item>
         <item name="android:paddingEnd">@dimen/medium_margin</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="SettingsHolderCheckboxStyle">
+        <item name="android:paddingStart">@dimen/normal_margin</item>
+        <item name="android:paddingTop">@dimen/activity_margin</item>
+        <item name="android:paddingEnd">@dimen/normal_margin</item>
+        <item name="android:paddingBottom">@dimen/activity_margin</item>
+    </style>
+
+    <style name="SettingsHolderTextViewStyle">
+        <item name="android:paddingStart">@dimen/normal_margin</item>
+        <item name="android:paddingTop">@dimen/bigger_margin</item>
+        <item name="android:paddingEnd">@dimen/normal_margin</item>
+        <item name="android:paddingBottom">@dimen/bigger_margin</item>
     </style>
 
     <!-- App themes -->
