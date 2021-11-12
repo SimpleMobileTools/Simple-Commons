@@ -131,6 +131,7 @@
         <item name="android:layout_marginTop">@dimen/activity_margin</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textSize">@dimen/big_text_size</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
     </style>
 
     <style name="SettingsCheckboxStyle">
@@ -155,14 +156,14 @@
     <style name="SettingsHolderCheckboxStyle">
         <item name="android:paddingStart">@dimen/activity_margin</item>
         <item name="android:paddingTop">@dimen/activity_margin</item>
-        <item name="android:paddingEnd">@dimen/normal_margin</item>
+        <item name="android:paddingEnd">@dimen/activity_margin</item>
         <item name="android:paddingBottom">@dimen/activity_margin</item>
     </style>
 
     <style name="SettingsHolderTextViewStyle">
         <item name="android:paddingStart">@dimen/activity_margin</item>
         <item name="android:paddingTop">@dimen/bigger_margin</item>
-        <item name="android:paddingEnd">@dimen/normal_margin</item>
+        <item name="android:paddingEnd">@dimen/activity_margin</item>
         <item name="android:paddingBottom">@dimen/bigger_margin</item>
     </style>
 
