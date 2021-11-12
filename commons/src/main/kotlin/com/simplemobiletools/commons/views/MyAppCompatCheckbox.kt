@@ -17,20 +17,20 @@ class MyAppCompatCheckbox : AppCompatCheckBox {
 
     fun setColors(textColor: Int, accentColor: Int, backgroundColor: Int) {
         setTextColor(textColor)
-        /*if (isMarshmallowPlus()) {
-            buttonDrawable?.applyColorFilter(accentColor)
+        if (isMarshmallowPlus()) {
+            buttonDrawable?.applyColorFilter(textColor)
             compoundDrawablesRelative.forEach {
-                it?.applyColorFilter(accentColor)
+                it?.applyColorFilter(textColor)
             }
-        } else {*/
-            val colorStateList = ColorStateList(
-                arrayOf(
-                    intArrayOf(-android.R.attr.state_checked),
-                    intArrayOf(android.R.attr.state_checked)
-                ),
-                intArrayOf(context.resources.getColor(R.color.radiobutton_disabled), accentColor)
-            )
-            supportButtonTintList = colorStateList
-        //}
+        }
+
+        val colorStateList = ColorStateList(
+            arrayOf(
+                intArrayOf(-android.R.attr.state_checked),
+                intArrayOf(android.R.attr.state_checked)
+            ),
+            intArrayOf(context.resources.getColor(R.color.radiobutton_disabled), accentColor)
+        )
+        supportButtonTintList = colorStateList
     }
 }
