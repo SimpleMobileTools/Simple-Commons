@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.activities
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.ActivityManager
+import android.app.RecoverableSecurityException
 import android.app.role.RoleManager
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -17,7 +18,6 @@ import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.provider.Settings
 import android.telecom.TelecomManager
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -54,11 +54,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     private val GENERIC_PERM_HANDLER = 100
     private val DELETE_FILE_SDK_30_HANDLER = 300
+    private val RECOVERABLE_SECURITY_HANDLER = 301
 
     companion object {
         var funAfterSAFPermission: ((success: Boolean) -> Unit)? = null
         var funAfterDelete30File: ((success: Boolean) -> Unit)? = null
-        private const val TAG = "BaseSimpleActivity"
+        var funRecoverableSecurity: ((success: Boolean) -> Unit)? = null
     }
 
     abstract fun getAppIconIDs(): ArrayList<Int>
@@ -132,7 +133,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun updateStatusbarColor(color: Int) {
-        window.statusBarColor = color.darkenColor()
+        window.statusBarColor = color
 
         if (isMarshmallowPlus()) {
             if (color.getContrastColor() == 0xFF333333.toInt()) {
@@ -191,7 +192,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             }
         }
 
-        val drawableId = if (useCrossAsBack) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector
+        val drawableId = if (useCrossAsBack) R.drawable.ic_cross_original_vector else R.drawable.ic_arrow_left_original_vector
         val icon = resources.getColoredDrawableWithColor(drawableId, color)
         supportActionBar?.setHomeAsUpIndicator(icon)
     }
@@ -212,7 +213,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
         super.onActivityResult(requestCode, resultCode, resultData)
-        Log.i(TAG, "onActivityResult: checkedDocumentPath=$checkedDocumentPath")
         val partition = try {
             checkedDocumentPath.substring(9, 18)
         } catch (e: Exception) {
@@ -298,6 +298,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             exportSettingsTo(outputStream, configItemsToExport)
         } else if (requestCode == DELETE_FILE_SDK_30_HANDLER) {
             funAfterDelete30File?.invoke(resultCode == Activity.RESULT_OK)
+        } else if (requestCode == RECOVERABLE_SECURITY_HANDLER) {
+            funRecoverableSecurity?.invoke(resultCode == Activity.RESULT_OK)
+            funRecoverableSecurity = null
         }
     }
 
@@ -443,6 +446,22 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             }
         } else {
             callback(false)
+        }
+    }
+
+    @SuppressLint("NewApi")
+    fun handleRecoverableSecurityException(callback: (success: Boolean) -> Unit) {
+        try {
+            callback.invoke(true)
+        } catch (securityException: SecurityException) {
+            if (isQPlus()) {
+                funRecoverableSecurity = callback
+                val recoverableSecurityException = securityException as? RecoverableSecurityException ?: throw securityException
+                val intentSender = recoverableSecurityException.userAction.actionIntent.intentSender
+                startIntentSenderForResult(intentSender, RECOVERABLE_SECURITY_HANDLER, null, 0, 0, 0)
+            } else {
+                callback(false)
+            }
         }
     }
 

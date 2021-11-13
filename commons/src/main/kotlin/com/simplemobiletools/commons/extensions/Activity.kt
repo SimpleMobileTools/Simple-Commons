@@ -15,10 +15,7 @@ import android.provider.MediaStore
 import android.telecom.PhoneAccountHandle
 import android.telecom.TelecomManager
 import android.text.Html
-import android.view.View
-import android.view.ViewGroup
-import android.view.Window
-import android.view.WindowManager
+import android.view.*
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
@@ -1261,7 +1258,7 @@ fun AppCompatActivity.showSideloadingDialog() {
 }
 
 fun BaseSimpleActivity.getTempFile(folderName: String, fileName: String): File? {
-    val folder = File(cacheDir, fileName)
+    val folder = File(cacheDir, folderName)
     if (!folder.exists()) {
         if (!folder.mkdir()) {
             toast(R.string.unknown_error_occurred)

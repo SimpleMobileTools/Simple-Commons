@@ -29,6 +29,7 @@
     <string name="select_a_different_color">Обрати інший колір</string>
     <string name="download">Завантажити</string>
     <string name="notification">Повідомлення</string>
+    <string name="notifications">Notifications</string>
     <string name="email">E-mail</string>
     <string name="previous">Попередній</string>
     <string name="playpause">Відтворення / Пауза</string>
@@ -513,6 +514,8 @@
     <!-- Settings -->
     <string name="settings">Налаштування</string>
     <string name="purchase_simple_thank_you">Придбати Simple Thank You</string>
+    <string name="general_settings">General</string>
+    <string name="color_customization">Color customization</string>
     <string name="customize_colors">Налаштувати кольори</string>
     <string name="customize_colors_locked">Налаштувати кольори (Locked)</string>
     <string name="customize_widget_colors">Налаштувати кольори віджета</string>
@@ -561,6 +564,7 @@
     <string name="startup">Запуск</string>
     <string name="text">Текст</string>
     <string name="migrating">Перенесення</string>
+    <string name="quality">Quality</string>
 
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Керування вкладками, що відображаються</string>
@@ -673,18 +677,24 @@
     <string name="website_label">Вихідний код знайдете за адресою</string>
     <string name="email_label">Надсилайте ваші відгуки і пропозиції до</string>
     <string name="upgrade_to_pro">Оновити до версії Pro</string>
-    <string name="more_apps_underlined"><u>Більше додатків</u></string>
-    <string name="more_apps_from_us_underlined"><u>Більше додатків від нас</u></string>
-    <string name="third_party_licences_underlined"><u>Ліцензії третіх сторін</u></string>
-    <string name="invite_friends_underlined"><u>Запропонувати друзям</u></string>
+    <string name="more_apps">Більше додатків</string>
+    <string name="more_apps_from_us">Більше додатків від нас</string>
+    <string name="invite_friends">Запропонувати друзям</string>
     <string name="share_text">Спробуй %1$s за посиланням %2$s</string>
     <string name="invite_via">Запропонувати з допомогою</string>
-    <string name="rate_us_underlined"><u>Оцінити нас</u></string>
+    <string name="rate_us">Оцінити нас</string>
     <string name="rate">Оцінити</string>
     <string name="donate">Підтримати розробника</string>
     <string name="donate_underlined"><u>Підтримати розробника</u></string>
     <string name="follow_us">Підписатися на нас</string>
     <string name="copyright">v %1$s\nАвторські права © Simple Mobile Tools %2$d</string>
+    <string name="support">Support</string>
+    <string name="help_us">Help us</string>
+    <string name="social">Social</string>
+    <string name="other">Other</string>
+    <string name="version_placeholder">Version %s</string>
+    <string name="hello">Hello :)</string>
+    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
     <string name="additional_info">Додаткова інформація</string>
     <string name="app_version">Версія додатка: %s</string>
     <string name="device_os">ОС пристрою: %s</string>
@@ -772,8 +782,12 @@
     <string name="faq_1_text_commons">Найімовірніше тому, що ви перемістили додаток на SD карту. В системі Android існує обмеження, що приховує віджети додатка
         в цьому випадку. Єдине рішення - перемістити додаток назад у Внутрішню Пам\'ять з допомогою налаштувань вашого пристрою.</string>
     <string name="faq_2_title_commons">Я хочу вас підтримати, але я не можу пожертвувати гроші. Чи є ще щось, що я можу зробити?</string>
-    <string name="faq_2_text_commons">Так, звичайно. Ви можете поширити інформацію про додатки або залишити хороший відгук і оцінки. Ви також можете допомогти перекласти додатки на нові мови або просто оновити існуючі переклади.
-        Ви знайдете вказівки за адресою https://github.com/SimpleMobileTools/General-Discussion або просто напишіть мені повідомлення на hello@simplemobiletools.com, якщо вам необхідна допомога.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
+            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Я випадково видалив деякі файли, як я можу їх відновити?</string>
     <string name="faq_3_text_commons">На жаль, ви не можете. Файли видаляються негайно після діалогу-підтвердження, функції типу \"Кошик\" не передбачено.</string>
     <string name="faq_4_title_commons">Мені не подобаються кольори віджета, чи можу я їх змінити?</string>
@@ -801,9 +815,14 @@
     <string name="translation">Translation</string>
     <string name="development">Development</string>
     <string name="other_help">Other help</string>
-    <string name="contributors_label">This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-        let us know if you want to help too. The guide to translating is at https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , or just contact us at hello@simplemobiletools.com if you have any questions.
-        Thanks to all contributors and other supporters!</string>
+    <string name="contributors_label">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -844,7 +863,9 @@
     <string name="translation_turkish">Turkish</string>
     <string name="translation_ukrainian">Ukrainian</string>
     <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese">Chinese</string>
+    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
+    <string name="translation_chinese_cn">Chinese (Simplified)</string>
+    <string name="translation_chinese_tw">Chinese (Traditional)</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Отримайте Pro-версію просто зараз!</string>

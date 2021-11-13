@@ -29,6 +29,7 @@
     <string name="select_a_different_color">Kies een andere kleur</string>
     <string name="download">Downloaden</string>
     <string name="notification">Notificatie</string>
+    <string name="notifications">Notifications</string>
     <string name="email">E-mail</string>
     <string name="previous">Vorige</string>
     <string name="playpause">Afspelen / Pauzeren</string>
@@ -513,6 +514,8 @@
     <!-- Settings -->
     <string name="settings">Instellingen</string>
     <string name="purchase_simple_thank_you">Eenvoudig Bedankje kopen</string>
+    <string name="general_settings">Algemeen</string>
+    <string name="color_customization">Kleuren</string>
     <string name="customize_colors">Kleuren aanpassen</string>
     <string name="customize_colors_locked">Kleuren aanpassen (Vergrendeld)</string>
     <string name="customize_widget_colors">Kleuren voor widget aanpassen</string>
@@ -561,6 +564,7 @@
     <string name="startup">Opstarten</string>
     <string name="text">Tekst</string>
     <string name="migrating">Migreren</string>
+    <string name="quality">Quality</string>
 
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Tabs tonen/verbergen</string>
@@ -673,18 +677,24 @@
     <string name="website_label">Bezoek voor de broncode</string>
     <string name="email_label">Stuur reacties of suggesties naar</string>
     <string name="upgrade_to_pro">Upgraden naar Pro-versie</string>
-    <string name="more_apps_underlined"><u>Meer apps</u></string>
-    <string name="more_apps_from_us_underlined"><u>Meer apps van ons</u></string>
-    <string name="third_party_licences_underlined"><u>Licenties van derden</u></string>
-    <string name="invite_friends_underlined"><u>Vrienden uitnodigen</u></string>
+    <string name="more_apps">Meer apps</string>
+    <string name="more_apps_from_us">Meer apps van ons</string>
+    <string name="invite_friends">Vrienden uitnodigen</string>
     <string name="share_text">Hé, bekijk %1$s eens op %2$s</string>
     <string name="invite_via">Uitnodigen via</string>
-    <string name="rate_us_underlined"><u>Beoordeel ons</u></string>
+    <string name="rate_us">Beoordeel ons</string>
     <string name="rate">Beoordelen</string>
     <string name="donate">Doneren</string>
     <string name="donate_underlined"><u>Doneren</u></string>
     <string name="follow_us">Volg ons</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="support">Ondersteuning</string>
+    <string name="help_us">Help ons</string>
+    <string name="social">Sociale media</string>
+    <string name="other">Overig</string>
+    <string name="version_placeholder">Versie %s</string>
+    <string name="hello">Hallo :)</string>
+    <string name="about_footer">Met &#10084;&#65039; gemaakt in Slowakije</string>
     <string name="additional_info">Extra informatie</string>
     <string name="app_version">Versie: %s</string>
     <string name="device_os">Besturingssysteem: %s</string>
@@ -771,8 +781,12 @@
     <string name="faq_1_title_commons">Waarom zie ik de widget van deze app niet in de lijst met widgets?</string>
     <string name="faq_1_text_commons">Waarschijnlijk is de app verplaatst naar de SD-kaart. Android verbergt widgets van apps die zich bevinden op de SD-kaart. De enige oplossing is het verplaatsen van de app naar de Interne Opslag via de instellingen van Android.</string>
     <string name="faq_2_title_commons">Ik wil een bijdrage leveren, maar ik kan geen geld doneren. Kan ik iets anders doen?</string>
-    <string name="faq_2_text_commons">Maar natuurlijk! Vertel anderen over deze apps of geef feedback en positieve beoordelingen. Ook het vertalen van de apps in een nieuwe taal of het bijwerken van bestaande vertalingen wordt gewaardeerd.
-        Een handleiding is te vinden op https://github.com/SimpleMobileTools/General-Discussion , of stuur me een bericht via hello@simplemobiletools.com voor hulp.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Maar natuurlijk! Vertel anderen over deze apps of geef feedback en beoordelingen. Ook het vertalen van de apps in een nieuwe taal of het bijwerken van bestaande vertalingen wordt gewaardeerd.
+            Een handleiding voor vertaling is te vinden op <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">deze website</a>, of stuur een bericht naar <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> voor hulp.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Ik heb per ongeluk bestanden verwijderd, hoe kan ik deze herstellen?</string>
     <string name="faq_3_text_commons">Dat gaat helaas niet lukken. Bestanden worden direct na bevestiging verwijderd; er is geen prullenbak.</string>
     <string name="faq_4_title_commons">Ik vind de kleuren van de widgets niet mooi, kan ik ze veranderen?</string>
@@ -800,9 +814,14 @@
     <string name="translation">Translation</string>
     <string name="development">Development</string>
     <string name="other_help">Other help</string>
-    <string name="contributors_label">This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-        let us know if you want to help too. The guide to translating is at https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , or just contact us at hello@simplemobiletools.com if you have any questions.
-        Thanks to all contributors and other supporters!</string>
+    <string name="contributors_label">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -843,7 +862,9 @@
     <string name="translation_turkish">Turkish</string>
     <string name="translation_ukrainian">Ukrainian</string>
     <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese">Chinese</string>
+    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
+    <string name="translation_chinese_cn">Chinese (Simplified)</string>
+    <string name="translation_chinese_tw">Chinese (Traditional)</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Upgrade nu naar de Pro-versie!</string>
@@ -866,7 +887,7 @@
     <string name="why_upgrade_attendees_emails">Uitnodigingen en e-mailherinneringen</string>
     <string name="why_upgrade_easy_event_importing">Eenvoudig afspraken importeren</string>
     <string name="why_upgrade_new_widgets">Nieuwe widgets</string>
-    
+
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Verbeterd samenvoegen van dubbele contacten</string>
     <string name="why_upgrade_font_size_customization">Lettergroottes aanpassen</string>

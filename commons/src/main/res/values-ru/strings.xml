@@ -29,6 +29,7 @@
     <string name="select_a_different_color">Выберите другой цвет</string>
     <string name="download">Загрузка</string>
     <string name="notification">Уведомление</string>
+    <string name="notifications">Notifications</string>
     <string name="email">Электронная почта</string>
     <string name="previous">Предыдущая</string>
     <string name="playpause">Воспроизведение/Пауза</string>
@@ -86,8 +87,8 @@
     <!-- Renaming -->
     <string name="rename_file">Изменение имени файла</string>
     <string name="rename_folder">Изменение имени папки</string>
-    <string name="rename_file_error">Не удалось переименовать файл</string>
-    <string name="rename_folder_error">Не удалось переименовать папку</string>
+    <string name="rename_file_error">Невозможно переименовать файл</string>
+    <string name="rename_folder_error">Невозможно переименовать папку</string>
     <string name="rename_folder_empty">Имя папки не должно быть пустым</string>
     <string name="rename_folder_exists">Папка с таким именем уже существует</string>
     <string name="rename_folder_root">Нельзя переименовать корневую папку</string>
@@ -103,7 +104,7 @@
     <string name="simple_renaming">Простое переименование</string>
     <string name="pattern_renaming">Шаблон</string>
     <string name="string_to_add">Строка для добавления</string>
-    <string name="rename_date_time_pattern">%Y — год\n%M — месяц\n%D — день\n%h — час\n%m — минута\n%s — секунда\n%i — порядковый номер с 1</string>
+    <string name="rename_date_time_pattern">%Y – год\n%M – месяц\n%D – день\n%h – час\n%m – минута\n%s – секунда\n%i – порядковый номер с 1</string>
     <string name="filename_without_txt">Имя файла (без .txt)</string>
     <string name="filename_without_json">Имя файла (без .json)</string>
 
@@ -117,10 +118,10 @@
     <string name="destination">Путь назначения</string>
     <string name="select_destination">Выберите путь назначения</string>
     <string name="click_select_destination">Нажмите здесь, чтобы выбрать расположение</string>
-    <string name="invalid_destination">Не удалось записать в выбранное расположение</string>
+    <string name="invalid_destination">Невозможно записать в выбранное расположение</string>
     <string name="please_select_destination">Выберите путь назначения</string>
     <string name="source_and_destination_same">Исходный и конечный пути не могут совпадать</string>
-    <string name="copy_failed">Не удалось скопировать файлы</string>
+    <string name="copy_failed">Невозможно скопировать файлы</string>
     <string name="copying">Копирование…</string>
     <string name="copying_success">Копирование файлов завершено</string>
     <string name="copying_success_one">Копирование файла завершено</string>
@@ -132,8 +133,8 @@
     <string name="copying_success_partial">Некоторые файлы не могут быть скопированы</string>
     <string name="no_files_selected">Файлы не выбраны</string>
     <string name="saving">Сохранение…</string>
-    <string name="could_not_create_folder">Не удалось создать папку \"%s\"</string>
-    <string name="could_not_create_file">Не удалось создать файл \"%s\"</string>
+    <string name="could_not_create_folder">Невозможно создать папку \"%s\"</string>
+    <string name="could_not_create_file">Невозможно создать файл \"%s\"</string>
     <string name="no_new_items">Ничего не найдено</string>
     <string name="no_space">По выбранному пути недостаточно свободного места.\nНеобходимо %1$s, доступно %2$s.</string>
 
@@ -351,7 +352,7 @@
     <string name="fingerprint">Отпечаток пальца</string>
     <string name="add_fingerprint">Добавить отпечаток</string>
     <string name="place_finger">Поместите палец на датчик отпечатков</string>
-    <string name="open_biometric_dialog">Открыть диалог подтверджения биометрических данных</string>
+    <string name="open_biometric_dialog">Открыть диалог подтверждения биометрических данных</string>
     <string name="authenticate">Авторизация</string>
     <string name="authentication_failed">Ошибка авторизации</string>
     <string name="authentication_blocked">Авторизация заблокирована, повторите попытку через некоторое время</string>
@@ -546,6 +547,8 @@
     <!-- Settings -->
     <string name="settings">Настройки</string>
     <string name="purchase_simple_thank_you">Купить Simple Thank You</string>
+    <string name="general_settings">Основные</string>
+    <string name="color_customization">Настройка цвета</string>
     <string name="customize_colors">Настройка интерфейса</string>
     <string name="customize_colors_locked">Настройка интерфейса (заблокировано)</string>
     <string name="customize_widget_colors">Настройка цветов виджета</string>
@@ -567,7 +570,7 @@
     <string name="enable_pull_to_refresh">Использовать жест \"потянуть для обновления\" в верхней части экрана</string>
     <string name="use_24_hour_time_format">24-часовой формат времени</string>
     <string name="change_date_and_time_format">Формат даты и времени</string>
-    <string name="sunday_first">Воскресенье — начало недели</string>
+    <string name="sunday_first">Воскресенье – начало недели</string>
     <string name="widgets">Виджеты</string>
     <string name="use_same_snooze">Всегда использовать один и тот же интервал повтора</string>
     <string name="snooze_time">Интервал повтора</string>
@@ -594,6 +597,7 @@
     <string name="startup">Запуск</string>
     <string name="text">Текст</string>
     <string name="migrating">Перенос</string>
+    <string name="quality">Quality</string>
 
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Управление отображаемыми вкладками</string>
@@ -707,18 +711,24 @@
     <string name="website_label">Исходный код можно найти по адресу</string>
     <string name="email_label">Отправить отзывы или предложения</string>
     <string name="upgrade_to_pro">Обновить до Pro</string>
-    <string name="more_apps_underlined"><u>Другие простые приложения</u></string>
-    <string name="more_apps_from_us_underlined"><u>Другие наши приложения</u></string>
-    <string name="third_party_licences_underlined"><u>Лицензии третьих сторон</u></string>
-    <string name="invite_friends_underlined"><u>Предложить другу</u></string>
+    <string name="more_apps">Другие простые приложения</string>
+    <string name="more_apps_from_us">Другие наши приложения</string>
+    <string name="invite_friends">Предложить другу</string>
     <string name="share_text">Попробуйте %1$s по ссылке %2$s</string>
     <string name="invite_via">Предложить с помощью</string>
-    <string name="rate_us_underlined"><u>Оценить в Google Play</u></string>
+    <string name="rate_us">Оценить в Google Play</string>
     <string name="rate">Оценить</string>
     <string name="donate">Поддержать разработчика</string>
     <string name="donate_underlined"><u>Поддержать разработчика</u></string>
     <string name="follow_us">Подписаться на нас</string>
     <string name="copyright">v %1$s\nАвторские права © Simple Mobile Tools %2$d</string>
+    <string name="support">Поддержка</string>
+    <string name="help_us">Помочь нам</string>
+    <string name="social">Сообщество</string>
+    <string name="other">Другое</string>
+    <string name="version_placeholder">Версия %s</string>
+    <string name="hello">Привет :)</string>
+    <string name="about_footer">Сделано с &#10084;&#65039; в Словакии</string>
     <string name="additional_info">Дополнительная информация</string>
     <string name="app_version">Версия приложения: %s</string>
     <string name="device_os">ОС устройства: %s</string>
@@ -804,10 +814,14 @@
     <string name="before_asking_question">Прежде чем задать вопрос, прочитайте</string>
     <string name="faq_1_title_commons">Почему я не вижу виджет этого приложения в списке виджетов?</string>
     <string name="faq_1_text_commons">Это, скорее всего, потому, что вы перенесли приложение на SD-карту. Существует ограничение системы Android, которое скрывает виджеты приложения
-        в этом случае. Единственное решение — переместить приложение обратно во внутреннее хранилище через настройки вашего устройства.</string>
+        в этом случае. Единственное решение – переместить приложение обратно во внутреннее хранилище через настройки вашего устройства.</string>
     <string name="faq_2_title_commons">Я хочу поддержать вас, но не могу пожертвовать деньги. Есть ли что-нибудь ещё, что я могу сделать?</string>
-    <string name="faq_2_text_commons">Да, конечно. Вы можете распространять информацию о приложениях или давать хорошие отзывы и оценки. Также вы можете помочь, переведя приложения на новый язык или просто обновив существующие переводы.
-        Руководство можно найти по адресу https://github.com/SimpleMobileTools/General-Discussion или просто написать мне короткое сообщение на hello@simplemobiletools.com , если вам нужна помощь.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Да, конечно. Вы можете рассказывать о наших приложениях или дать хорошие отзывы и оценки. Также вы можете помочь, переведя приложения на новый язык или обновив существующий перевод.
+            Руководство по переводу находится <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">здесь</a>. Можно просто связаться с нами по электронной почте <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a>, если у вас есть какие-либо вопросы.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Я по ошибке удалил некоторые файлы, как их восстановить?</string>
     <string name="faq_3_text_commons">К сожалению, вы не сможете. Файлы удаляются сразу после диалога подтверждения, функции вроде \"корзины\" не предусмотрено.</string>
     <string name="faq_4_title_commons">Мне не нравятся цвета виджета, я могу их изменить?</string>
@@ -824,9 +838,9 @@
         Это разовая покупка, которая означает, что вам никогда не придётся платить снова. Даже после смены устройства. Если вам не понравится версия Pro, вы можете просто удалить её в течение нескольких часов, после чего автоматически получите свои деньги обратно.
         Если вы захотите вернуть деньги в любое время позже, просто свяжитесь с нами по адресу hello@simplemobiletools.com и мы вернём их.</string>
     <string name="faq_9_title_commons">Как выбрать сразу несколько элементов?</string>
-    <string name="faq_9_text_commons">Есть несколько способов сделать это. Первый — это включить режим выделения длительным нажатием на одном элементе, а затем выделять другие короткими нажатиями на них.
+    <string name="faq_9_text_commons">Есть несколько способов сделать это. Первый – это включить режим выделения длительным нажатием на одном элементе, а затем выделять другие короткими нажатиями на них.
         Второй способ аналогичен выбору элементов на ПК с помощью мыши: включите режим выбора длительным нажатием на одном элементе, затем, не отпуская пальца, проведите им по другим элементам для выбора. 
-        Третий способ выбора нескольких элементов — длительное нажатие на один элемент, затем длительное нажатие на другой, и всё, что находится между ними, выбирается. 
+        Третий способ выбора нескольких элементов – длительное нажатие на один элемент, затем длительное нажатие на другой, и всё, что находится между ними, выбирается. 
         Если нужно выбрать все элементы, длительным нажатием выделите один элемент, а затем нажмите на счётчик выбранных элементов в левом верхнем углу. Это действие выберет или отменит выбор всего.</string>
     <string name="faq_10_title_commons">Я купил приложение, но не могу загрузить его на другое устройство.</string>
     <string name="faq_10_text_commons">Попробуйте очистить кеш приложения Google Play и перезагрузить устройство. Это какая-то ошибка в Google Play, не связанная с самим приложением.</string>
@@ -836,9 +850,14 @@
     <string name="translation">Перевод</string>
     <string name="development">Разработка</string>
     <string name="other_help">Другая помощь</string>
-    <string name="contributors_label">В данном списке перечислены все, кто заметно помог любому приложению из набора Simple Mobile Tools, а не только этому. Переводы осуществляются добровольцами,
-        дайте знать, если тоже хотите помочь. Руководство по переводу размещено здесь: https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file; также можно связаться с нами по адресу hello@simplemobiletools.com, если будут вопросы.
-        Спасибо всем участникам и другим помощникам!</string>
+    <string name="contributors_label">
+        <![CDATA[
+            В данном списке перечислены все, кто заметно помог любому приложению из набора Simple Mobile Tools, а не только этому. Переводы выполняются волонтёрами,
+            дайте нам знать, если вы тоже хотите помочь. Руководство по переводу находится <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">здесь</a>. Можно просто связаться с нами по электронной почте <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a>, если у вас есть какие-либо вопросы.
+            Спасибо всем участникам и другим помощникам!
+        ]]>
+    </string>
+
     <string name="translation_arabic">Арабский</string>
     <string name="translation_azerbaijani">Азербайджанский</string>
     <string name="translation_bengali">Бенгальский</string>
@@ -853,7 +872,7 @@
     <string name="translation_basque">Баскский</string>
     <string name="translation_persian">Персидский</string>
     <string name="translation_finnish">Финский</string>
-    <string name="translation_french">Французкий</string>
+    <string name="translation_french">Французский</string>
     <string name="translation_galician">Галицкий</string>
     <string name="translation_hindi">Хинди</string>
     <string name="translation_croatian">Хорватский</string>
@@ -879,7 +898,9 @@
     <string name="translation_turkish">Турецкий</string>
     <string name="translation_ukrainian">Украинский</string>
     <string name="translation_vietnamese">Вьетнамский</string>
-    <string name="translation_chinese">Китайский</string>
+    <string name="translation_chinese_hk">Китайский (Гонконг)</string>
+    <string name="translation_chinese_cn">Китайский (упрощённый)</string>
+    <string name="translation_chinese_tw">Китайский (традиционный)</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Получите Pro-версию прямо сейчас!</string>

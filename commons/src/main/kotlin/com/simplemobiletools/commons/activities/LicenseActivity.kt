@@ -3,12 +3,13 @@ package com.simplemobiletools.commons.activities
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
+import android.widget.LinearLayout
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.License
 import kotlinx.android.synthetic.main.activity_license.*
-import kotlinx.android.synthetic.main.license_item.view.*
+import kotlinx.android.synthetic.main.item_license.view.*
 import java.util.*
 
 class LicenseActivity : BaseSimpleActivity() {
@@ -20,7 +21,8 @@ class LicenseActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_license)
 
-        val linkColor = getAdjustedPrimaryColor()
+        val dividerMargin = resources.getDimension(R.dimen.medium_margin).toInt()
+        val titleColor = getAdjustedPrimaryColor()
         val textColor = baseConfig.textColor
         updateTextColors(licenses_holder)
 
@@ -29,19 +31,23 @@ class LicenseActivity : BaseSimpleActivity() {
         val licenseMask = intent.getIntExtra(APP_LICENSES, 0) or LICENSE_KOTLIN
         licenses.filter { licenseMask and it.id != 0 }.forEach {
             val license = it
-            inflater.inflate(R.layout.license_item, null).apply {
+            inflater.inflate(R.layout.item_license, null).apply {
+                background.applyColorFilter(baseConfig.backgroundColor.getContrastColor())
                 license_title.apply {
                     text = getString(license.titleId)
-                    underlineText()
-                    setTextColor(linkColor)
+                    setTextColor(titleColor)
                     setOnClickListener {
                         launchViewIntent(license.urlId)
                     }
                 }
 
-                license_text.text = getString(license.textId)
-                license_text.setTextColor(textColor)
+                license_text.apply {
+                    text = getString(license.textId)
+                    setTextColor(textColor)
+                }
+
                 licenses_holder.addView(this)
+                (layoutParams as LinearLayout.LayoutParams).bottomMargin = dividerMargin
             }
         }
     }

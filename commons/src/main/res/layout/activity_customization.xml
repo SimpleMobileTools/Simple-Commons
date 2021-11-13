@@ -216,18 +216,15 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/customization_navigation_bar_color_holder"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:background="?attr/selectableItemBackground">
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginBottom="@dimen/big_margin">
 
-            <com.simplemobiletools.commons.views.MyTextView
+            <android.widget.TextView
                 android:id="@+id/apply_to_all"
+                style="@style/ColoredButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_background"
-                android:clickable="false"
-                android:padding="@dimen/activity_margin"
-                android:text="@string/apply_to_all_apps"
-                android:textSize="@dimen/normal_text_size" />
+                android:text="@string/apply_to_all_apps" />
 
         </RelativeLayout>
     </RelativeLayout>

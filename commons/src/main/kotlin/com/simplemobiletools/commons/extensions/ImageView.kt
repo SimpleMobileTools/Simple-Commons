@@ -4,16 +4,15 @@ import android.graphics.PorterDuff
 import android.graphics.drawable.GradientDrawable
 import android.widget.ImageView
 
-fun ImageView.setFillWithStroke(fillColor: Int, backgroundColor: Int, cornerRadiusSize: Float = 0f) {
-    val strokeColor = backgroundColor.getContrastColor()
+fun ImageView.setFillWithStroke(fillColor: Int, backgroundColor: Int) {
     GradientDrawable().apply {
-        shape = GradientDrawable.RECTANGLE
+        shape = GradientDrawable.OVAL
         setColor(fillColor)
-        setStroke(2, strokeColor)
         background = this
 
-        if (cornerRadiusSize != 0f) {
-            cornerRadius = cornerRadiusSize
+        if (backgroundColor == fillColor || fillColor == -2 && backgroundColor == -1) {
+            val strokeColor = backgroundColor.getContrastColor().adjustAlpha(0.5f)
+            setStroke(2, strokeColor)
         }
     }
 }

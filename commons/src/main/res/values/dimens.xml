@@ -33,6 +33,7 @@
     <dimen name="rounded_corner_radius_small">4dp</dimen>
     <dimen name="rounded_corner_radius_big">10dp</dimen>
     <dimen name="bottom_sheet_corner_radius">24dp</dimen>
+    <dimen name="breadcrumbs_layout_height">48dp</dimen>
 
     <dimen name="dragselect_hotspot_height">56dp</dimen>
     <dimen name="selection_check_size">26dp</dimen>
@@ -50,5 +51,4 @@
     <dimen name="big_text_size">18sp</dimen>
     <dimen name="actionbar_text_size">20sp</dimen>
     <dimen name="extra_big_text_size">22sp</dimen>
-    <dimen name="breadcrumbs_layout_height">48dp</dimen>
 </resources>

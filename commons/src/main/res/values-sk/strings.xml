@@ -28,7 +28,8 @@
     <string name="transparent_color">Priesvitná farba</string>
     <string name="select_a_different_color">Zvoliť inú farbu</string>
     <string name="download">Stiahnuť</string>
-    <string name="notification">Pripomienka</string>
+    <string name="notification">Upozornenie</string>
+    <string name="notifications">Upozornenia</string>
     <string name="email">Email</string>
     <string name="previous">Predošlá</string>
     <string name="playpause">Hrať / Pauznúť</string>
@@ -546,6 +547,8 @@
     <!-- Settings -->
     <string name="settings">Nastavenia</string>
     <string name="purchase_simple_thank_you">Kúpiť Jednoduché Ďakujem</string>
+    <string name="general_settings">Všeobecné</string>
+    <string name="color_customization">Úprava farieb</string>
     <string name="customize_colors">Upraviť farby</string>
     <string name="customize_colors_locked">Upraviť farby (Uzamknuté)</string>
     <string name="customize_widget_colors">Upraviť farby widgetov</string>
@@ -594,6 +597,7 @@
     <string name="startup">Po spustení</string>
     <string name="text">Text</string>
     <string name="migrating">Migrovanie</string>
+    <string name="quality">Kvalita</string>
 
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Spravovať zobrazené karty</string>
@@ -707,18 +711,24 @@
     <string name="website_label">Pre zdrojové kódy navštívte</string>
     <string name="email_label">Odozvu a návrhy posielajte na</string>
     <string name="upgrade_to_pro">Stiahnuť Pro verziu</string>
-    <string name="more_apps_underlined"><u>Viac aplikácií</u></string>
-    <string name="more_apps_from_us_underlined"><u>Viac aplikácií od nás</u></string>
-    <string name="third_party_licences_underlined"><u>Licencie tretích strán</u></string>
-    <string name="invite_friends_underlined"><u>Pozvať priateľov</u></string>
+    <string name="more_apps">Viac aplikácií</string>
+    <string name="more_apps_from_us">Viac aplikácií od nás</string>
+    <string name="invite_friends">Pozvať priateľov</string>
     <string name="share_text">Ahoj, skús %1$s na %2$s</string>
     <string name="invite_via">Pozvať cez</string>
-    <string name="rate_us_underlined"><u>Ohodnotiť aplikáciu</u></string>
+    <string name="rate_us">Ohodnotiť aplikáciu</string>
     <string name="rate">Ohodnotiť</string>
     <string name="donate">Podporiť</string>
     <string name="donate_underlined"><u>Podporiť</u></string>
     <string name="follow_us">Sledujte nás</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="support">Podpora</string>
+    <string name="help_us">Pomôžte nám</string>
+    <string name="social">Sociálne siete</string>
+    <string name="other">Iné</string>
+    <string name="version_placeholder">Verzia %s</string>
+    <string name="hello">Ahoj :)</string>
+    <string name="about_footer">Vyrobené so &#10084;&#65039; na Slovensku</string>
     <string name="additional_info">Dodatočné informácie</string>
     <string name="app_version">Verzia aplikácie: %s</string>
     <string name="device_os">Operačný systém zariadenia: %s</string>
@@ -806,8 +816,12 @@
     <string name="faq_1_text_commons">Je to pravdepodobne spôsobené tým, že ste apku presunuli na SD kartu. Ide o systémové obmedzenie, ktoré v tomto prípade skryje widget apky.
         Jediným riešením je presunutie apky späť na internú pamäť cez nastavnenia zariadenia.</string>
     <string name="faq_2_title_commons">Chcem vás podporiť, ale neviem poslať peniaze. Viem pre vás urobiť aj niečo iné?</string>
-    <string name="faq_2_text_commons">Áno, samozrejme. Môžete napr. šíriť apky medzi známymi, alebo nám poslať užitočnú odozvu a hodnotenia. Viete pomôcť aj preložením apiek do nových jazykov, alebo upraviť existujúce preklady.
-        Návod nájdete na https://github.com/SimpleMobileTools/General-Discussion , alebo mi v prípade potreby pošlite email na hello@simplemobiletools.com.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Áno, samozrejme. Môžete napr. šíriť apky medzi známymi, alebo nám poslať užitočnú odozvu a hodnotenia. Viete pomôcť aj preložením apiek do nových jazykov, alebo upraviť existujúce preklady.
+            Návod na prekladanie je na <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">tejto webstránke</a>, alebo nám v prípade potreby napíšte na <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a>.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Náhodou som vymazal niektoré súbory, viem ich obnoviť?</string>
     <string name="faq_3_text_commons">Žiaľ, nie. Súbory sú mazané okamžite po potvrdení, nie je dostupný žiadny smetný kôš.</string>
     <string name="faq_4_title_commons">Nepáčia sa mi farby widgetu, viem ich zmeniť?</string>
@@ -835,9 +849,14 @@
     <string name="translation">Preklad</string>
     <string name="development">Vývoj</string>
     <string name="other_help">Iná pomoc</string>
-    <string name="contributors_label">Tento zoznam obsahuje každého, kto citeľne pomohol ktorejkoľvek apke z celej sady Simple Mobile Tools, nie iba tejto apke. Preklady sú spracovávané dobrovoľníkmi,
-        dajte nám vedieť, ak chcete pomôcť tiež. Návod na prekladanie je na https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , alebo ak máte nejaké otázky, tak nám jednoducho napíšte na hello@simplemobiletools.com.
-        Ďakujeme všetkým prispievateľom a iným podporovateľom!</string>
+    <string name="contributors_label">
+        <![CDATA[
+            Tento zoznam obsahuje každého, kto citeľne pomohol ktorejkoľvek apke z celej sady Simple Mobile Tools, nie iba tejto apke. Preklady sú spracovávané dobrovoľníkmi,
+            dajte nám vedieť, ak chcete pomôcť tiež. Návod na prekladanie je na <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">tejto webstránke</a>, alebo ak máte nejaké otázky, tak nám jednoducho napíšte na <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a>.
+            Ďakujeme všetkým prispievateľom a iným podporovateľom!
+        ]]>
+    </string>
+
     <string name="translation_arabic">Arabčina</string>
     <string name="translation_azerbaijani">Azerbajdžančina</string>
     <string name="translation_bengali">Bengálčina</string>
@@ -878,7 +897,9 @@
     <string name="translation_turkish">Turečtina</string>
     <string name="translation_ukrainian">Ukrajinčina</string>
     <string name="translation_vietnamese">Vietnamčina</string>
-    <string name="translation_chinese">Čínština</string>
+    <string name="translation_chinese_hk">Čínština (Hong Kong)</string>
+    <string name="translation_chinese_cn">Čínština (zjednodušená)</string>
+    <string name="translation_chinese_tw">Čínština (tradičná)</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Prejdite na Pro verziu teraz!</string>

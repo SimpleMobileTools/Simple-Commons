@@ -18,11 +18,8 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.getFilePlaceholderDrawables
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.MyRecyclerView
-import java.util.HashMap
-import java.util.Locale
-import kotlinx.android.synthetic.main.filepicker_list_item.view.list_item_details
-import kotlinx.android.synthetic.main.filepicker_list_item.view.list_item_icon
-import kotlinx.android.synthetic.main.filepicker_list_item.view.list_item_name
+import kotlinx.android.synthetic.main.item_filepicker_list.view.*
+import java.util.*
 
 class FilepickerItemsAdapter(
     activity: BaseSimpleActivity, val fileDirItems: List<FileDirItem>, recyclerView: MyRecyclerView,
@@ -43,7 +40,7 @@ class FilepickerItemsAdapter(
 
     override fun getActionMenuId() = 0
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.filepicker_list_item, parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.item_filepicker_list, parent)
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val fileDirItem = fileDirItems[position]

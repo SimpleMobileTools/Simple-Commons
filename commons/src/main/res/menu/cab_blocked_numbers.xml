@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/cab_copy_number"
-        android:icon="@drawable/ic_copy"
+        android:icon="@drawable/ic_copy_vector"
         android:title="@string/copy_number_to_clipboard"
         app:showAsAction="ifRoom" />
     <item

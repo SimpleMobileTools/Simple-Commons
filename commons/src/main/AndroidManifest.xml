@@ -25,7 +25,7 @@
         android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"
         tools:node="remove" />
 
-    <application>
+    <application android:supportsRtl="true">
         <activity
             android:name="com.simplemobiletools.commons.activities.ContributorsActivity"
             android:label="@string/contributors"

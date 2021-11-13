@@ -29,6 +29,7 @@
     <string name="select_a_different_color">Wybierz inny kolor</string>
     <string name="download">Pobierz</string>
     <string name="notification">Powiadomienie</string>
+    <string name="notifications">Powiadomienia</string>
     <string name="email">E-mail</string>
     <string name="previous">Poprzedni</string>
     <string name="playpause">Odtwórz/Wstrzymaj</string>
@@ -540,6 +541,8 @@
     <!-- Settings -->
     <string name="settings">Ustawienia</string>
     <string name="purchase_simple_thank_you">Kup aplikację „Proste podziękowanie”</string>
+    <string name="general_settings">Ogólne</string>
+    <string name="color_customization">Dostosowywanie kolorów</string>
     <string name="customize_colors">Dostosuj kolory aplikacji</string>
     <string name="customize_colors_locked">Dostosuj kolory aplikacji (Zablokowane)</string>
     <string name="customize_widget_colors">Dostosuj kolory widżetu</string>
@@ -556,7 +559,7 @@
     <string name="password_protect_file_deletion">Chroń pliki przed usunięciem i przeniesieniem</string>
     <string name="keep_last_modified">Utrzymuj starą datę modyfikacji po operacjach na plikach</string>
     <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
-    <string name="prevent_phone_from_sleeping">Zapobiegaj przejściu urządzenia w stan uśpienia, gdy aplikacja jest aktywna</string>
+    <string name="prevent_phone_from_sleeping">Zapobiegaj przechodzeniu urządzenia w tryb uśpienia, gdy aplikacja jest aktywna</string>
     <string name="skip_delete_confirmation">Nie pokazuj okna z potwierdzeniem usunięcia elementów</string>
     <string name="enable_pull_to_refresh">Włącz gest pociągnięcia ekranu od góry w celu odświeżenia widoku</string>
     <string name="use_24_hour_time_format">Używaj 24-godzinnego formatu czasu</string>
@@ -588,6 +591,7 @@
     <string name="startup">Uruchamianie</string>
     <string name="text">Tekst</string>
     <string name="migrating">Migracja</string>
+    <string name="quality">Jakość</string>
 
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Zarządzaj pokazywanymi kartami</string>
@@ -679,13 +683,13 @@
     <string name="saturday_letter">S</string>
     <string name="sunday_letter">N</string>
 
-    <string name="monday_short">Pon.</string>
-    <string name="tuesday_short">Wt.</string>
-    <string name="wednesday_short">Śr.</string>
-    <string name="thursday_short">Czw.</string>
-    <string name="friday_short">Pt.</string>
-    <string name="saturday_short">Sob.</string>
-    <string name="sunday_short">Ndz.</string>
+    <string name="monday_short">pon.</string>
+    <string name="tuesday_short">wt.</string>
+    <string name="wednesday_short">śr.</string>
+    <string name="thursday_short">czw.</string>
+    <string name="friday_short">pt.</string>
+    <string name="saturday_short">sob.</string>
+    <string name="sunday_short">niedz.</string>
 
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Twoja wersja aplikacji nie będzie już aktualizowana. Uaktualnij do wersji Pro, aby otrzymywać nowe poprawki i inne ulepszenia.</string>
@@ -700,18 +704,24 @@
     <string name="website_label">Kod źródłowy można znaleźć na stronie</string>
     <string name="email_label">Wyślij swoje uwagi lub sugestie na:</string>
     <string name="upgrade_to_pro">Uaktualnij do Pro</string>
-    <string name="more_apps_underlined"><u>Więcej aplikacji</u></string>
-    <string name="more_apps_from_us_underlined"><u>Więcej naszych aplikacji</u></string>
-    <string name="third_party_licences_underlined"><u>Licencje innych firm</u></string>
-    <string name="invite_friends_underlined"><u>Zaproponuj aplikację znajomym</u></string>
+    <string name="more_apps">Więcej aplikacji</string>
+    <string name="more_apps_from_us">Więcej naszych aplikacji</string>
+    <string name="invite_friends">Zaproponuj aplikację znajomym</string>
     <string name="share_text">Hej! Sprawdź aplikację %1$s na %2$s</string>
     <string name="invite_via">Zaproś za pomocą:</string>
-    <string name="rate_us_underlined"><u>Oceń aplikację</u></string>
+    <string name="rate_us">Oceń aplikację</string>
     <string name="rate">Oceń</string>
     <string name="donate">Przekaż datek</string>
     <string name="donate_underlined"><u>Przekaż datek</u></string>
     <string name="follow_us">Śledź nas</string>
     <string name="copyright">Wersja %1$s\n© Simple Mobile Tools %2$d</string>
+    <string name="support">Wsparcie</string>
+    <string name="help_us">Pomóż nam</string>
+    <string name="social">Portale społecznościowe</string>
+    <string name="other">Inne</string>
+    <string name="version_placeholder">Wersja %s</string>
+    <string name="hello">Cześć :)</string>
+    <string name="about_footer">Zrobione z &#10084;&#65039; na Słowacji</string>
     <string name="additional_info">Dodatkowe informacje</string>
     <string name="app_version">Wersja aplikacji: %s</string>
     <string name="device_os">System: %s</string>
@@ -725,11 +735,11 @@
     <string name="purchase">Kup</string>
     <string name="update_thank_you">Zaktualizuj aplikację Proste podziękowanie do najnowszej wersji</string>
     <string name="before_asking_question_read_faq">Zanim zadasz pytanie, najpierw sprawdź ustawienia aplikacji i przeczytaj często zadawane pytania. Może znajduje się tam rozwiązanie.</string>
-    <string name="before_rate_read_faq">Zanim nas ocenisz, sprawdź najpierw ustawienia aplikacji i przeczytaj często zadawane pytania. Jeśli masz jakieś problemy, może rozwiązanie już tam jest.</string>
-    <string name="make_sure_latest">Upewnij się, czy używasz najnowszej wersji aplikacji.</string>
+    <string name="before_rate_read_faq">Zanim nas ocenisz, sprawdź ustawienia aplikacji i przeczytaj często zadawane pytania. Jeśli masz jakieś problemy, może jest tam rozwiązanie.</string>
+    <string name="make_sure_latest">Upewnij się, że używasz najnowszej wersji aplikacji.</string>
     <string name="read_it">Przeczytaj to</string>
     <string name="read_faq">Przeczytaj FAQ</string>
-    <string name="rate_us_prompt">Witaj,\n\nwygląda na to, że używasz tej aplikacji już od dłuższego czasu i naprawdę to doceniamy.\n\nJeśli możemy prosić Cię o przysługę, to oceń nas w Google Play. To by nam naprawdę bardzo pomogło.\n\nNiezależnie od tego, co zdecydujesz, nie zobaczysz tej wiadomości ponownie.\n\nDzięki!</string>
+    <string name="rate_us_prompt">Witaj!\n\nWygląda na to, że używasz tej aplikacji już od dłuższego czasu i naprawdę to doceniamy.\n\nJeśli możemy poprosić Cię o przysługę, to oceń nas w Google Play. To by nam naprawdę bardzo pomogło.\n\nBez względu na to, jak zdecydujesz, nie zobaczysz tej wiadomości ponownie.\n\nDzięki!</string>
     <string name="rate_our_app">Oceń naszą aplikację :)</string>
     <string name="thank_you">Dziękujemy</string>
     <string name="widget_locked_pro">Widżet jest zablokowany.\nUaktualnij do wersji Pro, aby go odblokować.</string>
@@ -798,7 +808,12 @@
     <string name="faq_1_title_commons">Dlaczego nigdzie nie widzę widżetu aplikacji?</string>
     <string name="faq_1_text_commons">Zapewne dlatego, że aplikacja została zainstalowana na karcie pamięci. Jedynym rozwiązaniem problemu jest przeniesienie aplikacji do pamięci wewnętrznej. Jest to ograniczenie systemu.</string>
     <string name="faq_2_title_commons">Chcę Was wesprzeć, ale nie mam jak wpłacić pieniędzy. Czy mogę zrobić coś innego?</string>
-    <string name="faq_2_text_commons">Oczywiście. Możesz powiedzieć światu o naszych aplikacjach, podzielić się opinią i oceną w Sklepie Google Play, lub też wspomóc tłumaczenie aplikacji na nowe języki (bądź poprawić już istniejące tłumaczenia). Instrukcję znajdziesz pod adresem https://github.com/SimpleMobileTools/General-Discussion. Możesz też napisać do nas na adres hello@simplemobiletools.com, jeśli potrzebujesz pomocy.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Oczywiście. Możesz powiedzieć światu o naszych aplikacjach lub podzielić się opinią i oceną w Sklepie Google Play. Możesz też pomóc, tłumacząc aplikacje na nowy język lub po prostu zaktualizować istniejące tłumaczenia.
+            Instrukcja jak tłumaczyć znajduje się na <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">tej stronie</a>, albo po prostu skontaktuj się z nami pod adresem <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a>, jeśli masz jakiekolwiek pytania.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Przypadkowo usunąłem kilka plików. Mogę je jakoś odzyskać?</string>
     <string name="faq_3_text_commons">Pliki są usuwane zaraz po naciśnięciu w oknie potwierdzającym. System Android nie ma wbudowanego kosza.</string>
     <string name="faq_4_title_commons">Nie podobają mi się domyślne kolory widżetów. Mogę je jakoś zmienić?</string>
@@ -826,9 +841,14 @@
     <string name="translation">Tłumaczenie</string>
     <string name="development">Rozwój</string>
     <string name="other_help">Inna pomoc</string>
-    <string name="contributors_label">Ta lista zawiera wszystkich, którzy zauważalnie pomogli przy którejkolwiek z prostych aplikacji od Simple Mobile Tools, nie tylko przy tej. Tłumaczeniami zajmują się wolontariusze;
-        daj nam znać, jeśli też chcesz pomóc. Instrukcja jak tłumaczyć znajduje się na https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file, lub po prostu skontaktuj się z nami pod adresem hello@simplemobiletools.com, jeśli masz jakieś pytania.
-        Dziękuję wszystkim współtwórcom i innym wspierającym!</string>
+    <string name="contributors_label">
+        <![CDATA[
+            Ta lista zawiera wszystkich, którzy zauważalnie pomogli przy którejkolwiek z prostych aplikacji od Simple Mobile Tools, nie tylko przy tej. Tłumaczeniami zajmują się wolontariusze;
+            daj nam znać, jeśli też chcesz pomóc. Instrukcja jak tłumaczyć znajduje się na <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">tej stronie</a>, albo po prostu skontaktuj się z nami pod adresem <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a>, jeśli masz jakiekolwiek pytania.
+            Dziękuję wszystkim współtwórcom i innym wspierającym!
+        ]]>
+    </string>
+
     <string name="translation_arabic">arabski</string>
     <string name="translation_azerbaijani">azerski</string>
     <string name="translation_bengali">bengalski</string>
@@ -869,7 +889,9 @@
     <string name="translation_turkish">turecki</string>
     <string name="translation_ukrainian">ukraiński</string>
     <string name="translation_vietnamese">wietnamski</string>
-    <string name="translation_chinese">chiński</string>
+    <string name="translation_chinese_hk">chiński (Hongkong)</string>
+    <string name="translation_chinese_cn">chiński (uproszczony)</string>
+    <string name="translation_chinese_tw">chiński (tradycyjny)</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Pobierz wersję Pro już teraz!</string>
@@ -877,7 +899,7 @@
     <string name="why_upgrade_pro_version">Pro</string>
     <string name="why_upgrade_no_ads">Brak reklam</string>
     <string name="why_upgrade_no_internet_access">Bez dostępu do Internetu</string>
-    <string name="why_upgrade_footer">+100% gwarancja zwrotu pieniędzy</string>
+    <string name="why_upgrade_footer">+ 100% gwarancja zwrotu pieniędzy</string>
     <string name="why_upgrade_improved_design">Udoskonalony wygląd</string>
 
     <!-- Gallery Pro -->

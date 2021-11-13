@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/contributors_scrollview"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,658 +8,1530 @@
         android:id="@+id/contributors_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="@dimen/activity_margin">
+        android:orientation="vertical">
 
-        <com.simplemobiletools.commons.views.MyTextView
+        <TextView
             android:id="@+id/contributors_development_label"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:gravity="center_horizontal"
             android:text="@string/development"
-            android:textColor="@color/color_primary" />
+            android:textSize="@dimen/big_text_size" />
 
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_development"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/contributors_development_holder"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/contributors_developers"
-            tools:text="John, Joe" />
+            android:layout_margin="@dimen/medium_margin"
+            android:background="@drawable/section_holder_stroke">
 
-        <com.simplemobiletools.commons.views.MyTextView
+            <ImageView
+                android:id="@+id/contributors_development_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_alignTop="@+id/contributors_development"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:contentDescription="@null"
+                android:padding="@dimen/medium_margin"
+                android:src="@drawable/ic_code_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_development"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_development_icon"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/normal_margin"
+                android:paddingEnd="@dimen/normal_margin"
+                android:paddingBottom="@dimen/normal_margin"
+                android:text="@string/contributors_developers"
+                android:textSize="@dimen/bigger_text_size" />
+
+        </RelativeLayout>
+
+        <TextView
             android:id="@+id/contributors_translation_label"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_margin"
+            android:gravity="center_horizontal"
             android:text="@string/translation"
-            android:textColor="@color/color_primary" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_arabic_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translation_arabic"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_arabic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_arabic"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_azerbaijani_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_azerbaijani"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_azerbaijani"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_azerbaijani"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_bengali_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_bengali"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_bengali"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_bengali"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_breton_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_breton"
-            android:textAllCaps="true"
-            android:visibility="gone" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_breton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_breton"
-            android:visibility="gone"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_catalan_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_catalan"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_catalan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_catalan"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_czech_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_czech"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_czech"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_czech"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_welsh_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_welsh"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_welsh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_welsh"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_danish_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_danish"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_danish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_danish"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_german_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_german"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_german"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_german"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_greek_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_greek"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_greek"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_greek"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_spanish_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_spanish"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_spanish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_spanish"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_basque_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_basque"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_basque"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_basque"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_persian_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_persian"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_persian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_persian"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_finnish_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_finnish"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_finnish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_finnish"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_french_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_french"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_french"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_french"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_galician_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_galician"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_galician"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_galician"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_hindi_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_hindi"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_hindi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_hindi"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_croatian_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_croatian"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_croatian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_croatian"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_hungarian_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_hungarian"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_hungarian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_hungarian"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_indonesian_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_indonesian"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_indonesian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_indonesian"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_italian_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_italian"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_italian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_italian"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_hebrew_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_hebrew"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_hebrew"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_hebrew"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_japanese_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_japanese"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_japanese"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_japanese"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_korean_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_korean"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_korean"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_korean"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_lithuanian_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_lithuanian"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_lithuanian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_lithuanian"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_nepali_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_nepali"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_nepali"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_nepali"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_norwegian_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_norwegian"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_norwegian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_norwegian"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_dutch_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_dutch"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_dutch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_dutch"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_polish_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_polish"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_polish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_polish"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_portuguese_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_portuguese"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_portuguese"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_portuguese"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_romanian_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_romanian"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_romanian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_romanian"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_russian_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_russian"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_russian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_russian"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_slovak_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_slovak"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_slovak"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_slovak"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_slovenian_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_slovenian"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_slovenian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_slovenian"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_serbian_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_serbian"
-            android:textAllCaps="true"
-            android:visibility="gone" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_serbian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_serbian"
-            android:visibility="gone"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_swedish_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_swedish"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_swedish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_swedish"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_tamil_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_tamil"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_tamil"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_tamil"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_turkish_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_turkish"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_turkish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_turkish"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_ukrainian_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_ukrainian"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_ukrainian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_ukrainian"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_vietnamese_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_vietnamese"
-            android:textAllCaps="true"
-            android:visibility="gone" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_vietnamese"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_vietnamese"
-            android:visibility="gone"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_chinese_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/translation_chinese"
-            android:textAllCaps="true" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_chinese"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/translators_chinese"
-            tools:text="Jenny, Jim" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/contributors_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/big_margin"
-            android:autoLink="email|web"
-            android:text="@string/contributors_label" />
-
+            android:textSize="@dimen/big_text_size" />
+
+        <RelativeLayout
+            android:id="@+id/contributors_translation_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/medium_margin"
+            android:background="@drawable/section_holder_stroke"
+            android:paddingTop="@dimen/normal_margin"
+            android:paddingBottom="@dimen/activity_margin">
+
+            <ImageView
+                android:id="@+id/contributors_arabic_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_arabic_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_arabic_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_arabic_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_arabic_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_arabic"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_arabic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_arabic_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_arabic_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_arabic"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_azerbaijani_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_arabic"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_azerbaijani_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_azerbaijani_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_azerbaijani_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_azerbaijani_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_azerbaijani"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_azerbaijani"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_azerbaijani_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_azerbaijani_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_azerbaijani"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_bengali_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_azerbaijani"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_bengali_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_bengali_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_bengali_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_bengali_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_bengali"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_bengali"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_bengali_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_bengali_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_bengali"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_catalan_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_bengali"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_catalan_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_catalan_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_catalan_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_catalan_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_catalan"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_catalan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_catalan_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_catalan_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_catalan"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_czech_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_catalan"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_czech_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_czech_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_czech_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_czech_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_czech"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_czech"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_czech_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_czech_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_czech"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_welsh_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_czech"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_welsh_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_welsh_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_welsh_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_welsh_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_welsh"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_welsh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_welsh_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_welsh_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_welsh"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_danish_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_welsh"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_danish_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_danish_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_danish_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_danish_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_danish"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_danish"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_danish_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_danish_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_danish"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_german_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_danish"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_german_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_german_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_german_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_german_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_german"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_german"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_german_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_german_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_german"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_greek_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_german"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_greek_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_greek_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_greek_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_greek_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_greek"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_greek"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_greek_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_greek_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_greek"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_spanish_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_greek"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_spanish_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_spanish_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_spanish_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_spanish_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_spanish"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_spanish"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_spanish_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_spanish_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_spanish"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_basque_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_spanish"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_basque_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_basque_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_basque_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_basque_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_basque"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_basque"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_basque_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_basque_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_basque"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_persian_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_basque"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_persian_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_persian_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_persian_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_persian_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_persian"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_persian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_persian_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_persian_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_persian"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_finnish_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_persian"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_finnish_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_finnish_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_finnish_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_finnish_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_finnish"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_finnish"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_finnish_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_finnish_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_finnish"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_french_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_finnish"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_french_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_french_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_french_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_french_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_french"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_french"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_french_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_french_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_french"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_galician_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_french"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_galician_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_galician_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_galician_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_galician_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_galician"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_galician"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_galician_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_galician_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_galician"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_hindi_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_galician"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_hindi_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_hindi_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_hindi_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_hindi_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_hindi"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_hindi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_hindi_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_hindi_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_hindi"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_croatian_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_hindi"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_croatian_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_croatian_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_croatian_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_croatian_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_croatian"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_croatian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_croatian_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_croatian_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_croatian"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_hungarian_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_croatian"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_hungarian_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_hungarian_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_hungarian_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_hungarian_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_hungarian"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_hungarian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_hungarian_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_hungarian_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_hungarian"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_indonesian_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_hungarian"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_indonesian_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_indonesian_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_indonesian_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_indonesian_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_indonesian"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_indonesian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_indonesian_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_indonesian_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_indonesian"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_italian_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_indonesian"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_italian_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_italian_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_italian_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_italian_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_italian"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_italian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_italian_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_italian_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_italian"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_hebrew_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_italian"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_hebrew_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_hebrew_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_hebrew_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_hebrew_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_hebrew"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_hebrew"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_hebrew_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_hebrew_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_hebrew"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_japanese_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_hebrew"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_japanese_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_japanese_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_japanese_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_japanese_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_japanese"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_japanese"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_japanese_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_japanese_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_japanese"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_korean_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_japanese"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_korean_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_korean_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_korean_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_korean_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_korean"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_korean"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_korean_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_korean_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_korean"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_lithuanian_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_korean"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_lithuanian_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_lithuanian_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_lithuanian_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_lithuanian_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_lithuanian"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_lithuanian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_lithuanian_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_lithuanian_icon"
+                android:text="@string/translators_lithuanian"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_nepali_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_lithuanian"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_nepali_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_nepali_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_nepali_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_nepali_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_nepali"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_nepali"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_nepali_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_nepali_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_nepali"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_norwegian_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_nepali"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_norwegian_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_norwegian_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_norwegian_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_norwegian_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_norwegian"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_norwegian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_norwegian_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_norwegian_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_norwegian"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_dutch_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_norwegian"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_dutch_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_dutch_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_dutch_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_dutch_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_dutch"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_dutch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_dutch_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_dutch_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_dutch"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_polish_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_dutch"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_polish_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_polish_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_polish_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_polish_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_polish"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_polish"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_polish_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_polish_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_polish"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_portuguese_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_polish"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_portuguese_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_portuguese_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_portuguese_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_portuguese_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_portuguese"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_portuguese"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_portuguese_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_portuguese_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_portuguese"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_romanian_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_portuguese"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_romanian_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_romanian_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_romanian_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_romanian_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_romanian"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_romanian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_romanian_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_romanian_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_romanian"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_russian_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_romanian"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_russian_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_russian_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_russian_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_russian_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_russian"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_russian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_russian_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_russian_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_russian"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_slovak_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_russian"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_slovak_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_slovak_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_slovak_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_slovak_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_slovak"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_slovak"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_slovak_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_slovak_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_slovak"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_slovenian_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_slovak"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_slovenian_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_slovenian_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_slovenian_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_slovenian_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_slovenian"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_slovenian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_slovenian_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_slovenian_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_slovenian"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_swedish_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_slovenian"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_swedish_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_swedish_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_swedish_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_swedish_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_swedish"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_swedish"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_swedish_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_swedish_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_swedish"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_tamil_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_swedish"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_tamil_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_tamil_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_tamil_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_tamil_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_tamil"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_tamil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_tamil_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_tamil_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_tamil"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_turkish_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_tamil"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_turkish_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_turkish_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_turkish_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_turkish_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_turkish"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_turkish"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_turkish_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_turkish_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_turkish"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_ukrainian_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_turkish"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_ukrainian_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_ukrainian_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_ukrainian_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_ukrainian_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_ukrainian"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_ukrainian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_ukrainian_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_ukrainian_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_ukrainian"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_chinese_hk_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_ukrainian"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_chinese_hk_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_chinese_hk_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_chinese_hk_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_chinese_hk_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_chinese_hk"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_chinese_hk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_chinese_hk_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_chinese_hk_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_chinese_hk"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_chinese_cn_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_chinese_hk"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_chinese_cn_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_chinese_cn_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_chinese_cn_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_chinese_cn_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_chinese_cn"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_chinese_cn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_chinese_cn_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_chinese_cn_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_chinese_cn"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_chinese_tw_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_chinese_cn"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_flag_chinese_tw_vector" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_chinese_tw_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/contributors_chinese_tw_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_chinese_tw_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:text="@string/translation_chinese_tw"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="bold" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/contributors_chinese_tw"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/contributors_chinese_tw_label"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_chinese_tw_icon"
+                android:paddingEnd="@dimen/medium_margin"
+                android:text="@string/translators_chinese_tw"
+                android:textSize="@dimen/bigger_text_size" />
+
+            <ImageView
+                android:id="@+id/contributors_footer_icon"
+                android:layout_width="@dimen/normal_icon_size"
+                android:layout_height="@dimen/normal_icon_size"
+                android:layout_below="@+id/contributors_chinese_tw"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/big_margin"
+                android:contentDescription="@null"
+                android:padding="@dimen/medium_margin"
+                android:src="@drawable/ic_heart_vector" />
+
+            <TextView
+                android:id="@+id/contributors_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contributors_chinese_tw"
+                android:layout_alignTop="@+id/contributors_footer_icon"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_toEndOf="@+id/contributors_footer_icon"
+                android:paddingTop="@dimen/tiny_margin"
+                android:paddingEnd="@dimen/normal_margin"
+                android:text="@string/contributors_label"
+                android:textSize="@dimen/normal_text_size"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
     </LinearLayout>
 </ScrollView>

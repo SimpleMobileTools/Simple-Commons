@@ -29,6 +29,7 @@
     <string name="select_a_different_color">选择一个不同的颜色</string>
     <string name="download">下载</string>
     <string name="notification">通知</string>
+    <string name="notifications">Notifications</string>
     <string name="email">电子邮件</string>
     <string name="previous">上一首</string>
     <string name="playpause">播放/暂停</string>
@@ -481,6 +482,8 @@
     <!-- Settings -->
     <string name="settings">设置</string>
     <string name="purchase_simple_thank_you">感谢购买</string>
+    <string name="general_settings">General</string>
+    <string name="color_customization">Color customization</string>
     <string name="customize_colors">自定义颜色</string>
     <string name="customize_colors_locked">自定义颜色 (Locked)</string>
     <string name="customize_widget_colors">自定义小部件颜色</string>
@@ -529,6 +532,7 @@
     <string name="startup">启动</string>
     <string name="text">文本</string>
     <string name="migrating">转移</string>
+    <string name="quality">Quality</string>
 
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">管理显示的页面</string>
@@ -640,18 +644,24 @@
     <string name="website_label">应用源码</string>
     <string name="email_label">发送反馈</string>
     <string name="upgrade_to_pro">升级到专业版</string>
-    <string name="more_apps_underlined"><u>更多应用</u></string>
-    <string name="more_apps_from_us_underlined"><u>我们的其他应用</u></string>
-    <string name="third_party_licences_underlined"><u>开放源代码</u></string>
-    <string name="invite_friends_underlined"><u>分享给好友</u></string>
+    <string name="more_apps">更多应用</string>
+    <string name="more_apps_from_us">我们的其他应用</string>
+    <string name="invite_friends">分享给好友</string>
     <string name="share_text">请前往 %2$s 看看我们的 %1$s 吧！</string>
     <string name="invite_via">分享到</string>
-    <string name="rate_us_underlined"><u>为我们评分</u></string>
+    <string name="rate_us">为我们评分</string>
     <string name="rate">评分</string>
     <string name="donate">捐赠</string>
     <string name="donate_underlined"><u>捐赠</u></string>
     <string name="follow_us">关注我们</string>
     <string name="copyright">v %1$s Copyright © Simple Mobile Tools %2$d</string>
+    <string name="support">Support</string>
+    <string name="help_us">Help us</string>
+    <string name="social">Social</string>
+    <string name="other">Other</string>
+    <string name="version_placeholder">Version %s</string>
+    <string name="hello">Hello :)</string>
+    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
     <string name="additional_info">额外信息</string>
     <string name="app_version">应用版本：%s</string>
     <string name="device_os">设备系统：%s</string>
@@ -738,7 +748,12 @@
     <string name="faq_1_title_commons">为什么我在应用小部件列表里没有找到这个应用的小部件？</string>
     <string name="faq_1_text_commons">这很可能是因为您将应用程序移动到了SD卡。由于 Android 系统的限制，在这种情况下会隐藏应用程序的小部件。 唯一的解决方法是在系统设置中将应用程序移回内部存储。</string>
     <string name="faq_2_title_commons">我想支持您，但我不能捐赠金钱。 还有什么是我能够做的吗？</string>
-    <string name="faq_2_text_commons">当然有。您可以帮我宣传这个应用，或给个五星好评。您还可以为我的应用翻译新的语言来帮助您，或者是更新一些现有的翻译。您可以在 https://github.com/SimpleMobileTools/General-Discussion 找到该指南，如果您需要帮助，也可以发邮件 hello@simplemobiletools.com 给我。</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
+            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">我该怎么恢复误删的文件？</string>
     <string name="faq_3_text_commons">不幸的是，您无法恢复。在确认对话框后文件将被立即删除，您并没有回收站用。</string>
     <string name="faq_4_title_commons">我不喜欢小部件的颜色，我可以修改吗？</string>
@@ -766,9 +781,14 @@
     <string name="translation">Translation</string>
     <string name="development">Development</string>
     <string name="other_help">Other help</string>
-    <string name="contributors_label">This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-        let us know if you want to help too. The guide to translating is at https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , or just contact us at hello@simplemobiletools.com if you have any questions.
-        Thanks to all contributors and other supporters!</string>
+    <string name="contributors_label">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -809,7 +829,9 @@
     <string name="translation_turkish">Turkish</string>
     <string name="translation_ukrainian">Ukrainian</string>
     <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese">Chinese</string>
+    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
+    <string name="translation_chinese_cn">Chinese (Simplified)</string>
+    <string name="translation_chinese_tw">Chinese (Traditional)</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Get the Pro version now!</string>

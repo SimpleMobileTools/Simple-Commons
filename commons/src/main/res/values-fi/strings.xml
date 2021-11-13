@@ -29,6 +29,7 @@
     <string name="select_a_different_color">Valitse eri väri</string>
     <string name="download">Lataa</string>
     <string name="notification">Ilmoitus</string>
+    <string name="notifications">Notifications</string>
     <string name="email">Sähköposti</string>
     <string name="previous">Edellinen</string>
     <string name="playpause">Toista / Tauota</string>
@@ -252,7 +253,7 @@
     <!-- Themes -->
     <string name="light_theme">Vaalea</string>
     <string name="dark_theme">Tumma</string>
-    <string name="auto_theme">Auto</string>
+    <string name="auto_theme">Automaattinen</string>
     <string name="solarized">Solarisoitu</string>
     <string name="dark_red">Tumman punainen</string>
     <string name="white">Valkoinen</string>
@@ -513,6 +514,8 @@
     <!-- Settings -->
     <string name="settings">Asetukset</string>
     <string name="purchase_simple_thank_you">Osta Simple Thank You</string>
+    <string name="general_settings">General</string>
+    <string name="color_customization">Color customization</string>
     <string name="customize_colors">Muokkaa sovelluksen värejä</string>
     <string name="customize_colors_locked">Muokkaa sovelluksen värejä (Locked)</string>
     <string name="customize_widget_colors">Mukauta pienoissovelluksen värejä</string>
@@ -561,6 +564,7 @@
     <string name="startup">Käynnistys</string>
     <string name="text">Teksti</string>
     <string name="migrating">Yhdistäminen</string>
+    <string name="quality">Quality</string>
 
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Valitse sovelluksen välilehdet</string>
@@ -673,18 +677,24 @@
     <string name="website_label">Lähdekoodin löydät täältä</string>
     <string name="email_label">Lähetä palautteesi ja ehdotuksia osoitteeseen</string>
     <string name="upgrade_to_pro">Päivitä Pro-versioon</string>
-    <string name="more_apps_underlined"><u>Lisää sovelluksia</u></string>
-    <string name="more_apps_from_us_underlined"><u>Lisää sovelluksia meiltä</u></string>
-    <string name="third_party_licences_underlined"><u>Kolmansien osapuolien lisenssit</u></string>
-    <string name="invite_friends_underlined"><u>Kutsu ystäviä</u></string>
+    <string name="more_apps">Lisää sovelluksia</string>
+    <string name="more_apps_from_us">Lisää sovelluksia meiltä</string>
+    <string name="invite_friends">Kutsu ystäviä</string>
     <string name="share_text">Hei, tutustu %1$s täällä %2$s</string>
     <string name="invite_via">Kutsu sovelluksella</string>
-    <string name="rate_us_underlined"><u>Arvostele</u></string>
+    <string name="rate_us">Arvostele</string>
     <string name="rate">Arvostele</string>
     <string name="donate">Lahjoita</string>
     <string name="donate_underlined"><u>Lahjoita</u></string>
     <string name="follow_us">Seuraa</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="support">Support</string>
+    <string name="help_us">Help us</string>
+    <string name="social">Social</string>
+    <string name="other">Other</string>
+    <string name="version_placeholder">Version %s</string>
+    <string name="hello">Hello :)</string>
+    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
     <string name="additional_info">Lisätietoa</string>
     <string name="app_version">Sovelluksen versio: %s</string>
     <string name="device_os">Laitteen käyttöjärjestelmä: %s</string>
@@ -771,8 +781,12 @@
     <string name="faq_1_title_commons">Miksi en näe tämän sovelluksen pienoissovellusta pienoissovellusvalikossa?</string>
     <string name="faq_1_text_commons">Todennäköisesti asensit sovelluksen ulkoiselle muistikortille. Tässä tapauksessa ainoa vaihtoehto on uudelleenasentaa sovellus laitteen sisäiseen tallennustilaan.</string>
     <string name="faq_2_title_commons">Haluan tukea sinua, mutta minulla ei ole varaa lahjoittaa. Voinko auttaa jotenkin muuten?</string>
-    <string name="faq_2_text_commons">Tottakai. Voit kertoa ystävillesi sovelluksista ja antaa hyviä arvosteluja ja palautetta. Voit myös auttaa kääntämällä sovelluksen uudelle kielelle tai korjata käännösvirheitä.
-        Ohjeet löydät täältä https://github.com/SimpleMobileTools/General-Discussion , tai lähettämällä viestiä osoitteeseen hello@simplemobiletools.com jos Sinulla on kysyttävää.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
+            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Poistin tiedostoja vahingossa, miten palautan ne?</string>
     <string name="faq_3_text_commons">Valitettavasti se ei ole mahdollista. Tiedostot poistetaan aina pysyvästi.</string>
     <string name="faq_4_title_commons">En pidä pienoissovelluksen väreistä, voinko vaihtaa ne?</string>
@@ -798,9 +812,14 @@
     <string name="translation">Käännös</string>
     <string name="development">Kehitys</string>
     <string name="other_help">Muu apu</string>
-    <string name="contributors_label">Tämä lista sisältää Simple Mobile Tools-sovellusten luomiseen merkittävästi osallistuneita. Käännökset ovat vapaaehtoisien tekemiä,
-        ota meihin yhteyttä jos haluat myös olla avuksi. Ohje kääntämiseen löytyy osoiteesta https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , tai ota yhteys meihin sähköpostitse hello@simplemobiletools.com jos sinulla on kysymyksiä.
-        Kiitos kaikille osallistujille ja muille tukijoille!</string>
+    <string name="contributors_label">
+        <![CDATA[
+            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
+            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+            Thanks to all contributors and other supporters!
+        ]]>
+    </string>
+
     <string name="translation_arabic">Arabia</string>
     <string name="translation_azerbaijani">Azeri</string>
     <string name="translation_bengali">Bengali</string>
@@ -841,7 +860,9 @@
     <string name="translation_turkish">Turkki</string>
     <string name="translation_ukrainian">Ukraina</string>
     <string name="translation_vietnamese">Vietnam</string>
-    <string name="translation_chinese">Kiina</string>
+    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
+    <string name="translation_chinese_cn">Chinese (Simplified)</string>
+    <string name="translation_chinese_tw">Chinese (Traditional)</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Hanki Pro-versio nyt!</string>

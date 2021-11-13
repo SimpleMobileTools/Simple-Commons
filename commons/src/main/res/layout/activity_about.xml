@@ -1,135 +1,403 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/about_scrollview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:scrollbars="none">
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/about_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/activity_margin">
+        android:orientation="vertical">
 
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/about_website"
+        <TextView
+            android:id="@+id/about_support"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autoLink="web"
-            android:text="@string/my_website"
-            android:textColorLink="@color/color_primary"
-            android:visibility="gone" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/about_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/about_website"
-            android:text="@string/my_email"
-            android:textColorLink="@color/color_primary" />
-
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/about_faq_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/about_email"
             android:layout_marginTop="@dimen/activity_margin"
-            android:text="@string/before_asking_question" />
+            android:gravity="center_horizontal"
+            android:text="@string/support"
+            android:textSize="@dimen/big_text_size" />
 
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/about_faq"
+        <LinearLayout
+            android:id="@+id/about_support_holder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/about_faq_label"
-            android:paddingBottom="@dimen/activity_margin"
-            android:text="@string/frequently_asked_questions"
-            android:textColor="@color/color_primary" />
+            android:layout_margin="@dimen/medium_margin"
+            android:background="@drawable/section_holder_stroke"
+            android:orientation="vertical">
 
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/about_more_apps"
+            <RelativeLayout
+                android:id="@+id/about_faq_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_top_corners"
+                android:padding="@dimen/medium_margin">
+
+                <ImageView
+                    android:id="@+id/about_faq_icon"
+                    android:layout_width="@dimen/normal_icon_size"
+                    android:layout_height="@dimen/normal_icon_size"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/medium_margin"
+                    android:src="@drawable/ic_question_mark_vector" />
+
+                <com.simplemobiletools.commons.views.MyTextView
+                    android:id="@+id/about_faq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/about_faq_icon"
+                    android:layout_alignBottom="@+id/about_faq_icon"
+                    android:layout_marginStart="@dimen/normal_margin"
+                    android:layout_marginEnd="@dimen/normal_margin"
+                    android:layout_toEndOf="@+id/about_faq_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/frequently_asked_questions"
+                    android:textSize="@dimen/bigger_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/about_email_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_bottom_corners"
+                android:padding="@dimen/medium_margin">
+
+                <ImageView
+                    android:id="@+id/about_email_icon"
+                    android:layout_width="@dimen/normal_icon_size"
+                    android:layout_height="@dimen/normal_icon_size"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/medium_margin"
+                    android:src="@drawable/ic_mail_vector" />
+
+                <com.simplemobiletools.commons.views.MyTextView
+                    android:id="@+id/about_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/about_email_icon"
+                    android:layout_alignBottom="@+id/about_email_icon"
+                    android:layout_marginStart="@dimen/normal_margin"
+                    android:layout_marginEnd="@dimen/normal_margin"
+                    android:layout_toEndOf="@+id/about_email_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/my_email"
+                    android:textSize="@dimen/bigger_text_size" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/about_help_us"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/about_faq"
-            android:paddingTop="@dimen/activity_margin"
-            android:paddingBottom="@dimen/activity_margin"
-            android:text="@string/more_apps_from_us_underlined"
-            android:textColor="@color/color_primary" />
+            android:layout_marginTop="@dimen/activity_margin"
+            android:gravity="center_horizontal"
+            android:text="@string/help_us"
+            android:textSize="@dimen/big_text_size" />
 
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/about_invite"
+        <LinearLayout
+            android:id="@+id/about_help_us_holder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/about_more_apps"
-            android:paddingTop="@dimen/activity_margin"
-            android:paddingBottom="@dimen/activity_margin"
-            android:text="@string/invite_friends_underlined"
-            android:textColor="@color/color_primary" />
+            android:layout_margin="@dimen/medium_margin"
+            android:background="@drawable/section_holder_stroke"
+            android:orientation="vertical">
 
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/about_rate_us"
+            <RelativeLayout
+                android:id="@+id/about_rate_us_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_top_corners"
+                android:padding="@dimen/medium_margin">
+
+                <ImageView
+                    android:id="@+id/about_rate_us_icon"
+                    android:layout_width="@dimen/normal_icon_size"
+                    android:layout_height="@dimen/normal_icon_size"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/medium_margin"
+                    android:src="@drawable/ic_star_on_vector" />
+
+                <com.simplemobiletools.commons.views.MyTextView
+                    android:id="@+id/about_rate_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/about_rate_us_icon"
+                    android:layout_alignBottom="@+id/about_rate_us_icon"
+                    android:layout_marginStart="@dimen/normal_margin"
+                    android:layout_marginEnd="@dimen/normal_margin"
+                    android:layout_toEndOf="@+id/about_rate_us_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/rate_us"
+                    android:textSize="@dimen/bigger_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/about_invite_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_background"
+                android:padding="@dimen/medium_margin">
+
+                <ImageView
+                    android:id="@+id/about_invite_icon"
+                    android:layout_width="@dimen/normal_icon_size"
+                    android:layout_height="@dimen/normal_icon_size"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/medium_margin"
+                    android:src="@drawable/ic_add_person_vector" />
+
+                <com.simplemobiletools.commons.views.MyTextView
+                    android:id="@+id/about_invite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/about_invite_icon"
+                    android:layout_alignBottom="@+id/about_invite_icon"
+                    android:layout_marginStart="@dimen/normal_margin"
+                    android:layout_marginEnd="@dimen/normal_margin"
+                    android:layout_toEndOf="@+id/about_invite_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/invite_friends"
+                    android:textSize="@dimen/bigger_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/about_contributors_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_bottom_corners"
+                android:padding="@dimen/medium_margin">
+
+                <ImageView
+                    android:id="@+id/about_contributors_icon"
+                    android:layout_width="@dimen/normal_icon_size"
+                    android:layout_height="@dimen/normal_icon_size"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/medium_margin"
+                    android:src="@drawable/ic_face_vector" />
+
+                <com.simplemobiletools.commons.views.MyTextView
+                    android:id="@+id/about_contributors"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/about_contributors_icon"
+                    android:layout_alignBottom="@+id/about_contributors_icon"
+                    android:layout_marginStart="@dimen/normal_margin"
+                    android:layout_marginEnd="@dimen/normal_margin"
+                    android:layout_toEndOf="@+id/about_contributors_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/contributors"
+                    android:textSize="@dimen/bigger_text_size" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/about_social"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/about_invite"
-            android:paddingTop="@dimen/activity_margin"
-            android:paddingBottom="@dimen/activity_margin"
-            android:text="@string/rate_us_underlined"
-            android:textColor="@color/color_primary" />
+            android:layout_marginTop="@dimen/activity_margin"
+            android:gravity="center_horizontal"
+            android:text="@string/social"
+            android:textSize="@dimen/big_text_size" />
 
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/about_contributors"
+        <LinearLayout
+            android:id="@+id/about_social_holder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/about_rate_us"
-            android:paddingTop="@dimen/activity_margin"
-            android:paddingBottom="@dimen/activity_margin"
-            android:text="@string/contributors"
-            android:textColor="@color/color_primary" />
+            android:layout_margin="@dimen/medium_margin"
+            android:background="@drawable/section_holder_stroke"
+            android:orientation="vertical">
 
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/about_license"
+            <RelativeLayout
+                android:id="@+id/about_facebook_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_top_corners"
+                android:paddingStart="@dimen/activity_margin"
+                android:paddingTop="@dimen/medium_margin"
+                android:paddingBottom="@dimen/medium_margin">
+
+                <ImageView
+                    android:id="@+id/about_facebook_icon"
+                    android:layout_width="@dimen/normal_icon_size"
+                    android:layout_height="@dimen/normal_icon_size"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/medium_margin"
+                    android:src="@drawable/ic_facebook_vector" />
+
+                <com.simplemobiletools.commons.views.MyTextView
+                    android:id="@+id/about_facebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/about_facebook_icon"
+                    android:layout_alignBottom="@+id/about_facebook_icon"
+                    android:layout_marginStart="@dimen/normal_margin"
+                    android:layout_marginEnd="@dimen/normal_margin"
+                    android:layout_toEndOf="@+id/about_facebook_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/facebook"
+                    android:textSize="@dimen/bigger_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/about_reddit_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_bottom_corners"
+                android:paddingStart="@dimen/activity_margin"
+                android:paddingTop="@dimen/medium_margin"
+                android:paddingBottom="@dimen/medium_margin">
+
+                <ImageView
+                    android:id="@+id/about_reddit_icon"
+                    android:layout_width="@dimen/normal_icon_size"
+                    android:layout_height="@dimen/normal_icon_size"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/medium_margin"
+                    android:src="@drawable/ic_reddit_vector" />
+
+                <com.simplemobiletools.commons.views.MyTextView
+                    android:id="@+id/about_reddit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/about_reddit_icon"
+                    android:layout_alignBottom="@+id/about_reddit_icon"
+                    android:layout_marginStart="@dimen/normal_margin"
+                    android:layout_marginEnd="@dimen/normal_margin"
+                    android:layout_toEndOf="@+id/about_reddit_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/reddit"
+                    android:textSize="@dimen/bigger_text_size" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/about_other"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/about_contributors"
-            android:paddingTop="@dimen/activity_margin"
-            android:paddingBottom="@dimen/activity_margin"
-            android:text="@string/third_party_licences_underlined"
-            android:textColor="@color/color_primary" />
+            android:layout_marginTop="@dimen/activity_margin"
+            android:gravity="center_horizontal"
+            android:text="@string/other"
+            android:textSize="@dimen/big_text_size" />
 
-        <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/about_follow_us"
+        <LinearLayout
+            android:id="@+id/about_other_holder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/about_license"
-            android:paddingTop="@dimen/activity_margin"
-            android:paddingBottom="@dimen/medium_margin"
-            android:text="@string/follow_us" />
+            android:layout_margin="@dimen/medium_margin"
+            android:background="@drawable/section_holder_stroke"
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/about_facebook"
-            android:layout_width="@dimen/social_logo"
-            android:layout_height="@dimen/social_logo"
-            android:layout_below="@+id/about_follow_us"
-            android:src="@drawable/ic_facebook_vector" />
+            <RelativeLayout
+                android:id="@+id/about_more_apps_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_top_corners"
+                android:padding="@dimen/medium_margin">
 
-        <ImageView
-            android:id="@+id/about_reddit"
-            android:layout_width="@dimen/social_logo"
-            android:layout_height="@dimen/social_logo"
-            android:layout_below="@+id/about_follow_us"
-            android:layout_marginLeft="@dimen/medium_margin"
-            android:layout_marginRight="@dimen/medium_margin"
-            android:layout_toEndOf="@+id/about_facebook"
-            android:src="@drawable/ic_reddit_vector" />
+                <ImageView
+                    android:id="@+id/about_more_apps_icon"
+                    android:layout_width="@dimen/normal_icon_size"
+                    android:layout_height="@dimen/normal_icon_size"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/medium_margin"
+                    android:src="@drawable/ic_heart_vector" />
+
+                <com.simplemobiletools.commons.views.MyTextView
+                    android:id="@+id/about_more_apps"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/about_more_apps_icon"
+                    android:layout_alignBottom="@+id/about_more_apps_icon"
+                    android:layout_marginStart="@dimen/normal_margin"
+                    android:layout_marginEnd="@dimen/normal_margin"
+                    android:layout_toEndOf="@+id/about_more_apps_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/more_apps_from_us"
+                    android:textSize="@dimen/bigger_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/about_licenses_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_background"
+                android:padding="@dimen/medium_margin">
+
+                <ImageView
+                    android:id="@+id/about_licenses_icon"
+                    android:layout_width="@dimen/normal_icon_size"
+                    android:layout_height="@dimen/normal_icon_size"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/medium_margin"
+                    android:src="@drawable/ic_article_vector" />
+
+                <com.simplemobiletools.commons.views.MyTextView
+                    android:id="@+id/about_licenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/about_licenses_icon"
+                    android:layout_alignBottom="@+id/about_licenses_icon"
+                    android:layout_marginStart="@dimen/normal_margin"
+                    android:layout_marginEnd="@dimen/normal_margin"
+                    android:layout_toEndOf="@+id/about_licenses_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/third_party_licences"
+                    android:textSize="@dimen/bigger_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/about_version_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_bottom_corners"
+                android:padding="@dimen/medium_margin">
+
+                <ImageView
+                    android:id="@+id/about_version_icon"
+                    android:layout_width="@dimen/normal_icon_size"
+                    android:layout_height="@dimen/normal_icon_size"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/medium_margin"
+                    android:src="@drawable/ic_info_vector" />
+
+                <com.simplemobiletools.commons.views.MyTextView
+                    android:id="@+id/about_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/about_version_icon"
+                    android:layout_alignBottom="@+id/about_version_icon"
+                    android:layout_marginStart="@dimen/normal_margin"
+                    android:layout_marginEnd="@dimen/normal_margin"
+                    android:layout_toEndOf="@+id/about_version_icon"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/bigger_text_size"
+                    tools:text="@string/third_party_licences" />
+
+            </RelativeLayout>
+        </LinearLayout>
 
         <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/about_copyright"
+            android:id="@+id/footer"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/about_facebook"
-            android:layout_alignParentBottom="true"
-            android:gravity="center_horizontal|bottom"
-            android:paddingTop="@dimen/activity_margin"
-            android:text="v1.0\nCopyright © Simple Mobile Tools 2017" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/small_margin"
+            android:text="@string/about_footer"
+            android:textSize="@dimen/bigger_text_size" />
 
-    </RelativeLayout>
+    </LinearLayout>
 </ScrollView>

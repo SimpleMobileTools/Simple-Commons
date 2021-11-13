@@ -1,7 +1,7 @@
 <resources>
     <string name="ok">Tamam</string>
     <string name="cancel">İptal</string>
-    <string name="nothing">Nothing</string>
+    <string name="nothing">Hiçbir şey</string>
     <string name="later">Sonra</string>
     <string name="save_as">Farklı kaydet</string>
     <string name="file_saved">Dosya başarıyla kaydedildi</string>
@@ -15,7 +15,7 @@
     <string name="copy_to_clipboard">Panoya kopyala</string>
     <string name="copy_number_to_clipboard">Numarayı panoya kopyala</string>
     <string name="value_copied_to_clipboard">Değer panoya kopyalandı</string>
-    <string name="dial_number">Dial number</string>
+    <string name="dial_number">Numarayı çevir</string>
     <string name="unknown">Bilinmeyen</string>
     <string name="always">Her zaman</string>
     <string name="never">Asla</string>
@@ -29,6 +29,7 @@
     <string name="select_a_different_color">Farklı bir renk seçin</string>
     <string name="download">İndir</string>
     <string name="notification">Bildirim</string>
+    <string name="notifications">Notifications</string>
     <string name="email">E-posta</string>
     <string name="previous">Önceki</string>
     <string name="playpause">Çal / Duraklat</string>
@@ -50,14 +51,14 @@
     <string name="select_photo">Fotoğraf seç</string>
 
     <!-- Blocked numbers -->
-    <string name="manage_blocked_numbers">Engelli numaraları yönet</string>
+    <string name="manage_blocked_numbers">Engellenen numaraları yönet</string>
     <string name="not_blocking_anyone">Kimseyi engellemiyorsun.</string>
     <string name="add_a_blocked_number">Engellenen numara ekle</string>
     <string name="block_number">Numarayı engelle</string>
     <string name="block_numbers">Numaraları engelle</string>
-    <string name="blocked_numbers">Engelli numaralar</string>
-    <string name="export_blocked_numbers">Export blocked numbers</string>
-    <string name="import_blocked_numbers">Import blocked numbers</string>
+    <string name="blocked_numbers">Engellenen numaralar</string>
+    <string name="export_blocked_numbers">Engellenen numaraları dışa aktar</string>
+    <string name="import_blocked_numbers">Engellenen numaraları içe aktar</string>
     <string name="must_make_default_dialer">Engellenen numaraları kullanmak için bu uygulamayı varsayılan çevirici uygulaması yapmalısınız.</string>
     <string name="set_as_default">Varsayılan olarak ayarla</string>
     <string name="block_confirmation">\"%s\" gerçekten engellensin mi?</string>
@@ -74,7 +75,7 @@
 
     <!-- Filters -->
     <string name="filter">Filtre</string>
-    <string name="no_items_found">Hiçbir öğe bulunamadı.</string>
+    <string name="no_items_found">Hiçbir öge bulunamadı.</string>
     <string name="change_filter">Filtreyi değiştir</string>
 
     <!-- Permissions -->
@@ -104,8 +105,8 @@
     <string name="pattern_renaming">Desen</string>
     <string name="string_to_add">Eklenecek dize</string>
     <string name="rename_date_time_pattern">%Y - yıl\n%M - ay\n%D - gün\n%h - saat\n%m - dakika\n%s - saniye\n%i - 1\'den artan sayı</string>
-    <string name="filename_without_txt">Filename (without .txt)</string>
-    <string name="filename_without_json">Filename (without .json)</string>
+    <string name="filename_without_txt">Dosya adı (.txt olmadan)</string>
+    <string name="filename_without_json">Dosya adı (.json olmadan)</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopyala</string>
@@ -123,18 +124,18 @@
     <string name="copy_failed">Dosyalar kopyalanamadı</string>
     <string name="copying">Kopyalanıyor…</string>
     <string name="copying_success">Dosyalar başarıyla kopyalandı</string>
-    <string name="copying_success_one">File copied successfully</string>
+    <string name="copying_success_one">Dosya başarıyla kopyalandı</string>
     <string name="copy_move_failed">Bir hata oluştu</string>
     <string name="moving">Taşınıyor…</string>
     <string name="moving_success">Dosyalar başarıyla taşındı</string>
-    <string name="moving_success_one">File moved successfully</string>
+    <string name="moving_success_one">Dosya başarıyla taşındı</string>
     <string name="moving_success_partial">Bazı dosyalar taşınamadı</string>
     <string name="copying_success_partial">Bazı dosyalar kopyalanamadı</string>
     <string name="no_files_selected">Hiçbir dosya seçilmedi</string>
     <string name="saving">Kaydediliyor…</string>
     <string name="could_not_create_folder">%s klasörü oluşturulamıyor</string>
     <string name="could_not_create_file">%s dosyası oluşturulamıyor</string>
-    <string name="no_new_items">Yeni öğe bulunamadı</string>
+    <string name="no_new_items">Yeni öge bulunamadı</string>
     <string name="no_space">Hedef yeterli alana sahip değil.\nGereken %1$s, kullanılabilir %2$s</string>
 
     <!-- Create new -->
@@ -143,7 +144,7 @@
     <string name="file">Dosya</string>
     <string name="create_new_folder">Yeni klasör oluştur</string>
     <string name="name_taken">Bu ada sahip bir dosya veya klasör zaten var</string>
-    <string name="invalid_name">İsim, geçersiz karakterler içeriyor</string>
+    <string name="invalid_name">Ad, geçersiz karakterler içeriyor</string>
     <string name="empty_name">Lütfen yeni bir ad girin</string>
     <string name="unknown_error_occurred">Bilinmeyen bir hata oluştu</string>
 
@@ -167,19 +168,19 @@
     <string name="confirm_selection">Seçimi onayla</string>
 
     <plurals name="items">
-        <item quantity="one">%d öğe</item>
-        <item quantity="other">%d öğe</item>
+        <item quantity="one">%d öge</item>
+        <item quantity="other">%d öge</item>
     </plurals>
 
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d öğe</item>
-        <item quantity="other">%d öğe</item>
+        <item quantity="one">%d öge</item>
+        <item quantity="other">%d öge</item>
     </plurals>
 
     <plurals name="deleting_items">
-        <item quantity="one">%d öğe siliniyor</item>
-        <item quantity="other">%d öğe siliniyor</item>
+        <item quantity="one">%d öge siliniyor</item>
+        <item quantity="other">%d öge siliniyor</item>
     </plurals>
 
     <!-- Are you sure you want to delete 5 contacts? -->
@@ -192,7 +193,7 @@
     <string name="select_storage">Depolama seç</string>
     <string name="internal">Dahili</string>
     <string name="sd_card">SD Kart</string>
-    <string name="root">Root</string>
+    <string name="root">Kök</string>
     <string name="wrong_root_selected">Yanlış klasör seçildi, lütfen SD kartınızın kök klasörünü seçin</string>
     <string name="sd_card_usb_same">SD kart ve USB cihaz yolları aynı olamaz</string>
     <string name="app_on_sd_card">Uygulama, uygulama widget\'larını kullanılamaz hale getiren bir SD karta yüklenmiş görünüyor. Onları mevcut widget\'lar listesinde bile görmeyeceksiniz.
@@ -201,8 +202,8 @@
     <!-- File properties -->
     <string name="properties">Özellikler</string>
     <string name="path">Yol</string>
-    <string name="items_selected">Seçilen öğeler</string>
-    <string name="direct_children_count">Alt öğe sayısı</string>
+    <string name="items_selected">Seçilen ögeler</string>
+    <string name="direct_children_count">Alt öge sayısı</string>
     <string name="files_count">Toplam dosya sayısı</string>
     <string name="resolution">Çözünürlük</string>
     <string name="duration">Süre</string>
@@ -215,7 +216,7 @@
     <string name="camera">Kamera</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Şarkı başlığı</string>
-    <string name="gps_coordinates">GPS coordinates</string>
+    <string name="gps_coordinates">GPS koordinatları</string>
     <string name="altitude">Rakım</string>
 
     <!-- Color customization -->
@@ -223,7 +224,7 @@
     <string name="text_color">Metin rengi</string>
     <string name="primary_color">Ana renk</string>
     <string name="accent_color_white">Beyaz temanın vurgu rengi</string>
-    <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
+    <string name="accent_color_black_and_white">Siyah &amp; Beyaz temanın aksan rengi</string>
     <string name="foreground_color">Ön plan rengi</string>
     <string name="app_icon_color">Uygulama simgesi rengi</string>
     <string name="bottom_navigation_bar_color">Alt gezinti çubuğu rengi</string>
@@ -241,7 +242,7 @@
     <string name="apply_to_all_apps">Tüm Basit Uygulamalara renk uygula</string>
     <string name="app_icon_color_warning">UYARI: Bazı başlatıcılar uygulama simgesi özelleştirmesini düzgün kullanamıyor. Simgenin kaybolması durumunda, uygulamayı Google Play\'den veya varsa bir widget kullanarak başlatmayı deneyin.
         Başlatıldıktan sonra, sadece varsayılan turuncu simgeyi #F57C00 geri ayarlayın. En kötü durumda uygulamayı yeniden yüklemeniz gerekebilir.</string>
-    <string name="share_colors_success">"Renkler başarıyla güncellendi. 'Paylaşılan' adlı yeni bir Tema eklendi, lütfen gelecekte tüm uygulama renklerini güncellemek için kullanınız."</string>
+    <string name="share_colors_success">"Renkler başarıyla güncellendi. 'Paylaşılan' adlı yeni bir Tema eklendi, lütfen gelecekte tüm uygulama renklerini güncellemek için onu kullanın."</string>
     <string name="shared_theme_note">Pro uygulama sürümünü kullanıyor olsanız bile, teknik nedenlerden dolayı yine de Basit Teşekkürler\'e ihtiyacınız olduğunu unutmayın. Renk senkronizasyonunu o yapar.</string>
     <string name="purchase_thank_you">
         <![CDATA[
@@ -252,8 +253,8 @@
     <!-- Themes -->
     <string name="light_theme">Aydınlık</string>
     <string name="dark_theme">Karanlık</string>
-    <string name="auto_theme">Auto</string>
-    <string name="solarized">Solarized</string>
+    <string name="auto_theme">Otomatik</string>
+    <string name="solarized">GÜneşte kalmış</string>
     <string name="dark_red">Koyu Kırmızı</string>
     <string name="white">Beyaz</string>
     <string name="black_white">Siyah &amp; Beyaz</string>
@@ -297,7 +298,7 @@
     <string name="name">Ad</string>
     <string name="size">Boyut</string>
     <string name="last_modified">Son değiştirilme</string>
-    <string name="date_created">Date created</string>
+    <string name="date_created">Oluşturma tarihi</string>
     <string name="date_taken">Alınan tarih</string>
     <string name="title">Başlık</string>
     <string name="filename">Dosya adı</string>
@@ -319,10 +320,10 @@
     <string name="proceed_with_deletion">Silme işlemine devam etmek istediğinizden emin misiniz?</string>
     <string name="deletion_confirmation">%s gerçekten silinsin mi?</string>    <!-- Are you sure you want to delete 5 items? -->
     <string name="move_to_recycle_bin_confirmation">%s gerçekten Geri Dönüşüm Kutusuna taşınsın mı?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Bu öğeyi silmek istediğinizden emin misiniz?</string>
-    <string name="are_you_sure_recycle_bin">Bu öğeyi Geri Dönüşüm Kutusu\'na taşımak istediğinizden emin misiniz?</string>
+    <string name="are_you_sure_delete">Bu ögeyi silmek istediğinizden emin misiniz?</string>
+    <string name="are_you_sure_recycle_bin">Bu ögeyi Geri Dönüşüm Kutusu\'na taşımak istediğinizden emin misiniz?</string>
     <string name="do_not_ask_again">Bu oturumda tekrar sorma</string>
-    <string name="do_not_show_again">Do not show again</string>
+    <string name="do_not_show_again">Tekrar gösterme</string>
     <string name="yes">Evet</string>
     <string name="no">Hayır</string>
     <string name="maybe">Belki</string>
@@ -342,12 +343,12 @@
     <string name="insert_pattern">Deseni çiz</string>
     <string name="wrong_pattern">Yanlış desen</string>
     <string name="repeat_pattern">Deseni tekrar çiz</string>
-    <string name="biometrics">Biometrics</string>
+    <string name="biometrics">Biyometri</string>
     <string name="fingerprint">Parmak izi</string>
     <string name="add_fingerprint">Parmak izi ekle</string>
     <string name="place_finger">Lütfen parmağınızı parmak izi sensörüne yerleştirin</string>
-    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
-    <string name="authenticate">Authenticate</string>
+    <string name="open_biometric_dialog">Biyometrik kimlik doğrulama iletişim kutusunu aç</string>
+    <string name="authenticate">Kimlik doğrula</string>
     <string name="authentication_failed">Kimlik doğrulama başarısız</string>
     <string name="authentication_blocked">Kimlik doğrulama engellendi, lütfen birazdan tekrar deneyin</string>
     <string name="no_fingerprints_registered">Parmak iziniz kayıtlı değil, lütfen cihazınızın Ayarlar bölümünden ekleyin</string>
@@ -367,9 +368,9 @@
     <string name="minutes_raw">dakika</string>
     <string name="hours_raw">saat</string>
     <string name="days_raw">gün</string>
-    <string name="seconds_letter">s</string>
-    <string name="minutes_letter">m</string>
-    <string name="hours_letter">h</string>
+    <string name="seconds_letter">sn</string>
+    <string name="minutes_letter">dk</string>
+    <string name="hours_letter">sa</string>
 
     <plurals name="seconds">
         <item quantity="one">%d saniye</item>
@@ -513,22 +514,24 @@
     <!-- Settings -->
     <string name="settings">Ayarlar</string>
     <string name="purchase_simple_thank_you">Basit Teşekkürler\'i Satın Al</string>
+    <string name="general_settings">General</string>
+    <string name="color_customization">Renk özelleştirme</string>
     <string name="customize_colors">Renkleri özelleştir</string>
     <string name="customize_colors_locked">Renkleri özelleştir (Kilitli)</string>
     <string name="customize_widget_colors">Widget renklerini özelleştir</string>
     <string name="customize_notifications">Bildirimleri özelleştir</string>
     <string name="use_english_language">İngilizce dilini kullan</string>
-    <string name="show_hidden_items">Gizli öğeleri göster</string>
+    <string name="show_hidden_items">Gizli ögeleri göster</string>
     <string name="font_size">Yazı tipi boyutu</string>
     <string name="small">Küçük</string>
     <string name="medium">Orta</string>
     <string name="large">Büyük</string>
     <string name="extra_large">Çok büyük</string>
-    <string name="password_protect_hidden_items">Gizli öğe görünürlüğünü parola ile koru</string>
+    <string name="password_protect_hidden_items">Gizli öge görünürlüğünü parola ile koru</string>
     <string name="password_protect_whole_app">Tüm uygulamayı parola ile koru</string>
     <string name="password_protect_file_deletion">Parola korumalı dosya silme ve taşıma</string>
     <string name="keep_last_modified">Dosya işlemlerinde eski son değiştirme değerini koru</string>
-    <string name="show_info_bubble">Kaydırma çubuğunu sürükleyerek öğeleri kaydırırken bilgi balonunu göster</string>
+    <string name="show_info_bubble">Kaydırma çubuğunu sürükleyerek ögeleri kaydırırken bilgi balonunu göster</string>
     <string name="prevent_phone_from_sleeping">Uygulama ön plandayken telefonun uykuya geçmesini önle</string>
     <string name="skip_delete_confirmation">Her zaman silme onayı penceresini atla</string>
     <string name="enable_pull_to_refresh">Üstten yenilemek için çekmeyi etkinleştir</string>
@@ -539,7 +542,7 @@
     <string name="use_same_snooze">Her zaman aynı erteleme süresini kullan</string>
     <string name="snooze_time">Erteleme süresi</string>
     <string name="vibrate_on_button_press">Düğmeye basıldığında titret</string>
-    <string name="move_items_into_recycle_bin">Öğeleri silmek yerine Geri Dönüşüm Kutusuna taşı</string>
+    <string name="move_items_into_recycle_bin">Ögeleri silmek yerine Geri Dönüşüm Kutusuna taşı</string>
     <string name="recycle_bin_cleaning_interval">Geri Dönüşüm Kutusu temizleme süresi</string>
     <string name="empty_recycle_bin">Geri Dönüşüm Kutusunu boşalt</string>
     <string name="force_portrait_mode">Dikey modu zorla</string>
@@ -561,6 +564,7 @@
     <string name="startup">Başlangıç</string>
     <string name="text">Metin</string>
     <string name="migrating">Geçiş</string>
+    <string name="quality">Quality</string>
 
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Gösterilen sekmeleri yönet</string>
@@ -570,7 +574,7 @@
     <string name="call_history_tab">Arama Geçmişi</string>
     <string name="groups_tab">Gruplar</string>
     <string name="last_used_tab">Son kullanılan</string>
-    <string name="files_tab">Files</string>
+    <string name="files_tab">Dosyalar</string>
     <string name="recent_files_tab">Son Dosyalar</string>
 
     <!-- Recycle Bin -->
@@ -581,13 +585,13 @@
     <string name="files_restored_successfully">Dosyalar başarıyla geri yüklendi</string>
     <string name="empty_recycle_bin_confirmation">Geri Dönüşüm Kutusu\'nu boşaltmak istediğinizden emin misiniz? Dosyalar kalıcı olarak kaybolacak.</string>
     <string name="recycle_bin_empty">Geri Dönüşüm Kutusu boş</string>
-    <string name="moving_recycle_bin_items_disabled">Geri Dönüşüm kutusu öğelerini taşıma devre dışı, lütfen Geri Yükle\'yi kullanın</string>
+    <string name="moving_recycle_bin_items_disabled">Geri Dönüşüm kutusu ögelerini taşıma devre dışı, lütfen Geri Yükle\'yi kullanın</string>
     <string name="show_the_recycle_bin">Geri Dönüşüm Kutusunu göster</string>
     <string name="hide_the_recycle_bin">Geri Dönüşüm Kutusunu gizle</string>
 
     <plurals name="moving_items_into_bin">
-        <item quantity="one">%d öğe Geri Dönüşüm Kutusu\'na taşınıyor</item>
-        <item quantity="other">%d öğe Geri Dönüşüm Kutusu\'na taşınıyor</item>
+        <item quantity="one">%d öge Geri Dönüşüm Kutusu\'na taşınıyor</item>
+        <item quantity="other">%d öge Geri Dönüşüm Kutusu\'na taşınıyor</item>
     </plurals>
 
     <!-- Import / Export -->
@@ -597,10 +601,10 @@
     <string name="exporting_successful">Dışa aktarma başarılı</string>
     <string name="importing_failed">İçe aktarılamadı</string>
     <string name="exporting_failed">Dışa aktarılamadı</string>
-    <string name="importing_some_entries_failed">Bazı öğeler içe aktarılamadı</string>
-    <string name="exporting_some_entries_failed">Bazı öğeler dışa aktarılamadı</string>
-    <string name="no_entries_for_importing">İçe aktarılacak öğe bulunamadı</string>
-    <string name="no_entries_for_exporting">Dışa aktarılacak öğe bulunamadı</string>
+    <string name="importing_some_entries_failed">Bazı ögeler içe aktarılamadı</string>
+    <string name="exporting_some_entries_failed">Bazı ögeler dışa aktarılamadı</string>
+    <string name="no_entries_for_importing">İçe aktarılacak öge bulunamadı</string>
+    <string name="no_entries_for_exporting">Dışa aktarılacak öge bulunamadı</string>
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
@@ -673,18 +677,24 @@
     <string name="website_label">Kaynak kodları için ziyaret edin</string>
     <string name="email_label">Görüşlerinizi veya önerilerinizi şuraya gönderin:</string>
     <string name="upgrade_to_pro">Pro\'ya Yükselt</string>
-    <string name="more_apps_underlined"><u>Daha fazla uygulama</u></string>
-    <string name="more_apps_from_us_underlined"><u>Diğer uygulamalarımız</u></string>
-    <string name="third_party_licences_underlined"><u>Üçüncü taraf lisansları</u></string>
-    <string name="invite_friends_underlined"><u>Arkadaşlarınızı davet edin</u></string>
+    <string name="more_apps">Daha fazla uygulama</string>
+    <string name="more_apps_from_us">Diğer uygulamalarımız</string>
+    <string name="invite_friends">Arkadaşlarınızı davet edin</string>
     <string name="share_text">Selam, %1$s adlı harika bir uygulama buldum. %2$s adresinden indir</string>
     <string name="invite_via">Şununla davet et</string>
-    <string name="rate_us_underlined"><u>Bizi değerlendirin</u></string>
+    <string name="rate_us">Bizi değerlendirin</string>
     <string name="rate">Oyla</string>
     <string name="donate">Bağış yap</string>
     <string name="donate_underlined"><u>Bağış yapın</u></string>
     <string name="follow_us">Bizi takip edin</string>
     <string name="copyright">v %1$s\nTelif hakkı © Simple Mobile Tools %2$d</string>
+    <string name="support">Destek</string>
+    <string name="help_us">Bize yardım edin</string>
+    <string name="social">Sosyal</string>
+    <string name="other">Diğer</string>
+    <string name="version_placeholder">Sürüm %s</string>
+    <string name="hello">Merhaba :)</string>
+    <string name="about_footer">&#10084;&#65039; ile Slovakya\'da yapıldı</string>
     <string name="additional_info">Ek bilgiler</string>
     <string name="app_version">Uygulama sürümü: %s</string>
     <string name="device_os">Cihaz İS: %s</string>
@@ -705,10 +715,10 @@
     <string name="rate_us_prompt">Merhaba,\n\nzaten bir süredir bu uygulamayı kullanıyor gibi görünüyorsunuz ve gerçekten takdir ediyoruz.\n\nSizden bir iyilik isteyebilirsek, lütfen bizi Google Play\'de oylayın. Bu bize gerçekten çok yardımcı olacak.\n\nNasıl karar verirseniz verin, bu mesajı bir daha görmeyeceksiniz.\n\nTeşekkürler!</string>
     <string name="rate_our_app">Lütfen uygulamamızı oylayın :)</string>
     <string name="thank_you">Teşekkürler</string>
-    <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
+    <string name="widget_locked_pro">Widget kilitli.\nKilidi açmak için lütfen Pro sürümüne yükseltin.</string>
     <string name="widget_locked">
         <![CDATA[
-            The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
+            Widget kilitli.<br>Kilidini açmak için lütfen <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Basit Teşekkürler</a> uygulamasını satın alın.
         ]]>
     </string>
 
@@ -771,8 +781,12 @@
     <string name="faq_1_title_commons">Uygulamanın widget\'ını widget\'lar listesinde neden göremiyorum?</string>
     <string name="faq_1_text_commons">Büyük olasılıkla uygulamayı SD karta taşıdığınız içindir. Bu durumda verilen uygulama widget\'larını gizleyen bir Android sistem sınırlaması var. Tek çözüm, cihaz ayarlarınızı kullanarak uygulamayı Dahili Depolama birimine geri taşımaktır.</string>
     <string name="faq_2_title_commons">Seni desteklemek istiyorum ama para bağışlayamıyorum. Yapabileceğim başka bir şey var mı?</string>
-    <string name="faq_2_text_commons">Evet, tabi ki. Uygulamalar hakkında tanıtım yapabilir veya iyi geribildirim ve derecelendirmeler verebilirsiniz.
-        Kılavuzu https://github.com/SimpleMobileTools/General-Discussion adresinde bulabilir, veya yardıma ihtiyacınız varsa bana hello@simplemobiletools.com adresinden bir mesaj gönderebilirsiniz.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Evet tabi ki. Uygulamalar hakkında farkındalığı artırabilir veya iyi geri bildirim ve puanlar verebilirsiniz. Ayrıca, uygulamaları yeni bir dile çevirerek veya sadece mevcut çevirileri güncelleyerek de yardımcı olabilirsiniz.
+            Çeviri rehberi <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">bu sayfadadır</a> veya herhangi bir sorunuz varsa <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> adresinden bize ulaşın.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Bazı dosyaları yanlışlıkla sildim, onları nasıl kurtarabilirim?</string>
     <string name="faq_3_text_commons">Ne yazık ki, yapamazsınız. Onay penceresinden sonra dosyalar anında silinir, kullanılabilir çöp kutusu yoktur.</string>
     <string name="faq_4_title_commons">Widget renklerini beğenmedim, değiştirebilir miyim?</string>
@@ -788,60 +802,67 @@
     <string name="faq_8_text_commons">Uygulama sürümünüz artık güncellenmediğinden, tespit ettiğiniz hatalar asla düzeltilmeyecektir. Ayrıca yeni işlevler eklenmeyecektir. Pro sürümünü Google Play\'den az miktarda para karşılığında satın alabilirsiniz.
         Bir kerelik ödeme, yani bir kez satın aldığınızda, bir daha asla ödeme yapmanız gerekmeyeceği anlamına gelir. Yeni bir cihaz aldıktan sonra bile. Pro sürümünü beğenmediyseniz, birkaç saat içinde kaldırabilirsiniz ve paranızı otomatik olarak geri alırsınız.
         Daha sonra istediğiniz zaman geri ödeme almak isterseniz, hello@simplemobiletools.com adresinden bizimle iletişime geçmeniz yeterlidir.</string>
-    <string name="faq_9_title_commons">Aynı anda birden çok öğeyi nasıl seçebilirim?</string>
-    <string name="faq_9_text_commons">Bunu yapmanın birçok yolu var. İlki, bir öğeye uzun süre basarak seçim modunu başlatmak, ardından diğerlerini seçmek için kısa tıklamaktır. İkinci yol, PC\'lerdeki öğeleri fareyle seçmeye benzer, yalnızca bir öğeye uzun basarak seçim modunu başlatın ve ardından parmağınızı aşağı doğru kaydırarak diğer öğelere sürükleyin. Birden fazla öğe seçmenin üçüncü yolu, bir öğeye uzun süre basmak, ardından diğerine uzun basmaktır. Tüm öğeleri seçmek istiyorsanız, yalnızca bir öğeye uzun basın, ardından sol üst köşedeki seçili öğe sayacına tıklayın. Bu, her şeyi seçecek veya seçimini kaldıracaktır.</string>
+    <string name="faq_9_title_commons">Aynı anda birden çok ögeyi nasıl seçebilirim?</string>
+    <string name="faq_9_text_commons">Bunu yapmanın birçok yolu var. İlki, bir ögeye uzun süre basarak seçim modunu başlatmak, ardından diğerlerini seçmek için kısa tıklamaktır. İkinci yol, PC\'lerdeki ögeleri fareyle seçmeye benzer, yalnızca bir ögeye uzun basarak seçim modunu başlatın ve ardından parmağınızı aşağı doğru kaydırarak diğer ögelere sürükleyin. Birden fazla öge seçmenin üçüncü yolu, bir ögeye uzun süre basmak, ardından diğerine uzun basmaktır. Tüm ögeleri seçmek istiyorsanız, yalnızca bir ögeye uzun basın, ardından sol üst köşedeki seçili öge sayacına tıklayın. Bu, her şeyi seçecek veya seçimini kaldıracaktır.</string>
     <string name="faq_10_title_commons">Uygulamayı satın aldım ancak başka bir cihaza indiremiyorum.</string>
     <string name="faq_10_text_commons">Google Play uygulama önbelleğinizi temizlemeyi ve cihazınızı yeniden başlatmayı deneyin. Bazı Google Play aksaklıkları, gerçekten uygulamanın kendisiyle ilgili değil.</string>
 
     <!-- Contributors -->
-    <string name="contributors">Contributors</string>
-    <string name="translation">Translation</string>
-    <string name="development">Development</string>
-    <string name="other_help">Other help</string>
-    <string name="contributors_label">This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-        let us know if you want to help too. The guide to translating is at https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , or just contact us at hello@simplemobiletools.com if you have any questions.
-        Thanks to all contributors and other supporters!</string>
-    <string name="translation_arabic">Arabic</string>
-    <string name="translation_azerbaijani">Azerbaijani</string>
-    <string name="translation_bengali">Bengali</string>
-    <string name="translation_breton">Breton</string>
-    <string name="translation_catalan">Catalan</string>
-    <string name="translation_czech">Czech</string>
-    <string name="translation_welsh">Welsh</string>
-    <string name="translation_danish">Danish</string>
-    <string name="translation_german">German</string>
-    <string name="translation_greek">Greek</string>
-    <string name="translation_spanish">Spanish</string>
-    <string name="translation_basque">Basque</string>
-    <string name="translation_persian">Persian</string>
-    <string name="translation_finnish">Finnish</string>
-    <string name="translation_french">French</string>
-    <string name="translation_galician">Galician</string>
-    <string name="translation_hindi">Hindi</string>
-    <string name="translation_croatian">Croatian</string>
-    <string name="translation_hungarian">Hungarian</string>
-    <string name="translation_indonesian">Indonesian</string>
-    <string name="translation_italian">Italian</string>
-    <string name="translation_hebrew">Hebrew</string>
-    <string name="translation_japanese">Japanese</string>
-    <string name="translation_korean">Korean</string>
-    <string name="translation_lithuanian">Lithuanian</string>
-    <string name="translation_nepali">Nepali</string>
-    <string name="translation_norwegian">Norwegian</string>
-    <string name="translation_dutch">Dutch</string>
-    <string name="translation_polish">Polish</string>
-    <string name="translation_portuguese">Portuguese</string>
-    <string name="translation_romanian">Romanian</string>
-    <string name="translation_russian">Russian</string>
-    <string name="translation_slovak">Slovak</string>
-    <string name="translation_slovenian">Slovenian</string>
-    <string name="translation_serbian">Serbian</string>
-    <string name="translation_swedish">Swedish</string>
-    <string name="translation_tamil">Tamil</string>
-    <string name="translation_turkish">Turkish</string>
-    <string name="translation_ukrainian">Ukrainian</string>
-    <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese">Chinese</string>
+    <string name="contributors">Katkıda bulunanlar</string>
+    <string name="translation">Çeviri</string>
+    <string name="development">Geliştirme</string>
+    <string name="other_help">Diğer yardımlar</string>
+    <string name="contributors_label">
+        <![CDATA[
+            Bu liste, yalnızca buna değil, Simple Mobile Tools paketindeki herhangi bir uygulamaya belirgin şekilde yardımcı olan herkesi içerir. Çeviriler gönüllüler tarafından yapılır,
+            siz de yardım etmek isterseniz bize bildirin. Çeviri rehberi <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">bu sayfadadır</a> veya herhangi bir sorunuz varsa <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> adresinden bize ulaşın.
+            Tüm katkıda bulunanlara ve diğer destekçilere teşekkürler!
+        ]]>
+    </string>
+
+    <string name="translation_arabic">Arapça</string>
+    <string name="translation_azerbaijani">Azerice</string>
+    <string name="translation_bengali">Bengalce</string>
+    <string name="translation_breton">Bretonca</string>
+    <string name="translation_catalan">Katalanca</string>
+    <string name="translation_czech">Çekce</string>
+    <string name="translation_welsh">Galce</string>
+    <string name="translation_danish">Danca</string>
+    <string name="translation_german">Almanca</string>
+    <string name="translation_greek">Yunanca</string>
+    <string name="translation_spanish">İspanyolca</string>
+    <string name="translation_basque">Baskça</string>
+    <string name="translation_persian">Farsça</string>
+    <string name="translation_finnish">Fince</string>
+    <string name="translation_french">Fransızca</string>
+    <string name="translation_galician">Galiçyaca</string>
+    <string name="translation_hindi">Hintçe</string>
+    <string name="translation_croatian">Hırvatça</string>
+    <string name="translation_hungarian">Macarca</string>
+    <string name="translation_indonesian">Endonezyaca</string>
+    <string name="translation_italian">İtalyanca</string>
+    <string name="translation_hebrew">İbranice</string>
+    <string name="translation_japanese">Japonca</string>
+    <string name="translation_korean">Korece</string>
+    <string name="translation_lithuanian">Litvanyaca</string>
+    <string name="translation_nepali">Nepalce</string>
+    <string name="translation_norwegian">Norveççe</string>
+    <string name="translation_dutch">Felemenkçe</string>
+    <string name="translation_polish">Lehçe</string>
+    <string name="translation_portuguese">Portekizce</string>
+    <string name="translation_romanian">Rumence</string>
+    <string name="translation_russian">Rusça</string>
+    <string name="translation_slovak">Slovakça</string>
+    <string name="translation_slovenian">Slovence</string>
+    <string name="translation_serbian">Sırpça</string>
+    <string name="translation_swedish">İsveççe</string>
+    <string name="translation_tamil">Tamilce</string>
+    <string name="translation_turkish">Türkçe</string>
+    <string name="translation_ukrainian">Ukraynaca</string>
+    <string name="translation_vietnamese">Vietnamca</string>
+    <string name="translation_chinese_hk">Çince (Hong Kong)</string>
+    <string name="translation_chinese_cn">Çince (Basitleştirilmiş)</string>
+    <string name="translation_chinese_tw">Çince (Geleneksel)</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Pro sürümünü şimdi alın!</string>
@@ -873,9 +894,9 @@
     <string name="why_upgrade_contact_filtering">Kişi filtreleme</string>
 
     <!-- Notes Pro -->
-    <string name="why_upgrade_checklists">Kontrol listeleri</string>
+    <string name="why_upgrade_checklists">Yapılacaklar listeleri</string>
     <string name="why_upgrade_different_note_per_widget">Her araç için farklı not ve renkler</string>
-    <string name="why_upgrade_note_locking">Note locking</string>
+    <string name="why_upgrade_note_locking">Not kilitleme</string>
 
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Saat ve tarih formatını kişiselleştirme</string>
@@ -899,7 +920,7 @@
     <string name="rtl_viewpager_title">RtlViewPager (sağdan sola  kaydırma)</string>
     <string name="joda_title">Joda-Time (Java tarih değiştirme)</string>
     <string name="stetho_title">Stetho (hata ayıklama veritabanları)</string>
-    <string name="otto_title">Otto (event bus)</string>
+    <string name="otto_title">Otto (etkinlik veri yolu)</string>
     <string name="photoview_title">PhotoView (yakınlaştırılabilir GIF\'ler)</string>
     <string name="pattern_title">PatternLockView (desen koruması)</string>
     <string name="reprint_title">Reprint (parmak izi koruması)</string>

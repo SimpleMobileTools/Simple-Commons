@@ -37,7 +37,6 @@ class ColorPickerDialog(
     private val baseConfig = activity.baseConfig
     private val currentColorHsv = FloatArray(3)
     private val backgroundColor = baseConfig.backgroundColor
-    private val cornerRadius = activity.getCornerRadius()
     private var isHueBeingDragged = false
     private var wasDimmedBackgroundRemoved = false
     private var dialog: AlertDialog? = null
@@ -57,8 +56,8 @@ class ColorPickerDialog(
 
             viewSatVal.setHue(getHue())
 
-            viewNewColor.setFillWithStroke(getColor(), backgroundColor, cornerRadius)
-            color_picker_old_color.setFillWithStroke(color, backgroundColor, cornerRadius)
+            viewNewColor.setFillWithStroke(getColor(), backgroundColor)
+            color_picker_old_color.setFillWithStroke(color, backgroundColor)
 
             val hexCode = getHexCode(color)
             color_picker_old_hex.text = "#$hexCode"
@@ -117,7 +116,7 @@ class ColorPickerDialog(
                 currentColorHsv[2] = 1f - 1f / viewSatVal.measuredHeight * y
 
                 moveColorPicker()
-                viewNewColor.setFillWithStroke(getColor(), backgroundColor, cornerRadius)
+                viewNewColor.setFillWithStroke(getColor(), backgroundColor)
                 newHexField.setText(getHexCode(getColor()))
                 return@OnTouchListener true
             }
@@ -169,7 +168,7 @@ class ColorPickerDialog(
                 val recentColorView = ImageView(context)
                 recentColorView.id = View.generateViewId()
                 recentColorView.layoutParams = ViewGroup.LayoutParams(squareSize, squareSize)
-                recentColorView.setFillWithStroke(recentColor, backgroundColor, cornerRadius)
+                recentColorView.setFillWithStroke(recentColor, backgroundColor)
                 recentColorView.setOnClickListener { newHexField.setText(getHexCode(recentColor)) }
                 recent_colors.addView(recentColorView)
                 recent_colors_flow.addView(recentColorView)
@@ -218,7 +217,7 @@ class ColorPickerDialog(
     private fun updateHue() {
         viewSatVal.setHue(getHue())
         moveHuePicker()
-        viewNewColor.setFillWithStroke(getColor(), backgroundColor, cornerRadius)
+        viewNewColor.setFillWithStroke(getColor(), backgroundColor)
         if (removeDimmedBackground && !wasDimmedBackgroundRemoved) {
             dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
             wasDimmedBackgroundRemoved = true

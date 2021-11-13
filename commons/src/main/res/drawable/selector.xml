@@ -2,9 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <selector>
-            <item
-                android:drawable="@color/activated_item_foreground"
-                android:state_selected="true"/>
+            <item android:drawable="@color/activated_item_foreground" android:state_selected="true"/>
         </selector>
     </item>
     <item>

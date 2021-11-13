@@ -1,15 +1,15 @@
 package com.simplemobiletools.commons.activities
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.content.Intent.*
 import android.os.Build
 import android.os.Bundle
-import android.text.Html
-import android.text.method.LinkMovementMethod
+import android.os.Handler
 import android.view.Menu
-import android.view.View
+import androidx.core.net.toUri
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
-import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.dialogs.RateStarsDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
@@ -21,6 +21,11 @@ class AboutActivity : BaseSimpleActivity() {
     private var appName = ""
     private var linkColor = 0
 
+    private var firstVersionClickTS = 0L
+    private var clicksSinceFirstClick = 0
+    private val EASTER_EGG_TIME_LIMIT = 3000L
+    private val EASTER_EGG_REQUIRED_CLICKS = 7
+
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
 
     override fun getAppLauncherName() = intent.getStringExtra(APP_LAUNCHER_NAME) ?: ""
@@ -30,13 +35,33 @@ class AboutActivity : BaseSimpleActivity() {
         setContentView(R.layout.activity_about)
         appName = intent.getStringExtra(APP_NAME) ?: ""
         linkColor = getAdjustedPrimaryColor()
+
+        arrayOf(
+            about_faq_icon,
+            about_rate_us_icon,
+            about_invite_icon,
+            about_contributors_icon,
+            about_more_apps_icon,
+            about_email_icon,
+            about_licenses_icon,
+            about_version_icon
+        ).forEach {
+            it.applyColorFilter(baseConfig.textColor)
+        }
+
+        arrayOf(about_support, about_help_us, about_social, about_other).forEach {
+            it.setTextColor(getAdjustedPrimaryColor())
+        }
+
+        arrayOf(about_support_holder, about_help_us_holder, about_social_holder, about_other_holder).forEach {
+            it.background.applyColorFilter(baseConfig.backgroundColor.getContrastColor())
+        }
     }
 
     override fun onResume() {
         super.onResume()
         updateTextColors(about_holder)
 
-        setupWebsite()
         setupEmail()
         setupFAQ()
         setupMoreApps()
@@ -46,7 +71,7 @@ class AboutActivity : BaseSimpleActivity() {
         setupLicense()
         setupFacebook()
         setupReddit()
-        setupCopyright()
+        setupVersion()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -54,122 +79,108 @@ class AboutActivity : BaseSimpleActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
-    private fun setupWebsite() {
-        val websiteText = String.format(getString(R.string.two_string_placeholder), getString(R.string.website_label), getString(R.string.my_website))
-        about_website.text = websiteText
-    }
-
     private fun setupEmail() {
-        val label = getString(R.string.email_label)
-        val email = getString(R.string.my_email)
-
-        val appVersion = String.format(getString(R.string.app_version, intent.getStringExtra(APP_VERSION_NAME)))
-        val deviceOS = String.format(getString(R.string.device_os), Build.VERSION.RELEASE)
-        val newline = "%0D%0A"
-        val separator = "------------------------------"
-        val body = "$appVersion$newline$deviceOS$newline$separator$newline$newline"
-        val href = "$label<br><a href=\"mailto:$email?subject=$appName&body=$body\">$email</a>"
-        about_email.text = Html.fromHtml(href)
-
-        if (intent.getBooleanExtra(SHOW_FAQ_BEFORE_MAIL, false) && !baseConfig.wasBeforeAskingShown) {
-            about_email.setOnClickListener {
+        about_email_holder.setOnClickListener {
+            val msg = "${getString(R.string.before_asking_question_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
+            if (intent.getBooleanExtra(SHOW_FAQ_BEFORE_MAIL, false) && !baseConfig.wasBeforeAskingShown) {
                 baseConfig.wasBeforeAskingShown = true
-                about_email.movementMethod = LinkMovementMethod.getInstance()
-                about_email.setOnClickListener(null)
-                val msg = "${getString(R.string.before_asking_question_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
-                ConfirmationDialog(this, msg, 0, R.string.read_faq, R.string.skip) {
-                    about_faq_label.performClick()
+                ConfirmationAdvancedDialog(this, msg, 0, R.string.read_faq, R.string.skip) { success ->
+                    if (success) {
+                        about_faq_holder.performClick()
+                    } else {
+                        about_email_holder.performClick()
+                    }
+                }
+            } else {
+                val appVersion = String.format(getString(R.string.app_version, intent.getStringExtra(APP_VERSION_NAME)))
+                val deviceOS = String.format(getString(R.string.device_os), Build.VERSION.RELEASE)
+                val newline = "\n"
+                val separator = "------------------------------"
+                val body = "$appVersion$newline$deviceOS$newline$separator$newline$newline"
+
+                val address = getString(R.string.my_email)
+                val selectorIntent = Intent(ACTION_SENDTO)
+                    .setData("mailto:$address".toUri())
+                val emailIntent = Intent(ACTION_SEND).apply {
+                    putExtra(EXTRA_EMAIL, arrayOf(address))
+                    putExtra(EXTRA_SUBJECT, appName)
+                    putExtra(EXTRA_TEXT, body)
+                    selector = selectorIntent
+                }
+
+                try {
+                    startActivity(emailIntent)
+                } catch (e: ActivityNotFoundException) {
+                    toast(R.string.no_app_found)
+                } catch (e: Exception) {
+                    showErrorToast(e)
                 }
             }
-        } else {
-            about_email.movementMethod = LinkMovementMethod.getInstance()
         }
     }
 
     private fun setupFAQ() {
         val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
-        about_faq_label.beVisibleIf(faqItems.isNotEmpty())
-        about_faq_label.setOnClickListener {
-            openFAQ(faqItems)
-        }
-
-        about_faq.beVisibleIf(faqItems.isNotEmpty())
-        about_faq.setOnClickListener {
-            openFAQ(faqItems)
-        }
-
-        about_faq.setTextColor(linkColor)
-        about_faq.underlineText()
-    }
-
-    private fun openFAQ(faqItems: ArrayList<FAQItem>) {
-        Intent(applicationContext, FAQActivity::class.java).apply {
-            putExtra(APP_ICON_IDS, getAppIconIDs())
-            putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
-            putExtra(APP_FAQ, faqItems)
-            startActivity(this)
+        about_faq_holder.setOnClickListener {
+            Intent(applicationContext, FAQActivity::class.java).apply {
+                putExtra(APP_ICON_IDS, getAppIconIDs())
+                putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
+                putExtra(APP_FAQ, faqItems)
+                startActivity(this)
+            }
         }
     }
 
     private fun setupMoreApps() {
-        about_more_apps.setOnClickListener {
+        about_more_apps_holder.setOnClickListener {
             launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
         }
-        about_more_apps.setTextColor(linkColor)
     }
 
     private fun setupInvite() {
-        about_invite.setOnClickListener {
+        about_invite_holder.setOnClickListener {
             val text = String.format(getString(R.string.share_text), appName, getStoreUrl())
             Intent().apply {
-                action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_SUBJECT, appName)
-                putExtra(Intent.EXTRA_TEXT, text)
+                action = ACTION_SEND
+                putExtra(EXTRA_SUBJECT, appName)
+                putExtra(EXTRA_TEXT, text)
                 type = "text/plain"
-                startActivity(Intent.createChooser(this, getString(R.string.invite_via)))
+                startActivity(createChooser(this, getString(R.string.invite_via)))
             }
         }
-        about_invite.setTextColor(linkColor)
     }
 
     private fun setupContributors() {
-        about_contributors.setTextColor(linkColor)
-        about_contributors.underlineText()
-        about_contributors.setOnClickListener {
+        about_contributors_holder.setOnClickListener {
             val intent = Intent(applicationContext, ContributorsActivity::class.java)
             startActivity(intent)
         }
     }
 
     private fun setupRateUs() {
-        if (baseConfig.appRunCount < 5) {
-            about_rate_us.visibility = View.GONE
-        } else {
-            about_rate_us.setOnClickListener {
-                if (baseConfig.wasBeforeRateShown) {
-                    if (baseConfig.wasAppRated) {
-                        redirectToRateUs()
-                    } else {
-                        RateStarsDialog(this)
-                    }
+        about_rate_us_holder.setOnClickListener {
+            if (baseConfig.wasBeforeRateShown) {
+                if (baseConfig.wasAppRated) {
+                    redirectToRateUs()
                 } else {
-                    baseConfig.wasBeforeRateShown = true
-                    val msg = "${getString(R.string.before_rate_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
-                    ConfirmationAdvancedDialog(this, msg, 0, R.string.read_faq, R.string.skip) {
-                        if (it) {
-                            about_faq_label.performClick()
-                        } else {
-                            about_rate_us.performClick()
-                        }
+                    RateStarsDialog(this)
+                }
+            } else {
+                baseConfig.wasBeforeRateShown = true
+                val msg = "${getString(R.string.before_rate_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
+                ConfirmationAdvancedDialog(this, msg, 0, R.string.read_faq, R.string.skip) { success ->
+                    if (success) {
+                        about_faq_holder.performClick()
+                    } else {
+                        about_rate_us_holder.performClick()
                     }
                 }
             }
         }
-        about_rate_us.setTextColor(linkColor)
     }
 
     private fun setupLicense() {
-        about_license.setOnClickListener {
+        about_licenses_holder.setOnClickListener {
             Intent(applicationContext, LicenseActivity::class.java).apply {
                 putExtra(APP_ICON_IDS, getAppIconIDs())
                 putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
@@ -177,11 +188,10 @@ class AboutActivity : BaseSimpleActivity() {
                 startActivity(this)
             }
         }
-        about_license.setTextColor(linkColor)
     }
 
     private fun setupFacebook() {
-        about_facebook.setOnClickListener {
+        about_facebook_holder.setOnClickListener {
             var link = "https://www.facebook.com/simplemobiletools"
             try {
                 packageManager.getPackageInfo("com.facebook.katana", 0)
@@ -194,18 +204,34 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupReddit() {
-        about_reddit.setOnClickListener {
+        about_reddit_holder.setOnClickListener {
             launchViewIntent("https://www.reddit.com/r/SimpleMobileTools")
         }
     }
 
-    private fun setupCopyright() {
-        var versionName = intent.getStringExtra(APP_VERSION_NAME) ?: ""
+    private fun setupVersion() {
+        var version = intent.getStringExtra(APP_VERSION_NAME) ?: ""
         if (baseConfig.appId.removeSuffix(".debug").endsWith(".pro")) {
-            versionName += " ${getString(R.string.pro)}"
+            version += " ${getString(R.string.pro)}"
         }
 
-        val year = Calendar.getInstance().get(Calendar.YEAR)
-        about_copyright.text = String.format(getString(R.string.copyright), versionName, year)
+        val fullVersion = String.format(getString(R.string.version_placeholder, version))
+        about_version.text = fullVersion
+        about_version_holder.setOnClickListener {
+            if (firstVersionClickTS == 0L) {
+                firstVersionClickTS = System.currentTimeMillis()
+                Handler().postDelayed({
+                    firstVersionClickTS = 0L
+                    clicksSinceFirstClick = 0
+                }, EASTER_EGG_TIME_LIMIT)
+            }
+
+            clicksSinceFirstClick++
+            if (clicksSinceFirstClick >= EASTER_EGG_REQUIRED_CLICKS) {
+                toast(R.string.hello)
+                firstVersionClickTS = 0L
+                clicksSinceFirstClick = 0
+            }
+        }
     }
 }

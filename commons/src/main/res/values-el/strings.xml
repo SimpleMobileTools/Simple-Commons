@@ -29,6 +29,7 @@
     <string name="select_a_different_color">Επιλέξτε διαφορετικό χρώμα</string>
     <string name="download">Λήψη</string>
     <string name="notification">Ειδοποιήσεις</string>
+    <string name="notifications">Notifications</string>
     <string name="email">Email</string>
     <string name="previous">Προηγούμενο</string>
     <string name="playpause">Αναπαραγωγή / Παύση</string>
@@ -513,6 +514,8 @@
     <!-- Settings -->
     <string name="settings">Ρυθμίσεις</string>
     <string name="purchase_simple_thank_you">Αγοράστε το \"Απλά Σας ευχαριστώ\"</string>
+    <string name="general_settings">Γενικά</string>
+    <string name="color_customization">Προσαρμογή χρώματος</string>
     <string name="customize_colors">Προσαρμογή χρωμάτων</string>
     <string name="customize_colors_locked">Προσαρμογή χρωμάτων (Κλειδωμένο)</string>
     <string name="customize_widget_colors">Προσαρμογή χρωμάτων widget</string>
@@ -561,6 +564,7 @@
     <string name="startup">Εκκίνηση</string>
     <string name="text">Κείμενο</string>
     <string name="migrating">Μετεγκατάσταση</string>
+    <string name="quality">Quality</string>
 
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Διαχείριση εμφανιζόμενων καρτελών</string>
@@ -673,18 +677,24 @@
     <string name="website_label">Για τον κώδικα επισκεφθείτε</string>
     <string name="email_label">Στείλτε τα σχόλιά σας ή τις προτάσεις σας</string>
     <string name="upgrade_to_pro">Αναβάθμιση στην Pro</string>
-    <string name="more_apps_underlined"><u>Περισσότερες εφαρμογές</u></string>
-    <string name="more_apps_from_us_underlined"><u>Περισσότερες εφαρμογές από εμάς</u></string>
-    <string name="third_party_licences_underlined"><u>Άδειες τρίτων</u></string>
-    <string name="invite_friends_underlined"><u>Πρόσκληση φίλων</u></string>
+    <string name="more_apps">Περισσότερες εφαρμογές</string>
+    <string name="more_apps_from_us">Περισσότερες εφαρμογές από εμάς</string>
+    <string name="invite_friends">Πρόσκληση φίλων</string>
     <string name="share_text">Έι, έλα να δεις %1$s στο %2$s</string>
     <string name="invite_via">Πρόσκληση μέσω</string>
-    <string name="rate_us_underlined"><u>Βαθμολογήστε μας</u></string>
+    <string name="rate_us">Βαθμολογήστε μας</string>
     <string name="rate">Βαθμολογία</string>
     <string name="donate">Δωρεά</string>
     <string name="donate_underlined"><u>Δωρεά</u></string>
     <string name="follow_us">Ακολουθήστε μας</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="support">Support</string>
+    <string name="help_us">Help us</string>
+    <string name="social">Social</string>
+    <string name="other">Other</string>
+    <string name="version_placeholder">Version %s</string>
+    <string name="hello">Hello :)</string>
+    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
     <string name="additional_info">Πρόσθετες πληροφορίες</string>
     <string name="app_version">Έκδοση εφαρμογής: %s</string>
     <string name="device_os">OS Συσκευής: %s</string>
@@ -772,8 +782,12 @@
     <string name="faq_1_text_commons">Είναι πολύ πιθανό επειδή μετακινήσατε την εφαρμογή σε μια κάρτα SD. Υπάρχει ένας περιορισμός του συστήματος Android που αποκρύπτει τα συγκεκριμένα Γραφικά στοιχεία εφαρμογών
        σε αυτή την περίπτωση. Η μόνη λύση είναι να μετακινήσετε την εφαρμογή πίσω στην εσωτερική αποθήκευση μέσω των ρυθμίσεων της συσκευής σας.</string>
     <string name="faq_2_title_commons">Θέλω να σας υποστηρίξω, αλλά δεν μπορώ να δωρίσω χρήματα. Υπάρχει κάτι άλλο που μπορώ να κάνω;</string>
-    <string name="faq_2_text_commons">Ναι φυσικά. Μπορείτε να διαδώσετε το όνομα σχετικά με τις εφαρμογές μας ή να γράψετε καλά σχόλια και αξιολογήσεις. Μπορείτε επίσης να βοηθήσετε με τη μετάφραση των εφαρμογών σε μια νέα γλώσσα ή απλά να ενημερώσετε μερικές υπάρχουσες μεταφράσεις.
-        Μπορείτε να βρείτε τον οδηγό στο https://github.com/SimpleMobileTools/General-Discussion , ή απλά ένα μήνυμα στο hello@simplemobiletools.com αν χρειάζεστε βοήθεια.</string>
+    <string name="faq_2_text_commons">
+        <![CDATA[
+            Ναι, φυσικά. Μπορείτε να διαδώσετε τις εφαρμογές ή να δώσετε καλά σχόλια και αξιολογήσεις. Μπορείτε επίσης να βοηθήσετε με τη μετάφραση των εφαρμογών σε μια νέα γλώσσα ή απλώς να ενημερώστε κάποιες υπάρχουσες μεταφράσεις..
+            Ο οδηγός μετάφρασης βρίσκεται στον <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">ιστότοπο</a>, ή απλά επικοινωνήστε μαζί μας στο <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> αν έχετε οποιεσδήποτε ερωτήσεις.
+        ]]>
+    </string>
     <string name="faq_3_title_commons">Διαγραφή κάποιων αρχείων κατά λάθος, πώς μπορώ να τα ανακτήσω;</string>
     <string name="faq_3_text_commons">Δυστυχώς, δεν μπορείτε. Τα αρχεία διαγράφονται αμέσως μετά το παράθυρο διαλόγου επιβεβαίωσης, δεν υπάρχει διαθέσιμος Κάδος ανακύκλωσης.</string>
     <string name="faq_4_title_commons">Δεν μου αρέσουν τα χρώματα του Γραφικού στοιχείου, μπορώ να τα αλλάξω;</string>
@@ -801,9 +815,14 @@
     <string name="translation">Μετάφραση</string>
     <string name="development">Ανάπτυξη</string>
     <string name="other_help">Άλλη Βοήθεια</string>
-    <string name="contributors_label">Αυτή η λίστα περιέχει όλους όσους βοήθησαν αισθητά οποιαδήποτε εφαρμογή της σουίτας Simple Mobile Tools, όχι μόνο αυτή. Οι μεταφράσεις γίνονται από εθελοντές,
-        πείτε μας αν θέλετε να βοηθήσετε κι εσείς. Ο οδηγός μετάφρασης βρίσκεται στη διεύθυνση https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file , ή επικοινωνήστε μαζί μας στη διεύθυνση hello@simplemobiletools.com αν έχετε ερωτήσεις.
-        Ευχαριστούμε όλους τους συνεισφέροντες και άλλους υποστηρικτές!</string>
+    <string name="contributors_label">
+        <![CDATA[
+            Αυτή η λίστα περιέχει όλους όσους βοήθησαν αισθητά οποιαδήποτε εφαρμογή της σουίτας Simple Mobile Tools, όχι μόνο αυτή. Οι μεταφράσεις γίνονται από εθελοντές,
+            πείτε μας αν θέλετε να βοηθήσετε κι εσείς. Ο οδηγός για τη μετάφραση βρίσκεται στον <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">ιστότοπο</a>, ή επικοινωνήστε μαζί μας στο <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> αν έχετε οποιεσδήποτε ερωτήσεις.
+            Ευχαριστούμε όλους τους συνεισφέροντες και υποστηρικτές!
+        ]]>
+    </string>
+
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -844,7 +863,9 @@
     <string name="translation_turkish">Turkish</string>
     <string name="translation_ukrainian">Ukrainian</string>
     <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese">Chinese</string>
+    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
+    <string name="translation_chinese_cn">Chinese (Simplified)</string>
+    <string name="translation_chinese_tw">Chinese (Traditional)</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Λάβετε την Pro έκδοση τώρα!</string>

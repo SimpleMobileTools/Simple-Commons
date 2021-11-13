@@ -1,18 +1,19 @@
 package com.simplemobiletools.commons.activities
 
 import android.os.Bundle
+import android.text.Html
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.Menu
+import android.widget.LinearLayout
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
-import com.simplemobiletools.commons.extensions.underlineText
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.APP_FAQ
 import com.simplemobiletools.commons.helpers.APP_ICON_IDS
 import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
 import com.simplemobiletools.commons.models.FAQItem
 import kotlinx.android.synthetic.main.activity_faq.*
-import kotlinx.android.synthetic.main.faq_item.view.*
+import kotlinx.android.synthetic.main.item_faq.view.*
 import java.util.*
 
 class FAQActivity : BaseSimpleActivity() {
@@ -24,6 +25,7 @@ class FAQActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_faq)
 
+        val dividerMargin = resources.getDimension(R.dimen.medium_margin).toInt()
         val titleColor = getAdjustedPrimaryColor()
         val textColor = baseConfig.textColor
 
@@ -31,18 +33,23 @@ class FAQActivity : BaseSimpleActivity() {
         val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
         faqItems.forEach {
             val faqItem = it
-            inflater.inflate(R.layout.faq_item, null).apply {
+            inflater.inflate(R.layout.item_faq, null).apply {
+                background.applyColorFilter(baseConfig.backgroundColor.getContrastColor())
                 faq_title.apply {
                     text = if (faqItem.title is Int) getString(faqItem.title) else faqItem.title as String
-                    underlineText()
                     setTextColor(titleColor)
                 }
 
                 faq_text.apply {
-                    text = if (faqItem.text is Int) getString(faqItem.text) else faqItem.text as String
+                    text = if (faqItem.text is Int) Html.fromHtml(getString(faqItem.text)) else faqItem.text as String
                     setTextColor(textColor)
+                    setLinkTextColor(getAdjustedPrimaryColor())
+
+                    movementMethod = LinkMovementMethod.getInstance()
+                    removeUnderlines()
                 }
                 faq_holder.addView(this)
+                (layoutParams as LinearLayout.LayoutParams).bottomMargin = dividerMargin
             }
         }
     }

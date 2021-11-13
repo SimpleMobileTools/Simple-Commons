@@ -2,6 +2,8 @@ package com.simplemobiletools.commons.activities
 
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.drawable.LayerDrawable
+import android.graphics.drawable.RippleDrawable
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -82,7 +84,6 @@ class CustomizationActivity : BaseSimpleActivity() {
             baseConfig.isUsingSharedTheme = false
         }
 
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_cross_vector)
         updateTextColors(customization_holder)
         originalAppIconColor = baseConfig.appIconColor
     }
@@ -265,6 +266,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         updateActionbarColor(curPrimaryColor)
         updateNavigationBarColor(curNavigationBarColor)
         updateAutoThemeFields()
+        updateApplyToAllColors(curPrimaryColor)
         handleAccentColorLayout()
     }
 
@@ -400,13 +402,13 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun setupColorsPickers() {
-        val cornerRadius = getCornerRadius()
-        customization_text_color.setFillWithStroke(curTextColor, curBackgroundColor, cornerRadius)
-        customization_primary_color.setFillWithStroke(curPrimaryColor, curBackgroundColor, cornerRadius)
-        customization_accent_color.setFillWithStroke(curAccentColor, curBackgroundColor, cornerRadius)
-        customization_background_color.setFillWithStroke(curBackgroundColor, curBackgroundColor, cornerRadius)
-        customization_app_icon_color.setFillWithStroke(curAppIconColor, curBackgroundColor, cornerRadius)
-        customization_navigation_bar_color.setFillWithStroke(curNavigationBarColor, curBackgroundColor, cornerRadius)
+        customization_text_color.setFillWithStroke(curTextColor, curBackgroundColor)
+        customization_primary_color.setFillWithStroke(curPrimaryColor, curBackgroundColor)
+        customization_accent_color.setFillWithStroke(curAccentColor, curBackgroundColor)
+        customization_background_color.setFillWithStroke(curBackgroundColor, curBackgroundColor)
+        customization_app_icon_color.setFillWithStroke(curAppIconColor, curBackgroundColor)
+        customization_navigation_bar_color.setFillWithStroke(curNavigationBarColor, curBackgroundColor)
+        apply_to_all.setTextColor(curPrimaryColor.getContrastColor())
 
         customization_text_color_holder.setOnClickListener { pickTextColor() }
         customization_background_color_holder.setOnClickListener { pickBackgroundColor() }
@@ -415,7 +417,10 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         handleAccentColorLayout()
         customization_navigation_bar_color_holder.setOnClickListener { pickNavigationBarColor() }
-        apply_to_all_holder.setOnClickListener { applyToAll() }
+        apply_to_all.setOnClickListener {
+            applyToAll()
+        }
+
         customization_app_icon_color_holder.setOnClickListener {
             if (baseConfig.wasAppIconCustomizationWarningShown) {
                 pickAppIconColor()
@@ -449,6 +454,17 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun setCurrentPrimaryColor(color: Int) {
         curPrimaryColor = color
         updateActionbarColor(color)
+        updateApplyToAllColors(color)
+    }
+
+    private fun updateApplyToAllColors(newColor: Int) {
+        if (newColor == baseConfig.primaryColor) {
+            apply_to_all.setBackgroundResource(R.drawable.button_background_rounded)
+        } else {
+            val applyBackground = resources.getDrawable(R.drawable.button_background_rounded) as RippleDrawable
+            (applyBackground as LayerDrawable).findDrawableByLayerId(R.id.button_background_holder).applyColorFilter(newColor)
+            apply_to_all.background = applyBackground
+        }
     }
 
     private fun setCurrentNavigationBarColor(color: Int) {

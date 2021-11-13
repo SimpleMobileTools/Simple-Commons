@@ -7,6 +7,7 @@ import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.launchPurchaseThankYouIntent
+import com.simplemobiletools.commons.extensions.removeUnderlines
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_purchase_thank_you.view.*
 
@@ -20,6 +21,7 @@ class PurchaseThankYouDialog(val activity: Activity) {
 
             purchase_thank_you.text = Html.fromHtml(text)
             purchase_thank_you.movementMethod = LinkMovementMethod.getInstance()
+            purchase_thank_you.removeUnderlines()
         }
 
         AlertDialog.Builder(activity)

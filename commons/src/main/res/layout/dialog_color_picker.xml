@@ -25,10 +25,10 @@
                 android:layout_height="0dp"
                 app:flow_horizontalAlign="start"
                 app:flow_horizontalGap="@dimen/activity_margin"
-                app:flow_verticalGap="@dimen/medium_margin"
-                app:flow_maxElementsWrap="5"
-                app:flow_wrapMode="chain"
                 app:flow_horizontalStyle="packed"
+                app:flow_maxElementsWrap="5"
+                app:flow_verticalGap="@dimen/medium_margin"
+                app:flow_wrapMode="chain"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -137,8 +137,8 @@
 
             <ImageView
                 android:id="@+id/color_picker_old_color"
-                android:layout_width="@dimen/colorpicker_color_width"
-                android:layout_height="match_parent"
+                android:layout_width="@dimen/colorpicker_items_height"
+                android:layout_height="@dimen/colorpicker_items_height"
                 android:layout_toStartOf="@+id/color_picker_arrow"
                 android:background="@android:color/white" />
 
@@ -154,8 +154,8 @@
 
             <ImageView
                 android:id="@+id/color_picker_new_color"
-                android:layout_width="@dimen/colorpicker_color_width"
-                android:layout_height="match_parent"
+                android:layout_width="@dimen/colorpicker_items_height"
+                android:layout_height="@dimen/colorpicker_items_height"
                 android:layout_toEndOf="@+id/color_picker_arrow"
                 android:background="@android:color/white" />
         </RelativeLayout>
