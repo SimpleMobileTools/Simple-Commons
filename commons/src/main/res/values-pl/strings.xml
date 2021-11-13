@@ -29,7 +29,7 @@
     <string name="select_a_different_color">Wybierz inny kolor</string>
     <string name="download">Pobierz</string>
     <string name="notification">Powiadomienie</string>
-    <string name="notifications">Notifications</string>
+    <string name="notifications">Powiadomienia</string>
     <string name="email">E-mail</string>
     <string name="previous">Poprzedni</string>
     <string name="playpause">Odtwórz/Wstrzymaj</string>
@@ -559,7 +559,7 @@
     <string name="password_protect_file_deletion">Chroń pliki przed usunięciem i przeniesieniem</string>
     <string name="keep_last_modified">Utrzymuj starą datę modyfikacji po operacjach na plikach</string>
     <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
-    <string name="prevent_phone_from_sleeping">Zapobiegaj przejściu urządzenia w stan uśpienia, gdy aplikacja jest aktywna</string>
+    <string name="prevent_phone_from_sleeping">Zapobiegaj przechodzeniu urządzenia w tryb uśpienia, gdy aplikacja jest aktywna</string>
     <string name="skip_delete_confirmation">Nie pokazuj okna z potwierdzeniem usunięcia elementów</string>
     <string name="enable_pull_to_refresh">Włącz gest pociągnięcia ekranu od góry w celu odświeżenia widoku</string>
     <string name="use_24_hour_time_format">Używaj 24-godzinnego formatu czasu</string>
@@ -591,7 +591,7 @@
     <string name="startup">Uruchamianie</string>
     <string name="text">Tekst</string>
     <string name="migrating">Migracja</string>
-    <string name="quality">Quality</string>
+    <string name="quality">Jakość</string>
 
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Zarządzaj pokazywanymi kartami</string>
