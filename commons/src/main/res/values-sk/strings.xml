@@ -28,7 +28,8 @@
     <string name="transparent_color">Priesvitná farba</string>
     <string name="select_a_different_color">Zvoliť inú farbu</string>
     <string name="download">Stiahnuť</string>
-    <string name="notification">Pripomienka</string>
+    <string name="notification">Upozornenie</string>
+    <string name="notifications">Upozornenia</string>
     <string name="email">Email</string>
     <string name="previous">Predošlá</string>
     <string name="playpause">Hrať / Pauznúť</string>
@@ -596,6 +597,7 @@
     <string name="startup">Po spustení</string>
     <string name="text">Text</string>
     <string name="migrating">Migrovanie</string>
+    <string name="quality">Kvalita</string>
 
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Spravovať zobrazené karty</string>
