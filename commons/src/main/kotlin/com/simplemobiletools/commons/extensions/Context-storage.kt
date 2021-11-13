@@ -153,10 +153,14 @@ fun Context.isPathOnOTG(path: String) = otgPath.isNotEmpty() && path.startsWith(
 
 fun Context.isPathOnInternalStorage(path: String) = internalStoragePath.isNotEmpty() && path.startsWith(internalStoragePath)
 
-val DIRS_ACCESSIBLE_ONLY_WITH_SAF = listOf("/Android/data", "/Android/obb")
+const val ANDROID_DATA_DIR = "/Android/data"
+const val ANDROID_OBB_DIR = "/Android/obb"
+val DIRS_ACCESSIBLE_ONLY_WITH_SAF = listOf(ANDROID_DATA_DIR, ANDROID_OBB_DIR)
 
 fun Context.getSAFOnlyDirs(): List<String> {
-    return DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$internalStoragePath$it" }
+    return DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$internalStoragePath$it" }.toMutableList() +
+        DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$sdCardPath$it" }.toMutableList() +
+        DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$otgPath$it" }.toMutableList()
 }
 
 fun Context.isSAFOnlyRoot(path: String): Boolean {
@@ -196,25 +200,21 @@ fun Context.hasProperStoredAndroidDirTreeUri(path: String): Boolean {
 
 fun Context.getAndroidTreeUri(path: String): String {
     return when {
-        isPathOnOTG(path) -> baseConfig.otgAndroidTreeUri
-        isPathOnSD(path) -> baseConfig.sdAndroidTreeUri
-        else -> baseConfig.primaryAndroidTreeUri
+        isPathOnOTG(path) -> if (isAndroidDataDir(path)) baseConfig.otgAndroidDataTreeUri else baseConfig.otgAndroidObbTreeUri
+        isPathOnSD(path) -> if (isAndroidDataDir(path)) baseConfig.sdAndroidDataTreeUri else baseConfig.sdAndroidTreeObbUri
+        else -> if (isAndroidDataDir(path)) baseConfig.primaryAndroidDataTreeUri else baseConfig.primaryAndroidObbTreeUri
     }
 }
 
-fun Context.getTreeUriFromRoot(path: String): String {
-    return when {
-        isPathOnOTG(path) -> baseConfig.otgAndroidTreeUri
-        isPathOnSD(path) -> baseConfig.sdAndroidTreeUri
-        else -> baseConfig.primaryAndroidTreeUri
-    }
+fun isAndroidDataDir(path: String): Boolean {
+    return path.contains(ANDROID_DATA_DIR)
 }
 
 fun Context.storeAndroidTreeUri(path: String, treeUri: String) {
     return when {
-        isPathOnOTG(path) -> baseConfig.otgAndroidTreeUri = treeUri
-        isPathOnSD(path) -> baseConfig.sdAndroidTreeUri = treeUri
-        else -> baseConfig.primaryAndroidTreeUri = treeUri
+        isPathOnOTG(path) -> if (isAndroidDataDir(path)) baseConfig.otgAndroidDataTreeUri = treeUri else baseConfig.otgAndroidObbTreeUri = treeUri
+        isPathOnSD(path) -> if (isAndroidDataDir(path)) baseConfig.sdAndroidDataTreeUri = treeUri else baseConfig.otgAndroidObbTreeUri = treeUri
+        else -> if (isAndroidDataDir(path)) baseConfig.primaryAndroidDataTreeUri = treeUri else baseConfig.primaryAndroidObbTreeUri = treeUri
     }
 }
 
@@ -236,13 +236,8 @@ fun Context.createDocumentUri(fullPath: String): Uri {
     return DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
 }
 
-fun Context.getStorageRootId(path: String): String {
-    //content://com.android.externalstorage.documents/tree/1E17-301C%3A
-    //content://com.android.externalstorage.documents/tree/primary%3A
-    val androidTreeUri = getAndroidTreeUri(path)
-    val rootId = androidTreeUri.removeSuffix("%3AAndroid").substringAfterLast('/').trimEnd('/')
-    return rootId
-}
+fun Context.getStorageRootId(path: String) =
+    getAndroidTreeUri(path).removeSuffix(if (isAndroidDataDir(path)) "%3AAndroid%2Fdata" else "%3AAndroid%2Fobb").substringAfterLast('/').trimEnd('/')
 
 fun Context.isAStorageRootFolder(path: String): Boolean {
     val trimmed = path.trimEnd('/')

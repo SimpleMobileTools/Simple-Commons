@@ -154,7 +154,7 @@ fun BaseSimpleActivity.isShowingSAFPrimaryAndroidDialog(path: String): Boolean {
                 WritePermissionDialog(this, false) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         putExtra("android.content.extra.SHOW_ADVANCED", true)
-                        putExtra(DocumentsContract.EXTRA_INITIAL_URI, createDocumentUri("${path.getBasePath(this@isShowingSAFPrimaryAndroidDialog).trimEnd('/')}/Android"))
+                        putExtra(DocumentsContract.EXTRA_INITIAL_URI, createDocumentUri(path))
                         try {
                             startActivityForResult(this, OPEN_DOCUMENT_TREE_PRIMARY)
                             checkedDocumentPath = path

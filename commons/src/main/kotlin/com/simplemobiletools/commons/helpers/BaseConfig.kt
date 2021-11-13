@@ -24,17 +24,29 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(LAST_VERSION, 0)
         set(lastVersion) = prefs.edit().putInt(LAST_VERSION, lastVersion).apply()
 
-    var primaryAndroidTreeUri: String
-        get() = prefs.getString(PRIMARY_ANDROID_TREE_URI, "")!!
-        set(uri) = prefs.edit().putString(PRIMARY_ANDROID_TREE_URI, uri).apply()
+    var primaryAndroidDataTreeUri: String
+        get() = prefs.getString(PRIMARY_ANDROID_DATA_TREE_URI, "")!!
+        set(uri) = prefs.edit().putString(PRIMARY_ANDROID_DATA_TREE_URI, uri).apply()
 
-    var sdAndroidTreeUri: String
-        get() = prefs.getString(SD_ANDROID_TREE_URI, "")!!
-        set(uri) = prefs.edit().putString(SD_ANDROID_TREE_URI, uri).apply()
+    var sdAndroidDataTreeUri: String
+        get() = prefs.getString(SD_ANDROID_DATA_TREE_URI, "")!!
+        set(uri) = prefs.edit().putString(SD_ANDROID_DATA_TREE_URI, uri).apply()
 
-    var otgAndroidTreeUri: String
-        get() = prefs.getString(OTG_ANDROID_TREE_URI, "")!!
-        set(uri) = prefs.edit().putString(OTG_ANDROID_TREE_URI, uri).apply()
+    var otgAndroidDataTreeUri: String
+        get() = prefs.getString(OTG_ANDROID_DATA_TREE_URI, "")!!
+        set(uri) = prefs.edit().putString(OTG_ANDROID_DATA_TREE_URI, uri).apply()
+
+    var primaryAndroidObbTreeUri: String
+        get() = prefs.getString(PRIMARY_ANDROID_OBB_TREE_URI, "")!!
+        set(uri) = prefs.edit().putString(PRIMARY_ANDROID_OBB_TREE_URI, uri).apply()
+
+    var sdAndroidTreeObbUri: String
+        get() = prefs.getString(SD_ANDROID_OBB_TREE_URI, "")!!
+        set(uri) = prefs.edit().putString(SD_ANDROID_OBB_TREE_URI, uri).apply()
+
+    var otgAndroidObbTreeUri: String
+        get() = prefs.getString(OTG_ANDROID_OBB_TREE_URI, "")!!
+        set(uri) = prefs.edit().putString(OTG_ANDROID_OBB_TREE_URI, uri).apply()
 
     var sdTreeUri: String
         get() = prefs.getString(SD_TREE_URI, "")!!
