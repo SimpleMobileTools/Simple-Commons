@@ -1194,7 +1194,7 @@ fun AppCompatActivity.showSideloadingDialog() {
 }
 
 fun BaseSimpleActivity.getTempFile(folderName: String, fileName: String): File? {
-    val folder = File(cacheDir, fileName)
+    val folder = File(cacheDir, folderName)
     if (!folder.exists()) {
         if (!folder.mkdir()) {
             toast(R.string.unknown_error_occurred)
