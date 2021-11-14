@@ -28,8 +28,8 @@
     <string name="transparent_color">Χρώμα διαφάνειας</string>
     <string name="select_a_different_color">Επιλέξτε διαφορετικό χρώμα</string>
     <string name="download">Λήψη</string>
-    <string name="notification">Ειδοποιήσεις</string>
-    <string name="notifications">Notifications</string>
+    <string name="notification">Ειδοποίηση</string>
+    <string name="notifications">Ειδοποιήσεις</string>
     <string name="email">Email</string>
     <string name="previous">Προηγούμενο</string>
     <string name="playpause">Αναπαραγωγή / Παύση</string>
@@ -564,11 +564,11 @@
     <string name="startup">Εκκίνηση</string>
     <string name="text">Κείμενο</string>
     <string name="migrating">Μετεγκατάσταση</string>
-    <string name="quality">Quality</string>
+    <string name="quality">Ποιότητα</string>
 
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Διαχείριση εμφανιζόμενων καρτελών</string>
-    <string name="default_tab_to_open">Καρτέλα για άνοιγμα κατά την έναρξη της εφαρμογής</string>
+    <string name="default_tab_to_open">Άνοιγμα καρτέλας κατά την έναρξη της εφαρμογής</string>
     <string name="contacts_tab">Επαφές</string>
     <string name="favorites_tab">Αγαπημένες</string>
     <string name="call_history_tab">Ιστορικό κλήσεων</string>
