@@ -280,7 +280,6 @@ class CopyMoveTask(
                 }
             }
         } catch (e: Exception) {
-            e.printStackTrace()
             activity.showErrorToast(e)
         } finally {
             inputStream?.close()

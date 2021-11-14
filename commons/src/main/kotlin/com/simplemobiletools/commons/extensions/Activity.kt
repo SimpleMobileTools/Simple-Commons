@@ -153,7 +153,7 @@ fun BaseSimpleActivity.isShowingAndroidSAFDialog(path: String): Boolean {
                         putExtra("android.content.extra.SHOW_ADVANCED", true)
                         putExtra(DocumentsContract.EXTRA_INITIAL_URI, createAndroidDataOrObbUri(path))
                         try {
-                            startActivityForResult(this, OPEN_DOCUMENT_TREE_PRIMARY)
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_ANDROID_DATA_OR_OBB)
                             checkedDocumentPath = path
                             return@apply
                         } catch (e: Exception) {
@@ -161,7 +161,7 @@ fun BaseSimpleActivity.isShowingAndroidSAFDialog(path: String): Boolean {
                         }
 
                         try {
-                            startActivityForResult(this, OPEN_DOCUMENT_TREE_PRIMARY)
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_ANDROID_DATA_OR_OBB)
                             checkedDocumentPath = path
                         } catch (e: Exception) {
                             toast(R.string.unknown_error_occurred)

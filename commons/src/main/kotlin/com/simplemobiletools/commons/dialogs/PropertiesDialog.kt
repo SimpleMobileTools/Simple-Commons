@@ -240,7 +240,6 @@ class PropertiesDialog() {
             try {
                 ExifInterface(activity.contentResolver.openInputStream(activity.getAndroidSAFUri(path))!!)
             } catch (e: Exception) {
-                e.printStackTrace()
                 return
             }
         } else {

@@ -62,7 +62,6 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                 else -> activity.toast(R.string.unknown_error_occurred)
             }
         } catch (e: Exception) {
-            e.printStackTrace()
             activity.showErrorToast(e)
         }
     }

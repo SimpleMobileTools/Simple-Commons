@@ -13,7 +13,7 @@ open class FileDirItem(
     var isDirectory: Boolean = false,
     var children: Int = 0,
     var size: Long = 0L,
-    var modified: Long = 0L
+    var modified: Long = 0L,
 ) :
     Comparable<FileDirItem> {
     companion object {

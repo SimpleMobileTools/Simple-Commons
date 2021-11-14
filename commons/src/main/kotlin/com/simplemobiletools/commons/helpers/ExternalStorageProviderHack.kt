@@ -1,18 +1,16 @@
 package com.simplemobiletools.commons.helpers
 
-import android.content.Context
 import android.database.Cursor
 import android.database.MatrixCursor
 import android.database.MergeCursor
 import android.net.Uri
 import android.provider.DocumentsContract
-import com.simplemobiletools.commons.extensions.getStorageRootId
 import com.simplemobiletools.commons.extensions.getStringValue
 
 // On Android 11, ExternalStorageProvider no longer returns Android/data and Android/obb as children
 // of the Android directory on primary storage. However, the two child directories are actually
 // still accessible.
-// https://github.com/zhanghai/MaterialFiles/blob/master/app/src/main/java/me/zhanghai/android/files/provider/document/resolver/ExternalStorageProviderPrimaryAndroidDataHack.kt
+// Inspired by: https://github.com/zhanghai/MaterialFiles/blob/master/app/src/main/java/me/zhanghai/android/files/provider/document/resolver/ExternalStorageProviderPrimaryAndroidDataHack.kt
 object ExternalStorageProviderHack {
     private const val ANDROID_DATA_DISPLAY_NAME = "data"
     private const val ANDROID_OBB_DISPLAY_NAME = "obb"
