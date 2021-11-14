@@ -4,9 +4,9 @@ import android.graphics.PorterDuff
 import android.graphics.drawable.GradientDrawable
 import android.widget.ImageView
 
-fun ImageView.setFillWithStroke(fillColor: Int, backgroundColor: Int) {
+fun ImageView.setFillWithStroke(fillColor: Int, backgroundColor: Int, drawRectangle: Boolean = false) {
     GradientDrawable().apply {
-        shape = GradientDrawable.OVAL
+        shape = if (drawRectangle) GradientDrawable.RECTANGLE else GradientDrawable.OVAL
         setColor(fillColor)
         background = this
 
