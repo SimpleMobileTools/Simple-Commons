@@ -1,6 +1,5 @@
 package com.simplemobiletools.commons.models
 
-import android.app.Activity
 import android.content.Context
 import android.net.Uri
 import com.bumptech.glide.signature.ObjectKey
@@ -72,62 +71,43 @@ open class FileDirItem(
     }
 
     fun getProperSize(context: Context, countHidden: Boolean): Long {
-        return if (context.isPathOnOTG(path)) {
-            context.getDocumentFile(path)?.getItemSize(countHidden) ?: 0
-        } else if (isNougatPlus() && path.startsWith("content://")) {
-            try {
-                context.contentResolver.openInputStream(Uri.parse(path))?.available()?.toLong() ?: 0L
-            } catch (e: Exception) {
-                context.getSizeFromContentUri(Uri.parse(path))
+        return when {
+            context.isRestrictedSAFOnlyRoot(path) -> context.getAndroidSAFFileSize(path)
+            context.isPathOnOTG(path) -> context.getDocumentFile(path)?.getItemSize(countHidden) ?: 0
+            isNougatPlus() && path.startsWith("content://") -> {
+                try {
+                    context.contentResolver.openInputStream(Uri.parse(path))?.available()?.toLong() ?: 0L
+                } catch (e: Exception) {
+                    context.getSizeFromContentUri(Uri.parse(path))
+                }
             }
-        } else if (context.isRestrictedAndroidDir(path)) {
-            context.getSAFOnlyFileSize(path)
-        } else {
-            File(path).getProperSize(countHidden)
+            else -> File(path).getProperSize(countHidden)
         }
     }
 
     fun getProperFileCount(context: Context, countHidden: Boolean): Int {
         return when {
-            context.isPathOnOTG(path) -> {
-                context.getDocumentFile(path)?.getFileCount(countHidden) ?: 0
-            }
-            context.isRestrictedAndroidDir(path) -> {
-                context.getSAFOnlyFileCount(path, countHidden)
-            }
-            else -> {
-                File(path).getFileCount(countHidden)
-            }
+            context.isRestrictedSAFOnlyRoot(path) -> context.getAndroidSAFFileCount(path, countHidden)
+            context.isPathOnOTG(path) -> context.getDocumentFile(path)?.getFileCount(countHidden) ?: 0
+            else -> File(path).getFileCount(countHidden)
         }
     }
 
     fun getDirectChildrenCount(context: Context, countHiddenItems: Boolean): Int {
         return when {
-            context.isPathOnOTG(path) -> {
-                context.getDocumentFile(path)?.listFiles()?.filter { if (countHiddenItems) true else !it.name!!.startsWith(".") }?.size ?: 0
-            }
-            context.isRestrictedAndroidDir(path) -> {
-                try {
-                    context.getSAFOnlyDirectChildrenCount(path, countHiddenItems)
-                } catch (e: Exception) {
-                    0
-                }
-            }
-            else -> {
-                File(path).getDirectChildrenCount(context, countHiddenItems)
-            }
+            context.isRestrictedSAFOnlyRoot(path) -> context.getAndroidSAFDirectChildrenCount(path, countHiddenItems)
+            context.isPathOnOTG(path) -> context.getDocumentFile(path)?.listFiles()?.filter { if (countHiddenItems) true else !it.name!!.startsWith(".") }?.size
+                ?: 0
+            else -> File(path).getDirectChildrenCount(context, countHiddenItems)
         }
     }
 
     fun getLastModified(context: Context): Long {
-        return if (context.isPathOnOTG(path)) {
-            context.getFastDocumentFile(path)?.lastModified() ?: 0L
-        } else if (isNougatPlus() && path.startsWith("content://")) {
-            context.getMediaStoreLastModified(path)
-        } else if (context.isRestrictedAndroidDir(path)) {
-            context.getSAFOnlyLastModified(path)
-        } else {
-            File(path).lastModified()
+        return when {
+            context.isRestrictedSAFOnlyRoot(path) -> context.getAndroidSAFLastModified(path)
+            context.isPathOnOTG(path) -> context.getFastDocumentFile(path)?.lastModified() ?: 0L
+            isNougatPlus() && path.startsWith("content://") -> context.getMediaStoreLastModified(path)
+            else -> File(path).lastModified()
         }
     }
 

@@ -9,10 +9,8 @@ import android.provider.MediaStore
 import android.telephony.PhoneNumberUtils
 import android.text.Spannable
 import android.text.SpannableString
-import android.text.TextPaint
 import android.text.TextUtils
 import android.text.style.ForegroundColorSpan
-import android.text.style.URLSpan
 import android.widget.TextView
 import com.bumptech.glide.signature.ObjectKey
 import com.simplemobiletools.commons.helpers.*
@@ -107,8 +105,8 @@ fun String.doesThisOrParentHaveNoMedia(folderNoMediaStatuses: HashMap<String, Bo
 fun String.getImageResolution(context: Context): Point? {
     val options = BitmapFactory.Options()
     options.inJustDecodeBounds = true
-    if(context.isRestrictedAndroidDir(this)){
-        BitmapFactory.decodeStream(context.contentResolver.openInputStream(context.getPrimaryAndroidSAFUri(this)), null, options)
+    if(context.isRestrictedSAFOnlyRoot(this)){
+        BitmapFactory.decodeStream(context.contentResolver.openInputStream(context.getAndroidSAFUri(this)), null, options)
     }else{
         BitmapFactory.decodeFile(this, options)
     }

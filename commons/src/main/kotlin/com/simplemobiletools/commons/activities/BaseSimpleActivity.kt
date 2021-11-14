@@ -490,7 +490,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             if (isCopyOperation) {
                 startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
             } else {
-                if (isPathOnOTG(source) || isPathOnOTG(destination) || isPathOnSD(source) || isPathOnSD(destination) || isRestrictedAndroidDir(source) || isRestrictedAndroidDir(
+                if (isPathOnOTG(source) || isPathOnOTG(destination) || isPathOnSD(source) || isPathOnSD(destination) || isRestrictedSAFOnlyRoot(source) || isRestrictedSAFOnlyRoot(
                         destination
                     ) || fileDirItems.first().isDirectory
                 ) {

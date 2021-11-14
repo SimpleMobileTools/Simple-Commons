@@ -206,8 +206,8 @@ class FilePickerDialog(
             if ((pickFile && fileDocument.isFile) || (!pickFile && fileDocument.isDirectory)) {
                 sendSuccess()
             }
-        } else if (activity.isRestrictedAndroidDir(currPath)) {
-            val document = activity.getSomePrimaryAndroidSAFDocument(currPath) ?: return
+        } else if (activity.isRestrictedSAFOnlyRoot(currPath)) {
+            val document = activity.getSomeAndroidSAFDocument(currPath) ?: return
             if ((pickFile && document.isFile) || (!pickFile && document.isDirectory)) {
                 sendSuccess()
             }
@@ -241,9 +241,9 @@ class FilePickerDialog(
     private fun getRegularItems(path: String, lastModifieds: HashMap<String, Long>, callback: (List<FileDirItem>) -> Unit) {
         val items = ArrayList<FileDirItem>()
 
-        if (activity.isRestrictedAndroidDir(path)) {
+        if (activity.isRestrictedSAFOnlyRoot(path)) {
             activity.handlePrimaryAndroidSAFDialog(path) {
-                activity.getStorageItemsWithTreeUri(path, showHidden) {
+                activity.getAndroidSAFFileItems(path, showHidden) {
                     callback(it)
                 }
             }

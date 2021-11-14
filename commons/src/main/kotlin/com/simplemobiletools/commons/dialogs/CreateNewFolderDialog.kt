@@ -42,7 +42,7 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
     private fun createFolder(path: String, alertDialog: AlertDialog) {
         try {
             when {
-                activity.isRestrictedAndroidDir(path) && activity.createSAFOnlyDirectory(path) -> sendSuccess(alertDialog, path)
+                activity.isRestrictedSAFOnlyRoot(path) && activity.createAndroidSAFDirectory(path) -> sendSuccess(alertDialog, path)
                 activity.needsStupidWritePermissions(path) -> activity.handleSAFDialog(path) {
                     if (it) {
                         try {

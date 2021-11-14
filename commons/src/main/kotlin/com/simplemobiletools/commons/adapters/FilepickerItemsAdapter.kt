@@ -112,8 +112,8 @@ class FilepickerItemsAdapter(
                 }
 
                 if (!activity.isDestroyed && !activity.isFinishing) {
-                    if (activity.isRestrictedAndroidDir(path)) {
-                        itemToLoad = activity.getPrimaryAndroidSAFUri(path)
+                    if (activity.isRestrictedSAFOnlyRoot(path)) {
+                        itemToLoad = activity.getAndroidSAFUri(path)
                     } else if (hasOTGConnected && itemToLoad is String && activity.isPathOnOTG(itemToLoad)) {
                         itemToLoad = itemToLoad.getOTGPublicPath(activity)
                     }

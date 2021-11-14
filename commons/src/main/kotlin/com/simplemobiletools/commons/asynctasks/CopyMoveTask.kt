@@ -190,8 +190,8 @@ class CopyMoveTask(
                 copy(oldFileDirItem, newFileDirItem)
             }
             mTransferredFiles.add(source)
-        } else if (activity.isRestrictedAndroidDir(source.path)) {
-            activity.getStorageItemsWithTreeUri(source.path, true) { files ->
+        } else if (activity.isRestrictedSAFOnlyRoot(source.path)) {
+            activity.getAndroidSAFFileItems(source.path, true) { files ->
                 for (child in files) {
                     val newPath = "$destinationPath/${child.name}"
                     if (activity.getDoesFilePathExist(newPath)) {

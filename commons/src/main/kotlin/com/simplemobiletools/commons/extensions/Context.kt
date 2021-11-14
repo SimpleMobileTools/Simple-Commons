@@ -386,8 +386,8 @@ fun Context.getMimeTypeFromUri(uri: Uri): String {
 }
 
 fun Context.ensurePublicUri(path: String, applicationId: String): Uri? {
-    return if (isRestrictedAndroidDir(path)) {
-        getPrimaryAndroidSAFUri(path)
+    return if (isRestrictedSAFOnlyRoot(path)) {
+        getAndroidSAFUri(path)
     } else if (isPathOnOTG(path)) {
         getDocumentFile(path)?.uri
     } else {
@@ -759,8 +759,8 @@ fun Context.getResolution(path: String): Point? {
 fun Context.getImageResolution(path: String): Point? {
     val options = BitmapFactory.Options()
     options.inJustDecodeBounds = true
-    if (isRestrictedAndroidDir(path)) {
-        BitmapFactory.decodeStream(contentResolver.openInputStream(getPrimaryAndroidSAFUri(path)), null, options)
+    if (isRestrictedSAFOnlyRoot(path)) {
+        BitmapFactory.decodeStream(contentResolver.openInputStream(getAndroidSAFUri(path)), null, options)
     } else {
         BitmapFactory.decodeFile(path, options)
     }
@@ -776,8 +776,8 @@ fun Context.getImageResolution(path: String): Point? {
 fun Context.getVideoResolution(path: String): Point? {
     var point = try {
         val retriever = MediaMetadataRetriever()
-        if (isRestrictedAndroidDir(path)) {
-            retriever.setDataSource(this, getPrimaryAndroidSAFUri(path))
+        if (isRestrictedSAFOnlyRoot(path)) {
+            retriever.setDataSource(this, getAndroidSAFUri(path))
         } else {
             retriever.setDataSource(path)
         }

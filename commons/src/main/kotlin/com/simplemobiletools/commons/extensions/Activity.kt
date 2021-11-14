@@ -145,7 +145,7 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
 }
 
 fun BaseSimpleActivity.isShowingSAFPrimaryAndroidDialog(path: String): Boolean {
-    return if (isRestrictedAndroidDir(path) && (getAndroidTreeUri(path).isEmpty() || !hasProperStoredAndroidDirTreeUri(path))) {
+    return if (isRestrictedSAFOnlyRoot(path) && (getAndroidTreeUri(path).isEmpty() || !hasProperStoredAndroidTreeUri(path))) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
                 WritePermissionDialog(this, false) {
@@ -638,8 +638,8 @@ fun BaseSimpleActivity.deleteFile(fileDirItem: FileDirItem, allowDeleteFolder: B
 
 fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     val path = fileDirItem.path
-    if (isRestrictedAndroidDir(path)) {
-        deleteSAFOnlyDir(path, allowDeleteFolder, callback)
+    if (isRestrictedSAFOnlyRoot(path)) {
+        deleteAndroidSAFDirectory(path, allowDeleteFolder, callback)
     } else {
         val file = File(path)
         if (file.absolutePath.startsWith(internalStoragePath) && !file.canWrite()) {
@@ -724,7 +724,7 @@ fun Activity.rescanPaths(paths: List<String>, callback: (() -> Unit)? = null) {
 }
 
 fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((success: Boolean) -> Unit)? = null) {
-    if (isRestrictedAndroidDir(oldPath)) {
+    if (isRestrictedSAFOnlyRoot(oldPath)) {
         handlePrimaryAndroidSAFDialog(oldPath) {
             if (!it) {
                 runOnUiThread {
@@ -733,7 +733,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                 return@handlePrimaryAndroidSAFDialog
             }
             try {
-                val success = renameSAFOnlyDocument(oldPath, newPath)
+                val success = renameAndroidSAFDocument(oldPath, newPath)
                 runOnUiThread {
                     callback?.invoke(success)
                 }
@@ -898,46 +898,50 @@ fun BaseSimpleActivity.showFileCreateError(path: String) {
 fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, parentDocumentFile: DocumentFile? = null): OutputStream? {
     val targetFile = File(path)
 
-    return if (needsStupidWritePermissions(path)) {
-        var documentFile = parentDocumentFile
-        if (documentFile == null) {
-            if (getDoesFilePathExist(targetFile.parentFile.absolutePath)) {
-                documentFile = getDocumentFile(targetFile.parent)
-            } else {
-                documentFile = getDocumentFile(targetFile.parentFile.parent)
-                documentFile = documentFile!!.createDirectory(targetFile.parentFile.name)
-                    ?: getDocumentFile(targetFile.parentFile.absolutePath)
+    return when {
+        isRestrictedSAFOnlyRoot(path) -> {
+            val uri = getAndroidSAFUri(path)
+            if (!getDoesFilePathExist(path)) {
+                createAndroidSAFFile(path)
+            }
+            applicationContext.contentResolver.openOutputStream(uri)
+        }
+        needsStupidWritePermissions(path) -> {
+            var documentFile = parentDocumentFile
+            if (documentFile == null) {
+                if (getDoesFilePathExist(targetFile.parentFile.absolutePath)) {
+                    documentFile = getDocumentFile(targetFile.parent)
+                } else {
+                    documentFile = getDocumentFile(targetFile.parentFile.parent)
+                    documentFile = documentFile!!.createDirectory(targetFile.parentFile.name)
+                        ?: getDocumentFile(targetFile.parentFile.absolutePath)
+                }
+            }
+
+            if (documentFile == null) {
+                showFileCreateError(targetFile.parent)
+                return null
+            }
+
+            try {
+                val newDocument = documentFile.createFile(mimeType, path.getFilenameFromPath()) ?: getDocumentFile(path)
+                applicationContext.contentResolver.openOutputStream(newDocument!!.uri)
+            } catch (e: Exception) {
+                showErrorToast(e)
+                null
             }
         }
+        else -> {
+            if (targetFile.parentFile?.exists() == false) {
+                targetFile.parentFile?.mkdirs()
+            }
 
-        if (documentFile == null) {
-            showFileCreateError(targetFile.parent)
-            return null
-        }
-
-        try {
-            val newDocument = documentFile.createFile(mimeType, path.getFilenameFromPath()) ?: getDocumentFile(path)
-            applicationContext.contentResolver.openOutputStream(newDocument!!.uri)
-        } catch (e: Exception) {
-            showErrorToast(e)
-            null
-        }
-    } else if (isRestrictedAndroidDir(path)) {
-        val uri = getPrimaryAndroidSAFUri(path)
-        if (!getDoesFilePathExist(path)) {
-            createSAFOnlyFile(path)
-        }
-        applicationContext.contentResolver.openOutputStream(uri)
-    } else {
-        if (targetFile.parentFile?.exists() == false) {
-            targetFile.parentFile.mkdirs()
-        }
-
-        try {
-            FileOutputStream(targetFile)
-        } catch (e: Exception) {
-            showErrorToast(e)
-            null
+            try {
+                FileOutputStream(targetFile)
+            } catch (e: Exception) {
+                showErrorToast(e)
+                null
+            }
         }
     }
 }
@@ -1050,8 +1054,8 @@ fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
         return newDir != null
     }
 
-    if (isRestrictedAndroidDir(directory)) {
-        return createSAFOnlyDirectory(directory)
+    if (isRestrictedSAFOnlyRoot(directory)) {
+        return createAndroidSAFDirectory(directory)
     }
 
     return File(directory).mkdirs()
