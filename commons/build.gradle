@@ -2,13 +2,14 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'maven-publish'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion propCompileSdkVersion
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 30
+        minSdkVersion propMinSdkVersion
+        targetSdkVersion propTargetSdkVersion
     }
 
     buildTypes {
@@ -46,4 +47,12 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
 }
 
-//apply from: '../bintray-upload.gradle'
+project.afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+            }
+        }
+    }
+}
