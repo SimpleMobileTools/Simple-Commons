@@ -26,6 +26,7 @@ import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 import java.io.FileInputStream
 import java.io.InputStream
+import java.lang.IllegalStateException
 import java.net.URLDecoder
 import java.util.*
 import java.util.regex.Pattern
@@ -153,18 +154,16 @@ fun Context.isPathOnOTG(path: String) = otgPath.isNotEmpty() && path.startsWith(
 
 fun Context.isPathOnInternalStorage(path: String) = internalStoragePath.isNotEmpty() && path.startsWith(internalStoragePath)
 
-private const val ANDROID_DATA_DIR = "/Android/data"
-private const val ANDROID_OBB_DIR = "/Android/obb"
+private const val ANDROID_DATA_DIR = "/Android/data/"
+private const val ANDROID_OBB_DIR = "/Android/obb/"
 val DIRS_ACCESSIBLE_ONLY_WITH_SAF = listOf(ANDROID_DATA_DIR, ANDROID_OBB_DIR)
 
 fun Context.getSAFOnlyDirs(): List<String> {
-    return DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$internalStoragePath$it" }.toMutableList() +
-        DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$sdCardPath$it" }.toMutableList() +
-        DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$otgPath$it" }.toMutableList()
+    return DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$internalStoragePath$it" }
 }
 
 fun Context.isSAFOnlyRoot(path: String): Boolean {
-    return getSAFOnlyDirs().any { path.startsWith(it) }
+    return getSAFOnlyDirs().any { "${path.trimEnd('/')}/".startsWith(it) }
 }
 
 fun Context.isRestrictedSAFOnlyRoot(path: String): Boolean {
@@ -201,13 +200,14 @@ fun Context.hasProperStoredAndroidTreeUri(path: String): Boolean {
 fun Context.getAndroidTreeUri(path: String): String {
     return when {
         isPathOnOTG(path) -> if (isAndroidDataDir(path)) baseConfig.otgAndroidDataTreeUri else baseConfig.otgAndroidObbTreeUri
-        isPathOnSD(path) -> if (isAndroidDataDir(path)) baseConfig.sdAndroidDataTreeUri else baseConfig.sdAndroidTreeObbUri
+        isPathOnSD(path) -> if (isAndroidDataDir(path)) baseConfig.sdAndroidDataTreeUri else baseConfig.sdAndroidObbTreeUri
         else -> if (isAndroidDataDir(path)) baseConfig.primaryAndroidDataTreeUri else baseConfig.primaryAndroidObbTreeUri
     }
 }
 
 fun isAndroidDataDir(path: String): Boolean {
-    return path.contains(ANDROID_DATA_DIR)
+    val resolvedPath = "${path.trimEnd('/')}/"
+    return resolvedPath.contains(ANDROID_DATA_DIR)
 }
 
 fun Context.storeAndroidTreeUri(path: String, treeUri: String) {
@@ -234,6 +234,15 @@ fun Context.createDocumentUri(fullPath: String): Uri {
     val treeUri = DocumentsContract.buildTreeDocumentUri(EXTERNAL_STORAGE_PROVIDER_AUTHORITY, "$storageId:")
     val documentId = "${storageId}:$relativePath"
     return DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
+}
+
+fun Context.createAndroidDataOrObbUri(fullPath: String): Uri {
+    val path = if(isAndroidDataDir(fullPath)){
+        fullPath.getBasePath(this).trimEnd('/').plus(ANDROID_DATA_DIR)
+    }else {
+        fullPath.getBasePath(this).trimEnd('/').plus(ANDROID_OBB_DIR)
+    }
+    return createDocumentUri(path)
 }
 
 fun Context.getStorageRootId(path: String) =
@@ -635,7 +644,8 @@ fun Context.getFileSize(treeUri: Uri, documentId: String): Long {
 fun Context.getAndroidSAFDocumentId(path: String): String {
     val basePath = path.getBasePath(this)
     val relativePath = path.substring(basePath.length).trim('/')
-    return "${getStorageRootId(path)}:$relativePath"
+    val storageId = getStorageRootId(path)
+    return "$storageId:$relativePath"
 }
 
 
@@ -669,6 +679,10 @@ fun Context.getAndroidSAFDocument(path: String): DocumentFile? {
 fun Context.getSomeAndroidSAFDocument(path: String): DocumentFile? = getFastAndroidSAFDocument(path) ?: getAndroidSAFDocument(path)
 
 fun Context.getFastAndroidSAFDocument(path: String): DocumentFile? {
+    val treeUri = getAndroidTreeUri(path)
+    if (treeUri.isEmpty()) {
+        return null
+    }
     val uri = getAndroidSAFUri(path)
     return DocumentFile.fromSingleUri(this, uri)
 }
@@ -680,34 +694,47 @@ fun Context.getAndroidSAFChildrenUri(path: String): Uri {
 }
 
 fun Context.createAndroidSAFDirectory(path: String): Boolean {
-    val treeUri = getAndroidTreeUri(path).toUri()
-    val parentPath = path.getParentPath()
-    if (!getDoesFilePathExist(parentPath)) {
-        createAndroidSAFDirectory(parentPath)
+    return try {
+        val treeUri = getAndroidTreeUri(path).toUri()
+        val parentPath = path.getParentPath()
+        if (!getDoesFilePathExist(parentPath)) {
+            createAndroidSAFDirectory(parentPath)
+        }
+        val documentId = getAndroidSAFDocumentId(parentPath)
+        val parentUri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
+        DocumentsContract.createDocument(contentResolver, parentUri, Document.MIME_TYPE_DIR, path.getFilenameFromPath()) != null
+    } catch (e: IllegalStateException) {
+        showErrorToast(e)
+        false
     }
-    val documentId = getAndroidSAFDocumentId(parentPath)
-    val parentUri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
-    val createdUri = DocumentsContract.createDocument(contentResolver, parentUri, Document.MIME_TYPE_DIR, path.getFilenameFromPath())
-    return createdUri != null
 }
 
 fun Context.createAndroidSAFFile(path: String): Boolean {
-    val treeUri = getAndroidTreeUri(path).toUri()
-    val parentPath = path.getParentPath()
-    if (!getDoesFilePathExist(parentPath)) {
-        createAndroidSAFDirectory(parentPath)
+    return try {
+        val treeUri = getAndroidTreeUri(path).toUri()
+        val parentPath = path.getParentPath()
+        if (!getDoesFilePathExist(parentPath)) {
+            createAndroidSAFDirectory(parentPath)
+        }
+        val documentId = getAndroidSAFDocumentId(path.getParentPath())
+        val parentUri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
+        DocumentsContract.createDocument(contentResolver, parentUri, path.getMimeType(), path.getFilenameFromPath()) != null
+    } catch (e: IllegalStateException) {
+        showErrorToast(e)
+        false
     }
-    val documentId = getAndroidSAFDocumentId(path.getParentPath())
-    val parentUri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
-    val result = DocumentsContract.createDocument(contentResolver, parentUri, path.getMimeType(), path.getFilenameFromPath())
-    return result != null
 }
 
 fun Context.renameAndroidSAFDocument(oldPath: String, newPath: String): Boolean {
-    val treeUri = getAndroidTreeUri(oldPath).toUri()
-    val documentId = getAndroidSAFDocumentId(oldPath)
-    val parentUri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
-    return DocumentsContract.renameDocument(contentResolver, parentUri, newPath.getFilenameFromPath()) != null
+    return try {
+        val treeUri = getAndroidTreeUri(oldPath).toUri()
+        val documentId = getAndroidSAFDocumentId(oldPath)
+        val parentUri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
+         DocumentsContract.renameDocument(contentResolver, parentUri, newPath.getFilenameFromPath()) != null
+    }catch (e: IllegalStateException){
+        showErrorToast(e)
+        false
+    }
 }
 
 fun Context.getAndroidSAFFileSize(path: String): Long {

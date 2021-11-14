@@ -40,7 +40,7 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getString(PRIMARY_ANDROID_OBB_TREE_URI, "")!!
         set(uri) = prefs.edit().putString(PRIMARY_ANDROID_OBB_TREE_URI, uri).apply()
 
-    var sdAndroidTreeObbUri: String
+    var sdAndroidObbTreeUri: String
         get() = prefs.getString(SD_ANDROID_OBB_TREE_URI, "")!!
         set(uri) = prefs.edit().putString(SD_ANDROID_OBB_TREE_URI, uri).apply()
 

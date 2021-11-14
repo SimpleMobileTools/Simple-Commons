@@ -242,7 +242,7 @@ class FilePickerDialog(
         val items = ArrayList<FileDirItem>()
 
         if (activity.isRestrictedSAFOnlyRoot(path)) {
-            activity.handlePrimaryAndroidSAFDialog(path) {
+            activity.handleAndroidSAFDialog(path) {
                 activity.getAndroidSAFFileItems(path, showHidden) {
                     callback(it)
                 }

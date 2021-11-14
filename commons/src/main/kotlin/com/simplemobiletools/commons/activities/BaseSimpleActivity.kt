@@ -225,7 +225,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
                 if (isProperAndroidRoot(checkedDocumentPath, resultData.data!!)) {
                     if (resultData.dataString == baseConfig.OTGTreeUri || resultData.dataString == baseConfig.sdTreeUri) {
-                        toast("Select internal storage")
+                        toast(R.string.wrong_root_selected)
                         return
                     }
 
@@ -237,10 +237,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     funAfterSAFPermission?.invoke(true)
                     funAfterSAFPermission = null
                 } else {
-                    //TODO: refactor error message, select Android dir
                     toast(R.string.wrong_root_selected)
-                    val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
-                    startActivityForResult(intent, requestCode)
+                    Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
+                        if (isRPlus()) {
+                            putExtra(DocumentsContract.EXTRA_INITIAL_URI, createAndroidDataOrObbUri(checkedDocumentPath))
+                        }
+                        startActivityForResult(this, requestCode)
+                    }
+
                 }
             } else {
                 funAfterSAFPermission?.invoke(false)
@@ -396,11 +400,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun handlePrimaryAndroidSAFDialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
+    fun handleAndroidSAFDialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
         return if (!packageName.startsWith("com.simplemobiletools")) {
             callback(true)
             false
-        } else if (isShowingSAFPrimaryAndroidDialog(path)) {
+        } else if (isShowingAndroidSAFDialog(path)) {
             funAfterSAFPermission = callback
             true
         } else {
