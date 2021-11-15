@@ -244,7 +244,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                         }
                         startActivityForResult(this, requestCode)
                     }
-
                 }
             } else {
                 funAfterSAFPermission?.invoke(false)
