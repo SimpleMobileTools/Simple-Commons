@@ -160,6 +160,7 @@ class PropertiesDialog() {
                     } else {
                         File(path).md5()
                     }
+
                     activity.runOnUiThread {
                         (view.findViewById<LinearLayout>(R.id.properties_md5).property_value as TextView).text = md5
                     }
