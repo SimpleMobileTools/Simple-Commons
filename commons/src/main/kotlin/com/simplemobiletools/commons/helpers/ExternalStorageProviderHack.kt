@@ -23,19 +23,19 @@ object ExternalStorageProviderHack {
         DocumentsContract.Document.COLUMN_SIZE,
     )
 
-    private fun getAndroidDocumentId(rootDocId:String): String {
+    private fun getAndroidDocumentId(rootDocId: String): String {
         return "$rootDocId:Android"
     }
 
-    private fun getAndroidDataDocumentId(rootDocId:String): String {
+    private fun getAndroidDataDocumentId(rootDocId: String): String {
         return "${getAndroidDocumentId(rootDocId)}/data"
     }
 
-    private fun getAndroidObbDocumentId(rootDocId:String): String {
+    private fun getAndroidObbDocumentId(rootDocId: String): String {
         return "${getAndroidDocumentId(rootDocId)}/obb"
     }
 
-    fun transformQueryResult(rootDocId:String, uri: Uri, cursor: Cursor): Cursor {
+    fun transformQueryResult(rootDocId: String, uri: Uri, cursor: Cursor): Cursor {
         val documentId = DocumentsContract.getDocumentId(uri)
         if (uri.authority == EXTERNAL_STORAGE_PROVIDER_AUTHORITY && documentId == getAndroidDocumentId(rootDocId)) {
             var hasDataRow = false
@@ -55,9 +55,11 @@ object ExternalStorageProviderHack {
             } finally {
                 cursor.moveToPosition(-1)
             }
+
             if (hasDataRow && hasObbRow) {
                 return cursor
             }
+
             val extraCursor = MatrixCursor(CHILD_DOCUMENTS_CURSOR_COLUMN_NAMES)
             if (!hasDataRow) {
                 extraCursor.newRow()
@@ -82,6 +84,7 @@ object ExternalStorageProviderHack {
                         0L
                     )
             }
+
             if (!hasObbRow) {
                 extraCursor.newRow()
                     .add(
