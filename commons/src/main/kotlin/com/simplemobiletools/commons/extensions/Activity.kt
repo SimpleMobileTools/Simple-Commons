@@ -685,7 +685,6 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
             }
         }
     }
-
 }
 
 private fun deleteRecursively(file: File): Boolean {
@@ -732,6 +731,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                 }
                 return@handleAndroidSAFDialog
             }
+
             try {
                 val success = renameAndroidSAFDocument(oldPath, newPath)
                 runOnUiThread {
