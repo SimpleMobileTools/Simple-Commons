@@ -5,8 +5,8 @@ import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
-import java.io.File
 import kotlinx.android.synthetic.main.dialog_create_new_folder.view.*
+import java.io.File
 
 class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, val callback: (path: String) -> Unit) {
     init {
@@ -14,29 +14,29 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
         view.folder_path.text = "${activity.humanizePath(path).trimEnd('/')}/"
 
         AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok, null)
-                .setNegativeButton(R.string.cancel, null)
-                .create().apply {
-                    activity.setupDialogStuff(view, this, R.string.create_new_folder) {
-                        showKeyboard(view.folder_name)
-                        getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(View.OnClickListener {
-                            val name = view.folder_name.value
-                            when {
-                                name.isEmpty() -> activity.toast(R.string.empty_name)
-                                name.isAValidFilename() -> {
-                                    val file = File(path, name)
-                                    if (file.exists()) {
-                                        activity.toast(R.string.name_taken)
-                                        return@OnClickListener
-                                    }
-
-                                    createFolder("$path/$name", this)
+            .setPositiveButton(R.string.ok, null)
+            .setNegativeButton(R.string.cancel, null)
+            .create().apply {
+                activity.setupDialogStuff(view, this, R.string.create_new_folder) {
+                    showKeyboard(view.folder_name)
+                    getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(View.OnClickListener {
+                        val name = view.folder_name.value
+                        when {
+                            name.isEmpty() -> activity.toast(R.string.empty_name)
+                            name.isAValidFilename() -> {
+                                val file = File(path, name)
+                                if (file.exists()) {
+                                    activity.toast(R.string.name_taken)
+                                    return@OnClickListener
                                 }
-                                else -> activity.toast(R.string.invalid_name)
+
+                                createFolder("$path/$name", this)
                             }
-                        })
-                    }
+                            else -> activity.toast(R.string.invalid_name)
+                        }
+                    })
                 }
+            }
     }
 
     private fun createFolder(path: String, alertDialog: AlertDialog) {
