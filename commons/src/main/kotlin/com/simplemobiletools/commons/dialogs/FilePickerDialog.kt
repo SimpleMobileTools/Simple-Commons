@@ -28,15 +28,17 @@ import java.util.*
  * @param showFAB toggle the displaying of a Floating Action Button for creating new folders
  * @param callback the callback used for returning the selected file/folder
  */
-class FilePickerDialog(val activity: BaseSimpleActivity,
-                       var currPath: String = Environment.getExternalStorageDirectory().toString(),
-                       val pickFile: Boolean = true,
-                       var showHidden: Boolean = false,
-                       val showFAB: Boolean = false,
-                       val canAddShowHiddenButton: Boolean = false,
-                       val forceShowRoot: Boolean = false,
-                       val showFavoritesButton: Boolean = false,
-                       val callback: (pickedPath: String) -> Unit) : Breadcrumbs.BreadcrumbsListener {
+class FilePickerDialog(
+    val activity: BaseSimpleActivity,
+    var currPath: String = Environment.getExternalStorageDirectory().toString(),
+    val pickFile: Boolean = true,
+    var showHidden: Boolean = false,
+    val showFAB: Boolean = false,
+    val canAddShowHiddenButton: Boolean = false,
+    val forceShowRoot: Boolean = false,
+    val showFavoritesButton: Boolean = false,
+    val callback: (pickedPath: String) -> Unit
+) : Breadcrumbs.BreadcrumbsListener {
 
     private var mFirstUpdate = true
     private var mPrevPath = ""
@@ -85,8 +87,9 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                 true
             }
 
-        if (!pickFile)
+        if (!pickFile) {
             builder.setPositiveButton(R.string.ok, null)
+        }
 
         if (showFAB) {
             mDialogView.filepicker_fab.apply {
@@ -199,7 +202,12 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
     }
 
     private fun verifyPath() {
-        if (activity.isPathOnOTG(currPath)) {
+        if (activity.isRestrictedSAFOnlyRoot(currPath)) {
+            val document = activity.getSomeAndroidSAFDocument(currPath) ?: return
+            if ((pickFile && document.isFile) || (!pickFile && document.isDirectory)) {
+                sendSuccess()
+            }
+        } else if (activity.isPathOnOTG(currPath)) {
             val fileDocument = activity.getSomeDocumentFile(currPath) ?: return
             if ((pickFile && fileDocument.isFile) || (!pickFile && fileDocument.isDirectory)) {
                 sendSuccess()
@@ -218,16 +226,25 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         } else {
             currPath.trimEnd('/')
         }
+
         callback(currPath)
         mDialog.dismiss()
     }
 
     private fun getItems(path: String, callback: (List<FileDirItem>) -> Unit) {
-        if (activity.isPathOnOTG(path)) {
-            activity.getOTGItems(path, showHidden, false, callback)
-        } else {
-            val lastModifieds = activity.getFolderLastModifieds(path)
-            getRegularItems(path, lastModifieds, callback)
+        when {
+            activity.isRestrictedSAFOnlyRoot(path) -> {
+                activity.handleAndroidSAFDialog(path) {
+                    activity.getAndroidSAFFileItems(path, showHidden) {
+                        callback(it)
+                    }
+                }
+            }
+            activity.isPathOnOTG(path) -> activity.getOTGItems(path, showHidden, false, callback)
+            else -> {
+                val lastModifieds = activity.getFolderLastModifieds(path)
+                getRegularItems(path, lastModifieds, callback)
+            }
         }
     }
 
@@ -254,7 +271,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
                 lastModified = 0    // we don't actually need the real lastModified that badly, do not check file.lastModified()
             }
 
-            val children = if (isDirectory) file.getDirectChildrenCount(showHidden) else 0
+            val children = if (isDirectory) file.getDirectChildrenCount(activity, showHidden) else 0
             items.add(FileDirItem(curPath, curName, isDirectory, children, size, lastModified))
         }
         callback(items)

@@ -112,13 +112,15 @@ class FilepickerItemsAdapter(
                 }
 
                 if (!activity.isDestroyed && !activity.isFinishing) {
+                    if (activity.isRestrictedSAFOnlyRoot(path)) {
+                        itemToLoad = activity.getAndroidSAFUri(path)
+                    } else if (hasOTGConnected && itemToLoad is String && activity.isPathOnOTG(itemToLoad)) {
+                        itemToLoad = itemToLoad.getOTGPublicPath(activity)
+                    }
+
                     if (itemToLoad.toString().isGif()) {
                         Glide.with(activity).asBitmap().load(itemToLoad).apply(options).into(list_item_icon)
                     } else {
-                        if (hasOTGConnected && itemToLoad is String && activity.isPathOnOTG(itemToLoad)) {
-                            itemToLoad = itemToLoad.getOTGPublicPath(activity)
-                        }
-
                         Glide.with(activity)
                             .load(itemToLoad)
                             .transition(withCrossFade())

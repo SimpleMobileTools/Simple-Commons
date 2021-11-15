@@ -93,6 +93,12 @@ class PropertiesDialog() {
                     } catch (e: Exception) {
                         return@ensureBackgroundThread
                     }
+                } else if (activity.isRestrictedSAFOnlyRoot(path)) {
+                    try {
+                        ExifInterface(activity.contentResolver.openInputStream(activity.getAndroidSAFUri(path))!!)
+                    } catch (e: Exception) {
+                        return@ensureBackgroundThread
+                    }
                 } else {
                     ExifInterface(fileDirItem.path)
                 }
@@ -149,7 +155,12 @@ class PropertiesDialog() {
             if (activity.baseConfig.appId.removeSuffix(".debug") == "com.simplemobiletools.filemanager.pro") {
                 addProperty(R.string.md5, "…", R.id.properties_md5)
                 ensureBackgroundThread {
-                    val md5 = File(path).md5()
+                    val md5 = if (activity.isRestrictedSAFOnlyRoot(path)) {
+                        activity.contentResolver.openInputStream(activity.getAndroidSAFUri(path))?.md5()
+                    } else {
+                        File(path).md5()
+                    }
+
                     activity.runOnUiThread {
                         (view.findViewById<LinearLayout>(R.id.properties_md5).property_value as TextView).text = md5
                     }
@@ -222,6 +233,12 @@ class PropertiesDialog() {
         } else if (isNougatPlus() && path.startsWith("content://")) {
             try {
                 ExifInterface(activity.contentResolver.openInputStream(Uri.parse(path))!!)
+            } catch (e: Exception) {
+                return
+            }
+        } else if (activity.isRestrictedSAFOnlyRoot(path)) {
+            try {
+                ExifInterface(activity.contentResolver.openInputStream(activity.getAndroidSAFUri(path))!!)
             } catch (e: Exception) {
                 return
             }
