@@ -186,7 +186,7 @@
     <string name="root">Folder główny</string>
     <string name="wrong_root_selected">Wybrano nieprawidłowy folder. Wybierz główny folder karty pamięci.</string>
     <string name="sd_card_usb_same">Ścieżka do karty pamięci i urządzenia USB nie może być taka sama</string>
-    <string name="app_on_sd_card">Wygląda na to, że aplikacja jest zainstalowana na karcie pamięci. Przez to widżety aplikacji są niedostępne.\nJest to ograniczenie systemu. Jeśli chcesz używać widżetów, musisz przenieść ją do pamięci wewnętrznej.</string>
+    <string name="app_on_sd_card">Wygląda na to, że aplikacja jest zainstalowana na karcie pamięci, przez co widżety aplikacji są niedostępne. Nie zobaczysz ich nawet na liście dostępnych widżetów. Jest to ograniczenie systemu, więc jeśli chcesz ich używać, musisz przenieść aplikację z powrotem do pamięci wewnętrznej.</string>
     <!-- File properties -->
     <string name="properties">Właściwości</string>
     <string name="path">Ścieżka</string>
@@ -330,7 +330,7 @@
     <string name="authenticate">Uwierzytelnij</string>
     <string name="authentication_failed">Uwierzytelnianie nie powiodło się</string>
     <string name="authentication_blocked">Uwierzytelnianie zablokowane. Spróbuj ponownie za chwilę.</string>
-    <string name="no_fingerprints_registered">Nie masz zarejestrowanych odcisków palców. Dodaj je w ustawieniach systemowych.</string>
+    <string name="no_fingerprints_registered">Nie masz zarejestrowanych odcisków palców. Dodaj je w ustawieniach swojego urządzenia.</string>
     <string name="go_to_settings">Przejdź do ustawień</string>
     <string name="protection_setup_successfully">Hasło zostało ustawione. Jeśli je zapomnisz, przeinstaluj aplikację.</string>
     <string name="fingerprint_setup_successfully">Zabezpieczenie zostało ustawione. W razie problemów z jego zresetowaniem przeinstaluj aplikację.</string>
