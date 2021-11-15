@@ -121,7 +121,7 @@
                     android:layout_height="@dimen/normal_icon_size"
                     android:contentDescription="@null"
                     android:padding="@dimen/medium_margin"
-                    android:src="@drawable/ic_star_on_vector" />
+                    android:src="@drawable/ic_star_vector" />
 
                 <com.simplemobiletools.commons.views.MyTextView
                     android:id="@+id/about_rate_us"

@@ -284,7 +284,7 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         mDialogView.apply {
             filepicker_favorites_holder.beGone()
             filepicker_files_holder.beVisible()
-            val drawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_star_on_vector, activity.getAdjustedPrimaryColor().getContrastColor())
+            val drawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_star_vector, activity.getAdjustedPrimaryColor().getContrastColor())
             filepicker_fab_show_favorites.setImageDrawable(drawable)
         }
     }

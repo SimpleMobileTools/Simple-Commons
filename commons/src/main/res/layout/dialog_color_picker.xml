@@ -63,7 +63,7 @@
                 android:id="@+id/color_picker_hue_cursor"
                 android:layout_width="8dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_chevron_right_small_vector" />
+                android:src="@drawable/ic_chevron_right_unpadded_vector" />
 
             <ImageView
                 android:id="@+id/color_picker_cursor"

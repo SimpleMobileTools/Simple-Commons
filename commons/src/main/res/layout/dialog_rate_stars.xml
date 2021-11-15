@@ -31,7 +31,7 @@
             android:layout_height="@dimen/normal_icon_size"
             android:layout_margin="@dimen/tiny_margin"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_star_off_vector" />
+            android:src="@drawable/ic_star_outline_vector" />
 
         <ImageView
             android:id="@+id/rate_star_2"
@@ -39,7 +39,7 @@
             android:layout_height="@dimen/normal_icon_size"
             android:layout_margin="@dimen/tiny_margin"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_star_off_vector" />
+            android:src="@drawable/ic_star_outline_vector" />
 
         <ImageView
             android:id="@+id/rate_star_3"
@@ -47,7 +47,7 @@
             android:layout_height="@dimen/normal_icon_size"
             android:layout_margin="@dimen/tiny_margin"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_star_off_vector" />
+            android:src="@drawable/ic_star_outline_vector" />
 
         <ImageView
             android:id="@+id/rate_star_4"
@@ -55,7 +55,7 @@
             android:layout_height="@dimen/normal_icon_size"
             android:layout_margin="@dimen/tiny_margin"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_star_off_vector" />
+            android:src="@drawable/ic_star_outline_vector" />
 
         <ImageView
             android:id="@+id/rate_star_5"
@@ -63,7 +63,7 @@
             android:layout_height="@dimen/normal_icon_size"
             android:layout_margin="@dimen/tiny_margin"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_star_off_vector" />
+            android:src="@drawable/ic_star_outline_vector" />
 
     </LinearLayout>
 </LinearLayout>
