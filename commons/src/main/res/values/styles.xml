@@ -152,17 +152,11 @@
         <item name="android:paddingStart">@dimen/medium_margin</item>
     </style>
 
-    <style name="SettingsLeftLabelStyle">
-        <item name="android:layout_centerVertical">true</item>
-    </style>
+    <style name="SettingsLeftLabelStyle"/>
 
     <style name="SettingsRightTextualValueStyle">
-        <item name="android:layout_alignParentEnd">true</item>
-        <item name="android:maxLines">3</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:paddingEnd">@dimen/small_margin</item>
-        <item name="android:paddingStart">@dimen/activity_margin</item>
-        <item name="android:gravity">end</item>
+        <item name="android:alpha">0.6</item>
+        <item name="android:textFontWeight">300</item>
     </style>
 
     <style name="SettingsHolderCheckboxStyle">
@@ -174,9 +168,9 @@
 
     <style name="SettingsHolderTextViewStyle">
         <item name="android:paddingStart">@dimen/activity_margin</item>
-        <item name="android:paddingTop">@dimen/bigger_margin</item>
+        <item name="android:paddingTop">@dimen/activity_margin</item>
         <item name="android:paddingEnd">@dimen/activity_margin</item>
-        <item name="android:paddingBottom">@dimen/bigger_margin</item>
+        <item name="android:paddingBottom">@dimen/activity_margin</item>
     </style>
 
     <!-- App themes -->
