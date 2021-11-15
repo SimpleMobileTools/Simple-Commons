@@ -34,7 +34,7 @@ dependencies {
     implementation 'joda-time:joda-time:2.10.3'
     implementation "androidx.exifinterface:exifinterface:1.3.3"
     implementation "androidx.biometric:biometric-ktx:1.2.0-alpha03"
-    implementation 'com.github.tibbi:RecyclerView-FastScroller:c3943ae0dd'
+    implementation 'com.github.tibbi:RecyclerView-FastScroller:1d2b7e14e7'
 
     api 'com.github.tibbi:reprint:2f49ba01bb'
     api 'androidx.core:core-ktx:1.6.0'
