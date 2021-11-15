@@ -87,8 +87,9 @@ class FilePickerDialog(
                 true
             }
 
-        if (!pickFile)
+        if (!pickFile) {
             builder.setPositiveButton(R.string.ok, null)
+        }
 
         if (showFAB) {
             mDialogView.filepicker_fab.apply {
@@ -225,6 +226,7 @@ class FilePickerDialog(
         } else {
             currPath.trimEnd('/')
         }
+
         callback(currPath)
         mDialog.dismiss()
     }
@@ -238,9 +240,7 @@ class FilePickerDialog(
                     }
                 }
             }
-            activity.isPathOnOTG(path) -> {
-                activity.getOTGItems(path, showHidden, false, callback)
-            }
+            activity.isPathOnOTG(path) -> activity.getOTGItems(path, showHidden, false, callback)
             else -> {
                 val lastModifieds = activity.getFolderLastModifieds(path)
                 getRegularItems(path, lastModifieds, callback)
@@ -256,6 +256,7 @@ class FilePickerDialog(
             callback(items)
             return
         }
+
         for (file in files) {
             if (!showHidden && file.name.startsWith('.')) {
                 continue
@@ -300,7 +301,7 @@ class FilePickerDialog(
         mDialogView.apply {
             filepicker_favorites_holder.beGone()
             filepicker_files_holder.beVisible()
-            val drawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_star_on_vector, activity.getAdjustedPrimaryColor().getContrastColor())
+            val drawable = activity.resources.getColoredDrawableWithColor(R.drawable.ic_star_vector, activity.getAdjustedPrimaryColor().getContrastColor())
             filepicker_fab_show_favorites.setImageDrawable(drawable)
         }
     }
