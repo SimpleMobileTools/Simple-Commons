@@ -185,7 +185,7 @@
     <string name="sd_card">Karta pamięci</string>
     <string name="root">Folder główny</string>
     <string name="wrong_root_selected">Wybrano nieprawidłowy folder. Wybierz główny folder karty pamięci.</string>
-    <string name="sd_card_usb_same">Ścieżka do karty pamięci i urządzenia USB nie może być taka sama</string>
+    <string name="sd_card_usb_same">Ścieżki do karty pamięci i pamięci USB nie mogą być takie same</string>
     <string name="app_on_sd_card">Wygląda na to, że aplikacja jest zainstalowana na karcie pamięci, przez co widżety aplikacji są niedostępne. Nie zobaczysz ich nawet na liście dostępnych widżetów. Jest to ograniczenie systemu, więc jeśli chcesz ich używać, musisz przenieść aplikację z powrotem do pamięci wewnętrznej.</string>
     <!-- File properties -->
     <string name="properties">Właściwości</string>
@@ -609,7 +609,7 @@
     <string name="usb">USB</string>
     <string name="usb_detected">Wygląda na to, że masz podpiętą pamięć USB. Aby mieć pewność, że pliki na niej będą poprawnie widoczne, przyznaj aplikacji dodatkowe uprawnienia.</string>
     <string name="confirm_usb_storage_access_text">Wybierz folder główny pamięci USB na następnym ekranie, aby uzyskać do niej dostęp</string>
-    <string name="wrong_root_selected_usb">Wybrany został niewłaściwy folder. Wybierz główny folder pamięci USB.</string>
+    <string name="wrong_root_selected_usb">Wybrano nieprawidłowy folder. Wybierz główny folder pamięci USB.</string>
     <!-- Dates -->
     <string name="january">Styczeń</string>
     <string name="february">Luty</string>
@@ -714,7 +714,7 @@
         ]]>
     </string>
     <!-- New app (do not translate anything on the 4th line) -->
-    <string name="new_app">Cześć!&lt;br&gt;&lt;br&gt; Dajemy Ci znać, że ostatnio wyszła nowa aplikacja:&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Możesz ją pobrać, naciskając powyższy odnośnik.&lt;br&gt;&lt;br&gt; Dzięki!</string>
+    <string name="new_app">Cześć!&lt;br&gt;&lt;br&gt; Dajemy Ci znać, że ostatnio zostało wydanych kilka nowych aplikacji:&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Możesz je pobrać, naciskając ich nazwy lub ikony.&lt;br&gt;&lt;br&gt; Dzięki!</string>
     <string name="simple_app_launcher">Prosty launcher aplikacji</string>
     <string name="simple_calculator">Prosty kalkulator</string>
     <string name="simple_calendar">Prosty kalendarz</string>
