@@ -56,9 +56,7 @@ import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.*
 import java.io.File
 import java.text.SimpleDateFormat
-import java.util.ArrayList
-import java.util.Date
-import java.util.Locale
+import java.util.*
 
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
@@ -764,6 +762,7 @@ fun Context.getImageResolution(path: String): Point? {
     } else {
         BitmapFactory.decodeFile(path, options)
     }
+
     val width = options.outWidth
     val height = options.outHeight
     return if (width > 0 && height > 0) {
@@ -781,6 +780,7 @@ fun Context.getVideoResolution(path: String): Point? {
         } else {
             retriever.setDataSource(path)
         }
+
         val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH)!!.toInt()
         val height = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT)!!.toInt()
         Point(width, height)
