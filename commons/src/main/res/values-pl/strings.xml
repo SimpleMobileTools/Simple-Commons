@@ -60,7 +60,7 @@
     <string name="import_blocked_numbers">Importuj zablokowane numery</string>
     <string name="must_make_default_dialer">Musisz ustawić tę aplikację jako domyślną aplikację telefonu, aby móc korzystać z funkcji blokowania numerów.</string>
     <string name="set_as_default">Ustaw jako domyślną</string>
-    <string name="block_confirmation">Czy na pewno chcesz zablokować „%s”?</string>
+    <string name="block_confirmation">Czy zablokować „%s”\?</string>
     <!-- Favorites -->
     <string name="favorites">Ulubione</string>
     <string name="add_favorites">Dodaj ulubione</string>
@@ -224,7 +224,7 @@
     <string name="save">Zapisz</string>
     <string name="discard">Odrzuć</string>
     <string name="undo_changes">Cofnij zmiany</string>
-    <string name="undo_changes_confirmation">Czy na pewno chcesz cofnąć zmiany?</string>
+    <string name="undo_changes_confirmation">Czy cofnąć zmiany\?</string>
     <string name="save_before_closing">Masz niezapisane zmiany. Czy zapisać je przed wyjściem?</string>
     <string name="apply_to_all_apps">Zastosuj kolory we wszystkich Prostych aplikacjach</string>
     <string name="app_icon_color_warning">UWAGA: Niektóre launchery nie obsługują prawidłowo zmiany ikon aplikacji. Jeśli ona zniknie, uruchom aplikację przez Sklep Google Play lub przez widżet, jeśli jest dostępny.
@@ -295,13 +295,13 @@
     <string name="use_custom_sorting">Użyj własnego sortowania</string>
     <string name="change_order">Zmień porządek</string>
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Czy na pewno chcesz kontynuować usuwanie?</string>
-    <string name="deletion_confirmation">Czy na pewno chcesz usunąć %s?</string>
+    <string name="proceed_with_deletion">Czy kontynuować usuwanie\?</string>
+    <string name="deletion_confirmation">Czy usunąć %s\?</string>
     <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Czy na pewno chcesz przenieść %s do kosza?</string>
+    <string name="move_to_recycle_bin_confirmation">Czy przenieść %s do kosza\?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Czy na pewno chcesz usunąć ten element?</string>
-    <string name="are_you_sure_recycle_bin">Czy na pewno chcesz przenieść ten element do kosza?</string>
+    <string name="are_you_sure_delete">Czy usunąć ten element\?</string>
+    <string name="are_you_sure_recycle_bin">Czy przenieść ten element do kosza\?</string>
     <string name="do_not_ask_again">Nie pytaj więcej w tej sesji</string>
     <string name="do_not_show_again">Nie pokazuj ponownie</string>
     <string name="yes">Tak</string>
@@ -499,8 +499,8 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Czas pozostały do aktywacji alarmu:\n%s</string>
     <string name="reminder_triggers_in">Czas pozostały do aktywacji przypomnienia:\n%s</string>
-    <string name="alarm_warning">Upewnij się, że alarm działa poprawnie, zanim zaczniesz na nim polegać. Przez ograniczenia związane m.in. z oszczędzaniem baterii coś może nie zadziałać.</string>
-    <string name="reminder_warning">Upewnij się, że przypomnienia działają poprawnie, zanim zaczniesz na nich polegać. Przez ograniczenia związane m.in. z oszczędzaniem baterii coś może nie zadziałać.</string>
+    <string name="alarm_warning">Upewnij się, że alarm działa prawidłowo, zanim zaczniesz na nim polegać. Przez ograniczenia związane m.in. z oszczędzaniem baterii coś może nie zadziałać.</string>
+    <string name="reminder_warning">Upewnij się, że przypomnienia działają prawidłowo, zanim zaczniesz na nich polegać. Sprawdź ustawienia baterii i powiadomień w swoim urządzeniu, czy nic nie blokuje przypomnień lub nie wyłącza aplikacji w tle.</string>
     <string name="notifications_disabled">Powiadomienia tej aplikacji zostały wyłączone. Przejdź do ustawień systemu, aby je z powrotem włączyć.</string>
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
@@ -583,7 +583,7 @@
     <string name="restore_all_files">Przywróć wszystkie pliki</string>
     <string name="recycle_bin_emptied">Kosz został opróżniony</string>
     <string name="files_restored_successfully">Pliki zostały przywrócone</string>
-    <string name="empty_recycle_bin_confirmation">Czy na pewno chcesz opróżnić kosz? Pliki zostaną utracone bezpowrotnie.</string>
+    <string name="empty_recycle_bin_confirmation">Czy opróżnić kosz\? Pliki zostaną utracone bezpowrotnie.</string>
     <string name="recycle_bin_empty">Kosz jest pusty</string>
     <string name="moving_recycle_bin_items_disabled">Przenoszenie elementów z kosza jest wyłączone, użyj przywracania</string>
     <string name="show_the_recycle_bin">Pokaż kosz</string>
