@@ -176,6 +176,11 @@
         <item name="android:paddingBottom">@dimen/activity_margin</item>
     </style>
 
+    <style name="SettingsHolderTextViewOneLinerStyle" parent="@style/SettingsHolderTextViewStyle">
+        <item name="android:paddingTop">@dimen/bigger_margin</item>
+        <item name="android:paddingBottom">@dimen/bigger_margin</item>
+    </style>
+
     <!-- App themes -->
     <!-- White -->
     <style name="AppTheme.White" parent="AppTheme.Base">
