@@ -260,7 +260,7 @@
     <string name="temporarily_show_hidden">Tymczasowo pokaż ukryte elementy</string>
     <string name="stop_showing_hidden">Przestań pokazywać ukryte elementy</string>
     <string name="maximum_share_reached">Nie możesz udostępniać tak wielu danych naraz</string>
-    <string name="empty_and_disable_recycle_bin">Wyczyść i wyłącz kosz</string>
+    <string name="empty_and_disable_recycle_bin">Opróżnij i wyłącz kosz</string>
     <string name="undo">Cofnij</string>
     <string name="redo">Ponów</string>
     <string name="print">Drukuj</string>
@@ -530,13 +530,13 @@
     <string name="medium">Średnia</string>
     <string name="large">Duża</string>
     <string name="extra_large">Bardzo duża</string>
-    <string name="password_protect_hidden_items">Chroń widoczność ukrytych plików</string>
-    <string name="password_protect_whole_app">Chroń dostęp do aplikacji</string>
-    <string name="password_protect_file_deletion">Chroń pliki przed usunięciem i przeniesieniem</string>
+    <string name="password_protect_hidden_items">Chroń hasłem widoczność ukrytych elementów</string>
+    <string name="password_protect_whole_app">Chroń hasłem dostęp do całej aplikacji</string>
+    <string name="password_protect_file_deletion">Chroń hasłem usuwanie i przenoszenie elementów</string>
     <string name="keep_last_modified">Utrzymuj starą datę modyfikacji po operacjach na plikach</string>
     <string name="show_info_bubble">Pokazuj dodatkowe informacje o elementach przy przeciąganiu paska przewijania</string>
     <string name="prevent_phone_from_sleeping">Zapobiegaj przechodzeniu urządzenia w tryb uśpienia, gdy aplikacja jest aktywna</string>
-    <string name="skip_delete_confirmation">Nie pokazuj okna z potwierdzeniem usunięcia elementów</string>
+    <string name="skip_delete_confirmation">Nie pokazuj okna potwierdzenia usunięcia elementów</string>
     <string name="enable_pull_to_refresh">Włącz gest pociągnięcia ekranu od góry w celu odświeżenia widoku</string>
     <string name="use_24_hour_time_format">Używaj 24-godzinnego formatu czasu</string>
     <string name="change_date_and_time_format">Zmień format daty i godziny</string>
@@ -547,7 +547,7 @@
     <string name="vibrate_on_button_press">Wibracja przy naciśnięciu przycisku</string>
     <string name="move_items_into_recycle_bin">Przenoś elementy do kosza zamiast je usuwać</string>
     <string name="recycle_bin_cleaning_interval">Przedział czasowy czyszczenia kosza</string>
-    <string name="empty_recycle_bin">Wyczyść kosz</string>
+    <string name="empty_recycle_bin">Opróżnij kosz</string>
     <string name="force_portrait_mode">Wymuszaj tryb pionowy</string>
     <string name="export_settings">Eksportuj ustawienia</string>
     <string name="import_settings">Importuj ustawienia</string>
@@ -555,7 +555,7 @@
     <string name="settings_imported_successfully">Ustawienia zostały zaimportowane</string>
     <string name="start_name_with_surname">Zaczynaj nazwę od nazwiska</string>
     <string name="clear_cache">Wyczyść pamięć podręczną</string>
-    <string name="show_call_confirmation_dialog">Pokazuj okno potwierdzenia zadzwonienia przed zainicjowaniem połączenia</string>
+    <string name="show_call_confirmation_dialog">Pokazuj okno potwierdzenia przed nawiązaniem połączenia</string>
     <!-- Setting sections -->
     <string name="visibility">Widoczność</string>
     <string name="security">Bezpieczeństwo</string>
@@ -567,9 +567,9 @@
     <string name="text">Tekst</string>
     <string name="migrating">Migracja</string>
     <string name="quality">Jakość</string>
-    <string name="main_screen">Main screen</string>
-    <string name="thumbnails">Thumbnails</string>
-    <string name="list_view">List view</string>
+    <string name="main_screen">Ekran główny</string>
+    <string name="thumbnails">Miniaturki</string>
+    <string name="list_view">Widok listy</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Zarządzaj pokazywanymi kartami</string>
     <string name="default_tab_to_open">Karta otwierana przy uruchomieniu aplikacji</string>
@@ -768,7 +768,7 @@
         ]]>
     </string>
     <string name="faq_3_title_commons">Przypadkowo usunąłem kilka plików. Mogę je jakoś odzyskać?</string>
-    <string name="faq_3_text_commons">Pliki są usuwane zaraz po naciśnięciu w oknie potwierdzającym. System Android nie ma wbudowanego kosza.</string>
+    <string name="faq_3_text_commons">Niestety, nie możesz. Pliki są usuwane natychmiast po potwierdzeniu w oknie dialogowym. System Android nie ma wbudowanego kosza.</string>
     <string name="faq_4_title_commons">Nie podobają mi się domyślne kolory widżetów. Mogę je jakoś zmienić?</string>
     <string name="faq_4_text_commons">Tak. Po przeciągnięciu widżetu na pulpit pojawia się okno jego konfiguracji. Zobaczysz na nim kolorowe kwadraty, za pomocą których możesz wybrać nowe kolory. Suwakiem możesz też ustawić poziom przezroczystości.</string>
     <string name="faq_5_title_commons">Czy mogę jakoś odzyskać usunięte pliki?</string>
@@ -782,9 +782,7 @@
         Jest to jednorazowa płatność, co oznacza, że po zakupie nigdy nie będziesz musiał płacić ponownie, nawet po wymianie urządzenia. Jeśli nie spodoba Ci się wersja Pro, możesz ją po prostu odinstalować w ciągu kilku godzin i automatycznie otrzymasz zwrot pieniędzy.
         Jeśli chcesz zwrotu pieniędzy później, po prostu skontaktuj się z nami na hello@simplemobiletools.com i dostaniesz go.</string>
     <string name="faq_9_title_commons">Jak mogę wybrać wiele elementów jednocześnie?</string>
-    <string name="faq_9_text_commons">Można to zrobić na wiele sposobów. Pierwszym z nich jest uruchomienie trybu wyboru przez długie dotknięcie jednego elementu, a następnie krótkie dotknięcie innych, aby je wybrać. Drugi sposób jest podobny do wybierania elementów na komputerach PC za pomocą myszy.
-        Wystarczy uruchomić tryb zaznaczania przez długie naciśnięcie jednego elementu, a następnie z palcem wciąż w dół przeciągnąć go przez inne elementy do zaznaczenia. Trzeci sposób zaznaczania wielu elementów to długie dotknięcie jednego elementu, a następnie długie dotknięcie innego, a wszystko pomiędzy zostanie zaznaczone. Jeśli
-        chcesz zaznaczyć wszystkie elementy, dotknij długo jeden element, a następnie dotknij licznik wybranych elementów w lewym górnym rogu. To zaznaczy lub odznaczy wszystko.</string>
+    <string name="faq_9_text_commons">Można to zrobić na wiele sposobów. Pierwszym z nich jest uruchomienie trybu wyboru przez długie naciśnięcie jednego elementu, a następnie krótkie naciśnięcie innych, aby je wybrać. Drugi sposób jest podobny do wybierania elementów na komputerach PC za pomocą myszy. Wystarczy uruchomić tryb zaznaczania przez długie naciśnięcie jednego elementu, a następnie z przyciśniętym palcem przeciągnąć go przez inne elementy do zaznaczenia. Trzeci sposób zaznaczania wielu elementów to długie naciśnięcie jednego elementu, a następnie długie naciśnięcie innego, żeby wszystko pomiędzy zostało zaznaczone. Jeśli chcesz zaznaczyć wszystkie elementy, naciśnij długo jeden element, a następnie naciśnij licznik wybranych elementów w lewym górnym rogu. To zaznaczy lub odznaczy wszystko.</string>
     <string name="faq_10_title_commons">Zakupiłem aplikację, ale nie mogę jej pobrać na inne urządzenie.</string>
     <string name="faq_10_text_commons">Spróbuj wyczyścić pamięć podręczną aplikacji Google Play i zrestartować urządzenie. Jest to jakaś usterka Google Play, nie do końca związana z samą aplikacją.</string>
     <!-- Contributors -->
@@ -859,7 +857,7 @@
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Obsługa stref czasowych</string>
     <string name="why_upgrade_attendees_emails">Uczestnicy i przypomnienia e-mail</string>
-    <string name="why_upgrade_easy_event_importing">Łatwe importowanie zdarzeń</string>
+    <string name="why_upgrade_easy_event_importing">Łatwe importowanie wydarzeń</string>
     <string name="why_upgrade_new_widgets">Nowe widżety</string>
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Ulepszono łączenie zduplikowanych kontaktów</string>
