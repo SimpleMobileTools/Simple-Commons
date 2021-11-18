@@ -501,7 +501,7 @@
     <string name="reminder_triggers_in">Czas pozostały do aktywacji przypomnienia:\n%s</string>
     <string name="alarm_warning">Upewnij się, że alarm działa prawidłowo, zanim zaczniesz na nim polegać. Przez ograniczenia związane m.in. z oszczędzaniem baterii coś może nie zadziałać.</string>
     <string name="reminder_warning">Upewnij się, że przypomnienia działają prawidłowo, zanim zaczniesz na nich polegać. Sprawdź ustawienia baterii i powiadomień w swoim urządzeniu, czy nic nie blokuje przypomnień lub nie wyłącza aplikacji w tle.</string>
-    <string name="notifications_disabled">Powiadomienia tej aplikacji zostały wyłączone. Przejdź do ustawień systemu, aby je z powrotem włączyć.</string>
+    <string name="notifications_disabled">Powiadomienia tej aplikacji są wyłączone. Przejdź do ustawień urządzenia, aby je włączyć.</string>
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
     <string name="snooze">Drzemka</string>
@@ -758,8 +758,8 @@
     <!-- FAQ -->
     <string name="frequently_asked_questions">Często zadawane pytania (FAQ)</string>
     <string name="before_asking_question">Zanim zadasz pytanie, przeczytaj najpierw</string>
-    <string name="faq_1_title_commons">Dlaczego nigdzie nie widzę widżetu aplikacji?</string>
-    <string name="faq_1_text_commons">Zapewne dlatego, że aplikacja została zainstalowana na karcie pamięci. Jedynym rozwiązaniem problemu jest przeniesienie aplikacji do pamięci wewnętrznej. Jest to ograniczenie systemu.</string>
+    <string name="faq_1_title_commons">Dlaczego nie widzę widżetu tej aplikacji na liście widżetów\?</string>
+    <string name="faq_1_text_commons">Jest to najprawdopodobniej spowodowane przeniesieniem aplikacji na kartę pamięci. Istnieje ograniczenie systemu Android, które w takim przypadku ukrywa widżety danej aplikacji. Jedynym rozwiązaniem jest przeniesienie aplikacji z powrotem do pamięci wewnętrznej za pomocą ustawień urządzenia.</string>
     <string name="faq_2_title_commons">Chcę Was wesprzeć, ale nie mam jak wpłacić pieniędzy. Czy mogę zrobić coś innego?</string>
     <string name="faq_2_text_commons">
         <![CDATA[
@@ -778,9 +778,7 @@
     <string name="faq_7_title_commons">Pieniądze zostały odjęte z mojego konta bankowego, ale nie mogę pobrać aplikacji. Co mogę zrobić?</string>
     <string name="faq_7_text_commons">Płatności są w pełni obsługiwane przez Google, ich system szwankuje od czasu do czasu. Wystarczy wyczyścić pamięć podręczną aplikacji Google Play i zrestartować urządzenie, a następnie ponowić próbę pobrania.</string>
     <string name="faq_8_title_commons">Dlaczego powinienem uaktualnić do wersji Pro?</string>
-    <string name="faq_8_text_commons">Ponieważ Twoja wersja aplikacji nie jest już aktualizowana, błędy, które być może zauważyłeś, nigdy nie zostaną naprawione. Nie zostaną również dodane żadne nowe funkcje. Możesz kupić wersję Pro w Google Play za niewielką sumę pieniędzy.
-        Jest to jednorazowa płatność, co oznacza, że po zakupie nigdy nie będziesz musiał płacić ponownie, nawet po wymianie urządzenia. Jeśli nie spodoba Ci się wersja Pro, możesz ją po prostu odinstalować w ciągu kilku godzin i automatycznie otrzymasz zwrot pieniędzy.
-        Jeśli chcesz zwrotu pieniędzy później, po prostu skontaktuj się z nami na hello@simplemobiletools.com i dostaniesz go.</string>
+    <string name="faq_8_text_commons">Ponieważ Twoja wersja aplikacji nie jest już aktualizowana, błędy, które być może zauważyłeś, nigdy nie zostaną naprawione. Nie zostaną również dodane żadne nowe funkcje. Możesz kupić wersję Pro w Google Play za niewielką sumę pieniędzy. Jest to jednorazowa płatność, co oznacza, że po zakupie nigdy nie będziesz musiał płacić ponownie, nawet po wymianie urządzenia. Jeśli nie spodoba Ci się wersja Pro, możesz ją po prostu odinstalować w ciągu kilku godzin, a automatycznie otrzymasz swoje pieniądze z powrotem. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie, po prostu skontaktuj się z nami na hello@simplemobiletools.com, a otrzymasz go.</string>
     <string name="faq_9_title_commons">Jak mogę wybrać wiele elementów jednocześnie?</string>
     <string name="faq_9_text_commons">Można to zrobić na wiele sposobów. Pierwszym z nich jest uruchomienie trybu wyboru przez długie naciśnięcie jednego elementu, a następnie krótkie naciśnięcie innych, aby je wybrać. Drugi sposób jest podobny do wybierania elementów na komputerach PC za pomocą myszy. Wystarczy uruchomić tryb zaznaczania przez długie naciśnięcie jednego elementu, a następnie z przyciśniętym palcem przeciągnąć go przez inne elementy do zaznaczenia. Trzeci sposób zaznaczania wielu elementów to długie naciśnięcie jednego elementu, a następnie długie naciśnięcie innego, żeby wszystko pomiędzy zostało zaznaczone. Jeśli chcesz zaznaczyć wszystkie elementy, naciśnij długo jeden element, a następnie naciśnij licznik wybranych elementów w lewym górnym rogu. To zaznaczy lub odznaczy wszystko.</string>
     <string name="faq_10_title_commons">Zakupiłem aplikację, ale nie mogę jej pobrać na inne urządzenie.</string>
