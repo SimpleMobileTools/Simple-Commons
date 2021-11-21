@@ -29,8 +29,9 @@ class ConfirmationDialog(
         val builder = AlertDialog.Builder(activity)
             .setPositiveButton(positive) { dialog, which -> dialogConfirmed() }
 
-        if (negative != 0)
+        if (negative != 0) {
             builder.setNegativeButton(negative, null)
+        }
 
         dialog = builder.create().apply {
             activity.setupDialogStuff(view, this, cancelOnTouchOutside = cancelOnTouchOutside)
