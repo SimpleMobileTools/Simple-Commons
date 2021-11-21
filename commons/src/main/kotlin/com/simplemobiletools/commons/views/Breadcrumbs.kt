@@ -37,9 +37,9 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
             )
         )
 
+    var listener: BreadcrumbsListener? = null
     val itemsCount: Int
         get() = itemsLayout.childCount
-    var listener: BreadcrumbsListener? = null
 
     init {
         isHorizontalScrollBarEnabled = false
@@ -137,17 +137,18 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
         } else {
             selectedItemView.right - width + itemsLayout.paddingStart
         }
+
         if (!isFirstScroll && isShown) {
             smoothScrollTo(scrollX, 0)
         } else {
             scrollTo(scrollX, 0)
         }
+
         isFirstScroll = false
     }
 
     override fun requestLayout() {
         isLayoutDirty = true
-
         super.requestLayout()
     }
 
@@ -177,7 +178,6 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
     }
 
     private fun addBreadcrumb(item: FileDirItem, index: Int, addPrefix: Boolean) {
-
         if (itemsLayout.childCount == 0) {
             inflater.inflate(R.layout.item_breadcrumb_first, itemsLayout, false).apply {
                 resources.apply {
@@ -252,7 +252,6 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
     fun getItem(index: Int) = itemsLayout.getChildAt(index).tag as FileDirItem
 
     fun getLastItem() = itemsLayout.getChildAt(itemsLayout.childCount - 1).tag as FileDirItem
-
 
     interface BreadcrumbsListener {
         fun breadcrumbClicked(id: Int)
