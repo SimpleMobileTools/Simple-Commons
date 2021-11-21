@@ -2,7 +2,6 @@ package com.simplemobiletools.commons.views
 
 import android.content.Context
 import android.content.res.ColorStateList
-import android.graphics.drawable.ColorDrawable
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -184,7 +183,6 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
                     breadcrumb_text.background = ContextCompat.getDrawable(context, R.drawable.button_background)
                     breadcrumb_text.background.applyColorFilter(textColor)
                     elevation = getDimension(R.dimen.medium_margin)
-                    background = ColorDrawable(context.baseConfig.backgroundColor)
                     val medium = getDimension(R.dimen.medium_margin).toInt()
                     breadcrumb_text.setPadding(medium, medium, medium, medium)
                     setPadding(rootStartPadding, 0, 0, 0)
