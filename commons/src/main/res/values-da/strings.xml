@@ -29,7 +29,7 @@
     <string name="select_a_different_color">Vælg en anden farve</string>
     <string name="download">Download</string>
     <string name="notification">Underretning</string>
-    <string name="notifications">Notifications</string>
+    <string name="notifications">Underretninger</string>
     <string name="email">E-mail</string>
     <string name="previous">Forrige</string>
     <string name="playpause">Afspil / Pause</string>
@@ -124,11 +124,11 @@
     <string name="copy_failed">Kunne ikke kopiere filerne</string>
     <string name="copying">Kopierer…</string>
     <string name="copying_success">Filerne er kopieret</string>
-    <string name="copying_success_one">File copied successfully</string>
+    <string name="copying_success_one">Filen er kopieret</string>
     <string name="copy_move_failed">Der opstod en fejl</string>
     <string name="moving">Flytter…</string>
     <string name="moving_success">Filerne er flyttet</string>
-    <string name="moving_success_one">File moved successfully</string>
+    <string name="moving_success_one">Filen er flyttet</string>
     <string name="moving_success_partial">Ikke alle filer blev flyttet</string>
     <string name="copying_success_partial">Nogle filer blev ikke kopieret</string>
     <string name="no_files_selected">Der er ikke valgt nogen filer</string>
@@ -514,13 +514,13 @@
     <!-- Settings -->
     <string name="settings">Indstillinger</string>
     <string name="purchase_simple_thank_you">Køb Simple Thank You</string>
-    <string name="general_settings">General</string>
-    <string name="color_customization">Color customization</string>
+    <string name="general_settings">Generelt</string>
+    <string name="color_customization">Farvetilpasning</string>
     <string name="customize_colors">Rediger farver</string>
     <string name="customize_colors_locked">Rediger farver (Låst)</string>
     <string name="customize_widget_colors">Rediger widget-farver</string>
     <string name="customize_notifications">Tilpas notifikationer</string>
-    <string name="use_english_language">Anvend engelsk sprog</string>
+    <string name="use_english_language">Use English language</string>
     <string name="show_hidden_items">Vis skjulte elementer</string>
     <string name="font_size">Skriftstørrelse</string>
     <string name="small">Lille</string>
@@ -564,10 +564,10 @@
     <string name="startup">Opstart</string>
     <string name="text">Tekst</string>
     <string name="migrating">Migrering</string>
-    <string name="quality">Quality</string>
-    <string name="main_screen">Main screen</string>
+    <string name="quality">Kvalitet</string>
+    <string name="main_screen">Hovedskærm</string>
     <string name="thumbnails">Thumbnails</string>
-    <string name="list_view">List view</string>
+    <string name="list_view">Listevisning</string>
 
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Administrer viste faner</string>
@@ -692,12 +692,12 @@
     <string name="follow_us">Følg os</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="support">Support</string>
-    <string name="help_us">Help us</string>
+    <string name="help_us">Hjælp os</string>
     <string name="social">Social</string>
-    <string name="other">Other</string>
+    <string name="other">Andet</string>
     <string name="version_placeholder">Version %s</string>
-    <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="hello">Hej :)</string>
+    <string name="about_footer">Udviklet med &#10084;&#65039; i Slovakiet</string>
     <string name="additional_info">Yderligere info</string>
     <string name="app_version">App version: %s</string>
     <string name="device_os">Enheds-OS: %s</string>
@@ -786,8 +786,8 @@
     <string name="faq_2_title_commons">Jeg vil gerne støtte dig, men jeg kan ikke donere penge. Er der andet jeg kan gøre?</string>
     <string name="faq_2_text_commons">
         <![CDATA[
-            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
+            Ja, selvfølgelig. Du kan sprede budskabet om vores apps eller give god feedback og gode vurderinger. Du kan også hjælpe ved at oversætte apps til et nyt sprog eller blot opdatere nogle af de eksisterende oversættelser.
+            Vejledningen til oversættelse findes på <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">dette websted</a>, eller mail til os på adressen <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a>, hvis du har spørgsmål.
         ]]>
     </string>
     <string name="faq_3_title_commons">Jeg fik slettet nogle filer ved en fejl, hvordan kan jeg gendanne dem?</string>
@@ -805,69 +805,69 @@
     <string name="faq_8_text_commons">Da din version af appen ikke opdateres længere, kan den indeholde fejl der aldrig bliver rettet. Der vil heller ikke komme nye funktioner til den. Du kan købe Pro-versionen på Google Play for et lille beløb.
         Det er en engangsinvestering, har du betalt een gang skal du aldrig gøre det igen, heller ikke hvis du skifter mobil eller tablet. Kan du ikke lide Pro-versionen, kan du afinstallere den indenfor nogle få timer og du vil automatisk få dine penge tilbage.
         Vil du på et senere tidspunkt have pengene refunderet, skal du blot sende en mail til hello@simplemobiletools.com, så klarer vi det.</string>
-    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
-    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
-        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
-        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
-    <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
-    <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
+    <string name="faq_9_title_commons">Hvordan kan jeg vælge flere elementer på én gang?</string>
+    <string name="faq_9_text_commons">Der er flere måder at gøre det på. Den første er at starte valgtilstanden ved at trykke længe på et element og derefter klikke kort på andre elementer for at vælge dem. Den anden måde svarer til at vælge elementer på en pc med en mus.
+        Du skal bare starte valgtilstanden ved at trykke længe på et element og derefter mens fingeren stadig er nede, trække den hen over andre elementer for at vælge dem. Den tredje måde at vælge flere elementer på er ved at trykke længe på et element og derefter trykke længe på et andet element, og alt derimellem bliver valgt. Hvis du
+        vil vælge alle elementer, skal du blot trykke længe på et element og derefter klikke på tælleren for det valgte element øverst til venstre i hjørnet. Det vil vælge eller fravælge alting.</string>
+    <string name="faq_10_title_commons">Jeg har købt appen, men jeg kan ikke downloade den på en anden enhed.</string>
+    <string name="faq_10_text_commons">Prøv at rydde din Google Play-appcache og genstarte din enhed. Det er en fejl i Google Play, som ikke har noget med selve appen at gøre.</string>
 
     <!-- Contributors -->
-    <string name="contributors">Contributors</string>
-    <string name="translation">Translation</string>
-    <string name="development">Development</string>
-    <string name="other_help">Other help</string>
+    <string name="contributors">Bidragydere</string>
+    <string name="translation">Oversættelse</string>
+    <string name="development">Udvikling</string>
+    <string name="other_help">Anden hjælp</string>
     <string name="contributors_label">
         <![CDATA[
-            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
+            Denne liste indeholder alle, der har hjulpet med en app i Simple Mobile Tools-pakken, ikke kun denne. Oversættelser håndteres af frivillige,
+            så lad os vide, hvis du også vil hjælpe. Vejledningen til oversættelse findes på <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">denne hjemmeside</a>, eller send en mail til <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a>, hvis du har spørgsmål.
+            Tak til alle bidragydere og andre støtter!
         ]]>
     </string>
 
-    <string name="translation_arabic">Arabic</string>
-    <string name="translation_azerbaijani">Azerbaijani</string>
-    <string name="translation_bengali">Bengali</string>
-    <string name="translation_breton">Breton</string>
-    <string name="translation_catalan">Catalan</string>
-    <string name="translation_czech">Czech</string>
-    <string name="translation_welsh">Welsh</string>
-    <string name="translation_danish">Danish</string>
-    <string name="translation_german">German</string>
-    <string name="translation_greek">Greek</string>
-    <string name="translation_spanish">Spanish</string>
-    <string name="translation_basque">Basque</string>
-    <string name="translation_persian">Persian</string>
-    <string name="translation_finnish">Finnish</string>
-    <string name="translation_french">French</string>
-    <string name="translation_galician">Galician</string>
+    <string name="translation_arabic">Arabisk</string>
+    <string name="translation_azerbaijani">Aserbajdsjansk</string>
+    <string name="translation_bengali">Bengalsk</string>
+    <string name="translation_breton">Bretonsk</string>
+    <string name="translation_catalan">Catalansk</string>
+    <string name="translation_czech">Tjekkisk</string>
+    <string name="translation_welsh">Walisisk</string>
+    <string name="translation_danish">Dansk</string>
+    <string name="translation_german">Tysk</string>
+    <string name="translation_greek">Græsk</string>
+    <string name="translation_spanish">Spansk</string>
+    <string name="translation_basque">Baskisk</string>
+    <string name="translation_persian">Persisk</string>
+    <string name="translation_finnish">Finsk</string>
+    <string name="translation_french">Fransk</string>
+    <string name="translation_galician">Galicisk</string>
     <string name="translation_hindi">Hindi</string>
-    <string name="translation_croatian">Croatian</string>
-    <string name="translation_hungarian">Hungarian</string>
-    <string name="translation_indonesian">Indonesian</string>
-    <string name="translation_italian">Italian</string>
-    <string name="translation_hebrew">Hebrew</string>
-    <string name="translation_japanese">Japanese</string>
-    <string name="translation_korean">Korean</string>
-    <string name="translation_lithuanian">Lithuanian</string>
-    <string name="translation_nepali">Nepali</string>
-    <string name="translation_norwegian">Norwegian</string>
-    <string name="translation_dutch">Dutch</string>
-    <string name="translation_polish">Polish</string>
-    <string name="translation_portuguese">Portuguese</string>
-    <string name="translation_romanian">Romanian</string>
-    <string name="translation_russian">Russian</string>
-    <string name="translation_slovak">Slovak</string>
-    <string name="translation_slovenian">Slovenian</string>
-    <string name="translation_serbian">Serbian</string>
-    <string name="translation_swedish">Swedish</string>
-    <string name="translation_tamil">Tamil</string>
-    <string name="translation_turkish">Turkish</string>
-    <string name="translation_ukrainian">Ukrainian</string>
-    <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
-    <string name="translation_chinese_cn">Chinese (Simplified)</string>
-    <string name="translation_chinese_tw">Chinese (Traditional)</string>
+    <string name="translation_croatian">Croatisk</string>
+    <string name="translation_hungarian">Ungarsk</string>
+    <string name="translation_indonesian">Indonesisk</string>
+    <string name="translation_italian">Italiensk</string>
+    <string name="translation_hebrew">Hebraisk</string>
+    <string name="translation_japanese">Japansk</string>
+    <string name="translation_korean">Koreansk</string>
+    <string name="translation_lithuanian">Litauisk</string>
+    <string name="translation_nepali">Nepalesisk</string>
+    <string name="translation_norwegian">Norsk</string>
+    <string name="translation_dutch">Hollandsk</string>
+    <string name="translation_polish">Polsk</string>
+    <string name="translation_portuguese">Portugisisk</string>
+    <string name="translation_romanian">Rumænsk</string>
+    <string name="translation_russian">Russisk</string>
+    <string name="translation_slovak">Slovakisk</string>
+    <string name="translation_slovenian">Slovensk</string>
+    <string name="translation_serbian">Serbisk</string>
+    <string name="translation_swedish">Svensk</string>
+    <string name="translation_tamil">Tamilsk</string>
+    <string name="translation_turkish">Tyrkisk</string>
+    <string name="translation_ukrainian">Ukrainsk</string>
+    <string name="translation_vietnamese">Vietnamesisk</string>
+    <string name="translation_chinese_hk">Kinesisk (Hong Kong)</string>
+    <string name="translation_chinese_cn">Kinesisk (forenklet)</string>
+    <string name="translation_chinese_tw">Kinesisk (Traditionelt)</string
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Få Pro-versionen nu!</string>
