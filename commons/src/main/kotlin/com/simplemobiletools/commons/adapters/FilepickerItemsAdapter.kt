@@ -12,6 +12,7 @@ import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade
 import com.bumptech.glide.request.RequestOptions
+import com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
@@ -24,7 +25,7 @@ import java.util.*
 class FilepickerItemsAdapter(
     activity: BaseSimpleActivity, val fileDirItems: List<FileDirItem>, recyclerView: MyRecyclerView,
     itemClick: (Any) -> Unit
-) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick) {
+) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick), RecyclerViewFastScroller.OnPopupTextUpdate {
 
     private lateinit var fileDrawable: Drawable
     private lateinit var folderDrawable: Drawable
@@ -32,6 +33,8 @@ class FilepickerItemsAdapter(
     private val hasOTGConnected = activity.hasOTGConnected()
     private var fontSize = 0f
     private val cornerRadius = resources.getDimension(R.dimen.rounded_corner_radius_small).toInt()
+    private val dateFormat = activity.baseConfig.dateFormat
+    private val timeFormat = activity.getTimeFormat()
 
     init {
         initDrawables()
@@ -144,4 +147,6 @@ class FilepickerItemsAdapter(
         fileDrawable = resources.getDrawable(R.drawable.ic_file_generic)
         fileDrawables = getFilePlaceholderDrawables(activity)
     }
+
+    override fun onChange(position: Int) = fileDirItems.getOrNull(position)?.getBubbleText(activity, dateFormat, timeFormat) ?: ""
 }

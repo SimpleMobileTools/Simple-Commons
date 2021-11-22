@@ -25,27 +25,32 @@
                 android:paddingEnd="@dimen/small_margin"
                 android:paddingBottom="@dimen/small_margin" />
 
-            <com.simplemobiletools.commons.views.MyRecyclerView
-                android:id="@+id/filepicker_list"
+            <com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
+                android:id="@+id/filepicker_fastscroller"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/filepicker_breadcrumbs"
-                android:layoutAnimation="@anim/layout_animation"
-                android:scrollbars="none"
-                app:layoutManager="com.simplemobiletools.commons.views.MyLinearLayoutManager" />
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filepicker_breadcrumbs">
 
-            <com.simplemobiletools.commons.views.FastScroller
+                <com.simplemobiletools.commons.views.MyRecyclerView
+                    android:id="@+id/filepicker_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layoutAnimation="@anim/layout_animation"
+                    android:scrollbars="none"
+                    app:layoutManager="com.simplemobiletools.commons.views.MyLinearLayoutManager" />
+
+            </com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller>
+
+            <!--<com.simplemobiletools.commons.views.FastScroller
                 android:id="@+id/filepicker_fastscroller"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_alignTop="@+id/filepicker_list"
-                android:layout_alignBottom="@+id/filepicker_list"
                 android:layout_alignParentEnd="true"
                 android:paddingStart="@dimen/normal_margin">
 
                 <include layout="@layout/fastscroller_handle_vertical" />
 
-            </com.simplemobiletools.commons.views.FastScroller>
+            </com.simplemobiletools.commons.views.FastScroller>-->
         </RelativeLayout>
 
         <RelativeLayout

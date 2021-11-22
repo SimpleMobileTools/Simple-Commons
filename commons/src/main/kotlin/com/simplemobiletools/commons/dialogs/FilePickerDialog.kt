@@ -43,8 +43,6 @@ class FilePickerDialog(
     private var mFirstUpdate = true
     private var mPrevPath = ""
     private var mScrollStates = HashMap<String, Parcelable>()
-    private val mDateFormat = activity.baseConfig.dateFormat
-    private val mTimeFormat = activity.getTimeFormat()
 
     private lateinit var mDialog: AlertDialog
     private var mDialogView = activity.layoutInflater.inflate(R.layout.dialog_filepicker, null)
@@ -103,6 +101,8 @@ class FilePickerDialog(
             (layoutParams as CoordinatorLayout.LayoutParams).bottomMargin = secondaryFabBottomMargin
         }
 
+        val adjustedPrimaryColor = activity.getAdjustedPrimaryColor()
+        mDialogView.filepicker_fastscroller.updateColors(adjustedPrimaryColor, adjustedPrimaryColor.getContrastColor())
         mDialogView.filepicker_fab_show_hidden.apply {
             beVisibleIf(!showHidden && canAddShowHiddenButton)
             setOnClickListener {
@@ -183,18 +183,12 @@ class FilePickerDialog(
         mDialogView.apply {
             filepicker_list.adapter = adapter
             filepicker_breadcrumbs.setBreadcrumb(currPath)
-            filepicker_fastscroller.setViews(filepicker_list) {
-                filepicker_fastscroller.updateBubbleText(sortedItems.getOrNull(it)?.getBubbleText(context, mDateFormat, mTimeFormat) ?: "")
-            }
 
             if (context.areSystemAnimationsEnabled) {
                 filepicker_list.scheduleLayoutAnimation()
             }
 
             layoutManager.onRestoreInstanceState(mScrollStates[currPath.trimEnd('/')])
-            filepicker_list.onGlobalLayout {
-                filepicker_fastscroller.setScrollToY(filepicker_list.computeVerticalScrollOffset())
-            }
         }
 
         mFirstUpdate = false
