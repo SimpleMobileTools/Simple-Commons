@@ -155,6 +155,7 @@
     <string name="confirm_storage_access_title">Confermare l\'accesso all\'archiviazione esterna</string>
     <string name="confirm_storage_access_text">Scegliere il percorso della scheda SD nella prossima schermata, per consentire i permessi di scrittura</string>
     <string name="confirm_storage_access_text_sd">Se non si ha una scheda SD, provare questo</string>
+    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">Conferma selezione</string>
     <plurals name="items">
         <item quantity="one">%d elemento</item>

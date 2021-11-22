@@ -165,6 +165,7 @@
     <string name="confirm_storage_access_title">確認外部儲存空間存取權限</string>
     <string name="confirm_storage_access_text">請在下個畫面選擇SD卡的根目錄，以授予存取權限</string>
     <string name="confirm_storage_access_text_sd">"如果看不到SD卡，試試這個"</string>
+    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">確認選擇</string>
 
     <plurals name="items">

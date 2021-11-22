@@ -165,6 +165,7 @@
     <string name="confirm_storage_access_title">Pasirinkti išorinės talpyklos prieigą</string>
     <string name="confirm_storage_access_text">Norint suteikti prieigą, pasirinkite pagrindinį SD kortelės aplanką kitame lange</string>
     <string name="confirm_storage_access_text_sd">Jei nematote SD kortelės, pabandykite tai</string>
+    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">Patvirtinti pasirinkimą</string>
 
     <plurals name="items">

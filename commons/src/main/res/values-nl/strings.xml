@@ -165,6 +165,7 @@
     <string name="confirm_storage_access_title">Toegang tot externe opslag bevestigen</string>
     <string name="confirm_storage_access_text">Kies in het volgende scherm de hoofdmap van de SD-kaart om schrijfrechten te verlenen</string>
     <string name="confirm_storage_access_text_sd">Probeer het volgende indien de SD-kaart niet in de lijst staat</string>
+    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">Keuze bevestigen</string>
 
     <plurals name="items">

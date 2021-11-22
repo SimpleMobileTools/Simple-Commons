@@ -165,6 +165,7 @@
     <string name="confirm_storage_access_title">外部ストレージのアクセスを確認してください</string>
     <string name="confirm_storage_access_text">次の画面でSDカードのルートフォルダを選択して、書き込みアクセス許可を付与してください</string>
     <string name="confirm_storage_access_text_sd">SDカードの内容が表示されない場合は、こちらをお試しください</string>
+    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">選択を確認</string>
 
     <plurals name="items">

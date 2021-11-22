@@ -165,6 +165,7 @@
     <string name="confirm_storage_access_title">Permet l’accés a l’emmagatzematge extern</string>
     <string name="confirm_storage_access_text">Si us plau, tria la carpeta arrel de la targeta SD a la propera pantalla per concedir accés d’escriptura</string>
     <string name="confirm_storage_access_text_sd">Si no veus la targeta SD, prova això</string>
+    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">Confirmar Selecció</string>
 
     <plurals name="items">

@@ -165,6 +165,7 @@
     <string name="confirm_storage_access_title">Potvrďte přístup k externímu úložišti</string>
     <string name="confirm_storage_access_text">Pro poskytnutí oprávnění k zápisu prosím na následující obrazovce zvolte kořenový adresář SD karty</string>
     <string name="confirm_storage_access_text_sd">Pokud SD kartu nevidíte, vyzkoušejte následující</string>
+    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">Potvrdit výběr</string>
 
     <plurals name="items">

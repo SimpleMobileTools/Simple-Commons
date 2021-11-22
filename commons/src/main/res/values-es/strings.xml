@@ -165,6 +165,7 @@
     <string name="confirm_storage_access_title">Permita el acceso al almacenamiento externo</string>
     <string name="confirm_storage_access_text">Por favor, elija la carpeta raíz de la tarjeta SD en la próxima pantalla para conceder el acceso de escritura</string>
     <string name="confirm_storage_access_text_sd">Si no ve la tarjeta SD, prueba esto</string>
+    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">Confirmar la selección</string>
 
     <plurals name="items">

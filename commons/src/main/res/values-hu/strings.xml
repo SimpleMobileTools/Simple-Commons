@@ -165,6 +165,7 @@
     <string name="confirm_storage_access_title">Ellenőrizze a külső tároló hozzáférést</string>
     <string name="confirm_storage_access_text">Kérjük, válassza ki az SD kártya gyökérmappáját a következő képernyőn, hogy írási hozzáférést kapjon</string>
     <string name="confirm_storage_access_text_sd">Ha nem látja az SD kártyát, próbálja meg ezt</string>
+    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">Kiválasztás megerősítése</string>
 
     <plurals name="items">
