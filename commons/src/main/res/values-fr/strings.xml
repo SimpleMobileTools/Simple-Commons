@@ -51,7 +51,7 @@
     <string name="select_photo">Sélectionner une image</string>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Gérer les numéros bloqués</string>
-    <string name="not_blocking_anyone">Aucun numéro n\'est bloqué</string>
+    <string name="not_blocking_anyone">Aucun numéro n\'est bloqué.</string>
     <string name="add_a_blocked_number">Ajouter un numéro bloqué</string>
     <string name="block_number">Bloquer le numéro</string>
     <string name="block_numbers">Bloquer les numéros</string>
@@ -68,10 +68,10 @@
     <string name="remove_from_favorites">Supprimer des favoris</string>
     <!-- Search -->
     <string name="search">Recherche</string>
-    <string name="type_2_characters">Saisissez au moins deux caractères pour lancer la recherche</string>
+    <string name="type_2_characters">Saisissez au moins deux caractères pour lancer la recherche.</string>
     <!-- Filters -->
     <string name="filter">Filtrer</string>
-    <string name="no_items_found">Aucun élément</string>
+    <string name="no_items_found">Aucun élément trouvé.</string>
     <string name="change_filter">Modifier le filtre</string>
     <!-- Permissions -->
     <string name="no_storage_permissions">L\'autorisation d\'accès au stockage est nécessaire</string>
@@ -87,7 +87,7 @@
     <string name="rename_folder_exists">Un dossier portant ce nom existe déjà</string>
     <string name="rename_folder_root">Impossible de renommer le dossier racine de la mémoire</string>
     <string name="rename_folder_ok">Dossier renommé</string>
-    <string name="renaming_folder">Modification en cours…</string>
+    <string name="renaming_folder">Renommage du dossier</string>
     <string name="filename_cannot_be_empty">Le nom de fichier ne peut pas être vide</string>
     <string name="filename_invalid_characters">Le nom de fichier contient des caractères incorrects</string>
     <string name="filename_invalid_characters_placeholder">Le nom du fichier \"%s\" contient des caractères incorrects</string>
@@ -155,7 +155,7 @@
     <string name="confirm_storage_access_title">Confirmez l\'accès au stockage externe</string>
     <string name="confirm_storage_access_text">Veuillez sélectionner le dossier racine de la carte SD sur le prochain écran, pour accorder le droit en écriture</string>
     <string name="confirm_storage_access_text_sd">Si vous ne voyez pas la carte SD, essayez ceci</string>
-    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
+    <string name="confirm_storage_access_android_text">Veuillez autoriser l\'application à accéder au stockage sélectionné sur l\'écran suivant en appuyant sur « Utiliser ce dossier » en bas.</string>
     <string name="confirm_selection">Confirmer la sélection</string>
     <plurals name="items">
         <item quantity="one">%d élément</item>
@@ -167,8 +167,8 @@
         <item quantity="other">%d éléments</item>
     </plurals>
     <plurals name="deleting_items">
-        <item quantity="one">Suppression d\'%d élément en cours…</item>
-        <item quantity="other">Suppression de %d éléments en cours…</item>
+        <item quantity="one">Suppression d\'%d élément en cours</item>
+        <item quantity="other">Suppression de %d éléments en cours</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
@@ -244,8 +244,8 @@
     <string name="custom">Personnalisé</string>
     <string name="shared">Partagé</string>
     <!-- What's new -->
-    <string name="whats_new">Quoi de neuf ?</string>
-    <string name="whats_new_disclaimer">* seules les mises à jour les plus importantes sont indiquées ici. Les améliorations mineures ne sont pas détaillées.</string>
+    <string name="whats_new">Quoi de neuf</string>
+    <string name="whats_new_disclaimer">* seules les mises à jour les plus importantes sont indiquées ici. Les améliorations mineures ne sont pas détaillées</string>
     <!-- Actionbar items -->
     <string name="delete">Supprimer</string>
     <string name="remove">Retirer</string>
@@ -329,7 +329,7 @@
     <string name="open_biometric_dialog">Ouvrir la boîte de dialogue de vérification d\'identité biométrique</string>
     <string name="authenticate">Authentifier</string>
     <string name="authentication_failed">Échec de l\'identification</string>
-    <string name="authentication_blocked">Identification bloquée. Veuillez réessayer dans quelques instants.</string>
+    <string name="authentication_blocked">Identification bloquée. Veuillez réessayer dans quelques instants</string>
     <string name="no_fingerprints_registered">Vous n\'avez aucune empreinte digitale enregistrée. Veuillez en ajouter depuis les paramètres de votre appareil</string>
     <string name="go_to_settings">Ouvrir les Paramètres</string>
     <string name="protection_setup_successfully">Mot de passe enregistré. Veuillez réinstaller l\'application en cas de problème.</string>
@@ -530,8 +530,8 @@
     <string name="scrolling">Défilement</string>
     <string name="file_operations">Opérations de fichiers</string>
     <string name="recycle_bin">Corbeille</string>
-    <string name="saving_label">Enregistrement en cours…</string>
-    <string name="startup">Démarrage en cours…</string>
+    <string name="saving_label">Enregistrement en cours</string>
+    <string name="startup">Démarrage</string>
     <string name="text">Texte</string>
     <string name="migrating">Migration</string>
     <string name="quality">Qualité</string>
@@ -556,12 +556,12 @@
     <string name="files_restored_successfully">Fichiers restaurés avec succès</string>
     <string name="empty_recycle_bin_confirmation">Voulez-vous vraiment vider la corbeille ? Les fichiers seront définitivement supprimés.</string>
     <string name="recycle_bin_empty">La corbeille est vide</string>
-    <string name="moving_recycle_bin_items_disabled">Le déplacement des éléments vers la corbeille est désactivé, veuillez utiliser la fonction de restauration.</string>
+    <string name="moving_recycle_bin_items_disabled">Le déplacement des éléments de la corbeille est désactivé, veuillez utiliser la fonction de restauration</string>
     <string name="show_the_recycle_bin">Afficher la corbeille</string>
     <string name="hide_the_recycle_bin">Cacher la corbeille</string>
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Déplacement de %d élément dans la corbeille en cours…</item>
-        <item quantity="other">Déplacement de %d éléments dans la corbeille en cours…</item>
+        <item quantity="one">Déplacement de %d élément dans la corbeille</item>
+        <item quantity="other">Déplacement de %d éléments dans la corbeille</item>
     </plurals>
     <!-- Import / Export -->
     <string name="importing">Importer…</string>
@@ -578,7 +578,7 @@
     <string name="usb">USB</string>
     <string name="usb_detected">Il semblerait qu\'un périphérique USB soit connecté à votre appareil. Pour que les fichiers de ce périphérique s\'affichent correctement, vous devez accorder des autorisations supplémentaires.</string>
     <string name="confirm_usb_storage_access_text">Veuillez sélectionner le dossier racine du périphérique USB sur l\'écran suivant afin de pouvoir y accéder</string>
-    <string name="wrong_root_selected_usb">Erreur de dossier. Veuillez sélectionner le dossier racine du périphérique USB.</string>
+    <string name="wrong_root_selected_usb">Erreur de dossier. Veuillez sélectionner le dossier racine du périphérique USB</string>
     <!-- Dates -->
     <string name="january">Janvier</string>
     <string name="february">Février</string>
@@ -649,12 +649,12 @@
     <string name="donate_underlined"><u>Faire un don</u></string>
     <string name="follow_us">Suivez-nous</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="support">Support</string>
-    <string name="help_us">Aidez nous</string>
+    <string name="support">Assistance</string>
+    <string name="help_us">Nous aider</string>
     <string name="social">Réseaux sociaux</string>
     <string name="other">Autre</string>
     <string name="version_placeholder">Version %s</string>
-    <string name="hello">Hello :)</string>
+    <string name="hello">Bonjour :)</string>
     <string name="about_footer">Fait avec ❤️ en Slovaquie</string>
     <string name="additional_info">Informations supplémentaires</string>
     <string name="app_version">Version de l\'application : %s</string>
@@ -694,38 +694,38 @@
             Merci
         ]]>
     </string>
-    <string name="simple_app_launcher">Simple App Launcher</string>
-    <string name="simple_calculator">Simple Calculator</string>
-    <string name="simple_calendar">Simple Calendar</string>
-    <string name="simple_camera">Simple Camera</string>
-    <string name="simple_clock">Simple Clock</string>
+    <string name="simple_app_launcher">Lanceur d\'applications simple</string>
+    <string name="simple_calculator">Calculatrice simple</string>
+    <string name="simple_calendar">Calendrier simple</string>
+    <string name="simple_camera">Appareil photo simple</string>
+    <string name="simple_clock">Horloge simple</string>
     <string name="simple_contacts">Simple Contacts</string>
-    <string name="simple_dialer">Simple Dialer</string>
-    <string name="simple_draw">Simple Draw</string>
+    <string name="simple_dialer">Clavier de téléphone simple</string>
+    <string name="simple_draw">Dessin simple</string>
     <string name="simple_file_manager">Simple File Manager</string>
-    <string name="simple_flashlight">Simple Flashlight</string>
-    <string name="simple_gallery">Simple Gallery</string>
-    <string name="simple_music_player">Simple Music Player</string>
+    <string name="simple_flashlight">Lampe de poche simple</string>
+    <string name="simple_gallery">Galerie simple</string>
+    <string name="simple_music_player">Lecteur de musique simple</string>
     <string name="simple_notes">Simple Notes</string>
-    <string name="simple_sms_messenger">Simple SMS Messenger</string>
-    <string name="simple_thank_you">Simple Thank You</string>
-    <string name="simple_voice_recorder">Simple Voice Recorder</string>
-    <string name="app_launcher_short">App Launcher</string>
-    <string name="calculator_short">Calculator</string>
+    <string name="simple_sms_messenger">Messagerie SMS simple</string>
+    <string name="simple_thank_you">Un simple merci</string>
+    <string name="simple_voice_recorder">Enregistreur vocal simple</string>
+    <string name="app_launcher_short">Lanceur d\'applications</string>
+    <string name="calculator_short">Calculatrice</string>
     <string name="calendar_short">Calendarr</string>
-    <string name="camera_short">Camera</string>
-    <string name="clock_short">Clock</string>
+    <string name="camera_short">Appareil photo</string>
+    <string name="clock_short">Horloge</string>
     <string name="contacts_short">Contacts</string>
-    <string name="dialer_short">Dialer</string>
-    <string name="draw_short">Draw</string>
+    <string name="dialer_short">Clavier</string>
+    <string name="draw_short">Dessin</string>
     <string name="file_manager_short">File Manager</string>
-    <string name="flashlight_short">Flashlight</string>
-    <string name="gallery_short">Gallery</string>
-    <string name="music_player_short">Music Player</string>
+    <string name="flashlight_short">Lampe de poche</string>
+    <string name="gallery_short">Galerie</string>
+    <string name="music_player_short">Lecteur de musique</string>
     <string name="notes_short">Notes</string>
-    <string name="sms_messenger_short">SMS Messenger</string>
-    <string name="thank_you_short">Thank You</string>
-    <string name="voice_recorder_short">Voice Recorder</string>
+    <string name="sms_messenger_short">Messagerie SMS</string>
+    <string name="thank_you_short">Merci</string>
+    <string name="voice_recorder_short">Enregistreur vocal</string>
     <string name="sideloaded_app">
         <![CDATA[
             La version de votre application semble corrompue. Merci de télécharger la version originale <a href="%s">ici</a>.
@@ -737,12 +737,7 @@
     <string name="faq_1_title_commons">Pourquoi ne vois-je pas les widgets de cette application dans la liste des widgets ?</string>
     <string name="faq_1_text_commons">Probablement parce que l\'application a été déplacée sur la carte SD. Android a une limitation qui fait qu\'il n\'affiche pas les widgets de cette application dans ce cas. La seule solution consiste à déplacer l\'application vers le stockage interne depuis les paramètres système.</string>
     <string name="faq_2_title_commons">Je voudrais vous apporter mon soutien, mais je ne peux pas vous donner de l\'argent. Y a-t-il autre chose que je puisse faire ?</string>
-    <string name="faq_2_text_commons">
-        <![CDATA[
-            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-        ]]>
-    </string>
+    <string name="faq_2_text_commons">Oui, bien sûr. Vous pouvez faire connaître les applications ou donner de bons commentaires et des évaluations. Vous pouvez également aider en traduisant les apps dans une nouvelle langue, ou simplement mettre à jour certaines traductions existantes. Le guide de la traduction se trouve sur &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;ce site web&lt;/a&gt;, ou contactez-nous simplement à &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; si vous avez des questions.</string>
     <string name="faq_3_title_commons">J\'ai effacé des fichiers par erreur. Comment les récupérer ?</string>
     <string name="faq_3_text_commons">C\'est malheureusement impossible, car les fichiers sont supprimés instantanément après le dialogue de confirmation et il n\'y a pas de corbeille.</string>
     <string name="faq_4_title_commons">Je n\'aime pas les couleurs du widget. Puis-je les changer ?</string>
@@ -769,13 +764,7 @@
     <string name="translation">Traduction</string>
     <string name="development">Développement</string>
     <string name="other_help">Autre aide</string>
-    <string name="contributors_label">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label">Cette liste contient toutes les personnes qui ont aidé de manière notable une application de la suite Simple Mobile Tools, et pas seulement celle-ci. Les traductions sont gérées par des bénévoles, faites-nous savoir si vous voulez aider aussi. Le guide de la traduction se trouve sur &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;ce site web&lt;/a&gt;, ou contactez-nous simplement à &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; si vous avez des questions. Merci à tous les contributeurs et autres soutiens !</string>
     <string name="translation_arabic">Arabe</string>
     <string name="translation_azerbaijani">Azerbaïdjanais</string>
     <string name="translation_bengali">Bengali</string>
@@ -821,7 +810,7 @@
     <string name="translation_chinese_tw">Chinois (Traditionel)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Obtenez la version Pro maintenant !</string>
-    <string name="why_upgrade_basic_version">Basic</string>
+    <string name="why_upgrade_basic_version">Basique</string>
     <string name="why_upgrade_pro_version">Pro</string>
     <string name="why_upgrade_no_ads">Sans publicité</string>
     <string name="why_upgrade_no_internet_access">Aucun accès Internet</string>
