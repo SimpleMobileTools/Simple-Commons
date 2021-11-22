@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
-    <corners android:topLeftRadius="@dimen/normal_margin" android:topRightRadius="@dimen/normal_margin"/>
-    <solid android:color="@color/color_primary"/>
-    <size android:width="@dimen/fastscroll_height" android:height="@dimen/fastscroll_width"/>
-</shape>

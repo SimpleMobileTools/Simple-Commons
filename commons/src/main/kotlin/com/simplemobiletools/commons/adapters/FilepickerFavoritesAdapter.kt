@@ -10,8 +10,10 @@ import com.simplemobiletools.commons.extensions.getTextSize
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.filepicker_favorite.view.*
 
-class FilepickerFavoritesAdapter(activity: BaseSimpleActivity, val paths: List<String>, recyclerView: MyRecyclerView,
-                                 itemClick: (Any) -> Unit) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick) {
+class FilepickerFavoritesAdapter(
+    activity: BaseSimpleActivity, val paths: List<String>, recyclerView: MyRecyclerView,
+    itemClick: (Any) -> Unit
+) : MyRecyclerViewAdapter(activity, recyclerView, itemClick) {
 
     private var fontSize = 0f
 

@@ -17,12 +17,16 @@ import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
 import com.simplemobiletools.commons.extensions.getContrastColor
 import com.simplemobiletools.commons.interfaces.MyActionModeCallback
-import com.simplemobiletools.commons.views.FastScroller
 import com.simplemobiletools.commons.views.MyRecyclerView
 import java.util.*
 
-abstract class MyRecyclerViewListAdapter<T>(val activity: BaseSimpleActivity, val recyclerView: MyRecyclerView, diffUtil: DiffUtil.ItemCallback<T>, val fastScroller: FastScroller? = null,
-                                            val itemClick: (T) -> Unit, val onRefresh: ()-> Unit = {}) : ListAdapter<T, MyRecyclerViewListAdapter<T>.ViewHolder>(diffUtil) {
+abstract class MyRecyclerViewListAdapter<T>(
+    val activity: BaseSimpleActivity,
+    val recyclerView: MyRecyclerView,
+    diffUtil: DiffUtil.ItemCallback<T>,
+    val itemClick: (T) -> Unit,
+    val onRefresh: () -> Unit = {}
+) : ListAdapter<T, MyRecyclerViewListAdapter<T>.ViewHolder>(diffUtil) {
     protected val baseConfig = activity.baseConfig
     protected val resources = activity.resources!!
     protected val layoutInflater = activity.layoutInflater
@@ -60,8 +64,6 @@ abstract class MyRecyclerViewListAdapter<T>(val activity: BaseSimpleActivity, va
     protected fun isOneItemSelected() = selectedKeys.size == 1
 
     init {
-        fastScroller?.resetScrollPositions()
-
         actModeCallback = object : MyActionModeCallback() {
             override fun onActionItemClicked(mode: ActionMode, item: MenuItem): Boolean {
                 actionItemPressed(item.itemId)
@@ -199,7 +201,12 @@ abstract class MyRecyclerViewListAdapter<T>(val activity: BaseSimpleActivity, va
                 }
 
                 override fun selectRange(initialSelection: Int, lastDraggedIndex: Int, minReached: Int, maxReached: Int) {
-                    selectItemRange(initialSelection, Math.max(0, lastDraggedIndex - positionOffset), Math.max(0, minReached - positionOffset), maxReached - positionOffset)
+                    selectItemRange(
+                        initialSelection,
+                        Math.max(0, lastDraggedIndex - positionOffset),
+                        Math.max(0, minReached - positionOffset),
+                        maxReached - positionOffset
+                    )
                     if (minReached != maxReached) {
                         lastLongPressedItem = -1
                     }
@@ -297,7 +304,6 @@ abstract class MyRecyclerViewListAdapter<T>(val activity: BaseSimpleActivity, va
             notifyItemRemoved(it)
         }
         finishActMode()
-        fastScroller?.measureRecyclerView()
     }
 
     open inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {

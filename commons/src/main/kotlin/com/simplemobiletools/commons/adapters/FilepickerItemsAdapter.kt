@@ -25,7 +25,7 @@ import java.util.*
 class FilepickerItemsAdapter(
     activity: BaseSimpleActivity, val fileDirItems: List<FileDirItem>, recyclerView: MyRecyclerView,
     itemClick: (Any) -> Unit
-) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick), RecyclerViewFastScroller.OnPopupTextUpdate {
+) : MyRecyclerViewAdapter(activity, recyclerView, itemClick), RecyclerViewFastScroller.OnPopupTextUpdate {
 
     private lateinit var fileDrawable: Drawable
     private lateinit var folderDrawable: Drawable

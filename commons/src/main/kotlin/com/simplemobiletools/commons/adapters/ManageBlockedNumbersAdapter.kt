@@ -16,7 +16,7 @@ import java.util.*
 class ManageBlockedNumbersAdapter(
     activity: BaseSimpleActivity, var blockedNumbers: ArrayList<BlockedNumber>, val listener: RefreshRecyclerViewListener?,
     recyclerView: MyRecyclerView, itemClick: (Any) -> Unit
-) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick) {
+) : MyRecyclerViewAdapter(activity, recyclerView, itemClick) {
     init {
         setupDragListener(true)
     }
