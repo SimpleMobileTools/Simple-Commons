@@ -216,8 +216,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/customization_navigation_bar_color_holder"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/big_margin"
-            android:layout_marginBottom="@dimen/big_margin">
+            android:layout_margin="@dimen/big_margin">
 
             <android.widget.TextView
                 android:id="@+id/apply_to_all"
