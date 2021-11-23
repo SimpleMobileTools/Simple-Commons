@@ -590,23 +590,27 @@ fun Context.getAndroidSAFFileItems(path: String, shouldShowHidden: Boolean, getP
 }
 
 fun Context.getDirectChildrenCount(rootDocId: String, treeUri: Uri, documentId: String, shouldShowHidden: Boolean): Int {
-    val projection = arrayOf(Document.COLUMN_DOCUMENT_ID)
-    val childrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(treeUri, documentId)
-    val rawCursor = contentResolver.query(childrenUri, projection, null, null, null)!!
-    val cursor = ExternalStorageProviderHack.transformQueryResult(rootDocId, childrenUri, rawCursor)
-    return if (shouldShowHidden) {
-        cursor.count
-    } else {
-        var count = 0
-        cursor.use {
-            while (cursor.moveToNext()) {
-                val docId = cursor.getStringValue(Document.COLUMN_DOCUMENT_ID)
-                if (!docId.getFilenameFromPath().startsWith('.') || shouldShowHidden) {
-                    count++
+    return try {
+        val projection = arrayOf(Document.COLUMN_DOCUMENT_ID)
+        val childrenUri = DocumentsContract.buildChildDocumentsUriUsingTree(treeUri, documentId)
+        val rawCursor = contentResolver.query(childrenUri, projection, null, null, null)!!
+        val cursor = ExternalStorageProviderHack.transformQueryResult(rootDocId, childrenUri, rawCursor)
+        if (shouldShowHidden) {
+            cursor.count
+        } else {
+            var count = 0
+            cursor.use {
+                while (cursor.moveToNext()) {
+                    val docId = cursor.getStringValue(Document.COLUMN_DOCUMENT_ID)
+                    if (!docId.getFilenameFromPath().startsWith('.') || shouldShowHidden) {
+                        count++
+                    }
                 }
             }
+            count
         }
-        count
+    } catch (e: Exception) {
+        0
     }
 }
 
