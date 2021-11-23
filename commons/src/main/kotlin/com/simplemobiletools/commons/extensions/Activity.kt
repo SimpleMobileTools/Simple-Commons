@@ -33,13 +33,13 @@ import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.*
 import com.simplemobiletools.commons.views.MyTextView
+import kotlinx.android.synthetic.main.dialog_title.view.*
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.FileOutputStream
 import java.io.OutputStream
 import java.util.*
 import kotlin.collections.HashMap
-import kotlinx.android.synthetic.main.dialog_title.view.*
 
 fun AppCompatActivity.updateActionBarTitle(text: String, color: Int = baseConfig.primaryColor) {
     supportActionBar?.title = Html.fromHtml("<font color='${color.getContrastColor().toHex()}'>$text</font>")
@@ -148,8 +148,8 @@ fun BaseSimpleActivity.isShowingAndroidSAFDialog(path: String): Boolean {
     return if (isRestrictedSAFOnlyRoot(path) && (getAndroidTreeUri(path).isEmpty() || !hasProperStoredAndroidTreeUri(path))) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
-                ConfirmationAdvancedDialog(this, "", R.string.confirm_storage_access_android_text, R.string.ok, R.string.cancel) { okPressed ->
-                    if (okPressed) {
+                ConfirmationAdvancedDialog(this, "", R.string.confirm_storage_access_android_text, R.string.ok, R.string.cancel) { success ->
+                    if (success) {
                         Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                             putExtra("android.content.extra.SHOW_ADVANCED", true)
                             putExtra(DocumentsContract.EXTRA_INITIAL_URI, createAndroidDataOrObbUri(path))
