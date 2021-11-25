@@ -144,15 +144,3 @@ fun File.getDigest(algorithm: String): String? {
 }
 
 fun File.md5() = this.getDigest(MD5)
-
-fun File.createTempFile(): File {
-    return if (isDirectory) {
-        createTempDir("temp", "${System.currentTimeMillis()}", parentFile)
-    } else {
-        if (isRPlus()) {
-            kotlin.io.path.createTempFile(parentFile.toPath(), "temp", "${System.currentTimeMillis()}").toFile()
-        } else {
-            createTempFile("temp", "${System.currentTimeMillis()}", parentFile)
-        }
-    }
-}

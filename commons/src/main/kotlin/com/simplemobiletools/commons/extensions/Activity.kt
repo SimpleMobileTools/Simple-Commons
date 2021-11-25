@@ -793,7 +793,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
     } else {
         val oldFile = File(oldPath)
         val newFile = File(newPath)
-        val tempFile = oldFile.createTempFile()
+        val tempFile = createTempFile(oldFile) ?: return
         val oldToTempSucceeds = oldFile.renameTo(tempFile)
         val tempToNewSucceeds = tempFile.renameTo(newFile)
         if (oldToTempSucceeds && tempToNewSucceeds) {
@@ -821,6 +821,23 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
             runOnUiThread {
                 callback?.invoke(false)
             }
+        }
+    }
+}
+
+fun Activity.createTempFile(file: File): File? {
+    return if (file.isDirectory) {
+        createTempDir("temp", "${System.currentTimeMillis()}", file.parentFile)
+    } else {
+        if (isRPlus()) {
+            try {
+                kotlin.io.path.createTempFile(file.parentFile.toPath(), "temp", "${System.currentTimeMillis()}").toFile()
+            } catch (e: Exception) {
+                showErrorToast(e)
+                null
+            }
+        } else {
+            createTempFile("temp", "${System.currentTimeMillis()}", file.parentFile)
         }
     }
 }
