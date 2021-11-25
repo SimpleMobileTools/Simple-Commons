@@ -135,11 +135,15 @@ fun File.doesParentHaveNoMedia(): Boolean {
     return false
 }
 
-fun File.getDigest(algorithm: String): String {
-    return inputStream().getDigest(algorithm)
+fun File.getDigest(algorithm: String): String? {
+    return try {
+        inputStream().getDigest(algorithm)
+    } catch (e: Exception) {
+        null
+    }
 }
 
-fun File.md5(): String = this.getDigest(MD5)
+fun File.md5() = this.getDigest(MD5)
 
 fun File.createTempFile(): File {
     return if (isDirectory) {
