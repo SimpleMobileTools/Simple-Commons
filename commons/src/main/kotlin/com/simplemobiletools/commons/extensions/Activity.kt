@@ -932,14 +932,18 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
                     documentFile = getDocumentFile(targetFile.parent)
                 } else {
                     documentFile = getDocumentFile(targetFile.parentFile.parent)
-                    documentFile = documentFile!!.createDirectory(targetFile.parentFile.name)
-                        ?: getDocumentFile(targetFile.parentFile.absolutePath)
+                    documentFile = documentFile!!.createDirectory(targetFile.parentFile.name) ?: getDocumentFile(targetFile.parentFile.absolutePath)
                 }
             }
 
             if (documentFile == null) {
-                showFileCreateError(targetFile.parent)
-                return null
+                val casualOutputStream = createCasualFileOutputStream(this, targetFile)
+                return if (casualOutputStream == null) {
+                    showFileCreateError(targetFile.parent)
+                    null
+                } else {
+                    casualOutputStream
+                }
             }
 
             try {
@@ -950,18 +954,20 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
                 null
             }
         }
-        else -> {
-            if (targetFile.parentFile?.exists() == false) {
-                targetFile.parentFile?.mkdirs()
-            }
+        else -> return createCasualFileOutputStream(this, targetFile)
+    }
+}
 
-            try {
-                FileOutputStream(targetFile)
-            } catch (e: Exception) {
-                showErrorToast(e)
-                null
-            }
-        }
+private fun createCasualFileOutputStream(activity: BaseSimpleActivity, targetFile: File): OutputStream? {
+    if (targetFile.parentFile?.exists() == false) {
+        targetFile.parentFile?.mkdirs()
+    }
+
+    return try {
+        FileOutputStream(targetFile)
+    } catch (e: Exception) {
+        activity.showErrorToast(e)
+        null
     }
 }
 

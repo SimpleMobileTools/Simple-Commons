@@ -22,8 +22,7 @@ import java.io.File
 import java.io.InputStream
 import java.io.OutputStream
 import java.lang.ref.WeakReference
-import java.util.ArrayList
-import java.util.LinkedHashMap
+import java.util.*
 
 class CopyMoveTask(
     val activity: BaseSimpleActivity, val copyOnly: Boolean, val copyMediaOnly: Boolean, val conflictResolutions: LinkedHashMap<String, Int>,
@@ -68,6 +67,7 @@ class CopyMoveTask(
             if (file.size == 0L) {
                 file.size = file.getProperSize(activity, copyHidden)
             }
+
             val newPath = "$mDestinationPath/${file.name}"
             val fileExists = activity.getDoesFilePathExist(newPath)
             if (getConflictResolution(conflictResolutions, newPath) != CONFLICT_SKIP || !fileExists) {
@@ -243,6 +243,7 @@ class CopyMoveTask(
             if (!mDocuments.containsKey(directory) && activity.needsStupidWritePermissions(destination.path)) {
                 mDocuments[directory] = activity.getDocumentFile(directory)
             }
+
             out = activity.getFileOutputStreamSync(destination.path, source.path.getMimeType(), mDocuments[directory])
             inputStream = activity.getFileInputStreamSync(source.path)!!
 
