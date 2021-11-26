@@ -676,12 +676,12 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
                             trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
                         }
                     }
-                }
-            } else if (isRPlus()) {
-                val fileUris = getFileUrisFromFileDirItems(arrayListOf(fileDirItem))
-                deleteSDK30Uris(fileUris) { success ->
-                    runOnUiThread {
-                        callback?.invoke(success)
+                } else if (isRPlus()) {
+                    val fileUris = getFileUrisFromFileDirItems(arrayListOf(fileDirItem))
+                    deleteSDK30Uris(fileUris) { success ->
+                        runOnUiThread {
+                            callback?.invoke(success)
+                        }
                     }
                 }
             }
