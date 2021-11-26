@@ -75,17 +75,24 @@ private fun getDirectoryFileCount(dir: File, countHiddenItems: Boolean): Int {
     return count
 }
 
-fun File.getDirectChildrenCount(context: Context, countHiddenItems: Boolean) =
-    if (context.isRestrictedSAFOnlyRoot(path)) context.getAndroidSAFDirectChildrenCount(
-        path,
-        countHiddenItems
-    ) else listFiles()?.filter {
-        if (countHiddenItems) {
-            true
-        } else {
-            !it.name.startsWith('.')
-        }
-    }?.size ?: 0
+fun File.getDirectChildrenCount(context: Context, countHiddenItems: Boolean): Int {
+    val fileCount = if (context.isRestrictedSAFOnlyRoot(path)) {
+        context.getAndroidSAFDirectChildrenCount(
+            path,
+            countHiddenItems
+        )
+    } else {
+        listFiles()?.filter {
+            if (countHiddenItems) {
+                true
+            } else {
+                !it.name.startsWith('.')
+            }
+        }?.size ?: 0
+    }
+
+    return fileCount
+}
 
 fun File.toFileDirItem(context: Context) = FileDirItem(absolutePath, name, context.getIsPathDirectory(absolutePath), 0, length(), lastModified())
 
@@ -97,7 +104,10 @@ fun File.containsNoMedia(): Boolean {
     }
 }
 
-fun File.doesThisOrParentHaveNoMedia(folderNoMediaStatuses: HashMap<String, Boolean>, callback: ((path: String, hasNoMedia: Boolean) -> Unit)?): Boolean {
+fun File.doesThisOrParentHaveNoMedia(
+    folderNoMediaStatuses: HashMap<String, Boolean>,
+    callback: ((path: String, hasNoMedia: Boolean) -> Unit)?
+): Boolean {
     var curFile = this
     while (true) {
         val noMediaPath = "${curFile.absolutePath}/$NOMEDIA"

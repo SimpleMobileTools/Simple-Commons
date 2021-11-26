@@ -244,8 +244,7 @@ class FilePickerDialog(
 
     private fun getRegularItems(path: String, lastModifieds: HashMap<String, Long>, callback: (List<FileDirItem>) -> Unit) {
         val items = ArrayList<FileDirItem>()
-        val base = File(path)
-        val files = base.listFiles()
+        val files = File(path).listFiles()?.filterNotNull()
         if (files == null) {
             callback(items)
             return
