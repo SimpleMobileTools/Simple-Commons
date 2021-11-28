@@ -41,16 +41,16 @@
     <string name="no_access_to_contacts">Uygulama, kişilerinize erişemedi</string>
     <string name="insert_text_here">Metni buraya girin</string>
     <string name="call_person">%s kişisini ara</string>
-    <string name="zero">Zero</string>
-    <string name="one">One</string>
-    <string name="two">Two</string>
-    <string name="three">Three</string>
-    <string name="four">Four</string>
-    <string name="five">Five</string>
-    <string name="six">Six</string>
-    <string name="seven">Seven</string>
-    <string name="eight">Eight</string>
-    <string name="nine">Nine</string>
+    <string name="zero">Sıfır</string>
+    <string name="one">Bir</string>
+    <string name="two">İki</string>
+    <string name="three">Üç</string>
+    <string name="four">Dört</string>
+    <string name="five">Beş</string>
+    <string name="six">Altı</string>
+    <string name="seven">Yedi</string>
+    <string name="eight">Sekiz</string>
+    <string name="nine">Dokuz</string>
     <!-- View types -->
     <string name="change_view_type">Görünüm türünü değiştir</string>
     <string name="grid">Izgara</string>
@@ -165,7 +165,7 @@
     <string name="confirm_storage_access_title">Harici depolama erişimini onayla</string>
     <string name="confirm_storage_access_text">Yazma erişimi vermek için lütfen bir sonraki ekranda SD kartın kök klasörünü seçin</string>
     <string name="confirm_storage_access_text_sd">SD kartı görmüyorsanız, bunu deneyin</string>
-    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
+    <string name="confirm_storage_access_android_text">Lütfen alttaki \'Bu klasörü kullan\' seçeneğine basarak uygulamanın seçilen depolama alanına erişmesine izin verin.</string>
     <string name="confirm_selection">Seçimi onayla</string>
     <plurals name="items">
         <item quantity="one">%d öge</item>
