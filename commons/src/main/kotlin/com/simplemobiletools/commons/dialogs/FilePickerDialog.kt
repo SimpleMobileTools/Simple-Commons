@@ -101,8 +101,7 @@ class FilePickerDialog(
             (layoutParams as CoordinatorLayout.LayoutParams).bottomMargin = secondaryFabBottomMargin
         }
 
-        val adjustedPrimaryColor = activity.getAdjustedPrimaryColor()
-        mDialogView.filepicker_fastscroller.updateColors(adjustedPrimaryColor, adjustedPrimaryColor.getContrastColor())
+        mDialogView.filepicker_fastscroller.updateColors(activity.getAdjustedPrimaryColor())
         mDialogView.filepicker_fab_show_hidden.apply {
             beVisibleIf(!showHidden && canAddShowHiddenButton)
             setOnClickListener {
