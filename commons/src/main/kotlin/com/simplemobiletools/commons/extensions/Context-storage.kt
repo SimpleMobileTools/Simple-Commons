@@ -532,7 +532,6 @@ fun Context.getOTGItems(path: String, shouldShowHidden: Boolean, getProperFileSi
     callback(items)
 }
 
-
 @RequiresApi(Build.VERSION_CODES.O)
 fun Context.getAndroidSAFFileItems(path: String, shouldShowHidden: Boolean, getProperFileSize: Boolean = true, callback: (ArrayList<FileDirItem>) -> Unit) {
     val items = ArrayList<FileDirItem>()
@@ -553,38 +552,42 @@ fun Context.getAndroidSAFFileItems(path: String, shouldShowHidden: Boolean, getP
     }
 
     val projection = arrayOf(Document.COLUMN_DOCUMENT_ID, Document.COLUMN_DISPLAY_NAME, Document.COLUMN_MIME_TYPE, Document.COLUMN_LAST_MODIFIED)
-    val rawCursor = contentResolver.query(childrenUri, projection, null, null)!!
-    val cursor = ExternalStorageProviderHack.transformQueryResult(rootDocId, childrenUri, rawCursor)
-    cursor.use {
-        if (cursor.moveToFirst()) {
-            do {
-                val docId = cursor.getStringValue(Document.COLUMN_DOCUMENT_ID)
-                val name = cursor.getStringValue(Document.COLUMN_DISPLAY_NAME)
-                val mimeType = cursor.getStringValue(Document.COLUMN_MIME_TYPE)
-                val lastModified = cursor.getLongValue(Document.COLUMN_LAST_MODIFIED)
-                val isDirectory = mimeType == Document.MIME_TYPE_DIR
-                val filePath = docId.substring("${getStorageRootId(path)}:".length)
-                if (!shouldShowHidden && name.startsWith(".")) {
-                    continue
-                }
+    try {
+        val rawCursor = contentResolver.query(childrenUri, projection, null, null)!!
+        val cursor = ExternalStorageProviderHack.transformQueryResult(rootDocId, childrenUri, rawCursor)
+        cursor.use {
+            if (cursor.moveToFirst()) {
+                do {
+                    val docId = cursor.getStringValue(Document.COLUMN_DOCUMENT_ID)
+                    val name = cursor.getStringValue(Document.COLUMN_DISPLAY_NAME)
+                    val mimeType = cursor.getStringValue(Document.COLUMN_MIME_TYPE)
+                    val lastModified = cursor.getLongValue(Document.COLUMN_LAST_MODIFIED)
+                    val isDirectory = mimeType == Document.MIME_TYPE_DIR
+                    val filePath = docId.substring("${getStorageRootId(path)}:".length)
+                    if (!shouldShowHidden && name.startsWith(".")) {
+                        continue
+                    }
 
-                val decodedPath = path.getBasePath(this) + "/" + URLDecoder.decode(filePath, "UTF-8")
-                val fileSize = when {
-                    getProperFileSize -> getFileSize(treeUri, docId)
-                    isDirectory -> 0L
-                    else -> getFileSize(treeUri, docId)
-                }
+                    val decodedPath = path.getBasePath(this) + "/" + URLDecoder.decode(filePath, "UTF-8")
+                    val fileSize = when {
+                        getProperFileSize -> getFileSize(treeUri, docId)
+                        isDirectory -> 0L
+                        else -> getFileSize(treeUri, docId)
+                    }
 
-                val childrenCount = if (isDirectory) {
-                    getDirectChildrenCount(rootDocId, treeUri, docId, shouldShowHidden)
-                } else {
-                    0
-                }
+                    val childrenCount = if (isDirectory) {
+                        getDirectChildrenCount(rootDocId, treeUri, docId, shouldShowHidden)
+                    } else {
+                        0
+                    }
 
-                val fileDirItem = FileDirItem(decodedPath, name, isDirectory, childrenCount, fileSize, lastModified)
-                items.add(fileDirItem)
-            } while (cursor.moveToNext())
+                    val fileDirItem = FileDirItem(decodedPath, name, isDirectory, childrenCount, fileSize, lastModified)
+                    items.add(fileDirItem)
+                } while (cursor.moveToNext())
+            }
         }
+    } catch (e: Exception) {
+        showErrorToast(e)
     }
     callback(items)
 }
@@ -799,15 +802,15 @@ fun Context.getAndroidSAFLastModified(path: String): Long {
 fun Context.deleteAndroidSAFDirectory(path: String, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
     val treeUri = getAndroidTreeUri(path).toUri()
     val documentId = getAndroidSAFDocumentId(path)
-    val uri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
-    val document = DocumentFile.fromSingleUri(this, uri)
     try {
+        val uri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
+        val document = DocumentFile.fromSingleUri(this, uri)
         val fileDeleted = (document!!.isFile || allowDeleteFolder) && DocumentsContract.deleteDocument(applicationContext.contentResolver, document.uri)
         callback?.invoke(fileDeleted)
-    } catch (ignored: Exception) {
+    } catch (e: Exception) {
+        showErrorToast(e)
         callback?.invoke(false)
         storeAndroidTreeUri(path, "")
-        ignored.printStackTrace()
     }
 }
 
