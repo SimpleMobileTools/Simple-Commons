@@ -6,7 +6,6 @@ import androidx.biometric.auth.AuthPromptHost
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.simplemobiletools.commons.extensions.showBiometricPrompt
 import com.simplemobiletools.commons.extensions.updateTextColors
-import com.simplemobiletools.commons.helpers.PROTECTION_FINGERPRINT
 import com.simplemobiletools.commons.interfaces.HashListener
 import com.simplemobiletools.commons.interfaces.SecurityTab
 import kotlinx.android.synthetic.main.tab_biometric_id.view.*
@@ -24,9 +23,18 @@ class BiometricIdTab(context: Context, attrs: AttributeSet) : ConstraintLayout(c
         }
     }
 
-    override fun initTab(requiredHash: String, listener: HashListener, scrollView: MyScrollView, biometricPromptHost: AuthPromptHost) {
+    override fun initTab(
+        requiredHash: String,
+        listener: HashListener,
+        scrollView: MyScrollView,
+        biometricPromptHost: AuthPromptHost,
+        isSettingUpNewProtection: Boolean
+    ) {
         this.biometricPromptHost = biometricPromptHost
         hashListener = listener
+        if (!isSettingUpNewProtection) {
+            open_biometric_dialog.performClick()
+        }
     }
 
     override fun visibilityChanged(isVisible: Boolean) {}

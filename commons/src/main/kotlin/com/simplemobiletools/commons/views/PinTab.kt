@@ -39,7 +39,13 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
         pin_ok.applyColorFilter(context.baseConfig.textColor)
     }
 
-    override fun initTab(requiredHash: String, listener: HashListener, scrollView: MyScrollView, biometricPromptHost: AuthPromptHost) {
+    override fun initTab(
+        requiredHash: String,
+        listener: HashListener,
+        scrollView: MyScrollView,
+        biometricPromptHost: AuthPromptHost,
+        isSettingUpNewProtection: Boolean
+    ) {
         this.requiredHash = requiredHash
         hash = requiredHash
         hashListener = listener

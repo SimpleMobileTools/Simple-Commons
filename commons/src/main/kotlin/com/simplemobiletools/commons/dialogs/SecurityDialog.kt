@@ -36,7 +36,8 @@ class SecurityDialog(
                 hashListener = this@SecurityDialog,
                 scrollView = dialog_scrollview,
                 biometricPromptHost = AuthPromptHost(activity),
-                showBiometricIdTab = shouldShowBiometricIdTab()
+                showBiometricIdTab = shouldShowBiometricIdTab(),
+                isSettingUpNewProtection = showTabIndex == SHOW_ALL_TABS
             )
             viewPager.adapter = tabsAdapter
             viewPager.onPageChangeListener {

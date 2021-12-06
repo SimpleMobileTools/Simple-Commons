@@ -53,7 +53,13 @@ class PatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(context
         })
     }
 
-    override fun initTab(requiredHash: String, listener: HashListener, scrollView: MyScrollView, biometricPromptHost: AuthPromptHost) {
+    override fun initTab(
+        requiredHash: String,
+        listener: HashListener,
+        scrollView: MyScrollView,
+        biometricPromptHost: AuthPromptHost,
+        isSettingUpNewProtection: Boolean
+    ) {
         this.requiredHash = requiredHash
         this.scrollView = scrollView
         hash = requiredHash
