@@ -39,7 +39,7 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
         listener: HashListener,
         scrollView: MyScrollView,
         biometricPromptHost: AuthPromptHost,
-        isSettingUpNewProtection: Boolean
+        showBiometricAuthentication: Boolean
     ) {
         hashListener = listener
     }

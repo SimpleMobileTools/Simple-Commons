@@ -28,11 +28,11 @@ class BiometricIdTab(context: Context, attrs: AttributeSet) : ConstraintLayout(c
         listener: HashListener,
         scrollView: MyScrollView,
         biometricPromptHost: AuthPromptHost,
-        isSettingUpNewProtection: Boolean
+        showBiometricAuthentication: Boolean
     ) {
         this.biometricPromptHost = biometricPromptHost
         hashListener = listener
-        if (!isSettingUpNewProtection) {
+        if (showBiometricAuthentication) {
             open_biometric_dialog.performClick()
         }
     }

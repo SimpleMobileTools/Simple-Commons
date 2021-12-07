@@ -58,7 +58,7 @@ class PatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(context
         listener: HashListener,
         scrollView: MyScrollView,
         biometricPromptHost: AuthPromptHost,
-        isSettingUpNewProtection: Boolean
+        showBiometricAuthentication: Boolean
     ) {
         this.requiredHash = requiredHash
         this.scrollView = scrollView

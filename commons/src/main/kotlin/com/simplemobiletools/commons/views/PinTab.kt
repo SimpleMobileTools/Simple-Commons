@@ -44,7 +44,7 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
         listener: HashListener,
         scrollView: MyScrollView,
         biometricPromptHost: AuthPromptHost,
-        isSettingUpNewProtection: Boolean
+        showBiometricAuthentication: Boolean
     ) {
         this.requiredHash = requiredHash
         hash = requiredHash

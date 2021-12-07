@@ -23,7 +23,7 @@ class PasswordTypesAdapter(
     private val scrollView: MyScrollView,
     private val biometricPromptHost: AuthPromptHost,
     private val showBiometricIdTab: Boolean,
-    private val isSettingUpNewProtection: Boolean
+    private val showBiometricAuthentication: Boolean
 ) : PagerAdapter() {
     private val tabs = SparseArray<SecurityTab>()
 
@@ -31,7 +31,7 @@ class PasswordTypesAdapter(
         val view = LayoutInflater.from(context).inflate(layoutSelection(position), container, false)
         container.addView(view)
         tabs.put(position, view as SecurityTab)
-        (view as SecurityTab).initTab(requiredHash, hashListener, scrollView, biometricPromptHost, isSettingUpNewProtection)
+        (view as SecurityTab).initTab(requiredHash, hashListener, scrollView, biometricPromptHost, showBiometricAuthentication)
         return view
     }
 
