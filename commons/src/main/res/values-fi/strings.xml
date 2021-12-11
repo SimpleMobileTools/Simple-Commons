@@ -43,14 +43,14 @@
     <string name="call_person">Soita %s</string>
     <string name="zero">Zero</string>
     <string name="one">One</string>
-    <string name="two">Two</string>
-    <string name="three">Three</string>
-    <string name="four">Four</string>
-    <string name="five">Five</string>
-    <string name="six">Six</string>
-    <string name="seven">Seven</string>
-    <string name="eight">Eight</string>
-    <string name="nine">Nine</string>
+    <string name="two">Kaksi</string>
+    <string name="three">Kolme</string>
+    <string name="four">Neljä</string>
+    <string name="five">Viisi</string>
+    <string name="six">Kuusi</string>
+    <string name="seven">Seitsemän</string>
+    <string name="eight">Kahdeksan</string>
+    <string name="nine">Yhdeksän</string>
     <!-- View types -->
     <string name="change_view_type">Vaihda näkymää</string>
     <string name="grid">Ruudukko</string>
@@ -165,7 +165,7 @@
     <string name="confirm_storage_access_title">Vahvista pääsy ulkoiseen tallennustilaan</string>
     <string name="confirm_storage_access_text">Valitse muistikortin juurihakemisto seuraavaksi antaaksesi kirjoitusoikeuden</string>
     <string name="confirm_storage_access_text_sd">Jos et näe muistikorttia, kokeile tätä</string>
-    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
+    <string name="confirm_storage_access_android_text">Anna sovellukselle käyttöoikeus tallennustilan käyttöön painamalla seuraavassa näkymässä \"Käytä tätä hakemistoa\"-painiketta.</string>
     <string name="confirm_selection">Vahvista valinta</string>
     <plurals name="items">
         <item quantity="one">%d kohde</item>
@@ -545,8 +545,8 @@
     <string name="text">Teksti</string>
     <string name="migrating">Yhdistäminen</string>
     <string name="quality">Laatu</string>
-    <string name="main_screen">Main screen</string>
-    <string name="thumbnails">Thumbnails</string>
+    <string name="main_screen">Päänäkymä</string>
+    <string name="thumbnails">Esikatselukuvat</string>
     <string name="list_view">List view</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Valitse sovelluksen välilehdet</string>
