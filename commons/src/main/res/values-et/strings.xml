@@ -60,15 +60,15 @@
     <string name="change_cover_image">Muuda kaanepilti</string>
     <string name="select_photo">Vali foto</string>
     <!-- Blocked numbers -->
-    <string name="manage_blocked_numbers">Manage blocked numbers</string>
-    <string name="not_blocking_anyone">You are not blocking anyone.</string>
-    <string name="add_a_blocked_number">Add a blocked number</string>
+    <string name="manage_blocked_numbers">Halda blokeeritud telefoninumbreid</string>
+    <string name="not_blocking_anyone">Sa pole veel ühtegi telefoninumbrit blokeerinud.</string>
+    <string name="add_a_blocked_number">Lisa blokeeritav telefoninumber</string>
     <string name="block_number">Block number</string>
-    <string name="block_numbers">Block numbers</string>
-    <string name="blocked_numbers">Blocked numbers</string>
-    <string name="export_blocked_numbers">Export blocked numbers</string>
-    <string name="import_blocked_numbers">Import blocked numbers</string>
-    <string name="must_make_default_dialer">You have to make this app the default dialer app to make use of blocked numbers.</string>
+    <string name="block_numbers">Blokeeri telefoninumbreid</string>
+    <string name="blocked_numbers">Blokeeritud telefoninumbrid</string>
+    <string name="export_blocked_numbers">Ekspordi blokeeritud telefoninumbrid</string>
+    <string name="import_blocked_numbers">Impordi blokeeritud telefoninumbrid</string>
+    <string name="must_make_default_dialer">Kui soovid kasutada blokeeritud telefoninumbrite funktsionaalsust, siis peab see rakendus olema vaikimisi telefonirakendus.</string>
     <string name="set_as_default">Set as default</string>
     <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
     <!-- Favorites -->
