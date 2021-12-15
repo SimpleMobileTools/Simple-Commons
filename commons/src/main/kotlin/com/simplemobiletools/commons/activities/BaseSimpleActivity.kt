@@ -717,7 +717,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         var defaultFilename = baseConfig.lastExportedSettingsFile
         if (defaultFilename.isEmpty()) {
             val appName = baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro").removePrefix("com.simplemobiletools.")
-            defaultFilename = "$appName-settings.txt"
+            defaultFilename = "$appName-settings_${getCurrentFormattedDateTime()}.txt"
         }
 
         return defaultFilename
