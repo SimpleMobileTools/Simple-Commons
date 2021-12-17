@@ -105,68 +105,75 @@
     <string name="source_file_doesnt_exist">Lähtefaili %s pole olemas</string>
     <string name="prepend_filenames">Lisa faili nimele prefiks</string>
     <string name="append_filenames">Lisa faili nimele suffiks</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
+    <string name="simple_renaming">Lihtne ümbernimetamine</string>
+    <string name="pattern_renaming">Muster</string>
     <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second\n%i - number increasing from 1</string>
-    <string name="filename_without_txt">Filename (without .txt)</string>
-    <string name="filename_without_json">Filename (without .json)</string>
+    <string name="rename_date_time_pattern">%Y - aasta
+\n%M - kuu
+\n%D - päev
+\n%h - tund
+\n%m - minut
+\n%s - sekund
+\n%i - loendur alates 1\'st</string>
+    <string name="filename_without_txt">Faili nimi (ilma .txt laiendita)</string>
+    <string name="filename_without_json">Faili nimi (ilma .json laiendita)</string>
     <!-- Copy / Move -->
-    <string name="copy">Copy</string>
-    <string name="move">Move</string>
-    <string name="copy_move">Copy / Move</string>
-    <string name="copy_to">Copy to</string>
-    <string name="move_to">Move to</string>
+    <string name="copy">Kopeeri</string>
+    <string name="move">Teisalda</string>
+    <string name="copy_move">Kopeeri / Teisalda</string>
+    <string name="copy_to">Kopeeri asukohta</string>
+    <string name="move_to">Teisalda asukohta</string>
     <string name="source">Source</string>
     <string name="destination">Destination</string>
-    <string name="select_destination">Select destination</string>
-    <string name="click_select_destination">Click here to select destination</string>
-    <string name="invalid_destination">Could not write to the selected destination</string>
-    <string name="please_select_destination">Please select a destination</string>
-    <string name="source_and_destination_same">Source and destination cannot be the same</string>
-    <string name="copy_failed">Could not copy the files</string>
-    <string name="copying">Copying…</string>
-    <string name="copying_success">Files copied successfully</string>
-    <string name="copying_success_one">File copied successfully</string>
-    <string name="copy_move_failed">An error occurred</string>
-    <string name="moving">Moving…</string>
-    <string name="moving_success">Files moved successfully</string>
-    <string name="moving_success_one">File moved successfully</string>
-    <string name="moving_success_partial">Some files could not be moved</string>
-    <string name="copying_success_partial">Some files could not be copied</string>
-    <string name="no_files_selected">No files selected</string>
-    <string name="saving">Saving…</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
-    <string name="no_new_items">No new items have been found</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="select_destination">Vali sihtkaust</string>
+    <string name="click_select_destination">Sihtkausta valimiseks klõpsa siin</string>
+    <string name="invalid_destination">Valitud sihtkausta ei saanud kirjutada</string>
+    <string name="please_select_destination">Palun vali sihtkaust</string>
+    <string name="source_and_destination_same">Lähtekaust ja sihtkaust ei saa olla samad</string>
+    <string name="copy_failed">Failide kopeerimine ei õnnestunud</string>
+    <string name="copying">Kopeerime…</string>
+    <string name="copying_success">Failide kopeerimine õnnestus</string>
+    <string name="copying_success_one">Faili kopeerimine õnnestus</string>
+    <string name="copy_move_failed">Tekkis viga</string>
+    <string name="moving">Teisaldame…</string>
+    <string name="moving_success">Failide teisaldamine õnnestus</string>
+    <string name="moving_success_one">Faili teisaldamine õnnestus</string>
+    <string name="moving_success_partial">Mõnda faili ei saanud teisaldada</string>
+    <string name="copying_success_partial">Mõnda faili ei saanud kopeerida</string>
+    <string name="no_files_selected">Ühtegi faili pole valitud</string>
+    <string name="saving">Salvestame…</string>
+    <string name="could_not_create_folder">%s kausta loomine ei õnnestunud</string>
+    <string name="could_not_create_file">%s faili loomine ei õnnestunud</string>
+    <string name="no_new_items">Uusi objekte ei leidu</string>
+    <string name="no_space">Sihtkausta andmekandjal pole piisavalt ruumi.
+\nVajalik on %1$s, aga leidub %2$s</string>
     <!-- Create new -->
-    <string name="create_new">Create new</string>
-    <string name="folder">Folder</string>
+    <string name="create_new">Loo uus</string>
+    <string name="folder">Kaust</string>
     <string name="file">File</string>
-    <string name="create_new_folder">Create new folder</string>
-    <string name="name_taken">A file or folder with that name already exists</string>
-    <string name="invalid_name">The name contains invalid characters</string>
-    <string name="empty_name">Please enter a name</string>
-    <string name="unknown_error_occurred">An unknown error occurred</string>
+    <string name="create_new_folder">Loo uus kaust</string>
+    <string name="name_taken">Selle nimega fail või kaust on juba olemas</string>
+    <string name="invalid_name">Nimes leidub valesid tähemärke</string>
+    <string name="empty_name">Palun sisesta nimi</string>
+    <string name="unknown_error_occurred">Tekkis tundmatu viga</string>
     <!-- File operation conflicts -->
-    <string name="file_already_exists">File \"%s\" already exists</string>
-    <string name="file_already_exists_overwrite">File \"%s\" already exists. Overwrite?</string>
-    <string name="folder_already_exists">Folder \"%s\" already exists</string>
+    <string name="file_already_exists">„%s“ fail on juba olemas</string>
+    <string name="file_already_exists_overwrite">„%s“ fail on juba olemas, kas kirjutame üle\?</string>
+    <string name="folder_already_exists">„%s“ kaust on juba olemas</string>
     <string name="merge">Merge</string>
-    <string name="keep_both">Keep both</string>
-    <string name="overwrite">Overwrite</string>
-    <string name="skip">Skip</string>
-    <string name="append">Append with \'_1\'</string>
-    <string name="apply_to_all">Apply to all</string>
+    <string name="keep_both">Jäta mõlemad alles</string>
+    <string name="overwrite">Kirjuta üle</string>
+    <string name="skip">Jäta vahele</string>
+    <string name="append">Lisa nimele _1</string>
+    <string name="apply_to_all">Kohalda kõigile</string>
     <!-- File picker -->
-    <string name="select_folder">Select a folder</string>
-    <string name="select_file">Select a file</string>
-    <string name="confirm_storage_access_title">Confirm external storage access</string>
-    <string name="confirm_storage_access_text">Please choose the top folder of the SD card on the next screen, to grant write access</string>
-    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
-    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="select_folder">Vali kaust</string>
+    <string name="select_file">Vali fail</string>
+    <string name="confirm_storage_access_title">Kinnita juurdepääs välisele salvestusruumile</string>
+    <string name="confirm_storage_access_text">Ligipääsu lubamiseks palun vali järgmises vaates SD-kaardi juurkaust</string>
+    <string name="confirm_storage_access_text_sd">Kui sa SD-kaarti ei näe, siis proovi sellist võimalust</string>
+    <string name="confirm_storage_access_android_text">Valitud salvestusruumile ligipääsu saamiseks vali järgmise vaate allosas „Kasuta seda kausta“.</string>
+    <string name="confirm_selection">Kinnita valik</string>
     <plurals name="items">
         <item quantity="one">%d item</item>
         <item quantity="other">%d items</item>
@@ -177,8 +184,8 @@
         <item quantity="other">%d items</item>
     </plurals>
     <plurals name="deleting_items">
-        <item quantity="one">Deleting %d item</item>
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="one">Kustutame %d kirje</item>
+        <item quantity="other">Kustutame %d kirjet</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
@@ -186,22 +193,22 @@
         <item quantity="other">%d contacts</item>
     </plurals>
     <!-- Storages -->
-    <string name="select_storage">Select storage</string>
-    <string name="internal">Internal</string>
-    <string name="sd_card">SD Card</string>
+    <string name="select_storage">Vali salvestusruum</string>
+    <string name="internal">Sisemine</string>
+    <string name="sd_card">SD-kaart</string>
     <string name="root">Root</string>
-    <string name="wrong_root_selected">Wrong folder selected, please select the main folder of your SD card</string>
-    <string name="sd_card_usb_same">SD card and USB device paths cannot be the same</string>
+    <string name="wrong_root_selected">Valisid vale kausta, palun vali SD-kaardi juurkaust, mis on kõige esimene kaust</string>
+    <string name="sd_card_usb_same">SD-kaardi ja USB-seadme asukohad ei saa olla samad</string>
     <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
         It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
     <!-- File properties -->
     <string name="properties">Properties</string>
-    <string name="path">Path</string>
-    <string name="items_selected">Items selected</string>
-    <string name="direct_children_count">Direct children count</string>
-    <string name="files_count">Total files count</string>
-    <string name="resolution">Resolution</string>
-    <string name="duration">Duration</string>
+    <string name="path">Asukoht</string>
+    <string name="items_selected">Kirjeid valitud</string>
+    <string name="direct_children_count">Sisalduvate asukohtade arv</string>
+    <string name="files_count">Faile kokku</string>
+    <string name="resolution">Resolutsioon</string>
+    <string name="duration">Kestus</string>
     <string name="artist">Artist</string>
     <string name="album">Album</string>
     <string name="focal_length">Focal length</string>
