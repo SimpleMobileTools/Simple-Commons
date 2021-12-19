@@ -242,41 +242,37 @@
     <string name="apply_to_all_apps">Kasuta samu värvi kõikides Lihtsate tarvikute rakendsustes</string>
     <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
         Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
-    <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
-    <string name="shared_theme_note">Note that even though you are using the Pro app version, you still need Simple Thank You for technical reasons. It takes care of the color synchronization.</string>
-    <string name="purchase_thank_you">
-        <![CDATA[
-            Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
-        ]]>
-    </string>
+    <string name="share_colors_success">Värvide uuendamine õnnestus. Lisasime uue „Jagatud“ teema - edaspidisel värvide muutmisel palun kasuta seda.</string>
+    <string name="shared_theme_note">Kuigi sa kasutad rakenduse Pro-versiooni, palun siiski tehnilistel põhjustel paigalda rakendus „Lihtne tänuavaldus“. Muu hulgas tema haldab värvide sünkroniseerimist kõikide meie rakenduste vahel.</string>
+    <string name="purchase_thank_you">Selle funktsionaalsuse kasutamiseks ja meie toetamiseks palun osta &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Lihtne tänuavaldus&lt;/a&gt;. Tänud juba ette!</string>
     <!-- Themes -->
-    <string name="light_theme">Light</string>
-    <string name="dark_theme">Dark</string>
+    <string name="light_theme">Hele</string>
+    <string name="dark_theme">Tume</string>
     <string name="auto_theme">Auto</string>
     <string name="solarized">Solarized</string>
-    <string name="dark_red">Dark red</string>
+    <string name="dark_red">Tumepunane</string>
     <string name="white">White</string>
     <string name="black_white">Black &amp; White</string>
-    <string name="custom">Custom</string>
-    <string name="shared">Shared</string>
+    <string name="custom">Kohandatud</string>
+    <string name="shared">Jagatud</string>
     <!-- What's new -->
-    <string name="whats_new">What\'s new</string>
-    <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
+    <string name="whats_new">Mida on meil uut</string>
+    <string name="whats_new_disclaimer">* siin on kirjas vaid suuremad muudatused, kuid alati oleme teinud ka pisikohendusi</string>
     <!-- Actionbar items -->
     <string name="delete">Delete</string>
-    <string name="remove">Remove</string>
-    <string name="rename">Rename</string>
-    <string name="share">Share</string>
-    <string name="share_via">Share via</string>
-    <string name="select_all">Select all</string>
-    <string name="select_text">Select text</string>
-    <string name="hide">Hide</string>
-    <string name="unhide">Unhide</string>
-    <string name="hide_folder">Hide folder</string>
-    <string name="unhide_folder">Unhide folder</string>
-    <string name="temporarily_show_hidden">Temporarily show hidden</string>
-    <string name="stop_showing_hidden">Stop showing hidden media</string>
-    <string name="maximum_share_reached">You cannot share this much content at once</string>
+    <string name="remove">Eemalda</string>
+    <string name="rename">Muuda nime</string>
+    <string name="share">Jaga</string>
+    <string name="share_via">Jaga rakendusega</string>
+    <string name="select_all">Vali kõik</string>
+    <string name="select_text">Vali tekst</string>
+    <string name="hide">Peida</string>
+    <string name="unhide">Näida peidetud</string>
+    <string name="hide_folder">Peida kaust</string>
+    <string name="unhide_folder">Näita peidetud kausta</string>
+    <string name="temporarily_show_hidden">Näita peidetuid ajutiselt</string>
+    <string name="stop_showing_hidden">Lõpeta peidetud meedia näitamine</string>
+    <string name="maximum_share_reached">Nii palju sisu korraga jagada ei saa</string>
     <string name="empty_and_disable_recycle_bin">Tühjenda prügikast ja eemalda ta kasutusest</string>
     <string name="undo">Pööra tegevus tagasi</string>
     <string name="redo">Korda tegevust</string>
@@ -531,23 +527,23 @@
     <string name="use_same_snooze">Always use same snooze time</string>
     <string name="snooze_time">Snooze time</string>
     <string name="vibrate_on_button_press">Vibrate on button press</string>
-    <string name="move_items_into_recycle_bin">Move items into the Recycle Bin instead of deleting</string>
-    <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
-    <string name="empty_recycle_bin">Empty the Recycle Bin</string>
+    <string name="move_items_into_recycle_bin">Kustutamise asemel viska failid prügikasti</string>
+    <string name="recycle_bin_cleaning_interval">Prügikasti tühjendamise välp</string>
+    <string name="empty_recycle_bin">Tühjenda prügikast</string>
     <string name="force_portrait_mode">Force portrait mode</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
-    <string name="start_name_with_surname">Start name with surname</string>
-    <string name="clear_cache">Clear cache</string>
-    <string name="show_call_confirmation_dialog">Show a call confirmation dialog before initiating a call</string>
+    <string name="export_settings">Ekspordi seadistused</string>
+    <string name="import_settings">Impordi seadistused</string>
+    <string name="settings_exported_successfully">Seadistuste eksport õnnestus</string>
+    <string name="settings_imported_successfully">Seadistuste import õnnestus</string>
+    <string name="start_name_with_surname">Alusta nime perenimega</string>
+    <string name="clear_cache">Kustuta puhverdatud andmed</string>
+    <string name="show_call_confirmation_dialog">Enne kõne alustamist näita kinnitusvaadet</string>
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
+    <string name="visibility">Nähtavus</string>
+    <string name="security">Turvalisus</string>
     <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
-    <string name="recycle_bin">Recycle Bin</string>
+    <string name="file_operations">Tegevused failidega</string>
+    <string name="recycle_bin">Prügikast</string>
     <string name="saving_label">Saving</string>
     <string name="startup">Startup</string>
     <string name="text">Text</string>
@@ -560,23 +556,23 @@
     <string name="manage_shown_tabs">Manage shown tabs</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
     <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
+    <string name="favorites_tab">Lemmikud</string>
+    <string name="call_history_tab">Kõnede ajalugu</string>
+    <string name="groups_tab">Rühmad</string>
     <string name="last_used_tab">Last used one</string>
     <string name="files_tab">Files</string>
     <string name="recent_files_tab">Recent files</string>
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restore this file</string>
-    <string name="restore_selected_files">Restore selected files</string>
-    <string name="restore_all_files">Restore all files</string>
-    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
-    <string name="files_restored_successfully">Files have been restored successfully</string>
+    <string name="restore_this_file">Taasta see fail</string>
+    <string name="restore_selected_files">Taasta valitud failid</string>
+    <string name="restore_all_files">Taasta kõik failid</string>
+    <string name="recycle_bin_emptied">Prügikasti tühjendamine õnnestus</string>
+    <string name="files_restored_successfully">Failide taastamine õnnestus</string>
     <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
-    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
+    <string name="recycle_bin_empty">Prügikast on tühi</string>
     <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="show_the_recycle_bin">Näita prügikasti</string>
+    <string name="hide_the_recycle_bin">Peida prügikast</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Moving %d item into the Recycle Bin</item>
         <item quantity="other">Moving %d items into the Recycle Bin</item>
@@ -596,7 +592,7 @@
     <string name="usb">USB</string>
     <string name="usb_detected">Tundub, et sinu nutiseadme küljes on USB-seade. Selleks, et seal asuvad failid oleks korrektselt loetavad, pead lubama täiendavad õigusi.</string>
     <string name="confirm_usb_storage_access_text">Please choose the top folder of the USB device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_usb">Wrong folder selected, please select the main folder of your USB device</string>
+    <string name="wrong_root_selected_usb">Valisid vale kausta, palun vali USB-seadme juurkaust</string>
     <!-- Dates -->
     <string name="january">January</string>
     <string name="february">February</string>
@@ -623,13 +619,13 @@
     <string name="in_october">in October</string>
     <string name="in_november">in November</string>
     <string name="in_december">in December</string>
-    <string name="monday">Monday</string>
-    <string name="tuesday">Tuesday</string>
-    <string name="wednesday">Wednesday</string>
-    <string name="thursday">Thursday</string>
-    <string name="friday">Friday</string>
-    <string name="saturday">Saturday</string>
-    <string name="sunday">Sunday</string>
+    <string name="monday">Esmaspäev</string>
+    <string name="tuesday">Teisipäev</string>
+    <string name="wednesday">Kolmapäev</string>
+    <string name="thursday">Neljapäev</string>
+    <string name="friday">Reede</string>
+    <string name="saturday">Laupäev</string>
+    <string name="sunday">Pühapäev</string>
     <string name="monday_letter">M</string>
     <string name="tuesday_letter">T</string>
     <string name="wednesday_letter">W</string>
@@ -645,7 +641,7 @@
     <string name="saturday_short">Sat</string>
     <string name="sunday_short">Sun</string>
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
+    <string name="upgrade_to_pro_long">Seda rakenduse versiooni me enam ei uuenda. Täiendused ja parandused leiad nüüd Pro-versioonist.</string>
     <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
     <string name="it_is_free">It is free till: %s. If you download it till then, you will be able to use it for free forever.</string>
     <string name="more_info">More info</string>
@@ -907,7 +903,7 @@
     <string name="event_bus_title">Event Bus (communication within the app)</string>
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
-    <string name="apng_title">APNG Android (animated WebP support)</string>
+    <string name="apng_title">APNG Android (animeeritud WebP tugi)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
