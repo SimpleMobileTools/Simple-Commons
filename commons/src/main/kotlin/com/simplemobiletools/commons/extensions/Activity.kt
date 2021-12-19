@@ -793,7 +793,31 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
     } else {
         val oldFile = File(oldPath)
         val newFile = File(newPath)
-        val tempFile = createTempFile(oldFile) ?: return
+        val tempFile = try {
+            createTempFile(oldFile) ?: return
+        } catch (exception: Exception) {
+            if (isRPlus() && exception is java.nio.file.FileSystemException) {
+                val fileUris = getFileUrisFromFileDirItems(arrayListOf(File(oldPath).toFileDirItem(this)))
+                updateSDK30Uris(fileUris) {
+                    val values = ContentValues().apply {
+                        put(MediaStore.Images.Media.DISPLAY_NAME, newPath.getFilenameFromPath())
+                    }
+
+                    try {
+                        contentResolver.update(fileUris.first(), values, null, null)
+                        callback?.invoke(true)
+                    } catch (e: Exception) {
+                        showErrorToast(e)
+                        callback?.invoke(false)
+                    }
+                }
+            } else {
+                showErrorToast(exception)
+                callback?.invoke(false)
+            }
+            return
+        }
+
         val oldToTempSucceeds = oldFile.renameTo(tempFile)
         val tempToNewSucceeds = tempFile.renameTo(newFile)
         if (oldToTempSucceeds && tempToNewSucceeds) {
@@ -830,12 +854,8 @@ fun Activity.createTempFile(file: File): File? {
         createTempDir("temp", "${System.currentTimeMillis()}", file.parentFile)
     } else {
         if (isRPlus()) {
-            try {
-                kotlin.io.path.createTempFile(file.parentFile.toPath(), "temp", "${System.currentTimeMillis()}").toFile()
-            } catch (e: Exception) {
-                showErrorToast(e)
-                null
-            }
+            // this can throw FileSystemException, lets catch and handle it at the place calling this function
+            kotlin.io.path.createTempFile(file.parentFile.toPath(), "temp", "${System.currentTimeMillis()}").toFile()
         } else {
             createTempFile("temp", "${System.currentTimeMillis()}", file.parentFile)
         }

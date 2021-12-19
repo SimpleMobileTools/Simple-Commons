@@ -55,10 +55,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     private val GENERIC_PERM_HANDLER = 100
     private val DELETE_FILE_SDK_30_HANDLER = 300
     private val RECOVERABLE_SECURITY_HANDLER = 301
+    private val UPDATE_FILE_SDK_30_HANDLER = 302
 
     companion object {
         var funAfterSAFPermission: ((success: Boolean) -> Unit)? = null
         var funAfterDelete30File: ((success: Boolean) -> Unit)? = null
+        var funAfterUpdate30File: ((success: Boolean) -> Unit)? = null
         var funRecoverableSecurity: ((success: Boolean) -> Unit)? = null
     }
 
@@ -304,6 +306,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         } else if (requestCode == RECOVERABLE_SECURITY_HANDLER) {
             funRecoverableSecurity?.invoke(resultCode == Activity.RESULT_OK)
             funRecoverableSecurity = null
+        } else if (requestCode == UPDATE_FILE_SDK_30_HANDLER) {
+            funAfterUpdate30File?.invoke(resultCode == Activity.RESULT_OK)
         }
     }
 
@@ -444,6 +448,21 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             try {
                 val deleteRequest = MediaStore.createDeleteRequest(contentResolver, uris).intentSender
                 startIntentSenderForResult(deleteRequest, DELETE_FILE_SDK_30_HANDLER, null, 0, 0, 0)
+            } catch (e: Exception) {
+                showErrorToast(e)
+            }
+        } else {
+            callback(false)
+        }
+    }
+
+    @SuppressLint("NewApi")
+    fun updateSDK30Uris(uris: List<Uri>, callback: (success: Boolean) -> Unit) {
+        if (isRPlus()) {
+            funAfterUpdate30File = callback
+            try {
+                val writeRequest = MediaStore.createWriteRequest(contentResolver, uris).intentSender
+                startIntentSenderForResult(writeRequest, UPDATE_FILE_SDK_30_HANDLER, null, 0, 0, 0)
             } catch (e: Exception) {
                 showErrorToast(e)
             }
