@@ -14,7 +14,7 @@ import java.io.File
 
 class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs), RenameTab {
     var ignoreClicks = false
-    var stopLooping = false
+    var stopLooping = false     // we should request the permission on Android 30+ for all uris at once, not one by one
     var activity: BaseSimpleActivity? = null
     var paths = ArrayList<String>()
 
@@ -29,6 +29,7 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
     }
 
     override fun dialogConfirmed(useMediaFileExtension: Boolean, callback: (success: Boolean) -> Unit) {
+        stopLooping = false
         val valueToAdd = rename_simple_value.text.toString()
         val append = rename_simple_radio_group.checkedRadioButtonId == rename_simple_radio_append.id
 

@@ -20,7 +20,7 @@ import kotlin.collections.ArrayList
 
 class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs), RenameTab {
     var ignoreClicks = false
-    var stopLooping = false
+    var stopLooping = false     // we should request the permission on Android 30+ for all uris at once, not one by one
     var currentIncrementalNumber = 1
     var numbersCnt = 0
     var activity: BaseSimpleActivity? = null
@@ -38,6 +38,7 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
     }
 
     override fun dialogConfirmed(useMediaFileExtension: Boolean, callback: (success: Boolean) -> Unit) {
+        stopLooping = false
         if (ignoreClicks) {
             return
         }
