@@ -798,16 +798,20 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
         } catch (exception: Exception) {
             if (isRPlus() && exception is java.nio.file.FileSystemException) {
                 val fileUris = getFileUrisFromFileDirItems(arrayListOf(File(oldPath).toFileDirItem(this)))
-                updateSDK30Uris(fileUris) {
-                    val values = ContentValues().apply {
-                        put(MediaStore.Images.Media.DISPLAY_NAME, newPath.getFilenameFromPath())
-                    }
+                updateSDK30Uris(fileUris) { success ->
+                    if (success ) {
+                        val values = ContentValues().apply {
+                            put(MediaStore.Images.Media.DISPLAY_NAME, newPath.getFilenameFromPath())
+                        }
 
-                    try {
-                        contentResolver.update(fileUris.first(), values, null, null)
-                        callback?.invoke(true)
-                    } catch (e: Exception) {
-                        showErrorToast(e)
+                        try {
+                            contentResolver.update(fileUris.first(), values, null, null)
+                            callback?.invoke(true)
+                        } catch (e: Exception) {
+                            showErrorToast(e)
+                            callback?.invoke(false)
+                        }
+                    } else {
                         callback?.invoke(false)
                     }
                 }
