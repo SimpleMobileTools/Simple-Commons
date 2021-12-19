@@ -930,11 +930,13 @@ fun Context.getFileUrisFromFileDirItems(fileDirItems: List<FileDirItem>): ArrayL
     val fileUris = ArrayList<Uri>()
     val allIds = getMediaStoreIds(this)
     val filePaths = fileDirItems.map { it.path.lowercase(Locale.getDefault()) }
-    for ((filePath, mediaStoreId) in allIds) {
-        if (filePaths.contains(filePath.lowercase(Locale.getDefault()))) {
-            val baseUri = getFileUri(filePath)
-            val uri = ContentUris.withAppendedId(baseUri, mediaStoreId)
-            fileUris.add(uri)
+    filePaths.forEach { path ->
+        for ((filePath, mediaStoreId) in allIds) {
+            if (filePath.lowercase() == path) {
+                val baseUri = getFileUri(filePath)
+                val uri = ContentUris.withAppendedId(baseUri, mediaStoreId)
+                fileUris.add(uri)
+            }
         }
     }
 
