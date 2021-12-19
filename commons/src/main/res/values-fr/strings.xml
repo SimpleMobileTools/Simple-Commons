@@ -233,7 +233,7 @@
     <string name="undo_changes">Annuler les modifications</string>
     <string name="undo_changes_confirmation">Voulez-vous vraiment annuler vos modifications ?</string>
     <string name="save_before_closing">Vous avez des modifications non enregistrées. Les enregistrer avant de quitter ?</string>
-    <string name="apply_to_all_apps">Appliquer à l\'ensemble de la suite d\'applications Simples</string>
+    <string name="apply_to_all_apps">Appliquer à l\'ensemble de la suite d\'applications \'Simple\'</string>
     <string name="app_icon_color_warning">AVERTISSEMENT : certains lanceurs ne gèrent pas correctement la personnalisation des icônes d\'applications. Au cas où l\'icône disparaîtrait, essayez de lancer l\'application via Google Play ou un widget.
         Une fois lancé, réglez simplement l\'icône orange par défaut #F57C00. Dans le pire des cas vous devrez peut-être réinstaller l\'application.</string>
     <string name="share_colors_success">Couleurs actualisées. Un nouveau thème nommé \"Partagé\" a été ajouté. Veuillez utiliser ce thème pour actualiser les couleurs de toutes les applications à partir de maintenant.</string>
@@ -709,26 +709,26 @@
     <string name="simple_calendar">Calendrier simple</string>
     <string name="simple_camera">Appareil photo simple</string>
     <string name="simple_clock">Horloge simple</string>
-    <string name="simple_contacts">Simple Contacts</string>
+    <string name="simple_contacts">Contacts simple</string>
     <string name="simple_dialer">Clavier de téléphone simple</string>
     <string name="simple_draw">Dessin simple</string>
-    <string name="simple_file_manager">Simple File Manager</string>
+    <string name="simple_file_manager">Gestionnaire de fichiers simple</string>
     <string name="simple_flashlight">Lampe de poche simple</string>
     <string name="simple_gallery">Galerie simple</string>
     <string name="simple_music_player">Lecteur de musique simple</string>
-    <string name="simple_notes">Simple Notes</string>
+    <string name="simple_notes">Notes simple</string>
     <string name="simple_sms_messenger">Messagerie SMS simple</string>
-    <string name="simple_thank_you">Un simple merci</string>
+    <string name="simple_thank_you">Merci simple</string>
     <string name="simple_voice_recorder">Enregistreur vocal simple</string>
     <string name="app_launcher_short">Lanceur d\'applications</string>
     <string name="calculator_short">Calculatrice</string>
-    <string name="calendar_short">Calendarr</string>
+    <string name="calendar_short">Calendrier</string>
     <string name="camera_short">Appareil photo</string>
     <string name="clock_short">Horloge</string>
     <string name="contacts_short">Contacts</string>
-    <string name="dialer_short">Clavier</string>
+    <string name="dialer_short">Clavier de téléphone</string>
     <string name="draw_short">Dessin</string>
-    <string name="file_manager_short">File Manager</string>
+    <string name="file_manager_short">Gestionnaire de fichiers</string>
     <string name="flashlight_short">Lampe de poche</string>
     <string name="gallery_short">Galerie</string>
     <string name="music_player_short">Lecteur de musique</string>
@@ -892,5 +892,5 @@
     <string name="deprecated_app">ATTENTION : cette version de l\'application n\'est plus maintenue. Procurez-vous la version Pro à l\'adresse https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">N’oubliez pas que si vous désinstallez une application payante dans les 2 heures, vous serez automatiquement remboursé. Si vous souhaitez un remboursement, à tout moment, contactez-nous à hello@simplemobiletools.com et vous l\'obtiendrez. Alors n\'hésitez pas et essayez nos applications :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">Un groupe d\'applications Android open-source simples avec widgets personnalisables, sans publicités ni permissions inutiles.</string>
+    <string name="developer_description">Un groupe d\'applications Android open-source simples avec widgets personnalisables, sans publicité ni permission inutile.</string>
 </resources>
