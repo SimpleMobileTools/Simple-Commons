@@ -644,7 +644,7 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
         deleteAndroidSAFDirectory(path, allowDeleteFolder, callback)
     } else {
         val file = File(path)
-        if (file.absolutePath.startsWith(internalStoragePath) && !file.canWrite()) {
+        if (!isRPlus() && file.absolutePath.startsWith(internalStoragePath) && !file.canWrite()) {
             callback?.invoke(false)
             return
         }
