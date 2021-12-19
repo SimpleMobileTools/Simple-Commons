@@ -1,6 +1,8 @@
 package com.simplemobiletools.commons.views
 
+import android.content.ContentValues
 import android.content.Context
+import android.provider.MediaStore
 import android.util.AttributeSet
 import android.widget.RelativeLayout
 import com.simplemobiletools.commons.R
@@ -8,9 +10,11 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.interfaces.RenameTab
 import kotlinx.android.synthetic.main.tab_rename_simple.view.*
+import java.io.File
 
 class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs), RenameTab {
     var ignoreClicks = false
+    var stopLooping = false
     var activity: BaseSimpleActivity? = null
     var paths = ArrayList<String>()
 
@@ -53,6 +57,10 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
             ignoreClicks = true
             var pathsCnt = validPaths.size
             for (path in validPaths) {
+                if (stopLooping) {
+                    continue
+                }
+
                 val fullName = path.getFilenameFromPath()
                 var dotAt = fullName.lastIndexOf(".")
                 if (dotAt == -1) {
@@ -74,16 +82,61 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
                     continue
                 }
 
-                activity?.renameFile(path, newPath) {
-                    if (it) {
+                activity?.renameFile(path, newPath, true) { success, useAndroid30Way ->
+                    if (success) {
                         pathsCnt--
                         if (pathsCnt == 0) {
                             callback(true)
                         }
                     } else {
                         ignoreClicks = false
-                        activity?.toast(R.string.unknown_error_occurred)
+                        if (useAndroid30Way) {
+                            stopLooping = true
+                            renameAllFiles(validPaths, append, valueToAdd, callback)
+                        } else {
+                            activity?.toast(R.string.unknown_error_occurred)
+                        }
                     }
+                }
+            }
+
+            stopLooping = false
+        }
+    }
+
+    private fun renameAllFiles(paths: List<String>, appendString: Boolean, stringToAdd: String, callback: (success: Boolean) -> Unit) {
+        val fileDirItems = paths.map { File(it).toFileDirItem(context) }
+        val uris = context.getFileUrisFromFileDirItems(fileDirItems)
+        activity?.updateSDK30Uris(uris) { success ->
+            if (success) {
+                try {
+                    uris.forEachIndexed { index, uri ->
+                        val path = paths[index]
+
+                        val fullName = path.getFilenameFromPath()
+                        var dotAt = fullName.lastIndexOf(".")
+                        if (dotAt == -1) {
+                            dotAt = fullName.length
+                        }
+
+                        val name = fullName.substring(0, dotAt)
+                        val extension = if (fullName.contains(".")) ".${fullName.getFilenameExtension()}" else ""
+
+                        val newName = if (appendString) {
+                            "$name$stringToAdd$extension"
+                        } else {
+                            "$stringToAdd$fullName"
+                        }
+
+                        val values = ContentValues().apply {
+                            put(MediaStore.Images.Media.DISPLAY_NAME, newName)
+                        }
+
+                        context.contentResolver.update(uri, values, null, null)
+                    }
+                    callback(true)
+                } catch (e: Exception) {
+                    callback(false)
                 }
             }
         }

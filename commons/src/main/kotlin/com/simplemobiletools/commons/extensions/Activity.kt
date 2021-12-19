@@ -724,12 +724,17 @@ fun Activity.rescanPaths(paths: List<String>, callback: (() -> Unit)? = null) {
     applicationContext.rescanPaths(paths, callback)
 }
 
-fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((success: Boolean) -> Unit)? = null) {
+fun BaseSimpleActivity.renameFile(
+    oldPath: String,
+    newPath: String,
+    isRenamingMultipleFiles: Boolean,
+    callback: ((success: Boolean, useAndroid30Way: Boolean) -> Unit)? = null
+) {
     if (isRestrictedSAFOnlyRoot(oldPath)) {
         handleAndroidSAFDialog(oldPath) {
             if (!it) {
                 runOnUiThread {
-                    callback?.invoke(false)
+                    callback?.invoke(false, false)
                 }
                 return@handleAndroidSAFDialog
             }
@@ -737,12 +742,12 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
             try {
                 val success = renameAndroidSAFDocument(oldPath, newPath)
                 runOnUiThread {
-                    callback?.invoke(success)
+                    callback?.invoke(success, false)
                 }
             } catch (e: Exception) {
                 showErrorToast(e)
                 runOnUiThread {
-                    callback?.invoke(false)
+                    callback?.invoke(false, false)
                 }
             }
         }
@@ -755,7 +760,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
             val document = getSomeDocumentFile(oldPath)
             if (document == null || (File(oldPath).isDirectory != document.isDirectory)) {
                 runOnUiThread {
-                    callback?.invoke(false)
+                    callback?.invoke(false, false)
                 }
                 return@handleSAFDialog
             }
@@ -768,7 +773,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                         // FileNotFoundException is thrown in some weird cases, but renaming works just fine
                     } catch (e: Exception) {
                         showErrorToast(e)
-                        callback?.invoke(false)
+                        callback?.invoke(false, false)
                         return@ensureBackgroundThread
                     }
 
@@ -779,14 +784,14 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                         }
                         deleteFromMediaStore(oldPath)
                         runOnUiThread {
-                            callback?.invoke(true)
+                            callback?.invoke(true, false)
                         }
                     }
                 }
             } catch (e: Exception) {
                 showErrorToast(e)
                 runOnUiThread {
-                    callback?.invoke(false)
+                    callback?.invoke(false, false)
                 }
             }
         }
@@ -797,27 +802,32 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
             createTempFile(oldFile) ?: return
         } catch (exception: Exception) {
             if (isRPlus() && exception is java.nio.file.FileSystemException) {
-                val fileUris = getFileUrisFromFileDirItems(arrayListOf(File(oldPath).toFileDirItem(this)))
-                updateSDK30Uris(fileUris) { success ->
-                    if (success ) {
-                        val values = ContentValues().apply {
-                            put(MediaStore.Images.Media.DISPLAY_NAME, newPath.getFilenameFromPath())
-                        }
+                // if we are renaming multiple files at once, we should give the Android 30+ permission dialog all uris together, not one by one
+                if (isRenamingMultipleFiles) {
+                    callback?.invoke(false, true)
+                } else {
+                    val fileUris = getFileUrisFromFileDirItems(arrayListOf(File(oldPath).toFileDirItem(this)))
+                    updateSDK30Uris(fileUris) { success ->
+                        if (success) {
+                            val values = ContentValues().apply {
+                                put(MediaStore.Images.Media.DISPLAY_NAME, newPath.getFilenameFromPath())
+                            }
 
-                        try {
-                            contentResolver.update(fileUris.first(), values, null, null)
-                            callback?.invoke(true)
-                        } catch (e: Exception) {
-                            showErrorToast(e)
-                            callback?.invoke(false)
+                            try {
+                                contentResolver.update(fileUris.first(), values, null, null)
+                                callback?.invoke(true, false)
+                            } catch (e: Exception) {
+                                showErrorToast(e)
+                                callback?.invoke(false, false)
+                            }
+                        } else {
+                            callback?.invoke(false, false)
                         }
-                    } else {
-                        callback?.invoke(false)
                     }
                 }
             } else {
                 showErrorToast(exception)
-                callback?.invoke(false)
+                callback?.invoke(false, false)
             }
             return
         }
@@ -829,7 +839,7 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                 updateInMediaStore(oldPath, newPath)
                 rescanPath(newPath) {
                     runOnUiThread {
-                        callback?.invoke(true)
+                        callback?.invoke(true, false)
                     }
                     scanPathRecursively(newPath)
                 }
@@ -840,14 +850,14 @@ fun BaseSimpleActivity.renameFile(oldPath: String, newPath: String, callback: ((
                 updateInMediaStore(oldPath, newPath)
                 scanPathsRecursively(arrayListOf(newPath)) {
                     runOnUiThread {
-                        callback?.invoke(true)
+                        callback?.invoke(true, false)
                     }
                 }
             }
         } else {
             tempFile.delete()
             runOnUiThread {
-                callback?.invoke(false)
+                callback?.invoke(false, false)
             }
         }
     }

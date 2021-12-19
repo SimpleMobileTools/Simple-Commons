@@ -123,8 +123,8 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                     }
 
                     currentIncrementalNumber++
-                    activity?.renameFile(path, newPath) {
-                        if (it) {
+                    activity?.renameFile(path, newPath, true) { success, useAndroid30Way ->
+                        if (success) {
                             pathsCnt--
                             if (pathsCnt == 0) {
                                 callback(true)

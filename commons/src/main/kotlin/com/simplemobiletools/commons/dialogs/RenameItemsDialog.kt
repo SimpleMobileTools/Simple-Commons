@@ -75,8 +75,8 @@ class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<S
                                         continue
                                     }
 
-                                    activity.renameFile(path, newPath) {
-                                        if (it) {
+                                    activity.renameFile(path, newPath, true) { success, useAndroid30Way ->
+                                        if (success) {
                                             pathsCnt--
                                             if (pathsCnt == 0) {
                                                 callback()
