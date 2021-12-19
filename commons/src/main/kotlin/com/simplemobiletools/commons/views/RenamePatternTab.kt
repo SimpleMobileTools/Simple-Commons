@@ -168,12 +168,14 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
 
     private fun renameAllFiles(paths: List<String>, useMediaFileExtension: Boolean, callback: (success: Boolean) -> Unit) {
         val fileDirItems = paths.map { File(it).toFileDirItem(context) }
-        val uris = context.getFileUrisFromFileDirItems(fileDirItems)
+        val uriPairs = context.getFileUrisFromFileDirItems(fileDirItems)
+        val validPaths = uriPairs.first
+        val uris = uriPairs.second
         activity?.updateSDK30Uris(uris) { success ->
             if (success) {
                 try {
                     uris.forEachIndexed { index, uri ->
-                        val path = paths[index]
+                        val path = validPaths[index]
                         val newFileName = getNewPath(path, useMediaFileExtension)?.getFilenameFromPath() ?: return@forEachIndexed
                         val values = ContentValues().apply {
                             put(MediaStore.Images.Media.DISPLAY_NAME, newFileName)

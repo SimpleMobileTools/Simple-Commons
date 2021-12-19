@@ -615,7 +615,7 @@ fun BaseSimpleActivity.deleteFilesBg(files: List<FileDirItem>, allowDeleteFolder
 
                 if (index == files.size - 1) {
                     if (isRPlus() && failedFileDirItems.isNotEmpty()) {
-                        val fileUris = getFileUrisFromFileDirItems(failedFileDirItems)
+                        val fileUris = getFileUrisFromFileDirItems(failedFileDirItems).second
                         deleteSDK30Uris(fileUris) { success ->
                             runOnUiThread {
                                 callback?.invoke(success)
@@ -677,7 +677,7 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
                         }
                     }
                 } else if (isRPlus()) {
-                    val fileUris = getFileUrisFromFileDirItems(arrayListOf(fileDirItem))
+                    val fileUris = getFileUrisFromFileDirItems(arrayListOf(fileDirItem)).second
                     deleteSDK30Uris(fileUris) { success ->
                         runOnUiThread {
                             callback?.invoke(success)
@@ -806,7 +806,7 @@ fun BaseSimpleActivity.renameFile(
                 if (isRenamingMultipleFiles) {
                     callback?.invoke(false, true)
                 } else {
-                    val fileUris = getFileUrisFromFileDirItems(arrayListOf(File(oldPath).toFileDirItem(this)))
+                    val fileUris = getFileUrisFromFileDirItems(arrayListOf(File(oldPath).toFileDirItem(this))).second
                     updateSDK30Uris(fileUris) { success ->
                         if (success) {
                             val values = ContentValues().apply {

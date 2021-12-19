@@ -926,21 +926,26 @@ private val physicalPaths = arrayListOf(
     "/storage/usbdisk2"
 )
 
-fun Context.getFileUrisFromFileDirItems(fileDirItems: List<FileDirItem>): ArrayList<Uri> {
+// Convert paths like /storage/emulated/0/Pictures/Screenshots/first.jpg to content://media/external/images/media/131799
+// so that we can refer to the file in the MediaStore.
+// If we found no mediastore uri for a given file, do not return its path either to avoid some mismatching
+fun Context.getFileUrisFromFileDirItems(fileDirItems: List<FileDirItem>): Pair<ArrayList<String>, ArrayList<Uri>> {
     val fileUris = ArrayList<Uri>()
+    val successfulFilePaths = ArrayList<String>()
     val allIds = getMediaStoreIds(this)
-    val filePaths = fileDirItems.map { it.path.lowercase(Locale.getDefault()) }
+    val filePaths = fileDirItems.map { it.path }
     filePaths.forEach { path ->
         for ((filePath, mediaStoreId) in allIds) {
-            if (filePath.lowercase() == path) {
+            if (filePath.lowercase() == path.lowercase()) {
                 val baseUri = getFileUri(filePath)
                 val uri = ContentUris.withAppendedId(baseUri, mediaStoreId)
                 fileUris.add(uri)
+                successfulFilePaths.add(path)
             }
         }
     }
 
-    return fileUris
+    return Pair(successfulFilePaths, fileUris)
 }
 
 fun getMediaStoreIds(context: Context): HashMap<String, Long> {

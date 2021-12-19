@@ -106,12 +106,14 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
 
     private fun renameAllFiles(paths: List<String>, appendString: Boolean, stringToAdd: String, callback: (success: Boolean) -> Unit) {
         val fileDirItems = paths.map { File(it).toFileDirItem(context) }
-        val uris = context.getFileUrisFromFileDirItems(fileDirItems)
+        val uriPairs = context.getFileUrisFromFileDirItems(fileDirItems)
+        val validPaths = uriPairs.first
+        val uris = uriPairs.second
         activity?.updateSDK30Uris(uris) { success ->
             if (success) {
                 try {
                     uris.forEachIndexed { index, uri ->
-                        val path = paths[index]
+                        val path = validPaths[index]
 
                         val fullName = path.getFilenameFromPath()
                         var dotAt = fullName.lastIndexOf(".")
