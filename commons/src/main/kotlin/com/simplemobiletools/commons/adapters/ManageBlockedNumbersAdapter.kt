@@ -23,7 +23,7 @@ class ManageBlockedNumbersAdapter(
 
     override fun getActionMenuId() = R.menu.cab_blocked_numbers
 
-    override fun onContextViewCreated(view: BottomActionMenuView) {
+    override fun onBottomActionMenuCreated(view: BottomActionMenuView) {
         view.toggleItemVisibility(R.id.cab_copy_number, isOneItemSelected())
     }
 

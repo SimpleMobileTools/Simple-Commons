@@ -35,7 +35,7 @@ class FilepickerFavoritesAdapter(
 
     override fun getItemCount() = paths.size
 
-    override fun onContextViewCreated(view: BottomActionMenuView) {}
+    override fun onBottomActionMenuCreated(view: BottomActionMenuView) {}
 
     override fun actionItemPressed(id: Int) {}
 

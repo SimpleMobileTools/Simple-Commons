@@ -55,7 +55,7 @@ class FilepickerItemsAdapter(
 
     override fun getItemCount() = fileDirItems.size
 
-    override fun onContextViewCreated(view: BottomActionMenuView) {}
+    override fun onBottomActionMenuCreated(view: BottomActionMenuView) {}
 
     override fun actionItemPressed(id: Int) {}
 

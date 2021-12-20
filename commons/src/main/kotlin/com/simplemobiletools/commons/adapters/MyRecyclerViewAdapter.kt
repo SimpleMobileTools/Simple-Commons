@@ -44,7 +44,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     abstract fun getActionMenuId(): Int
 
-    abstract fun onContextViewCreated(view: BottomActionMenuView)
+    abstract fun onBottomActionMenuCreated(view: BottomActionMenuView)
 
     abstract fun actionItemPressed(id: Int)
 
@@ -63,7 +63,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     init {
         contextCallback = object : BottomActionMenuCallback {
             override fun onViewCreated(view: BottomActionMenuView) {
-                onContextViewCreated(view)
+                onBottomActionMenuCreated(view)
             }
 
             override fun onItemClicked(item: BottomActionMenuItem) {
