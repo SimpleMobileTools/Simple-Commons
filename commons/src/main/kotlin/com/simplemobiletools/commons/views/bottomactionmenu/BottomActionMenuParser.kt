@@ -1,4 +1,4 @@
-package com.simplemobiletools.commons.views.contextview
+package com.simplemobiletools.commons.views.bottomactionmenu
 
 import android.content.Context
 import android.util.AttributeSet
@@ -8,14 +8,14 @@ import android.view.View
 import com.simplemobiletools.commons.R
 import org.xmlpull.v1.XmlPullParser
 
-internal class ContextViewMenuParser(private val context: Context) {
+internal class BottomActionMenuParser(private val context: Context) {
     companion object {
         private const val NO_TEXT = ""
         private const val MENU_TAG = "menu"
         private const val MENU_ITEM_TAG = "item"
     }
 
-    fun inflate(menuId: Int): List<ContextViewItem> {
+    fun inflate(menuId: Int): List<BottomActionMenuItem> {
         val parser = context.resources.getLayout(menuId)
         parser.use {
             val attrs = Xml.asAttributeSet(parser)
@@ -23,8 +23,8 @@ internal class ContextViewMenuParser(private val context: Context) {
         }
     }
 
-    private fun readContextItems(parser: XmlPullParser, attrs: AttributeSet): List<ContextViewItem> {
-        val items = mutableListOf<ContextViewItem>()
+    private fun readContextItems(parser: XmlPullParser, attrs: AttributeSet): List<BottomActionMenuItem> {
+        val items = mutableListOf<BottomActionMenuItem>()
         var eventType = parser.eventType
         var tagName: String
 
@@ -65,7 +65,7 @@ internal class ContextViewMenuParser(private val context: Context) {
         return items
     }
 
-    private fun readContextViewItem(parser: XmlPullParser, attrs: AttributeSet): ContextViewItem {
+    private fun readContextViewItem(parser: XmlPullParser, attrs: AttributeSet): BottomActionMenuItem {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ContextViewItem)
         val id = typedArray.getResourceId(R.styleable.ContextViewItem_android_id, View.NO_ID)
         val text = typedArray.getString(R.styleable.ContextViewItem_android_title) ?: NO_TEXT
@@ -74,6 +74,6 @@ internal class ContextViewMenuParser(private val context: Context) {
         val visible = typedArray.getBoolean(R.styleable.ContextViewItem_android_visible, true)
         typedArray.recycle()
         parser.require(XmlPullParser.START_TAG, null, MENU_ITEM_TAG)
-        return ContextViewItem(id, text, iconId, showAsAction == MenuItem.SHOW_AS_ACTION_ALWAYS || showAsAction == MenuItem.SHOW_AS_ACTION_IF_ROOM, visible)
+        return BottomActionMenuItem(id, text, iconId, showAsAction == MenuItem.SHOW_AS_ACTION_ALWAYS || showAsAction == MenuItem.SHOW_AS_ACTION_IF_ROOM, visible)
     }
 }

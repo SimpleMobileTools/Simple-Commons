@@ -1,4 +1,4 @@
-package com.simplemobiletools.commons.views.contextview
+package com.simplemobiletools.commons.views.bottomactionmenu
 
 import android.content.Context
 import android.graphics.Rect
@@ -13,7 +13,7 @@ import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
 import kotlinx.android.synthetic.main.item_action_mode_popup.view.*
 import kotlin.math.ceil
 
-class ContextViewItemPopup(private val context: Context, private val items: List<ContextViewItem>, private val onSelect: (ContextViewItem) -> Unit) {
+class BottomActionMenuItemPopup(private val context: Context, private val items: List<BottomActionMenuItem>, private val onSelect: (BottomActionMenuItem) -> Unit) {
 
     private val popup = PopupWindow(context, null, android.R.attr.popupMenuStyle)
     private var anchorView: View? = null
@@ -30,7 +30,7 @@ class ContextViewItemPopup(private val context: Context, private val items: List
     private val popupPaddingTop: Int
     private val dropDownGravity: Int = Gravity.TOP or Gravity.END
 
-    private val popupListAdapter = object : ArrayAdapter<ContextViewItem>(context, R.layout.item_action_mode_popup, items) {
+    private val popupListAdapter = object : ArrayAdapter<BottomActionMenuItem>(context, R.layout.item_action_mode_popup, items) {
         override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
             var view = convertView
             if (view == null) {

@@ -1,4 +1,4 @@
-package com.simplemobiletools.commons.views.contextview
+package com.simplemobiletools.commons.views.bottomactionmenu
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -21,7 +21,7 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.isRPlus
 
 
-class ContextView : LinearLayout {
+class BottomActionMenuView : LinearLayout {
 
     companion object {
         private const val ENTER_ANIMATION_DURATION = 225
@@ -35,11 +35,11 @@ class ContextView : LinearLayout {
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
 
     private val inflater = LayoutInflater.from(context)
-    private val itemsLookup = LinkedHashMap<Int, ContextViewItem>()
-    private val items: List<ContextViewItem>
-        get() = itemsLookup.values.toList().sortedWith(compareBy<ContextViewItem> { it.showAsAction }.thenBy { it.icon == View.NO_ID }).filter { it.isVisible }
+    private val itemsLookup = LinkedHashMap<Int, BottomActionMenuItem>()
+    private val items: List<BottomActionMenuItem>
+        get() = itemsLookup.values.toList().sortedWith(compareBy<BottomActionMenuItem> { it.showAsAction }.thenBy { it.icon == View.NO_ID }).filter { it.isVisible }
     private var currentAnimator: ViewPropertyAnimator? = null
-    private var callback: ContextViewCallback? = null
+    private var callback: BottomActionMenuCallback? = null
 
     init {
         orientation = HORIZONTAL
@@ -53,7 +53,7 @@ class ContextView : LinearLayout {
         minimumHeight = defaultHeight
     }
 
-    fun setCallback(listener: ContextViewCallback?) {
+    fun setCallback(listener: BottomActionMenuCallback?) {
         this.callback = listener
     }
 
@@ -101,18 +101,18 @@ class ContextView : LinearLayout {
 
     fun createFromMenu(@MenuRes menuResId: Int) {
         if (menuResId != View.NO_ID) {
-            val menuParser = ContextViewMenuParser(context)
+            val menuParser = BottomActionMenuParser(context)
             val items = menuParser.inflate(menuResId)
             setup(items)
         }
     }
 
-    fun setup(items: List<ContextViewItem>) {
+    fun setup(items: List<BottomActionMenuItem>) {
         items.forEach { itemsLookup[it.id] = it }
         init()
     }
 
-    fun add(item: ContextViewItem) {
+    fun add(item: BottomActionMenuItem) {
         setItem(item)
     }
 
@@ -135,7 +135,7 @@ class ContextView : LinearLayout {
         setItem(item?.copy(title = title))
     }
 
-    private fun setItem(item: ContextViewItem?) {
+    private fun setItem(item: BottomActionMenuItem?) {
         item?.let {
             itemsLookup[item.id] = item
             init()
@@ -178,7 +178,7 @@ class ContextView : LinearLayout {
         return result - 1
     }
 
-    private fun drawNormalItem(item: ContextViewItem) {
+    private fun drawNormalItem(item: BottomActionMenuItem) {
         (inflater.inflate(R.layout.item_action_mode, this, false) as ImageView).apply {
             setupItem(item)
             setOnClickListener {
@@ -192,7 +192,7 @@ class ContextView : LinearLayout {
         }
     }
 
-    private fun drawOverflowItem(overFlowItems: List<ContextViewItem>) {
+    private fun drawOverflowItem(overFlowItems: List<BottomActionMenuItem>) {
         (inflater.inflate(R.layout.item_action_mode, this, false) as ImageView).apply {
             setImageResource(R.drawable.ic_three_dots_vector)
             val contentDesc = context.getString(R.string.more_info)
@@ -210,7 +210,7 @@ class ContextView : LinearLayout {
         }
     }
 
-    private fun ImageView.setupItem(item: ContextViewItem) {
+    private fun ImageView.setupItem(item: BottomActionMenuItem) {
         id = item.id
         contentDescription = item.title
         if (item.icon != View.NO_ID) {
@@ -220,8 +220,8 @@ class ContextView : LinearLayout {
         applyColorFilter(context.getAdjustedPrimaryColor())
     }
 
-    private fun getOverflowPopup(overFlowItems: List<ContextViewItem>): ContextViewItemPopup {
-        return ContextViewItemPopup(context, overFlowItems) {
+    private fun getOverflowPopup(overFlowItems: List<BottomActionMenuItem>): BottomActionMenuItemPopup {
+        return BottomActionMenuItemPopup(context, overFlowItems) {
             callback?.onItemClicked(it)
         }
     }

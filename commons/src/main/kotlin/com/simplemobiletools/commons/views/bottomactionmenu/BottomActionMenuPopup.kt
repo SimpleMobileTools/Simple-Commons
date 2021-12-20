@@ -1,4 +1,4 @@
-package com.simplemobiletools.commons.views.contextview
+package com.simplemobiletools.commons.views.bottomactionmenu
 
 import android.view.Gravity
 import android.view.ViewGroup
@@ -11,14 +11,14 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 
 
-class ContextViewPopup(private val activity: BaseSimpleActivity, items: List<ContextViewItem>) {
-    private val contextView = ContextView(activity)
+class BottomActionMenuPopup(private val activity: BaseSimpleActivity, items: List<BottomActionMenuItem>) {
+    private val contextView = BottomActionMenuView(activity)
     private val popup = PopupWindow(activity, null, android.R.attr.popupMenuStyle)
     private var floatingActionButton: FloatingActionButton? = null
-    private var callback: ContextViewCallback? = null
+    private var callback: BottomActionMenuCallback? = null
 
 
-    constructor(activity: BaseSimpleActivity, @MenuRes menuResId: Int) : this(activity, ContextViewMenuParser(activity).inflate(menuResId))
+    constructor(activity: BaseSimpleActivity, @MenuRes menuResId: Int) : this(activity, BottomActionMenuParser(activity).inflate(menuResId))
 
     init {
         popup.contentView = contextView
@@ -33,7 +33,7 @@ class ContextViewPopup(private val activity: BaseSimpleActivity, items: List<Con
         contextView.setup(items)
     }
 
-    fun show(callback: ContextViewCallback?, hideFab: Boolean = true) {
+    fun show(callback: BottomActionMenuCallback?, hideFab: Boolean = true) {
         this.callback = callback
         callback?.onCreateContextView(contextView)
         if (hideFab) {
