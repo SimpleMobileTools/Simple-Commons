@@ -55,7 +55,7 @@ internal class BottomActionMenuParser(private val context: Context) {
 
             if (eventType == XmlPullParser.START_TAG) {
                 when (tagName) {
-                    MENU_ITEM_TAG -> items.add(readContextViewItem(parser, attrs))
+                    MENU_ITEM_TAG -> items.add(readBottomActionMenuItem(parser, attrs))
                 }
             }
 
@@ -65,13 +65,13 @@ internal class BottomActionMenuParser(private val context: Context) {
         return items
     }
 
-    private fun readContextViewItem(parser: XmlPullParser, attrs: AttributeSet): BottomActionMenuItem {
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ContextViewItem)
-        val id = typedArray.getResourceId(R.styleable.ContextViewItem_android_id, View.NO_ID)
-        val text = typedArray.getString(R.styleable.ContextViewItem_android_title) ?: NO_TEXT
-        val iconId = typedArray.getResourceId(R.styleable.ContextViewItem_android_icon, View.NO_ID)
-        val showAsAction = typedArray.getInt(R.styleable.ContextViewItem_showAsAction, -1)
-        val visible = typedArray.getBoolean(R.styleable.ContextViewItem_android_visible, true)
+    private fun readBottomActionMenuItem(parser: XmlPullParser, attrs: AttributeSet): BottomActionMenuItem {
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.BottomActionMenuItem)
+        val id = typedArray.getResourceId(R.styleable.BottomActionMenuItem_android_id, View.NO_ID)
+        val text = typedArray.getString(R.styleable.BottomActionMenuItem_android_title) ?: NO_TEXT
+        val iconId = typedArray.getResourceId(R.styleable.BottomActionMenuItem_android_icon, View.NO_ID)
+        val showAsAction = typedArray.getInt(R.styleable.BottomActionMenuItem_showAsAction, -1)
+        val visible = typedArray.getBoolean(R.styleable.BottomActionMenuItem_android_visible, true)
         typedArray.recycle()
         parser.require(XmlPullParser.START_TAG, null, MENU_ITEM_TAG)
         return BottomActionMenuItem(id, text, iconId, showAsAction == MenuItem.SHOW_AS_ACTION_ALWAYS || showAsAction == MenuItem.SHOW_AS_ACTION_IF_ROOM, visible)

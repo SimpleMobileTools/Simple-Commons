@@ -12,7 +12,7 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 
 
 class BottomActionMenuPopup(private val activity: BaseSimpleActivity, items: List<BottomActionMenuItem>) {
-    private val contextView = BottomActionMenuView(activity)
+    private val bottomActionMenuView = BottomActionMenuView(activity)
     private val popup = PopupWindow(activity, null, android.R.attr.popupMenuStyle)
     private var floatingActionButton: FloatingActionButton? = null
     private var callback: BottomActionMenuCallback? = null
@@ -21,7 +21,7 @@ class BottomActionMenuPopup(private val activity: BaseSimpleActivity, items: Lis
     constructor(activity: BaseSimpleActivity, @MenuRes menuResId: Int) : this(activity, BottomActionMenuParser(activity).inflate(menuResId))
 
     init {
-        popup.contentView = contextView
+        popup.contentView = bottomActionMenuView
         popup.width = ViewGroup.LayoutParams.MATCH_PARENT
         popup.height = ViewGroup.LayoutParams.WRAP_CONTENT
         popup.isOutsideTouchable = false
@@ -30,19 +30,19 @@ class BottomActionMenuPopup(private val activity: BaseSimpleActivity, items: Lis
             floatingActionButton?.show()
         }
         PopupWindowCompat.setWindowLayoutType(popup, WindowManager.LayoutParams.TYPE_APPLICATION)
-        contextView.setup(items)
+        bottomActionMenuView.setup(items)
     }
 
     fun show(callback: BottomActionMenuCallback?, hideFab: Boolean = true) {
         this.callback = callback
-        callback?.onViewCreated(contextView)
+        callback?.onViewCreated(bottomActionMenuView)
         if (hideFab) {
             floatingActionButton?.hide() ?: findFABAndHide()
         }
-        contextView.setCallback(callback)
-        contextView.sendAccessibilityEvent(AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED)
-        popup.showAtLocation(contextView, Gravity.BOTTOM or Gravity.FILL_HORIZONTAL, 0, 0)
-        contextView.show()
+        bottomActionMenuView.setCallback(callback)
+        bottomActionMenuView.sendAccessibilityEvent(AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED)
+        popup.showAtLocation(bottomActionMenuView, Gravity.BOTTOM or Gravity.FILL_HORIZONTAL, 0, 0)
+        bottomActionMenuView.show()
     }
 
     fun dismiss() {
@@ -69,6 +69,6 @@ class BottomActionMenuPopup(private val activity: BaseSimpleActivity, items: Lis
     }
 
     fun invalidate() {
-        callback?.onViewCreated(contextView)
+        callback?.onViewCreated(bottomActionMenuView)
     }
 }
