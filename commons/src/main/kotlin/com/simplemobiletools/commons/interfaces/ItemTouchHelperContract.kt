@@ -1,11 +1,11 @@
 package com.simplemobiletools.commons.interfaces
 
-import androidx.recyclerview.widget.RecyclerView
+import com.simplemobiletools.commons.adapters.MyRecyclerViewAdapter
 
 interface ItemTouchHelperContract {
     fun onRowMoved(fromPosition: Int, toPosition: Int)
 
-    fun onRowSelected(myViewHolder: RecyclerView.ViewHolder?)
+    fun onRowSelected(myViewHolder: MyRecyclerViewAdapter.ViewHolder?)
 
-    fun onRowClear(myViewHolder: RecyclerView.ViewHolder?)
+    fun onRowClear(myViewHolder: MyRecyclerViewAdapter.ViewHolder?)
 }

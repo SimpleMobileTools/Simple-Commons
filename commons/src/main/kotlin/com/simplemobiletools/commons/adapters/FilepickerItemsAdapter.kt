@@ -19,6 +19,7 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.getFilePlaceholderDrawables
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.MyRecyclerView
+import com.simplemobiletools.commons.views.contextview.ContextView
 import kotlinx.android.synthetic.main.item_filepicker_list.view.*
 import java.util.*
 
@@ -55,7 +56,7 @@ class FilepickerItemsAdapter(
 
     override fun getItemCount() = fileDirItems.size
 
-    override fun prepareActionMode(menu: Menu) {}
+    override fun onContextViewCreated(view: ContextView) {}
 
     override fun actionItemPressed(id: Int) {}
 
@@ -66,8 +67,6 @@ class FilepickerItemsAdapter(
     override fun getItemKeyPosition(key: Int) = fileDirItems.indexOfFirst { it.path.hashCode() == key }
 
     override fun getItemSelectionKey(position: Int) = fileDirItems[position].path.hashCode()
-
-    override fun onActionModeCreated() {}
 
     override fun onActionModeDestroyed() {}
 

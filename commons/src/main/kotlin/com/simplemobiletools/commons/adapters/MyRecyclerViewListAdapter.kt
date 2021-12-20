@@ -18,6 +18,10 @@ import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
 import com.simplemobiletools.commons.extensions.getContrastColor
 import com.simplemobiletools.commons.interfaces.MyActionModeCallback
 import com.simplemobiletools.commons.views.MyRecyclerView
+import com.simplemobiletools.commons.views.contextview.ContextView
+import com.simplemobiletools.commons.views.contextview.ContextViewCallback
+import com.simplemobiletools.commons.views.contextview.ContextViewItem
+import com.simplemobiletools.commons.views.contextview.ContextViewPopup
 import java.util.*
 
 abstract class MyRecyclerViewListAdapter<T>(
@@ -39,13 +43,15 @@ abstract class MyRecyclerViewListAdapter<T>(
     protected var selectedKeys = LinkedHashSet<Int>()
     protected var positionOffset = 0
     protected var actMode: ActionMode? = null
+    protected var contextCallback: ContextViewCallback? = null
+    protected var contextPopup: ContextViewPopup? = null
 
     private var actBarTextView: TextView? = null
     private var lastLongPressedItem = -1
 
     abstract fun getActionMenuId(): Int
 
-    abstract fun prepareActionMode(menu: Menu)
+    abstract fun onContextViewCreated(view: ContextView)
 
     abstract fun actionItemPressed(id: Int)
 
@@ -57,24 +63,27 @@ abstract class MyRecyclerViewListAdapter<T>(
 
     abstract fun getItemKeyPosition(key: Int): Int
 
-    abstract fun onActionModeCreated()
-
     abstract fun onActionModeDestroyed()
 
     protected fun isOneItemSelected() = selectedKeys.size == 1
 
     init {
+        contextCallback = object : ContextViewCallback {
+            override fun onCreateContextView(view: ContextView) {
+                onContextViewCreated(view)
+            }
+
+            override fun onItemClicked(item: ContextViewItem) {
+                actionItemPressed(item.id)
+            }
+        }
+
         actModeCallback = object : MyActionModeCallback() {
             override fun onActionItemClicked(mode: ActionMode, item: MenuItem): Boolean {
-                actionItemPressed(item.itemId)
-                return true
+                return false
             }
 
             override fun onCreateActionMode(actionMode: ActionMode, menu: Menu?): Boolean {
-                if (getActionMenuId() == 0) {
-                    return true
-                }
-
                 isSelectable = true
                 actMode = actionMode
                 actBarTextView = layoutInflater.inflate(R.layout.actionbar_title, null) as TextView
@@ -87,18 +96,16 @@ abstract class MyRecyclerViewListAdapter<T>(
                         selectAll()
                     }
                 }
-                activity.menuInflater.inflate(getActionMenuId(), menu)
-                onActionModeCreated()
                 return true
             }
 
             override fun onPrepareActionMode(actionMode: ActionMode, menu: Menu): Boolean {
-                prepareActionMode(menu)
-                return true
+                return false
             }
 
             override fun onDestroyActionMode(actionMode: ActionMode) {
                 isSelectable = false
+                contextPopup?.dismiss()
                 (selectedKeys.clone() as HashSet<Int>).forEach {
                     val position = getItemKeyPosition(it)
                     if (position != -1) {
@@ -150,6 +157,7 @@ abstract class MyRecyclerViewListAdapter<T>(
         if (oldTitle != newTitle) {
             actBarTextView?.text = newTitle
             actMode?.invalidate()
+            contextPopup?.invalidate()
         }
     }
 
@@ -336,6 +344,7 @@ abstract class MyRecyclerViewListAdapter<T>(
             val currentPosition = adapterPosition - positionOffset
             if (!actModeCallback.isSelectable) {
                 activity.startSupportActionMode(actModeCallback)
+                contextPopup = ContextViewPopup(activity, getActionMenuId()).also { it.show(contextCallback) }
             }
 
             toggleItemSelection(true, currentPosition, true)

@@ -10,6 +10,7 @@ import com.simplemobiletools.commons.extensions.deleteBlockedNumber
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.BlockedNumber
 import com.simplemobiletools.commons.views.MyRecyclerView
+import com.simplemobiletools.commons.views.contextview.ContextView
 import kotlinx.android.synthetic.main.item_manage_blocked_number.view.*
 import java.util.*
 
@@ -23,10 +24,8 @@ class ManageBlockedNumbersAdapter(
 
     override fun getActionMenuId() = R.menu.cab_blocked_numbers
 
-    override fun prepareActionMode(menu: Menu) {
-        menu.apply {
-            findItem(R.id.cab_copy_number).isVisible = isOneItemSelected()
-        }
+    override fun onContextViewCreated(view: ContextView) {
+        view.toggleItemVisibility(R.id.cab_copy_number, isOneItemSelected())
     }
 
     override fun actionItemPressed(id: Int) {
@@ -43,8 +42,6 @@ class ManageBlockedNumbersAdapter(
     override fun getItemSelectionKey(position: Int) = blockedNumbers.getOrNull(position)?.id?.toInt()
 
     override fun getItemKeyPosition(key: Int) = blockedNumbers.indexOfFirst { it.id.toInt() == key }
-
-    override fun onActionModeCreated() {}
 
     override fun onActionModeDestroyed() {}
 

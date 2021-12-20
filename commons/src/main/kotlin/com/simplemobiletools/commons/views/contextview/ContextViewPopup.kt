@@ -15,10 +15,10 @@ class ContextViewPopup(private val activity: BaseSimpleActivity, items: List<Con
     private val contextView = ContextView(activity)
     private val popup = PopupWindow(activity, null, android.R.attr.popupMenuStyle)
     private var floatingActionButton: FloatingActionButton? = null
-    private var callback:ContextViewCallback? = null
+    private var callback: ContextViewCallback? = null
 
 
-    constructor(activity: BaseSimpleActivity, @MenuRes menuResId:Int): this(activity, ContextViewMenuParser(activity).inflate(menuResId))
+    constructor(activity: BaseSimpleActivity, @MenuRes menuResId: Int) : this(activity, ContextViewMenuParser(activity).inflate(menuResId))
 
     init {
         popup.contentView = contextView
@@ -33,14 +33,16 @@ class ContextViewPopup(private val activity: BaseSimpleActivity, items: List<Con
         contextView.setup(items)
     }
 
-    fun show(callback: ContextViewCallback?) {
+    fun show(callback: ContextViewCallback?, hideFab: Boolean = true) {
         this.callback = callback
         callback?.onCreateContextView(contextView)
-        floatingActionButton?.hide() ?: findFABAndHide()
+        if (hideFab) {
+            floatingActionButton?.hide() ?: findFABAndHide()
+        }
         contextView.setCallback(callback)
-        contextView.show()
         contextView.sendAccessibilityEvent(AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED)
         popup.showAtLocation(contextView, Gravity.BOTTOM or Gravity.FILL_HORIZONTAL, 0, 0)
+        contextView.show()
     }
 
     fun dismiss() {
@@ -67,7 +69,6 @@ class ContextViewPopup(private val activity: BaseSimpleActivity, items: List<Con
     }
 
     fun invalidate() {
-        contextView.invalidate()
         callback?.onCreateContextView(contextView)
     }
 }
