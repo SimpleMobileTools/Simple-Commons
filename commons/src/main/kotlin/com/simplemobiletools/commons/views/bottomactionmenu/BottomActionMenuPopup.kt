@@ -26,7 +26,7 @@ class BottomActionMenuPopup(private val activity: BaseSimpleActivity, items: Lis
         popup.height = ViewGroup.LayoutParams.WRAP_CONTENT
         popup.isOutsideTouchable = false
         popup.setOnDismissListener {
-            callback?.onDestroyContextView()
+            callback?.onViewDestroyed()
             floatingActionButton?.show()
         }
         PopupWindowCompat.setWindowLayoutType(popup, WindowManager.LayoutParams.TYPE_APPLICATION)
@@ -35,7 +35,7 @@ class BottomActionMenuPopup(private val activity: BaseSimpleActivity, items: Lis
 
     fun show(callback: BottomActionMenuCallback?, hideFab: Boolean = true) {
         this.callback = callback
-        callback?.onCreateContextView(contextView)
+        callback?.onViewCreated(contextView)
         if (hideFab) {
             floatingActionButton?.hide() ?: findFABAndHide()
         }
@@ -69,6 +69,6 @@ class BottomActionMenuPopup(private val activity: BaseSimpleActivity, items: Lis
     }
 
     fun invalidate() {
-        callback?.onCreateContextView(contextView)
+        callback?.onViewCreated(contextView)
     }
 }

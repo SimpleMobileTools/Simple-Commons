@@ -69,7 +69,7 @@ abstract class MyRecyclerViewListAdapter<T>(
 
     init {
         contextCallback = object : BottomActionMenuCallback {
-            override fun onCreateContextView(view: BottomActionMenuView) {
+            override fun onViewCreated(view: BottomActionMenuView) {
                 onContextViewCreated(view)
             }
 

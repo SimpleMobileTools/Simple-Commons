@@ -62,7 +62,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     init {
         contextCallback = object : BottomActionMenuCallback {
-            override fun onCreateContextView(view: BottomActionMenuView) {
+            override fun onViewCreated(view: BottomActionMenuView) {
                 onContextViewCreated(view)
             }
 
