@@ -465,8 +465,8 @@
         <item quantity="other">%d päeva võrra</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one">%d nädala võrra</item>
+        <item quantity="other">%d nädala võrra</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d kuu võrra</item>
@@ -544,22 +544,22 @@
     <string name="scrolling">Scrolling</string>
     <string name="file_operations">Tegevused failidega</string>
     <string name="recycle_bin">Prügikast</string>
-    <string name="saving_label">Saving</string>
-    <string name="startup">Startup</string>
+    <string name="saving_label">Salvestame</string>
+    <string name="startup">Käivitamine</string>
     <string name="text">Text</string>
     <string name="migrating">Migrating</string>
-    <string name="quality">Quality</string>
-    <string name="main_screen">Main screen</string>
-    <string name="thumbnails">Thumbnails</string>
+    <string name="quality">Kvaliteet</string>
+    <string name="main_screen">Põhivaade</string>
+    <string name="thumbnails">Pisipildid</string>
     <string name="list_view">List view</string>
     <!-- Default tab to open -->
-    <string name="manage_shown_tabs">Manage shown tabs</string>
-    <string name="default_tab_to_open">Tab to open at app start</string>
+    <string name="manage_shown_tabs">Halda näidatavaid vahekaarte</string>
+    <string name="default_tab_to_open">Rakenduse avamisel kuvatav vahekaart</string>
     <string name="contacts_tab">Contacts</string>
     <string name="favorites_tab">Lemmikud</string>
     <string name="call_history_tab">Kõnede ajalugu</string>
     <string name="groups_tab">Rühmad</string>
-    <string name="last_used_tab">Last used one</string>
+    <string name="last_used_tab">Viimatikasutatu</string>
     <string name="files_tab">Files</string>
     <string name="recent_files_tab">Recent files</string>
     <!-- Recycle Bin -->
@@ -568,14 +568,14 @@
     <string name="restore_all_files">Taasta kõik failid</string>
     <string name="recycle_bin_emptied">Prügikasti tühjendamine õnnestus</string>
     <string name="files_restored_successfully">Failide taastamine õnnestus</string>
-    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
+    <string name="empty_recycle_bin_confirmation">Kas oled kindel, et soovid prügikasti tühjendada\? Failid lähevad lõplikult kaduma.</string>
     <string name="recycle_bin_empty">Prügikast on tühi</string>
-    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
+    <string name="moving_recycle_bin_items_disabled">Prügikastis olevaid faile ei saa mujale tõsta, palun kasuta taastamist</string>
     <string name="show_the_recycle_bin">Näita prügikasti</string>
     <string name="hide_the_recycle_bin">Peida prügikast</string>
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Moving %d item into the Recycle Bin</item>
-        <item quantity="other">Moving %d items into the Recycle Bin</item>
+        <item quantity="one">Viskan %d faili prügikasti</item>
+        <item quantity="other">Viskan %d faili prügikasti</item>
     </plurals>
     <!-- Import / Export -->
     <string name="importing">Importing…</string>
@@ -644,22 +644,22 @@
     <string name="upgrade_to_pro_long">Seda rakenduse versiooni me enam ei uuenda. Täiendused ja parandused leiad nüüd Pro-versioonist.</string>
     <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
     <string name="it_is_free">It is free till: %s. If you download it till then, you will be able to use it for free forever.</string>
-    <string name="more_info">More info</string>
-    <string name="upgrade">Upgrade</string>
+    <string name="more_info">Lisateave</string>
+    <string name="upgrade">Uuenda</string>
     <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
     <!-- About -->
-    <string name="about">About</string>
-    <string name="website_label">For the source codes visit</string>
-    <string name="email_label">Send your feedback or suggestions to</string>
-    <string name="upgrade_to_pro">Upgrade to Pro</string>
-    <string name="more_apps">More apps</string>
-    <string name="more_apps_from_us">More apps from us</string>
-    <string name="invite_friends">Invite friends</string>
-    <string name="share_text">Hey, come check out %1$s at %2$s</string>
-    <string name="invite_via">Invite via</string>
+    <string name="about">Rakenduse teave</string>
+    <string name="website_label">Lähtekoodi leiad siit</string>
+    <string name="email_label">Oma tagasiside ja ettepanekud palun saada e-posti aadressile</string>
+    <string name="upgrade_to_pro">Võta kasutusele Pro versioon</string>
+    <string name="more_apps">Vaata kõiki meie rakendusi</string>
+    <string name="more_apps_from_us">Vaata kõiki meie rakendusi</string>
+    <string name="invite_friends">Kutsu sõpru kasutama seda rakendust</string>
+    <string name="share_text">Hei, palun vaata, kas sulle meeldiks selline rakendus - %1$s, mille leiad %2$s saidist</string>
+    <string name="invite_via">Saada kutse rakendusega</string>
     <string name="rate_us">Rate us</string>
     <string name="rate">Rate</string>
-    <string name="donate">Donate</string>
+    <string name="donate">Toeta meid</string>
     <string name="donate_underlined"><u>Donate</u></string>
     <string name="follow_us">Follow us</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
@@ -740,15 +740,11 @@
     <string name="sms_messenger_short">SMS Messenger</string>
     <string name="thank_you_short">Thank You</string>
     <string name="voice_recorder_short">Voice Recorder</string>
-    <string name="sideloaded_app">
-        <![CDATA[
-            It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
-        ]]>
-    </string>
+    <string name="sideloaded_app">Tundub sinu hetkel kasutatav rakenduse variant on vigane. Palun laadi algupärane versioon &lt;a href=%s&gt;siit&lt;/a&gt;.</string>
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Frequently asked questions</string>
-    <string name="before_asking_question">Before you ask a question, please first read the</string>
-    <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
+    <string name="frequently_asked_questions">Korduma kippuvad küsimused</string>
+    <string name="before_asking_question">Enne küsimuse kirjutamist palun loe esmalt järgnevat lehte</string>
+    <string name="faq_1_title_commons">Kuidas ma ei näe seda rakenduste vidinat kõikide vidinate loendis\?</string>
     <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
         in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
     <string name="faq_2_title_commons">I want to support you, but I cannot donate money. Is there anything else I can do?</string>
@@ -844,20 +840,20 @@
     <string name="why_upgrade_improved_design">Improved design</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
-    <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
-    <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
-    <string name="why_upgrade_folder_locking">Individual folder locking</string>
-    <string name="why_upgrade_printing_support">Printing support</string>
+    <string name="why_upgrade_heic_support">HEIC/HEIF failide tugi</string>
+    <string name="why_upgrade_batch_renaming">Mitme faili nime korraga muutmine</string>
+    <string name="why_upgrade_folder_locking">Üksikute kaustade lukustamine</string>
+    <string name="why_upgrade_printing_support">Trükkimise tugi</string>
     <!-- Calendar Pro -->
-    <string name="why_upgrade_time_zone_support">Time zone support</string>
-    <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
-    <string name="why_upgrade_easy_event_importing">Easy event importing</string>
-    <string name="why_upgrade_new_widgets">New widgets</string>
+    <string name="why_upgrade_time_zone_support">Ajavööndite tugi</string>
+    <string name="why_upgrade_attendees_emails">Osalejad ja e-posti teel saadetavad meeldetuletused</string>
+    <string name="why_upgrade_easy_event_importing">Lihtne sündmuste importimine</string>
+    <string name="why_upgrade_new_widgets">Uued vidinad</string>
     <!-- Contacts Pro -->
-    <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
-    <string name="why_upgrade_font_size_customization">Font size customization</string>
-    <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
-    <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
+    <string name="why_upgrade_duplicate_contact_merging">Täiustatud topeltkontaktide ühendamine</string>
+    <string name="why_upgrade_font_size_customization">Kirjasuuruse kohandamine</string>
+    <string name="why_upgrade_private_contact_sharing">Valikuline privaatsete kontaktide jagamine meie rakenduste vahel</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Kohandatavad helinad kontaktidele</string>
     <string name="why_upgrade_contact_filtering">Contact filtering</string>
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Checklists</string>
