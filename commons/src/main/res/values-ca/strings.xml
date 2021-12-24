@@ -7,7 +7,7 @@
     <string name="save_as">Desa com a</string>
     <string name="file_saved">El fitxer s\'ha desat correctament</string>
     <string name="invalid_file_format">El format del fitxer no és vàlid</string>
-    <string name="out_of_memory_error">Error de manca de memòria</string>
+    <string name="out_of_memory_error">Error de memòria exhaurida</string>
     <string name="an_error_occurred">S\'ha produït un error: %s</string>
     <string name="open_with">Obre amb</string>
     <string name="edit_with">Edita amb</string>
@@ -27,7 +27,7 @@
     <string name="label">Etiqueta</string>
     <string name="transparent">Transparent</string>
     <string name="transparent_color">Color transparent</string>
-    <string name="select_a_different_color">Selecciona un color diferent</string>
+    <string name="select_a_different_color">Seleccioneu un color diferent</string>
     <string name="download">Descarrega</string>
     <string name="notification">Notificació</string>
     <string name="notifications">Notificacions</string>
@@ -38,7 +38,7 @@
     <string name="number">Número</string>
     <string name="no_contacts_found">No s\'ha trobat cap contacte</string>
     <string name="request_the_required_permissions">Sol·licita els permisos necessaris</string>
-    <string name="no_access_to_contacts">L\'aplicació no ha pogut accedir als teus contactes</string>
+    <string name="no_access_to_contacts">L\'aplicació no ha pogut accedir als vostres contactes</string>
     <string name="insert_text_here">Introdueix el text aquí</string>
     <string name="call_person">Truca a %s</string>
     <string name="zero">Zero</string>
@@ -58,17 +58,17 @@
     <string name="increase_column_count">Augmenta el nombre de columnes</string>
     <string name="reduce_column_count">Redueix el nombre de columnes</string>
     <string name="change_cover_image">Canvia la imatge de la portada</string>
-    <string name="select_photo">Selecciona la foto</string>
+    <string name="select_photo">Selecciona una foto</string>
     <!-- Blocked numbers -->
-    <string name="manage_blocked_numbers">Gestiona els números bloquejats</string>
-    <string name="not_blocking_anyone">No estàs bloquejant ningú.</string>
+    <string name="manage_blocked_numbers">Gestió dels números bloquejats</string>
+    <string name="not_blocking_anyone">No esteu bloquejant a ningú.</string>
     <string name="add_a_blocked_number">Afegeix un número bloquejat</string>
     <string name="block_number">Bloqueja el número</string>
     <string name="block_numbers">Bloqueja números</string>
     <string name="blocked_numbers">Números bloquejats</string>
     <string name="export_blocked_numbers">Exporta els números bloquejats</string>
-    <string name="import_blocked_numbers">Importa números bloquejats</string>
-    <string name="must_make_default_dialer">Cal fer que aquesta aplicació sigui l\'aplicació de predeterminada de marcatge per utilitzar els números bloquejats.</string>
+    <string name="import_blocked_numbers">Importa els números bloquejats</string>
+    <string name="must_make_default_dialer">Cal fer que aquesta aplicació sigui l\'aplicació predeterminada de marcatge per utilitzar els números bloquejats.</string>
     <string name="set_as_default">Estableix com a predeterminada</string>
     <string name="block_confirmation">Segur que voleu bloquejar «%s»\?</string>
     <!-- Favorites -->
@@ -78,7 +78,7 @@
     <string name="remove_from_favorites">Elimina dels preferits</string>
     <!-- Search -->
     <string name="search">Cerca</string>
-    <string name="type_2_characters">Escriu com a mínim 2 caràcters per iniciar la cerca.</string>
+    <string name="type_2_characters">Escriviu com a mínim 2 caràcters per iniciar la cerca.</string>
     <!-- Filters -->
     <string name="filter">Filtre</string>
     <string name="no_items_found">No s\'ha trobat cap element.</string>
@@ -120,12 +120,12 @@
     <!-- Copy / Move -->
     <string name="copy">Copia</string>
     <string name="move">Mou</string>
-    <string name="copy_move">Copia/Mou</string>
+    <string name="copy_move">Copia / Mou</string>
     <string name="copy_to">Copia a</string>
     <string name="move_to">Mou a</string>
     <string name="source">Origen</string>
     <string name="destination">Destinació</string>
-    <string name="select_destination">Selecciona la destinació</string>
+    <string name="select_destination">Selecció de la destinació</string>
     <string name="click_select_destination">Feu clic aquí per seleccionar la destinació</string>
     <string name="invalid_destination">No s\'ha pogut escriure a la destinació seleccionada</string>
     <string name="please_select_destination">Seleccioneu una destinació</string>
@@ -144,7 +144,7 @@
     <string name="saving">S\'està desant…</string>
     <string name="could_not_create_folder">No s\'ha pogut crear la carpeta %s</string>
     <string name="could_not_create_file">No s\'ha pogut crear el fitxer %s</string>
-    <string name="no_new_items">No s’ha trobat cap element nou</string>
+    <string name="no_new_items">No s\'ha trobat cap element nou</string>
     <string name="no_space">La destinació no té prou espai disponible.
 \nNecessari %1$s, disponible %2$s</string>
     <!-- Create new -->
@@ -170,10 +170,10 @@
     <string name="select_folder">Selecciona una carpeta</string>
     <string name="select_file">Seleccioneu un fitxer</string>
     <string name="confirm_storage_access_title">Confirma l\'accés a l\'emmagatzematge extern</string>
-    <string name="confirm_storage_access_text">Tria la carpeta superior de la targeta SD a la pantalla següent, per atorgar accés a escriptura</string>
-    <string name="confirm_storage_access_text_sd">Si no veus la targeta SD, prova això</string>
-    <string name="confirm_storage_access_android_text">Permet que l’aplicació accedeixi a l’emmagatzematge seleccionat a la pantalla següent prement «Utilitza aquesta carpeta» a la part inferior.</string>
-    <string name="confirm_selection">Confirma la selecció</string>
+    <string name="confirm_storage_access_text">Trieu la carpeta superior de la targeta SD a la pantalla següent, per atorgar accés d\'escriptura</string>
+    <string name="confirm_storage_access_text_sd">Si no veieu la targeta SD, proveu això</string>
+    <string name="confirm_storage_access_android_text">Permeteu que l\'aplicació accedeixi a l\'emmagatzematge seleccionat prement «Utilitza aquesta carpeta» a la part inferior de la pantalla següent.</string>
+    <string name="confirm_selection">Confirmeu la selecció</string>
     <plurals name="items">
         <item quantity="one">%d element</item>
         <item quantity="other">%d elements</item>
@@ -193,13 +193,13 @@
         <item quantity="other">%d contactes</item>
     </plurals>
     <!-- Storages -->
-    <string name="select_storage">Selecciona l\'emmagatzematge</string>
+    <string name="select_storage">Seleccioneu l\'emmagatzematge</string>
     <string name="internal">Intern</string>
     <string name="sd_card">Targeta SD</string>
     <string name="root">Arrel</string>
-    <string name="wrong_root_selected">S\'ha seleccionat una carpeta incorrecta, selecciona la carpeta principal de la targeta SD</string>
+    <string name="wrong_root_selected">S\'ha seleccionat una carpeta incorrecta, seleccioneu la carpeta principal de la targeta SD</string>
     <string name="sd_card_usb_same">Els camins de la targeta SD i del dispositiu USB no poden ser els mateixos</string>
-    <string name="app_on_sd_card">Sembla que l\'aplicació està instal·lada a una targeta SD, cosa que fa que els ginys de l\'aplicació no estiguin disponibles. No els veuràs ni a la llista de ginys disponibles. És una limitació del sistema, de manera que si voleu utilitzar els ginys, cal tornar a moure l\'aplicació a l\'emmagatzematge intern.</string>
+    <string name="app_on_sd_card">Sembla que l\'aplicació està instal·lada en una targeta SD, això fa que els ginys de l\'aplicació no estiguin disponibles. No els veureu a la llista de ginys disponibles. És una limitació del sistema, de manera que si voleu utilitzar els ginys, cal tornar a moure l\'aplicació a l\'emmagatzematge intern.</string>
     <!-- File properties -->
     <string name="properties">Propietats</string>
     <string name="path">Camí</string>
@@ -211,7 +211,7 @@
     <string name="artist">Artista</string>
     <string name="album">Àlbum</string>
     <string name="focal_length">Distància focal</string>
-    <string name="exposure_time">Temps d’exposició</string>
+    <string name="exposure_time">Temps d\'exposició</string>
     <string name="iso_speed">Velocitat ISO</string>
     <string name="f_number">Número F</string>
     <string name="camera">Càmera</string>
@@ -226,9 +226,9 @@
     <string name="accent_color_white">Color d\'accent del tema blanc</string>
     <string name="accent_color_black_and_white">Color d\'accent del tema blanc i negre</string>
     <string name="foreground_color">Color de primer pla</string>
-    <string name="app_icon_color">Color de la icona de l\'aplicació</string>
-    <string name="bottom_navigation_bar_color">Color de la barra de navegació inferior</string>
-    <string name="restore_defaults">Restaurar els valors predeterminats</string>
+    <string name="app_icon_color">Color de la icona d\'aplicació</string>
+    <string name="bottom_navigation_bar_color">Color de la barra inferior de navegació</string>
+    <string name="restore_defaults">Restaura els valors predeterminats</string>
     <string name="use_default">Utilitza el valor predeterminat</string>
     <string name="default_color">Predeterminat</string>
     <string name="change_color">Canvia el color</string>
@@ -237,13 +237,13 @@
     <string name="save">Desa</string>
     <string name="discard">Descarta</string>
     <string name="undo_changes">Desfés els canvis</string>
-    <string name="undo_changes_confirmation">Segur que vols desfer els canvis\?</string>
-    <string name="save_before_closing">Teniu canvis no desats. Vols desar abans de sortir\?</string>
+    <string name="undo_changes_confirmation">Segur que voleu desfer els canvis\?</string>
+    <string name="save_before_closing">Hi ha canvis no desats. Els voleu desar abans de sortir\?</string>
     <string name="apply_to_all_apps">Aplica els colors a totes les aplicacions Simple</string>
-    <string name="app_icon_color_warning">ADVERTÈNCIA: Alguns llançadors no gestionen correctament la personalització de la icona d\'aplicació. En cas que la icona desaparegui, proveu de llançar l\'aplicació mitjançant Google Play o algun giny, si està disponible. Un cop llançat, configureu la icona de color taronja per defecte #F57C00. És possible que calgui tornar a instal·lar l\'aplicació en el pitjor dels casos.</string>
-    <string name="share_colors_success">Colors actualitzats correctament. S’ha afegit un nou tema anomenat «Compartit». Fes -lo servir per actualitzar tots els colors de les aplicacions en el futur.</string>
+    <string name="app_icon_color_warning">ADVERTÈNCIA: Alguns llançadors no gestionen correctament la personalització de la icona d\'aplicació. En cas que la icona desaparegui, proveu de llançar l\'aplicació mitjançant Google Play o algun giny, si està disponible. Un cop llançat, configureu la icona de color taronja predeterminat #F57C00. És possible que calgui tornar a instal·lar l\'aplicació en el pitjor dels casos.</string>
+    <string name="share_colors_success">Colors actualitzats correctament. S\'ha afegit un tema nou anomenat «Compartit». Feu-lo servir per actualitzar tots els colors de l\'aplicació en el futur.</string>
     <string name="shared_theme_note">Tingueu en compte que tot i que utilitzeu la versió Pro de l\'aplicació, encara cal tenir Simple Tank you per motius tècnics. S\'ocupa de la sincronització del color.</string>
-    <string name="purchase_thank_you">Si us plau, compreu l\'aplicació &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; per desblocar aquesta funció i ajudar al desenvolupament. Gràcies!</string>
+    <string name="purchase_thank_you">Si us plau, compreu l\'aplicació &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; per desbloquejar aquesta funció i ajudar al desenvolupament. Gràcies!</string>
     <!-- Themes -->
     <string name="light_theme">Clar</string>
     <string name="dark_theme">Fosc</string>
@@ -256,7 +256,7 @@
     <string name="shared">Compartit</string>
     <!-- What's new -->
     <string name="whats_new">Què hi ha de nou</string>
-    <string name="whats_new_disclaimer">* Aquí només s’enumeren les actualitzacions més grans. Sempre hi ha millores petites també</string>
+    <string name="whats_new_disclaimer">* Aquí només s\'enumeren les actualitzacions més grans. Sempre hi ha millores petites també</string>
     <!-- Actionbar items -->
     <string name="delete">Suprimeix</string>
     <string name="remove">Elimina</string>
@@ -271,7 +271,7 @@
     <string name="unhide_folder">Mostra la carpeta</string>
     <string name="temporarily_show_hidden">Mostra temporalment el que està ocult</string>
     <string name="stop_showing_hidden">Deixa de mostrar contingut multimèdia ocult</string>
-    <string name="maximum_share_reached">No pots compartir aquest contingut alhora</string>
+    <string name="maximum_share_reached">No podeu compartir tot aquest contingut alhora</string>
     <string name="empty_and_disable_recycle_bin">Buida i desactiva la paperera de reciclatge</string>
     <string name="undo">Desfés</string>
     <string name="redo">Refés</string>
@@ -290,7 +290,7 @@
     <string name="size">Mida</string>
     <string name="last_modified">Última modificació</string>
     <string name="date_created">Data de creació</string>
-    <string name="date_taken">Data de presa</string>
+    <string name="date_taken">Data de realització</string>
     <string name="title">Títol</string>
     <string name="filename">Nom de fitxer</string>
     <string name="extension">Extensió</string>
@@ -299,7 +299,7 @@
     <string name="ascending">Ascendent</string>
     <string name="descending">Descendent</string>
     <string name="use_for_this_folder">Utilitza només per a aquesta carpeta</string>
-    <string name="sort_numeric_parts">Ordena les parts numèriques per valor real</string>
+    <string name="sort_numeric_parts">Ordena les parts numèriques pel valor real</string>
     <string name="first_name">Nom</string>
     <string name="middle_name">Nom del mig</string>
     <string name="surname">Cognom</string>
@@ -307,13 +307,13 @@
     <string name="use_custom_sorting">Utilitza l\'ordenació personalitzada</string>
     <string name="change_order">Canvia l\'ordre</string>
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Segur que vols continuar amb la supressió\?</string>
-    <string name="deletion_confirmation">Segur que vols suprimir %s\?</string>
+    <string name="proceed_with_deletion">Segur que voleu continuar amb la supressió\?</string>
+    <string name="deletion_confirmation">Segur que voleu suprimir %s\?</string>
     <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Segur que vols moure %s a la paperera\?</string>
+    <string name="move_to_recycle_bin_confirmation">Segur que voleu moure %s a la paperera\?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Segur que vols suprimir aquest element\?</string>
-    <string name="are_you_sure_recycle_bin">Segur que vols moure aquest element a la paperera\?</string>
+    <string name="are_you_sure_delete">Segur que voleu suprimir aquest element\?</string>
+    <string name="are_you_sure_recycle_bin">Segur que voleu moure aquest element a la paperera\?</string>
     <string name="do_not_ask_again">No tornis a preguntar-ho en aquesta sessió</string>
     <string name="do_not_show_again">No ho tornis a mostrar</string>
     <string name="yes">Sí</string>
@@ -325,34 +325,34 @@
     </plurals>
     <!-- Password protection -->
     <string name="pin">PIN</string>
-    <string name="enter_pin">Introdueix el PIN</string>
-    <string name="please_enter_pin">Introdueix un PIN</string>
+    <string name="enter_pin">Introduïu el PIN</string>
+    <string name="please_enter_pin">Introduïu un PIN</string>
     <string name="wrong_pin">PIN incorrecte</string>
-    <string name="repeat_pin">Repeteix el PIN</string>
+    <string name="repeat_pin">Repetiu el PIN</string>
     <string name="pattern">Patró</string>
-    <string name="insert_pattern">Introdueix el patró</string>
+    <string name="insert_pattern">Introduïu el patró</string>
     <string name="wrong_pattern">Patró incorrecte</string>
-    <string name="repeat_pattern">Repeteix el patró</string>
+    <string name="repeat_pattern">Repetiu el patró</string>
     <string name="biometrics">Biometria</string>
     <string name="fingerprint">Empremta digital</string>
     <string name="add_fingerprint">Afegeix una empremta digital</string>
-    <string name="place_finger">Col·loca el dit al sensor d\'empremtes dactilars</string>
-    <string name="open_biometric_dialog">Obre el quadre de diàleg de verificació d’identificació biomètrica</string>
-    <string name="authenticate">Autenticar-se</string>
+    <string name="place_finger">Poseu el dit al sensor d\'empremtes dactilars</string>
+    <string name="open_biometric_dialog">Obre el diàleg de verificació d\'identificació biomètrica</string>
+    <string name="authenticate">Autentica</string>
     <string name="authentication_failed">L\'autenticació ha fallat</string>
-    <string name="authentication_blocked">S\'ha blocat l\'autenticació, torna a provar-ho d\'aquí a un moment</string>
-    <string name="no_fingerprints_registered">No tens cap empremta digital registrada. Afegeix-ne alguna a la configuració del dispositiu</string>
-    <string name="go_to_settings">Ves a la configuració</string>
-    <string name="protection_setup_successfully">Configuració correcta de la contrasenya. Torna a instal·lar l\'aplicació en cas que l\'oblidis.</string>
-    <string name="fingerprint_setup_successfully">Configuració correcta de la protecció. Torna a instal·lar l\'aplicació en cas de problemes per restablir-la.</string>
-    <string name="lock_folder">Bloca la carpeta</string>
-    <string name="unlock_folder">Desbloca la carpeta</string>
+    <string name="authentication_blocked">S\'ha bloquejat l\'autenticació, torneu a provar-ho d\'aquí a un moment</string>
+    <string name="no_fingerprints_registered">No hi ha cap empremta digital registrada. Afegiu-ne alguna a la configuració del dispositiu</string>
+    <string name="go_to_settings">Aneu a la configuració</string>
+    <string name="protection_setup_successfully">Configuració correcta de la contrasenya. Torneu a instal·lar l\'aplicació en cas que l\'oblideu.</string>
+    <string name="fingerprint_setup_successfully">Configuració correcta de la protecció. Torneu a instal·lar l\'aplicació en cas de problemes per restablir-la.</string>
+    <string name="lock_folder">Bloqueja la carpeta</string>
+    <string name="unlock_folder">Desbloqueja la carpeta</string>
     <string name="lock_folder_notice">Aquesta protecció només funciona en aquesta aplicació. No substituirà un xifratge real de carpetes de tot el sistema.</string>
     <!-- Times -->
     <string name="yesterday">Ahir</string>
     <string name="today">Avui</string>
     <string name="tomorrow">Demà</string>
-    <string name="hide_year">Oculta any</string>
+    <string name="hide_year">Oculta l\'any</string>
     <string name="seconds_raw">segons</string>
     <string name="minutes_raw">minuts</string>
     <string name="hours_raw">hores</string>
@@ -480,8 +480,8 @@
     <string name="reminder_triggers_in">Temps restant fins que s\'activi el recordatori:
 \n%s</string>
     <string name="alarm_warning">Assegureu-vos que l\'alarma funcioni correctament abans de confiar-hi. Pot comportar-se malament per les restriccions del sistema relacionades amb l\'estalvi de bateria.</string>
-    <string name="reminder_warning">Assegureu-vos que els recordatoris funcionin correctament abans de confiar-hi. Podrien comportar-se malament per de les restriccions del sistema relacionades amb l\'estalvi de bateria.</string>
-    <string name="notifications_disabled">Les notificacions d\'aquesta aplicació estan desactivades. Aneu a la configuració del vostre dispositiu per activar-les.</string>
+    <string name="reminder_warning">Assegureu-vos que els recordatoris funcionin correctament abans de confiar-hi. Comproveu la configuració de la bateria i de les notificacions, que no hi hagi res que bloquegi els recordatoris o que mati l\'aplicació en el segon pla.</string>
+    <string name="notifications_disabled">Les notificacions d\'aquesta aplicació estan desactivades. Aneu a la configuració del dispositiu per activar-les.</string>
     <!-- Alarms -->
     <string name="alarm">Alarma</string>
     <string name="snooze">Ajorna</string>
@@ -500,10 +500,10 @@
     <string name="general_settings">General</string>
     <string name="color_customization">Personalització del color</string>
     <string name="customize_colors">Personalitza els colors</string>
-    <string name="customize_colors_locked">Personalitza els colors (blocat)</string>
+    <string name="customize_colors_locked">Personalitza els colors (bloquejat)</string>
     <string name="customize_widget_colors">Personalitza els colors dels ginys</string>
     <string name="customize_notifications">Personalitza les notificacions</string>
-    <string name="use_english_language">Utilitza l’idioma anglès</string>
+    <string name="use_english_language">Utilitza l\'idioma anglès</string>
     <string name="show_hidden_items">Mostra els elements ocults</string>
     <string name="font_size">Mida de la lletra</string>
     <string name="small">Petita</string>
@@ -514,7 +514,7 @@
     <string name="password_protect_whole_app">Protegeix amb contrasenya tota l\'aplicació</string>
     <string name="password_protect_file_deletion">Protegeix amb contrasenya la supressió i el moviment dels fitxers</string>
     <string name="keep_last_modified">Conserva el valor de darrera modificació anterior a les operacions de fitxer</string>
-    <string name="show_info_bubble">Mostra una bombolla d\'informació als elements de desplaçament arrossegant la barra de desplaçament</string>
+    <string name="show_info_bubble">Mostra una bombolla d\'informació en desplaçar elements arrossegant la barra de desplaçament</string>
     <string name="prevent_phone_from_sleeping">Evita que el telèfon s\'adormi mentre l\'aplicació està en primer pla</string>
     <string name="skip_delete_confirmation">Omet sempre el diàleg de confirmació de supressió</string>
     <string name="enable_pull_to_refresh">Activa el lliscament des de la part superior per refrescar</string>
@@ -530,7 +530,7 @@
     <string name="empty_recycle_bin">Buida la paperera de reciclatge</string>
     <string name="force_portrait_mode">Força el mode de retrat</string>
     <string name="export_settings">Exporta la configuració</string>
-    <string name="import_settings">Importa la configuració</string>
+    <string name="import_settings">Importa una configuració</string>
     <string name="settings_exported_successfully">La configuració s\'ha exportat correctament</string>
     <string name="settings_imported_successfully">La configuració s\'ha importat correctament</string>
     <string name="start_name_with_surname">Comença el nom amb el cognom</string>
@@ -540,21 +540,21 @@
     <string name="visibility">Visibilitat</string>
     <string name="security">Seguretat</string>
     <string name="scrolling">Desplaçament</string>
-    <string name="file_operations">Operacions de fitxers</string>
+    <string name="file_operations">Operacions amb fitxers</string>
     <string name="recycle_bin">Paperera de reciclatge</string>
-    <string name="saving_label">Desant</string>
+    <string name="saving_label">Desament</string>
     <string name="startup">Inici</string>
     <string name="text">Text</string>
-    <string name="migrating">Migrant</string>
+    <string name="migrating">Migració</string>
     <string name="quality">Qualitat</string>
     <string name="main_screen">Pantalla principal</string>
     <string name="thumbnails">Miniatures</string>
     <string name="list_view">Vista de llista</string>
     <!-- Default tab to open -->
-    <string name="manage_shown_tabs">Gestioneu les pestanyes mostrades</string>
-    <string name="default_tab_to_open">Pestanya per obrir-la a l\'inici de l\'aplicació</string>
+    <string name="manage_shown_tabs">Gestiona les pestanyes mostrades</string>
+    <string name="default_tab_to_open">Pestanya a obrir en iniciar l\'aplicació</string>
     <string name="contacts_tab">Contactes</string>
-    <string name="favorites_tab">Favorits</string>
+    <string name="favorites_tab">Preferits</string>
     <string name="call_history_tab">Historial de trucades</string>
     <string name="groups_tab">Grups</string>
     <string name="last_used_tab">Darrer utilitzat</string>
@@ -564,33 +564,33 @@
     <string name="restore_this_file">Restaura aquest fitxer</string>
     <string name="restore_selected_files">Restaura els fitxers seleccionats</string>
     <string name="restore_all_files">Restaura tots els fitxers</string>
-    <string name="recycle_bin_emptied">La paperea s\'ha buidat correctament</string>
+    <string name="recycle_bin_emptied">La paperera de reciclatge s\'ha buidat correctament</string>
     <string name="files_restored_successfully">El fitxers s\'han restaurat correctament</string>
-    <string name="empty_recycle_bin_confirmation">Segur que vols buidar la paperera? El fitxer s\'eliminaran definitivament.</string>
-    <string name="recycle_bin_empty">La paperera és buida</string>
-    <string name="moving_recycle_bin_items_disabled">Moure a la paperara està deshabilitat. Feu servir recuperar</string>
-    <string name="show_the_recycle_bin">Mostra la paperera</string>
-    <string name="hide_the_recycle_bin">Oculta la paperera</string>
+    <string name="empty_recycle_bin_confirmation">Segur que voleu buidar la paperera de reciclatge\? Els fitxers es perdran per sempre.</string>
+    <string name="recycle_bin_empty">La paperera de reciclatge és buida</string>
+    <string name="moving_recycle_bin_items_disabled">Moure els elements de la paperera està de reciclatge desactivat, utilitzeu la restauració</string>
+    <string name="show_the_recycle_bin">Mostra la paperera de reciclatge</string>
+    <string name="hide_the_recycle_bin">Oculta la paperera de reciclatge</string>
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Movent %d element a la paperera de reciclage</item>
-        <item quantity="other">Movent %d elements a la paperera de reciclage</item>
+        <item quantity="one">Movent %d element a la paperera de reciclatge</item>
+        <item quantity="other">Movent %d elements a la paperera de reciclatge</item>
     </plurals>
     <!-- Import / Export -->
-    <string name="importing">Important…</string>
-    <string name="exporting">Exportant…</string>
+    <string name="importing">S\'està important…</string>
+    <string name="exporting">S\'està exportant…</string>
     <string name="importing_successful">Importació correcta</string>
     <string name="exporting_successful">Exportació correcta</string>
-    <string name="importing_failed">Importacó fallida</string>
-    <string name="exporting_failed">Exportació fallida</string>
-    <string name="importing_some_entries_failed">L\'impotació d\'algunes entrades ha fallat</string>
-    <string name="exporting_some_entries_failed">L\'exportació d\'algunes entrades ha fallat</string>
-    <string name="no_entries_for_importing">No s\'han trobat entrades per importar</string>
-    <string name="no_entries_for_exporting">No s\'han trobat entrades per exportar</string>
+    <string name="importing_failed">Ha fallat la importació</string>
+    <string name="exporting_failed">Ha fallat l\'exportació</string>
+    <string name="importing_some_entries_failed">Ha fallat la importació d\'algunes entrades</string>
+    <string name="exporting_some_entries_failed">Ha fallat l\'exportació d\'algunes entrades</string>
+    <string name="no_entries_for_importing">No s\'ha trobat cap entrada per importar</string>
+    <string name="no_entries_for_exporting">No s\'ha trobat cap entrada per exportar</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">Sembla que teniu un dispositiu USB connectat al vostre dispositiu. Per assegurar-vos que els fitxers apareguin correctament, heu de concedir permisos addicionals.</string>
-    <string name="confirm_usb_storage_access_text">Seleccioneu la carpeta arrel del dispositiu USB a la pantalla següent per concedir accés</string>
-    <string name="wrong_root_selected_usb">S\'ha seleccionat la carpeta incorrecta, seleccioneu la carpeta arrel del vostre dispositiu USB</string>
+    <string name="usb_detected">Sembla que hi ha un dispositiu USB connectat al vostre dispositiu. Per assegurar que els fitxers apareguin adequadament, cal atorgar permisos addicionals.</string>
+    <string name="confirm_usb_storage_access_text">Seleccioneu la carpeta arrel del dispositiu USB a la pantalla següent per atorgar l\'accés</string>
+    <string name="wrong_root_selected_usb">S\'ha seleccionat una carpeta incorrecta, seleccioneu la carpeta principal del dispositiu USB</string>
     <!-- Dates -->
     <string name="january">Gener</string>
     <string name="february">Febrer</string>
@@ -631,288 +631,248 @@
     <string name="friday_letter">DV</string>
     <string name="saturday_letter">DS</string>
     <string name="sunday_letter">DG</string>
-    <string name="monday_short">DL</string>
-    <string name="tuesday_short">DT</string>
-    <string name="wednesday_short">DC</string>
-    <string name="thursday_short">DJ</string>
-    <string name="friday_short">DV</string>
-    <string name="saturday_short">DS</string>
-    <string name="sunday_short">DG</string>
+    <string name="monday_short">dl.</string>
+    <string name="tuesday_short">dt.</string>
+    <string name="wednesday_short">dc.</string>
+    <string name="thursday_short">dj.</string>
+    <string name="friday_short">dv.</string>
+    <string name="saturday_short">ds.</string>
+    <string name="sunday_short">dg.</string>
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">La versió de l\'aplicació ja no s\'actualitzarà. Actualitzeu a la versió Pro per rebre noves solucions i altres millores.</string>
-    <string name="upgrade_to_pro_long_click">La versió de l\'aplicació ja no s\'actualitzarà. Actualitzeu a la versió Pro per rebre noves solucions i altres millores fent clic aquí.</string>
-    <string name="it_is_free">És gratuït fins a: %s. Si ho descarregueu fins aleshores, podreu utilitzar-lo de forma gratuïta per sempre.</string>
+    <string name="upgrade_to_pro_long">La versió de l\'aplicació ja no s\'actualitzarà més. Actualitzeu a la versió Pro per rebre correccions noves i altres millores.</string>
+    <string name="upgrade_to_pro_long_click">La versió de l\'aplicació ja no s\'actualitzarà més. Actualitzeu a la versió Pro per rebre solucions noves i altres millores fent clic aquí.</string>
+    <string name="it_is_free">És gratuïta fins a: %s. Si la descarregueu fins aleshores, podreu utilitzar-la de franc per sempre.</string>
     <string name="more_info">Més informació</string>
     <string name="upgrade">Actualitza</string>
-    <string name="upgrade_calendar">Heu de migrar els esdeveniments emmagatzemats localment manualment mitjançant l\'exportació en un fitxer .ics, i després importar-los. Podeu trobar els dos botons d\'exportació / importació al menú de la pantalla principal.</string>
+    <string name="upgrade_calendar">Cal migrar els esdeveniments emmagatzemats localment de manera manual mitjançant l\'exportació en un fitxer .ics, i després importar-los. Podeu trobar els dos botons d\'exportació/importació al menú de la pantalla principal.</string>
     <!-- About -->
-    <string name="about">Sobre</string>
-    <string name="website_label">Més aplicacions senzilles i codi font a</string>
-    <string name="email_label">Envia els teus comentaris o suggeriments a</string>
-    <string name="upgrade_to_pro">Actualitza a pro</string>
+    <string name="about">Quan a</string>
+    <string name="website_label">Per al codi font visiteu</string>
+    <string name="email_label">Envieu els vostres comentaris o suggeriments a</string>
+    <string name="upgrade_to_pro">Actualitzeu a Pro</string>
     <string name="more_apps">Més aplicacions</string>
     <string name="more_apps_from_us">Més aplicacions nostres</string>
-    <string name="invite_friends">Convida a amics</string>
-    <string name="share_text">Hola, vine i mira %1$s a %2$s</string>
-    <string name="invite_via">Convida amb</string>
-    <string name="rate_us">vota\'ns a Play Store</string>
-    <string name="rate">Puntua</string>
-    <string name="donate">Donar</string>
-    <string name="donate_underlined"><u>Donar</u></string>
-    <string name="follow_us">Segueix-nos</string>
+    <string name="invite_friends">Convideu a amics</string>
+    <string name="share_text">Hola, vine a veure %1$s a %2$s</string>
+    <string name="invite_via">Convideu a través de</string>
+    <string name="rate_us">Valoreu-nos</string>
+    <string name="rate">Valora</string>
+    <string name="donate">Donació</string>
+    <string name="donate_underlined"><u>Donació</u></string>
+    <string name="follow_us">Seguiu-nos</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="support">Suport</string>
-    <string name="help_us">Ajuda\'ns</string>
+    <string name="support">Assistència</string>
+    <string name="help_us">Ajudeu-nos</string>
     <string name="social">Social</string>
     <string name="other">Altres</string>
     <string name="version_placeholder">Versió %s</string>
     <string name="hello">Hola :)</string>
-    <string name="about_footer">Fet amb ❤️ in Slovakia</string>
-    <string name="additional_info">Informació adicional</string>
-    <string name="app_version">Versió de la APP: %s</string>
-    <string name="device_os">Sistema operatiu: %s</string>
-    <string name="donate_please">
-        <![CDATA[
-            Hola,<br><br>
-            Esperem que gaudiu de l\'aplicació. No conté cap anunci, així que si us plau, ajudeu el seu desenvolupament comprant la aplicació <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, també evitarà que aquest diàleg es torni a mostrar.<br><br>
-            Gràcies!
-        ]]>
-    </string>
-    <string name="purchase">Comprar</string>
+    <string name="about_footer">Fet amb ❤️ a Eslovàquia</string>
+    <string name="additional_info">Informació addicional</string>
+    <string name="app_version">Versió de l\'aplicació: %s</string>
+    <string name="device_os">SO del dispositiu: %s</string>
+    <string name="donate_please">Hola,&lt;br&gt;&lt;br&gt; esperem que gaudiu de l\'aplicació. No conté cap anunci, així que si us plau, ajudeu el seu desenvolupament comprant l\'aplicació &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;, també evitarà que aquest diàleg es torni a mostrar.&lt;br&gt;&lt;br&gt; Gràcies!</string>
+    <string name="purchase">Compra</string>
     <string name="update_thank_you">Si us plau, actualitzeu Simple Thank You a la darrera versió</string>
-    <string name="before_asking_question_read_faq">Abans de fer una pregunta, llegiu les Preguntes més freqüents. Potser la solució hi és.</string>
-    <string name="before_rate_read_faq">Abans de fer-nos una valoració, comproveu la configuració de l\'aplicació i llegiu les preguntes més freqüents. Si teniu problemes, potser la solució hi és.</string>
+    <string name="before_asking_question_read_faq">Abans de fer una pregunta, reviseu la configuració de l\'aplicació i llegiu les preguntes més freqüents. Potser hi és la solució.</string>
+    <string name="before_rate_read_faq">Abans de fer una valoració, reviseu la configuració de l\'aplicació i llegiu les preguntes més freqüents. Si teniu problemes, potser hi és la solució.</string>
     <string name="make_sure_latest">Assegureu-vos també que utilitzeu la versió més recent de l\'aplicació.</string>
-    <string name="read_it">Llegiu</string>
-    <string name="read_faq">Llegir Preguntes Freqüents</string>
+    <string name="read_it">Llegiu-ho</string>
+    <string name="read_faq">Llegiu les preguntes més freqüents</string>
     <string name="rate_us_prompt">Hola,
 \n
-\nsembla que esteu utilitzant aquesta aplicació ja des de fa molt de temps, i ho agraïm realment.
+\nsembla que esteu utilitzant aquesta aplicació des de fa força temps, i ho agraïm sincerament.
 \n
-\nSi us demanem un favor, cal que ens puntueu a Google Play. Això ens ajudarà molt.
+\nSi us podem demanar un favor, valoreu-nos a Google Play, si us plau. Això ens ajudarà molt.
 \n
 \nNo importa què decidiu, no tornareu a veure aquest missatge.
 \n
 \nGràcies!</string>
-    <string name="rate_our_app">Valora la nostra aplicació si us plau :)</string>
+    <string name="rate_our_app">Valoreu la nostra aplicació, si us plau :)</string>
     <string name="thank_you">Gràcies</string>
-    <string name="widget_locked_pro">El widget està bloquejat. \nActualitzeu la versió Pro per desbloquejar-lo.</string>
-    <string name="widget_locked">
-        <![CDATA[
-            El widget està bloquejat. <br> Compreu <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> per debloquejar-lo.
-        ]]>
-    </string>
+    <string name="widget_locked_pro">El giny està bloquejat.
+\nActualitzeu a la versió Pro per desbloquejar-lo.</string>
+    <string name="widget_locked">El giny està bloquejat. &lt;br&gt;Compreu &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; per desbloquejar-lo.</string>
     <!-- New app (do not translate anything on the 4th line) -->
-    <string name="new_app">
-        <![CDATA[
-            Hola,<br><br>
-            només informar-te que una nova aplicació s\'ha publicat recentment:<br><br>
-            <a href="%1$s">%2$s</a><br><br>
-            <a href="%3$s">%4$s</a><br><br>
-            <a href="%5$s">%6$s</a><br><br>
-            Pots descarregar-la prement el títol.<br><br>
-            Gràcies
-        ]]>
-    </string>
-    <string name="simple_app_launcher">Llançador d\'aplicacions simple</string>
-    <string name="simple_calculator">Calculadora simple</string>
-    <string name="simple_calendar">Calendari simple</string>
-    <string name="simple_camera">Càmera simple</string>
-    <string name="simple_clock">Rellotge simple</string>
+    <string name="new_app">Hola,&lt;br&gt;&lt;br&gt; només informar-vos que recentment s\'ha publicat una aplicació nova:&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Podeu descarregar-la prement el títol.&lt;br&gt;&lt;br&gt; Gràcies</string>
+    <string name="simple_app_launcher">Simple App Launcher</string>
+    <string name="simple_calculator">Simple Calculator</string>
+    <string name="simple_calendar">Simple Calendar</string>
+    <string name="simple_camera">Simple Camera</string>
+    <string name="simple_clock">Simple Clock</string>
     <string name="simple_contacts">Simple Contacts</string>
-    <string name="simple_dialer">Marcador simple</string>
-    <string name="simple_draw">Dibuix simple</string>
+    <string name="simple_dialer">Simple Dialer</string>
+    <string name="simple_draw">Simple Draw</string>
     <string name="simple_file_manager">Simple File Manager</string>
-    <string name="simple_flashlight">Llanterna simple</string>
-    <string name="simple_gallery">Galeria simple</string>
-    <string name="simple_music_player">Reproductor de música simple</string>
+    <string name="simple_flashlight">Simple Flashlight</string>
+    <string name="simple_gallery">Simple Gallery</string>
+    <string name="simple_music_player">Simple Music Player</string>
     <string name="simple_notes">Simple Notes</string>
-    <string name="simple_sms_messenger">Missatges SMS simple</string>
-    <string name="simple_thank_you">Gràcies simple</string>
-    <string name="simple_voice_recorder">Gravadora de veu simple</string>
+    <string name="simple_sms_messenger">Simple SMS Messenger</string>
+    <string name="simple_thank_you">Simple Thank You</string>
+    <string name="simple_voice_recorder">Simple Voice Recorder</string>
     <string name="app_launcher_short">Llançador d\'aplicacions</string>
     <string name="calculator_short">Calculadora</string>
     <string name="calendar_short">Calendari</string>
     <string name="camera_short">Càmera</string>
     <string name="clock_short">Rellotge</string>
-    <string name="contacts_short">Contacts</string>
+    <string name="contacts_short">Contactes</string>
     <string name="dialer_short">Marcador</string>
     <string name="draw_short">Dibuix</string>
-    <string name="file_manager_short">File Manager</string>
+    <string name="file_manager_short">Gestor de fitxers</string>
     <string name="flashlight_short">Llanterna</string>
     <string name="gallery_short">Galeria</string>
     <string name="music_player_short">Reproductor de música</string>
     <string name="notes_short">Notes</string>
-    <string name="sms_messenger_short">Missatger SMS</string>
+    <string name="sms_messenger_short">Missatges SMS</string>
     <string name="thank_you_short">Gràcies</string>
-    <string name="voice_recorder_short">Gravadora de veu</string>
-    <string name="sideloaded_app">
-        <![CDATA[
-            Sembla que la versió de l\'aplicació està danyada. Baixeu la versió original <a href="%s">aquí</a>.
-        ]]>
-    </string>
+    <string name="voice_recorder_short">Enregistrador de veu</string>
+    <string name="sideloaded_app">Sembla que aquesta versió de l\'aplicació està malmesa. Baixeu la versió original &lt;a href=%s&gt;aquí&lt;/a&gt;.</string>
     <!-- FAQ -->
-    <string name="frequently_asked_questions">Preguntes frequents</string>
-    <string name="before_asking_question">Abans de fer una pregunta, primer llegeix les</string>
-    <string name="faq_1_title_commons">Com és que no veig aquest widget a la llista de widgets?</string>
-    <string name="faq_1_text_commons">Probablement, perquè heu mogut l\'aplicació en una targeta SD. Hi ha una limitació del sistema d\'Android que oculta els widgets de l\'aplicació determinada
-        en aquest cas. L\'única solució és moure l\'aplicació a l\'emmagatzematge intern a través de la configuració del dispositiu.</string>
-    <string name="faq_2_title_commons">Vull donar-vos suport, però no puc donar diners. Hi ha alguna cosa més que pugui fer?</string>
-    <string name="faq_2_text_commons">
-        <![CDATA[
-            Sí, per suposat. Podeu difondre les aplicacions o donar bones valoracions i comentaris. També podeu ajudar traduint les aplicacions a un idioma nou o simplement actualitzant algunes traduccions existents.
-             La guia per traduir es troba a <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">aquest lloc web</a> , o simplement poseu-vos en contacte amb nosaltres a <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> si teniu cap pregunta.
-        ]]>
-    </string>
-    <string name="faq_3_title_commons">He esborrat alguns fitxers per error, com puc recuperar-los?</string>
-    <string name="faq_3_text_commons">Malauradament, no pots fer-ho. Els fitxers s\'eliminen a l\'instant després del diàleg de confirmació, no hi ha una paperera disponible.</string>
-    <string name="faq_4_title_commons">No m\'agraden els colors del widget, puc canviar-los?</string>
-    <string name="faq_4_text_commons">Sí, mentre arrossegueu un widget a la vostra pantalla d\'inici, apareixerà una pantalla de configuració de widgets. Veureu quadrats de colors a l\'extrem inferior esquerre, només cal prémer-los per seleccionar un color nou. També podeu utilitzar el control lliscant per ajustar l\'alfa.</string>
-    <string name="faq_5_title_commons">Puc recuperar d\'alguna manera els fitxers eliminats?</string>
-    <string name="faq_5_text_commons">Si es van esborrar totalment, no ho podeu fer. Tanmateix, hi ha una Paperera de reciclatge habilitada per defecte, que farà que els fitxers es moguin allà en comptes de suprimir-los.</string>
+    <string name="frequently_asked_questions">Preguntes més freqüents</string>
+    <string name="before_asking_question">Abans de fer una pregunta, primer llegiu les</string>
+    <string name="faq_1_title_commons">Com és que no veig aquest giny a la llista de ginys\?</string>
+    <string name="faq_1_text_commons">Probablement, perquè heu mogut l\'aplicació a una targeta SD. Hi ha una limitació del sistema d\'Android que oculta els ginys de les aplicació en aquest cas. L\'única solució és moure l\'aplicació a l\'emmagatzematge intern a través de la configuració del dispositiu.</string>
+    <string name="faq_2_title_commons">Vull ajudar-vos, però no puc donar diners. Hi ha quelcom més que pugui fer\?</string>
+    <string name="faq_2_text_commons">Sí, és clar. Podeu difondre les aplicacions o fer bones valoracions i comentaris. També podeu ajudar traduint les aplicacions a un idioma nou o simplement actualitzant algunes traduccions existents. La guia per traduir es troba en &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;aquest lloc web&lt;/a&gt;, o senzillament poseu-vos en contacte amb nosaltres a &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; si teniu cap pregunta.</string>
+    <string name="faq_3_title_commons">He suprimit alguns fitxers per error, com els puc recuperar\?</string>
+    <string name="faq_3_text_commons">Malauradament, no podeu fer-ho. Els fitxers se suprimeixen a l\'instant després del diàleg de confirmació, no hi ha cap paperera disponible.</string>
+    <string name="faq_4_title_commons">No m\'agraden els colors del giny, puc canviar-los\?</string>
+    <string name="faq_4_text_commons">Sí, mentre arrossegueu un giny a la pantalla d\'inici apareixerà una pantalla de configuració de ginys. Veureu quadrats de color a l\'extrem inferior esquerre, només cal prémer-los per seleccionar un color nou. També podeu utilitzar el control lliscant per ajustar l\'alfa.</string>
+    <string name="faq_5_title_commons">Puc restaurar d\'alguna manera els fitxers suprimits\?</string>
+    <string name="faq_5_text_commons">Si es van suprimir totalment, no ho podeu fer. Tanmateix, hi ha una paperera de reciclatge activada de manera predeterminada que farà que els fitxers es moguin allà en lloc de suprimir-los.</string>
     <string name="faq_6_title_commons">Ha desaparegut la icona del menú d\'aplicacions. Què puc fer?</string>
-    <string name="faq_6_text_commons">El teu llançador no és compatible amb la personalització d\'icones correctament. Intenteu iniciar l\'aplicació mitjançant Google Play o algun widget, si està disponible.
-        Un cop llançat, simplement configureu la icona de taronja per defecte # F57C00. És possible que hàgiu de tornar a instal·lar l\'aplicació en el pitjor dels casos.</string>
-    <string name="faq_7_title_commons">Els diners han estat deduïts del meu compte bancari, però no puc descarregar l\'aplicació. Què puc fer?</string>
-    <string name="faq_7_text_commons">Google fa que els pagaments siguin completament gestionats i alguns cops això genera problemes de sistema. Només cal que esborris la memòria cau de l\’aplicació Google Play i reiniciis el dispositiu. A continuació prova a baixar-la de nou.</string>
+    <string name="faq_6_text_commons">El vostre llançador no és compatible amb la personalització correcta d\'icones. Intenteu iniciar l\'aplicació mitjançant Google Play o algun giny, si està disponible. Un cop llançada, configureu la icona de taronja #F57C00 predeterminat. És possible que hàgiu de tornar a instal·lar l\'aplicació en el pitjor dels casos.</string>
+    <string name="faq_7_title_commons">Els diners s\'han descomptat del meu compte bancari, però no puc descarregar l\'aplicació. Què puc fer\?</string>
+    <string name="faq_7_text_commons">Google gestiona completament els pagaments, i alguns cops això genera problemes en el seu sistema. Només cal que netegeu la memòria cau de l\'aplicació Google Play i reinicieu el dispositiu, després torneu a intentar descarregar-la.</string>
     <string name="faq_8_title_commons">Per què he d\'actualitzar a la versió Pro?</string>
-    <string name="faq_8_text_commons">Com que la versió de l\'aplicació ja no s\'actualitza, els errors que heu vist, no seran corregits. Tampoc s\’hi afegiran noves funcions. Podeu comprar la versió Pro a Google Play per una petita quantitat de diners.
-         Es tracta d\’un pagament únic, cosa que significa que un cop l\’adquireixis, no hauràs de tornar a pagar mai més. Ni tan sols després de canviar de dispositiu. Si no us agrada la versió Pro, podeu desinstal·lar-la en poques hores i automàticament obtindreu els diners.
-         Si voleu un reemborsament en qualsevol moment més tard, només cal que contacteu amb nosaltres a l\'adreça hello@simplemobiletools.com i ho aconseguireu.</string>
+    <string name="faq_8_text_commons">Com que la versió de l\'aplicació ja no s\'actualitza, els errors que potser heu vist no es corregiran. Tampoc s\'afegiran funcions noves. Podeu comprar la versió Pro a Google Play per una petita quantitat de diners. Es tracta d\'un pagament únic, cosa que significa que un cop que l\'adquiriu, no caldrà tornar a pagar mai més. Ni tan sols després de canviar de dispositiu. Si no us agrada la versió Pro, podeu desinstal·lar-la en poques hores i automàticament es retornaran els diners. Si voleu un reemborsament més endavant, poseu-vos en contacte amb nosaltres a l\'adreça hello@simplemobiletools.com i ho aconseguireu.</string>
     <string name="faq_9_title_commons">Com puc seleccionar diversos elements alhora?</string>
-    <string name="faq_9_text_commons">Hi ha diverses maneres de fer-ho. El primer és iniciar el mode de selecció prement un element i, a continuació, fer clic breu sobre els altres per seleccionar-los. La segona forma és similar a la selecció d\’elements en ordinadors amb un ratolí,
-         només cal que inicieu el mode de selecció prement un element i, tot seguit, arrossegueu-lo amb el dit cap a altres elements per seleccionar-lo. La tercera manera de seleccionar diversos elements consisteix en prémer llargament un element, després en prémer llargament un altre i es selecciona tot el que hi ha entre els dos. Si tu
-         voleu seleccionar tots els elements; només cal que premeu llargament un element i, a continuació, feu clic al comptador d\’elements seleccionats a l\’extrem superior esquerre. Això seleccionarà o anul·larà la selecció de tot.</string>
+    <string name="faq_9_text_commons">Hi ha diverses maneres de fer-ho. La primera és iniciar el mode de selecció prement (llarg) un element i, a continuació, fer clic breu sobre els altres per seleccionar-los. La segona forma és similar a la selecció d\'elements en els ordinadors amb un ratolí, només cal que inicieu el mode de selecció prement un element i, tot seguit, arrossegueu-lo amb el dit cap a altres elements per seleccionar-los. La tercera manera de seleccionar diversos elements consisteix en prémer (llarg) un element, després prémer (llarg) un altre i se selecciona tot el que hi ha entre els dos. Si voleu seleccionar tots els elements; només cal que premeu (llarg) un element i, a continuació, feu clic al comptador d\'elements seleccionats a l\'extrem superior esquerre. Això seleccionarà o anul·larà la selecció de tot.</string>
     <string name="faq_10_title_commons">He comprat l\'aplicació, però no la puc baixar en cap altre dispositiu.</string>
-    <string name="faq_10_text_commons">Proveu d\'esborrar la memòria cau de l\'aplicació Google Play i reinicieu el dispositiu. Es tracta d\'un problema de Google Play, que no està realment relacionat amb l\'aplicació en si.</string>
+    <string name="faq_10_text_commons">Proveu de netejar la memòria cau de l\'aplicació Google Play i reinicieu el dispositiu. Es tracta d\'un problema de Google Play, que no està realment relacionat amb l\'aplicació en si.</string>
     <!-- Contributors -->
     <string name="contributors">Col·laboradors</string>
     <string name="translation">Traducció</string>
     <string name="development">Desenvolupament</string>
-    <string name="other_help">Altres ajudes</string>
-    <string name="contributors_label">
-        <![CDATA[
-            Aquesta llista conté tots els que van ajudar notablement a qualsevol aplicació de la suite Simple Mobile Tools, no només aquesta. Les traduccions són gestionades per voluntaris,
-             fes-nos saber si tu també vols ajudar. La guia per traduir es troba a <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">aquest lloc web</a> , o simplement poseu-vos en contacte amb nosaltres a <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> si teniu cap pregunta.
-             Gràcies a tots els col·laboradors i altres col·laboradors!
-        ]]>
-    </string>
-    <string name="translation_arabic">Arabic</string>
-    <string name="translation_azerbaijani">Azerbaijani</string>
-    <string name="translation_bengali">Bengali</string>
-    <string name="translation_breton">Breton</string>
+    <string name="other_help">Altra ajuda</string>
+    <string name="contributors_label">Aquesta llista conté tots els que van ajudar notablement a qualsevol aplicació de la suite Simple Mobile Tools, no només aquesta. Les traduccions són gestionades per voluntaris, fes-nos saber si vós també voleu ajudar. La guia per traduir es troba a &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;aquest lloc web&lt;/a&gt;, o simplement poseu-vos en contacte amb nosaltres a &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; si teniu qualsevol pregunta. Gràcies a tots els col·laboradors i altres patrocinadors!</string>
+    <string name="translation_arabic">Àrab</string>
+    <string name="translation_azerbaijani">Àzeri</string>
+    <string name="translation_bengali">Bengalí</string>
+    <string name="translation_breton">Bretó</string>
     <string name="translation_catalan">Català</string>
-    <string name="translation_czech">Czech</string>
-    <string name="translation_welsh">Welsh</string>
-    <string name="translation_danish">Danish</string>
-    <string name="translation_german">German</string>
-    <string name="translation_greek">Greek</string>
-    <string name="translation_spanish">Spanish</string>
-    <string name="translation_basque">Basque</string>
-    <string name="translation_persian">Persian</string>
-    <string name="translation_finnish">Finnish</string>
-    <string name="translation_french">French</string>
-    <string name="translation_galician">Galician</string>
+    <string name="translation_czech">Txec</string>
+    <string name="translation_welsh">Gal·lès</string>
+    <string name="translation_danish">Danès</string>
+    <string name="translation_german">Alemany</string>
+    <string name="translation_greek">Grec</string>
+    <string name="translation_spanish">Espanyol</string>
+    <string name="translation_basque">Basc</string>
+    <string name="translation_persian">Persa</string>
+    <string name="translation_finnish">Finès</string>
+    <string name="translation_french">Francès</string>
+    <string name="translation_galician">Gallec</string>
     <string name="translation_hindi">Hindi</string>
-    <string name="translation_croatian">Croatian</string>
-    <string name="translation_hungarian">Hungarian</string>
-    <string name="translation_indonesian">Indonesian</string>
-    <string name="translation_italian">Italian</string>
-    <string name="translation_hebrew">Hebrew</string>
-    <string name="translation_japanese">Japanese</string>
-    <string name="translation_korean">Korean</string>
-    <string name="translation_lithuanian">Lithuanian</string>
-    <string name="translation_nepali">Nepali</string>
-    <string name="translation_norwegian">Norwegian</string>
-    <string name="translation_dutch">Dutch</string>
-    <string name="translation_polish">Polish</string>
-    <string name="translation_portuguese">Portuguese</string>
-    <string name="translation_romanian">Romanian</string>
-    <string name="translation_russian">Russian</string>
-    <string name="translation_slovak">Slovak</string>
-    <string name="translation_slovenian">Slovenian</string>
-    <string name="translation_serbian">Serbian</string>
-    <string name="translation_swedish">Swedish</string>
-    <string name="translation_tamil">Tamil</string>
-    <string name="translation_turkish">Turkish</string>
-    <string name="translation_ukrainian">Ukrainian</string>
-    <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
-    <string name="translation_chinese_cn">Chinese (Simplified)</string>
-    <string name="translation_chinese_tw">Chinese (Traditional)</string>
+    <string name="translation_croatian">Croat</string>
+    <string name="translation_hungarian">Hongarès</string>
+    <string name="translation_indonesian">Indonesi</string>
+    <string name="translation_italian">Italià</string>
+    <string name="translation_hebrew">Hebreu</string>
+    <string name="translation_japanese">Japonès</string>
+    <string name="translation_korean">Coreà</string>
+    <string name="translation_lithuanian">Lituà</string>
+    <string name="translation_nepali">Nepalès</string>
+    <string name="translation_norwegian">Noruec</string>
+    <string name="translation_dutch">Holandès</string>
+    <string name="translation_polish">Polonès</string>
+    <string name="translation_portuguese">Portuguès</string>
+    <string name="translation_romanian">Romanès</string>
+    <string name="translation_russian">Rus</string>
+    <string name="translation_slovak">Eslovac</string>
+    <string name="translation_slovenian">Eslovè</string>
+    <string name="translation_serbian">Serbi</string>
+    <string name="translation_swedish">Suec</string>
+    <string name="translation_tamil">Tàmil</string>
+    <string name="translation_turkish">Turc</string>
+    <string name="translation_ukrainian">Ucraïnès</string>
+    <string name="translation_vietnamese">Vietnamita</string>
+    <string name="translation_chinese_hk">Xinès (Hong Kong)</string>
+    <string name="translation_chinese_cn">Xinès (simplificat)</string>
+    <string name="translation_chinese_tw">Xinès (tradicional)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
-    <string name="why_upgrade">Obteniu ara la versió Pro!</string>
-    <string name="why_upgrade_basic_version">Bàsic</string>
+    <string name="why_upgrade">Aconseguiu ara la versió Pro!</string>
+    <string name="why_upgrade_basic_version">Bàsica</string>
     <string name="why_upgrade_pro_version">Pro</string>
     <string name="why_upgrade_no_ads">Sense anuncis</string>
-    <string name="why_upgrade_no_internet_access">No hi ha accés a Internet</string>
-    <string name="why_upgrade_footer">+ 100% de garantia de devolució</string>
+    <string name="why_upgrade_no_internet_access">Sense accés a Internet</string>
+    <string name="why_upgrade_footer">+ Garantia de devolució de diners 100%</string>
     <string name="why_upgrade_improved_design">Disseny millorat</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor de fotos avançat</string>
-    <string name="why_upgrade_heic_support">Suport als fitxers HEIC / HEIF</string>
-    <string name="why_upgrade_batch_renaming">Canvi de nom del fitxer per lots avançat</string>
-    <string name="why_upgrade_folder_locking">Bloqueig individual de carpetes</string>
-    <string name="why_upgrade_printing_support">Suport d\'impressió</string>
+    <string name="why_upgrade_heic_support">Implementació de fitxers HEIC/HEIF</string>
+    <string name="why_upgrade_batch_renaming">Canvi de nom de fitxers per lots avançat</string>
+    <string name="why_upgrade_folder_locking">Bloqueig de carpetes individuals</string>
+    <string name="why_upgrade_printing_support">Implementació de la impressió</string>
     <!-- Calendar Pro -->
-    <string name="why_upgrade_time_zone_support">Suport a la zona horària</string>
+    <string name="why_upgrade_time_zone_support">Implementació de zones horàries</string>
     <string name="why_upgrade_attendees_emails">Assistents i recordatoris per correu electrònic</string>
     <string name="why_upgrade_easy_event_importing">Importació fàcil d\'esdeveniments</string>
     <string name="why_upgrade_new_widgets">Ginys nous</string>
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">S\'ha millorat la combinació de contactes duplicats</string>
-    <string name="why_upgrade_font_size_customization">Personalització de la mida del tipus de lletra</string>
-    <string name="why_upgrade_private_contact_sharing">Compartir contactes privats opcionals a les nostres aplicacions</string>
+    <string name="why_upgrade_font_size_customization">Personalització de la mida de la lletra</string>
+    <string name="why_upgrade_private_contact_sharing">Compartició opcional de contactes privats a les nostres aplicacions</string>
     <string name="why_upgrade_customizable_contact_ringtones">Tons de contacte personalitzables</string>
     <string name="why_upgrade_contact_filtering">Filtratge de contactes</string>
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Llistes de comprovació</string>
-    <string name="why_upgrade_different_note_per_widget">Nota i colors diferents per widget</string>
-    <string name="why_upgrade_note_locking">Bloqueja la nota</string>
+    <string name="why_upgrade_different_note_per_widget">Notes i colors diferents per giny</string>
+    <string name="why_upgrade_note_locking">Bloqueig de notes</string>
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Personalització del format de data i hora</string>
     <string name="why_upgrade_shortcuts">Dreceres de pantalla inicial</string>
-    <string name="why_upgrade_file_compression">Suport de compressió de fitxers</string>
-    <string name="why_upgrade_recents_tab">Pestanya amb fitxers recents</string>
+    <string name="why_upgrade_file_compression">Implementació de compressió de fitxers</string>
+    <string name="why_upgrade_recents_tab">Pestanya amb els fitxers recents</string>
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Personalització del color de fons</string>
-    <string name="why_upgrade_file_importing">Suport per a la importació de fitxers</string>
-    <string name="why_upgrade_zooming">Ampliació</string>
+    <string name="why_upgrade_file_importing">Implementació de la importació de fitxers</string>
+    <string name="why_upgrade_zooming">Zoom</string>
     <!-- License -->
-    <string name="notice">Aquesta aplicació fa servir les següents biblioteques de tercers que ens faciliten la feina. Gràcies.</string>
+    <string name="notice">Aquesta aplicació fa servir les biblioteques següents de tercers que ens faciliten la feina. Gràcies.</string>
     <string name="third_party_licences">Llicències de tercers</string>
-    <string name="kotlin_title">Kotlin (Programming language)</string>
-    <string name="subsampling_title">Vista d\'imatge a escala de submostreig (visualitzacions d\'imatge amb zoom)</string>
-    <string name="glide_title">Llisca (càrrega i memòria cau d\'imatges)</string>
+    <string name="kotlin_title">Kotlin (llenguatge de programació)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (visualització d\'imatges amb zoom)</string>
+    <string name="glide_title">Glide (càrrega i memòria cau d\'imatges)</string>
     <string name="picasso_title">Picasso (càrrega i memòria cau d\'imatges)</string>
-    <string name="cropper_title">Escapçador d\'imatges d\'Android (escapça i gira la imatge)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (lliscar de dreta a esquerra)</string>
+    <string name="cropper_title">Android Image Cropper (escapça i gira les imatges)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (lliscament de dreta a esquerra)</string>
     <string name="joda_title">Joda-Time (substitució de les dates de Java)</string>
     <string name="stetho_title">Stetho (depuració de bases de dades)</string>
     <string name="otto_title">Otto (bus d\'esdeveniments)</string>
     <string name="photoview_title">PhotoView (GIF amb zoom)</string>
-    <string name="pattern_title">PatternLockView (protecció de patró)</string>
+    <string name="pattern_title">PatternLockView (protecció amb patró)</string>
     <string name="reprint_title">Reprint (protecció d\'empremtes digitals)</string>
     <string name="gif_drawable_title">Gif Drawable (càrrega de GIF)</string>
-    <string name="autofittextview_title">AutoFitTextView (canvi de mida del text)</string>
-    <string name="robolectric_title">Robolectric (marc de proves)</string>
+    <string name="autofittextview_title">AutoFitTextView (canvi de mida de text)</string>
+    <string name="robolectric_title">Robolectric (entorn de treball de proves)</string>
     <string name="espresso_title">Espresso (ajudant de proves)</string>
     <string name="gson_title">Gson (analitzador JSON)</string>
     <string name="leak_canary_title">Leak Canary (detector de fuites de memòria)</string>
-    <string name="number_picker_title">Selector de números (selector de números personalitzable)</string>
+    <string name="number_picker_title">Number Picker (selector personalitzable de números)</string>
     <string name="exoplayer_title">ExoPlayer (reproductor de vídeo)</string>
-    <string name="panorama_view_title">VR Panorama View (mostra panorames)</string>
-    <string name="sanselan_title">Apache Sanselan (lectura de metadades de les imatges)</string>
+    <string name="panorama_view_title">VR Panorama View (visualització de panorames)</string>
+    <string name="sanselan_title">Apache Sanselan (lectura de metadades d\'imatges)</string>
     <string name="filters_title">Android Photo Filters (filtres d\'imatge)</string>
     <string name="gesture_views_title">Gesture Views (imatges amb zoom)</string>
     <string name="indicator_fast_scroll_title">Indicator Fast Scroll (lletres a la barra de desplaçament)</string>
     <string name="event_bus_title">Event Bus (comunicació dins de l\'aplicació)</string>
     <string name="audio_record_view_title">Audio Record View (visualització d\'àudio)</string>
     <string name="sms_mms_title">SMS MMS (gestió d\'SMS i MMS)</string>
-    <string name="apng_title">APNG Android (suport WebP animat)</string>
+    <string name="apng_title">APNG Android (implementa WebP animades)</string>
     <!-- Google Play listing -->
-    <string name="deprecated_app">DESCONTINUADA: Aquesta versió de l\’aplicació ja no es manté, obteniu la versió Pro a l\'adreça https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">No us oblideu que si desinstal·leu qualsevol aplicació de pagament en un termini de 2 hores, se us retornarà automàticament. Si voleu un reemborsament en qualsevol moment més tard, poseu-vos en contacte amb nosaltres a hello@simplemobiletools.com i ho rebreu. Això fa que sigui fàcil provar-ho :)</string>
+    <string name="deprecated_app">OBSOLETA: Aquesta versió de l\'aplicació ja no es manté, obteniu la versió Pro a https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">No oblideu que si desinstal·leu qualsevol aplicació de pagament en un termini de 2 hores, el càrrec es retornarà automàticament. Si voleu un reemborsament més tard, poseu-vos en contacte amb nosaltres a hello@simplemobiletools.com i el rebreu. Això fa que sigui fàcil provar-ho :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">Un grup d\'aplicacions Android simples i de codi obert amb widgets personalitzables, sense anuncis ni permisos innecessaris.</string>
+    <string name="developer_description">Un grup d\'aplicacions Android simples i de codi obert amb ginys personalitzables, sense anuncis ni permisos innecessaris.</string>
 </resources>
