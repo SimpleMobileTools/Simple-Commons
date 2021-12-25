@@ -21,13 +21,13 @@
     <string name="always">Visada</string>
     <string name="never">Niekada</string>
     <string name="details">Išsamiau</string>
-    <string name="notes"></string>
+    <string name="notes"/>
     <string name="deleting_folder">Ištrinamas aplankas „%s“</string>
     <string name="none">Nėra</string>
     <string name="label">Etiketė</string>
-    <string name="transparent"></string>
+    <string name="transparent"/>
     <string name="transparent_color">Permatoma spalva</string>
-    <string name="select_a_different_color"></string>
+    <string name="select_a_different_color"/>
     <string name="download">Atsisiųsti</string>
     <string name="notification">Pranešimas</string>
     <string name="notifications">Pranešimai</string>
@@ -37,7 +37,7 @@
     <string name="next">Kitas</string>
     <string name="number">Numeris</string>
     <string name="no_contacts_found">Nerasta jokių adresatų</string>
-    <string name="request_the_required_permissions"></string>
+    <string name="request_the_required_permissions"/>
     <string name="no_access_to_contacts">Programėlei nepavyko gauti prieigą prie jūsų adresatų</string>
     <string name="insert_text_here">Įterpkite tekstą čia</string>
     <string name="call_person">Skambinti %s</string>
@@ -84,10 +84,10 @@
     <string name="no_items_found">Nerasta jokių elementų.</string>
     <string name="change_filter">Keisti filtrą</string>
     <!-- Permissions -->
-    <string name="no_storage_permissions"></string>
-    <string name="no_contacts_permission"></string>
-    <string name="no_camera_permissions"></string>
-    <string name="no_audio_permissions"></string>
+    <string name="no_storage_permissions"/>
+    <string name="no_contacts_permission"/>
+    <string name="no_camera_permissions"/>
+    <string name="no_audio_permissions"/>
     <!-- Renaming -->
     <string name="rename_file">Pervadinti failą</string>
     <string name="rename_folder">Pervadinti aplanką</string>
@@ -95,20 +95,20 @@
     <string name="rename_folder_error">Nepavyko pervadinti aplanko</string>
     <string name="rename_folder_empty">Aplanko pavadinimas negali būti tuščias</string>
     <string name="rename_folder_exists">Aplankas tokiu pavadinimu jau yra</string>
-    <string name="rename_folder_root"></string>
+    <string name="rename_folder_root"/>
     <string name="rename_folder_ok">Aplankas sėkmingai pervadintas</string>
     <string name="renaming_folder">Pervadinamas aplankas</string>
     <string name="filename_cannot_be_empty">Failo pavadinimas negali būti tuščias</string>
     <string name="filename_invalid_characters">Failo pavadinime yra negalimų simbolių</string>
     <string name="filename_invalid_characters_placeholder">Failo pavadinime „%s“ yra negalimų simbolių</string>
-    <string name="extension_cannot_be_empty"></string>
+    <string name="extension_cannot_be_empty"/>
     <string name="source_file_doesnt_exist">Pradinio failo %s nėra</string>
-    <string name="prepend_filenames"></string>
-    <string name="append_filenames"></string>
+    <string name="prepend_filenames"/>
+    <string name="append_filenames"/>
     <string name="simple_renaming">Paprastas pervadinimas</string>
     <string name="pattern_renaming">Šablonas</string>
-    <string name="string_to_add"></string>
-    <string name="rename_date_time_pattern"></string>
+    <string name="string_to_add"/>
+    <string name="rename_date_time_pattern"/>
     <string name="filename_without_txt">Failo pavadinimas (be .txt)</string>
     <string name="filename_without_json">Failo pavadinimas (be .json)</string>
     <!-- Copy / Move -->
@@ -134,7 +134,7 @@
     <string name="moving_success_one">Failas sėkmingai perkeltas</string>
     <string name="moving_success_partial">Kai kurių failų nepavyko perkelti</string>
     <string name="copying_success_partial">Kai kurių failų nepavyko nukopijuoti</string>
-    <string name="no_files_selected"></string>
+    <string name="no_files_selected"/>
     <string name="saving">Įrašoma…</string>
     <string name="could_not_create_folder">Nepavyko sukurti aplanko %s</string>
     <string name="could_not_create_file">Nepavyko sukurti failo %s</string>
@@ -147,7 +147,7 @@
     <string name="file">Failą</string>
     <string name="create_new_folder">Sukurti naują aplanką</string>
     <string name="name_taken">Failas ar aplankas tokiu pavadinimu jau yra</string>
-    <string name="invalid_name"></string>
+    <string name="invalid_name"/>
     <string name="empty_name">Įveskite pavadinimą</string>
     <string name="unknown_error_occurred">Įvyko nežinoma klaida</string>
     <!-- File operation conflicts -->
@@ -163,11 +163,11 @@
     <!-- File picker -->
     <string name="select_folder">Pasirinkite aplanką</string>
     <string name="select_file">Pasirinkite failą</string>
-    <string name="confirm_storage_access_title"></string>
-    <string name="confirm_storage_access_text"></string>
+    <string name="confirm_storage_access_title"/>
+    <string name="confirm_storage_access_text"/>
     <string name="confirm_storage_access_text_sd">Jei nematote SD kortelės, pabandykite štai ką</string>
-    <string name="confirm_storage_access_android_text"></string>
-    <string name="confirm_selection"></string>
+    <string name="confirm_storage_access_android_text"/>
+    <string name="confirm_selection"/>
     <plurals name="items">
         <item quantity="one">%d elementas</item>
         <item quantity="few">%d elementai</item>
@@ -191,18 +191,18 @@
         <item quantity="other">%d adresatų</item>
     </plurals>
     <!-- Storages -->
-    <string name="select_storage"></string>
-    <string name="internal"></string>
+    <string name="select_storage"/>
+    <string name="internal"/>
     <string name="sd_card">SD kortelė</string>
-    <string name="root"></string>
+    <string name="root"/>
     <string name="wrong_root_selected">Pasirinktas neteisingas aplankas, pasirinkite pagrindinį SD kortelės aplanką</string>
     <string name="sd_card_usb_same">SD kortelė ir USB įrenginio keliai negali būti tokie patys</string>
-    <string name="app_on_sd_card"></string>
+    <string name="app_on_sd_card"/>
     <!-- File properties -->
     <string name="properties">Savybės</string>
     <string name="path">Kelias</string>
-    <string name="items_selected"></string>
-    <string name="direct_children_count"></string>
+    <string name="items_selected"/>
+    <string name="direct_children_count"/>
     <string name="files_count">Bendras failų skaičius</string>
     <string name="resolution">Raiška</string>
     <string name="duration">Trukmė</string>
@@ -211,7 +211,7 @@
     <string name="focal_length">Židinio nuotolis</string>
     <string name="exposure_time">Išlaikymas</string>
     <string name="iso_speed">ISO greitis</string>
-    <string name="f_number"></string>
+    <string name="f_number"/>
     <string name="camera">Fotoaparatas</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Dainos pavadinimas</string>
@@ -227,7 +227,7 @@
     <string name="app_icon_color">Programėlės piktogramos spalva</string>
     <string name="bottom_navigation_bar_color">Apatinės naršymo juostos spalva</string>
     <string name="restore_defaults">Atkurti numatytuosius</string>
-    <string name="use_default"></string>
+    <string name="use_default"/>
     <string name="default_color">Numatytasis</string>
     <string name="change_color">Keisti spalvą</string>
     <string name="theme">Apipavidalinimas</string>
@@ -238,15 +238,15 @@
     <string name="undo_changes_confirmation">Ar tikrai norite atšaukti pakeitimus\?</string>
     <string name="save_before_closing">Yra neįrašytų pakeitimų. Įrašyti prieš išeinant\?</string>
     <string name="apply_to_all_apps">Taikyti spalvas visoms paprastoms programėlėms</string>
-    <string name="app_icon_color_warning"></string>
-    <string name="share_colors_success"></string>
-    <string name="shared_theme_note"></string>
-    <string name="purchase_thank_you"></string>
+    <string name="app_icon_color_warning"/>
+    <string name="share_colors_success"/>
+    <string name="shared_theme_note"/>
+    <string name="purchase_thank_you"/>
     <!-- Themes -->
     <string name="light_theme">Šviesus</string>
     <string name="dark_theme">Tamsus</string>
     <string name="auto_theme">Automatinis</string>
-    <string name="solarized"></string>
+    <string name="solarized"/>
     <string name="dark_red">Tamsiai raudonas</string>
     <string name="white">Baltas</string>
     <string name="black_white">Juodai baltas</string>
@@ -261,8 +261,8 @@
     <string name="rename">Pervadinti</string>
     <string name="share">Bendrinti</string>
     <string name="share_via">Bendrinti per</string>
-    <string name="select_all"></string>
-    <string name="select_text"></string>
+    <string name="select_all"/>
+    <string name="select_text"/>
     <string name="hide">Slėpti</string>
     <string name="unhide">Nebeslėpti</string>
     <string name="hide_folder">Slėpti aplanką</string>
@@ -274,12 +274,12 @@
     <string name="undo">Atšaukti</string>
     <string name="redo">Grąžinti</string>
     <string name="print">Spausdinti</string>
-    <string name="create_shortcut"></string>
+    <string name="create_shortcut"/>
     <string name="add_number_to_contact"/>
-    <string name="view_contact_details"></string>
+    <string name="view_contact_details"/>
     <string name="call_from_sim_1">Skambinti iš SIM kortelės 1</string>
     <string name="call_from_sim_2">Skambinti iš SIM kortelės 2</string>
-    <string name="toggle_filename"></string>
+    <string name="toggle_filename"/>
     <string name="move_to_top">Perkelti į viršų</string>
     <string name="move_to_bottom">Perkelti į apačią</string>
     <!-- Sorting -->
@@ -297,7 +297,7 @@
     <string name="ascending">Didėjančiai</string>
     <string name="descending">Mažėjančiai</string>
     <string name="use_for_this_folder">Naudoti tik šiam aplankui</string>
-    <string name="sort_numeric_parts"></string>
+    <string name="sort_numeric_parts"/>
     <string name="first_name">Vardas</string>
     <string name="middle_name">Antras vardas</string>
     <string name="surname">Pavardė</string>
@@ -318,46 +318,47 @@
     <string name="no">Ne</string>
     <string name="maybe">Galbūt</string>
     <plurals name="delete_warning">
-        <item quantity="one">WARNING: You are deleting %d folder</item>
-        <item quantity="other">WARNING: You are deleting %d folders</item>
+        <item quantity="one">ĮSPĖJIMAS: Jūs ištrinate %d aplanką</item>
+        <item quantity="few">ĮSPĖJIMAS: Jūs ištrinate %d aplankus</item>
+        <item quantity="other">ĮSPĖJIMAS: Jūs ištrinate %d aplankų</item>
     </plurals>
     <!-- Password protection -->
-    <string name="pin">PIN</string>
-    <string name="enter_pin">Įvesti PIN</string>
-    <string name="please_enter_pin">Prašome įvesti PIN</string>
-    <string name="wrong_pin">Klaidingas PIN</string>
-    <string name="repeat_pin">Pakartoti PIN</string>
-    <string name="pattern">Modelis</string>
-    <string name="insert_pattern">Įtraukti modelį</string>
-    <string name="wrong_pattern">Klaidingas modelis</string>
-    <string name="repeat_pattern">Pakartoti modelį</string>
-    <string name="biometrics">Biometrics</string>
+    <string name="pin"></string>
+    <string name="enter_pin"></string>
+    <string name="please_enter_pin"></string>
+    <string name="wrong_pin"></string>
+    <string name="repeat_pin"></string>
+    <string name="pattern">Šablonas</string>
+    <string name="insert_pattern">Įveskite šabloną</string>
+    <string name="wrong_pattern">Neteisingas šablonas</string>
+    <string name="repeat_pattern">Pakartokite šabloną</string>
+    <string name="biometrics"></string>
     <string name="fingerprint">Piršto atspaudas</string>
     <string name="add_fingerprint">Pridėti piršto atspaudą</string>
-    <string name="place_finger">Prašome uždėti savo pirštą ant pirštų atspaudų jutiklio</string>
-    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
-    <string name="authenticate">Authenticate</string>
-    <string name="authentication_failed">Autentifikacija nepavyko</string>
-    <string name="authentication_blocked">Autentifikacija blokuojama, prašome pabandyti iš naujo vėliau</string>
-    <string name="no_fingerprints_registered">Neturite registruotų pirštų atspaudų, prašome įtraukti Jūsų įrenginio nustatymuose</string>
-    <string name="go_to_settings">Eiti į nustatymus</string>
-    <string name="protection_setup_successfully">Slaptažodis nustatytas sėkmingai. Prašome įdiegti programėlę iš naujo jei pamiršite slaptažodį.</string>
-    <string name="fingerprint_setup_successfully">Apsauga nustatyta sėkmingai. Prašome įdiegti programėlę iš naujo jei bus problemų su apsaugos nustatymu iš naujo.</string>
-    <string name="lock_folder">Lock folder</string>
-    <string name="unlock_folder">Unlock folder</string>
-    <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
+    <string name="place_finger">Uždėkite pirštą ant piršto atspaudo jutiklio</string>
+    <string name="open_biometric_dialog"></string>
+    <string name="authenticate"></string>
+    <string name="authentication_failed">Nepavyko nustatyti tapatybės</string>
+    <string name="authentication_blocked">Tapatybės nustatymas užblokuotas, netrukus bandykite dar kartą</string>
+    <string name="no_fingerprints_registered">Neturite jokių registruotų piršto atspaudų, įtraukite juos savo įrenginio nustatymuose</string>
+    <string name="go_to_settings">Pereiti į nustatymus</string>
+    <string name="protection_setup_successfully">Slaptažodis sėkmingai nustatytas. Jeigu jį pamiršite, įdiekite programėlę iš naujo.</string>
+    <string name="fingerprint_setup_successfully">Apsauga sėkmingai nustatyta. Jei kils problemų su apsaugos atstatymu, įdiekite programėlę iš naujo.</string>
+    <string name="lock_folder">Užrakinti aplanką</string>
+    <string name="unlock_folder">Atrakinti aplanką</string>
+    <string name="lock_folder_notice">Ši apsauga veikia tik šioje programėlėje ir ji nepakeičia tikrojo aplankų šifravimo sistemos mastu.</string>
     <!-- Times -->
     <string name="yesterday">Vakar</string>
     <string name="today">Šiandien</string>
     <string name="tomorrow">Rytoj</string>
-    <string name="hide_year">Hide year</string>
+    <string name="hide_year">Slėpti metus</string>
     <string name="seconds_raw">sekundės</string>
     <string name="minutes_raw">minutės</string>
     <string name="hours_raw">valandos</string>
     <string name="days_raw">dienos</string>
-    <string name="seconds_letter">s</string>
-    <string name="minutes_letter">m</string>
-    <string name="hours_letter">h</string>
+    <string name="seconds_letter">sek.</string>
+    <string name="minutes_letter">min.</string>
+    <string name="hours_letter">val.</string>
     <plurals name="seconds">
         <item quantity="one">%d sekundė</item>
         <item quantity="few">%d sekundės</item>
@@ -395,171 +396,175 @@
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">per %d sekundę</item>
-        <item quantity="few">per %d sekundes</item>
-        <item quantity="other">per %d sekundžių</item>
+        <item quantity="one">%d sekundės</item>
+        <item quantity="few">%d sekundžių</item>
+        <item quantity="other">%d sekundžių</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">per %d minutę</item>
-        <item quantity="few">per %d minutes</item>
-        <item quantity="other">per %d minučių</item>
+        <item quantity="one">%d minutės</item>
+        <item quantity="few">%d minučių</item>
+        <item quantity="other">%d minučių</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">per %d valandą</item>
-        <item quantity="few">per %d valandas</item>
-        <item quantity="other">per %d valandų</item>
+        <item quantity="one">%d valandos</item>
+        <item quantity="few">%d valandų</item>
+        <item quantity="other">%d valandų</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d dieną</item>
-        <item quantity="few">%d dienas</item>
+        <item quantity="one">%d dienos</item>
+        <item quantity="few">%d dienų</item>
         <item quantity="other">%d dienų</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d savaitę</item>
-        <item quantity="few">%d savaites</item>
+        <item quantity="one">%d savaitės</item>
+        <item quantity="few">%d savaičių</item>
         <item quantity="other">%d savaičių</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">%d mėnesį</item>
-        <item quantity="few">%d mėnesius</item>
+        <item quantity="one">%d mėnesio</item>
+        <item quantity="few">%d mėnesių</item>
         <item quantity="other">%d mėnesių</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d metai</item>
-        <item quantity="few">%d metai</item>
+        <item quantity="one">%d metų</item>
+        <item quantity="few">%d metų</item>
         <item quantity="other">%d metų</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one">Prieš %d sekundę</item>
-        <item quantity="few">Prieš %d sekundes</item>
-        <item quantity="other">Prieš %d sekundžių</item>
+        <item quantity="one"></item>
+        <item quantity="few"></item>
+        <item quantity="other"></item>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one">Prieš %d minutę</item>
-        <item quantity="few">Prieš %d minutes</item>
-        <item quantity="other">Prieš %d minučių</item>
+        <item quantity="one"></item>
+        <item quantity="few"></item>
+        <item quantity="other"></item>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one">Prieš %d valandą</item>
-        <item quantity="few">Prieš %d valandas</item>
-        <item quantity="other">Prieš %d valandų</item>
+        <item quantity="one"></item>
+        <item quantity="few"></item>
+        <item quantity="other"></item>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one">Prieš %d dieną</item>
-        <item quantity="few">Prieš %d dienas</item>
-        <item quantity="other">Prieš %d dienų</item>
+        <item quantity="one"></item>
+        <item quantity="few"></item>
+        <item quantity="other"></item>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one">%d savaitę</item>
-        <item quantity="few">%d sa vaites</item>
-        <item quantity="other">%d savaičių</item>
+        <item quantity="one"></item>
+        <item quantity="few"></item>
+        <item quantity="other"></item>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one">%d month before</item>
-        <item quantity="few">%d months before</item>
-        <item quantity="other">%d months before</item>
+        <item quantity="one"></item>
+        <item quantity="few"></item>
+        <item quantity="other"></item>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one">%d year before</item>
-        <item quantity="few">%d years before</item>
-        <item quantity="other">%d years before</item>
+        <item quantity="one"></item>
+        <item quantity="few"></item>
+        <item quantity="other"></item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">Per %d sekundę</item>
-        <item quantity="few">Per %d sekundes</item>
-        <item quantity="other">Per %d sekundžių</item>
+        <item quantity="one"></item>
+        <item quantity="few"></item>
+        <item quantity="other"></item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">Per %d minutę</item>
-        <item quantity="few">Per %d minutes</item>
-        <item quantity="other">Per %d minučių</item>
+        <item quantity="one"></item>
+        <item quantity="few"></item>
+        <item quantity="other"></item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">Per %d valandą</item>
-        <item quantity="few">Per %d valandas</item>
-        <item quantity="other">Per %d valandų</item>
+        <item quantity="one"></item>
+        <item quantity="few"></item>
+        <item quantity="other"></item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d day</item>
-        <item quantity="other">%d days</item>
+        <item quantity="one"></item>
+        <item quantity="few"></item>
+        <item quantity="other"></item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d week</item>
-        <item quantity="other">%d weeks</item>
+        <item quantity="one"></item>
+        <item quantity="few"></item>
+        <item quantity="other"></item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d month</item>
-        <item quantity="other">%d months</item>
+        <item quantity="one"></item>
+        <item quantity="few"></item>
+        <item quantity="other"></item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d year</item>
-        <item quantity="other">%d years</item>
+        <item quantity="one"></item>
+        <item quantity="few"></item>
+        <item quantity="other"></item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Likęs laikas iki žadintuvo suveikimo:\n%s</string>
-    <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
-    <string name="alarm_warning">Prieš naudodamiesi, įsitikinkite, kad signalas veikia tinkamai. Gali nesuveikti dėl sistemos apribojimų, susijusių su baterijos taupymu.</string>
-    <string name="reminder_warning">Prieš naudodamiesi, įsitikinkite, kad priminimai tinkamai veikia. Jie gali netinkamai veikti dėl sistemos apribojimų, susijusių su baterijos taupymu.</string>
-    <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
+    <string name="alarm_goes_off_in"></string>
+    <string name="reminder_triggers_in"></string>
+    <string name="alarm_warning"></string>
+    <string name="reminder_warning"></string>
+    <string name="notifications_disabled">Šios programėlės pranešimai yra išjungti. Norėdami juos įjungti, pereikite į savo įrenginio nustatymus.</string>
     <!-- Alarms -->
     <string name="alarm">Žadintuvas</string>
     <string name="snooze">Snausti</string>
-    <string name="dismiss">Nutraukti</string>
-    <string name="no_reminder">Nėra priminimo</string>
-    <string name="at_start">Paleidžiant</string>
+    <string name="dismiss">Atmesti</string>
+    <string name="no_reminder"></string>
+    <string name="at_start"></string>
     <string name="system_sounds">Sistemos garsai</string>
     <string name="your_sounds">Jūsų garsai</string>
     <string name="add_new_sound">Pridėti naują garsą</string>
-    <string name="no_sound">Nėra garso</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="no_sound">Be garso</string>
+    <string name="during_day_at_hh_mm"></string>
+    <string name="during_day_at"></string>
     <!-- Settings -->
     <string name="settings">Nustatymai</string>
-    <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
-    <string name="general_settings">General</string>
-    <string name="color_customization">Color customization</string>
-    <string name="customize_colors">Spalvų redagavimas</string>
-    <string name="customize_colors_locked">Spalvų redagavimas (Locked)</string>
-    <string name="customize_widget_colors">Customize widget colors</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="purchase_simple_thank_you">Įsigyti „Paprastą ačiū“</string>
+    <string name="general_settings">Bendri</string>
+    <string name="color_customization">Spalvos tinkinimas</string>
+    <string name="customize_colors">Tinkinti spalvas</string>
+    <string name="customize_colors_locked">Tinkinti spalvas (Užrakinta)</string>
+    <string name="customize_widget_colors">Tinkinti valdiklių spalvas</string>
+    <string name="customize_notifications">Tinkinti pranešimus</string>
     <string name="use_english_language">Naudoti anglų kalbą</string>
     <string name="show_hidden_items">Rodyti paslėptus elementus</string>
-    <string name="font_size">Teksto dydis</string>
-    <string name="small">Smulkus</string>
+    <string name="font_size">Šrifto dydis</string>
+    <string name="small">Mažas</string>
     <string name="medium">Vidutinis</string>
     <string name="large">Didelis</string>
-    <string name="extra_large">Ypač didelis</string>
+    <string name="extra_large">Labai didelis</string>
     <string name="password_protect_hidden_items">Apsaugoti slaptažodžiu paslėptų elementų matomumą</string>
     <string name="password_protect_whole_app">Apsaugoti slaptažodžiu visą programėlę</string>
-    <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
-    <string name="keep_last_modified">Keep old last-modified value at file operations</string>
-    <string name="show_info_bubble">Rodyti informacijos burbuliuką esant slinkties elementams velkant slinkties juostą</string>
-    <string name="prevent_phone_from_sleeping">Neleisti telefonui užmigti, kai programėlė veikia fone</string>
+    <string name="password_protect_file_deletion">Apsaugoti slaptažodžiu failų ištrynimą ir perkėlimą</string>
+    <string name="keep_last_modified"></string>
+    <string name="show_info_bubble"></string>
+    <string name="prevent_phone_from_sleeping">Neleisti telefonui užmigti tol, kol programėlė veikia priekiniame plane</string>
     <string name="skip_delete_confirmation">Visada praleisti ištrynimo patvirtinimo dialogą</string>
-    <string name="enable_pull_to_refresh">Įgalinti patraukimą nuo viršaus, kad </string>
+    <string name="enable_pull_to_refresh"></string>
     <string name="use_24_hour_time_format">Naudoti 24 valandų formatą</string>
-    <string name="change_date_and_time_format">Pakeisti datos ir laiko formatą</string>
+    <string name="change_date_and_time_format">Keisti datos ir laiko formatą</string>
     <string name="sunday_first">Pradėti savaitę nuo sekmadienio</string>
     <string name="widgets">Valdikliai</string>
-    <string name="use_same_snooze">Visada naudoti tą patį snaudimo laiką</string>
-    <string name="snooze_time">Snaudimo laikas</string>
+    <string name="use_same_snooze">Visada naudoti tokį patį snaudimo laikotarpį</string>
+    <string name="snooze_time">Snaudimo laikotarpis</string>
     <string name="vibrate_on_button_press">Vibruoti, kai paspaudžiami mygtukai</string>
-    <string name="move_items_into_recycle_bin">Perkelti elementus į šiukšlinę vietoj ištrynimo</string>
+    <string name="move_items_into_recycle_bin"></string>
     <string name="recycle_bin_cleaning_interval">Šiukšlinės išvalymo intervalas</string>
-    <string name="empty_recycle_bin">Ištuštinti šiukšlinę</string>
-    <string name="force_portrait_mode">Priversti rodyti portreto rėžimu</string>
-    <string name="export_settings">Exportuoti nustatymus</string>
+    <string name="empty_recycle_bin"></string>
+    <string name="force_portrait_mode"></string>
+    <string name="export_settings">Eksportuoti nustatymus</string>
     <string name="import_settings">Importuoti nustatymus</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
-    <string name="start_name_with_surname">Pavardė rodoma pirma</string>
-    <string name="clear_cache">Clear cache</string>
-    <string name="show_call_confirmation_dialog">Show a call confirmation dialog before initiating a call</string>
+    <string name="settings_exported_successfully">Nustatymai sėkmingai eksportuoti</string>
+    <string name="settings_imported_successfully">Nustatymai sėkmingai importuoti</string>
+    <string name="start_name_with_surname"></string>
+    <string name="clear_cache">Išvalyti podėlį</string>
+    <string name="show_call_confirmation_dialog"></string>
     <!-- Setting sections -->
     <string name="visibility">Matomumas</string>
-    <string name="security">Sauga</string>
+    <string name="security">Saugumas</string>
     <string name="scrolling">Slinkimas</string>
     <string name="file_operations">Bylų operacijos</string>
     <string name="recycle_bin">Šiukšlinė</string>
