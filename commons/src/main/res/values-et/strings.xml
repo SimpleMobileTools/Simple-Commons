@@ -249,7 +249,7 @@
     <string name="light_theme">Hele</string>
     <string name="dark_theme">Tume</string>
     <string name="auto_theme">Auto</string>
-    <string name="solarized">Solarized</string>
+    <string name="solarized">Päikese käes</string>
     <string name="dark_red">Tumepunane</string>
     <string name="white">White</string>
     <string name="black_white">Black &amp; White</string>
@@ -516,21 +516,21 @@
     <string name="password_protect_whole_app">Kaitse salasõnaga kogu rakendust</string>
     <string name="password_protect_file_deletion">Kaitse salasõnaga failide kustutamist ja teisaldamist</string>
     <string name="keep_last_modified">Failide haldamisel jäta alles ka vanatüübiline „viimati muudatud“ ajatempel</string>
-    <string name="show_info_bubble">Show an info bubble at scrolling items by scrollbar dragging</string>
+    <string name="show_info_bubble">Kerimisriba sikutamisel näita kirjetekohast infomulli</string>
     <string name="prevent_phone_from_sleeping">Kui rakendus on avatud ja kasutusel, siis takista telefoni uinumist</string>
     <string name="skip_delete_confirmation">Kustutamisel ära mitte kunagi küsi topeltkinnitust</string>
-    <string name="enable_pull_to_refresh">Enable pull-to-refresh from the top</string>
+    <string name="enable_pull_to_refresh">Ülalt alla sikutamisel värskenda andmeid</string>
     <string name="use_24_hour_time_format">Kasuta 24-tunni ajavormingut</string>
     <string name="change_date_and_time_format">Muuda kuupäeva ja kellaaja vormingut</string>
     <string name="sunday_first">Nädal algab pühapäevaga</string>
     <string name="widgets">Widgets</string>
-    <string name="use_same_snooze">Always use same snooze time</string>
-    <string name="snooze_time">Snooze time</string>
-    <string name="vibrate_on_button_press">Vibrate on button press</string>
+    <string name="use_same_snooze">Alati kasuta sama tukastamise aega</string>
+    <string name="snooze_time">Tukastamise aeg</string>
+    <string name="vibrate_on_button_press">Nupuvajutusel vibreeri</string>
     <string name="move_items_into_recycle_bin">Kustutamise asemel viska failid prügikasti</string>
     <string name="recycle_bin_cleaning_interval">Prügikasti tühjendamise välp</string>
     <string name="empty_recycle_bin">Tühjenda prügikast</string>
-    <string name="force_portrait_mode">Force portrait mode</string>
+    <string name="force_portrait_mode">Kasuta ainult püstvaadet</string>
     <string name="export_settings">Ekspordi seadistused</string>
     <string name="import_settings">Impordi seadistused</string>
     <string name="settings_exported_successfully">Seadistuste eksport õnnestus</string>
@@ -541,7 +541,7 @@
     <!-- Setting sections -->
     <string name="visibility">Nähtavus</string>
     <string name="security">Turvalisus</string>
-    <string name="scrolling">Scrolling</string>
+    <string name="scrolling">Kerimine</string>
     <string name="file_operations">Tegevused failidega</string>
     <string name="recycle_bin">Prügikast</string>
     <string name="saving_label">Salvestame</string>
@@ -578,10 +578,10 @@
         <item quantity="other">Viskan %d faili prügikasti</item>
     </plurals>
     <!-- Import / Export -->
-    <string name="importing">Importing…</string>
-    <string name="exporting">Exporting…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
+    <string name="importing">Impordime…</string>
+    <string name="exporting">Ekspordime…</string>
+    <string name="importing_successful">Importimine õnnestus</string>
+    <string name="exporting_successful">Eksportimine õnnestus</string>
     <string name="importing_failed">Importimine ei õnnestunud</string>
     <string name="exporting_failed">Eksportimine ei õnnestunud</string>
     <string name="importing_some_entries_failed">Mõnede kirjete importimine ei õnnestunud</string>
@@ -642,11 +642,11 @@
     <string name="sunday_short">Sun</string>
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Seda rakenduse versiooni me enam ei uuenda. Täiendused ja parandused leiad nüüd Pro-versioonist.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
-    <string name="it_is_free">It is free till: %s. If you download it till then, you will be able to use it for free forever.</string>
+    <string name="upgrade_to_pro_long_click">Sellele rakenduse versioonile enam uuendusi ei lisandu. Kui soovid parandusi ja täiendusi, siis klõpsates siin võta kasutusele Pro-versioon.</string>
+    <string name="it_is_free">See rakendus on tasuta kuni %s. Kui laadid ta alla enne seda, siis on ta tasuta kasutamiseks ilma ajalise piiranguta.</string>
     <string name="more_info">Lisateave</string>
     <string name="upgrade">Uuenda</string>
-    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
+    <string name="upgrade_calendar">Palun tõsta kohalikku andmekogusse salvestatud sündmused uude rakendusse kasutades eksportimist .ics faili ning seejärel importimist saast failist. Vastavad eksportimise/importimise nupud leiad põhivaates asuvast rakenduse menüüst.</string>
     <!-- About -->
     <string name="about">Rakenduse teave</string>
     <string name="website_label">Lähtekoodi leiad siit</string>
@@ -660,19 +660,19 @@
     <string name="rate_us">Rate us</string>
     <string name="rate">Rate</string>
     <string name="donate">Toeta meid</string>
-    <string name="donate_underlined"><u>Donate</u></string>
-    <string name="follow_us">Follow us</string>
+    <string name="donate_underlined"><u>Toeta meid rahaliselt</u></string>
+    <string name="follow_us">Jälgi meid</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="support">Support</string>
     <string name="help_us">Help us</string>
     <string name="social">Social</string>
     <string name="other">Other</string>
     <string name="version_placeholder">Version %s</string>
-    <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with ❤️ in Slovakia</string>
-    <string name="additional_info">Additional info</string>
-    <string name="app_version">App version: %s</string>
-    <string name="device_os">Device OS: %s</string>
+    <string name="hello">Hei :)</string>
+    <string name="about_footer">Tehtud Slovakkias suure ❤️\'ga</string>
+    <string name="additional_info">Lisateave</string>
+    <string name="app_version">Rakenduse versioon: %s</string>
+    <string name="device_os">Seadme operatsioonisüsteem: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>
@@ -685,79 +685,60 @@
     <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
     <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
     <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
-    <string name="read_it">Read it</string>
-    <string name="read_faq">Read FAQ</string>
+    <string name="read_it">Loe järgnevat</string>
+    <string name="read_faq">Loe korduma kippuvaid küsimusi</string>
     <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
-    <string name="rate_our_app">Rate our app please :)</string>
-    <string name="thank_you">Thank you</string>
-    <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
-    <string name="widget_locked">
-        <![CDATA[
-            The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
-        ]]>
-    </string>
+    <string name="rate_our_app">Palun hinda meie rakendust :)</string>
+    <string name="thank_you">Suur tänu</string>
+    <string name="widget_locked_pro">Rakendus on lukustatud.
+\nLukustuse eemaldamiseks palun uuenda ta Pro-versioonini.</string>
+    <string name="widget_locked">Vidin on lukustatud.&lt;br&gt;Lukustuse eemaldamiseks palun osta rakendus &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Lihtne tänuavaldus&lt;/a&gt;.</string>
     <!-- New app (do not translate anything on the 4th line) -->
-    <string name="new_app">
-        <![CDATA[
-            Hey,<br><br>
-            just letting you know that some new apps have been released recently:<br><br>
-            <a href="%1$s">%2$s</a><br><br>
-            <a href="%3$s">%4$s</a><br><br>
-            <a href="%5$s">%6$s</a><br><br>
-            You can download them by pressing their titles or icons.<br><br>
-            Thanks
-        ]]>
-    </string>
-    <string name="simple_app_launcher">Simple App Launcher</string>
-    <string name="simple_calculator">Simple Calculator</string>
-    <string name="simple_calendar">Simple Calendar</string>
-    <string name="simple_camera">Simple Camera</string>
-    <string name="simple_clock">Simple Clock</string>
+    <string name="new_app">Hei,&lt;br&gt;&lt;br&gt; tahtsime lihtsalt teada anda, et oleme teinud mõned uued rakendused :&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Klõpsides ikooni või nimel saad sa neid alla laadida.&lt;br&gt;&lt;br&gt; Tänud</string>
+    <string name="simple_app_launcher">Lihtne rakenduste käivitaja</string>
+    <string name="simple_calculator">Lihtne kalkulaator</string>
+    <string name="simple_calendar">Lihtne kalender</string>
+    <string name="simple_camera">Lihtne kaamera</string>
+    <string name="simple_clock">Lihtne kell</string>
     <string name="simple_contacts">Simple Contacts</string>
-    <string name="simple_dialer">Simple Dialer</string>
-    <string name="simple_draw">Simple Draw</string>
+    <string name="simple_dialer">Lihtne telefon</string>
+    <string name="simple_draw">Lihtne joonistaja</string>
     <string name="simple_file_manager">Simple File Manager</string>
-    <string name="simple_flashlight">Simple Flashlight</string>
-    <string name="simple_gallery">Simple Gallery</string>
-    <string name="simple_music_player">Simple Music Player</string>
+    <string name="simple_flashlight">Lihtne taskulamp</string>
+    <string name="simple_gallery">Lihtne galerii</string>
+    <string name="simple_music_player">Lihtne muusikamängija</string>
     <string name="simple_notes">Simple Notes</string>
-    <string name="simple_sms_messenger">Simple SMS Messenger</string>
-    <string name="simple_thank_you">Simple Thank You</string>
-    <string name="simple_voice_recorder">Simple Voice Recorder</string>
-    <string name="app_launcher_short">App Launcher</string>
-    <string name="calculator_short">Calculator</string>
-    <string name="calendar_short">Calendar</string>
-    <string name="camera_short">Camera</string>
-    <string name="clock_short">Clock</string>
+    <string name="simple_sms_messenger">Lihtne SMS sõnumiklient</string>
+    <string name="simple_thank_you">Lihtne tänuavaldus</string>
+    <string name="simple_voice_recorder">Lihtne helisalvestaja</string>
+    <string name="app_launcher_short">Rakenduste käivitaja</string>
+    <string name="calculator_short">Kalkulaator</string>
+    <string name="calendar_short">Kalender</string>
+    <string name="camera_short">Kaamera</string>
+    <string name="clock_short">Kell</string>
     <string name="contacts_short">Contacts</string>
-    <string name="dialer_short">Dialer</string>
-    <string name="draw_short">Draw</string>
+    <string name="dialer_short">Telefon</string>
+    <string name="draw_short">Joonistaja</string>
     <string name="file_manager_short">File Manager</string>
-    <string name="flashlight_short">Flashlight</string>
-    <string name="gallery_short">Gallery</string>
-    <string name="music_player_short">Music Player</string>
+    <string name="flashlight_short">Taskulamp</string>
+    <string name="gallery_short">Galerii</string>
+    <string name="music_player_short">Muusikamängija</string>
     <string name="notes_short">Notes</string>
-    <string name="sms_messenger_short">SMS Messenger</string>
-    <string name="thank_you_short">Thank You</string>
-    <string name="voice_recorder_short">Voice Recorder</string>
+    <string name="sms_messenger_short">SMS sõnumid</string>
+    <string name="thank_you_short">Suur tänu</string>
+    <string name="voice_recorder_short">Helisalvestaja</string>
     <string name="sideloaded_app">Tundub sinu hetkel kasutatav rakenduse variant on vigane. Palun laadi algupärane versioon &lt;a href=%s&gt;siit&lt;/a&gt;.</string>
     <!-- FAQ -->
     <string name="frequently_asked_questions">Korduma kippuvad küsimused</string>
     <string name="before_asking_question">Enne küsimuse kirjutamist palun loe esmalt järgnevat lehte</string>
     <string name="faq_1_title_commons">Kuidas ma ei näe seda rakenduste vidinat kõikide vidinate loendis\?</string>
-    <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
-        in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
-    <string name="faq_2_title_commons">I want to support you, but I cannot donate money. Is there anything else I can do?</string>
-    <string name="faq_2_text_commons">
-        <![CDATA[
-            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-        ]]>
-    </string>
-    <string name="faq_3_title_commons">I deleted some files by mistake, how can I recover them?</string>
-    <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, there is no trashbin available.</string>
-    <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
-    <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
+    <string name="faq_1_text_commons">Tõenäoliselt juhtus nii, et teisaldasid rakenduse SD-kaardile. On olemas Android-süsteemi piirang, mis sellisel juhul peidab antud rakenduse vidinad. Ainus lahendus on teisaldada rakendus tagasi sisemälusse kasutades nutiseadme seadistusi.</string>
+    <string name="faq_2_title_commons">Ma tahan teid toetada, kuid ma ei saa raha annetada. Kas ma saan veel midagi teha\?</string>
+    <string name="faq_2_text_commons">Jah, muidugi. Sa saad rakendust teistele tutvustada või anda head tagasisidet ja hinnanguid. Samuti saad aidata ka rakenduste tõlkimisega uude keelde või lihtsalt mõne olemasoleva tõlke ajakohastamisega. Tõlkimise juhend asub &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;siin lehel&lt;/a&gt; või küsimuste puhul lihtsalt võta meiega ühendust aadressil &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt;.</string>
+    <string name="faq_3_title_commons">Ma kustutasin kogemata mõned failid, kuidas saan neid taastada\?</string>
+    <string name="faq_3_text_commons">Kahjuks ei saa. Failid kustutatakse koheselt pärast topeltkinnitust ning prügikasti ei ole kasutusel.</string>
+    <string name="faq_4_title_commons">Mulle ei meeldi vidinate värvid, kas ma saan neid muuta\?</string>
+    <string name="faq_4_text_commons">Jah, kui lohistad vidinat oma koduekraanile, ilmub vidina seadistusvaade. Sa näed vasakus alumises nurgas värvilisi ruute, ning uue värvi valimiseks vajuta neid. Lisaks saade läbipaistvuse kohendamiseks kasutada liugurit.</string>
     <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
     <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
     <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
@@ -776,9 +757,9 @@
     <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
     <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
     <!-- Contributors -->
-    <string name="contributors">Contributors</string>
-    <string name="translation">Translation</string>
-    <string name="development">Development</string>
+    <string name="contributors">Kaasautorid</string>
+    <string name="translation">Tõlked</string>
+    <string name="development">Arendus</string>
     <string name="other_help">Other help</string>
     <string name="contributors_label">
         <![CDATA[
@@ -870,7 +851,7 @@
     <string name="why_upgrade_zooming">Zooming</string>
     <!-- License -->
     <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
-    <string name="third_party_licences">Third party licences</string>
+    <string name="third_party_licences">Kolmandate osapoolte litsentsid</string>
     <string name="kotlin_title">Kotlin (programming language)</string>
     <string name="subsampling_title">Subsampling Scale Image View (zoomable imageviews)</string>
     <string name="glide_title">Glide (image loading and caching)</string>
