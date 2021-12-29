@@ -37,7 +37,7 @@ class BottomActionMenuView : LinearLayout {
     private val inflater = LayoutInflater.from(context)
     private val itemsLookup = LinkedHashMap<Int, BottomActionMenuItem>()
     private val items: List<BottomActionMenuItem>
-        get() = itemsLookup.values.toList().sortedWith(compareBy<BottomActionMenuItem> { it.showAsAction }.thenBy { it.icon == View.NO_ID }).filter { it.isVisible }
+        get() = itemsLookup.values.toList().sortedWith(compareByDescending<BottomActionMenuItem> { it.showAsAction }.thenBy { it.icon != View.NO_ID }).filter { it.isVisible }
     private var currentAnimator: ViewPropertyAnimator? = null
     private var callback: BottomActionMenuCallback? = null
 
