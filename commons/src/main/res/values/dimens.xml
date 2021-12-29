@@ -23,7 +23,6 @@
     <dimen name="fastscroll_width">8dp</dimen>
     <dimen name="fastscroll_height">40dp</dimen>
     <dimen name="fingerprint_icon_size">72dp</dimen>
-    <dimen name="fastscroll_bubble_offset">30dp</dimen>
     <dimen name="fab_size">56dp</dimen>
     <dimen name="secondary_fab_bottom_margin">76dp</dimen>
     <dimen name="file_picker_icon_size">54dp</dimen>
@@ -34,9 +33,6 @@
     <dimen name="rounded_corner_radius_big">10dp</dimen>
     <dimen name="bottom_sheet_corner_radius">24dp</dimen>
     <dimen name="breadcrumbs_layout_height">48dp</dimen>
-    <dimen name="bottom_cab_layout_height">48dp</dimen>
-    <dimen name="bottom_cab_layout_max_width">300dp</dimen>
-    <dimen name="bottom_cab_layout_item_size">48dp</dimen>
 
     <dimen name="dragselect_hotspot_height">56dp</dimen>
     <dimen name="selection_check_size">26dp</dimen>
@@ -55,9 +51,7 @@
     <dimen name="actionbar_text_size">20sp</dimen>
     <dimen name="extra_big_text_size">22sp</dimen>
 
-    <dimen name="cab_popup_menu_vertical_padding">8dp</dimen>
     <dimen name="cab_popup_menu_max_width">336dp</dimen>
     <dimen name="cab_popup_menu_min_width">168dp</dimen>
-    <dimen name="cab_popup_menu_width_unit">56dp</dimen>
     <dimen name="cab_item_min_width">85dp</dimen>
 </resources>

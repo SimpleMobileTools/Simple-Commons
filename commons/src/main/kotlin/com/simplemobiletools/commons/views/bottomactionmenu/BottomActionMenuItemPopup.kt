@@ -10,20 +10,25 @@ import androidx.core.widget.PopupWindowCompat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
+import com.simplemobiletools.commons.extensions.windowManager
+import com.simplemobiletools.commons.helpers.isRPlus
 import kotlinx.android.synthetic.main.item_action_mode_popup.view.*
 import kotlin.math.ceil
 
-class BottomActionMenuItemPopup(private val context: Context, private val items: List<BottomActionMenuItem>, private val onSelect: (BottomActionMenuItem) -> Unit) {
+class BottomActionMenuItemPopup(
+    private val context: Context,
+    private val items: List<BottomActionMenuItem>,
+    private val onSelect: (BottomActionMenuItem) -> Unit
+) {
 
     private val popup = PopupWindow(context, null, android.R.attr.popupMenuStyle)
     private var anchorView: View? = null
     private var dropDownWidth = ViewGroup.LayoutParams.WRAP_CONTENT
+    private var dropDownHeight = ViewGroup.LayoutParams.WRAP_CONTENT
     private var dropDownVerticalOffset: Int = 0
     private var dropDownHorizontalOffset: Int = 0
     private val tempRect = Rect()
-    private val popupMaxWidth: Int
     private val popupMinWidth: Int
-    private val popupWidthUnit: Int
     private val popupPaddingBottom: Int
     private val popupPaddingStart: Int
     private val popupPaddingEnd: Int
@@ -53,9 +58,7 @@ class BottomActionMenuItemPopup(private val context: Context, private val items:
 
     init {
         popup.isFocusable = true
-        popupMaxWidth = context.resources.getDimensionPixelSize(R.dimen.cab_popup_menu_max_width)
         popupMinWidth = context.resources.getDimensionPixelSize(R.dimen.cab_popup_menu_min_width)
-        popupWidthUnit = context.resources.getDimensionPixelSize(R.dimen.cab_popup_menu_width_unit)
         popupPaddingStart = context.resources.getDimensionPixelSize(R.dimen.smaller_margin)
         popupPaddingEnd = context.resources.getDimensionPixelSize(R.dimen.smaller_margin)
         popupPaddingTop = context.resources.getDimensionPixelSize(R.dimen.smaller_margin)
@@ -64,15 +67,14 @@ class BottomActionMenuItemPopup(private val context: Context, private val items:
 
     fun show(anchorView: View) {
         this.anchorView = anchorView
-        val height = buildDropDown()
+        buildDropDown()
         PopupWindowCompat.setWindowLayoutType(popup, WindowManager.LayoutParams.TYPE_APPLICATION_SUB_PANEL)
         popup.isOutsideTouchable = true
-        val widthSpec = dropDownWidth
         if (popup.isShowing) {
-            popup.update(anchorView, dropDownHorizontalOffset, dropDownVerticalOffset, widthSpec, if (height < 0) -1 else height)
+            popup.update(anchorView, dropDownHorizontalOffset, dropDownVerticalOffset, dropDownWidth, if (dropDownHeight < 0) -1 else dropDownHeight)
         } else {
-            popup.width = widthSpec
-            popup.height = height
+            popup.width = dropDownWidth
+            popup.height = dropDownHeight
             PopupWindowCompat.showAsDropDown(popup, anchorView, dropDownHorizontalOffset, dropDownVerticalOffset, dropDownGravity)
         }
     }
@@ -90,7 +92,7 @@ class BottomActionMenuItemPopup(private val context: Context, private val items:
         }
     }
 
-    private fun buildDropDown(): Int {
+    private fun buildDropDown() {
         var otherHeights = 0
         val dropDownList = ListView(context).apply {
             adapter = popupListAdapter
@@ -104,7 +106,13 @@ class BottomActionMenuItemPopup(private val context: Context, private val items:
             setPaddingRelative(popupPaddingStart, popupPaddingTop, popupPaddingEnd, popupPaddingBottom)
         }
 
-        val width = measureMenuSizeAndGetWidth(popupMaxWidth)
+        val screenWidth = if (isRPlus()) {
+            context.windowManager.currentWindowMetrics.bounds.width()
+        } else {
+            context.windowManager.defaultDisplay.width
+        }
+
+        val width = measureMenuSizeAndGetWidth((0.8 * screenWidth).toInt())
         updateContentWidth(width)
         popup.contentView = dropDownList
 
@@ -135,7 +143,8 @@ class BottomActionMenuItemPopup(private val context: Context, private val items:
             otherHeights += padding + listPadding
         }
 
-        return listContent + otherHeights
+        dropDownHeight = listContent + otherHeights
+        dropDownList.layoutParams = ViewGroup.LayoutParams(dropDownWidth, dropDownHeight)
     }
 
     private fun updateContentWidth(width: Int) {
@@ -239,9 +248,6 @@ class BottomActionMenuItemPopup(private val context: Context, private val items:
                 maxWidth = itemWidth
             }
         }
-
-        maxWidth = ceil(maxWidth.toDouble() / popupWidthUnit).toInt() * popupWidthUnit
-
         return maxWidth
     }
 }
