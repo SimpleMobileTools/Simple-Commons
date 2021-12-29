@@ -237,7 +237,7 @@
     <string name="default_color">По умолчанию</string>
     <string name="change_color">Изменить цвет</string>
     <string name="theme">Тема</string>
-    <string name="changing_color_description">Изменение цвета повлечёт переключение на пользовательскую тему.</string>
+    <string name="changing_color_description">Изменение цвета повлечёт переключение на пользовательскую тему</string>
     <string name="save">Сохранить</string>
     <string name="discard">Нет</string>
     <string name="undo_changes">Отменить изменения</string>
@@ -627,7 +627,7 @@
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">К устройству подключён USB-накопитель, необходимо убедиться, что файлы на нём отображаются правильно. Для этого необходимо предоставить дополнительные разрешения.</string>
-    <string name="confirm_usb_storage_access_text">Выберите корневую папку USB-накопителя на следующем экране, чтобы предоставить к нему доступ.</string>
+    <string name="confirm_usb_storage_access_text">Выберите корневую папку USB-накопителя на следующем экране, чтобы предоставить к нему доступ</string>
     <string name="wrong_root_selected_usb">Выбрана неправильная папка. Выберите корневую папку USB-накопителя.</string>
     <!-- Dates -->
     <string name="january">Январь</string>
@@ -717,7 +717,7 @@
         ]]>
     </string>
     <string name="purchase">Купить</string>
-    <string name="update_thank_you">Обновите \"Simple Thank You\" до последней версии.</string>
+    <string name="update_thank_you">Обновите \"Simple Thank You\" до последней версии</string>
     <string name="before_asking_question_read_faq">Прежде чем задать вопрос, изучите настройки приложения и прочтите FAQ (часто задаваемые вопросы). Возможно, решение есть.</string>
     <string name="before_rate_read_faq">Прежде чем поставить оценку, изучите настройки приложения и прочтите FAQ (часто задаваемые вопросы). Если у вас возникли какие-то проблемы, возможно, решение уже есть.</string>
     <string name="make_sure_latest">Также убедитесь, что используете последнюю версию приложения.</string>

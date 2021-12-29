@@ -217,8 +217,8 @@
     <string name="background_color">Bakgrunnsfarge</string>
     <string name="text_color">Tekstfarge</string>
     <string name="primary_color">Primærfarge</string>
-    <string name="accent_color_white">Accent color of white theme</string>
-    <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
+    <string name="accent_color_white">Aksentfarge til hvitt tema</string>
+    <string name="accent_color_black_and_white">Aksentfarge til svart &amp; hvitt tema</string>
     <string name="foreground_color">Forgrunnsfarge</string>
     <string name="app_icon_color">Farge for app-ikon</string>
     <string name="bottom_navigation_bar_color">Farge på nedre navigeringslinje</string>
@@ -246,10 +246,10 @@
     <!-- Themes -->
     <string name="light_theme">Lyst</string>
     <string name="dark_theme">Mørkt</string>
-    <string name="auto_theme">Auto</string>
+    <string name="auto_theme">Automatisk</string>
     <string name="solarized">Solarisert</string>
     <string name="dark_red">Mørkerødt</string>
-    <string name="white">White</string>
+    <string name="white">Hvitt</string>
     <string name="black_white">Svart &amp; hvitt</string>
     <string name="custom">Tilpasset</string>
     <string name="shared">Delt</string>
@@ -288,7 +288,7 @@
     <string name="name">Navn</string>
     <string name="size">Størrelse</string>
     <string name="last_modified">Sist endret</string>
-    <string name="date_created">Date created</string>
+    <string name="date_created">Dato opprettet</string>
     <string name="date_taken">Dato tatt</string>
     <string name="title">Tittel</string>
     <string name="filename">Filnavn</string>
@@ -314,10 +314,10 @@
     <string name="are_you_sure_delete">Er du sikker på at du vil slette dette elementet?</string>
     <string name="are_you_sure_recycle_bin">Er du sikker på at du vil flytte dette elementet til papirkurven?</string>
     <string name="do_not_ask_again">Ikke spør igjen i denne økten</string>
-    <string name="do_not_show_again">Do not show again</string>
+    <string name="do_not_show_again">Ikke vis igjen</string>
     <string name="yes">Ja</string>
     <string name="no">Nei</string>
-    <string name="maybe">Maybe</string>
+    <string name="maybe">Kanskje</string>
     <plurals name="delete_warning">
         <item quantity="one">ADVARSEL: Du sletter %d mappe</item>
         <item quantity="other">ADVARSEL: Du sletter %d mapper</item>
@@ -332,12 +332,12 @@
     <string name="insert_pattern">Tegn mønster</string>
     <string name="wrong_pattern">Feil mønster</string>
     <string name="repeat_pattern">Gjenta mønster</string>
-    <string name="biometrics">Biometrics</string>
+    <string name="biometrics">Biometrisk</string>
     <string name="fingerprint">Fingeravtrykk</string>
     <string name="add_fingerprint">Legg til fingeravtrykk</string>
     <string name="place_finger">Plasser fingeren på fingeravtrykksensoren</string>
     <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
-    <string name="authenticate">Authenticate</string>
+    <string name="authenticate">Autentiser</string>
     <string name="authentication_failed">Autentisering feilet</string>
     <string name="authentication_blocked">Autentisering blokkert, prøv igjen</string>
     <string name="no_fingerprints_registered">Du har ingen fingeravtrykk registrert, legg til i enhetens innstillinger</string>
@@ -358,7 +358,7 @@
     <string name="days_raw">dager</string>
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
-    <string name="hours_letter">h</string>
+    <string name="hours_letter">t</string>
     <plurals name="seconds">
         <item quantity="one">%d sekund</item>
         <item quantity="other">%d sekunder</item>
@@ -495,12 +495,12 @@
     <!-- Settings -->
     <string name="settings">Innstillinger</string>
     <string name="purchase_simple_thank_you">Kjøp Simple Thank You</string>
-    <string name="general_settings">General</string>
-    <string name="color_customization">Color customization</string>
+    <string name="general_settings">Generelt</string>
+    <string name="color_customization">Fargetilpasning</string>
     <string name="customize_colors">Tilpass farger</string>
-    <string name="customize_colors_locked">Tilpass farger (Locked)</string>
+    <string name="customize_colors_locked">Tilpass farger (låst)</string>
     <string name="customize_widget_colors">Tilpass modulfarger</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="customize_notifications">Tilpass varsler</string>
     <string name="use_english_language">Bruk engelsk språk</string>
     <string name="show_hidden_items">Vis skjulte elementer</string>
     <string name="font_size">Skriftstørrelse</string>
