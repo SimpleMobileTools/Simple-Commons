@@ -475,6 +475,15 @@ open class BaseConfig(val context: Context) {
 
     // color picker last used colors
     internal var colorPickerRecentColors: LinkedList<Int>
-        get() = LinkedList(prefs.getString(COLOR_PICKER_RECENT_COLORS, null)?.lines()?.map { it.toInt() } ?: emptyList())
+        get(): LinkedList<Int> {
+            val defaultList = arrayListOf(
+                context.resources.getColor(R.color.md_red_700),
+                context.resources.getColor(R.color.md_blue_700),
+                context.resources.getColor(R.color.md_green_700),
+                context.resources.getColor(R.color.md_yellow_700),
+                context.resources.getColor(R.color.md_orange_700)
+            )
+            return LinkedList(prefs.getString(COLOR_PICKER_RECENT_COLORS, null)?.lines()?.map { it.toInt() } ?: defaultList)
+        }
         set(recentColors) = prefs.edit().putString(COLOR_PICKER_RECENT_COLORS, recentColors.joinToString(separator = "\n")).apply()
 }
