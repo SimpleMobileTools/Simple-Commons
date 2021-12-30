@@ -12,4 +12,4 @@
     android:textSize="@dimen/bigger_text_size"
     tools:drawableStart="@drawable/ic_rename_vector"
     tools:drawableTint="@color/color_primary"
-    tools:text="@tools:sample/cities" />
+    tools:text="@string/delete" />

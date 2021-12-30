@@ -10,13 +10,11 @@ import androidx.core.widget.PopupWindowCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 
-
 class BottomActionMenuPopup(private val activity: BaseSimpleActivity, items: List<BottomActionMenuItem>) {
     private val bottomActionMenuView = BottomActionMenuView(activity)
     private val popup = PopupWindow(activity, null, android.R.attr.popupMenuStyle)
     private var floatingActionButton: FloatingActionButton? = null
     private var callback: BottomActionMenuCallback? = null
-
 
     constructor(activity: BaseSimpleActivity, @MenuRes menuResId: Int) : this(activity, BottomActionMenuParser(activity).inflate(menuResId))
 

@@ -18,10 +18,10 @@ import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
 import com.simplemobiletools.commons.extensions.getContrastColor
 import com.simplemobiletools.commons.interfaces.MyActionModeCallback
 import com.simplemobiletools.commons.views.MyRecyclerView
-import com.simplemobiletools.commons.views.bottomactionmenu.BottomActionMenuView
 import com.simplemobiletools.commons.views.bottomactionmenu.BottomActionMenuCallback
 import com.simplemobiletools.commons.views.bottomactionmenu.BottomActionMenuItem
 import com.simplemobiletools.commons.views.bottomactionmenu.BottomActionMenuPopup
+import com.simplemobiletools.commons.views.bottomactionmenu.BottomActionMenuView
 import java.util.*
 
 abstract class MyRecyclerViewListAdapter<T>(

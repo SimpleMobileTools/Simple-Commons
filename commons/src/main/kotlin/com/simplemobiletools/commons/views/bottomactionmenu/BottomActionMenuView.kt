@@ -11,18 +11,13 @@ import android.view.View
 import android.view.ViewPropertyAnimator
 import android.widget.ImageView
 import android.widget.LinearLayout
-import androidx.annotation.DrawableRes
 import androidx.annotation.IdRes
-import androidx.annotation.MenuRes
-import androidx.annotation.StringRes
 import com.google.android.material.animation.AnimationUtils
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.isRPlus
 
-
 class BottomActionMenuView : LinearLayout {
-
     companion object {
         private const val ENTER_ANIMATION_DURATION = 225
         private const val EXIT_ANIMATION_DURATION = 175
@@ -37,7 +32,12 @@ class BottomActionMenuView : LinearLayout {
     private val inflater = LayoutInflater.from(context)
     private val itemsLookup = LinkedHashMap<Int, BottomActionMenuItem>()
     private val items: List<BottomActionMenuItem>
-        get() = itemsLookup.values.toList().sortedWith(compareByDescending<BottomActionMenuItem> { it.showAsAction }.thenBy { it.icon != View.NO_ID }).filter { it.isVisible }
+        get() = itemsLookup.values.toList().sortedWith(compareByDescending<BottomActionMenuItem> {
+            it.showAsAction
+        }.thenBy {
+            it.icon != View.NO_ID
+        }).filter { it.isVisible }
+
     private var currentAnimator: ViewPropertyAnimator? = null
     private var callback: BottomActionMenuCallback? = null
 
@@ -99,14 +99,6 @@ class BottomActionMenuView : LinearLayout {
                 })
     }
 
-    fun createFromMenu(@MenuRes menuResId: Int) {
-        if (menuResId != View.NO_ID) {
-            val menuParser = BottomActionMenuParser(context)
-            val items = menuParser.inflate(menuResId)
-            setup(items)
-        }
-    }
-
     fun setup(items: List<BottomActionMenuItem>) {
         items.forEach { itemsLookup[it.id] = it }
         init()
@@ -114,25 +106,6 @@ class BottomActionMenuView : LinearLayout {
 
     fun add(item: BottomActionMenuItem) {
         setItem(item)
-    }
-
-    fun setItemShowAsAction(@IdRes itemId: Int, showAsAction: Boolean) {
-        val item = itemsLookup[itemId]
-        setItem(item?.copy(showAsAction = showAsAction))
-    }
-
-    fun changeItemIcon(@IdRes itemId: Int, @DrawableRes iconRes: Int) {
-        val item = itemsLookup[itemId]
-        setItem(item?.copy(icon = iconRes))
-    }
-
-    fun changeItemTitle(@IdRes itemId: Int, @StringRes stringRes: Int) {
-        changeItemTitle(itemId, context.getString(stringRes))
-    }
-
-    fun changeItemTitle(@IdRes itemId: Int, title: String) {
-        val item = itemsLookup[itemId]
-        setItem(item?.copy(title = title))
     }
 
     private fun setItem(item: BottomActionMenuItem?) {

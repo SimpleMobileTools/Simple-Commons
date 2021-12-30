@@ -74,6 +74,12 @@ internal class BottomActionMenuParser(private val context: Context) {
         val visible = typedArray.getBoolean(R.styleable.BottomActionMenuItem_android_visible, true)
         typedArray.recycle()
         parser.require(XmlPullParser.START_TAG, null, MENU_ITEM_TAG)
-        return BottomActionMenuItem(id, text, iconId, showAsAction == MenuItem.SHOW_AS_ACTION_ALWAYS || showAsAction == MenuItem.SHOW_AS_ACTION_IF_ROOM, visible)
+        return BottomActionMenuItem(
+            id,
+            text,
+            iconId,
+            showAsAction == MenuItem.SHOW_AS_ACTION_ALWAYS || showAsAction == MenuItem.SHOW_AS_ACTION_IF_ROOM,
+            visible
+        )
     }
 }

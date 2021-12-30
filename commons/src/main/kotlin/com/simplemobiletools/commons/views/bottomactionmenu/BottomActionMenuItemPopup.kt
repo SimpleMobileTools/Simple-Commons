@@ -4,7 +4,10 @@ import android.content.Context
 import android.graphics.Rect
 import android.view.*
 import android.view.View.MeasureSpec
-import android.widget.*
+import android.widget.ArrayAdapter
+import android.widget.FrameLayout
+import android.widget.ListView
+import android.widget.PopupWindow
 import androidx.core.content.ContextCompat
 import androidx.core.widget.PopupWindowCompat
 import com.simplemobiletools.commons.R
@@ -13,14 +16,12 @@ import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
 import com.simplemobiletools.commons.extensions.windowManager
 import com.simplemobiletools.commons.helpers.isRPlus
 import kotlinx.android.synthetic.main.item_action_mode_popup.view.*
-import kotlin.math.ceil
 
 class BottomActionMenuItemPopup(
     private val context: Context,
     private val items: List<BottomActionMenuItem>,
     private val onSelect: (BottomActionMenuItem) -> Unit
 ) {
-
     private val popup = PopupWindow(context, null, android.R.attr.popupMenuStyle)
     private var anchorView: View? = null
     private var dropDownWidth = ViewGroup.LayoutParams.WRAP_CONTENT
@@ -41,6 +42,7 @@ class BottomActionMenuItemPopup(
             if (view == null) {
                 view = LayoutInflater.from(context).inflate(R.layout.item_action_mode_popup, parent, false)
             }
+
             val item = items[position]
             view!!.cab_item.text = item.title
             if (item.icon != View.NO_ID) {
@@ -48,10 +50,12 @@ class BottomActionMenuItemPopup(
                 icon?.applyColorFilter(context.getAdjustedPrimaryColor())
                 view.cab_item.setCompoundDrawablesWithIntrinsicBounds(icon, null, null, null)
             }
+
             view.setOnClickListener {
                 onSelect.invoke(item)
                 popup.dismiss()
             }
+
             return view
         }
     }
@@ -71,7 +75,8 @@ class BottomActionMenuItemPopup(
         PopupWindowCompat.setWindowLayoutType(popup, WindowManager.LayoutParams.TYPE_APPLICATION_SUB_PANEL)
         popup.isOutsideTouchable = true
         if (popup.isShowing) {
-            popup.update(anchorView, dropDownHorizontalOffset, dropDownVerticalOffset, dropDownWidth, if (dropDownHeight < 0) -1 else dropDownHeight)
+            val dropDownHeight = if (dropDownHeight < 0) -1 else dropDownHeight
+            popup.update(anchorView, dropDownHorizontalOffset, dropDownVerticalOffset, dropDownWidth, dropDownHeight)
         } else {
             popup.width = dropDownWidth
             popup.height = dropDownHeight
@@ -82,14 +87,6 @@ class BottomActionMenuItemPopup(
     internal fun dismiss() {
         popup.dismiss()
         popup.contentView = null
-    }
-
-    internal fun setOnDismissListener(listener: (() -> Unit)?) {
-        if (listener != null) {
-            popup.setOnDismissListener { listener.invoke() }
-        } else {
-            popup.setOnDismissListener(null)
-        }
     }
 
     private fun buildDropDown() {
@@ -132,7 +129,7 @@ class BottomActionMenuItemPopup(
             padding = 0
         }
 
-        if ((dropDownGravity and Gravity.BOTTOM) == Gravity.BOTTOM) {
+        if (dropDownGravity and Gravity.BOTTOM == Gravity.BOTTOM) {
             dropDownVerticalOffset += anchorView!!.height
         }
 
@@ -161,7 +158,6 @@ class BottomActionMenuItemPopup(
      * @see androidx.appcompat.widget.DropDownListView.measureHeightOfChildrenCompat
      */
     private fun measureHeightOfChildrenCompat(maxHeight: Int): Int {
-
         val parent = FrameLayout(context)
         val widthMeasureSpec = MeasureSpec.makeMeasureSpec(dropDownWidth, MeasureSpec.EXACTLY)
 
@@ -182,27 +178,27 @@ class BottomActionMenuItemPopup(
 
             // Compute child height spec
             val heightMeasureSpec: Int
-            var childLp: ViewGroup.LayoutParams? = child.layoutParams
+            var childLayoutParams: ViewGroup.LayoutParams? = child.layoutParams
 
-            if (childLp == null) {
-                childLp = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-                child.layoutParams = childLp
+            if (childLayoutParams == null) {
+                childLayoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+                child.layoutParams = childLayoutParams
             }
 
-            heightMeasureSpec = if (childLp.height > 0) {
+            heightMeasureSpec = if (childLayoutParams.height > 0) {
                 MeasureSpec.makeMeasureSpec(
-                    childLp.height,
+                    childLayoutParams.height,
                     MeasureSpec.EXACTLY
                 )
             } else {
-                MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED)
+                MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED)
             }
             child.measure(widthMeasureSpec, heightMeasureSpec)
             // Since this view was measured directly against the parent measure
             // spec, we must measure it again before reuse.
             child.forceLayout()
 
-            val marginLayoutParams = childLp as? ViewGroup.MarginLayoutParams
+            val marginLayoutParams = childLayoutParams as? ViewGroup.MarginLayoutParams
             val topMargin = marginLayoutParams?.topMargin ?: 0
             val bottomMargin = marginLayoutParams?.bottomMargin ?: 0
             val verticalMargin = topMargin + bottomMargin
