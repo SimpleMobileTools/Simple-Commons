@@ -137,8 +137,11 @@ class BottomActionMenuView : LinearLayout {
 
     private fun setItem(item: BottomActionMenuItem?) {
         item?.let {
+            val oldItem = itemsLookup[item.id]
             itemsLookup[item.id] = item
-            init()
+            if (oldItem != item) {
+                init()
+            }
         }
     }
 
