@@ -30,7 +30,7 @@
     <string name="select_a_different_color">选择一个不同的颜色</string>
     <string name="download">下载</string>
     <string name="notification">通知</string>
-    <string name="notifications">Notifications</string>
+    <string name="notifications">通知</string>
     <string name="email">电子邮件</string>
     <string name="previous">上一首</string>
     <string name="playpause">播放/暂停</string>
@@ -41,8 +41,8 @@
     <string name="no_access_to_contacts">该应用无法访问联系人</string>
     <string name="insert_text_here">在此输入文本</string>
     <string name="call_person">打电话给 %s</string>
-    <string name="zero">Zero</string>
-    <string name="one">One</string>
+    <string name="zero">零</string>
+    <string name="one">一</string>
     <string name="two">二</string>
     <string name="three">三</string>
     <string name="four">四</string>
@@ -243,7 +243,7 @@
     <!-- Themes -->
     <string name="light_theme">浅色主题</string>
     <string name="dark_theme">深色主题</string>
-    <string name="auto_theme">Auto</string>
+    <string name="auto_theme">自动</string>
     <string name="solarized">曝光过度</string>
     <string name="dark_red">深红</string>
     <string name="white">白色</string>
@@ -463,10 +463,10 @@
     <!-- Settings -->
     <string name="settings">设置</string>
     <string name="purchase_simple_thank_you">感谢购买</string>
-    <string name="general_settings">General</string>
+    <string name="general_settings">通用</string>
     <string name="color_customization">颜色定制</string>
     <string name="customize_colors">自定义颜色</string>
-    <string name="customize_colors_locked">自定义颜色 (Locked)</string>
+    <string name="customize_colors_locked">自定义颜色 (锁定)</string>
     <string name="customize_widget_colors">自定义小部件颜色</string>
     <string name="customize_notifications">自定义通知</string>
     <string name="use_english_language">强制使用英语语言</string>
@@ -515,7 +515,7 @@
     <string name="quality">质量</string>
     <string name="main_screen">主屏幕</string>
     <string name="thumbnails">缩略图</string>
-    <string name="list_view">List view</string>
+    <string name="list_view">列表视图</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">管理显示的页面</string>
     <string name="default_tab_to_open">应用启动时打开的页面</string>
@@ -524,8 +524,8 @@
     <string name="call_history_tab">通话记录</string>
     <string name="groups_tab">分组</string>
     <string name="last_used_tab">上次使用的</string>
-    <string name="files_tab">Files</string>
-    <string name="recent_files_tab">Recent files</string>
+    <string name="files_tab">文件</string>
+    <string name="recent_files_tab">最近的文件</string>
     <!-- Recycle Bin -->
     <string name="restore_this_file">恢复此文件</string>
     <string name="restore_selected_files">恢复选中的文件</string>
@@ -626,14 +626,14 @@
     <string name="donate_underlined"><u>捐赠</u></string>
     <string name="follow_us">关注我们</string>
     <string name="copyright">v %1$s
-\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="support">Support</string>
-    <string name="help_us">Help us</string>
-    <string name="social">Social</string>
-    <string name="other">Other</string>
-    <string name="version_placeholder">Version %s</string>
+\n版权所有 © Simple Mobile Tools %2$d</string>
+    <string name="support">支持</string>
+    <string name="help_us">帮助我们</string>
+    <string name="social">社交网络</string>
+    <string name="other">其他</string>
+    <string name="version_placeholder">版本 %s</string>
     <string name="hello">你好 :)</string>
-    <string name="about_footer">Made with ❤️ in Slovakia</string>
+    <string name="about_footer">饱含 ❤️ 于斯洛伐克制作</string>
     <string name="additional_info">额外信息</string>
     <string name="app_version">应用版本：%s</string>
     <string name="device_os">设备系统：%s</string>
@@ -664,32 +664,32 @@
     <string name="simple_calendar">简易日历</string>
     <string name="simple_camera">简易相机</string>
     <string name="simple_clock">简易时钟</string>
-    <string name="simple_contacts">Simple Contacts</string>
+    <string name="simple_contacts">简易通讯录</string>
     <string name="simple_dialer">简易拨号器</string>
     <string name="simple_draw">简易绘图</string>
-    <string name="simple_file_manager">Simple File Manager</string>
+    <string name="simple_file_manager">简易文件管理器</string>
     <string name="simple_flashlight">简易手电筒</string>
     <string name="simple_gallery">简易图库</string>
     <string name="simple_music_player">简易音乐播放器</string>
-    <string name="simple_notes">Simple Notes</string>
+    <string name="simple_notes">简易笔记</string>
     <string name="simple_sms_messenger">简易短信</string>
-    <string name="simple_thank_you">Simple Thank You</string>
+    <string name="simple_thank_you">简易感谢</string>
     <string name="simple_voice_recorder">简易录音机</string>
     <string name="app_launcher_short">应用启动器</string>
     <string name="calculator_short">计算器</string>
     <string name="calendar_short">日历</string>
     <string name="camera_short">相机</string>
     <string name="clock_short">时钟</string>
-    <string name="contacts_short">Contacts</string>
+    <string name="contacts_short">通讯录</string>
     <string name="dialer_short">拨号器</string>
     <string name="draw_short">绘图</string>
-    <string name="file_manager_short">File Manager</string>
+    <string name="file_manager_short">文件管理器</string>
     <string name="flashlight_short">手电筒</string>
     <string name="gallery_short">图库</string>
     <string name="music_player_short">音乐播放器</string>
-    <string name="notes_short">Notes</string>
+    <string name="notes_short">笔记</string>
     <string name="sms_messenger_short">短信</string>
-    <string name="thank_you_short">谢谢你</string>
+    <string name="thank_you_short">感谢</string>
     <string name="voice_recorder_short">录音机</string>
     <string name="sideloaded_app">
         <![CDATA[
@@ -728,7 +728,7 @@
     <string name="contributors">贡献者</string>
     <string name="translation">翻译</string>
     <string name="development">开发</string>
-    <string name="other_help">Other help</string>
+    <string name="other_help">其他帮助</string>
     <string name="contributors_label">此列表包含对 Simple Mobile Tools 套件中的任何应用程序有显著帮助的所有人，而不仅仅是这个应用程序。 翻译由志愿者处理，如果您也想提供帮助，请告诉我们。 翻译指南位于 &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;this website&lt;/a&gt;，或者如果你有任何问题，欢迎发送电子邮件到 &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt;。感谢所有贡献者和其他支持者！</string>
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
@@ -805,8 +805,8 @@
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">自定义日期和时间格式</string>
     <string name="why_upgrade_shortcuts">主屏幕快捷方式</string>
-    <string name="why_upgrade_file_compression">File compression support</string>
-    <string name="why_upgrade_recents_tab">Tab with recent files</string>
+    <string name="why_upgrade_file_compression">文件压缩支持</string>
+    <string name="why_upgrade_recents_tab">包含最近文件的标签页</string>
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">自定义背景色</string>
     <string name="why_upgrade_file_importing">支持文件导入</string>
@@ -818,7 +818,7 @@
     <string name="subsampling_title">子采样比例图像视图 (可缩放的图像视图)</string>
     <string name="glide_title">Glide（图片加载和缓存）</string>
     <string name="picasso_title">Picasso (图片加载和缓存)</string>
-    <string name="cropper_title">Android Image Cropper（图像裁剪和旋转）</string>
+    <string name="cropper_title">安卓图像剪裁器(图像裁剪和旋转)</string>
     <string name="rtl_viewpager_title">RtlViewPager (从右向左滑动)</string>
     <string name="joda_title">Joda-Time (Java日期替换)</string>
     <string name="stetho_title">Stetho (调试数据库)</string>
@@ -847,5 +847,5 @@
     <string name="deprecated_app">已弃用：该应用版本已不再维护，请在以下链接获取专业版 https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">别忘了如果您在2小时内卸载任何付费应用将会自动退款。如果您想在之后退款，只需通过 hello@simplemobiletools.com 联系我们即可。这样您就可以放心试用了 :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">一组简约且开源的 Android 应用程序，可自定义小部件，并且没有广告和不必要的权限。</string>
+    <string name="developer_description">一组简易且开源的 Android 应用程序，可自定义小部件，并且没有广告和不必要的权限。</string>
 </resources>
