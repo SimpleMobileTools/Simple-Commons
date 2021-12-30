@@ -337,7 +337,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
             val currentPosition = adapterPosition - positionOffset
             if (!actModeCallback.isSelectable) {
                 activity.startSupportActionMode(actModeCallback)
-                contextPopup = BottomActionMenuPopup(activity, getActionMenuId()).also { it.show(contextCallback) }
+                contextPopup = BottomActionMenuPopup(activity, getActionMenuId()).also { it.show(contextCallback, recyclerView) }
             }
 
             toggleItemSelection(true, currentPosition, true)

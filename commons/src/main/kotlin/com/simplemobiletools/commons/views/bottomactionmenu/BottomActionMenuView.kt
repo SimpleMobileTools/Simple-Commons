@@ -49,6 +49,7 @@ class BottomActionMenuView : LinearLayout {
 
     private fun setDefaultHeight() {
         val typedValue = TypedValue()
+        context.theme.resolveAttribute(android.R.attr.actionBarSize, typedValue, true)
         val defaultHeight = TypedValue.complexToDimensionPixelSize(typedValue.data, resources.displayMetrics)
         minimumHeight = defaultHeight
     }
