@@ -20,6 +20,8 @@
     <dimen name="colorpicker_color_width">70dp</dimen>
 
     <dimen name="normal_icon_size">48dp</dimen>
+    <dimen name="fastscroll_width">8dp</dimen>
+    <dimen name="fastscroll_height">40dp</dimen>
     <dimen name="fingerprint_icon_size">72dp</dimen>
     <dimen name="fab_size">56dp</dimen>
     <dimen name="secondary_fab_bottom_margin">76dp</dimen>
@@ -48,4 +50,8 @@
     <dimen name="big_text_size">18sp</dimen>
     <dimen name="actionbar_text_size">20sp</dimen>
     <dimen name="extra_big_text_size">22sp</dimen>
+
+    <dimen name="cab_popup_menu_max_width">336dp</dimen>
+    <dimen name="cab_popup_menu_min_width">168dp</dimen>
+    <dimen name="cab_item_min_width">85dp</dimen>
 </resources>
