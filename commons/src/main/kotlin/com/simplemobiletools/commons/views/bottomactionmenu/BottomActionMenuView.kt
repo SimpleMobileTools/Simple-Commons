@@ -49,6 +49,7 @@ class BottomActionMenuView : LinearLayout {
 
     private fun setDefaultHeight() {
         val typedValue = TypedValue()
+        context.theme.resolveAttribute(android.R.attr.actionBarSize, typedValue, true)
         val defaultHeight = TypedValue.complexToDimensionPixelSize(typedValue.data, resources.displayMetrics)
         minimumHeight = defaultHeight
     }
@@ -110,8 +111,11 @@ class BottomActionMenuView : LinearLayout {
 
     private fun setItem(item: BottomActionMenuItem?) {
         item?.let {
+            val oldItem = itemsLookup[item.id]
             itemsLookup[item.id] = item
-            init()
+            if (oldItem != item) {
+                init()
+            }
         }
     }
 
