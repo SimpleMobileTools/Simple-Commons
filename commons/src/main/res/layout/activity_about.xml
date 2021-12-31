@@ -197,6 +197,37 @@
                     android:textSize="@dimen/bigger_text_size" />
 
             </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/about_donate_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_bottom_corners"
+                android:padding="@dimen/medium_margin"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/about_donate_icon"
+                    android:layout_width="@dimen/normal_icon_size"
+                    android:layout_height="@dimen/normal_icon_size"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/medium_margin"
+                    android:src="@drawable/ic_dollar_vector" />
+
+                <com.simplemobiletools.commons.views.MyTextView
+                    android:id="@+id/about_donate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/about_donate_icon"
+                    android:layout_alignBottom="@+id/about_donate_icon"
+                    android:layout_marginStart="@dimen/normal_margin"
+                    android:layout_marginEnd="@dimen/normal_margin"
+                    android:layout_toEndOf="@+id/about_donate_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/donate"
+                    android:textSize="@dimen/bigger_text_size" />
+
+            </RelativeLayout>
         </LinearLayout>
 
         <TextView

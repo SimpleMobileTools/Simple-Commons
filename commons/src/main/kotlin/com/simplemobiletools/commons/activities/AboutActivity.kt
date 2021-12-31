@@ -39,6 +39,7 @@ class AboutActivity : BaseSimpleActivity() {
         arrayOf(
             about_faq_icon,
             about_rate_us_icon,
+            about_donate_icon,
             about_invite_icon,
             about_contributors_icon,
             about_more_apps_icon,
@@ -64,6 +65,7 @@ class AboutActivity : BaseSimpleActivity() {
 
         setupEmail()
         setupFAQ()
+        setupDonate()
         setupMoreApps()
         setupRateUs()
         setupInvite()
@@ -128,6 +130,18 @@ class AboutActivity : BaseSimpleActivity() {
                 putExtra(APP_FAQ, faqItems)
                 startActivity(this)
             }
+        }
+    }
+
+    private fun setupDonate() {
+        if (resources.getBoolean(R.bool.show_donate_in_about)) {
+            about_donate_holder.beVisible()
+            about_contributors_holder.background = resources.getDrawable(R.drawable.ripple_background, theme)
+            about_donate_holder.setOnClickListener {
+                launchViewIntent("https://simplemobiletools.com/donate")
+            }
+        } else {
+            about_donate_holder.beGone()
         }
     }
 
