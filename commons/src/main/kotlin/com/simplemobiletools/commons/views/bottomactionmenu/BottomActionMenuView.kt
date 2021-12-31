@@ -12,6 +12,7 @@ import android.view.ViewPropertyAnimator
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.annotation.IdRes
+import androidx.core.content.ContextCompat
 import com.google.android.material.animation.AnimationUtils
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
@@ -174,7 +175,7 @@ class BottomActionMenuView : LinearLayout {
             setImageResource(R.drawable.ic_three_dots_vector)
             val contentDesc = context.getString(R.string.more_info)
             contentDescription = contentDesc
-            applyColorFilter(context.getAdjustedPrimaryColor())
+            applyColorFilter(ContextCompat.getColor(context, android.R.color.white))
             val popup = getOverflowPopup(overFlowItems)
             setOnClickListener {
                 popup.show(it)
@@ -194,7 +195,7 @@ class BottomActionMenuView : LinearLayout {
             setImageResource(item.icon)
         }
         beVisibleIf(item.isVisible)
-        applyColorFilter(context.getAdjustedPrimaryColor())
+        applyColorFilter(ContextCompat.getColor(context, android.R.color.white))
     }
 
     private fun getOverflowPopup(overFlowItems: List<BottomActionMenuItem>): BottomActionMenuItemPopup {

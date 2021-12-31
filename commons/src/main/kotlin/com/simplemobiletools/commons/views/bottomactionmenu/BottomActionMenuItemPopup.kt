@@ -47,7 +47,7 @@ class BottomActionMenuItemPopup(
             view!!.cab_item.text = item.title
             if (item.icon != View.NO_ID) {
                 val icon = ContextCompat.getDrawable(context, item.icon)
-                icon?.applyColorFilter(context.getAdjustedPrimaryColor())
+                icon?.applyColorFilter(ContextCompat.getColor(context, android.R.color.white))
                 view.cab_item.setCompoundDrawablesWithIntrinsicBounds(icon, null, null, null)
             }
 
