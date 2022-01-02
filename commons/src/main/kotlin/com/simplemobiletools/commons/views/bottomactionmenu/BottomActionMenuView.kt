@@ -4,6 +4,7 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.TimeInterpolator
 import android.content.Context
+import android.graphics.Color
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -175,7 +176,7 @@ class BottomActionMenuView : LinearLayout {
             setImageResource(R.drawable.ic_three_dots_vector)
             val contentDesc = context.getString(R.string.more_info)
             contentDescription = contentDesc
-            applyColorFilter(ContextCompat.getColor(context, android.R.color.white))
+            applyColorFilter(Color.WHITE)
             val popup = getOverflowPopup(overFlowItems)
             setOnClickListener {
                 popup.show(it)
@@ -195,7 +196,7 @@ class BottomActionMenuView : LinearLayout {
             setImageResource(item.icon)
         }
         beVisibleIf(item.isVisible)
-        applyColorFilter(ContextCompat.getColor(context, android.R.color.white))
+        applyColorFilter(Color.WHITE)
     }
 
     private fun getOverflowPopup(overFlowItems: List<BottomActionMenuItem>): BottomActionMenuItemPopup {
