@@ -13,7 +13,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.widget.PopupWindowCompat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.applyColorFilter
-import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
 import com.simplemobiletools.commons.extensions.windowManager
 import com.simplemobiletools.commons.helpers.isRPlus
 import kotlinx.android.synthetic.main.item_action_mode_popup.view.*
