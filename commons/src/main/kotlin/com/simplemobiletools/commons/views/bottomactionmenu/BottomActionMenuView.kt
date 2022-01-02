@@ -6,14 +6,12 @@ import android.animation.TimeInterpolator
 import android.content.Context
 import android.graphics.Color
 import android.util.AttributeSet
-import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewPropertyAnimator
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.annotation.IdRes
-import androidx.core.content.ContextCompat
 import com.google.android.material.animation.AnimationUtils
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
