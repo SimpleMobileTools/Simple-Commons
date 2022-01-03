@@ -860,30 +860,30 @@
     <string name="rtl_viewpager_title">RtlViewPager (viipamine paremalt vasakule)</string>
     <string name="joda_title">Joda-Time (asendus Java kuupäevadele)</string>
     <string name="stetho_title">Stetho (andmebaaside silumine)</string>
-    <string name="otto_title">Otto (event bus)</string>
-    <string name="photoview_title">PhotoView (zoomable GIFs)</string>
+    <string name="otto_title">Otto (sündmuste siin)</string>
+    <string name="photoview_title">PhotoView (suumitavad GIF-failid)</string>
     <string name="pattern_title">PatternLockView (pattern protection)</string>
-    <string name="reprint_title">Reprint (fingerprint protection)</string>
-    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
-    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
-    <string name="robolectric_title">Robolectric (testing framework)</string>
-    <string name="espresso_title">Espresso (testing helper)</string>
-    <string name="gson_title">Gson (JSON parser)</string>
-    <string name="leak_canary_title">Leak Canary (memory leak detector)</string>
-    <string name="number_picker_title">Number Picker (customizable number picker)</string>
-    <string name="exoplayer_title">ExoPlayer (video player)</string>
-    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
-    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
-    <string name="filters_title">Android Photo Filters (image filters)</string>
-    <string name="gesture_views_title">Gesture Views (zoomable images)</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
+    <string name="reprint_title">Reprint (sõrmejälgede kaitse)</string>
+    <string name="gif_drawable_title">Gif Drawable (GIF-failide laadimine)</string>
+    <string name="autofittextview_title">AutoFitTextView (teksti suuruse muutmine)</string>
+    <string name="robolectric_title">Robolectric (ühiktestimise raamistik)</string>
+    <string name="espresso_title">Espresso (testimise abirakendus)</string>
+    <string name="gson_title">Gson (JSON\'i süntaksianalüüs)</string>
+    <string name="leak_canary_title">Leak Canary (mälulekete tuvastaja)</string>
+    <string name="number_picker_title">Number Picker (kohandatav numbrivalija)</string>
+    <string name="exoplayer_title">ExoPlayer (videote esitaja)</string>
+    <string name="panorama_view_title">VR Panorama View (panoraamvaadete esitaja)</string>
+    <string name="sanselan_title">Apache Sanselan (piltide metainfo lugeja)</string>
+    <string name="filters_title">Android Photo Filters (pildifiltrid)</string>
+    <string name="gesture_views_title">Gesture Views (suumitavad pildid)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (tähtede kasutamine kerimisribal)</string>
+    <string name="event_bus_title">Event Bus (rakendusesisene suhtlus)</string>
+    <string name="audio_record_view_title">Audio Record View (heli visualiseerimine)</string>
+    <string name="sms_mms_title">SMS MMS (SMS- ja MMS-sõnumite käsitlemine)</string>
     <string name="apng_title">APNG Android (animeeritud WebP tugi)</string>
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">AEGUNUD: Selle rakenduse versiooni arendus on lõppenud, laadi PRO-versioon aadressilt https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">Palun arvesta, et kui eemaldad tasulise rakenduse nutiseadmest 2 tunni jooksul, siis ostusumma tagastatakse automaatselt. Kui soovit tagastust hiljem, siis saada e-kiri hello@simplemobiletools.com aadressile ning korraldame tagastuse. Mõlemal juhul on sul võimalik meie tasulisi rakendusi testida :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Arendame Androidi jaoks avatud lähtekoodil põhinevaid lihtsaid tarvikuid, millel on kohandatavad vidinad ja milles pole reklaame ega vajadust asjatute õiguste jaoks.</string>
 </resources>
