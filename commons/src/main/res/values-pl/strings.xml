@@ -101,7 +101,7 @@
     <string name="filename_cannot_be_empty">Nazwa pliku nie może być pusta</string>
     <string name="filename_invalid_characters">Nazwa pliku zawiera niedozwolone znaki</string>
     <string name="filename_invalid_characters_placeholder">Nazwa „%s” zawiera niedozwolone znaki</string>
-    <string name="extension_cannot_be_empty">Rozszerzenie pliku nie może być puste</string>
+    <string name="extension_cannot_be_empty">Rozszerzenie nie może być puste</string>
     <string name="source_file_doesnt_exist">Plik źródłowy %s nie istnieje</string>
     <string name="prepend_filenames">Poprzedź nazwy plików</string>
     <string name="append_filenames">Dołącz do nazw plików</string>
@@ -909,7 +909,7 @@
     <string name="gson_title">Gson (parser JSON)</string>
     <string name="leak_canary_title">Leak Canary (wykrywanie wycieków pamięci)</string>
     <string name="number_picker_title">Number Picker (konfigurowalny selektor liczb)</string>
-    <string name="exoplayer_title">ExoPlayer (odtwarzacz filmów)</string>
+    <string name="exoplayer_title">ExoPlayer (odtwarzacz wideo)</string>
     <string name="panorama_view_title">VR Panorama View (wyświetlanie panoram)</string>
     <string name="sanselan_title">Apache Sanselan (odczytywanie metadanych obrazów)</string>
     <string name="filters_title">Android Photo Filters (filtry obrazów)</string>
@@ -920,7 +920,7 @@
     <string name="sms_mms_title">SMS MMS (obsługa SMS-ów i MMS-ów)</string>
     <string name="apng_title">APNG Android (obsługa animowanych WebP)</string>
     <!-- Google Play listing -->
-    <string name="deprecated_app">PRZESTARZAŁA: Ta wersja aplikacji nie jest już utrzymywana, pobierz wersję Pro na stronie https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
+    <string name="deprecated_app">PRZESTARZAŁA: Ta wersja aplikacji nie jest już utrzymywana. Pobierz wersję Pro z https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Nie zapomnij, że jeśli odinstalujesz jakąkolwiek płatną aplikację w ciągu 2 godzin, automatycznie otrzymasz zwrot pieniędzy. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie później, wystarczy skontaktować się z nami na hello@simplemobiletools.com i dostaniesz go. To sprawia, że są łatwe do wypróbowania :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Zestaw prostych, otwartoźródłowych aplikacji na Androida z konfigurowalnymi widżetami, bez reklam i zbędnych uprawnień.</string>
