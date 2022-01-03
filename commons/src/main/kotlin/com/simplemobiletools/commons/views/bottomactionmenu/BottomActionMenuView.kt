@@ -4,8 +4,8 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.TimeInterpolator
 import android.content.Context
+import android.graphics.Color
 import android.util.AttributeSet
-import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewPropertyAnimator
@@ -44,14 +44,6 @@ class BottomActionMenuView : LinearLayout {
     init {
         orientation = HORIZONTAL
         elevation = 2f
-        setDefaultHeight()
-    }
-
-    private fun setDefaultHeight() {
-        val typedValue = TypedValue()
-        context.theme.resolveAttribute(android.R.attr.actionBarSize, typedValue, true)
-        val defaultHeight = TypedValue.complexToDimensionPixelSize(typedValue.data, resources.displayMetrics)
-        minimumHeight = defaultHeight
     }
 
     fun setCallback(listener: BottomActionMenuCallback?) {
@@ -174,7 +166,7 @@ class BottomActionMenuView : LinearLayout {
             setImageResource(R.drawable.ic_three_dots_vector)
             val contentDesc = context.getString(R.string.more_info)
             contentDescription = contentDesc
-            applyColorFilter(context.getAdjustedPrimaryColor())
+            applyColorFilter(Color.WHITE)
             val popup = getOverflowPopup(overFlowItems)
             setOnClickListener {
                 popup.show(it)
@@ -194,7 +186,7 @@ class BottomActionMenuView : LinearLayout {
             setImageResource(item.icon)
         }
         beVisibleIf(item.isVisible)
-        applyColorFilter(context.getAdjustedPrimaryColor())
+        applyColorFilter(Color.WHITE)
     }
 
     private fun getOverflowPopup(overFlowItems: List<BottomActionMenuItem>): BottomActionMenuItemPopup {

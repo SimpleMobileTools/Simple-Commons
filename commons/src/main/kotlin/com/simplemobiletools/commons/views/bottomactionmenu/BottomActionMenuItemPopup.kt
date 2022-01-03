@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.views.bottomactionmenu
 
 import android.content.Context
+import android.graphics.Color
 import android.graphics.Rect
 import android.view.*
 import android.view.View.MeasureSpec
@@ -12,7 +13,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.widget.PopupWindowCompat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.applyColorFilter
-import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
 import com.simplemobiletools.commons.extensions.windowManager
 import com.simplemobiletools.commons.helpers.isRPlus
 import kotlinx.android.synthetic.main.item_action_mode_popup.view.*
@@ -47,7 +47,7 @@ class BottomActionMenuItemPopup(
             view!!.cab_item.text = item.title
             if (item.icon != View.NO_ID) {
                 val icon = ContextCompat.getDrawable(context, item.icon)
-                icon?.applyColorFilter(context.getAdjustedPrimaryColor())
+                icon?.applyColorFilter(Color.WHITE)
                 view.cab_item.setCompoundDrawablesWithIntrinsicBounds(icon, null, null, null)
             }
 
