@@ -329,21 +329,21 @@
         <item quantity="other">ĮSPĖJIMAS: Jūs ištrinate %d aplankų</item>
     </plurals>
     <!-- Password protection -->
-    <string name="pin"></string>
-    <string name="enter_pin"></string>
-    <string name="please_enter_pin"></string>
-    <string name="wrong_pin"></string>
-    <string name="repeat_pin"></string>
+    <string name="pin"/>
+    <string name="enter_pin"/>
+    <string name="please_enter_pin"/>
+    <string name="wrong_pin"/>
+    <string name="repeat_pin"/>
     <string name="pattern">Šablonas</string>
     <string name="insert_pattern">Įveskite šabloną</string>
     <string name="wrong_pattern">Neteisingas šablonas</string>
     <string name="repeat_pattern">Pakartokite šabloną</string>
-    <string name="biometrics"></string>
+    <string name="biometrics"/>
     <string name="fingerprint">Piršto atspaudas</string>
     <string name="add_fingerprint">Pridėti piršto atspaudą</string>
     <string name="place_finger">Uždėkite pirštą ant piršto atspaudo jutiklio</string>
-    <string name="open_biometric_dialog"></string>
-    <string name="authenticate"></string>
+    <string name="open_biometric_dialog"/>
+    <string name="authenticate"/>
     <string name="authentication_failed">Nepavyko nustatyti tapatybės</string>
     <string name="authentication_blocked">Tapatybės nustatymas užblokuotas, netrukus bandykite dar kartą</string>
     <string name="no_fingerprints_registered">Neturite jokių registruotų piršto atspaudų, įtraukite juos savo įrenginio nustatymuose</string>
@@ -438,94 +438,94 @@
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
-        <item quantity="one"></item>
-        <item quantity="few"></item>
-        <item quantity="other"></item>
+        <item quantity="one"/>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
     <plurals name="minutes_before">
-        <item quantity="one"></item>
-        <item quantity="few"></item>
-        <item quantity="other"></item>
+        <item quantity="one"/>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
     <plurals name="hours_before">
-        <item quantity="one"></item>
-        <item quantity="few"></item>
-        <item quantity="other"></item>
+        <item quantity="one"/>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
     <plurals name="days_before">
-        <item quantity="one"></item>
-        <item quantity="few"></item>
-        <item quantity="other"></item>
+        <item quantity="one"/>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
     <plurals name="weeks_before">
-        <item quantity="one"></item>
-        <item quantity="few"></item>
-        <item quantity="other"></item>
+        <item quantity="one"/>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
     <plurals name="months_before">
-        <item quantity="one"></item>
-        <item quantity="few"></item>
-        <item quantity="other"></item>
+        <item quantity="one"/>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
     <plurals name="years_before">
-        <item quantity="one"></item>
-        <item quantity="few"></item>
-        <item quantity="other"></item>
+        <item quantity="one"/>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one"></item>
-        <item quantity="few"></item>
-        <item quantity="other"></item>
+        <item quantity="one"/>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one"></item>
-        <item quantity="few"></item>
-        <item quantity="other"></item>
+        <item quantity="one"/>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one"></item>
-        <item quantity="few"></item>
-        <item quantity="other"></item>
+        <item quantity="one"/>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one"></item>
-        <item quantity="few"></item>
-        <item quantity="other"></item>
+        <item quantity="one"/>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one"></item>
-        <item quantity="few"></item>
-        <item quantity="other"></item>
+        <item quantity="one"/>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one"></item>
-        <item quantity="few"></item>
-        <item quantity="other"></item>
+        <item quantity="one"/>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one"></item>
-        <item quantity="few"></item>
-        <item quantity="other"></item>
+        <item quantity="one"/>
+        <item quantity="few"/>
+        <item quantity="other"/>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in"></string>
-    <string name="reminder_triggers_in"></string>
-    <string name="alarm_warning"></string>
-    <string name="reminder_warning"></string>
+    <string name="alarm_goes_off_in"/>
+    <string name="reminder_triggers_in"/>
+    <string name="alarm_warning"/>
+    <string name="reminder_warning"/>
     <string name="notifications_disabled">Šios programėlės pranešimai yra išjungti. Norėdami juos įjungti, pereikite į savo įrenginio nustatymus.</string>
     <!-- Alarms -->
     <string name="alarm">Žadintuvas</string>
     <string name="snooze">Snausti</string>
     <string name="dismiss">Atmesti</string>
-    <string name="no_reminder"></string>
-    <string name="at_start"></string>
+    <string name="no_reminder"/>
+    <string name="at_start"/>
     <string name="system_sounds">Sistemos garsai</string>
     <string name="your_sounds">Jūsų garsai</string>
     <string name="add_new_sound">Pridėti naują garsą</string>
     <string name="no_sound">Be garso</string>
-    <string name="during_day_at_hh_mm"></string>
-    <string name="during_day_at"></string>
+    <string name="during_day_at_hh_mm"/>
+    <string name="during_day_at"/>
     <!-- Settings -->
     <string name="settings">Nustatymai</string>
     <string name="purchase_simple_thank_you">Įsigyti „Paprastą ačiū“</string>
@@ -545,11 +545,11 @@
     <string name="password_protect_hidden_items">Apsaugoti slaptažodžiu paslėptų elementų matomumą</string>
     <string name="password_protect_whole_app">Apsaugoti slaptažodžiu visą programėlę</string>
     <string name="password_protect_file_deletion">Apsaugoti slaptažodžiu failų ištrynimą ir perkėlimą</string>
-    <string name="keep_last_modified"></string>
-    <string name="show_info_bubble"></string>
+    <string name="keep_last_modified"/>
+    <string name="show_info_bubble"/>
     <string name="prevent_phone_from_sleeping">Neleisti telefonui užmigti tol, kol programėlė veikia priekiniame plane</string>
     <string name="skip_delete_confirmation">Visada praleisti ištrynimo patvirtinimo dialogą</string>
-    <string name="enable_pull_to_refresh"></string>
+    <string name="enable_pull_to_refresh"/>
     <string name="use_24_hour_time_format">Naudoti 24 valandų formatą</string>
     <string name="change_date_and_time_format">Keisti datos ir laiko formatą</string>
     <string name="sunday_first">Pradėti savaitę nuo sekmadienio</string>
@@ -557,33 +557,33 @@
     <string name="use_same_snooze">Visada naudoti tokį patį snaudimo laikotarpį</string>
     <string name="snooze_time">Snaudimo laikotarpis</string>
     <string name="vibrate_on_button_press">Vibruoti, kai paspaudžiami mygtukai</string>
-    <string name="move_items_into_recycle_bin"></string>
+    <string name="move_items_into_recycle_bin"/>
     <string name="recycle_bin_cleaning_interval">Šiukšlinės išvalymo intervalas</string>
-    <string name="empty_recycle_bin"></string>
-    <string name="force_portrait_mode"></string>
+    <string name="empty_recycle_bin"/>
+    <string name="force_portrait_mode"/>
     <string name="export_settings">Eksportuoti nustatymus</string>
     <string name="import_settings">Importuoti nustatymus</string>
     <string name="settings_exported_successfully">Nustatymai sėkmingai eksportuoti</string>
     <string name="settings_imported_successfully">Nustatymai sėkmingai importuoti</string>
-    <string name="start_name_with_surname"></string>
+    <string name="start_name_with_surname"/>
     <string name="clear_cache">Išvalyti podėlį</string>
-    <string name="show_call_confirmation_dialog"></string>
+    <string name="show_call_confirmation_dialog"/>
     <!-- Setting sections -->
     <string name="visibility">Matomumas</string>
     <string name="security">Saugumas</string>
     <string name="scrolling">Slinkimas</string>
-    <string name="file_operations">Bylų operacijos</string>
+    <string name="file_operations">Operacijos su failais</string>
     <string name="recycle_bin">Šiukšlinė</string>
-    <string name="saving_label">Saving</string>
-    <string name="startup">Startup</string>
-    <string name="text">Text</string>
-    <string name="migrating">Migrating</string>
-    <string name="quality">Quality</string>
-    <string name="main_screen">Main screen</string>
-    <string name="thumbnails">Thumbnails</string>
-    <string name="list_view">List view</string>
+    <string name="saving_label">Įrašymas</string>
+    <string name="startup">Paleidimas</string>
+    <string name="text">Tekstas</string>
+    <string name="migrating">Perkėlimas</string>
+    <string name="quality">Kokybė</string>
+    <string name="main_screen">Pagrindinis ekranas</string>
+    <string name="thumbnails">Miniatiūros</string>
+    <string name="list_view">Sąrašo rodinys</string>
     <!-- Default tab to open -->
-    <string name="manage_shown_tabs">Manage shown tabs</string>
+    <string name="manage_shown_tabs">Tvarkyti rodomas korteles</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
     <string name="contacts_tab">Contacts</string>
     <string name="favorites_tab">Favorites</string>

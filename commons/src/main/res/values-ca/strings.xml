@@ -28,7 +28,7 @@
     <string name="transparent">Transparent</string>
     <string name="transparent_color">Color transparent</string>
     <string name="select_a_different_color">Seleccioneu un color diferent</string>
-    <string name="download">Descarrega</string>
+    <string name="download">Baixa</string>
     <string name="notification">Notificació</string>
     <string name="notifications">Notificacions</string>
     <string name="email">Correu electrònic</string>
@@ -641,7 +641,7 @@
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">La versió de l\'aplicació ja no s\'actualitzarà més. Actualitzeu a la versió Pro per rebre correccions noves i altres millores.</string>
     <string name="upgrade_to_pro_long_click">La versió de l\'aplicació ja no s\'actualitzarà més. Actualitzeu a la versió Pro per rebre solucions noves i altres millores fent clic aquí.</string>
-    <string name="it_is_free">És gratuïta fins a: %s. Si la descarregueu fins aleshores, podreu utilitzar-la de franc per sempre.</string>
+    <string name="it_is_free">És gratuïta fins a: %s. Si la baixeu fins aleshores, podreu utilitzar-la de franc per sempre.</string>
     <string name="more_info">Més informació</string>
     <string name="upgrade">Actualitza</string>
     <string name="upgrade_calendar">Cal migrar els esdeveniments emmagatzemats localment de manera manual mitjançant l\'exportació en un fitxer .ics, i després importar-los. Podeu trobar els dos botons d\'exportació/importació al menú de la pantalla principal.</string>
@@ -694,7 +694,7 @@
 \nActualitzeu a la versió Pro per desbloquejar-lo.</string>
     <string name="widget_locked">El giny està bloquejat. &lt;br&gt;Compreu &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; per desbloquejar-lo.</string>
     <!-- New app (do not translate anything on the 4th line) -->
-    <string name="new_app">Hola,&lt;br&gt;&lt;br&gt; només informar-vos que recentment s\'ha publicat una aplicació nova:&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Podeu descarregar-la prement el títol.&lt;br&gt;&lt;br&gt; Gràcies</string>
+    <string name="new_app">Hola,&lt;br&gt;&lt;br&gt; només informar-vos que recentment s\'ha publicat una aplicació nova:&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Podeu baixar-la prement el títol.&lt;br&gt;&lt;br&gt; Gràcies</string>
     <string name="simple_app_launcher">Simple App Launcher</string>
     <string name="simple_calculator">Simple Calculator</string>
     <string name="simple_calendar">Simple Calendar</string>
@@ -743,8 +743,8 @@
     <string name="faq_5_text_commons">Si es van suprimir totalment, no ho podeu fer. Tanmateix, hi ha una paperera de reciclatge activada de manera predeterminada que farà que els fitxers es moguin allà en lloc de suprimir-los.</string>
     <string name="faq_6_title_commons">Ha desaparegut la icona del menú d\'aplicacions. Què puc fer?</string>
     <string name="faq_6_text_commons">El vostre llançador no és compatible amb la personalització correcta d\'icones. Intenteu iniciar l\'aplicació mitjançant Google Play o algun giny, si està disponible. Un cop llançada, configureu la icona de taronja #F57C00 predeterminat. És possible que hàgiu de tornar a instal·lar l\'aplicació en el pitjor dels casos.</string>
-    <string name="faq_7_title_commons">Els diners s\'han descomptat del meu compte bancari, però no puc descarregar l\'aplicació. Què puc fer\?</string>
-    <string name="faq_7_text_commons">Google gestiona completament els pagaments, i alguns cops això genera problemes en el seu sistema. Només cal que netegeu la memòria cau de l\'aplicació Google Play i reinicieu el dispositiu, després torneu a intentar descarregar-la.</string>
+    <string name="faq_7_title_commons">Els diners s\'han descomptat del meu compte bancari, però no puc baixar l\'aplicació. Què puc fer\?</string>
+    <string name="faq_7_text_commons">Google gestiona completament els pagaments, i alguns cops això genera problemes en el seu sistema. Només cal que netegeu la memòria cau de l\'aplicació Google Play i reinicieu el dispositiu, després torneu a intentar baixar-la.</string>
     <string name="faq_8_title_commons">Per què he d\'actualitzar a la versió Pro?</string>
     <string name="faq_8_text_commons">Com que la versió de l\'aplicació ja no s\'actualitza, els errors que potser heu vist no es corregiran. Tampoc s\'afegiran funcions noves. Podeu comprar la versió Pro a Google Play per una petita quantitat de diners. Es tracta d\'un pagament únic, cosa que significa que un cop que l\'adquiriu, no caldrà tornar a pagar mai més. Ni tan sols després de canviar de dispositiu. Si no us agrada la versió Pro, podeu desinstal·lar-la en poques hores i automàticament es retornaran els diners. Si voleu un reemborsament més endavant, poseu-vos en contacte amb nosaltres a l\'adreça hello@simplemobiletools.com i ho aconseguireu.</string>
     <string name="faq_9_title_commons">Com puc seleccionar diversos elements alhora?</string>
