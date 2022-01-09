@@ -101,7 +101,7 @@
     <string name="filename_cannot_be_empty">El nom del fitxer no pot estar buit</string>
     <string name="filename_invalid_characters">El nom del fitxer conté caràcters no vàlids</string>
     <string name="filename_invalid_characters_placeholder">El nom de fitxer «%s» conté caràcters no vàlids</string>
-    <string name="extension_cannot_be_empty">La extensió no pot estar buida</string>
+    <string name="extension_cannot_be_empty">L\'extensió no pot estar buida</string>
     <string name="source_file_doesnt_exist">El fitxer d\'origen %s no existeix</string>
     <string name="prepend_filenames">Preposa als noms de fitxer</string>
     <string name="append_filenames">Afegeix els noms de fitxer</string>
@@ -205,7 +205,7 @@
     <string name="path">Camí</string>
     <string name="items_selected">Elements seleccionats</string>
     <string name="direct_children_count">Recompte de fills directes</string>
-    <string name="files_count">Recompte total de fitxers</string>
+    <string name="files_count">Comptador total de fitxers</string>
     <string name="resolution">Resolució</string>
     <string name="duration">Durada</string>
     <string name="artist">Artista</string>
@@ -509,7 +509,7 @@
     <string name="small">Petita</string>
     <string name="medium">Mitjana</string>
     <string name="large">Gran</string>
-    <string name="extra_large">Extra gran</string>
+    <string name="extra_large">Extragran</string>
     <string name="password_protect_hidden_items">Protegeix amb contrasenya la visibilitat dels elements ocults</string>
     <string name="password_protect_whole_app">Protegeix amb contrasenya tota l\'aplicació</string>
     <string name="password_protect_file_deletion">Protegeix amb contrasenya la supressió i el moviment dels fitxers</string>
@@ -565,7 +565,7 @@
     <string name="restore_selected_files">Restaura els fitxers seleccionats</string>
     <string name="restore_all_files">Restaura tots els fitxers</string>
     <string name="recycle_bin_emptied">La paperera de reciclatge s\'ha buidat correctament</string>
-    <string name="files_restored_successfully">El fitxers s\'han restaurat correctament</string>
+    <string name="files_restored_successfully">Els fitxers s\'han restaurat correctament</string>
     <string name="empty_recycle_bin_confirmation">Segur que voleu buidar la paperera de reciclatge\? Els fitxers es perdran per sempre.</string>
     <string name="recycle_bin_empty">La paperera de reciclatge és buida</string>
     <string name="moving_recycle_bin_items_disabled">Moure els elements de la paperera està de reciclatge desactivat, utilitzeu la restauració</string>
@@ -605,18 +605,18 @@
     <string name="november">Novembre</string>
     <string name="december">Desembre</string>
     <!-- in January -->
-    <string name="in_january">al gener</string>
-    <string name="in_february">al febrer</string>
-    <string name="in_march">al març</string>
-    <string name="in_april">a l\'abril</string>
-    <string name="in_may">al maig</string>
-    <string name="in_june">al juny</string>
-    <string name="in_july">al juliol</string>
-    <string name="in_august">a l\'agost</string>
-    <string name="in_september">al setembre</string>
-    <string name="in_october">a l\'octubre</string>
-    <string name="in_november">al novembre</string>
-    <string name="in_december">al desembre</string>
+    <string name="in_january">de gener</string>
+    <string name="in_february">de febrer</string>
+    <string name="in_march">de març</string>
+    <string name="in_april">d\'abril</string>
+    <string name="in_may">de maig</string>
+    <string name="in_june">de juny</string>
+    <string name="in_july">de juliol</string>
+    <string name="in_august">d\'agost</string>
+    <string name="in_september">de setembre</string>
+    <string name="in_october">d\'octubre</string>
+    <string name="in_november">de novembre</string>
+    <string name="in_december">de desembre</string>
     <string name="monday">Dilluns</string>
     <string name="tuesday">Dimarts</string>
     <string name="wednesday">Dimecres</string>
@@ -646,7 +646,7 @@
     <string name="upgrade">Actualitza</string>
     <string name="upgrade_calendar">Cal migrar els esdeveniments emmagatzemats localment de manera manual mitjançant l\'exportació en un fitxer .ics, i després importar-los. Podeu trobar els dos botons d\'exportació/importació al menú de la pantalla principal.</string>
     <!-- About -->
-    <string name="about">Quan a</string>
+    <string name="about">Quant a</string>
     <string name="website_label">Per al codi font visiteu</string>
     <string name="email_label">Envieu els vostres comentaris o suggeriments a</string>
     <string name="upgrade_to_pro">Actualitzeu a Pro</string>
@@ -732,7 +732,7 @@
     <string name="frequently_asked_questions">Preguntes més freqüents</string>
     <string name="before_asking_question">Abans de fer una pregunta, primer llegiu les</string>
     <string name="faq_1_title_commons">Com és que no veig aquest giny a la llista de ginys\?</string>
-    <string name="faq_1_text_commons">Probablement, perquè heu mogut l\'aplicació a una targeta SD. Hi ha una limitació del sistema d\'Android que oculta els ginys de les aplicació en aquest cas. L\'única solució és moure l\'aplicació a l\'emmagatzematge intern a través de la configuració del dispositiu.</string>
+    <string name="faq_1_text_commons">Probablement, perquè heu mogut l\'aplicació a una targeta SD. Hi ha una limitació del sistema d\'Android que oculta els ginys de l\'aplicació en aquest cas. L\'única solució és moure l\'aplicació a l\'emmagatzematge intern a través de la configuració del dispositiu.</string>
     <string name="faq_2_title_commons">Vull ajudar-vos, però no puc donar diners. Hi ha quelcom més que pugui fer\?</string>
     <string name="faq_2_text_commons">Sí, és clar. Podeu difondre les aplicacions o fer bones valoracions i comentaris. També podeu ajudar traduint les aplicacions a un idioma nou o simplement actualitzant algunes traduccions existents. La guia per traduir es troba en &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;aquest lloc web&lt;/a&gt;, o senzillament poseu-vos en contacte amb nosaltres a &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt; si teniu cap pregunta.</string>
     <string name="faq_3_title_commons">He suprimit alguns fitxers per error, com els puc recuperar\?</string>
@@ -748,7 +748,7 @@
     <string name="faq_8_title_commons">Per què he d\'actualitzar a la versió Pro?</string>
     <string name="faq_8_text_commons">Com que la versió de l\'aplicació ja no s\'actualitza, els errors que potser heu vist no es corregiran. Tampoc s\'afegiran funcions noves. Podeu comprar la versió Pro a Google Play per una petita quantitat de diners. Es tracta d\'un pagament únic, cosa que significa que un cop que l\'adquiriu, no caldrà tornar a pagar mai més. Ni tan sols després de canviar de dispositiu. Si no us agrada la versió Pro, podeu desinstal·lar-la en poques hores i automàticament es retornaran els diners. Si voleu un reemborsament més endavant, poseu-vos en contacte amb nosaltres a l\'adreça hello@simplemobiletools.com i ho aconseguireu.</string>
     <string name="faq_9_title_commons">Com puc seleccionar diversos elements alhora?</string>
-    <string name="faq_9_text_commons">Hi ha diverses maneres de fer-ho. La primera és iniciar el mode de selecció prement (llarg) un element i, a continuació, fer clic breu sobre els altres per seleccionar-los. La segona forma és similar a la selecció d\'elements en els ordinadors amb un ratolí, només cal que inicieu el mode de selecció prement un element i, tot seguit, arrossegueu-lo amb el dit cap a altres elements per seleccionar-los. La tercera manera de seleccionar diversos elements consisteix en prémer (llarg) un element, després prémer (llarg) un altre i se selecciona tot el que hi ha entre els dos. Si voleu seleccionar tots els elements; només cal que premeu (llarg) un element i, a continuació, feu clic al comptador d\'elements seleccionats a l\'extrem superior esquerre. Això seleccionarà o anul·larà la selecció de tot.</string>
+    <string name="faq_9_text_commons">Hi ha diverses maneres de fer-ho. La primera és iniciar el mode de selecció prement (llarg) un element i, a continuació, fer clic breu sobre els altres per seleccionar-los. La segona forma és similar a la selecció d\'elements en els ordinadors amb un ratolí, només cal que inicieu el mode de selecció prement un element i, tot seguit, arrossegueu-lo amb el dit cap a altres elements per seleccionar-los. La tercera manera de seleccionar diversos elements consisteix a prémer (llarg) un element, després prémer (llarg) un altre i se selecciona tot el que hi ha entre els dos. Si voleu seleccionar tots els elements; només cal que premeu (llarg) un element i, a continuació, feu clic al comptador d\'elements seleccionats a l\'extrem superior esquerre. Això seleccionarà o anul·larà la selecció de tot.</string>
     <string name="faq_10_title_commons">He comprat l\'aplicació, però no la puc baixar en cap altre dispositiu.</string>
     <string name="faq_10_text_commons">Proveu de netejar la memòria cau de l\'aplicació Google Play i reinicieu el dispositiu. Es tracta d\'un problema de Google Play, que no està realment relacionat amb l\'aplicació en si.</string>
     <!-- Contributors -->
