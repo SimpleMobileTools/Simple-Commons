@@ -440,10 +440,6 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getString(LAST_EXPORTED_SETTINGS_FOLDER, "")!!
         set(lastExportedSettingsFolder) = prefs.edit().putString(LAST_EXPORTED_SETTINGS_FOLDER, lastExportedSettingsFolder).apply()
 
-    var lastExportedSettingsFile: String
-        get() = prefs.getString(LAST_EXPORTED_SETTINGS_FILE, "")!!
-        set(lastExportedSettingsFile) = prefs.edit().putString(LAST_EXPORTED_SETTINGS_FILE, lastExportedSettingsFile).apply()
-
     var lastBlockedNumbersExportPath: String
         get() = prefs.getString(LAST_BLOCKED_NUMBERS_EXPORT_PATH, "")!!
         set(lastBlockedNumbersExportPath) = prefs.edit().putString(LAST_BLOCKED_NUMBERS_EXPORT_PATH, lastBlockedNumbersExportPath).apply()
