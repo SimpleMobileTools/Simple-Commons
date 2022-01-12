@@ -13,29 +13,28 @@ import androidx.core.content.ContextCompat
 import androidx.core.widget.PopupWindowCompat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.applyColorFilter
-import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
 import com.simplemobiletools.commons.extensions.windowManager
 import com.simplemobiletools.commons.helpers.isRPlus
-import kotlinx.android.synthetic.main.item_action_mode_popup.view.*
+import kotlinx.android.synthetic.main.item_action_mode_popup.view.cab_item
 
 class BottomActionMenuItemPopup(
     private val context: Context,
     private val items: List<BottomActionMenuItem>,
-    private val onSelect: (BottomActionMenuItem) -> Unit
+    private val onSelect: (BottomActionMenuItem) -> Unit,
 ) {
     private val popup = PopupWindow(context, null, android.R.attr.popupMenuStyle)
     private var anchorView: View? = null
     private var dropDownWidth = ViewGroup.LayoutParams.WRAP_CONTENT
     private var dropDownHeight = ViewGroup.LayoutParams.WRAP_CONTENT
-    private var dropDownVerticalOffset: Int = 0
-    private var dropDownHorizontalOffset: Int = 0
     private val tempRect = Rect()
     private val popupMinWidth: Int
     private val popupPaddingBottom: Int
     private val popupPaddingStart: Int
     private val popupPaddingEnd: Int
     private val popupPaddingTop: Int
-    private val dropDownGravity: Int = Gravity.TOP or Gravity.END
+
+    val isShowing: Boolean
+        get() = popup.isShowing
 
     private val popupListAdapter = object : ArrayAdapter<BottomActionMenuItem>(context, R.layout.item_action_mode_popup, items) {
         override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
@@ -75,14 +74,28 @@ class BottomActionMenuItemPopup(
         buildDropDown()
         PopupWindowCompat.setWindowLayoutType(popup, WindowManager.LayoutParams.TYPE_APPLICATION_SUB_PANEL)
         popup.isOutsideTouchable = true
-        if (popup.isShowing) {
-            val dropDownHeight = if (dropDownHeight < 0) -1 else dropDownHeight
-            popup.update(anchorView, dropDownHorizontalOffset, dropDownVerticalOffset, dropDownWidth, dropDownHeight)
-        } else {
-            popup.width = dropDownWidth
-            popup.height = dropDownHeight
-            PopupWindowCompat.showAsDropDown(popup, anchorView, dropDownHorizontalOffset, dropDownVerticalOffset, dropDownGravity)
-        }
+        popup.width = dropDownWidth
+        popup.height = dropDownHeight
+        var x = 0
+        var y = 0
+        val contentView: View = popup.contentView
+        val windowRect = Rect()
+        contentView.getWindowVisibleDisplayFrame(windowRect)
+        val windowW = windowRect.width()
+        val windowH = windowRect.height()
+        contentView.measure(
+            makeDropDownMeasureSpec(dropDownWidth, windowW),
+            makeDropDownMeasureSpec(dropDownHeight, windowH)
+        )
+
+        val anchorLocation = IntArray(2)
+        anchorView.getLocationInWindow(anchorLocation)
+        x += anchorLocation[0]
+
+        y += anchorView.height * 2
+        x -= dropDownWidth - anchorView.width
+
+        popup.showAtLocation(contentView, Gravity.BOTTOM, x, y)
     }
 
     internal fun dismiss() {
@@ -98,9 +111,10 @@ class BottomActionMenuItemPopup(
             divider = null
             isFocusableInTouchMode = true
             clipToPadding = false
-            isVerticalScrollBarEnabled = false
+            isVerticalScrollBarEnabled = true
             isHorizontalScrollBarEnabled = false
             clipToOutline = true
+            elevation = 3f
             setPaddingRelative(popupPaddingStart, popupPaddingTop, popupPaddingEnd, popupPaddingBottom)
         }
 
@@ -118,23 +132,15 @@ class BottomActionMenuItemPopup(
         // to get the available height for the whole window.
         val padding: Int
         val popupBackground = popup.background
-        if (popupBackground != null) {
+        padding = if (popupBackground != null) {
             popupBackground.getPadding(tempRect)
-            padding = tempRect.top + tempRect.bottom
-
-            // If we don't have an explicit vertical offset, determine one from
-            // the window background so that content will line up.
-            dropDownVerticalOffset -= tempRect.top
+            tempRect.top + tempRect.bottom
         } else {
             tempRect.setEmpty()
-            padding = 0
+            0
         }
 
-        if (dropDownGravity and Gravity.BOTTOM == Gravity.BOTTOM) {
-            dropDownVerticalOffset += anchorView!!.height
-        }
-
-        val maxHeight = popup.getMaxAvailableHeight(anchorView!!, dropDownVerticalOffset)
+        val maxHeight = popup.getMaxAvailableHeight(anchorView!!, 0)
         val listContent = measureHeightOfChildrenCompat(maxHeight - otherHeights)
         if (listContent > 0) {
             val listPadding = dropDownList.paddingTop + dropDownList.paddingBottom
@@ -246,5 +252,26 @@ class BottomActionMenuItemPopup(
             }
         }
         return maxWidth
+    }
+
+    private fun makeDropDownMeasureSpec(measureSpec: Int, maxSize: Int): Int {
+        return MeasureSpec.makeMeasureSpec(
+            getDropDownMeasureSpecSize(measureSpec, maxSize),
+            getDropDownMeasureSpecMode(measureSpec)
+        )
+    }
+
+    private fun getDropDownMeasureSpecSize(measureSpec: Int, maxSize: Int): Int {
+        return when (measureSpec) {
+            ViewGroup.LayoutParams.MATCH_PARENT -> maxSize
+            else -> MeasureSpec.getSize(measureSpec)
+        }
+    }
+
+    private fun getDropDownMeasureSpecMode(measureSpec: Int): Int {
+        return when (measureSpec) {
+            ViewGroup.LayoutParams.WRAP_CONTENT -> MeasureSpec.UNSPECIFIED
+            else -> MeasureSpec.EXACTLY
+        }
     }
 }
