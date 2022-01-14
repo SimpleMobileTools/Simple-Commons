@@ -45,7 +45,6 @@ class ExportSettingsDialog(val activity: BaseSimpleActivity, val defaultFilename
                                 return@setOnClickListener
                             }
 
-                            activity.baseConfig.lastExportedSettingsFile = filename
                             val newPath = "${folder.trimEnd('/')}/$filename"
                             if (!newPath.getFilenameFromPath().isAValidFilename()) {
                                 activity.toast(R.string.filename_invalid_characters)

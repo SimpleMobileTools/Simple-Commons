@@ -733,13 +733,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     private fun getExportSettingsFilename(): String {
-        var defaultFilename = baseConfig.lastExportedSettingsFile
-        if (defaultFilename.isEmpty()) {
-            val appName = baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro").removePrefix("com.simplemobiletools.")
-            defaultFilename = "$appName-settings_${getCurrentFormattedDateTime()}.txt"
-        }
-
-        return defaultFilename
+        val appName = baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro").removePrefix("com.simplemobiletools.")
+        return "$appName-settings_${getCurrentFormattedDateTime()}.txt"
     }
 
     @SuppressLint("InlinedApi")
