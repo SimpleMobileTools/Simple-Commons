@@ -14,7 +14,10 @@ import android.widget.LinearLayout
 import androidx.annotation.IdRes
 import com.google.android.material.animation.AnimationUtils
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.extensions.applyColorFilter
+import com.simplemobiletools.commons.extensions.beVisibleIf
+import com.simplemobiletools.commons.extensions.toast
+import com.simplemobiletools.commons.extensions.windowManager
 import com.simplemobiletools.commons.helpers.isRPlus
 
 class BottomActionMenuView : LinearLayout {
@@ -40,6 +43,7 @@ class BottomActionMenuView : LinearLayout {
 
     private var currentAnimator: ViewPropertyAnimator? = null
     private var callback: BottomActionMenuCallback? = null
+    private var itemPopup: BottomActionMenuItemPopup? = null
 
     init {
         orientation = HORIZONTAL
@@ -151,7 +155,11 @@ class BottomActionMenuView : LinearLayout {
         (inflater.inflate(R.layout.item_action_mode, this, false) as ImageView).apply {
             setupItem(item)
             setOnClickListener {
-                callback?.onItemClicked(item)
+                if (itemPopup?.isShowing == true) {
+                    itemPopup?.dismiss()
+                } else {
+                    callback?.onItemClicked(item)
+                }
             }
             setOnLongClickListener {
                 context.toast(item.title)
@@ -167,9 +175,13 @@ class BottomActionMenuView : LinearLayout {
             val contentDesc = context.getString(R.string.more_info)
             contentDescription = contentDesc
             applyColorFilter(Color.WHITE)
-            val popup = getOverflowPopup(overFlowItems)
+            itemPopup = getOverflowPopup(overFlowItems)
             setOnClickListener {
-                popup.show(it)
+                if (itemPopup?.isShowing == true) {
+                    itemPopup?.dismiss()
+                } else {
+                    itemPopup?.show(it)
+                }
             }
             setOnLongClickListener {
                 context.toast(contentDesc)
