@@ -10,6 +10,7 @@ android {
     defaultConfig {
         minSdkVersion propMinSdkVersion
         targetSdkVersion propTargetSdkVersion
+        buildConfigField "boolean", "show_donate_in_about", "false"
     }
 
     buildTypes {
