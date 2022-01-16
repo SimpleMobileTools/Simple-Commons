@@ -841,6 +841,7 @@ fun BaseSimpleActivity.renameFile(
                     runOnUiThread {
                         callback?.invoke(true, false)
                     }
+                    deleteFromMediaStore(oldPath)
                     scanPathRecursively(newPath)
                 }
             } else {
@@ -849,6 +850,7 @@ fun BaseSimpleActivity.renameFile(
                 }
                 updateInMediaStore(oldPath, newPath)
                 scanPathsRecursively(arrayListOf(newPath)) {
+                    deleteFromMediaStore(oldPath)
                     runOnUiThread {
                         callback?.invoke(true, false)
                     }
