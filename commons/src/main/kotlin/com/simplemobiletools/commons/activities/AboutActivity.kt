@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.Menu
 import androidx.core.net.toUri
-import com.simplemobiletools.commons.BuildConfig
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.dialogs.ConfirmationAdvancedDialog
 import com.simplemobiletools.commons.dialogs.RateStarsDialog
@@ -135,7 +134,7 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupDonate() {
-        if (BuildConfig.show_donate_in_about) {
+        if (resources.getBoolean(R.bool.show_donate_in_about)) {
             about_donate_holder.beVisible()
             about_contributors_holder.background = resources.getDrawable(R.drawable.ripple_background, theme)
             about_donate_holder.setOnClickListener {
