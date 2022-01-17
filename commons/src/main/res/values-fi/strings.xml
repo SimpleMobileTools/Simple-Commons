@@ -389,31 +389,31 @@
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">sekunnissa</item>
+        <item quantity="one">%d sekunnissa</item>
         <item quantity="other">%d sekunnissa</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">minuutissa</item>
+        <item quantity="one">%d minuutissa</item>
         <item quantity="other">%d minuutissa</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">tunnissa</item>
+        <item quantity="one">%d tunnissa</item>
         <item quantity="other">%d tunnissa</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">päivässä</item>
+        <item quantity="one">%d päivässä</item>
         <item quantity="other">%d päivässä</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">viikossa</item>
+        <item quantity="one">%d viikossa</item>
         <item quantity="other">%d viikossa</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">kuukaudessa</item>
+        <item quantity="one">%d kuukaudessa</item>
         <item quantity="other">%d kuukaudessa</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">vuodessa</item>
+        <item quantity="one">%d vuodessa</item>
         <item quantity="other">%d vuodessa</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
@@ -447,31 +447,31 @@
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">sekunnilla</item>
+        <item quantity="one">%d sekunnilla</item>
         <item quantity="other">%d sekunnilla</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">minuutilla</item>
+        <item quantity="one">%d minuutilla</item>
         <item quantity="other">%d minuutilla</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">tunnilla</item>
+        <item quantity="one">%d tunnilla</item>
         <item quantity="other">%d tunnilla</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">päivällä</item>
+        <item quantity="one">%d päivällä</item>
         <item quantity="other">%d päivällä</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">viikolla</item>
+        <item quantity="one">%d viikolla</item>
         <item quantity="other">%d viikolla</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">kuukaudella</item>
+        <item quantity="one">%d kuukaudella</item>
         <item quantity="other">%d kuukaudella</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">vuodella</item>
+        <item quantity="one">%d vuodella</item>
         <item quantity="other">%d vuodella</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
