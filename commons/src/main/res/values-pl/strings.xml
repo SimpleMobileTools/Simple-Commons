@@ -163,7 +163,7 @@
     <string name="select_folder">Wybierz folder</string>
     <string name="select_file">Wybierz plik</string>
     <string name="confirm_storage_access_title">Potwierdź dostęp do karty pamięci</string>
-    <string name="confirm_storage_access_text">Wybierz główny folder na karcie pamięci na następnym ekranie i udziel dostępu do zapisu</string>
+    <string name="confirm_storage_access_text">Wybierz folder główny karty pamięci na następnym ekranie, aby przyznać dostęp</string>
     <string name="confirm_storage_access_text_sd">Jeśli nie widzisz karty pamięci, spróbuj tego:</string>
     <string name="confirm_storage_access_android_text">Zezwól aplikacji na dostęp do wybranej pamięci na następnym ekranie, naciskając „Użyj tego folderu” na dole.</string>
     <string name="confirm_selection">Potwierdź wybór</string>
@@ -195,7 +195,7 @@
     <string name="internal">Wewnętrzna</string>
     <string name="sd_card">Karta pamięci</string>
     <string name="root">Folder główny</string>
-    <string name="wrong_root_selected">Wybrano nieprawidłowy folder. Wybierz główny folder karty pamięci.</string>
+    <string name="wrong_root_selected">Wybrano nieprawidłowy folder. Wybierz folder główny karty pamięci.</string>
     <string name="sd_card_usb_same">Ścieżki do karty pamięci i pamięci USB nie mogą być takie same</string>
     <string name="app_on_sd_card">Wygląda na to, że aplikacja jest zainstalowana na karcie pamięci, przez co widżety aplikacji są niedostępne. Nie zobaczysz ich nawet na liście dostępnych widżetów. Jest to ograniczenie systemu, więc jeśli chcesz ich używać, musisz przenieść aplikację z powrotem do pamięci wewnętrznej.</string>
     <!-- File properties -->
@@ -622,8 +622,8 @@
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Wygląda na to, że masz podpiętą pamięć USB. Aby mieć pewność, że pliki na niej będą poprawnie widoczne, przyznaj aplikacji dodatkowe uprawnienia.</string>
-    <string name="confirm_usb_storage_access_text">Wybierz folder główny pamięci USB na następnym ekranie, aby uzyskać do niej dostęp</string>
-    <string name="wrong_root_selected_usb">Wybrano nieprawidłowy folder. Wybierz główny folder pamięci USB.</string>
+    <string name="confirm_usb_storage_access_text">Wybierz folder główny pamięci USB na następnym ekranie, aby przyznać dostęp</string>
+    <string name="wrong_root_selected_usb">Wybrano nieprawidłowy folder. Wybierz folder główny pamięci USB.</string>
     <!-- Dates -->
     <string name="january">Styczeń</string>
     <string name="february">Luty</string>
