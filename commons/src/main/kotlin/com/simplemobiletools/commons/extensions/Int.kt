@@ -109,16 +109,32 @@ fun Int.flipBit(bit: Int) = if (this and bit == 0) addBit(bit) else removeBit(bi
 fun ClosedRange<Int>.random() = Random().nextInt(endInclusive - start) + start
 
 // taken from https://stackoverflow.com/a/40964456/1967672
-fun Int.darkenColor(): Int {
+fun Int.darkenColor(factor: Int = 8): Int {
     if (this == Color.WHITE || this == Color.BLACK) {
         return this
     }
 
-    val DARK_FACTOR = 8
+    val DARK_FACTOR = factor
     var hsv = FloatArray(3)
     Color.colorToHSV(this, hsv)
     val hsl = hsv2hsl(hsv)
     hsl[2] -= DARK_FACTOR / 100f
+    if (hsl[2] < 0)
+        hsl[2] = 0f
+    hsv = hsl2hsv(hsl)
+    return Color.HSVToColor(hsv)
+}
+
+fun Int.lightenColor(factor: Int = 8): Int {
+    if (this == Color.WHITE || this == Color.BLACK) {
+        return this
+    }
+
+    val LIGHT_FACTOR = factor
+    var hsv = FloatArray(3)
+    Color.colorToHSV(this, hsv)
+    val hsl = hsv2hsl(hsv)
+    hsl[2] += LIGHT_FACTOR / 100f
     if (hsl[2] < 0)
         hsl[2] = 0f
     hsv = hsl2hsv(hsl)

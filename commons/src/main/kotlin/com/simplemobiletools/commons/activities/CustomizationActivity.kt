@@ -461,7 +461,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         if (newColor == baseConfig.primaryColor) {
             apply_to_all.setBackgroundResource(R.drawable.button_background_rounded)
         } else {
-            val applyBackground = resources.getDrawable(R.drawable.button_background_rounded) as RippleDrawable
+            val applyBackground = resources.getDrawable(R.drawable.button_background_rounded, theme) as RippleDrawable
             (applyBackground as LayerDrawable).findDrawableByLayerId(R.id.button_background_holder).applyColorFilter(newColor)
             apply_to_all.background = applyBackground
         }
