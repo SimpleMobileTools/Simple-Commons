@@ -329,21 +329,21 @@
         <item quantity="other">ĮSPĖJIMAS: Jūs ištrinate %d aplankų</item>
     </plurals>
     <!-- Password protection -->
-    <string name="pin"/>
-    <string name="enter_pin"/>
-    <string name="please_enter_pin"/>
-    <string name="wrong_pin"/>
-    <string name="repeat_pin"/>
+    <string name="pin">PIN kodas</string>
+    <string name="enter_pin">Įvesti PIN kodą</string>
+    <string name="please_enter_pin">Įveskite PIN kodą</string>
+    <string name="wrong_pin">Neteisingas PIN kodas</string>
+    <string name="repeat_pin">Pakartokite PIN kodą</string>
     <string name="pattern">Šablonas</string>
     <string name="insert_pattern">Įveskite šabloną</string>
     <string name="wrong_pattern">Neteisingas šablonas</string>
     <string name="repeat_pattern">Pakartokite šabloną</string>
-    <string name="biometrics"/>
+    <string name="biometrics">Biometrika</string>
     <string name="fingerprint">Piršto atspaudas</string>
     <string name="add_fingerprint">Pridėti piršto atspaudą</string>
     <string name="place_finger">Uždėkite pirštą ant piršto atspaudo jutiklio</string>
-    <string name="open_biometric_dialog"/>
-    <string name="authenticate"/>
+    <string name="open_biometric_dialog">Atverti biometrinio ID patvirtinimo dialogą</string>
+    <string name="authenticate">Nustatyti tapatybę</string>
     <string name="authentication_failed">Nepavyko nustatyti tapatybės</string>
     <string name="authentication_blocked">Tapatybės nustatymas užblokuotas, netrukus bandykite dar kartą</string>
     <string name="no_fingerprints_registered">Neturite jokių registruotų piršto atspaudų, įtraukite juos savo įrenginio nustatymuose</string>
@@ -560,14 +560,14 @@
     <string name="move_items_into_recycle_bin"/>
     <string name="recycle_bin_cleaning_interval">Šiukšlinės išvalymo intervalas</string>
     <string name="empty_recycle_bin"/>
-    <string name="force_portrait_mode"/>
+    <string name="force_portrait_mode">Priverstinai naudoti stačią veikseną</string>
     <string name="export_settings">Eksportuoti nustatymus</string>
     <string name="import_settings">Importuoti nustatymus</string>
     <string name="settings_exported_successfully">Nustatymai sėkmingai eksportuoti</string>
     <string name="settings_imported_successfully">Nustatymai sėkmingai importuoti</string>
-    <string name="start_name_with_surname"/>
+    <string name="start_name_with_surname">Pirmiausia, rodyti pavardę</string>
     <string name="clear_cache">Išvalyti podėlį</string>
-    <string name="show_call_confirmation_dialog"/>
+    <string name="show_call_confirmation_dialog">Prieš inicijuojant skambutį, rodyti patvirtinimo dialogą</string>
     <!-- Setting sections -->
     <string name="visibility">Matomumas</string>
     <string name="security">Saugumas</string>
@@ -768,163 +768,147 @@
     <string name="frequently_asked_questions">Dažniausiai užduodami klausimai</string>
     <string name="before_asking_question">Prieš užduodami klausimą, iš pradžių, perskaitykite</string>
     <string name="faq_1_title_commons">Kodėl valdiklių sąraše nematau šios programėlės valdiklio\?</string>
-    <string name="faq_1_text_commons">Labiausiai tikėtina, kad perkėlėte programėlę į SD kortelę. Yra "Android" sistemos apribojimas, kuris slepia nurodytos programėlės valdiklį tuo atveju. Vienintelis sprendimas yra perkelti programėlę į vidinę atmintinę per įrenginio nustatymus.</string>
-    <string name="faq_2_title_commons">Aš noriu jus paremti, bet aš negaliu paaukoti pinigų. Ar yra kažkas, ką galiu padaryti?</string>
-    <string name="faq_2_text_commons">
-        <![CDATA[
-            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-        ]]>
-    </string>
-    <string name="faq_3_title_commons">Aš per klaidą ištryniau keletą bylų, kaip jas atkurti?</string>
-    <string name="faq_3_text_commons">Deja, jūs negalite. Bylos iš karto ištrinamos po patvirtinimo dialogo, nėra šiukšliadėžės.</string>
-    <string name="faq_4_title_commons">Aš nemėgstu valdiklio spalvų, galiu jas pakeisti?</string>
-    <string name="faq_4_text_commons">Taip, kai vilksite valdiklį savo pagrindiniame ekrane, pasirodys valdiklio konfigūracijos ekranas. Apatiniame kairiajame kampe pamatysite spalvotą kvadratą, tiesiog paspauskite, kad pasirinktumėte naują spalvą. Galite naudoti slankiklį, kad galėtumėte koreguoti pagrindinę spalvą</string>
-    <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
-    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
-    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
-        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
-        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
-    <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
-    <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
+    <string name="faq_1_text_commons">Greičiausiai, taip yra dėl to, kad perkėlėte programėlę į SD kortelę. Yra „Android“ sistemos apribojimas, kuris tokiu atveju paslepia nurodytos programėlės valdiklius. Vienintelis sprendimas yra per įrenginio nustatymus perkelti programėlę atgal į vidinę atmintį.</string>
+    <string name="faq_2_title_commons">Aš noriu jus paremti, bet neturiu galimybės paaukoti pinigų. Ar yra kas nors, ką galiu padaryti\?</string>
+    <string name="faq_2_text_commons">Žinoma, yra. Galite skleisti žinią apie programėles arba teikti gerus atsiliepimus ir įvertinimus. Be to, galite padėti versdami programėles į naują kalbą arba atnaujindami esamus vertimus. Vertimo vadovą, galite rasti &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;šioje svetainėje&lt;/a&gt; arba, tiesiog, jei turite klausimų, susisiekite su mumis el. paštu &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt;.</string>
+    <string name="faq_3_title_commons">Aš per klaidą ištryniau keletą failų, kaip galiu juos atkurti\?</string>
+    <string name="faq_3_text_commons">Deja, to padaryti negalite. Failai yra ištrinami iš karto po patvirtinimo dialogo, o šiukšlinė yra neprieinama.</string>
+    <string name="faq_4_title_commons">Man nepatinka valdiklio spalvos, kaip galiu jas pakeisti\?</string>
+    <string name="faq_4_text_commons">Kai velkate valdiklį į pagrindinį ekraną, atsiranda valdiklio konfigūracijos ekranas. Apatiniame kairiajame kampe pamatysite spalvotus kvadratus. Tiesiog, paspauskite ant jų, kad pasirinktumėte naują spalvą. Be to, galite naudoti slankiklį, norėdami reguliuoti permatomumą.</string>
+    <string name="faq_5_title_commons">Ar galiu kaip nors atkurti ištrintus failus\?</string>
+    <string name="faq_5_text_commons">Jeigu tikrai juos ištrynėte, jų atkurti nebegalite. Vis dėlto, pagal numatymą yra įjungta šiukšlinė ir failai yra neištrinami, o vietoj to, perkeliami į ją.</string>
+    <string name="faq_6_title_commons">Programėlės paleidyklės piktograma dingo. Ką daryti\?</string>
+    <string name="faq_6_text_commons">Taip yra todėl, kad jūsų paleidyklė tinkamai nepalaiko piktogramos tinkinimo. Jei prieinama, pabandykite paleisti programėlę per „Google Play“ ar per kokį nors valdiklį. Paleidę programėlę, atstatykite numatytąją oranžinę piktogramą #F57C00. Blogiausiu atveju, jums gali tekti įdiegti programėlę iš naujo.</string>
+    <string name="faq_7_title_commons">Pinigai buvo nuskaičiuoti nuo mano banko sąskaitos, o aš vis tiek negaliu atsisiųsti programėlės. Ką daryti\?</string>
+    <string name="faq_7_text_commons">Mokėjimus pilnai apdoroja „Google“, jų sistema laikas nuo laiko stringa. Tiesiog, išvalykite „Google Play“ programėlės podėlį ir paleiskite įrenginį iš naujo, o tuomet, bandykite atsisiųsti programėlę.</string>
+    <string name="faq_8_title_commons">Kodėl turėčiau atsinaujinti į „Pro“ versiją\?</string>
+    <string name="faq_8_text_commons">Kadangi jūsų programėlės versija daugiau nebeatnaujinama, klaidos, kurias galbūt pastebėjote, nebebus ištaisomos. Be to, nebebus pridedamos jokios naujos funkcijos. Už nedidelę pinigų sumą, per „Google Play“ galite įsigyti „Pro“ versiją. Tai yra vienkartinis mokestis, kas reiškia, jog vieną kartą įsigiję, daugiau nebeturėsite mokėti dar kartą. Netgi, jei įsigysite naują įrenginį. Jeigu „Pro“ versija jums nepatiks, per kelias valandas galėsite ją pašalinti ir pinigai bus jums grąžinti automatiškai. Jei pinigus norėsite susigrąžinti vėliau, tiesiog, susisiekite su mumis el. paštu hello@simplemobiletools.com ir mes juos grąžinsime.</string>
+    <string name="faq_9_title_commons">Kaip vienu metu galiu pažymėti kelis elementus\?</string>
+    <string name="faq_9_text_commons">Yra keli būdai, kaip galima tą padaryti. Pirmas būdas, tai įjungti žymėjimo veikseną, paspaudus ir ilgai palaikius ant vieno elemento, o tuomet trumpai paspaudžiant ant kitų, norimų pažymėti, elementų. Antras būdas yra panašus į tą, kuris naudojamas kompiuteriuose žymint elementus pele. Tiesiog, įjunkite žymėjimo veikseną paspaudę ir ilgai palaikę ant vieno elemento, o tuomet neatleisdami piršto, tempkite jį žemyn per kitus elementus, kad juos pažymėtumėte. Trečias būdas, kaip pažymėti kelis elementus, yra paspausti ir ilgai palaikyti ant vieno elemento, tuomet paspausti ir ilgai palaikyti ant kito elemento, ir viskas, kas yra tarp šių dviejų elementų, bus pažymėta. Jei norite pažymėti visus elementus, paspauskite ir ilgai palaikykite ant vieno elemento, o tuomet viršutiniame kairiajame kampe spustelėkite ant pažymėtų elementų skaitiklio. Tai viską pažymės arba nuims žymėjimą nuo visų elementų.</string>
+    <string name="faq_10_title_commons">Aš įsigijau programėlę, bet negaliu jos atsisiųsti kitame įrenginyje.</string>
+    <string name="faq_10_text_commons">Pabandykite išvalyti „Google Play“ programėlės podėlį ir paleiskite savo įrenginį iš naujo. Tai yra „Google Play“ triktis, kuri nėra susijusi su įsigyta programėle.</string>
     <!-- Contributors -->
-    <string name="contributors">Contributors</string>
-    <string name="translation">Translation</string>
-    <string name="development">Development</string>
-    <string name="other_help">Other help</string>
-    <string name="contributors_label">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
-    <string name="translation_arabic">Arabic</string>
-    <string name="translation_azerbaijani">Azerbaijani</string>
-    <string name="translation_bengali">Bengali</string>
-    <string name="translation_breton">Breton</string>
-    <string name="translation_catalan">Catalan</string>
-    <string name="translation_czech">Czech</string>
-    <string name="translation_welsh">Welsh</string>
-    <string name="translation_danish">Danish</string>
-    <string name="translation_german">German</string>
-    <string name="translation_greek">Greek</string>
-    <string name="translation_spanish">Spanish</string>
-    <string name="translation_basque">Basque</string>
-    <string name="translation_persian">Persian</string>
-    <string name="translation_finnish">Finnish</string>
-    <string name="translation_french">French</string>
-    <string name="translation_galician">Galician</string>
+    <string name="contributors">Talkininkai</string>
+    <string name="translation">Vertimas</string>
+    <string name="development">Plėtojimas</string>
+    <string name="other_help">Kita pagalba</string>
+    <string name="contributors_label">Šiame sąraše yra žmonės, kurie daug prisidėjo prie visų „Simple Mobile Tools“ rinkinio programėlių, o ne vien tik prie šios. Programėles į kitas kalbas verčia savanoriai, tad praneškite mums, jei taip pat norite padėti. Vertimo vadovą rasite &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;šioje svetainėje&lt;/a&gt; arba, jei turite klausimų, susisiekite su mumis el. paštu &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt;. Dėkojame visiems, kas prisidėjo ar kitaip mus palaikė!</string>
+    <string name="translation_arabic">Arabų</string>
+    <string name="translation_azerbaijani">Azerbaidžaniečių</string>
+    <string name="translation_bengali">Bengalų</string>
+    <string name="translation_breton">Bretonų</string>
+    <string name="translation_catalan">Katalonų</string>
+    <string name="translation_czech">Čekų</string>
+    <string name="translation_welsh">Valų</string>
+    <string name="translation_danish">Danų</string>
+    <string name="translation_german">Vokiečių</string>
+    <string name="translation_greek">Graikų</string>
+    <string name="translation_spanish">Ispanų</string>
+    <string name="translation_basque">Baskų</string>
+    <string name="translation_persian">Persų</string>
+    <string name="translation_finnish">Suomių</string>
+    <string name="translation_french">Prancūzų</string>
+    <string name="translation_galician">Galisų</string>
     <string name="translation_hindi">Hindi</string>
-    <string name="translation_croatian">Croatian</string>
-    <string name="translation_hungarian">Hungarian</string>
-    <string name="translation_indonesian">Indonesian</string>
-    <string name="translation_italian">Italian</string>
-    <string name="translation_hebrew">Hebrew</string>
-    <string name="translation_japanese">Japanese</string>
-    <string name="translation_korean">Korean</string>
-    <string name="translation_lithuanian">Lithuanian</string>
-    <string name="translation_nepali">Nepali</string>
-    <string name="translation_norwegian">Norwegian</string>
-    <string name="translation_dutch">Dutch</string>
-    <string name="translation_polish">Polish</string>
-    <string name="translation_portuguese">Portuguese</string>
-    <string name="translation_romanian">Romanian</string>
-    <string name="translation_russian">Russian</string>
-    <string name="translation_slovak">Slovak</string>
-    <string name="translation_slovenian">Slovenian</string>
-    <string name="translation_serbian">Serbian</string>
-    <string name="translation_swedish">Swedish</string>
-    <string name="translation_tamil">Tamil</string>
-    <string name="translation_turkish">Turkish</string>
-    <string name="translation_ukrainian">Ukrainian</string>
-    <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
-    <string name="translation_chinese_cn">Chinese (Simplified)</string>
-    <string name="translation_chinese_tw">Chinese (Traditional)</string>
+    <string name="translation_croatian">Kroatų</string>
+    <string name="translation_hungarian">Vengrų</string>
+    <string name="translation_indonesian">Indoneziečių</string>
+    <string name="translation_italian">Italų</string>
+    <string name="translation_hebrew">Hebrajų</string>
+    <string name="translation_japanese">Japonų</string>
+    <string name="translation_korean">Korėjiečių</string>
+    <string name="translation_lithuanian">Lietuvių</string>
+    <string name="translation_nepali">Nepaliečių</string>
+    <string name="translation_norwegian">Norvegų</string>
+    <string name="translation_dutch">Olandų</string>
+    <string name="translation_polish">Lenkų</string>
+    <string name="translation_portuguese">Portugalų</string>
+    <string name="translation_romanian">Rumunų</string>
+    <string name="translation_russian">Rusų</string>
+    <string name="translation_slovak">Slovakų</string>
+    <string name="translation_slovenian">Slovėnų</string>
+    <string name="translation_serbian">Serbų</string>
+    <string name="translation_swedish">Švedų</string>
+    <string name="translation_tamil">Tamilų</string>
+    <string name="translation_turkish">Turkų</string>
+    <string name="translation_ukrainian">Ukrainiečių</string>
+    <string name="translation_vietnamese">Vietnamiečių</string>
+    <string name="translation_chinese_hk">Kinų (Honkongas)</string>
+    <string name="translation_chinese_cn">Kinų(Supaprastinta)</string>
+    <string name="translation_chinese_tw">Kinų (Tradicinė)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
-    <string name="why_upgrade">Get the Pro version now!</string>
-    <string name="why_upgrade_basic_version">Basic</string>
-    <string name="why_upgrade_pro_version">Pro</string>
-    <string name="why_upgrade_no_ads">No ads</string>
-    <string name="why_upgrade_no_internet_access">No internet access</string>
-    <string name="why_upgrade_footer">+ 100% Money Back Guarantee</string>
-    <string name="why_upgrade_improved_design">Improved design</string>
+    <string name="why_upgrade">Gaukite „Pro“ versiją dabar!</string>
+    <string name="why_upgrade_basic_version">Pagrindinė</string>
+    <string name="why_upgrade_pro_version">„Pro“</string>
+    <string name="why_upgrade_no_ads">Jokių reklamų</string>
+    <string name="why_upgrade_no_internet_access">Nereikalauja prieigos prie interneto</string>
+    <string name="why_upgrade_footer">+ 100% pinigų grąžinimo garantija</string>
+    <string name="why_upgrade_improved_design">Patobulintas dizainas</string>
     <!-- Gallery Pro -->
-    <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
-    <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
-    <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
-    <string name="why_upgrade_folder_locking">Individual folder locking</string>
-    <string name="why_upgrade_printing_support">Printing support</string>
+    <string name="why_upgrade_advanced_photo_editor">Išplėstinis nuotraukų redaktorius</string>
+    <string name="why_upgrade_heic_support">HEIC/HEIF failų palaikymas</string>
+    <string name="why_upgrade_batch_renaming">Išplėstinis masinis failų pervadinimas</string>
+    <string name="why_upgrade_folder_locking">Atskirų aplankų užrakinimas</string>
+    <string name="why_upgrade_printing_support">Spausdinimo palaikymas</string>
     <!-- Calendar Pro -->
-    <string name="why_upgrade_time_zone_support">Time zone support</string>
-    <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
-    <string name="why_upgrade_easy_event_importing">Easy event importing</string>
-    <string name="why_upgrade_new_widgets">New widgets</string>
+    <string name="why_upgrade_time_zone_support">Laiko juostos palaikymas</string>
+    <string name="why_upgrade_attendees_emails">Kviestiniai ir priminimai el. paštu</string>
+    <string name="why_upgrade_easy_event_importing">Lengvas įvykių importavimas</string>
+    <string name="why_upgrade_new_widgets">Nauji valdikliai</string>
     <!-- Contacts Pro -->
-    <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
-    <string name="why_upgrade_font_size_customization">Font size customization</string>
-    <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
-    <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
-    <string name="why_upgrade_contact_filtering">Contact filtering</string>
+    <string name="why_upgrade_duplicate_contact_merging">Patobulintas besidubliuojančių adresatų sujungimas</string>
+    <string name="why_upgrade_font_size_customization">Šrifto dydžio tinkinimas</string>
+    <string name="why_upgrade_private_contact_sharing">Pasirinktinis privačių adresatų bendrinimas tarp mūsų programėlių</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Tinkinamos adresatų skambučio melodijos</string>
+    <string name="why_upgrade_contact_filtering">Adresatų filtravimas</string>
     <!-- Notes Pro -->
-    <string name="why_upgrade_checklists">Checklists</string>
-    <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
-    <string name="why_upgrade_note_locking">Note locking</string>
+    <string name="why_upgrade_checklists">Kontroliniai sąrašai</string>
+    <string name="why_upgrade_different_note_per_widget">Kiekviename valdiklyje skirtingi užrašai ir spalvos</string>
+    <string name="why_upgrade_note_locking">Užrašų užrakinimas</string>
     <!-- File Manager Pro -->
-    <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
-    <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
-    <string name="why_upgrade_file_compression">File compression support</string>
-    <string name="why_upgrade_recents_tab">Tab with recent files</string>
+    <string name="why_upgrade_date_and_time_format">Datos ir laiko formato tinkinimas</string>
+    <string name="why_upgrade_shortcuts">Šaukiniai pradiniame ekrane</string>
+    <string name="why_upgrade_file_compression">Failų glaudinimo palaikymas</string>
+    <string name="why_upgrade_recents_tab">Kortelė su paskiausiais failais</string>
     <!-- Draw Pro -->
-    <string name="why_upgrade_background_color_customization">Background color customization</string>
-    <string name="why_upgrade_file_importing">File importing support</string>
-    <string name="why_upgrade_zooming">Zooming</string>
+    <string name="why_upgrade_background_color_customization">Fono spalvos tinkinimas</string>
+    <string name="why_upgrade_file_importing">Failų importavimo palaikymas</string>
+    <string name="why_upgrade_zooming">Mastelio keitimas</string>
     <!-- License -->
-    <string name="notice">Ši programa naudoja trečiųjų šalių licensijas ir padaro mano gyvenimą geresnį. Ačiū.</string>
-    <string name="third_party_licences">Trečiųjų šalių licensijos</string>
-    <string name="kotlin_title">Kotlin (Programavimo kalba)</string>
-    <string name="subsampling_title">Subsampling Scale Image View (Atvaizdų didinimui)</string>
-    <string name="glide_title">Glide (Atvaizdų įkėlimui ir talpinimui)</string>
-    <string name="picasso_title">Picasso (Atvaizdo įkėlimui ir talpinimui)</string>
-    <string name="cropper_title">Android Image Cropper (Atvaizdo apkarpimui ir pasukimui)</string>
-    <string name="rtl_viewpager_title">RtlViewPager (Puslapių braukimui)</string>
-    <string name="joda_title">Joda-Time (Java duomenų pakeitimui)</string>
-    <string name="stetho_title">Stetho (Duomenų bazių šifravimui)</string>
-    <string name="otto_title">Otto (Įvykių sąrašams)</string>
-    <string name="photoview_title">PhotoView (judančių paveiksliukų didinimui)</string>
-    <string name="pattern_title">PatternLockView (modelio apsaugai)</string>
-    <string name="reprint_title">Reprint (piršto atspaudo apsaugai)</string>
-    <string name="gif_drawable_title">Gif Drawable (GIF\'ų įkėlimui)</string>
-    <string name="autofittextview_title">AutoFitTextView (teksto dydžio keitimui)</string>
-    <string name="robolectric_title">Robolectric (testavimo aplinkai)</string>
-    <string name="espresso_title">Espresso (testavimo pagalbai)</string>
-    <string name="gson_title">Gson (JSON analizatoriui)</string>
-    <string name="leak_canary_title">Leak Canary (atminties nutekėjimo ieškikliui)</string>
-    <string name="number_picker_title">Number Picker (tinkinamam numerių parinkikliui)</string>
-    <string name="exoplayer_title">ExoPlayer (video player)</string>
-    <string name="panorama_view_title">VR Panorama View (displaying panoramas)</string>
-    <string name="sanselan_title">Apache Sanselan (reading image metadata)</string>
-    <string name="filters_title">Android Photo Filters (image filters)</string>
-    <string name="gesture_views_title">Gesture Views (zoomable images)</string>
-    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (letters on scrollbar)</string>
-    <string name="event_bus_title">Event Bus (communication within the app)</string>
-    <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
-    <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
-    <string name="apng_title">APNG Android (animated WebP support)</string>
+    <string name="notice">Ši programėlė naudoja trečiųjų šalių bibliotekas, kurios palengvina man gyvenimą. Dėkoju.</string>
+    <string name="third_party_licences">Trečiųjų šalių licencijos</string>
+    <string name="kotlin_title">Kotlin (programavimo kalba)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (atvaizdų rodinio mastelio keitimui)</string>
+    <string name="glide_title">Glide (atvaizdų įkėlimas ir podėliavimas)</string>
+    <string name="picasso_title">Picasso (atvaizdų įkėlimas ir podėliavimas)</string>
+    <string name="cropper_title">Android Image Cropper (atvaizdų apkarpymui ir pasukimui)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (perbraukimui iš dešinės į kairę)</string>
+    <string name="joda_title">Joda-Time („Java“ duomenų pakeitimui)</string>
+    <string name="stetho_title">Stetho (derinimo duomenų bazės)</string>
+    <string name="otto_title">Otto (įvykių magistralė)</string>
+    <string name="photoview_title">PhotoView (keičiamo mastelio GIF atvaizdai)</string>
+    <string name="pattern_title">PatternLockView (apsauga šablonu)</string>
+    <string name="reprint_title">Reprint (apsauga piršto atspaudu)</string>
+    <string name="gif_drawable_title">Gif Drawable (GIF atvaizdų įkėlimas)</string>
+    <string name="autofittextview_title">AutoFitTextView (teksto dydžio keitimas)</string>
+    <string name="robolectric_title">Robolectric (testavimo karkasas)</string>
+    <string name="espresso_title">Espresso (testavimo pagelbiklis)</string>
+    <string name="gson_title">Gson (JSON analizatorius)</string>
+    <string name="leak_canary_title">Leak Canary (atminties nutekėjimo detektorius)</string>
+    <string name="number_picker_title">Number Picker (tinkinamas skaitmenų parinkiklis)</string>
+    <string name="exoplayer_title">ExoPlayer (vaizdo grotuvas)</string>
+    <string name="panorama_view_title">VR Panorama View (panoramų atvaizdavimas)</string>
+    <string name="sanselan_title">Apache Sanselan (atvaizdų metaduomenų skaitymas)</string>
+    <string name="filters_title">Android Photo Filters (atvaizdų filtrai)</string>
+    <string name="gesture_views_title">Gesture Views (keičiamo dydžio atvaizdai)</string>
+    <string name="indicator_fast_scroll_title">Indicator Fast Scroll (raidės ant slankjuostės)</string>
+    <string name="event_bus_title">Event Bus (susisiekimas programėlės viduje)</string>
+    <string name="audio_record_view_title">Audio Record View (garso vizualizavimas)</string>
+    <string name="sms_mms_title">SMS MMS (SMS ir MMS apdorojimas)</string>
+    <string name="apng_title">APNG Android (animuotų WebP palaikymas)</string>
     <!-- Google Play listing -->
-    <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="deprecated_app">PASENUSI: Ši programėlės versija daugiau nebeprižiūrima, gaukite „Pro“ versiją, adresu https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
+    <string name="pro_app_refund">Nepamirškite, jog jeigu per 2 valandas pašalinsite bet kurią mokamą programėlę, jums automatiškai bus grąžinti pinigai. Jei norėsite susigrąžinti pinigus vėliau, susisiekite su mumis el. paštu hello@simplemobiletools.com ir juos atgausite. Tokiu būdu galite lengvai išbandyti programėlę :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Paprastų, atvirojo kodo „Android“ progamėlių rinkinys su tinkinamais valdikliais, be reklamų ir nereikalingų leidimų.</string>
 </resources>
