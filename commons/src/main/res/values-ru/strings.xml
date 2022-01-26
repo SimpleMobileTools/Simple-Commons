@@ -61,7 +61,7 @@
     <string name="select_photo">Выбрать изображение</string>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Управление блокируемыми номерами</string>
-    <string name="not_blocking_anyone">Нет блокируемых номеров</string>
+    <string name="not_blocking_anyone">Нет блокируемых номеров.</string>
     <string name="add_a_blocked_number">Добавить блокируемый номер</string>
     <string name="block_number">Блокировать номер</string>
     <string name="block_numbers">Блокировать номера</string>
@@ -78,10 +78,10 @@
     <string name="remove_from_favorites">Убрать из избранного</string>
     <!-- Search -->
     <string name="search">Поиск</string>
-    <string name="type_2_characters">Введите как минимум 2 символа для начала поиска</string>
+    <string name="type_2_characters">Введите как минимум 2 символа для начала поиска.</string>
     <!-- Filters -->
     <string name="filter">Фильтр</string>
-    <string name="no_items_found">Ничего не найдено</string>
+    <string name="no_items_found">Ничего не найдено.</string>
     <string name="change_filter">Изменить фильтр</string>
     <!-- Permissions -->
     <string name="no_storage_permissions">Требуется разрешение для доступа к хранилищу</string>
@@ -293,8 +293,8 @@
     <string name="toggle_filename">Переключить отображение имени файла</string>
     <string name="move_to_top">Переместить наверх</string>
     <string name="move_to_bottom">Переместить вниз</string>
-    <string name="pin_item">Pin item</string>
-    <string name="unpin_item">Unpin item</string>
+    <string name="pin_item">Закрепить элемент</string>
+    <string name="unpin_item">Открепить элемент</string>
     <!-- Sorting -->
     <string name="sort_by">Сортировать по…</string>
     <string name="name">Имя</string>
