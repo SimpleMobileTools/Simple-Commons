@@ -52,7 +52,7 @@
     <string name="seven">Siedem</string>
     <string name="eight">Osiem</string>
     <string name="nine">Dziewięć</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="value_cannot_be_empty">Wartość nie może być pusta</string>
     <!-- View types -->
     <string name="change_view_type">Zmień typ widoku</string>
     <string name="grid">Siatka</string>
@@ -795,7 +795,7 @@
     <string name="faq_7_title_commons">Pieniądze zostały odjęte z mojego konta bankowego, ale nie mogę pobrać aplikacji. Co mogę zrobić?</string>
     <string name="faq_7_text_commons">Płatności są w pełni obsługiwane przez Google, ich system szwankuje od czasu do czasu. Wystarczy wyczyścić pamięć podręczną aplikacji Google Play i zrestartować urządzenie, a następnie ponowić próbę pobrania.</string>
     <string name="faq_8_title_commons">Dlaczego powinienem uaktualnić do wersji Pro?</string>
-    <string name="faq_8_text_commons">Ponieważ Twoja wersja aplikacji nie jest już aktualizowana, błędy, które być może zauważyłeś, nigdy nie zostaną naprawione. Nie zostaną również dodane żadne nowe funkcje. Możesz kupić wersję Pro w Google Play za niewielką sumę pieniędzy. Jest to jednorazowa płatność, co oznacza, że po zakupie nigdy nie będziesz musiał płacić ponownie, nawet po wymianie urządzenia. Jeśli nie spodoba Ci się wersja Pro, możesz ją po prostu odinstalować w ciągu kilku godzin, a automatycznie otrzymasz swoje pieniądze z powrotem. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie, po prostu skontaktuj się z nami na hello@simplemobiletools.com, a otrzymasz go.</string>
+    <string name="faq_8_text_commons">Ponieważ Twoja wersja aplikacji nie jest już aktualizowana, błędy, które być może zauważyłeś(-aś), nigdy nie zostaną naprawione. Nie zostaną również dodane żadne nowe funkcje. Możesz kupić wersję Pro w Google Play za niewielką sumę pieniędzy. Jest to jednorazowa płatność, co oznacza, że po zakupie nigdy nie będziesz musiał(a) płacić ponownie, nawet po wymianie urządzenia. Jeśli nie spodoba Ci się wersja Pro, możesz ją po prostu odinstalować w ciągu kilku godzin, a automatycznie otrzymasz swoje pieniądze z powrotem. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie, po prostu skontaktuj się z nami na hello@simplemobiletools.com, a otrzymasz go.</string>
     <string name="faq_9_title_commons">Jak mogę wybrać wiele elementów jednocześnie?</string>
     <string name="faq_9_text_commons">Można to zrobić na wiele sposobów. Pierwszym z nich jest uruchomienie trybu wyboru przez długie naciśnięcie jednego elementu, a następnie krótkie naciśnięcie innych, aby je wybrać. Drugi sposób jest podobny do wybierania elementów na komputerach PC za pomocą myszy. Wystarczy uruchomić tryb zaznaczania przez długie naciśnięcie jednego elementu, a następnie z przyciśniętym palcem przeciągnąć go przez inne elementy do zaznaczenia. Trzeci sposób zaznaczania wielu elementów to długie naciśnięcie jednego elementu, a następnie długie naciśnięcie innego, żeby wszystko pomiędzy zostało zaznaczone. Jeśli chcesz zaznaczyć wszystkie elementy, naciśnij długo jeden element, a następnie naciśnij licznik wybranych elementów w lewym górnym rogu. To zaznaczy lub odznaczy wszystko.</string>
     <string name="faq_10_title_commons">Zakupiłem aplikację, ale nie mogę jej pobrać na inne urządzenie.</string>
@@ -927,7 +927,7 @@
     <string name="apng_title">APNG Android (obsługa animowanych WebP)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">PRZESTARZAŁA: Ta wersja aplikacji nie jest już utrzymywana. Pobierz wersję Pro z https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Nie zapomnij, że jeśli odinstalujesz jakąkolwiek płatną aplikację w ciągu 2 godzin, automatycznie otrzymasz zwrot pieniędzy. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie później, wystarczy skontaktować się z nami na hello@simplemobiletools.com i dostaniesz go. To sprawia, że są łatwe do wypróbowania :)</string>
+    <string name="pro_app_refund">Pamiętaj, że jeśli odinstalujesz którąkolwiek z płatnych aplikacji w ciągu 2 godzin, automatycznie otrzymasz zwrot pieniędzy. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie później, wystarczy skontaktować się z nami na hello@simplemobiletools.com, a otrzymasz go. To sprawia, że aplikacje są łatwe do wypróbowania :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Zestaw prostych, otwartoźródłowych aplikacji na Androida z konfigurowalnymi widżetami, bez reklam i zbędnych uprawnień.</string>
 </resources>
