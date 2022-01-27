@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ok">சரி</string>
     <string name="cancel">ரத்துசெய்</string>
@@ -50,7 +51,6 @@
     <string name="seven">Seven</string>
     <string name="eight">Eight</string>
     <string name="nine">Nine</string>
-
     <!-- View types -->
     <string name="change_view_type">காட்சி வகையை மாற்று</string>
     <string name="grid">கட்டம்</string>
@@ -59,7 +59,6 @@
     <string name="reduce_column_count">நெடுவரிசை குறை</string>
     <string name="change_cover_image">அட்டைப் படத்தை மாற்று</string>
     <string name="select_photo">புகைப்படத்தைத் தேர்ந்தெடு</string>
-
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">தடுக்கப்பட்ட எண்களை நிர்வகி</string>
     <string name="not_blocking_anyone">நீங்கள் யாரையும் தடுக்கவில்லை.</string>
@@ -72,28 +71,23 @@
     <string name="must_make_default_dialer">தடுக்கப்பட்ட எண்களைப் பயன்படுத்த இப்பயன்பாட்டை இயல்புநிலை டயலர் பயன்பாடாக மாற்ற வேண்டும்.</string>
     <string name="set_as_default">இயல்புநிலையாக அமை</string>
     <string name="block_confirmation">\"%s\" ஐத் தடுக்க விரும்புகிறீர்களா?</string>
-
     <!-- Favorites -->
     <string name="favorites">பிடித்தவை</string>
     <string name="add_favorites">பிடித்தவற்றைச் சேர்</string>
     <string name="add_to_favorites">பிடித்தவையில் சேர்</string>
     <string name="remove_from_favorites">பிடித்தவையிலிருந்து அகற்று</string>
-
     <!-- Search -->
     <string name="search">தேடல்</string>
     <string name="type_2_characters">தேடலைத் தொடங்க குறைந்தது 2 எழுத்துக்களைத் தட்டச்சு செய்க.</string>
-
     <!-- Filters -->
     <string name="filter">வடிகட்டி</string>
     <string name="no_items_found">உருப்படிகள் எதுவும் கிடைக்கவில்லை.</string>
     <string name="change_filter">வடிப்பானை மாற்றவும்</string>
-
     <!-- Permissions -->
     <string name="no_storage_permissions">சேமிப்பு அனுமதி தேவை</string>
     <string name="no_contacts_permission">தொடர்புகளின் அனுமதி தேவை</string>
     <string name="no_camera_permissions">கேமரா அனுமதி தேவை</string>
     <string name="no_audio_permissions">ஆடியோ அனுமதி தேவை</string>
-
     <!-- Renaming -->
     <string name="rename_file">கோப்பை மறுபெயரிடு</string>
     <string name="rename_folder">கோப்புறையை மறுபெயரிடு</string>
@@ -117,7 +111,6 @@
     <string name="rename_date_time_pattern">%Y - ஆண்டு\n%M - மாதம்\n%D - நாள்\n%h - மணி\n%m - நிமிடம்\n%s - விநாடிகள்\n%i - 1 இலிருந்து அதிகரிக்கும் எண்</string>
     <string name="filename_without_txt">Filename (without .txt)</string>
     <string name="filename_without_json">Filename (without .json)</string>
-
     <!-- Copy / Move -->
     <string name="copy">நகலெடுக்கவும்</string>
     <string name="move">நகர்வு</string>
@@ -147,7 +140,6 @@
     <string name="could_not_create_file">Could not create file %s</string>
     <string name="no_new_items">புது உருப்படிகள் ஏதுமில்லை</string>
     <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
-
     <!-- Create new -->
     <string name="create_new">Create new</string>
     <string name="folder">கோப்புறை</string>
@@ -157,7 +149,6 @@
     <string name="invalid_name">The name contains invalid characters</string>
     <string name="empty_name">பெயரை உள்ளிடவும்</string>
     <string name="unknown_error_occurred">ஓர் அறியா பிழை ஏற்பட்டது</string>
-
     <!-- File operation conflicts -->
     <string name="file_already_exists">கோப்பு \"%s\" ஏற்கனவே உள்ளது</string>
     <string name="file_already_exists_overwrite">கோப்பு \"%s\" ஏற்கனவே உள்ளது. மேலெழுதவா?</string>
@@ -168,7 +159,6 @@
     <string name="skip">Skip</string>
     <string name="append">Append with \'_1\'</string>
     <string name="apply_to_all">Apply to all</string>
-
     <!-- File picker -->
     <string name="select_folder">கோப்புறையை தேர்ந்தெடு</string>
     <string name="select_file">கோப்பை தேர்ந்தெடு</string>
@@ -177,29 +167,24 @@
     <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
     <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">தேர்வை உறுதிசெய்</string>
-
     <plurals name="items">
         <item quantity="one">%d உருப்படி</item>
         <item quantity="other">%d உருப்படிகள்</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d உருப்படி</item>
         <item quantity="other">%d உருப்படிகள்</item>
     </plurals>
-
     <plurals name="deleting_items">
         <item quantity="one">%d உருப்படியை அழிக்கிறது</item>
         <item quantity="other">%d உருப்படிகளை அழிக்கிறது</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d தொடர்பு</item>
         <item quantity="other">%d தொடர்புகள்</item>
     </plurals>
-
     <!-- Storages -->
     <string name="select_storage">Select storage</string>
     <string name="internal">Internal</string>
@@ -209,7 +194,6 @@
     <string name="sd_card_usb_same">SD card and USB device paths cannot be the same</string>
     <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
         It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
-
     <!-- File properties -->
     <string name="properties">பண்புகள்</string>
     <string name="path">பாதை</string>
@@ -229,7 +213,6 @@
     <string name="song_title">பாடல் தலைப்பு</string>
     <string name="gps_coordinates">GPS ஆய அச்சுகள்</string>
     <string name="altitude">உயரம்</string>
-
     <!-- Color customization -->
     <string name="background_color">பின்புல நிறம்</string>
     <string name="text_color">சொற்சர நிறம்</string>
@@ -260,7 +243,6 @@
             Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
         ]]>
     </string>
-
     <!-- Themes -->
     <string name="light_theme">Light</string>
     <string name="dark_theme">Dark</string>
@@ -271,11 +253,9 @@
     <string name="black_white">Black &amp; White</string>
     <string name="custom">Custom</string>
     <string name="shared">Shared</string>
-
     <!-- What's new -->
     <string name="whats_new">பதிது என்ன</string>
     <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
-
     <!-- Actionbar items -->
     <string name="delete">அழி</string>
     <string name="remove">நீக்கு</string>
@@ -305,7 +285,6 @@
     <string name="move_to_bottom">Move to the bottom</string>
     <string name="pin_item">Pin item</string>
     <string name="unpin_item">Unpin item</string>
-
     <!-- Sorting -->
     <string name="sort_by">இதன்படி வரிசைபடுத்து</string>
     <string name="name">பெயர்</string>
@@ -328,11 +307,12 @@
     <string name="full_name">முழு பெயர்</string>
     <string name="use_custom_sorting">Use custom sorting</string>
     <string name="change_order">Change order</string>
-
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
-    <string name="deletion_confirmation">%s-ஐ அழிக்க நீங்கள் உறுதியா?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s into the Recycle Bin?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">%s-ஐ அழிக்க நீங்கள் உறுதியா?</string>
+    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s into the Recycle Bin?</string>
+    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">இவ்வுருப்படியை அழிக்க நீங்கள் உறுதியா?</string>
     <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
     <string name="do_not_ask_again">இவ்வமர்வில் மீண்டும் கேட்காதே</string>
@@ -340,12 +320,10 @@
     <string name="yes">ஆம்</string>
     <string name="no">இல்லை</string>
     <string name="maybe">ஒருவேலை</string>
-
     <plurals name="delete_warning">
         <item quantity="one">எச்சரிக்கை: %d கோப்புறையை அழிக்கிறீர்கள்</item>
         <item quantity="other">எச்சரிக்கை: %d கோப்புறைகளை அழிக்கிறீர்கள்</item>
     </plurals>
-
     <!-- Password protection -->
     <string name="pin">குறியீட்டெண்</string>
     <string name="enter_pin">குறியீட்டெண்ணை உள்ளிடு</string>
@@ -371,7 +349,6 @@
     <string name="lock_folder">கோப்புறையை பூட்டு</string>
     <string name="unlock_folder">கோப்புறையை பூட்டவிழ்</string>
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
-
     <!-- Times -->
     <string name="yesterday">நேற்று</string>
     <string name="today">இன்று</string>
@@ -384,7 +361,6 @@
     <string name="seconds_letter">வி</string>
     <string name="minutes_letter">நி</string>
     <string name="hours_letter">ம</string>
-
     <plurals name="seconds">
         <item quantity="one">%d விநாடி</item>
         <item quantity="other">%d விநாடிகள்</item>
@@ -413,7 +389,6 @@
         <item quantity="one">%d ஆண்டு</item>
         <item quantity="other">%d ஆண்டுகள்</item>
     </plurals>
-
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d second</item>
@@ -443,7 +418,6 @@
         <item quantity="one">%d year</item>
         <item quantity="other">%d years</item>
     </plurals>
-
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d second before</item>
@@ -473,7 +447,6 @@
         <item quantity="one">%d year before</item>
         <item quantity="other">%d years before</item>
     </plurals>
-
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d second</item>
@@ -503,14 +476,12 @@
         <item quantity="one">%d year</item>
         <item quantity="other">%d years</item>
     </plurals>
-
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
     <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
     <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
     <string name="reminder_warning">Please make sure the reminders work properly before relying on them. Check your device battery and notification settings, if there is nothing blocking the reminders, or killing the app in the background.</string>
     <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
-
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
     <string name="snooze">Snooze</string>
@@ -523,7 +494,6 @@
     <string name="no_sound">No sound</string>
     <string name="during_day_at_hh_mm">During the day at hh:mm</string>
     <string name="during_day_at">During the day at %02d:%02d</string>
-
     <!-- Settings -->
     <string name="settings">அமைப்புகள்</string>
     <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
@@ -566,7 +536,6 @@
     <string name="start_name_with_surname">Start name with surname</string>
     <string name="clear_cache">பிடிதரவை துடை</string>
     <string name="show_call_confirmation_dialog">Show a call confirmation dialog before initiating a call</string>
-
     <!-- Setting sections -->
     <string name="visibility">தெரிவுநிலை</string>
     <string name="security">பாதுகாப்பு</string>
@@ -579,9 +548,8 @@
     <string name="migrating">இடம்பெயர்கிறது</string>
     <string name="quality">Quality</string>
     <string name="main_screen">Main screen</string>
-    <string name="thumbnails">Thumbnails</string>
+    <string name="thumbnails">சிறுபடங்கள்</string>
     <string name="list_view">List view</string>
-
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">காட்டப்படும் தாவல்களை நிர்வகி</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
@@ -592,7 +560,6 @@
     <string name="last_used_tab">கடைசியாக பயன்படுத்தியது</string>
     <string name="files_tab">கோப்புகள்</string>
     <string name="recent_files_tab">அண்மை கோப்புகள்</string>
-
     <!-- Recycle Bin -->
     <string name="restore_this_file">இககோப்பை மீட்டமை</string>
     <string name="restore_selected_files">தேர்ந்தெடுத்த கோப்புகளை மீட்டமை</string>
@@ -604,12 +571,10 @@
     <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
     <string name="show_the_recycle_bin">மறுசுழற்சி தொட்டியை காட்டு</string>
     <string name="hide_the_recycle_bin">மறுசுழற்சி தொட்டியை மறை</string>
-
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d உருப்படியை மறுசுழற்சி தொட்டிக்குள் நகர்த்துகிறது</item>
         <item quantity="other">%d உருப்படிகளை மறுசுழற்சி தொட்டிக்குள் நகர்த்துகிறது</item>
     </plurals>
-
     <!-- Import / Export -->
     <string name="importing">ஏற்றுகிறது…</string>
     <string name="exporting">இறக்குகிறது…</string>
@@ -621,13 +586,11 @@
     <string name="exporting_some_entries_failed">Exporting some entries failed</string>
     <string name="no_entries_for_importing">No entries for importing have been found</string>
     <string name="no_entries_for_exporting">No entries for exporting have been found</string>
-
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
     <string name="confirm_usb_storage_access_text">Please choose the top folder of the USB device on the next screen, to grant access</string>
     <string name="wrong_root_selected_usb">Wrong folder selected, please select the main folder of your USB device</string>
-
     <!-- Dates -->
     <string name="january">ஜனவரி</string>
     <string name="february">பிப்ரவரி</string>
@@ -641,7 +604,6 @@
     <string name="october">அக்டோபர்</string>
     <string name="november">நவம்பர்</string>
     <string name="december">டிசம்பர்</string>
-
     <!-- in January -->
     <string name="in_january">ஜனவரியில்</string>
     <string name="in_february">பிப்ரவரியில்</string>
@@ -655,7 +617,6 @@
     <string name="in_october">அக்டோபரில்</string>
     <string name="in_november">நவம்பரில்</string>
     <string name="in_december">டிசம்பரில்</string>
-
     <string name="monday">திங்கள்</string>
     <string name="tuesday">செவ்வாய்</string>
     <string name="wednesday">புதன்</string>
@@ -663,7 +624,6 @@
     <string name="friday">வெள்ளி</string>
     <string name="saturday">சனி</string>
     <string name="sunday">ஞாயிறு</string>
-
     <string name="monday_letter">தி</string>
     <string name="tuesday_letter">செ</string>
     <string name="wednesday_letter">பு</string>
@@ -671,7 +631,6 @@
     <string name="friday_letter">வெ</string>
     <string name="saturday_letter">ச</string>
     <string name="sunday_letter">ஞா</string>
-
     <string name="monday_short">தி</string>
     <string name="tuesday_short">செ</string>
     <string name="wednesday_short">பு</string>
@@ -679,7 +638,6 @@
     <string name="friday_short">வெ</string>
     <string name="saturday_short">ச</string>
     <string name="sunday_short">ஞா</string>
-
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
     <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
@@ -687,7 +645,6 @@
     <string name="more_info">மேலும் தகவல்</string>
     <string name="upgrade">தரமுயர்த்து</string>
     <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
-
     <!-- About -->
     <string name="about">பற்றி</string>
     <string name="website_label">For the source codes visit</string>
@@ -710,7 +667,7 @@
     <string name="other">Other</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="about_footer">Made with ❤️ in Slovakia</string>
     <string name="additional_info">Additional info</string>
     <string name="app_version">செயலி பதிப்பு: %s</string>
     <string name="device_os">Device OS: %s</string>
@@ -737,7 +694,6 @@
             The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
         ]]>
     </string>
-
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -750,7 +706,6 @@
             Thanks
         ]]>
     </string>
-
     <string name="simple_app_launcher">எளிய செயலி ஏவி</string>
     <string name="simple_calculator">எளிய கணிப்பபொறி</string>
     <string name="simple_calendar">எளிய நாட்காட்டி</string>
@@ -768,7 +723,6 @@
     <string name="simple_sms_messenger">எளிய குறுஞ்செய்தி தூதர்</string>
     <string name="simple_thank_you">எளிய நன்றி</string>
     <string name="simple_voice_recorder">எளிய குரல் பதிவான்</string>
-
     <string name="app_launcher_short">செயலி ஏவி</string>
     <string name="calculator_short">கணிப்பபொறி</string>
     <string name="calendar_short">நாட்காட்டி</string>
@@ -786,13 +740,11 @@
     <string name="sms_messenger_short">குறுஞ்செய்தி தூதர்</string>
     <string name="thank_you_short">நன்றி</string>
     <string name="voice_recorder_short">குரல் பதிவான்</string>
-
     <string name="sideloaded_app">
         <![CDATA[
             It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
         ]]>
     </string>
-
     <!-- FAQ -->
     <string name="frequently_asked_questions">Frequently asked questions</string>
     <string name="before_asking_question">Before you ask a question, please first read the</string>
@@ -827,7 +779,6 @@
         want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
     <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
     <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
-
     <!-- Contributors -->
     <string name="contributors">Contributors</string>
     <string name="translation">Translation</string>
@@ -840,7 +791,6 @@
             Thanks to all contributors and other supporters!
         ]]>
     </string>
-
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -884,7 +834,6 @@
     <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
     <string name="translation_chinese_cn">Chinese (Simplified)</string>
     <string name="translation_chinese_tw">Chinese (Traditional)</string>
-
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Get the Pro version now!</string>
     <string name="why_upgrade_basic_version">Basic</string>
@@ -893,43 +842,36 @@
     <string name="why_upgrade_no_internet_access">இணைய அணுகல் இல்லை</string>
     <string name="why_upgrade_footer">+ 100% Money Back Guarantee</string>
     <string name="why_upgrade_improved_design">Improved design</string>
-
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">மேம்பட்ட புகைப்பட திருத்தி</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF கோப்பு ஆதரவு</string>
     <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
     <string name="why_upgrade_folder_locking">Individual folder locking</string>
     <string name="why_upgrade_printing_support">அச்சிடுதல் ஆதரவு</string>
-
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">நேர மண்டல ஆதரவு</string>
     <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
     <string name="why_upgrade_easy_event_importing">எளிதான நிகழ்வு இறக்குமதி</string>
     <string name="why_upgrade_new_widgets">New widgets</string>
-
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
     <string name="why_upgrade_font_size_customization">எழுத்துரு அளவு தனிப்பயனாக்கம்</string>
     <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
     <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
     <string name="why_upgrade_contact_filtering">தொடர்பு வடிகட்டல்</string>
-
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Checklists</string>
     <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
     <string name="why_upgrade_note_locking">குறிப்பு பூட்டல்</string>
-
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">தேதி மற்றும் நேர வடிவமைப்பு தனிப்பயனாக்கம்</string>
     <string name="why_upgrade_shortcuts">முகப்புத்திரை குறுக்குவழிகள்</string>
     <string name="why_upgrade_file_compression">கோப்பு சுருக்கம் ஆதரவு</string>
     <string name="why_upgrade_recents_tab">அண்மை கோப்புகள் கொண்ட தாவல்</string>
-
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">பின்புல நிறம் தனிப்பயனாக்கம்</string>
     <string name="why_upgrade_file_importing">கோப்பு இறக்குமதி ஆதரவு</string>
     <string name="why_upgrade_zooming">Zooming</string>
-
     <!-- License -->
     <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
     <string name="third_party_licences">மூன்றாம் தரப்பு உரிமங்கள்</string>
@@ -962,11 +904,9 @@
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
     <string name="apng_title">APNG Android (animated WebP support)</string>
-
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
-
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
 </resources>
