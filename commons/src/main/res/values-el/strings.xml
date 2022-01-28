@@ -10,7 +10,7 @@
     <string name="an_error_occurred">Παρουσιάστηκε σφάλμα: %s</string>
     <string name="open_with">Άνοιγμα με</string>
     <string name="edit_with">Επεξεργασία με</string>
-    <string name="edit">Edit</string>
+    <string name="edit">Επεξεργασία</string>
     <string name="no_app_found">Δεν βρέθηκε έγκυρη εφαρμογή</string>
     <string name="set_as">Ορισμός ως</string>
     <string name="copy_to_clipboard">Αντιγραφή στο Πρόχειρο</string>
@@ -51,7 +51,7 @@
     <string name="seven">Επτά</string>
     <string name="eight">Οκτώ</string>
     <string name="nine">Εννέα</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="value_cannot_be_empty">Η τιμή δεν μπορεί να είναι κενή</string>
 
     <!-- View types -->
     <string name="change_view_type">Αλλαγή τύπου εμφάνισης</string>
