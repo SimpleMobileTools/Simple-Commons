@@ -56,6 +56,8 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     abstract fun getItemKeyPosition(key: Int): Int
 
+    abstract fun onActionModeCreated()
+
     abstract fun onActionModeDestroyed()
 
     protected fun isOneItemSelected() = selectedKeys.size == 1
@@ -89,6 +91,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                         selectAll()
                     }
                 }
+                onActionModeCreated()
                 return true
             }
 

@@ -63,6 +63,8 @@ class StringsAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.list_item, parent)
 
+    override fun onActionModeCreated() {}
+
     override fun onActionModeDestroyed() {
         if (isChangingOrder) {
             notifyDataSetChanged()

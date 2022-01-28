@@ -47,6 +47,8 @@ class FilepickerFavoritesAdapter(
 
     override fun getItemSelectionKey(position: Int) = paths[position].hashCode()
 
+    override fun onActionModeCreated() {}
+
     override fun onActionModeDestroyed() {}
 
     private fun setupView(view: View, path: String) {
