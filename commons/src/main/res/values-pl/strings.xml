@@ -140,7 +140,7 @@
     <string name="saving">Zapisywanie…</string>
     <string name="could_not_create_folder">Nie udało się utworzyć folderu %s</string>
     <string name="could_not_create_file">Nie udało się utworzyć pliku %s</string>
-    <string name="no_new_items">Nie znaleziono żadnych nowych elementów</string>
+    <string name="no_new_items">Nie znaleziono nowych elementów</string>
     <string name="no_space">Miejsce docelowe nie ma wystarczającej ilości wolnego miejsca.\nWymagane %1$s, dostępne %2$s</string>
     <!-- Create new -->
     <string name="create_new">Utwórz nowy</string>
@@ -622,7 +622,7 @@
     <string name="importing_some_entries_failed">Importowanie niektórych wpisów nie powiodło się</string>
     <string name="exporting_some_entries_failed">Eksportowanie niektórych wpisów nie powiodło się</string>
     <string name="no_entries_for_importing">Nie znaleziono żadnych wpisów do zaimportowania</string>
-    <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
+    <string name="no_new_entries_for_importing">Nie znaleziono nowych wpisów do zaimportowania</string>
     <string name="no_entries_for_exporting">Nie znaleziono żadnych wpisów do wyeksportowania</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
