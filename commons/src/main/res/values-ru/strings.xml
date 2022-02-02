@@ -11,7 +11,7 @@
     <string name="an_error_occurred">Произошла ошибка: %s</string>
     <string name="open_with">Открыть в…</string>
     <string name="edit_with">Редактировать в…</string>
-    <string name="edit">Edit</string>
+    <string name="edit">Редактировать</string>
     <string name="no_app_found">Приложение не найдено</string>
     <string name="set_as">Установить как…</string>
     <string name="copy_to_clipboard">Копировать в буфер обмена</string>
@@ -52,7 +52,7 @@
     <string name="seven">Семь</string>
     <string name="eight">Восемь</string>
     <string name="nine">Девять</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="value_cannot_be_empty">Значение не может быть пустым</string>
     <!-- View types -->
     <string name="change_view_type">Вид</string>
     <string name="grid">Сетка</string>
@@ -545,7 +545,7 @@
     <string name="customize_widget_colors">Настройка цветов виджета</string>
     <string name="customize_notifications">Настройка уведомлений</string>
     <string name="use_english_language">Использовать английский язык</string>
-    <string name="language">Language</string>
+    <string name="language">Язык</string>
     <string name="show_hidden_items">Показывать скрытые папки</string>
     <string name="font_size">Размер шрифта</string>
     <string name="small">Мелкий</string>
@@ -628,7 +628,7 @@
     <string name="importing_some_entries_failed">Ошибка при импортировании некоторых элементов</string>
     <string name="exporting_some_entries_failed">Ошибка при экспортировании некоторых элементов</string>
     <string name="no_entries_for_importing">Нечего импортировать</string>
-    <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
+    <string name="no_new_entries_for_importing">Не найдено новых записей для импорта</string>
     <string name="no_entries_for_exporting">Нечего экспортировать</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
