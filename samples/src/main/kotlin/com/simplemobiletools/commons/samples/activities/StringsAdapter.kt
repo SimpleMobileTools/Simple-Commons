@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.samples.activities
 
+import android.view.Menu
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +15,6 @@ import com.simplemobiletools.commons.interfaces.ItemTouchHelperContract
 import com.simplemobiletools.commons.interfaces.StartReorderDragListener
 import com.simplemobiletools.commons.samples.R
 import com.simplemobiletools.commons.views.MyRecyclerView
-import com.simplemobiletools.commons.views.bottomactionmenu.BottomActionMenuView
 import kotlinx.android.synthetic.main.list_item.view.*
 import java.util.*
 
@@ -41,7 +41,7 @@ class StringsAdapter(
 
     override fun getActionMenuId() = R.menu.cab_delete_only
 
-    override fun onBottomActionMenuCreated(view: BottomActionMenuView) {}
+    override fun prepareActionMode(menu: Menu) {}
 
     override fun actionItemPressed(id: Int) {
         if (selectedKeys.isEmpty()) {
