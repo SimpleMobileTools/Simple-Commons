@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.adapters
 import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
 import android.util.TypedValue
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
@@ -18,7 +19,6 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.getFilePlaceholderDrawables
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.MyRecyclerView
-import com.simplemobiletools.commons.views.bottomactionmenu.BottomActionMenuView
 import kotlinx.android.synthetic.main.item_filepicker_list.view.*
 import java.util.*
 
@@ -55,7 +55,7 @@ class FilepickerItemsAdapter(
 
     override fun getItemCount() = fileDirItems.size
 
-    override fun onBottomActionMenuCreated(view: BottomActionMenuView) {}
+    override fun prepareActionMode(menu: Menu) {}
 
     override fun actionItemPressed(id: Int) {}
 
