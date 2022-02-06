@@ -45,6 +45,7 @@ class AboutActivity : BaseSimpleActivity() {
             about_more_apps_icon,
             about_email_icon,
             about_licenses_icon,
+            about_website_icon,
             about_version_icon
         ).forEach {
             it.applyColorFilter(baseConfig.textColor)
@@ -73,6 +74,7 @@ class AboutActivity : BaseSimpleActivity() {
         setupLicense()
         setupFacebook()
         setupReddit()
+        setupWebsite()
         setupVersion()
     }
 
@@ -148,6 +150,17 @@ class AboutActivity : BaseSimpleActivity() {
     private fun setupMoreApps() {
         about_more_apps_holder.setOnClickListener {
             launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
+        }
+    }
+
+    private fun setupWebsite() {
+        if (resources.getBoolean(R.bool.show_donate_in_about)) {
+            about_website_holder.beVisible()
+            about_website_holder.setOnClickListener {
+                launchViewIntent("https://simplemobiletools.com/")
+            }
+        } else {
+            about_website_holder.beGone()
         }
     }
 
