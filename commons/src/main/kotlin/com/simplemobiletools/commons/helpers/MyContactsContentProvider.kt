@@ -7,6 +7,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.simplemobiletools.commons.extensions.getIntValue
 import com.simplemobiletools.commons.extensions.getStringValue
+import com.simplemobiletools.commons.models.PhoneNumber
 import com.simplemobiletools.commons.models.SimpleContact
 
 // used for sharing privately stored contacts in Simple Contacts with Simple Dialer, Simple SMS Messenger and Simple Calendar Pro
@@ -43,10 +44,12 @@ class MyContactsContentProvider {
                             val birthdaysJson = cursor.getStringValue(COL_BIRTHDAYS)
                             val anniversariesJson = cursor.getStringValue(COL_ANNIVERSARIES)
 
-                            val token = object : TypeToken<ArrayList<String>>() {}.type
-                            val phoneNumbers = Gson().fromJson<ArrayList<String>>(phoneNumbersJson, token) ?: ArrayList()
-                            val birthdays = Gson().fromJson<ArrayList<String>>(birthdaysJson, token) ?: ArrayList()
-                            val anniversaries = Gson().fromJson<ArrayList<String>>(anniversariesJson, token) ?: ArrayList()
+                            val phoneNumbersToken = object : TypeToken<ArrayList<PhoneNumber>>() {}.type
+                            val phoneNumbers = Gson().fromJson<ArrayList<PhoneNumber>>(phoneNumbersJson, phoneNumbersToken) ?: ArrayList()
+
+                            val stringsToken = object : TypeToken<ArrayList<PhoneNumber>>() {}.type
+                            val birthdays = Gson().fromJson<ArrayList<String>>(birthdaysJson, stringsToken) ?: ArrayList()
+                            val anniversaries = Gson().fromJson<ArrayList<String>>(anniversariesJson, stringsToken) ?: ArrayList()
 
                             val contact = SimpleContact(rawId, contactId, name, photoUri, phoneNumbers, birthdays, anniversaries)
                             contacts.add(contact)

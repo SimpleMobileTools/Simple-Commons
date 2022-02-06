@@ -4,8 +4,10 @@ import android.telephony.PhoneNumberUtils
 import com.simplemobiletools.commons.extensions.normalizePhoneNumber
 import com.simplemobiletools.commons.extensions.normalizeString
 
-data class SimpleContact(val rawId: Int, val contactId: Int, var name: String, var photoUri: String, var phoneNumbers: ArrayList<String>,
-                         var birthdays: ArrayList<String>, var anniversaries: ArrayList<String>) : Comparable<SimpleContact> {
+data class SimpleContact(
+    val rawId: Int, val contactId: Int, var name: String, var photoUri: String, var phoneNumbers: ArrayList<PhoneNumber>,
+    var birthdays: ArrayList<String>, var anniversaries: ArrayList<String>
+) : Comparable<SimpleContact> {
     override fun compareTo(other: SimpleContact): Int {
         val firstString = name.normalizeString()
         val secondString = other.name.normalizeString()
@@ -29,15 +31,15 @@ data class SimpleContact(val rawId: Int, val contactId: Int, var name: String, v
         return if (text.isNotEmpty()) {
             val normalizedText = text.normalizePhoneNumber()
             if (normalizedText.isEmpty()) {
-                phoneNumbers.any { phoneNumber ->
+                phoneNumbers.map { it.normalizedNumber }.any { phoneNumber ->
                     phoneNumber.contains(text)
                 }
             } else {
-                phoneNumbers.any { phoneNumber ->
+                phoneNumbers.map { it.normalizedNumber }.any { phoneNumber ->
                     PhoneNumberUtils.compare(phoneNumber.normalizePhoneNumber(), normalizedText) ||
-                            phoneNumber.contains(text) ||
-                            phoneNumber.normalizePhoneNumber().contains(normalizedText) ||
-                            phoneNumber.contains(normalizedText)
+                        phoneNumber.contains(text) ||
+                        phoneNumber.normalizePhoneNumber().contains(normalizedText) ||
+                        phoneNumber.contains(normalizedText)
                 }
             }
         } else {
@@ -49,11 +51,11 @@ data class SimpleContact(val rawId: Int, val contactId: Int, var name: String, v
         return if (text.isNotEmpty()) {
             val normalizedText = text.normalizePhoneNumber()
             if (normalizedText.isEmpty()) {
-                phoneNumbers.any { phoneNumber ->
+                phoneNumbers.map { it.normalizedNumber }.any { phoneNumber ->
                     phoneNumber == text
                 }
             } else {
-                phoneNumbers.any { phoneNumber ->
+                phoneNumbers.map { it.normalizedNumber }.any { phoneNumber ->
                     PhoneNumberUtils.compare(phoneNumber.normalizePhoneNumber(), normalizedText) ||
                         phoneNumber == text ||
                         phoneNumber.normalizePhoneNumber() == normalizedText ||

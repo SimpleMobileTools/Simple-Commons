@@ -9,8 +9,7 @@ import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
 import android.net.Uri
 import android.provider.ContactsContract.*
-import android.provider.ContactsContract.CommonDataKinds.Organization
-import android.provider.ContactsContract.CommonDataKinds.StructuredName
+import android.provider.ContactsContract.CommonDataKinds.*
 import android.text.TextUtils
 import android.util.SparseArray
 import android.widget.ImageView
@@ -22,6 +21,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.models.PhoneNumber
 import com.simplemobiletools.commons.models.SimpleContact
 
 class SimpleContactsHelper(val context: Context) {
@@ -44,8 +44,8 @@ class SimpleContactsHelper(val context: Context) {
             }
 
             allContacts = allContacts.filter { it.name.isNotEmpty() }.distinctBy {
-                val startIndex = Math.max(0, it.phoneNumbers.first().length - 9)
-                it.phoneNumbers.first().substring(startIndex)
+                val startIndex = Math.max(0, it.phoneNumbers.first().normalizedNumber.length - 9)
+                it.phoneNumbers.first().normalizedNumber.substring(startIndex)
             }.distinctBy { it.rawId }.toMutableList() as ArrayList<SimpleContact>
 
             // if there are duplicate contacts with the same name, while the first one has phone numbers 1234 and 4567, second one has only 4567,
@@ -58,7 +58,7 @@ class SimpleContactsHelper(val context: Context) {
                     if (contacts.any { it.phoneNumbers.size == 1 } && contacts.any { it.phoneNumbers.size > 1 }) {
                         val multipleNumbersContact = contacts.first()
                         contacts.subList(1, contacts.size).forEach { contact ->
-                            if (contact.phoneNumbers.all { multipleNumbersContact.doesContainPhoneNumber(it) }) {
+                            if (contact.phoneNumbers.all { multipleNumbersContact.doesContainPhoneNumber(it.normalizedNumber) }) {
                                 val contactToRemove = allContacts.firstOrNull { it.rawId == contact.rawId }
                                 if (contactToRemove != null) {
                                     contactsToRemove.add(contactToRemove)
@@ -162,26 +162,32 @@ class SimpleContactsHelper(val context: Context) {
 
     private fun getContactPhoneNumbers(favoritesOnly: Boolean): ArrayList<SimpleContact> {
         val contacts = ArrayList<SimpleContact>()
-        val uri = CommonDataKinds.Phone.CONTENT_URI
+        val uri = Phone.CONTENT_URI
         val projection = arrayOf(
             Data.RAW_CONTACT_ID,
             Data.CONTACT_ID,
-            CommonDataKinds.Phone.NORMALIZED_NUMBER,
-            CommonDataKinds.Phone.NUMBER
+            Phone.NORMALIZED_NUMBER,
+            Phone.NUMBER,
+            Phone.TYPE,
+            Phone.LABEL
         )
 
         val selection = if (favoritesOnly) "${Data.STARRED} = 1" else null
 
         context.queryCursor(uri, projection, selection) { cursor ->
-            val phoneNumber = cursor.getStringValue(CommonDataKinds.Phone.NORMALIZED_NUMBER)
-                ?: cursor.getStringValue(CommonDataKinds.Phone.NUMBER)?.normalizePhoneNumber() ?: return@queryCursor
+            val normalizedNumber = cursor.getStringValue(Phone.NORMALIZED_NUMBER)
+                ?: cursor.getStringValue(Phone.NUMBER)?.normalizePhoneNumber() ?: return@queryCursor
 
             val rawId = cursor.getIntValue(Data.RAW_CONTACT_ID)
             val contactId = cursor.getIntValue(Data.CONTACT_ID)
+            val type = cursor.getIntValue(Phone.TYPE)
+            val label = cursor.getStringValue(Phone.LABEL) ?: ""
             if (contacts.firstOrNull { it.rawId == rawId } == null) {
                 val contact = SimpleContact(rawId, contactId, "", "", ArrayList(), ArrayList(), ArrayList())
                 contacts.add(contact)
             }
+
+            val phoneNumber = PhoneNumber(normalizedNumber, type, label, normalizedNumber)
             contacts.firstOrNull { it.rawId == rawId }?.phoneNumbers?.add(phoneNumber)
         }
         return contacts
@@ -192,16 +198,16 @@ class SimpleContactsHelper(val context: Context) {
         val uri = Data.CONTENT_URI
         val projection = arrayOf(
             Data.RAW_CONTACT_ID,
-            CommonDataKinds.Event.START_DATE
+            Event.START_DATE
         )
 
-        val selection = "${CommonDataKinds.Event.MIMETYPE} = ? AND ${CommonDataKinds.Event.TYPE} = ?"
-        val requiredType = if (getBirthdays) CommonDataKinds.Event.TYPE_BIRTHDAY.toString() else CommonDataKinds.Event.TYPE_ANNIVERSARY.toString()
-        val selectionArgs = arrayOf(CommonDataKinds.Event.CONTENT_ITEM_TYPE, requiredType)
+        val selection = "${Event.MIMETYPE} = ? AND ${Event.TYPE} = ?"
+        val requiredType = if (getBirthdays) Event.TYPE_BIRTHDAY.toString() else Event.TYPE_ANNIVERSARY.toString()
+        val selectionArgs = arrayOf(Event.CONTENT_ITEM_TYPE, requiredType)
 
         context.queryCursor(uri, projection, selection, selectionArgs) { cursor ->
             val id = cursor.getIntValue(Data.RAW_CONTACT_ID)
-            val startDate = cursor.getStringValue(CommonDataKinds.Event.START_DATE) ?: return@queryCursor
+            val startDate = cursor.getStringValue(Event.START_DATE) ?: return@queryCursor
 
             if (eventDates[id] == null) {
                 eventDates.put(id, ArrayList())
