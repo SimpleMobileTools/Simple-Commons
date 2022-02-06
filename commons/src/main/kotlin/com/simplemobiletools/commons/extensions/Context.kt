@@ -8,6 +8,7 @@ import android.app.role.RoleManager
 import android.content.*
 import android.content.pm.PackageManager
 import android.content.pm.ShortcutManager
+import android.provider.ContactsContract.CommonDataKinds.*
 import android.content.res.Configuration
 import android.database.Cursor
 import android.graphics.BitmapFactory
@@ -20,12 +21,9 @@ import android.os.Build
 import android.os.Environment
 import android.os.Handler
 import android.os.Looper
-import android.provider.BaseColumns
+import android.provider.*
 import android.provider.BlockedNumberContract.BlockedNumbers
-import android.provider.DocumentsContract
 import android.provider.MediaStore.*
-import android.provider.OpenableColumns
-import android.provider.Settings
 import android.telecom.TelecomManager
 import android.telephony.PhoneNumberUtils
 import android.view.View
@@ -1089,4 +1087,23 @@ fun Context.copyToClipboard(text: String) {
     val clip = ClipData.newPlainText(getString(R.string.simple_commons), text)
     (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).setPrimaryClip(clip)
     toast(R.string.value_copied_to_clipboard)
+}
+
+fun Context.getPhoneNumberTypeText(type: Int, label: String): String {
+    return if (type == BaseTypes.TYPE_CUSTOM) {
+        label
+    } else {
+        getString(
+            when (type) {
+                Phone.TYPE_MOBILE -> R.string.mobile
+                Phone.TYPE_HOME -> R.string.home
+                Phone.TYPE_WORK -> R.string.work
+                Phone.TYPE_MAIN -> R.string.main_number
+                Phone.TYPE_FAX_WORK -> R.string.work_fax
+                Phone.TYPE_FAX_HOME -> R.string.home_fax
+                Phone.TYPE_PAGER -> R.string.pager
+                else -> R.string.other
+            }
+        )
+    }
 }

@@ -53,6 +53,17 @@
     <string name="nine">Nine</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
 
+    <!-- Emails -->
+    <string name="home">Hem</string>
+    <string name="work">Arbete</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Mobil</string>
+    <string name="main_number">Primärt nummer</string>
+    <string name="work_fax">Arbetsfax</string>
+    <string name="home_fax">Hemfax</string>
+    <string name="pager">Personsökare</string>
+    <string name="no_phone_number_found">Inget telefonnummer hittades</string>
+
     <!-- View types -->
     <string name="change_view_type">Ändra vy</string>
     <string name="grid">Rutnät</string>

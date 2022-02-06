@@ -53,6 +53,16 @@
     <string name="eight">Otto</string>
     <string name="nine">Nove</string>
     <string name="value_cannot_be_empty">Il valore non può essere vuoto</string>
+    <!-- Emails -->
+    <string name="home">Casa</string>
+    <string name="work">Lavoro</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Cellulare</string>
+    <string name="main_number">Principale</string>
+    <string name="work_fax">Fax di lavoro</string>
+    <string name="home_fax">Fax di casa</string>
+    <string name="pager">Cercapersone</string>
+    <string name="no_phone_number_found">Non è stato trovato alcun numero di telefono</string>
     <!-- View types -->
     <string name="change_view_type">Cambia modalità visualizzazione</string>
     <string name="grid">Griglia</string>

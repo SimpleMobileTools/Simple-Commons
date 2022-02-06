@@ -53,6 +53,16 @@
     <string name="eight">Kahdeksan</string>
     <string name="nine">Yhdeksän</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <!-- Emails -->
+    <string name="home">Koti</string>
+    <string name="work">Työ</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Matkapuhelin</string>
+    <string name="main_number">Oletus</string>
+    <string name="work_fax">Faksi (työ)</string>
+    <string name="home_fax">Faksi (koti)</string>
+    <string name="pager">Hakulaite</string>
+    <string name="no_phone_number_found">Puhelinnumeroa ei löytynyt</string>
     <!-- View types -->
     <string name="change_view_type">Vaihda näkymää</string>
     <string name="grid">Ruudukko</string>

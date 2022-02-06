@@ -53,6 +53,16 @@
     <string name="eight">Aštuoni</string>
     <string name="nine">Devyni</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <!-- Emails -->
+    <string name="home">Namų</string>
+    <string name="work">Darbo</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Mobilusis</string>
+    <string name="main_number">Pagrindinis</string>
+    <string name="work_fax">Darbo faksas</string>
+    <string name="home_fax">Namų faksas</string>
+    <string name="pager">Pranešimų gaviklis</string>
+    <string name="no_phone_number_found">Nerasta telefono numerio</string>
     <!-- View types -->
     <string name="change_view_type">Keisti rodinio tipą</string>
     <string name="grid">Tinklelis</string>

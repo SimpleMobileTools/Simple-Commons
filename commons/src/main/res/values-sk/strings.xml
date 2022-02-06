@@ -53,6 +53,18 @@
     <string name="nine">Deväť</string>
     <string name="value_cannot_be_empty">Hodnota nesmie byť prázdna</string>
 
+    <!-- Emails -->
+    <string name="home">Domov</string>
+    <string name="work">Práca</string>
+
+    <!-- Phone numbers -->
+    <string name="mobile">Mobil</string>
+    <string name="main_number">Hlavné</string>
+    <string name="work_fax">Pracovný fax</string>
+    <string name="home_fax">Domáci fax</string>
+    <string name="pager">Pager</string>
+    <string name="no_phone_number_found">Nenašlo sa žiadne telefónne číslo</string>
+
     <!-- View types -->
     <string name="change_view_type">Zmeniť typ zobrazenia</string>
     <string name="grid">Mriežka</string>

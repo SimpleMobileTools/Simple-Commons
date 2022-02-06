@@ -53,6 +53,17 @@
     <string name="nine">Nine</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
 
+    <!-- Emails -->
+    <string name="home">Domov</string>
+    <string name="work">Práce</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Mobil</string>
+    <string name="main_number">Hlavní</string>
+    <string name="work_fax">Pracovní fax</string>
+    <string name="home_fax">Domácí fax</string>
+    <string name="pager">Pager</string>
+    <string name="no_phone_number_found">Nenalezeno žádné telefonní číslo</string>
+
     <!-- View types -->
     <string name="change_view_type">Změnit typ zobrazení</string>
     <string name="grid">Mřížka</string>

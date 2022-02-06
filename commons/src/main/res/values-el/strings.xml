@@ -52,7 +52,16 @@
     <string name="eight">Οκτώ</string>
     <string name="nine">Εννέα</string>
     <string name="value_cannot_be_empty">Η τιμή δεν μπορεί να είναι κενή</string>
-
+    <!-- Emails -->
+    <string name="home">Οικία</string>
+    <string name="work">Εργασία</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Κινητό</string>
+    <string name="main_number">Κύριο</string>
+    <string name="work_fax">Φαξ Εργασίας</string>
+    <string name="home_fax">Φαξ Οικίας</string>
+    <string name="pager">Βομβητής</string>
+    <string name="no_phone_number_found">Δεν βρέθηκε τηλεφωνικός αριθμός</string>
     <!-- View types -->
     <string name="change_view_type">Αλλαγή τύπου εμφάνισης</string>
     <string name="grid">Πλέγμα</string>

@@ -53,6 +53,17 @@
     <string name="nine">Nine</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
 
+    <!-- Emails -->
+    <string name="home">Домашній</string>
+    <string name="work">Робочий</string>
+
+    <!-- Phone numbers -->
+    <string name="mobile">Мобільний</string>
+    <string name="main_number">Основний</string>
+    <string name="work_fax">Робочий факс</string>
+    <string name="home_fax">Домашній факс</string>
+    <string name="pager">Пейджер</string>
+    <string name="no_phone_number_found">Номер не знайдено</string>
     <!-- View types -->
     <string name="change_view_type">Змінити тип перегляду</string>
     <string name="grid">Сітка</string>

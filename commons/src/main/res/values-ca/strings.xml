@@ -53,6 +53,16 @@
     <string name="eight">Vuit</string>
     <string name="nine">Nou</string>
     <string name="value_cannot_be_empty">El valor no pot estar buit</string>
+    <!-- Emails -->
+    <string name="home">Llar</string>
+    <string name="work">Feina</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Mòbil</string>
+    <string name="main_number">Principal</string>
+    <string name="work_fax">Fax de la feina</string>
+    <string name="home_fax">Fax de la llar</string>
+    <string name="pager">Cercapersones</string>
+    <string name="no_phone_number_found">No s\'ha trobat cap número de telèfon</string>
     <!-- View types -->
     <string name="change_view_type">Canvia el tipus de vista</string>
     <string name="grid">Quadrícula</string>

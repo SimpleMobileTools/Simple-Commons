@@ -53,6 +53,16 @@
     <string name="eight">Ok</string>
     <string name="nine">Naŭ</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <!-- Emails -->
+    <string name="home">Hejmo</string>
+    <string name="work">Laboro</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Mobile</string>
+    <string name="main_number">Main</string>
+    <string name="work_fax">Work Fax</string>
+    <string name="home_fax">Home Fax</string>
+    <string name="pager">Pager</string>
+    <string name="no_phone_number_found">No phone number has been found</string>
     <!-- View types -->
     <string name="change_view_type">Change view type</string>
     <string name="grid">Krado</string>

@@ -53,6 +53,16 @@
     <string name="eight">ثمانية</string>
     <string name="nine">تسعة</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <!-- Emails -->
+    <string name="home">المنزل</string>
+    <string name="work">العمل</string>
+    <!-- Phone numbers -->
+    <string name="mobile">جوال</string>
+    <string name="main_number">رئيسي</string>
+    <string name="work_fax">فاكس العمل</string>
+    <string name="home_fax">فاكس المنزل</string>
+    <string name="pager">بايجر</string>
+    <string name="no_phone_number_found">لم يتم العثور على رقم هاتف</string>
     <!-- View types -->
     <string name="change_view_type">تغيير نوع العرض</string>
     <string name="grid">الشبكة</string>

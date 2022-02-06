@@ -52,7 +52,17 @@
     <string name="eight">Eight</string>
     <string name="nine">Nine</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <!-- Emails -->
+    <string name="home">Etxea</string>
+    <string name="work">Lana</string>
 
+    <!-- Phone numbers -->
+    <string name="mobile">Mugikorra</string>
+    <string name="main_number">Nagusia</string>
+    <string name="work_fax">Laneko faxa</string>
+    <string name="home_fax">Etxeko faxa</string>
+    <string name="pager">Pager</string>
+    <string name="no_phone_number_found">Ez da telefono zenbakirik aurkitu</string>
     <!-- View types -->
     <string name="change_view_type">Aldatu ikuspegi mota</string>
     <string name="grid">Sareta</string>

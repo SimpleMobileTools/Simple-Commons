@@ -53,6 +53,16 @@
     <string name="eight">Huit</string>
     <string name="nine">Neuf</string>
     <string name="value_cannot_be_empty">La valeur ne peut pas être vide</string>
+    <!-- Emails -->
+    <string name="home">Maison</string>
+    <string name="work">Travail</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Mobile</string>
+    <string name="main_number">Principal</string>
+    <string name="work_fax">Télécopieur travail</string>
+    <string name="home_fax">Télécopieur maison</string>
+    <string name="pager">Téléavertisseur</string>
+    <string name="no_phone_number_found">Aucun numéro de téléphone n\’a été trouvé</string>
     <!-- View types -->
     <string name="change_view_type">Modifier le mode d\'affichage</string>
     <string name="grid">Grille</string>

@@ -53,6 +53,16 @@
     <string name="eight">Eight</string>
     <string name="nine">Nine</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <!-- Emails -->
+    <string name="home">Privat</string>
+    <string name="work">Arbeid</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Mobil</string>
+    <string name="main_number">Hovednummer</string>
+    <string name="work_fax">Arbeidsfaks</string>
+    <string name="home_fax">Hjemmefaks</string>
+    <string name="pager">Personsøker</string>
+    <string name="no_phone_number_found">Fant ikke noe telefonnummer</string>
     <!-- View types -->
     <string name="change_view_type">Endre visningstype</string>
     <string name="grid">Rutenett</string>

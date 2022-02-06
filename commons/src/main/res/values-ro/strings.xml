@@ -53,6 +53,18 @@
     <string name="nine">Nine</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
 
+    <!-- Emails -->
+    <string name="home">Acasă</string>
+    <string name="work">Muncă</string>
+
+    <!-- Phone numbers -->
+    <string name="mobile">Mobil</string>
+    <string name="main_number">Principal</string>
+    <string name="work_fax">Fax de muncă</string>
+    <string name="home_fax">Fax de acasă</string>
+    <string name="pager">Pager</string>
+    <string name="no_phone_number_found">Nu a fost găsit niciun număr de telefon</string>
+
     <!-- View types -->
     <string name="change_view_type">Schimbaţi tipul de vizualizare</string>
     <string name="grid">Grilă</string>

@@ -52,7 +52,16 @@
     <string name="eight">Otte</string>
     <string name="nine">Ni</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
-
+    <!-- Emails -->
+    <string name="home">Hjem</string>
+    <string name="work">Arbejde</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Mobil</string>
+    <string name="main_number">Hovednummer</string>
+    <string name="work_fax">Arbejdsfax</string>
+    <string name="home_fax">Hjemmefax</string>
+    <string name="pager">Personsøger</string>
+    <string name="no_phone_number_found">Intet telefonnummer er fundet</string>
     <!-- View types -->
     <string name="change_view_type">Skift visning</string>
     <string name="grid">Gitter</string>

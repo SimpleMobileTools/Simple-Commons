@@ -53,6 +53,16 @@
     <string name="eight">Acht</string>
     <string name="nine">Neun</string>
     <string name="value_cannot_be_empty">Wert darf nicht leer sein</string>
+    <!-- Emails -->
+    <string name="home">Privat</string>
+    <string name="work">Arbeit</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Mobil</string>
+    <string name="main_number">Festnetz</string>
+    <string name="work_fax">Arbeit Fax</string>
+    <string name="home_fax">Privat Fax</string>
+    <string name="pager">Pager</string>
+    <string name="no_phone_number_found">Es wurde keine Telefonnummer gefunden</string>
     <!-- View types -->
     <string name="change_view_type">Darstellung ändern</string>
     <string name="grid">Gitternetz</string>

@@ -52,7 +52,16 @@
     <string name="eight">Eight</string>
     <string name="nine">Nine</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
-
+    <!-- Emails -->
+    <string name="home">Kućni</string>
+    <string name="work">Posao</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Mobilni</string>
+    <string name="main_number">Glavni</string>
+    <string name="work_fax">Poslovni fax</string>
+    <string name="home_fax">Kućni fax</string>
+    <string name="pager">Pager</string>
+    <string name="no_phone_number_found">Nije pronađen nijedan telefonski broj</string>
     <!-- View types -->
     <string name="change_view_type">Promijeni vrstu prikaza</string>
     <string name="grid">Mreža</string>

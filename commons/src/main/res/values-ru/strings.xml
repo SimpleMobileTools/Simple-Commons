@@ -53,6 +53,16 @@
     <string name="eight">Восемь</string>
     <string name="nine">Девять</string>
     <string name="value_cannot_be_empty">Значение не может быть пустым</string>
+    <!-- Emails -->
+    <string name="home">Домашний</string>
+    <string name="work">Рабочий</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Мобильный</string>
+    <string name="main_number">Основной</string>
+    <string name="work_fax">Рабочий факс</string>
+    <string name="home_fax">Домашний факс</string>
+    <string name="pager">Пейджер</string>
+    <string name="no_phone_number_found">Номер не найден</string>
     <!-- View types -->
     <string name="change_view_type">Вид</string>
     <string name="grid">Сетка</string>

@@ -53,6 +53,16 @@
     <string name="eight">Nyolc</string>
     <string name="nine">Kilenc</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <!-- Emails -->
+    <string name="home">Otthon</string>
+    <string name="work">Munkahely</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Mobil</string>
+    <string name="main_number">Elsődleges telefonszám</string>
+    <string name="work_fax">Munkahelyi fax</string>
+    <string name="home_fax">Otthoni fax</string>
+    <string name="pager">Csipogó</string>
+    <string name="no_phone_number_found">Nem található ilyen telefonszám</string>
     <!-- View types -->
     <string name="change_view_type">Nézettípus módosítása</string>
     <string name="grid">Rács</string>

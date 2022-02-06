@@ -52,6 +52,16 @@
     <string name="eight">Eight</string>
     <string name="nine">Nine</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <!-- Emails -->
+    <string name="home">自宅</string>
+    <string name="work">職場</string>
+    <!-- Phone numbers -->
+    <string name="mobile">携帯</string>
+    <string name="main_number">メイン</string>
+    <string name="work_fax">職場FAX</string>
+    <string name="home_fax">自宅FAX</string>
+    <string name="pager">ポケベル</string>
+    <string name="no_phone_number_found">電話番号が見つかりません</string>
 
     <!-- View types -->
     <string name="change_view_type">表示形式の変更</string>

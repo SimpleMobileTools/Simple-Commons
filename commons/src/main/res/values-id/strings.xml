@@ -52,7 +52,16 @@
     <string name="eight">Eight</string>
     <string name="nine">Nine</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
-
+    <!-- Emails -->
+    <string name="home">Rumah</string>
+    <string name="work">Kerja</string>
+    <!-- Phone numbers -->
+    <string name="mobile">Ponsel</string>
+    <string name="main_number">Utama</string>
+    <string name="work_fax">Faks Kerja</string>
+    <string name="home_fax">Faks Rumah</string>
+    <string name="pager">Pager</string>
+    <string name="no_phone_number_found">Tidak ada nomor telepon yang ditemukan</string>
     <!-- View types -->
     <string name="change_view_type">Ubah tampilan</string>
     <string name="grid">Kotak</string>
