@@ -47,7 +47,7 @@ class MyContactsContentProvider {
                             val phoneNumbersToken = object : TypeToken<ArrayList<PhoneNumber>>() {}.type
                             val phoneNumbers = Gson().fromJson<ArrayList<PhoneNumber>>(phoneNumbersJson, phoneNumbersToken) ?: ArrayList()
 
-                            val stringsToken = object : TypeToken<ArrayList<PhoneNumber>>() {}.type
+                            val stringsToken = object : TypeToken<ArrayList<String>>() {}.type
                             val birthdays = Gson().fromJson<ArrayList<String>>(birthdaysJson, stringsToken) ?: ArrayList()
                             val anniversaries = Gson().fromJson<ArrayList<String>>(anniversariesJson, stringsToken) ?: ArrayList()
 
