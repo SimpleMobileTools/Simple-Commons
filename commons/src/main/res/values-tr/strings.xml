@@ -31,7 +31,7 @@
     <string name="select_a_different_color">Farklı bir renk seçin</string>
     <string name="download">İndir</string>
     <string name="notification">Bildirim</string>
-    <string name="notifications">Notifications</string>
+    <string name="notifications">Bildirimler</string>
     <string name="email">E-posta</string>
     <string name="previous">Önceki</string>
     <string name="playpause">Çal / Duraklat</string>
@@ -40,7 +40,7 @@
     <string name="no_contacts_found">Kişi bulunamadı</string>
     <string name="request_the_required_permissions">Gerekli izinleri iste</string>
     <string name="no_access_to_contacts">Uygulama, kişilerinize erişemedi</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
+    <string name="no_phone_call_permission">Uygulamanın telefon görüşmesi başlatma izni yok, lütfen aygıt ayarlarında izin verin</string>
     <string name="insert_text_here">Metni buraya girin</string>
     <string name="call_person">%s kişisini ara</string>
     <string name="zero">Sıfır</string>
@@ -260,7 +260,7 @@
     <string name="light_theme">Aydınlık</string>
     <string name="dark_theme">Karanlık</string>
     <string name="auto_theme">Otomatik</string>
-    <string name="solarized">GÜneşte kalmış</string>
+    <string name="solarized">Güneşte kalmış</string>
     <string name="dark_red">Koyu Kırmızı</string>
     <string name="white">Beyaz</string>
     <string name="black_white">Siyah &amp; Beyaz</string>
@@ -296,11 +296,11 @@
     <string name="toggle_filename">Dosya adı görünürlüğünü aç/kapat</string>
     <string name="move_to_top">Üste taşı</string>
     <string name="move_to_bottom">Alta taşı</string>
-    <string name="pin_item">Pin item</string>
+    <string name="pin_item">Ögeyi sabitle</string>
     <string name="unpin_item">Ögenin sabitlemesini kaldır</string>
-    <string name="send_sms">Send SMS</string>
-    <string name="send_email">Send email</string>
-    <string name="call">Call</string>
+    <string name="send_sms">SMS gönder</string>
+    <string name="send_email">E-posta gönder</string>
+    <string name="call">Ara</string>
     <!-- Sorting -->
     <string name="sort_by">Sıralama ölçütü</string>
     <string name="name">Ad</string>
@@ -513,7 +513,7 @@
     <!-- Settings -->
     <string name="settings">Ayarlar</string>
     <string name="purchase_simple_thank_you">Basit Teşekkürler\'i Satın Al</string>
-    <string name="general_settings">General</string>
+    <string name="general_settings">Genel</string>
     <string name="color_customization">Renk özelleştirme</string>
     <string name="customize_colors">Renkleri özelleştir</string>
     <string name="customize_colors_locked">Renkleri özelleştir (Kilitli)</string>
@@ -566,7 +566,7 @@
     <string name="quality">Kalite</string>
     <string name="main_screen">Ana ekran</string>
     <string name="thumbnails">Küçük resimler</string>
-    <string name="list_view">List view</string>
+    <string name="list_view">Liste görünümü</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Gösterilen sekmeleri yönet</string>
     <string name="default_tab_to_open">Uygulama başlatıldığında açılacak sekme</string>
