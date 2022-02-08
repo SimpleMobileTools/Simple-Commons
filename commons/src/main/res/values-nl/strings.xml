@@ -40,7 +40,7 @@
     <string name="no_contacts_found">Geen contacten gevonden</string>
     <string name="request_the_required_permissions">Om benodigde machtigingen vragen</string>
     <string name="no_access_to_contacts">De app heeft geen toegang tot uw contacten</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
+    <string name="no_phone_call_permission">De app heeft geen machtiging om telefoongesprekken te beginnen</string>
     <string name="insert_text_here">Voeg hier tekst in</string>
     <string name="call_person">%s bellen</string>
     <string name="zero">Nul</string>
@@ -298,9 +298,9 @@
     <string name="move_to_bottom">Onderaan zetten</string>
     <string name="pin_item">Vastpinnen</string>
     <string name="unpin_item">Losmaken</string>
-    <string name="send_sms">Send SMS</string>
-    <string name="send_email">Send email</string>
-    <string name="call">Call</string>
+    <string name="send_sms">SMS sturen</string>
+    <string name="send_email">E-mail sturen</string>
+    <string name="call">Bellen</string>
     <!-- Sorting -->
     <string name="sort_by">Sorteren op</string>
     <string name="name">Naam</string>
