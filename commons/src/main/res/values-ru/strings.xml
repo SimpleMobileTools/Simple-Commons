@@ -40,7 +40,7 @@
     <string name="no_contacts_found">Контакты не найдены</string>
     <string name="request_the_required_permissions">Запрос необходимых разрешений</string>
     <string name="no_access_to_contacts">Приложение не может получить доступ к вашим контактам</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
+    <string name="no_phone_call_permission">У приложения нет разрешения на совершение телефонных вызовов, пожалуйста, предоставьте его в настройках устройства</string>
     <string name="insert_text_here">Введите текст здесь</string>
     <string name="call_person">Вызов %s</string>
     <string name="zero">Ноль</string>
@@ -308,9 +308,9 @@
     <string name="move_to_bottom">Переместить вниз</string>
     <string name="pin_item">Закрепить элемент</string>
     <string name="unpin_item">Открепить элемент</string>
-    <string name="send_sms">Send SMS</string>
+    <string name="send_sms">Отправить SMS</string>
     <string name="send_email">Send email</string>
-    <string name="call">Call</string>
+    <string name="call">Вызов</string>
     <!-- Sorting -->
     <string name="sort_by">Сортировать по…</string>
     <string name="name">Имя</string>
