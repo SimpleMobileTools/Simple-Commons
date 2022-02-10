@@ -44,8 +44,9 @@ class SimpleContactsHelper(val context: Context) {
             }
 
             allContacts = allContacts.filter { it.name.isNotEmpty() }.distinctBy {
-                val startIndex = Math.max(0, it.phoneNumbers.first().normalizedNumber.length - 9)
-                it.phoneNumbers.first().normalizedNumber.substring(startIndex)
+                val normalizedNumber = it.phoneNumbers.first().normalizedNumber ?: it.phoneNumbers.first().value.normalizePhoneNumber()
+                val startIndex = Math.max(0, normalizedNumber.length - 9)
+                normalizedNumber.substring(startIndex)
             }.distinctBy { it.rawId }.toMutableList() as ArrayList<SimpleContact>
 
             // if there are duplicate contacts with the same name, while the first one has phone numbers 1234 and 4567, second one has only 4567,
@@ -58,7 +59,7 @@ class SimpleContactsHelper(val context: Context) {
                     if (contacts.any { it.phoneNumbers.size == 1 } && contacts.any { it.phoneNumbers.size > 1 }) {
                         val multipleNumbersContact = contacts.first()
                         contacts.subList(1, contacts.size).forEach { contact ->
-                            if (contact.phoneNumbers.all { multipleNumbersContact.doesContainPhoneNumber(it.normalizedNumber) }) {
+                            if (contact.phoneNumbers.all { it.normalizedNumber != null && multipleNumbersContact.doesContainPhoneNumber(it.normalizedNumber!!) }) {
                                 val contactToRemove = allContacts.firstOrNull { it.rawId == contact.rawId }
                                 if (contactToRemove != null) {
                                     contactsToRemove.add(contactToRemove)
