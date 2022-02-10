@@ -23,3 +23,5 @@
   **[] $VALUES;
   public *;
 }
+
+-keep class com.simplemobiletools.commons.models.PhoneNumber { *; }
