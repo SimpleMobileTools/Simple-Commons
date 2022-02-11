@@ -31,11 +31,11 @@ data class SimpleContact(
         return if (text.isNotEmpty()) {
             val normalizedText = text.normalizePhoneNumber()
             if (normalizedText.isEmpty()) {
-                phoneNumbers.mapNotNull { it.normalizedNumber }.any { phoneNumber ->
+                phoneNumbers.map { it.normalizedNumber }.any { phoneNumber ->
                     phoneNumber.contains(text)
                 }
             } else {
-                phoneNumbers.mapNotNull { it.normalizedNumber }.any { phoneNumber ->
+                phoneNumbers.map { it.normalizedNumber }.any { phoneNumber ->
                     PhoneNumberUtils.compare(phoneNumber.normalizePhoneNumber(), normalizedText) ||
                         phoneNumber.contains(text) ||
                         phoneNumber.normalizePhoneNumber().contains(normalizedText) ||
@@ -51,11 +51,11 @@ data class SimpleContact(
         return if (text.isNotEmpty()) {
             val normalizedText = text.normalizePhoneNumber()
             if (normalizedText.isEmpty()) {
-                phoneNumbers.mapNotNull { it.normalizedNumber }.any { phoneNumber ->
+                phoneNumbers.map { it.normalizedNumber }.any { phoneNumber ->
                     phoneNumber == text
                 }
             } else {
-                phoneNumbers.mapNotNull { it.normalizedNumber }.any { phoneNumber ->
+                phoneNumbers.map { it.normalizedNumber }.any { phoneNumber ->
                     PhoneNumberUtils.compare(phoneNumber.normalizePhoneNumber(), normalizedText) ||
                         phoneNumber == text ||
                         phoneNumber.normalizePhoneNumber() == normalizedText ||
