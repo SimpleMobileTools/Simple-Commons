@@ -39,7 +39,7 @@
     <string name="number">Nummer</string>
     <string name="no_contacts_found">Geen contacten gevonden</string>
     <string name="request_the_required_permissions">Om benodigde machtigingen vragen</string>
-    <string name="no_access_to_contacts">De app heeft geen toegang tot uw contacten</string>
+    <string name="no_access_to_contacts">De app heeft geen toegang tot de contactenlijst</string>
     <string name="no_phone_call_permission">De app heeft geen machtiging om telefoongesprekken te beginnen</string>
     <string name="insert_text_here">Voeg hier tekst in</string>
     <string name="call_person">%s bellen</string>
@@ -353,15 +353,15 @@
     <string name="biometrics">Biometrie</string>
     <string name="fingerprint">Vingerafdruk</string>
     <string name="add_fingerprint">Voeg vingerafdruk toe</string>
-    <string name="place_finger">Plaats uw vinger op de sensor</string>
+    <string name="place_finger">Plaats een vinger op de sensor</string>
     <string name="open_biometric_dialog">Biometrische identificatie openen</string>
     <string name="authenticate">Authenticeren</string>
     <string name="authentication_failed">Authenticatie mislukt</string>
     <string name="authentication_blocked">Authenticatie geblokkeerd, probeer het op een ander moment</string>
-    <string name="no_fingerprints_registered">Er zijn geen vingerafdrukken geregistreerd. Voeg deze toe via de instellingen van uw toestel.</string>
+    <string name="no_fingerprints_registered">Er zijn geen vingerafdrukken geregistreerd. Voeg deze toe via de systeeminstellingen.</string>
     <string name="go_to_settings">Ga naar Instellingen</string>
     <string name="protection_setup_successfully">Wachtwoord ingesteld. Herinstalleer deze app indien u het wachtwoord vergeet.</string>
-    <string name="fingerprint_setup_successfully">Vingerafdruk beveiliging ingesteld. Herinstalleer deze app indien u niet meer met uw vingerafdruk kunt authenticeren.</string>
+    <string name="fingerprint_setup_successfully">Vingerafdrukbeveiliging ingesteld. Herinstalleer deze app indien authenticatie met vingerafdrukken niet meer werkt.</string>
     <string name="lock_folder">Map vergrendelen</string>
     <string name="unlock_folder">Map ontgrendelen</string>
     <string name="lock_folder_notice">Deze bescherming werkt alleen binnen de app en is dus geen vervanging voor een daadwerkelijke encryptie van de map.</string>
