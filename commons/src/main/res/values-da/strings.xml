@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annuller</string>
@@ -72,7 +73,6 @@
     <string name="reduce_column_count">Færre kolonner</string>
     <string name="change_cover_image">Skift cover-billede</string>
     <string name="select_photo">Vælg billede</string>
-
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Administrér blokerede numre</string>
     <string name="not_blocking_anyone">Du blokerer ikke nogen</string>
@@ -85,28 +85,23 @@
     <string name="must_make_default_dialer">Du skal gøre denne app til standardopkaldsappen for at gøre brug af blokerede numre.</string>
     <string name="set_as_default">Gør til standard</string>
     <string name="block_confirmation">Er du sikker på at du vil blokere \"%s\"?</string>
-
     <!-- Favorites -->
     <string name="favorites">Bogmærker</string>
     <string name="add_favorites">Tilføj bogmærker</string>
     <string name="add_to_favorites">Føj til bogmærker</string>
     <string name="remove_from_favorites">Fjern fra bogmærker</string>
-
     <!-- Search -->
     <string name="search">Søg</string>
     <string name="type_2_characters">Start søgningen ved at skrive mindst to tegn.</string>
-
     <!-- Filters -->
     <string name="filter">Filter</string>
     <string name="no_items_found">Intet fundet.</string>
     <string name="change_filter">Skift filter</string>
-
     <!-- Permissions -->
     <string name="no_storage_permissions">Tilladelse til at gemme påkrævet</string>
     <string name="no_contacts_permission">Adgang til kontakter påkrævet</string>
     <string name="no_camera_permissions">Adgang til kamera påkrævet</string>
     <string name="no_audio_permissions">Adgang til lyd påkrævet</string>
-
     <!-- Renaming -->
     <string name="rename_file">Omdøb fil</string>
     <string name="rename_folder">Omdøb mappe</string>
@@ -131,7 +126,6 @@
     <string name="filename_without_txt">Filenavn (uden .txt)</string>
     <string name="filename_without_json">Filenavn (uden .json)</string>
     <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
-
     <!-- Copy / Move -->
     <string name="copy">Kopier</string>
     <string name="move">Flyt</string>
@@ -161,7 +155,6 @@
     <string name="could_not_create_file">Kunne ikke oprette filen %s</string>
     <string name="no_new_items">Der blev ikke fundet nogen nye filer</string>
     <string name="no_space">Der er ikke plads nok.\nDer skal bruges %1$s, der er %2$s</string>
-
     <!-- Create new -->
     <string name="create_new">Opret ny</string>
     <string name="folder">Mappe</string>
@@ -171,7 +164,6 @@
     <string name="invalid_name">Navnet indeholder ugyldige tegn</string>
     <string name="empty_name">Skriv et navn</string>
     <string name="unknown_error_occurred">Der opstod en ukendt fejl</string>
-
     <!-- File operation conflicts -->
     <string name="file_already_exists">Filen \"%s\" findes allerede</string>
     <string name="file_already_exists_overwrite">Filen \"%s\" findes allerede. Overskriv?</string>
@@ -182,7 +174,6 @@
     <string name="skip">Spring over</string>
     <string name="append">Tilføj \"_1\"</string>
     <string name="apply_to_all">Anvend på alle konflikter</string>
-
     <!-- File picker -->
     <string name="select_folder">Vælg en mappe</string>
     <string name="select_file">Vælg en fil</string>
@@ -191,29 +182,24 @@
     <string name="confirm_storage_access_text_sd">Hvis ikke du kan se SD-kortet kan du prøve dette</string>
     <string name="confirm_storage_access_android_text">Tillad appen at få adgang til det valgte lager på det næste skærmbillede ved at trykke på \'Brug denne mappe\' nederst.</string>
     <string name="confirm_selection">Bekræft valg</string>
-
     <plurals name="items">
         <item quantity="one">%d element</item>
         <item quantity="other">%d elementer</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d element</item>
         <item quantity="other">%d elementer</item>
     </plurals>
-
     <plurals name="deleting_items">
         <item quantity="one">Sletter %d element</item>
         <item quantity="other">Sletter %d elementer</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d kontakt</item>
         <item quantity="other">%d kontakter</item>
     </plurals>
-
     <!-- Storages -->
     <string name="select_storage">Vælg lager</string>
     <string name="internal">Intern</string>
@@ -223,7 +209,6 @@
     <string name="sd_card_usb_same">Stierne til SD-kortet og USB-enheden kan ikke være ens</string>
     <string name="app_on_sd_card">Det ser ud til at du har appen installeret på et SD-kort. Det gør at appens widget ikke er tilgængelig og ikke kan ses på listen med widgets.
         Dette skyldes en begrænsning i systemet, så hvis du vil bruge appens widgets må du flytte appen tilbage til det interne lager.</string>
-
     <!-- File properties -->
     <string name="properties">Egenskaber</string>
     <string name="path">Sti</string>
@@ -243,7 +228,6 @@
     <string name="song_title">Sangtitel</string>
     <string name="gps_coordinates">GPS-koordinater</string>
     <string name="altitude">Højde</string>
-
     <!-- Color customization -->
     <string name="background_color">Baggrundsfarve</string>
     <string name="text_color">Tekstfarve</string>
@@ -274,7 +258,6 @@
             Køb <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> for at låse denne funktion op og understøtte appens udvikling. Tak!
         ]]>
     </string>
-
     <!-- Themes -->
     <string name="light_theme">Lys</string>
     <string name="dark_theme">Mørk</string>
@@ -285,11 +268,9 @@
     <string name="black_white">Sort &amp; hvid</string>
     <string name="custom">Tilpasset</string>
     <string name="shared">Gemt</string>
-
     <!-- What's new -->
     <string name="whats_new">Hvad er nyt</string>
     <string name="whats_new_disclaimer">* Kun større opdateringer er nævnt her, der er altid flere mindre forbedringer også</string>
-
     <!-- Actionbar items -->
     <string name="delete">Slet</string>
     <string name="remove">Fjern</string>
@@ -322,7 +303,6 @@
     <string name="send_sms">Send SMS</string>
     <string name="send_email">Send email</string>
     <string name="call">Call</string>
-
     <!-- Sorting -->
     <string name="sort_by">Sorter efter</string>
     <string name="name">Navn</string>
@@ -345,11 +325,12 @@
     <string name="full_name">Fulde navn</string>
     <string name="use_custom_sorting">Brug brugerdefineret rækkefølge</string>
     <string name="change_order">Skift rækkefølge</string>
-
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Er du sikker på at du vil fortsætte med at slette?</string>
-    <string name="deletion_confirmation">Er du sikker på at du vil slette %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Er du sikker på at du vil flytte %s til papirkurven?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">Er du sikker på at du vil slette %s?</string>
+    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Er du sikker på at du vil flytte %s til papirkurven?</string>
+    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Er du sikker på at du vil slette dette?</string>
     <string name="are_you_sure_recycle_bin">Er du sikker på at du vil flytte dette til papirkurven?</string>
     <string name="do_not_ask_again">Spørg ikke igen i denne session</string>
@@ -357,12 +338,10 @@
     <string name="yes">Ja</string>
     <string name="no">Nej</string>
     <string name="maybe">Måske</string>
-
     <plurals name="delete_warning">
         <item quantity="one">ADVARSEL: Du sletter en mappe</item>
         <item quantity="other">ADVARSEL: Du sletter %d mapper</item>
     </plurals>
-
     <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">Indtast PIN</string>
@@ -388,7 +367,6 @@
     <string name="lock_folder">Lås mappe</string>
     <string name="unlock_folder">Lås mappe op</string>
     <string name="lock_folder_notice">Denne beskyttelse virker kun i denne app, den er ikke beregnet som erstatning for rigtig kryptering af mapper på systemniveau.</string>
-
     <!-- Times -->
     <string name="yesterday">I går</string>
     <string name="today">I dag</string>
@@ -401,7 +379,6 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
-
     <plurals name="seconds">
         <item quantity="one">%d sekund</item>
         <item quantity="other">%d sekunder</item>
@@ -430,7 +407,6 @@
         <item quantity="one">%d år</item>
         <item quantity="other">%d år</item>
     </plurals>
-
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d sekund</item>
@@ -460,7 +436,6 @@
         <item quantity="one">%d år</item>
         <item quantity="other">%d år</item>
     </plurals>
-
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d sekund før start</item>
@@ -490,7 +465,6 @@
         <item quantity="one">%d år før start</item>
         <item quantity="other">%d år før start</item>
     </plurals>
-
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d sekund</item>
@@ -520,14 +494,12 @@
         <item quantity="one">%d år</item>
         <item quantity="other">%d år</item>
     </plurals>
-
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Resterende tid før alarmen lyder:\n%s</string>
     <string name="reminder_triggers_in">Tid tilbage inden alarmen lyder:\n%s</string>
     <string name="alarm_warning">Du anbefales sikre dig at alarmen virker som den skal inden du stoler på den. Den kan drille som følge af strømbesparende begrænsninger på systemet.</string>
     <string name="reminder_warning">Du anbefales sikre dig at påmindelser virker som de skal inden du stoler på dem. De kan drille som følge af strømbesparende begrænsninger på systemet.</string>
     <string name="notifications_disabled">Påmindelser er ikke aktiveret for denne app. Du kan aktivere dem i indstillingerne på din enhed.</string>
-
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
     <string name="snooze">Udsæt</string>
@@ -540,7 +512,6 @@
     <string name="no_sound">Ingen lyd</string>
     <string name="during_day_at_hh_mm">I løbet af dagen kl. hh:mm</string>
     <string name="during_day_at">I løbet af dagen kl. %02d:%02d</string>
-
     <!-- Settings -->
     <string name="settings">Indstillinger</string>
     <string name="purchase_simple_thank_you">Køb Simple Thank You</string>
@@ -572,7 +543,7 @@
     <string name="widgets">Widgets</string>
     <string name="use_same_snooze">Brug altid samme udsættelsestid</string>
     <string name="snooze_time">Udsættelsestid</string>
-    <string name="vibrate_on_button_press">Vibrer ved tryk på knapper</string>
+    <string name="vibrate_on_button_press">Vibrer ved knaptryk</string>
     <string name="move_items_into_recycle_bin">Flyt elementer til papirkurven i stedet for at slette dem</string>
     <string name="recycle_bin_cleaning_interval">Interval for tømning af papirkurven</string>
     <string name="empty_recycle_bin">Tøm papirkurven</string>
@@ -584,7 +555,6 @@
     <string name="start_name_with_surname">Start navn med efternavn</string>
     <string name="clear_cache">Ryd cache</string>
     <string name="show_call_confirmation_dialog">Vis en opkaldsbekræftelsesdialog før du starter et opkald</string>
-
     <!-- Setting sections -->
     <string name="visibility">Synlighed</string>
     <string name="security">Sikkerhed</string>
@@ -599,7 +569,6 @@
     <string name="main_screen">Hovedskærm</string>
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">Listevisning</string>
-
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Administrer viste faner</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
@@ -610,7 +579,6 @@
     <string name="last_used_tab">Senest brugte</string>
     <string name="files_tab">Filer</string>
     <string name="recent_files_tab">Seneste filer</string>
-
     <!-- Recycle Bin -->
     <string name="restore_this_file">Gendan denne fil</string>
     <string name="restore_selected_files">Gendan valgte filer</string>
@@ -622,12 +590,10 @@
     <string name="moving_recycle_bin_items_disabled">Flytning af indhold i papirkurven er deaktiveret, gendan i stedet</string>
     <string name="show_the_recycle_bin">Vis papirkurven</string>
     <string name="hide_the_recycle_bin">Skjul papirkurven</string>
-
     <plurals name="moving_items_into_bin">
         <item quantity="one">Flytter en fil til papirkurven</item>
         <item quantity="other">Flytter %d filer til papirkurven</item>
     </plurals>
-
     <!-- Import / Export -->
     <string name="importing">Importerer…</string>
     <string name="exporting">Eksporterer…</string>
@@ -640,13 +606,11 @@
     <string name="no_entries_for_importing">Der blev ikke fundet indhold til import</string>
     <string name="no_new_entries_for_importing">Der er ikke fundet nye poster til import</string>
     <string name="no_entries_for_exporting">Der er ikke fundet indhold til eksport</string>
-
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Du ser ud til at have en USB-enhed tilsluttet. For at sikre at dens filer ses ordentligt, skal du tildele flere rettigheder.</string>
     <string name="confirm_usb_storage_access_text">Vælg rodmappen på USB-enheden på den næste skærm for at give adgang.</string>
     <string name="wrong_root_selected_usb">Den forkerte mappe er valgt, vælg rodmappen på din USB-enhed</string>
-
     <!-- Dates -->
     <string name="january">Januar</string>
     <string name="february">Februar</string>
@@ -660,7 +624,6 @@
     <string name="october">Oktober</string>
     <string name="november">November</string>
     <string name="december">December</string>
-
     <!-- in January -->
     <string name="in_january">i januar</string>
     <string name="in_february">i februar</string>
@@ -674,7 +637,6 @@
     <string name="in_october">i oktober</string>
     <string name="in_november">i november</string>
     <string name="in_december">i december</string>
-
     <string name="monday">Mandag</string>
     <string name="tuesday">Tirsdag</string>
     <string name="wednesday">Onsdag</string>
@@ -682,7 +644,6 @@
     <string name="friday">Fredag</string>
     <string name="saturday">Lørdag</string>
     <string name="sunday">Søndag</string>
-
     <string name="monday_letter">M</string>
     <string name="tuesday_letter">T</string>
     <string name="wednesday_letter">O</string>
@@ -690,7 +651,6 @@
     <string name="friday_letter">F</string>
     <string name="saturday_letter">L</string>
     <string name="sunday_letter">S</string>
-
     <string name="monday_short">Man</string>
     <string name="tuesday_short">Tir</string>
     <string name="wednesday_short">Ons</string>
@@ -698,7 +658,6 @@
     <string name="friday_short">Fre</string>
     <string name="saturday_short">Lør</string>
     <string name="sunday_short">Søn</string>
-
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Din version af appen opdateres ikke længere. Opgrader til Pro-versionen, og du vil få fejlrettelser og andre forbedringer.</string>
     <string name="upgrade_to_pro_long_click">Din version af appen opdateres ikke længere. For at få nye fejlrettelser og andre forbedringer må du opgradere til Pro-versionen ved at klikke her.</string>
@@ -706,7 +665,6 @@
     <string name="more_info">Yderligere oplysninger</string>
     <string name="upgrade">Opgrader</string>
     <string name="upgrade_calendar">Du må migrere lokalt gemte begivenheder ved at eksportere til en ics-fil og derpå importere den. Du finder eksport- og importknapper i hovedmenuen.</string>
-
     <!-- About -->
     <string name="about">Om</string>
     <string name="website">Website</string>
@@ -730,7 +688,7 @@
     <string name="other">Andet</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hej :)</string>
-    <string name="about_footer">Udviklet med &#10084;&#65039; i Slovakiet</string>
+    <string name="about_footer">Udviklet med ❤️ i Slovakiet</string>
     <string name="additional_info">Yderligere info</string>
     <string name="app_version">App version: %s</string>
     <string name="device_os">Enheds-OS: %s</string>
@@ -757,7 +715,6 @@
             Widget\'en er låst.<br>Køb venligst <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> for at åbne den.
         ]]>
     </string>
-
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -770,7 +727,6 @@
             Tak
         ]]>
     </string>
-
     <string name="simple_app_launcher">Simple App Launcher</string>
     <string name="simple_calculator">Simple Calculator</string>
     <string name="simple_calendar">Simple Calendar</string>
@@ -788,7 +744,6 @@
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
-
     <string name="app_launcher_short">App Launcher</string>
     <string name="calculator_short">Lommeregner</string>
     <string name="calendar_short">Kalender</string>
@@ -806,13 +761,11 @@
     <string name="sms_messenger_short">SMS Messenger</string>
     <string name="thank_you_short">Tak skal du have</string>
     <string name="voice_recorder_short">Lydoptager</string>
-
     <string name="sideloaded_app">
         <![CDATA[
             Det ser ud til at din app-version er beskadiget. <a href="%s">Download den originale version her</a>.
         ]]>
     </string>
-
     <!-- FAQ -->
     <string name="frequently_asked_questions">Ofte stillede spørgsmål</string>
     <string name="before_asking_question">Inden du stiller et spørgsmål bedes du først læse</string>
@@ -846,7 +799,6 @@
         vil vælge alle elementer, skal du blot trykke længe på et element og derefter klikke på tælleren for det valgte element øverst til venstre i hjørnet. Det vil vælge eller fravælge alting.</string>
     <string name="faq_10_title_commons">Jeg har købt appen, men jeg kan ikke downloade den på en anden enhed.</string>
     <string name="faq_10_text_commons">Prøv at rydde din Google Play-appcache og genstarte din enhed. Det er en fejl i Google Play, som ikke har noget med selve appen at gøre.</string>
-
     <!-- Contributors -->
     <string name="contributors">Bidragydere</string>
     <string name="translation">Oversættelse</string>
@@ -859,7 +811,6 @@
             Tak til alle bidragydere og andre støtter!
         ]]>
     </string>
-
     <string name="translation_arabic">Arabisk</string>
     <string name="translation_azerbaijani">Aserbajdsjansk</string>
     <string name="translation_bengali">Bengalsk</string>
@@ -904,7 +855,6 @@
     <string name="translation_chinese_hk">Kinesisk (Hong Kong)</string>
     <string name="translation_chinese_cn">Kinesisk (forenklet)</string>
     <string name="translation_chinese_tw">Kinesisk (Traditionelt)</string>
-
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Få Pro-versionen nu!</string>
     <string name="why_upgrade_basic_version">Basic</string>
@@ -913,43 +863,36 @@
     <string name="why_upgrade_no_internet_access">Ingen internetadgang</string>
     <string name="why_upgrade_footer">+ Fuld tilfredshed eller pengene tilbage</string>
     <string name="why_upgrade_improved_design">Forbedret design</string>
-
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Avanceret fotoredigering</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF filunderstøttelse</string>
     <string name="why_upgrade_batch_renaming">Avanceret masseomdøbning af filer</string>
     <string name="why_upgrade_folder_locking">Individuel låsning af mapper</string>
     <string name="why_upgrade_printing_support">Udskrivningssupport</string>
-
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Tidszone-support</string>
     <string name="why_upgrade_attendees_emails">Deltager- og mail-påmindelser</string>
     <string name="why_upgrade_easy_event_importing">Nem import af begivenheder</string>
     <string name="why_upgrade_new_widgets">Nye widgets</string>
-
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Forbedret sammenfletning af duplikerede kontakter</string>
     <string name="why_upgrade_font_size_customization">Skræddersyet skriftstørrelse</string>
     <string name="why_upgrade_private_contact_sharing">Mulighed for deling af private kontakter med dine apps</string>
     <string name="why_upgrade_customizable_contact_ringtones">Kontaktspecifikke ringetoner</string>
     <string name="why_upgrade_contact_filtering">Kontaktfiltrering</string>
-
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Tjeklister</string>
     <string name="why_upgrade_different_note_per_widget">Forskellig note og farver per widget</string>
     <string name="why_upgrade_note_locking">Note-låsning</string>
-
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Tilpasning af format på dato og tid</string>
     <string name="why_upgrade_shortcuts">Genveje til startside</string>
     <string name="why_upgrade_file_compression">Understøtter pakning af filer</string>
     <string name="why_upgrade_recents_tab">Fane med seneste filer</string>
-
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Selvvalgt baggrundsfarve</string>
     <string name="why_upgrade_file_importing">Understøtter filimport</string>
     <string name="why_upgrade_zooming">Zooming</string>
-
     <!-- License -->
     <string name="notice">Denne app bruger følgende 3.-parts biblioteker der gør at mit liv bliver lidt enklere. Tak.</string>
     <string name="third_party_licences">3.-parts licencer</string>
@@ -982,11 +925,9 @@
     <string name="audio_record_view_title">Audio Record View (audio-visualisering)</string>
     <string name="sms_mms_title">SMS MMS (håndtering af SMS og MMS)</string>
     <string name="apng_title">APNG Android (animated WebP support)</string>
-
     <!-- Google Play listing -->
     <string name="deprecated_app">FORÆLDET: Denne version af appen vedligeholdes ikke længere, skift til Pro-versionen her https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Husk at hvis du afinstallerer en betalt app indenfor 2 timer, får du automatisk pengene tilbage. Vil du have refunderet beløbet på et senere tidspunkt, så send en mail til hello@simplemobiletools.com . På den måde kan du prøvekøre appen uden omkostninger :)</string>
-
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">En gruppe simple, open source apps til Android med widgets, der kan tilpasses, uden reklamer og unødvendige tilladelser.</string>
 </resources>
