@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.TimePickerDialog
 import android.content.*
@@ -135,6 +136,42 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
                             startActivityForResult(this, OPEN_DOCUMENT_TREE_SD)
                             checkedDocumentPath = path
                         } catch (e: Exception) {
+                            toast(R.string.unknown_error_occurred)
+                        }
+                    }
+                }
+            }
+        }
+        true
+    } else {
+        false
+    }
+}
+
+@SuppressLint("InlinedApi")
+fun BaseSimpleActivity.isShowingSAFDialogForDeleteSdk30(path: String): Boolean {
+    val pathUri = createFirstParentDocumentUri(path)
+    return if (!hasProperStoredFirstParentUri(pathUri.toString())) {
+        runOnUiThread {
+            if (!isDestroyed && !isFinishing) {
+                WritePermissionDialog(this, false) {
+                    Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
+                        putExtra("android.content.extra.SHOW_ADVANCED", true)
+                        putExtra(DocumentsContract.EXTRA_INITIAL_URI, pathUri)
+                        try {
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE_SINGLE_FILE)
+                            checkedDocumentPath = path
+                            return@apply
+                        } catch (e: Exception) {
+                            e.printStackTrace()
+                            type = "*/*"
+                        }
+
+                        try {
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE_SINGLE_FILE)
+                            checkedDocumentPath = path
+                        } catch (e: Exception) {
+                            e.printStackTrace()
                             toast(R.string.unknown_error_occurred)
                         }
                     }
@@ -677,6 +714,14 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
                     handleSAFDialog(path) {
                         if (it) {
                             trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
+                        }
+                    }
+                } else if (isRPlus() && isAccessibleWithSAFSdk30(path)) {
+                    handleSAFDeleteSdk30Dialog(path) {
+                        if (it) {
+                            deleteDocumentWithSAFSdk30(fileDirItem, allowDeleteFolder, callback)
+                        } else {
+                            callback?.invoke(false)
                         }
                     }
                 } else if (isRPlus()) {
