@@ -124,6 +124,7 @@
     <string name="rename_date_time_pattern">%Y - vuosi\n%M - kuukausi\n%D - päivä\n%h - tunti\n%m - minuutti\n%s - sekunti\n%i - nouseva numero, alkaen numerosta 1</string>
     <string name="filename_without_txt">Tiedostonimi (ilman .txt-päätettä)</string>
     <string name="filename_without_json">Tiedostonimi (ilman .json-päätettä)</string>
+    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
     <!-- Copy / Move -->
     <string name="copy">Kopioi</string>
     <string name="move">Siirrä</string>

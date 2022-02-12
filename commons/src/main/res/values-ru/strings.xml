@@ -130,6 +130,7 @@
 \n%i — порядковый номер с 1</string>
     <string name="filename_without_txt">Имя файла (без .txt)</string>
     <string name="filename_without_json">Имя файла (без .json)</string>
+    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
     <!-- Copy / Move -->
     <string name="copy">Копировать</string>
     <string name="move">Переместить</string>

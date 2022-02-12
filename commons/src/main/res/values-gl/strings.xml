@@ -130,6 +130,7 @@
     <string name="rename_date_time_pattern">%Y - ano\n%M - mes\n%D - día\n%h - hora\n%m - minuto\n%s - segundo\n%i - número incremental desde 1</string>
     <string name="filename_without_txt">Filename (without .txt)</string>
     <string name="filename_without_json">Filename (without .json)</string>
+    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
 
     <!-- Copy / Move -->
     <string name="copy">Copiar</string>

@@ -130,6 +130,7 @@
 \n%i - nombre augmentant des d\'1</string>
     <string name="filename_without_txt">Nom del fitxer (sense .txt)</string>
     <string name="filename_without_json">Nom del fitxer (sense .json)</string>
+    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
     <!-- Copy / Move -->
     <string name="copy">Copia</string>
     <string name="move">Mou</string>

@@ -129,6 +129,7 @@
     <string name="rename_date_time_pattern">%Y - έτος\n%M - μήνας\n%D - ημέρα\n%h - ώρα\n%m - λεπτό\n%s - δευτ/το\n%i - αύξηση αριθμού από 1</string>
     <string name="filename_without_txt">Όνομα αρχείου (χωρίς .txt)</string>
     <string name="filename_without_json">Όνομα αρχείου (χωρίς .json)</string>
+    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
 
     <!-- Copy / Move -->
     <string name="copy">Αντιγραφή</string>

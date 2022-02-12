@@ -132,6 +132,7 @@
     <string name="rename_date_time_pattern">%Y - rok\n%M - mesiac\n%D - deň\n%h - hodina\n%m - minúta\n%s - sekunda\n%i - číslo narastajúce od 1</string>
     <string name="filename_without_txt">Názov súboru (bez .txt)</string>
     <string name="filename_without_json">Názov súboru (bez .json)</string>
+    <string name="cannot_hide_files">Od Android verzie 11 už nie je možné takýmto spôsobom skrývať súbory a priečinky</string>
 
     <!-- Copy / Move -->
     <string name="copy">Kopírovať</string>
