@@ -68,7 +68,7 @@
     <!-- View types -->
     <string name="change_view_type">Weergavetype wijzigen</string>
     <string name="grid">Rooster</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">Ongelijk Raster</string>
     <string name="list">Lijst</string>
     <string name="increase_column_count">Meer kolommen</string>
     <string name="reduce_column_count">Minder kolommen</string>
@@ -183,7 +183,7 @@
     <string name="confirm_storage_access_text_sd">Probeer het volgende indien de SD-kaart niet in de lijst staat</string>
     <string name="confirm_storage_access_android_text">Geef de app toestemming om de geselecteerde map te gebruiken door in het volgende scherm onderaan op \'Deze map gebruiken\' te klikken.</string>
     <string name="confirm_selection">Keuze bevestigen</string>
-    <string name="loading">Loading…</string>
+    <string name="loading">Laden…</string>
     <plurals name="items">
         <item quantity="one">%d item</item>
         <item quantity="other">%d items</item>
