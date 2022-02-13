@@ -88,13 +88,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/activity_margin"
         android:orientation="vertical">
 
         <com.simplemobiletools.commons.views.MyFloatingActionButton
             android:id="@+id/filepicker_fab_show_favorites"
             android:layout_width="@dimen/fab_size"
             android:layout_height="@dimen/fab_size"
+            android:layout_marginEnd="@dimen/activity_margin"
             android:layout_marginBottom="@dimen/activity_margin"
             android:src="@drawable/ic_star_vector" />
 
@@ -102,6 +102,7 @@
             android:id="@+id/filepicker_fab_show_hidden"
             android:layout_width="@dimen/fab_size"
             android:layout_height="@dimen/fab_size"
+            android:layout_marginEnd="@dimen/activity_margin"
             android:layout_marginBottom="@dimen/activity_margin"
             android:src="@drawable/ic_unhide_vector" />
     </LinearLayout>
