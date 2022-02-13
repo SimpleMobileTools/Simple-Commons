@@ -182,6 +182,7 @@
     <string name="confirm_storage_access_text_sd">Jos et näe muistikorttia, kokeile tätä</string>
     <string name="confirm_storage_access_android_text">Anna sovellukselle käyttöoikeus tallennustilan käyttöön painamalla seuraavassa näkymässä \"Käytä tätä hakemistoa\"-painiketta.</string>
     <string name="confirm_selection">Vahvista valinta</string>
+    <string name="loading">Loading…</string>
     <plurals name="items">
         <item quantity="one">%d kohde</item>
         <item quantity="other">%d kohdetta</item>

@@ -189,6 +189,7 @@
     <string name="confirm_storage_access_text_sd">Si no veieu la targeta SD, proveu això</string>
     <string name="confirm_storage_access_android_text">Permeteu que l\'aplicació accedeixi a l\'emmagatzematge seleccionat prement «Utilitza aquesta carpeta» a la part inferior de la pantalla següent.</string>
     <string name="confirm_selection">Confirmeu la selecció</string>
+    <string name="loading">Loading…</string>
     <plurals name="items">
         <item quantity="one">%d element</item>
         <item quantity="other">%d elements</item>

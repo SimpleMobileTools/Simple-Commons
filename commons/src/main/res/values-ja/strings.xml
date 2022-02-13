@@ -192,6 +192,7 @@
     <string name="confirm_storage_access_text_sd">SDカードの内容が表示されない場合は、こちらをお試しください</string>
     <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">選択を確認</string>
+    <string name="loading">Loading…</string>
 
     <plurals name="items">
         <item quantity="other">%d アイテム</item>
