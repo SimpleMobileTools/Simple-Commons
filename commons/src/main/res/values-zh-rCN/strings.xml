@@ -125,7 +125,7 @@
     <string name="rename_date_time_pattern">%Y - 年\n%M - 月\n%D - 日\n%h - 时\n%m - 分\n%s - 秒\n%i - 数字从1递增</string>
     <string name="filename_without_txt">文件名（不带 .txt）</string>
     <string name="filename_without_json">文件名（不带 .json）</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
+    <string name="cannot_hide_files">从 Android 11 开始，你再也不能像这样隐藏文件和文件夹了</string>
     <!-- Copy / Move -->
     <string name="copy">复制</string>
     <string name="move">移动</string>
