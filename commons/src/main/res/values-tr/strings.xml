@@ -125,7 +125,7 @@
     <string name="rename_date_time_pattern">%Y - yıl\n%M - ay\n%D - gün\n%h - saat\n%m - dakika\n%s - saniye\n%i - 1\'den artan sayı</string>
     <string name="filename_without_txt">Dosya adı (.txt olmadan)</string>
     <string name="filename_without_json">Dosya adı (.json olmadan)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
+    <string name="cannot_hide_files">Android 11\'den itibaren dosya ve klasörleri artık bu şekilde gizleyemezsiniz</string>
     <!-- Copy / Move -->
     <string name="copy">Kopyala</string>
     <string name="move">Taşı</string>
