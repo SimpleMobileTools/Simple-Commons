@@ -32,9 +32,9 @@ open class FileDirItem(
             when {
                 sorting and SORT_BY_NAME != 0 -> {
                     result = if (sorting and SORT_USE_NUMERIC_VALUE != 0) {
-                        AlphanumericComparator().compare(name.toLowerCase(), other.name.toLowerCase())
+                        AlphanumericComparator().compare(name.normalizeString().toLowerCase(), other.name.normalizeString().toLowerCase())
                     } else {
-                        name.toLowerCase().compareTo(other.name.toLowerCase())
+                        name.normalizeString().toLowerCase().compareTo(other.name.normalizeString().toLowerCase())
                     }
                 }
                 sorting and SORT_BY_SIZE != 0 -> result = when {
