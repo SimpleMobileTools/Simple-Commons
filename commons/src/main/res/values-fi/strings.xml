@@ -11,7 +11,7 @@
     <string name="an_error_occurred">Virhe: %s</string>
     <string name="open_with">Avaa sovelluksessa</string>
     <string name="edit_with">Muokkaa sovelluksella</string>
-    <string name="edit">Edit</string>
+    <string name="edit">Muokkaa</string>
     <string name="no_app_found">Sovelluksia ei löydetty</string>
     <string name="set_as">Aseta</string>
     <string name="copy_to_clipboard">Kopioi leikepöydälle</string>
@@ -40,7 +40,7 @@
     <string name="no_contacts_found">Kontakteja ei löytynyt</string>
     <string name="request_the_required_permissions">Pyydä tarvittavia oikeuksia</string>
     <string name="no_access_to_contacts">Sovelluksella ei ole käyttöoikeutta yhteystietoihin</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
+    <string name="no_phone_call_permission">Sovelluksella ei ole käyttöoikeutta puhelujen aloittamiseen, myönnä käyttöoikeus laitteen asetuksissa.</string>
     <string name="insert_text_here">Lisää teksti tähän</string>
     <string name="call_person">Soita %s</string>
     <string name="zero">Zero</string>
@@ -53,7 +53,7 @@
     <string name="seven">Seitsemän</string>
     <string name="eight">Kahdeksan</string>
     <string name="nine">Yhdeksän</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="value_cannot_be_empty">Arvo ei voi olla tyhjä</string>
     <!-- Emails -->
     <string name="home">Koti</string>
     <string name="work">Työ</string>
@@ -67,7 +67,7 @@
     <!-- View types -->
     <string name="change_view_type">Vaihda näkymää</string>
     <string name="grid">Ruudukko</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">Epätasainen ruudukko</string>
     <string name="list">Lista</string>
     <string name="increase_column_count">Lisää sarakkeita</string>
     <string name="reduce_column_count">Vähennä sarakkeita</string>
