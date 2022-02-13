@@ -34,7 +34,6 @@
                 android:alpha="0.8"
                 android:gravity="center"
                 android:paddingStart="@dimen/activity_margin"
-                android:paddingTop="@dimen/activity_margin"
                 android:paddingEnd="@dimen/activity_margin"
                 android:text="@string/loading"
                 android:textSize="@dimen/bigger_text_size"
