@@ -66,7 +66,7 @@
     <!-- View types -->
     <string name="change_view_type">Αλλαγή τύπου εμφάνισης</string>
     <string name="grid">Πλέγμα</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">Ανισομερές πλέγμα</string>
     <string name="list">Λίστα</string>
     <string name="increase_column_count">Αύξηση αριθμού στηλών</string>
     <string name="reduce_column_count">Μείωση αριθμού στηλών</string>
@@ -130,7 +130,7 @@
     <string name="rename_date_time_pattern">%Y - έτος\n%M - μήνας\n%D - ημέρα\n%h - ώρα\n%m - λεπτό\n%s - δευτ/το\n%i - αύξηση αριθμού από 1</string>
     <string name="filename_without_txt">Όνομα αρχείου (χωρίς .txt)</string>
     <string name="filename_without_json">Όνομα αρχείου (χωρίς .json)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
+    <string name="cannot_hide_files">Ξεκινώντας από το Android 11 δεν μπορείτε πλέον να αποκρύπτετε αρχεία και φακέλους με αυτόν τον τρόπο</string>
 
     <!-- Copy / Move -->
     <string name="copy">Αντιγραφή</string>
