@@ -25,6 +25,21 @@
                 android:paddingEnd="@dimen/small_margin"
                 android:paddingBottom="@dimen/small_margin" />
 
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/filepicker_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filepicker_breadcrumbs"
+                android:layout_centerHorizontal="true"
+                android:alpha="0.8"
+                android:gravity="center"
+                android:paddingStart="@dimen/activity_margin"
+                android:paddingTop="@dimen/activity_margin"
+                android:paddingEnd="@dimen/activity_margin"
+                android:text="@string/loading"
+                android:textSize="@dimen/bigger_text_size"
+                android:textStyle="italic" />
+
             <com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
                 android:id="@+id/filepicker_fastscroller"
                 android:layout_width="match_parent"
