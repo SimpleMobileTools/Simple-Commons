@@ -40,17 +40,6 @@
                     app:layoutManager="com.simplemobiletools.commons.views.MyLinearLayoutManager" />
 
             </com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller>
-
-            <!--<com.simplemobiletools.commons.views.FastScroller
-                android:id="@+id/filepicker_fastscroller"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:paddingStart="@dimen/normal_margin">
-
-                <include layout="@layout/fastscroller_handle_vertical" />
-
-            </com.simplemobiletools.commons.views.FastScroller>-->
         </RelativeLayout>
 
         <RelativeLayout
