@@ -1090,7 +1090,8 @@ fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNum
 fun Context.copyToClipboard(text: String) {
     val clip = ClipData.newPlainText(getString(R.string.simple_commons), text)
     (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).setPrimaryClip(clip)
-    toast(R.string.value_copied_to_clipboard)
+    val toastText = String.format(getString(R.string.value_copied_to_clipboard_show), text)
+    toast(toastText)
 }
 
 fun Context.getPhoneNumberTypeText(type: Int, label: String): String {
