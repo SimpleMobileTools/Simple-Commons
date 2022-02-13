@@ -63,7 +63,7 @@ class FilePickerDialog(
 
         mDialogView.filepicker_breadcrumbs.apply {
             listener = this@FilePickerDialog
-            updateFontSize(activity.getTextSize())
+            updateFontSize(activity.getTextSize(), false)
         }
 
         tryUpdateItems()
