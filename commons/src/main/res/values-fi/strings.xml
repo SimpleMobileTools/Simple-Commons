@@ -125,7 +125,7 @@
     <string name="rename_date_time_pattern">%Y - vuosi\n%M - kuukausi\n%D - päivä\n%h - tunti\n%m - minuutti\n%s - sekunti\n%i - nouseva numero, alkaen numerosta 1</string>
     <string name="filename_without_txt">Tiedostonimi (ilman .txt-päätettä)</string>
     <string name="filename_without_json">Tiedostonimi (ilman .json-päätettä)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
+    <string name="cannot_hide_files">Android 11 ja uudemmat eivät enää salli tiedostojen ja kansioiden piilottamista</string>
     <!-- Copy / Move -->
     <string name="copy">Kopioi</string>
     <string name="move">Siirrä</string>
@@ -300,10 +300,10 @@
     <string name="move_to_top">Siirrä ylimmäksi</string>
     <string name="move_to_bottom">Siirrä alimmaksi</string>
     <string name="pin_item">Pin item</string>
-    <string name="unpin_item">Unpin item</string>
-    <string name="send_sms">Send SMS</string>
+    <string name="unpin_item">Poista kohteen kiinnitys</string>
+    <string name="send_sms">Lähetä tekstiviesti</string>
     <string name="send_email">Send email</string>
-    <string name="call">Call</string>
+    <string name="call">Soita</string>
     <!-- Sorting -->
     <string name="sort_by">Järjestä</string>
     <string name="name">Nimen perusteella</string>
@@ -523,7 +523,7 @@
     <string name="customize_widget_colors">Mukauta pienoissovelluksen värejä</string>
     <string name="customize_notifications">Mukauta ilmoituksia</string>
     <string name="use_english_language">Käytä englannin kieltä</string>
-    <string name="language">Language</string>
+    <string name="language">Kieli</string>
     <string name="show_hidden_items">Näytä piilotetut tiedostot</string>
     <string name="font_size">Fonttikoko</string>
     <string name="small">Pieni</string>
