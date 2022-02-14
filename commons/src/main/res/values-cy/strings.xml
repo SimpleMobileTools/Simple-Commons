@@ -239,6 +239,7 @@
     <string name="sd_card_usb_same">Rhaid bod llwybrau\'r cerdyn SD a\'r ddyfais USB yn wahanol</string>
     <string name="app_on_sd_card">Mae\'n ymddangos dy fod wedi gosod yr ap ar gerdyn SD, gan olygu nad yw teclynnau\'r ap ar gael. Ni fyddan nhw hyd yn oed ymddangos ar y rhestr o declynnau ar gael.
         Mae hyn yn gyfyngiad gan y system, felly os wyt eisiau defnyddio\'r teclynnau, rhaid symud yr ap i storfa fewnol dy ddyfais.</string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select the path %s</string>
 
     <!-- File properties -->
     <string name="properties">Priodweddau</string>

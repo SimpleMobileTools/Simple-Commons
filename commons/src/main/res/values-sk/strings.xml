@@ -232,6 +232,7 @@
     <string name="sd_card_usb_same">Cesta k SD karte a USB zariadeniu nesmie byť rovnaká</string>
     <string name="app_on_sd_card">Vyzerá to tak, že máte aplikáciu nainštalovanú na SD karte, čo spôsobí nedostupnosť widgetov. Ani ich neuvidíte na zozname dostupných widgetov.
         Ide o systémové obmedzenie, čiže ak chcete widgety používať, musíte presunúť aplikáciu späť na internú pamäť.</string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select the path %s</string>
 
     <!-- File properties -->
     <string name="properties">Vlastnosti</string>

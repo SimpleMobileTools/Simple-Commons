@@ -233,6 +233,7 @@
     <string name="wrong_root_selected">Izbrali ste napačno mapo. Izbrati morate korensko mapo SD kartice</string>
     <string name="sd_card_usb_same">Pot do SD kartice in USB ne moreta biti enaki</string>
     <string name="app_on_sd_card">Aplikacijo ste namestili na SD kartico, kar pomeni, da pripomočki ne bodo delovali. Ne boste jih niti videli na seznamu.\n        To je omejitev sistema zato, če želite uporabljati pripomočke, morate aplikacijo premakniti nazaj v notranjo shrambo.</string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select the path %s</string>
 
     <!-- File properties -->
     <string name="properties">Lastnosti</string>

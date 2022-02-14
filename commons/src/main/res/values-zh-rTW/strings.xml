@@ -225,6 +225,7 @@
     <string name="sd_card_usb_same">SD卡和USB裝置的路徑不能相同</string>
     <string name="app_on_sd_card">你似乎將應用程式安裝在SD卡，那會造成應用程式小工具無法使用。你甚至不會在可用的小工具列表中見到它們。
         那是個系統限制，所以如果你想要使用小工具，你必須把應用程式移動回內部儲存空間。</string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select the path %s</string>
 
     <!-- File properties -->
     <string name="properties">屬性</string>

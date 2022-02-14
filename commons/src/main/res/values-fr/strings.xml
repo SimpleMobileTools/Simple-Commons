@@ -211,6 +211,7 @@
     <string name="sd_card_usb_same">Les emplacements de la carte SD et du stockage USB ne peuvent être similaires</string>
     <string name="app_on_sd_card">L\'application semble installée sur une carte SD, ce qui empêche l\'utilisation des widgets de l\'applications. Ils n\'apparaîtront pas dans la liste des widgets disponibles.
         Il s\'agit d\'une limitation système. Si vous souhaitez utiliser des widgets, vous devez déplacer l\'application vers la mémoire interne.</string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select the path %s</string>
     <!-- File properties -->
     <string name="properties">Propriétés</string>
     <string name="path">Emplacement</string>

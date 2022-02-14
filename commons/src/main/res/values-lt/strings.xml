@@ -221,6 +221,7 @@
     <string name="wrong_root_selected">Pasirinktas neteisingas aplankas, pasirinkite pagrindinį SD kortelės aplanką</string>
     <string name="sd_card_usb_same">SD kortelė ir USB įrenginio keliai negali būti tokie patys</string>
     <string name="app_on_sd_card">Atrodo, kad esate įdiegę programėlę SD kortelėje. Tai padaro programėlės valdiklius neprieinamus. Jūs net jų nematysite prieinamų valdiklių sąraše. Tai yra sisteminis apribojimas, todėl, jei norite naudotis valdikliais, turite perkelti programėlę atgal į vidinę atmintį.</string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select the path %s</string>
     <!-- File properties -->
     <string name="properties">Savybės</string>
     <string name="path">Kelias</string>

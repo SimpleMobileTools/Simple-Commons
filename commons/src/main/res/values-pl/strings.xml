@@ -215,6 +215,7 @@
     <string name="wrong_root_selected">Wybrano nieprawidłowy folder. Wybierz folder główny karty pamięci.</string>
     <string name="sd_card_usb_same">Ścieżki do karty pamięci i pamięci USB nie mogą być takie same</string>
     <string name="app_on_sd_card">Wygląda na to, że aplikacja jest zainstalowana na karcie pamięci, przez co widżety aplikacji są niedostępne. Nie zobaczysz ich nawet na liście dostępnych widżetów. Jest to ograniczenie systemu, więc jeśli chcesz ich używać, musisz przenieść aplikację z powrotem do pamięci wewnętrznej.</string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select the path %s</string>
     <!-- File properties -->
     <string name="properties">Właściwości</string>
     <string name="path">Ścieżka</string>

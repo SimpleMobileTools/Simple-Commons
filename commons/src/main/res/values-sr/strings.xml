@@ -227,6 +227,7 @@
     <string name="wrong_root_selected">Изабрана је погрешна фасцикла, молим вас изаберите почетну фасциклу на СД картици</string>
     <string name="sd_card_usb_same">Стазе СД картице и УСБ уређаја не могу бити исте</string>
     <string name="app_on_sd_card">Апликација је већ инсталирана на СД картици, зато су виџети недоступни. То је ограничење система, и ако желите да користите виџете морате да преместите апликацију назад у унутрашње складиште.</string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select the path %s</string>
 
     <!-- File properties -->
     <string name="properties">Својства</string>
