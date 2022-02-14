@@ -68,7 +68,7 @@
     <!-- View types -->
     <string name="change_view_type">更改视图类型</string>
     <string name="grid">网格</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">非均匀网格</string>
     <string name="list">列表</string>
     <string name="increase_column_count">显示更多项目</string>
     <string name="reduce_column_count">显示更少项目</string>
@@ -183,7 +183,7 @@
     <string name="confirm_storage_access_text_sd">如果您未找到 SD 卡目录，请尝试</string>
     <string name="confirm_storage_access_android_text">请在下一个屏幕上按下底部的“使用此文件夹”，允许应用程序访问所选的存储空间。</string>
     <string name="confirm_selection">确认选择</string>
-    <string name="loading">Loading…</string>
+    <string name="loading">加载中…</string>
     <plurals name="items">
         <item quantity="other">%d 个项目</item>
     </plurals>
