@@ -166,7 +166,7 @@ fun Context.getSAFOnlyDirs(): List<String> {
 fun Context.isAccessibleWithSAFSdk30(path: String): Boolean {
     val firstParentPath = path.getFirstParentPath(this)
     val firstParentDir = path.getFirstParentDirName(this)
-    return firstParentPath != path.getBasePath(this) &&
+    return isRPlus() && firstParentPath != path.getBasePath(this) &&
         DIRS_INACCESSIBLE_WITH_SAF_SDK_30.all {
             firstParentDir != it
         }
@@ -280,8 +280,7 @@ fun Context.createFirstParentTreeUri(fullPath: String): Uri {
     }
     val rootParentDirName = fullPath.getFirstParentDirName(this)
     val firstParentId = "$storageId:$rootParentDirName"
-    val treeUri = DocumentsContract.buildTreeDocumentUri(EXTERNAL_STORAGE_PROVIDER_AUTHORITY, firstParentId)
-    return treeUri
+    return DocumentsContract.buildTreeDocumentUri(EXTERNAL_STORAGE_PROVIDER_AUTHORITY, firstParentId)
 }
 
 fun Context.createDocumentUriUsingFirstParentTreeUri(fullPath: String): Uri {
