@@ -301,14 +301,17 @@ fun Context.createDocumentUriUsingFirstParentTreeUri(fullPath: String): Uri {
     return DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
 }
 
-
-fun Context.createAndroidDataOrObbUri(fullPath: String): Uri {
-    val path = if (isAndroidDataDir(fullPath)) {
+fun Context.createAndroidDataOrObbPath(fullPath: String): Uri {
+    return if (isAndroidDataDir(fullPath)) {
         fullPath.getBasePath(this).trimEnd('/').plus(ANDROID_DATA_DIR)
     } else {
         fullPath.getBasePath(this).trimEnd('/').plus(ANDROID_OBB_DIR)
     }
+}
 
+
+fun Context.createAndroidDataOrObbUri(fullPath: String): Uri {
+    val path = createAndroidDataOrObbPath(fullPath)
     return createDocumentUri(path)
 }
 

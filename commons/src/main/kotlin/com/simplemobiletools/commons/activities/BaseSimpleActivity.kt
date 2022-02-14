@@ -230,7 +230,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 val checkedUri = createFirstParentTreeUri(checkedDocumentPath)
 
                 if (treeUri != checkedUri) {
-                    toast("Please select the directory: ${checkedDocumentPath.getFirstParentPath(this)}")
+                    toast(getString(R.string.wrong_folder_selected, checkedDocumentPath.getFirstParentPath(this)))
                     return
                 }
 
@@ -246,7 +246,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
                 if (isProperAndroidRoot(checkedDocumentPath, resultData.data!!)) {
                     if (resultData.dataString == baseConfig.OTGTreeUri || resultData.dataString == baseConfig.sdTreeUri) {
-                        toast(R.string.wrong_root_selected)
+                        toast(getString(R.string.wrong_folder_selected, createAndroidDataOrObbPath(checkedDocumentPath)))
                         return
                     }
 
@@ -258,7 +258,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     funAfterSAFPermission?.invoke(true)
                     funAfterSAFPermission = null
                 } else {
-                    toast(R.string.wrong_root_selected)
+                    toast(getString(R.string.wrong_folder_selected, createAndroidDataOrObbPath(checkedDocumentPath)))
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         if (isRPlus()) {
                             putExtra(DocumentsContract.EXTRA_INITIAL_URI, createAndroidDataOrObbUri(checkedDocumentPath))
