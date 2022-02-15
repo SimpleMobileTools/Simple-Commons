@@ -54,19 +54,19 @@
     <string name="seven">Zeven</string>
     <string name="eight">Acht</string>
     <string name="nine">Negen</string>
-    <string name="value_cannot_be_empty">Waarde mag niet leeg zijn</string>
+    <string name="value_cannot_be_empty">Dit veld mag niet leeg zijn</string>
     <!-- Emails -->
     <string name="home">Thuis</string>
     <string name="work">Werk</string>
     <!-- Phone numbers -->
     <string name="mobile">Mobiel</string>
     <string name="main_number">Standaard</string>
-    <string name="work_fax">Werk fax</string>
-    <string name="home_fax">Thuisfax</string>
+    <string name="work_fax">Fax Werk</string>
+    <string name="home_fax">Fax Thuis</string>
     <string name="pager">Semafoon</string>
     <string name="no_phone_number_found">Geen telefoonnummer gevonden</string>
     <!-- View types -->
-    <string name="change_view_type">Weergavetype wijzigen</string>
+    <string name="change_view_type">Weergave wijzigen</string>
     <string name="grid">Rooster</string>
     <string name="uneven_grid">Ongelijk Raster</string>
     <string name="list">Lijst</string>
