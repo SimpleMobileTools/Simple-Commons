@@ -166,7 +166,7 @@ fun Context.getSAFOnlyDirs(): List<String> {
 fun Context.isAccessibleWithSAFSdk30(path: String): Boolean {
     val firstParentPath = path.getFirstParentPath(this)
     val firstParentDir = path.getFirstParentDirName(this)
-    return isRPlus() && firstParentPath != path.getBasePath(this) &&
+    return isRPlus() && firstParentPath != path &&
         DIRS_INACCESSIBLE_WITH_SAF_SDK_30.all {
             firstParentDir != it
         }

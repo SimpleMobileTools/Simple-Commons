@@ -223,7 +223,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
         val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
 
-        if (requestCode == OPEN_DOCUMENT_TREE_SINGLE_FILE) {
+        if (requestCode == OPEN_DOCUMENT_TREE_FOR_DELETE_SDK_30) {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
 
                 val treeUri = resultData.data

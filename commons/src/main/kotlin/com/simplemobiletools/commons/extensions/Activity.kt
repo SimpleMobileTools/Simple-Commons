@@ -28,7 +28,6 @@ import androidx.biometric.BiometricPrompt
 import androidx.biometric.auth.AuthPromptCallback
 import androidx.biometric.auth.AuthPromptHost
 import androidx.biometric.auth.Class2BiometricAuthPrompt
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.documentfile.provider.DocumentFile
 import androidx.fragment.app.FragmentActivity
 import com.simplemobiletools.commons.R
@@ -158,7 +157,7 @@ fun BaseSimpleActivity.isShowingSAFDialogForDeleteSdk30(path: String): Boolean {
                         putExtra("android.content.extra.SHOW_ADVANCED", true)
                         putExtra(DocumentsContract.EXTRA_INITIAL_URI, createFirstParentDocumentUri(path))
                         try {
-                            startActivityForResult(this, OPEN_DOCUMENT_TREE_SINGLE_FILE)
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_DELETE_SDK_30)
                             checkedDocumentPath = path
                             return@apply
                         } catch (e: Exception) {
@@ -167,7 +166,7 @@ fun BaseSimpleActivity.isShowingSAFDialogForDeleteSdk30(path: String): Boolean {
                         }
 
                         try {
-                            startActivityForResult(this, OPEN_DOCUMENT_TREE_SINGLE_FILE)
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_DELETE_SDK_30)
                             checkedDocumentPath = path
                         } catch (e: Exception) {
                             e.printStackTrace()
