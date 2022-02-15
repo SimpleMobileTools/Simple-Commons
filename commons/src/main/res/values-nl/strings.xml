@@ -180,9 +180,9 @@
     <string name="select_folder">Een map kiezen</string>
     <string name="select_file">Een bestand kiezen</string>
     <string name="confirm_storage_access_title">Toegang tot externe opslag bevestigen</string>
-    <string name="confirm_storage_access_text">Op het volgende scherm schrijfrecht verlenen op de hoofdmap van de SD-kaart</string>
-    <string name="confirm_storage_access_text_sd">Het volgende proberen als de SD-kaart niet in de lijst staat</string>
-    <string name="confirm_storage_access_android_text">Verleen de app toegangsrecht tot de gekozen opslag door onderaan op het volgende scherm op \'Deze map gebruiken\' te klikken.</string>
+    <string name="confirm_storage_access_text">Kies de hoofdmap van de SD-kaart op het volgende scherm om schrijfrechten te verlenen</string>
+    <string name="confirm_storage_access_text_sd">Probeer het volgende indien de SD-kaart niet in de lijst staat</string>
+    <string name="confirm_storage_access_android_text">Verleen de app toegang tot de gekozen map door in het volgende scherm op \'Deze map gebruiken\' te klikken.</string>
     <string name="confirm_selection">Keuze bevestigen</string>
     <string name="loading">Laden…</string>
     <plurals name="items">
@@ -208,7 +208,7 @@
     <string name="internal">Interne opslag</string>
     <string name="sd_card">SD-kaart</string>
     <string name="root">Hoofdmap</string>
-    <string name="wrong_root_selected">Verkeerde map: de hoofdmap van de SD-kaart kiezen</string>
+    <string name="wrong_root_selected">Verkeerde map: kies de hoofdmap van de SD-kaart</string>
     <string name="sd_card_usb_same">Paden van SD-kaart en USB-apparaat kunnen niet gelijk zijn</string>
     <string name="app_on_sd_card">Het lijkt erop dat de app op een SD-kaart is geïnstalleerd, waardoor de app-widgets niet beschikbaar zijn. Ze zijn niet eens zichtbaar in de lijst met beschikbare widgets. Het is een systeembeperking, dus om de widgets te gebruiken moet de app teruggezet worden naar de interne opslag.</string>
     <!-- File properties -->
