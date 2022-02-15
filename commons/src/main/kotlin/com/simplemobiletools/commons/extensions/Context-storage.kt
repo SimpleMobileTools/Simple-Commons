@@ -301,7 +301,7 @@ fun Context.createDocumentUriUsingFirstParentTreeUri(fullPath: String): Uri {
     return DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
 }
 
-fun Context.createAndroidDataOrObbPath(fullPath: String): Uri {
+fun Context.createAndroidDataOrObbPath(fullPath: String): String {
     return if (isAndroidDataDir(fullPath)) {
         fullPath.getBasePath(this).trimEnd('/').plus(ANDROID_DATA_DIR)
     } else {
