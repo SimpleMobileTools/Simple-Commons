@@ -40,7 +40,7 @@
     <string name="number">Nummer</string>
     <string name="no_contacts_found">Geen contacten gevonden</string>
     <string name="request_the_required_permissions">Verplichte rechten vragen</string>
-    <string name="no_access_to_contacts">De app had geen toegang tot de contacten</string>
+    <string name="no_access_to_contacts">De app heeft geen toegang tot de contactenlijst</string>
     <string name="no_phone_call_permission">App heeft geen recht om telefoongesprekken te starten, geef dit in de toestelinstellingen</string>
     <string name="insert_text_here">Tekst hier invoegen</string>
     <string name="call_person">%s bellen</string>
@@ -126,7 +126,7 @@
     <string name="rename_date_time_pattern">%Y - jaar\n%M - maand\n%D - dag\n%h - uur\n%m - minuut\n%s - seconde\n%i - getal oplopend vanaf 1</string>
     <string name="filename_without_txt">Bestandsnaam (zonder .txt)</string>
     <string name="filename_without_json">Bestandsnaam (zonder .json)</string>
-    <string name="cannot_hide_files">Vanaf Android 11 is het niet meer mogelijk om zo bestanden of mappen te verbergen</string>
+    <string name="cannot_hide_files">Vanaf Android 11 is het niet meer mogelijk om op deze manier bestanden of mappen te verbergen</string>
     <!-- Copy / Move -->
     <string name="copy">Kopiëren</string>
     <string name="move">Verplaatsen</string>
@@ -785,8 +785,8 @@
     <string name="faq_4_text_commons">Ja, bij het plaatsen van een widget naar uw hoofdscherm, verschijnt een widgetconfiguratiescherm. Je ziet gekleurde vierkanten in de linkerbenedenhoek, druk erop om een nieuwe kleur te kiezen. De schuifregelaar is voor de transparantie.</string>
     <string name="faq_5_title_commons">Kan ik verwijderde bestanden terugzetten\?</string>
     <string name="faq_5_text_commons">Niet als de bestanden daadwerkelijk zijn verwijderd. Bestanden kunnen worden teruggezet als de prullenbak is ingeschakeld (dat is standaard het geval, zie Instellingen).</string>
-    <string name="faq_6_title_commons">Het app-opstartpictogram is verdwenen. Wat kan ik doen\?</string>
-    <string name="faq_6_text_commons">Dit wordt veroorzaakt doordat het opstartprogramma het aanpassen van pictogrammen niet goed ondersteunt. Probeer de app te starten via Google Play of een widget, indien beschikbaar. Eenmaal gelanceerd, gewoon het standaard oranje pictogram #F57C00 terugzetten. In het ergste geval dient de app opnieuw te worden geïnstallereerd.</string>
+    <string name="faq_6_title_commons">Het icoon voor de app is verdwenen uit mijn launcher. Wat moet ik doen\?</string>
+    <string name="faq_6_text_commons">Dit wordt veroorzaakt doordat de launcher het aanpassen van pictogrammen niet goed ondersteunt. Probeer de app te starten via Google Play of een widget, indien beschikbaar. Eenmaal gelanceerd, gewoon het standaard oranje pictogram #F57C00 terugzetten. In het ergste geval dient de app opnieuw te worden geïnstallereerd.</string>
     <string name="faq_7_title_commons">Het geld is afgeschreven van mijn rekening, maar ik kan de app nog niet downloaden. Wat moet ik doen?</string>
     <string name="faq_7_text_commons">Betalingen worden verwerkt door Google, maar dit systeem vertoont soms wat problemen. Leeg de cache van de Google Play Store app en start daarna het apparaat opnieuw. Probeer vervolgens nogmaals de app te downloaden.</string>
     <string name="faq_8_title_commons">Waarom zou ik upgraden naar de Pro-versie?</string>
