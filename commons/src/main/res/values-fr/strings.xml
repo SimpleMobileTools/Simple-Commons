@@ -17,7 +17,8 @@
     <string name="copy_to_clipboard">Copier dans le presse-papiers</string>
     <string name="copy_number_to_clipboard">Copier le numéro dans le presse-papiers</string>
     <string name="value_copied_to_clipboard">Valeur copiée dans le presse-papiers</string>
-    <string name="value_copied_to_clipboard_show">Valeur copiée dans le presse-papiers:\n%s</string>
+    <string name="value_copied_to_clipboard_show">Valeur copiée dans le presse-papiers :
+\n%s</string>
     <string name="dial_number">Composer le numéro</string>
     <string name="unknown">Inconnu</string>
     <string name="always">Toujours</string>
@@ -68,7 +69,7 @@
     <!-- View types -->
     <string name="change_view_type">Modifier le mode d\'affichage</string>
     <string name="grid">Grille</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">Grille irrégulière</string>
     <string name="list">Liste</string>
     <string name="increase_column_count">Ajouter une colonne</string>
     <string name="reduce_column_count">Supprimer une colonne</string>
@@ -126,7 +127,7 @@
     <string name="rename_date_time_pattern">%Y - année\n%M - mois\n%D - jour\n%h - heure\n%m - minute\n%s - seconde\n%i - Incrémentation débute à 1</string>
     <string name="filename_without_txt">Nom de fichier (sans .txt)</string>
     <string name="filename_without_json">Nom de fichier (sans .json)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
+    <string name="cannot_hide_files">À partir d\'Android 11, il n\'est plus possible de masquer les fichiers et les dossiers de cette manière</string>
     <!-- Copy / Move -->
     <string name="copy">Copier</string>
     <string name="move">Déplacer</string>
@@ -183,7 +184,7 @@
     <string name="confirm_storage_access_text_sd">Si vous ne voyez pas la carte SD, essayez ceci</string>
     <string name="confirm_storage_access_android_text">Veuillez autoriser l\'application à accéder au stockage sélectionné sur l\'écran suivant en appuyant sur « Utiliser ce dossier » en bas.</string>
     <string name="confirm_selection">Confirmer la sélection</string>
-    <string name="loading">Loading…</string>
+    <string name="loading">Chargement…</string>
     <plurals name="items">
         <item quantity="one">%d élément</item>
         <item quantity="other">%d éléments</item>
