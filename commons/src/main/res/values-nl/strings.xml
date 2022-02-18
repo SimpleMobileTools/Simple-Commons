@@ -85,7 +85,7 @@
     <string name="import_blocked_numbers">Geblokkeerde nummers importeren</string>
     <string name="must_make_default_dialer">Van deze app de standaard telefoon-app maken om nummers te kunnen blokkeren.</string>
     <string name="set_as_default">Als standaard instellen</string>
-    <string name="block_confirmation">Nummer \"%s\" inderdaad blokkeren\?</string>
+    <string name="block_confirmation">Nummer \"%s\" blokkeren\?</string>
     <!-- Favorites -->
     <string name="favorites">Favorieten</string>
     <string name="add_favorites">Favorieten toevoegen</string>
@@ -211,7 +211,7 @@
     <string name="wrong_root_selected">Verkeerde map: kies de hoofdmap van de SD-kaart</string>
     <string name="sd_card_usb_same">Paden van SD-kaart en USB-apparaat kunnen niet gelijk zijn</string>
     <string name="app_on_sd_card">Het lijkt erop dat de app is geïnstalleerd op een SD-kaart. Dit zorgt ervoor dat Android de widgets van deze app blokkeert. Dit is een beperking van het systeem en alleen het verplaatsen van de app naar het interne geheugen zal de widgets beschikbaar maken.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">De verkeerde map is gekozen. Kies de map \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Eigenschappen</string>
     <string name="path">Pad</string>
@@ -324,13 +324,13 @@
     <string name="use_custom_sorting">Aangepast sorteren</string>
     <string name="change_order">Volgorde aanpassen</string>
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Deze items inderdaad verwijderen\?</string>
-    <string name="deletion_confirmation">%s inderdaad verwijderen\?</string>
+    <string name="proceed_with_deletion">Deze items verwijderen\?</string>
+    <string name="deletion_confirmation">%s verwijderen\?</string>
     <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">%s inderdaad verplaatsen naar de prullenbak\?</string>
+    <string name="move_to_recycle_bin_confirmation">%s verplaatsen naar de prullenbak\?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Item inderdaad verwijderen\?</string>
-    <string name="are_you_sure_recycle_bin">Item inderdaad verplaatsen naar de prullenbak\?</string>
+    <string name="are_you_sure_delete">Item verwijderen\?</string>
+    <string name="are_you_sure_recycle_bin">Item verplaatsen naar de prullenbak\?</string>
     <string name="do_not_ask_again">Onthouden voor deze sessie</string>
     <string name="do_not_show_again">Niet opnieuw weergeven</string>
     <string name="yes">Ja</string>
