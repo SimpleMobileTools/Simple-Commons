@@ -41,7 +41,7 @@
     <string name="no_contacts_found">Keine Kontakte gefunden</string>
     <string name="request_the_required_permissions">Benötigte Berechtigungen anfordern</string>
     <string name="no_access_to_contacts">Die App kann nicht auf deine Kontakte zugreifen</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
+    <string name="no_phone_call_permission">Die Anwendung hat nicht die Berechtigung, Telefonanrufe zu tätigen, bitte gewähren Sie diese in den Geräteeinstellungen</string>
     <string name="insert_text_here">Text hier einfügen</string>
     <string name="call_person">%s anrufen</string>
     <string name="zero">Zero</string>
@@ -68,7 +68,7 @@
     <!-- View types -->
     <string name="change_view_type">Darstellung ändern</string>
     <string name="grid">Gitternetz</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">Ungleichmäßiges Raster</string>
     <string name="list">Liste</string>
     <string name="increase_column_count">Kacheln verkleinern</string>
     <string name="reduce_column_count">Kacheln vergrößern</string>
@@ -126,7 +126,7 @@
     <string name="rename_date_time_pattern">%Y - Jahr\n%M - Monat\n%D - Tag\n%h - Stunde\n%m - Minute\n%s - Sekunde\n%i - Aufsteigender Index, beginnt bei 1</string>
     <string name="filename_without_txt">Dateiname (ohne .txt)</string>
     <string name="filename_without_json">Dateiname (ohne .json)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
+    <string name="cannot_hide_files">Ab Android 11 können Sie Dateien und Ordner nicht mehr auf diese Weise verstecken</string>
     <!-- Copy / Move -->
     <string name="copy">Kopieren</string>
     <string name="move">Verschieben</string>
@@ -183,7 +183,7 @@
     <string name="confirm_storage_access_text_sd">Wenn die SD-Karte nicht angezeigt wird, versuche das</string>
     <string name="confirm_storage_access_android_text">Erlauben Sie der App auf dem nächsten Bildschirm den Zugriff auf den ausgewählten Speicher, indem Sie unten auf „Diesen Ordner verwenden“ klicken.</string>
     <string name="confirm_selection">Auswahl bestätigen</string>
-    <string name="loading">Loading…</string>
+    <string name="loading">Wird geladen …</string>
     <plurals name="items">
         <item quantity="one">%d Element</item>
         <item quantity="other">%d Elemente</item>

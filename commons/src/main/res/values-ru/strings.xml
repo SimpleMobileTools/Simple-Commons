@@ -68,7 +68,7 @@
     <!-- View types -->
     <string name="change_view_type">Вид</string>
     <string name="grid">Сетка</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">Неровная сетка</string>
     <string name="list">Список</string>
     <string name="increase_column_count">Добавить столбец</string>
     <string name="reduce_column_count">Убрать столбец</string>
@@ -132,7 +132,7 @@
 \n%i — порядковый номер с 1</string>
     <string name="filename_without_txt">Имя файла (без .txt)</string>
     <string name="filename_without_json">Имя файла (без .json)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
+    <string name="cannot_hide_files">Начиная с Android 11 вы больше не можете скрывать такие файлы и папки</string>
     <!-- Copy / Move -->
     <string name="copy">Копировать</string>
     <string name="move">Переместить</string>
@@ -189,7 +189,7 @@
     <string name="confirm_storage_access_text_sd">Если SD-карта не видна, попробуйте это</string>
     <string name="confirm_storage_access_android_text">Разрешите приложению доступ к выбранному хранилищу на следующем экране, нажав \"Использовать эту папку\" в нижней части.</string>
     <string name="confirm_selection">Подтвердить выделение</string>
-    <string name="loading">Loading…</string>
+    <string name="loading">Загрузка…</string>
     <plurals name="items">
         <item quantity="one">%d элемент</item>
         <item quantity="few">%d элемента</item>

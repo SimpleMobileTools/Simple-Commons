@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ok">OKE</string>
     <string name="cancel">Batal</string>
-    <string name="nothing">Nothing</string>
+    <string name="nothing">Tidak ada</string>
     <string name="later">Kemudian</string>
     <string name="save_as">Simpan sebagai</string>
     <string name="file_saved">Berkas berhasil disimpan</string>
@@ -13,11 +14,11 @@
     <string name="edit">Edit</string>
     <string name="no_app_found">Tidak ada aplikasi yang sesuai</string>
     <string name="set_as">Setel sebagai</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
+    <string name="copy_to_clipboard">Salin ke papan klip</string>
+    <string name="copy_number_to_clipboard">Salin angka ke papan klip</string>
     <string name="value_copied_to_clipboard">Nilai disalin ke papan klip</string>
     <string name="value_copied_to_clipboard_show">Nilai disalin ke papan klip:\n%s</string>
-    <string name="dial_number">Dial number</string>
+    <string name="dial_number">Nomor telepon</string>
     <string name="unknown">Tidak diketahui</string>
     <string name="always">Selalu</string>
     <string name="never">Jangan pernah</string>
@@ -39,21 +40,21 @@
     <string name="number">Nomor</string>
     <string name="no_contacts_found">Tidak ada kontak yang ditemukan</string>
     <string name="request_the_required_permissions">Meminta izin yang diperlukan</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
-    <string name="insert_text_here">Insert text here</string>
+    <string name="no_access_to_contacts">Aplikasi tidak dapat mengakses kontak Anda</string>
+    <string name="no_phone_call_permission">Aplikasi tidak diizinkan untuk memulai panggilan, mohon berikan izin di setelan perangkat</string>
+    <string name="insert_text_here">Masukkan teks di sini</string>
     <string name="call_person">Panggil %s</string>
-    <string name="zero">Zero</string>
-    <string name="one">One</string>
-    <string name="two">Two</string>
-    <string name="three">Three</string>
-    <string name="four">Four</string>
-    <string name="five">Five</string>
-    <string name="six">Six</string>
-    <string name="seven">Seven</string>
-    <string name="eight">Eight</string>
-    <string name="nine">Nine</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="zero">Nol</string>
+    <string name="one">Satu</string>
+    <string name="two">Dua</string>
+    <string name="three">Tiga</string>
+    <string name="four">Empat</string>
+    <string name="five">Lima</string>
+    <string name="six">Enam</string>
+    <string name="seven">Tujuh</string>
+    <string name="eight">Delapan</string>
+    <string name="nine">Sembilan</string>
+    <string name="value_cannot_be_empty">Nilai tidak boleh kosong</string>
     <!-- Emails -->
     <string name="home">Rumah</string>
     <string name="work">Kerja</string>
@@ -67,13 +68,12 @@
     <!-- View types -->
     <string name="change_view_type">Ubah tampilan</string>
     <string name="grid">Kotak</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">Grid Tidak Rata</string>
     <string name="list">Daftar</string>
     <string name="increase_column_count">Tambah jumlah kolom</string>
     <string name="reduce_column_count">Kurangi jumlah kolom</string>
     <string name="change_cover_image">Ubah gambar kover</string>
     <string name="select_photo">Pilih foto</string>
-
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Kelola nomor yang diblokir</string>
     <string name="not_blocking_anyone">Anda tidak memblokir siapapun.</string>
@@ -81,33 +81,28 @@
     <string name="block_number">Blokir nomor</string>
     <string name="block_numbers">Blokir nomor</string>
     <string name="blocked_numbers">Nomor yang diblokir</string>
-    <string name="export_blocked_numbers">Export blocked numbers</string>
-    <string name="import_blocked_numbers">Import blocked numbers</string>
+    <string name="export_blocked_numbers">Ekspor nomor terblokir</string>
+    <string name="import_blocked_numbers">Impor nomor terblokir</string>
     <string name="must_make_default_dialer">Anda harus mengatur aplikasi ini sebagai aplikasi dialer default untuk menggunakan fitur pemblokir nomor.</string>
     <string name="set_as_default">Tetapkan sebagai default</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
-
+    <string name="block_confirmation">Yakin untuk memblokir \"%s\"\?</string>
     <!-- Favorites -->
     <string name="favorites">Favorit</string>
     <string name="add_favorites">Tambah favorit</string>
     <string name="add_to_favorites">Tambah ke favorit</string>
     <string name="remove_from_favorites">Hapus dari favorit</string>
-
     <!-- Search -->
     <string name="search">Cari</string>
     <string name="type_2_characters">Ketik paling tidak 2 karakter untuk mencari.</string>
-
     <!-- Filters -->
     <string name="filter">Filter</string>
     <string name="no_items_found">Item tidak ditemukan.</string>
     <string name="change_filter">Ubah filter</string>
-
     <!-- Permissions -->
     <string name="no_storage_permissions">Izin penyimpanan diperlukan</string>
     <string name="no_contacts_permission">Izin kontak diperlukan</string>
     <string name="no_camera_permissions">Izin kamera diperlukan</string>
     <string name="no_audio_permissions">Izin audio diperlukan</string>
-
     <!-- Renaming -->
     <string name="rename_file">Ubah nama berkas</string>
     <string name="rename_folder">Ubah nama folder</string>
@@ -129,10 +124,9 @@
     <string name="pattern_renaming">Pola</string>
     <string name="string_to_add">Kata untuk ditambahkan</string>
     <string name="rename_date_time_pattern">%Y - tahun\n%M - bulan\n%D - hari\n%h - jam\n%m - menit\n%s - detik\n%i - angka bertambah mulai dari 1</string>
-    <string name="filename_without_txt">Filename (without .txt)</string>
-    <string name="filename_without_json">Filename (without .json)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
-
+    <string name="filename_without_txt">Nama File (tanpa .txt)</string>
+    <string name="filename_without_json">Nama File (tanpa .json)</string>
+    <string name="cannot_hide_files">Mulai dari Android 11 Anda tidak dapat menyembunyikan file dan folder seperti itu</string>
     <!-- Copy / Move -->
     <string name="copy">Salin</string>
     <string name="move">Pindah</string>
@@ -149,11 +143,11 @@
     <string name="copy_failed">Tidak bisa menyalin berkas</string>
     <string name="copying">Menyalin…</string>
     <string name="copying_success">Berkas berhasil disalin</string>
-    <string name="copying_success_one">File copied successfully</string>
+    <string name="copying_success_one">File berhasil disalin</string>
     <string name="copy_move_failed">Telah terjadi kesalahan</string>
     <string name="moving">Memindahkan…</string>
     <string name="moving_success">Berkas berhasil dipindahkan</string>
-    <string name="moving_success_one">File moved successfully</string>
+    <string name="moving_success_one">File berhasil dipindah</string>
     <string name="moving_success_partial">Beberapa berkas tidak bisa dipindahkan</string>
     <string name="copying_success_partial">Beberapa berkas tidak bisa disalin</string>
     <string name="no_files_selected">Tidak ada berkas yang dipilih</string>
@@ -162,17 +156,15 @@
     <string name="could_not_create_file">Tidak bisa membuat berkas %s</string>
     <string name="no_new_items">Tidak ada item baru yang ditemukan</string>
     <string name="no_space">Tujuan tidak memiliki cukup ruang kosong.\nMembutuhkan %1$s, tersedia %2$s</string>
-
     <!-- Create new -->
     <string name="create_new">Buat baru</string>
     <string name="folder">Folder</string>
-    <string name="file">Berkas</string>
+    <string name="file">File</string>
     <string name="create_new_folder">Buat folder baru</string>
     <string name="name_taken">Berkas atau folder dengan nama sama sudah ada</string>
     <string name="invalid_name">Nama berisi karakter tidak valid</string>
     <string name="empty_name">Silakan masukkan nama</string>
     <string name="unknown_error_occurred">Telah terjadi kesalahan yang tidak diketahui</string>
-
     <!-- File operation conflicts -->
     <string name="file_already_exists">Berkas \"%s\" sudah ada</string>
     <string name="file_already_exists_overwrite">Berkas \"%s\" sudah ada. Ganti?</string>
@@ -183,7 +175,6 @@
     <string name="skip">Lewati</string>
     <string name="append">Akhiri dengan \'_1\'</string>
     <string name="apply_to_all">Terapkan ke semua</string>
-
     <!-- File picker -->
     <string name="select_folder">Pilih folder</string>
     <string name="select_file">Pilih berkas</string>
@@ -193,26 +184,21 @@
     <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">Konfirmasi pilihan</string>
     <string name="loading">Loading…</string>
-
     <plurals name="items">
         <item quantity="other">%d item</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="other">%d item</item>
     </plurals>
-
     <plurals name="deleting_items">
         <item quantity="other">Menghapus %d item</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d kontak</item>
         <item quantity="other">%d kontak</item>
     </plurals>
-
     <!-- Storages -->
     <string name="select_storage">Pilih penyimpanan</string>
     <string name="internal">Internal</string>
@@ -222,8 +208,7 @@
     <string name="sd_card_usb_same">Jalur kartu SD dan perangkat USB tidak boleh sama</string>
     <string name="app_on_sd_card">Kelihatannya anda memasang aplikasi ini di kartu SD, sehingga widget tidak tersedia. Anda tidak akan melihatnya di daftar widget yang tersedia.
         Ini adalah keterbatasan sistem, jika anda ingin menggunakan widget, anda harus memindahkan aplikasi ke penyimpanan internal.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
-
+  <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Properti</string>
     <string name="path">Jalur</string>
@@ -243,7 +228,6 @@
     <string name="song_title">Judul lagu</string>
     <string name="gps_coordinates">Koordinat GPS</string>
     <string name="altitude">Ketinggian</string>
-
     <!-- Color customization -->
     <string name="background_color">Warna latar belakang</string>
     <string name="text_color">Warna teks</string>
@@ -274,7 +258,6 @@
             Silakan beli <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> untuk membuka fungsi ini dan mendukung pengembangan. Terima kasih!
         ]]>
     </string>
-
     <!-- Themes -->
     <string name="light_theme">Terang</string>
     <string name="dark_theme">Gelap</string>
@@ -285,11 +268,9 @@
     <string name="black_white">Hitam &amp; Putih</string>
     <string name="custom">Khusus</string>
     <string name="shared">Saling Berbagi</string>
-
     <!-- What's new -->
     <string name="whats_new">Apa yang baru</string>
     <string name="whats_new_disclaimer">* hanya perubahan besar yang ditampilkan di sini, selalu ada juga peningkatan kecil</string>
-
     <!-- Actionbar items -->
     <string name="delete">Hapus</string>
     <string name="remove">Buang</string>
@@ -319,10 +300,9 @@
     <string name="move_to_bottom">Move to the bottom</string>
     <string name="pin_item">Pin item</string>
     <string name="unpin_item">Unpin item</string>
-    <string name="send_sms">Send SMS</string>
+    <string name="send_sms">Kirim SMS</string>
     <string name="send_email">Send email</string>
     <string name="call">Call</string>
-
     <!-- Sorting -->
     <string name="sort_by">Urutkan menurut</string>
     <string name="name">Nama</string>
@@ -345,11 +325,12 @@
     <string name="full_name">Full name</string>
     <string name="use_custom_sorting">Use custom sorting</string>
     <string name="change_order">Change order</string>
-
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Apakah anda yakin ingin melanjutkan penghapusan?</string>
-    <string name="deletion_confirmation">Apakah anda yakin ingin menghapus %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Anda yakin ingin memindahkan %s ke Keranjang Sampah?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">Apakah anda yakin ingin menghapus %s?</string>
+    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Anda yakin ingin memindahkan %s ke Keranjang Sampah?</string>
+    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Apakah anda yakin ingin menghapus item ini?</string>
     <string name="are_you_sure_recycle_bin">Apakah anda yakin ingin memindahkan item ini ke Keranjang Sampah?</string>
     <string name="do_not_ask_again">Jangan tanya lagi untuk sesi ini</string>
@@ -357,11 +338,9 @@
     <string name="yes">Ya</string>
     <string name="no">Tidak</string>
     <string name="maybe">Mungkin</string>
-
     <plurals name="delete_warning">
         <item quantity="other">PERHATIAN: Anda akan menghapus %d folder</item>
     </plurals>
-
     <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">Masukkan PIN</string>
@@ -387,7 +366,6 @@
     <string name="lock_folder">Kunci folder</string>
     <string name="unlock_folder">Buka kunci folder</string>
     <string name="lock_folder_notice">Perlindungan ini hanya bekerja di aplikasi ini saja, tidak dibuat untuk menggantikan fitur enkripsi folder keseluruhan sistem.</string>
-
     <!-- Times -->
     <string name="yesterday">Kemarin</string>
     <string name="today">Hari ini</string>
@@ -400,7 +378,6 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
-
     <plurals name="seconds">
         <item quantity="other">%d detik</item>
     </plurals>
@@ -422,7 +399,6 @@
     <plurals name="years">
         <item quantity="other">%d tahun</item>
     </plurals>
-
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="other">%d detik</item>
@@ -445,7 +421,6 @@
     <plurals name="in_years">
         <item quantity="other">%d tahun</item>
     </plurals>
-
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="other">%d detik sebelumnya</item>
@@ -468,7 +443,6 @@
     <plurals name="years_before">
         <item quantity="other">%d years before</item>
     </plurals>
-
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="other">%d detik</item>
@@ -491,14 +465,12 @@
     <plurals name="by_years">
         <item quantity="other">%d tahun</item>
     </plurals>
-
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Sisa waktu hingga alarm berbunyi:\n%s</string>
     <string name="reminder_triggers_in">Sisa waktu hingga pengingat muncul:\n%s</string>
     <string name="alarm_warning">Silakan pastikan alarm berfungsi dengan baik sebelum menggunakannya. Bisa saja terjadi salah tindakan karena keterbatasan sistem terkait penghematan baterai.</string>
     <string name="reminder_warning">Silakan pastikan pengingat berfungsi dengan baik sebelum menggunakannya. Bisa saja terjadi salah tindakan karena keterbatasan sistem terkait penghematan baterai.</string>
     <string name="notifications_disabled">Notifikasi aplikasi ini dinonaktifkan. Silakan buka pengaturan perangkat untuk mengaktifkannya.</string>
-
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
     <string name="snooze">Tunda</string>
@@ -511,7 +483,6 @@
     <string name="no_sound">Tidak ada suara</string>
     <string name="during_day_at_hh_mm">During the day at hh:mm</string>
     <string name="during_day_at">During the day at %02d:%02d</string>
-
     <!-- Settings -->
     <string name="settings">Pengaturan</string>
     <string name="purchase_simple_thank_you">Beli Simple Thank You</string>
@@ -555,7 +526,6 @@
     <string name="start_name_with_surname">Nama dimulai dengan nama belakang</string>
     <string name="clear_cache">Clear cache</string>
     <string name="show_call_confirmation_dialog">Tampilkan dialog konfirmasi panggilan sebelum melakukan panggilan</string>
-
     <!-- Setting sections -->
     <string name="visibility">Visibilitas</string>
     <string name="security">Keamanan</string>
@@ -570,7 +540,6 @@
     <string name="main_screen">Main screen</string>
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
-
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Kelola tab yang ditampilkan</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
@@ -581,7 +550,6 @@
     <string name="last_used_tab">Last used one</string>
     <string name="files_tab">Files</string>
     <string name="recent_files_tab">File terbaru</string>
-
     <!-- Recycle Bin -->
     <string name="restore_this_file">Pulihkan berkas ini</string>
     <string name="restore_selected_files">Pulihkan berkas yang dipilih</string>
@@ -593,11 +561,9 @@
     <string name="moving_recycle_bin_items_disabled">Memindahkan item Keranjang Sampah dinonaktifkan, silakan gunakan fitur Pemulihan</string>
     <string name="show_the_recycle_bin">Tampilkan Keranjang Sampah</string>
     <string name="hide_the_recycle_bin">Sembunyikan Keranjang Sampah</string>
-
     <plurals name="moving_items_into_bin">
         <item quantity="other">Memindahkan %d item ke Keranjang Sampah</item>
     </plurals>
-
     <!-- Import / Export -->
     <string name="importing">Mengimpor…</string>
     <string name="exporting">Mengekspor…</string>
@@ -610,13 +576,11 @@
     <string name="no_entries_for_importing">Tidak ditemukan entri untuk bisa diimpor</string>
     <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
     <string name="no_entries_for_exporting">Tidak ditemukan entri untuk bisa diekspor</string>
-
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Sepertinya anda memiliki perangkat USB di perangkat anda. Untuk memastikan berkas ditampilkan dengan benar, anda perlu memberi izin akses tambahan.</string>
     <string name="confirm_usb_storage_access_text">Silakan pilih folder root perangkat USB di layar berikutnya untuk memberi izin akses</string>
     <string name="wrong_root_selected_usb">Folder yang dipilih salah, silakan pilih folder root perangkat USB</string>
-
     <!-- Dates -->
     <string name="january">Januari</string>
     <string name="february">Februari</string>
@@ -630,7 +594,6 @@
     <string name="october">Oktober</string>
     <string name="november">November</string>
     <string name="december">Desember</string>
-
     <!-- in January -->
     <string name="in_january">pada Januari</string>
     <string name="in_february">pada Februari</string>
@@ -644,7 +607,6 @@
     <string name="in_october">pada Oktober</string>
     <string name="in_november">pada November</string>
     <string name="in_december">pada Desember</string>
-
     <string name="monday">Senin</string>
     <string name="tuesday">Selasa</string>
     <string name="wednesday">Rabu</string>
@@ -652,7 +614,6 @@
     <string name="friday">Jumat</string>
     <string name="saturday">Sabtu</string>
     <string name="sunday">Minggu</string>
-
     <string name="monday_letter">S</string>
     <string name="tuesday_letter">S</string>
     <string name="wednesday_letter">R</string>
@@ -660,7 +621,6 @@
     <string name="friday_letter">J</string>
     <string name="saturday_letter">S</string>
     <string name="sunday_letter">M</string>
-
     <string name="monday_short">Sen</string>
     <string name="tuesday_short">Sel</string>
     <string name="wednesday_short">Rab</string>
@@ -668,7 +628,6 @@
     <string name="friday_short">Jum</string>
     <string name="saturday_short">Sab</string>
     <string name="sunday_short">Min</string>
-
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
     <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
@@ -676,7 +635,6 @@
     <string name="more_info">Info selengkapnya</string>
     <string name="upgrade">Tingkatkan</string>
     <string name="upgrade_calendar">Anda perlu memindahkan acara yang disimpan lokal secara manual dengan cara mengekspornya ke berkas .ics, lalu mengimpornya kembali. Anda bisa menemukan tombol ekspor/impor di layar menu utama.</string>
-
     <!-- About -->
     <string name="about">Tentang</string>
     <string name="website">Website</string>
@@ -700,7 +658,7 @@
     <string name="other">Other</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="about_footer">Made with ❤️ in Slovakia</string>
     <string name="additional_info">Info tambahan</string>
     <string name="app_version">Versi aplikasi: %s</string>
     <string name="device_os">OS perangkat: %s</string>
@@ -727,7 +685,6 @@
             The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
         ]]>
     </string>
-
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -740,7 +697,6 @@
             Terima kasih
         ]]>
     </string>
-
     <string name="simple_app_launcher">Simple App Launcher</string>
     <string name="simple_calculator">Simple Calculator</string>
     <string name="simple_calendar">Simple Calendar</string>
@@ -758,7 +714,6 @@
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
-
     <string name="app_launcher_short">App Launcher</string>
     <string name="calculator_short">Calculator</string>
     <string name="calendar_short">Calendar</string>
@@ -776,13 +731,11 @@
     <string name="sms_messenger_short">SMS Messenger</string>
     <string name="thank_you_short">Thank You</string>
     <string name="voice_recorder_short">Voice Recorder</string>
-
     <string name="sideloaded_app">
         <![CDATA[
             Sepertinya versi aplikasi anda rusak. Silakan unduh versi original <a href="%s">di sini</a>.
         ]]>
     </string>
-
     <!-- FAQ -->
     <string name="frequently_asked_questions">FAQ</string>
     <string name="before_asking_question">Sebelum anda bertanya, silakan baca</string>
@@ -817,7 +770,6 @@
         want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
     <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
     <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
-
     <!-- Contributors -->
     <string name="contributors">Contributors</string>
     <string name="translation">Translation</string>
@@ -830,7 +782,6 @@
             Thanks to all contributors and other supporters!
         ]]>
     </string>
-
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -875,7 +826,6 @@
     <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
     <string name="translation_chinese_cn">Chinese (Simplified)</string>
     <string name="translation_chinese_tw">Chinese (Traditional)</string>
-
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Dapatkan versi Pro sekarang!</string>
     <string name="why_upgrade_basic_version">Dasar</string>
@@ -884,43 +834,36 @@
     <string name="why_upgrade_no_internet_access">Tanpa akses internet</string>
     <string name="why_upgrade_footer">+ Jaminan Uang Kembali 100%</string>
     <string name="why_upgrade_improved_design">Desain yang ditingkatkan</string>
-
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor foto tingkat lanjut</string>
     <string name="why_upgrade_heic_support">Mendukung jenis file HEIC / HEIF</string>
     <string name="why_upgrade_batch_renaming">Mengganti nama beberapa file tingkat lanjut</string>
     <string name="why_upgrade_folder_locking">Penguncian folder individu</string>
     <string name="why_upgrade_printing_support">Mendukung pencetakan</string>
-
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Dukungan zona waktu</string>
     <string name="why_upgrade_attendees_emails">Pengingat email dan peserta</string>
     <string name="why_upgrade_easy_event_importing">Mengimpor acara dengan mudah</string>
     <string name="why_upgrade_new_widgets">Widget baru</string>
-
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Peningkatan fitur penggabungan kontak duplikat</string>
     <string name="why_upgrade_font_size_customization">Kustomisasi ukuran font</string>
     <string name="why_upgrade_private_contact_sharing">Berbagi kontak pribadi opsional dalam aplikasi kami</string>
     <string name="why_upgrade_customizable_contact_ringtones">Nada dering kontak yang dapat disesuaikan</string>
     <string name="why_upgrade_contact_filtering">Pemfilteran kontak</string>
-
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Daftar periksa</string>
     <string name="why_upgrade_different_note_per_widget">Catatan dan warna yang berbeda setiap widget</string>
     <string name="why_upgrade_note_locking">Note locking</string>
-
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Kustomisasi format tanggal dan waktu</string>
     <string name="why_upgrade_shortcuts">Pintasan layar beranda</string>
     <string name="why_upgrade_file_compression">Mendukung kompresi file</string>
     <string name="why_upgrade_recents_tab">Tab dengan file terbaru</string>
-
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Kustomisasi warna latar belakang</string>
     <string name="why_upgrade_file_importing">Mendukung pengimporan file</string>
     <string name="why_upgrade_zooming">Memperbesar</string>
-
     <!-- License -->
     <string name="notice">Aplikasi ini menggunakan pustaka pihak ketiga berikut untuk mempermudah pekerjaan. Terima kasih.</string>
     <string name="third_party_licences">Lisensi pihak ketiga</string>
@@ -953,11 +896,9 @@
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
     <string name="apng_title">APNG Android (animated WebP support)</string>
-
     <!-- Google Play listing -->
     <string name="deprecated_app">TIDAK DIDUKUNG: Versi aplikasi ini tidak lagi dikembangkan, dapatkan versi Pro di https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Jangan lupa, jika anda untuk mencopot aplikasi berbayar manapun dalam waktu 2 jam, uang anda akan otomatis dikembalikan. Jika anda ingin pengembalian dilakukan lain waktu, cukup hubungi hello@simplemobiletools.com dan anda akan mendapatkannya. Mempermudah anda untuk mencobanya terlebih dahulu. :)</string>
-
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
 </resources>
