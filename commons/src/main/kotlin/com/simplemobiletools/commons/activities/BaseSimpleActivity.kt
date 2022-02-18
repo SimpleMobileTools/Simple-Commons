@@ -223,11 +223,31 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
         val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
 
-        if (requestCode == OPEN_DOCUMENT_TREE_FOR_ANDROID_DATA_OR_OBB) {
+        if (requestCode == OPEN_DOCUMENT_TREE_FOR_DELETE_SDK_30) {
+            if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+
+                val treeUri = resultData.data
+                val checkedUri = createFirstParentTreeUri(checkedDocumentPath)
+
+                if (treeUri != checkedUri) {
+                    toast(getString(R.string.wrong_folder_selected, checkedDocumentPath.getFirstParentPath(this)))
+                    return
+                }
+
+                val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+                applicationContext.contentResolver.takePersistableUriPermission(treeUri, takeFlags)
+                funAfterSAFPermission?.invoke(true)
+                funAfterSAFPermission = null
+            } else {
+                funAfterSAFPermission?.invoke(false)
+            }
+
+        } else if (requestCode == OPEN_DOCUMENT_TREE_FOR_ANDROID_DATA_OR_OBB) {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
                 if (isProperAndroidRoot(checkedDocumentPath, resultData.data!!)) {
                     if (resultData.dataString == baseConfig.OTGTreeUri || resultData.dataString == baseConfig.sdTreeUri) {
-                        toast(R.string.wrong_root_selected)
+                        val pathToSelect = createAndroidDataOrObbPath(checkedDocumentPath)
+                        toast(getString(R.string.wrong_folder_selected, pathToSelect))
                         return
                     }
 
@@ -239,7 +259,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     funAfterSAFPermission?.invoke(true)
                     funAfterSAFPermission = null
                 } else {
-                    toast(R.string.wrong_root_selected)
+                    toast(getString(R.string.wrong_folder_selected, createAndroidDataOrObbPath(checkedDocumentPath)))
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         if (isRPlus()) {
                             putExtra(DocumentsContract.EXTRA_INITIAL_URI, createAndroidDataOrObbUri(checkedDocumentPath))
@@ -396,6 +416,19 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             callback(true)
             false
         } else if (isShowingSAFDialog(path) || isShowingOTGDialog(path)) {
+            funAfterSAFPermission = callback
+            true
+        } else {
+            callback(true)
+            false
+        }
+    }
+
+    fun handleSAFDeleteSdk30Dialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
+        return if (!packageName.startsWith("com.simplemobiletools")) {
+            callback(true)
+            false
+        } else if (isShowingSAFDialogForDeleteSdk30(path)) {
             funAfterSAFPermission = callback
             true
         } else {

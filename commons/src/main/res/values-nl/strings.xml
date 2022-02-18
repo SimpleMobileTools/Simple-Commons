@@ -210,7 +210,8 @@
     <string name="root">Hoofdmap</string>
     <string name="wrong_root_selected">Verkeerde map: kies de hoofdmap van de SD-kaart</string>
     <string name="sd_card_usb_same">Paden van SD-kaart en USB-apparaat kunnen niet gelijk zijn</string>
-    <string name="app_on_sd_card">Het lijkt erop dat de app op een SD-kaart is geïnstalleerd, waardoor de app-widgets niet beschikbaar zijn. Ze zijn niet eens zichtbaar in de lijst met beschikbare widgets. Het is een systeembeperking, dus om de widgets te gebruiken moet de app teruggezet worden naar de interne opslag.</string>
+    <string name="app_on_sd_card">Het lijkt erop dat de app is geïnstalleerd op een SD-kaart. Dit zorgt ervoor dat Android de widgets van deze app blokkeert. Dit is een beperking van het systeem en alleen het verplaatsen van de app naar het interne geheugen zal de widgets beschikbaar maken.</string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Eigenschappen</string>
     <string name="path">Pad</string>

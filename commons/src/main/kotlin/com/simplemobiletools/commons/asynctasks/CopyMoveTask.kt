@@ -276,7 +276,7 @@ class CopyMoveTask(
                 if (!copyOnly) {
                     inputStream.close()
                     out?.close()
-                    activity.deleteFileBg(source)
+                    activity.deleteFileBg(source, isDeletingMultipleFiles = false)
                     activity.deleteFromMediaStore(source.path)
                 }
             }

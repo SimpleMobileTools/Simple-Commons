@@ -155,11 +155,23 @@ fun Context.isPathOnInternalStorage(path: String) = internalStoragePath.isNotEmp
 
 private const val ANDROID_DATA_DIR = "/Android/data/"
 private const val ANDROID_OBB_DIR = "/Android/obb/"
+private const val DOWNLOAD_DIR = "Download"
 val DIRS_ACCESSIBLE_ONLY_WITH_SAF = listOf(ANDROID_DATA_DIR, ANDROID_OBB_DIR)
+private val DIRS_INACCESSIBLE_WITH_SAF_SDK_30 = listOf(DOWNLOAD_DIR)
 
 fun Context.getSAFOnlyDirs(): List<String> {
     return DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$internalStoragePath$it" }
 }
+
+fun Context.isAccessibleWithSAFSdk30(path: String): Boolean {
+    val firstParentPath = path.getFirstParentPath(this)
+    val firstParentDir = path.getFirstParentDirName(this)
+    return isRPlus() && firstParentPath != path &&
+        DIRS_INACCESSIBLE_WITH_SAF_SDK_30.all {
+            firstParentDir != it
+        }
+}
+
 
 fun Context.isSAFOnlyRoot(path: String): Boolean {
     return getSAFOnlyDirs().any { "${path.trimEnd('/')}/".startsWith(it) }
@@ -185,6 +197,11 @@ fun Context.hasProperStoredTreeUri(isOTG: Boolean): Boolean {
         }
     }
     return hasProperUri
+}
+
+fun Context.hasProperStoredFirstParentUri(path: String): Boolean {
+    val firstParentUri = createFirstParentTreeUri(path)
+    return contentResolver.persistedUriPermissions.any { it.uri.toString() == firstParentUri.toString() }
 }
 
 fun Context.hasProperStoredAndroidTreeUri(path: String): Boolean {
@@ -237,13 +254,64 @@ fun Context.createDocumentUri(fullPath: String): Uri {
     return DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
 }
 
-fun Context.createAndroidDataOrObbUri(fullPath: String): Uri {
-    val path = if (isAndroidDataDir(fullPath)) {
+fun Context.createFirstParentDocumentUri(fullPath: String): Uri {
+    val storageId = if (fullPath.startsWith('/')) {
+        when {
+            fullPath.startsWith(internalStoragePath) -> "primary"
+            else -> fullPath.substringAfter("/storage/", "").substringBefore('/')
+        }
+    } else {
+        fullPath.substringBefore(':', "").substringAfterLast('/')
+    }
+    val rootParentDirName = fullPath.getFirstParentDirName(this)
+    val treeUri = DocumentsContract.buildTreeDocumentUri(EXTERNAL_STORAGE_PROVIDER_AUTHORITY, "$storageId:")
+    val documentId = "${storageId}:$rootParentDirName"
+    return DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
+}
+
+fun Context.createFirstParentTreeUri(fullPath: String): Uri {
+    val storageId = if (fullPath.startsWith('/')) {
+        when {
+            fullPath.startsWith(internalStoragePath) -> "primary"
+            else -> fullPath.substringAfter("/storage/", "").substringBefore('/')
+        }
+    } else {
+        fullPath.substringBefore(':', "").substringAfterLast('/')
+    }
+    val rootParentDirName = fullPath.getFirstParentDirName(this)
+    val firstParentId = "$storageId:$rootParentDirName"
+    return DocumentsContract.buildTreeDocumentUri(EXTERNAL_STORAGE_PROVIDER_AUTHORITY, firstParentId)
+}
+
+fun Context.createDocumentUriUsingFirstParentTreeUri(fullPath: String): Uri {
+    val storageId = if (fullPath.startsWith('/')) {
+        when {
+            fullPath.startsWith(internalStoragePath) -> "primary"
+            else -> fullPath.substringAfter("/storage/", "").substringBefore('/')
+        }
+    } else {
+        fullPath.substringBefore(':', "").substringAfterLast('/')
+    }
+    val relativePath = when {
+        fullPath.startsWith(internalStoragePath) -> fullPath.substring(internalStoragePath.length).trim('/')
+        else -> fullPath.substringAfter(storageId).trim('/')
+    }
+    val treeUri = createFirstParentTreeUri(fullPath)
+    val documentId = "${storageId}:$relativePath"
+    return DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
+}
+
+fun Context.createAndroidDataOrObbPath(fullPath: String): String {
+    return if (isAndroidDataDir(fullPath)) {
         fullPath.getBasePath(this).trimEnd('/').plus(ANDROID_DATA_DIR)
     } else {
         fullPath.getBasePath(this).trimEnd('/').plus(ANDROID_OBB_DIR)
     }
+}
 
+
+fun Context.createAndroidDataOrObbUri(fullPath: String): Uri {
+    val path = createAndroidDataOrObbPath(fullPath)
     return createDocumentUri(path)
 }
 
@@ -750,6 +818,26 @@ fun Context.renameAndroidSAFDocument(oldPath: String, newPath: String): Boolean 
     } catch (e: IllegalStateException) {
         showErrorToast(e)
         false
+    }
+}
+
+fun Context.deleteDocumentWithSAFSdk30(fileDirItem: FileDirItem, allowDeleteFolder: Boolean, callback: ((wasSuccess: Boolean) -> Unit)?) {
+    try {
+        var fileDeleted = false
+        if (fileDirItem.isDirectory.not() || allowDeleteFolder) {
+            val firstParentTreeUri = createFirstParentTreeUri(fileDirItem.path)
+            val fileUri = createDocumentUriUsingFirstParentTreeUri(fileDirItem.path)
+            fileDeleted = DocumentsContract.deleteDocument(contentResolver, fileUri)
+        }
+
+        if (fileDeleted) {
+            deleteFromMediaStore(fileDirItem.path)
+            callback?.invoke(true)
+        }
+
+    } catch (e: Exception) {
+        callback?.invoke(false)
+        showErrorToast(e)
     }
 }
 

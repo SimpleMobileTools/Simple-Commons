@@ -37,6 +37,19 @@ fun String.getBasePath(context: Context): String {
     }
 }
 
+fun String.getFirstParentDirName(context: Context): String {
+    val basePath = getBasePath(context)
+    val pathWithoutBasePath = substring(basePath.length + 1)
+    return pathWithoutBasePath.substringBefore("/")
+}
+
+fun String.getFirstParentPath(context: Context): String {
+    val basePath = getBasePath(context)
+    val pathWithoutBasePath = substring(basePath.length + 1)
+    val firstParentPath = pathWithoutBasePath.substringBefore("/")
+    return "$basePath/$firstParentPath"
+}
+
 fun String.isAValidFilename(): Boolean {
     val ILLEGAL_CHARACTERS = charArrayOf('/', '\n', '\r', '\t', '\u0000', '`', '?', '*', '\\', '<', '>', '|', '\"', ':')
     ILLEGAL_CHARACTERS.forEach {

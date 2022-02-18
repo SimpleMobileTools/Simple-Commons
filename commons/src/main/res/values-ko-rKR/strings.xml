@@ -223,6 +223,7 @@
     <string name="wrong_root_selected">잘못된 폴더가 선택되었습니다. SD 카드의 루트 폴더를 선택하세요.</string>
     <string name="sd_card_usb_same">SD카드와 USB 장치의 경로가 중복되었습니다.</string>
     <string name="app_on_sd_card">시스템 제한으로 SD카드에 설치한 앱은 위젯을 사용할 수 없습니다. 위젯을 사용하시려면 내장 메모리에 앱을 옮겨 주시기 바랍니다</string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
 
     <!-- File properties -->
     <string name="properties">속성</string>

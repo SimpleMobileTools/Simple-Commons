@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.TimePickerDialog
 import android.content.*
@@ -27,7 +28,6 @@ import androidx.biometric.BiometricPrompt
 import androidx.biometric.auth.AuthPromptCallback
 import androidx.biometric.auth.AuthPromptHost
 import androidx.biometric.auth.Class2BiometricAuthPrompt
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.documentfile.provider.DocumentFile
 import androidx.fragment.app.FragmentActivity
 import com.simplemobiletools.commons.R
@@ -133,6 +133,39 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
 
                         try {
                             startActivityForResult(this, OPEN_DOCUMENT_TREE_SD)
+                            checkedDocumentPath = path
+                        } catch (e: Exception) {
+                            toast(R.string.unknown_error_occurred)
+                        }
+                    }
+                }
+            }
+        }
+        true
+    } else {
+        false
+    }
+}
+
+@SuppressLint("InlinedApi")
+fun BaseSimpleActivity.isShowingSAFDialogForDeleteSdk30(path: String): Boolean {
+    return if (!hasProperStoredFirstParentUri(path)) {
+        runOnUiThread {
+            if (!isDestroyed && !isFinishing) {
+                WritePermissionDialog(this, false) {
+                    Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
+                        putExtra("android.content.extra.SHOW_ADVANCED", true)
+                        putExtra(DocumentsContract.EXTRA_INITIAL_URI, createFirstParentDocumentUri(path))
+                        try {
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_DELETE_SDK_30)
+                            checkedDocumentPath = path
+                            return@apply
+                        } catch (e: Exception) {
+                            type = "*/*"
+                        }
+
+                        try {
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_DELETE_SDK_30)
                             checkedDocumentPath = path
                         } catch (e: Exception) {
                             toast(R.string.unknown_error_occurred)
@@ -575,11 +608,11 @@ fun BaseSimpleActivity.deleteFolderBg(fileDirItem: FileDirItem, deleteMediaOnly:
 
         val files = filesArr.toMutableList().filter { !deleteMediaOnly || it.isMediaFile() }
         for (file in files) {
-            deleteFileBg(file.toFileDirItem(applicationContext), false) { }
+            deleteFileBg(file.toFileDirItem(applicationContext), allowDeleteFolder = false, isDeletingMultipleFiles = false) { }
         }
 
         if (folder.listFiles()?.isEmpty() == true) {
-            deleteFileBg(fileDirItem, true) { }
+            deleteFileBg(fileDirItem, allowDeleteFolder = true, isDeletingMultipleFiles = false) { }
         }
     }
     runOnUiThread {
@@ -609,14 +642,14 @@ fun BaseSimpleActivity.deleteFilesBg(files: List<FileDirItem>, allowDeleteFolder
 
         val failedFileDirItems = ArrayList<FileDirItem>()
         files.forEachIndexed { index, file ->
-            deleteFileBg(file, allowDeleteFolder) {
+            deleteFileBg(file, allowDeleteFolder, true) {
                 if (it) {
                     wasSuccess = true
                 } else {
                     failedFileDirItems.add(file)
                 }
 
-                if (index == files.size - 1) {
+                if (index == files.lastIndex) {
                     if (isRPlus() && failedFileDirItems.isNotEmpty()) {
                         val fileUris = getFileUrisFromFileDirItems(failedFileDirItems).second
                         deleteSDK30Uris(fileUris) { success ->
@@ -635,13 +668,23 @@ fun BaseSimpleActivity.deleteFilesBg(files: List<FileDirItem>, allowDeleteFolder
     }
 }
 
-fun BaseSimpleActivity.deleteFile(fileDirItem: FileDirItem, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
+fun BaseSimpleActivity.deleteFile(
+    fileDirItem: FileDirItem,
+    allowDeleteFolder: Boolean = false,
+    isDeletingMultipleFiles: Boolean,
+    callback: ((wasSuccess: Boolean) -> Unit)? = null
+) {
     ensureBackgroundThread {
-        deleteFileBg(fileDirItem, allowDeleteFolder, callback)
+        deleteFileBg(fileDirItem, allowDeleteFolder, isDeletingMultipleFiles, callback)
     }
 }
 
-fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null) {
+fun BaseSimpleActivity.deleteFileBg(
+    fileDirItem: FileDirItem,
+    allowDeleteFolder: Boolean = false,
+    isDeletingMultipleFiles: Boolean,
+    callback: ((wasSuccess: Boolean) -> Unit)? = null,
+) {
     val path = fileDirItem.path
     if (isRestrictedSAFOnlyRoot(path)) {
         deleteAndroidSAFDirectory(path, allowDeleteFolder, callback)
@@ -679,13 +722,21 @@ fun BaseSimpleActivity.deleteFileBg(fileDirItem: FileDirItem, allowDeleteFolder:
                             trySAFFileDelete(fileDirItem, allowDeleteFolder, callback)
                         }
                     }
-                } else if (isRPlus()) {
+                } else if (isAccessibleWithSAFSdk30(path)) {
+                    handleSAFDeleteSdk30Dialog(path) {
+                        if (it) {
+                            deleteDocumentWithSAFSdk30(fileDirItem, allowDeleteFolder, callback)
+                        }
+                    }
+                } else if (isRPlus() && !isDeletingMultipleFiles) {
                     val fileUris = getFileUrisFromFileDirItems(arrayListOf(fileDirItem)).second
                     deleteSDK30Uris(fileUris) { success ->
                         runOnUiThread {
                             callback?.invoke(success)
                         }
                     }
+                } else {
+                    callback?.invoke(false)
                 }
             }
         }
@@ -727,7 +778,7 @@ fun Activity.rescanPaths(paths: List<String>, callback: (() -> Unit)? = null) {
     applicationContext.rescanPaths(paths, callback)
 }
 
-fun BaseSimpleActivity.renameFile(
+fun BaseSimpleActivity.renameFile (
     oldPath: String,
     newPath: String,
     isRenamingMultipleFiles: Boolean,
