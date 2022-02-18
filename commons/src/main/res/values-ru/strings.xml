@@ -221,7 +221,7 @@
     <string name="sd_card_usb_same">Пути к SD-карте и USB-накопителю не могут быть одинаковыми</string>
     <string name="app_on_sd_card">Похоже, что приложение у вас установлено на SD-карту, а это делает виджеты приложений недоступными. Вы даже не увидите их в списке доступных виджетов.
         Это системное ограничение, поэтому, если хотите использовать виджеты, вам нужно переместить приложение обратно во внутреннюю память.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select the path %s</string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Свойства</string>
     <string name="path">Расположение</string>

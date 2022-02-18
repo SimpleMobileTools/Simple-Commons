@@ -226,7 +226,7 @@
     <string name="sd_card_usb_same">SD txartelaren eta USB gailuaren bideak ezin dira berdinak izan</string>
     <string name="app_on_sd_card">Badirudi aplikazioa SD txartel batean instalatu duzula, horrek aplikazioen widgetak erabilgarri egotea ekiditen du. Ezingo dituzu erabilgarri dauden widgeten zerrendan ikusi.
         Sistemaren muga da, beraz, widgetak erabili nahi badituzu, aplikazioa barneko biltegiratzera mugitu behar duzu.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select the path %s</string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
 
     <!-- File properties -->
     <string name="properties">Propietateak</string>

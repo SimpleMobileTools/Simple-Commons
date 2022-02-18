@@ -211,7 +211,7 @@
     <string name="sd_card_usb_same">I percorsi della scheda SD e del dispositivo USB non possono essere uguali</string>
     <string name="app_on_sd_card">Sembra che l\'app sia installata nella scheda SD, ciò impedisce l\'uso dei widget dell\'app. Non li vedrai neppure nell\'elenco dei widget disponibili.
         È una limitazione di sistema, quindi se si vuole utilizzare i widget, si deve spostare l\'app nella memoria interna.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select the path %s</string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Proprietà</string>
     <string name="path">Percorso</string>

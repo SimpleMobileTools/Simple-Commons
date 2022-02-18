@@ -195,7 +195,7 @@
     <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">Potvrdit výběr</string>
     <string name="loading">Loading…</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select the path %s</string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
 
     <plurals name="items">
         <item quantity="one">%d položka</item>

@@ -227,7 +227,7 @@
     <string name="sd_card_usb_same">La tarjeta SD y el dispositivo USB no pueden ser los mismos</string>
     <string name="app_on_sd_card">Parece que tienes la aplicación instalada en una tarjeta SD, lo que hace que los widgets de la aplicación no estén disponibles. Ni siquiera los verás en la lista de widgets disponibles.
         Es una limitación del sistema, por lo que si deseas usar los widgets, debes volver a colocar la aplicación en el almacenamiento interno.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select the path %s</string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
 
     <!-- File properties -->
     <string name="properties">Propiedades</string>

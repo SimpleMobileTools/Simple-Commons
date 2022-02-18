@@ -211,7 +211,7 @@
     <string name="sd_card_usb_same">SD kart ve USB cihaz yolları aynı olamaz</string>
     <string name="app_on_sd_card">Uygulama, uygulama widget\'larını kullanılamaz hale getiren bir SD karta yüklenmiş görünüyor. Onları mevcut widget\'lar listesinde bile görmeyeceksiniz.
         Bu bir sistem sınırlamasıdır, bu yüzden widget\'ları kullanmak istiyorsanız, uygulamayı dahili depolama birimine geri taşımalısınız.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select the path %s</string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Özellikler</string>
     <string name="path">Yol</string>

@@ -246,7 +246,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
                 if (isProperAndroidRoot(checkedDocumentPath, resultData.data!!)) {
                     if (resultData.dataString == baseConfig.OTGTreeUri || resultData.dataString == baseConfig.sdTreeUri) {
-                        toast(getString(R.string.wrong_folder_selected, createAndroidDataOrObbPath(checkedDocumentPath)))
+                        val pathToSelect = createAndroidDataOrObbPath(checkedDocumentPath)
+                        toast(getString(R.string.wrong_folder_selected, pathToSelect))
                         return
                     }
 

@@ -161,7 +161,6 @@ fun BaseSimpleActivity.isShowingSAFDialogForDeleteSdk30(path: String): Boolean {
                             checkedDocumentPath = path
                             return@apply
                         } catch (e: Exception) {
-                            e.printStackTrace()
                             type = "*/*"
                         }
 
@@ -169,7 +168,6 @@ fun BaseSimpleActivity.isShowingSAFDialogForDeleteSdk30(path: String): Boolean {
                             startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_DELETE_SDK_30)
                             checkedDocumentPath = path
                         } catch (e: Exception) {
-                            e.printStackTrace()
                             toast(R.string.unknown_error_occurred)
                         }
                     }
