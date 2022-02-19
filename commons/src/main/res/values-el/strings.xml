@@ -185,10 +185,10 @@
     <string name="apply_to_all">Εφαρμογή σε όλα</string>
 
     <!-- File picker -->
-    <string name="select_folder">Επιλέξτε ένα φάκελο</string>
-    <string name="select_file">Επιλέξτε ένα αρχείο</string>
-    <string name="confirm_storage_access_title">Επιβεβαιώστε την πρόσβαση στην εξωτερική αποθήκευση</string>
-    <string name="confirm_folder_access_title">Confirm folder access</string>
+    <string name="select_folder">Επιλογή φακέλου</string>
+    <string name="select_file">Επιλογή αρχείου</string>
+    <string name="confirm_storage_access_title">Επιβεβαίωση πρόσβασης στην Εξωτερική αποθήκευση</string>
+    <string name="confirm_folder_access_title">Επιβεβαίωση πρόσβασης φακέλου</string>
     <string name="confirm_storage_access_text">Επιλέξτε τον ριζικό φάκελο της κάρτας SD στην επόμενη οθόνη, για να επιτρέψετε πρόσβαση εγγραφής</string>
     <string name="confirm_storage_access_text_sd">Εάν δεν βλέπετε την κάρτα SD, δοκιμάστε αυτό</string>
     <string name="confirm_storage_access_android_text">Επιτρέψτε στην εφαρμογή την πρόσβαση στον επιλεγμένο αποθηκευτικό χώρο στην επόμενη οθόνη πατώντας \'Χρήση αυτού του φακέλου\' στο κάτω μέρος.</string>
@@ -253,7 +253,7 @@
     <string name="text_color">Χρώμα κειμένου</string>
     <string name="primary_color">Πρωτεύον χρώμα</string>
     <string name="accent_color_white">Χρώμα έμφασης Λευκού θέματος</string>
-    <string name="accent_color_black_and_white">Χρώμα έμφασης του Μαύρου &amp; Λευκού θέματος</string>
+    <string name="accent_color_black_and_white">Χρώμα έμφασης Μαύρου &amp; Λευκού θέματος</string>
     <string name="foreground_color">Χρώμα προσκηνίου</string>
     <string name="app_icon_color">Χρώμα εικονιδίου εφαρμογής</string>
     <string name="bottom_navigation_bar_color">Χρώμα κάτω γραμμής Πλοήγησης</string>
