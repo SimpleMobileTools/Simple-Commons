@@ -41,7 +41,7 @@
     <string name="no_contacts_found">Geen contacten gevonden</string>
     <string name="request_the_required_permissions">Verplichte rechten vragen</string>
     <string name="no_access_to_contacts">De app heeft geen toegang tot de contactenlijst</string>
-    <string name="no_phone_call_permission">App heeft geen recht om telefoongesprekken te starten, geef dit in de toestelinstellingen</string>
+    <string name="no_phone_call_permission">App heeft geen recht om telefoongesprekken te starten, verleen het in de systeeminstellingen</string>
     <string name="insert_text_here">Tekst hier invoegen</string>
     <string name="call_person">%s bellen</string>
     <string name="zero">Nul</string>
@@ -211,7 +211,7 @@
     <string name="wrong_root_selected">Verkeerde map: kies de hoofdmap van de SD-kaart</string>
     <string name="sd_card_usb_same">Paden van SD-kaart en USB-apparaat kunnen niet gelijk zijn</string>
     <string name="app_on_sd_card">Het lijkt erop dat de app is geïnstalleerd op een SD-kaart. Dit zorgt ervoor dat Android de widgets van deze app blokkeert. Dit is een beperking van het systeem en alleen het verplaatsen van de app naar het interne geheugen zal de widgets beschikbaar maken.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">De verkeerde map is gekozen. Kies de map \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Eigenschappen</string>
     <string name="path">Pad</string>
@@ -249,7 +249,7 @@
     <string name="save">Opslaan</string>
     <string name="discard">Negeren</string>
     <string name="undo_changes">Wijzigingen ongedaan maken</string>
-    <string name="undo_changes_confirmation">Wijzigingen ongedaan maken\?</string>
+    <string name="undo_changes_confirmation">Wijzigingen inderdaad ongedaan maken\?</string>
     <string name="save_before_closing">Er zijn niet-opgeslagen wijzigingen. Opslaan voor afsluiten\?</string>
     <string name="apply_to_all_apps">Kleuren toepassen op al onze apps</string>
     <string name="app_icon_color_warning">WAARSCHUWING: Sommige launchers kunnen niet goed omgaan met aangepaste app-iconen. Als het icoon verdwijnt, probeer de app dan te starten via de Play Store of een widget. Zodra de app gestart is kan het icoon middels de standaardkleur #F57C00 worden hersteld. In het ergste geval dient de app opnieuw te worden geïnstalleerd.</string>
@@ -324,13 +324,13 @@
     <string name="use_custom_sorting">Aangepast sorteren</string>
     <string name="change_order">Volgorde aanpassen</string>
     <!-- Confirmation dialog -->
-    <string name="proceed_with_deletion">Deze items echt verwijderen\?</string>
-    <string name="deletion_confirmation">%s echt verwijderen?</string>
+    <string name="proceed_with_deletion">Deze items verwijderen\?</string>
+    <string name="deletion_confirmation">%s verwijderen\?</string>
     <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">%s echt verplaatsen naar de prullenbak?</string>
+    <string name="move_to_recycle_bin_confirmation">%s verplaatsen naar de prullenbak\?</string>
     <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
-    <string name="are_you_sure_delete">Item echt verwijderen?</string>
-    <string name="are_you_sure_recycle_bin">Item echt verplaatsen naar de prullenbak?</string>
+    <string name="are_you_sure_delete">Item verwijderen\?</string>
+    <string name="are_you_sure_recycle_bin">Item verplaatsen naar de prullenbak\?</string>
     <string name="do_not_ask_again">Onthouden voor deze sessie</string>
     <string name="do_not_show_again">Niet opnieuw weergeven</string>
     <string name="yes">Ja</string>
@@ -348,7 +348,7 @@
     <string name="repeat_pin">Pincode herhalen</string>
     <string name="pattern">Patroon</string>
     <string name="insert_pattern">Patroon invoeren</string>
-    <string name="wrong_pattern">Verkeerde patroon</string>
+    <string name="wrong_pattern">Verkeerd patroon</string>
     <string name="repeat_pattern">Patroon herhalen</string>
     <string name="biometrics">Biometrie</string>
     <string name="fingerprint">Vingerafdruk</string>
@@ -496,8 +496,8 @@
     <string name="alarm_goes_off_in">Het alarm zal afgaan over\n%s</string>
     <string name="reminder_triggers_in">De herinnering zal worden getoond over\n%s</string>
     <string name="alarm_warning">Eerst controleren of het alarm goed werkt. Er kunnen zich problemen voordoen door de batterijbesparing van Android.</string>
-    <string name="reminder_warning">Eerst controleren of de herinneringen goed werken. Er kunnen zich problemen voordoen door de batterijbesparing van Android.</string>
-    <string name="notifications_disabled">Meldingen van deze app zijn uitgeschakeld. Inschakelen in de instellingen van het toestel is vereist.</string>
+    <string name="reminder_warning">Kijk eerst of de herinneringen goed werken alvorens er op te vertrouwen. Controleer de Android batterij- en meldingsinstellingen en kijk of niets de herinneringen blokkeert, of dat de app op de achtergrond wordt gestopt.</string>
+    <string name="notifications_disabled">Meldingen van deze app zijn uitgeschakeld. Ga naar de systeeminstellingen voor deze app om ze in te schakelen.</string>
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
     <string name="snooze">Sluimeren</string>
@@ -583,7 +583,7 @@
     <string name="restore_all_files">Alle bestanden terugzetten</string>
     <string name="recycle_bin_emptied">Prullenbak is geleegd</string>
     <string name="files_restored_successfully">Bestanden zijn teruggezet</string>
-    <string name="empty_recycle_bin_confirmation">Prullenbak echt leegmaken\? De bestanden zullen permanent verwijderd worden.</string>
+    <string name="empty_recycle_bin_confirmation">Prullenbak inderdaad leegmaken\? De bestanden zullen permanent verwijderd worden.</string>
     <string name="recycle_bin_empty">Prullenbak is leeg</string>
     <string name="moving_recycle_bin_items_disabled">Items uit de prullenbak verplaatsen is niet toegestaan. Gebruik de opdracht Herstellen.</string>
     <string name="show_the_recycle_bin">De prullenbak tonen</string>
@@ -787,7 +787,7 @@
     <string name="faq_5_title_commons">Kan ik verwijderde bestanden terugzetten\?</string>
     <string name="faq_5_text_commons">Niet als de bestanden daadwerkelijk zijn verwijderd. Bestanden kunnen worden teruggezet als de prullenbak is ingeschakeld (dat is standaard het geval, zie Instellingen).</string>
     <string name="faq_6_title_commons">Het icoon voor de app is verdwenen uit mijn launcher. Wat moet ik doen\?</string>
-    <string name="faq_6_text_commons">Dit wordt veroorzaakt doordat de launcher het aanpassen van pictogrammen niet goed ondersteunt. Probeer de app te starten via Google Play of een widget, indien beschikbaar. Eenmaal gelanceerd, gewoon het standaard oranje pictogram #F57C00 terugzetten. In het ergste geval dient de app opnieuw te worden geïnstallereerd.</string>
+    <string name="faq_6_text_commons">Dit wordt veroorzaakt doordat de launcher het aanpassen van pictogrammen niet goed ondersteunt. Probeer de app te starten via Google Play of een widget, indien beschikbaar. Zodra de app gestart is, kan het icoon met het kiezen van de oranje standaardkleur worden teruggezet. In het ergste geval dient de app opnieuw te worden geïnstalleerd.</string>
     <string name="faq_7_title_commons">Het geld is afgeschreven van mijn rekening, maar ik kan de app nog niet downloaden. Wat moet ik doen?</string>
     <string name="faq_7_text_commons">Betalingen worden verwerkt door Google, maar dit systeem vertoont soms wat problemen. Leeg de cache van de Google Play Store app en start daarna het apparaat opnieuw. Probeer vervolgens nogmaals de app te downloaden.</string>
     <string name="faq_8_title_commons">Waarom zou ik upgraden naar de Pro-versie?</string>
@@ -798,7 +798,7 @@
     <string name="faq_9_text_commons">Dit kan op verschillende manieren. De eerste is door met een lange druk op een enkel item de selectiemodus in te schakelen, waarna kort klikken op andere items de selectie zal uitbreiden. De tweede manier is vergelijkbaar met het selecteren van items op een PC met de muis:
         druk lang op een item en sleep vervolgens over andere items om ook die te selecteren. De derde manier is door lang te drukken op het eerste item en vervolgens ook lang te drukken op het laatste item, waarna alle items ertussen zullen worden geselecteerd. Om alle
         items te selecteren kan na het lang drukken op een item geklikt worden op de teller in de linkerbovenhoek. Dit zal alle items selecteren of de gehele selectie ongedaan maken.</string>
-    <string name="faq_10_title_commons">Ik heb de app aangeschaft, maar ik kan deze niet downloaden via een ander apparaat.</string>
+    <string name="faq_10_title_commons">Ik heb de app aangeschaft, maar ik kan deze niet downloaden op een ander toestel.</string>
     <string name="faq_10_text_commons">Probeer uw Google Play app-cache te legen en het toestel opnieuw op te starten. Het is een Google Play probleem, niet gerelateerd aan de app zelf.</string>
     <!-- Contributors -->
     <string name="contributors">Bijdragers</string>

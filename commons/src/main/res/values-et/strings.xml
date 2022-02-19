@@ -41,7 +41,7 @@
     <string name="no_contacts_found">Kontakte ei leidu</string>
     <string name="request_the_required_permissions">Taotle vajalikke õigusi</string>
     <string name="no_access_to_contacts">Rakendusel puudub ligipääs sinu telefoniraamatule</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
+    <string name="no_phone_call_permission">Rakendusel puuduvad õigused kõnede alustamiseks, palun määra seadistustes vastavad õigused</string>
     <string name="insert_text_here">Sisesta tekst siia</string>
     <string name="call_person">Helista %s</string>
     <string name="zero">Zero</string>
@@ -54,7 +54,7 @@
     <string name="seven">Seitse</string>
     <string name="eight">Kaheksa</string>
     <string name="nine">Üheksa</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="value_cannot_be_empty">Väärtus ei saa tühi olla</string>
     <!-- Emails -->
     <string name="home">Home</string>
     <string name="work">Töö</string>
@@ -68,7 +68,7 @@
     <!-- View types -->
     <string name="change_view_type">Muuda vaate tüüpi</string>
     <string name="grid">Ruudustik</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">Ebaühtlane võrk</string>
     <string name="list">List</string>
     <string name="increase_column_count">Suurenda veergude arvu</string>
     <string name="reduce_column_count">Vähenda veergude arvu</string>
@@ -132,7 +132,7 @@
 \n%i - loendur alates 1\'st</string>
     <string name="filename_without_txt">Faili nimi (ilma .txt laiendita)</string>
     <string name="filename_without_json">Faili nimi (ilma .json laiendita)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
+    <string name="cannot_hide_files">Alates Android 11-st ei saa enam selliseid faile ja kaustu peita</string>
     <!-- Copy / Move -->
     <string name="copy">Kopeeri</string>
     <string name="move">Teisalda</string>
@@ -190,7 +190,7 @@
     <string name="confirm_storage_access_text_sd">Kui sa SD-kaarti ei näe, siis proovi sellist võimalust</string>
     <string name="confirm_storage_access_android_text">Valitud salvestusruumile ligipääsu saamiseks vali järgmise vaate allosas „Kasuta seda kausta“.</string>
     <string name="confirm_selection">Kinnita valik</string>
-    <string name="loading">Loading…</string>
+    <string name="loading">Laadin…</string>
     <plurals name="items">
         <item quantity="one">%d item</item>
         <item quantity="other">%d items</item>
@@ -304,10 +304,10 @@
     <string name="move_to_top">Tõsta kõige ülemiseks</string>
     <string name="move_to_bottom">Tõsta kõige alumiseks</string>
     <string name="pin_item">Pin item</string>
-    <string name="unpin_item">Unpin item</string>
-    <string name="send_sms">Send SMS</string>
+    <string name="unpin_item">Eemalda klammerdus</string>
+    <string name="send_sms">Saada SMS sõnum</string>
     <string name="send_email">Send email</string>
-    <string name="call">Call</string>
+    <string name="call">Helista</string>
     <!-- Sorting -->
     <string name="sort_by">Sordi</string>
     <string name="name">Name</string>
@@ -529,7 +529,7 @@
     <string name="customize_widget_colors">Muuda vidina värve</string>
     <string name="customize_notifications">Kohenda teavitusi</string>
     <string name="use_english_language">Kasuta inglise keelt</string>
-    <string name="language">Language</string>
+    <string name="language">Keel</string>
     <string name="show_hidden_items">Näita peidetud valikuid</string>
     <string name="font_size">Kirjasuurus</string>
     <string name="small">Väike</string>
@@ -611,7 +611,7 @@
     <string name="importing_some_entries_failed">Mõnede kirjete importimine ei õnnestunud</string>
     <string name="exporting_some_entries_failed">Mõnede kirjete eksportimine ei õnnestunud</string>
     <string name="no_entries_for_importing">Ühtegi importimiseks sobilikku kirjet ei leidu</string>
-    <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
+    <string name="no_new_entries_for_importing">Ühtegi uut kirjet importimiseks ei leidunud</string>
     <string name="no_entries_for_exporting">Ühtegi eksportimiseks sobilikku kirjet ei leidu</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>

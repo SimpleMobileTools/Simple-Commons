@@ -208,7 +208,7 @@
     <string name="sd_card_usb_same">SD 卡和 USB 设备路径不能相同</string>
     <string name="app_on_sd_card">您似乎已将应用程序安装在 SD 卡上，这使得应用的小部件不可用。您将无法在小部件列表里看到它们。
         这是一个系统限制，所以如果您想要使用这些小部件，您必须将应用移回内部存储器。</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">选中了错误的文件夹，请选择路径 \'%s\'</string>
     <!-- File properties -->
     <string name="properties">属性</string>
     <string name="path">路径</string>

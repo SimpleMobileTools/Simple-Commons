@@ -217,7 +217,7 @@
     <string name="wrong_root_selected">S\'ha seleccionat una carpeta incorrecta, seleccioneu la carpeta principal de la targeta SD</string>
     <string name="sd_card_usb_same">Els camins de la targeta SD i del dispositiu USB no poden ser els mateixos</string>
     <string name="app_on_sd_card">Sembla que l\'aplicació està instal·lada en una targeta SD, això fa que els ginys de l\'aplicació no estiguin disponibles. No els veureu a la llista de ginys disponibles. És una limitació del sistema, de manera que si voleu utilitzar els ginys, cal tornar a moure l\'aplicació a l\'emmagatzematge intern.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">S\'ha seleccionat una carpeta incorrecta, seleccioneu el camí «%s»</string>
     <!-- File properties -->
     <string name="properties">Propietats</string>
     <string name="path">Camí</string>
