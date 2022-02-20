@@ -2,4 +2,5 @@
 <resources>
     <bool name="default_vibrate_on_press">false</bool>
     <bool name="show_donate_in_about">false</bool>
+    <bool name="hide_google_relations">false</bool>
 </resources>
