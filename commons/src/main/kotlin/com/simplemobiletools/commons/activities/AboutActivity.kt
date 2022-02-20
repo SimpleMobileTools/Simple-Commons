@@ -83,6 +83,18 @@ class AboutActivity : BaseSimpleActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
+    private fun setupFAQ() {
+        val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
+        about_faq_holder.setOnClickListener {
+            Intent(applicationContext, FAQActivity::class.java).apply {
+                putExtra(APP_ICON_IDS, getAppIconIDs())
+                putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
+                putExtra(APP_FAQ, faqItems)
+                startActivity(this)
+            }
+        }
+    }
+
     private fun setupEmail() {
         about_email_holder.setOnClickListener {
             val msg = "${getString(R.string.before_asking_question_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
@@ -123,59 +135,29 @@ class AboutActivity : BaseSimpleActivity() {
         }
     }
 
-    private fun setupFAQ() {
-        val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
-        about_faq_holder.setOnClickListener {
-            Intent(applicationContext, FAQActivity::class.java).apply {
-                putExtra(APP_ICON_IDS, getAppIconIDs())
-                putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
-                putExtra(APP_FAQ, faqItems)
-                startActivity(this)
-            }
-        }
-    }
-
-    private fun setupDonate() {
-        if (resources.getBoolean(R.bool.show_donate_in_about)) {
-            about_donate_holder.beVisible()
-
-            val contributorsBg = if (about_rate_us_holder.isGone() && about_invite_holder.isGone()) {
-                R.drawable.ripple_top_corners
-            } else {
-                R.drawable.ripple_background
-            }
-
-            about_contributors_holder.background = resources.getDrawable(contributorsBg, theme)
-            about_donate_holder.setOnClickListener {
-                launchViewIntent("https://simplemobiletools.com/donate")
-            }
-        } else {
-            about_donate_holder.beGone()
-        }
-    }
-
-    private fun setupMoreApps() {
+    private fun setupRateUs() {
         if (resources.getBoolean(R.bool.hide_google_relations)) {
-            about_more_apps_holder.beGone()
+            about_rate_us_holder.beGone()
         }
 
-        about_more_apps_holder.setOnClickListener {
-            launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
-        }
-    }
-
-    private fun setupWebsite() {
-        if (resources.getBoolean(R.bool.show_donate_in_about)) {
-            if (about_more_apps_holder.isGone()) {
-                about_website_holder.background = resources.getDrawable(R.drawable.ripple_top_corners, theme)
+        about_rate_us_holder.setOnClickListener {
+            if (baseConfig.wasBeforeRateShown) {
+                if (baseConfig.wasAppRated) {
+                    redirectToRateUs()
+                } else {
+                    RateStarsDialog(this)
+                }
+            } else {
+                baseConfig.wasBeforeRateShown = true
+                val msg = "${getString(R.string.before_rate_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
+                ConfirmationAdvancedDialog(this, msg, 0, R.string.read_faq, R.string.skip) { success ->
+                    if (success) {
+                        about_faq_holder.performClick()
+                    } else {
+                        about_rate_us_holder.performClick()
+                    }
+                }
             }
-
-            about_website_holder.beVisible()
-            about_website_holder.setOnClickListener {
-                launchViewIntent("https://simplemobiletools.com/")
-            }
-        } else {
-            about_website_holder.beGone()
         }
     }
 
@@ -207,44 +189,22 @@ class AboutActivity : BaseSimpleActivity() {
         }
     }
 
-    private fun setupRateUs() {
-        if (resources.getBoolean(R.bool.hide_google_relations)) {
-            about_rate_us_holder.beGone()
-        }
+    private fun setupDonate() {
+        if (resources.getBoolean(R.bool.show_donate_in_about)) {
+            about_donate_holder.beVisible()
 
-        about_rate_us_holder.setOnClickListener {
-            if (baseConfig.wasBeforeRateShown) {
-                if (baseConfig.wasAppRated) {
-                    redirectToRateUs()
-                } else {
-                    RateStarsDialog(this)
-                }
+            val contributorsBg = if (about_rate_us_holder.isGone() && about_invite_holder.isGone()) {
+                R.drawable.ripple_top_corners
             } else {
-                baseConfig.wasBeforeRateShown = true
-                val msg = "${getString(R.string.before_rate_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
-                ConfirmationAdvancedDialog(this, msg, 0, R.string.read_faq, R.string.skip) { success ->
-                    if (success) {
-                        about_faq_holder.performClick()
-                    } else {
-                        about_rate_us_holder.performClick()
-                    }
-                }
+                R.drawable.ripple_background
             }
-        }
-    }
 
-    private fun setupLicense() {
-        if (about_website_holder.isGone() && about_more_apps_holder.isGone()) {
-            about_licenses_holder.background = resources.getDrawable(R.drawable.ripple_top_corners, theme)
-        }
-
-        about_licenses_holder.setOnClickListener {
-            Intent(applicationContext, LicenseActivity::class.java).apply {
-                putExtra(APP_ICON_IDS, getAppIconIDs())
-                putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
-                putExtra(APP_LICENSES, intent.getIntExtra(APP_LICENSES, 0))
-                startActivity(this)
+            about_contributors_holder.background = resources.getDrawable(contributorsBg, theme)
+            about_donate_holder.setOnClickListener {
+                launchViewIntent("https://simplemobiletools.com/donate")
             }
+        } else {
+            about_donate_holder.beGone()
         }
     }
 
@@ -264,6 +224,46 @@ class AboutActivity : BaseSimpleActivity() {
     private fun setupReddit() {
         about_reddit_holder.setOnClickListener {
             launchViewIntent("https://www.reddit.com/r/SimpleMobileTools")
+        }
+    }
+
+    private fun setupMoreApps() {
+        if (resources.getBoolean(R.bool.hide_google_relations)) {
+            about_more_apps_holder.beGone()
+        }
+
+        about_more_apps_holder.setOnClickListener {
+            launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
+        }
+    }
+
+    private fun setupWebsite() {
+        if (resources.getBoolean(R.bool.show_donate_in_about)) {
+            if (about_more_apps_holder.isGone()) {
+                about_website_holder.background = resources.getDrawable(R.drawable.ripple_top_corners, theme)
+            }
+
+            about_website_holder.beVisible()
+            about_website_holder.setOnClickListener {
+                launchViewIntent("https://simplemobiletools.com/")
+            }
+        } else {
+            about_website_holder.beGone()
+        }
+    }
+
+    private fun setupLicense() {
+        if (about_website_holder.isGone() && about_more_apps_holder.isGone()) {
+            about_licenses_holder.background = resources.getDrawable(R.drawable.ripple_top_corners, theme)
+        }
+
+        about_licenses_holder.setOnClickListener {
+            Intent(applicationContext, LicenseActivity::class.java).apply {
+                putExtra(APP_ICON_IDS, getAppIconIDs())
+                putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
+                putExtra(APP_LICENSES, intent.getIntExtra(APP_LICENSES, 0))
+                startActivity(this)
+            }
         }
     }
 
