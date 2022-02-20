@@ -72,7 +72,8 @@ class CustomizationActivity : BaseSimpleActivity() {
 
                     runOnUiThread {
                         setupThemes()
-                        apply_to_all_holder.beVisibleIf(storedSharedTheme == null && curSelectedThemeId != THEME_AUTO)
+                        val hideGoogleRelations = resources.getBoolean(R.bool.hide_google_relations)
+                        apply_to_all_holder.beVisibleIf(storedSharedTheme == null && curSelectedThemeId != THEME_AUTO && !hideGoogleRelations)
                     }
                 } catch (e: Exception) {
                     toast(R.string.update_thank_you)
@@ -199,7 +200,8 @@ class CustomizationActivity : BaseSimpleActivity() {
                 toast(R.string.changing_color_description)
             }
 
-            apply_to_all_holder.beVisibleIf(curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SHARED)
+            val hideGoogleRelations = resources.getBoolean(R.bool.hide_google_relations)
+            apply_to_all_holder.beVisibleIf(curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SHARED && !hideGoogleRelations)
         }
     }
 
