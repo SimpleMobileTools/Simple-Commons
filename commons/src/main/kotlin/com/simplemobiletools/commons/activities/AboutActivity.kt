@@ -85,6 +85,7 @@ class AboutActivity : BaseSimpleActivity() {
 
     private fun setupFAQ() {
         val faqItems = intent.getSerializableExtra(APP_FAQ) as ArrayList<FAQItem>
+        about_faq_holder.beVisibleIf(faqItems.isNotEmpty())
         about_faq_holder.setOnClickListener {
             Intent(applicationContext, FAQActivity::class.java).apply {
                 putExtra(APP_ICON_IDS, getAppIconIDs())
@@ -96,6 +97,10 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupEmail() {
+        if (about_faq_holder.isGone()) {
+            about_email_holder.background = resources.getDrawable(R.drawable.ripple_all_corners, theme)
+        }
+
         about_email_holder.setOnClickListener {
             val msg = "${getString(R.string.before_asking_question_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
             if (intent.getBooleanExtra(SHOW_FAQ_BEFORE_MAIL, false) && !baseConfig.wasBeforeAskingShown) {
