@@ -17,8 +17,7 @@
     <string name="copy_to_clipboard">Copier dans le presse-papiers</string>
     <string name="copy_number_to_clipboard">Copier le numéro dans le presse-papiers</string>
     <string name="value_copied_to_clipboard">Valeur copiée dans le presse-papiers</string>
-    <string name="value_copied_to_clipboard_show">Valeur copiée dans le presse-papiers :
-\n%s</string>
+    <string name="value_copied_to_clipboard_show">Valeur copiée dans le presse-papiers :\n%s</string>
     <string name="dial_number">Composer le numéro</string>
     <string name="unknown">Inconnu</string>
     <string name="always">Toujours</string>
@@ -84,7 +83,7 @@
     <string name="blocked_numbers">Numéros bloqués</string>
     <string name="export_blocked_numbers">Exporter les numéros bloqués</string>
     <string name="import_blocked_numbers">Importer les numéros bloqués</string>
-    <string name="must_make_default_dialer">Cette application doit être l\’application de numérotation par défaut pour utiliser les numéros bloqués.</string>
+    <string name="must_make_default_dialer">Cette application doit être l\'application de numérotation par défaut pour utiliser les numéros bloqués.</string>
     <string name="set_as_default">Définir par défaut</string>
     <string name="block_confirmation">Voulez-vous vraiment bloquer \"%s\" ?</string>
     <!-- Favorites -->
@@ -127,7 +126,7 @@
     <string name="rename_date_time_pattern">%Y - année\n%M - mois\n%D - jour\n%h - heure\n%m - minute\n%s - seconde\n%i - Incrémentation débute à 1</string>
     <string name="filename_without_txt">Nom de fichier (sans .txt)</string>
     <string name="filename_without_json">Nom de fichier (sans .json)</string>
-    <string name="cannot_hide_files">À partir d\'Android 11, il n\'est plus possible de masquer les fichiers et les dossiers de cette manière</string>
+    <string name="cannot_hide_files">À partir d\'Android 11, il n\'est plus possible de cacher les fichiers et les dossiers de cette manière</string>
     <!-- Copy / Move -->
     <string name="copy">Copier</string>
     <string name="move">Déplacer</string>
@@ -155,7 +154,7 @@
     <string name="saving">Enregistrement en cours…</string>
     <string name="could_not_create_folder">Impossible de créer le dossier %s</string>
     <string name="could_not_create_file">Impossible de créer le fichier %s</string>
-    <string name="no_new_items">Aucun nouveal élément trouvé</string>
+    <string name="no_new_items">Aucun nouvel élément trouvé</string>
     <string name="no_space">La destination n\'a pas assez d\'espace disponible.\nNécessaire : %1$s, disponible : %2$s</string>
     <!-- Create new -->
     <string name="create_new">Créer un nouveau</string>
@@ -179,11 +178,11 @@
     <!-- File picker -->
     <string name="select_folder">Sélectionner un dossier</string>
     <string name="select_file">Sélectionner un fichier</string>
-    <string name="confirm_storage_access_title">Confirmez l\'accès au stockage externe</string>
-    <string name="confirm_folder_access_title">Confirm folder access</string>
+    <string name="confirm_storage_access_title">Veuillez confirmer l\'accès au stockage externe</string>
+    <string name="confirm_folder_access_title">Veuillez confirmer l\'accès au dossier</string>
     <string name="confirm_storage_access_text">Veuillez sélectionner le dossier racine de la carte SD sur le prochain écran, pour accorder le droit en écriture</string>
     <string name="confirm_storage_access_text_sd">Si vous ne voyez pas la carte SD, essayez ceci</string>
-    <string name="confirm_storage_access_android_text">Veuillez autoriser l\'application à accéder au stockage sélectionné sur l\'écran suivant en appuyant sur « Utiliser ce dossier » en bas.</string>
+    <string name="confirm_storage_access_android_text">Veuillez autoriser l\'application à accéder au stockage sélectionné sur l\'écran suivant en appuyant sur "Utiliser ce dossier" en bas.</string>
     <string name="confirm_selection">Confirmer la sélection</string>
     <string name="loading">Chargement…</string>
     <plurals name="items">
@@ -213,7 +212,7 @@
     <string name="sd_card_usb_same">Les emplacements de la carte SD et du stockage USB ne peuvent être similaires</string>
     <string name="app_on_sd_card">L\'application semble installée sur une carte SD, ce qui empêche l\'utilisation des widgets de l\'applications. Ils n\'apparaîtront pas dans la liste des widgets disponibles.
         Il s\'agit d\'une limitation système. Si vous souhaitez utiliser des widgets, vous devez déplacer l\'application vers la mémoire interne.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">Mauvais dossier sélectionné, veuillez sélectionner l\'emplacement \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Propriétés</string>
     <string name="path">Emplacement</string>
@@ -500,8 +499,8 @@
         <item quantity="other">%d ans</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Durée restante jusqu\'au déclenchement de l\'alarme : \n%s</string>
-    <string name="reminder_triggers_in">Durée restante jusqu\'au déclenchement du rappel : \n%s</string>
+    <string name="alarm_goes_off_in">Durée restante jusqu\'au déclenchement de l\'alarme :\n%s</string>
+    <string name="reminder_triggers_in">Durée restante jusqu\'au déclenchement du rappel :\n%s</string>
     <string name="alarm_warning">Veuillez vérifier que l\'alarme fonctionne correctement avant de lui faire confiance. Elle pourrait ne pas fonctionner correctement, en raison du mode d\'économie d\'énergie de votre appareil.</string>
     <string name="reminder_warning">Veuillez vérifier que les rappels fonctionnent correctement avant de leur faire confiance. Ils pourraient ne pas fonctionner correctement, en raison du mode d\'économie d\'énergie de votre appareil.</string>
     <string name="notifications_disabled">Les notifications de cette application sont désactivées. Veuillez les activer depuis les paramètres de votre appareil.</string>
@@ -573,7 +572,7 @@
     <string name="quality">Qualité</string>
     <string name="main_screen">Écran principal</string>
     <string name="thumbnails">Vignettes</string>
-    <string name="list_view">List view</string>
+    <string name="list_view">Liste</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Gérer les onglets affichés</string>
     <string name="default_tab_to_open">Onglet à ouvrir au démarrage de l\'application</string>
@@ -669,7 +668,7 @@
     <string name="it_is_free">Gratuit jusqu\'au : %s. Si vous la téléchargez avant cette date, vous pourrez définitivement l\'utiliser gratuitement.</string>
     <string name="more_info">Plus d\'information</string>
     <string name="upgrade">Passer à la version Pro</string>
-    <string name="upgrade_calendar">Vous devez migrer manuellement les évènements stockés localement via un export dans un fichier .ics, puis un import. Vous trouverez les boutons d\'export /import dans le menu de l\'écran principal.</string>
+    <string name="upgrade_calendar">Vous devez migrer manuellement les évènements stockés localement via une exportation dans un fichier .ics, puis une importation. Vous trouverez les boutons d\'exportation/importation dans le menu de l\'écran principal.</string>
     <!-- About -->
     <string name="about">À propos</string>
     <string name="website">Site web</string>
@@ -835,7 +834,7 @@
     <string name="translation_norwegian">Norvégien</string>
     <string name="translation_dutch">Néerlandais</string>
     <string name="translation_polish">Polonais</string>
-    <string name="translation_portuguese">Portuguais</string>
+    <string name="translation_portuguese">Portugais</string>
     <string name="translation_romanian">Roumain</string>
     <string name="translation_russian">Russe</string>
     <string name="translation_slovak">Slovaque</string>
