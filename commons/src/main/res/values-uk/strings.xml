@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Скасувати</string>
@@ -54,11 +55,9 @@
     <string name="eight">Eight</string>
     <string name="nine">Nine</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
-
     <!-- Emails -->
     <string name="home">Домашній</string>
     <string name="work">Робочий</string>
-
     <!-- Phone numbers -->
     <string name="mobile">Мобільний</string>
     <string name="main_number">Основний</string>
@@ -75,7 +74,6 @@
     <string name="reduce_column_count">Зменшити кількість колонок</string>
     <string name="change_cover_image">Змінити обкладинку</string>
     <string name="select_photo">Вибрати фото</string>
-
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Керувати блокованими номерами</string>
     <string name="not_blocking_anyone">Немає блокованих номерів.</string>
@@ -88,28 +86,23 @@
     <string name="must_make_default_dialer">Щоб використовувати функцію блокування номерів, вам необхідно встановити цей додаток як стандартний для роботи з контактами.</string>
     <string name="set_as_default">Встановити додаток як стандартний</string>
     <string name="block_confirmation">Ви впевнені що хочете заблокувати \"%s\"?</string>
-
     <!-- Favorites -->
     <string name="favorites">Улюблене</string>
     <string name="add_favorites">Додати улюблене</string>
     <string name="add_to_favorites">Додати до улюбленого</string>
     <string name="remove_from_favorites">Видалити з улюбленого</string>
-
     <!-- Search -->
     <string name="search">Пошук</string>
     <string name="type_2_characters">Введіть принаймні 2 символи, щоб почати пошук.</string>
-
     <!-- Filters -->
     <string name="filter">Фільтр</string>
     <string name="no_items_found">Нічого не знайдено.</string>
     <string name="change_filter">Змінити фільтр</string>
-
     <!-- Permissions -->
     <string name="no_storage_permissions">Необхідний дозвіл на доступ до внутрішньої пам\'яті</string>
     <string name="no_contacts_permission">Необхідний дозвіл на доступ до контактів</string>
     <string name="no_camera_permissions">Необхідний дозвіл на доступ до камери</string>
     <string name="no_audio_permissions">Необхідний дозвіл на доступ до аудіо</string>
-
     <!-- Renaming -->
     <string name="rename_file">Перейменувати файл</string>
     <string name="rename_folder">Перейменувати теку</string>
@@ -134,7 +127,6 @@
     <string name="filename_without_txt">Filename (without .txt)</string>
     <string name="filename_without_json">Filename (without .json)</string>
     <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
-
     <!-- Copy / Move -->
     <string name="copy">Копіювати</string>
     <string name="move">Перемістити</string>
@@ -164,7 +156,6 @@
     <string name="could_not_create_file">Не вдалося створити файл %s</string>
     <string name="no_new_items">Не знайдено нових елементів</string>
     <string name="no_space">Місце призначення не має достатньо вільного місця.\nНеобхідно %1$s, доступно %2$s</string>
-
     <!-- Create new -->
     <string name="create_new">Створити новий</string>
     <string name="folder">Теку</string>
@@ -174,7 +165,6 @@
     <string name="invalid_name">Ім\'я містить недопустимі символи</string>
     <string name="empty_name">Введіть ім\'я</string>
     <string name="unknown_error_occurred">Сталася невідома помилка</string>
-
     <!-- File operation conflicts -->
     <string name="file_already_exists">Файл \"%s\" вже існує</string>
     <string name="file_already_exists_overwrite">Файл \"%s\" вже існує. Перезаписати?</string>
@@ -185,7 +175,6 @@
     <string name="skip">Пропустити</string>
     <string name="append">Додати \'_1\' в кінець</string>
     <string name="apply_to_all">Застосувати до усіх</string>
-
     <!-- File picker -->
     <string name="select_folder">Обрати теку</string>
     <string name="select_file">Обрати файл</string>
@@ -196,29 +185,24 @@
     <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">Підтвердіть вибір</string>
     <string name="loading">Loading…</string>
-
     <plurals name="items">
         <item quantity="one">%d елемент</item>
         <item quantity="other">%d елементів</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d елемент</item>
         <item quantity="other">%d елементів</item>
     </plurals>
-
     <plurals name="deleting_items">
         <item quantity="one">Видалення %d елементу</item>
         <item quantity="other">Видалення %d елементів</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d контакт</item>
         <item quantity="other">%d контактів</item>
     </plurals>
-
     <!-- Storages -->
     <string name="select_storage">Обрати пам\'ять</string>
     <string name="internal">Внутрішня</string>
@@ -229,7 +213,6 @@
     <string name="app_on_sd_card">Схоже, ви встановили додаток на SD-карту, що робить віджети додатка недоступними. Ви навіть не побачите їх у списку доступних віджетів.
         Це обмеження системи, тож якщо ви хочете використовувати віджети, вам треба перемістити додаток до внутрішньої пам\'яті.</string>
     <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
-
     <!-- File properties -->
     <string name="properties">Властивості</string>
     <string name="path">Шлях</string>
@@ -249,7 +232,6 @@
     <string name="song_title">Назва пісні</string>
     <string name="gps_coordinates">GPS координати</string>
     <string name="altitude">Висота над рівнем моря</string>
-
     <!-- Color customization -->
     <string name="background_color">Колір фону</string>
     <string name="text_color">Колір тексту</string>
@@ -280,7 +262,6 @@
             Будь ласка, придбайте <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, щоб розблокувати цю функцію і підтримати розробку. Дякую!
         ]]>
     </string>
-
     <!-- Themes -->
     <string name="light_theme">Світла</string>
     <string name="dark_theme">Темна</string>
@@ -291,11 +272,9 @@
     <string name="black_white">Чорний &amp; Білий</string>
     <string name="custom">Користувацька</string>
     <string name="shared">Загальна</string>
-
     <!-- What's new -->
     <string name="whats_new">Що нового</string>
     <string name="whats_new_disclaimer">* тут перераховані тільки великі оновлення, але завжди є менші покращення</string>
-
     <!-- Actionbar items -->
     <string name="delete">Видалити</string>
     <string name="remove">Перемістити</string>
@@ -325,10 +304,9 @@
     <string name="move_to_bottom">Перемістити вниз</string>
     <string name="pin_item">Pin item</string>
     <string name="unpin_item">Unpin item</string>
-    <string name="send_sms">Send SMS</string>
+    <string name="send_sms">Надіслати SMS</string>
     <string name="send_email">Send email</string>
     <string name="call">Call</string>
-
     <!-- Sorting -->
     <string name="sort_by">Сортувати за</string>
     <string name="name">Ім\'я</string>
@@ -351,11 +329,12 @@
     <string name="full_name">Повне ім\'я</string>
     <string name="use_custom_sorting">Сортувати власноруч</string>
     <string name="change_order">Змінити порядок</string>
-
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Ви впевнені, що хочете продовжити видалення?</string>
-    <string name="deletion_confirmation">Ви впевнені, що хочете видалити %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Ви впевнені, що хочете перемістити %s у Кошик?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">Ви впевнені, що хочете видалити %s?</string>
+    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Ви впевнені, що хочете перемістити %s у Кошик?</string>
+    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Ви впевнені, що хочете видалити цей елемент?</string>
     <string name="are_you_sure_recycle_bin">Ви впевнені, що хочете перемістити цей елемент у Кошик?</string>
     <string name="do_not_ask_again">Більше не питати у цій сесії</string>
@@ -363,12 +342,10 @@
     <string name="yes">Так</string>
     <string name="no">Ні</string>
     <string name="maybe">Можливо</string>
-
     <plurals name="delete_warning">
         <item quantity="one">УВАГА: Ви видаляєте %d теку</item>
         <item quantity="other">УВАГА: Ви видаляєте %d тек</item>
     </plurals>
-
     <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">Введіть PIN</string>
@@ -394,7 +371,6 @@
     <string name="lock_folder">Заблокувати теку</string>
     <string name="unlock_folder">Розблокувати теку</string>
     <string name="lock_folder_notice">Цей захист працює тільки у цьому додатку, він не призначений для заміни загальносистемного шифрування тек.</string>
-
     <!-- Times -->
     <string name="yesterday">Вчора</string>
     <string name="today">Сьогодні</string>
@@ -407,7 +383,6 @@
     <string name="seconds_letter">с</string>
     <string name="minutes_letter">х</string>
     <string name="hours_letter">г</string>
-
     <plurals name="seconds">
         <item quantity="one">%d секунда</item>
         <item quantity="other">%d секунди</item>
@@ -436,7 +411,6 @@
         <item quantity="one">%d рік</item>
         <item quantity="other">%d роки</item>
     </plurals>
-
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d секунду</item>
@@ -466,7 +440,6 @@
         <item quantity="one">%d рік</item>
         <item quantity="other">%d років</item>
     </plurals>
-
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">за %d секунду</item>
@@ -496,7 +469,6 @@
         <item quantity="one">за %d рік</item>
         <item quantity="other">за %d років</item>
     </plurals>
-
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d секунду</item>
@@ -526,7 +498,6 @@
         <item quantity="one">%d рік</item>
         <item quantity="other">%d років</item>
     </plurals>
-
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Сигнал будильника зазвучить через:\n%s</string>
     <string name="reminder_triggers_in">Час до того, як спрацює нагадування:\n%s</string>
@@ -534,7 +505,6 @@
     <string name="alarm_warning">Переконайтеся, що будильник працює коректно, перед тим, як на нього покладатися. Він може не спрацювати через системні обмеження, пов\'язані з економією заряду батареї.</string>
     <string name="reminder_warning">Переконайтеся, що нагадування працюють коректно, перед тим, як на них покладатися. Вони можуть не спрацювати через системні обмеження, пов\'язані з економією заряду батареї.</string>
     <string name="notifications_disabled">Сповіщення від цього додатка заборонені. Перейдіть до Налаштувань пристрою, щоб їх увімкнути.</string>
-
     <!-- Alarms -->
     <string name="alarm">Будильник</string>
     <string name="snooze">Відкласти</string>
@@ -547,7 +517,6 @@
     <string name="no_sound">Без звуку</string>
     <string name="during_day_at_hh_mm">Протягом дня о гг:хх</string>
     <string name="during_day_at">Протягом дня о %02d:%02d</string>
-
     <!-- Settings -->
     <string name="settings">Налаштування</string>
     <string name="purchase_simple_thank_you">Придбати Simple Thank You</string>
@@ -591,7 +560,6 @@
     <string name="start_name_with_surname">Показувати спочатку прізвище</string>
     <string name="clear_cache">Очистити кеш</string>
     <string name="show_call_confirmation_dialog">Показувати діалог підтвердження виклику</string>
-
     <!-- Setting sections -->
     <string name="visibility">Відображення</string>
     <string name="security">Безпека</string>
@@ -606,7 +574,6 @@
     <string name="main_screen">Main screen</string>
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
-
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Керування вкладками, що відображаються</string>
     <string name="default_tab_to_open">Вкладка, що відкривається при запуску додатка</string>
@@ -617,7 +584,6 @@
     <string name="last_used_tab">Останнє використане</string>
     <string name="files_tab">Файли</string>
     <string name="recent_files_tab">Нещодавні файли</string>
-
     <!-- Recycle Bin -->
     <string name="restore_this_file">Відновити цей файл</string>
     <string name="restore_selected_files">Відновити обрані файли</string>
@@ -629,12 +595,10 @@
     <string name="moving_recycle_bin_items_disabled">Переміщення елементів з Кошика відключено, будь ласка, використовуйте опцію Відновити</string>
     <string name="show_the_recycle_bin">Показати Кошик</string>
     <string name="hide_the_recycle_bin">Приховати Кошик</string>
-
     <plurals name="moving_items_into_bin">
         <item quantity="one">Переміщення %d елемента в Кошик</item>
         <item quantity="other">Переміщення %d елементів у Кошик</item>
     </plurals>
-
     <!-- Import / Export -->
     <string name="importing">Триває імпортування…</string>
     <string name="exporting">Триває експортування…</string>
@@ -647,13 +611,11 @@
     <string name="no_entries_for_importing">Не знайдено елементів для імпортування</string>
     <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
     <string name="no_entries_for_exporting">Не знайдено елементів для експортування</string>
-
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Здається, до вашого пристрою приєднано USB-пристрій. Для коректного відображення його файлів вам необхідно надати додаткові дозволи.</string>
     <string name="confirm_usb_storage_access_text">Будь ласка, оберіть кореневу теку USB-пристрою далі, щоб надати доступ</string>
     <string name="wrong_root_selected_usb">Обрано невірну теку, будь ласка, оберіть кореневу теку вашого USB-пристрою</string>
-
     <!-- Dates -->
     <string name="january">Січень</string>
     <string name="february">Лютий</string>
@@ -667,7 +629,6 @@
     <string name="october">Жовтень</string>
     <string name="november">Листопад</string>
     <string name="december">Грудень</string>
-
     <!-- in January -->
     <string name="in_january">у Січні</string>
     <string name="in_february">у Лютому</string>
@@ -681,7 +642,6 @@
     <string name="in_october">у Жовтні</string>
     <string name="in_november">у Листопаді</string>
     <string name="in_december">у Грудні</string>
-
     <string name="monday">Понеділок</string>
     <string name="tuesday">Вівторок</string>
     <string name="wednesday">Середа</string>
@@ -689,7 +649,6 @@
     <string name="friday">П\'ятниця</string>
     <string name="saturday">Субота</string>
     <string name="sunday">Неділя</string>
-
     <string name="monday_letter">П</string>
     <string name="tuesday_letter">В</string>
     <string name="wednesday_letter">С</string>
@@ -697,7 +656,6 @@
     <string name="friday_letter">П</string>
     <string name="saturday_letter">С</string>
     <string name="sunday_letter">Н</string>
-
     <string name="monday_short">Пон</string>
     <string name="tuesday_short">Вів</string>
     <string name="wednesday_short">Сер</string>
@@ -705,7 +663,6 @@
     <string name="friday_short">Пят</string>
     <string name="saturday_short">Суб</string>
     <string name="sunday_short">Нед</string>
-
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Ця версія додатку більше не буде оновлюватися. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
     <string name="upgrade_to_pro_long_click">Ця версія додатку більше не буде оновлюватися. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
@@ -713,7 +670,6 @@
     <string name="more_info">Більше інформації</string>
     <string name="upgrade">Оновити</string>
     <string name="upgrade_calendar">Вам доведеться власноруч перемістити події, що зберігаються локально, експортувавши їх в .ics файл, а потім імпортувавши з нього. Ви знайдете кнопку експорту/імпорту в меню головного екрана.</string>
-
     <!-- About -->
     <string name="about">Про додаток</string>
     <string name="website">Website</string>
@@ -737,7 +693,7 @@
     <string name="other">Other</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="about_footer">Made with ❤️ in Slovakia</string>
     <string name="additional_info">Додаткова інформація</string>
     <string name="app_version">Версія додатка: %s</string>
     <string name="device_os">ОС пристрою: %s</string>
@@ -764,7 +720,6 @@
             The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
         ]]>
     </string>
-
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -777,7 +732,6 @@
             Спасибі
         ]]>
     </string>
-
     <string name="simple_app_launcher">Simple App Launcher</string>
     <string name="simple_calculator">Simple Calculator</string>
     <string name="simple_calendar">Simple Calendar</string>
@@ -795,7 +749,6 @@
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
-
     <string name="app_launcher_short">App Launcher</string>
     <string name="calculator_short">Калькулятор</string>
     <string name="calendar_short">Календар</string>
@@ -813,13 +766,11 @@
     <string name="sms_messenger_short">SMS Повідомлення</string>
     <string name="thank_you_short">Подяка</string>
     <string name="voice_recorder_short">Диктофон</string>
-
     <string name="sideloaded_app">
         <![CDATA[
             Схоже, що ваша версія додатка пошкоджена. Будь ласка, завантажте оригінальну версію <a href="%s">тут</a>.
         ]]>
     </string>
-
     <!-- FAQ -->
     <string name="frequently_asked_questions">Часті питання - ЧаПи</string>
     <string name="before_asking_question">Перш ніж запитувати, будь ласка, прочитайте</string>
@@ -854,7 +805,6 @@
         хочете виділити всі елементи, тривалим натисненням виділіть один елемент, потім натисніть на лічильник елементів у верхньому лівому куті. Ця дія виділить або відмінить виділення всіх елементів.</string>
     <string name="faq_10_title_commons">Я придбав додаток, проте не можу завантажити його на іншому пристроєві.</string>
     <string name="faq_10_text_commons">Спробуйте очистити кеш вашого додатка Google Play і перезапустіть ваш пристрій. Це помилка в роботі Google Play, що насправді не пов\'язана з самим додатком.</string>
-
     <!-- Contributors -->
     <string name="contributors">Contributors</string>
     <string name="translation">Translation</string>
@@ -867,7 +817,6 @@
             Thanks to all contributors and other supporters!
         ]]>
     </string>
-
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -912,7 +861,6 @@
     <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
     <string name="translation_chinese_cn">Chinese (Simplified)</string>
     <string name="translation_chinese_tw">Chinese (Traditional)</string>
-
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Отримайте Pro-версію просто зараз!</string>
     <string name="why_upgrade_basic_version">Базова</string>
@@ -921,43 +869,36 @@
     <string name="why_upgrade_no_internet_access">Без доступу до Інтернету</string>
     <string name="why_upgrade_footer">+ 100% гарантія повернення коштів</string>
     <string name="why_upgrade_improved_design">Покращений дизайн</string>
-
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Удосконалений фоторедактор</string>
     <string name="why_upgrade_heic_support">Підтримка файлів HEIC/HEIF</string>
     <string name="why_upgrade_batch_renaming">Удосконалене перейменування пакетних файлів</string>
     <string name="why_upgrade_folder_locking">Індивідуальне блокування папок</string>
     <string name="why_upgrade_printing_support">Підтримка друку</string>
-
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Підтримка часових поясів</string>
     <string name="why_upgrade_attendees_emails">Відвідувачі та нагадування електронною поштою</string>
     <string name="why_upgrade_easy_event_importing">Зручний імпорт подій</string>
     <string name="why_upgrade_new_widgets">Нові віджети</string>
-
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Удосконалена функція злиття контактів</string>
     <string name="why_upgrade_font_size_customization">Налаштування розміру шрифту</string>
     <string name="why_upgrade_private_contact_sharing">Додатковий обмін конфіденційними контактами в наших додатках</string>
     <string name="why_upgrade_customizable_contact_ringtones">Налаштування мелодій виклику для контакту</string>
     <string name="why_upgrade_contact_filtering">Contact filtering</string>
-
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Контрольні списки</string>
     <string name="why_upgrade_different_note_per_widget">Різні замітки та кольори для кожного віджета</string>
     <string name="why_upgrade_note_locking">Блокування нотаток</string>
-
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Налаштування формату дати та часу</string>
     <string name="why_upgrade_shortcuts">Ярлики на головному екрані</string>
     <string name="why_upgrade_file_compression">Підтримка стиснення файлів</string>
     <string name="why_upgrade_recents_tab">Вкладка з нещодавніми файлами</string>
-
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Налаштування кольору фону</string>
     <string name="why_upgrade_file_importing">Підтримка імпорту файлів</string>
     <string name="why_upgrade_zooming">Zooming</string>
-
     <!-- License -->
     <string name="notice">Цей додаток створено з використанням наступних бібліотек сторонніх розробників, що полегшує мою працю. Дякую.</string>
     <string name="third_party_licences">Ліцензії третіх сторін</string>
@@ -990,11 +931,9 @@
     <string name="audio_record_view_title">Audio Record View (аудіо візуалізація)</string>
     <string name="sms_mms_title">SMS MMS (обробка SMS та MMS)</string>
     <string name="apng_title">APNG Android (підтримка анімацій WebP)</string>
-
     <!-- Google Play listing -->
     <string name="deprecated_app">Застаріла: Ця версія додатка більше не підтримується, встановіть версію Pro за адресою https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Пам\'ятайте: якщо ви видалите будь-який платний додаток протягом 2 годин, вам буде автоматично повернена сума покупки. Якщо ви захочете повернути гроші пізніше, сконтактуйте з нами за адресою hello@simplemobiletools.com, і ви їх отримаєте. Таким чином ви можете легко спробувати додаток :)</string>
-
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
 </resources>
