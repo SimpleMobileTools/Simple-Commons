@@ -101,6 +101,17 @@ class AboutActivity : BaseSimpleActivity() {
             about_email_holder.background = resources.getDrawable(R.drawable.ripple_all_corners, theme)
         }
 
+        if (resources.getBoolean(R.bool.hide_all_external_links)) {
+            about_email_holder.beGone()
+
+            if (about_faq_holder.isGone()) {
+                about_support.beGone()
+                about_support_holder.beGone()
+            } else {
+                about_faq_holder.background = resources.getDrawable(R.drawable.ripple_all_corners, theme)
+            }
+        }
+
         about_email_holder.setOnClickListener {
             val msg = "${getString(R.string.before_asking_question_read_faq)}\n\n${getString(R.string.make_sure_latest)}"
             if (intent.getBooleanExtra(SHOW_FAQ_BEFORE_MAIL, false) && !baseConfig.wasBeforeAskingShown) {
@@ -195,7 +206,7 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupDonate() {
-        if (resources.getBoolean(R.bool.show_donate_in_about)) {
+        if (resources.getBoolean(R.bool.show_donate_in_about) && !resources.getBoolean(R.bool.hide_all_external_links)) {
             about_donate_holder.beVisible()
 
             val contributorsBg = if (about_rate_us_holder.isGone() && about_invite_holder.isGone()) {
@@ -214,6 +225,11 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupFacebook() {
+        if (resources.getBoolean(R.bool.hide_all_external_links)) {
+            about_social.beGone()
+            about_social_holder.beGone()
+        }
+
         about_facebook_holder.setOnClickListener {
             var link = "https://www.facebook.com/simplemobiletools"
             try {
@@ -243,7 +259,7 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupWebsite() {
-        if (resources.getBoolean(R.bool.show_donate_in_about)) {
+        if (resources.getBoolean(R.bool.show_donate_in_about) && !resources.getBoolean(R.bool.hide_all_external_links)) {
             if (about_more_apps_holder.isGone()) {
                 about_website_holder.background = resources.getDrawable(R.drawable.ripple_top_corners, theme)
             }

@@ -38,6 +38,11 @@ class ContributorsActivity : BaseSimpleActivity() {
         arrayOf(contributors_development_holder, contributors_translation_holder).forEach {
             it.background.applyColorFilter(baseConfig.backgroundColor.getContrastColor())
         }
+
+        if (resources.getBoolean(R.bool.hide_all_external_links)) {
+            contributors_footer_icon.beGone()
+            contributors_label.beGone()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
