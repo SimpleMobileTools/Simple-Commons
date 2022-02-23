@@ -501,6 +501,7 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Durée restante jusqu\'au déclenchement de l\'alarme :\n%s</string>
     <string name="reminder_triggers_in">Durée restante jusqu\'au déclenchement du rappel :\n%s</string>
+    <string name="time_remaining">Time remaining:\n%s</string>
     <string name="alarm_warning">Veuillez vérifier que l\'alarme fonctionne correctement avant de lui faire confiance. Elle pourrait ne pas fonctionner correctement, en raison du mode d\'économie d\'énergie de votre appareil.</string>
     <string name="reminder_warning">Veuillez vérifier que les rappels fonctionnent correctement avant de leur faire confiance. Ils pourraient ne pas fonctionner correctement, en raison du mode d\'économie d\'énergie de votre appareil.</string>
     <string name="notifications_disabled">Les notifications de cette application sont désactivées. Veuillez les activer depuis les paramètres de votre appareil.</string>

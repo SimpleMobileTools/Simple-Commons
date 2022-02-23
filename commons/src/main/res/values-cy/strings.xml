@@ -654,6 +654,7 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Amser yn weddill nes bod y larwm yn canu:\n%s</string>
     <string name="reminder_triggers_in">Amser yn weddill nes dy fod yn cael dy atgoffa:\n%s</string>
+    <string name="time_remaining">Time remaining:\n%s</string>
     <string name="alarm_warning">Sicrha bod y larwm yn gweithio\'n iawn cyn dibynnu arno. Gall gamymddwyn o herwydd rhwystrau\'r system yn ymwneud ag arbed batri.</string>
     <string name="reminder_warning">Sicrha bod atgoffa yn gweithio yn iawn cyn dibynnu arnyn nhw. Gellir camymddwyn oherwydd rhwystrau\'r system yn ymwneud ag arbed batri.</string>
     <string name="notifications_disabled">Mae hysbysiadau\'r ap hwn wedi\'u hanalluogi. Galluoga nhw yng ngosodiadau dy ddyfais.</string>

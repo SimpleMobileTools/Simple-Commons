@@ -501,6 +501,7 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Aikaa hälytykseen:\n%s</string>
     <string name="reminder_triggers_in">Aikaa jäljellä ennen muistutusta:\n%s</string>
+    <string name="time_remaining">Time remaining:\n%s</string>
     <string name="alarm_warning">Varmista että hälytys toimii ennenkuin turvaudut siihen. Se voi toimia virheellisesti laitteesi virransäästötoiminnoista riippuen.</string>
     <string name="reminder_warning">Varmista että muistutus toimii ennenkuin turvaudut siihen. Se voi toimia virheellisesti laitteesi virransäästötoiminnoista riippuen.</string>
     <string name="notifications_disabled">Tämän sovelluksen ilmoitukset ovat poissa käytöstä. Kytke ilmoitukset päälle laitteesi asetuksista.</string>

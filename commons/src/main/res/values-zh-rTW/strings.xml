@@ -499,6 +499,7 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">鬧鐘響起剩餘時間:\n%s</string>
     <string name="reminder_triggers_in">提醒觸發剩餘時間:\n%s</string>
+    <string name="time_remaining">Time remaining:\n%s</string>
     <string name="alarm_warning">依靠鬧鐘功能之前，請先確認是否正常運作，有可能因為省電相關的系統限制而導致失靈。</string>
     <string name="reminder_warning">依靠提醒功能之前，請先確認是否正常運作，有可能因為省電相關的系統限制而導致失靈。</string>
     <string name="notifications_disabled">這應用程式的通知被停用了。請到你的裝置設定中去啟用。</string>

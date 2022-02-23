@@ -501,6 +501,7 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Tid igjen til alarmen går:\n%s</string>
     <string name="reminder_triggers_in">Tid som gjenstår til påminnelsen utløser:\n%s</string>
+    <string name="time_remaining">Time remaining:\n%s</string>
     <string name="alarm_warning">Sørg for at alarmen fungerer ordentlig før du stoler på den. Den kan fungere dårlig på grunn av systembegrensninger relatert til batterisparing.</string>
     <string name="reminder_warning">Sørg for at påminnelsene fungerer riktig før du stoler på dem. De kan fungere dårlig på grunn av systembegrensninger relatert til batterisparing.</string>
     <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>

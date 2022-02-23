@@ -534,6 +534,7 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Czas pozostały do aktywacji alarmu:\n%s</string>
     <string name="reminder_triggers_in">Czas pozostały do aktywacji przypomnienia:\n%s</string>
+    <string name="time_remaining">Time remaining:\n%s</string>
     <string name="alarm_warning">Upewnij się, że alarm działa prawidłowo, zanim zaczniesz na nim polegać. Przez ograniczenia związane m.in. z oszczędzaniem baterii coś może nie zadziałać.</string>
     <string name="reminder_warning">Upewnij się, że przypomnienia działają prawidłowo, zanim zaczniesz na nich polegać. Sprawdź ustawienia baterii i powiadomień w swoim urządzeniu, czy nic nie blokuje przypomnień lub nie wyłącza aplikacji w tle.</string>
     <string name="notifications_disabled">Powiadomienia tej aplikacji są wyłączone. Przejdź do ustawień urządzenia, aby je włączyć.</string>

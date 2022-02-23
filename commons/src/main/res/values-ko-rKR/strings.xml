@@ -496,6 +496,7 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">알람이 울리기까지 남은 시간:\n%s</string>
     <string name="reminder_triggers_in">알림이 작동하기까지 남은 시간:\n%s</string>
+    <string name="time_remaining">Time remaining:\n%s</string>
     <string name="alarm_warning">알람을 사용하기 전 제대로 작동하는지 먼저 확인하시기 바랍니다. 배터리 절약과 관련된 시스템 제한으로 오작동 할 가능성이 있습니다.</string>
     <string name="reminder_warning">알림을 사용하기 전 제대로 작동하는지 먼저 확인하시기 바랍니다. 배터리 절약과 관련된 시스템 제한으로 오작동 할 가능성이 있습니다.</string>
     <string name="notifications_disabled">이 앱의 알림 설정이 비활성화 되어 있습니다. 기기 설정에서 활성화 해 주시기 바랍니다.</string>

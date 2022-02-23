@@ -496,6 +496,7 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Het alarm zal afgaan over\n%s</string>
     <string name="reminder_triggers_in">De herinnering zal worden getoond over\n%s</string>
+    <string name="time_remaining">Time remaining:\n%s</string>
     <string name="alarm_warning">Eerst controleren of het alarm goed werkt. Er kunnen zich problemen voordoen door de batterijbesparing van Android.</string>
     <string name="reminder_warning">Kijk eerst of de herinneringen betrouwbaar werken. Controleer de systeeminstellingen voor batterijoptimalisatie en meldingen om zeker van te zijn dat de app op de achtergrond niet wordt afgesloten of dat de meldingen worden geblokkeerd.</string>
     <string name="notifications_disabled">Meldingen van deze app zijn uitgeschakeld. Ga naar de systeeminstellingen voor deze app om ze in te schakelen.</string>
