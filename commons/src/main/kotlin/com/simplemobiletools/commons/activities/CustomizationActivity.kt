@@ -87,6 +87,10 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         updateTextColors(customization_holder)
         originalAppIconColor = baseConfig.appIconColor
+
+        if (resources.getBoolean(R.bool.hide_google_relations)) {
+            apply_to_all_holder.beGone()
+        }
     }
 
     override fun onResume() {
