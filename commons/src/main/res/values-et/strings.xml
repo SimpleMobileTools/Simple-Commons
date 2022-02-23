@@ -501,11 +501,9 @@
         <item quantity="other">%d aasta võrra</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
-    <string name="alarm_goes_off_in">Äratuseni jäänud aeg:
-\n%s</string>
-    <string name="reminder_triggers_in">Meeldetuletuseni jäänud aeg:
+    <string name="alarm_goes_off_in">Äratuseni jäänud aeg:\n%s</string>
+    <string name="reminder_triggers_in">Meeldetuletuseni jäänud aeg:\n%s</string>
     <string name="time_remaining">Time remaining:\n%s</string>
-\n%s</string>
     <string name="alarm_warning">Palun veendu, et alarm töötab korralikult, enne kui sa sellega arvestad. Alarm võib aku säästmisega seotud süsteemipiirangute tõttu valesti käituda.</string>
     <string name="reminder_warning">Palun veendu, et meeldetuletused töötavad korralikult, enne kui sa sellega arvestad. Kontrolli oma nutiseadme aku ja teavituse seadistusi, kas midagi ei blokeeri meeldetuletusi ega sulge taustal töötavat rakendust.</string>
     <string name="notifications_disabled">Selle rakenduse teavitused on välja lülitatud. Nende lubamiseks ava oma nutiseadme seadistused.</string>
