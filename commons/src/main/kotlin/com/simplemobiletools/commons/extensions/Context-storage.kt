@@ -164,6 +164,10 @@ fun Context.getSAFOnlyDirs(): List<String> {
 }
 
 fun Context.isAccessibleWithSAFSdk30(path: String): Boolean {
+    if(path.startsWith(filesDir.absolutePath)){
+        return false
+    }
+
     val firstParentPath = path.getFirstParentPath(this)
     val firstParentDir = path.getFirstParentDirName(this)
     return isRPlus() && firstParentPath != path &&
