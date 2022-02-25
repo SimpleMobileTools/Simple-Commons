@@ -237,10 +237,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
                 val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
                 applicationContext.contentResolver.takePersistableUriPermission(treeUri, takeFlags)
-                funAfterSAFPermission?.invoke(true)
-                funAfterSAFPermission = null
+                funAfterDelete30File?.invoke(true)
+                funAfterDelete30File = null
             } else {
-                funAfterSAFPermission?.invoke(false)
+                funAfterDelete30File?.invoke(false)
             }
 
         } else if (requestCode == OPEN_DOCUMENT_TREE_FOR_ANDROID_DATA_OR_OBB) {
@@ -430,7 +430,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             callback(true)
             false
         } else if (isShowingSAFDialogForDeleteSdk30(path)) {
-            funAfterSAFPermission = callback
+            funAfterDelete30File = callback
             true
         } else {
             callback(true)

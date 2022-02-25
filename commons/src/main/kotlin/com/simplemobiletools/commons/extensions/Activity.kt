@@ -154,7 +154,7 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
 
 @SuppressLint("InlinedApi")
 fun BaseSimpleActivity.isShowingSAFDialogForDeleteSdk30(path: String): Boolean {
-    return if (!hasProperStoredFirstParentUri(path)) {
+    return if (isAccessibleWithSAFSdk30(path) && !hasProperStoredFirstParentUri(path)) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
                 WritePermissionDialog(this, Mode.SDK_30) {
@@ -644,31 +644,38 @@ fun BaseSimpleActivity.deleteFilesBg(files: List<FileDirItem>, allowDeleteFolder
     }
 
     var wasSuccess = false
-    handleSAFDialog(files[0].path) {
+    val firstFile = files.first()
+    handleSAFDialog(firstFile.path) {
         if (!it) {
             return@handleSAFDialog
         }
 
-        val failedFileDirItems = ArrayList<FileDirItem>()
-        files.forEachIndexed { index, file ->
-            deleteFileBg(file, allowDeleteFolder, true) {
-                if (it) {
-                    wasSuccess = true
-                } else {
-                    failedFileDirItems.add(file)
-                }
+        handleSAFDeleteSdk30Dialog(firstFile.path) {
+            if (!it) {
+                return@handleSAFDeleteSdk30Dialog
+            }
 
-                if (index == files.lastIndex) {
-                    if (isRPlus() && failedFileDirItems.isNotEmpty()) {
-                        val fileUris = getFileUrisFromFileDirItems(failedFileDirItems).second
-                        deleteSDK30Uris(fileUris) { success ->
-                            runOnUiThread {
-                                callback?.invoke(success)
-                            }
-                        }
+            val failedFileDirItems = ArrayList<FileDirItem>()
+            files.forEachIndexed { index, file ->
+                deleteFileBg(file, allowDeleteFolder, true) {
+                    if (it) {
+                        wasSuccess = true
                     } else {
-                        runOnUiThread {
-                            callback?.invoke(wasSuccess)
+                        failedFileDirItems.add(file)
+                    }
+
+                    if (index == files.lastIndex) {
+                        if (isRPlus() && failedFileDirItems.isNotEmpty()) {
+                            val fileUris = getFileUrisFromFileDirItems(failedFileDirItems).second
+                            deleteSDK30Uris(fileUris) { success ->
+                                runOnUiThread {
+                                    callback?.invoke(success)
+                                }
+                            }
+                        } else {
+                            runOnUiThread {
+                                callback?.invoke(wasSuccess)
+                            }
                         }
                     }
                 }
@@ -787,7 +794,7 @@ fun Activity.rescanPaths(paths: List<String>, callback: (() -> Unit)? = null) {
     applicationContext.rescanPaths(paths, callback)
 }
 
-fun BaseSimpleActivity.renameFile (
+fun BaseSimpleActivity.renameFile(
     oldPath: String,
     newPath: String,
     isRenamingMultipleFiles: Boolean,
