@@ -160,7 +160,7 @@ fun BaseSimpleActivity.isShowingSAFDialogForDeleteSdk30(path: String): Boolean {
                 WritePermissionDialog(this, Mode.SDK_30) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         putExtra("android.content.extra.SHOW_ADVANCED", true)
-                        putExtra(DocumentsContract.EXTRA_INITIAL_URI, createFirstParentDocumentUri(path))
+                        putExtra(DocumentsContract.EXTRA_INITIAL_URI, createDocumentUriFromFirstParentTree(path))
                         try {
                             startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_DELETE_SDK_30)
                             checkedDocumentPath = path
