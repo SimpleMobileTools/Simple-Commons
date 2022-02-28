@@ -11,7 +11,7 @@
     <string name="an_error_occurred">エラーが発生しました: %s</string>
     <string name="open_with">別のアプリで開く</string>
     <string name="edit_with">他のアプリで編集</string>
-    <string name="edit">Edit</string>
+    <string name="edit">編集</string>
     <string name="no_app_found">有効なアプリが見つかりません</string>
     <string name="set_as">他で使う</string>
     <string name="copy_to_clipboard">クリップボードにコピーする</string>
@@ -41,20 +41,20 @@
     <string name="no_contacts_found">連絡先が見つかりません</string>
     <string name="request_the_required_permissions">要求された許可をリクエスト</string>
     <string name="no_access_to_contacts">連絡先情報にアクセスすることが出来ませんでした</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
+    <string name="no_phone_call_permission">アプリに電話をかける権限がありません。デバイス設定で許可してください</string>
     <string name="insert_text_here">ここにテキストを挿入</string>
     <string name="call_person">%sに発信</string>
     <string name="zero">Zero</string>
     <string name="one">One</string>
-    <string name="two">Two</string>
-    <string name="three">Three</string>
-    <string name="four">Four</string>
-    <string name="five">Five</string>
-    <string name="six">Six</string>
-    <string name="seven">Seven</string>
-    <string name="eight">Eight</string>
-    <string name="nine">Nine</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="value_cannot_be_empty">値を空にすることはできません</string>
     <!-- Emails -->
     <string name="home">自宅</string>
     <string name="work">職場</string>
@@ -81,8 +81,8 @@
     <string name="block_number">番号をブロックする</string>
     <string name="block_numbers">複数の番号をブロックする</string>
     <string name="blocked_numbers">ブロックした番号</string>
-    <string name="export_blocked_numbers">Export blocked numbers</string>
-    <string name="import_blocked_numbers">Import blocked numbers</string>
+    <string name="export_blocked_numbers">ブロックした番号をエクスポート</string>
+    <string name="import_blocked_numbers">ブロックした番号をインポート</string>
     <string name="must_make_default_dialer">番号ブロックを活用するには、このアプリをデフォルトの電話アプリにする必要があります。</string>
     <string name="set_as_default">デフォルトとして設定</string>
     <string name="block_confirmation">本当に\"%s\"をブロックしますか？</string>
@@ -124,9 +124,9 @@
     <string name="pattern_renaming">パターン</string>
     <string name="string_to_add">追加する文字列</string>
     <string name="rename_date_time_pattern">%Y - 年\n%M - 月\n%D - 日\n%h - 時\n%m - 分\n%s - 秒\n%i - 1から増える数</string>
-    <string name="filename_without_txt">Filename (without .txt)</string>
-    <string name="filename_without_json">Filename (without .json)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
+    <string name="filename_without_txt">ファイル名 (.txtを除く)</string>
+    <string name="filename_without_json">ファイル名 (.jsonを除く)</string>
+    <string name="cannot_hide_files">Android11以降、ファイルやフォルダを非表示にできなくなりました</string>
     <!-- Copy / Move -->
     <string name="copy">コピー</string>
     <string name="move">移動</string>
@@ -143,11 +143,11 @@
     <string name="copy_failed">ファイルをコピーできませんでした</string>
     <string name="copying">コピー中…</string>
     <string name="copying_success">ファイルを正常にコピーしました</string>
-    <string name="copying_success_one">File copied successfully</string>
+    <string name="copying_success_one">ファイルのコピーに成功しました</string>
     <string name="copy_move_failed">エラーが発生しました</string>
     <string name="moving">移動中…</string>
     <string name="moving_success">ファイルを正常に移動しました</string>
-    <string name="moving_success_one">File moved successfully</string>
+    <string name="moving_success_one">ファイルの移動に成功しました</string>
     <string name="moving_success_partial">一部のファイルが移動できませんでした</string>
     <string name="copying_success_partial">一部のファイルがコピーできませんでした</string>
     <string name="no_files_selected">ファイルが選択されていません</string>
@@ -296,11 +296,11 @@
     <string name="call_from_sim_1">SIM 1 から電話</string>
     <string name="call_from_sim_2">SIM 2 から電話</string>
     <string name="toggle_filename">ファイル名の表示を切り替え</string>
-    <string name="move_to_top">Move to the top</string>
-    <string name="move_to_bottom">Move to the bottom</string>
+    <string name="move_to_top">上部に移動する</string>
+    <string name="move_to_bottom">下部に移動する</string>
     <string name="pin_item">Pin item</string>
     <string name="unpin_item">Unpin item</string>
-    <string name="send_sms">Send SMS</string>
+    <string name="send_sms">SMSを送信</string>
     <string name="send_email">Send email</string>
     <string name="call">Call</string>
     <!-- Sorting -->
@@ -488,13 +488,13 @@
     <string name="settings">設定</string>
     <string name="purchase_simple_thank_you">Simple Thank Youを購入</string>
     <string name="general_settings">General</string>
-    <string name="color_customization">Color customization</string>
+    <string name="color_customization">カラーカスタマイズ</string>
     <string name="customize_colors">表示色のカスタマイズ</string>
     <string name="customize_colors_locked">表示色のカスタマイズ (Locked)</string>
     <string name="customize_widget_colors">ウィジェットの色をカスタマイズ</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="customize_notifications">通知をカスタマイズ</string>
     <string name="use_english_language">英語で表示する</string>
-    <string name="language">Language</string>
+    <string name="language">言語</string>
     <string name="show_hidden_items">非表示のアイテムを表示する</string>
     <string name="font_size">メモのフォントサイズ</string>
     <string name="small">小</string>
@@ -525,7 +525,7 @@
     <string name="settings_exported_successfully">設定は正常にエクスポートされました</string>
     <string name="settings_imported_successfully">設定は正常にインポートされました</string>
     <string name="start_name_with_surname">姓を先に表示</string>
-    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cache">キャッシュのクリア</string>
     <string name="show_call_confirmation_dialog">発信する前に確認ダイアログを表示する</string>
     <!-- Setting sections -->
     <string name="visibility">表示・非表示</string>
@@ -539,7 +539,7 @@
     <string name="migrating">移行中</string>
     <string name="quality">Quality</string>
     <string name="main_screen">Main screen</string>
-    <string name="thumbnails">Thumbnails</string>
+    <string name="thumbnails">サムネイル</string>
     <string name="list_view">List view</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">表示するタブを管理</string>
@@ -709,7 +709,7 @@
     <string name="simple_file_manager">Simpleファイルマネージャー</string>
     <string name="simple_flashlight">Simpleフラッシュライト</string>
     <string name="simple_gallery">Simpleギャラリー</string>
-    <string name="simple_keyboard">Simple Keyboard</string>
+    <string name="simple_keyboard">シンプルキーボード</string>
     <string name="simple_music_player">Simple音楽プレーヤー</string>
     <string name="simple_notes">Simpleノート</string>
     <string name="simple_sms_messenger">Simpleショートメール</string>
@@ -726,7 +726,7 @@
     <string name="file_manager_short">ファイルマネージャー</string>
     <string name="flashlight_short">フラッシュライト</string>
     <string name="gallery_short">ギャラリー</string>
-    <string name="keyboard_short">Keyboard</string>
+    <string name="keyboard_short">キーボード</string>
     <string name="music_player_short">音楽プレイヤー</string>
     <string name="notes_short">メモ</string>
     <string name="sms_messenger_short">ショートメール</string>
@@ -770,7 +770,7 @@
     <string name="faq_10_text_commons">Google Playアプリのキャッシュを削除してデバイスを再起動してみてください。Google Playの不具合であり、アプリの不具合ではありません。</string>
     <!-- Contributors -->
     <string name="contributors">Contributors</string>
-    <string name="translation">Translation</string>
+    <string name="translation">翻訳</string>
     <string name="development">Development</string>
     <string name="other_help">Other help</string>
     <string name="contributors_label">
