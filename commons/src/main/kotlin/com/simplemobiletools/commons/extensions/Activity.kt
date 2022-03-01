@@ -33,6 +33,7 @@ import androidx.fragment.app.FragmentActivity
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.dialogs.*
+import com.simplemobiletools.commons.dialogs.WritePermissionDialog.Mode
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.*
 import com.simplemobiletools.commons.views.MyTextView
@@ -124,7 +125,7 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
     return if ((!isRPlus() && isPathOnSD(path) && !isSDCardSetAsDefaultStorage() && (baseConfig.sdTreeUri.isEmpty() || !hasProperStoredTreeUri(false)))) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
-                WritePermissionDialog(this, false) {
+                WritePermissionDialog(this, Mode.SD_CARD) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         putExtra("android.content.extra.SHOW_ADVANCED", true)
                         try {
@@ -153,13 +154,13 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
 
 @SuppressLint("InlinedApi")
 fun BaseSimpleActivity.isShowingSAFDialogForDeleteSdk30(path: String): Boolean {
-    return if (!hasProperStoredFirstParentUri(path)) {
+    return if (isAccessibleWithSAFSdk30(path) && !hasProperStoredFirstParentUri(path)) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
-                WritePermissionDialog(this, false) {
+                WritePermissionDialog(this, Mode.SDK_30) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         putExtra("android.content.extra.SHOW_ADVANCED", true)
-                        putExtra(DocumentsContract.EXTRA_INITIAL_URI, createFirstParentDocumentUri(path))
+                        putExtra(DocumentsContract.EXTRA_INITIAL_URI, createDocumentUriFromFirstParentTree(path))
                         try {
                             startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_DELETE_SDK_30)
                             checkedDocumentPath = path
@@ -230,7 +231,7 @@ fun BaseSimpleActivity.isShowingOTGDialog(path: String): Boolean {
 fun BaseSimpleActivity.showOTGPermissionDialog(path: String) {
     runOnUiThread {
         if (!isDestroyed && !isFinishing) {
-            WritePermissionDialog(this, true) {
+            WritePermissionDialog(this, Mode.OTG) {
                 Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                     try {
                         startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
@@ -643,31 +644,38 @@ fun BaseSimpleActivity.deleteFilesBg(files: List<FileDirItem>, allowDeleteFolder
     }
 
     var wasSuccess = false
-    handleSAFDialog(files[0].path) {
+    val firstFile = files.first()
+    handleSAFDialog(firstFile.path) {
         if (!it) {
             return@handleSAFDialog
         }
 
-        val failedFileDirItems = ArrayList<FileDirItem>()
-        files.forEachIndexed { index, file ->
-            deleteFileBg(file, allowDeleteFolder, true) {
-                if (it) {
-                    wasSuccess = true
-                } else {
-                    failedFileDirItems.add(file)
-                }
+        handleSAFDeleteSdk30Dialog(firstFile.path) {
+            if (!it) {
+                return@handleSAFDeleteSdk30Dialog
+            }
 
-                if (index == files.lastIndex) {
-                    if (isRPlus() && failedFileDirItems.isNotEmpty()) {
-                        val fileUris = getFileUrisFromFileDirItems(failedFileDirItems).second
-                        deleteSDK30Uris(fileUris) { success ->
-                            runOnUiThread {
-                                callback?.invoke(success)
-                            }
-                        }
+            val failedFileDirItems = ArrayList<FileDirItem>()
+            files.forEachIndexed { index, file ->
+                deleteFileBg(file, allowDeleteFolder, true) {
+                    if (it) {
+                        wasSuccess = true
                     } else {
-                        runOnUiThread {
-                            callback?.invoke(wasSuccess)
+                        failedFileDirItems.add(file)
+                    }
+
+                    if (index == files.lastIndex) {
+                        if (isRPlus() && failedFileDirItems.isNotEmpty()) {
+                            val fileUris = getFileUrisFromFileDirItems(failedFileDirItems).second
+                            deleteSDK30Uris(fileUris) { success ->
+                                runOnUiThread {
+                                    callback?.invoke(success)
+                                }
+                            }
+                        } else {
+                            runOnUiThread {
+                                callback?.invoke(wasSuccess)
+                            }
                         }
                     }
                 }
@@ -786,7 +794,7 @@ fun Activity.rescanPaths(paths: List<String>, callback: (() -> Unit)? = null) {
     applicationContext.rescanPaths(paths, callback)
 }
 
-fun BaseSimpleActivity.renameFile (
+fun BaseSimpleActivity.renameFile(
     oldPath: String,
     newPath: String,
     isRenamingMultipleFiles: Boolean,

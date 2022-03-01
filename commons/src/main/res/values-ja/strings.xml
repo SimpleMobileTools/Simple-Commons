@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">キャンセル</string>
@@ -10,7 +11,7 @@
     <string name="an_error_occurred">エラーが発生しました: %s</string>
     <string name="open_with">別のアプリで開く</string>
     <string name="edit_with">他のアプリで編集</string>
-    <string name="edit">Edit</string>
+    <string name="edit">編集</string>
     <string name="no_app_found">有効なアプリが見つかりません</string>
     <string name="set_as">他で使う</string>
     <string name="copy_to_clipboard">クリップボードにコピーする</string>
@@ -40,20 +41,20 @@
     <string name="no_contacts_found">連絡先が見つかりません</string>
     <string name="request_the_required_permissions">要求された許可をリクエスト</string>
     <string name="no_access_to_contacts">連絡先情報にアクセスすることが出来ませんでした</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
+    <string name="no_phone_call_permission">アプリに電話をかける権限がありません。デバイス設定で許可してください</string>
     <string name="insert_text_here">ここにテキストを挿入</string>
     <string name="call_person">%sに発信</string>
     <string name="zero">Zero</string>
     <string name="one">One</string>
-    <string name="two">Two</string>
-    <string name="three">Three</string>
-    <string name="four">Four</string>
-    <string name="five">Five</string>
-    <string name="six">Six</string>
-    <string name="seven">Seven</string>
-    <string name="eight">Eight</string>
-    <string name="nine">Nine</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="value_cannot_be_empty">値を空にすることはできません</string>
     <!-- Emails -->
     <string name="home">自宅</string>
     <string name="work">職場</string>
@@ -64,7 +65,6 @@
     <string name="home_fax">自宅FAX</string>
     <string name="pager">ポケベル</string>
     <string name="no_phone_number_found">電話番号が見つかりません</string>
-
     <!-- View types -->
     <string name="change_view_type">表示形式の変更</string>
     <string name="grid">グリッド</string>
@@ -74,7 +74,6 @@
     <string name="reduce_column_count">列数を減らす</string>
     <string name="change_cover_image">カバー画像を変更</string>
     <string name="select_photo">写真を選択</string>
-
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">ブロックした番号を管理</string>
     <string name="not_blocking_anyone">まだ誰もブロックしていません.</string>
@@ -82,33 +81,28 @@
     <string name="block_number">番号をブロックする</string>
     <string name="block_numbers">複数の番号をブロックする</string>
     <string name="blocked_numbers">ブロックした番号</string>
-    <string name="export_blocked_numbers">Export blocked numbers</string>
-    <string name="import_blocked_numbers">Import blocked numbers</string>
-    <string name="must_make_default_dialer">番号ブロックを活用するには、このアプリをデフォルトの電話アプリにする必要があります</string>
+    <string name="export_blocked_numbers">ブロックした番号をエクスポート</string>
+    <string name="import_blocked_numbers">ブロックした番号をインポート</string>
+    <string name="must_make_default_dialer">番号ブロックを活用するには、このアプリをデフォルトの電話アプリにする必要があります。</string>
     <string name="set_as_default">デフォルトとして設定</string>
     <string name="block_confirmation">本当に\"%s\"をブロックしますか？</string>
-
     <!-- Favorites -->
     <string name="favorites">お気に入り</string>
     <string name="add_favorites">お気に入りを追加</string>
     <string name="add_to_favorites">お気に入りに追加</string>
     <string name="remove_from_favorites">お気に入りから削除</string>
-
     <!-- Search -->
     <string name="search">検索</string>
     <string name="type_2_characters">検索を開始するには少なくとも2文字以上入力してください。</string>
-
     <!-- Filters -->
     <string name="filter">フィルタ</string>
     <string name="no_items_found">何も見つかりませんでした。</string>
     <string name="change_filter">フィルタを変更</string>
-
     <!-- Permissions -->
     <string name="no_storage_permissions">ストレージへのアクセス許可が必要です</string>
     <string name="no_contacts_permission">連絡先へのアクセス許可が必要です</string>
     <string name="no_camera_permissions">カメラへのアクセス許可が必要です</string>
     <string name="no_audio_permissions">マイクへのアクセス許可が必要です</string>
-
     <!-- Renaming -->
     <string name="rename_file">ファイルの名前を変更</string>
     <string name="rename_folder">フォルダの名前を変更</string>
@@ -130,10 +124,9 @@
     <string name="pattern_renaming">パターン</string>
     <string name="string_to_add">追加する文字列</string>
     <string name="rename_date_time_pattern">%Y - 年\n%M - 月\n%D - 日\n%h - 時\n%m - 分\n%s - 秒\n%i - 1から増える数</string>
-    <string name="filename_without_txt">Filename (without .txt)</string>
-    <string name="filename_without_json">Filename (without .json)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
-
+    <string name="filename_without_txt">ファイル名 (.txtを除く)</string>
+    <string name="filename_without_json">ファイル名 (.jsonを除く)</string>
+    <string name="cannot_hide_files">Android11以降、ファイルやフォルダを非表示にできなくなりました</string>
     <!-- Copy / Move -->
     <string name="copy">コピー</string>
     <string name="move">移動</string>
@@ -150,11 +143,11 @@
     <string name="copy_failed">ファイルをコピーできませんでした</string>
     <string name="copying">コピー中…</string>
     <string name="copying_success">ファイルを正常にコピーしました</string>
-    <string name="copying_success_one">File copied successfully</string>
+    <string name="copying_success_one">ファイルのコピーに成功しました</string>
     <string name="copy_move_failed">エラーが発生しました</string>
     <string name="moving">移動中…</string>
     <string name="moving_success">ファイルを正常に移動しました</string>
-    <string name="moving_success_one">File moved successfully</string>
+    <string name="moving_success_one">ファイルの移動に成功しました</string>
     <string name="moving_success_partial">一部のファイルが移動できませんでした</string>
     <string name="copying_success_partial">一部のファイルがコピーできませんでした</string>
     <string name="no_files_selected">ファイルが選択されていません</string>
@@ -163,7 +156,6 @@
     <string name="could_not_create_file">ファイル %s を作成できません</string>
     <string name="no_new_items">新しいアイテムは見つかりませんでした</string>
     <string name="no_space">保存先に十分な空き容量がありません。 必要容量 %1$s, 空き容量 %2$s</string>
-
     <!-- Create new -->
     <string name="create_new">新規作成</string>
     <string name="folder">フォルダ</string>
@@ -173,7 +165,6 @@
     <string name="invalid_name">名前に無効な文字が含まれています</string>
     <string name="empty_name">名前を入力してください</string>
     <string name="unknown_error_occurred">不明なエラーが発生しました</string>
-
     <!-- File operation conflicts -->
     <string name="file_already_exists">ファイル \"%s\" は既に存在しています</string>
     <string name="file_already_exists_overwrite">ファイル \"%s\" は既に存在しています。上書きしますか？</string>
@@ -184,7 +175,6 @@
     <string name="skip">スキップ</string>
     <string name="append">\'_1\' に追記する</string>
     <string name="apply_to_all">すべてに適用</string>
-
     <!-- File picker -->
     <string name="select_folder">フォルダを選択</string>
     <string name="select_file">ファイルを選択</string>
@@ -195,25 +185,20 @@
     <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">選択を確認</string>
     <string name="loading">Loading…</string>
-
     <plurals name="items">
         <item quantity="other">%d アイテム</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="other">%d アイテム</item>
     </plurals>
-
     <plurals name="deleting_items">
         <item quantity="other">%d アイテムを削除しています</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="other">%d コンタクト</item>
     </plurals>
-
     <!-- Storages -->
     <string name="select_storage">ストレージを選択</string>
     <string name="internal">内部</string>
@@ -224,7 +209,6 @@
     <string name="app_on_sd_card">アプリがSDカード上にインストールされているため、アプリのウィジェットは使用できません。利用可能なウィジェットのリストにも表示されないでしょう。
         これはシステムによる制限なので、ウィジェットを使用する場合には、アプリを内部ストレージに戻す必要があります。</string>
     <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
-
     <!-- File properties -->
     <string name="properties">プロパティ</string>
     <string name="path">パス</string>
@@ -244,7 +228,6 @@
     <string name="song_title">曲名</string>
     <string name="gps_coordinates">GPS座標値</string>
     <string name="altitude">高度</string>
-
     <!-- Color customization -->
     <string name="background_color">背景色</string>
     <string name="text_color">文字色</string>
@@ -275,7 +258,6 @@
             この機能のロックを解除して開発者をサポートするには、<a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> アプリを購入してください。
         ]]>
     </string>
-
     <!-- Themes -->
     <string name="light_theme">ライト</string>
     <string name="dark_theme">ダーク</string>
@@ -286,11 +268,9 @@
     <string name="black_white">モノクロ</string>
     <string name="custom">カスタム</string>
     <string name="shared">共有</string>
-
     <!-- What's new -->
     <string name="whats_new">更新内容</string>
     <string name="whats_new_disclaimer">* ここでは主な変更点を挙げていますが、その他の細かい改善も行われています</string>
-
     <!-- Actionbar items -->
     <string name="delete">削除</string>
     <string name="remove">削除</string>
@@ -316,14 +296,13 @@
     <string name="call_from_sim_1">SIM 1 から電話</string>
     <string name="call_from_sim_2">SIM 2 から電話</string>
     <string name="toggle_filename">ファイル名の表示を切り替え</string>
-    <string name="move_to_top">Move to the top</string>
-    <string name="move_to_bottom">Move to the bottom</string>
+    <string name="move_to_top">上部に移動する</string>
+    <string name="move_to_bottom">下部に移動する</string>
     <string name="pin_item">Pin item</string>
     <string name="unpin_item">Unpin item</string>
-    <string name="send_sms">Send SMS</string>
+    <string name="send_sms">SMSを送信</string>
     <string name="send_email">Send email</string>
     <string name="call">Call</string>
-
     <!-- Sorting -->
     <string name="sort_by">並べ替え</string>
     <string name="name">名前</string>
@@ -346,11 +325,12 @@
     <string name="full_name">氏名</string>
     <string name="use_custom_sorting">カスタムソートを使用</string>
     <string name="change_order">並び替え</string>
-
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">削除を続行してもよろしいですか？</string>
-    <string name="deletion_confirmation">%s を削除してもよろしいですか？</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">%s をゴミ箱に移動してもよろしいですか？</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">%s を削除してもよろしいですか？</string>
+    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">%s をゴミ箱に移動してもよろしいですか？</string>
+    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">このアイテムを削除してもよろしいですか？</string>
     <string name="are_you_sure_recycle_bin">個のアイテムをゴミ箱に移動してもよろしいですか？</string>
     <string name="do_not_ask_again">このセッションでは再度たずねない</string>
@@ -358,11 +338,9 @@
     <string name="yes">はい</string>
     <string name="no">いいえ</string>
     <string name="maybe">恐らく</string>
-
     <plurals name="delete_warning">
         <item quantity="other">警告: %d 個のフォルダを削除しようとしています</item>
     </plurals>
-
     <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">PINを入力</string>
@@ -388,7 +366,6 @@
     <string name="lock_folder">フォルダに鍵をかける</string>
     <string name="unlock_folder">フォルダの鍵を外す</string>
     <string name="lock_folder_notice">この保護はアプリ内のみの機能となっており、実際のシステム全体のフォルダ暗号化は行われません。</string>
-
     <!-- Times -->
     <string name="yesterday">昨日</string>
     <string name="today">今日</string>
@@ -401,7 +378,6 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
-
     <plurals name="seconds">
         <item quantity="other">%d秒</item>
     </plurals>
@@ -423,7 +399,6 @@
     <plurals name="years">
         <item quantity="other">%d年</item>
     </plurals>
-
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="other">%d秒</item>
@@ -446,7 +421,6 @@
     <plurals name="in_years">
         <item quantity="other">%d年</item>
     </plurals>
-
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="other">%d秒前</item>
@@ -469,7 +443,6 @@
     <plurals name="years_before">
         <item quantity="other">%d年前</item>
     </plurals>
-
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="other">%d秒</item>
@@ -492,7 +465,6 @@
     <plurals name="by_years">
         <item quantity="other">%d年</item>
     </plurals>
-
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">アラームが鳴るまでの時間:\n%s</string>
     <string name="reminder_triggers_in">リマインダー発動までの時間:\n%s</string>
@@ -500,7 +472,6 @@
     <string name="alarm_warning">アラームの動作を確認して使用してください。充電節約に関連したシステム制限による誤動作が発生する場合があります。</string>
     <string name="reminder_warning">リマインダーの動作を確認して使用してください。リマインダーを妨げるものはないか、アプリがバックグラウンドで閉じられないか、デバイスの充電と通知設定を確認してください。</string>
     <string name="notifications_disabled">アプリの通知が無効となっています。設定から有効に変更してください。</string>
-
     <!-- Alarms -->
     <string name="alarm">アラーム</string>
     <string name="snooze">スヌーズ</string>
@@ -513,18 +484,17 @@
     <string name="no_sound">サウンドなし</string>
     <string name="during_day_at_hh_mm">During the day at hh:mm</string>
     <string name="during_day_at">During the day at %02d:%02d</string>
-
     <!-- Settings -->
     <string name="settings">設定</string>
     <string name="purchase_simple_thank_you">Simple Thank Youを購入</string>
     <string name="general_settings">General</string>
-    <string name="color_customization">Color customization</string>
+    <string name="color_customization">カラーカスタマイズ</string>
     <string name="customize_colors">表示色のカスタマイズ</string>
     <string name="customize_colors_locked">表示色のカスタマイズ (Locked)</string>
     <string name="customize_widget_colors">ウィジェットの色をカスタマイズ</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="customize_notifications">通知をカスタマイズ</string>
     <string name="use_english_language">英語で表示する</string>
-    <string name="language">Language</string>
+    <string name="language">言語</string>
     <string name="show_hidden_items">非表示のアイテムを表示する</string>
     <string name="font_size">メモのフォントサイズ</string>
     <string name="small">小</string>
@@ -555,9 +525,8 @@
     <string name="settings_exported_successfully">設定は正常にエクスポートされました</string>
     <string name="settings_imported_successfully">設定は正常にインポートされました</string>
     <string name="start_name_with_surname">姓を先に表示</string>
-    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cache">キャッシュのクリア</string>
     <string name="show_call_confirmation_dialog">発信する前に確認ダイアログを表示する</string>
-
     <!-- Setting sections -->
     <string name="visibility">表示・非表示</string>
     <string name="security">セキュリティ</string>
@@ -570,9 +539,8 @@
     <string name="migrating">移行中</string>
     <string name="quality">Quality</string>
     <string name="main_screen">Main screen</string>
-    <string name="thumbnails">Thumbnails</string>
+    <string name="thumbnails">サムネイル</string>
     <string name="list_view">List view</string>
-
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">表示するタブを管理</string>
     <string name="default_tab_to_open">アプリ開始時に開くタブ</string>
@@ -583,7 +551,6 @@
     <string name="last_used_tab">最後に使用</string>
     <string name="files_tab">Files</string>
     <string name="recent_files_tab">最近使用したファイル</string>
-
     <!-- Recycle Bin -->
     <string name="restore_this_file">このファイルを復元</string>
     <string name="restore_selected_files">選択したファイルを復元</string>
@@ -595,11 +562,9 @@
     <string name="moving_recycle_bin_items_disabled">ごみ箱からの移動はできません。復元を使用してください</string>
     <string name="show_the_recycle_bin">ごみ箱を表示</string>
     <string name="hide_the_recycle_bin">ごみ箱を隠す</string>
-
     <plurals name="moving_items_into_bin">
         <item quantity="other">%d件のアイテムをごみ箱に移動しています</item>
     </plurals>
-
     <!-- Import / Export -->
     <string name="importing">インポート中…</string>
     <string name="exporting">エクスポート中…</string>
@@ -612,13 +577,11 @@
     <string name="no_entries_for_importing">インポートするエントリが見つかりませんでした</string>
     <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
     <string name="no_entries_for_exporting">エクスポートするエントリが見つかりませんでした</string>
-
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">デバイスにUSBが繋がっているようです。ファイルを正常に表示するためには、追加で許可を行ってください。</string>
     <string name="confirm_usb_storage_access_text">アクセスを許可するには、次の画面でUSBデバイスの1番上のフォルダを選択してください</string>
     <string name="wrong_root_selected_usb">選択されたフォルダが間違っています。USBデバイスのルートフォルダを選択してください</string>
-
     <!-- Dates -->
     <string name="january">1月</string>
     <string name="february">2月</string>
@@ -632,7 +595,6 @@
     <string name="october">10月</string>
     <string name="november">11月</string>
     <string name="december">12月</string>
-
     <!-- in January -->
     <string name="in_january">1月に</string>
     <string name="in_february">2月に</string>
@@ -646,7 +608,6 @@
     <string name="in_october">10月に</string>
     <string name="in_november">11月に</string>
     <string name="in_december">12月に</string>
-
     <string name="monday">月曜日</string>
     <string name="tuesday">火曜日</string>
     <string name="wednesday">水曜日</string>
@@ -654,7 +615,6 @@
     <string name="friday">金曜日</string>
     <string name="saturday">土曜日</string>
     <string name="sunday">日曜日</string>
-
     <string name="monday_letter">月</string>
     <string name="tuesday_letter">火</string>
     <string name="wednesday_letter">水</string>
@@ -662,7 +622,6 @@
     <string name="friday_letter">金</string>
     <string name="saturday_letter">土</string>
     <string name="sunday_letter">日</string>
-
     <string name="monday_short">月</string>
     <string name="tuesday_short">火</string>
     <string name="wednesday_short">水</string>
@@ -670,7 +629,6 @@
     <string name="friday_short">金</string>
     <string name="saturday_short">土</string>
     <string name="sunday_short">日</string>
-
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">アプリのバージョンはこれ以上更新されません。新しい修正や改善を受けるには、Pro版へアップグレードしてください。</string>
     <string name="upgrade_to_pro_long_click">アプリのバージョンはこれ以上更新されません。新しい修正や改善を受けるには、ここをクリックしてPro版へアップグレードしてください。</string>
@@ -678,7 +636,6 @@
     <string name="more_info">もっと見る</string>
     <string name="upgrade">アップグレードする</string>
     <string name="upgrade_calendar">ローカルに保存されたイベントは、手動で.icsファイルにエクスポートしてインポートする必要があります。インポート/エクスポートボタンはメイン画面のメニューにあります。</string>
-
     <!-- About -->
     <string name="about">このアプリについて</string>
     <string name="website">Website</string>
@@ -702,7 +659,7 @@
     <string name="other">Other</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="about_footer">Made with ❤️ in Slovakia</string>
     <string name="additional_info">追加情報</string>
     <string name="app_version">アプリバージョン: %s</string>
     <string name="device_os">デバイスOS: %s</string>
@@ -729,7 +686,6 @@
             The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
         ]]>
     </string>
-
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -742,7 +698,6 @@
             ありがとうございます
         ]]>
     </string>
-
     <string name="simple_app_launcher">Simple App ランチャー</string>
     <string name="simple_calculator">Simple電卓</string>
     <string name="simple_calendar">Simpleカレンダー</string>
@@ -754,13 +709,12 @@
     <string name="simple_file_manager">Simpleファイルマネージャー</string>
     <string name="simple_flashlight">Simpleフラッシュライト</string>
     <string name="simple_gallery">Simpleギャラリー</string>
-    <string name="simple_keyboard">Simple Keyboard</string>
+    <string name="simple_keyboard">シンプルキーボード</string>
     <string name="simple_music_player">Simple音楽プレーヤー</string>
     <string name="simple_notes">Simpleノート</string>
     <string name="simple_sms_messenger">Simpleショートメール</string>
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simpleボイスレコーダー</string>
-
     <string name="app_launcher_short">アプリランチャー</string>
     <string name="calculator_short">電卓</string>
     <string name="calendar_short">カレンダー</string>
@@ -772,19 +726,17 @@
     <string name="file_manager_short">ファイルマネージャー</string>
     <string name="flashlight_short">フラッシュライト</string>
     <string name="gallery_short">ギャラリー</string>
-    <string name="keyboard_short">Keyboard</string>
+    <string name="keyboard_short">キーボード</string>
     <string name="music_player_short">音楽プレイヤー</string>
     <string name="notes_short">メモ</string>
     <string name="sms_messenger_short">ショートメール</string>
     <string name="thank_you_short">Thank You</string>
     <string name="voice_recorder_short">ボイスレコーダー</string>
-
     <string name="sideloaded_app">
         <![CDATA[
             アプリのバージョンが破損しているようです。オリジナル版を<a href="%s">ここから</a>ダウンロードしてください。
         ]]>
     </string>
-
     <!-- FAQ -->
     <string name="frequently_asked_questions">よくある質問</string>
     <string name="before_asking_question">質問する前に、こちらをお読みください</string>
@@ -816,10 +768,9 @@
     <string name="faq_9_text_commons">いくつかの方法があります。アイテムを長押しして、他の項目をクリックし選択モードにする方法。２つ目はパソコンのマウスでアイテムを選択するのと同じように、アイテムを長押しして選択モードを開始し、そのまま指を他の項目にドラッグして選択する方法です。３つ目は、アイテムを長押しし、他のアイテムを長押しすると、間にある全てが選択されます。全てのアイテムを選択したければ、アイテムを長押しし、左上にあるアイテムカウンターをクリックしてください。アイテムカウンターで全ての選択をしたり、解除したりできます。</string>
     <string name="faq_10_title_commons">アプリを購入しましたが、違うデバイスでダウンロード出来ません。</string>
     <string name="faq_10_text_commons">Google Playアプリのキャッシュを削除してデバイスを再起動してみてください。Google Playの不具合であり、アプリの不具合ではありません。</string>
-
     <!-- Contributors -->
     <string name="contributors">Contributors</string>
-    <string name="translation">Translation</string>
+    <string name="translation">翻訳</string>
     <string name="development">Development</string>
     <string name="other_help">Other help</string>
     <string name="contributors_label">
@@ -829,7 +780,6 @@
             Thanks to all contributors and other supporters!
         ]]>
     </string>
-
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -874,7 +824,6 @@
     <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
     <string name="translation_chinese_cn">Chinese (Simplified)</string>
     <string name="translation_chinese_tw">Chinese (Traditional)</string>
-
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">今すぐPro版をゲットしよう！</string>
     <string name="why_upgrade_basic_version">ベーシック</string>
@@ -883,43 +832,36 @@
     <string name="why_upgrade_no_internet_access">インターネットにアクセス不要</string>
     <string name="why_upgrade_footer">+ 100％返金保証</string>
     <string name="why_upgrade_improved_design">改良されたデザイン</string>
-
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">上級な写真編集</string>
     <string name="why_upgrade_heic_support">HEIC / HEIFファイル対応</string>
     <string name="why_upgrade_batch_renaming">上級なバッチファイル名の変更</string>
     <string name="why_upgrade_folder_locking">個々のフォルダーのロック</string>
     <string name="why_upgrade_printing_support">印刷対応</string>
-
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">現地時間対応</string>
     <string name="why_upgrade_attendees_emails">出席者とメール通知</string>
     <string name="why_upgrade_easy_event_importing">簡単なイベントの入力</string>
     <string name="why_upgrade_new_widgets">新しいウィジェット</string>
-
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">重複した連絡先登録を改善</string>
     <string name="why_upgrade_font_size_customization">文字サイズのカスタマイズ</string>
     <string name="why_upgrade_private_contact_sharing">アプリ内で個別連絡先をシェアするオプション</string>
     <string name="why_upgrade_customizable_contact_ringtones">カスタマイズ可能な連絡先の着信音</string>
     <string name="why_upgrade_contact_filtering">連絡先フィルタリング</string>
-
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">チェックリスト</string>
     <string name="why_upgrade_different_note_per_widget">各ウィジェットに違うメモと色</string>
     <string name="why_upgrade_note_locking">Note locking</string>
-
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">日付と時刻のフォーマットのカスタマイズ</string>
     <string name="why_upgrade_shortcuts">ホーム画面のショートカット</string>
     <string name="why_upgrade_file_compression">ファイル圧縮対応</string>
     <string name="why_upgrade_recents_tab">最近のファイルのタブ</string>
-
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">背景色のカスタマイズ</string>
     <string name="why_upgrade_file_importing">ファイル入力対応</string>
     <string name="why_upgrade_zooming">ズーミング</string>
-
     <!-- License -->
     <string name="notice">このアプリは、私の暮らしにゆとりを持たせるために、次のサードパーティのライブラリーを使用しています。ありがとうございます。</string>
     <string name="third_party_licences">サードパーティー ライセンス</string>
@@ -952,12 +894,10 @@
     <string name="audio_record_view_title">Audio Record View (オーディオ・ビジュアライゼーション)</string>
     <string name="sms_mms_title">SMS MMS (SMSやMMSの取り扱い)</string>
     <string name="apng_title">APNG Android (アニメーションWebPサポート)</string>
-
     <!-- Google Play listing -->
     <string name="deprecated_app">非推奨: このバージョンのアプリはメンテナンスが行われなくなります。こちらのURLからPro版を入手してください。https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">どのアプリでも、購入後２時間以内にアンインストールすると自動的に払い戻しされることを覚えていてください。それ以降に払い戻しが必要な場合は、こちらにお問い合わせください。hello@simplemobiletools.com
 お試ししやすいかと思います :)</string>
-
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">広告や不要な権限がなく、カスタマイズ可能なウィジェットを備えたシンプルな複数のオープンソースAndroidアプリ</string>
+    <string name="developer_description">広告や不要な権限がなく、カスタマイズ可能なウィジェットを備えたシンプルな複数のオープンソースAndroidアプリ。</string>
 </resources>
