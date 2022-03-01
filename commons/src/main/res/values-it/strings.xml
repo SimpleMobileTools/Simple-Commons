@@ -179,7 +179,7 @@
     <string name="select_folder">Seleziona una cartella</string>
     <string name="select_file">Seleziona un file</string>
     <string name="confirm_storage_access_title">Confermare l\'accesso all\'archiviazione esterna</string>
-    <string name="confirm_folder_access_title">Confirm folder access</string>
+    <string name="confirm_folder_access_title">Conferma l\'accesso alla cartella</string>
     <string name="confirm_storage_access_text">Scegliere il percorso della scheda SD nella prossima schermata, per consentire i permessi di scrittura</string>
     <string name="confirm_storage_access_text_sd">Se non si ha una scheda SD, provare questo</string>
     <string name="confirm_storage_access_android_text">Consenti all\'app di accedere allo storage selezionato nella schermata successiva premendo «Usa questa cartella» in basso.</string>
@@ -212,7 +212,7 @@
     <string name="sd_card_usb_same">I percorsi della scheda SD e del dispositivo USB non possono essere uguali</string>
     <string name="app_on_sd_card">Sembra che l\'app sia installata nella scheda SD, ciò impedisce l\'uso dei widget dell\'app. Non li vedrai neppure nell\'elenco dei widget disponibili.
         È una limitazione di sistema, quindi se si vuole utilizzare i widget, si deve spostare l\'app nella memoria interna.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">Cartella errata selezionata, selezionare il percorso «%s»</string>
     <!-- File properties -->
     <string name="properties">Proprietà</string>
     <string name="path">Percorso</string>
@@ -501,7 +501,8 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Tempo rimanente prima che suoni la sveglia:\n%s</string>
     <string name="reminder_triggers_in">Tempo rimanente prima della notifica promemoria:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Tempo rimanente:
+\n%s</string>
     <string name="alarm_warning">Assicurarsi che la sveglia funzioni correttamente prima di fare affidamento su di essa. Potrebbe comportarsi in modo anomalo a causa di restrizioni di sistema relative al risparmio della batteria.</string>
     <string name="reminder_warning">Assicurarsi che i promemoria funzionino correttamente prima di fare affidamento su di essi. Potrebbero comportarsi in modo anomalo a causa di restrizioni di sistema relative al risparmio della batteria.</string>
     <string name="notifications_disabled">Le notifiche di questa applicazione sono disattivate. Andare nelle impostazioni del dispositivo per attivarle.</string>
