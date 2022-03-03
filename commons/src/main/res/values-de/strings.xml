@@ -179,7 +179,7 @@
     <string name="select_folder">Ordner auswählen</string>
     <string name="select_file">Datei auswählen</string>
     <string name="confirm_storage_access_title">Bitte Zugriff auf externen Speicher bestätigen</string>
-    <string name="confirm_folder_access_title">Confirm folder access</string>
+    <string name="confirm_folder_access_title">Ordnerzugriff bestätigen</string>
     <string name="confirm_storage_access_text">Bitte am nächsten Bildschirm das Hauptverzeichnis deiner SD-Karte auswählen, um Schreibzugriff zu erlauben</string>
     <string name="confirm_storage_access_text_sd">Wenn die SD-Karte nicht angezeigt wird, versuche das</string>
     <string name="confirm_storage_access_android_text">Erlauben Sie der App auf dem nächsten Bildschirm den Zugriff auf den ausgewählten Speicher, indem Sie unten auf „Diesen Ordner verwenden“ klicken.</string>
@@ -212,7 +212,7 @@
     <string name="sd_card_usb_same">SD-Karten- und USB-Gerätepfad dürfen nicht identisch sein</string>
     <string name="app_on_sd_card">Die App wurde anscheinend auf der SD-Karte installiert, daher sind die Widgets nicht verfügbar. Sie werden auch in der Liste der Widgets nicht angezeigt.
         Dies ist systemseitig so beschränkt. Für die Verwendung der Widgets muss die App wieder im internen Speicher installiert werden.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">Falscher Ordner ausgewählt, bitte Pfad „%s“ wählen</string>
     <!-- File properties -->
     <string name="properties">Eigenschaften</string>
     <string name="path">Pfad</string>
@@ -501,7 +501,8 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Zeit bis Alarm:\n%s</string>
     <string name="reminder_triggers_in">Verbleibende Zeit bis Alarm ausgelöst wird:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Verbleibende Zeit:
+\n%s</string>
     <string name="alarm_warning">Bitte stell sicher, dass der Alarm zuverlässig funktioniert, bevor Du Dich darauf verlässt. Es könnte wegen Systemeinschränkungen (z.B. Stromsparfunktion) fehlschlagen.</string>
     <string name="reminder_warning">Bitte stell sicher, dass die Erinnerung zuverlässig funktioniert, bevor Du Dich darauf verlässt. Es könnte wegen Systemeinschränkungen (z.B. Stromsparfunktion) fehlschlagen.</string>
     <string name="notifications_disabled">Benachrichtigungen für diese App sind deaktiviert. Wechsle in die Systemeinstellungen und aktiviere sie.</string>
