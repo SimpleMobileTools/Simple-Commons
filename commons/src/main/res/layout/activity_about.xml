@@ -391,6 +391,36 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/about_privacy_policy_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_background"
+                android:padding="@dimen/medium_margin">
+
+                <ImageView
+                    android:id="@+id/about_privacy_policy_icon"
+                    android:layout_width="@dimen/normal_icon_size"
+                    android:layout_height="@dimen/normal_icon_size"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/medium_margin"
+                    android:src="@drawable/ic_unhide_vector" />
+
+                <com.simplemobiletools.commons.views.MyTextView
+                    android:id="@+id/about_privacy_policy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/about_privacy_policy_icon"
+                    android:layout_alignBottom="@+id/about_privacy_policy_icon"
+                    android:layout_marginStart="@dimen/normal_margin"
+                    android:layout_marginEnd="@dimen/normal_margin"
+                    android:layout_toEndOf="@+id/about_privacy_policy_icon"
+                    android:gravity="center_vertical"
+                    android:text="@string/privacy_policy"
+                    android:textSize="@dimen/bigger_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:id="@+id/about_licenses_holder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

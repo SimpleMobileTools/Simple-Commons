@@ -44,6 +44,7 @@ class AboutActivity : BaseSimpleActivity() {
             about_contributors_icon,
             about_more_apps_icon,
             about_email_icon,
+            about_privacy_policy_icon,
             about_licenses_icon,
             about_website_icon,
             about_version_icon
@@ -74,6 +75,7 @@ class AboutActivity : BaseSimpleActivity() {
         setupReddit()
         setupMoreApps()
         setupWebsite()
+        setupPrivacyPolicy()
         setupLicense()
         setupVersion()
     }
@@ -273,8 +275,20 @@ class AboutActivity : BaseSimpleActivity() {
         }
     }
 
+    private fun setupPrivacyPolicy() {
+        if (resources.getBoolean(R.bool.hide_google_relations) || resources.getBoolean(R.bool.hide_all_external_links)) {
+            about_privacy_policy_holder.beGone()
+        }
+
+        about_privacy_policy_holder.setOnClickListener {
+            val appId = baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro").removePrefix("com.simplemobiletools.")
+            val url = "https://simplemobiletools.com/privacy/$appId.txt"
+            launchViewIntent(url)
+        }
+    }
+
     private fun setupLicense() {
-        if (about_website_holder.isGone() && about_more_apps_holder.isGone()) {
+        if (about_website_holder.isGone() && about_more_apps_holder.isGone() && about_privacy_policy_holder.isGone()) {
             about_licenses_holder.background = resources.getDrawable(R.drawable.ripple_top_corners, theme)
         }
 
