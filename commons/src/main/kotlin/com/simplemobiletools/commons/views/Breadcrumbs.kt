@@ -13,7 +13,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.mydebug
 import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.item_breadcrumb.view.*
 
