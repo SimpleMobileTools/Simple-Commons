@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.adapters
 
+import android.graphics.Color
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -81,7 +82,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                     }
                 }
                 activity.menuInflater.inflate(getActionMenuId(), menu)
-                activity.updateMenuItemColors(menu)
+                activity.updateMenuItemColors(menu, baseColor = Color.BLACK)
                 onActionModeCreated()
                 return true
             }
