@@ -14,6 +14,7 @@
         <item name="android:colorControlHighlight">@color/activated_item_foreground</item>
         <item name="colorControlHighlight">@color/activated_item_foreground</item>
         <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
+        <item name="android:actionModeCloseDrawable">@drawable/ic_arrow_left_vector</item>
     </style>
 
     <style name="AppTheme.Base.Core" parent="Theme.AppCompat.NoActionBar">
