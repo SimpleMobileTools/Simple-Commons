@@ -224,7 +224,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
         val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
 
-        if (requestCode == OPEN_DOCUMENT_TREE_FOR_DELETE_SDK_30) {
+        if (requestCode == OPEN_DOCUMENT_TREE_FOR_SDK_30) {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
 
                 val treeUri = resultData.data
@@ -237,8 +237,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
                 val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
                 applicationContext.contentResolver.takePersistableUriPermission(treeUri, takeFlags)
-                funAfterDelete30File?.invoke(true)
+                val funAfter = funAfterDelete30File
                 funAfterDelete30File = null
+                funAfter?.invoke(true)
             } else {
                 funAfterDelete30File?.invoke(false)
             }

@@ -162,7 +162,7 @@ fun BaseSimpleActivity.isShowingSAFDialogForDeleteSdk30(path: String): Boolean {
                         putExtra("android.content.extra.SHOW_ADVANCED", true)
                         putExtra(DocumentsContract.EXTRA_INITIAL_URI, createFirstParentTreeUriUsingRootTree(path))
                         try {
-                            startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_DELETE_SDK_30)
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_SDK_30)
                             checkedDocumentPath = path
                             return@apply
                         } catch (e: Exception) {
@@ -170,7 +170,7 @@ fun BaseSimpleActivity.isShowingSAFDialogForDeleteSdk30(path: String): Boolean {
                         }
 
                         try {
-                            startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_DELETE_SDK_30)
+                            startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_SDK_30)
                             checkedDocumentPath = path
                         } catch (e: Exception) {
                             toast(R.string.unknown_error_occurred)

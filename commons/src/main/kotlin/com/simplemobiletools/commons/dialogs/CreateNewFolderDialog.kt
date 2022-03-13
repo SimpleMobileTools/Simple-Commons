@@ -64,7 +64,7 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                     }
                 }
                 File(path).mkdirs() -> sendSuccess(alertDialog, path)
-                else -> activity.toast(R.string.unknown_error_occurred)
+                else -> activity.toast(activity.getString(R.string.could_not_create_folder, path.getFilenameFromPath()))
             }
         } catch (e: Exception) {
             activity.showErrorToast(e)
