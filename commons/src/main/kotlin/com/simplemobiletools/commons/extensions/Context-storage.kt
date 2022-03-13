@@ -188,11 +188,6 @@ fun Context.hasProperStoredTreeUri(isOTG: Boolean): Boolean {
     return hasProperUri
 }
 
-fun Context.hasProperStoredFirstParentUri(path: String): Boolean {
-    val firstParentUri = createFirstParentTreeUri(path)
-    return contentResolver.persistedUriPermissions.any { it.uri.toString() == firstParentUri.toString() }
-}
-
 fun Context.hasProperStoredAndroidTreeUri(path: String): Boolean {
     val uri = getAndroidTreeUri(path)
     val hasProperUri = contentResolver.persistedUriPermissions.any { it.uri.toString() == uri }
@@ -852,7 +847,14 @@ fun Context.getFileInputStreamSync(path: String): InputStream? {
             val uri = getAndroidSAFUri(path)
             applicationContext.contentResolver.openInputStream(uri)
         }
-
+        isAccessibleWithSAFSdk30(path) -> {
+            try {
+                FileInputStream(File(path))
+            } catch (e: Exception) {
+                val uri = createDocumentUriUsingFirstParentTreeUri(path)
+                applicationContext.contentResolver.openInputStream(uri)
+            }
+        }
         isPathOnOTG(path) -> {
             val fileDocument = getSomeDocumentFile(path)
             applicationContext.contentResolver.openInputStream(fileDocument?.uri!!)

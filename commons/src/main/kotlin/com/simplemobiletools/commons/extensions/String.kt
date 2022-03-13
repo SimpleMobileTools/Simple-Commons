@@ -37,17 +37,27 @@ fun String.getBasePath(context: Context): String {
     }
 }
 
-fun String.getFirstParentDirName(context: Context): String {
+fun String.getFirstParentDirName(context: Context): String? {
     val basePath = getBasePath(context)
-    val pathWithoutBasePath = substring(basePath.length + 1)
-    return pathWithoutBasePath.substringBefore("/")
+    val startIndex = basePath.length + 1
+    return if (length > startIndex) {
+        val pathWithoutBasePath = substring(startIndex)
+        pathWithoutBasePath.substringBefore("/")
+    } else {
+        null
+    }
 }
 
 fun String.getFirstParentPath(context: Context): String {
     val basePath = getBasePath(context)
-    val pathWithoutBasePath = substring(basePath.length + 1)
-    val firstParentPath = pathWithoutBasePath.substringBefore("/")
-    return "$basePath/$firstParentPath"
+    val startIndex = basePath.length + 1
+    return if (length > startIndex) {
+        val pathWithoutBasePath = substring(basePath.length + 1)
+        val firstParentPath = pathWithoutBasePath.substringBefore("/")
+        "$basePath/$firstParentPath"
+    } else {
+        basePath
+    }
 }
 
 fun String.isAValidFilename(): Boolean {

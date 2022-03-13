@@ -205,6 +205,20 @@ class CopyMoveTask(
                 }
                 mTransferredFiles.add(source)
             }
+        } else if (activity.isAccessibleWithSAFSdk30(source.path)) {
+            val children = activity.getDocumentSdk30(source.path)?.listFiles() ?: return
+            for (child in children) {
+                val newPath = "$destinationPath/${child.name}"
+                if (File(newPath).exists()) {
+                    continue
+                }
+
+                val oldPath = "${source.path}/${child.name}"
+                val oldFileDirItem = FileDirItem(oldPath, child.name!!, child.isDirectory, 0, child.length())
+                val newFileDirItem = FileDirItem(newPath, child.name!!, child.isDirectory)
+                copy(oldFileDirItem, newFileDirItem)
+            }
+            mTransferredFiles.add(source)
         } else {
             val children = File(source.path).list()
             for (child in children) {

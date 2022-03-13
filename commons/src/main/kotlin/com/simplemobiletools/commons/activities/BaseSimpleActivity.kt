@@ -425,7 +425,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun handleSAFDeleteSdk30Dialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
+    fun handleSAFDialogSdk30(path: String, callback: (success: Boolean) -> Unit): Boolean {
         return if (!packageName.startsWith("com.simplemobiletools")) {
             callback(true)
             false
@@ -542,59 +542,71 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 return@handleSAFDialog
             }
 
-            copyMoveCallback = callback
-            var fileCountToCopy = fileDirItems.size
-            if (isCopyOperation) {
-                startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
-            } else {
-                if (isPathOnOTG(source) || isPathOnOTG(destination) || isPathOnSD(source) || isPathOnSD(destination) || isRestrictedSAFOnlyRoot(source) || isRestrictedSAFOnlyRoot(
-                        destination
-                    ) || fileDirItems.first().isDirectory
-                ) {
-                    handleSAFDialog(source) {
-                        if (it) {
-                            startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
-                        }
-                    }
+            handleSAFDialogSdk30(destination){
+                if (!it) {
+                    copyMoveListener.copyFailed()
+                    return@handleSAFDialogSdk30
+                }
+
+                copyMoveCallback = callback
+                var fileCountToCopy = fileDirItems.size
+                if (isCopyOperation) {
+                    startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
                 } else {
-                    try {
-                        checkConflicts(fileDirItems, destination, 0, LinkedHashMap()) {
-                            toast(R.string.moving)
-                            ensureBackgroundThread {
-                                val updatedPaths = ArrayList<String>(fileDirItems.size)
-                                val destinationFolder = File(destination)
-                                for (oldFileDirItem in fileDirItems) {
-                                    var newFile = File(destinationFolder, oldFileDirItem.name)
-                                    if (newFile.exists()) {
-                                        when {
-                                            getConflictResolution(it, newFile.absolutePath) == CONFLICT_SKIP -> fileCountToCopy--
-                                            getConflictResolution(it, newFile.absolutePath) == CONFLICT_KEEP_BOTH -> newFile = getAlternativeFile(newFile)
-                                            else ->
-                                                // this file is guaranteed to be on the internal storage, so just delete it this way
-                                                newFile.delete()
-                                        }
-                                    }
-
-                                    if (!newFile.exists() && File(oldFileDirItem.path).renameTo(newFile)) {
-                                        if (!baseConfig.keepLastModified) {
-                                            newFile.setLastModified(System.currentTimeMillis())
-                                        }
-                                        updatedPaths.add(newFile.absolutePath)
-                                        deleteFromMediaStore(oldFileDirItem.path)
-                                    }
-                                }
-
-                                runOnUiThread {
-                                    if (updatedPaths.isEmpty()) {
-                                        copyMoveListener.copySucceeded(false, fileCountToCopy == 0, destination, false)
-                                    } else {
-                                        copyMoveListener.copySucceeded(false, fileCountToCopy <= updatedPaths.size, destination, updatedPaths.size == 1)
+                    if (isPathOnOTG(source) || isPathOnOTG(destination) || isPathOnSD(source) || isPathOnSD(destination) ||
+                        isRestrictedSAFOnlyRoot(source) || isRestrictedSAFOnlyRoot(destination) ||
+                        isAccessibleWithSAFSdk30(source) || isAccessibleWithSAFSdk30(destination) ||
+                        fileDirItems.first().isDirectory
+                    ) {
+                        handleSAFDialog(source) {
+                            if(it){
+                                handleSAFDialogSdk30(source){
+                                    if (it) {
+                                        startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
                                     }
                                 }
                             }
                         }
-                    } catch (e: Exception) {
-                        showErrorToast(e)
+                    } else {
+                        try {
+                            checkConflicts(fileDirItems, destination, 0, LinkedHashMap()) {
+                                toast(R.string.moving)
+                                ensureBackgroundThread {
+                                    val updatedPaths = ArrayList<String>(fileDirItems.size)
+                                    val destinationFolder = File(destination)
+                                    for (oldFileDirItem in fileDirItems) {
+                                        var newFile = File(destinationFolder, oldFileDirItem.name)
+                                        if (newFile.exists()) {
+                                            when {
+                                                getConflictResolution(it, newFile.absolutePath) == CONFLICT_SKIP -> fileCountToCopy--
+                                                getConflictResolution(it, newFile.absolutePath) == CONFLICT_KEEP_BOTH -> newFile = getAlternativeFile(newFile)
+                                                else ->
+                                                    // this file is guaranteed to be on the internal storage, so just delete it this way
+                                                    newFile.delete()
+                                            }
+                                        }
+
+                                        if (!newFile.exists() && File(oldFileDirItem.path).renameTo(newFile)) {
+                                            if (!baseConfig.keepLastModified) {
+                                                newFile.setLastModified(System.currentTimeMillis())
+                                            }
+                                            updatedPaths.add(newFile.absolutePath)
+                                            deleteFromMediaStore(oldFileDirItem.path)
+                                        }
+                                    }
+
+                                    runOnUiThread {
+                                        if (updatedPaths.isEmpty()) {
+                                            copyMoveListener.copySucceeded(false, fileCountToCopy == 0, destination, false)
+                                        } else {
+                                            copyMoveListener.copySucceeded(false, fileCountToCopy <= updatedPaths.size, destination, updatedPaths.size == 1)
+                                        }
+                                    }
+                                }
+                            }
+                        } catch (e: Exception) {
+                            showErrorToast(e)
+                        }
                     }
                 }
             }

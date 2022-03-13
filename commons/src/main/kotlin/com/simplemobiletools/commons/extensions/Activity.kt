@@ -160,7 +160,7 @@ fun BaseSimpleActivity.isShowingSAFDialogForDeleteSdk30(path: String): Boolean {
                 WritePermissionDialog(this, Mode.SDK_30) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         putExtra("android.content.extra.SHOW_ADVANCED", true)
-                        putExtra(DocumentsContract.EXTRA_INITIAL_URI, createDocumentUriFromFirstParentTree(path))
+                        putExtra(DocumentsContract.EXTRA_INITIAL_URI, createFirstParentTreeUriUsingRootTree(path))
                         try {
                             startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_DELETE_SDK_30)
                             checkedDocumentPath = path
@@ -650,9 +650,9 @@ fun BaseSimpleActivity.deleteFilesBg(files: List<FileDirItem>, allowDeleteFolder
             return@handleSAFDialog
         }
 
-        handleSAFDeleteSdk30Dialog(firstFile.path) {
+        handleSAFDialogSdk30(firstFile.path) {
             if (!it) {
-                return@handleSAFDeleteSdk30Dialog
+                return@handleSAFDialogSdk30
             }
 
             val failedFileDirItems = ArrayList<FileDirItem>()
@@ -739,7 +739,7 @@ fun BaseSimpleActivity.deleteFileBg(
                         }
                     }
                 } else if (isAccessibleWithSAFSdk30(path)) {
-                    handleSAFDeleteSdk30Dialog(path) {
+                    handleSAFDialogSdk30(path) {
                         if (it) {
                             deleteDocumentWithSAFSdk30(fileDirItem, allowDeleteFolder, callback)
                         }
@@ -1070,6 +1070,17 @@ fun BaseSimpleActivity.getFileOutputStreamSync(path: String, mimeType: String, p
                 null
             }
         }
+        isAccessibleWithSAFSdk30(path) -> {
+            try {
+                val uri = createDocumentUriUsingFirstParentTreeUri(path)
+                if (!getDoesFilePathExist(path)) {
+                    createSAFFileSdk30(path)
+                }
+                applicationContext.contentResolver.openOutputStream(uri)
+            } catch (e: Exception) {
+                null
+            } ?: createCasualFileOutputStream(this, targetFile)
+        }
         else -> return createCasualFileOutputStream(this, targetFile)
     }
 }
@@ -1197,6 +1208,10 @@ fun BaseSimpleActivity.createDirectorySync(directory: String): Boolean {
 
     if (isRestrictedSAFOnlyRoot(directory)) {
         return createAndroidSAFDirectory(directory)
+    }
+
+    if (isAccessibleWithSAFSdk30(directory)) {
+        return createSAFDirectorySdk30(directory)
     }
 
     return File(directory).mkdirs()
