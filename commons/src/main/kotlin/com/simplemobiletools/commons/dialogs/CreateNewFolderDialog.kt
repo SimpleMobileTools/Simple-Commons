@@ -43,6 +43,11 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
         try {
             when {
                 activity.isRestrictedSAFOnlyRoot(path) && activity.createAndroidSAFDirectory(path) -> sendSuccess(alertDialog, path)
+                activity.isAccessibleWithSAFSdk30(path) ->  activity.handleSAFDialogSdk30(path){
+                    if (it && activity.createSAFDirectorySdk30(path)) {
+                        sendSuccess(alertDialog, path)
+                    }
+                }
                 activity.needsStupidWritePermissions(path) -> activity.handleSAFDialog(path) {
                     if (it) {
                         try {
@@ -59,7 +64,7 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                     }
                 }
                 File(path).mkdirs() -> sendSuccess(alertDialog, path)
-                else -> activity.toast(R.string.unknown_error_occurred)
+                else -> activity.toast(activity.getString(R.string.could_not_create_folder, path.getFilenameFromPath()))
             }
         } catch (e: Exception) {
             activity.showErrorToast(e)
