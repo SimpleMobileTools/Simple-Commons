@@ -183,7 +183,7 @@
     <string name="confirm_storage_access_text">Vælg SD-kortets rodmappe på næste side for at give skriveadgang til den</string>
     <string name="confirm_storage_access_text_sd">Hvis ikke du kan se SD-kortet kan du prøve dette</string>
     <string name="confirm_storage_access_android_text">Tillad appen at få adgang til det valgte lager på det næste skærmbillede ved at trykke på \'Brug denne mappe\' nederst.</string>
-    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'%s\' on the next screen by pressing \'Use this folder\' at the bottom.</string>
+    <string name="confirm_storage_access_android_text_specific">Tillad adgang til \"%s\" på det næste skærmbillede ved at trykke på \"Brug denne mappe\" nederst på skærmen.</string>
     <string name="confirm_selection">Bekræft valg</string>
     <string name="loading">Indlæser…</string>
     <string name="wrong_folder_selected">Forkert mappe valgt. Vælg stien \'%s\'</string>
@@ -502,7 +502,7 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Resterende tid før alarmen lyder:\n%s</string>
     <string name="reminder_triggers_in">Tid tilbage inden alarmen lyder:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Resterende tid:\n%s</string>
     <string name="alarm_warning">Du anbefales sikre dig at alarmen virker som den skal inden du stoler på den. Den kan drille som følge af strømbesparende begrænsninger på systemet.</string>
     <string name="reminder_warning">Du anbefales sikre dig at påmindelser virker som de skal inden du stoler på dem. De kan drille som følge af strømbesparende begrænsninger på systemet.</string>
     <string name="notifications_disabled">Påmindelser er ikke aktiveret for denne app. Du kan aktivere dem i indstillingerne på din enhed.</string>
@@ -692,7 +692,7 @@
     <string name="help_us">Hjælp os</string>
     <string name="social">Social</string>
     <string name="other">Andet</string>
-    <string name="privacy_policy">Privacy policy</string>
+    <string name="privacy_policy">Politik om beskyttelse af personlige oplysninger</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hej :)</string>
     <string name="about_footer">Udviklet med ❤️ i Slovakiet</string>
