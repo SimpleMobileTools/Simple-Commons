@@ -195,6 +195,7 @@
     <string name="confirm_storage_access_text">Изаберите почетну фасциклу СД картице на следећем екрану, да дозволите записивање</string>
     <string name="confirm_storage_access_text_sd">Ако не видите СД картицу, пробајте ово</string>
     <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
+    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'%s\' on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">Потврдите одабир</string>
     <string name="loading">Loading…</string>
 

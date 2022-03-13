@@ -192,6 +192,7 @@
     <string name="confirm_storage_access_text">Επιλέξτε τον ριζικό φάκελο της κάρτας SD στην επόμενη οθόνη, για να επιτρέψετε πρόσβαση εγγραφής</string>
     <string name="confirm_storage_access_text_sd">Εάν δεν βλέπετε την κάρτα SD, δοκιμάστε αυτό</string>
     <string name="confirm_storage_access_android_text">Επιτρέψτε στην εφαρμογή την πρόσβαση στον επιλεγμένο αποθηκευτικό χώρο στην επόμενη οθόνη πατώντας \'Χρήση αυτού του φακέλου\' στο κάτω μέρος.</string>
+    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'%s\' on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">Επιβεβαίωση επιλογής</string>
     <string name="loading">Loading…</string>
 

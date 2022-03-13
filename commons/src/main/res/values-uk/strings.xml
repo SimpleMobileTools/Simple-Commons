@@ -183,6 +183,7 @@
     <string name="confirm_storage_access_text">Щоб надати доступ на запис, оберіть кореневу теку SD-карти на наступному екрані</string>
     <string name="confirm_storage_access_text_sd">Якщо ви не бачите SD-карту, спробуйте це</string>
     <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
+    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'%s\' on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">Підтвердіть вибір</string>
     <string name="loading">Loading…</string>
     <plurals name="items">

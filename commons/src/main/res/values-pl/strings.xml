@@ -183,6 +183,7 @@
     <string name="confirm_storage_access_text">Wybierz folder główny karty pamięci na następnym ekranie, aby przyznać dostęp</string>
     <string name="confirm_storage_access_text_sd">Jeśli nie widzisz karty pamięci, spróbuj tego:</string>
     <string name="confirm_storage_access_android_text">Zezwól aplikacji na dostęp do wybranej pamięci na następnym ekranie, naciskając „Użyj tego folderu” na dole.</string>
+    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'%s\' on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">Potwierdź wybór</string>
     <string name="loading">Ładowanie…</string>
     <plurals name="items">

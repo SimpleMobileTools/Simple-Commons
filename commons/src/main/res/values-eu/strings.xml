@@ -193,6 +193,7 @@
     <string name="confirm_storage_access_text">Hautatu SD txartelaren karpeta nagusia hurrengo pantailan, idazteko baimena emateko</string>
     <string name="confirm_storage_access_text_sd">SD txartela ez badakusazu, saiatu honekin</string>
     <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
+    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'%s\' on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_selection">Berretsi hautaketa</string>
     <string name="loading">Loading…</string>
 
