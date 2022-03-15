@@ -152,3 +152,20 @@ fun Context.deleteDocumentWithSAFSdk30(fileDirItem: FileDirItem, allowDeleteFold
         showErrorToast(e)
     }
 }
+
+fun Context.hasProperStoredDocumentUriSdk30(path: String): Boolean {
+    val documentUri = buildDocumentUriSdk30(path)
+    return contentResolver.persistedUriPermissions.any { it.uri.toString() == documentUri.toString() }
+}
+
+fun Context.buildDocumentUriSdk30(fullPath: String): Uri {
+    val storageId = getSAFStorageId(fullPath)
+
+    val relativePath = when {
+        fullPath.startsWith(internalStoragePath) -> fullPath.substring(internalStoragePath.length).trim('/')
+        else -> fullPath.substringAfter(storageId).trim('/')
+    }
+
+    val documentId = "${storageId}:$relativePath"
+    return DocumentsContract.buildDocumentUri(EXTERNAL_STORAGE_PROVIDER_AUTHORITY, documentId)
+}

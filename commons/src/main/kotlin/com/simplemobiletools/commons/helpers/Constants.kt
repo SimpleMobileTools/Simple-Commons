@@ -203,6 +203,7 @@ const val REQUEST_SET_AS = 1004
 const val REQUEST_EDIT_IMAGE = 1005
 const val SELECT_EXPORT_SETTINGS_FILE_INTENT = 1006
 const val REQUEST_CODE_SET_DEFAULT_DIALER = 1007
+const val CREATE_DOCUMENT_SDK_30 = 1008
 
 // sorting
 const val SORT_ORDER = "sort_order"

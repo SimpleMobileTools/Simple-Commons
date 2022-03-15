@@ -5,6 +5,7 @@ import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.isRPlus
 import kotlinx.android.synthetic.main.dialog_create_new_folder.view.*
 import java.io.File
 
@@ -43,7 +44,7 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
         try {
             when {
                 activity.isRestrictedSAFOnlyRoot(path) && activity.createAndroidSAFDirectory(path) -> sendSuccess(alertDialog, path)
-                activity.isAccessibleWithSAFSdk30(path) ->  activity.handleSAFDialogSdk30(path){
+                activity.isAccessibleWithSAFSdk30(path) -> activity.handleSAFDialogSdk30(path) {
                     if (it && activity.createSAFDirectorySdk30(path)) {
                         sendSuccess(alertDialog, path)
                     }
@@ -64,6 +65,11 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                     }
                 }
                 File(path).mkdirs() -> sendSuccess(alertDialog, path)
+                isRPlus() && path.getParentPath().isBasePath(activity) -> activity.handleSAFCreateDocumentDialogSdk30(path) {
+                    if (it) {
+                        sendSuccess(alertDialog, path)
+                    }
+                }
                 else -> activity.toast(activity.getString(R.string.could_not_create_folder, path.getFilenameFromPath()))
             }
         } catch (e: Exception) {
