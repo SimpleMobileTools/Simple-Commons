@@ -223,8 +223,27 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         val sdOtgPattern = Pattern.compile(SD_OTG_SHORT)
+        if (requestCode == CREATE_DOCUMENT_SDK_30) {
+            if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
 
-        if (requestCode == OPEN_DOCUMENT_TREE_FOR_SDK_30) {
+                val treeUri = resultData.data
+                val checkedUri = buildDocumentUriSdk30(checkedDocumentPath)
+
+                if (treeUri != checkedUri) {
+                    toast(getString(R.string.wrong_folder_selected, checkedDocumentPath))
+                    return
+                }
+
+                val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+                applicationContext.contentResolver.takePersistableUriPermission(treeUri, takeFlags)
+                val funAfter = funAfterDelete30File
+                funAfterDelete30File = null
+                funAfter?.invoke(true)
+            } else {
+                funAfterDelete30File?.invoke(false)
+            }
+
+        } else if (requestCode == OPEN_DOCUMENT_TREE_FOR_SDK_30) {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
 
                 val treeUri = resultData.data
@@ -430,7 +449,20 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         return if (!packageName.startsWith("com.simplemobiletools")) {
             callback(true)
             false
-        } else if (isShowingSAFDialogForDeleteSdk30(path)) {
+        } else if (isShowingSAFDialogSdk30(path)) {
+            funAfterDelete30File = callback
+            true
+        } else {
+            callback(true)
+            false
+        }
+    }
+
+    fun handleSAFCreateDocumentDialogSdk30(path: String, callback: (success: Boolean) -> Unit): Boolean {
+        return if (!packageName.startsWith("com.simplemobiletools")) {
+            callback(true)
+            false
+        } else if (isShowingSAFCreateDocumentDialogSdk30(path)) {
             funAfterDelete30File = callback
             true
         } else {
