@@ -127,7 +127,7 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
             if (!isDestroyed && !isFinishing) {
                 WritePermissionDialog(this, Mode.SD_CARD) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
-                        putExtra("android.content.extra.SHOW_ADVANCED", true)
+                        putExtra(EXTRA_SHOW_ADVANCED, true)
                         try {
                             startActivityForResult(this, OPEN_DOCUMENT_TREE_SD)
                             checkedDocumentPath = path
@@ -153,13 +153,13 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
 }
 
 @SuppressLint("InlinedApi")
-fun BaseSimpleActivity.isShowingSAFDialogForDeleteSdk30(path: String): Boolean {
+fun BaseSimpleActivity.isShowingSAFDialogSdk30(path: String): Boolean {
     return if (isAccessibleWithSAFSdk30(path) && !hasProperStoredFirstParentUri(path)) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
-                WritePermissionDialog(this, Mode.SDK_30) {
+                WritePermissionDialog(this, Mode.OPEN_DOCUMENT_TREE_SDK_30) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
-                        putExtra("android.content.extra.SHOW_ADVANCED", true)
+                        putExtra(EXTRA_SHOW_ADVANCED, true)
                         putExtra(DocumentsContract.EXTRA_INITIAL_URI, createFirstParentTreeUriUsingRootTree(path))
                         try {
                             startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_SDK_30)
@@ -185,6 +185,42 @@ fun BaseSimpleActivity.isShowingSAFDialogForDeleteSdk30(path: String): Boolean {
     }
 }
 
+@SuppressLint("InlinedApi")
+fun BaseSimpleActivity.isShowingSAFCreateDocumentDialogSdk30(path: String): Boolean {
+    return if (!hasProperStoredDocumentUriSdk30(path)) {
+        runOnUiThread {
+            if (!isDestroyed && !isFinishing) {
+                WritePermissionDialog(this, Mode.CREATE_DOCUMENT_SDK_30) {
+                    Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
+                        type = DocumentsContract.Document.MIME_TYPE_DIR
+                        putExtra(EXTRA_SHOW_ADVANCED, true)
+                        addCategory(Intent.CATEGORY_OPENABLE)
+                        putExtra(DocumentsContract.EXTRA_INITIAL_URI, buildDocumentUriSdk30(path.getParentPath()))
+                        putExtra(Intent.EXTRA_TITLE, path.getFilenameFromPath())
+                        try {
+                            startActivityForResult(this, CREATE_DOCUMENT_SDK_30)
+                            checkedDocumentPath = path
+                            return@apply
+                        } catch (e: Exception) {
+                            type = "*/*"
+                        }
+
+                        try {
+                            startActivityForResult(this, CREATE_DOCUMENT_SDK_30)
+                            checkedDocumentPath = path
+                        } catch (e: Exception) {
+                            toast(R.string.unknown_error_occurred)
+                        }
+                    }
+                }
+            }
+        }
+        true
+    } else {
+        false
+    }
+}
+
 fun BaseSimpleActivity.isShowingAndroidSAFDialog(path: String): Boolean {
     return if (isRestrictedSAFOnlyRoot(path) && (getAndroidTreeUri(path).isEmpty() || !hasProperStoredAndroidTreeUri(path))) {
         runOnUiThread {
@@ -192,7 +228,7 @@ fun BaseSimpleActivity.isShowingAndroidSAFDialog(path: String): Boolean {
                 ConfirmationAdvancedDialog(this, "", R.string.confirm_storage_access_android_text, R.string.ok, R.string.cancel) { success ->
                     if (success) {
                         Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
-                            putExtra("android.content.extra.SHOW_ADVANCED", true)
+                            putExtra(EXTRA_SHOW_ADVANCED, true)
                             putExtra(DocumentsContract.EXTRA_INITIAL_URI, createAndroidDataOrObbUri(path))
                             try {
                                 startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_ANDROID_DATA_OR_OBB)

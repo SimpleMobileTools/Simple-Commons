@@ -13,6 +13,7 @@ import java.util.HashMap
 import java.util.LinkedHashMap
 
 const val EXTERNAL_STORAGE_PROVIDER_AUTHORITY = "com.android.externalstorage.documents"
+const val EXTRA_SHOW_ADVANCED = "android.content.extra.SHOW_ADVANCED"
 
 const val APP_NAME = "app_name"
 const val APP_LICENSES = "app_licenses"
