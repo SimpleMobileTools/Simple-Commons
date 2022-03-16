@@ -60,7 +60,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     companion object {
         var funAfterSAFPermission: ((success: Boolean) -> Unit)? = null
-        var funAfterDelete30File: ((success: Boolean) -> Unit)? = null
+        var funAfterSdk30Action: ((success: Boolean) -> Unit)? = null
         var funAfterUpdate30File: ((success: Boolean) -> Unit)? = null
         var funRecoverableSecurity: ((success: Boolean) -> Unit)? = null
     }
@@ -236,11 +236,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
                 val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
                 applicationContext.contentResolver.takePersistableUriPermission(treeUri, takeFlags)
-                val funAfter = funAfterDelete30File
-                funAfterDelete30File = null
+                val funAfter = funAfterSdk30Action
+                funAfterSdk30Action = null
                 funAfter?.invoke(true)
             } else {
-                funAfterDelete30File?.invoke(false)
+                funAfterSdk30Action?.invoke(false)
             }
 
         } else if (requestCode == OPEN_DOCUMENT_TREE_FOR_SDK_30) {
@@ -256,11 +256,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
                 val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
                 applicationContext.contentResolver.takePersistableUriPermission(treeUri, takeFlags)
-                val funAfter = funAfterDelete30File
-                funAfterDelete30File = null
+                val funAfter = funAfterSdk30Action
+                funAfterSdk30Action = null
                 funAfter?.invoke(true)
             } else {
-                funAfterDelete30File?.invoke(false)
+                funAfterSdk30Action?.invoke(false)
             }
 
         } else if (requestCode == OPEN_DOCUMENT_TREE_FOR_ANDROID_DATA_OR_OBB) {
@@ -343,7 +343,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             val outputStream = contentResolver.openOutputStream(resultData.data!!)
             exportSettingsTo(outputStream, configItemsToExport)
         } else if (requestCode == DELETE_FILE_SDK_30_HANDLER) {
-            funAfterDelete30File?.invoke(resultCode == Activity.RESULT_OK)
+            funAfterSdk30Action?.invoke(resultCode == Activity.RESULT_OK)
         } else if (requestCode == RECOVERABLE_SECURITY_HANDLER) {
             funRecoverableSecurity?.invoke(resultCode == Activity.RESULT_OK)
             funRecoverableSecurity = null
@@ -450,7 +450,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             callback(true)
             false
         } else if (isShowingSAFDialogSdk30(path)) {
-            funAfterDelete30File = callback
+            funAfterSdk30Action = callback
             true
         } else {
             callback(true)
@@ -463,7 +463,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             callback(true)
             false
         } else if (isShowingSAFCreateDocumentDialogSdk30(path)) {
-            funAfterDelete30File = callback
+            funAfterSdk30Action = callback
             true
         } else {
             callback(true)
@@ -512,7 +512,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     @SuppressLint("NewApi")
     fun deleteSDK30Uris(uris: List<Uri>, callback: (success: Boolean) -> Unit) {
         if (isRPlus()) {
-            funAfterDelete30File = callback
+            funAfterSdk30Action = callback
             try {
                 val deleteRequest = MediaStore.createDeleteRequest(contentResolver, uris).intentSender
                 startIntentSenderForResult(deleteRequest, DELETE_FILE_SDK_30_HANDLER, null, 0, 0, 0)
