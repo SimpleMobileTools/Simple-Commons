@@ -192,9 +192,10 @@
     <string name="confirm_storage_access_text">Επιλέξτε τον ριζικό φάκελο της κάρτας SD στην επόμενη οθόνη, για να επιτρέψετε πρόσβαση εγγραφής</string>
     <string name="confirm_storage_access_text_sd">Εάν δεν βλέπετε την κάρτα SD, δοκιμάστε αυτό</string>
     <string name="confirm_storage_access_android_text">Επιτρέψτε στην εφαρμογή την πρόσβαση στον επιλεγμένο αποθηκευτικό χώρο στην επόμενη οθόνη πατώντας \'Χρήση αυτού του φακέλου\' στο κάτω μέρος.</string>
+    <string name="confirm_storage_access_android_text_specific">Επιτρέψτε την πρόσβαση σε \'%s\' στην επόμενη οθόνη πατώντας \'Χρήση αυτού του φακέλου\' στο κάτω μέρος.</string>
     <string name="confirm_create_doc_for_new_folder_text">Please press \'Save\' at the bottom on the next screen to create the new folder</string>
     <string name="confirm_selection">Επιβεβαίωση επιλογής</string>
-    <string name="loading">Loading…</string>
+    <string name="loading">Φόρτωση…</string>
 
     <plurals name="items">
         <item quantity="one">%d στοιχείο</item>
@@ -529,7 +530,7 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Χρόνος που απομένει μέχρι να κλείσει η ειδοποίηση:\n%s</string>
     <string name="reminder_triggers_in">Χρόνος που απομένει μέχρι να ενεργοποιηθεί η υπενθύμιση:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Απομένει:\n%s</string>
     <string name="alarm_warning">Βεβαιωθείτε ότι η ειδοποίηση λειτουργεί σωστά πριν βασιστείτε σε αυτήν. Θα μπορούσε να αποτύχει λόγω των περιορισμών του συστήματος που σχετίζονται με την εξοικονόμηση μπαταρίας.</string>
     <string name="reminder_warning">Βεβαιωθείτε ότι η υπενθύμιση λειτουργεί σωστά πριν βασιστείτε σε αυτήν. Θα μπορούσε να αποτύχει λόγω των περιορισμών του συστήματος που σχετίζονται με την εξοικονόμηση μπαταρίας.</string>
     <string name="notifications_disabled">Οι ειδοποιήσεις αυτής της εφαρμογής είναι απενεργοποιημένες. Μεταβείτε στις ρυθμίσεις της συσκευής για να τις ενεργοποιήσετε.</string>
@@ -734,7 +735,7 @@
     <string name="help_us">Βοηθήστε μας</string>
     <string name="social">Κοινωνικά</string>
     <string name="other">Άλλα</string>
-    <string name="privacy_policy">Privacy policy</string>
+    <string name="privacy_policy">Πολιτική Απορρήτου</string>
     <string name="version_placeholder">Έκδοση %s</string>
     <string name="hello">Hello :)</string>
     <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>

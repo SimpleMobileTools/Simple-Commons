@@ -575,7 +575,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 return@handleSAFDialog
             }
 
-            handleSAFDialogSdk30(destination){
+            handleSAFDialogSdk30(destination) {
                 if (!it) {
                     copyMoveListener.copyFailed()
                     return@handleSAFDialogSdk30
@@ -592,8 +592,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                         fileDirItems.first().isDirectory
                     ) {
                         handleSAFDialog(source) {
-                            if(it){
-                                handleSAFDialogSdk30(source){
+                            if (it) {
+                                handleSAFDialogSdk30(source) {
                                     if (it) {
                                         startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
                                     }

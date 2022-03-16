@@ -194,6 +194,7 @@
     <string name="confirm_storage_access_text">쓰기 권한을 부여하려면 다음 화면에서 SD 카드의 루트 폴더를 선택하세요.</string>
     <string name="confirm_storage_access_text_sd">SD 카드가 보이지 않으면 시도해보세요.</string>
     <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
+    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'%s\' on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_create_doc_for_new_folder_text">Please press \'Save\' at the bottom on the next screen to create the new folder</string>
     <string name="confirm_selection">선택 확인</string>
     <string name="loading">Loading…</string>

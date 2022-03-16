@@ -183,6 +183,7 @@
     <string name="confirm_storage_access_text">请选择 SD 卡根目录并授予写权限</string>
     <string name="confirm_storage_access_text_sd">如果您未找到 SD 卡目录，请尝试</string>
     <string name="confirm_storage_access_android_text">请在下一个屏幕上按下底部的“使用此文件夹”，允许应用程序访问所选的存储空间。</string>
+    <string name="confirm_storage_access_android_text_specific">请在下个屏幕上允许访问 \'%s\'，方法是按下底部的“使用此文件夹”。</string>
     <string name="confirm_create_doc_for_new_folder_text">Please press \'Save\' at the bottom on the next screen to create the new folder</string>
     <string name="confirm_selection">确认选择</string>
     <string name="loading">加载中…</string>

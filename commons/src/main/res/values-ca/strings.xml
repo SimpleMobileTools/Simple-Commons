@@ -190,6 +190,7 @@
     <string name="confirm_storage_access_text">Trieu la carpeta superior de la targeta SD a la pantalla següent, per atorgar accés d\'escriptura</string>
     <string name="confirm_storage_access_text_sd">Si no veieu la targeta SD, proveu això</string>
     <string name="confirm_storage_access_android_text">Permeteu que l\'aplicació accedeixi a l\'emmagatzematge seleccionat prement «Utilitza aquesta carpeta» a la part inferior de la pantalla següent.</string>
+    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'%s\' on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_create_doc_for_new_folder_text">Please press \'Save\' at the bottom on the next screen to create the new folder</string>
     <string name="confirm_selection">Confirmeu la selecció</string>
     <string name="loading">S\'està carregant…</string>
