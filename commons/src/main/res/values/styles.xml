@@ -9,7 +9,7 @@
         <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem.DropDownItem</item>
         <item name="buttonStyle">@style/MyTransparentButton</item>
         <item name="android:buttonStyle">@style/MyTransparentButton</item>
-        <item name="android:itemBackground">@color/default_background_color</item>
+        <item name="actionOverflowMenuStyle">@style/TopPopupMenu.Overflow.Dark</item>
         <item name="android:textColor">@color/default_text_color</item>
         <item name="android:colorControlHighlight">@color/activated_item_foreground</item>
         <item name="colorControlHighlight">@color/activated_item_foreground</item>
@@ -129,6 +129,14 @@
         <item name="android:textColorHint">@color/hint_black</item>
     </style>
 
+    <style name="TopPopupMenu.Overflow.Light" parent="@style/Widget.MaterialComponents.PopupMenu.Overflow">
+        <item name="android:popupBackground">@drawable/top_popup_menu_bg_light</item>
+    </style>
+
+    <style name="TopPopupMenu.Overflow.Dark" parent="@style/Widget.MaterialComponents.PopupMenu.Overflow">
+        <item name="android:popupBackground">@drawable/top_popup_menu_bg_dark</item>
+    </style>
+
     <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/BottomSheetModalStyle</item>
         <item name="android:colorControlHighlight">@color/activated_item_foreground</item>
@@ -191,7 +199,7 @@
         <item name="actionBarTheme">@style/DarkActionBarItems</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/theme_dark_background_color</item>
-        <item name="android:itemBackground">@color/md_grey_white</item>
+        <item name="actionOverflowMenuStyle">@style/TopPopupMenu.Overflow.Light</item>
         <item name="android:itemTextAppearance">@style/AppTheme.White.TextStyle</item>
         <item name="android:colorControlHighlight">@color/activated_item_foreground</item>
         <item name="colorControlHighlight">@color/activated_item_foreground</item>
@@ -220,7 +228,7 @@
         <item name="actionBarTheme">@style/LightActionBarItems</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:textColorPrimary">@color/theme_light_background_color</item>
-        <item name="android:itemBackground">@color/md_grey_black</item>
+        <item name="actionOverflowMenuStyle">@style/TopPopupMenu.Overflow.Dark</item>
         <item name="android:itemTextAppearance">@style/AppTheme.BlackAndWhite.TextStyle</item>
         <item name="android:colorControlHighlight">@color/activated_item_foreground</item>
         <item name="colorControlHighlight">@color/activated_item_foreground</item>
