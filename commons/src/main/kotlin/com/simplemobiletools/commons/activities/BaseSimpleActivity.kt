@@ -491,7 +491,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         funAfterSAFPermission = callback
-        WritePermissionDialog(this, Mode.OTG) {
+        WritePermissionDialog(this, Mode.Otg) {
             Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                 try {
                     startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
@@ -593,11 +593,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     ) {
                         handleSAFDialog(source) {
                             if (it) {
-                                handleSAFDialogSdk30(source) {
-                                    if (it) {
-                                        startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
-                                    }
-                                }
+                                startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
                             }
                         }
                     } else {

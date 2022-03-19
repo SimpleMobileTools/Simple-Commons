@@ -125,7 +125,7 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
     return if ((!isRPlus() && isPathOnSD(path) && !isSDCardSetAsDefaultStorage() && (baseConfig.sdTreeUri.isEmpty() || !hasProperStoredTreeUri(false)))) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
-                WritePermissionDialog(this, Mode.SD_CARD) {
+                WritePermissionDialog(this, Mode.SdCard) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         putExtra(EXTRA_SHOW_ADVANCED, true)
                         try {
@@ -157,7 +157,7 @@ fun BaseSimpleActivity.isShowingSAFDialogSdk30(path: String): Boolean {
     return if (isAccessibleWithSAFSdk30(path) && !hasProperStoredFirstParentUri(path)) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
-                WritePermissionDialog(this, Mode.OPEN_DOCUMENT_TREE_SDK_30) {
+                WritePermissionDialog(this, Mode.OpenDocumentTreeSDK30(path.getFirstParentPath(this))) {
                     Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                         putExtra(EXTRA_SHOW_ADVANCED, true)
                         putExtra(DocumentsContract.EXTRA_INITIAL_URI, createFirstParentTreeUriUsingRootTree(path))
@@ -190,7 +190,7 @@ fun BaseSimpleActivity.isShowingSAFCreateDocumentDialogSdk30(path: String): Bool
     return if (!hasProperStoredDocumentUriSdk30(path)) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
-                WritePermissionDialog(this, Mode.CREATE_DOCUMENT_SDK_30) {
+                WritePermissionDialog(this, Mode.CreateDocumentSDK30) {
                     Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
                         type = DocumentsContract.Document.MIME_TYPE_DIR
                         putExtra(EXTRA_SHOW_ADVANCED, true)
@@ -267,7 +267,7 @@ fun BaseSimpleActivity.isShowingOTGDialog(path: String): Boolean {
 fun BaseSimpleActivity.showOTGPermissionDialog(path: String) {
     runOnUiThread {
         if (!isDestroyed && !isFinishing) {
-            WritePermissionDialog(this, Mode.OTG) {
+            WritePermissionDialog(this, Mode.Otg) {
                 Intent(Intent.ACTION_OPEN_DOCUMENT_TREE).apply {
                     try {
                         startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
