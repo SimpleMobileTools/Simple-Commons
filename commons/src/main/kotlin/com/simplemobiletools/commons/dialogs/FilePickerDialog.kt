@@ -207,6 +207,15 @@ class FilePickerDialog(
             if ((pickFile && fileDocument.isFile) || (!pickFile && fileDocument.isDirectory)) {
                 sendSuccess()
             }
+        } else if (activity.isAccessibleWithSAFSdk30(currPath)) {
+            activity.handleSAFDialogSdk30(currPath) {
+                if (it) {
+                    val document = activity.getSomeDocumentSdk30(currPath) ?: return@handleSAFDialogSdk30
+                    if ((pickFile && document.isFile) || (!pickFile && document.isDirectory)) {
+                        sendSuccess()
+                    }
+                }
+            }
         } else {
             val file = File(currPath)
             if ((pickFile && file.isFile) || (!pickFile && file.isDirectory)) {

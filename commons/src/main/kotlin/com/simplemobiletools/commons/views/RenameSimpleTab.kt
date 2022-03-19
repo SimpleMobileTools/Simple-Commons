@@ -9,6 +9,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.interfaces.RenameTab
+import com.simplemobiletools.commons.models.Android30RenameFormat
 import kotlinx.android.synthetic.main.tab_rename_simple.view.*
 import java.io.File
 
@@ -44,8 +45,9 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
         }
 
         val validPaths = paths.filter { activity?.getDoesFilePathExist(it) == true }
-        val sdFilePath = validPaths.firstOrNull { activity?.isPathOnSD(it) == true } ?: validPaths.firstOrNull()
-        if (sdFilePath == null) {
+        val firstPath = validPaths.firstOrNull()
+        val sdFilePath = validPaths.firstOrNull { activity?.isPathOnSD(it) == true } ?: firstPath
+        if (firstPath == null || sdFilePath == null) {
             activity?.toast(R.string.unknown_error_occurred)
             return
         }
@@ -55,61 +57,73 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
                 return@handleSAFDialog
             }
 
-            ignoreClicks = true
-            var pathsCnt = validPaths.size
-            for (path in validPaths) {
-                if (stopLooping) {
-                    return@handleSAFDialog
+            activity?.handleSAFDialogSdk30(firstPath) {
+                if (!it) {
+                    return@handleSAFDialogSdk30
                 }
 
-                val fullName = path.getFilenameFromPath()
-                var dotAt = fullName.lastIndexOf(".")
-                if (dotAt == -1) {
-                    dotAt = fullName.length
-                }
+                ignoreClicks = true
+                var pathsCnt = validPaths.size
+                for (path in validPaths) {
+                    if (stopLooping) {
+                        return@handleSAFDialogSdk30
+                    }
 
-                val name = fullName.substring(0, dotAt)
-                val extension = if (fullName.contains(".")) ".${fullName.getFilenameExtension()}" else ""
+                    val fullName = path.getFilenameFromPath()
+                    var dotAt = fullName.lastIndexOf(".")
+                    if (dotAt == -1) {
+                        dotAt = fullName.length
+                    }
 
-                val newName = if (append) {
-                    "$name$valueToAdd$extension"
-                } else {
-                    "$valueToAdd$fullName"
-                }
+                    val name = fullName.substring(0, dotAt)
+                    val extension = if (fullName.contains(".")) ".${fullName.getFilenameExtension()}" else ""
 
-                val newPath = "${path.getParentPath()}/$newName"
-
-                if (activity?.getDoesFilePathExist(newPath) == true) {
-                    continue
-                }
-
-                activity?.renameFile(path, newPath, true) { success, useAndroid30Way ->
-                    if (success) {
-                        pathsCnt--
-                        if (pathsCnt == 0) {
-                            callback(true)
-                        }
+                    val newName = if (append) {
+                        "$name$valueToAdd$extension"
                     } else {
-                        ignoreClicks = false
-                        if (useAndroid30Way) {
-                            stopLooping = true
-                            renameAllFiles(validPaths, append, valueToAdd, callback)
+                        "$valueToAdd$fullName"
+                    }
+
+                    val newPath = "${path.getParentPath()}/$newName"
+
+                    if (activity?.getDoesFilePathExist(newPath) == true) {
+                        continue
+                    }
+
+                    activity?.renameFile(path, newPath, true) { success, android30Format ->
+                        if (success) {
+                            pathsCnt--
+                            if (pathsCnt == 0) {
+                                callback(true)
+                            }
                         } else {
-                            activity?.toast(R.string.unknown_error_occurred)
+                            ignoreClicks = false
+                            if (android30Format != Android30RenameFormat.NONE) {
+                                stopLooping = true
+                                renameAllFiles(validPaths, append, valueToAdd, android30Format, callback)
+                            } else {
+                                activity?.toast(R.string.unknown_error_occurred)
+                            }
                         }
                     }
                 }
+                stopLooping = false
             }
-
-            stopLooping = false
         }
     }
 
-    private fun renameAllFiles(paths: List<String>, appendString: Boolean, stringToAdd: String, callback: (success: Boolean) -> Unit) {
+    private fun renameAllFiles(
+        paths: List<String>,
+        appendString: Boolean,
+        stringToAdd: String,
+        android30Format: Android30RenameFormat,
+        callback: (success: Boolean) -> Unit
+    ) {
         val fileDirItems = paths.map { File(it).toFileDirItem(context) }
         val uriPairs = context.getFileUrisFromFileDirItems(fileDirItems)
         val validPaths = uriPairs.first
         val uris = uriPairs.second
+        val activity = activity
         activity?.updateSDK30Uris(uris) { success ->
             if (success) {
                 try {
@@ -131,15 +145,42 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
                             "$stringToAdd$fullName"
                         }
 
-                        val values = ContentValues().apply {
-                            put(MediaStore.Images.Media.DISPLAY_NAME, newName)
+                        when (android30Format) {
+                            Android30RenameFormat.SAF -> {
+                                val sourceFile = File(path).toFileDirItem(activity)
+                                val newPath = "${path.getParentPath()}/$newName"
+                                val destinationFile = sourceFile.copy(path = newPath, name = newName)
+                                if (activity.copySingleFileSdk30(sourceFile, destinationFile)) {
+                                    if (!activity.baseConfig.keepLastModified) {
+                                        File(newPath).setLastModified(System.currentTimeMillis())
+                                    }
+                                    activity.contentResolver.delete(uri, null)
+                                    activity.updateInMediaStore(path, newPath)
+                                    activity.scanPathsRecursively(arrayListOf(newPath))
+                                }
+                            }
+                            Android30RenameFormat.CONTENT_RESOLVER -> {
+                                val values = ContentValues().apply {
+                                    put(MediaStore.Images.Media.DISPLAY_NAME, newName)
+                                }
+                                context.contentResolver.update(uri, values, null, null)
+                            }
+                            Android30RenameFormat.NONE -> {
+                                activity.runOnUiThread {
+                                    callback(true)
+                                }
+                                return@forEachIndexed
+                            }
                         }
-
-                        context.contentResolver.update(uri, values, null, null)
                     }
-                    callback(true)
+                    activity.runOnUiThread {
+                        callback(true)
+                    }
                 } catch (e: Exception) {
-                    callback(false)
+                    activity.runOnUiThread {
+                        activity.showErrorToast(e)
+                        callback(false)
+                    }
                 }
             }
         }

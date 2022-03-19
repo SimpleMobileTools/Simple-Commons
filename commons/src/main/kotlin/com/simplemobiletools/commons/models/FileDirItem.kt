@@ -7,7 +7,7 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
 import java.io.File
 
-open class FileDirItem(
+data class FileDirItem(
     val path: String,
     val name: String = "",
     var isDirectory: Boolean = false,
