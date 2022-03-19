@@ -860,7 +860,6 @@ fun BaseSimpleActivity.renameFile(
             }
         }
     } else if (isAccessibleWithSAFSdk30(oldPath)) {
-
         handleSAFDialogSdk30(oldPath) {
             if (!it) {
                 return@handleSAFDialogSdk30
