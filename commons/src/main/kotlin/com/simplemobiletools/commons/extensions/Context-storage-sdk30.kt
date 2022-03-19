@@ -153,6 +153,18 @@ fun Context.deleteDocumentWithSAFSdk30(fileDirItem: FileDirItem, allowDeleteFold
     }
 }
 
+fun Context.renameDocumentSdk30(oldPath: String, newPath: String): Boolean {
+    return try {
+        val treeUri = createFirstParentTreeUri(oldPath)
+        val documentId = getSAFDocumentId(oldPath)
+        val parentUri = DocumentsContract.buildDocumentUriUsingTree(treeUri, documentId)
+        DocumentsContract.renameDocument(contentResolver, parentUri, newPath.getFilenameFromPath()) != null
+    } catch (e: IllegalStateException) {
+        showErrorToast(e)
+        false
+    }
+}
+
 fun Context.hasProperStoredDocumentUriSdk30(path: String): Boolean {
     val documentUri = buildDocumentUriSdk30(path)
     return contentResolver.persistedUriPermissions.any { it.uri.toString() == documentUri.toString() }

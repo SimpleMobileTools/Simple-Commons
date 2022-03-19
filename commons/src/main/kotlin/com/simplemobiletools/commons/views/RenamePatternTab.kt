@@ -12,6 +12,7 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.isNougatPlus
 import com.simplemobiletools.commons.interfaces.RenameTab
+import com.simplemobiletools.commons.models.Android30RenameFormat
 import kotlinx.android.synthetic.main.dialog_rename_items_pattern.view.*
 import java.io.File
 import java.text.SimpleDateFormat
@@ -50,8 +51,9 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
         }
 
         val validPaths = paths.filter { activity?.getDoesFilePathExist(it) == true }
-        val sdFilePath = validPaths.firstOrNull { activity?.isPathOnSD(it) == true } ?: validPaths.firstOrNull()
-        if (sdFilePath == null) {
+        val firstPath = validPaths.firstOrNull()
+        val sdFilePath = validPaths.firstOrNull { activity?.isPathOnSD(it) == true } ?: firstPath
+        if (firstPath == null || sdFilePath == null) {
             activity?.toast(R.string.unknown_error_occurred)
             return
         }
@@ -62,39 +64,44 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                 return@handleSAFDialog
             }
 
-            ignoreClicks = true
-            var pathsCnt = validPaths.size
-            numbersCnt = pathsCnt.toString().length
-            for (path in validPaths) {
-                if (stopLooping) {
-                    return@handleSAFDialog
+            activity?.handleSAFDialogSdk30(firstPath) {
+                if (!it) {
+                    return@handleSAFDialogSdk30
                 }
 
-                try {
-                    val newPath = getNewPath(path, useMediaFileExtension) ?: continue
-                    activity?.renameFile(path, newPath, true) { success, useAndroid30Way ->
-                        if (success) {
-                            pathsCnt--
-                            if (pathsCnt == 0) {
-                                callback(true)
-                            }
-                        } else {
-                            ignoreClicks = false
-                            if (useAndroid30Way) {
-                                currentIncrementalNumber = 1
-                                stopLooping = true
-                                renameAllFiles(validPaths, useMediaFileExtension, callback)
+                ignoreClicks = true
+                var pathsCnt = validPaths.size
+                numbersCnt = pathsCnt.toString().length
+                for (path in validPaths) {
+                    if (stopLooping) {
+                        return@handleSAFDialogSdk30
+                    }
+
+                    try {
+                        val newPath = getNewPath(path, useMediaFileExtension) ?: continue
+                        activity?.renameFile(path, newPath, true) { success, android30Format ->
+                            if (success) {
+                                pathsCnt--
+                                if (pathsCnt == 0) {
+                                    callback(true)
+                                }
                             } else {
-                                activity?.toast(R.string.unknown_error_occurred)
+                                ignoreClicks = false
+                                if (android30Format != Android30RenameFormat.NONE) {
+                                    currentIncrementalNumber = 1
+                                    stopLooping = true
+                                    renameAllFiles(validPaths, useMediaFileExtension, android30Format, callback)
+                                } else {
+                                    activity?.toast(R.string.unknown_error_occurred)
+                                }
                             }
                         }
+                    } catch (e: Exception) {
+                        activity?.showErrorToast(e)
                     }
-                } catch (e: Exception) {
-                    activity?.showErrorToast(e)
                 }
+                stopLooping = false
             }
-
-            stopLooping = false
         }
     }
 
@@ -167,26 +174,59 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
         }
     }
 
-    private fun renameAllFiles(paths: List<String>, useMediaFileExtension: Boolean, callback: (success: Boolean) -> Unit) {
+    private fun renameAllFiles(
+        paths: List<String>,
+        useMediaFileExtension: Boolean,
+        android30Format: Android30RenameFormat,
+        callback: (success: Boolean) -> Unit
+    ) {
         val fileDirItems = paths.map { File(it).toFileDirItem(context) }
         val uriPairs = context.getFileUrisFromFileDirItems(fileDirItems)
         val validPaths = uriPairs.first
         val uris = uriPairs.second
+        val activity = activity
         activity?.updateSDK30Uris(uris) { success ->
             if (success) {
                 try {
                     uris.forEachIndexed { index, uri ->
                         val path = validPaths[index]
                         val newFileName = getNewPath(path, useMediaFileExtension)?.getFilenameFromPath() ?: return@forEachIndexed
-                        val values = ContentValues().apply {
-                            put(MediaStore.Images.Media.DISPLAY_NAME, newFileName)
+                        when (android30Format) {
+                            Android30RenameFormat.SAF -> {
+                                val sourceFile = File(path).toFileDirItem(context)
+                                val newPath = "${path.getParentPath()}/$newFileName"
+                                val destinationFile = sourceFile.copy(path = newPath, name = newFileName)
+                                if (activity.copySingleFileSdk30(sourceFile, destinationFile)) {
+                                    if (!activity.baseConfig.keepLastModified) {
+                                        File(newPath).setLastModified(System.currentTimeMillis())
+                                    }
+                                    activity.contentResolver.delete(uri, null)
+                                    activity.updateInMediaStore(path, newPath)
+                                    activity.scanPathsRecursively(arrayListOf(newPath))
+                                }
+                            }
+                            Android30RenameFormat.CONTENT_RESOLVER -> {
+                                val values = ContentValues().apply {
+                                    put(MediaStore.Images.Media.DISPLAY_NAME, newFileName)
+                                }
+                                context.contentResolver.update(uri, values, null, null)
+                            }
+                            Android30RenameFormat.NONE -> {
+                                activity.runOnUiThread {
+                                    callback(true)
+                                }
+                                return@forEachIndexed
+                            }
                         }
-
-                        context.contentResolver.update(uri, values, null, null)
                     }
-                    callback(true)
+                    activity.runOnUiThread {
+                        callback(true)
+                    }
                 } catch (e: Exception) {
-                    callback(false)
+                    activity.runOnUiThread {
+                        activity.showErrorToast(e)
+                        callback(false)
+                    }
                 }
             }
         }

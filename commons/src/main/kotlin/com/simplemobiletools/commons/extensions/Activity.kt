@@ -834,26 +834,48 @@ fun BaseSimpleActivity.renameFile(
     oldPath: String,
     newPath: String,
     isRenamingMultipleFiles: Boolean,
-    callback: ((success: Boolean, useAndroid30Way: Boolean) -> Unit)? = null
+    callback: ((success: Boolean, android30RenameFormat: Android30RenameFormat) -> Unit)? = null
 ) {
     if (isRestrictedSAFOnlyRoot(oldPath)) {
         handleAndroidSAFDialog(oldPath) {
             if (!it) {
                 runOnUiThread {
-                    callback?.invoke(false, false)
+                    callback?.invoke(false, Android30RenameFormat.NONE)
                 }
                 return@handleAndroidSAFDialog
             }
 
             try {
-                val success = renameAndroidSAFDocument(oldPath, newPath)
-                runOnUiThread {
-                    callback?.invoke(success, false)
+                ensureBackgroundThread {
+                    val success = renameAndroidSAFDocument(oldPath, newPath)
+                    runOnUiThread {
+                        callback?.invoke(success, Android30RenameFormat.NONE)
+                    }
                 }
             } catch (e: Exception) {
                 showErrorToast(e)
                 runOnUiThread {
-                    callback?.invoke(false, false)
+                    callback?.invoke(false, Android30RenameFormat.NONE)
+                }
+            }
+        }
+    } else if (isAccessibleWithSAFSdk30(oldPath)) {
+        handleSAFDialogSdk30(oldPath) {
+            if (!it) {
+                return@handleSAFDialogSdk30
+            }
+
+            try {
+                ensureBackgroundThread {
+                    val success = renameDocumentSdk30(oldPath, newPath)
+                    runOnUiThread {
+                        callback?.invoke(success, Android30RenameFormat.NONE)
+                    }
+                }
+            } catch (e: Exception) {
+                showErrorToast(e)
+                runOnUiThread {
+                    callback?.invoke(false, Android30RenameFormat.NONE)
                 }
             }
         }
@@ -866,7 +888,7 @@ fun BaseSimpleActivity.renameFile(
             val document = getSomeDocumentFile(oldPath)
             if (document == null || (File(oldPath).isDirectory != document.isDirectory)) {
                 runOnUiThread {
-                    callback?.invoke(false, false)
+                    callback?.invoke(false, Android30RenameFormat.NONE)
                 }
                 return@handleSAFDialog
             }
@@ -879,7 +901,7 @@ fun BaseSimpleActivity.renameFile(
                         // FileNotFoundException is thrown in some weird cases, but renaming works just fine
                     } catch (e: Exception) {
                         showErrorToast(e)
-                        callback?.invoke(false, false)
+                        callback?.invoke(false, Android30RenameFormat.NONE)
                         return@ensureBackgroundThread
                     }
 
@@ -890,14 +912,14 @@ fun BaseSimpleActivity.renameFile(
                         }
                         deleteFromMediaStore(oldPath)
                         runOnUiThread {
-                            callback?.invoke(true, false)
+                            callback?.invoke(true, Android30RenameFormat.NONE)
                         }
                     }
                 }
             } catch (e: Exception) {
                 showErrorToast(e)
                 runOnUiThread {
-                    callback?.invoke(false, false)
+                    callback?.invoke(false, Android30RenameFormat.NONE)
                 }
             }
         }
@@ -910,7 +932,7 @@ fun BaseSimpleActivity.renameFile(
             if (isRPlus() && exception is java.nio.file.FileSystemException) {
                 // if we are renaming multiple files at once, we should give the Android 30+ permission dialog all uris together, not one by one
                 if (isRenamingMultipleFiles) {
-                    callback?.invoke(false, true)
+                    callback?.invoke(false, Android30RenameFormat.CONTENT_RESOLVER)
                 } else {
                     val fileUris = getFileUrisFromFileDirItems(arrayListOf(File(oldPath).toFileDirItem(this))).second
                     updateSDK30Uris(fileUris) { success ->
@@ -921,19 +943,19 @@ fun BaseSimpleActivity.renameFile(
 
                             try {
                                 contentResolver.update(fileUris.first(), values, null, null)
-                                callback?.invoke(true, false)
+                                callback?.invoke(true, Android30RenameFormat.NONE)
                             } catch (e: Exception) {
                                 showErrorToast(e)
-                                callback?.invoke(false, false)
+                                callback?.invoke(false, Android30RenameFormat.NONE)
                             }
                         } else {
-                            callback?.invoke(false, false)
+                            callback?.invoke(false, Android30RenameFormat.NONE)
                         }
                     }
                 }
             } else {
                 showErrorToast(exception)
-                callback?.invoke(false, false)
+                callback?.invoke(false, Android30RenameFormat.NONE)
             }
             return
         }
@@ -945,7 +967,7 @@ fun BaseSimpleActivity.renameFile(
                 updateInMediaStore(oldPath, newPath)
                 rescanPath(newPath) {
                     runOnUiThread {
-                        callback?.invoke(true, false)
+                        callback?.invoke(true, Android30RenameFormat.NONE)
                     }
                     deleteFromMediaStore(oldPath)
                     scanPathRecursively(newPath)
@@ -958,14 +980,48 @@ fun BaseSimpleActivity.renameFile(
                 scanPathsRecursively(arrayListOf(newPath)) {
                     deleteFromMediaStore(oldPath)
                     runOnUiThread {
-                        callback?.invoke(true, false)
+                        callback?.invoke(true, Android30RenameFormat.NONE)
                     }
                 }
             }
         } else {
             tempFile.delete()
-            runOnUiThread {
-                callback?.invoke(false, false)
+            newFile.delete()
+            if (isRPlus()) {
+                // if we are renaming multiple files at once, we should give the Android 30+ permission dialog all uris together, not one by one
+                if (isRenamingMultipleFiles) {
+                    callback?.invoke(false, Android30RenameFormat.SAF)
+                } else {
+                    val fileUris = getFileUrisFromFileDirItems(arrayListOf(File(oldPath).toFileDirItem(this))).second
+                    updateSDK30Uris(fileUris) { success ->
+                        if (!success) {
+                            return@updateSDK30Uris
+                        }
+                        try {
+                            val sourceFile = File(oldPath).toFileDirItem(this)
+                            val destinationFile = sourceFile.copy(path = newPath, name = newPath.getFilenameFromPath())
+                            val copySuccessful = copySingleFileSdk30(sourceFile, destinationFile)
+                            if (copySuccessful) {
+                                if (!baseConfig.keepLastModified) {
+                                    newFile.setLastModified(System.currentTimeMillis())
+                                }
+                                contentResolver.delete(fileUris.first(), null)
+                                updateInMediaStore(oldPath, newPath)
+                                scanPathsRecursively(arrayListOf(newPath)) {
+                                    runOnUiThread {
+                                        callback?.invoke(true, Android30RenameFormat.NONE)
+                                    }
+                                }
+                            }
+
+                        } catch (e: Exception) {
+                            showErrorToast(e)
+                            callback?.invoke(false, Android30RenameFormat.NONE)
+                        }
+                    }
+                }
+            } else {
+                callback?.invoke(false, Android30RenameFormat.NONE)
             }
         }
     }
