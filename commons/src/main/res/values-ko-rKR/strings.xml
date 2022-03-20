@@ -248,6 +248,7 @@
     <string name="gps_coordinates">GPS 좌표</string>
     <string name="altitude">고도</string>
     <string name="remove_exif">Remove EXIF</string>
+    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
     <string name="exif_removed">EXIF values removed successfully</string>
 
     <!-- Color customization -->

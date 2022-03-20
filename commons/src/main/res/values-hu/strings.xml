@@ -241,6 +241,7 @@
     <string name="gps_coordinates">GPS koordináták</string>
     <string name="altitude">Magasság</string>
     <string name="remove_exif">Remove EXIF</string>
+    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
     <string name="exif_removed">EXIF values removed successfully</string>
     <!-- Color customization -->
     <string name="background_color">Háttérszín</string>
