@@ -30,7 +30,8 @@ fun ExifInterface.copyTo(destination: ExifInterface, copyOrientation: Boolean = 
         ExifInterface.TAG_ISO_SPEED_RATINGS,
         ExifInterface.TAG_MAKE,
         ExifInterface.TAG_MODEL,
-        ExifInterface.TAG_WHITE_BALANCE)
+        ExifInterface.TAG_WHITE_BALANCE
+    )
 
     if (copyOrientation) {
         attributes.add(ExifInterface.TAG_ORIENTATION)
@@ -49,9 +50,7 @@ fun ExifInterface.copyTo(destination: ExifInterface, copyOrientation: Boolean = 
     }
 }
 
-fun ExifInterface.removeValues(path: String) {
-    val newExif = ExifInterface(path)
-
+fun ExifInterface.removeValues() {
     val attributes = arrayListOf(
         // ExifInterface.TAG_ORIENTATION,   // do not remove the orientation, it could lead to unexpected behaviour at displaying the file
         ExifInterface.TAG_APERTURE_VALUE,
@@ -80,10 +79,10 @@ fun ExifInterface.removeValues(path: String) {
     )
 
     attributes.forEach {
-        newExif.setAttribute(it, null)
+        setAttribute(it, null)
     }
 
-    newExif.saveAttributes()
+    saveAttributes()
 }
 
 fun ExifInterface.getExifProperties(): String {
