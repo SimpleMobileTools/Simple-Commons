@@ -183,8 +183,8 @@
     <string name="confirm_storage_access_text">Yazma erişimi vermek için lütfen bir sonraki ekranda SD kartın kök klasörünü seçin</string>
     <string name="confirm_storage_access_text_sd">SD kartı görmüyorsanız, bunu deneyin</string>
     <string name="confirm_storage_access_android_text">Lütfen alttaki \'Bu klasörü kullan\' seçeneğine basarak uygulamanın seçilen depolama alanına erişmesine izin verin.</string>
-    <string name="confirm_storage_access_android_text_specific">Lütfen alttaki \'Bu klasörü kullan\' seçeneğine basarak bir sonraki ekranda \'%s\' erişimine izin verin.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Yeni klasörü oluşturmak için lütfen sonraki ekranın altındaki \'Kaydet\' düğmesine basın.</string>
+    <string name="confirm_storage_access_android_text_specific">Lütfen alttaki \'&lt;b&gt;Bu klasörü kullan&lt;/b&gt;\' seçeneğine basarak bir sonraki ekranda \'&lt;b&gt;%s&lt;/b&gt;\' erişimine izin verin.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Yeni klasörü oluşturmak için lütfen sonraki ekranın altındaki \'&lt;b&gt;Kaydet&lt;/b&gt;\' düğmesine basın.</string>
     <string name="confirm_selection">Seçimi onayla</string>
     <string name="loading">Yükleniyor…</string>
     <plurals name="items">

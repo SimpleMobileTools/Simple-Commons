@@ -183,9 +183,9 @@
     <string name="confirm_storage_access_text">Bitte am nächsten Bildschirm das Hauptverzeichnis deiner SD-Karte auswählen, um Schreibzugriff zu erlauben</string>
     <string name="confirm_storage_access_text_sd">Wenn die SD-Karte nicht angezeigt wird, versuche das</string>
     <string name="confirm_storage_access_android_text">Erlauben Sie der App auf dem nächsten Bildschirm den Zugriff auf den ausgewählten Speicher, indem Sie unten auf „Diesen Ordner verwenden“ klicken.</string>
-    <string name="confirm_storage_access_android_text_specific">Bitte erlauben Sie den Zugriff auf „%s“ auf dem nächsten Bildschirm, indem Sie unten auf
-\n„Diesen Ordner verwenden“ drücken.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Bitte drücken Sie auf „Speichern“ am unteren Rand des nächsten Bildschirms, um den neuen Ordner zu erstellen.</string>
+    <string name="confirm_storage_access_android_text_specific">Bitte erlauben Sie den Zugriff auf „&lt;b&gt;%s&lt;/b&gt;“ auf dem nächsten Bildschirm, indem Sie unten auf
+\n„&lt;b&gt;Diesen Ordner verwenden&lt;/b&gt;“ drücken.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Bitte drücken Sie auf „&lt;b&gt;Speichern&lt;/b&gt;“ am unteren Rand des nächsten Bildschirms, um den neuen Ordner zu erstellen.</string>
     <string name="confirm_selection">Auswahl bestätigen</string>
     <string name="loading">Wird geladen …</string>
     <plurals name="items">

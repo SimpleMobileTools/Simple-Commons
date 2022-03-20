@@ -183,8 +183,8 @@
     <string name="confirm_storage_access_text">Scegliere il percorso della scheda SD nella prossima schermata, per consentire i permessi di scrittura</string>
     <string name="confirm_storage_access_text_sd">Se non si ha una scheda SD, provare questo</string>
     <string name="confirm_storage_access_android_text">Consenti all\'app di accedere allo storage selezionato nella schermata successiva premendo «Usa questa cartella» in basso.</string>
-    <string name="confirm_storage_access_android_text_specific">Permetti l\'accesso a «%s» nella prossima schermata premendo «Usa questa cartella» in basso.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Premi «Salva» in fondo alla prossima schermata per creare la nuova cartella.</string>
+    <string name="confirm_storage_access_android_text_specific">Permetti l\'accesso a «&lt;b&gt;%s&lt;/b&gt;» nella prossima schermata premendo «&lt;b&gt;Usa questa cartella&lt;/b&gt;» in basso.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Premi «&lt;b&gt;Salva&lt;/b&gt;» in fondo alla prossima schermata per creare la nuova cartella.</string>
     <string name="confirm_selection">Conferma selezione</string>
     <string name="loading">Caricamento…</string>
     <plurals name="items">
