@@ -60,7 +60,7 @@ class PropertiesDialog() {
         builder.create().apply {
             mActivity.setupDialogStuff(mDialogView, this, R.string.properties)
             getButton(AlertDialog.BUTTON_NEUTRAL).setOnClickListener {
-                removeEXIF(path)
+                removeEXIFFromPath(path)
             }
         }
     }
@@ -240,11 +240,19 @@ class PropertiesDialog() {
             }
         }
 
-        AlertDialog.Builder(activity)
+        val builder = AlertDialog.Builder(mActivity)
             .setPositiveButton(R.string.ok, null)
-            .create().apply {
-                activity.setupDialogStuff(mDialogView, this, R.string.properties)
+
+        if (!paths.any { it.startsWith("content://") }) {
+            builder.setNeutralButton(R.string.remove_exif, null)
+        }
+
+        builder.create().apply {
+            mActivity.setupDialogStuff(mDialogView, this, R.string.properties)
+            getButton(AlertDialog.BUTTON_NEUTRAL).setOnClickListener {
+                removeEXIFFromPaths(paths)
             }
+        }
     }
 
     private fun addExifProperties(path: String, activity: Activity) {
@@ -282,7 +290,7 @@ class PropertiesDialog() {
         }
     }
 
-    private fun removeEXIF(path: String) {
+    private fun removeEXIFFromPath(path: String) {
         ConfirmationDialog(mActivity, "", R.string.remove_exif_confirmation) {
             try {
                 ExifInterface(path).removeValues()
@@ -290,6 +298,19 @@ class PropertiesDialog() {
 
                 mPropertyView.properties_holder.removeAllViews()
                 addProperties(path)
+            } catch (e: Exception) {
+                mActivity.showErrorToast(e)
+            }
+        }
+    }
+
+    private fun removeEXIFFromPaths(paths: List<String>) {
+        ConfirmationDialog(mActivity, "", R.string.remove_exif_confirmation) {
+            try {
+                paths.forEach {
+                    ExifInterface(it).removeValues()
+                }
+                mActivity.toast(R.string.exif_removed)
             } catch (e: Exception) {
                 mActivity.showErrorToast(e)
             }
