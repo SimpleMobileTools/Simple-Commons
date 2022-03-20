@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.dialogs
 import android.app.Activity
 import android.content.res.Resources
 import android.net.Uri
+import android.os.Environment
 import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
@@ -54,7 +55,9 @@ class PropertiesDialog() {
             .setPositiveButton(R.string.ok, null)
 
         if (!path.startsWith("content://") && path.canModifyEXIF()) {
-            builder.setNeutralButton(R.string.remove_exif, null)
+            if ((isRPlus() && Environment.isExternalStorageManager()) || (!isRPlus() && activity.hasPermission(PERMISSION_WRITE_STORAGE))) {
+                builder.setNeutralButton(R.string.remove_exif, null)
+            }
         }
 
         builder.create().apply {
@@ -244,7 +247,9 @@ class PropertiesDialog() {
             .setPositiveButton(R.string.ok, null)
 
         if (!paths.any { it.startsWith("content://") } && paths.any { it.canModifyEXIF() }) {
-            builder.setNeutralButton(R.string.remove_exif, null)
+            if ((isRPlus() && Environment.isExternalStorageManager()) || (!isRPlus() && activity.hasPermission(PERMISSION_WRITE_STORAGE))) {
+                builder.setNeutralButton(R.string.remove_exif, null)
+            }
         }
 
         builder.create().apply {
