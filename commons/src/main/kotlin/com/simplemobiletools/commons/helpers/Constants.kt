@@ -304,6 +304,8 @@ val videoExtensions: Array<String> get() = arrayOf(".mp4", ".mkv", ".webm", ".av
 val audioExtensions: Array<String> get() = arrayOf(".mp3", ".wav", ".wma", ".ogg", ".m4a", ".opus", ".flac", ".aac")
 val rawExtensions: Array<String> get() = arrayOf(".dng", ".orf", ".nef", ".arw", ".rw2", ".cr2", ".cr3")
 
+val extensionsSupportingEXIF: Array<String> get() = arrayOf(".jpg", ".jpeg", ".png", ".webp", ".dng")
+
 const val DATE_FORMAT_ONE = "dd.MM.yyyy"
 const val DATE_FORMAT_TWO = "dd/MM/yyyy"
 const val DATE_FORMAT_THREE = "MM/dd/yyyy"

@@ -103,6 +103,8 @@ fun String.isImageSlow() = isImageFast() || getMimeType().startsWith("image") ||
 fun String.isVideoSlow() = isVideoFast() || getMimeType().startsWith("video") || startsWith(MediaStore.Video.Media.EXTERNAL_CONTENT_URI.toString())
 fun String.isAudioSlow() = isAudioFast() || getMimeType().startsWith("audio") || startsWith(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI.toString())
 
+fun String.canModifyEXIF() = extensionsSupportingEXIF.any { endsWith(it, true) }
+
 fun String.getCompressionFormat() = when (getFilenameExtension().toLowerCase()) {
     "png" -> Bitmap.CompressFormat.PNG
     "webp" -> Bitmap.CompressFormat.WEBP

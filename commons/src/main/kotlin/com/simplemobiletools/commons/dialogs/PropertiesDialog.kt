@@ -53,7 +53,7 @@ class PropertiesDialog() {
         val builder = AlertDialog.Builder(mActivity)
             .setPositiveButton(R.string.ok, null)
 
-        if (!path.startsWith("content://")) {
+        if (!path.startsWith("content://") && path.canModifyEXIF()) {
             builder.setNeutralButton(R.string.remove_exif, null)
         }
 
@@ -243,7 +243,7 @@ class PropertiesDialog() {
         val builder = AlertDialog.Builder(mActivity)
             .setPositiveButton(R.string.ok, null)
 
-        if (!paths.any { it.startsWith("content://") }) {
+        if (!paths.any { it.startsWith("content://") } && paths.any { it.canModifyEXIF() }) {
             builder.setNeutralButton(R.string.remove_exif, null)
         }
 
@@ -307,7 +307,7 @@ class PropertiesDialog() {
     private fun removeEXIFFromPaths(paths: List<String>) {
         ConfirmationDialog(mActivity, "", R.string.remove_exif_confirmation) {
             try {
-                paths.forEach {
+                paths.filter { it.canModifyEXIF() }.forEach {
                     ExifInterface(it).removeValues()
                 }
                 mActivity.toast(R.string.exif_removed)
