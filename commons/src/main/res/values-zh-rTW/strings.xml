@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ok">確定</string>
     <string name="cancel">取消</string>
@@ -54,11 +55,9 @@
     <string name="eight">Eight</string>
     <string name="nine">Nine</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
-
     <!-- Emails -->
     <string name="home">住家</string>
     <string name="work">工作</string>
-
     <!-- Phone numbers -->
     <string name="mobile">手機</string>
     <string name="main_number">主用</string>
@@ -66,7 +65,6 @@
     <string name="home_fax">住家傳真</string>
     <string name="pager">呼叫器</string>
     <string name="no_phone_number_found">未發現電話號碼</string>
-
     <!-- View types -->
     <string name="change_view_type">改變瀏覽類型</string>
     <string name="grid">格狀</string>
@@ -76,7 +74,6 @@
     <string name="reduce_column_count">減少欄數</string>
     <string name="change_cover_image">更換封面圖片</string>
     <string name="select_photo">選擇相片</string>
-
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">管理黑名單</string>
     <string name="not_blocking_anyone">你沒有封鎖任何人</string>
@@ -89,28 +86,23 @@
     <string name="must_make_default_dialer">你必須將這應用程式設為預設的撥號程式來使用黑名單。</string>
     <string name="set_as_default">設為預設</string>
     <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
-
     <!-- Favorites -->
     <string name="favorites">我的最愛</string>
     <string name="add_favorites">添加我的最愛</string>
     <string name="add_to_favorites">加入我的最愛</string>
     <string name="remove_from_favorites">移除我的最愛</string>
-
     <!-- Search -->
     <string name="search">搜尋</string>
     <string name="type_2_characters">輸入兩個字以上來開始搜尋。</string>
-
     <!-- Filters -->
     <string name="filter">篩選</string>
     <string name="no_items_found">未發現項目</string>
     <string name="change_filter">更改篩選條件</string>
-
     <!-- Permissions -->
     <string name="no_storage_permissions">儲存空間權限是必要的</string>
     <string name="no_contacts_permission">聯絡人權限是必要的</string>
     <string name="no_camera_permissions">相機權限是必要的</string>
     <string name="no_audio_permissions">音訊權限是必要的</string>
-
     <!-- Renaming -->
     <string name="rename_file">重新命名檔案</string>
     <string name="rename_folder">重新命名資料夾</string>
@@ -135,7 +127,6 @@
     <string name="filename_without_txt">Filename (without .txt)</string>
     <string name="filename_without_json">Filename (without .json)</string>
     <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
-
     <!-- Copy / Move -->
     <string name="copy">複製</string>
     <string name="move">移動</string>
@@ -165,7 +156,6 @@
     <string name="could_not_create_file">無法建立檔案 %s</string>
     <string name="no_new_items">未發現新的項目</string>
     <string name="no_space">目標沒有足夠的可用空間。\n需求 %1$s, 可用 %2$s</string>
-
     <!-- Create new -->
     <string name="create_new">新增</string>
     <string name="folder">資料夾</string>
@@ -175,7 +165,6 @@
     <string name="invalid_name">名稱包含無效的字元</string>
     <string name="empty_name">請輸入一個名稱</string>
     <string name="unknown_error_occurred">發生未知的錯誤</string>
-
     <!-- File operation conflicts -->
     <string name="file_already_exists">檔案 \"%s\" 已經存在</string>
     <string name="file_already_exists_overwrite">檔案 \"%s\" 已經存在。 要覆蓋嗎?</string>
@@ -186,7 +175,6 @@
     <string name="skip">跳過</string>
     <string name="append">附加 \'_1\'</string>
     <string name="apply_to_all">添加到全部衝突</string>
-
     <!-- File picker -->
     <string name="select_folder">選擇資料夾</string>
     <string name="select_file">選擇檔案</string>
@@ -199,26 +187,21 @@
     <string name="confirm_create_doc_for_new_folder_text">Please press \'Save\' at the bottom of the next screen to create the new folder.</string>
     <string name="confirm_selection">確認選擇</string>
     <string name="loading">Loading…</string>
-
     <plurals name="items">
         <item quantity="other">%d個項目</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="other">%d個項目</item>
     </plurals>
-
     <plurals name="deleting_items">
         <item quantity="other">%d個項目刪除中</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d個聯絡人</item>
         <item quantity="other">%d個聯絡人</item>
     </plurals>
-
     <!-- Storages -->
     <string name="select_storage">選擇儲存空間</string>
     <string name="internal">內部儲存空間</string>
@@ -229,7 +212,6 @@
     <string name="app_on_sd_card">你似乎將應用程式安裝在SD卡，那會造成應用程式小工具無法使用。你甚至不會在可用的小工具列表中見到它們。
         那是個系統限制，所以如果你想要使用小工具，你必須把應用程式移動回內部儲存空間。</string>
     <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
-
     <!-- File properties -->
     <string name="properties">屬性</string>
     <string name="path">路徑</string>
@@ -249,7 +231,6 @@
     <string name="song_title">歌名</string>
     <string name="gps_coordinates">GPS座標</string>
     <string name="altitude">海拔高度</string>
-
     <!-- Color customization -->
     <string name="background_color">背景顏色</string>
     <string name="text_color">文字顏色</string>
@@ -280,7 +261,6 @@
             請購買 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> 來解鎖此功能及支持開發者。謝謝!
         ]]>
     </string>
-
     <!-- Themes -->
     <string name="light_theme">明亮主題</string>
     <string name="dark_theme">灰暗主題</string>
@@ -291,11 +271,9 @@
     <string name="black_white">黑白主題</string>
     <string name="custom">自訂</string>
     <string name="shared">分享</string>
-
     <!-- What's new -->
     <string name="whats_new">更新了什麼</string>
     <string name="whats_new_disclaimer">*此處僅列出大更新，尚有一些小改善</string>
-
     <!-- Actionbar items -->
     <string name="delete">刪除</string>
     <string name="remove">移除</string>
@@ -325,10 +303,9 @@
     <string name="move_to_bottom">Move to the bottom</string>
     <string name="pin_item">Pin item</string>
     <string name="unpin_item">Unpin item</string>
-    <string name="send_sms">Send SMS</string>
+    <string name="send_sms">傳送簡訊</string>
     <string name="send_email">Send email</string>
     <string name="call">Call</string>
-
     <!-- Sorting -->
     <string name="sort_by">排序</string>
     <string name="name">名稱</string>
@@ -351,11 +328,12 @@
     <string name="full_name">Full name</string>
     <string name="use_custom_sorting">Use custom sorting</string>
     <string name="change_order">Change order</string>
-
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">確定要進行刪除嗎?</string>
-    <string name="deletion_confirmation">你確定要刪除%s嗎?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">你確定要把%s移到回收桶嗎?</string>    <!-- Are you sure you want to move 3 items into Recycle Bin? -->
+    <string name="deletion_confirmation">你確定要刪除%s嗎?</string>
+    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">你確定要把%s移到回收桶嗎?</string>
+    <!-- Are you sure you want to move 3 items into Recycle Bin? -->
     <string name="are_you_sure_delete">你確定要刪除這個項目嗎?</string>
     <string name="are_you_sure_recycle_bin">你確定要把這個項目移到回收桶嗎?</string>
     <string name="do_not_ask_again">這情況不再詢問</string>
@@ -363,11 +341,9 @@
     <string name="yes">是</string>
     <string name="no">否</string>
     <string name="maybe">或許</string>
-
     <plurals name="delete_warning">
         <item quantity="other">注意: 你正在刪除%d個資料夾</item>
     </plurals>
-
     <!-- Password protection -->
     <string name="pin">PIN碼</string>
     <string name="enter_pin">輸入PIN碼</string>
@@ -393,7 +369,6 @@
     <string name="lock_folder">上鎖資料夾</string>
     <string name="unlock_folder">解鎖資料夾</string>
     <string name="lock_folder_notice">這保護僅限作用於此應用程式，並不該用來取代真正系統級的資料夾加密。</string>
-
     <!-- Times -->
     <string name="yesterday">昨天</string>
     <string name="today">今天</string>
@@ -406,7 +381,6 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
-
     <plurals name="seconds">
         <item quantity="other">%d秒鐘</item>
     </plurals>
@@ -428,7 +402,6 @@
     <plurals name="years">
         <item quantity="other">%d年</item>
     </plurals>
-
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="other">%d秒鐘內</item>
@@ -451,7 +424,6 @@
     <plurals name="in_years">
         <item quantity="other">%d年內</item>
     </plurals>
-
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="other">%d秒鐘前</item>
@@ -474,7 +446,6 @@
     <plurals name="years_before">
         <item quantity="other">%d年前</item>
     </plurals>
-
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="other">%d秒鐘</item>
@@ -497,7 +468,6 @@
     <plurals name="by_years">
         <item quantity="other">%d年</item>
     </plurals>
-
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">鬧鐘響起剩餘時間:\n%s</string>
     <string name="reminder_triggers_in">提醒觸發剩餘時間:\n%s</string>
@@ -505,7 +475,6 @@
     <string name="alarm_warning">依靠鬧鐘功能之前，請先確認是否正常運作，有可能因為省電相關的系統限制而導致失靈。</string>
     <string name="reminder_warning">依靠提醒功能之前，請先確認是否正常運作，有可能因為省電相關的系統限制而導致失靈。</string>
     <string name="notifications_disabled">這應用程式的通知被停用了。請到你的裝置設定中去啟用。</string>
-
     <!-- Alarms -->
     <string name="alarm">鬧鐘</string>
     <string name="snooze">延遲</string>
@@ -518,7 +487,6 @@
     <string name="no_sound">無音效</string>
     <string name="during_day_at_hh_mm">During the day at hh:mm</string>
     <string name="during_day_at">During the day at %02d:%02d</string>
-
     <!-- Settings -->
     <string name="settings">設定</string>
     <string name="purchase_simple_thank_you">購買Simple Thank You</string>
@@ -562,7 +530,6 @@
     <string name="start_name_with_surname">姓氏在前</string>
     <string name="clear_cache">Clear cache</string>
     <string name="show_call_confirmation_dialog">開始通話前顯示通話確認框</string>
-
     <!-- Setting sections -->
     <string name="visibility">可見度</string>
     <string name="security">安全性</string>
@@ -577,7 +544,6 @@
     <string name="main_screen">Main screen</string>
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
-
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">管理顯示的頁面</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
@@ -588,7 +554,6 @@
     <string name="last_used_tab">Last used one</string>
     <string name="files_tab">Files</string>
     <string name="recent_files_tab">Recent files</string>
-
     <!-- Recycle Bin -->
     <string name="restore_this_file">還原這個檔案</string>
     <string name="restore_selected_files">還原選擇的檔案</string>
@@ -600,11 +565,9 @@
     <string name="moving_recycle_bin_items_disabled">移動回收桶項目的功能已停用，請使用復原</string>
     <string name="show_the_recycle_bin">顯示回收桶</string>
     <string name="hide_the_recycle_bin">隱藏回收桶</string>
- 
     <plurals name="moving_items_into_bin">
         <item quantity="other">正在移動%d個項目進回收桶</item>
     </plurals>
-
     <!-- Import / Export -->
     <string name="importing">正在匯入…</string>
     <string name="exporting">正在匯出…</string>
@@ -617,13 +580,11 @@
     <string name="no_entries_for_importing">未發現供匯入的項目</string>
     <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
     <string name="no_entries_for_exporting">未發現供匯出的項目</string>
-
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">似乎有USB裝置接上了你的裝置。為確保檔案正確顯示，你必須授予額外的權限。</string>
     <string name="confirm_usb_storage_access_text">請在下個畫面選擇USB裝置的根目錄，以授予存取權限</string>
     <string name="wrong_root_selected_usb">選擇到錯誤資料夾，請選擇你USB裝置的根目錄</string>
-
     <!-- Dates -->
     <string name="january">一月</string>
     <string name="february">二月</string>
@@ -637,7 +598,6 @@
     <string name="october">十月</string>
     <string name="november">十一月</string>
     <string name="december">十二月</string>
-
     <!-- in January -->
     <string name="in_january">在一月</string>
     <string name="in_february">在二月</string>
@@ -651,7 +611,6 @@
     <string name="in_october">在十月</string>
     <string name="in_november">在十一月</string>
     <string name="in_december">在十二月</string>
-
     <string name="monday">星期一</string>
     <string name="tuesday">星期二</string>
     <string name="wednesday">星期三</string>
@@ -659,7 +618,6 @@
     <string name="friday">星期五</string>
     <string name="saturday">星期六</string>
     <string name="sunday">星期日</string>
-
     <string name="monday_letter">一</string>
     <string name="tuesday_letter">二</string>
     <string name="wednesday_letter">三</string>
@@ -667,7 +625,6 @@
     <string name="friday_letter">五</string>
     <string name="saturday_letter">六</string>
     <string name="sunday_letter">日</string>
-
     <string name="monday_short">週一</string>
     <string name="tuesday_short">週二</string>
     <string name="wednesday_short">週三</string>
@@ -675,7 +632,6 @@
     <string name="friday_short">週五</string>
     <string name="saturday_short">週六</string>
     <string name="sunday_short">週日</string>
-
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">你的應用程式版本將不再更新。請更新到專業版以獲得新的修復和其他改善。</string>
     <string name="upgrade_to_pro_long_click">你的應用程式版本將不再更新。請點擊這裡，更新到專業版以獲得新的修復和其他改善。</string>
@@ -683,7 +639,6 @@
     <string name="more_info">更多資訊</string>
     <string name="upgrade">升級</string>
     <string name="upgrade_calendar">你必須手動搬移儲存在本機端的活動，透過匯出.ics檔案再接著匯入。你可以在主畫面選單中，找到 匯出/匯入 兩個按鈕。</string>
-
     <!-- About -->
     <string name="about">關於</string>
     <string name="website">Website</string>
@@ -708,7 +663,7 @@
     <string name="privacy_policy">Privacy policy</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="about_footer">Made with ❤️ in Slovakia</string>
     <string name="additional_info">進階資訊</string>
     <string name="app_version">應用程式版本: %s</string>
     <string name="device_os">裝置系統: %s</string>
@@ -735,7 +690,6 @@
             The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
         ]]>
     </string>
-
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -748,7 +702,6 @@
             謝謝
         ]]>
     </string>
-
     <string name="simple_app_launcher">Simple App Launcher</string>
     <string name="simple_calculator">Simple Calculator</string>
     <string name="simple_calendar">Simple Calendar</string>
@@ -766,7 +719,6 @@
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
-
     <string name="app_launcher_short">App Launcher</string>
     <string name="calculator_short">計算機</string>
     <string name="calendar_short">行事曆</string>
@@ -784,13 +736,11 @@
     <string name="sms_messenger_short">SMS Messenger</string>
     <string name="thank_you_short">Thank You</string>
     <string name="voice_recorder_short">Voice Recorder</string>
-
     <string name="sideloaded_app">
         <![CDATA[
             你的應用程式版本似乎是損壞的。請從 <a href="%s">這裡</a> 下載原始版本。
         ]]>
     </string>
-
     <!-- FAQ -->
     <string name="frequently_asked_questions">常見問題</string>
     <string name="before_asking_question">在你發問之前，請先閱讀</string>
@@ -825,7 +775,6 @@
         want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
     <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
     <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
-
     <!-- Contributors -->
     <string name="contributors">Contributors</string>
     <string name="translation">Translation</string>
@@ -838,7 +787,6 @@
             Thanks to all contributors and other supporters!
         ]]>
     </string>
-
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -883,7 +831,6 @@
     <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
     <string name="translation_chinese_cn">Chinese (Simplified)</string>
     <string name="translation_chinese_tw">Chinese (Traditional)</string>
-
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Get the Pro version now!</string>
     <string name="why_upgrade_basic_version">Basic</string>
@@ -892,43 +839,36 @@
     <string name="why_upgrade_no_internet_access">No internet access</string>
     <string name="why_upgrade_footer">+ 100% Money Back Guarantee</string>
     <string name="why_upgrade_improved_design">Improved design</string>
-
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
     <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
     <string name="why_upgrade_folder_locking">Individual folder locking</string>
     <string name="why_upgrade_printing_support">Printing support</string>
-
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Time zone support</string>
     <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
     <string name="why_upgrade_easy_event_importing">Easy event importing</string>
     <string name="why_upgrade_new_widgets">New widgets</string>
-
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
     <string name="why_upgrade_font_size_customization">Font size customization</string>
     <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
     <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
     <string name="why_upgrade_contact_filtering">Contact filtering</string>
-
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Checklists</string>
     <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
     <string name="why_upgrade_note_locking">Note locking</string>
-
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
     <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
     <string name="why_upgrade_file_compression">File compression support</string>
     <string name="why_upgrade_recents_tab">Tab with recent files</string>
-
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Background color customization</string>
     <string name="why_upgrade_file_importing">File importing support</string>
     <string name="why_upgrade_zooming">Zooming</string>
-
     <!-- License -->
     <string name="notice">這程式使用了下列的第三方函式庫來讓我工作簡化。感謝。</string>
     <string name="third_party_licences">第三方授權</string>
@@ -961,11 +901,9 @@
     <string name="audio_record_view_title">Audio Record View (音訊視覺化)</string>
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
     <string name="apng_title">APNG Android (animated WebP support)</string>
-
     <!-- Google Play listing -->
     <string name="deprecated_app">已捨棄: 這版本的應用程式不再維護，在這取得專業版  https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">別忘記如果您在2小時內解除安裝任何付費應用程式，將會自動被退款。若您在之後隨時想退款，只要透過 @simplemobiletools.com 聯絡我們，即可收到退款。這麼一來輕鬆就能試用了 :)</string>
-
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
 </resources>
