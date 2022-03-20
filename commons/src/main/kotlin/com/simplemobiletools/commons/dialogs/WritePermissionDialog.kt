@@ -38,7 +38,9 @@ class WritePermissionDialog(activity: Activity, val mode: Mode, val callback: ()
                 glide.load(R.drawable.img_write_storage_sd).transition(crossFade).into(view.write_permissions_dialog_image_sd)
             }
             is Mode.OpenDocumentTreeSDK30 -> {
-                view.write_permissions_dialog_otg_text.text = Html.fromHtml(activity.humanizePath(activity.getString(R.string.confirm_storage_access_android_text_specific, mode.path)))
+                val humanizedPath = activity.humanizePath(mode.path)
+                view.write_permissions_dialog_otg_text.text =
+                    Html.fromHtml(activity.getString(R.string.confirm_storage_access_android_text_specific, humanizedPath))
                 glide.load(R.drawable.img_write_storage_sdk_30).transition(crossFade).into(view.write_permissions_dialog_otg_image)
 
                 view.write_permissions_dialog_otg_image.setOnClickListener {
