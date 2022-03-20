@@ -249,9 +249,9 @@
     <string name="song_title">Τίτλος τραγουδιού</string>
     <string name="gps_coordinates">Συντεταγμένες GPS</string>
     <string name="altitude">Υψόμετρο</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">Αφαίρεση EXIF</string>
+    <string name="remove_exif_confirmation">Σίγουρα θέλετε να αφαιρέσετε τις τιμές EXIF, όπως συντεταγμένες GPS, μοντέλο φωτογραφικής μηχανής κ.λ.π.?</string>
+    <string name="exif_removed">Οι τιμές EXIF αφαιρέθηκαν επιτυχώς</string>
 
     <!-- Color customization -->
     <string name="background_color">Χρώμα φόντου</string>
