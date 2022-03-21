@@ -183,8 +183,8 @@
     <string name="confirm_storage_access_text">请选择 SD 卡根目录并授予写权限</string>
     <string name="confirm_storage_access_text_sd">如果您未找到 SD 卡目录，请尝试</string>
     <string name="confirm_storage_access_android_text">请在下一个屏幕上按下底部的“使用此文件夹”，允许应用程序访问所选的存储空间。</string>
-    <string name="confirm_storage_access_android_text_specific">请在下个屏幕上允许访问 \'&lt;b&gt;%s&lt;/b&gt;\'，方法是按下底部的“使用此文件夹”。</string>
-    <string name="confirm_create_doc_for_new_folder_text">请按下下个屏幕底部的“保存”按钮来创建新文件夹。</string>
+    <string name="confirm_storage_access_android_text_specific">请在下个屏幕上允许访问 \'<b>%s</b>\'，方法是按下底部的“<b>使用此文件夹</b>”。</string>
+    <string name="confirm_create_doc_for_new_folder_text">请按下下个屏幕底部的“<b>保存</b>”按钮来创建新文件夹。</string>
     <string name="confirm_selection">确认选择</string>
     <string name="loading">加载中…</string>
     <plurals name="items">
@@ -231,9 +231,9 @@
     <string name="song_title">歌曲标题</string>
     <string name="gps_coordinates">GPS 坐标</string>
     <string name="altitude">海拔高度</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">删除 EXIF</string>
+    <string name="remove_exif_confirmation">你确定你想删除 EXIF 值，如 GPS 坐标，相机型号等\?</string>
+    <string name="exif_removed">成功删除了 EXIF 值</string>
     <!-- Color customization -->
     <string name="background_color">背景色</string>
     <string name="text_color">文本颜色</string>
