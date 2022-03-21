@@ -54,7 +54,7 @@ class PropertiesDialog() {
         val builder = AlertDialog.Builder(mActivity)
             .setPositiveButton(R.string.ok, null)
 
-        if (!path.startsWith("content://") && path.canModifyEXIF()) {
+        if (!path.startsWith("content://") && path.canModifyEXIF() && activity.isPathOnInternalStorage(path)) {
             if ((isRPlus() && Environment.isExternalStorageManager()) || (!isRPlus() && activity.hasPermission(PERMISSION_WRITE_STORAGE))) {
                 builder.setNeutralButton(R.string.remove_exif, null)
             }
@@ -246,7 +246,7 @@ class PropertiesDialog() {
         val builder = AlertDialog.Builder(mActivity)
             .setPositiveButton(R.string.ok, null)
 
-        if (!paths.any { it.startsWith("content://") } && paths.any { it.canModifyEXIF() }) {
+        if (!paths.any { it.startsWith("content://") } && paths.any { it.canModifyEXIF() } && paths.any { activity.isPathOnInternalStorage(it) }) {
             if ((isRPlus() && Environment.isExternalStorageManager()) || (!isRPlus() && activity.hasPermission(PERMISSION_WRITE_STORAGE))) {
                 builder.setNeutralButton(R.string.remove_exif, null)
             }
@@ -312,7 +312,7 @@ class PropertiesDialog() {
     private fun removeEXIFFromPaths(paths: List<String>) {
         ConfirmationDialog(mActivity, "", R.string.remove_exif_confirmation) {
             try {
-                paths.filter { it.canModifyEXIF() }.forEach {
+                paths.filter { mActivity.isPathOnInternalStorage(it) && it.canModifyEXIF() }.forEach {
                     ExifInterface(it).removeValues()
                 }
                 mActivity.toast(R.string.exif_removed)
