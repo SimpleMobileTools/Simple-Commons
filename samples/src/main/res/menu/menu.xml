@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/save_note"
+        android:icon="@drawable/ic_save_vector"
+        android:title="@string/save"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/undo"
+        android:icon="@drawable/ic_undo_vector"
+        android:title="@string/undo"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/redo"
+        android:icon="@drawable/ic_redo_vector"
+        android:title="@string/redo"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/open_search"
+        android:icon="@drawable/ic_search_vector"
+        android:title="@string/search"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/sort_checklist"
+        android:icon="@drawable/ic_sort_vector"
+        android:title="@string/sort_by"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/ic_share_vector"
+        android:title="@string/share"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/print"
+        android:title="@string/print"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_settings_cog_vector"
+        android:title="@string/settings"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/ic_info_vector"
+        android:title="@string/about"
+        app:showAsAction="ifRoom" />
+</menu>
