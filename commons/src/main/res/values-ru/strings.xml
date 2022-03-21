@@ -244,9 +244,9 @@
     <string name="song_title">Название композиции</string>
     <string name="gps_coordinates">Координаты GPS</string>
     <string name="altitude">Высота над уровнем моря</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">Удалить EXIF</string>
+    <string name="remove_exif_confirmation">Вы уверены, что хотите удалить записи EXIF, такие как координаты GPS, модель камеры и т.д.\?</string>
+    <string name="exif_removed">Записи EXIF удалены</string>
     <!-- Color customization -->
     <string name="background_color">Цвет фона</string>
     <string name="text_color">Цвет текста</string>
