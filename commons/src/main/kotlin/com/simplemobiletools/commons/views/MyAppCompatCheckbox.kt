@@ -20,7 +20,7 @@ class MyAppCompatCheckbox : AppCompatCheckBox {
                 intArrayOf(-android.R.attr.state_checked),
                 intArrayOf(android.R.attr.state_checked)
             ),
-            intArrayOf(textColor.adjustAlpha(0.8f), accentColor)
+            intArrayOf(textColor.adjustAlpha(0.6f), accentColor)
         )
         supportButtonTintList = colorStateList
     }
