@@ -19,7 +19,6 @@ class ConfirmationAdvancedDialog(
 
         val builder = AlertDialog.Builder(activity)
             .setPositiveButton(positive) { dialog, which -> positivePressed() }
-            .setOnCancelListener { negativePressed() }
 
         if (negative != 0) {
             builder.setNegativeButton(negative) { dialog, which -> negativePressed() }
