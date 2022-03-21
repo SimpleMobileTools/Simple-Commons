@@ -1374,7 +1374,13 @@ fun Activity.setupDialogStuff(
         getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(dialogButtonColor)
         getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(dialogButtonColor)
 
-        val bgDrawable = resources.getColoredDrawableWithColor(R.drawable.dialog_bg, baseConfig.backgroundColor)
+        val backgroundColor = if (isBlackAndWhiteTheme()) {
+            resources.getColor(R.color.default_background_color)
+        } else {
+            baseConfig.backgroundColor
+        }
+
+        val bgDrawable = resources.getColoredDrawableWithColor(R.drawable.dialog_bg, backgroundColor)
         window?.setBackgroundDrawable(bgDrawable)
     }
     callback?.invoke()
