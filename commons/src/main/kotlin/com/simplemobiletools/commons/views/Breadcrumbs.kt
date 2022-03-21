@@ -25,6 +25,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
     private var isLayoutDirty = true
     private var isScrollToSelectedItemPending = false
     private var isFirstScroll = true
+    private var isShownInDialog = false
     private var stickyRootInitialLeft = 0
     private var rootStartPadding = 0
 
@@ -152,7 +153,8 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
         super.requestLayout()
     }
 
-    fun setBreadcrumb(fullPath: String) {
+    fun setBreadcrumb(fullPath: String, isShownInDialog: Boolean) {
+        this.isShownInDialog = isShownInDialog
         lastPath = fullPath
         val basePath = fullPath.getBasePath(context)
         var currPath = basePath
@@ -180,7 +182,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
     private fun addBreadcrumb(item: FileDirItem, index: Int, addPrefix: Boolean) {
         if (itemsLayout.childCount == 0) {
             inflater.inflate(R.layout.item_breadcrumb_first, itemsLayout, false).apply {
-                val backgroundColor = if (context.isBlackAndWhiteTheme()) {
+                val backgroundColor = if (context.isBlackAndWhiteTheme() && isShownInDialog) {
                     resources.getColor(R.color.default_background_color)
                 } else {
                     context.baseConfig.backgroundColor
@@ -243,13 +245,13 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
 
     fun updateColor(color: Int) {
         textColor = color
-        setBreadcrumb(lastPath)
+        setBreadcrumb(lastPath, isShownInDialog)
     }
 
     fun updateFontSize(size: Float, updateTexts: Boolean) {
         fontSize = size
         if (updateTexts) {
-            setBreadcrumb(lastPath)
+            setBreadcrumb(lastPath, isShownInDialog)
         }
     }
 
