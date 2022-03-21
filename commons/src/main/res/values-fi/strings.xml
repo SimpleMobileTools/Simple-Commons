@@ -41,7 +41,7 @@
     <string name="no_contacts_found">Kontakteja ei löytynyt</string>
     <string name="request_the_required_permissions">Pyydä tarvittavia oikeuksia</string>
     <string name="no_access_to_contacts">Sovelluksella ei ole käyttöoikeutta yhteystietoihin</string>
-    <string name="no_phone_call_permission">Sovelluksella ei ole käyttöoikeutta puhelujen aloittamiseen, myönnä käyttöoikeus laitteen asetuksissa.</string>
+    <string name="no_phone_call_permission">Sovelluksella ei ole käyttöoikeutta puhelujen aloittamiseen, myönnä käyttöoikeus laitteen asetuksissa</string>
     <string name="insert_text_here">Lisää teksti tähän</string>
     <string name="call_person">Soita %s</string>
     <string name="zero">Zero</string>
@@ -179,14 +179,14 @@
     <string name="select_folder">Valitse kansio</string>
     <string name="select_file">Valitse tiedosto</string>
     <string name="confirm_storage_access_title">Vahvista pääsy ulkoiseen tallennustilaan</string>
-    <string name="confirm_folder_access_title">Confirm folder access</string>
+    <string name="confirm_folder_access_title">Varmista kansion käyttöoikeus</string>
     <string name="confirm_storage_access_text">Valitse muistikortin juurihakemisto seuraavaksi antaaksesi kirjoitusoikeuden</string>
     <string name="confirm_storage_access_text_sd">Jos et näe muistikorttia, kokeile tätä</string>
     <string name="confirm_storage_access_android_text">Anna sovellukselle käyttöoikeus tallennustilan käyttöön painamalla seuraavassa näkymässä \"Käytä tätä hakemistoa\"-painiketta.</string>
-    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
+    <string name="confirm_storage_access_android_text_specific">Anna käyttöoikeus kohteeseen \'&lt;b&gt;%s&lt;/b&gt;\' seuraavalla ruudulla painamalla \'&lt;b&gt;Käytä tätä kansiota&lt;/b&gt;\' alalaidasta.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Paina \'&lt;b&gt;Tallenna&lt;/b&gt;\' seuraavan ruudun alalaidasta luodaksesi uuden kansion.</string>
     <string name="confirm_selection">Vahvista valinta</string>
-    <string name="loading">Loading…</string>
+    <string name="loading">Ladataan…</string>
     <plurals name="items">
         <item quantity="one">%d kohde</item>
         <item quantity="other">%d kohdetta</item>
@@ -214,7 +214,7 @@
     <string name="sd_card_usb_same">Muistikortin ja USB-laitteen polut eivät voi olla samat</string>
     <string name="app_on_sd_card">Sovellus on asennettu muistikortille, jonka vuoksi pienoissovellukset eivät ole käytettävissä. Niitä ei näytetä pienoissovellusten listalla.
         Kyseessä on järjestelmän rajoitus, joten jos haluat käyttää pienoissovelluksia, siirrä sovellus takaisin sisäiseen tallennustilaan.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">Väärä kansio valittu, valitse \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Ominaisuudet</string>
     <string name="path">Polku</string>
@@ -234,9 +234,9 @@
     <string name="song_title">Kappaleen nimi</string>
     <string name="gps_coordinates">GPS-koordinaatit</string>
     <string name="altitude">Korkeus</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">Poista EXIF</string>
+    <string name="remove_exif_confirmation">Haluatko varmasti poistaa EXIF-arvot kuten GPS-koordinaatit, kameran mallin yms.\?</string>
+    <string name="exif_removed">EXIF-arvot poistettu</string>
     <!-- Color customization -->
     <string name="background_color">Taustaväri</string>
     <string name="text_color">Tekstin väri</string>
@@ -418,31 +418,31 @@
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
-        <item quantity="one">%d sekunnissa</item>
+        <item quantity="one">%d:ssä sekunnissa</item>
         <item quantity="other">%d sekunnissa</item>
     </plurals>
     <plurals name="in_minutes">
-        <item quantity="one">%d minuutissa</item>
+        <item quantity="one">%d:ssä minuutissa</item>
         <item quantity="other">%d minuutissa</item>
     </plurals>
     <plurals name="in_hours">
-        <item quantity="one">%d tunnissa</item>
+        <item quantity="one">%d:ssä tunnissa</item>
         <item quantity="other">%d tunnissa</item>
     </plurals>
     <plurals name="in_days">
-        <item quantity="one">%d päivässä</item>
+        <item quantity="one">%d:ssä päivässä</item>
         <item quantity="other">%d päivässä</item>
     </plurals>
     <plurals name="in_weeks">
-        <item quantity="one">%d viikossa</item>
+        <item quantity="one">%d:ssä viikossa</item>
         <item quantity="other">%d viikossa</item>
     </plurals>
     <plurals name="in_months">
-        <item quantity="one">%d kuukaudessa</item>
+        <item quantity="one">%d:ssä kuukaudessa</item>
         <item quantity="other">%d kuukaudessa</item>
     </plurals>
     <plurals name="in_years">
-        <item quantity="one">%d vuodessa</item>
+        <item quantity="one">%d:ssä vuodessa</item>
         <item quantity="other">%d vuodessa</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
@@ -476,37 +476,38 @@
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
-        <item quantity="one">%d sekunnilla</item>
+        <item quantity="one">%d:llä sekunnilla</item>
         <item quantity="other">%d sekunnilla</item>
     </plurals>
     <plurals name="by_minutes">
-        <item quantity="one">%d minuutilla</item>
+        <item quantity="one">%d:llä minuutilla</item>
         <item quantity="other">%d minuutilla</item>
     </plurals>
     <plurals name="by_hours">
-        <item quantity="one">%d tunnilla</item>
+        <item quantity="one">%d:llä tunnilla</item>
         <item quantity="other">%d tunnilla</item>
     </plurals>
     <plurals name="by_days">
-        <item quantity="one">%d päivällä</item>
+        <item quantity="one">%d:llä päivällä</item>
         <item quantity="other">%d päivällä</item>
     </plurals>
     <plurals name="by_weeks">
-        <item quantity="one">%d viikolla</item>
+        <item quantity="one">%d:llä viikolla</item>
         <item quantity="other">%d viikolla</item>
     </plurals>
     <plurals name="by_months">
-        <item quantity="one">%d kuukaudella</item>
+        <item quantity="one">%d:llä kuukaudella</item>
         <item quantity="other">%d kuukaudella</item>
     </plurals>
     <plurals name="by_years">
-        <item quantity="one">%d vuodella</item>
+        <item quantity="one">%d:llä vuodella</item>
         <item quantity="other">%d vuodella</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Aikaa hälytykseen:\n%s</string>
     <string name="reminder_triggers_in">Aikaa jäljellä ennen muistutusta:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Aikaa jäljellä:
+\n%s</string>
     <string name="alarm_warning">Varmista että hälytys toimii ennenkuin turvaudut siihen. Se voi toimia virheellisesti laitteesi virransäästötoiminnoista riippuen.</string>
     <string name="reminder_warning">Varmista että muistutus toimii ennenkuin turvaudut siihen. Se voi toimia virheellisesti laitteesi virransäästötoiminnoista riippuen.</string>
     <string name="notifications_disabled">Tämän sovelluksen ilmoitukset ovat poissa käytöstä. Kytke ilmoitukset päälle laitteesi asetuksista.</string>
@@ -614,7 +615,7 @@
     <string name="importing_some_entries_failed">Joidenkin kohteiden tuonti epäonnistui</string>
     <string name="exporting_some_entries_failed">Joidenkin kohteiden vienti epäonnistui</string>
     <string name="no_entries_for_importing">Tuotavia kohteita ei löytynyt </string>
-    <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
+    <string name="no_new_entries_for_importing">Ei uusia tuotavia kohteita</string>
     <string name="no_entries_for_exporting">Vientikohteita ei löydetty</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
@@ -696,7 +697,7 @@
     <string name="help_us">Help us</string>
     <string name="social">Social</string>
     <string name="other">Other</string>
-    <string name="privacy_policy">Privacy policy</string>
+    <string name="privacy_policy">Tietosuojakäytäntö</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hei :)</string>
     <string name="about_footer">Tehty ❤️:llä Slovakiassa</string>
@@ -899,7 +900,7 @@
     <string name="picasso_title">Picasso (kuvien lataus ja välimuisti)</string>
     <string name="cropper_title">Android Image Cropper (kuvien rajaus ja kierto)</string>
     <string name="rtl_viewpager_title">RtlViewPager (oikealta vasemmalle-pyyhkäisy)</string>
-    <string name="joda_title">Joda-Time (Java date replacement)</string>
+    <string name="joda_title">Joda-Time (Java date-korvike)</string>
     <string name="stetho_title">Stetho (virheenkorjaustietokannat)</string>
     <string name="otto_title">Otto (tapahtumaväylä)</string>
     <string name="photoview_title">PhotoView (zoomattavat GIF-tiedostot)</string>
