@@ -25,7 +25,6 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
     private var isLayoutDirty = true
     private var isScrollToSelectedItemPending = false
     private var isFirstScroll = true
-    private var isShownInDialog = false
     private var stickyRootInitialLeft = 0
     private var rootStartPadding = 0
 
@@ -153,8 +152,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
         super.requestLayout()
     }
 
-    fun setBreadcrumb(fullPath: String, isShownInDialog: Boolean) {
-        this.isShownInDialog = isShownInDialog
+    fun setBreadcrumb(fullPath: String) {
         lastPath = fullPath
         val basePath = fullPath.getBasePath(context)
         var currPath = basePath
@@ -182,17 +180,11 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
     private fun addBreadcrumb(item: FileDirItem, index: Int, addPrefix: Boolean) {
         if (itemsLayout.childCount == 0) {
             inflater.inflate(R.layout.item_breadcrumb_first, itemsLayout, false).apply {
-                val backgroundColor = if (context.isBlackAndWhiteTheme() && isShownInDialog) {
-                    resources.getColor(R.color.default_background_color)
-                } else {
-                    context.baseConfig.backgroundColor
-                }
-
                 resources.apply {
                     breadcrumb_text.background = ContextCompat.getDrawable(context, R.drawable.button_background)
                     breadcrumb_text.background.applyColorFilter(textColor)
                     elevation = 1f
-                    background = ColorDrawable(backgroundColor)
+                    background = ColorDrawable(context.baseConfig.backgroundColor)
                     val medium = getDimension(R.dimen.medium_margin).toInt()
                     breadcrumb_text.setPadding(medium, medium, medium, medium)
                     setPadding(rootStartPadding, 0, 0, 0)
@@ -245,13 +237,13 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
 
     fun updateColor(color: Int) {
         textColor = color
-        setBreadcrumb(lastPath, isShownInDialog)
+        setBreadcrumb(lastPath)
     }
 
     fun updateFontSize(size: Float, updateTexts: Boolean) {
         fontSize = size
         if (updateTexts) {
-            setBreadcrumb(lastPath, isShownInDialog)
+            setBreadcrumb(lastPath)
         }
     }
 

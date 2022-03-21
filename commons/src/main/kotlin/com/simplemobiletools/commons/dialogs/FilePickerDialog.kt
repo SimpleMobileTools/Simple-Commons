@@ -183,7 +183,7 @@ class FilePickerDialog(
 
         mDialogView.apply {
             filepicker_list.adapter = adapter
-            filepicker_breadcrumbs.setBreadcrumb(currPath, true)
+            filepicker_breadcrumbs.setBreadcrumb(currPath)
 
             if (context.areSystemAnimationsEnabled) {
                 filepicker_list.scheduleLayoutAnimation()
