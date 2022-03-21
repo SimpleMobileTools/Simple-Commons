@@ -180,11 +180,17 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
     private fun addBreadcrumb(item: FileDirItem, index: Int, addPrefix: Boolean) {
         if (itemsLayout.childCount == 0) {
             inflater.inflate(R.layout.item_breadcrumb_first, itemsLayout, false).apply {
+                val backgroundColor = if (context.isBlackAndWhiteTheme()) {
+                    resources.getColor(R.color.default_background_color)
+                } else {
+                    context.baseConfig.backgroundColor
+                }
+
                 resources.apply {
                     breadcrumb_text.background = ContextCompat.getDrawable(context, R.drawable.button_background)
                     breadcrumb_text.background.applyColorFilter(textColor)
                     elevation = 1f
-                    background = ColorDrawable(context.baseConfig.backgroundColor)
+                    background = ColorDrawable(backgroundColor)
                     val medium = getDimension(R.dimen.medium_margin).toInt()
                     breadcrumb_text.setPadding(medium, medium, medium, medium)
                     setPadding(rootStartPadding, 0, 0, 0)
