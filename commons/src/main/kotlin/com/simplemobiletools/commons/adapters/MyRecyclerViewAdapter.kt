@@ -82,7 +82,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                     }
                 }
                 activity.menuInflater.inflate(getActionMenuId(), menu)
-                activity.updateMenuItemColors(menu, baseColor = Color.BLACK)
+                activity.updateMenuItemColors(menu, baseColor = Color.BLACK, updateHomeAsUpColor = false)
                 onActionModeCreated()
                 return true
             }
