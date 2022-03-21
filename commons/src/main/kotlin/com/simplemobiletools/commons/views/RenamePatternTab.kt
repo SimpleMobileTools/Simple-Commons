@@ -13,6 +13,7 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.isNougatPlus
 import com.simplemobiletools.commons.interfaces.RenameTab
 import com.simplemobiletools.commons.models.Android30RenameFormat
+import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.dialog_rename_items_pattern.view.*
 import java.io.File
 import java.text.SimpleDateFormat
@@ -195,7 +196,14 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                             Android30RenameFormat.SAF -> {
                                 val sourceFile = File(path).toFileDirItem(context)
                                 val newPath = "${path.getParentPath()}/$newFileName"
-                                val destinationFile = sourceFile.copy(path = newPath, name = newFileName)
+                                val destinationFile = FileDirItem(
+                                    newPath,
+                                    newFileName,
+                                    sourceFile.isDirectory,
+                                    sourceFile.children,
+                                    sourceFile.size,
+                                    sourceFile.modified
+                                )
                                 if (activity.copySingleFileSdk30(sourceFile, destinationFile)) {
                                     if (!activity.baseConfig.keepLastModified) {
                                         File(newPath).setLastModified(System.currentTimeMillis())

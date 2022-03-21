@@ -10,6 +10,7 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.interfaces.RenameTab
 import com.simplemobiletools.commons.models.Android30RenameFormat
+import com.simplemobiletools.commons.models.FileDirItem
 import kotlinx.android.synthetic.main.tab_rename_simple.view.*
 import java.io.File
 
@@ -149,7 +150,14 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
                             Android30RenameFormat.SAF -> {
                                 val sourceFile = File(path).toFileDirItem(activity)
                                 val newPath = "${path.getParentPath()}/$newName"
-                                val destinationFile = sourceFile.copy(path = newPath, name = newName)
+                                val destinationFile = FileDirItem(
+                                    newPath,
+                                    newName,
+                                    sourceFile.isDirectory,
+                                    sourceFile.children,
+                                    sourceFile.size,
+                                    sourceFile.modified
+                                )
                                 if (activity.copySingleFileSdk30(sourceFile, destinationFile)) {
                                     if (!activity.baseConfig.keepLastModified) {
                                         File(newPath).setLastModified(System.currentTimeMillis())

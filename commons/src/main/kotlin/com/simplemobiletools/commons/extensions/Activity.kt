@@ -999,7 +999,14 @@ fun BaseSimpleActivity.renameFile(
                         }
                         try {
                             val sourceFile = File(oldPath).toFileDirItem(this)
-                            val destinationFile = sourceFile.copy(path = newPath, name = newPath.getFilenameFromPath())
+                            val destinationFile = FileDirItem(
+                                newPath,
+                                newPath.getFilenameFromPath(),
+                                sourceFile.isDirectory,
+                                sourceFile.children,
+                                sourceFile.size,
+                                sourceFile.modified
+                            )
                             val copySuccessful = copySingleFileSdk30(sourceFile, destinationFile)
                             if (copySuccessful) {
                                 if (!baseConfig.keepLastModified) {
