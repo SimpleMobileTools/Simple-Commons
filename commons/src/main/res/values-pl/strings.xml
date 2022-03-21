@@ -111,7 +111,7 @@
     <string name="rename_folder_empty">Nazwa folderu nie może być pusta</string>
     <string name="rename_folder_exists">Folder o tej nazwie już istnieje</string>
     <string name="rename_folder_root">Nie można zmienić nazwy folderu głównego</string>
-    <string name="rename_folder_ok">Zmieniono nazwę folderu</string>
+    <string name="rename_folder_ok">Nazwa folderu została zmieniona</string>
     <string name="renaming_folder">Zmienianie nazwy folderu</string>
     <string name="filename_cannot_be_empty">Nazwa pliku nie może być pusta</string>
     <string name="filename_invalid_characters">Nazwa pliku zawiera niedozwolone znaki</string>
@@ -238,9 +238,9 @@
     <string name="song_title">Tytuł piosenki</string>
     <string name="gps_coordinates">Współrzędne GPS</string>
     <string name="altitude">Wysokość</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">Usuń dane EXIF</string>
+    <string name="remove_exif_confirmation">Czy usunąć dane EXIF, takie jak współrzędne GPS, model aparatu itp.\?</string>
+    <string name="exif_removed">Dane EXIF zostały usunięte</string>
     <!-- Color customization -->
     <string name="background_color">Kolor tła</string>
     <string name="text_color">Kolor tekstu</string>

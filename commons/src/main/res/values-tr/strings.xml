@@ -233,9 +233,9 @@
     <string name="song_title">Şarkı başlığı</string>
     <string name="gps_coordinates">GPS koordinatları</string>
     <string name="altitude">Rakım</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">EXIF\'i kaldır</string>
+    <string name="remove_exif_confirmation">GPS koordinatları, kamera modeli vb. EXIF değerlerini kaldırmak istediğinizden emin misiniz\?</string>
+    <string name="exif_removed">EXIF değerleri başarıyla kaldırıldı</string>
     <!-- Color customization -->
     <string name="background_color">Arka plan rengi</string>
     <string name="text_color">Metin rengi</string>
