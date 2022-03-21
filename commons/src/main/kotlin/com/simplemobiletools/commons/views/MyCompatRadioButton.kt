@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatRadioButton
+import com.simplemobiletools.commons.extensions.adjustAlpha
 
 class MyCompatRadioButton : AppCompatRadioButton {
     constructor(context: Context) : super(context)
@@ -19,7 +20,7 @@ class MyCompatRadioButton : AppCompatRadioButton {
                 intArrayOf(-android.R.attr.state_checked),
                 intArrayOf(android.R.attr.state_checked)
             ),
-            intArrayOf(textColor, accentColor)
+            intArrayOf(textColor.adjustAlpha(0.8f), accentColor)
         )
         supportButtonTintList = colorStateList
     }
