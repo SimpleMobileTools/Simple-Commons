@@ -969,7 +969,9 @@ fun BaseSimpleActivity.renameFile(
                     runOnUiThread {
                         callback?.invoke(true, Android30RenameFormat.NONE)
                     }
-                    deleteFromMediaStore(oldPath)
+                    if (!oldPath.equals(newPath, true)) {
+                        deleteFromMediaStore(oldPath)
+                    }
                     scanPathRecursively(newPath)
                 }
             } else {
@@ -978,7 +980,9 @@ fun BaseSimpleActivity.renameFile(
                 }
                 updateInMediaStore(oldPath, newPath)
                 scanPathsRecursively(arrayListOf(newPath)) {
-                    deleteFromMediaStore(oldPath)
+                    if (!oldPath.equals(newPath, true)) {
+                        deleteFromMediaStore(oldPath)
+                    }
                     runOnUiThread {
                         callback?.invoke(true, Android30RenameFormat.NONE)
                     }
