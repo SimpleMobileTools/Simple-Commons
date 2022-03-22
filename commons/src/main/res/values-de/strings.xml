@@ -236,8 +236,8 @@
     <string name="gps_coordinates">GPS Koordinaten</string>
     <string name="altitude">Höhe</string>
     <string name="remove_exif">EXIF Daten entfernen</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif_confirmation">Sollen wirklich alle EXIF Daten, wie z.B. GPS Koordinaten oder Kameramodell, entfernt werden\?</string>
+    <string name="exif_removed">EXIF Daten erfolgreich entfernt</string>
     <!-- Color customization -->
     <string name="background_color">Hintergrundfarbe</string>
     <string name="text_color">Schriftfarbe</string>
