@@ -234,9 +234,9 @@
     <string name="song_title">Titel van het nummer</string>
     <string name="gps_coordinates">GPS-coördinaten</string>
     <string name="altitude">Hoogte</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">EXIF verwijderen</string>
+    <string name="remove_exif_confirmation">De EXIF-gegevens (zoals GPS-coördinaten, cameramodel enz.) verwijderen\?</string>
+    <string name="exif_removed">De EXIF-gegevens zijn verwijderd</string>
     <!-- Color customization -->
     <string name="background_color">Achtergrondkleur</string>
     <string name="text_color">Tekstkleur</string>
