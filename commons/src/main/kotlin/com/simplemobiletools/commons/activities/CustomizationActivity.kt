@@ -135,7 +135,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun setupThemes() {
         predefinedThemes.apply {
-            if (isSPlus() && BuildConfig.COMPILE_SDK_VERSION >= Build.VERSION_CODES.S) {
+            if (isSPlus() && applicationInfo.compileSdkVersion >= Build.VERSION_CODES.S) {
                 put(THEME_SYSTEM, getSystemThemeColors())
             }
 

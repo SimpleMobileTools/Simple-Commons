@@ -9,7 +9,6 @@ android {
     defaultConfig {
         minSdkVersion propMinSdkVersion
         targetSdkVersion propTargetSdkVersion
-        buildConfigField "int", "COMPILE_SDK_VERSION", "$propCompileSdkVersion"
     }
 
     buildTypes {
