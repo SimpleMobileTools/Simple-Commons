@@ -12,6 +12,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.isQPlus
 import com.simplemobiletools.commons.views.ColorPickerSquare
 import kotlinx.android.synthetic.main.dialog_color_picker.view.*
 import java.util.*
@@ -45,6 +46,10 @@ class ColorPickerDialog(
         Color.colorToHSV(color, currentColorHsv)
 
         val view = activity.layoutInflater.inflate(R.layout.dialog_color_picker, null).apply {
+            if (isQPlus()) {
+                isForceDarkAllowed = false
+            }
+
             viewHue = color_picker_hue
             viewSatVal = color_picker_square
             viewCursor = color_picker_hue_cursor
