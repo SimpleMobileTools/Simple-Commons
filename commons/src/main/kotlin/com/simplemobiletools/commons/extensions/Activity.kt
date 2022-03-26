@@ -1201,7 +1201,7 @@ private fun createCasualFileOutputStream(activity: BaseSimpleActivity, targetFil
     }
 }
 
-fun FragmentActivity.performSecurityCheck(
+fun Activity.performSecurityCheck(
     protectionType: Int,
     requiredHash: String,
     successCallback: ((String, Int) -> Unit)? = null,
@@ -1225,14 +1225,14 @@ fun FragmentActivity.performSecurityCheck(
     }
 }
 
-fun FragmentActivity.showBiometricPrompt(
+fun Activity.showBiometricPrompt(
     successCallback: ((String, Int) -> Unit)? = null,
     failureCallback: (() -> Unit)? = null
 ) {
     Class2BiometricAuthPrompt.Builder(getText(R.string.authenticate), getText(R.string.cancel))
         .build()
         .startAuthentication(
-            AuthPromptHost(this),
+            AuthPromptHost(this as FragmentActivity),
             object : AuthPromptCallback() {
                 override fun onAuthenticationSucceeded(activity: FragmentActivity?, result: BiometricPrompt.AuthenticationResult) {
                     successCallback?.invoke("", PROTECTION_FINGERPRINT)
@@ -1254,7 +1254,7 @@ fun FragmentActivity.showBiometricPrompt(
         )
 }
 
-fun FragmentActivity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
+fun Activity.handleHiddenFolderPasswordProtection(callback: () -> Unit) {
     if (baseConfig.isHiddenPasswordProtectionOn) {
         SecurityDialog(this, baseConfig.hiddenPasswordHash, baseConfig.hiddenProtectionType) { _, _, success ->
             if (success) {
@@ -1266,7 +1266,7 @@ fun FragmentActivity.handleHiddenFolderPasswordProtection(callback: () -> Unit) 
     }
 }
 
-fun FragmentActivity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
+fun Activity.handleAppPasswordProtection(callback: (success: Boolean) -> Unit) {
     if (baseConfig.isAppPasswordProtectionOn) {
         SecurityDialog(this, baseConfig.appPasswordHash, baseConfig.appProtectionType) { _, _, success ->
             callback(success)
@@ -1276,7 +1276,7 @@ fun FragmentActivity.handleAppPasswordProtection(callback: (success: Boolean) ->
     }
 }
 
-fun FragmentActivity.handleDeletePasswordProtection(callback: () -> Unit) {
+fun Activity.handleDeletePasswordProtection(callback: () -> Unit) {
     if (baseConfig.isDeletePasswordProtectionOn) {
         SecurityDialog(this, baseConfig.deletePasswordHash, baseConfig.deleteProtectionType) { _, _, success ->
             if (success) {
@@ -1288,7 +1288,7 @@ fun FragmentActivity.handleDeletePasswordProtection(callback: () -> Unit) {
     }
 }
 
-fun FragmentActivity.handleLockedFolderOpening(path: String, callback: (success: Boolean) -> Unit) {
+fun Activity.handleLockedFolderOpening(path: String, callback: (success: Boolean) -> Unit) {
     if (baseConfig.isFolderProtected(path)) {
         SecurityDialog(this, baseConfig.getFolderProtectionHash(path), baseConfig.getFolderProtectionType(path)) { _, _, success ->
             callback(success)

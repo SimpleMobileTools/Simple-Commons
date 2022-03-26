@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.dialogs
 
+import android.app.Activity
 import android.view.LayoutInflater
 import androidx.appcompat.app.AlertDialog
 import androidx.biometric.auth.AuthPromptHost
@@ -16,7 +17,7 @@ import com.simplemobiletools.commons.views.MyDialogViewPager
 import kotlinx.android.synthetic.main.dialog_security.view.*
 
 class SecurityDialog(
-    private val activity: FragmentActivity,
+    private val activity: Activity,
     private val requiredHash: String,
     private val showTabIndex: Int,
     private val callback: (hash: String, type: Int, success: Boolean) -> Unit
@@ -35,7 +36,7 @@ class SecurityDialog(
                 requiredHash = requiredHash,
                 hashListener = this@SecurityDialog,
                 scrollView = dialog_scrollview,
-                biometricPromptHost = AuthPromptHost(activity),
+                biometricPromptHost = AuthPromptHost(activity as FragmentActivity),
                 showBiometricIdTab = shouldShowBiometricIdTab(),
                 showBiometricAuthentication = showTabIndex == PROTECTION_FINGERPRINT && activity.isTargetSdkVersion30Plus()
             )
