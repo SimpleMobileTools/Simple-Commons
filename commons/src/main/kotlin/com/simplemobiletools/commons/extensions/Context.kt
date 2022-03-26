@@ -11,7 +11,6 @@ import android.content.pm.ShortcutManager
 import android.content.res.Configuration
 import android.database.Cursor
 import android.graphics.BitmapFactory
-import android.graphics.Color
 import android.graphics.Point
 import android.media.MediaMetadataRetriever
 import android.media.RingtoneManager
@@ -31,7 +30,6 @@ import android.provider.Settings
 import android.telecom.TelecomManager
 import android.telephony.PhoneNumberUtils
 import android.view.View
-import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -45,17 +43,8 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.*
-import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_ACCENT_COLOR
-import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_APP_ICON_COLOR
-import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_BACKGROUND_COLOR
-import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_LAST_UPDATED_TS
-import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_NAVIGATION_BAR_COLOR
-import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_PRIMARY_COLOR
-import com.simplemobiletools.commons.helpers.MyContentProvider.Companion.COL_TEXT_COLOR
 import com.simplemobiletools.commons.models.AlarmSound
 import com.simplemobiletools.commons.models.BlockedNumber
-import com.simplemobiletools.commons.models.SharedTheme
-import com.simplemobiletools.commons.views.*
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -65,62 +54,6 @@ fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIV
 val Context.isRTLLayout: Boolean get() = resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_RTL
 
 val Context.areSystemAnimationsEnabled: Boolean get() = Settings.Global.getFloat(contentResolver, Settings.Global.ANIMATOR_DURATION_SCALE, 0f) > 0f
-
-fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAccentColor: Int = 0) {
-    val textColor = if (tmpTextColor == 0) baseConfig.textColor else tmpTextColor
-    val backgroundColor = baseConfig.backgroundColor
-    val accentColor = if (tmpAccentColor == 0) {
-        when {
-            isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
-            else -> baseConfig.primaryColor
-        }
-    } else {
-        tmpAccentColor
-    }
-
-    val cnt = viewGroup.childCount
-    (0 until cnt).map { viewGroup.getChildAt(it) }.forEach {
-        when (it) {
-            is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
-            is MyAppCompatSpinner -> it.setColors(textColor, accentColor, backgroundColor)
-            is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
-            is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
-            is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
-            is MyEditText -> it.setColors(textColor, accentColor, backgroundColor)
-            is MyAutoCompleteTextView -> it.setColors(textColor, accentColor, backgroundColor)
-            is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
-            is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor)
-            is MyButton -> it.setColors(textColor, accentColor, backgroundColor)
-            is MyTextInputLayout -> it.setColors(textColor, accentColor, backgroundColor)
-            is ViewGroup -> updateTextColors(it, textColor, accentColor)
-        }
-    }
-}
-
-fun Context.getLinkTextColor(): Int {
-    return if (baseConfig.primaryColor == resources.getColor(R.color.color_primary)) {
-        baseConfig.primaryColor
-    } else {
-        baseConfig.textColor
-    }
-}
-
-fun Context.isBlackAndWhiteTheme() = baseConfig.textColor == Color.WHITE && baseConfig.primaryColor == Color.BLACK && baseConfig.backgroundColor == Color.BLACK
-
-fun Context.isWhiteTheme() = baseConfig.textColor == DARK_GREY && baseConfig.primaryColor == Color.WHITE && baseConfig.backgroundColor == Color.WHITE
-
-fun Context.isUsingSystemDarkTheme() = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_YES != 0
-
-fun Context.getAdjustedPrimaryColor() = when {
-    isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
-    else -> baseConfig.primaryColor
-}
-
-fun Context.getDefaultTopMenuColor() = if (baseConfig.isUsingSystemTheme) {
-    resources.getColor(R.color.you_background_color)
-} else {
-    baseConfig.primaryColor
-}
 
 fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
     toast(getString(id), length)
@@ -448,37 +381,6 @@ fun Context.getSizeFromContentUri(uri: Uri): Long {
     return 0L
 }
 
-fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
-    if (!isThankYouInstalled()) {
-        callback(null)
-    } else {
-        val cursorLoader = getMyContentProviderCursorLoader()
-        ensureBackgroundThread {
-            callback(getSharedThemeSync(cursorLoader))
-        }
-    }
-}
-
-fun Context.getSharedThemeSync(cursorLoader: CursorLoader): SharedTheme? {
-    val cursor = cursorLoader.loadInBackground()
-    cursor?.use {
-        if (cursor.moveToFirst()) {
-            try {
-                val textColor = cursor.getIntValue(COL_TEXT_COLOR)
-                val backgroundColor = cursor.getIntValue(COL_BACKGROUND_COLOR)
-                val primaryColor = cursor.getIntValue(COL_PRIMARY_COLOR)
-                val accentColor = cursor.getIntValue(COL_ACCENT_COLOR)
-                val appIconColor = cursor.getIntValue(COL_APP_ICON_COLOR)
-                val navigationBarColor = cursor.getIntValueOrNull(COL_NAVIGATION_BAR_COLOR) ?: INVALID_NAVIGATION_BAR_COLOR
-                val lastUpdatedTS = cursor.getIntValue(COL_LAST_UPDATED_TS)
-                return SharedTheme(textColor, backgroundColor, primaryColor, appIconColor, navigationBarColor, lastUpdatedTS, accentColor)
-            } catch (e: Exception) {
-            }
-        }
-    }
-    return null
-}
-
 fun Context.getMyContentProviderCursorLoader() = CursorLoader(this, MyContentProvider.MY_CONTENT_URI, null, null, null, null)
 
 fun Context.getMyContactsCursor(favoritesOnly: Boolean, withPhoneNumbersOnly: Boolean) = try {
@@ -489,8 +391,6 @@ fun Context.getMyContactsCursor(favoritesOnly: Boolean, withPhoneNumbersOnly: Bo
 } catch (e: Exception) {
     null
 }
-
-fun Context.getDialogTheme() = if (baseConfig.backgroundColor.getContrastColor() == Color.WHITE) R.style.MyDialogTheme_Dark else R.style.MyDialogTheme
 
 fun Context.getCurrentFormattedDateTime(): String {
     val simpleDateFormat = SimpleDateFormat("yyyy_MM_dd_HH_mm_ss", Locale.getDefault())
@@ -712,35 +612,6 @@ fun Context.saveExifRotation(exif: ExifInterface, degrees: Int) {
     exif.setAttribute(ExifInterface.TAG_ORIENTATION, orientationDegrees.orientationFromDegrees())
     exif.saveAttributes()
 }
-
-fun Context.checkAppIconColor() {
-    val appId = baseConfig.appId
-    if (appId.isNotEmpty() && baseConfig.lastIconColor != baseConfig.appIconColor) {
-        getAppIconColors().forEachIndexed { index, color ->
-            toggleAppIconColor(appId, index, color, false)
-        }
-
-        getAppIconColors().forEachIndexed { index, color ->
-            if (baseConfig.appIconColor == color) {
-                toggleAppIconColor(appId, index, color, true)
-            }
-        }
-    }
-}
-
-fun Context.toggleAppIconColor(appId: String, colorIndex: Int, color: Int, enable: Boolean) {
-    val className = "${appId.removeSuffix(".debug")}.activities.SplashActivity${appIconColorStrings[colorIndex]}"
-    val state = if (enable) PackageManager.COMPONENT_ENABLED_STATE_ENABLED else PackageManager.COMPONENT_ENABLED_STATE_DISABLED
-    try {
-        packageManager.setComponentEnabledSetting(ComponentName(appId, className), state, PackageManager.DONT_KILL_APP)
-        if (enable) {
-            baseConfig.lastIconColor = color
-        }
-    } catch (e: Exception) {
-    }
-}
-
-fun Context.getAppIconColors() = resources.getIntArray(R.array.md_app_icon_colors).toCollection(ArrayList())
 
 fun Context.getLaunchIntent() = packageManager.getLaunchIntentForPackage(baseConfig.appId)
 

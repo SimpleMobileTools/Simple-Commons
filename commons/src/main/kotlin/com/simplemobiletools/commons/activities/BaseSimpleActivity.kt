@@ -182,7 +182,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun updateMenuItemColors(menu: Menu?, useCrossAsBack: Boolean = false, baseColor: Int = getDefaultTopMenuColor(), updateHomeAsUpColor: Boolean = true) {
+    fun updateMenuItemColors(menu: Menu?, useCrossAsBack: Boolean = false, baseColor: Int = getTopMenuColor(), updateHomeAsUpColor: Boolean = true) {
         if (menu == null) {
             return
         }
