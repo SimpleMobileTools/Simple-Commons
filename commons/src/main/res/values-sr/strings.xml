@@ -290,12 +290,14 @@
     <string name="light_theme">Светла</string>
     <string name="dark_theme">Тамна</string>
     <string name="auto_theme">Auto</string>
+    <string name="auto_light_dark_theme">Auto light / dark</string>
     <string name="solarized">Осветљена</string>
     <string name="dark_red">Тамно црвена</string>
     <string name="white">White</string>
     <string name="black_white">Црно &amp; Бела</string>
     <string name="custom">Прилагођена</string>
     <string name="shared">Дељена</string>
+    <string name="system_default">System default</string>
 
     <!-- What's new -->
     <string name="whats_new">Шта је ново</string>

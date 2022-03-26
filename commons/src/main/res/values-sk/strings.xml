@@ -295,12 +295,14 @@
     <string name="light_theme">Svetlá</string>
     <string name="dark_theme">Tmavá</string>
     <string name="auto_theme">Automatická</string>
+    <string name="auto_light_dark_theme">Automatická svetlá / tmavá</string>
     <string name="solarized">Solarizovaná</string>
     <string name="dark_red">Tmavo červená</string>
     <string name="white">Biela</string>
     <string name="black_white">Čiernobiela</string>
     <string name="custom">Vlastná</string>
     <string name="shared">Zdieľaná</string>
+    <string name="system_default">Systémová</string>
 
     <!-- What's new -->
     <string name="whats_new">Novinky</string>

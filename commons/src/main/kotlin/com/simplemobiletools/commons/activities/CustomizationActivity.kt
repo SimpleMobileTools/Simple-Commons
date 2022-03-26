@@ -280,7 +280,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         val isUsingSystemDarkTheme = isUsingSystemDarkTheme()
         val textColor = if (isUsingSystemDarkTheme) R.color.theme_dark_text_color else R.color.theme_light_text_color
         val backgroundColor = if (isUsingSystemDarkTheme) R.color.theme_dark_background_color else R.color.theme_light_background_color
-        return MyTheme(R.string.auto_theme, textColor, backgroundColor, R.color.color_primary, R.color.color_primary)
+        return MyTheme(R.string.auto_light_dark_theme, textColor, backgroundColor, R.color.color_primary, R.color.color_primary)
     }
 
     private fun getCurrentThemeId(): Int {
