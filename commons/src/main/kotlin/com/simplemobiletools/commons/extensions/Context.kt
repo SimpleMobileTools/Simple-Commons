@@ -116,6 +116,12 @@ fun Context.getAdjustedPrimaryColor() = when {
     else -> baseConfig.primaryColor
 }
 
+fun Context.getDefaultTopMenuColor() = if (baseConfig.isUsingSystemTheme) {
+    resources.getColor(R.color.you_background_color)
+} else {
+    baseConfig.primaryColor
+}
+
 fun Context.toast(id: Int, length: Int = Toast.LENGTH_SHORT) {
     toast(getString(id), length)
 }
