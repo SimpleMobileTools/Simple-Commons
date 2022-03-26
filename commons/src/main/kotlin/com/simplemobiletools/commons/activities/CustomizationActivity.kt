@@ -4,9 +4,11 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.LayerDrawable
 import android.graphics.drawable.RippleDrawable
+import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import com.simplemobiletools.commons.BuildConfig
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.extensions.*
@@ -27,6 +29,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private val THEME_SHARED = 6
     private val THEME_WHITE = 7
     private val THEME_AUTO = 8
+    private val THEME_SYSTEM = 9    // Material You
 
     private var curTextColor = 0
     private var curBackgroundColor = 0
@@ -73,7 +76,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     runOnUiThread {
                         setupThemes()
                         val hideGoogleRelations = resources.getBoolean(R.bool.hide_google_relations)
-                        apply_to_all_holder.beVisibleIf(storedSharedTheme == null && curSelectedThemeId != THEME_AUTO && !hideGoogleRelations)
+                        apply_to_all_holder.beVisibleIf(storedSharedTheme == null && curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && !hideGoogleRelations)
                     }
                 } catch (e: Exception) {
                     toast(R.string.update_thank_you)
@@ -132,6 +135,10 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun setupThemes() {
         predefinedThemes.apply {
+            if (isSPlus() && BuildConfig.COMPILE_SDK_VERSION >= Build.VERSION_CODES.S) {
+                put(THEME_SYSTEM, getSystemThemeColors())
+            }
+
             put(THEME_AUTO, getAutoThemeColors())
             put(
                 THEME_LIGHT,
@@ -147,7 +154,6 @@ class CustomizationActivity : BaseSimpleActivity() {
                 THEME_DARK,
                 MyTheme(R.string.dark_theme, R.color.theme_dark_text_color, R.color.theme_dark_background_color, R.color.color_primary, R.color.color_primary)
             )
-            //put(THEME_SOLARIZED, MyTheme(R.string.solarized, R.color.theme_solarized_text_color, R.color.theme_solarized_background_color, R.color.theme_solarized_primary_color))
             put(
                 THEME_DARK_RED,
                 MyTheme(
@@ -199,13 +205,13 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
 
             updateColorTheme(it as Int, true)
-            if (it != THEME_CUSTOM && it != THEME_SHARED && it != THEME_AUTO && !baseConfig.wasCustomThemeSwitchDescriptionShown) {
+            if (it != THEME_CUSTOM && it != THEME_SHARED && it != THEME_AUTO && it != THEME_SYSTEM && !baseConfig.wasCustomThemeSwitchDescriptionShown) {
                 baseConfig.wasCustomThemeSwitchDescriptionShown = true
                 toast(R.string.changing_color_description)
             }
 
             val hideGoogleRelations = resources.getBoolean(R.bool.hide_google_relations)
-            apply_to_all_holder.beVisibleIf(curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SHARED && !hideGoogleRelations)
+            apply_to_all_holder.beVisibleIf(curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_SHARED && !hideGoogleRelations)
         }
     }
 
@@ -252,7 +258,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 curTextColor = getColor(theme.textColorId)
                 curBackgroundColor = getColor(theme.backgroundColorId)
 
-                if (curSelectedThemeId != THEME_AUTO) {
+                if (curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM) {
                     curPrimaryColor = getColor(theme.primaryColorId)
                     curAccentColor = getColor(R.color.color_primary)
                     curAppIconColor = getColor(theme.appIconColorId)
@@ -283,16 +289,29 @@ class CustomizationActivity : BaseSimpleActivity() {
         return MyTheme(R.string.auto_light_dark_theme, textColor, backgroundColor, R.color.color_primary, R.color.color_primary)
     }
 
+    // doesn't really matter what colors we use here, everything will be taken from the system. Use the default dark theme values here.
+    private fun getSystemThemeColors(): MyTheme {
+        return MyTheme(
+            R.string.system_default,
+            R.color.theme_dark_text_color,
+            R.color.theme_dark_background_color,
+            R.color.color_primary,
+            R.color.color_primary
+        )
+    }
+
     private fun getCurrentThemeId(): Int {
         if (baseConfig.isUsingSharedTheme) {
             return THEME_SHARED
+        } else if (baseConfig.isUsingSystemTheme) {
+            return THEME_SYSTEM
         } else if (baseConfig.isUsingAutoTheme || curSelectedThemeId == THEME_AUTO) {
             return THEME_AUTO
         }
 
         var themeId = THEME_CUSTOM
         resources.apply {
-            for ((key, value) in predefinedThemes.filter { it.key != THEME_CUSTOM && it.key != THEME_SHARED && it.key != THEME_AUTO }) {
+            for ((key, value) in predefinedThemes.filter { it.key != THEME_CUSTOM && it.key != THEME_SHARED && it.key != THEME_AUTO && it.key != THEME_SYSTEM }) {
                 if (curTextColor == getColor(value.textColorId) &&
                     curBackgroundColor == getColor(value.backgroundColorId) &&
                     curPrimaryColor == getColor(value.primaryColorId) &&
@@ -328,8 +347,10 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun updateAutoThemeFields() {
         arrayOf(customization_text_color_holder, customization_background_color_holder, customization_navigation_bar_color_holder).forEach {
-            it.beVisibleIf(curSelectedThemeId != THEME_AUTO)
+            it.beVisibleIf(curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM)
         }
+
+        customization_primary_color_holder.beVisibleIf(curSelectedThemeId != THEME_SYSTEM)
     }
 
     private fun promptSaveDiscard() {
@@ -377,6 +398,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         baseConfig.isUsingSharedTheme = curSelectedThemeId == THEME_SHARED
         baseConfig.shouldUseSharedTheme = curSelectedThemeId == THEME_SHARED
         baseConfig.isUsingAutoTheme = curSelectedThemeId == THEME_AUTO
+        baseConfig.isUsingSystemTheme = curSelectedThemeId == THEME_SYSTEM
 
         hasUnsavedChanges = false
         if (finishAfterSave) {

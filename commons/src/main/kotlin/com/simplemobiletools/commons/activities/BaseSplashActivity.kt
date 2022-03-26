@@ -33,7 +33,7 @@ abstract class BaseSplashActivity : AppCompatActivity() {
             }
         }
 
-        if (!baseConfig.isUsingAutoTheme && isThankYouInstalled()) {
+        if (!baseConfig.isUsingAutoTheme && !baseConfig.isUsingSystemTheme && isThankYouInstalled()) {
             getSharedTheme {
                 if (it != null) {
                     baseConfig.apply {
