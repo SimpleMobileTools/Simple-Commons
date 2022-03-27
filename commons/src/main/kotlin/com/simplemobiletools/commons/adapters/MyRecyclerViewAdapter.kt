@@ -1,13 +1,9 @@
 package com.simplemobiletools.commons.adapters
 
 import android.graphics.Color
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
-import androidx.appcompat.view.ActionMode
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.commons.R
@@ -330,7 +326,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
         fun viewLongClicked() {
             val currentPosition = adapterPosition - positionOffset
             if (!actModeCallback.isSelectable) {
-                activity.startSupportActionMode(actModeCallback)
+                activity.startActionMode(actModeCallback)
             }
 
             toggleItemSelection(true, currentPosition, true)

@@ -4,6 +4,7 @@ import android.app.Activity
 import com.simplemobiletools.commons.R
 
 fun Activity.getThemeId(color: Int = baseConfig.primaryColor, showTransparentTop: Boolean = false) = when {
+    baseConfig.isUsingSystemTheme -> if (isUsingSystemDarkTheme()) R.style.AppTheme_Base_System else R.style.AppTheme_Base_System_Light
     isBlackAndWhiteTheme() -> if (showTransparentTop) R.style.AppTheme_BlackAndWhite_NoActionBar else R.style.AppTheme_BlackAndWhite
     isWhiteTheme() -> if (showTransparentTop) R.style.AppTheme_White_NoActionBar else R.style.AppTheme_White
     showTransparentTop -> {

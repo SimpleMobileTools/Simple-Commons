@@ -22,6 +22,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
+import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -89,7 +90,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         super.onResume()
         if (useDynamicTheme) {
             setTheme(getThemeId(showTransparentTop = showTransparentTop))
-            updateBackgroundColor()
+
+            if (!baseConfig.isUsingSystemTheme) {
+                updateBackgroundColor()
+            }
         }
 
         if (showTransparentTop) {
@@ -128,22 +132,29 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         window.decorView.setBackgroundColor(color)
     }
 
-    fun updateActionbarColor(color: Int = baseConfig.primaryColor) {
-        supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
-        updateActionBarTitle(supportActionBar?.title.toString(), color)
-        updateStatusbarColor(color)
-        setTaskDescription(ActivityManager.TaskDescription(null, null, color))
+    fun updateStatusbarColor(color: Int) {
+        if (!baseConfig.isUsingSystemTheme) {
+            window.statusBarColor = color
+
+            if (isMarshmallowPlus()) {
+                if (color.getContrastColor() == 0xFF333333.toInt()) {
+                    window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
+                } else {
+                    window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
+                }
+            }
+        }
     }
 
-    fun updateStatusbarColor(color: Int) {
-        window.statusBarColor = color
-
-        if (isMarshmallowPlus()) {
-            if (color.getContrastColor() == 0xFF333333.toInt()) {
-                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
-            } else {
-                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
-            }
+    fun updateActionbarColor(color: Int = baseConfig.primaryColor) {
+        updateActionBarTitle(supportActionBar?.title.toString(), color)
+        if (baseConfig.isUsingSystemTheme) {
+            supportActionBar?.setBackgroundDrawable(ColorDrawable(window.statusBarColor))
+            setTaskDescription(ActivityManager.TaskDescription(null, null, window.statusBarColor))
+        } else {
+            supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
+            updateStatusbarColor(color)
+            setTaskDescription(ActivityManager.TaskDescription(null, null, color))
         }
     }
 
@@ -182,8 +193,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun updateMenuItemColors(menu: Menu?, useCrossAsBack: Boolean = false, baseColor: Int = getTopMenuColor(), updateHomeAsUpColor: Boolean = true) {
-        if (menu == null) {
+    fun updateMenuItemColors(menu: Menu?, useCrossAsBack: Boolean = false, baseColor: Int = baseConfig.primaryColor, updateHomeAsUpColor: Boolean = true) {
+        if (menu == null || baseConfig.isUsingSystemTheme) {
             return
         }
 
@@ -247,7 +258,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
         } else if (requestCode == OPEN_DOCUMENT_TREE_FOR_SDK_30) {
             if (resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-
                 val treeUri = resultData.data
                 val checkedUri = createFirstParentTreeUri(checkedDocumentPath)
 

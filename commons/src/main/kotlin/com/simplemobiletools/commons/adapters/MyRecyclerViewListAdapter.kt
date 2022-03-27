@@ -1,12 +1,8 @@
 package com.simplemobiletools.commons.adapters
 
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
-import androidx.appcompat.view.ActionMode
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ListAdapter
@@ -335,7 +331,7 @@ abstract class MyRecyclerViewListAdapter<T>(
         private fun viewLongClicked() {
             val currentPosition = adapterPosition - positionOffset
             if (!actModeCallback.isSelectable) {
-                activity.startSupportActionMode(actModeCallback)
+                activity.startActionMode(actModeCallback)
             }
 
             toggleItemSelection(true, currentPosition, true)

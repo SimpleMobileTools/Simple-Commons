@@ -46,11 +46,19 @@ import java.util.*
 import kotlin.collections.HashMap
 
 fun AppCompatActivity.updateActionBarTitle(text: String, color: Int = baseConfig.primaryColor) {
-    supportActionBar?.title = Html.fromHtml("<font color='${color.getContrastColor().toHex()}'>$text</font>")
+    if (baseConfig.isUsingSystemTheme) {
+        supportActionBar?.title = text
+    } else {
+        supportActionBar?.title = Html.fromHtml("<font color='${color.getContrastColor().toHex()}'>$text</font>")
+    }
 }
 
 fun AppCompatActivity.updateActionBarSubtitle(text: String) {
-    supportActionBar?.subtitle = Html.fromHtml("<font color='${baseConfig.primaryColor.getContrastColor().toHex()}'>$text</font>")
+    if (baseConfig.isUsingSystemTheme) {
+        supportActionBar?.subtitle = text
+    } else {
+        supportActionBar?.subtitle = Html.fromHtml("<font color='${baseConfig.primaryColor.getContrastColor().toHex()}'>$text</font>")
+    }
 }
 
 fun Activity.appLaunched(appId: String) {
@@ -1495,7 +1503,7 @@ fun BaseSimpleActivity.getAlarmSounds(type: Int, callback: (ArrayList<AlarmSound
     }
 }
 
-fun AppCompatActivity.checkAppSideloading(): Boolean {
+fun Activity.checkAppSideloading(): Boolean {
     val isSideloaded = when (baseConfig.appSideloadingStatus) {
         SIDELOADING_TRUE -> true
         SIDELOADING_FALSE -> false
@@ -1510,7 +1518,7 @@ fun AppCompatActivity.checkAppSideloading(): Boolean {
     return isSideloaded
 }
 
-fun AppCompatActivity.isAppSideloaded(): Boolean {
+fun Activity.isAppSideloaded(): Boolean {
     return try {
         getDrawable(R.drawable.ic_camera_vector)
         false
@@ -1519,7 +1527,7 @@ fun AppCompatActivity.isAppSideloaded(): Boolean {
     }
 }
 
-fun AppCompatActivity.showSideloadingDialog() {
+fun Activity.showSideloadingDialog() {
     AppSideloadedDialog(this) {
         finish()
     }

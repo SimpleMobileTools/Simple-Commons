@@ -23,6 +23,20 @@
         <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
     </style>
 
+    <style name="AppTheme.Base.System" parent="@android:style/Theme.DeviceDefault.NoActionBar">
+        <item name="colorPrimary">@color/you_primary_color</item>
+        <item name="colorPrimaryDark">@color/you_primary_dark_color</item>
+        <item name="colorAccent">@color/you_primary_color</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="AppTheme.Base.System.Light" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+        <item name="colorPrimary">@color/you_primary_color</item>
+        <item name="colorPrimaryDark">@color/you_primary_dark_color</item>
+        <item name="colorAccent">@color/you_primary_color</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
     <style name="TranslucentTheme" parent="Theme.AppCompat.NoActionBar" />
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">

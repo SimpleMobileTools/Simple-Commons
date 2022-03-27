@@ -1,6 +1,6 @@
 package com.simplemobiletools.commons.interfaces
 
-import androidx.appcompat.view.ActionMode
+import android.view.ActionMode
 
 abstract class MyActionModeCallback : ActionMode.Callback {
     var isSelectable = false
