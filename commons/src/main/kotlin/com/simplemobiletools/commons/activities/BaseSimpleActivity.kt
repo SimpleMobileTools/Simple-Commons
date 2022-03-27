@@ -194,11 +194,22 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun updateMenuItemColors(menu: Menu?, useCrossAsBack: Boolean = false, baseColor: Int = baseConfig.primaryColor, updateHomeAsUpColor: Boolean = true) {
-        if (menu == null || baseConfig.isUsingSystemTheme) {
+        if (menu == null) {
             return
         }
 
-        val color = baseColor.getContrastColor()
+        var color = baseColor.getContrastColor()
+        if (baseConfig.isUsingSystemTheme) {
+            val views = ArrayList<View>()
+            try {
+                window.decorView.rootView.findViewsWithText(views, supportActionBar?.title, View.FIND_VIEWS_WITH_TEXT)
+                if (views.size == 1 && views[0] is TextView) {
+                    color = (views[0] as TextView).currentTextColor
+                }
+            } catch (ignored: Exception) {
+            }
+        }
+
         for (i in 0 until menu.size()) {
             try {
                 menu.getItem(i)?.icon?.setTint(color)
