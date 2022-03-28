@@ -30,6 +30,7 @@
         <item name="android:windowLightStatusBar">false</item>
         <item name="actionOverflowMenuStyle">@style/TopPopupMenuYou</item>
         <item name="actionBarPopupTheme">@style/TopPopupMenuTextYou</item>
+        <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
     </style>
 
     <style name="AppTheme.Base.System.Light" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">
@@ -39,13 +40,18 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="actionOverflowMenuStyle">@style/TopPopupMenuYou</item>
         <item name="actionBarPopupTheme">@style/TopPopupMenuTextYou</item>
+        <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
+    </style>
+
+    <!-- remove the shadow under actionBar, keep it there around Overflow menu that appears at pressing the 3 dots -->
+    <style name="AppTheme.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:outlineProvider">none</item>
     </style>
 
     <style name="TopPopupMenuYou">
         <item name="android:popupBackground">@drawable/top_popup_menu_you_bg</item>
         <item name="android:dropDownHorizontalOffset">-12dp</item>
         <item name="android:popupElevation">4dp</item>
-        <item name="android:textColor">@color/md_red</item>
     </style>
 
     <style name="TopPopupMenuTextYou">
