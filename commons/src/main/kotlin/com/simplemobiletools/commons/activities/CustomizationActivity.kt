@@ -59,7 +59,6 @@ class CustomizationActivity : BaseSimpleActivity() {
         }
 
         initColorVariables()
-        setupColorsPickers()
 
         if (isThankYouInstalled()) {
             val cursorLoader = getMyContentProviderCursorLoader()
@@ -181,6 +180,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
         }
         setupThemePicker()
+        setupColorsPickers()
     }
 
     private fun setupThemePicker() {

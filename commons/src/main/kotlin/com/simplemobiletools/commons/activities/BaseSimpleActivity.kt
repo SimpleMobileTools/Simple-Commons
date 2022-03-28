@@ -42,7 +42,6 @@ import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 import java.io.OutputStream
-import java.util.*
 import java.util.regex.Pattern
 
 abstract class BaseSimpleActivity : AppCompatActivity() {
