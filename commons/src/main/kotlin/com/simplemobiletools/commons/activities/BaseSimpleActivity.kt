@@ -203,8 +203,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             val views = ArrayList<View>()
             try {
                 window.decorView.rootView.findViewsWithText(views, supportActionBar?.title, View.FIND_VIEWS_WITH_TEXT)
-                if (views.size == 1 && views[0] is TextView) {
-                    color = (views[0] as TextView).currentTextColor
+                views.firstOrNull { it is TextView && it.id == -1 }?.apply {
+                    color = (this as TextView).currentTextColor
                 }
             } catch (ignored: Exception) {
             }

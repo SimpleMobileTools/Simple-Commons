@@ -20,23 +20,27 @@ class ContributorsActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contributors)
 
+        val textColor = getProperTextColor()
+        val backgroundColor = getProperBackgroundColor()
+        val primaryColor = getProperPrimaryColor()
+
         updateTextColors(contributors_holder)
-        contributors_development_label.setTextColor(getAdjustedPrimaryColor())
-        contributors_translation_label.setTextColor(getAdjustedPrimaryColor())
+        contributors_development_label.setTextColor(primaryColor)
+        contributors_translation_label.setTextColor(primaryColor)
 
         contributors_label.apply {
-            setTextColor(baseConfig.textColor)
+            setTextColor(textColor)
             text = Html.fromHtml(getString(R.string.contributors_label))
-            setLinkTextColor(getAdjustedPrimaryColor())
+            setLinkTextColor(primaryColor)
             movementMethod = LinkMovementMethod.getInstance()
             removeUnderlines()
         }
 
-        contributors_development_icon.applyColorFilter(baseConfig.textColor)
-        contributors_footer_icon.applyColorFilter(baseConfig.textColor)
+        contributors_development_icon.applyColorFilter(textColor)
+        contributors_footer_icon.applyColorFilter(textColor)
 
         arrayOf(contributors_development_holder, contributors_translation_holder).forEach {
-            it.background.applyColorFilter(baseConfig.backgroundColor.getContrastColor())
+            it.background.applyColorFilter(backgroundColor.getContrastColor())
         }
 
         if (resources.getBoolean(R.bool.hide_all_external_links)) {

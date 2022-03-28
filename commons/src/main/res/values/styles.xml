@@ -49,7 +49,7 @@
     </style>
 
     <style name="TopPopupMenuYou">
-        <item name="android:popupBackground">@drawable/top_popup_menu_you_bg</item>
+        <item name="android:popupBackground">@drawable/dialog_you_background</item>
         <item name="android:dropDownHorizontalOffset">-12dp</item>
         <item name="android:popupElevation">4dp</item>
     </style>

@@ -1353,7 +1353,7 @@ fun Activity.setupDialogStuff(
     if (view is ViewGroup)
         updateTextColors(view)
     else if (view is MyTextView) {
-        view.setColors(baseConfig.textColor, adjustedPrimaryColor, baseConfig.backgroundColor)
+        view.setColors(getProperTextColor(), adjustedPrimaryColor, getProperBackgroundColor())
     }
 
     var title: TextView? = null
@@ -1386,10 +1386,10 @@ fun Activity.setupDialogStuff(
         getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(dialogButtonColor)
         getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(dialogButtonColor)
 
-        val bgDrawable = if (isBlackAndWhiteTheme()) {
-            resources.getDrawable(R.drawable.black_dialog_background, theme)
-        } else {
-            resources.getColoredDrawableWithColor(R.drawable.dialog_bg, baseConfig.backgroundColor)
+        val bgDrawable = when {
+            isBlackAndWhiteTheme() -> resources.getDrawable(R.drawable.black_dialog_background, theme)
+            baseConfig.isUsingSystemTheme -> resources.getDrawable(R.drawable.dialog_you_background, theme)
+            else -> resources.getColoredDrawableWithColor(R.drawable.dialog_bg, baseConfig.backgroundColor)
         }
 
         window?.setBackgroundDrawable(bgDrawable)

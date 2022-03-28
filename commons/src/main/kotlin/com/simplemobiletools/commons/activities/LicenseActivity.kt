@@ -22,8 +22,10 @@ class LicenseActivity : BaseSimpleActivity() {
         setContentView(R.layout.activity_license)
 
         val dividerMargin = resources.getDimension(R.dimen.medium_margin).toInt()
-        val titleColor = getAdjustedPrimaryColor()
-        val textColor = baseConfig.textColor
+        val textColor = getProperTextColor()
+        val backgroundColor = getProperBackgroundColor()
+        val primaryColor = getProperPrimaryColor()
+
         updateTextColors(licenses_holder)
 
         val inflater = LayoutInflater.from(this)
@@ -32,10 +34,10 @@ class LicenseActivity : BaseSimpleActivity() {
         licenses.filter { licenseMask and it.id != 0 }.forEach {
             val license = it
             inflater.inflate(R.layout.item_license, null).apply {
-                background.applyColorFilter(baseConfig.backgroundColor.getContrastColor())
+                background.applyColorFilter(backgroundColor.getContrastColor())
                 license_title.apply {
                     text = getString(license.titleId)
-                    setTextColor(titleColor)
+                    setTextColor(primaryColor)
                     setOnClickListener {
                         launchViewIntent(license.urlId)
                     }

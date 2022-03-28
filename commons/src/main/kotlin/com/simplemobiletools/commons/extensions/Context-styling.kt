@@ -13,19 +13,19 @@ import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.*
 import java.util.*
 
-fun Context.getBackgroundColor() = if (baseConfig.isUsingSystemTheme) {
+fun Context.getProperBackgroundColor() = if (baseConfig.isUsingSystemTheme) {
     resources.getColor(R.color.you_background_color)
 } else {
     baseConfig.backgroundColor
 }
 
-fun Context.getNeutralTextColor() = if (baseConfig.isUsingSystemTheme) {
+fun Context.getProperTextColor() = if (baseConfig.isUsingSystemTheme) {
     resources.getColor(R.color.you_neutral_text_color)
 } else {
     baseConfig.textColor
 }
 
-fun Context.getViewPrimaryColor() = if (baseConfig.isUsingSystemTheme) {
+fun Context.getProperPrimaryColor() = if (baseConfig.isUsingSystemTheme) {
     resources.getColor(R.color.you_primary_color)
 } else {
     baseConfig.primaryColor
@@ -34,7 +34,7 @@ fun Context.getViewPrimaryColor() = if (baseConfig.isUsingSystemTheme) {
 fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAccentColor: Int = 0) {
     val textColor = when {
         tmpTextColor == 0 -> baseConfig.textColor
-        baseConfig.isUsingSystemTheme -> getNeutralTextColor()
+        baseConfig.isUsingSystemTheme -> getProperTextColor()
         else -> tmpTextColor
     }
 
@@ -42,7 +42,7 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
     val accentColor = if (tmpAccentColor == 0) {
         when {
             isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
-            else -> getViewPrimaryColor()
+            else -> getProperPrimaryColor()
         }
     } else {
         tmpAccentColor
@@ -83,7 +83,7 @@ fun Context.isUsingSystemDarkTheme() = resources.configuration.uiMode and Config
 
 fun Context.getAdjustedPrimaryColor() = when {
     isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
-    else -> getViewPrimaryColor()
+    else -> getProperPrimaryColor()
 }
 
 fun Context.getDialogTheme() = if (baseConfig.backgroundColor.getContrastColor() == Color.WHITE) R.style.MyDialogTheme_Dark else R.style.MyDialogTheme

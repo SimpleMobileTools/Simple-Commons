@@ -34,9 +34,9 @@ class AboutActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
         appName = intent.getStringExtra(APP_NAME) ?: ""
-        val textColor = getNeutralTextColor()
-        val backgroundColor = getBackgroundColor()
-        primaryColor = getViewPrimaryColor()
+        val textColor = getProperTextColor()
+        val backgroundColor = getProperBackgroundColor()
+        primaryColor = getProperPrimaryColor()
 
         arrayOf(
             about_faq_icon,
