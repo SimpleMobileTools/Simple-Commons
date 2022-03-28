@@ -11,18 +11,17 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.*
-import java.util.*
-
-fun Context.getProperBackgroundColor() = if (baseConfig.isUsingSystemTheme) {
-    resources.getColor(R.color.you_background_color)
-} else {
-    baseConfig.backgroundColor
-}
 
 fun Context.getProperTextColor() = if (baseConfig.isUsingSystemTheme) {
     resources.getColor(R.color.you_neutral_text_color)
 } else {
     baseConfig.textColor
+}
+
+fun Context.getProperBackgroundColor() = if (baseConfig.isUsingSystemTheme) {
+    resources.getColor(R.color.you_background_color)
+} else {
+    baseConfig.backgroundColor
 }
 
 fun Context.getProperPrimaryColor() = if (baseConfig.isUsingSystemTheme) {
@@ -33,8 +32,8 @@ fun Context.getProperPrimaryColor() = if (baseConfig.isUsingSystemTheme) {
 
 fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAccentColor: Int = 0) {
     val textColor = when {
-        tmpTextColor == 0 -> baseConfig.textColor
         baseConfig.isUsingSystemTheme -> getProperTextColor()
+        tmpTextColor == 0 -> baseConfig.textColor
         else -> tmpTextColor
     }
 

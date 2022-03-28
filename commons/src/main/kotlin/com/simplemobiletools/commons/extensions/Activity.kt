@@ -18,7 +18,10 @@ import android.provider.MediaStore
 import android.telecom.PhoneAccountHandle
 import android.telecom.TelecomManager
 import android.text.Html
-import android.view.*
+import android.view.View
+import android.view.ViewGroup
+import android.view.Window
+import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
@@ -43,7 +46,6 @@ import java.io.FileNotFoundException
 import java.io.FileOutputStream
 import java.io.OutputStream
 import java.util.*
-import kotlin.collections.HashMap
 
 fun AppCompatActivity.updateActionBarTitle(text: String, color: Int = baseConfig.primaryColor) {
     if (baseConfig.isUsingSystemTheme) {
@@ -1349,11 +1351,13 @@ fun Activity.setupDialogStuff(
         return
     }
 
+    val textColor = getProperTextColor()
+    val backgroundColor = getProperBackgroundColor()
     val adjustedPrimaryColor = getAdjustedPrimaryColor()
-    if (view is ViewGroup)
+    if (view is ViewGroup) {
         updateTextColors(view)
-    else if (view is MyTextView) {
-        view.setColors(getProperTextColor(), adjustedPrimaryColor, getProperBackgroundColor())
+    } else if (view is MyTextView) {
+        view.setColors(textColor, adjustedPrimaryColor, backgroundColor)
     }
 
     var title: TextView? = null
@@ -1365,13 +1369,13 @@ fun Activity.setupDialogStuff(
             } else {
                 setText(titleId)
             }
-            setTextColor(baseConfig.textColor)
+            setTextColor(textColor)
         }
     }
 
     // if we use the same primary and background color, use the text color for dialog confirmation buttons
     val dialogButtonColor = if (adjustedPrimaryColor == baseConfig.backgroundColor) {
-        baseConfig.textColor
+        textColor
     } else {
         adjustedPrimaryColor
     }
