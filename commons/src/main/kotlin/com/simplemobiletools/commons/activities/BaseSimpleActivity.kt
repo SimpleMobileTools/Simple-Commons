@@ -90,9 +90,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         if (useDynamicTheme) {
             setTheme(getThemeId(showTransparentTop = showTransparentTop))
 
-            if (!baseConfig.isUsingSystemTheme) {
-                updateBackgroundColor()
+            val backgroundColor = if (baseConfig.isUsingSystemTheme) {
+                resources.getColor(R.color.you_background_color, theme)
+            } else {
+                baseConfig.backgroundColor
             }
+
+            updateBackgroundColor(backgroundColor)
         }
 
         if (showTransparentTop) {
@@ -132,23 +136,23 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun updateStatusbarColor(color: Int) {
-        if (!baseConfig.isUsingSystemTheme) {
-            window.statusBarColor = color
+        window.statusBarColor = color
 
-            if (isMarshmallowPlus()) {
-                if (color.getContrastColor() == 0xFF333333.toInt()) {
-                    window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
-                } else {
-                    window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
-                }
+        if (isMarshmallowPlus()) {
+            if (color.getContrastColor() == 0xFF333333.toInt()) {
+                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
+            } else {
+                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
             }
         }
     }
 
-    fun updateActionbarColor(color: Int = baseConfig.primaryColor) {
+    fun updateActionbarColor(color: Int = getProperPrimaryColor()) {
         updateActionBarTitle(supportActionBar?.title.toString(), color)
         if (baseConfig.isUsingSystemTheme) {
-            supportActionBar?.setBackgroundDrawable(ColorDrawable(window.statusBarColor))
+            val statusBarColor = resources.getColor(R.color.you_status_bar_color)
+            supportActionBar?.setBackgroundDrawable(ColorDrawable(statusBarColor))
+            updateStatusbarColor(statusBarColor)
             setTaskDescription(ActivityManager.TaskDescription(null, null, window.statusBarColor))
         } else {
             supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
