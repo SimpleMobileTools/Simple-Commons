@@ -102,7 +102,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         if (showTransparentTop) {
             window.statusBarColor = Color.TRANSPARENT
         } else {
-            updateActionbarColor()
+            val color = if (baseConfig.isUsingSystemTheme) {
+                resources.getColor(R.color.you_status_bar_color)
+            } else {
+                getProperPrimaryColor()
+            }
+
+            updateActionbarColor(color)
         }
 
         updateRecentsAppIcon()
@@ -149,16 +155,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     fun updateActionbarColor(color: Int = getProperPrimaryColor()) {
         updateActionBarTitle(supportActionBar?.title.toString(), color)
-        if (baseConfig.isUsingSystemTheme) {
-            val statusBarColor = resources.getColor(R.color.you_status_bar_color)
-            supportActionBar?.setBackgroundDrawable(ColorDrawable(statusBarColor))
-            updateStatusbarColor(statusBarColor)
-            setTaskDescription(ActivityManager.TaskDescription(null, null, window.statusBarColor))
-        } else {
-            supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
-            updateStatusbarColor(color)
-            setTaskDescription(ActivityManager.TaskDescription(null, null, color))
-        }
+        supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
+        updateStatusbarColor(color)
+        setTaskDescription(ActivityManager.TaskDescription(null, null, color))
     }
 
     fun updateNavigationBarColor(color: Int = baseConfig.navigationBarColor) {

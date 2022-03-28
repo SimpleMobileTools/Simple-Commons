@@ -119,7 +119,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_customization, menu)
         menu.findItem(R.id.save).isVisible = hasUnsavedChanges
-        updateMenuItemColors(menu, true, getCurrentPrimaryColor())
+        updateMenuItemColors(menu, true, getCurrentStatusBarColor())
         this.menu = menu
         return true
     }
@@ -220,6 +220,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
             val hideGoogleRelations = resources.getBoolean(R.bool.hide_google_relations)
             apply_to_all_holder.beVisibleIf(curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_SHARED && !hideGoogleRelations)
+            updateMenuItemColors(menu, true, getCurrentStatusBarColor())
         }
     }
 
@@ -275,7 +276,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 curNavigationBarColor = getThemeNavigationColor(curSelectedThemeId)
                 setTheme(getThemeId(getCurrentPrimaryColor()))
                 colorChanged()
-                updateMenuItemColors(menu, true, getCurrentPrimaryColor())
+                updateMenuItemColors(menu, true, getCurrentStatusBarColor())
             }
         }
 
@@ -283,7 +284,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         invalidateOptionsMenu()
         updateLabelColors(getCurrentTextColor())
         updateBackgroundColor(getCurrentBackgroundColor())
-        updateActionbarColor(getCurrentPrimaryColor())
+        updateActionbarColor(getCurrentStatusBarColor())
         updateNavigationBarColor(curNavigationBarColor)
         updateAutoThemeFields()
         updateApplyToAllColors(getCurrentPrimaryColor())
@@ -311,7 +312,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getCurrentThemeId(): Int {
         if (baseConfig.isUsingSharedTheme) {
             return THEME_SHARED
-        } else if (baseConfig.isUsingSystemTheme || curSelectedThemeId == THEME_SYSTEM) {
+        } else if ((baseConfig.isUsingSystemTheme && !hasUnsavedChanges) || curSelectedThemeId == THEME_SYSTEM) {
             return THEME_SYSTEM
         } else if (baseConfig.isUsingAutoTheme || curSelectedThemeId == THEME_AUTO) {
             return THEME_AUTO
@@ -667,6 +668,12 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun getCurrentPrimaryColor() = if (customization_theme.value == getString(R.string.system_default)) {
         resources.getColor(R.color.you_primary_color)
+    } else {
+        curPrimaryColor
+    }
+
+    private fun getCurrentStatusBarColor() = if (customization_theme.value == getString(R.string.system_default)) {
+        resources.getColor(R.color.you_status_bar_color)
     } else {
         curPrimaryColor
     }
