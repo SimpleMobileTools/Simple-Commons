@@ -311,7 +311,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private fun getCurrentThemeId(): Int {
         if (baseConfig.isUsingSharedTheme) {
             return THEME_SHARED
-        } else if (baseConfig.isUsingSystemTheme && !hasUnsavedChanges) {
+        } else if (baseConfig.isUsingSystemTheme || curSelectedThemeId == THEME_SYSTEM) {
             return THEME_SYSTEM
         } else if (baseConfig.isUsingAutoTheme || curSelectedThemeId == THEME_AUTO) {
             return THEME_AUTO
