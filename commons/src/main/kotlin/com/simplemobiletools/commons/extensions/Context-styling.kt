@@ -30,22 +30,18 @@ fun Context.getProperPrimaryColor() = if (baseConfig.isUsingSystemTheme) {
     baseConfig.primaryColor
 }
 
-fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAccentColor: Int = 0) {
+fun Context.updateTextColors(viewGroup: ViewGroup) {
     val textColor = when {
         baseConfig.isUsingSystemTheme -> getProperTextColor()
-        tmpTextColor == 0 -> baseConfig.textColor
-        else -> tmpTextColor
+        else -> baseConfig.textColor
     }
 
     val backgroundColor = baseConfig.backgroundColor
-    val accentColor = if (tmpAccentColor == 0) {
-        when {
-            isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
-            else -> getProperPrimaryColor()
-        }
-    } else {
-        tmpAccentColor
+    val accentColor = when {
+        isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
+        else -> getProperPrimaryColor()
     }
+
 
     val cnt = viewGroup.childCount
     (0 until cnt).map { viewGroup.getChildAt(it) }.forEach {
@@ -61,7 +57,7 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
             is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor)
             is MyButton -> it.setColors(textColor, accentColor, backgroundColor)
             is MyTextInputLayout -> it.setColors(textColor, accentColor, backgroundColor)
-            is ViewGroup -> updateTextColors(it, textColor, accentColor)
+            is ViewGroup -> updateTextColors(it)
         }
     }
 }
