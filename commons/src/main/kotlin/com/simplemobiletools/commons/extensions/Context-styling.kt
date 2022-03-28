@@ -13,10 +13,16 @@ import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.*
 import java.util.*
 
-fun Context.getTopMenuColor() = if (baseConfig.isUsingSystemTheme) {
+fun Context.getBackgroundColor() = if (baseConfig.isUsingSystemTheme) {
     resources.getColor(R.color.you_background_color)
 } else {
-    baseConfig.primaryColor
+    baseConfig.backgroundColor
+}
+
+fun Context.getNeutralTextColor() = if (baseConfig.isUsingSystemTheme) {
+    resources.getColor(R.color.you_neutral_text_color)
+} else {
+    baseConfig.textColor
 }
 
 fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAccentColor: Int = 0) {

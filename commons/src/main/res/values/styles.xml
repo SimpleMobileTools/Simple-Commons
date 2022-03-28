@@ -28,6 +28,7 @@
         <item name="colorPrimaryDark">@color/you_primary_dark_color</item>
         <item name="colorAccent">@color/you_primary_color</item>
         <item name="android:windowLightStatusBar">false</item>
+        <item name="actionOverflowMenuStyle">@style/TopPopupMenuYou</item>
     </style>
 
     <style name="AppTheme.Base.System.Light" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">
@@ -35,6 +36,19 @@
         <item name="colorPrimaryDark">@color/you_primary_dark_color</item>
         <item name="colorAccent">@color/you_primary_color</item>
         <item name="android:windowLightStatusBar">true</item>
+        <item name="actionOverflowMenuStyle">@style/TopPopupMenuYou</item>
+        <item name="actionBarPopupTheme">@style/TopPopupMenuTextYou</item>
+    </style>
+
+    <style name="TopPopupMenuYou">
+        <item name="android:popupBackground">@drawable/top_popup_menu_you_bg</item>
+        <item name="android:dropDownHorizontalOffset">-12dp</item>
+        <item name="android:popupElevation">4dp</item>
+        <item name="android:textColor">@color/md_red</item>
+    </style>
+
+    <style name="TopPopupMenuTextYou">
+        <item name="android:textColor">@color/you_overflow_text_color</item>
     </style>
 
     <style name="TranslucentTheme" parent="Theme.AppCompat.NoActionBar" />
