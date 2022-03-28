@@ -29,6 +29,7 @@
         <item name="colorAccent">@color/you_primary_color</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="actionOverflowMenuStyle">@style/TopPopupMenuYou</item>
+        <item name="actionBarPopupTheme">@style/TopPopupMenuTextYou</item>
     </style>
 
     <style name="AppTheme.Base.System.Light" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">
