@@ -19,7 +19,7 @@ import java.util.*
 
 class AboutActivity : BaseSimpleActivity() {
     private var appName = ""
-    private var linkColor = 0
+    private var primaryColor = 0
 
     private var firstVersionClickTS = 0L
     private var clicksSinceFirstClick = 0
@@ -34,7 +34,9 @@ class AboutActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
         appName = intent.getStringExtra(APP_NAME) ?: ""
-        linkColor = getAdjustedPrimaryColor()
+        val textColor = getNeutralTextColor()
+        val backgroundColor = getBackgroundColor()
+        primaryColor = getViewPrimaryColor()
 
         arrayOf(
             about_faq_icon,
@@ -49,21 +51,21 @@ class AboutActivity : BaseSimpleActivity() {
             about_website_icon,
             about_version_icon
         ).forEach {
-            it.applyColorFilter(baseConfig.textColor)
+            it.applyColorFilter(textColor)
         }
 
         arrayOf(about_support, about_help_us, about_social, about_other).forEach {
-            it.setTextColor(getAdjustedPrimaryColor())
+            it.setTextColor(primaryColor)
         }
 
         arrayOf(about_support_holder, about_help_us_holder, about_social_holder, about_other_holder).forEach {
-            it.background.applyColorFilter(baseConfig.backgroundColor.getContrastColor())
+            it.background.applyColorFilter(backgroundColor.getContrastColor())
         }
     }
 
     override fun onResume() {
         super.onResume()
-        updateTextColors(about_holder)
+        updateTextColors(about_scrollview)
 
         setupFAQ()
         setupEmail()

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="you_background_color">@android:color/system_accent1_900</color>
-    <color name="you_neutral_text_color">@android:color/system_accent1_200</color>
+    <color name="you_neutral_text_color">@android:color/system_accent1_10</color>
     <color name="you_primary_color">@android:color/system_accent1_400</color>
     <color name="you_primary_dark_color">@android:color/system_accent1_600</color>
     <color name="you_overflow_menu_color">@android:color/system_accent2_800</color>
-    <color name="you_overflow_text_color">@android:color/system_accent2_10</color>
 </resources>

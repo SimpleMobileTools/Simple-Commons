@@ -55,7 +55,7 @@
     </style>
 
     <style name="TopPopupMenuTextYou">
-        <item name="android:textColor">@color/you_overflow_text_color</item>
+        <item name="android:textColor">@color/you_neutral_text_color</item>
     </style>
 
     <style name="TranslucentTheme" parent="Theme.AppCompat.NoActionBar" />

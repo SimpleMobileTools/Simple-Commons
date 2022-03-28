@@ -25,13 +25,24 @@ fun Context.getNeutralTextColor() = if (baseConfig.isUsingSystemTheme) {
     baseConfig.textColor
 }
 
+fun Context.getViewPrimaryColor() = if (baseConfig.isUsingSystemTheme) {
+    resources.getColor(R.color.you_primary_color)
+} else {
+    baseConfig.primaryColor
+}
+
 fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAccentColor: Int = 0) {
-    val textColor = if (tmpTextColor == 0) baseConfig.textColor else tmpTextColor
+    val textColor = when {
+        tmpTextColor == 0 -> baseConfig.textColor
+        baseConfig.isUsingSystemTheme -> getNeutralTextColor()
+        else -> tmpTextColor
+    }
+
     val backgroundColor = baseConfig.backgroundColor
     val accentColor = if (tmpAccentColor == 0) {
         when {
             isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
-            else -> baseConfig.primaryColor
+            else -> getViewPrimaryColor()
         }
     } else {
         tmpAccentColor
@@ -72,7 +83,7 @@ fun Context.isUsingSystemDarkTheme() = resources.configuration.uiMode and Config
 
 fun Context.getAdjustedPrimaryColor() = when {
     isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
-    else -> baseConfig.primaryColor
+    else -> getViewPrimaryColor()
 }
 
 fun Context.getDialogTheme() = if (baseConfig.backgroundColor.getContrastColor() == Color.WHITE) R.style.MyDialogTheme_Dark else R.style.MyDialogTheme
