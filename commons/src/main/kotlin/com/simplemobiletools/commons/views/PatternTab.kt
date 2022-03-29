@@ -11,7 +11,7 @@ import com.andrognito.patternlockview.listener.PatternLockViewListener
 import com.andrognito.patternlockview.utils.PatternLockUtils
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
+import com.simplemobiletools.commons.extensions.getProperPrimaryColor
 import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.PROTECTION_PATTERN
@@ -38,7 +38,7 @@ class PatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(context
             false
         }
 
-        pattern_lock_view.correctStateColor = context.getAdjustedPrimaryColor()
+        pattern_lock_view.correctStateColor = context.getProperPrimaryColor()
         pattern_lock_view.normalStateColor = textColor
         pattern_lock_view.addPatternLockListener(object : PatternLockViewListener {
             override fun onComplete(pattern: MutableList<PatternLockView.Dot>?) {

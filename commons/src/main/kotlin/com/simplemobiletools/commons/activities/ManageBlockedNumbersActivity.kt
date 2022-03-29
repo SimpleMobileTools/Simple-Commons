@@ -38,7 +38,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
 
         manage_blocked_numbers_placeholder_2.apply {
             underlineText()
-            setTextColor(getAdjustedPrimaryColor())
+            setTextColor(getProperPrimaryColor())
             setOnClickListener {
                 if (isDefaultDialer()) {
                     addOrEditBlockedNumber()

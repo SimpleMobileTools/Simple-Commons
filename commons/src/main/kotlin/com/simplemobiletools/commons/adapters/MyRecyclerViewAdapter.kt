@@ -9,11 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
 import com.simplemobiletools.commons.extensions.getContrastColor
+import com.simplemobiletools.commons.extensions.getProperPrimaryColor
 import com.simplemobiletools.commons.interfaces.MyActionModeCallback
 import com.simplemobiletools.commons.views.MyRecyclerView
-import java.util.*
 
 abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyclerView: MyRecyclerView, val itemClick: (Any) -> Unit) :
     RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder>() {
@@ -21,8 +20,8 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
     protected val resources = activity.resources!!
     protected val layoutInflater = activity.layoutInflater
     protected var primaryColor = baseConfig.primaryColor
-    protected var adjustedPrimaryColor = activity.getAdjustedPrimaryColor()
-    protected var contrastColor = adjustedPrimaryColor.getContrastColor()
+    protected var properPrimaryColor = activity.getProperPrimaryColor()
+    protected var contrastColor = properPrimaryColor.getContrastColor()
     protected var textColor = baseConfig.textColor
     protected var backgroundColor = baseConfig.backgroundColor
     protected var actModeCallback: MyActionModeCallback
@@ -273,8 +272,8 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
 
     fun updatePrimaryColor(primaryColor: Int) {
         this.primaryColor = primaryColor
-        adjustedPrimaryColor = activity.getAdjustedPrimaryColor()
-        contrastColor = adjustedPrimaryColor.getContrastColor()
+        properPrimaryColor = activity.getProperPrimaryColor()
+        contrastColor = properPrimaryColor.getContrastColor()
     }
 
     fun updateBackgroundColor(backgroundColor: Int) {

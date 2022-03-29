@@ -26,7 +26,7 @@ class FAQActivity : BaseSimpleActivity() {
         setContentView(R.layout.activity_faq)
 
         val dividerMargin = resources.getDimension(R.dimen.medium_margin).toInt()
-        val titleColor = getAdjustedPrimaryColor()
+        val titleColor = getProperPrimaryColor()
         val backgroundColor = getProperBackgroundColor()
         val textColor = getProperTextColor()
 

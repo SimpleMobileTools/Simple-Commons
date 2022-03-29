@@ -262,14 +262,14 @@ fun String.getNameLetter() = normalizeString().toCharArray().getOrNull(0)?.toStr
 
 fun String.normalizePhoneNumber() = PhoneNumberUtils.normalizeNumber(this)
 
-fun String.highlightTextFromNumbers(textToHighlight: String, adjustedPrimaryColor: Int): SpannableString {
+fun String.highlightTextFromNumbers(textToHighlight: String, primaryColor: Int): SpannableString {
     val spannableString = SpannableString(this)
     val digits = PhoneNumberUtils.convertKeypadLettersToDigits(this)
     if (digits.contains(textToHighlight)) {
         val startIndex = digits.indexOf(textToHighlight, 0, true)
         val endIndex = Math.min(startIndex + textToHighlight.length, length)
         try {
-            spannableString.setSpan(ForegroundColorSpan(adjustedPrimaryColor), startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+            spannableString.setSpan(ForegroundColorSpan(primaryColor), startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
         } catch (ignored: IndexOutOfBoundsException) {
         }
     }

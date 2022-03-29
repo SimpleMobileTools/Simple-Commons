@@ -1357,11 +1357,11 @@ fun Activity.setupDialogStuff(
 
     val textColor = getProperTextColor()
     val backgroundColor = getProperBackgroundColor()
-    val adjustedPrimaryColor = getAdjustedPrimaryColor()
+    val primaryColor = getProperPrimaryColor()
     if (view is ViewGroup) {
         updateTextColors(view)
     } else if (view is MyTextView) {
-        view.setColors(textColor, adjustedPrimaryColor, backgroundColor)
+        view.setColors(textColor, primaryColor, backgroundColor)
     }
 
     var title: TextView? = null
@@ -1378,10 +1378,10 @@ fun Activity.setupDialogStuff(
     }
 
     // if we use the same primary and background color, use the text color for dialog confirmation buttons
-    val dialogButtonColor = if (adjustedPrimaryColor == baseConfig.backgroundColor) {
+    val dialogButtonColor = if (primaryColor == baseConfig.backgroundColor) {
         textColor
     } else {
-        adjustedPrimaryColor
+        primaryColor
     }
 
     dialog.apply {

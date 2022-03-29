@@ -17,7 +17,6 @@ import com.simplemobiletools.commons.models.AlarmSound
 import com.simplemobiletools.commons.models.RadioItem
 import com.simplemobiletools.commons.views.MyCompatRadioButton
 import kotlinx.android.synthetic.main.dialog_select_alarm_sound.view.*
-import java.util.*
 
 class SelectAlarmSoundDialog(
     val activity: BaseSimpleActivity, val currentUri: String, val audioStream: Int, val pickAudioIntentId: Int,
@@ -39,8 +38,8 @@ class SelectAlarmSoundDialog(
             gotSystemAlarms()
         }
 
-        view.dialog_select_alarm_your_label.setTextColor(activity.getAdjustedPrimaryColor())
-        view.dialog_select_alarm_system_label.setTextColor(activity.getAdjustedPrimaryColor())
+        view.dialog_select_alarm_your_label.setTextColor(activity.getProperPrimaryColor())
+        view.dialog_select_alarm_system_label.setTextColor(activity.getProperPrimaryColor())
 
         addYourAlarms()
 
@@ -75,7 +74,7 @@ class SelectAlarmSoundDialog(
             text = alarmSound.title
             isChecked = alarmSound.uri == currentUri
             id = alarmSound.id
-            setColors(config.textColor, activity.getAdjustedPrimaryColor(), config.backgroundColor)
+            setColors(config.textColor, activity.getProperPrimaryColor(), config.backgroundColor)
             setOnClickListener {
                 alarmClicked(alarmSound)
 

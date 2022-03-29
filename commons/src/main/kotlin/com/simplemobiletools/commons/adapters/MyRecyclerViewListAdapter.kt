@@ -10,11 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
 import com.simplemobiletools.commons.extensions.getContrastColor
+import com.simplemobiletools.commons.extensions.getProperPrimaryColor
 import com.simplemobiletools.commons.interfaces.MyActionModeCallback
 import com.simplemobiletools.commons.views.MyRecyclerView
-import java.util.*
 
 abstract class MyRecyclerViewListAdapter<T>(
     val activity: BaseSimpleActivity,
@@ -27,8 +26,8 @@ abstract class MyRecyclerViewListAdapter<T>(
     protected val resources = activity.resources!!
     protected val layoutInflater = activity.layoutInflater
     protected var primaryColor = baseConfig.primaryColor
-    protected var adjustedPrimaryColor = activity.getAdjustedPrimaryColor()
-    protected var contrastColor = adjustedPrimaryColor.getContrastColor()
+    protected var primaryPrimaryColor = activity.getProperPrimaryColor()
+    protected var contrastColor = primaryPrimaryColor.getContrastColor()
     protected var textColor = baseConfig.textColor
     protected var backgroundColor = baseConfig.backgroundColor
     protected var actModeCallback: MyActionModeCallback
@@ -278,8 +277,8 @@ abstract class MyRecyclerViewListAdapter<T>(
 
     fun updatePrimaryColor(primaryColor: Int) {
         this.primaryColor = primaryColor
-        adjustedPrimaryColor = activity.getAdjustedPrimaryColor()
-        contrastColor = adjustedPrimaryColor.getContrastColor()
+        primaryPrimaryColor = activity.getProperPrimaryColor()
+        contrastColor = primaryPrimaryColor.getContrastColor()
     }
 
     fun updateBackgroundColor(backgroundColor: Int) {

@@ -12,6 +12,7 @@ import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.SharedTheme
 import com.simplemobiletools.commons.views.*
 
+// handle system default theme (Material You) specially as the color is taken from the system, not hardcoded by us
 fun Context.getProperTextColor() = if (baseConfig.isUsingSystemTheme) {
     resources.getColor(R.color.you_neutral_text_color)
 } else {
@@ -24,10 +25,10 @@ fun Context.getProperBackgroundColor() = if (baseConfig.isUsingSystemTheme) {
     baseConfig.backgroundColor
 }
 
-fun Context.getProperPrimaryColor() = if (baseConfig.isUsingSystemTheme) {
-    resources.getColor(R.color.you_primary_color)
-} else {
-    baseConfig.primaryColor
+fun Context.getProperPrimaryColor() = when {
+    baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_primary_color)
+    isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
+    else -> baseConfig.primaryColor
 }
 
 fun Context.updateTextColors(viewGroup: ViewGroup) {
@@ -75,11 +76,6 @@ fun Context.isBlackAndWhiteTheme() = baseConfig.textColor == Color.WHITE && base
 fun Context.isWhiteTheme() = baseConfig.textColor == DARK_GREY && baseConfig.primaryColor == Color.WHITE && baseConfig.backgroundColor == Color.WHITE
 
 fun Context.isUsingSystemDarkTheme() = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_YES != 0
-
-fun Context.getAdjustedPrimaryColor() = when {
-    isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
-    else -> getProperPrimaryColor()
-}
 
 fun Context.getDialogTheme() = if (baseConfig.backgroundColor.getContrastColor() == Color.WHITE) R.style.MyDialogTheme_Dark else R.style.MyDialogTheme
 

@@ -11,9 +11,9 @@ class RateStarsDialog(val activity: Activity) {
 
     init {
         val view = activity.layoutInflater.inflate(R.layout.dialog_rate_stars, null).apply {
-            val textColor = activity.baseConfig.textColor
+            val primaryColor = activity.getProperPrimaryColor()
             arrayOf(rate_star_1, rate_star_2, rate_star_3, rate_star_4, rate_star_5).forEach {
-                it.applyColorFilter(textColor)
+                it.applyColorFilter(primaryColor)
             }
 
             rate_star_1.setOnClickListener { dialogCancelled(true) }
