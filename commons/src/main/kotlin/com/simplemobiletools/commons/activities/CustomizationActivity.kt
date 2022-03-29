@@ -106,7 +106,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
         if (!baseConfig.isUsingSystemTheme) {
             updateBackgroundColor(getCurrentBackgroundColor())
-            updateActionbarColor(getCurrentPrimaryColor())
+            updateActionbarColor(getCurrentStatusBarColor())
             updateNavigationBarColor(curNavigationBarColor)
         }
 
@@ -581,6 +581,10 @@ class CustomizationActivity : BaseSimpleActivity() {
                 if (hasColorChanged(curAccentColor, color)) {
                     curAccentColor = color
                     colorChanged()
+
+                    if (isCurrentWhiteTheme() || isCurrentBlackAndWhiteTheme()) {
+                        updateActionbarColor(getCurrentStatusBarColor())
+                    }
                 }
             }
         }
@@ -674,6 +678,8 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun getCurrentStatusBarColor() = if (customization_theme.value == getString(R.string.system_default)) {
         resources.getColor(R.color.you_status_bar_color)
+    } else if (isCurrentBlackAndWhiteTheme() || isCurrentWhiteTheme()) {
+        curAccentColor
     } else {
         curPrimaryColor
     }
