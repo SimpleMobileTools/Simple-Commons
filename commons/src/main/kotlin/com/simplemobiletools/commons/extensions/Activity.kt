@@ -48,19 +48,23 @@ import java.io.OutputStream
 import java.util.*
 
 fun AppCompatActivity.updateActionBarTitle(text: String, color: Int = baseConfig.primaryColor) {
-    if (baseConfig.isUsingSystemTheme) {
-        supportActionBar?.title = text
+    val colorToUse = if (baseConfig.isUsingSystemTheme) {
+        getProperTextColor()
     } else {
-        supportActionBar?.title = Html.fromHtml("<font color='${color.getContrastColor().toHex()}'>$text</font>")
+        color.getContrastColor()
     }
+
+    supportActionBar?.title = Html.fromHtml("<font color='${colorToUse.toHex()}'>$text</font>")
 }
 
 fun AppCompatActivity.updateActionBarSubtitle(text: String) {
-    if (baseConfig.isUsingSystemTheme) {
-        supportActionBar?.subtitle = text
+    val colorToUse = if (baseConfig.isUsingSystemTheme) {
+        getProperTextColor()
     } else {
-        supportActionBar?.subtitle = Html.fromHtml("<font color='${baseConfig.primaryColor.getContrastColor().toHex()}'>$text</font>")
+        baseConfig.primaryColor.getContrastColor()
     }
+
+    supportActionBar?.subtitle = Html.fromHtml("<font color='${colorToUse.toHex()}'>$text</font>")
 }
 
 fun Activity.appLaunched(appId: String) {

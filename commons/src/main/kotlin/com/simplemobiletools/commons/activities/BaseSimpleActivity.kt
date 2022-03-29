@@ -22,7 +22,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
-import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -202,14 +201,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
         var color = baseColor.getContrastColor()
         if (baseConfig.isUsingSystemTheme) {
-            val views = ArrayList<View>()
-            try {
-                window.decorView.rootView.findViewsWithText(views, supportActionBar?.title, View.FIND_VIEWS_WITH_TEXT)
-                views.firstOrNull { it is TextView && it.id == -1 }?.apply {
-                    color = (this as TextView).currentTextColor
-                }
-            } catch (ignored: Exception) {
-            }
+            color = getProperTextColor()
         }
 
         for (i in 0 until menu.size()) {
