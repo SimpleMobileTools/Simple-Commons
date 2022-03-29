@@ -341,8 +341,8 @@ class PropertiesDialog() {
         }
 
         mInflater.inflate(R.layout.item_property, mPropertyView, false).apply {
-            property_value.setTextColor(mActivity.baseConfig.textColor)
-            property_label.setTextColor(mActivity.baseConfig.textColor)
+            property_value.setTextColor(mActivity.getProperTextColor())
+            property_label.setTextColor(mActivity.getProperTextColor())
 
             property_label.text = mResources.getString(labelId)
             property_value.text = value

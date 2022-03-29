@@ -36,7 +36,7 @@ class PinTab(context: Context, attrs: AttributeSet) : RelativeLayout(context, at
         pin_9.setOnClickListener { addNumber("9") }
         pin_c.setOnClickListener { clear() }
         pin_ok.setOnClickListener { confirmPIN() }
-        pin_ok.applyColorFilter(context.baseConfig.textColor)
+        pin_ok.applyColorFilter(context.getProperTextColor())
     }
 
     override fun initTab(

@@ -74,7 +74,7 @@ class SelectAlarmSoundDialog(
             text = alarmSound.title
             isChecked = alarmSound.uri == currentUri
             id = alarmSound.id
-            setColors(config.textColor, activity.getProperPrimaryColor(), config.backgroundColor)
+            setColors(activity.getProperTextColor(), activity.getProperPrimaryColor(), activity.getProperBackgroundColor())
             setOnClickListener {
                 alarmClicked(alarmSound)
 

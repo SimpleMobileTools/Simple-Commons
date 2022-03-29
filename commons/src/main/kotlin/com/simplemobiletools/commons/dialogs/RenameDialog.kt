@@ -28,7 +28,7 @@ class RenameDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String
             }
             viewPager.currentItem = activity.baseConfig.lastRenameUsed
 
-            val textColor = context.baseConfig.textColor
+            val textColor = context.getProperTextColor()
             dialog_tab_layout.setTabTextColors(textColor, textColor)
             dialog_tab_layout.setSelectedTabIndicatorColor(context.getProperPrimaryColor())
 

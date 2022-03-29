@@ -25,7 +25,7 @@ class FingerprintTab(context: Context, attrs: AttributeSet) : RelativeLayout(con
 
     override fun onFinishInflate() {
         super.onFinishInflate()
-        val textColor = context.baseConfig.textColor
+        val textColor = context.getProperTextColor()
         context.updateTextColors(fingerprint_lock_holder)
         fingerprint_image.applyColorFilter(textColor)
 

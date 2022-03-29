@@ -140,7 +140,7 @@ class ColorPickerDialog(
             }
         }
 
-        val textColor = baseConfig.textColor
+        val textColor = activity.getProperTextColor()
         val builder = AlertDialog.Builder(activity)
             .setPositiveButton(R.string.ok) { dialog, which -> confirmNewColor() }
             .setNegativeButton(R.string.cancel) { dialog, which -> dialogDismissed() }

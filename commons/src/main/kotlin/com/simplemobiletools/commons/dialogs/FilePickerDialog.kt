@@ -100,7 +100,7 @@ class FilePickerDialog(
             (layoutParams as CoordinatorLayout.LayoutParams).bottomMargin = secondaryFabBottomMargin
         }
 
-        mDialogView.filepicker_placeholder.setTextColor(activity.baseConfig.textColor)
+        mDialogView.filepicker_placeholder.setTextColor(activity.getProperTextColor())
         mDialogView.filepicker_fastscroller.updateColors(activity.getProperPrimaryColor())
         mDialogView.filepicker_fab_show_hidden.apply {
             beVisibleIf(!showHidden && canAddShowHiddenButton)
