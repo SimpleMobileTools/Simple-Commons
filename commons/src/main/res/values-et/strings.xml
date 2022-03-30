@@ -161,9 +161,8 @@
     <string name="could_not_create_folder">%s kausta loomine ei õnnestunud</string>
     <string name="could_not_create_file">%s faili loomine ei õnnestunud</string>
     <string name="no_new_items">Uusi objekte ei leidu</string>
-    <string name="no_space">Sihtkausta andmekandjal pole piisavalt ruumi.
+    <string name="no_space">Sihtkausta andmekandjal pole piisavalt ruumi.\nVajalik on %1$s, aga leidub %2$s</string>
     <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
-\nVajalik on %1$s, aga leidub %2$s</string>
     <!-- Create new -->
     <string name="create_new">Loo uus</string>
     <string name="folder">Kaust</string>
