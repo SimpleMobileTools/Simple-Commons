@@ -162,7 +162,7 @@
     <string name="could_not_create_file">Αδύνατη η δημιουργία του αρχείου %s</string>
     <string name="no_new_items">Δεν βρέθηκαν νέα στοιχεία</string>
     <string name="no_space">Ο προορισμός που επιλέξατε δεν διαθέτει τον απαιτούμενο χώρο.\nΑπαιτείται %1$s, διαθέσιμα %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="system_service_disabled">Η υπηρεσία Συστήματος για την επιλογή αρχείων και φακέλων δεν είναι διαθέσιμη</string>
 
     <!-- Create new -->
     <string name="create_new">Δημιουργία νέου</string>
@@ -184,7 +184,7 @@
     <string name="skip">Παράβλεψη</string>
     <string name="append">Προσάρτηση με \'_1\'</string>
     <string name="apply_to_all">Εφαρμογή σε όλα</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
+    <string name="system_folder_restriction">Το Σύστημα δεν επιτρέπει τη λειτουργία σε αυτόν το φάκελο, παρακαλούμε επιλέξτε έναν άλλο φάκελο</string>
 
     <!-- File picker -->
     <string name="select_folder">Επιλογή φακέλου</string>
