@@ -156,6 +156,7 @@
     <string name="could_not_create_file">يتعذر إنشاء الملف %s</string>
     <string name="no_new_items">لا توجد عناصر جديدة</string>
     <string name="no_space">لا تحتوي الوجهة على مساحة كافية متوفرة .\n مطلوب %1$s، المتوفر %2$s</string>
+    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
     <!-- Create new -->
     <string name="create_new">إنشاء جديد</string>
     <string name="folder">مجلد</string>

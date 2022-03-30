@@ -162,6 +162,7 @@
     <string name="could_not_create_file">Невозможно создать файл \"%s\"</string>
     <string name="no_new_items">Ничего не найдено</string>
     <string name="no_space">По выбранному пути недостаточно свободного места.\nНеобходимо %1$s, доступно %2$s.</string>
+    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
     <!-- Create new -->
     <string name="create_new">Создать</string>
     <string name="folder">Папка</string>

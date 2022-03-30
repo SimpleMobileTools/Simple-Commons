@@ -156,6 +156,7 @@
     <string name="could_not_create_file">無法建立檔案 %s</string>
     <string name="no_new_items">未發現新的項目</string>
     <string name="no_space">目標沒有足夠的可用空間。\n需求 %1$s, 可用 %2$s</string>
+    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
     <!-- Create new -->
     <string name="create_new">新增</string>
     <string name="folder">資料夾</string>

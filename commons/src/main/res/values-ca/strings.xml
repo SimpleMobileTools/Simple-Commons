@@ -162,6 +162,7 @@
     <string name="could_not_create_file">No s\'ha pogut crear el fitxer %s</string>
     <string name="no_new_items">No s\'ha trobat cap element nou</string>
     <string name="no_space">La destinació no té prou espai disponible.
+    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
 \nNecessari %1$s, disponible %2$s</string>
     <!-- Create new -->
     <string name="create_new">Crea nou</string>

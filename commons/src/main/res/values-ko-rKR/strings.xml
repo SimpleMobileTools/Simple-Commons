@@ -164,6 +164,7 @@
     <string name="could_not_create_file">%s 파일 생성에 실패함</string>
     <string name="no_new_items">새 항목을 찾을 수 없음</string>
     <string name="no_space">대상 경로의 공간이 부족합니다.\n필요 공간: %1$s, 사용 가능: %2$s</string>
+    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
 
     <!-- Create new -->
     <string name="create_new">새로 만들기</string>

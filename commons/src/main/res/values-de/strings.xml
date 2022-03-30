@@ -156,6 +156,7 @@
     <string name="could_not_create_file">Datei %s konnte nicht erstellt werden</string>
     <string name="no_new_items">Keine neuen Elemente gefunden</string>
     <string name="no_space">Der freie Platz im Zielverzeichnis ist nicht ausreichend.\nErforderlich: %1$s; Vorhanden: %2$s</string>
+    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
     <!-- Create new -->
     <string name="create_new">Neuer Ordner</string>
     <string name="folder">Ordner</string>

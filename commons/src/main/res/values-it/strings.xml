@@ -156,6 +156,7 @@
     <string name="could_not_create_file">Impossibile creare il file %s</string>
     <string name="no_new_items">Nessun nuovo elemento trovato</string>
     <string name="no_space">La destinazione non ha abbastanza spazio disponibile.\nRichiesti %1$s, disponibili %2$s</string>
+    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
     <!-- Create new -->
     <string name="create_new">Crea nuovo</string>
     <string name="folder">Cartella</string>

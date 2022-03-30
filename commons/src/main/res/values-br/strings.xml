@@ -165,6 +165,7 @@
     <string name="could_not_create_file">Could not create file %s</string>
     <string name="no_new_items">No new items have been found</string>
     <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
+    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
 
     <!-- Create new -->
     <string name="create_new">Create new</string>
