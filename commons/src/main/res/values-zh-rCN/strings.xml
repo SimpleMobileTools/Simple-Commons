@@ -156,7 +156,7 @@
     <string name="could_not_create_file">创建文件 %s 失败</string>
     <string name="no_new_items">没有找到新的项目</string>
     <string name="no_space">目标位置没有足够的可用空间。\n需要 %1$s，可用 %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="system_service_disabled">选择文件和文件夹的系统服务不可用</string>
     <!-- Create new -->
     <string name="create_new">新建</string>
     <string name="folder">文件夹</string>
