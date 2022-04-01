@@ -194,13 +194,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun updateMenuItemColors(menu: Menu?, useCrossAsBack: Boolean = false, baseColor: Int = getProperPrimaryColor(), updateHomeAsUpColor: Boolean = true) {
+    fun updateMenuItemColors(
+        menu: Menu?, useCrossAsBack: Boolean = false, baseColor: Int = getProperPrimaryColor(), updateHomeAsUpColor: Boolean = true,
+        isContextualMenu: Boolean = false
+    ) {
         if (menu == null) {
             return
         }
 
         var color = baseColor.getContrastColor()
-        if (baseConfig.isUsingSystemTheme) {
+        if (baseConfig.isUsingSystemTheme && !isContextualMenu) {
             color = getProperTextColor()
         }
 

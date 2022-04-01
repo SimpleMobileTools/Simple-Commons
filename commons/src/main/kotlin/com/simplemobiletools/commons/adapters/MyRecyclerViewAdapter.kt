@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.adapters
 
 import android.graphics.Color
 import android.view.*
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -74,9 +75,24 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                         selectAll()
                     }
                 }
+
                 activity.menuInflater.inflate(getActionMenuId(), menu)
-                activity.updateMenuItemColors(menu, baseColor = Color.BLACK, updateHomeAsUpColor = false)
+                val bgColor = if (baseConfig.isUsingSystemTheme) {
+                    resources.getColor(R.color.you_contextual_status_bar_color, activity.theme)
+                } else {
+                    Color.BLACK
+                }
+
+                actBarTextView!!.setTextColor(bgColor.getContrastColor())
+                activity.updateMenuItemColors(menu, baseColor = bgColor, updateHomeAsUpColor = true, isContextualMenu = true)
                 onActionModeCreated()
+
+                if (baseConfig.isUsingSystemTheme) {
+                    actBarTextView?.onGlobalLayout {
+                        val backArrow = activity.findViewById<ImageView>(R.id.action_mode_close_button)
+                        backArrow?.applyColorFilter(bgColor.getContrastColor())
+                    }
+                }
                 return true
             }
 

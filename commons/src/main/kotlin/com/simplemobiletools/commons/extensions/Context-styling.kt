@@ -14,19 +14,19 @@ import com.simplemobiletools.commons.views.*
 
 // handle system default theme (Material You) specially as the color is taken from the system, not hardcoded by us
 fun Context.getProperTextColor() = if (baseConfig.isUsingSystemTheme) {
-    resources.getColor(R.color.you_neutral_text_color)
+    resources.getColor(R.color.you_neutral_text_color, theme)
 } else {
     baseConfig.textColor
 }
 
 fun Context.getProperBackgroundColor() = if (baseConfig.isUsingSystemTheme) {
-    resources.getColor(R.color.you_background_color)
+    resources.getColor(R.color.you_background_color, theme)
 } else {
     baseConfig.backgroundColor
 }
 
 fun Context.getProperPrimaryColor() = when {
-    baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_primary_color)
+    baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_primary_color, theme)
     isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
     else -> baseConfig.primaryColor
 }
