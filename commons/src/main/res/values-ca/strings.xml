@@ -162,7 +162,7 @@
     <string name="could_not_create_file">No s\'ha pogut crear el fitxer %s</string>
     <string name="no_new_items">No s\'ha trobat cap element nou</string>
     <string name="no_space">La destinació no té prou espai disponible.\nNecessari %1$s, disponible %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="system_service_disabled">El servei del sistema per seleccionar fitxers i carpetes no està disponible</string>
     <!-- Create new -->
     <string name="create_new">Crea nou</string>
     <string name="folder">Carpeta</string>
@@ -182,7 +182,7 @@
     <string name="skip">Omet</string>
     <string name="append">Afegeix amb «_1»</string>
     <string name="apply_to_all">Aplica-ho a tots</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
+    <string name="system_folder_restriction">El sistema no permet l\'operació en aquesta carpeta, trieu-ne una altra</string>
     <!-- File picker -->
     <string name="select_folder">Selecciona una carpeta</string>
     <string name="select_file">Seleccioneu un fitxer</string>

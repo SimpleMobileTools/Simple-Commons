@@ -156,7 +156,7 @@
     <string name="could_not_create_file">Nie udało się utworzyć pliku %s</string>
     <string name="no_new_items">Nie znaleziono nowych elementów</string>
     <string name="no_space">Miejsce docelowe nie ma wystarczającej ilości wolnego miejsca.\nWymagane %1$s, dostępne %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="system_service_disabled">Usługa systemowa do wybierania plików i folderów jest niedostępna</string>
     <!-- Create new -->
     <string name="create_new">Utwórz nowy</string>
     <string name="folder">Folder</string>
@@ -176,7 +176,7 @@
     <string name="skip">Pomiń</string>
     <string name="append">Dodaj końcówkę „_1”</string>
     <string name="apply_to_all">Zastosuj do wszystkich</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
+    <string name="system_folder_restriction">System nie pozwala na operację w tym folderze, wybierz inny</string>
     <!-- File picker -->
     <string name="select_folder">Wybierz folder</string>
     <string name="select_file">Wybierz plik</string>
