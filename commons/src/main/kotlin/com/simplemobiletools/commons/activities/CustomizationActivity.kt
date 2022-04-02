@@ -198,6 +198,10 @@ class CustomizationActivity : BaseSimpleActivity() {
                 }
             }
         }
+
+        if (customization_theme.value == getString(R.string.system_default)) {
+            apply_to_all_holder.beGone()
+        }
     }
 
     private fun themePickerClicked() {
