@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Avbryt</string>
@@ -10,7 +11,7 @@
     <string name="an_error_occurred">Ett fel har uppstått: %s</string>
     <string name="open_with">Öppna med</string>
     <string name="edit_with">Redigera med</string>
-    <string name="edit">Edit</string>
+    <string name="edit">Redigera</string>
     <string name="no_app_found">Ingen giltig app hittades</string>
     <string name="set_as">Använd som</string>
     <string name="copy_to_clipboard">Copy to clipboard</string>
@@ -54,7 +55,6 @@
     <string name="eight">Eight</string>
     <string name="nine">Nine</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
-
     <!-- Emails -->
     <string name="home">Hem</string>
     <string name="work">Arbete</string>
@@ -65,7 +65,6 @@
     <string name="home_fax">Hemfax</string>
     <string name="pager">Personsökare</string>
     <string name="no_phone_number_found">Inget telefonnummer hittades</string>
-
     <!-- View types -->
     <string name="change_view_type">Ändra vy</string>
     <string name="grid">Rutnät</string>
@@ -75,7 +74,6 @@
     <string name="reduce_column_count">Minska antalet kolumner</string>
     <string name="change_cover_image">Byt omslagsbild</string>
     <string name="select_photo">Välj foto</string>
-
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Hantera blockerade nummer</string>
     <string name="not_blocking_anyone">Du blockerar inte någon.</string>
@@ -88,28 +86,23 @@
     <string name="must_make_default_dialer">Du måste ställa in den här appen som standardtelefonapp för att kunna använda blockerade nummer.</string>
     <string name="set_as_default">Ange som standard</string>
     <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
-
     <!-- Favorites -->
     <string name="favorites">Favoriter</string>
     <string name="add_favorites">Lägg till favoriter</string>
     <string name="add_to_favorites">Lägg till i favoriter</string>
     <string name="remove_from_favorites">Ta bort från favoriter</string>
-
     <!-- Search -->
     <string name="search">Sök</string>
     <string name="type_2_characters">Skriv in minst två tecken för att starta sökningen.</string>
-
     <!-- Filters -->
     <string name="filter">Filtrera</string>
     <string name="no_items_found">Inga objekt hittades.</string>
     <string name="change_filter">Ändra filter</string>
-
     <!-- Permissions -->
     <string name="no_storage_permissions">Lagringsbehörighet krävs</string>
     <string name="no_contacts_permission">Kontaktbehörighet krävs</string>
     <string name="no_camera_permissions">Kamerabehörighet krävs</string>
     <string name="no_audio_permissions">Mikrofonbehörighet krävs</string>
-
     <!-- Renaming -->
     <string name="rename_file">Byt namn på fil</string>
     <string name="rename_folder">Byt namn på mapp</string>
@@ -134,7 +127,6 @@
     <string name="filename_without_txt">Filename (without .txt)</string>
     <string name="filename_without_json">Filename (without .json)</string>
     <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
-
     <!-- Copy / Move -->
     <string name="copy">Kopiera</string>
     <string name="move">Flytta</string>
@@ -165,7 +157,6 @@
     <string name="no_new_items">Inga nya objekt hittades</string>
     <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
     <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
-
     <!-- Create new -->
     <string name="create_new">Skapa ny</string>
     <string name="folder">Mapp</string>
@@ -175,7 +166,6 @@
     <string name="invalid_name">Namnet innehåller ogiltiga tecken</string>
     <string name="empty_name">Ange ett namn</string>
     <string name="unknown_error_occurred">Ett okänt fel har uppstått</string>
-
     <!-- File operation conflicts -->
     <string name="file_already_exists">Filen \"%s\" finns redan</string>
     <string name="file_already_exists_overwrite">Filen \"%s\" finns redan. Skriv över?</string>
@@ -187,7 +177,6 @@
     <string name="append">Lägg till \'_1\'</string>
     <string name="apply_to_all">Använd på alla konflikter</string>
     <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
-
     <!-- File picker -->
     <string name="select_folder">Välj mapp</string>
     <string name="select_file">Välj fil</string>
@@ -200,29 +189,24 @@
     <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
     <string name="confirm_selection">Bekräfta val</string>
     <string name="loading">Loading…</string>
-
     <plurals name="items">
         <item quantity="one">%d objekt</item>
         <item quantity="other">%d objekt</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d objekt</item>
         <item quantity="other">%d objekt</item>
     </plurals>
-
     <plurals name="deleting_items">
         <item quantity="one">Tar bort %d objekt</item>
         <item quantity="other">Tar bort %d objekt</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d kontakt</item>
         <item quantity="other">%d kontakter</item>
     </plurals>
-
     <!-- Storages -->
     <string name="select_storage">Välj lagringsplats</string>
     <string name="internal">Internt</string>
@@ -233,7 +217,6 @@
     <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
         It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
     <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
-
     <!-- File properties -->
     <string name="properties">Egenskaper</string>
     <string name="path">Sökväg</string>
@@ -256,7 +239,6 @@
     <string name="remove_exif">Remove EXIF</string>
     <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
     <string name="exif_removed">EXIF values removed successfully</string>
-
     <!-- Color customization -->
     <string name="background_color">Bakgrundsfärg</string>
     <string name="text_color">Textfärg</string>
@@ -287,7 +269,6 @@
             Köp <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> för att låsa upp denna funktion och stödja utvecklingen. Tack!
         ]]>
     </string>
-
     <!-- Themes -->
     <string name="light_theme">Ljust</string>
     <string name="dark_theme">Mörkt</string>
@@ -300,11 +281,9 @@
     <string name="custom">Anpassat</string>
     <string name="shared">Delat</string>
     <string name="system_default">System default</string>
-
     <!-- What's new -->
     <string name="whats_new">Vad är nytt</string>
     <string name="whats_new_disclaimer">* bara de större uppdateringarna visas här, det görs också alltid några mindre förbättringar</string>
-
     <!-- Actionbar items -->
     <string name="delete">Ta bort</string>
     <string name="remove">Ta bort</string>
@@ -334,10 +313,9 @@
     <string name="move_to_bottom">Move to the bottom</string>
     <string name="pin_item">Pin item</string>
     <string name="unpin_item">Unpin item</string>
-    <string name="send_sms">Send SMS</string>
+    <string name="send_sms">Skicka sms</string>
     <string name="send_email">Send email</string>
     <string name="call">Call</string>
-
     <!-- Sorting -->
     <string name="sort_by">Sortera efter</string>
     <string name="name">Namn</string>
@@ -360,11 +338,12 @@
     <string name="full_name">Full name</string>
     <string name="use_custom_sorting">Use custom sorting</string>
     <string name="change_order">Change order</string>
-
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Är du säker på att du vill fortsätta med borttagningen?</string>
-    <string name="deletion_confirmation">Är du säker på att du vill ta bort %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Är du säker på att du vill flytta %s till Papperskorgen?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">Är du säker på att du vill ta bort %s?</string>
+    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Är du säker på att du vill flytta %s till Papperskorgen?</string>
+    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Är du säker på att du vill ta bort det här objektet?</string>
     <string name="are_you_sure_recycle_bin">Är du säker på att du vill flytta det här objektet till Papperskorgen?</string>
     <string name="do_not_ask_again">Fråga inte igen i denna session</string>
@@ -372,12 +351,10 @@
     <string name="yes">Ja</string>
     <string name="no">Nej</string>
     <string name="maybe">Kanske</string>
-
     <plurals name="delete_warning">
         <item quantity="one">VARNING! Du håller på att ta bort %d mapp</item>
         <item quantity="other">VARNING! Du håller på att ta bort %d mappar</item>
     </plurals>
-
     <!-- Password protection -->
     <string name="pin">PIN-kod</string>
     <string name="enter_pin">Ange PIN-kod</string>
@@ -403,7 +380,6 @@
     <string name="lock_folder">Lås mapp</string>
     <string name="unlock_folder">Lås upp mapp</string>
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
-
     <!-- Times -->
     <string name="yesterday">Igår</string>
     <string name="today">Idag</string>
@@ -416,7 +392,6 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
-
     <plurals name="seconds">
         <item quantity="one">%d sekund</item>
         <item quantity="other">%d sekunder</item>
@@ -445,7 +420,6 @@
         <item quantity="one">%d år</item>
         <item quantity="other">%d år</item>
     </plurals>
-
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d sekund</item>
@@ -475,7 +449,6 @@
         <item quantity="one">%d år</item>
         <item quantity="other">%d år</item>
     </plurals>
-
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d sekund innan</item>
@@ -505,7 +478,6 @@
         <item quantity="one">%d år innan</item>
         <item quantity="other">%d år innan</item>
     </plurals>
-
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d sekund</item>
@@ -535,7 +507,6 @@
         <item quantity="one">%d år</item>
         <item quantity="other">%d år</item>
     </plurals>
-
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Återstående tid tills alarmet ringer:\n%s</string>
     <string name="reminder_triggers_in">Återstående tid tills påminnelsen aktiveras:\n%s</string>
@@ -543,7 +514,6 @@
     <string name="alarm_warning">Kontrollera att alarmet fungerar som det ska innan du förlitar dig på det. Det kanske inte fungerar som det ska på grund av batterisparrelaterade systembegränsningar.</string>
     <string name="reminder_warning">Kontrollera att påminnelserna fungerar som de ska innan du förlitar dig på dem. De kanske inte fungerar som de ska på grund av batterisparrelaterade systembegränsningar.</string>
     <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
-
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
     <string name="snooze">Snooza</string>
@@ -556,7 +526,6 @@
     <string name="no_sound">Inget ljud</string>
     <string name="during_day_at_hh_mm">During the day at hh:mm</string>
     <string name="during_day_at">During the day at %02d:%02d</string>
-
     <!-- Settings -->
     <string name="settings">Inställningar</string>
     <string name="purchase_simple_thank_you">Köp Simple Thank You</string>
@@ -600,7 +569,6 @@
     <string name="start_name_with_surname">Visa efternamn först</string>
     <string name="clear_cache">Clear cache</string>
     <string name="show_call_confirmation_dialog">Visa en bekräftelsedialogruta före uppringning</string>
-
     <!-- Setting sections -->
     <string name="visibility">Synlighet</string>
     <string name="security">Säkerhet</string>
@@ -615,7 +583,6 @@
     <string name="main_screen">Main screen</string>
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
-
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Välj vilka flikar som ska visas</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
@@ -626,7 +593,6 @@
     <string name="last_used_tab">Last used one</string>
     <string name="files_tab">Files</string>
     <string name="recent_files_tab">Recent files</string>
-
     <!-- Recycle Bin -->
     <string name="restore_this_file">Återställ filen</string>
     <string name="restore_selected_files">Återställ valda filer</string>
@@ -638,12 +604,10 @@
     <string name="moving_recycle_bin_items_disabled">Flytt av objekt i Papperskorgen är inaktiverad, använd Återställ</string>
     <string name="show_the_recycle_bin">Visa Papperskorgen</string>
     <string name="hide_the_recycle_bin">Dölj Papperskorgen</string>
-
     <plurals name="moving_items_into_bin">
         <item quantity="one">Flyttar %d objekt till Papperskorgen</item>
         <item quantity="other">Flyttar %d objekt till Papperskorgen</item>
     </plurals>
-
     <!-- Import / Export -->
     <string name="importing">Importerar…</string>
     <string name="exporting">Exporterar…</string>
@@ -656,13 +620,11 @@
     <string name="no_entries_for_importing">Inga poster som kan importeras hittades</string>
     <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
     <string name="no_entries_for_exporting">Inga poster som kan exporteras hittades</string>
-
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
     <string name="confirm_usb_storage_access_text">Välj rotmappen på USB-enheten på nästa skärm, för att ge åtkomst</string>
     <string name="wrong_root_selected_usb">Du har valt fel mapp, välj rotmappen på din USB-enhet</string>
-
     <!-- Dates -->
     <string name="january">Januari</string>
     <string name="february">Februari</string>
@@ -676,7 +638,6 @@
     <string name="october">Oktober</string>
     <string name="november">November</string>
     <string name="december">December</string>
-
     <!-- in January -->
     <string name="in_january">i januari</string>
     <string name="in_february">i februari</string>
@@ -690,7 +651,6 @@
     <string name="in_october">i oktober</string>
     <string name="in_november">i november</string>
     <string name="in_december">i december</string>
-
     <string name="monday">Måndag</string>
     <string name="tuesday">Tisdag</string>
     <string name="wednesday">Onsdag</string>
@@ -698,7 +658,6 @@
     <string name="friday">Fredag</string>
     <string name="saturday">Lördag</string>
     <string name="sunday">Söndag</string>
-
     <string name="monday_letter">M</string>
     <string name="tuesday_letter">T</string>
     <string name="wednesday_letter">O</string>
@@ -706,7 +665,6 @@
     <string name="friday_letter">F</string>
     <string name="saturday_letter">L</string>
     <string name="sunday_letter">S</string>
-
     <string name="monday_short">Mån</string>
     <string name="tuesday_short">Tis</string>
     <string name="wednesday_short">Ons</string>
@@ -714,7 +672,6 @@
     <string name="friday_short">Fre</string>
     <string name="saturday_short">Lör</string>
     <string name="sunday_short">Sön</string>
-
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
     <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
@@ -722,7 +679,6 @@
     <string name="more_info">Mer information</string>
     <string name="upgrade">Uppgradera</string>
     <string name="upgrade_calendar">Lokalt sparade händelser kan bara migreras manuellt genom att exportera och importera dem till och från en .ics-fil. Du hittar knappar för både export och import i huvudvymenyn.</string>
-
     <!-- About -->
     <string name="about">Om</string>
     <string name="website">Website</string>
@@ -747,7 +703,7 @@
     <string name="privacy_policy">Privacy policy</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="about_footer">Made with ❤️ in Slovakia</string>
     <string name="additional_info">Ytterligare information</string>
     <string name="app_version">Appversion: %s</string>
     <string name="device_os">Enhetens operativsystem: %s</string>
@@ -774,7 +730,6 @@
             The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
         ]]>
     </string>
-
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -787,7 +742,6 @@
             Tack
         ]]>
     </string>
-
     <string name="simple_app_launcher">Simple App Launcher</string>
     <string name="simple_calculator">Simple Calculator</string>
     <string name="simple_calendar">Simple Calendar</string>
@@ -805,7 +759,6 @@
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
-
     <string name="app_launcher_short">App Launcher</string>
     <string name="calculator_short">Calculator</string>
     <string name="calendar_short">Calendar</string>
@@ -823,13 +776,11 @@
     <string name="sms_messenger_short">SMS Messenger</string>
     <string name="thank_you_short">Thank You</string>
     <string name="voice_recorder_short">Voice Recorder</string>
-
     <string name="sideloaded_app">
         <![CDATA[
             It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
         ]]>
     </string>
-
     <!-- FAQ -->
     <string name="frequently_asked_questions">Frågor och svar</string>
     <string name="before_asking_question">Innan du ställer en fråga, läs först</string>
@@ -864,7 +815,6 @@
         want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
     <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
     <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
-
     <!-- Contributors -->
     <string name="contributors">Contributors</string>
     <string name="translation">Translation</string>
@@ -877,7 +827,6 @@
             Thanks to all contributors and other supporters!
         ]]>
     </string>
-
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -922,7 +871,6 @@
     <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
     <string name="translation_chinese_cn">Chinese (Simplified)</string>
     <string name="translation_chinese_tw">Chinese (Traditional)</string>
-
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Get the Pro version now!</string>
     <string name="why_upgrade_basic_version">Basic</string>
@@ -931,43 +879,36 @@
     <string name="why_upgrade_no_internet_access">No internet access</string>
     <string name="why_upgrade_footer">+ 100% Money Back Guarantee</string>
     <string name="why_upgrade_improved_design">Improved design</string>
-
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
     <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
     <string name="why_upgrade_folder_locking">Individual folder locking</string>
     <string name="why_upgrade_printing_support">Printing support</string>
-
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Time zone support</string>
     <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
     <string name="why_upgrade_easy_event_importing">Easy event importing</string>
     <string name="why_upgrade_new_widgets">New widgets</string>
-
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
     <string name="why_upgrade_font_size_customization">Font size customization</string>
     <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
     <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
     <string name="why_upgrade_contact_filtering">Contact filtering</string>
-
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Checklists</string>
     <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
     <string name="why_upgrade_note_locking">Note locking</string>
-
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
     <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
     <string name="why_upgrade_file_compression">File compression support</string>
     <string name="why_upgrade_recents_tab">Tab with recent files</string>
-
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Background color customization</string>
     <string name="why_upgrade_file_importing">File importing support</string>
     <string name="why_upgrade_zooming">Zooming</string>
-
     <!-- License -->
     <string name="notice">Denna app använder följande tredjepartsbibliotek för att göra mitt liv enklare. Tack.</string>
     <string name="third_party_licences">Tredjepartslicenser</string>
@@ -1000,11 +941,9 @@
     <string name="audio_record_view_title">Audio Record View (audio visualization)</string>
     <string name="sms_mms_title">SMS MMS (SMS and MMS handling)</string>
     <string name="apng_title">APNG Android (animated WebP support)</string>
-
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
-
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
 </resources>
