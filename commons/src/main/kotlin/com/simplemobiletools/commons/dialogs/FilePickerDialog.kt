@@ -63,6 +63,7 @@ class FilePickerDialog(
         mDialogView.filepicker_breadcrumbs.apply {
             listener = this@FilePickerDialog
             updateFontSize(activity.getTextSize(), false)
+            isShownInDialog = true
         }
 
         tryUpdateItems()
@@ -73,7 +74,7 @@ class FilePickerDialog(
             .setOnKeyListener { dialogInterface, i, keyEvent ->
                 if (keyEvent.action == KeyEvent.ACTION_UP && i == KeyEvent.KEYCODE_BACK) {
                     val breadcrumbs = mDialogView.filepicker_breadcrumbs
-                    if (breadcrumbs.itemsCount > 1) {
+                    if (breadcrumbs.getItemCount() > 1) {
                         breadcrumbs.removeBreadcrumb()
                         currPath = breadcrumbs.getLastItem().path.trimEnd('/')
                         tryUpdateItems()
