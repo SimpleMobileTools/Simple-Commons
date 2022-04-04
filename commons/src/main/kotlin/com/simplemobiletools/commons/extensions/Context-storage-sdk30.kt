@@ -13,7 +13,11 @@ import java.io.File
 
 private const val DOWNLOAD_DIR = "Download"
 private const val ANDROID_DIR = "Android"
-private val DIRS_INACCESSIBLE_WITH_SAF_SDK_30 = if(isSPlus()) listOf(DOWNLOAD_DIR, ANDROID_DIR) else listOf(DOWNLOAD_DIR)
+private val DIRS_INACCESSIBLE_WITH_SAF_SDK_30 = if (isSPlus()) {
+    listOf(DOWNLOAD_DIR, ANDROID_DIR)
+} else {
+    listOf(DOWNLOAD_DIR)
+}
 
 fun Context.hasProperStoredFirstParentUri(path: String): Boolean {
     val firstParentUri = createFirstParentTreeUri(path)
@@ -29,10 +33,10 @@ fun Context.isAccessibleWithSAFSdk30(path: String): Boolean {
     val firstParentDir =  path.getFirstParentDirName(this, level)
     val firstParentPath =  path.getFirstParentPath(this, level)
 
-    return firstParentDir != null && File(firstParentPath).isDirectory &&
-        DIRS_INACCESSIBLE_WITH_SAF_SDK_30.all {
-            !firstParentDir.equals(it, true)
-        }
+    val isValidName = firstParentDir != null
+    val isDirectory = File(firstParentPath).isDirectory
+    val isAnAccessibleDirectory = DIRS_INACCESSIBLE_WITH_SAF_SDK_30.all { !firstParentDir.equals(it, true) }
+    return isValidName && isDirectory && isAnAccessibleDirectory
 }
 
 fun Context.getFirstParentLevel(path: String): Int {
@@ -52,10 +56,10 @@ fun Context.isRestrictedWithSAFSdk30(path: String): Boolean {
     val firstParentDir =  path.getFirstParentDirName(this, level)
     val firstParentPath =  path.getFirstParentPath(this, level)
 
-    return (firstParentDir == null || (File(firstParentPath).isDirectory &&
-        DIRS_INACCESSIBLE_WITH_SAF_SDK_30.any {
-            firstParentDir.equals(it, true)
-        }))
+    val isInvalidName = firstParentDir == null
+    val isDirectory = File(firstParentPath).isDirectory
+    val isARestrictedDirectory = DIRS_INACCESSIBLE_WITH_SAF_SDK_30.any { firstParentDir.equals(it, true) }
+    return isInvalidName || (isDirectory && isARestrictedDirectory)
 }
 
 fun Context.isInDownloadDir(path: String): Boolean {

@@ -47,7 +47,11 @@ fun String.getFirstParentDirName(context: Context, level: Int): String? {
     return if (length > startIndex) {
         val pathWithoutBasePath = substring(startIndex)
         val pathSegments = pathWithoutBasePath.split("/")
-        if (level < pathSegments.size) pathSegments.slice(0..level).joinToString("/") else null
+        if (level < pathSegments.size) {
+            pathSegments.slice(0..level).joinToString("/")
+        } else {
+            null
+        }
     } else {
         null
     }
@@ -59,7 +63,11 @@ fun String.getFirstParentPath(context: Context, level: Int): String {
     return if (length > startIndex) {
         val pathWithoutBasePath = substring(basePath.length + 1)
         val pathSegments = pathWithoutBasePath.split("/")
-        val firstParentPath = if (level < pathSegments.size) pathSegments.slice(0..level).joinToString("/") else pathWithoutBasePath
+        val firstParentPath = if (level < pathSegments.size) {
+            pathSegments.slice(0..level).joinToString("/")
+        } else {
+            pathWithoutBasePath
+        }
         "$basePath/$firstParentPath"
     } else {
         basePath
