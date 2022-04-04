@@ -196,7 +196,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     fun updateMenuItemColors(
         menu: Menu?, useCrossAsBack: Boolean = false, baseColor: Int = getProperPrimaryColor(), updateHomeAsUpColor: Boolean = true,
-        isContextualMenu: Boolean = false
+        isContextualMenu: Boolean = false, forceWhiteIcons: Boolean = false
     ) {
         if (menu == null) {
             return
@@ -205,6 +205,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         var color = baseColor.getContrastColor()
         if (baseConfig.isUsingSystemTheme && !isContextualMenu) {
             color = getProperTextColor()
+        }
+
+        if (forceWhiteIcons) {
+            color = Color.WHITE
         }
 
         for (i in 0 until menu.size()) {
