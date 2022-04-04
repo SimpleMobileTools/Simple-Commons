@@ -162,7 +162,7 @@
     <string name="could_not_create_file">%s faili loomine ei õnnestunud</string>
     <string name="no_new_items">Uusi objekte ei leidu</string>
     <string name="no_space">Sihtkausta andmekandjal pole piisavalt ruumi.\nVajalik on %1$s, aga leidub %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="system_service_disabled">Süsteemne teenus failide ja kaustade valimiseks pole saadaval</string>
     <!-- Create new -->
     <string name="create_new">Loo uus</string>
     <string name="folder">Kaust</string>
@@ -182,17 +182,17 @@
     <string name="skip">Jäta vahele</string>
     <string name="append">Lisa nimele _1</string>
     <string name="apply_to_all">Kohalda kõigile</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
+    <string name="system_folder_restriction">Selles kaustas pole toimingud lubatud, palun vali mõni muu kaust</string>
     <!-- File picker -->
     <string name="select_folder">Vali kaust</string>
     <string name="select_file">Vali fail</string>
     <string name="confirm_storage_access_title">Kinnita juurdepääs välisele salvestusruumile</string>
-    <string name="confirm_folder_access_title">Confirm folder access</string>
+    <string name="confirm_folder_access_title">Luba ligipääs kaustale</string>
     <string name="confirm_storage_access_text">Ligipääsu lubamiseks palun vali järgmises vaates SD-kaardi juurkaust</string>
     <string name="confirm_storage_access_text_sd">Kui sa SD-kaarti ei näe, siis proovi sellist võimalust</string>
     <string name="confirm_storage_access_android_text">Valitud salvestusruumile ligipääsu saamiseks vali järgmise vaate allosas „Kasuta seda kausta“.</string>
-    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
+    <string name="confirm_storage_access_android_text_specific">Vajutades järgmise vaate all ääres asuvat „<b>Kasuta seda kausta</b>“ luba ligipääs „<b>%s</b>“ kaustale.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Uue kausta loomiseks palun klõpsi järgmise vaata all ääres olevat „<b>Salvesta</b>“ nuppu.</string>
     <string name="confirm_selection">Kinnita valik</string>
     <string name="loading">Laadin…</string>
     <plurals name="items">
@@ -221,7 +221,7 @@
     <string name="wrong_root_selected">Valisid vale kausta, palun vali SD-kaardi juurkaust, mis on kõige esimene kaust</string>
     <string name="sd_card_usb_same">SD-kaardi ja USB-seadme asukohad ei saa olla samad</string>
     <string name="app_on_sd_card">Tundub, et oled rakenduse paigaldanud SD-kaardile, mis muudab rakenduse vidinad mittekasutatavateks. Sa isegi ei näe neid olemasolevate vidinate nimekirjas. Tegemist on süsteemipiiranguga, seega kui soovid vidinaid kasutada, pead rakenduse tagasi sisemällu tõstma.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">Valisid vale kausta, palun vali „%s“</string>
     <!-- File properties -->
     <string name="properties">Properties</string>
     <string name="path">Asukoht</string>
@@ -241,9 +241,9 @@
     <string name="song_title">Pala pealkiri</string>
     <string name="gps_coordinates">GPS-koordinaadid</string>
     <string name="altitude">Altitude</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">Kustuta EXIF-väljad</string>
+    <string name="remove_exif_confirmation">Kas sa oled kindel, et soovid kustutada EXIF väljade väärtused nagu näiteks asukoha koordinaadid, kaamera mudel, jmt\?</string>
+    <string name="exif_removed">EXIF-väljade kustutamine õnnestus</string>
     <!-- Color customization -->
     <string name="background_color">Taustavärv</string>
     <string name="text_color">Text color</string>
@@ -274,7 +274,7 @@
     <string name="light_theme">Hele</string>
     <string name="dark_theme">Tume</string>
     <string name="auto_theme">Auto</string>
-    <string name="auto_light_dark_theme">Auto light / dark</string>
+    <string name="auto_light_dark_theme">Määra hele või tume teema automaatselt</string>
     <string name="solarized">Päikese käes</string>
     <string name="dark_red">Tumepunane</string>
     <string name="white">White</string>
@@ -511,7 +511,8 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Äratuseni jäänud aeg:\n%s</string>
     <string name="reminder_triggers_in">Meeldetuletuseni jäänud aeg:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Järelejäänud aeg:
+\n%s</string>
     <string name="alarm_warning">Palun veendu, et alarm töötab korralikult, enne kui sa sellega arvestad. Alarm võib aku säästmisega seotud süsteemipiirangute tõttu valesti käituda.</string>
     <string name="reminder_warning">Palun veendu, et meeldetuletused töötavad korralikult, enne kui sa sellega arvestad. Kontrolli oma nutiseadme aku ja teavituse seadistusi, kas midagi ei blokeeri meeldetuletusi ega sulge taustal töötavat rakendust.</string>
     <string name="notifications_disabled">Selle rakenduse teavitused on välja lülitatud. Nende lubamiseks ava oma nutiseadme seadistused.</string>
@@ -701,7 +702,7 @@
     <string name="help_us">Help us</string>
     <string name="social">Social</string>
     <string name="other">Other</string>
-    <string name="privacy_policy">Privacy policy</string>
+    <string name="privacy_policy">Privaatsuspoliitika</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hei :)</string>
     <string name="about_footer">Tehtud Slovakkias suure ❤️\'ga</string>
@@ -719,7 +720,7 @@
     <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
     <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
     <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
-    <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
+    <string name="make_sure_latest">Lisaks palun kontrolli, et kasutad rakenduse viimast versiooni.</string>
     <string name="read_it">Loe järgnevat</string>
     <string name="read_faq">Loe korduma kippuvaid küsimusi</string>
     <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
@@ -741,7 +742,7 @@
     <string name="simple_file_manager">Simple File Manager</string>
     <string name="simple_flashlight">Lihtne taskulamp</string>
     <string name="simple_gallery">Lihtne galerii</string>
-    <string name="simple_keyboard">Simple Keyboard</string>
+    <string name="simple_keyboard">Lihtne klahvistik</string>
     <string name="simple_music_player">Lihtne muusikamängija</string>
     <string name="simple_notes">Simple Notes</string>
     <string name="simple_sms_messenger">Lihtne SMS sõnumiklient</string>
@@ -758,7 +759,7 @@
     <string name="file_manager_short">File Manager</string>
     <string name="flashlight_short">Taskulamp</string>
     <string name="gallery_short">Galerii</string>
-    <string name="keyboard_short">Keyboard</string>
+    <string name="keyboard_short">Klahvistik</string>
     <string name="music_player_short">Muusikamängija</string>
     <string name="notes_short">Notes</string>
     <string name="sms_messenger_short">SMS sõnumid</string>
@@ -873,20 +874,20 @@
     <string name="why_upgrade_font_size_customization">Kirjasuuruse kohandamine</string>
     <string name="why_upgrade_private_contact_sharing">Valikuline privaatsete kontaktide jagamine meie rakenduste vahel</string>
     <string name="why_upgrade_customizable_contact_ringtones">Kohandatavad helinad kontaktidele</string>
-    <string name="why_upgrade_contact_filtering">Contact filtering</string>
+    <string name="why_upgrade_contact_filtering">Kontaktide otsing</string>
     <!-- Notes Pro -->
-    <string name="why_upgrade_checklists">Checklists</string>
-    <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
-    <string name="why_upgrade_note_locking">Note locking</string>
+    <string name="why_upgrade_checklists">Tööde loendid</string>
+    <string name="why_upgrade_different_note_per_widget">Erinevad märkmed ja värvid iga vidina kohta</string>
+    <string name="why_upgrade_note_locking">Märkmete lukustamine</string>
     <!-- File Manager Pro -->
-    <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
-    <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
+    <string name="why_upgrade_date_and_time_format">Kuupäeva ja kellaaja vormingu kohandamine</string>
+    <string name="why_upgrade_shortcuts">Lingid avavaates</string>
     <string name="why_upgrade_file_compression">File compression support</string>
     <string name="why_upgrade_recents_tab">Tab with recent files</string>
     <!-- Draw Pro -->
-    <string name="why_upgrade_background_color_customization">Background color customization</string>
+    <string name="why_upgrade_background_color_customization">Taustavärvi kohandamine</string>
     <string name="why_upgrade_file_importing">Failide impordi tugi</string>
-    <string name="why_upgrade_zooming">Zooming</string>
+    <string name="why_upgrade_zooming">Suumimine</string>
     <!-- License -->
     <string name="notice">Et arendajate töö oleks tõhusam ja lihtsam, on selles rakenduses kasutusel järgnevad kolmandate osapoolte teegid. Tänud.</string>
     <string name="third_party_licences">Kolmandate osapoolte litsentsid</string>
@@ -900,7 +901,7 @@
     <string name="stetho_title">Stetho (andmebaaside silumine)</string>
     <string name="otto_title">Otto (sündmuste siin)</string>
     <string name="photoview_title">PhotoView (suumitavad GIF-failid)</string>
-    <string name="pattern_title">PatternLockView (pattern protection)</string>
+    <string name="pattern_title">PatternLockView (ekraanilukustus)</string>
     <string name="reprint_title">Reprint (sõrmejälgede kaitse)</string>
     <string name="gif_drawable_title">Gif Drawable (GIF-failide laadimine)</string>
     <string name="autofittextview_title">AutoFitTextView (teksti suuruse muutmine)</string>
