@@ -11,7 +11,7 @@
     <string name="an_error_occurred">பிழை ஏற்பட்டது: %s</string>
     <string name="open_with">இதனுடன் திற</string>
     <string name="edit_with">இதனுடன் திருத்து</string>
-    <string name="edit">Edit</string>
+    <string name="edit">திருத்து</string>
     <string name="no_app_found">சரியான செயலி ஏதுமில்லை</string>
     <string name="set_as">இதுவாக அமை</string>
     <string name="copy_to_clipboard">நினைவிக்கு நகலெடு</string>
@@ -58,7 +58,6 @@
     <!-- Emails -->
     <string name="home">Home</string>
     <string name="work">Work</string>
-
     <!-- Phone numbers -->
     <string name="mobile">Mobile</string>
     <string name="main_number">Main</string>
@@ -132,8 +131,8 @@
     <string name="copy">நகலெடுக்கவும்</string>
     <string name="move">நகர்வு</string>
     <string name="copy_move">நகலெடு / நகர்த்து</string>
-    <string name="copy_to">நகலெடுக்க வேண்டிய இடம்</string>
-    <string name="move_to">நகர்த்த வேண்டிய இடம்</string>
+    <string name="copy_to">இதற்கு நகலெடு</string>
+    <string name="move_to">இதற்கு நகர்த்து</string>
     <string name="source">மூலம்</string>
     <string name="destination">இலக்கு</string>
     <string name="select_destination">இலக்கைத் தேர்ந்தெடு</string>
@@ -310,8 +309,8 @@
     <string name="call_from_sim_1">Call from SIM 1</string>
     <string name="call_from_sim_2">Call from SIM 2</string>
     <string name="toggle_filename">Toggle filename visibility</string>
-    <string name="move_to_top">Move to the top</string>
-    <string name="move_to_bottom">Move to the bottom</string>
+    <string name="move_to_top">உச்சிக்கு நகர்த்து</string>
+    <string name="move_to_bottom">அடிப்புறத்திற்கு நகர்த்து</string>
     <string name="pin_item">Pin item</string>
     <string name="unpin_item">Unpin item</string>
     <string name="send_sms">Send SMS</string>
