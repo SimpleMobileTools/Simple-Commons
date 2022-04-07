@@ -11,13 +11,14 @@
     <string name="an_error_occurred">S-a produs o eroare %s</string>
     <string name="open_with">Deschide cu</string>
     <string name="edit_with">Editează cu</string>
-    <string name="edit">Edit</string>
+    <string name="edit">Editaţi</string>
     <string name="no_app_found">Nu s-a găsit nicio aplicaţie validă</string>
     <string name="set_as">Setează ca</string>
     <string name="copy_to_clipboard">Copie în clipboard</string>
     <string name="copy_number_to_clipboard">Copie numărul în clipboard</string>
     <string name="value_copied_to_clipboard">Valoare copiată în clipboard</string>
-    <string name="value_copied_to_clipboard_show">Value copied to clipboard:\n%s</string>
+    <string name="value_copied_to_clipboard_show">Valoare copiată în clipboard:
+\n%s</string>
     <string name="dial_number">Formați numărul</string>
     <string name="unknown">Necunoscut</string>
     <string name="always">Întotdeauna</string>
@@ -41,20 +42,20 @@
     <string name="no_contacts_found">Niciun contact găsit</string>
     <string name="request_the_required_permissions">Solicită permisiunile necesare</string>
     <string name="no_access_to_contacts">Aplicaţia nu a putut accesa contactele dumneavoastră</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
+    <string name="no_phone_call_permission">Aplicația nu are permisiunea de a iniția apeluri telefonice, vă rugăm să o acordați în setările dispozitivului</string>
     <string name="insert_text_here">Introduceţi textul aici</string>
     <string name="call_person">Apelare %s</string>
     <string name="zero">Zero</string>
     <string name="one">One</string>
     <string name="two">Two</string>
-    <string name="three">Three</string>
-    <string name="four">Four</string>
-    <string name="five">Five</string>
-    <string name="six">Six</string>
-    <string name="seven">Seven</string>
-    <string name="eight">Eight</string>
-    <string name="nine">Nine</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="three">Trei</string>
+    <string name="four">Patru</string>
+    <string name="five">Cinci</string>
+    <string name="six">Șase</string>
+    <string name="seven">Șapte</string>
+    <string name="eight">Opt</string>
+    <string name="nine">Nouă</string>
+    <string name="value_cannot_be_empty">Valoarea nu poate fi goală</string>
     <!-- Emails -->
     <string name="home">Acasă</string>
     <string name="work">Muncă</string>
@@ -68,7 +69,7 @@
     <!-- View types -->
     <string name="change_view_type">Schimbaţi tipul de vizualizare</string>
     <string name="grid">Grilă</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">Grilă neuniformă</string>
     <string name="list">Listă</string>
     <string name="increase_column_count">Creşte numărul de coloane</string>
     <string name="reduce_column_count">Reduce numărul de coloane</string>
@@ -126,7 +127,7 @@
     <string name="rename_date_time_pattern">%Y - an\n%M - lună\n%D - zi\n%h - oră\n%m - minut\n%s - secondă\n%i - numărul crescând de la 1</string>
     <string name="filename_without_txt">Numele fişierului (fără .txt)</string>
     <string name="filename_without_json">Numele fişierului (fără .json)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
+    <string name="cannot_hide_files">Începând cu Android 11 nu mai poți ascunde fișiere și dosare astfel</string>
     <!-- Copy / Move -->
     <string name="copy">Copie</string>
     <string name="move">Mută</string>
@@ -156,7 +157,7 @@
     <string name="could_not_create_file">Nu s-a putut crea fişierul %s</string>
     <string name="no_new_items">Nu au fost găsite elemente noi</string>
     <string name="no_space">Destinaţia nu are suficient spaţiu disponibil.\nNecesar %1$s, disponibil %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="system_service_disabled">Serviciul de sistem pentru selectarea fișierelor și dosarelor nu este disponibil</string>
     <!-- Create new -->
     <string name="create_new">Crează nou</string>
     <string name="folder">Dosar</string>
@@ -176,16 +177,16 @@
     <string name="skip">Sari peste</string>
     <string name="append">Adăugaţi cu \'_1\'</string>
     <string name="apply_to_all">Se aplică tuturor</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
+    <string name="system_folder_restriction">Sistemul nu permite operarea în acest dosar, vă rugăm să alegeți un alt dosar.</string>
     <!-- File picker -->
     <string name="select_folder">Selectaţi un dosar</string>
     <string name="select_file">Selectaţi un dosar</string>
     <string name="confirm_storage_access_title">Confirmaţi accesul la memoria externă</string>
-    <string name="confirm_folder_access_title">Confirm folder access</string>
-    <string name="confirm_storage_access_text">Vă rugăm să alegeţi dosarul rădăcină a cardului SD în ecranul următor, pentru a acorda acces la scriere.</string>
+    <string name="confirm_folder_access_title">Confirmați accesul la dosar</string>
+    <string name="confirm_storage_access_text">Vă rugăm să alegeţi dosarul rădăcină a cardului SD în ecranul următor, pentru a acorda acces la scriere</string>
     <string name="confirm_storage_access_text_sd">Dacă nu vedeţi cardul sd încercaţi următoarele</string>
-    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
-    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
+    <string name="confirm_storage_access_android_text">Vă rugăm să permiteți aplicației să acceseze spațiul de stocare selectat în ecranul următor, apăsând \'Utilizați acest dosar\' în partea de jos.</string>
+    <string name="confirm_storage_access_android_text_specific">Vă rugăm să permiteţi accesul la \'<b>%s</b>\' pe următorul ecran prin apăsarea butonului \'<b>Folosiţi acest dosar</b>\' aflat în partea de jos a ecranului.</string>
     <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
     <string name="confirm_selection">Confirmă selecţia</string>
     <string name="loading">Loading…</string>
