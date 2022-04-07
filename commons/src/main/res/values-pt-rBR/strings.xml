@@ -30,10 +30,10 @@
     <string name="transparent">Transparente</string>
     <string name="transparent_color">Cor transparente</string>
     <string name="select_a_different_color">Selecione uma cor diferente</string>
-    <string name="download">Download</string>
+    <string name="download">Baixar</string>
     <string name="notification">Notificação</string>
-    <string name="notifications">Notifications</string>
-    <string name="email">Email</string>
+    <string name="notifications">Notificações</string>
+    <string name="email">E-mail</string>
     <string name="previous">Anterior</string>
     <string name="playpause">Reproduzir / Pausar</string>
     <string name="next">Próximo</string>
@@ -54,7 +54,7 @@
     <string name="seven">Sete</string>
     <string name="eight">Oito</string>
     <string name="nine">Nove</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="value_cannot_be_empty">O valor não pode ficar vazio</string>
     <!-- Emails -->
     <string name="home">Residencial</string>
     <string name="work">Comercial</string>
@@ -64,7 +64,7 @@
     <string name="work_fax">Fax Comercial</string>
     <string name="home_fax">Fax Residencial</string>
     <string name="pager">Pager</string>
-    <string name="no_phone_number_found">Não foi encontrado nenhum número de telefone</string>
+    <string name="no_phone_number_found">Nenhum número de telefone foi encontrado</string>
     <!-- View types -->
     <string name="change_view_type">Alterar modo de visualização</string>
     <string name="grid">Grade</string>
@@ -99,10 +99,10 @@
     <string name="no_items_found">Nenhum item encontrado.</string>
     <string name="change_filter">Alterar filtro</string>
     <!-- Permissions -->
-    <string name="no_storage_permissions">É necessária a permissão Armazenamento</string>
-    <string name="no_contacts_permission">É necessária a permissão Contatos</string>
-    <string name="no_camera_permissions">É necessária a permissão Câmera</string>
-    <string name="no_audio_permissions">É necessária a permissão Áudio</string>
+    <string name="no_storage_permissions">A permissão de Armazenamento é necessária</string>
+    <string name="no_contacts_permission">A permissão de Contatos é necessária</string>
+    <string name="no_camera_permissions">A permissão de Câmera é necessária</string>
+    <string name="no_audio_permissions">A permissão de Áudio é necessária</string>
     <!-- Renaming -->
     <string name="rename_file">Renomear arquivo</string>
     <string name="rename_folder">Renomear pasta</string>
@@ -185,10 +185,10 @@
     <string name="confirm_storage_access_text">Por favor escolha a pasta raiz do cartão SD no próximo passo para conceder acesso de escrita</string>
     <string name="confirm_storage_access_text_sd">Se você não encontrar o cartão SD, tente isto</string>
     <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
-    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
+    <string name="confirm_storage_access_android_text_specific">Por favor, permita o acesso de \'&lt;b&gt;%s&lt;/b&gt;\' na próxima tela ao pressionar \'&lt;b&gt;Use this folder&lt;/b&gt;\' no canto inferior da tela.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Por favor, pressione \'&lt;b&gt;Save&lt;/b&gt;\' no canto inferior da próxima nela para criar uma nova pasta.</string>
     <string name="confirm_selection">Confirmar seleção</string>
-    <string name="loading">Loading…</string>
+    <string name="loading">Carregando…</string>
     <plurals name="items">
         <item quantity="one">%d item</item>
         <item quantity="other">%d itens</item>
@@ -216,7 +216,7 @@
     <string name="sd_card_usb_same">As pastas do cartão SD e do dispositivo USB não podem ser a mesma</string>
     <string name="app_on_sd_card">Parece que você instalou o aplicativo em um cartão SD, o que torna os widgets indisponíveis. Você não os verá na lista de widgets.
         Isto é uma limitação do sistema operacional, caso você queira ter acesso aos widgets será preciso mover o aplicativo para o armazenamento interno.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">A pasta esrrada foi selecionada, por favor, selecione \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Propriedades</string>
     <string name="path">Caminho</string>
@@ -237,8 +237,8 @@
     <string name="gps_coordinates">Coordenadas GPS</string>
     <string name="altitude">Altitude</string>
     <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif_confirmation">Você tem certeza de que desejava remover os valores EXIF, como coordenadas de GPS, modelo de câmera, etc.?</string>
+    <string name="exif_removed">Valores EXIF foram removidos com sucesso</string>
     <!-- Color customization -->
     <string name="background_color">Cor de fundo</string>
     <string name="text_color">Cor do texto</string>
@@ -273,14 +273,14 @@
     <string name="light_theme">Claro</string>
     <string name="dark_theme">Escuro</string>
     <string name="auto_theme">Auto</string>
-    <string name="auto_light_dark_theme">Auto light / dark</string>
+    <string name="auto_light_dark_theme">Auto claro / escuro</string>
     <string name="solarized">Ensolarado</string>
     <string name="dark_red">Vermelho Escuro</string>
     <string name="white">Branco</string>
     <string name="black_white">Preto &amp; branco</string>
     <string name="custom">Personalizado</string>
     <string name="shared">Compartilhado</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">Padrão do sistema</string>
     <!-- What's new -->
     <string name="whats_new">Novidades</string>
     <string name="whats_new_disclaimer">* apenas as alterações significativas são listadas aqui, mas também há sempre algumas melhorias pequenas não mencionadas</string>
@@ -311,11 +311,11 @@
     <string name="toggle_filename">Exibir/ocultar nome do arquivo</string>
     <string name="move_to_top">Mover para cima</string>
     <string name="move_to_bottom">Mover para baixo</string>
-    <string name="pin_item">Pin item</string>
-    <string name="unpin_item">Unpin item</string>
-    <string name="send_sms">Send SMS</string>
-    <string name="send_email">Send email</string>
-    <string name="call">Call</string>
+    <string name="pin_item">Fixar item</string>
+    <string name="unpin_item">Desfixar item</string>
+    <string name="send_sms">Enviar SMS</string>
+    <string name="send_email">Enviar e-mail</string>
+    <string name="call">Ligar</string>
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
     <string name="name">Nome</string>
@@ -582,7 +582,7 @@
     <string name="quality">Qualidade</string>
     <string name="main_screen">Tela principal</string>
     <string name="thumbnails">Miniaturas</string>
-    <string name="list_view">List view</string>
+    <string name="list_view">Visualização em Lista</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Gerenciar abas visíveis</string>
     <string name="default_tab_to_open">Aba exibida na inicialização do aplicativo</string>
@@ -591,7 +591,7 @@
     <string name="call_history_tab">Histórico de chamadas</string>
     <string name="groups_tab">Grupos</string>
     <string name="last_used_tab">Última usada</string>
-    <string name="files_tab">Files</string>
+    <string name="files_tab">Arquivos</string>
     <string name="recent_files_tab">Arquivos recentes</string>
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restaurar este arquivo</string>
@@ -696,12 +696,12 @@
     <string name="donate_underlined"><u>Doar</u></string>
     <string name="follow_us">Siga-nos</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
-    <string name="support">Support</string>
-    <string name="help_us">Help us</string>
+    <string name="support">Suporte</string>
+    <string name="help_us">Nos ajude</string>
     <string name="social">Social</string>
-    <string name="other">Other</string>
-    <string name="privacy_policy">Privacy policy</string>
-    <string name="version_placeholder">Version %s</string>
+    <string name="other">Outros</string>
+    <string name="privacy_policy">Política de Privacidade</string>
+    <string name="version_placeholder">Versão %s</string>
     <string name="hello">Olá :)</string>
     <string name="about_footer">Feito com ❤️ na Eslováquia</string>
     <string name="additional_info">Informações adicionais</string>
@@ -742,16 +742,16 @@
     <string name="simple_calculator">Calculadora Simples</string>
     <string name="simple_calendar">Calendário Simples</string>
     <string name="simple_camera">Câmera Simples</string>
-    <string name="simple_clock">Relógio SImples</string>
-    <string name="simple_contacts">Simple Contacts</string>
+    <string name="simple_clock">Relógio Simples</string>
+    <string name="simple_contacts">Contatos Simples</string>
     <string name="simple_dialer">Discador Simples</string>
     <string name="simple_draw">Desenhos Simples</string>
-    <string name="simple_file_manager">Simple File Manager</string>
+    <string name="simple_file_manager">Gerenciador Simples</string>
     <string name="simple_flashlight">Lanterna Simples</string>
     <string name="simple_gallery">Galeria Simples</string>
-    <string name="simple_keyboard">Simple Keyboard</string>
+    <string name="simple_keyboard">Teclado Simples</string>
     <string name="simple_music_player">Player de Música Simples</string>
-    <string name="simple_notes">Simple Notes</string>
+    <string name="simple_notes">Notas Simples</string>
     <string name="simple_sms_messenger">Mensagens SMS Simples</string>
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Gravador de Voz Simples</string>
@@ -766,11 +766,11 @@
     <string name="file_manager_short">Gestor de ficheiros</string>
     <string name="flashlight_short">Lanterna</string>
     <string name="gallery_short">Galeria</string>
-    <string name="keyboard_short">Keyboard</string>
+    <string name="keyboard_short">Teclado</string>
     <string name="music_player_short">Reprodutor de músicas</string>
     <string name="notes_short">Notas</string>
     <string name="sms_messenger_short">Mensagens SMS</string>
-    <string name="thank_you_short">Thank You</string>
+    <string name="thank_you_short">Obrigado</string>
     <string name="voice_recorder_short">Gravador de Voz</string>
     <string name="sideloaded_app">
         <![CDATA[
@@ -928,5 +928,5 @@
     <string name="deprecated_app">OBSOLETO: Esta versão do app não recebe mais atualizações. Por favor obtenha a versão Pro em https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Não se esqueça de que se você desinstalar um aplicativo pago em menos de duas horas você receberá reembolsado(a) automaticamente. Se você precisar de um reembolso após isso, entre em contato conosco através hello@simplemobiletools.com. Isso torna tudo mais fácil se você quiser testar :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">Um grupo de aplicações simples, open source, para Android com widgets personalizados, sem anúncios nem permissões desnecessárias.</string>
+    <string name="developer_description">Um grupo de aplicativos simples, open source, para Android com widgets personalizados, sem anúncios nem permissões desnecessárias.</string>
 </resources>
