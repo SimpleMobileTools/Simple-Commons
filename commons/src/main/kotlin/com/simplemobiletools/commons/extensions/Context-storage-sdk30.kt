@@ -41,15 +41,15 @@ fun Context.isAccessibleWithSAFSdk30(path: String): Boolean {
 
 fun Context.getFirstParentLevel(path: String): Int {
     return when {
-        isSPlus() && (isInAndroidDir(path) || isInDownloadDir(path)) -> 1
-        isRPlus() && isInDownloadDir(path) -> 1
+        isSPlus() && (isInAndroidDir(path) || isInSubFolderInDownloadDir(path)) -> 1
+        isRPlus() && isInSubFolderInDownloadDir(path) -> 1
         else -> 0
     }
 }
 
 fun Context.isRestrictedWithSAFSdk30(path: String): Boolean {
     if (path.startsWith(recycleBinPath) || isExternalStorageManager()) {
-        return true
+        return false
     }
 
     val level = getFirstParentLevel(path)
@@ -68,6 +68,21 @@ fun Context.isInDownloadDir(path: String): Boolean {
     }
     val firstParentDir = path.getFirstParentDirName(this, 0)
     return firstParentDir.equals(DOWNLOAD_DIR, true)
+}
+
+fun Context.isInSubFolderInDownloadDir(path: String): Boolean {
+    if (path.startsWith(recycleBinPath)) {
+        return false
+    }
+    val firstParentDir = path.getFirstParentDirName(this, 1)
+    return if (firstParentDir == null) {
+        false
+    } else {
+        val startsWithDownloadDir = firstParentDir.startsWith(DOWNLOAD_DIR, true)
+        val hasAtLeast1PathSegment = firstParentDir.split("/").filter { it.isNotEmpty() }.size > 1
+        val firstParentPath = path.getFirstParentPath(this, 1)
+        startsWithDownloadDir && hasAtLeast1PathSegment && File(firstParentPath).isDirectory
+    }
 }
 
 fun Context.isInAndroidDir(path: String): Boolean {
@@ -237,4 +252,9 @@ fun Context.buildDocumentUriSdk30(fullPath: String): Uri {
 
     val documentId = "${storageId}:$relativePath"
     return DocumentsContract.buildDocumentUri(EXTERNAL_STORAGE_PROVIDER_AUTHORITY, documentId)
+}
+
+fun Context.getPicturesDirectoryPath(fullPath: String): String {
+    val basePath = fullPath.getBasePath(this)
+    return File(basePath, Environment.DIRECTORY_PICTURES).absolutePath
 }

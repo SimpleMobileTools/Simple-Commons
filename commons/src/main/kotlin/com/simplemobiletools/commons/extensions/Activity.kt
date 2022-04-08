@@ -9,6 +9,7 @@ import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.media.RingtoneManager
 import android.net.Uri
+import android.os.Environment
 import android.os.Handler
 import android.os.Looper
 import android.os.TransactionTooLargeException
@@ -455,7 +456,9 @@ fun Activity.openEditorIntent(path: String, forceChooser: Boolean, applicationId
         Intent().apply {
             action = Intent.ACTION_EDIT
             setDataAndType(newUri, getUriMimeType(path, newUri))
-            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
+            if (!isRPlus() || (isRPlus() && (hasProperStoredDocumentUriSdk30(path) || Environment.isExternalStorageManager()))) {
+                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
+            }
 
             val parent = path.getParentPath()
             val newFilename = "${path.getFilenameFromPath().substringBeforeLast('.')}_1"
@@ -463,10 +466,12 @@ fun Activity.openEditorIntent(path: String, forceChooser: Boolean, applicationId
             val newFilePath = File(parent, "$newFilename.$extension")
 
             val outputUri = if (isPathOnOTG(path)) newUri else getFinalUriFromPath("$newFilePath", applicationId)
-            val resInfoList = packageManager.queryIntentActivities(this, PackageManager.MATCH_DEFAULT_ONLY)
-            for (resolveInfo in resInfoList) {
-                val packageName = resolveInfo.activityInfo.packageName
-                grantUriPermission(packageName, outputUri, Intent.FLAG_GRANT_WRITE_URI_PERMISSION or Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            if (!isRPlus()) {
+                val resInfoList = packageManager.queryIntentActivities(this, PackageManager.MATCH_DEFAULT_ONLY)
+                for (resolveInfo in resInfoList) {
+                    val packageName = resolveInfo.activityInfo.packageName
+                    grantUriPermission(packageName, outputUri, Intent.FLAG_GRANT_WRITE_URI_PERMISSION or Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                }
             }
 
             putExtra(MediaStore.EXTRA_OUTPUT, outputUri)
@@ -1095,49 +1100,86 @@ fun Activity.hideKeyboard(view: View) {
 }
 
 fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreatingNewFile: Boolean = false, callback: (outputStream: OutputStream?) -> Unit) {
-    if (needsStupidWritePermissions(fileDirItem.path)) {
-        handleSAFDialog(fileDirItem.path) {
-            if (!it) {
-                return@handleSAFDialog
-            }
+    val targetFile = File(fileDirItem.path)
+    when {
+        isRestrictedSAFOnlyRoot(fileDirItem.path) -> {
+            handleAndroidSAFDialog(fileDirItem.path) {
+                if (!it) {
+                    return@handleAndroidSAFDialog
+                }
 
-            var document = getDocumentFile(fileDirItem.path)
-            if (document == null && allowCreatingNewFile) {
-                document = getDocumentFile(fileDirItem.getParentPath())
+                val uri = getAndroidSAFUri(fileDirItem.path)
+                if (!getDoesFilePathExist(fileDirItem.path)) {
+                    createAndroidSAFFile(fileDirItem.path)
+                }
+                callback.invoke(applicationContext.contentResolver.openOutputStream(uri))
             }
+        }
+        needsStupidWritePermissions(fileDirItem.path) -> {
+            handleSAFDialog(fileDirItem.path) {
+                if (!it) {
+                    return@handleSAFDialog
+                }
 
-            if (document == null) {
-                showFileCreateError(fileDirItem.path)
-                callback(null)
-                return@handleSAFDialog
-            }
+                var document = getDocumentFile(fileDirItem.path)
+                if (document == null && allowCreatingNewFile) {
+                    document = getDocumentFile(fileDirItem.getParentPath())
+                }
 
-            if (!getDoesFilePathExist(fileDirItem.path)) {
-                document = document.createFile("", fileDirItem.name) ?: getDocumentFile(fileDirItem.path)
-            }
+                if (document == null) {
+                    showFileCreateError(fileDirItem.path)
+                    callback(null)
+                    return@handleSAFDialog
+                }
 
-            if (document?.exists() == true) {
-                try {
-                    callback(applicationContext.contentResolver.openOutputStream(document.uri))
-                } catch (e: FileNotFoundException) {
-                    showErrorToast(e)
+                if (!getDoesFilePathExist(fileDirItem.path)) {
+                    document = getDocumentFile(fileDirItem.path) ?: document.createFile("", fileDirItem.name)
+                }
+
+                if (document?.exists() == true) {
+                    try {
+                        callback(applicationContext.contentResolver.openOutputStream(document.uri))
+                    } catch (e: FileNotFoundException) {
+                        showErrorToast(e)
+                        callback(null)
+                    }
+                } else {
+                    showFileCreateError(fileDirItem.path)
                     callback(null)
                 }
-            } else {
-                showFileCreateError(fileDirItem.path)
-                callback(null)
             }
         }
-    } else {
-        val file = File(fileDirItem.path)
-        if (file.parentFile?.exists() == false) {
-            file.parentFile.mkdirs()
-        }
+        isAccessibleWithSAFSdk30(fileDirItem.path) -> {
+            handleSAFDialogSdk30(fileDirItem.path) {
+                if (!it) {
+                    return@handleSAFDialogSdk30
+                }
 
-        try {
-            callback(FileOutputStream(file))
-        } catch (e: Exception) {
-            callback(null)
+                callback.invoke(
+                    try {
+                        val uri = createDocumentUriUsingFirstParentTreeUri(fileDirItem.path)
+                        if (!getDoesFilePathExist(fileDirItem.path)) {
+                            createSAFFileSdk30(fileDirItem.path)
+                        }
+                        applicationContext.contentResolver.openOutputStream(uri)
+                    } catch (e: Exception) {
+                        null
+                    } ?: createCasualFileOutputStream(this, targetFile)
+                )
+            }
+        }
+        isRestrictedWithSAFSdk30(fileDirItem.path) -> {
+            callback.invoke(
+                try {
+                    val fileUri = getFileUrisFromFileDirItems(arrayListOf(fileDirItem)).second
+                    applicationContext.contentResolver.openOutputStream(fileUri.first())
+                } catch (e: Exception) {
+                    null
+                } ?: createCasualFileOutputStream(this, targetFile)
+            )
+        }
+        else -> {
+            callback.invoke(createCasualFileOutputStream(this, targetFile))
         }
     }
 }
