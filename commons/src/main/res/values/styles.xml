@@ -113,6 +113,16 @@
         <item name="android:textColor">@color/theme_dark_text_color</item>
     </style>
 
+    <!-- used at Date and Time pickers -->
+    <style name="MyDialogMaterialTheme" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/you_primary_color</item>
+        <item name="android:colorAccent">@color/you_primary_color</item>
+        <item name="android:windowBackground">@drawable/dialog_you_background</item>
+        <item name="android:textColor">@color/you_primary_color</item>
+        <item name="android:textColorSecondary">@color/you_neutral_text_color</item>
+        <item name="android:textColorPrimary">@color/you_neutral_text_color</item>
+    </style>
+
     <style name="Theme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
