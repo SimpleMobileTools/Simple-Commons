@@ -178,7 +178,7 @@
     <string name="skip">Sari peste</string>
     <string name="append">Adăugaţi cu \'_1\'</string>
     <string name="apply_to_all">Se aplică tuturor</string>
-    <string name="system_folder_restriction">Sistemul nu permite operarea în acest dosar, vă rugăm să alegeți un alt dosar.</string>
+    <string name="system_folder_restriction">Sistemul nu permite operarea în acest dosar, vă rugăm să alegeți un alt dosar</string>
     <!-- File picker -->
     <string name="select_folder">Selectaţi un dosar</string>
     <string name="select_file">Selectaţi un dosar</string>
@@ -188,25 +188,29 @@
     <string name="confirm_storage_access_text_sd">Dacă nu vedeţi cardul sd încercaţi următoarele</string>
     <string name="confirm_storage_access_android_text">Vă rugăm să permiteți aplicației să acceseze spațiul de stocare selectat în ecranul următor, apăsând \'Utilizați acest dosar\' în partea de jos.</string>
     <string name="confirm_storage_access_android_text_specific">Vă rugăm să permiteţi accesul la \'<b>%s</b>\' pe următorul ecran prin apăsarea butonului \'<b>Folosiţi acest dosar</b>\' aflat în partea de jos a ecranului.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Vă rugăm să apăsați \' <b>Salvare</b>\' în partea de jos a ecranului următor pentru a crea noul dosar.</string>
     <string name="confirm_selection">Confirmă selecţia</string>
-    <string name="loading">Loading…</string>
+    <string name="loading">Încărcare…</string>
     <plurals name="items">
         <item quantity="one">%d articol</item>
+        <item quantity="few">%d articole</item>
         <item quantity="other">%d articole</item>
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d articol</item>
+        <item quantity="few">%d articole</item>
         <item quantity="other">%d articole</item>
     </plurals>
     <plurals name="deleting_items">
         <item quantity="one">Ştergere %d articol</item>
+        <item quantity="few">Ştergere %d articole</item>
         <item quantity="other">Ştergere %d articole</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d contact</item>
+        <item quantity="few">%d contacte</item>
         <item quantity="other">%d contacte</item>
     </plurals>
     <!-- Storages -->
@@ -218,7 +222,7 @@
     <string name="sd_card_usb_same">Căile cardului SD și ale dispozitivului USB nu pot fi aceleași</string>
     <string name="app_on_sd_card">Se pare că aplicația este instalată pe un card SD, ceea ce face ca widgeturile aplicației să nu fie disponibile. Nu le veți vedea nici măcar în lista de widgeturi disponibile.
         Este o limitare a sistemului, așa că, dacă doriți să folosiți widgeturile, trebuie să mutați aplicația înapoi în memoria internă.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">A fost selectat un dosar greșit, vă rugăm să selectați calea \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Proprietăţi</string>
     <string name="path">Calea de acces</string>
@@ -233,14 +237,14 @@
     <string name="exposure_time">Timp de expunere</string>
     <string name="iso_speed">viteza ISO</string>
     <string name="f_number">numărul F</string>
-    <string name="camera">Camera</string>
+    <string name="camera">Cameră</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Titlu melodie</string>
     <string name="gps_coordinates">coordonate GPS</string>
     <string name="altitude">Altitudine</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">Eliminați EXIF</string>
+    <string name="remove_exif_confirmation">Sunteți sigur că doriți să eliminați valorile EXIF, cum ar fi coordonatele GPS, modelul camerei etc.\?</string>
+    <string name="exif_removed">Valorile EXIF au fost eliminate cu succes</string>
     <!-- Color customization -->
     <string name="background_color">Culoare de fundal</string>
     <string name="text_color">Culoarea textului</string>
@@ -275,7 +279,7 @@
     <string name="light_theme">Deschisă</string>
     <string name="dark_theme">Închisă</string>
     <string name="auto_theme">Automatic</string>
-    <string name="auto_light_dark_theme">Auto light / dark</string>
+    <string name="auto_light_dark_theme">Schimbare automată a modului luminos / întunecat</string>
     <string name="solarized">Solarizat</string>
     <string name="dark_red">Roşu închis</string>
     <string name="white">Alb</string>
