@@ -1460,7 +1460,7 @@ fun Activity.showPickSecondsDialog(
             }
             -3 -> {
                 TimePickerDialog(
-                    this, getDialogTheme(),
+                    this, getTimePickerDialogTheme(),
                     { view, hourOfDay, minute -> callback(hourOfDay * -3600 + minute * -60) },
                     curSeconds / 3600, curSeconds % 3600, baseConfig.use24HourFormat
                 ).show()

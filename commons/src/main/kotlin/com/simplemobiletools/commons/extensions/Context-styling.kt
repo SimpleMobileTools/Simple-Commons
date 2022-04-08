@@ -77,8 +77,18 @@ fun Context.isWhiteTheme() = baseConfig.textColor == DARK_GREY && baseConfig.pri
 
 fun Context.isUsingSystemDarkTheme() = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_YES != 0
 
-fun Context.getDialogTheme() = when {
-    baseConfig.isUsingSystemTheme -> R.style.MyDialogMaterialTheme
+fun Context.getTimePickerDialogTheme() = when {
+    baseConfig.isUsingSystemTheme -> if (isUsingSystemDarkTheme()) {
+        R.style.MyTimePickerMaterialTheme_Dark
+    } else {
+        R.style.MyDateTimePickerMaterialTheme
+    }
+    baseConfig.backgroundColor.getContrastColor() == Color.WHITE -> R.style.MyDialogTheme_Dark
+    else -> R.style.MyDialogTheme
+}
+
+fun Context.getDatePickerDialogTheme() = when {
+    baseConfig.isUsingSystemTheme -> R.style.MyDateTimePickerMaterialTheme
     baseConfig.backgroundColor.getContrastColor() == Color.WHITE -> R.style.MyDialogTheme_Dark
     else -> R.style.MyDialogTheme
 }
