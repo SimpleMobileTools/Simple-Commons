@@ -122,7 +122,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            android.R.id.home -> finish()
+            android.R.id.home -> {
+                hideKeyboard()
+                finish()
+            }
             else -> return super.onOptionsItemSelected(item)
         }
         return true
