@@ -311,7 +311,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                         if (isRPlus()) {
                             putExtra(DocumentsContract.EXTRA_INITIAL_URI, createAndroidDataOrObbUri(checkedDocumentPath))
                         }
-                        startActivityForResult(this, requestCode)
+
+                        try {
+                            startActivityForResult(this, requestCode)
+                        } catch (e: Exception) {
+                            showErrorToast(e)
+                        }
                     }
                 }
             } else {
@@ -333,7 +338,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 } else {
                     toast(R.string.wrong_root_selected)
                     val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
-                    startActivityForResult(intent, requestCode)
+
+                    try {
+                        startActivityForResult(intent, requestCode)
+                    } catch (e: Exception) {
+                        showErrorToast(e)
+                    }
                 }
             } else {
                 funAfterSAFPermission?.invoke(false)
@@ -360,7 +370,12 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 } else {
                     toast(R.string.wrong_root_selected_usb)
                     val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
-                    startActivityForResult(intent, requestCode)
+
+                    try {
+                        startActivityForResult(intent, requestCode)
+                    } catch (e: Exception) {
+                        showErrorToast(e)
+                    }
                 }
             } else {
                 funAfterSAFPermission?.invoke(false)
@@ -800,7 +815,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                     putExtra(Intent.EXTRA_TITLE, filename)
                     addCategory(Intent.CATEGORY_OPENABLE)
 
-                    startActivityForResult(this, SELECT_EXPORT_SETTINGS_FILE_INTENT)
+                    try {
+                        startActivityForResult(this, SELECT_EXPORT_SETTINGS_FILE_INTENT)
+                    } catch (e: ActivityNotFoundException) {
+                        toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
+                    } catch (e: Exception) {
+                        showErrorToast(e)
+                    }
                 }
             }
         } else {

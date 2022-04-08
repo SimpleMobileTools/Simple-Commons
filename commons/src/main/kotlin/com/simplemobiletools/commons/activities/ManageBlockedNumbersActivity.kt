@@ -1,11 +1,13 @@
 package com.simplemobiletools.commons.activities
 
 import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.adapters.ManageBlockedNumbersAdapter
 import com.simplemobiletools.commons.dialogs.AddBlockedNumberDialog
@@ -19,7 +21,6 @@ import com.simplemobiletools.commons.models.BlockedNumber
 import kotlinx.android.synthetic.main.activity_manage_blocked_numbers.*
 import java.io.FileOutputStream
 import java.io.OutputStream
-import java.util.*
 
 class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewListener {
     private val PICK_IMPORT_SOURCE_INTENT = 11
@@ -101,7 +102,14 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
             Intent(Intent.ACTION_GET_CONTENT).apply {
                 addCategory(Intent.CATEGORY_OPENABLE)
                 type = "text/plain"
-                startActivityForResult(this, PICK_IMPORT_SOURCE_INTENT)
+
+                try {
+                    startActivityForResult(this, PICK_IMPORT_SOURCE_INTENT)
+                } catch (e: ActivityNotFoundException) {
+                    toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
+                } catch (e: Exception) {
+                    showErrorToast(e)
+                }
             }
         } else {
             handlePermission(PERMISSION_READ_STORAGE) {
@@ -161,7 +169,14 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
                     type = "text/plain"
                     putExtra(Intent.EXTRA_TITLE, file.name)
                     addCategory(Intent.CATEGORY_OPENABLE)
-                    startActivityForResult(this, PICK_EXPORT_FILE_INTENT)
+
+                    try {
+                        startActivityForResult(this, PICK_EXPORT_FILE_INTENT)
+                    } catch (e: ActivityNotFoundException) {
+                        toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
+                    } catch (e: Exception) {
+                        showErrorToast(e)
+                    }
                 }
             }
         } else {
