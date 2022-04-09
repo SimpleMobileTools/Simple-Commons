@@ -216,6 +216,15 @@ class FilePickerDialog(
                     }
                 }
             }
+        } else if (activity.isRestrictedWithSAFSdk30(currPath)) {
+            if (activity.isInDownloadDir(currPath)) {
+                val file = File(currPath)
+                if ((pickFile && file.isFile) || (!pickFile && file.isDirectory)) {
+                    sendSuccess()
+                }
+            } else {
+                activity.toast(R.string.system_folder_restriction)
+            }
         } else {
             val file = File(currPath)
             if ((pickFile && file.isFile) || (!pickFile && file.isDirectory)) {

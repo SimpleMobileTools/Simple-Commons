@@ -325,18 +325,25 @@ fun Context.getMimeTypeFromUri(uri: Uri): String {
 }
 
 fun Context.ensurePublicUri(path: String, applicationId: String): Uri? {
-    return if (isRestrictedSAFOnlyRoot(path)) {
-        getAndroidSAFUri(path)
-    } else if (isPathOnOTG(path)) {
-        getDocumentFile(path)?.uri
-    } else {
-        val uri = Uri.parse(path)
-        if (uri.scheme == "content") {
-            uri
-        } else {
-            val newPath = if (uri.toString().startsWith("/")) uri.toString() else uri.path
-            val file = File(newPath)
-            getFilePublicUri(file, applicationId)
+    return when {
+        hasProperStoredAndroidTreeUri(path) && isRestrictedSAFOnlyRoot(path) -> {
+            getAndroidSAFUri(path)
+        }
+        hasProperStoredDocumentUriSdk30(path) && isAccessibleWithSAFSdk30(path) -> {
+            createDocumentUriUsingFirstParentTreeUri(path)
+        }
+        isPathOnOTG(path) -> {
+            getDocumentFile(path)?.uri
+        }
+        else -> {
+            val uri = Uri.parse(path)
+            if (uri.scheme == "content") {
+                uri
+            } else {
+                val newPath = if (uri.toString().startsWith("/")) uri.toString() else uri.path
+                val file = File(newPath)
+                getFilePublicUri(file, applicationId)
+            }
         }
     }
 }
