@@ -9,7 +9,7 @@
     <string name="invalid_file_format">Ugyldigt filformat</string>
     <string name="out_of_memory_error">Fejl, ikke mere plads</string>
     <string name="an_error_occurred">Der opstod en fejl: %s</string>
-    <string name="error">Error: %s</string>
+    <string name="error">Fejl: %s</string>
     <string name="open_with">Åbn med</string>
     <string name="edit_with">Rediger med</string>
     <string name="edit">Rediger</string>
@@ -157,7 +157,7 @@
     <string name="could_not_create_file">Kunne ikke oprette filen %s</string>
     <string name="no_new_items">Der blev ikke fundet nogen nye filer</string>
     <string name="no_space">Der er ikke plads nok.\nDer skal bruges %1$s, der er %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="system_service_disabled">Systemtjenesten til valg af filer og mapper er ikke tilgængelig</string>
     <!-- Create new -->
     <string name="create_new">Opret ny</string>
     <string name="folder">Mappe</string>
@@ -177,7 +177,7 @@
     <string name="skip">Spring over</string>
     <string name="append">Tilføj \"_1\"</string>
     <string name="apply_to_all">Anvend på alle konflikter</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
+    <string name="system_folder_restriction">Systemet tillader ikke operationen i denne mappe, vælg en anden</string>
     <!-- File picker -->
     <string name="select_folder">Vælg en mappe</string>
     <string name="select_file">Vælg en fil</string>
@@ -187,7 +187,7 @@
     <string name="confirm_storage_access_text_sd">Hvis ikke du kan se SD-kortet kan du prøve dette</string>
     <string name="confirm_storage_access_android_text">Tillad appen at få adgang til det valgte lager på det næste skærmbillede ved at trykke på \'Brug denne mappe\' nederst.</string>
     <string name="confirm_storage_access_android_text_specific">Tillad adgang til \"&lt;b&gt;%s&lt;/b&gt;\" på det næste skærmbillede ved at trykke på \"&lt;b&gt;Brug denne mappe&lt;/b&gt;\" nederst på skærmen.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Tryk på \'&lt;b&gt;Save&lt;/b&gt;\' nederst på det næste skærmbillede for at oprette den nye mappe.</string>
     <string name="confirm_selection">Bekræft valg</string>
     <string name="loading">Indlæser…</string>
     <string name="wrong_folder_selected">Forkert mappe valgt. Vælg stien \'%s\'</string>
@@ -237,9 +237,9 @@
     <string name="song_title">Sangtitel</string>
     <string name="gps_coordinates">GPS-koordinater</string>
     <string name="altitude">Højde</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">Fjern EXIF</string>
+    <string name="remove_exif_confirmation">Er du sikker på, at du vil fjerne EXIF-værdier som GPS-koordinater, kameramodel osv.?</string>
+    <string name="exif_removed">EXIF-værdierne er fjernet</string>
     <!-- Color customization -->
     <string name="background_color">Baggrundsfarve</string>
     <string name="text_color">Tekstfarve</string>
@@ -274,14 +274,14 @@
     <string name="light_theme">Lys</string>
     <string name="dark_theme">Mørk</string>
     <string name="auto_theme">Auto</string>
-    <string name="auto_light_dark_theme">Auto light / dark</string>
+    <string name="auto_light_dark_theme">Auto lyst / mørkt</string>
     <string name="solarized">Solariseret</string>
     <string name="dark_red">Mørkerød</string>
     <string name="white">Hvid</string>
     <string name="black_white">Sort &amp; hvid</string>
     <string name="custom">Tilpasset</string>
     <string name="shared">Gemt</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">Systemets standard</string>
     <!-- What's new -->
     <string name="whats_new">Hvad er nyt</string>
     <string name="whats_new_disclaimer">* Kun større opdateringer er nævnt her, der er altid flere mindre forbedringer også</string>
@@ -392,7 +392,7 @@
     <string name="days_raw">dage</string>
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
-    <string name="hours_letter">h</string>
+    <string name="hours_letter">t</string>
     <plurals name="seconds">
         <item quantity="one">%d sekund</item>
         <item quantity="other">%d sekunder</item>
@@ -614,10 +614,10 @@
     <string name="exporting">Eksporterer…</string>
     <string name="importing_successful">Import gennemført</string>
     <string name="exporting_successful">Eksport gennemført</string>
-    <string name="importing_failed">Import mislykkedes</string>
-    <string name="exporting_failed">Eksport mislykkedes</string>
-    <string name="importing_some_entries_failed">Import mislykkedes delvist</string>
-    <string name="exporting_some_entries_failed">Eksport mislykkedes delvist</string>
+    <string name="importing_failed">Importen mislykkedes</string>
+    <string name="exporting_failed">Eksporten mislykkedes</string>
+    <string name="importing_some_entries_failed">Importen mislykkedes delvist</string>
+    <string name="exporting_some_entries_failed">Eksporten mislykkedes delvist</string>
     <string name="no_entries_for_importing">Der blev ikke fundet indhold til import</string>
     <string name="no_new_entries_for_importing">Der er ikke fundet nye poster til import</string>
     <string name="no_entries_for_exporting">Der er ikke fundet indhold til eksport</string>
