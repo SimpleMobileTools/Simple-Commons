@@ -157,7 +157,7 @@
     <string name="could_not_create_file">Ei voitu luoda tiedostoa %s</string>
     <string name="no_new_items">Uusia kohteita ei löytynyt</string>
     <string name="no_space">Kohteessa ei ole riittävästi tyhjää tilaa vapaana.\nVaaditaan %1$s, vapaana %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="system_service_disabled">Järjestelmän palvelu tiedostojen ja kansioiden valitsemiseen ei ole käytettävissä</string>
     <!-- Create new -->
     <string name="create_new">Luo uusi</string>
     <string name="folder">Kansio</string>
@@ -177,7 +177,7 @@
     <string name="skip">Ohita</string>
     <string name="append">Lisää nimeen \'_1\'</string>
     <string name="apply_to_all">Käytä kaikkiin</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
+    <string name="system_folder_restriction">Järjestelmä ei salli toimintoa tässä kansiossa, ole hyvä ja valitse toinen</string>
     <!-- File picker -->
     <string name="select_folder">Valitse kansio</string>
     <string name="select_file">Valitse tiedosto</string>
@@ -274,7 +274,7 @@
     <string name="light_theme">Vaalea</string>
     <string name="dark_theme">Tumma</string>
     <string name="auto_theme">Automaattinen</string>
-    <string name="auto_light_dark_theme">Auto light / dark</string>
+    <string name="auto_light_dark_theme">Automaattinen vaalea / tumma</string>
     <string name="solarized">Solarisoitu</string>
     <string name="dark_red">Tumman punainen</string>
     <string name="white">Valkoinen</string>
