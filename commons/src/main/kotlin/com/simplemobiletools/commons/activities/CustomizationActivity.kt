@@ -4,7 +4,6 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.LayerDrawable
 import android.graphics.drawable.RippleDrawable
-import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -142,7 +141,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun setupThemes() {
         predefinedThemes.apply {
-            if (isSPlus() && applicationInfo.compileSdkVersion >= Build.VERSION_CODES.S) {
+            if (isSPlus()) {
                 put(THEME_SYSTEM, getSystemThemeColors())
             }
 
