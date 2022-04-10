@@ -477,6 +477,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     // synchronous return value determines only if we are showing the SAF dialog, callback result tells if the SD or OTG permission has been granted
     fun handleSAFDialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
+        hideKeyboard()
         return if (!packageName.startsWith("com.simplemobiletools")) {
             callback(true)
             false
@@ -490,6 +491,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun handleSAFDialogSdk30(path: String, callback: (success: Boolean) -> Unit): Boolean {
+        hideKeyboard()
         return if (!packageName.startsWith("com.simplemobiletools")) {
             callback(true)
             false
@@ -503,6 +505,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun handleSAFCreateDocumentDialogSdk30(path: String, callback: (success: Boolean) -> Unit): Boolean {
+        hideKeyboard()
         return if (!packageName.startsWith("com.simplemobiletools")) {
             callback(true)
             false
@@ -516,6 +519,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun handleAndroidSAFDialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
+        hideKeyboard()
         return if (!packageName.startsWith("com.simplemobiletools")) {
             callback(true)
             false
@@ -529,6 +533,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun handleOTGPermission(callback: (success: Boolean) -> Unit) {
+        hideKeyboard()
         if (baseConfig.OTGTreeUri.isNotEmpty()) {
             callback(true)
             return
@@ -557,6 +562,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     @SuppressLint("NewApi")
     fun deleteSDK30Uris(uris: List<Uri>, callback: (success: Boolean) -> Unit) {
+        hideKeyboard()
         if (isRPlus()) {
             funAfterSdk30Action = callback
             try {
@@ -572,6 +578,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
     @SuppressLint("NewApi")
     fun updateSDK30Uris(uris: List<Uri>, callback: (success: Boolean) -> Unit) {
+        hideKeyboard()
         if (isRPlus()) {
             funAfterUpdate30File = callback
             try {
