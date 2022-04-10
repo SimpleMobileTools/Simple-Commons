@@ -2,24 +2,24 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Avbryt</string>
-    <string name="nothing">Nothing</string>
-    <string name="later">Later</string>
+    <string name="nothing">Ingenting</string>
+    <string name="later">Senare</string>
     <string name="save_as">Spara som</string>
     <string name="file_saved">Filen har sparats</string>
     <string name="invalid_file_format">Ogiltigt filformat</string>
     <string name="out_of_memory_error">Minnet är fullt</string>
     <string name="an_error_occurred">Ett fel har uppstått: %s</string>
-    <string name="error">Error: %s</string>
+    <string name="error">Fel: %s</string>
     <string name="open_with">Öppna med</string>
     <string name="edit_with">Redigera med</string>
     <string name="edit">Redigera</string>
     <string name="no_app_found">Ingen giltig app hittades</string>
     <string name="set_as">Använd som</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
-    <string name="value_copied_to_clipboard">Värdet har kopierats till Urklipp</string>
-    <string name="value_copied_to_clipboard_show">Värdet har kopierats till Urklipp:\n%s</string>
-    <string name="dial_number">Dial number</string>
+    <string name="copy_to_clipboard">Kopiera till urklipp</string>
+    <string name="copy_number_to_clipboard">Kopiera nummer till urklipp</string>
+    <string name="value_copied_to_clipboard">Värdet har kopierats till urklipp</string>
+    <string name="value_copied_to_clipboard_show">Värdet har kopierats till urklipp:\n%s</string>
+    <string name="dial_number">Ring nummer</string>
     <string name="unknown">Okänd</string>
     <string name="always">Alltid</string>
     <string name="never">Aldrig</string>
@@ -33,7 +33,7 @@
     <string name="select_a_different_color">Välj en annan färg</string>
     <string name="download">Hämta</string>
     <string name="notification">Avisering</string>
-    <string name="notifications">Notifications</string>
+    <string name="notifications">Aviseringar</string>
     <string name="email">E-post</string>
     <string name="previous">Föregående</string>
     <string name="playpause">Spela / Pausa</string>
@@ -45,16 +45,16 @@
     <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
     <string name="insert_text_here">Insert text here</string>
     <string name="call_person">Ring %s</string>
-    <string name="zero">Zero</string>
-    <string name="one">One</string>
-    <string name="two">Two</string>
-    <string name="three">Three</string>
-    <string name="four">Four</string>
-    <string name="five">Five</string>
-    <string name="six">Six</string>
-    <string name="seven">Seven</string>
-    <string name="eight">Eight</string>
-    <string name="nine">Nine</string>
+    <string name="zero">Noll</string>
+    <string name="one">Ett</string>
+    <string name="two">Två</string>
+    <string name="three">Tre</string>
+    <string name="four">Fyra</string>
+    <string name="five">Fem</string>
+    <string name="six">Sex</string>
+    <string name="seven">Sju</string>
+    <string name="eight">Åtta</string>
+    <string name="nine">Nio</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
     <!-- Emails -->
     <string name="home">Hem</string>
@@ -69,7 +69,7 @@
     <!-- View types -->
     <string name="change_view_type">Ändra vy</string>
     <string name="grid">Rutnät</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">Ojämnt rutnät</string>
     <string name="list">Lista</string>
     <string name="increase_column_count">Öka antalet kolumner</string>
     <string name="reduce_column_count">Minska antalet kolumner</string>
@@ -82,11 +82,11 @@
     <string name="block_number">Blockera nummer</string>
     <string name="block_numbers">Blockera nummer</string>
     <string name="blocked_numbers">Blockerade nummer</string>
-    <string name="export_blocked_numbers">Export blocked numbers</string>
-    <string name="import_blocked_numbers">Import blocked numbers</string>
+    <string name="export_blocked_numbers">Exportera blockerade nummer</string>
+    <string name="import_blocked_numbers">Importera blockerade nummer</string>
     <string name="must_make_default_dialer">Du måste ställa in den här appen som standardtelefonapp för att kunna använda blockerade nummer.</string>
     <string name="set_as_default">Ange som standard</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
+    <string name="block_confirmation">Är du säker på att du vill blockera \"%s\"?</string>
     <!-- Favorites -->
     <string name="favorites">Favoriter</string>
     <string name="add_favorites">Lägg till favoriter</string>
@@ -144,11 +144,11 @@
     <string name="copy_failed">Det gick inte att kopiera filerna</string>
     <string name="copying">Kopierar…</string>
     <string name="copying_success">Filerna har kopierats</string>
-    <string name="copying_success_one">File copied successfully</string>
+    <string name="copying_success_one">Filen har kopierats</string>
     <string name="copy_move_failed">Ett fel har uppstått</string>
     <string name="moving">Flyttar…</string>
     <string name="moving_success">Filerna har flyttats</string>
-    <string name="moving_success_one">File moved successfully</string>
+    <string name="moving_success_one">Filen har flyttats</string>
     <string name="moving_success_partial">Det gick inte att flytta vissa filer</string>
     <string name="copying_success_partial">Det gick inte att kopiera vissa filer</string>
     <string name="no_files_selected">Inga filer har valts</string>
@@ -190,7 +190,7 @@
     <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
     <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
     <string name="confirm_selection">Bekräfta val</string>
-    <string name="loading">Loading…</string>
+    <string name="loading">Läser in…</string>
     <plurals name="items">
         <item quantity="one">%d objekt</item>
         <item quantity="other">%d objekt</item>
@@ -274,15 +274,15 @@
     <!-- Themes -->
     <string name="light_theme">Ljust</string>
     <string name="dark_theme">Mörkt</string>
-    <string name="auto_theme">Auto</string>
+    <string name="auto_theme">Automatiskt</string>
     <string name="auto_light_dark_theme">Auto light / dark</string>
     <string name="solarized">Solariserat</string>
     <string name="dark_red">Mörkrött</string>
-    <string name="white">White</string>
+    <string name="white">Vitt</string>
     <string name="black_white">Svartvitt</string>
     <string name="custom">Anpassat</string>
     <string name="shared">Delat</string>
-    <string name="system_default">System default</string>
+    <string name="system_default">Systemstandard</string>
     <!-- What's new -->
     <string name="whats_new">Vad är nytt</string>
     <string name="whats_new_disclaimer">* bara de större uppdateringarna visas här, det görs också alltid några mindre förbättringar</string>
@@ -292,8 +292,8 @@
     <string name="rename">Byt namn</string>
     <string name="share">Dela</string>
     <string name="share_via">Dela via</string>
-    <string name="select_all">Välj alla</string>
-    <string name="select_text">Select text</string>
+    <string name="select_all">Markera alla</string>
+    <string name="select_text">Markera text</string>
     <string name="hide">Dölj</string>
     <string name="unhide">Visa</string>
     <string name="hide_folder">Dölj mapp</string>
@@ -306,18 +306,18 @@
     <string name="redo">Gör om</string>
     <string name="print">Skriv ut</string>
     <string name="create_shortcut">Skapa genväg</string>
-    <string name="add_number_to_contact">Add number to contact</string>
-    <string name="view_contact_details">View contact details</string>
-    <string name="call_from_sim_1">Call from SIM 1</string>
-    <string name="call_from_sim_2">Call from SIM 2</string>
+    <string name="add_number_to_contact">Lägg till nummer i kontakt</string>
+    <string name="view_contact_details">Visa kontaktuppgifter</string>
+    <string name="call_from_sim_1">Ring med SIM-kort 1</string>
+    <string name="call_from_sim_2">Ring med SIM-kort 2</string>
     <string name="toggle_filename">Visa/dölj filnamn</string>
-    <string name="move_to_top">Move to the top</string>
-    <string name="move_to_bottom">Move to the bottom</string>
-    <string name="pin_item">Pin item</string>
-    <string name="unpin_item">Unpin item</string>
+    <string name="move_to_top">Flytta högst upp</string>
+    <string name="move_to_bottom">Flytta längst ned</string>
+    <string name="pin_item">Fäst objekt</string>
+    <string name="unpin_item">Lossa objekt</string>
     <string name="send_sms">Skicka sms</string>
-    <string name="send_email">Send email</string>
-    <string name="call">Call</string>
+    <string name="send_email">Skicka e-post</string>
+    <string name="call">Ring</string>
     <!-- Sorting -->
     <string name="sort_by">Sortera efter</string>
     <string name="name">Namn</string>
@@ -349,7 +349,7 @@
     <string name="are_you_sure_delete">Är du säker på att du vill ta bort det här objektet?</string>
     <string name="are_you_sure_recycle_bin">Är du säker på att du vill flytta det här objektet till Papperskorgen?</string>
     <string name="do_not_ask_again">Fråga inte igen i denna session</string>
-    <string name="do_not_show_again">Do not show again</string>
+    <string name="do_not_show_again">Visa inte igen</string>
     <string name="yes">Ja</string>
     <string name="no">Nej</string>
     <string name="maybe">Kanske</string>
@@ -367,12 +367,12 @@
     <string name="insert_pattern">Rita mönster</string>
     <string name="wrong_pattern">Du har ritat fel mönster</string>
     <string name="repeat_pattern">Upprepa mönster</string>
-    <string name="biometrics">Biometrics</string>
+    <string name="biometrics">Biometri</string>
     <string name="fingerprint">Fingeravtryck</string>
     <string name="add_fingerprint">Lägg till fingeravtryck</string>
     <string name="place_finger">Placera fingret på fingeravtrycksläsaren</string>
     <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
-    <string name="authenticate">Authenticate</string>
+    <string name="authenticate">Autentisera</string>
     <string name="authentication_failed">Autentiseringen misslyckades</string>
     <string name="authentication_blocked">Autentisering blockeras, försök igen om en stund</string>
     <string name="no_fingerprints_registered">Du har inga registrerade fingeravtryck, lägg till några i Inställningarna på din enhet</string>
@@ -386,7 +386,7 @@
     <string name="yesterday">Igår</string>
     <string name="today">Idag</string>
     <string name="tomorrow">Imorgon</string>
-    <string name="hide_year">Hide year</string>
+    <string name="hide_year">Dölj årtal</string>
     <string name="seconds_raw">sekunder</string>
     <string name="minutes_raw">minuter</string>
     <string name="hours_raw">timmar</string>
@@ -512,7 +512,7 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Återstående tid tills alarmet ringer:\n%s</string>
     <string name="reminder_triggers_in">Återstående tid tills påminnelsen aktiveras:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Återstående tid:\n%s</string>
     <string name="alarm_warning">Kontrollera att alarmet fungerar som det ska innan du förlitar dig på det. Det kanske inte fungerar som det ska på grund av batterisparrelaterade systembegränsningar.</string>
     <string name="reminder_warning">Kontrollera att påminnelserna fungerar som de ska innan du förlitar dig på dem. De kanske inte fungerar som de ska på grund av batterisparrelaterade systembegränsningar.</string>
     <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
@@ -531,14 +531,14 @@
     <!-- Settings -->
     <string name="settings">Inställningar</string>
     <string name="purchase_simple_thank_you">Köp Simple Thank You</string>
-    <string name="general_settings">General</string>
-    <string name="color_customization">Color customization</string>
+    <string name="general_settings">Allmänt</string>
+    <string name="color_customization">Färganpassning</string>
     <string name="customize_colors">Anpassa färger</string>
-    <string name="customize_colors_locked">Anpassa färger (Locked)</string>
+    <string name="customize_colors_locked">Anpassa färger (låst)</string>
     <string name="customize_widget_colors">Anpassa widgetarnas färger</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="customize_notifications">Anpassa aviseringar</string>
     <string name="use_english_language">Använd engelska</string>
-    <string name="language">Language</string>
+    <string name="language">Språk</string>
     <string name="show_hidden_items">Visa dolda objekt</string>
     <string name="font_size">Teckenstorlek</string>
     <string name="small">Liten</string>
@@ -569,7 +569,7 @@
     <string name="settings_exported_successfully">Inställningarna har exporterats</string>
     <string name="settings_imported_successfully">Inställningarna har importerats</string>
     <string name="start_name_with_surname">Visa efternamn först</string>
-    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cache">Rensa cacheminne</string>
     <string name="show_call_confirmation_dialog">Visa en bekräftelsedialogruta före uppringning</string>
     <!-- Setting sections -->
     <string name="visibility">Synlighet</string>
@@ -581,20 +581,20 @@
     <string name="startup">Start</string>
     <string name="text">Text</string>
     <string name="migrating">Migrering</string>
-    <string name="quality">Quality</string>
-    <string name="main_screen">Main screen</string>
-    <string name="thumbnails">Thumbnails</string>
-    <string name="list_view">List view</string>
+    <string name="quality">Kvalitet</string>
+    <string name="main_screen">Huvudskärm</string>
+    <string name="thumbnails">Miniatyrbilder</string>
+    <string name="list_view">Listvy</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Välj vilka flikar som ska visas</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
-    <string name="files_tab">Files</string>
-    <string name="recent_files_tab">Recent files</string>
+    <string name="contacts_tab">Kontakter</string>
+    <string name="favorites_tab">Favoriter</string>
+    <string name="call_history_tab">Samtalshistorik</string>
+    <string name="groups_tab">Grupper</string>
+    <string name="last_used_tab">Den senast använda</string>
+    <string name="files_tab">Filer</string>
+    <string name="recent_files_tab">Senaste filer</string>
     <!-- Recycle Bin -->
     <string name="restore_this_file">Återställ filen</string>
     <string name="restore_selected_files">Återställ valda filer</string>
@@ -620,7 +620,7 @@
     <string name="importing_some_entries_failed">Importen av vissa poster misslyckades</string>
     <string name="exporting_some_entries_failed">Exporten av vissa poster misslyckades</string>
     <string name="no_entries_for_importing">Inga poster som kan importeras hittades</string>
-    <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
+    <string name="no_new_entries_for_importing">Inga nya poster som kan importeras hittades</string>
     <string name="no_entries_for_exporting">Inga poster som kan exporteras hittades</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
@@ -683,12 +683,12 @@
     <string name="upgrade_calendar">Lokalt sparade händelser kan bara migreras manuellt genom att exportera och importera dem till och från en .ics-fil. Du hittar knappar för både export och import i huvudvymenyn.</string>
     <!-- About -->
     <string name="about">Om</string>
-    <string name="website">Website</string>
+    <string name="website">Webbplats</string>
     <string name="website_label">Du hittar källkoden på</string>
     <string name="email_label">Skicka dina synpunkter och förslag till</string>
     <string name="upgrade_to_pro">Uppgradera till Pro</string>
     <string name="more_apps">Fler appar</string>
-    <string name="more_apps_from_us">More apps from us</string>
+    <string name="more_apps_from_us">Fler appar från oss</string>
     <string name="invite_friends">Bjud in vänner</string>
     <string name="share_text">Hej, läs om %1$s på %2$s</string>
     <string name="invite_via">Bjud in via</string>
@@ -699,12 +699,12 @@
     <string name="follow_us">Följ oss</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="support">Support</string>
-    <string name="help_us">Help us</string>
+    <string name="help_us">Hjälp oss</string>
     <string name="social">Social</string>
     <string name="other">Other</string>
-    <string name="privacy_policy">Privacy policy</string>
+    <string name="privacy_policy">Integritetspolicy</string>
     <string name="version_placeholder">Version %s</string>
-    <string name="hello">Hello :)</string>
+    <string name="hello">Hej :)</string>
     <string name="about_footer">Made with ❤️ in Slovakia</string>
     <string name="additional_info">Ytterligare information</string>
     <string name="app_version">Appversion: %s</string>
@@ -725,7 +725,7 @@
     <string name="read_faq">Read FAQ</string>
     <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
     <string name="rate_our_app">Rate our app please :)</string>
-    <string name="thank_you">Thank you</string>
+    <string name="thank_you">Tack</string>
     <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
     <string name="widget_locked">
         <![CDATA[
@@ -762,21 +762,21 @@
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
     <string name="app_launcher_short">App Launcher</string>
-    <string name="calculator_short">Calculator</string>
-    <string name="calendar_short">Calendar</string>
-    <string name="camera_short">Camera</string>
-    <string name="clock_short">Clock</string>
-    <string name="contacts_short">Contacts</string>
-    <string name="dialer_short">Dialer</string>
-    <string name="draw_short">Draw</string>
-    <string name="file_manager_short">File Manager</string>
-    <string name="flashlight_short">Flashlight</string>
-    <string name="gallery_short">Gallery</string>
-    <string name="keyboard_short">Keyboard</string>
-    <string name="music_player_short">Music Player</string>
-    <string name="notes_short">Notes</string>
-    <string name="sms_messenger_short">SMS Messenger</string>
-    <string name="thank_you_short">Thank You</string>
+    <string name="calculator_short">Kalkylator</string>
+    <string name="calendar_short">Kalender</string>
+    <string name="camera_short">Kamera</string>
+    <string name="clock_short">Klocka</string>
+    <string name="contacts_short">Kontakter</string>
+    <string name="dialer_short">Telefon</string>
+    <string name="draw_short">Rita</string>
+    <string name="file_manager_short">Filhanterare</string>
+    <string name="flashlight_short">Ficklampa</string>
+    <string name="gallery_short">Galleri</string>
+    <string name="keyboard_short">Tangentbord</string>
+    <string name="music_player_short">Musikspelare</string>
+    <string name="notes_short">Anteckningar</string>
+    <string name="sms_messenger_short">Sms</string>
+    <string name="thank_you_short">Tack</string>
     <string name="voice_recorder_short">Voice Recorder</string>
     <string name="sideloaded_app">
         <![CDATA[
