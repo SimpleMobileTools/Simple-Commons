@@ -1022,26 +1022,56 @@ fun BaseSimpleActivity.renameFile(
                             return@updateSDK30Uris
                         }
                         try {
+                            val sourceUri = fileUris.first()
                             val sourceFile = File(oldPath).toFileDirItem(this)
-                            val destinationFile = FileDirItem(
-                                newPath,
-                                newPath.getFilenameFromPath(),
-                                sourceFile.isDirectory,
-                                sourceFile.children,
-                                sourceFile.size,
-                                sourceFile.modified
-                            )
-                            val copySuccessful = copySingleFileSdk30(sourceFile, destinationFile)
-                            if (copySuccessful) {
-                                if (!baseConfig.keepLastModified) {
-                                    newFile.setLastModified(System.currentTimeMillis())
+
+                            if (oldPath.equals(newPath, true)) {
+                                val tempDestination = try {
+                                    createTempFile(File(sourceFile.path)) ?: return@updateSDK30Uris
+                                } catch (exception: Exception) {
+                                    callback?.invoke(false, Android30RenameFormat.NONE)
+                                    return@updateSDK30Uris
                                 }
-                                contentResolver.delete(fileUris.first(), null)
-                                updateInMediaStore(oldPath, newPath)
-                                scanPathsRecursively(arrayListOf(newPath)) {
-                                    runOnUiThread {
-                                        callback?.invoke(true, Android30RenameFormat.NONE)
+
+                                val copyTempSuccess = copySingleFileSdk30(sourceFile, tempDestination.toFileDirItem(this))
+                                if (copyTempSuccess) {
+                                    contentResolver.delete(sourceUri, null)
+                                    tempDestination.renameTo(File(newPath))
+                                    if (!baseConfig.keepLastModified) {
+                                        newFile.setLastModified(System.currentTimeMillis())
                                     }
+                                    updateInMediaStore(oldPath, newPath)
+                                    scanPathsRecursively(arrayListOf(newPath)) {
+                                        runOnUiThread {
+                                            callback?.invoke(true, Android30RenameFormat.NONE)
+                                        }
+                                    }
+                                } else {
+                                    callback?.invoke(false, Android30RenameFormat.NONE)
+                                }
+                            } else {
+                                val destinationFile = FileDirItem(
+                                    newPath,
+                                    newPath.getFilenameFromPath(),
+                                    sourceFile.isDirectory,
+                                    sourceFile.children,
+                                    sourceFile.size,
+                                    sourceFile.modified
+                                )
+                                val copySuccessful = copySingleFileSdk30(sourceFile, destinationFile)
+                                if (copySuccessful) {
+                                    if (!baseConfig.keepLastModified) {
+                                        newFile.setLastModified(System.currentTimeMillis())
+                                    }
+                                    contentResolver.delete(sourceUri, null)
+                                    updateInMediaStore(oldPath, newPath)
+                                    scanPathsRecursively(arrayListOf(newPath)) {
+                                        runOnUiThread {
+                                            callback?.invoke(true, Android30RenameFormat.NONE)
+                                        }
+                                    }
+                                } else {
+                                    callback?.invoke(false, Android30RenameFormat.NONE)
                                 }
                             }
 

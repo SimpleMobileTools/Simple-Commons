@@ -188,6 +188,7 @@
     <string name="append">\'_1\' 문자열을 추가하기</string>
     <string name="apply_to_all">모든 충돌에 적용</string>
     <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
+    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
 
     <!-- File picker -->
     <string name="select_folder">폴더 선택</string>

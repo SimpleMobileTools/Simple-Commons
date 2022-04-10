@@ -37,10 +37,6 @@ fun String.getBasePath(context: Context): String {
     }
 }
 
-fun String.isBasePath(context: Context): Boolean {
-    return getBasePath(context) == this
-}
-
 fun String.getFirstParentDirName(context: Context, level: Int): String? {
     val basePath = getBasePath(context)
     val startIndex = basePath.length + 1
