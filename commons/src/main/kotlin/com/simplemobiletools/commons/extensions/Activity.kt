@@ -26,6 +26,7 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.biometric.BiometricPrompt
@@ -154,6 +155,8 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
                         try {
                             startActivityForResult(this, OPEN_DOCUMENT_TREE_SD)
                             checkedDocumentPath = path
+                        } catch (e: ActivityNotFoundException) {
+                            toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
                         } catch (e: Exception) {
                             toast(R.string.unknown_error_occurred)
                         }
@@ -188,6 +191,8 @@ fun BaseSimpleActivity.isShowingSAFDialogSdk30(path: String): Boolean {
                         try {
                             startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_SDK_30)
                             checkedDocumentPath = path
+                        } catch (e: ActivityNotFoundException) {
+                            toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
                         } catch (e: Exception) {
                             toast(R.string.unknown_error_occurred)
                         }
@@ -224,6 +229,8 @@ fun BaseSimpleActivity.isShowingSAFCreateDocumentDialogSdk30(path: String): Bool
                         try {
                             startActivityForResult(this, CREATE_DOCUMENT_SDK_30)
                             checkedDocumentPath = path
+                        } catch (e: ActivityNotFoundException) {
+                            toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
                         } catch (e: Exception) {
                             toast(R.string.unknown_error_occurred)
                         }
@@ -257,6 +264,8 @@ fun BaseSimpleActivity.isShowingAndroidSAFDialog(path: String): Boolean {
                             try {
                                 startActivityForResult(this, OPEN_DOCUMENT_TREE_FOR_ANDROID_DATA_OR_OBB)
                                 checkedDocumentPath = path
+                            } catch (e: ActivityNotFoundException) {
+                                toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
                             } catch (e: Exception) {
                                 toast(R.string.unknown_error_occurred)
                             }
@@ -296,6 +305,8 @@ fun BaseSimpleActivity.showOTGPermissionDialog(path: String) {
                     try {
                         startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
                         checkedDocumentPath = path
+                    } catch (e: ActivityNotFoundException) {
+                        toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
                     } catch (e: Exception) {
                         toast(R.string.unknown_error_occurred)
                     }

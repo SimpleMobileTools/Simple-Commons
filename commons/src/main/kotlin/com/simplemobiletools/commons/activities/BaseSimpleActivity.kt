@@ -546,6 +546,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
 
                 try {
                     startActivityForResult(this, OPEN_DOCUMENT_TREE_OTG)
+                } catch (e: ActivityNotFoundException) {
+                    toast(R.string.system_service_disabled, Toast.LENGTH_LONG)
                 } catch (e: Exception) {
                     toast(R.string.unknown_error_occurred)
                 }
