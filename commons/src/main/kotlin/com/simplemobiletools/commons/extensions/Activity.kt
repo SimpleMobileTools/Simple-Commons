@@ -49,7 +49,7 @@ import java.io.FileOutputStream
 import java.io.OutputStream
 import java.util.*
 
-fun AppCompatActivity.updateActionBarTitle(text: String, color: Int = baseConfig.primaryColor) {
+fun AppCompatActivity.updateActionBarTitle(text: String, color: Int = getProperPrimaryColor()) {
     val colorToUse = if (baseConfig.isUsingSystemTheme) {
         getProperTextColor()
     } else {
