@@ -65,7 +65,7 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                     }
                 }
                 File(path).mkdirs() -> sendSuccess(alertDialog, path)
-                isRPlus() && path.getParentPath().isBasePath(activity) -> activity.handleSAFCreateDocumentDialogSdk30(path) {
+                isRPlus() && activity.isAStorageRootFolder(path.getParentPath()) -> activity.handleSAFCreateDocumentDialogSdk30(path) {
                     if (it) {
                         sendSuccess(alertDialog, path)
                     }

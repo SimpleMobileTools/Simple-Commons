@@ -189,6 +189,7 @@
     <string name="append">Append with \'_1\'</string>
     <string name="apply_to_all">Apply to all</string>
     <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
+    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
 
     <!-- File picker -->
     <string name="select_folder">Select a folder</string>
