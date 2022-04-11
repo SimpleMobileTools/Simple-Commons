@@ -681,8 +681,6 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun getCurrentStatusBarColor() = if (customization_theme.value == getString(R.string.system_default)) {
         resources.getColor(R.color.you_status_bar_color)
-    } else if (isCurrentBlackAndWhiteTheme() || isCurrentWhiteTheme()) {
-        curAccentColor
     } else {
         curPrimaryColor
     }
