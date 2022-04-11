@@ -48,7 +48,7 @@
     <string name="call_person">Apelare %s</string>
     <string name="zero">Zero</string>
     <string name="one">One</string>
-    <string name="two">Two</string>
+    <string name="two">Doi</string>
     <string name="three">Trei</string>
     <string name="four">Patru</string>
     <string name="five">Cinci</string>
@@ -179,7 +179,7 @@
     <string name="append">Adăugaţi cu \'_1\'</string>
     <string name="apply_to_all">Se aplică tuturor</string>
     <string name="system_folder_restriction">Sistemul nu permite operarea în acest dosar, vă rugăm să alegeți un alt dosar</string>
-    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
+    <string name="rename_in_sd_card_system_restriction">Sistemul nu permite redenumirea în acest dosar</string>
     <!-- File picker -->
     <string name="select_folder">Selectaţi un dosar</string>
     <string name="select_file">Selectaţi un dosar</string>
@@ -322,7 +322,7 @@
     <string name="unpin_item">Unpin item</string>
     <string name="send_sms">Trimiteți SMS</string>
     <string name="send_email">Send email</string>
-    <string name="call">Call</string>
+    <string name="call">Sunați</string>
     <!-- Sorting -->
     <string name="sort_by">Sortează după</string>
     <string name="name">Nume</string>
@@ -360,6 +360,7 @@
     <string name="maybe">Poate</string>
     <plurals name="delete_warning">
         <item quantity="one">AVERTISMENT: Ștergeți %d dosar</item>
+        <item quantity="few">AVERTISMENT: Ștergeți %d dosare</item>
         <item quantity="other">AVERTISMENT: Ștergeți %d dosare</item>
     </plurals>
     <!-- Password protection -->
@@ -401,123 +402,152 @@
     <string name="hours_letter">h</string>
     <plurals name="seconds">
         <item quantity="one">%d secundă</item>
+        <item quantity="few">%d secunde</item>
         <item quantity="other">%d secunde</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d minut</item>
+        <item quantity="few">%d minute</item>
         <item quantity="other">%d minute</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d oră</item>
+        <item quantity="few">%d ore</item>
         <item quantity="other">%d ore</item>
     </plurals>
     <plurals name="days">
         <item quantity="one">%d zi</item>
+        <item quantity="few">%d zile</item>
         <item quantity="other">%d zile</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="one">%d săptămână</item>
+        <item quantity="few">%d săptămâni</item>
         <item quantity="other">%d săptămâni</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d lună</item>
+        <item quantity="few">%d luni</item>
         <item quantity="other">%d luni</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d an</item>
+        <item quantity="few">%d ani</item>
         <item quantity="other">%d ani</item>
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d secundă</item>
+        <item quantity="few">%d secunde</item>
         <item quantity="other">%d secunde</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d minut</item>
+        <item quantity="few">%d minute</item>
         <item quantity="other">%d minute</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d oră</item>
+        <item quantity="few">%d ore</item>
         <item quantity="other">%d ore</item>
     </plurals>
     <plurals name="in_days">
         <item quantity="one">%d zi</item>
+        <item quantity="few">%d zile</item>
         <item quantity="other">%d zile</item>
     </plurals>
     <plurals name="in_weeks">
         <item quantity="one">%d săptămână</item>
+        <item quantity="few">%d săptămâni</item>
         <item quantity="other">%d săptămâni</item>
     </plurals>
     <plurals name="in_months">
         <item quantity="one">%d lună</item>
+        <item quantity="few">%d luni</item>
         <item quantity="other">%d luni</item>
     </plurals>
     <plurals name="in_years">
         <item quantity="one">%d an</item>
+        <item quantity="few">%d ani</item>
         <item quantity="other">%d ani</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d secundă înainte</item>
+        <item quantity="few">%d secunde înainte</item>
         <item quantity="other">%d secunde înainte</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">%d minut înainte</item>
+        <item quantity="few">%d minute înainte</item>
         <item quantity="other">%d minute înainte</item>
     </plurals>
     <plurals name="hours_before">
         <item quantity="one">%d oră înainte</item>
+        <item quantity="few">%d ore înainte</item>
         <item quantity="other">%d ore înainte</item>
     </plurals>
     <plurals name="days_before">
         <item quantity="one">%d zi înainte</item>
+        <item quantity="few">%d zile înainte</item>
         <item quantity="other">%d zile înainte</item>
     </plurals>
     <plurals name="weeks_before">
         <item quantity="one">%d săptămână înainte</item>
+        <item quantity="few">%d săptămâni înainte</item>
         <item quantity="other">%d săptămâni înainte</item>
     </plurals>
     <plurals name="months_before">
         <item quantity="one">%d lună înainte</item>
+        <item quantity="few">%d luni înainte</item>
         <item quantity="other">%d luni înainte</item>
     </plurals>
     <plurals name="years_before">
         <item quantity="one">%d an înainte</item>
+        <item quantity="few">%d ani înainte</item>
         <item quantity="other">%d ani înainte</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d secundă</item>
+        <item quantity="few">%d secunde</item>
         <item quantity="other">%d secunde</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d minut</item>
+        <item quantity="few">%d minute</item>
         <item quantity="other">%d minute</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d oră</item>
+        <item quantity="few">%d ore</item>
         <item quantity="other">%d ore</item>
     </plurals>
     <plurals name="by_days">
         <item quantity="one">%d zi</item>
+        <item quantity="few">%d zile</item>
         <item quantity="other">%d zile</item>
     </plurals>
     <plurals name="by_weeks">
         <item quantity="one">%d săptămână</item>
+        <item quantity="few">%d săptămâni</item>
         <item quantity="other">%d săptămâni</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d lună</item>
+        <item quantity="few">%d luni</item>
         <item quantity="other">%d luni</item>
     </plurals>
     <plurals name="by_years">
         <item quantity="one">%d an</item>
+        <item quantity="few">%d ani</item>
         <item quantity="other">%d ani</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Timpul rămas până la declanșarea alarmei:\n%s</string>
     <string name="reminder_triggers_in">Timpul rămas până la declanșarea atenționării:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Timp rămas:
+\n%s</string>
     <string name="alarm_warning">Vă rugăm să vă asigurați că alarma funcționează corespunzător înainte de a vă baza pe ea. S-ar putea să se comporte necorespunzător din cauza restricțiilor de sistem legate de economisirea bateriei.</string>
     <string name="reminder_warning">Vă rugăm să vă asigurați că memento-urile funcționează corect înainte de a vă baza pe ele. Verificați setările bateriei dispozitivului, precum și setările de notificare. Unele telefoane au funcţii care pot bloca memento-urile sau pot să elimine procesul de fundal al aplicaţiei.</string>
     <string name="notifications_disabled">Notificările privind această aplicație sunt dezactivate. Vă rugăm să accesați setările dispozitivului pentru a le activa.</string>
@@ -543,7 +573,7 @@
     <string name="customize_widget_colors">Personalizați culorile widgetului</string>
     <string name="customize_notifications">Personalizați notificările</string>
     <string name="use_english_language">Utilizați limba engleză</string>
-    <string name="language">Language</string>
+    <string name="language">Limbă</string>
     <string name="show_hidden_items">Afișați elementele ascunse</string>
     <string name="font_size">Dimensiunea fontului</string>
     <string name="small">Mic</string>
@@ -586,9 +616,9 @@
     <string name="startup">Pornire</string>
     <string name="text">Text</string>
     <string name="migrating">Migrare</string>
-    <string name="quality">Quality</string>
-    <string name="main_screen">Main screen</string>
-    <string name="thumbnails">Thumbnails</string>
+    <string name="quality">Calitate</string>
+    <string name="main_screen">Ecran principal</string>
+    <string name="thumbnails">Miniaturi</string>
     <string name="list_view">List view</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Gestionați filele afișate</string>
@@ -613,6 +643,7 @@
     <string name="hide_the_recycle_bin">Ascundeţi coșul de reciclare</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Mutarea elementului %d în coşul de recilare</item>
+        <item quantity="few">Mutarea elementelor %d în coşul de recilare</item>
         <item quantity="other">Mutarea elementelor %d în coşul de recilare</item>
     </plurals>
     <!-- Import / Export -->
@@ -625,7 +656,7 @@
     <string name="importing_some_entries_failed">Importul unor intrări a eșuat</string>
     <string name="exporting_some_entries_failed">Exportul unor intrări a eșuat</string>
     <string name="no_entries_for_importing">Nu au fost găsite intrări ce pot fi importate</string>
-    <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
+    <string name="no_new_entries_for_importing">Nu au fost găsite intrări noi pentru import</string>
     <string name="no_entries_for_exporting">Nu au fost găsite intrări ce pot fi exportate</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
@@ -707,9 +738,9 @@
     <string name="help_us">Ajutaţi-ne</string>
     <string name="social">Social</string>
     <string name="other">Altele</string>
-    <string name="privacy_policy">Privacy policy</string>
+    <string name="privacy_policy">Politică de confidențialitate</string>
     <string name="version_placeholder">Version %s</string>
-    <string name="hello">Hello :)</string>
+    <string name="hello">Salut :)</string>
     <string name="about_footer">Realizat cu ❤️ în Slovacia</string>
     <string name="additional_info">Informații suplimentare</string>
     <string name="app_version">Versiunea aplicației: %s</string>
@@ -760,11 +791,11 @@
     <string name="simple_file_manager">Manager de Fișiere Simplu</string>
     <string name="simple_flashlight">Lanternă Simplă</string>
     <string name="simple_gallery">Galerie Simplă</string>
-    <string name="simple_keyboard">Simple Keyboard</string>
+    <string name="simple_keyboard">Tastatură simplă</string>
     <string name="simple_music_player">Player Muzical Simplu</string>
     <string name="simple_notes">Note Simple</string>
     <string name="simple_sms_messenger">SMS Messenger Simplu</string>
-    <string name="simple_thank_you">Simple Thank You</string>
+    <string name="simple_thank_you">Mulțumesc Simplu</string>
     <string name="simple_voice_recorder">Înregistrări Vocale Simple</string>
     <string name="app_launcher_short">Lansator aplicaţii</string>
     <string name="calculator_short">Calculator</string>
@@ -777,7 +808,7 @@
     <string name="file_manager_short">Manager de fișiere</string>
     <string name="flashlight_short">Lanternă</string>
     <string name="gallery_short">Galerie</string>
-    <string name="keyboard_short">Keyboard</string>
+    <string name="keyboard_short">Tastatură</string>
     <string name="music_player_short">Player muzical</string>
     <string name="notes_short">Note</string>
     <string name="sms_messenger_short">Mesaje</string>
