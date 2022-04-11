@@ -181,7 +181,7 @@ class Breadcrumbs(context: Context, attrs: AttributeSet) : HorizontalScrollView(
             val firstItemBgColor = if (isShownInDialog && context.baseConfig.isUsingSystemTheme) {
                 resources.getColor(R.color.you_dialog_background_color, context.theme)
             } else {
-                context.baseConfig.backgroundColor
+                context.getProperBackgroundColor()
             }
 
             inflater.inflate(R.layout.item_breadcrumb_first, itemsLayout, false).apply {
