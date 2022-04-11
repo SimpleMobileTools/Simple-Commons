@@ -9,12 +9,12 @@ fun Activity.getThemeId(color: Int = baseConfig.primaryColor, showTransparentTop
     baseConfig.isUsingSystemTheme -> if (isUsingSystemDarkTheme()) R.style.AppTheme_Base_System else R.style.AppTheme_Base_System_Light
     isBlackAndWhiteTheme() -> when {
         showTransparentTop -> R.style.AppTheme_BlackAndWhite_NoActionBar
-        baseConfig.accentColor.getContrastColor() == DARK_GREY -> R.style.AppTheme_BlackAndWhite_DarkTextColor
+        baseConfig.primaryColor.getContrastColor() == DARK_GREY -> R.style.AppTheme_BlackAndWhite_DarkTextColor
         else -> R.style.AppTheme_BlackAndWhite
     }
     isWhiteTheme() -> when {
         showTransparentTop -> R.style.AppTheme_White_NoActionBar
-        baseConfig.accentColor.getContrastColor() == Color.WHITE -> R.style.AppTheme_White_LightTextColor
+        baseConfig.primaryColor.getContrastColor() == Color.WHITE -> R.style.AppTheme_White_LightTextColor
         else -> R.style.AppTheme_White
     }
     showTransparentTop -> {
