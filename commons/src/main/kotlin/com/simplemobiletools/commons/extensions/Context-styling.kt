@@ -31,6 +31,11 @@ fun Context.getProperPrimaryColor() = when {
     else -> baseConfig.primaryColor
 }
 
+fun Context.getProperStatusBarColor() = when {
+    baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_primary_color, theme)
+    else -> baseConfig.primaryColor
+}
+
 fun Context.updateTextColors(viewGroup: ViewGroup) {
     val textColor = when {
         baseConfig.isUsingSystemTheme -> getProperTextColor()

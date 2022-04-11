@@ -104,7 +104,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             val color = if (baseConfig.isUsingSystemTheme) {
                 resources.getColor(R.color.you_status_bar_color)
             } else {
-                getProperPrimaryColor()
+                getProperStatusBarColor()
             }
 
             updateActionbarColor(color)
@@ -155,7 +155,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun updateActionbarColor(color: Int = getProperPrimaryColor()) {
+    fun updateActionbarColor(color: Int = getProperStatusBarColor()) {
         updateActionBarTitle(supportActionBar?.title.toString(), color)
         supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
         updateStatusbarColor(color)
