@@ -83,7 +83,7 @@ private fun doToast(context: Context, message: String, length: Int) {
 }
 
 fun Context.showErrorToast(msg: String, length: Int = Toast.LENGTH_LONG) {
-    toast(String.format(getString(R.string.an_error_occurred), msg), length)
+    toast(String.format(getString(R.string.error), msg), length)
 }
 
 fun Context.showErrorToast(exception: Exception, length: Int = Toast.LENGTH_LONG) {
