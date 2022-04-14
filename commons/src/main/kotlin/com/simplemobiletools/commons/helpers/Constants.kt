@@ -262,6 +262,7 @@ const val PERMISSION_GET_ACCOUNTS = 12
 const val PERMISSION_READ_SMS = 13
 const val PERMISSION_SEND_SMS = 14
 const val PERMISSION_READ_PHONE_STATE = 15
+const val PERMISSION_MEDIA_LOCATION = 16
 
 // conflict resolving
 const val CONFLICT_SKIP = 1
