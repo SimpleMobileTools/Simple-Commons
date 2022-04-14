@@ -9,7 +9,7 @@
     <string name="invalid_file_format">Ongeldig bestandsformaat</string>
     <string name="out_of_memory_error">Onvoldoende geheugen</string>
     <string name="an_error_occurred">Fout opgetreden: %s</string>
-    <string name="error">Error: %s</string>
+    <string name="error">Fout: %s</string>
     <string name="open_with">Openen met</string>
     <string name="edit_with">Bewerken met</string>
     <string name="edit">Bewerken</string>
@@ -178,7 +178,7 @@
     <string name="append">Toevoegen met \'_1\'</string>
     <string name="apply_to_all">Toepassen op alle</string>
     <string name="system_folder_restriction">Het systeem staat de bewerking in deze map niet toe, kies een andere map</string>
-    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
+    <string name="rename_in_sd_card_system_restriction">Het systeem staat niet toe om in deze map namen te wijzigen</string>
     <!-- File picker -->
     <string name="select_folder">Kies een map</string>
     <string name="select_file">Kies een bestand</string>

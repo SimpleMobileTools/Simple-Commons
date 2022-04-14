@@ -157,7 +157,7 @@
     <string name="could_not_create_file">Impossibile creare il file %s</string>
     <string name="no_new_items">Nessun nuovo elemento trovato</string>
     <string name="no_space">La destinazione non ha abbastanza spazio disponibile.\nRichiesti %1$s, disponibili %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="system_service_disabled">Il servizio di sistema per la selezione di file e cartelle non è disponibile</string>
     <!-- Create new -->
     <string name="create_new">Crea nuovo</string>
     <string name="folder">Cartella</string>
@@ -177,8 +177,8 @@
     <string name="skip">Salta</string>
     <string name="append">Aggiungi \'_1\' alla fine</string>
     <string name="apply_to_all">Applica a tutti i conflitti</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
-    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
+    <string name="system_folder_restriction">Il sistema non permette l\'operazione in questa cartella, sceglietene un\'altra</string>
+    <string name="rename_in_sd_card_system_restriction">Il sistema non permette di rinominare in questa cartella</string>
     <!-- File picker -->
     <string name="select_folder">Seleziona una cartella</string>
     <string name="select_file">Seleziona un file</string>
@@ -238,9 +238,9 @@
     <string name="song_title">Titolo canzone</string>
     <string name="gps_coordinates">Coordinate GPS</string>
     <string name="altitude">Altitudine</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">Rimuovi EXIF</string>
+    <string name="remove_exif_confirmation">Sei sicuro/a di voler rimuovere i valori EXIF come le coordinate GPS, il modello della fotocamera, ecc.\?</string>
+    <string name="exif_removed">Valori EXIF rimossi con successo</string>
     <!-- Color customization -->
     <string name="background_color">Colore di sfondo</string>
     <string name="text_color">Colore del testo</string>
@@ -275,7 +275,7 @@
     <string name="light_theme">Chiaro</string>
     <string name="dark_theme">Scuro</string>
     <string name="auto_theme">Auto</string>
-    <string name="auto_light_dark_theme">Auto light / dark</string>
+    <string name="auto_light_dark_theme">Auto chiaro / scuro</string>
     <string name="solarized">Solarizzato</string>
     <string name="dark_red">Rosso scuro</string>
     <string name="white">Bianco</string>

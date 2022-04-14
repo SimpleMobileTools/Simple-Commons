@@ -9,7 +9,7 @@
     <string name="invalid_file_format">Format de fichier incorrect</string>
     <string name="out_of_memory_error">Erreur : mémoire insuffisante</string>
     <string name="an_error_occurred">Une erreur est survenue : %s</string>
-    <string name="error">Error: %s</string>
+    <string name="error">Erreur : %s</string>
     <string name="open_with">Ouvrir avec</string>
     <string name="edit_with">Modifier avec</string>
     <string name="edit">Modifier</string>
@@ -157,7 +157,7 @@
     <string name="could_not_create_file">Impossible de créer le fichier %s</string>
     <string name="no_new_items">Aucun nouvel élément trouvé</string>
     <string name="no_space">La destination n\'a pas assez d\'espace disponible.\nNécessaire : %1$s, disponible : %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="system_service_disabled">Le service système de sélection des fichiers et des dossiers est indisponible</string>
     <!-- Create new -->
     <string name="create_new">Créer un nouveau</string>
     <string name="folder">Dossier</string>
@@ -178,7 +178,7 @@
     <string name="append">Ajouter un suffixe \"_1\"</string>
     <string name="apply_to_all">Appliquer à tous</string>
     <string name="system_folder_restriction">Le système n\'autorise pas l\'opération dans ce dossier, veuillez en choisir un autre</string>
-    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
+    <string name="rename_in_sd_card_system_restriction">Le système n\'autorise pas le renommage dans ce dossier</string>
     <!-- File picker -->
     <string name="select_folder">Sélectionner un dossier</string>
     <string name="select_file">Sélectionner un fichier</string>
