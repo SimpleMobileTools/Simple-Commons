@@ -15,12 +15,14 @@
         <item name="colorControlHighlight">@color/activated_item_foreground</item>
         <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
         <item name="android:actionModeCloseDrawable">@drawable/ic_arrow_left_vector</item>
+        <item name="android:forceDarkAllowed">false</item>
     </style>
 
     <style name="AppTheme.Base.Core" parent="Theme.AppCompat.NoActionBar">
         <item name="android:colorControlHighlight">@color/activated_item_foreground</item>
         <item name="colorControlHighlight">@color/activated_item_foreground</item>
         <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
+        <item name="android:forceDarkAllowed">false</item>
     </style>
 
     <style name="AppTheme.Base.System" parent="@android:style/Theme.DeviceDefault.NoActionBar">
@@ -32,6 +34,7 @@
         <item name="actionBarPopupTheme">@style/TopPopupMenuTextYou</item>
         <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
         <item name="actionModeStyle">@style/AppTheme.ActionMode</item>
+        <item name="android:forceDarkAllowed">false</item>
     </style>
 
     <style name="AppTheme.Base.System.Light" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">
