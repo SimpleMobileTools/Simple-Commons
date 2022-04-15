@@ -36,7 +36,7 @@ fun Context.isAccessibleWithSAFSdk30(path: String): Boolean {
     val isValidName = firstParentDir != null
     val isDirectory = File(firstParentPath).isDirectory
     val isAnAccessibleDirectory = DIRS_INACCESSIBLE_WITH_SAF_SDK_30.all { !firstParentDir.equals(it, true) }
-    return isValidName && isDirectory && isAnAccessibleDirectory
+    return isRPlus() && isValidName && isDirectory && isAnAccessibleDirectory
 }
 
 fun Context.getFirstParentLevel(path: String): Int {
@@ -59,7 +59,7 @@ fun Context.isRestrictedWithSAFSdk30(path: String): Boolean {
     val isInvalidName = firstParentDir == null
     val isDirectory = File(firstParentPath).isDirectory
     val isARestrictedDirectory = DIRS_INACCESSIBLE_WITH_SAF_SDK_30.any { firstParentDir.equals(it, true) }
-    return isInvalidName || (isDirectory && isARestrictedDirectory)
+    return isRPlus() && isInvalidName || (isDirectory && isARestrictedDirectory)
 }
 
 fun Context.isInDownloadDir(path: String): Boolean {
