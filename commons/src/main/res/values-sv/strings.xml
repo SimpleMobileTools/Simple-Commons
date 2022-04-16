@@ -55,7 +55,7 @@
     <string name="seven">Sju</string>
     <string name="eight">Åtta</string>
     <string name="nine">Nio</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="value_cannot_be_empty">Värdet får inte vara tomt</string>
     <!-- Emails -->
     <string name="home">Hem</string>
     <string name="work">Arbete</string>
@@ -125,8 +125,8 @@
     <string name="pattern_renaming">Pattern</string>
     <string name="string_to_add">String to add</string>
     <string name="rename_date_time_pattern">%Y - år\n%M - månad\n%D - dag\n%h - timme\n%m - minut\n%s - sekund\n%i - number increasing from 1</string>
-    <string name="filename_without_txt">Filename (without .txt)</string>
-    <string name="filename_without_json">Filename (without .json)</string>
+    <string name="filename_without_txt">Filnamn (utan .txt)</string>
+    <string name="filename_without_json">Filnamn (utan .json)</string>
     <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
     <!-- Copy / Move -->
     <string name="copy">Kopiera</string>
@@ -184,7 +184,7 @@
     <string name="select_folder">Välj mapp</string>
     <string name="select_file">Välj fil</string>
     <string name="confirm_storage_access_title">Bekräfta åtkomst till extern lagring</string>
-    <string name="confirm_folder_access_title">Confirm folder access</string>
+    <string name="confirm_folder_access_title">Bekräfta mappåtkomst</string>
     <string name="confirm_storage_access_text">Välj rotmappen på ditt SD-kort på nästa skärm, för att bevilja skrivrättigheter</string>
     <string name="confirm_storage_access_text_sd">Om du inte ser SD-kortet, prova detta</string>
     <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
@@ -239,9 +239,9 @@
     <string name="song_title">Låttitel</string>
     <string name="gps_coordinates">GPS-koordinater</string>
     <string name="altitude">Höjd över havet</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">Ta bort EXIF-data</string>
+    <string name="remove_exif_confirmation">Är du säker på att du vill ta bort EXIF-data som GPS-koordinater, kameramodell med mera?</string>
+    <string name="exif_removed">EXIF-datan har tagits bort</string>
     <!-- Color customization -->
     <string name="background_color">Bakgrundsfärg</string>
     <string name="text_color">Textfärg</string>
@@ -338,9 +338,9 @@
     <string name="first_name">Förnamn</string>
     <string name="middle_name">Mellannamn</string>
     <string name="surname">Efternamn</string>
-    <string name="full_name">Full name</string>
-    <string name="use_custom_sorting">Use custom sorting</string>
-    <string name="change_order">Change order</string>
+    <string name="full_name">Fullständigt namn</string>
+    <string name="use_custom_sorting">Använd anpassad sortering</string>
+    <string name="change_order">Ändra ordning</string>
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Är du säker på att du vill fortsätta med borttagningen?</string>
     <string name="deletion_confirmation">Är du säker på att du vill ta bort %s?</string>
@@ -527,8 +527,8 @@
     <string name="your_sounds">Dina ljud</string>
     <string name="add_new_sound">Lägg till ett nytt ljud</string>
     <string name="no_sound">Inget ljud</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="during_day_at_hh_mm">Under dagen klockan hh:mm</string>
+    <string name="during_day_at">Under dagen klockan %02d:%02d</string>
     <!-- Settings -->
     <string name="settings">Inställningar</string>
     <string name="purchase_simple_thank_you">Köp Simple Thank You</string>
@@ -701,12 +701,12 @@
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="support">Support</string>
     <string name="help_us">Hjälp oss</string>
-    <string name="social">Social</string>
-    <string name="other">Other</string>
+    <string name="social">Socialt</string>
+    <string name="other">Övrigt</string>
     <string name="privacy_policy">Integritetspolicy</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hej :)</string>
-    <string name="about_footer">Made with ❤️ in Slovakia</string>
+    <string name="about_footer">Skapad med ❤️ i Slovakien</string>
     <string name="additional_info">Ytterligare information</string>
     <string name="app_version">Appversion: %s</string>
     <string name="device_os">Enhetens operativsystem: %s</string>
@@ -725,12 +725,12 @@
     <string name="read_it">Read it</string>
     <string name="read_faq">Read FAQ</string>
     <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
-    <string name="rate_our_app">Rate our app please :)</string>
+    <string name="rate_our_app">Betygsätt vår app :)</string>
     <string name="thank_you">Tack</string>
-    <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
+    <string name="widget_locked_pro">Widgeten är låst.\nUppgradera till Pro-versionen för att låsa upp den.</string>
     <string name="widget_locked">
         <![CDATA[
-            The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
+            Widgeten är låst.<br>Köp <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> för att låsa upp den.
         ]]>
     </string>
     <!-- New app (do not translate anything on the 4th line) -->
@@ -819,10 +819,10 @@
     <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
     <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
     <!-- Contributors -->
-    <string name="contributors">Contributors</string>
-    <string name="translation">Translation</string>
-    <string name="development">Development</string>
-    <string name="other_help">Other help</string>
+    <string name="contributors">Bidragsgivare</string>
+    <string name="translation">Översättning</string>
+    <string name="development">Utveckling</string>
+    <string name="other_help">Annan hjälp</string>
     <string name="contributors_label">
         <![CDATA[
             This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
@@ -830,50 +830,50 @@
             Thanks to all contributors and other supporters!
         ]]>
     </string>
-    <string name="translation_arabic">Arabic</string>
-    <string name="translation_azerbaijani">Azerbaijani</string>
+    <string name="translation_arabic">Arabiska</string>
+    <string name="translation_azerbaijani">Azerbajdzjanska</string>
     <string name="translation_bengali">Bengali</string>
-    <string name="translation_breton">Breton</string>
-    <string name="translation_catalan">Catalan</string>
-    <string name="translation_czech">Czech</string>
-    <string name="translation_welsh">Welsh</string>
-    <string name="translation_danish">Danish</string>
-    <string name="translation_english">English</string>
-    <string name="translation_german">German</string>
-    <string name="translation_greek">Greek</string>
-    <string name="translation_spanish">Spanish</string>
-    <string name="translation_basque">Basque</string>
-    <string name="translation_persian">Persian</string>
-    <string name="translation_finnish">Finnish</string>
-    <string name="translation_french">French</string>
-    <string name="translation_galician">Galician</string>
+    <string name="translation_breton">Bretonska</string>
+    <string name="translation_catalan">Katalanska</string>
+    <string name="translation_czech">Tjeckiska</string>
+    <string name="translation_welsh">Walesiska</string>
+    <string name="translation_danish">Danska</string>
+    <string name="translation_english">Engelska</string>
+    <string name="translation_german">Tyska</string>
+    <string name="translation_greek">Grekiska</string>
+    <string name="translation_spanish">Spanska</string>
+    <string name="translation_basque">Baskiska</string>
+    <string name="translation_persian">Persiska</string>
+    <string name="translation_finnish">Finska</string>
+    <string name="translation_french">Franska</string>
+    <string name="translation_galician">Galiciska</string>
     <string name="translation_hindi">Hindi</string>
-    <string name="translation_croatian">Croatian</string>
-    <string name="translation_hungarian">Hungarian</string>
-    <string name="translation_indonesian">Indonesian</string>
-    <string name="translation_italian">Italian</string>
-    <string name="translation_hebrew">Hebrew</string>
-    <string name="translation_japanese">Japanese</string>
-    <string name="translation_korean">Korean</string>
-    <string name="translation_lithuanian">Lithuanian</string>
+    <string name="translation_croatian">Kroatiska</string>
+    <string name="translation_hungarian">Ungerska</string>
+    <string name="translation_indonesian">Indonesiska</string>
+    <string name="translation_italian">Italienska</string>
+    <string name="translation_hebrew">Hebreiska</string>
+    <string name="translation_japanese">Japanska</string>
+    <string name="translation_korean">Koreanska</string>
+    <string name="translation_lithuanian">Litauiska</string>
     <string name="translation_nepali">Nepali</string>
-    <string name="translation_norwegian">Norwegian</string>
-    <string name="translation_dutch">Dutch</string>
-    <string name="translation_polish">Polish</string>
-    <string name="translation_portuguese">Portuguese</string>
-    <string name="translation_romanian">Romanian</string>
-    <string name="translation_russian">Russian</string>
-    <string name="translation_slovak">Slovak</string>
-    <string name="translation_slovenian">Slovenian</string>
-    <string name="translation_serbian">Serbian</string>
-    <string name="translation_swedish">Swedish</string>
+    <string name="translation_norwegian">Norska</string>
+    <string name="translation_dutch">Nederländska</string>
+    <string name="translation_polish">Polska</string>
+    <string name="translation_portuguese">Portugisiska</string>
+    <string name="translation_romanian">Rumänska</string>
+    <string name="translation_russian">Ryska</string>
+    <string name="translation_slovak">Slovakiska</string>
+    <string name="translation_slovenian">Slovenska</string>
+    <string name="translation_serbian">Serbiska</string>
+    <string name="translation_swedish">Svenska</string>
     <string name="translation_tamil">Tamil</string>
-    <string name="translation_turkish">Turkish</string>
-    <string name="translation_ukrainian">Ukrainian</string>
-    <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
-    <string name="translation_chinese_cn">Chinese (Simplified)</string>
-    <string name="translation_chinese_tw">Chinese (Traditional)</string>
+    <string name="translation_turkish">Turkiska</string>
+    <string name="translation_ukrainian">Ukrainska</string>
+    <string name="translation_vietnamese">Vietnamesiska</string>
+    <string name="translation_chinese_hk">Kinesiska (Hongkong)</string>
+    <string name="translation_chinese_cn">Kinesiska (förenklad)</string>
+    <string name="translation_chinese_tw">Kinesiska (traditionell)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Get the Pro version now!</string>
     <string name="why_upgrade_basic_version">Basic</string>
