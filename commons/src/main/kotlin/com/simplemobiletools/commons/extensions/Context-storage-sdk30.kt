@@ -7,17 +7,12 @@ import android.provider.DocumentsContract
 import androidx.documentfile.provider.DocumentFile
 import com.simplemobiletools.commons.helpers.EXTERNAL_STORAGE_PROVIDER_AUTHORITY
 import com.simplemobiletools.commons.helpers.isRPlus
-import com.simplemobiletools.commons.helpers.isSPlus
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 
 private const val DOWNLOAD_DIR = "Download"
 private const val ANDROID_DIR = "Android"
-private val DIRS_INACCESSIBLE_WITH_SAF_SDK_30 = if (isSPlus()) {
-    listOf(DOWNLOAD_DIR, ANDROID_DIR)
-} else {
-    listOf(DOWNLOAD_DIR)
-}
+private val DIRS_INACCESSIBLE_WITH_SAF_SDK_30 = listOf(DOWNLOAD_DIR, ANDROID_DIR)
 
 fun Context.hasProperStoredFirstParentUri(path: String): Boolean {
     val firstParentUri = createFirstParentTreeUri(path)
@@ -41,8 +36,7 @@ fun Context.isAccessibleWithSAFSdk30(path: String): Boolean {
 
 fun Context.getFirstParentLevel(path: String): Int {
     return when {
-        isSPlus() && (isInAndroidDir(path) || isInSubFolderInDownloadDir(path)) -> 1
-        isRPlus() && isInSubFolderInDownloadDir(path) -> 1
+        isRPlus() && (isInAndroidDir(path) || isInSubFolderInDownloadDir(path)) -> 1
         else -> 0
     }
 }
