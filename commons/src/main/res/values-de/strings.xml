@@ -178,6 +178,7 @@
     <string name="append">\"_1\" anhängen</string>
     <string name="apply_to_all">Bei allen Konflikten anwenden</string>
     <string name="system_folder_restriction">Das System lässt den Vorgang in diesem Ordner nicht zu, bitte wählen Sie einen anderen Ordner</string>
+    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
     <string name="rename_in_sd_card_system_restriction">Das System erlaubt keine Umbenennung in diesem Ordner</string>
     <!-- File picker -->
     <string name="select_folder">Ordner auswählen</string>

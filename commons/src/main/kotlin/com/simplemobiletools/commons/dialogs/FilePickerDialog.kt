@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.dialogs
 import android.os.Environment
 import android.os.Parcelable
 import android.view.KeyEvent
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -223,7 +224,7 @@ class FilePickerDialog(
                     sendSuccess()
                 }
             } else {
-                activity.toast(R.string.system_folder_restriction)
+                activity.toast(R.string.system_folder_restriction, Toast.LENGTH_LONG)
             }
         } else {
             val file = File(currPath)
