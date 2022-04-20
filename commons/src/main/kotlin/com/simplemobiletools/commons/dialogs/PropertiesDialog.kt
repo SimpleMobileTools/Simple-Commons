@@ -124,7 +124,11 @@ class PropertiesDialog() {
                         return@ensureBackgroundThread
                     }
                 } else {
-                    ExifInterface(fileDirItem.path)
+                    try {
+                        ExifInterface(fileDirItem.path)
+                    } catch (e: Exception) {
+                        return@ensureBackgroundThread
+                    }
                 }
 
                 val latLon = FloatArray(2)
