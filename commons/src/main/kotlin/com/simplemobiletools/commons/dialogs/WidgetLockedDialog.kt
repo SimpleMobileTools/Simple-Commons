@@ -35,7 +35,7 @@ class WidgetLockedDialog(val activity: Activity, val callback: () -> Unit) {
             }
     }
 
-    private fun dismissDialog() {
+    fun dismissDialog() {
         dialog.dismiss()
         callback()
     }
