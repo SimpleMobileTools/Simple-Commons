@@ -281,6 +281,7 @@ class CopyMoveTask(
                                 val fileUris = activity.getFileUrisFromFileDirItems(arrayListOf(destination)).second
                                 activity.updateSDK30Uris(fileUris) {
                                     updateLastModifiedValues(source, destination)
+                                    activity.rescanPath(destination.path)
                                 }
                             } else {
                                 updateLastModifiedValues(source, destination)
@@ -292,6 +293,7 @@ class CopyMoveTask(
                         val fileUris = activity.getFileUrisFromFileDirItems(arrayListOf(destination)).second
                         activity.updateSDK30Uris(fileUris) {
                             updateLastModifiedValues(source, destination)
+                            activity.rescanPath(destination.path)
                         }
                     } else {
                         updateLastModifiedValues(source, destination)
@@ -323,6 +325,7 @@ class CopyMoveTask(
             MediaStore.Images.Media.DATE_TAKEN,
             MediaStore.Images.Media.DATE_MODIFIED
         )
+
         val uri = MediaStore.Files.getContentUri("external")
         val selection = "${MediaStore.MediaColumns.DATA} = ?"
         var selectionArgs = arrayOf(sourcePath)
