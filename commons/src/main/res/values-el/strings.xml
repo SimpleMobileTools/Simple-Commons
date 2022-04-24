@@ -186,7 +186,7 @@
     <string name="append">Προσάρτηση με \'_1\'</string>
     <string name="apply_to_all">Εφαρμογή σε όλα</string>
     <string name="system_folder_restriction">Το Σύστημα δεν επιτρέπει τη λειτουργία σε αυτόν το φάκελο, παρακαλούμε επιλέξτε έναν άλλο φάκελο</string>
-    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
+    <string name="system_folder_copy_restriction">Το Σύστημα δεν επιτρέπει την αντιγραφή σε αυτόν τον φάκελο, παρακαλώ επιλέξτε έναν άλλο φάκελο</string>
     <string name="rename_in_sd_card_system_restriction">Το Σύστημα δεν επιτρέπει μετονομασία σε αυτόν το φάκελο</string>
 
     <!-- File picker -->
@@ -409,7 +409,7 @@
     <string name="yesterday">Χθές</string>
     <string name="today">Σήμερα</string>
     <string name="tomorrow">Αύριο</string>
-    <string name="every_day">Every day</string>
+    <string name="every_day">Καθημερινά</string>
     <string name="hide_year">Απόκρυψη χρόνου</string>
     <string name="seconds_raw">δευτ.</string>
     <string name="minutes_raw">λεπτ.</string>
