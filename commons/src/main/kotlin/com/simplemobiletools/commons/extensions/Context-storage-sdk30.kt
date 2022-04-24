@@ -4,9 +4,11 @@ import android.content.Context
 import android.net.Uri
 import android.os.Environment
 import android.provider.DocumentsContract
+import android.provider.MediaStore
 import androidx.documentfile.provider.DocumentFile
 import com.simplemobiletools.commons.helpers.EXTERNAL_STORAGE_PROVIDER_AUTHORITY
 import com.simplemobiletools.commons.helpers.isRPlus
+import com.simplemobiletools.commons.helpers.isSPlus
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 
@@ -25,8 +27,8 @@ fun Context.isAccessibleWithSAFSdk30(path: String): Boolean {
     }
 
     val level = getFirstParentLevel(path)
-    val firstParentDir =  path.getFirstParentDirName(this, level)
-    val firstParentPath =  path.getFirstParentPath(this, level)
+    val firstParentDir = path.getFirstParentDirName(this, level)
+    val firstParentPath = path.getFirstParentPath(this, level)
 
     val isValidName = firstParentDir != null
     val isDirectory = File(firstParentPath).isDirectory
@@ -47,8 +49,8 @@ fun Context.isRestrictedWithSAFSdk30(path: String): Boolean {
     }
 
     val level = getFirstParentLevel(path)
-    val firstParentDir =  path.getFirstParentDirName(this, level)
-    val firstParentPath =  path.getFirstParentPath(this, level)
+    val firstParentDir = path.getFirstParentDirName(this, level)
+    val firstParentPath = path.getFirstParentPath(this, level)
 
     val isInvalidName = firstParentDir == null
     val isDirectory = File(firstParentPath).isDirectory
@@ -93,6 +95,11 @@ fun isNotExternalStorageManager(): Boolean {
 
 fun isExternalStorageManager(): Boolean {
     return isRPlus() && Environment.isExternalStorageManager()
+}
+
+// is the app a Media Management App on Android 12+?
+fun Context.canManageMedia(): Boolean {
+    return isSPlus() && MediaStore.canManageMedia(this)
 }
 
 fun Context.createFirstParentTreeUriUsingRootTree(fullPath: String): Uri {
@@ -198,7 +205,6 @@ fun Context.getDocumentSdk30(path: String): DocumentFile? {
         null
     }
 }
-
 
 fun Context.deleteDocumentWithSAFSdk30(fileDirItem: FileDirItem, allowDeleteFolder: Boolean, callback: ((wasSuccess: Boolean) -> Unit)?) {
     try {
