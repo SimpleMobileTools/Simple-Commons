@@ -178,7 +178,7 @@
     <string name="append">Ajouter un suffixe \"_1\"</string>
     <string name="apply_to_all">Appliquer à tous</string>
     <string name="system_folder_restriction">Le système n\'autorise pas l\'opération dans ce dossier, veuillez en choisir un autre</string>
-    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
+    <string name="system_folder_copy_restriction">Le système ne permet pas de copier dans ce dossier, veuillez en choisir un autre</string>
     <string name="rename_in_sd_card_system_restriction">Le système n\'autorise pas le renommage dans ce dossier</string>
     <!-- File picker -->
     <string name="select_folder">Sélectionner un dossier</string>
@@ -387,7 +387,7 @@
     <string name="yesterday">Hier</string>
     <string name="today">Aujourd\'hui</string>
     <string name="tomorrow">Demain</string>
-    <string name="every_day">Every day</string>
+    <string name="every_day">Tous les jours</string>
     <string name="hide_year">Cacher l\'année</string>
     <string name="seconds_raw">secondes</string>
     <string name="minutes_raw">minutes</string>
