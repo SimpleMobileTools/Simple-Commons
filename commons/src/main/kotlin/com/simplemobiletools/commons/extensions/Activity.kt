@@ -172,7 +172,7 @@ fun BaseSimpleActivity.isShowingSAFDialog(path: String): Boolean {
 
 @SuppressLint("InlinedApi")
 fun BaseSimpleActivity.isShowingSAFDialogSdk30(path: String): Boolean {
-    return if (isAccessibleWithSAFSdk30(path) && !hasProperStoredFirstParentUri(path)) {
+    return if (isAccessibleWithSAFSdk30(path) && !hasProperStoredFirstParentUri(path) && !canManageMedia()) {
         runOnUiThread {
             if (!isDestroyed && !isFinishing) {
                 val level = getFirstParentLevel(path)
