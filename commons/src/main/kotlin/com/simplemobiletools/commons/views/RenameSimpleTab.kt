@@ -131,7 +131,7 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
         appendString: Boolean,
         stringToAdd: String,
         android30Format: Android30RenameFormat,
-        callback: (success: Boolean) -> Unit,
+        callback: (success: Boolean) -> Unit
     ) {
         val fileDirItems = paths.map { File(it).toFileDirItem(context) }
         val uriPairs = context.getFileUrisFromFileDirItems(fileDirItems)
