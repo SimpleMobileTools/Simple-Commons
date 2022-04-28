@@ -56,12 +56,14 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     private val DELETE_FILE_SDK_30_HANDLER = 300
     private val RECOVERABLE_SECURITY_HANDLER = 301
     private val UPDATE_FILE_SDK_30_HANDLER = 302
+    private val MANAGE_MEDIA_RC = 303
 
     companion object {
         var funAfterSAFPermission: ((success: Boolean) -> Unit)? = null
         var funAfterSdk30Action: ((success: Boolean) -> Unit)? = null
         var funAfterUpdate30File: ((success: Boolean) -> Unit)? = null
         var funRecoverableSecurity: ((success: Boolean) -> Unit)? = null
+        var funAfterManageMediaPermission: (() -> Unit)? = null
     }
 
     abstract fun getAppIconIDs(): ArrayList<Int>
@@ -393,6 +395,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             funRecoverableSecurity = null
         } else if (requestCode == UPDATE_FILE_SDK_30_HANDLER) {
             funAfterUpdate30File?.invoke(resultCode == Activity.RESULT_OK)
+        } else if (requestCode == MANAGE_MEDIA_RC) {
+            funAfterManageMediaPermission?.invoke()
         }
     }
 
@@ -605,6 +609,15 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             } else {
                 callback(false)
             }
+        }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.S)
+    fun launchMediaManagementIntent(callback: () -> Unit) {
+        Intent(Settings.ACTION_REQUEST_MANAGE_MEDIA).apply {
+            data = Uri.parse("package:$packageName")
+            startActivityForResult(this, MANAGE_MEDIA_RC)
+            funAfterManageMediaPermission = callback
         }
     }
 
