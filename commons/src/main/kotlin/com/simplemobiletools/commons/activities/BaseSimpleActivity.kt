@@ -617,8 +617,8 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         Intent(Settings.ACTION_REQUEST_MANAGE_MEDIA).apply {
             data = Uri.parse("package:$packageName")
             startActivityForResult(this, MANAGE_MEDIA_RC)
-            funAfterManageMediaPermission = callback
         }
+        funAfterManageMediaPermission = callback
     }
 
     fun copyMoveFilesTo(
