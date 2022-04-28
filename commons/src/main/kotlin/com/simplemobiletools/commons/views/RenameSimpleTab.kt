@@ -58,67 +58,80 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
                 return@handleSAFDialog
             }
 
-            activity?.handleSAFDialogSdk30(firstPath) {
-                if (!it) {
-                    return@handleSAFDialogSdk30
-                }
-
-                ignoreClicks = true
-                var pathsCnt = validPaths.size
-                for (path in validPaths) {
-                    if (stopLooping) {
+            if (activity?.canManageMedia() == true) {
+                renameFiles(validPaths, append, valueToAdd, callback)
+            } else {
+                activity?.handleSAFDialogSdk30(firstPath) { granted ->
+                    if (!granted) {
                         return@handleSAFDialogSdk30
                     }
 
-                    val fullName = path.getFilenameFromPath()
-                    var dotAt = fullName.lastIndexOf(".")
-                    if (dotAt == -1) {
-                        dotAt = fullName.length
-                    }
-
-                    val name = fullName.substring(0, dotAt)
-                    val extension = if (fullName.contains(".")) ".${fullName.getFilenameExtension()}" else ""
-
-                    val newName = if (append) {
-                        "$name$valueToAdd$extension"
-                    } else {
-                        "$valueToAdd$fullName"
-                    }
-
-                    val newPath = "${path.getParentPath()}/$newName"
-
-                    if (activity?.getDoesFilePathExist(newPath) == true) {
-                        continue
-                    }
-
-                    activity?.renameFile(path, newPath, true) { success, android30Format ->
-                        if (success) {
-                            pathsCnt--
-                            if (pathsCnt == 0) {
-                                callback(true)
-                            }
-                        } else {
-                            ignoreClicks = false
-                            if (android30Format != Android30RenameFormat.NONE) {
-                                stopLooping = true
-                                renameAllFiles(validPaths, append, valueToAdd, android30Format, callback)
-                            } else {
-                                activity?.toast(R.string.unknown_error_occurred)
-                            }
-                        }
-                    }
+                    renameFiles(validPaths, append, valueToAdd, callback)
                 }
-                stopLooping = false
             }
         }
     }
 
-    private fun renameAllFiles(
+    private fun renameFiles(
+        validPaths: List<String>,
+        append: Boolean,
+        valueToAdd: String,
+        callback: (success: Boolean) -> Unit
+    ) {
+        ignoreClicks = true
+        var pathsCnt = validPaths.size
+        for (path in validPaths) {
+            if (stopLooping) {
+                return
+            }
+
+            val fullName = path.getFilenameFromPath()
+            var dotAt = fullName.lastIndexOf(".")
+            if (dotAt == -1) {
+                dotAt = fullName.length
+            }
+
+            val name = fullName.substring(0, dotAt)
+            val extension = if (fullName.contains(".")) ".${fullName.getFilenameExtension()}" else ""
+
+            val newName = if (append) {
+                "$name$valueToAdd$extension"
+            } else {
+                "$valueToAdd$fullName"
+            }
+
+            val newPath = "${path.getParentPath()}/$newName"
+
+            if (activity?.getDoesFilePathExist(newPath) == true) {
+                continue
+            }
+
+            activity?.renameFile(path, newPath, true) { success, android30Format ->
+                if (success) {
+                    pathsCnt--
+                    if (pathsCnt == 0) {
+                        callback(true)
+                    }
+                } else {
+                    ignoreClicks = false
+                    if (android30Format != Android30RenameFormat.NONE) {
+                        stopLooping = true
+                        renameAllFilesSdk30(validPaths, append, valueToAdd, android30Format, callback)
+                    } else {
+                        activity?.toast(R.string.unknown_error_occurred)
+                    }
+                }
+            }
+        }
+        stopLooping = false
+    }
+
+    private fun renameAllFilesSdk30(
         paths: List<String>,
         appendString: Boolean,
         stringToAdd: String,
         android30Format: Android30RenameFormat,
-        callback: (success: Boolean) -> Unit
+        callback: (success: Boolean) -> Unit,
     ) {
         val fileDirItems = paths.map { File(it).toFileDirItem(context) }
         val uriPairs = context.getFileUrisFromFileDirItems(fileDirItems)

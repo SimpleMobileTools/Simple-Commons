@@ -65,45 +65,57 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                 return@handleSAFDialog
             }
 
-            activity?.handleSAFDialogSdk30(firstPath) {
-                if (!it) {
-                    return@handleSAFDialogSdk30
-                }
-
-                ignoreClicks = true
-                var pathsCnt = validPaths.size
-                numbersCnt = pathsCnt.toString().length
-                for (path in validPaths) {
-                    if (stopLooping) {
+            if (activity?.canManageMedia() == true) {
+                renameFiles(validPaths, useMediaFileExtension, callback)
+            } else {
+                activity?.handleSAFDialogSdk30(firstPath) { granted ->
+                    if (!granted) {
                         return@handleSAFDialogSdk30
                     }
 
-                    try {
-                        val newPath = getNewPath(path, useMediaFileExtension) ?: continue
-                        activity?.renameFile(path, newPath, true) { success, android30Format ->
-                            if (success) {
-                                pathsCnt--
-                                if (pathsCnt == 0) {
-                                    callback(true)
-                                }
-                            } else {
-                                ignoreClicks = false
-                                if (android30Format != Android30RenameFormat.NONE) {
-                                    currentIncrementalNumber = 1
-                                    stopLooping = true
-                                    renameAllFiles(validPaths, useMediaFileExtension, android30Format, callback)
-                                } else {
-                                    activity?.toast(R.string.unknown_error_occurred)
-                                }
-                            }
-                        }
-                    } catch (e: Exception) {
-                        activity?.showErrorToast(e)
-                    }
+                    renameFiles(validPaths, useMediaFileExtension, callback)
                 }
-                stopLooping = false
             }
         }
+    }
+
+    private fun renameFiles(
+        validPaths: List<String>,
+        useMediaFileExtension: Boolean,
+        callback: (success: Boolean) -> Unit
+    ) {
+        ignoreClicks = true
+        var pathsCnt = validPaths.size
+        numbersCnt = pathsCnt.toString().length
+        for (path in validPaths) {
+            if (stopLooping) {
+                return
+            }
+
+            try {
+                val newPath = getNewPath(path, useMediaFileExtension) ?: continue
+                activity?.renameFile(path, newPath, true) { success, android30Format ->
+                    if (success) {
+                        pathsCnt--
+                        if (pathsCnt == 0) {
+                            callback(true)
+                        }
+                    } else {
+                        ignoreClicks = false
+                        if (android30Format != Android30RenameFormat.NONE) {
+                            currentIncrementalNumber = 1
+                            stopLooping = true
+                            renameAllFiles(validPaths, useMediaFileExtension, android30Format, callback)
+                        } else {
+                            activity?.toast(R.string.unknown_error_occurred)
+                        }
+                    }
+                }
+            } catch (e: Exception) {
+                activity?.showErrorToast(e)
+            }
+        }
+        stopLooping = false
     }
 
     private fun getNewPath(path: String, useMediaFileExtension: Boolean): String? {
