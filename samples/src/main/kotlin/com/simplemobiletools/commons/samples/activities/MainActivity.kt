@@ -1,9 +1,7 @@
 package com.simplemobiletools.commons.samples.activities
 
-import android.content.Intent
 import android.os.Bundle
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
-import com.simplemobiletools.commons.activities.ManageBlockedNumbersActivity
 import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.samples.BuildConfig
 import com.simplemobiletools.commons.samples.R
@@ -22,8 +20,7 @@ class MainActivity : BaseSimpleActivity() {
         setContentView(R.layout.activity_main)
         appLaunched(BuildConfig.APPLICATION_ID)
 
-        startActivity(Intent(this,ManageBlockedNumbersActivity::class.java))
-        startCustomizationActivity()
+        //startCustomizationActivity()
         //startAboutActivity(R.string.smtco_app_name, 3, "0.2", arrayListOf(FAQItem(R.string.faq_1_title_commons, R.string.faq_1_text_commons)), false)
 
         /*val letters = arrayListOf("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q")

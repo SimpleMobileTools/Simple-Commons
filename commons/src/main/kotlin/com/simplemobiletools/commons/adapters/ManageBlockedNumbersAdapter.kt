@@ -9,6 +9,7 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.copyToClipboard
 import com.simplemobiletools.commons.extensions.deleteBlockedNumber
 import com.simplemobiletools.commons.extensions.getProperTextColor
+import com.simplemobiletools.commons.helpers.isNougatPlus
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.BlockedNumber
 import com.simplemobiletools.commons.views.MyRecyclerView
@@ -104,7 +105,7 @@ class ManageBlockedNumbersAdapter(
                 }
         }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+        if (isNougatPlus()) {
             overflowMenu.showContextMenu(overflowMenu.x, overflowMenu.y)
         } else {
             overflowMenu.showContextMenu()

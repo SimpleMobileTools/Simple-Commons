@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/manage_blocked_number_overflow_menu"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/overflow_icon_size"
+        android:layout_height="@dimen/overflow_icon_size"
         android:padding="5dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
