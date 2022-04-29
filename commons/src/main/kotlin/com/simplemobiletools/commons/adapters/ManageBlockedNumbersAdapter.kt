@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.adapters
 
+import android.os.Build
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
@@ -7,11 +8,11 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.copyToClipboard
 import com.simplemobiletools.commons.extensions.deleteBlockedNumber
+import com.simplemobiletools.commons.extensions.getProperTextColor
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.BlockedNumber
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.item_manage_blocked_number.view.*
-import java.util.*
 
 class ManageBlockedNumbersAdapter(
     activity: BaseSimpleActivity, var blockedNumbers: ArrayList<BlockedNumber>, val listener: RefreshRecyclerViewListener?,
@@ -69,7 +70,51 @@ class ManageBlockedNumbersAdapter(
                 text = blockedNumber.number
                 setTextColor(textColor)
             }
+
+            manage_blocked_number_overflow_menu.drawable.apply {
+                mutate()
+                setTint(activity.getProperTextColor())
+            }
+
+            manage_blocked_number_overflow_menu.setOnClickListener { overflowMenu ->
+                createAndShowContextMenu(overflowMenu, blockedNumber)
+            }
         }
+    }
+
+    private fun createAndShowContextMenu(
+        overflowMenu: View,
+        blockedNumber: BlockedNumber
+    ) {
+        overflowMenu.setOnCreateContextMenuListener { menu, view, _ ->
+            val blockedNumberId = blockedNumber.id.toInt()
+            menu.add(view.context.getString(R.string.copy_number_to_clipboard))
+                .setOnMenuItemClickListener {
+                    executeItemMenuOperation(blockedNumberId) {
+                        copyNumberToClipboard()
+                    }
+                    return@setOnMenuItemClickListener true
+                }
+            menu.add(view.context.getString(R.string.delete))
+                .setOnMenuItemClickListener {
+                    executeItemMenuOperation(blockedNumberId) {
+                        deleteSelection()
+                    }
+                    return@setOnMenuItemClickListener true
+                }
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            overflowMenu.showContextMenu(overflowMenu.x, overflowMenu.y)
+        } else {
+            overflowMenu.showContextMenu()
+        }
+    }
+
+    private fun executeItemMenuOperation(blockedNumberId: Int, block: () -> Unit) {
+        selectedKeys.add(blockedNumberId)
+        block.invoke()
+        selectedKeys.remove(blockedNumberId)
     }
 
     private fun copyNumberToClipboard() {
