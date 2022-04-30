@@ -983,7 +983,7 @@ private fun BaseSimpleActivity.renameCasually(
     val tempFile = try {
         createTempFile(oldFile) ?: return
     } catch (exception: Exception) {
-        if (isRPlus() && exception is java.nio.file.FileSystemException) {
+        if (isRPlus() && exception is FileSystemException) {
             // if we are renaming multiple files at once, we should give the Android 30+ permission dialog all uris together, not one by one
             if (isRenamingMultipleFiles) {
                 callback?.invoke(false, Android30RenameFormat.CONTENT_RESOLVER)
