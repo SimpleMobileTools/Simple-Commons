@@ -65,57 +65,45 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                 return@handleSAFDialog
             }
 
-            if (activity?.canManageMedia() == true) {
-                renameFiles(validPaths, useMediaFileExtension, callback)
-            } else {
-                activity?.handleSAFDialogSdk30(firstPath) { granted ->
-                    if (!granted) {
-                        return@handleSAFDialogSdk30
+            activity?.checkManageMediaOrHandleSAFDialogSdk30(firstPath) {
+                if (!it) {
+                    return@checkManageMediaOrHandleSAFDialogSdk30
+                }
+
+                ignoreClicks = true
+                var pathsCnt = validPaths.size
+                numbersCnt = pathsCnt.toString().length
+                for (path in validPaths) {
+                    if (stopLooping) {
+                        return@checkManageMediaOrHandleSAFDialogSdk30
                     }
 
-                    renameFiles(validPaths, useMediaFileExtension, callback)
-                }
-            }
-        }
-    }
-
-    private fun renameFiles(
-        validPaths: List<String>,
-        useMediaFileExtension: Boolean,
-        callback: (success: Boolean) -> Unit
-    ) {
-        ignoreClicks = true
-        var pathsCnt = validPaths.size
-        numbersCnt = pathsCnt.toString().length
-        for (path in validPaths) {
-            if (stopLooping) {
-                return
-            }
-
-            try {
-                val newPath = getNewPath(path, useMediaFileExtension) ?: continue
-                activity?.renameFile(path, newPath, true) { success, android30Format ->
-                    if (success) {
-                        pathsCnt--
-                        if (pathsCnt == 0) {
-                            callback(true)
+                    try {
+                        val newPath = getNewPath(path, useMediaFileExtension) ?: continue
+                        activity?.renameFile(path, newPath, true) { success, android30Format ->
+                            if (success) {
+                                pathsCnt--
+                                if (pathsCnt == 0) {
+                                    callback(true)
+                                }
+                            } else {
+                                ignoreClicks = false
+                                if (android30Format != Android30RenameFormat.NONE) {
+                                    currentIncrementalNumber = 1
+                                    stopLooping = true
+                                    renameAllFiles(validPaths, useMediaFileExtension, android30Format, callback)
+                                } else {
+                                    activity?.toast(R.string.unknown_error_occurred)
+                                }
+                            }
                         }
-                    } else {
-                        ignoreClicks = false
-                        if (android30Format != Android30RenameFormat.NONE) {
-                            currentIncrementalNumber = 1
-                            stopLooping = true
-                            renameAllFiles(validPaths, useMediaFileExtension, android30Format, callback)
-                        } else {
-                            activity?.toast(R.string.unknown_error_occurred)
-                        }
+                    } catch (e: Exception) {
+                        activity?.showErrorToast(e)
                     }
                 }
-            } catch (e: Exception) {
-                activity?.showErrorToast(e)
+                stopLooping = false
             }
         }
-        stopLooping = false
     }
 
     private fun getNewPath(path: String, useMediaFileExtension: Boolean): String? {

@@ -508,6 +508,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
+    fun checkManageMediaOrHandleSAFDialogSdk30(path: String, callback: (success: Boolean) -> Unit): Boolean {
+        hideKeyboard()
+        return if (canManageMedia()) {
+            callback(true)
+            false
+        } else {
+            handleSAFDialogSdk30(path, callback)
+        }
+    }
+
     fun handleSAFCreateDocumentDialogSdk30(path: String, callback: (success: Boolean) -> Unit): Boolean {
         hideKeyboard()
         return if (!packageName.startsWith("com.simplemobiletools")) {

@@ -720,9 +720,9 @@ fun BaseSimpleActivity.deleteFilesBg(files: List<FileDirItem>, allowDeleteFolder
             return@handleSAFDialog
         }
 
-        handleSAFDialogSdk30(firstFile.path) {
+        checkManageMediaOrHandleSAFDialogSdk30(firstFile.path) {
             if (!it) {
-                return@handleSAFDialogSdk30
+                return@checkManageMediaOrHandleSAFDialogSdk30
             }
 
             val failedFileDirItems = ArrayList<FileDirItem>()
@@ -809,22 +809,30 @@ fun BaseSimpleActivity.deleteFileBg(
                         }
                     }
                 } else if (isAccessibleWithSAFSdk30(path)) {
-                    handleSAFDialogSdk30(path) {
-                        if (it) {
-                            deleteDocumentWithSAFSdk30(fileDirItem, allowDeleteFolder, callback)
+                    if (canManageMedia()) {
+                        deleteSdk30(fileDirItem, callback)
+                    } else {
+                        handleSAFDialogSdk30(path) {
+                            if (it) {
+                                deleteDocumentWithSAFSdk30(fileDirItem, allowDeleteFolder, callback)
+                            }
                         }
                     }
                 } else if (isRPlus() && !isDeletingMultipleFiles) {
-                    val fileUris = getFileUrisFromFileDirItems(arrayListOf(fileDirItem)).second
-                    deleteSDK30Uris(fileUris) { success ->
-                        runOnUiThread {
-                            callback?.invoke(success)
-                        }
-                    }
+                    deleteSdk30(fileDirItem, callback)
                 } else {
                     callback?.invoke(false)
                 }
             }
+        }
+    }
+}
+
+private fun BaseSimpleActivity.deleteSdk30(fileDirItem: FileDirItem, callback: ((wasSuccess: Boolean) -> Unit)?) {
+    val fileUris = getFileUrisFromFileDirItems(arrayListOf(fileDirItem)).second
+    deleteSDK30Uris(fileUris) { success ->
+        runOnUiThread {
+            callback?.invoke(success)
         }
     }
 }
