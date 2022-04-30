@@ -1,15 +1,13 @@
 package com.simplemobiletools.commons.adapters
 
-import android.os.Build
-import android.view.Menu
-import android.view.View
-import android.view.ViewGroup
+import android.content.Context
+import android.view.*
+import android.widget.PopupMenu
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.copyToClipboard
 import com.simplemobiletools.commons.extensions.deleteBlockedNumber
 import com.simplemobiletools.commons.extensions.getProperTextColor
-import com.simplemobiletools.commons.helpers.isNougatPlus
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.BlockedNumber
 import com.simplemobiletools.commons.views.MyRecyclerView
@@ -78,38 +76,34 @@ class ManageBlockedNumbersAdapter(
             }
 
             manage_blocked_number_overflow_menu.setOnClickListener { overflowMenu ->
-                createAndShowContextMenu(overflowMenu, blockedNumber)
+                showPopupMenu(popup_anchor, blockedNumber)
             }
         }
     }
 
-    private fun createAndShowContextMenu(
-        overflowMenu: View,
-        blockedNumber: BlockedNumber
-    ) {
-        overflowMenu.setOnCreateContextMenuListener { menu, view, _ ->
-            val blockedNumberId = blockedNumber.id.toInt()
-            menu.add(view.context.getString(R.string.copy_number_to_clipboard))
-                .setOnMenuItemClickListener {
-                    executeItemMenuOperation(blockedNumberId) {
-                        copyNumberToClipboard()
+    private fun showPopupMenu(view: View, blockedNumber: BlockedNumber) {
+        val wrapper: Context = ContextThemeWrapper(activity, R.style.AppTheme_PopupMenuDarkStyle)
+        PopupMenu(wrapper, view, Gravity.END)
+            .apply {
+                inflate(R.menu.cab_blocked_numbers)
+                setOnMenuItemClickListener { item: MenuItem? ->
+                    val blockedNumberId = blockedNumber.id.toInt()
+                    when (item!!.itemId) {
+                        R.id.cab_copy_number -> {
+                            executeItemMenuOperation(blockedNumberId) {
+                                copyNumberToClipboard()
+                            }
+                        }
+                        R.id.cab_delete -> {
+                            executeItemMenuOperation(blockedNumberId) {
+                                deleteSelection()
+                            }
+                        }
                     }
-                    return@setOnMenuItemClickListener true
+                    true
                 }
-            menu.add(view.context.getString(R.string.delete))
-                .setOnMenuItemClickListener {
-                    executeItemMenuOperation(blockedNumberId) {
-                        deleteSelection()
-                    }
-                    return@setOnMenuItemClickListener true
-                }
-        }
-
-        if (isNougatPlus()) {
-            overflowMenu.showContextMenu(overflowMenu.x, overflowMenu.y)
-        } else {
-            overflowMenu.showContextMenu()
-        }
+                show()
+            }
     }
 
     private fun executeItemMenuOperation(blockedNumberId: Int, block: () -> Unit) {
