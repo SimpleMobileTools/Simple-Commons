@@ -2,7 +2,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Скасувати</string>
-    <string name="nothing">Nothing</string>
+    <string name="nothing">Нічого</string>
     <string name="later">Пізніше</string>
     <string name="save_as">Зберегти як</string>
     <string name="file_saved">Файл успішно збережено</string>
@@ -12,7 +12,7 @@
     <string name="error">Error: %s</string>
     <string name="open_with">Відкрити за допомогою</string>
     <string name="edit_with">Редагувати за допомогою</string>
-    <string name="edit">Edit</string>
+    <string name="edit">Редагувати</string>
     <string name="no_app_found">Не знайдено допустимих додатків</string>
     <string name="set_as">Встановити як</string>
     <string name="copy_to_clipboard">Копіювати у буфер обміну</string>
@@ -42,20 +42,20 @@
     <string name="no_contacts_found">Контактів не знайдено</string>
     <string name="request_the_required_permissions">Запит на необхідні дозволи</string>
     <string name="no_access_to_contacts">Додаток не має доступу до контактів</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
+    <string name="no_phone_call_permission">Додаток не має дозволу ініціювати телефонні дзвінки, будь ласка, надайте його в налаштуваннях пристрою</string>
     <string name="insert_text_here">Вставте текст сюди</string>
     <string name="call_person">Телефонувати %s</string>
     <string name="zero">Zero</string>
     <string name="one">One</string>
-    <string name="two">Two</string>
-    <string name="three">Three</string>
-    <string name="four">Four</string>
-    <string name="five">Five</string>
-    <string name="six">Six</string>
-    <string name="seven">Seven</string>
-    <string name="eight">Eight</string>
-    <string name="nine">Nine</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="two">Два</string>
+    <string name="three">Три</string>
+    <string name="four">Чотири</string>
+    <string name="five">П\'ять</string>
+    <string name="six">Шість</string>
+    <string name="seven">Сім</string>
+    <string name="eight">Вісім</string>
+    <string name="nine">Дев’ять</string>
+    <string name="value_cannot_be_empty">Значення не може бути порожнім</string>
     <!-- Emails -->
     <string name="home">Домашній</string>
     <string name="work">Робочий</string>
@@ -69,7 +69,7 @@
     <!-- View types -->
     <string name="change_view_type">Змінити тип перегляду</string>
     <string name="grid">Сітка</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">Нерівна сітка</string>
     <string name="list">Список</string>
     <string name="increase_column_count">Збільшити кількість колонок</string>
     <string name="reduce_column_count">Зменшити кількість колонок</string>
@@ -82,8 +82,8 @@
     <string name="block_number">Блокувати номер</string>
     <string name="block_numbers">Блокувати номери</string>
     <string name="blocked_numbers">Заблоковані номери</string>
-    <string name="export_blocked_numbers">Export blocked numbers</string>
-    <string name="import_blocked_numbers">Import blocked numbers</string>
+    <string name="export_blocked_numbers">Експортувати заблоковані номери</string>
+    <string name="import_blocked_numbers">Імпортувати заблоковані номери</string>
     <string name="must_make_default_dialer">Щоб використовувати функцію блокування номерів, вам необхідно встановити цей додаток як стандартний для роботи з контактами.</string>
     <string name="set_as_default">Встановити додаток як стандартний</string>
     <string name="block_confirmation">Ви впевнені що хочете заблокувати \"%s\"?</string>
@@ -125,9 +125,9 @@
     <string name="pattern_renaming">Шаблон</string>
     <string name="string_to_add">Рядок для додавання</string>
     <string name="rename_date_time_pattern">%Y - рік\n%M - місяць\n%D - день\n%h - година\n%m - хвилина\n%s - секунда\n%i - номер від 1</string>
-    <string name="filename_without_txt">Filename (without .txt)</string>
-    <string name="filename_without_json">Filename (without .json)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
+    <string name="filename_without_txt">Ім\'я файлу (без .txt)</string>
+    <string name="filename_without_json">Ім\'я файлу (без .json)</string>
+    <string name="cannot_hide_files">Починаючи з Android 11, ви більше не можете приховувати такі файли та папки</string>
     <!-- Copy / Move -->
     <string name="copy">Копіювати</string>
     <string name="move">Перемістити</string>
@@ -144,11 +144,11 @@
     <string name="copy_failed">Не вдалося скопіювати файли</string>
     <string name="copying">Триває копіювання…</string>
     <string name="copying_success">Файли успішно скопійовано</string>
-    <string name="copying_success_one">File copied successfully</string>
+    <string name="copying_success_one">Файл успішно скопійовано</string>
     <string name="copy_move_failed">Сталася помилка</string>
     <string name="moving">Триває переміщення…</string>
     <string name="moving_success">Файли успішно переміщено</string>
-    <string name="moving_success_one">File moved successfully</string>
+    <string name="moving_success_one">Файл успішно переміщено</string>
     <string name="moving_success_partial">Деякі файли не можуть бути переміщені</string>
     <string name="copying_success_partial">Деякі файли не можуть бути скопійовані</string>
     <string name="no_files_selected">Не обрано жодного файлу</string>
@@ -157,7 +157,7 @@
     <string name="could_not_create_file">Не вдалося створити файл %s</string>
     <string name="no_new_items">Не знайдено нових елементів</string>
     <string name="no_space">Місце призначення не має достатньо вільного місця.\nНеобхідно %1$s, доступно %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="system_service_disabled">Системна служба для вибору файлів і тек недоступна</string>
     <!-- Create new -->
     <string name="create_new">Створити новий</string>
     <string name="folder">Теку</string>
@@ -177,37 +177,45 @@
     <string name="skip">Пропустити</string>
     <string name="append">Додати \'_1\' в кінець</string>
     <string name="apply_to_all">Застосувати до усіх</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
-    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
-    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
+    <string name="system_folder_restriction">Система не дозволяє операцію в цій теці, будь ласка, виберіть іншу</string>
+    <string name="system_folder_copy_restriction">Система не дозволяє копіювати в цю теку, будь ласка, виберіть іншу</string>
+    <string name="rename_in_sd_card_system_restriction">Система не дозволяє перейменовувати в цій теці</string>
     <!-- File picker -->
     <string name="select_folder">Обрати теку</string>
     <string name="select_file">Обрати файл</string>
     <string name="confirm_storage_access_title">Підтвердити дозвіл на доступ до зовнішньої пам\'яті</string>
-    <string name="confirm_folder_access_title">Confirm folder access</string>
+    <string name="confirm_folder_access_title">Підтвердити доступ до теки</string>
     <string name="confirm_storage_access_text">Щоб надати доступ на запис, оберіть кореневу теку SD-карти на наступному екрані</string>
     <string name="confirm_storage_access_text_sd">Якщо ви не бачите SD-карту, спробуйте це</string>
-    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
-    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
+    <string name="confirm_storage_access_android_text"></string>
+    <string name="confirm_storage_access_android_text_specific"></string>
+    <string name="confirm_create_doc_for_new_folder_text"></string>
     <string name="confirm_selection">Підтвердіть вибір</string>
-    <string name="loading">Loading…</string>
+    <string name="loading">Завантаження…</string>
     <plurals name="items">
         <item quantity="one">%d елемент</item>
+        <item quantity="few">%d елемента</item>
+        <item quantity="many">%d елементів</item>
         <item quantity="other">%d елементів</item>
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d елемент</item>
+        <item quantity="few">%d елемента</item>
+        <item quantity="many">%d елементів</item>
         <item quantity="other">%d елементів</item>
     </plurals>
     <plurals name="deleting_items">
         <item quantity="one">Видалення %d елементу</item>
+        <item quantity="few">Видалення %d елементів</item>
+        <item quantity="many">Видалення %d елементів</item>
         <item quantity="other">Видалення %d елементів</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d контакт</item>
+        <item quantity="few">%d контакти</item>
+        <item quantity="many">%d контактів</item>
         <item quantity="other">%d контактів</item>
     </plurals>
     <!-- Storages -->
@@ -219,7 +227,7 @@
     <string name="sd_card_usb_same">Шляхи до SD-карти та USB-пристрою не можуть співпадати</string>
     <string name="app_on_sd_card">Схоже, ви встановили додаток на SD-карту, що робить віджети додатка недоступними. Ви навіть не побачите їх у списку доступних віджетів.
         Це обмеження системи, тож якщо ви хочете використовувати віджети, вам треба перемістити додаток до внутрішньої пам\'яті.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected"></string>
     <!-- File properties -->
     <string name="properties">Властивості</string>
     <string name="path">Шлях</string>
@@ -239,9 +247,9 @@
     <string name="song_title">Назва пісні</string>
     <string name="gps_coordinates">GPS координати</string>
     <string name="altitude">Висота над рівнем моря</string>
-    <string name="remove_exif">Remove EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
-    <string name="exif_removed">EXIF values removed successfully</string>
+    <string name="remove_exif">Видалити EXIF</string>
+    <string name="remove_exif_confirmation"></string>
+    <string name="exif_removed">Значення EXIF успішно видалено</string>
     <!-- Color customization -->
     <string name="background_color">Колір фону</string>
     <string name="text_color">Колір тексту</string>
@@ -276,7 +284,7 @@
     <string name="light_theme">Світла</string>
     <string name="dark_theme">Темна</string>
     <string name="auto_theme">Auto</string>
-    <string name="auto_light_dark_theme">Auto light / dark</string>
+    <string name="auto_light_dark_theme">Автоматично світла/темна</string>
     <string name="solarized">Солярис</string>
     <string name="dark_red">Темно-червоний</string>
     <string name="white">White</string>
@@ -315,10 +323,10 @@
     <string name="move_to_top">Перемістити наверх</string>
     <string name="move_to_bottom">Перемістити вниз</string>
     <string name="pin_item">Pin item</string>
-    <string name="unpin_item">Unpin item</string>
+    <string name="unpin_item">Відкріпити елемент</string>
     <string name="send_sms">Надіслати SMS</string>
     <string name="send_email">Send email</string>
-    <string name="call">Call</string>
+    <string name="call">Виклик</string>
     <!-- Sorting -->
     <string name="sort_by">Сортувати за</string>
     <string name="name">Ім\'я</string>
@@ -350,12 +358,14 @@
     <string name="are_you_sure_delete">Ви впевнені, що хочете видалити цей елемент?</string>
     <string name="are_you_sure_recycle_bin">Ви впевнені, що хочете перемістити цей елемент у Кошик?</string>
     <string name="do_not_ask_again">Більше не питати у цій сесії</string>
-    <string name="do_not_show_again">Do not show again</string>
+    <string name="do_not_show_again">Не показувати знову</string>
     <string name="yes">Так</string>
     <string name="no">Ні</string>
     <string name="maybe">Можливо</string>
     <plurals name="delete_warning">
         <item quantity="one">УВАГА: Ви видаляєте %d теку</item>
+        <item quantity="few">УВАГА: Ви видаляєте %d теки</item>
+        <item quantity="many">УВАГА: Ви видаляєте %d тек</item>
         <item quantity="other">УВАГА: Ви видаляєте %d тек</item>
     </plurals>
     <!-- Password protection -->
@@ -387,7 +397,7 @@
     <string name="yesterday">Вчора</string>
     <string name="today">Сьогодні</string>
     <string name="tomorrow">Завтра</string>
-    <string name="every_day">Every day</string>
+    <string name="every_day">Щодня</string>
     <string name="hide_year">Приховати рік</string>
     <string name="seconds_raw">секунд</string>
     <string name="minutes_raw">хвилин</string>
@@ -398,123 +408,180 @@
     <string name="hours_letter">г</string>
     <plurals name="seconds">
         <item quantity="one">%d секунда</item>
-        <item quantity="other">%d секунди</item>
+        <item quantity="few">%d секунди</item>
+        <item quantity="many">%d секунд</item>
+        <item quantity="other">%d секунд</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d хвилина</item>
-        <item quantity="other">%d хвилини</item>
+        <item quantity="few">%d хвилини</item>
+        <item quantity="many">%d хвилин</item>
+        <item quantity="other">%d хвилин</item>
     </plurals>
     <plurals name="hours">
         <item quantity="one">%d година</item>
-        <item quantity="other">%d години</item>
+        <item quantity="few">%d години</item>
+        <item quantity="many">%d годин</item>
+        <item quantity="other">%d годин</item>
     </plurals>
     <plurals name="days">
         <item quantity="one">%d день</item>
-        <item quantity="other">%d дні</item>
+        <item quantity="few">%d дні</item>
+        <item quantity="many">%d днів</item>
+        <item quantity="other">%d днів</item>
     </plurals>
     <plurals name="weeks">
         <item quantity="one">%d тиждень</item>
-        <item quantity="other">%d тижні</item>
+        <item quantity="few">%d тижні</item>
+        <item quantity="many">%d тижнів</item>
+        <item quantity="other">%d тижнів</item>
     </plurals>
     <plurals name="months">
         <item quantity="one">%d місяць</item>
-        <item quantity="other">%d місяці</item>
+        <item quantity="few">%d місяці</item>
+        <item quantity="many">%d місяців</item>
+        <item quantity="other">%d місяців</item>
     </plurals>
     <plurals name="years">
         <item quantity="one">%d рік</item>
-        <item quantity="other">%d роки</item>
+        <item quantity="few">%d роки</item>
+        <item quantity="many">%d років</item>
+        <item quantity="other">%d років</item>
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d секунду</item>
+        <item quantity="few">%d секунди</item>
+        <item quantity="many">%d секунд</item>
         <item quantity="other">%d секунд</item>
     </plurals>
     <plurals name="in_minutes">
         <item quantity="one">%d хвилину</item>
+        <item quantity="few">%d хвилини</item>
+        <item quantity="many">%d хвилин</item>
         <item quantity="other">%d хвилин</item>
     </plurals>
     <plurals name="in_hours">
         <item quantity="one">%d годину</item>
+        <item quantity="few">%d години</item>
+        <item quantity="many">%d годин</item>
         <item quantity="other">%d годин</item>
     </plurals>
     <plurals name="in_days">
         <item quantity="one">%d день</item>
+        <item quantity="few">%d дні</item>
+        <item quantity="many">%d днів</item>
         <item quantity="other">%d днів</item>
     </plurals>
     <plurals name="in_weeks">
         <item quantity="one">%d тиждень</item>
+        <item quantity="few">%d тижні</item>
+        <item quantity="many">%d тижнів</item>
         <item quantity="other">%d тижнів</item>
     </plurals>
     <plurals name="in_months">
         <item quantity="one">%d місяць</item>
+        <item quantity="few">%d місяці</item>
+        <item quantity="many">%d місяців</item>
         <item quantity="other">%d місяців</item>
     </plurals>
     <plurals name="in_years">
         <item quantity="one">%d рік</item>
+        <item quantity="few">%d роки</item>
+        <item quantity="many">%d років</item>
         <item quantity="other">%d років</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">за %d секунду</item>
+        <item quantity="few">за %d секунди</item>
+        <item quantity="many">за %d секунд</item>
         <item quantity="other">за %d секунд</item>
     </plurals>
     <plurals name="minutes_before">
         <item quantity="one">за %d хвилину</item>
+        <item quantity="few">за %d хвилини</item>
+        <item quantity="many">за %d хвилин</item>
         <item quantity="other">за %d хвилин</item>
     </plurals>
     <plurals name="hours_before">
         <item quantity="one">за %d годину</item>
+        <item quantity="few">за %d години</item>
+        <item quantity="many">за %d годин</item>
         <item quantity="other">за %d годин</item>
     </plurals>
     <plurals name="days_before">
         <item quantity="one">за %d день</item>
+        <item quantity="few">за %d дні</item>
+        <item quantity="many">за %d днів</item>
         <item quantity="other">за %d днів</item>
     </plurals>
     <plurals name="weeks_before">
         <item quantity="one">за %d тиждень</item>
+        <item quantity="few">за %d тижні</item>
+        <item quantity="many">за %d тижнів</item>
         <item quantity="other">за %d тижнів</item>
     </plurals>
     <plurals name="months_before">
         <item quantity="one">за %d місяць</item>
+        <item quantity="few">за %d місяці</item>
+        <item quantity="many">за %d місяців</item>
         <item quantity="other">за %d місяців</item>
     </plurals>
     <plurals name="years_before">
         <item quantity="one">за %d рік</item>
+        <item quantity="few">за %d роки</item>
+        <item quantity="many">за %d років</item>
         <item quantity="other">за %d років</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d секунду</item>
+        <item quantity="few">%d секунди</item>
+        <item quantity="many">%d секунд</item>
         <item quantity="other">%d секунд</item>
     </plurals>
     <plurals name="by_minutes">
         <item quantity="one">%d хвилину</item>
+        <item quantity="few">%d хвилини</item>
+        <item quantity="many">%d хвилин</item>
         <item quantity="other">%d хвилин</item>
     </plurals>
     <plurals name="by_hours">
         <item quantity="one">%d годину</item>
+        <item quantity="few">%d години</item>
+        <item quantity="many">%d годин</item>
         <item quantity="other">%d годин</item>
     </plurals>
     <plurals name="by_days">
         <item quantity="one">%d день</item>
+        <item quantity="few">%d дні</item>
+        <item quantity="many">%d днів</item>
         <item quantity="other">%d днів</item>
     </plurals>
     <plurals name="by_weeks">
         <item quantity="one">%d тиждень</item>
+        <item quantity="few">%d тижні</item>
+        <item quantity="many">%d тижнів</item>
         <item quantity="other">%d тижнів</item>
     </plurals>
     <plurals name="by_months">
         <item quantity="one">%d місяць</item>
+        <item quantity="few">%d місяці</item>
+        <item quantity="many">%d місяців</item>
         <item quantity="other">%d місяців</item>
     </plurals>
     <plurals name="by_years">
         <item quantity="one">%d рік</item>
+        <item quantity="few">%d роки</item>
+        <item quantity="many">%d років</item>
         <item quantity="other">%d років</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Сигнал будильника зазвучить через:\n%s</string>
     <string name="reminder_triggers_in">Час до того, як спрацює нагадування:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Час, що залишився:
+\n%s</string>
     <string name="alarm_warning">Переконайтеся, що будильник працює коректно, перед тим, як на нього покладатися. Він може не спрацювати через системні обмеження, пов\'язані з економією заряду батареї.</string>
     <string name="reminder_warning">Переконайтеся, що нагадування працюють коректно, перед тим, як на них покладатися. Вони можуть не спрацювати через системні обмеження, пов\'язані з економією заряду батареї.</string>
     <string name="notifications_disabled">Сповіщення від цього додатка заборонені. Перейдіть до Налаштувань пристрою, щоб їх увімкнути.</string>
@@ -534,13 +601,13 @@
     <string name="settings">Налаштування</string>
     <string name="purchase_simple_thank_you">Придбати Simple Thank You</string>
     <string name="general_settings">General</string>
-    <string name="color_customization">Color customization</string>
+    <string name="color_customization">Налаштування кольору</string>
     <string name="customize_colors">Налаштувати кольори</string>
     <string name="customize_colors_locked">Налаштувати кольори (Locked)</string>
     <string name="customize_widget_colors">Налаштувати кольори віджета</string>
     <string name="customize_notifications">Налаштувати повідомлення</string>
     <string name="use_english_language">Використовувати англійську (Use English language)</string>
-    <string name="language">Language</string>
+    <string name="language">Мова</string>
     <string name="show_hidden_items">Показати приховані елементи</string>
     <string name="font_size">Розмір шрифту</string>
     <string name="small">Малий</string>
@@ -583,9 +650,9 @@
     <string name="startup">Запуск</string>
     <string name="text">Текст</string>
     <string name="migrating">Перенесення</string>
-    <string name="quality">Quality</string>
-    <string name="main_screen">Main screen</string>
-    <string name="thumbnails">Thumbnails</string>
+    <string name="quality">Якість</string>
+    <string name="main_screen">Головний екран</string>
+    <string name="thumbnails">Мініатюри</string>
     <string name="list_view">List view</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Керування вкладками, що відображаються</string>
@@ -610,6 +677,8 @@
     <string name="hide_the_recycle_bin">Приховати Кошик</string>
     <plurals name="moving_items_into_bin">
         <item quantity="one">Переміщення %d елемента в Кошик</item>
+        <item quantity="few">Переміщення %d елементів у Кошик</item>
+        <item quantity="many">Переміщення %d елементів у Кошик</item>
         <item quantity="other">Переміщення %d елементів у Кошик</item>
     </plurals>
     <!-- Import / Export -->
@@ -622,7 +691,7 @@
     <string name="importing_some_entries_failed">Не вдалось імпортувати деякі елементи</string>
     <string name="exporting_some_entries_failed">Не вдалось експортувати деякі елементи</string>
     <string name="no_entries_for_importing">Не знайдено елементів для імпортування</string>
-    <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
+    <string name="no_new_entries_for_importing">Не знайдено нові записи для імпортування</string>
     <string name="no_entries_for_exporting">Не знайдено елементів для експортування</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
@@ -704,10 +773,10 @@
     <string name="help_us">Help us</string>
     <string name="social">Social</string>
     <string name="other">Other</string>
-    <string name="privacy_policy">Privacy policy</string>
+    <string name="privacy_policy">Політика конфіденційності</string>
     <string name="version_placeholder">Version %s</string>
-    <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with ❤️ in Slovakia</string>
+    <string name="hello">Привіт :)</string>
+    <string name="about_footer">Зроблено з ❤️ у Словаччині</string>
     <string name="additional_info">Додаткова інформація</string>
     <string name="app_version">Версія додатка: %s</string>
     <string name="device_os">ОС пристрою: %s</string>
@@ -728,12 +797,9 @@
     <string name="rate_us_prompt">Привіт,\n\nздається, ви вже давно користуєтесь цим додатком, і ми це високо цінуємо.\n\nЧи могли б ви зробити нам послугу і оцінити додаток в Google Play? Це дійсно дуже нам допоможе.\n\nНезалежно від того, що ви вирішите, ви не побачите знову це повідомлення.\n\nСпасибі!</string>
     <string name="rate_our_app">Оцініть наш додаток :)</string>
     <string name="thank_you">Подяка</string>
-    <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
-    <string name="widget_locked">
-        <![CDATA[
-            The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
-        ]]>
-    </string>
+    <string name="widget_locked_pro">Віджет заблоковано.
+\nБудь ласка, оновіть додаток до версії Pro, щоб розблокувати віджет.</string>
+    <string name="widget_locked">Віджет заблоковано.&lt;br&gt;Будь ласка, придбайте &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;, щоб розблокувати його.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -746,13 +812,13 @@
             Спасибі
         ]]>
     </string>
-    <string name="simple_app_launcher">Simple App Launcher</string>
-    <string name="simple_calculator">Simple Calculator</string>
-    <string name="simple_calendar">Simple Calendar</string>
-    <string name="simple_camera">Simple Camera</string>
-    <string name="simple_clock">Simple Clock</string>
+    <string name="simple_app_launcher">Простий Лаунчер</string>
+    <string name="simple_calculator">Простий Калькулятор</string>
+    <string name="simple_calendar">Простий Календар</string>
+    <string name="simple_camera">Проста Камера</string>
+    <string name="simple_clock">Простий Годинник</string>
     <string name="simple_contacts">Simple Contacts</string>
-    <string name="simple_dialer">Simple Dialer</string>
+    <string name="simple_dialer"></string>
     <string name="simple_draw">Simple Draw</string>
     <string name="simple_file_manager">Simple File Manager</string>
     <string name="simple_flashlight">Simple Flashlight</string>
