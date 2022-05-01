@@ -204,6 +204,29 @@
         <item name="android:popupBackground">@drawable/top_popup_menu_bg_dark</item>
     </style>
 
+    <style name="AppTheme.YouPopupMenuStyle" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:popupMenuStyle">@style/AppTheme.YouPopupMenu</item>
+        <item name="android:itemTextAppearance">@style/AppTheme.YouItemTextStyle</item>
+    </style>
+
+    <style name="AppTheme.YouItemTextStyle" parent="TextAppearance.AppCompat.Light.Widget.PopupMenu.Small">
+        <item name="android:textColor">@color/you_neutral_text_color</item>
+    </style>
+
+    <style name="AppTheme.YouPopupMenu" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@color/you_dialog_background_color</item>
+        <item name="android:popupElevation">@dimen/popup_menu_elevation</item>
+    </style>
+
+    <style name="AppTheme.PopupMenuDarkStyle" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:popupMenuStyle">@style/AppTheme.PopupMenuDark</item>
+    </style>
+
+    <style name="AppTheme.PopupMenuDark" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@color/default_background_color</item>
+        <item name="android:popupElevation">@dimen/popup_menu_elevation</item>
+    </style>
+
     <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/BottomSheetModalStyle</item>
         <item name="android:colorControlHighlight">@color/activated_item_foreground</item>
@@ -2892,12 +2915,4 @@
         <item name="colorAccent">@color/md_grey_black</item>
     </style>
 
-    <style name="AppTheme.PopupMenuDarkStyle" parent="ThemeOverlay.AppCompat.Dark">
-        <item name="android:popupMenuStyle">@style/AppTheme.PopupMenuDark</item>
-    </style>
-
-    <style name="AppTheme.PopupMenuDark" parent="@android:style/Widget.PopupMenu">
-        <item name="android:popupBackground">@drawable/top_popup_menu_bg_dark</item>
-        <item name="android:popupElevation">10dp</item>
-    </style>
 </resources>

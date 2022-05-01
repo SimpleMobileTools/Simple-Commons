@@ -5,9 +5,11 @@ import android.view.*
 import android.widget.PopupMenu
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
+import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.copyToClipboard
 import com.simplemobiletools.commons.extensions.deleteBlockedNumber
 import com.simplemobiletools.commons.extensions.getProperTextColor
+import com.simplemobiletools.commons.helpers.isSPlus
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.BlockedNumber
 import com.simplemobiletools.commons.views.MyRecyclerView
@@ -82,7 +84,13 @@ class ManageBlockedNumbersAdapter(
     }
 
     private fun showPopupMenu(view: View, blockedNumber: BlockedNumber) {
-        val wrapper: Context = ContextThemeWrapper(activity, R.style.AppTheme_PopupMenuDarkStyle)
+        val theme = if (isSPlus() && activity.baseConfig.isUsingSystemTheme) {
+            R.style.AppTheme_YouPopupMenuStyle
+        } else {
+            R.style.AppTheme_PopupMenuDarkStyle
+        }
+
+        val wrapper: Context = ContextThemeWrapper(activity, theme)
         PopupMenu(wrapper, view, Gravity.END)
             .apply {
                 inflate(R.menu.cab_blocked_numbers)
