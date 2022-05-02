@@ -214,7 +214,7 @@
     </style>
 
     <style name="AppTheme.YouPopupMenu" parent="@android:style/Widget.PopupMenu">
-        <item name="android:popupBackground">@color/you_dialog_background_color</item>
+        <item name="android:popupBackground">@drawable/popup_menu_bg_you</item>
         <item name="android:popupElevation">@dimen/popup_menu_elevation</item>
     </style>
 
@@ -223,7 +223,16 @@
     </style>
 
     <style name="AppTheme.PopupMenuDark" parent="@android:style/Widget.PopupMenu">
-        <item name="android:popupBackground">@color/default_background_color</item>
+        <item name="android:popupBackground">@drawable/top_popup_menu_bg_dark</item>
+        <item name="android:popupElevation">@dimen/popup_menu_elevation</item>
+    </style>
+
+    <style name="AppTheme.PopupMenuLightStyle" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:popupMenuStyle">@style/AppTheme.PopupMenuLight</item>
+    </style>
+
+    <style name="AppTheme.PopupMenuLight" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@drawable/top_popup_menu_bg_light</item>
         <item name="android:popupElevation">@dimen/popup_menu_elevation</item>
     </style>
 
