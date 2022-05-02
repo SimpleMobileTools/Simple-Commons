@@ -71,13 +71,13 @@ class ManageBlockedNumbersAdapter(
                 setTextColor(textColor)
             }
 
-            manage_blocked_number_overflow_menu.drawable.apply {
+            overflow_menu_icon.drawable.apply {
                 mutate()
                 setTint(activity.getProperTextColor())
             }
 
-            manage_blocked_number_overflow_menu.setOnClickListener { overflowMenu ->
-                showPopupMenu(popup_anchor, blockedNumber)
+            overflow_menu_icon.setOnClickListener { overflowMenu ->
+                showPopupMenu(overflow_menu_anchor, blockedNumber)
             }
         }
     }

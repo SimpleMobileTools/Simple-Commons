@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/manage_blocked_number_holder"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -10,27 +9,19 @@
     android:foreground="@drawable/selector">
 
     <ImageView
-        android:id="@+id/manage_blocked_number_overflow_menu"
+        android:id="@+id/overflow_menu_icon"
+        style="@style/OverflowMenuIconStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:paddingStart="@dimen/activity_margin"
-        android:paddingTop="@dimen/normal_margin"
-        android:paddingEnd="@dimen/activity_margin"
-        android:paddingBottom="@dimen/normal_margin"
-        app:srcCompat="@drawable/ic_more_dots_vector" />
+        android:layout_centerVertical="true" />
 
     <View
-        android:id="@+id/popup_anchor"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/overflow_menu_anchor"
+        style="@style/OverflowMenuAnchorStyle"
         android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="@dimen/activity_margin"
-        android:visibility="invisible" />
+        android:layout_centerVertical="true" />
 
     <com.simplemobiletools.commons.views.MyTextView
         android:id="@+id/manage_blocked_number_title"
@@ -42,6 +33,6 @@
         android:layout_marginTop="@dimen/activity_margin"
         android:layout_marginEnd="@dimen/activity_margin"
         android:layout_marginBottom="@dimen/activity_margin"
-        android:layout_toStartOf="@+id/manage_blocked_number_overflow_menu" />
+        android:layout_toStartOf="@+id/overflow_menu_icon" />
 
 </RelativeLayout>
