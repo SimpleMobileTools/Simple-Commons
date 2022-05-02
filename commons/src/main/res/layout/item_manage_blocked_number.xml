@@ -27,10 +27,10 @@
         android:id="@+id/popup_anchor"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:visibility="invisible"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="@dimen/activity_margin" />
+        android:layout_marginEnd="@dimen/activity_margin"
+        android:visibility="invisible" />
 
     <com.simplemobiletools.commons.views.MyTextView
         android:id="@+id/manage_blocked_number_title"
