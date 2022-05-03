@@ -63,7 +63,7 @@
     <style name="TopPopupMenuYou">
         <item name="android:popupBackground">@drawable/dialog_you_background</item>
         <item name="android:dropDownHorizontalOffset">-10dp</item>
-        <item name="android:popupElevation">4dp</item>
+        <item name="android:popupElevation">@dimen/popup_menu_elevation</item>
     </style>
 
     <style name="TopPopupMenuTextYou">
@@ -202,6 +202,54 @@
 
     <style name="TopPopupMenu.Overflow.Dark" parent="@style/Widget.MaterialComponents.PopupMenu.Overflow">
         <item name="android:popupBackground">@drawable/top_popup_menu_bg_dark</item>
+    </style>
+
+    <style name="OverflowMenuIconStyle">
+        <item name="srcCompat">@drawable/ic_more_dots_vector</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:paddingStart">@dimen/activity_margin</item>
+        <item name="android:paddingTop">@dimen/normal_margin</item>
+        <item name="android:paddingEnd">@dimen/activity_margin</item>
+        <item name="android:paddingBottom">@dimen/normal_margin</item>
+    </style>
+
+    <style name="OverflowMenuAnchorStyle">
+        <item name="android:layout_width">@dimen/one_dp</item>
+        <item name="android:layout_height">@dimen/one_dp</item>
+        <item name="android:layout_marginEnd">@dimen/activity_margin</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="AppTheme.YouPopupMenuStyle" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:popupMenuStyle">@style/AppTheme.YouPopupMenu</item>
+        <item name="android:itemTextAppearance">@style/AppTheme.YouItemTextStyle</item>
+    </style>
+
+    <style name="AppTheme.YouItemTextStyle" parent="TextAppearance.AppCompat.Light.Widget.PopupMenu.Small">
+        <item name="android:textColor">@color/you_neutral_text_color</item>
+    </style>
+
+    <style name="AppTheme.YouPopupMenu" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@drawable/popup_menu_bg_you</item>
+        <item name="android:popupElevation">@dimen/popup_menu_elevation</item>
+    </style>
+
+    <style name="AppTheme.PopupMenuDarkStyle" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:popupMenuStyle">@style/AppTheme.PopupMenuDark</item>
+    </style>
+
+    <style name="AppTheme.PopupMenuDark" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@drawable/top_popup_menu_bg_dark</item>
+        <item name="android:popupElevation">@dimen/popup_menu_elevation</item>
+    </style>
+
+    <style name="AppTheme.PopupMenuLightStyle" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:popupMenuStyle">@style/AppTheme.PopupMenuLight</item>
+    </style>
+
+    <style name="AppTheme.PopupMenuLight" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@drawable/top_popup_menu_bg_light</item>
+        <item name="android:popupElevation">@dimen/popup_menu_elevation</item>
     </style>
 
     <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">

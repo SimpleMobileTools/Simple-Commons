@@ -5,7 +5,6 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.samples.BuildConfig
 import com.simplemobiletools.commons.samples.R
-import java.util.*
 
 class MainActivity : BaseSimpleActivity() {
     override fun getAppLauncherName() = getString(R.string.smtco_app_name)

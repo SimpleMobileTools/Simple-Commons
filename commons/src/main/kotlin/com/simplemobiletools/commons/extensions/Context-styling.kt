@@ -92,6 +92,16 @@ fun Context.getTimePickerDialogTheme() = when {
     else -> R.style.MyDialogTheme
 }
 
+fun Context.getPopupMenuTheme(): Int {
+    return if (isSPlus() && baseConfig.isUsingSystemTheme) {
+        R.style.AppTheme_YouPopupMenuStyle
+    } else if (isWhiteTheme()) {
+        R.style.AppTheme_PopupMenuLightStyle
+    } else {
+        R.style.AppTheme_PopupMenuDarkStyle
+    }
+}
+
 fun Context.getDatePickerDialogTheme() = when {
     baseConfig.isUsingSystemTheme -> R.style.MyDateTimePickerMaterialTheme
     baseConfig.backgroundColor.getContrastColor() == Color.WHITE -> R.style.MyDialogTheme_Dark
