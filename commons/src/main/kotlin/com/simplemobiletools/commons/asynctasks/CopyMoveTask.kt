@@ -282,6 +282,7 @@ class CopyMoveTask(
                                 activity.updateSDK30Uris(fileUris) {
                                     updateLastModifiedValues(source, destination)
                                     activity.rescanPath(destination.path)
+                                    deleteSourceFile(source)
                                 }
                             } else {
                                 updateLastModifiedValues(source, destination)
@@ -294,17 +295,20 @@ class CopyMoveTask(
                         activity.updateSDK30Uris(fileUris) {
                             updateLastModifiedValues(source, destination)
                             activity.rescanPath(destination.path)
+                            inputStream.close()
+                            out?.close()
+                            deleteSourceFile(source)
                         }
                     } else {
                         updateLastModifiedValues(source, destination)
+                        inputStream.close()
+                        out?.close()
+                        deleteSourceFile(source)
                     }
-                }
-
-                if (!copyOnly) {
+                } else {
                     inputStream.close()
                     out?.close()
-                    activity.deleteFileBg(source, isDeletingMultipleFiles = false)
-                    activity.deleteFromMediaStore(source.path)
+                    deleteSourceFile(source)
                 }
             }
         } catch (e: Exception) {
@@ -318,6 +322,11 @@ class CopyMoveTask(
     private fun updateLastModifiedValues(source: FileDirItem, destination: FileDirItem) {
         copyOldLastModified(source.path, destination.path)
         File(destination.path).setLastModified(File(source.path).lastModified())
+    }
+
+    private fun deleteSourceFile(source: FileDirItem) {
+        activity.deleteFileBg(source, isDeletingMultipleFiles = false)
+        activity.deleteFromMediaStore(source.path)
     }
 
     private fun copyOldLastModified(sourcePath: String, destinationPath: String) {
