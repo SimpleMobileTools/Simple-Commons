@@ -684,10 +684,12 @@
     <string name="more_info">Plus d\'information</string>
     <string name="upgrade">Passer à la version Pro</string>
     <string name="upgrade_calendar">Vous devez migrer manuellement les évènements stockés localement via une exportation dans un fichier .ics, puis une importation. Vous trouverez les boutons d\'exportation/importation dans le menu de l\'écran principal.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">Hé,
+\n
+\nil semble que vous ayez déjà la version Pro de l\'application aussi. Vous n\'aurez plus besoin de celle-ci, vous pouvez la désinstaller.</string>
+    <string name="upgraded_to_pro_calendar">Vous devez migrer manuellement les événements stockés localement en les exportant dans un fichier .ics, puis en les important. Vous trouverez les boutons d\'exportation et d\'importation dans le menu supérieur.</string>
+    <string name="upgraded_to_pro_notes">Vous devez migrer vos notes vers la version Pro manuellement.</string>
+    <string name="upgraded_to_pro_contacts">Vous devez migrer manuellement les contacts stockés à titre privé en les exportant dans un fichier .vcf, puis en les important. Vous trouverez les boutons d\'exportation et d\'importation dans le menu supérieur.</string>
     <!-- About -->
     <string name="about">À propos</string>
     <string name="website">Site web</string>
