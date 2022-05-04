@@ -650,10 +650,12 @@
     <string name="more_info">更多信息</string>
     <string name="upgrade">升级</string>
     <string name="upgrade_calendar">您必须通过导出/导入.ics文件来自行转移本地存储的事件。您可以在主界面菜单中找到导出/导入选项。</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">嘿，
+\n
+\n你似乎已经有了专业版的应用程序。你不再需要这个，你可以卸载它。</string>
+    <string name="upgraded_to_pro_calendar">你必须通过在 .ics 文件中导出，然后导入的方式手动迁移本地存储的事件。你可以在顶部菜单中找到导出和导入按钮。</string>
+    <string name="upgraded_to_pro_notes">你必须手动将笔记迁移到专业版。</string>
+    <string name="upgraded_to_pro_contacts">你必须通过在 .vcf 文件中导出，然后导入的方式手动迁移私有存储的联系人。你可以在顶部菜单中找到导出和导入按钮。</string>
     <!-- About -->
     <string name="about">关于</string>
     <string name="website">Website</string>
