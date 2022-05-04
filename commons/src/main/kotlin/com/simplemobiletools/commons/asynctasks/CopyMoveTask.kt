@@ -282,7 +282,6 @@ class CopyMoveTask(
                                 activity.updateSDK30Uris(fileUris) {
                                     updateLastModifiedValues(source, destination)
                                     activity.rescanPath(destination.path)
-                                    deleteSourceFile(source)
                                 }
                             } else {
                                 updateLastModifiedValues(source, destination)
