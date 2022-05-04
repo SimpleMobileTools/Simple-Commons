@@ -178,8 +178,8 @@
     <string name="append">Tilføj \"_1\"</string>
     <string name="apply_to_all">Anvend på alle konflikter</string>
     <string name="system_folder_restriction">Systemet tillader ikke operationen i denne mappe, vælg en anden</string>
-    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
-    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
+    <string name="system_folder_copy_restriction">Systemet tillader ikke kopiering til denne mappe, vælg en anden</string>
+    <string name="rename_in_sd_card_system_restriction">Systemet tillader ikke omdøbning i denne mappe</string>
     <!-- File picker -->
     <string name="select_folder">Vælg en mappe</string>
     <string name="select_file">Vælg en fil</string>
@@ -387,7 +387,7 @@
     <string name="yesterday">I går</string>
     <string name="today">I dag</string>
     <string name="tomorrow">I morgen</string>
-    <string name="every_day">Every day</string>
+    <string name="every_day">Hver dag</string>
     <string name="hide_year">Skjul årstal</string>
     <string name="seconds_raw">sekunder</string>
     <string name="minutes_raw">minutter</string>
@@ -683,10 +683,10 @@
     <string name="more_info">Yderligere oplysninger</string>
     <string name="upgrade">Opgrader</string>
     <string name="upgrade_calendar">Du må migrere lokalt gemte begivenheder ved at eksportere til en ics-fil og derpå importere den. Du finder eksport- og importknapper i hovedmenuen.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">Hej,\n\ndet ser ud til, at du også allerede har Pro-app-versionen. Du har ikke længere brug for denne, du kan afinstallere den..</string>
+    <string name="upgraded_to_pro_calendar">Du skal migrere lokalt lagrede begivenheder manuelt ved at eksportere dem til en .ics-fil og derefter importere dem. Du kan finde både eksport- og importknapper i topmenuen.</string>
+    <string name="upgraded_to_pro_notes">Du er nødt til at overføre dine noter til Pro-versionen manuelt.</string>
+    <string name="upgraded_to_pro_contacts">Du skal migrere privat gemte kontakter manuelt ved at eksportere dem til en .vcf-fil og derefter importere dem. Du kan finde både eksport- og importknapper i topmenuen.</string>
     <!-- About -->
     <string name="about">Om</string>
     <string name="website">Website</string>
