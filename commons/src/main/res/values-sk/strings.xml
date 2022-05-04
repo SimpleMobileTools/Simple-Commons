@@ -761,6 +761,10 @@
     <string name="more_info">Viac info</string>
     <string name="upgrade">Stiahnuť</string>
     <string name="upgrade_calendar">Lokálne uložené udalosti musíte exportovať manuálne do .ics súboru, následne importovať. Tlačidlá pre exportovanie/importovanie nájdete v menu hlavnej obrazovky.</string>
+    <string name="upgraded_to_pro">Zdravím,\n\nvyzerá to tak, že už máte Pro verziu. Túto už teda nebudete potrebovať, môžete ju odinštalovať.</string>
+    <string name="upgraded_to_pro_calendar">Lokálne uložené udalosti musíte premigrovať manuálne pomocou exportovania do .ics súboru a následného importovania. Tlačidlá pre export a import nájdete v hornom menu.</string>
+    <string name="upgraded_to_pro_notes">Poznámky musíte do Pro verzie skopírovať manuálne.</string>
+    <string name="upgraded_to_pro_contacts">Súkromne uložené kontakty musíte premigrovať manuálne pomocou exportovania do .vcf súboru a následného importovania. Tlačidlá pre export a import nájdete v hornom menu.</string>
 
     <!-- About -->
     <string name="about">O aplikácií</string>

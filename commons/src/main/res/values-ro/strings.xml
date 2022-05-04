@@ -719,6 +719,10 @@
     <string name="more_info">Mai multe informaţii</string>
     <string name="upgrade">Actualizează la Pro</string>
     <string name="upgrade_calendar">Trebuie să migrați manual evenimentele stocate la nivel local prin export într-un fișier .ics, apoi prin import. Puteți găsi ambele butoane de export/import în meniul ecranului principal.</string>
+    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
+    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
+    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
     <!-- About -->
     <string name="about">Despre</string>
     <string name="website">Website</string>
