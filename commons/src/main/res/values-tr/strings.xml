@@ -681,10 +681,12 @@
     <string name="more_info">Daha fazla bilgi</string>
     <string name="upgrade">Yükselt</string>
     <string name="upgrade_calendar">Yerel olarak depolanan etkinlikleri bir .ics dosyasına dışa aktarıp ardından içe aktarma yoluyla el ile geçirmeniz gerekir. Her iki dışa aktarma/içe aktarma düğmelerini ana ekran menüsünde bulabilirsiniz.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">Merhaba,
+\n
+\nGörünüşe göre zaten Pro uygulama sürümünüz de var. Artık buna ihtiyacınız olmayacak, kaldırabilirsiniz.</string>
+    <string name="upgraded_to_pro_calendar">Yerel olarak kaydedilen etkinlikleri bir .ics dosyasına aktarıp ardından içe aktarma yoluyla elle taşımanız gerekmektedir. Dışa ve içe aktarma düğmelerini üst menüde bulabilirsiniz.</string>
+    <string name="upgraded_to_pro_notes">Notlarınızı Pro sürümüne elle taşımanız gerekmektedir.</string>
+    <string name="upgraded_to_pro_contacts">Özel olarak kaydedilen kişileri bir .vcf dosyasına aktarıp ardından içe aktarma yoluyla elle taşımanız gerekmektedir. Dışa ve içe aktarma düğmelerini üst menüde bulabilirsiniz.</string>
     <!-- About -->
     <string name="about">Hakkında</string>
     <string name="website">Web sitesi</string>

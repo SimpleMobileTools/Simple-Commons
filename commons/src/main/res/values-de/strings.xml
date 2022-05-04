@@ -178,7 +178,7 @@
     <string name="append">\"_1\" anhängen</string>
     <string name="apply_to_all">Bei allen Konflikten anwenden</string>
     <string name="system_folder_restriction">Das System lässt den Vorgang in diesem Ordner nicht zu, bitte wählen Sie einen anderen Ordner</string>
-    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
+    <string name="system_folder_copy_restriction">Das System lässt das Kopieren in diesen Ordner nicht zu, bitte wählen Sie einen anderen Ordner</string>
     <string name="rename_in_sd_card_system_restriction">Das System erlaubt keine Umbenennung in diesem Ordner</string>
     <!-- File picker -->
     <string name="select_folder">Ordner auswählen</string>
@@ -685,10 +685,12 @@
     <string name="more_info">Mehr Infos</string>
     <string name="upgrade">Pro-Version installieren</string>
     <string name="upgrade_calendar">Um lokal gespeicherte Ereignisse zu migrieren, musst Du sie als ics-Datei exportieren und anschließend importieren. Die beiden Schaltflächen befinden sich im Hauptmenü.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">Hallo,
+\n
+\nes sieht so aus, als hätten Sie auch schon die Pro-App-Version. Sie brauchen diese nicht mehr, Sie können sie deinstallieren.</string>
+    <string name="upgraded_to_pro_calendar">Sie müssen lokal gespeicherte Ereignisse manuell durch Exportieren in eine .ics-Datei und anschließendes Importieren migrieren. Die Schaltflächen für Export und Import finden Sie im oberen Menü.</string>
+    <string name="upgraded_to_pro_notes">Sie müssen Ihre Notizen manuell in die Pro-Version migrieren.</string>
+    <string name="upgraded_to_pro_contacts">Sie müssen privat gespeicherte Kontakte manuell durch Exportieren in eine .vcf-Datei und anschließendes Importieren migrieren. Die Schaltflächen für Export und Import finden Sie im oberen Menü.</string>
     <!-- About -->
     <string name="about">Über</string>
     <string name="website">Website</string>
