@@ -187,9 +187,9 @@
     <string name="confirm_folder_access_title">Підтвердити доступ до теки</string>
     <string name="confirm_storage_access_text">Щоб надати доступ на запис, оберіть кореневу теку SD-карти на наступному екрані</string>
     <string name="confirm_storage_access_text_sd">Якщо ви не бачите SD-карту, спробуйте це</string>
-    <string name="confirm_storage_access_android_text"></string>
-    <string name="confirm_storage_access_android_text_specific"></string>
-    <string name="confirm_create_doc_for_new_folder_text"></string>
+    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
+    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
     <string name="confirm_selection">Підтвердіть вибір</string>
     <string name="loading">Завантаження…</string>
     <plurals name="items">
@@ -227,7 +227,7 @@
     <string name="sd_card_usb_same">Шляхи до SD-карти та USB-пристрою не можуть співпадати</string>
     <string name="app_on_sd_card">Схоже, ви встановили додаток на SD-карту, що робить віджети додатка недоступними. Ви навіть не побачите їх у списку доступних віджетів.
         Це обмеження системи, тож якщо ви хочете використовувати віджети, вам треба перемістити додаток до внутрішньої пам\'яті.</string>
-    <string name="wrong_folder_selected"></string>
+    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Властивості</string>
     <string name="path">Шлях</string>
@@ -248,7 +248,7 @@
     <string name="gps_coordinates">GPS координати</string>
     <string name="altitude">Висота над рівнем моря</string>
     <string name="remove_exif">Видалити EXIF</string>
-    <string name="remove_exif_confirmation"></string>
+    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
     <string name="exif_removed">Значення EXIF успішно видалено</string>
     <!-- Color customization -->
     <string name="background_color">Колір фону</string>
@@ -822,8 +822,8 @@
     <string name="simple_camera">Проста Камера</string>
     <string name="simple_clock">Простий Годинник</string>
     <string name="simple_contacts">Simple Contacts</string>
-    <string name="simple_dialer"></string>
-    <string name="simple_draw">Simple Draw</string>
+    <string name="simple_dialer">Simple Dialer</string>
+    <string name="simple_draw">Просто Малювання</string>
     <string name="simple_file_manager">Simple File Manager</string>
     <string name="simple_flashlight">Simple Flashlight</string>
     <string name="simple_gallery">Simple Gallery</string>

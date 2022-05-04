@@ -718,10 +718,12 @@
     <string name="more_info">Więcej informacji</string>
     <string name="upgrade">Uaktualnij</string>
     <string name="upgrade_calendar">Musisz przenieść przechowywane lokalnie wydarzenia ręcznie przez wyeksportowanie ich do pliku .ics, a następnie ich zaimportowanie. Oba służące do tego przyciski znajdziesz w menu na ekranie głównym.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">Witaj,
+\n
+\nwygląda na to, że masz już także wersję Pro aplikacji. Nie będziesz już potrzebować tej wersji, możesz ją odinstalować.</string>
+    <string name="upgraded_to_pro_calendar">Musisz przenieść przechowywane lokalnie wydarzenia ręcznie przez wyeksportowanie ich do pliku .ics, a następnie ich zaimportowanie. Oba służące do tego przyciski znajdziesz w górnym menu.</string>
+    <string name="upgraded_to_pro_notes">Musisz ręcznie przenieść swoje notatki do wersji Pro.</string>
+    <string name="upgraded_to_pro_contacts">Musisz przenieść prywatne kontakty ręcznie przez wyeksportowanie ich do pliku .ics, a następnie ich zaimportowanie. Oba służące do tego przyciski znajdziesz w górnym menu.</string>
     <!-- About -->
     <string name="about">O aplikacji</string>
     <string name="website">Strona internetowa</string>
