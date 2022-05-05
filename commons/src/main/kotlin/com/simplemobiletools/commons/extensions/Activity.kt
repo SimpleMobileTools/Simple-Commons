@@ -902,7 +902,7 @@ fun BaseSimpleActivity.renameFile(
             }
         }
     } else if (isAccessibleWithSAFSdk30(oldPath)) {
-        if (canManageMedia()) {
+        if (canManageMedia() && isPathOnInternalStorage(oldPath)) {
             renameCasually(oldPath, newPath, isRenamingMultipleFiles, callback)
         } else {
             handleSAFDialogSdk30(oldPath) {
