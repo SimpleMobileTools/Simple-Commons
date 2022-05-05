@@ -33,6 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/drag_handle_icon"
             android:layout_toEndOf="@+id/item_contact_image"
             android:ellipsize="end"
             android:gravity="center_vertical"
@@ -41,6 +42,12 @@
             android:paddingEnd="@dimen/activity_margin"
             android:textSize="@dimen/big_text_size"
             tools:text="John Doe" />
+
+        <ImageView
+            android:id="@+id/drag_handle_icon"
+            style="@style/DragHandleIconStyle"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
 
     </RelativeLayout>
 </FrameLayout>

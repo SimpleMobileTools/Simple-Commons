@@ -31,6 +31,7 @@
             android:id="@+id/item_contact_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/drag_handle_icon"
             android:layout_toEndOf="@+id/item_contact_image"
             android:ellipsize="end"
             android:gravity="center_vertical"
@@ -46,14 +47,21 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/item_contact_name"
             android:layout_alignStart="@+id/item_contact_name"
+            android:layout_toStartOf="@+id/drag_handle_icon"
             android:layout_toEndOf="@+id/item_contact_image"
-            android:gravity="center_vertical"
             android:alpha="0.6"
+            android:gravity="center_vertical"
             android:maxLines="1"
             android:paddingStart="@dimen/medium_margin"
             android:paddingEnd="@dimen/activity_margin"
             android:textSize="@dimen/normal_text_size"
             tools:text="0123 456 789" />
+
+        <ImageView
+            android:id="@+id/drag_handle_icon"
+            style="@style/DragHandleIconStyle"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
 
     </RelativeLayout>
 </FrameLayout>

@@ -305,6 +305,15 @@
         <item name="android:paddingBottom">@dimen/bigger_margin</item>
     </style>
 
+    <style name="DragHandleIconStyle">
+        <item name="android:src">@drawable/ic_drag_handle_vector</item>
+        <item name="android:layout_width">@dimen/dragselect_hotspot_height</item>
+        <item name="android:layout_height">@dimen/dragselect_hotspot_height</item>
+        <item name="android:paddingTop">@dimen/normal_margin</item>
+        <item name="android:paddingBottom">@dimen/normal_margin</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
     <!-- App themes -->
     <!-- White -->
     <style name="AppTheme.White" parent="AppTheme.Base">
