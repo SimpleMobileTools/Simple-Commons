@@ -205,7 +205,7 @@
     </style>
 
     <style name="OverflowMenuIconStyle">
-        <item name="srcCompat">@drawable/ic_more_dots_vector</item>
+        <item name="srcCompat">@drawable/ic_three_dots_vector</item>
         <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
         <item name="android:paddingStart">@dimen/activity_margin</item>
         <item name="android:paddingTop">@dimen/normal_margin</item>
