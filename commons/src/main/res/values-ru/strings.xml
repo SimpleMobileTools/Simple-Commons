@@ -577,7 +577,7 @@
     <string name="color_customization">Настройка цвета</string>
     <string name="customize_colors">Настройка интерфейса</string>
     <string name="customize_colors_locked">Настройка интерфейса (заблокировано)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Заблокировано</string>
     <string name="customize_widget_colors">Настройка цветов виджета</string>
     <string name="customize_notifications">Настройка уведомлений</string>
     <string name="use_english_language">Использовать английский язык</string>
@@ -725,10 +725,12 @@
     <string name="more_info">Подробнее</string>
     <string name="upgrade">Обновить</string>
     <string name="upgrade_calendar">Локально сохранённые события необходимо перенести вручную через экспорт и последующий импорт ics-файла. Кнопки экспорта/импорта находятся в главном меню.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">Эй,
+\n
+\nпохоже, у вас уже есть Pro-версия данного приложения. Эта версия вам больше не понадобится, её можно удалить.</string>
+    <string name="upgraded_to_pro_calendar">Локально сохранённые события необходимо перенести вручную через экспорт и последующий импорт ics-файла. Кнопки экспорта/импорта находятся в верхнем меню.</string>
+    <string name="upgraded_to_pro_notes">Необходимо вручную перенести свои заметки в Pro-версию.</string>
+    <string name="upgraded_to_pro_contacts">Локально сохранённые контакты необходимо перенести вручную через экспорт и последующий импорт vcf-файла. Кнопки экспорта/импорта находятся в верхнем меню.</string>
     <!-- About -->
     <string name="about">О приложении</string>
     <string name="website">Сайт</string>
