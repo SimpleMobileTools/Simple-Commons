@@ -192,6 +192,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Por favor, pressione \'&lt;b&gt;Save&lt;/b&gt;\' no canto inferior da próxima nela para criar uma nova pasta.</string>
     <string name="confirm_selection">Confirmar seleção</string>
     <string name="loading">Carregando…</string>
+    <string name="access_storage_prompt">Conceda ao nosso aplicativo acesso a todos os seus arquivos, ele pode não funcionar bem sem ele.</string>
     <plurals name="items">
         <item quantity="one">%d item</item>
         <item quantity="other">%d itens</item>

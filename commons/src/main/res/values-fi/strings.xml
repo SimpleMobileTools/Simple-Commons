@@ -192,6 +192,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Paina \'&lt;b&gt;Tallenna&lt;/b&gt;\' seuraavan ruudun alalaidasta luodaksesi uuden kansion.</string>
     <string name="confirm_selection">Vahvista valinta</string>
     <string name="loading">Ladataan…</string>
+    <string name="access_storage_prompt">Anna sovellukselle käyttöoikeus kaikkiin tiedoistoihin, muutoin se ei välttämättä toimi.</string>
     <plurals name="items">
         <item quantity="one">%d kohde</item>
         <item quantity="other">%d kohdetta</item>

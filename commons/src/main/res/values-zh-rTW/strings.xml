@@ -192,6 +192,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
     <string name="confirm_selection">確認選擇</string>
     <string name="loading">Loading…</string>
+    <string name="access_storage_prompt">請授予我們的 app 對所有檔案的存取權，否則其可能無法正常運作。</string>
     <plurals name="items">
         <item quantity="other">%d個項目</item>
     </plurals>

@@ -192,6 +192,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Naciśnij „&lt;b&gt;Zapisz&lt;/b&gt;” na dole następnego ekranu, aby utworzyć nowy folder.</string>
     <string name="confirm_selection">Potwierdź wybór</string>
     <string name="loading">Ładowanie…</string>
+    <string name="access_storage_prompt">Przyznaj naszej aplikacji dostęp do wszystkich swoich plików. Bez niego może nie działać dobrze.</string>
     <plurals name="items">
         <item quantity="one">%d element</item>
         <item quantity="few">%d elementy</item>

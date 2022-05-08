@@ -192,6 +192,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
     <string name="confirm_selection">Bekräfta val</string>
     <string name="loading">Läser in…</string>
+    <string name="access_storage_prompt">Vänligen ge oss tillgänglighet till dina filer, den kanske inte fungerar väl utan det.</string>
     <plurals name="items">
         <item quantity="one">%d objekt</item>
         <item quantity="other">%d objekt</item>

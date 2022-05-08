@@ -18,8 +18,7 @@
     <string name="copy_to_clipboard">Copie în clipboard</string>
     <string name="copy_number_to_clipboard">Copie numărul în clipboard</string>
     <string name="value_copied_to_clipboard">Valoare copiată în clipboard</string>
-    <string name="value_copied_to_clipboard_show">Valoare copiată în clipboard:
-\n%s</string>
+    <string name="value_copied_to_clipboard_show">Valoare copiată în clipboard:\n%s</string>
     <string name="dial_number">Formați numărul</string>
     <string name="unknown">Necunoscut</string>
     <string name="always">Întotdeauna</string>
@@ -193,6 +192,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Vă rugăm să apăsați \' <b>Salvare</b>\' în partea de jos a ecranului următor pentru a crea noul dosar.</string>
     <string name="confirm_selection">Confirmă selecţia</string>
     <string name="loading">Încărcare…</string>
+    <string name="access_storage_prompt">Vă rugăm să acordați aplicației noastre acces la toate fișierele dvs., deoarece s-ar putea să nu funcționeze bine fără acest lucru.</string>
     <plurals name="items">
         <item quantity="one">%d articol</item>
         <item quantity="few">%d articole</item>

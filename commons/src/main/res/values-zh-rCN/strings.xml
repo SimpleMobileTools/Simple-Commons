@@ -192,6 +192,7 @@
     <string name="confirm_create_doc_for_new_folder_text">请按下下个屏幕底部的“&lt;b&gt;保存&lt;/b&gt;”按钮来创建新文件夹。</string>
     <string name="confirm_selection">确认选择</string>
     <string name="loading">加载中…</string>
+    <string name="access_storage_prompt">请允许我们的应用程序访问您的所有文件，没有此权限它可能不能正常工作。</string>
     <plurals name="items">
         <item quantity="other">%d 个项目</item>
     </plurals>

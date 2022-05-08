@@ -204,6 +204,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
     <string name="confirm_selection">Потврдите одабир</string>
     <string name="loading">Loading…</string>
+    <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
 
     <plurals name="items">
         <item quantity="one">%d ставка</item>

@@ -192,6 +192,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Yeni klasörü oluşturmak için lütfen sonraki ekranın altındaki \'&lt;b&gt;Kaydet&lt;/b&gt;\' düğmesine basın.</string>
     <string name="confirm_selection">Seçimi onayla</string>
     <string name="loading">Yükleniyor…</string>
+    <string name="access_storage_prompt">Lütfen uygulamamızın tüm dosyalarınıza erismesine izin verin, bu olmadan iyi çalışmayabilir.</string>
     <plurals name="items">
         <item quantity="one">%d öge</item>
         <item quantity="other">%d öge</item>

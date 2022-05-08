@@ -192,6 +192,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Druk in het volgende scherm onderaan op \'&lt;b&gt;Opslaan&lt;/b&gt;\' om de nieuwe map aan te maken.</string>
     <string name="confirm_selection">Keuze bevestigen</string>
     <string name="loading">Laden…</string>
+    <string name="access_storage_prompt">Geef toestemming aan de app om alle bestanden op het apparaat te benaderen om er zeker van te zijn dat deze app probleemloos werkt.</string>
     <plurals name="items">
         <item quantity="one">%d item</item>
         <item quantity="other">%d items</item>

@@ -192,7 +192,8 @@
 \n„&lt;b&gt;Diesen Ordner verwenden&lt;/b&gt;“ drücken.</string>
     <string name="confirm_create_doc_for_new_folder_text">Bitte drücken Sie auf „&lt;b&gt;Speichern&lt;/b&gt;“ am unteren Rand des nächsten Bildschirms, um den neuen Ordner zu erstellen.</string>
     <string name="confirm_selection">Auswahl bestätigen</string>
-    <string name="loading">Wird geladen …</string>
+    <string name="loading">Wird geladen …</string>
+    <string name="access_storage_prompt">Bitte gewähren Sie unserer Anwendung Zugriff auf alle Ihre Dateien, da sie sonst möglicherweise nicht richtig funktioniert.</string>
     <plurals name="items">
         <item quantity="one">%d Element</item>
         <item quantity="other">%d Elemente</item>

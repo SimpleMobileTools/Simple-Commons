@@ -192,7 +192,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Tryk på \'&lt;b&gt;Save&lt;/b&gt;\' nederst på det næste skærmbillede for at oprette den nye mappe.</string>
     <string name="confirm_selection">Bekræft valg</string>
     <string name="loading">Indlæser…</string>
-    <string name="wrong_folder_selected">Forkert mappe valgt. Vælg stien \'%s\'</string>
+    <string name="access_storage_prompt">Giv venligst vores app adgang til alle dine filer, den fungerer muligvis ikke godt uden.</string>
     <plurals name="items">
         <item quantity="one">%d element</item>
         <item quantity="other">%d elementer</item>
@@ -220,6 +220,7 @@
     <string name="sd_card_usb_same">Stierne til SD-kortet og USB-enheden kan ikke være ens</string>
     <string name="app_on_sd_card">Det ser ud til at du har appen installeret på et SD-kort. Det gør at appens widget ikke er tilgængelig og ikke kan ses på listen med widgets.
         Dette skyldes en begrænsning i systemet, så hvis du vil bruge appens widgets må du flytte appen tilbage til det interne lager.</string>
+    <string name="wrong_folder_selected">Forkert mappe valgt. Vælg stien \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Egenskaber</string>
     <string name="path">Sti</string>

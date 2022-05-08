@@ -198,6 +198,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Premeu «&lt;b&gt;Desa&lt;/b&gt;» a la part inferior de la pantalla següent per crear la carpeta nova.</string>
     <string name="confirm_selection">Confirmeu la selecció</string>
     <string name="loading">S\'està carregant…</string>
+    <string name="access_storage_prompt">Si us plau, concediu accés de la nostra aplicació a tots els vostres fitxers, és possible que no funcioni bé sense això.</string>
     <plurals name="items">
         <item quantity="one">%d element</item>
         <item quantity="other">%d elements</item>

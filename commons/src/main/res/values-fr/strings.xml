@@ -192,6 +192,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Veuillez appuyer sur \"&lt;b&gt;Enregistrer&lt;/b&gt;\" en bas de l\'écran suivant pour créer le nouveau dossier.</string>
     <string name="confirm_selection">Confirmer la sélection</string>
     <string name="loading">Chargement…</string>
+    <string name="access_storage_prompt">Veuillez accorder à notre application l\'accès à tous vos fichiers, elle pourrait ne pas fonctionner correctement sans cela.</string>
     <plurals name="items">
         <item quantity="one">%d élément</item>
         <item quantity="other">%d éléments</item>

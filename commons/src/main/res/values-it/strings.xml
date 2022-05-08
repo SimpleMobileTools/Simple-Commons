@@ -192,6 +192,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Premi «&lt;b&gt;Salva&lt;/b&gt;» in fondo alla prossima schermata per creare la nuova cartella.</string>
     <string name="confirm_selection">Conferma selezione</string>
     <string name="loading">Caricamento…</string>
+    <string name="access_storage_prompt">Per favore, concedi alla nostra app l\'accesso a tutti i tuoi file, potrebbe non funzionare bene senza.</string>
     <plurals name="items">
         <item quantity="one">%d elemento</item>
         <item quantity="other">%d elementi</item>

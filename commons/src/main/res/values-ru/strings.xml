@@ -198,6 +198,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Нажмите \"&lt;b&gt;Сохранить&lt;/b&gt;\" внизу на следующем экране, чтобы создать новую папку.</string>
     <string name="confirm_selection">Подтвердить выделение</string>
     <string name="loading">Загрузка…</string>
+    <string name="access_storage_prompt">Предоставьте приложению доступ ко всем вашим файлам, без него оно может работать некорректно.</string>
     <plurals name="items">
         <item quantity="one">%d элемент</item>
         <item quantity="few">%d элемента</item>
