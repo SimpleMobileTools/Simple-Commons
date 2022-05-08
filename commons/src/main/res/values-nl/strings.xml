@@ -532,7 +532,7 @@
     <string name="color_customization">Kleuren aanpassen</string>
     <string name="customize_colors">Kleuren aanpassen</string>
     <string name="customize_colors_locked">Kleuren aanpassen (vergrendeld)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Vergrendeld</string>
     <string name="customize_widget_colors">Widgetkleuren aanpassen</string>
     <string name="customize_notifications">Meldingen aanpassen</string>
     <string name="use_english_language">Use English language</string>
@@ -679,10 +679,10 @@
     <string name="more_info">Meer informatie</string>
     <string name="upgrade">Upgraden</string>
     <string name="upgrade_calendar">Lokaal opgeslagen agenda\'s migreren kan alleen door exporteren naar een .ics bestand, en dan weer importeren. Deze functies zijn te vinden in het menu van de app.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">De Pro-versie van deze app is ook al geïnstalleerd. Deze app is niet meer nodig en kan dus gedeïnstalleerd worden.</string>
+    <string name="upgraded_to_pro_calendar">Lokaal opgeslagen afspraken moeten handmatig worden verplaatst door ze eerst te exporteren naar een .ics-bestand en ze vervolgens weer te importeren. Beide functies zijn te vinden in het menu.</string>
+    <string name="upgraded_to_pro_notes">De notities moeten handmatig worden overgezet naar de Pro-versie.</string>
+    <string name="upgraded_to_pro_contacts">Privécontacten moeten handmatig worden overgezet door ze te exporteren naar een .vcf-bestand en ze vervolgens weer te importeren. Beide functies zijn te vinden in het menu.</string>
     <!-- About -->
     <string name="about">Over</string>
     <string name="website">Website</string>

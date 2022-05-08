@@ -538,7 +538,7 @@
     <string name="color_customization">Personalització del color</string>
     <string name="customize_colors">Personalitza els colors</string>
     <string name="customize_colors_locked">Personalitza els colors (bloquejat)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Bloquejat</string>
     <string name="customize_widget_colors">Personalitza els colors dels ginys</string>
     <string name="customize_notifications">Personalitza les notificacions</string>
     <string name="use_english_language">Utilitza l\'idioma anglès</string>
@@ -685,10 +685,12 @@
     <string name="more_info">Més informació</string>
     <string name="upgrade">Actualitza</string>
     <string name="upgrade_calendar">Cal migrar els esdeveniments emmagatzemats localment de manera manual mitjançant l\'exportació en un fitxer .ics, i després importar-los. Podeu trobar els dos botons d\'exportació/importació al menú de la pantalla principal.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">Hola,
+\n
+\nsembla que ja teniu també la versió Pro de l\'aplicació. Ja no tornareu a necessitar aquesta, podeu desinstal·lar-la.</string>
+    <string name="upgraded_to_pro_calendar">Cal migrar manualment els esdeveniments emmagatzemats localment mitjançant l\'exportació en un fitxer «.ics», i després la importació. Podeu trobar els botons d\'exportació i importació al menú superior.</string>
+    <string name="upgraded_to_pro_notes">Cal migrar manualment les vostres notes a la versió Pro.</string>
+    <string name="upgraded_to_pro_contacts">Cal migrar manualment els contactes emmagatzemats en privat mitjançant l\'exportació en un fitxer .vcf i després la importació. Podeu trobar els botons d\'exportació i importació al menú superior.</string>
     <!-- About -->
     <string name="about">Quant a</string>
     <string name="website">Lloc web</string>

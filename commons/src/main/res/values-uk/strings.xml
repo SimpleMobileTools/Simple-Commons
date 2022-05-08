@@ -187,9 +187,9 @@
     <string name="confirm_folder_access_title">Підтвердити доступ до теки</string>
     <string name="confirm_storage_access_text">Щоб надати доступ на запис, оберіть кореневу теку SD-карти на наступному екрані</string>
     <string name="confirm_storage_access_text_sd">Якщо ви не бачите SD-карту, спробуйте це</string>
-    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
-    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
+    <string name="confirm_storage_access_android_text">Будь ласка, дозвольте додатку отримати доступ до вибраного сховища на наступному екрані, натиснувши \"Використовувати цю теку\" внизу.</string>
+    <string name="confirm_storage_access_android_text_specific">Будь ласка, дозвольте доступ до \'<b>%s</b>\' на наступному екрані, натиснувши \'<b>Використовувати цю теку</b>\' внизу.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Будь ласка, натисніть \'<b>Зберегти</b>\' внизу наступного екрана, щоб створити нову теку.</string>
     <string name="confirm_selection">Підтвердіть вибір</string>
     <string name="loading">Завантаження…</string>
     <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
@@ -228,7 +228,7 @@
     <string name="sd_card_usb_same">Шляхи до SD-карти та USB-пристрою не можуть співпадати</string>
     <string name="app_on_sd_card">Схоже, ви встановили додаток на SD-карту, що робить віджети додатка недоступними. Ви навіть не побачите їх у списку доступних віджетів.
         Це обмеження системи, тож якщо ви хочете використовувати віджети, вам треба перемістити додаток до внутрішньої пам\'яті.</string>
-    <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
+    <string name="wrong_folder_selected">Вибрано неправильну теку, будь ласка, виберіть \'%s\'</string>
     <!-- File properties -->
     <string name="properties">Властивості</string>
     <string name="path">Шлях</string>
@@ -249,7 +249,7 @@
     <string name="gps_coordinates">GPS координати</string>
     <string name="altitude">Висота над рівнем моря</string>
     <string name="remove_exif">Видалити EXIF</string>
-    <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
+    <string name="remove_exif_confirmation">Ви впевнені, що хочете видалити значення EXIF, як-от координати GPS, модель камери тощо\?</string>
     <string name="exif_removed">Значення EXIF успішно видалено</string>
     <!-- Color customization -->
     <string name="background_color">Колір фону</string>
@@ -605,7 +605,7 @@
     <string name="color_customization">Налаштування кольору</string>
     <string name="customize_colors">Налаштувати кольори</string>
     <string name="customize_colors_locked">Налаштувати кольори (Locked)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Заблоковано</string>
     <string name="customize_widget_colors">Налаштувати кольори віджета</string>
     <string name="customize_notifications">Налаштувати повідомлення</string>
     <string name="use_english_language">Використовувати англійську (Use English language)</string>
@@ -754,10 +754,12 @@
     <string name="more_info">Більше інформації</string>
     <string name="upgrade">Оновити</string>
     <string name="upgrade_calendar">Вам доведеться власноруч перемістити події, що зберігаються локально, експортувавши їх в .ics файл, а потім імпортувавши з нього. Ви знайдете кнопку експорту/імпорту в меню головного екрана.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">Гей,
+\n
+\nСхоже, у вас також є Pro-версія додатку. Вам більше не знадобиться ця, ви можете видалити її.</string>
+    <string name="upgraded_to_pro_calendar">Вам доведеться власноруч перемістити події, що зберігаються локально, експортувавши їх в .ics файл, а потім імпортувавши. Ви знайдете кнопку експорту/імпорту в меню головного екрана.</string>
+    <string name="upgraded_to_pro_notes">Вам доведеться вручну перенести свої нотатки до Pro-версії.</string>
+    <string name="upgraded_to_pro_contacts">Вам доведеться власноруч перемістити контакти, що зберігаються локально, експортувавши їх в .vcf файл, а потім імпортувавши. Ви знайдете кнопку експорту/імпорту в меню головного екрана.</string>
     <!-- About -->
     <string name="about">Про додаток</string>
     <string name="website">Website</string>
@@ -827,15 +829,15 @@
     <string name="simple_dialer">Simple Dialer</string>
     <string name="simple_draw">Просто Малювання</string>
     <string name="simple_file_manager">Simple File Manager</string>
-    <string name="simple_flashlight">Simple Flashlight</string>
-    <string name="simple_gallery">Simple Gallery</string>
-    <string name="simple_keyboard">Simple Keyboard</string>
-    <string name="simple_music_player">Simple Music Player</string>
+    <string name="simple_flashlight">Простий Ліхтарик</string>
+    <string name="simple_gallery">Проста Галерея</string>
+    <string name="simple_keyboard">Проста Клавіатура</string>
+    <string name="simple_music_player">Простий Музичний Програвач</string>
     <string name="simple_notes">Simple Notes</string>
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
-    <string name="simple_thank_you">Simple Thank You</string>
+    <string name="simple_thank_you">Просто Подяка</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
-    <string name="app_launcher_short">App Launcher</string>
+    <string name="app_launcher_short">Лаунчер</string>
     <string name="calculator_short">Калькулятор</string>
     <string name="calendar_short">Календар</string>
     <string name="camera_short">Камера</string>
@@ -846,7 +848,7 @@
     <string name="file_manager_short">Менеджер Файлів</string>
     <string name="flashlight_short">Ліхтарик</string>
     <string name="gallery_short">Галерея</string>
-    <string name="keyboard_short">Keyboard</string>
+    <string name="keyboard_short">Клавіатура</string>
     <string name="music_player_short">Музичний Програвач</string>
     <string name="notes_short">Нотатник</string>
     <string name="sms_messenger_short">SMS Повідомлення</string>
@@ -892,9 +894,9 @@
     <string name="faq_10_title_commons">Я придбав додаток, проте не можу завантажити його на іншому пристроєві.</string>
     <string name="faq_10_text_commons">Спробуйте очистити кеш вашого додатка Google Play і перезапустіть ваш пристрій. Це помилка в роботі Google Play, що насправді не пов\'язана з самим додатком.</string>
     <!-- Contributors -->
-    <string name="contributors">Contributors</string>
-    <string name="translation">Translation</string>
-    <string name="development">Development</string>
+    <string name="contributors">Помічники</string>
+    <string name="translation">Переклад</string>
+    <string name="development">Розробка</string>
     <string name="other_help">Other help</string>
     <string name="contributors_label">
         <![CDATA[
@@ -971,7 +973,7 @@
     <string name="why_upgrade_font_size_customization">Налаштування розміру шрифту</string>
     <string name="why_upgrade_private_contact_sharing">Додатковий обмін конфіденційними контактами в наших додатках</string>
     <string name="why_upgrade_customizable_contact_ringtones">Налаштування мелодій виклику для контакту</string>
-    <string name="why_upgrade_contact_filtering">Contact filtering</string>
+    <string name="why_upgrade_contact_filtering">Фільтрування контактів</string>
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Контрольні списки</string>
     <string name="why_upgrade_different_note_per_widget">Різні замітки та кольори для кожного віджета</string>
@@ -984,7 +986,7 @@
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Налаштування кольору фону</string>
     <string name="why_upgrade_file_importing">Підтримка імпорту файлів</string>
-    <string name="why_upgrade_zooming">Zooming</string>
+    <string name="why_upgrade_zooming">Масштабування</string>
     <!-- License -->
     <string name="notice">Цей додаток створено з використанням наступних бібліотек сторонніх розробників, що полегшує мою працю. Дякую.</string>
     <string name="third_party_licences">Ліцензії третіх сторін</string>
@@ -1021,5 +1023,5 @@
     <string name="deprecated_app">Застаріла: Ця версія додатка більше не підтримується, встановіть версію Pro за адресою https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Пам\'ятайте: якщо ви видалите будь-який платний додаток протягом 2 годин, вам буде автоматично повернена сума покупки. Якщо ви захочете повернути гроші пізніше, сконтактуйте з нами за адресою hello@simplemobiletools.com, і ви їх отримаєте. Таким чином ви можете легко спробувати додаток :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Група простих Android-додатків з відкритим вихідним кодом, настроювальними віджетами, без реклами та непотрібних дозволів.</string>
 </resources>
