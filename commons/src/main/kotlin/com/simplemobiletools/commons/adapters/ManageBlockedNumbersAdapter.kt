@@ -31,6 +31,10 @@ class ManageBlockedNumbersAdapter(
     }
 
     override fun actionItemPressed(id: Int) {
+        if (selectedKeys.isEmpty()) {
+            return
+        }
+
         when (id) {
             R.id.cab_copy_number -> copyNumberToClipboard()
             R.id.cab_delete -> deleteSelection()
@@ -87,7 +91,7 @@ class ManageBlockedNumbersAdapter(
         val wrapper: Context = ContextThemeWrapper(activity, theme)
 
         PopupMenu(wrapper, view, Gravity.END).apply {
-            inflate(R.menu.cab_blocked_numbers)
+            inflate(getActionMenuId())
             setOnMenuItemClickListener { item ->
                 val blockedNumberId = blockedNumber.id.toInt()
                 when (item.itemId) {
@@ -112,7 +116,6 @@ class ManageBlockedNumbersAdapter(
         finishActMode()
         selectedKeys.add(blockedNumberId)
         callback()
-        selectedKeys.remove(blockedNumberId)
     }
 
     private fun copyNumberToClipboard() {

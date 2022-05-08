@@ -8,6 +8,18 @@
     android:focusable="true"
     android:foreground="@drawable/selector">
 
+    <com.simplemobiletools.commons.views.MyTextView
+        android:id="@+id/manage_blocked_number_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/activity_margin"
+        android:layout_marginBottom="@dimen/activity_margin"
+        android:layout_toStartOf="@+id/overflow_menu_icon" />
+
     <ImageView
         android:id="@+id/overflow_menu_icon"
         style="@style/OverflowMenuIconStyle"
@@ -22,17 +34,5 @@
         style="@style/OverflowMenuAnchorStyle"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true" />
-
-    <com.simplemobiletools.commons.views.MyTextView
-        android:id="@+id/manage_blocked_number_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="@dimen/activity_margin"
-        android:layout_marginTop="@dimen/activity_margin"
-        android:layout_marginEnd="@dimen/activity_margin"
-        android:layout_marginBottom="@dimen/activity_margin"
-        android:layout_toStartOf="@+id/overflow_menu_icon" />
 
 </RelativeLayout>
