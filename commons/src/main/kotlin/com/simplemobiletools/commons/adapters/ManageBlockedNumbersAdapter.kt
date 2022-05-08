@@ -116,6 +116,7 @@ class ManageBlockedNumbersAdapter(
         finishActMode()
         selectedKeys.add(blockedNumberId)
         callback()
+        selectedKeys.remove(blockedNumberId)
     }
 
     private fun copyNumberToClipboard() {
