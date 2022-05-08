@@ -87,10 +87,11 @@ class ManageBlockedNumbersAdapter(
     }
 
     private fun showPopupMenu(view: View, blockedNumber: BlockedNumber) {
+        finishActMode()
         val theme = activity.getPopupMenuTheme()
-        val wrapper: Context = ContextThemeWrapper(activity, theme)
+        val contextTheme = ContextThemeWrapper(activity, theme)
 
-        PopupMenu(wrapper, view, Gravity.END).apply {
+        PopupMenu(contextTheme, view, Gravity.END).apply {
             inflate(getActionMenuId())
             setOnMenuItemClickListener { item ->
                 val blockedNumberId = blockedNumber.id.toInt()
@@ -113,7 +114,6 @@ class ManageBlockedNumbersAdapter(
     }
 
     private fun executeItemMenuOperation(blockedNumberId: Int, callback: () -> Unit) {
-        finishActMode()
         selectedKeys.add(blockedNumberId)
         callback()
         selectedKeys.remove(blockedNumberId)

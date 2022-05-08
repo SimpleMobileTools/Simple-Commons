@@ -62,6 +62,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                     return true
                 }
 
+                selectedKeys.clear()
                 isSelectable = true
                 actMode = actionMode
                 actBarTextView = layoutInflater.inflate(R.layout.actionbar_title, null) as TextView
