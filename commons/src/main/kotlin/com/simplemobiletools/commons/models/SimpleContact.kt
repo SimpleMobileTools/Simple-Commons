@@ -3,12 +3,36 @@ package com.simplemobiletools.commons.models
 import android.telephony.PhoneNumberUtils
 import com.simplemobiletools.commons.extensions.normalizePhoneNumber
 import com.simplemobiletools.commons.extensions.normalizeString
+import com.simplemobiletools.commons.helpers.SORT_BY_FULL_NAME
+import com.simplemobiletools.commons.helpers.SORT_DESCENDING
 
 data class SimpleContact(
     val rawId: Int, val contactId: Int, var name: String, var photoUri: String, var phoneNumbers: ArrayList<PhoneNumber>,
     var birthdays: ArrayList<String>, var anniversaries: ArrayList<String>
 ) : Comparable<SimpleContact> {
+
+    companion object {
+        var sorting = 0
+    }
+
     override fun compareTo(other: SimpleContact): Int {
+        var result = when {
+            sorting and SORT_BY_FULL_NAME != 0 -> {
+                return compareByFullName(other)
+            }
+            else -> {
+                compareUsingIds(other)
+            }
+        }
+
+        if (sorting and SORT_DESCENDING != 0) {
+            result *= -1
+        }
+
+        return result
+    }
+
+    private fun compareByFullName(other: SimpleContact): Int {
         val firstString = name.normalizeString()
         val secondString = other.name.normalizeString()
 
@@ -25,6 +49,12 @@ data class SimpleContact(
                 firstString.compareTo(secondString, true)
             }
         }
+    }
+
+    private fun compareUsingIds(other: SimpleContact): Int {
+        val firstId = rawId
+        val secondId = other.rawId
+        return firstId.compareTo(secondId)
     }
 
     fun doesContainPhoneNumber(text: String): Boolean {
