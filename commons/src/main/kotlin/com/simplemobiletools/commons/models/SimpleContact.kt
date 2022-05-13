@@ -12,10 +12,12 @@ data class SimpleContact(
 ) : Comparable<SimpleContact> {
 
     companion object {
-        var sorting = 0
+        var sorting = -1
     }
 
     override fun compareTo(other: SimpleContact): Int {
+        if (sorting == -1) return compareByFullName(other)
+
         var result = when {
             sorting and SORT_BY_FULL_NAME != 0 -> {
                 compareByFullName(other)
