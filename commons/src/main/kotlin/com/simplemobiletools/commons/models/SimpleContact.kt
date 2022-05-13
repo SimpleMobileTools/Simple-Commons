@@ -18,7 +18,7 @@ data class SimpleContact(
     override fun compareTo(other: SimpleContact): Int {
         var result = when {
             sorting and SORT_BY_FULL_NAME != 0 -> {
-                return compareByFullName(other)
+                compareByFullName(other)
             }
             else -> {
                 compareUsingIds(other)
