@@ -725,26 +725,35 @@ fun BaseSimpleActivity.deleteFilesBg(files: List<FileDirItem>, allowDeleteFolder
                 return@checkManageMediaOrHandleSAFDialogSdk30
             }
 
-            val failedFileDirItems = ArrayList<FileDirItem>()
-            files.forEachIndexed { index, file ->
-                deleteFileBg(file, allowDeleteFolder, true) {
-                    if (it) {
-                        wasSuccess = true
-                    } else {
-                        failedFileDirItems.add(file)
+            if (canManageMedia()) {
+                val fileUris = getFileUrisFromFileDirItems(files).second
+                deleteSDK30Uris(fileUris) { success ->
+                    runOnUiThread {
+                        callback?.invoke(success)
                     }
-
-                    if (index == files.lastIndex) {
-                        if (isRPlus() && failedFileDirItems.isNotEmpty()) {
-                            val fileUris = getFileUrisFromFileDirItems(failedFileDirItems).second
-                            deleteSDK30Uris(fileUris) { success ->
-                                runOnUiThread {
-                                    callback?.invoke(success)
-                                }
-                            }
+                }
+            } else {
+                val failedFileDirItems = ArrayList<FileDirItem>()
+                files.forEachIndexed { index, file ->
+                    deleteFileBg(file, allowDeleteFolder, true) {
+                        if (it) {
+                            wasSuccess = true
                         } else {
-                            runOnUiThread {
-                                callback?.invoke(wasSuccess)
+                            failedFileDirItems.add(file)
+                        }
+
+                        if (index == files.lastIndex) {
+                            if (isRPlus() && failedFileDirItems.isNotEmpty()) {
+                                val fileUris = getFileUrisFromFileDirItems(failedFileDirItems).second
+                                deleteSDK30Uris(fileUris) { success ->
+                                    runOnUiThread {
+                                        callback?.invoke(success)
+                                    }
+                                }
+                            } else {
+                                runOnUiThread {
+                                    callback?.invoke(wasSuccess)
+                                }
                             }
                         }
                     }
