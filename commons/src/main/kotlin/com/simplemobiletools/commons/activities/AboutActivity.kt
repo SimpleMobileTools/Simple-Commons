@@ -278,7 +278,7 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupPrivacyPolicy() {
-        if (resources.getBoolean(R.bool.hide_google_relations) || resources.getBoolean(R.bool.hide_all_external_links)) {
+        if (resources.getBoolean(R.bool.hide_all_external_links)) {
             about_privacy_policy_holder.beGone()
         }
 
