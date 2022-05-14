@@ -271,7 +271,7 @@
     <string name="app_icon_color_warning">UWAGA: Niektóre launchery nie obsługują prawidłowo zmiany ikon aplikacji. Jeśli ona zniknie, uruchom aplikację przez Sklep Google Play lub przez widżet, jeśli jest dostępny.
         Po uruchomieniu aplikacji ustaw domyślny kolor ikony (#F57C00). W najgorszym przypadku konieczne może być przeinstalowanie aplikacji.</string>
     <string name="share_colors_success">Kolory zostały zmienione. Dodano nowy motyw o nazwie „wspólny” — użyj go do aktualizacji kolorystyki we wszystkich Prostych aplikacjach w przyszłości.</string>
-    <string name="shared_theme_note">Zauważ, że nawet jeśli używasz wersji Pro aplikacji, nadal potrzebujesz aplikacji „Proste podziękowanie” z powodów technicznych. Zajmuje się ona synchronizacją kolorów.</string>
+    <string name="shared_theme_note">Pamiętaj, że nawet jeśli używasz wersji Pro aplikacji, nadal potrzebujesz aplikacji „Proste podziękowanie” z powodów technicznych. Zajmuje się ona synchronizacją kolorów.</string>
     <string name="purchase_thank_you">Aby odblokować tę funkcję (i przy okazji wesprzeć rozwój niniejszej aplikacji), kup aplikację &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Proste podziękowanie&lt;/a&gt;. Dzięki!</string>
     <!-- Themes -->
     <string name="light_theme">Jasny</string>
@@ -764,8 +764,8 @@
     <string name="update_thank_you">Zaktualizuj aplikację Proste podziękowanie do najnowszej wersji</string>
     <string name="before_asking_question_read_faq">Zanim zadasz pytanie, najpierw sprawdź ustawienia aplikacji i przeczytaj często zadawane pytania. Może znajduje się tam rozwiązanie.</string>
     <string name="before_rate_read_faq">Zanim nas ocenisz, sprawdź ustawienia aplikacji i przeczytaj często zadawane pytania. Jeśli masz jakieś problemy, może jest tam rozwiązanie.</string>
-    <string name="make_sure_latest">Upewnij się, że używasz najnowszej wersji aplikacji.</string>
-    <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
+    <string name="make_sure_latest">Upewnij się też, że używasz najnowszej wersji aplikacji.</string>
+    <string name="make_sure_upgrade">Pamiętaj również, że ta wersja aplikacji nie jest już rozwijana. Pobierz wersję Pro, aby uzyskać wiele ulepszeń.</string>
     <string name="read_it">Przeczytaj to</string>
     <string name="read_faq">Przeczytaj FAQ</string>
     <string name="rate_us_prompt">Witaj!\n\nWygląda na to, że używasz tej aplikacji już od dłuższego czasu i naprawdę to doceniamy.\n\nJeśli możemy poprosić Cię o przysługę, to oceń nas w Google Play. To by nam naprawdę bardzo pomogło.\n\nBez względu na to, jak zdecydujesz, nie zobaczysz tej wiadomości ponownie.\n\nDzięki!</string>
@@ -922,23 +922,23 @@
     <string name="why_upgrade_easy_event_importing">Łatwe importowanie wydarzeń</string>
     <string name="why_upgrade_new_widgets">Nowe widżety</string>
     <!-- Contacts Pro -->
-    <string name="why_upgrade_duplicate_contact_merging">Ulepszono łączenie zduplikowanych kontaktów</string>
+    <string name="why_upgrade_duplicate_contact_merging">Ulepszone scalanie powielonych kontaktów</string>
     <string name="why_upgrade_font_size_customization">Dostosowywanie rozmiaru czcionki</string>
-    <string name="why_upgrade_private_contact_sharing">Opcjonalne udostępnianie kontaktów prywatnych w naszych aplikacjach</string>
+    <string name="why_upgrade_private_contact_sharing">Opcjonalne udostępnianie prywatnych kontaktów w naszych aplikacjach</string>
     <string name="why_upgrade_customizable_contact_ringtones">Konfigurowalne dzwonki kontaktów</string>
     <string name="why_upgrade_contact_filtering">Filtrowanie kontaktów</string>
-    <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
+    <string name="why_upgrade_contact_private_contacts">Kontakty przechowywane prywatnie</string>
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Listy kontrolne</string>
     <string name="why_upgrade_different_note_per_widget">Różne notatki i kolory w widżetach</string>
-    <string name="why_upgrade_note_locking">Blokada notatek</string>
+    <string name="why_upgrade_note_locking">Blokowanie notatek</string>
     <!-- File Manager Pro -->
-    <string name="why_upgrade_date_and_time_format">Personalizacja formatu daty i czasu</string>
+    <string name="why_upgrade_date_and_time_format">Dostosowywanie formatu daty i godziny</string>
     <string name="why_upgrade_shortcuts">Skróty ekranu głównego</string>
     <string name="why_upgrade_file_compression">Obsługa kompresji plików</string>
     <string name="why_upgrade_recents_tab">Karta z ostatnimi plikami</string>
     <!-- Draw Pro -->
-    <string name="why_upgrade_background_color_customization">Personalizacja koloru tła</string>
+    <string name="why_upgrade_background_color_customization">Dostosowywanie koloru tła</string>
     <string name="why_upgrade_file_importing">Obsługa importowania plików</string>
     <string name="why_upgrade_zooming">Powiększanie</string>
     <!-- License -->
