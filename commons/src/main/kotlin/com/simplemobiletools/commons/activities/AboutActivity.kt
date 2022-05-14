@@ -156,7 +156,7 @@ class AboutActivity : BaseSimpleActivity() {
     }
 
     private fun setupRateUs() {
-        if (resources.getBoolean(R.bool.hide_google_relations)) {
+        if (resources.getBoolean(R.bool.hide_google_relations) || resources.getBoolean(R.bool.avoid_showing_rating_prompt)) {
             about_rate_us_holder.beGone()
         }
 

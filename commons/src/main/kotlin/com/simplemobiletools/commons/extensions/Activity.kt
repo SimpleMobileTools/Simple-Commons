@@ -111,7 +111,7 @@ fun Activity.appLaunched(appId: String) {
     }
 
     if (baseConfig.appRunCount % 40 == 0 && !baseConfig.wasAppRated) {
-        if (!resources.getBoolean(R.bool.hide_google_relations)) {
+        if (!resources.getBoolean(R.bool.hide_google_relations) && !resources.getBoolean(R.bool.avoid_showing_rating_prompt)) {
             RateStarsDialog(this)
         }
     }
