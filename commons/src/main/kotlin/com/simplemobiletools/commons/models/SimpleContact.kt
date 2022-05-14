@@ -19,12 +19,8 @@ data class SimpleContact(
         if (sorting == -1) return compareByFullName(other)
 
         var result = when {
-            sorting and SORT_BY_FULL_NAME != 0 -> {
-                compareByFullName(other)
-            }
-            else -> {
-                compareUsingIds(other)
-            }
+            sorting and SORT_BY_FULL_NAME != 0 -> compareByFullName(other)
+            else -> rawId.compareTo(other.rawId)
         }
 
         if (sorting and SORT_DESCENDING != 0) {
@@ -51,12 +47,6 @@ data class SimpleContact(
                 firstString.compareTo(secondString, true)
             }
         }
-    }
-
-    private fun compareUsingIds(other: SimpleContact): Int {
-        val firstId = rawId
-        val secondId = other.rawId
-        return firstId.compareTo(secondId)
     }
 
     fun doesContainPhoneNumber(text: String): Boolean {
