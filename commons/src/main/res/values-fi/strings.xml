@@ -539,7 +539,7 @@
     <string name="color_customization">Värien mukautus</string>
     <string name="customize_colors">Muokkaa sovelluksen värejä</string>
     <string name="customize_colors_locked">Muokkaa sovelluksen värejä (Locked)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Lukittu</string>
     <string name="customize_widget_colors">Mukauta pienoissovelluksen värejä</string>
     <string name="customize_notifications">Mukauta ilmoituksia</string>
     <string name="use_english_language">Käytä englannin kieltä</string>
@@ -686,7 +686,9 @@
     <string name="more_info">Lisää tietoa</string>
     <string name="upgrade">Päivitä</string>
     <string name="upgrade_calendar">Sinun tulee yhdistää paikallisesti tallennetut tapahtumat manuaalisesti viemällä ne .ics-tiedostoon ja sen jälkeen tuomalla tiedostosta. Löydät vienti- ja tuontipainikkeet päävalikosta.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
+    <string name="upgraded_to_pro">Hei,
+\n
+\nnäyttää siltä, että sinulla on Pro-versio asennettuna. Et tarvitse tätä versiota enää, voit siis poistaa tämän.</string>
     <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
     <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
     <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
