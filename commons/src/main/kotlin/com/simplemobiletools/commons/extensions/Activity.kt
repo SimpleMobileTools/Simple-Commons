@@ -111,7 +111,7 @@ fun Activity.appLaunched(appId: String) {
     }
 
     if (baseConfig.appRunCount % 40 == 0 && !baseConfig.wasAppRated) {
-        if (!resources.getBoolean(R.bool.hide_google_relations)) {
+        if (!resources.getBoolean(R.bool.hide_google_relations) && !resources.getBoolean(R.bool.avoid_showing_rating_prompt)) {
             RateStarsDialog(this)
         }
     }
@@ -726,7 +726,7 @@ fun BaseSimpleActivity.deleteFilesBg(files: List<FileDirItem>, allowDeleteFolder
 
             if (canManageMedia()) {
                 val fileUris = getFileUrisFromFileDirItems(files).second
-                if(fileUris.size == files.size){
+                if (fileUris.size == files.size) {
                     deleteSDK30Uris(fileUris) { success ->
                         runOnUiThread {
                             callback?.invoke(success)
@@ -742,7 +742,11 @@ fun BaseSimpleActivity.deleteFilesBg(files: List<FileDirItem>, allowDeleteFolder
     }
 }
 
-private fun BaseSimpleActivity.deleteFilesCasual(files: List<FileDirItem>, allowDeleteFolder: Boolean = false, callback: ((wasSuccess: Boolean) -> Unit)? = null){
+private fun BaseSimpleActivity.deleteFilesCasual(
+    files: List<FileDirItem>,
+    allowDeleteFolder: Boolean = false,
+    callback: ((wasSuccess: Boolean) -> Unit)? = null
+) {
     var wasSuccess = false
     val failedFileDirItems = ArrayList<FileDirItem>()
     files.forEachIndexed { index, file ->
