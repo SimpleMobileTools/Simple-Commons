@@ -192,7 +192,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Будь ласка, натисніть \'<b>Зберегти</b>\' внизу наступного екрана, щоб створити нову теку.</string>
     <string name="confirm_selection">Підтвердіть вибір</string>
     <string name="loading">Завантаження…</string>
-    <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
+    <string name="access_storage_prompt">Будь ласка, надайте даному додатку доступ до ваших файлів, без цього він може несправно працювати.</string>
     <plurals name="items">
         <item quantity="one">%d елемент</item>
         <item quantity="few">%d елемента</item>
@@ -800,7 +800,7 @@
     <string name="before_asking_question_read_faq">Перш ніж запитувати, будь ласка, ознайомтесь із налаштуваннями додатка та прочитайте Часті Питання. Можливо, відповідь там.</string>
     <string name="before_rate_read_faq">Перш ніж ви оціните нас, будь ласка перегляньте налаштування додатка та прочитайте Часті Питання. Якщо у вас виникнуть проблеми, можливо там буде вирішення.</string>
     <string name="make_sure_latest">Також переконайтеся, що ви користуєтеся найновішою версією додатка.</string>
-    <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
+    <string name="make_sure_upgrade">Також зверніть увагу, що ця версія програми більше не розробляється, придбайте версію Pro, щоб отримати багато покращень.</string>
     <string name="read_it">Прочитати</string>
     <string name="read_faq">Читати ЧаПи</string>
     <string name="rate_us_prompt">Привіт,\n\nздається, ви вже давно користуєтесь цим додатком, і ми це високо цінуємо.\n\nЧи могли б ви зробити нам послугу і оцінити додаток в Google Play? Це дійсно дуже нам допоможе.\n\nНезалежно від того, що ви вирішите, ви не побачите знову це повідомлення.\n\nСпасибі!</string>
@@ -827,7 +827,7 @@
     <string name="simple_camera">Проста Камера</string>
     <string name="simple_clock">Простий Годинник</string>
     <string name="simple_contacts">Прості контакти</string>
-    <string name="simple_dialer">Simple Dialer</string>
+    <string name="simple_dialer">Простий Телефон</string>
     <string name="simple_draw">Просте Малювання</string>
     <string name="simple_file_manager">Простий Файловий Менеджер</string>
     <string name="simple_flashlight">Простий Ліхтарик</string>
@@ -867,12 +867,7 @@
     <string name="faq_1_text_commons">Найімовірніше тому, що ви перемістили додаток на SD карту. В системі Android існує обмеження, що приховує віджети додатка
         в цьому випадку. Єдине рішення - перемістити додаток назад у Внутрішню Пам\'ять з допомогою налаштувань вашого пристрою.</string>
     <string name="faq_2_title_commons">Я хочу вас підтримати, але я не можу пожертвувати гроші. Чи є ще щось, що я можу зробити?</string>
-    <string name="faq_2_text_commons">
-        <![CDATA[
-            Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-            The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-        ]]>
-    </string>
+    <string name="faq_2_text_commons">Так, звісно. Ви можете поширювати інформацію про наші додатки або давати хороші відгуки та оцінки. Ви також можете допомогти, переклавши додатки на нову мову або просто оновивши деякі наявні переклади. Посібник з перекладу знаходиться за адресою &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;this website&lt;/a&gt; або просто зв\'яжіться з нами за адресою &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt;, якщо у вас виникли запитання.</string>
     <string name="faq_3_title_commons">Я випадково видалив деякі файли, як я можу їх відновити?</string>
     <string name="faq_3_text_commons">На жаль, ви не можете. Файли видаляються негайно після діалогу-підтвердження, функції типу \"Кошик\" не передбачено.</string>
     <string name="faq_4_title_commons">Мені не подобаються кольори віджета, чи можу я їх змінити?</string>
@@ -899,13 +894,7 @@
     <string name="translation">Переклад</string>
     <string name="development">Розробка</string>
     <string name="other_help">Other help</string>
-    <string name="contributors_label">
-        <![CDATA[
-            This list contains everyone that noticeably helped any app within the Simple Mobile Tools suite, not only this one. Translations are handled by volunteers,
-            let us know if you want to help too. The guide to translating is at <a href="https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file">this website</a>, or just contact us at <a href="mailto:hello@simplemobiletools.com">hello@simplemobiletools.com</a> if you have any questions.
-            Thanks to all contributors and other supporters!
-        ]]>
-    </string>
+    <string name="contributors_label">У цьому списку є всі, хто помітно допоміг будь-якому додатку в наборі Simple Mobile Tools, не тільки цьому. Перекладами займаються волонтери. Якщо ви також хочете допомогти, то повідомте нас. Посібник з перекладу знаходиться за адресою &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;this website&lt;/a&gt; або просто зв\'яжіться з нами за адресою &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt;, якщо у вас виникли запитання. Дякуємо всім помічникам та всім, хто підтримує!</string>
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
