@@ -10,7 +10,6 @@ import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.License
 import kotlinx.android.synthetic.main.activity_license.*
 import kotlinx.android.synthetic.main.item_license.view.*
-import java.util.*
 
 class LicenseActivity : BaseSimpleActivity() {
     override fun getAppIconIDs() = intent.getIntegerArrayListExtra(APP_ICON_IDS) ?: ArrayList()
@@ -88,6 +87,7 @@ class LicenseActivity : BaseSimpleActivity() {
         License(LICENSE_EVENT_BUS, R.string.event_bus_title, R.string.event_bus_text, R.string.event_bus_url),
         License(LICENSE_AUDIO_RECORD_VIEW, R.string.audio_record_view_title, R.string.audio_record_view_text, R.string.audio_record_view_url),
         License(LICENSE_SMS_MMS, R.string.sms_mms_title, R.string.sms_mms_text, R.string.sms_mms_url),
-        License(LICENSE_APNG, R.string.apng_title, R.string.apng_text, R.string.apng_url)
+        License(LICENSE_APNG, R.string.apng_title, R.string.apng_text, R.string.apng_url),
+        License(LICENSE_PDF_VIEWER, R.string.pdf_viewer_title, R.string.pdf_viewer_text, R.string.pdf_viewer_url)
     )
 }
