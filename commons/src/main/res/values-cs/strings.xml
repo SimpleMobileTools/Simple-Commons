@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Zrušit</string>
@@ -55,7 +56,6 @@
     <string name="eight">Eight</string>
     <string name="nine">Nine</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
-
     <!-- Emails -->
     <string name="home">Domov</string>
     <string name="work">Práce</string>
@@ -66,7 +66,6 @@
     <string name="home_fax">Domácí fax</string>
     <string name="pager">Pager</string>
     <string name="no_phone_number_found">Nenalezeno žádné telefonní číslo</string>
-
     <!-- View types -->
     <string name="change_view_type">Změnit typ zobrazení</string>
     <string name="grid">Mřížka</string>
@@ -76,7 +75,6 @@
     <string name="reduce_column_count">Snížit počet sloupců</string>
     <string name="change_cover_image">Změnit obal alba</string>
     <string name="select_photo">Vybrat fotografii</string>
-
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Spravovat blokovaná čísla</string>
     <string name="not_blocking_anyone">Neblokujete nikoho.</string>
@@ -89,28 +87,23 @@
     <string name="must_make_default_dialer">Pro použití blokování čísel musíte nastavit aplikaci jako výchozí pro správu hovorů.</string>
     <string name="set_as_default">Nastavit jako výchozí</string>
     <string name="block_confirmation">Jste si jistý, že chcete zablokovat \"%s\"?</string>
-
     <!-- Favorites -->
     <string name="favorites">Oblíbené</string>
     <string name="add_favorites">Přidat oblíbené</string>
     <string name="add_to_favorites">Přidat do oblíbených</string>
     <string name="remove_from_favorites">Odebrat z oblíbených</string>
-
     <!-- Search -->
     <string name="search">Hledat</string>
     <string name="type_2_characters">Zadejte alespoň 2 znaky pro zahájení hledání.</string>
-
     <!-- Filters -->
     <string name="filter">Filtrovat</string>
     <string name="no_items_found">Nenalezeny žádné položky.</string>
     <string name="change_filter">Upravit filtr</string>
-
     <!-- Permissions -->
     <string name="no_storage_permissions">Je vyžadováno oprávnění pro přístup k externímu úložišti</string>
     <string name="no_contacts_permission">Je vyžadováno oprávnění pro přístup ke kontaktům</string>
     <string name="no_camera_permissions">Je vyžadováno oprávnění pro přístup k fotoaparátu</string>
     <string name="no_audio_permissions">Je vyžadováno oprávnění pro přístup ke zvuku</string>
-
     <!-- Renaming -->
     <string name="rename_file">Přejmenovat soubor</string>
     <string name="rename_folder">Přejmenovat složku</string>
@@ -135,7 +128,6 @@
     <string name="filename_without_txt">Filename (without .txt)</string>
     <string name="filename_without_json">Filename (without .json)</string>
     <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
-
     <!-- Copy / Move -->
     <string name="copy">Kopírovat</string>
     <string name="move">Přesunout</string>
@@ -166,7 +158,6 @@
     <string name="no_new_items">Nenalezeny žádné nové položky</string>
     <string name="no_space">V cíli není dostatek místa.\nPotřeba %1$s, k dispozici %2$s</string>
     <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
-
     <!-- Create new -->
     <string name="create_new">Nový</string>
     <string name="folder">Složka</string>
@@ -176,7 +167,6 @@
     <string name="invalid_name">Název obsahuje neplatné znaky</string>
     <string name="empty_name">Zadejte prosím název</string>
     <string name="unknown_error_occurred">Vyskytla se neznámá chyba</string>
-
     <!-- File operation conflicts -->
     <string name="file_already_exists">Soubor \"%s\" již existuje</string>
     <string name="file_already_exists_overwrite">Soubor \"%s\" již existuje. Přepsat?</string>
@@ -190,7 +180,6 @@
     <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
     <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
     <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
-
     <!-- File picker -->
     <string name="select_folder">Zvolte složku</string>
     <string name="select_file">Zvolte soubor</string>
@@ -204,33 +193,28 @@
     <string name="confirm_selection">Potvrdit výběr</string>
     <string name="loading">Loading…</string>
     <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
-
     <plurals name="items">
         <item quantity="one">%d položka</item>
         <item quantity="few">%d položky</item>
         <item quantity="other">%d položek</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d položku</item>
         <item quantity="few">%d položky</item>
         <item quantity="other">%d položek</item>
     </plurals>
-
     <plurals name="deleting_items">
         <item quantity="one">Odstraňuje se %d položka</item>
         <item quantity="few">Odstraňují se %d položky</item>
         <item quantity="other">Odstraňuje se %d položek</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d kontakt</item>
         <item quantity="few">%d kontakty</item>
         <item quantity="other">%d kontaktů</item>
     </plurals>
-
     <!-- Storages -->
     <string name="select_storage">Zvolit úložiště</string>
     <string name="internal">Interní</string>
@@ -241,7 +225,6 @@
     <string name="app_on_sd_card">Zdá se, že máte aplikaci nainstalovanou na SD kartě, widgety proto nebudou dostupné. Neuvidíte je ani v seznamu dostupných widgetů.
         Jedná se o systémové omezení, proto pokud chcete widgety používat, musíte aplikaci přesunout zpět do interního úložiště.</string>
     <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
-
     <!-- File properties -->
     <string name="properties">Vlastnosti</string>
     <string name="path">Cesta</string>
@@ -264,7 +247,6 @@
     <string name="remove_exif">Remove EXIF</string>
     <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
     <string name="exif_removed">EXIF values removed successfully</string>
-
     <!-- Color customization -->
     <string name="background_color">Barva pozadí</string>
     <string name="text_color">Barva písma</string>
@@ -295,7 +277,6 @@
             Prosím, zakupte si <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Jednoduché děkuji</a> pro odemkutí této funkce a pro podporu vývoje. Děkuji!
         ]]>
     </string>
-
     <!-- Themes -->
     <string name="light_theme">Světlý</string>
     <string name="dark_theme">Tmavý</string>
@@ -308,11 +289,9 @@
     <string name="custom">Vlastní</string>
     <string name="shared">Sdílený</string>
     <string name="system_default">System default</string>
-
     <!-- What's new -->
     <string name="whats_new">Co je nového</string>
     <string name="whats_new_disclaimer">* najdete zde pouze výraznější změny, vždy jsou však doprovázeny i drobnými opravami</string>
-
     <!-- Actionbar items -->
     <string name="delete">Smazat</string>
     <string name="remove">Odstranit</string>
@@ -345,7 +324,6 @@
     <string name="send_sms">Send SMS</string>
     <string name="send_email">Send email</string>
     <string name="call">Call</string>
-
     <!-- Sorting -->
     <string name="sort_by">Seřadit dle</string>
     <string name="name">Název</string>
@@ -368,11 +346,12 @@
     <string name="full_name">Celé jméno</string>
     <string name="use_custom_sorting">Použijte vlastní třídění</string>
     <string name="change_order">Změnit pořádek</string>
-
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Opravdu chcete smazat dané soubory/složky?</string>
-    <string name="deletion_confirmation">Opravdu chcete smazat  %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Opravdu chcete přesunout %s do koše?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">Opravdu chcete smazat  %s?</string>
+    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Opravdu chcete přesunout %s do koše?</string>
+    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Opravdu chcete smazat tuto položku</string>
     <string name="are_you_sure_recycle_bin">Opravdu chcete přesunout tuto položku do koše?</string>
     <string name="do_not_ask_again">V této relaci se znovu neptat</string>
@@ -380,13 +359,11 @@
     <string name="yes">Ano</string>
     <string name="no">Ne</string>
     <string name="maybe">Možná</string>
-
     <plurals name="delete_warning">
         <item quantity="one">UPOZORNĚNÍ: Chystáte se smazat %d složku</item>
         <item quantity="few">UPOZORNĚNÍ: Chystáte se smazat %d složky</item>
         <item quantity="other">UPOZORNĚNÍ: Chystáte se smazat %d složek</item>
     </plurals>
-
     <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">Zadejte PIN</string>
@@ -412,12 +389,11 @@
     <string name="lock_folder">Uzamknout složku</string>
     <string name="unlock_folder">Odemknout složku</string>
     <string name="lock_folder_notice">Tato ochrana funguje pouze v této aplikaci, nemá za cíl nahradit šifrování fungující napříč systémem.</string>
-
     <!-- Times -->
     <string name="yesterday">Včera</string>
     <string name="today">Dnes</string>
     <string name="tomorrow">Zítra</string>
-    <string name="every_day">Every day</string>
+    <string name="every_day">Každý den</string>
     <string name="hide_year">Skrýt rok</string>
     <string name="seconds_raw">sekundy</string>
     <string name="minutes_raw">minuty</string>
@@ -426,7 +402,6 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
-
     <plurals name="seconds">
         <item quantity="one">%d sekunda</item>
         <item quantity="few">%d sekundy</item>
@@ -462,7 +437,6 @@
         <item quantity="few">%d roky</item>
         <item quantity="other">%d roků</item>
     </plurals>
-
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d sekundu</item>
@@ -499,7 +473,6 @@
         <item quantity="few">%d roky</item>
         <item quantity="other">%d roků</item>
     </plurals>
-
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d sekundu před</item>
@@ -536,7 +509,6 @@
         <item quantity="few">%d roky před</item>
         <item quantity="other">%d roků před</item>
     </plurals>
-
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d sekundu</item>
@@ -573,7 +545,6 @@
         <item quantity="few">%d roky</item>
         <item quantity="other">%d roků</item>
     </plurals>
-
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Zbývající čas do zvonění budíku:\n%s</string>
     <string name="reminder_triggers_in">Zbývající čas do zobrazení připomínky:\n%s</string>
@@ -581,7 +552,6 @@
     <string name="alarm_warning">Před spoléháním se na budík se prosím ujistěte, že funguje správně. Některá systémová omezení spojená se zvýšením výdrže baterie mohou způsobovat problémy.</string>
     <string name="reminder_warning">Před spoléháním se na připomínky se prosím ujistěte, že fungují správně. Některá systémová omezení spojená se zvýšením výdrže baterie mohou způsobovat problémy.</string>
     <string name="notifications_disabled">Oznámení této aplikace jsou vypnuta. Pro jejich povolení prosím přejděte do nastavení svého zařízení.</string>
-
     <!-- Alarms -->
     <string name="alarm">Budík</string>
     <string name="snooze">Odložit</string>
@@ -594,7 +564,6 @@
     <string name="no_sound">Žádný zvuk</string>
     <string name="during_day_at_hh_mm">Během dne v hh:mm</string>
     <string name="during_day_at">Během dne v %02d:%02d</string>
-
     <!-- Settings -->
     <string name="settings">Nastavení</string>
     <string name="purchase_simple_thank_you">Zakoupit Jednoduché děkuji</string>
@@ -639,7 +608,6 @@
     <string name="start_name_with_surname">Nejprve příjmení</string>
     <string name="clear_cache">Vyčistit mezipaměť</string>
     <string name="show_call_confirmation_dialog">Před zahájením hovoru zobrazit potvrzovací dialog</string>
-
     <!-- Setting sections -->
     <string name="visibility">Viditelnost</string>
     <string name="security">Zabezpečení</string>
@@ -654,7 +622,6 @@
     <string name="main_screen">Main screen</string>
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
-
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Spravovat zobrazené karty</string>
     <string name="default_tab_to_open">Kartu otevřete při spuštění aplikace</string>
@@ -665,7 +632,6 @@
     <string name="last_used_tab">Naposledy použité</string>
     <string name="files_tab">Soubory</string>
     <string name="recent_files_tab">Nejnovější soubory</string>
-
     <!-- Recycle Bin -->
     <string name="restore_this_file">Obnovit tento soubor</string>
     <string name="restore_selected_files">Obnovit vybrané soubory</string>
@@ -677,13 +643,11 @@
     <string name="moving_recycle_bin_items_disabled">Přesouvání položek z koše není povoleno, prosím použijte možnost Obnovit</string>
     <string name="show_the_recycle_bin">Zobrazit koš</string>
     <string name="hide_the_recycle_bin">Skrýt koš</string>
-
     <plurals name="moving_items_into_bin">
         <item quantity="one">%d položka se přesouvá do koše</item>
         <item quantity="few">%d položky se přesouvají do koše</item>
         <item quantity="other">%d položek se přesouvá do koše</item>
     </plurals>
-
     <!-- Import / Export -->
     <string name="importing">Importování…</string>
     <string name="exporting">Exportování…</string>
@@ -696,13 +660,11 @@
     <string name="no_entries_for_importing">Nebyly nalezeny žádné položky pro import</string>
     <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
     <string name="no_entries_for_exporting">Nebyly nalezeny žádné položky pro export</string>
-
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Zdá se, že ke svému zařízení máte připojeno USB zařízení. Pro správné zobrazení jeho souborů jsou potřeba další oprávnění.</string>
     <string name="confirm_usb_storage_access_text">Pro povolení přístupu prosím na následující obrazovce zvolte kořenový adresář USB zařízení</string>
     <string name="wrong_root_selected_usb">Zvolena nesprávná složka, vyberte prosím kořenový adresář USB zařízení</string>
-
     <!-- Dates -->
     <string name="january">leden</string>
     <string name="february">únor</string>
@@ -716,7 +678,6 @@
     <string name="october">říjen</string>
     <string name="november">listopad</string>
     <string name="december">prosinec</string>
-
     <!-- in January -->
     <string name="in_january">v lednu</string>
     <string name="in_february">v únoru</string>
@@ -730,7 +691,6 @@
     <string name="in_october">v říjnu</string>
     <string name="in_november">v listopadu</string>
     <string name="in_december">v prosinci</string>
-
     <string name="monday">Pondělí</string>
     <string name="tuesday">Úterý</string>
     <string name="wednesday">Středa</string>
@@ -738,7 +698,6 @@
     <string name="friday">Pátek</string>
     <string name="saturday">Sobota</string>
     <string name="sunday">Neděle</string>
-
     <string name="monday_letter">P</string>
     <string name="tuesday_letter">Ú</string>
     <string name="wednesday_letter">S</string>
@@ -746,7 +705,6 @@
     <string name="friday_letter">P</string>
     <string name="saturday_letter">S</string>
     <string name="sunday_letter">N</string>
-
     <string name="monday_short">Po</string>
     <string name="tuesday_short">Út</string>
     <string name="wednesday_short">St</string>
@@ -754,7 +712,6 @@
     <string name="friday_short">Pá</string>
     <string name="saturday_short">So</string>
     <string name="sunday_short">Ne</string>
-
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Tato verze aplikace již není podporována. Pro nové opravy a jiná vylepšení prosím přejděte na Pro verzi.</string>
     <string name="upgrade_to_pro_long_click">Tato verze aplikace již nebude dále aktualizována. Pro nové opravy a jiná vylepšení prosím přejděte na Pro verzi kliknutím sem.</string>
@@ -766,7 +723,6 @@
     <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
     <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
     <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
-
     <!-- About -->
     <string name="about">O aplikaci</string>
     <string name="website">Website</string>
@@ -790,7 +746,7 @@
     <string name="privacy_policy">Privacy policy</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="about_footer">Made with ❤️ in Slovakia</string>
     <string name="additional_info">Dodatečné informace</string>
     <string name="app_version">Verze aplikace: %s</string>
     <string name="device_os">Operační systém zařízení: %s</string>
@@ -819,7 +775,6 @@
             The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
         ]]>
     </string>
-
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -832,7 +787,6 @@
             Děkuji
         ]]>
     </string>
-
     <string name="simple_app_launcher">Simple App Launcher</string>
     <string name="simple_calculator">Simple Calculator</string>
     <string name="simple_calendar">Simple Calendar</string>
@@ -850,7 +804,6 @@
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
-
     <string name="app_launcher_short">App Launcher</string>
     <string name="calculator_short">Kalkulačka</string>
     <string name="calendar_short">Kalendář</string>
@@ -868,13 +821,11 @@
     <string name="sms_messenger_short">SMS Messenger</string>
     <string name="thank_you_short">Děkuji</string>
     <string name="voice_recorder_short">Hlasový záznamník</string>
-
     <string name="sideloaded_app">
         <![CDATA[
             Zdá se, že vaše verze aplikace je poškozená. Prosím stáhněte originální verzi <a href="%s">zde</a>.
         ]]>
     </string>
-
     <!-- FAQ -->
     <string name="frequently_asked_questions">Často kladené otázky</string>
     <string name="before_asking_question">Před položením otázky si prosím prvně přečtěte</string>
@@ -909,7 +860,6 @@
         chcete vybrat všechny položky, stačí dlouze stisknout jednu položku a poté kliknout na počítadlo vybraných položek v levém horním rohu. Tím se vybere nebo zruší výběr všeho.</string>
     <string name="faq_10_title_commons">Koupil jsem si aplikaci, ale nemohu ji stáhnout do jiného zařízení.</string>
     <string name="faq_10_text_commons">Zkuste vymazat mezipaměť aplikace Google Play a restartovat zařízení. Je to nějaká závada Google Play, která ve skutečnosti nesouvisí se samotnou aplikací.</string>
-
     <!-- Contributors -->
     <string name="contributors">Contributors</string>
     <string name="translation">Translation</string>
@@ -922,7 +872,6 @@
             Thanks to all contributors and other supporters!
         ]]>
     </string>
-
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -967,7 +916,6 @@
     <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
     <string name="translation_chinese_cn">Chinese (Simplified)</string>
     <string name="translation_chinese_tw">Chinese (Traditional)</string>
-
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Get the Pro version now!</string>
     <string name="why_upgrade_basic_version">Basic</string>
@@ -976,20 +924,17 @@
     <string name="why_upgrade_no_internet_access">No internet access</string>
     <string name="why_upgrade_footer">+ 100% Money Back Guarantee</string>
     <string name="why_upgrade_improved_design">Improved design</string>
-
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
     <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
     <string name="why_upgrade_folder_locking">Individual folder locking</string>
     <string name="why_upgrade_printing_support">Printing support</string>
-
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Time zone support</string>
     <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
     <string name="why_upgrade_easy_event_importing">Easy event importing</string>
     <string name="why_upgrade_new_widgets">New widgets</string>
-
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
     <string name="why_upgrade_font_size_customization">Font size customization</string>
@@ -997,23 +942,19 @@
     <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
     <string name="why_upgrade_contact_filtering">Filtrování kontaktů</string>
     <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
-
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Checklists</string>
     <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
     <string name="why_upgrade_note_locking">Note locking</string>
-
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
     <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
     <string name="why_upgrade_file_compression">File compression support</string>
     <string name="why_upgrade_recents_tab">Tab with recent files</string>
-
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Background color customization</string>
     <string name="why_upgrade_file_importing">File importing support</string>
     <string name="why_upgrade_zooming">Zooming</string>
-
     <!-- License -->
     <string name="notice">Tato aplikace používá pro ulehčení mé práce následující knihovny třetích stran. Děkuji.</string>
     <string name="third_party_licences">Licence třetích stran</string>
@@ -1047,11 +988,9 @@
     <string name="sms_mms_title">SMS MMS (spravovanie SMS a MMS)</string>
     <string name="apng_title">APNG Android (animated WebP support)</string>
     <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
-
     <!-- Google Play listing -->
     <string name="deprecated_app">ZASTARALÁ: Tato verze aplikace již není podporována, stáhněte si Pro verzi na https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Nezapomeňte, že pokud odinstalujete kteroukoliv placenou aplikaci do 2 hodin, budou vám automaticky vráceny peníze. Pokud budete chtít vrátit platbu kdykoliv později, kontaktujte nás prosím na hello@simplemobiletools.com . Tímto vám nic nebrání aplikace plně ozkoušet :)</string>
-
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
 </resources>
