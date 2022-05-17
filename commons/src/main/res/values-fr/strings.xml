@@ -539,7 +539,7 @@
     <string name="color_customization">Personnalisation des couleurs</string>
     <string name="customize_colors">Modifier les couleurs</string>
     <string name="customize_colors_locked">Modifier les couleurs (verrouillé)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Verrouillé</string>
     <string name="customize_widget_colors">Modifier les couleurs du widget</string>
     <string name="customize_notifications">Personnaliser les notifications</string>
     <string name="use_english_language">Utiliser la langue anglaise</string>
@@ -727,12 +727,12 @@
         ]]>
     </string>
     <string name="purchase">Acheter</string>
-    <string name="order_simple_phone">Order Simple Phone</string>
+    <string name="order_simple_phone">Commander un Simple Phone</string>
     <string name="update_thank_you">Veuillez mettre à jour Simple Thank You</string>
     <string name="before_asking_question_read_faq">Avant de poser une question, veuillez vérifier les paramètres de l\'application et lire la foire aux questions. Il est possible que la solution s\'y trouve.</string>
     <string name="before_rate_read_faq">Avant de nous évaluer, veuillez vérifier les paramètres de l\'application et lire la foire aux questions. Si vous rencontrez des problèmes, il est possible que la solution s\'y trouve.</string>
     <string name="make_sure_latest">Assurez-vous également que vous utilisez la version la plus récente de l\'application.</string>
-    <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
+    <string name="make_sure_upgrade">Notez également que cette version de l\'application n\'est plus développée. Procurez-vous la version Pro pour bénéficier de nombreuses améliorations.</string>
     <string name="read_it">Consulter</string>
     <string name="read_faq">Lire la FAQ</string>
     <string name="rate_us_prompt">Bonjour,\n\nil semblerait que vous utilisez cette application depuis un certain temps et nous vous en remercions.\n\nSi nous pouvons vous demander une faveur, veuillez nous évaluer sur Google Play. Cela nous aiderait beaucoup.\n\nPeu importe le contenu de votre évaluation, vous ne verrez plus ce message.\n\nMerci d\'avance !</string>
@@ -898,7 +898,7 @@
     <string name="why_upgrade_private_contact_sharing">Partage facultatif des contacts privés entre nos applications</string>
     <string name="why_upgrade_customizable_contact_ringtones">Sonnerie personnalisée par contact</string>
     <string name="why_upgrade_contact_filtering">Filtrage des contacts</string>
-    <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
+    <string name="why_upgrade_contact_private_contacts">Contacts stockés de manière privée</string>
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Listes de contrôle</string>
     <string name="why_upgrade_different_note_per_widget">Différentes couleurs par widget</string>
@@ -944,7 +944,7 @@
     <string name="audio_record_view_title">Audio Record View (visualisation audio)</string>
     <string name="sms_mms_title">SMS MMS (gestion SMS et MMS)</string>
     <string name="apng_title">APNG Android (support WebP animé)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (visionneuse de PDF)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">ATTENTION : cette version de l\'application n\'est plus maintenue. Procurez-vous la version Pro à l\'adresse https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">N\'oubliez pas que si vous désinstallez une application payante dans les 2 heures, vous serez automatiquement remboursé. Si vous souhaitez un remboursement, à tout moment, contactez-nous à hello@simplemobiletools.com et vous l\'obtiendrez. Alors n\'hésitez pas et essayez nos applications :)</string>
