@@ -95,10 +95,6 @@ val Context.sdCardPath: String get() = baseConfig.sdCardPath
 val Context.internalStoragePath: String get() = baseConfig.internalStoragePath
 val Context.otgPath: String get() = baseConfig.OTGPath
 
-val Context.targetSdkVersion: Int get() = applicationInfo.targetSdkVersion
-
-fun Context.isTargetSdkVersion30Plus(): Boolean = targetSdkVersion >= Build.VERSION_CODES.R
-
 fun Context.isFingerPrintSensorAvailable() = isMarshmallowPlus() && Reprint.isHardwarePresent()
 
 fun Context.isBiometricIdAvailable(): Boolean = when (BiometricManager.from(this).canAuthenticate(BiometricManager.Authenticators.BIOMETRIC_WEAK)) {

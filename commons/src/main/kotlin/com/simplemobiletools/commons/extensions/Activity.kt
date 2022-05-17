@@ -1348,7 +1348,7 @@ fun Activity.performSecurityCheck(
     successCallback: ((String, Int) -> Unit)? = null,
     failureCallback: (() -> Unit)? = null
 ) {
-    if (protectionType == PROTECTION_FINGERPRINT && isTargetSdkVersion30Plus()) {
+    if (protectionType == PROTECTION_FINGERPRINT && isRPlus()) {
         showBiometricPrompt(successCallback, failureCallback)
     } else {
         SecurityDialog(

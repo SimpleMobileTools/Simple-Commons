@@ -8,10 +8,7 @@ import androidx.fragment.app.FragmentActivity
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.adapters.PasswordTypesAdapter
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.PROTECTION_FINGERPRINT
-import com.simplemobiletools.commons.helpers.PROTECTION_PATTERN
-import com.simplemobiletools.commons.helpers.PROTECTION_PIN
-import com.simplemobiletools.commons.helpers.SHOW_ALL_TABS
+import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.interfaces.HashListener
 import com.simplemobiletools.commons.views.MyDialogViewPager
 import kotlinx.android.synthetic.main.dialog_security.view.*
@@ -38,7 +35,7 @@ class SecurityDialog(
                 scrollView = dialog_scrollview,
                 biometricPromptHost = AuthPromptHost(activity as FragmentActivity),
                 showBiometricIdTab = shouldShowBiometricIdTab(),
-                showBiometricAuthentication = showTabIndex == PROTECTION_FINGERPRINT && activity.isTargetSdkVersion30Plus()
+                showBiometricAuthentication = showTabIndex == PROTECTION_FINGERPRINT && isRPlus()
             )
             viewPager.adapter = tabsAdapter
             viewPager.onPageChangeListener {
@@ -53,7 +50,7 @@ class SecurityDialog(
                 val textColor = context.getProperTextColor()
 
                 if (shouldShowBiometricIdTab()) {
-                    val tabTitle = if (context.isTargetSdkVersion30Plus()) R.string.biometrics else R.string.fingerprint
+                    val tabTitle = if (isRPlus()) R.string.biometrics else R.string.fingerprint
                     dialog_tab_layout.addTab(dialog_tab_layout.newTab().setText(tabTitle), PROTECTION_FINGERPRINT)
                 }
 
@@ -101,7 +98,7 @@ class SecurityDialog(
     }
 
     private fun shouldShowBiometricIdTab(): Boolean {
-        return if (activity.isTargetSdkVersion30Plus()) {
+        return if (isRPlus()) {
             activity.isBiometricIdAvailable()
         } else {
             activity.isFingerPrintSensorAvailable()

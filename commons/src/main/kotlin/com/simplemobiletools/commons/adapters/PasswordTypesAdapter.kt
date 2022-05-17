@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import androidx.biometric.auth.AuthPromptHost
 import androidx.viewpager.widget.PagerAdapter
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.isTargetSdkVersion30Plus
 import com.simplemobiletools.commons.helpers.PROTECTION_FINGERPRINT
 import com.simplemobiletools.commons.helpers.PROTECTION_PATTERN
 import com.simplemobiletools.commons.helpers.PROTECTION_PIN
+import com.simplemobiletools.commons.helpers.isRPlus
 import com.simplemobiletools.commons.interfaces.HashListener
 import com.simplemobiletools.commons.interfaces.SecurityTab
 import com.simplemobiletools.commons.views.MyScrollView
@@ -47,7 +47,7 @@ class PasswordTypesAdapter(
     private fun layoutSelection(position: Int): Int = when (position) {
         PROTECTION_PATTERN -> R.layout.tab_pattern
         PROTECTION_PIN -> R.layout.tab_pin
-        PROTECTION_FINGERPRINT -> if (context.isTargetSdkVersion30Plus()) R.layout.tab_biometric_id else R.layout.tab_fingerprint
+        PROTECTION_FINGERPRINT -> if (isRPlus()) R.layout.tab_biometric_id else R.layout.tab_fingerprint
         else -> throw RuntimeException("Only 3 tabs allowed")
     }
 
