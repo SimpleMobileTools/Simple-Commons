@@ -539,7 +539,7 @@
     <string name="color_customization">Personalizzazione del colore</string>
     <string name="customize_colors">Personalizza i colori</string>
     <string name="customize_colors_locked">Personalizza i colori (Locked)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Bloccato</string>
     <string name="customize_widget_colors">Personalizza i colori del widget</string>
     <string name="customize_notifications">Personalizza le notifiche</string>
     <string name="use_english_language">Usa la lingua inglese</string>
@@ -686,10 +686,12 @@
     <string name="more_info">Maggiori informazioni</string>
     <string name="upgrade">Aggiorna</string>
     <string name="upgrade_calendar">Devi migrare a mano gli eventi salvati localmente esportandoli in un file .ics, poi importandoli. Si possono trovare i pulsanti esporta/importa nel menu della schermata principale.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">Ehi,
+\n
+\nsembra che tu abbia già la versione Pro dell\'applicazione. Questa non ti servirà più, puoi disinstallarla.</string>
+    <string name="upgraded_to_pro_calendar">È necessario migrare manualmente gli eventi memorizzati localmente esportandoli in un file .ics e poi importandoli. I pulsanti di esportazione e importazione si trovano nel menu in alto.</string>
+    <string name="upgraded_to_pro_notes">È necessario migrare manualmente le note alla versione Pro.</string>
+    <string name="upgraded_to_pro_contacts">È necessario migrare manualmente i contatti memorizzati privatamente esportandoli in un file .vcf e poi importandoli. I pulsanti di esportazione e importazione si trovano nel menu in alto.</string>
     <!-- About -->
     <string name="about">Informazioni</string>
     <string name="website">Website</string>
@@ -730,7 +732,7 @@
     <string name="before_asking_question_read_faq">Prima di fare una domanda, controlla le impostazioni dell\'app e le domande frequenti. Magari si trova la soluzione.</string>
     <string name="before_rate_read_faq">Prima di valutarci, controlla le impostazioni dell\'app e leggi le domande frequenti. Se riscontri problemi, la soluzione potrebbe trovarsi là.</string>
     <string name="make_sure_latest">Assicurati anche che tu stia usando la versione più recente dell\'app.</string>
-    <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
+    <string name="make_sure_upgrade">Si noti inoltre che questa versione dell\'app non è più in fase di sviluppo; acquistate quella Pro per ottenere molti miglioramenti.</string>
     <string name="read_it">Leggi</string>
     <string name="read_faq">Domande frequenti</string>
     <string name="rate_us_prompt">Ciao,\n\nstai utilizzando questa app da un po\' di tempo e ne siamo veramente grati..\n\nValutaci su Google Play se vuoi farci un favore, ci aiuterà tantissimo.\n\nNon è importante cosa sceglierai, non vedrai più questo messaggio una volta ancora.\n\nGrazie!</string>
@@ -898,7 +900,7 @@
     <string name="why_upgrade_private_contact_sharing">Condivisione opzionale dei contatti privati tra le nostre applicazioni</string>
     <string name="why_upgrade_customizable_contact_ringtones">Suonerie personalizzate per contatto</string>
     <string name="why_upgrade_contact_filtering">Filtro contatti</string>
-    <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
+    <string name="why_upgrade_contact_private_contacts">Contatti memorizzati privatamente</string>
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Liste di controllo</string>
     <string name="why_upgrade_different_note_per_widget">Note e colori diversi per ogni widget</string>
@@ -944,7 +946,7 @@
     <string name="audio_record_view_title">Audio Record View (visualizzazione audio)</string>
     <string name="sms_mms_title">SMS MMS (gestione SMS e MMS)</string>
     <string name="apng_title">APNG Android (supporto WebP animati)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (visualizzatore di PDF)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATA: Questa versione dell\'app non è più supportata, ottieni la versione Pro a https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Non dimenticarti che se disinstalli qualsiasi app a pagamento entro le due ore dall\'acquisto, verrai automaticamente rimborsato. Se vuoi essere rimborsato quando vuoi dopo le due ore, puoi contattarci a hello@simplemobiletools.com. In questo modo puoi facilmente provare l\'app :)</string>
