@@ -423,6 +423,7 @@ fun Context.isThankYouInstalled() = isPackageInstalled("com.simplemobiletools.th
 
 fun Context.isOrWasThankYouInstalled(): Boolean {
     return when {
+        resources.getBoolean(R.bool.pretend_thank_you_installed) -> true
         baseConfig.hadThankYouInstalled -> true
         isThankYouInstalled() -> {
             baseConfig.hadThankYouInstalled = true
