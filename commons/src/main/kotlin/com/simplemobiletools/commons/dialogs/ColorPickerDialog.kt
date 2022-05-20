@@ -169,7 +169,7 @@ class ColorPickerDialog(
         if (recentColors.isNotEmpty()) {
             recent_colors.beVisible()
             val squareSize = context.resources.getDimensionPixelSize(R.dimen.colorpicker_hue_width)
-            recentColors.take(RECENT_COLORS_NUMBER).reversed().forEach { recentColor ->
+            recentColors.take(RECENT_COLORS_NUMBER).forEach { recentColor ->
                 val recentColorView = ImageView(context)
                 recentColorView.id = View.generateViewId()
                 recentColorView.layoutParams = ViewGroup.LayoutParams(squareSize, squareSize)
