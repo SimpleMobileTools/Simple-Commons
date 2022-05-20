@@ -73,7 +73,11 @@ class CustomizationActivity : BaseSimpleActivity() {
                     runOnUiThread {
                         setupThemes()
                         val hideGoogleRelations = resources.getBoolean(R.bool.hide_google_relations)
-                        apply_to_all_holder.beVisibleIf(storedSharedTheme == null && curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && !hideGoogleRelations)
+                        val hideSharedThemeButton = resources.getBoolean(R.bool.hide_shared_theme_button)
+                        apply_to_all_holder.beVisibleIf(
+                            storedSharedTheme == null && curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM
+                                && !hideGoogleRelations && !hideSharedThemeButton
+                        )
                     }
                 } catch (e: Exception) {
                     toast(R.string.update_thank_you)
@@ -94,7 +98,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         updateLabelColors(textColor)
         originalAppIconColor = baseConfig.appIconColor
 
-        if (resources.getBoolean(R.bool.hide_google_relations)) {
+        if (resources.getBoolean(R.bool.hide_google_relations) || resources.getBoolean(R.bool.hide_shared_theme_button)) {
             apply_to_all_holder.beGone()
         }
     }
@@ -222,7 +226,11 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
 
             val hideGoogleRelations = resources.getBoolean(R.bool.hide_google_relations)
-            apply_to_all_holder.beVisibleIf(curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_SHARED && !hideGoogleRelations)
+            val hideSharedThemeButton = resources.getBoolean(R.bool.hide_shared_theme_button)
+            apply_to_all_holder.beVisibleIf(
+                curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_SHARED
+                    && !hideGoogleRelations && !hideSharedThemeButton
+            )
             updateMenuItemColors(menu, true, getCurrentStatusBarColor())
         }
     }
