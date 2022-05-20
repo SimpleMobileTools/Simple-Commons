@@ -73,10 +73,8 @@ class CustomizationActivity : BaseSimpleActivity() {
                     runOnUiThread {
                         setupThemes()
                         val hideGoogleRelations = resources.getBoolean(R.bool.hide_google_relations)
-                        val hideSharedThemeButton = resources.getBoolean(R.bool.hide_shared_theme_button)
                         apply_to_all_holder.beVisibleIf(
-                            storedSharedTheme == null && curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM
-                                && !hideGoogleRelations && !hideSharedThemeButton
+                            storedSharedTheme == null && curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && !hideGoogleRelations
                         )
                     }
                 } catch (e: Exception) {
@@ -98,7 +96,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         updateLabelColors(textColor)
         originalAppIconColor = baseConfig.appIconColor
 
-        if (resources.getBoolean(R.bool.hide_google_relations) || resources.getBoolean(R.bool.hide_shared_theme_button)) {
+        if (resources.getBoolean(R.bool.hide_google_relations)) {
             apply_to_all_holder.beGone()
         }
     }
@@ -226,10 +224,8 @@ class CustomizationActivity : BaseSimpleActivity() {
             }
 
             val hideGoogleRelations = resources.getBoolean(R.bool.hide_google_relations)
-            val hideSharedThemeButton = resources.getBoolean(R.bool.hide_shared_theme_button)
             apply_to_all_holder.beVisibleIf(
-                curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_SHARED
-                    && !hideGoogleRelations && !hideSharedThemeButton
+                curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_SHARED && !hideGoogleRelations
             )
             updateMenuItemColors(menu, true, getCurrentStatusBarColor())
         }
