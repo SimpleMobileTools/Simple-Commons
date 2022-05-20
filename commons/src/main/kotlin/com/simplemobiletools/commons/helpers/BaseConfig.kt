@@ -140,7 +140,7 @@ open class BaseConfig(val context: Context) {
         set(customNavigationBarColor) = prefs.edit().putInt(CUSTOM_NAVIGATION_BAR_COLOR, customNavigationBarColor).apply()
 
     var widgetBgColor: Int
-        get() = prefs.getInt(WIDGET_BG_COLOR, DEFAULT_WIDGET_BG_COLOR)
+        get() = prefs.getInt(WIDGET_BG_COLOR, context.resources.getInteger(R.integer.default_widget_bg_color))
         set(widgetBgColor) = prefs.edit().putInt(WIDGET_BG_COLOR, widgetBgColor).apply()
 
     var widgetTextColor: Int
