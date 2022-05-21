@@ -320,7 +320,10 @@ class CopyMoveTask(
 
     private fun updateLastModifiedValues(source: FileDirItem, destination: FileDirItem) {
         copyOldLastModified(source.path, destination.path)
-        File(destination.path).setLastModified(File(source.path).lastModified())
+        val lastModified = File(source.path).lastModified()
+        if (lastModified != 0L) {
+            File(destination.path).setLastModified(lastModified)
+        }
     }
 
     private fun deleteSourceFile(source: FileDirItem) {

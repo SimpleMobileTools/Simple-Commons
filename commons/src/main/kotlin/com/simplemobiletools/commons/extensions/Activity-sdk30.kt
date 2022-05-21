@@ -38,7 +38,10 @@ fun BaseSimpleActivity.copySingleFileSdk30(source: FileDirItem, destination: Fil
         return if (source.size == copiedSize && getDoesFilePathExist(destination.path)) {
             if (baseConfig.keepLastModified) {
                 copyOldLastModified(source.path, destination.path)
-                File(destination.path).setLastModified(File(source.path).lastModified())
+                val lastModified = File(source.path).lastModified()
+                if (lastModified != 0L) {
+                    File(destination.path).setLastModified(lastModified)
+                }
             }
             true
         } else {
