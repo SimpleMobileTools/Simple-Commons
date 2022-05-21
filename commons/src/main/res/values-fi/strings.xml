@@ -327,7 +327,7 @@
     <string name="last_modified">Viimeksi muokattu</string>
     <string name="date_created">Luontipäivämäärä</string>
     <string name="date_taken">Viimeksi kuvattu</string>
-    <string name="title">Otsikko</string>
+    <string name="title">Nimi</string>
     <string name="filename">Tiedostonimi</string>
     <string name="extension">Tiedostopääte</string>
     <string name="random">Satunnainen</string>
@@ -689,9 +689,9 @@
     <string name="upgraded_to_pro">Hei,
 \n
 \nnäyttää siltä, että sinulla on Pro-versio asennettuna. Et tarvitse tätä versiota enää, voit siis poistaa tämän.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro_calendar">Sinun tulee yhdistää paikallisesti tallennetut tapahtumat manuaalisesti viemällä ensin tapahtumat .ics-tiedostoon ja sen jälkeen tuomalla tapahtumat. Vienti- ja tuontitoiminnot löytyvät ylävalikosta.</string>
+    <string name="upgraded_to_pro_notes">Sinun tulee yhdistää muistiinpanot Pro-versioon manuaalisesti.</string>
+    <string name="upgraded_to_pro_contacts">Sinun tulee yhdistää yksityisesti tallennetut yhteystiedot manuaalisesti viemällä ne ensin .vcf-tiedostoon ja sen jälkeen tuomalla ne. Vienti- ja tuontitoiminnot löytyvät ylävalikosta.</string>
     <!-- About -->
     <string name="about">Tietoa</string>
     <string name="website">Website</string>
@@ -727,12 +727,12 @@
         ]]>
     </string>
     <string name="purchase">Osta</string>
-    <string name="order_simple_phone">Order Simple Phone</string>
+    <string name="order_simple_phone">Tilaa Simple Phone</string>
     <string name="update_thank_you">Päivitä Simple Thank You viimeisimpään versioon</string>
     <string name="before_asking_question_read_faq">Ennen kysymyksen esittämistä varmista, löytyykö vastaus asetuksista tai usein kysytyistä kysymyksistä (Frequently Asked Questions).</string>
     <string name="before_rate_read_faq">Ennen kuin arvostelet sovelluksen ja sinulla on ongelmia sovelluksen kanssa, varmista, löytyykö ratkaisu asetuksista tai usein kysytyistä kysymyksistä (Frequently Asked Questions).</string>
     <string name="make_sure_latest">Varmista myös, että käytät viimeisintä versiota.</string>
-    <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
+    <string name="make_sure_upgrade">Huomioi, että tätä sovellusversiota ei enää kehitetä, hanki Pro-versio parannuksia varten.</string>
     <string name="read_it">Lue</string>
     <string name="read_faq">Lue FAQ</string>
     <string name="rate_us_prompt">Hei,
@@ -895,7 +895,7 @@
     <string name="why_upgrade_private_contact_sharing">Vaihtoehtona sovellustemme välinen kontaktien jako</string>
     <string name="why_upgrade_customizable_contact_ringtones">Mukautetut kontaktien soittoäänet </string>
     <string name="why_upgrade_contact_filtering">Kontaktien suodatus</string>
-    <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
+    <string name="why_upgrade_contact_private_contacts">Yksityisesti tallennetut yhteystiedot</string>
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Tarkistuslistat</string>
     <string name="why_upgrade_different_note_per_widget">Pienoissovelluskohtainen muistiinpano ja värit</string>
