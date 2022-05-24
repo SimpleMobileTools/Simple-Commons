@@ -660,16 +660,34 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 copyMoveCallback = callback
                 var fileCountToCopy = fileDirItems.size
                 if (isCopyOperation) {
-                    startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
+                    if(canManageMedia()){
+                        val fileUris = getFileUrisFromFileDirItems(fileDirItems).second
+                        updateSDK30Uris(fileUris) { sdk30UriSuccess ->
+                            if (sdk30UriSuccess) {
+                                startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
+                            }
+                        }
+                    } else {
+                        startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
+                    }
                 } else {
                     if (isPathOnOTG(source) || isPathOnOTG(destination) || isPathOnSD(source) || isPathOnSD(destination) ||
                         isRestrictedSAFOnlyRoot(source) || isRestrictedSAFOnlyRoot(destination) ||
                         isAccessibleWithSAFSdk30(source) || isAccessibleWithSAFSdk30(destination) ||
                         fileDirItems.first().isDirectory
                     ) {
-                        handleSAFDialog(source) {
-                            if (it) {
-                                startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
+                        handleSAFDialog(source) { safSuccess ->
+                            if (safSuccess) {
+                                if(canManageMedia()){
+                                    val fileUris = getFileUrisFromFileDirItems(fileDirItems).second
+                                    updateSDK30Uris(fileUris) { sdk30UriSuccess ->
+                                        if (sdk30UriSuccess) {
+                                            startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
+                                        }
+                                    }
+                                } else {
+                                    startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
+                                }
                             }
                         }
                     } else {

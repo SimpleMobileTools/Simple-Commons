@@ -12,10 +12,7 @@ import androidx.documentfile.provider.DocumentFile
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.CONFLICT_KEEP_BOTH
-import com.simplemobiletools.commons.helpers.CONFLICT_SKIP
-import com.simplemobiletools.commons.helpers.getConflictResolution
-import com.simplemobiletools.commons.helpers.isOreoPlus
+import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.interfaces.CopyMoveListener
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
@@ -277,33 +274,16 @@ class CopyMoveTask(
                 if (copyOnly) {
                     activity.rescanPath(destination.path) {
                         if (activity.baseConfig.keepLastModified) {
-                            if (activity.canManageMedia()) {
-                                val fileUris = activity.getFileUrisFromFileDirItems(arrayListOf(destination)).second
-                                activity.updateSDK30Uris(fileUris) {
-                                    updateLastModifiedValues(source, destination)
-                                    activity.rescanPath(destination.path)
-                                }
-                            } else {
-                                updateLastModifiedValues(source, destination)
-                            }
+                            updateLastModifiedValues(source, destination)
+                            activity.rescanPath(destination.path)
                         }
                     }
                 } else if (activity.baseConfig.keepLastModified) {
-                    if (activity.canManageMedia()) {
-                        val fileUris = activity.getFileUrisFromFileDirItems(arrayListOf(destination)).second
-                        activity.updateSDK30Uris(fileUris) {
-                            updateLastModifiedValues(source, destination)
-                            activity.rescanPath(destination.path)
-                            inputStream.close()
-                            out?.close()
-                            deleteSourceFile(source)
-                        }
-                    } else {
-                        updateLastModifiedValues(source, destination)
-                        inputStream.close()
-                        out?.close()
-                        deleteSourceFile(source)
-                    }
+                    updateLastModifiedValues(source, destination)
+                    activity.rescanPath(destination.path)
+                    inputStream.close()
+                    out?.close()
+                    deleteSourceFile(source)
                 } else {
                     inputStream.close()
                     out?.close()
