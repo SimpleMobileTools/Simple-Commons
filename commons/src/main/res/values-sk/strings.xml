@@ -1048,6 +1048,7 @@
     <string name="sms_mms_title">SMS MMS (spravovanie SMS a MMS)</string>
     <string name="apng_title">APNG Android (podpora pre animované WebP súbory)</string>
     <string name="pdf_viewer_title">Android PdfViewer (Prehliadač PDF)</string>
+    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
 
     <!-- Google Play listing -->
     <string name="deprecated_app">ZASTARALÁ: Táto verzia aplikácie už nie je podporovaná. Stiahnite si Pro verziu na https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
@@ -1055,5 +1056,4 @@
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Skupina jednoduchých, open source Android apiek s nastaviteľnými widgetmi, bez reklám a nepotrebných oprávnení.</string>
-    <string name="m3u_parser_title">M3U Parser</string>
 </resources>
