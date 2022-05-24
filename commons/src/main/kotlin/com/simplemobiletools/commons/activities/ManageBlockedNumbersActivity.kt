@@ -37,6 +37,13 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         updateTextColors(manage_blocked_numbers_wrapper)
         updatePlaceholderTexts()
 
+        block_unknown.apply {
+            isChecked = baseConfig.blockUnknownNumbers
+            setOnCheckedChangeListener { _, isChecked ->
+                baseConfig.blockUnknownNumbers = isChecked
+            }
+        }
+
         manage_blocked_numbers_placeholder_2.apply {
             underlineText()
             setTextColor(getProperPrimaryColor())

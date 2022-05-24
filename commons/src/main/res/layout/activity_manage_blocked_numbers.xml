@@ -1,43 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/manage_blocked_numbers_wrapper"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
+
+    <com.simplemobiletools.commons.views.MySwitchCompat
+        android:id="@+id/block_unknown"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_margin"
+        android:text="@string/block_unknown_calls"
+        android:textSize="@dimen/bigger_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.simplemobiletools.commons.views.MyRecyclerView
         android:id="@+id/manage_blocked_numbers_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:clipToPadding="false"
         android:scrollbars="vertical"
-        app:layoutManager="com.simplemobiletools.commons.views.MyLinearLayoutManager" />
+        app:layoutManager="com.simplemobiletools.commons.views.MyLinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/block_unknown"
+        tools:listitem="@layout/item_manage_blocked_number" />
 
     <com.simplemobiletools.commons.views.MyTextView
         android:id="@+id/manage_blocked_numbers_placeholder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
         android:alpha="0.8"
+        android:gravity="center_horizontal"
         android:paddingStart="@dimen/activity_margin"
         android:paddingTop="@dimen/activity_margin"
         android:paddingEnd="@dimen/activity_margin"
         android:text="@string/not_blocking_anyone"
         android:textSize="@dimen/bigger_text_size"
         android:textStyle="italic"
-        android:visibility="gone" />
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/block_unknown" />
 
     <com.simplemobiletools.commons.views.MyTextView
         android:id="@+id/manage_blocked_numbers_placeholder_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/manage_blocked_numbers_placeholder"
-        android:layout_centerHorizontal="true"
         android:background="?attr/selectableItemBackground"
         android:gravity="center"
         android:padding="@dimen/activity_margin"
         android:text="@string/add_a_blocked_number"
         android:textSize="@dimen/bigger_text_size"
-        android:visibility="gone" />
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/manage_blocked_numbers_placeholder" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
