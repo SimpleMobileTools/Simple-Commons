@@ -87,8 +87,8 @@
     <string name="must_make_default_dialer">Щоб використовувати функцію блокування номерів, вам необхідно встановити цей додаток як стандартний для роботи з контактами.</string>
     <string name="set_as_default">Встановити додаток як стандартний</string>
     <string name="block_confirmation">Ви впевнені що хочете заблокувати \"%s\"?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_unknown_calls">Блокувати дзвінки від не збережених контактів</string>
+    <string name="block_unknown_messages">Блокувати повідомлення від не збережених контактів</string>
     <!-- Favorites -->
     <string name="favorites">Улюблене</string>
     <string name="add_favorites">Додати улюблене</string>
@@ -1013,7 +1013,7 @@
     <string name="sms_mms_title">SMS MMS (обробка SMS та MMS)</string>
     <string name="apng_title">APNG Android (підтримка анімацій WebP)</string>
     <string name="pdf_viewer_title">Android PdfViewer (переглядач PDF)</string>
-    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
+    <string name="m3u_parser_title">M3U Парсер (обробка m3u-файлів списків відтворення)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">Застаріла: Ця версія додатка більше не підтримується, встановіть версію Pro за адресою https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Пам\'ятайте: якщо ви видалите будь-який платний додаток протягом 2 годин, вам буде автоматично повернена сума покупки. Якщо ви захочете повернути гроші пізніше, сконтактуйте з нами за адресою hello@simplemobiletools.com, і ви їх отримаєте. Таким чином ви можете легко спробувати додаток :)</string>
