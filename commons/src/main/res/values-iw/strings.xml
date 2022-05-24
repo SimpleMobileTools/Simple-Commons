@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ok">אישור</string>
     <string name="cancel">ביטול</string>
-    <string name="nothing">Nothing</string>
-    <string name="later">Later</string>
+    <string name="nothing">שום דבר</string>
+    <string name="later">מאוחר</string>
     <string name="save_as">שמירה בשם</string>
     <string name="file_saved">קובץ נשמר</string>
     <string name="invalid_file_format">פורמט קובץ שגוי</string>
@@ -11,14 +12,14 @@
     <string name="error">Error: %s</string>
     <string name="open_with">פתיחה באמצעות</string>
     <string name="edit_with">עריכה באמצעות</string>
-    <string name="edit">Edit</string>
+    <string name="edit">לערוך</string>
     <string name="no_app_found">לא נמצאה אפליקציה מתאימה</string>
     <string name="set_as">קבע כ</string>
     <string name="copy_to_clipboard">העתקה לקליפבורד</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
+    <string name="copy_number_to_clipboard">העתק את המספר ללוח</string>
     <string name="value_copied_to_clipboard">הועתק לקליפבורד</string>
     <string name="value_copied_to_clipboard_show">הועתק לקליפבורד:\n%s</string>
-    <string name="dial_number">Dial number</string>
+    <string name="dial_number">חייג מספר</string>
     <string name="unknown">לא ידוע</string>
     <string name="always">תמיד</string>
     <string name="never">לעולם לא</string>
@@ -55,11 +56,9 @@
     <string name="eight">Eight</string>
     <string name="nine">Nine</string>
     <string name="value_cannot_be_empty">Value cannot be empty</string>
-
     <!-- Emails -->
     <string name="home">Home</string>
     <string name="work">Work</string>
-
     <!-- Phone numbers -->
     <string name="mobile">Mobile</string>
     <string name="main_number">Main</string>
@@ -67,7 +66,6 @@
     <string name="home_fax">Home Fax</string>
     <string name="pager">Pager</string>
     <string name="no_phone_number_found">No phone number has been found</string>
-
     <!-- View types -->
     <string name="change_view_type">Change view type</string>
     <string name="grid">Grid</string>
@@ -77,7 +75,6 @@
     <string name="reduce_column_count">Reduce column count</string>
     <string name="change_cover_image">Change cover image</string>
     <string name="select_photo">Select photo</string>
-
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">ניהול מספרים חסומים</string>
     <string name="not_blocking_anyone">אין חסימות</string>
@@ -90,28 +87,23 @@
     <string name="must_make_default_dialer">נדרש לבחור את האפליקצייה כברירת מחדל בכדי לחסום מספרים.</string>
     <string name="set_as_default">קבע כברירת מחדל</string>
     <string name="block_confirmation">האם לחסום את \"%s\"?</string>
-
     <!-- Favorites -->
     <string name="favorites">מועדפים</string>
     <string name="add_favorites">הוספה למועדפים</string>
     <string name="add_to_favorites">הוסף למועדפים</string>
     <string name="remove_from_favorites">הסרה ממועדפים</string>
-
     <!-- Search -->
     <string name="search">חיפוש</string>
     <string name="type_2_characters">הקלד/י לפחות 2 תווים כדי להתחיל חיפוש</string>
-
     <!-- Filters -->
     <string name="filter">סינון</string>
     <string name="no_items_found">לא נמצאו פריטים.</string>
     <string name="change_filter">שינוי סינון</string>
-
     <!-- Permissions -->
     <string name="no_storage_permissions">נדרשים הרשאות אחסון</string>
     <string name="no_contacts_permission">נדרשים הרשאות אנשי קשר</string>
     <string name="no_camera_permissions">נדרשים הרשאות מצלמה</string>
     <string name="no_audio_permissions">נדרשים הרשאות אודיו</string>
-
     <!-- Renaming -->
     <string name="rename_file">שנה שם קובץ</string>
     <string name="rename_folder">שנה שם תיקייה</string>
@@ -136,7 +128,6 @@
     <string name="filename_without_txt">Filename (without .txt)</string>
     <string name="filename_without_json">Filename (without .json)</string>
     <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
-
     <!-- Copy / Move -->
     <string name="copy">העתק</string>
     <string name="move">העבר</string>
@@ -167,7 +158,6 @@
     <string name="no_new_items">לא נמצאו פריטים חדשים</string>
     <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
     <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
-
     <!-- Create new -->
     <string name="create_new">צור חדש</string>
     <string name="folder">תיקיה</string>
@@ -177,7 +167,6 @@
     <string name="invalid_name">השם מכיל תווים לא חוקיים</string>
     <string name="empty_name">נא להכניס שם</string>
     <string name="unknown_error_occurred">שגיאה לא ידועה אירעה</string>
-
     <!-- File operation conflicts -->
     <string name="file_already_exists">הקובץ \"%s\" כבר קיים</string>
     <string name="file_already_exists_overwrite">הקובץ \"%s\" כבר קיים. לדרוס?</string>
@@ -191,7 +180,6 @@
     <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
     <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
     <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
-
     <!-- File picker -->
     <string name="select_folder">בחר/י תיקייה</string>
     <string name="select_file">בחר/י קובץ</string>
@@ -205,29 +193,24 @@
     <string name="confirm_selection">אישור בחירה</string>
     <string name="loading">Loading…</string>
     <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
-
     <plurals name="items">
         <item quantity="one">%d item</item>
         <item quantity="other">%d items</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d item</item>
         <item quantity="other">%d items</item>
     </plurals>
-
     <plurals name="deleting_items">
         <item quantity="one">Deleting %d item</item>
         <item quantity="other">Deleting %d items</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d contact</item>
         <item quantity="other">%d contacts</item>
     </plurals>
-
     <!-- Storages -->
     <string name="select_storage">בחירת אחסון</string>
     <string name="internal">פנימי</string>
@@ -238,7 +221,6 @@
     <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
         It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
     <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
-
     <!-- File properties -->
     <string name="properties">מאפיינים</string>
     <string name="path">נתיב</string>
@@ -261,7 +243,6 @@
     <string name="remove_exif">Remove EXIF</string>
     <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
     <string name="exif_removed">EXIF values removed successfully</string>
-
     <!-- Color customization -->
     <string name="background_color">Background color</string>
     <string name="text_color">צבע טקסט</string>
@@ -292,7 +273,6 @@
             Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
         ]]>
     </string>
-
     <!-- Themes -->
     <string name="light_theme">בהיר</string>
     <string name="dark_theme">כהה</string>
@@ -305,11 +285,9 @@
     <string name="custom">מותאם אישית</string>
     <string name="shared">משותף</string>
     <string name="system_default">System default</string>
-
     <!-- What's new -->
     <string name="whats_new">מה חדש</string>
     <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
-
     <!-- Actionbar items -->
     <string name="delete">מחק</string>
     <string name="remove">הסר</string>
@@ -342,7 +320,6 @@
     <string name="send_sms">Send SMS</string>
     <string name="send_email">Send email</string>
     <string name="call">Call</string>
-
     <!-- Sorting -->
     <string name="sort_by">מיין לפי</string>
     <string name="name">שם</string>
@@ -365,11 +342,12 @@
     <string name="full_name">שם מלא</string>
     <string name="use_custom_sorting">Use custom sorting</string>
     <string name="change_order">Change order</string>
-
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">להמשיך במחיקה?</string>
-    <string name="deletion_confirmation">האם למחוק את %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">האם להעביר את %s לסל המחזור?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">האם למחוק את %s?</string>
+    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">האם להעביר את %s לסל המחזור?</string>
+    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">האם למחוק פריט זה?</string>
     <string name="are_you_sure_recycle_bin">האם להעביר פריט זה לסל המחזור?</string>
     <string name="do_not_ask_again">Do not ask again in this session</string>
@@ -377,12 +355,10 @@
     <string name="yes">כן</string>
     <string name="no">לא</string>
     <string name="maybe">אולי</string>
-
     <plurals name="delete_warning">
         <item quantity="one">WARNING: You are deleting %d folder</item>
         <item quantity="other">WARNING: You are deleting %d folders</item>
     </plurals>
-
     <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">הכנס PIN</string>
@@ -408,7 +384,6 @@
     <string name="lock_folder">נעל תיקייה</string>
     <string name="unlock_folder">בטל נעילת תיקייה</string>
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
-
     <!-- Times -->
     <string name="yesterday">אתמול</string>
     <string name="today">היום</string>
@@ -422,7 +397,6 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
-
     <plurals name="seconds">
         <item quantity="one">%d second</item>
         <item quantity="other">%d seconds</item>
@@ -451,7 +425,6 @@
         <item quantity="one">%d year</item>
         <item quantity="other">%d years</item>
     </plurals>
-
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d second</item>
@@ -481,7 +454,6 @@
         <item quantity="one">%d year</item>
         <item quantity="other">%d years</item>
     </plurals>
-
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d second before</item>
@@ -511,7 +483,6 @@
         <item quantity="one">%d year before</item>
         <item quantity="other">%d years before</item>
     </plurals>
-
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d second</item>
@@ -541,7 +512,6 @@
         <item quantity="one">%d year</item>
         <item quantity="other">%d years</item>
     </plurals>
-
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
     <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
@@ -549,7 +519,6 @@
     <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
     <string name="reminder_warning">Please make sure the reminders work properly before relying on them. Check your device battery and notification settings, if there is nothing blocking the reminders, or killing the app in the background.</string>
     <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
-
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
     <string name="snooze">Snooze</string>
@@ -562,7 +531,6 @@
     <string name="no_sound">No sound</string>
     <string name="during_day_at_hh_mm">During the day at hh:mm</string>
     <string name="during_day_at">During the day at %02d:%02d</string>
-
     <!-- Settings -->
     <string name="settings">הגדרות</string>
     <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
@@ -595,7 +563,7 @@
     <string name="widgets">יישומונים</string>
     <string name="use_same_snooze">Always use same snooze time</string>
     <string name="snooze_time">Snooze time</string>
-    <string name="vibrate_on_button_press">רטט בלחיצה על כפתור</string>
+    <string name="vibrate_on_button_press">רטט בעת לחיצה</string>
     <string name="move_items_into_recycle_bin">העבר לסל המחזור במקום מחיקה</string>
     <string name="recycle_bin_cleaning_interval">זמן ריקון של סל המחזור</string>
     <string name="empty_recycle_bin">רוקן את סל המחזור</string>
@@ -607,7 +575,6 @@
     <string name="start_name_with_surname">התחל שם בשם משפחה</string>
     <string name="clear_cache">Clear cache</string>
     <string name="show_call_confirmation_dialog">Show a call confirmation dialog before initiating a call</string>
-
     <!-- Setting sections -->
     <string name="visibility">נראות</string>
     <string name="security">אבטחה</string>
@@ -622,7 +589,6 @@
     <string name="main_screen">Main screen</string>
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
-
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Manage shown tabs</string>
     <string name="default_tab_to_open">טאב בפתיחת האפליקצייה</string>
@@ -633,7 +599,6 @@
     <string name="last_used_tab">בשימוש לאחרונה</string>
     <string name="files_tab">Files</string>
     <string name="recent_files_tab">Recent files</string>
-
     <!-- Recycle Bin -->
     <string name="restore_this_file">שחזר קובץ זה</string>
     <string name="restore_selected_files">שחזר קבצים נבחרים</string>
@@ -645,12 +610,10 @@
     <string name="moving_recycle_bin_items_disabled">העברה של פריטי סל המחזור מבוטלת. נא להשתמש בשחזור</string>
     <string name="show_the_recycle_bin">הצג את סל המחזור</string>
     <string name="hide_the_recycle_bin">הסתר את סל המחזור</string>
-
     <plurals name="moving_items_into_bin">
         <item quantity="one">Moving %d item into the Recycle Bin</item>
         <item quantity="other">Moving %d items into the Recycle Bin</item>
     </plurals>
-
     <!-- Import / Export -->
     <string name="importing">מייבא...</string>
     <string name="exporting">מייצא...</string>
@@ -663,13 +626,11 @@
     <string name="no_entries_for_importing">לא נמצאו רשומות לייבוא</string>
     <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
     <string name="no_entries_for_exporting">לא נמצאו רשומות לייצוא</string>
-
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
     <string name="confirm_usb_storage_access_text">Please choose the top folder of the USB device on the next screen, to grant access</string>
     <string name="wrong_root_selected_usb">Wrong folder selected, please select the main folder of your USB device</string>
-
     <!-- Dates -->
     <string name="january">ינואר</string>
     <string name="february">פברואר</string>
@@ -683,7 +644,6 @@
     <string name="october">אוקטובר</string>
     <string name="november">נובמבר</string>
     <string name="december">דצמבר</string>
-
     <!-- in January -->
     <string name="in_january">בינואר</string>
     <string name="in_february">בפברואר</string>
@@ -697,7 +657,6 @@
     <string name="in_october">באוקטובר</string>
     <string name="in_november">בנובמבר</string>
     <string name="in_december">בדצמבר</string>
-
     <string name="monday">שני</string>
     <string name="tuesday">שלישי</string>
     <string name="wednesday">רביעי</string>
@@ -705,7 +664,6 @@
     <string name="friday">שישי</string>
     <string name="saturday">שבת</string>
     <string name="sunday">ראשון</string>
-
     <string name="monday_letter">ב\'</string>
     <string name="tuesday_letter">ג\'</string>
     <string name="wednesday_letter">ד\'</string>
@@ -713,7 +671,6 @@
     <string name="friday_letter">ו\'</string>
     <string name="saturday_letter">ש\'</string>
     <string name="sunday_letter">א\'</string>
-
     <string name="monday_short">ב\'</string>
     <string name="tuesday_short">ג\'</string>
     <string name="wednesday_short">ד\'</string>
@@ -721,7 +678,6 @@
     <string name="friday_short">ו\'</string>
     <string name="saturday_short">ז\'</string>
     <string name="sunday_short">א\'</string>
-
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
     <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
@@ -733,7 +689,6 @@
     <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
     <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
     <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
-
     <!-- About -->
     <string name="about">אודות</string>
     <string name="website">Website</string>
@@ -757,7 +712,7 @@
     <string name="privacy_policy">Privacy policy</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="about_footer">Made with ❤️ in Slovakia</string>
     <string name="additional_info">מידע נוסף</string>
     <string name="app_version">App version: %s</string>
     <string name="device_os">Device OS: %s</string>
@@ -786,7 +741,6 @@
             The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
         ]]>
     </string>
-
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -799,7 +753,6 @@
             Thanks
         ]]>
     </string>
-
     <string name="simple_app_launcher">Simple App Launcher</string>
     <string name="simple_calculator">Simple Calculator</string>
     <string name="simple_calendar">Simple Calendar</string>
@@ -817,7 +770,6 @@
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
-
     <string name="app_launcher_short">App Launcher</string>
     <string name="calculator_short">מחשבון</string>
     <string name="calendar_short">יומן</string>
@@ -835,13 +787,11 @@
     <string name="sms_messenger_short">הודעות SMS</string>
     <string name="thank_you_short">Thank You</string>
     <string name="voice_recorder_short">רשמקול</string>
-
     <string name="sideloaded_app">
         <![CDATA[
             It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
         ]]>
     </string>
-
     <!-- FAQ -->
     <string name="frequently_asked_questions">Frequently asked questions</string>
     <string name="before_asking_question">Before you ask a question, please first read the</string>
@@ -876,7 +826,6 @@
         want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
     <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
     <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
-
     <!-- Contributors -->
     <string name="contributors">Contributors</string>
     <string name="translation">Translation</string>
@@ -889,7 +838,6 @@
             Thanks to all contributors and other supporters!
         ]]>
     </string>
-
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -934,7 +882,6 @@
     <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
     <string name="translation_chinese_cn">Chinese (Simplified)</string>
     <string name="translation_chinese_tw">Chinese (Traditional)</string>
-
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Get the Pro version now!</string>
     <string name="why_upgrade_basic_version">Basic</string>
@@ -943,20 +890,17 @@
     <string name="why_upgrade_no_internet_access">No internet access</string>
     <string name="why_upgrade_footer">+ 100% Money Back Guarantee</string>
     <string name="why_upgrade_improved_design">Improved design</string>
-
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
     <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
     <string name="why_upgrade_folder_locking">Individual folder locking</string>
     <string name="why_upgrade_printing_support">Printing support</string>
-
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Time zone support</string>
     <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
     <string name="why_upgrade_easy_event_importing">Easy event importing</string>
     <string name="why_upgrade_new_widgets">New widgets</string>
-
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
     <string name="why_upgrade_font_size_customization">Font size customization</string>
@@ -964,23 +908,19 @@
     <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
     <string name="why_upgrade_contact_filtering">Contact filtering</string>
     <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
-
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Checklists</string>
     <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
     <string name="why_upgrade_note_locking">Note locking</string>
-
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
     <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
     <string name="why_upgrade_file_compression">File compression support</string>
     <string name="why_upgrade_recents_tab">Tab with recent files</string>
-
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Background color customization</string>
     <string name="why_upgrade_file_importing">File importing support</string>
     <string name="why_upgrade_zooming">Zooming</string>
-
     <!-- License -->
     <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
     <string name="third_party_licences">Third party licences</string>
@@ -1015,11 +955,9 @@
     <string name="apng_title">APNG Android (animated WebP support)</string>
     <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
-
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
-
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
 </resources>
