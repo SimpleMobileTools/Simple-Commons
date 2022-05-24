@@ -87,6 +87,8 @@
     <string name="must_make_default_dialer">Cal fer que aquesta aplicació sigui l\'aplicació predeterminada de marcatge per utilitzar els números bloquejats.</string>
     <string name="set_as_default">Estableix com a predeterminada</string>
     <string name="block_confirmation">Segur que voleu bloquejar «%s»\?</string>
+    <string name="block_unknown_calls">Block calls from not stored contacts</string>
+    <string name="block_unknown_messages">Block messages from not stored contacts</string>
     <!-- Favorites -->
     <string name="favorites">Preferits</string>
     <string name="add_favorites">Afegeix preferits</string>

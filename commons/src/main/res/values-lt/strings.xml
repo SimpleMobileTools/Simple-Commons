@@ -87,6 +87,8 @@
     <string name="must_make_default_dialer">Norėdami blokuoti numerius, turite nustatyti šią programėlę kaip numatytąją numerių rinkimo programėlę.</string>
     <string name="set_as_default">Nustatyti kaip numatytąją</string>
     <string name="block_confirmation">Ar tikrai norite užblokuoti „%s“\?</string>
+    <string name="block_unknown_calls">Block calls from not stored contacts</string>
+    <string name="block_unknown_messages">Block messages from not stored contacts</string>
     <!-- Favorites -->
     <string name="favorites">Mėgstami</string>
     <string name="add_favorites">Pridėti mėgstamus</string>

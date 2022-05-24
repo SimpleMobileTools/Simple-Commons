@@ -89,6 +89,8 @@
     <string name="must_make_default_dialer">Rhaid gwneud yr ap hwn yr ap deialu rhagosodedig er mwyn defnyddio rhifau wedi\'u rhwystro.</string>
     <string name="set_as_default">Defnyddio fel y rhagosodedig</string>
     <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
+    <string name="block_unknown_calls">Block calls from not stored contacts</string>
+    <string name="block_unknown_messages">Block messages from not stored contacts</string>
 
     <!-- Favorites -->
     <string name="favorites">Ffefrynnau</string>

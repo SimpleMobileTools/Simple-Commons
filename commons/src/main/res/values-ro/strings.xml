@@ -87,6 +87,8 @@
     <string name="must_make_default_dialer">Trebuie să setaţi aceasta aplicaţie ca aplicaţie implicită de apelare pentru a putea beneficia de funcţia de blocare de numere.</string>
     <string name="set_as_default">Setează ca implicit</string>
     <string name="block_confirmation">Eşti sigur că vrei să îl blochezi pe \"%s\"?</string>
+    <string name="block_unknown_calls">Block calls from not stored contacts</string>
+    <string name="block_unknown_messages">Block messages from not stored contacts</string>
     <!-- Favorites -->
     <string name="favorites">Favorite</string>
     <string name="add_favorites">Adaugă favorite</string>

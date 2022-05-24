@@ -87,6 +87,8 @@
     <string name="must_make_default_dialer">Pro použití blokování čísel musíte nastavit aplikaci jako výchozí pro správu hovorů.</string>
     <string name="set_as_default">Nastavit jako výchozí</string>
     <string name="block_confirmation">Jste si jistý, že chcete zablokovat \"%s\"?</string>
+    <string name="block_unknown_calls">Block calls from not stored contacts</string>
+    <string name="block_unknown_messages">Block messages from not stored contacts</string>
     <!-- Favorites -->
     <string name="favorites">Oblíbené</string>
     <string name="add_favorites">Přidat oblíbené</string>

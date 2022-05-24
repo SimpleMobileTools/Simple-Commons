@@ -87,6 +87,8 @@
     <string name="must_make_default_dialer">தடுக்கப்பட்ட எண்களைப் பயன்படுத்த இப்பயன்பாட்டை இயல்புநிலை டயலர் பயன்பாடாக மாற்ற வேண்டும்.</string>
     <string name="set_as_default">இயல்புநிலையாக அமை</string>
     <string name="block_confirmation">\"%s\" ஐத் தடுக்க விரும்புகிறீர்களா?</string>
+    <string name="block_unknown_calls">Block calls from not stored contacts</string>
+    <string name="block_unknown_messages">Block messages from not stored contacts</string>
     <!-- Favorites -->
     <string name="favorites">பிடித்தவை</string>
     <string name="add_favorites">பிடித்தவற்றைச் சேர்</string>

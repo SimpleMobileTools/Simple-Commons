@@ -87,6 +87,8 @@
     <string name="must_make_default_dialer">È necessario impostare quest\'app come predefinita per utilizzare i numeri bloccati.</string>
     <string name="set_as_default">Imposta come predefinita</string>
     <string name="block_confirmation">Sei sicuro di volere bloccare \"%s\"?</string>
+    <string name="block_unknown_calls">Block calls from not stored contacts</string>
+    <string name="block_unknown_messages">Block messages from not stored contacts</string>
     <!-- Favorites -->
     <string name="favorites">Preferiti</string>
     <string name="add_favorites">Aggiungi preferiti</string>

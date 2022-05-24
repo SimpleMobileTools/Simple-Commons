@@ -87,6 +87,8 @@
     <string name="must_make_default_dialer">Van deze app de standaard telefoon-app maken om nummers te kunnen blokkeren.</string>
     <string name="set_as_default">Als standaard instellen</string>
     <string name="block_confirmation">Nummer \"%s\" blokkeren\?</string>
+    <string name="block_unknown_calls">Block calls from not stored contacts</string>
+    <string name="block_unknown_messages">Block messages from not stored contacts</string>
     <!-- Favorites -->
     <string name="favorites">Favorieten</string>
     <string name="add_favorites">Favorieten toevoegen</string>

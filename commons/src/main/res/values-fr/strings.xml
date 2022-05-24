@@ -87,6 +87,8 @@
     <string name="must_make_default_dialer">Cette application doit être l\'application de numérotation par défaut pour utiliser les numéros bloqués.</string>
     <string name="set_as_default">Définir par défaut</string>
     <string name="block_confirmation">Voulez-vous vraiment bloquer \"%s\" ?</string>
+    <string name="block_unknown_calls">Block calls from not stored contacts</string>
+    <string name="block_unknown_messages">Block messages from not stored contacts</string>
     <!-- Favorites -->
     <string name="favorites">Favoris</string>
     <string name="add_favorites">Ajouter des favoris</string>

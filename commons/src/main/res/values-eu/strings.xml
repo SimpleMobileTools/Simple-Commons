@@ -88,6 +88,8 @@
     <string name="must_make_default_dialer">Blokeatutako zenbakiak erabiltzeko aplikazio honek markatzaile-aplikazio lehenetsia izan behar du.</string>
     <string name="set_as_default">Ezarri lehenetsi gisa</string>
     <string name="block_confirmation">Ziur zaude \"%s\" blokeatu nahi duzula?</string>
+    <string name="block_unknown_calls">Block calls from not stored contacts</string>
+    <string name="block_unknown_messages">Block messages from not stored contacts</string>
 
     <!-- Favorites -->
     <string name="favorites">Gogokoak</string>
