@@ -38,7 +38,10 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         updatePlaceholderTexts()
 
         block_unknown.apply {
-            setText(if (baseConfig.appId.startsWith("com.simplemobiletools.dialer")) R.string.block_unknown_calls else R.string.block_unknown_messages)
+            setText(if (baseConfig.appId.startsWith("com.simplemobiletools.dialer"))
+                R.string.block_unknown_calls
+            else
+                R.string.block_unknown_messages)
             isChecked = baseConfig.blockUnknownNumbers
             setOnCheckedChangeListener { _, isChecked ->
                 baseConfig.blockUnknownNumbers = isChecked
