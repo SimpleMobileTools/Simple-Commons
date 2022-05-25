@@ -87,8 +87,8 @@
     <string name="must_make_default_dialer">Musisz ustawić tę aplikację jako domyślną aplikację telefonu, aby móc korzystać z funkcji blokowania numerów.</string>
     <string name="set_as_default">Ustaw jako domyślną</string>
     <string name="block_confirmation">Czy zablokować „%s”\?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_unknown_calls">Blokuj połączenia od niezapisanych kontaktów</string>
+    <string name="block_unknown_messages">Blokuj wiadomości od niezapisanych kontaktów</string>
     <!-- Favorites -->
     <string name="favorites">Ulubione</string>
     <string name="add_favorites">Dodaj ulubione</string>
@@ -977,7 +977,7 @@
     <string name="sms_mms_title">SMS MMS (obsługa SMS-ów i MMS-ów)</string>
     <string name="apng_title">APNG Android (obsługa animowanych WebP)</string>
     <string name="pdf_viewer_title">Android PdfViewer (czytnik PDF)</string>
-    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
+    <string name="m3u_parser_title">M3U Parser (obsługa plików playlist M3U)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">PRZESTARZAŁA: Ta wersja aplikacji nie jest już utrzymywana. Pobierz wersję Pro z https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Pamiętaj, że jeśli odinstalujesz którąkolwiek z płatnych aplikacji w ciągu 2 godzin, automatycznie otrzymasz zwrot pieniędzy. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie później, wystarczy skontaktować się z nami na hello@simplemobiletools.com, a otrzymasz go. To sprawia, że aplikacje są łatwe do wypróbowania :)</string>

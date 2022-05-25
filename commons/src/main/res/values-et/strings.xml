@@ -87,8 +87,8 @@
     <string name="must_make_default_dialer">Kui soovid kasutada blokeeritud telefoninumbrite funktsionaalsust, siis peab see rakendus olema vaikimisi telefonirakendus.</string>
     <string name="set_as_default">Set as default</string>
     <string name="block_confirmation">Kas sa oled kindel, et soovid blokeerida „%s“ telefoninumbrit\?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_unknown_calls">Blokeeri kõned, kui helistaja pole aadressiraamatus</string>
+    <string name="block_unknown_messages">Blokeeri sõnumid, kui saatja pole aadressiraamatus</string>
     <!-- Favorites -->
     <string name="favorites">Lemmikud</string>
     <string name="add_favorites">Lisa lemmikuks</string>
@@ -186,8 +186,8 @@
     <string name="append">Lisa nimele _1</string>
     <string name="apply_to_all">Kohalda kõigile</string>
     <string name="system_folder_restriction">Selles kaustas pole toimingud lubatud, palun vali mõni muu kaust</string>
-    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
-    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
+    <string name="system_folder_copy_restriction">Süsteem ei võimalda sellesse kausta kopeerida, palun vali mõni muu kaust</string>
+    <string name="rename_in_sd_card_system_restriction">Süsteem ei võimalda selle kausta nime muuta</string>
     <!-- File picker -->
     <string name="select_folder">Vali kaust</string>
     <string name="select_file">Vali fail</string>
@@ -391,7 +391,7 @@
     <string name="yesterday">Eile</string>
     <string name="today">Täna</string>
     <string name="tomorrow">Homme</string>
-    <string name="every_day">Every day</string>
+    <string name="every_day">Iga päev</string>
     <string name="hide_year">Peida aasta</string>
     <string name="seconds_raw">sekundit</string>
     <string name="minutes_raw">minutes</string>
@@ -542,7 +542,7 @@
     <string name="color_customization">Värvide kohendamine</string>
     <string name="customize_colors">Muuda rakenduse värve</string>
     <string name="customize_colors_locked">Muuda rakenduse värve (Lukustatud)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Lukus</string>
     <string name="customize_widget_colors">Muuda vidina värve</string>
     <string name="customize_notifications">Kohenda teavitusi</string>
     <string name="use_english_language">Kasuta inglise keelt</string>
@@ -727,9 +727,9 @@
             Thank you!
         ]]>
     </string>
-    <string name="purchase">Purchase</string>
-    <string name="order_simple_phone">Order Simple Phone</string>
-    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
+    <string name="purchase">Osta</string>
+    <string name="order_simple_phone">Telli rakendus Lihtne telefon</string>
+    <string name="update_thank_you">Palun uuenda raklendus Lihtne tänuavaldus viimase versioonini</string>
     <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
     <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
     <string name="make_sure_latest">Lisaks palun kontrolli, et kasutad rakenduse viimast versiooni.</string>
@@ -864,7 +864,7 @@
     <string name="translation_chinese_cn">Chinese (Simplified)</string>
     <string name="translation_chinese_tw">Chinese (Traditional)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
-    <string name="why_upgrade">Get the Pro version now!</string>
+    <string name="why_upgrade">Osta Pro-versioon nüüd!</string>
     <string name="why_upgrade_basic_version">Basic</string>
     <string name="why_upgrade_pro_version">Pro</string>
     <string name="why_upgrade_no_ads">No ads</string>

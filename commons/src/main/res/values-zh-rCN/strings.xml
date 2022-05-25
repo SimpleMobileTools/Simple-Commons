@@ -87,8 +87,8 @@
     <string name="must_make_default_dialer">您必须将这应用程序设为默认的拨号程序来使用黑名单。</string>
     <string name="set_as_default">设为默认</string>
     <string name="block_confirmation">您确定要将 \"%s\" 添加到黑名单吗？</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_unknown_calls">拦截来自未存储联系人的通话</string>
+    <string name="block_unknown_messages">拦截来自未存储联系人的消息</string>
     <!-- Favorites -->
     <string name="favorites">收藏</string>
     <string name="add_favorites">添加收藏</string>

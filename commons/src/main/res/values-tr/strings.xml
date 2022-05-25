@@ -87,8 +87,8 @@
     <string name="must_make_default_dialer">Engellenen numaraları kullanmak için bu uygulamayı öntanımlı çevirici uygulaması yapmalısınız.</string>
     <string name="set_as_default">Öntanımlı olarak ayarla</string>
     <string name="block_confirmation">\"%s\" gerçekten engellensin mi?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_unknown_calls">Kayıtlı olmayan kişilerden gelen aramaları engelle</string>
+    <string name="block_unknown_messages">Kayıtlı olmayan kişilerden gelen mesajları engelle</string>
     <!-- Favorites -->
     <string name="favorites">Favoriler</string>
     <string name="add_favorites">Favori ekle</string>
@@ -950,7 +950,7 @@
     <string name="sms_mms_title">SMS MMS (SMS ve MMS yönetimi)</string>
     <string name="apng_title">APNG Android (hareketli WebP desteği)</string>
     <string name="pdf_viewer_title">Android PdfViewer (PDF görüntüleyici)</string>
-    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
+    <string name="m3u_parser_title">M3U Ayrıştırıcı (m3u çalma listesi dosyası işleme)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">Kullanımdan kaldırıldı: Uygulamanın bu sürümü artık sağlanmıyor, Pro sürümünü şuradan indirin: https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Ücretli herhangi bir uygulamayı 2 saat içinde kaldırırsanız, otomatik olarak iade edileceğini unutmayın. İstediğiniz zaman geri ödeme almak isterseniz, hello@simplemobiletools.com adresinden bizimle iletişime geçmeniz yeterli olacaktır. Bu denemeyi kolaylaştırır :)</string>
