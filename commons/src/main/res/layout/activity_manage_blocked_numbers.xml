@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="@dimen/activity_margin"
-        android:text="@string/block_unknown_calls"
+        android:text="@string/block_unknown_numbers_title"
         android:textSize="@dimen/bigger_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
