@@ -8,8 +8,12 @@ import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
 import android.net.Uri
-import android.provider.ContactsContract.*
-import android.provider.ContactsContract.CommonDataKinds.*
+import android.provider.ContactsContract.CommonDataKinds.Event
+import android.provider.ContactsContract.CommonDataKinds.Organization
+import android.provider.ContactsContract.CommonDataKinds.Phone
+import android.provider.ContactsContract.CommonDataKinds.StructuredName
+import android.provider.ContactsContract.Data
+import android.provider.ContactsContract.PhoneLookup
 import android.text.TextUtils
 import android.util.SparseArray
 import android.widget.ImageView
@@ -374,5 +378,24 @@ class SimpleContactsHelper(val context: Context) {
                 callback(placeholder.bitmap)
             }
         }
+    }
+
+    fun exists(number: String): Boolean {
+        if (!context.hasPermission(PERMISSION_READ_CONTACTS)) {
+            return false
+        }
+
+        val uri = Uri.withAppendedPath(PhoneLookup.CONTENT_FILTER_URI, Uri.encode(number))
+        val projection = arrayOf(PhoneLookup._ID)
+
+        try {
+            val cursor = context.contentResolver.query(uri, projection, null, null, null)
+            cursor?.use {
+                return it.moveToFirst()
+            }
+        } catch (ignored: Exception) {
+        }
+
+        return false
     }
 }

@@ -448,6 +448,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getString(LAST_BLOCKED_NUMBERS_EXPORT_PATH, "")!!
         set(lastBlockedNumbersExportPath) = prefs.edit().putString(LAST_BLOCKED_NUMBERS_EXPORT_PATH, lastBlockedNumbersExportPath).apply()
 
+    var blockUnknownNumbers: Boolean
+        get() = prefs.getBoolean(BLOCK_UNKNOWN_NUMBERS, false)
+        set(blockUnknownNumbers) = prefs.edit().putBoolean(BLOCK_UNKNOWN_NUMBERS, blockUnknownNumbers).apply()
+
     var fontSize: Int
         get() = prefs.getInt(FONT_SIZE, context.resources.getInteger(R.integer.default_font_size))
         set(size) = prefs.edit().putInt(FONT_SIZE, size).apply()
