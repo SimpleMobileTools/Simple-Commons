@@ -6,6 +6,7 @@ import android.view.KeyEvent
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.coordinatorlayout.widget.CoordinatorLayout
+import androidx.documentfile.provider.DocumentFile
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
@@ -37,6 +38,7 @@ class FilePickerDialog(
     val canAddShowHiddenButton: Boolean = false,
     val forceShowRoot: Boolean = false,
     val showFavoritesButton: Boolean = false,
+    private val enforceStorageRestrictions: Boolean = true,
     val callback: (pickedPath: String) -> Unit
 ) : Breadcrumbs.BreadcrumbsListener {
 
@@ -198,39 +200,55 @@ class FilePickerDialog(
     }
 
     private fun verifyPath() {
-        if (activity.isRestrictedSAFOnlyRoot(currPath)) {
-            val document = activity.getSomeAndroidSAFDocument(currPath) ?: return
-            if ((pickFile && document.isFile) || (!pickFile && document.isDirectory)) {
-                sendSuccess()
+        when {
+            activity.isRestrictedSAFOnlyRoot(currPath) -> {
+                val document = activity.getSomeAndroidSAFDocument(currPath) ?: return
+                sendSuccessForDocumentFile(document)
             }
-        } else if (activity.isPathOnOTG(currPath)) {
-            val fileDocument = activity.getSomeDocumentFile(currPath) ?: return
-            if ((pickFile && fileDocument.isFile) || (!pickFile && fileDocument.isDirectory)) {
-                sendSuccess()
+            activity.isPathOnOTG(currPath) -> {
+                val fileDocument = activity.getSomeDocumentFile(currPath) ?: return
+                sendSuccessForDocumentFile(fileDocument)
             }
-        } else if (activity.isAccessibleWithSAFSdk30(currPath)) {
-            activity.handleSAFDialogSdk30(currPath) {
-                if (it) {
-                    val document = activity.getSomeDocumentSdk30(currPath) ?: return@handleSAFDialogSdk30
-                    if ((pickFile && document.isFile) || (!pickFile && document.isDirectory)) {
-                        sendSuccess()
+            activity.isAccessibleWithSAFSdk30(currPath) -> {
+                if (enforceStorageRestrictions) {
+                    activity.handleSAFDialogSdk30(currPath) {
+                        if (it) {
+                            val document = activity.getSomeDocumentSdk30(currPath)
+                            sendSuccessForDocumentFile(document ?: return@handleSAFDialogSdk30)
+                        }
                     }
+                } else {
+                    sendSuccessForDirectFile()
+                }
+
+            }
+            activity.isRestrictedWithSAFSdk30(currPath) -> {
+                if (enforceStorageRestrictions) {
+                    if (activity.isInDownloadDir(currPath)) {
+                        sendSuccessForDirectFile()
+                    } else {
+                        activity.toast(R.string.system_folder_restriction, Toast.LENGTH_LONG)
+                    }
+                } else {
+                    sendSuccessForDirectFile()
                 }
             }
-        } else if (activity.isRestrictedWithSAFSdk30(currPath)) {
-            if (activity.isInDownloadDir(currPath)) {
-                val file = File(currPath)
-                if ((pickFile && file.isFile) || (!pickFile && file.isDirectory)) {
-                    sendSuccess()
-                }
-            } else {
-                activity.toast(R.string.system_folder_restriction, Toast.LENGTH_LONG)
+            else -> {
+                sendSuccessForDirectFile()
             }
-        } else {
-            val file = File(currPath)
-            if ((pickFile && file.isFile) || (!pickFile && file.isDirectory)) {
-                sendSuccess()
-            }
+        }
+    }
+
+    private fun sendSuccessForDocumentFile(document: DocumentFile) {
+        if ((pickFile && document.isFile) || (!pickFile && document.isDirectory)) {
+            sendSuccess()
+        }
+    }
+
+    private fun sendSuccessForDirectFile() {
+        val file = File(currPath)
+        if ((pickFile && file.isFile) || (!pickFile && file.isDirectory)) {
+            sendSuccess()
         }
     }
 
