@@ -6,16 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.simplemobiletools.commons.views.MySwitchCompat
-        android:id="@+id/block_unknown"
+    <RelativeLayout
+        android:id="@+id/block_unknown_holder"
+        style="@style/SettingsHolderCheckboxStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:padding="@dimen/activity_margin"
-        android:textSize="@dimen/bigger_text_size"
+        android:background="@drawable/ripple_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/block_unknown_calls" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.simplemobiletools.commons.views.MyAppCompatCheckbox
+            android:id="@+id/block_unknown"
+            style="@style/SettingsCheckboxStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/block_unknown_calls" />
+
+    </RelativeLayout>
 
     <com.simplemobiletools.commons.views.MyRecyclerView
         android:id="@+id/manage_blocked_numbers_list"
@@ -27,7 +35,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/block_unknown"
+        app:layout_constraintTop_toBottomOf="@+id/block_unknown_holder"
         tools:listitem="@layout/item_manage_blocked_number" />
 
     <com.simplemobiletools.commons.views.MyTextView
@@ -43,7 +51,7 @@
         android:textSize="@dimen/bigger_text_size"
         android:textStyle="italic"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@+id/block_unknown" />
+        app:layout_constraintTop_toBottomOf="@+id/block_unknown_holder" />
 
     <com.simplemobiletools.commons.views.MyTextView
         android:id="@+id/manage_blocked_numbers_placeholder_2"

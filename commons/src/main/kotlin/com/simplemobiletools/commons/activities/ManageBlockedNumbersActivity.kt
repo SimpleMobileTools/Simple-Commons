@@ -37,13 +37,16 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         updateTextColors(manage_blocked_numbers_wrapper)
         updatePlaceholderTexts()
 
-        val switchTitleRes = if (baseConfig.appId.startsWith("com.simplemobiletools.dialer")) R.string.block_unknown_calls else R.string.block_unknown_messages
+        val blockTitleRes = if (baseConfig.appId.startsWith("com.simplemobiletools.dialer")) R.string.block_unknown_calls else R.string.block_unknown_messages
+
         block_unknown.apply {
-            setText(switchTitleRes)
+            setText(blockTitleRes)
             isChecked = baseConfig.blockUnknownNumbers
-            setOnCheckedChangeListener { _, isChecked ->
-                baseConfig.blockUnknownNumbers = isChecked
-            }
+        }
+
+        block_unknown_holder.setOnClickListener {
+            block_unknown.toggle()
+            baseConfig.blockUnknownNumbers = block_unknown.isChecked
         }
 
         manage_blocked_numbers_placeholder_2.apply {
