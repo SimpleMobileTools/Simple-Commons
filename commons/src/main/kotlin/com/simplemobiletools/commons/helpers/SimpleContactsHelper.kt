@@ -1,6 +1,7 @@
 package com.simplemobiletools.commons.helpers
 
 import android.content.Context
+import android.database.Cursor
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Paint
@@ -380,8 +381,7 @@ class SimpleContactsHelper(val context: Context) {
         }
     }
 
-    fun exists(number: String, callback: (Boolean) -> Unit) {
-        val privateCursor = context.getMyContactsCursor(false, true)
+    fun exists(number: String, privateCursor: Cursor?, callback: (Boolean) -> Unit) {
         SimpleContactsHelper(context).getAvailableContacts(false) { contacts ->
             val contact = contacts.firstOrNull { it.doesHavePhoneNumber(number) }
             if (contact != null) {
