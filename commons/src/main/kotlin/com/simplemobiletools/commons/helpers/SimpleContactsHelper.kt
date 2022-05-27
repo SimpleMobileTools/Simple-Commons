@@ -389,11 +389,7 @@ class SimpleContactsHelper(val context: Context) {
             } else {
                 val privateContacts = MyContactsContentProvider.getSimpleContacts(context, privateCursor)
                 val privateContact = privateContacts.firstOrNull { it.doesHavePhoneNumber(number) }
-                if (privateContact != null) {
-                    callback.invoke(true)
-                } else {
-                    callback.invoke(false)
-                }
+                callback.invoke(privateContact != null)
             }
         }
     }
