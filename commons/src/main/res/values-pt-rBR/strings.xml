@@ -87,8 +87,8 @@
     <string name="must_make_default_dialer">Você precisa tornar este aplicativo padrão para poder bloquear números.</string>
     <string name="set_as_default">Definir como padrão</string>
     <string name="block_confirmation">Tem certeza que deseja bloquear \"%s\"?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_unknown_calls">Bloquear chamadas de contatos não salvos</string>
+    <string name="block_unknown_messages">Bloquear mensagens de contatos não salvos</string>
     <!-- Favorites -->
     <string name="favorites">Favoritos</string>
     <string name="add_favorites">Adicionar favoritos</string>
@@ -180,8 +180,8 @@
     <string name="append">Adicionar sufixo \'_1\'</string>
     <string name="apply_to_all">Aplicar a todos os conflitos</string>
     <string name="system_folder_restriction">O sistema não permite a operação nesta pasta, por favor escolha outra</string>
-    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
-    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
+    <string name="system_folder_copy_restriction">O sistema não permite copiar para esta pasta, por favor, escolha outra</string>
+    <string name="rename_in_sd_card_system_restriction">O sistema não permite que você renomeie esta pasta</string>
     <!-- File picker -->
     <string name="select_folder">Selecionar pasta</string>
     <string name="select_file">Selecionar arquivo</string>
@@ -189,7 +189,7 @@
     <string name="confirm_folder_access_title">Confirmar acesso à pasta</string>
     <string name="confirm_storage_access_text">Por favor escolha a pasta raiz do cartão SD no próximo passo para conceder acesso de escrita</string>
     <string name="confirm_storage_access_text_sd">Se você não encontrar o cartão SD, tente isto</string>
-    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
+    <string name="confirm_storage_access_android_text">Por favor, permita que o aplicativo acesse o armazenamento utilizando o botão \"Use esta pasta\" no canto inferior da próxima tela.</string>
     <string name="confirm_storage_access_android_text_specific">Por favor, permita o acesso de \'&lt;b&gt;%s&lt;/b&gt;\' na próxima tela ao pressionar \'&lt;b&gt;Use this folder&lt;/b&gt;\' no canto inferior da tela.</string>
     <string name="confirm_create_doc_for_new_folder_text">Por favor, pressione \'&lt;b&gt;Save&lt;/b&gt;\' no canto inferior da próxima nela para criar uma nova pasta.</string>
     <string name="confirm_selection">Confirmar seleção</string>
@@ -242,7 +242,7 @@
     <string name="song_title">Título da música</string>
     <string name="gps_coordinates">Coordenadas GPS</string>
     <string name="altitude">Altitude</string>
-    <string name="remove_exif">Remove EXIF</string>
+    <string name="remove_exif">Remover EXIF</string>
     <string name="remove_exif_confirmation">Você tem certeza de que desejava remover os valores EXIF, como coordenadas de GPS, modelo de câmera, etc.?</string>
     <string name="exif_removed">Valores EXIF foram removidos com sucesso</string>
     <!-- Color customization -->
@@ -390,7 +390,7 @@
     <string name="yesterday">Ontem</string>
     <string name="today">Hoje</string>
     <string name="tomorrow">Amanhã</string>
-    <string name="every_day">Every day</string>
+    <string name="every_day">Todos os dias</string>
     <string name="hide_year">Ocultar ano</string>
     <string name="seconds_raw">segundos</string>
     <string name="minutes_raw">minutos</string>
@@ -517,7 +517,8 @@
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Tempo restante até o alarme disparar:\n%s</string>
     <string name="reminder_triggers_in">Tempo restante até o lembrete:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Tempo restante:
+\n%s</string>
     <string name="alarm_warning">Por favor, verifique se o alarme funciona corretamente antes de confiar nele. Ele pode não funcionar direito devido a restrições de sistema relacionadas à economia de bateria.</string>
     <string name="reminder_warning">Certifique-se de que os lembretes funcionam corretamente antes de confiar neles. Eles podem se funcionar direito devido a restrições de sistema relacionadas à economia de bateria.</string>
     <string name="notifications_disabled">As notificações deste aplicativo foram desativadas pelo sistema. Por favor, reative-as através nas configurações do seu aparelho.</string>
@@ -540,11 +541,11 @@
     <string name="color_customization">Personalização de cores</string>
     <string name="customize_colors">Personalizar cores</string>
     <string name="customize_colors_locked">Personalizar cores (Locked)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Trancado</string>
     <string name="customize_widget_colors">Personalizar cores de widget</string>
     <string name="customize_notifications">Personalizar notificações</string>
     <string name="use_english_language">Usar o idioma inglês</string>
-    <string name="language">Language</string>
+    <string name="language">Idioma</string>
     <string name="show_hidden_items">Exibir itens ocultos</string>
     <string name="font_size">Tamanho do texto</string>
     <string name="small">Pequeno</string>
@@ -626,7 +627,7 @@
     <string name="importing_some_entries_failed">Houve falha em alguns itens da importação</string>
     <string name="exporting_some_entries_failed">Houve falha em alguns itens da exportação</string>
     <string name="no_entries_for_importing">Não foram encontrados itens para importar</string>
-    <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
+    <string name="no_new_entries_for_importing">Nenhuma entrada nova foi encontrada</string>
     <string name="no_entries_for_exporting">Não foram encontramos itens para exportar</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
@@ -687,10 +688,12 @@
     <string name="more_info">Mais informação</string>
     <string name="upgrade">Atualizar</string>
     <string name="upgrade_calendar">Você precisará migrar de forma manual os eventos armazenados localmente. Você pode fazer isso exportando-os para um arquivo .ics, e depois importando este arquivo. Você pode encontrar os botões de importar/exportar no menu da tela inicial.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">Ei,
+\n
+\nparece que você já tem a versão Pro deste app. Você não vai mais precisar dele, então, por favor, desinstale!</string>
+    <string name="upgraded_to_pro_calendar">Você precisa migrar eventos armazenados lcoalmente através da exportação de um arquivo .ics e depois importar. Você pode encontrar ambos os botões no menu ao topo.</string>
+    <string name="upgraded_to_pro_notes">Você precisa migrar suas notas para a versão Pro manualmente.</string>
+    <string name="upgraded_to_pro_contacts">Você precisa migrar seus contatos armazenados de forma privada ao exportar um arquivo .vcf e então importá-lo. Você pode encontrar ambos os botões no menu ao topo.</string>
     <!-- About -->
     <string name="about">Sobre</string>
     <string name="website">Website</string>
@@ -726,12 +729,12 @@
         ]]>
     </string>
     <string name="purchase">Comprar</string>
-    <string name="order_simple_phone">Order Simple Phone</string>
+    <string name="order_simple_phone">Ordem Telefones Simples</string>
     <string name="update_thank_you">Por favor, atualize o Simple Thank You para a versão mais recente</string>
     <string name="before_asking_question_read_faq">Antes de fazer uma pergunta, por favor verifique as configurações do aplicativo e leia a lista de Perguntas Frequentes.</string>
     <string name="before_rate_read_faq">Antes de nos avaliar, por favor verifique as configurações do aplicativo e leia a lista de Perguntas Frequentes. Se você tiver algum problema, talvez a solução esteja lá.</string>
     <string name="make_sure_latest">Verifique também se você está usando a versão mais recente do aplicativo.</string>
-    <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
+    <string name="make_sure_upgrade">Por favor, note que esta versão não está mais sendo desenvolvida. Obtenha a versão Pro para desfrutar das atualizações.</string>
     <string name="read_it">Ler</string>
     <string name="read_faq">Leia as Perguntas Frequentes</string>
     <string name="rate_us_prompt">Olá,\n\nParece que você já está utilizando este app a algum tempo, e nós agradecemos a você por isso.\n\nPor favor, considere nos avaliar na Google Play. Isso iria nos ajudar bastante.\n\nDe uma forma ou de outra, você não verá esta mensagem novamente.\n\nObrigado!</string>
@@ -766,7 +769,7 @@
     <string name="simple_music_player">Player de Música Simples</string>
     <string name="simple_notes">Notas Simples</string>
     <string name="simple_sms_messenger">Mensagens SMS Simples</string>
-    <string name="simple_thank_you">Simple Thank You</string>
+    <string name="simple_thank_you">Obrigado Simples</string>
     <string name="simple_voice_recorder">Gravador de Voz Simples</string>
     <string name="app_launcher_short">Lançador de Aplicativos</string>
     <string name="calculator_short">Calculadora</string>
@@ -892,7 +895,7 @@
     <string name="why_upgrade_private_contact_sharing">Compartilhamento entre contatos opcional dentro de nossos apps</string>
     <string name="why_upgrade_customizable_contact_ringtones">Toques personalizados para os contatos</string>
     <string name="why_upgrade_contact_filtering">Filtragem de contatos</string>
-    <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
+    <string name="why_upgrade_contact_private_contacts">Contatos armazenados em local privado</string>
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Listas</string>
     <string name="why_upgrade_different_note_per_widget">Notas e cores diferentes por widgets</string>
@@ -938,8 +941,8 @@
     <string name="audio_record_view_title">Audio Record View (visualização de áudio)</string>
     <string name="sms_mms_title">SMS MMS (uso de SMS e MMS)</string>
     <string name="apng_title">APNG Android (suporte para WebP animado)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
-    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
+    <string name="pdf_viewer_title">Visualizador PDF Android</string>
+    <string name="m3u_parser_title">M3U Parser (Gerenciador de Arquivo de Playlist m3u)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">OBSOLETO: Esta versão do app não recebe mais atualizações. Por favor obtenha a versão Pro em https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Não se esqueça de que se você desinstalar um aplicativo pago em menos de duas horas você receberá reembolsado(a) automaticamente. Se você precisar de um reembolso após isso, entre em contato conosco através hello@simplemobiletools.com. Isso torna tudo mais fácil se você quiser testar :)</string>

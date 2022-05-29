@@ -86,9 +86,9 @@
     <string name="import_blocked_numbers">Gesperrte Nummern importieren</string>
     <string name="must_make_default_dialer">Du musst diese App als Standardtelefonie-App einstellen, um Nummern blockieren zu können.</string>
     <string name="set_as_default">Als Standard auswählen</string>
-    <string name="block_confirmation">Soll \"%s\" blockiert werden?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_confirmation">Soll „%s“ blockiert werden\?</string>
+    <string name="block_unknown_calls">Anrufe von nicht gespeicherten Kontakten blockieren</string>
+    <string name="block_unknown_messages">Nachrichten von nicht gespeicherten Kontakten blockieren</string>
     <!-- Favorites -->
     <string name="favorites">Favoriten</string>
     <string name="add_favorites">Favoriten hinzufügen</string>
@@ -939,7 +939,7 @@
     <string name="sms_mms_title">SMS MMS (SMS- und MMS-Handhabung)</string>
     <string name="apng_title">APNG Android (animierte WebP-Unterstützung)</string>
     <string name="pdf_viewer_title">Android PdfViewer (PDF-Betrachter)</string>
-    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
+    <string name="m3u_parser_title">M3U-Parser (Bearbeitung von m3u-Wiedergabelisten-Dateien)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">Veraltet: Diese Version der App wird nicht länger unterstützt. Hole dir die Pro-Version unter https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Vergiss nicht, dass Dir der Betrag erstattet wird, wenn du eine bezahlte App innerhalb von zwei Stunden wieder deinstallierst. Falls du später eine Rückerstattung wünschst, kontaktiere uns einfach unter hello@simplemobiletools.com, und du wirst sie bekommen. So kann man ganz einfach die App ausprobieren :)</string>
