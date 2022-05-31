@@ -12,7 +12,10 @@ import androidx.documentfile.provider.DocumentFile
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.*
+import com.simplemobiletools.commons.helpers.CONFLICT_KEEP_BOTH
+import com.simplemobiletools.commons.helpers.CONFLICT_SKIP
+import com.simplemobiletools.commons.helpers.getConflictResolution
+import com.simplemobiletools.commons.helpers.isOreoPlus
 import com.simplemobiletools.commons.interfaces.CopyMoveListener
 import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
@@ -29,6 +32,7 @@ class CopyMoveTask(
 
     private var mListener: WeakReference<CopyMoveListener>? = null
     private var mTransferredFiles = ArrayList<FileDirItem>()
+    private var mFileDirItemsToDelete = ArrayList<FileDirItem>()        // confirm the deletion of files on Android 11 from Downloads and Android at once
     private var mDocuments = LinkedHashMap<String, DocumentFile?>()
     private var mFiles = ArrayList<FileDirItem>()
     private var mFileCountToCopy = 0
@@ -106,6 +110,7 @@ class CopyMoveTask(
             return
         }
 
+        deleteProtectedFiles()
         mProgressHandler.removeCallbacksAndMessages(null)
         activity.notificationManager.cancel(mNotifId)
         val listener = mListener?.get() ?: return
@@ -307,8 +312,26 @@ class CopyMoveTask(
     }
 
     private fun deleteSourceFile(source: FileDirItem) {
-        activity.deleteFileBg(source, isDeletingMultipleFiles = false)
-        activity.deleteFromMediaStore(source.path)
+        if (activity.isRestrictedWithSAFSdk30(source.path) && !activity.canManageMedia()) {
+            mFileDirItemsToDelete.add(source)
+        } else {
+            activity.deleteFileBg(source, isDeletingMultipleFiles = false)
+            activity.deleteFromMediaStore(source.path)
+        }
+    }
+
+    // if we delete multiple files from Downloads folder on Android 11 or 12 without being a Media Management app, show the confirmation dialog just once
+    private fun deleteProtectedFiles() {
+        if (mFileDirItemsToDelete.isNotEmpty()) {
+            val fileUris = activity.getFileUrisFromFileDirItems(mFileDirItemsToDelete).second
+            activity.deleteSDK30Uris(fileUris) { success ->
+                if (success) {
+                    mFileDirItemsToDelete.forEach {
+                        activity.deleteFromMediaStore(it.path)
+                    }
+                }
+            }
+        }
     }
 
     private fun copyOldLastModified(sourcePath: String, destinationPath: String) {
