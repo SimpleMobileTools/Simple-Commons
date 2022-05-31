@@ -724,16 +724,13 @@ fun BaseSimpleActivity.deleteFilesBg(files: List<FileDirItem>, allowDeleteFolder
                 return@checkManageMediaOrHandleSAFDialogSdk30
             }
 
-            if (canManageMedia()) {
+            val recycleBinPath = firstFile.isRecycleBinPath(this)
+            if (canManageMedia() && !recycleBinPath) {
                 val fileUris = getFileUrisFromFileDirItems(files).second
-                if (fileUris.size == files.size) {
-                    deleteSDK30Uris(fileUris) { success ->
-                        runOnUiThread {
-                            callback?.invoke(success)
-                        }
+                deleteSDK30Uris(fileUris) { success ->
+                    runOnUiThread {
+                        callback?.invoke(success)
                     }
-                } else {
-                    deleteFilesCasual(files, allowDeleteFolder, callback)
                 }
             } else {
                 deleteFilesCasual(files, allowDeleteFolder, callback)
