@@ -278,11 +278,7 @@
         Після запуску просто поверніть стандартний колір піктограми: #F57C00. У найгіршому випадку вам доведеться перевстановити додаток.</string>
     <string name="share_colors_success">Кольори успішно оновлено. Було додано нову тему під назвою \'Загальна\', використовуйте її для оновлення кольорів усіх додатків у майбутньому.</string>
     <string name="shared_theme_note">Зауважте, що хоча ви користуєтеся версією Pro додатка, вам необхідний додаток Просто Подяка з технічних причин. Він подбає про синхронізацію кольору.</string>
-    <string name="purchase_thank_you">
-        <![CDATA[
-            Будь ласка, придбайте <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, щоб розблокувати цю функцію і підтримати розробку. Дякую!
-        ]]>
-    </string>
+    <string name="purchase_thank_you">Будь ласка, придбайте &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Просту Подяку&lt;/a&gt;, щоб розблокувати цю функцію і підтримати розробку. Дякую!</string>
     <!-- Themes -->
     <string name="light_theme">Світла</string>
     <string name="dark_theme">Темна</string>
@@ -602,7 +598,7 @@
     <string name="during_day_at">Протягом дня о %02d:%02d</string>
     <!-- Settings -->
     <string name="settings">Налаштування</string>
-    <string name="purchase_simple_thank_you">Придбати Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Придбати \"Просту Подяку\"</string>
     <string name="general_settings">General</string>
     <string name="color_customization">Налаштування кольору</string>
     <string name="customize_colors">Налаштувати кольори</string>
@@ -789,16 +785,10 @@
     <string name="additional_info">Додаткова інформація</string>
     <string name="app_version">Версія додатка: %s</string>
     <string name="device_os">ОС пристрою: %s</string>
-    <string name="donate_please">
-        <![CDATA[
-            Привіт,<br><br>
-            сподіваюсь, вам подобається додаток. Він не містить реклами, будь ласка, підтримайте його розробку, придбавши додаток <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>. Покупка також відмінить повторне спливання цього повідомлення.<br><br>
-            Спасибі!
-        ]]>
-    </string>
+    <string name="donate_please">Привіт,&lt;br&gt;&lt;br&gt; сподіваюсь, вам подобається додаток. Він не містить реклами, будь ласка, підтримайте його розробку, придбавши додаток &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Проста Подяка&lt;/a&gt;. Покупка також відмінить повторне спливання цього повідомлення.&lt;br&gt;&lt;br&gt; Спасибі!</string>
     <string name="purchase">Придбати</string>
     <string name="order_simple_phone">Замовити Простий Телефон</string>
-    <string name="update_thank_you">Будь ласка, оновіть Simple Thank You до останньої версії</string>
+    <string name="update_thank_you">Будь ласка, оновіть \"Просту Подяку\" до останньої версії</string>
     <string name="before_asking_question_read_faq">Перш ніж запитувати, будь ласка, ознайомтесь із налаштуваннями додатка та прочитайте Часті Питання. Можливо, відповідь там.</string>
     <string name="before_rate_read_faq">Перш ніж ви оціните нас, будь ласка перегляньте налаштування додатка та прочитайте Часті Питання. Якщо у вас виникнуть проблеми, можливо там буде вирішення.</string>
     <string name="make_sure_latest">Також переконайтеся, що ви користуєтеся найновішою версією додатка.</string>
@@ -810,7 +800,7 @@
     <string name="thank_you">Подяка</string>
     <string name="widget_locked_pro">Віджет заблоковано.
 \nБудь ласка, оновіть додаток до версії Pro, щоб розблокувати віджет.</string>
-    <string name="widget_locked">Віджет заблоковано.&lt;br&gt;Будь ласка, придбайте &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;, щоб розблокувати його.</string>
+    <string name="widget_locked">Віджет заблоковано.&lt;br&gt;Будь ласка, придбайте &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Просту Подяку&lt;/a&gt;, щоб розблокувати його.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
