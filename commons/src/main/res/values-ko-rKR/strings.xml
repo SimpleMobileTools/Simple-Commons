@@ -104,6 +104,7 @@
 
     <!-- Filters -->
     <string name="filter">필터</string>
+    <string name="filter_pro">필터 (Pro)</string>
     <string name="no_items_found">항목을 찾지 못함</string>
     <string name="change_filter">필터 변경</string>
 
@@ -325,6 +326,7 @@
     <string name="undo">뒤로</string>
     <string name="redo">앞으로</string>
     <string name="print">인쇄</string>
+    <string name="print_pro">인쇄 (Pro)</string>
     <string name="create_shortcut">바로가기 생성</string>
     <string name="add_number_to_contact">Add number to contact</string>
     <string name="view_contact_details">View contact details</string>

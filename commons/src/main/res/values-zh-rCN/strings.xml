@@ -99,6 +99,7 @@
     <string name="type_2_characters">请输入至少两个字符来开始搜索。</string>
     <!-- Filters -->
     <string name="filter">过滤</string>
+    <string name="filter_pro">过滤 (Pro)</string>
     <string name="no_items_found">找不到任何项目。</string>
     <string name="change_filter">更改过滤器</string>
     <!-- Permissions -->
@@ -306,6 +307,7 @@
     <string name="undo">撤销</string>
     <string name="redo">重做</string>
     <string name="print">打印</string>
+    <string name="print_pro">打印 (Pro)</string>
     <string name="create_shortcut">创建快捷方式</string>
     <string name="add_number_to_contact">添加号码至联系人</string>
     <string name="view_contact_details">查看联系人详情</string>

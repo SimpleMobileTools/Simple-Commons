@@ -99,6 +99,7 @@
     <string name="type_2_characters">検索を開始するには少なくとも2文字以上入力してください。</string>
     <!-- Filters -->
     <string name="filter">フィルタ</string>
+    <string name="filter_pro">フィルタ (Pro)</string>
     <string name="no_items_found">何も見つかりませんでした。</string>
     <string name="change_filter">フィルタを変更</string>
     <!-- Permissions -->
@@ -305,6 +306,7 @@
     <string name="undo">元に戻す</string>
     <string name="redo">やり直し</string>
     <string name="print">印刷</string>
+    <string name="print_pro">印刷 (Pro)</string>
     <string name="create_shortcut">ショートカットを作成</string>
     <string name="add_number_to_contact">連絡先に番号を追加</string>
     <string name="view_contact_details">連絡先の詳細を表示</string>
