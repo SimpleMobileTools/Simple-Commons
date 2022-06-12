@@ -382,6 +382,7 @@
     <string name="protection_setup_successfully">パスワードの設定が完了しました。パスワードを紛失した場合は、アプリを再インストールしてください</string>
     <string name="fingerprint_setup_successfully">指紋認証の設定が完了しました。何らかの問題によりアプリを再インストールした場合には、再度設定し直してください。</string>
     <string name="lock_folder">フォルダに鍵をかける</string>
+    <string name="lock_folder_pro">フォルダに鍵をかける (Pro)</string>
     <string name="unlock_folder">フォルダの鍵を外す</string>
     <string name="lock_folder_notice">この保護はアプリ内のみの機能となっており、実際のシステム全体のフォルダ暗号化は行われません。</string>
     <!-- Times -->
