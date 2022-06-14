@@ -626,7 +626,11 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun launchMediaManagementIntent(callback: () -> Unit) {
         Intent(Settings.ACTION_REQUEST_MANAGE_MEDIA).apply {
             data = Uri.parse("package:$packageName")
-            startActivityForResult(this, MANAGE_MEDIA_RC)
+            try {
+                startActivityForResult(this, MANAGE_MEDIA_RC)
+            } catch (e: Exception) {
+                showErrorToast(e)
+            }
         }
         funAfterManageMediaPermission = callback
     }

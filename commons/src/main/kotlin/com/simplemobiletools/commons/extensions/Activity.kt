@@ -317,6 +317,7 @@ fun BaseSimpleActivity.showOTGPermissionDialog(path: String) {
 }
 
 fun Activity.launchPurchaseThankYouIntent() {
+    hideKeyboard()
     try {
         launchViewIntent("market://details?id=com.simplemobiletools.thankyou")
     } catch (ignored: Exception) {
@@ -335,6 +336,7 @@ fun Activity.launchUpgradeToProIntent() {
 fun Activity.launchViewIntent(id: Int) = launchViewIntent(getString(id))
 
 fun Activity.launchViewIntent(url: String) {
+    hideKeyboard()
     ensureBackgroundThread {
         Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
             launchActivityIntent(this)
@@ -343,6 +345,7 @@ fun Activity.launchViewIntent(url: String) {
 }
 
 fun Activity.redirectToRateUs() {
+    hideKeyboard()
     try {
         launchViewIntent("market://details?id=${packageName.removeSuffix(".debug")}")
     } catch (ignored: ActivityNotFoundException) {
