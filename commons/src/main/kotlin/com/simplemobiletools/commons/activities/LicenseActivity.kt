@@ -29,8 +29,8 @@ class LicenseActivity : BaseSimpleActivity() {
 
         val inflater = LayoutInflater.from(this)
         val licenses = initLicenses()
-        val licenseMask = intent.getIntExtra(APP_LICENSES, 0) or LICENSE_KOTLIN
-        licenses.filter { licenseMask and it.id != 0 }.forEach {
+        val licenseMask = intent.getLongExtra(APP_LICENSES, 0) or LICENSE_KOTLIN
+        licenses.filter { licenseMask and it.id != 0L }.forEach {
             val license = it
             inflater.inflate(R.layout.item_license, null).apply {
                 background.applyColorFilter(backgroundColor.getContrastColor())
@@ -89,6 +89,7 @@ class LicenseActivity : BaseSimpleActivity() {
         License(LICENSE_SMS_MMS, R.string.sms_mms_title, R.string.sms_mms_text, R.string.sms_mms_url),
         License(LICENSE_APNG, R.string.apng_title, R.string.apng_text, R.string.apng_url),
         License(LICENSE_PDF_VIEWER, R.string.pdf_viewer_title, R.string.pdf_viewer_text, R.string.pdf_viewer_url),
-        License(LICENSE_M3U_PARSER, R.string.m3u_parser_title, R.string.m3u_parser_text, R.string.m3u_parser_url)
+        License(LICENSE_M3U_PARSER, R.string.m3u_parser_title, R.string.m3u_parser_text, R.string.m3u_parser_url),
+        License(LICENSE_ANDROID_LAME, R.string.android_lame_title, R.string.android_lame_text, R.string.android_lame_url)
     )
 }
