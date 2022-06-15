@@ -431,7 +431,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun startAboutActivity(appNameId: Int, licenseMask: Int, versionName: String, faqItems: ArrayList<FAQItem>, showFAQBeforeMail: Boolean) {
+    fun startAboutActivity(appNameId: Int, licenseMask: Long, versionName: String, faqItems: ArrayList<FAQItem>, showFAQBeforeMail: Boolean) {
         hideKeyboard()
         Intent(applicationContext, AboutActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIDs())
