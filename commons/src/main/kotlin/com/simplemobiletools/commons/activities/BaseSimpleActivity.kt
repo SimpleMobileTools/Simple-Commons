@@ -666,7 +666,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 if (isCopyOperation) {
                     val recycleBinPath = fileDirItems.first().isRecycleBinPath(this)
                     if (canManageMedia() && !recycleBinPath) {
-                        val fileUris = getFileUrisFromFileDirItems(fileDirItems).second
+                        val fileUris = getFileUrisFromFileDirItems(fileDirItems)
                         updateSDK30Uris(fileUris) { sdk30UriSuccess ->
                             if (sdk30UriSuccess) {
                                 startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)
@@ -685,7 +685,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                             if (safSuccess) {
                                 val recycleBinPath = fileDirItems.first().isRecycleBinPath(this)
                                 if (canManageMedia() && !recycleBinPath) {
-                                    val fileUris = getFileUrisFromFileDirItems(fileDirItems).second
+                                    val fileUris = getFileUrisFromFileDirItems(fileDirItems)
                                     updateSDK30Uris(fileUris) { sdk30UriSuccess ->
                                         if (sdk30UriSuccess) {
                                             startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)

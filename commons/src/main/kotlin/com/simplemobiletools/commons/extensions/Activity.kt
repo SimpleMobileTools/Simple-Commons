@@ -729,7 +729,8 @@ fun BaseSimpleActivity.deleteFilesBg(files: List<FileDirItem>, allowDeleteFolder
 
             val recycleBinPath = firstFile.isRecycleBinPath(this)
             if (canManageMedia() && !recycleBinPath) {
-                val fileUris = getFileUrisFromFileDirItems(files).second
+                val fileUris = getFileUrisFromFileDirItems(files)
+
                 deleteSDK30Uris(fileUris) { success ->
                     runOnUiThread {
                         callback?.invoke(success)
@@ -759,7 +760,7 @@ private fun BaseSimpleActivity.deleteFilesCasual(
 
             if (index == files.lastIndex) {
                 if (isRPlus() && failedFileDirItems.isNotEmpty()) {
-                    val fileUris = getFileUrisFromFileDirItems(failedFileDirItems).second
+                    val fileUris = getFileUrisFromFileDirItems(failedFileDirItems)
                     deleteSDK30Uris(fileUris) { success ->
                         runOnUiThread {
                             callback?.invoke(success)
@@ -850,7 +851,7 @@ fun BaseSimpleActivity.deleteFileBg(
 }
 
 private fun BaseSimpleActivity.deleteSdk30(fileDirItem: FileDirItem, callback: ((wasSuccess: Boolean) -> Unit)?) {
-    val fileUris = getFileUrisFromFileDirItems(arrayListOf(fileDirItem)).second
+    val fileUris = getFileUrisFromFileDirItems(arrayListOf(fileDirItem))
     deleteSDK30Uris(fileUris) { success ->
         runOnUiThread {
             callback?.invoke(success)
@@ -1009,7 +1010,7 @@ private fun BaseSimpleActivity.renameCasually(
             if (isRenamingMultipleFiles) {
                 callback?.invoke(false, Android30RenameFormat.CONTENT_RESOLVER)
             } else {
-                val fileUris = getFileUrisFromFileDirItems(arrayListOf(File(oldPath).toFileDirItem(this))).second
+                val fileUris = getFileUrisFromFileDirItems(arrayListOf(File(oldPath).toFileDirItem(this)))
                 updateSDK30Uris(fileUris) { success ->
                     if (success) {
                         val values = ContentValues().apply {
@@ -1071,7 +1072,7 @@ private fun BaseSimpleActivity.renameCasually(
             if (isRenamingMultipleFiles) {
                 callback?.invoke(false, Android30RenameFormat.SAF)
             } else {
-                val fileUris = getFileUrisFromFileDirItems(arrayListOf(File(oldPath).toFileDirItem(this))).second
+                val fileUris = getFileUrisFromFileDirItems(arrayListOf(File(oldPath).toFileDirItem(this)))
                 updateSDK30Uris(fileUris) { success ->
                     if (!success) {
                         return@updateSDK30Uris
@@ -1255,7 +1256,7 @@ fun BaseSimpleActivity.getFileOutputStream(fileDirItem: FileDirItem, allowCreati
         isRestrictedWithSAFSdk30(fileDirItem.path) -> {
             callback.invoke(
                 try {
-                    val fileUri = getFileUrisFromFileDirItems(arrayListOf(fileDirItem)).second
+                    val fileUri = getFileUrisFromFileDirItems(arrayListOf(fileDirItem))
                     applicationContext.contentResolver.openOutputStream(fileUri.first())
                 } catch (e: Exception) {
                     null

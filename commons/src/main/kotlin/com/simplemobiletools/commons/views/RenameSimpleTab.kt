@@ -121,7 +121,7 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
         callback: (success: Boolean) -> Unit
     ) {
         val fileDirItems = paths.map { File(it).toFileDirItem(context) }
-        val uriPairs = context.getFileUrisFromFileDirItems(fileDirItems)
+        val uriPairs = context.getUrisPathsFromFileDirItems(fileDirItems)
         val validPaths = uriPairs.first
         val uris = uriPairs.second
         val activity = activity
