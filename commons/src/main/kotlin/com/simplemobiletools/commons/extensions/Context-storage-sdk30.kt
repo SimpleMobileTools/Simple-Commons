@@ -55,7 +55,7 @@ fun Context.isRestrictedWithSAFSdk30(path: String): Boolean {
     val isInvalidName = firstParentDir == null
     val isDirectory = File(firstParentPath).isDirectory
     val isARestrictedDirectory = DIRS_INACCESSIBLE_WITH_SAF_SDK_30.any { firstParentDir.equals(it, true) }
-    return isRPlus() && isInvalidName || (isDirectory && isARestrictedDirectory)
+    return isRPlus() && (isInvalidName || (isDirectory && isARestrictedDirectory))
 }
 
 fun Context.isInDownloadDir(path: String): Boolean {
