@@ -339,7 +339,13 @@ fun Activity.launchViewIntent(url: String) {
     hideKeyboard()
     ensureBackgroundThread {
         Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
-            launchActivityIntent(this)
+            try {
+                startActivity(intent)
+            } catch (e: ActivityNotFoundException) {
+                toast(R.string.no_browser_found)
+            } catch (e: Exception) {
+                showErrorToast(e)
+            }
         }
     }
 }

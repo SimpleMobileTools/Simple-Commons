@@ -146,7 +146,7 @@ class AboutActivity : BaseSimpleActivity() {
                 try {
                     startActivity(emailIntent)
                 } catch (e: ActivityNotFoundException) {
-                    toast(R.string.no_app_found)
+                    toast(R.string.no_email_client_found)
                 } catch (e: Exception) {
                     showErrorToast(e)
                 }
