@@ -14,8 +14,8 @@
     <string name="edit_with">Edytuj w</string>
     <string name="edit">Edytuj</string>
     <string name="no_app_found">Nie znaleziono odpowiedniej aplikacji</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">Nie znaleziono przeglądarki</string>
+    <string name="no_email_client_found">Nie znaleziono klienta poczty e-mail</string>
     <string name="set_as">Ustaw jako</string>
     <string name="copy_to_clipboard">Kopiuj do schowka</string>
     <string name="copy_number_to_clipboard">Skopiuj numer do schowka</string>
@@ -185,7 +185,7 @@
     <string name="system_folder_restriction">System nie pozwala na operację w tym folderze, wybierz inny</string>
     <string name="system_folder_copy_restriction">System nie pozwala na kopiowanie do tego folderu, wybierz inny</string>
     <string name="rename_in_sd_card_system_restriction">System nie pozwala na zmianę nazwy w tym folderze</string>
-    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
+    <string name="rename_internal_system_restriction">Nie można zmieniać nazw folderów bezpośrednio w pamięci wewnętrznej, tylko podfolderów</string>
     <!-- File picker -->
     <string name="select_folder">Wybierz folder</string>
     <string name="select_file">Wybierz plik</string>
@@ -985,7 +985,7 @@
     <string name="apng_title">APNG Android (obsługa animowanych WebP)</string>
     <string name="pdf_viewer_title">Android PdfViewer (czytnik PDF)</string>
     <string name="m3u_parser_title">M3U Parser (obsługa plików playlist M3U)</string>
-    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="android_lame_title">AndroidLame (koder MP3)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">PRZESTARZAŁA: Ta wersja aplikacji nie jest już utrzymywana. Pobierz wersję Pro z https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Pamiętaj, że jeśli odinstalujesz którąkolwiek z płatnych aplikacji w ciągu 2 godzin, automatycznie otrzymasz zwrot pieniędzy. Jeśli chcesz zwrotu pieniędzy w dowolnym momencie później, wystarczy skontaktować się z nami na hello@simplemobiletools.com, a otrzymasz go. To sprawia, że aplikacje są łatwe do wypróbowania :)</string>
