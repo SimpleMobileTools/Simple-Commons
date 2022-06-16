@@ -191,6 +191,7 @@
     <string name="system_folder_restriction">Selles kaustas pole toimingud lubatud, palun vali mõni muu kaust</string>
     <string name="system_folder_copy_restriction">Süsteem ei võimalda sellesse kausta kopeerida, palun vali mõni muu kaust</string>
     <string name="rename_in_sd_card_system_restriction">Süsteem ei võimalda selle kausta nime muuta</string>
+    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
     <!-- File picker -->
     <string name="select_folder">Vali kaust</string>
     <string name="select_file">Vali fail</string>

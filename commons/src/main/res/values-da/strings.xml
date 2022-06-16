@@ -185,6 +185,7 @@
     <string name="system_folder_restriction">Systemet tillader ikke operationen i denne mappe, vælg en anden</string>
     <string name="system_folder_copy_restriction">Systemet tillader ikke kopiering til denne mappe, vælg en anden</string>
     <string name="rename_in_sd_card_system_restriction">Systemet tillader ikke omdøbning i denne mappe</string>
+    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
     <!-- File picker -->
     <string name="select_folder">Vælg en mappe</string>
     <string name="select_file">Vælg en fil</string>
