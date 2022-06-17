@@ -14,8 +14,8 @@
     <string name="edit_with">Редагувати за допомогою</string>
     <string name="edit">Редагувати</string>
     <string name="no_app_found">Не знайдено допустимих додатків</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">Браузер не знайдено</string>
+    <string name="no_email_client_found">Поштовий клієнт не знайдено</string>
     <string name="set_as">Встановити як</string>
     <string name="copy_to_clipboard">Копіювати у буфер обміну</string>
     <string name="copy_number_to_clipboard">Копіювати номер у буфер обміну</string>
@@ -185,7 +185,7 @@
     <string name="system_folder_restriction">Система не дозволяє операцію в цій теці, будь ласка, виберіть іншу</string>
     <string name="system_folder_copy_restriction">Система не дозволяє копіювати в цю теку, будь ласка, виберіть іншу</string>
     <string name="rename_in_sd_card_system_restriction">Система не дозволяє перейменовувати в цій теці</string>
-    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
+    <string name="rename_internal_system_restriction">Не можна перейменувати теки безпосередньо у внутрішній пам\'яті, лише у вкладених теках</string>
     <!-- File picker -->
     <string name="select_folder">Обрати теку</string>
     <string name="select_file">Обрати файл</string>
