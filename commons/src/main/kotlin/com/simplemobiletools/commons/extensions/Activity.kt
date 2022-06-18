@@ -930,7 +930,7 @@ fun BaseSimpleActivity.renameFile(
             }
         }
     } else if (isAccessibleWithSAFSdk30(oldPath)) {
-        if (canManageMedia() && isPathOnInternalStorage(oldPath)) {
+        if (canManageMedia() && !File(oldPath).isDirectory && isPathOnInternalStorage(oldPath)) {
             renameCasually(oldPath, newPath, isRenamingMultipleFiles, callback)
         } else {
             handleSAFDialogSdk30(oldPath) {
@@ -952,6 +952,11 @@ fun BaseSimpleActivity.renameFile(
                     }
                 }
             }
+        }
+    } else if (isRestrictedWithSAFSdk30(oldPath)) {
+        runOnUiThread {
+            toast(R.string.rename_in_sd_card_system_restriction)
+            callback?.invoke(false, Android30RenameFormat.NONE)
         }
     } else if (needsStupidWritePermissions(newPath)) {
         handleSAFDialog(newPath) {
