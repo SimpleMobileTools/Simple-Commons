@@ -14,8 +14,8 @@
     <string name="edit_with">Şununla düzenle</string>
     <string name="edit">Düzenle</string>
     <string name="no_app_found">Geçerli bir uygulama bulunamadı</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">Tarayıcı bulunamadı</string>
+    <string name="no_email_client_found">E-posta istemcisi bulunamadı</string>
     <string name="set_as">Ayarla</string>
     <string name="copy_to_clipboard">Panoya kopyala</string>
     <string name="copy_number_to_clipboard">Numarayı panoya kopyala</string>
@@ -185,7 +185,7 @@
     <string name="system_folder_restriction">Sistem bu klasörde işlem yapmaya izin vermiyor, lütfen başka bir tane seçin</string>
     <string name="system_folder_copy_restriction">Sistem bu klasöre kopyalamaya izin vermiyor, lütfen başka bir tane seçin</string>
     <string name="rename_in_sd_card_system_restriction">Sistem bu klasörde yeniden adlandırmaya izin vermiyor</string>
-    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
+    <string name="rename_internal_system_restriction">Dahili depolama alanındaki klasörler doğrudan yeniden adlandırılamıyor, yalnızca alt klasörler yeniden adlandırılabilir</string>
     <!-- File picker -->
     <string name="select_folder">Bir klasör seç</string>
     <string name="select_file">Bir dosya seç</string>
@@ -958,7 +958,7 @@
     <string name="apng_title">APNG Android (hareketli WebP desteği)</string>
     <string name="pdf_viewer_title">Android PdfViewer (PDF görüntüleyici)</string>
     <string name="m3u_parser_title">M3U Ayrıştırıcı (m3u çalma listesi dosyası işleme)</string>
-    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="android_lame_title">AndroidLame (mp3 kodlayıcı)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">Kullanımdan kaldırıldı: Uygulamanın bu sürümü artık sağlanmıyor, Pro sürümünü şuradan indirin: https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Ücretli herhangi bir uygulamayı 2 saat içinde kaldırırsanız, otomatik olarak iade edileceğini unutmayın. İstediğiniz zaman geri ödeme almak isterseniz, hello@simplemobiletools.com adresinden bizimle iletişime geçmeniz yeterli olacaktır. Bu denemeyi kolaylaştırır :)</string>

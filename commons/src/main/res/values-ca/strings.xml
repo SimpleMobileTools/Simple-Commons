@@ -14,8 +14,8 @@
     <string name="edit_with">Edita amb</string>
     <string name="edit">Edita</string>
     <string name="no_app_found">No s\'ha trobat cap aplicació vàlida</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">No s\'ha trobat cap navegador</string>
+    <string name="no_email_client_found">No s\'ha trobat cap client de correu electrònic</string>
     <string name="set_as">Estableix com a</string>
     <string name="copy_to_clipboard">Copia al porta-retalls</string>
     <string name="copy_number_to_clipboard">Copia el número al porta-retalls</string>
@@ -191,7 +191,7 @@
     <string name="system_folder_restriction">El sistema no permet l\'operació en aquesta carpeta, trieu-ne una altra</string>
     <string name="system_folder_copy_restriction">El sistema no permet copiar en aquesta carpeta. Trieu-ne una altra</string>
     <string name="rename_in_sd_card_system_restriction">El sistema no permet canviar el nom en aquesta carpeta</string>
-    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
+    <string name="rename_internal_system_restriction">No es poden canviar els noms de les carpetes directament a l\'emmagatzematge intern, només les subcarpetes</string>
     <!-- File picker -->
     <string name="select_folder">Selecciona una carpeta</string>
     <string name="select_file">Seleccioneu un fitxer</string>
@@ -934,7 +934,7 @@
     <string name="apng_title">APNG Android (implementa WebP animades)</string>
     <string name="pdf_viewer_title">Android PdfViewer (visualitzador de PDF)</string>
     <string name="m3u_parser_title">Analitzador M3U (gestió de fitxers «m3u» de llistes de reproducció)</string>
-    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="android_lame_title">AndroidLame (codificador «mp3»)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">OBSOLETA: Aquesta versió de l\'aplicació ja no es manté, obteniu la versió Pro a https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">No oblideu que si desinstal·leu qualsevol aplicació de pagament en un termini de 2 hores, el càrrec es retornarà automàticament. Si voleu un reemborsament més tard, poseu-vos en contacte amb nosaltres a hello@simplemobiletools.com i el rebreu. Això fa que sigui fàcil provar-ho :)</string>
