@@ -42,11 +42,8 @@ import com.simplemobiletools.commons.dialogs.WritePermissionDialog.Mode
 import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.*
 import com.simplemobiletools.commons.views.MyTextView
+import java.io.*
 import kotlinx.android.synthetic.main.dialog_title.view.*
-import java.io.File
-import java.io.FileNotFoundException
-import java.io.FileOutputStream
-import java.io.OutputStream
 import java.util.*
 
 fun AppCompatActivity.updateActionBarTitle(text: String, color: Int = getProperStatusBarColor()) {
@@ -941,8 +938,21 @@ fun BaseSimpleActivity.renameFile(
                 try {
                     ensureBackgroundThread {
                         val success = renameDocumentSdk30(oldPath, newPath)
-                        runOnUiThread {
-                            callback?.invoke(success, Android30RenameFormat.NONE)
+                        if (success) {
+                            updateInMediaStore(oldPath, newPath)
+                            rescanPath(newPath) {
+                                runOnUiThread {
+                                    callback?.invoke(true, Android30RenameFormat.NONE)
+                                }
+                                if (!oldPath.equals(newPath, true)) {
+                                    deleteFromMediaStore(oldPath)
+                                }
+                                scanPathRecursively(newPath)
+                            }
+                        } else {
+                            runOnUiThread {
+                                callback?.invoke(false, Android30RenameFormat.NONE)
+                            }
                         }
                     }
                 } catch (e: Exception) {
@@ -952,11 +962,6 @@ fun BaseSimpleActivity.renameFile(
                     }
                 }
             }
-        }
-    } else if (isRestrictedWithSAFSdk30(oldPath)) {
-        runOnUiThread {
-            toast(R.string.rename_in_sd_card_system_restriction)
-            callback?.invoke(false, Android30RenameFormat.NONE)
         }
     } else if (needsStupidWritePermissions(newPath)) {
         handleSAFDialog(newPath) {
@@ -1041,7 +1046,11 @@ private fun BaseSimpleActivity.renameCasually(
                 }
             }
         } else {
-            showErrorToast(exception)
+            if (isRestrictedWithSAFSdk30(oldPath) && exception is IOException) {
+                toast(R.string.rename_internal_system_restriction)
+            } else {
+                showErrorToast(exception)
+            }
             callback?.invoke(false, Android30RenameFormat.NONE)
         }
         return
