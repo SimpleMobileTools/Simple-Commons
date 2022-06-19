@@ -340,7 +340,7 @@ fun Activity.launchViewIntent(url: String) {
     ensureBackgroundThread {
         Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
             try {
-                startActivity(intent)
+                startActivity(this)
             } catch (e: ActivityNotFoundException) {
                 toast(R.string.no_browser_found)
             } catch (e: Exception) {
