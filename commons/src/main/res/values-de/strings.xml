@@ -14,8 +14,8 @@
     <string name="edit_with">Bearbeiten mit</string>
     <string name="edit">Bearbeiten</string>
     <string name="no_app_found">Keine passende App gefunden</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">Kein Browser gefunden</string>
+    <string name="no_email_client_found">Kein E-Mail-Client gefunden</string>
     <string name="set_as">Festlegen als</string>
     <string name="copy_to_clipboard">In die Zwischenablage kopieren</string>
     <string name="copy_number_to_clipboard">Kopiere die Nummer in die Zwischenablage</string>
@@ -101,7 +101,7 @@
     <string name="type_2_characters">Du musst mindestens 2 Zeichen eingeben, um die Suche zu starten.</string>
     <!-- Filters -->
     <string name="filter">Filter</string>
-    <string name="filter_pro">Filter (Pro)</string>
+    <string name="filter_pro">Filter (Profi)</string>
     <string name="no_items_found">Keine Elemente gefunden.</string>
     <string name="change_filter">Filter ändern</string>
     <!-- Permissions -->
@@ -185,7 +185,7 @@
     <string name="system_folder_restriction">Das System lässt den Vorgang in diesem Ordner nicht zu, bitte wählen Sie einen anderen Ordner</string>
     <string name="system_folder_copy_restriction">Das System lässt das Kopieren in diesen Ordner nicht zu, bitte wählen Sie einen anderen Ordner</string>
     <string name="rename_in_sd_card_system_restriction">Das System erlaubt keine Umbenennung in diesem Ordner</string>
-    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
+    <string name="rename_internal_system_restriction">Ordner auf dem internen Speicher können nicht direkt umbenannt werden, nur Unterordner</string>
     <!-- File picker -->
     <string name="select_folder">Ordner auswählen</string>
     <string name="select_file">Datei auswählen</string>
@@ -948,7 +948,7 @@
     <string name="apng_title">APNG Android (animierte WebP-Unterstützung)</string>
     <string name="pdf_viewer_title">Android PdfViewer (PDF-Betrachter)</string>
     <string name="m3u_parser_title">M3U-Parser (Bearbeitung von m3u-Wiedergabelisten-Dateien)</string>
-    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="android_lame_title">AndroidLame (mp3-Encoder)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">Veraltet: Diese Version der App wird nicht länger unterstützt. Hole dir die Pro-Version unter https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Vergiss nicht, dass Dir der Betrag erstattet wird, wenn du eine bezahlte App innerhalb von zwei Stunden wieder deinstallierst. Falls du später eine Rückerstattung wünschst, kontaktiere uns einfach unter hello@simplemobiletools.com, und du wirst sie bekommen. So kann man ganz einfach die App ausprobieren :)</string>
