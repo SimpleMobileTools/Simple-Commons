@@ -186,7 +186,7 @@
     <string name="system_folder_copy_restriction">Il sistema non permette di copiare in questa cartella, sceglietene un\'altra</string>
     <string name="rename_in_sd_card_system_restriction">Il sistema non permette di rinominare in questa cartella</string>
     <string name="rename_internal_system_restriction">Impossibile rinominare le cartelle direttamente sulla memoria interna, solo le sottocartelle</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
+    <string name="cannot_rename_folder">Impossibile rinominare questa cartella</string>
     <!-- File picker -->
     <string name="select_folder">Seleziona una cartella</string>
     <string name="select_file">Seleziona un file</string>
@@ -220,7 +220,7 @@
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Seleziona archiviazione</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Memoria</string>
     <string name="internal">Interna</string>
     <string name="sd_card">Scheda SD</string>
     <string name="root">Root</string>
