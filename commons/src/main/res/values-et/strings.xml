@@ -192,7 +192,7 @@
     <string name="system_folder_copy_restriction">Süsteem ei võimalda sellesse kausta kopeerida, palun vali mõni muu kaust</string>
     <string name="rename_in_sd_card_system_restriction">Süsteem ei võimalda selle kausta nime muuta</string>
     <string name="rename_internal_system_restriction">Kaustu ei saa ümber nimetada otse sisemälus, seda saad teha ainult alamkaustades</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
+    <string name="cannot_rename_folder">Selle kausta nime ei saa muuta</string>
     <!-- File picker -->
     <string name="select_folder">Vali kaust</string>
     <string name="select_file">Vali fail</string>
@@ -226,7 +226,7 @@
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Vali salvestusruum</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Andmehoidla</string>
     <string name="internal">Sisemine</string>
     <string name="sd_card">SD-kaart</string>
     <string name="root">Root</string>
@@ -897,7 +897,7 @@
     <string name="why_upgrade_private_contact_sharing">Valikuline privaatsete kontaktide jagamine meie rakenduste vahel</string>
     <string name="why_upgrade_customizable_contact_ringtones">Kohandatavad helinad kontaktidele</string>
     <string name="why_upgrade_contact_filtering">Kontaktide otsing</string>
-    <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
+    <string name="why_upgrade_contact_private_contacts">Privaatselt salvestatud kontaktid</string>
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Tööde loendid</string>
     <string name="why_upgrade_different_note_per_widget">Erinevad märkmed ja värvid iga vidina kohta</string>
@@ -943,9 +943,9 @@
     <string name="audio_record_view_title">Audio Record View (heli visualiseerimine)</string>
     <string name="sms_mms_title">SMS MMS (SMS- ja MMS-sõnumite käsitlemine)</string>
     <string name="apng_title">APNG Android (animeeritud WebP tugi)</string>
-    <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
-    <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
-    <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
+    <string name="pdf_viewer_title">Android PdfViewer (PDF failide kuvamise teek)</string>
+    <string name="m3u_parser_title">M3U Parser (m3u esitusloendi käitleja)</string>
+    <string name="android_lame_title">AndroidLame (mp3 kodeerija)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">AEGUNUD: Selle rakenduse versiooni arendus on lõppenud, laadi PRO-versioon aadressilt https://play.google.com/store/apps/details\?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Palun arvesta, et kui eemaldad tasulise rakenduse nutiseadmest 2 tunni jooksul, siis ostusumma tagastatakse automaatselt. Kui soovit tagastust hiljem, siis saada e-kiri hello@simplemobiletools.com aadressile ning korraldame tagastuse. Mõlemal juhul on sul võimalik meie tasulisi rakendusi testida :)</string>
