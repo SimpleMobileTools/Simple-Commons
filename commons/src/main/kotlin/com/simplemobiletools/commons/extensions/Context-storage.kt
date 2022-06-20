@@ -159,7 +159,8 @@ fun Context.isPathOnOTG(path: String) = otgPath.isNotEmpty() && path.startsWith(
 fun Context.isPathOnInternalStorage(path: String) = internalStoragePath.isNotEmpty() && path.startsWith(internalStoragePath)
 
 fun Context.getSAFOnlyDirs(): List<String> {
-    return DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$internalStoragePath$it" }
+    return DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$internalStoragePath$it" } +
+        DIRS_ACCESSIBLE_ONLY_WITH_SAF.map { "$sdCardPath$it" }
 }
 
 fun Context.isSAFOnlyRoot(path: String): Boolean {
@@ -213,7 +214,7 @@ fun isAndroidDataDir(path: String): Boolean {
 fun Context.storeAndroidTreeUri(path: String, treeUri: String) {
     return when {
         isPathOnOTG(path) -> if (isAndroidDataDir(path)) baseConfig.otgAndroidDataTreeUri = treeUri else baseConfig.otgAndroidObbTreeUri = treeUri
-        isPathOnSD(path) -> if (isAndroidDataDir(path)) baseConfig.sdAndroidDataTreeUri = treeUri else baseConfig.otgAndroidObbTreeUri = treeUri
+        isPathOnSD(path) -> if (isAndroidDataDir(path)) baseConfig.sdAndroidDataTreeUri = treeUri else baseConfig.sdAndroidObbTreeUri = treeUri
         else -> if (isAndroidDataDir(path)) baseConfig.primaryAndroidDataTreeUri = treeUri else baseConfig.primaryAndroidObbTreeUri = treeUri
     }
 }
