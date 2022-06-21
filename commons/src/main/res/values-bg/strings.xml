@@ -1,240 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
-    <string name="nothing">Nothing</string>
-    <string name="later">Later</string>
-    <string name="save_as">Save as</string>
-    <string name="file_saved">File saved successfully</string>
-    <string name="invalid_file_format">Invalid file format</string>
-    <string name="out_of_memory_error">Out of memory error</string>
-    <string name="an_error_occurred">An error occurred: %s</string>
-    <string name="error">Error: %s</string>
-    <string name="open_with">Open with</string>
-    <string name="edit_with">Edit with</string>
-    <string name="edit">Edit</string>
-    <string name="no_app_found">No valid app found</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
-    <string name="set_as">Set as</string>
-    <string name="copy_to_clipboard">Copy to clipboard</string>
-    <string name="copy_number_to_clipboard">Copy number to clipboard</string>
-    <string name="value_copied_to_clipboard">Value copied to clipboard</string>
-    <string name="value_copied_to_clipboard_show">Value copied to clipboard:\n%s</string>
-    <string name="dial_number">Dial number</string>
-    <string name="unknown">Unknown</string>
-    <string name="always">Always</string>
-    <string name="never">Never</string>
-    <string name="details">Details</string>
-    <string name="notes">Notes</string>
-    <string name="deleting_folder">Deleting folder \'%s\'</string>
-    <string name="none">None</string>
-    <string name="label">Label</string>
-    <string name="transparent">Transparent</string>
-    <string name="transparent_color">Transparent color</string>
-    <string name="select_a_different_color">Select a different color</string>
-    <string name="download">Download</string>
-    <string name="notification">Notification</string>
-    <string name="notifications">Notifications</string>
-    <string name="email">Email</string>
-    <string name="previous">Previous</string>
-    <string name="playpause">Play / Pause</string>
-    <string name="next">Next</string>
-    <string name="number">Number</string>
-    <string name="no_contacts_found">No contacts found</string>
-    <string name="request_the_required_permissions">Request the required permissions</string>
-    <string name="no_access_to_contacts">The app could not access your contacts</string>
-    <string name="no_phone_call_permission">App does not have the permission to initiate phone calls, please grant it in the device settings</string>
-    <string name="insert_text_here">Insert text here</string>
-    <string name="call_person">Call %s</string>
-    <string name="zero">Zero</string>
-    <string name="one">One</string>
-    <string name="two">Two</string>
-    <string name="three">Three</string>
-    <string name="four">Four</string>
-    <string name="five">Five</string>
-    <string name="six">Six</string>
-    <string name="seven">Seven</string>
-    <string name="eight">Eight</string>
-    <string name="nine">Nine</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
-
+    <string name="cancel">Отмяна</string>
+    <string name="nothing">Нищо</string>
+    <string name="later">По-късно</string>
+    <string name="save_as">Запазване като</string>
+    <string name="file_saved">Файлът е запазен успешно</string>
+    <string name="invalid_file_format">Невалиден файлов формат</string>
+    <string name="out_of_memory_error">Грешка от липса на памет</string>
+    <string name="an_error_occurred">Възникна грешка: %s</string>
+    <string name="error">Грешка: %s</string>
+    <string name="open_with">Отваряне с</string>
+    <string name="edit_with">Редакция с</string>
+    <string name="edit">Редакция</string>
+    <string name="no_app_found">Не е намерено валидно приложение</string>
+    <string name="no_browser_found">Не е намерен браузър</string>
+    <string name="no_email_client_found">Не е намерен имейл клиент</string>
+    <string name="set_as">Задаване като</string>
+    <string name="copy_to_clipboard">Копиране в клипборда</string>
+    <string name="copy_number_to_clipboard">Копиране на номера в клипборда</string>
+    <string name="value_copied_to_clipboard">Стойността е копирана в клипборда</string>
+    <string name="value_copied_to_clipboard_show">Стойност, копирана в клипборда:
+\n%s</string>
+    <string name="dial_number">Набиране на номер</string>
+    <string name="unknown">Неизвестно</string>
+    <string name="always">Винаги</string>
+    <string name="never">Никога</string>
+    <string name="details">Подробности</string>
+    <string name="notes">Бележки</string>
+    <string name="deleting_folder">Изтриване на папка „%s“</string>
+    <string name="none">Нищо</string>
+    <string name="label">Етикет</string>
+    <string name="transparent">Прозрачно</string>
+    <string name="transparent_color">Прозрачен цвят</string>
+    <string name="select_a_different_color">Избор на различен цвят</string>
+    <string name="download">Изтегляне</string>
+    <string name="notification">Известие</string>
+    <string name="notifications">Известия</string>
+    <string name="email">Имейл</string>
+    <string name="previous">Предишно</string>
+    <string name="playpause">Пускане / Пауза</string>
+    <string name="next">Следващо</string>
+    <string name="number">Номер</string>
+    <string name="no_contacts_found">Няма намерени контакти</string>
+    <string name="request_the_required_permissions">Поискване на необходимите разрешения</string>
+    <string name="no_access_to_contacts">Неуспешен достъп до контактите Ви</string>
+    <string name="no_phone_call_permission">Приложението няма позволение за започване на телефонни обаждания, разрешете в настройките на устройството</string>
+    <string name="insert_text_here">Вмъкване на текст тук</string>
+    <string name="call_person">Повикване %s</string>
+    <string name="zero">Нула</string>
+    <string name="one">Едно</string>
+    <string name="two">Две</string>
+    <string name="three">Три</string>
+    <string name="four">Четири</string>
+    <string name="five">Пет</string>
+    <string name="six">Шест</string>
+    <string name="seven">Седем</string>
+    <string name="eight">Осем</string>
+    <string name="nine">Девет</string>
+    <string name="value_cannot_be_empty">Стойността не може да бъде празна</string>
     <!-- Emails -->
-    <string name="home">Home</string>
-    <string name="work">Work</string>
-
+    <string name="home">Начало</string>
+    <string name="work">Работа</string>
     <!-- Phone numbers -->
-    <string name="mobile">Mobile</string>
-    <string name="main_number">Main</string>
-    <string name="work_fax">Work Fax</string>
-    <string name="home_fax">Home Fax</string>
-    <string name="pager">Pager</string>
-    <string name="no_phone_number_found">No phone number has been found</string>
-
+    <string name="mobile">Мобилен</string>
+    <string name="main_number">Основен</string>
+    <string name="work_fax">Работен факс</string>
+    <string name="home_fax">Домашен факс</string>
+    <string name="pager">Пейджър</string>
+    <string name="no_phone_number_found">Не е намерен телефонен номер</string>
     <!-- View types -->
-    <string name="change_view_type">Change view type</string>
-    <string name="grid">Grid</string>
-    <string name="uneven_grid">Uneven Grid</string>
-    <string name="list">List</string>
-    <string name="increase_column_count">Increase column count</string>
-    <string name="reduce_column_count">Reduce column count</string>
-    <string name="change_cover_image">Change cover image</string>
-    <string name="select_photo">Select photo</string>
-
+    <string name="change_view_type">Промяна на изгледа</string>
+    <string name="grid">Решетка</string>
+    <string name="uneven_grid">Неравномерна решетка</string>
+    <string name="list">Списък</string>
+    <string name="increase_column_count">Увеличаване на броя на колоните</string>
+    <string name="reduce_column_count">Намаляване на броя на колоните</string>
+    <string name="change_cover_image">Промяна на корицата</string>
+    <string name="select_photo">Избор на снимка</string>
     <!-- Blocked numbers -->
-    <string name="manage_blocked_numbers">Manage blocked numbers</string>
-    <string name="not_blocking_anyone">You are not blocking anyone.</string>
-    <string name="add_a_blocked_number">Add a blocked number</string>
-    <string name="block_number">Block number</string>
-    <string name="block_numbers">Block numbers</string>
-    <string name="blocked_numbers">Blocked numbers</string>
-    <string name="export_blocked_numbers">Export blocked numbers</string>
-    <string name="import_blocked_numbers">Import blocked numbers</string>
-    <string name="must_make_default_dialer">You have to make this app the default dialer app to make use of blocked numbers.</string>
-    <string name="set_as_default">Set as default</string>
-    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
-
+    <string name="manage_blocked_numbers">Управление на блокирани номера</string>
+    <string name="not_blocking_anyone">Не блокирате никого.</string>
+    <string name="add_a_blocked_number">Добавяне на блокиран номер</string>
+    <string name="block_number">Блокиране на номер</string>
+    <string name="block_numbers">Блокиране на номера</string>
+    <string name="blocked_numbers">Блокирани номера</string>
+    <string name="export_blocked_numbers">Експортиране на блокирани номера</string>
+    <string name="import_blocked_numbers">Импортиране на блокирани номера</string>
+    <string name="must_make_default_dialer">Трябва да направите приложението за набиране по подразбиране, за да се възползвате от блокираните номера.</string>
+    <string name="set_as_default">Задаване по подразбиране</string>
+    <string name="block_confirmation">Сигурни ли сте, че искате да блокирате \"%s\"\?</string>
+    <string name="block_unknown_calls">Блокиране на повиквания от незапазени контакти</string>
+    <string name="block_unknown_messages">Блокиране на съобщения от незапазени контакти</string>
     <!-- Favorites -->
-    <string name="favorites">Favorites</string>
-    <string name="add_favorites">Add favorites</string>
-    <string name="add_to_favorites">Add to favorites</string>
-    <string name="remove_from_favorites">Remove from favorites</string>
-
+    <string name="favorites">Любими</string>
+    <string name="add_favorites">Добавяне на любими</string>
+    <string name="add_to_favorites">Добавяне към любими</string>
+    <string name="remove_from_favorites">Премахване от любими</string>
     <!-- Search -->
-    <string name="search">Search</string>
-    <string name="type_2_characters">Type in at least 2 characters to start the search.</string>
-
+    <string name="search">Търсене</string>
+    <string name="type_2_characters">Въведете поне 2 символа, за да започне търсенето.</string>
     <!-- Filters -->
-    <string name="filter">Filter</string>
-    <string name="filter_pro">Filter (Pro)</string>
-    <string name="no_items_found">No items found.</string>
-    <string name="change_filter">Change filter</string>
-
+    <string name="filter">Филтър</string>
+    <string name="filter_pro">Филтър (Pro)</string>
+    <string name="no_items_found">Няма намерени елементи.</string>
+    <string name="change_filter">Промяна на филтър</string>
     <!-- Permissions -->
-    <string name="no_storage_permissions">Storage permission is required</string>
-    <string name="no_contacts_permission">Contacts permission is required</string>
-    <string name="no_camera_permissions">Camera permission is required</string>
-    <string name="no_audio_permissions">Audio permission is required</string>
-
+    <string name="no_storage_permissions">Необходимо е разрешение за съхранение</string>
+    <string name="no_contacts_permission">Необходимо е разрешение за контакти</string>
+    <string name="no_camera_permissions">Необходимо е разрешение за камера</string>
+    <string name="no_audio_permissions">Необходимо е разрешение за аудио</string>
     <!-- Renaming -->
-    <string name="rename_file">Rename file</string>
-    <string name="rename_folder">Rename folder</string>
-    <string name="rename_file_error">Could not rename the file</string>
-    <string name="rename_folder_error">Could not rename the folder</string>
-    <string name="rename_folder_empty">Folder name must not be empty</string>
-    <string name="rename_folder_exists">A folder with that name already exists</string>
-    <string name="rename_folder_root">Cannot rename the root folder of a storage</string>
-    <string name="rename_folder_ok">Folder renamed successfully</string>
-    <string name="renaming_folder">Renaming folder</string>
-    <string name="filename_cannot_be_empty">Filename cannot be empty</string>
-    <string name="filename_invalid_characters">Filename contains invalid characters</string>
-    <string name="filename_invalid_characters_placeholder">Filename \'%s\' contains invalid characters</string>
-    <string name="extension_cannot_be_empty">Extension cannot be empty</string>
-    <string name="source_file_doesnt_exist">Source file %s doesn\'t exist</string>
+    <string name="rename_file">Преименуване на файл</string>
+    <string name="rename_folder">Преименуване на папка</string>
+    <string name="rename_file_error">Неуспешно преименуване на файл</string>
+    <string name="rename_folder_error">Неуспешно преименуване на папка</string>
+    <string name="rename_folder_empty">Името на папката не трябва да е празно</string>
+    <string name="rename_folder_exists">Вече съществува папка с това име</string>
+    <string name="rename_folder_root">Не може да се преименува главната папка на хранилище</string>
+    <string name="rename_folder_ok">Папката е преименувана успешно</string>
+    <string name="renaming_folder">Преименуване на папка</string>
+    <string name="filename_cannot_be_empty">Името на файла не може да бъде празно</string>
+    <string name="filename_invalid_characters">Името на файла съдържа невалидни символи</string>
+    <string name="filename_invalid_characters_placeholder">Името на файл „%s“ съдържа невалидни символи</string>
+    <string name="extension_cannot_be_empty">Разширението не може да бъде празно</string>
+    <string name="source_file_doesnt_exist">Изходният файл %s не съществува</string>
     <string name="prepend_filenames">Prepend filenames</string>
     <string name="append_filenames">Append filenames</string>
     <string name="simple_renaming">Simple renaming</string>
     <string name="pattern_renaming">Pattern</string>
-    <string name="string_to_add">String to add</string>
-    <string name="rename_date_time_pattern">%Y - year\n%M - month\n%D - day\n%h - hour\n%m - minute\n%s - second\n%i - number increasing from 1</string>
-    <string name="filename_without_txt">Filename (without .txt)</string>
-    <string name="filename_without_json">Filename (without .json)</string>
-    <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
-
+    <string name="string_to_add">Низ за добавяне</string>
+    <string name="rename_date_time_pattern">%Y - година
+\n%M - месец
+\n%D - ден
+\n%h - час
+\n%m - минута
+\n%s - секунда
+\n%i - число, нарастващо от 1</string>
+    <string name="filename_without_txt">Име на файл (без .txt)</string>
+    <string name="filename_without_json">Име на файл (без .json)</string>
+    <string name="cannot_hide_files">От Android 11 вече не можете да скривате файлове и папки по този начин</string>
     <!-- Copy / Move -->
-    <string name="copy">Copy</string>
-    <string name="move">Move</string>
-    <string name="copy_move">Copy / Move</string>
-    <string name="copy_to">Copy to</string>
-    <string name="move_to">Move to</string>
-    <string name="source">Source</string>
-    <string name="destination">Destination</string>
-    <string name="select_destination">Select destination</string>
-    <string name="click_select_destination">Click here to select destination</string>
-    <string name="invalid_destination">Could not write to the selected destination</string>
-    <string name="please_select_destination">Please select a destination</string>
-    <string name="source_and_destination_same">Source and destination cannot be the same</string>
-    <string name="copy_failed">Could not copy the files</string>
-    <string name="copying">Copying…</string>
-    <string name="copying_success">Files copied successfully</string>
-    <string name="copying_success_one">File copied successfully</string>
-    <string name="copy_move_failed">An error occurred</string>
-    <string name="moving">Moving…</string>
-    <string name="moving_success">Files moved successfully</string>
-    <string name="moving_success_one">File moved successfully</string>
-    <string name="moving_success_partial">Some files could not be moved</string>
-    <string name="copying_success_partial">Some files could not be copied</string>
-    <string name="no_files_selected">No files selected</string>
-    <string name="saving">Saving…</string>
-    <string name="could_not_create_folder">Could not create folder %s</string>
-    <string name="could_not_create_file">Could not create file %s</string>
-    <string name="no_new_items">No new items have been found</string>
-    <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
-    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
-
+    <string name="copy">Копиране</string>
+    <string name="move">Преместване</string>
+    <string name="copy_move">Копиране / Преместване</string>
+    <string name="copy_to">Копиране към</string>
+    <string name="move_to">Преместване към</string>
+    <string name="source">Източник</string>
+    <string name="destination">Дестинация</string>
+    <string name="select_destination">Избор на дестинация</string>
+    <string name="click_select_destination">Кликнете тук, за избор на дестинация</string>
+    <string name="invalid_destination">Не можа да се запише на избраната дестинация</string>
+    <string name="please_select_destination">Моля, изберете дестинация</string>
+    <string name="source_and_destination_same">Източникът и дестинацията не могат да бъдат еднакви</string>
+    <string name="copy_failed">Неуспешно копиране на файловете</string>
+    <string name="copying">Копира се…</string>
+    <string name="copying_success">Файловете са копирани успешно</string>
+    <string name="copying_success_one">Файлът е копиран успешно</string>
+    <string name="copy_move_failed">Възникна грешка</string>
+    <string name="moving">Премества се…</string>
+    <string name="moving_success">Файловете са преместени успешно</string>
+    <string name="moving_success_one">Файлът е преместен успешно</string>
+    <string name="moving_success_partial">Някои файлове не можаха да бъдат преместени</string>
+    <string name="copying_success_partial">Някои файлове не можаха да бъдат копирани</string>
+    <string name="no_files_selected">Няма избрани файлове</string>
+    <string name="saving">Запазва се…</string>
+    <string name="could_not_create_folder">Неуспешно създаване на папка %s</string>
+    <string name="could_not_create_file">Неуспешно създаване на файл %s</string>
+    <string name="no_new_items">Не са намерени нови елементи</string>
+    <string name="no_space">Дестинацията няма достатъчно свободно място.
+\nНеобходимо %1$s, налично %2$s</string>
+    <string name="system_service_disabled">Системната услуга за избор на файлове и папки не е налична</string>
     <!-- Create new -->
-    <string name="create_new">Create new</string>
-    <string name="folder">Folder</string>
-    <string name="file">File</string>
-    <string name="create_new_folder">Create new folder</string>
-    <string name="name_taken">A file or folder with that name already exists</string>
-    <string name="invalid_name">The name contains invalid characters</string>
-    <string name="empty_name">Please enter a name</string>
-    <string name="unknown_error_occurred">An unknown error occurred</string>
-
+    <string name="create_new">Създаване на нов</string>
+    <string name="folder">Папка</string>
+    <string name="file">Файл</string>
+    <string name="create_new_folder">Създаване на нова папка</string>
+    <string name="name_taken">Вече съществува файл или папка с това име</string>
+    <string name="invalid_name">Името съдържа невалидни символи</string>
+    <string name="empty_name">Моля, въведете име</string>
+    <string name="unknown_error_occurred">Възникна неизвестна грешка</string>
     <!-- File operation conflicts -->
-    <string name="file_already_exists">File \"%s\" already exists</string>
-    <string name="file_already_exists_overwrite">File \"%s\" already exists. Overwrite?</string>
-    <string name="folder_already_exists">Folder \"%s\" already exists</string>
-    <string name="merge">Merge</string>
-    <string name="keep_both">Keep both</string>
-    <string name="overwrite">Overwrite</string>
-    <string name="skip">Skip</string>
+    <string name="file_already_exists">Файл \"%s\" вече съществува</string>
+    <string name="file_already_exists_overwrite">Файл \"%s\" вече съществува. Презаписване\?</string>
+    <string name="folder_already_exists">Папка \"%s\" вече съществува</string>
+    <string name="merge">Сливане</string>
+    <string name="keep_both">Запазване на двете</string>
+    <string name="overwrite">Презаписване</string>
+    <string name="skip">Пропускане</string>
     <string name="append">Append with \'_1\'</string>
-    <string name="apply_to_all">Apply to all</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
-    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
-    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
-    <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
-
+    <string name="apply_to_all">Приложи към всички</string>
+    <string name="system_folder_restriction">Системата не позволява операцията в тази папка, моля, изберете друга</string>
+    <string name="system_folder_copy_restriction">Системата не позволява копиране в тази папка, моля, изберете друга</string>
+    <string name="rename_in_sd_card_system_restriction">Системата не позволява преименуване в тази папка</string>
+    <string name="rename_internal_system_restriction">Не може да се преименуват папки директно на вътрешно хранилище, само подпапки</string>
+    <string name="cannot_rename_folder">Тази папка не може да се преименува</string>
     <!-- File picker -->
-    <string name="select_folder">Select a folder</string>
-    <string name="select_file">Select a file</string>
-    <string name="confirm_storage_access_title">Confirm external storage access</string>
-    <string name="confirm_folder_access_title">Confirm folder access</string>
-    <string name="confirm_storage_access_text">Please choose the top folder of the SD card on the next screen, to grant write access</string>
-    <string name="confirm_storage_access_text_sd">If you don\'t see the SD card, try this</string>
+    <string name="select_folder">Избор на папка</string>
+    <string name="select_file">Избор на файл</string>
+    <string name="confirm_storage_access_title">Потвърдете достъпа до външно хранилище</string>
+    <string name="confirm_folder_access_title">Потвърдете достъпа до папка</string>
+    <string name="confirm_storage_access_text">Моля, изберете горната папка на SD картата на следващия екран, за да предоставите достъп за запис</string>
+    <string name="confirm_storage_access_text_sd">Ако не виждате SD картата, опитайте това</string>
     <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
     <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
     <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
     <string name="confirm_selection">Confirm selection</string>
     <string name="loading">Loading…</string>
     <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
-
     <plurals name="items">
         <item quantity="one">%d item</item>
         <item quantity="other">%d items</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d item</item>
         <item quantity="other">%d items</item>
     </plurals>
-
     <plurals name="deleting_items">
         <item quantity="one">Deleting %d item</item>
         <item quantity="other">Deleting %d items</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d contact</item>
         <item quantity="other">%d contacts</item>
     </plurals>
-
     <!-- Storages -->
     <string name="select_storage">Select storage</string>
     <string name="storage">Storage</string>
@@ -246,7 +237,6 @@
     <string name="app_on_sd_card">You seem to have the app installed on an SD card, that makes the app widgets unavailable. You won\'t even see them on the list of available widgets.
         It is a system limitation, so if you want to use the widgets, you have to move the app back on the internal storage.</string>
     <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
-
     <!-- File properties -->
     <string name="properties">Properties</string>
     <string name="path">Path</string>
@@ -261,7 +251,7 @@
     <string name="exposure_time">Exposure time</string>
     <string name="iso_speed">ISO speed</string>
     <string name="f_number">F-number</string>
-    <string name="camera">Camera</string>
+    <string name="camera">Камера</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Song title</string>
     <string name="gps_coordinates">GPS coordinates</string>
@@ -269,7 +259,6 @@
     <string name="remove_exif">Remove EXIF</string>
     <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
     <string name="exif_removed">EXIF values removed successfully</string>
-
     <!-- Color customization -->
     <string name="background_color">Background color</string>
     <string name="text_color">Text color</string>
@@ -290,7 +279,7 @@
     <string name="undo_changes">Undo changes</string>
     <string name="undo_changes_confirmation">Are you sure you want to undo your changes?</string>
     <string name="save_before_closing">You have unsaved changes. Save before exit?</string>
-    <string name="apply_to_all_apps">Apply colors to all Simple Apps</string>
+    <string name="apply_to_all_apps">Прилагане на цветове за всички Обикновени приложения</string>
     <string name="app_icon_color_warning">WARNING: Some launchers do not handle app icon customization properly. In case the icon will disappear, try launching the app via Google Play or some widget, if available.
         Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
     <string name="share_colors_success">Colors updated successfully. A new Theme called \'Shared\' has been added, please use that for updating all app colors in the future.</string>
@@ -300,7 +289,6 @@
             Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock this function and support the development. Thanks!
         ]]>
     </string>
-
     <!-- Themes -->
     <string name="light_theme">Light</string>
     <string name="dark_theme">Dark</string>
@@ -313,11 +301,9 @@
     <string name="custom">Custom</string>
     <string name="shared">Shared</string>
     <string name="system_default">System default</string>
-
     <!-- What's new -->
     <string name="whats_new">What\'s new</string>
     <string name="whats_new_disclaimer">* only the bigger updates are listed here, there are always some smaller improvements too</string>
-
     <!-- Actionbar items -->
     <string name="delete">Delete</string>
     <string name="remove">Remove</string>
@@ -352,7 +338,6 @@
     <string name="send_sms">Send SMS</string>
     <string name="send_email">Send email</string>
     <string name="call">Call</string>
-
     <!-- Sorting -->
     <string name="sort_by">Sort by</string>
     <string name="name">Name</string>
@@ -375,11 +360,12 @@
     <string name="full_name">Full name</string>
     <string name="use_custom_sorting">Use custom sorting</string>
     <string name="change_order">Change order</string>
-
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Are you sure you want to proceed with the deletion?</string>
-    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s into the Recycle Bin?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">Are you sure you want to delete %s?</string>
+    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Are you sure you want to move %s into the Recycle Bin?</string>
+    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Are you sure you want to delete this item?</string>
     <string name="are_you_sure_recycle_bin">Are you sure you want to move this item into the Recycle Bin?</string>
     <string name="do_not_ask_again">Do not ask again in this session</string>
@@ -387,12 +373,10 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="maybe">Maybe</string>
-
     <plurals name="delete_warning">
         <item quantity="one">WARNING: You are deleting %d folder</item>
         <item quantity="other">WARNING: You are deleting %d folders</item>
     </plurals>
-
     <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">Enter PIN</string>
@@ -419,7 +403,6 @@
     <string name="lock_folder_pro">Lock folder (Pro)</string>
     <string name="unlock_folder">Unlock folder</string>
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
-
     <!-- Times -->
     <string name="yesterday">Yesterday</string>
     <string name="today">Today</string>
@@ -433,7 +416,6 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
-
     <plurals name="seconds">
         <item quantity="one">%d second</item>
         <item quantity="other">%d seconds</item>
@@ -462,7 +444,6 @@
         <item quantity="one">%d year</item>
         <item quantity="other">%d years</item>
     </plurals>
-
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d second</item>
@@ -492,7 +473,6 @@
         <item quantity="one">%d year</item>
         <item quantity="other">%d years</item>
     </plurals>
-
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d second before</item>
@@ -522,7 +502,6 @@
         <item quantity="one">%d year before</item>
         <item quantity="other">%d years before</item>
     </plurals>
-
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d second</item>
@@ -552,7 +531,6 @@
         <item quantity="one">%d year</item>
         <item quantity="other">%d years</item>
     </plurals>
-
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Time remaining till the alarm goes off:\n%s</string>
     <string name="reminder_triggers_in">Time remaining till the reminder triggers:\n%s</string>
@@ -560,7 +538,6 @@
     <string name="alarm_warning">Please make sure the alarm works properly before relying on it. It could misbehave due to system restrictions related to battery saving.</string>
     <string name="reminder_warning">Please make sure the reminders work properly before relying on them. Check your device battery and notification settings, if there is nothing blocking the reminders, or killing the app in the background.</string>
     <string name="notifications_disabled">Notifications of this application are disabled. Please go in your device settings for enabling them.</string>
-
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
     <string name="snooze">Snooze</string>
@@ -573,10 +550,9 @@
     <string name="no_sound">No sound</string>
     <string name="during_day_at_hh_mm">During the day at hh:mm</string>
     <string name="during_day_at">During the day at %02d:%02d</string>
-
     <!-- Settings -->
     <string name="settings">Settings</string>
-    <string name="purchase_simple_thank_you">Purchase Simple Thank You</string>
+    <string name="purchase_simple_thank_you">Закупуване на Обикновено благодаря</string>
     <string name="general_settings">General</string>
     <string name="color_customization">Color customization</string>
     <string name="customize_colors">Customize colors</string>
@@ -618,7 +594,6 @@
     <string name="start_name_with_surname">Start name with surname</string>
     <string name="clear_cache">Clear cache</string>
     <string name="show_call_confirmation_dialog">Show a call confirmation dialog before initiating a call</string>
-
     <!-- Setting sections -->
     <string name="visibility">Visibility</string>
     <string name="security">Security</string>
@@ -633,7 +608,6 @@
     <string name="main_screen">Main screen</string>
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
-
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Manage shown tabs</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
@@ -644,7 +618,6 @@
     <string name="last_used_tab">Last used one</string>
     <string name="files_tab">Files</string>
     <string name="recent_files_tab">Recent files</string>
-
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restore this file</string>
     <string name="restore_selected_files">Restore selected files</string>
@@ -656,12 +629,10 @@
     <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
     <string name="show_the_recycle_bin">Show the Recycle Bin</string>
     <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
-
     <plurals name="moving_items_into_bin">
         <item quantity="one">Moving %d item into the Recycle Bin</item>
         <item quantity="other">Moving %d items into the Recycle Bin</item>
     </plurals>
-
     <!-- Import / Export -->
     <string name="importing">Importing…</string>
     <string name="exporting">Exporting…</string>
@@ -674,13 +645,11 @@
     <string name="no_entries_for_importing">No entries for importing have been found</string>
     <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
     <string name="no_entries_for_exporting">No entries for exporting have been found</string>
-
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
     <string name="confirm_usb_storage_access_text">Please choose the top folder of the USB device on the next screen, to grant access</string>
     <string name="wrong_root_selected_usb">Wrong folder selected, please select the main folder of your USB device</string>
-
     <!-- Dates -->
     <string name="january">January</string>
     <string name="february">February</string>
@@ -694,7 +663,6 @@
     <string name="october">October</string>
     <string name="november">November</string>
     <string name="december">December</string>
-
     <!-- in January -->
     <string name="in_january">in January</string>
     <string name="in_february">in February</string>
@@ -708,7 +676,6 @@
     <string name="in_october">in October</string>
     <string name="in_november">in November</string>
     <string name="in_december">in December</string>
-
     <string name="monday">Monday</string>
     <string name="tuesday">Tuesday</string>
     <string name="wednesday">Wednesday</string>
@@ -716,7 +683,6 @@
     <string name="friday">Friday</string>
     <string name="saturday">Saturday</string>
     <string name="sunday">Sunday</string>
-
     <string name="monday_letter">M</string>
     <string name="tuesday_letter">T</string>
     <string name="wednesday_letter">W</string>
@@ -724,7 +690,6 @@
     <string name="friday_letter">F</string>
     <string name="saturday_letter">S</string>
     <string name="sunday_letter">S</string>
-
     <string name="monday_short">Mon</string>
     <string name="tuesday_short">Tue</string>
     <string name="wednesday_short">Wed</string>
@@ -732,7 +697,6 @@
     <string name="friday_short">Fri</string>
     <string name="saturday_short">Sat</string>
     <string name="sunday_short">Sun</string>
-
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
     <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
@@ -744,7 +708,6 @@
     <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
     <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
     <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
-
     <!-- About -->
     <string name="about">About</string>
     <string name="website">Website</string>
@@ -768,7 +731,7 @@
     <string name="privacy_policy">Privacy policy</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="about_footer">Made with ❤️ in Slovakia</string>
     <string name="additional_info">Additional info</string>
     <string name="app_version">App version: %s</string>
     <string name="device_os">Device OS: %s</string>
@@ -780,8 +743,8 @@
         ]]>
     </string>
     <string name="purchase">Purchase</string>
-    <string name="order_simple_phone">Order Simple Phone</string>
-    <string name="update_thank_you">Please update Simple Thank You to the latest version</string>
+    <string name="order_simple_phone">Поръчка на Обикновен телефон</string>
+    <string name="update_thank_you">Моля, актуализирайте Обикновено благодаря до най-новата версия</string>
     <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
     <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
     <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
@@ -797,7 +760,6 @@
             The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
         ]]>
     </string>
-
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -810,29 +772,27 @@
             Thanks
         ]]>
     </string>
-
-    <string name="simple_app_launcher">Simple App Launcher</string>
-    <string name="simple_calculator">Simple Calculator</string>
-    <string name="simple_calendar">Simple Calendar</string>
-    <string name="simple_camera">Simple Camera</string>
-    <string name="simple_clock">Simple Clock</string>
-    <string name="simple_contacts">Simple Contacts</string>
-    <string name="simple_dialer">Simple Dialer</string>
-    <string name="simple_draw">Simple Draw</string>
-    <string name="simple_file_manager">Simple File Manager</string>
-    <string name="simple_flashlight">Simple Flashlight</string>
-    <string name="simple_gallery">Simple Gallery</string>
-    <string name="simple_keyboard">Simple Keyboard</string>
-    <string name="simple_music_player">Simple Music Player</string>
-    <string name="simple_notes">Simple Notes</string>
-    <string name="simple_sms_messenger">Simple SMS Messenger</string>
-    <string name="simple_thank_you">Simple Thank You</string>
-    <string name="simple_voice_recorder">Simple Voice Recorder</string>
-
-    <string name="app_launcher_short">App Launcher</string>
-    <string name="calculator_short">Calculator</string>
-    <string name="calendar_short">Calendar</string>
-    <string name="camera_short">Camera</string>
+    <string name="simple_app_launcher">Обикновен начален екран</string>
+    <string name="simple_calculator">Обикновен калкулатор</string>
+    <string name="simple_calendar">Обикновен календар</string>
+    <string name="simple_camera">Обикновена камера</string>
+    <string name="simple_clock">Обикновен часовник</string>
+    <string name="simple_contacts">Обикновени контакти</string>
+    <string name="simple_dialer">Обикновени повиквания</string>
+    <string name="simple_draw">Обикновено рисуване</string>
+    <string name="simple_file_manager">Обикновени файлове</string>
+    <string name="simple_flashlight">Обикновен фенер</string>
+    <string name="simple_gallery">Обикновена галерия</string>
+    <string name="simple_keyboard">Обикновена клавиатура</string>
+    <string name="simple_music_player">Обикновен музикален плейър</string>
+    <string name="simple_notes">Обикновени бележки</string>
+    <string name="simple_sms_messenger">Обикновени SMS съобщения</string>
+    <string name="simple_thank_you">Обикновено благодаря</string>
+    <string name="simple_voice_recorder">Обикновен диктофон</string>
+    <string name="app_launcher_short">Начален екран</string>
+    <string name="calculator_short">Калкулатор</string>
+    <string name="calendar_short">Календар</string>
+    <string name="camera_short">Камера</string>
     <string name="clock_short">Clock</string>
     <string name="contacts_short">Contacts</string>
     <string name="dialer_short">Dialer</string>
@@ -846,13 +806,11 @@
     <string name="sms_messenger_short">SMS Messenger</string>
     <string name="thank_you_short">Thank You</string>
     <string name="voice_recorder_short">Voice Recorder</string>
-
     <string name="sideloaded_app">
         <![CDATA[
             It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
         ]]>
     </string>
-
     <!-- FAQ -->
     <string name="frequently_asked_questions">Frequently asked questions</string>
     <string name="before_asking_question">Before you ask a question, please first read the</string>
@@ -887,7 +845,6 @@
         want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
     <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
     <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
-
     <!-- Contributors -->
     <string name="contributors">Contributors</string>
     <string name="translation">Translation</string>
@@ -900,7 +857,6 @@
             Thanks to all contributors and other supporters!
         ]]>
     </string>
-
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -945,7 +901,6 @@
     <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
     <string name="translation_chinese_cn">Chinese (Simplified)</string>
     <string name="translation_chinese_tw">Chinese (Traditional)</string>
-
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Get the Pro version now!</string>
     <string name="why_upgrade_basic_version">Basic</string>
@@ -954,20 +909,17 @@
     <string name="why_upgrade_no_internet_access">No internet access</string>
     <string name="why_upgrade_footer">+ 100% Money Back Guarantee</string>
     <string name="why_upgrade_improved_design">Improved design</string>
-
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
     <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
     <string name="why_upgrade_folder_locking">Individual folder locking</string>
     <string name="why_upgrade_printing_support">Printing support</string>
-
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Time zone support</string>
     <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
     <string name="why_upgrade_easy_event_importing">Easy event importing</string>
     <string name="why_upgrade_new_widgets">New widgets</string>
-
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
     <string name="why_upgrade_font_size_customization">Font size customization</string>
@@ -975,23 +927,19 @@
     <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
     <string name="why_upgrade_contact_filtering">Contact filtering</string>
     <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
-
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Checklists</string>
     <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
     <string name="why_upgrade_note_locking">Note locking</string>
-
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
     <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
     <string name="why_upgrade_file_compression">File compression support</string>
     <string name="why_upgrade_recents_tab">Tab with recent files</string>
-
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Background color customization</string>
     <string name="why_upgrade_file_importing">File importing support</string>
     <string name="why_upgrade_zooming">Zooming</string>
-
     <!-- License -->
     <string name="notice">This app uses the following third party libraries to make my life easier. Thank you.</string>
     <string name="third_party_licences">Third party licences</string>
@@ -1027,11 +975,9 @@
     <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
-
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
-
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
+    <string name="developer_description">Група обикновени приложения с отворен код за Android с гъвкави приспособления, без реклами и ненужни разрешения.</string>
 </resources>
