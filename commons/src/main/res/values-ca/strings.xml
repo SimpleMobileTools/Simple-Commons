@@ -192,7 +192,7 @@
     <string name="system_folder_copy_restriction">El sistema no permet copiar en aquesta carpeta. Trieu-ne una altra</string>
     <string name="rename_in_sd_card_system_restriction">El sistema no permet canviar el nom en aquesta carpeta</string>
     <string name="rename_internal_system_restriction">No es poden canviar els noms de les carpetes directament a l\'emmagatzematge intern, només les subcarpetes</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
+    <string name="cannot_rename_folder">No s\'ha pogut canviar el nom d\'aquesta carpeta</string>
     <!-- File picker -->
     <string name="select_folder">Selecciona una carpeta</string>
     <string name="select_file">Seleccioneu un fitxer</string>
@@ -226,7 +226,7 @@
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Seleccioneu l\'emmagatzematge</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Emmagatzematge</string>
     <string name="internal">Intern</string>
     <string name="sd_card">Targeta SD</string>
     <string name="root">Arrel</string>
