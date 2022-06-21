@@ -1046,7 +1046,7 @@ private fun BaseSimpleActivity.renameCasually(
                 }
             }
         } else {
-            if (File(oldPath).isDirectory && isRestrictedWithSAFSdk30(oldPath) && exception is IOException) {
+            if (exception is IOException && File(oldPath).isDirectory && isRestrictedWithSAFSdk30(oldPath)) {
                 toast(R.string.cannot_rename_folder)
             } else {
                 showErrorToast(exception)
