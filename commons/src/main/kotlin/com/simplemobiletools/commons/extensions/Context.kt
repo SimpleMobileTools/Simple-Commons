@@ -31,6 +31,8 @@ import android.telecom.TelecomManager
 import android.telephony.PhoneNumberUtils
 import android.view.View
 import android.view.WindowManager
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.biometric.BiometricManager
@@ -993,4 +995,15 @@ fun Context.getPhoneNumberTypeText(type: Int, label: String): String {
             }
         )
     }
+}
+
+fun Context.updateBottomTabItemColors(view: View?, isActive: Boolean) {
+    val color = if (isActive) {
+        getProperPrimaryColor()
+    } else {
+        getProperTextColor()
+    }
+
+    view?.findViewById<ImageView>(R.id.tab_item_icon)?.applyColorFilter(color)
+    view?.findViewById<TextView>(R.id.tab_item_label)?.setTextColor(color)
 }
