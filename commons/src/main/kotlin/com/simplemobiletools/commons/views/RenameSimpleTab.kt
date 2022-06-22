@@ -102,8 +102,6 @@ class RenameSimpleTab(context: Context, attrs: AttributeSet) : RelativeLayout(co
                             if (android30Format != Android30RenameFormat.NONE) {
                                 stopLooping = true
                                 renameAllFiles(validPaths, append, valueToAdd, android30Format, callback)
-                            } else {
-                                activity?.toast(R.string.unknown_error_occurred)
                             }
                         }
                     }
