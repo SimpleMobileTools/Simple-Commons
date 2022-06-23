@@ -1106,7 +1106,7 @@ private fun BaseSimpleActivity.renameCasually(
                             val tempDestination = try {
                                 createTempFile(File(sourceFile.path)) ?: return@updateSDK30Uris
                             } catch (exception: Exception) {
-                                toast(R.string.unknown_error_occurred)
+                                showErrorToast(exception)
                                 callback?.invoke(false, Android30RenameFormat.NONE)
                                 return@updateSDK30Uris
                             }
