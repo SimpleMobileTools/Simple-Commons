@@ -92,8 +92,6 @@ class RenamePatternTab(context: Context, attrs: AttributeSet) : RelativeLayout(c
                                     currentIncrementalNumber = 1
                                     stopLooping = true
                                     renameAllFiles(validPaths, useMediaFileExtension, android30Format, callback)
-                                } else {
-                                    activity?.toast(R.string.unknown_error_occurred)
                                 }
                             }
                         }

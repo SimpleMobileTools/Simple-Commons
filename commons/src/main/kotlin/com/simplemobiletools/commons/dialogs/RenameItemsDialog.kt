@@ -76,7 +76,7 @@ class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<S
                                     continue
                                 }
 
-                                activity.renameFile(path, newPath, true) { success, useAndroid30Way ->
+                                activity.renameFile(path, newPath, true) { success, _ ->
                                     if (success) {
                                         pathsCnt--
                                         if (pathsCnt == 0) {
@@ -85,7 +85,6 @@ class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<S
                                         }
                                     } else {
                                         ignoreClicks = false
-                                        activity.toast(R.string.unknown_error_occurred)
                                         dismiss()
                                     }
                                 }

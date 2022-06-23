@@ -75,13 +75,11 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
 
                         updatedPaths.add(newPath)
                         ignoreClicks = true
-                        activity.renameFile(path, newPath, false) { success, useAndroid30Way ->
+                        activity.renameFile(path, newPath, false) { success, _ ->
                             ignoreClicks = false
                             if (success) {
                                 callback(newPath)
                                 dismiss()
-                            } else {
-                                activity.toast(R.string.unknown_error_occurred)
                             }
                         }
                     }
