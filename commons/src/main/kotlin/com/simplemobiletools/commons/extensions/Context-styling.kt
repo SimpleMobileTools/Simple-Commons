@@ -167,3 +167,13 @@ fun Context.toggleAppIconColor(appId: String, colorIndex: Int, color: Int, enabl
 }
 
 fun Context.getAppIconColors() = resources.getIntArray(R.array.md_app_icon_colors).toCollection(ArrayList())
+
+fun Context.getBottomTabsBackgroundColor(): Int {
+    val baseColor = baseConfig.backgroundColor
+    val bottomColor = if (baseColor == Color.WHITE) {
+        resources.getColor(R.color.bottom_tabs_light_background)
+    } else {
+        baseConfig.backgroundColor.lightenColor(4)
+    }
+    return bottomColor
+}
