@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ok">OK</string>
-    <string name="cancel">Отмяна</string>
+    <string name="ok">Добре</string>
+    <string name="cancel">Отказ</string>
     <string name="nothing">Нищо</string>
     <string name="later">По-късно</string>
     <string name="save_as">Запазване като</string>
-    <string name="file_saved">Файлът е запазен успешно</string>
+    <string name="file_saved">Файлът е запазен</string>
     <string name="invalid_file_format">Невалиден файлов формат</string>
     <string name="out_of_memory_error">Грешка от липса на памет</string>
     <string name="an_error_occurred">Възникна грешка: %s</string>
@@ -120,13 +120,13 @@
     <string name="rename_folder_empty">Името на папката не трябва да е празно</string>
     <string name="rename_folder_exists">Вече съществува папка с това име</string>
     <string name="rename_folder_root">Не може да се преименува главната папка на хранилище</string>
-    <string name="rename_folder_ok">Папката е преименувана успешно</string>
+    <string name="rename_folder_ok">Папката е преименувана</string>
     <string name="renaming_folder">Преименуване на папка</string>
     <string name="filename_cannot_be_empty">Името на файла не може да бъде празно</string>
-    <string name="filename_invalid_characters">Името на файла съдържа невалидни символи</string>
-    <string name="filename_invalid_characters_placeholder">Името на файл „%s“ съдържа невалидни символи</string>
+    <string name="filename_invalid_characters">Името на файла съдържа непозволени знаци</string>
+    <string name="filename_invalid_characters_placeholder">Името на файла „%s“ съдържа непозволени знаци</string>
     <string name="extension_cannot_be_empty">Разширението не може да бъде празно</string>
-    <string name="source_file_doesnt_exist">Изходният файл %s не съществува</string>
+    <string name="source_file_doesnt_exist">Изходния файл %s не съществува</string>
     <string name="prepend_filenames">Prepend filenames</string>
     <string name="append_filenames">Append filenames</string>
     <string name="simple_renaming">Simple renaming</string>
@@ -179,8 +179,8 @@
     <string name="file">Файл</string>
     <string name="create_new_folder">Създаване на нова папка</string>
     <string name="name_taken">Вече съществува файл или папка с това име</string>
-    <string name="invalid_name">Името съдържа невалидни символи</string>
-    <string name="empty_name">Моля, въведете име</string>
+    <string name="invalid_name">Името съдържа непозволени знаци</string>
+    <string name="empty_name">Въведете име</string>
     <string name="unknown_error_occurred">Възникна неизвестна грешка</string>
     <!-- File operation conflicts -->
     <string name="file_already_exists">Файл \"%s\" вече съществува</string>
@@ -196,7 +196,7 @@
     <string name="system_folder_copy_restriction">Системата не позволява копиране в тази папка, моля, изберете друга</string>
     <string name="rename_in_sd_card_system_restriction">Системата не позволява преименуване в тази папка</string>
     <string name="rename_internal_system_restriction">Не може да се преименуват папки директно на вътрешно хранилище, само подпапки</string>
-    <string name="cannot_rename_folder">Тази папка не може да се преименува</string>
+    <string name="cannot_rename_folder">Папката не може да бъде преименувана</string>
     <!-- File picker -->
     <string name="select_folder">Избор на папка</string>
     <string name="select_file">Избор на файл</string>
@@ -208,7 +208,7 @@
     <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
     <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
     <string name="confirm_selection">Confirm selection</string>
-    <string name="loading">Loading…</string>
+    <string name="loading">Зареждане…</string>
     <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
     <plurals name="items">
         <item quantity="one">%d item</item>
@@ -230,9 +230,9 @@
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Select storage</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Хранилище</string>
     <string name="internal">Internal</string>
-    <string name="sd_card">SD Card</string>
+    <string name="sd_card">Карта на SD</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Wrong folder selected, please select the main folder of your SD card</string>
     <string name="sd_card_usb_same">SD card and USB device paths cannot be the same</string>
@@ -246,17 +246,17 @@
     <string name="direct_children_count">Direct children count</string>
     <string name="files_count">Total files count</string>
     <string name="resolution">Resolution</string>
-    <string name="duration">Duration</string>
+    <string name="duration">Продължителност</string>
     <string name="artist">Artist</string>
     <string name="album">Album</string>
-    <string name="focal_length">Focal length</string>
-    <string name="exposure_time">Exposure time</string>
+    <string name="focal_length">Фокусно разстояние</string>
+    <string name="exposure_time">Ереме на експозиция</string>
     <string name="iso_speed">ISO speed</string>
     <string name="f_number">F-number</string>
     <string name="camera">Камера</string>
     <string name="exif">EXIF</string>
     <string name="song_title">Song title</string>
-    <string name="gps_coordinates">GPS coordinates</string>
+    <string name="gps_coordinates">Координати на GPS</string>
     <string name="altitude">Altitude</string>
     <string name="remove_exif">Remove EXIF</string>
     <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
@@ -309,7 +309,7 @@
     <!-- Actionbar items -->
     <string name="delete">Delete</string>
     <string name="remove">Remove</string>
-    <string name="rename">Rename</string>
+    <string name="rename">Преименуване</string>
     <string name="share">Share</string>
     <string name="share_via">Share via</string>
     <string name="select_all">Select all</string>
@@ -328,7 +328,7 @@
     <string name="print_pro">Print (Pro)</string>
     <string name="create_shortcut">Create shortcut</string>
     <string name="create_shortcut_pro">Create shortcut (Pro)</string>
-    <string name="add_number_to_contact">Add number to contact</string>
+    <string name="add_number_to_contact">Добавя номера към контакт</string>
     <string name="view_contact_details">View contact details</string>
     <string name="call_from_sim_1">Call from SIM 1</string>
     <string name="call_from_sim_2">Call from SIM 2</string>
@@ -342,13 +342,13 @@
     <string name="call">Call</string>
     <!-- Sorting -->
     <string name="sort_by">Sort by</string>
-    <string name="name">Name</string>
+    <string name="name">Име</string>
     <string name="size">Size</string>
     <string name="last_modified">Last modified</string>
     <string name="date_created">Date created</string>
     <string name="date_taken">Date taken</string>
     <string name="title">Title</string>
-    <string name="filename">Filename</string>
+    <string name="filename">Име на файла</string>
     <string name="extension">Extension</string>
     <string name="random">Random</string>
     <string name="sort_randomly">Sort randomly</string>
@@ -356,10 +356,10 @@
     <string name="descending">Descending</string>
     <string name="use_for_this_folder">Use for this folder only</string>
     <string name="sort_numeric_parts">Sort numeric parts by actual value</string>
-    <string name="first_name">First name</string>
-    <string name="middle_name">Middle name</string>
-    <string name="surname">Surname</string>
-    <string name="full_name">Full name</string>
+    <string name="first_name">Собствено име</string>
+    <string name="middle_name">Бащино име</string>
+    <string name="surname">Фамилия</string>
+    <string name="full_name">Цяло име</string>
     <string name="use_custom_sorting">Use custom sorting</string>
     <string name="change_order">Change order</string>
     <!-- Confirmation dialog -->
@@ -745,8 +745,8 @@
         ]]>
     </string>
     <string name="purchase">Purchase</string>
-    <string name="order_simple_phone">Поръчка на Обикновен телефон</string>
-    <string name="update_thank_you">Моля, актуализирайте Обикновено благодаря до най-новата версия</string>
+    <string name="order_simple_phone">Поръчване на Обикновен телефон</string>
+    <string name="update_thank_you">Моля, обноврте Обикновено благодаря до последното издание</string>
     <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
     <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
     <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
@@ -899,7 +899,7 @@
     <string name="translation_tamil">Tamil</string>
     <string name="translation_turkish">Turkish</string>
     <string name="translation_ukrainian">Ukrainian</string>
-    <string name="translation_vietnamese">Vietnamese</string>
+    <string name="translation_vietnamese">Виетнамски</string>
     <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
     <string name="translation_chinese_cn">Chinese (Simplified)</string>
     <string name="translation_chinese_tw">Chinese (Traditional)</string>
