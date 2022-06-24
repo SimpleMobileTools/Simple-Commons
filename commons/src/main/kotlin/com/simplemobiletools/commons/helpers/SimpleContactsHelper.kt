@@ -174,7 +174,8 @@ class SimpleContactsHelper(val context: Context) {
             Phone.NORMALIZED_NUMBER,
             Phone.NUMBER,
             Phone.TYPE,
-            Phone.LABEL
+            Phone.LABEL,
+            Phone.IS_PRIMARY
         )
 
         val selection = if (favoritesOnly) "${Data.STARRED} = 1" else null
@@ -187,12 +188,14 @@ class SimpleContactsHelper(val context: Context) {
             val contactId = cursor.getIntValue(Data.CONTACT_ID)
             val type = cursor.getIntValue(Phone.TYPE)
             val label = cursor.getStringValue(Phone.LABEL) ?: ""
+            val isPrimary = cursor.getIntValue(Phone.IS_PRIMARY) != 0
+
             if (contacts.firstOrNull { it.rawId == rawId } == null) {
                 val contact = SimpleContact(rawId, contactId, "", "", ArrayList(), ArrayList(), ArrayList())
                 contacts.add(contact)
             }
 
-            val phoneNumber = PhoneNumber(normalizedNumber, type, label, normalizedNumber)
+            val phoneNumber = PhoneNumber(normalizedNumber, type, label, normalizedNumber, isPrimary)
             contacts.firstOrNull { it.rawId == rawId }?.phoneNumbers?.add(phoneNumber)
         }
         return contacts
