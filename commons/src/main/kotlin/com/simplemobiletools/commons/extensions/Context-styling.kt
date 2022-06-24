@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.extensions
 
+import android.annotation.SuppressLint
 import android.content.ComponentName
 import android.content.Context
 import android.content.pm.PackageManager
@@ -168,12 +169,13 @@ fun Context.toggleAppIconColor(appId: String, colorIndex: Int, color: Int, enabl
 
 fun Context.getAppIconColors() = resources.getIntArray(R.array.md_app_icon_colors).toCollection(ArrayList())
 
+@SuppressLint("NewApi")
 fun Context.getBottomTabsBackgroundColor(): Int {
     val baseColor = baseConfig.backgroundColor
-    val bottomColor = if (baseColor == Color.WHITE) {
-        resources.getColor(R.color.bottom_tabs_light_background)
-    } else {
-        baseConfig.backgroundColor.lightenColor(4)
+    val bottomColor = when {
+        baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_status_bar_color, theme)
+        baseColor == Color.WHITE -> resources.getColor(R.color.bottom_tabs_light_background)
+        else -> baseConfig.backgroundColor.lightenColor(4)
     }
     return bottomColor
 }
