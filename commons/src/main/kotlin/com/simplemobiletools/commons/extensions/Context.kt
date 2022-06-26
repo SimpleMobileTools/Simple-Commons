@@ -15,10 +15,7 @@ import android.graphics.Point
 import android.media.MediaMetadataRetriever
 import android.media.RingtoneManager
 import android.net.Uri
-import android.os.Build
-import android.os.Environment
-import android.os.Handler
-import android.os.Looper
+import android.os.*
 import android.provider.BaseColumns
 import android.provider.BlockedNumberContract.BlockedNumbers
 import android.provider.ContactsContract.CommonDataKinds.BaseTypes
@@ -38,6 +35,7 @@ import androidx.annotation.RequiresApi
 import androidx.biometric.BiometricManager
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import androidx.core.os.bundleOf
 import androidx.exifinterface.media.ExifInterface
 import androidx.loader.content.CursorLoader
 import com.github.ajalt.reprint.core.Reprint
@@ -108,9 +106,8 @@ fun Context.getLatestMediaId(uri: Uri = Files.getContentUri("external")): Long {
     val projection = arrayOf(
         BaseColumns._ID
     )
-    val sortOrder = "${BaseColumns._ID} DESC LIMIT 1"
     try {
-        val cursor = contentResolver.query(uri, projection, null, null, sortOrder)
+        val cursor = queryCursorDesc(uri, projection, BaseColumns._ID, 1)
         cursor?.use {
             if (cursor.moveToFirst()) {
                 return cursor.getLongValue(BaseColumns._ID)
@@ -121,13 +118,31 @@ fun Context.getLatestMediaId(uri: Uri = Files.getContentUri("external")): Long {
     return 0
 }
 
+private fun Context.queryCursorDesc(
+    uri: Uri,
+    projection: Array<String>,
+    sortColumn:String,
+    limit: Int,
+): Cursor? {
+    return if (isRPlus()) {
+        val queryArgs = bundleOf(
+            ContentResolver.QUERY_ARG_LIMIT to limit,
+            ContentResolver.QUERY_ARG_SORT_DIRECTION to ContentResolver.QUERY_SORT_DIRECTION_DESCENDING,
+            ContentResolver.QUERY_ARG_SORT_COLUMNS to arrayOf(sortColumn),
+        )
+        contentResolver.query(uri, projection, queryArgs, null)
+    } else {
+        val sortOrder = "$sortColumn DESC LIMIT $limit"
+        contentResolver.query(uri, projection, null, null, sortOrder)
+    }
+}
+
 fun Context.getLatestMediaByDateId(uri: Uri = Files.getContentUri("external")): Long {
     val projection = arrayOf(
         BaseColumns._ID
     )
-    val sortOrder = "${Images.ImageColumns.DATE_TAKEN} DESC LIMIT 1"
     try {
-        val cursor = contentResolver.query(uri, projection, null, null, sortOrder)
+        val cursor = queryCursorDesc(uri, projection, Images.ImageColumns.DATE_TAKEN, 1)
         cursor?.use {
             if (cursor.moveToFirst()) {
                 return cursor.getLongValue(BaseColumns._ID)
