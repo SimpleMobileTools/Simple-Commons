@@ -32,6 +32,6 @@ class UpgradeToProDialog(val activity: Activity) {
     }
 
     private fun moreInfo() {
-        activity.launchViewIntent("https://medium.com/@tibbi/some-simple-mobile-tools-apps-are-becoming-paid-d053268f0fb2")
+        activity.launchViewIntent("https://simplemobiletools.com/upgrade_to_pro")
     }
 }
