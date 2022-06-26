@@ -29,10 +29,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.util.Pair
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
-import com.simplemobiletools.commons.dialogs.ConfirmationDialog
-import com.simplemobiletools.commons.dialogs.ExportSettingsDialog
-import com.simplemobiletools.commons.dialogs.FileConflictDialog
-import com.simplemobiletools.commons.dialogs.WritePermissionDialog
+import com.simplemobiletools.commons.dialogs.*
 import com.simplemobiletools.commons.dialogs.WritePermissionDialog.Mode
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
@@ -467,7 +464,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         if (isOrWasThankYouInstalled()) {
             startCustomizationActivity()
         } else {
-            launchPurchaseThankYouIntent()
+            FeatureLockedDialog(this) {}
         }
     }
 
