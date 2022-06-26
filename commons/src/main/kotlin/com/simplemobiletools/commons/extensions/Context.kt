@@ -124,7 +124,7 @@ private fun Context.queryCursorDesc(
     sortColumn:String,
     limit: Int,
 ): Cursor? {
-    return if (isOreoPlus()) {
+    return if (isRPlus()) {
         val queryArgs = bundleOf(
             ContentResolver.QUERY_ARG_LIMIT to limit,
             ContentResolver.QUERY_ARG_SORT_DIRECTION to ContentResolver.QUERY_SORT_DIRECTION_DESCENDING,
