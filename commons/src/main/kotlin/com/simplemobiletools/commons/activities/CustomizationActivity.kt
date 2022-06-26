@@ -39,6 +39,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     private var lastSavePromptTS = 0L
     private var curNavigationBarColor = INVALID_NAVIGATION_BAR_COLOR
     private var hasUnsavedChanges = false
+    private var isThankYou = false      // show "Apply colors to all Simple apps" in Simple Thank You itself even with "Hide Google relations" enabled
     private var predefinedThemes = LinkedHashMap<Int, MyTheme>()
     private var curPrimaryLineColorPicker: LineColorPickerDialog? = null
     private var storedSharedTheme: SharedTheme? = null
@@ -57,6 +58,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             baseConfig.navigationBarColor = window.navigationBarColor
         }
 
+        isThankYou = packageName.removeSuffix(".debug") == "com.simplemobiletools.thankyou"
         initColorVariables()
 
         if (isThankYouInstalled()) {
@@ -72,7 +74,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
                     runOnUiThread {
                         setupThemes()
-                        val hideGoogleRelations = resources.getBoolean(R.bool.hide_google_relations)
+                        val hideGoogleRelations = resources.getBoolean(R.bool.hide_google_relations) && !isThankYou
                         apply_to_all_holder.beVisibleIf(
                             storedSharedTheme == null && curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && !hideGoogleRelations
                         )
@@ -96,7 +98,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         updateLabelColors(textColor)
         originalAppIconColor = baseConfig.appIconColor
 
-        if (resources.getBoolean(R.bool.hide_google_relations)) {
+        if (resources.getBoolean(R.bool.hide_google_relations) && !isThankYou) {
             apply_to_all_holder.beGone()
         }
     }
@@ -223,7 +225,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 toast(R.string.changing_color_description)
             }
 
-            val hideGoogleRelations = resources.getBoolean(R.bool.hide_google_relations)
+            val hideGoogleRelations = resources.getBoolean(R.bool.hide_google_relations) && !isThankYou
             apply_to_all_holder.beVisibleIf(
                 curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_SHARED && !hideGoogleRelations
             )
