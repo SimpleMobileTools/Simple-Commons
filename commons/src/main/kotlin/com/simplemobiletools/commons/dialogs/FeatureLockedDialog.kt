@@ -10,14 +10,14 @@ import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.getProperTextColor
 import com.simplemobiletools.commons.extensions.launchPurchaseThankYouIntent
 import com.simplemobiletools.commons.extensions.setupDialogStuff
-import kotlinx.android.synthetic.main.dialog_widget_locked.view.*
+import kotlinx.android.synthetic.main.dialog_feature_locked.view.*
 
-class WidgetLockedDialog(val activity: Activity, val callback: () -> Unit) {
+class FeatureLockedDialog(val activity: Activity, val callback: () -> Unit) {
     private var dialog: AlertDialog
 
     init {
-        val view: View = activity.layoutInflater.inflate(R.layout.dialog_widget_locked, null)
-        view.widget_locked_image.applyColorFilter(activity.getProperTextColor())
+        val view: View = activity.layoutInflater.inflate(R.layout.dialog_feature_locked, null)
+        view.feature_locked_image.applyColorFilter(activity.getProperTextColor())
 
         dialog = AlertDialog.Builder(activity)
             .setPositiveButton(R.string.purchase, null)
@@ -25,8 +25,8 @@ class WidgetLockedDialog(val activity: Activity, val callback: () -> Unit) {
             .setOnDismissListener { dismissDialog() }
             .create().apply {
                 activity.setupDialogStuff(view, this, cancelOnTouchOutside = false) {
-                    view.widget_locked_description.text = Html.fromHtml(activity.getString(R.string.widget_locked))
-                    view.widget_locked_description.movementMethod = LinkMovementMethod.getInstance()
+                    view.feature_locked_description.text = Html.fromHtml(activity.getString(R.string.features_locked))
+                    view.feature_locked_description.movementMethod = LinkMovementMethod.getInstance()
 
                     getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                         activity.launchPurchaseThankYouIntent()
