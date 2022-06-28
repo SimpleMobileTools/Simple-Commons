@@ -188,7 +188,7 @@
     <string name="system_folder_copy_restriction">Система не дозволяє копіювати в цю теку, будь ласка, виберіть іншу</string>
     <string name="rename_in_sd_card_system_restriction">Система не дозволяє перейменовувати в цій теці</string>
     <string name="rename_internal_system_restriction">Не можна перейменувати теки безпосередньо у внутрішній пам\'яті, лише у вкладених теках</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
+    <string name="cannot_rename_folder">Не вдається перейменувати цю теку</string>
     <!-- File picker -->
     <string name="select_folder">Обрати теку</string>
     <string name="select_file">Обрати файл</string>
@@ -230,7 +230,7 @@
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Обрати пам\'ять</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Сховище</string>
     <string name="internal">Внутрішня</string>
     <string name="sd_card">SD-карта</string>
     <string name="root">Корінь</string>
@@ -811,7 +811,7 @@
     <string name="thank_you">Подяка</string>
     <string name="widget_locked_pro">Віджет заблоковано.
 \nБудь ласка, оновіть додаток до версії Pro, щоб розблокувати віджет.</string>
-    <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
+    <string name="features_locked">Ця функція заблокована, будь ласка, придбайте &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Просту Подяку&lt;/a&gt;, щоб розблокувати весь застосунок.&lt;br&gt;&lt;br&gt;Це лише одноразовий платіж, якщо ви не будете задоволені, ми зможемо повернути вам гроші.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -949,7 +949,7 @@
     <string name="why_upgrade_no_ads">Жодної реклами</string>
     <string name="why_upgrade_no_internet_access">Без доступу до Інтернету</string>
     <string name="why_upgrade_footer">100% гарантія повернення коштів</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
+    <string name="why_upgrade_footer_one_time_payment">Одноразовий платіж</string>
     <string name="why_upgrade_improved_design">Покращений дизайн</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Удосконалений фоторедактор</string>
