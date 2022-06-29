@@ -616,41 +616,41 @@
     <string name="default_tab_to_open">Раздел за отваряне при стартиране на приложението</string>
     <string name="contacts_tab">Контакти</string>
     <string name="favorites_tab">Избрани</string>
-    <string name="call_history_tab">Дневник на обажданията</string>
+    <string name="call_history_tab">Дневник на Обажданията</string>
     <string name="groups_tab">Групи</string>
     <string name="last_used_tab">Последно използван</string>
     <string name="files_tab">Файлове</string>
-    <string name="recent_files_tab">Recent files</string>
+    <string name="recent_files_tab">Последни файлове</string>
     <!-- Recycle Bin -->
     <string name="restore_this_file">Възстанови този файл</string>
     <string name="restore_selected_files">Възстанови избраните файлове</string>
     <string name="restore_all_files">Възстанови всички файлове</string>
-    <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
-    <string name="files_restored_successfully">Files have been restored successfully</string>
-    <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
-    <string name="recycle_bin_empty">The Recycle Bin is empty</string>
-    <string name="moving_recycle_bin_items_disabled">Moving Recycle bin items is disabled, please use Restore</string>
-    <string name="show_the_recycle_bin">Show the Recycle Bin</string>
-    <string name="hide_the_recycle_bin">Hide the Recycle Bin</string>
+    <string name="recycle_bin_emptied">Кошчето е изпразнено успешно</string>
+    <string name="files_restored_successfully">Файловете са възстановени успешно</string>
+    <string name="empty_recycle_bin_confirmation">Наистина ли искате да изпразните кошчето\? Файловете ще бъдат изтрити завинаги.</string>
+    <string name="recycle_bin_empty">Кошчето е празно</string>
+    <string name="moving_recycle_bin_items_disabled">Преместването на елементи от кошчето е деактивирано, моля, използвайте Възстановяване</string>
+    <string name="show_the_recycle_bin">Покажете Кошчето</string>
+    <string name="hide_the_recycle_bin">Скрийте Кошчето</string>
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Moving %d item into the Recycle Bin</item>
-        <item quantity="other">Moving %d items into the Recycle Bin</item>
+        <item quantity="one">Преместване на %d елемент в Kошчето</item>
+        <item quantity="other">Преместване на %d елементa в Kошчето</item>
     </plurals>
     <!-- Import / Export -->
-    <string name="importing">Importing…</string>
-    <string name="exporting">Exporting…</string>
-    <string name="importing_successful">Importing successful</string>
-    <string name="exporting_successful">Exporting successful</string>
-    <string name="importing_failed">Importing failed</string>
-    <string name="exporting_failed">Exporting failed</string>
-    <string name="importing_some_entries_failed">Importing some entries failed</string>
-    <string name="exporting_some_entries_failed">Exporting some entries failed</string>
-    <string name="no_entries_for_importing">No entries for importing have been found</string>
-    <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
-    <string name="no_entries_for_exporting">No entries for exporting have been found</string>
+    <string name="importing">Импортиране…</string>
+    <string name="exporting">Експортиране…</string>
+    <string name="importing_successful">Успешно импортиране</string>
+    <string name="exporting_successful">Успешно експортиране</string>
+    <string name="importing_failed">Импортирането неуспешно</string>
+    <string name="exporting_failed">Експортирането неуспешно</string>
+    <string name="importing_some_entries_failed">Импортирането на някои елементи неуспешно</string>
+    <string name="exporting_some_entries_failed">Експортирането на някои елементи неуспешно</string>
+    <string name="no_entries_for_importing">Не са намерени записи за импортиране</string>
+    <string name="no_new_entries_for_importing">Не са намерени нови записи за експортиране</string>
+    <string name="no_entries_for_exporting">Не са намерени записи за експортиране</string>
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">You seem to have an USB device attached to your device. To make sure its files appear properly, you need to grant additional permissions.</string>
+    <string name="usb_detected">Изглежда имате USB устройство, прикачено към вашето устройство. За да сте сигурни, че неговите файлове се появяват правилно, трябва да предоставите допълнителни разрешения.</string>
     <string name="confirm_usb_storage_access_text">Please choose the top folder of the USB device on the next screen, to grant access</string>
     <string name="wrong_root_selected_usb">Wrong folder selected, please select the main folder of your USB device</string>
     <!-- Dates -->
