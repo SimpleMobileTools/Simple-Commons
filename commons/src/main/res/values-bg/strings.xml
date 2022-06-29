@@ -132,7 +132,7 @@
     <string name="append_filenames">Добавете имена на файлове</string>
     <string name="simple_renaming">Просто преименуване</string>
     <string name="pattern_renaming">Щаблон</string>
-    <string name="string_to_add">Текст за добавяне</string>
+    <string name="string_to_add">Низ за добавяне</string>
     <string name="rename_date_time_pattern">%Y - година
 \n%M - месец
 \n%D - ден
@@ -330,7 +330,7 @@
     <string name="create_shortcut">Create shortcut</string>
     <string name="create_shortcut_pro">Create shortcut (Pro)</string>
     <string name="add_number_to_contact">Добавя номера към контакт</string>
-    <string name="view_contact_details">Детайли за контакт</string>
+    <string name="view_contact_details">Подробности за контакта</string>
     <string name="call_from_sim_1">Call from SIM 1</string>
     <string name="call_from_sim_2">Call from SIM 2</string>
     <string name="toggle_filename">Toggle filename visibility</string>
@@ -704,8 +704,8 @@
     <string name="upgrade_to_pro_long">Версията на приложението ви вече няма да се актуализира. Моля, надстройте до Pro версията, за да получите нови поправки и други подобрения.</string>
     <string name="upgrade_to_pro_long_click">Версията на приложението ви вече няма да се актуализира. Моля, надстройте до Pro версията, за да получите нови корекции и други подобрения, като кликнете тук.</string>
     <string name="it_is_free">Той е безплатен до: %s. Ако го изтеглите дотогава, ще можете да го използвате безплатно завинаги.</string>
-    <string name="more_info">Повече информация</string>
-    <string name="upgrade">Ъпгрейд</string>
+    <string name="more_info">Подробности</string>
+    <string name="upgrade">Обновяване</string>
     <string name="upgrade_calendar">Трябва да мигрирате локално съхранени събития ръчно чрез експортиране в .ics файл, след което импортирайте. Можете да намерите и двата бутона за експортиране/импортиране в главното екранно меню.</string>
     <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
     <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
@@ -713,7 +713,7 @@
     <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
     <!-- About -->
     <string name="about">Относно</string>
-    <string name="website">Уебсайт</string>
+    <string name="website">Страница</string>
     <string name="website_label">For the source codes visit</string>
     <string name="email_label">Send your feedback or suggestions to</string>
     <string name="upgrade_to_pro">Upgrade to Pro</string>
@@ -725,7 +725,7 @@
     <string name="rate_us">Rate us</string>
     <string name="rate">Rate</string>
     <string name="donate">Дарения</string>
-    <string name="follow_us">Последвай ни</string>
+    <string name="follow_us">Последвайте ни</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="support">Support</string>
     <string name="help_us">Help us</string>
