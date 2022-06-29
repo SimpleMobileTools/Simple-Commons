@@ -590,25 +590,25 @@
     <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
     <string name="empty_recycle_bin">Empty the Recycle Bin</string>
     <string name="force_portrait_mode">Force portrait mode</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
-    <string name="start_name_with_surname">Start name with surname</string>
-    <string name="clear_cache">Clear cache</string>
-    <string name="show_call_confirmation_dialog">Show a call confirmation dialog before initiating a call</string>
+    <string name="export_settings">Експортиране на настройки</string>
+    <string name="import_settings">Импортиране на настройки</string>
+    <string name="settings_exported_successfully">Настройките се експортираха успешно</string>
+    <string name="settings_imported_successfully">Настройките се импортираха успешно</string>
+    <string name="start_name_with_surname">Започнете името с фамилията</string>
+    <string name="clear_cache">Изтрий кеш-памет</string>
+    <string name="show_call_confirmation_dialog">Показване на диалогов прозорец за потвърждение на повикване преди започване на повикване</string>
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
-    <string name="recycle_bin">Recycle Bin</string>
-    <string name="saving_label">Saving</string>
-    <string name="startup">Startup</string>
-    <string name="text">Text</string>
-    <string name="migrating">Migrating</string>
-    <string name="quality">Quality</string>
-    <string name="main_screen">Main screen</string>
+    <string name="visibility">Видимост</string>
+    <string name="security">Сигурност</string>
+    <string name="scrolling">Превъртане</string>
+    <string name="file_operations">Файлови операции</string>
+    <string name="recycle_bin">Кошче</string>
+    <string name="saving_label">Запазване</string>
+    <string name="startup">Стартиране</string>
+    <string name="text">Текст</string>
+    <string name="migrating">Мигриране</string>
+    <string name="quality">Качество</string>
+    <string name="main_screen">Начален екран</string>
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
     <!-- Default tab to open -->
@@ -622,7 +622,7 @@
     <string name="files_tab">Files</string>
     <string name="recent_files_tab">Recent files</string>
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restore this file</string>
+    <string name="restore_this_file">Възстановете този файл</string>
     <string name="restore_selected_files">Restore selected files</string>
     <string name="restore_all_files">Restore all files</string>
     <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
