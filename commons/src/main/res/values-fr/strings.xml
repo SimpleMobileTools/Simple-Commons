@@ -625,8 +625,8 @@
     <string name="show_the_recycle_bin">Afficher la corbeille</string>
     <string name="hide_the_recycle_bin">Cacher la corbeille</string>
     <plurals name="moving_items_into_bin">
-        <item quantity="one">Déplacement de %d élément dans la corbeille</item>
-        <item quantity="other">Déplacement de %d éléments dans la corbeille</item>
+        <item quantity="one">%d élément déplacé dans la corbeille</item>
+        <item quantity="other">%d éléments déplacés dans la corbeille</item>
     </plurals>
     <!-- Import / Export -->
     <string name="importing">Importer…</string>
