@@ -96,10 +96,10 @@
     <string name="block_unknown_calls">Блокиране на повиквания от незапазени контакти</string>
     <string name="block_unknown_messages">Блокиране на съобщения от незапазени контакти</string>
     <!-- Favorites -->
-    <string name="favorites">Любими</string>
-    <string name="add_favorites">Добавяне на любими</string>
-    <string name="add_to_favorites">Добавяне към любими</string>
-    <string name="remove_from_favorites">Премахване от любими</string>
+    <string name="favorites">Избрани</string>
+    <string name="add_favorites">Добавяне на избрани</string>
+    <string name="add_to_favorites">Добавяне към избрани</string>
+    <string name="remove_from_favorites">Премахване от избрани</string>
     <!-- Search -->
     <string name="search">Търсене</string>
     <string name="type_2_characters">Въведете поне 2 символа, за да започне търсенето.</string>
@@ -615,8 +615,8 @@
     <string name="manage_shown_tabs">Управление на показаните раздели</string>
     <string name="default_tab_to_open">Раздел за отваряне при стартиране на приложението</string>
     <string name="contacts_tab">Контакти</string>
-    <string name="favorites_tab">Любими</string>
-    <string name="call_history_tab">История на Обажданията</string>
+    <string name="favorites_tab">Избрани</string>
+    <string name="call_history_tab">Дневник на обажданията</string>
     <string name="groups_tab">Групи</string>
     <string name="last_used_tab">Последно използван</string>
     <string name="files_tab">Файлове</string>
