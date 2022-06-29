@@ -205,35 +205,35 @@
     <string name="confirm_folder_access_title">Потвърдете достъпа до папка</string>
     <string name="confirm_storage_access_text">Моля, изберете горната папка на SD картата на следващия екран, за да предоставите достъп за запис</string>
     <string name="confirm_storage_access_text_sd">Ако не виждате SD картата, опитайте това</string>
-    <string name="confirm_storage_access_android_text">Please allow the app accessing the selected storage on the next screen by pressing \'Use this folder\' at the bottom.</string>
-    <string name="confirm_storage_access_android_text_specific">Please allow accessing \'&lt;b&gt;%s&lt;/b&gt;\' on the next screen by pressing \'&lt;b&gt;Use this folder&lt;/b&gt;\' at the bottom.</string>
-    <string name="confirm_create_doc_for_new_folder_text">Please press \'&lt;b&gt;Save&lt;/b&gt;\' at the bottom of the next screen to create the new folder.</string>
-    <string name="confirm_selection">Confirm selection</string>
+    <string name="confirm_storage_access_android_text">Моля, позволете на приложението да има достъп до избраното хранилище на следващия екран, като натиснете \'Използвайте тази папка\' в долната част.</string>
+    <string name="confirm_storage_access_android_text_specific">Моля, разрешете достъп до \'<b>%s </b>\' на следващия екран, като натиснете \'<b> Използвайте тази папка </b>\' в долната част на екрана.</string>
+    <string name="confirm_create_doc_for_new_folder_text">Моля, натиснете \'<b>Запазване </b>\' в долната част на следващия екран, за да създадете новата папка.</string>
+    <string name="confirm_selection">Потвърдете избора</string>
     <string name="loading">Зареждане…</string>
-    <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
+    <string name="access_storage_prompt">Моля, предоставете достъп на нашето приложение до всички ваши файлове, то може да не работи добре без него.</string>
     <plurals name="items">
-        <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">%d елемент</item>
+        <item quantity="other">%d елемента</item>
     </plurals>
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
-        <item quantity="one">%d item</item>
-        <item quantity="other">%d items</item>
+        <item quantity="one">%d елемент</item>
+        <item quantity="other">%d елемента</item>
     </plurals>
     <plurals name="deleting_items">
-        <item quantity="one">Deleting %d item</item>
-        <item quantity="other">Deleting %d items</item>
+        <item quantity="one">Изтриване %d елемент</item>
+        <item quantity="other">Изтриване %d елемента</item>
     </plurals>
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
-        <item quantity="one">%d contact</item>
-        <item quantity="other">%d contacts</item>
+        <item quantity="one">%d контакт</item>
+        <item quantity="other">%d контакта</item>
     </plurals>
     <!-- Storages -->
-    <string name="select_storage">Select storage</string>
+    <string name="select_storage">Изберете хранилище</string>
     <string name="storage">Хранилище</string>
-    <string name="internal">Internal</string>
-    <string name="sd_card">Карта на SD</string>
+    <string name="internal">Вътрешно</string>
+    <string name="sd_card">SD Карта</string>
     <string name="root">Root</string>
     <string name="wrong_root_selected">Wrong folder selected, please select the main folder of your SD card</string>
     <string name="sd_card_usb_same">SD card and USB device paths cannot be the same</string>
@@ -651,34 +651,34 @@
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Изглежда имате USB устройство, прикачено към вашето устройство. За да сте сигурни, че неговите файлове се появяват правилно, трябва да предоставите допълнителни разрешения.</string>
-    <string name="confirm_usb_storage_access_text">Please choose the top folder of the USB device on the next screen, to grant access</string>
-    <string name="wrong_root_selected_usb">Wrong folder selected, please select the main folder of your USB device</string>
+    <string name="confirm_usb_storage_access_text">Моля, изберете най-горната папка от USB устройството на следващия екран, за да предоставите достъп</string>
+    <string name="wrong_root_selected_usb">Избрана грешна папка, моля, изберете началната папка на вашето USB устройство</string>
     <!-- Dates -->
-    <string name="january">January</string>
-    <string name="february">February</string>
-    <string name="march">March</string>
-    <string name="april">April</string>
-    <string name="may">May</string>
-    <string name="june">June</string>
-    <string name="july">July</string>
-    <string name="august">August</string>
-    <string name="september">September</string>
-    <string name="october">October</string>
-    <string name="november">November</string>
-    <string name="december">December</string>
+    <string name="january">Януари</string>
+    <string name="february">Февруари</string>
+    <string name="march">Март</string>
+    <string name="april">Април</string>
+    <string name="may">Май</string>
+    <string name="june">Юни</string>
+    <string name="july">Юли</string>
+    <string name="august">Август</string>
+    <string name="september">Септември</string>
+    <string name="october">Октомври</string>
+    <string name="november">Ноември</string>
+    <string name="december">Декември</string>
     <!-- in January -->
-    <string name="in_january">in January</string>
-    <string name="in_february">in February</string>
-    <string name="in_march">in March</string>
-    <string name="in_april">in April</string>
-    <string name="in_may">in May</string>
-    <string name="in_june">in June</string>
-    <string name="in_july">in July</string>
-    <string name="in_august">in August</string>
-    <string name="in_september">in September</string>
-    <string name="in_october">in October</string>
-    <string name="in_november">in November</string>
-    <string name="in_december">in December</string>
+    <string name="in_january">през Януари</string>
+    <string name="in_february">през Февруари</string>
+    <string name="in_march">през Март</string>
+    <string name="in_april">през Април</string>
+    <string name="in_may">през Май</string>
+    <string name="in_june">през Юни</string>
+    <string name="in_july">през Юли</string>
+    <string name="in_august">през Август</string>
+    <string name="in_september">през Септември</string>
+    <string name="in_october">през Октомври</string>
+    <string name="in_november">през Ноември</string>
+    <string name="in_december">през Декември</string>
     <string name="monday">Понеделник</string>
     <string name="tuesday">Вторник</string>
     <string name="wednesday">Сряда</string>
