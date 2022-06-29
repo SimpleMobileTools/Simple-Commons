@@ -128,10 +128,10 @@
     <string name="filename_invalid_characters_placeholder">Името на файла „%s“ съдържа непозволени знаци</string>
     <string name="extension_cannot_be_empty">Разширението не може да бъде празно</string>
     <string name="source_file_doesnt_exist">Изходния файл %s не съществува</string>
-    <string name="prepend_filenames">Prepend filenames</string>
-    <string name="append_filenames">Append filenames</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
+    <string name="prepend_filenames">Представяне имена на файлове</string>
+    <string name="append_filenames">Добавете имена на файлове</string>
+    <string name="simple_renaming">Просто преименуване</string>
+    <string name="pattern_renaming">Щаблон</string>
     <string name="string_to_add">Низ за добавяне</string>
     <string name="rename_date_time_pattern">%Y - година
 \n%M - месец
