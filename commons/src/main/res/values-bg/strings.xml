@@ -89,7 +89,7 @@
     <string name="block_numbers">Блокиране на номера</string>
     <string name="blocked_numbers">Блокирани номера</string>
     <string name="export_blocked_numbers">Експортиране на блокирани номера</string>
-    <string name="import_blocked_numbers">Импортиране на блокирани номера</string>
+    <string name="import_blocked_numbers">Внасяне на блокирани номера</string>
     <string name="must_make_default_dialer">Трябва да направите приложението за набиране по подразбиране, за да се възползвате от блокираните номера.</string>
     <string name="set_as_default">Задаване по подразбиране</string>
     <string name="block_confirmation">Сигурни ли сте, че искате да блокирате \"%s\"\?</string>
@@ -591,7 +591,7 @@
     <string name="empty_recycle_bin">Empty the Recycle Bin</string>
     <string name="force_portrait_mode">Force portrait mode</string>
     <string name="export_settings">Експортиране на настройки</string>
-    <string name="import_settings">Импортиране на настройки</string>
+    <string name="import_settings">Внасяне на настройки</string>
     <string name="settings_exported_successfully">Настройките се експортираха успешно</string>
     <string name="settings_imported_successfully">Настройките се импортираха успешно</string>
     <string name="start_name_with_surname">Започнете името с фамилията</string>
@@ -601,7 +601,7 @@
     <string name="visibility">Видимост</string>
     <string name="security">Сигурност</string>
     <string name="scrolling">Превъртане</string>
-    <string name="file_operations">Файлови операции</string>
+    <string name="file_operations">Действия с файлове</string>
     <string name="recycle_bin">Кошче</string>
     <string name="saving_label">Запазване</string>
     <string name="startup">Стартиране</string>
@@ -735,8 +735,8 @@
     <string name="other">Other</string>
     <string name="privacy_policy">Privacy policy</string>
     <string name="version_placeholder">Version %s</string>
-    <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with ❤️ in Slovakia</string>
+    <string name="hello">Здравейте :)</string>
+    <string name="about_footer">Направено с ❤️ в Словакия</string>
     <string name="additional_info">Additional info</string>
     <string name="app_version">App version: %s</string>
     <string name="device_os">ОС на устройството: %s</string>
