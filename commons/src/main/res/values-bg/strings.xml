@@ -758,7 +758,7 @@
     <string name="read_faq">Прочетете често задавани въпроси</string>
     <string name="rate_us_prompt">Здравейте,
 \n
-\nИзглежда, че вече използвате това приложение от доста време и ние наистина го оценяваме.
+\nИзглежда, че вече използвате приложението доста време и наистина го оценяваме.
 \n
 \nАко можем да ви помолим услуга, моля, оценете ни в Google Play. Това наистина би ни помогнало много.
 \n
@@ -769,7 +769,7 @@
     <string name="thank_you">Благодаря Ви</string>
     <string name="widget_locked_pro">Приставката е заключена.
 \nМоля, надстройте до Pro версията, за да я отключите.</string>
-    <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
+    <string name="features_locked">Тази функция е заключена, за да я отключите поръчайте &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; за пълен достъп до функциите на приложението.&lt;br&gt;&lt;br&gt;Плащането е еднократно, а ако не останете доволни ще ви върнем парите.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -918,7 +918,7 @@
     <string name="why_upgrade_no_ads">No ads</string>
     <string name="why_upgrade_no_internet_access">No internet access</string>
     <string name="why_upgrade_footer">100% Money Back Guarantee</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
+    <string name="why_upgrade_footer_one_time_payment">Еднократно плащане</string>
     <string name="why_upgrade_improved_design">Improved design</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
