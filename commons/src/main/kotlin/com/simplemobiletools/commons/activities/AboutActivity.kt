@@ -74,6 +74,7 @@ class AboutActivity : BaseSimpleActivity() {
         setupDonate()
         setupFacebook()
         setupReddit()
+        setupTelegram()
         setupMoreApps()
         setupWebsite()
         setupPrivacyPolicy()
@@ -250,6 +251,12 @@ class AboutActivity : BaseSimpleActivity() {
     private fun setupReddit() {
         about_reddit_holder.setOnClickListener {
             launchViewIntent("https://www.reddit.com/r/SimpleMobileTools")
+        }
+    }
+
+    private fun setupTelegram() {
+        about_telegram_holder.setOnClickListener {
+            launchViewIntent("https://t.me/SimpleMobileTools")
         }
     }
 
