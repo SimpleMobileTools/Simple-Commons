@@ -754,7 +754,7 @@
     <string name="thank_you">Gràcies</string>
     <string name="widget_locked_pro">El giny està bloquejat.
 \nActualitzeu a la versió Pro per desbloquejar-lo.</string>
-    <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
+    <string name="features_locked">Aquesta funció està bloquejada, compreu &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; per desbloquejar l\'aplicació completa.&lt;br&gt;&lt;br&gt;És un pagament únic i si no us satisfà, podem reembossar-ho.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">Hola,&lt;br&gt;&lt;br&gt; només informar-vos que recentment s\'ha publicat una aplicació nova:&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; Podeu baixar-la prement el títol.&lt;br&gt;&lt;br&gt; Gràcies</string>
     <string name="simple_app_launcher">Simple App Launcher</string>
@@ -829,7 +829,7 @@
     <string name="translation_czech">Txec</string>
     <string name="translation_welsh">Gal·lès</string>
     <string name="translation_danish">Danès</string>
-    <string name="translation_english">English</string>
+    <string name="translation_english">Anglès</string>
     <string name="translation_german">Alemany</string>
     <string name="translation_greek">Grec</string>
     <string name="translation_spanish">Espanyol</string>
@@ -872,7 +872,7 @@
     <string name="why_upgrade_no_ads">Sense anuncis</string>
     <string name="why_upgrade_no_internet_access">Sense accés a Internet</string>
     <string name="why_upgrade_footer">Garantia de devolució de diners 100%</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
+    <string name="why_upgrade_footer_one_time_payment">Pagament únic</string>
     <string name="why_upgrade_improved_design">Disseny millorat</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor de fotos avançat</string>
