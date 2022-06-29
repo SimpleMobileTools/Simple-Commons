@@ -89,17 +89,17 @@
     <string name="block_numbers">Блокиране на номера</string>
     <string name="blocked_numbers">Блокирани номера</string>
     <string name="export_blocked_numbers">Експортиране на блокирани номера</string>
-    <string name="import_blocked_numbers">Импортиране на блокирани номера</string>
+    <string name="import_blocked_numbers">Внасяне на блокирани номера</string>
     <string name="must_make_default_dialer">Трябва да направите приложението за набиране по подразбиране, за да се възползвате от блокираните номера.</string>
     <string name="set_as_default">Задаване по подразбиране</string>
     <string name="block_confirmation">Сигурни ли сте, че искате да блокирате \"%s\"\?</string>
     <string name="block_unknown_calls">Блокиране на повиквания от незапазени контакти</string>
     <string name="block_unknown_messages">Блокиране на съобщения от незапазени контакти</string>
     <!-- Favorites -->
-    <string name="favorites">Любими</string>
-    <string name="add_favorites">Добавяне на любими</string>
-    <string name="add_to_favorites">Добавяне към любими</string>
-    <string name="remove_from_favorites">Премахване от любими</string>
+    <string name="favorites">Избрани</string>
+    <string name="add_favorites">Добавяне на избрани</string>
+    <string name="add_to_favorites">Добавяне към избрани</string>
+    <string name="remove_from_favorites">Премахване от избрани</string>
     <!-- Search -->
     <string name="search">Търсене</string>
     <string name="type_2_characters">Въведете поне 2 символа, за да започне търсенето.</string>
@@ -116,8 +116,8 @@
     <!-- Renaming -->
     <string name="rename_file">Преименуване на файл</string>
     <string name="rename_folder">Преименуване на папка</string>
-    <string name="rename_file_error">Неуспешно преименуване на файл</string>
-    <string name="rename_folder_error">Неуспешно преименуване на папка</string>
+    <string name="rename_file_error">Файлът не може да бъде преименуван</string>
+    <string name="rename_folder_error">Папката не може да бъде преименувана</string>
     <string name="rename_folder_empty">Името на папката не трябва да е празно</string>
     <string name="rename_folder_exists">Вече съществува папка с това име</string>
     <string name="rename_folder_root">Не може да се преименува главната папка на хранилище</string>
@@ -128,10 +128,10 @@
     <string name="filename_invalid_characters_placeholder">Името на файла „%s“ съдържа непозволени знаци</string>
     <string name="extension_cannot_be_empty">Разширението не може да бъде празно</string>
     <string name="source_file_doesnt_exist">Изходния файл %s не съществува</string>
-    <string name="prepend_filenames">Prepend filenames</string>
-    <string name="append_filenames">Append filenames</string>
-    <string name="simple_renaming">Simple renaming</string>
-    <string name="pattern_renaming">Pattern</string>
+    <string name="prepend_filenames">Представяне имена на файлове</string>
+    <string name="append_filenames">Добавете имена на файлове</string>
+    <string name="simple_renaming">Просто преименуване</string>
+    <string name="pattern_renaming">Щаблон</string>
     <string name="string_to_add">Низ за добавяне</string>
     <string name="rename_date_time_pattern">%Y - година
 \n%M - месец
@@ -191,7 +191,7 @@
     <string name="keep_both">Запазване на двете</string>
     <string name="overwrite">Презаписване</string>
     <string name="skip">Пропускане</string>
-    <string name="append">Append with \'_1\'</string>
+    <string name="append">Добавяне с \'_1\'</string>
     <string name="apply_to_all">Приложи към всички</string>
     <string name="system_folder_restriction">Системата не позволява операцията в тази папка, моля, изберете друга</string>
     <string name="system_folder_copy_restriction">Системата не позволява копиране в тази папка, моля, изберете друга</string>
@@ -330,7 +330,7 @@
     <string name="create_shortcut">Create shortcut</string>
     <string name="create_shortcut_pro">Create shortcut (Pro)</string>
     <string name="add_number_to_contact">Добавя номера към контакт</string>
-    <string name="view_contact_details">View contact details</string>
+    <string name="view_contact_details">Подробности за контакта</string>
     <string name="call_from_sim_1">Call from SIM 1</string>
     <string name="call_from_sim_2">Call from SIM 2</string>
     <string name="toggle_filename">Toggle filename visibility</string>
@@ -590,41 +590,41 @@
     <string name="recycle_bin_cleaning_interval">Recycle Bin cleaning interval</string>
     <string name="empty_recycle_bin">Empty the Recycle Bin</string>
     <string name="force_portrait_mode">Force portrait mode</string>
-    <string name="export_settings">Export settings</string>
-    <string name="import_settings">Import settings</string>
-    <string name="settings_exported_successfully">Settings exported successfully</string>
-    <string name="settings_imported_successfully">Settings imported successfully</string>
-    <string name="start_name_with_surname">Start name with surname</string>
-    <string name="clear_cache">Clear cache</string>
-    <string name="show_call_confirmation_dialog">Show a call confirmation dialog before initiating a call</string>
+    <string name="export_settings">Експортиране на настройки</string>
+    <string name="import_settings">Внасяне на настройки</string>
+    <string name="settings_exported_successfully">Настройките се експортираха успешно</string>
+    <string name="settings_imported_successfully">Настройките се импортираха успешно</string>
+    <string name="start_name_with_surname">Започнете името с фамилията</string>
+    <string name="clear_cache">Изтрий кеш-памет</string>
+    <string name="show_call_confirmation_dialog">Показване на диалогов прозорец за потвърждение на повикване преди започване на повикване</string>
     <!-- Setting sections -->
-    <string name="visibility">Visibility</string>
-    <string name="security">Security</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="file_operations">File operations</string>
-    <string name="recycle_bin">Recycle Bin</string>
-    <string name="saving_label">Saving</string>
-    <string name="startup">Startup</string>
-    <string name="text">Text</string>
-    <string name="migrating">Migrating</string>
-    <string name="quality">Quality</string>
-    <string name="main_screen">Main screen</string>
-    <string name="thumbnails">Thumbnails</string>
-    <string name="list_view">List view</string>
+    <string name="visibility">Видимост</string>
+    <string name="security">Сигурност</string>
+    <string name="scrolling">Превъртане</string>
+    <string name="file_operations">Действия с файлове</string>
+    <string name="recycle_bin">Кошче</string>
+    <string name="saving_label">Запазване</string>
+    <string name="startup">Стартиране</string>
+    <string name="text">Текст</string>
+    <string name="migrating">Мигриране</string>
+    <string name="quality">Качество</string>
+    <string name="main_screen">Начален екран</string>
+    <string name="thumbnails">Миниатюри</string>
+    <string name="list_view">Изглед на списък</string>
     <!-- Default tab to open -->
-    <string name="manage_shown_tabs">Manage shown tabs</string>
-    <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
-    <string name="files_tab">Files</string>
+    <string name="manage_shown_tabs">Управление на показаните раздели</string>
+    <string name="default_tab_to_open">Раздел за отваряне при стартиране на приложението</string>
+    <string name="contacts_tab">Контакти</string>
+    <string name="favorites_tab">Избрани</string>
+    <string name="call_history_tab">Дневник на обажданията</string>
+    <string name="groups_tab">Групи</string>
+    <string name="last_used_tab">Последно използван</string>
+    <string name="files_tab">Файлове</string>
     <string name="recent_files_tab">Recent files</string>
     <!-- Recycle Bin -->
-    <string name="restore_this_file">Restore this file</string>
-    <string name="restore_selected_files">Restore selected files</string>
-    <string name="restore_all_files">Restore all files</string>
+    <string name="restore_this_file">Възстанови този файл</string>
+    <string name="restore_selected_files">Възстанови избраните файлове</string>
+    <string name="restore_all_files">Възстанови всички файлове</string>
     <string name="recycle_bin_emptied">The Recycle Bin has been emptied successfully</string>
     <string name="files_restored_successfully">Files have been restored successfully</string>
     <string name="empty_recycle_bin_confirmation">Are you sure you want to empty the Recycle Bin? The files will be permanently lost.</string>
@@ -679,41 +679,43 @@
     <string name="in_october">in October</string>
     <string name="in_november">in November</string>
     <string name="in_december">in December</string>
-    <string name="monday">Monday</string>
-    <string name="tuesday">Tuesday</string>
-    <string name="wednesday">Wednesday</string>
-    <string name="thursday">Thursday</string>
-    <string name="friday">Friday</string>
-    <string name="saturday">Saturday</string>
-    <string name="sunday">Sunday</string>
-    <string name="monday_letter">M</string>
-    <string name="tuesday_letter">T</string>
-    <string name="wednesday_letter">W</string>
-    <string name="thursday_letter">T</string>
-    <string name="friday_letter">F</string>
-    <string name="saturday_letter">S</string>
-    <string name="sunday_letter">S</string>
-    <string name="monday_short">Mon</string>
-    <string name="tuesday_short">Tue</string>
-    <string name="wednesday_short">Wed</string>
-    <string name="thursday_short">Thu</string>
-    <string name="friday_short">Fri</string>
-    <string name="saturday_short">Sat</string>
-    <string name="sunday_short">Sun</string>
+    <string name="monday">Понеделник</string>
+    <string name="tuesday">Вторник</string>
+    <string name="wednesday">Сряда</string>
+    <string name="thursday">Четвъртък</string>
+    <string name="friday">Петък</string>
+    <string name="saturday">Събота</string>
+    <string name="sunday">Неделя</string>
+    <string name="monday_letter">П</string>
+    <string name="tuesday_letter">Т</string>
+    <string name="wednesday_letter">С</string>
+    <string name="thursday_letter">Ч</string>
+    <string name="friday_letter">П</string>
+    <string name="saturday_letter">С</string>
+    <string name="sunday_letter">Н</string>
+    <string name="monday_short">Пн</string>
+    <string name="tuesday_short">Вт</string>
+    <string name="wednesday_short">Ср</string>
+    <string name="thursday_short">Чт</string>
+    <string name="friday_short">Пт</string>
+    <string name="saturday_short">Сб</string>
+    <string name="sunday_short">Нд</string>
     <!-- Pro version -->
-    <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
-    <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
-    <string name="it_is_free">It is free till: %s. If you download it till then, you will be able to use it for free forever.</string>
-    <string name="more_info">More info</string>
-    <string name="upgrade">Upgrade</string>
-    <string name="upgrade_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export/import buttons at the main screen menu.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgrade_to_pro_long">Версията на приложението ви вече няма да се актуализира. Моля, надстройте до Pro версията, за да получите нови поправки и други подобрения.</string>
+    <string name="upgrade_to_pro_long_click">Версията на приложението ви вече няма да се актуализира. Моля, надстройте до Pro версията, за да получите нови корекции и други подобрения, като кликнете тук.</string>
+    <string name="it_is_free">Той е безплатен до: %s. Ако го изтеглите дотогава, ще можете да го използвате безплатно завинаги.</string>
+    <string name="more_info">Подробности</string>
+    <string name="upgrade">Обновяване</string>
+    <string name="upgrade_calendar">Трябва да мигрирате локално съхранени събития ръчно чрез експортиране в .ics файл, след което импортирайте. Можете да намерите и двата бутона за експортиране/импортиране в главното екранно меню.</string>
+    <string name="upgraded_to_pro">Хей,
+\n
+\nИзглежда, че вече имате Pro версията на приложението. Това вече няма да ви трябва, можете да го деинсталирате.</string>
+    <string name="upgraded_to_pro_calendar">Трябва да мигрирате локално съхранени събития ръчно чрез експортиране във файл .ics, след което да импортирате. Можете да намерите както бутони за експортиране, така и импортиране в горното меню.</string>
+    <string name="upgraded_to_pro_notes">Трябва да мигрирате бележките си към Pro версията ръчно.</string>
+    <string name="upgraded_to_pro_contacts">Трябва да мигрирате локално съхранените контакти ръчно чрез експортиране във .vcf файл, след което да импортирате. Можете да намерите бутоните за експортиране/импортиране в горното меню.</string>
     <!-- About -->
-    <string name="about">About</string>
-    <string name="website">Website</string>
+    <string name="about">Относно</string>
+    <string name="website">Страница</string>
     <string name="website_label">For the source codes visit</string>
     <string name="email_label">Send your feedback or suggestions to</string>
     <string name="upgrade_to_pro">Upgrade to Pro</string>
@@ -724,8 +726,8 @@
     <string name="invite_via">Invite via</string>
     <string name="rate_us">Rate us</string>
     <string name="rate">Rate</string>
-    <string name="donate">Donate</string>
-    <string name="follow_us">Follow us</string>
+    <string name="donate">Дарения</string>
+    <string name="follow_us">Последвайте ни</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
     <string name="support">Support</string>
     <string name="help_us">Help us</string>
@@ -733,11 +735,11 @@
     <string name="other">Other</string>
     <string name="privacy_policy">Privacy policy</string>
     <string name="version_placeholder">Version %s</string>
-    <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with ❤️ in Slovakia</string>
+    <string name="hello">Здравейте :)</string>
+    <string name="about_footer">Направено с ❤️ в Словакия</string>
     <string name="additional_info">Additional info</string>
     <string name="app_version">App version: %s</string>
-    <string name="device_os">Device OS: %s</string>
+    <string name="device_os">ОС на устройството: %s</string>
     <string name="donate_please">
         <![CDATA[
             Hello,<br><br>
@@ -752,13 +754,22 @@
     <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
     <string name="make_sure_latest">Also make sure that you are using the latest app version.</string>
     <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
-    <string name="read_it">Read it</string>
-    <string name="read_faq">Read FAQ</string>
-    <string name="rate_us_prompt">Hello,\n\nit looks like you are using this app for quite a while already, and we really appreciate it.\n\nIf we can ask you a favor, please rate us on Google Play. That would really help us a lot.\n\nNo matter how you decide, you will not see this message again.\n\nThanks!</string>
-    <string name="rate_our_app">Rate our app please :)</string>
-    <string name="thank_you">Thank you</string>
-    <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
-    <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
+    <string name="read_it">Прочети го</string>
+    <string name="read_faq">Прочетете често задавани въпроси</string>
+    <string name="rate_us_prompt">Здравейте,
+\n
+\nИзглежда, че вече използвате приложението доста време и наистина го оценяваме.
+\n
+\nАко можем да ви помолим услуга, моля, оценете ни в Google Play. Това наистина би ни помогнало много.
+\n
+\nКаквото и да решите, няма да видите това съобщение отново.
+\n
+\nБлагодаря!</string>
+    <string name="rate_our_app">Оценете нашето приложение, моля :)</string>
+    <string name="thank_you">Благодаря Ви</string>
+    <string name="widget_locked_pro">Приставката е заключена.
+\nМоля, надстройте до Pro версията, за да я отключите.</string>
+    <string name="features_locked">Тази функция е заключена, за да я отключите поръчайте &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; за пълен достъп до функциите на приложението.&lt;br&gt;&lt;br&gt;Плащането е еднократно, а ако не останете доволни ще ви върнем парите.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -907,7 +918,7 @@
     <string name="why_upgrade_no_ads">No ads</string>
     <string name="why_upgrade_no_internet_access">No internet access</string>
     <string name="why_upgrade_footer">100% Money Back Guarantee</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
+    <string name="why_upgrade_footer_one_time_payment">Еднократно плащане</string>
     <string name="why_upgrade_improved_design">Improved design</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
