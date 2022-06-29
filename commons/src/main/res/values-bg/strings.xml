@@ -707,10 +707,12 @@
     <string name="more_info">Подробности</string>
     <string name="upgrade">Обновяване</string>
     <string name="upgrade_calendar">Трябва да мигрирате локално съхранени събития ръчно чрез експортиране в .ics файл, след което импортирайте. Можете да намерите и двата бутона за експортиране/импортиране в главното екранно меню.</string>
-    <string name="upgraded_to_pro">Hey,\n\nseems like you already have the Pro app version too. You will not need this one anymore, you can uninstall it.</string>
-    <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
-    <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
-    <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
+    <string name="upgraded_to_pro">Хей,
+\n
+\nИзглежда, че вече имате Pro версията на приложението. Това вече няма да ви трябва, можете да го деинсталирате.</string>
+    <string name="upgraded_to_pro_calendar">Трябва да мигрирате локално съхранени събития ръчно чрез експортиране във файл .ics, след което да импортирате. Можете да намерите както бутони за експортиране, така и импортиране в горното меню.</string>
+    <string name="upgraded_to_pro_notes">Трябва да мигрирате бележките си към Pro версията ръчно.</string>
+    <string name="upgraded_to_pro_contacts">Трябва да мигрирате локално съхранените контакти ръчно чрез експортиране във .vcf файл, след което да импортирате. Можете да намерите бутоните за експортиране/импортиране в горното меню.</string>
     <!-- About -->
     <string name="about">Относно</string>
     <string name="website">Страница</string>
