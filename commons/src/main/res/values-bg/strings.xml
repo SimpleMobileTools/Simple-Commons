@@ -116,8 +116,8 @@
     <!-- Renaming -->
     <string name="rename_file">Преименуване на файл</string>
     <string name="rename_folder">Преименуване на папка</string>
-    <string name="rename_file_error">Неуспешно преименуване на файл</string>
-    <string name="rename_folder_error">Неуспешно преименуване на папка</string>
+    <string name="rename_file_error">Файлът не може да бъде преименуван</string>
+    <string name="rename_folder_error">Папката не може да бъде преименувана</string>
     <string name="rename_folder_empty">Името на папката не трябва да е празно</string>
     <string name="rename_folder_exists">Вече съществува папка с това име</string>
     <string name="rename_folder_root">Не може да се преименува главната папка на хранилище</string>
