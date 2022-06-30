@@ -233,7 +233,7 @@
     <string name="select_storage">Изберете хранилище</string>
     <string name="storage">Хранилище</string>
     <string name="internal">Вътрешно</string>
-    <string name="sd_card">Карта на SD</string>
+    <string name="sd_card">SD Карта</string>
     <string name="root">Ядро</string>
     <string name="wrong_root_selected">Избрана грешна папка, моля, изберете началната папка на вашата SD карта</string>
     <string name="sd_card_usb_same">Пътищата до SD картата и USB устройството не могат да бъдат еднакви</string>
@@ -911,11 +911,11 @@
     <string name="why_upgrade_heic_support">Поддръжка на HEIC/HEIF файлове</string>
     <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
     <string name="why_upgrade_folder_locking">Individual folder locking</string>
-    <string name="why_upgrade_printing_support">Printing support</string>
+    <string name="why_upgrade_printing_support">Поддръжка за печат</string>
     <!-- Calendar Pro -->
-    <string name="why_upgrade_time_zone_support">Time zone support</string>
+    <string name="why_upgrade_time_zone_support">Поддръжка на часовати зони</string>
     <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
-    <string name="why_upgrade_easy_event_importing">Easy event importing</string>
+    <string name="why_upgrade_easy_event_importing">Лесно импортиране на събития</string>
     <string name="why_upgrade_new_widgets">Нови приспособления</string>
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
