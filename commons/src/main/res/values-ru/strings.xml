@@ -793,7 +793,7 @@
     <string name="rate_our_app">Оцените приложение, пожалуйста :)</string>
     <string name="thank_you">Спасибо</string>
     <string name="widget_locked_pro">Виджет заблокирован.\nПерейдите на версию Pro, чтобы разблокировать его.</string>
-    <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
+    <string name="features_locked">Эта функция заблокирована, пожалуйста, купите &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; для разблокировки всех возможностей приложения.&lt;br&gt;&lt;br&gt;Это разовый платёж, и если вы не будете удовлетворены, возможен возврат денег.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -939,7 +939,7 @@
     <string name="why_upgrade_no_ads">Никакой рекламы</string>
     <string name="why_upgrade_no_internet_access">Без доступа к интернету</string>
     <string name="why_upgrade_footer">100% гарантия возврата денег</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
+    <string name="why_upgrade_footer_one_time_payment">Разовый платёж</string>
     <string name="why_upgrade_improved_design">Улучшенный дизайн</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Мощный фоторедактор</string>
