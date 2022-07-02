@@ -24,6 +24,10 @@ class ConfirmationAdvancedDialog(
             builder.setNegativeButton(negative) { dialog, which -> negativePressed() }
         }
 
+        if (!cancelOnTouchOutside) {
+            builder.setOnCancelListener { negativePressed() }
+        }
+
         dialog = builder.create().apply {
             activity.setupDialogStuff(view, this, cancelOnTouchOutside = cancelOnTouchOutside)
         }
