@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/tab_item_icon"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
         android:layout_gravity="center_horizontal"
         android:scaleType="fitCenter"
         tools:src="@drawable/ic_person_vector" />
