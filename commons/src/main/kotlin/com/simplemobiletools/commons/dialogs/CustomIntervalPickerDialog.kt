@@ -1,6 +1,9 @@
 package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
+import android.content.DialogInterface
+import android.view.KeyEvent
+import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
@@ -15,6 +18,15 @@ class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: In
     var view = (activity.layoutInflater.inflate(R.layout.dialog_custom_interval_picker, null) as ViewGroup)
 
     init {
+        dialog = AlertDialog.Builder(activity)
+            .setPositiveButton(R.string.ok) { dialogInterface, i -> confirmReminder() }
+            .setNegativeButton(R.string.cancel, null)
+            .create().apply {
+                activity.setupDialogStuff(view, this) {
+                    showKeyboard(view.dialog_custom_interval_value)
+                }
+            }
+
         view.apply {
             dialog_radio_seconds.beVisibleIf(showSeconds)
             when {
@@ -36,16 +48,18 @@ class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: In
                     dialog_custom_interval_value.setText(selectedSeconds.toString())
                 }
             }
-        }
-
-        dialog = AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok) { dialogInterface, i -> confirmReminder() }
-                .setNegativeButton(R.string.cancel, null)
-                .create().apply {
-                    activity.setupDialogStuff(view, this) {
-                        showKeyboard(view.dialog_custom_interval_value)
+            dialog_custom_interval_value.setOnKeyListener(object : View.OnKeyListener {
+                override fun onKey(v: View?, keyCode: Int, event: KeyEvent): Boolean {
+                    if (event.action == KeyEvent.ACTION_DOWN &&
+                        keyCode == KeyEvent.KEYCODE_ENTER
+                    ) {
+                        dialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick()
+                        return true
                     }
+                    return false
                 }
+            })
+        }
     }
 
     private fun confirmReminder() {
