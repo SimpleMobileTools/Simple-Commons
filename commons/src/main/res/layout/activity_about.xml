@@ -252,9 +252,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ripple_top_corners"
-                android:paddingStart="@dimen/activity_margin"
-                android:paddingTop="@dimen/medium_margin"
-                android:paddingBottom="@dimen/medium_margin">
+                android:padding="@dimen/medium_margin">
 
                 <ImageView
                     android:id="@+id/about_facebook_icon"
@@ -284,9 +282,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ripple_background"
-                android:paddingStart="@dimen/activity_margin"
-                android:paddingTop="@dimen/medium_margin"
-                android:paddingBottom="@dimen/medium_margin">
+                android:padding="@dimen/medium_margin">
 
                 <ImageView
                     android:id="@+id/about_reddit_icon"
@@ -316,9 +312,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ripple_bottom_corners"
-                android:paddingStart="@dimen/activity_margin"
-                android:paddingTop="@dimen/medium_margin"
-                android:paddingBottom="@dimen/medium_margin">
+                android:padding="@dimen/medium_margin">
 
                 <ImageView
                     android:id="@+id/about_telegram_icon"
