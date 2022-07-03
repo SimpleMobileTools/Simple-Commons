@@ -48,14 +48,14 @@ class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: In
                     dialog_custom_interval_value.setText(selectedSeconds.toString())
                 }
             }
+
             dialog_custom_interval_value.setOnKeyListener(object : View.OnKeyListener {
                 override fun onKey(v: View?, keyCode: Int, event: KeyEvent): Boolean {
-                    if (event.action == KeyEvent.ACTION_DOWN &&
-                        keyCode == KeyEvent.KEYCODE_ENTER
-                    ) {
+                    if (event.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
                         dialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick()
                         return true
                     }
+
                     return false
                 }
             })
