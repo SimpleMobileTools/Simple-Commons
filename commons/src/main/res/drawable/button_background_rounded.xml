@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="?attr/colorPrimaryDark">
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?attr/colorPrimaryDark">
     <item android:id="@+id/button_background_holder">
         <layer-list>
             <item android:id="@+id/button_background_shape">
                 <shape android:shape="rectangle">
-                    <solid android:color="?attr/colorPrimary"/>
-                    <corners android:radius="12dp"/>
+                    <solid android:color="?attr/colorPrimary" />
+                    <corners android:radius="14dp" />
                 </shape>
             </item>
         </layer-list>
