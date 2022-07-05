@@ -156,8 +156,7 @@
     </style>
 
     <style name="ColoredButtonStyle" parent="@android:style/Widget.TextView">
-        <item name="android:textFontWeight">600</item>
-        <item name="android:textAllCaps">true</item>
+        <item name="android:textFontWeight">400</item>
         <item name="android:textSize">@dimen/normal_text_size</item>
         <item name="android:paddingStart">@dimen/bigger_margin</item>
         <item name="android:paddingEnd">@dimen/bigger_margin</item>
@@ -167,8 +166,7 @@
     </style>
 
     <style name="StrokeButtonStyle" parent="@android:style/Widget.TextView">
-        <item name="android:textFontWeight">600</item>
-        <item name="android:textAllCaps">true</item>
+        <item name="android:textFontWeight">400</item>
         <item name="android:textSize">@dimen/normal_text_size</item>
         <item name="android:paddingStart">@dimen/bigger_margin</item>
         <item name="android:paddingEnd">@dimen/bigger_margin</item>
