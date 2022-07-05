@@ -59,6 +59,8 @@
     <string name="value_cannot_be_empty">Value cannot be empty</string>
     <string name="create_new_contact">Create new contact</string>
     <string name="add_to_existing_contact">Add to an existing contact</string>
+    <string name="app_corrupt">App Corrupt</string>
+    <string name="disclaimer">Disclaimer</string>
 
     <!-- Emails -->
     <string name="home">Home</string>
@@ -845,7 +847,6 @@
     <string name="sms_messenger_short">SMS Messenger</string>
     <string name="thank_you_short">Thank You</string>
     <string name="voice_recorder_short">Voice Recorder</string>
-
     <string name="sideloaded_app">
         <![CDATA[
             It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
