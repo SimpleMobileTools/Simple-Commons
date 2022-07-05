@@ -72,7 +72,7 @@ class FilePickerDialog(
         tryUpdateItems()
         setupFavorites()
 
-        val builder = AlertDialog.Builder(activity)
+        val builder = activity.getAlertDialogBuilder()
             .setNegativeButton(R.string.cancel, null)
             .setOnKeyListener { dialogInterface, i, keyEvent ->
                 if (keyEvent.action == KeyEvent.ACTION_UP && i == KeyEvent.KEYCODE_BACK) {

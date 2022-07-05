@@ -111,7 +111,7 @@ class StoragePickerDialog(
             radioGroup.addView(rootButton, layoutParams)
         }
 
-        AlertDialog.Builder(activity).apply {
+        activity.getAlertDialogBuilder().apply {
             activity.setupDialogStuff(view, this, R.string.select_storage) { alertDialog ->
                 dialog = alertDialog
             }

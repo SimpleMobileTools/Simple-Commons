@@ -25,7 +25,7 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
             rename_item_name.setText(name)
         }
 
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok, null)
             .setNegativeButton(R.string.cancel, null)
             .apply {

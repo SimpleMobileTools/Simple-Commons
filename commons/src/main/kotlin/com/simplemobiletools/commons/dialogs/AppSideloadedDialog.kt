@@ -5,6 +5,7 @@ import android.text.Html
 import android.text.method.LinkMovementMethod
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
 import com.simplemobiletools.commons.extensions.getStringsPackageName
 import com.simplemobiletools.commons.extensions.launchViewIntent
 import com.simplemobiletools.commons.extensions.setupDialogStuff
@@ -21,7 +22,7 @@ class AppSideloadedDialog(val activity: Activity, val callback: () -> Unit) {
             text_view.movementMethod = LinkMovementMethod.getInstance()
         }
 
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setNegativeButton(R.string.cancel) { dialog, which -> negativePressed() }
             .setPositiveButton(R.string.download, null)
             .setOnCancelListener { negativePressed() }

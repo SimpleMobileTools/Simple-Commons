@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.dialogs
 import android.app.Activity
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
 import com.simplemobiletools.commons.extensions.launchUpgradeToProIntent
 import com.simplemobiletools.commons.extensions.launchViewIntent
 import com.simplemobiletools.commons.extensions.setupDialogStuff
@@ -15,7 +16,7 @@ class UpgradeToProDialog(val activity: Activity) {
             upgrade_to_pro.text = activity.getString(R.string.upgrade_to_pro_long)
         }
 
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.upgrade) { dialog, which -> upgradeApp() }
             .setNeutralButton(R.string.more_info, null)     // do not dismiss the dialog on pressing More Info
             .setNegativeButton(R.string.cancel, null)

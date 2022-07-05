@@ -43,7 +43,7 @@ class SelectAlarmSoundDialog(
 
         addYourAlarms()
 
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setOnDismissListener { mediaPlayer?.stop() }
             .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
             .setNegativeButton(R.string.cancel, null)

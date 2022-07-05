@@ -44,7 +44,7 @@ class RenameDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String
             })
         }
 
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok, null)
             .setNegativeButton(R.string.cancel) { dialog, which -> dismissDialog() }
             .apply {

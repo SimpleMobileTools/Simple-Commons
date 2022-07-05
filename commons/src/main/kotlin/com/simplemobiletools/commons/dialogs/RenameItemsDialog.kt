@@ -19,7 +19,7 @@ class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<S
         var ignoreClicks = false
         val view = activity.layoutInflater.inflate(layoutId, null)
 
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok, null)
             .setNegativeButton(R.string.cancel, null)
             .apply {

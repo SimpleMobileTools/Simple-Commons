@@ -1,13 +1,13 @@
 package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
-import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.R.id.conflict_dialog_radio_keep_both
 import com.simplemobiletools.commons.R.id.conflict_dialog_radio_merge
 import com.simplemobiletools.commons.R.id.conflict_dialog_radio_skip
 import com.simplemobiletools.commons.extensions.baseConfig
 import com.simplemobiletools.commons.extensions.beVisibleIf
+import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.helpers.CONFLICT_KEEP_BOTH
 import com.simplemobiletools.commons.helpers.CONFLICT_MERGE
@@ -39,7 +39,7 @@ class FileConflictDialog(
             resolutionButton.isChecked = true
         }
 
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
             .setNegativeButton(R.string.cancel, null)
             .apply {

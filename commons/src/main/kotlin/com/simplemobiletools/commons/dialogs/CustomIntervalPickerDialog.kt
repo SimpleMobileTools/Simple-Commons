@@ -18,7 +18,7 @@ class CustomIntervalPickerDialog(val activity: Activity, val selectedSeconds: In
     var view = (activity.layoutInflater.inflate(R.layout.dialog_custom_interval_picker, null) as ViewGroup)
 
     init {
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok) { dialogInterface, i -> confirmReminder() }
             .setNegativeButton(R.string.cancel, null)
             .apply {

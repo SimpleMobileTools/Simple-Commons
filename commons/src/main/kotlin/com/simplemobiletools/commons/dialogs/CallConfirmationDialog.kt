@@ -1,10 +1,10 @@
 package com.simplemobiletools.commons.dialogs
 
 import android.view.animation.AnimationUtils
-import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.applyColorFilter
+import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
 import com.simplemobiletools.commons.extensions.getProperTextColor
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_call_confirmation.view.*
@@ -14,7 +14,7 @@ class CallConfirmationDialog(val activity: BaseSimpleActivity, val callee: Strin
 
     init {
         view.call_confirm_phone.applyColorFilter(activity.getProperTextColor())
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setNegativeButton(R.string.cancel, null)
             .apply {
                 val title = String.format(activity.getString(R.string.call_person), callee)

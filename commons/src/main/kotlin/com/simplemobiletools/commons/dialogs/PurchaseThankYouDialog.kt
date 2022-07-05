@@ -3,12 +3,8 @@ package com.simplemobiletools.commons.dialogs
 import android.app.Activity
 import android.text.Html
 import android.text.method.LinkMovementMethod
-import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
-import com.simplemobiletools.commons.extensions.baseConfig
-import com.simplemobiletools.commons.extensions.launchPurchaseThankYouIntent
-import com.simplemobiletools.commons.extensions.removeUnderlines
-import com.simplemobiletools.commons.extensions.setupDialogStuff
+import com.simplemobiletools.commons.extensions.*
 import kotlinx.android.synthetic.main.dialog_purchase_thank_you.view.*
 
 class PurchaseThankYouDialog(val activity: Activity) {
@@ -24,7 +20,7 @@ class PurchaseThankYouDialog(val activity: Activity) {
             purchase_thank_you.removeUnderlines()
         }
 
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.purchase) { dialog, which -> activity.launchPurchaseThankYouIntent() }
             .setNegativeButton(R.string.cancel, null)
             .apply {

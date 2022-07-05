@@ -51,7 +51,7 @@ class PropertiesDialog() {
         mPropertyView = mDialogView.properties_holder!!
         addProperties(path)
 
-        val builder = AlertDialog.Builder(mActivity)
+        val builder = activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok, null)
 
         if (!path.startsWith("content://") && path.canModifyEXIF() && activity.isPathOnInternalStorage(path)) {
@@ -248,7 +248,7 @@ class PropertiesDialog() {
             }
         }
 
-        val builder = AlertDialog.Builder(mActivity)
+        val builder = activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok, null)
 
         if (!paths.any { it.startsWith("content://") } && paths.any { it.canModifyEXIF() } && paths.any { activity.isPathOnInternalStorage(it) }) {

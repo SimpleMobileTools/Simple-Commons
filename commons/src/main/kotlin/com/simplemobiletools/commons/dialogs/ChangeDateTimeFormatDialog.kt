@@ -2,10 +2,10 @@ package com.simplemobiletools.commons.dialogs
 
 import android.app.Activity
 import android.text.format.DateFormat
-import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.R.id.*
 import com.simplemobiletools.commons.extensions.baseConfig
+import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.helpers.*
 import kotlinx.android.synthetic.main.dialog_change_date_time_format.view.*
@@ -41,7 +41,7 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Uni
             formatButton.isChecked = true
         }
 
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
             .setNegativeButton(R.string.cancel, null)
             .apply {

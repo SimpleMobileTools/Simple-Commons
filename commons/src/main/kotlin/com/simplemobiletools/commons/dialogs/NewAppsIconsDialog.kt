@@ -3,8 +3,8 @@ package com.simplemobiletools.commons.dialogs
 import android.app.Activity
 import android.text.Html
 import android.text.method.LinkMovementMethod
-import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.commons.R
+import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
 import com.simplemobiletools.commons.extensions.launchViewIntent
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_new_apps_icons.view.*
@@ -31,7 +31,7 @@ class NewAppsIconsDialog(val activity: Activity) {
             new_apps_voice_recorder.setOnClickListener { activity.launchViewIntent(voiceRecorderUrl) }
         }
 
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok, null)
             .apply {
                 activity.setupDialogStuff(view, this, cancelOnTouchOutside = false)

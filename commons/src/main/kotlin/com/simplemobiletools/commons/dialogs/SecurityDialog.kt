@@ -75,7 +75,7 @@ class SecurityDialog(
             }
         }
 
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setOnCancelListener { onCancelFail() }
             .setNegativeButton(R.string.cancel) { _, _ -> onCancelFail() }
             .apply {

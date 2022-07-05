@@ -1522,7 +1522,7 @@ fun Activity.setupDialogStuff(
     }
 
     if (dialog is MaterialAlertDialogBuilder) {
-        dialog.apply {
+        dialog.create().apply {
             if (titleId != 0) {
                 setTitle(titleId)
             } else if (titleText.isNotEmpty()) {
@@ -1532,8 +1532,8 @@ fun Activity.setupDialogStuff(
             setView(view)
             setCancelable(cancelOnTouchOutside)
             show()
+            callback?.invoke(this)
         }
-        callback?.invoke(dialog.create())
     } else {
         var title: TextView? = null
         if (titleId != 0 || titleText.isNotEmpty()) {
