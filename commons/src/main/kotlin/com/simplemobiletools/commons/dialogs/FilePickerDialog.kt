@@ -46,7 +46,7 @@ class FilePickerDialog(
     private var mPrevPath = ""
     private var mScrollStates = HashMap<String, Parcelable>()
 
-    private lateinit var mDialog: AlertDialog
+    private var mDialog: AlertDialog? = null
     private var mDialogView = activity.layoutInflater.inflate(R.layout.dialog_filepicker, null)
 
     init {
@@ -82,7 +82,7 @@ class FilePickerDialog(
                         currPath = breadcrumbs.getLastItem().path.trimEnd('/')
                         tryUpdateItems()
                     } else {
-                        mDialog.dismiss()
+                        mDialog?.dismiss()
                     }
                 }
                 true
@@ -129,12 +129,14 @@ class FilePickerDialog(
             }
         }
 
-        mDialog = builder.create().apply {
-            activity.setupDialogStuff(mDialogView, this, getTitle())
+        builder.apply {
+            activity.setupDialogStuff(mDialogView, this, getTitle()) { alertDialog ->
+                mDialog = alertDialog
+            }
         }
 
         if (!pickFile) {
-            mDialog.getButton(AlertDialog.BUTTON_POSITIVE)?.setOnClickListener {
+            mDialog?.getButton(AlertDialog.BUTTON_POSITIVE)?.setOnClickListener {
                 verifyPath()
             }
         }
@@ -145,7 +147,7 @@ class FilePickerDialog(
     private fun createNewFolder() {
         CreateNewFolderDialog(activity, currPath) {
             callback(it)
-            mDialog.dismiss()
+            mDialog?.dismiss()
         }
     }
 
@@ -260,7 +262,7 @@ class FilePickerDialog(
         }
 
         callback(currPath)
-        mDialog.dismiss()
+        mDialog?.dismiss()
     }
 
     private fun getItems(path: String, callback: (List<FileDirItem>) -> Unit) {

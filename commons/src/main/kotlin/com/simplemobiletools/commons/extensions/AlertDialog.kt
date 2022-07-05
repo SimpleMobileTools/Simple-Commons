@@ -1,10 +1,10 @@
 package com.simplemobiletools.commons.extensions
 
 import android.view.WindowManager
-import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.AppCompatEditText
 
-fun AlertDialog.showKeyboard(editText: EditText) {
+fun AlertDialog.showKeyboard(editText: AppCompatEditText) {
     window!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
     editText.apply {
         requestFocus()

@@ -32,6 +32,10 @@ class RenameDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String
             dialog_tab_layout.setTabTextColors(textColor, textColor)
             dialog_tab_layout.setSelectedTabIndicatorColor(context.getProperPrimaryColor())
 
+            if (activity.baseConfig.isUsingSystemTheme) {
+                dialog_tab_layout.setBackgroundColor(activity.resources.getColor(R.color.you_dialog_background_color))
+            }
+
             dialog_tab_layout.onTabSelectionChanged(tabSelectedAction = {
                 viewPager.currentItem = when {
                     it.text.toString().equals(resources.getString(R.string.simple_renaming), true) -> RENAME_SIMPLE
@@ -40,13 +44,13 @@ class RenameDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String
             })
         }
 
-        dialog = AlertDialog.Builder(activity)
+        AlertDialog.Builder(activity)
             .setPositiveButton(R.string.ok, null)
             .setNegativeButton(R.string.cancel) { dialog, which -> dismissDialog() }
-            .create().apply {
-                activity.setupDialogStuff(view, this).apply {
-                    window?.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM)
-                    getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+            .apply {
+                activity.setupDialogStuff(view, this) { alertDialog ->
+                    alertDialog.window?.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM)
+                    alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                         tabsAdapter.dialogConfirmed(useMediaFileExtension, viewPager.currentItem) {
                             dismissDialog()
                             if (it) {

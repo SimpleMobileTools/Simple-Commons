@@ -1,35 +1,41 @@
 package com.simplemobiletools.commons.dialogs
 
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.AppCompatEditText
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
-import kotlinx.android.synthetic.main.dialog_rename_items.*
 import kotlinx.android.synthetic.main.dialog_rename_items.view.*
 
 // used at renaming folders
 class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<String>, val callback: () -> Unit) {
     init {
+        val layoutId = if (activity.baseConfig.isUsingSystemTheme) {
+            R.layout.dialog_rename_items_material
+        } else {
+            R.layout.dialog_rename_items
+        }
+
         var ignoreClicks = false
-        val view = activity.layoutInflater.inflate(R.layout.dialog_rename_items, null)
+        val view = activity.layoutInflater.inflate(layoutId, null)
 
         AlertDialog.Builder(activity)
             .setPositiveButton(R.string.ok, null)
             .setNegativeButton(R.string.cancel, null)
-            .create().apply {
-                activity.setupDialogStuff(view, this, R.string.rename) {
-                    showKeyboard(view.rename_items_value)
-                    getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+            .apply {
+                activity.setupDialogStuff(view, this, R.string.rename) { alertDialog ->
+                    alertDialog.showKeyboard(view.findViewById(R.id.rename_items_value))
+                    alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                         if (ignoreClicks) {
                             return@setOnClickListener
                         }
 
-                        val valueToAdd = view.rename_items_value.text.toString()
-                        val append = view.rename_items_radio_group.checkedRadioButtonId == rename_items_radio_append.id
+                        val valueToAdd = view.findViewById<AppCompatEditText>(R.id.rename_items_value).text.toString()
+                        val append = view.rename_items_radio_group.checkedRadioButtonId == view.rename_items_radio_append.id
 
                         if (valueToAdd.isEmpty()) {
                             callback()
-                            dismiss()
+                            alertDialog.dismiss()
                             return@setOnClickListener
                         }
 
@@ -42,7 +48,7 @@ class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<S
                         val sdFilePath = validPaths.firstOrNull { activity.isPathOnSD(it) } ?: validPaths.firstOrNull()
                         if (sdFilePath == null) {
                             activity.toast(R.string.unknown_error_occurred)
-                            dismiss()
+                            alertDialog.dismiss()
                             return@setOnClickListener
                         }
 
@@ -80,11 +86,11 @@ class RenameItemsDialog(val activity: BaseSimpleActivity, val paths: ArrayList<S
                                         pathsCnt--
                                         if (pathsCnt == 0) {
                                             callback()
-                                            dismiss()
+                                            alertDialog.dismiss()
                                         }
                                     } else {
                                         ignoreClicks = false
-                                        dismiss()
+                                        alertDialog.dismiss()
                                     }
                                 }
                             }

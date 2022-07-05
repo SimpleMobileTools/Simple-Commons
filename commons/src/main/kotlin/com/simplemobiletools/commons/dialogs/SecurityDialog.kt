@@ -54,6 +54,10 @@ class SecurityDialog(
                     dialog_tab_layout.addTab(dialog_tab_layout.newTab().setText(tabTitle), PROTECTION_FINGERPRINT)
                 }
 
+                if (activity.baseConfig.isUsingSystemTheme) {
+                    dialog_tab_layout.setBackgroundColor(activity.resources.getColor(R.color.you_dialog_background_color))
+                }
+
                 dialog_tab_layout.setTabTextColors(textColor, textColor)
                 dialog_tab_layout.setSelectedTabIndicatorColor(context.getProperPrimaryColor())
                 dialog_tab_layout.onTabSelectionChanged(tabSelectedAction = {
@@ -71,17 +75,19 @@ class SecurityDialog(
             }
         }
 
-        dialog = AlertDialog.Builder(activity)
+        AlertDialog.Builder(activity)
             .setOnCancelListener { onCancelFail() }
             .setNegativeButton(R.string.cancel) { _, _ -> onCancelFail() }
-            .create().apply {
-                activity.setupDialogStuff(view, this)
+            .apply {
+                activity.setupDialogStuff(view, this) { alertDialog ->
+                    dialog = alertDialog
+                }
             }
     }
 
     private fun onCancelFail() {
         callback("", 0, false)
-        dialog!!.dismiss()
+        dialog?.dismiss()
     }
 
     override fun receivedHash(hash: String, type: Int) {

@@ -11,7 +11,7 @@ import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_textview.view.*
 
 class AppSideloadedDialog(val activity: Activity, val callback: () -> Unit) {
-    private var dialog: AlertDialog
+    private var dialog: AlertDialog? = null
     private val url = "https://play.google.com/store/apps/details?id=${activity.getStringsPackageName()}"
 
     init {
@@ -21,16 +21,18 @@ class AppSideloadedDialog(val activity: Activity, val callback: () -> Unit) {
             text_view.movementMethod = LinkMovementMethod.getInstance()
         }
 
-        dialog = AlertDialog.Builder(activity)
-                .setNegativeButton(R.string.cancel) { dialog, which -> negativePressed() }
-                .setPositiveButton(R.string.download, null)
-                .setOnCancelListener { negativePressed() }
-                .create().apply {
-                    activity.setupDialogStuff(view, this)
-                    getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+        AlertDialog.Builder(activity)
+            .setNegativeButton(R.string.cancel) { dialog, which -> negativePressed() }
+            .setPositiveButton(R.string.download, null)
+            .setOnCancelListener { negativePressed() }
+            .apply {
+                activity.setupDialogStuff(view, this, R.string.app_corrupt) { alertDialog ->
+                    alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                         downloadApp()
                     }
+                    dialog = alertDialog
                 }
+            }
     }
 
     private fun downloadApp() {
@@ -38,7 +40,7 @@ class AppSideloadedDialog(val activity: Activity, val callback: () -> Unit) {
     }
 
     private fun negativePressed() {
-        dialog.dismiss()
+        dialog?.dismiss()
         callback()
     }
 }

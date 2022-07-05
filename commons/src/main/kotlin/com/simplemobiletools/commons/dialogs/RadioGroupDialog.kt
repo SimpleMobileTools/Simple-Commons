@@ -11,11 +11,12 @@ import com.simplemobiletools.commons.extensions.onGlobalLayout
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.models.RadioItem
 import kotlinx.android.synthetic.main.dialog_radio_group.view.*
-import java.util.*
 
-class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, val checkedItemId: Int = -1, val titleId: Int = 0,
-                       showOKButton: Boolean = false, val cancelCallback: (() -> Unit)? = null, val callback: (newValue: Any) -> Unit) {
-    private val dialog: AlertDialog
+class RadioGroupDialog(
+    val activity: Activity, val items: ArrayList<RadioItem>, val checkedItemId: Int = -1, val titleId: Int = 0,
+    showOKButton: Boolean = false, val cancelCallback: (() -> Unit)? = null, val callback: (newValue: Any) -> Unit
+) {
+    private var dialog: AlertDialog? = null
     private var wasInit = false
     private var selectedItemId = -1
 
@@ -39,14 +40,16 @@ class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, 
         }
 
         val builder = AlertDialog.Builder(activity)
-                .setOnCancelListener { cancelCallback?.invoke() }
+            .setOnCancelListener { cancelCallback?.invoke() }
 
         if (selectedItemId != -1 && showOKButton) {
             builder.setPositiveButton(R.string.ok) { dialog, which -> itemSelected(selectedItemId) }
         }
 
-        dialog = builder.create().apply {
-            activity.setupDialogStuff(view, this, titleId)
+        builder.apply {
+            activity.setupDialogStuff(view, this, titleId) { alertDialog ->
+                dialog = alertDialog
+            }
         }
 
         if (selectedItemId != -1) {
@@ -63,7 +66,7 @@ class RadioGroupDialog(val activity: Activity, val items: ArrayList<RadioItem>, 
     private fun itemSelected(checkedId: Int) {
         if (wasInit) {
             callback(items[checkedId].value)
-            dialog.dismiss()
+            dialog?.dismiss()
         }
     }
 }

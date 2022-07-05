@@ -7,7 +7,7 @@ import com.simplemobiletools.commons.extensions.*
 import kotlinx.android.synthetic.main.dialog_rate_stars.view.*
 
 class RateStarsDialog(val activity: Activity) {
-    private var dialog: AlertDialog
+    private var dialog: AlertDialog? = null
 
     init {
         val view = activity.layoutInflater.inflate(R.layout.dialog_rate_stars, null).apply {
@@ -26,16 +26,18 @@ class RateStarsDialog(val activity: Activity) {
             }
         }
 
-        dialog = AlertDialog.Builder(activity)
+        AlertDialog.Builder(activity)
             .setNegativeButton(R.string.later) { dialog, which -> dialogCancelled(false) }
             .setOnCancelListener { dialogCancelled(false) }
-            .create().apply {
-                activity.setupDialogStuff(view, this, cancelOnTouchOutside = false)
+            .apply {
+                activity.setupDialogStuff(view, this, cancelOnTouchOutside = false) { alertDialog ->
+                    dialog = alertDialog
+                }
             }
     }
 
     private fun dialogCancelled(showThankYou: Boolean) {
-        dialog.dismiss()
+        dialog?.dismiss()
         if (showThankYou) {
             activity.toast(R.string.thank_you)
             activity.baseConfig.wasAppRated = true

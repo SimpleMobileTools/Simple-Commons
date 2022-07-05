@@ -11,7 +11,8 @@ import kotlinx.android.synthetic.main.dialog_textview.view.*
 class NewAppDialog(val activity: Activity, val packageName: String, val title: String, val packageName2: String, val title2: String) {
     init {
         val view = activity.layoutInflater.inflate(R.layout.dialog_textview, null).apply {
-            val text = String.format(activity.getString(R.string.new_app),
+            val text = String.format(
+                activity.getString(R.string.new_app),
                 "https://play.google.com/store/apps/details?id=$packageName", title,
                 "https://play.google.com/store/apps/details?id=$packageName2", title2
             )
@@ -22,7 +23,7 @@ class NewAppDialog(val activity: Activity, val packageName: String, val title: S
 
         AlertDialog.Builder(activity)
             .setPositiveButton(R.string.ok, null)
-            .create().apply {
+            .apply {
                 activity.setupDialogStuff(view, this, cancelOnTouchOutside = false)
             }
     }

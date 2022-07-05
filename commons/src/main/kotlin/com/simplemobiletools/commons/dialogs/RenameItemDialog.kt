@@ -5,7 +5,6 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import kotlinx.android.synthetic.main.dialog_rename_item.view.*
-import java.util.*
 
 class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val callback: (newPath: String) -> Unit) {
     init {
@@ -29,10 +28,10 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
         AlertDialog.Builder(activity)
             .setPositiveButton(R.string.ok, null)
             .setNegativeButton(R.string.cancel, null)
-            .create().apply {
-                activity.setupDialogStuff(view, this, R.string.rename) {
-                    showKeyboard(view.rename_item_name)
-                    getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+            .apply {
+                activity.setupDialogStuff(view, this, R.string.rename) { alertDialog ->
+                    alertDialog.showKeyboard(view.rename_item_name)
+                    alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                         if (ignoreClicks) {
                             return@setOnClickListener
                         }
@@ -79,7 +78,7 @@ class RenameItemDialog(val activity: BaseSimpleActivity, val path: String, val c
                             ignoreClicks = false
                             if (success) {
                                 callback(newPath)
-                                dismiss()
+                                alertDialog.dismiss()
                             }
                         }
                     }

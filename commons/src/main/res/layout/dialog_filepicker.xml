@@ -49,6 +49,7 @@
                     android:id="@+id/filepicker_list"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/medium_margin"
                     android:layoutAnimation="@anim/layout_animation"
                     android:scrollbars="none"
                     app:layoutManager="com.simplemobiletools.commons.views.MyLinearLayoutManager" />

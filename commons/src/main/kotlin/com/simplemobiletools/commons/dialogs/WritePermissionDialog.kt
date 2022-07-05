@@ -20,7 +20,7 @@ class WritePermissionDialog(activity: Activity, val mode: Mode, val callback: ()
         object CreateDocumentSDK30 : Mode()
     }
 
-    var dialog: AlertDialog
+    private var dialog: AlertDialog? = null
 
     init {
         val layout = if (mode == Mode.SdCard) R.layout.dialog_write_permission else R.layout.dialog_write_permission_otg
@@ -60,19 +60,21 @@ class WritePermissionDialog(activity: Activity, val mode: Mode, val callback: ()
             }
         }
 
-        dialog = AlertDialog.Builder(activity)
+        AlertDialog.Builder(activity)
             .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
             .setOnCancelListener {
                 BaseSimpleActivity.funAfterSAFPermission?.invoke(false)
                 BaseSimpleActivity.funAfterSAFPermission = null
             }
-            .create().apply {
-                activity.setupDialogStuff(view, this, dialogTitle)
+            .apply {
+                activity.setupDialogStuff(view, this, dialogTitle) { alertDialog ->
+                    dialog = alertDialog
+                }
             }
     }
 
     private fun dialogConfirmed() {
-        dialog.dismiss()
+        dialog?.dismiss()
         callback()
     }
 }

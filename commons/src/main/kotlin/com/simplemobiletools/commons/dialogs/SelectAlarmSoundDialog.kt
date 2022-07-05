@@ -30,7 +30,7 @@ class SelectAlarmSoundDialog(
     private var yourAlarmSounds = ArrayList<AlarmSound>()
     private var mediaPlayer: MediaPlayer? = null
     private val config = activity.baseConfig
-    private val dialog: AlertDialog
+    private var dialog: AlertDialog? = null
 
     init {
         activity.getAlarmSounds(type) {
@@ -43,13 +43,15 @@ class SelectAlarmSoundDialog(
 
         addYourAlarms()
 
-        dialog = AlertDialog.Builder(activity)
+        AlertDialog.Builder(activity)
             .setOnDismissListener { mediaPlayer?.stop() }
             .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
             .setNegativeButton(R.string.cancel, null)
-            .create().apply {
-                activity.setupDialogStuff(view, this)
-                window?.volumeControlStream = audioStream
+            .apply {
+                activity.setupDialogStuff(view, this) { alertDialog ->
+                    dialog = alertDialog
+                    alertDialog.window?.volumeControlStream = audioStream
+                }
             }
     }
 
@@ -115,7 +117,7 @@ class SelectAlarmSoundDialog(
                 } catch (e: ActivityNotFoundException) {
                     activity.toast(R.string.no_app_found)
                 }
-                dialog.dismiss()
+                dialog?.dismiss()
             }
             else -> try {
                 mediaPlayer?.reset()

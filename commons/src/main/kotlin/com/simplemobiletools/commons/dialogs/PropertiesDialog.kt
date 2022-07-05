@@ -60,10 +60,11 @@ class PropertiesDialog() {
             }
         }
 
-        builder.create().apply {
-            mActivity.setupDialogStuff(mDialogView, this, R.string.properties)
-            getButton(AlertDialog.BUTTON_NEUTRAL).setOnClickListener {
-                removeEXIFFromPath(path)
+        builder.apply {
+            mActivity.setupDialogStuff(mDialogView, this, R.string.properties) { alertDialog ->
+                alertDialog.getButton(AlertDialog.BUTTON_NEUTRAL).setOnClickListener {
+                    removeEXIFFromPath(path)
+                }
             }
         }
     }
@@ -256,10 +257,11 @@ class PropertiesDialog() {
             }
         }
 
-        builder.create().apply {
-            mActivity.setupDialogStuff(mDialogView, this, R.string.properties)
-            getButton(AlertDialog.BUTTON_NEUTRAL).setOnClickListener {
-                removeEXIFFromPaths(paths)
+        builder.apply {
+            mActivity.setupDialogStuff(mDialogView, this, R.string.properties) { alertDialog ->
+                alertDialog.getButton(AlertDialog.BUTTON_NEUTRAL).setOnClickListener {
+                    removeEXIFFromPaths(paths)
+                }
             }
         }
     }

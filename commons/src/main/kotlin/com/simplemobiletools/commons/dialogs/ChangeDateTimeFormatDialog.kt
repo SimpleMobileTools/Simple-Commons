@@ -42,11 +42,11 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Uni
         }
 
         AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
-                .setNegativeButton(R.string.cancel, null)
-                .create().apply {
-                    activity.setupDialogStuff(view, this)
-                }
+            .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
+            .setNegativeButton(R.string.cancel, null)
+            .apply {
+                activity.setupDialogStuff(view, this)
+            }
     }
 
     private fun dialogConfirmed() {

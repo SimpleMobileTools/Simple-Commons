@@ -150,8 +150,9 @@ class ColorPickerDialog(
             builder.setNeutralButton(R.string.use_default) { dialog, which -> useDefault() }
         }
 
-        dialog = builder.create().apply {
-            activity.setupDialogStuff(view, this) {
+        builder.apply {
+            activity.setupDialogStuff(view, this) { alertDialog ->
+                dialog = alertDialog
                 view.color_picker_arrow.applyColorFilter(textColor)
                 view.color_picker_hex_arrow.applyColorFilter(textColor)
                 viewCursor.applyColorFilter(textColor)

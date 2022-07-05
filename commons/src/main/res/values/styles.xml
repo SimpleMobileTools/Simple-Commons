@@ -25,7 +25,7 @@
         <item name="android:forceDarkAllowed">false</item>
     </style>
 
-    <style name="AppTheme.Base.System" parent="@android:style/Theme.DeviceDefault.NoActionBar">
+    <style name="AppTheme.Base.System" parent="Theme.Material3.Dark">
         <item name="colorPrimary">@color/you_primary_color</item>
         <item name="colorPrimaryDark">@color/you_primary_dark_color</item>
         <item name="colorAccent">@color/you_primary_color</item>
@@ -35,9 +35,10 @@
         <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
         <item name="actionModeStyle">@style/AppTheme.ActionMode</item>
         <item name="android:forceDarkAllowed">false</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
     </style>
 
-    <style name="AppTheme.Base.System.Light" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+    <style name="AppTheme.Base.System.Light" parent="Theme.Material3.Light">
         <item name="colorPrimary">@color/you_primary_color</item>
         <item name="colorPrimaryDark">@color/you_primary_dark_color</item>
         <item name="colorAccent">@color/you_primary_color</item>
@@ -46,11 +47,42 @@
         <item name="actionBarPopupTheme">@style/TopPopupMenuTextYou</item>
         <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
         <item name="actionModeStyle">@style/AppTheme.ActionMode</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
     </style>
 
     <!-- remove the shadow under actionBar, keep it there around Overflow menu that appears at pressing the 3 dots -->
     <style name="AppTheme.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <item name="android:outlineProvider">none</item>
+    </style>
+
+    <!-- material dialogs -->
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorPrimary">@color/you_dialog_background_color</item>
+        <item name="colorSecondary">@color/you_dialog_background_color</item>
+        <item name="colorSurface">@color/you_dialog_background_color</item>
+        <item name="colorOnSurface">@color/you_primary_color</item>
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.App</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/MaterialAlertDialog.App.Title.Text</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.App.Button</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.App.Button</item>
+    </style>
+
+    <style name="MaterialAlertDialog.App" parent="MaterialAlertDialog.Material3">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.MediumComponent</item>
+        <item name="shapeAppearanceOverlay">@null</item>
+    </style>
+
+    <style name="MaterialAlertDialog.App.Title.Text" parent="MaterialAlertDialog.Material3.Title.Text">
+        <item name="android:textColor">@color/you_primary_color</item>
+    </style>
+
+    <style name="Widget.App.Button" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/you_primary_color</item>
+    </style>
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/material_dialog_corner_radius</item>
     </style>
 
     <!-- contextual action mode -->

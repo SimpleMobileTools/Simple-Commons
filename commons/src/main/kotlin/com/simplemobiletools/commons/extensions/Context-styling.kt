@@ -49,7 +49,6 @@ fun Context.updateTextColors(viewGroup: ViewGroup) {
         else -> getProperPrimaryColor()
     }
 
-
     val cnt = viewGroup.childCount
     (0 until cnt).map { viewGroup.getChildAt(it) }.forEach {
         when (it) {

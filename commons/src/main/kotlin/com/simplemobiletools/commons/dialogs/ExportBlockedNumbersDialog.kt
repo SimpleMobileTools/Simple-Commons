@@ -1,10 +1,12 @@
 package com.simplemobiletools.commons.dialogs
 
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.AppCompatEditText
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.*
+import com.simplemobiletools.commons.helpers.BLOCKED_NUMBERS_EXPORT_EXTENSION
+import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import kotlinx.android.synthetic.main.dialog_export_blocked_numbers.view.*
 import java.io.File
 
@@ -18,9 +20,15 @@ class ExportBlockedNumbersDialog(
     private val config = activity.baseConfig
 
     init {
-        val view = activity.layoutInflater.inflate(R.layout.dialog_export_blocked_numbers, null).apply {
+        val layoutId = if (activity.baseConfig.isUsingSystemTheme) {
+            R.layout.dialog_export_blocked_numbers_material
+        } else {
+            R.layout.dialog_export_blocked_numbers
+        }
+
+        val view = activity.layoutInflater.inflate(layoutId, null).apply {
             export_blocked_numbers_folder.text = activity.humanizePath(realPath)
-            export_blocked_numbers_filename.setText("${activity.getString(R.string.blocked_numbers)}_${activity.getCurrentFormattedDateTime()}")
+            findViewById<AppCompatEditText>(R.id.export_blocked_numbers_filename).setText("${activity.getString(R.string.blocked_numbers)}_${activity.getCurrentFormattedDateTime()}")
 
             if (hidePath) {
                 export_blocked_numbers_folder_label.beGone()
@@ -38,10 +46,10 @@ class ExportBlockedNumbersDialog(
         AlertDialog.Builder(activity)
             .setPositiveButton(R.string.ok, null)
             .setNegativeButton(R.string.cancel, null)
-            .create().apply {
-                activity.setupDialogStuff(view, this, R.string.export_blocked_numbers) {
-                    getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-                        val filename = view.export_blocked_numbers_filename.value
+            .apply {
+                activity.setupDialogStuff(view, this, R.string.export_blocked_numbers) { alertDialog ->
+                    alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+                        val filename = view.findViewById<AppCompatEditText>(R.id.export_blocked_numbers_filename).value
                         when {
                             filename.isEmpty() -> activity.toast(R.string.empty_name)
                             filename.isAValidFilename() -> {
@@ -54,7 +62,7 @@ class ExportBlockedNumbersDialog(
                                 ensureBackgroundThread {
                                     config.lastBlockedNumbersExportPath = file.absolutePath.getParentPath()
                                     callback(file)
-                                    dismiss()
+                                    alertDialog.dismiss()
                                 }
                             }
                             else -> activity.toast(R.string.invalid_name)

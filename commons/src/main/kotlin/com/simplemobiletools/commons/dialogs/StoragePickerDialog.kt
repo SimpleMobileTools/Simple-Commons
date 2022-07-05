@@ -19,15 +19,17 @@ import kotlinx.android.synthetic.main.dialog_radio_group.view.*
  * @param callback an anonymous function
  *
  */
-class StoragePickerDialog(val activity: BaseSimpleActivity, val currPath: String, val showRoot: Boolean, pickSingleOption: Boolean,
-                          val callback: (pickedPath: String) -> Unit) {
+class StoragePickerDialog(
+    val activity: BaseSimpleActivity, val currPath: String, val showRoot: Boolean, pickSingleOption: Boolean,
+    val callback: (pickedPath: String) -> Unit
+) {
     private val ID_INTERNAL = 1
     private val ID_SD = 2
     private val ID_OTG = 3
     private val ID_ROOT = 4
 
-    private lateinit var mDialog: AlertDialog
     private lateinit var radioGroup: RadioGroup
+    private var dialog: AlertDialog? = null
     private var defaultSelectedId = 0
     private val availableStorages = ArrayList<String>()
 
@@ -109,19 +111,20 @@ class StoragePickerDialog(val activity: BaseSimpleActivity, val currPath: String
             radioGroup.addView(rootButton, layoutParams)
         }
 
-        mDialog = AlertDialog.Builder(activity)
-            .create().apply {
-                activity.setupDialogStuff(view, this, R.string.select_storage)
+        AlertDialog.Builder(activity).apply {
+            activity.setupDialogStuff(view, this, R.string.select_storage) { alertDialog ->
+                dialog = alertDialog
             }
+        }
     }
 
     private fun internalPicked() {
-        mDialog.dismiss()
+        dialog?.dismiss()
         callback(activity.internalStoragePath)
     }
 
     private fun sdPicked() {
-        mDialog.dismiss()
+        dialog?.dismiss()
         callback(activity.sdCardPath)
     }
 
@@ -129,7 +132,7 @@ class StoragePickerDialog(val activity: BaseSimpleActivity, val currPath: String
         activity.handleOTGPermission {
             if (it) {
                 callback(activity.otgPath)
-                mDialog.dismiss()
+                dialog?.dismiss()
             } else {
                 radioGroup.check(defaultSelectedId)
             }
@@ -137,7 +140,7 @@ class StoragePickerDialog(val activity: BaseSimpleActivity, val currPath: String
     }
 
     private fun rootPicked() {
-        mDialog.dismiss()
+        dialog?.dismiss()
         callback("/")
     }
 }

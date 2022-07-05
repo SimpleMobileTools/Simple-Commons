@@ -16,7 +16,8 @@ class NewAppsIconsDialog(val activity: Activity) {
             val smsMessengerUrl = "https://play.google.com/store/apps/details?id=com.simplemobiletools.smsmessenger"
             val voiceRecorderUrl = "https://play.google.com/store/apps/details?id=com.simplemobiletools.voicerecorder"
 
-            val text = String.format(activity.getString(R.string.new_app),
+            val text = String.format(
+                activity.getString(R.string.new_app),
                 dialerUrl, activity.getString(R.string.simple_dialer),
                 smsMessengerUrl, activity.getString(R.string.simple_sms_messenger),
                 voiceRecorderUrl, activity.getString(R.string.simple_voice_recorder)
@@ -32,7 +33,7 @@ class NewAppsIconsDialog(val activity: Activity) {
 
         AlertDialog.Builder(activity)
             .setPositiveButton(R.string.ok, null)
-            .create().apply {
+            .apply {
                 activity.setupDialogStuff(view, this, cancelOnTouchOutside = false)
             }
     }

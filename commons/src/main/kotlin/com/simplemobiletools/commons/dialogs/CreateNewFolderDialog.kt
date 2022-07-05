@@ -2,6 +2,7 @@ package com.simplemobiletools.commons.dialogs
 
 import android.view.View
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.AppCompatEditText
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
@@ -11,17 +12,23 @@ import java.io.File
 
 class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, val callback: (path: String) -> Unit) {
     init {
-        val view = activity.layoutInflater.inflate(R.layout.dialog_create_new_folder, null)
+        val layoutId = if (activity.baseConfig.isUsingSystemTheme) {
+            R.layout.dialog_create_new_folder_material
+        } else {
+            R.layout.dialog_create_new_folder
+        }
+
+        val view = activity.layoutInflater.inflate(layoutId, null)
         view.folder_path.text = "${activity.humanizePath(path).trimEnd('/')}/"
 
         AlertDialog.Builder(activity)
             .setPositiveButton(R.string.ok, null)
             .setNegativeButton(R.string.cancel, null)
-            .create().apply {
-                activity.setupDialogStuff(view, this, R.string.create_new_folder) {
-                    showKeyboard(view.folder_name)
-                    getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(View.OnClickListener {
-                        val name = view.folder_name.value
+            .apply {
+                activity.setupDialogStuff(view, this, R.string.create_new_folder) { alertDialog ->
+                    alertDialog.showKeyboard(view.findViewById(R.id.folder_name))
+                    alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(View.OnClickListener {
+                        val name = view.findViewById<AppCompatEditText>(R.id.folder_name).value
                         when {
                             name.isEmpty() -> activity.toast(R.string.empty_name)
                             name.isAValidFilename() -> {
@@ -31,7 +38,7 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
                                     return@OnClickListener
                                 }
 
-                                createFolder("$path/$name", this)
+                                createFolder("$path/$name", alertDialog)
                             }
                             else -> activity.toast(R.string.invalid_name)
                         }

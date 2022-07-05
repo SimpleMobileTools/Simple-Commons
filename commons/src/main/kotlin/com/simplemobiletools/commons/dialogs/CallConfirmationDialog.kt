@@ -16,14 +16,14 @@ class CallConfirmationDialog(val activity: BaseSimpleActivity, val callee: Strin
         view.call_confirm_phone.applyColorFilter(activity.getProperTextColor())
         AlertDialog.Builder(activity)
             .setNegativeButton(R.string.cancel, null)
-            .create().apply {
+            .apply {
                 val title = String.format(activity.getString(R.string.call_person), callee)
-                activity.setupDialogStuff(view, this, titleText = title) {
+                activity.setupDialogStuff(view, this, titleText = title) { alertDialog ->
                     view.call_confirm_phone.apply {
                         startAnimation(AnimationUtils.loadAnimation(activity, R.anim.pulsing_animation))
                         setOnClickListener {
                             callback.invoke()
-                            dismiss()
+                            alertDialog.dismiss()
                         }
                     }
                 }

@@ -9,11 +9,11 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.interfaces.LineColorPickerListener
 import kotlinx.android.synthetic.main.dialog_line_color_picker.view.*
-import java.util.*
 
-class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, val isPrimaryColorPicker: Boolean, val primaryColors: Int = R.array.md_primary_colors,
-                            val appIconIDs: ArrayList<Int>? = null, val menu: Menu? = null, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit) {
-
+class LineColorPickerDialog(
+    val activity: BaseSimpleActivity, val color: Int, val isPrimaryColorPicker: Boolean, val primaryColors: Int = R.array.md_primary_colors,
+    val appIconIDs: ArrayList<Int>? = null, val menu: Menu? = null, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit
+) {
     private val PRIMARY_COLORS_COUNT = 19
     private val DEFAULT_PRIMARY_COLOR_INDEX = 14
     private val DEFAULT_SECONDARY_COLOR_INDEX = 6
@@ -60,12 +60,14 @@ class LineColorPickerDialog(val activity: BaseSimpleActivity, val color: Int, va
             }
         }
 
-        dialog = AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
             .setNegativeButton(R.string.cancel) { dialog, which -> dialogDismissed() }
             .setOnCancelListener { dialogDismissed() }
-            .create().apply {
-                activity.setupDialogStuff(view, this)
+            .apply {
+                activity.setupDialogStuff(view, this) { alertDialog ->
+                    dialog = alertDialog
+                }
             }
     }
 

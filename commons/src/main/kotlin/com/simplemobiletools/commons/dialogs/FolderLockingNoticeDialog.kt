@@ -14,11 +14,11 @@ class FolderLockingNoticeDialog(val activity: Activity, val callback: () -> Unit
         }
 
         AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
-                .setNegativeButton(R.string.cancel, null)
-                .create().apply {
-                    activity.setupDialogStuff(view, this)
-                }
+            .setPositiveButton(R.string.ok) { dialog, which -> dialogConfirmed() }
+            .setNegativeButton(R.string.cancel, null)
+            .apply {
+                activity.setupDialogStuff(view, this, R.string.disclaimer)
+            }
     }
 
     private fun dialogConfirmed() {

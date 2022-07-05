@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/export_settings_wrapper"
+    android:id="@+id/export_blocked_numbers_wrapper"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/export_settings_holder"
+        android:id="@+id/export_blocked_numbers_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -14,15 +14,15 @@
         android:paddingRight="@dimen/activity_margin">
 
         <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/export_settings_path_label"
+            android:id="@+id/export_blocked_numbers_folder_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/small_margin"
-            android:text="@string/path"
+            android:text="@string/folder"
             android:textSize="@dimen/smaller_text_size" />
 
         <com.simplemobiletools.commons.views.MyTextView
-            android:id="@+id/export_settings_path"
+            android:id="@+id/export_blocked_numbers_folder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/small_margin"
@@ -30,14 +30,14 @@
             android:paddingTop="@dimen/small_margin"
             android:paddingBottom="@dimen/activity_margin" />
 
-        <com.simplemobiletools.commons.views.MyTextInputLayout
-            android:id="@+id/export_settings_hint"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/export_blocked_numbers_hint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/filename">
+            android:hint="@string/filename_without_txt">
 
-            <com.simplemobiletools.commons.views.MyEditText
-                android:id="@+id/export_settings_filename"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/export_blocked_numbers_filename"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/activity_margin"
@@ -45,6 +45,6 @@
                 android:textCursorDrawable="@null"
                 android:textSize="@dimen/normal_text_size" />
 
-        </com.simplemobiletools.commons.views.MyTextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 </ScrollView>
