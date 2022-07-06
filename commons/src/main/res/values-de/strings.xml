@@ -60,8 +60,8 @@
     <string name="value_cannot_be_empty">Wert darf nicht leer sein</string>
     <string name="create_new_contact">Neuen Kontakt erstellen</string>
     <string name="add_to_existing_contact">Zu einem existierenden Kontakt hinzufügen</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
+    <string name="app_corrupt">Anwendung beschädigt</string>
+    <string name="disclaimer">Haftungsausschluss</string>
     <!-- Emails -->
     <string name="home">Privat</string>
     <string name="work">Arbeit</string>
@@ -191,7 +191,7 @@
     <string name="system_folder_copy_restriction">Das System lässt das Kopieren in diesen Ordner nicht zu, bitte wählen Sie einen anderen Ordner</string>
     <string name="rename_in_sd_card_system_restriction">Das System erlaubt keine Umbenennung in diesem Ordner</string>
     <string name="rename_internal_system_restriction">Ordner auf dem internen Speicher können nicht direkt umbenannt werden, nur Unterordner</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
+    <string name="cannot_rename_folder">Dieser Ordner kann nicht umbenannt werden</string>
     <!-- File picker -->
     <string name="select_folder">Ordner auswählen</string>
     <string name="select_file">Datei auswählen</string>
@@ -226,7 +226,7 @@
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Speicher auswählen</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Speicherplatz</string>
     <string name="internal">Intern</string>
     <string name="sd_card">SD-Karte</string>
     <string name="root">Hauptverzeichnis</string>
@@ -759,7 +759,7 @@
     <string name="thank_you">Danke</string>
     <string name="widget_locked_pro">Das Widget ist gesperrt.
 \nBitte aktualisieren Sie auf die Pro-Version, um es freizuschalten.</string>
-    <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
+    <string name="features_locked">Diese Funktion ist gesperrt; bitte kaufen Sie &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Schlichtes Dankeschön&lt;/a&gt;, um die volle Anwendung freizuschalten.&lt;br&gt;&lt;br&gt;Es ist eine einmalige Zahlung und wenn Sie nicht zufrieden sind, können wir Ihnen das Geld zurückerstatten.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -888,7 +888,7 @@
     <string name="why_upgrade_no_ads">Keine Werbung</string>
     <string name="why_upgrade_no_internet_access">Kein Internetzugang</string>
     <string name="why_upgrade_footer">100% Geld-zurück-Garantie</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
+    <string name="why_upgrade_footer_one_time_payment">Einmalige Zahlung</string>
     <string name="why_upgrade_improved_design">Verbessertes Design</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Fortgeschrittener Fotoeditor</string>
