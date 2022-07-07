@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="AppTheme.Base" parent="Theme.AppCompat">
+    <style name="AppTheme.Base" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorPrimaryDark">@color/color_primary_dark</item>
         <item name="colorAccent">@color/color_accent</item>
@@ -16,6 +16,8 @@
         <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
         <item name="android:actionModeCloseDrawable">@drawable/ic_arrow_left_vector</item>
         <item name="android:forceDarkAllowed">false</item>
+        <item name="windowActionModeOverlay">true</item>    <!-- replace casual top menu with contextual menu after long pressing an item -->
+        <item name="android:actionOverflowButtonStyle">@style/ActionMenuOverflowIcon</item>
     </style>
 
     <style name="AppTheme.Base.Core" parent="Theme.AppCompat.NoActionBar">
@@ -25,7 +27,7 @@
         <item name="android:forceDarkAllowed">false</item>
     </style>
 
-    <style name="AppTheme.Base.System" parent="Theme.Material3.Dark">
+    <style name="AppTheme.Base.System" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/you_primary_color</item>
         <item name="colorPrimaryDark">@color/you_primary_dark_color</item>
         <item name="colorAccent">@color/you_primary_color</item>
@@ -36,9 +38,11 @@
         <item name="actionModeStyle">@style/AppTheme.ActionMode</item>
         <item name="android:forceDarkAllowed">false</item>
         <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:actionOverflowButtonStyle">@style/ActionMenuOverflowIcon</item>
     </style>
 
-    <style name="AppTheme.Base.System.Light" parent="Theme.Material3.Light">
+    <style name="AppTheme.Base.System.Light" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/you_primary_color</item>
         <item name="colorPrimaryDark">@color/you_primary_dark_color</item>
         <item name="colorAccent">@color/you_primary_color</item>
@@ -48,6 +52,9 @@
         <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
         <item name="actionModeStyle">@style/AppTheme.ActionMode</item>
         <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:actionOverflowButtonStyle">@style/ActionMenuOverflowIcon</item>
+        <item name="android:itemTextAppearance">@style/MenuTextAppearance</item>
     </style>
 
     <!-- remove the shadow under actionBar, keep it there around Overflow menu that appears at pressing the 3 dots -->
@@ -85,6 +92,15 @@
         <item name="cornerSize">@dimen/material_dialog_corner_radius</item>
     </style>
 
+    <style name="ActionMenuOverflowIcon" parent="@style/Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/md_grey_white</item>
+    </style>
+
+    <!-- text color of top menu items appearing after pressing 3 dots -->
+    <style name="MenuTextAppearance">
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
     <!-- contextual action mode -->
     <style name="AppTheme.ActionMode" parent="@style/Widget.AppCompat.ActionMode">
         <item name="android:outlineProvider">none</item>
@@ -92,7 +108,7 @@
         <item name="actionOverflowButtonStyle">@style/TopPopupMenuYou</item>
     </style>
 
-    <style name="TopPopupMenuYou">
+    <style name="TopPopupMenuYou" parent="@style/Widget.AppCompat.ActionButton.Overflow">
         <item name="android:popupBackground">@drawable/dialog_you_background</item>
         <item name="android:dropDownHorizontalOffset">-10dp</item>
         <item name="android:popupElevation">@dimen/popup_menu_elevation</item>
@@ -113,8 +129,7 @@
         <item name="android:windowShowWallpaper">true</item>
     </style>
 
-    <style name="AppTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
-        <item name="android:fontFamily">sans-serif</item>
+    <style name="AppTheme.ActionBar.TitleTextStyle">
         <item name="android:textSize">@dimen/actionbar_text_size</item>
     </style>
 

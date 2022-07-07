@@ -33,7 +33,7 @@ fun Context.getProperPrimaryColor() = when {
 }
 
 fun Context.getProperStatusBarColor() = when {
-    baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_primary_color, theme)
+    baseConfig.isUsingSystemTheme -> resources.getColor(R.color.you_status_bar_color, theme)
     else -> baseConfig.primaryColor
 }
 
