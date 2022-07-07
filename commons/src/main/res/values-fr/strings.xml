@@ -60,8 +60,8 @@
     <string name="value_cannot_be_empty">La valeur ne peut pas être vide</string>
     <string name="create_new_contact">Créer un nouveau contact</string>
     <string name="add_to_existing_contact">Ajouter à un contact existant</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
+    <string name="app_corrupt">Appli corrompue</string>
+    <string name="disclaimer">Avis de non-responsabilité</string>
     <!-- Emails -->
     <string name="home">Maison</string>
     <string name="work">Travail</string>
@@ -191,7 +191,7 @@
     <string name="system_folder_copy_restriction">Le système ne permet pas de copier dans ce dossier, veuillez en choisir un autre</string>
     <string name="rename_in_sd_card_system_restriction">Le système n\'autorise pas le renommage dans ce dossier</string>
     <string name="rename_internal_system_restriction">Impossible de renommer les dossiers directement sur le stockage interne, seulement les sous-dossiers</string>
-    <string name="cannot_rename_folder">Cannot rename this folder</string>
+    <string name="cannot_rename_folder">Impossible de renommer ce dossier</string>
     <!-- File picker -->
     <string name="select_folder">Sélectionner un dossier</string>
     <string name="select_file">Sélectionner un fichier</string>
@@ -225,7 +225,7 @@
     </plurals>
     <!-- Storages -->
     <string name="select_storage">Sélectionner le stockage</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Stockage</string>
     <string name="internal">Interne</string>
     <string name="sd_card">Carte SD</string>
     <string name="root">Racine</string>
@@ -755,7 +755,7 @@
     <string name="rate_our_app">Merci d\'évaluer notre application :)</string>
     <string name="thank_you">Merci</string>
     <string name="widget_locked_pro">Le widget est verrouillé.\nVeuillez passer à la version Pro pour le déverrouiller.</string>
-    <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
+    <string name="features_locked">Cette fonctionnalité est verrouillée, achetez &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; pour déverrouiller l\'application complète.&lt;br&gt;&lt;br&gt;C\'est un paiement unique et si vous n\'êtes pas satisfait·e, nous pouvons vous rembourser.</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -892,7 +892,7 @@
     <string name="why_upgrade_no_ads">Sans publicité</string>
     <string name="why_upgrade_no_internet_access">Aucun accès Internet</string>
     <string name="why_upgrade_footer">Garantie de remboursement à 100%</string>
-    <string name="why_upgrade_footer_one_time_payment">One time payment</string>
+    <string name="why_upgrade_footer_one_time_payment">Paiement unique</string>
     <string name="why_upgrade_improved_design">Design amélioré</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Éditeur de photos avancé</string>

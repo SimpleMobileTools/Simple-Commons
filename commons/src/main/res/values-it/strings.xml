@@ -60,8 +60,8 @@
     <string name="value_cannot_be_empty">Il valore non può essere vuoto</string>
     <string name="create_new_contact">Crea un nuovo contatto</string>
     <string name="add_to_existing_contact">Aggiungi a un contatto esistente</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
+    <string name="app_corrupt">App danneggiata</string>
+    <string name="disclaimer">Dichiarazione di non responsabilità</string>
     <!-- Emails -->
     <string name="home">Casa</string>
     <string name="work">Lavoro</string>
@@ -551,7 +551,7 @@
     <!-- Settings -->
     <string name="settings">Impostazioni</string>
     <string name="purchase_simple_thank_you">Acquista Semplice Ringraziamento</string>
-    <string name="general_settings">General</string>
+    <string name="general_settings">Generale</string>
     <string name="color_customization">Personalizzazione del colore</string>
     <string name="customize_colors">Personalizza i colori</string>
     <string name="customize_colors_locked">Personalizza i colori (Locked)</string>
@@ -605,7 +605,7 @@
     <string name="quality">Qualità</string>
     <string name="main_screen">Schermo principale</string>
     <string name="thumbnails">Miniature</string>
-    <string name="list_view">List view</string>
+    <string name="list_view">Vista a elenco</string>
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Gestisci le schede mostrate</string>
     <string name="default_tab_to_open">Scheda da aprire all\'avvio dell\'app</string>
@@ -894,7 +894,7 @@
     <string name="why_upgrade_no_ads">No pubblicità</string>
     <string name="why_upgrade_no_internet_access">No accesso a Internet</string>
     <string name="why_upgrade_footer">100% garantito soddisfatti o rimborsati</string>
-    <string name="why_upgrade_footer_one_time_payment">Pagamento Unico</string>
+    <string name="why_upgrade_footer_one_time_payment">Pagamento unico</string>
     <string name="why_upgrade_improved_design">Design migliorato</string>
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor fotografico avanzato</string>
