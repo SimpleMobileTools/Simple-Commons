@@ -1,17 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/faq_scrollview"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/faq_coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/faq_holder"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/faq_app_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingStart="@dimen/medium_margin"
-        android:paddingTop="@dimen/medium_margin"
-        android:paddingEnd="@dimen/medium_margin">
+        android:layout_height="wrap_content">
 
-    </LinearLayout>
-</ScrollView>
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/faq_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_primary"
+            app:navigationIcon="@drawable/ic_arrow_left_vector"
+            app:title="@string/frequently_asked_questions"
+            app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/faq_nested_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/faq_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/medium_margin"
+            android:paddingTop="@dimen/medium_margin"
+            android:paddingEnd="@dimen/medium_margin">
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

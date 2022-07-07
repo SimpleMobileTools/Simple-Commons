@@ -2,7 +2,6 @@ package com.simplemobiletools.commons.activities
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Menu
 import android.widget.LinearLayout
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
@@ -19,6 +18,7 @@ class LicenseActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_license)
+        setupToolbar(license_toolbar, TOOLBAR_NAVIGATION_ARROW)
 
         val dividerMargin = resources.getDimension(R.dimen.medium_margin).toInt()
         val textColor = getProperTextColor()
@@ -51,11 +51,6 @@ class LicenseActivity : BaseSimpleActivity() {
                 (layoutParams as LinearLayout.LayoutParams).bottomMargin = dividerMargin
             }
         }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        updateMenuItemColors(menu)
-        return super.onCreateOptionsMenu(menu)
     }
 
     private fun initLicenses() = arrayOf(
