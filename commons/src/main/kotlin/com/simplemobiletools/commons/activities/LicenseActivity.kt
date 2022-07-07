@@ -18,7 +18,6 @@ class LicenseActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_license)
-        setupToolbar(license_toolbar, TOOLBAR_NAVIGATION_ARROW)
 
         val dividerMargin = resources.getDimension(R.dimen.medium_margin).toInt()
         val textColor = getProperTextColor()
@@ -51,6 +50,11 @@ class LicenseActivity : BaseSimpleActivity() {
                 (layoutParams as LinearLayout.LayoutParams).bottomMargin = dividerMargin
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        setupToolbar(license_toolbar, TOOLBAR_NAVIGATION_ARROW)
     }
 
     private fun initLicenses() = arrayOf(

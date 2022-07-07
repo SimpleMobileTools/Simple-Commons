@@ -23,7 +23,6 @@ class FAQActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_faq)
-        setupToolbar(faq_toolbar, TOOLBAR_NAVIGATION_ARROW)
 
         val dividerMargin = resources.getDimension(R.dimen.medium_margin).toInt()
         val titleColor = getProperPrimaryColor()
@@ -53,5 +52,10 @@ class FAQActivity : BaseSimpleActivity() {
                 (layoutParams as LinearLayout.LayoutParams).bottomMargin = dividerMargin
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        setupToolbar(faq_toolbar, TOOLBAR_NAVIGATION_ARROW)
     }
 }

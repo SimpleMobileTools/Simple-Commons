@@ -84,6 +84,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("NewApi")
     override fun onResume() {
         super.onResume()
         if (useDynamicTheme) {
@@ -228,17 +229,17 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun setupToolbar(toolbar: MaterialToolbar, toolbarNavigationIcon: Int = TOOLBAR_NAVIGATION_NONE) {
-        toolbar.setBackgroundColor(getProperStatusBarColor())
-        toolbar.setTitleTextColor(getProperStatusBarColor().getContrastColor())
-        toolbar.overflowIcon = resources.getColoredDrawableWithColor(R.drawable.ic_three_dots_vector, getProperStatusBarColor().getContrastColor())
+    fun setupToolbar(toolbar: MaterialToolbar, toolbarNavigationIcon: Int = TOOLBAR_NAVIGATION_NONE, statusBarColor: Int = getProperStatusBarColor()) {
+        toolbar.setBackgroundColor(statusBarColor)
+        toolbar.setTitleTextColor(statusBarColor.getContrastColor())
+        toolbar.overflowIcon = resources.getColoredDrawableWithColor(R.drawable.ic_three_dots_vector, statusBarColor.getContrastColor())
 
         if (toolbarNavigationIcon != TOOLBAR_NAVIGATION_NONE) {
             val drawableId = if (toolbarNavigationIcon == TOOLBAR_NAVIGATION_CROSS) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector
-            toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, getProperStatusBarColor().getContrastColor())
+            toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, statusBarColor.getContrastColor())
         }
 
-        updateMenuItemColors(toolbar.menu)
+        updateMenuItemColors(toolbar.menu, toolbarNavigationIcon == TOOLBAR_NAVIGATION_CROSS, statusBarColor)
         toolbar.setNavigationOnClickListener {
             hideKeyboard()
             finish()

@@ -35,7 +35,6 @@ class AboutActivity : BaseSimpleActivity() {
         val textColor = getProperTextColor()
         val backgroundColor = getProperBackgroundColor()
         primaryColor = getProperPrimaryColor()
-        setupToolbar(about_toolbar, TOOLBAR_NAVIGATION_ARROW)
 
         arrayOf(
             about_faq_icon,
@@ -65,6 +64,7 @@ class AboutActivity : BaseSimpleActivity() {
     override fun onResume() {
         super.onResume()
         updateTextColors(about_nested_scrollview)
+        setupToolbar(about_toolbar, TOOLBAR_NAVIGATION_ARROW)
 
         setupFAQ()
         setupEmail()

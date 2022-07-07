@@ -3,6 +3,7 @@ package com.simplemobiletools.commons.samples.activities
 import android.os.Bundle
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.appLaunched
+import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.samples.BuildConfig
 import com.simplemobiletools.commons.samples.R
 import kotlinx.android.synthetic.main.activity_main.*
@@ -21,7 +22,6 @@ class MainActivity : BaseSimpleActivity() {
         setContentView(R.layout.activity_main)
         appLaunched(BuildConfig.APPLICATION_ID)
 
-        setupToolbar(main_toolbar)
         main_color_customization.setOnClickListener {
             startCustomizationActivity()
         }
@@ -40,5 +40,10 @@ class MainActivity : BaseSimpleActivity() {
                 media_refresh_layout.isRefreshing = false
             }, 1000L)
         }*/
+    }
+
+    override fun onResume() {
+        super.onResume()
+        setupToolbar(main_toolbar)
     }
 }

@@ -7,6 +7,7 @@ import com.google.android.material.appbar.MaterialToolbar
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.TOOLBAR_NAVIGATION_CROSS
 import com.simplemobiletools.commons.interfaces.LineColorPickerListener
 import kotlinx.android.synthetic.main.dialog_line_color_picker.view.*
 
@@ -78,9 +79,11 @@ class LineColorPickerDialog(
         if (isPrimaryColorPicker) {
             activity.updateActionbarColor(color)
             activity.setTheme(activity.getThemeId(color))
-            activity.updateMenuItemColors(toolbar?.menu, true, color)
-            toolbar?.setBackgroundColor(color)
-            toolbar?.setTitleTextColor(color.getContrastColor())
+
+            if (toolbar != null) {
+                activity.updateMenuItemColors(toolbar.menu, true, color)
+                activity.setupToolbar(toolbar, TOOLBAR_NAVIGATION_CROSS, color)
+            }
 
             if (!wasDimmedBackgroundRemoved) {
                 dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)

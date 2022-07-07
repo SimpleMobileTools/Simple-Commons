@@ -18,7 +18,6 @@ class ContributorsActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contributors)
-        setupToolbar(contributors_toolbar, TOOLBAR_NAVIGATION_ARROW)
 
         val textColor = getProperTextColor()
         val backgroundColor = getProperBackgroundColor()
@@ -47,5 +46,10 @@ class ContributorsActivity : BaseSimpleActivity() {
             contributors_footer_icon.beGone()
             contributors_label.beGone()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        setupToolbar(contributors_toolbar, TOOLBAR_NAVIGATION_ARROW)
     }
 }

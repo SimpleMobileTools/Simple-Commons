@@ -230,6 +230,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_SHARED && !hideGoogleRelations
             )
             updateMenuItemColors(customization_toolbar.menu, true, getCurrentStatusBarColor())
+            setupToolbar(customization_toolbar, TOOLBAR_NAVIGATION_CROSS, getCurrentStatusBarColor())
         }
     }
 
@@ -248,6 +249,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     curAppIconColor = baseConfig.customAppIconColor
                     setTheme(getThemeId(curPrimaryColor))
                     updateMenuItemColors(customization_toolbar.menu, true, curPrimaryColor)
+                    setupToolbar(customization_toolbar, TOOLBAR_NAVIGATION_CROSS, curPrimaryColor)
                     setupColorsPickers()
                 } else {
                     baseConfig.customPrimaryColor = curPrimaryColor
@@ -270,6 +272,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     setTheme(getThemeId(curPrimaryColor))
                     setupColorsPickers()
                     updateMenuItemColors(customization_toolbar.menu, true, curPrimaryColor)
+                    setupToolbar(customization_toolbar, TOOLBAR_NAVIGATION_CROSS, curPrimaryColor)
                 }
             } else {
                 val theme = predefinedThemes[curSelectedThemeId]!!
@@ -286,6 +289,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 setTheme(getThemeId(getCurrentPrimaryColor()))
                 colorChanged()
                 updateMenuItemColors(customization_toolbar.menu, true, getCurrentStatusBarColor())
+                setupToolbar(customization_toolbar, TOOLBAR_NAVIGATION_CROSS, getCurrentStatusBarColor())
             }
         }
 
@@ -575,12 +579,12 @@ class CustomizationActivity : BaseSimpleActivity() {
                     setTheme(getThemeId(color))
                 }
                 updateMenuItemColors(customization_toolbar.menu, true, color)
-                customization_toolbar.setBackgroundColor(color)
+                setupToolbar(customization_toolbar, TOOLBAR_NAVIGATION_CROSS, color)
             } else {
                 updateActionbarColor(curPrimaryColor)
                 setTheme(getThemeId(curPrimaryColor))
                 updateMenuItemColors(customization_toolbar.menu, true, curPrimaryColor)
-                customization_toolbar.setBackgroundColor(curPrimaryColor)
+                setupToolbar(customization_toolbar, TOOLBAR_NAVIGATION_CROSS, curPrimaryColor)
             }
         }
     }
