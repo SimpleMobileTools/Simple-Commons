@@ -1,9 +1,9 @@
 package com.simplemobiletools.commons.dialogs
 
-import android.view.Menu
 import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
+import com.google.android.material.appbar.MaterialToolbar
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.dialog_line_color_picker.view.*
 
 class LineColorPickerDialog(
     val activity: BaseSimpleActivity, val color: Int, val isPrimaryColorPicker: Boolean, val primaryColors: Int = R.array.md_primary_colors,
-    val appIconIDs: ArrayList<Int>? = null, val menu: Menu? = null, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit
+    val appIconIDs: ArrayList<Int>? = null, val toolbar: MaterialToolbar? = null, val callback: (wasPositivePressed: Boolean, color: Int) -> Unit
 ) {
     private val PRIMARY_COLORS_COUNT = 19
     private val DEFAULT_PRIMARY_COLOR_INDEX = 14
@@ -78,7 +78,9 @@ class LineColorPickerDialog(
         if (isPrimaryColorPicker) {
             activity.updateActionbarColor(color)
             activity.setTheme(activity.getThemeId(color))
-            activity.updateMenuItemColors(menu, true, color)
+            activity.updateMenuItemColors(toolbar?.menu, true, color)
+            toolbar?.setBackgroundColor(color)
+            toolbar?.setTitleTextColor(color.getContrastColor())
 
             if (!wasDimmedBackgroundRemoved) {
                 dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)

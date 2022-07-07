@@ -5,6 +5,7 @@ import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.samples.BuildConfig
 import com.simplemobiletools.commons.samples.R
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseSimpleActivity() {
     override fun getAppLauncherName() = getString(R.string.smtco_app_name)
@@ -19,6 +20,11 @@ class MainActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         appLaunched(BuildConfig.APPLICATION_ID)
+
+        setupToolbar(main_toolbar)
+        main_color_customization.setOnClickListener {
+            startCustomizationActivity()
+        }
 
         //startCustomizationActivity()
         //startAboutActivity(R.string.smtco_app_name, 3, "0.2", arrayListOf(FAQItem(R.string.faq_1_title_commons, R.string.faq_1_text_commons)), false)

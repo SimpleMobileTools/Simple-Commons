@@ -27,6 +27,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.util.Pair
+import com.google.android.material.appbar.MaterialToolbar
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
 import com.simplemobiletools.commons.dialogs.*
@@ -225,6 +226,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             val icon = resources.getColoredDrawableWithColor(drawableId, color)
             supportActionBar?.setHomeAsUpIndicator(icon)
         }
+    }
+
+    fun setupToolbar(toolbar: MaterialToolbar) {
+        toolbar.setBackgroundColor(getProperStatusBarColor())
+        toolbar.setTitleTextColor(getProperStatusBarColor().getContrastColor())
+        toolbar.overflowIcon = resources.getColoredDrawableWithColor(R.drawable.ic_three_dots_vector, getProperStatusBarColor().getContrastColor())
+        updateMenuItemColors(toolbar.menu)
     }
 
     private fun getCurrentAppIconColorIndex(): Int {
