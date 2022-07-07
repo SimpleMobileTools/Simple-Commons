@@ -55,7 +55,7 @@ class CustomizationActivity : BaseSimpleActivity() {
             baseConfig.navigationBarColor = window.navigationBarColor
         }
 
-        setupToolbar(customization_toolbar)
+        setupToolbar(customization_toolbar, TOOLBAR_NAVIGATION_CROSS)
         setupOptionsMenu()
         refreshMenuItems()
         isThankYou = packageName.removeSuffix(".debug") == "com.simplemobiletools.thankyou"

@@ -228,11 +228,21 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun setupToolbar(toolbar: MaterialToolbar) {
+    fun setupToolbar(toolbar: MaterialToolbar, toolbarNavigationIcon: Int = TOOLBAR_NAVIGATION_NONE) {
         toolbar.setBackgroundColor(getProperStatusBarColor())
         toolbar.setTitleTextColor(getProperStatusBarColor().getContrastColor())
         toolbar.overflowIcon = resources.getColoredDrawableWithColor(R.drawable.ic_three_dots_vector, getProperStatusBarColor().getContrastColor())
+
+        if (toolbarNavigationIcon != TOOLBAR_NAVIGATION_NONE) {
+            val drawableId = if (toolbarNavigationIcon == TOOLBAR_NAVIGATION_CROSS) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector
+            toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, getProperStatusBarColor().getContrastColor())
+        }
+
         updateMenuItemColors(toolbar.menu)
+        toolbar.setNavigationOnClickListener {
+            hideKeyboard()
+            finish()
+        }
     }
 
     private fun getCurrentAppIconColorIndex(): Int {
