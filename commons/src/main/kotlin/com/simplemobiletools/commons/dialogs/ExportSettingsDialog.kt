@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.dialogs
 
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.widget.AppCompatEditText
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
@@ -12,12 +11,6 @@ class ExportSettingsDialog(
     callback: (path: String, filename: String) -> Unit
 ) {
     init {
-        val layoutId = if (activity.baseConfig.isUsingSystemTheme) {
-            R.layout.dialog_export_settings_material
-        } else {
-            R.layout.dialog_export_settings
-        }
-
         val lastUsedFolder = activity.baseConfig.lastExportedSettingsFolder
         var folder = if (lastUsedFolder.isNotEmpty() && activity.getDoesFilePathExist(lastUsedFolder)) {
             lastUsedFolder
@@ -25,8 +18,8 @@ class ExportSettingsDialog(
             activity.internalStoragePath
         }
 
-        val view = activity.layoutInflater.inflate(layoutId, null).apply {
-            findViewById<AppCompatEditText>(R.id.export_settings_filename).setText(defaultFilename)
+        val view = activity.layoutInflater.inflate(R.layout.dialog_export_settings, null).apply {
+            export_settings_filename.setText(defaultFilename)
 
             if (hidePath) {
                 export_settings_path_label.beGone()
@@ -48,7 +41,7 @@ class ExportSettingsDialog(
             .apply {
                 activity.setupDialogStuff(view, this, R.string.export_settings) { alertDialog ->
                     alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-                        val filename = view.findViewById<AppCompatEditText>(R.id.export_settings_filename).value
+                        val filename = view.export_settings_filename.value
                         if (filename.isEmpty()) {
                             activity.toast(R.string.filename_cannot_be_empty)
                             return@setOnClickListener

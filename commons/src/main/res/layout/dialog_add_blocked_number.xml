@@ -9,15 +9,14 @@
         android:id="@+id/add_blocked_number_hint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/activity_margin"
         android:hint="@string/number">
 
-        <com.simplemobiletools.commons.views.MyEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/add_blocked_number_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_margin"
-            android:layout_marginEnd="@dimen/activity_margin"
             android:inputType="phone"
             android:textCursorDrawable="@null"
             android:textSize="@dimen/bigger_text_size" />

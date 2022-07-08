@@ -5,9 +5,9 @@ import android.content.res.ColorStateList
 import android.util.AttributeSet
 import com.google.android.material.textfield.TextInputLayout
 import com.simplemobiletools.commons.extensions.adjustAlpha
-import com.simplemobiletools.commons.extensions.onTextChangeListener
 import com.simplemobiletools.commons.extensions.value
 import com.simplemobiletools.commons.helpers.HIGHER_ALPHA
+import com.simplemobiletools.commons.helpers.MEDIUM_ALPHA
 
 class MyTextInputLayout : TextInputLayout {
     constructor(context: Context) : super(context)
@@ -31,10 +31,20 @@ class MyTextInputLayout : TextInputLayout {
             focusedTextColor.isAccessible = true
             focusedTextColor.set(this, ColorStateList(arrayOf(intArrayOf(0)), intArrayOf(accentColor)))
 
-            editText!!.onTextChangeListener { text ->
-                val hintTextColor = if (text.isEmpty()) textColor.adjustAlpha(HIGHER_ALPHA) else textColor
-                defaultTextColor.set(this, ColorStateList(arrayOf(intArrayOf(0)), intArrayOf(hintTextColor)))
-            }
+            val defaultHintTextColor = textColor.adjustAlpha(MEDIUM_ALPHA)
+            val boxColorState = ColorStateList(
+                arrayOf(
+                    intArrayOf(android.R.attr.state_active),
+                    intArrayOf(android.R.attr.state_focused)
+                ),
+                intArrayOf(
+                    defaultHintTextColor,
+                    accentColor
+                )
+            )
+
+            setBoxStrokeColorStateList(boxColorState)
+            defaultTextColor.set(this, ColorStateList(arrayOf(intArrayOf(0)), intArrayOf(defaultHintTextColor)))
         } catch (e: Exception) {
         }
     }

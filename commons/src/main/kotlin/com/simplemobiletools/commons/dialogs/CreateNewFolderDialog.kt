@@ -2,7 +2,6 @@ package com.simplemobiletools.commons.dialogs
 
 import android.view.View
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.widget.AppCompatEditText
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
@@ -12,13 +11,7 @@ import java.io.File
 
 class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, val callback: (path: String) -> Unit) {
     init {
-        val layoutId = if (activity.baseConfig.isUsingSystemTheme) {
-            R.layout.dialog_create_new_folder_material
-        } else {
-            R.layout.dialog_create_new_folder
-        }
-
-        val view = activity.layoutInflater.inflate(layoutId, null)
+        val view = activity.layoutInflater.inflate(R.layout.dialog_create_new_folder, null)
         view.folder_path.text = "${activity.humanizePath(path).trimEnd('/')}/"
 
         activity.getAlertDialogBuilder()
@@ -26,9 +19,9 @@ class CreateNewFolderDialog(val activity: BaseSimpleActivity, val path: String, 
             .setNegativeButton(R.string.cancel, null)
             .apply {
                 activity.setupDialogStuff(view, this, R.string.create_new_folder) { alertDialog ->
-                    alertDialog.showKeyboard(view.findViewById(R.id.folder_name))
+                    alertDialog.showKeyboard(view.folder_name)
                     alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(View.OnClickListener {
-                        val name = view.findViewById<AppCompatEditText>(R.id.folder_name).value
+                        val name = view.folder_name.value
                         when {
                             name.isEmpty() -> activity.toast(R.string.empty_name)
                             name.isAValidFilename() -> {

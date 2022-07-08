@@ -1,7 +1,6 @@
 package com.simplemobiletools.commons.dialogs
 
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.widget.AppCompatEditText
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.*
@@ -20,15 +19,9 @@ class ExportBlockedNumbersDialog(
     private val config = activity.baseConfig
 
     init {
-        val layoutId = if (activity.baseConfig.isUsingSystemTheme) {
-            R.layout.dialog_export_blocked_numbers_material
-        } else {
-            R.layout.dialog_export_blocked_numbers
-        }
-
-        val view = activity.layoutInflater.inflate(layoutId, null).apply {
+        val view = activity.layoutInflater.inflate(R.layout.dialog_export_blocked_numbers, null).apply {
             export_blocked_numbers_folder.text = activity.humanizePath(realPath)
-            findViewById<AppCompatEditText>(R.id.export_blocked_numbers_filename).setText("${activity.getString(R.string.blocked_numbers)}_${activity.getCurrentFormattedDateTime()}")
+            export_blocked_numbers_filename.setText("${activity.getString(R.string.blocked_numbers)}_${activity.getCurrentFormattedDateTime()}")
 
             if (hidePath) {
                 export_blocked_numbers_folder_label.beGone()
@@ -49,7 +42,7 @@ class ExportBlockedNumbersDialog(
             .apply {
                 activity.setupDialogStuff(view, this, R.string.export_blocked_numbers) { alertDialog ->
                     alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-                        val filename = view.findViewById<AppCompatEditText>(R.id.export_blocked_numbers_filename).value
+                        val filename = view.export_blocked_numbers_filename.value
                         when {
                             filename.isEmpty() -> activity.toast(R.string.empty_name)
                             filename.isAValidFilename() -> {
