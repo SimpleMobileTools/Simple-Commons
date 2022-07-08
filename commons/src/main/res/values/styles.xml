@@ -333,9 +333,9 @@
 
     <style name="SettingsHolderCheckboxStyle">
         <item name="android:paddingStart">@dimen/activity_margin</item>
-        <item name="android:paddingTop">@dimen/normal_margin</item>
+        <item name="android:paddingTop">@dimen/medium_margin</item>
         <item name="android:paddingEnd">@dimen/activity_margin</item>
-        <item name="android:paddingBottom">@dimen/normal_margin</item>
+        <item name="android:paddingBottom">@dimen/medium_margin</item>
     </style>
 
     <style name="SettingsHolderTextViewStyle">
