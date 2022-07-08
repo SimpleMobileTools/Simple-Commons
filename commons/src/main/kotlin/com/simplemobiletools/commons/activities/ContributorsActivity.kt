@@ -50,6 +50,6 @@ class ContributorsActivity : BaseSimpleActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(contributors_toolbar, NavigationIcon.Arrow, collapseToolbarOnScroll = true)
+        setupToolbar(contributors_toolbar, NavigationIcon.Arrow)
     }
 }

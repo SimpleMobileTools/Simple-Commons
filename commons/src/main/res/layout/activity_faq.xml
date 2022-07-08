@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/color_primary"
-            app:navigationIcon="@drawable/ic_arrow_left_vector"
+            app:layout_scrollFlags="scroll|enterAlways"
             app:title="@string/frequently_asked_questions"
             app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
 

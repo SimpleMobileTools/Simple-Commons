@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/color_primary"
-            app:navigationIcon="@drawable/ic_arrow_left_vector"
+            app:layout_scrollFlags="scroll|enterAlways"
             app:title="@string/third_party_licences"
             app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
 

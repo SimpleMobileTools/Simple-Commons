@@ -27,7 +27,6 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.util.Pair
-import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.MaterialToolbar
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.asynctasks.CopyMoveTask
@@ -237,8 +236,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun setupToolbar(
         toolbar: MaterialToolbar,
         toolbarNavigationIcon: NavigationIcon = NavigationIcon.None,
-        statusBarColor: Int = getProperStatusBarColor(),
-        collapseToolbarOnScroll: Boolean = false
+        statusBarColor: Int = getProperStatusBarColor()
     ) {
         toolbar.setBackgroundColor(statusBarColor)
         toolbar.setTitleTextColor(statusBarColor.getContrastColor())
@@ -253,11 +251,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         toolbar.setNavigationOnClickListener {
             hideKeyboard()
             finish()
-        }
-
-        if (collapseToolbarOnScroll) {
-            (toolbar.layoutParams as AppBarLayout.LayoutParams).scrollFlags =
-                (AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS or AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL)
         }
     }
 

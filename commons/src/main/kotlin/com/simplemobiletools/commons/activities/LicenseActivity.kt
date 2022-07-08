@@ -54,7 +54,7 @@ class LicenseActivity : BaseSimpleActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(license_toolbar, NavigationIcon.Arrow, collapseToolbarOnScroll = true)
+        setupToolbar(license_toolbar, NavigationIcon.Arrow)
     }
 
     private fun initLicenses() = arrayOf(
