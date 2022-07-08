@@ -5,8 +5,6 @@ import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.widget.Toast
 import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.adapters.ManageBlockedNumbersAdapter
@@ -34,6 +32,8 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_manage_blocked_numbers)
         updateBlockedNumbers()
+        setupOptionsMenu()
+
         updateTextColors(manage_blocked_numbers_wrapper)
         updatePlaceholderTexts()
 
@@ -62,20 +62,42 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_add_blocked_number, menu)
-        updateMenuItemColors(menu)
-        return true
+    override fun onResume() {
+        super.onResume()
+        setupToolbar(block_numbers_toolbar, TOOLBAR_NAVIGATION_ARROW)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.add_blocked_number -> addOrEditBlockedNumber()
-            R.id.import_blocked_numbers -> tryImportBlockedNumbers()
-            R.id.export_blocked_numbers -> tryExportBlockedNumbers()
-            else -> return super.onOptionsItemSelected(item)
+    private fun setupOptionsMenu() {
+        block_numbers_toolbar.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.add_blocked_number -> {
+                    addOrEditBlockedNumber()
+                    true
+                }
+                R.id.import_blocked_numbers -> {
+                    tryImportBlockedNumbers()
+                    true
+                }
+                R.id.export_blocked_numbers -> {
+                    tryExportBlockedNumbers()
+                    true
+                }
+                else -> false
+            }
         }
-        return true
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
+        super.onActivityResult(requestCode, resultCode, resultData)
+        if (requestCode == REQUEST_CODE_SET_DEFAULT_DIALER && isDefaultDialer()) {
+            updatePlaceholderTexts()
+            updateBlockedNumbers()
+        } else if (requestCode == PICK_IMPORT_SOURCE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+            tryImportBlockedNumbersFromFile(resultData.data!!)
+        } else if (requestCode == PICK_EXPORT_FILE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+            val outputStream = contentResolver.openOutputStream(resultData.data!!)
+            exportBlockedNumbersTo(outputStream)
+        }
     }
 
     override fun refreshItems() {
@@ -219,19 +241,6 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
                     )
                 }
             }
-        }
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
-        super.onActivityResult(requestCode, resultCode, resultData)
-        if (requestCode == REQUEST_CODE_SET_DEFAULT_DIALER && isDefaultDialer()) {
-            updatePlaceholderTexts()
-            updateBlockedNumbers()
-        } else if (requestCode == PICK_IMPORT_SOURCE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-            tryImportBlockedNumbersFromFile(resultData.data!!)
-        } else if (requestCode == PICK_EXPORT_FILE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
-            val outputStream = contentResolver.openOutputStream(resultData.data!!)
-            exportBlockedNumbersTo(outputStream)
         }
     }
 }

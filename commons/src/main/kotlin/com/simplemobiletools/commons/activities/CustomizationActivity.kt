@@ -49,13 +49,13 @@ class CustomizationActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
+        setupToolbar(customization_toolbar, TOOLBAR_NAVIGATION_CROSS)
 
         if (baseConfig.defaultNavigationBarColor == INVALID_NAVIGATION_BAR_COLOR && baseConfig.navigationBarColor == INVALID_NAVIGATION_BAR_COLOR) {
             baseConfig.defaultNavigationBarColor = window.navigationBarColor
             baseConfig.navigationBarColor = window.navigationBarColor
         }
 
-        setupToolbar(customization_toolbar, TOOLBAR_NAVIGATION_CROSS)
         setupOptionsMenu()
         refreshMenuItems()
         isThankYou = packageName.removeSuffix(".debug") == "com.simplemobiletools.thankyou"
