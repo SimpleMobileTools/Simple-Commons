@@ -64,7 +64,7 @@ class ManageBlockedNumbersActivity : BaseSimpleActivity(), RefreshRecyclerViewLi
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(block_numbers_toolbar, TOOLBAR_NAVIGATION_ARROW)
+        setupToolbar(block_numbers_toolbar, NavigationIcon.Arrow)
     }
 
     private fun setupOptionsMenu() {

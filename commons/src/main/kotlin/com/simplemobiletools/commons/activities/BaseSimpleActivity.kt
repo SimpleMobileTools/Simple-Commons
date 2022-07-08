@@ -207,10 +207,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         var color = baseColor.getContrastColor()
-        if (baseConfig.isUsingSystemTheme && !isContextualMenu) {
-            color = getProperTextColor()
-        }
-
         if (forceWhiteIcons) {
             color = Color.WHITE
         }
@@ -229,17 +225,17 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun setupToolbar(toolbar: MaterialToolbar, toolbarNavigationIcon: Int = TOOLBAR_NAVIGATION_NONE, statusBarColor: Int = getProperStatusBarColor()) {
+    fun setupToolbar(toolbar: MaterialToolbar, toolbarNavigationIcon: NavigationIcon = NavigationIcon.None, statusBarColor: Int = getProperStatusBarColor()) {
         toolbar.setBackgroundColor(statusBarColor)
         toolbar.setTitleTextColor(statusBarColor.getContrastColor())
         toolbar.overflowIcon = resources.getColoredDrawableWithColor(R.drawable.ic_three_dots_vector, statusBarColor.getContrastColor())
 
-        if (toolbarNavigationIcon != TOOLBAR_NAVIGATION_NONE) {
-            val drawableId = if (toolbarNavigationIcon == TOOLBAR_NAVIGATION_CROSS) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector
+        if (toolbarNavigationIcon != NavigationIcon.None) {
+            val drawableId = if (toolbarNavigationIcon == NavigationIcon.Cross) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector
             toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, statusBarColor.getContrastColor())
         }
 
-        updateMenuItemColors(toolbar.menu, toolbarNavigationIcon == TOOLBAR_NAVIGATION_CROSS, statusBarColor)
+        updateMenuItemColors(toolbar.menu, toolbarNavigationIcon == NavigationIcon.Cross, statusBarColor)
         toolbar.setNavigationOnClickListener {
             hideKeyboard()
             finish()

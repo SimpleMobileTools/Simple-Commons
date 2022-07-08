@@ -10,7 +10,7 @@ import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.APP_FAQ
 import com.simplemobiletools.commons.helpers.APP_ICON_IDS
 import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
-import com.simplemobiletools.commons.helpers.TOOLBAR_NAVIGATION_ARROW
+import com.simplemobiletools.commons.helpers.NavigationIcon
 import com.simplemobiletools.commons.models.FAQItem
 import kotlinx.android.synthetic.main.activity_faq.*
 import kotlinx.android.synthetic.main.item_faq.view.*
@@ -56,6 +56,6 @@ class FAQActivity : BaseSimpleActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(faq_toolbar, TOOLBAR_NAVIGATION_ARROW)
+        setupToolbar(faq_toolbar, NavigationIcon.Arrow)
     }
 }

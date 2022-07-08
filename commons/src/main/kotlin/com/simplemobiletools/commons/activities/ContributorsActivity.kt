@@ -7,6 +7,7 @@ import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.APP_ICON_IDS
 import com.simplemobiletools.commons.helpers.APP_LAUNCHER_NAME
+import com.simplemobiletools.commons.helpers.NavigationIcon
 import com.simplemobiletools.commons.helpers.TOOLBAR_NAVIGATION_ARROW
 import kotlinx.android.synthetic.main.activity_contributors.*
 
@@ -50,6 +51,6 @@ class ContributorsActivity : BaseSimpleActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(contributors_toolbar, TOOLBAR_NAVIGATION_ARROW)
+        setupToolbar(contributors_toolbar, NavigationIcon.Arrow)
     }
 }

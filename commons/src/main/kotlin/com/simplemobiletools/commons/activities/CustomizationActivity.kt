@@ -49,7 +49,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customization)
-        setupToolbar(customization_toolbar, TOOLBAR_NAVIGATION_CROSS)
+        setupToolbar(customization_toolbar, NavigationIcon.Cross)
 
         if (baseConfig.defaultNavigationBarColor == INVALID_NAVIGATION_BAR_COLOR && baseConfig.navigationBarColor == INVALID_NAVIGATION_BAR_COLOR) {
             baseConfig.defaultNavigationBarColor = window.navigationBarColor
@@ -230,7 +230,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 curSelectedThemeId != THEME_AUTO && curSelectedThemeId != THEME_SYSTEM && curSelectedThemeId != THEME_SHARED && !hideGoogleRelations
             )
             updateMenuItemColors(customization_toolbar.menu, true, getCurrentStatusBarColor())
-            setupToolbar(customization_toolbar, TOOLBAR_NAVIGATION_CROSS, getCurrentStatusBarColor())
+            setupToolbar(customization_toolbar, NavigationIcon.Cross, getCurrentStatusBarColor())
         }
     }
 
@@ -249,7 +249,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     curAppIconColor = baseConfig.customAppIconColor
                     setTheme(getThemeId(curPrimaryColor))
                     updateMenuItemColors(customization_toolbar.menu, true, curPrimaryColor)
-                    setupToolbar(customization_toolbar, TOOLBAR_NAVIGATION_CROSS, curPrimaryColor)
+                    setupToolbar(customization_toolbar, NavigationIcon.Cross, curPrimaryColor)
                     setupColorsPickers()
                 } else {
                     baseConfig.customPrimaryColor = curPrimaryColor
@@ -272,7 +272,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                     setTheme(getThemeId(curPrimaryColor))
                     setupColorsPickers()
                     updateMenuItemColors(customization_toolbar.menu, true, curPrimaryColor)
-                    setupToolbar(customization_toolbar, TOOLBAR_NAVIGATION_CROSS, curPrimaryColor)
+                    setupToolbar(customization_toolbar, NavigationIcon.Cross, curPrimaryColor)
                 }
             } else {
                 val theme = predefinedThemes[curSelectedThemeId]!!
@@ -289,7 +289,7 @@ class CustomizationActivity : BaseSimpleActivity() {
                 setTheme(getThemeId(getCurrentPrimaryColor()))
                 colorChanged()
                 updateMenuItemColors(customization_toolbar.menu, true, getCurrentStatusBarColor())
-                setupToolbar(customization_toolbar, TOOLBAR_NAVIGATION_CROSS, getCurrentStatusBarColor())
+                setupToolbar(customization_toolbar, NavigationIcon.Cross, getCurrentStatusBarColor())
             }
         }
 
@@ -579,12 +579,12 @@ class CustomizationActivity : BaseSimpleActivity() {
                     setTheme(getThemeId(color))
                 }
                 updateMenuItemColors(customization_toolbar.menu, true, color)
-                setupToolbar(customization_toolbar, TOOLBAR_NAVIGATION_CROSS, color)
+                setupToolbar(customization_toolbar, NavigationIcon.Cross, color)
             } else {
                 updateActionbarColor(curPrimaryColor)
                 setTheme(getThemeId(curPrimaryColor))
                 updateMenuItemColors(customization_toolbar.menu, true, curPrimaryColor)
-                setupToolbar(customization_toolbar, TOOLBAR_NAVIGATION_CROSS, curPrimaryColor)
+                setupToolbar(customization_toolbar, NavigationIcon.Cross, curPrimaryColor)
             }
         }
     }

@@ -330,6 +330,13 @@ const val TOOLBAR_NAVIGATION_ARROW = 0
 const val TOOLBAR_NAVIGATION_CROSS = 1
 const val TOOLBAR_NAVIGATION_NONE = 2
 
+// possible icons at the top left corner
+enum class NavigationIcon {
+    Cross,
+    Arrow,
+    None
+}
+
 val appIconColorStrings = arrayListOf(
     ".Red",
     ".Pink",
