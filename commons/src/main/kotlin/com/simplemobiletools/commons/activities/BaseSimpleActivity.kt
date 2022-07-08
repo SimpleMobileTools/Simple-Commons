@@ -163,8 +163,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         setTaskDescription(ActivityManager.TaskDescription(null, null, color))
     }
 
-    fun updateNavigationBarColor(color: Int = baseConfig.navigationBarColor) {
-        if (baseConfig.navigationBarColor != INVALID_NAVIGATION_BAR_COLOR) {
+    fun updateNavigationBarColor(color: Int = baseConfig.navigationBarColor, isColorPreview: Boolean = false) {
+        if (baseConfig.isUsingSystemTheme && !isColorPreview) {
+            val navBarColor = getBottomNavigationBackgroundColor()
+            window.navigationBarColor = navBarColor
+            if (navBarColor.getContrastColor() == 0xFF333333.toInt()) {
+                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
+            } else {
+                window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
+            }
+        } else if (baseConfig.navigationBarColor != INVALID_NAVIGATION_BAR_COLOR) {
             try {
                 val colorToUse = if (color == -2) -1 else color
                 window.navigationBarColor = colorToUse

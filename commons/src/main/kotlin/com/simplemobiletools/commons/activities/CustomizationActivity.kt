@@ -298,7 +298,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         updateLabelColors(getCurrentTextColor())
         updateBackgroundColor(getCurrentBackgroundColor())
         updateActionbarColor(getCurrentStatusBarColor())
-        updateNavigationBarColor(curNavigationBarColor)
+        updateNavigationBarColor(curNavigationBarColor, true)
         updateAutoThemeFields()
         updateApplyToAllColors(getCurrentPrimaryColor())
         handleAccentColorLayout()
@@ -521,7 +521,7 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun setCurrentNavigationBarColor(color: Int) {
         curNavigationBarColor = color
-        updateNavigationBarColor(color)
+        updateNavigationBarColor(color, true)
     }
 
     private fun handleAccentColorLayout() {
@@ -606,14 +606,14 @@ class CustomizationActivity : BaseSimpleActivity() {
 
     private fun pickNavigationBarColor() {
         ColorPickerDialog(this, curNavigationBarColor, true, true, currentColorCallback = {
-            updateNavigationBarColor(it)
+            updateNavigationBarColor(it, true)
         }, callback = { wasPositivePressed, color ->
             if (wasPositivePressed) {
                 setCurrentNavigationBarColor(color)
                 colorChanged()
                 updateColorTheme(getUpdatedTheme())
             } else {
-                updateNavigationBarColor(curNavigationBarColor)
+                updateNavigationBarColor(curNavigationBarColor, true)
             }
         })
     }

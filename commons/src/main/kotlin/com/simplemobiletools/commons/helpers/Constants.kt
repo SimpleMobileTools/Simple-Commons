@@ -326,10 +326,6 @@ const val DATE_FORMAT_FOURTEEN = "yy/MM/dd"
 const val TIME_FORMAT_12 = "hh:mm a"
 const val TIME_FORMAT_24 = "HH:mm"
 
-const val TOOLBAR_NAVIGATION_ARROW = 0
-const val TOOLBAR_NAVIGATION_CROSS = 1
-const val TOOLBAR_NAVIGATION_NONE = 2
-
 // possible icons at the top left corner
 enum class NavigationIcon {
     Cross,
