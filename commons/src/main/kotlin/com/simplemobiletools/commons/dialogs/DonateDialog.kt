@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.dialog_textview.view.*
 class DonateDialog(val activity: Activity) {
     init {
         val view = activity.layoutInflater.inflate(R.layout.dialog_textview, null).apply {
-            text_view.text = Html.fromHtml(activity.getString(R.string.donate_new))
+            text_view.text = Html.fromHtml(activity.getString(R.string.donate_please))
             text_view.movementMethod = LinkMovementMethod.getInstance()
         }
 
