@@ -56,6 +56,6 @@ class FAQActivity : BaseSimpleActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(faq_toolbar, NavigationIcon.Arrow)
+        setupToolbar(faq_toolbar, NavigationIcon.Arrow, collapseToolbarOnScroll = true)
     }
 }

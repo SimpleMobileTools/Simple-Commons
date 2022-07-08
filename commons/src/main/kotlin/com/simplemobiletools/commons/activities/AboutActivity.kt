@@ -64,7 +64,7 @@ class AboutActivity : BaseSimpleActivity() {
     override fun onResume() {
         super.onResume()
         updateTextColors(about_nested_scrollview)
-        setupToolbar(about_toolbar, NavigationIcon.Arrow)
+        setupToolbar(about_toolbar, NavigationIcon.Arrow, collapseToolbarOnScroll = true)
 
         setupFAQ()
         setupEmail()
