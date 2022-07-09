@@ -10,6 +10,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.graphics.Color
+import android.graphics.PorterDuff
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
@@ -22,6 +23,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
+import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -40,6 +43,7 @@ import com.simplemobiletools.commons.models.FileDirItem
 import java.io.File
 import java.io.OutputStream
 import java.util.regex.Pattern
+
 
 abstract class BaseSimpleActivity : AppCompatActivity() {
     var copyMoveCallback: ((destinationPath: String) -> Unit)? = null
@@ -236,21 +240,45 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun setupToolbar(
         toolbar: MaterialToolbar,
         toolbarNavigationIcon: NavigationIcon = NavigationIcon.None,
-        statusBarColor: Int = getProperStatusBarColor()
+        statusBarColor: Int = getProperStatusBarColor(),
+        searchMenuItem: MenuItem? = null
     ) {
+        val contrastColor = statusBarColor.getContrastColor()
         toolbar.setBackgroundColor(statusBarColor)
-        toolbar.setTitleTextColor(statusBarColor.getContrastColor())
-        toolbar.overflowIcon = resources.getColoredDrawableWithColor(R.drawable.ic_three_dots_vector, statusBarColor.getContrastColor())
+        toolbar.setTitleTextColor(contrastColor)
+        toolbar.overflowIcon = resources.getColoredDrawableWithColor(R.drawable.ic_three_dots_vector, contrastColor)
 
         if (toolbarNavigationIcon != NavigationIcon.None) {
             val drawableId = if (toolbarNavigationIcon == NavigationIcon.Cross) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector
-            toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, statusBarColor.getContrastColor())
+            toolbar.navigationIcon = resources.getColoredDrawableWithColor(drawableId, contrastColor)
         }
 
         updateMenuItemColors(toolbar.menu, toolbarNavigationIcon == NavigationIcon.Cross, statusBarColor)
         toolbar.setNavigationOnClickListener {
             hideKeyboard()
             finish()
+        }
+
+        // this icon is used at closing search
+        toolbar.collapseIcon = resources.getColoredDrawableWithColor(R.drawable.ic_arrow_left_vector, contrastColor)
+
+        searchMenuItem?.actionView?.findViewById<ImageView>(androidx.appcompat.R.id.search_close_btn)?.apply {
+            applyColorFilter(contrastColor)
+        }
+
+        searchMenuItem?.actionView?.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)?.apply {
+            setTextColor(contrastColor)
+            setHintTextColor(contrastColor.adjustAlpha(MEDIUM_ALPHA))
+            hint = "${getString(R.string.search)}…"
+
+            if (isQPlus()) {
+                textCursorDrawable = null
+            }
+        }
+
+        // search underline
+        searchMenuItem?.actionView?.findViewById<View>(androidx.appcompat.R.id.search_plate)?.apply {
+            background.setColorFilter(contrastColor, PorterDuff.Mode.MULTIPLY)
         }
     }
 
