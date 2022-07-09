@@ -129,6 +129,14 @@
         <item name="android:windowShowWallpaper">true</item>
     </style>
 
+    <style name="MyWidgetConfigSaveStyle">
+        <item name="android:background">@drawable/widget_config_seekbar_background</item>
+        <item name="android:paddingStart">@dimen/activity_margin</item>
+        <item name="android:paddingEnd">@dimen/activity_margin</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/big_text_size</item>
+    </style>
+
     <style name="AppTheme.ActionBar.TitleTextStyle">
         <item name="android:textSize">@dimen/actionbar_text_size</item>
     </style>
