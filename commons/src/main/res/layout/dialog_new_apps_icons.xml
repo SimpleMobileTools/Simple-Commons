@@ -12,6 +12,7 @@
         android:paddingLeft="@dimen/activity_margin"
         android:paddingTop="@dimen/activity_margin"
         android:paddingRight="@dimen/activity_margin"
+        android:textColorHighlight="@color/disabled_text_color_highlight"
         android:textSize="@dimen/bigger_text_size" />
 
     <ImageView

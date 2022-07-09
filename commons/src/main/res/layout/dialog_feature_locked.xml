@@ -20,6 +20,7 @@
         android:gravity="center"
         android:lineSpacingExtra="1sp"
         android:paddingTop="@dimen/normal_margin"
+        android:textColorHighlight="@color/disabled_text_color_highlight"
         android:textSize="@dimen/bigger_text_size" />
 
 </RelativeLayout>

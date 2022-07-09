@@ -7,4 +7,5 @@
     android:paddingTop="@dimen/activity_margin"
     android:paddingEnd="@dimen/bigger_margin"
     android:paddingBottom="@dimen/activity_margin"
+    android:textColorHighlight="@color/disabled_text_color_highlight"
     android:textSize="@dimen/bigger_text_size" />
