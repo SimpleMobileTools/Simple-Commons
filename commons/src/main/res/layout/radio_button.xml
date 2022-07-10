@@ -2,4 +2,7 @@
 <com.simplemobiletools.commons.views.MyCompatRadioButton xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/dialog_radio_button"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+    android:layout_height="wrap_content"
+    android:minHeight="0dp"
+    android:paddingTop="@dimen/normal_margin"
+    android:paddingBottom="@dimen/normal_margin" />
