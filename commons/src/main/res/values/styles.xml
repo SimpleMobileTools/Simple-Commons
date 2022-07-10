@@ -159,6 +159,13 @@
         <item name="android:background">@drawable/transparent_button</item>
     </style>
 
+    <!-- EditText inside MyTextInputLayout, when the value shouldnt be edited by inserting text manually -->
+    <style name="UnclickableEditText">
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:inputType">textNoSuggestions</item>
+    </style>
+
     <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog">
         <item name="colorAccent">@color/color_primary</item>
         <item name="android:windowBackground">@color/theme_light_background_color</item>
