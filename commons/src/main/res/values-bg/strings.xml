@@ -61,8 +61,8 @@
     <string name="value_cannot_be_empty">Стойността не може да бъде празна</string>
     <string name="create_new_contact">Създаване на контакт</string>
     <string name="add_to_existing_contact">Добавяне към съществуващ контакт</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
+    <string name="app_corrupt">Развалено приложение</string>
+    <string name="disclaimer">Внимание</string>
     <!-- Emails -->
     <string name="home">Начало</string>
     <string name="work">Работа</string>
@@ -132,7 +132,7 @@
     <string name="source_file_doesnt_exist">Изходния файл %s не съществува</string>
     <string name="prepend_filenames">Представка на файлови имена</string>
     <string name="append_filenames">Прибавяне на файлови имена</string>
-    <string name="simple_renaming">Просто преименуване</string>
+    <string name="simple_renaming">Обикновено преименуване</string>
     <string name="pattern_renaming">Шаблон</string>
     <string name="string_to_add">Текст за добавяне</string>
     <string name="rename_date_time_pattern">%Y - година
@@ -743,8 +743,8 @@
     <string name="donate_please">Здравей,&lt;br&gt;&lt;br&gt; надявам се, че се наслаждаваш на приложението. То не съдържа реклами, моля, подкрепете разработката му, като закупите приложението &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Обикновено Благодаря&lt;/a&gt;. То ще предотврати този диалог да се покаже отново.&lt;br&gt;&lt;br&gt; Благодаря!</string>
     <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features and color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
     <string name="purchase">Купи</string>
-    <string name="order_simple_phone">Поръчване на Обикновен телефон</string>
-    <string name="update_thank_you">Моля, обноврте Обикновено благодаря до последното издание</string>
+    <string name="order_simple_phone">Поръчване на Обикновен Смартфон</string>
+    <string name="update_thank_you">Моля, обноврте Обикновено Благодаря до последното издание</string>
     <string name="before_asking_question_read_faq">Преди да зададете въпрос, моля, проверете настройките на приложението и първо прочетете често задаваните въпроси. Може би решението може да бъде намерено там.</string>
     <string name="before_rate_read_faq">Преди да ни оцените, моля, проверете настройките на приложението и първо прочетете често задаваните въпроси. Ако имате някакви проблеми, може би решението може да бъде намерено там.</string>
     <string name="make_sure_latest">Също така се уверете, че използвате най-новата версия на приложението.</string>
@@ -777,7 +777,7 @@
             Thanks
         ]]>
     </string>
-    <string name="simple_app_launcher">Обикновен начален екран</string>
+    <string name="simple_app_launcher">Обикновен Начален Екран</string>
     <string name="simple_calculator">Обикновен Калкулатор</string>
     <string name="simple_calendar">Обикновен Календар</string>
     <string name="simple_camera">Обикновена Камера</string>
@@ -835,9 +835,7 @@
     <string name="faq_7_title_commons">Парите са приспаднати от банковата ми сметка, но не мога да изтегля приложението. Какво мога да направя\?</string>
     <string name="faq_7_text_commons">Плащанията се обработват изцяло от Google, системната им има гличове от време на време. Просто изчистете кеша на приложението Google Play и рестартирайте устройството си, след което отново го изтегляте.</string>
     <string name="faq_8_title_commons">Защо трябва да обновя до Про версията\?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
+    <string name="faq_8_text_commons">Тъй като версията на приложението ви вече не се актуализира, грешките, които сте забелязали, никога няма да бъдат поправени. Няма да се добавят и нови функции. Можете да закупите Pro версията в Google Play за малка сума пари. Това е еднократно плащане, което означава, че след като го закупите, никога няма да се налага да плащате отново. Дори и след получаване на ново устройство. Ако няма да ви хареса Pro версията, можете просто да я деинсталирате в рамките на няколко часа и автоматично ще си върнете парите. Ако искате възстановяване на сумата по -късно, просто се свържете с нас на hello@simplemobiletools.com и ще го получите.</string>
     <string name="faq_9_title_commons">Как мога да избера няколко елемента наведнъж\?</string>
     <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
         just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
@@ -912,20 +910,20 @@
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Редактор на снимки за напреднали</string>
     <string name="why_upgrade_heic_support">Поддръжка на HEIC/HEIF файлове</string>
-    <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
-    <string name="why_upgrade_folder_locking">Individual folder locking</string>
+    <string name="why_upgrade_batch_renaming">Групово преименуване на файлове за напреднали</string>
+    <string name="why_upgrade_folder_locking">Индивидуално заключване на папките</string>
     <string name="why_upgrade_printing_support">Поддръжка за печат</string>
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Поддръжка на часовати зони</string>
-    <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
+    <string name="why_upgrade_attendees_emails">Участници и напомняния по имейл</string>
     <string name="why_upgrade_easy_event_importing">Лесно импортиране на събития</string>
     <string name="why_upgrade_new_widgets">Нови приспособления</string>
     <!-- Contacts Pro -->
-    <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
-    <string name="why_upgrade_font_size_customization">Font size customization</string>
+    <string name="why_upgrade_duplicate_contact_merging">Подобрено сливане на дублирани контакти</string>
+    <string name="why_upgrade_font_size_customization">Персонализиране на размера на шрифта</string>
     <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
     <string name="why_upgrade_customizable_contact_ringtones">Персонализирани мелодии за контакт</string>
-    <string name="why_upgrade_contact_filtering">Contact filtering</string>
+    <string name="why_upgrade_contact_filtering">Филтриране на контактите</string>
     <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Checklists</string>
@@ -977,7 +975,7 @@
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
     <!-- Google Play listing -->
     <string name="deprecated_app">DEPRECATED: This version of the app is no longer maintained, get the Pro version at https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
-    <string name="pro_app_refund">Don\'t forget that if you uninstall any paid app within 2 hours, you will automatically be refunded. If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it. That makes it easy to try it out :)</string>
+    <string name="pro_app_refund">Не забравяйте, че ако деинсталирате всяко платено приложение в рамките на 2 часа, автоматично ще бъде възстановена сумата. Ако искате възстановяване на сумата по всяко време по -късно, просто се свържете с нас на hello@simplemobiletools.com и ще го получите. Това улеснява изпробването :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">Група обикновени приложения с отворен код за Android с гъвкави приспособления, без реклами и ненужни разрешения.</string>
 </resources>
