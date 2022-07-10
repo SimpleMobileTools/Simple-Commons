@@ -41,7 +41,7 @@
     <string name="next">Επόμενο</string>
     <string name="number">Αριθμός</string>
     <string name="no_contacts_found">Δεν βρέθηκαν Επαφές</string>
-    <string name="request_the_required_permissions">Ζητούνται τα απαιτούμενα δικαιώματα</string>
+    <string name="request_the_required_permissions">Ζητούνται οι απαιτούμενες Άδειες</string>
     <string name="no_access_to_contacts">Η εφαρμογή δεν έχει πρόσβαση στις επαφές σας</string>
     <string name="no_phone_call_permission">Η εφαρμογή δεν έχει άδεια να εκκινεί τηλεφωνικές κλήσεις, παρακαλούμε παραχωρήσετε την στις ρυθμίσεις της συσκευής.</string>
     <string name="insert_text_here">Εισαγωγή κειμένου εδώ</string>
@@ -213,7 +213,7 @@
     <string name="confirm_create_doc_for_new_folder_text">Παρακαλώ πατήστε \'&lt;b&gt;Αποθήκευση&lt;/b&gt;\' στο κάτω μέρος της επόμενης οθόνης για να δημιουργήσετε το Νέο φάκελο.</string>
     <string name="confirm_selection">Επιβεβαίωση επιλογής</string>
     <string name="loading">Φόρτωση…</string>
-    <string name="access_storage_prompt">Παρακαλώ παραχωρήστε την πρόσβαση σε όλα τα αρχεία σας, γιατί χωρίς αυτή μπορεί να μην λειτουργεί καλά.</string>
+    <string name="access_storage_prompt">Παρακαλώ παραχωρήστε την πρόσβαση σε όλα τα αρχεία σας, γιατί χωρίς αυτή μπορεί να μην λειτουργεί σωστά.</string>
 
     <plurals name="items">
         <item quantity="one">%d στοιχείο</item>
@@ -239,7 +239,7 @@
 
     <!-- Storages -->
     <string name="select_storage">Επιλέξτε αποθήκευση</string>
-    <string name="storage">Storage</string>
+    <string name="storage">Αποθήκευση</string>
     <string name="internal">Εσωτερική</string>
     <string name="sd_card">SD Card</string>
     <string name="root">Root</string>
@@ -679,7 +679,7 @@
 
     <!-- OTG devices -->
     <string name="usb">USB</string>
-    <string name="usb_detected">Φαίνεται ότι μια συσκευή USB είναι συνδεδεμένη στη συσκευή σας. Για να βεβαιωθείτε ότι τα αρχεία της εμφανίζονται σωστά, χρειάζεται να χορηγήσετε πρόσθετα δικαιώματα.</string>
+    <string name="usb_detected">Φαίνεται ότι μια συσκευή USB είναι συνδεδεμένη στη συσκευή σας. Για να βεβαιωθείτε ότι τα αρχεία της εμφανίζονται σωστά, χρειάζεται να χορηγήσετε πρόσθετες Άδειες.</string>
     <string name="confirm_usb_storage_access_text">Παρακαλώ επιλέξτε τον ριζικό κατάλογο της συσκευής USB στην επόμενη οθόνη, για παραχώρηση πρόσβασης</string>
     <string name="wrong_root_selected_usb">Λάθος επιλεγμένος κατάλογος, παρακαλώ επιλέξτε το ριζικό κατάλογο της συσκευής USB</string>
 
@@ -781,14 +781,14 @@
             Ευχαριστούμε!
         ]]>
     </string>
-    <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features and color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
+    <string name="donate_new">Γειά σας,&lt;br&gt;&lt;br&gt;ελπίζω να απολαμβάνετε την εφαρμογή. Δεν περιέχει διαφημίσεις και δεν συλλέγουμε τα δεδομένα σας, παρακαλούμε υποστηρίξτε την ανάπτυξή της με την αγορά της &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Απλά Σας Ευχαριστούμε&lt;/a&gt;. Επίσης, θα έχετε ξεκλειδώσει όλες τις λειτουργίες της και την προσαρμογή των χρωμάτων.&lt;br&gt;&lt;br&gt;Σας ευχαριστώ!</string>
     <string name="purchase">Αγορά</string>
     <string name="order_simple_phone">Αγορά Simple Phone</string>
     <string name="update_thank_you">Παρακαλώ ενημερώστε την Απλά Σας Ευχαριστούμε στην τελευταία έκδοση</string>
     <string name="before_asking_question_read_faq">Πριν κάνετε μια ερώτηση, ελέγξτε τις ρυθμίσεις της εφαρμογής και διαβάστε πρώτα τις Συχνές Ερωτήσεις. Ίσως η λύση υπάρχει εκεί.</string>
     <string name="before_rate_read_faq">Πριν μας αξιολογήσετε, ελέγξτε τις ρυθμίσεις εφαρμογής και διαβάστε πρώτα τις Συχνές Ερωτήσεις. Αν έχετε προβλήματα, ίσως η λύση υπάρχει εκεί.</string>
     <string name="make_sure_latest">Επίσης, βεβαιωθείτε ότι χρησιμοποιείτε την τελευταία έκδοση της εφαρμογής.</string>
-    <string name="make_sure_upgrade">Also note that this app version is no longer being developed, get the Pro one for many improvements.</string>
+    <string name="make_sure_upgrade">Σημειώστε επίσης ότι αυτή η έκδοση της εφαρμογής δεν αναπτύσσεται πλέον, αποκτήστε την έκδοση Pro για πολλές βελτιώσεις.</string>
     <string name="read_it">Διαβάστε τις</string>
     <string name="read_faq">Συχνές Ερωτήσεις</string>
     <string name="rate_us_prompt">Γειά σας,\n\nφαίνεται ότι χρησιμοποιείτε αυτήν την εφαρμογή ήδη για αρκετό καιρό, και το εκτιμούμε πραγματικά.\n\nΑν μπορούμε να σας ζητήσουμε μια χάρη, παρακαλούμε αξιολογήστε μας στο Google Play. Αυτό θα μας βοηθούσε πολύ.\n\nΑνεξάρτητα τι αποφασίσατε, δεν θα εμφανιστεί ξανά αυτό το μήνυμα.\n\nΕυχαριστούμε!</string>
@@ -974,7 +974,7 @@
     <string name="why_upgrade_private_contact_sharing">Προαιρετική κοινή χρήση ιδιωτικών επαφών στις εφαρμογές μας</string>
     <string name="why_upgrade_customizable_contact_ringtones">Προσαρμόσιμοι ήχοι κλήσης επαφών</string>
     <string name="why_upgrade_contact_filtering">Φιλτράρισμα επαφών</string>
-    <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
+    <string name="why_upgrade_contact_private_contacts">Ιδιωτικά αποθηκευμένες επαφές</string>
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Λίστες ελέγχου</string>
@@ -1033,5 +1033,5 @@
     <string name="pro_app_refund">Μην ξεχνάτε οτι αν απεγκατασταθεί εντός 2 ωρών, θα επιστραφούν αυτόματα τα χρήματα σας. Αν θέλετε επιστροφή χρημάτων οποιαδήποτε στιγμή αργότερα, απλά επικοινωνήστε μαζί μας στο hello@simplemobiletools.com και θα τα λάβετε. Αυτό το κάνει εύκολότερο για να την δοκιμάσετε :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">Μια ομάδα Απλών εφαρμογών Android ανοιχτού κώδικα με προσαρμόσιμα γραφικά στοιχεία, χωρίς διαφημίσεις και περιττά δικαιώματα.</string>
+    <string name="developer_description">Μια ομάδα Απλών εφαρμογών Android ανοιχτού κώδικα με προσαρμόσιμα γραφικά στοιχεία, χωρίς διαφημίσεις και περιττές Άδειες.</string>
 </resources>
