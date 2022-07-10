@@ -22,7 +22,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.core.widget.NestedScrollView
+    <RelativeLayout
         android:id="@+id/block_numbers_nested_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -104,5 +104,5 @@
                 app:layout_constraintTop_toBottomOf="@id/manage_blocked_numbers_placeholder" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
