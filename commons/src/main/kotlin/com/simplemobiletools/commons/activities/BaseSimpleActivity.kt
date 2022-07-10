@@ -44,7 +44,6 @@ import java.io.File
 import java.io.OutputStream
 import java.util.regex.Pattern
 
-
 abstract class BaseSimpleActivity : AppCompatActivity() {
     var copyMoveCallback: ((destinationPath: String) -> Unit)? = null
     var actionOnPermission: ((granted: Boolean) -> Unit)? = null

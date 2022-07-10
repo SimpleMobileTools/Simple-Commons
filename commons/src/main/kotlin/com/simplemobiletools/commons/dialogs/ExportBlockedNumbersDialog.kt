@@ -41,6 +41,7 @@ class ExportBlockedNumbersDialog(
             .setNegativeButton(R.string.cancel, null)
             .apply {
                 activity.setupDialogStuff(view, this, R.string.export_blocked_numbers) { alertDialog ->
+                    alertDialog.showKeyboard(view.export_blocked_numbers_filename)
                     alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                         val filename = view.export_blocked_numbers_filename.value
                         when {
