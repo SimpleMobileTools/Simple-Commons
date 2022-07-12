@@ -163,7 +163,7 @@
     <style name="UnclickableEditText">
         <item name="android:clickable">false</item>
         <item name="android:focusable">false</item>
-        <item name="android:inputType">textNoSuggestions</item>
+        <item name="android:inputType">textNoSuggestions|textMultiLine</item>
     </style>
 
     <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog">
