@@ -7,10 +7,9 @@
 
     <com.simplemobiletools.commons.views.MyButton
         android:id="@+id/open_biometric_dialog"
+        style="@style/ColoredButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_background"
-        android:padding="@dimen/normal_margin"
         android:text="@string/open_biometric_dialog"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
