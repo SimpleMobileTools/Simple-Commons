@@ -3,7 +3,6 @@ package com.simplemobiletools.commons.samples.activities
 import android.os.Bundle
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.appLaunched
-import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.samples.BuildConfig
 import com.simplemobiletools.commons.samples.R
 import kotlinx.android.synthetic.main.activity_main.*
