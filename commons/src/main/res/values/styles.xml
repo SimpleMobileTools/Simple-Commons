@@ -25,6 +25,8 @@
         <item name="colorControlHighlight">@color/activated_item_foreground</item>
         <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
         <item name="android:forceDarkAllowed">false</item>
+        <item name="actionOverflowMenuStyle">@style/TopPopupMenu.Overflow.Dark</item>
+        <item name="android:actionOverflowButtonStyle">@style/ActionMenuOverflowIcon</item>
     </style>
 
     <style name="AppTheme.Base.System" parent="Theme.Material3.Dark.NoActionBar">
