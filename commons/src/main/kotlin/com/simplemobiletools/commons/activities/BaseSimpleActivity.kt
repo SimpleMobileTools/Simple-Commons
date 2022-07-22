@@ -181,7 +181,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 window.navigationBarColor = colorToUse
 
                 if (isOreoPlus()) {
-                    if (color.getContrastColor() == 0xFF333333.toInt()) {
+                    if (colorToUse.getContrastColor() == 0xFF333333.toInt()) {
                         window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
                     } else {
                         window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.removeBit(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR)
