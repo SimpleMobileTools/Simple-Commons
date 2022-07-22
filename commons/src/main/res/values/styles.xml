@@ -27,6 +27,7 @@
         <item name="android:forceDarkAllowed">false</item>
         <item name="actionOverflowMenuStyle">@style/TopPopupMenu.Overflow.Dark</item>
         <item name="android:actionOverflowButtonStyle">@style/ActionMenuOverflowIcon</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
 
     <style name="AppTheme.Base.System" parent="Theme.Material3.Dark.NoActionBar">
