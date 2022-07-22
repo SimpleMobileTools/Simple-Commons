@@ -404,7 +404,7 @@
         <item name="android:textColor">@color/dark_grey</item>
     </style>
 
-    <style name="AppTheme.White.NoActionBar" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppTheme.White.NoActionBar" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/md_grey_white</item>
         <item name="colorPrimaryDark">@color/md_grey_white_dark</item>
         <item name="colorAccent">@color/md_grey_white</item>
@@ -427,6 +427,7 @@
         <item name="colorControlHighlight">@color/activated_item_foreground</item>
         <item name="android:colorControlActivated">@color/md_grey_white</item>
         <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
+        <item name="android:actionOverflowButtonStyle">@style/ActionMenuOverflowIcon</item>
     </style>
 
     <style name="AppTheme.BlackAndWhite.DarkTextColor" parent="AppTheme.BlackAndWhite">
@@ -437,7 +438,7 @@
         <item name="android:textColor">@color/md_grey_white</item>
     </style>
 
-    <style name="AppTheme.BlackAndWhite.NoActionBar" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppTheme.BlackAndWhite.NoActionBar" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/md_grey_black</item>
         <item name="colorPrimaryDark">@color/md_grey_black_dark</item>
         <item name="colorAccent">@color/md_grey_black</item>
@@ -445,6 +446,7 @@
         <item name="colorControlHighlight">@color/activated_item_foreground</item>
         <item name="android:colorControlActivated">@color/md_grey_white</item>
         <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
+        <item name="android:actionOverflowButtonStyle">@style/ActionMenuOverflowIcon</item>
     </style>
 
     <style name="AppTheme.Red_100" parent="AppTheme.Base">
