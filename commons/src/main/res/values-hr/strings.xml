@@ -74,10 +74,10 @@
     <string name="no_phone_number_found">Nije pronađen nijedan telefonski broj</string>
     <!-- View types -->
     <string name="change_view_type">Promijeni vrstu prikaza</string>
-    <string name="grid">Mreža</string>
-    <string name="grid_pro">Mreža (Pro)</string>
-    <string name="uneven_grid">Uneven Grid</string>
-    <string name="list">Lista</string>
+    <string name="grid">Prikaz ikona</string>
+    <string name="grid_pro">Prikaz ikona (Pro)</string>
+    <string name="uneven_grid">Neravnomjerni prikaz ikona</string>
+    <string name="list">Prikaz popisa</string>
     <string name="increase_column_count">Povećaj broj stupaca</string>
     <string name="reduce_column_count">Smanji broj stupaca</string>
     <string name="change_cover_image">Promjeni naslovnu sliku</string>
@@ -594,15 +594,15 @@
     <string name="language">Language</string>
     <string name="show_hidden_items">Prikaži skrivene stavke</string>
     <string name="font_size">Veličina fonta</string>
-    <string name="small">Malo</string>
-    <string name="medium">Srednje</string>
-    <string name="large">Veće</string>
-    <string name="extra_large">Puno veće</string>
+    <string name="small">Mala</string>
+    <string name="medium">Srednja</string>
+    <string name="large">Velika</string>
+    <string name="extra_large">Jako velika</string>
     <string name="password_protect_hidden_items">Vidljivost skrivenih, lozinkom zaštićenih stavki</string>
     <string name="password_protect_whole_app">Zaštiti cijelu aplikaciju lozinkom</string>
     <string name="password_protect_file_deletion">Password protect file deletion and moving</string>
     <string name="keep_last_modified">Keep old last-modified value at file operations</string>
-    <string name="show_info_bubble">Prikažite informativni mjehur prilikom pomicanja stavki pomicanjem trake za pomicanje</string>
+    <string name="show_info_bubble">Prikaži informativni balončić prilikom prelistavanja stavki povlačenjem klizne trake</string>
     <string name="prevent_phone_from_sleeping">Spriječite da uređaj prijeđe u stanje mirovanja dok je aplikacija u prvom planu</string>
     <string name="skip_delete_confirmation">Uvijek preskoči dijaloški okvir za potvrdu brisanja</string>
     <string name="enable_pull_to_refresh">Omogućite osvježavanje povlačenjem s vrha</string>
