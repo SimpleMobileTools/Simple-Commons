@@ -137,6 +137,7 @@
     <string name="rename_date_time_pattern">%Y - рік\n%M - місяць\n%D - день\n%h - година\n%m - хвилина\n%s - секунда\n%i - номер від 1</string>
     <string name="filename_without_txt">Ім\'я файлу (без .txt)</string>
     <string name="filename_without_json">Ім\'я файлу (без .json)</string>
+    <string name="filename_without_zip">Ім\'я файлу (без .zip)</string>
     <string name="cannot_hide_files">Починаючи з Android 11, ви більше не можете приховувати такі файли та теки</string>
     <!-- Copy / Move -->
     <string name="copy">Копіювати</string>

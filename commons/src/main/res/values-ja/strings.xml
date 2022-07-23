@@ -137,6 +137,7 @@
     <string name="rename_date_time_pattern">%Y - 年\n%M - 月\n%D - 日\n%h - 時\n%m - 分\n%s - 秒\n%i - 1から増える数</string>
     <string name="filename_without_txt">ファイル名 (.txtを除く)</string>
     <string name="filename_without_json">ファイル名 (.jsonを除く)</string>
+    <string name="filename_without_zip">ファイル名 (.zipを除く)</string>
     <string name="cannot_hide_files">Android11以降、ファイルやフォルダを非表示にできなくなりました</string>
     <!-- Copy / Move -->
     <string name="copy">コピー</string>
