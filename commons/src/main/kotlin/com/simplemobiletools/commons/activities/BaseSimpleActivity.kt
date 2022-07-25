@@ -50,6 +50,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     var isAskingPermissions = false
     var useDynamicTheme = true
     var showTransparentTop = false
+    var showTransparentNavigation = false
     var checkedDocumentPath = ""
     var configItemsToExport = LinkedHashMap<String, Any>()
 
@@ -167,6 +168,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun updateNavigationBarColor(color: Int = baseConfig.navigationBarColor, isColorPreview: Boolean = false) {
+        if (showTransparentNavigation) {
+            return
+        }
+
         if (baseConfig.isUsingSystemTheme && !isColorPreview) {
             val navBarColor = getBottomNavigationBackgroundColor()
             window.navigationBarColor = navBarColor
