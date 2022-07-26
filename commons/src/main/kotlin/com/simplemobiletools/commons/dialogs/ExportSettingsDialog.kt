@@ -19,7 +19,7 @@ class ExportSettingsDialog(
         }
 
         val view = activity.layoutInflater.inflate(R.layout.dialog_export_settings, null).apply {
-            export_settings_filename.setText(defaultFilename)
+            export_settings_filename.setText(defaultFilename.removeSuffix(".txt"))
 
             if (hidePath) {
                 export_settings_path_label.beGone()
@@ -41,12 +41,13 @@ class ExportSettingsDialog(
             .apply {
                 activity.setupDialogStuff(view, this, R.string.export_settings) { alertDialog ->
                     alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-                        val filename = view.export_settings_filename.value
+                        var filename = view.export_settings_filename.value
                         if (filename.isEmpty()) {
                             activity.toast(R.string.filename_cannot_be_empty)
                             return@setOnClickListener
                         }
 
+                        filename += ".txt"
                         val newPath = "${folder.trimEnd('/')}/$filename"
                         if (!newPath.getFilenameFromPath().isAValidFilename()) {
                             activity.toast(R.string.filename_invalid_characters)
