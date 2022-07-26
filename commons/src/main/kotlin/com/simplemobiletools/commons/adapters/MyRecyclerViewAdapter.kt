@@ -84,7 +84,7 @@ abstract class MyRecyclerViewAdapter(val activity: BaseSimpleActivity, val recyc
                 }
 
                 actBarTextView!!.setTextColor(bgColor.getContrastColor())
-                activity.updateMenuItemColors(menu, baseColor = bgColor, updateHomeAsUpColor = true, isContextualMenu = true)
+                activity.updateMenuItemColors(menu, baseColor = bgColor)
                 onActionModeCreated()
 
                 if (baseConfig.isUsingSystemTheme) {

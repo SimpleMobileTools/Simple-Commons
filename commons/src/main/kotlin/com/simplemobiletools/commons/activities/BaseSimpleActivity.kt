@@ -11,7 +11,6 @@ import android.content.Intent
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.PorterDuff
-import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -161,8 +160,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     fun updateActionbarColor(color: Int = getProperStatusBarColor()) {
-        updateActionBarTitle(supportActionBar?.title.toString(), color)
-        supportActionBar?.setBackgroundDrawable(ColorDrawable(color))
         updateStatusbarColor(color)
         setTaskDescription(ActivityManager.TaskDescription(null, null, color))
     }
@@ -214,10 +211,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun updateMenuItemColors(
-        menu: Menu?, useCrossAsBack: Boolean = false, baseColor: Int = getProperStatusBarColor(), updateHomeAsUpColor: Boolean = true,
-        isContextualMenu: Boolean = false, forceWhiteIcons: Boolean = false
-    ) {
+    fun updateMenuItemColors(menu: Menu?, useCrossAsBack: Boolean = false, baseColor: Int = getProperStatusBarColor(), forceWhiteIcons: Boolean = false) {
         if (menu == null) {
             return
         }
@@ -232,12 +226,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
                 menu.getItem(i)?.icon?.setTint(color)
             } catch (ignored: Exception) {
             }
-        }
-
-        if (updateHomeAsUpColor && !isContextualMenu) {
-            val drawableId = if (useCrossAsBack) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector
-            val icon = resources.getColoredDrawableWithColor(drawableId, color)
-            supportActionBar?.setHomeAsUpIndicator(icon)
         }
     }
 

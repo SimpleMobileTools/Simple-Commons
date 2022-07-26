@@ -18,7 +18,6 @@ import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.telecom.PhoneAccountHandle
 import android.telecom.TelecomManager
-import android.text.Html
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
@@ -28,7 +27,6 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import androidx.biometric.BiometricPrompt
 import androidx.biometric.auth.AuthPromptCallback
 import androidx.biometric.auth.AuthPromptHost
@@ -46,26 +44,6 @@ import com.simplemobiletools.commons.views.MyTextView
 import kotlinx.android.synthetic.main.dialog_title.view.*
 import java.io.*
 import java.util.*
-
-fun AppCompatActivity.updateActionBarTitle(text: String, color: Int = getProperStatusBarColor()) {
-    val colorToUse = if (baseConfig.isUsingSystemTheme) {
-        getProperTextColor()
-    } else {
-        color.getContrastColor()
-    }
-
-    supportActionBar?.title = Html.fromHtml("<font color='${colorToUse.toHex()}'>$text</font>")
-}
-
-fun AppCompatActivity.updateActionBarSubtitle(text: String) {
-    val colorToUse = if (baseConfig.isUsingSystemTheme) {
-        getProperTextColor()
-    } else {
-        baseConfig.primaryColor.getContrastColor()
-    }
-
-    supportActionBar?.subtitle = Html.fromHtml("<font color='${colorToUse.toHex()}'>$text</font>")
-}
 
 fun Activity.appLaunched(appId: String) {
     baseConfig.internalStoragePath = getInternalStoragePath()
