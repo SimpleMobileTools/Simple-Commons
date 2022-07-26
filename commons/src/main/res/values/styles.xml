@@ -121,7 +121,7 @@
         <item name="android:textColor">@color/you_neutral_text_color</item>
     </style>
 
-    <style name="TranslucentTheme" parent="Theme.Material3.Dark.NoActionBar" >
+    <style name="TranslucentTheme" parent="Theme.Material3.Dark.NoActionBar">
         <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
         <item name="actionOverflowMenuStyle">@style/TopPopupMenu.Overflow.Dark</item>
         <item name="android:actionOverflowButtonStyle">@style/ActionMenuOverflowIcon</item>
@@ -173,16 +173,31 @@
         <item name="android:inputType">textNoSuggestions|textMultiLine</item>
     </style>
 
-    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+    <style name="MyDialogTheme" parent="Theme.Material3.Light.Dialog">
         <item name="colorAccent">@color/color_primary</item>
         <item name="android:windowBackground">@color/theme_light_background_color</item>
         <item name="android:textColor">@color/theme_light_text_color</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/DialogButtonStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DialogButtonStyle</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/DialogButtonStyle</item>
     </style>
 
-    <style name="MyDialogTheme.Dark" parent="Theme.AppCompat.Dialog">
+    <style name="MyDialogTheme.Dark" parent="Theme.Material3.Dark.Dialog">
         <item name="colorAccent">@color/color_primary</item>
         <item name="android:windowBackground">@color/theme_dark_background_color</item>
         <item name="android:textColor">@color/theme_dark_text_color</item>
+
+        <item name="android:buttonBarNegativeButtonStyle">@style/DialogButtonStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DialogButtonStyle</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/DialogButtonStyle</item>
+    </style>
+
+    <style name="DialogButtonStyle" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/color_primary</item>
+    </style>
+
+    <style name="MaterialDialogButtonStyle" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/you_primary_color</item>
     </style>
 
     <!-- Used at dark Material You Time picker. Some of its parts cannot be customized through themes, we use these hacky ways. -->
@@ -193,6 +208,9 @@
         <item name="android:textColor">@color/you_primary_color</item>
         <item name="android:textColorSecondary">@color/you_neutral_text_color</item>
         <item name="android:textColorPrimary">@color/you_neutral_text_color</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/MaterialDialogButtonStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/MaterialDialogButtonStyle</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/MaterialDialogButtonStyle</item>
     </style>
 
     <!-- Used at both dark and light Material You Date pickers and light Time Picker, as otherwise it glitches -->
@@ -203,6 +221,9 @@
         <item name="android:textColor">@color/you_primary_color</item>
         <item name="android:textColorPrimary">@color/you_neutral_text_color</item>
         <item name="android:textColorSecondary">@color/you_neutral_text_color</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/MaterialDialogButtonStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/MaterialDialogButtonStyle</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/MaterialDialogButtonStyle</item>
     </style>
 
     <style name="Theme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
