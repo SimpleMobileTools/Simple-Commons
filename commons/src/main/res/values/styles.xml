@@ -122,6 +122,7 @@
     </style>
 
     <style name="TranslucentTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimaryDark">@android:color/transparent</item>
         <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
         <item name="actionOverflowMenuStyle">@style/TopPopupMenu.Overflow.Dark</item>
         <item name="android:actionOverflowButtonStyle">@style/ActionMenuOverflowIcon</item>
