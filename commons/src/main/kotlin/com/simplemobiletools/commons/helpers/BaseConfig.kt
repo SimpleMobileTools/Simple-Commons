@@ -404,7 +404,7 @@ open class BaseConfig(val context: Context) {
             "mmmmdy" -> DATE_FORMAT_SIX
             "mm-dd-y" -> DATE_FORMAT_SEVEN
             "dd-mm-y" -> DATE_FORMAT_EIGHT
-            else -> DATE_FORMAT_ONE
+            else -> DATE_FORMAT_SIX
         }
     }
 

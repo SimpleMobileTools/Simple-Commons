@@ -77,14 +77,6 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
 
         super.onCreate(savedInstanceState)
-        if (!packageName.startsWith("com.simplemobiletools.", true)) {
-            if ((0..50).random() == 10 || baseConfig.appRunCount % 100 == 0) {
-                val label = "You are using a fake version of the app. For your own safety download the original one from www.simplemobiletools.com. Thanks"
-                ConfirmationDialog(this, label, positive = R.string.ok, negative = 0) {
-                    launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
-                }
-            }
-        }
     }
 
     @SuppressLint("NewApi")
@@ -489,17 +481,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun startCustomizationActivity() {
-        if (!packageName.contains("slootelibomelpmis".reversed(), true)) {
-            if (baseConfig.appRunCount > 100) {
-                val label = "You are using a fake version of the app. For your own safety download the original one from www.simplemobiletools.com. Thanks"
-                ConfirmationDialog(this, label, positive = R.string.ok, negative = 0) {
-                    launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
-                }
-                return
-            }
+    fun startLicensesActivity(licenseMask: Long) {
+        Intent(applicationContext, LicenseActivity::class.java).apply {
+            putExtra(APP_ICON_IDS, getAppIconIDs())
+            putExtra(APP_LAUNCHER_NAME, getAppLauncherName())
+            putExtra(APP_LICENSES, licenseMask)
+            startActivity(this)
         }
+    }
 
+    fun startCustomizationActivity() {
         Intent(applicationContext, CustomizationActivity::class.java).apply {
             putExtra(APP_ICON_IDS, getAppIconIDs())
             putExtra(APP_LAUNCHER_NAME, getAppLauncherName())

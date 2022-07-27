@@ -80,17 +80,6 @@ fun Activity.appLaunched(appId: String) {
     }
 
     baseConfig.appRunCount++
-    if (baseConfig.appRunCount % 30 == 0 && !isAProApp()) {
-        if (!resources.getBoolean(R.bool.hide_google_relations)) {
-            showDonateOrUpgradeDialog()
-        }
-    }
-
-    if (baseConfig.appRunCount % 40 == 0 && !baseConfig.wasAppRated) {
-        if (!resources.getBoolean(R.bool.hide_google_relations)) {
-            RateStarsDialog(this)
-        }
-    }
 
     if (baseConfig.navigationBarColor == INVALID_NAVIGATION_BAR_COLOR && (window.attributes.flags and WindowManager.LayoutParams.FLAG_FULLSCREEN == 0)) {
         baseConfig.defaultNavigationBarColor = window.navigationBarColor

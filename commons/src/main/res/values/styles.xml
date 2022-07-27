@@ -365,7 +365,7 @@
     </style>
 
     <style name="SettingsTextLabelStyle">
-        <item name="android:textSize">@dimen/normal_text_size</item>
+        <item name="android:textSize">@dimen/big_text_size</item>
     </style>
 
     <style name="SettingsTextValueStyle">

@@ -564,11 +564,6 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickPrimaryColor() {
-        if (!packageName.startsWith("com.simplemobiletools.", true) && baseConfig.appRunCount > 50) {
-            finish()
-            return
-        }
-
         curPrimaryLineColorPicker = LineColorPickerDialog(this, curPrimaryColor, true, toolbar = customization_toolbar) { wasPositivePressed, color ->
             curPrimaryLineColorPicker = null
             if (wasPositivePressed) {
