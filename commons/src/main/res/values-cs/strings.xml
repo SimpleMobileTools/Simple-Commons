@@ -48,22 +48,22 @@
     <string name="no_phone_call_permission">Aplikace nemá oprávnění pro zahájení telefonních hovorů. Prosím, poskytněte jej v nastavení zařízení</string>
     <string name="insert_text_here">Sem vložte text</string>
     <string name="call_person">Zavolat %s</string>
-    <string name="zero">Zero</string>
-    <string name="one">One</string>
-    <string name="two">Two</string>
-    <string name="three">Three</string>
-    <string name="four">Four</string>
-    <string name="five">Five</string>
-    <string name="six">Six</string>
-    <string name="seven">Seven</string>
-    <string name="eight">Eight</string>
-    <string name="nine">Nine</string>
-    <string name="value">Value</string>
-    <string name="value_cannot_be_empty">Value cannot be empty</string>
+    <string name="zero">Nula</string>
+    <string name="one">Jedna</string>
+    <string name="two">Dvě</string>
+    <string name="three">Tři</string>
+    <string name="four">Čtyři</string>
+    <string name="five">Pět</string>
+    <string name="six">Šest</string>
+    <string name="seven">Sedm</string>
+    <string name="eight">Osm</string>
+    <string name="nine">devět</string>
+    <string name="value">Hodnota</string>
+    <string name="value_cannot_be_empty">Hodnota nesmí být prázdná</string>
     <string name="create_new_contact">Vytvořit nový kontakt</string>
-    <string name="add_to_existing_contact">Přidat k existujícímu kontaktu</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
+    <string name="add_to_existing_contact">Přidat k existujícímu kontaktu</string>
+    <string name="app_corrupt">Aplikace je poškozená</string>
+    <string name="disclaimer">Zřeknutí se odpovědnosti</string>
     <!-- Emails -->
     <string name="home">Domov</string>
     <string name="work">Práce</string>
@@ -78,7 +78,7 @@
     <string name="change_view_type">Změnit typ zobrazení</string>
     <string name="grid">Mřížka</string>
     <string name="grid_pro">Mřížka (Pro)</string>
-    <string name="uneven_grid">Uneven Grid</string>
+    <string name="uneven_grid">Nerovnoměrná mřížka</string>
     <string name="list">Seznam</string>
     <string name="increase_column_count">Zvýšit počet sloupců</string>
     <string name="reduce_column_count">Snížit počet sloupců</string>
@@ -86,23 +86,23 @@
     <string name="select_photo">Vybrat fotografii</string>
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Spravovat blokovaná čísla</string>
-    <string name="not_blocking_anyone">Neblokujete nikoho.</string>
+    <string name="not_blocking_anyone">Nikoho neblokujete.</string>
     <string name="add_a_blocked_number">Přidat blokované číslo</string>
     <string name="block_number">Blokovat číslo</string>
     <string name="block_numbers">Blokovat čísla</string>
     <string name="blocked_numbers">Blokovaná čísla</string>
-    <string name="export_blocked_numbers">Export blocked numbers</string>
-    <string name="import_blocked_numbers">Import blocked numbers</string>
-    <string name="must_make_default_dialer">Pro použití blokování čísel musíte nastavit aplikaci jako výchozí pro správu hovorů.</string>
+    <string name="export_blocked_numbers">Exportovat blokovaná čísla</string>
+    <string name="import_blocked_numbers">Importovat blokovaná čísla</string>
+    <string name="must_make_default_dialer">Pro použití blokování čísel musíte nastavit tuto aplikaci jako výchozí pro správu hovorů.</string>
     <string name="set_as_default">Nastavit jako výchozí</string>
-    <string name="block_confirmation">Jste si jistý, že chcete zablokovat \"%s\"?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_confirmation">Jste si jistí, že chcete zablokovat „%s“\?</string>
+    <string name="block_unknown_calls">Blokovat volání z neznámých čísel</string>
+    <string name="block_unknown_messages">Blokovat zprávy z neznámých čísel</string>
     <!-- Favorites -->
     <string name="favorites">Oblíbené</string>
     <string name="add_favorites">Přidat oblíbené</string>
     <string name="add_to_favorites">Přidat do oblíbených</string>
-    <string name="remove_from_favorites">Odebrat z oblíbených</string>
+    <string name="remove_from_favorites">Odebrat z oblíbených</string>
     <!-- Search -->
     <string name="search">Hledat</string>
     <string name="type_2_characters">Zadejte alespoň 2 znaky pro zahájení hledání.</string>
@@ -112,9 +112,9 @@
     <string name="no_items_found">Nenalezeny žádné položky.</string>
     <string name="change_filter">Upravit filtr</string>
     <!-- Permissions -->
-    <string name="no_storage_permissions">Je vyžadováno oprávnění pro přístup k externímu úložišti</string>
+    <string name="no_storage_permissions">Je vyžadováno oprávnění pro přístup k úložišti</string>
     <string name="no_contacts_permission">Je vyžadováno oprávnění pro přístup ke kontaktům</string>
-    <string name="no_camera_permissions">Je vyžadováno oprávnění pro přístup k fotoaparátu</string>
+    <string name="no_camera_permissions">Je vyžadováno oprávnění pro přístup k fotoaparátu</string>
     <string name="no_audio_permissions">Je vyžadováno oprávnění pro přístup ke zvuku</string>
     <!-- Renaming -->
     <string name="rename_file">Přejmenovat soubor</string>
