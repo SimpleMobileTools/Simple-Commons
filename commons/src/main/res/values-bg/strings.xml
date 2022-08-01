@@ -5,7 +5,7 @@
     <string name="nothing">Нищо</string>
     <string name="later">По-късно</string>
     <string name="save_as">Запазване като</string>
-    <string name="file_saved">Файлът е запазен</string>
+    <string name="file_saved">Файлът е запазен успешно</string>
     <string name="invalid_file_format">Невалиден файлов формат</string>
     <string name="out_of_memory_error">Грешка от липса на памет</string>
     <string name="an_error_occurred">Възникна грешка: %s</string>
@@ -44,8 +44,8 @@
     <string name="number">Номер</string>
     <string name="no_contacts_found">Няма намерени контакти</string>
     <string name="request_the_required_permissions">Поискване на необходимите разрешения</string>
-    <string name="no_access_to_contacts">Неуспешен достъп до контактите Ви</string>
-    <string name="no_phone_call_permission">Приложението няма позволение за започване на телефонни обаждания, разрешете в настройките на устройството</string>
+    <string name="no_access_to_contacts">Приложението няма достъп до контактите ви</string>
+    <string name="no_phone_call_permission">Приложението няма разрешение за иницииране на телефонни обаждания, моля, дайте го в настройките на устройството</string>
     <string name="insert_text_here">Вмъкване на текст тук</string>
     <string name="call_person">Повикване %s</string>
     <string name="zero">Нула</string>
@@ -58,7 +58,7 @@
     <string name="seven">Седем</string>
     <string name="eight">Осем</string>
     <string name="nine">Девет</string>
-    <string name="value">Value</string>
+    <string name="value">Стойност</string>
     <string name="value_cannot_be_empty">Стойността не може да бъде празна</string>
     <string name="create_new_contact">Създаване на контакт</string>
     <string name="add_to_existing_contact">Добавяне към съществуващ контакт</string>
@@ -93,7 +93,7 @@
     <string name="blocked_numbers">Блокирани номера</string>
     <string name="export_blocked_numbers">Експортиране на блокирани номера</string>
     <string name="import_blocked_numbers">Внасяне на блокирани номера</string>
-    <string name="must_make_default_dialer">Трябва да направите приложението за набиране по подразбиране, за да се възползвате от блокираните номера.</string>
+    <string name="must_make_default_dialer">За да използвате блокираните номера, трябва да настроите това приложение като приложение за набиране по подразбиране.</string>
     <string name="set_as_default">Задаване по подразбиране</string>
     <string name="block_confirmation">Сигурни ли сте, че искате да блокирате \"%s\"\?</string>
     <string name="block_unknown_calls">Блокиране на повиквания от незапазени контакти</string>
@@ -105,7 +105,7 @@
     <string name="remove_from_favorites">Премахни от любимите</string>
     <!-- Search -->
     <string name="search">Търсене</string>
-    <string name="type_2_characters">Въведете поне 2 символа, за да започне търсенето.</string>
+    <string name="type_2_characters">Въведете поне 2 символа, за да започнете търсенето.</string>
     <!-- Filters -->
     <string name="filter">Филтър</string>
     <string name="filter_pro">Филтър (Про)</string>
@@ -146,7 +146,7 @@
     <string name="filename_without_txt">Име на файл (без .txt)</string>
     <string name="filename_without_json">Име на файл (без .json)</string>
     <string name="filename_without_zip">Име на файл (без .zip)</string>
-    <string name="cannot_hide_files">От Android 11 вече не можете да скривате файлове и папки по този начин</string>
+    <string name="cannot_hide_files">От Android 11 нататък вече не можете да скривате файлове и папки по този начин</string>
     <!-- Copy / Move -->
     <string name="copy">Копиране</string>
     <string name="move">Преместване</string>
@@ -157,7 +157,7 @@
     <string name="destination">Дестинация</string>
     <string name="select_destination">Избор на дестинация</string>
     <string name="click_select_destination">Кликнете тук, за избор на дестинация</string>
-    <string name="invalid_destination">Не можа да се запише на избраната дестинация</string>
+    <string name="invalid_destination">Не можа да се пише на избраното местоназначение</string>
     <string name="please_select_destination">Моля, изберете дестинация</string>
     <string name="source_and_destination_same">Източникът и дестинацията не могат да бъдат еднакви</string>
     <string name="copy_failed">Неуспешно копиране на файловете</string>
@@ -185,7 +185,7 @@
     <string name="create_new_folder">Създаване на нова папка</string>
     <string name="name_taken">Вече съществува файл или папка с това име</string>
     <string name="invalid_name">Името съдържа непозволени знаци</string>
-    <string name="empty_name">Въведете име</string>
+    <string name="empty_name">Моля, въведете име</string>
     <string name="unknown_error_occurred">Възникна неизвестна грешка</string>
     <!-- File operation conflicts -->
     <string name="file_already_exists">Файл \"%s\" вече съществува</string>
