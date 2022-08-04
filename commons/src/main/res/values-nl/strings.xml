@@ -36,7 +36,7 @@
     <string name="download">Downloaden</string>
     <string name="notification">Melding</string>
     <string name="notifications">Meldingen</string>
-    <string name="email">Email</string>
+    <string name="email">E-mail</string>
     <string name="previous">Vorige</string>
     <string name="playpause">Afspelen / Pauzeren</string>
     <string name="next">Volgende</string>
@@ -92,9 +92,9 @@
     <string name="blocked_numbers">Geblokkeerde nummers</string>
     <string name="export_blocked_numbers">Geblokkeerde nummers exporteren</string>
     <string name="import_blocked_numbers">Geblokkeerde nummers importeren</string>
-    <string name="must_make_default_dialer">Om nummers te kunnen blokkeren, moet u deze app de standaard telefoon-app maken.</string>
+    <string name="must_make_default_dialer">Maak van deze app de standaard telefoon-app om nummers te kunnen blokkeren.</string>
     <string name="set_as_default">Als standaard instellen</string>
-    <string name="block_confirmation">Wilt u \"%s\" echt blokkeren\?</string>
+    <string name="block_confirmation">Nummer \"%s\" echt blokkeren\?</string>
     <string name="block_unknown_calls">Oproepen van onopgeslagen contacten blokkeren</string>
     <string name="block_unknown_messages">Berichten van onopgeslagen contacten blokkeren</string>
     <!-- Favorites -->
@@ -887,8 +887,8 @@
     <string name="translation_ukrainian">Oekraïens</string>
     <string name="translation_vietnamese">Vietnamees</string>
     <string name="translation_chinese_hk">Chinees (Hong Kong)</string>
-    <string name="translation_chinese_cn">Chinese (Vereenvoudigd)</string>
-    <string name="translation_chinese_tw">Chinese (Traditioneel)</string>
+    <string name="translation_chinese_cn">Chinees (Vereenvoudigd)</string>
+    <string name="translation_chinese_tw">Chinees (Traditioneel)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Stap nu over naar de Pro-versie!</string>
     <string name="why_upgrade_basic_version">Standaard</string>
