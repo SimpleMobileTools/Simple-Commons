@@ -253,7 +253,7 @@
     <string name="click_select_destination">Click here to select destination</string>
     <string name="name_taken">Папка альбо файл з такой назвай ужо існуе</string>
     <string name="invalid_name">The name contains invalid characters</string>
-    <string name="empty_name">Please enter a name</string>
+    <string name="empty_name">Увядзіце назву</string>
     <string name="invalid_destination">Could not write to the selected destination</string>
     <string name="please_select_destination">Please select a destination</string>
     <string name="source_and_destination_same">Source and destination cannot be the same</string>
@@ -261,7 +261,7 @@
     <string name="copying">Капіяванне…</string>
     <string name="copying_success">Капіяванне файлаў паспяхова выканана</string>
     <string name="copying_success_one">Капіяванне файла паспяхова выканана</string>
-    <string name="copy_move_failed">An error occurred</string>
+    <string name="copy_move_failed">Адбылася памылка</string>
     <string name="moving">Перамяшчэнне…</string>
     <string name="moving_success">Перамяшчэнне файлаў паспяхова выканана</string>
     <string name="moving_success_one">Перамяшчэнне файла паспяхова выканана</string>
@@ -276,7 +276,7 @@
     <string name="folder">Папка</string>
     <string name="file">Файл</string>
     <string name="create_new_folder">Стварыць новую папку</string>
-    <string name="unknown_error_occurred">An unknown error occurred</string>
+    <string name="unknown_error_occurred">Адбылася невядомая памылка</string>
     <string name="file_already_exists_overwrite">Файл \"%s\" ужо існуе. Перазапісаць\?</string>
     <string name="folder_already_exists">Папка \"%s\" ужо існуе</string>
     <string name="merge">Аб\'яднаць</string>
@@ -284,10 +284,10 @@
     <string name="overwrite">Перазапісаць</string>
     <string name="skip">Прамінуць</string>
     <string name="append">Далучыць \'_1\' да назвы</string>
-    <string name="apply_to_all">Apply to all</string>
-    <string name="system_folder_restriction">The system does not allow the operation in this folder, please pick another one</string>
-    <string name="system_folder_copy_restriction">The system does not allow copying into this folder, please pick another one</string>
-    <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
+    <string name="apply_to_all">Ужыць да ўсіх</string>
+    <string name="system_folder_restriction">Сістэма не дазваляе аперацыю ў гэтай папцы, абярыце іншую папку</string>
+    <string name="system_folder_copy_restriction">Сістэма не дазваляе капіяванне ў гэту папку, абярыце іншую папку</string>
+    <string name="rename_in_sd_card_system_restriction">Сістэма не дазваляе перайменаванне ў гэтай папцы</string>
     <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
     <string name="cannot_rename_folder">Cannot rename this folder</string>
     <string name="confirm_storage_access_text">Please choose the top folder of the SD card on the next screen, to grant write access</string>
