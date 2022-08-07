@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ok">OK</string>
+    <string name="ok">Oké</string>
     <string name="cancel">Annuleren</string>
     <string name="nothing">Niets</string>
     <string name="later">Later</string>
@@ -14,8 +14,8 @@
     <string name="edit_with">Bewerken met</string>
     <string name="edit">Bewerken</string>
     <string name="no_app_found">Geen geldige app gevonden</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">Geen browser gevonden</string>
+    <string name="no_email_client_found">Geen email-opener gevonden</string>
     <string name="set_as">Instellen als</string>
     <string name="copy_to_clipboard">Naar klembord kopiëren</string>
     <string name="copy_number_to_clipboard">Nummer naar klembord kopiëren</string>
@@ -26,12 +26,12 @@
     <string name="always">Altijd</string>
     <string name="never">Nooit</string>
     <string name="details">Details</string>
-    <string name="notes">Notities</string>
+    <string name="notes">Aantekeningen</string>
     <string name="deleting_folder">Map \'%s\' verwijderen</string>
     <string name="none">Geen</string>
     <string name="label">Label</string>
-    <string name="transparent">Transparant</string>
-    <string name="transparent_color">Transparante kleur</string>
+    <string name="transparent">Doorzichtig</string>
+    <string name="transparent_color">Doorzichtige kleur</string>
     <string name="select_a_different_color">Een andere kleur kiezen</string>
     <string name="download">Downloaden</string>
     <string name="notification">Melding</string>
@@ -42,13 +42,13 @@
     <string name="next">Volgende</string>
     <string name="number">Nummer</string>
     <string name="no_contacts_found">Geen contacten gevonden</string>
-    <string name="request_the_required_permissions">Verplichte rechten vragen</string>
+    <string name="request_the_required_permissions">Vereiste rechten vragen</string>
     <string name="no_access_to_contacts">De app heeft geen toegang tot de contactenlijst</string>
     <string name="no_phone_call_permission">App heeft geen recht om telefoongesprekken te starten, verleen het in de systeeminstellingen</string>
     <string name="insert_text_here">Tekst hier invoegen</string>
     <string name="call_person">%s bellen</string>
     <string name="zero">Nul</string>
-    <string name="one">Een</string>
+    <string name="one">Eén</string>
     <string name="two">Twee</string>
     <string name="three">Drie</string>
     <string name="four">Vier</string>
@@ -62,7 +62,7 @@
     <string name="create_new_contact">Nieuw contact aanmaken</string>
     <string name="add_to_existing_contact">Aan bestaand contact toevoegen</string>
     <string name="app_corrupt">App corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
+    <string name="disclaimer">Vrijwaring</string>
     <!-- Emails -->
     <string name="home">Thuis</string>
     <string name="work">Werk</string>
@@ -92,9 +92,9 @@
     <string name="blocked_numbers">Geblokkeerde nummers</string>
     <string name="export_blocked_numbers">Geblokkeerde nummers exporteren</string>
     <string name="import_blocked_numbers">Geblokkeerde nummers importeren</string>
-    <string name="must_make_default_dialer">Van deze app de standaard telefoon-app maken om nummers te kunnen blokkeren.</string>
+    <string name="must_make_default_dialer">Maak van deze app de standaard telefoon-app om nummers te kunnen blokkeren.</string>
     <string name="set_as_default">Als standaard instellen</string>
-    <string name="block_confirmation">Nummer \"%s\" blokkeren\?</string>
+    <string name="block_confirmation">Nummer \"%s\" echt blokkeren\?</string>
     <string name="block_unknown_calls">Oproepen van onopgeslagen contacten blokkeren</string>
     <string name="block_unknown_messages">Berichten van onopgeslagen contacten blokkeren</string>
     <!-- Favorites -->
@@ -192,7 +192,7 @@
     <string name="system_folder_restriction">Het systeem staat de bewerking in deze map niet toe, kies een andere map</string>
     <string name="system_folder_copy_restriction">Het systeem staat het kopiëren naar deze map niet toe</string>
     <string name="rename_in_sd_card_system_restriction">Het systeem staat niet toe om in deze map namen te wijzigen</string>
-    <string name="rename_internal_system_restriction">Kan hoofdmappen op de interne opslag niet hernoemen. Alleen submappen kunnen worden hernoemd.</string>
+    <string name="rename_internal_system_restriction">Kan hoofdmappen op de interne opslag niet hernoemen, alleen deelmappen</string>
     <string name="cannot_rename_folder">Kan deze map niet hernoemen</string>
     <!-- File picker -->
     <string name="select_folder">Kies een map</string>
@@ -286,7 +286,7 @@
     <string name="light_theme">Licht</string>
     <string name="dark_theme">Donker</string>
     <string name="auto_theme">Automatisch</string>
-    <string name="auto_light_dark_theme">Auto light / dark</string>
+    <string name="auto_light_dark_theme">Auto licht / donker</string>
     <string name="solarized">Solariseren</string>
     <string name="dark_red">Donkerrood</string>
     <string name="white">Wit</string>
@@ -326,7 +326,7 @@
     <string name="toggle_filename">Bestandsnaam tonen aan/uit</string>
     <string name="move_to_top">Bovenaan zetten</string>
     <string name="move_to_bottom">Onderaan zetten</string>
-    <string name="pin_item">Vastpinnen</string>
+    <string name="pin_item">Vastprikken</string>
     <string name="unpin_item">Losmaken</string>
     <string name="send_sms">SMS versturen</string>
     <string name="send_email">E-mail sturen</string>
@@ -697,7 +697,9 @@
     <string name="more_info">Meer informatie</string>
     <string name="upgrade">Upgraden</string>
     <string name="upgrade_calendar">Lokaal opgeslagen agenda\'s migreren kan alleen door exporteren naar een .ics bestand, en dan weer importeren. Deze functies zijn te vinden in het menu van de app.</string>
-    <string name="upgraded_to_pro">De Pro-versie van deze app is ook al geïnstalleerd. Deze app is niet meer nodig en kan dus gedeïnstalleerd worden.</string>
+    <string name="upgraded_to_pro">Hoi,
+\n
+\nde Pro-versie van deze app is ook al geïnstalleerd. Deze app is niet meer nodig en kan dus verwijderd worden.</string>
     <string name="upgraded_to_pro_calendar">Lokaal opgeslagen afspraken moeten handmatig worden verplaatst door ze eerst te exporteren naar een .ics-bestand en ze vervolgens weer te importeren. Beide functies zijn te vinden in het menu.</string>
     <string name="upgraded_to_pro_notes">De notities moeten handmatig worden overgezet naar de Pro-versie.</string>
     <string name="upgraded_to_pro_contacts">Privécontacten moeten handmatig worden overgezet door ze te exporteren naar een .vcf-bestand en ze vervolgens weer te importeren. Beide functies zijn te vinden in het menu.</string>
@@ -843,52 +845,52 @@
     <string name="development">Ontwikkeling</string>
     <string name="other_help">Andere hulp</string>
     <string name="contributors_label">Deze lijst bevat de namen van iedereen die aan een app binnen de Simple Mobile Tools suite heeft bijgedragen. Vertalingen worden gedaan door vrijwilligers, dus laat het ons weten als je ook wilt helpen. Lees de instructies &lt;a href=https://github.com/SimpleMobileTools/General-Discussion#how-can-i-suggest-an-edit-to-a-file&gt;op deze website&lt;/a&gt;, of stuur bij vragen een bericht naar &lt;a href=mailto:hello@simplemobiletools.com&gt;hello@simplemobiletools.com&lt;/a&gt;. Bedankt voor alle bijdragen en andere ondersteuning!</string>
-    <string name="translation_arabic">Arabic</string>
-    <string name="translation_azerbaijani">Azerbaijani</string>
-    <string name="translation_bengali">Bengali</string>
-    <string name="translation_breton">Breton</string>
-    <string name="translation_catalan">Catalan</string>
-    <string name="translation_czech">Czech</string>
+    <string name="translation_arabic">Arabisch</string>
+    <string name="translation_azerbaijani">Azerbeidjaans</string>
+    <string name="translation_bengali">Bengaals</string>
+    <string name="translation_breton">Bretons</string>
+    <string name="translation_catalan">Catalaans</string>
+    <string name="translation_czech">Tsjechisch</string>
     <string name="translation_welsh">Welsh</string>
-    <string name="translation_danish">Danish</string>
-    <string name="translation_english">English</string>
-    <string name="translation_german">German</string>
-    <string name="translation_greek">Greek</string>
-    <string name="translation_spanish">Spanish</string>
-    <string name="translation_basque">Basque</string>
-    <string name="translation_persian">Persian</string>
-    <string name="translation_finnish">Finnish</string>
-    <string name="translation_french">French</string>
-    <string name="translation_galician">Galician</string>
+    <string name="translation_danish">Deens</string>
+    <string name="translation_english">Engels</string>
+    <string name="translation_german">Duits</string>
+    <string name="translation_greek">Grieks</string>
+    <string name="translation_spanish">Spaans</string>
+    <string name="translation_basque">Baskisch</string>
+    <string name="translation_persian">Farsi</string>
+    <string name="translation_finnish">Fins</string>
+    <string name="translation_french">Frans</string>
+    <string name="translation_galician">Galicisch</string>
     <string name="translation_hindi">Hindi</string>
-    <string name="translation_croatian">Croatian</string>
-    <string name="translation_hungarian">Hungarian</string>
-    <string name="translation_indonesian">Indonesian</string>
-    <string name="translation_italian">Italian</string>
-    <string name="translation_hebrew">Hebrew</string>
-    <string name="translation_japanese">Japanese</string>
-    <string name="translation_korean">Korean</string>
-    <string name="translation_lithuanian">Lithuanian</string>
-    <string name="translation_nepali">Nepali</string>
-    <string name="translation_norwegian">Norwegian</string>
-    <string name="translation_dutch">Dutch</string>
-    <string name="translation_polish">Polish</string>
-    <string name="translation_portuguese">Portuguese</string>
-    <string name="translation_romanian">Romanian</string>
-    <string name="translation_russian">Russian</string>
-    <string name="translation_slovak">Slovak</string>
-    <string name="translation_slovenian">Slovenian</string>
-    <string name="translation_serbian">Serbian</string>
-    <string name="translation_swedish">Swedish</string>
+    <string name="translation_croatian">Kroatisch</string>
+    <string name="translation_hungarian">Hongaars</string>
+    <string name="translation_indonesian">Indonesisch</string>
+    <string name="translation_italian">Italiaans</string>
+    <string name="translation_hebrew">Hebreeuws</string>
+    <string name="translation_japanese">Japans</string>
+    <string name="translation_korean">Koreaans</string>
+    <string name="translation_lithuanian">Litouws</string>
+    <string name="translation_nepali">Nepals</string>
+    <string name="translation_norwegian">Noors</string>
+    <string name="translation_dutch">Nederlands</string>
+    <string name="translation_polish">Pools</string>
+    <string name="translation_portuguese">Portugees</string>
+    <string name="translation_romanian">Roemeens</string>
+    <string name="translation_russian">Russisch</string>
+    <string name="translation_slovak">Slovaaks</string>
+    <string name="translation_slovenian">Sloveens</string>
+    <string name="translation_serbian">Servisch</string>
+    <string name="translation_swedish">Zweeds</string>
     <string name="translation_tamil">Tamil</string>
-    <string name="translation_turkish">Turkish</string>
-    <string name="translation_ukrainian">Ukrainian</string>
-    <string name="translation_vietnamese">Vietnamese</string>
-    <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
-    <string name="translation_chinese_cn">Chinese (Simplified)</string>
-    <string name="translation_chinese_tw">Chinese (Traditional)</string>
+    <string name="translation_turkish">Turks</string>
+    <string name="translation_ukrainian">Oekraïens</string>
+    <string name="translation_vietnamese">Vietnamees</string>
+    <string name="translation_chinese_hk">Chinees (Hong Kong)</string>
+    <string name="translation_chinese_cn">Chinees (Vereenvoudigd)</string>
+    <string name="translation_chinese_tw">Chinees (Traditioneel)</string>
     <!-- Pro comparison (shown in the deprecated free apps) -->
-    <string name="why_upgrade">Upgrade nu naar de Pro-versie!</string>
+    <string name="why_upgrade">Stap nu over naar de Pro-versie!</string>
     <string name="why_upgrade_basic_version">Standaard</string>
     <string name="why_upgrade_pro_version">Pro</string>
     <string name="why_upgrade_no_ads">Geen advertenties</string>
@@ -897,7 +899,7 @@
     <string name="why_upgrade_footer_one_time_payment">Eenmalige betaling</string>
     <string name="why_upgrade_improved_design">Verbeterd ontwerp</string>
     <!-- Gallery Pro -->
-    <string name="why_upgrade_advanced_photo_editor">Geavanceerd foto\'s bewerken</string>
+    <string name="why_upgrade_advanced_photo_editor">Geavanceerde fotobewerking</string>
     <string name="why_upgrade_heic_support">Ondersteuning voor HEIC/HEIF</string>
     <string name="why_upgrade_batch_renaming">Geavanceerd batch-bestanden hernoemen</string>
     <string name="why_upgrade_folder_locking">Afzonderlijke mappen vergrendelen</string>
