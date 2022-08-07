@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ok">Oké</string>
+    <string name="ok">OK</string>
     <string name="cancel">Annuleren</string>
     <string name="nothing">Niets</string>
     <string name="later">Later</string>
@@ -15,7 +15,7 @@
     <string name="edit">Bewerken</string>
     <string name="no_app_found">Geen geldige app gevonden</string>
     <string name="no_browser_found">Geen browser gevonden</string>
-    <string name="no_email_client_found">Geen email-opener gevonden</string>
+    <string name="no_email_client_found">Geen e-mailapp gevonden</string>
     <string name="set_as">Instellen als</string>
     <string name="copy_to_clipboard">Naar klembord kopiëren</string>
     <string name="copy_number_to_clipboard">Nummer naar klembord kopiëren</string>
@@ -26,12 +26,12 @@
     <string name="always">Altijd</string>
     <string name="never">Nooit</string>
     <string name="details">Details</string>
-    <string name="notes">Aantekeningen</string>
+    <string name="notes">Notities</string>
     <string name="deleting_folder">Map \'%s\' verwijderen</string>
     <string name="none">Geen</string>
     <string name="label">Label</string>
-    <string name="transparent">Doorzichtig</string>
-    <string name="transparent_color">Doorzichtige kleur</string>
+    <string name="transparent">Transparant</string>
+    <string name="transparent_color">Transparante kleur</string>
     <string name="select_a_different_color">Een andere kleur kiezen</string>
     <string name="download">Downloaden</string>
     <string name="notification">Melding</string>
@@ -62,7 +62,7 @@
     <string name="create_new_contact">Nieuw contact aanmaken</string>
     <string name="add_to_existing_contact">Aan bestaand contact toevoegen</string>
     <string name="app_corrupt">App corrupt</string>
-    <string name="disclaimer">Vrijwaring</string>
+    <string name="disclaimer">Disclaimer</string>
     <!-- Emails -->
     <string name="home">Thuis</string>
     <string name="work">Werk</string>
@@ -192,7 +192,7 @@
     <string name="system_folder_restriction">Het systeem staat de bewerking in deze map niet toe, kies een andere map</string>
     <string name="system_folder_copy_restriction">Het systeem staat het kopiëren naar deze map niet toe</string>
     <string name="rename_in_sd_card_system_restriction">Het systeem staat niet toe om in deze map namen te wijzigen</string>
-    <string name="rename_internal_system_restriction">Kan hoofdmappen op de interne opslag niet hernoemen, alleen deelmappen</string>
+    <string name="rename_internal_system_restriction">Kan hoofdmappen op de interne opslag niet hernoemen, alleen submappen</string>
     <string name="cannot_rename_folder">Kan deze map niet hernoemen</string>
     <!-- File picker -->
     <string name="select_folder">Kies een map</string>
@@ -286,7 +286,7 @@
     <string name="light_theme">Licht</string>
     <string name="dark_theme">Donker</string>
     <string name="auto_theme">Automatisch</string>
-    <string name="auto_light_dark_theme">Auto licht / donker</string>
+    <string name="auto_light_dark_theme">Automatisch licht/donker</string>
     <string name="solarized">Solariseren</string>
     <string name="dark_red">Donkerrood</string>
     <string name="white">Wit</string>
@@ -326,7 +326,7 @@
     <string name="toggle_filename">Bestandsnaam tonen aan/uit</string>
     <string name="move_to_top">Bovenaan zetten</string>
     <string name="move_to_bottom">Onderaan zetten</string>
-    <string name="pin_item">Vastprikken</string>
+    <string name="pin_item">Vastpinnen</string>
     <string name="unpin_item">Losmaken</string>
     <string name="send_sms">SMS versturen</string>
     <string name="send_email">E-mail sturen</string>
@@ -697,9 +697,7 @@
     <string name="more_info">Meer informatie</string>
     <string name="upgrade">Upgraden</string>
     <string name="upgrade_calendar">Lokaal opgeslagen agenda\'s migreren kan alleen door exporteren naar een .ics bestand, en dan weer importeren. Deze functies zijn te vinden in het menu van de app.</string>
-    <string name="upgraded_to_pro">Hoi,
-\n
-\nde Pro-versie van deze app is ook al geïnstalleerd. Deze app is niet meer nodig en kan dus verwijderd worden.</string>
+    <string name="upgraded_to_pro">De Pro-versie van deze app is ook al geïnstalleerd. Deze app is niet meer nodig en kan dus verwijderd worden.</string>
     <string name="upgraded_to_pro_calendar">Lokaal opgeslagen afspraken moeten handmatig worden verplaatst door ze eerst te exporteren naar een .ics-bestand en ze vervolgens weer te importeren. Beide functies zijn te vinden in het menu.</string>
     <string name="upgraded_to_pro_notes">De notities moeten handmatig worden overgezet naar de Pro-versie.</string>
     <string name="upgraded_to_pro_contacts">Privécontacten moeten handmatig worden overgezet door ze te exporteren naar een .vcf-bestand en ze vervolgens weer te importeren. Beide functies zijn te vinden in het menu.</string>
