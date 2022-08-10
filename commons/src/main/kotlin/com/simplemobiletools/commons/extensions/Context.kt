@@ -861,15 +861,15 @@ val Context.notificationManager: NotificationManager get() = getSystemService(Co
 val Context.shortcutManager: ShortcutManager get() = getSystemService(ShortcutManager::class.java) as ShortcutManager
 
 val Context.portrait get() = resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT
-val Context.navigationBarRight: Boolean get() = usableScreenSize.x < realScreenSize.x && usableScreenSize.x > usableScreenSize.y
-val Context.navigationBarBottom: Boolean get() = usableScreenSize.y < realScreenSize.y
-val Context.navigationBarHeight: Int get() = if (navigationBarBottom && navigationBarSize.y != usableScreenSize.y) navigationBarSize.y else 0
-val Context.navigationBarWidth: Int get() = if (navigationBarRight) navigationBarSize.x else 0
+val Context.navigationBarOnSide: Boolean get() = usableScreenSize.x < realScreenSize.x && usableScreenSize.x > usableScreenSize.y
+val Context.navigationBarOnBottom: Boolean get() = usableScreenSize.y < realScreenSize.y
+val Context.navigationBarHeight: Int get() = if (navigationBarOnBottom && navigationBarSize.y != usableScreenSize.y) navigationBarSize.y else 0
+val Context.navigationBarWidth: Int get() = if (navigationBarOnSide) navigationBarSize.x else 0
 
 val Context.navigationBarSize: Point
     get() = when {
-        navigationBarRight -> Point(newNavigationBarHeight, usableScreenSize.y)
-        navigationBarBottom -> Point(usableScreenSize.x, newNavigationBarHeight)
+        navigationBarOnSide -> Point(newNavigationBarHeight, usableScreenSize.y)
+        navigationBarOnBottom -> Point(usableScreenSize.x, newNavigationBarHeight)
         else -> Point()
     }
 
