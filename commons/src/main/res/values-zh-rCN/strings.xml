@@ -279,12 +279,8 @@
     <string name="app_icon_color_warning">警告：某些桌面应用无法正确处理自定义应用图标。如果图标消失，请尝试通过 Google Play 或某个小部件启动应用（如果有的话）。
 在成功启动之后，请将图标颜色设置为默认的橙色#F57C00。在最坏的情况下，您可能必须重新安装本应用。</string>
     <string name="share_colors_success">颜色更改成功。已添加名为“共享”的新主题，以后您可以使用它来更改所有应用的颜色。</string>
-    <string name="shared_theme_note">注意尽管您已经使用 Pro 版本的应用，由于技术原因您仍然需要简易感谢。它用来负责颜色同步。</string>
-    <string name="purchase_thank_you">
-        <![CDATA[
-            请购买 <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">简易感谢</a> 以解锁此功能并支持开发。感谢！
-        ]]>
-    </string>
+    <string name="shared_theme_note">注意尽管您已经使用 Pro 版本的应用，由于技术原因您仍然需要简单感谢。它用来负责颜色同步。</string>
+    <string name="purchase_thank_you">请购买 &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;简单感谢&lt;/a&gt; 以解锁此功能并支持开发。感谢！</string>
     <!-- Themes -->
     <string name="light_theme">浅色主题</string>
     <string name="dark_theme">深色主题</string>
@@ -714,7 +710,7 @@
     <string name="donate_new">你好，&lt;br&gt;&lt;br&gt;希望您喜欢这个应用程序。它不包含广告，我们也不收集您的数据，要支持它的开发， 请购买 &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. 您将解锁所有的应用功能和颜色自定义。&lt;br&gt;&lt;br&gt;谢谢你！</string>
     <string name="purchase">购买</string>
     <string name="order_simple_phone">订购 Simple Phone</string>
-    <string name="update_thank_you">请更新简易感谢到最新版本</string>
+    <string name="update_thank_you">请更新简单感谢到最新版本</string>
     <string name="before_asking_question_read_faq">提问之前，请先打开应用设置并阅读常见问题。也许您可以在那里找到答案。</string>
     <string name="before_rate_read_faq">评分之前，请先打开应用设置并阅读常见问题。也许您可以在那里找到答案。</string>
     <string name="make_sure_latest">另外，请确保您正在使用的是最新版本的应用。</string>
@@ -729,23 +725,23 @@
     <string name="features_locked">此功能被锁，请购买 &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; 解锁完整版应用。&lt;br&gt;&lt;br&gt;这是一次性付款，如果您不满意，我们可以退款给您。</string>
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">嘿，&lt;br&gt;&lt;br&gt;我们最近发布了一些新的应用：&lt;br&gt;&lt;br&gt; &lt;a href=%1$s&gt;%2$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%3$s&gt;%4$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; &lt;a href=%5$s&gt;%6$s&lt;/a&gt;&lt;br&gt;&lt;br&gt; 您可以点击标题或图标来下载。&lt;br&gt;&lt;br&gt; 谢谢</string>
-    <string name="simple_app_launcher">简易应用启动器</string>
-    <string name="simple_calculator">简易计算器</string>
-    <string name="simple_calendar">简易日历</string>
-    <string name="simple_camera">简易相机</string>
-    <string name="simple_clock">简易时钟</string>
-    <string name="simple_contacts">简易通讯录</string>
-    <string name="simple_dialer">简易拨号器</string>
-    <string name="simple_draw">简易绘图</string>
-    <string name="simple_file_manager">简易文件管理器</string>
-    <string name="simple_flashlight">简易手电筒</string>
-    <string name="simple_gallery">简易图库</string>
-    <string name="simple_keyboard">简易键盘</string>
-    <string name="simple_music_player">简易音乐播放器</string>
-    <string name="simple_notes">简易笔记</string>
-    <string name="simple_sms_messenger">简易短信</string>
-    <string name="simple_thank_you">简易感谢</string>
-    <string name="simple_voice_recorder">简易录音机</string>
+    <string name="simple_app_launcher">简单应用启动器</string>
+    <string name="simple_calculator">简单计算器</string>
+    <string name="simple_calendar">简单日历</string>
+    <string name="simple_camera">简单相机</string>
+    <string name="simple_clock">简单时钟</string>
+    <string name="simple_contacts">简单通讯录</string>
+    <string name="simple_dialer">简单拨号器</string>
+    <string name="simple_draw">简单绘图</string>
+    <string name="simple_file_manager">简单文件管理器</string>
+    <string name="simple_flashlight">简单手电筒</string>
+    <string name="simple_gallery">简单图库</string>
+    <string name="simple_keyboard">简单键盘</string>
+    <string name="simple_music_player">简单音乐播放器</string>
+    <string name="simple_notes">简单笔记</string>
+    <string name="simple_sms_messenger">简单短信</string>
+    <string name="simple_thank_you">简单感谢</string>
+    <string name="simple_voice_recorder">简单录音机</string>
     <string name="app_launcher_short">应用启动器</string>
     <string name="calculator_short">计算器</string>
     <string name="calendar_short">日历</string>
@@ -925,5 +921,5 @@
     <string name="deprecated_app">已弃用：该应用版本已不再维护，请在以下链接获取专业版 https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">别忘了如果您在2小时内卸载任何付费应用将会自动退款。如果您想在之后退款，只需通过 hello@simplemobiletools.com 联系我们即可。这样您就可以放心试用了 :)</string>
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">一组简易且开源的 Android 应用程序，可自定义小部件，并且没有广告和不必要的权限。</string>
+    <string name="developer_description">一组简单且开源的 Android 应用程序，可自定义小部件，并且没有广告和不必要的权限。</string>
 </resources>
