@@ -523,6 +523,25 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
+    fun launchChangeAppLanguageIntent() {
+        try {
+            Intent(Settings.ACTION_APP_LOCALE_SETTINGS).apply {
+                data = Uri.fromParts("package", packageName, null)
+                startActivity(this)
+            }
+        } catch (e: Exception) {
+            try {
+                Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                    data = Uri.fromParts("package", packageName, null)
+                    startActivity(this)
+                }
+            } catch (e: Exception) {
+                showErrorToast(e)
+            }
+        }
+    }
+
     // synchronous return value determines only if we are showing the SAF dialog, callback result tells if the SD or OTG permission has been granted
     fun handleSAFDialog(path: String, callback: (success: Boolean) -> Unit): Boolean {
         hideKeyboard()
