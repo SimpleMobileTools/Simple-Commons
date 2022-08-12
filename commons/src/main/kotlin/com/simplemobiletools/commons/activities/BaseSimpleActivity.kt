@@ -136,7 +136,7 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     }
 
     override fun attachBaseContext(newBase: Context) {
-        if (newBase.baseConfig.useEnglish) {
+        if (newBase.baseConfig.useEnglish && !isTiramisuPlus()) {
             super.attachBaseContext(MyContextWrapper(newBase).wrap(newBase, "en"))
         } else {
             super.attachBaseContext(newBase)
