@@ -386,29 +386,29 @@
     <!-- Password protection -->
     <string name="pin">PIN</string>
     <string name="enter_pin">Zadejte PIN</string>
-    <string name="please_enter_pin">Prosím zadejte PIN</string>
+    <string name="please_enter_pin">Prosím, zadejte PIN</string>
     <string name="wrong_pin">Nesprávný PIN</string>
     <string name="repeat_pin">Opakujte PIN</string>
     <string name="pattern">Vzor</string>
     <string name="insert_pattern">Zadejte vzor</string>
     <string name="wrong_pattern">Nesprávný vzor</string>
     <string name="repeat_pattern">Opakovat vzor</string>
-    <string name="biometrics">Biometrics</string>
+    <string name="biometrics">Biometrie</string>
     <string name="fingerprint">Otisk</string>
-    <string name="add_fingerprint">Potvrďte otisk prstu</string>
-    <string name="place_finger">Prosím přiložte prst na senzor otisku prstu</string>
-    <string name="open_biometric_dialog">Open biometric ID verification dialog</string>
-    <string name="authenticate">Authenticate</string>
+    <string name="add_fingerprint">Přidat otisk prstu</string>
+    <string name="place_finger">Prosím, přiložte prst na senzor otisku prstu</string>
+    <string name="open_biometric_dialog">Otevřít okno ověření biometrickým ID</string>
+    <string name="authenticate">Ověřit</string>
     <string name="authentication_failed">Ověření selhalo</string>
     <string name="authentication_blocked">Ověření je blokováno, zkuste to prosím později</string>
-    <string name="no_fingerprints_registered">Nejsou registrovány žádné otisky prstu, prosím přidejte nějaké v nastavení svého zařízení</string>
+    <string name="no_fingerprints_registered">Nejsou registrovány žádné otisky prstu, prosím, přidejte nějaké v nastavení svého zařízení</string>
     <string name="go_to_settings">Přejít do nastavení</string>
     <string name="protection_setup_successfully">Heslo bylo úspěšně nastaveno. Pokud jej zapomenete, přeinstalujte prosím aplikaci.</string>
-    <string name="fingerprint_setup_successfully">Ochrana byla úspěšně nastavena. V případě problémů s její změnou prosím přeinstalujte aplikaci.</string>
+    <string name="fingerprint_setup_successfully">Ochrana byla úspěšně nastavena. V případě problémů s její změnou, prosím, přeinstalujte aplikaci.</string>
     <string name="lock_folder">Uzamknout složku</string>
     <string name="lock_folder_pro">Uzamknout složku (Pro)</string>
     <string name="unlock_folder">Odemknout složku</string>
-    <string name="lock_folder_notice">Tato ochrana funguje pouze v této aplikaci, nemá za cíl nahradit šifrování fungující napříč systémem.</string>
+    <string name="lock_folder_notice">Tato ochrana funguje pouze v této aplikaci, nemá za cíl nahradit šifrování složky fungující napříč systémem.</string>
     <!-- Times -->
     <string name="yesterday">Včera</string>
     <string name="today">Dnes</string>
@@ -455,7 +455,7 @@
     <plurals name="years">
         <item quantity="one">%d rok</item>
         <item quantity="few">%d roky</item>
-        <item quantity="other">%d roků</item>
+        <item quantity="other">%d let</item>
     </plurals>
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
@@ -491,7 +491,7 @@
     <plurals name="in_years">
         <item quantity="one">%d rok</item>
         <item quantity="few">%d roky</item>
-        <item quantity="other">%d roků</item>
+        <item quantity="other">%d let</item>
     </plurals>
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
@@ -527,7 +527,7 @@
     <plurals name="years_before">
         <item quantity="one">%d rok před</item>
         <item quantity="few">%d roky před</item>
-        <item quantity="other">%d roků před</item>
+        <item quantity="other">%d let před</item>
     </plurals>
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
@@ -563,14 +563,15 @@
     <plurals name="by_years">
         <item quantity="one">%d rok</item>
         <item quantity="few">%d roky</item>
-        <item quantity="other">%d roků</item>
+        <item quantity="other">%d let</item>
     </plurals>
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Zbývající čas do zvonění budíku:\n%s</string>
     <string name="reminder_triggers_in">Zbývající čas do zobrazení připomínky:\n%s</string>
-    <string name="time_remaining">Time remaining:\n%s</string>
+    <string name="time_remaining">Zbývající čas:
+\n%s</string>
     <string name="alarm_warning">Před spoléháním se na budík se prosím ujistěte, že funguje správně. Některá systémová omezení spojená se zvýšením výdrže baterie mohou způsobovat problémy.</string>
-    <string name="reminder_warning">Před spoléháním se na připomínky se prosím ujistěte, že fungují správně. Některá systémová omezení spojená se zvýšením výdrže baterie mohou způsobovat problémy.</string>
+    <string name="reminder_warning">Před spoléháním se na připomínky se prosím ujistěte, že fungují správně. Zkontrolujte na svém zařízení nastavení baterie a oznamování, zda tam není nic blokujícího připomínky nebo ukončujícího aplikace běžící na pozadí.</string>
     <string name="notifications_disabled">Oznámení této aplikace jsou vypnuta. Pro jejich povolení prosím přejděte do nastavení svého zařízení.</string>
     <!-- Alarms -->
     <string name="alarm">Budík</string>
@@ -582,20 +583,20 @@
     <string name="your_sounds">Vaše zvuky</string>
     <string name="add_new_sound">Přidat nový zvuk</string>
     <string name="no_sound">Žádný zvuk</string>
-    <string name="during_day_at_hh_mm">Během dne v hh:mm</string>
-    <string name="during_day_at">Během dne v %02d:%02d</string>
+    <string name="during_day_at_hh_mm">Během dne ve hh:mm</string>
+    <string name="during_day_at">Během dne ve %02d:%02d</string>
     <!-- Settings -->
     <string name="settings">Nastavení</string>
     <string name="purchase_simple_thank_you">Zakoupit Jednoduché děkuji</string>
-    <string name="general_settings">General</string>
-    <string name="color_customization">Color customization</string>
+    <string name="general_settings">Obecné</string>
+    <string name="color_customization">Přizpůsobení barev</string>
     <string name="customize_colors">Přizpůsobit barvy</string>
     <string name="customize_colors_locked">Přizpůsobit barvy (Uzamčeno)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Uzamčeno</string>
     <string name="customize_widget_colors">Přizpůsobit barvy widgetů</string>
-    <string name="customize_notifications">Přizpůsobte oznámení</string>
+    <string name="customize_notifications">Přizpůsobit oznámení</string>
     <string name="use_english_language">Použít angličtinu</string>
-    <string name="language">Language</string>
+    <string name="language">Jazyk</string>
     <string name="show_hidden_items">Zobrazit skryté položky</string>
     <string name="font_size">Velikost písma</string>
     <string name="small">Malé</string>
@@ -607,12 +608,12 @@
     <string name="password_protect_file_deletion">Chránit heslem mazání a přesouvání souborů</string>
     <string name="keep_last_modified">Zachovat původní čas poslední úpravy při souborových operacích</string>
     <string name="show_info_bubble">Zobrazit informační bublinu při prohlížení položek tažením posuvníku</string>
-    <string name="prevent_phone_from_sleeping">Zabránit uspání zařízení dokud je aplikace v popředí</string>
+    <string name="prevent_phone_from_sleeping">Zabránit uspání zařízení dokud je aplikace v popředí</string>
     <string name="skip_delete_confirmation">Vždy přeskočit potvrzení mazání souborů</string>
     <string name="enable_pull_to_refresh">Povolit obnovení seznamu tažením shora</string>
     <string name="use_24_hour_time_format">Použít 24 hodinový formát času</string>
     <string name="change_date_and_time_format">Změnit formát data a času</string>
-    <string name="sunday_first">Začátek týdne v neděli</string>
+    <string name="sunday_first">Začátek týdne v neděli</string>
     <string name="widgets">Widgety</string>
     <string name="use_same_snooze">Vždy použít stejný čas odložení</string>
     <string name="snooze_time">Čas odložení</string>
