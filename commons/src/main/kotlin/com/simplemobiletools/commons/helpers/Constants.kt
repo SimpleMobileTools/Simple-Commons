@@ -413,6 +413,9 @@ fun isRPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
 @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.S)
 fun isSPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
 
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.TIRAMISU)
+fun isTiramisuPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
+
 fun getDateFormats() = arrayListOf(
     "--MM-dd",
     "yyyy-MM-dd",
