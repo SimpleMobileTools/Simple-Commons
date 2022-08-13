@@ -219,7 +219,7 @@
     <string name="loading">Loading…</string>
     <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
 
-  <plurals name="items">
+    <plurals name="items">
         <item quantity="zero">%d eitemau</item>
         <item quantity="one">%d eitem</item>
         <item quantity="two">%d eitem</item>
@@ -460,7 +460,7 @@
         <item quantity="many">%d eiliad</item>
         <item quantity="other">%d eiliad</item>
     </plurals>
-	<plurals name="minutes">
+    <plurals name="minutes">
         <item quantity="zero">%d munudau</item>
         <item quantity="one">%d munud</item>
         <item quantity="two">%d funud</item>
@@ -518,7 +518,7 @@
         <item quantity="many">%d eiliad</item>
         <item quantity="other">%d eiliad</item>
     </plurals>
-	<plurals name="in_minutes">
+    <plurals name="in_minutes">
         <item quantity="zero">%d munudau</item>
         <item quantity="one">%d munud</item>
         <item quantity="two">%d funud</item>
@@ -576,7 +576,7 @@
         <item quantity="many">%d eiliad ymlaen llaw</item>
         <item quantity="other">%d eiliad ymlaen llaw</item>
     </plurals>
-	<plurals name="minutes_before">
+    <plurals name="minutes_before">
         <item quantity="zero">%d munudau ymlaen llaw</item>
         <item quantity="one">%d munud ymlaen llaw</item>
         <item quantity="two">%d funud ymlaen llaw</item>
@@ -634,7 +634,7 @@
         <item quantity="many">%d eiliad</item>
         <item quantity="other">%d eiliad</item>
     </plurals>
-	<plurals name="by_minutes">
+    <plurals name="by_minutes">
         <item quantity="zero">%d munudau</item>
         <item quantity="one">%d munud</item>
         <item quantity="two">%d funud</item>
@@ -1031,6 +1031,7 @@
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
     <string name="translation_breton">Breton</string>
+    <string name="translation_bulgarian">Bulgarian</string>
     <string name="translation_catalan">Catalan</string>
     <string name="translation_czech">Czech</string>
     <string name="translation_welsh">Welsh</string>
