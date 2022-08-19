@@ -14,8 +14,8 @@
     <string name="edit_with">Redigera med</string>
     <string name="edit">Redigera</string>
     <string name="no_app_found">Ingen giltig app hittades</string>
-    <string name="no_browser_found">No browser found</string>
-    <string name="no_email_client_found">No email client found</string>
+    <string name="no_browser_found">Ingen webbläsare hittades</string>
+    <string name="no_email_client_found">Ingen e-postklient hittades</string>
     <string name="set_as">Använd som</string>
     <string name="copy_to_clipboard">Kopiera till urklipp</string>
     <string name="copy_number_to_clipboard">Kopiera nummer till urklipp</string>
@@ -57,12 +57,14 @@
     <string name="seven">Sju</string>
     <string name="eight">Åtta</string>
     <string name="nine">Nio</string>
-    <string name="value">Value</string>
+    <string name="value">Värde</string>
     <string name="value_cannot_be_empty">Värdet får inte vara tomt</string>
     <string name="create_new_contact">Skapa ny kontakt</string>
     <string name="add_to_existing_contact">Lägg till i en befintlig kontakt</string>
-    <string name="app_corrupt">App Corrupt</string>
-    <string name="disclaimer">Disclaimer</string>
+    <string name="app_corrupt">Appen är skadad</string>
+    <string name="disclaimer">Ansvarsfriskrivning</string>
+    <string name="take_photo">Ta foto</string>
+    <string name="choose_photo">Välj foto</string>
     <!-- Emails -->
     <string name="home">Hem</string>
     <string name="work">Arbete</string>
@@ -95,8 +97,8 @@
     <string name="must_make_default_dialer">Du måste ställa in den här appen som standardtelefonapp för att kunna använda blockerade nummer.</string>
     <string name="set_as_default">Ange som standard</string>
     <string name="block_confirmation">Är du säker på att du vill blockera \"%s\"?</string>
-    <string name="block_unknown_calls">Block calls from not stored contacts</string>
-    <string name="block_unknown_messages">Block messages from not stored contacts</string>
+    <string name="block_unknown_calls">Blockera samtal från okända nummer</string>
+    <string name="block_unknown_messages">Blockera meddelanden från okända nummer</string>
     <!-- Favorites -->
     <string name="favorites">Favoriter</string>
     <string name="add_favorites">Lägg till favoriter</string>
@@ -556,7 +558,7 @@
     <string name="color_customization">Färganpassning</string>
     <string name="customize_colors">Anpassa färger</string>
     <string name="customize_colors_locked">Anpassa färger (låst)</string>
-    <string name="feature_locked">Locked</string>
+    <string name="feature_locked">Låst</string>
     <string name="customize_widget_colors">Anpassa widgetarnas färger</string>
     <string name="customize_notifications">Anpassa aviseringar</string>
     <string name="use_english_language">Använd engelska</string>
@@ -743,7 +745,7 @@
     </string>
     <string name="donate_new">Hello,&lt;br&gt;&lt;br&gt;hope you are enjoying the app. It contains no ads and we aren\'t collecting your data either, please support its development by purchasing &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt;. You will also have all app features and color customization unlocked.&lt;br&gt;&lt;br&gt;Thank you!</string>
     <string name="purchase">Köp</string>
-    <string name="get_simple_phone">Get Simple Phone</string>
+    <string name="get_simple_phone">Skaffa Simple Phone</string>
     <string name="update_thank_you">Uppdatera Simple Thank You till den senaste versionen</string>
     <string name="before_asking_question_read_faq">Before you ask a question, please check the app settings and read the Frequently Asked Questions first. Maybe the solution is there.</string>
     <string name="before_rate_read_faq">Before you rate us, please check the app settings and read the Frequently Asked Questions first. If you have any problems, maybe the solution is there.</string>
@@ -801,7 +803,7 @@
     <string name="notes_short">Anteckningar</string>
     <string name="sms_messenger_short">Sms</string>
     <string name="thank_you_short">Tack</string>
-    <string name="voice_recorder_short">Voice Recorder</string>
+    <string name="voice_recorder_short">Röstinspelare</string>
     <string name="sideloaded_app">
         <![CDATA[
             It looks like your app version is corrupt. Please download the original version <a href="%s">here</a>.
