@@ -228,7 +228,7 @@
         <item name="android:buttonBarNeutralButtonStyle">@style/MaterialDialogButtonStyle</item>
     </style>
 
-    <style name="Theme.Transparent" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.Transparent" parent="Theme.Material3.Dark.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -236,6 +236,7 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:backgroundDimEnabled">false</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
     </style>
 
     <style name="PinNumberStyle.Base">
