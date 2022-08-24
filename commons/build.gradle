@@ -34,7 +34,7 @@ dependencies {
     implementation "androidx.biometric:biometric-ktx:1.2.0-alpha04"
 
     api 'joda-time:joda-time:2.11.0'
-    api 'com.github.tibbi:RecyclerView-FastScroller:2a56457fef'
+    api 'com.github.tibbi:RecyclerView-FastScroller:5a95285b1f'
     api 'com.github.tibbi:reprint:2cb206415d'
     api 'androidx.core:core-ktx:1.8.0'
     api 'androidx.appcompat:appcompat:1.5.0'
