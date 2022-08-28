@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Prekliči</string>
@@ -64,11 +65,9 @@
     <string name="disclaimer">Disclaimer</string>
     <string name="take_photo">Take photo</string>
     <string name="choose_photo">Choose photo</string>
-
     <!-- Emails -->
     <string name="home">Home</string>
     <string name="work">Work</string>
-
     <!-- Phone numbers -->
     <string name="mobile">Mobile</string>
     <string name="main_number">Main</string>
@@ -76,7 +75,6 @@
     <string name="home_fax">Home Fax</string>
     <string name="pager">Pager</string>
     <string name="no_phone_number_found">No phone number has been found</string>
-
     <!-- View types -->
     <string name="change_view_type">Spremeni tip pogleda</string>
     <string name="grid">Mreža</string>
@@ -90,7 +88,6 @@
     <string name="landscape_column_count">Landscape column count</string>
     <string name="change_cover_image">Spremeni naslovno fotografijo</string>
     <string name="select_photo">Izberi fotografijo</string>
-
     <!-- Blocked numbers -->
     <string name="manage_blocked_numbers">Manage blocked numbers</string>
     <string name="not_blocking_anyone">You are not blocking anyone.</string>
@@ -105,29 +102,24 @@
     <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
     <string name="block_unknown_calls">Block calls from not stored contacts</string>
     <string name="block_unknown_messages">Block messages from not stored contacts</string>
-
     <!-- Favorites -->
     <string name="favorites">Priljubljeno</string>
     <string name="add_favorites">Dodaj priljubljene</string>
     <string name="add_to_favorites">Dodaj med priljubljene</string>
     <string name="remove_from_favorites">Odstrani iz priljubljenih</string>
-
     <!-- Search -->
     <string name="search">Iskanje</string>
     <string name="type_2_characters">Vpišite vsaj 2 znaka za začetek iskanja</string>
-
     <!-- Filters -->
     <string name="filter">Filter</string>
     <string name="filter_pro">Filter (Pro)</string>
     <string name="no_items_found">Nobenih rezultatov.</string>
     <string name="change_filter">Spremeni filter</string>
-
     <!-- Permissions -->
     <string name="no_storage_permissions">Dovoljenje za shrambo je potrebno</string>
     <string name="no_contacts_permission">Dovoljenje za stike je potrebno</string>
     <string name="no_camera_permissions">Dovoljenje za kamero je potrebno</string>
     <string name="no_audio_permissions">Dovoljenje za zvok je potrebno</string>
-
     <!-- Renaming -->
     <string name="rename_file">Preimenuj datoteko</string>
     <string name="rename_folder">Preimenuj mapo</string>
@@ -153,7 +145,6 @@
     <string name="filename_without_json">Filename (without .json)</string>
     <string name="filename_without_zip">Filename (without .zip)</string>
     <string name="cannot_hide_files">Starting from Android 11 you cannot hide files and folders like that anymore</string>
-
     <!-- Copy / Move -->
     <string name="copy">Kopiraj</string>
     <string name="move">Premakni</string>
@@ -184,7 +175,6 @@
     <string name="no_new_items">No new items have been found</string>
     <string name="no_space">The destination does not have enough space available.\nRequired %1$s, available %2$s</string>
     <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
-
     <!-- Create new -->
     <string name="create_new">Ustvari novo</string>
     <string name="folder">Mapa</string>
@@ -194,7 +184,6 @@
     <string name="invalid_name">Ime vsebuje neveljavne znake</string>
     <string name="empty_name">Vpišite ime</string>
     <string name="unknown_error_occurred">Prišlo je do neznane napake</string>
-
     <!-- File operation conflicts -->
     <string name="file_already_exists">Datoteka %s že obstaja</string>
     <string name="file_already_exists_overwrite">Datoteka %s že obstaja. Jo želite prepisati?</string>
@@ -210,7 +199,6 @@
     <string name="rename_in_sd_card_system_restriction">The system does not allow renaming in this folder</string>
     <string name="rename_internal_system_restriction">Cannot rename folders directly on internal storage, only subfolders</string>
     <string name="cannot_rename_folder">Cannot rename this folder</string>
-
     <!-- File picker -->
     <string name="select_folder">Izberi mapo</string>
     <string name="select_file">Izberi datoteko</string>
@@ -224,14 +212,12 @@
     <string name="confirm_selection">Potrdi izbor</string>
     <string name="loading">Loading…</string>
     <string name="access_storage_prompt">Please grant our app access to all your files, it might not work well without it.</string>
-
     <plurals name="items">
         <item quantity="one">%d element</item>
         <item quantity="two">%d elementa</item>
         <item quantity="few">%d elementi</item>
         <item quantity="other">%d elementov</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 items? -->
     <plurals name="delete_items">
         <item quantity="one">%d element</item>
@@ -239,20 +225,17 @@
         <item quantity="few">%d elementi</item>
         <item quantity="other">%d elementov</item>
     </plurals>
-
     <plurals name="deleting_items">
         <item quantity="one">Brisanje %d elementa</item>
         <item quantity="two">Brisanje %d elementov</item>
         <item quantity="few">Brisanje %d elementov</item>
         <item quantity="other">Brisanje %d elementov</item>
     </plurals>
-
     <!-- Are you sure you want to delete 5 contacts? -->
     <plurals name="delete_contacts">
         <item quantity="one">%d contact</item>
         <item quantity="other">%d contacts</item>
     </plurals>
-
     <!-- Storages -->
     <string name="select_storage">Izberite</string>
     <string name="storage">Storage</string>
@@ -263,7 +246,6 @@
     <string name="sd_card_usb_same">Pot do SD kartice in USB ne moreta biti enaki</string>
     <string name="app_on_sd_card">Aplikacijo ste namestili na SD kartico, kar pomeni, da pripomočki ne bodo delovali. Ne boste jih niti videli na seznamu.\n        To je omejitev sistema zato, če želite uporabljati pripomočke, morate aplikacijo premakniti nazaj v notranjo shrambo.</string>
     <string name="wrong_folder_selected">Wrong folder selected, please select path \'%s\'</string>
-
     <!-- File properties -->
     <string name="properties">Lastnosti</string>
     <string name="path">Pot</string>
@@ -286,7 +268,6 @@
     <string name="remove_exif">Remove EXIF</string>
     <string name="remove_exif_confirmation">Are you sure you want to remove EXIF values like GPS coordinates, camera model etc?</string>
     <string name="exif_removed">EXIF values removed successfully</string>
-
     <!-- Color customization -->
     <string name="background_color">Barva ozadja</string>
     <string name="text_color">Barva besedila</string>
@@ -317,7 +298,6 @@
             Prosimo, kupite aplikacijo <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, da odklenete to funkcijo in podpirate razvov. Hvala!
         ]]>
     </string>
-
     <!-- Themes -->
     <string name="light_theme">Svetlo</string>
     <string name="dark_theme">Temno</string>
@@ -330,11 +310,9 @@
     <string name="custom">Po meri</string>
     <string name="shared">Deljeno</string>
     <string name="system_default">System default</string>
-
     <!-- What's new -->
     <string name="whats_new">Kaj je novega</string>
     <string name="whats_new_disclaimer">* tukaj so omenjene le večje spremembe. Vsaka različica vsebuje tudi dosti manjših izboljšav</string>
-
     <!-- Actionbar items -->
     <string name="delete">Izbriši</string>
     <string name="remove">Odstrani</string>
@@ -369,7 +347,6 @@
     <string name="send_sms">Send SMS</string>
     <string name="send_email">Send email</string>
     <string name="call">Call</string>
-
     <!-- Sorting -->
     <string name="sort_by">Razvrsti po</string>
     <string name="name">Ime</string>
@@ -392,11 +369,12 @@
     <string name="full_name">Full name</string>
     <string name="use_custom_sorting">Use custom sorting</string>
     <string name="change_order">Change order</string>
-
     <!-- Confirmation dialog -->
     <string name="proceed_with_deletion">Res želite nadaljevati s tem izborom?</string>
-    <string name="deletion_confirmation">Res želite izbrisati \'%s\'?</string>    <!-- Are you sure you want to delete 5 items? -->
-    <string name="move_to_recycle_bin_confirmation">Res želite \'%s\' premakniti v Koš?</string>    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
+    <string name="deletion_confirmation">Res želite izbrisati \'%s\'?</string>
+    <!-- Are you sure you want to delete 5 items? -->
+    <string name="move_to_recycle_bin_confirmation">Res želite \'%s\' premakniti v Koš?</string>
+    <!-- Are you sure you want to move 3 items into the Recycle Bin? -->
     <string name="are_you_sure_delete">Res želite izbrisati ta element?</string>
     <string name="are_you_sure_recycle_bin">Res želite premakniti ta element v Koš?</string>
     <string name="do_not_ask_again">To sejo ne sprašuj več</string>
@@ -404,14 +382,12 @@
     <string name="yes">Da</string>
     <string name="no">Ne</string>
     <string name="maybe">Mogoče</string>
-
     <plurals name="delete_warning">
         <item quantity="one">OPOZORILO: Brišete %d mapo</item>
         <item quantity="two">OPOZORILO: Brišete %d mapi</item>
         <item quantity="few">OPOZORILO: Brišete %d mape</item>
         <item quantity="other">OPOZORILO: Brišete %d map</item>
     </plurals>
-
     <!-- Password protection -->
     <string name="pin">Spuščajoče</string>
     <string name="enter_pin">Vpišite PIN</string>
@@ -438,7 +414,6 @@
     <string name="lock_folder_pro">Lock folder (Pro)</string>
     <string name="unlock_folder">Unlock folder</string>
     <string name="lock_folder_notice">This protection works in this app only, it is not supposed to replace a real systemwide folder encryption.</string>
-
     <!-- Times -->
     <string name="yesterday">Včeraj</string>
     <string name="today">Danes</string>
@@ -452,7 +427,6 @@
     <string name="seconds_letter">s</string>
     <string name="minutes_letter">m</string>
     <string name="hours_letter">h</string>
-
     <plurals name="seconds">
         <item quantity="one">%d sekunda</item>
         <item quantity="two">%d sekundi</item>
@@ -495,7 +469,6 @@
         <item quantity="few">%d leta</item>
         <item quantity="other">%d let</item>
     </plurals>
-
     <!-- For example: I will be there in 5 minutes -->
     <plurals name="in_seconds">
         <item quantity="one">%d sekundo</item>
@@ -539,7 +512,6 @@
         <item quantity="few">%d leta</item>
         <item quantity="other">%d let</item>
     </plurals>
-
     <!-- For example: Event reminder: 3 minutes before -->
     <plurals name="seconds_before">
         <item quantity="one">%d sekundo prej</item>
@@ -583,7 +555,6 @@
         <item quantity="few">%d leta prej</item>
         <item quantity="other">%d let prej</item>
     </plurals>
-
     <!-- For example: Postpone reminder by 3 minutes -->
     <plurals name="by_seconds">
         <item quantity="one">%d sekundo</item>
@@ -627,7 +598,6 @@
         <item quantity="few">%d leta</item>
         <item quantity="other">%d let</item>
     </plurals>
-
     <!-- For example: Time remaining till the alarm goes off: 6 hours, 5 minutes -->
     <string name="alarm_goes_off_in">Čas do sprožitve alarma: %s</string>
     <string name="reminder_triggers_in">Čas do sprožitve opomnika: %s</string>
@@ -635,7 +605,6 @@
     <string name="alarm_warning">Predlagamo, da alarm preizkusite, preden se nanj zanašate. Zaradi sistemskih omejitev, povezanih z ohranjanjem baterije, lahko alarm zataji.</string>
     <string name="reminder_warning">Predlagamo, da opomnike preiskusite, preden se zanašate na njih. Zaradi sistemskih omejitev, povezanih z ohranjanjem baterije, lahko opomniki zatajijo.</string>
     <string name="notifications_disabled">Obvestila so za to aplikacijo onemogočena. Vklopite jih lahko v nastavitvah naprave.</string>
-
     <!-- Alarms -->
     <string name="alarm">Alarm</string>
     <string name="snooze">Dremež</string>
@@ -648,7 +617,6 @@
     <string name="no_sound">Brez zvoka</string>
     <string name="during_day_at_hh_mm">During the day at hh:mm</string>
     <string name="during_day_at">During the day at %02d:%02d</string>
-
     <!-- Settings -->
     <string name="settings">Nastavitve</string>
     <string name="purchase_simple_thank_you">Kupite aplikacijo Simple Thank You</string>
@@ -681,7 +649,7 @@
     <string name="widgets">Pripomočki</string>
     <string name="use_same_snooze">Vedno uporabi enak čas dremeža</string>
     <string name="snooze_time">Čas dremeža</string>
-    <string name="vibrate_on_button_press">Vibriraj ob pritisku gumba</string>
+    <string name="vibrate_on_button_press">Vibrate on button press</string>
     <string name="move_items_into_recycle_bin">Premakni datoteke v koš namesto brisanja</string>
     <string name="recycle_bin_cleaning_interval">Čas med čiščenji Koša</string>
     <string name="empty_recycle_bin">Izprazni Koš</string>
@@ -693,7 +661,6 @@
     <string name="start_name_with_surname">Start name with surname</string>
     <string name="clear_cache">Clear cache</string>
     <string name="show_call_confirmation_dialog">Show a call confirmation dialog before initiating a call</string>
-
     <!-- Setting sections -->
     <string name="visibility">Vidljivost</string>
     <string name="security">Varnost</string>
@@ -708,7 +675,6 @@
     <string name="main_screen">Main screen</string>
     <string name="thumbnails">Thumbnails</string>
     <string name="list_view">List view</string>
-
     <!-- Default tab to open -->
     <string name="manage_shown_tabs">Manage shown tabs</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
@@ -719,7 +685,6 @@
     <string name="last_used_tab">Last used one</string>
     <string name="files_tab">Files</string>
     <string name="recent_files_tab">Recent files</string>
-
     <!-- Recycle Bin -->
     <string name="restore_this_file">Obnovi to datoteko</string>
     <string name="restore_selected_files">Obnovite izbrane datoteke</string>
@@ -731,14 +696,12 @@
     <string name="moving_recycle_bin_items_disabled">Premikanje elementov v Košu je onemogočeno, uporabite Obnovitev</string>
     <string name="show_the_recycle_bin">Pokaži Koš</string>
     <string name="hide_the_recycle_bin">Skrij Koš</string>
-
     <plurals name="moving_items_into_bin">
         <item quantity="one">Premikanje %d elementa v Koš</item>
         <item quantity="two">Premikanje %d elementov v Koš</item>
         <item quantity="few">Premikanje %d elementov v Koš</item>
         <item quantity="other">Premikanje %d elementov v Koš</item>
     </plurals>
-
     <!-- Import / Export -->
     <string name="importing">Uvažanje…</string>
     <string name="exporting">Izvažanje…</string>
@@ -751,13 +714,11 @@
     <string name="no_entries_for_importing">Za uvoz ni bilo najdenih nobenih vnosov</string>
     <string name="no_new_entries_for_importing">No new entries for importing have been found</string>
     <string name="no_entries_for_exporting">Za izvoz ni bilo najdenih nobenih vnosov</string>
-
     <!-- OTG devices -->
     <string name="usb">USB</string>
     <string name="usb_detected">Kot kaže, imate na napravo priključeno USB napravo. Da zagotovite pravilno prikazovanje datotek, morate odobriti dodatna dovoljenja.</string>
     <string name="confirm_usb_storage_access_text">Izberitre korensko mapo naprave USB na naslednjem zaslonu, da odobrite dostop</string>
     <string name="wrong_root_selected_usb">Izbrana je bila napapačna mapa. Prosimo, izberite korensko mapo naprave USB.</string>
-
     <!-- Dates -->
     <string name="january">Januar</string>
     <string name="february">Februar</string>
@@ -771,7 +732,6 @@
     <string name="october">Oktober</string>
     <string name="november">November</string>
     <string name="december">December</string>
-
     <!-- in January -->
     <string name="in_january">v januarju</string>
     <string name="in_february">v februarju</string>
@@ -785,7 +745,6 @@
     <string name="in_october">v oktobru</string>
     <string name="in_november">v novembru</string>
     <string name="in_december">v decembru</string>
-
     <string name="monday">Ponedeljek</string>
     <string name="tuesday">Torek</string>
     <string name="wednesday">Sreda</string>
@@ -793,7 +752,6 @@
     <string name="friday">Petek</string>
     <string name="saturday">Sobota</string>
     <string name="sunday">Nedelja</string>
-
     <string name="monday_letter">P</string>
     <string name="tuesday_letter">T</string>
     <string name="wednesday_letter">S</string>
@@ -801,7 +759,6 @@
     <string name="friday_letter">P</string>
     <string name="saturday_letter">S</string>
     <string name="sunday_letter">N</string>
-
     <string name="monday_short">Pon</string>
     <string name="tuesday_short">Tor</string>
     <string name="wednesday_short">Sre</string>
@@ -809,7 +766,6 @@
     <string name="friday_short">Pet</string>
     <string name="saturday_short">Sob</string>
     <string name="sunday_short">Ned</string>
-
     <!-- Pro version -->
     <string name="upgrade_to_pro_long">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements.</string>
     <string name="upgrade_to_pro_long_click">Your app version will not be updated anymore. Please upgrade to the Pro version to receive new fixes and other improvements by clicking here.</string>
@@ -821,7 +777,6 @@
     <string name="upgraded_to_pro_calendar">You have to migrate locally stored events manually via exporting in an .ics file, then importing. You can find both export and import buttons at the top menu.</string>
     <string name="upgraded_to_pro_notes">You have to migrate your notes to the Pro version manually.</string>
     <string name="upgraded_to_pro_contacts">You have to migrate privately stored contacts manually via exporting in a .vcf file, then importing. You can find both export and import buttons at the top menu.</string>
-
     <!-- About -->
     <string name="about">O aplikaciji</string>
     <string name="website">Website</string>
@@ -845,7 +800,7 @@
     <string name="privacy_policy">Privacy policy</string>
     <string name="version_placeholder">Version %s</string>
     <string name="hello">Hello :)</string>
-    <string name="about_footer">Made with &#10084;&#65039; in Slovakia</string>
+    <string name="about_footer">Made with ❤️ in Slovakia</string>
     <string name="additional_info">Dodatne informacije</string>
     <string name="app_version">Različica aplikacije: %s</string>
     <string name="device_os">Operacijski sistem: %s</string>
@@ -871,7 +826,6 @@
     <string name="thank_you">Thank you</string>
     <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
     <string name="features_locked">This feature is locked, please purchase &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou&gt;Simple Thank You&lt;/a&gt; for unlocking the full app.&lt;br&gt;&lt;br&gt;It is a one time payment only and if you won\'t be satisfied, we can refund you.</string>
-
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
         <![CDATA[
@@ -884,7 +838,6 @@
             Hvala
         ]]>
     </string>
-
     <string name="simple_app_launcher">Simple App Launcher</string>
     <string name="simple_calculator">Simple Calculator</string>
     <string name="simple_calendar">Simple Calendar</string>
@@ -902,7 +855,6 @@
     <string name="simple_sms_messenger">Simple SMS Messenger</string>
     <string name="simple_thank_you">Simple Thank You</string>
     <string name="simple_voice_recorder">Simple Voice Recorder</string>
-
     <string name="app_launcher_short">App Launcher</string>
     <string name="calculator_short">Calculator</string>
     <string name="calendar_short">Calendar</string>
@@ -920,13 +872,11 @@
     <string name="sms_messenger_short">SMS Messenger</string>
     <string name="thank_you_short">Thank You</string>
     <string name="voice_recorder_short">Voice Recorder</string>
-
     <string name="sideloaded_app">
         <![CDATA[
             Izgleda, da je vaša verzija aplikacije pokvarjena. Prosimo naložite originalno verzijo od <a href="%s">tukaj</a>.
         ]]>
     </string>
-
     <!-- FAQ -->
     <string name="frequently_asked_questions">Pogosta vprašanja</string>
     <string name="before_asking_question">Preden postavite vprašanje, preberite</string>
@@ -960,7 +910,6 @@
         want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
     <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
     <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
-
     <!-- Contributors -->
     <string name="contributors">Contributors</string>
     <string name="translation">Translation</string>
@@ -973,7 +922,6 @@
             Thanks to all contributors and other supporters!
         ]]>
     </string>
-
     <string name="translation_arabic">Arabic</string>
     <string name="translation_azerbaijani">Azerbaijani</string>
     <string name="translation_bengali">Bengali</string>
@@ -1019,7 +967,6 @@
     <string name="translation_chinese_hk">Chinese (Hong Kong)</string>
     <string name="translation_chinese_cn">Chinese (Simplified)</string>
     <string name="translation_chinese_tw">Chinese (Traditional)</string>
-
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Get the Pro version now!</string>
     <string name="why_upgrade_basic_version">Basic</string>
@@ -1029,20 +976,17 @@
     <string name="why_upgrade_footer">100% Money Back Guarantee</string>
     <string name="why_upgrade_footer_one_time_payment">One time payment</string>
     <string name="why_upgrade_improved_design">Improved design</string>
-
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
     <string name="why_upgrade_heic_support">HEIC/HEIF file support</string>
     <string name="why_upgrade_batch_renaming">Advanced batch file renaming</string>
     <string name="why_upgrade_folder_locking">Individual folder locking</string>
     <string name="why_upgrade_printing_support">Printing support</string>
-
     <!-- Calendar Pro -->
     <string name="why_upgrade_time_zone_support">Time zone support</string>
     <string name="why_upgrade_attendees_emails">Attendees and email reminders</string>
     <string name="why_upgrade_easy_event_importing">Easy event importing</string>
     <string name="why_upgrade_new_widgets">New widgets</string>
-
     <!-- Contacts Pro -->
     <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
     <string name="why_upgrade_font_size_customization">Font size customization</string>
@@ -1050,23 +994,19 @@
     <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
     <string name="why_upgrade_contact_filtering">Contact filtering</string>
     <string name="why_upgrade_contact_private_contacts">Privately stored contacts</string>
-
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Checklists</string>
     <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
     <string name="why_upgrade_note_locking">Note locking</string>
-
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
     <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
     <string name="why_upgrade_file_compression">File compression support</string>
     <string name="why_upgrade_recents_tab">Tab with recent files</string>
-
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Background color customization</string>
     <string name="why_upgrade_file_importing">File importing support</string>
     <string name="why_upgrade_zooming">Zooming</string>
-
     <!-- License -->
     <string name="notice">Da si olajšamo delo, aplikacija uporablja naslednje programske knjižnice. Hvala.</string>
     <string name="third_party_licences">Licence tretjih oseb</string>
@@ -1102,11 +1042,9 @@
     <string name="pdf_viewer_title">Android PdfViewer (PDF viewer)</string>
     <string name="m3u_parser_title">M3U Parser (m3u playlist file handling)</string>
     <string name="android_lame_title">AndroidLame (mp3 encoder)</string>
-
     <!-- Google Play listing -->
     <string name="deprecated_app">ZASTARELO: Ta verzija aplikacije se ne vzdržuje več, pridobite si Pro verzijo na https://play.google.com/store/apps/details?id=com.simplemobiletools.xxx.pro</string>
     <string name="pro_app_refund">Ne pozabite - če odstranite katerokoli plačljivo aplikacijo v dveh urah, dobite povrnjen avtomatično denar. Če želite povrnitev denarja po preteku tega časa, nas kontaktirajte na hello@simplemobiletools.com in poskrbeli bomo za to. Zaradi tega je preizkušanje aplikacije še bolj preprosto. :)</string>
-
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
     <string name="developer_description">A group of simple, open source Android apps with customizable widgets, without ads and unnecessary permissions.</string>
 </resources>
