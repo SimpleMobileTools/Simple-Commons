@@ -36,6 +36,9 @@
     <string name="add_fingerprint">Дадаць адбітак пальца</string>
     <string name="take_photo">Зрабіць фота</string>
     <string name="choose_photo">Выбраць фота</string>
+    <!-- Events -->
+    <string name="birthday">Дзень нараджэння</string>
+    <string name="anniversary">Гадавіна</string>
     <plurals name="hours_before">
         <item quantity="one">%d гадзіна да падзеі</item>
         <item quantity="few">%d гадзіны да падзеі</item>
