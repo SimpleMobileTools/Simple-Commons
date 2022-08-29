@@ -238,6 +238,7 @@ fun Context.getPermissionString(id: Int) = when (id) {
     PERMISSION_SEND_SMS -> Manifest.permission.SEND_SMS
     PERMISSION_READ_PHONE_STATE -> Manifest.permission.READ_PHONE_STATE
     PERMISSION_MEDIA_LOCATION -> if (isQPlus()) Manifest.permission.ACCESS_MEDIA_LOCATION else ""
+    PERMISSION_POST_NOTIFICATIONS -> Manifest.permission.POST_NOTIFICATIONS
     else -> ""
 }
 
