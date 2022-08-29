@@ -802,7 +802,7 @@ fun BaseSimpleActivity.deleteFileBg(
             }
         } else {
             if (getIsPathDirectory(file.absolutePath) && allowDeleteFolder) {
-                fileDeleted = deleteRecursively(file)
+                fileDeleted = deleteRecursively(file, this)
             }
 
             if (!fileDeleted) {
@@ -841,15 +841,19 @@ private fun BaseSimpleActivity.deleteSdk30(fileDirItem: FileDirItem, callback: (
     }
 }
 
-private fun deleteRecursively(file: File): Boolean {
+private fun deleteRecursively(file: File, context: Context): Boolean {
     if (file.isDirectory) {
         val files = file.listFiles() ?: return file.delete()
         for (child in files) {
-            deleteRecursively(child)
+            deleteRecursively(child, context)
         }
     }
 
-    return file.delete()
+    val deleted = file.delete()
+    if (deleted) {
+        context.deleteFromMediaStore(file.absolutePath)
+    }
+    return deleted
 }
 
 fun Activity.scanFileRecursively(file: File, callback: (() -> Unit)? = null) {
