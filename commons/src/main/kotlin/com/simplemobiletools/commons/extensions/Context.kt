@@ -15,7 +15,10 @@ import android.graphics.Point
 import android.media.MediaMetadataRetriever
 import android.media.RingtoneManager
 import android.net.Uri
-import android.os.*
+import android.os.Build
+import android.os.Environment
+import android.os.Handler
+import android.os.Looper
 import android.provider.BaseColumns
 import android.provider.BlockedNumberContract.BlockedNumbers
 import android.provider.ContactsContract.CommonDataKinds.BaseTypes
@@ -121,7 +124,7 @@ fun Context.getLatestMediaId(uri: Uri = Files.getContentUri("external")): Long {
 private fun Context.queryCursorDesc(
     uri: Uri,
     projection: Array<String>,
-    sortColumn:String,
+    sortColumn: String,
     limit: Int,
 ): Cursor? {
     return if (isRPlus()) {
@@ -239,6 +242,9 @@ fun Context.getPermissionString(id: Int) = when (id) {
     PERMISSION_READ_PHONE_STATE -> Manifest.permission.READ_PHONE_STATE
     PERMISSION_MEDIA_LOCATION -> if (isQPlus()) Manifest.permission.ACCESS_MEDIA_LOCATION else ""
     PERMISSION_POST_NOTIFICATIONS -> Manifest.permission.POST_NOTIFICATIONS
+    PERMISSION_READ_MEDIA_IMAGES -> Manifest.permission.READ_MEDIA_IMAGES
+    PERMISSION_READ_MEDIA_VIDEO -> Manifest.permission.READ_MEDIA_VIDEO
+    PERMISSION_READ_MEDIA_AUDIO -> Manifest.permission.READ_MEDIA_AUDIO
     else -> ""
 }
 
