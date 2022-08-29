@@ -875,6 +875,16 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
+    fun handleNotificationPermission(callback: (granted: Boolean) -> Unit) {
+        if (!isTiramisuPlus()) {
+            callback(true)
+        } else {
+            handlePermission(PERMISSION_POST_NOTIFICATIONS) { granted ->
+                callback(granted)
+            }
+        }
+    }
+
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         isAskingPermissions = false
