@@ -1029,3 +1029,10 @@ fun Context.updateBottomTabItemColors(view: View?, isActive: Boolean) {
     view?.findViewById<ImageView>(R.id.tab_item_icon)?.applyColorFilter(color)
     view?.findViewById<TextView>(R.id.tab_item_label)?.setTextColor(color)
 }
+
+fun Context.sendEmailIntent(recipient: String) {
+    Intent(Intent.ACTION_SENDTO).apply {
+        data = Uri.fromParts(KEY_MAILTO, recipient, null)
+        launchActivityIntent(this)
+    }
+}
