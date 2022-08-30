@@ -35,6 +35,7 @@ const val SAVE_DISCARD_PROMPT_INTERVAL = 1000L
 const val SD_OTG_PATTERN = "^/storage/[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$"
 const val SD_OTG_SHORT = "^[A-Za-z0-9]{4}-[A-Za-z0-9]{4}$"
 const val KEY_PHONE = "phone"
+const val KEY_MAILTO = "mailto"
 const val CONTACT_ID = "contact_id"
 const val IS_PRIVATE = "is_private"
 const val MD5 = "MD5"
