@@ -829,7 +829,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
             checkConflicts(files, destinationPath, 0, LinkedHashMap()) {
                 toast(if (isCopyOperation) R.string.copying else R.string.moving)
                 val pair = Pair(files, destinationPath)
-                CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
+                handleNotificationPermission { granted ->
+                    if (granted) {
+                        CopyMoveTask(this, isCopyOperation, copyPhotoVideoOnly, it, copyMoveListener, copyHidden).execute(pair)
+                    } else {
+                        toast(R.string.no_post_notifications_permissions)
+                    }
+                }
             }
         } else {
             val text = String.format(getString(R.string.no_space), sumToCopy.formatSize(), availableSpace.formatSize())
